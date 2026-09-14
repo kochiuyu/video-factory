@@ -1,0 +1,77 @@
+id: GAME-M04-OUT
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 48
+title_en: A hint is not a mix
+title_zh: 提示不是混合
+title_zh_hk: 提示唔係混合
+objective_en: Close. Focal points and cheap talk can tip coordination. Chicken stays hard. Next sitting a table with no Nash cell.
+objective_zh: 收住。焦点和便宜的话推得动协调。斗鸡仍然难。下一讲是一格纳什都没有的表。
+objective_zh_hk: 收住。焦點同平嘅說話推得動協調。鬥雞都仲難。下一講係一格納什都冇嘅表。
+glossary:
+- en: focal point
+  zh: 焦点
+  zh_hk: 焦點
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What can tip both Left on the wide path?
+  zh: 宽路上，什么可以把人推向都在左？
+  zh_hk: 闊路上面，咩可以將人推去都喺左？
+  answer_en: A landmark both can see, or a sentence that does not pay to lie.
+  answer_zh: 两车都能看见的地标，或一句说谎没有好处的话。
+  answer_zh_hk: 兩架都見到嘅地標，或一句講大话冇好處嘅話。
+- id: Q2
+  type: comprehension
+  en: What is the next sitting?
+  zh: 下一讲是什么？
+  zh_hk: 下一講係咩？
+  answer_en: A payoff table where no cell is Nash.
+  answer_zh: 一张一格纳什都没有的报酬表。
+  answer_zh_hk: 一張一格納什都冇嘅報酬表。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: A hint is not a mix
+  title_zh: 提示不是混合
+  title_zh_hk: 提示唔係混合
+  claim_en: A label. A sentence. The gate still disagrees.
+  claim_zh: 一个标签。一句话。门口仍然意见相反。
+  claim_zh_hk: 一個標籤。一句話。門口都仲意見相反。
+  next_en: Next sitting starts when no cell is Nash.
+  next_zh: 下一讲从一格纳什都没有的表开始。
+  next_zh_hk: 下一講由一格納什都冇嘅表開始。
+  en: Look back. A shady side or a sentence can tip the wide path. At the gate the two Nash cells disagree, so the same tools grab rather than help. We still did not mix Left and Right.
+  zh: 再看一遍。有荫的一侧或一句话，推得动宽路。门口两格纳什意见相反，同一套工具就变成抢。我们还没有把左右混在一起。
+  zh_hk: 再睇一遍。有蔭嗰一側定一句，推得動闊路。門口兩格納什意見相反，同一套工具就變成搶。我哋都未將左右撈埋。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Next, no Nash cell
+  title_zh: 下一张表，没有纳什格
+  title_zh_hk: 下一張表，冇納什格
+  q1_en: Hints can tip coordination.
+  q1_zh: 提示推得动协调。
+  q1_zh_hk: 提示推得動協調。
+  q2_en: Next sitting is a table with no Nash cell.
+  q2_zh: 下一讲是一格纳什都没有的表。
+  q2_zh_hk: 下一講係一格納什都冇嘅表。
+  en: That is all I need you to take from this unit. A hint is not a mix. Next sitting starts when even the marked cells disappear.
+  zh: 这一单元我只要你带走这一点。提示不是混合。下一讲从连标出来的格子都消失的时候开始。
+  zh_hk: 呢一單元我淨要你帶走呢樣。提示唔係混合。下一講由連標出嚟嘅格仔都消失嗰陣開始。

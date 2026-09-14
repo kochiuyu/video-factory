@@ -1,0 +1,68 @@
+id: ACC-M02-IN
+course: accounting
+course_en: Introductory Accounting
+course_zh: 会计入门
+course_zh_hk: 會計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: 'This sitting: which period'
+title_zh: 这一讲：哪一期
+title_zh_hk: 這一講：哪一期
+objective_en: Put the sale, the matching cost, and the machine in the right period.
+objective_zh: 把销售、配比的成本和机器放进该放的那一期。
+objective_zh_hk: 把銷售、配比的成本和機器放進該放的那一期。
+glossary:
+- en: Open
+  zh: 开场
+  zh_hk: 開場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What three amounts does this sitting place in time?
+  zh: 哪三笔金额要放进时间？
+  zh_hk: 哪三筆金額要放進時間？
+  answer_en: The sale, the matching cost, and the machine.
+  answer_zh: 销售、配比的成本、机器。
+  answer_zh_hk: 銷售、配比的成本、機器。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: which period'
+  title_zh: 这一讲：哪一期
+  title_zh_hk: 這一講：哪一期
+  en: The books can already hold a line. This sitting asks which year that line belongs to. Delivery,
+    matching, then a machine used for years.
+  zh: 账已经能放下一行。这一讲问那一行属于哪一年。先交货，再配比，再谈用很多年的机器。
+  zh_hk: 賬已經能放下一行。這一講問那一行屬於哪一年。先交貨，再配比，再談用很多年的機器。
+  item1_en: Revenue recognition
+  item1_zh: 收入确认
+  item1_zh_hk: 收入確認
+  item2_en: Matching principle
+  item2_zh: 配比原则
+  item2_zh_hk: 配比原則
+  item3_en: Depreciation
+  item3_zh: 折旧
+  item3_zh_hk: 折舊
+- id: takeaway
+  visual: title_card
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: which period'
+  title_zh: 这一讲：哪一期
+  title_zh_hk: 這一講：哪一期
+  en: Three shorts. Revenue when delivered. Cost beside that revenue. Machine cost spread across the
+    years of use.
+  zh: 三条短片。交货才确认收入。成本和那笔收入放一起。机器成本按使用的年份摊开。
+  zh_hk: 三條短片。交貨才確認收入。成本和那筆收入放一起。機器成本按使用的年份攤開。

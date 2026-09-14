@@ -1,0 +1,218 @@
+[
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "hook",
+    "language": "en",
+    "text": "Matching said: put the cost with the revenue it helps to earn. A machine helps to earn revenue for years. So its cost is not an expense on the purchase day. Depreciation is matching, stretched across useful life.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\en\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "define",
+    "language": "en",
+    "text": "Depreciation allocates the depreciable cost of a long-lived asset across its useful life. It is an estimate, not a cash payment and not a market price.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\en\\define.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "example",
+    "language": "en",
+    "text": "A printer costs five units and should last five years with no residual. Cash leaves now. Expense is one unit a year. Year one profit is not punished for the whole machine.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\en\\example.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "formula",
+    "language": "en",
+    "text": "Depreciation is not a valuation guess. It allocates a prepaid bundle of machine-years across the periods that use them.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\en\\formula.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "van",
+    "language": "en",
+    "text": "Pay 100 for a van. Expect 10 at the end. Five years of work sit in between. Straight line puts 18 of expense in each of those years.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\en\\van.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "steps",
+    "language": "en",
+    "text": "Subtract what you expect to recover. Divide by the years of use. Put that slice in the period. Market price next year is a different question.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\en\\steps.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "life",
+    "language": "en",
+    "text": "The useful life is the clock. If the van works five years, five periods share the net cost. Do not dump the 100 into year one.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\en\\life.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "views",
+    "language": "en",
+    "text": "Dumping the whole cost in year one hides later work. Ignoring residual overstates expense. Rewriting life every month turns a rule into a mood.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\en\\views.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "takeaway",
+    "language": "en",
+    "text": "Paying for an asset and using an asset are different events. Depreciation records the use. That closes this sitting: we now know which period gets the sale, the matching cost, and the machine.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\en\\takeaway.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "hook",
+    "language": "zh_cn",
+    "text": "配比说：成本和它所帮助赚到的收入放在一起。机器会帮好几年的忙。所以购买日不能把全部成本一次记成费用。折旧就是把配比拉长到使用年限。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_cn\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "define",
+    "language": "zh_cn",
+    "text": "折旧把长期资产的应折旧成本分摊到使用寿命各期。它是估计，不是付现，也不是市价。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_cn\\define.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "example",
+    "language": "zh_cn",
+    "text": "打印机花五单位，预计用五年且无残值。现金现在就出去。费用是每年一单位。第一年利润不必承担整台机器。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_cn\\example.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "formula",
+    "language": "zh_cn",
+    "text": "折旧不是估值猜测。它把预付的一捆机器年，分到真正使用这些年的期间。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_cn\\formula.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "van",
+    "language": "zh_cn",
+    "text": "花100买货车。预计最后剩10。中间有五年工作。直线法每年记18的费用。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_cn\\van.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "steps",
+    "language": "zh_cn",
+    "text": "减去预计收回的部分。再除以使用年数。把这一片记入当期。明年市价是另一个问题。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_cn\\steps.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "life",
+    "language": "zh_cn",
+    "text": "使用年限就是时钟。货车用五年，就由五个期间分担净成本。不要把100全部丢进第一年。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_cn\\life.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "views",
+    "language": "zh_cn",
+    "text": "第一年吃掉全部成本，会藏起后面的工作。忽略残值会夸大费用。每月改年限会把规则变成心情。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_cn\\views.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "takeaway",
+    "language": "zh_cn",
+    "text": "付钱买资产，和真正使用资产，是两件事。折旧记的是使用。这一单元到此结束：销售、配比的成本和机器，各记在该记的那一期。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_cn\\takeaway.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "hook",
+    "language": "zh_hk",
+    "text": "配比說：成本和它所幫助賺到的收入放在一起。機器會幫好幾年的忙。所以購買日不能把全部成本一次記成費用。折舊就是把配比拉長到使用年限。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_hk\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "define",
+    "language": "zh_hk",
+    "text": "折舊把長期資產的應折舊成本分攤到使用壽命各期。它是估計，不是付現，也不是市價。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_hk\\define.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "example",
+    "language": "zh_hk",
+    "text": "打印機花五單位，預計用五年且無殘值。現金現在就出去。費用是每年一單位。第一年利潤不必承擔整台機器。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_hk\\example.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "formula",
+    "language": "zh_hk",
+    "text": "折舊不是估值猜測。它把預付的一捆機器年，分到真正使用這些年的期間。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_hk\\formula.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "van",
+    "language": "zh_hk",
+    "text": "花100買貨車。預計最後剩10。中間有五年工作。直線法每年記18的費用。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_hk\\van.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "steps",
+    "language": "zh_hk",
+    "text": "減去預計收回的部分。再除以使用年數。把這一片記入當期。明年市價是另一個問題。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_hk\\steps.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "life",
+    "language": "zh_hk",
+    "text": "使用年限就是時鐘。貨車用五年，就由五個期間分擔淨成本。不要把100全部丟進第一年。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_hk\\life.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "views",
+    "language": "zh_hk",
+    "text": "第一年吃掉全部成本，會藏起後面的工作。忽略殘值會誇大費用。每月改年限會把規則變成心情。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_hk\\views.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DP-01",
+    "beat_id": "takeaway",
+    "language": "zh_hk",
+    "text": "付錢買資產，和真正使用資產，是兩件事。折舊記的是使用。這一單元到此結束：銷售、配比的成本和機器，各記在該記的那一期。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DP-01\\audio\\zh_hk\\takeaway.mp3",
+    "with_timestamps": true
+  }
+]

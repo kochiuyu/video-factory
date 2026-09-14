@@ -1,0 +1,155 @@
+id: GAME-M02-IN
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: What they would pick
+title_zh: 他们会选什么
+title_zh_hk: 佢哋會揀咩
+objective_en: Put the cart table on screen. Read a cell, a row, and a column. Then say what it means to delete a line.
+objective_zh: 先把咖啡车的表放出来。读一格、一行、一列。再说删掉一行是什么意思。
+objective_zh_hk: 先將咖啡車張表擺出嚟。讀一格、一行、一列。再講刪走一行係咩意思。
+glossary:
+- en: dominant strategy
+  zh: 占优策略
+  zh_hk: 佔優策略
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: In the cell 0 then 5, who gets 5?
+  zh: 格子里先 0 后 5，谁拿到 5？
+  zh_hk: 格仔入面先 0 後 5，邊個攞到 5？
+  answer_en: Cart B. The first number is always A. A row is A's two payoffs.
+  answer_zh: 乙车。头一个数字永远是甲。一行是甲在两列上的报酬。
+  answer_zh_hk: 乙車。第一個數字永遠係甲。一行係甲喺兩列上面嘅報酬。
+- id: Q2
+  type: comprehension
+  en: What three words will this unit add?
+  zh: 这一单元要补上哪三个词？
+  zh_hk: 呢一單元要補上邊三個詞？
+  answer_en: Dominant strategy, dominance solvable, and the prisoner's dilemma.
+  answer_zh: 占优策略、重复删除可解，以及囚徒困境。
+  answer_zh_hk: 佔優策略、重複刪除可解，以及囚徒困境。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: What they would pick
+  title_zh: 他们会选什么
+  title_zh_hk: 佢哋會揀咩
+  en: Last sitting left the payoff table on the page. Nobody picked a cell. Before we delete anything, put that same table where you can see it. A cell is two numbers. A row is one strategy for A.
+  zh: 上一讲把报酬表留在纸上。还没有人选出一格。先不要删任何一行。先把同一张表放到眼前。一格是两个数字。一行是甲的一个策略。
+  zh_hk: 上一講將報酬表留喺紙度。都未有人揀到一格。未好刪任何一行。先將同一張表擺到眼前。一格係兩個數字。一行係甲嘅一個策略。
+- id: table
+  visual: payoff_matrix
+  seconds: 28
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: How to read this table
+  title_zh: 这张表怎么读
+  title_zh_hk: 呢張表點讀
+  row_player_en: Cart A
+  row_player_zh: 甲车
+  row_player_zh_hk: 甲車
+  col_player_en: Cart B
+  col_player_zh: 乙车
+  col_player_zh_hk: 乙車
+  row1_en: High
+  row1_zh: 高价
+  row1_zh_hk: 貴
+  row2_en: Low
+  row2_zh: 低价
+  row2_zh_hk: 平
+  col1_en: High
+  col1_zh: 高价
+  col1_zh_hk: 貴
+  col2_en: Low
+  col2_zh: 低价
+  col2_zh_hk: 平
+  c11: "(3, 3)"
+  c12: "(0, 5)"
+  c21: "(5, 0)"
+  c22: "(1, 1)"
+  highlight: c12
+  note_en: First number is A. A's High row is 3 then 0.
+  note_zh: 头一个数字是甲。甲的高价行是先 3 后 0。
+  note_zh_hk: 第一個數字係甲。甲嘅貴行係先 3 後 0。
+  en: Cart A is the row. Cart B is the column. First number is A. Look at High for A. If B posts High, A takes 3. If B posts Low, A takes 0. That whole row is the High line we may later delete.
+  zh: 甲车是行。乙车是列。头一个数字是甲。看甲的高价。乙标高价，甲带走 3。乙标低价，甲带走 0。整一行就是后面可能删掉的高价。
+  zh_hk: 甲車係行。乙車係列。第一個數字係甲。睇甲嘅貴。乙標貴，甲袋走 3。乙標平，甲袋走 0。成一行就係後面可能刪走嘅貴。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: A line you would never post
+  title_zh: 一条你绝不会标的策略
+  title_zh_hk: 一條你絕唔會標嘅策略
+  formula: Delete a row only if it loses in every column
+  formula_en: Delete a row only if it loses in every column
+  formula_zh: 只有每一列都更差，才删掉这一行
+  formula_zh_hk: 淨係每一列都更差，先刪走呢一行
+  gloss_en: A line is a row of A's numbers.
+  gloss_zh: 一行，就是甲那两个数字。
+  gloss_zh_hk: 一行，就係甲嗰兩個數字。
+  en: Here is the idea. A line is a row. High for A is 3 and 0. You may delete that row only if the other row pays A more in every column. We do not guess a personality. We compare two rows on this table.
+  zh: 核心就这一句。一行就是甲的两个数字。甲的高价是 3 和 0。只有另一行在每一列都更高，才删这一行。不是猜性格。是在这张表上比较两行。
+  zh_hk: 核心就呢一句。一行就係甲嗰兩個數字。甲嘅貴係 3 同 0。淨係另一行喺每一列都更高，先刪呢一行。唔係估性格。係喺呢張表比較兩行。
+- id: plan
+  visual: module_open
+  seconds: 26
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Three words to add
+  title_zh: 要补上三个词
+  title_zh_hk: 要補上三個詞
+  en: Here is what we will do. First we name a dominant strategy on the coffee carts. Then we cross out the lines that die, and see what is left. Then we give this same table its usual name, the prisoner's dilemma. Last we say why both carts end on Low.
+  zh: 我们接下来做这件事。先在咖啡车上点出占优策略。再划掉会死掉的行，看还剩什么。然后给同一张表取教科书上的名字，囚徒困境。最后说明为什么两辆车都会停在低价。
+  zh_hk: 我哋跟住做呢件事。先喺咖啡車上面點出佔優策略。再劃走會死人嘅行，睇仲剩咩。然後俾同一張表改教科書個名，囚徒困境。最後講明點解兩架車都會停喺平。
+  item1_en: A dominant strategy
+  item1_zh: 占优策略
+  item1_zh_hk: 佔優策略
+  item2_en: Cross out what dies
+  item2_zh: 划掉会死掉的行
+  item2_zh_hk: 劃走會死人嘅行
+  item3_en: The prisoner's dilemma
+  item3_zh: 囚徒困境
+  item3_zh_hk: 囚徒困境
+  item4_en: Why both end on Low
+  item4_zh: 为什么都停在低价
+  item4_zh_hk: 點解都停喺平
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Read the table first
+  title_zh: 先读表
+  title_zh_hk: 先讀表
+  q1_en: A row is one strategy for A across both of B's boards.
+  q1_zh: 一行是甲的一个策略，对着乙的两块牌子。
+  q1_zh_hk: 一行係甲嘅一個策略，對住乙兩塊牌。
+  q2_en: Delete a row only if it loses in every column.
+  q2_zh: 只有每一列都更差，才删掉这一行。
+  q2_zh_hk: 淨係每一列都更差，先刪走呢一行。
+  en: That is all I need you to see in this opening. A row is a strategy. A column is the other board. Next we compare the two rows and name a dominant strategy.
+  zh: 开场我只要你看见这一点。一行是一个策略。一列是对面那块牌子。接下来比较这两行，点出占优策略。
+  zh_hk: 開場我淨要你見到呢樣。一行係一個策略。一列係對面嗰塊牌。跟住比較呢兩行，點出佔優策略。

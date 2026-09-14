@@ -1,0 +1,156 @@
+
+===== console GAME-M02.yaml =====
+module: GAME-M02 <- GAME-M02-IN + GAME-DOM-01 + GAME-DS-01 + GAME-PD-01 + GAME-PD-02 + GAME-M02-OUT
+quiz: 24 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-M02\quiz
+progress: module 1/6 build GAME-M02-IN
+######## GAME-M02-IN (module part 1/6) ########
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-M02-IN\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-M02-IN\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-M02-IN\slides\en single
+progress: slides 1/3 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-M02-IN\slides\zh single
+progress: slides 2/3 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-M02-IN\slides\zh_hk single
+progress: slides 3/3 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-M02-IN\narration_jobs.json
+timing: slides 47.4s
+slides-only: wrote 12 PNG files; skipped TTS and mux
+timing: total 47.4s
+timing: breakdown slides 47.4s
+progress: module 2/6 build GAME-DOM-01
+######## GAME-DOM-01 (module part 2/6) ########
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-DOM-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-DOM-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-DOM-01\slides\en single
+progress: slides 1/3 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-DOM-01\slides\zh single
+progress: slides 2/3 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-DOM-01\slides\zh_hk single
+progress: slides 3/3 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-DOM-01\narration_jobs.json
+timing: slides 1m 22.3s
+slides-only: wrote 15 PNG files; skipped TTS and mux
+timing: total 1m 22.3s
+timing: breakdown slides 1m 22.3s
+progress: module 3/6 build GAME-DS-01
+######## GAME-DS-01 (module part 3/6) ########
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-DS-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-DS-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-DS-01\slides\en single
+progress: slides 1/3 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-DS-01\slides\zh single
+progress: slides 2/3 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-DS-01\slides\zh_hk single
+progress: slides 3/3 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-DS-01\narration_jobs.json
+timing: slides 1m 18.0s
+slides-only: wrote 15 PNG files; skipped TTS and mux
+timing: total 1m 18.0s
+timing: breakdown slides 1m 18.0s
+progress: module 4/6 build GAME-PD-01
+######## GAME-PD-01 (module part 4/6) ########
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PD-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PD-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PD-01\slides\en single
+progress: slides 1/3 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PD-01\slides\zh single
+progress: slides 2/3 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PD-01\slides\zh_hk single
+progress: slides 3/3 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PD-01\narration_jobs.json
+timing: slides 2m 12.3s
+slides-only: wrote 15 PNG files; skipped TTS and mux
+timing: total 2m 12.3s
+timing: breakdown slides 2m 12.3s
+progress: module 5/6 build GAME-PD-02
+######## GAME-PD-02 (module part 5/6) ########
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PD-02\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PD-02\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PD-02\slides\en single
+progress: slides 1/3 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PD-02\slides\zh single
+progress: slides 2/3 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PD-02\slides\zh_hk single
+progress: slides 3/3 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PD-02\narration_jobs.json
+timing: slides 1m 32.2s
+slides-only: wrote 15 PNG files; skipped TTS and mux
+timing: total 1m 32.2s
+timing: breakdown slides 1m 32.2s
+progress: module 6/6 build GAME-M02-OUT
+######## GAME-M02-OUT (module part 6/6) ########
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-M02-OUT\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-M02-OUT\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-M02-OUT\slides\en single
+progress: slides 1/3 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-M02-OUT\slides\zh single
+progress: slides 2/3 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-M02-OUT\slides\zh_hk single
+progress: slides 3/3 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-M02-OUT\narration_jobs.json
+timing: slides 50.7s
+slides-only: wrote 6 PNG files; skipped TTS and mux
+timing: total 50.7s
+timing: breakdown slides 50.7s
+module: 246 slides PNG across 6 shorts; skip module mux
+slides-only: wrote 246 PNG files; skipped TTS and mux

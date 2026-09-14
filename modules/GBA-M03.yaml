@@ -1,0 +1,20 @@
+id: GBA-M03
+kind: module
+course: gba
+course_en: Greater Bay Area
+course_zh: 粤港澳大湾区
+course_zh_hk: 粵港澳大灣區
+duration_target_s: 554
+title_en: What it costs to cross
+title_zh: 跨过去要付的账
+title_zh_hk: 跨過去要付的賬
+objective_en: Sticker price plus border time and paperwork; listing, banking, and payments sit in
+  different cities; two rule books are the design, not noise.
+objective_zh: 标价之外还有过关时间和文件；上市、银行、支付不在同一座城；两套规则是设计，不是误差。
+objective_zh_hk: 標價之外還有過關時間和文件；上市、銀行、支付不在同一座城；兩套規則是設計，不是誤差。
+lessons:
+- GBA-M03-IN
+- GBA-TC-01
+- GBA-FN-01
+- GBA-RG-01
+- GBA-M03-OUT

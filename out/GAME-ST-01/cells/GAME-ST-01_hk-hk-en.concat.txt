@@ -1,0 +1,5 @@
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-ST-01/clips/hk-hk-en/01_hook.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-ST-01/clips/hk-hk-en/02_define.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-ST-01/clips/hk-hk-en/03_steps.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-ST-01/clips/hk-hk-en/04_formula.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-ST-01/clips/hk-hk-en/05_takeaway.mp4'

@@ -1,0 +1,20 @@
+id: GAME-M03
+kind: module
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+duration_target_s: 624
+title_en: When the table does not pick
+title_zh: 当表选不出来
+title_zh_hk: 當表揀唔出
+objective_en: Read a table that is not dominance solvable. Name best response and Nash. See coordination and chicken on the same path.
+objective_zh: 读一张重复删除解不了的表。点出最优反应和纳什均衡。同一条路上看到协调和斗鸡。
+objective_zh_hk: 讀一張重複刪除解唔到嘅表。點出最佳回應同納什均衡。同一條路見到協調同鬥雞。
+lessons:
+- GAME-M03-IN
+- GAME-COORD-01
+- GAME-BR-01
+- GAME-NE-01
+- GAME-CH-01
+- GAME-M03-OUT

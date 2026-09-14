@@ -1,0 +1,153 @@
+id: GAME-PD-02
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 128
+title_en: Why both end on Low
+title_zh: 为什么都停在低价
+title_zh_hk: 點解都停喺平
+objective_en: Low dominates High. Both post Low. Each takes one, not three. That is the dilemma on this path.
+objective_zh: 低价占优于高价。两车都标低价。各带走一，不是三。这就是这条路上的困境。
+objective_zh_hk: 平佔優過貴。兩架都標平。各袋走一，唔係三。呢個就係呢條路嘅困境。
+glossary:
+- en: prisoner's dilemma
+  zh: 囚徒困境
+  zh_hk: 囚徒困境
+  lock: true
+- en: dominant strategy
+  zh: 占优策略
+  zh_hk: 佔優策略
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: After both delete High, which cell is left?
+  zh: 两车都划掉高价之后，剩下哪一格？
+  zh_hk: 兩架都劃走貴之後，剩邊一格？
+  answer_en: Low and Low. Each takes one.
+  answer_zh: 低价对低价。各带走一。
+  answer_zh_hk: 平對平。各袋走一。
+- id: Q2
+  type: transfer
+  en: Why is Low and Low a dilemma?
+  zh: 为什么低对低算困境？
+  zh_hk: 點解平對平算困境？
+  answer_en: Each follows a dominant strategy, and both take less than at High and High.
+  answer_zh: 每辆都用了占优策略，带走的却比高对高少。
+  answer_zh_hk: 每架都用咗佔優策略，袋走嘅卻比貴對貴少。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Same numbers as before
+  title_zh: 还是刚才那些数字
+  title_zh_hk: 都係頭先嗰啲數字
+  en: Do not draw a new table. High and High still pays three each. Low and Low still pays one each. We already know Low dominates High. Now say what that means for the morning.
+  zh: 不要另画一张表。高对高还是各三。低对低还是各一。低价占优于高价，我们已经看过。现在说清，这对这个早晨意味着什么。
+  zh_hk: 唔好另畫一張表。貴對貴都係各三。平對平都係各一。平佔優過貴，我哋已經睇過。而家講清，呢樣對呢個朝早意味住咩。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Both cut, both worse
+  title_zh: 都降价，都更差
+  title_zh_hk: 都減價，都更差
+  formula: Each uses the dominant strategy. Both take home less.
+  formula_en: Each uses the dominant strategy. Both take home less.
+  formula_zh: 每辆都用占优策略。两车带走的都变少。
+  formula_zh_hk: 每架都用佔優策略。兩架袋走嘅都變少。
+  gloss_en: That sting is the dilemma.
+  gloss_zh: 这一刺，就是困境。
+  gloss_zh_hk: 呢一刺，就係困境。
+  en: Here is the idea. Each cart uses the dominant strategy and posts Low. The cell that remains is one and one, not three and three. Each did what the table allowed. Both take home less. That sting is the dilemma.
+  zh: 核心就这一句。每辆车都用占优策略，标低价。剩下的格子是一和一，不是三和三。每辆都按表来做。两车带走的都少了。这一刺就是困境。
+  zh_hk: 核心就呢一句。每架車都用佔優策略，標平。剩低嘅格仔係一同一，唔係三同三。每架都跟表嚟做。兩架袋走嘅都少咗。呢一刺就係困境。
+- id: matrix
+  visual: payoff_matrix
+  seconds: 32
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Three and three is gone
+  title_zh: 三和三没了
+  title_zh_hk: 三同三冇咗
+  row_player_en: Cart A
+  row_player_zh: 甲车
+  row_player_zh_hk: 甲車
+  col_player_en: Cart B
+  col_player_zh: 乙车
+  col_player_zh_hk: 乙車
+  row1_en: High
+  row1_zh: 高价
+  row1_zh_hk: 貴
+  row2_en: Low
+  row2_zh: 低价
+  row2_zh_hk: 平
+  col1_en: High
+  col1_zh: 高价
+  col1_zh_hk: 貴
+  col2_en: Low
+  col2_zh: 低价
+  col2_zh_hk: 平
+  c11: "(3, 3)"
+  c12: "(0, 5)"
+  c21: "(5, 0)"
+  c22: "(1, 1)"
+  highlight: c22
+  note_en: First number is A. Low and Low is what remains.
+  note_zh: 头一个数字是甲。剩下的是低对低。
+  note_zh_hk: 第一個數字係甲。剩低嘅係平對平。
+  en: Same cells as before. High and High pays three each. If A cuts and B stays High, A takes five and B takes zero. After both delete High, only Low and Low remains. Read one and one.
+  zh: 还是那些格子。高对高各三。甲降、乙仍卖高价，甲拿走五，乙拿走零。两车都划掉高价之后，只剩低对低。读一和一。
+  zh_hk: 都係嗰啲格仔。貴對貴各三。甲減、乙仲賣貴，甲攞走五，乙攞走零。兩架都劃走貴之後，淨剩平對平。讀一同一。
+- id: example
+  visual: example
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Nobody needed a meeting
+  title_zh: 谁也不必开会
+  title_zh_hk: 邊個都唔使開會
+  setup_en: Each cart can see that High dies.
+  setup_zh: 每辆车都看得见，高价会死。
+  setup_zh_hk: 每架車都睇得見，貴會死人。
+  result_en: They both cut. The three-and-three morning is gone.
+  result_zh: 两车都降。那个三和三的早晨没了。
+  result_zh_hk: 兩架都減。嗰個三同三嘅朝早冇咗。
+  en: Each cart can see that High dies. They do not need a meeting on the path. They both cut. Customers get the cheap board, and each cart takes home less than at High and High.
+  zh: 每辆车都看得见高价会死。路上不必开会。两车都降。客人买到便宜的，两车带走的都比高对高少。
+  zh_hk: 每架車都睇得見貴會死人。路上唔使開會。兩架都減。客人買到平，兩架袋走嘅都比貴對貴少。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: The sting on this path
+  title_zh: 这条路上的刺
+  title_zh_hk: 呢條路上面嘅刺
+  q1_en: Low dominates High for each cart.
+  q1_zh: 每辆车的低价都占优于高价。
+  q1_zh_hk: 每架車嘅平都佔優過貴。
+  q2_en: Both Low, and both take less than both High.
+  q2_zh: 都卖低价，带走的却比都卖高价少。
+  q2_zh_hk: 都賣平，袋走嘅卻比都賣貴少。
+  en: Say both lines. Low dominates High. Both post Low, and both take less than at High and High. That is the prisoner's dilemma on this path. Next we close on this same table.
+  zh: 两句都要说。低价占优于高价。两车都标低价，带走的却比高对高少。这就是这条路上的囚徒困境。接下来用同一张表收住。
+  zh_hk: 兩句都要講。平佔優過貴。兩架都標平，袋走嘅卻比貴對貴少。呢個就係呢條路嘅囚徒困境。跟住用同一張表收住。

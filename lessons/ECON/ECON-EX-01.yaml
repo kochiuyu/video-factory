@@ -1,0 +1,228 @@
+id: ECON-EX-01
+course: principles
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 144
+title_en: Externalities
+title_zh: 外部性
+title_zh_hk: 外部性
+objective_en: 'Close the unit: when a third party bears a cost or benefit that the price never recorded,
+  private cost is not social cost.'
+objective_zh: 收住本单元：第三者承担了价格从未记下的成本或好处时，私人成本就不是社会成本。
+objective_zh_hk: 收住本單元：第三者承擔了價格從未記下的成本或好處時，私人成本就不是社會成本。
+glossary:
+- en: externality
+  zh: 外部性
+  zh_hk: 外部性
+  lock: true
+- en: social cost
+  zh: 社会成本
+  zh_hk: 社會成本
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Social cost equals which two pieces?
+  zh: 社会成本等于哪两部分？
+  zh_hk: 社會成本等於哪兩部分？
+  answer_en: Private cost plus external cost.
+  answer_zh: 私人成本加上外部成本。
+  answer_zh_hk: 私人成本加上外部成本。
+- id: Q2
+  type: transfer
+  en: A student shares clean lecture notes with the whole group chat. What kind of externality is
+    that?
+  zh: 一名学生把整洁的课堂笔记发到全组群。这是哪类外部性？
+  zh_hk: 一名學生把整潔的課堂筆記發到全組群。這是哪類外部性？
+  answer_en: A positive externality. Others gain without paying the note-taker.
+  answer_zh: 正外部性。别人受益却没有付给做笔记的人。
+  answer_zh_hk: 正外部性。別人受益卻沒有付給做筆記的人。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Externalities
+  title_zh: 外部性
+  title_zh_hk: 外部性
+  en: Moral hazard hid effort inside a contract. An externality leaves the contract entirely. Some
+    costs never appear on the buyer’s or seller’s bill. They still get paid — by someone standing
+    off to the side.
+  zh: 道德风险把努力藏在合同里。外部性则走出了合同。有些成本从不出现在买家或卖家的账单上。账还是有人付——由站在旁边的人付。
+  zh_hk: 道德風險把努力藏在合同裏。外部性則走出了合同。有些成本從不出現在買家或賣家的賬單上。賬還是有人付——由站在旁邊的人付。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Spillover
+  title_zh: 外溢
+  title_zh_hk: 外溢
+  formula: Social cost = private cost + external cost
+  formula_en: Social cost = private cost + external cost
+  formula_zh: 社会成本 = 私人成本 + 外部成本
+  formula_zh_hk: 社會成本 = 私人成本 + 外部成本
+  gloss_en: A positive externality is a spillover benefit.
+  gloss_zh: 正外部性是外溢的好处。
+  gloss_zh_hk: 正外部性是外溢的好處。
+  en: An externality is a cost or benefit that falls on a third party who did not choose the action.
+    Markets that see only the private cost will overdo harmful acts and underdo helpful ones.
+  zh: 外部性是落在未做选择的第三人身上的成本或收益。只看见私人成本的市场，会把有害的事做多，把有益的事做少。
+  zh_hk: 外部性是落在未做選擇的第三人身上的成本或收益。只看見私人成本的市場，會把有害的事做多，把有益的事做少。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Late practice room
+  title_zh: 深夜琴房
+  title_zh_hk: 深夜琴房
+  left_en: Player pays the booking fee
+  left_zh: 演奏者支付预约费
+  left_zh_hk: 演奏者支付預約費
+  right_en: Neighbours lose sleep
+  right_zh: 邻居失去睡眠
+  right_zh_hk: 鄰居失去睡眠
+  en: The booking fee is the private cost. The lost sleep next door is an external cost. The social
+    cost of that late hour is both together, so too many late bookings will happen if only the fee
+    is charged.
+  zh: 预约费是私人成本。隔壁失去的睡眠是外部成本。这一晚的社会成本是两者之和。若只收预约费，深夜使用就会过多。
+  zh_hk: 預約費是私人成本。隔壁失去的睡眠是外部成本。這一晚的社會成本是兩者之和。若只收預約費，深夜使用就會過多。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Add the missing cost
+  title_zh: 补上缺少的成本
+  title_zh_hk: 補上缺少的成本
+  formula: Social cost = private cost + external cost
+  formula_en: Social cost = private cost + external cost
+  formula_zh: 社会成本 = 私人成本 + 外部成本
+  formula_zh_hk: 社會成本 = 私人成本 + 外部成本
+  gloss_en: Markets price the private part.
+  gloss_zh: 市场给私人部分定价。
+  gloss_zh_hk: 市場給私人部分定價。
+  en: A factory pays wages and fuel. Neighbours pay the smoke. Social cost is both. If only the factory’s
+    bill is priced, output is too high.
+  zh: 工厂支付工资和燃料。邻居支付烟雾。社会成本是两者。如果只给工厂的账单定价，产量就会偏高。
+  zh_hk: 工廠支付工資和燃料。鄰居支付煙霧。社會成本是兩者。如果只給工廠的賬單定價，產量就會偏高。
+- id: sign
+  visual: two_column
+  seconds: 16
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Two externalities
+  title_zh: 两种外部性
+  title_zh_hk: 兩種外部性
+  left_en: 'Negative: smoke, noise'
+  left_zh: 负：烟雾、噪音
+  left_zh_hk: 負：煙霧、噪音
+  right_en: 'Positive: vaccine, garden'
+  right_zh: 正：疫苗、花园
+  right_zh_hk: 正：疫苗、花園
+  en: Negative externalities mean too much of the activity. Positive externalities mean too little.
+    The sign tells you whether to tax or to support.
+  zh: 负外部性表示活动太多。正外部性表示活动太少。符号告诉你该征税还是该支持。
+  zh_hk: 負外部性表示活動太多。正外部性表示活動太少。符號告訴你該徵稅還是該支持。
+- id: port
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A noisy night port
+  title_zh: 嘈杂的夜间港口
+  title_zh_hk: 嘈雜的夜間港口
+  setup_en: Ships save waiting time
+  setup_zh: 船节省等待
+  setup_zh_hk: 船節省等待
+  result_en: Residents lose sleep
+  result_zh: 居民失眠
+  result_zh_hk: 居民失眠
+  en: Night berths cut queue costs for ships. They also cut sleep for the block next door. Price the
+    berth with both costs or the night shift will over-expand.
+  zh: 夜间泊位减少船的排队成本。也减少隔壁街区的睡眠。给泊位定价时要计入两种成本，否则夜班会扩张过度。
+  zh_hk: 夜間泊位減少船的排隊成本。也減少隔壁街區的睡眠。給泊位定價時要計入兩種成本，否則夜班會擴張過度。
+- id: policy
+  visual: steps
+  seconds: 18
+  kicker: Steps
+  kicker_en: Steps
+  kicker_zh: 步骤
+  kicker_zh_hk: 步驟
+  title_en: A repair kit
+  title_zh: 一套修补
+  title_zh_hk: 一套修補
+  step1_en: Measure the external piece
+  step1_zh: 测量外部那一块
+  step1_zh_hk: 測量外部那一塊
+  step2_en: Put it on the bill
+  step2_zh: 把它写进账单
+  step2_zh_hk: 把它寫進賬單
+  step3_en: Recheck quantity
+  step3_zh: 再看数量
+  step3_zh_hk: 再看數量
+  en: Name the missing cost or benefit in money. Attach it with a tax, a fee, or a subsidy. Then look
+    again at how much of the activity remains.
+  zh: 用钱给缺少的成本或好处起名。用税、费或补贴贴上去。然后再看活动还剩多少。
+  zh_hk: 用錢給缺少的成本或好處起名。用稅、費或補貼貼上去。然後再看活動還剩多少。
+- id: gap
+  visual: big_number
+  seconds: 14
+  kicker: Number
+  kicker_en: Number
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: The unpriced slice
+  title_zh: 未定价的那片
+  title_zh_hk: 未定價的那片
+  unit_en: on the invoice
+  unit_zh: 发票上
+  unit_zh_hk: 發票上
+  caption_en: If it is missing, quantity is wrong.
+  caption_zh: 缺了，数量就错。
+  caption_zh_hk: 缺了，數量就錯。
+  number: '?'
+  en: You do not need a perfect number to see the direction. If a real cost is off the invoice, the
+    market quantity is not the social quantity.
+  zh: 不必有完美数字也能看出方向。若真实成本不在发票上，市场数量就不是社会数量。
+  zh_hk: 不必有完美數字也能看出方向。若真實成本不在發票上，市場數量就不是社會數量。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Name the missing party
+  title_zh: 说出缺席的那一方
+  title_zh_hk: 說出缺席的那一方
+  q1_en: Who is affected but not paying?
+  q1_zh: 谁受影响却没有付钱？
+  q1_zh_hk: 誰受影響卻沒有付錢？
+  q2_en: Is the spillover a cost or a benefit?
+  q2_zh: 外溢是成本还是收益？
+  q2_zh_hk: 外溢是成本還是收益？
+  en: 'Write private cost and social cost as two lines. If they differ, the market price is not the
+    full story. That closes the sitting: a price can clear, and still miss hidden action or a third
+    party.'
+  zh: 把私人成本和社会成本写成两行。两行不一致，市价就不是完整故事。这一单元到此结束：价格可以出清，却仍可能漏掉隐藏行动或第三者。
+  zh_hk: 把私人成本和社會成本寫成兩行。兩行不一致，市價就不是完整故事。這一單元到此結束：價格可以出清，卻仍可能漏掉隱藏行動或第三者。

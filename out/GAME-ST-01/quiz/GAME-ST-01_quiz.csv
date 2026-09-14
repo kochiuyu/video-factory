@@ -1,0 +1,5 @@
+﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
+1,GAME-ST-01,comprehension,25,What is a strategy in this game?,这一局里，策略是什么？,呢一局，策略係咩？,High or Low. What this game allows you to post. Not a mood.,高价或低价。这局允许你标上去的东西。不是一种脾气。,貴定平。呢一局准你標上去嘅嘢。唔係一種脾氣。
+2,GAME-ST-01,transfer,25,A vendor says I will match whatever they do. Is that a strategy here?,摊主说他们怎样我怎样。这里算策略吗？,檔主話佢點我點。呢度算唔算策略？,No. Each cart posts High or Low without seeing the other board.,不算。每辆车要在看不见对面牌子时就标高价或低价。,唔算。每架車要喺睇唔到對面牌嗰陣就標貴定平。
+3,GAME-ST-01,check,25,Is this phrase High or Low?,这句话是高价还是低价？,呢句係貴定平？,,,
+4,GAME-ST-01,transfer,25,"If not, did I change the game?",如果都不是，我是不是换局了？,若都唔係，我係咪換咗局？,,,

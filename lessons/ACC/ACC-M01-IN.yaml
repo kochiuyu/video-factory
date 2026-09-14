@@ -1,0 +1,68 @@
+id: ACC-M01-IN
+course: accounting
+course_en: Introductory Accounting
+course_zh: 会计入门
+course_zh_hk: 會計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: 'This sitting: the books'
+title_zh: 这一讲：账本
+title_zh_hk: 這一講：賬本
+objective_en: 'Say what this sitting will do: write one event so both sides still match.'
+objective_zh: 先说这一讲要做什么：把一件事项写下，两边仍然对齐。
+objective_zh_hk: 先說這一講要做什麼：把一件事項寫下，兩邊仍然對齊。
+glossary:
+- en: Open
+  zh: 开场
+  zh_hk: 開場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What three steps does this sitting take?
+  zh: 这一讲按哪三步走？
+  zh_hk: 這一講按哪三步走？
+  answer_en: Equation, journal line, then which clock dates the line.
+  answer_zh: 等式、分录，然后用哪只钟落日期。
+  answer_zh_hk: 等式、分錄，然後用哪隻鐘落日期。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: the books'
+  title_zh: 这一讲：账本
+  title_zh_hk: 這一講：賬本
+  en: Three shorts, one job. We write an event on the books. First the equation, then the journal
+    line, then the clock we date it with.
+  zh: 三条短片，一件事。我们把事项写进账。先等式，再分录，再问用哪一只钟落日期。
+  zh_hk: 三條短片，一件事。我們把事項寫進賬。先等式，再分錄，再問用哪一隻鐘落日期。
+  item1_en: Accounting equation
+  item1_zh: 会计等式
+  item1_zh_hk: 會計等式
+  item2_en: Debits and credits
+  item2_zh: 借方与贷方
+  item2_zh_hk: 借方與貸方
+  item3_en: Accrual versus cash
+  item3_zh: 权责发生与收付实现
+  item3_zh_hk: 權責發生與收付實現
+- id: takeaway
+  visual: title_card
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: the books'
+  title_zh: 这一讲：账本
+  title_zh_hk: 這一講：賬本
+  en: By the end you should keep the two sides equal, write the line, and date it to the work — not
+    only to the cash.
+  zh: 结束时，你应能让两边相等，写出那一行，并按完工而不是只按收付款来落日期。
+  zh_hk: 結束時，你應能讓兩邊相等，寫出那一行，並按完工而不是只按收付款來落日期。

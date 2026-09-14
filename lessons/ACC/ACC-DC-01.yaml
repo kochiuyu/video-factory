@@ -1,0 +1,120 @@
+id: ACC-DC-01
+course: accounting
+course_en: Introductory Accounting
+course_zh: 会计入门
+course_zh_hk: 會計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 66
+title_en: Debits and Credits
+title_zh: 借方与贷方
+title_zh_hk: 借方與貸方
+objective_en: 'Second step of the books unit: put the equation on a journal line as one debit and
+  one credit.'
+objective_zh: 记账单元的第二步：把等式落到分录上，一借一贷。
+objective_zh_hk: 記賬單元的第二步：把等式落到分錄上，一借一貸。
+glossary:
+- en: debit
+  zh: 借方
+  zh_hk: 借方
+  lock: true
+- en: credit
+  zh: 贷方
+  zh_hk: 貸方
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: In every journal entry, what must be true of debits and credits?
+  zh: 在每笔分录中，借方和贷方必须满足什么？
+  zh_hk: 在每筆分錄中，借方和貸方必須滿足什麼？
+  answer_en: Total debits equal total credits.
+  answer_zh: 借方合计等于贷方合计。
+  answer_zh_hk: 借方合計等於貸方合計。
+- id: Q2
+  type: transfer
+  en: The firm pays a supplier in cash. Which account is credited?
+  zh: 企业用现金付给供应商。贷记哪一个账户？
+  zh_hk: 企業用現金付給供應商。貸記哪一個賬戶？
+  answer_en: Cash. Cash on the right falls.
+  answer_zh: 现金。右边的现金减少。
+  answer_zh_hk: 現金。右邊的現金減少。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Debits and Credits
+  title_zh: 借方与贷方
+  title_zh_hk: 借方與貸方
+  en: The equation said both sides must move together. Debit and credit are only the two sides of
+    that one line. Neither word means good or bad.
+  zh: 等式要求两边一起动。借和贷只是那一行的左右两侧。两个词都不表示好坏。
+  zh_hk: 等式要求兩邊一起動。借和貸只是那一行的左右兩側。兩個詞都不表示好壞。
+- id: define
+  visual: definition_card
+  seconds: 18
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Two sides of a line
+  title_zh: 一行的两边
+  title_zh_hk: 一行的兩邊
+  formula: Debits = Credits
+  formula_en: Debits = Credits
+  formula_zh: 借方 = 贷方
+  formula_zh_hk: 借方 = 貸方
+  gloss_en: Left records a debit. Right records a credit.
+  gloss_zh: 左边记借，右边记贷。
+  gloss_zh_hk: 左邊記借，右邊記貸。
+  en: A debit is the left side of an account. A credit is the right side. Every journal entry needs
+    at least one of each, and the totals must match.
+  zh: 借方是账户的左边。贷方是账户的右边。每笔分录至少各有一个，而且金额必须相等。
+  zh_hk: 借方是賬戶的左邊。貸方是賬戶的右邊。每筆分錄至少各有一個，而且金額必須相等。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Buy supplies with cash
+  title_zh: 用现金买办公用品
+  title_zh_hk: 用現金買辦公用品
+  left_en: Debit supplies
+  left_zh: 借记用品
+  left_zh_hk: 借記用品
+  right_en: Credit cash
+  right_zh: 贷记现金
+  right_zh_hk: 貸記現金
+  en: Buying supplies with cash increases an asset on the left and decreases another asset on the
+    right. Debit supplies. Credit cash. The line still balances.
+  zh: 用现金买用品，左边一项资产增加，右边另一项资产减少。借记用品，贷记现金。这一行仍然平衡。
+  zh_hk: 用現金買用品，左邊一項資產增加，右邊另一項資產減少。借記用品，貸記現金。這一行仍然平衡。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Name both sides
+  title_zh: 两边都要说出
+  title_zh_hk: 兩邊都要說出
+  q1_en: Which account is debited?
+  q1_zh: 借记哪一个账户？
+  q1_zh_hk: 借記哪一個賬戶？
+  q2_en: Which account is credited for the same amount?
+  q2_zh: 贷记哪一个账户，金额是否相同？
+  q2_zh_hk: 貸記哪一個賬戶，金額是否相同？
+  en: Do not memorise “debit means increase.” Name the account on the left and the account on the
+    right, then check the amounts. Next we ask when that line is dated — when cash moves, or when
+    the work is done.
+  zh: 不要死记“借就是增加”。先说出左边是哪个账户、右边是哪个账户，再核对金额。下一讲问的是这一行记在哪一天——现金动的那天，还是活干完的那天。
+  zh_hk: 不要死記「借就是增加」。先說出左邊是哪個賬戶、右邊是哪個賬戶，再核對金額。下一講問的是這一行記在哪一天——現金動的那天，還是活幹完的那天。

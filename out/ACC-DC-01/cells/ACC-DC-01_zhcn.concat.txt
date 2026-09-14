@@ -1,0 +1,4 @@
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-DC-01/clips/zhcn/01_hook.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-DC-01/clips/zhcn/02_define.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-DC-01/clips/zhcn/03_example.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-DC-01/clips/zhcn/04_takeaway.mp4'

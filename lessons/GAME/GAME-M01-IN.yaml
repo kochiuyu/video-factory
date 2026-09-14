@@ -1,0 +1,116 @@
+id: GAME-M01-IN
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 96
+title_en: What a game is
+title_zh: 什么叫博弈
+title_zh_hk: 咩叫博弈
+objective_en: Show the two carts. Name what a game is. Then name players, strategies, and payoffs. Do not pick a price yet.
+objective_zh: 看见两辆车。说出什么叫博弈。再点出参与人、策略和报酬。先不要定价。
+objective_zh_hk: 見到兩架車。講出咩叫博弈。再點出參與人、策略同報酬。未好定價。
+glossary:
+- en: game
+  zh: 博弈
+  zh_hk: 博弈
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: When do we call this morning a game?
+  zh: 什么时候这个早晨叫博弈？
+  zh_hk: 幾時呢個朝早叫博弈？
+  answer_en: When what one cart takes home depends on the other cart's choice.
+  answer_zh: 当一辆车能带走多少，还取决于另一辆怎么选。
+  answer_zh_hk: 當一架車袋到幾多，仲取決於另一架點揀。
+- id: Q2
+  type: comprehension
+  en: What will this unit write down next?
+  zh: 接下来要写下来的是什么？
+  zh_hk: 跟住要寫低嘅係咩？
+  answer_en: That the two carts are in a game. Then players, strategies, and payoffs.
+  answer_zh: 两辆车已经在博弈里。然后是参与人、策略和报酬。
+  answer_zh_hk: 兩架車已經喺博弈入面。然後係參與人、策略同報酬。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: What a game is
+  title_zh: 什么叫博弈
+  title_zh_hk: 咩叫博弈
+  en: Look at this path at eight in the morning. Two coffee carts are already open. Customers walk past both prices and buy from the cheaper one. So if A cuts its price, B loses customers even if B does nothing.
+  zh: 看早上八点的这条路。两辆咖啡车已经开了。客人走过两个价，会买便宜的那辆。所以甲一降价，乙就会少客人，哪怕乙什么都没改。
+  zh_hk: 睇朝早八點呢條路。兩架咖啡車已經開咗。客人行過兩個價，會買平嗰架。所以甲一減價，乙就會少客人，就算乙乜都冇改。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: What we call a game
+  title_zh: 什么叫博弈
+  title_zh_hk: 咩叫博弈
+  formula: What you take home depends on someone else's choice
+  formula_en: What you take home depends on someone else's choice
+  formula_zh: 你能带走多少，还看别人怎么选
+  formula_zh_hk: 你袋到幾多，仲睇人哋點揀
+  gloss_en: That is all the word game means here.
+  gloss_zh: 这里说的博弈，就是这个意思。
+  gloss_zh_hk: 呢度講嘅博弈，就係呢個意思。
+  en: Here is the idea. When what you take home depends on someone else's choice, we call that a game. That is all the word means in this unit. It is not a board game, and it is not about who is clever. These two carts just cannot ignore each other.
+  zh: 核心就这一句。你能带走多少还得看别人怎么选，这种情况我们就叫博弈。这一单元里，这个词就这一个意思。不是棋类游戏，也不是看谁更聪明。只是这两辆车没法不理对方。
+  zh_hk: 核心就呢一句。你袋到幾多仲要睇人哋點揀，呢種情況我哋就叫博弈。呢一單元裏面，呢個詞就呢一個意思。唔係棋類遊戲，亦唔係睇邊個叻啲。淨係呢兩架車冇得唔理對面。
+- id: plan
+  visual: module_open
+  seconds: 26
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Three words to write down
+  title_zh: 要写下三个词
+  title_zh_hk: 要寫低三個詞
+  en: Here is what we will do. First we check that the two carts are already in a game. Then we name the players. Then we name the strategies, High or Low. Last we name the payoffs, what each pair of prices pays.
+  zh: 我们接下来做这件事。先确认两辆车已经在博弈里。再点出参与人。再点出策略，高价或低价。最后点出报酬，每一对价格能拿走多少。
+  zh_hk: 我哋跟住做呢件事。先確認兩架車已經喺博弈入面。再點出參與人。再點出策略，貴定平。最後點出報酬，每一對價可以攞幾多。
+  item1_en: They are already in a game
+  item1_zh: 它们已经在博弈里
+  item1_zh_hk: 佢哋已經喺博弈入面
+  item2_en: Players
+  item2_zh: 参与人
+  item2_zh_hk: 參與人
+  item3_en: Strategies
+  item3_zh: 策略
+  item3_zh_hk: 策略
+  item4_en: Payoffs
+  item4_zh: 报酬
+  item4_zh_hk: 報酬
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: They cannot ignore each other
+  title_zh: 它们没法不理对方
+  title_zh_hk: 佢哋冇得唔理對面
+  q1_en: What one cart takes home depends on the other.
+  q1_zh: 一辆车带走多少，还看另一辆。
+  q1_zh_hk: 一架車袋到幾多，都睇另一架。
+  q2_en: Don't pick a price yet.
+  q2_zh: 先不要定哪个价。
+  q2_zh_hk: 未好定邊個價。
+  en: That is all I need you to see in this opening. Both carts see the same morning. Neither sees the other board before it posts. Don't pick a price yet. Next we start with those two carts again.
+  zh: 开场我只要你看见这一点。两车看见的是同一个早晨。谁也没在亮牌前看见对面的牌子。先不要定价。接下来还是从这两辆车开始。
+  zh_hk: 開場我淨要你見到呢樣。兩架見到嘅係同一個朝早。邊個都未喺亮牌前見到對面嗰塊牌。未好定價。跟住都係由呢兩架車開始。

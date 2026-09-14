@@ -1,0 +1,290 @@
+id: AUD-SK-01
+course: auditing
+course_en: Introductory Auditing
+course_zh: 审计入门
+course_zh_hk: 審計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 192
+title_en: Professional Skepticism
+title_zh: 职业怀疑
+title_zh_hk: 職業懷疑
+objective_en: 'Close the judgment unit: question evidence instead of assuming management is honest
+  or dishonest.'
+objective_zh: 收住判断单元：追问证据，不要预设管理层诚实或不诚实。
+objective_zh_hk: 收住判斷單元：追問證據，不要預設管理層誠實或不誠實。
+glossary:
+- en: professional skepticism
+  zh: 职业怀疑
+  zh_hk: 職業懷疑
+  lock: true
+- en: audit evidence
+  zh: 审计证据
+  zh_hk: 審計證據
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Professional skepticism is mainly a habit of doing what?
+  zh: 职业怀疑主要是一种怎样的习惯？
+  zh_hk: 職業懷疑主要是一種怎樣的習慣？
+  answer_en: Questioning evidence rather than assuming the story is true.
+  answer_zh: 质疑证据，而不是假定故事为真。
+  answer_zh_hk: 質疑證據，而不是假定故事為真。
+- id: Q2
+  type: transfer
+  en: Inventory sheets match the general ledger. What else might a skeptical auditor still want?
+  zh: 盘点表与总账一致。保持怀疑的审计师可能还要什么？
+  zh_hk: 盤點表與總賬一致。保持懷疑的審計師可能還要什麼？
+  answer_en: Sight the goods, or test whether the sheets were copied from the ledger.
+  answer_zh: 去看实物，或测试盘点表是否从总账抄来。
+  answer_zh_hk: 去看實物，或測試盤點表是否從總賬抄來。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Professional Skepticism
+  title_zh: 职业怀疑
+  title_zh_hk: 職業懷疑
+  en: Materiality told us which misses matter. Skepticism tells us how to sit with the file. Do not
+    assume management is honest. Do not assume it is lying. Ask whether this document earned the trust
+    we are about to give it.
+  zh: 重要性告诉我们哪些遗漏要紧。职业怀疑告诉我们怎么面对档案。不要假定管理层诚实，也不要假定它在说谎。问这份文件配不配得上我们准备付出的信任。
+  zh_hk: 重要性告訴我們哪些遺漏要緊。職業懷疑告訴我們怎麼面對檔案。不要假定管理層誠實，也不要假定它在說謊。問這份文件配不配得上我們準備付出的信任。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Alert mind, not a fight
+  title_zh: 保持警觉，不是找架打
+  title_zh_hk: 保持警覺，不是找架打
+  formula: Question evidence, not motives first
+  formula_en: Question evidence, not motives first
+  formula_zh: 先质疑证据，不要先猜动机
+  formula_zh_hk: 先質疑證據，不要先猜動機
+  gloss_en: Neither trust nor distrust is the starting point.
+  gloss_zh: 起点既不是信任，也不是不信任。
+  gloss_zh_hk: 起點既不是信任，也不是不信任。
+  en: Professional skepticism is a questioning mind and a critical look at evidence. It is not an
+    accusation. It is the habit of asking what would change your mind.
+  zh: 职业怀疑是保持提问的头脑，并批判地看待证据。它不是指控。它是习惯问：什么会改变你的判断。
+  zh_hk: 職業懷疑是保持提問的頭腦，並批判地看待證據。它不是指控。它是習慣問：什麼會改變你的判斷。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A round-number sale
+  title_zh: 一笔整数销售
+  title_zh_hk: 一筆整數銷售
+  left_en: Invoice looks complete
+  left_zh: 发票看起来齐全
+  left_zh_hk: 發票看起來齊全
+  right_en: No shipping record that day
+  right_zh: 当天没有发货记录
+  right_zh_hk: 當天沒有發貨記錄
+  en: Management shows a large invoice dated the last day of the year. The paper is tidy. There is
+    no shipping note that day. Skepticism means you ask for the delivery evidence before you accept
+    the sale.
+  zh: 管理层出示一张年末大额发票。文件整齐。当天没有发货单。职业怀疑意味着，在接受这笔销售之前，先要发货证据。
+  zh_hk: 管理層出示一張年末大額發票。文件整齊。當天沒有發貨單。職業懷疑意味著，在接受這筆銷售之前，先要發貨證據。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Doubt the file first
+  title_zh: 先怀疑档案
+  title_zh_hk: 先懷疑檔案
+  formula: Question evidence, not motives first
+  formula_en: Question evidence, not motives first
+  formula_zh: 先质疑证据，不要先猜动机
+  formula_zh_hk: 先質疑證據，不要先猜動機
+  gloss_en: Skepticism is a method.
+  gloss_zh: 怀疑是一种方法。
+  gloss_zh_hk: 懷疑是一種方法。
+  en: Professional skepticism starts with the document, not with a theory about character. Ask what
+    would make this invoice false before you ask who benefits.
+  zh: 职业怀疑从文件开始，而不是从人格理论开始。先问什么会让这张发票为假，再问谁会受益。
+  zh_hk: 職業懷疑從文件開始，而不是從人格理論開始。先問什麼會讓這張發票為假，再問誰會受益。
+- id: steps
+  visual: steps
+  seconds: 18
+  kicker: Steps
+  kicker_en: Steps
+  kicker_zh: 步骤
+  kicker_zh_hk: 步驟
+  title_en: A three-beat check
+  title_zh: 三拍检验
+  title_zh_hk: 三拍檢驗
+  step1_en: What does the paper claim?
+  step1_zh: 文件主张什么？
+  step1_zh_hk: 文件主張什麼？
+  step2_en: What else would we see if it were true?
+  step2_zh: 若为真还应看到什么？
+  step2_zh_hk: 若為真還應看到什麼？
+  step3_en: Did we look for that?
+  step3_zh: 我们有没有去看？
+  step3_zh_hk: 我們有沒有去看？
+  en: Read the claim in one sentence. List the traces that claim should leave. Then see whether the
+    file contains those traces. Motive comes later.
+  zh: 用一句话读出主张。列出该主张应留下的痕迹。再看档案里有没有这些痕迹。动机放后面。
+  zh_hk: 用一句話讀出主張。列出該主張應留下的痕跡。再看檔案裏有沒有這些痕跡。動機放後面。
+- id: invoice
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A perfect supplier bill
+  title_zh: 一张完美的供应商账单
+  title_zh_hk: 一張完美的供應商賬單
+  setup_en: Round amount, new vendor
+  setup_zh: 整数金额，新供应商
+  setup_zh_hk: 整數金額，新供應商
+  result_en: Ask for the goods received note
+  result_zh: 索取收货单
+  result_zh_hk: 索取收貨單
+  en: The invoice is clean and large. The vendor is new. Skepticism does not accuse. It asks for the
+    receiving record and the payment trail before it signs off.
+  zh: 发票干净而且金额大。供应商是新的。怀疑并不等于指控。签字前先要收货记录和付款轨迹。
+  zh_hk: 發票乾淨而且金額大。供應商是新的。懷疑並不等于指控。簽字前先要收貨記錄和付款軌跡。
+- id: bias
+  visual: two_column
+  seconds: 16
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Two easy slips
+  title_zh: 两种容易的失误
+  title_zh_hk: 兩種容易的失誤
+  left_en: Trust a familiar CFO
+  left_zh: 信任熟悉的财务总监
+  left_zh_hk: 信任熟悉的財務總監
+  right_en: Chase a story too early
+  right_zh: 过早追一个故事
+  right_zh_hk: 過早追一個故事
+  en: Familiarity makes weak paper look fine. A colourful fraud story makes you skip the receiving
+    dock. Both are failures of method, not of kindness.
+  zh: 熟悉会让弱文件看起来没问题。精彩的舞弊故事会让你跳过收货台。两者都是方法失败，不是善良失败。
+  zh_hk: 熟悉會讓弱文件看起來沒問題。精彩的舞弊故事會讓你跳過收貨臺。兩者都是方法失敗，不是善良失敗。
+- id: tools
+  visual: three_column
+  seconds: 16
+  kicker: Three parts
+  kicker_en: Three parts
+  kicker_zh: 三部分
+  kicker_zh_hk: 三部分
+  title_en: Keep the habit
+  title_zh: 保持习惯
+  title_zh_hk: 保持習慣
+  col1_en: Confirm outside
+  col1_zh: 向外部询证
+  col1_zh_hk: 向外部詢證
+  col2_en: Inspect originals
+  col2_zh: 查看原件
+  col2_zh_hk: 查看原件
+  col3_en: Recalculate
+  col3_zh: 重新计算
+  col3_zh_hk: 重新計算
+  en: Outside confirmations puncture a tidy file. Originals beat scans. Recalculation catches the
+    quiet arithmetic. Use all three before you write “reasonable.”
+  zh: 外部询证能刺破整齐的档案。原件胜过扫描件。重算能抓住安静的算术。写下「合理」之前三种都要用。
+  zh_hk: 外部詢證能刺破整齊的檔案。原件勝過掃描件。重算能抓住安靜的算術。寫下「合理」之前三種都要用。
+- id: hours
+  visual: big_number
+  seconds: 14
+  kicker: Number
+  kicker_en: Number
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Time is a control
+  title_zh: 时间也是控制
+  title_zh_hk: 時間也是控制
+  unit_en: on odd items
+  unit_zh: 花在异常项目上
+  unit_zh_hk: 花在異常項目上
+  caption_en: Budget more where the story is neat.
+  caption_zh: 故事越整齐，预算越多。
+  caption_zh_hk: 故事越整齊，預算越多。
+  number: 2x
+  en: Neat packages deserve more hours, not fewer. Double the time on items that arrived complete,
+    signed, and early. That is skepticism in the plan.
+  zh: 整齐的包裹应得到更多小时，而不是更少。对完整、已签字、又提早到达的项目加倍时间。这就是计划里的怀疑。
+  zh_hk: 整齊的包裹應得到更多小時，而不是更少。對完整、已簽字、又提早到達的項目加倍時間。這就是計劃裏的懷疑。
+- id: end
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Year-end rush
+  title_zh: 年末赶工
+  title_zh_hk: 年末趕工
+  setup_en: Many late journal entries
+  setup_zh: 大量期末分录
+  setup_zh_hk: 大量期末分錄
+  result_en: Pick a sample and rebuild them
+  result_zh: 抽样并重做
+  result_zh_hk: 抽樣並重做
+  en: December is noisy. Rebuild a sample of late entries from source documents. If the rebuild fails,
+    do not soothe yourself with “busy season.”
+  zh: 十二月很吵。从原始单据重做一组晚到的分录。如果重做失败，不要用「旺季」安慰自己。
+  zh_hk: 十二月很吵。從原始單據重做一組晚到的分錄。如果重做失敗，不要用「旺季」安慰自己。
+- id: invoice
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A perfect supplier bill
+  title_zh: 一张完美的供应商账单
+  title_zh_hk: 一張完美的供應商賬單
+  setup_en: Round amount, new vendor
+  setup_zh: 整数金额，新供应商
+  setup_zh_hk: 整數金額，新供應商
+  result_en: Ask for the goods received note
+  result_zh: 索取收货单
+  result_zh_hk: 索取收貨單
+  en: The invoice is clean and large. The vendor is new. Skepticism does not accuse. It asks for the
+    receiving record and the payment trail before it signs off.
+  zh: 发票干净而且金额大。供应商是新的。怀疑并不等于指控。签字前先要收货记录和付款轨迹。
+  zh_hk: 發票乾淨而且金額大。供應商是新的。懷疑並不等于指控。簽字前先要收貨記錄和付款軌跡。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Ask what is missing
+  title_zh: 问还缺什么
+  title_zh_hk: 問還缺什麼
+  q1_en: What evidence would confirm this claim?
+  q1_zh: 什么证据能证实这一主张？
+  q1_zh_hk: 什麼證據能證實這一主張？
+  q2_en: What evidence is still absent?
+  q2_zh: 还缺哪一项证据？
+  q2_zh_hk: 還缺哪一項證據？
+  en: 'If a number is convenient for the person who prepared it, pull one more original source. That
+    closes the sitting: we know who we are, what we tested, what we kept, how large it can be, and
+    how hard to push.'
+  zh: 若这个数字对编制的人特别方便，再抽一份原始来源。这一单元到此结束：我们知道自己是谁、查了什么、留下什么、可以有多大、还该追多深。
+  zh_hk: 若這個數字對編製的人特別方便，再抽一份原始來源。這一單元到此結束：我們知道自己是誰、查了什麼、留下什麼、可以有多大、還該追多深。

@@ -1,0 +1,186 @@
+id: ACC-RR-01
+course: accounting
+course_en: Introductory Accounting
+course_zh: 会计入门
+course_zh_hk: 會計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 114
+title_en: Revenue Recognition
+title_zh: 收入确认
+title_zh_hk: 收入確認
+objective_en: 'Open the timing unit: book revenue when the promise is delivered, not when the contract
+  is signed.'
+objective_zh: 打开期间单元：承诺交付了才确认收入，不是合同一签就确认。
+objective_zh_hk: 打開期間單元：承諾交付了才確認收入，不是合同一簽就確認。
+glossary:
+- en: revenue recognition
+  zh: 收入确认
+  zh_hk: 收入確認
+  lock: true
+- en: performance obligation
+  zh: 履约义务
+  zh_hk: 履約義務
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: When is revenue recognised?
+  zh: 收入应在何时确认？
+  zh_hk: 收入應在何時確認？
+  answer_en: When the performance obligation is satisfied.
+  answer_zh: 在履约义务完成时。
+  answer_zh_hk: 在履約義務完成時。
+- id: Q2
+  type: transfer
+  en: A gym sells a one-year pass in January. Can it take all the fee as January revenue?
+  zh: 健身房一月出售年卡。能否把全部费用记为一月收入？
+  zh_hk: 健身房一月出售年卡。能否把全部費用記為一月收入？
+  answer_en: No. Recognise the fee as the months of access are provided.
+  answer_zh: 不能。应按提供使用权的月份确认。
+  answer_zh_hk: 不能。應按提供使用權的月份確認。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Revenue Recognition
+  title_zh: 收入确认
+  title_zh_hk: 收入確認
+  en: Last sitting taught the work clock. This sitting asks what “the work” is for a sale. A signed
+    contract is not yet revenue. Revenue waits until the firm does the thing it promised.
+  zh: 上一单元讲了完工的钟。这一讲问销售里的“完工”是什么。签了合同还不是收入。收入要等到企业把答应的事做完。
+  zh_hk: 上一單元講了完工的鐘。這一講問銷售裏的「完工」是什麼。簽了合同還不是收入。收入要等到企業把答應的事做完。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Deliver the promise
+  title_zh: 交付承诺
+  title_zh_hk: 交付承諾
+  formula: Revenue when the obligation is satisfied
+  formula_en: Revenue when the obligation is satisfied
+  formula_zh: 履行义务时确认收入
+  formula_zh_hk: 履行義務時確認收入
+  gloss_en: Cash received early is a liability until then.
+  gloss_zh: 提前收到的现金，在那之前是负债。
+  gloss_zh_hk: 提前收到的現金，在那之前是負債。
+  en: Revenue is recognised when the performance obligation is satisfied. That usually means the customer
+    has the good or has received the service. A deposit is not revenue yet.
+  zh: 履约义务完成时，才确认收入。通常是指客户拿到商品或已接受服务。订金还不是收入。
+  zh_hk: 履約義務完成時，才確認收入。通常是指客戶拿到商品或已接受服務。訂金還不是收入。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Course fee in September
+  title_zh: 九月收到的课费
+  title_zh_hk: 九月收到的課費
+  left_en: Cash in September
+  left_zh: 九月收到现金
+  left_zh_hk: 九月收到現金
+  right_en: Class delivered in October
+  right_zh: 十月才上课
+  right_zh_hk: 十月才上課
+  en: A school collects the fee in September for an October class. September books cash and a liability.
+    October, when the class is taught, turns that liability into revenue.
+  zh: 学校九月收到十月课程的学费。九月记下现金和负债。十月上完课，这笔负债才转为收入。
+  zh_hk: 學校九月收到十月課程的學費。九月記下現金和負債。十月上完課，這筆負債才轉為收入。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: The obligation test
+  title_zh: 履约测试
+  title_zh_hk: 履約測試
+  formula: Revenue when the obligation is satisfied
+  formula_en: Revenue when the obligation is satisfied
+  formula_zh: 履行义务时确认收入
+  formula_zh_hk: 履行義務時確認收入
+  gloss_en: Cash can arrive earlier or later.
+  gloss_zh: 现金可以更早或更晚到。
+  gloss_zh_hk: 現金可以更早或更晚到。
+  en: Revenue waits for the promise you made to the customer. If you have not delivered, cash in the
+    bank is still a liability, not a sale.
+  zh: 收入要等你对客户的承诺完成。若尚未交付，账上的现金仍是负债，不是销售收入。
+  zh_hk: 收入要等你對客戶的承諾完成。若尚未交付，賬上的現金仍是負債，不是銷售收入。
+- id: steps
+  visual: steps
+  seconds: 18
+  kicker: Steps
+  kicker_en: Steps
+  kicker_zh: 步骤
+  kicker_zh_hk: 步驟
+  title_en: When to book the sale
+  title_zh: 何时记销售
+  title_zh_hk: 何時記銷售
+  step1_en: Name the promise
+  step1_zh: 说出承诺
+  step1_zh_hk: 說出承諾
+  step2_en: See if it is done
+  step2_zh: 看是否已经完成
+  step2_zh_hk: 看是否已經完成
+  step3_en: Only then record revenue
+  step3_zh: 这时才记收入
+  step3_zh_hk: 這時才記收入
+  en: Write the promise in one line. Check whether that promise is already satisfied. Record revenue
+    only then. A deposit is not the finish line.
+  zh: 用一句话写出承诺。检查这句承诺是否已经完成。这时才记收入。订金不是终点。
+  zh_hk: 用一句話寫出承諾。檢查這句承諾是否已經完成。這時才記收入。訂金不是終點。
+- id: parts
+  visual: three_column
+  seconds: 16
+  kicker: Three parts
+  kicker_en: Three parts
+  kicker_zh: 三部分
+  kicker_zh_hk: 三部分
+  title_en: Cash is not the test
+  title_zh: 现金不是检验
+  title_zh_hk: 現金不是檢驗
+  col1_en: Invoice sent
+  col1_zh: 已开账单
+  col1_zh_hk: 已開賬單
+  col2_en: Cash received
+  col2_zh: 已收现金
+  col2_zh_hk: 已收現金
+  col3_en: Promise kept
+  col3_zh: 承诺已履行
+  col3_zh_hk: 承諾已履行
+  en: You can send an invoice early. You can collect cash early. Neither fact books revenue by itself.
+    The test is whether the promise was kept.
+  zh: 你可以提早开票。你可以提早收款。这两件事本身都不能记收入。检验是承诺有没有被履行。
+  zh_hk: 你可以提早開票。你可以提早收款。這兩件事本身都不能記收入。檢驗是承諾有沒有被履行。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Ask what was delivered
+  title_zh: 先问交付了什么
+  title_zh_hk: 先問交付了什麼
+  q1_en: Has the promised work been done?
+  q1_zh: 承诺的工作做完了吗？
+  q1_zh_hk: 承諾的工作做完了嗎？
+  q2_en: If not, is the cash still a liability?
+  q2_zh: 若没有，这笔现金是否仍是负债？
+  q2_zh_hk: 若沒有，這筆現金是否仍是負債？
+  en: Do not book revenue from a signature or a cash transfer alone. Book it when the customer has
+    what was promised. Next we put the cost of that same story in the same period.
+  zh: 不要单凭签名或转账就记收入。要等客户拿到所承诺的东西。下一讲把同一笔生意的成本放进同一期。
+  zh_hk: 不要單憑簽名或轉賬就記收入。要等客戶拿到所承諾的東西。下一講把同一筆生意的成本放進同一期。

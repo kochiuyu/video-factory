@@ -1,0 +1,2 @@
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-M01-IN/clips/en-en-zh/01_hook.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-M01-IN/clips/en-en-zh/02_takeaway.mp4'

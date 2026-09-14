@@ -1,0 +1,20 @@
+id: GAME-M06
+kind: module
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+duration_target_s: 528
+title_en: The same tools at work
+title_zh: 同一套工具，在公司里
+title_zh_hk: 同一套工具，喺公司度
+objective_en: Map dominance, coordination, chicken, and mixed strategy onto pricing, standards, scarce slots, and audit.
+objective_zh: 把占优、协调、斗鸡和混合，对到定价、标准、稀缺名额和抽查。
+objective_zh_hk: 將佔優、協調、鬥雞同混合，對到定價、標準、稀缺名額同抽查。
+lessons:
+- GAME-M06-IN
+- GAME-APP-01
+- GAME-APP-02
+- GAME-APP-03
+- GAME-APP-04
+- GAME-M06-OUT

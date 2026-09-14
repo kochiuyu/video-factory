@@ -1,0 +1,20 @@
+id: GAME-M01
+kind: module
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+duration_target_s: 452
+title_en: What a game is
+title_zh: 什么叫博弈
+title_zh_hk: 咩叫博弈
+objective_en: Name players, strategies, and payoffs that depend on the profile — before asking what each person would pick.
+objective_zh: 先说出参与人、策略，以及随策略组合而变的报酬——再问每个人会选什么。
+objective_zh_hk: 先說出參與人、策略，以及隨策略組合而變的報酬——再問每個人會選什麼。
+lessons:
+- GAME-M01-IN
+- GAME-GI-01
+- GAME-PL-01
+- GAME-ST-01
+- GAME-PO-01
+- GAME-M01-OUT

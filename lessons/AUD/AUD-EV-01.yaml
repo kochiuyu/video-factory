@@ -1,0 +1,165 @@
+id: AUD-EV-01
+course: auditing
+course_en: Introductory Auditing
+course_zh: 审计入门
+course_zh_hk: 審計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 96
+title_en: Audit Evidence
+title_zh: 审计证据
+title_zh_hk: 審計證據
+objective_en: 'Close the process unit: keep evidence that is independent, original, and close to the
+  claim.'
+objective_zh: 收住过程单元：留下独立的、原始的、靠近主张的证据。
+objective_zh_hk: 收住過程單元：留下獨立的、原始的、靠近主張的證據。
+glossary:
+- en: audit evidence
+  zh: 审计证据
+  zh_hk: 審計證據
+  lock: true
+- en: sufficiency
+  zh: 充分性
+  zh_hk: 充分性
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Appropriate evidence is mainly about what?
+  zh: 适当的证据主要指什么？
+  zh_hk: 適當的證據主要指什麼？
+  answer_en: Quality — independent source, original document, test close to the claim.
+  answer_zh: 质量——独立来源、原始文件、测试贴近主张。
+  answer_zh_hk: 質量——獨立來源、原始文件、測試貼近主張。
+- id: Q2
+  type: transfer
+  en: To test year-end inventory, which is stronger — the client’s count sheet or the auditor’s own
+    test count?
+  zh: 测试年末存货时，客户的盘点表和审计师亲自抽盘，哪一个更强？
+  zh_hk: 測試年末存貨時，客戶的盤點表和審計師親自抽盤，哪一個更強？
+  answer_en: The auditor’s own test count. It is independent of the client’s paper.
+  answer_zh: 审计师亲自抽盘。它独立于客户的纸张。
+  answer_zh_hk: 審計師親自抽盤。它獨立於客戶的紙張。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Audit Evidence
+  title_zh: 审计证据
+  title_zh_hk: 審計證據
+  en: We have a person who can speak and a firm that cannot hide every error in one pair of hands.
+    What goes in the file? Prefer evidence that is independent, original, and close to the claim.
+  zh: 开口的人有了，企业也不能把错误全藏在一双手里。档案里放什么？优先放独立的、原始的、靠近主张的证据。
+  zh_hk: 開口的人有了，企業也不能把錯誤全藏在一雙手裏。檔案裏放什麼？優先放獨立的、原始的、靠近主張的證據。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Enough, and good enough
+  title_zh: 既要够，也要好
+  title_zh_hk: 既要夠，也要好
+  formula: Sufficient and appropriate evidence
+  formula_en: Sufficient and appropriate evidence
+  formula_zh: 充分且适当的证据
+  formula_zh_hk: 充分且適當的證據
+  gloss_en: Quantity is sufficiency. Quality is appropriateness.
+  gloss_zh: 数量是充分性。质量是适当性。
+  gloss_zh_hk: 數量是充分性。質量是適當性。
+  en: Evidence must be sufficient in quantity and appropriate in quality. Quality rises when the source
+    is independent, the document is original, and the test sits close to the claim.
+  zh: 证据必须数量充分、质量适当。来源独立、文件原始、测试贴近主张时，质量就上升。
+  zh_hk: 證據必須數量充分、質量適當。來源獨立、文件原始、測試貼近主張時，質量就上升。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Bank cash
+  title_zh: 银行存款
+  title_zh_hk: 銀行存款
+  left_en: Client printout of the ledger
+  left_zh: 客户自己打印的明细账
+  left_zh_hk: 客戶自己打印的明細賬
+  right_en: Reply from the bank
+  right_zh: 银行的回函
+  right_zh_hk: 銀行的回函
+  en: A ledger printout from the client is easy to get and easy to edit. A confirmation sent back
+    by the bank is independent. For cash, the bank reply is the stronger piece.
+  zh: 客户自己的明细账好拿，也好改。银行寄回的询证函是独立的。对现金来说，银行回函更硬。
+  zh_hk: 客戶自己的明細賬好拿，也好改。銀行寄回的詢證函是獨立的。對現金來說，銀行回函更硬。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Two tests together
+  title_zh: 两个检验一起
+  title_zh_hk: 兩個檢驗一起
+  formula: Sufficient and appropriate evidence
+  formula_en: Sufficient and appropriate evidence
+  formula_zh: 充分且适当的证据
+  formula_zh_hk: 充分且適當的證據
+  gloss_en: Volume is not enough.
+  gloss_zh: 数量不够。
+  gloss_zh_hk: 數量不夠。
+  en: Sufficiency is how much. Appropriateness is how good. A pile of weak emails does not replace
+    one bank confirmation.
+  zh: 充分是多少。适当是多好。一堆无力的电邮，换不来一封银行询证。
+  zh_hk: 充分是多少。適當是多好。一堆無力的電郵，換不來一封銀行詢證。
+- id: sources
+  visual: three_column
+  seconds: 16
+  kicker: Three parts
+  kicker_en: Three parts
+  kicker_zh: 三部分
+  kicker_zh_hk: 三部分
+  title_en: Where evidence lives
+  title_zh: 证据在哪里
+  title_zh_hk: 證據在哪裏
+  col1_en: From the client
+  col1_zh: 来自客户
+  col1_zh_hk: 來自客戶
+  col2_en: From outsiders
+  col2_zh: 来自外部
+  col2_zh_hk: 來自外部
+  col3_en: From the auditor
+  col3_zh: 来自审计师
+  col3_zh_hk: 來自審計師
+  en: Client files are convenient and biased. Outside confirmations are slower and stronger. Auditor-made
+    tests sit in between. Rank the source, not the font size.
+  zh: 客户档案方便，也带偏见。外部询证更慢，也更强。审计师自己做的测试介于两者之间。先排来源，不要看字体大小。
+  zh_hk: 客戶檔案方便，也帶偏見。外部詢證更慢，也更強。審計師自己做的測試介於兩者之間。先排來源，不要看字體大小。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Rank the source
+  title_zh: 给来源排序
+  title_zh_hk: 給來源排序
+  q1_en: Who produced this document?
+  q1_zh: 这份文件是谁做的？
+  q1_zh_hk: 這份文件是誰做的？
+  q2_en: Could that person change it unnoticed?
+  q2_zh: 那个人能否悄悄改掉它？
+  q2_zh_hk: 那個人能否悄悄改掉它？
+  en: A photocopy of management’s slide is weak. A bank confirmation is stronger. That closes the
+    process sitting. Next sitting asks how large a miss can be, and how hard we should push on what
+    we were handed.
+  zh: 管理层幻灯片的复印件很弱。银行询证更强。过程这一单元到此结束。下一单元问：漏报可以有多大，以及对递过来的材料该追问到什么地步。
+  zh_hk: 管理層幻燈片的複印件很弱。銀行詢證更強。過程這一單元到此結束。下一單元問：漏報可以有多大，以及對遞過來的材料該追問到什麼地步。

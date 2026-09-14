@@ -1,0 +1,122 @@
+[
+  {
+    "lesson_id": "GAME-DOM-01",
+    "beat_id": "hook",
+    "language": "en",
+    "text": "Look at cart A. High or Low. Before you guess what B will do, ask a colder question. Is there a line A would never post, because the other line pays more either way?",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-DOM-01\\audio\\en\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-DOM-01",
+    "beat_id": "define",
+    "language": "en",
+    "text": "Here is the idea. Low dominates High for A if Low pays A more when B posts High, and Low still pays A more when B posts Low. Then High is dominated. A can delete it. You do not need to know what B will do.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-DOM-01\\audio\\en\\define.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-DOM-01",
+    "beat_id": "matrix",
+    "language": "en",
+    "text": "Read A's numbers only. If B posts High, A gets 3 from High and 5 from Low. If B posts Low, A gets 0 from High and 1 from Low. Five beats three. One beats zero. Low dominates High for A.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-DOM-01\\audio\\en\\matrix.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-DOM-01",
+    "beat_id": "example",
+    "language": "en",
+    "text": "People stop after one column. Do not. Low must beat High against every board B might post. One column is a hint. Both columns is a dominant strategy.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-DOM-01\\audio\\en\\example.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-DOM-01",
+    "beat_id": "takeaway",
+    "language": "en",
+    "text": "Ask both questions. If both answers are yes, Low dominates High for A, and High is dominated. Next we cross High out and look at the table again.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-DOM-01\\audio\\en\\takeaway.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-DOM-01",
+    "beat_id": "hook",
+    "language": "zh_cn",
+    "text": "看甲车。高价或低价。先不要猜乙会怎么标。先问一句更冷的。有没有一条甲绝不会标，因为另一条无论怎样都赚得更多？",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-DOM-01\\audio\\zh_cn\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-DOM-01",
+    "beat_id": "define",
+    "language": "zh_cn",
+    "text": "核心就这一句。乙标高价时，甲标低价更赚；乙标低价时，甲标低价还是更赚。低价就占优于高价。高价就被占优。甲可以删。你不必知道乙会怎么做。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-DOM-01\\audio\\zh_cn\\define.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-DOM-01",
+    "beat_id": "matrix",
+    "language": "zh_cn",
+    "text": "只读甲的数字。乙标高价，甲标高价得 3，标低价得 5。乙标低价，甲标高价得 0，标低价得 1。五比三大。一比零大。甲的低价占优于高价。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-DOM-01\\audio\\zh_cn\\matrix.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-DOM-01",
+    "beat_id": "example",
+    "language": "zh_cn",
+    "text": "有人看完一列就停。不要停。低价必须在乙可能标的每一块牌子上都赢过高价。一列只是线索。两列才是占优策略。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-DOM-01\\audio\\zh_cn\\example.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-DOM-01",
+    "beat_id": "takeaway",
+    "language": "zh_cn",
+    "text": "两问都要问。两问都是，甲的低价就占优于高价，高价就被占优。接下来把高价划掉，再看这张表。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-DOM-01\\audio\\zh_cn\\takeaway.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-DOM-01",
+    "beat_id": "hook",
+    "language": "zh_hk",
+    "text": "睇甲車。貴定平。未好估乙會點標。先問一句更冷嘅。有冇一條甲絕唔會標，因為另一條無論點都賺多啲？",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-DOM-01\\audio\\zh_hk\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-DOM-01",
+    "beat_id": "define",
+    "language": "zh_hk",
+    "text": "核心就呢一句。乙標貴嗰陣，甲標平更賺；乙標平嗰陣，甲標平都係更賺。平就佔優過貴。貴就被佔優。甲可以刪。你唔使知乙會點做。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-DOM-01\\audio\\zh_hk\\define.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-DOM-01",
+    "beat_id": "matrix",
+    "language": "zh_hk",
+    "text": "淨讀甲嘅數字。乙標貴，甲標貴得 3，標平得 5。乙標平，甲標貴得 0，標平得 1。五比三大。一比零大。甲嘅平佔優過貴。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-DOM-01\\audio\\zh_hk\\matrix.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-DOM-01",
+    "beat_id": "example",
+    "language": "zh_hk",
+    "text": "有人睇完一列就停。唔好停。平一定要喺乙可能標嘅每一塊牌都贏過貴。一列淨係線索。兩列先至係佔優策略。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-DOM-01\\audio\\zh_hk\\example.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-DOM-01",
+    "beat_id": "takeaway",
+    "language": "zh_hk",
+    "text": "兩問都要問。兩問都係，甲嘅平就佔優過貴，貴就被佔優。跟住將貴劃走，再睇呢張表。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-DOM-01\\audio\\zh_hk\\takeaway.mp3",
+    "with_timestamps": true
+  }
+]

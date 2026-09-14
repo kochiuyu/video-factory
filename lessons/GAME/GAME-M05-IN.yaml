@@ -1,0 +1,116 @@
+id: GAME-M05-IN
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 96
+title_en: When no cell is Nash
+title_zh: 当没有一格是纳什
+title_zh_hk: 當冇一格係納什
+objective_en: Open. Last unit tipped among two Nash cells. This unit a table where every cell has someone who wants to move.
+objective_zh: 打开。上一单元是在两格纳什里推。这一单元是一张每一格都有人想动的表。
+objective_zh_hk: 打開。上一單元係喺兩格納什度推。呢一單元係一張每一格都有人想郁嘅表。
+glossary:
+- en: Nash equilibrium
+  zh: 纳什均衡
+  zh_hk: 納什均衡
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What did the last unit use to tip a cell?
+  zh: 上一单元用什么推向一格？
+  zh_hk: 上一單元用咩推去一格？
+  answer_en: A landmark or a sentence, on tables that already had two Nash cells.
+  answer_zh: 地标或一句话，用在已经有两格纳什的表上。
+  answer_zh_hk: 地標定一句，用喺已經有兩格納什嘅表。
+- id: Q2
+  type: comprehension
+  en: What is new in this unit?
+  zh: 这一单元新在哪里？
+  zh_hk: 呢一單元新喺邊？
+  answer_en: A payoff table where no cell is Nash.
+  answer_zh: 一张一格纳什都没有的报酬表。
+  answer_zh_hk: 一張一格納什都冇嘅報酬表。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: When no cell is Nash
+  title_zh: 当没有一格是纳什
+  title_zh_hk: 當冇一格係納什
+  en: Last sitting a hint could tip the wide path. This sitting a new stall opens. It copies your side and steals the queue. Same reading rule. Every cell will have someone who wants to move.
+  zh: 上一讲，一个提示推得动宽路。这一讲多了一辆仿摊。它跟你停同一侧，抢走排队。读法不变。每一格都会有人想动。
+  zh_hk: 上一講，一個提示推得動闊路。呢一講多咗一架仿攤。佢跟你停同一側，搶走行隊。讀法不變。每一格都會有人想郁。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Same page, a rival who copies
+  title_zh: 同一页，一个会抄的对手
+  title_zh_hk: 同一頁，一個會抄嘅對手
+  formula: A is still the row. First number is still A.
+  formula_en: A is still the row. First number is still A.
+  formula_zh: 甲还是行。头一个数字还是甲。
+  formula_zh_hk: 甲都係行。第一個數字都係甲。
+  gloss_en: Deletion will not help. Hints will not help.
+  gloss_zh: 删除帮不上。提示也帮不上。
+  gloss_zh_hk: 刪除幫唔到。提示都幫唔到。
+  en: Here is the idea. We still read the payoff table the same way. What is new is the other player. The copycat wants to match you. You want to mismatch. No cell will be mutual best response.
+  zh: 核心就这一句。报酬表还是那样读。新的是对面那个人。仿摊想跟你停一起。你想错开。没有一格会是彼此的最优反应。
+  zh_hk: 核心就呢一句。報酬表都係噉讀。新嘅係對面嗰個人。仿攤想跟你停一齊。你想錯開。冇一格會係彼此嘅最佳回應。
+- id: plan
+  visual: module_open
+  seconds: 26
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Four parts from here
+  title_zh: 从这里往后四部分
+  title_zh_hk: 由呢度去四部分
+  en: Here is what we will do. First we check every cell and see that someone would move. Then a mix, Left some mornings and Right the rest. Then best response to that mix. Last a mix that the copycat cannot exploit.
+  zh: 我们接下来做这件事。先逐格看，看见每一格都有人会动。再看混合，有些早晨停左，其余停右。再看对这个混合的最优反应。最后看一个仿摊钻不到空子的混合。
+  zh_hk: 我哋跟住做呢件事。先逐格睇，見到每一格都有人會郁。再睇混合，有啲朝早停左，其餘停右。再睇對呢個混合嘅最佳回應。最後睇一個仿攤鑽唔到空位嘅混合。
+  item1_en: No cell is Nash
+  item1_zh: 没有一格是纳什
+  item1_zh_hk: 冇一格係納什
+  item2_en: A mix of mornings
+  item2_zh: 把早晨混起来
+  item2_zh_hk: 將朝早撈埋
+  item3_en: Best response to a mix
+  item3_zh: 对混合的最优反应
+  item3_zh_hk: 對混合嘅最佳回應
+  item4_en: A mix the copycat cannot exploit
+  item4_zh: 仿摊钻不到空子的混合
+  item4_zh_hk: 仿攤鑽唔到空位嘅混合
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Do not look for a landmark first
+  title_zh: 先不要找地标
+  title_zh_hk: 未好搵地標
+  q1_en: Same reading rule as last sitting.
+  q1_zh: 读法和上一讲一样。
+  q1_zh_hk: 讀法同上一講一樣。
+  q2_en: This table will not mark a Nash cell.
+  q2_zh: 这张表标不出一格纳什。
+  q2_zh_hk: 呢張表標唔出一格納什。
+  en: That is all I need you to see in this opening. Keep the payoff table. Do not reach for shade or a sentence first. Next we read every cell and watch someone move.
+  zh: 开场我只要你看见这一点。把报酬表留下。先不要伸手去找荫或一句话。接下来逐格读，看每一格都有人会动。
+  zh_hk: 開場我淨要你見到呢樣。將報酬表留低。未好伸手去搵蔭定一句。跟住逐格讀，睇每一格都有人會郁。

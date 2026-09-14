@@ -1,0 +1,129 @@
+id: GAME-APP-03
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: One scarce slot
+title_zh: 一个稀缺名额
+title_zh_hk: 一個稀缺名額
+objective_en: One kiosk, one client, one offer deadline. Chicken. Two Nash that disagree. I will Hold is a grab.
+objective_zh: 一个摊位、一个客户、一个截止录用。斗鸡。两格纳什意见相反。“我占住”是在抢。
+objective_zh_hk: 一個攤位、一個客戶、一個截止錄用。鬥雞。兩格納什意見相反。「我佔住」係喺度搶。
+glossary:
+- en: chicken
+  zh: 斗鸡
+  zh_hk: 鬥雞
+  lock: true
+quiz:
+- id: Q1
+  type: transfer
+  en: Two brands want the only mall kiosk. What tool first?
+  zh: 两个品牌抢商场里唯一的摊位。先用哪样工具？
+  zh_hk: 兩個品牌搶商場入面唯一嘅攤位。先用邊樣工具？
+  answer_en: Best response, then Nash. Expect two cells that disagree.
+  answer_zh: 先最优反应，再纳什。会看到意见相反的两格。
+  answer_zh_hk: 先最佳回應，再納什。會見到意見相反嘅兩格。
+- id: Q2
+  type: transfer
+  en: Why is I will not yield a weak sentence here?
+  zh: 这里为什么“我不让”是弱的一句话？
+  zh_hk: 呢度點解「我唔讓」係弱嘅一句？
+  answer_en: Each firm likes a different Nash cell. The sentence tries to grab the slot.
+  answer_zh: 每家喜欢的纳什格不同。这句话是在抢名额。
+  answer_zh_hk: 每間鍾意嘅納什格唔同。呢句係喺度搶名額。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Only one kiosk
+  title_zh: 只有一个摊位
+  title_zh_hk: 得一個攤位
+  en: Two brands want the only kiosk in the mall. Each can Push for it or Yield and take a worse corner. They cannot both sit in that kiosk. That is the gate.
+  zh: 两个品牌要商场里唯一的摊位。可以抢，也可以让，去差一些的角落。两家不能一起坐进那个摊位。这就是门口。
+  zh_hk: 兩個品牌要商場入面唯一嘅攤位。可以搶，亦可以讓，去差啲嘅角落。兩間唔可以一齊坐入嗰個攤位。呢個就係門口。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Two Nash, one slot
+  title_zh: 两格纳什，一个名额
+  title_zh_hk: 兩格納什，一個名額
+  formula: Each firm likes a different Nash cell
+  formula_en: Each firm likes a different Nash cell
+  formula_zh: 每家喜欢的纳什格不一样
+  formula_zh_hk: 每間鍾意嘅納什格唔一樣
+  gloss_en: Both Push is the crash. The lease dies.
+  gloss_zh: 都抢就是撞上。租约黄了。
+  gloss_zh_hk: 都搶就係撞埋。租約黃咗。
+  en: Here is the idea. One firm Pushes and one Yields. That cell is Nash. The other way around is Nash too. Both Push and the mall walks away. Talk that says I will not yield is a grab, not a landmark.
+  zh: 核心就这一句。一家抢、一家让，那一格是纳什。反过来也是纳什。都抢，商场就走开。说我不让，是在抢，不是地标。
+  zh_hk: 核心就呢一句。一間搶、一間讓，嗰一格係納什。調轉都係納什。都搶，商場就行開。講我唔讓，係喺度搶，唔係地標。
+- id: example
+  visual: example
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: An exploding offer
+  title_zh: 限时录用
+  title_zh_hk: 限時錄用
+  setup_en: Two firms want one graduate. Each can rush the deadline or wait.
+  setup_zh: 两家公司抢一个毕业生。可以催截止，也可以等。
+  setup_zh_hk: 兩間公司搶一個畢業生。可以催截止，亦可以等。
+  result_en: Both rush, the candidate walks. One waits, the other fills the slot.
+  result_zh: 都催，学生走开。一家等，另一家占到名额。
+  result_zh_hk: 都催，學生行開。一間等，另一間佔到名額。
+  en: Two firms, one graduate, an exploding offer. Both rush and the candidate walks. One waits and the other fills the slot. Same chicken table. The deadline is Hold.
+  zh: 两家公司，一个毕业生，一个限时录用。都催，人就走。一家等，另一家占到名额。还是斗鸡那张表。截止就是占住。
+  zh_hk: 兩間公司，一個畢業生，一個限時錄用。都催，人就走。一間等，另一間佔到名額。都係鬥雞嗰張表。截止就係佔住。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Slots, and clients
+  title_zh: 名额，和客户
+  title_zh_hk: 名額，同客戶
+  left_en: Two airlines, one landing slot this hour.
+  left_zh: 两家航空，这个小时只有一个降落位。
+  left_zh_hk: 兩間航空，呢個鐘得一個降落位。
+  right_en: Two agencies, one client who will hire only one.
+  right_zh: 两家代理，客户只会雇一家。
+  right_zh_hk: 兩間代理，客戶淨會請一間。
+  en: A landing slot and a client who will hire once are the same gate. Shade does not say who Yields. A sentence I will Hold tries to grab the better Nash cell.
+  zh: 一个降落位，和一个只雇一次的客户，就是同一道门。荫不会告诉谁该让。一句我占住，是在抢更好的那一格纳什。
+  zh_hk: 一個降落位，同一個淨請一次嘅客戶，就係同一度門。蔭唔會話邊個該讓。一句我佔住，係喺度搶更好嗰一格納什。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Nash is not match here
+  title_zh: 这里纳什不是跟上
+  title_zh_hk: 呢度納什唔係跟上
+  q1_en: One slot is chicken.
+  q1_zh: 一个名额就是斗鸡。
+  q1_zh_hk: 一個名額就係鬥雞。
+  q2_en: I will Hold is a grab.
+  q2_zh: “我占住”是在抢。
+  q2_zh_hk: 「我佔住」係喺度搶。
+  en: Mark two Nash cells that disagree. Do not treat talk as cheap. Next an audit that cannot sit on one side every morning.
+  zh: 标出意见相反的两格纳什。不要把话当便宜。接下来一次不能天天停在同一侧的抽查。
+  zh_hk: 標出意見相反嘅兩格納什。唔好將話當平。跟住一次唔可以日日停同一側嘅抽查。

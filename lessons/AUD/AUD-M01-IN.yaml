@@ -1,0 +1,69 @@
+id: AUD-M01-IN
+course: auditing
+course_en: Introductory Auditing
+course_zh: 审计入门
+course_zh_hk: 審計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: 'This sitting: the audit process'
+title_zh: 这一讲：审计怎么走
+title_zh_hk: 這一講：審計怎麼走
+objective_en: 'Name the path: the person who signs, the duties inside the firm, then what goes in
+  the file.'
+objective_zh: 先说出路径：签字的人，企业内部的职责，然后档案里放什么。
+objective_zh_hk: 先說出路徑：簽字的人，企業內部的職責，然後檔案裏放什麼。
+glossary:
+- en: Open
+  zh: 开场
+  zh_hk: 開場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What three stops does this sitting make?
+  zh: 这一讲停哪三站？
+  zh_hk: 這一講停哪三站？
+  answer_en: Independence, internal control, then evidence.
+  answer_zh: 独立、内部控制，然后证据。
+  answer_zh_hk: 獨立、內部控制，然後證據。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: the audit process'
+  title_zh: 这一讲：审计怎么走
+  title_zh_hk: 這一講：審計怎麼走
+  en: Three shorts. First whether the auditor can speak. Then whether one person can both create and
+    hide an error. Then what evidence we keep.
+  zh: 三条短片。先问审计师能不能开口。再问同一人能不能既制造错误又藏住它。然后我们留下什么证据。
+  zh_hk: 三條短片。先問審計師能不能開口。再問同一人能不能既製造錯誤又藏住它。然後我們留下什麼證據。
+  item1_en: Auditor independence
+  item1_zh: 审计独立性
+  item1_zh_hk: 審計獨立性
+  item2_en: Internal control
+  item2_zh: 内部控制
+  item2_zh_hk: 內部控制
+  item3_en: Audit evidence
+  item3_zh: 审计证据
+  item3_zh_hk: 審計證據
+- id: takeaway
+  visual: title_card
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: the audit process'
+  title_zh: 这一讲：审计怎么走
+  title_zh_hk: 這一講：審計怎麼走
+  en: By the end you should know who you are, what you test inside the firm, and what is strong enough
+    to keep.
+  zh: 结束时，你应知道自己是谁、在企业里查什么、什么够格留下。
+  zh_hk: 結束時，你應知道自己是誰、在企業裏查什麼、什麼夠格留下。

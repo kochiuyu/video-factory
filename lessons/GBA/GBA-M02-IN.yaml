@@ -1,0 +1,68 @@
+id: GBA-M02-IN
+course: gba
+course_en: Greater Bay Area
+course_zh: 粤港澳大湾区
+course_zh_hk: 粵港澳大灣區
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: 'This sitting: who does which step'
+title_zh: 这一讲：谁做哪一步
+title_zh_hk: 這一講：誰做哪一步
+objective_en: Assign a GBA task by opportunity cost, draw the chain, then say when plants become a
+  cluster.
+objective_zh: 按机会成本给大湾区分工，画出链条，再说工厂何时变成集群。
+objective_zh_hk: 按機會成本給大灣區分工，畫出鏈條，再說工廠何時變成集群。
+glossary:
+- en: Open
+  zh: 开场
+  zh_hk: 開場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What three pictures does this sitting draw?
+  zh: 这一讲画哪三张图？
+  zh_hk: 這一講畫哪三張圖？
+  answer_en: Who should do the task, the order of steps, then the reused people and parts.
+  answer_zh: 谁该做这项任务、步骤顺序、然后是被重复使用的人和零件。
+  answer_zh_hk: 誰該做這項任務、步驟順序、然後是被重複使用的人和零件。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: who does which step'
+  title_zh: 这一讲：谁做哪一步
+  title_zh_hk: 這一講：誰做哪一步
+  en: The map is done. This sitting is the work. Which city gives up less. In what order the steps
+    run. Whether the plants actually reuse people and parts.
+  zh: 地图讲完了。这一讲是干活。哪座城放弃得更少。步骤按什么顺序。这些厂是否真的在共用人和零件。
+  zh_hk: 地圖講完了。這一講是幹活。哪座城放棄得更少。步驟按什麼順序。這些廠是否真的在共用人和零件。
+  item1_en: City comparative advantage
+  item1_zh: 城市比较优势
+  item1_zh_hk: 城市比較優勢
+  item2_en: Supply chains
+  item2_zh: 供应链
+  item2_zh_hk: 供應鏈
+  item3_en: Innovation cluster
+  item3_zh: 创新集群
+  item3_zh_hk: 創新集群
+- id: takeaway
+  visual: title_card
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: who does which step'
+  title_zh: 这一讲：谁做哪一步
+  title_zh_hk: 這一講：誰做哪一步
+  en: 'Three shorts: comparative advantage, the chain, the cluster. Size of the city is not the plan.'
+  zh: 三条短片：比较优势、链条、集群。城市有多大，不是方案。
+  zh_hk: 三條短片：比較優勢、鏈條、集群。城市有多大，不是方案。

@@ -1,0 +1,5 @@
+﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
+1,GAME-M02-OUT,comprehension,25,What three tools did this unit add?,这一单元补上了哪三样工具？,呢一單元補上咗邊三樣工具？,"Dominant strategy, dominance solvable, and the prisoner's dilemma.",占优策略、重复删除可解，以及囚徒困境。,佔優策略、重複刪除可解，以及囚徒困境。
+2,GAME-M02-OUT,comprehension,25,Did anyone have to guess a personality?,有没有人必须去猜性格？,有冇人一定要去估性格？,No. The table deleted the lines.,没有。是表划掉了那些行。,冇。係表劃走咗嗰啲行。
+3,GAME-M02-OUT,check,25,The table deleted the lines.,是表划掉了那些行。,係表劃走咗嗰啲行。,,,
+4,GAME-M02-OUT,transfer,25,Next sitting asks what to do when nothing dominates.,下一讲才问，没有占优时怎么办。,下一講先問，冇佔優嗰陣點算。,,,

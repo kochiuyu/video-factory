@@ -1,0 +1,13 @@
+id: high-contrast
+label: High contrast lecture
+bg: "#FFFFFF"
+ink: "#111111"
+muted: "#444444"
+white: "#FFFFFF"
+navy: "#000000"
+gold: "#C9A227"
+emerald: "#0B6E4F"
+wash: "#F0F0F0"
+wash2: "#E6E6E6"
+blobs: false
+corner: true

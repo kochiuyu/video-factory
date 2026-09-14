@@ -1,0 +1,5 @@
+﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
+1,GAME-PO-01,comprehension,25,"In the cell 0 then 5, who gets 5?",格子里先 0 后 5，谁拿到 5？,格仔入面先 0 後 5，邊個攞到 5？,Cart B. The first number is always A. Those two numbers are the payoffs.,乙车。头一个数字永远是甲。这两个数字就是报酬。,乙車。第一個數字永遠係甲。呢兩個數字就係報酬。
+2,GAME-PO-01,transfer,25,"Both post Low. Why is the cell 1 and 1, not 5 and 5?",两车都卖低价。为什么是 1 和 1，不是 5 和 5？,兩架都賣平。點解係 1 同 1，唔係 5 同 5？,They split a thin margin. Five appears only if the other cart stays High.,他们在分很薄的利润。那个五只有对面仍卖高价才会出现。,佢哋喺分好薄嘅利潤。嗰個五要對面仲賣貴先會出現。
+3,GAME-PO-01,check,25,Who is the first number?,头一个数字是谁？,第一個數字係邊個？,,,
+4,GAME-PO-01,transfer,25,What does zero then five say happened on the path?,先零后五，路上发生了什么？,先零後五，路上發生咗咩事？,,,

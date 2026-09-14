@@ -1,0 +1,77 @@
+id: GAME-M05-OUT
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 48
+title_en: The table picked a share
+title_zh: 表选出了一个份额
+title_zh_hk: 表揀咗一個份額
+objective_en: Close. No cell was Nash. A mix can be. Next sitting takes the tools into the firm.
+objective_zh: 收住。没有一格是纳什。混合可以是。下一讲把工具带进公司。
+objective_zh_hk: 收住。冇一格係納什。混合可以係。下一講將工具帶入公司。
+glossary:
+- en: mixed strategy Nash
+  zh: 混合策略纳什均衡
+  zh_hk: 混合策略納什均衡
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What did this unit add to Nash?
+  zh: 这一单元给纳什补上了什么？
+  zh_hk: 呢一單元俾納什補上咗咩？
+  answer_en: The answers can be mixes when no cell is mutual best response.
+  answer_zh: 没有一格是彼此的最优反应时，答案可以是混合。
+  answer_zh_hk: 冇一格係彼此嘅最佳回應嗰陣，答案可以係混合。
+- id: Q2
+  type: comprehension
+  en: What comes after this unit?
+  zh: 这一单元之后是什么？
+  zh_hk: 呢一單元之後係咩？
+  answer_en: Take the same tools off the path and into the firm.
+  answer_zh: 把同一套工具带离这条路，带进公司。
+  answer_zh_hk: 將同一套工具帶離呢條路，帶入公司。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: The table picked a share
+  title_zh: 表选出了一个份额
+  title_zh_hk: 表揀咗一個份額
+  claim_en: No cell. A mix. Half and half.
+  claim_zh: 没有一格。一个混合。一半一半。
+  claim_zh_hk: 冇一格。一個混合。一半一半。
+  next_en: Next sitting takes these tools off the path into the firm.
+  next_zh: 下一讲把这些工具带离这条路，带进公司。
+  next_zh_hk: 下一講將呢啲工具帶離呢條路，帶入公司。
+  en: Look back. Every cell had someone who wanted to move. A mix is a share of mornings, not a third side. Half and half made each of you willing to mix. The table picked a share.
+  zh: 再看一遍。每一格都有人想动。混合是早晨的份额，不是第三侧。一半一半让两边都愿意混合。表选出了一个份额。
+  zh_hk: 再睇一遍。每一格都有人想郁。混合係朝早嘅份額，唔係第三側。一半一半等兩邊都愿意混合。張表揀咗一個份額。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: One morning at a time, so far
+  title_zh: 到现在，还是一个早晨
+  title_zh_hk: 到而家，都仲係一個朝早
+  q1_en: Mixed Nash is still mutual best response.
+  q1_zh: 混合纳什仍是彼此的最优反应。
+  q1_zh_hk: 混合納什都仲係彼此嘅最佳回應。
+  q2_en: Next sitting takes the tools into the firm.
+  q2_zh: 下一讲把工具带进公司。
+  q2_zh_hk: 下一講將工具帶入公司。
+  en: That is all I need you to take from this unit. The table can pick a share when it cannot pick a cell. Next sitting leaves the path and asks where these tools show up at work.
+  zh: 这一单元我只要你带走这一点。表选不出一格时，可以选出一个份额。下一讲离开这条路，问这些工具在工作里出现在哪。
+  zh_hk: 呢一單元我淨要你帶走呢樣。張表揀唔出一格嗰陣，可以揀一個份額。下一講離開呢條路，問呢啲工具喺工作入面出現喺邊。

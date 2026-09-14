@@ -1,0 +1,5 @@
+﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
+1,GAME-M02-IN,comprehension,25,What did the last unit put on paper?,上一单元写在纸上的是什么？,上一單元寫喺紙度嘅係咩？,"Players, strategies, and payoffs. Nobody had picked a cell.",参与人、策略和报酬。还没有人选出一格。,參與人、策略同報酬。都未有人揀到一格。
+2,GAME-M02-IN,comprehension,25,What three words will this unit add?,这一单元要补上哪三个词？,呢一單元要補上邊三個詞？,"Dominant strategy, dominance solvable, and the prisoner's dilemma.",占优策略、重复删除可解，以及囚徒困境。,佔優策略、重複刪除可解，以及囚徒困境。
+3,GAME-M02-IN,check,25,The table is already written.,表已经写好。,張表已經寫好。,,,
+4,GAME-M02-IN,transfer,25,We delete a line only when the table says so.,只有表这样写，才删掉一行。,淨係表噉寫，先刪走一行。,,,

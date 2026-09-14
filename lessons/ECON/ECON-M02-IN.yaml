@@ -1,0 +1,69 @@
+id: ECON-M02-IN
+course: economics
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: 'This sitting: payoffs and trade'
+title_zh: 这一讲：报酬与分工
+title_zh_hk: 這一講：報酬與分工
+objective_en: Change a payoff, assign a task by opportunity cost, then see whether a price rise fills
+  the till.
+objective_zh: 改一改报酬，按机会成本分工，再看涨价是进账还是把店清空。
+objective_zh_hk: 改一改報酬，按機會成本分工，再看漲價是進賬還是把店清空。
+glossary:
+- en: Open
+  zh: 开场
+  zh_hk: 開場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What three changes does this sitting follow?
+  zh: 这一讲跟哪三种变化？
+  zh_hk: 這一講跟哪三種變化？
+  answer_en: A changed payoff, a reassigned task, then a price rise.
+  answer_zh: 报酬变了、任务重分、然后涨价。
+  answer_zh_hk: 報酬變了、任務重分、然後漲價。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: payoffs and trade'
+  title_zh: 这一讲：报酬与分工
+  title_zh_hk: 這一講：報酬與分工
+  en: Last sitting chose the next unit. This sitting changes the payoff. People move. Tasks move.
+    Then a price rise either raises revenue or sends buyers away.
+  zh: 上一讲选了下一单位。这一讲改报酬。人会动。任务会动。然后涨价要么增加收入，要么把买家送走。
+  zh_hk: 上一講選了下一單位。這一講改報酬。人會動。任務會動。然後漲價要麼增加收入，要麼把買家送走。
+  item1_en: Incentives
+  item1_zh: 激励
+  item1_zh_hk: 激勵
+  item2_en: Comparative advantage
+  item2_zh: 比较优势
+  item2_zh_hk: 比較優勢
+  item3_en: Price elasticity
+  item3_zh: 价格弹性
+  item3_zh_hk: 價格彈性
+- id: takeaway
+  visual: title_card
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: payoffs and trade'
+  title_zh: 这一讲：报酬与分工
+  title_zh_hk: 這一講：報酬與分工
+  en: 'Three shorts: incentives, comparative advantage, elasticity. One thread — what happens when
+    the terms of the deal change.'
+  zh: 三条短片：激励、比较优势、弹性。一条线——交易条件一变，会发生什么。
+  zh_hk: 三條短片：激勵、比較優勢、彈性。一條線——交易條件一變，會發生什麼。

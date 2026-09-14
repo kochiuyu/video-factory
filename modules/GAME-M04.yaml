@@ -1,0 +1,19 @@
+id: GAME-M04
+kind: module
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+duration_target_s: 504
+title_en: Which cell
+title_zh: 落在哪一格
+title_zh_hk: 落邊一格
+objective_en: Stay on the two Nash tables. Name a focal point. See when cheap talk helps, and why the gate is harder.
+objective_zh: 留在那两张有两个纳什的表上。点出焦点。看便宜的话何时有用，门口为什么更难。
+objective_zh_hk: 留喺嗰兩張有兩個納什嘅表。點出焦點。睇平嘅說話幾時有用，門口點解更難。
+lessons:
+- GAME-M04-IN
+- GAME-FOCAL-01
+- GAME-TALK-01
+- GAME-SEL-01
+- GAME-M04-OUT

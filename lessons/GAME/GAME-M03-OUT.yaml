@@ -1,0 +1,77 @@
+id: GAME-M03-OUT
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 48
+title_en: Two Nash, still a pick
+title_zh: 两个纳什，还要再选
+title_zh_hk: 兩個納什，仲要再揀
+objective_en: Close. Best response, then Nash. Coordination matches. Chicken opposes. Next sitting asks which of the two cells.
+objective_zh: 收住。先最优反应，再纳什。协调是停一起。斗鸡是相反。下一讲才问两格里落在哪一格。
+objective_zh_hk: 收住。先最佳回應，再納什。協調係停一齊。鬥雞係相反。下一講先問兩格裏面落邊一格。
+glossary:
+- en: Nash equilibrium
+  zh: 纳什均衡
+  zh_hk: 納什均衡
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What is Nash on these two tables?
+  zh: 这两张表上，纳什是什么？
+  zh_hk: 呢兩張表上面，納什係咩？
+  answer_en: Mutual best response. Match on the wide path. Opposite actions at the gate.
+  answer_zh: 彼此都是最优反应。宽路上是停一起。门口是相反的动作。
+  answer_zh_hk: 彼此都係最佳回應。闊路係停一齊。門口係相反嘅動作。
+- id: Q2
+  type: comprehension
+  en: What has this unit not done?
+  zh: 这一单元还没做什么？
+  zh_hk: 呢一單元仲未做咩？
+  answer_en: It has not picked among two Nash cells.
+  answer_zh: 还没在两个纳什里再选。
+  answer_zh_hk: 都未喺兩個納什再揀。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Two Nash, still a pick
+  title_zh: 两个纳什，还要再选
+  title_zh_hk: 兩個納什，仲要再揀
+  claim_en: Best response. Nash. Match, or opposite.
+  claim_zh: 最优反应。纳什。停一起，或相反。
+  claim_zh_hk: 最佳回應。納什。停一齊，定相反。
+  next_en: Next sitting asks which of the two Nash cells.
+  next_zh: 下一讲才问两格纳什里落在哪一格。
+  next_zh_hk: 下一講先問兩格納什裏面落邊一格。
+  en: Look back. You can fix one column and name a best response. You can mark a Nash cell as mutual best response. On the wide path that means match. At the gate that means opposite. We have not picked among two Nash cells.
+  zh: 再看一遍。你钉得住一列，点得出最优反应。也标得出纳什是彼此的最优反应。宽路上那是停一起。门口那是相反。我们还没在两个纳什里再选。
+  zh_hk: 再睇一遍。你釘得住一列，點得出最佳回應。都標得出納什係彼此嘅最佳回應。闊路嗰啲係停一齊。門口嗰啲係相反。我哋都未喺兩個納什再揀。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Which cell, next
+  title_zh: 下一讲才问哪一格
+  title_zh_hk: 下一講先問邊一格
+  q1_en: Nash is mutual best response.
+  q1_zh: 纳什就是彼此都是最优反应。
+  q1_zh_hk: 納什就係彼此都係最佳回應。
+  q2_en: Next sitting asks which of the two cells.
+  q2_zh: 下一讲才问两格里落在哪一格。
+  q2_zh_hk: 下一講先問兩格裏面落邊一格。
+  en: That is all I need you to take from this unit. Nash marks cells. It does not always pick one. Next sitting stays on these two tables and asks which cell.
+  zh: 这一单元我只要你带走这一点。纳什是标格子。它不一定选出一格。下一讲还留在这两张表上，问会落在哪一格。
+  zh_hk: 呢一單元我淨要你帶走呢樣。納什係標格仔。佢唔一定揀到一格。下一講仲留喺呢兩張表，問會落邊一格。

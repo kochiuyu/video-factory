@@ -1,0 +1,19 @@
+id: ACC-M01
+kind: module
+course: accounting
+course_en: Introductory Accounting
+course_zh: 会计入门
+course_zh_hk: 會計入門
+duration_target_s: 284
+title_en: How a line gets on the books
+title_zh: 一笔账怎么入账
+title_zh_hk: 一筆賬怎麼入賬
+objective_en: Equation, debit and credit, then cash versus accrual — how an event is written down.
+objective_zh: 先等式、再借贷，然后分清收付与权责——一笔事项如何写进账。
+objective_zh_hk: 先等式、再借貸，然後分清收付與權責——一筆事項如何寫進賬。
+lessons:
+- ACC-M01-IN
+- ACC-EQ-01
+- ACC-DC-01
+- ACC-AC-01
+- ACC-M01-OUT

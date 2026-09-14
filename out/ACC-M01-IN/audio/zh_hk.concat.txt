@@ -1,0 +1,2 @@
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-M01-IN/audio/padded/zh_hk/hook.mp3'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-M01-IN/audio/padded/zh_hk/takeaway.mp3'

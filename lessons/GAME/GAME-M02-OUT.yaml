@@ -1,0 +1,77 @@
+id: GAME-M02-OUT
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 48
+title_en: The table can pick a cell
+title_zh: 表可以选出一格
+title_zh_hk: 表可以揀到一格
+objective_en: Close. Dominance can delete a line. The prisoner's dilemma is both using that tool and both ending worse.
+objective_zh: 收住。占优可以删掉一行。囚徒困境是两人都用这个工具，结果都更差。
+objective_zh_hk: 收住。佔優可以刪走一行。囚徒困境係兩個人都用呢個工具，結果都更差。
+glossary:
+- en: dominant strategy
+  zh: 占优策略
+  zh_hk: 佔優策略
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What three tools did this unit add?
+  zh: 这一单元补上了哪三样工具？
+  zh_hk: 呢一單元補上咗邊三樣工具？
+  answer_en: Dominant strategy, dominance solvable, and the prisoner's dilemma.
+  answer_zh: 占优策略、重复删除可解，以及囚徒困境。
+  answer_zh_hk: 佔優策略、重複刪除可解，以及囚徒困境。
+- id: Q2
+  type: comprehension
+  en: Did anyone have to guess a personality?
+  zh: 有没有人必须去猜性格？
+  zh_hk: 有冇人一定要去估性格？
+  answer_en: No. The table deleted the lines.
+  answer_zh: 没有。是表划掉了那些行。
+  answer_zh_hk: 冇。係表劃走咗嗰啲行。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: The table can pick a cell
+  title_zh: 表可以选出一格
+  title_zh_hk: 表可以揀到一格
+  claim_en: Dominant strategy. Cross out what dies. Both Talk, both worse.
+  claim_zh: 占优策略。划掉会死掉的行。都招供，都更差。
+  claim_zh_hk: 佔優策略。劃走會死人嘅行。都招供，都更差。
+  next_en: Next sitting asks what to do when nothing dominates.
+  next_zh: 下一讲才问，没有占优时怎么办。
+  next_zh_hk: 下一講先問，冇佔優嗰陣點算。
+  en: Look back at the payoff table. You can name a dominant strategy. You can cross out a line that dies and read the smaller table. Both carts post Low, and both take home less. That is as far as this unit goes.
+  zh: 再看报酬表。你点得出占优策略。划得掉会死掉的行，也读得了小表。两车都标低价，带走的都少了。这一单元只走到这里。
+  zh_hk: 再睇報酬表。你點得出佔優策略。劃得走會死人嘅行，都讀得細表。兩架都標平，袋走嘅都少咗。呢一單元淨行到呢度。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Nobody guessed a personality
+  title_zh: 没有人去猜性格
+  title_zh_hk: 冇人去估性格
+  q1_en: The table deleted the lines.
+  q1_zh: 是表划掉了那些行。
+  q1_zh_hk: 係表劃走咗嗰啲行。
+  q2_en: Next sitting asks what to do when nothing dominates.
+  q2_zh: 下一讲才问，没有占优时怎么办。
+  q2_zh_hk: 下一講先問，冇佔優嗰陣點算。
+  en: That is all I need you to take from this unit. Nobody guessed a personality. When a line dies on every column, you may delete it. Next sitting starts when nothing dominates.
+  zh: 这一单元我只要你带走这一点。没有人去猜性格。一行在每一列都死，你就可以删。下一讲从没有占优的时候开始。
+  zh_hk: 呢一單元我淨要你帶走呢樣。冇人去估性格。一行喺每一列都死人，你就可以刪。下一講由冇佔優嗰陣開始。

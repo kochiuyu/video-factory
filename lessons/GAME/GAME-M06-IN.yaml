@@ -1,0 +1,116 @@
+id: GAME-M06-IN
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 96
+title_en: The same tools at work
+title_zh: 同一套工具，在公司里
+title_zh_hk: 同一套工具，喺公司度
+objective_en: Leave the path. Keep the payoff table. Ask which tool to reach for first at work.
+objective_zh: 离开这条路。留下报酬表。问上班时先伸手拿哪一样工具。
+objective_zh_hk: 離開呢條路。留低報酬表。問返工嗰陣先伸手攞邊樣工具。
+glossary:
+- en: payoff table
+  zh: 报酬表
+  zh_hk: 報酬表
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What do we keep when we leave the path?
+  zh: 离开这条路时，留下什么？
+  zh_hk: 離開呢條路嗰陣，留低咩？
+  answer_en: The payoff table and the tools. Not the coffee carts.
+  answer_zh: 报酬表和那些工具。不是咖啡车。
+  answer_zh_hk: 報酬表同嗰啲工具。唔係咖啡車。
+- id: Q2
+  type: comprehension
+  en: What four tools will this unit map?
+  zh: 这一单元要对上哪四样工具？
+  zh_hk: 呢一單元要對上邊四樣工具？
+  answer_en: Dominance, coordination, chicken, and a mix.
+  answer_zh: 占优、协调、斗鸡，以及混合。
+  answer_zh_hk: 佔優、協調、鬥雞，以及混合。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Leave the path
+  title_zh: 离开这条路
+  title_zh_hk: 離開呢條路
+  en: The carts were a page we could read. The tools were the point. Both sides see the same table. Neither sees the other board before it posts. That is still true in a firm.
+  zh: 咖啡车只是一页读得懂的纸。工具才是重点。两边看见同一张表。谁也没在亮牌前看见对面。公司里也是这样。
+  zh_hk: 咖啡車淨係一頁讀得明嘅紙。工具先至係重點。兩邊見到同一張表。邊個都未喺亮牌前見到對面。公司度都係噉。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Same table, new labels
+  title_zh: 同一张表，新的标签
+  title_zh_hk: 同一張表，新嘅標籤
+  formula: Ask which tool first. Then name the players.
+  formula_en: Ask which tool first. Then name the players.
+  formula_zh: 先问用哪样工具。再点出参与人。
+  formula_zh_hk: 先問用邊樣工具。再點出參與人。
+  gloss_en: Do not start from a story about personality.
+  gloss_zh: 不要从性格故事开始。
+  gloss_zh_hk: 唔好由性格故事開始。
+  en: Here is the idea. At work you still write players, strategies, and payoffs. Then you ask. Can I delete a row? Are there two Nash cells? Does a label tip one? Is every cell moving? That order is the course.
+  zh: 核心就这一句。上班仍是写出参与人、策略和报酬。然后问。能不能删一行？是不是有两格纳什？标签推不推得动？是不是每一格都在动？这个顺序就是这门课。
+  zh_hk: 核心就呢一句。返工都係寫出參與人、策略同報酬。然後問。可唔可以刪一行？係唔係有兩格納什？標籤推唔推得動？係唔係每一格都喺度郁？呢個順序就係呢門課。
+- id: plan
+  visual: module_open
+  seconds: 26
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Four rooms in the firm
+  title_zh: 公司里的四个房间
+  title_zh_hk: 公司度嘅四個房
+  en: Here is what we will do. First two shops cutting price. Then two products that need the same plug. Then one scarce slot. Last an audit that cannot sit still.
+  zh: 我们接下来做这件事。先看两家店抢着降价。再看两个产品要同一只插头。再看一个稀缺名额。最后看一次坐不住的抽查。
+  zh_hk: 我哋跟住做呢件事。先睇兩間店搶住減價。再睇兩個產品要同一隻插頭。再睇一個稀缺名額。最後睇一次坐唔住嘅抽查。
+  item1_en: Two shops cut price
+  item1_zh: 两家店抢着降价
+  item1_zh_hk: 兩間店搶住減價
+  item2_en: The same plug
+  item2_zh: 同一只插头
+  item2_zh_hk: 同一隻插頭
+  item3_en: One scarce slot
+  item3_zh: 一个稀缺名额
+  item3_zh_hk: 一個稀缺名額
+  item4_en: An audit that cannot sit still
+  item4_zh: 坐不住的抽查
+  item4_zh_hk: 坐唔住嘅抽查
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Tools first
+  title_zh: 先拿工具
+  title_zh_hk: 先攞工具
+  q1_en: Write the table before you pick a story.
+  q1_zh: 先写表，再选故事。
+  q1_zh_hk: 先寫表，再揀故事。
+  q2_en: Ask which tool first.
+  q2_zh: 先问用哪样工具。
+  q2_zh_hk: 先問用邊樣工具。
+  en: That is all I need you to see in this opening. Leave the carts. Keep the order. Next two shops can cut this weekend's price.
+  zh: 开场我只要你看见这一点。离开咖啡车。留下顺序。接下来两家店可以降这个周末的价。
+  zh_hk: 開場我淨要你見到呢樣。離開咖啡車。留低順序。跟住兩間店可以減呢個周末嘅價。

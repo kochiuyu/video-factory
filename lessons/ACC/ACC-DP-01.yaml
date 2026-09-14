@@ -1,0 +1,228 @@
+id: ACC-DP-01
+course: accounting
+course_en: Introductory Accounting
+course_zh: 会计入门
+course_zh_hk: 會計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 144
+title_en: Depreciation
+title_zh: 折旧
+title_zh_hk: 折舊
+objective_en: 'Close the timing unit: a machine is used up across years; depreciation records that
+  use, not the day of payment.'
+objective_zh: 收住期间单元：机器是按年耗用的；折旧记的是使用，不是付款日。
+objective_zh_hk: 收住期間單元：機器是按年耗用的；折舊記的是使用，不是付款日。
+glossary:
+- en: depreciation
+  zh: 折旧
+  zh_hk: 折舊
+  lock: true
+- en: useful life
+  zh: 使用寿命
+  zh_hk: 使用壽命
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Depreciation allocates which amount over useful life?
+  zh: 折旧把哪一笔金额分摊到使用寿命？
+  zh_hk: 折舊把哪一筆金額分攤到使用壽命？
+  answer_en: Cost minus residual value.
+  answer_zh: 成本减去残值。
+  answer_zh_hk: 成本減去殘值。
+- id: Q2
+  type: transfer
+  en: Buying a van uses cash this year. Does that whole cash outlay reduce this year’s profit?
+  zh: 今年用现金买一辆面包车。整笔现金支出是否都减少今年利润？
+  zh_hk: 今年用現金買一輛客貨車。整筆現金支出是否都減少今年利潤？
+  answer_en: No. Only this year’s depreciation hits profit.
+  answer_zh: 不是。只有本年折旧计入利润。
+  answer_zh_hk: 不是。只有本年折舊計入利潤。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Depreciation
+  title_zh: 折旧
+  title_zh_hk: 折舊
+  en: 'Matching said: put the cost with the revenue it helps to earn. A machine helps to earn revenue
+    for years. So its cost is not an expense on the purchase day. Depreciation is matching, stretched
+    across useful life.'
+  zh: 配比说：成本和它所帮助赚到的收入放在一起。机器会帮好几年的忙。所以购买日不能把全部成本一次记成费用。折旧就是把配比拉长到使用年限。
+  zh_hk: 配比說：成本和它所幫助賺到的收入放在一起。機器會幫好幾年的忙。所以購買日不能把全部成本一次記成費用。折舊就是把配比拉長到使用年限。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Cost over useful life
+  title_zh: 按使用寿命分摊成本
+  title_zh_hk: 按使用壽命分攤成本
+  formula: Expense = (cost − residual) / useful life
+  formula_en: Expense = (cost − residual) / useful life
+  formula_zh: 费用 = (成本 − 残值) / 使用年限
+  formula_zh_hk: 費用 = (成本 − 殘值) / 使用年限
+  gloss_en: Residual is what you expect to recover at the end.
+  gloss_zh: 残值是预计寿命结束时还能收回的金额。
+  gloss_zh_hk: 殘值是預計壽命結束時還能收回的金額。
+  en: Depreciation allocates the depreciable cost of a long-lived asset across its useful life. It
+    is an estimate, not a cash payment and not a market price.
+  zh: 折旧把长期资产的应折旧成本分摊到使用寿命各期。它是估计，不是付现，也不是市价。
+  zh_hk: 折舊把長期資產的應折舊成本分攤到使用壽命各期。它是估計，不是付現，也不是市價。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A five-year printer
+  title_zh: 一台五年的打印机
+  title_zh_hk: 一台五年的打印機
+  left_en: Pay the full price now
+  left_zh: 现在付全款
+  left_zh_hk: 現在付全款
+  right_en: Expense one fifth each year
+  right_zh: 每年费用为五分之一
+  right_zh_hk: 每年費用為五分之一
+  en: A printer costs five units and should last five years with no residual. Cash leaves now. Expense
+    is one unit a year. Year one profit is not punished for the whole machine.
+  zh: 打印机花五单位，预计用五年且无残值。现金现在就出去。费用是每年一单位。第一年利润不必承担整台机器。
+  zh_hk: 打印機花五單位，預計用五年且無殘值。現金現在就出去。費用是每年一單位。第一年利潤不必承擔整台機器。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Spread the machine
+  title_zh: 把机器摊开
+  title_zh_hk: 把機器攤開
+  formula: Expense = (cost − residual) / useful life
+  formula_en: Expense = (cost − residual) / useful life
+  formula_zh: 费用 = (成本 − 残值) / 使用年限
+  formula_zh_hk: 費用 = (成本 − 殘值) / 使用年限
+  gloss_en: One year does not eat the whole cost.
+  gloss_zh: 一年吃不完整台成本。
+  gloss_zh_hk: 一年吃不完整台成本。
+  en: Depreciation is not a valuation guess. It allocates a prepaid bundle of machine-years across
+    the periods that use them.
+  zh: 折旧不是估值猜测。它把预付的一捆机器年，分到真正使用这些年的期间。
+  zh_hk: 折舊不是估值猜測。它把預付的一捆機器年，分到真正使用這些年的期間。
+- id: van
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A van for five years
+  title_zh: 一辆用五年的货车
+  title_zh_hk: 一輛用五年的貨車
+  setup_en: Cost 100, residual 10, life 5
+  setup_zh: 成本100，残值10，年限5
+  setup_zh_hk: 成本100，殘值10，年限5
+  result_en: Each year expenses 18
+  result_zh: 每年费用18
+  result_zh_hk: 每年費用18
+  en: Pay 100 for a van. Expect 10 at the end. Five years of work sit in between. Straight line puts
+    18 of expense in each of those years.
+  zh: 花100买货车。预计最后剩10。中间有五年工作。直线法每年记18的费用。
+  zh_hk: 花100買貨車。預計最後剩10。中間有五年工作。直線法每年記18的費用。
+- id: steps
+  visual: steps
+  seconds: 18
+  kicker: Steps
+  kicker_en: Steps
+  kicker_zh: 步骤
+  kicker_zh_hk: 步驟
+  title_en: Allocate, do not guess
+  title_zh: 是分摊，不是猜价
+  title_zh_hk: 是分攤，不是猜價
+  step1_en: Start with cost minus residual
+  step1_zh: 从成本减残值开始
+  step1_zh_hk: 從成本減殘值開始
+  step2_en: Divide by useful life
+  step2_zh: 除以使用年限
+  step2_zh_hk: 除以使用年限
+  step3_en: Charge that amount each period
+  step3_zh: 每期记入该金额
+  step3_zh_hk: 每期記入該金額
+  en: Subtract what you expect to recover. Divide by the years of use. Put that slice in the period.
+    Market price next year is a different question.
+  zh: 减去预计收回的部分。再除以使用年数。把这一片记入当期。明年市价是另一个问题。
+  zh_hk: 減去預計收回的部分。再除以使用年數。把這一片記入當期。明年市價是另一個問題。
+- id: life
+  visual: big_number
+  seconds: 14
+  kicker: Number
+  kicker_en: Number
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Five working years
+  title_zh: 五个工作年
+  title_zh_hk: 五個工作年
+  unit_en: years
+  unit_zh: 年
+  unit_zh_hk: 年
+  caption_en: The cost is prepaid time.
+  caption_zh: 成本是预付的时间。
+  caption_zh_hk: 成本是預付的時間。
+  number: 5
+  en: The useful life is the clock. If the van works five years, five periods share the net cost.
+    Do not dump the 100 into year one.
+  zh: 使用年限就是时钟。货车用五年，就由五个期间分担净成本。不要把100全部丢进第一年。
+  zh_hk: 使用年限就是時鐘。貨車用五年，就由五個期間分擔淨成本。不要把100全部丟進第一年。
+- id: views
+  visual: three_column
+  seconds: 16
+  kicker: Three parts
+  kicker_en: Three parts
+  kicker_zh: 三部分
+  kicker_zh_hk: 三部分
+  title_en: Three mistakes
+  title_zh: 三种错法
+  title_zh_hk: 三種錯法
+  col1_en: Expense all at purchase
+  col1_zh: 购买时一次费用化
+  col1_zh_hk: 購買時一次費用化
+  col2_en: Ignore residual value
+  col2_zh: 忽略残值
+  col2_zh_hk: 忽略殘值
+  col3_en: Change life every month
+  col3_zh: 每月改年限
+  col3_zh_hk: 每月改年限
+  en: Dumping the whole cost in year one hides later work. Ignoring residual overstates expense. Rewriting
+    life every month turns a rule into a mood.
+  zh: 第一年吃掉全部成本，会藏起后面的工作。忽略残值会夸大费用。每月改年限会把规则变成心情。
+  zh_hk: 第一年吃掉全部成本，會藏起後面的工作。忽略殘值會誇大費用。每月改年限會把規則變成心情。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Separate cash from use
+  title_zh: 把现金和使用分开
+  title_zh_hk: 把現金和使用分開
+  q1_en: How long will this asset work?
+  q1_zh: 这项资产还能工作多久？
+  q1_zh_hk: 這項資產還能工作多久？
+  q2_en: How much cost belongs to this year?
+  q2_zh: 今年应承担多少成本？
+  q2_zh_hk: 今年應承擔多少成本？
+  en: 'Paying for an asset and using an asset are different events. Depreciation records the use.
+    That closes this sitting: we now know which period gets the sale, the matching cost, and the machine.'
+  zh: 付钱买资产，和真正使用资产，是两件事。折旧记的是使用。这一单元到此结束：销售、配比的成本和机器，各记在该记的那一期。
+  zh_hk: 付錢買資產，和真正使用資產，是兩件事。折舊記的是使用。這一單元到此結束：銷售、配比的成本和機器，各記在該記的那一期。

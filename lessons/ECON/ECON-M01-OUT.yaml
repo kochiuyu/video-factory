@@ -1,0 +1,76 @@
+id: ECON-M01-OUT
+course: economics
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: The choice, closed
+title_zh: 选择，先说到这里
+title_zh_hk: 選擇，先說到這裏
+objective_en: 'Close the choice sitting. Next sitting: people respond when those payoffs change, then
+  trade and a price.'
+objective_zh: 收住选择这一讲。下一讲：这些报酬一变人就动，然后是分工和价格。
+objective_zh_hk: 收住選擇這一講。下一講：這些報酬一變人就動，然後是分工和價格。
+glossary:
+- en: Close
+  zh: 收束
+  zh_hk: 收束
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: A sunk cost belongs in which decision?
+  zh: 沉没成本进入哪一步决策？
+  zh_hk: 沉沒成本進入哪一步決策？
+  answer_en: None. The next choice uses only future benefits and future costs.
+  answer_zh: 哪一步都不进。下一步只用未来的好处和未来的成本。
+  answer_zh_hk: 哪一步都不進。下一步只用未來的好處和未來的成本。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The choice, closed
+  title_zh: 选择，先说到这里
+  title_zh_hk: 選擇，先說到這裏
+  en: You can name the trade-off, the opportunity cost, the sunk cost, and the margin of one more
+    unit.
+  zh: 你能说出权衡、机会成本、沉没成本，以及再一单位的边际。
+  zh_hk: 你能說出權衡、機會成本、沉沒成本，以及再一單位的邊際。
+  claim_en: You can name the trade-off, the opportunity cost, the sunk cost, and the margin of one
+    more unit.
+  claim_zh: 你能说出权衡、机会成本、沉没成本，以及再一单位的边际。
+  claim_zh_hk: 你能說出權衡、機會成本、沉沒成本，以及再一單位的邊際。
+  next_en: That is how to choose. Next sitting attaches a payoff, assigns a task, and asks what a
+    price rise does.
+  next_zh: 选择单元到此。下一讲给报酬、分工，并问涨价之后会怎样。
+  next_zh_hk: 選擇單元到此。下一講給報酬、分工，並問漲價之後會怎樣。
+- id: takeaway
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The choice, closed
+  title_zh: 选择，先说到这里
+  title_zh_hk: 選擇，先說到這裏
+  en: That is how to choose. Next sitting attaches a payoff, assigns a task, and asks what a price
+    rise does.
+  zh: 选择单元到此。下一讲给报酬、分工，并问涨价之后会怎样。
+  zh_hk: 選擇單元到此。下一講給報酬、分工，並問漲價之後會怎樣。
+  claim_en: You can name the trade-off, the opportunity cost, the sunk cost, and the margin of one
+    more unit.
+  claim_zh: 你能说出权衡、机会成本、沉没成本，以及再一单位的边际。
+  claim_zh_hk: 你能說出權衡、機會成本、沉沒成本，以及再一單位的邊際。
+  next_en: That is how to choose. Next sitting attaches a payoff, assigns a task, and asks what a
+    price rise does.
+  next_zh: 选择单元到此。下一讲给报酬、分工，并问涨价之后会怎样。
+  next_zh_hk: 選擇單元到此。下一講給報酬、分工，並問漲價之後會怎樣。

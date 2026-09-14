@@ -1,0 +1,5 @@
+﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
+1,ACC-AC-01,comprehension,25,When does accrual accounting record revenue?,权责发生制何时记录收入？,權責發生制何時記錄收入？,"When it is earned, even if cash comes later.",在赚得时，即使现金稍后才到。,在賺得時，即使現金稍後才到。
+2,ACC-AC-01,transfer,25,A shop buys goods in March and pays in April. When does accrual record the purchase?,商店三月进货、四月付款。权责发生制何时记录这笔采购？,商店三月進貨、四月付款。權責發生制何時記錄這筆採購？,"March, when the goods and the obligation arrive.",三月，货物和义务同时发生之时。,三月，貨物和義務同時發生之時。
+3,ACC-AC-01,check,25,Has the work already been done?,工作是否已经完成？,工作是否已經完成？,,,
+4,ACC-AC-01,transfer,25,Has cash already moved?,现金是否已经转手？,現金是否已經轉手？,,,

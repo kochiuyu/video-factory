@@ -1,0 +1,286 @@
+id: GBA-LM-01
+course: gba
+course_en: Greater Bay Area
+course_zh: 粤港澳大湾区
+course_zh_hk: 粵港澳大灣區
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 192
+title_en: Talent and Labour
+title_zh: 人才与劳动力
+title_zh_hk: 人才與勞動力
+objective_en: 'Close the map unit: a GBA job move is a permit and a wage, not only a train ride.'
+objective_zh: 收住地图单元：大湾区换工作是许可加工资，不只是坐火车。
+objective_zh_hk: 收住地圖單元：大灣區換工作是許可加工資，不只是坐火車。
+glossary:
+- en: labour market
+  zh: 劳动力市场
+  zh_hk: 勞動力市場
+  lock: true
+- en: recognition
+  zh: 资质认可
+  zh_hk: 資質認可
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What often matters more than train fare in a GBA job move?
+  zh: 在大湾区换工作时，什么往往比火车票更重要？
+  zh_hk: 在大灣區換工作時，什麼往往比火車票更重要？
+  answer_en: The permit and whether the licence is recognised.
+  answer_zh: 许可，以及执照是否被认可。
+  answer_zh_hk: 許可，以及執照是否被認可。
+- id: Q2
+  type: transfer
+  en: Two cities share a high-speed rail. Teachers still cannot switch schools. What is missing?
+  zh: 两座城市有高铁相连。教师仍不能换学校。缺的是什么？
+  zh_hk: 兩座城市有高鐵相連。教師仍不能換學校。缺的是什麼？
+  answer_en: Recognition of the teaching licence, not more trains.
+  answer_zh: 教师执照的认可，而不是更多列车。
+  answer_zh_hk: 教師執照的認可，而不是更多列車。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Talent and Labour
+  title_zh: 人才与劳动力
+  title_zh_hk: 人才與勞動力
+  en: Goods can already move faster than people. A short commute does not create one labour market.
+    A licence and a contract still have to travel.
+  zh: 货已经能比人走得快。通勤短，造不出一个统一的劳动力市场。牌照和合同还是要过关。
+  zh_hk: 貨已經能比人走得快。通勤短，造不出一個統一的勞動力市場。牌照和合同還是要過關。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Wage plus the permit
+  title_zh: 工资加上许可
+  title_zh_hk: 工資加上許可
+  formula: Move = wage gap − permit cost
+  formula_en: Move = wage gap − permit cost
+  formula_zh: 流动 = 工资差 − 许可成本
+  formula_zh_hk: 流動 = 工資差 − 許可成本
+  gloss_en: Recognition of a licence is part of the permit cost.
+  gloss_zh: 执照互认是许可成本的一部分。
+  gloss_zh_hk: 執照互認是許可成本的一部分。
+  en: People move toward higher net pay after housing, tax, and the cost of being allowed to work.
+    In the GBA that last piece — the permit and the recognised licence — often dwarfs the train fare.
+  zh: 人们会走向扣除住房、税收和获准工作成本之后净报酬更高的地方。在大湾区，最后这一块——许可和被认可的执照——往往比火车票大得多。
+  zh_hk: 人們會走向扣除住房、稅收和獲准工作成本之後淨報酬更高的地方。在大灣區，最後這一塊——許可和被認可的執照——往往比火車票大得多。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A nurse and a coder
+  title_zh: 护士与程序员
+  title_zh_hk: 護士與程式員
+  left_en: Licence must be recognised
+  left_zh: 执照必须被认可
+  left_zh_hk: 執照必須被認可
+  right_en: Portfolio can travel faster
+  right_zh: 作品集可以走得更快
+  right_zh_hk: 作品集可以走得更快
+  en: A nurse may need a recognised licence before taking a shift across the boundary. A coder may
+    move with a portfolio and a contract. Same train, different gates.
+  zh: 护士可能要先获得认可的执照，才能到边界另一边值班。程序员也许带着作品集和合同就能走。同一班火车，不同的关口。
+  zh_hk: 護士可能要先獲得認可的執照，才能到邊界另一邊值班。程式員也許帶著作品集和合同就能走。同一班火車，不同的關口。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: A move has a price
+  title_zh: 搬家有价格
+  title_zh_hk: 搬家有價格
+  formula: Move = wage gap − permit cost
+  formula_en: Move = wage gap − permit cost
+  formula_zh: 流动 = 工资差 − 许可成本
+  formula_zh_hk: 流動 = 工資差 − 許可成本
+  gloss_en: The visa is part of the wage.
+  gloss_zh: 签证是工资的一部分。
+  gloss_zh_hk: 簽證是工資的一部分。
+  en: Talent follows a gap only after you subtract the cost of being allowed to work. A high offer
+    with a closed permit is not a high offer.
+  zh: 人才只会在减去获准工作的成本之后，才跟随工资差。许可关闭的高报价，并不是高报价。
+  zh_hk: 人才只會在減去獲准工作的成本之後，才跟隨工資差。許可關閉的高報價，並不是高報價。
+- id: gap
+  visual: two_column
+  seconds: 16
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Posted versus net
+  title_zh: 牌价对净额
+  title_zh_hk: 牌價對淨額
+  left_en: Headline wage
+  left_zh: 名义工资
+  left_zh_hk: 名義工資
+  right_en: Wage minus permit friction
+  right_zh: 工资减去许可摩擦
+  right_zh_hk: 工資減去許可摩擦
+  en: Human resources quotes the headline. The worker subtracts housing, travel, and the chance the
+    permit fails. Policy should talk in the second number.
+  zh: 人事报出名义工资。工人会减去住房、通勤，以及许可失败的可能。政策应用第二个数字说话。
+  zh_hk: 人事報出名義工資。工人會減去住房、通勤，以及許可失敗的可能。政策應用第二個數字說話。
+- id: nurse
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A nurse across the boundary
+  title_zh: 跨境的护士
+  title_zh_hk: 跨境的護士
+  setup_en: Higher posted wage
+  setup_zh: 更高的名义工资
+  setup_zh_hk: 更高的名義工資
+  result_en: Licence does not travel
+  result_zh: 执照不能跟着走
+  result_zh_hk: 執照不能跟著走
+  en: The clinic posts more. The nursing licence does not automatically follow. Until that paper moves,
+    the wage gap is a poster, not a flow.
+  zh: 诊所开出更高工资。护士执照不会自动跟上。在那张纸移动之前，工资差只是海报，不是流动。
+  zh_hk: 診所開出更高工資。護士執照不會自動跟上。在那張紙移動之前，工資差只是海報，不是流動。
+- id: count
+  visual: steps
+  seconds: 18
+  kicker: Steps
+  kicker_en: Steps
+  kicker_zh: 步骤
+  kicker_zh_hk: 步驟
+  title_en: Count a move
+  title_zh: 计算一次流动
+  title_zh_hk: 計算一次流動
+  step1_en: Write both wages
+  step1_zh: 写下两边工资
+  step1_zh_hk: 寫下兩邊工資
+  step2_en: Add permit months
+  step2_zh: 加上许可月数
+  step2_zh_hk: 加上許可月數
+  step3_en: See if anyone still moves
+  step3_zh: 看是否还有人移动
+  step3_zh_hk: 看是否還有人移動
+  en: Put the two wages on one line. Convert waiting months into money. If the remainder is thin,
+    do not be surprised when the hiring fair is quiet.
+  zh: 把两边工资写在一行。把等待的月份换成钱。若剩下的很薄，招聘会冷清就不必惊讶。
+  zh_hk: 把兩邊工資寫在一行。把等待的月份換成錢。若剩下的很薄，招聘會冷清就不必驚訝。
+- id: frictions
+  visual: three_column
+  seconds: 16
+  kicker: Three parts
+  kicker_en: Three parts
+  kicker_zh: 三部分
+  kicker_zh_hk: 三部分
+  title_en: Three brakes
+  title_zh: 三种刹车
+  title_zh_hk: 三種剎車
+  col1_en: Licence
+  col1_zh: 执照
+  col1_zh_hk: 執照
+  col2_en: Housing
+  col2_zh: 住房
+  col2_zh_hk: 住房
+  col3_en: Family seat
+  col3_zh: 家庭座位
+  col3_zh_hk: 家庭座位
+  en: A missing licence stops the job. Dear housing eats the gap. A school place that does not move
+    eats the rest. Labour policy that ignores the third brake will fail in June.
+  zh: 缺少执照会挡住工作。昂贵住房会吃掉差额。不能移动的学位会吃掉剩下的。忽略第三种刹车的劳动力政策会在六月失败。
+  zh_hk: 缺少執照會擋住工作。昂貴住房會吃掉差額。不能移動的學位會吃掉剩下的。忽略第三種剎車的勞動力政策會在六月失敗。
+- id: wait
+  visual: big_number
+  seconds: 14
+  kicker: Number
+  kicker_en: Number
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Permit months
+  title_zh: 许可月数
+  title_zh_hk: 許可月數
+  unit_en: months
+  unit_zh: 个月
+  unit_zh_hk: 個月
+  caption_en: Waiting is a wage cut.
+  caption_zh: 等待就是减薪。
+  caption_zh_hk: 等待就是減薪。
+  number: 6
+  en: Six months of waiting can erase a year of advertised premium. Publish the wait next to the wage
+    if you want a serious talent slide.
+  zh: 六个月等待可以抹掉一年宣传中的溢价。若想做认真的人才页，把等待和工资印在一起。
+  zh_hk: 六個月等待可以抹掉一年宣傳中的溢價。若想做認真的人才頁，把等待和工資印在一起。
+- id: weekend
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A weekend-only flow
+  title_zh: 只在周末流动
+  title_zh_hk: 只在週末流動
+  setup_en: Work permit blocked
+  setup_zh: 工作许可受阻
+  setup_zh_hk: 工作許可受阻
+  result_en: People still visit
+  result_zh: 人们仍会到访
+  result_zh_hk: 人們仍會到訪
+  en: You will see bags on Friday night and empty desks on Monday. That is tourism plus meetings,
+    not a labour market. Do not count it as talent integration.
+  zh: 你会在周五晚上看到箱子，周一看到空桌子。那是旅游加开会，不是劳动力市场。不要把它算成人才一体化。
+  zh_hk: 你會在週五晚上看到箱子，週一看到空桌子。那是旅遊加開會，不是勞動力市場。不要把它算成人才一體化。
+- id: tool
+  visual: two_column
+  seconds: 16
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Raise pay or cut friction
+  title_zh: 加薪还是减摩擦
+  title_zh_hk: 加薪還是減摩擦
+  left_en: A larger posted gap
+  left_zh: 更大的名义差额
+  left_zh_hk: 更大的名義差額
+  right_en: A faster permit
+  right_zh: 更快的许可
+  right_zh_hk: 更快的許可
+  en: Raising the poster is easy to announce. Shortening the permit is the tool that changes the net.
+    Use both if you must; do not use only the poster.
+  zh: 提高海报容易宣布。缩短许可才是改变净额的工具。必要时两者都用；不要只用海报。
+  zh_hk: 提高海報容易宣布。縮短許可才是改變淨額的工具。必要時兩者都用；不要只用海報。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Price the permit
+  title_zh: 给许可标价
+  title_zh_hk: 給許可標價
+  q1_en: Is this job licensed?
+  q1_zh: 这份工作需要执照吗？
+  q1_zh_hk: 這份工作需要執照嗎？
+  q2_en: Does the other city accept that licence?
+  q2_zh: 另一座城市承认这张执照吗？
+  q2_zh_hk: 另一座城市承認這張執照嗎？
+  en: Talent policy that only builds housing or trains will miss the gate that actually stops the
+    move. That closes the map sitting. Next sitting asks which city should do which step of the work.
+  zh: 人才政策若只盖房子或只修铁路，会错过真正拦住流动的那道闸。地图这一单元到此结束。下一单元问：哪座城该做工作里的哪一步。
+  zh_hk: 人才政策若只蓋房子或只修鐵路，會錯過真正攔住流動的那道閘。地圖這一單元到此結束。下一單元問：哪座城該做工作裏的哪一步。

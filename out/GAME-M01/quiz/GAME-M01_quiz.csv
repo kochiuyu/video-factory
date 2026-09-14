@@ -1,0 +1,25 @@
+﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
+1,GAME-M01-IN,comprehension,4,When do we call this morning a game?,什么时候这个早晨叫博弈？,幾時呢個朝早叫博弈？,When what one cart takes home depends on the other cart's choice.,当一辆车能带走多少，还取决于另一辆怎么选。,當一架車袋到幾多，仲取決於另一架點揀。
+2,GAME-M01-IN,comprehension,4,What will this unit write down next?,接下来要写下来的是什么？,跟住要寫低嘅係咩？,"That the two carts are in a game. Then players, strategies, and payoffs.",两辆车已经在博弈里。然后是参与人、策略和报酬。,兩架車已經喺博弈入面。然後係參與人、策略同報酬。
+3,GAME-M01-IN,check,4,What one cart takes home depends on the other.,一辆车带走多少，还看另一辆。,一架車袋到幾多，都睇另一架。,,,
+4,GAME-M01-IN,transfer,4,Don't pick a price yet.,先不要定哪个价。,未好定邊個價。,,,
+5,GAME-GI-01,comprehension,4,Why is posting a price on that path already a game?,为什么在那条路上标价已经是博弈？,點解喺嗰條路標價已經係博弈？,Because what one cart takes home also depends on the other cart's price.,因为一辆车能带走多少，还取决于另一辆的价。,因為一架車袋到幾多，仲取決於另一架個價。
+6,GAME-GI-01,transfer,4,A puts a lower price up. B leaves its board. Does B still take home the same amount?,甲把价钱标低。乙牌子不动。乙带走的钱还一样吗？,甲將價錢標低。乙塊牌唔郁。乙袋到嘅錢仲一樣嗎？,No. Customers walk to A. B takes home less without touching the board.,不一样。客人走向甲。乙没改牌子，带走的钱还是少了。,唔一樣。客人行去甲。乙冇改牌，袋到嘅錢都係少咗。
+7,GAME-GI-01,check,4,Can I say what this cart takes home without mentioning the other?,不提另一辆，我说得出这辆车带走多少吗？,唔提另一架，我講唔講得出呢架袋到幾多？,,,
+8,GAME-GI-01,transfer,4,"If the other board changes, does this cart take home less?",对面牌子一变，这辆车带走的钱会变少吗？,對面牌一變，呢架袋到嘅錢會唔會少？,,,
+9,GAME-PL-01,comprehension,4,Who counts as a player here?,这里谁算参与人？,呢度邊個算參與人？,"Someone who posts a price this morning, and who cares what the other cart posts.",今天早上会标价的人，而且在乎对面标什么。,今朝會標價嘅人，而且在意對面標咩。
+10,GAME-PL-01,transfer,4,Are the customers a third player?,客人是第三个参与人吗？,客人係唔係第三個參與人？,No. They walk to the cheaper cart. They do not post a price.,不是。他们走向更便宜的车。他们不标价。,唔係。佢哋行去平嗰架。佢哋唔標價。
+11,GAME-PL-01,check,4,Can this name post a price?,这个名字能标价吗？,呢個名可唔可以標價？,,,
+12,GAME-PL-01,transfer,4,"If not, is it the crowd, the weather, or just a phrase?",如果不能，它是客人、天气，还是一句空话？,若唔得，佢係客人、天氣，定一句空話？,,,
+13,GAME-ST-01,comprehension,4,What is a strategy in this game?,这一局里，策略是什么？,呢一局，策略係咩？,High or Low. What this game allows you to post. Not a mood.,高价或低价。这局允许你标上去的东西。不是一种脾气。,貴定平。呢一局准你標上去嘅嘢。唔係一種脾氣。
+14,GAME-ST-01,transfer,4,A vendor says I will match whatever they do. Is that a strategy here?,摊主说他们怎样我怎样。这里算策略吗？,檔主話佢點我點。呢度算唔算策略？,No. Each cart posts High or Low without seeing the other board.,不算。每辆车要在看不见对面牌子时就标高价或低价。,唔算。每架車要喺睇唔到對面牌嗰陣就標貴定平。
+15,GAME-ST-01,check,4,Is this phrase High or Low?,这句话是高价还是低价？,呢句係貴定平？,,,
+16,GAME-ST-01,transfer,4,"If not, did I change the game?",如果都不是，我是不是换局了？,若都唔係，我係咪換咗局？,,,
+17,GAME-PO-01,comprehension,4,"In the cell 0 then 5, who gets 5?",格子里先 0 后 5，谁拿到 5？,格仔入面先 0 後 5，邊個攞到 5？,Cart B. The first number is always A. Those two numbers are the payoffs.,乙车。头一个数字永远是甲。这两个数字就是报酬。,乙車。第一個數字永遠係甲。呢兩個數字就係報酬。
+18,GAME-PO-01,transfer,4,"Both post Low. Why is the cell 1 and 1, not 5 and 5?",两车都卖低价。为什么是 1 和 1，不是 5 和 5？,兩架都賣平。點解係 1 同 1，唔係 5 同 5？,They split a thin margin. Five appears only if the other cart stays High.,他们在分很薄的利润。那个五只有对面仍卖高价才会出现。,佢哋喺分好薄嘅利潤。嗰個五要對面仲賣貴先會出現。
+19,GAME-PO-01,check,4,Who is the first number?,头一个数字是谁？,第一個數字係邊個？,,,
+20,GAME-PO-01,transfer,4,What does zero then five say happened on the path?,先零后五，路上发生了什么？,先零後五，路上發生咗咩事？,,,
+21,GAME-M01-OUT,comprehension,5,What is on paper now?,现在纸上有什么？,而家紙上面有咩？,"The players, the strategies, and the payoffs.",参与人、策略和报酬。,參與人、策略同報酬。
+22,GAME-M01-OUT,comprehension,5,Has anyone picked a cell yet?,有没有人选出一格？,有冇人揀到一格？,No. What each cart would pick is the next sitting.,没有。每辆车会选哪一格，留给下一讲。,冇。每架車會揀邊一格，留俾下一講。
+23,GAME-M01-OUT,check,5,The table is written.,表已经写好。,張表已經寫好。,,,
+24,GAME-M01-OUT,transfer,5,Nobody has picked a cell yet.,还没有人选出一格。,都未有人揀到一格。,,,

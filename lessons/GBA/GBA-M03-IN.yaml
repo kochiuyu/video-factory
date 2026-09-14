@@ -1,0 +1,68 @@
+id: GBA-M03-IN
+course: gba
+course_en: Greater Bay Area
+course_zh: 粤港澳大湾区
+course_zh_hk: 粵港澳大灣區
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: 'This sitting: the cost of crossing'
+title_zh: 这一讲：跨过去的账
+title_zh_hk: 這一講：跨過去的賬
+objective_en: Add gate time to the sticker price, split finance into doors, then treat two rule books
+  as the design.
+objective_zh: 在标价上加闸口时间，把金融拆成几道门，再把两套规则当成设计。
+objective_zh_hk: 在標價上加閘口時間，把金融拆成幾道門，再把兩套規則當成設計。
+glossary:
+- en: Open
+  zh: 开场
+  zh_hk: 開場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Which three gates does this sitting price?
+  zh: 这一讲给哪三道闸标价？
+  zh_hk: 這一講給哪三道閘標價？
+  answer_en: The shipment’s paperwork, the finance door, and the second rule book.
+  answer_zh: 货物的文件、金融的门、第二本规则。
+  answer_zh_hk: 貨物的文件、金融的門、第二本規則。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: the cost of crossing'
+  title_zh: 这一讲：跨过去的账
+  title_zh_hk: 這一講：跨過去的賬
+  en: The work is assigned. Crossing still has a bill. Paperwork between factory and shop. Listing,
+    banking, and payments under different doors. Then the second rule book.
+  zh: 活已经分好。跨过去仍有账单。工厂和店面之间的文件。上市、银行、支付走不同的门。然后是第二本规则。
+  zh_hk: 活已經分好。跨過去仍有賬單。工廠和店面之間的文件。上市、銀行、支付走不同的門。然後是第二本規則。
+  item1_en: Trade costs
+  item1_zh: 贸易成本
+  item1_zh_hk: 貿易成本
+  item2_en: Financial services
+  item2_zh: 金融服务
+  item2_zh_hk: 金融服務
+  item3_en: Regulatory difference
+  item3_zh: 监管差异
+  item3_zh_hk: 監管差異
+- id: takeaway
+  visual: title_card
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: the cost of crossing'
+  title_zh: 这一讲：跨过去的账
+  title_zh_hk: 這一講：跨過去的賬
+  en: Three shorts. Trade cost, finance doors, regulatory difference. A short map is not a cheap crossing.
+  zh: 三条短片。贸易成本、金融的门、规则的差别。地图短，不等于过关便宜。
+  zh_hk: 三條短片。貿易成本、金融的門、規則的差別。地圖短，不等於過關便宜。

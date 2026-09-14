@@ -1,0 +1,5 @@
+﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
+1,ECON-EL-01,comprehension,25,"If |Ed| is greater than one, what happens to revenue when price rises?",若弹性绝对值大于一，涨价时收入会怎样？,若彈性絕對值大於一，漲價時收入會怎樣？,Revenue falls. Quantity drops by more than the price rises.,收入下降。数量下降的比例大于价格上升的比例。,收入下降。數量下降的比例大於價格上升的比例。
+2,ECON-EL-01,transfer,25,A unique required textbook has almost no substitute. Should a small price rise raise revenue?,一本必修且几乎无替代的教材小幅涨价，收入会不会增加？,一本必修且幾乎無替代的教材小幅漲價，收入會不會增加？,"Yes, if demand is inelastic. Few students can drop the book.",会，若需求缺乏弹性。很少学生能不用这本书。,會，若需求缺乏彈性。很少學生能不用這本書。
+3,ECON-EL-01,check,25,Can buyers switch easily?,买家能否轻易换别的？,買家能否輕易換別的？,,,
+4,ECON-EL-01,transfer,25,Will revenue rise or fall?,收入会升还是会降？,收入會升還是會降？,,,

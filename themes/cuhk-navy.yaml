@@ -1,0 +1,13 @@
+id: cuhk-navy
+label: CUHK navy / gold
+bg: "#F7F4EE"
+ink: "#141C28"
+muted: "#5A6473"
+white: "#FFFFFF"
+navy: "#0B1F3A"
+gold: "#C4A35A"
+emerald: "#1F6F5B"
+wash: "#ECE4D2"
+wash2: "#E8E0CE"
+blobs: true
+corner: true

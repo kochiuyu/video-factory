@@ -1,0 +1,116 @@
+id: GAME-M03-IN
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 96
+title_en: When the table does not pick
+title_zh: 当表选不出来
+title_zh_hk: 當表揀唔出
+objective_en: Open. Last unit the payoff table picked Low and Low. This unit a table that will not pick. Same reading rule.
+objective_zh: 打开。上一单元报酬表选出了低对低。这一单元是一张选不出来的表。读法不变。
+objective_zh_hk: 打開。上一單元報酬表揀咗平對平。呢一單元係一張揀唔出嘅表。讀法不變。
+glossary:
+- en: payoff table
+  zh: 报酬表
+  zh_hk: 報酬表
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What did the last unit's table pick?
+  zh: 上一单元的表选出了什么？
+  zh_hk: 上一單元張表揀咗咩？
+  answer_en: Low and Low. Low dominated High.
+  answer_zh: 低价对低价。低价占优于高价。
+  answer_zh_hk: 平對平。平佔優過貴。
+- id: Q2
+  type: comprehension
+  en: What is new in this unit?
+  zh: 这一单元新在哪里？
+  zh_hk: 呢一單元新喺邊？
+  answer_en: A payoff table where nothing is dominated, so deletion does not pick a cell.
+  answer_zh: 一张没有被占优行的报酬表，删完选不出一格。
+  answer_zh_hk: 一張冇被佔優行嘅報酬表，刪完揀唔出一格。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: When the table does not pick
+  title_zh: 当表选不出来
+  title_zh_hk: 當表揀唔出
+  en: Last sitting the payoff table picked Low and Low. Low dominated High. This sitting we keep the same carts and the same reading rule. The table will not pick for us.
+  zh: 上一讲，报酬表选出了低对低。低价占优于高价。这一讲还是这两辆车，读法也不变。表不会帮我们选出一格。
+  zh_hk: 上一講，報酬表揀咗平對平。平佔優過貴。呢一講都係呢兩架車，讀法都唔變。張表唔會幫我哋揀到一格。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Same page, new numbers
+  title_zh: 同一页，新数字
+  title_zh_hk: 同一頁，新數字
+  formula: A is still the row. First number is still A.
+  formula_en: A is still the row. First number is still A.
+  formula_zh: 甲还是行。头一个数字还是甲。
+  formula_zh_hk: 甲都係行。第一個數字都係甲。
+  gloss_en: Deletion will not finish the job.
+  gloss_zh: 光靠删除，做不完。
+  gloss_zh_hk: 光靠刪除，做唔完。
+  en: Here is the idea. We still read the payoff table the same way. What changes is the numbers. No row loses in every column. You cannot delete your way to one cell.
+  zh: 核心就这一句。报酬表还是那样读。变的是数字。没有一行在每一列都更差。你删不到只剩一格。
+  zh_hk: 核心就呢一句。報酬表都係噉讀。變嘅係數字。冇一行喺每一列都更差。你刪唔到淨剩一格。
+- id: plan
+  visual: module_open
+  seconds: 26
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Four parts from here
+  title_zh: 从这里往后四部分
+  title_zh_hk: 由呢度去四部分
+  en: Here is what we will do. First a morning where both carts want the same side of the path. Then best response. Then Nash, a cell where both answers fit. Last the path narrows, and they cannot both take the gate.
+  zh: 我们接下来做这件事。先看一个早晨，两车都想停在路的同一侧。再点出最优反应。再点出纳什均衡，两边都对得上的那一格。最后路窄了，两车不能一起占住门口。
+  zh_hk: 我哋跟住做呢件事。先睇一個朝早，兩架都想停喺路同一側。再點出最佳回應。再點出納什均衡，兩邊都對得上嗰一格。最後路窄咗，兩架唔可以一齊佔住門口。
+  item1_en: Same side of the path
+  item1_zh: 路的同一侧
+  item1_zh_hk: 路同一側
+  item2_en: Best response
+  item2_zh: 最优反应
+  item2_zh_hk: 最佳回應
+  item3_en: Nash
+  item3_zh: 纳什均衡
+  item3_zh_hk: 納什均衡
+  item4_en: The gate is too narrow
+  item4_zh: 门口太窄
+  item4_zh_hk: 門口太窄
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Do not delete first
+  title_zh: 先不要删
+  title_zh_hk: 未好刪
+  q1_en: Same reading rule as last sitting.
+  q1_zh: 读法和上一讲一样。
+  q1_zh_hk: 讀法同上一講一樣。
+  q2_en: This table will not pick a cell by deletion.
+  q2_zh: 这张表靠删除选不出一格。
+  q2_zh_hk: 呢張表靠刪除揀唔出一格。
+  en: That is all I need you to see in this opening. Keep the payoff table. Do not reach for deletion first. Next both carts want the same side of the path.
+  zh: 开场我只要你看见这一点。把报酬表留下。先不要伸手去删。接下来两车都想停在路的同一侧。
+  zh_hk: 開場我淨要你見到呢樣。將報酬表留低。未好伸手去刪。跟住兩架都想停喺路同一側。

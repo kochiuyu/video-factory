@@ -1,0 +1,75 @@
+id: GBA-M01-OUT
+course: gba
+course_en: Greater Bay Area
+course_zh: 粤港澳大湾区
+course_zh_hk: 粵港澳大灣區
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: The map, closed
+title_zh: 地图，先说到这里
+title_zh_hk: 地圖，先說到這裏
+objective_en: Close the map sitting. Next sitting asks which city should do which step of the work.
+objective_zh: 收住地图这一讲。下一讲问哪座城该做工作里的哪一步。
+objective_zh_hk: 收住地圖這一講。下一講問哪座城該做工作裏的哪一步。
+glossary:
+- en: Close
+  zh: 收束
+  zh_hk: 收束
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Why is a short commute not one labour market?
+  zh: 为什么通勤短不等于一个劳动力市场？
+  zh_hk: 為什麼通勤短不等於一個勞動力市場？
+  answer_en: A licence and a contract still have to travel.
+  answer_zh: 牌照和合同还是要过关。
+  answer_zh_hk: 牌照和合同還是要過關。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The map, closed
+  title_zh: 地图，先说到这里
+  title_zh_hk: 地圖，先說到這裏
+  en: You can name the cities, count door-to-door time, separate the factors, and treat a job move
+    as a permit plus a wage.
+  zh: 你能说出城市，数门到门的时间，分开要素，并把换工作看成许可加工资。
+  zh_hk: 你能說出城市，數門到門的時間，分開要素，並把換工作看成許可加工資。
+  claim_en: You can name the cities, count door-to-door time, separate the factors, and treat a job
+    move as a permit plus a wage.
+  claim_zh: 你能说出城市，数门到门的时间，分开要素，并把换工作看成许可加工资。
+  claim_zh_hk: 你能說出城市，數門到門的時間，分開要素，並把換工作看成許可加工資。
+  next_en: 'That is the map. Next sitting: who does which step — comparative advantage, the chain,
+    the cluster.'
+  next_zh: 地图单元到此。下一讲：谁做哪一步——比较优势、链条、集群。
+  next_zh_hk: 地圖單元到此。下一講：誰做哪一步——比較優勢、鏈條、集群。
+- id: takeaway
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The map, closed
+  title_zh: 地图，先说到这里
+  title_zh_hk: 地圖，先說到這裏
+  en: 'That is the map. Next sitting: who does which step — comparative advantage, the chain, the
+    cluster.'
+  zh: 地图单元到此。下一讲：谁做哪一步——比较优势、链条、集群。
+  zh_hk: 地圖單元到此。下一講：誰做哪一步——比較優勢、鏈條、集群。
+  claim_en: You can name the cities, count door-to-door time, separate the factors, and treat a job
+    move as a permit plus a wage.
+  claim_zh: 你能说出城市，数门到门的时间，分开要素，并把换工作看成许可加工资。
+  claim_zh_hk: 你能說出城市，數門到門的時間，分開要素，並把換工作看成許可加工資。
+  next_en: 'That is the map. Next sitting: who does which step — comparative advantage, the chain,
+    the cluster.'
+  next_zh: 地图单元到此。下一讲：谁做哪一步——比较优势、链条、集群。
+  next_zh_hk: 地圖單元到此。下一講：誰做哪一步——比較優勢、鏈條、集群。

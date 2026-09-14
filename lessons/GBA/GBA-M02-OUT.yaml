@@ -1,0 +1,73 @@
+id: GBA-M02-OUT
+course: gba
+course_en: Greater Bay Area
+course_zh: 粤港澳大湾区
+course_zh_hk: 粵港澳大灣區
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: The work, closed
+title_zh: 活，先说到这里
+title_zh_hk: 活，先說到這裏
+objective_en: 'Close the production sitting. Next sitting prices the crossing: paperwork, finance
+  doors, two rule books.'
+objective_zh: 收住生产这一讲。下一讲给过关标价：文件、金融门槛、两套规则。
+objective_zh_hk: 收住生產這一講。下一講給過關標價：文件、金融門檻、兩套規則。
+glossary:
+- en: Close
+  zh: 收束
+  zh_hk: 收束
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: When is a cluster not a cluster?
+  zh: 何时集群还不算集群？
+  zh_hk: 何時集群還不算集群？
+  answer_en: When the only link is a press release — no shared people, parts, or ideas.
+  answer_zh: 若唯一联系是新闻稿——没有共用的人、零件或想法。
+  answer_zh_hk: 若唯一聯繫是新聞稿——沒有共用的人、零件或想法。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The work, closed
+  title_zh: 活，先说到这里
+  title_zh_hk: 活，先說到這裏
+  en: You can assign the lower-cost city, mark the step that can stop the chain, and refuse a cluster
+    that exists only on a press release.
+  zh: 你能把任务交给机会成本更低的城，标出能让链条停住的那一步，并拒绝只存在于新闻稿上的集群。
+  zh_hk: 你能把任務交給機會成本更低的城，標出能讓鏈條停住的那一步，並拒絕只存在於新聞稿上的集群。
+  claim_en: You can assign the lower-cost city, mark the step that can stop the chain, and refuse
+    a cluster that exists only on a press release.
+  claim_zh: 你能把任务交给机会成本更低的城，标出能让链条停住的那一步，并拒绝只存在于新闻稿上的集群。
+  claim_zh_hk: 你能把任務交給機會成本更低的城，標出能讓鏈條停住的那一步，並拒絕只存在於新聞稿上的集群。
+  next_en: 'That is the work. Next sitting: what it costs to cross.'
+  next_zh: 生产单元到此。下一讲：跨过去要付的账。
+  next_zh_hk: 生產單元到此。下一講：跨過去要付的賬。
+- id: takeaway
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The work, closed
+  title_zh: 活，先说到这里
+  title_zh_hk: 活，先說到這裏
+  en: 'That is the work. Next sitting: what it costs to cross.'
+  zh: 生产单元到此。下一讲：跨过去要付的账。
+  zh_hk: 生產單元到此。下一講：跨過去要付的賬。
+  claim_en: You can assign the lower-cost city, mark the step that can stop the chain, and refuse
+    a cluster that exists only on a press release.
+  claim_zh: 你能把任务交给机会成本更低的城，标出能让链条停住的那一步，并拒绝只存在于新闻稿上的集群。
+  claim_zh_hk: 你能把任務交給機會成本更低的城，標出能讓鏈條停住的那一步，並拒絕只存在於新聞稿上的集群。
+  next_en: 'That is the work. Next sitting: what it costs to cross.'
+  next_zh: 生产单元到此。下一讲：跨过去要付的账。
+  next_zh_hk: 生產單元到此。下一講：跨過去要付的賬。

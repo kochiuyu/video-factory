@@ -1,0 +1,20 @@
+id: GAME-M05
+kind: module
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+duration_target_s: 624
+title_en: When no cell is Nash
+title_zh: 当没有一格是纳什
+title_zh_hk: 當冇一格係納什
+objective_en: Read a table with no pure Nash. Name a mixed strategy. Best-respond to a mix. Find a mixed Nash.
+objective_zh: 读一张没有纯策略纳什的表。点出混合策略。对一个混合做最优反应。找出混合纳什。
+objective_zh_hk: 讀一張冇純策略納什嘅表。點出混合策略。對一個混合做最佳回應。搵出混合納什。
+lessons:
+- GAME-M05-IN
+- GAME-NP-01
+- GAME-MIX-01
+- GAME-BRM-01
+- GAME-MN-01
+- GAME-M05-OUT

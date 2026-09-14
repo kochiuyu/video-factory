@@ -1,0 +1,20 @@
+id: AUD-M01
+kind: module
+course: auditing
+course_en: Introductory Auditing
+course_zh: 审计入门
+course_zh_hk: 審計入門
+duration_target_s: 330
+title_en: Who you are, what you test, what you keep
+title_zh: 你是谁、查什么、留下什么
+title_zh_hk: 你是誰、查什麼、留下什麼
+objective_en: Independence first, then duties inside the firm, then evidence that can support the
+  claim.
+objective_zh: 先独立，再看企业内部的职责分离，然后才是撑得住结论的证据。
+objective_zh_hk: 先獨立，再看企業內部的職責分離，然後才是撐得住結論的證據。
+lessons:
+- AUD-M01-IN
+- AUD-IN-01
+- AUD-IC-01
+- AUD-EV-01
+- AUD-M01-OUT

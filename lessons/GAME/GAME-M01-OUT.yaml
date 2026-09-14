@@ -1,0 +1,116 @@
+id: GAME-M01-OUT
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 72
+title_en: The payoff table
+title_zh: 报酬表
+title_zh_hk: 報酬表
+objective_en: Close on the payoff table. Players on the axes, strategies on the labels, payoffs in the cells. Nobody has picked a cell.
+objective_zh: 用报酬表收住。轴上是参与人，边上是策略，格子里是报酬。还没有人选出一格。
+objective_zh_hk: 用報酬表收住。軸上面係參與人，旁邊係策略，格仔入面係報酬。都未有人揀到一格。
+glossary:
+- en: payoff table
+  zh: 报酬表
+  zh_hk: 報酬表
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What three things sit on the payoff table?
+  zh: 报酬表上有哪三样东西？
+  zh_hk: 報酬表上面有邊三樣嘢？
+  answer_en: Players on the axes, strategies on the labels, payoffs in the cells.
+  answer_zh: 轴上是参与人，边上是策略，格子里是报酬。
+  answer_zh_hk: 軸上面係參與人，旁邊係策略，格仔入面係報酬。
+- id: Q2
+  type: comprehension
+  en: Has anyone picked a cell yet?
+  zh: 有没有人选出一格？
+  zh_hk: 有冇人揀到一格？
+  answer_en: No. What each cart would pick is the next sitting.
+  answer_zh: 没有。每辆车会选哪一格，留给下一讲。
+  answer_zh_hk: 冇。每架車會揀邊一格，留俾下一講。
+beats:
+- id: table
+  visual: payoff_matrix
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: The morning on one page
+  title_zh: 一个早晨，一页纸
+  title_zh_hk: 一個朝早，一頁紙
+  row_player_en: Cart A
+  row_player_zh: 甲车
+  row_player_zh_hk: 甲車
+  col_player_en: Cart B
+  col_player_zh: 乙车
+  col_player_zh_hk: 乙車
+  row1_en: High
+  row1_zh: 高价
+  row1_zh_hk: 貴
+  row2_en: Low
+  row2_zh: 低价
+  row2_zh_hk: 平
+  col1_en: High
+  col1_zh: 高价
+  col1_zh_hk: 貴
+  col2_en: Low
+  col2_zh: 低价
+  col2_zh_hk: 平
+  c11: "(3, 3)"
+  c12: "(0, 5)"
+  c21: "(5, 0)"
+  c22: "(1, 1)"
+  highlight: c11
+  note_en: Players on the axes. Strategies on the labels. Payoffs in the cells.
+  note_zh: 轴上是参与人。边上是策略。格子里是报酬。
+  note_zh_hk: 軸上面係參與人。旁邊係策略。格仔入面係報酬。
+  en: Look at this page. Cart A is the row. Cart B is the column. High and Low sit on the edge. Each cell is what the two carts take home that hour. This grid is the payoff table. That is module one on one page.
+  zh: 看这一页。甲车是行。乙车是列。边上是高价和低价。每一格是那个小时两辆车带走的钱。这张格子就是报酬表。第一单元就在这一页上。
+  zh_hk: 睇呢一頁。甲車係行。乙車係列。旁邊係貴同平。每一格係嗰個鐘兩架車袋走嘅錢。呢張格仔就係報酬表。第一單元就喺呢一頁上面。
+- id: hook
+  visual: module_close
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: The payoff table is written
+  title_zh: 报酬表已经写好
+  title_zh_hk: 報酬表已經寫好
+  claim_en: Players. Strategies. Payoffs. One table.
+  claim_zh: 参与人。策略。报酬。一张表。
+  claim_zh_hk: 參與人。策略。報酬。一張表。
+  next_en: Next sitting asks what each cart would pick from this table.
+  next_zh: 下一讲才问，每辆车会在这张表上选哪一格。
+  next_zh_hk: 下一講先問，每架車會喺呢張表上面揀邊一格。
+  en: That is as far as this unit goes. You can name the players, the strategies, and the payoffs, and you can point to them on one table. Nobody has picked a cell.
+  zh: 这一单元只走到这里。你点得出参与人、策略和报酬，也能在一张表上指出来。还没有人选出一格。
+  zh_hk: 呢一單元淨行到呢度。你點得出參與人、策略同報酬，都能喺一張表上面指出來。都未有人揀到一格。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Nobody has picked a cell
+  title_zh: 还没有人选出一格
+  title_zh_hk: 都未有人揀到一格
+  q1_en: The payoff table holds the morning.
+  q1_zh: 报酬表装着这个早晨。
+  q1_zh_hk: 報酬表裝住呢個朝早。
+  q2_en: Nobody has picked a cell yet.
+  q2_zh: 还没有人选出一格。
+  q2_zh_hk: 都未有人揀到一格。
+  en: That is all I need you to take from this unit. Keep the payoff table. Next sitting starts from this same page and asks what each cart would pick.
+  zh: 这一单元我只要你带走这一点。把报酬表留下。下一讲从同一页开始，问每辆车会选哪一格。
+  zh_hk: 呢一單元我淨要你帶走呢樣。將報酬表留低。下一講由同一頁開始，問每架車會揀邊一格。

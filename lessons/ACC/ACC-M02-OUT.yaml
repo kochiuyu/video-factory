@@ -1,0 +1,73 @@
+id: ACC-M02-OUT
+course: accounting
+course_en: Introductory Accounting
+course_zh: 会计入门
+course_zh_hk: 會計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: The period, closed
+title_zh: 期间，先说到这里
+title_zh_hk: 期間，先說到這裏
+objective_en: You can date a sale, pair its cost, and spread a machine. Payment day is not automatically
+  the story.
+objective_zh: 销售能落期，成本能配对，机器能摊开。付款日并不自动就是故事。
+objective_zh_hk: 銷售能落期，成本能配對，機器能攤開。付款日並不自動就是故事。
+glossary:
+- en: Close
+  zh: 收束
+  zh_hk: 收束
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Why is the payment date not enough?
+  zh: 为什么付款日不够？
+  zh_hk: 為什麼付款日不夠？
+  answer_en: Revenue waits for delivery; cost waits for that revenue; the machine is used across years.
+  answer_zh: 收入等交货；成本等那笔收入；机器按年使用。
+  answer_zh_hk: 收入等交貨；成本等那筆收入；機器按年使用。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The period, closed
+  title_zh: 期间，先说到这里
+  title_zh_hk: 期間，先說到這裏
+  en: A signature is not revenue. A payment is not the matching cost. Buying the machine is not the
+    year of use.
+  zh: 签名不是收入。付款不是配比的成本。买下机器不是使用的那一年。
+  zh_hk: 簽名不是收入。付款不是配比的成本。買下機器不是使用的那一年。
+  claim_en: A signature is not revenue. A payment is not the matching cost. Buying the machine is
+    not the year of use.
+  claim_zh: 签名不是收入。付款不是配比的成本。买下机器不是使用的那一年。
+  claim_zh_hk: 簽名不是收入。付款不是配比的成本。買下機器不是使用的那一年。
+  next_en: That is the timing unit. The number now has a period, not only a journal line.
+  next_zh: 期间单元到此。数字现在有了所属的一期，不只是一行分录。
+  next_zh_hk: 期間單元到此。數字現在有了所屬的一期，不只是一行分錄。
+- id: takeaway
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The period, closed
+  title_zh: 期间，先说到这里
+  title_zh_hk: 期間，先說到這裏
+  en: That is the timing unit. The number now has a period, not only a journal line.
+  zh: 期间单元到此。数字现在有了所属的一期，不只是一行分录。
+  zh_hk: 期間單元到此。數字現在有了所屬的一期，不只是一行分錄。
+  claim_en: A signature is not revenue. A payment is not the matching cost. Buying the machine is
+    not the year of use.
+  claim_zh: 签名不是收入。付款不是配比的成本。买下机器不是使用的那一年。
+  claim_zh_hk: 簽名不是收入。付款不是配比的成本。買下機器不是使用的那一年。
+  next_en: That is the timing unit. The number now has a period, not only a journal line.
+  next_zh: 期间单元到此。数字现在有了所属的一期，不只是一行分录。
+  next_zh_hk: 期間單元到此。數字現在有了所屬的一期，不只是一行分錄。

@@ -1,0 +1,21 @@
+id: GBA-M01
+kind: module
+course: gba
+course_en: Greater Bay Area
+course_zh: 粤港澳大湾区
+course_zh_hk: 粵港澳大灣區
+duration_target_s: 520
+title_en: The map, the link, and who can move
+title_zh: 地图、通道、谁过得去
+title_zh_hk: 地圖、通道、誰過得去
+objective_en: Name the GBA, treat a bridge as saved time, then separate goods, capital, and people
+  — a job move is a permit, not only a train.
+objective_zh: 先给大湾区下定义，把桥看成省下的时间，再分清货、资金和人——换工作是许可，不只是火车。
+objective_zh_hk: 先給大灣區下定義，把橋看成省下的時間，再分清貨、資金和人——換工作是許可，不只是火車。
+lessons:
+- GBA-M01-IN
+- GBA-OV-01
+- GBA-IF-01
+- GBA-FM-01
+- GBA-LM-01
+- GBA-M01-OUT

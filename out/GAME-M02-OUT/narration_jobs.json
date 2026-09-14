@@ -1,0 +1,50 @@
+[
+  {
+    "lesson_id": "GAME-M02-OUT",
+    "beat_id": "hook",
+    "language": "en",
+    "text": "Look back. You can name a dominant strategy. You can cross out a line that dies and read the smaller table. You can solve the prisoner's dilemma the same way, and see why both end worse. That is as far as this unit goes.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-OUT\\audio\\en\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-OUT",
+    "beat_id": "takeaway",
+    "language": "en",
+    "text": "That is all I need you to take from this unit. Nobody guessed a personality. When a line dies on every column, you may delete it. Next sitting starts when nothing dominates.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-OUT\\audio\\en\\takeaway.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-OUT",
+    "beat_id": "hook",
+    "language": "zh_cn",
+    "text": "再看一遍。你点得出占优策略。划得掉会死掉的行，也读得了小表。你也能用同一方法解囚徒困境，并看见为什么两人都更差。这一单元只走到这里。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-OUT\\audio\\zh_cn\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-OUT",
+    "beat_id": "takeaway",
+    "language": "zh_cn",
+    "text": "这一单元我只要你带走这一点。没有人去猜性格。一行在每一列都死，你就可以删。下一讲从没有占优的时候开始。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-OUT\\audio\\zh_cn\\takeaway.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-OUT",
+    "beat_id": "hook",
+    "language": "zh_hk",
+    "text": "再睇一遍。你點得出佔優策略。劃得走會死人嘅行，都讀得細表。你都用得同一方法解囚徒困境，並見到點解兩個人都更差。呢一單元淨行到呢度。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-OUT\\audio\\zh_hk\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-OUT",
+    "beat_id": "takeaway",
+    "language": "zh_hk",
+    "text": "呢一單元我淨要你帶走呢樣。冇人去估性格。一行喺每一列都死人，你就可以刪。下一講由冇佔優嗰陣開始。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-OUT\\audio\\zh_hk\\takeaway.mp3",
+    "with_timestamps": true
+  }
+]

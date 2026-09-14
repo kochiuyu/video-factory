@@ -1,0 +1,73 @@
+id: AUD-M02-OUT
+course: auditing
+course_en: Introductory Auditing
+course_zh: 审计入门
+course_zh_hk: 審計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: The judgment, closed
+title_zh: 判断，先说到这里
+title_zh_hk: 判斷，先說到這裏
+objective_en: 'Close the judgment sitting: you can size a miss and test a document without assuming
+  honesty or fraud.'
+objective_zh: 收住判断这一讲：能衡量遗漏，也能检验文件，而不预设诚实或欺诈。
+objective_zh_hk: 收住判斷這一講：能量量遺漏，也能檢驗文件，而不預設誠實或欺詐。
+glossary:
+- en: Close
+  zh: 收束
+  zh_hk: 收束
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Skepticism assumes what about management?
+  zh: 职业怀疑对管理层做何假定？
+  zh_hk: 職業懷疑對管理層做何假定？
+  answer_en: Neither honesty nor fraud. It asks whether the document earned the trust.
+  answer_zh: 既不假定诚实，也不假定欺诈。它问文件配不配得上信任。
+  answer_zh_hk: 既不假定誠實，也不假定欺詐。它問文件配不配得上信任。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The judgment, closed
+  title_zh: 判断，先说到这里
+  title_zh_hk: 判斷，先說到這裏
+  en: A small error in a watched number can still matter. A convenient number still needs one more
+    original source.
+  zh: 使用者盯着的数字，错一点也可能要紧。一个特别方便的数字，仍需要再抽一份原始来源。
+  zh_hk: 使用者盯著的數字，錯一點也可能要緊。一個特別方便的數字，仍需要再抽一份原始來源。
+  claim_en: A small error in a watched number can still matter. A convenient number still needs one
+    more original source.
+  claim_zh: 使用者盯着的数字，错一点也可能要紧。一个特别方便的数字，仍需要再抽一份原始来源。
+  claim_zh_hk: 使用者盯著的數字，錯一點也可能要緊。一個特別方便的數字，仍需要再抽一份原始來源。
+  next_en: That is the judgment unit. Process plus judgment is the whole audit sitting in this course.
+  next_zh: 判断单元到此。过程加判断，就是这门课里一整次审计。
+  next_zh_hk: 判斷單元到此。過程加判斷，就是這門課裏一整次審計。
+- id: takeaway
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The judgment, closed
+  title_zh: 判断，先说到这里
+  title_zh_hk: 判斷，先說到這裏
+  en: That is the judgment unit. Process plus judgment is the whole audit sitting in this course.
+  zh: 判断单元到此。过程加判断，就是这门课里一整次审计。
+  zh_hk: 判斷單元到此。過程加判斷，就是這門課裏一整次審計。
+  claim_en: A small error in a watched number can still matter. A convenient number still needs one
+    more original source.
+  claim_zh: 使用者盯着的数字，错一点也可能要紧。一个特别方便的数字，仍需要再抽一份原始来源。
+  claim_zh_hk: 使用者盯著的數字，錯一點也可能要緊。一個特別方便的數字，仍需要再抽一份原始來源。
+  next_en: That is the judgment unit. Process plus judgment is the whole audit sitting in this course.
+  next_zh: 判断单元到此。过程加判断，就是这门课里一整次审计。
+  next_zh_hk: 判斷單元到此。過程加判斷，就是這門課裏一整次審計。

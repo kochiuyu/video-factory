@@ -1,0 +1,44 @@
+1
+00:00:00,000 --> 00:00:10,010
+The equation said both sides must move together. Debit and credit are only the
+two sides of that one line. Neither word means good or bad.
+
+2
+00:00:10,030 --> 00:00:14,546
+A debit is the left side of an account. A
+credit is the right side.
+
+3
+00:00:14,566 --> 00:00:20,090
+Every journal entry needs at least one of
+each, and the totals must match.
+
+4
+00:00:20,110 --> 00:00:23,696
+Buying supplies with cash increases an
+asset on the left and decreases another
+asset on the right. Debit supplies.
+
+5
+00:00:23,716 --> 00:00:27,903
+Credit cash.
+
+6
+00:00:27,923 --> 00:00:32,110
+The line still balances.
+
+7
+00:00:32,130 --> 00:00:36,826
+Do not memorise “debit means increase.
+
+8
+00:00:36,846 --> 00:00:42,328
+” Name the account on the left and the
+account on the right, then check the
+amounts.
+
+9
+00:00:42,348 --> 00:00:47,830
+Next we ask when that line is dated — when
+cash moves, or when the work is done.
+

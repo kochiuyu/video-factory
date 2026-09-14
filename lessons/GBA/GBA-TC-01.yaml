@@ -1,0 +1,291 @@
+id: GBA-TC-01
+course: gba
+course_en: Greater Bay Area
+course_zh: 粤港澳大湾区
+course_zh_hk: 粵港澳大灣區
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 192
+title_en: Trade Costs
+title_zh: 贸易成本
+title_zh_hk: 貿易成本
+objective_en: 'Open the crossing unit: add border time and paperwork to the sticker price of a GBA
+  shipment.'
+objective_zh: 打开过关单元：大湾区一票货的标价之外，还要加上过关时间和文件。
+objective_zh_hk: 打開過關單元：大灣區一票貨的標價之外，還要加上過關時間和文件。
+glossary:
+- en: trade cost
+  zh: 贸易成本
+  zh_hk: 貿易成本
+  lock: true
+- en: two systems
+  zh: 两制
+  zh_hk: 兩制
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Trade cost includes which items besides the sticker price?
+  zh: 除标价外，贸易成本还包括什么？
+  zh_hk: 除標價外，貿易成本還包括什麼？
+  answer_en: Time, paperwork, standards, and rule risk at the gate.
+  answer_zh: 过关时间、文件、标准和规则风险。
+  answer_zh_hk: 過關時間、文件、標準和規則風險。
+- id: Q2
+  type: transfer
+  en: Two shops are 40 minutes apart across the boundary. Why might the same good still sell at different
+    prices?
+  zh: 两家店隔着边界只需四十分钟。为何同一商品仍可能卖不同价格？
+  zh_hk: 兩家店隔著邊界只需四十分鐘。為何同一商品仍可能賣不同價格？
+  answer_en: Crossing costs and different standards can keep the prices apart.
+  answer_zh: 过关成本和不同标准可以把价格隔开。
+  answer_zh_hk: 過關成本和不同標準可以把價格隔開。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Trade Costs
+  title_zh: 贸易成本
+  title_zh_hk: 貿易成本
+  en: Last sitting built a chain and a cluster. The factory and the shop may still be an hour apart.
+    The costly part is often the paperwork in between.
+  zh: 上一单元有了链条和集群。工厂和店面也许只相隔一小时。贵的部分往往是中间那些文件。
+  zh_hk: 上一單元有了鏈條和集群。工廠和店面也許只相隔一小時。貴的部分往往是中間那些文件。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Price plus the gate
+  title_zh: 价格加上关口
+  title_zh_hk: 價格加上關口
+  formula: Full cost = price + time + rules
+  formula_en: Full cost = price + time + rules
+  formula_zh: 全成本 = 价格 + 时间 + 规则
+  formula_zh_hk: 全成本 = 價格 + 時間 + 規則
+  gloss_en: Distance is only one piece.
+  gloss_zh: 距离只是其中一块。
+  gloss_zh_hk: 距離只是其中一塊。
+  en: A trade cost is everything that sits between the maker and the buyer besides the sticker price
+    — time at the gate, certificates, standards, and the risk that a rule changes mid-route.
+  zh: 贸易成本是标价之外、挡在生产者和买家之间的一切：过关时间、证明、标准，以及中途规则改变的风险。
+  zh_hk: 貿易成本是標價之外、擋在生產者和買家之間的一切：過關時間、證明、標準，以及中途規則改變的風險。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Same part, two labels
+  title_zh: 同一零件，两套标签
+  title_zh_hk: 同一零件，兩套標籤
+  left_en: Factory test in Dongguan
+  left_zh: 东莞工厂的检测
+  left_zh_hk: 東莞工廠的檢測
+  right_en: Retail standard in Hong Kong
+  right_zh: 香港零售的标准
+  right_zh_hk: 香港零售的標準
+  en: A charger can leave Dongguan after one test and still need another label for a Hong Kong shelf.
+    The second test is a trade cost. The truck was already cheap.
+  zh: 充电器在东莞测完一次，放到香港货架上可能还要另一套标签。第二次检测就是贸易成本。货车其实已经便宜。
+  zh_hk: 充電器在東莞測完一次，放到香港貨架上可能還要另一套標籤。第二次檢測就是貿易成本。貨車其實已經便宜。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Price is not the bill
+  title_zh: 价格不是账单
+  title_zh_hk: 價格不是賬單
+  formula: Full cost = price + time + rules
+  formula_en: Full cost = price + time + rules
+  formula_zh: 全成本 = 价格 + 时间 + 规则
+  formula_zh_hk: 全成本 = 價格 + 時間 + 規則
+  gloss_en: A cheap good can be expensive to move.
+  gloss_zh: 便宜的货可以很贵才搬得动。
+  gloss_zh_hk: 便宜的貨可以很貴才搬得動。
+  en: Trade costs are the extra wedge between the factory gate and the shelf. Time and paperwork sit
+    in that wedge beside the freight quote.
+  zh: 贸易成本是出厂到货架之间多出来的楔子。时间和文件与运费报价一起坐在那块楔子里。
+  zh_hk: 貿易成本是出廠到貨架之間多出來的楔子。時間和文件與運費報價一起坐在那塊楔子裏。
+- id: wedge
+  visual: three_column
+  seconds: 16
+  kicker: Three parts
+  kicker_en: Three parts
+  kicker_zh: 三部分
+  kicker_zh_hk: 三部分
+  title_en: Three pieces of the wedge
+  title_zh: 楔子的三块
+  title_zh_hk: 楔子的三塊
+  col1_en: Freight
+  col1_zh: 运费
+  col1_zh_hk: 運費
+  col2_en: Delay
+  col2_zh: 延误
+  col2_zh_hk: 延誤
+  col3_en: Forms
+  col3_zh: 表格
+  col3_zh_hk: 表格
+  en: A lower freight rate with a longer queue can raise full cost. A new form can do the same. Always
+    add the three before you celebrate a cheaper ticket.
+  zh: 运费更低但排队更长，全成本仍可能上升。一张新表格也一样。在庆祝更便宜的票之前，先把三块加总。
+  zh_hk: 運費更低但排隊更長，全成本仍可能上升。一張新表格也一樣。在慶祝更便宜的票之前，先把三塊加總。
+- id: parts
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A same-day part
+  title_zh: 当天就要的零件
+  title_zh_hk: 當天就要的零件
+  setup_en: The unit price is low
+  setup_zh: 单价很低
+  setup_zh_hk: 單價很低
+  result_en: A missed berth stops the line
+  result_zh: 误了泊位就停线
+  result_zh_hk: 誤了泊位就停線
+  en: The part is cheap. The unplanned stop at the plant is not. Trade cost here is the hour the line
+    sits idle, not the line on the invoice.
+  zh: 零件便宜。工厂计划外停线不便宜。这里的贸易成本是产线闲着的那一小时，不是发票上的那一行。
+  zh_hk: 零件便宜。工廠計劃外停線不便宜。這裏的貿易成本是產線閒著的那一小時，不是發票上的那一行。
+- id: add
+  visual: steps
+  seconds: 18
+  kicker: Steps
+  kicker_en: Steps
+  kicker_zh: 步骤
+  kicker_zh_hk: 步驟
+  title_en: Add a full cost
+  title_zh: 加总全成本
+  title_zh_hk: 加總全成本
+  step1_en: Write the gate price
+  step1_zh: 写出厂价
+  step1_zh_hk: 寫出廠價
+  step2_en: Add hours in money
+  step2_zh: 把小时换成钱
+  step2_zh_hk: 把小時換成錢
+  step3_en: Add the form that can fail
+  step3_zh: 加上可能失败的表格
+  step3_zh_hk: 加上可能失敗的表格
+  en: Start with the seller’s price. Convert expected delay into money. Add the expected cost of a
+    rejected form. That sum is what the buyer compares.
+  zh: 从卖家价格开始。把预期延误换成钱。再加上表格被拒的预期成本。这个总和才是买家在比较的东西。
+  zh_hk: 從賣家價格開始。把預期延誤換成錢。再加上表格被拒的預期成本。這個總和才是買家在比較的東西。
+- id: cut
+  visual: two_column
+  seconds: 16
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Cut the right piece
+  title_zh: 切对的那一块
+  title_zh_hk: 切對的那一塊
+  left_en: A cheaper ship
+  left_zh: 更便宜的船
+  left_zh_hk: 更便宜的船
+  right_en: A faster stamp
+  right_zh: 更快的章
+  right_zh_hk: 更快的章
+  en: If the wedge is time, a cheaper ship does little. If the wedge is a stamp, a new berth does
+    little. Diagnose the piece before you buy the tool.
+  zh: 若楔子是时间，更便宜的船用处不大。若楔子是印章，新泊位用处不大。买工具前先诊断是哪一块。
+  zh_hk: 若楔子是時間，更便宜的船用處不大。若楔子是印章，新泊位用處不大。買工具前先診斷是哪一塊。
+- id: hours
+  visual: big_number
+  seconds: 14
+  kicker: Number
+  kicker_en: Number
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: A day on the quay
+  title_zh: 码头上的一天
+  title_zh_hk: 碼頭上的一天
+  unit_en: hours
+  unit_zh: 小时
+  unit_zh_hk: 小時
+  caption_en: Often larger than the freight.
+  caption_zh: 常常比运费更大。
+  caption_zh_hk: 常常比運費更大。
+  number: 24
+  en: One extra day can exceed the sea freight on a light, urgent part. Publish hours next to dollars
+    when you claim trade just became cheaper.
+  zh: 多一天可以超过一件轻而急的零件的海运费。当你宣称贸易变便宜时，把小时和金额印在一起。
+  zh_hk: 多一天可以超過一件輕而急的零件的海運費。當你宣稱貿易變便宜時，把小時和金額印在一起。
+- id: paper
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A rejected certificate
+  title_zh: 一份被拒的证明
+  title_zh_hk: 一份被拒的證明
+  setup_en: Cargo is already in the port
+  setup_zh: 货已在港
+  setup_zh_hk: 貨已在港
+  result_en: The form sends it back
+  result_zh: 表格把它退回
+  result_zh_hk: 表格把它退回
+  en: The box arrived. The certificate did not match. Full cost includes the return trip. That is
+    a rule cost, not a distance cost.
+  zh: 箱子到了。证明不一致。全成本包括回程。那是规则成本，不是距离成本。
+  zh_hk: 箱子到了。證明不一致。全成本包括回程。那是規則成本，不是距離成本。
+- id: claims
+  visual: three_column
+  seconds: 16
+  kicker: Three parts
+  kicker_en: Three parts
+  kicker_zh: 三部分
+  kicker_zh_hk: 三部分
+  title_en: Three cheap-trade claims
+  title_zh: 三种便宜贸易说法
+  title_zh_hk: 三種便宜貿易說法
+  col1_en: New bridge
+  col1_zh: 新桥
+  col1_zh_hk: 新橋
+  col2_en: Lower tariff
+  col2_zh: 更低关税
+  col2_zh_hk: 更低關稅
+  col3_en: One form fewer
+  col3_zh: 少一张表
+  col3_zh_hk: 少一張表
+  en: Each claim cuts a different piece. A bridge cuts minutes. A tariff cuts the tax. A dropped form
+    cuts failure risk. Do not treat them as synonyms.
+  zh: 每种说法切的是不同块。桥切分钟。关税切税。少一张表切失败风险。不要把它们当成同义词。
+  zh_hk: 每種說法切的是不同塊。橋切分鐘。關稅切稅。少一張表切失敗風險。不要把它們當成同義詞。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Price the gate
+  title_zh: 给关口标价
+  title_zh_hk: 給關口標價
+  q1_en: How long does the crossing take?
+  q1_zh: 过关要花多久？
+  q1_zh_hk: 過關要花多久？
+  q2_en: Which rule is not shared on both sides?
+  q2_zh: 哪一条规则两边并不共用？
+  q2_zh_hk: 哪一條規則兩邊並不共用？
+  en: 'A short map does not mean a cheap trade. Write the gate costs before you call two GBA cities
+    one market. Next: money work has gates too — listing, banking, and payments are not one counter.'
+  zh: 地图短，不等于贸易便宜。先写下闸口成本，再称两座大湾区城市是一个市场。下一讲：钱的活也有闸口——上市、银行、支付，不是同一个柜台。
+  zh_hk: 地圖短，不等於貿易便宜。先寫下閘口成本，再稱兩座大灣區城市是一個市場。下一講：錢的活也有閘口——上市、銀行、支付，不是同一個櫃檯。

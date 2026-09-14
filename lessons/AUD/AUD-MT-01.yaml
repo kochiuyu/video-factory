@@ -1,0 +1,224 @@
+id: AUD-MT-01
+course: auditing
+course_en: Introductory Auditing
+course_zh: 审计入门
+course_zh_hk: 審計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 142
+title_en: Materiality
+title_zh: 重要性
+title_zh_hk: 重要性
+objective_en: 'Open the judgment unit: a misstatement matters if it could change a user’s decision.'
+objective_zh: 打开判断单元：错报若会改变使用者的决定，就重要。
+objective_zh_hk: 打開判斷單元：錯報若會改變使用者的決定，就重要。
+glossary:
+- en: materiality
+  zh: 重要性
+  zh_hk: 重要性
+  lock: true
+- en: misstatement
+  zh: 错报
+  zh_hk: 錯報
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: A misstatement is material when it could do what?
+  zh: 错报在什么情况下是重要的？
+  zh_hk: 錯報在什麼情況下是重要的？
+  answer_en: Change a user’s decision.
+  answer_zh: 改变使用者的决策。
+  answer_zh_hk: 改變使用者的決策。
+- id: Q2
+  type: transfer
+  en: A firm understates a related-party loan that is small versus total assets. Can it still be material?
+  zh: 企业少报一笔关联方借款，相对总资产很小。它仍可能重要吗？
+  zh_hk: 企業少報一筆關聯方借款，相對總資產很小。它仍可能重要嗎？
+  answer_en: Yes. Nature and who benefits can make a small item material.
+  answer_zh: 可能。性质和受益人可以使小项目变得重要。
+  answer_zh_hk: 可能。性質和受益人可以使小項目變得重要。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Materiality
+  title_zh: 重要性
+  title_zh_hk: 重要性
+  en: Last sitting filled the file. This sitting asks which misses are large enough to chase. Materiality
+    is not a rounding rule. It is whether a user would decide differently if the number were corrected.
+  zh: 上一单元把档案装满。这一讲问哪些遗漏大到值得追。重要性不是四舍五入的规则。它问的是：数字改对以后，使用者会不会改决定。
+  zh_hk: 上一單元把檔案裝滿。這一講問哪些遺漏大到值得追。重要性不是四捨五入的規則。它問的是：數字改對以後，使用者會不會改決定。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Could a decision change?
+  title_zh: 决策会不会变？
+  title_zh_hk: 決策會不會變？
+  formula: Material if it could change a decision
+  formula_en: Material if it could change a decision
+  formula_zh: 若可能改变决策即具重要性
+  formula_zh_hk: 若可能改變決策即具重要性
+  gloss_en: Size matters. So does the nature of the item.
+  gloss_zh: 金额重要。项目的性质同样重要。
+  gloss_zh_hk: 金額重要。項目的性質同樣重要。
+  en: A misstatement is material if it could reasonably influence the decisions of users of the statements.
+    A small fraud in a director’s pocket can be material even when the dollar amount is modest.
+  zh: 若错报合理地可能影响报表使用者的决策，它就是重要的。董事把一小笔钱放进自己口袋，即使金额不大，也可以是重要的。
+  zh_hk: 若錯報合理地可能影響報表使用者的決策，它就是重要的。董事把一小筆錢放進自己口袋，即使金額不大，也可以是重要的。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Rounding versus hiding a loss
+  title_zh: 四舍五入与掩盖亏损
+  title_zh_hk: 四捨五入與掩蓋虧損
+  left_en: Tiny rounding in sales
+  left_zh: 销售额上的微小取整
+  left_zh_hk: 銷售額上的微小取整
+  right_en: Error that hides a loss
+  right_zh: 把亏损藏起来的差错
+  right_zh_hk: 把虧損藏起來的差錯
+  en: A one-dollar rounding difference in sales is not material. The same firm books a sale that turns
+    a loss into a profit. Users who care about a profit test would decide differently. That second
+    error is material.
+  zh: 销售额差一块钱的取整，通常不重要。同一家公司记下一笔销售，把亏损变成盈利。关心盈亏门槛的使用者会改主意。这第二项差错就是重要的。
+  zh_hk: 銷售額差一塊錢的取整，通常不重要。同一家公司記下了一筆銷售，把虧損變成盈利。關心盈虧門檻的使用者會改主意。這第二項差錯就是重要的。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Would a decision change?
+  title_zh: 决策会不会变？
+  title_zh_hk: 決策會不會變？
+  formula: Material if it could change a decision
+  formula_en: Material if it could change a decision
+  formula_zh: 若可能改变决策即具重要性
+  formula_zh_hk: 若可能改變決策即具重要性
+  gloss_en: Not every error is equal.
+  gloss_zh: 不是每个错误都一样。
+  gloss_zh_hk: 不是每個錯誤都一樣。
+  en: Materiality is about users. If a lender or owner would choose differently after the correction,
+    the item is material even when it looks small.
+  zh: 重要性看使用者。若更正之后贷款人或股东会做不同选择，即使金额看起来小，项目仍具重要性。
+  zh_hk: 重要性看使用者。若更正之後貸款人或股東會做不同選擇，即使金額看起來小，項目仍具重要性。
+- id: rule
+  visual: big_number
+  seconds: 14
+  kicker: Number
+  kicker_en: Number
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: A starting slice
+  title_zh: 一个起点
+  title_zh_hk: 一個起點
+  unit_en: of profit
+  unit_zh: 利润
+  unit_zh_hk: 利潤
+  caption_en: A rule of thumb, not a law.
+  caption_zh: 经验法则，不是法律。
+  caption_zh_hk: 經驗法則，不是法律。
+  number: 5%
+  en: Five percent of profit is a common planning number. Fraud, covenants, and trends can make a
+    smaller item material. Never stop at the percentage.
+  zh: 利润的百分之五是常见计划数。舞弊、契约和趋势都能让更小的项目变得重要。不要停在百分比上。
+  zh_hk: 利潤的百分之五是常見計劃數。舞弊、契約和趨勢都能讓更小的項目變得重要。不要停在百分比上。
+- id: lenses
+  visual: three_column
+  seconds: 16
+  kicker: Three parts
+  kicker_en: Three parts
+  kicker_zh: 三部分
+  kicker_zh_hk: 三部分
+  title_en: Three user tests
+  title_zh: 三种使用者检验
+  title_zh_hk: 三種使用者檢驗
+  col1_en: Size
+  col1_zh: 金额大小
+  col1_zh_hk: 金額大小
+  col2_en: Nature
+  col2_zh: 性质
+  col2_zh_hk: 性質
+  col3_en: Context
+  col3_zh: 情境
+  col3_zh_hk: 情境
+  en: A large clean error is material. A small lie about a covenant can also be material. Context
+    includes who reads the statements and why.
+  zh: 干净的大错误具有重要性。关于契约的小谎言也可以有重要性。情境包括谁读报表、为什么读。
+  zh_hk: 乾淨的大錯誤具有重要性。關於契約的小謊言也可以有重要性。情境包括誰讀報表、為什麼讀。
+- id: loan
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A thin covenant
+  title_zh: 很紧的契约
+  title_zh_hk: 很緊的契約
+  setup_en: Miss by a tiny amount
+  setup_zh: 只差一点点
+  setup_zh_hk: 只差一點點
+  result_en: The loan can be called
+  result_zh: 贷款可能被收回
+  result_zh_hk: 貸款可能被收回
+  en: The firm is one dollar inside a debt covenant. An extra dollar of expense would break it. That
+    dollar is material because the decision on the loan would change.
+  zh: 公司只比债务契约好一块钱。再多一块费用就会违约。这块钱具有重要性，因为贷款决策会改变。
+  zh_hk: 公司只比債務契約好一塊錢。再多一塊費用就會違約。這塊錢具有重要性，因為貸款決策會改變。
+- id: audit
+  visual: two_column
+  seconds: 16
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Plan versus conclude
+  title_zh: 计划对结论
+  title_zh_hk: 計劃對結論
+  left_en: Planning materiality sets work
+  left_zh: 计划重要性决定工作量
+  left_zh_hk: 計劃重要性決定工作量
+  right_en: Final materiality judges the set
+  right_zh: 最终重要性判断整组
+  right_zh_hk: 最終重要性判斷整組
+  en: You plan tests with one threshold. You judge the pile of leftover misstatements with another
+    look at users. Do not glue the two numbers together without thought.
+  zh: 你用一个门槛去计划测试。你再用使用者的眼光去看剩下的错报堆。不要不经思考就把两个数字粘在一起。
+  zh_hk: 你用一個門檻去計劃測試。你再用使用者的眼光去看剩下的錯報堆。不要不經思考就把兩個數字黏在一起。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Think like a user
+  title_zh: 站在使用者那边想
+  title_zh_hk: 站在使用者那邊想
+  q1_en: Who uses this number?
+  q1_zh: 谁在用这个数字？
+  q1_zh_hk: 誰在用這個數字？
+  q2_en: Would their decision flip if it moved?
+  q2_zh: 数字一动，他们的决策会不会翻转？
+  q2_zh_hk: 數字一動，他們的決策會不會翻轉？
+  en: A small error in a number users watch can still be material. A large error in a line nobody
+    uses may not be. Next we decide how far to trust the evidence we already kept.
+  zh: 使用者盯着的那个数字，错一点也可能重要。没人用的那一行，错一大截也可能不重要。下一讲决定：已经留下的证据，我们敢信到什么地步。
+  zh_hk: 使用者盯著的那個數字，錯一點也可能重要。沒人用的那一行，錯一大截也可能不重要。下一講決定：已經留下的證據，我們敢信到什麼地步。

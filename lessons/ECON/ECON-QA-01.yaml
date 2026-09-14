@@ -1,0 +1,246 @@
+id: ECON-QA-01
+course: factory-qa
+course_en: Factory quality check
+course_zh: 工厂质检课
+course_zh_hk: 工廠質檢課
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 180
+title_en: Trade-offs
+title_zh: 权衡
+title_zh_hk: 權衡
+objective_en: 'Open the choice unit: every yes uses time or money that cannot be spent twice.'
+objective_zh: 打开选择单元：每一个“是”都占用不能花第二次的时间或金钱。
+objective_zh_hk: 打開選擇單元：每一個「是」都佔用不能花第二次的時間或金錢。
+glossary:
+- en: trade-off
+  zh: 权衡
+  zh_hk: 權衡
+  lock: true
+- en: opportunity cost
+  zh: 机会成本
+  zh_hk: 機會成本
+  lock: true
+- en: incentive
+  zh: 激励
+  zh_hk: 激勵
+  lock: true
+- en: sunk cost
+  zh: 沉没成本
+  zh_hk: 沉沒成本
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Opportunity cost counts which forgone option?
+  zh: 机会成本计算的是哪一个放弃的选项？
+  zh_hk: 機會成本計算的是哪一個放棄的選項？
+  answer_en: Only the single best alternative.
+  answer_zh: 只算那个次优选项。
+  answer_zh_hk: 只算那個次優選項。
+- id: Q2
+  type: transfer
+  en: Should a sunk cost decide the next step?
+  zh: 沉没成本应不应该决定下一步？
+  zh_hk: 沉沒成本應不應該決定下一步？
+  answer_en: No. Weigh only future benefits and future costs.
+  answer_zh: 不应该。只权衡未来收益和未来成本。
+  answer_zh_hk: 不應該。只權衡未來收益和未來成本。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 20
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Trade-offs
+  title_zh: 权衡
+  title_zh_hk: 權衡
+  en: This sitting is about a choice. Every yes uses time or money that cannot be spent twice. Name
+    what you give up before you name what you get.
+  zh: 这一单元从选择讲起。每一个“是”，都占用不能花第二次的时间或钱。先说出你放弃了什么，再谈你得到了什么。
+  zh_hk: 這一單元從選擇講起。每一個「是」，都佔用不能花第二次的時間或錢。先說出你放棄了什麼，再談你得到了什麼。
+- id: define
+  visual: definition_card
+  seconds: 20
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Trade-off
+  title_zh: 权衡
+  title_zh_hk: 權衡
+  formula: trade-off = give up one thing to get another
+  formula_en: trade-off = give up one thing to get another
+  formula_zh: 权衡 = 放弃一样去得到另一样
+  formula_zh_hk: 權衡 = 放棄一樣去得到另一樣
+  gloss_en: Time, money, and attention are limited
+  gloss_zh: 时间、金钱和注意力都有限
+  gloss_zh_hk: 時間、金錢和注意力都有限
+  en: A trade-off means you give up one use of a resource to get another. Time, money, and attention
+    are limited, so saying yes to a project is also saying no to the next-best use of the same afternoon.
+    Name both sides before you call the choice cheap.
+  zh: 权衡是指你放弃一种用途，才能得到另一种。时间、金钱和注意力都有限，答应一个项目，等于拒绝同一下午的次优用途。说便宜之前，先把两边都写下来。
+  zh_hk: 權衡是指你放棄一種用途，才能得到另一種。時間、金錢和注意力都有限，答應一個項目，等於拒絕同一下午的次優用途。說便宜之前，先把兩邊都寫下來。
+- id: formula
+  visual: formula
+  seconds: 20
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Opportunity cost
+  title_zh: 机会成本
+  title_zh_hk: 機會成本
+  formula: OC = value of the best forgone option
+  formula_en: OC = value of the best forgone option
+  formula_zh: 机会成本 = 次优选项的价值
+  formula_zh_hk: 機會成本 = 次優選項的價值
+  gloss_en: Count only the next-best use, not every dream
+  gloss_zh: 只算次优用途，不算所有愿望
+  gloss_zh_hk: 只算次優用途，不算所有願望
+  en: Opportunity cost is the value of the single best option you give up, not the sum of every option
+    you can imagine. If you spend the evening on one problem set, the cost is the next-best evening,
+    not the whole rest of the semester. Write that next-best use in one line.
+  zh: 机会成本是你放弃的那个次优选项的价值，不是所有想象中的选项加总。若整晚只做一套题，成本是次优的那个晚上，不是整个学期。请用一句话写出那个次优用途。
+  zh_hk: 機會成本是你放棄的那個次優選項的價值，不是所有想像中的選項加總。若整晚只做一套題，成本是次優的那個晚上，不是整個學期。請用一句話寫出那個次優用途。
+- id: predict
+  visual: two_column
+  seconds: 20
+  kicker: Predict
+  kicker_en: Predict
+  kicker_zh: 预测
+  kicker_zh_hk: 預測
+  title_en: Raise the reward
+  title_zh: 提高回报
+  title_zh_hk: 提高回報
+  left_en: Stronger incentive
+  left_zh: 更强激励
+  left_zh_hk: 更強激勵
+  right_en: More of that action
+  right_zh: 更多该行动
+  right_zh_hk: 更多該行動
+  en: If you raise the reward for one action, people usually do more of it. That is the first column.
+    The second column is the behaviour you should write down before the rule changes. Watch the two
+    cards. The left claim should land first, then the right claim, while the gold bar keeps moving
+    across the same beat.
+  zh: 提高某一行动的回报，人们通常会做更多。这是左栏。右栏是改规则之前就该写下的行为。请看两张卡片：左栏主张先出现，右栏随后出现，金色进度条仍在同一拍上往前走。
+  zh_hk: 提高某一行動的回報，人們通常會做更多。這是左欄。右欄是改規則之前就該寫下的行為。請看兩張卡片：左欄主張先出現，右欄隨後出現，金色進度條仍在同一拍上往前走。
+- id: example
+  visual: example
+  seconds: 20
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Night bonus
+  title_zh: 夜间奖金
+  title_zh_hk: 夜間獎金
+  setup_en: Late-night bonus per completed drop
+  setup_zh: 夜间每单完成支付奖金
+  setup_zh_hk: 夜間每單完成支付獎金
+  result_en: Faster deliveries / more accidents
+  result_zh: 更快送达 / 更多事故
+  result_zh_hk: 更快送達 / 更多事故
+  en: A platform pays a late-night bonus for each completed drop. Riders finish more orders, which
+    is the intended incentive. They also take riskier routes, and accidents rise. Watch the setup
+    card first, then the result card. The extra accidents are the side effect you should have written
+    before the bonus went live.
+  zh: 平台为夜间每单完成支付奖金。骑手完成更多订单，这是预期的激励。他们也走更险的路线，事故上升。请先看设定卡，再看结果卡。多出的事故，就是奖金上线前就该写下来的副作用。
+  zh_hk: 平台為夜間每單完成支付獎金。騎手完成更多訂單，這是預期的激勵。他們也走更險的路線，事故上升。請先看設定卡，再看結果卡。多出的事故，就是獎金上線前就該寫下來的副作用。
+- id: compare
+  visual: three_column
+  seconds: 22
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 比较
+  kicker_zh_hk: 比較
+  title_en: Three checks
+  title_zh: 三项检查
+  title_zh_hk: 三項檢查
+  col1_en: Name the incentive
+  col1_zh: 说出激励
+  col1_zh_hk: 說出激勵
+  col2_en: Predict the action
+  col2_zh: 预测行为
+  col2_zh_hk: 預測行為
+  col3_en: Check the side effect
+  col3_zh: 检查副作用
+  col3_zh_hk: 檢查副作用
+  en: Before you change a grade rule or a bonus, run three checks. Name the incentive in one phrase.
+    Predict which action will rise. Then ask what else might rise that you do not want. The three
+    cards should appear in that order. If a check is missing, stop and write it before the policy
+    goes out.
+  zh: 改成绩规则或奖金之前，先做三项检查。一句话说出激励，预测哪一种行为会增加，再问还有什么你不想增加的东西。三张卡片应按这个顺序出现。缺一项，就先补上再出台政策。
+  zh_hk: 改成績規則或獎金之前，先做三項檢查。一句話說出激勵，預測哪一種行為會增加，再問還有什麼你不想增加的東西。三張卡片應按這個順序出現。缺一項，就先補上再出臺政策。
+- id: rule
+  visual: steps
+  seconds: 22
+  kicker: Rule
+  kicker_en: Rule
+  kicker_zh: 规则
+  kicker_zh_hk: 規則
+  title_en: Ignore sunk cost
+  title_zh: 忽略沉没成本
+  title_zh_hk: 忽略沉沒成本
+  step1_en: Name future benefits
+  step1_zh: 写出未来收益
+  step1_zh_hk: 寫出未來收益
+  step2_en: Name future costs
+  step2_zh: 写出未来成本
+  step2_zh_hk: 寫出未來成本
+  step3_en: Leave the sunk cost out
+  step3_zh: 沉没成本不入账
+  step3_zh_hk: 沉沒成本不入賬
+  en: A sunk cost is already spent and cannot come back. The next choice should weigh only future
+    benefits and future costs. Name the future gain, name the future cost, and leave the tuition already
+    paid off the page. Watch the three steps arrive one after another. If the bar is still running,
+    the beat is not over.
+  zh: 沉没成本已经花掉，无法收回。下一步只应权衡未来收益和未来成本。先写未来收益，再写未来成本，已交学费不要入账。请看三步依次出现。进度条还在走，这一拍就还没结束。
+  zh_hk: 沉沒成本已經花掉，無法收回。下一步只應權衡未來收益和未來成本。先寫未來收益，再寫未來成本，已交學費不要入賬。請看三步依次出現。進度條還在走，這一拍就還沒結束。
+- id: number
+  visual: big_number
+  seconds: 18
+  kicker: Fact
+  kicker_en: Fact
+  kicker_zh: 数据
+  kicker_zh_hk: 數據
+  title_en: Night bonus
+  title_zh: 夜间奖金
+  title_zh_hk: 夜間獎金
+  unit_en: more late drops
+  unit_zh: 夜间单量
+  unit_zh_hk: 夜間單量
+  caption_en: and more accidents on the same nights
+  caption_zh: 同一夜间事故也更多
+  caption_zh_hk: 同一夜間事故也更多
+  number: 2x
+  en: Suppose late drops double after the bonus. That number is not a verdict by itself. Ask whether
+    accidents, complaints, or quits moved on the same nights. A big number on screen should make you
+    pause, not clap. Hold the figure until the gold bar finishes, then decide what else you need to
+    measure.
+  zh: 假设奖金之后夜间单量翻倍。这个数字本身不是结论。要问同一夜间事故、投诉或离职有没有一起变。大数字是让你停下来，不是让你鼓掌。等进度条走完，再决定还要量什么。
+  zh_hk: 假設獎金之後夜間單量翻倍。這個數字本身不是結論。要問同一夜間事故、投訴或離職有沒有一起變。大數字是讓你停下來，不是讓你鼓掌。等進度條走完，再決定還要量什麼。
+- id: takeaway
+  visual: takeaway
+  seconds: 18
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Two questions
+  title_zh: 两个问题
+  title_zh_hk: 兩個問題
+  q1_en: What do you give up if you say yes tonight?
+  q1_zh: 若今晚答应，你放弃的是什么？
+  q1_zh_hk: 若今晚答應，你放棄的是什麼？
+  q2_en: If that cost were not yet sunk, would you still choose this path?
+  q2_zh: 若那笔成本尚未沉没，你今天还会选这条路吗？
+  q2_zh_hk: 若那筆成本尚未沉沒，你今天還會選這條路嗎？
+  en: 'Hold two questions on the table. What do you give up if you say yes tonight? If that cost were
+    zero, would the choice even be hard? Next we give that hidden price a name: opportunity cost.'
+  zh: 桌上只留两个问题。今晚说“是”，你放弃了什么？若那代价为零，这件事还会难选吗？下一讲给这个看不见的价格起个名字：机会成本。
+  zh_hk: 桌上只留兩個問題。今晚說「是」，你放棄了什麼？若那代價為零，這件事還會難選嗎？下一講給這個看不見的價格起個名字：機會成本。

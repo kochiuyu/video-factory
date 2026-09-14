@@ -1,0 +1,129 @@
+id: GAME-APP-01
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: Two shops cut price
+title_zh: 两家店抢着降价
+title_zh_hk: 兩間店搶住減價
+objective_en: Weekend promo is the cart price war. Low dominates. Both cut. Both take home less.
+objective_zh: 周末促销就是咖啡车的价格战。低价占优。都降。都少赚。
+objective_zh_hk: 周末促銷就係咖啡車嘅價格戰。平佔優。都減。都少賺。
+glossary:
+- en: prisoner's dilemma
+  zh: 囚徒困境
+  zh_hk: 囚徒困境
+  lock: true
+quiz:
+- id: Q1
+  type: transfer
+  en: Two cafes share one street. Each can hold price or cut this weekend. What tool first?
+  zh: 两家咖啡店同一条街。这个周末可以守价或降价。先用哪样工具？
+  zh_hk: 兩間咖啡店同一條街。呢個周末可以守價定減價。先用邊樣工具？
+  answer_en: Dominance. Check whether Cut pays more in both columns.
+  answer_zh: 占优。看降价是不是两列都更赚。
+  answer_zh_hk: 佔優。睇減價係唔係兩列都更賺。
+- id: Q2
+  type: transfer
+  en: Both cut and both take home less. What is the name?
+  zh: 都降了，带走的都少了。这叫什么？
+  zh_hk: 都減咗，袋走嘅都少咗。呢個叫咩？
+  answer_en: The prisoner's dilemma. Same table as High and Low.
+  answer_zh: 囚徒困境。和高低价是同一张表。
+  answer_zh_hk: 囚徒困境。同貴平係同一張表。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: This weekend's board
+  title_zh: 这个周末的牌子
+  title_zh_hk: 呢個周末嘅牌
+  en: Two cafes on one street. Each can Hold this weekend's price or Cut. Customers walk to the cheaper board. You have seen this morning already.
+  zh: 一条街上两家咖啡店。这个周末可以守价，也可以降。客人走向更便宜的牌子。这个早晨你已经见过。
+  zh_hk: 一條街兩間咖啡店。呢個周末可以守價，亦可以減。客人行去平啲嗰塊牌。呢個朝早你已經見過。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Reach for dominance first
+  title_zh: 先伸手拿占优
+  title_zh_hk: 先伸手攞佔優
+  formula: If Cut pays more in both columns, Cut dominates
+  formula_en: If Cut pays more in both columns, Cut dominates
+  formula_zh: 两列里降价都更赚，降价就占优
+  formula_zh_hk: 兩列裏面減價都更賺，減價就佔優
+  gloss_en: Do not start with a meeting about loyalty.
+  gloss_zh: 不要先开会谈义气。
+  gloss_zh_hk: 唔好先開會談義氣。
+  en: Here is the idea. Write the table before you call a meeting. If Cut pays more when the other Holds, and Cut still pays more when the other Cuts, Cut dominates. That is the cart table with new labels.
+  zh: 核心就这一句。先写表，再开会。对面守价时降更赚，对面也降时降还是更赚，降价就占优。就是咖啡车那张表，换了标签。
+  zh_hk: 核心就呢一句。先寫表，再開會。對面守價嗰陣減更賺，對面都減嗰陣減都係更賺，減價就佔優。就係咖啡車嗰張表，換咗標籤。
+- id: example
+  visual: example
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Both cut, both thinner
+  title_zh: 都降了，都更薄
+  title_zh_hk: 都減咗，都更薄
+  setup_en: Each cafe deletes Hold. Both post Cut.
+  setup_zh: 两家都划掉守价。都亮出降价。
+  setup_zh_hk: 兩間都劃走守價。都亮出減價。
+  result_en: Traffic is up. Margin is down. Same sting as Low and Low.
+  result_zh: 人流多了。利润薄了。和低对低是同一刺。
+  result_zh_hk: 人流多咗。利潤薄咗。同平對平係同一刺。
+  en: Each cafe deletes Hold. Both post Cut. More customers walk in. Each ticket is thinner. That is the prisoner's dilemma at work. A promise to Hold only works if breaking it does not pay.
+  zh: 两家都划掉守价。都亮出降价。客人多了。每单更薄。这就是上班时的囚徒困境。答应守价，只有违约没有好处时才站得住。
+  zh_hk: 兩間都劃走守價。都亮出減價。客人多咗。每單更薄。呢個就係返工嗰陣嘅囚徒困境。答應守價，淨係違約冇好處嗰陣先企得住。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Airlines, same seat
+  title_zh: 航空公司，同一张票
+  title_zh_hk: 航空公司，同一張票
+  left_en: Two airlines, one route. Cut the fare or hold it.
+  left_zh: 两家航空，同一条航线。降票价或守票价。
+  left_zh_hk: 兩間航空，同一條航線。減票價定守票價。
+  right_en: Same tool. Check both columns before you call it a brand war.
+  right_zh: 同一工具。先看两列，再叫它品牌战。
+  right_zh_hk: 同一工具。先睇兩列，再叫佢品牌戰。
+  en: Two airlines on one route look the same. Cut or Hold. Check both columns. If Cut dominates, you are not watching a personality. You are watching the cart table in a terminal.
+  zh: 同一条航线上的两家航空，也是这样。降或守。先看两列。降价一旦占优，你就不是在看性格。你是在航站楼里看咖啡车那张表。
+  zh_hk: 同一條航線上面兩間航空，都係噉。減定守。先睇兩列。減價一旦佔優，你就唔係喺度睇性格。你係喺航站樓睇咖啡車嗰張表。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Delete before you meet
+  title_zh: 先删，再开会
+  title_zh_hk: 先刪，再開會
+  q1_en: Weekend promo can be a prisoner's dilemma.
+  q1_zh: 周末促销可以是囚徒困境。
+  q1_zh_hk: 周末促銷可以係囚徒困境。
+  q2_en: Check both columns before you talk loyalty.
+  q2_zh: 先看两列，再谈义气。
+  q2_zh_hk: 先睇兩列，再談義氣。
+  en: Write the table. If one row dies in every column, delete it. Next two products that need the same plug. Deletion will not pick the plug.
+  zh: 先写表。一行在每一列都死，就删。接下来两个产品要同一只插头。删除选不出插头。
+  zh_hk: 先寫表。一行喺每一列都死人，就刪。跟住兩個產品要同一隻插頭。刪除揀唔出插頭。

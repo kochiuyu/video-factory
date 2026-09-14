@@ -1,0 +1,44 @@
+1
+00:00:00,000 --> 00:00:11,210
+This sitting starts with the books. Every resource the firm controls has a claim on
+it. The equation is the test that those two sides still match.
+
+2
+00:00:11,230 --> 00:00:17,141
+Assets are resources the business
+controls. Liabilities are claims by
+outsiders.
+
+3
+00:00:17,161 --> 00:00:24,390
+Equity is the owners’ residual claim. The
+two sides must be equal after every event.
+
+4
+00:00:24,410 --> 00:00:28,659
+The firm borrows cash from a bank. Cash,
+an asset, rises.
+
+5
+00:00:28,679 --> 00:00:33,640
+The bank loan, a liability, rises by the
+same amount. Equity does not move.
+
+6
+00:00:33,660 --> 00:00:38,620
+The equation still holds.
+
+7
+00:00:38,640 --> 00:00:41,593
+After each event,
+
+8
+00:00:41,613 --> 00:00:45,061
+name the asset that moved and the claim
+that moved with it.
+
+9
+00:00:45,081 --> 00:00:48,530
+Next we write that same event as a debit
+and a credit.
+

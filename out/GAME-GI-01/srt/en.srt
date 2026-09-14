@@ -1,0 +1,155 @@
+1
+00:00:00,000 --> 00:00:02,342
+Look at those two carts again.
+
+2
+00:00:02,362 --> 00:00:07,065
+Cart A is thinking, I will cut the price
+and sell more.
+
+3
+00:00:07,085 --> 00:00:11,001
+Fine, if A is the only cart on the path.
+
+4
+00:00:11,021 --> 00:00:12,575
+B is already there.
+
+5
+00:00:12,595 --> 00:00:14,937
+Customers walk to the cheaper board.
+
+6
+00:00:14,957 --> 00:00:19,660
+So when A sells more, those cups used to
+stop at B.
+
+7
+00:00:19,680 --> 00:00:21,152
+Here is the idea.
+
+8
+00:00:21,172 --> 00:00:24,508
+What one cart takes home that hour depends
+on
+
+9
+00:00:24,527 --> 00:00:26,745
+both prices, not just its own.
+
+10
+00:00:26,765 --> 00:00:27,863
+Try a test.
+
+11
+00:00:27,883 --> 00:00:30,101
+Pretend the other cart is gone.
+
+12
+00:00:30,121 --> 00:00:34,203
+If what you take home does not change, you
+are not
+
+13
+00:00:34,222 --> 00:00:35,694
+in a game yet.
+
+14
+00:00:35,714 --> 00:00:39,050
+You just have a shop on an empty path.
+
+15
+00:00:39,070 --> 00:00:40,868
+Think of one cart first.
+
+16
+00:00:40,888 --> 00:00:44,141
+Customers have nowhere else to buy, so
+that cart
+
+17
+00:00:44,161 --> 00:00:46,687
+can set a price and ignore everyone.
+
+18
+00:00:46,707 --> 00:00:49,232
+On this path there are two carts.
+
+19
+00:00:49,252 --> 00:00:52,505
+Customers look at both prices and walk to
+the
+
+20
+00:00:52,525 --> 00:00:53,397
+cheaper one.
+
+21
+00:00:53,417 --> 00:00:56,670
+Each cart has to think about the other
+board.
+
+22
+00:00:56,690 --> 00:00:57,735
+Now watch B.
+
+23
+00:00:57,755 --> 00:01:00,576
+A puts a lower price on the board.
+
+24
+00:01:00,596 --> 00:01:03,062
+B leaves its price where it is.
+
+25
+00:01:03,082 --> 00:01:04,838
+Customers walk over to A.
+
+26
+00:01:04,858 --> 00:01:08,744
+B did not touch the board, and B still
+takes home
+
+27
+00:01:08,764 --> 00:01:09,809
+less that hour.
+
+28
+00:01:09,829 --> 00:01:12,650
+That is all I need you to see.
+
+29
+00:01:12,670 --> 00:01:13,800
+Use two checks.
+
+30
+00:01:13,820 --> 00:01:17,248
+Can I say what this cart takes home
+without
+
+31
+00:01:17,268 --> 00:01:18,781
+mentioning the other one?
+
+32
+00:01:18,801 --> 00:01:22,613
+If the other board changes and this board
+does not,
+
+33
+00:01:22,633 --> 00:01:25,295
+does this cart still take home less?
+
+34
+00:01:25,315 --> 00:01:29,127
+If both answers are no, you can ignore the
+other
+
+35
+00:01:29,147 --> 00:01:30,004
+cart.
+
+36
+00:01:30,024 --> 00:01:31,920
+Next we name the players.
+

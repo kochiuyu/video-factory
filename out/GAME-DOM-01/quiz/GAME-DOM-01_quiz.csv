@@ -1,0 +1,5 @@
+﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
+1,GAME-DOM-01,comprehension,25,When does Low dominate High for cart A?,什么时候甲车的低价占优于高价？,幾時甲車嘅平佔優過貴？,"When Low pays A more than High, both if B posts High and if B posts Low.",无论乙标高价还是低价，甲标低价都比标高价赚得多。,無論乙標貴定平，甲標平都比標貴賺得多。
+2,GAME-DOM-01,transfer,25,B posts High. A gets 3 from High and 5 from Low. Is that enough to say Low dominates?,乙标高价。甲标高价得 3，标低价得 5。这就能说低价占优吗？,乙標貴。甲標貴得 3，標平得 5。噉就講得平佔優嗎？,"No. You still have to check the other column, when B posts Low.",不能。还要看另一列，乙标低价的时候。,唔得。仲要睇另一列，乙標平嗰陣。
+3,GAME-DOM-01,check,25,"If B posts High, does Low pay A more?",乙标高价时，甲标低价更赚吗？,乙標貴嗰陣，甲標平更賺嗎？,,,
+4,GAME-DOM-01,transfer,25,"If B posts Low, does Low still pay A more?",乙标低价时，甲标低价还是更赚吗？,乙標平嗰陣，甲標平仲係更賺嗎？,,,

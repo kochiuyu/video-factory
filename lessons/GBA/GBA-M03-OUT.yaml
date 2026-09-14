@@ -1,0 +1,74 @@
+id: GBA-M03-OUT
+course: gba
+course_en: Greater Bay Area
+course_zh: 粤港澳大湾区
+course_zh_hk: 粵港澳大灣區
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: The crossing, closed
+title_zh: 过关，先说到这里
+title_zh_hk: 過關，先說到這裏
+objective_en: 'Close the GBA course sitting: place, work, and the bill to cross.'
+objective_zh: 收住大湾区这一课：地方、活、以及跨过去的账。
+objective_zh_hk: 收住大灣區這一課：地方、活、以及跨過去的賬。
+glossary:
+- en: Close
+  zh: 收束
+  zh_hk: 收束
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Why keep desks in more than one GBA city?
+  zh: 为什么要在多于一座大湾区城市留办公桌？
+  zh_hk: 為什麼要在多於一座大灣區城市留辦公桌？
+  answer_en: Different rule books — a cost, and also the reason the work is split.
+  answer_zh: 不同的规则书——既是成本，也是把活拆开的原因。
+  answer_zh_hk: 不同的規則書——既是成本，也是把活拆開的原因。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The crossing, closed
+  title_zh: 过关，先说到这里
+  title_zh_hk: 過關，先說到這裏
+  en: You can write gate costs, refuse “GBA finance” as one counter, and treat the second rule book
+    as why a firm keeps two desks.
+  zh: 你能写下闸口成本，拒绝把“大湾区金融”说成一个柜台，并把第二本规则看成企业留两张办公桌的原因。
+  zh_hk: 你能寫下閘口成本，拒絕把「大灣區金融」說成一個櫃檯，並把第二本規則看成企業留兩張辦公桌的原因。
+  claim_en: You can write gate costs, refuse “GBA finance” as one counter, and treat the second rule
+    book as why a firm keeps two desks.
+  claim_zh: 你能写下闸口成本，拒绝把“大湾区金融”说成一个柜台，并把第二本规则看成企业留两张办公桌的原因。
+  claim_zh_hk: 你能寫下閘口成本，拒絕把「大灣區金融」說成一個櫃檯，並把第二本規則看成企業留兩張辦公桌的原因。
+  next_en: That is the crossing. The GBA is cities, assigned work, and gates — not one market on a
+    poster.
+  next_zh: 过关单元到此。大湾区是城市、分好的活、和闸口——不是海报上的一个市场。
+  next_zh_hk: 過關單元到此。大灣區是城市、分好的活、和閘口——不是海報上的一個市場。
+- id: takeaway
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The crossing, closed
+  title_zh: 过关，先说到这里
+  title_zh_hk: 過關，先說到這裏
+  en: That is the crossing. The GBA is cities, assigned work, and gates — not one market on a poster.
+  zh: 过关单元到此。大湾区是城市、分好的活、和闸口——不是海报上的一个市场。
+  zh_hk: 過關單元到此。大灣區是城市、分好的活、和閘口——不是海報上的一個市場。
+  claim_en: You can write gate costs, refuse “GBA finance” as one counter, and treat the second rule
+    book as why a firm keeps two desks.
+  claim_zh: 你能写下闸口成本，拒绝把“大湾区金融”说成一个柜台，并把第二本规则看成企业留两张办公桌的原因。
+  claim_zh_hk: 你能寫下閘口成本，拒絕把「大灣區金融」說成一個櫃檯，並把第二本規則看成企業留兩張辦公桌的原因。
+  next_en: That is the crossing. The GBA is cities, assigned work, and gates — not one market on a
+    poster.
+  next_zh: 过关单元到此。大湾区是城市、分好的活、和闸口——不是海报上的一个市场。
+  next_zh_hk: 過關單元到此。大灣區是城市、分好的活、和閘口——不是海報上的一個市場。

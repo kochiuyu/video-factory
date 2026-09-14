@@ -1,0 +1,1763 @@
+
+===== ACC-AC-01  2026-09-11 16:27:09 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en single
+progress: slides 1/3 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh single
+progress: slides 2/3 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk single
+progress: slides 3/3 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 47.8s
+slides-only: wrote 18 PNG files; skipped TTS and mux
+timing: total 47.8s
+timing: breakdown slides 47.8s
+progress: module 5/5 build ACC-M01-OUT
+######## ACC-M01-OUT (module part 5/5) ########
+
+===== ACC-AC-01  2026-09-12 01:29:41 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en (19 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh (19 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk (19 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 0.0s
+preview en/01_hook
+preview en/02_define
+preview en/02_define_s1
+preview en/02_define_s2
+preview en/03_example
+preview en/03_example_s1
+preview en/03_example_s2
+preview en/03_example_s3
+preview en/04_formula
+preview en/04_formula_s1
+preview en/04_formula_s2
+preview en/05_steps
+preview en/05_steps_s1
+preview en/05_steps_s2
+preview en/05_steps_s3
+preview en/06_takeaway
+preview en/06_takeaway_s1
+preview en/06_takeaway_s2
+preview en/06_takeaway_s3
+progress: preview 1/3 en
+preview zh_cn/01_hook
+preview zh_cn/02_define
+preview zh_cn/02_define_s1
+preview zh_cn/02_define_s2
+preview zh_cn/03_example
+preview zh_cn/03_example_s1
+preview zh_cn/03_example_s2
+preview zh_cn/03_example_s3
+preview zh_cn/04_formula
+preview zh_cn/04_formula_s1
+preview zh_cn/04_formula_s2
+preview zh_cn/05_steps
+preview zh_cn/05_steps_s1
+preview zh_cn/05_steps_s2
+preview zh_cn/05_steps_s3
+preview zh_cn/06_takeaway
+preview zh_cn/06_takeaway_s1
+preview zh_cn/06_takeaway_s2
+preview zh_cn/06_takeaway_s3
+progress: preview 2/3 zh
+preview zh_hk/01_hook
+preview zh_hk/02_define
+preview zh_hk/02_define_s1
+preview zh_hk/02_define_s2
+preview zh_hk/03_example
+preview zh_hk/03_example_s1
+preview zh_hk/03_example_s2
+preview zh_hk/03_example_s3
+preview zh_hk/04_formula
+preview zh_hk/04_formula_s1
+preview zh_hk/04_formula_s2
+preview zh_hk/05_steps
+preview zh_hk/05_steps_s1
+preview zh_hk/05_steps_s2
+preview zh_hk/05_steps_s3
+preview zh_hk/06_takeaway
+preview zh_hk/06_takeaway_s1
+preview zh_hk/06_takeaway_s2
+preview zh_hk/06_takeaway_s3
+progress: preview 3/3 zh_hk
+caption-preview: wrote 57 stamped frames; skipped TTS and mux
+timing: caption preview 24.5s
+timing: total 24.5s
+timing: breakdown slides 0.0s, caption preview 24.5s
+
+===== ACC-AC-01  2026-09-12 01:31:06 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en (19 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh (19 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk (19 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 0.0s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+tts jobs: 18 to speak, 3 in flight
+tts: en/hook
+tts: en/define
+tts: en/example
+progress: speech 1/18 en/example
+tts: en/formula
+progress: speech 2/18 en/define
+tts: en/steps
+progress: speech 3/18 en/formula
+tts: en/takeaway
+progress: speech 4/18 en/hook
+tts: zh_cn/hook
+progress: speech 5/18 en/steps
+tts: zh_cn/define
+progress: speech 6/18 zh_cn/define
+tts: zh_cn/example
+progress: speech 7/18 en/takeaway
+tts: zh_cn/formula
+progress: speech 8/18 zh_cn/example
+tts: zh_cn/steps
+progress: speech 9/18 zh_cn/formula
+tts: zh_cn/takeaway
+progress: speech 10/18 zh_cn/steps
+tts: zh_hk/hook
+progress: speech 11/18 zh_cn/hook
+tts: zh_hk/define
+progress: speech 12/18 zh_cn/takeaway
+tts: zh_hk/example
+progress: speech 13/18 zh_hk/define
+tts: zh_hk/formula
+progress: speech 14/18 zh_hk/example
+tts: zh_hk/steps
+progress: speech 15/18 zh_hk/formula
+tts: zh_hk/takeaway
+progress: speech 16/18 zh_hk/steps
+progress: speech 17/18 zh_hk/hook
+progress: speech 18/18 zh_hk/takeaway
+timing: speech 11.9s
+Traceback (most recent call last):
+  File "C:\Users\kochi\Dropbox\video-factory\factory\build.py", line 750, in <module>
+    main()
+  File "C:\Users\kochi\Dropbox\video-factory\factory\build.py", line 730, in main
+    build(
+  File "C:\Users\kochi\Dropbox\video-factory\factory\build.py", line 439, in build
+    padded[lang].append(pad_audio(src, dur, pad_dir / lang / f"{beat['id']}.mp3"))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kochi\Dropbox\video-factory\factory\build.py", line 201, in pad_audio
+    return atomic_replace(tmp, dest)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kochi\Dropbox\video-factory\factory\paths.py", line 287, in replace_file
+    src.replace(dest)
+  File "C:\Users\kochi\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1376, in replace
+    os.replace(self, target)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-AC-01\\audio\\padded\\zh_hk\\example.tmp.mp3' -> 'C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-AC-01\\audio\\padded\\zh_hk\\example.mp3'
+
+===== ACC-AC-01  2026-09-12 01:37:29 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en (19 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh (19 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk (19 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 0.1s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 1/18 en/hook reuse
+progress: speech 2/18 en/define reuse
+progress: speech 3/18 en/example reuse
+progress: speech 4/18 en/formula reuse
+progress: speech 5/18 en/steps reuse
+progress: speech 6/18 en/takeaway reuse
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 7/18 zh_cn/hook reuse
+progress: speech 8/18 zh_cn/define reuse
+progress: speech 9/18 zh_cn/example reuse
+progress: speech 10/18 zh_cn/formula reuse
+progress: speech 11/18 zh_cn/steps reuse
+progress: speech 12/18 zh_cn/takeaway reuse
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 13/18 zh_hk/hook reuse
+progress: speech 14/18 zh_hk/define reuse
+progress: speech 15/18 zh_hk/example reuse
+progress: speech 16/18 zh_hk/formula reuse
+progress: speech 17/18 zh_hk/steps reuse
+progress: speech 18/18 zh_hk/takeaway reuse
+timing: speech 5.0s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk
+timing: stage stills 12.5s
+motion: dissolve 0.18 beat-fade 0.12 fps 15 clip-jobs 3
+progress: clip 1/3 0/6 en encode 6
+clip: encoded en/hook
+progress: clip 1/3 1/6 en/hook
+clip: encoded en/define
+progress: clip 1/3 2/6 en/define
+clip: encoded en/formula
+progress: clip 1/3 3/6 en/formula
+clip: encoded en/example
+progress: clip 1/3 4/6 en/example
+clip: encoded en/steps
+progress: clip 1/3 5/6 en/steps
+clip: encoded en/takeaway
+progress: clip 1/3 6/6 en/takeaway
+concat: en (6 beats)
+progress: concat 1/3 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_en.mp4 (76.2s)
+timing: video en 27.7s
+progress: clip 2/3 0/6 zhcn encode 6
+clip: encoded zhcn/hook
+progress: clip 2/3 1/6 zhcn/hook
+clip: encoded zhcn/define
+progress: clip 2/3 2/6 zhcn/define
+clip: encoded zhcn/formula
+progress: clip 2/3 3/6 zhcn/formula
+clip: encoded zhcn/example
+progress: clip 2/3 4/6 zhcn/example
+clip: encoded zhcn/steps
+progress: clip 2/3 5/6 zhcn/steps
+clip: encoded zhcn/takeaway
+progress: clip 2/3 6/6 zhcn/takeaway
+concat: zhcn (6 beats)
+progress: concat 2/3 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhcn.mp4 (76.2s)
+timing: video zhcn 24.8s
+progress: clip 3/3 0/6 zhhk encode 6
+clip: encoded zhhk/hook
+progress: clip 3/3 1/6 zhhk/hook
+clip: encoded zhhk/define
+progress: clip 3/3 2/6 zhhk/define
+clip: encoded zhhk/formula
+progress: clip 3/3 3/6 zhhk/formula
+clip: encoded zhhk/example
+progress: clip 3/3 4/6 zhhk/example
+clip: encoded zhhk/steps
+progress: clip 3/3 5/6 zhhk/steps
+clip: encoded zhhk/takeaway
+progress: clip 3/3 6/6 zhhk/takeaway
+concat: zhhk (6 beats)
+progress: concat 3/3 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhhk.mp4 (76.2s)
+timing: video zhhk 26.1s
+timing: total 1m 36.2s
+timing: breakdown slides 0.1s, speech 5.0s, stage stills 12.5s, video en 27.7s, video zhcn 24.8s, video zhhk 26.1s
+
+===== ACC-AC-01  2026-09-12 01:41:10 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en (19 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh (19 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk (19 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 0.0s
+slides-only: wrote 57 PNG files; skipped TTS and mux
+timing: total 0.0s
+timing: breakdown slides 0.0s
+progress: module 5/5 build ACC-M01-OUT
+######## ACC-M01-OUT (module part 5/5) ########
+
+===== ACC-AC-01  2026-09-12 01:42:08 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en (19 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh (19 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk (19 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 0.0s
+slides-only: wrote 57 PNG files; skipped TTS and mux
+timing: total 0.0s
+timing: breakdown slides 0.0s
+progress: module 5/5 build ACC-M01-OUT
+######## ACC-M01-OUT (module part 5/5) ########
+
+===== ACC-AC-01  2026-09-12 01:47:20 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en (19 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh (19 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk (19 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 0.1s
+preview reuse en (19 png)
+progress: preview 1/3 en reuse
+preview reuse zh (19 png)
+progress: preview 2/3 zh reuse
+preview reuse zh_hk (19 png)
+progress: preview 3/3 zh_hk reuse
+caption-preview: wrote 57 stamped frames; skipped TTS and mux
+timing: caption preview 0.2s
+timing: total 0.2s
+timing: breakdown slides 0.1s, caption preview 0.2s
+progress: module 5/5 build ACC-M01-OUT
+######## ACC-M01-OUT (module part 5/5) ########
+
+===== ACC-AC-01  2026-09-12 01:50:35 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en (19 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh (19 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk (19 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 0.1s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 1/18 en/hook reuse
+progress: speech 2/18 en/define reuse
+progress: speech 3/18 en/example reuse
+progress: speech 4/18 en/formula reuse
+progress: speech 5/18 en/steps reuse
+progress: speech 6/18 en/takeaway reuse
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 7/18 zh_cn/hook reuse
+progress: speech 8/18 zh_cn/define reuse
+progress: speech 9/18 zh_cn/example reuse
+progress: speech 10/18 zh_cn/formula reuse
+progress: speech 11/18 zh_cn/steps reuse
+progress: speech 12/18 zh_cn/takeaway reuse
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 13/18 zh_hk/hook reuse
+progress: speech 14/18 zh_hk/define reuse
+progress: speech 15/18 zh_hk/example reuse
+progress: speech 16/18 zh_hk/formula reuse
+progress: speech 17/18 zh_hk/steps reuse
+progress: speech 18/18 zh_hk/takeaway reuse
+timing: speech 2.4s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk
+timing: stage stills 10.8s
+motion: dissolve 0.18 beat-fade 0.12 fps 15 clip-jobs 3
+progress: clip 1/3 0/6 en encode 6
+clip: encoded en/hook
+progress: clip 1/3 1/6 en/hook
+clip: encoded en/define
+progress: clip 1/3 2/6 en/define
+clip: encoded en/formula
+progress: clip 1/3 3/6 en/formula
+clip: encoded en/example
+progress: clip 1/3 4/6 en/example
+clip: encoded en/steps
+progress: clip 1/3 5/6 en/steps
+clip: encoded en/takeaway
+progress: clip 1/3 6/6 en/takeaway
+concat: en (6 beats)
+progress: concat 1/3 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_en.mp4 (76.2s)
+timing: video en 17.4s
+progress: clip 2/3 0/6 zhcn encode 6
+clip: encoded zhcn/hook
+progress: clip 2/3 1/6 zhcn/hook
+clip: encoded zhcn/define
+progress: clip 2/3 2/6 zhcn/define
+clip: encoded zhcn/formula
+progress: clip 2/3 3/6 zhcn/formula
+clip: encoded zhcn/example
+progress: clip 2/3 4/6 zhcn/example
+clip: encoded zhcn/steps
+progress: clip 2/3 5/6 zhcn/steps
+clip: encoded zhcn/takeaway
+progress: clip 2/3 6/6 zhcn/takeaway
+concat: zhcn (6 beats)
+progress: concat 2/3 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhcn.mp4 (76.2s)
+timing: video zhcn 19.9s
+progress: clip 3/3 0/6 zhhk encode 6
+clip: encoded zhhk/hook
+progress: clip 3/3 1/6 zhhk/hook
+clip: encoded zhhk/define
+progress: clip 3/3 2/6 zhhk/define
+clip: encoded zhhk/formula
+progress: clip 3/3 3/6 zhhk/formula
+clip: encoded zhhk/example
+progress: clip 3/3 4/6 zhhk/example
+clip: encoded zhhk/steps
+progress: clip 3/3 5/6 zhhk/steps
+clip: encoded zhhk/takeaway
+progress: clip 3/3 6/6 zhhk/takeaway
+concat: zhhk (6 beats)
+progress: concat 3/3 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhhk.mp4 (76.2s)
+timing: video zhhk 20.3s
+timing: total 1m 10.9s
+timing: breakdown slides 0.1s, speech 2.4s, stage stills 10.8s, video en 17.4s, video zhcn 19.9s, video zhhk 20.3s
+progress: module 5/5 build ACC-M01-OUT
+######## ACC-M01-OUT (module part 5/5) ########
+
+===== ACC-AC-01  2026-09-12 02:16:44 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en (19 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh (19 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk (19 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 0.1s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 1/18 en/hook reuse
+progress: speech 2/18 en/define reuse
+progress: speech 3/18 en/example reuse
+progress: speech 4/18 en/formula reuse
+progress: speech 5/18 en/steps reuse
+progress: speech 6/18 en/takeaway reuse
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 7/18 zh_cn/hook reuse
+progress: speech 8/18 zh_cn/define reuse
+progress: speech 9/18 zh_cn/example reuse
+progress: speech 10/18 zh_cn/formula reuse
+progress: speech 11/18 zh_cn/steps reuse
+progress: speech 12/18 zh_cn/takeaway reuse
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 13/18 zh_hk/hook reuse
+progress: speech 14/18 zh_hk/define reuse
+progress: speech 15/18 zh_hk/example reuse
+progress: speech 16/18 zh_hk/formula reuse
+progress: speech 17/18 zh_hk/steps reuse
+progress: speech 18/18 zh_hk/takeaway reuse
+timing: speech 2.4s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk
+timing: stage stills 11.3s
+motion: dissolve 0.18 beat-fade 0.12 fps 15 clip-jobs 3
+progress: clip 1/3 0/6 en encode 6
+clip: encoded en/hook
+progress: clip 1/3 1/6 en/hook
+clip: encoded en/define
+progress: clip 1/3 2/6 en/define
+clip: encoded en/formula
+progress: clip 1/3 3/6 en/formula
+clip: encoded en/example
+progress: clip 1/3 4/6 en/example
+clip: encoded en/steps
+progress: clip 1/3 5/6 en/steps
+clip: encoded en/takeaway
+progress: clip 1/3 6/6 en/takeaway
+concat: en (6 beats)
+progress: concat 1/3 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_en.mp4 (76.2s)
+timing: video en 20.5s
+progress: clip 2/3 0/6 zhcn encode 6
+clip: encoded zhcn/hook
+progress: clip 2/3 1/6 zhcn/hook
+clip: encoded zhcn/define
+progress: clip 2/3 2/6 zhcn/define
+clip: encoded zhcn/formula
+progress: clip 2/3 3/6 zhcn/formula
+clip: encoded zhcn/example
+progress: clip 2/3 4/6 zhcn/example
+clip: encoded zhcn/steps
+progress: clip 2/3 5/6 zhcn/steps
+clip: encoded zhcn/takeaway
+progress: clip 2/3 6/6 zhcn/takeaway
+concat: zhcn (6 beats)
+progress: concat 2/3 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhcn.mp4 (76.2s)
+timing: video zhcn 21.6s
+progress: clip 3/3 0/6 zhhk encode 6
+clip: encoded zhhk/hook
+progress: clip 3/3 1/6 zhhk/hook
+clip: encoded zhhk/define
+progress: clip 3/3 2/6 zhhk/define
+clip: encoded zhhk/formula
+progress: clip 3/3 3/6 zhhk/formula
+clip: encoded zhhk/example
+progress: clip 3/3 4/6 zhhk/example
+clip: encoded zhhk/steps
+progress: clip 3/3 5/6 zhhk/steps
+clip: encoded zhhk/takeaway
+progress: clip 3/3 6/6 zhhk/takeaway
+concat: zhhk (6 beats)
+progress: concat 3/3 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhhk.mp4 (76.2s)
+timing: video zhhk 21.9s
+timing: total 1m 17.7s
+timing: breakdown slides 0.1s, speech 2.4s, stage stills 11.3s, video en 20.5s, video zhcn 21.6s, video zhhk 21.9s
+progress: module 5/5 build ACC-M01-OUT
+######## ACC-M01-OUT (module part 5/5) ########
+
+===== ACC-AC-01  2026-09-12 02:35:09 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en (19 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh (19 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk (19 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 0.0s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 1/18 en/hook reuse
+progress: speech 2/18 en/define reuse
+progress: speech 3/18 en/example reuse
+progress: speech 4/18 en/formula reuse
+progress: speech 5/18 en/steps reuse
+progress: speech 6/18 en/takeaway reuse
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 7/18 zh_cn/hook reuse
+progress: speech 8/18 zh_cn/define reuse
+progress: speech 9/18 zh_cn/example reuse
+progress: speech 10/18 zh_cn/formula reuse
+progress: speech 11/18 zh_cn/steps reuse
+progress: speech 12/18 zh_cn/takeaway reuse
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 13/18 zh_hk/hook reuse
+progress: speech 14/18 zh_hk/define reuse
+progress: speech 15/18 zh_hk/example reuse
+progress: speech 16/18 zh_hk/formula reuse
+progress: speech 17/18 zh_hk/steps reuse
+progress: speech 18/18 zh_hk/takeaway reuse
+timing: speech 2.9s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk
+timing: stage stills 12.5s
+motion: dissolve 0.18 beat-fade 0.12 fps 15 clip-jobs 3
+progress: clip 1/3 0/6 en encode 6
+clip: encoded en/hook
+progress: clip 1/3 1/6 en/hook
+clip: encoded en/define
+progress: clip 1/3 2/6 en/define
+clip: encoded en/example
+progress: clip 1/3 3/6 en/example
+clip: encoded en/formula
+progress: clip 1/3 4/6 en/formula
+clip: encoded en/steps
+progress: clip 1/3 5/6 en/steps
+clip: encoded en/takeaway
+progress: clip 1/3 6/6 en/takeaway
+concat: en (6 beats)
+progress: concat 1/3 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_en.mp4 (76.2s)
+timing: video en 25.1s
+progress: clip 2/3 0/6 zhcn encode 6
+clip: encoded zhcn/hook
+progress: clip 2/3 1/6 zhcn/hook
+clip: encoded zhcn/define
+progress: clip 2/3 2/6 zhcn/define
+clip: encoded zhcn/formula
+progress: clip 2/3 3/6 zhcn/formula
+clip: encoded zhcn/example
+progress: clip 2/3 4/6 zhcn/example
+clip: encoded zhcn/steps
+progress: clip 2/3 5/6 zhcn/steps
+clip: encoded zhcn/takeaway
+progress: clip 2/3 6/6 zhcn/takeaway
+concat: zhcn (6 beats)
+progress: concat 2/3 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhcn.mp4 (76.2s)
+timing: video zhcn 37.1s
+progress: clip 3/3 0/6 zhhk encode 6
+clip: encoded zhhk/hook
+progress: clip 3/3 1/6 zhhk/hook
+clip: encoded zhhk/define
+progress: clip 3/3 2/6 zhhk/define
+clip: encoded zhhk/example
+progress: clip 3/3 3/6 zhhk/example
+clip: encoded zhhk/formula
+progress: clip 3/3 4/6 zhhk/formula
+clip: encoded zhhk/steps
+progress: clip 3/3 5/6 zhhk/steps
+clip: encoded zhhk/takeaway
+progress: clip 3/3 6/6 zhhk/takeaway
+concat: zhhk (6 beats)
+progress: concat 3/3 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhhk.mp4 (76.2s)
+timing: video zhhk 44.7s
+timing: total 2m 2.4s
+timing: breakdown slides 0.0s, speech 2.9s, stage stills 12.5s, video en 25.1s, video zhcn 37.1s, video zhhk 44.7s
+progress: module 5/5 build ACC-M01-OUT
+######## ACC-M01-OUT (module part 5/5) ########
+
+===== ACC-AC-01  2026-09-12 02:43:48 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en (19 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh (19 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk (19 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 0.1s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 1/18 en/hook reuse
+progress: speech 2/18 en/define reuse
+progress: speech 3/18 en/example reuse
+progress: speech 4/18 en/formula reuse
+progress: speech 5/18 en/steps reuse
+progress: speech 6/18 en/takeaway reuse
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 7/18 zh_cn/hook reuse
+progress: speech 8/18 zh_cn/define reuse
+progress: speech 9/18 zh_cn/example reuse
+progress: speech 10/18 zh_cn/formula reuse
+progress: speech 11/18 zh_cn/steps reuse
+progress: speech 12/18 zh_cn/takeaway reuse
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 13/18 zh_hk/hook reuse
+progress: speech 14/18 zh_hk/define reuse
+progress: speech 15/18 zh_hk/example reuse
+progress: speech 16/18 zh_hk/formula reuse
+progress: speech 17/18 zh_hk/steps reuse
+progress: speech 18/18 zh_hk/takeaway reuse
+timing: speech 2.3s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk
+timing: stage stills 11.1s
+motion: dissolve 0.18 beat-fade 0.12 fps 15 clip-jobs 3
+progress: clip 1/3 0/6 en encode 6
+clip: encoded en/hook
+progress: clip 1/3 1/6 en/hook
+clip: encoded en/define
+progress: clip 1/3 2/6 en/define
+clip: encoded en/formula
+progress: clip 1/3 3/6 en/formula
+clip: encoded en/example
+progress: clip 1/3 4/6 en/example
+clip: encoded en/steps
+progress: clip 1/3 5/6 en/steps
+clip: encoded en/takeaway
+progress: clip 1/3 6/6 en/takeaway
+concat: en (6 beats)
+progress: concat 1/3 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_en.mp4 (76.2s)
+timing: video en 21.2s
+progress: clip 2/3 0/6 zhcn encode 6
+clip: encoded zhcn/hook
+progress: clip 2/3 1/6 zhcn/hook
+clip: encoded zhcn/define
+progress: clip 2/3 2/6 zhcn/define
+clip: encoded zhcn/formula
+progress: clip 2/3 3/6 zhcn/formula
+clip: encoded zhcn/example
+progress: clip 2/3 4/6 zhcn/example
+clip: encoded zhcn/steps
+progress: clip 2/3 5/6 zhcn/steps
+clip: encoded zhcn/takeaway
+progress: clip 2/3 6/6 zhcn/takeaway
+concat: zhcn (6 beats)
+progress: concat 2/3 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhcn.mp4 (76.2s)
+timing: video zhcn 20.3s
+progress: clip 3/3 0/6 zhhk encode 6
+clip: encoded zhhk/hook
+progress: clip 3/3 1/6 zhhk/hook
+clip: encoded zhhk/define
+progress: clip 3/3 2/6 zhhk/define
+clip: encoded zhhk/formula
+progress: clip 3/3 3/6 zhhk/formula
+clip: encoded zhhk/example
+progress: clip 3/3 4/6 zhhk/example
+clip: encoded zhhk/steps
+progress: clip 3/3 5/6 zhhk/steps
+clip: encoded zhhk/takeaway
+progress: clip 3/3 6/6 zhhk/takeaway
+concat: zhhk (6 beats)
+progress: concat 3/3 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhhk.mp4 (76.2s)
+timing: video zhhk 21.9s
+timing: total 1m 16.8s
+timing: breakdown slides 0.1s, speech 2.3s, stage stills 11.1s, video en 21.2s, video zhcn 20.3s, video zhhk 21.9s
+progress: module 5/5 build ACC-M01-OUT
+######## ACC-M01-OUT (module part 5/5) ########
+
+===== ACC-AC-01  2026-09-12 02:51:04 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en (19 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh (19 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk (19 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 0.1s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 1/18 en/hook reuse
+progress: speech 2/18 en/define reuse
+progress: speech 3/18 en/example reuse
+progress: speech 4/18 en/formula reuse
+progress: speech 5/18 en/steps reuse
+progress: speech 6/18 en/takeaway reuse
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 7/18 zh_cn/hook reuse
+progress: speech 8/18 zh_cn/define reuse
+progress: speech 9/18 zh_cn/example reuse
+progress: speech 10/18 zh_cn/formula reuse
+progress: speech 11/18 zh_cn/steps reuse
+progress: speech 12/18 zh_cn/takeaway reuse
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 13/18 zh_hk/hook reuse
+progress: speech 14/18 zh_hk/define reuse
+progress: speech 15/18 zh_hk/example reuse
+progress: speech 16/18 zh_hk/formula reuse
+progress: speech 17/18 zh_hk/steps reuse
+progress: speech 18/18 zh_hk/takeaway reuse
+timing: speech 2.4s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk
+timing: stage stills 11.2s
+motion: dissolve 0.18 beat-fade 0.12 fps 15 clip-jobs 3
+progress: clip 1/3 0/6 en encode 6
+clip: encoded en/hook
+progress: clip 1/3 1/6 en/hook
+clip: encoded en/define
+progress: clip 1/3 2/6 en/define
+clip: encoded en/formula
+progress: clip 1/3 3/6 en/formula
+clip: encoded en/example
+progress: clip 1/3 4/6 en/example
+clip: encoded en/steps
+progress: clip 1/3 5/6 en/steps
+clip: encoded en/takeaway
+progress: clip 1/3 6/6 en/takeaway
+concat: en (6 beats)
+progress: concat 1/3 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_en.mp4 (76.2s)
+timing: video en 20.6s
+progress: clip 2/3 0/6 zhcn encode 6
+clip: encoded zhcn/hook
+progress: clip 2/3 1/6 zhcn/hook
+clip: encoded zhcn/define
+progress: clip 2/3 2/6 zhcn/define
+clip: encoded zhcn/formula
+progress: clip 2/3 3/6 zhcn/formula
+clip: encoded zhcn/example
+progress: clip 2/3 4/6 zhcn/example
+clip: encoded zhcn/steps
+progress: clip 2/3 5/6 zhcn/steps
+clip: encoded zhcn/takeaway
+progress: clip 2/3 6/6 zhcn/takeaway
+concat: zhcn (6 beats)
+progress: concat 2/3 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhcn.mp4 (76.2s)
+timing: video zhcn 20.7s
+progress: clip 3/3 0/6 zhhk encode 6
+clip: encoded zhhk/hook
+progress: clip 3/3 1/6 zhhk/hook
+clip: encoded zhhk/define
+progress: clip 3/3 2/6 zhhk/define
+clip: encoded zhhk/formula
+progress: clip 3/3 3/6 zhhk/formula
+clip: encoded zhhk/example
+progress: clip 3/3 4/6 zhhk/example
+clip: encoded zhhk/steps
+progress: clip 3/3 5/6 zhhk/steps
+clip: encoded zhhk/takeaway
+progress: clip 3/3 6/6 zhhk/takeaway
+concat: zhhk (6 beats)
+progress: concat 3/3 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhhk.mp4 (76.2s)
+timing: video zhhk 21.8s
+timing: total 1m 16.8s
+timing: breakdown slides 0.1s, speech 2.4s, stage stills 11.2s, video en 20.6s, video zhcn 20.7s, video zhhk 21.8s
+progress: module 5/5 build ACC-M01-OUT
+######## ACC-M01-OUT (module part 5/5) ########
+
+===== ACC-AC-01  2026-09-12 03:00:25 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, en-en-zh, en-en-hk, zh-zh-en, zhcn, hk-hk-en, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, en+zh, en+zh_hk, zh, zh+en, zh_hk, zh_hk+en
+progress: slides 0/7 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en (19 png)
+progress: slides 1/7 en reuse
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh+en bilingual
+progress: slides 2/7 zh+en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk+en bilingual
+progress: slides 3/7 zh_hk+en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh bilingual
+progress: slides 4/7 en+zh
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh (19 png)
+progress: slides 5/7 zh reuse
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh_hk bilingual
+progress: slides 6/7 en+zh_hk
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk (19 png)
+progress: slides 7/7 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 1m 2.7s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 1/18 en/hook reuse
+progress: speech 2/18 en/define reuse
+progress: speech 3/18 en/example reuse
+progress: speech 4/18 en/formula reuse
+progress: speech 5/18 en/steps reuse
+progress: speech 6/18 en/takeaway reuse
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 7/18 zh_cn/hook reuse
+progress: speech 8/18 zh_cn/define reuse
+progress: speech 9/18 zh_cn/example reuse
+progress: speech 10/18 zh_cn/formula reuse
+progress: speech 11/18 zh_cn/steps reuse
+progress: speech 12/18 zh_cn/takeaway reuse
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 13/18 zh_hk/hook reuse
+progress: speech 14/18 zh_hk/define reuse
+progress: speech 15/18 zh_hk/example reuse
+progress: speech 16/18 zh_hk/formula reuse
+progress: speech 17/18 zh_hk/steps reuse
+progress: speech 18/18 zh_hk/takeaway reuse
+timing: speech 2.4s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh+en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk+en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh_hk
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk
+timing: stage stills 11.0s
+motion: dissolve 0.18 beat-fade 0.12 fps 15 clip-jobs 3
+progress: clip 1/7 0/6 en encode 6
+clip: encoded en/hook
+progress: clip 1/7 1/6 en/hook
+clip: encoded en/define
+progress: clip 1/7 2/6 en/define
+clip: encoded en/formula
+progress: clip 1/7 3/6 en/formula
+clip: encoded en/example
+progress: clip 1/7 4/6 en/example
+clip: encoded en/steps
+progress: clip 1/7 5/6 en/steps
+clip: encoded en/takeaway
+progress: clip 1/7 6/6 en/takeaway
+concat: en (6 beats)
+progress: concat 1/7 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_en.mp4 (76.2s)
+timing: video en 21.6s
+progress: clip 2/7 0/6 en-en-zh encode 6
+clip: encoded en-en-zh/hook
+progress: clip 2/7 1/6 en-en-zh/hook
+clip: encoded en-en-zh/define
+progress: clip 2/7 2/6 en-en-zh/define
+clip: encoded en-en-zh/formula
+progress: clip 2/7 3/6 en-en-zh/formula
+clip: encoded en-en-zh/example
+progress: clip 2/7 4/6 en-en-zh/example
+clip: encoded en-en-zh/steps
+progress: clip 2/7 5/6 en-en-zh/steps
+clip: encoded en-en-zh/takeaway
+progress: clip 2/7 6/6 en-en-zh/takeaway
+concat: en-en-zh (6 beats)
+progress: concat 2/7 en-en-zh
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_en-en-zh.mp4 (76.2s)
+timing: video en-en-zh 26.0s
+progress: clip 3/7 0/6 en-en-hk encode 6
+clip: encoded en-en-hk/hook
+progress: clip 3/7 1/6 en-en-hk/hook
+clip: encoded en-en-hk/define
+progress: clip 3/7 2/6 en-en-hk/define
+clip: encoded en-en-hk/formula
+progress: clip 3/7 3/6 en-en-hk/formula
+clip: encoded en-en-hk/example
+progress: clip 3/7 4/6 en-en-hk/example
+clip: encoded en-en-hk/steps
+progress: clip 3/7 5/6 en-en-hk/steps
+clip: encoded en-en-hk/takeaway
+progress: clip 3/7 6/6 en-en-hk/takeaway
+concat: en-en-hk (6 beats)
+progress: concat 3/7 en-en-hk
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_en-en-hk.mp4 (76.2s)
+timing: video en-en-hk 26.8s
+progress: clip 4/7 0/6 zh-zh-en encode 6
+clip: encoded zh-zh-en/hook
+progress: clip 4/7 1/6 zh-zh-en/hook
+clip: encoded zh-zh-en/define
+progress: clip 4/7 2/6 zh-zh-en/define
+clip: encoded zh-zh-en/formula
+progress: clip 4/7 3/6 zh-zh-en/formula
+clip: encoded zh-zh-en/example
+progress: clip 4/7 4/6 zh-zh-en/example
+clip: encoded zh-zh-en/steps
+progress: clip 4/7 5/6 zh-zh-en/steps
+clip: encoded zh-zh-en/takeaway
+progress: clip 4/7 6/6 zh-zh-en/takeaway
+concat: zh-zh-en (6 beats)
+progress: concat 4/7 zh-zh-en
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zh-zh-en.mp4 (76.2s)
+timing: video zh-zh-en 24.2s
+progress: clip 5/7 0/6 zhcn encode 6
+clip: encoded zhcn/hook
+progress: clip 5/7 1/6 zhcn/hook
+clip: encoded zhcn/define
+progress: clip 5/7 2/6 zhcn/define
+clip: encoded zhcn/formula
+progress: clip 5/7 3/6 zhcn/formula
+clip: encoded zhcn/example
+progress: clip 5/7 4/6 zhcn/example
+clip: encoded zhcn/takeaway
+progress: clip 5/7 5/6 zhcn/takeaway
+clip: encoded zhcn/steps
+progress: clip 5/7 6/6 zhcn/steps
+concat: zhcn (6 beats)
+progress: concat 5/7 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhcn.mp4 (76.2s)
+timing: video zhcn 19.7s
+progress: clip 6/7 0/6 hk-hk-en encode 6
+clip: encoded hk-hk-en/hook
+progress: clip 6/7 1/6 hk-hk-en/hook
+clip: encoded hk-hk-en/define
+progress: clip 6/7 2/6 hk-hk-en/define
+clip: encoded hk-hk-en/formula
+progress: clip 6/7 3/6 hk-hk-en/formula
+clip: encoded hk-hk-en/example
+progress: clip 6/7 4/6 hk-hk-en/example
+clip: encoded hk-hk-en/steps
+progress: clip 6/7 5/6 hk-hk-en/steps
+clip: encoded hk-hk-en/takeaway
+progress: clip 6/7 6/6 hk-hk-en/takeaway
+concat: hk-hk-en (6 beats)
+progress: concat 6/7 hk-hk-en
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_hk-hk-en.mp4 (76.2s)
+timing: video hk-hk-en 28.7s
+progress: clip 7/7 0/6 zhhk encode 6
+clip: encoded zhhk/hook
+progress: clip 7/7 1/6 zhhk/hook
+clip: encoded zhhk/define
+progress: clip 7/7 2/6 zhhk/define
+clip: encoded zhhk/formula
+progress: clip 7/7 3/6 zhhk/formula
+clip: encoded zhhk/example
+progress: clip 7/7 4/6 zhhk/example
+clip: encoded zhhk/steps
+progress: clip 7/7 5/6 zhhk/steps
+clip: encoded zhhk/takeaway
+progress: clip 7/7 6/6 zhhk/takeaway
+concat: zhhk (6 beats)
+progress: concat 7/7 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhhk.mp4 (76.2s)
+timing: video zhhk 24.0s
+timing: total 4m 7.0s
+timing: breakdown slides 1m 2.7s, speech 2.4s, stage stills 11.0s, video en 21.6s, video en-en-zh 26.0s, video en-en-hk 26.8s, video zh-zh-en 24.2s, video zhcn 19.7s, video hk-hk-en 28.7s, video zhhk 24.0s
+progress: module 5/5 build ACC-M01-OUT
+######## ACC-M01-OUT (module part 5/5) ########
+
+===== ACC-AC-01  2026-09-12 03:25:41 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, en-en-hk, zh-zh-en, zhcn, zh-zh-hk, hk-hk-en, hk-hk-zh, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, en+zh, en+zh_hk, zh, zh+zh_hk, zh_hk, zh_hk+en, zh_hk+zh
+progress: slides 0/8 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en single
+progress: slides 1/8 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk+en bilingual
+progress: slides 2/8 zh_hk+en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh bilingual
+progress: slides 3/8 en+zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh single
+progress: slides 4/8 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk+zh bilingual
+progress: slides 5/8 zh_hk+zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh_hk bilingual
+progress: slides 6/8 en+zh_hk
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh+zh_hk bilingual
+progress: slides 7/8 zh+zh_hk
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk single
+progress: slides 8/8 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 1m 40.1s
+slides-only: wrote 48 PNG files; skipped TTS and mux
+timing: total 1m 40.1s
+timing: breakdown slides 1m 40.1s
+progress: module 5/5 build ACC-M01-OUT
+######## ACC-M01-OUT (module part 5/5) ########
+
+===== ACC-AC-01  2026-09-12 03:35:56 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, en-en-hk, zh-zh-en, zhcn, zh-zh-hk, hk-hk-en, hk-hk-zh, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, en+zh, en+zh_hk, zh, zh+zh_hk, zh_hk, zh_hk+en, zh_hk+zh
+progress: slides 0/8 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en (19 png)
+progress: slides 1/8 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk+en (19 png)
+progress: slides 2/8 zh_hk+en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh (19 png)
+progress: slides 3/8 en+zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh (19 png)
+progress: slides 4/8 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk+zh (19 png)
+progress: slides 5/8 zh_hk+zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh_hk (19 png)
+progress: slides 6/8 en+zh_hk reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh+zh_hk (19 png)
+progress: slides 7/8 zh+zh_hk reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk (19 png)
+progress: slides 8/8 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 0.1s
+preview en/01_hook
+preview en/02_define
+preview en/02_define_s1
+preview en/02_define_s2
+preview en/03_example
+preview en/03_example_s1
+preview en/03_example_s2
+preview en/03_example_s3
+preview en/04_formula
+preview en/04_formula_s1
+preview en/04_formula_s2
+preview en/05_steps
+preview en/05_steps_s1
+preview en/05_steps_s2
+preview en/05_steps_s3
+preview en/06_takeaway
+preview en/06_takeaway_s1
+preview en/06_takeaway_s2
+preview en/06_takeaway_s3
+progress: preview 1/8 en
+preview en/01_hook
+preview en/02_define
+preview en/02_define_s1
+preview en/02_define_s2
+preview en/03_example
+preview en/03_example_s1
+preview en/03_example_s2
+preview en/03_example_s3
+preview en/04_formula
+preview en/04_formula_s1
+preview en/04_formula_s2
+preview en/05_steps
+preview en/05_steps_s1
+preview en/05_steps_s2
+preview en/05_steps_s3
+preview en/06_takeaway
+preview en/06_takeaway_s1
+preview en/06_takeaway_s2
+preview en/06_takeaway_s3
+progress: preview 2/8 zh_hk+en
+preview zh_cn/01_hook
+preview zh_cn/02_define
+preview zh_cn/02_define_s1
+preview zh_cn/02_define_s2
+preview zh_cn/03_example
+preview zh_cn/03_example_s1
+preview zh_cn/03_example_s2
+preview zh_cn/03_example_s3
+preview zh_cn/04_formula
+preview zh_cn/04_formula_s1
+preview zh_cn/04_formula_s2
+preview zh_cn/05_steps
+preview zh_cn/05_steps_s1
+preview zh_cn/05_steps_s2
+preview zh_cn/05_steps_s3
+preview zh_cn/06_takeaway
+preview zh_cn/06_takeaway_s1
+preview zh_cn/06_takeaway_s2
+preview zh_cn/06_takeaway_s3
+progress: preview 3/8 en+zh
+preview zh_cn/01_hook
+preview zh_cn/02_define
+preview zh_cn/02_define_s1
+preview zh_cn/02_define_s2
+preview zh_cn/03_example
+preview zh_cn/03_example_s1
+preview zh_cn/03_example_s2
+preview zh_cn/03_example_s3
+preview zh_cn/04_formula
+preview zh_cn/04_formula_s1
+preview zh_cn/04_formula_s2
+preview zh_cn/05_steps
+preview zh_cn/05_steps_s1
+preview zh_cn/05_steps_s2
+preview zh_cn/05_steps_s3
+preview zh_cn/06_takeaway
+preview zh_cn/06_takeaway_s1
+preview zh_cn/06_takeaway_s2
+preview zh_cn/06_takeaway_s3
+progress: preview 4/8 zh
+preview zh_cn/01_hook
+preview zh_cn/02_define
+preview zh_cn/02_define_s1
+preview zh_cn/02_define_s2
+preview zh_cn/03_example
+preview zh_cn/03_example_s1
+preview zh_cn/03_example_s2
+preview zh_cn/03_example_s3
+preview zh_cn/04_formula
+preview zh_cn/04_formula_s1
+preview zh_cn/04_formula_s2
+preview zh_cn/05_steps
+preview zh_cn/05_steps_s1
+preview zh_cn/05_steps_s2
+preview zh_cn/05_steps_s3
+preview zh_cn/06_takeaway
+preview zh_cn/06_takeaway_s1
+preview zh_cn/06_takeaway_s2
+preview zh_cn/06_takeaway_s3
+progress: preview 5/8 zh_hk+zh
+preview zh_hk/01_hook
+preview zh_hk/02_define
+preview zh_hk/02_define_s1
+preview zh_hk/02_define_s2
+preview zh_hk/03_example
+preview zh_hk/03_example_s1
+preview zh_hk/03_example_s2
+preview zh_hk/03_example_s3
+preview zh_hk/04_formula
+preview zh_hk/04_formula_s1
+preview zh_hk/04_formula_s2
+preview zh_hk/05_steps
+preview zh_hk/05_steps_s1
+preview zh_hk/05_steps_s2
+preview zh_hk/05_steps_s3
+preview zh_hk/06_takeaway
+preview zh_hk/06_takeaway_s1
+preview zh_hk/06_takeaway_s2
+preview zh_hk/06_takeaway_s3
+progress: preview 6/8 en+zh_hk
+preview zh_hk/01_hook
+preview zh_hk/02_define
+preview zh_hk/02_define_s1
+preview zh_hk/02_define_s2
+preview zh_hk/03_example
+preview zh_hk/03_example_s1
+preview zh_hk/03_example_s2
+preview zh_hk/03_example_s3
+preview zh_hk/04_formula
+preview zh_hk/04_formula_s1
+preview zh_hk/04_formula_s2
+preview zh_hk/05_steps
+preview zh_hk/05_steps_s1
+preview zh_hk/05_steps_s2
+preview zh_hk/05_steps_s3
+preview zh_hk/06_takeaway
+preview zh_hk/06_takeaway_s1
+preview zh_hk/06_takeaway_s2
+preview zh_hk/06_takeaway_s3
+progress: preview 7/8 zh+zh_hk
+preview zh_hk/01_hook
+preview zh_hk/02_define
+preview zh_hk/02_define_s1
+preview zh_hk/02_define_s2
+preview zh_hk/03_example
+preview zh_hk/03_example_s1
+preview zh_hk/03_example_s2
+preview zh_hk/03_example_s3
+preview zh_hk/04_formula
+preview zh_hk/04_formula_s1
+preview zh_hk/04_formula_s2
+preview zh_hk/05_steps
+preview zh_hk/05_steps_s1
+preview zh_hk/05_steps_s2
+preview zh_hk/05_steps_s3
+preview zh_hk/06_takeaway
+preview zh_hk/06_takeaway_s1
+preview zh_hk/06_takeaway_s2
+preview zh_hk/06_takeaway_s3
+progress: preview 8/8 zh_hk
+caption-preview: wrote 152 stamped frames; skipped TTS and mux
+timing: caption preview 49.1s
+timing: total 49.3s
+timing: breakdown slides 0.1s, caption preview 49.1s
+progress: module 5/5 build ACC-M01-OUT
+######## ACC-M01-OUT (module part 5/5) ########
+
+===== ACC-AC-01  2026-09-12 03:44:18 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, en-en-zh, en-en-hk, zh-zh-en, zhcn, zh-zh-hk, hk-hk-en, hk-hk-zh, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, en+zh, en+zh_hk, zh, zh+en, zh+zh_hk, zh_hk, zh_hk+en, zh_hk+zh
+progress: slides 0/9 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en (19 png)
+progress: slides 1/9 en reuse
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh+en bilingual
+progress: slides 2/9 zh+en
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk+en (19 png)
+progress: slides 3/9 zh_hk+en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh (19 png)
+progress: slides 4/9 en+zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh (19 png)
+progress: slides 5/9 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk+zh (19 png)
+progress: slides 6/9 zh_hk+zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh_hk (19 png)
+progress: slides 7/9 en+zh_hk reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh+zh_hk (19 png)
+progress: slides 8/9 zh+zh_hk reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk (19 png)
+progress: slides 9/9 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 19.2s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 1/18 en/hook reuse
+progress: speech 2/18 en/define reuse
+progress: speech 3/18 en/example reuse
+progress: speech 4/18 en/formula reuse
+progress: speech 5/18 en/steps reuse
+progress: speech 6/18 en/takeaway reuse
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 7/18 zh_cn/hook reuse
+progress: speech 8/18 zh_cn/define reuse
+progress: speech 9/18 zh_cn/example reuse
+progress: speech 10/18 zh_cn/formula reuse
+progress: speech 11/18 zh_cn/steps reuse
+progress: speech 12/18 zh_cn/takeaway reuse
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 13/18 zh_hk/hook reuse
+progress: speech 14/18 zh_hk/define reuse
+progress: speech 15/18 zh_hk/example reuse
+progress: speech 16/18 zh_hk/formula reuse
+progress: speech 17/18 zh_hk/steps reuse
+progress: speech 18/18 zh_hk/takeaway reuse
+timing: speech 2.5s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh+en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk+en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk+zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh_hk
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh+zh_hk
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk
+timing: stage stills 11.3s
+motion: dissolve 0.18 beat-fade 0 fps 15 clip-jobs 3
+progress: clip 1/9 0/6 en encode 6
+clip: encoded en/hook
+progress: clip 1/9 1/6 en/hook
+clip: encoded en/define
+progress: clip 1/9 2/6 en/define
+clip: encoded en/formula
+progress: clip 1/9 3/6 en/formula
+clip: encoded en/example
+progress: clip 1/9 4/6 en/example
+clip: encoded en/steps
+progress: clip 1/9 5/6 en/steps
+clip: encoded en/takeaway
+progress: clip 1/9 6/6 en/takeaway
+concat: en (6 beats)
+progress: concat 1/9 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_en.mp4 (76.2s)
+timing: video en 26.0s
+progress: clip 2/9 0/6 en-en-zh encode 6
+clip: encoded en-en-zh/hook
+progress: clip 2/9 1/6 en-en-zh/hook
+clip: encoded en-en-zh/define
+progress: clip 2/9 2/6 en-en-zh/define
+clip: encoded en-en-zh/formula
+progress: clip 2/9 3/6 en-en-zh/formula
+clip: encoded en-en-zh/example
+progress: clip 2/9 4/6 en-en-zh/example
+clip: encoded en-en-zh/steps
+progress: clip 2/9 5/6 en-en-zh/steps
+clip: encoded en-en-zh/takeaway
+progress: clip 2/9 6/6 en-en-zh/takeaway
+concat: en-en-zh (6 beats)
+progress: concat 2/9 en-en-zh
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_en-en-zh.mp4 (76.2s)
+timing: video en-en-zh 26.9s
+progress: clip 3/9 0/6 en-en-hk encode 6
+clip: encoded en-en-hk/hook
+progress: clip 3/9 1/6 en-en-hk/hook
+clip: encoded en-en-hk/define
+progress: clip 3/9 2/6 en-en-hk/define
+clip: encoded en-en-hk/formula
+progress: clip 3/9 3/6 en-en-hk/formula
+clip: encoded en-en-hk/example
+progress: clip 3/9 4/6 en-en-hk/example
+clip: encoded en-en-hk/steps
+progress: clip 3/9 5/6 en-en-hk/steps
+clip: encoded en-en-hk/takeaway
+progress: clip 3/9 6/6 en-en-hk/takeaway
+concat: en-en-hk (6 beats)
+progress: concat 3/9 en-en-hk
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_en-en-hk.mp4 (76.2s)
+timing: video en-en-hk 26.4s
+progress: clip 4/9 0/6 zh-zh-en encode 6
+clip: encoded zh-zh-en/hook
+progress: clip 4/9 1/6 zh-zh-en/hook
+clip: encoded zh-zh-en/define
+progress: clip 4/9 2/6 zh-zh-en/define
+clip: encoded zh-zh-en/formula
+progress: clip 4/9 3/6 zh-zh-en/formula
+clip: encoded zh-zh-en/example
+progress: clip 4/9 4/6 zh-zh-en/example
+clip: encoded zh-zh-en/steps
+progress: clip 4/9 5/6 zh-zh-en/steps
+clip: encoded zh-zh-en/takeaway
+progress: clip 4/9 6/6 zh-zh-en/takeaway
+concat: zh-zh-en (6 beats)
+progress: concat 4/9 zh-zh-en
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zh-zh-en.mp4 (76.2s)
+timing: video zh-zh-en 26.5s
+progress: clip 5/9 0/6 zhcn encode 6
+clip: encoded zhcn/hook
+progress: clip 5/9 1/6 zhcn/hook
+clip: encoded zhcn/define
+progress: clip 5/9 2/6 zhcn/define
+clip: encoded zhcn/formula
+progress: clip 5/9 3/6 zhcn/formula
+clip: encoded zhcn/example
+progress: clip 5/9 4/6 zhcn/example
+clip: encoded zhcn/steps
+progress: clip 5/9 5/6 zhcn/steps
+clip: encoded zhcn/takeaway
+progress: clip 5/9 6/6 zhcn/takeaway
+concat: zhcn (6 beats)
+progress: concat 5/9 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhcn.mp4 (76.2s)
+timing: video zhcn 27.7s
+progress: clip 6/9 0/6 zh-zh-hk encode 6
+clip: encoded zh-zh-hk/hook
+progress: clip 6/9 1/6 zh-zh-hk/hook
+clip: encoded zh-zh-hk/define
+progress: clip 6/9 2/6 zh-zh-hk/define
+clip: encoded zh-zh-hk/formula
+progress: clip 6/9 3/6 zh-zh-hk/formula
+clip: encoded zh-zh-hk/example
+progress: clip 6/9 4/6 zh-zh-hk/example
+clip: encoded zh-zh-hk/takeaway
+progress: clip 6/9 5/6 zh-zh-hk/takeaway
+clip: encoded zh-zh-hk/steps
+progress: clip 6/9 6/6 zh-zh-hk/steps
+concat: zh-zh-hk (6 beats)
+progress: concat 6/9 zh-zh-hk
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zh-zh-hk.mp4 (76.2s)
+timing: video zh-zh-hk 37.7s
+progress: clip 7/9 0/6 hk-hk-en encode 6
+clip: encoded hk-hk-en/hook
+progress: clip 7/9 1/6 hk-hk-en/hook
+clip: encoded hk-hk-en/define
+progress: clip 7/9 2/6 hk-hk-en/define
+clip: encoded hk-hk-en/example
+progress: clip 7/9 3/6 hk-hk-en/example
+clip: encoded hk-hk-en/formula
+progress: clip 7/9 4/6 hk-hk-en/formula
+clip: encoded hk-hk-en/steps
+progress: clip 7/9 5/6 hk-hk-en/steps
+clip: encoded hk-hk-en/takeaway
+progress: clip 7/9 6/6 hk-hk-en/takeaway
+concat: hk-hk-en (6 beats)
+progress: concat 7/9 hk-hk-en
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_hk-hk-en.mp4 (76.2s)
+timing: video hk-hk-en 39.1s
+progress: clip 8/9 0/6 hk-hk-zh encode 6
+clip: encoded hk-hk-zh/hook
+progress: clip 8/9 1/6 hk-hk-zh/hook
+clip: encoded hk-hk-zh/define
+progress: clip 8/9 2/6 hk-hk-zh/define
+clip: encoded hk-hk-zh/formula
+progress: clip 8/9 3/6 hk-hk-zh/formula
+clip: encoded hk-hk-zh/example
+progress: clip 8/9 4/6 hk-hk-zh/example
+clip: encoded hk-hk-zh/steps
+progress: clip 8/9 5/6 hk-hk-zh/steps
+clip: encoded hk-hk-zh/takeaway
+progress: clip 8/9 6/6 hk-hk-zh/takeaway
+concat: hk-hk-zh (6 beats)
+progress: concat 8/9 hk-hk-zh
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_hk-hk-zh.mp4 (76.2s)
+timing: video hk-hk-zh 34.7s
+progress: clip 9/9 0/6 zhhk encode 6
+clip: encoded zhhk/hook
+progress: clip 9/9 1/6 zhhk/hook
+clip: encoded zhhk/define
+progress: clip 9/9 2/6 zhhk/define
+clip: encoded zhhk/formula
+progress: clip 9/9 3/6 zhhk/formula
+clip: encoded zhhk/example
+progress: clip 9/9 4/6 zhhk/example
+clip: encoded zhhk/steps
+progress: clip 9/9 5/6 zhhk/steps
+clip: encoded zhhk/takeaway
+progress: clip 9/9 6/6 zhhk/takeaway
+concat: zhhk (6 beats)
+progress: concat 9/9 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhhk.mp4 (76.2s)
+timing: video zhhk 28.2s
+timing: total 5m 6.2s
+timing: breakdown slides 19.2s, speech 2.5s, stage stills 11.3s, video en 26.0s, video en-en-zh 26.9s, video en-en-hk 26.4s, video zh-zh-en 26.5s, video zhcn 27.7s, video zh-zh-hk 37.7s, video hk-hk-en 39.1s, video hk-hk-zh 34.7s, video zhhk 28.2s
+progress: module 5/5 build ACC-M01-OUT
+######## ACC-M01-OUT (module part 5/5) ########
+
+===== ACC-AC-01  2026-09-12 12:53:39 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, en-en-zh, en-en-hk, zh-zh-en, zhcn, zh-zh-hk, hk-hk-en, hk-hk-zh, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, en+zh, en+zh_hk, zh, zh+en, zh+zh_hk, zh_hk, zh_hk+en, zh_hk+zh
+progress: slides 0/9 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en single
+progress: slides 1/9 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh+en bilingual
+progress: slides 2/9 zh+en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk+en bilingual
+progress: slides 3/9 zh_hk+en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh bilingual
+progress: slides 4/9 en+zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh single
+progress: slides 5/9 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk+zh bilingual
+progress: slides 6/9 zh_hk+zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh_hk bilingual
+progress: slides 7/9 en+zh_hk
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh+zh_hk bilingual
+progress: slides 8/9 zh+zh_hk
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk single
+progress: slides 9/9 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\narration_jobs.json
+timing: slides 1m 56.6s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 1/18 en/hook reuse
+progress: speech 2/18 en/define reuse
+progress: speech 3/18 en/example reuse
+progress: speech 4/18 en/formula reuse
+progress: speech 5/18 en/steps reuse
+progress: speech 6/18 en/takeaway reuse
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 7/18 zh_cn/hook reuse
+progress: speech 8/18 zh_cn/define reuse
+progress: speech 9/18 zh_cn/example reuse
+progress: speech 10/18 zh_cn/formula reuse
+progress: speech 11/18 zh_cn/steps reuse
+progress: speech 12/18 zh_cn/takeaway reuse
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 13/18 zh_hk/hook reuse
+progress: speech 14/18 zh_hk/define reuse
+progress: speech 15/18 zh_hk/example reuse
+progress: speech 16/18 zh_hk/formula reuse
+progress: speech 17/18 zh_hk/steps reuse
+progress: speech 18/18 zh_hk/takeaway reuse
+timing: speech 2.9s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh+en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk+en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk+zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\en+zh_hk
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh+zh_hk
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\slides\zh_hk
+timing: stage stills 11.0s
+motion: dissolve 0.18 beat-fade 0 fps 15 clip-jobs 3
+progress: clip 1/9 0/6 en encode 6
+clip: encoded en/hook
+progress: clip 1/9 1/6 en/hook
+clip: encoded en/define
+progress: clip 1/9 2/6 en/define
+clip: encoded en/formula
+progress: clip 1/9 3/6 en/formula
+clip: encoded en/example
+progress: clip 1/9 4/6 en/example
+clip: encoded en/steps
+progress: clip 1/9 5/6 en/steps
+clip: encoded en/takeaway
+progress: clip 1/9 6/6 en/takeaway
+concat: en (6 beats)
+progress: concat 1/9 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_en.mp4 (76.2s)
+timing: video en 22.6s
+progress: clip 2/9 0/6 en-en-zh encode 6
+clip: encoded en-en-zh/hook
+progress: clip 2/9 1/6 en-en-zh/hook
+clip: encoded en-en-zh/define
+progress: clip 2/9 2/6 en-en-zh/define
+clip: encoded en-en-zh/formula
+progress: clip 2/9 3/6 en-en-zh/formula
+clip: encoded en-en-zh/example
+progress: clip 2/9 4/6 en-en-zh/example
+clip: encoded en-en-zh/steps
+progress: clip 2/9 5/6 en-en-zh/steps
+clip: encoded en-en-zh/takeaway
+progress: clip 2/9 6/6 en-en-zh/takeaway
+concat: en-en-zh (6 beats)
+progress: concat 2/9 en-en-zh
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_en-en-zh.mp4 (76.2s)
+timing: video en-en-zh 23.2s
+progress: clip 3/9 0/6 en-en-hk encode 6
+clip: encoded en-en-hk/hook
+progress: clip 3/9 1/6 en-en-hk/hook
+clip: encoded en-en-hk/define
+progress: clip 3/9 2/6 en-en-hk/define
+clip: encoded en-en-hk/formula
+progress: clip 3/9 3/6 en-en-hk/formula
+clip: encoded en-en-hk/example
+progress: clip 3/9 4/6 en-en-hk/example
+clip: encoded en-en-hk/steps
+progress: clip 3/9 5/6 en-en-hk/steps
+clip: encoded en-en-hk/takeaway
+progress: clip 3/9 6/6 en-en-hk/takeaway
+concat: en-en-hk (6 beats)
+progress: concat 3/9 en-en-hk
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_en-en-hk.mp4 (76.2s)
+timing: video en-en-hk 23.2s
+progress: clip 4/9 0/6 zh-zh-en encode 6
+clip: encoded zh-zh-en/hook
+progress: clip 4/9 1/6 zh-zh-en/hook
+clip: encoded zh-zh-en/define
+progress: clip 4/9 2/6 zh-zh-en/define
+clip: encoded zh-zh-en/formula
+progress: clip 4/9 3/6 zh-zh-en/formula
+clip: encoded zh-zh-en/example
+progress: clip 4/9 4/6 zh-zh-en/example
+clip: encoded zh-zh-en/steps
+progress: clip 4/9 5/6 zh-zh-en/steps
+clip: encoded zh-zh-en/takeaway
+progress: clip 4/9 6/6 zh-zh-en/takeaway
+concat: zh-zh-en (6 beats)
+progress: concat 4/9 zh-zh-en
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zh-zh-en.mp4 (76.2s)
+timing: video zh-zh-en 22.2s
+progress: clip 5/9 0/6 zhcn encode 6
+clip: encoded zhcn/hook
+progress: clip 5/9 1/6 zhcn/hook
+clip: encoded zhcn/define
+progress: clip 5/9 2/6 zhcn/define
+clip: encoded zhcn/formula
+progress: clip 5/9 3/6 zhcn/formula
+clip: encoded zhcn/example
+progress: clip 5/9 4/6 zhcn/example
+clip: encoded zhcn/steps
+progress: clip 5/9 5/6 zhcn/steps
+clip: encoded zhcn/takeaway
+progress: clip 5/9 6/6 zhcn/takeaway
+concat: zhcn (6 beats)
+progress: concat 5/9 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhcn.mp4 (76.2s)
+timing: video zhcn 23.0s
+progress: clip 6/9 0/6 zh-zh-hk encode 6
+clip: encoded zh-zh-hk/hook
+progress: clip 6/9 1/6 zh-zh-hk/hook
+clip: encoded zh-zh-hk/define
+progress: clip 6/9 2/6 zh-zh-hk/define
+clip: encoded zh-zh-hk/formula
+progress: clip 6/9 3/6 zh-zh-hk/formula
+clip: encoded zh-zh-hk/example
+progress: clip 6/9 4/6 zh-zh-hk/example
+clip: encoded zh-zh-hk/steps
+progress: clip 6/9 5/6 zh-zh-hk/steps
+clip: encoded zh-zh-hk/takeaway
+progress: clip 6/9 6/6 zh-zh-hk/takeaway
+concat: zh-zh-hk (6 beats)
+progress: concat 6/9 zh-zh-hk
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zh-zh-hk.mp4 (76.2s)
+timing: video zh-zh-hk 23.8s
+progress: clip 7/9 0/6 hk-hk-en encode 6
+clip: encoded hk-hk-en/hook
+progress: clip 7/9 1/6 hk-hk-en/hook
+clip: encoded hk-hk-en/define
+progress: clip 7/9 2/6 hk-hk-en/define
+clip: encoded hk-hk-en/example
+progress: clip 7/9 3/6 hk-hk-en/example
+clip: encoded hk-hk-en/formula
+progress: clip 7/9 4/6 hk-hk-en/formula
+clip: encoded hk-hk-en/steps
+progress: clip 7/9 5/6 hk-hk-en/steps
+clip: encoded hk-hk-en/takeaway
+progress: clip 7/9 6/6 hk-hk-en/takeaway
+concat: hk-hk-en (6 beats)
+progress: concat 7/9 hk-hk-en
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_hk-hk-en.mp4 (76.2s)
+timing: video hk-hk-en 27.9s
+progress: clip 8/9 0/6 hk-hk-zh encode 6
+clip: encoded hk-hk-zh/hook
+progress: clip 8/9 1/6 hk-hk-zh/hook
+clip: encoded hk-hk-zh/define
+progress: clip 8/9 2/6 hk-hk-zh/define
+clip: encoded hk-hk-zh/formula
+progress: clip 8/9 3/6 hk-hk-zh/formula
+clip: encoded hk-hk-zh/example
+progress: clip 8/9 4/6 hk-hk-zh/example
+clip: encoded hk-hk-zh/steps
+progress: clip 8/9 5/6 hk-hk-zh/steps
+clip: encoded hk-hk-zh/takeaway
+progress: clip 8/9 6/6 hk-hk-zh/takeaway
+concat: hk-hk-zh (6 beats)
+progress: concat 8/9 hk-hk-zh
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_hk-hk-zh.mp4 (76.2s)
+timing: video hk-hk-zh 24.6s
+progress: clip 9/9 0/6 zhhk encode 6
+clip: encoded zhhk/hook
+progress: clip 9/9 1/6 zhhk/hook
+clip: encoded zhhk/define
+progress: clip 9/9 2/6 zhhk/define
+clip: encoded zhhk/formula
+progress: clip 9/9 3/6 zhhk/formula
+clip: encoded zhhk/example
+progress: clip 9/9 4/6 zhhk/example
+clip: encoded zhhk/steps
+progress: clip 9/9 5/6 zhhk/steps
+clip: encoded zhhk/takeaway
+progress: clip 9/9 6/6 zhhk/takeaway
+concat: zhhk (6 beats)
+progress: concat 9/9 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\ACC-AC-01\cells\ACC-AC-01_zhhk.mp4 (76.2s)
+timing: video zhhk 25.5s
+timing: total 5m 46.5s
+timing: breakdown slides 1m 56.6s, speech 2.9s, stage stills 11.0s, video en 22.6s, video en-en-zh 23.2s, video en-en-hk 23.2s, video zh-zh-en 22.2s, video zhcn 23.0s, video zh-zh-hk 23.8s, video hk-hk-en 27.9s, video hk-hk-zh 24.6s, video zhhk 25.5s
+progress: module 5/5 build ACC-M01-OUT
+######## ACC-M01-OUT (module part 5/5) ########

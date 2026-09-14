@@ -1,0 +1,153 @@
+id: GAME-NE-01
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: Nash
+title_zh: 纳什均衡
+title_zh_hk: 納什均衡
+objective_en: A Nash cell is mutual best response. On this path both Left and both Right are Nash.
+objective_zh: 纳什那一格，是彼此的最优反应。这条路上，都在左和都在右都是纳什。
+objective_zh_hk: 納什嗰一格，係彼此嘅最佳回應。呢條路，都喺左同都喺右都係納什。
+glossary:
+- en: Nash equilibrium
+  zh: 纳什均衡
+  zh_hk: 納什均衡
+  lock: true
+- en: best response
+  zh: 最优反应
+  zh_hk: 最佳回應
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: When is a cell Nash?
+  zh: 什么时候一格叫纳什？
+  zh_hk: 幾時一格叫納什？
+  answer_en: When A's row is a best response to B's column, and B's column is a best response to A's row.
+  answer_zh: 甲这一行是对乙那一列的最优反应，乙那一列也是对甲这一行的最优反应。
+  answer_zh_hk: 甲呢一行係對乙嗰一列嘅最佳回應，乙嗰一列都係對甲呢一行嘅最佳回應。
+- id: Q2
+  type: transfer
+  en: Is Left versus Right a Nash cell?
+  zh: 左对右是纳什吗？
+  zh_hk: 左對右係唔係納什？
+  answer_en: No. Each would rather match. Both would move.
+  answer_zh: 不是。每辆都更想停在一起。两车都会动。
+  answer_zh_hk: 唔係。每架都更想停一齊。兩架都會郁。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Both answers in one cell
+  title_zh: 两个答案在同一格
+  title_zh_hk: 兩個答案喺同一格
+  en: You can name A's best response to Left, and B's best response to Left. Ask whether those two answers sit in the same cell. If they do, neither cart wants to move alone.
+  zh: 你已经说得出甲对左的最优反应，也说得出乙对左的最优反应。问这两个答案是不是落在同一格。如果是，谁也不想自己先动。
+  zh_hk: 你已經講得出甲對左嘅最佳回應，都講得出乙對左嘅最佳回應。問呢兩個答案係唔係落喺同一格。若係，邊個都唔想自己先郁。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Mutual best response
+  title_zh: 彼此都是最优反应
+  title_zh_hk: 彼此都係最佳回應
+  formula: Nash is a cell where each is a best response to the other
+  formula_en: Nash is a cell where each is a best response to the other
+  formula_zh: 纳什就是彼此都是对方最优反应的那一格
+  formula_zh_hk: 納什就係彼此都係對方最佳回應嗰一格
+  gloss_en: Not a promise. Not a meeting.
+  gloss_zh: 不是承诺。不是开会。
+  gloss_zh_hk: 唔係承諾。唔係開會。
+  en: Here is the idea. A cell is Nash when A's row is a best response to B's column, and B's column is a best response to A's row. Nobody has to agree. Each is already answering the column they see.
+  zh: 核心就这一句。甲这一行是对乙那一列的最优反应，乙那一列也是对甲这一行的最优反应，这一格就是纳什。谁也不必答应。每辆只是在回答看见的那一列。
+  zh_hk: 核心就呢一句。甲呢一行係對乙嗰一列嘅最佳回應，乙嗰一列都係對甲呢一行嘅最佳回應，呢一格就係納什。邊個都唔使答應。每架淨係回答見到嗰一列。
+- id: matrix
+  visual: payoff_matrix
+  seconds: 28
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Two Nash cells
+  title_zh: 两格都是纳什
+  title_zh_hk: 兩格都係納什
+  row_player_en: Cart A
+  row_player_zh: 甲车
+  row_player_zh_hk: 甲車
+  col_player_en: Cart B
+  col_player_zh: 乙车
+  col_player_zh_hk: 乙車
+  row1_en: Left
+  row1_zh: 左
+  row1_zh_hk: 左
+  row2_en: Right
+  row2_zh: 右
+  row2_zh_hk: 右
+  col1_en: Left
+  col1_zh: 左
+  col1_zh_hk: 左
+  col2_en: Right
+  col2_zh: 右
+  col2_zh_hk: 右
+  c11: "(3, 3)"
+  c12: "(0, 0)"
+  c21: "(0, 0)"
+  c22: "(3, 3)"
+  highlight: c11
+  note_en: Both Left is Nash. Both Right is Nash too.
+  note_zh: 都在左是纳什。都在右也是纳什。
+  note_zh_hk: 都喺左係納什。都喺右都係納什。
+  en: Both Left. A's best response to Left is Left. B's best response to Left is Left. That cell is Nash. Both Right is Nash the same way. The split cells are not. Each would rather match.
+  zh: 都在左。甲对左的最优反应是左。乙对左的最优反应也是左。这一格是纳什。都在右，同样是纳什。分开的两格不是。每辆都更想停在一起。
+  zh_hk: 都喺左。甲對左嘅最佳回應係左。乙對左嘅最佳回應都係左。呢一格係納什。都喺右，同樣係納什。分開嗰兩格唔係。每架都更想停一齊。
+- id: example
+  visual: example
+  seconds: 22
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Two Nash, no winner yet
+  title_zh: 两个纳什，还没有赢家
+  title_zh_hk: 兩個納什，都未有贏家
+  setup_en: The table has two Nash cells.
+  setup_zh: 表上有两格纳什。
+  setup_zh_hk: 表上面有兩格納什。
+  result_en: We have not said which morning happens.
+  result_zh: 我们还没说会停在哪一个早晨。
+  result_zh_hk: 我哋都未講會停邊一個朝早。
+  en: The table has two Nash cells. We have not said which morning happens. Nash does not pick between them. It only marks the cells where neither cart wants to move alone.
+  zh: 表上有两格纳什。我们还没说会停在哪一个早晨。纳什不会在这两格里再选一次。它只标出谁也不想自己先动的格子。
+  zh_hk: 表上面有兩格納什。我哋都未講會停邊一個朝早。納什唔會喺呢兩格再揀一次。佢淨係標出邊個都唔想自己先郁嘅格仔。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Mutual best response
+  title_zh: 彼此都是最优反应
+  title_zh_hk: 彼此都係最佳回應
+  q1_en: Nash is mutual best response.
+  q1_zh: 纳什就是彼此都是最优反应。
+  q1_zh_hk: 納什就係彼此都係最佳回應。
+  q2_en: This table has two Nash cells.
+  q2_zh: 这张表有两格纳什。
+  q2_zh_hk: 呢張表有兩格納什。
+  en: Keep that sentence. Nash is mutual best response. This table has two. Next the path narrows. They cannot both take the gate, and Nash will not mean match.
+  zh: 留下这一句。纳什就是彼此都是最优反应。这张表有两格。接下来路窄了。两车不能一起占住门口，纳什也不再等于停在一起。
+  zh_hk: 留低呢一句。納什就係彼此都係最佳回應。呢張表有兩格。跟住路窄咗。兩架唔可以一齊佔住門口，納什都唔再等於停一齊。

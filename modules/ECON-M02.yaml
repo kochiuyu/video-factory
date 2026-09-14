@@ -1,0 +1,20 @@
+id: ECON-M02
+kind: module
+course: economics
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+duration_target_s: 408
+title_en: Incentives, trade, and a price change
+title_zh: 激励、分工、涨价之后
+title_zh_hk: 激勵、分工、漲價之後
+objective_en: People respond to incentives; assign work by opportunity cost; use elasticity to see
+  what a price rise does to revenue.
+objective_zh: 人对激励作出反应；按机会成本分工；用弹性看涨价后收入升还是降。
+objective_zh_hk: 人對激勵作出反應；按機會成本分工；用彈性看漲價後收入升還是降。
+lessons:
+- ECON-M02-IN
+- ECON-IN-01
+- ECON-CA-01
+- ECON-EL-01
+- ECON-M02-OUT

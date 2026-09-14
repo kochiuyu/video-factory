@@ -1,0 +1,98 @@
+[
+  {
+    "lesson_id": "GAME-M02-IN",
+    "beat_id": "hook",
+    "language": "en",
+    "text": "Look back at that path. We already named the players, the strategies, and the payoffs. The table is on paper. Nobody has picked a cell. This unit asks a new question. What would each cart post?",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-IN\\audio\\en\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-IN",
+    "beat_id": "define",
+    "language": "en",
+    "text": "Here is the idea. Some strategies you would never post, because another line pays more no matter what the other cart does. You can delete that line before anyone picks. We do not guess a personality. We read the table.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-IN\\audio\\en\\define.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-IN",
+    "beat_id": "plan",
+    "language": "en",
+    "text": "Here is what we will do. First we name a dominant strategy on the coffee carts. Then we cross out the lines that die, and see what is left. Then a new story, the prisoner's dilemma. Last we solve that story with the same tool.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-IN\\audio\\en\\plan.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-IN",
+    "beat_id": "takeaway",
+    "language": "en",
+    "text": "That is all I need you to see in this opening. Do not pick a price yet. Do not guess who is tough. Next we look at High and Low on the same table, and we name a dominant strategy.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-IN\\audio\\en\\takeaway.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-IN",
+    "beat_id": "hook",
+    "language": "zh_cn",
+    "text": "再看那条路。参与人、策略和报酬，我们已经点过了。表在纸上。还没有人选出一格。这一单元问一句新的。每辆车会标什么？",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-IN\\audio\\zh_cn\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-IN",
+    "beat_id": "define",
+    "language": "zh_cn",
+    "text": "核心就这一句。有的策略你绝不会标，因为另一条无论对面怎么标都赚得更多。还没人选，这条就可以删。不是猜性格。是读这张表。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-IN\\audio\\zh_cn\\define.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-IN",
+    "beat_id": "plan",
+    "language": "zh_cn",
+    "text": "我们接下来做这件事。先在咖啡车上点出占优策略。再划掉会死掉的行，看还剩什么。然后换一个故事，囚徒困境。最后用同一个工具解那个故事。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-IN\\audio\\zh_cn\\plan.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-IN",
+    "beat_id": "takeaway",
+    "language": "zh_cn",
+    "text": "开场我只要你看见这一点。先不要定价。也不要猜谁更狠。接下来看同一张表上的高价和低价，点出占优策略。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-IN\\audio\\zh_cn\\takeaway.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-IN",
+    "beat_id": "hook",
+    "language": "zh_hk",
+    "text": "再睇嗰條路。參與人、策略同報酬，我哋已經點過。張表喺紙度。都未有人揀到一格。呢一單元問一句新嘅。每架車會標咩？",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-IN\\audio\\zh_hk\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-IN",
+    "beat_id": "define",
+    "language": "zh_hk",
+    "text": "核心就呢一句。有啲策略你絕唔會標，因為另一條無論對面點標都賺多啲。都未有人揀，呢條就可以刪。唔係估性格。係讀呢張表。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-IN\\audio\\zh_hk\\define.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-IN",
+    "beat_id": "plan",
+    "language": "zh_hk",
+    "text": "我哋跟住做呢件事。先喺咖啡車上面點出佔優策略。再劃走會死人嘅行，睇仲剩咩。然後換一個故事，囚徒困境。最後用同一個工具解嗰個故事。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-IN\\audio\\zh_hk\\plan.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "GAME-M02-IN",
+    "beat_id": "takeaway",
+    "language": "zh_hk",
+    "text": "開場我淨要你見到呢樣。未好定價。都唔好估邊個惡啲。跟住睇同一張表上面嘅貴同平，點出佔優策略。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\GAME-M02-IN\\audio\\zh_hk\\takeaway.mp3",
+    "with_timestamps": true
+  }
+]

@@ -1,0 +1,116 @@
+id: GAME-M04-IN
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 96
+title_en: Which cell
+title_zh: 落在哪一格
+title_zh_hk: 落邊一格
+objective_en: Open. Two Nash cells are marked. This unit asks which cell, without a new table and without mixing.
+objective_zh: 打开。两格纳什已经标好。这一单元问落在哪一格。不换表，也不混合。
+objective_zh_hk: 打開。兩格納什已經標好。呢一單元問落邊一格。唔換表，都唔混合。
+glossary:
+- en: Nash equilibrium
+  zh: 纳什均衡
+  zh_hk: 納什均衡
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What did the last unit leave unfinished?
+  zh: 上一单元留下什么没做完？
+  zh_hk: 上一單元留低咩未做完？
+  answer_en: Which of the two Nash cells happens.
+  answer_zh: 两格纳什里会落在哪一格。
+  answer_zh_hk: 兩格納什裏面會落邊一格。
+- id: Q2
+  type: comprehension
+  en: Do we draw a new payoff table?
+  zh: 要不要另画一张报酬表？
+  zh_hk: 要唔要另畫一張報酬表？
+  answer_en: No. Same two tables. Wide path and the gate.
+  answer_zh: 不要。还是那两张。宽路和门口。
+  answer_zh_hk: 唔好。都係嗰兩張。闊路同門口。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Which cell
+  title_zh: 落在哪一格
+  title_zh_hk: 落邊一格
+  en: Last sitting marked two Nash cells and stopped. Both Left and both Right. Hold and Yield, or Yield and Hold. The table did not pick. This sitting stays on those pages.
+  zh: 上一讲标出两格纳什就停了。都在左和都在右。占和让，或让和占。表没有选。这一讲还留在那两页上。
+  zh_hk: 上一講標出兩格納什就停。都喺左同都喺右。佔同讓，定讓同佔。張表冇揀。呢一講仲留喺嗰兩頁。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Same tables, a new question
+  title_zh: 还是那些表，新的一问
+  title_zh_hk: 都係嗰啲表，新嘅一問
+  formula: Nash marked the cells. Something else may tip one cell.
+  formula_en: Nash marked the cells. Something else may tip one cell.
+  formula_zh: 纳什标出了格子。另有东西可能推往其中一格。
+  formula_zh_hk: 納什標出咗格仔。另有嘢可能推去其中一格。
+  gloss_en: Not a new strategy list. Not a mix yet.
+  gloss_zh: 不是新的策略清单。也还不是混合。
+  gloss_zh_hk: 唔係新嘅策略清單。都仲未係混合。
+  en: Here is the idea. We do not add a third side of the path. We do not mix Left and Right yet. We ask whether both carts can see the same hint, and whether that hint can tip one Nash cell.
+  zh: 核心就这一句。不增加路的第三侧。也还不把左右混在一起。先问两车能不能看见同一个提示，这个提示会不会把人推向其中一格纳什。
+  zh_hk: 核心就呢一句。唔加路嘅第三側。都仲未將左右撈埋。先問兩架可唔可以見到同一個提示，呢個提示會唔會將人推去其中一格納什。
+- id: plan
+  visual: module_open
+  seconds: 26
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Three parts from here
+  title_zh: 从这里往后三部分
+  title_zh_hk: 由呢度去三部分
+  en: Here is what we will do. First a landmark both carts can see, the shady side. Then a sentence said out loud, I will sit Left. Last the gate, where that sentence is no longer cheap.
+  zh: 我们接下来做这件事。先看两车都能看见的地标，有荫的那一侧。再看一句说出来的话，我停左边。最后回到门口，那句话在那里就不便宜了。
+  zh_hk: 我哋跟住做呢件事。先睇兩架都見到嘅地標，有蔭嗰一側。再睇一句講出嚟嘅話，我停左邊。最後返門口，嗰句喺嗰度就唔平。
+  item1_en: A landmark both can see
+  item1_zh: 两车都能看见的地标
+  item1_zh_hk: 兩架都見到嘅地標
+  item2_en: A sentence said out loud
+  item2_zh: 一句说出来的话
+  item2_zh_hk: 一句講出嚟嘅話
+  item3_en: The gate is harder
+  item3_zh: 门口更难
+  item3_zh_hk: 門口更難
+  item4_en: Then we stop
+  item4_zh: 然后收住
+  item4_zh_hk: 然後收住
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: This unit
+  kicker_en: This unit
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Do not mix yet
+  title_zh: 先不要混合
+  title_zh_hk: 未好混合
+  q1_en: Same two tables as last sitting.
+  q1_zh: 还是上一讲那两张表。
+  q1_zh_hk: 都係上一講嗰兩張表。
+  q2_en: We ask which Nash cell, not how to mix.
+  q2_zh: 问的是落在哪一格纳什，不是怎么混合。
+  q2_zh_hk: 問嘅係落邊一格納什，唔係點混合。
+  en: That is all I need you to see in this opening. Keep both Nash cells. Do not mix yet. Next both carts can see the shady side of the path.
+  zh: 开场我只要你看见这一点。两格纳什都留下。先不要混合。接下来两车都能看见路荫的那一侧。
+  zh_hk: 開場我淨要你見到呢樣。兩格納什都留低。未好混合。跟住兩架都見到路蔭嗰一側。

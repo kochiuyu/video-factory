@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SOP — AI bilingual teaching videos</title>
+<style>
+  @page { size: A4; margin: 14mm; }
+  body { margin:0; font: 12.5px/1.35 "Segoe UI", "Noto Sans CJK SC", sans-serif; color:#1b2430; }
+  main { max-width: 780px; margin: 0 auto; padding: 16px 20px 24px; }
+  h1 { font-size: 20px; margin: 0 0 2px; color:#0b1f3a; }
+  .zh { color:#5c6672; margin: 0 0 8px; }
+  .banner { background:#0b1f3a; color:#f4efe6; padding:8px 10px; border-radius:8px; font-size:12px; }
+  h2 { font-size: 13px; letter-spacing:.04em; text-transform:uppercase; color:#8a7340; margin:14px 0 6px; }
+  ol.steps { margin:0; padding-left:18px; }
+  ol.steps li { margin: 0 0 5px; }
+  table { width:100%; border-collapse:collapse; font-size:12px; }
+  th, td { border:1px solid #d7d0c4; padding:5px 7px; text-align:left; vertical-align:top; }
+  th { background:#f4efe6; color:#0b1f3a; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:8px 16px; }
+  .note { font-size:11.5px; color:#5c6672; }
+  .box { border:1px solid #d7d0c4; border-radius:8px; padding:8px 10px; }
+  @media print { .banner { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Faculty SOP — one page</h1>
+  <p class="zh">双语教学短片 · CUHK bilingual video factory · AI bilingual teaching videos</p>
+  <p class="banner">This pack is ready for a pilot course. You do not need ffmpeg, Python, or the factory console to teach with it.</p>
+
+  <h2>What you received</h2>
+  <div class="grid">
+    <div class="box">Modules (5–10 min units): <strong>ACC-M01 / ECON-M01 / GBA-M01</strong></div>
+    <div class="box">Short lessons in this zip: <strong>—</strong></div>
+    <div class="box">Each unit has EN / 简 / 繁 speech, optional bilingual slides, optional no-caption twin, speeds 1× 1.25× 1.5× 2×.</div>
+    <div class="box">Quiz: 100-point student sheet + answer key + CSV. Do not put the key on the LMS.</div>
+  </div>
+
+  <h2>Six steps</h2>
+  <ol class="steps">
+    <li><strong>Pick one module</strong> for the week, not every short. Students watch the module; shorts are backup.</li>
+    <li><strong>Assign one treatment</strong> from <em>treatments.csv</em>. File names look like <code>ECON-M01__en__cap-burn__1p00x.mp4</code> — lesson, speech, captions on/off, speed. Do not rename.</li>
+    <li><strong>Upload the MP4</strong> to Blackboard / Moodle / KEEP. Attach the matching <code>.srt</code> if the player can turn captions on. Soft captions = Year 2 / SEN option.</li>
+    <li><strong>Release the student quiz HTML or CSV</strong> after the video. Mark with the key. Scores are out of 100.</li>
+    <li><strong>Do not mix speeds in one cell.</strong> A student in the 1.5× arm only sees the 1p50x file. Log the <code>cell_id</code> from the CSV next to the student id.</li>
+    <li><strong>If a file is missing</strong>, send the operator the module id. Faculty do not rebuild videos. Operators use the console: select the module → tick languages → Build. Experiment pack is optional.</li>
+  </ol>
+
+  <h2>Recommended first assignment</h2>
+  <table>
+    <tr><th>Arm</th><th>File to post</th><th>Why</th></tr>
+    <tr><td>A · matched EN</td><td><code>…__en__cap-burn__1p00x.mp4</code></td><td>Baseline, English-medium section</td></tr>
+    <tr><td>B · matched 简</td><td><code>…__zhcn__cap-burn__1p00x.mp4</code></td><td>Putonghua section</td></tr>
+    <tr><td>C · matched 繁</td><td><code>…__zhhk__cap-burn__1p00x.mp4</code></td><td>Cantonese section</td></tr>
+    <tr><td>D · mix slides</td><td><code>…__en-en-zh__cap-burn__1p00x.mp4</code></td><td>EN speech, bilingual slides</td></tr>
+    <tr><td>E · speed</td><td>same cell at <code>1p50x</code> or <code>2p00x</code></td><td>Grant playback-speed arm; fall back to 1.25× if 2× is too fast</td></tr>
+    <tr><td>F · no caption</td><td><code>…__cap-off__1p00x.mp4</code></td><td>Year-2 subtitle-off / accessibility contrast</td></tr>
+  </table>
+
+  <h2>Do / do not</h2>
+  <div class="grid">
+    <div class="box"><strong>Do</strong> keep burned-in and soft SRT together. Do print this page. Do record completion and quiz score.</div>
+    <div class="box"><strong>Do not</strong> re-export from PowerPoint. Do not hand students the answer key. Do not edit YAML unless you are the drafter.</div>
+  </div>
+  <p class="note">Ethics: informed consent and anonymised scores. Operator docs: SETUP.md, SCHEMA.md. This page is the only sheet faculty need in class.</p>
+</main>
+</body>
+</html>

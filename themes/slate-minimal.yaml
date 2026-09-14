@@ -1,0 +1,13 @@
+id: slate-minimal
+label: Slate minimal
+bg: "#F4F5F7"
+ink: "#1B1F24"
+muted: "#6B7280"
+white: "#FFFFFF"
+navy: "#1F2933"
+gold: "#4B5563"
+emerald: "#374151"
+wash: "#E5E7EB"
+wash2: "#D1D5DB"
+blobs: false
+corner: false

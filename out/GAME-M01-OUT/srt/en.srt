@@ -1,0 +1,46 @@
+1
+00:00:00,000 --> 00:00:01,954
+Look back at the path.
+
+2
+00:00:01,974 --> 00:00:03,927
+You can name the players.
+
+3
+00:00:03,947 --> 00:00:07,085
+You can name the strategies, High or Low.
+
+4
+00:00:07,105 --> 00:00:10,243
+You can read the payoffs in each cell.
+
+5
+00:00:10,263 --> 00:00:12,612
+That is the game on paper.
+
+6
+00:00:12,632 --> 00:00:15,770
+That is as far as this unit goes.
+
+7
+00:00:15,790 --> 00:00:20,132
+That is all I need you to take from this
+unit.
+
+8
+00:00:20,152 --> 00:00:21,719
+The table is written.
+
+9
+00:00:21,739 --> 00:00:23,701
+Nobody has picked a cell.
+
+10
+00:00:23,721 --> 00:00:27,667
+What each cart would pick from that table
+is the
+
+11
+00:00:27,687 --> 00:00:28,560
+next sitting.
+

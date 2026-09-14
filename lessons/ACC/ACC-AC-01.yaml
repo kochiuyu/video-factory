@@ -1,0 +1,163 @@
+id: ACC-AC-01
+course: accounting
+course_en: Introductory Accounting
+course_zh: 会计入门
+course_zh_hk: 會計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 98
+title_en: Accrual versus Cash
+title_zh: 权责发生与收付实现
+title_zh_hk: 權責發生與收付實現
+objective_en: 'Close the books unit: date the journal line on the work clock, not only on the cash
+  clock.'
+objective_zh: 收住记账单元：分录按完工的钟走，不只按收付款的钟走。
+objective_zh_hk: 收住記賬單元：分錄按完工的鐘走，不只按收付款的鐘走。
+glossary:
+- en: accrual basis
+  zh: 权责发生制
+  zh_hk: 權責發生制
+  lock: true
+- en: cash basis
+  zh: 收付实现制
+  zh_hk: 收付實現制
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: When does accrual accounting record revenue?
+  zh: 权责发生制何时记录收入？
+  zh_hk: 權責發生制何時記錄收入？
+  answer_en: When it is earned, even if cash comes later.
+  answer_zh: 在赚得时，即使现金稍后才到。
+  answer_zh_hk: 在賺得時，即使現金稍後才到。
+- id: Q2
+  type: transfer
+  en: A shop buys goods in March and pays in April. When does accrual record the purchase?
+  zh: 商店三月进货、四月付款。权责发生制何时记录这笔采购？
+  zh_hk: 商店三月進貨、四月付款。權責發生制何時記錄這筆採購？
+  answer_en: March, when the goods and the obligation arrive.
+  answer_zh: 三月，货物和义务同时发生之时。
+  answer_zh_hk: 三月，貨物和義務同時發生之時。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Accrual versus Cash
+  title_zh: 权责发生与收付实现
+  title_zh_hk: 權責發生與收付實現
+  en: We can now write a balanced line. The remaining question is the date. Cash in the till is easy
+    to see. Profit uses a different clock — the work, not the wallet.
+  zh: 平衡的一行已经会写。剩下的是日期。抽屉里的现金好认。利润用的是另一只钟——看活有没有干完，不看钱有没有进袋。
+  zh_hk: 平衡的一行已經會寫。剩下的是日期。抽屜裏的現金好認。利潤用的是另一隻鐘——看活有沒有幹完，不看錢有沒有進袋。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: When the work happens
+  title_zh: 工作发生之时
+  title_zh_hk: 工作發生之時
+  formula: Record when earned or incurred
+  formula_en: Record when earned or incurred
+  formula_zh: 在赚得或发生时入账
+  formula_zh_hk: 在賺得或發生時入賬
+  gloss_en: Cash basis waits for the bank transfer.
+  gloss_zh: 收付实现制要等银行转账。
+  gloss_zh_hk: 收付實現制要等銀行轉賬。
+  en: Under the accrual basis, revenue is recorded when it is earned and expense when it is incurred.
+    Under the cash basis, both wait until money changes hands.
+  zh: 在权责发生制下，收入在赚得时入账，费用在发生时入账。在收付实现制下，两者都要等到钱转手。
+  zh_hk: 在權責發生制下，收入在賺得時入賬，費用在發生時入賬。在收付實現制下，兩者都要等到錢轉手。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Teach now, collect later
+  title_zh: 先上课，后收款
+  title_zh_hk: 先上課，後收款
+  left_en: Accrual records tuition now
+  left_zh: 权责发生制现在记学费
+  left_zh_hk: 權責發生制現在記學費
+  right_en: Cash basis waits for payment
+  right_zh: 收付实现制等到收款
+  right_zh_hk: 收付實現制等到收款
+  en: A tutor finishes a course in June. The family pays in July. Accrual books record the fee in
+    June. Cash books stay silent until July. The work was June.
+  zh: 家教在六月上完课。家长七月才付款。权责发生制在六月记学费。收付实现制要到七月才记账。工作发生在六月。
+  zh_hk: 家教在六月上完課。家長七月才付款。權責發生制在六月記學費。收付實現制要到七月才記賬。工作發生在六月。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Two clocks
+  title_zh: 两套时钟
+  title_zh_hk: 兩套時鐘
+  formula: Record when earned or incurred
+  formula_en: Record when earned or incurred
+  formula_zh: 在赚得或发生时入账
+  formula_zh_hk: 在賺得或發生時入賬
+  gloss_en: Cash basis waits for the transfer.
+  gloss_zh: 收付实现制要等转账。
+  gloss_zh_hk: 收付實現制要等轉賬。
+  en: Write the rule before the example. Accrual follows the work. Cash follows the wallet. Both can
+    be true books. They answer different questions.
+  zh: 先写下规则再看例子。权责发生跟着工作。收付实现跟着钱包。两套都可以是真账，只是问题不同。
+  zh_hk: 先寫下規則再看例子。權責發生跟著工作。收付實現跟著錢包。兩套都可以是真賬，只是問題不同。
+- id: steps
+  visual: steps
+  seconds: 18
+  kicker: Steps
+  kicker_en: Steps
+  kicker_zh: 步骤
+  kicker_zh_hk: 步驟
+  title_en: From job to books
+  title_zh: 从工作到账本
+  title_zh_hk: 從工作到賬本
+  step1_en: Ask if the work is done
+  step1_zh: 问工作是否完成
+  step1_zh_hk: 問工作是否完成
+  step2_en: Ask if cash has moved
+  step2_zh: 问现金是否转手
+  step2_zh_hk: 問現金是否轉手
+  step3_en: Pick the clock for the report
+  step3_zh: 为这份报告选时钟
+  step3_zh_hk: 為這份報告選時鐘
+  en: First ask whether the service is finished. Then ask whether money moved. Then pick accrual or
+    cash for that report. Do not mix the two clocks in one total.
+  zh: 先问服务是否完成。再问钱是否转手。再为这份报告选择权责或收付。不要在一个合计里混用两套时钟。
+  zh_hk: 先問服務是否完成。再問錢是否轉手。再為這份報告選擇權責或收付。不要在一個合計裏混用兩套時鐘。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Ask which clock
+  title_zh: 先问用哪套时钟
+  title_zh_hk: 先問用哪套時鐘
+  q1_en: Has the work already been done?
+  q1_zh: 工作是否已经完成？
+  q1_zh_hk: 工作是否已經完成？
+  q2_en: Has cash already moved?
+  q2_zh: 现金是否已经转手？
+  q2_zh_hk: 現金是否已經轉手？
+  en: 'If the report is meant to show performance, use the work clock. This sitting ends here: we
+    can record an event and date it. The next sitting asks which period the amount belongs to.'
+  zh: 若报表要反映经营，就用完工的钟。这一讲到此为止：事项能入账，也能落日期。下一单元问的是这个数字属于哪一期。
+  zh_hk: 若報表要反映經營，就用完工的鐘。這一講到此為止：事項能入賬，也能落日期。下一單元問的是這個數字屬於哪一期。

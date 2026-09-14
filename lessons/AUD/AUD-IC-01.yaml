@@ -1,0 +1,184 @@
+id: AUD-IC-01
+course: auditing
+course_en: Introductory Auditing
+course_zh: 审计入门
+course_zh_hk: 審計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 114
+title_en: Internal Control
+title_zh: 内部控制
+title_zh_hk: 內部控制
+objective_en: 'Second step of the process unit: separate duties so one person cannot both create and
+  hide an error.'
+objective_zh: 过程单元的第二步：职责分开，让同一人不能既制造错误又把它藏住。
+objective_zh_hk: 過程單元的第二步：職責分開，讓同一人不能既製造錯誤又把它藏住。
+glossary:
+- en: internal control
+  zh: 内部控制
+  zh_hk: 內部控制
+  lock: true
+- en: segregation of duties
+  zh: 职责分离
+  zh_hk: 職責分離
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Segregation of duties tries to stop one person from doing what?
+  zh: 职责分离试图阻止一个人同时做什么？
+  zh_hk: 職責分離試圖阻止一個人同時做什麼？
+  answer_en: Creating an error and hiding it in the records.
+  answer_zh: 既制造差错，又在记录中掩盖它。
+  answer_zh_hk: 既製造差錯，又在記錄中掩蓋它。
+- id: Q2
+  type: transfer
+  en: The warehouse manager can both ship goods and adjust the inventory system. What risk follows?
+  zh: 仓管既发货又能改库存系统。随之而来的风险是什么？
+  zh_hk: 倉管既發貨又能改庫存系統。隨之而來的風險是什麼？
+  answer_en: Goods can leave and the books can be edited to hide the shortage.
+  answer_zh: 货物可以出去，账也可以被改掉来掩盖短缺。
+  answer_zh_hk: 貨物可以出去，賬也可以被改掉來掩蓋短缺。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Internal Control
+  title_zh: 内部控制
+  title_zh_hk: 內部控制
+  en: Independence asked whether the auditor can speak. Internal control asks whether the firm can
+    even see its own errors. Separate the person who records from the person who holds the asset.
+  zh: 独立问的是审计师能不能开口。内部控制问的是企业能不能看见自己的错误。记账的人和保管资产的人，不要是同一人。
+  zh_hk: 獨立問的是審計師能不能開口。內部控制問的是企業能不能看見自己的錯誤。記賬的人和保管資產的人，不要是同一人。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Process, not a person
+  title_zh: 是流程，不是某个人
+  title_zh_hk: 是流程，不是某一個人
+  formula: One person should not do it all
+  formula_en: One person should not do it all
+  formula_zh: 一人不应包办全部
+  formula_zh_hk: 一人不應包辦全部
+  gloss_en: Record, custody, and authorise should be split.
+  gloss_zh: 记账、保管和审批应当分开。
+  gloss_zh_hk: 記賬、保管和審批應當分開。
+  en: Internal control is the process a firm uses to protect assets and make reports reliable. Segregation
+    of duties is the core idea — the person who records should not also hold the cash or approve the
+    payment.
+  zh: 内部控制是企业用来保护资产、使报告可靠的过程。核心是职责分离——记账的人不应同时保管现金或批准付款。
+  zh_hk: 內部控制是企業用來保護資產、使報告可靠的過程。核心是職責分離——記賬的人不應同時保管現金或批准付款。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Cashier and bookkeeper
+  title_zh: 出纳与记账
+  title_zh_hk: 出納與記賬
+  left_en: Same person holds cash and books
+  left_zh: 同一人既管钱又管账
+  left_zh_hk: 同一人既管錢又管賬
+  right_en: Split the two jobs
+  right_zh: 把两份工作拆开
+  right_zh_hk: 把兩份工作拆開
+  en: If one clerk both receives cash and writes the cash book, a missing envelope can be hidden by
+    a false line. Give custody to one person and recording to another. The two records must then meet.
+  zh: 若同一职员既收款又写现金账，少一个信封可以用假分录藏住。保管给一个人，记账给另一个人。两套记录就必须对得上。
+  zh_hk: 若同一職員既收款又寫現金賬，少一個信封可以用假分錄藏住。保管給一個人，記賬給另一個人。兩套記錄就必須對得上。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Separate the jobs
+  title_zh: 把工作拆开
+  title_zh_hk: 把工作拆開
+  formula: One person should not do it all
+  formula_en: One person should not do it all
+  formula_zh: 一人不应包办全部
+  formula_zh_hk: 一人不應包辦全部
+  gloss_en: Custody, recording, approval.
+  gloss_zh: 保管、记账、审批。
+  gloss_zh_hk: 保管、記賬、審批。
+  en: Internal control fails when one person holds the asset, writes the book, and signs the approval.
+    Split those three jobs and errors have to meet.
+  zh: 当同一个人保管资产、登记账簿、又签字审批，内控就失败。把这三件事拆开，错误必须碰面才会过关。
+  zh_hk: 當同一個人保管資產、登記賬簿、又簽字審批，內控就失敗。把這三件事拆開，錯誤必須碰面才會過關。
+- id: steps
+  visual: steps
+  seconds: 18
+  kicker: Steps
+  kicker_en: Steps
+  kicker_zh: 步骤
+  kicker_zh_hk: 步驟
+  title_en: A cash desk test
+  title_zh: 收银台检验
+  title_zh_hk: 收銀臺檢驗
+  step1_en: Who holds the cash
+  step1_zh: 谁保管现金
+  step1_zh_hk: 誰保管現金
+  step2_en: Who records the sale
+  step2_zh: 谁登记销售
+  step2_zh_hk: 誰登記銷售
+  step3_en: Who signs the count
+  step3_zh: 谁在盘点上签字
+  step3_zh_hk: 誰在盤點上簽字
+  en: Watch one afternoon at the desk. If the same badge does all three jobs, the control is theatre.
+    Redesign the line before you add cameras.
+  zh: 看一下午收银台。若同一张工牌做完三件事，内控就是演戏。先改流程，再加摄像头。
+  zh_hk: 看一下午收銀臺。若同一張工牌做完三件事，內控就是演戲。先改流程，再加攝像頭。
+- id: risk
+  visual: two_column
+  seconds: 16
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Speed versus check
+  title_zh: 速度对检验
+  title_zh_hk: 速度對檢驗
+  left_en: One person is faster
+  left_zh: 一个人更快
+  left_zh_hk: 一個人更快
+  right_en: Two people catch theft
+  right_zh: 两个人能抓住盗窃
+  right_zh_hk: 兩個人能抓住盜竊
+  en: A tiny shop will plead speed. A missing split still needs a second pair of eyes on the count.
+    Size changes the tool, not the idea.
+  zh: 小店会用速度当借口。即使规模很小，盘点仍需要第二双眼睛。规模改变工具，不改变想法。
+  zh_hk: 小店會用速度當藉口。即使規模很小，盤點仍需要第二雙眼睛。規模改變工具，不改變想法。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Look for the overlap
+  title_zh: 找出重叠的人
+  title_zh_hk: 找出重疊的人
+  q1_en: Who authorises this step?
+  q1_zh: 谁批准这一步？
+  q1_zh_hk: 誰批准這一步？
+  q2_en: Who records it, and who holds the asset?
+  q2_zh: 谁记账，谁保管资产？
+  q2_zh_hk: 誰記賬，誰保管資產？
+  en: 'A missing split of duties is itself a finding. Next we collect what we will rely on: evidence
+    that is independent, original, and close to the claim — not a copy of management’s story.'
+  zh: 职责没分开，本身就是发现。下一讲收集我们准备依靠的东西：独立的、原始的、靠近主张的证据——不是管理层故事的复印件。
+  zh_hk: 職責沒分開，本身就是發現。下一講收集我們準備依靠的東西：獨立的、原始的、靠近主張的證據——不是管理層故事的複印件。

@@ -1,0 +1,182 @@
+id: ECON-CA-01
+course: principles
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 112
+title_en: Comparative Advantage
+title_zh: 比较优势
+title_zh_hk: 比較優勢
+objective_en: 'Second step of the trade unit: assign each task to the person with the lower opportunity
+  cost.'
+objective_zh: 交易单元的第二步：把每项任务交给机会成本更低的人。
+objective_zh_hk: 交易單元的第二步：把每項任務交給機會成本更低的人。
+glossary:
+- en: comparative advantage
+  zh: 比较优势
+  zh_hk: 比較優勢
+  lock: true
+- en: absolute advantage
+  zh: 绝对优势
+  zh_hk: 絕對優勢
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Comparative advantage is defined by what?
+  zh: 比较优势是由什么定义的？
+  zh_hk: 比較優勢是由什麼定義的？
+  answer_en: Lower opportunity cost on that task, not higher speed on every task.
+  answer_zh: 该任务上更低的机会成本，而不是每件事都更快。
+  answer_zh_hk: 該任務上更低的機會成本，而不是每件事都更快。
+- id: Q2
+  type: transfer
+  en: A senior is better at coding and at client calls. The intern’s only low-cost task is calls.
+    Who should take calls?
+  zh: 学长写代码和打电话都更强。实习生机会成本低的只有电话。谁该去打电话？
+  zh_hk: 學長寫程式和打電話都更強。實習生機會成本低的只有電話。誰該去打電話？
+  answer_en: The intern. The senior’s time is worth more in coding.
+  answer_zh: 实习生。学长的时间用在写代码上更值。
+  answer_zh_hk: 實習生。學長的時間用在寫程式上更值。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Comparative Advantage
+  title_zh: 比较优势
+  title_zh_hk: 比較優勢
+  en: Incentives move effort. Trade moves tasks. Being faster at both jobs is not the reason to do
+    both jobs. Give each person the task with the lower opportunity cost.
+  zh: 激励改变努力。交易改变分工。两件事都更快，不是两件事都该自己做的理由。把每项任务交给机会成本更低的那个人。
+  zh_hk: 激勵改變努力。交易改變分工。兩件事都更快，不是兩件事都該自己做的理由。把每項任務交給機會成本更低的那個人。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Lower opportunity cost
+  title_zh: 更低的机会成本
+  title_zh_hk: 更低的機會成本
+  formula: CA = lower OC on that task
+  formula_en: CA = lower OC on that task
+  formula_zh: 比较优势 = 该任务机会成本更低
+  formula_zh_hk: 比較優勢 = 該任務機會成本更低
+  gloss_en: Absolute advantage is “who is faster.” Comparative is “who gives up less.”
+  gloss_zh: 绝对优势是谁更快。比较优势是谁放弃得更少。
+  gloss_zh_hk: 絕對優勢是誰更快。比較優勢是誰放棄得更少。
+  en: You have a comparative advantage in a task when your opportunity cost of doing it is lower than
+    the other person’s. Absolute advantage only says who uses fewer inputs.
+  zh: 若你做这件事的机会成本比对方低，你就有比较优势。绝对优势只说明谁用的投入更少。
+  zh_hk: 若你做這件事的機會成本比對方低，你就有比較優勢。絕對優勢只說明誰用的投入更少。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Slides or data
+  title_zh: 做幻灯片还是整理数据
+  title_zh_hk: 做投影片還是整理數據
+  left_en: You are faster at both
+  left_zh: 你两样都更快
+  left_zh_hk: 你兩樣都更快
+  right_en: Partner’s cost of slides is lower
+  right_zh: 同伴做幻灯片的代价更低
+  right_zh_hk: 同伴做投影片的代價更低
+  en: You finish slides and cleaning data faster than your partner. If slides cost your partner little
+    other work, let them take slides. You take the data. Output for the team rises.
+  zh: 你做幻灯片和清理数据都比同伴快。若同伴做幻灯片几乎不耽误别的工作，就让同伴做幻灯片，你做数据。小组总产出会上升。
+  zh_hk: 你做投影片和清理數據都比同伴快。若同伴做投影片幾乎不耽誤別的工作，就讓同伴做投影片，你做數據。小組總產出會上升。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Lower opportunity cost
+  title_zh: 更低的机会成本
+  title_zh_hk: 更低的機會成本
+  formula: CA = lower OC on that task
+  formula_en: CA = lower OC on that task
+  formula_zh: 比较优势 = 该任务机会成本更低
+  formula_zh_hk: 比較優勢 = 該任務機會成本更低
+  gloss_en: Not the same as being faster.
+  gloss_zh: 不等于更快。
+  gloss_zh_hk: 不等於更快。
+  en: Absolute advantage is about who uses fewer inputs. Comparative advantage is about who gives
+    up less of the other good. Trade follows the second.
+  zh: 绝对优势看谁用更少投入。比较优势看谁少放弃另一种产品。贸易跟的是后者。
+  zh_hk: 絕對優勢看誰用更少投入。比較優勢看誰少放棄另一種產品。貿易跟的是後者。
+- id: two
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Two people, two jobs
+  title_zh: 两个人，两份工作
+  title_zh_hk: 兩個人，兩份工作
+  setup_en: A is faster at both
+  setup_zh: 甲两件都更快
+  setup_zh_hk: 甲兩件都更快
+  result_en: B still has CA in one
+  result_zh: 乙仍在一件上有比较优势
+  result_zh_hk: 乙仍在一件上有比較優勢
+  en: Alex types and files faster than Blair. If Alex is relatively even faster at typing, Blair should
+    file. Both finish more by specialising.
+  zh: 甲打字和归档都比乙快。若甲在打字上相对更快，乙就应归档。两人分工后完成得更多。
+  zh_hk: 甲打字和歸檔都比乙快。若甲在打字上相對更快，乙就應歸檔。兩人分工後完成得更多。
+- id: trade
+  visual: two_column
+  seconds: 16
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Make versus trade
+  title_zh: 自做对交易
+  title_zh_hk: 自做對交易
+  left_en: Do the task with lower OC
+  left_zh: 做机会成本更低的任务
+  left_zh_hk: 做機會成本更低的任務
+  right_en: Buy the other task
+  right_zh: 买另一项任务
+  right_zh_hk: 買另一項任務
+  en: You do not need to win every contest. You need a partner whose opportunity cost ranks the other
+    way. That is the deal.
+  zh: 你不必赢下每一场比赛。你需要一个机会成本排序相反的搭档。那就是交易。
+  zh_hk: 你不必贏下每一場比賽。你需要一個機會成本排序相反的搭檔。那就是交易。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Trade the high-cost task
+  title_zh: 把高成本的任务交出去
+  title_zh_hk: 把高成本的任務交出去
+  q1_en: Who gives up less to do this task?
+  q1_zh: 谁做这件事放弃得更少？
+  q1_zh_hk: 誰做這件事放棄得更少？
+  q2_en: What can you produce instead?
+  q2_zh: 你改做这件事能多产出什么？
+  q2_zh_hk: 你改做這件事能多產出什麼？
+  en: 'Give each person the task with the lower opportunity cost. Speed at everything is not a plan
+    for the team. Next: once a price is attached to that trade, does a price rise fill the till or
+    empty the shop.'
+  zh: 把任务交给机会成本更低的人。样样都快，不是团队方案。下一讲：给这桩交易标上价格之后，涨价是进账，还是把店清空。
+  zh_hk: 把任務交給機會成本更低的人。樣樣都快，不是團隊方案。下一講：給這樁交易標上價格之後，漲價是進賬，還是把店清空。

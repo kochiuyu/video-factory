@@ -1,0 +1,132 @@
+id: GAME-PL-01
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: Players
+title_zh: 参与人
+title_zh_hk: 參與人
+objective_en: Name the players. A player posts a price this morning. Customers are the crowd, not a third player.
+objective_zh: 点出参与人。参与人是今天早上会标价的人。客人只是客人，不是第三个参与人。
+objective_zh_hk: 點出參與人。參與人係今朝會標價嘅人。客人淨係客人，唔係第三個參與人。
+glossary:
+- en: player
+  zh: 参与人
+  zh_hk: 參與人
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Who counts as a player here?
+  zh: 这里谁算参与人？
+  zh_hk: 呢度邊個算參與人？
+  answer_en: Someone who posts a price this morning, and who cares what the other cart posts.
+  answer_zh: 今天早上会标价的人，而且在乎对面标什么。
+  answer_zh_hk: 今朝會標價嘅人，而且在意對面標咩。
+- id: Q2
+  type: transfer
+  en: Are the customers a third player?
+  zh: 客人是第三个参与人吗？
+  zh_hk: 客人係唔係第三個參與人？
+  answer_en: No. They walk to the cheaper cart. They do not post a price.
+  answer_zh: 不是。他们走向更便宜的车。他们不标价。
+  answer_zh_hk: 唔係。佢哋行去平嗰架。佢哋唔標價。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Who the players are
+  title_zh: 谁是参与人
+  title_zh_hk: 邊個係參與人
+  en: We already know the two carts cannot ignore each other. That makes this morning a game. Now name the players. A player is someone who posts a price this morning. The market is not a player. The weather is not a player.
+  zh: 我们已经知道，这两辆车没法不理对方。所以这个早晨是一局博弈。现在点出参与人。参与人是今天早上会标价的人。市场不是参与人。天气也不是参与人。
+  zh_hk: 我哋已經知，呢兩架車冇得唔理對面。所以呢個朝早係一局博弈。而家點出參與人。參與人係今朝會標價嘅人。市場唔係參與人。天氣都唔係參與人。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: A player posts a price
+  title_zh: 参与人会标价
+  title_zh_hk: 參與人會標價
+  formula: A player posts a price, and cares what the other posts
+  formula_en: A player posts a price, and cares what the other posts
+  formula_zh: 参与人会标价，而且在乎对面标什么
+  formula_zh_hk: 參與人會標價，而且在意對面標咩
+  gloss_en: If it cannot post a price, it is not a player.
+  gloss_zh: 不能标价，就不是参与人。
+  gloss_zh_hk: 唔可以標價，就唔算參與人。
+  en: Here is the idea. A player is someone who posts a price, and who cares what the other cart posts. If it cannot post a price, it is not a player. Rain can change how many customers come. Rain does not put a number on a board.
+  zh: 核心就这一句。参与人是会标价的人，而且在乎对面标什么。不能标价，就不是参与人。下雨能改变来多少客人。下雨不会在牌子上写数字。
+  zh_hk: 核心就呢一句。參與人係會標價嘅人，而且在意對面標咩。唔可以標價，就唔算參與人。落雨會改到嚟幾多客人。落雨唔會喺牌子上面寫數字。
+- id: roster
+  visual: three_column
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Two players, one crowd
+  title_zh: 两个参与人，一群客人
+  title_zh_hk: 兩個參與人，一班客人
+  col1_en: Cart A. Posts a price.
+  col1_zh: 甲车。标一个价。
+  col1_zh_hk: 甲車。標一個價。
+  col2_en: Cart B. Posts a price.
+  col2_zh: 乙车。标一个价。
+  col2_zh_hk: 乙車。標一個價。
+  col3_en: Customers. Walk to the cheaper cart.
+  col3_zh: 客人。走向更便宜的车。
+  col3_zh_hk: 客人。行去平嗰架。
+  en: Look at the three names. Cart A posts a price. Cart B posts a price. Customers look at both boards and walk to the cheaper cart. The customers are the crowd. They are not a third player.
+  zh: 看这三个名字。甲车标一个价。乙车标一个价。客人看完两块牌子，走向便宜的那辆。客人只是客人。他们不是第三个参与人。
+  zh_hk: 睇呢三個名。甲車標一個價。乙車標一個價。客人睇完兩塊牌，行去平嗰架。客人淨係客人。佢哋唔係第三個參與人。
+- id: example
+  visual: example
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Do not name the market
+  title_zh: 不要把市场点名
+  title_zh_hk: 唔好點市場個名
+  setup_en: Someone writes, the market chooses the winner.
+  setup_zh: 有人写，市场选出赢家。
+  setup_zh_hk: 有人寫，市場揀咗贏家。
+  result_en: Rewrite it. A and B post prices. Customers walk. No third board.
+  result_zh: 改过来。甲乙自己标价。客人自己走。没有第三块牌子。
+  result_zh_hk: 改返。甲乙自己標價。客人自己行。冇第三塊牌。
+  en: Someone writes, the market chooses the winner. Cross that out. A and B post prices. Customers walk. There is no third board on this path, so there is no third player.
+  zh: 有人写，市场选出赢家。划掉。甲乙自己标价。客人自己走。这条路上没有第三块牌子，也就没有第三个参与人。
+  zh_hk: 有人寫，市場揀咗贏家。劃走。甲乙自己標價。客人自己行。呢條路冇第三塊牌，就冇第三個參與人。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Name who posts a price
+  title_zh: 点名谁在标价
+  title_zh_hk: 點名邊個喺度標價
+  q1_en: Can this name post a price?
+  q1_zh: 这个名字能标价吗？
+  q1_zh_hk: 呢個名可唔可以標價？
+  q2_en: If not, is it the crowd, the weather, or just a phrase?
+  q2_zh: 如果不能，它是客人、天气，还是一句空话？
+  q2_zh_hk: 若唔得，佢係客人、天氣，定一句空話？
+  en: Before you keep a name, ask whether it can post a price this morning. If it cannot, drop it. Two names stay. Cart A and Cart B. Next we name the strategies. High or Low.
+  zh: 留下一个名字之前，先问它今天早上能不能标价。不能就划掉。只留下两个名字。甲车和乙车。下一问是策略。高价还是低价。
+  zh_hk: 留低一個名之前，先問佢今朝可唔可以標價。唔得就劃走。淨留兩個名。甲車同乙車。下一問係策略。貴定平。

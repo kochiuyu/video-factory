@@ -1,0 +1,6 @@
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-AC-01/audio/padded/en/hook.mp3'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-AC-01/audio/padded/en/define.mp3'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-AC-01/audio/padded/en/example.mp3'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-AC-01/audio/padded/en/formula.mp3'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-AC-01/audio/padded/en/steps.mp3'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-AC-01/audio/padded/en/takeaway.mp3'

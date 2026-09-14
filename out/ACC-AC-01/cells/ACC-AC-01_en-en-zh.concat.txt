@@ -1,0 +1,6 @@
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-AC-01/clips/en-en-zh/01_hook.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-AC-01/clips/en-en-zh/02_define.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-AC-01/clips/en-en-zh/03_example.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-AC-01/clips/en-en-zh/04_formula.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-AC-01/clips/en-en-zh/05_steps.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-AC-01/clips/en-en-zh/06_takeaway.mp4'

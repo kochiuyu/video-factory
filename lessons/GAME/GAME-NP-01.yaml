@@ -1,0 +1,149 @@
+id: GAME-NP-01
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: No cell is Nash
+title_zh: 没有一格是纳什
+title_zh_hk: 冇一格係納什
+objective_en: You want to mismatch the copycat. The copycat wants to match. Every cell, someone would move.
+objective_zh: 你想和仿摊错开。仿摊想跟你停一起。每一格都有人会动。
+objective_zh_hk: 你想同仿攤錯開。仿攤想跟你停一齊。每一格都有人會郁。
+glossary:
+- en: Nash equilibrium
+  zh: 纳什均衡
+  zh_hk: 納什均衡
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: If both sit Left, who wants to move?
+  zh: 都停左边时，谁想动？
+  zh_hk: 都停左邊嗰陣，邊個想郁？
+  answer_en: You. The copycat stole the queue. Right would pay you more.
+  answer_zh: 你。仿摊抢走了排队。停右你更赚。
+  answer_zh_hk: 你。仿攤搶走咗行隊。停右你更賺。
+- id: Q2
+  type: transfer
+  en: If you sit Left and the copycat sits Right, who wants to move?
+  zh: 你停左、仿摊停右，谁想动？
+  zh_hk: 你停左、仿攤停右，邊個想郁？
+  answer_en: The copycat. Matching you would steal the queue.
+  answer_zh: 仿摊。跟你停一起才能抢走排队。
+  answer_zh_hk: 仿攤。跟你停一齊先搶得走行隊。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: A stall that copies
+  title_zh: 一辆会抄的摊
+  title_zh_hk: 一架會抄嘅攤
+  en: You still choose Left or Right. A copycat stall opens across the path. If it sits on your side, it steals the queue. If it sits on the other side, you keep the morning.
+  zh: 你还是选左或右。路对面开了一辆仿摊。它停在你这一侧，就抢走排队。它停在另一侧，这个早晨就是你的。
+  zh_hk: 你都係揀左定右。路對面開咗一架仿攤。佢停你呢一側，就搶走行隊。佢停另一側，呢個朝早就係你嘅。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Match versus mismatch
+  title_zh: 跟上，还是错开
+  title_zh_hk: 跟上，定錯開
+  formula: You want to mismatch. The copycat wants to match.
+  formula_en: You want to mismatch. The copycat wants to match.
+  formula_zh: 你想错开。仿摊想跟上。
+  formula_zh_hk: 你想錯開。仿攤想跟上。
+  gloss_en: Those two wants cannot sit in one cell.
+  gloss_zh: 这两种想要，坐不进同一格。
+  gloss_zh_hk: 呢兩種想要，坐唔入同一格。
+  en: Here is the idea. You take home more when you sit where the copycat is not. The copycat takes home more when it sits where you are. One cell cannot be a best response for both.
+  zh: 核心就这一句。仿摊不在的那一侧，你更赚。你在的那一侧，仿摊更赚。同一格不可能同时是两边的最优反应。
+  zh_hk: 核心就呢一句。仿攤唔喺嗰一側，你更賺。你喺嗰一側，仿攤更賺。同一格唔可能同時係兩邊嘅最佳回應。
+- id: matrix
+  visual: payoff_matrix
+  seconds: 28
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Check every cell
+  title_zh: 每一格都看
+  title_zh_hk: 每一格都睇
+  row_player_en: You
+  row_player_zh: 你
+  row_player_zh_hk: 你
+  col_player_en: Copycat
+  col_player_zh: 仿摊
+  col_player_zh_hk: 仿攤
+  row1_en: Left
+  row1_zh: 左
+  row1_zh_hk: 左
+  row2_en: Right
+  row2_zh: 右
+  row2_zh_hk: 右
+  col1_en: Left
+  col1_zh: 左
+  col1_zh_hk: 左
+  col2_en: Right
+  col2_zh: 右
+  col2_zh_hk: 右
+  c11: "(0, 3)"
+  c12: "(3, 0)"
+  c21: "(3, 0)"
+  c22: "(0, 3)"
+  highlight: c11
+  note_en: First number is you. Match pays you zero. Mismatch pays you three.
+  note_zh: 头一个数字是你。跟上你得零。错开你得三。
+  note_zh_hk: 第一個數字係你。跟上你得零。錯開你得三。
+  en: Both Left. You get 0, the copycat gets 3. You would move to Right. You Left, copycat Right. You get 3, they get 0. They would move to Left. The other two cells flip the same way.
+  zh: 都在左。你得 0，仿摊得 3。你会改停右。你在左、仿摊在右。你得 3，他们得 0。他们会改停左。另外两格同样会翻。
+  zh_hk: 都喺左。你得 0，仿攤得 3。你會改停右。你喺左、仿攤喺右。你得 3，佢哋得 0。佢哋會改停左。另外兩格同樣會翻。
+- id: example
+  visual: example
+  seconds: 22
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: A landmark will not save this
+  title_zh: 地标救不了这一局
+  title_zh_hk: 地標救唔到呢一局
+  setup_en: Both look at the shady side and sit Left.
+  setup_zh: 两车都看着有荫的一侧，停在左。
+  setup_zh_hk: 兩架都睇住有蔭嗰一側，停喺左。
+  result_en: The copycat just stole the queue. You want to leave.
+  result_zh: 仿摊正好抢走排队。你想离开。
+  result_zh_hk: 仿攤啱啱搶走行隊。你想離開。
+  en: Put shade on the Left. If both sit there, the copycat stole the queue. You want to leave. A focal point that makes you match is the copycat's gift, not yours.
+  zh: 把荫放在左边。两车都停那里，仿摊正好抢走排队。你想离开。一个让你们停一起的焦点，是仿摊的礼物，不是你的。
+  zh_hk: 將蔭放喺左邊。兩架都停嗰度，仿攤啱啱搶走行隊。你想離開。一個等你哋停一齊嘅焦點，係仿攤嘅禮物，唔係你嘅。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Every cell moves
+  title_zh: 每一格都会动
+  title_zh_hk: 每一格都會郁
+  q1_en: You want to mismatch. The copycat wants to match.
+  q1_zh: 你想错开。仿摊想跟上。
+  q1_zh_hk: 你想錯開。仿攤想跟上。
+  q2_en: No cell is Nash.
+  q2_zh: 没有一格是纳什。
+  q2_zh_hk: 冇一格係納什。
+  en: Check all four cells. Someone would move from each. Next we stop posting one side every morning. Some mornings Left, some Right. That list of mornings is a mix.
+  zh: 四格都看过。每一格都有人会动。接下来不要每天都停同一侧。有些早晨左，有些右。这些早晨的清单，就是混合。
+  zh_hk: 四格都睇過。每一格都有人會郁。跟住唔好每日都停同一側。有啲朝早左，有啲右。呢啲朝早嘅清單，就係混合。

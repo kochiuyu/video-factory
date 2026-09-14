@@ -1,0 +1,20 @@
+id: ACC-M02
+kind: module
+course: accounting
+course_en: Introductory Accounting
+course_zh: 会计入门
+course_zh_hk: 會計入門
+duration_target_s: 410
+title_en: Which period gets the number
+title_zh: 数字记在哪一期
+title_zh_hk: 數字記在哪一期
+objective_en: Revenue when delivered, cost matched to that revenue, machine cost spread across years
+  of use.
+objective_zh: 交货才确认收入，费用跟它所帮助赚到的收入同一期，机器成本按使用年份摊开。
+objective_zh_hk: 交貨才確認收入，費用跟它所幫助賺到的收入同一期，機器成本按使用年份攤開。
+lessons:
+- ACC-M02-IN
+- ACC-RR-01
+- ACC-MP-01
+- ACC-DP-01
+- ACC-M02-OUT

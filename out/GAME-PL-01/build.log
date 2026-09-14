@@ -1,0 +1,2169 @@
+
+===== GAME-PL-01  2026-09-12 09:34:19 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en single
+progress: slides 1/3 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh single
+progress: slides 2/3 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk single
+progress: slides 3/3 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 30.8s
+slides-only: wrote 15 PNG files; skipped TTS and mux
+timing: total 30.8s
+timing: breakdown slides 30.8s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-12 09:54:34 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: reuse beat 1/5 hook
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en single
+progress: slides 1/3 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: reuse beat 1/5 hook
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh single
+progress: slides 2/3 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: reuse beat 1/5 hook
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk single
+progress: slides 3/3 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 34.7s
+slides-only: wrote 15 PNG files; skipped TTS and mux
+timing: total 34.7s
+timing: breakdown slides 34.7s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-12 09:57:42 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.0s
+preview en/01_hook
+preview en/02_define
+preview en/02_define_s1
+preview en/02_define_s2
+preview en/03_roster
+preview en/03_roster_s1
+preview en/03_roster_s2
+preview en/03_roster_s3
+preview en/04_example
+preview en/04_example_s1
+preview en/04_example_s2
+preview en/04_example_s3
+preview en/05_takeaway
+preview en/05_takeaway_s1
+preview en/05_takeaway_s2
+preview en/05_takeaway_s3
+progress: preview 1/3 en
+preview zh_cn/01_hook
+preview zh_cn/02_define
+preview zh_cn/02_define_s1
+preview zh_cn/02_define_s2
+preview zh_cn/03_roster
+preview zh_cn/03_roster_s1
+preview zh_cn/03_roster_s2
+preview zh_cn/03_roster_s3
+preview zh_cn/04_example
+preview zh_cn/04_example_s1
+preview zh_cn/04_example_s2
+preview zh_cn/04_example_s3
+preview zh_cn/05_takeaway
+preview zh_cn/05_takeaway_s1
+preview zh_cn/05_takeaway_s2
+preview zh_cn/05_takeaway_s3
+progress: preview 2/3 zh
+preview zh_hk/01_hook
+preview zh_hk/02_define
+preview zh_hk/02_define_s1
+preview zh_hk/02_define_s2
+preview zh_hk/03_roster
+preview zh_hk/03_roster_s1
+preview zh_hk/03_roster_s2
+preview zh_hk/03_roster_s3
+preview zh_hk/04_example
+preview zh_hk/04_example_s1
+preview zh_hk/04_example_s2
+preview zh_hk/04_example_s3
+preview zh_hk/05_takeaway
+preview zh_hk/05_takeaway_s1
+preview zh_hk/05_takeaway_s2
+preview zh_hk/05_takeaway_s3
+progress: preview 3/3 zh_hk
+caption-preview: wrote 48 stamped frames; skipped TTS and mux
+timing: caption preview 15.5s
+timing: total 15.6s
+timing: breakdown slides 0.0s, caption preview 15.5s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-12 10:08:06 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zh-zh-en, zhcn, hk-hk-en, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, en+zh, en+zh_hk, zh, zh_hk
+progress: slides 0/5 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/5 en reuse
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh bilingual
+progress: slides 2/5 en+zh
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 3/5 zh reuse
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh_hk bilingual
+progress: slides 4/5 en+zh_hk
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 5/5 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 1m 3.7s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+tts jobs: 15 to speak, 3 in flight
+tts: en/hook
+tts: en/define
+tts: en/roster
+progress: speech 1/15 en/roster
+tts: en/example
+progress: speech 2/15 en/hook
+tts: en/takeaway
+progress: speech 3/15 en/define
+tts: zh_cn/hook
+progress: speech 4/15 en/example
+tts: zh_cn/define
+progress: speech 5/15 en/takeaway
+tts: zh_cn/roster
+progress: speech 6/15 zh_cn/hook
+tts: zh_cn/example
+progress: speech 7/15 zh_cn/define
+tts: zh_cn/takeaway
+progress: speech 8/15 zh_cn/roster
+tts: zh_hk/hook
+progress: speech 9/15 zh_cn/example
+tts: zh_hk/define
+progress: speech 10/15 zh_cn/takeaway
+tts: zh_hk/roster
+progress: speech 11/15 zh_hk/hook
+tts: zh_hk/example
+progress: speech 12/15 zh_hk/roster
+tts: zh_hk/takeaway
+progress: speech 13/15 zh_hk/define
+progress: speech 14/15 zh_hk/example
+progress: speech 15/15 zh_hk/takeaway
+timing: speech 9.3s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh_hk
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk
+timing: stage stills 9.5s
+motion: dissolve 0.18 beat-fade 0 fps 15 clip-jobs 3
+progress: clip 1/5 0/5 en encode 5
+clip: encoded en/hook
+progress: clip 1/5 1/5 en/hook
+clip: encoded en/define
+progress: clip 1/5 2/5 en/define
+clip: encoded en/roster
+progress: clip 1/5 3/5 en/roster
+clip: encoded en/example
+progress: clip 1/5 4/5 en/example
+clip: encoded en/takeaway
+progress: clip 1/5 5/5 en/takeaway
+concat: en (5 beats)
+progress: concat 1/5 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_en.mp4 (44.5s)
+timing: video en 19.6s
+progress: clip 2/5 0/5 zh-zh-en encode 5
+clip: encoded zh-zh-en/hook
+progress: clip 2/5 1/5 zh-zh-en/hook
+clip: encoded zh-zh-en/example
+progress: clip 2/5 2/5 zh-zh-en/example
+clip: encoded zh-zh-en/define
+progress: clip 2/5 3/5 zh-zh-en/define
+clip: encoded zh-zh-en/takeaway
+progress: clip 2/5 4/5 zh-zh-en/takeaway
+clip: encoded zh-zh-en/roster
+progress: clip 2/5 5/5 zh-zh-en/roster
+concat: zh-zh-en (5 beats)
+progress: concat 2/5 zh-zh-en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zh-zh-en.mp4 (44.5s)
+timing: video zh-zh-en 18.9s
+progress: clip 3/5 0/5 zhcn encode 5
+clip: encoded zhcn/hook
+progress: clip 3/5 1/5 zhcn/hook
+clip: encoded zhcn/example
+progress: clip 3/5 2/5 zhcn/example
+clip: encoded zhcn/define
+progress: clip 3/5 3/5 zhcn/define
+clip: encoded zhcn/roster
+progress: clip 3/5 4/5 zhcn/roster
+clip: encoded zhcn/takeaway
+progress: clip 3/5 5/5 zhcn/takeaway
+concat: zhcn (5 beats)
+progress: concat 3/5 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhcn.mp4 (44.5s)
+timing: video zhcn 19.2s
+progress: clip 4/5 0/5 hk-hk-en encode 5
+clip: encoded hk-hk-en/hook
+progress: clip 4/5 1/5 hk-hk-en/hook
+clip: encoded hk-hk-en/define
+progress: clip 4/5 2/5 hk-hk-en/define
+clip: encoded hk-hk-en/roster
+progress: clip 4/5 3/5 hk-hk-en/roster
+clip: encoded hk-hk-en/example
+progress: clip 4/5 4/5 hk-hk-en/example
+clip: encoded hk-hk-en/takeaway
+progress: clip 4/5 5/5 hk-hk-en/takeaway
+concat: hk-hk-en (5 beats)
+progress: concat 4/5 hk-hk-en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_hk-hk-en.mp4 (44.5s)
+timing: video hk-hk-en 22.4s
+progress: clip 5/5 0/5 zhhk encode 5
+clip: encoded zhhk/hook
+progress: clip 5/5 1/5 zhhk/hook
+clip: encoded zhhk/example
+progress: clip 5/5 2/5 zhhk/example
+clip: encoded zhhk/define
+progress: clip 5/5 3/5 zhhk/define
+clip: encoded zhhk/roster
+progress: clip 5/5 4/5 zhhk/roster
+clip: encoded zhhk/takeaway
+progress: clip 5/5 5/5 zhhk/takeaway
+concat: zhhk (5 beats)
+progress: concat 5/5 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhhk.mp4 (44.5s)
+timing: video zhhk 27.0s
+timing: total 3m 9.6s
+timing: breakdown slides 1m 3.7s, speech 9.3s, stage stills 9.5s, video en 19.6s, video zh-zh-en 18.9s, video zhcn 19.2s, video hk-hk-en 22.4s, video zhhk 27.0s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-12 12:05:33 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, en-en-zh, zh-zh-en, zhcn, hk-hk-en, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, en+zh, en+zh_hk, zh, zh+en, zh_hk
+progress: slides 0/6 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/6 en reuse
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh+en bilingual
+progress: slides 2/6 zh+en
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh (16 png)
+progress: slides 3/6 en+zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 4/6 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh_hk (16 png)
+progress: slides 5/6 en+zh_hk reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 6/6 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 33.1s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 1/15 en/hook reuse
+progress: speech 2/15 en/define reuse
+progress: speech 3/15 en/roster reuse
+progress: speech 4/15 en/example reuse
+progress: speech 5/15 en/takeaway reuse
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 6/15 zh_cn/hook reuse
+progress: speech 7/15 zh_cn/define reuse
+progress: speech 8/15 zh_cn/roster reuse
+progress: speech 9/15 zh_cn/example reuse
+progress: speech 10/15 zh_cn/takeaway reuse
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 11/15 zh_hk/hook reuse
+progress: speech 12/15 zh_hk/define reuse
+progress: speech 13/15 zh_hk/roster reuse
+progress: speech 14/15 zh_hk/example reuse
+progress: speech 15/15 zh_hk/takeaway reuse
+timing: speech 2.3s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh+en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh_hk
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk
+timing: stage stills 9.8s
+motion: dissolve 0.18 beat-fade 0 fps 15 clip-jobs 3
+progress: clip 1/6 0/5 en encode 5
+clip: encoded en/hook
+progress: clip 1/6 1/5 en/hook
+clip: encoded en/example
+progress: clip 1/6 2/5 en/example
+clip: encoded en/define
+progress: clip 1/6 3/5 en/define
+clip: encoded en/roster
+progress: clip 1/6 4/5 en/roster
+clip: encoded en/takeaway
+progress: clip 1/6 5/5 en/takeaway
+concat: en (5 beats)
+progress: concat 1/6 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_en.mp4 (44.5s)
+timing: video en 14.0s
+progress: clip 2/6 0/5 en-en-zh encode 5
+clip: encoded en-en-zh/hook
+progress: clip 2/6 1/5 en-en-zh/hook
+clip: encoded en-en-zh/example
+progress: clip 2/6 2/5 en-en-zh/example
+clip: encoded en-en-zh/define
+progress: clip 2/6 3/5 en-en-zh/define
+clip: encoded en-en-zh/roster
+progress: clip 2/6 4/5 en-en-zh/roster
+clip: encoded en-en-zh/takeaway
+progress: clip 2/6 5/5 en-en-zh/takeaway
+concat: en-en-zh (5 beats)
+progress: concat 2/6 en-en-zh
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_en-en-zh.mp4 (44.5s)
+timing: video en-en-zh 18.4s
+progress: clip 3/6 0/5 zh-zh-en encode 5
+clip: encoded zh-zh-en/hook
+progress: clip 3/6 1/5 zh-zh-en/hook
+clip: encoded zh-zh-en/example
+progress: clip 3/6 2/5 zh-zh-en/example
+clip: encoded zh-zh-en/define
+progress: clip 3/6 3/5 zh-zh-en/define
+clip: encoded zh-zh-en/roster
+progress: clip 3/6 4/5 zh-zh-en/roster
+clip: encoded zh-zh-en/takeaway
+progress: clip 3/6 5/5 zh-zh-en/takeaway
+concat: zh-zh-en (5 beats)
+progress: concat 3/6 zh-zh-en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zh-zh-en.mp4 (44.5s)
+timing: video zh-zh-en 13.9s
+progress: clip 4/6 0/5 zhcn encode 5
+clip: encoded zhcn/hook
+progress: clip 4/6 1/5 zhcn/hook
+clip: encoded zhcn/example
+progress: clip 4/6 2/5 zhcn/example
+clip: encoded zhcn/define
+progress: clip 4/6 3/5 zhcn/define
+clip: encoded zhcn/roster
+progress: clip 4/6 4/5 zhcn/roster
+clip: encoded zhcn/takeaway
+progress: clip 4/6 5/5 zhcn/takeaway
+concat: zhcn (5 beats)
+progress: concat 4/6 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhcn.mp4 (44.5s)
+timing: video zhcn 13.9s
+progress: clip 5/6 0/5 hk-hk-en encode 5
+clip: encoded hk-hk-en/hook
+progress: clip 5/6 1/5 hk-hk-en/hook
+clip: encoded hk-hk-en/example
+progress: clip 5/6 2/5 hk-hk-en/example
+clip: encoded hk-hk-en/define
+progress: clip 5/6 3/5 hk-hk-en/define
+clip: encoded hk-hk-en/roster
+progress: clip 5/6 4/5 hk-hk-en/roster
+clip: encoded hk-hk-en/takeaway
+progress: clip 5/6 5/5 hk-hk-en/takeaway
+concat: hk-hk-en (5 beats)
+progress: concat 5/6 hk-hk-en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_hk-hk-en.mp4 (44.5s)
+timing: video hk-hk-en 15.4s
+progress: clip 6/6 0/5 zhhk encode 5
+clip: encoded zhhk/hook
+progress: clip 6/6 1/5 zhhk/hook
+clip: encoded zhhk/define
+progress: clip 6/6 2/5 zhhk/define
+clip: encoded zhhk/example
+progress: clip 6/6 3/5 zhhk/example
+clip: encoded zhhk/roster
+progress: clip 6/6 4/5 zhhk/roster
+clip: encoded zhhk/takeaway
+progress: clip 6/6 5/5 zhhk/takeaway
+concat: zhhk (5 beats)
+progress: concat 6/6 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhhk.mp4 (44.5s)
+timing: video zhhk 15.5s
+timing: total 2m 16.2s
+timing: breakdown slides 33.1s, speech 2.3s, stage stills 9.8s, video en 14.0s, video en-en-zh 18.4s, video zh-zh-en 13.9s, video zhcn 13.9s, video hk-hk-en 15.4s, video zhhk 15.5s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-12 16:08:04 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en single
+progress: slides 1/3 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh single
+progress: slides 2/3 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk single
+progress: slides 3/3 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 35.9s
+slides-only: wrote 15 PNG files; skipped TTS and mux
+timing: total 35.9s
+timing: breakdown slides 35.9s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-12 16:44:12 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zh-zh-en, zhcn, hk-hk-en, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, en+zh, en+zh_hk, zh, zh_hk
+progress: slides 0/5 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en single
+progress: slides 1/5 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh bilingual
+progress: slides 2/5 en+zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh single
+progress: slides 3/5 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh_hk bilingual
+progress: slides 4/5 en+zh_hk
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk single
+progress: slides 5/5 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 1m 34.9s
+slides-only: wrote 25 PNG files; skipped TTS and mux
+timing: total 1m 34.9s
+timing: breakdown slides 1m 34.9s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-12 16:49:02 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zh-zh-en, zhcn, hk-hk-en, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, en+zh, en+zh_hk, zh, zh_hk
+progress: slides 0/5 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/5 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh (16 png)
+progress: slides 2/5 en+zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 3/5 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh_hk (16 png)
+progress: slides 4/5 en+zh_hk reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 5/5 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.1s
+preview en/01_hook
+preview en/02_define
+preview en/02_define_s1
+preview en/02_define_s2
+preview en/03_roster
+preview en/03_roster_s1
+preview en/03_roster_s2
+preview en/03_roster_s3
+preview en/04_example
+preview en/04_example_s1
+preview en/04_example_s2
+preview en/04_example_s3
+preview en/05_takeaway
+preview en/05_takeaway_s1
+preview en/05_takeaway_s2
+preview en/05_takeaway_s3
+progress: preview 1/5 en
+preview zh_cn/01_hook
+preview zh_cn/02_define
+preview zh_cn/02_define_s1
+preview zh_cn/02_define_s2
+preview zh_cn/03_roster
+preview zh_cn/03_roster_s1
+preview zh_cn/03_roster_s2
+preview zh_cn/03_roster_s3
+preview zh_cn/04_example
+preview zh_cn/04_example_s1
+preview zh_cn/04_example_s2
+preview zh_cn/04_example_s3
+preview zh_cn/05_takeaway
+preview zh_cn/05_takeaway_s1
+preview zh_cn/05_takeaway_s2
+preview zh_cn/05_takeaway_s3
+progress: preview 2/5 en+zh
+preview zh_cn/01_hook
+preview zh_cn/02_define
+preview zh_cn/02_define_s1
+preview zh_cn/02_define_s2
+preview zh_cn/03_roster
+preview zh_cn/03_roster_s1
+preview zh_cn/03_roster_s2
+preview zh_cn/03_roster_s3
+preview zh_cn/04_example
+preview zh_cn/04_example_s1
+preview zh_cn/04_example_s2
+preview zh_cn/04_example_s3
+preview zh_cn/05_takeaway
+preview zh_cn/05_takeaway_s1
+preview zh_cn/05_takeaway_s2
+preview zh_cn/05_takeaway_s3
+progress: preview 3/5 zh
+preview zh_hk/01_hook
+preview zh_hk/02_define
+preview zh_hk/02_define_s1
+preview zh_hk/02_define_s2
+preview zh_hk/03_roster
+preview zh_hk/03_roster_s1
+preview zh_hk/03_roster_s2
+preview zh_hk/03_roster_s3
+preview zh_hk/04_example
+preview zh_hk/04_example_s1
+preview zh_hk/04_example_s2
+preview zh_hk/04_example_s3
+preview zh_hk/05_takeaway
+preview zh_hk/05_takeaway_s1
+preview zh_hk/05_takeaway_s2
+preview zh_hk/05_takeaway_s3
+progress: preview 4/5 en+zh_hk
+preview zh_hk/01_hook
+preview zh_hk/02_define
+preview zh_hk/02_define_s1
+preview zh_hk/02_define_s2
+preview zh_hk/03_roster
+preview zh_hk/03_roster_s1
+preview zh_hk/03_roster_s2
+preview zh_hk/03_roster_s3
+preview zh_hk/04_example
+preview zh_hk/04_example_s1
+preview zh_hk/04_example_s2
+preview zh_hk/04_example_s3
+preview zh_hk/05_takeaway
+preview zh_hk/05_takeaway_s1
+preview zh_hk/05_takeaway_s2
+preview zh_hk/05_takeaway_s3
+progress: preview 5/5 zh_hk
+caption-preview: wrote 80 stamped frames; skipped TTS and mux
+timing: caption preview 25.5s
+timing: total 25.5s
+timing: breakdown slides 0.1s, caption preview 25.5s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-12 17:19:21 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zh-zh-en, zhcn, hk-hk-en, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, en+zh, en+zh_hk, zh, zh_hk
+progress: slides 0/5 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/5 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh (16 png)
+progress: slides 2/5 en+zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 3/5 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh_hk (16 png)
+progress: slides 4/5 en+zh_hk reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 5/5 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.1s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+tts: script changed en/hook
+tts: script changed en/define
+tts: script changed en/roster
+tts: script changed en/example
+tts: script changed en/takeaway
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+tts: script changed zh_cn/hook
+tts: script changed zh_cn/define
+tts: script changed zh_cn/roster
+tts: script changed zh_cn/example
+tts: script changed zh_cn/takeaway
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+tts: script changed zh_hk/hook
+tts: script changed zh_hk/define
+tts: script changed zh_hk/roster
+tts: script changed zh_hk/example
+tts: script changed zh_hk/takeaway
+tts jobs: 15 to speak, 3 in flight
+tts: en/hook
+tts: en/define
+tts: en/roster
+progress: speech 1/15 en/define
+tts: en/example
+progress: speech 2/15 en/roster
+progress: speech 3/15 en/hook
+tts: en/takeaway
+tts: zh_cn/hook
+progress: speech 4/15 en/example
+tts: zh_cn/define
+progress: speech 5/15 en/takeaway
+tts: zh_cn/roster
+progress: speech 6/15 zh_cn/hook
+tts: zh_cn/example
+progress: speech 7/15 zh_cn/define
+tts: zh_cn/takeaway
+progress: speech 8/15 zh_cn/roster
+tts: zh_hk/hook
+progress: speech 9/15 zh_cn/example
+tts: zh_hk/define
+progress: speech 10/15 zh_cn/takeaway
+tts: zh_hk/roster
+progress: speech 11/15 zh_hk/define
+tts: zh_hk/example
+progress: speech 12/15 zh_hk/hook
+tts: zh_hk/takeaway
+progress: speech 13/15 zh_hk/roster
+progress: speech 14/15 zh_hk/example
+progress: speech 15/15 zh_hk/takeaway
+timing: speech 15.2s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en+zh_hk
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk
+timing: stage stills 10.7s
+motion: dissolve 0.18 beat-fade 0 fps 15 clip-jobs 3
+progress: clip 1/5 0/5 en encode 5
+clip: encoded en/hook
+progress: clip 1/5 1/5 en/hook
+clip: encoded en/define
+progress: clip 1/5 2/5 en/define
+clip: encoded en/roster
+progress: clip 1/5 3/5 en/roster
+clip: encoded en/example
+progress: clip 1/5 4/5 en/example
+clip: encoded en/takeaway
+progress: clip 1/5 5/5 en/takeaway
+concat: en (5 beats)
+progress: concat 1/5 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_en.mp4 (53.5s)
+timing: video en 23.6s
+progress: clip 2/5 0/5 zh-zh-en encode 5
+clip: encoded zh-zh-en/hook
+progress: clip 2/5 1/5 zh-zh-en/hook
+clip: encoded zh-zh-en/define
+progress: clip 2/5 2/5 zh-zh-en/define
+clip: encoded zh-zh-en/roster
+progress: clip 2/5 3/5 zh-zh-en/roster
+clip: encoded zh-zh-en/example
+progress: clip 2/5 4/5 zh-zh-en/example
+clip: encoded zh-zh-en/takeaway
+progress: clip 2/5 5/5 zh-zh-en/takeaway
+concat: zh-zh-en (5 beats)
+progress: concat 2/5 zh-zh-en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zh-zh-en.mp4 (53.5s)
+timing: video zh-zh-en 21.8s
+progress: clip 3/5 0/5 zhcn encode 5
+clip: encoded zhcn/hook
+progress: clip 3/5 1/5 zhcn/hook
+clip: encoded zhcn/define
+progress: clip 3/5 2/5 zhcn/define
+clip: encoded zhcn/roster
+progress: clip 3/5 3/5 zhcn/roster
+clip: encoded zhcn/example
+progress: clip 3/5 4/5 zhcn/example
+clip: encoded zhcn/takeaway
+progress: clip 3/5 5/5 zhcn/takeaway
+concat: zhcn (5 beats)
+progress: concat 3/5 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhcn.mp4 (53.5s)
+timing: video zhcn 23.2s
+progress: clip 4/5 0/5 hk-hk-en encode 5
+clip: encoded hk-hk-en/hook
+progress: clip 4/5 1/5 hk-hk-en/hook
+clip: encoded hk-hk-en/define
+progress: clip 4/5 2/5 hk-hk-en/define
+clip: encoded hk-hk-en/roster
+progress: clip 4/5 3/5 hk-hk-en/roster
+clip: encoded hk-hk-en/example
+progress: clip 4/5 4/5 hk-hk-en/example
+clip: encoded hk-hk-en/takeaway
+progress: clip 4/5 5/5 hk-hk-en/takeaway
+concat: hk-hk-en (5 beats)
+progress: concat 4/5 hk-hk-en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_hk-hk-en.mp4 (53.5s)
+timing: video hk-hk-en 24.8s
+progress: clip 5/5 0/5 zhhk encode 5
+clip: encoded zhhk/hook
+progress: clip 5/5 1/5 zhhk/hook
+clip: encoded zhhk/define
+progress: clip 5/5 2/5 zhhk/define
+clip: encoded zhhk/roster
+progress: clip 5/5 3/5 zhhk/roster
+clip: encoded zhhk/example
+progress: clip 5/5 4/5 zhhk/example
+clip: encoded zhhk/takeaway
+progress: clip 5/5 5/5 zhhk/takeaway
+concat: zhhk (5 beats)
+progress: concat 5/5 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhhk.mp4 (53.5s)
+timing: video zhhk 23.1s
+timing: total 2m 22.4s
+timing: breakdown slides 0.1s, speech 15.2s, stage stills 10.7s, video en 23.6s, video zh-zh-en 21.8s, video zhcn 23.2s, video hk-hk-en 24.8s, video zhhk 23.1s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-12 17:47:25 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en single
+progress: slides 1/3 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh single
+progress: slides 2/3 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk single
+progress: slides 3/3 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 36.0s
+slides-only: wrote 15 PNG files; skipped TTS and mux
+timing: total 36.0s
+timing: breakdown slides 36.0s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 00:44:12 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en single
+progress: slides 1/3 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh single
+progress: slides 2/3 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk single
+progress: slides 3/3 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 41.0s
+preview en/01_hook_c1
+preview en/01_hook_c2
+preview en/02_define
+preview en/02_define_s1
+preview en/02_define_s2
+preview en/03_roster
+preview en/03_roster_s1
+preview en/03_roster_s2
+preview en/03_roster_s3
+preview en/04_example
+preview en/04_example_s1
+preview en/04_example_s2
+preview en/04_example_s3
+preview en/05_takeaway
+preview en/05_takeaway_s1
+preview en/05_takeaway_s2
+preview en/05_takeaway_s3
+progress: preview 1/3 en
+preview zh_cn/01_hook
+preview zh_cn/02_define
+preview zh_cn/02_define_s1
+preview zh_cn/02_define_s2
+preview zh_cn/03_roster
+preview zh_cn/03_roster_s1
+preview zh_cn/03_roster_s2
+preview zh_cn/03_roster_s3
+preview zh_cn/04_example
+preview zh_cn/04_example_s1
+preview zh_cn/04_example_s2
+preview zh_cn/04_example_s3
+preview zh_cn/05_takeaway
+preview zh_cn/05_takeaway_s1
+preview zh_cn/05_takeaway_s2
+preview zh_cn/05_takeaway_s3
+progress: preview 2/3 zh
+preview zh_hk/01_hook
+preview zh_hk/02_define
+preview zh_hk/02_define_s1
+preview zh_hk/02_define_s2
+preview zh_hk/03_roster
+preview zh_hk/03_roster_s1
+preview zh_hk/03_roster_s2
+preview zh_hk/03_roster_s3
+preview zh_hk/04_example
+preview zh_hk/04_example_s1
+preview zh_hk/04_example_s2
+preview zh_hk/04_example_s3
+preview zh_hk/05_takeaway
+preview zh_hk/05_takeaway_s1
+preview zh_hk/05_takeaway_s2
+preview zh_hk/05_takeaway_s3
+progress: preview 3/3 zh_hk
+caption-preview: wrote 49 stamped frames; skipped TTS and mux
+timing: caption preview 22.3s
+timing: total 1m 3.3s
+timing: breakdown slides 41.0s, caption preview 22.3s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 00:52:01 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.0s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+tts: script changed en/hook
+tts: script changed en/define
+tts: script changed en/roster
+tts: script changed en/example
+tts: script changed en/takeaway
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+tts: script changed zh_cn/hook
+tts: script changed zh_cn/define
+tts: script changed zh_cn/roster
+tts: script changed zh_cn/example
+tts: script changed zh_cn/takeaway
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+tts: script changed zh_hk/hook
+tts: script changed zh_hk/define
+tts: script changed zh_hk/roster
+tts: script changed zh_hk/example
+tts: script changed zh_hk/takeaway
+tts jobs: 15 to speak, 3 in flight
+tts: en/hook
+tts: en/define
+tts: en/roster
+progress: speech 1/15 en/roster
+tts: en/example
+progress: speech 2/15 en/hook
+progress: speech 3/15 en/define
+tts: en/takeaway
+tts: zh_cn/hook
+progress: speech 4/15 en/example
+tts: zh_cn/define
+progress: speech 5/15 en/takeaway
+tts: zh_cn/roster
+progress: speech 6/15 zh_cn/hook
+tts: zh_cn/example
+progress: speech 7/15 zh_cn/define
+tts: zh_cn/takeaway
+progress: speech 8/15 zh_cn/roster
+tts: zh_hk/hook
+progress: speech 9/15 zh_cn/example
+tts: zh_hk/define
+progress: speech 10/15 zh_cn/takeaway
+tts: zh_hk/roster
+progress: speech 11/15 zh_hk/hook
+tts: zh_hk/example
+progress: speech 12/15 zh_hk/define
+tts: zh_hk/takeaway
+progress: speech 13/15 zh_hk/example
+progress: speech 14/15 zh_hk/roster
+progress: speech 15/15 zh_hk/takeaway
+timing: speech 18.5s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk
+timing: stage stills 10.5s
+motion: dissolve 0.18 beat-fade 0 fps 15 clip-jobs 3
+progress: clip 1/3 0/5 en encode 5
+clip: encoded en/hook
+progress: clip 1/3 1/5 en/hook
+clip: encoded en/define
+progress: clip 1/3 2/5 en/define
+clip: encoded en/roster
+progress: clip 1/3 3/5 en/roster
+clip: encoded en/takeaway
+progress: clip 1/3 4/5 en/takeaway
+clip: encoded en/example
+progress: clip 1/3 5/5 en/example
+concat: en (5 beats)
+progress: concat 1/3 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_en.mp4 (78.0s)
+timing: video en 28.6s
+progress: clip 2/3 0/5 zhcn encode 5
+clip: encoded zhcn/hook
+progress: clip 2/3 1/5 zhcn/hook
+clip: encoded zhcn/define
+progress: clip 2/3 2/5 zhcn/define
+clip: encoded zhcn/example
+progress: clip 2/3 3/5 zhcn/example
+clip: encoded zhcn/roster
+progress: clip 2/3 4/5 zhcn/roster
+clip: encoded zhcn/takeaway
+progress: clip 2/3 5/5 zhcn/takeaway
+concat: zhcn (5 beats)
+progress: concat 2/3 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhcn.mp4 (78.0s)
+timing: video zhcn 26.1s
+progress: clip 3/3 0/5 zhhk encode 5
+clip: encoded zhhk/hook
+progress: clip 3/3 1/5 zhhk/hook
+clip: encoded zhhk/define
+progress: clip 3/3 2/5 zhhk/define
+clip: encoded zhhk/roster
+progress: clip 3/3 3/5 zhhk/roster
+clip: encoded zhhk/example
+progress: clip 3/3 4/5 zhhk/example
+clip: encoded zhhk/takeaway
+progress: clip 3/3 5/5 zhhk/takeaway
+concat: zhhk (5 beats)
+progress: concat 3/3 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhhk.mp4 (78.0s)
+timing: video zhhk 24.9s
+timing: total 1m 48.6s
+timing: breakdown slides 0.0s, speech 18.5s, stage stills 10.5s, video en 28.6s, video zhcn 26.1s, video zhhk 24.9s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 02:00:50 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en single
+progress: slides 1/3 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh single
+progress: slides 2/3 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk single
+progress: slides 3/3 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 33.0s
+slides-only: wrote 15 PNG files; skipped TTS and mux
+timing: total 33.0s
+timing: breakdown slides 33.0s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 02:06:35 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.0s
+preview en/01_hook_c1
+preview en/01_hook_c2
+preview en/02_define
+preview en/02_define_s1
+preview en/02_define_s2
+preview en/03_roster
+preview en/03_roster_s1
+preview en/03_roster_s2
+preview en/03_roster_s3
+preview en/04_example
+preview en/04_example_s1
+preview en/04_example_s2
+preview en/04_example_s3
+preview en/05_takeaway
+preview en/05_takeaway_s1
+preview en/05_takeaway_s2
+preview en/05_takeaway_s3
+progress: preview 1/3 en
+preview zh_cn/01_hook
+preview zh_cn/02_define
+preview zh_cn/02_define_s1
+preview zh_cn/02_define_s2
+preview zh_cn/03_roster
+preview zh_cn/03_roster_s1
+preview zh_cn/03_roster_s2
+preview zh_cn/03_roster_s3
+preview zh_cn/04_example
+preview zh_cn/04_example_s1
+preview zh_cn/04_example_s2
+preview zh_cn/04_example_s3
+preview zh_cn/05_takeaway
+preview zh_cn/05_takeaway_s1
+preview zh_cn/05_takeaway_s2
+preview zh_cn/05_takeaway_s3
+progress: preview 2/3 zh
+preview zh_hk/01_hook
+preview zh_hk/02_define
+preview zh_hk/02_define_s1
+preview zh_hk/02_define_s2
+preview zh_hk/03_roster
+preview zh_hk/03_roster_s1
+preview zh_hk/03_roster_s2
+preview zh_hk/03_roster_s3
+preview zh_hk/04_example
+preview zh_hk/04_example_s1
+preview zh_hk/04_example_s2
+preview zh_hk/04_example_s3
+preview zh_hk/05_takeaway
+preview zh_hk/05_takeaway_s1
+preview zh_hk/05_takeaway_s2
+preview zh_hk/05_takeaway_s3
+progress: preview 3/3 zh_hk
+caption-preview: wrote 49 stamped frames; skipped TTS and mux
+timing: caption preview 16.6s
+timing: total 16.6s
+timing: breakdown slides 0.0s, caption preview 16.6s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 02:28:35 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.1s
+slides-only: wrote 48 PNG files; skipped TTS and mux
+timing: total 0.1s
+timing: breakdown slides 0.1s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 02:33:08 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.0s
+preview en/01_hook_c1
+preview en/01_hook_c2
+preview en/01_hook_c3
+preview en/01_hook_c4
+preview en/01_hook_c5
+preview en/01_hook_c6
+preview en/02_define
+preview en/02_define_s1
+preview en/02_define_s2
+preview en/03_roster
+preview en/03_roster_s1
+preview en/03_roster_s2
+preview en/03_roster_s3
+preview en/04_example
+preview en/04_example_s1
+preview en/04_example_s2
+preview en/04_example_s3
+preview en/05_takeaway
+preview en/05_takeaway_s1
+preview en/05_takeaway_s2
+preview en/05_takeaway_s3
+progress: preview 1/3 en
+preview zh_cn/01_hook_c1
+preview zh_cn/01_hook_c2
+preview zh_cn/01_hook_c3
+preview zh_cn/01_hook_c4
+preview zh_cn/01_hook_c5
+preview zh_cn/02_define
+preview zh_cn/02_define_s1
+preview zh_cn/02_define_s2
+preview zh_cn/03_roster
+preview zh_cn/03_roster_s1
+preview zh_cn/03_roster_s2
+preview zh_cn/03_roster_s3
+preview zh_cn/04_example
+preview zh_cn/04_example_s1
+preview zh_cn/04_example_s2
+preview zh_cn/04_example_s3
+preview zh_cn/05_takeaway
+preview zh_cn/05_takeaway_s1
+preview zh_cn/05_takeaway_s2
+preview zh_cn/05_takeaway_s3
+progress: preview 2/3 zh
+preview zh_hk/01_hook_c1
+preview zh_hk/01_hook_c2
+preview zh_hk/01_hook_c3
+preview zh_hk/01_hook_c4
+preview zh_hk/01_hook_c5
+preview zh_hk/02_define
+preview zh_hk/02_define_s1
+preview zh_hk/02_define_s2
+preview zh_hk/03_roster
+preview zh_hk/03_roster_s1
+preview zh_hk/03_roster_s2
+preview zh_hk/03_roster_s3
+preview zh_hk/04_example
+preview zh_hk/04_example_s1
+preview zh_hk/04_example_s2
+preview zh_hk/04_example_s3
+preview zh_hk/05_takeaway
+preview zh_hk/05_takeaway_s1
+preview zh_hk/05_takeaway_s2
+preview zh_hk/05_takeaway_s3
+progress: preview 3/3 zh_hk
+caption-preview: wrote 61 stamped frames; skipped TTS and mux
+timing: caption preview 19.7s
+timing: total 19.8s
+timing: breakdown slides 0.0s, caption preview 19.7s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 02:50:36 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.0s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 1/15 en/hook reuse
+progress: speech 2/15 en/define reuse
+progress: speech 3/15 en/roster reuse
+progress: speech 4/15 en/example reuse
+progress: speech 5/15 en/takeaway reuse
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 6/15 zh_cn/hook reuse
+progress: speech 7/15 zh_cn/define reuse
+progress: speech 8/15 zh_cn/roster reuse
+progress: speech 9/15 zh_cn/example reuse
+progress: speech 10/15 zh_cn/takeaway reuse
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 11/15 zh_hk/hook reuse
+progress: speech 12/15 zh_hk/define reuse
+progress: speech 13/15 zh_hk/roster reuse
+progress: speech 14/15 zh_hk/example reuse
+progress: speech 15/15 zh_hk/takeaway reuse
+timing: speech 2.1s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk
+timing: stage stills 10.2s
+motion: dissolve 0.18 beat-fade 0 fps 15 clip-jobs 3
+progress: clip 1/3 0/5 en encode 5
+clip: encoded en/define
+progress: clip 1/3 1/5 en/define
+clip: encoded en/roster
+progress: clip 1/3 2/5 en/roster
+clip: encoded en/hook
+progress: clip 1/3 3/5 en/hook
+clip: encoded en/example
+progress: clip 1/3 4/5 en/example
+clip: encoded en/takeaway
+progress: clip 1/3 5/5 en/takeaway
+concat: en (5 beats)
+progress: concat 1/3 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_en.mp4 (78.0s)
+timing: video en 30.5s
+progress: clip 2/3 0/5 zhcn encode 5
+clip: encoded zhcn/define
+progress: clip 2/3 1/5 zhcn/define
+clip: encoded zhcn/roster
+progress: clip 2/3 2/5 zhcn/roster
+clip: encoded zhcn/hook
+progress: clip 2/3 3/5 zhcn/hook
+clip: encoded zhcn/example
+progress: clip 2/3 4/5 zhcn/example
+clip: encoded zhcn/takeaway
+progress: clip 2/3 5/5 zhcn/takeaway
+concat: zhcn (5 beats)
+progress: concat 2/3 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhcn.mp4 (78.0s)
+timing: video zhcn 31.2s
+progress: clip 3/3 0/5 zhhk encode 5
+clip: encoded zhhk/define
+progress: clip 3/3 1/5 zhhk/define
+clip: encoded zhhk/roster
+progress: clip 3/3 2/5 zhhk/roster
+clip: encoded zhhk/hook
+progress: clip 3/3 3/5 zhhk/hook
+clip: encoded zhhk/example
+progress: clip 3/3 4/5 zhhk/example
+clip: encoded zhhk/takeaway
+progress: clip 3/3 5/5 zhhk/takeaway
+concat: zhhk (5 beats)
+progress: concat 3/3 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhhk.mp4 (78.0s)
+timing: video zhhk 29.2s
+timing: total 1m 43.2s
+timing: breakdown slides 0.0s, speech 2.1s, stage stills 10.2s, video en 30.5s, video zhcn 31.2s, video zhhk 29.2s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 03:11:10 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.2s
+slides-only: wrote 48 PNG files; skipped TTS and mux
+timing: total 0.2s
+timing: breakdown slides 0.2s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 03:15:54 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.1s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 1/15 en/hook reuse
+progress: speech 2/15 en/define reuse
+progress: speech 3/15 en/roster reuse
+progress: speech 4/15 en/example reuse
+progress: speech 5/15 en/takeaway reuse
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 6/15 zh_cn/hook reuse
+progress: speech 7/15 zh_cn/define reuse
+progress: speech 8/15 zh_cn/roster reuse
+progress: speech 9/15 zh_cn/example reuse
+progress: speech 10/15 zh_cn/takeaway reuse
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 11/15 zh_hk/hook reuse
+progress: speech 12/15 zh_hk/define reuse
+progress: speech 13/15 zh_hk/roster reuse
+progress: speech 14/15 zh_hk/example reuse
+progress: speech 15/15 zh_hk/takeaway reuse
+timing: speech 2.4s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk
+timing: stage stills 11.3s
+motion: dissolve 0.18 beat-fade 0 fps 15 clip-jobs 3
+progress: clip 1/3 0/5 en encode 5
+clip: encoded en/hook
+progress: clip 1/3 1/5 en/hook
+clip: encoded en/define
+progress: clip 1/3 2/5 en/define
+clip: encoded en/roster
+progress: clip 1/3 3/5 en/roster
+clip: encoded en/example
+progress: clip 1/3 4/5 en/example
+clip: encoded en/takeaway
+progress: clip 1/3 5/5 en/takeaway
+concat: en (5 beats)
+progress: concat 1/3 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_en.mp4 (78.0s)
+timing: video en 39.1s
+progress: clip 2/3 0/5 zhcn encode 5
+clip: encoded zhcn/hook
+progress: clip 2/3 1/5 zhcn/hook
+clip: encoded zhcn/roster
+progress: clip 2/3 2/5 zhcn/roster
+clip: encoded zhcn/define
+progress: clip 2/3 3/5 zhcn/define
+clip: encoded zhcn/example
+progress: clip 2/3 4/5 zhcn/example
+clip: encoded zhcn/takeaway
+progress: clip 2/3 5/5 zhcn/takeaway
+concat: zhcn (5 beats)
+progress: concat 2/3 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhcn.mp4 (78.0s)
+timing: video zhcn 34.0s
+progress: clip 3/3 0/5 zhhk encode 5
+clip: encoded zhhk/hook
+progress: clip 3/3 1/5 zhhk/hook
+clip: encoded zhhk/roster
+progress: clip 3/3 2/5 zhhk/roster
+clip: encoded zhhk/define
+progress: clip 3/3 3/5 zhhk/define
+clip: encoded zhhk/example
+progress: clip 3/3 4/5 zhhk/example
+clip: encoded zhhk/takeaway
+progress: clip 3/3 5/5 zhhk/takeaway
+concat: zhhk (5 beats)
+progress: concat 3/3 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhhk.mp4 (78.0s)
+timing: video zhhk 34.4s
+timing: total 2m 1.2s
+timing: breakdown slides 0.1s, speech 2.4s, stage stills 11.3s, video en 39.1s, video zhcn 34.0s, video zhhk 34.4s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 04:06:39 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.1s
+preview reuse en (21 png)
+progress: preview 1/3 en reuse
+preview reuse zh (20 png)
+progress: preview 2/3 zh reuse
+preview reuse zh_hk (20 png)
+progress: preview 3/3 zh_hk reuse
+caption-preview: wrote 61 stamped frames; skipped TTS and mux
+timing: caption preview 0.1s
+timing: total 0.1s
+timing: breakdown slides 0.1s, caption preview 0.1s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 04:07:23 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.1s
+slides-only: wrote 48 PNG files; skipped TTS and mux
+timing: total 0.1s
+timing: breakdown slides 0.1s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 04:15:31 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.1s
+preview reuse en (21 png)
+progress: preview 1/3 en reuse
+preview reuse zh (20 png)
+progress: preview 2/3 zh reuse
+preview reuse zh_hk (20 png)
+progress: preview 3/3 zh_hk reuse
+caption-preview: wrote 61 stamped frames; skipped TTS and mux
+timing: caption preview 0.3s
+timing: total 0.4s
+timing: breakdown slides 0.1s, caption preview 0.3s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 04:16:35 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 4.7s
+preview reuse en (21 png)
+progress: preview 1/3 en reuse
+preview reuse zh (20 png)
+progress: preview 2/3 zh reuse
+preview reuse zh_hk (20 png)
+progress: preview 3/3 zh_hk reuse
+caption-preview: wrote 61 stamped frames; skipped TTS and mux
+timing: caption preview 8.4s
+timing: total 13.2s
+timing: breakdown slides 4.7s, caption preview 8.4s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 04:21:45 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.0s
+slides-only: wrote 48 PNG files; skipped TTS and mux
+timing: total 0.0s
+timing: breakdown slides 0.0s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 04:22:15 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.1s
+slides-only: wrote 48 PNG files; skipped TTS and mux
+timing: total 0.1s
+timing: breakdown slides 0.1s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 04:31:32 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en single
+progress: slides 1/3 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh single
+progress: slides 2/3 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk single
+progress: slides 3/3 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 1m 32.1s
+slides-only: wrote 15 PNG files; skipped TTS and mux
+timing: total 1m 32.1s
+timing: breakdown slides 1m 32.1s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 05:02:20 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.2s
+preview en/02_define_s1_c1
+preview en/02_define_s1_c2
+preview en/02_define_s1_c3
+preview en/02_define_s1_c4
+preview en/02_define_s2_c1
+preview en/02_define_s2_c2
+preview en/03_roster_s1_c1
+preview en/03_roster_s1_c2
+preview en/03_roster_s2_c1
+preview en/03_roster_s2_c2
+preview en/03_roster_s2_c3
+preview en/03_roster_s3_c1
+preview en/03_roster_s3_c2
+preview en/04_example_s1_c1
+preview en/04_example_s1_c2
+preview en/04_example_s2_c1
+preview en/04_example_s2_c2
+preview en/04_example_s3_c1
+preview en/04_example_s3_c2
+preview en/05_takeaway_s1_c1
+preview en/05_takeaway_s1_c2
+preview en/05_takeaway_s1_c3
+preview en/05_takeaway_s2_c1
+preview en/05_takeaway_s2_c2
+preview en/05_takeaway_s3_c1
+preview en/05_takeaway_s3_c2
+progress: preview 1/3 en
+preview zh_cn/02_define_s1_c1
+preview zh_cn/02_define_s1_c2
+preview zh_cn/02_define_s1_c3
+preview zh_cn/02_define_s2_c1
+preview zh_cn/02_define_s2_c2
+preview zh_cn/03_roster_s1_c1
+preview zh_cn/03_roster_s1_c2
+preview zh_cn/03_roster_s2_c1
+preview zh_cn/03_roster_s2_c2
+preview zh_cn/03_roster_s3_c1
+preview zh_cn/03_roster_s3_c2
+preview zh_cn/04_example_s1_c1
+preview zh_cn/04_example_s1_c2
+preview zh_cn/04_example_s2_c1
+preview zh_cn/04_example_s2_c2
+preview zh_cn/04_example_s3
+preview zh_cn/05_takeaway_s1_c1
+preview zh_cn/05_takeaway_s1_c2
+preview zh_cn/05_takeaway_s2_c1
+preview zh_cn/05_takeaway_s2_c2
+preview zh_cn/05_takeaway_s3
+progress: preview 2/3 zh
+preview zh_hk/02_define_s1_c1
+preview zh_hk/02_define_s1_c2
+preview zh_hk/02_define_s1_c3
+preview zh_hk/02_define_s2_c1
+preview zh_hk/02_define_s2_c2
+preview zh_hk/03_roster_s1_c1
+preview zh_hk/03_roster_s1_c2
+preview zh_hk/03_roster_s2_c1
+preview zh_hk/03_roster_s2_c2
+preview zh_hk/03_roster_s3_c1
+preview zh_hk/03_roster_s3_c2
+preview zh_hk/04_example_s1_c1
+preview zh_hk/04_example_s1_c2
+preview zh_hk/04_example_s2_c1
+preview zh_hk/04_example_s2_c2
+preview zh_hk/04_example_s3
+preview zh_hk/05_takeaway_s1_c1
+preview zh_hk/05_takeaway_s1_c2
+preview zh_hk/05_takeaway_s2_c1
+preview zh_hk/05_takeaway_s2_c2
+preview zh_hk/05_takeaway_s3
+progress: preview 3/3 zh_hk
+caption-preview: wrote 68 stamped frames; skipped TTS and mux
+timing: caption preview 31.5s
+timing: total 31.7s
+timing: breakdown slides 0.2s, caption preview 31.5s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 05:17:05 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.0s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 1/15 en/hook reuse
+progress: speech 2/15 en/define reuse
+progress: speech 3/15 en/roster reuse
+progress: speech 4/15 en/example reuse
+progress: speech 5/15 en/takeaway reuse
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 6/15 zh_cn/hook reuse
+progress: speech 7/15 zh_cn/define reuse
+progress: speech 8/15 zh_cn/roster reuse
+progress: speech 9/15 zh_cn/example reuse
+progress: speech 10/15 zh_cn/takeaway reuse
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 11/15 zh_hk/hook reuse
+progress: speech 12/15 zh_hk/define reuse
+progress: speech 13/15 zh_hk/roster reuse
+progress: speech 14/15 zh_hk/example reuse
+progress: speech 15/15 zh_hk/takeaway reuse
+timing: speech 3.1s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk
+timing: stage stills 11.5s
+motion: dissolve 0.18 beat-fade 0 fps 15 clip-jobs 3
+progress: clip 1/3 0/5 en encode 5
+clip: encoded en/hook
+progress: clip 1/3 1/5 en/hook
+clip: encoded en/define
+progress: clip 1/3 2/5 en/define
+clip: encoded en/roster
+progress: clip 1/3 3/5 en/roster
+clip: encoded en/example
+progress: clip 1/3 4/5 en/example
+clip: encoded en/takeaway
+progress: clip 1/3 5/5 en/takeaway
+concat: en (5 beats)
+progress: concat 1/3 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_en.mp4 (78.0s)
+timing: video en 41.5s
+progress: clip 2/3 0/5 zhcn encode 5
+clip: encoded zhcn/hook
+progress: clip 2/3 1/5 zhcn/hook
+clip: encoded zhcn/define
+progress: clip 2/3 2/5 zhcn/define
+clip: encoded zhcn/roster
+progress: clip 2/3 3/5 zhcn/roster
+clip: encoded zhcn/example
+progress: clip 2/3 4/5 zhcn/example
+clip: encoded zhcn/takeaway
+progress: clip 2/3 5/5 zhcn/takeaway
+concat: zhcn (5 beats)
+progress: concat 2/3 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhcn.mp4 (78.0s)
+timing: video zhcn 41.2s
+progress: clip 3/3 0/5 zhhk encode 5
+clip: encoded zhhk/hook
+progress: clip 3/3 1/5 zhhk/hook
+clip: encoded zhhk/define
+progress: clip 3/3 2/5 zhhk/define
+clip: encoded zhhk/roster
+progress: clip 3/3 3/5 zhhk/roster
+clip: encoded zhhk/example
+progress: clip 3/3 4/5 zhhk/example
+clip: encoded zhhk/takeaway
+progress: clip 3/3 5/5 zhhk/takeaway
+concat: zhhk (5 beats)
+progress: concat 3/3 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhhk.mp4 (78.0s)
+timing: video zhhk 40.8s
+timing: total 2m 18.2s
+timing: breakdown slides 0.0s, speech 3.1s, stage stills 11.5s, video en 41.5s, video zhcn 41.2s, video zhhk 40.8s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 13:43:15 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.1s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 1/15 en/hook reuse
+progress: speech 2/15 en/define reuse
+progress: speech 3/15 en/roster reuse
+progress: speech 4/15 en/example reuse
+progress: speech 5/15 en/takeaway reuse
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 6/15 zh_cn/hook reuse
+progress: speech 7/15 zh_cn/define reuse
+progress: speech 8/15 zh_cn/roster reuse
+progress: speech 9/15 zh_cn/example reuse
+progress: speech 10/15 zh_cn/takeaway reuse
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 11/15 zh_hk/hook reuse
+progress: speech 12/15 zh_hk/define reuse
+progress: speech 13/15 zh_hk/roster reuse
+progress: speech 14/15 zh_hk/example reuse
+progress: speech 15/15 zh_hk/takeaway reuse
+timing: speech 3.1s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk
+timing: stage stills 12.7s
+motion: dissolve 0.18 beat-fade 0 fps 15 clip-jobs 3
+captions en/hook: 6 cards
+captions en/define: 6 cards
+captions en/roster: 7 cards
+captions en/example: 6 cards
+captions en/takeaway: 7 cards
+progress: clip 1/3 0/5 en encode 5
+clip: encoded en/define
+progress: clip 1/3 1/5 en/define
+clip: encoded en/roster
+progress: clip 1/3 2/5 en/roster
+clip: encoded en/hook
+progress: clip 1/3 3/5 en/hook
+clip: encoded en/example
+progress: clip 1/3 4/5 en/example
+clip: encoded en/takeaway
+progress: clip 1/3 5/5 en/takeaway
+concat: en (5 beats)
+progress: concat 1/3 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_en.mp4 (78.0s)
+timing: video en 20.2s
+captions zhcn/hook: 5 cards
+captions zhcn/define: 5 cards
+captions zhcn/roster: 6 cards
+captions zhcn/example: 5 cards
+captions zhcn/takeaway: 5 cards
+progress: clip 2/3 0/5 zhcn encode 5
+clip: encoded zhcn/roster
+progress: clip 2/3 1/5 zhcn/roster
+clip: encoded zhcn/hook
+progress: clip 2/3 2/5 zhcn/hook
+clip: encoded zhcn/define
+progress: clip 2/3 3/5 zhcn/define
+clip: encoded zhcn/example
+progress: clip 2/3 4/5 zhcn/example
+clip: encoded zhcn/takeaway
+progress: clip 2/3 5/5 zhcn/takeaway
+concat: zhcn (5 beats)
+progress: concat 2/3 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhcn.mp4 (78.0s)
+timing: video zhcn 19.5s
+captions zhhk/hook: 5 cards
+captions zhhk/define: 5 cards
+captions zhhk/roster: 6 cards
+captions zhhk/example: 5 cards
+captions zhhk/takeaway: 5 cards
+progress: clip 3/3 0/5 zhhk encode 5
+clip: encoded zhhk/roster
+progress: clip 3/3 1/5 zhhk/roster
+clip: encoded zhhk/define
+progress: clip 3/3 2/5 zhhk/define
+clip: encoded zhhk/hook
+progress: clip 3/3 3/5 zhhk/hook
+clip: encoded zhhk/example
+progress: clip 3/3 4/5 zhhk/example
+clip: encoded zhhk/takeaway
+progress: clip 3/3 5/5 zhhk/takeaway
+concat: zhhk (5 beats)
+progress: concat 3/3 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhhk.mp4 (78.0s)
+timing: video zhhk 20.2s
+timing: total 1m 15.8s
+timing: breakdown slides 0.1s, speech 3.1s, stage stills 12.7s, video en 20.2s, video zhcn 19.5s, video zhhk 20.2s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 14:16:20 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en single
+progress: slides 1/3 en
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh single
+progress: slides 2/3 zh
+slide fonts: latin= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback.ttf latin_bold= C:\Users\kochi\Dropbox\video-factory\fonts\LatinFallback-Bold.ttf cjk= C:\Users\kochi\Dropbox\video-factory\fonts\CJKFallback.ttf
+slides: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk single
+progress: slides 3/3 zh_hk
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 34.4s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+tts: script changed en/hook
+tts: script changed en/define
+tts: script changed en/roster
+tts: script changed en/example
+tts: script changed en/takeaway
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+tts: script changed zh_cn/hook
+tts: script changed zh_cn/define
+tts: script changed zh_cn/roster
+tts: script changed zh_cn/example
+tts: script changed zh_cn/takeaway
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+tts: script changed zh_hk/hook
+tts: script changed zh_hk/define
+tts: script changed zh_hk/roster
+tts: script changed zh_hk/example
+tts: script changed zh_hk/takeaway
+tts jobs: 15 to speak, 3 in flight
+tts: en/hook
+tts: en/define
+tts: en/roster
+progress: speech 1/15 en/define
+tts: en/example
+progress: speech 2/15 en/hook
+tts: en/takeaway
+progress: speech 3/15 en/roster
+tts: zh_cn/hook
+progress: speech 4/15 en/example
+tts: zh_cn/define
+progress: speech 5/15 zh_cn/hook
+tts: zh_cn/roster
+progress: speech 6/15 en/takeaway
+tts: zh_cn/example
+progress: speech 7/15 zh_cn/define
+tts: zh_cn/takeaway
+progress: speech 8/15 zh_cn/roster
+tts: zh_hk/hook
+progress: speech 9/15 zh_cn/example
+tts: zh_hk/define
+progress: speech 10/15 zh_cn/takeaway
+tts: zh_hk/roster
+progress: speech 11/15 zh_hk/define
+tts: zh_hk/example
+progress: speech 12/15 zh_hk/hook
+tts: zh_hk/takeaway
+progress: speech 13/15 zh_hk/roster
+progress: speech 14/15 zh_hk/example
+progress: speech 15/15 zh_hk/takeaway
+timing: speech 21.0s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk
+timing: stage stills 10.6s
+motion: dissolve 0.18 beat-fade 0 fps 15 clip-jobs 3
+captions en/hook: 7 cards
+captions en/define: 6 cards
+captions en/roster: 7 cards
+captions en/example: 6 cards
+captions en/takeaway: 7 cards
+progress: clip 1/3 0/5 en encode 5
+clip: encoded en/define
+progress: clip 1/3 1/5 en/define
+clip: encoded en/roster
+progress: clip 1/3 2/5 en/roster
+clip: encoded en/hook
+progress: clip 1/3 3/5 en/hook
+clip: encoded en/example
+progress: clip 1/3 4/5 en/example
+clip: encoded en/takeaway
+progress: clip 1/3 5/5 en/takeaway
+concat: en (5 beats)
+progress: concat 1/3 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_en.mp4 (80.0s)
+timing: video en 28.1s
+captions zhcn/hook: 6 cards
+captions zhcn/define: 5 cards
+captions zhcn/roster: 6 cards
+captions zhcn/example: 5 cards
+captions zhcn/takeaway: 6 cards
+progress: clip 2/3 0/5 zhcn encode 5
+clip: encoded zhcn/define
+progress: clip 2/3 1/5 zhcn/define
+clip: encoded zhcn/roster
+progress: clip 2/3 2/5 zhcn/roster
+clip: encoded zhcn/hook
+progress: clip 2/3 3/5 zhcn/hook
+clip: encoded zhcn/example
+progress: clip 2/3 4/5 zhcn/example
+clip: encoded zhcn/takeaway
+progress: clip 2/3 5/5 zhcn/takeaway
+concat: zhcn (5 beats)
+progress: concat 2/3 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhcn.mp4 (80.0s)
+timing: video zhcn 26.3s
+captions zhhk/hook: 6 cards
+captions zhhk/define: 5 cards
+captions zhhk/roster: 6 cards
+captions zhhk/example: 5 cards
+captions zhhk/takeaway: 6 cards
+progress: clip 3/3 0/5 zhhk encode 5
+clip: encoded zhhk/define
+progress: clip 3/3 1/5 zhhk/define
+clip: encoded zhhk/roster
+progress: clip 3/3 2/5 zhhk/roster
+clip: encoded zhhk/hook
+progress: clip 3/3 3/5 zhhk/hook
+clip: encoded zhhk/example
+progress: clip 3/3 4/5 zhhk/example
+clip: encoded zhhk/takeaway
+progress: clip 3/3 5/5 zhhk/takeaway
+concat: zhhk (5 beats)
+progress: concat 3/3 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhhk.mp4 (80.0s)
+timing: video zhhk 27.5s
+timing: total 2m 28.0s
+timing: breakdown slides 34.4s, speech 21.0s, stage stills 10.6s, video en 28.1s, video zhcn 26.3s, video zhhk 27.5s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########
+
+===== GAME-PL-01  2026-09-13 14:38:24 UTC =====
+log file: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\build.log
+latest  : C:\Users\kochi\Dropbox\video-factory\out\last_build.log
+quiz: 4 items, 100 points -> C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\quiz
+tracks: en, zh_cn, zh_hk
+cells: en, zhcn, zhhk
+titles: match cell language
+theme: cuhk-navy C:\Users\kochi\Dropbox\video-factory\themes\cuhk-navy.yaml
+slide folders: en, zh, zh_hk
+progress: slides 0/3 start
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en (16 png)
+progress: slides 1/3 en reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh (16 png)
+progress: slides 2/3 zh reuse
+slides: reuse C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk (16 png)
+progress: slides 3/3 zh_hk reuse
+narration jobs: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\narration_jobs.json
+timing: slides 0.1s
+ffmpeg: C:\Users\kochi\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin\ffmpeg.EXE
+tts: synthesizing missing beat audio
+tts voice en: en-US-GuyNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 1/15 en/hook reuse
+progress: speech 2/15 en/define reuse
+progress: speech 3/15 en/roster reuse
+progress: speech 4/15 en/example reuse
+progress: speech 5/15 en/takeaway reuse
+tts voice zh_cn: zh-CN-YunxiNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 6/15 zh_cn/hook reuse
+progress: speech 7/15 zh_cn/define reuse
+progress: speech 8/15 zh_cn/roster reuse
+progress: speech 9/15 zh_cn/example reuse
+progress: speech 10/15 zh_cn/takeaway reuse
+tts voice zh_hk: zh-HK-WanLungNeural rate=+0% volume=+0% pitch=+0Hz
+progress: speech 11/15 zh_hk/hook reuse
+progress: speech 12/15 zh_hk/define reuse
+progress: speech 13/15 zh_hk/roster reuse
+progress: speech 14/15 zh_hk/example reuse
+progress: speech 15/15 zh_hk/takeaway reuse
+timing: speech 3.7s
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\en
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh
+stage stills: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\slides\zh_hk
+timing: stage stills 14.9s
+motion: dissolve 0.18 beat-fade 0 fps 15 clip-jobs 3
+captions en/hook: 7 cards
+captions en/define: 6 cards
+captions en/roster: 7 cards
+captions en/example: 6 cards
+captions en/takeaway: 7 cards
+progress: clip 1/3 0/5 en encode 5
+clip: encoded en/roster
+progress: clip 1/3 1/5 en/roster
+clip: encoded en/define
+progress: clip 1/3 2/5 en/define
+clip: encoded en/hook
+progress: clip 1/3 3/5 en/hook
+clip: encoded en/example
+progress: clip 1/3 4/5 en/example
+clip: encoded en/takeaway
+progress: clip 1/3 5/5 en/takeaway
+concat: en (5 beats)
+progress: concat 1/3 en
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_en.mp4 (80.0s)
+timing: video en 30.8s
+captions zhcn/hook: 6 cards
+captions zhcn/define: 5 cards
+captions zhcn/roster: 6 cards
+captions zhcn/example: 5 cards
+captions zhcn/takeaway: 6 cards
+progress: clip 2/3 0/5 zhcn encode 5
+clip: encoded zhcn/define
+progress: clip 2/3 1/5 zhcn/define
+clip: encoded zhcn/roster
+progress: clip 2/3 2/5 zhcn/roster
+clip: encoded zhcn/hook
+progress: clip 2/3 3/5 zhcn/hook
+clip: encoded zhcn/example
+progress: clip 2/3 4/5 zhcn/example
+clip: encoded zhcn/takeaway
+progress: clip 2/3 5/5 zhcn/takeaway
+concat: zhcn (5 beats)
+progress: concat 2/3 zhcn
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhcn.mp4 (80.0s)
+timing: video zhcn 26.1s
+captions zhhk/hook: 6 cards
+captions zhhk/define: 5 cards
+captions zhhk/roster: 6 cards
+captions zhhk/example: 5 cards
+captions zhhk/takeaway: 6 cards
+progress: clip 3/3 0/5 zhhk encode 5
+clip: encoded zhhk/define
+progress: clip 3/3 1/5 zhhk/define
+clip: encoded zhhk/roster
+progress: clip 3/3 2/5 zhhk/roster
+clip: encoded zhhk/hook
+progress: clip 3/3 3/5 zhhk/hook
+clip: encoded zhhk/example
+progress: clip 3/3 4/5 zhhk/example
+clip: encoded zhhk/takeaway
+progress: clip 3/3 5/5 zhhk/takeaway
+concat: zhhk (5 beats)
+progress: concat 3/3 zhhk
+cell: C:\Users\kochi\Dropbox\video-factory\out\GAME-PL-01\cells\GAME-PL-01_zhhk.mp4 (80.0s)
+timing: video zhhk 1m 3.7s
+timing: total 2m 19.3s
+timing: breakdown slides 0.1s, speech 3.7s, stage stills 14.9s, video en 30.8s, video zhcn 26.1s, video zhhk 1m 3.7s
+progress: module 4/6 build GAME-ST-01
+######## GAME-ST-01 (module part 4/6) ########

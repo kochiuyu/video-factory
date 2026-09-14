@@ -1,0 +1,50 @@
+[
+  {
+    "lesson_id": "ACC-M01-OUT",
+    "beat_id": "hook",
+    "language": "en",
+    "text": "You can state the equation, place a debit and a credit, and choose the work clock over the cash clock.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-M01-OUT\\audio\\en\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-M01-OUT",
+    "beat_id": "takeaway",
+    "language": "en",
+    "text": "That is the books unit. Next sitting: which period gets the sale, the matching cost, and the machine.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-M01-OUT\\audio\\en\\takeaway.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-M01-OUT",
+    "beat_id": "hook",
+    "language": "zh_cn",
+    "text": "你能说出等式，放下借和贷，并选用完工的钟而不是只看收付款的钟。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-M01-OUT\\audio\\zh_cn\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-M01-OUT",
+    "beat_id": "takeaway",
+    "language": "zh_cn",
+    "text": "记账单元到此。下一讲：销售、配比的成本、机器，各记在哪一期。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-M01-OUT\\audio\\zh_cn\\takeaway.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-M01-OUT",
+    "beat_id": "hook",
+    "language": "zh_hk",
+    "text": "你能說出等式，放下借和貸，並選用完工的鐘而不是只看收付款的鐘。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-M01-OUT\\audio\\zh_hk\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-M01-OUT",
+    "beat_id": "takeaway",
+    "language": "zh_hk",
+    "text": "記賬單元到此。下一講：銷售、配比的成本、機器，各記在哪一期。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-M01-OUT\\audio\\zh_hk\\takeaway.mp3",
+    "with_timestamps": true
+  }
+]

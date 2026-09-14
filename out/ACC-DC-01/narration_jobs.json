@@ -1,0 +1,98 @@
+[
+  {
+    "lesson_id": "ACC-DC-01",
+    "beat_id": "hook",
+    "language": "en",
+    "text": "The equation said both sides must move together. Debit and credit are only the two sides of that one line. Neither word means good or bad.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DC-01\\audio\\en\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DC-01",
+    "beat_id": "define",
+    "language": "en",
+    "text": "A debit is the left side of an account. A credit is the right side. Every journal entry needs at least one of each, and the totals must match.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DC-01\\audio\\en\\define.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DC-01",
+    "beat_id": "example",
+    "language": "en",
+    "text": "Buying supplies with cash increases an asset on the left and decreases another asset on the right. Debit supplies. Credit cash. The line still balances.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DC-01\\audio\\en\\example.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DC-01",
+    "beat_id": "takeaway",
+    "language": "en",
+    "text": "Do not memorise “debit means increase.” Name the account on the left and the account on the right, then check the amounts. Next we ask when that line is dated — when cash moves, or when the work is done.",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DC-01\\audio\\en\\takeaway.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DC-01",
+    "beat_id": "hook",
+    "language": "zh_cn",
+    "text": "等式要求两边一起动。借和贷只是那一行的左右两侧。两个词都不表示好坏。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DC-01\\audio\\zh_cn\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DC-01",
+    "beat_id": "define",
+    "language": "zh_cn",
+    "text": "借方是账户的左边。贷方是账户的右边。每笔分录至少各有一个，而且金额必须相等。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DC-01\\audio\\zh_cn\\define.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DC-01",
+    "beat_id": "example",
+    "language": "zh_cn",
+    "text": "用现金买用品，左边一项资产增加，右边另一项资产减少。借记用品，贷记现金。这一行仍然平衡。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DC-01\\audio\\zh_cn\\example.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DC-01",
+    "beat_id": "takeaway",
+    "language": "zh_cn",
+    "text": "不要死记“借就是增加”。先说出左边是哪个账户、右边是哪个账户，再核对金额。下一讲问的是这一行记在哪一天——现金动的那天，还是活干完的那天。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DC-01\\audio\\zh_cn\\takeaway.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DC-01",
+    "beat_id": "hook",
+    "language": "zh_hk",
+    "text": "等式要求兩邊一起動。借和貸只是那一行的左右兩側。兩個詞都不表示好壞。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DC-01\\audio\\zh_hk\\hook.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DC-01",
+    "beat_id": "define",
+    "language": "zh_hk",
+    "text": "借方是賬戶的左邊。貸方是賬戶的右邊。每筆分錄至少各有一個，而且金額必須相等。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DC-01\\audio\\zh_hk\\define.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DC-01",
+    "beat_id": "example",
+    "language": "zh_hk",
+    "text": "用現金買用品，左邊一項資產增加，右邊另一項資產減少。借記用品，貸記現金。這一行仍然平衡。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DC-01\\audio\\zh_hk\\example.mp3",
+    "with_timestamps": true
+  },
+  {
+    "lesson_id": "ACC-DC-01",
+    "beat_id": "takeaway",
+    "language": "zh_hk",
+    "text": "不要死記「借就是增加」。先說出左邊是哪個賬戶、右邊是哪個賬戶，再核對金額。下一講問的是這一行記在哪一天——現金動的那天，還是活幹完的那天。",
+    "dest_path": "C:\\Users\\kochi\\Dropbox\\video-factory\\out\\ACC-DC-01\\audio\\zh_hk\\takeaway.mp3",
+    "with_timestamps": true
+  }
+]

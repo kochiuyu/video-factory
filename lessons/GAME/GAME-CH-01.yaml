@@ -1,0 +1,153 @@
+id: GAME-CH-01
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 128
+title_en: The gate is too narrow
+title_zh: 门口太窄
+title_zh_hk: 門口太窄
+objective_en: One prime pitch. Hold or Yield. Two Nash with opposite actions. Both Hold is the crash.
+objective_zh: 只有一个好摊位。占住或让开。两个纳什是相反的动作。都占住就是撞上。
+objective_zh_hk: 得一個好攤位。佔住定讓開。兩個納什係相反嘅動作。都佔住就係撞埋。
+glossary:
+- en: chicken
+  zh: 斗鸡
+  zh_hk: 鬥雞
+  lock: true
+- en: Nash equilibrium
+  zh: 纳什均衡
+  zh_hk: 納什均衡
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What are the two Nash cells?
+  zh: 哪两格是纳什？
+  zh_hk: 邊兩格係納什？
+  answer_en: A Holds and B Yields. A Yields and B Holds.
+  answer_zh: 甲占乙让。甲让乙占。
+  answer_zh_hk: 甲佔乙讓。甲讓乙佔。
+- id: Q2
+  type: transfer
+  en: Why is both Hold not Nash?
+  zh: 为什么都占住不是纳什？
+  zh_hk: 點解都佔住唔係納什？
+  answer_en: Each would rather Yield if the other Holds. Zero is worse than two.
+  answer_zh: 对面占住时，自己让开更好。零比二差。
+  answer_zh_hk: 對面佔住嗰陣，自己讓開更好。零比二差。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: The gate is too narrow
+  title_zh: 门口太窄
+  title_zh_hk: 門口太窄
+  en: Same two carts. The path narrows at the gate. There is one prime pitch. Each cart may Hold that pitch or Yield and take the corner. They cannot both sit in the gate.
+  zh: 还是这两辆车。路在门口窄了。只有一个好摊位。每辆车可以占住门口，或让开去角落。两车不能一起停在门口。
+  zh_hk: 都係呢兩架車。路喺門口窄咗。得一個好攤位。每架車可以佔住門口，定讓開去角落。兩架唔可以一齊停門口。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Hold or Yield
+  title_zh: 占住或让开
+  title_zh_hk: 佔住定讓開
+  formula: Best response flips with the other cart
+  formula_en: Best response flips with the other cart
+  formula_zh: 最优反应会随着对面翻过来
+  formula_zh_hk: 最佳回應會隨住對面翻轉
+  gloss_en: The book calls this chicken.
+  gloss_zh: 书里把这一局叫斗鸡。
+  gloss_zh_hk: 書度將呢一局叫鬥雞。
+  en: Here is the idea. If the other cart Yields, you want the gate. If the other cart Holds, you want the corner. Best response flips. The book calls this chicken. Nash will not mean sit together.
+  zh: 核心就这一句。对面让开，你想占门口。对面占住，你想去角落。最优反应会翻过来。书里叫斗鸡。纳什在这里不等于停在一起。
+  zh_hk: 核心就呢一句。對面讓開，你想佔門口。對面佔住，你想去角落。最佳回應會翻轉。書度叫鬥雞。納什喺呢度唔等於停一齊。
+- id: matrix
+  visual: payoff_matrix
+  seconds: 32
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Opposite Nash
+  title_zh: 相反的纳什
+  title_zh_hk: 相反嘅納什
+  row_player_en: Cart A
+  row_player_zh: 甲车
+  row_player_zh_hk: 甲車
+  col_player_en: Cart B
+  col_player_zh: 乙车
+  col_player_zh_hk: 乙車
+  row1_en: Yield
+  row1_zh: 让开
+  row1_zh_hk: 讓開
+  row2_en: Hold
+  row2_zh: 占住
+  row2_zh_hk: 佔住
+  col1_en: Yield
+  col1_zh: 让开
+  col1_zh_hk: 讓開
+  col2_en: Hold
+  col2_zh: 占住
+  col2_zh_hk: 佔住
+  c11: "(3, 3)"
+  c12: "(2, 5)"
+  c21: "(5, 2)"
+  c22: "(0, 0)"
+  highlight: c21
+  note_en: First number is A. Both Hold is zero. The Nash cells are the off ones.
+  note_zh: 头一个数字是甲。都占住是零。纳什在对角那两格。
+  note_zh_hk: 第一個數字係甲。都佔住係零。納什喺對角嗰兩格。
+  en: Both Yield, each takes three in the back. A Holds and B Yields, A takes five and B takes two. Both Hold, they block the gate and take zero. The Nash cells are five-two and two-five.
+  zh: 都让开，在后面各带走三。甲占乙让，甲带走五，乙带走二。都占住，堵住门口，各带走零。纳什是五和二、二和五。
+  zh_hk: 都讓開，喺後面各袋走三。甲佔乙讓，甲袋走五，乙袋走二。都佔住，堵住門口，各袋走零。納什係五同二、二同五。
+- id: example
+  visual: example
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Why both Hold is not Nash
+  title_zh: 为什么都占住不是纳什
+  title_zh_hk: 點解都佔住唔係納什
+  setup_en: Both carts Hold. Each takes zero.
+  setup_zh: 两车都占住。各带走零。
+  setup_zh_hk: 兩架都佔住。各袋走零。
+  result_en: If the other Holds, Yield pays two. So both would move.
+  result_zh: 对面占住时，让开能带走二。所以两车都会动。
+  result_zh_hk: 對面佔住嗰陣，讓開可以袋走二。所以兩架都會郁。
+  en: Both Hold is the crash. Each takes zero. If the other cart Holds, Yield pays two. Zero is worse, so both would move. A Nash cell is one Hold and one Yield.
+  zh: 都占住就是撞上。各带走零。对面占住时，让开能带走二。零更差，所以两车都会动。纳什是一辆占、一辆让。
+  zh_hk: 都佔住就係撞埋。各袋走零。對面佔住嗰陣，讓開可以袋走二。零更差，所以兩架都會郁。納什係一架佔、一架讓。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Nash is not match
+  title_zh: 纳什不等于停在一起
+  title_zh_hk: 納什唔等於停一齊
+  q1_en: Two Nash cells, opposite actions.
+  q1_zh: 两格纳什，动作相反。
+  q1_zh_hk: 兩格納什，動作相反。
+  q2_en: Both Hold is not Nash.
+  q2_zh: 都占住不是纳什。
+  q2_zh_hk: 都佔住唔係納什。
+  en: Keep both lines. Nash can be opposite actions. Both Hold is not Nash. Next we close. We still have not said which cart gets the gate.
+  zh: 两句都留下。纳什可以是相反的动作。都占住不是纳什。接下来收住。我们还没说谁占到门口。
+  zh_hk: 兩句都留低。納什可以係相反嘅動作。都佔住唔係納什。跟住收住。我哋都未講邊個佔到門口。

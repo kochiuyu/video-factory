@@ -1,0 +1,71 @@
+id: GBA-M01-IN
+course: gba
+course_en: Greater Bay Area
+course_zh: 粤港澳大湾区
+course_zh_hk: 粵港澳大灣區
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: 'This sitting: the map'
+title_zh: 这一讲：地图
+title_zh_hk: 這一講：地圖
+objective_en: Name the GBA, put a clock on a crossing, then say which factor — and which person —
+  can actually move.
+objective_zh: 给大湾区起名，给通道加上钟，再说哪种要素、哪个人真正过得去。
+objective_zh_hk: 給大灣區起名，給通道加上鐘，再說哪種要素、哪個人真正過得去。
+glossary:
+- en: Open
+  zh: 开场
+  zh_hk: 開場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Which four layers does this sitting put on the GBA?
+  zh: 这一讲给大湾区叠哪四层？
+  zh_hk: 這一講給大灣區疊哪四層？
+  answer_en: The city list, the clock on a crossing, the factor, then the person.
+  answer_zh: 城市名单、通道上的钟、要素，然后是人。
+  answer_zh_hk: 城市名單、通道上的鐘、要素，然後是人。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: the map'
+  title_zh: 这一讲：地图
+  title_zh_hk: 這一講：地圖
+  en: Four shorts. The map is nine Guangdong cities plus Hong Kong and Macao. A bridge cuts time.
+    Goods, capital, and people still use different gates.
+  zh: 四条短片。地图是广东九市加香港、澳门。桥能缩短时间。货、资金和人，仍走不同的闸。
+  zh_hk: 四條短片。地圖是廣東九市加香港、澳門。橋能縮短時間。貨、資金和人，仍走不同的閘。
+  item1_en: What the GBA is
+  item1_zh: 大湾区是什么
+  item1_zh_hk: 大灣區是什麼
+  item2_en: Infrastructure links
+  item2_zh: 基础设施连接
+  item2_zh_hk: 基礎設施連接
+  item3_en: Factor mobility
+  item3_zh: 要素流动
+  item3_zh_hk: 要素流動
+  item4_en: Talent and labour
+  item4_zh: 人才与劳动力
+  item4_zh_hk: 人才與勞動力
+- id: takeaway
+  visual: title_card
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: the map'
+  title_zh: 这一讲：地图
+  title_zh_hk: 這一講：地圖
+  en: By the end, “GBA” should mean cities and gates, not one policy on a poster.
+  zh: 结束时，“大湾区”应是指城市和闸口，不是海报上的一套政策。
+  zh_hk: 結束時，「大灣區」應是指城市和閘口，不是海報上的一套政策。

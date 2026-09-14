@@ -1,0 +1,4 @@
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-EQ-01/audio/padded/zh_hk/hook.mp3'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-EQ-01/audio/padded/zh_hk/define.mp3'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-EQ-01/audio/padded/zh_hk/example.mp3'
+file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-EQ-01/audio/padded/zh_hk/takeaway.mp3'

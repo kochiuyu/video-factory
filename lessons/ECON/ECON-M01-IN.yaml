@@ -1,0 +1,72 @@
+id: ECON-M01-IN
+course: economics
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: 'This sitting: what a choice costs'
+title_zh: 这一讲：选择的代价
+title_zh_hk: 這一講：選擇的代價
+objective_en: 'Lay out the tools for one choice: the trade-off, the forward cost, the cost already
+  gone, then one more unit.'
+objective_zh: 把一次选择要用的工具摆出来：权衡、向前看的成本、已经花掉的成本，然后是再一单位。
+objective_zh_hk: 把一次選擇要用的工具擺出來：權衡、向前看的成本、已經花掉的成本，然後是再一單位。
+glossary:
+- en: Open
+  zh: 开场
+  zh_hk: 開場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Which four tools does this sitting use on one choice?
+  zh: 这一讲用哪四件工具看一次选择？
+  zh_hk: 這一講用哪四件工具看一次選擇？
+  answer_en: Trade-off, opportunity cost, sunk cost, then the margin.
+  answer_zh: 权衡、机会成本、沉没成本，然后是边际。
+  answer_zh_hk: 權衡、機會成本、沉沒成本，然後是邊際。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: what a choice costs'
+  title_zh: 这一讲：选择的代价
+  title_zh_hk: 這一講：選擇的代價
+  en: Four shorts, one choice. Name what you give up. Name the next-best use. Ignore what cannot come
+    back. Then ask whether one more unit is still worth it.
+  zh: 四条短片，一次选择。说出你放弃了什么。说出次优用途。已经回不来的不要再算。然后问再做一单位还值不值。
+  zh_hk: 四條短片，一次選擇。說出你放棄了什麼。說出次優用途。已經回不來的不要再算。然後問再做一單位還值不值。
+  item1_en: Trade-offs
+  item1_zh: 权衡
+  item1_zh_hk: 權衡
+  item2_en: Opportunity cost
+  item2_zh: 机会成本
+  item2_zh_hk: 機會成本
+  item3_en: Sunk cost
+  item3_zh: 沉没成本
+  item3_zh_hk: 沉沒成本
+  item4_en: Marginal thinking
+  item4_zh: 边际思维
+  item4_zh_hk: 邊際思維
+- id: takeaway
+  visual: title_card
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: what a choice costs'
+  title_zh: 这一讲：选择的代价
+  title_zh_hk: 這一講：選擇的代價
+  en: By the end you decide forward — from here, not from the receipt and not from the average so
+    far.
+  zh: 结束时，你应能朝前做决定——从现在起，不从收据，也不从到目前为止的平均数。
+  zh_hk: 結束時，你應能朝前做決定——從現在起，不從收據，也不從到目前為止的平均數。

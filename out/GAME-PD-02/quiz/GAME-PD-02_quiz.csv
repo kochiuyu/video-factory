@@ -1,0 +1,5 @@
+﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
+1,GAME-PD-02,comprehension,25,What dominates Silent for each partner?,对每个同伙，什么占优于沉默？,對每個同夥，咩佔優過沉默？,"Talk. It pays better if the other is Silent, and if the other Talks.",招供。对方沉默时更好，对方招供时也更好。,招供。對面沉默嗰陣更好，對面招供嗰陣都更好。
+2,GAME-PD-02,transfer,25,Both Talk. Why is that a dilemma?,两人都招。为什么叫困境？,兩個人都招。點解叫困境？,"Each follows a dominant strategy, and both are worse than if both had stayed Silent.",每人用了占优策略，结果却比两人都沉默更差。,每人用咗佔優策略，結果卻比兩個人都沉默更差。
+3,GAME-PD-02,check,25,Talk dominates Silent for each partner.,每人招供都占优于沉默。,每人招供都佔優過沉默。,,,
+4,GAME-PD-02,transfer,25,"Both Talk, and both are worse than both Silent.",两人都招，却比都沉默更差。,兩個人都招，卻比都沉默更差。,,,

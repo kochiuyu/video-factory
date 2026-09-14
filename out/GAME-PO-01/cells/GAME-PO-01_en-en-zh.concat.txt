@@ -1,0 +1,5 @@
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PO-01/clips/en-en-zh/01_hook.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PO-01/clips/en-en-zh/02_define.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PO-01/clips/en-en-zh/03_matrix.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PO-01/clips/en-en-zh/04_example.mp4'
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PO-01/clips/en-en-zh/05_takeaway.mp4'

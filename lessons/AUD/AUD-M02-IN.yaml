@@ -1,0 +1,65 @@
+id: AUD-M02-IN
+course: auditing
+course_en: Introductory Auditing
+course_zh: 审计入门
+course_zh_hk: 審計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: 'This sitting: how large, how sure'
+title_zh: 这一讲：有多大、有多敢信
+title_zh_hk: 這一講：有多大、有多敢信
+objective_en: 'Ask two judgment questions: would a user change a decision, and did this document earn
+  our trust.'
+objective_zh: 问两个判断问题：使用者会不会改决定，以及这份文件配不配得上信任。
+objective_zh_hk: 問兩個判斷問題：使用者會不會改決定，以及這份文件配不配得上信任。
+glossary:
+- en: Open
+  zh: 开场
+  zh_hk: 開場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Which two questions does this sitting ask?
+  zh: 这一讲问哪两个问题？
+  zh_hk: 這一講問哪兩個問題？
+  answer_en: Would a user change a decision, and did the document earn our trust.
+  answer_zh: 使用者会不会改决定，以及文件配不配得上信任。
+  answer_zh_hk: 使用者會不會改決定，以及文件配不配得上信任。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: how large, how sure'
+  title_zh: 这一讲：有多大、有多敢信
+  title_zh_hk: 這一講：有多大、有多敢信
+  en: The file is already open. This sitting does not add another folder. It asks which misses matter
+    and how hard to push on what we were handed.
+  zh: 档案已经打开。这一讲不再加一只文件夹。它问哪些遗漏要紧，以及对递过来的材料该追多深。
+  zh_hk: 檔案已經打開。這一講不再加一隻文件夾。它問哪些遺漏要緊，以及對遞過來的材料該追多深。
+  item1_en: Materiality
+  item1_zh: 重要性
+  item1_zh_hk: 重要性
+  item2_en: Professional skepticism
+  item2_zh: 职业怀疑
+  item2_zh_hk: 職業懷疑
+- id: takeaway
+  visual: title_card
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: how large, how sure'
+  title_zh: 这一讲：有多大、有多敢信
+  title_zh_hk: 這一講：有多大、有多敢信
+  en: Two shorts. Materiality is about the user. Skepticism is about the document. Neither is a mood.
+  zh: 两条短片。重要性看使用者。职业怀疑看文件。两者都不是情绪。
+  zh_hk: 兩條短片。重要性看使用者。職業懷疑看文件。兩者都不是情緒。

@@ -1,0 +1,153 @@
+id: GAME-DOM-01
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: A dominant strategy
+title_zh: 占优策略
+title_zh_hk: 佔優策略
+objective_en: Low dominates High if Low pays more no matter what the other cart posts.
+objective_zh: 无论对面标什么，低价都比高价赚得多，低价就占优。
+objective_zh_hk: 無論對面標咩，平都比貴賺得多，平就佔優。
+glossary:
+- en: dominant strategy
+  zh: 占优策略
+  zh_hk: 佔優策略
+  lock: true
+- en: dominated
+  zh: 被占优
+  zh_hk: 被佔優
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: When does Low dominate High for cart A?
+  zh: 什么时候甲车的低价占优于高价？
+  zh_hk: 幾時甲車嘅平佔優過貴？
+  answer_en: When Low pays A more than High, both if B posts High and if B posts Low.
+  answer_zh: 无论乙标高价还是低价，甲标低价都比标高价赚得多。
+  answer_zh_hk: 無論乙標貴定平，甲標平都比標貴賺得多。
+- id: Q2
+  type: transfer
+  en: B posts High. A gets 3 from High and 5 from Low. Is that enough to say Low dominates?
+  zh: 乙标高价。甲标高价得 3，标低价得 5。这就能说低价占优吗？
+  zh_hk: 乙標貴。甲標貴得 3，標平得 5。噉就講得平佔優嗎？
+  answer_en: No. You still have to check the other column, when B posts Low.
+  answer_zh: 不能。还要看另一列，乙标低价的时候。
+  answer_zh_hk: 唔得。仲要睇另一列，乙標平嗰陣。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Would you ever post High?
+  title_zh: 你还会标高价吗？
+  title_zh_hk: 你仲會標貴嗎？
+  en: Look at the same payoff table. Cart A, High or Low. Before you guess what B will do, compare the two rows. Is there a line A would never post, because the other row pays more either way?
+  zh: 看同一张报酬表。甲车，高价或低价。先不要猜乙会怎么标。先比较这两行。有没有一行甲绝不会标，因为另一行无论怎样都赚得更多？
+  zh_hk: 睇同一張報酬表。甲車，貴定平。未好估乙會點標。先比較呢兩行。有冇一行甲絕唔會標，因為另一行無論點都賺多啲？
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Low dominates High
+  title_zh: 低价占优于高价
+  title_zh_hk: 平佔優過貴
+  formula: Low dominates High if Low pays more no matter what B posts
+  formula_en: Low dominates High if Low pays more no matter what B posts
+  formula_zh: 无论乙标什么，低价都赚得更多，低价就占优
+  formula_zh_hk: 無論乙標咩，平都賺多啲，平就佔優
+  gloss_en: Then High is dominated. A can delete it.
+  gloss_zh: 高价就被占优。甲可以删掉它。
+  gloss_zh_hk: 貴就被佔優。甲可以刪走佢。
+  en: Here is the idea. Low dominates High for A if Low pays A more when B posts High, and Low still pays A more when B posts Low. Then High is dominated. A can delete it. You do not need to know what B will do.
+  zh: 核心就这一句。乙标高价时，甲标低价更赚；乙标低价时，甲标低价还是更赚。低价就占优于高价。高价就被占优。甲可以删。你不必知道乙会怎么做。
+  zh_hk: 核心就呢一句。乙標貴嗰陣，甲標平更賺；乙標平嗰陣，甲標平都係更賺。平就佔優過貴。貴就被佔優。甲可以刪。你唔使知乙會點做。
+- id: matrix
+  visual: payoff_matrix
+  seconds: 28
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Check both columns
+  title_zh: 两列都要看
+  title_zh_hk: 兩列都要睇
+  row_player_en: Cart A
+  row_player_zh: 甲车
+  row_player_zh_hk: 甲車
+  col_player_en: Cart B
+  col_player_zh: 乙车
+  col_player_zh_hk: 乙車
+  row1_en: High
+  row1_zh: 高价
+  row1_zh_hk: 貴
+  row2_en: Low
+  row2_zh: 低价
+  row2_zh_hk: 平
+  col1_en: High
+  col1_zh: 高价
+  col1_zh_hk: 貴
+  col2_en: Low
+  col2_zh: 低价
+  col2_zh_hk: 平
+  c11: "(3, 3)"
+  c12: "(0, 5)"
+  c21: "(5, 0)"
+  c22: "(1, 1)"
+  highlight: c21
+  note_en: First number is A. Low beats High in both columns.
+  note_zh: 头一个数字是甲。两列里低价都比高价高。
+  note_zh_hk: 第一個數字係甲。兩列裏面平都比貴高。
+  en: Read A's numbers only. If B posts High, A gets 3 from High and 5 from Low. If B posts Low, A gets 0 from High and 1 from Low. Five beats three. One beats zero. Low dominates High for A.
+  zh: 只读甲的数字。乙标高价，甲标高价得 3，标低价得 5。乙标低价，甲标高价得 0，标低价得 1。五比三大。一比零大。甲的低价占优于高价。
+  zh_hk: 淨讀甲嘅數字。乙標貴，甲標貴得 3，標平得 5。乙標平，甲標貴得 0，標平得 1。五比三大。一比零大。甲嘅平佔優過貴。
+- id: example
+  visual: example
+  seconds: 22
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: One column is not enough
+  title_zh: 只看一列不够
+  title_zh_hk: 淨睇一列唔夠
+  setup_en: B posts High. Low pays A more than High.
+  setup_zh: 乙标高价。甲标低价比标高价赚得多。
+  setup_zh_hk: 乙標貴。甲標平比標貴賺得多。
+  result_en: Still check the other column. Dominance needs both.
+  result_zh: 还要看另一列。占优必须两列都成立。
+  result_zh_hk: 仲要睇另一列。佔優一定要兩列都成立。
+  en: People stop after one column. Do not. Low must beat High against every board B might post. One column is a hint. Both columns is a dominant strategy.
+  zh: 有人看完一列就停。不要停。低价必须在乙可能标的每一块牌子上都赢过高价。一列只是线索。两列才是占优策略。
+  zh_hk: 有人睇完一列就停。唔好停。平一定要喺乙可能標嘅每一塊牌都贏過貴。一列淨係線索。兩列先至係佔優策略。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Two checks
+  title_zh: 先问两句
+  title_zh_hk: 先問兩句
+  q1_en: If B posts High, does Low pay A more?
+  q1_zh: 乙标高价时，甲标低价更赚吗？
+  q1_zh_hk: 乙標貴嗰陣，甲標平更賺嗎？
+  q2_en: If B posts Low, does Low still pay A more?
+  q2_zh: 乙标低价时，甲标低价还是更赚吗？
+  q2_zh_hk: 乙標平嗰陣，甲標平仲係更賺嗎？
+  en: Ask both questions. If both answers are yes, Low dominates High for A, and High is dominated. Next we cross High out and look at the table again.
+  zh: 两问都要问。两问都是，甲的低价就占优于高价，高价就被占优。接下来把高价划掉，再看这张表。
+  zh_hk: 兩問都要問。兩問都係，甲嘅平就佔優過貴，貴就被佔優。跟住將貴劃走，再睇呢張表。

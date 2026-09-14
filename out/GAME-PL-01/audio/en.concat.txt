@@ -1,0 +1,5 @@
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PL-01/audio/padded/en/hook.mp3'
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PL-01/audio/padded/en/define.mp3'
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PL-01/audio/padded/en/roster.mp3'
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PL-01/audio/padded/en/example.mp3'
+file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PL-01/audio/padded/en/takeaway.mp3'

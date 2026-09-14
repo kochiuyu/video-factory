@@ -1,0 +1,70 @@
+id: AUD-M01-OUT
+course: auditing
+course_en: Introductory Auditing
+course_zh: 审计入门
+course_zh_hk: 審計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: The process, closed
+title_zh: 过程，先说到这里
+title_zh_hk: 過程，先說到這裏
+objective_en: Close the process sitting. Next sitting asks how large a miss can be, and how hard to
+  push on the file.
+objective_zh: 收住过程这一讲。下一讲问漏报可以有多大，以及对档案该追多深。
+objective_zh_hk: 收住過程這一講。下一講問漏報可以有多大，以及對檔案該追多深。
+glossary:
+- en: Close
+  zh: 收束
+  zh_hk: 收束
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What belongs in the file at the end of this sitting?
+  zh: 这一讲结束时档案里该有什么？
+  zh_hk: 這一講結束時檔案裏該有什麼？
+  answer_en: Evidence that is independent, original, and close to the claim.
+  answer_zh: 独立的、原始的、靠近主张的证据。
+  answer_zh_hk: 獨立的、原始的、靠近主張的證據。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The process, closed
+  title_zh: 过程，先说到这里
+  title_zh_hk: 過程，先說到這裏
+  en: Independence, a split of duties, and original evidence — that is the path into the file.
+  zh: 独立、职责分开、原始证据——这就是进档案的路。
+  zh_hk: 獨立、職責分開、原始證據——這就是進檔案的路。
+  claim_en: Independence, a split of duties, and original evidence — that is the path into the file.
+  claim_zh: 独立、职责分开、原始证据——这就是进档案的路。
+  claim_zh_hk: 獨立、職責分開、原始證據——這就是進檔案的路。
+  next_en: 'Process unit done. Next: materiality and skepticism — how large, and how sure.'
+  next_zh: 过程单元到此。下一讲：重要性和职业怀疑——有多大，有多敢信。
+  next_zh_hk: 過程單元到此。下一講：重要性和職業懷疑——有多大，有多敢信。
+- id: takeaway
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The process, closed
+  title_zh: 过程，先说到这里
+  title_zh_hk: 過程，先說到這裏
+  en: 'Process unit done. Next: materiality and skepticism — how large, and how sure.'
+  zh: 过程单元到此。下一讲：重要性和职业怀疑——有多大，有多敢信。
+  zh_hk: 過程單元到此。下一講：重要性和職業懷疑——有多大，有多敢信。
+  claim_en: Independence, a split of duties, and original evidence — that is the path into the file.
+  claim_zh: 独立、职责分开、原始证据——这就是进档案的路。
+  claim_zh_hk: 獨立、職責分開、原始證據——這就是進檔案的路。
+  next_en: 'Process unit done. Next: materiality and skepticism — how large, and how sure.'
+  next_zh: 过程单元到此。下一讲：重要性和职业怀疑——有多大，有多敢信。
+  next_zh_hk: 過程單元到此。下一講：重要性和職業懷疑——有多大，有多敢信。

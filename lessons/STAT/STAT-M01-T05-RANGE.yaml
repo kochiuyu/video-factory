@@ -7,13 +7,13 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
-title_en: How wide is the demand span?
-title_zh: 需求的完整跨度有多大？
-title_zh_hk: 需求嘅完整跨度有幾大？
-objective_en: Define the range as maximum minus minimum, calculate and compare street-store and network ranges, and explain why it reveals observed outer boundaries but cannot by itself describe typical variability.
-objective_zh: 把极差定义为最大值减去最小值，计算并比较街头门店与全网络的极差，并解释它为何能显示观测边界，却不能单独描述典型波动。
-objective_zh_hk: 將全距定義為最大值減去最小值，計算並比較街頭門店同全網絡嘅全距，並解釋佢點解可以顯示觀測邊界，卻唔可以單獨描述典型波動。
+duration_target_s: 528
+title_en: What is the range?
+title_zh: 什么是极差？
+title_zh_hk: 咩係全距？
+objective_en: Decide whether one delivery size can fit every shop when two days share the same average, find the range as maximum minus minimum, and see why one far shop can dominate it while the shops in between are ignored.
+objective_zh: 两天的平均数一样时，判断一个送货量能不能照顾所有店，用最大值减最小值求出极差，并看到为什么一家很远的店就能主导极差，而中间的店完全没算进去。
+objective_zh_hk: 兩日嘅平均數一樣時，判斷一個送貨量夠唔夠照顧晒所有店，用最大值減最小值計出全距，並睇到點解一間好遠嘅店就可以主導全距，而中間嘅店完全冇計入去。
 glossary:
 - en: range
   zh: 极差
@@ -64,127 +64,374 @@ quiz:
   options_en:
   - 'A: It uses only the minimum and maximum, so one unusual endpoint can dominate while all middle observations are ignored.'
   - 'B: It requires dividing by the total number of stores in the chain.'
-  - 'C: It can only be calculated on text categories rather than numbers.'
-  - 'D: It always equals zero whenever sales are positive.'
+  - 'C: The range uses every shop equally, so one extreme cannot dominate.'
+  - 'D: The range equals the average of all shop sales.'
   options_zh:
   - 'A: 它只使用最小值与最大值，因此一个异常端点就可能主导结果，而中间所有观测值都被忽略。'
   - 'B: 它必须除以连锁公司旗下的门店总数。'
-  - 'C: 它只能用于文字分类，不能用于具体数字。'
-  - 'D: 只要销量为正数，它就必然等于零。'
+  - 'C: 极差平等使用每家店，所以单个极端值无法主导结果。'
+  - 'D: 极差等于所有门店销量的平均数。'
   options_zh_hk:
   - 'A: 佢只使用最小值同最大值，所以一個異常端點就可能主導結果，而中間所有觀測值都被忽略。'
   - 'B: 佢必須除以連鎖公司旗下嘅門店總數。'
-  - 'C: 佢淨係可以用喺文字分類，唔可以用喺具體數字。'
-  - 'D: 只要銷量係正數，佢就必然等於零。'
+  - 'C: 全距平等使用每間店，所以單一極端值冇辦法主導結果。'
+  - 'D: 全距等於所有門店銷量嘅平均數。'
   answer: A
-  explanation_en: One extreme endpoint can greatly enlarge the range without revealing how the remaining stores are distributed.
-  explanation_zh: 一个极端端点就能大幅扩大极差，却不会说明其余门店如何分布。
-  explanation_zh_hk: 一個極端端點就可以大幅擴大全距，卻唔會說明其餘門店點樣分佈。
+  explanation_en: 'One extreme endpoint can greatly enlarge the range without revealing how the remaining stores are distributed. The range does not use every shop equally and is not the average of sales.'
+  explanation_zh: '一个极端端点就能大幅扩大极差，却不会说明其余门店如何分布。极差并不平等使用每家店，也不等于销量的平均数。'
+  explanation_zh_hk: '一個極端端點就可以大幅擴大全距，卻唔會說明其餘門店點樣分佈。全距並唔平等使用每間店，亦唔等於銷量嘅平均數。'
 beats:
 - id: hook
   visual: title_card
-  seconds: 30
+  seconds: 46
   kicker: The Question
   kicker_en: The Question
-  kicker_zh: 商业问题
-  kicker_zh_hk: 商業問題
-  title_en: How far apart are your stores?
-  title_zh: 分店之间的差距到底有多大？
-  title_zh_hk: 分店之間嘅差距到底有幾大？
-  en: A regional director knows average demand, but still needs the observed boundaries. How far apart are the lowest- and highest-demand stores in the report? If that span is wide, one uniform staffing or inventory plan may fail at both ends. We need a measure of the full distance between the two endpoints.
-  zh: 区域总监知道平均需求，却仍要掌握观测边界：报表中需求最低与最高的门店相差多远？如果跨度很宽，一套统一的排班或库存方案可能在两个端点都失效。我们需要衡量两个端点之间完整距离的指标。
-  zh_hk: 區域總監知道平均需求，但仍然要掌握觀測邊界：報表入面需求最低同最高嘅門店相差幾遠？如果跨度好闊，一套統一嘅排班或者庫存方案可能喺兩個端點都失效。我哋需要衡量兩個端點之間完整距離嘅指標。
-- id: define
-  visual: definition_card
-  seconds: 34
-  kicker: What It Is
-  kicker_en: What It Is
-  kicker_zh: 概念定义
-  kicker_zh_hk: 概念定義
-  title_en: The span between the extremes
-  title_zh: 两个极端之间的总跨度
-  title_zh_hk: 兩個極端之間嘅總跨度
-  formula: Range = Maximum value - Minimum value
-  formula_zh: 极差 = 最大值 - 最小值
-  formula_zh_hk: 全距 = 最大值 - 最小值
-  s1_en: The range is the simplest measure of spread. It equals the maximum observed value minus the minimum observed value, reporting the full numerical span covered by the data.
-  s1_zh: 极差是最简单的离散程度指标，等于观测最大值减去观测最小值，表示数据覆盖的完整数值跨度。
-  s1_zh_hk: 全距係最簡單嘅離散程度指標，等於觀測最大值減去觀測最小值，表示數據覆蓋嘅完整數值跨度。
-  s2_en: It uses only those two endpoints. It tells you how far apart the extremes are, but nothing about where the observations between them are concentrated.
-  s2_zh: 它只使用两个端点，能说明极端值相隔多远，却不会告诉你中间观测值集中在哪里。
-  s2_zh_hk: 佢只使用兩個端點，可以說明極端值相隔幾遠，卻唔會話畀你知中間觀測值集中喺邊度。
-- id: calc
-  visual: example
-  seconds: 36
-  kicker: Step by Step
-  kicker_en: Step by Step
-  kicker_zh: 算例推演
-  kicker_zh_hk: 算例推演
-  title_en: Checking the Monday span
-  title_zh: 核算周一的销售跨度
-  title_zh_hk: 核算周一嘅銷售跨度
-  setup_en: 'Wan Chai (Max): 420 cups | Mong Kok (Min): 310 cups'
-  setup_zh: 湾仔（最大值）：420杯 | 旺角（最小值）：310杯
-  setup_zh_hk: 灣仔（最大值）：420杯 | 旺角（最小值）：310杯
-  result_en: 'Range: 420 - 310 = 110 cups'
-  result_zh: 极差：420 - 310 = 110 杯
-  result_zh_hk: 全距：420 - 310 = 110 杯
-  s1_en: 'Calculating the range takes two steps. Step one: identify the smallest and largest values in your dataset. Looking at our street stores on Monday, Mong Kok sold 310 cups, and Wan Chai sold 420 cups.'
-  s1_zh: 计算极差只需要两步。第一步：找出数据集里的最小值和最大值。查看我们周一的街头门店，旺角店卖了310杯，湾仔店卖了420杯。
-  s1_zh_hk: 計算全距淨係需要兩步。第一步：搵出數據集入面嘅最小值同最大值。睇吓我哋周一嘅街頭門店，旺角舖賣咗310杯，灣仔舖賣咗420杯。
-  s2_en: 'Step two: subtract the minimum from the maximum. 420 minus 310 gives a street store range of exactly 110 cups.'
-  s2_zh: 第二步：用最大值减去最小值。420减去310，算出的街头门店极差正好是110杯。
-  s2_zh_hk: 第二步：用最大值減去最小值。420減去310，計出嚟嘅街頭門店全距啱啱好係110杯。
-  s3_en: 'Interpret 110 carefully: the two observed street-store sales figures are 110 cups apart. It does not mean a typical shop varies by 110 cups, and it describes no observations between the endpoints.'
-  s3_zh: 要谨慎解释110杯：观测到的两家街头门店相差110杯。它不表示典型门店会波动110杯，也没有描述端点之间的观测值。
-  s3_zh_hk: 要小心解釋110杯：觀測到嘅兩間街頭門店相差110杯。佢唔代表典型門店會波動110杯，亦冇描述端點之間嘅觀測值。
-- id: trap
+  kicker_zh: 业务问题
+  kicker_zh_hk: 業務問題
+  title_en: What is the range?
+  title_zh: 什么是极差？
+  title_zh_hk: 咩係全距？
+  en: >-
+    Imagine you run four coffee shops, and every morning one truck drops the same number of cups at each shop.
+    You know the average day. Is that enough to set the drop? If the shops sell about the same, one size fits them all.
+    If they are far apart, the same drop leaves one shop running out by lunch and another throwing cups away at closing.
+    Same average, very different mornings. So before you send every shop the same amount, you need to know how far apart the shops are.
+    The number that answers that is called the range. What is the range?
+  zh: >-
+    假设你管着四家咖啡店，每天早上，同一辆货车给每家店送去一样多的杯子。你知道平均一天卖多少。光知道这个，够不够定送货量？
+    要是四家店卖得差不多，一个量就全都合适。要是差得很远，同样的送货量会让一家店中午就断货，另一家关门时还得扔掉一堆杯子。
+    平均数一样，早上的情况却完全不同。所以，给每家店送同样的量之前，你得先知道这几家店相差多远。回答这个问题的数，叫作极差。什么是极差？
+  zh_hk: >-
+    假設你管緊四間咖啡店，每朝同一架貨車將一樣咁多嘅杯送去每間店。你知道平均一日賣幾多。淨係知呢個，夠唔夠定送貨量？
+    如果四間店賣得差唔多，一個量就啱晒。如果相差好遠，同一個送貨量會搞到一間店晏晝就斷貨，另一間收舖嗰陣仲要掉一堆杯。
+    平均數一樣，朝早嘅情況就完全唔同。所以，畀每間店送同一個量之前，你要先知道呢幾間店相差幾遠。答到呢個問題嘅數，就叫做全距。咩係全距？
+- id: data
+  visual: series
+  reveal: cells
+  seconds: 46
+  cols: 4
+  kicker: The Shops
+  kicker_en: The Shops
+  kicker_zh: 四家店
+  kicker_zh_hk: 四間店
+  title_en: Same four shops, two days
+  title_zh: 同样四家店，两天
+  title_zh_hk: 同樣四間店，兩日
+  tag_en: Cups sold
+  tag_zh: 卖出杯数
+  tag_zh_hk: 賣出杯數
+  row1_en: Monday
+  row1_zh: 星期一
+  row1_zh_hk: 星期一
+  row2_en: Tuesday
+  row2_zh: 星期二
+  row2_zh_hk: 星期二
+  col1_en: Shop A
+  col1_zh: A店
+  col1_zh_hk: A店
+  col2_en: Shop B
+  col2_zh: B店
+  col2_zh_hk: B店
+  col3_en: Shop C
+  col3_zh: C店
+  col3_zh_hk: C店
+  col4_en: Shop D
+  col4_zh: D店
+  col4_zh_hk: D店
+  c11: '380'
+  c12: '310'
+  c13: '420'
+  c14: '370'
+  c21: '360'
+  c22: '380'
+  c23: '350'
+  c24: '390'
+  footer_en: 'Both days: 1,480 / 4 = 370'
+  footer_zh: 两天都是 1,480 / 4 = 370
+  footer_zh_hk: 兩日都係 1,480 / 4 = 370
+  s1_en: Suppose these are the four shops on Monday, in cups sold. Shop A sold 380. Shop B sold 310. Shop C sold 420. And Shop D sold 370.
+  s1_zh: 假设这是四家店星期一卖出的杯数。A店卖了380杯，B店卖了310杯，C店卖了420杯，D店卖了370杯。
+  s1_zh_hk: 假設呢啲係四間店星期一賣出嘅杯數。A店賣咗380杯，B店賣咗310杯，C店賣咗420杯，D店賣咗370杯。
+  s2_en: Now Tuesday, same four shops. Shop A sold 360, Shop B 380, Shop C 350, and Shop D 390. Different numbers. But look at the totals.
+  s2_zh: 再看星期二，还是这四家店。A店卖了360，B店380，C店350，D店390。数字不一样，可是你看看总数。
+  s2_zh_hk: 再睇星期二，都係呢四間店。A店賣咗360，B店380，C店350，D店390。數字唔同，但係你睇吓總數。
+  s3_en: >-
+    Monday adds up to 1,480 cups, and so does Tuesday. The average is the total divided by the number of shops:
+    1,480 divided by 4 is 370 cups, on both days. So does the same average mean the same delivery plan?
+  s3_zh: 星期一加起来是1,480杯，星期二也是1,480杯。平均数就是总数除以店的数目：1,480除以4，两天都是370杯。那平均数一样，送货方案也能一样吗？
+  s3_zh_hk: 星期一加埋係1,480杯，星期二都係1,480杯。平均數就係總數除以店嘅數目：1,480除以4，兩日都係370杯。咁平均數一樣，送貨方案又係咪可以一樣？
+- id: plans
   visual: two_column
-  seconds: 36
-  kicker: The Limitation
-  kicker_en: The Limitation
-  kicker_zh: 关键局限
-  kicker_zh_hk: 關鍵局限
-  title_en: One endpoint can dominate
-  title_zh: 一个端点就能主导结果
-  title_zh_hk: 一個端點就可以主導結果
-  left_en: 'Street range: 110 cups'
-  left_zh: 街边店极差：110 杯
-  left_zh_hk: 街邊舖全距：110 杯
-  right_en: 'With Airport: 3,890 cups'
-  right_zh: 加入机场后：3,890杯
-  right_zh_hk: 加入機場後：3,890杯
-  s1_en: The range is highly sensitive to an extreme endpoint because it uses no other observations. Add the 24-hour Airport branch at 4,200 cups, and the maximum changes immediately.
-  s1_zh: 极差对极端端点非常敏感，因为它不使用其他观测值。加入销量4,200杯的24小时机场店后，最大值立刻改变。
-  s1_zh_hk: 全距對極端端點非常敏感，因為佢唔使用其他觀測值。加入銷量4,200杯嘅24小時機場舖之後，最大值即刻改變。
-  s2_en: The network range becomes 4,200 minus 310, or 3,890 cups. Compared with the 110-cup street-store range, that is about 35.4 times as large.
-  s2_zh: 全网络极差变为4,200减310，即3,890杯。与110杯的街头门店极差相比，大约是其35.4倍。
-  s2_zh_hk: 全網絡全距變成4,200減310，即3,890杯。同110杯嘅街頭門店全距相比，大約係佢嘅35.4倍。
-  s3_en: Both calculations are correct, but they describe different populations. The network range includes the Airport format and should not be presented as the routine spread of ordinary street stores.
-  s3_zh: 两个计算都正确，但描述的是不同总体。全网络极差包含机场店这种业态，不应被表述为普通街头门店的常规波动。
-  s3_zh_hk: 兩個計算都正確，但描述嘅係唔同總體。全網絡全距包括機場舖呢種業態，唔應該被講成普通街頭門店嘅常規波動。
-- id: takeaway
+  seconds: 50
+  kicker: The Plans
+  kicker_en: The Plans
+  kicker_zh: 两个方案
+  kicker_zh_hk: 兩個方案
+  title_en: Same average, different plan
+  title_zh: 平均一样，方案不同
+  title_zh_hk: 平均一樣，方案唔同
+  left_en: 'Tuesday: within 20 cups'
+  left_zh: 星期二：最多差 20 杯
+  left_zh_hk: 星期二：最多差 20 杯
+  right_en: 'Monday: 50 short, 60 over'
+  right_zh: 星期一：缺 50，多 60
+  right_zh_hk: 星期一：缺 50，多 60
+  s1_en: Let's test it. Send every shop the average, 370 cups, on both days. Who runs out, and who throws cups away?
+  s1_zh: 我们来试一试。两天都给每家店送平均数，370杯。哪家会断货，哪家要扔杯子？
+  s1_zh_hk: 我哋試吓。兩日都畀每間店送平均數，370杯。邊間會斷貨，邊間要掉杯？
+  s2_en: >-
+    On Tuesday, the plan works. Every shop sold between 350 and 390, so 370 is never more than 20 cups off.
+    A few spare cups at Shop C, a short wait at Shop D. That is a normal day.
+  s2_zh: 星期二，这个方案行得通。每家店都卖了350到390杯，所以370最多只差20杯。C店剩几个杯子，D店的客人稍微等一下，这就是平常的一天。
+  s2_zh_hk: 星期二，呢個方案行得通。每間店都賣咗350到390杯，所以370最多淨係差20杯。C店剩低幾個杯，D店啲客等多陣，即係平平常常嘅一日。
+  s3_en: >-
+    On Monday, the same 370 fails at both ends. Shop C sold 420, so it runs 50 cups short. Shop B sold only 310, so 60 cups go in the bin.
+    Same average, very different mornings. The average cannot see the difference. So which number can?
+  s3_zh: 星期一，同样的370在两头都出问题。C店卖了420杯，缺了50杯；B店只卖了310杯，60个杯子只能扔掉。平均数一样，早上的情况完全不同。平均数看不出这个差别，那哪个数看得出？
+  s3_zh_hk: 星期一，同一個370喺兩頭都出事。C店賣咗420杯，就缺咗50杯；B店淨係賣咗310杯，60個杯要掉落垃圾桶。平均數一樣，朝早嘅情況就完全唔同。平均數睇唔出呢個分別，咁邊個數睇得出？
+- id: monday
+  visual: rank_line
+  seconds: 50
+  kicker: Monday
+  kicker_en: Monday
+  kicker_zh: 星期一
+  kicker_zh_hk: 星期一
+  title_en: 'Monday: line up, read the ends'
+  title_zh: 星期一：排好，看两头
+  title_zh_hk: 星期一：排好，睇兩頭
+  values: 380;310;420;370
+  labels_en: Shop A;Shop B;Shop C;Shop D
+  labels_zh: A店;B店;C店;D店
+  labels_zh_hk: A店;B店;C店;D店
+  order: sorted
+  mark: ends
+  span: ends
+  span_en: 420 − 310 = 110 cups
+  span_zh: 420 − 310 = 110 杯
+  span_zh_hk: 420 − 310 = 110 杯
+  s1_en: Take Monday on its own. Here are the four shops in the order we wrote them, 380, 310, 420, 370. In that order, it is hard to see how far apart they are.
+  s1_zh: 先单独看星期一。四家店按刚才写下的顺序：380、310、420、370。这样排，很难看出它们相差多远。
+  s1_zh_hk: 先單獨睇星期一。四間店照啱先寫低嘅次序：380、310、420、370。噉樣排，好難睇得出佢哋相差幾遠。
+  s2_en: So line them up from the fewest cups to the most. Shop B at 310, Shop D at 370, Shop A at 380, and Shop C at 420. Each shop keeps its own number. We have only sorted.
+  s2_zh: 所以把它们从卖得最少排到最多：B店310，D店370，A店380，C店420。每家店的数字都没变，我们只是排了个序。
+  s2_zh_hk: 所以將佢哋由賣得最少排到最多：B店310，D店370，A店380，C店420。每間店嘅數字都冇變，我哋只係排咗個次序。
+  s3_en: >-
+    Now read the two ends. The smallest value is 310; it is called the minimum. The largest is 420, the maximum.
+    The distance between them is 420 minus 310, which is 110 cups. On Monday, one plan has to stretch across 110 cups.
+  s3_zh: 现在看两头。最小的是310，叫作最小值；最大的是420，叫作最大值。两头相差420减310，等于110杯。星期一，一个方案得撑开110杯的差距。
+  s3_zh_hk: 而家睇兩頭。最細嗰個係310，叫做最小值；最大嗰個係420，叫做最大值。兩頭相差420減310，即係110杯。星期一，一個方案要撐得住110杯嘅差距。
+- id: tuesday
+  visual: rank_line
+  seconds: 38
+  kicker: Tuesday
+  kicker_en: Tuesday
+  kicker_zh: 星期二
+  kicker_zh_hk: 星期二
+  title_en: 'Tuesday: the same two moves'
+  title_zh: 星期二：同样两步
+  title_zh_hk: 星期二：一樣兩步
+  values: 360;380;350;390
+  labels_en: Shop A;Shop B;Shop C;Shop D
+  labels_zh: A店;B店;C店;D店
+  labels_zh_hk: A店;B店;C店;D店
+  order: sorted
+  mark: ends
+  span: ends
+  span_en: 390 − 350 = 40 cups
+  span_zh: 390 − 350 = 40 杯
+  span_zh_hk: 390 − 350 = 40 杯
+  s1_en: Do the same for Tuesday. As written, the shops sold 360, 380, 350, and 390.
+  s1_zh: 星期二也照做一遍。按写下的顺序，四家店卖了360、380、350和390。
+  s1_zh_hk: 星期二都照做一次。照寫低嘅次序，四間店賣咗360、380、350同390。
+  s2_en: Sort them. Shop C at 350, Shop A at 360, Shop B at 380, and Shop D at 390.
+  s2_zh: 排好序：C店350，A店360，B店380，D店390。
+  s2_zh_hk: 排好次序：C店350，A店360，B店380，D店390。
+  s3_en: >-
+    The ends are 350 and 390. 390 minus 350 is 40 cups. Monday stretches across 110 cups; Tuesday only 40.
+    Same average, yet Monday is almost three times as wide. This distance between the two ends has a name.
+  s3_zh: 两头是350和390。390减350，等于40杯。星期一要撑开110杯，星期二只有40杯。平均数一样，星期一却宽了差不多三倍。两头之间的这段距离，有一个名字。
+  s3_zh_hk: 兩頭係350同390。390減350，即係40杯。星期一要撐110杯，星期二得40杯。平均數一樣，星期一就闊咗差唔多三倍。兩頭之間呢段距離，有個名。
+- id: name_range
+  visual: title_card
+  seconds: 20
+  kicker: The Name
+  kicker_en: The Name
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Range
+  title_zh: 极差
+  title_zh_hk: 全距
+  en: Range. That is the name. Take the largest value, subtract the smallest, and what is left is the range. Monday's range is 110 cups. Tuesday's is 40. So how do we write that for any set of numbers?
+  zh: 极差，这就是它的名字。用最大的数减去最小的数，剩下的就是极差。星期一的极差是110杯，星期二是40杯。那换成任何一组数，要怎么写？
+  zh_hk: 全距，呢個就係佢個名。用最大嘅數減最細嘅數，剩低嘅就係全距。星期一嘅全距係110杯，星期二係40杯。咁換成任何一組數，又點樣寫？
+- id: defn
+  visual: definition_card
+  seconds: 38
+  kicker: The Definition
+  kicker_en: The Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Range, written down
+  title_zh: 把极差写下来
+  title_zh_hk: 將全距寫低
+  formula_en: Range = maximum − minimum
+  formula_zh: 极差 = 最大值 − 最小值
+  formula_zh_hk: 全距 = 最大值 − 最小值
+  gloss_en: 'Monday: 110 cups. Tuesday: 40 cups.'
+  gloss_zh: 星期一 110 杯，星期二 40 杯
+  gloss_zh_hk: 星期一 110 杯，星期二 40 杯
+  s1_en: >-
+    Here is the definition. Find the largest value, the maximum. Find the smallest value, the minimum. Then subtract: maximum minus minimum.
+    The answer keeps the unit of the data, here cups. The range is the simplest measure of spread, which simply means how far apart the numbers sit.
+  s1_zh: 定义是这样的：找出最大的数，就是最大值；找出最小的数，就是最小值；然后相减，最大值减最小值。答案的单位跟数据一样，这里是杯。极差是最简单的一种离散程度指标，离散程度就是这些数分得有多开。
+  s1_zh_hk: 定義係噉：搵出最大嘅數，即係最大值；搵出最細嘅數，即係最小值；跟住相減，最大值減最小值。答案嘅單位同數據一樣，呢度係杯。全距係最簡單嘅一種離散程度指標，離散程度即係啲數分得幾開。
+  s2_en: For Monday, 420 minus 310 is 110 cups. For Tuesday, 390 minus 350 is 40 cups. Notice what we used each day, two numbers out of four. So what happened to the other two?
+  s2_zh: 星期一，420减310是110杯；星期二，390减350是40杯。留意一下，每天四个数，我们只用了两个。另外两个去哪儿了？
+  s2_zh_hk: 星期一，420減310係110杯；星期二，390減350係40杯。留意吓，每日四個數，我哋淨係用咗兩個。另外兩個去咗邊？
+- id: ends
+  visual: two_column
+  seconds: 44
+  kicker: Only the Ends
+  kicker_en: Only the Ends
+  kicker_zh: 只看两头
+  kicker_zh_hk: 淨係睇兩頭
+  title_en: Only the two ends count
+  title_zh: 只有两头算数
+  title_zh_hk: 淨係兩頭計數
+  left_en: 'Uses: 310 and 420'
+  left_zh: 用到：310 和 420
+  left_zh_hk: 用到：310 同 420
+  right_en: 'Skips: 370 and 380'
+  right_zh: 没用：370 和 380
+  right_zh_hk: 冇用：370 同 380
+  s1_en: They were never used. The range reads the two ends of the line and nothing else.
+  s1_zh: 它们根本没被用上。极差只读这条线的两头，别的都不看。
+  s1_zh_hk: 佢哋根本冇用到。全距淨係讀條線嘅兩頭，其他乜都唔睇。
+  s2_en: On Monday, it used Shop B's 310 and Shop C's 420. Those two numbers alone decide the answer, 110.
+  s2_zh: 星期一，它只用了B店的310和C店的420。答案110，完全由这两个数决定。
+  s2_zh_hk: 星期一，佢淨係用咗B店嘅310同C店嘅420。答案110，完全由呢兩個數決定。
+  s3_en: >-
+    Shop D's 370 and Shop A's 380 were skipped. Suppose both of them moved anywhere between 310 and 420; the range would still be 110.
+    So the range says how wide the line is, but nothing about where the shops in between sit.
+    And if only the ends matter, what happens when one end moves a long way?
+  s3_zh: D店的370和A店的380都没算进去。就算这两家店在310到420之间随便怎么变，极差还是110。所以极差只说明这条线有多宽，中间的店落在哪里，它一点也不知道。既然只有两头算数，要是其中一头跑得很远，会怎样？
+  s3_zh_hk: D店嘅370同A店嘅380都冇計入去。就算呢兩間店喺310到420之間點樣變，全距都仲係110。所以全距淨係話你知條線有幾闊，中間啲店喺邊度，佢完全唔知。既然淨係兩頭計數，如果其中一頭走得好遠，會點？
+- id: far
+  visual: rank_line
+  seconds: 42
+  kicker: One Far Shop
+  kicker_en: One Far Shop
+  kicker_zh: 一家很远的店
+  kicker_zh_hk: 一間好遠嘅店
+  title_en: Add Shop E, a 24-hour site
+  title_zh: 加入24小时营业的E店
+  title_zh_hk: 加入24小時營業嘅E店
+  values: 380;310;420;370;4,200
+  break: last
+  labels_en: Shop A;Shop B;Shop C;Shop D;Shop E
+  labels_zh: A店;B店;C店;D店;E店
+  labels_zh_hk: A店;B店;C店;D店;E店
+  order: sorted
+  mark: ends
+  span: ends
+  span_en: 4,200 − 310 = 3,890 cups
+  span_zh: 4,200 − 310 = 3,890 杯
+  span_zh_hk: 4,200 − 310 = 3,890 杯
+  s1_en: Suppose the company also counts Shop E, a 24-hour site. On the same Monday, it sold 4,200 cups. Here are all five shops as written.
+  s1_zh: 假设公司把E店也算进来，这是一家24小时营业的店。同一个星期一，它卖了4,200杯。这是五家店按写下顺序的数字。
+  s1_zh_hk: 假設公司將E店都計埋入嚟，呢間係24小時營業嘅店。同一個星期一，佢賣咗4,200杯。呢度係五間店照寫低次序嘅數字。
+  s2_en: Sort them. The four street shops sit together at the low end, from 310 to 420. Shop E stands alone at the top, at 4,200.
+  s2_zh: 排好序。四家街边店挤在低的一头，从310到420。E店一家独自站在最高处，4,200杯。
+  s2_zh_hk: 排好次序。四間街邊店擠埋喺低嗰頭，由310到420。E店自己一間企喺最高嗰度，4,200杯。
+  s3_en: >-
+    Read the ends again. The minimum is still 310, but the maximum is now 4,200. 4,200 minus 310 is 3,890 cups.
+    One shop moved the range from 110 to 3,890. So which number is right?
+  s3_zh: 再看两头。最小值还是310，最大值却变成了4,200。4,200减310，等于3,890杯。一家店就把极差从110推到了3,890。那哪个数才对？
+  s3_zh_hk: 再睇兩頭。最小值仲係310，但最大值變咗4,200。4,200減310，即係3,890杯。一間店就將全距由110推到3,890。咁邊個數先啱？
+- id: groups
+  visual: two_column
+  seconds: 42
+  kicker: Two Groups
+  kicker_en: Two Groups
+  kicker_zh: 两组店
+  kicker_zh_hk: 兩組店
+  title_en: Both right, different shops
+  title_zh: 都对，包括的店不同
+  title_zh_hk: 都啱，包括嘅店唔同
+  left_en: 'Street shops: 110 cups'
+  left_zh: 街边店：110 杯
+  left_zh_hk: 街邊店：110 杯
+  right_en: 'With Shop E: 3,890 cups'
+  right_zh: 加上E店：3,890 杯
+  right_zh_hk: 加埋E店：3,890 杯
+  s1_en: Both. Each subtraction is correct. They answer the question for different groups of shops.
+  s1_zh: 两个都对，每一道减法都没算错。只是它们回答的，是不同一组店的问题。
+  s1_zh_hk: 兩個都啱，每一條減數都冇計錯。只不過佢哋答緊嘅，係唔同一組店嘅問題。
+  s2_en: The four street shops span 110 cups. That is the stretch a delivery plan for ordinary street shops has to cover.
+  s2_zh: 四家街边店的跨度是110杯。给普通街边店定送货方案，要照顾的就是这段差距。
+  s2_zh_hk: 四間街邊店嘅跨度係110杯。幫普通街邊店定送貨方案，要照顧嘅就係呢段差距。
+  s3_en: >-
+    Add Shop E, and the range becomes 3,890 cups, about 35.4 times as large. That number describes a group that mixes street shops with a 24-hour site.
+    It is not how far apart ordinary street shops are. So whenever you report a range, say which shops are included.
+  s3_zh: 加上E店，极差就变成3,890杯，大约是原来的35.4倍。这个数描述的，是街边店和24小时店混在一起的一组店，不是普通街边店之间相差多远。所以每次报极差，都要讲清楚算了哪些店。
+  s3_zh_hk: 加埋E店，全距就變成3,890杯，大約係原本嘅35.4倍。呢個數講嘅，係街邊店同24小時店撈埋一齊嘅一組店，唔係普通街邊店之間相差幾遠。所以每次報全距，都要講清楚計咗邊幾間店。
+- id: limit
+  visual: two_column
+  seconds: 46
+  kicker: The Limit
+  kicker_en: The Limit
+  kicker_zh: 限度
+  kicker_zh_hk: 限度
+  title_en: A stretch, not a typical gap
+  title_zh: 是跨度，不是一般差距
+  title_zh_hk: 係跨度，唔係一般差距
+  left_en: How far a plan must stretch
+  left_zh: 一个方案要撑多宽
+  left_zh_hk: 一個方案要撐幾闊
+  right_en: Not a typical shop's gap
+  right_zh: 不是一般门店的差距
+  right_zh_hk: 唔係一般店嘅差距
+  s1_en: So what does the range tell a manager, and what does it not?
+  s1_zh: 那极差到底能告诉经理什么，又不能告诉他什么？
+  s1_zh_hk: 咁全距究竟話到經理知啲乜，又話唔到佢知啲乜？
+  s2_en: >-
+    It tells you how far one plan has to stretch. On Monday, the street shops ran from 310 to 420, so a single delivery size has to cover 110 cups of difference.
+    And it is quick: one subtraction.
+  s2_zh: 它能告诉你，一个方案要撑多宽。星期一，街边店从310卖到420，所以同一个送货量要照顾110杯的差距。而且算起来很快，一道减法就够了。
+  s2_zh_hk: 佢話到你知，一個方案要撐幾闊。星期一，街邊店由310賣到420，所以同一個送貨量要照顧110杯嘅差距。而且計起嚟好快，一條減數就得。
+  s3_en: >-
+    It does not tell you how far a typical shop sits from the others. A range of 110 does not mean each shop swings by 110 cups;
+    only the two end shops are that far apart. And it jumps the moment either end changes, as Shop E showed.
+  s3_zh: 它不能告诉你，一般的店跟其他店差多远。极差110，不代表每家店都会上下差110杯，只有两头那两家店才差这么多。而且只要任何一头一变，它就会大跳，E店就是例子。
+  s3_zh_hk: 佢話唔到你知，一般嘅店同其他店差幾遠。全距110，唔代表每間店都會上落110杯，淨係兩頭嗰兩間店先差咁多。而且只要任何一頭一變，佢就會大跳，E店就係例子。
+- id: answer
   visual: takeaway
-  seconds: 32
-  kicker: Decision Rule
-  kicker_en: Decision Rule
-  kicker_zh: 商业法则
-  kicker_zh_hk: 商業法則
-  title_en: Use the range as an endpoint check
-  title_zh: 把极差用作端点检查
-  title_zh_hk: 將全距用作端點檢查
-  q1_en: What does the range tell a manager?
-  q1_zh: 极差给管理者传达了什么？
-  q1_zh_hk: 全距畀管理者傳達咗咩？
-  q2_en: Why should you handle it with caution?
-  q2_zh: 为什么必须谨慎使用极差？
-  q2_zh_hk: 點解必須謹慎使用全距？
-  s1_en: Use the range to identify the observed outer span and flag whether capacity plans must accommodate very different endpoints. It is a quick boundary check, not a complete staffing formula.
-  s1_zh: 用极差识别观测到的外围跨度，并检查容量方案是否需要应对差异悬殊的端点。它是快速的边界检查，不是完整的排班公式。
-  s1_zh_hk: 用全距識別觀測到嘅外圍跨度，並檢查容量方案係咪需要應對差異懸殊嘅端點。佢係快速嘅邊界檢查，唔係完整嘅排班公式。
-  s2_en: Do not use the range alone to describe routine variability. It ignores every middle observation and changes sharply when either endpoint changes.
-  s2_zh: 不要只用极差描述常规波动。它忽略所有中间观测值，而且任何端点改变时都可能大幅变化。
-  s2_zh_hk: 唔好只用全距描述常規波動。佢忽略所有中間觀測值，而且任何端點改變嗰陣都可能大幅變化。
-  s3_en: 'The operating rule is precise: report maximum minus minimum, state which population is included, and pair the range with a measure that describes the middle of the distribution.'
-  s3_zh: 经营规则很明确：报告最大值减最小值，说明纳入的是哪个总体，并同时采用能够描述分布中间部分的指标。
-  s3_zh_hk: 營運規則好清楚：報告最大值減最小值，說明納入嘅係邊個總體，並同時採用可以描述分佈中間部分嘅指標。
+  seconds: 66
+  kicker: The Answer
+  kicker_en: The Answer
+  kicker_zh: 答案
+  kicker_zh_hk: 答案
+  title_en: One size? Check the range first.
+  title_zh: 统一送货？先看极差
+  title_zh_hk: 統一送貨？先睇全距
+  q1_en: Can one delivery fit every shop?
+  q1_zh: 一个送货量能照顾所有店吗？
+  q1_zh_hk: 一個送貨量啱唔啱晒所有店？
+  q2_en: When can the range mislead?
+  q2_zh: 极差什么时候会误导人？
+  q2_zh_hk: 全距幾時會誤導人？
+  s1_en: Back to the morning truck. Can one delivery size fit every shop? The average alone cannot tell you. It was 370 cups on both Monday and Tuesday.
+  s1_zh: 回到早上那辆货车。一个送货量，能不能照顾所有店？只看平均数答不了，星期一和星期二都是370杯。
+  s1_zh_hk: 返去朝早嗰架貨車。一個送貨量，啱唔啱晒所有店？淨係睇平均數答唔到，星期一同星期二都係370杯。
+  s2_en: >-
+    The range can. Sort the shops, then take the maximum minus the minimum. Tuesday's range is 40 cups, so one size of 370 works.
+    Monday's range is 110 cups, so the same size leaves Shop C 50 short and Shop B with 60 to throw away.
+    Check the range before you send everyone the same amount.
+  s2_zh: 极差答得了。先把店排好，再用最大值减最小值。星期二的极差是40杯，所以统一送370行得通。星期一的极差是110杯，同样的量会让C店缺50杯，B店扔掉60杯。给每家店送同样的量之前，先看一看极差。
+  s2_zh_hk: 全距答得到。先將啲店排好，再用最大值減最小值。星期二嘅全距係40杯，所以統一送370行得通。星期一嘅全距係110杯，同一個量會搞到C店缺50杯，B店要掉60杯。畀每間店送同一個量之前，先睇吓全距。
+  s3_en: >-
+    When can the range mislead? It uses only the two ends, so one far shop, like Shop E, can blow it up from 110 to 3,890.
+    Say which shops are included, and look at the shops in between, not just the ends.
+    These numbers describe only the days we supposed. The range tells you how far one plan must stretch, not what each shop needs.
+  s3_zh: 极差什么时候会误导人？它只用两头，所以一家很远的店，比如E店，就能把它从110撑到3,890。报的时候要讲清楚算了哪些店，也要看看中间的店，不要只看两头。这些数字只描述我们假设的这两天。极差告诉你一个方案要撑多宽，而不是每家店各要多少。
+  s3_zh_hk: 全距幾時會誤導人？佢淨係用兩頭，所以一間好遠嘅店，好似E店，就可以將佢由110撐到3,890。報嘅時候要講清楚計咗邊幾間店，亦要睇吓中間啲店，唔好淨係睇兩頭。呢啲數字只係描述我哋假設嘅呢兩日。全距話你知一個方案要撐幾闊，而唔係每間店各自要幾多。

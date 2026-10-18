@@ -7,13 +7,13 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
-title_en: How wide is the middle fifty percent?
-title_zh: 中间百分之五十的跨度有多大？
-title_zh_hk: 中間百分之五十嘅跨度有幾大？
-objective_en: Define the interquartile range as Q3 minus Q1, connect quartiles to the 25th and 75th percentiles, calculate the IQR using the course quartile convention, and explain why it is less sensitive than the range while remaining dependent on the dataset and quartile method.
-objective_zh: 把四分位距定义为Q3减去Q1，将四分位数与第25和第75百分位数联系起来，使用本课程的四分位数约定计算IQR，并解释它为何比极差更不易受极端值影响，同时仍取决于数据集与四分位数算法。
-objective_zh_hk: 將四分位距定義為Q3減去Q1，將四分位數同第25同第75百分位數連結起來，使用本課程嘅四分位數約定計算IQR，並解釋佢點解比全距更唔容易受極端值影響，同時仍然取決於數據集同四分位數算法。
+duration_target_s: 506
+title_en: What is the interquartile range?
+title_zh: 什么是四分位距？
+title_zh_hk: 咩係四分位距？
+objective_en: Find the width of the middle of an ordered line of shops by locating Q1 and Q3 with the nearest-rank method (place = 0.25 or 0.75 times the count, rounded up), define the interquartile range as Q3 minus Q1, and see why one far value stretches the ends far more than the box, while the IQR still depends on the group, period and method.
+objective_zh: 用最接近秩法（位置 = 0.25 或 0.75 乘以个数，向上取整）找出Q1和Q3，量出排好的一排店中间有多宽；把四分位距定义为Q3减Q1，并看到一家很远的店为什么把两头拉得远比箱子多，而四分位距仍然取决于比较哪组店、哪段时间和用什么方法。
+objective_zh_hk: 用最接近秩法（位置 = 0.25 或 0.75 乘個數，向上取整）搵出Q1同Q3，量出排好嘅一排店中間有幾闊；將四分位距定義為Q3減Q1，並睇到一間好遠嘅店點解將兩頭拉得遠過個盒好多，而四分位距仍然取決於比較邊組店、邊段時間同用咩方法。
 glossary:
 - en: interquartile range
   zh: 四分位距
@@ -39,161 +39,334 @@ quiz:
   question_zh_hk: 四分位距（IQR）係點樣衡量數據離散程度嘅？
   options_en:
   - 'A: It calculates the distance between the smallest and largest values in the entire file.'
-  - 'B: It measures the distance between Q1 and Q3, the boundaries of the middle 50% of ordered observations.'
+  - 'B: It measures the distance between Q1 and Q3, the boundaries of about the middle half of ordered observations.'
   - 'C: It divides the arithmetic mean by the number of stores.'
   - 'D: It adds all four quartiles together into a grand total.'
   options_zh:
   - 'A: 它计算整个数据表中最小数值与最大数值之间的距离。'
-  - 'B: 它测量Q1与Q3之间的距离，也就是有序观测值中间50%的边界跨度。'
+  - 'B: 它测量Q1与Q3之间的距离，也就是有序观测值大约中间一半的边界跨度。'
   - 'C: 它用算术平均数除以门店总数。'
   - 'D: 它把所有四个四分位数直接相加得出总和。'
   options_zh_hk:
   - 'A: 佢計算成張數據表入面最少數值同最大數值之間嘅距離。'
-  - 'B: 佢測量Q1同Q3之間嘅距離，即係有序觀測值中間50%嘅邊界跨度。'
+  - 'B: 佢測量Q1同Q3之間嘅距離，即係有序觀測值大約中間一半嘅邊界跨度。'
   - 'C: 佢用算術平均數除以門店總數。'
   - 'D: 佢將所有四個四分位數直接加埋得出總和。'
   answer: B
-  explanation_en: The IQR equals Q3 minus Q1 and describes the span of the middle 50%. It is less sensitive to extreme endpoints than the range, but Q1, Q3, and the IQR can still change when the dataset changes.
-  explanation_zh: 四分位距等于Q3减去Q1，描述中间50%的跨度。它比极差更不易受极端端点影响，但数据集改变时，Q1、Q3与IQR仍可能改变。
-  explanation_zh_hk: 四分位距等於Q3減去Q1，描述中間50%嘅跨度。佢比全距更唔容易受極端端點影響，但數據集改變嗰陣，Q1、Q3同IQR仍然可能改變。
+  explanation_en: The IQR equals Q3 minus Q1 and describes the span of about the middle half. It is less sensitive to extreme endpoints than the range, but Q1, Q3, and the IQR can still change when the dataset changes.
+  explanation_zh: 四分位距等于Q3减去Q1，描述大约中间一半的跨度。它比极差更不易受极端端点影响，但数据集改变时，Q1、Q3与IQR仍可能改变。
+  explanation_zh_hk: 四分位距等於Q3減去Q1，描述大約中間一半嘅跨度。佢比全距更唔容易受極端端點影響，但數據集改變嗰陣，Q1、Q3同IQR仍然可能改變。
 - id: Q2
   type: multiple_choice
   question_en: Why can the IQR be more useful than the range for describing routine street-store variation?
   question_zh: 为什么四分位距可能比极差更适合描述街头门店的常规波动？
   question_zh_hk: 點解四分位距可能比全距更適合描述街頭門店嘅常規波動？
   options_en:
-  - 'A: It focuses on the middle 50%, so a single extreme endpoint usually has less influence than it has on the range.'
-  - 'B: The IQR is always equal to zero in profitable coffee shops.'
-  - 'C: Financial auditors prohibit using the simple range in accounting reports.'
-  - 'D: The IQR automatically doubles store revenue.'
+  - 'A: It focuses on about the middle half, so a single extreme endpoint usually has less influence than it has on the range.'
+  - 'B: The IQR ignores the middle shops and only uses the two endpoints.'
+  - 'C: The IQR always equals the full range of the data.'
+  - 'D: Once you know the IQR, you no longer need Q1 or Q3 labels.'
   options_zh:
-  - 'A: 它聚焦中间50%，因此单个极端端点通常不像影响极差那样强烈地影响IQR。'
-  - 'B: 在盈利的咖啡店里，IQR 永远等于零。'
-  - 'C: 财务审计师明令禁止在会计报告中使用极差。'
-  - 'D: IQR 能自动让分店的营业额翻倍。'
+  - 'A: 它聚焦大约中间一半，因此单个极端端点通常不像影响极差那样强烈地影响IQR。'
+  - 'B: IQR 会忽略中间门店，只使用两个端点。'
+  - 'C: IQR 永远等于整段数据的极差。'
+  - 'D: 只要知道 IQR，就不再需要 Q1 或 Q3 标签。'
   options_zh_hk:
-  - 'A: 佢聚焦中間50%，所以單一極端端點通常唔會好似影響全距噉強烈影響IQR。'
-  - 'B: 喺賺錢嘅咖啡店入面，IQR 永遠等於零。'
-  - 'C: 財務審計師明令禁止喺會計報告入面使用全距。'
-  - 'D: IQR 可以自動令分店嘅營業額翻倍。'
+  - 'A: 佢聚焦大約中間一半，所以單一極端端點通常唔會好似影響全距噉強烈影響IQR。'
+  - 'B: IQR 會忽略中間門店，只使用兩個端點。'
+  - 'C: IQR 永遠等於成段數據嘅全距。'
+  - 'D: 只要知到 IQR，就唔再需要 Q1 或者 Q3 標籤。'
   answer: A
-  explanation_en: The range uses only the minimum and maximum. The IQR uses quartile boundaries around the middle half, so one isolated endpoint often has less influence, although Q1 and Q3 can still change when the dataset changes.
-  explanation_zh: 极差只使用最小值和最大值。IQR使用围绕中间一半的四分位边界，因此单个孤立端点通常影响较小；但数据集改变时，Q1与Q3仍可能改变。
-  explanation_zh_hk: 全距只使用最小值同最大值。IQR使用圍繞中間一半嘅四分位邊界，所以單一孤立端點通常影響較小；但數據集改變嗰陣，Q1同Q3仍然可能改變。
+  explanation_en: 'The range uses only the minimum and maximum. The IQR uses Q1 and Q3 around about the middle half, so one isolated endpoint often has less influence. IQR is not the full range, does not ignore the middle, and still needs Q1 and Q3.'
+  explanation_zh: '极差只使用最小值和最大值。IQR 使用围绕大约中间一半的 Q1 与 Q3，因此单个孤立端点通常影响较小。IQR 不是整段极差，不会忽略中间，并且仍需要 Q1 与 Q3。'
+  explanation_zh_hk: '全距只使用最小值同最大值。IQR 使用圍繞大約中間一半嘅 Q1 同 Q3，所以單一孤立端點通常影響較小。IQR 唔係成段全距，唔會忽略中間，並且仍然需要 Q1 同 Q3。'
 beats:
 - id: hook
   visual: title_card
-  seconds: 30
+  seconds: 46
   kicker: The Question
   kicker_en: The Question
-  kicker_zh: 商业问题
-  kicker_zh_hk: 商業問題
-  title_en: How wide is normal store variation?
-  title_zh: 常规分店的日常波动到底有多大？
-  title_zh_hk: 常規分店嘅日常波動到底有幾大？
-  en: The range can become enormous when one unusual Airport branch enters the report. But headquarters still needs a picture of routine variation among ordinary stores. Instead of measuring from the absolute minimum to the absolute maximum, how can managers focus on the spread of the middle half of the ordered data?
-  zh: 当一家异常的机场店进入报表时，极差可能变得非常大。但总部仍需要了解普通门店的常规波动。管理者如何不再从绝对最小值量到绝对最大值，而是聚焦有序数据中间一半的跨度？
-  zh_hk: 當一間異常嘅機場舖進入報表嗰陣，全距可能變得非常大。但總部仍然需要了解普通門店嘅常規波動。管理者點樣唔再由絕對最小值量到絕對最大值，而係聚焦有序數據中間一半嘅跨度？
-- id: define
-  visual: definition_card
+  kicker_zh: 业务问题
+  kicker_zh_hk: 業務問題
+  title_en: What is the interquartile range?
+  title_zh: 什么是四分位距？
+  title_zh_hk: 咩係四分位距？
+  en: >-
+    Suppose head office plans the morning milk delivery for its street coffee shops. It wants a normal band, a spread of cups that an ordinary day falls inside.
+    Make the band too wide, and shops throw milk away. Make it too narrow, and they run out by lunch.
+    The trouble is that the lowest and the highest day are often the unusual ones. Plan around them, and one strange day sets the band for everyone.
+    So how wide is the middle of the group, once you look past the two ends?
+    The number that answers that is called the interquartile range. What is the interquartile range?
+  zh: >-
+    假设总部要给街边的咖啡店安排每天早上的牛奶。它想要一个正常区间，也就是普通的一天大概会卖多少杯。区间定得太宽，店里就要倒掉牛奶；定得太窄，不到中午就卖光了。
+    麻烦的是，最低和最高的那一天，往往正是不寻常的那一天。照着它们来定，一个奇怪的日子就替所有店定了区间。
+    所以，撇开两头不看，这组店的中间到底有多宽？回答这个问题的数，叫作四分位距。什么是四分位距？
+  zh_hk: >-
+    假設總部要幫街邊嘅咖啡店安排每朝嘅牛奶。佢想要一個正常範圍，即係普通一日大概會賣幾多杯。範圍定得太闊，間店就要倒咗啲牛奶；定得太窄，未到晏晝就賣晒。
+    麻煩嘅係，最低同最高嗰日，往往就係唔尋常嗰日。跟住佢哋嚟定，一日古怪嘅生意就幫晒所有店定咗個範圍。
+    所以，唔睇兩頭，呢組店中間究竟有幾闊？答到呢個問題嘅數，就叫做四分位距。咩係四分位距？
+- id: line
+  visual: rank_line
+  seconds: 66
+  kicker: The Line
+  kicker_en: The Line
+  kicker_zh: 排一排
+  kicker_zh_hk: 排一排
+  title_en: Five shops, one Monday
+  title_zh: 五家店，同一个星期一
+  title_zh_hk: 五間店，同一個星期一
+  values: 360;420;280;390;310
+  labels_en: Shop A;Shop B;Shop C;Shop D;Shop E
+  labels_zh: A店;B店;C店;D店;E店
+  labels_zh_hk: A店;B店;C店;D店;E店
+  order: sorted
+  mark: ends
+  span: ends
+  span_en: 420 − 280 = 140 cups
+  span_zh: 420 − 280 = 140 杯
+  span_zh_hk: 420 − 280 = 140 杯
+  s1_en: >-
+    Here are five shops on one Monday, in the order they were written. Shop A sold 360 cups, Shop B 420, Shop C 280, Shop D 390, and Shop E 310.
+    Where is the middle of this group? Written like this, it is hard to say.
+  s1_zh: 这是五家店在同一个星期一的销量，按写下的顺序：A店卖了360杯，B店420，C店280，D店390，E店310。这组店的中间在哪里？这样写着，很难看出来。
+  s1_zh_hk: 呢個係五間店喺同一個星期一嘅銷量，照寫低嘅次序：A店賣咗360杯，B店420，C店280，D店390，E店310。呢組店嘅中間喺邊？噉樣寫住，好難睇得出。
+  s2_en: >-
+    So line them up from the fewest cups to the most, and number the places. Shop C at 280 is first, then Shop E at 310, Shop A at 360, Shop D at 390, and Shop B at 420 in fifth place.
+    Each shop keeps its own number; we have only sorted.
+  s2_zh: 所以把它们从卖得最少排到最多，再给位置编号。第一位是C店，280；然后是E店310、A店360、D店390，第五位是B店420。每家店的数字都没变，我们只是排了个序。
+  s2_zh_hk: 所以將佢哋由賣得最少排到最多，再幫每個位編號。第一位係C店，280；跟住係E店310、A店360、D店390，第五位係B店420。每間店嘅數字都冇變，我哋只係排咗個次序。
+  s3_en: >-
+    The quickest width to read is from end to end. 420 minus 280 is 140 cups. That gap, highest minus lowest, is called the range.
+    But notice who sets it. Only two shops, the very lowest and the very highest. The three shops in the middle never count.
+    What if we measured the middle instead? Where would the middle start?
+  s3_zh: 最快读出来的宽度，是从一头到另一头：420减280，等于140杯。最高减最低，这个差叫作极差。可是留意一下，是谁定了它？只有两家店，最低的和最高的。中间那三家店，完全没算进去。如果改量中间呢？中间从哪里开始？
+  s3_zh_hk: 最快讀到嘅闊度，係由一頭到另一頭：420減280，等於140杯。最高減最低，呢個差就叫做全距。但係留意吓，係邊個定咗佢？得兩間店，最低嗰間同最高嗰間。中間嗰三間店，完全冇計到。如果改為量中間呢？中間由邊度開始？
+- id: q1
+  visual: rank_line
+  seconds: 50
+  kicker: A Quarter Up
+  kicker_en: A Quarter Up
+  kicker_zh: 四分之一处
+  kicker_zh_hk: 四分之一處
+  title_en: A quarter of the way up
+  title_zh: 从低往上四分之一
+  title_zh_hk: 由低向上四分之一
+  values: 280;310;360;390;420
+  labels_en: Shop C;Shop E;Shop A;Shop D;Shop B
+  labels_zh: C店;E店;A店;D店;B店
+  labels_zh_hk: C店;E店;A店;D店;B店
+  order: as_given
+  mark: '2'
+  footer_en: 0.25 × 5 = 1.25 → 2
+  footer_zh: 0.25 × 5 = 1.25 → 2
+  footer_zh_hk: 0.25 × 5 = 1.25 → 2
+  s1_en: >-
+    Picture the ordered line cut into four equal quarters. The middle starts a quarter of the way up. Here is the same line, already in order.
+  s1_zh: 把排好的这条线想象成切成四等份。中间，就从往上四分之一的地方开始。这是同一条线，已经排好了。
+  s1_zh_hk: 將排好嘅呢條線想像成切開四等份。中間，就由向上四分之一嘅位置開始。呢條係同一條線，已經排好咗。
+  s2_en: >-
+    Which place is a quarter of the way up? Multiply one quarter, 0.25, by the number of shops, 5. 0.25 times 5 is 1.25.
+    There is no place one and a quarter, so round up to the next whole place, place 2. This way of picking a place is called the nearest-rank method.
+  s2_zh: 往上四分之一是第几位？用四分之一，也就是0.25，乘以店的数目5。0.25乘以5等于1.25。没有第一点二五位，所以向上取到下一个整数位，第2位。这种找位置的做法，叫作最接近秩法。
+  s2_zh_hk: 向上四分之一係第幾位？用四分之一，即係0.25，乘店嘅數目5。0.25乘5等於1.25。冇第一點二五位，所以向上取到下一個整數位，第2位。呢種搵位置嘅做法，叫做最接近秩法。
+  s3_en: >-
+    Place 2 is Shop E, at 310 cups. This quarter mark is called the first quartile, Q1 for short. A quartile is simply a quarter mark on the ordered line.
+    So the middle starts at 310. Where does it end?
+  s3_zh: 第2位是E店，310杯。这个四分之一的标记，叫作第一四分位数，简写Q1。四分位数，其实就是排好的线上一个四分之一的标记。所以中间从310开始。那它在哪里结束？
+  s3_zh_hk: 第2位係E店，310杯。呢個四分之一嘅標記，叫做第一四分位數，簡寫Q1。四分位數，其實就係排好嗰條線上面一個四分之一嘅標記。所以中間由310開始。咁佢喺邊度完？
+- id: q3
+  visual: rank_line
   seconds: 34
-  kicker: What It Is
-  kicker_en: What It Is
-  kicker_zh: 概念定义
-  kicker_zh_hk: 概念定義
-  title_en: The span between two percentile landmarks
-  title_zh: 两个百分位界标之间的跨度
-  title_zh_hk: 兩個百分位界標之間嘅跨度
-  formula: 'IQR = Q3 − Q1
-
-    Q3 = 75th percentile, Q1 = 25th'
-  formula_zh: '四分位距 = Q3 − Q1
-
-    Q3 = 第75百分位数，Q1 = 第25百分位数'
-  formula_zh_hk: '四分位距 = Q3 − Q1
-
-    Q3 = 第75百分位數，Q1 = 第25百分位數'
-  s1_en: 'Percentiles divide ordered data into relative positions. Quartiles are special percentile landmarks: Q1 is the 25th percentile and Q3 is the 75th percentile.'
-  s1_zh: 百分位数把有序数据划分为相对位置。四分位数是特殊的百分位界标：Q1是第25百分位数，Q3是第75百分位数。
-  s1_zh_hk: 百分位數將有序數據劃分成相對位置。四分位數係特殊嘅百分位界標：Q1係第25百分位數，Q3係第75百分位數。
-  s2_en: The interquartile range is Q3 minus Q1. Rather than deleting observations, it focuses measurement on the middle 50% bounded by these two quartiles, a region often used to summarize routine operating conditions.
-  s2_zh: 四分位距等于Q3减去Q1。它并不是删除观测值，而是把度量重点放在由两个四分位数界定的中间50%，这个区域常用于概括常规运营状况。
-  s2_zh_hk: 四分位距等於Q3減去Q1。佢並唔係刪除觀測值，而係將度量重點放喺由兩個四分位數界定嘅中間50%，呢個區域常用嚟概括常規營運狀況。
-- id: calc
-  visual: steps
-  seconds: 36
-  kicker: Step by Step
-  kicker_en: Step by Step
-  kicker_zh: 计算步骤
-  kicker_zh_hk: 計算步驟
-  title_en: Measuring the middle spread
-  title_zh: 测量中间50%的跨度
-  title_zh_hk: 測量中間50%嘅跨度
-  step1_en: Find Q1 boundary
-  step1_zh: 锁定 Q1 分界点
-  step1_zh_hk: 鎖定 Q1 分界點
-  step2_en: Find Q3 boundary
-  step2_zh: 锁定 Q3 分界点
-  step2_zh_hk: 鎖定 Q3 分界點
-  step3_en: Subtract Q1 from Q3
-  step3_zh: 用 Q3 减去 Q1
-  step3_zh_hk: 用 Q3 減去 Q1
-  s1_en: 'Step one: use the five street-store volumes 280, 310, 360, 390, and 420. Under the nearest-rank convention used with that file, Q1 is the 310-cup observation.'
-  s1_zh: 第一步：使用五家街店的销量 280、310、360、390 和 420。按该文件所用的最近名次约定，Q1 是 310 杯那个观测。
-  s1_zh_hk: 第一步：使用五間街舖嘅銷量 280、310、360、390 同 420。按該檔案所用嘅最近名次約定，Q1 係 310 杯嗰個觀測。
-  s2_en: 'Step two: under the same convention, Q3 is the 390-cup observation. Another software rule can move the quartile, so the method has to travel with the number.'
-  s2_zh: 第二步：按同一约定，Q3 是 390 杯那个观测。另一种软件规则可能移动四分位数，所以方法必须和数字一起报告。
-  s2_zh_hk: 第二步：按同一約定，Q3 係 390 杯嗰個觀測。另一種軟件規則可能移動四分位數，所以方法一定要同數字一齊報告。
-  s3_en: 'Step three: subtract Q1 from Q3. The IQR is 390 minus 310, or 80 cups. This is the width of the middle 50% under the stated convention, not a claim that every ordinary store varies by 80 cups.'
-  s3_zh: 第三步：用Q3减去Q1。IQR为390减310，即80杯。这是在所说明约定下中间50%的宽度，并不表示每家普通门店都会波动80杯。
-  s3_zh_hk: 第三步：用Q3減去Q1。IQR係390減310，即80杯。呢個係喺所講明約定下中間50%嘅寬度，並唔代表每間普通門店都會波動80杯。
-- id: power
+  kicker: Three Quarters Up
+  kicker_en: Three Quarters Up
+  kicker_zh: 四分之三处
+  kicker_zh_hk: 四分之三處
+  title_en: Three quarters of the way up
+  title_zh: 从低往上四分之三
+  title_zh_hk: 由低向上四分之三
+  values: 280;310;360;390;420
+  labels_en: Shop C;Shop E;Shop A;Shop D;Shop B
+  labels_zh: C店;E店;A店;D店;B店
+  labels_zh_hk: C店;E店;A店;D店;B店
+  order: as_given
+  mark: '4'
+  footer_en: 0.75 × 5 = 3.75 → 4
+  footer_zh: 0.75 × 5 = 3.75 → 4
+  footer_zh_hk: 0.75 × 5 = 3.75 → 4
+  s1_en: It ends three quarters of the way up. Same five shops, same order.
+  s1_zh: 它在往上四分之三的地方结束。还是这五家店，还是这个顺序。
+  s1_zh_hk: 佢喺向上四分之三嘅位置完。都係呢五間店，都係呢個次序。
+  s2_en: >-
+    Three quarters is 0.75. 0.75 times 5 is 3.75. Again there is no such place, so round up, to place 4.
+  s2_zh: 四分之三就是0.75。0.75乘以5等于3.75。同样没有这个位置，所以向上取整，到第4位。
+  s2_zh_hk: 四分之三即係0.75。0.75乘5等於3.75。一樣冇呢個位，所以向上取整，到第4位。
+  s3_en: >-
+    Place 4 is Shop D, at 390 cups. That is the third quartile, Q3. So the middle of the line runs from 310 to 390.
+    How wide is that stretch, and what does it look like?
+  s3_zh: 第4位是D店，390杯。这是第三四分位数，Q3。所以这条线的中间，从310走到390。这一段有多宽？画出来又是什么样子？
+  s3_zh_hk: 第4位係D店，390杯。呢個係第三四分位數，Q3。所以呢條線嘅中間，由310行到390。呢一段有幾闊？畫出嚟又係點樣？
+- id: box
+  visual: box_line
+  seconds: 48
+  kicker: The Box
+  kicker_en: The Box
+  kicker_zh: 画个箱子
+  kicker_zh_hk: 畫個盒
+  title_en: Draw the middle as a box
+  title_zh: 把中间画成一个箱子
+  title_zh_hk: 將中間畫成一個盒
+  values: 360;420;280;390;310
+  span_en: 390 − 310 = 80 cups
+  span_zh: 390 − 310 = 80 杯
+  span_zh_hk: 390 − 310 = 80 杯
+  footer_en: 'Box: Q1 to Q3. Lines: to each end'
+  footer_zh: 箱子：Q1到Q3；线：伸到两头
+  footer_zh_hk: 盒：Q1到Q3；線：伸到兩頭
+  s1_en: >-
+    Put the five shops on a scale of cups. Each dot is one shop, from 280 on the left to 420 on the right. Now the gaps between the shops show too.
+  s1_zh: 把五家店放到一条杯数的刻度上。每个点是一家店，左边是280，右边是420。现在店与店之间隔多远，也看得到了。
+  s1_zh_hk: 將五間店擺上一條杯數嘅刻度。每一點係一間店，左邊係280，右邊係420。而家店同店之間隔幾遠，都睇得到。
+  s2_en: Mark the two quarter marks we found. Q1 at 310, and Q3 at 390.
+  s2_zh: 标出刚才找到的两个四分之一标记：Q1在310，Q3在390。
+  s2_zh_hk: 標出頭先搵到嘅兩個四分之一標記：Q1喺310，Q3喺390。
+  s3_en: >-
+    Draw a box from Q1 to Q3. Inside sit the middle shops. Its width is 390 minus 310, which is 80 cups.
+    Lines run out from the box to the lowest and the highest shop, so the ends are still on the picture; they just sit outside the box.
+    That 80 cups is the number we were after. What is it called?
+  s3_zh: 从Q1到Q3画一个箱子，中间的店都在里面。它的宽度是390减310，等于80杯。箱子两边各伸出一条线，连到最低和最高的店，所以两头还在图上，只是在箱子外面。这80杯，就是我们要找的数。它叫什么？
+  s3_zh_hk: 由Q1到Q3畫一個盒，中間嘅店都喺入面。佢嘅闊度係390減310，等於80杯。盒兩邊各自伸出一條線，連到最低同最高嘅店，所以兩頭仲喺幅圖度，只係喺個盒外面。呢80杯，就係我哋要搵嘅數。佢叫咩？
+- id: name_iqr
+  visual: title_card
+  seconds: 24
+  kicker: The Name
+  kicker_en: The Name
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Interquartile range
+  title_zh: 四分位距
+  title_zh_hk: 四分位距
+  en: >-
+    Interquartile range, or IQR. Inter means between, and the quartiles are the quarter marks. So the interquartile range is the distance between the two quartiles,
+    Q3 minus Q1. For this Monday it is 80 cups. How do we write that down for any group?
+  zh: >-
+    四分位距，英文简写IQR。四分位数就是那两个四分之一的标记，四分位距就是这两个标记之间的距离，也就是Q3减Q1。这个星期一，它是80杯。那换成任何一组店，要怎么写下来？
+  zh_hk: >-
+    四分位距，英文簡寫IQR。四分位數就係嗰兩個四分之一嘅標記，四分位距就係呢兩個標記之間嘅距離，即係Q3減Q1。呢個星期一，佢係80杯。咁換成任何一組店，又點樣寫低？
+- id: defn
+  visual: definition_card
+  seconds: 52
+  kicker: The Definition
+  kicker_en: The Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: The IQR, written down
+  title_zh: 把四分位距写下来
+  title_zh_hk: 將四分位距寫低
+  formula_en: IQR = Q3 − Q1
+  formula_zh: 四分位距 = Q3 − Q1
+  formula_zh_hk: 四分位距 = Q3 − Q1
+  gloss_en: Q1 is the 25th percentile, Q3 the 75th
+  gloss_zh: Q1 是第25百分位数，Q3 是第75百分位数
+  gloss_zh_hk: Q1 係第25百分位數，Q3 係第75百分位數
+  s1_en: >-
+    Here it is in symbols. Put the values in order. Q1 is the value a quarter of the way up, and Q3 is the value three quarters of the way up.
+    The IQR is Q3 minus Q1. With the nearest-rank method, the place is the fraction times the number of values, rounded up.
+  s1_zh: 用符号写出来：先把数排好。Q1是往上四分之一处的数，Q3是往上四分之三处的数。四分位距就是Q3减Q1。用最接近秩法，位置就是这个比例乘以数的个数，有小数就向上取整。
+  s1_zh_hk: 用符號寫出嚟：先將啲數排好。Q1係向上四分之一嗰度嘅數，Q3係向上四分之三嗰度嘅數。四分位距就係Q3減Q1。用最接近秩法，位置就係呢個比例乘數嘅個數，有小數就向上取整。
+  s2_en: >-
+    Another name for Q1 is the 25th percentile, because about 25 percent of the values sit at or below it. Q3 is the 75th percentile.
+    So the box holds roughly the middle half of the values. With only five shops, roughly matters; here the box holds three of the five.
+    So why would a planner trust the middle more than the ends? Watch what one unusual shop does.
+  s2_zh: Q1的另一个名字是第25百分位数，因为大约25%的数不高于它；Q3就是第75百分位数。所以箱子框住的，大约是中间一半的数。只有五家店，“大约”很重要：这里箱子框住了五家里的三家。那为什么规划的人更相信中间，而不是两头？看看一家不寻常的店会怎样。
+  s2_zh_hk: Q1嘅另一個名係第25百分位數，因為大約25%嘅數唔高過佢；Q3就係第75百分位數。所以個盒框住嘅，大約係中間一半嘅數。得五間店，「大約」好重要：呢度個盒框住咗五間入面嘅三間。咁點解做規劃嘅人信中間多過兩頭？睇吓一間唔尋常嘅店會點。
+- id: far
+  visual: box_line
+  seconds: 58
+  kicker: One Far Shop
+  kicker_en: One Far Shop
+  kicker_zh: 一家很远的店
+  kicker_zh_hk: 一間好遠嘅店
+  title_en: Add Shop F, a 24-hour site
+  title_zh: 加上通宵营业的F店
+  title_zh_hk: 加埋通宵營業嘅F店
+  values: 280;310;360;390;420;4,200
+  break: last
+  span_en: 420 − 310 = 110 cups
+  span_zh: 420 − 310 = 110 杯
+  span_zh_hk: 420 − 310 = 110 杯
+  footer_en: 'End to end: 140 → 3,920 cups'
+  footer_zh: 两头之间：140 → 3,920 杯
+  footer_zh_hk: 兩頭之間：140 → 3,920 杯
+  s1_en: >-
+    Suppose head office also counts Shop F, a 24-hour site. On the same Monday it sold 4,200 cups. Now there are six shops, and one sits far off to the right.
+  s1_zh: 假设总部把F店也算进来，这是一家通宵营业的店。同一个星期一，它卖了4,200杯。现在有六家店，其中一家远远落在右边。
+  s1_zh_hk: 假設總部將F店都計埋入嚟，呢間係通宵營業嘅店。同一個星期一，佢賣咗4,200杯。而家有六間店，其中一間遠遠喺右邊。
+  s2_en: >-
+    Find the quarter marks again, for six shops. 0.25 times 6 is 1.5, round up to place 2, which is 310. 0.75 times 6 is 4.5, round up to place 5, which is 420.
+  s2_zh: 用六家店再找一次四分之一标记。0.25乘以6等于1.5，向上取到第2位，是310。0.75乘以6等于4.5，向上取到第5位，是420。
+  s2_zh_hk: 用六間店再搵一次四分之一標記。0.25乘6等於1.5，向上取到第2位，係310。0.75乘6等於4.5，向上取到第5位，係420。
+  s3_en: >-
+    The box now runs from 310 to 420, so the IQR is 110 cups. It grew by 30. Now look at the ends. Highest minus lowest was 140 cups; now it is 4,200 minus 280, or 3,920, twenty-eight times as wide.
+    One far shop stretched the line out to the end, but barely moved the box. Does that make the IQR safe from everything?
+  s3_zh: 箱子现在从310到420，所以四分位距是110杯，多了30。再看两头：最高减最低本来是140杯，现在是4,200减280，等于3,920，宽了二十八倍。一家很远的店，把线一直拉长到尽头，却几乎没有挪动箱子。那是不是说，四分位距什么都不怕？
+  s3_zh_hk: 個盒而家由310到420，所以四分位距係110杯，多咗30。再睇兩頭：最高減最低本來係140杯，而家係4,200減280，等於3,920，闊咗二十八倍。一間好遠嘅店，將條線一直拉長到盡頭，但係差唔多冇郁到個盒。咁係咪即係話，四分位距乜都唔怕？
+- id: limit
   visual: two_column
-  seconds: 36
-  kicker: Why It Is Robust
-  kicker_en: Why It Is Robust
-  kicker_zh: 为何较稳健
-  kicker_zh_hk: 點解較穩健
-  title_en: Less sensitive to extreme endpoints
-  title_zh: 对极端端点较不敏感
-  title_zh_hk: 對極端端點較不敏感
-  left_en: Airport sells 4,200 cups
-  left_zh: 机场店售出 4,200 杯
-  left_zh_hk: 機場舖售出 4,200 杯
-  right_en: 'Middle IQR: 80 cups'
-  right_zh: 中间IQR：80杯
-  right_zh_hk: 中間IQR：80杯
-  s1_en: Now consider the 24-hour Airport branch at 4,200 cups. That value dramatically changes the maximum and therefore the range.
-  s1_zh: 现在考虑销量4,200杯的24小时机场店。这个数值会大幅改变最大值，因此也会大幅改变极差。
-  s1_zh_hk: 而家考慮銷量4,200杯嘅24小時機場舖。呢個數值會大幅改變最大值，所以亦會大幅改變全距。
-  s2_en: Because the IQR is determined by quartile boundaries around the middle half, one isolated extreme observation often has much less influence than it has on the range.
-  s2_zh: 由于IQR由围绕中间一半的四分位边界决定，单个孤立的极端观测值通常不像影响极差那样强烈地影响IQR。
-  s2_zh_hk: 由於IQR由圍繞中間一半嘅四分位邊界決定，單一孤立嘅極端觀測值通常唔會好似影響全距噉強烈影響IQR。
-  s3_en: But robust does not mean immune. If the dataset, number of extreme observations, or quartile convention changes, Q1, Q3, and the IQR may also change.
-  s3_zh: 但稳健并不表示完全免疫。如果数据集、极端观测值的数量或四分位数约定改变，Q1、Q3与IQR也可能改变。
-  s3_zh_hk: 但穩健並唔代表完全免疫。如果數據集、極端觀測值嘅數量或者四分位數約定改變，Q1、Q3同IQR亦可能改變。
-- id: takeaway
+  seconds: 60
+  kicker: The Limit
+  kicker_en: The Limit
+  kicker_zh: 限度
+  kicker_zh_hk: 限度
+  title_en: The middle, not the whole story
+  title_zh: 讲的是中间，不是全部
+  title_zh_hk: 講嘅係中間，唔係全部
+  left_en: 'Tells: width of the middle'
+  left_zh: 能说：中间有多宽
+  left_zh_hk: 講到：中間有幾闊
+  right_en: 'Not: the far days'
+  right_zh: 不能说：两头发生了什么
+  right_zh_hk: 講唔到：兩頭發生咗乜
+  s1_en: So what does the IQR tell a planner, and what does it not?
+  s1_zh: 那四分位距到底能告诉规划的人什么，又不能告诉他什么？
+  s1_zh_hk: 咁四分位距究竟話到做規劃嘅人知啲乜，又話唔到佢知啲乜？
+  s2_en: >-
+    It tells you how wide the middle of the group is. On this Monday the middle shops sat within 80 cups of each other.
+    One far shop moved it by 30 cups, not by thousands. That is a fair picture of an ordinary day.
+  s2_zh: 它能告诉你这组店的中间有多宽。这个星期一，中间那几家店彼此相差不超过80杯。一家很远的店，只让它变了30杯，而不是几千杯。拿来描述普通的一天，这样比较公道。
+  s2_zh_hk: 佢話到你知呢組店嘅中間有幾闊。呢個星期一，中間嗰幾間店之間相差唔超過80杯。一間好遠嘅店，只係令佢變咗30杯，唔係幾千杯。用嚟描述普通嘅一日，噉就公道啲。
+  s3_en: >-
+    It does not tell you about the far days. Shop F still sold 4,200 cups and still needs its own plan. The IQR also changed, so robust does not mean immune.
+    It is not a promise that every shop stays within 80 cups. And it depends on the group, the period, and the method; another textbook or software rule can place the quartiles a little differently.
+    The milk order itself still needs the cost of waste and the cost of running out.
+  s3_zh: 它不能告诉你两头的事。F店照样卖了4,200杯，照样要单独安排。四分位距自己也变了，所以稳健不等于完全不受影响。它也不是保证每家店都只差80杯。而且它取决于比较哪组店、哪段时间、用什么方法；换一本教材或一个软件，四分位数的位置可能会有一点不同。至于牛奶到底订多少，还得算上倒掉的成本和卖光的成本。
+  s3_zh_hk: 佢話唔到你知兩頭嘅事。F店照樣賣咗4,200杯，照樣要另外安排。四分位距自己都變咗，所以穩健唔等於完全唔受影響。佢亦唔係保證每間店都只係差80杯。而且佢取決於比較邊組店、邊段時間、用咩方法；換一本教科書或者一個軟件，四分位數嘅位置可能會有少少唔同。至於牛奶實際訂幾多，仲要計埋倒咗嘅成本同賣晒嘅成本。
+- id: answer
   visual: takeaway
-  seconds: 32
-  kicker: Decision Rule
-  kicker_en: Decision Rule
-  kicker_zh: 商业法则
-  kicker_zh_hk: 商業法則
-  title_en: Use IQR to inform routine operating bands
-  title_zh: 用IQR辅助设定常规运营区间
-  title_zh_hk: 用IQR輔助設定常規營運區間
-  q1_en: What does the IQR tell headquarters?
-  q1_zh: IQR 告诉了总部什么信息？
-  q1_zh_hk: IQR 話咗畀總部知咩資訊？
-  q2_en: Why pair IQR with other measures?
-  q2_zh: 为什么要把IQR与其他指标结合？
-  q2_zh_hk: 點解要將IQR同其他指標結合？
-  s1_en: The IQR can help managers describe routine demand spread and inform staffing bands or inventory buffers for comparable street stores.
-  s1_zh: IQR可以帮助管理者描述常规需求的离散程度，并为可比街头门店的排班区间或库存缓冲提供依据。
-  s1_zh_hk: IQR可以幫管理者描述常規需求嘅離散程度，並為可比街頭門店嘅排班區間或者庫存緩衝提供依據。
-  s2_en: It should not replace the range or operational investigation. The range reports the full observed span, while the IQR summarizes the middle half and may conceal important extreme events.
-  s2_zh: 它不应取代极差或运营调查。极差报告完整观测跨度，而IQR概括中间一半，也可能掩盖重要的极端事件。
-  s2_zh_hk: 佢唔應該取代全距或者營運調查。全距報告完整觀測跨度，而IQR概括中間一半，亦可能掩蓋重要嘅極端事件。
-  s3_en: 'The operating rule is precise: state the quartile convention, calculate Q3 minus Q1, interpret the result as the width of the middle 50%, and use it alongside measures of center and the outer boundaries.'
-  s3_zh: 经营规则很明确：说明四分位数约定，计算Q3减Q1，把结果解释为中间50%的宽度，并与中心指标及外围边界指标结合使用。
-  s3_zh_hk: 營運規則好清楚：講明四分位數約定，計算Q3減Q1，將結果解釋為中間50%嘅寬度，並同中心指標及外圍邊界指標一齊使用。
+  seconds: 68
+  kicker: The Answer
+  kicker_en: The Answer
+  kicker_zh: 答案
+  kicker_zh_hk: 答案
+  title_en: Normal day? Check the IQR.
+  title_zh: 平常多宽？看四分位距
+  title_zh_hk: 平時幾闊？睇四分位距
+  q1_en: What does the IQR measure?
+  q1_zh: 四分位距量的是什么？
+  q1_zh_hk: 四分位距量緊咩？
+  q2_en: What must you report with it?
+  q2_zh: 报告时要同时说明什么？
+  q2_zh_hk: 報告嗰陣要同時講明咩？
+  s1_en: >-
+    Back to head office and the milk. It wanted a normal band without letting one strange day set it. End to end, the five shops spread over 140 cups, and one far shop could stretch that to 3,920.
+  s1_zh: 回到总部和牛奶。总部想要一个正常区间，又不想让一个奇怪的日子来定它。从一头到另一头，五家店相差140杯；多一家很远的店，就能拉到3,920杯。
+  s1_zh_hk: 返去總部同牛奶。總部想要一個正常範圍，又唔想畀一日古怪嘅生意嚟定佢。由一頭到另一頭，五間店相差140杯；多一間好遠嘅店，就可以拉到3,920杯。
+  s2_en: >-
+    What does the IQR measure? The width of the middle of the ordered line, Q3 minus Q1. To find it, sort the values, take 0.25 and 0.75 of the count, round each place up, read Q1 and Q3, and subtract.
+    For this Monday, 390 minus 310 is 80 cups.
+  s2_zh: 四分位距量的是什么？排好的这条线中间的宽度，也就是Q3减Q1。找的方法是：把数排好，用0.25和0.75分别乘以个数，位置有小数就向上取整，读出Q1和Q3，再相减。这个星期一，390减310，等于80杯。
+  s2_zh_hk: 四分位距量緊咩？排好嗰條線中間嘅闊度，即係Q3減Q1。搵嘅方法係：將啲數排好，用0.25同0.75分別乘個數，位置有小數就向上取整，讀出Q1同Q3，再相減。呢個星期一，390減310，等於80杯。
+  s3_en: >-
+    What must you report with it? The group of shops, the period, and the method, here the nearest-rank method. Add Shop F and the IQR becomes 110 cups, while the ends stretch to 3,920.
+    These are numbers we supposed for one Monday. The IQR tells you how wide a normal day's middle is, not what happened on the far days, and not how much milk to order on its own.
+  s3_zh: 报告时要同时说明什么？比较的是哪组店、哪段时间、用什么方法，这里是最接近秩法。加上F店，四分位距变成110杯，两头却拉到3,920杯。这些都是我们为一个星期一假设的数字。四分位距告诉你平常日子的中间有多宽，不告诉你两头那几天发生了什么，也不能单靠它决定订多少牛奶。
+  s3_zh_hk: 報告嗰陣要同時講明咩？比較嘅係邊組店、邊段時間、用咩方法，呢度係最接近秩法。加埋F店，四分位距變成110杯，兩頭就拉到3,920杯。呢啲都係我哋為一個星期一假設嘅數字。四分位距話你知平時嘅中間有幾闊，唔話你知兩頭嗰幾日發生咗乜，亦唔可以淨靠佢決定訂幾多牛奶。

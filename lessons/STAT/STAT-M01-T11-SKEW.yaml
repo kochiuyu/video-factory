@@ -1,3 +1,14 @@
+# Author / teacher pacing (optional; not shown to learners).
+# Full short ~884s. Do not delete beats. Quiz and numbers stay as written.
+# CORE PATH (first sitting / essential arc):
+#   hook, data, plans, distance, shape, clue, name_right, name_left,
+#   why_cube, cubes_a, cubes_b, formula, name_skew, answer
+# OPTIONAL DEEP-DIVE (second pass or if time allows):
+#   average  — mean refresh (skip if T02 is still fresh)
+#   squares  — same-spread bridge (skip if T08 was just watched)
+#   defn     — written formula after the name card
+#   limit    — manager caution (pair with answer on a full watch)
+# Suggested split: CORE now; add squares/defn/limit on a return pass.
 id: STAT-M01-T11-SKEW
 course: statistics
 course_en: Business Statistics
@@ -7,13 +18,13 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 768
+duration_target_s: 884
 title_en: What is skewness?
 title_zh: 什么是偏度？
 title_zh_hk: 咩係偏度？
-objective_en: Decide whether two shops that match on the average and the variance can prepare the same 100 cups, and use the cube of the distances to see which side is long.
-objective_zh: 判断两家平均数和方差都相同的门店能不能都按100杯备货，并用距离的立方看出哪一侧被拉长。
-objective_zh_hk: 判斷兩間平均數同方差都相同嘅門店可唔可以都按100杯備貨，並用距離嘅立方睇出邊一邊被拉長。
+objective_en: Decide whether two shops that match on the average and the variance can prepare the same 100 cups, and use the cubes of the deviations to see which side is long.
+objective_zh: 判断两家平均数和方差都相同的门店能不能都备100杯，并用偏差的立方看出哪一侧被拉长。
+objective_zh_hk: 判斷兩間平均數同方差都相同嘅門店可唔可以都備100杯，並用偏差嘅立方睇出邊一邊被拉長。
 glossary:
 - en: skewness
   zh: 偏度
@@ -39,19 +50,19 @@ quiz:
   question_zh_hk: 兩間店平均都係100杯，方差都相同。點解廚房備100杯之前仍然可能要睇偏度？
   options_en:
   - 'A: The same average and the same spread can still hide which side is long.'
-  - 'B: Skewness replaces the average.'
+  - 'B: Skewness measures how widely the days spread, which the variance cannot.'
   - 'C: The same variance means the two shops have the same shape.'
-  - 'D: Skewness tells you tomorrow''s sales.'
+  - 'D: Skewness tells the kitchen exactly how many cups to prepare.'
   options_zh:
   - 'A: 平均数相同、分散程度相同，仍然可能看不出哪一侧被拉长。'
-  - 'B: 偏度可以代替平均数。'
+  - 'B: 偏度衡量每天分散得有多宽，这是方差做不到的。'
   - 'C: 方差相同，就表示两家店的形状相同。'
-  - 'D: 偏度可以告诉你明天的销量。'
+  - 'D: 偏度可以准确告诉厨房要备多少杯。'
   options_zh_hk:
   - 'A: 平均數相同、分散程度相同，仍然可能睇唔出邊一邊被拉長。'
-  - 'B: 偏度可以代替平均數。'
+  - 'B: 偏度量度每日分散得有幾闊，呢樣係方差做唔到嘅。'
   - 'C: 方差相同，就表示兩間店嘅形狀相同。'
-  - 'D: 偏度可以話你知聽日嘅銷量。'
+  - 'D: 偏度可以準確話畀廚房知要備幾多杯。'
   answer: A
   explanation_en: Shop A and Shop B both average 100 cups, and both have variance 1,000. A has one high day. B has one low day. Skewness is the next question after the average and the variance.
   explanation_zh: A店和B店平均都是100杯，方差都是1,000。A店有一个高峰日，B店有一个低谷日。看完平均数和方差，下一个问题就是偏度。
@@ -83,7 +94,7 @@ quiz:
 beats:
 - id: hook
   visual: title_card
-  seconds: 54
+  seconds: 48
   kicker: The Question
   kicker_en: The Question
   kicker_zh: 业务问题
@@ -91,15 +102,14 @@ beats:
   title_en: What is skewness?
   title_zh: 什么是偏度？
   title_zh_hk: 咩係偏度？
-  en: "Imagine you manage two coffee shops. Tomorrow morning you write one prep sheet. Both shops averaged 100 cups a day over five weekdays. One sheet of 100 looks right for both. It may not be. One shop can still throw cups out on most days. The other can still run out on most days. Wasted cups cost money. An empty shelf costs the sale. Which shop wastes? Which shop runs out? The number that answers that is called skewness. What is skewness?"
-  zh: "假设你管着两家咖啡店。明天早上你要写一张备货单。五个工作日里，两家平均每天都卖100杯。一张100杯的单看起来两家都合适。它可能不是。一家店仍然可能大多数天把杯子倒掉。另一家仍然可能大多数天卖完。倒掉的杯子是成本。卖完是丢了那一单。哪家浪费？哪家不够？回答这个问题的数叫作偏度。什么是偏度？"
-  zh_hk: "假設你管緊兩間咖啡店。聽朝早你要寫一張備貨單。五個平日入面，兩間平均每日都賣100杯。一張100杯嘅單睇落兩間都合適。佢可能唔係。一間店仍然可能大多數日子將杯倒走。另一間仍然可能大多數日子賣晒。倒走嘅杯係成本。賣晒就係丟咗嗰一單。邊間浪費？邊間唔夠？回答呢個問題嘅數叫做偏度。咩係偏度？"
+  en: Imagine you run two coffee shops, Shop A and Shop B. Tonight you write one prep sheet for tomorrow. Over five weekdays, both shops averaged 100 cups a day, and their days swung by the same amount. So 100 cups at each shop looks safe. It may not be. At one shop, 100 cups leaves cups to throw out on most days. At the other, 100 runs out on most days. Thrown-out cups cost money. Running out costs the sale. The average and the swing cannot tell you which shop is which. One more number can. What is skewness?
+  zh: 假设你管着两家咖啡店，A店和B店。今晚你要写明天的备货单。五个工作日里，两家店平均每天都卖100杯，每天的起伏也一样大。所以两家都备100杯，看起来很稳妥。其实未必。在其中一家，备100杯，大多数日子都要倒掉一些。在另一家，备100杯，大多数日子都会卖完。倒掉的杯子是成本，卖完了就丢了生意。平均数和起伏，都说不出哪家是哪家。还有一个数说得出。什么是偏度？
+  zh_hk: 假設你管住兩間咖啡店，A店同B店。今晚你要寫聽日嘅備貨單。五個平日入面，兩間店平均每日都賣100杯，每日嘅起跌亦一樣咁大。所以兩間都備100杯，睇落好穩陣。其實未必。喺其中一間，備100杯，大部分日子都要倒走啲。喺另一間，備100杯，大部分日子都會賣晒。倒走嘅杯係成本，賣晒就走咗生意。平均數同起跌，都講唔到邊間係邊間。仲有一個數講得到。咩係偏度？
 - id: data
   visual: series
   reveal: cells
-  seconds: 50
+  seconds: 48
   cols: 5
-  kicker: Five Days
   kicker_en: Five Days
   kicker_zh: 五天
   kicker_zh_hk: 五日
@@ -140,18 +150,19 @@ beats:
   footer_en: Both totals = 500
   footer_zh: 两家合计都是 500
   footer_zh_hk: 兩間合計都係 500
-  s1_en: Here are the five days behind that prep sheet. Shop A, in cups sold. Day 1 sold 70. Day 2 sold 80. Day 3 sold 90. Day 4 sold 100. Day 5 sold 160.
-  s1_zh: 这就是那张备货单背后的五天。A店卖出的杯数。第1天卖了70杯。第2天卖了80杯。第3天卖了90杯。第4天卖了100杯。第5天卖了160杯。
-  s1_zh_hk: 呢個就係嗰張備貨單背後嘅五日。A店賣出嚟嘅杯數。第1日賣咗70杯。第2日賣咗80杯。第3日賣咗90杯。第4日賣咗100杯。第5日賣咗160杯。
+  s1_en: 'Here are the five days behind that prep sheet, in cups sold. Shop A: Day 1 sold 70. Day 2 sold 80. Day 3 sold 90. Day 4 sold 100. Day 5 sold 160.'
+  s1_zh: 这就是那张备货单背后的五天，单位是卖出的杯数。A店：第1天卖了70杯，第2天80杯，第3天90杯，第4天100杯，第5天160杯。
+  s1_zh_hk: 呢個就係嗰張備貨單背後嘅五日，單位係賣出嘅杯數。A店：第1日賣咗70杯，第2日80杯，第3日90杯，第4日100杯，第5日160杯。
   s2_en: Those five add to 500, so the average is 100. Three days sit below 100. One day is a rush at 160.
-  s2_zh: 这五天加起来是500，所以平均数是100。三天低于100。一天是160的高峰。
-  s2_zh_hk: 呢五日加起嚟係500，所以平均數係100。三日低過100。一日係160嘅高峰。
-  s3_en: Shop B sold 40, 100, 110, 120, and 130. Same total, same average. But three days sit above 100, and one day is quiet at 40.
-  s3_zh: B店卖了40、100、110、120和130杯。总数一样，平均数一样。但三天高于100，一天是40的低谷。
-  s3_zh_hk: B店賣咗40、100、110、120同130杯。總數一樣，平均數一樣。但三日高過100，一日係40嘅低谷。
+  s2_zh: 这五天加起来是500，所以平均数是100。有三天低于100，有一天是160的高峰。
+  s2_zh_hk: 呢五日加埋係500，所以平均數係100。有三日低過100，有一日係160嘅高峰。
+  s3_en: Shop B sold 40, 100, 110, 120, and 130. Same total, same average. But three days sit above 100, and one day is quiet at 40. So does one sheet of 100 cups suit both shops?
+  s3_zh: B店卖了40、100、110、120和130杯。总数一样，平均数一样。但有三天高于100，有一天是40的低谷。那一张100杯的备货单，两家都合适吗？
+  s3_zh_hk: B店賣咗40、100、110、120同130杯。總數一樣，平均數一樣。但係有三日高過100，有一日係40嘅低谷。咁一張100杯嘅備貨單，兩間都啱用嗎？
+  kicker: Five Days
 - id: plans
   visual: two_column
-  seconds: 46
+  seconds: 38
   kicker: The Plans
   kicker_en: The Plans
   kicker_zh: 两套计划
@@ -159,24 +170,24 @@ beats:
   title_en: Same 100. Not the same risk.
   title_zh: 都是100，风险不同
   title_zh_hk: 都係100，風險唔同
-  left_en: 'A: three quiet days. Prep 100 wastes.'
-  left_zh: A：三天清闲。备100会浪费。
-  left_zh_hk: A：三日清閒。備100會浪費。
-  right_en: 'B: three busy days. Prep 100 runs out.'
-  right_zh: B：三天较忙。备100会不够。
-  right_zh_hk: B：三日較忙。備100會唔夠。
-  s1_en: So the averages match, and the days do not. Prepare 100 at Shop A. Three of the five days sold less. Those cups get thrown out.
-  s1_zh: 所以平均数一样，每天不一样。在A店备100杯。五天里有三天卖得更少。多出来的杯子会被倒掉。
-  s1_zh_hk: 所以平均數一樣，每日唔一樣。喺A店備100杯。五日入面有三日賣得更少。多出嚟嘅杯會被倒走。
-  s2_en: Prepare 100 at Shop B. Three of the five days sold more. Those days run out.
-  s2_zh: 在B店备100杯。五天里有三天卖得更多。那些天会不够。
-  s2_zh_hk: 喺B店備100杯。五日入面有三日賣得更多。嗰啲日會唔夠。
-  s3_en: Same 100, different risk, different plans. The average cannot say which shop wastes. Next we check it properly, then the spread, to see if either number can.
-  s3_zh: 都是100，风险不同，计划不同。平均数说不出哪家浪费。接下来我们把它算清楚，再看分散，看这两个数能不能说。
-  s3_zh_hk: 都係100，風險唔同，計劃唔同。平均數講唔出邊間浪費。跟住我哋將佢計清楚，再睇分散，睇呢兩個數可唔可以講。
+  left_en: 'A: prep 100, waste 3 days'
+  left_zh: A：备100，三天剩
+  left_zh_hk: A：備100，三日有剩
+  right_en: 'B: prep 100, short 3 days'
+  right_zh: B：备100，三天不够
+  right_zh_hk: B：備100，三日唔夠
+  s1_en: No. The averages match, but the days do not. Look at what one sheet of 100 does at each shop.
+  s1_zh: 不合适。平均数一样，每天却不一样。看看同一张100杯的单，在两家店会怎样。
+  s1_zh_hk: 唔啱。平均數一樣，每日就唔一樣。睇吓同一張100杯嘅單，喺兩間店會點。
+  s2_en: Prepare 100 at Shop A. On three of the five days it sold less, so cups are left over and thrown out.
+  s2_zh: 在A店备100杯。五天里有三天卖得更少，杯子剩下来，只好倒掉。
+  s2_zh_hk: 喺A店備100杯。五日入面有三日賣得少啲，啲杯剩低，惟有倒走。
+  s3_en: Prepare 100 at Shop B. On three of the five days it sold more, so it runs out. Same 100, different risk, different plans. Can the average, or the swing, tell the two shops apart?
+  s3_zh: 在B店备100杯。五天里有三天卖得更多，所以会卖完。同样是100，风险不同，计划也不同。平均数或者起伏，能不能把两家店分开？
+  s3_zh_hk: 喺B店備100杯。五日入面有三日賣得多啲，所以會賣晒。同樣係100，風險唔同，計劃都唔同。平均數或者起跌，可唔可以分得開兩間店？
 - id: average
   visual: definition_card
-  seconds: 36
+  seconds: 30
   kicker: The Average
   kicker_en: The Average
   kicker_zh: 平均数
@@ -193,15 +204,15 @@ beats:
   formula_zh_hk: '平均數 = 合計 / 日數
 
     500 / 5 = 100'
-  s1_en: So can either number tell them apart? First the average, the 100 on the prep sheet. Each shop sold 500 cups over the five days. The average is the total shared equally. 500 divided by 5 is 100 cups a day.
-  s1_zh: 那么这两个数能不能把它们分开？先看平均数，就是备货单上的那个100。每家店五天一共卖了500杯。平均数就是把总数平均分。500除以5，等于每天100杯。
-  s1_zh_hk: 咁呢兩個數可唔可以將佢哋分開？先睇平均數，就係備貨單上嗰個100。每間店五日一共賣咗500杯。平均數就係將總數平均分。500除以5，等於每日100杯。
-  s2_en: That does not mean either shop sold 100 every day. It is one reference number. Next we set each day beside 100, and see how far it sits.
-  s2_zh: 这不表示两家店每天真的都卖了100杯。它只是一个用来比较的数。接下来，把每天放在100旁边，看看离得有多远。
-  s2_zh_hk: 呢個唔代表兩間店每日真係都賣咗100杯。佢只係一個用嚟比較嘅數。跟住，將每日放喺100旁邊，睇吓離得有幾遠。
+  s1_en: Start with the average, the 100 on the prep sheet. Each shop sold 500 cups over the five days. The average is the total shared equally. 500 divided by 5 is 100 cups a day.
+  s1_zh: 先看平均数，就是备货单上的那个100。每家店五天一共卖了500杯。平均数就是把总数平均分。500除以5，等于每天100杯。
+  s1_zh_hk: 先睇平均數，即係備貨單上面嗰個100。每間店五日一共賣咗500杯。平均數就係將總數平均分。500除5，等於每日100杯。
+  s2_en: Both shops get exactly the same 100, so the average cannot split them. It is one reference point. So how far does each day sit from it?
+  s2_zh: 两家店得到的都是100，所以平均数分不开它们。它只是一个参照点。那每一天离它有多远？
+  s2_zh_hk: 兩間店得到嘅都係100，所以平均數分唔開佢哋。佢只係一個參照點。咁每一日離佢有幾遠？
 - id: distance
-  visual: steps
-  seconds: 46
+  visual: dev_bars
+  seconds: 66
   kicker: How Far
   kicker_en: How Far
   kicker_zh: 有多远
@@ -209,89 +220,93 @@ beats:
   title_en: Each day minus 100
   title_zh: 每天减去100
   title_zh_hk: 每日減100
-  step1_en: 'Day 1: 70 − 100 = −30'
-  step1_zh: 第1天：70 − 100 = −30
-  step1_zh_hk: 第1日：70 − 100 = −30
-  step2_en: 'Day 2: 80 − 100 = −20'
-  step2_zh: 第2天：80 − 100 = −20
-  step2_zh_hk: 第2日：80 − 100 = −20
-  step3_en: 'Day 3: 90 − 100 = −10'
-  step3_zh: 第3天：90 − 100 = −10
-  step3_zh_hk: 第3日：90 − 100 = −10
-  step4_en: 'Day 4: 100 − 100 = 0'
-  step4_zh: 第4天：100 − 100 = 0
-  step4_zh_hk: 第4日：100 − 100 = 0
-  step5_en: 'Day 5: 160 − 100 = +60'
-  step5_zh: 第5天：160 − 100 = +60
-  step5_zh_hk: 第5日：160 − 100 = +60
-  s1_en: Start with Shop A. Take each day and subtract 100. Write a minus if the day was below, a plus if it was above. Day 1 is 70 minus 100, so minus 30.
-  s1_zh: 先从A店开始。用每天的杯数减去100。低于100就写负号，高于100就写正号。第1天是70减100，等于负30。
-  s1_zh_hk: 先由A店開始。用每日嘅杯數減100。低過100就寫負號，高過100就寫正號。第1日係70減100，等於負30。
-  s2_en: Day 2 is 80 minus 100, so minus 20. Day 3 is 90 minus 100, so minus 10.
-  s2_zh: 第2天是80减100，等于负20。第3天是90减100，等于负10。
-  s2_zh_hk: 第2日係80減100，等於負20。第3日係90減100，等於負10。
-  s3_en: Day 4 is exactly 100, so zero. Day 5 is 160 minus 100, so plus 60. Three days below, one match, one rush. These how-far numbers are called deviations. The name can wait.
-  s3_zh: 第4天正好是100，所以是零。第5天是160减100，等于正60。三天低于，一天正好，一天是高峰。这些“有多远”叫作偏差。名字可以等一等。
-  s3_zh_hk: 第4日啱啱係100，所以係零。第5日係160減100，等於正60。三日低過，一日啱啱，一日係高峰。呢啲「有幾遠」叫做偏差。名可以等一等。
+  values: 70;80;90;100;160
+  mean: 100
+  labels_en: Day 1;Day 2;Day 3;Day 4;Day 5
+  labels_zh: 第1天;第2天;第3天;第4天;第5天
+  labels_zh_hk: 第1日;第2日;第3日;第4日;第5日
+  mark: far
+  footer_en: −30 − 20 − 10 + 0 + 60 = 0
+  footer_zh: −30 − 20 − 10 + 0 + 60 = 0
+  footer_zh_hk: −30 − 20 − 10 + 0 + 60 = 0
+  s1_en: Start with Shop A. Put each day beside the 100 line. Day 1, 70 cups, sits below it. Day 2, 80, and Day 3, 90, sit below too. Day 4 is right on the line. Day 5, 160, sits far above.
+  s1_zh: 先从A店开始。把每一天放在100这条线旁边。第1天70杯，在线下面。第2天80杯、第3天90杯，也在下面。第4天正好在线上。第5天160杯，远远在线上面。
+  s1_zh_hk: 先由A店開始。將每一日放喺100呢條線旁邊。第1日70杯，喺線下面。第2日80杯、第3日90杯，都喺下面。第4日啱啱喺線上。第5日160杯，遠遠喺線上面。
+  s2_en: 'Now measure each gap: the day minus 100. Day 1 is minus 30. Day 2 is minus 20. Day 3 is minus 10. Day 4 is zero. Day 5 is plus 60. A minus means below the average. A plus means above.'
+  s2_zh: 现在量一量每天的差距：当天的杯数减去100。第1天是负30，第2天是负20，第3天是负10，第4天是零，第5天是正60。负号表示低于平均数，正号表示高于平均数。
+  s2_zh_hk: 而家度吓每日嘅差距：當日嘅杯數減100。第1日係負30，第2日係負20，第3日係負10，第4日係零，第5日係正60。負號代表低過平均數，正號代表高過平均數。
+  s3_en: 'One far day above, three near days below. These signed gaps are called deviations. Add all five and you get zero: minus 30, minus 20 and minus 10 cancel the plus 60. They always cancel around the average. So how do we measure the swing without the cancelling?'
+  s3_zh: 上面一天很远，下面三天很近。这些带正负号的差距叫作偏差。五个加起来等于零：负30、负20、负10，刚好抵消正60。在平均数两边，它们总是会抵消。那要怎么量起伏，才不会被抵消掉？
+  s3_zh_hk: 上面一日好遠，下面三日好近。呢啲帶正負號嘅差距叫做偏差。五個加埋等於零：負30、負20、負10，啱啱抵銷正60。喺平均數兩邊，佢哋一定會抵銷。咁要點樣量起跌，先唔會被抵銷？
 - id: squares
-  visual: steps
-  seconds: 48
+  visual: dev_bars
+  seconds: 56
   kicker: The Spread
   kicker_en: The Spread
   kicker_zh: 分散
   kicker_zh_hk: 分散
-  title_en: Multiply by itself, then share
-  title_zh: 乘以自己，再平分
-  title_zh_hk: 乘自己，再平分
-  step1_en: 30 × 30 = 900. 20 × 20 = 400.
-  step1_zh: 30 × 30 = 900。20 × 20 = 400。
-  step1_zh_hk: 30 × 30 = 900。20 × 20 = 400。
-  step2_en: 10 × 10 = 100. 0 × 0 = 0. 60 × 60 = 3,600.
-  step2_zh: 10 × 10 = 100。0 × 0 = 0。60 × 60 = 3,600。
-  step2_zh_hk: 10 × 10 = 100。0 × 0 = 0。60 × 60 = 3,600。
-  step3_en: Sum = 5,000. 5,000 / 5 = 1,000.
-  step3_zh: 和 = 5,000。5,000 / 5 = 1,000。
-  step3_zh_hk: 和 = 5,000。5,000 / 5 = 1,000。
-  step4_en: Shop B does the same. Also 1,000.
-  step4_zh: B店同样做。也是 1,000。
-  step4_zh_hk: B店同樣做。都係 1,000。
-  s1_en: Can we just add those how-far numbers? The days below pull one way. The rush pulls the other. They can cancel, like a seesaw. Multiply each by itself, so both sides count.
-  s1_zh: 能不能把这些“有多远”直接加起来？低于100的那几天往一边拉。高峰往另一边拉。它们会抵消，像一个跷跷板。每一个都乘以自己，两边才都算。
-  s1_zh_hk: 可唔可以將呢啲「有幾遠」直接加起嚟？低過100嗰幾日往一邊拉。高峰往另一邊拉。佢哋會抵銷，好似一個蹺蹺板。每一個都乘自己，兩邊先都計。
-  s2_en: Thirty times 30 is 900. Twenty times 20 is 400. Ten times 10 is 100. Zero times zero is zero. Sixty times 60 is 3,600. A minus times a minus is a plus, so the quiet days count too.
-  s2_zh: 30乘30是900。20乘20是400。10乘10是100。零乘零是零。60乘60是3,600。负数乘负数，得到正数，所以清闲的那天也算进去。
-  s2_zh_hk: 30乘30係900。20乘20係400。10乘10係100。零乘零係零。60乘60係3,600。負數乘負數，得到正數，所以清閒嗰日都計埋。
-  s3_en: Add them and you get 5,000. Divide by 5. That is 1,000. Cups times cups, because we multiplied. We call it the variance. Do the same for Shop B and you get 1,000 again. The spread matches. It still cannot say which side is long.
-  s3_zh: 加起来是5,000。除以5，等于1,000。杯乘杯，因为我们做了乘法。我们叫它方差。对B店做同样的计算，也是1,000。分散对得上。它仍然说不出哪一侧被拉长。
-  s3_zh_hk: 加起嚟係5,000。除以5，等於1,000。杯乘杯，因為我哋做咗乘法。我哋叫佢做方差。對B店做同樣嘅計算，都係1,000。分散對得上。佢仍然講唔出邊一邊被拉長。
+  title_en: 'Times itself: the same spread'
+  title_zh: 乘以自己：分散一样
+  title_zh_hk: 乘自己：分散一樣
+  values: 70;80;90;100;160
+  values_b: 40;100;110;120;130
+  mean: 100
+  power: 2
+  labels_en: Day 1;Day 2;Day 3;Day 4;Day 5
+  labels_zh: 第1天;第2天;第3天;第4天;第5天
+  labels_zh_hk: 第1日;第2日;第3日;第4日;第5日
+  mark: none
+  name_a_en: Shop A
+  name_a_zh: A店
+  name_a_zh_hk: A店
+  name_b_en: Shop B
+  name_b_zh: B店
+  name_b_zh_hk: B店
+  footer_en: 'Each shop: 5,000 / 5 = 1,000'
+  footer_zh: 每家店：5,000 / 5 = 1,000
+  footer_zh_hk: 每間店：5,000 / 5 = 1,000
+  s1_en: Multiply each deviation by itself. A minus times a minus is a plus, so nothing cancels. Do it for both shops. Shop B's deviations are minus 60, zero, plus 10, plus 20, and plus 30.
+  s1_zh: 把每个偏差乘以自己。负数乘负数得正数，所以不会再抵消。两家店都这样做。B店的偏差是负60、零、正10、正20和正30。
+  s1_zh_hk: 將每個偏差乘自己。負數乘負數得正數，所以唔會再抵銷。兩間店都咁做。B店嘅偏差係負60、零、正10、正20同正30。
+  s2_en: Read the bars. Shop A gives 900, 400, 100, zero, and 3,600. Shop B gives 3,600, zero, 100, 400, and 900. The same five numbers, in a different order.
+  s2_zh: 读一读这些柱。A店是900、400、100、零和3,600。B店是3,600、零、100、400和900。同样的五个数，只是次序不同。
+  s2_zh_hk: 讀吓啲柱。A店係900、400、100、零同3,600。B店係3,600、零、100、400同900。同樣嘅五個數，只係次序唔同。
+  s3_en: So each shop adds to 5,000. Share it over 5 days and you get 1,000. That is the variance, and it is the same for both shops. But squaring wiped out every sign, so it cannot say which side is long. Then what is left that differs?
+  s3_zh: 所以每家店加起来都是5,000。平均分到5天，得到1,000。这就是方差，两家店一样。可是平方把所有正负号都抹掉了，所以它说不出哪一侧被拉长。那还剩下什么是不同的？
+  s3_zh_hk: 所以每間店加埋都係5,000。平均分落5日，得到1,000。呢個就係方差，兩間店一樣。但係平方將所有正負號都抹走咗，所以佢講唔到邊一邊被拉長。咁仲有乜嘢係唔同？
 - id: shape
-  visual: two_column
-  seconds: 44
+  visual: balance_line
+  seconds: 58
   kicker: The Shape
   kicker_en: The Shape
   kicker_zh: 形状
   kicker_zh_hk: 形狀
-  title_en: One high day, or one low day
-  title_zh: 一个高峰日，或一个低谷日
-  title_zh_hk: 一個高峰日，或者一個低谷日
-  left_en: 'A: 160 is the long high side'
-  left_zh: A：160 是被拉长的高的一侧
-  left_zh_hk: A：160 係被拉長嘅高嗰一邊
-  right_en: 'B: 40 is the long low side'
-  right_zh: B：40 是被拉长的低的一侧
-  right_zh_hk: B：40 係被拉長嘅低嗰一邊
-  s1_en: So the average matches, and the spread matches. What is left is the shape. Line Shop A up from low to high. Three days sit below 100. One day equals 100. One day, 160, sits out on the high side.
-  s1_zh: 所以平均数对得上，分散也对得上。剩下的是形状。把A店从少到多排好。三天低于100。一天正好是100。一天是160，远在高的一侧。
-  s1_zh_hk: 所以平均數對得上，分散都對得上。剩低嘅係形狀。將A店由少到多排好。三日低過100。一日啱啱係100。一日係160，遠喺高嗰一邊。
-  s2_en: That thin end is the tail. Think of a queue. Most people stand together. One person stands far to the right. Shop A has a long high side.
-  s2_zh: 细的那一端叫作尾巴。可以把它想成一队人。大多数人站在一起。一个人远远站在右边。A店的高的一侧被拉长。
-  s2_zh_hk: 幼嗰一端叫做尾巴。可以將佢想成一隊人。大多數人企埋一齊。一個人遠遠企喺右邊。A店高嗰一邊被拉長。
-  s3_en: Line Shop B up. Three days sit above 100. One day equals 100. One day, 40, sits out on the low side. Shop B has a long low side. Before we name these shapes, there is a quicker look.
-  s3_zh: 把B店排好。三天高于100。一天正好是100。一天是40，远在低的一侧。B店的低的一侧被拉长。给这两种形状起名字之前，还有一个更快的看法。
-  s3_zh_hk: 將B店排好。三日高過100。一日啱啱係100。一日係40，遠喺低嗰一邊。B店低嗰一邊被拉長。畀呢兩種形狀起名之前，仲有一個更快嘅睇法。
+  title_en: Three near days, one far day
+  title_zh: 三天很近，一天很远
+  title_zh_hk: 三日好近，一日好遠
+  values: 70;80;90;100;160
+  mean: 100
+  left_en: 'Below: 30 + 20 + 10 = 60'
+  left_zh: 低于100：30 + 20 + 10 = 60
+  left_zh_hk: 低過100：30 + 20 + 10 = 60
+  right_en: 'Above: one day, 60'
+  right_zh: 高于100：一天，60
+  right_zh_hk: 高過100：一日，60
+  footer_en: 'Shop B: the mirror, 40 far below'
+  footer_zh: B店相反：40 远在低的一侧
+  footer_zh_hk: B店相反：40 遠喺低嗰邊
+  s1_en: What is left is the shape. Put Shop A's five days on one line of cups. 70, 80 and 90 sit close together, 100 is next to them, and 160 sits far out on the right.
+  s1_zh: 剩下的就是形状。把A店的五天放在一条杯数的线上。70、80和90挤在一起，100就在旁边，160远远落在右边。
+  s1_zh_hk: 剩低嘅就係形狀。將A店嘅五日擺喺一條杯數嘅線上面。70、80同90擠埋一齊，100就喺隔籬，160遠遠落喺右邊。
+  s2_en: Put the average, 100, under the line as the balance point. The line balances there, even though only one day sits above it.
+  s2_zh: 把平均数100放在线的下面，当作支点。这条线就在那里平衡，虽然只有一天在它上面。
+  s2_zh_hk: 將平均數100擺喺條線下面，當係支點。條線就喺嗰度平衡，雖然得一日喺佢上面。
+  s3_en: 'On the left, three near days pull 30, 20 and 10, which is 60. On the right, one far day pulls 60 on its own. That lonely far end is called the tail. Shop A has a long high side. Shop B is the mirror: 40 sits alone, far out on the low side. Is there a quick way to spot which side is long?'
+  s3_zh: 左边三天很近，拉力是30、20和10，合共60。右边只有一天，很远，自己就拉了60。这一端孤零零地伸出去，叫作尾巴。A店的高的一侧被拉长。B店刚好相反：40孤零零地远在低的一侧。有没有一个快的方法，看出哪一侧被拉长？
+  s3_zh_hk: 左邊三日好近，拉力係30、20同10，加埋60。右邊得一日，好遠，自己就拉咗60。呢一端孤零零噉伸出去，叫做尾巴。A店高嗰一邊被拉長。B店啱啱相反：40孤零零噉遠喺低嗰一邊。有冇一個快嘅方法，睇得出邊一邊被拉長？
 - id: clue
   visual: two_column
-  seconds: 40
+  seconds: 44
   kicker: A Clue
   kicker_en: A Clue
   kicker_zh: 一个线索
@@ -299,24 +314,24 @@ beats:
   title_en: The middle day is a clue
   title_zh: 排在中间的一天是线索
   title_zh_hk: 排喺中間嘅一日係線索
-  left_en: 'A: average 100, middle day 90'
-  left_zh: A：平均数 100，中间的一天 90
-  left_zh_hk: A：平均數 100，中間嘅一日 90
-  right_en: 'B: average 100, middle day 110'
-  right_zh: B：平均数 100，中间的一天 110
-  right_zh_hk: B：平均數 100，中間嘅一日 110
-  s1_en: So which side is long? Line the days up and take the middle one. For Shop A that middle day is 90. For Shop B it is 110. Both averages are 100.
-  s1_zh: 那么哪一侧被拉长？把每天从少到多排好，取中间的一天。A店中间的一天是90。B店是110。两家的平均数都是100。
-  s1_zh_hk: 咁邊一邊被拉長？將每日由少到多排好，取中間嘅一日。A店中間嘅一日係90。B店係110。兩間嘅平均數都係100。
-  s2_en: Shop A's average sits above its middle day. Shop B's average sits below its middle day. That gap points at which side is long. The middle day is called the median. The name can wait. It is a clue, not the definition.
-  s2_zh: A店的平均数高于中间的一天。B店的平均数低于中间的一天。这个差距指向哪一侧被拉长。中间的一天叫作中位数。名字可以等一等。它是线索，不是定义。
-  s2_zh_hk: A店嘅平均數高過中間嘅一日。B店嘅平均數低過中間嘅一日。呢個差距指向邊一邊被拉長。中間嘅一日叫做中位數。名可以等一等。佢係線索，唔係定義。
-  s3_en: Do not stop at the two numbers. Open the five days. Shop A's high day is 160. Shop B's low day is 40. The middle day points you there. Those two shapes have names.
-  s3_zh: 不要停在这两个数上。打开这五天。A店的高峰是160，B店的低谷是40。中间的一天把你指到那里。这两种形状有名字。
-  s3_zh_hk: 唔好停喺呢兩個數度。打開呢五日。A店嘅高峰係160，B店嘅低谷係40。中間嘅一日將你指到嗰度。呢兩種形狀有名。
+  left_en: 'A: middle 90, average 100'
+  left_zh: A：中间 90，平均 100
+  left_zh_hk: A：中間 90，平均 100
+  right_en: 'B: middle 110, average 100'
+  right_zh: B：中间 110，平均 100
+  right_zh_hk: B：中間 110，平均 100
+  s1_en: Here is a quick clue. Line each shop's days up from low to high, and take the day in the middle.
+  s1_zh: 有一个快的线索。把每家店的五天从少到多排好，取排在中间的那一天。
+  s1_zh_hk: 有一個快嘅線索。將每間店嘅五日由少到多排好，攞排喺中間嗰一日。
+  s2_en: Shop A's middle day is 90. Its average, 100, sits above that, because the far day at 160 pulls the average toward the long high side.
+  s2_zh: A店中间的一天是90。它的平均数100比90高，因为160那个很远的一天，把平均数往被拉长的高的一侧拉。
+  s2_zh_hk: A店中間嗰一日係90。佢嘅平均數100比90高，因為160嗰個好遠嘅一日，將平均數向被拉長嘅高嗰一邊拉。
+  s3_en: Shop B's middle day is 110. Its average sits below that, pulled down by the quiet day at 40. The middle day is called the median. It is a clue, not the definition, so still open the five days. So what are these two shapes called?
+  s3_zh: B店中间的一天是110。它的平均数比110低，被40那个低谷往下拉。中间的那一天叫作中位数。它只是线索，不是定义，所以还是要打开那五天看看。那这两种形状叫什么？
+  s3_zh_hk: B店中間嗰一日係110。佢嘅平均數比110低，俾40嗰個低谷拉低咗。中間嗰一日叫做中位數。佢只係線索，唔係定義，所以都要打開嗰五日睇吓。咁呢兩種形狀叫咩？
 - id: name_right
   visual: title_card
-  seconds: 28
+  seconds: 30
   kicker: The Name
   kicker_en: The Name
   kicker_zh: 名字
@@ -324,9 +339,9 @@ beats:
   title_en: Right skew
   title_zh: 右偏
   title_zh_hk: 右偏
-  s1_en: Right skew. That is the name for a long high side. Shop A. Also called positive skew, because the long side sits above the average. The name is a place on the line, not a verdict that the shop is better.
-  s1_zh: 右偏。这就是高的一侧被拉长的名字。A店。也叫正偏，因为被拉长的一侧在平均数上面。这个名字是排队之后的位置，不是这家店更好的判决。
-  s1_zh_hk: 右偏。呢個就係高嗰一邊被拉長嘅名。A店。亦叫正偏，因為被拉長嗰一邊喺平均數上面。呢個名係排好隊之後嘅位置，唔係呢間店更好嘅判決。
+  en: Right skew. That is the name for a long high side, like Shop A. It is also called positive skew, because the far day sits above the average. Draw the line from low to high, and the tail points right. The name is a place on the line, not a verdict that the shop is better. And the mirror shape?
+  zh: 右偏。这就是高的一侧被拉长的名字，像A店。它也叫正偏，因为那个很远的一天在平均数上面。把线从低画到高，尾巴就指向右边。这个名字只是线上的位置，不是说这家店更好。那反过来的形状呢？
+  zh_hk: 右偏。呢個就係高嗰一邊被拉長嘅名，好似A店。佢亦叫正偏，因為嗰個好遠嘅一日喺平均數上面。將條線由低畫到高，條尾就指向右邊。呢個名只係線上面嘅位置，唔係話呢間店好啲。咁反轉嘅形狀呢？
 - id: name_left
   visual: title_card
   seconds: 28
@@ -337,12 +352,13 @@ beats:
   title_en: Left skew
   title_zh: 左偏
   title_zh_hk: 左偏
-  s1_en: Left skew. That is the name for a long low side. Shop B. Also called negative skew, because the long side sits below the average. We have named the shape. Now we need a number for how long that side is.
-  s1_zh: 左偏。这就是低的一侧被拉长的名字。B店。也叫负偏，因为被拉长的一侧在平均数下面。形状已经有名字了。现在我们需要一个数，来说那一侧有多长。
-  s1_zh_hk: 左偏。呢個就係低嗰一邊被拉長嘅名。B店。亦叫負偏，因為被拉長嗰一邊喺平均數下面。形狀已經有名。而家我哋需要一個數，嚟講嗰一邊有幾長。
+  en: Left skew. That is the name for a long low side, like Shop B. It is also called negative skew, because the far day sits below the average, and the tail points left. Now the shapes have names. But we want a number for them, and squaring threw the sign away. What keeps the sign?
+  zh: 左偏。这就是低的一侧被拉长的名字，像B店。它也叫负偏，因为那个很远的一天在平均数下面，尾巴指向左边。现在形状有了名字。可是我们想要一个数，而平方已经把正负号丢掉了。怎样才能保住正负号？
+  zh_hk: 左偏。呢個就係低嗰一邊被拉長嘅名，好似B店。佢亦叫負偏，因為嗰個好遠嘅一日喺平均數下面，條尾指向左邊。而家形狀有咗名。但係我哋想要一個數，而平方已經將正負號掉咗。點樣先保得住正負號？
 - id: why_cube
   visual: steps
-  seconds: 48
+  layout: rows
+  seconds: 56
   kicker: Why Cube
   kicker_en: Why Cube
   kicker_zh: 为什么要立方
@@ -350,89 +366,126 @@ beats:
   title_en: Multiply by itself, then again
   title_zh: 乘以自己，再乘一次
   title_zh_hk: 乘自己，再乘一次
-  step1_en: 2 × 2 = 4. The sign is gone.
-  step1_zh: 2 × 2 = 4。符号没有了。
-  step1_zh_hk: 2 × 2 = 4。符號冇咗。
-  step2_en: 2 × 2 × 2 = 8
-  step2_zh: 2 × 2 × 2 = 8
-  step2_zh_hk: 2 × 2 × 2 = 8
+  step1_en: 2 × 2 = 4 and −2 × −2 = 4
+  step1_zh: 2 × 2 = 4，−2 × −2 = 4
+  step1_zh_hk: 2 × 2 = 4，−2 × −2 = 4
+  step2_en: 2 × 2 × 2 = +8
+  step2_zh: 2 × 2 × 2 = +8
+  step2_zh_hk: 2 × 2 × 2 = +8
   step3_en: −2 × −2 × −2 = −8
   step3_zh: −2 × −2 × −2 = −8
   step3_zh_hk: −2 × −2 × −2 = −8
-  step4_en: The sign survives
-  step4_zh: 符号还在
-  step4_zh_hk: 符號仲喺度
-  s1_en: Variance already multiplied each distance by itself. That wiped the sign. Two times two is 4. Minus 2 times minus 2 is also 4. So variance can say how big the swing is, and nothing about which side is long.
-  s1_zh: 方差已经把每个距离乘以自己。符号被抹掉了。2乘2等于4。负2乘负2也等于4。所以方差只能说晃动有多大，不能说哪一侧被拉长。
-  s1_zh_hk: 方差已經將每個距離乘自己。符號被抹走咗。2乘2等於4。負2乘負2都等於4。所以方差只可以話搖動有幾大，唔可以話邊一邊被拉長。
-  s2_en: This time we multiply by itself, then by itself again. Two times two times two is 8. That is a cube. A small example first.
-  s2_zh: 这一次，我们乘以自己，再乘以自己一次。2乘2乘2等于8。这就是立方。先看一个小的。
-  s2_zh_hk: 呢一次，我哋乘自己，再乘自己一次。2乘2乘2等於8。呢個就係立方。先睇一個細嘅。
-  s3_en: 'Minus 2 times minus 2 times minus 2 is minus 8. The sign survives. A day above 100 stays positive. A day below 100 stays negative. And a far day weighs more: 4 times 4 times 4 is 64, while 2 times 2 times 2 is only 8.'
-  s3_zh: 负2乘负2乘负2等于负8。符号还在。高于100的一天仍然是正的。低于100的一天仍然是负的。而且远的一天更重：4乘4乘4是64，2乘2乘2只有8。
-  s3_zh_hk: 負2乘負2乘負2等於負8。符號仲喺度。高過100嘅一日仍然係正。低過100嘅一日仍然係負。而且遠嘅一日更重：4乘4乘4係64，2乘2乘2只有8。
+  step4_en: 4 × 4 × 4 = 64
+  step4_zh: 4 × 4 × 4 = 64
+  step4_zh_hk: 4 × 4 × 4 = 64
+  s1_en: Squaring loses the sign. 2 times 2 is 4, and minus 2 times minus 2 is also 4. A day above and a day below look the same.
+  s1_zh: 平方会丢掉正负号。2乘2等于4，负2乘负2也等于4。高于平均的一天和低于平均的一天，看起来一模一样。
+  s1_zh_hk: 平方會掉咗正負號。2乘2等於4，負2乘負2都等於4。高過平均嘅一日同低過平均嘅一日，睇落一模一樣。
+  s2_en: So multiply once more. 2 times 2 times 2 is 8. A number times itself, then times itself again, is called its cube.
+  s2_zh: 所以再乘一次。2乘2乘2等于8。一个数乘以自己，再乘以自己一次，叫作它的立方。
+  s2_zh_hk: 所以再乘多一次。2乘2乘2等於8。一個數乘自己，再乘自己一次，叫做佢嘅立方。
+  s3_en: Now minus 2 times minus 2 times minus 2. The first two make plus 4, and times minus 2 gives minus 8. The sign survives. A day above stays plus. A day below stays minus.
+  s3_zh: 再看负2乘负2乘负2。前两个得正4，再乘负2，得负8。正负号保住了。高于平均的一天仍然是正，低于平均的一天仍然是负。
+  s3_zh_hk: 再睇負2乘負2乘負2。頭兩個得正4，再乘負2，得負8。正負號保住咗。高過平均嘅一日仍然係正，低過平均嘅一日仍然係負。
+  s4_en: And a far day weighs much more. 4 is only twice as far as 2, but 4 cubed is 64, eight times as big as 8. So what happens when we cube Shop A's days?
+  s4_zh: 而且远的一天分量重得多。4只是2的两倍远，但4的立方是64，是8的八倍。那把A店的每一天都立方，会怎样？
+  s4_zh_hk: 而且遠嘅一日份量重好多。4只係2嘅兩倍遠，但係4嘅立方係64，係8嘅八倍。咁將A店每一日都立方，會點？
 - id: cubes_a
-  visual: steps
-  seconds: 48
+  visual: dev_bars
+  seconds: 58
   kicker: Shop A
   kicker_en: Shop A
   kicker_zh: A店
   kicker_zh_hk: A店
-  title_en: Cube every day at A
+  title_en: Cube every day at Shop A
   title_zh: 把A店的每一天立方
-  title_zh_hk: 將A店嘅每一日立方
-  step1_en: −30 × −30 × −30 = −27,000
-  step1_zh: −30 × −30 × −30 = −27,000
-  step1_zh_hk: −30 × −30 × −30 = −27,000
-  step2_en: −20 cubed = −8,000. −10 cubed = −1,000.
-  step2_zh: −20 的立方 = −8,000。−10 的立方 = −1,000。
-  step2_zh_hk: −20 嘅立方 = −8,000。−10 嘅立方 = −1,000。
-  step3_en: 0 cubed = 0. +60 cubed = +216,000.
-  step3_zh: 0 的立方 = 0。+60 的立方 = +216,000。
-  step3_zh_hk: 0 嘅立方 = 0。+60 嘅立方 = +216,000。
-  step4_en: The rush outweighs the three quiet days
-  step4_zh: 高峰压过了三天清闲
-  step4_zh_hk: 高峰壓過咗三日清閒
-  s1_en: 'Now do that for every day at A. We already have the five how-far numbers: minus 30, minus 20, minus 10, zero, and plus 60.'
-  s1_zh: 现在对A店的每一天都这样做。我们刚才已经有了五个“有多远”：负30、负20、负10、零和正60。
-  s1_zh_hk: 而家對A店嘅每一日都咁做。我哋頭先已經有咗五個「有幾遠」：負30、負20、負10、零同正60。
-  s2_en: Minus 30 times itself, then again, is minus 27,000. Minus 20 gives minus 8,000. Minus 10 gives minus 1,000. The three quiet days pull down.
-  s2_zh: 负30乘自己，再乘一次，等于负27,000。负20是负8,000。负10是负1,000。三天清闲往下拉。
-  s2_zh_hk: 負30乘自己，再乘一次，等於負27,000。負20係負8,000。負10係負1,000。三日清閒向下拉。
-  s3_en: Zero times itself is zero. Plus 60 times itself, then again, is plus 216,000. One rush outweighs the three quiet days. That is the long high side, in a number.
-  s3_zh: 零乘自己是零。正60乘自己，再乘一次，等于正216,000。一个高峰压过了三天清闲。这就是被拉长的高的一侧，写成一个数。
-  s3_zh_hk: 零乘自己係零。正60乘自己，再乘一次，等於正216,000。一個高峰壓過咗三日清閒。呢個就係被拉長嘅高嗰一邊，寫成一個數。
+  title_zh_hk: 將A店每一日立方
+  values: 70;80;90;100;160
+  mean: 100
+  power: 3
+  labels_en: Day 1;Day 2;Day 3;Day 4;Day 5
+  labels_zh: 第1天;第2天;第3天;第4天;第5天
+  labels_zh_hk: 第1日;第2日;第3日;第4日;第5日
+  mark: far
+  footer_en: Sum of cubes = +180,000
+  footer_zh: 立方之和 = +180,000
+  footer_zh_hk: 立方之和 = +180,000
+  s1_en: 'Take Shop A''s five deviations and cube each one. You can see it under each day: minus 30 cubed, minus 20 cubed, minus 10 cubed, zero cubed, and plus 60 cubed.'
+  s1_zh: 拿A店的五个偏差，每一个都立方。每天下面都写着：负30的立方、负20的立方、负10的立方、零的立方，还有正60的立方。
+  s1_zh_hk: 攞A店嘅五個偏差，每一個都立方。每日下面都寫住：負30嘅立方、負20嘅立方、負10嘅立方、零嘅立方，同正60嘅立方。
+  s2_en: Minus 30 cubed is minus 27,000. Minus 20 gives minus 8,000, and minus 10 gives minus 1,000. Zero stays zero. Plus 60 cubed is plus 216,000. The three quiet days point down, but they are small.
+  s2_zh: 负30的立方是负27,000。负20是负8,000，负10是负1,000。零还是零。正60的立方是正216,000。三天清闲的往下指，但都很小。
+  s2_zh_hk: 負30嘅立方係負27,000。負20係負8,000，負10係負1,000。零仍然係零。正60嘅立方係正216,000。三日清閒嘅向下指，但係都好細。
+  s3_en: 'The far day towers over the rest. Add the five: 216,000 minus 27,000, minus 8,000, minus 1,000 is plus 180,000. Plus, because the long side is high. What does Shop B give?'
+  s3_zh: 很远的那一天比其他几天高出一大截。五个加起来：216,000减27,000，减8,000，再减1,000，等于正180,000。是正的，因为被拉长的是高的一侧。那B店会得到什么？
+  s3_zh_hk: 好遠嗰一日比其他日高出一大截。五個加埋：216,000減27,000，減8,000，再減1,000，等於正180,000。係正，因為被拉長嘅係高嗰一邊。咁B店會得到乜？
 - id: cubes_b
-  visual: steps
-  seconds: 42
+  visual: dev_bars
+  seconds: 46
   kicker: Shop B
   kicker_en: Shop B
   kicker_zh: B店
   kicker_zh_hk: B店
-  title_en: Same steps. The other side.
-  title_zh: 同样的步骤，另一侧
-  title_zh_hk: 同樣嘅步驟，另一邊
-  step1_en: −60 cubed = −216,000
-  step1_zh: −60 的立方 = −216,000
-  step1_zh_hk: −60 嘅立方 = −216,000
-  step2_en: 0, +1,000, +8,000, +27,000
-  step2_zh: 0，+1,000，+8,000，+27,000
-  step2_zh_hk: 0，+1,000，+8,000，+27,000
-  step3_en: The quiet day outweighs the three busy days
-  step3_zh: 低谷压过了三天较忙
-  step3_zh_hk: 低谷壓過咗三日較忙
-  s1_en: Now the same steps for Shop B. How far is each day from 100? Minus 60, zero, plus 10, plus 20, and plus 30.
-  s1_zh: 现在用同样的步骤看B店。每天离100有多远？负60、零、正10、正20和正30。
-  s1_zh_hk: 而家用同樣嘅步驟睇B店。每日離100有幾遠？負60、零、正10、正20同正30。
-  s2_en: Minus 60 times itself, then again, is minus 216,000. The three busy days give plus 1,000, plus 8,000, and plus 27,000.
-  s2_zh: 负60乘自己，再乘一次，等于负216,000。三天较忙给出正1,000、正8,000和正27,000。
-  s2_zh_hk: 負60乘自己，再乘一次，等於負216,000。三日較忙畀出正1,000、正8,000同正27,000。
-  s3_en: One quiet day outweighs the three busy days. That is the long low side, in a number. We have the idea. It has a name.
-  s3_zh: 一个低谷压过了三天较忙。这就是被拉长的低的一侧，写成一个数。想法已经有了。它有一个名字。
-  s3_zh_hk: 一個低谷壓過咗三日較忙。呢個就係被拉長嘅低嗰一邊，寫成一個數。想法已經有。佢有一個名。
+  title_en: Same steps at Shop B
+  title_zh: B店，同样的步骤
+  title_zh_hk: B店，同樣步驟
+  values: 40;100;110;120;130
+  mean: 100
+  power: 3
+  labels_en: Day 1;Day 2;Day 3;Day 4;Day 5
+  labels_zh: 第1天;第2天;第3天;第4天;第5天
+  labels_zh_hk: 第1日;第2日;第3日;第4日;第5日
+  mark: far
+  footer_en: Sum of cubes = −180,000
+  footer_zh: 立方之和 = −180,000
+  footer_zh_hk: 立方之和 = −180,000
+  s1_en: Shop B's deviations are minus 60, zero, plus 10, plus 20, and plus 30. Cube each one, the same way.
+  s1_zh: B店的偏差是负60、零、正10、正20和正30。用同样的方法，每一个都立方。
+  s1_zh_hk: B店嘅偏差係負60、零、正10、正20同正30。用同樣嘅方法，每一個都立方。
+  s2_en: Minus 60 cubed is minus 216,000. Zero stays zero. Plus 10, 20, and 30 cubed give plus 1,000, plus 8,000, and plus 27,000.
+  s2_zh: 负60的立方是负216,000。零还是零。正10、20、30的立方，是正1,000、正8,000和正27,000。
+  s2_zh_hk: 負60嘅立方係負216,000。零仍然係零。正10、20、30嘅立方，係正1,000、正8,000同正27,000。
+  s3_en: 'Now the far day points down and outweighs the three busy days. The sum is minus 180,000: the same size as Shop A, with the opposite sign. The sign shows the long side. But 180,000 of what?'
+  s3_zh: 这次很远的那一天往下指，压过了三天较忙的。总和是负180,000：大小和A店一样，正负号相反。正负号指出被拉长的一侧。可是，180,000是什么单位？
+  s3_zh_hk: 今次好遠嗰一日向下指，壓過咗三日較忙嘅。總和係負180,000：大細同A店一樣，正負號相反。正負號指出被拉長嘅一邊。但係，180,000係乜嘢單位？
+- id: formula
+  visual: steps
+  layout: rows
+  seconds: 70
+  kicker: Take Out the Cups
+  kicker_en: Take Out the Cups
+  kicker_zh: 去掉单位
+  kicker_zh_hk: 拎走單位
+  title_en: Share it, then take out the cups
+  title_zh: 平分，再去掉杯
+  title_zh_hk: 平分，再拎走杯
+  step1_en: 180,000 / 5 = 36,000
+  step1_zh: 180,000 / 5 = 36,000
+  step1_zh_hk: 180,000 / 5 = 36,000
+  step2_en: σ = √1,000 ≈ 31.6
+  step2_zh: σ = √1,000 ≈ 31.6
+  step2_zh_hk: σ = √1,000 ≈ 31.6
+  step3_en: 31.6 × 31.6 × 31.6 ≈ 31,600
+  step3_zh: 31.6 × 31.6 × 31.6 ≈ 31,600
+  step3_zh_hk: 31.6 × 31.6 × 31.6 ≈ 31,600
+  step4_en: 36,000 / 31,600 ≈ +1.1
+  step4_zh: 36,000 / 31,600 ≈ +1.1
+  step4_zh_hk: 36,000 / 31,600 ≈ +1.1
+  s1_en: It is cups times cups times cups, so the number is huge and its unit is strange. First share Shop A's sum over the 5 days, like an average. 180,000 divided by 5 is 36,000.
+  s1_zh: 单位是杯乘杯乘杯，所以这个数很大，单位也很怪。先把A店的总和平均分到5天，就像算平均数。180,000除以5，等于36,000。
+  s1_zh_hk: 單位係杯乘杯乘杯，所以呢個數好大，單位亦好怪。先將A店嘅總和平均分落5日，好似計平均數噉。180,000除5，等於36,000。
+  s2_en: 'Next, the typical swing in plain cups. That is the standard deviation, written sigma: the number that, times itself, gives the variance of 1,000. It is about 31.6 cups.'
+  s2_zh: 接着，用普通的杯数说典型的起伏。这就是标准差，写作西格玛：自己乘自己会得到方差1,000的那个数。它大约是31.6杯。
+  s2_zh_hk: 跟住，用普通嘅杯數講典型嘅起跌。呢個就係標準差，寫做西格瑪：自己乘自己會得到方差1,000嗰個數。佢大約係31.6杯。
+  s3_en: Cube it as well. 31.6 times 31.6 times 31.6 is about 31,600. That is cups cubed too, like the 36,000.
+  s3_zh: 把它也立方。31.6乘31.6乘31.6，大约是31,600。它也是杯的立方，和36,000一样。
+  s3_zh_hk: 將佢都立方。31.6乘31.6乘31.6，大約係31,600。佢都係杯嘅立方，同36,000一樣。
+  s4_en: Now divide. 36,000 over 31,600 is about plus 1.1. The cups cancel, so it is a plain number that any two shops can share. Shop B, with minus 180,000, gives about minus 1.1. So what is this number called?
+  s4_zh: 现在相除。36,000除以31,600，大约是正1.1。杯这个单位约掉了，变成一个普通的数，任何两家店都可以拿来比较。B店的总和是负180,000，算出来大约是负1.1。那这个数叫什么？
+  s4_zh_hk: 而家相除。36,000除31,600，大約係正1.1。杯呢個單位約咗，變成一個普通嘅數，任何兩間店都可以攞嚟比較。B店嘅總和係負180,000，計出嚟大約係負1.1。咁呢個數叫咩？
 - id: name_skew
   visual: title_card
-  seconds: 32
+  seconds: 34
   kicker: The Name
   kicker_en: The Name
   kicker_zh: 名字
@@ -440,43 +493,12 @@ beats:
   title_en: Skewness
   title_zh: 偏度
   title_zh_hk: 偏度
-  s1_en: Skewness. That is the name. It is the number that says which side is long, after the average and the variance have already matched. Next, the formula writes these same steps in short names.
-  s1_zh: 偏度。这就是那个名字。它是那个说哪一侧被拉长的数，在平均数和方差已经对上之后。接下来，公式用简称写下刚才这些步骤。
-  s1_zh_hk: 偏度。呢個就係嗰個名。佢係嗰個講邊一邊被拉長嘅數，喺平均數同方差已經對上之後。跟住，公式用簡稱寫低頭先呢啲步驟。
-- id: formula
-  visual: steps
-  seconds: 52
-  kicker: The Formula
-  kicker_en: The Formula
-  kicker_zh: 公式
-  kicker_zh_hk: 公式
-  title_en: Nicknames for steps we already did
-  title_zh: 给已经做过的步骤起简称
-  title_zh_hk: 畀已經做過嘅步驟起簡稱
-  step1_en: Each day is an x. The average is μ = 100.
-  step1_zh: 每一天是一个 x。平均数是 μ = 100。
-  step1_zh_hk: 每一日係一個 x。平均數係 μ = 100。
-  step2_en: 'Cube the how-far: (x − μ) × itself × itself'
-  step2_zh: 把“有多远”立方：(x − μ) × 自己 × 自己
-  step2_zh_hk: 將「有幾遠」立方：(x − μ) × 自己 × 自己
-  step3_en: Σ means add. n is 5. Then divide by σ³.
-  step3_zh: Σ 表示相加。n 是 5。再除以 σ³。
-  step3_zh_hk: Σ 表示相加。n 係 5。再除以 σ³。
-  step4_en: A about +1.1. B about −1.1.
-  step4_zh: A 大约 +1.1。B 大约 −1.1。
-  step4_zh_hk: A 大約 +1.1。B 大約 −1.1。
-  s1_en: The formula is only nicknames for steps we already did. Each day is an x. The average is mu, 100. How far is x minus mu. We then multiply that by itself, then by itself again.
-  s1_zh: 公式只是给已经做过的步骤起简称。每一天是一个 x。平均数是 mu，100。有多远就是 x 减去 mu。然后我们把它乘以自己，再乘以自己一次。
-  s1_zh_hk: 公式只係畀已經做過嘅步驟起簡稱。每一日係一個 x。平均數係 mu，100。有幾遠就係 x 減 mu。跟住我哋將佢乘自己，再乘自己一次。
-  s2_en: Capital sigma means add every one of those, not just two. n is how many days, 5. Sigma is the standard deviation, the number that times itself gives the variance. Here it is the same for both shops. Sigma times itself, then again, takes the cups out, so the two shops can be compared as plain numbers.
-  s2_zh: 大写西格玛表示每一个都加，不是只加两个。n 是有多少天，5。西格玛是标准差，就是自己乘自己得到方差的那个数。这里两家店相同。西格玛乘自己，再乘一次，把杯这个单位去掉，所以两家店可以当成普通的数来比较。
-  s2_zh_hk: 大寫西格瑪表示每一個都加，唔係只加兩個。n 係有幾多日，5。西格瑪係標準差，就係自己乘自己得到方差嗰個數。呢度兩間店相同。西格瑪乘自己，再乘一次，將杯呢個單位拎走，所以兩間店可以當成普通嘅數嚟比較。
-  s3_en: For Shop A the result is about plus 1.1. Positive, so the long side is the high side. Right skew. For Shop B it is about minus 1.1. Negative, so the long side is the low side. Left skew. Zero means the cubed distances balance. It does not, by itself, prove the two sides are perfect mirrors. The same steps have a written form.
-  s3_zh: A店算出来大约是正1.1。正的，所以被拉长的是高的一侧。右偏。B店大约是负1.1。负的，所以被拉长的是低的一侧。左偏。零表示这些立方互相平衡。单凭零，不能证明两侧是完美的镜像。同样的步骤有一个写法。
-  s3_zh_hk: A店計出嚟大約係正1.1。正，所以被拉長嘅係高嗰一邊。右偏。B店大約係負1.1。負，所以被拉長嘅係低嗰一邊。左偏。零表示呢啲立方互相平衡。單憑零，唔可以證明兩邊係完美嘅鏡像。同樣嘅步驟有一個寫法。
+  en: Skewness. It is the number that says which side is long, after the average and the variance have matched. Plus means a long high side, right skew, like Shop A at about plus 1.1. Minus means a long low side, left skew, like Shop B at about minus 1.1. Near zero means the cubes balance. So how do we write it for any group of days?
+  zh: 偏度。在平均数和方差都对上之后，它就是说出哪一侧被拉长的那个数。正的表示高的一侧被拉长，也就是右偏，像A店，大约正1.1。负的表示低的一侧被拉长，也就是左偏，像B店，大约负1.1。接近零，表示这些立方互相平衡。那换成任何一组日子，要怎么写？
+  zh_hk: 偏度。喺平均數同方差都對上之後，佢就係講出邊一邊被拉長嗰個數。正嘅代表高嗰一邊被拉長，即係右偏，好似A店，大約正1.1。負嘅代表低嗰一邊被拉長，即係左偏，好似B店，大約負1.1。接近零，代表呢啲立方互相平衡。咁換成任何一組日子，要點寫？
 - id: defn
   visual: definition_card
-  seconds: 40
+  seconds: 44
   kicker: The Definition
   kicker_en: The Definition
   kicker_zh: 定义
@@ -484,22 +506,22 @@ beats:
   title_en: Skewness, written down
   title_zh: 偏度，写成公式
   title_zh_hk: 偏度，寫成公式
-  formula: Skewness = (sum of cubed distances / n) / σ³
-  formula_zh: 偏度 = （立方距离之和 / n） / σ³
-  formula_zh_hk: 偏度 = （立方距離之和 / n） / σ³
+  formula: Skewness = (Σ(x − μ)³ / n) / σ³
+  formula_zh: 偏度 = (Σ(x − μ)³ / n) / σ³
+  formula_zh_hk: 偏度 = (Σ(x − μ)³ / n) / σ³
   formula_tex: \dfrac{\sum (x_i - \mu)^3 / n}{\sigma^3}
-  gloss: A about +1.1. B about −1.1.
-  gloss_zh: A 大约 +1.1。B 大约 −1.1。
-  gloss_zh_hk: A 大約 +1.1。B 大約 −1.1。
-  s1_en: Here is the written form. Cube each day's distance from the average. Add those cubes, divide by n, then divide by sigma cubed. That last divide takes the cups out, so the two shops can be compared as plain numbers.
-  s1_zh: 这就是写法。把每天离平均数的距离立方。把这些立方加起来，除以 n，再除以西格玛的立方。最后这一步把杯这个单位去掉，所以两家店可以当成普通的数来比较。
-  s1_zh_hk: 呢個就係寫法。將每日離平均數嘅距離立方。將呢啲立方加起嚟，除以 n，再除以西格瑪嘅立方。最後呢一步將杯呢個單位拎走，所以兩間店可以當成普通嘅數嚟比較。
-  s2_en: For Shop A that number is about plus 1.1. For Shop B it is about minus 1.1. The sign is the long side. This is the definition. It is not an order to change the prep sheet.
-  s2_zh: A店这个数大约是正1.1。B店大约是负1.1。符号就是被拉长的一侧。这就是定义。它不是改备货单的指令。
-  s2_zh_hk: A店呢個數大約係正1.1。B店大約係負1.1。符號就係被拉長嘅一邊。呢個就係定義。佢唔係改備貨單嘅指令。
+  gloss: The sign shows which side is long
+  gloss_zh: 正负号说明哪一侧被拉长
+  gloss_zh_hk: 正負號話你知邊一邊被拉長
+  s1_en: Here are the same steps in symbols. x is each day and mu is the average, so x minus mu is the deviation. Cube each one. The big sigma means add them all. Divide by n, the number of days. Then divide by small sigma cubed, the standard deviation cubed.
+  s1_zh: 这是同样的步骤，用符号写出来。x是每一天，mu是平均数，所以x减mu就是偏差。每一个都立方。大写的西格玛表示全部加起来。除以n，也就是天数。再除以小写西格玛的立方，就是标准差的立方。
+  s1_zh_hk: 呢個係同樣嘅步驟，用符號寫出嚟。x係每一日，mu係平均數，所以x減mu就係偏差。每一個都立方。大寫嘅西格瑪代表全部加埋。除以n，即係日數。再除以細寫西格瑪嘅立方，即係標準差嘅立方。
+  s2_en: We divide by n, the number of days, as we did for the variance. For Shop A it gives about plus 1.1, and for Shop B about minus 1.1. So what can this number tell you, and what can it not?
+  s2_zh: 和方差一样，我们除以n，也就是天数。A店得到大约正1.1，B店大约负1.1。那这个数能告诉你什么，又不能告诉你什么？
+  s2_zh_hk: 同方差一樣，我哋除以n，即係日數。A店得到大約正1.1，B店大約負1.1。咁呢個數話到你知啲乜，又話唔到你知啲乜？
 - id: limit
   visual: two_column
-  seconds: 44
+  seconds: 64
   kicker: The Limit
   kicker_en: The Limit
   kicker_zh: 限度
@@ -507,24 +529,24 @@ beats:
   title_en: A reason to check, not an order
   title_zh: 是检查的理由，不是指令
   title_zh_hk: 係檢查嘅理由，唔係指令
-  left_en: Why it helps
-  left_zh: 它有什么用
-  left_zh_hk: 佢有咩用
-  right_en: What it is not
-  right_zh: 它不是什么
-  right_zh_hk: 佢唔係乜
-  s1_en: So why keep the number, if it is not an order? It uses every day. Cubing keeps the sign, so a day above and a day below do not cancel. Even when the average and the variance match, we can still see that the plans should differ.
-  s1_zh: 那么如果它不是指令，为什么还要留着这个数？它用到每一天。立方保住了符号，所以高于平均数的一天和低于平均数的一天不会互相抵消。即使平均数和方差都一样，我们仍然看得出计划应该不同。
-  s1_zh_hk: 咁如果佢唔係指令，點解仲要留住呢個數？佢用到每一日。立方保住咗符號，所以高過平均數嘅一日同低過平均數嘅一日唔會互相抵銷。就算平均數同方差都一樣，我哋仍然睇得出計劃應該唔同。
-  s2_en: A plus does not mean the shop is better, and a minus does not mean it is worse. One high day can make right skew. One low day can make left skew. Two different patterns of days can also give the same number. Keep the five days in view.
-  s2_zh: 正号不表示这家店更好，负号也不表示它更差。一个高峰日就可以造成右偏。一个低谷日就可以造成左偏。两种不同的五天，也可能算出同一个数。所以还要看着原来的五天。
-  s2_zh_hk: 正號唔表示呢間店更好，負號亦唔表示佢更差。一個高峰日就可以造成右偏。一個低谷日就可以造成左偏。兩種唔同嘅五日，亦可能計出同一個數。所以仲要睇住原本嘅五日。
-  s3_en: And 1.1 is not an order to prepare 101 cups, or 99. It has no cups left in it. The sign says which side is long. The count of the days says which outcome showed up on three of these five days.
-  s3_zh: 而且1.1不是备101杯或99杯的指令。它里面已经没有杯了。符号说明哪一侧被拉长。天数的清点才说明，这五天里有三天出现了哪一种结果。
-  s3_zh_hk: 而且1.1唔係備101杯或者99杯嘅指令。佢入面已經冇杯。符號講邊一邊被拉長。日數嘅清點先講，呢五日入面有三日出現咗邊一種結果。
+  left_en: 'Tells: which side is long'
+  left_zh: 能说：哪一侧被拉长
+  left_zh_hk: 講到：邊一邊被拉長
+  right_en: 'Not: better, worse, or cups'
+  right_zh: 不能说：好坏或杯数
+  right_zh_hk: 講唔到：好壞或者杯數
+  s1_en: So what does skewness tell you, and what does it not?
+  s1_zh: 那偏度能告诉你什么，又不能告诉你什么？
+  s1_zh_hk: 咁偏度話到你知啲乜，又話唔到你知啲乜？
+  s2_en: It tells you which side is long, and it uses every day to do it. Cubing keeps the sign, so the far day is not cancelled out. Even when the average and the variance match, as they do here, it shows that the two shops need different plans.
+  s2_zh: 它能告诉你哪一侧被拉长，而且用到每一天。立方保住了正负号，所以那个很远的一天不会被抵消掉。即使平均数和方差都一样，就像这里，它也能显示两家店需要不同的计划。
+  s2_zh_hk: 佢話到你知邊一邊被拉長，而且用到每一日。立方保住咗正負號，所以嗰個好遠嘅一日唔會被抵銷。就算平均數同方差都一樣，好似呢度噉，佢都顯示到兩間店需要唔同嘅計劃。
+  s3_en: It does not say a shop is better or worse. A minus is not a bad mark. It has no cups left in it, so 1.1 is not an order to prepare 101 cups. One far day can create it, and with only five days, one unusual day can change it a lot. Two different sets of days can even give the same number. So keep the five days in view. Then which shop wastes, and which runs out?
+  s3_zh: 它不能说一家店更好或更差，负号不是扣分。它里面已经没有杯了，所以1.1不是叫你备101杯的指令。一个很远的日子就能造成它，而只有五天，一个特别的日子就能让它变很多。两组不同的日子，甚至可能算出同一个数。所以要一直看着那五天。那到底哪家浪费，哪家不够？
+  s3_zh_hk: 佢講唔到一間店好啲定差啲，負號唔係扣分。佢入面已經冇杯，所以1.1唔係叫你備101杯嘅指令。一個好遠嘅日子就可以造成佢，而得五日，一個特別嘅日子就可以令佢變好多。兩組唔同嘅日子，甚至可能計出同一個數。所以要一直睇住嗰五日。咁究竟邊間浪費，邊間唔夠？
 - id: answer
   visual: takeaway
-  seconds: 48
+  seconds: 66
   kicker: The Answer
   kicker_en: The Answer
   kicker_zh: 回答问题
@@ -532,18 +554,18 @@ beats:
   title_en: Same average. Different plans.
   title_zh: 平均相同，计划不同
   title_zh_hk: 平均相同，計劃唔同
-  q1_en: Which shop wastes, and which shop runs out?
+  q1_en: Which shop wastes, which runs out?
   q1_zh: 哪家浪费，哪家不够？
   q1_zh_hk: 邊間浪費，邊間唔夠？
-  q2_en: What else is needed before choosing a prep quantity?
-  q2_zh: 选定备货数量之前，还需要什么？
-  q2_zh_hk: 揀定備貨數量之前，仲需要咩？
-  s1_en: Back to the question. Same average, same spread, different plans. Shop A is about plus 1.1, right skew. Three days are below 100, and one day is a rush at 160. Preparing 100 wastes on three days.
-  s1_zh: 回到问题。平均相同，分散相同，计划不同。A店大约是正1.1，右偏。三天低于100，一天是160的高峰。备100杯，三天会浪费。
-  s1_zh_hk: 返到問題。平均相同，分散相同，計劃唔同。A店大約係正1.1，右偏。三日低過100，一日係160嘅高峰。備100杯，三日會浪費。
-  s2_en: Shop B is about minus 1.1, left skew. Three days are above 100, and one day is quiet at 40. Preparing 100 runs short on three of these five days. The sign says the long side. The day count says which outcome showed up more often.
-  s2_zh: B店大约是负1.1，左偏。三天高于100，一天是40的低谷。备100杯，这五天里有三天会不够。符号说明被拉长的一侧。天数的清点说明哪种结果出现得更多。
-  s2_zh_hk: B店大約係負1.1，左偏。三日高過100，一日係40嘅低谷。備100杯，呢五日入面有三日會唔夠。符號講被拉長嘅一邊。日數嘅清點講邊種結果出現得更多。
-  s3_en: Before you set the plan, check the cost of wasted cups, the cost of running out, and whether these five days will happen again. These numbers describe only the five days we supposed. Neither the average, nor the variance, nor the skewness writes the prep sheet by itself.
-  s3_zh: 定备货之前，还要看倒掉杯子的成本、卖完的成本，以及这五天会不会再发生。这些数只描述我们假设的五天。平均数、方差、偏度，哪一个都不能单独写备货单。
-  s3_zh_hk: 定備貨之前，仲要睇倒走杯嘅成本、賣晒嘅成本，以及呢五日會唔會再發生。呢啲數只係描述我哋假設嘅五日。平均數、方差、偏度，邊一個都唔可以單獨寫備貨單。
+  q2_en: What else before choosing a prep amount?
+  q2_zh: 定备货量之前，还要看什么？
+  q2_zh_hk: 定備貨量之前，仲要睇咩？
+  s1_en: 'Back to tonight''s prep sheet. Same average, same variance, but not the same shape. Shop A is about plus 1.1, right skew: three days below 100 and one rush at 160. Preparing 100 there wastes cups on three of the five days.'
+  s1_zh: 回到今晚的备货单。平均相同，方差相同，形状却不同。A店大约是正1.1，右偏：三天低于100，一天是160的高峰。在那里备100杯，五天里有三天会浪费。
+  s1_zh_hk: 返到今晚嘅備貨單。平均相同，方差相同，形狀就唔同。A店大約係正1.1，右偏：三日低過100，一日係160嘅高峰。喺嗰度備100杯，五日入面有三日會浪費。
+  s2_en: 'Shop B is about minus 1.1, left skew: three days above 100 and one quiet day at 40. Preparing 100 there runs out on three of the five days. The sign shows the long side. The days themselves show which outcome came up more often.'
+  s2_zh: B店大约是负1.1，左偏：三天高于100，一天是40的低谷。在那里备100杯，五天里有三天会不够。正负号指出被拉长的一侧，日子本身才说明哪种结果出现得更多。
+  s2_zh_hk: B店大約係負1.1，左偏：三日高過100，一日係40嘅低谷。喺嗰度備100杯，五日入面有三日會唔夠。正負號指出被拉長嘅一邊，啲日子本身先講到邊種結果出現得多啲。
+  s3_en: Before you set the plan, check the cost of a wasted cup, the cost of running out, and whether these five days will happen again. These numbers describe only the five days we supposed. The average, the variance and the skewness each answer one question. None of them writes the prep sheet by itself.
+  s3_zh: 定计划之前，还要看倒掉一杯的成本、卖完的成本，以及这五天会不会再出现。这些数只描述我们假设的五天。平均数、方差、偏度，各自回答一个问题，哪一个都不能单独写出备货单。
+  s3_zh_hk: 定計劃之前，仲要睇倒走一杯嘅成本、賣晒嘅成本，同埋呢五日會唔會再出現。呢啲數只係描述我哋假設嘅五日。平均數、方差、偏度，各自答一個問題，邊一個都唔可以單獨寫出備貨單。

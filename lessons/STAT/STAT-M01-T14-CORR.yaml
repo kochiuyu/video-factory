@@ -7,189 +7,409 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
-title_en: How strong is the linear connection?
-title_zh: 线性关联到底有多紧密？
-title_zh_hk: 線性關聯到底有幾緊密？
-objective_en: Define Pearson correlation as covariance divided by the product of the two standard deviations, explain how standardization removes units and constrains r to the interval from minus one to plus one, interpret correlation as the direction and strength of linear association, and explain why correlation is a starting point for investigation rather than proof of causation.
-objective_zh: 把皮尔逊相关系数定义为协方差除以两个变量标准差之积，解释标准化如何消除单位并把r限制在负一到正一之间，把相关系数解释为线性关联的方向与强度，并说明相关分析是进一步调查的起点，而不是因果关系的证明。
-objective_zh_hk: 將皮爾遜相關系數定義為協方差除以兩個變量標準差之積，解釋標準化點樣消除單位並將r限制喺負一到正一之間，將相關系數解釋為線性關聯嘅方向同強度，並說明相關分析係進一步調查嘅起點，而唔係因果關係嘅證明。
+duration_target_s: 552
+title_en: What is correlation?
+title_zh: 什么是相关系数？
+title_zh_hk: 咩係相關系數？
+objective_en: Define Pearson correlation as covariance divided by the product of the two standard deviations (with ÷ n), read r on a unit-free −1 to +1 scale, use the five-shop rent and cups file, and treat a strong r as a starting point for investigation rather than proof of causation.
+objective_zh: 把皮尔逊相关系数定义为协方差除以两个标准差之积（除以n），在−1到+1的无单位尺度上读r，使用五家店租金与杯数的例子，并把强相关视为调查的起点，而不是因果关系的证明。
+objective_zh_hk: 將皮爾遜相關系數定義為協方差除以兩個標準差之積（除以n），喺−1到+1嘅無單位尺度上讀r，使用五間店租金同杯數嘅例子，並將強相關視為調查嘅起點，而唔係因果關係嘅證明。
 glossary:
 - en: correlation
   zh: 相关系数
   zh_hk: 相關系數
   lock: true
-- en: standardized
-  zh: 标准化
-  zh_hk: 標準化
-  lock: true
-- en: linear relationship
-  zh: 线性关系
-  zh_hk: 線性關係
-  lock: true
-- en: causation
-  zh: 因果关系
-  zh_hk: 因果關係
-  lock: true
-- en: confounding variable
-  zh: 混杂变量
-  zh_hk: 混雜變量
+- en: unit-free
+  zh: 无单位
+  zh_hk: 無單位
   lock: true
 quiz:
 - id: Q1
   type: multiple_choice
-  question_en: What does r = +0.92 between store rent and daily cup sales indicate?
-  question_zh: 商铺租金与咖啡日销量之间的相关系数为r = +0.92，表示什么？
-  question_zh_hk: 商舖租金同咖啡日銷量之間嘅相關系數係r = +0.92，表示咩？
+  question_en: What does r ≈ +1.00 between shop rent and daily cup sales indicate for these five shops?
+  question_zh: 这五家店的租金与日销量相关系数约为 r ≈ +1.00，表示什么？
+  question_zh_hk: 呢五間店嘅租金同日銷量相關系數大約係 r ≈ +1.00，表示咩？
   options_en:
-  - 'A: The observed data show a very strong positive linear association between rent and sales.'
-  - 'B: Paying higher rent directly causes customers to drink more coffee.'
-  - 'C: Exactly 92% of store revenue is wasted on unnecessary commercial rent.'
-  - 'D: The calculation is invalid because correlation cannot exceed zero.'
+  - 'A: The five shops show a very strong positive linear pattern between rent and cups.'
+  - 'B: Paying higher rent is guaranteed to raise cup sales at every shop.'
+  - 'C: An r near +1 means you have a perfect staffing formula for every shop.'
+  - 'D: Correlation only works when the two averages are exactly equal.'
   options_zh:
-  - 'A: 观测数据表明租金与销量之间存在非常强的正向线性关联。'
-  - 'B: 支付更高的租金会直接促使顾客喝下更多的咖啡。'
-  - 'C: 门店正好有 92% 的营业收入被不必要的商业租金白白浪费了。'
-  - 'D: 计算结果无效，因为相关系数绝不可能超过零。'
+  - 'A: 这五家店在租金与杯数之间呈现非常强的正向线性模式。'
+  - 'B: 支付更高的租金，一定能提高每家店的杯数销量。'
+  - 'C: r 接近 +1 表示你已有适用于每家店的完美人手公式。'
+  - 'D: 只有两个平均数完全相等时，相关才有效。'
   options_zh_hk:
-  - 'A: 觀測數據表明租金同銷量之間存在非常強嘅正向線性關聯。'
-  - 'B: 畀更高嘅租金會直接促使顧客飲多啲咖啡。'
-  - 'C: 門店啱啱好有 92% 嘅營業收入被唔必要嘅商業租金白白浪費咗。'
-  - 'D: 計算結果無效，因為相關系數絕唔可能超過零。'
+  - 'A: 呢五間店喺租金同杯數之間呈現非常強嘅正向線性模式。'
+  - 'B: 付更高嘅租金，一定可以提高每間店嘅杯數銷量。'
+  - 'C: r 接近 +1 表示你已有適用於每間店嘅完美人手公式。'
+  - 'D: 淨係兩個平均數完全相等嗰陣，相關先有效。'
   answer: A
-  explanation_en: An r of +0.92 is close to +1 and indicates a very strong positive linear pattern in the observed data. It does not show that higher rent causes higher sales.
-  explanation_zh: r值为+0.92，接近+1，表示观测数据中存在非常强的正向线性模式，但不能说明高租金导致高销量。
-  explanation_zh_hk: r值係+0.92，接近+1，表示觀測數據入面存在非常強嘅正向線性模式，但唔可以說明高租金導致高銷量。
+  explanation_en: 'An r near +1 indicates a very strong positive linear pattern in the observed file. It does not guarantee that higher rent raises cups, give a perfect staffing formula, or require the two averages to be equal.'
+  explanation_zh: 'r接近+1表示观测数据中存在非常强的正向线性模式。它不能保证更高租金会提高杯数，也不等于完美人手公式，更不要求两个平均数相等。'
+  explanation_zh_hk: 'r接近+1表示觀測數據入面存在非常強嘅正向線性模式。佢唔可以保證更高租金會提高杯數，亦唔等於完美人手公式，更加唔要求兩個平均數相等。'
 - id: Q2
   type: multiple_choice
-  question_en: Why does strong correlation not establish causation?
+  question_en: Why does a strong correlation not establish causation?
   question_zh: 为什么强相关不能证明因果关系？
   question_zh_hk: 點解強相關唔可以證明因果關係？
   options_en:
-  - 'A: A confounding variable may influence both measured variables, reverse direction may be possible, or the pattern may be coincidental.'
-  - 'B: Correlation can only be calculated on small sample sizes under ten stores.'
-  - 'C: The Pearson formula produces random numbers that change on different days of the week.'
-  - 'D: Regulators impose legal fines whenever correlation is confused with causation.'
+  - 'A: A third factor may push both variables, the direction may run the other way, or the pattern may
+    be coincidental.'
+  - 'B: A large r still carries the original units, so bigger units mean a stronger link.'
+  - 'C: A strong r proves the earlier shop is the cause of the later shop.'
+  - 'D: An r near +1 always means one shop''s rent causes another shop''s cups.'
   options_zh:
-  - 'A: 混杂变量可能同时影响两个被测变量，也可能存在反向作用或巧合模式。'
-  - 'B: 相关系数只能用于少于十家门店的小样本数据。'
-  - 'C: 皮尔逊公式算出的数值具有随机性，在每周的不同日子会随意变动。'
-  - 'D: 监管机构会在企业混淆相关与因果时处以巨额行政罚款。'
+  - 'A: 第三个因素可能同时推动两个变量，也可能方向相反，或者只是巧合。'
+  - 'B: 较大的 r 仍带着原始单位，所以单位越大关系就越强。'
+  - 'C: 强相关证明靠前的店是靠后那家店的原因。'
+  - 'D: r 接近 +1 总表示一家店的租金导致另一家店的杯数。'
   options_zh_hk:
-  - 'A: 混雜變量可能同時影響兩個被測變量，亦可能存在反向作用或者巧合模式。'
-  - 'B: 相關系數淨係可以用喺少過十間門店嘅細樣本數據。'
-  - 'C: 皮爾遜公式計出嚟嘅數值具有隨機性，喺每個禮拜嘅唔同日子會隨意變動。'
-  - 'D: 監管機構會喺企業混淆相關同因果嗰陣處以巨額行政罰款。'
+  - 'A: 第三個因素可能同時推動兩個變量，亦可能方向相反，或者淨係巧合。'
+  - 'B: 較大嘅 r 仍然帶住原始單位，所以單位越大關係就越強。'
+  - 'C: 強相關證明靠前嘅店係靠後嗰間店嘅原因。'
+  - 'D: r 接近 +1 總表示一間店嘅租金導致另一間店嘅杯數。'
   answer: A
-  explanation_en: Foot traffic may be a confounding variable influencing both rent and sales. Correlation helps identify a relationship worth investigating, but additional business logic, process knowledge, or experimental evidence is needed to assess causation.
-  explanation_zh: 客流量可能是同时影响租金与销量的混杂变量。相关分析可以找出值得调查的关系，但判断因果仍需要商业逻辑、流程知识或实验性证据。
-  explanation_zh_hk: 人流量可能係同時影響租金同銷量嘅混雜變量。相關分析可以搵出值得調查嘅關係，但判斷因果仍然需要商業邏輯、流程知識或者實驗性證據。
+  explanation_en: 'Foot traffic may push both rent and sales, the arrow may run the other way, or the pattern may be chance. Correlation is unit-free, so bigger units do not make a stronger r, and a strong r still does not prove that one shop causes another.'
+  explanation_zh: '客流量可能同时推高租金与销量，方向也可能相反，或者只是巧合。相关系数无单位，单位变大不会让 r 更强；强相关也不能证明一家店导致另一家。'
+  explanation_zh_hk: '人流量可能同時推高租金同銷量，方向亦可能相反，或者淨係巧合。相關系數無單位，單位變大唔會令 r 更強；強相關亦唔可以證明一間店導致另一間。'
 beats:
 - id: hook
   visual: title_card
-  seconds: 30
+  seconds: 36
   kicker: The Question
   kicker_en: The Question
-  kicker_zh: 商业问题
-  kicker_zh_hk: 商業問題
-  title_en: From unit-dependent covariance to unit-free correlation
-  title_zh: 从受单位影响的协方差到无单位相关系数
-  title_zh_hk: 由受單位影響嘅協方差到無單位相關系數
-  en: Covariance tells us whether rent and sales move in the same or opposite direction, but its magnitude carries compound units such as dollar-cups. To compare linear relationships on a common scale, we need to remove those units without losing direction.
-  zh: 协方差告诉我们租金与销量是同向还是反向变动，但其数值带有元·杯等复合单位。要在统一尺度上比较线性关系，我们需要消除单位，同时保留方向。
-  zh_hk: 協方差話畀我哋知租金同銷量係同向定反向變動，但佢嘅數值帶有蚊·杯等複合單位。要喺統一尺度上比較線性關係，我哋需要消除單位，同時保留方向。
-- id: define
-  visual: definition_card
-  seconds: 34
-  kicker: What It Is
-  kicker_en: What It Is
-  kicker_zh: 核心概念
-  kicker_zh_hk: 核心概念
-  title_en: Standardizing covariance into Pearson correlation
-  title_zh: 把协方差标准化为皮尔逊相关系数
-  title_zh_hk: 將協方差標準化為皮爾遜相關系數
-  formula: r = covariance / (SD of X × SD of Y)
-  formula_zh: 相关系数 r = 协方差 /（X 的标准差 × Y 的标准差）
-  formula_zh_hk: 相關係數 r = 協方差 /（X 嘅標準差 × Y 嘅標準差）
-  formula_tex: r = \frac{\text{Cov}(X, Y)}{s_X s_Y}
-  s1_en: Pearson correlation divides covariance by the product of the standard deviations of X and Y. This standardization removes the original measurement units.
-  s1_zh: 皮尔逊相关系数用协方差除以X与Y标准差之积。这个标准化过程会消除原始计量单位。
-  s1_zh_hk: 皮爾遜相關系數用協方差除以X同Y標準差之積。呢個標準化過程會消除原始計量單位。
-  s2_en: The result, r, is unit-free and constrained to the interval from minus one to plus one. Its sign gives the direction of linear association, while its absolute value summarizes linear strength.
-  s2_zh: 所得的r没有单位，并被限制在负一到正一之间。符号表示线性关联方向，绝对值概括线性关联强度。
-  s2_zh_hk: 所得嘅r冇單位，並被限制喺負一到正一之間。符號表示線性關聯方向，絕對值概括線性關聯強度。
-- id: ruler
-  visual: two_column
-  seconds: 36
-  kicker: The Universal Ruler
-  kicker_en: The Standardized Scale
-  kicker_zh: 标准化尺度
-  kicker_zh_hk: 標準化尺度
-  title_en: Direction and linear strength from −1 to +1
-  title_zh: 从−1到+1判断方向与线性强度
-  title_zh_hk: 由−1到+1判斷方向同線性強度
-  left_en: 'Near ±1: strong linear pattern'
-  left_zh: 接近±1：强线性模式
-  left_zh_hk: 接近±1：強線性模式
-  right_en: 'Near 0: little linear association'
-  right_zh: 接近0：线性关联很弱
-  right_zh_hk: 接近0：線性關聯好弱
-  s1_en: An r near +1 indicates a very strong positive linear pattern; an r near −1 indicates a very strong negative linear pattern. Values closer to either endpoint show tighter alignment around a straight line.
-  s1_zh: r接近+1表示非常强的正向线性模式；r接近−1表示非常强的负向线性模式。数值越接近任一端点，数据围绕直线的排列越紧密。
-  s1_zh_hk: r接近+1表示非常強嘅正向線性模式；r接近−1表示非常強嘅負向線性模式。數值越接近任何一個端點，數據圍繞直線嘅排列越緊密。
-  s2_en: An r near zero indicates little or no linear association. A nonlinear relationship may still exist, so analysts should inspect a scatterplot rather than conclude that the variables are unrelated.
-  s2_zh: r接近零表示几乎没有线性关联，但仍可能存在非线性关系。因此，分析者应检查散点图，而不是断定两个变量毫无关系。
-  s2_zh_hk: r接近零表示幾乎冇線性關聯，但仍然可能存在非線性關係。所以，分析者應該檢查散點圖，而唔係斷定兩個變量毫無關係。
-  s3_en: Because r is unit-free, managers can compare linear associations measured in different units. Such comparisons should still use relevant datasets, comparable time periods, and adequate sample sizes.
-  s3_zh: 由于r没有单位，管理者可以比较使用不同单位衡量的线性关联。但比较仍应基于相关的数据集、可比期间与足够样本量。
-  s3_zh_hk: 由於r冇單位，管理者可以比較使用唔同單位衡量嘅線性關聯。但比較仍然應該基於相關嘅數據集、可比期間同足夠樣本量。
-- id: trap
-  visual: two_column
-  seconds: 36
-  kicker: The Golden Trap
-  kicker_en: The Causation Trap
-  kicker_zh: 因果陷阱
-  kicker_zh_hk: 因果陷阱
-  title_en: Association is not causation
-  title_zh: 关联不等于因果
-  title_zh_hk: 關聯唔等於因果
-  left_en: 'Larger file: r = +0.92'
-  left_zh: 较大文件：r = +0.92
-  left_zh_hk: 較大檔案：r = +0.92
-  right_en: 'Confounding variable: foot traffic'
-  right_zh: 混杂变量：客流量
-  right_zh_hk: 混雜變量：人流量
-  s1_en: A strong correlation is evidence of a linear association worth investigating. It does not identify causal direction or prove that changing one variable will change the other.
-  s1_zh: 强相关说明存在值得调查的线性关联，但不能识别因果方向，也不能证明改变一个变量会令另一个变量改变。
-  s1_zh_hk: 強相關說明存在值得調查嘅線性關聯，但唔可以識別因果方向，亦唔可以證明改變一個變量會令另一個變量改變。
-  s2_en: The figure r = +0.92 is a larger-file illustration, not the two-shop rent pair. Two distinct shops force a sample correlation of plus or minus one. Paying more rent still does not itself bring customers in.
-  s2_zh: r = +0.92 是较大文件上的示例，不是两家店的租金配对。两家不同的店会迫使样本相关系数为正一或负一。多付租金本身仍然不会把顾客带进店里。
-  s2_zh_hk: r = +0.92 係較大檔案上嘅示例，唔係兩間店嘅租金配對。兩間唔同嘅店會迫使樣本相關系數為正一或者負一。多付租金本身仍然唔會將客人帶入舖。
-  s3_en: Foot traffic is a possible confounding variable because it may influence both rent and sales. Business logic, process knowledge, and experimental or quasi-experimental evidence are needed before making a causal claim.
-  s3_zh: 客流量是可能的混杂变量，因为它可能同时影响租金与销量。在提出因果结论前，需要商业逻辑、流程知识，以及实验或准实验性证据。
-  s3_zh_hk: 人流量係可能嘅混雜變量，因為佢可能同時影響租金同銷量。喺提出因果結論之前，需要商業邏輯、流程知識，以及實驗或者準實驗性證據。
-- id: takeaway
-  visual: takeaway
+  kicker_zh: 业务问题
+  kicker_zh_hk: 業務問題
+  title_en: What is correlation?
+  title_zh: 什么是相关系数？
+  title_zh_hk: 咩係相關系數？
+  en: >-
+    Suppose you pick sites for coffee shops. At five shops, rent and cups move together: when rent is
+    above its average, cups tend to be above theirs too. The average of those paired gaps — the
+    covariance — is 176,000 dollar-cups, a size that jumps if you rewrite dollars as cents. A manager
+    asks how strong the linear link is on a scale that ignores units. What is correlation?
+  zh: 假设你在为咖啡店选址。五家店的租金和杯数同向变动：租金高于平均时，杯数也往往高于平均。把这些成对差距乘起来再平均，得到协方差176,000元·杯——若改用分来计价，这个数会跳变。经理要问的是：这条线性联系有多强，而且尺度不该跟着单位变。什么是相关系数？
+  zh_hk: 假設你喺為咖啡店選址。五間店嘅租金同杯數同向變動：租金高過平均嗰陣，杯數都往往高過平均。將呢啲成對差距乘起嚟再平均，得到協方差176,000蚊·杯——若改用仙嚟計價，呢個數會跳變。經理要問嘅係：呢條線性聯繫有幾強，而且尺度唔應該跟住單位變。咩係相關系數？
+- id: data
+  visual: series
+  seconds: 48
+  cols: 5
+  rows: 2
+  kicker: Five Shops
+  kicker_en: Five Shops
+  kicker_zh: 五家店
+  kicker_zh_hk: 五間店
+  title_en: Rent and cups for five shops
+  title_zh: 五家店的租金和杯数
+  title_zh_hk: 五間店嘅租金同杯數
+  row1_en: Rent ($)
+  row1_zh: 租金（元）
+  row1_zh_hk: 租金（蚊）
+  row2_en: Cups
+  row2_zh: 杯数
+  row2_zh_hk: 杯數
+  col1_en: A
+  col1_zh: A
+  col1_zh_hk: A
+  col2_en: B
+  col2_zh: B
+  col2_zh_hk: B
+  col3_en: C
+  col3_zh: C
+  col3_zh_hk: C
+  col4_en: D
+  col4_zh: D
+  col4_zh_hk: D
+  col5_en: E
+  col5_zh: E
+  col5_zh_hk: E
+  c11: 10,000
+  c12: 12,000
+  c13: 13,000
+  c14: 16,000
+  c15: 19,000
+  c21: '300'
+  c22: '330'
+  c23: '360'
+  c24: '400'
+  c25: '460'
+  s1_en: >-
+    Here are five shops on one file. Shop A: 10,000 dollars and 300 cups. Shop E: 19,000 and 460.
+    Average rent 14,000. Average cups 370. The average of the paired gap products — the covariance —
+    is 176,000 dollar-cups.
+  s1_zh: 这里有五家店的同一份表。A店：10,000元和300杯。E店：19,000元和460杯。平均租金14,000。平均杯数370。成对差距乘积的平均——协方差——是176,000元·杯。
+  s1_zh_hk: 呢度有五間店嘅同一份表。A店：10,000蚊同300杯。E店：19,000蚊同460杯。平均租金14,000。平均杯數370。成對差距乘積嘅平均——協方差——係176,000蚊·杯。
+  s2_en: Direction is already clear and positive. To talk about strength, we need to strip the units out
+    of that 176,000. How?
+  s2_zh: 方向已经清楚，而且是正的。要谈强弱，需要把176,000里的单位去掉。怎么做？
+  s2_zh_hk: 方向已經清楚，而且係正。要傾強弱，需要將176,000入面嘅單位去掉。點做？
+- id: plot
+  visual: quad_scatter
+  seconds: 54
+  kicker: On the Plot
+  kicker_en: On the Plot
+  kicker_zh: 落在图上
+  kicker_zh_hk: 落喺圖上
+  title_en: Almost a straight climb
+  title_zh: 几乎是一条直线往上
+  title_zh_hk: 幾乎係一條直線向上
+  xs: 10000;12000;13000;16000;19000
+  ys: 300;330;360;400;460
+  mean_x: 14000
+  mean_y: 370
+  mark: same
+  labels_en: Shop A;Shop B;Shop C;Shop D;Shop E
+  labels_zh: A店;B店;C店;D店;E店
+  labels_zh_hk: A店;B店;C店;D店;E店
+  x_axis_en: Rent ($)
+  x_axis_zh: 租金（元）
+  x_axis_zh_hk: 租金（蚊）
+  y_axis_en: Cups
+  y_axis_zh: 杯数
+  y_axis_zh_hk: 杯數
+  footer_en: Cov = 176,000 dollar-cups
+  footer_zh: 协方差 = 176,000 元·杯
+  footer_zh_hk: 協方差 = 176,000 蚊·杯
+  s1_en: Put the five shops on the plot again. As rent rises, cups rise. The points sit close to one climbing
+    line.
+  s1_zh: 再把五家店画在图上。租金越高，杯数越高。这些点贴近一条往上的线。
+  s1_zh_hk: 再將五間店畫喺圖上。租金越高，杯數越高。呢啲點貼近一條向上嘅線。
+  s2_en: The mean lines cross at 14,000 and 370. Every shop sits in a same-sign box, which is why the
+    covariance was positive.
+  s2_zh: 平均线交在14,000和370。每家店都落在同号格，所以协方差是正的。
+  s2_zh_hk: 平均線交喺14,000同370。每間店都落喺同號格，所以協方差係正。
+  s3_en: Closeness to a straight line is the strength question. Covariance alone cannot answer it, because
+    its size still carries units. What do we divide by?
+  s3_zh: 点有多贴近直线，才是强弱问题。单靠协方差答不了，因为它的大小还带着单位。我们该除以什么？
+  s3_zh_hk: 點有幾貼近直線，先係強弱問題。單靠協方差答唔到，因為佢嘅大細仲帶住單位。我哋應該除以咩？
+- id: sds
+  visual: steps
+  layout: rows
+  seconds: 66
+  kicker: Step by Step
+  kicker_en: Step by Step
+  kicker_zh: 一步一步
+  kicker_zh_hk: 一步一步
+  title_en: Two standard deviations
+  title_zh: 两个标准差
+  title_zh_hk: 兩個標準差
+  step1_en: Rent SD ≈ 3,162
+  step1_zh: 租金标准差 ≈ 3,162
+  step1_zh_hk: 租金標準差 ≈ 3,162
+  step2_en: Cups SD ≈ 55.9
+  step2_zh: 杯数标准差 ≈ 55.9
+  step2_zh_hk: 杯數標準差 ≈ 55.9
+  step3_en: 3,162 × 55.9 ≈ 176,750
+  step3_zh: 3,162 × 55.9 ≈ 176,750
+  step3_zh_hk: 3,162 × 55.9 ≈ 176,750
+  s1_en: 'First the rent spread. Share the squared rent gaps by five: 50,000,000 / 5 = 10,000,000. Take
+    the square root: about 3,162 dollars. That is the rent standard deviation, with divide by n, matching
+    the variance short.'
+  s1_zh: 先看租金的分散。把租金差距的平方平分到五：50,000,000 / 5 = 10,000,000。开方：大约3,162元。这是租金的标准差，除以n，和方差那一课一致。
+  s1_zh_hk: 先睇租金嘅分散。將租金差距嘅平方平分到五：50,000,000 / 5 = 10,000,000。開方：大約3,162蚊。呢個係租金嘅標準差，除以n，同方差嗰課一致。
+  s2_en: 'Now the cups spread. Share the squared cup gaps by five: 15,600 / 5 = 3,120. Square root: about
+    55.9 cups.'
+  s2_zh: 再看杯数的分散。把杯数差距的平方平分到五：15,600 / 5 = 3,120。开方：大约55.9杯。
+  s2_zh_hk: 再睇杯數嘅分散。將杯數差距嘅平方平分到五：15,600 / 5 = 3,120。開方：大約55.9杯。
+  s3_en: 'Multiply the two standard deviations: 3,162 times 55.9 is about 176,750. That product carries
+    the same dollar-cup units as the covariance. Ready to cancel them?'
+  s3_zh: 把两个标准差相乘：3,162乘55.9，大约176,750。这个乘积带着和协方差一样的元·杯单位。可以用来消掉单位了吗？
+  s3_zh_hk: 將兩個標準差相乘：3,162乘55.9，大約176,750。呢個乘積帶住同協方差一樣嘅蚊·杯單位。可以攞嚟消咗單位未？
+- id: divide
+  visual: steps
+  layout: rows
+  seconds: 48
+  kicker: Cancel the Units
+  kicker_en: Cancel the Units
+  kicker_zh: 消掉单位
+  kicker_zh_hk: 消咗單位
+  title_en: Covariance over the product
+  title_zh: 协方差除以乘积
+  title_zh_hk: 協方差除以乘積
+  step1_en: 176,000 / 176,750
+  step1_zh: 176,000 / 176,750
+  step1_zh_hk: 176,000 / 176,750
+  step2_en: r ≈ +0.996
+  step2_zh: r ≈ +0.996
+  step2_zh_hk: r ≈ +0.996
+  step3_en: About +1.00
+  step3_zh: 约为 +1.00
+  step3_zh_hk: 約為 +1.00
+  s1_en: Divide the covariance by that product. 176,000 / 176,750 is about +0.996.
+  s1_zh: 用协方差除以那个乘积。176,000 / 176,750，大约是+0.996。
+  s1_zh_hk: 用協方差除以嗰個乘積。176,000 / 176,750，大約係+0.996。
+  s2_en: The dollar-cup units cancel. What remains is a plain number near plus one.
+  s2_zh: 元·杯的单位消掉了。剩下的是一个接近正一的纯数字。
+  s2_zh_hk: 蚊·杯嘅單位消咗。剩低嘅係一個接近正一嘅純數字。
+  s3_en: For these five shops we can say r is about +1.00 — almost as strong a positive linear pattern
+    as the scale allows. What do we call this number?
+  s3_zh: 对这五家店，我们可以说r约为+1.00——在这个尺度上，正向线性模式几乎强到顶。这个数叫什么？
+  s3_zh_hk: 對呢五間店，我哋可以講r約為+1.00——喺呢個尺度上，正向線性模式幾乎強到頂。呢個數叫咩名？
+- id: name_corr
+  visual: title_card
   seconds: 32
-  kicker: Decision Rule
-  kicker_en: Decision Rule
-  kicker_zh: 商业法则
-  kicker_zh_hk: 商業法則
-  title_en: Measure the linear link, investigate the cause
-  title_zh: 度量线性关联，再调查因果
-  title_zh_hk: 度量線性關聯，再調查因果
-  q1_en: What does Pearson correlation measure?
-  q1_zh: 皮尔逊相关系数衡量什么？
-  q1_zh_hk: 皮爾遜相關系數衡量咩？
-  q2_en: What can it not establish by itself?
-  q2_zh: 它本身不能证明什么？
-  q2_zh_hk: 佢本身唔可以證明咩？
-  s1_en: Use Pearson correlation to summarize the direction and strength of linear association on a unit-free scale from −1 to +1. Inspect the scatterplot and data context alongside r.
-  s1_zh: 使用皮尔逊相关系数，在−1到+1的无单位尺度上概括线性关联方向与强度。同时应结合散点图与数据背景解释r。
-  s1_zh_hk: 使用皮爾遜相關系數，喺−1到+1嘅無單位尺度上概括線性關聯方向同強度。同時應該結合散點圖同數據背景解釋r。
-  s2_en: Treat correlation as a starting point for investigation, not the end of analysis. Check for nonlinear patterns, outliers, confounding variables, reverse direction, and data-quality problems.
-  s2_zh: 把相关分析视为调查的起点，而不是分析终点。应检查非线性模式、异常值、混杂变量、反向作用与数据质量问题。
-  s2_zh_hk: 將相關分析視為調查嘅起點，而唔係分析終點。應該檢查非線性模式、異常值、混雜變量、反向作用同數據質量問題。
-  s3_en: Correlation measures how closely two variables follow a linear pattern. Business logic, process knowledge, and stronger research designs are required before concluding that one variable influences the other.
-  s3_zh: 相关系数衡量两个变量遵循线性模式的紧密程度。要判断一个变量是否影响另一个变量，还需要商业逻辑、流程知识与更强的研究设计。
-  s3_zh_hk: 相關系數衡量兩個變量跟隨線性模式嘅緊密程度。要判斷一個變量係咪影響另一個變量，仲需要商業邏輯、流程知識同更強嘅研究設計。
+  kicker: The Name
+  kicker_en: The Name
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Correlation
+  title_zh: 相关系数
+  title_zh_hk: 相關系數
+  en: This number is called the correlation, often written r. It keeps the direction from covariance and
+    adds a unit-free reading of how tightly the points follow a straight line.
+  zh: 这个数叫作相关系数，常写成r。它保留协方差的方向，并加上一个无单位的读数：点有多紧地贴着一条直线。
+  zh_hk: 呢個數叫做相關系數，成日寫成r。佢保留協方差嘅方向，再加一個無單位嘅讀數：點有幾緊貼住一條直線。
+- id: formula
+  visual: definition_card
+  seconds: 42
+  kicker: The Rule
+  kicker_en: The Rule
+  kicker_zh: 规则
+  kicker_zh_hk: 規則
+  title_en: Divide out both spreads
+  title_zh: 把两边的分散除掉
+  title_zh_hk: 將兩邊嘅分散除掉
+  formula_en: r = Cov(X, Y) / (SD_x × SD_y)
+  formula_zh: r = 协方差 /（标准差ₓ × 标准差ᵧ）
+  formula_zh_hk: r = 協方差 /（標準差ₓ × 標準差ᵧ）
+  formula_tex: r = \frac{\mathrm{Cov}(X,Y)}{s_X s_Y}
+  s1_en: Pearson correlation divides the covariance by the product of the two standard deviations. Use
+    the same divide-by-n choice you used for covariance and variance in this module.
+  s1_zh: 皮尔逊相关系数用协方差除以两个标准差的乘积。这里除以n的选择，和本模块协方差、方差那两课一致。
+  s1_zh_hk: 皮爾遜相關系數用協方差除以兩個標準差嘅乘積。呢度除以n嘅選擇，同本模塊協方差、方差嗰兩課一致。
+  s2_en: The result r has no units and sits between −1 and +1. The sign is direction. The distance from
+    zero is linear strength.
+  s2_zh: 得到的r没有单位，落在−1到+1之间。符号是方向。离零的距离是线性强弱。
+  s2_zh_hk: 得到嘅r冇單位，落喺−1到+1之間。符號係方向。離零嘅距離係線性強弱。
+- id: ruler
+  visual: quad_scatter
+  mode: ruler
+  seconds: 60
+  kicker: The Scale
+  kicker_en: The Scale
+  kicker_zh: 尺度
+  kicker_zh_hk: 尺度
+  title_en: From −1 to +1
+  title_zh: 从−1到+1
+  title_zh_hk: 由−1到+1
+  r: 0.996
+  left_en: Near −1
+  left_zh: 接近−1
+  left_zh_hk: 接近−1
+  mid_en: Near 0
+  mid_zh: 接近0
+  mid_zh_hk: 接近0
+  right_en: Near +1
+  right_zh: 接近+1
+  right_zh_hk: 接近+1
+  footer_en: 'Five shops: r ≈ +1.00'
+  footer_zh: 五家店：r ≈ +1.00
+  footer_zh_hk: 五間店：r ≈ +1.00
+  s1_en: Picture a ruler from minus one to plus one. Every correlation lands somewhere on this scale,
+    whatever units the raw file used.
+  s1_zh: 想象一把从负一到正一的标尺。无论原始文件用什么单位，每个相关系数都会落在这把尺上。
+  s1_zh_hk: 想像一把由負一到正一嘅標尺。無論原始檔案用咩單位，每個相關系數都會落喺呢把尺上。
+  s2_en: Near plus one, points climb together in a tight line. Near minus one, they fall together. Near
+    zero, a straight line barely helps.
+  s2_zh: 接近正一，点紧贴着一起往上。接近负一，点紧贴着一起往下。接近零，直线几乎帮不上忙。
+  s2_zh_hk: 接近正一，點緊貼住一齊向上。接近負一，點緊貼住一齊向下。接近零，直線幾乎幫唔上手。
+  s3_en: Our five shops pin near plus one. That is a very strong positive linear pattern on this file
+    — still not a proof that rent causes sales.
+  s3_zh: 我们这五家店钉在接近正一的位置。这是这份数据上非常强的正向线性模式——仍然不能证明租金导致销量。
+  s3_zh_hk: 我哋呢五間店釘喺接近正一嘅位置。呢個係呢份數據上非常強嘅正向線性模式——仍然唔可以證明租金導致銷量。
+- id: units
+  visual: two_column
+  seconds: 48
+  kicker: Units Drop Out
+  kicker_en: Units Drop Out
+  kicker_zh: 单位消掉了
+  kicker_zh_hk: 單位消咗
+  title_en: Same r after a unit change
+  title_zh: 换单位后 r 不变
+  title_zh_hk: 換單位後 r 不變
+  left_en: 'Dollars: r ≈ +1.00'
+  left_zh: 用元：r ≈ +1.00
+  left_zh_hk: 用蚊：r ≈ +1.00
+  right_en: 'Cents: r ≈ +1.00'
+  right_zh: 用分：r ≈ +1.00
+  right_zh_hk: 用仙：r ≈ +1.00
+  s1_en: Rewrite rent in cents. Covariance jumps by 100, to 17,600,000. The rent standard deviation also
+    jumps by 100.
+  s1_zh: 把租金改成用分。协方差扩大100倍，变成17,600,000。租金的标准差也扩大100倍。
+  s1_zh_hk: 將租金改成用仙。協方差擴大100倍，變成17,600,000。租金嘅標準差都擴大100倍。
+  s2_en: In the correlation fraction, that 100 appears on top and on the bottom, so it cancels. r stays
+    about +1.00.
+  s2_zh: 在相关系数的分式里，这个100出现在上面也出现在下面，所以消掉了。r仍然约为+1.00。
+  s2_zh_hk: 喺相關系數嘅分式入面，呢個100出現喺上面亦出現喺下面，所以消咗。r仍然約為+1.00。
+  s3_en: That is the point of dividing by both spreads. Correlation lets you compare linear strength across
+    files that started in different units.
+  s3_zh: 这正是同时除掉两边分散的意义。相关系数让你可以比较一开始单位不同的文件上的线性强弱。
+  s3_zh_hk: 呢個正係同時除掉兩邊分散嘅意義。相關系數等你可以比較一開始單位唔同嘅檔案上嘅線性強弱。
+- id: trap
+  visual: dag
+  seconds: 60
+  kicker: Not Cause
+  kicker_en: Not Cause
+  kicker_zh: 不是因果
+  kicker_zh_hk: 唔係因果
+  title_en: A third factor can push both
+  title_zh: 第三个因素可以同时推动两者
+  title_zh_hk: 第三個因素可以同時推動兩者
+  n1_id: Traffic
+  n1_en: Foot traffic
+  n1_zh: 客流量
+  n1_zh_hk: 人流量
+  n2_id: Rent
+  n2_en: Rent
+  n2_zh: 租金
+  n2_zh_hk: 租金
+  n3_id: Cups
+  n3_en: Cups
+  n3_zh: 杯数
+  n3_zh_hk: 杯數
+  e1: Traffic->Rent
+  e2: Traffic->Cups
+  highlight: Traffic->Cups
+  role_en: 'Confounder: busy streets raise both'
+  role_zh: 混杂因素：热闹的街推高两者
+  role_zh_hk: 混雜因素：熱鬧嘅街推高兩者
+  s1_en: A strong r is a reason to investigate, not a reason to claim that raising rent will raise cup
+    sales.
+  s1_zh: 一个很强的r是值得调查的理由，不是声称提高租金就会提高杯销量的理由。
+  s1_zh_hk: 一個好強嘅r係值得調查嘅理由，唔係聲稱提高租金就會提高杯銷量嘅理由。
+  s2_en: Draw a third factor. Foot traffic can push rent up, because busy streets cost more, and push
+    cups up, because more people pass the door.
+  s2_zh: 画出第三个因素。客流量可以推高租金，因为热闹的街更贵；也可以推高杯数，因为更多人经过门口。
+  s2_zh_hk: 畫出第三個因素。人流量可以推高租金，因為熱鬧嘅街更貴；亦可以推高杯數，因為更多人經過門口。
+  s3_en: Then rent and cups move together in the file even if rent itself does not cause cups. Check the
+    scatterplot, the story, and stronger designs before you claim cause.
+  s3_zh: 这样在数据里租金和杯数会一起动，即使租金本身并不导致杯数。声称因果之前，要检查散点图、业务故事和更强的研究设计。
+  s3_zh_hk: 咁樣喺數據入面租金同杯數會一齊郁，即使租金本身並唔導致杯數。聲稱因果之前，要檢查散點圖、業務故事同更強嘅研究設計。
+- id: answer
+  visual: takeaway
+  seconds: 58
+  kicker: The Answer
+  kicker_en: The Answer
+  kicker_zh: 回答
+  kicker_zh_hk: 回答
+  title_en: Strength yes. Cause later.
+  title_zh: 强弱可以谈，因果往后
+  title_zh_hk: 強弱可以傾，因果往後
+  q1_en: How strong is the linear link?
+  q1_zh: 线性联系有多强？
+  q1_zh_hk: 線性聯繫有幾強？
+  q2_en: What must you still not claim?
+  q2_zh: 你仍然不能声称什么？
+  q2_zh_hk: 你仍然唔可以聲稱咩？
+  s1_en: 'For these five shops, r is about +1.00: a very strong positive linear pattern on a unit-free
+    scale from −1 to +1.'
+  s1_zh: 对这五家店，r约为+1.00：在−1到+1的无单位尺度上，这是非常强的正向线性模式。
+  s1_zh_hk: 對呢五間店，r約為+1.00：喺−1到+1嘅無單位尺度上，呢個係非常強嘅正向線性模式。
+  s2_en: That strength reading survives a change from dollars to cents. Covariance alone did not.
+  s2_zh: 这个强弱读数在从元换成分之后仍然成立。单靠协方差做不到。
+  s2_zh_hk: 呢個強弱讀數喺由蚊換成仙之後仍然成立。單靠協方差做唔到。
+  s3_en: 'The operating rule: use r for direction and linear strength, inspect the scatterplot, and do
+    not treat correlation as proof of cause.'
+  s3_zh: 经营规则：用r看方向和线性强弱，检查散点图，不要把相关当成因果的证明。
+  s3_zh_hk: 營運規則：用r睇方向同線性強弱，檢查散點圖，唔好將相關當成因果嘅證明。

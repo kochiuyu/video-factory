@@ -7,29 +7,29 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 162
-title_en: The executive decision dashboard
-title_zh: 管理层决策仪表盘
-title_zh_hk: 管理層決策儀表板
-objective_en: Synthesize the module’s descriptive statistics into a managerial decision framework, showing how leaders combine measures of center, position, spread, shape, data quality, and association while respecting each measure’s limitations.
-objective_zh: 把本模块的描述性统计整合为管理决策框架，说明领导者如何结合中心、位置、离散、形态、数据质量与关联指标，同时尊重每项指标的局限。
-objective_zh_hk: 將本模組嘅描述性統計整合成管理決策框架，說明領導者點樣結合中心、位置、離散、形態、數據質量同關聯指標，同時尊重每項指標嘅局限。
+duration_target_s: 500
+title_en: What is a decision dashboard?
+title_zh: 什么是决策仪表盘？
+title_zh_hk: 咩係決策儀表板？
+objective_en: Close the module by turning the four descriptive dials into one decision dashboard — pick complementary measures for center, spread, shape, and association, state each limitation, and never manage by a single statistic.
+objective_zh: 用四个描述性刻度收束本模块，组成一张决策仪表盘：为中心、离散、形态与关联挑选互补指标，写明各自局限，绝不只凭单一统计量管理。
+objective_zh_hk: 用四個描述性刻度收束本模組，組成一張決策儀表板：為中心、離散、形態同關聯揀互補指標，寫明各自局限，絕唔好只憑單一統計量管理。
 glossary:
-- en: decision framework
-  zh: 决策框架
-  zh_hk: 決策框架
+- en: decision dashboard
+  zh: 决策仪表盘
+  zh_hk: 決策儀表板
   lock: true
-- en: executive dashboard
-  zh: 管理层仪表盘
-  zh_hk: 管理層儀表板
-  lock: true
-- en: complementary measures
-  zh: 互补指标
-  zh_hk: 互補指標
+- en: four dials
+  zh: 四个刻度
+  zh_hk: 四個刻度
   lock: true
 - en: limitation
   zh: 局限
   zh_hk: 局限
+  lock: true
+- en: comparison group
+  zh: 比较总体
+  zh_hk: 比較總體
   lock: true
 quiz:
 - id: Q1
@@ -38,17 +38,17 @@ quiz:
   question_zh: 为什么管理者不应只用一个汇总统计量评估业务绩效？
   question_zh_hk: 點解管理者唔應該只用一個匯總統計量評估業務績效？
   options_en:
-  - 'A: Each statistic answers a particular question and may omit important information about position, spread, shape, unusual observations, or relationships.'
+  - 'A: Each statistic answers one kind of question and can miss spread, shape, outliers, or links.'
   - 'B: One measure is always sufficient when the dataset is large.'
   - 'C: Multiple measures automatically prove causation.'
   - 'D: Every statistic answers exactly the same business question.'
   options_zh:
-  - 'A: 每个统计量只回答特定问题，并可能遗漏位置、离散、形态、异常观测值或变量关系等重要信息。'
+  - 'A: 每个统计量只回答一类问题，并可能漏掉离散、形态、异常值或关联。'
   - 'B: 只要数据集足够大，一个指标就永远足够。'
   - 'C: 使用多个指标会自动证明因果关系。'
   - 'D: 每个统计量都回答完全相同的业务问题。'
   options_zh_hk:
-  - 'A: 每個統計量只回答特定問題，並可能遺漏位置、離散、形態、異常觀測值或者變量關係等重要資訊。'
+  - 'A: 每個統計量只回答一類問題，並可能漏咗離散、形態、異常值或者關聯。'
   - 'B: 只要數據集足夠大，一個指標就永遠足夠。'
   - 'C: 使用多個指標會自動證明因果關係。'
   - 'D: 每個統計量都回答完全相同嘅業務問題。'
@@ -62,17 +62,17 @@ quiz:
   question_zh: 哪一种组合最适合对分店业绩进行平衡评估？
   question_zh_hk: 邊一種組合最適合對分店業績作平衡評估？
   options_en:
-  - 'A: A measure of typical performance, a measure of spread, an inspection of distribution shape and outliers, and relevant association analysis.'
+  - 'A: Typical level, spread, a check of shape and outliers, plus any useful association.'
   - 'B: The range alone for every decision.'
   - 'C: The mean alone, regardless of outliers or business format.'
   - 'D: Correlation alone as proof that one operational variable causes another.'
   options_zh:
-  - 'A: 典型业绩指标、离散指标、分布形态与异常值检查，以及相关的关联分析。'
+  - 'A: 典型水平、离散、形态与异常值检查，以及有用的关联分析。'
   - 'B: 所有决策都只使用极差。'
   - 'C: 不考虑异常值或门店业态，只使用平均数。'
   - 'D: 只用相关系数证明一个运营变量导致另一个变量。'
   options_zh_hk:
-  - 'A: 典型業績指標、離散指標、分佈形態同異常值檢查，以及相關嘅關聯分析。'
+  - 'A: 典型水平、離散、形態同異常值檢查，以及有用嘅關聯分析。'
   - 'B: 所有決策都只使用全距。'
   - 'C: 唔考慮異常值或者門店業態，只使用平均數。'
   - 'D: 只用相關系數證明一個營運變量導致另一個變量。'
@@ -83,85 +83,434 @@ quiz:
 beats:
 - id: hook
   visual: title_card
-  seconds: 30
-  kicker: The Synthesis
-  kicker_en: The Synthesis
-  kicker_zh: 综合视野
-  kicker_zh_hk: 綜合視野
-  title_en: Turn separate measures into one decision process
-  title_zh: 把分散指标整合为决策流程
-  title_zh_hk: 將分散指標整合成決策流程
-  en: Across this module, we moved from raw store records to measures of center, position, spread, shape, unusual observations, and relationships. The final task is not to display every formula at once. It is to choose a small, complementary set of measures that answers the business question without hiding important limitations.
-  zh: 本模块把原始门店记录逐步转化为中心、位置、离散、形态、异常观测值与变量关系等指标。最后的任务不是同时展示所有公式，而是选择一组精简而互补的指标，在回答业务问题的同时不掩盖重要局限。
-  zh_hk: 本模組將原始門店記錄逐步轉化成中心、位置、離散、形態、異常觀測值同變量關係等指標。最後嘅任務唔係同時展示所有公式，而係選擇一組精簡而互補嘅指標，喺回答業務問題嘅同時唔掩蓋重要局限。
-- id: matrix
-  visual: module_close
-  seconds: 44
-  title_en: A four-layer decision framework
-  title_zh: 四层决策框架
-  title_zh_hk: 四層決策框架
-  claim_en: Start with the decision, then select complementary measures and state their limitations.
-  claim_zh: 先明确决策问题，再选择互补指标，并说明各自局限。
-  claim_zh_hk: 先明確決策問題，再選擇互補指標，並講明各自局限。
-  next_en: Close the review when each chosen measure has a stated comparison group and a stated limitation.
-  next_zh: 当每个选用指标都写明比较总体与局限时，这次复核就可以收束。
-  next_zh_hk: 當每個選用指標都寫明比較總體同局限嗰陣，呢次覆核就可以收束。
-  en: 'Layer one describes center and position: mean, median, mode, and percentiles answer different questions about total scale, typical observations, common categories, and relative standing. Layer two describes variability: range, IQR, variance, standard deviation, and coefficient of variation compare outer span, middle spread, squared spread, spread in original units, and relative dispersion. None of these measures is an automatic staffing, inventory, or target formula.'
-  zh: 第一层描述中心与位置：平均数、中位数、众数与百分位数分别回答总体规模、典型观测、常见类别与相对位置问题。第二层描述离散：极差、四分位距、方差、标准差与变异系数分别反映外围跨度、中间跨度、平方离散、原始单位离散与相对离散。任何一个指标都不是自动生成排班、库存或目标的公式。
-  zh_hk: 第一層描述中心同位置：平均數、中位數、眾數同百分位數分別回答總體規模、典型觀測、常見類別同相對位置問題。第二層描述離散：全距、四分位距、方差、標準差同變異系數分別反映外圍跨度、中間跨度、平方離散、原始單位離散同相對離散。任何一個指標都唔係自動生成排班、庫存或者目標嘅公式。
-  kicker_en: Review
-  kicker_zh: 复核
-  kicker_zh_hk: 覆核
-  next_label_en: Rule
-  next_label_zh: 规则
-  next_label_zh_hk: 規則
-- id: shape_link
+  seconds: 52
+  kicker: The Question
+  kicker_en: The Question
+  kicker_zh: 业务问题
+  kicker_zh_hk: 業務問題
+  title_en: What is a decision dashboard?
+  title_zh: 什么是决策仪表盘？
+  title_zh_hk: 咩係決策儀表板？
+  en: >-
+    Suppose you manage several coffee shops. One Monday column of cup counts hits the desk.
+    If you steer the chain with a single average, the quiet shops overstock and the busy shop runs dry.
+    If you steer with the widest gap alone, every plan looks like an emergency.
+    One number answers one question and hides the rest. You need a small board of dials that names each question before you act.
+    That board is a decision dashboard. What is a decision dashboard?
+  zh: >-
+    假设你管着几家咖啡店。星期一，桌上只有一列杯数。
+    要是只拿一个平均数管整条连锁，清闲的店会堆货，忙店中午前就会断货。
+    要是只拿最宽的那一段管计划，每件事都像紧急事故。
+    一个数字只回答一个问题，其余的都被盖住。你需要一块小小的刻度板，先点名问题再行动。
+    那块板，叫决策仪表盘。什么是决策仪表盘？
+  zh_hk: >-
+    假設你管緊幾間咖啡店。星期一，檯上得一欄杯數。
+    如果淨係攞一個平均數管成條連鎖，清閒嘅店會積貨，忙店中午前就會斷貨。
+    如果淨係攞最闊嗰段管計劃，每件事都好似緊急事故。
+    一個數字只答一個問題，其餘嘅都被遮住。你需要一塊細細嘅刻度板，先點名問題再行動。
+    嗰塊板，就叫決策儀表板。咩係決策儀表板？
+- id: data
+  visual: series
+  reveal: cells
+  seconds: 58
+  cols: 3
+  kicker: The File
+  kicker_en: The File
+  kicker_zh: 三家店
+  kicker_zh_hk: 三間店
+  title_en: Three shops, one Monday column
+  title_zh: 三家店，一列星期一
+  title_zh_hk: 三間店，一欄星期一
+  row1_en: '1'
+  row1_zh: '1'
+  row1_zh_hk: '1'
+  col1_en: Shop A
+  col1_zh: A店
+  col1_zh_hk: A店
+  col2_en: Shop B
+  col2_zh: B店
+  col2_zh_hk: B店
+  col3_en: Shop C
+  col3_zh: C店
+  col3_zh_hk: C店
+  c11: '310'
+  c12: '420'
+  c13: '4,200'
+  footer_en: 'Suppose Monday cups'
+  footer_zh: 假设的星期一杯数
+  footer_zh_hk: 假設嘅星期一杯數
+  tag_en: Three shops
+  tag_zh: 三家店
+  tag_zh_hk: 三間店
+  s1_en: >-
+    Suppose Monday cups again. Shop A sold 310. Shop B sold 420. Shop C sold 4,200.
+    Same three numbers you have seen as a teaching file. Which single summary should run the chain?
+  s1_zh: >-
+    再看假设的星期一杯数。A店310，B店420，C店4,200。
+    还是这份教学文件里的三个数。该用哪一个摘要来管整条连锁？
+  s1_zh_hk: >-
+    再睇假設嘅星期一杯數。A店310，B店420，C店4,200。
+    仲係呢份教學檔案入面嘅三個數。應該用邊一個摘要嚟管成條連鎖？
+  s2_en: >-
+    The average is pulled by Shop C. The middle shop is 420. The end-to-end gap is 3,890 cups.
+    Each of those answers a different question. None of them is the whole plan.
+  s2_zh: >-
+    平均数会被C店拉开。中间那家是420。两端差距是3,890杯。
+    每一个都在回答不同的问题。没有一个等于整份计划。
+  s2_zh_hk: >-
+    平均數會被C店拉開。中間嗰間係420。兩端差距係3,890杯。
+    每一個都喺度答唔同嘅問題。冇一個等於整份計劃。
+  s3_en: >-
+    So the close of this module is not a longer formula list.
+    It is a dashboard that names the dial, picks a matching measure, and states what that measure cannot do.
+  s3_zh: >-
+    所以本模块的收束，不是一张更长的公式清单。
+    而是一块仪表盘：点名刻度，选对指标，并写明那个指标做不到什么。
+  s3_zh_hk: >-
+    所以本模組嘅收束，唔係一張更長嘅公式清單。
+    而係一塊儀表板：點名刻度，揀對指標，並寫明嗰個指標做唔到咩。
+- id: name_dash
+  visual: title_card
+  seconds: 24
+  kicker: The Name
+  kicker_en: The Name
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Decision dashboard
+  title_zh: 决策仪表盘
+  title_zh_hk: 決策儀表板
+  en: >-
+    Decision dashboard. That is the name.
+    It is the four dials from the opening short, written as one board a manager can read before acting.
+    It does not invent the future. Next, the board itself.
+  zh: >-
+    决策仪表盘。这就是它的名字。
+    就是开篇那四个刻度，写成经理行动前能读懂的一块板。
+    它不编造未来。接下来，看这块板本身。
+  zh_hk: >-
+    決策儀表板。呢個就係佢個名。
+    就係開篇嗰四個刻度，寫成經理行動前讀得明嘅一塊板。
+    佢唔會編造未來。跟住，睇呢塊板本身。
+- id: dials
+  visual: table_grid
+  seconds: 90
+  rows: 4
+  cols: 3
+  kicker: Four Dials
+  kicker_en: Four Dials
+  kicker_zh: 四个刻度
+  kicker_zh_hk: 四個刻度
+  title_en: Question, measure, caution
+  title_zh: 问题、指标、提醒
+  title_zh_hk: 問題、指標、提醒
+  col1_en: Dial
+  col1_zh: 刻度
+  col1_zh_hk: 刻度
+  col2_en: Tools
+  col2_zh: 工具
+  col2_zh_hk: 工具
+  col3_en: Caution
+  col3_zh: 小心
+  col3_zh_hk: 小心
+  row1_en: '1'
+  row1_zh: '1'
+  row1_zh_hk: '1'
+  row2_en: '2'
+  row2_zh: '2'
+  row2_zh_hk: '2'
+  row3_en: '3'
+  row3_zh: '3'
+  row3_zh_hk: '3'
+  row4_en: '4'
+  row4_zh: '4'
+  row4_zh_hk: '4'
+  c11_en: Center
+  c11_zh: 中心
+  c11_zh_hk: 中心
+  c12_en: Mean · median · mode
+  c12_zh: 均、中、众
+  c12_zh_hk: 均、中、眾
+  c13_en: Not the full plan
+  c13_zh: 不是整份计划
+  c13_zh_hk: 唔係整份計劃
+  c21_en: Spread
+  c21_zh: 离散
+  c21_zh_hk: 離散
+  c22_en: Range · IQR · SD · CV
+  c22_zh: 极差·IQR·SD·CV
+  c22_zh_hk: 全距·IQR·SD·CV
+  c23_en: Width ≠ staffing
+  c23_zh: 宽度≠人手
+  c23_zh_hk: 闊度≠人手
+  c31_en: Shape
+  c31_zh: 形态
+  c31_zh_hk: 形態
+  c32_en: Skew · kurt · outlier
+  c32_zh: 偏·峰·异常
+  c32_zh_hk: 偏·峰·異常
+  c33_en: Flag ≠ error proof
+  c33_zh: 标记≠证明错
+  c33_zh_hk: 標記≠證明錯
+  c41_en: Association
+  c41_zh: 关联
+  c41_zh_hk: 關聯
+  c42_en: Cov, correlation
+  c42_zh: 协方差·相关
+  c42_zh_hk: 協方差·相關
+  c43_en: Together ≠ causes
+  c43_zh: 同向≠因果
+  c43_zh_hk: 同向≠因果
+  footer_en: 'Name the dial before the number'
+  footer_zh: 先点名刻度，再谈数字
+  footer_zh_hk: 先點名刻度，再講數字
+  s1_en: >-
+    Read the board left to right. Center asks where typical demand sits. The tools are mean, median, and mode.
+    Caution: a center number is not the full staffing or inventory plan.
+  s1_zh: >-
+    从左到右读这块板。中心问常规需求落在哪里。工具是平均数、中位数和众数。
+    小心：一个中心数字不等于整份人手或库存计划。
+  s1_zh_hk: >-
+    由左到右讀呢塊板。中心問常規需求落喺邊。工具係平均數、中位數同眾數。
+    小心：一個中心數字唔等於整份人手或者庫存計劃。
+  s2_en: >-
+    Spread asks how wide the shops sit. Range, IQR, standard deviation, and CV each measure width differently.
+    Caution: width is not an automatic staffing formula. In this module, variance and SD divide by n.
+  s2_zh: >-
+    离散问各店相距有多宽。极差、四分位距、标准差和变异系数，量法各不相同。
+    小心：宽度不是自动的人手公式。本模块里，方差和标准差都除以n。
+  s2_zh_hk: >-
+    離散問各店相距有幾闊。全距、四分位距、標準差同變異系數，量法各有唔同。
+    小心：闊度唔係自動嘅人手公式。本模組入面，方差同標準差都除以n。
+  s3_en: >-
+    Shape asks which side is long and which far day needs a check. Skewness, kurtosis, and outlier fences flag review.
+    Association asks what moves together. Covariance and correlation need a second measure, such as rent beside cups.
+    Caution on both rows: a flag is not proof of a recording error, and moving together is not causation.
+  s3_zh: >-
+    形态问哪一边更长、哪一个远日需要复查。偏度、峰度和异常值围栏只是标记复查。
+    关联问什么一起动。协方差和相关需要第二个指标，例如租金配杯数。
+    两行都要小心：标记不等于证明记错，同向也不等于因果。
+  s3_zh_hk: >-
+    形態問邊一邊更長、邊一個遠日需要複查。偏度、峰度同異常值圍欄淨係標記複查。
+    關聯問咩一齊郁。協方差同相關需要第二個指標，例如租金配杯數。
+    兩行都要小心：標記唔等於證明記錯，同向亦唔等於因果。
+- id: picture
+  visual: rank_line
+  seconds: 55
+  kicker: One Picture
+  kicker_en: One Picture
+  kicker_zh: 一幅图
+  kicker_zh_hk: 一幅圖
+  title_en: Four dials on one line
+  title_zh: 一条线上的四个刻度
+  title_zh_hk: 一條線上嘅四個刻度
+  values: 310;420;4200
+  labels_en: Shop A;Shop B;Shop C
+  labels_zh: A店;B店;C店
+  labels_zh_hk: A店;B店;C店
+  order: sorted
+  mark: ends
+  span: ends
+  span_en: 4,200 − 310 = 3,890 cups
+  span_zh: 4,200 − 310 = 3,890 杯
+  span_zh_hk: 4,200 − 310 = 3,890 杯
+  break: last
+  footer_en: 'Center · spread · shape at a glance'
+  footer_zh: 一眼看到中心、离散、形态
+  footer_zh_hk: 一眼睇到中心、離散、形態
+  s1_en: >-
+    Put the three shops on one line. Shop A at 310, Shop B at 420, Shop C at 4,200 after a break.
+    Center, spread, and shape can all speak from this single column.
+  s1_zh: >-
+    把三家店放在一条线上。A店310，B店420，隔开之后是C店4,200。
+    中心、离散、形态，都能从这一列发言。
+  s1_zh_hk: >-
+    將三間店放喺一條線上。A店310，B店420，隔開之後係C店4,200。
+    中心、離散、形態，都能夠由呢一欄發言。
+  s2_en: >-
+    Order them. The middle shop is 420. End to end is 3,890 cups. The high side is the long side.
+    One calm center can sit next to a loud shape. That is why the dashboard has more than one dial.
+  s2_zh: >-
+    排好序。中间是420。两端是3,890杯。高的一边就是长的一边。
+    平静的中心旁边，可以有吵闹的形态。所以仪表盘不能只有一个刻度。
+  s2_zh_hk: >-
+    排好序。中間係420。兩端係3,890杯。高嗰邊就係長嗰邊。
+    平靜嘅中心旁邊，可以有嘈吵嘅形態。所以儀表板唔可以得一個刻度。
+  s3_en: >-
+    Association still cannot speak from cups alone. Add rent beside each shop when you need that dial.
+    Keep the picture, then choose which dial the decision actually asks.
+  s3_zh: >-
+    只有杯数，关联还是发不了言。需要那个刻度时，再给每家店配上租金。
+    先留住这幅图，再选决策真正在问的那个刻度。
+  s3_zh_hk: >-
+    淨係杯數，關聯仲係發唔到言。需要嗰個刻度嗰陣，再畀每間店配上租金。
+    先留住呢幅圖，再揀決策真正喺度問嗰個刻度。
+- id: one_fails
   visual: two_column
-  seconds: 48
-  kicker: Shape and Drivers
-  kicker_en: Shape, Quality, and Relationships
-  kicker_zh: 形态、质量与变量关系
-  kicker_zh_hk: 形態、質量同變量關係
-  title_en: Inspect what summaries can conceal
-  title_zh: 检查汇总指标可能掩盖的信息
-  title_zh_hk: 檢查匯總指標可能掩蓋嘅資訊
-  left_en: 'Shape and quality: outliers, skewness, kurtosis'
-  left_zh: 形态与质量：异常值、偏度、峰度
-  left_zh_hk: 形態同質量：異常值、偏度、峰度
-  right_en: 'Relationships: covariance and correlation'
-  right_zh: 变量关系：协方差与相关系数
-  right_zh_hk: 變量關係：協方差同相關系數
-  s1_en: Layer three checks data shape and quality. Outlier rules flag observations for investigation; skewness describes asymmetry; kurtosis describes the influence of extreme observations. These measures guide review and stress testing, but they do not diagnose causes or predict disasters by themselves.
-  s1_zh: 第三层检查数据形态与质量。异常值规则把观测值标记出来供调查；偏度描述不对称性；峰度描述极端观测值的影响。这些指标可以引导复查与压力测试，但本身不能诊断成因或预测灾难。
-  s1_zh_hk: 第三層檢查數據形態同質量。異常值規則將觀測值標記出嚟供調查；偏度描述唔對稱性；峰度描述極端觀測值嘅影響。呢啲指標可以引導複查同壓力測試，但本身唔可以診斷成因或者預測災難。
-  s2_en: Layer four examines paired variables. Covariance gives the direction of linear co-movement, while correlation standardizes that relationship to a unit-free scale from minus one to plus one. Neither measure proves causation.
-  s2_zh: 第四层研究成对变量。协方差表示线性共同变动的方向，相关系数则把关系标准化到负一至正一的无单位尺度。两者都不能证明因果关系。
-  s2_zh_hk: 第四層研究成對變量。協方差表示線性共同變動嘅方向，相關系數就將關係標準化到負一至正一嘅無單位尺度。兩者都唔可以證明因果關係。
-  s3_en: Across all four layers, managers should verify the comparison group, time period, units, sample or population convention, data quality, and business context before acting.
-  s3_zh: 在四个层次中，管理者都应在行动前核实比较总体、统计期间、单位、样本或总体约定、数据质量与业务背景。
-  s3_zh_hk: 喺四個層次入面，管理者都應該喺行動之前核實比較總體、統計期間、單位、樣本或者總體約定、數據質量同業務背景。
-- id: takeaway
+  seconds: 58
+  kicker: The Trap
+  kicker_en: The Trap
+  kicker_zh: 陷阱
+  kicker_zh_hk: 陷阱
+  title_en: One number is not four answers
+  title_zh: 一个数字不是四个答案
+  title_zh_hk: 一個數字唔係四個答案
+  left_en: Average alone
+  left_zh: 只用平均
+  left_zh_hk: 只用平均
+  right_en: Full dashboard
+  right_zh: 完整仪表盘
+  right_zh_hk: 完整儀表板
+  s1_en: >-
+    Steer only with the average and Shop C pulls the plan up. Quiet shops waste milk. The busy shop still looks "covered" on paper.
+  s1_zh: >-
+    只拿平均数开船，C店会把计划往上拉。清闲的店浪费牛奶。忙店在纸面上却好像已经被照顾到。
+  s1_zh_hk: >-
+    淨係攞平均數開船，C店會將計劃向上拉。清閒嘅店浪費牛奶。忙店喺紙面上又好似已經被照顧到。
+  s2_en: >-
+    Open the dashboard and the same file says more. Spread names the 3,890-cup gap. Shape flags the long high side. Association waits for a second column.
+  s2_zh: >-
+    打开仪表盘，同一份文件会多说几句。离散点出3,890杯的差距。形态标出高的那一边。关联还在等第二列。
+  s2_zh_hk: >-
+    打開儀表板，同一份檔案會多講幾句。離散指出3,890杯嘅差距。形態標出高嗰邊。關聯仲喺度等第二欄。
+  s3_en: >-
+    So never manage by a single statistic. Pair the dial the decision asks with a matching measure, then write the limitation beside it.
+  s3_zh: >-
+    所以绝不要只凭一个统计量管理。决策问哪个刻度，就配哪个指标，并在旁边写上局限。
+  s3_zh_hk: >-
+    所以絕唔好只憑一個統計量管理。決策問邊個刻度，就配邊個指標，並喺隔離寫上局限。
+- id: assoc
+  visual: dag
+  seconds: 55
+  kicker: Association
+  kicker_en: Association
+  kicker_zh: 关联
+  kicker_zh_hk: 關聯
+  title_en: Together is not causation
+  title_zh: 同向不是因果
+  title_zh_hk: 同向唔係因果
+  n1_id: Traffic
+  n1_en: Foot traffic
+  n1_zh: 人流
+  n1_zh_hk: 人流
+  n2_id: Rent
+  n2_en: Rent
+  n2_zh: 租金
+  n2_zh_hk: 租金
+  n3_id: Cups
+  n3_en: Cups
+  n3_zh: 杯数
+  n3_zh_hk: 杯數
+  e1: Traffic->Rent
+  e2: Traffic->Cups
+  highlight: Traffic->Cups
+  role_en: 'Busy streets raise both'
+  role_zh: 旺街抬高两者
+  role_zh_hk: 旺街抬高兩者
+  s1_en: >-
+    Suppose five shops with rent from 10,000 to 19,000 dollars and cups from 300 to 460.
+    With divide by n, covariance is 176,000 dollar-cups and r is about +1.00. Strong together-movement.
+  s1_zh: >-
+    假设五家店，租金从10,000到19,000元，杯数从300到460。
+    除以n时，协方差是176,000元·杯，r大约是+1.00。同向走得很强。
+  s1_zh_hk: >-
+    假設五間店，租金由10,000到19,000蚊，杯數由300到460。
+    除以n嗰陣，協方差係176,000蚊·杯，r大約係+1.00。同向走得好勁。
+  s2_en: >-
+    That number still does not prove that raising rent raises cups.
+    Foot traffic can push both: busy streets cost more to rent, and more people pass the door.
+  s2_zh: >-
+    这个数字仍然证明不了提高租金就会提高杯数。
+    人流可以同时推动两者：旺的街道租金更贵，路过的人也更多。
+  s2_zh_hk: >-
+    呢個數字仍然證明唔到提高租金就會提高杯數。
+    人流可以同時推動兩者：旺嘅街道租金更貴，路過嘅人亦更多。
+  s3_en: >-
+    So the association dial on the dashboard says "investigate the pair," not "raise rent to raise cups."
+    Check the scatter, the story, and stronger designs before you claim cause.
+  s3_zh: >-
+    所以仪表盘上的关联刻度说的是「去查这对变量」，不是「加租金就能加杯数」。
+    在声称因果之前，先看散点图、业务故事和更强的设计。
+  s3_zh_hk: >-
+    所以儀表板上嘅關聯刻度講嘅係「去查呢對變量」，唔係「加租金就能加杯數」。
+    喺聲稱因果之前，先睇散點圖、業務故事同更強嘅設計。
+- id: checklist
+  visual: steps
+  layout: rows
+  seconds: 60
+  kicker: Before You Act
+  kicker_en: Before You Act
+  kicker_zh: 行动之前
+  kicker_zh_hk: 行動之前
+  title_en: Four checks on every measure
+  title_zh: 每个指标四道检查
+  title_zh_hk: 每個指標四道檢查
+  step1_en: '1. Name the dial'
+  step1_zh: 1. 点名所问刻度
+  step1_zh_hk: 1. 點名所問刻度
+  step2_en: '2. Shops, period, unit'
+  step2_zh: 2. 店、期间、单位
+  step2_zh_hk: 2. 店、期間、單位
+  step3_en: '3. Matching measure (/n)'
+  step3_zh: 3. 匹配指标（÷n）
+  step3_zh_hk: 3. 匹配指標（÷n）
+  step4_en: '4. Write the limitation'
+  step4_zh: 4. 旁写局限
+  step4_zh_hk: 4. 旁寫局限
+  s1_en: >-
+    Before you act, first name the dial. Are you asking about center, spread, shape, or association?
+  s1_zh: >-
+    行动之前，先点名刻度。你在问中心、离散、形态，还是关联？
+  s1_zh_hk: >-
+    行動之前，先點名刻度。你喺度問中心、離散、形態，定係關聯？
+  s2_en: >-
+    Second, name the comparison group. Which shops, which period, and which unit are in the file?
+  s2_zh: >-
+    第二，写明比较总体。文件里是哪些店、哪个期间、什么单位？
+  s2_zh_hk: >-
+    第二，寫明比較總體。檔案入面係邊啲店、邊個期間、咩單位？
+  s3_en: >-
+    Third, pick a matching measure. In this descriptive module, variance and related spreads divide by n.
+  s3_zh: >-
+    第三，选匹配的指标。在本描述性模块里，方差和相关离散量都除以n。
+  s3_zh_hk: >-
+    第三，揀匹配嘅指標。喺本描述性模組入面，方差同相關離散量都除以n。
+  s4_en: >-
+    Fourth, write the limitation beside the number. Then the dashboard is ready for a decision, not for a slogan.
+  s4_zh: >-
+    第四，在数字旁边写上局限。这样仪表盘才服务于决策，而不是一句口号。
+  s4_zh_hk: >-
+    第四，喺數字隔離寫上局限。咁儀表板先服務決策，而唔係一句口號。
+- id: answer
   visual: takeaway
-  seconds: 40
-  kicker: Executive Rule
-  kicker_en: Executive Rule
-  kicker_zh: 高管守则
-  kicker_zh_hk: 高管守則
-  title_en: Never manage by a single statistic
-  title_zh: 永远不要只凭单一统计量管理
-  title_zh_hk: 永遠唔好只憑單一統計量管理
+  seconds: 48
+  kicker: The Rule
+  kicker_en: The Rule
+  kicker_zh: 规则
+  kicker_zh_hk: 規則
+  title_en: Never manage by one number
+  title_zh: 不要只凭一个数
+  title_zh_hk: 唔好只憑一個數
   q1_en: How should managers build the dashboard?
   q1_zh: 管理者应如何构建仪表盘？
   q1_zh_hk: 管理者應該點樣構建儀表板？
-  q2_en: What is descriptive statistics designed to support?
-  q2_zh: 描述性统计旨在支持什么？
-  q2_zh_hk: 描述性統計旨在支持咩？
-  s1_en: Begin with the decision question. Pair an appropriate measure of center or position with relevant measures of spread, then inspect shape, outliers, and relationships when they matter.
-  s1_zh: 从决策问题出发。把合适的中心或位置指标与相关离散指标配对，并在需要时检查形态、异常值与变量关系。
-  s1_zh_hk: 由決策問題出發。將合適嘅中心或者位置指標同相關離散指標配對，並喺需要嗰陣檢查形態、異常值同變量關係。
-  s2_en: Descriptive statistics summarizes the observed data and reveals patterns worth investigating. It does not replace managerial judgment, establish causation, or remove uncertainty.
-  s2_zh: 描述性统计用于概括已观测数据，并揭示值得调查的模式。它不能取代管理判断、证明因果关系或消除不确定性。
-  s2_zh_hk: 描述性統計用嚟概括已觀測數據，並揭示值得調查嘅模式。佢唔可以取代管理判斷、證明因果關係或者消除不確定性。
-  s3_en: 'The executive rule is precise: select complementary measures, state assumptions and limitations, investigate unusual results, and connect every statistic to a specific business question before deciding.'
-  s3_zh: 管理规则很明确：选择互补指标，说明假设与局限，调查异常结果，并在决策前把每个统计量对应到具体业务问题。
-  s3_zh_hk: 管理規則好清楚：選擇互補指標，講明假設同局限，調查異常結果，並喺決策之前將每個統計量對應到具體業務問題。
+  q2_en: What does descriptive statistics support?
+  q2_zh: 描述性统计支持什么？
+  q2_zh_hk: 描述性統計支持咩？
+  s1_en: >-
+    Begin with the decision question. Pair center or position with spread, then inspect shape, outliers, and relationships when they matter.
+  s1_zh: >-
+    从决策问题出发。把中心或位置与离散配对，需要时再检查形态、异常值与变量关系。
+  s1_zh_hk: >-
+    由決策問題出發。將中心或者位置同離散配對，需要嗰陣再檢查形態、異常值同變量關係。
+  s2_en: >-
+    Descriptive statistics summarizes the observed file and flags patterns worth checking. It does not replace judgment, prove causation, or remove uncertainty.
+  s2_zh: >-
+    描述性统计概括已经看到的文件，并标出值得复查的模式。它不能取代判断、证明因果或消除不确定。
+  s2_zh_hk: >-
+    描述性統計概括已經睇到嘅檔案，並標出值得複查嘅模式。佢唔可以取代判斷、證明因果或者消除唔確定。
+  s3_en: >-
+    The operating rule: select complementary measures, state the comparison group and each limitation, investigate unusual results, and connect every statistic to a named dial before you decide.
+  s3_zh: >-
+    操作规则：选择互补指标，写明比较总体与各自局限，调查异常结果，并在决策前把每个统计量对应到已点名的刻度。
+  s3_zh_hk: >-
+    操作規則：揀互補指標，寫明比較總體同各自局限，調查異常結果，並喺決策之前將每個統計量對應到已點名嘅刻度。

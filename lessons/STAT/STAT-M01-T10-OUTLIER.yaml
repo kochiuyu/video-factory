@@ -7,13 +7,13 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
-title_en: Signal or noise?
-title_zh: 异常值是商业信号还是数据问题？
-title_zh_hk: 異常值係商業訊號定數據問題？
-objective_en: Define an outlier as an unusually distant observation, apply the 1.5×IQR screening rule using the course quartile convention, and distinguish verified data errors from valid but unusual business observations before deciding how to treat them.
-objective_zh: 把异常值定义为距离主体数据异常遥远的观测值，按照本课程的四分位数约定应用1.5倍IQR筛查规则，并在决定处理方式前区分已核实的数据错误与真实但不寻常的业务观测。
-objective_zh_hk: 將異常值定義為距離主體數據異常遙遠嘅觀測值，按照本課程嘅四分位數約定應用1.5倍IQR篩查規則，並喺決定處理方式之前，區分已核實嘅數據錯誤同真實但不尋常嘅業務觀測。
+duration_target_s: 636
+title_en: What is an outlier?
+title_zh: 什么是异常值？
+title_zh_hk: 咩係異常值？
+objective_en: Define an outlier as a value unusually far from the rest, compute the 1.5 × IQR fences from nearest-rank quartiles, and decide what to do with a flagged value by checking the record before correcting it, keeping it, or reporting it separately.
+objective_zh: 把异常值定义为离其他值异常遥远的值；用最接近秩法的四分位数算出1.5倍IQR围栏；并在改正、保留或单独报告之前，先查记录，再决定怎样处理被标记的值。
+objective_zh_hk: 將異常值定義為離其他值異常遙遠嘅值；用最接近秩法嘅四分位數計出1.5倍IQR圍欄；並喺改正、保留或者單獨報告之前，先查記錄，再決定點樣處理被標記嘅值。
 glossary:
 - en: outlier
   zh: 异常值
@@ -40,27 +40,27 @@ quiz:
   options_en:
   - 'A: Automatically delete unusual observations.'
   - 'B: Screen for observations that deserve further investigation.'
-  - 'C: Compute the arithmetic mean.'
-  - 'D: Convert variance into standard deviation.'
+  - 'C: Prove that any value outside the fences is a recording mistake.'
+  - 'D: Replace a far value with the average so the summary looks normal.'
   options_zh:
   - 'A: 自动删除异常观测值。'
   - 'B: 筛查值得进一步调查的观测值。'
-  - 'C: 计算算术平均数。'
-  - 'D: 将方差转换为标准差。'
+  - 'C: 证明凡是落在围栏外的值都是记录错误。'
+  - 'D: 用平均数替换很远的值，让汇总看起来正常。'
   options_zh_hk:
   - 'A: 自動刪除異常觀測值。'
   - 'B: 篩查值得進一步調查嘅觀測值。'
-  - 'C: 計算算術平均數。'
-  - 'D: 將方差轉換為標準差。'
+  - 'C: 證明凡係落喺圍欄外嘅值都係記錄錯誤。'
+  - 'D: 用平均數取代好遠嘅值，等個總結睇落正常啲。'
   answer: B
-  explanation_en: The 1.5×IQR rule flags observations for review. It does not determine whether they are errors or whether they should be removed.
-  explanation_zh: 1.5倍IQR规则把观测值标记出来供复查，但不能判断该值是否错误，也不能自动决定是否删除。
-  explanation_zh_hk: 1.5倍IQR規則將觀測值標記出嚟供複查，但唔可以判斷個數值係咪錯誤，亦唔可以自動決定係咪刪除。
+  explanation_en: The 1.5×IQR rule flags observations for review. It does not prove they are errors, and it does not tell you to delete or replace them.
+  explanation_zh: 1.5倍IQR规则把观测值标记出来供复查，但不能证明它是错误，也不会叫你删掉或替换它。
+  explanation_zh_hk: 1.5倍IQR規則將觀測值標記出嚟供複查，但唔可以證明佢係錯誤，亦唔會叫你刪走或者取代佢。
 - id: Q2
   type: multiple_choice
-  question_en: An airport store sells 4,200 cups while ordinary stores sell around 300–400 cups. What should a manager do first?
-  question_zh: 机场店卖出4200杯，而普通门店约为300至400杯。管理者首先应做什么？
-  question_zh_hk: 機場舖賣出4200杯，而普通門店大約300至400杯。管理者首先應該做咩？
+  question_en: A 24-hour Shop F sells 4,200 cups while five ordinary shops sell 280–420. What should a manager do first?
+  question_zh: 通宵营业的F店卖出4,200杯，而五家普通的店卖出280到420杯。经理首先应该做什么？
+  question_zh_hk: 通宵營業嘅F店賣出4,200杯，而五間普通嘅店賣出280到420杯。經理首先應該做咩？
   options_en:
   - 'A: Delete the observation immediately.'
   - 'B: Investigate whether it is a data error, a one-time event, or a valid business signal.'
@@ -83,112 +83,301 @@ quiz:
 beats:
 - id: hook
   visual: title_card
-  seconds: 30
+  seconds: 52
+  kicker: The Question
   kicker_en: The Question
-  kicker_zh: 商业问题
-  kicker_zh_hk: 商業問題
-  title_en: The 4,200-cup mystery
-  title_zh: 4200杯之谜
-  title_zh_hk: 4200杯之謎
-  en: Most street stores report roughly 300 to 400 cups, while the Airport branch reports 4,200. The number is unusual, but unusual does not mean wrong. Before changing the report, management needs a consistent screening method and a disciplined process for checking the cause.
-  zh: 大部分街头门店报告约300至400杯，而机场店报告4,200杯。这个数字不寻常，但不寻常并不等于错误。在修改报表前，管理层需要一致的筛查方法，并按规范查清成因。
-  zh_hk: 大部分街頭門店報告大約300至400杯，而機場舖報告4,200杯。呢個數字唔尋常，但唔尋常唔等於錯。喺修改報表之前，管理層需要一致嘅篩查方法，並按規範查清楚成因。
-- id: define
-  visual: definition_card
-  seconds: 34
-  kicker_en: What It Is
-  kicker_zh: 核心概念
-  kicker_zh_hk: 核心概念
-  title_en: A candidate for investigation
-  title_zh: 需要调查的候选观测值
-  title_zh_hk: 需要調查嘅候選觀測值
-  formula: 'Lower fence = Q1 − 1.5×IQR
-
-    Upper fence = Q3 + 1.5×IQR'
-  formula_zh: '下界 = Q1 − 1.5×IQR
-
-    上界 = Q3 + 1.5×IQR'
-  formula_zh_hk: '下界 = Q1 − 1.5×IQR
-
-    上界 = Q3 + 1.5×IQR'
-  s1_en: An outlier is an observation unusually distant from the main body of the data. It may affect the mean, variance, and other summaries, but statistical distance alone does not reveal the cause.
-  s1_zh: 异常值是与数据主体距离异常遥远的观测值。它可能影响平均数、方差与其他汇总指标，但统计距离本身无法说明成因。
-  s1_zh_hk: 異常值係同數據主體距離異常遙遠嘅觀測值。佢可能影響平均數、方差同其他匯總指標，但統計距離本身無法說明成因。
-  s2_en: A common boxplot rule flags values below Q1 minus 1.5×IQR or above Q3 plus 1.5×IQR. These fences identify candidates for review; they do not prove that a value is invalid.
-  s2_zh: 常见的箱线图规则会标记低于Q1减1.5倍IQR或高于Q3加1.5倍IQR的数值。围栏只找出复查候选值，并不能证明该值无效。
-  s2_zh_hk: 常見嘅箱線圖規則會標記低過Q1減1.5倍IQR或者高過Q3加1.5倍IQR嘅數值。圍欄只係搵出複查候選值，並唔可以證明個數值無效。
-- id: calc
+  kicker_zh: 业务问题
+  kicker_zh_hk: 業務問題
+  title_en: What is an outlier?
+  title_zh: 什么是异常值？
+  title_zh_hk: 咩係異常值？
+  en: Suppose head office checks Monday's sales before it sets next week's milk orders. Five shops sold between 280 and 420 cups. Then Shop F, a 24-hour site, reports 4,200. What do you do with that number? Delete it, and if it was real, Shop F runs short of milk all week. Keep it, and if it was a typing slip, the average for the six shops jumps from 352 cups to about 993, nearly three times as big, and every order built on it is off. So before anyone touches the number, you need a fair way to say how far is too far. A value that sits that far from the rest has a name. What is an outlier?
+  zh: 假设总部每个星期一先看销量，再定下星期的牛奶订单。五家店卖了280到420杯。接着，通宵营业的F店报来4,200杯。这个数怎么处理？删掉它，如果它是真的，F店整个星期都会缺牛奶。留着它，如果它其实是打错了，六家店的平均数就会从352杯跳到大约993杯，差不多是原来的三倍，照着它下的订单全都会错。所以在动这个数之前，你需要一个公平的方法，说清楚多远才算太远。离其他数这么远的值，有一个名字。什么是异常值？
+  zh_hk: 假設總部逢星期一先睇銷量，再定下個星期嘅牛奶訂單。五間店賣咗280到420杯。跟住，通宵營業嘅F店報上嚟4,200杯。呢個數點處理？刪咗佢，如果佢係真嘅，F店成個星期都會唔夠牛奶。留住佢，如果佢其實係打錯，六間店嘅平均數就會由352杯跳到大約993杯，差唔多係原來嘅三倍，跟住佢落嘅訂單全部都會錯。所以喺郁呢個數之前，你需要一個公平嘅方法，講清楚幾遠先算太遠。離其他數咁遠嘅值，有個名。咩係異常值？
+- id: line
+  visual: rank_line
+  seconds: 50
+  kicker: The Line
+  kicker_en: The Line
+  kicker_zh: 排一排
+  kicker_zh_hk: 排一排
+  title_en: Six shops, one Monday
+  title_zh: 六家店，同一个星期一
+  title_zh_hk: 六間店，同一個星期一
+  values: 360;420;280;390;310;4,200
+  labels_en: Shop A;Shop B;Shop C;Shop D;Shop E;Shop F
+  labels_zh: A店;B店;C店;D店;E店;F店
+  labels_zh_hk: A店;B店;C店;D店;E店;F店
+  order: sorted
+  mark: '6'
+  break: last
+  footer_en: 4,200 ÷ 420 = 10
+  footer_zh: 4,200 ÷ 420 = 10
+  footer_zh_hk: 4,200 ÷ 420 = 10
+  s1_en: Here are the six shops in the order they came in. Shop A sold 360 cups, Shop B 420, Shop C 280, Shop D 390, Shop E 310, and Shop F 4,200.
+  s1_zh: 这是六家店按报上来的顺序：A店卖了360杯，B店420，C店280，D店390，E店310，F店4,200。
+  s1_zh_hk: 呢度係六間店照報上嚟嘅次序：A店賣咗360杯，B店420，C店280，D店390，E店310，F店4,200。
+  s2_en: Line them up from the fewest cups to the most. The five ordinary shops sit close together, from 280 to 420. Shop F is so far off that the line needs a break before it.
+  s2_zh: 从卖得最少排到最多。五家普通的店挤在一起，从280到420。F店远得这条线要先断开一下，才放得下它。
+  s2_zh_hk: 由賣得最少排到最多。五間普通嘅店擠埋一齊，由280到420。F店遠到條線要斷開一下，先擺得落佢。
+  s3_en: 'Shop F sold ten times as much as the next busiest shop: 4,200 divided by 420 is 10. It looks far. But looks far is a feeling, and two managers can feel it differently. So how far is too far?'
+  s3_zh: F店卖的是第二多那家店的十倍：4,200除以420，等于10。它看起来很远。可是“看起来远”只是一种感觉，两个经理的感觉可以不一样。那到底多远才算太远？
+  s3_zh_hk: F店賣嘅係第二多嗰間嘅十倍：4,200除420，等於10。佢睇落好遠。但係「睇落遠」只係一種感覺，兩個經理嘅感覺可以唔同。咁究竟幾遠先算太遠？
+- id: yardstick
+  visual: box_line
+  seconds: 66
+  kicker: The Yardstick
+  kicker_en: The Yardstick
+  kicker_zh: 尺子
+  kicker_zh_hk: 把尺
+  title_en: A yardstick from the middle
+  title_zh: 用中间做尺子
+  title_zh_hk: 用中間做把尺
+  values: 360;420;280;390;310
+  span_en: 390 − 310 = 80 cups
+  span_zh: 390 − 310 = 80 杯
+  span_zh_hk: 390 − 310 = 80 杯
+  footer_en: 0.25 × 5 → 2 · 0.75 × 5 → 4
+  footer_zh: 0.25 × 5 → 2 · 0.75 × 5 → 4
+  footer_zh_hk: 0.25 × 5 → 2 · 0.75 × 5 → 4
+  s1_en: To judge far, we need a yardstick, and it should come from the ordinary shops, not from the strange one. Put the five ordinary shops on a scale of cups, from 280 on the left to 420 on the right.
+  s1_zh: 要判断远不远，得先有一把尺子，而且这把尺子应该来自普通的店，而不是那家奇怪的店。把五家普通的店放到一条杯数的刻度上，左边是280，右边是420。
+  s1_zh_hk: 要判斷遠唔遠，先要有把尺，而呢把尺應該嚟自普通嘅店，唔係嗰間古怪嘅店。將五間普通嘅店擺上一條杯數嘅刻度，左邊係280，右邊係420。
+  s2_en: Now find the quarter marks. Sort the five and multiply. A quarter of 5 is 1.25. There is no place one and a quarter, so round up to place 2, which is 310. That is the first quartile, Q1. Three quarters of 5 is 3.75. Round up to place 4, which is 390. That is the third quartile, Q3.
+  s2_zh: 接着找四分之一的标记。把五个数排好，再乘一乘。5的四分之一是1.25；没有第一点二五位，所以向上取到第2位，是310，这就是第一四分位数，Q1。5的四分之三是3.75，向上取到第4位，是390，这就是第三四分位数，Q3。
+  s2_zh_hk: 跟住搵四分之一嘅標記。將五個數排好，再乘一乘。5嘅四分之一係1.25；冇第一點二五位，所以向上取到第2位，係310，呢個就係第一四分位數，Q1。5嘅四分之三係3.75，向上取到第4位，係390，呢個就係第三四分位數，Q3。
+  s3_en: Draw a box from Q1 to Q3. It holds about the middle half of the shops. Its width, 390 minus 310, is 80 cups. That width is called the interquartile range, or IQR, and it is our yardstick. So how many yardsticks out counts as too far?
+  s3_zh: 从Q1到Q3画一个箱子，里面大约是中间一半的店。它的宽度是390减310，等于80杯。这个宽度叫作四分位距，英文简写IQR，它就是我们的尺子。那么，离箱子多少把尺子，才算太远？
+  s3_zh_hk: 由Q1到Q3畫一個盒，入面大約係中間一半嘅店。佢嘅闊度係390減310，等於80杯。呢個闊度叫做四分位距，英文簡寫IQR，佢就係我哋把尺。咁，離個盒幾多把尺先算太遠？
+- id: step_out
   visual: steps
   seconds: 38
-  kicker_en: Step by Step
-  kicker_zh: 识别步骤
-  kicker_zh_hk: 識別步驟
-  title_en: Screening the airport store
-  title_zh: 筛查机场店
-  title_zh_hk: 篩查機場舖
-  step1_en: Calculate IQR
-  step2_en: Build fences
-  step3_en: Compare observation
-  step1_zh: 计算IQR
-  step2_zh: 建立边界
-  step3_zh: 比较观测值
-  step1_zh_hk: 計算IQR
-  step2_zh_hk: 建立邊界
-  step3_zh_hk: 比較觀測值
-  s1_en: 'Step one: using the course quartile convention for comparable street stores, Q1 is 310 cups, Q3 is 390 cups, and the IQR is 80 cups.'
-  s1_zh: 第一步：按照本课程对可比街头门店采用的四分位数约定，Q1为310杯，Q3为390杯，IQR为80杯。
-  s1_zh_hk: 第一步：按照本課程對可比街頭門店採用嘅四分位數約定，Q1係310杯，Q3係390杯，IQR係80杯。
-  s2_en: 'Step two: 1.5 times 80 equals 120 cups. The lower fence is 310 minus 120, or 190 cups. The upper fence is 390 plus 120, or 510 cups.'
-  s2_zh: 第二步：1.5乘80等于120杯。下界为310减120，即190杯；上界为390加120，即510杯。
-  s2_zh_hk: 第二步：1.5乘80等於120杯。下界係310減120，即190杯；上界係390加120，即510杯。
-  s3_en: 'Step three: 4,200 cups exceeds the 510-cup upper fence by 3,690 cups, so it is flagged as a potential outlier. The calculation triggers investigation; it does not diagnose the cause.'
-  s3_zh: 第三步：4,200杯高出510杯上界3,690杯，因此被标记为潜在异常值。计算只会触发调查，并不会诊断成因。
-  s3_zh_hk: 第三步：4,200杯高出510杯上界3,690杯，所以被標記為潛在異常值。計算只會觸發調查，並唔會診斷成因。
-- id: interpret
+  kicker: The Fences
+  kicker_en: The Fences
+  kicker_zh: 围栏
+  kicker_zh_hk: 圍欄
+  title_en: One and a half boxes out
+  title_zh: 往外走一个半箱宽
+  title_zh_hk: 向外行一個半盒闊
+  layout: rows
+  step1_en: 1.5 × 80 = 120 cups
+  step1_zh: 1.5 × 80 = 120 杯
+  step1_zh_hk: 1.5 × 80 = 120 杯
+  step2_en: 310 − 120 = 190 cups
+  step2_zh: 310 − 120 = 190 杯
+  step2_zh_hk: 310 − 120 = 190 杯
+  step3_en: 390 + 120 = 510 cups
+  step3_zh: 390 + 120 = 510 杯
+  step3_zh_hk: 390 + 120 = 510 杯
+  s1_en: A common rule steps out one and a half box widths. One and a half times 80 is 80 plus half of 80, which is 40. So 120 cups.
+  s1_zh: 常用的规则是往外走一个半箱宽。1.5乘80，就是80再加80的一半40，等于120杯。
+  s1_zh_hk: 常用嘅規則係向外行一個半盒闊。1.5乘80，即係80再加80嘅一半40，等於120杯。
+  s2_en: Step that far below Q1. 310 minus 120 is 190 cups. That line is the lower fence.
+  s2_zh: 从Q1往下走这么远：310减120，等于190杯。这条线叫下围栏。
+  s2_zh_hk: 由Q1向下行咁遠：310減120，等於190杯。呢條線叫下圍欄。
+  s3_en: And that far above Q3. 390 plus 120 is 510 cups, the upper fence. A shop between 190 and 510 counts as ordinary by this rule. So where does Shop F land?
+  s3_zh: 再从Q3往上走这么远：390加120，等于510杯，这是上围栏。按这个规则，落在190到510之间的店都算普通。那F店落在哪里？
+  s3_zh_hk: 再由Q3向上行咁遠：390加120，等於510杯，呢條係上圍欄。按呢個規則，落喺190到510之間嘅店都算普通。咁F店落喺邊？
+- id: flag
+  visual: box_line
+  seconds: 46
+  kicker: The Flag
+  kicker_en: The Flag
+  kicker_zh: 标记
+  kicker_zh_hk: 標記
+  title_en: Where does Shop F land?
+  title_zh: F店落在哪里？
+  title_zh_hk: F店落喺邊？
+  values: 360;420;280;390;310;4,200
+  q1: 310
+  q3: 390
+  fences: 190;510
+  break: last
+  span_en: 1.5 × 80 = 120 cups
+  span_zh: 1.5 × 80 = 120 杯
+  span_zh_hk: 1.5 × 80 = 120 杯
+  footer_en: 4,200 − 510 = 3,690 cups
+  footer_zh: 4,200 − 510 = 3,690 杯
+  footer_zh_hk: 4,200 − 510 = 3,690 杯
+  s1_en: Here is the same box, built from the five ordinary shops. Shop F's 4,200 sits on the same line, past a break.
+  s1_zh: 这是同一个箱子，用五家普通的店画出来。F店的4,200放在同一条线上，在断开的地方后面。
+  s1_zh_hk: 呢個係同一個盒，用五間普通嘅店畫出嚟。F店嘅4,200擺喺同一條線上面，喺斷開位後面。
+  s2_en: Add the fences, at 190 and 510, each one and a half box widths out. All five ordinary shops sit inside them, from 280 to 420.
+  s2_zh: 加上围栏，在190和510，各离箱子一个半箱宽。五家普通的店全在里面，从280到420。
+  s2_zh_hk: 加埋圍欄，喺190同510，各自離個盒一個半盒闊。五間普通嘅店全部喺入面，由280到420。
+  s3_en: 'Shop F is far past the upper fence: 4,200 minus 510 is 3,690 cups beyond it. So the rule flags Shop F. Not because it feels far, but because it sits outside a fence that anyone can work out again. What do we call a value like that?'
+  s3_zh: F店远远越过了上围栏：4,200减510，超出3,690杯。所以这个规则把F店标记出来。不是因为“感觉很远”，而是它落在一道谁都能重算的围栏外面。这样的值叫什么？
+  s3_zh_hk: F店遠遠越過咗上圍欄：4,200減510，超出3,690杯。所以呢個規則將F店標記出嚟。唔係因為「感覺好遠」，而係佢落喺一道邊個都可以重新計嘅圍欄外面。噉嘅值叫咩？
+- id: name_outlier
+  visual: title_card
+  seconds: 28
+  kicker: The Name
+  kicker_en: The Name
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Outlier
+  title_zh: 异常值
+  title_zh_hk: 異常值
+  en: 'An outlier. A value that sits unusually far from the rest of the group. The fences turn unusually far into a screening rule: below the lower fence or above the upper fence, and the value is flagged for a check. On this Monday, Shop F is an outlier. So how do we write the rule for any group?'
+  zh: 异常值。就是离这组数的其他值异常遥远的值。围栏把“异常遥远”变成一条筛查规则：低于下围栏，或者高于上围栏，这个值就被标记出来，等着核查。这个星期一，F店就是一个异常值。那换成任何一组数，这条规则要怎么写？
+  zh_hk: 異常值。即係離呢組數其他值異常遙遠嘅值。圍欄將「異常遙遠」變成一條篩查規則：低過下圍欄，或者高過上圍欄，個值就會被標記出嚟，等人核查。呢個星期一，F店就係一個異常值。咁換成任何一組數，呢條規則又點樣寫？
+- id: rule
+  visual: definition_card
+  seconds: 52
+  kicker: The Rule
+  kicker_en: The Rule
+  kicker_zh: 规则
+  kicker_zh_hk: 規則
+  title_en: The 1.5 × IQR rule
+  title_zh: 1.5倍IQR规则
+  title_zh_hk: 1.5倍IQR規則
+  formula_en: 'Lower fence = Q1 − 1.5 × IQR
+
+    Upper fence = Q3 + 1.5 × IQR'
+  formula_zh: '下围栏 = Q1 − 1.5 × IQR
+
+    上围栏 = Q3 + 1.5 × IQR'
+  formula_zh_hk: '下圍欄 = Q1 − 1.5 × IQR
+
+    上圍欄 = Q3 + 1.5 × IQR'
+  gloss_en: 'Outside a fence: flag it, then check'
+  gloss_zh: 落在围栏外：先标记，再核查
+  gloss_zh_hk: 落喺圍欄外：先標記，再核查
+  s1_en: Here it is in symbols. Q1 and Q3 are the quarter marks, and the IQR is Q3 minus Q1, the width of the box. The lower fence is Q1 minus one and a half IQRs. The upper fence is Q3 plus one and a half IQRs. Anything outside is flagged.
+  s1_zh: 用符号写出来：Q1和Q3是两个四分之一的标记，四分位距是Q3减Q1，也就是箱子的宽度。下围栏是Q1减1.5个四分位距，上围栏是Q3加1.5个四分位距。落在外面的，就被标记出来。
+  s1_zh_hk: 用符號寫出嚟：Q1同Q3係兩個四分之一嘅標記，四分位距係Q3減Q1，即係個盒嘅闊度。下圍欄係Q1減1.5個四分位距，上圍欄係Q3加1.5個四分位距。落喺外面嘅，就會被標記出嚟。
+  s2_en: Two notes. The one and a half is a convention that many analysts share, not a law of nature. And here we built the box from the five ordinary shops, to check one new number against them. The usual box-plot habit puts every value in, the suspect one too. Does that change the verdict for Shop F?
+  s2_zh: 有两点要说明。1.5是很多分析师共同采用的惯例，不是自然定律。另外，刚才我们用五家普通的店来画箱子，再拿一个新的数跟它们比。通常画箱线图的做法，是把所有数都放进去，包括那个可疑的数。这样一来，F店的结论会变吗？
+  s2_zh_hk: 有兩點要講清楚。1.5係好多分析員共同用嘅慣例，唔係自然定律。另外，頭先我哋用五間普通嘅店嚟畫個盒，再攞一個新嘅數同佢哋比。一般畫箱線圖嘅做法，係將所有數都放入去，包括嗰個可疑嘅數。噉樣，F店嘅結論會唔會變？
+- id: six
+  visual: box_line
+  seconds: 48
+  kicker: Six Shops
+  kicker_en: Six Shops
+  kicker_zh: 六家店
+  kicker_zh_hk: 六間店
+  title_en: Count Shop F in too
+  title_zh: 把F店也算进去
+  title_zh_hk: 將F店都計埋
+  values: 280;310;360;390;420;4,200
+  fences: 'on'
+  break: last
+  span_en: 1.5 × 110 = 165 cups
+  span_zh: 1.5 × 110 = 165 杯
+  span_zh_hk: 1.5 × 110 = 165 杯
+  footer_en: '4,200 > 585: still flagged'
+  footer_zh: 4,200 > 585：仍被标记
+  footer_zh_hk: 4,200 > 585：仍然被標記
+  s1_en: Six shops now, Shop F included. A quarter of 6 is 1.5; round up to place 2, which is 310. Three quarters of 6 is 4.5; round up to place 5, which is 420. The box widens to 420 minus 310, which is 110 cups.
+  s1_zh: 现在是六家店，F店也算在内。6的四分之一是1.5，向上取到第2位，是310。6的四分之三是4.5，向上取到第5位，是420。箱子变宽了，420减310，等于110杯。
+  s1_zh_hk: 而家係六間店，F店都計埋。6嘅四分之一係1.5，向上取到第2位，係310。6嘅四分之三係4.5，向上取到第5位，係420。個盒闊咗，420減310，等於110杯。
+  s2_en: 'One and a half times 110 is 165. So the fences move out: 310 minus 165 is 145, and 420 plus 165 is 585.'
+  s2_zh: 1.5乘110等于165。所以围栏往外移：310减165，等于145；420加165，等于585。
+  s2_zh_hk: 1.5乘110等於165。所以圍欄向外移：310減165，等於145；420加165，等於585。
+  s3_en: Shop F's 4,200 is still far past 585. Same flag, either way. A value this far out gets flagged however you build the box. But does flagged mean wrong?
+  s3_zh: F店的4,200仍然远远超过585。两种做法，结论一样。一个远到这种程度的值，不管箱子怎么画，都会被标记出来。可是，被标记就等于错了吗？
+  s3_zh_hk: F店嘅4,200仍然遠遠超過585。兩個做法，結論一樣。一個遠到咁嘅值，無論個盒點畫，都會被標記出嚟。但係，被標記係咪即係錯？
+- id: stories
+  visual: steps
+  seconds: 52
+  kicker: Three Stories
+  kicker_en: Three Stories
+  kicker_zh: 三种可能
+  kicker_zh_hk: 三個可能
+  title_en: Flagged is not wrong
+  title_zh: 被标记，不等于错
+  title_zh_hk: 被標記，唔等於錯
+  layout: rows
+  step1_en: 'A typing slip: one 0 too many'
+  step1_zh: 打错：多打了一个0
+  step1_zh_hk: 打錯：多打咗一個0
+  step2_en: 'A one-off: an unusual Monday'
+  step2_zh: 一次性：特别的星期一
+  step2_zh_hk: 一次性：特別嘅星期一
+  step3_en: A different kind of shop
+  step3_zh: 不同类型的店
+  step3_zh_hk: 唔同類型嘅店
+  s1_en: 'The fence says look here. It does not say why. Picture three stories behind 4,200. One: a typing slip. Suppose Shop F really sold 420, and someone typed one zero too many. That is a data error.'
+  s1_zh: 围栏只是说“看这里”，没说为什么。想象4,200背后有三种可能。第一，打错了。假设F店其实卖了420杯，有人多打了一个0。这就是数据错误。
+  s1_zh_hk: 圍欄只係話「睇呢度」，冇話點解。想像4,200背後有三個可能。第一，打錯咗。假設F店其實賣咗420杯，有人多打咗個0。呢個就係數據錯誤。
+  s2_en: 'Two: the number is real, but the day was not ordinary. Suppose a concert nearby kept Shop F busy all night. That is a real one-off.'
+  s2_zh: 第二，数字是真的，但那天不寻常。假设附近有一场演唱会，让F店整晚都很忙。这是真实的一次性事件。
+  s2_zh_hk: 第二，個數係真嘅，但嗰日唔尋常。假設附近有一場演唱會，令F店成晚都好忙。呢個係真實嘅一次性事件。
+  s3_en: 'Three: the number is real, and normal for Shop F. A 24-hour site is a different kind of shop from the five ordinary ones, so it was never a fair comparison. The fence cannot tell these three apart. So what do you do?'
+  s3_zh: 第三，数字是真的，而且对F店来说很正常。通宵营业的店，跟五家普通的店本来就不是同一类，一开始就不能公平比较。围栏分不出这三种情况。那该怎么办？
+  s3_zh_hk: 第三，個數係真嘅，而且對F店嚟講好正常。通宵營業嘅店，同五間普通嘅店本來就唔係同一類，一開始就唔可以公平噉比。圍欄分唔到呢三個情況。咁點算？
+- id: decide
   visual: two_column
-  seconds: 34
-  kicker_en: Managerial Meaning
-  kicker_zh: 管理含义
-  kicker_zh_hk: 管理含義
-  title_en: Error, special event, or structural difference?
-  title_zh: 错误、特殊事件，还是结构差异？
-  title_zh_hk: 錯誤、特殊事件，定係結構差異？
-  left_en: Invalid record
-  right_en: Valid unusual observation
-  left_zh: 无效记录
-  right_zh: 真实但不寻常的观测
-  left_zh_hk: 無效記錄
-  right_zh_hk: 真實但唔尋常嘅觀測
-  s1_en: First verify the record by checking source transactions, units, duplicate processing, and system logs. If evidence confirms an error, correct the record and document the change.
-  s1_zh: 首先核实记录，检查交易源数据、单位、重复处理与系统日志。如果证据确认错误，就修正记录并记录改动。
-  s1_zh_hk: 首先核實記錄，檢查交易源數據、單位、重複處理同系統日誌。如果證據確認錯誤，就修正記錄並記錄改動。
-  s2_en: If the record is valid, examine operating context. It may reflect a one-time event, promotion, unusual traffic, or a branch format that is not comparable with ordinary street stores.
-  s2_zh: 如果记录有效，就检查运营背景。它可能反映一次性事件、推广活动、异常客流，或与普通街头门店不可直接比较的业态。
-  s2_zh_hk: 如果記錄有效，就檢查營運背景。佢可能反映一次性事件、推廣活動、異常客流，或者同普通街頭門店唔可以直接比較嘅業態。
-  s3_en: A valid outlier may be retained, analyzed separately, or reported through sensitivity analysis. The treatment should follow the analytical question and be documented transparently.
-  s3_zh: 真实异常值可以保留、单独分析，或通过敏感性分析报告。处理方式应服从分析问题，并透明记录。
-  s3_zh_hk: 真實異常值可以保留、單獨分析，或者透過敏感性分析報告。處理方式應該服從分析問題，並透明記錄。
-- id: takeaway
+  seconds: 60
+  kicker: The Decision
+  kicker_en: The Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Check the record, then decide
+  title_zh: 先查记录，再决定
+  title_zh_hk: 先查記錄，再決定
+  left_en: 'Error: correct it, note it'
+  left_zh: 错了：改正，并写下来
+  left_zh_hk: 錯咗：改正，並寫低
+  right_en: 'Real: keep it, report apart'
+  right_zh: 是真的：保留，分开报告
+  right_zh_hk: 係真嘅：保留，分開報告
+  s1_en: First, check the record before you touch the data. Look at Shop F's till receipts for Monday, the units, and whether any sale was counted twice.
+  s1_zh: 第一步，动数据之前先查记录。看F店星期一的收银单据、单位，还有有没有哪笔交易算了两次。
+  s1_zh_hk: 第一步，郁啲數據之前先查記錄。睇吓F店星期一嘅收銀單據、單位，同埋有冇邊單交易計咗兩次。
+  s2_en: If the receipts show a slip, correct it. If they show 420, write 420, and note what you changed and why, so anyone can follow the change later.
+  s2_zh: 如果单据显示是打错了，就改正。单据上是420，就写420，再写下改了什么、为什么改，让别人以后也看得懂。
+  s2_zh_hk: 如果單據顯示係打錯，就改正。單據上面係420，就寫420，再寫低改咗乜、點解改，等人以後都睇得明。
+  s3_en: 'If the number is real, keep it. Do not delete a value just because it is flagged. Report Shop F on its own line, or show the summary with and without it: the average is 352 cups for the five shops, and about 993 with Shop F. Then the five shops and Shop F each get their own plan. So what can the rule tell you, and what can it not?'
+  s3_zh: 如果数字是真的，就保留。不要只因为被标记就删掉一个值。可以把F店单独列一行，或者同时给出有它和没有它的结果：五家店的平均数是352杯，算上F店大约是993杯。这样，五家店和F店就各有各的计划。那这个规则能告诉你什么，又不能告诉你什么？
+  s3_zh_hk: 如果個數係真嘅，就保留。唔好淨係因為被標記就刪走一個值。可以將F店單獨列一行，或者同時畀出有佢同冇佢嘅結果：五間店嘅平均數係352杯，計埋F店大約係993杯。噉樣，五間店同F店就各自有自己嘅計劃。咁呢個規則話到你知啲乜，又話唔到你知啲乜？
+- id: limit
+  visual: two_column
+  seconds: 68
+  kicker: The Limit
+  kicker_en: The Limit
+  kicker_zh: 限度
+  kicker_zh_hk: 限度
+  title_en: A screening rule, not a verdict
+  title_zh: 筛查规则，不是判决
+  title_zh_hk: 篩查規則，唔係判決
+  left_en: 'Tells: which values to check'
+  left_zh: 能说：该查哪些值
+  left_zh_hk: 講到：要查邊啲值
+  right_en: 'Not: why, or what to do'
+  right_zh: 不能说：原因和做法
+  right_zh_hk: 講唔到：原因同做法
+  s1_en: So what does the rule tell you, and what does it not?
+  s1_zh: 那这个规则到底能告诉你什么，又不能告诉你什么？
+  s1_zh_hk: 咁呢個規則究竟話到你知啲乜，又話唔到你知啲乜？
+  s2_en: 'It tells you which values sit unusually far from the rest, the same way every time, so two managers looking at the same file flag the same shops. And because it is built on the quartiles, one far shop barely moves its own fences: the upper fence moved from 510 to 585, not to thousands.'
+  s2_zh: 它能告诉你哪些值离其他值异常地远，而且每次用同一种方法，所以两个经理看同一份数据，会标记出同样的店。又因为它建立在四分位数上，一家很远的店几乎挪不动自己的围栏：上围栏从510移到585，而不是移到几千。
+  s2_zh_hk: 佢話到你知邊啲值離其他值異常咁遠，而且每次都用同一個方法，所以兩個經理睇同一份數據，會標記出同樣嘅店。又因為佢建基於四分位數，一間好遠嘅店差唔多郁唔到自己嘅圍欄：上圍欄由510移到585，唔係移到幾千。
+  s3_en: 'It does not tell you why, or what to do. That takes the record and the business context. It also depends on the method: the 1.5 is a convention, and another textbook or software rule can place the quartiles a little differently and shift the fences. With five or six shops, the fences rest on very few values. And a mistake inside the fences is never flagged: if 390 had been typed as 360, no fence would catch it.'
+  s3_zh: 它不能告诉你原因，也不能告诉你该怎么做，这些要靠记录和业务背景。它也取决于方法：1.5是惯例，换一本教材或一个软件，四分位数的位置可能有一点不同，围栏也会跟着移。只有五六家店，围栏只建立在很少的数上。还有，落在围栏里面的错误永远不会被标记：如果390被打成了360，没有一道围栏抓得到。
+  s3_zh_hk: 佢話唔到你知原因，亦話唔到你知應該點做，呢啲要靠記錄同業務背景。佢亦取決於方法：1.5係慣例，換一本教科書或者一個軟件，四分位數嘅位置可能有少少唔同，圍欄都會跟住移。得五六間店，圍欄只係建基於好少數。仲有，落喺圍欄入面嘅錯誤永遠唔會被標記：如果390被打成360，冇一道圍欄捉得到。
+- id: answer
   visual: takeaway
-  seconds: 32
-  kicker_en: Decision Rule
-  kicker_zh: 商业法则
-  kicker_zh_hk: 商業法則
-  title_en: Flag, verify, explain, decide
-  title_zh: 标记、核实、解释、决策
-  title_zh_hk: 標記、核實、解釋、決策
-  q1_en: What does the 1.5×IQR rule do?
-  q1_zh: 1.5倍IQR规则做什么？
-  q1_zh_hk: 1.5倍IQR規則做咩？
-  q2_en: How should managers respond?
-  q2_zh: 管理者应如何回应？
-  q2_zh_hk: 管理者應該點樣回應？
-  s1_en: Use the 1.5×IQR fences as a consistent screening rule, not as an automatic cleaning command.
-  s1_zh: 把1.5倍IQR围栏用作一致的筛查规则，而不是自动清洗命令。
-  s1_zh_hk: 將1.5倍IQR圍欄用作一致嘅篩查規則，而唔係自動清洗命令。
-  s2_en: Verify whether the observation is erroneous, event-driven, or structurally different from the comparison group before changing the dataset.
-  s2_zh: 在修改数据集前，核实该观测值是错误、事件驱动，还是与比较总体存在结构差异。
-  s2_zh_hk: 喺修改數據集之前，核實個觀測值係錯誤、事件驅動，定係同比較總體存在結構差異。
-  s3_en: 'The operating rule is precise: flag statistically, verify operationally, document the explanation, and then decide whether to correct, retain, segment, or report sensitivity results.'
-  s3_zh: 经营规则很明确：用统计方法标记，用运营证据核实，记录解释，再决定修正、保留、分组，或报告敏感性结果。
-  s3_zh_hk: 營運規則好清楚：用統計方法標記，用營運證據核實，記錄解釋，再決定修正、保留、分組，或者報告敏感性結果。
+  seconds: 76
+  kicker: The Answer
+  kicker_en: The Answer
+  kicker_zh: 答案
+  kicker_zh_hk: 答案
+  title_en: Far? Flag it, then check.
+  title_zh: 很远？先标记，再核查
+  title_zh_hk: 好遠？先標記，再核查
+  q1_en: What makes a value an outlier?
+  q1_zh: 什么样的值算异常值？
+  q1_zh_hk: 點樣嘅值先算異常值？
+  q2_en: What do you do after the flag?
+  q2_zh: 被标记之后要做什么？
+  q2_zh_hk: 被標記之後要做咩？
+  s1_en: Back to head office and Shop F's 4,200. Delete it, and a site that really was busy runs short. Keep a typing slip, and the average jumps from 352 cups to about 993.
+  s1_zh: 回到总部和F店的4,200杯。删掉它，一家真的很忙的店就会缺货；留着一个打错的数，平均数就会从352杯跳到大约993杯。
+  s1_zh_hk: 返去總部同F店嘅4,200杯。刪咗佢，一間真係好忙嘅店就會唔夠貨；留低一個打錯嘅數，平均數就會由352杯跳到大約993杯。
+  s2_en: What makes a value an outlier? It sits unusually far from the rest, and the 1.5 times IQR rule makes that precise. From the five ordinary shops, Q1 is 310, Q3 is 390, and the IQR is 80. The fences sit at 190 and 510. Shop F's 4,200 is outside, and it is still outside, past 585, when Shop F is counted in.
+  s2_zh: 什么样的值算异常值？离其他值异常遥远的值，而1.5倍IQR规则把“多远”说清楚。用五家普通的店，Q1是310，Q3是390，四分位距是80，围栏在190和510。F店的4,200落在外面；把F店也算进去，它还是在585外面。
+  s2_zh_hk: 點樣嘅值先算異常值？離其他值異常遙遠嘅值，而1.5倍IQR規則將「幾遠」講清楚。用五間普通嘅店，Q1係310，Q3係390，四分位距係80，圍欄喺190同510。F店嘅4,200落喺外面；將F店都計埋，佢都仲喺585外面。
+  s3_en: What do you do after the flag? Check the record first. Correct an error and write down the change. Keep a real value, and report it on its own, or with and without it. Never delete a value only because it is flagged. These are numbers we supposed for one Monday, and the fences depend on the quartile method you report with them. The fence finds the value to check. The record decides what it means.
+  s3_zh: 被标记之后要做什么？先查记录。是错误，就改正，并写下改动；是真的，就保留，单独报告，或者同时给出有它和没有它的结果。绝不要只因为被标记就删掉一个值。这些都是我们为一个星期一假设的数字，而围栏也取决于你同时报告的四分位数方法。围栏找出要查的值，记录才决定它代表什么。
+  s3_zh_hk: 被標記之後要做咩？先查記錄。係錯誤，就改正，並寫低改動；係真嘅，就保留，單獨報告，或者同時畀出有佢同冇佢嘅結果。千祈唔好淨係因為被標記就刪走一個值。呢啲都係我哋為一個星期一假設嘅數字，而圍欄亦取決於你同時報告嘅四分位數方法。圍欄搵出要查嘅值，記錄先決定佢代表乜。

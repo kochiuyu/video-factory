@@ -7,13 +7,13 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
-title_en: Where does this shop rank?
-title_zh: 这家分店处于什么位置？
-title_zh_hk: 呢間分店排喺咩位置？
-objective_en: Define a percentile as a relative position in ordered data, calculate the 80th percentile using the nearest-rank method, interpret percentile standing for branch benchmarking, and explain why the method, period, and comparison group must be stated.
-objective_zh: 把百分位数定义为有序数据中的相对位置，使用最接近秩法计算第80百分位数，解释百分位排名如何用于门店基准比较，并说明为何必须交代计算方法、统计期间与比较总体。
-objective_zh_hk: 將百分位數定義為有序數據入面嘅相對位置，使用最接近秩法計算第80百分位數，解釋百分位排名點樣用於門店基準比較，並說明點解一定要交代計算方法、統計期間同比較總體。
+duration_target_s: 540
+title_en: What is a percentile?
+title_zh: 什么是百分位数？
+title_zh_hk: 咩係百分位數？
+objective_en: Decide whether one shop's sales are strong by finding its place in the ordered line of shops, turn that place into a percentile rank, find a percentile with the nearest-rank method (round the place up), and see why the answer depends on the group, period and method.
+objective_zh: 通过找出一家店在排好的一排店里的位置，判断它的销量强不强；把位置换算成百分位排名，用最接近秩法（位置向上取整）求出百分位数，并看到答案为什么取决于比较哪组店、哪段时间和用什么方法。
+objective_zh_hk: 透過搵出一間店喺排好嘅一排店入面嘅位置，判斷佢嘅銷量勁唔勁；將位置換算成百分位排名，用最接近秩法（位置向上取整）搵出百分位數，並睇到答案點解取決於比較邊組店、邊段時間同用咩方法。
 glossary:
 - en: percentile
   zh: 百分位数
@@ -83,120 +83,325 @@ quiz:
 beats:
 - id: hook
   visual: title_card
-  seconds: 30
+  seconds: 44
   kicker: The Question
   kicker_en: The Question
-  kicker_zh: 商业问题
-  kicker_zh_hk: 商業問題
-  title_en: Is 390 cups strong performance?
-  title_zh: 390杯算不算强劲业绩？
-  title_zh_hk: 390杯算唔算強勁業績？
-  en: A branch sold 390 cups on Monday. That number sounds healthy, but a manager still cannot judge it in isolation. Is 390 near the middle of the network, or does it place the branch among the top performers? To answer, we need to compare its position with every other observed branch.
-  zh: 一家分店周一卖了390杯。这个数字听起来不错，但管理者不能孤立判断：390杯接近比较总体的中间，还是处于较高位置？要回答这个问题，必须把它与其他观测门店一起排序。
-  zh_hk: 一間分店星期一賣咗390杯。呢個數字聽落唔錯，但管理者唔可以孤立判斷：390杯接近比較總體嘅中間，定係處於較高位置？要回答呢個問題，一定要將佢同其他觀測門店一齊排序。
-- id: define
-  visual: definition_card
-  seconds: 34
-  kicker: What It Is
-  kicker_en: What It Is
-  kicker_zh: 概念定义
-  kicker_zh_hk: 概念定義
-  title_en: A position in ordered data
-  title_zh: 有序数据中的相对位置
-  title_zh_hk: 有序數據入面嘅相對位置
-  formula: 'p-th percentile = value at rank p
-
-    about p% of observations fall at or below it'
-  formula_zh: '第 p 百分位数 = 排在第 p 位的值
-
-    大约 p% 的观测落在该值或以下'
-  formula_zh_hk: '第 p 百分位數 = 排喺第 p 位嘅值
-
-    大約 p% 嘅觀測落喺該值或以下'
-  gloss_en: Percentiles define cutoff values for ranked groups.
-  gloss_zh: 百分位数用于界定有序数据中的相对位置门槛。
-  gloss_zh_hk: 百分位數用嚟界定有序數據入面嘅相對位置門檻。
-  s1_en: A percentile describes relative position. After arranging observations from smallest to largest, the p-th percentile marks a value at or below which approximately p percent of observations fall.
-  s1_zh: 百分位数描述相对位置。将观测值从小到大排列后，第p百分位数标记一个数值，约有p%的观测值不高于它。
-  s1_zh_hk: 百分位數描述相對位置。將觀測值由細到大排列之後，第p百分位數標記一個數值，大約有p%嘅觀測值唔高過佢。
-  s2_en: 'It does not report distance between shops and it is not the mean. It answers a ranking question: how far through the ordered comparison group must we move before reaching this threshold?'
-  s2_zh: 它不衡量门店之间的数值距离，也不是平均数。它回答的是排名问题：在有序比较总体中，要到达什么位置才会触及这个门槛？
-  s2_zh_hk: 佢唔衡量門店之間嘅數值距離，亦唔係平均數。佢回答嘅係排名問題：喺有序比較總體入面，要去到咩位置先會到達呢個門檻？
-- id: calc
-  visual: steps
-  seconds: 38
-  kicker: Step by Step
-  kicker_en: Step by Step
-  kicker_zh: 计算步骤
-  kicker_zh_hk: 計算步驟
-  title_en: Finding the 80th percentile
-  title_zh: 找出第80百分位数
-  title_zh_hk: 搵出第80百分位數
-  step1_en: Sort the five stores
-  step1_zh: 排列五家门店
-  step1_zh_hk: 排列五間門店
-  step2_en: Compute the nearest rank
-  step2_zh: 计算最接近秩
-  step2_zh_hk: 計算最接近秩
-  step3_en: Read the ranked value
-  step3_zh: 读出对应数值
-  step3_zh_hk: 讀出對應數值
-  s1_en: 'Step one: order the five street-store volumes: 280, 310, 360, 390, and 420 cups.'
-  s1_zh: 第一步：将五家街头门店的销量从小到大排列为280、310、360、390和420杯。
-  s1_zh_hk: 第一步：將五間街頭門店嘅銷量由細到大排列為280、310、360、390同420杯。
-  s2_en: 'Step two: this lesson uses the nearest-rank method. Multiply 0.80 by 5 to get 4, then round upward if necessary. The required rank is the fourth observation.'
-  s2_zh: 第二步：本课采用最接近秩法。用0.80乘以5得到4；如有小数则向上取整。因此需要第四个观测值。
-  s2_zh_hk: 第二步：本課採用最接近秩法。用0.80乘以5得到4；如果有小數就向上取整。所以需要第四個觀測值。
-  s3_en: 'Step three: the fourth ordered value is 390 cups. Under this stated method and dataset, 390 cups is the 80th-percentile threshold.'
-  s3_zh: 第三步：第四个有序数值是390杯。在本课说明的方法与数据集中，390杯就是第80百分位门槛。
-  s3_zh_hk: 第三步：第四個有序數值係390杯。喺本課講明嘅方法同數據集入面，390杯就係第80百分位門檻。
-- id: interpret
+  kicker_zh: 业务问题
+  kicker_zh_hk: 業務問題
+  title_en: What is a percentile?
+  title_zh: 什么是百分位数？
+  title_zh_hk: 咩係百分位數？
+  en: >-
+    Suppose head office wants to learn from its strongest coffee shops, so it will visit them first and see what they do differently.
+    Shop D sold 390 cups on Monday. Is that a strong day? On its own, 390 cannot tell you.
+    If most shops sold more, you would be copying an ordinary shop. If almost every shop sold less, Shop D is worth the trip.
+    So the question is not how big 390 is. It is where 390 stands in the line of shops.
+    The number that answers that is called a percentile. What is a percentile?
+  zh: >-
+    假设总部想向最强的几家咖啡店取经，先去这些店看看它们做对了什么。D店星期一卖了390杯。这算不算强？单看390，你判断不了。
+    要是大多数店卖得比它多，你就是在学一家普通的店；要是几乎每家店都卖得比它少，D店就值得去一趟。
+    所以问题不是390有多大，而是390在这一排店里站在哪里。回答这个问题的数，叫作百分位数。什么是百分位数？
+  zh_hk: >-
+    假設總部想向最勁嗰幾間咖啡店取經，先去嗰啲店睇吓佢哋做啱咗乜。D店星期一賣咗390杯。噉算唔算勁？淨係睇390，你判斷唔到。
+    如果大部分店都賣得多過佢，你就係去學一間普通嘅店；如果差唔多每間店都賣得少過佢，D店就值得去一轉。
+    所以問題唔係390有幾大，而係390喺呢一排店入面企喺邊個位。答到呢個問題嘅數，就叫做百分位數。咩係百分位數？
+- id: line
+  visual: rank_line
+  seconds: 60
+  kicker: The Line
+  kicker_en: The Line
+  kicker_zh: 排一排
+  kicker_zh_hk: 排一排
+  title_en: Five shops, one Monday
+  title_zh: 五家店，同一个星期一
+  title_zh_hk: 五間店，同一個星期一
+  values: 360;420;280;390;310
+  labels_en: Shop A;Shop B;Shop C;Shop D;Shop E
+  labels_zh: A店;B店;C店;D店;E店
+  labels_zh_hk: A店;B店;C店;D店;E店
+  order: sorted
+  mark: '4'
+  span: 1-4
+  span_en: 4 of 5 at or below 390
+  span_zh: 五家里有四家不高于 390
+  span_zh_hk: 五間入面有四間唔高過 390
+  s1_en: >-
+    Here are the five shops on that Monday, in the order they were written. Shop A sold 360 cups, Shop B 420, Shop C 280, Shop D 390, and Shop E 310.
+    Written like this, can you tell where 390 stands?
+  s1_zh: 这是那个星期一的五家店，按写下的顺序：A店卖了360杯，B店420，C店280，D店390，E店310。这样写着，你看得出390站在哪里吗？
+  s1_zh_hk: 呢個係嗰個星期一嘅五間店，照寫低嘅次序：A店賣咗360杯，B店420，C店280，D店390，E店310。噉樣寫住，你睇唔睇得出390企喺邊？
+  s2_en: >-
+    So line them up from the fewest cups to the most, and number the places. Shop C at 280 is first, then Shop E at 310, Shop A at 360, Shop D at 390,
+    and Shop B at 420 in fifth place. Each shop keeps its own number; we have only sorted. Values put in order like this are called ordered data.
+  s2_zh: 所以把它们从卖得最少排到最多，再给每个位置编号。第一位是C店，280；然后是E店310、A店360、D店390，第五位是B店420。每家店的数字都没变，我们只是排了个序。像这样排好顺序的数，叫作有序数据。
+  s2_zh_hk: 所以將佢哋由賣得最少排到最多，再幫每個位編號。第一位係C店，280；跟住係E店310、A店360、D店390，第五位係B店420。每間店嘅數字都冇變，我哋只係排咗個次序。好似噉排好次序嘅數，就叫做有序數據。
+  s3_en: >-
+    Now find Shop D. It is in place 4. Count the shops at or below 390: Shop C, Shop E, Shop A, and Shop D itself. That is 4 of the 5 shops.
+    Is there a quicker way, though? What about the average?
+  s3_zh: 现在找D店：它在第4位。数一数不高于390的店：C店、E店、A店，还有D店自己，五家里有四家。不过，有没有更快的办法？平均数行不行？
+  s3_zh_hk: 而家搵D店：佢喺第4位。數吓有幾多間唔高過390：C店、E店、A店，仲有D店自己，五間入面有四間。不過，有冇更快嘅方法？平均數得唔得？
+- id: why_not
   visual: two_column
-  seconds: 34
-  kicker: Managerial Meaning
-  kicker_en: Managerial Meaning
-  kicker_zh: 管理含义
-  kicker_zh_hk: 管理含義
-  title_en: Rank depends on the comparison group
-  title_zh: 排名取决于比较总体
-  title_zh_hk: 排名取決於比較總體
-  left_en: Street-store benchmark
-  left_zh: 街头门店基准
-  left_zh_hk: 街頭門店基準
-  right_en: Network-wide benchmark
-  right_zh: 全网络基准
-  right_zh_hk: 全網絡基準
-  s1_en: The 80th-percentile threshold helps managers identify relatively high performers without confusing rank with average size. A store at 390 cups is high relative to these five street-store observations.
-  s1_zh: 第80百分位门槛帮助管理者识别相对较高的观测值，同时避免把排名误当成平均规模。相对于这五家街头门店，390杯处于较高位置。
-  s1_zh_hk: 第80百分位門檻幫管理者識別相對較高嘅觀測值，同時避免將排名誤當成平均規模。相對於呢五間街頭門店，390杯處於較高位置。
-  s2_en: But percentile standing changes when the comparison group changes. Adding Airport branches, closed stores, or a different period may change both the ordering and the threshold.
-  s2_zh: 但比较总体改变时，百分位排名也会改变。加入机场店、停业门店，或改用不同期间，都可能改变排序与门槛。
-  s2_zh_hk: 但比較總體改變嗰陣，百分位排名亦會改變。加入機場舖、停業門店，或者改用唔同期間，都可能改變排序同門檻。
-  s3_en: Software packages may also use different interpolation conventions. For reproducible reporting, state the dataset, period, and percentile method rather than presenting the threshold without context.
-  s3_zh: 不同软件也可能采用不同的插值约定。为了让报告可复现，应说明数据集、统计期间与百分位计算方法，而不是脱离背景只给出门槛。
-  s3_zh_hk: 唔同軟件亦可能採用唔同嘅插值約定。為咗令報告可以重現，應該講明數據集、統計期間同百分位計算方法，而唔係離開背景只講門檻。
-- id: takeaway
+  seconds: 52
+  kicker: The Average
+  kicker_en: The Average
+  kicker_zh: 平均数
+  kicker_zh_hk: 平均數
+  title_en: Above average, but how high?
+  title_zh: 高于平均，但排多高？
+  title_zh_hk: 高過平均，但排幾高？
+  left_en: 'Average 352: D is 38 above'
+  left_zh: 平均 352：D店高 38
+  left_zh_hk: 平均 352：D店高 38
+  right_en: 'Line: D is 4th of 5'
+  right_zh: 排序：D店五家里排第四
+  right_zh_hk: 排序：D店五間入面排第四
+  s1_en: Let's test the average first. Can it tell us where 390 stands?
+  s1_zh: 我们先试试平均数。它能告诉我们390站在哪里吗？
+  s1_zh_hk: 我哋先試吓平均數。佢話唔話到我哋知390企喺邊？
+  s2_en: >-
+    The average is the total divided by the number of shops. The five shops add up to 1,760 cups, and 1,760 divided by 5 is 352.
+    Shop D is 38 cups above it. That sounds good. But it tells you how far, not how many shops Shop D beat.
+    One very big shop could pull the average above 390, while Shop D still beats the same three shops.
+  s2_zh: 平均数就是总数除以店的数目。五家店加起来是1,760杯，1,760除以5，等于352。D店比它高38杯，听起来不错。可是这说的是高多少，不是D店赢了几家店。只要多一家特别大的店，就能把平均数拉到390上面去，而D店照样赢着同样那三家店。
+  s2_zh_hk: 平均數就係總數除以店嘅數目。五間店加埋係1,760杯，1,760除以5，即係352。D店比佢高38杯，聽落唔錯。但係呢個講嘅係高幾多，唔係D店贏咗幾多間店。只要多一間特別大嘅店，就可以將平均數扯上390以上，而D店照樣贏緊同樣嗰三間店。
+  s3_en: >-
+    The line answers the real question directly. 4 of the 5 shops sold 390 cups or less. That is a statement about place, not size.
+    So how do we turn 4 of 5 into one number a manager can compare?
+  s3_zh: 排好的那条线，直接回答了真正的问题：五家店里有四家卖了390杯或更少。这说的是位置，不是大小。那怎么把“五家里有四家”变成一个经理可以拿来比较的数？
+  s3_zh_hk: 排好嗰條線，直接答到真正嘅問題：五間店入面有四間賣咗390杯或者更少。呢個講嘅係位置，唔係大細。咁點樣將「五間入面有四間」變成一個經理可以攞嚟比較嘅數？
+- id: share
+  visual: steps
+  seconds: 40
+  kicker: The Share
+  kicker_en: The Share
+  kicker_zh: 占多少
+  kicker_zh_hk: 佔幾多
+  title_en: From 4 of 5 to a percent
+  title_zh: 从五分之四到百分比
+  title_zh_hk: 由五分之四到百分比
+  step1_en: 4 shops at or below 390
+  step1_zh: 四家不高于 390
+  step1_zh_hk: 四間唔高過 390
+  step2_en: 4 ÷ 5 = 0.80
+  step2_zh: 4 ÷ 5 = 0.80
+  step2_zh_hk: 4 ÷ 5 = 0.80
+  step3_en: 0.80 = 80%
+  step3_zh: 0.80 = 80%
+  step3_zh_hk: 0.80 = 80%
+  s1_en: >-
+    Start with the count. 4 of the 5 shops sold 390 cups or less. Shop D counts itself, because "at or below" includes the shop we are standing on.
+  s1_zh: 先数数。五家店里有四家卖了390杯或更少。D店把自己也算进去，因为“不高于”包括我们站着的这一家。
+  s1_zh_hk: 先數吓。五間店入面有四間賣咗390杯或者更少。D店連自己都計埋，因為「唔高過」包括我哋企緊嗰一間。
+  s2_en: >-
+    Now turn the count into a share. Divide by the number of shops. 4 divided by 5 is 0.80. Think of the line cut into five equal slices; each shop is one fifth, or 20 percent.
+  s2_zh: 再把个数变成占比：除以店的数目。4除以5，等于0.80。你可以把这条线切成五等份，每家店占五分之一，也就是20%。
+  s2_zh_hk: 再將個數變成佔比：除以店嘅數目。4除以5，即係0.80。你可以將條線切成五等份，每間店佔五分之一，即係20%。
+  s3_en: And 0.80 is 80 percent. So 80 percent of these shops sold at or below Shop D. That share, and the value it points to, have names.
+  s3_zh: 0.80就是80%。所以这些店里，有80%卖得不比D店多。这个占比，还有它对应的那个数，都有名字。
+  s3_zh_hk: 0.80即係80%。所以呢啲店入面，有80%賣得唔多過D店。呢個佔比，同埋佢對應嗰個數，都有名。
+- id: name_pctl
+  visual: title_card
+  seconds: 28
+  kicker: The Name
+  kicker_en: The Name
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Percentile
+  title_zh: 百分位数
+  title_zh_hk: 百分位數
+  en: >-
+    Percentile. 390 cups is the 80th percentile of these five shops, because about 80 percent of them sit at or below it.
+    Turn it around and you get Shop D's percentile rank, 80 percent. The percentile is a value on the line; the percentile rank is the share at or below it.
+    So how do we write that down for any group?
+  zh: >-
+    百分位数。390杯是这五家店的第80百分位数，因为大约80%的店不高于它。反过来说，D店的百分位排名就是80%。
+    百分位数是线上的一个数值；百分位排名是不高于它的那一部分占多少。那换成任何一组店，要怎么写下来？
+  zh_hk: >-
+    百分位數。390杯係呢五間店嘅第80百分位數，因為大約80%嘅店唔高過佢。倒轉嚟講，D店嘅百分位排名就係80%。
+    百分位數係條線上面嘅一個數值；百分位排名係唔高過佢嗰部分佔幾多。咁換成任何一組店，又點樣寫低？
+- id: defn
+  visual: definition_card
+  seconds: 46
+  kicker: The Definition
+  kicker_en: The Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Percentile, written down
+  title_zh: 把百分位数写下来
+  title_zh_hk: 將百分位數寫低
+  formula_en: 'pth percentile: about p% at or below'
+  formula_zh: 第 p 百分位数：约 p% 不高于它
+  formula_zh_hk: 第 p 百分位數：約 p% 唔高過佢
+  gloss_en: 390 = 80th percentile of the five
+  gloss_zh: 390 是五家店的第八十百分位数
+  gloss_zh_hk: 390 係五間店嘅第八十百分位數
+  s1_en: >-
+    Here it is in words. Put the values in order. The p-th percentile is a value with about p percent of the values at or below it.
+    p is just the percent you ask about, 80 for the 80th, 50 for the 50th. And a value's percentile rank is the share of values at or below it.
+  s1_zh: 用一句话说：先把数排好。第p百分位数，是一个大约有p%的数不高于它的数值。p就是你问的那个百分比，第80就是80，第50就是50。而一个数的百分位排名，就是不高于它的数占多少。
+  s1_zh_hk: 用一句講晒：先將啲數排好。第p百分位數，係一個大約有p%嘅數唔高過佢嘅數值。p就係你問嗰個百分比，第80就係80，第50就係50。而一個數嘅百分位排名，就係唔高過佢嘅數佔幾多。
+  s2_en: >-
+    For Monday, 390 cups is the 80th percentile, and Shop D's percentile rank is 80 percent. Notice the word "about". With only five shops, each shop is a 20 percent step.
+    Now suppose a manager asks the other way round. Give me the 80th percentile. Which shop do you read?
+  s2_zh: 星期一的数据里，390杯是第80百分位数，D店的百分位排名是80%。留意“大约”这两个字：只有五家店，每家店就是20%的一级台阶。现在假设经理反过来问：给我第80百分位数。你该读哪一家店？
+  s2_zh_hk: 星期一嘅數據入面，390杯係第80百分位數，D店嘅百分位排名係80%。留意「大約」呢兩個字：得五間店，每間店就係20%嘅一級。而家假設經理倒轉問：畀我第80百分位數。你應該讀邊間店？
+- id: find80
+  visual: steps
+  seconds: 42
+  kicker: The Other Way
+  kicker_en: The Other Way
+  kicker_zh: 反过来找
+  kicker_zh_hk: 倒轉嚟搵
+  title_en: Find the 80th percentile
+  title_zh: 找出第八十百分位数
+  title_zh_hk: 搵出第八十百分位數
+  step1_en: Sort the five shops
+  step1_zh: 把五家店排好
+  step1_zh_hk: 將五間店排好
+  step2_en: 0.80 × 5 = 4
+  step2_zh: 0.80 × 5 = 4
+  step2_zh_hk: 0.80 × 5 = 4
+  step3_en: Place 4 = 390 cups
+  step3_zh: 第 4 位 = 390 杯
+  step3_zh_hk: 第 4 位 = 390 杯
+  s1_en: Use the same five shops. Step one, sort them, from 280 up to 420. A percentile only makes sense on ordered data.
+  s1_zh: 还是这五家店。第一步，把它们排好，从280排到420。百分位数只对有序数据才有意义。
+  s1_zh_hk: 都係呢五間店。第一步，將佢哋排好，由280排到420。百分位數只係對有序數據先有意思。
+  s2_en: >-
+    Step two, find the place. Multiply the percent, 0.80, by the number of shops, 5. 0.80 times 5 is 4, so we go to place 4.
+    This way of picking a place is called the nearest-rank method.
+  s2_zh: 第二步，找位置。用百分比0.80乘以店的数目5。0.80乘以5等于4，所以我们去第4位。这种找位置的做法，叫作最接近秩法。
+  s2_zh_hk: 第二步，搵位置。用百分比0.80乘以店嘅數目5。0.80乘5等於4，所以我哋去第4位。呢種搵位置嘅做法，叫做最接近秩法。
+  s3_en: >-
+    Step three, read the value in place 4. It is 390 cups, Shop D. The same answer, found from the other direction.
+    But 0.80 times 5 came out whole. What if the place is not a whole number?
+  s3_zh: 第三步，读出第4位的数值：390杯，就是D店。同一个答案，只是从另一个方向找到。不过0.80乘以5刚好是整数。要是位置不是整数呢？
+  s3_zh_hk: 第三步，讀出第4位嘅數值：390杯，即係D店。同一個答案，只係由另一個方向搵到。不過0.80乘5啱啱係整數。如果個位置唔係整數又點？
+- id: round_up
+  visual: rank_line
+  seconds: 46
+  kicker: Round Up
+  kicker_en: Round Up
+  kicker_zh: 向上取整
+  kicker_zh_hk: 向上取整
+  title_en: Not a whole place? Round up
+  title_zh: 位置有小数？向上取整
+  title_zh_hk: 位置有小數？向上取整
+  values: 280;310;360;390;420
+  labels_en: Shop C;Shop E;Shop A;Shop D;Shop B
+  labels_zh: C店;E店;A店;D店;B店
+  labels_zh_hk: C店;E店;A店;D店;B店
+  order: as_given
+  mark: '3'
+  footer_en: 0.50 × 5 = 2.5 → 3
+  footer_zh: 0.50 × 5 = 2.5 → 3
+  footer_zh_hk: 0.50 × 5 = 2.5 → 3
+  s1_en: Try the 50th percentile, halfway along the line. Here are the same five shops, already in order.
+  s1_zh: 试试第50百分位数，也就是这条线的一半。还是这五家店，已经排好了。
+  s1_zh_hk: 試吓第50百分位數，即係條線嘅一半。都係呢五間店，已經排好咗。
+  s2_en: >-
+    Number the places, 1 to 5. Now 0.50 times 5 is 2.5. There is no place two and a half.
+    The nearest-rank method says round up to the next whole place, which is place 3.
+  s2_zh: 给位置编号，1到5。0.50乘以5等于2.5，可是没有第二点五位。最接近秩法的规定是：向上取到下一个整数位，也就是第3位。
+  s2_zh_hk: 幫位置編號，1到5。0.50乘5等於2.5，但係冇第二點五位。最接近秩法嘅規定係：向上取到下一個整數位，即係第3位。
+  s3_en: >-
+    Place 3 is Shop A, at 360 cups. Two shops sit below it and two above, so halfway lands right in the middle of the line, as it should.
+    Whenever the place has a decimal, round up. So far, the group has been these five shops. What happens to Shop D if the group changes?
+  s3_zh: 第3位是A店，360杯。它下面两家，上面两家，所以一半正好落在线的中间，合情合理。只要位置有小数，就向上取整。到目前为止，比较的都是这五家店。要是这组店变了，D店会怎样？
+  s3_zh_hk: 第3位係A店，360杯。佢下面兩間，上面兩間，所以一半啱啱落喺條線中間，合情合理。只要位置有小數，就向上取整。到目前為止，比較嘅都係呢五間店。如果呢組店變咗，D店會點？
+- id: group
+  visual: rank_line
+  seconds: 62
+  kicker: The Group
+  kicker_en: The Group
+  kicker_zh: 比较哪些店
+  kicker_zh_hk: 比較邊啲店
+  title_en: Add one bigger shop
+  title_zh: 多加一家更大的店
+  title_zh_hk: 加多一間大啲嘅店
+  values: 280;310;360;390;420;420+
+  labels_en: Shop C;Shop E;Shop A;Shop D;Shop B;Shop F
+  labels_zh: C店;E店;A店;D店;B店;F店
+  labels_zh_hk: C店;E店;A店;D店;B店;F店
+  order: as_given
+  mark: '4'
+  span: 1-4
+  span_en: 4 of 6 at or below 390
+  span_zh: 六家里有四家不高于 390
+  span_zh_hk: 六間入面有四間唔高過 390
+  footer_en: 4 ÷ 6 ≈ 67%
+  footer_zh: 4 ÷ 6 ≈ 67%
+  footer_zh_hk: 4 ÷ 6 ≈ 67%
+  s1_en: >-
+    Suppose head office adds a sixth shop, Shop F, that sold more than 420 cups. We do not even need its exact number. Here is the new line, in order.
+  s1_zh: 假设总部再加一家店，F店，它卖了超过420杯。连它的确切数字都不需要知道。这是新的一排，已经排好。
+  s1_zh_hk: 假設總部再加多一間店，F店，佢賣咗超過420杯。連佢實際賣幾多都唔使知。呢個係新嘅一排，已經排好。
+  s2_en: Number the places. Shop D did not change. It still sold 390, and it is still in place 4. But now there are six places, not five.
+  s2_zh: 给位置编号。D店没变，还是卖了390杯，还是在第4位。可是现在有六个位置，不是五个。
+  s2_zh_hk: 幫位置編號。D店冇變，都係賣咗390杯，都係喺第4位。但係而家有六個位，唔係五個。
+  s3_en: >-
+    Count again. 4 of 6 shops are at or below 390, and 4 divided by 6 is about 0.67. Shop D's percentile rank falls from 80 percent to about 67.
+    The 80th percentile moves too. 0.80 times 6 is 4.8, round up to place 5, which is 420 cups. Same shop, same 390 cups, a different standing.
+    And Shop F could have sold a little more or ten times more; nothing here would change. So what does a percentile tell a manager, and what does it not?
+  s3_zh: 再数一次：六家里有四家不高于390，4除以6大约是0.67。D店的百分位排名，从80%掉到大约67%。第80百分位数也跟着变：0.80乘以6等于4.8，向上取到第5位，就是420杯。同一家店，同样的390杯，位置却不同了。而且F店多卖一点也好，多卖十倍也好，这里什么都不会变。那百分位数能告诉经理什么，又不能告诉他什么？
+  s3_zh_hk: 再數一次：六間入面有四間唔高過390，4除以6大約係0.67。D店嘅百分位排名，由80%跌到大約67%。第80百分位數都跟住變：0.80乘6等於4.8，向上取到第5位，即係420杯。同一間店，同樣係390杯，位置就唔同咗。而且F店多賣少少又好，多賣十倍又好，呢度乜都唔會變。咁百分位數話到經理知啲乜，又話唔到佢知啲乜？
+- id: limit
+  visual: two_column
+  seconds: 50
+  kicker: The Limit
+  kicker_en: The Limit
+  kicker_zh: 限度
+  kicker_zh_hk: 限度
+  title_en: A place in line, not a size
+  title_zh: 讲的是位置，不是大小
+  title_zh_hk: 講嘅係位置，唔係大細
+  left_en: 'Tells: share at or below'
+  left_zh: 能说：多少店不高于它
+  left_zh_hk: 講到：幾多店唔高過佢
+  right_en: 'Not: how far ahead'
+  right_zh: 不能说：领先多少杯
+  right_zh_hk: 講唔到：拋離幾多杯
+  s1_en: So what does a percentile tell a manager, and what does it not?
+  s1_zh: 那百分位数到底能告诉经理什么，又不能告诉他什么？
+  s1_zh_hk: 咁百分位數究竟話到經理知啲乜，又話唔到佢知啲乜？
+  s2_en: >-
+    It tells you position. Shop D at the 80th percentile means about 80 percent of these shops sold at or below it.
+    That is exactly what head office asked. Is this shop near the top of its group?
+  s2_zh: 它能告诉你位置。D店在第80百分位，意思是大约80%的店卖得不比它多。这正是总部问的：这家店是不是接近这组店的顶端？
+  s2_zh_hk: 佢話到你知位置。D店喺第80百分位，意思係大約80%嘅店賣得唔多過佢。呢個正正係總部問嘅：呢間店係咪接近呢組店嘅頂端？
+  s3_en: >-
+    It does not tell you distance. It ignores how far ahead or behind the other shops are; Shop F's exact sales never mattered.
+    And it is not a target every shop must hit. It belongs to one group, one period, and one method.
+    Change any of them, a new shop, a different week, or another way of rounding, and the answer can move.
+  s3_zh: 它不能告诉你距离。别的店领先多少、落后多少，它都不管；F店到底卖了多少，从头到尾都无所谓。它也不是每家店都得达到的目标。它只属于一组店、一段时间、一种算法。任何一样变了，多一家店、换一个星期、换一种取整的方法，答案都可能会变。
+  s3_zh_hk: 佢話唔到你知距離。其他店拋離幾多、落後幾多，佢都唔理；F店實際賣咗幾多，由頭到尾都冇關係。佢亦唔係每間店都要做到嘅目標。佢只係屬於一組店、一段時間、一種計法。任何一樣變咗，多一間店、換一個星期、換一種取整嘅方法，答案都可能會變。
+- id: answer
   visual: takeaway
-  seconds: 32
-  kicker: Decision Rule
-  kicker_en: Decision Rule
-  kicker_zh: 商业法则
-  kicker_zh_hk: 商業法則
-  title_en: Use percentiles for relative standing
-  title_zh: 用百分位数判断相对位置
-  title_zh_hk: 用百分位數判斷相對位置
+  seconds: 70
+  kicker: The Answer
+  kicker_en: The Answer
+  kicker_zh: 答案
+  kicker_zh_hk: 答案
+  title_en: Strong? Check the percentile.
+  title_zh: 强不强？先看排第几
+  title_zh_hk: 勁唔勁？先睇排第幾
   q1_en: What does the 80th percentile describe?
-  q1_zh: 第80百分位数描述什么？
-  q1_zh_hk: 第80百分位數描述咩？
+  q1_zh: 第八十百分位数描述什么？
+  q1_zh_hk: 第八十百分位數描述咩？
   q2_en: What context must accompany it?
   q2_zh: 报告时必须同时说明什么？
   q2_zh_hk: 報告嗰陣一定要同時講明咩？
-  s1_en: 'Use percentiles when the managerial question is relative standing: which branches are near the top, middle, or bottom of a defined comparison group?'
-  s1_zh: 当管理问题关注相对位置时，可以使用百分位数：在明确的比较总体中，哪些门店接近顶部、中部或底部？
-  s1_zh_hk: 當管理問題關注相對位置嗰陣，可以用百分位數：喺明確嘅比較總體入面，邊啲門店接近頂部、中部或者底部？
-  s2_en: Do not turn a percentile threshold into a universal target. It summarizes observed rank and may move when the population, period, or method changes.
-  s2_zh: 不要把百分位门槛变成普遍适用的硬性目标。它概括的是观测排名；总体、期间或方法改变时，门槛也可能移动。
-  s2_zh_hk: 唔好將百分位門檻變成普遍適用嘅硬性目標。佢概括嘅係觀測排名；總體、期間或者方法改變嗰陣，門檻亦可能移動。
-  s3_en: 'The operating rule is precise: sort the correct comparison group, state the percentile convention, calculate the ranked threshold, and interpret it as position rather than average performance.'
-  s3_zh: 经营规则很明确：对正确的比较总体排序，说明百分位约定，计算对应排位门槛，并把它解释为位置而不是平均业绩。
-  s3_zh_hk: 營運規則好清楚：對正確嘅比較總體排序，講明百分位約定，計算對應排位門檻，並將佢解釋為位置，而唔係平均業績。
+  s1_en: Back to head office and Shop D. Is 390 cups a strong day? On its own, 390 could not tell you. Lined up with the other four shops, it sits in place 4 of 5.
+  s1_zh: 回到总部和D店。390杯算不算强？单看390，你判断不了。跟另外四家店排在一起，它在五家里排第4位。
+  s1_zh_hk: 返去總部同D店。390杯算唔算勁？淨係睇390，你判斷唔到。同另外四間店排埋一齊，佢喺五間入面排第4位。
+  s2_en: >-
+    What does the 80th percentile describe? A value with about 80 percent of the group at or below it. Here that value is 390 cups, so Shop D's percentile rank is 80 percent,
+    near the top, with only Shop B ahead. To find it, sort the shops, multiply the percent by the count, round up if the place has a decimal, and read that place.
+  s2_zh: 第80百分位数描述什么？一个大约有80%的店不高于它的数值。这里这个数值是390杯，所以D店的百分位排名是80%，接近顶端，只有B店在它前面。找的方法是：把店排好，用百分比乘以店的数目，位置有小数就向上取整，然后读出那个位置。
+  s2_zh_hk: 第80百分位數描述咩？一個大約有80%嘅店唔高過佢嘅數值。呢度呢個數值係390杯，所以D店嘅百分位排名係80%，接近頂端，得B店喺佢前面。搵嘅方法係：將啲店排好，用百分比乘店嘅數目，位置有小數就向上取整，然後讀出嗰個位置。
+  s3_en: >-
+    What context must accompany it? The group of shops, the period, and the method, here the nearest-rank method. Add one bigger shop, and Shop D slips to about 67 percent.
+    These are numbers we supposed for one Monday. A percentile tells you where a shop stands in its line, not how much more it sold, and not what any shop should sell.
+  s3_zh: 报告时必须同时说明什么？比较的是哪组店、哪段时间、用什么方法，这里是最接近秩法。多加一家更大的店，D店就掉到大约67%。这些都是我们为一个星期一假设的数字。百分位数告诉你一家店在这一排里站在哪里，不告诉你它多卖了多少，也不告诉你哪家店应该卖多少。
+  s3_zh_hk: 報告嗰陣一定要同時講明咩？比較嘅係邊組店、邊段時間、用咩方法，呢度係最接近秩法。加多一間大啲嘅店，D店就跌到大約67%。呢啲都係我哋為一個星期一假設嘅數字。百分位數話你知一間店喺呢一排入面企喺邊，唔話你知佢多賣咗幾多，亦唔話你知邊間店應該賣幾多。

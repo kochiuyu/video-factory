@@ -7,13 +7,13 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 612
+duration_target_s: 630
 title_en: What is the median?
 title_zh: 什么是中位数？
 title_zh_hk: 咩係中位數？
 objective_en: Decide which number to give a typical day when one rush day pulls the average up, and find the middle of the ordered days for five days and for four.
-objective_zh: 当一个高峰日把平均数拉高时，判断该给一个普通的天哪个数，并分别找出五天和四天排好之后的正中间。
-objective_zh_hk: 當一個高峰日將平均數拉高時，判斷該畀一個普通嘅日邊個數，並分別搵出五日同四日排好之後嘅正中間。
+objective_zh: 当一个高峰日把平均数拉高时，判断普通的一天应该报哪个数，并分别找出五天和四天排好之后的正中间。
+objective_zh_hk: 當一個高峰日將平均數拉高時，判斷普通嘅一日應該報邊個數，並分別搵出五日同四日排好之後嘅正中間。
 glossary:
 - en: median
   zh: 中位数
@@ -83,7 +83,7 @@ quiz:
 beats:
 - id: hook
   visual: title_card
-  seconds: 54
+  seconds: 38
   kicker: The Question
   kicker_en: The Question
   kicker_zh: 业务问题
@@ -91,13 +91,13 @@ beats:
   title_en: What is the median?
   title_zh: 什么是中位数？
   title_zh_hk: 咩係中位數？
-  en: "Imagine you manage two coffee shops. Someone asks you for one number: what does a typical day sell? Each shop has several days. One shop has a rush day. If you give the average, most days look like they failed. Which number should you give for a typical day? The number that answers that is called the median. What is the median?"
-  zh: "假设你管着两家咖啡店。有人要你给一个数：一个普通的天通常卖多少？每家店有好几天。一家店有一个高峰日。如果你给平均数，大多数天看起来都没达标。该给一个普通的天哪个数？回答这个问题的数叫作中位数。什么是中位数？"
-  zh_hk: "假設你管緊兩間咖啡店。有人要你畀一個數：一個普通嘅日通常賣幾多？每間店有幾多日。一間店有一個高峰日。如果你畀平均數，大多數日睇落都冇達標。該畀一個普通嘅日邊個數？回答呢個問題嘅數叫做中位數。咩係中位數？"
+  en: 'Imagine you manage two coffee shops. Head office asks you for one number: what does a typical day sell? Most days are quiet and close together, but one shop had a single rush day. Give the average, and that one rush pulls the number up. Set it as the daily target, and most ordinary days look like failures, even though nothing went wrong. So which number should you give for a typical day? The number that answers that is called the median. What is the median?'
+  zh: 假设你管着两家咖啡店。总部要你报一个数：普通的一天卖多少？大多数日子都很平稳，彼此差不多，可是有一家店碰上了一个高峰日。要是报平均数，这一个高峰就会把数拉高。拿它当每天的目标，大多数普通的日子都会像没达标，其实什么问题都没有。那普通的一天，到底要报哪个数？回答这个问题的数，叫作中位数。什么是中位数？
+  zh_hk: 假設你管緊兩間咖啡店。總部要你報一個數：普通嘅一日賣幾多？大部分日子都好平穩，彼此差唔多，但係有一間店撞正一個高峰日。如果報平均數，呢一個高峰就會將個數拉高。攞佢做每日嘅目標，大部分普通嘅日子都會似冇達標，其實乜問題都冇。咁普通嘅一日，到底要報邊個數？答到呢個問題嘅數，就叫做中位數。咩係中位數？
 - id: data
   visual: series
   reveal: cells
-  seconds: 50
+  seconds: 46
   cols: 5
   kicker: Five Days
   kicker_en: Five Days
@@ -124,51 +124,55 @@ beats:
   col5_en: Day 5
   col5_zh: 第5天
   col5_zh_hk: 第5日
-  c11: "80"
-  c12: "100"
-  c13: "120"
-  c14: "140"
-  c15: "460"
-  footer_en: Five days. One rush.
-  footer_zh: 五天。一个高峰。
-  footer_zh_hk: 五日。一個高峰。
-  s1_en: "Here are the five days behind that question. Shop A, in cups sold. Day 1 sold 80. Day 2 sold 100. Day 3 sold 120. Day 4 sold 140. Day 5 sold 460."
-  s1_zh: "这就是那个问题背后的五天。A店卖出的杯数。第1天卖了80杯。第2天卖了100杯。第3天卖了120杯。第4天卖了140杯。第5天卖了460杯。"
-  s1_zh_hk: "呢個就係嗰個問題背後嘅五日。A店賣出嚟嘅杯數。第1日賣咗80杯。第2日賣咗100杯。第3日賣咗120杯。第4日賣咗140杯。第5日賣咗460杯。"
-  s2_en: "Four days sit near each other, from 80 to 140. Day 5 is a rush at 460. One number has to stand for a typical day."
-  s2_zh: "四天离得不远，从80到140。第5天是460的高峰。一个数要代表一个普通的天。"
-  s2_zh_hk: "四日離得唔遠，由80到140。第5日係460嘅高峰。一個數要代表一個普通嘅日。"
-  s3_en: "If we just add and share, the rush day will pull the number up. Next we see what that target does to the ordinary days."
-  s3_zh: "如果我们只是加起来再平分，高峰日会把这个数拉高。接下来看那个目标对普通的天意味着什么。"
-  s3_zh_hk: "如果我哋只係加起嚟再平分，高峰日會將呢個數拉高。跟住睇嗰個目標對普通嘅日意味着咩。"
+  c11: '80'
+  c12: '100'
+  c13: '120'
+  c14: '140'
+  c15: '460'
+  footer_en: Four close days, one rush
+  footer_zh: 四天相近，一天高峰
+  footer_zh_hk: 四日相近，一日高峰
+  s1_en: Suppose these are Shop A's five days, in cups sold. Day 1 sold 80. Day 2 sold 100. Day 3 sold 120. Day 4 sold 140. And Day 5 sold 460.
+  s1_zh: 假设这是A店五天卖出的杯数。第1天卖了80杯。第2天卖了100杯。第3天卖了120杯。第4天卖了140杯。第5天卖了460杯。
+  s1_zh_hk: 假設呢個係A店五日賣出嘅杯數。第1日賣咗80杯。第2日賣咗100杯。第3日賣咗120杯。第4日賣咗140杯。第5日賣咗460杯。
+  s2_en: Look at the shape of the row. Four days sit close together, between 80 and 140. Day 5 is far above them, a rush at 460. Yet one number has to stand for a typical day.
+  s2_zh: 看看这一行的样子。四天挨得很近，在80到140之间。第5天远远高出，是460的高峰。可是我们只能用一个数，代表普通的一天。
+  s2_zh_hk: 睇吓呢一行嘅樣。四日企得好近，喺80到140之間。第5日遠遠高過佢哋，係460嘅高峰。但係我哋得一個數，去代表普通嘅一日。
+  s3_en: 'Four close days and one rush. The first number most people reach for is the average: add everything up and share it out. So what does the average say here?'
+  s3_zh: 四天相近，一天高峰。大多数人第一个想到的是平均数：全部加起来，再平分。那平均数在这里会说什么？
+  s3_zh_hk: 四日相近，一日高峰。大部分人第一時間諗到嘅係平均數：全部加埋，再平分。咁平均數喺呢度會講乜？
+  rows: 1
+  tag_en: Cups sold
+  tag_zh: 卖出杯数
+  tag_zh_hk: 賣出杯數
 - id: plans
   visual: two_column
-  seconds: 44
+  seconds: 54
   kicker: The Plans
   kicker_en: The Plans
   kicker_zh: 两个目标
   kicker_zh_hk: 兩個目標
-  title_en: One average. Most days look short.
-  title_zh: 一个平均数，大多数天都像没达标
-  title_zh_hk: 一個平均數，大多數日都似冇達標
-  left_en: "Ordinary days: 80 to 140"
-  left_zh: "普通的天：80 到 140"
-  left_zh_hk: "普通嘅日：80 到 140"
-  right_en: "Average target: 180"
-  right_zh: "平均目标：180"
-  right_zh_hk: "平均目標：180"
-  s1_en: "So which number do you give? Add the five days and share. 80 plus 100 plus 120 plus 140 plus 460 is 900. Divide by 5. That is 180 cups."
-  s1_zh: "那么你给哪个数？把五天加起来再平分。80加100加120加140加460等于900。除以5。等于180杯。"
-  s1_zh_hk: "咁你畀邊個數？將五日加起嚟再平分。80加100加120加140加460等於900。除以5。等於180杯。"
-  s2_en: "Set 180 as the target for a typical day. Four of the five days sold less. Those days look like they failed."
-  s2_zh: "把180定为一个普通的天的目标。五天里有四天卖得更少。那些天看起来都没达标。"
-  s2_zh_hk: "將180定做一個普通嘅日嘅目標。五日入面有四日賣得更少。嗰啲日睇落都冇達標。"
-  s3_en: "The average answers how many cups the five days sold, shared equally. It does not answer what a typical day sold. Next we line the days up."
-  s3_zh: "平均数回答的是五天一共卖了多少杯，平均分。它不回答一个普通的天卖了多少。接下来把这五天排成一队。"
-  s3_zh_hk: "平均數回答嘅係五日一共賣咗幾多杯，平均分。佢唔回答一個普通嘅日賣咗幾多。跟住將呢五日排成一隊。"
+  title_en: Target 180? Four days miss
+  title_zh: 目标180？四天没达到
+  title_zh_hk: 目標180？四日未達到
+  left_en: 'Ordinary days: 80 to 140'
+  left_zh: 普通的天：80 到 140
+  left_zh_hk: 普通嘅日：80 到 140
+  right_en: 'Average target: 180'
+  right_zh: 平均目标：180
+  right_zh_hk: 平均目標：180
+  s1_en: Let's work it out. 80 plus 100 plus 120 plus 140 plus 460 is 900 cups. Divide by 5 days, and the average is 180 cups. Now suppose 180 becomes the target for a typical day.
+  s1_zh: 我们算一算。80加100加120加140加460，等于900杯。除以5天，平均数是180杯。现在假设把180定成普通一天的目标。
+  s1_zh_hk: 我哋計吓。80加100加120加140加460，等於900杯。除以5日，平均數係180杯。而家假設將180定做普通一日嘅目標。
+  s2_en: First, the ordinary days. Four of the five sold between 80 and 140 cups. That is what a normal day at Shop A looks like.
+  s2_zh: 先看普通的日子。五天里有四天，卖的是80到140杯。这才是A店平常一天的样子。
+  s2_zh_hk: 先睇普通嘅日子。五日入面有四日，賣嘅係80到140杯。呢個先係A店平常一日嘅樣。
+  s3_en: Now the average target, 180. Every one of those four days falls short of it, so they all look like failures. Only the rush day clears it. The average answers how many cups the five days sold, shared equally. It does not answer what a typical day sold. So where else could we look?
+  s3_zh: 再看平均数定出来的目标，180。那四天全都够不着，看起来都像没达标，只有高峰日过了线。平均数回答的是五天卖的杯数平均分下来是多少，不是普通的一天卖多少。那我们还能看哪里？
+  s3_zh_hk: 再睇平均數定出嚟嘅目標，180。嗰四日全部都夠唔到，睇落個個都似冇達標，得高峰日過到線。平均數答嘅係五日賣嘅杯數平分落嚟有幾多，唔係普通嘅一日賣幾多。咁我哋仲可以睇邊度？
 - id: lineup
-  visual: steps
-  seconds: 42
+  visual: rank_line
+  seconds: 40
   kicker: The Line
   kicker_en: The Line
   kicker_zh: 排队
@@ -176,27 +180,21 @@ beats:
   title_en: Line the five days up
   title_zh: 把五天排好
   title_zh_hk: 將五日排好
-  step1_en: "80, then 100, then 120"
-  step1_zh: "80，然后 100，然后 120"
-  step1_zh_hk: "80，然後 100，然後 120"
-  step2_en: "Then 140, then 460"
-  step2_zh: "然后 140，然后 460"
-  step2_zh_hk: "然後 140，然後 460"
-  step3_en: "Five days. Middle is the third."
-  step3_zh: "五天。正中间是第三天。"
-  step3_zh_hk: "五日。正中間係第三日。"
-  s1_en: "Think of a queue. Line the days up from the smallest number of cups to the largest. Day 1 is first, at 80. Then 100. Then 120."
-  s1_zh: "可以把它想成一队人。把这五天从杯数最少排到最多。第1天排第一，80杯。然后100。然后120。"
-  s1_zh_hk: "可以將佢想成一隊人。將呢五日由杯數最少排到最多。第1日排第一，80杯。然後100。然後120。"
-  s2_en: "Then 140. The rush day is last, at 460. We have not added anything. We have only put the days in order."
-  s2_zh: "然后140。高峰日排最后，460杯。我们什么都没加。只是把这些天排好了。"
-  s2_zh_hk: "然後140。高峰日排最後，460杯。我哋咩都冇加。只係將呢啲日排好咗。"
-  s3_en: "Five days. The middle of the line is the third one. Two days below it, two days above it. Next we read that spot."
-  s3_zh: "五天。这一队的正中间是第三天。下面两天，上面两天。接下来读出那个位置。"
-  s3_zh_hk: "五日。呢一隊嘅正中間係第三日。下面兩日，上面兩日。跟住讀出嗰個位置。"
+  values: 80;100;120;140;460
+  order: as_given
+  mark: none
+  s1_en: 'Try something that does not add at all. Think of a queue. Put the days in a line from the fewest cups to the most: 80, then 100, then 120, then 140, then 460.'
+  s1_zh: 试一个完全不用加的方法。想想排队。把这些天从杯数最少排到最多：80，然后100，然后120，然后140，然后460。
+  s1_zh_hk: 試一個完全唔使加嘅方法。諗吓排隊。將呢啲日由杯數最少排到最多：80，然後100，然後120，然後140，然後460。
+  s2_en: Now number the places in the queue, one through five. We have not added anything. We have only put the days in order. That step is called a rank.
+  s2_zh: 现在给队里的位置编上号，从第一到第五。我们什么都没加，只是把这些天排好了顺序。这一步叫作排序。
+  s2_zh_hk: 而家幫隊入面嘅位置編號，由第一到第五。我哋乜都冇加，只係將呢啲日排好次序。呢一步叫做排序。
+  s3_en: With five places, which one is in the middle? The third. Two days stand below it, and two stand above it.
+  s3_zh: 五个位置，哪一个在正中间？第三个。它下面有两天，上面也有两天。
+  s3_zh_hk: 五個位置，邊一個喺正中間？第三個。佢下面有兩日，上面都有兩日。
 - id: middle
-  visual: steps
-  seconds: 40
+  visual: rank_line
+  seconds: 42
   kicker: The Middle
   kicker_en: The Middle
   kicker_zh: 正中间
@@ -204,27 +202,24 @@ beats:
   title_en: Read the middle day
   title_zh: 读出正中间的一天
   title_zh_hk: 讀出正中間嘅一日
-  step1_en: "Five days. Middle is the third."
-  step1_zh: "五天。正中间是第三天。"
-  step1_zh_hk: "五日。正中間係第三日。"
-  step2_en: "Third day sold 120"
-  step2_zh: "第三天卖了 120"
-  step2_zh_hk: "第三日賣咗 120"
-  step3_en: "Five days. Middle is 120."
-  step3_zh: "五天。正中间是 120。"
-  step3_zh_hk: "五日。正中間係 120。"
-  s1_en: "So which day is in the middle? With five days, it is the third. Two below, two above."
-  s1_zh: "那么哪一天在正中间？五天，就是第三天。下面两天，上面两天。"
-  s1_zh_hk: "咁邊一日喺正中間？五日，就係第三日。下面兩日，上面兩日。"
-  s2_en: "The third day sold 120 cups. That is the number in the middle of the line."
-  s2_zh: "第三天卖了120杯。这就是这一队正中间的数。"
-  s2_zh_hk: "第三日賣咗120杯。呢個就係呢一隊正中間嘅數。"
-  s3_en: "120 is what an ordinary day sold. The average, 180, sits above four of the five days. This number has a name."
-  s3_zh: "120是一个普通的天卖的。平均数180，高于五天里的四天。这个数有一个名字。"
-  s3_zh_hk: "120係一個普通嘅日賣嘅。平均數180，高過五日入面嘅四日。呢個數有一個名。"
+  values: 80;100;120;140;460
+  order: as_given
+  mark: middle
+  footer_en: Middle = 120
+  footer_zh: 中间 = 120
+  footer_zh_hk: 中間 = 120
+  s1_en: 'So read that third place. Here is the same queue, low to high: 80, 100, 120, 140, 460.'
+  s1_zh: 那就读出第三个位置。还是这一队，从少到多：80，100，120，140，460。
+  s1_zh_hk: 咁就讀出第三個位置。都係呢一隊，由少到多：80，100，120，140，460。
+  s2_en: Count in from both ends. Take one off the bottom and one off the top, then one more from each side. The day left standing in the middle is the third.
+  s2_zh: 从两头往里数。底下去掉一个，顶上去掉一个，两边再各去掉一个。留在正中间的，就是第三个。
+  s2_zh_hk: 由兩頭向入面數。底下剔走一個，頂上剔走一個，兩邊再各剔走一個。留喺正中間嘅，就係第三個。
+  s3_en: 'The third day sold 120 cups. That looks like an ordinary day at Shop A: it sits right among the four close days. The average, 180, sits above four of the five. This middle number has a name.'
+  s3_zh: 第三天卖了120杯。这才像A店普通的一天：它就落在那四个相近的日子中间。平均数180，却高过五天里的四天。这个正中间的数，有一个名字。
+  s3_zh_hk: 第三日賣咗120杯。呢個先似A店普通嘅一日：佢就喺嗰四個相近嘅日子中間。平均數180，就高過五日入面嘅四日。呢個正中間嘅數，有個名。
 - id: name_med
   visual: title_card
-  seconds: 32
+  seconds: 20
   kicker: The Name
   kicker_en: The Name
   kicker_zh: 名字
@@ -232,39 +227,37 @@ beats:
   title_en: Median
   title_zh: 中位数
   title_zh_hk: 中位數
-  s1_en: "Median. That is the name. It is the middle of the line, after you have sorted low to high. For these five days it is 120 cups. Next we see why the rush day cannot pull it."
-  s1_zh: "中位数。这就是那个名字。它是排好之后正中间的那个数。这五天是120杯。接下来看为什么高峰日拉不动它。"
-  s1_zh_hk: "中位數。呢個就係嗰個名。佢係排好之後正中間嗰個數。呢五日係120杯。跟住睇點解高峰日拉唔郁佢。"
+  en: Median. That is the name. Sort the values from low to high, then read the one in the middle. For Shop A's five days, the median is 120 cups. But what happens to it if the rush day gets even bigger?
+  zh: 中位数。这就是它的名字。把数从小到大排好，再读出正中间的那个。A店这五天，中位数是120杯。可是，要是高峰日变得更大，它会怎样？
+  zh_hk: 中位數。呢個就係佢個名。將啲數由細到大排好，再讀出正中間嗰個。A店呢五日，中位數係120杯。但係如果高峰日再大啲，佢會點？
 - id: robust
   visual: two_column
-  seconds: 46
+  seconds: 52
   kicker: Why It Holds
   kicker_en: Why It Holds
   kicker_zh: 为什么拉不动
   kicker_zh_hk: 點解拉唔郁
-  title_en: The rush can grow. The middle stays.
-  title_zh: 高峰可以更大，正中间不变
-  title_zh_hk: 高峰可以更大，正中間唔變
-  left_en: "Rush at 460. Middle is 120."
-  left_zh: "高峰 460。正中间是 120。"
-  left_zh_hk: "高峰 460。正中間係 120。"
-  right_en: "Rush at 4,000. Middle is still 120."
-  right_zh: "高峰 4,000。正中间还是 120。"
-  right_zh_hk: "高峰 4,000。正中間仲係 120。"
-  s1_en: "So why does the rush day not pull this number? The average uses the cups. A bigger day adds more cups, so the share goes up. The middle uses the place in the line."
-  s1_zh: "那么为什么高峰日拉不动这个数？平均数用的是杯数。更大的一天加上更多杯，份额就上去了。正中间用的是排队的位置。"
-  s1_zh_hk: "咁點解高峰日拉唔郁呢個數？平均數用嘅係杯數。更大嘅一日加上更多杯，份額就上去咗。正中間用嘅係排隊嘅位置。"
-  s2_en: "Suppose Day 5 sold 4,000 cups, not 460. It is still last in the line. The third day is still 120. The middle is still 120."
-  s2_zh: "假设第5天卖了4,000杯，不是460。它还是排在最后。第三天还是120。正中间还是120。"
-  s2_zh_hk: "假設第5日賣咗4,000杯，唔係460。佢仲係排喺最後。第三日仲係120。正中間仲係120。"
-  s3_en: "The rush day is still in the file. We have not thrown it out. Its distance cannot, by itself, move the middle. A day this far out is called an outlier. The name can wait. Five days have one middle. Next, Shop B, with four days."
-  s3_zh: "高峰日还在这份记录里。我们没有把它丢掉。它离得有多远，不能单独挪动正中间。离得这么远的一天叫作异常值。名字可以等一等。五天有一个正中间。接下来，B店，四天。"
-  s3_zh_hk: "高峰日仲喺呢份記錄入面。我哋冇將佢丟低。佢離得有幾遠，唔可以單獨郁到正中間。離得咁遠嘅一日叫做異常值。名可以等一等。五日有一個正中間。跟住，B店，四日。"
+  title_en: Rush grows, middle stays
+  title_zh: 高峰变大，正中间不变
+  title_zh_hk: 高峰變大，正中間唔變
+  left_en: 'Rush 460: middle 120'
+  left_zh: 高峰 460：正中间 120
+  left_zh_hk: 高峰 460：正中間 120
+  right_en: 'Rush 4,000: still 120'
+  right_zh: 高峰 4,000：仍是 120
+  right_zh_hk: 高峰 4,000：仍然係 120
+  s1_en: Here is the key difference. The average uses the cups themselves, so a bigger rush adds more cups and drags the share up. The median uses only the place in the queue.
+  s1_zh: 关键的分别在这里。平均数用的是杯数本身，高峰越大，加进去的杯数越多，平均份额就被拖上去。中位数只看排序里的位置。
+  s1_zh_hk: 關鍵嘅分別喺呢度。平均數用嘅係杯數本身，高峰越大，加入去嘅杯數越多，平均份額就俾佢拖高。中位數只睇排序入面嘅位置。
+  s2_en: As it stands, the rush is 460. The queue reads 80, 100, 120, 140, 460, and the middle is 120.
+  s2_zh: 现在的高峰是460。这一队是80、100、120、140、460，正中间是120。
+  s2_zh_hk: 而家嘅高峰係460。呢一隊係80、100、120、140、460，正中間係120。
+  s3_en: Now suppose Day 5 sold 4,000 cups instead. It is still last in the queue, and the third day is still 120, so the median stays 120. The average would jump far above every ordinary day. We have not thrown the rush day out; it is still in the file. A day this far from the rest is called an outlier.
+  s3_zh: 现在假设第5天卖的是4,000杯。它还是排在最后，第三天还是120，所以中位数还是120。平均数却会跳到远远高过每一个普通的日子。我们没有把高峰日丢掉，它还在记录里。离其他日子这么远的一天，叫作异常值。
+  s3_zh_hk: 而家假設第5日賣咗4,000杯。佢仲係排喺最尾，第三日仲係120，所以中位數仲係120。平均數就會跳到遠遠高過每一個普通嘅日子。我哋冇將高峰日丟走，佢仲喺記錄入面。離其他日子咁遠嘅一日，叫做異常值。
 - id: four
-  visual: series
-  reveal: cells
+  visual: rank_line
   seconds: 46
-  cols: 4
   kicker: Four Days
   kicker_en: Four Days
   kicker_zh: 四天
@@ -272,40 +265,24 @@ beats:
   title_en: Shop B. Four days.
   title_zh: B店。四天。
   title_zh_hk: B店。四日。
-  row1_en: Shop B
-  row1_zh: B店
-  row1_zh_hk: B店
-  col1_en: Day 1
-  col1_zh: 第1天
-  col1_zh_hk: 第1日
-  col2_en: Day 2
-  col2_zh: 第2天
-  col2_zh_hk: 第2日
-  col3_en: Day 3
-  col3_zh: 第3天
-  col3_zh_hk: 第3日
-  col4_en: Day 4
-  col4_zh: 第4天
-  col4_zh_hk: 第4日
-  c11: "100"
-  c12: "200"
-  c13: "300"
-  c14: "800"
-  footer_en: Four days. One rush.
-  footer_zh: 四天。一个高峰。
-  footer_zh_hk: 四日。一個高峰。
-  s1_en: "Here is Shop B, so the rule is complete. Four days. Day 1 sold 100. Day 2 sold 200. Day 3 sold 300. Day 4 sold 800."
-  s1_zh: "这是B店，规则才完整。四天。第1天卖了100杯。第2天卖了200杯。第3天卖了300杯。第4天卖了800杯。"
-  s1_zh_hk: "呢個係B店，規則先完整。四日。第1日賣咗100杯。第2日賣咗200杯。第3日賣咗300杯。第4日賣咗800杯。"
-  s2_en: "They are already in order, low to high. With five days the middle was one spot. With four days there is no single middle spot."
-  s2_zh: "它们已经从少到多排好了。五天的时候，正中间是一个位置。四天没有唯一的正中间。"
-  s2_zh_hk: "佢哋已經由少到多排好咗。五日嘅時候，正中間係一個位置。四日冇唯一嘅正中間。"
-  s3_en: "Look at the line. 100, then 200, then 300, then 800. The two middle spots are 200 and 300. Next we share those two."
-  s3_zh: "看这一队。100，然后200，然后300，然后800。正中间的两个位置是200和300。接下来把这两个数平均分。"
-  s3_zh_hk: "睇呢一隊。100，然後200，然後300，然後800。正中間嘅兩個位置係200同300。跟住將呢兩個數平均分。"
+  values: 100;200;300;800
+  order: as_given
+  mark: middle
+  footer_en: Share 200 and 300
+  footer_zh: 平分 200 和 300
+  footer_zh_hk: 平分 200 同 300
+  s1_en: Five days gave us one middle. But what if the count is even? Suppose Shop B has four days. Day 1 sold 100. Day 2 sold 200. Day 3 sold 300. Day 4 sold 800.
+  s1_zh: 五天，给了我们一个正中间。可要是天数是偶数呢？假设B店有四天。第1天卖了100杯，第2天卖了200杯，第3天卖了300杯，第4天卖了800杯。
+  s1_zh_hk: 五日，畀咗我哋一個正中間。但如果日數係雙數呢？假設B店有四日。第1日賣咗100杯，第2日賣咗200杯，第3日賣咗300杯，第4日賣咗800杯。
+  s2_en: Put them in order on the numbered line, low to high; they already are. With five days, one place sat in the middle. With four, there is no single middle place.
+  s2_zh: 按编号从少到多排好，它们本来就是这个顺序。五天的时候，正中间只有一个位置。四天，就没有唯一的正中间了。
+  s2_zh_hk: 按編號由少到多排好，佢哋本身已經係呢個次序。五日嗰陣，正中間得一個位置。四日，就冇唯一嘅正中間喇。
+  s3_en: 'Instead, two places share the middle: the second and the third, 200 and 300. One day sits below them and one above. So what do we do with two middles?'
+  s3_zh: 这时候，中间有两个位置：第二个和第三个，200和300。它们下面一天，上面一天。那两个正中间要怎么办？
+  s3_zh_hk: 呢個時候，中間有兩個位置：第二個同第三個，200同300。佢哋下面一日，上面一日。咁兩個正中間點算？
 - id: share
   visual: steps
-  seconds: 44
+  seconds: 46
   kicker: Two Middles
   kicker_en: Two Middles
   kicker_zh: 两个正中间
@@ -313,30 +290,33 @@ beats:
   title_en: Share the two middle days
   title_zh: 把正中间的两天平均分
   title_zh_hk: 將正中間嘅兩日平均分
-  step1_en: "Second day: 200. Third day: 300."
-  step1_zh: "第二天：200。第三天：300。"
-  step1_zh_hk: "第二日：200。第三日：300。"
-  step2_en: "200 + 300 = 500"
-  step2_zh: "200 + 300 = 500"
-  step2_zh_hk: "200 + 300 = 500"
-  step3_en: "500 / 2 = 250"
-  step3_zh: "500 / 2 = 250"
-  step3_zh_hk: "500 / 2 = 250"
-  step4_en: "Four days. Middle is 250."
-  step4_zh: "四天。正中间是 250。"
-  step4_zh_hk: "四日。正中間係 250。"
-  s1_en: "So which two do we share? The second and the third. 200 and 300. One day below them, one day above them."
-  s1_zh: "那么平均分哪两天？第二天和第三天。200和300。它们下面一天，上面一天。"
-  s1_zh_hk: "咁平均分邊兩日？第二日同第三日。200同300。佢哋下面一日，上面一日。"
-  s2_en: "Add them. 200 plus 300 is 500. Share equally. 500 divided by 2 is 250. That is the middle of a four-day line."
-  s2_zh: "加起来。200加300等于500。平均分。500除以2等于250。这就是四天这一队的正中间。"
-  s2_zh_hk: "加起嚟。200加300等於500。平均分。500除以2等於250。呢個就係四日呢一隊嘅正中間。"
-  s3_en: "Five days, read the one middle: 120. Four days, share the two middles: 250. The same two steps have a written form."
-  s3_zh: "五天，读出那一个正中间：120。四天，把两个正中间平均分：250。同样的两步有一个写法。"
-  s3_zh_hk: "五日，讀出嗰一個正中間：120。四日，將兩個正中間平均分：250。同樣嘅兩步有一個寫法。"
+  step1_en: 2nd day 200, 3rd day 300
+  step1_zh: 第二天 200，第三天 300
+  step1_zh_hk: 第二日 200，第三日 300
+  step2_en: 200 + 300 = 500
+  step2_zh: 200 + 300 = 500
+  step2_zh_hk: 200 + 300 = 500
+  step3_en: 500 / 2 = 250
+  step3_zh: 500 / 2 = 250
+  step3_zh_hk: 500 / 2 = 250
+  step4_en: Four days. Middle is 250.
+  step4_zh: 四天。正中间是 250。
+  step4_zh_hk: 四日。正中間係 250。
+  s1_en: 'We share them, the same way two people split a bill. The two middle days are the second and the third: 200 and 300.'
+  s1_zh: 把它们平均分，就像两个人平分一张账单。正中间的两天是第二天和第三天：200和300。
+  s1_zh_hk: 將佢哋平均分，就好似兩個人夾一張單咁。正中間嘅兩日係第二日同第三日：200同300。
+  s2_en: Add the two middles. 200 plus 300 is 500 cups.
+  s2_zh: 先把两个正中间加起来。200加300等于500杯。
+  s2_zh_hk: 先將兩個正中間加埋。200加300等於500杯。
+  s3_en: 'Then share equally between the two. 500 divided by 2 is 250 cups. Notice that 250 is not one of Shop B''s days. That is fine: it sits halfway between the two middles.'
+  s3_zh: 再由这两个平分。500除以2等于250杯。留意，250不是B店任何一天的数。这没关系：它正好落在两个正中间的半路。
+  s3_zh_hk: 再由呢兩個平分。500除以2等於250杯。留意，250唔係B店任何一日嘅數。冇問題嘅：佢啱啱喺兩個正中間嘅半路。
+  s4_en: 'So the rule is complete. Five days: read the one middle, 120. Four days: share the two middles, 250. Now we can write the median down for any count.'
+  s4_zh: 这样规则就完整了。五天：读出唯一的正中间，120。四天：把两个正中间平均分，250。现在可以把中位数写成一个定义，天数多少都适用。
+  s4_zh_hk: 噉樣規則就完整喇。五日：讀出唯一嘅正中間，120。四日：將兩個正中間平均分，250。而家可以將中位數寫成一個定義，幾多日都用得。
 - id: defn
   visual: definition_card
-  seconds: 42
+  seconds: 38
   kicker: The Definition
   kicker_en: The Definition
   kicker_zh: 定义
@@ -354,17 +334,17 @@ beats:
 
     雙數：將兩個正中間平均分'
   gloss: 'Five days: 120. Four days: 250.'
-  gloss_zh: '五天：120。四天：250。'
-  gloss_zh_hk: '五日：120。四日：250。'
-  s1_en: "Here is the written form. Sort the days from low to high. If the count is odd, like five, read the single middle. If the count is even, like four, share the two middle days equally."
-  s1_zh: "这就是写法。把这些天从少到多排好。如果是奇数，比如五天，读出唯一的正中间。如果是偶数，比如四天，把正中间的两天平均分。"
-  s1_zh_hk: "呢個就係寫法。將呢啲日由少到多排好。如果係單數，好似五日，讀出唯一嘅正中間。如果係雙數，好似四日，將正中間嘅兩日平均分。"
-  s2_en: "Five days, the median is 120 cups. Four days, the median is 250 cups. It is about place in the line, not about how far a rush day sits. This is the definition. Next, two things the middle can do that the average cannot."
-  s2_zh: "五天，中位数是120杯。四天，中位数是250杯。它看的是排队的位置，不是高峰日离得有多远。这就是定义。接下来，正中间能做、而平均数做不到的两件事。"
-  s2_zh_hk: "五日，中位數係120杯。四日，中位數係250杯。佢睇嘅係排隊嘅位置，唔係高峰日離得有幾遠。呢個就係定義。跟住，正中間做得到、而平均數做唔到嘅兩件事。"
+  gloss_zh: 五天：120。四天：250。
+  gloss_zh_hk: 五日：120。四日：250。
+  s1_en: Here is the definition. First, sort the values from low to high. If the count is odd, like five, read the single middle value. If the count is even, like four, share the two middle values equally.
+  s1_zh: 这就是定义。先把数值从小到大排好。如果个数是奇数，比如五天，就读出唯一的正中间。如果个数是偶数，比如四天，就把正中间的两个数平均分。
+  s1_zh_hk: 呢個就係定義。先將數值由細到大排好。如果個數係單數，好似五日，就讀出唯一嘅正中間。如果個數係雙數，好似四日，就將正中間嘅兩個數平均分。
+  s2_en: For Shop A's five days, the median is 120 cups. For Shop B's four days, it is 250 cups. Either way, the median depends on place in the line, not on how far out the rush day sits. So what can it do that the average cannot?
+  s2_zh: A店五天，中位数是120杯。B店四天，中位数是250杯。不管哪种，中位数看的都是排队的位置，不是高峰日离得多远。那它能做什么，是平均数做不到的？
+  s2_zh_hk: A店五日，中位數係120杯。B店四日，中位數係250杯。點都好，中位數睇嘅都係排隊嘅位置，唔係高峰日離得幾遠。咁佢做得到啲乜，係平均數做唔到嘅？
 - id: good
   visual: two_column
-  seconds: 44
+  seconds: 48
   kicker: Why It Helps
   kicker_en: Why It Helps
   kicker_zh: 它好在哪里
@@ -372,96 +352,107 @@ beats:
   title_en: Two things the middle can do
   title_zh: 正中间能做的两件事
   title_zh_hk: 正中間做得到嘅兩件事
-  left_en: "A rush day does not move the middle"
-  left_zh: "高峰日挪不动正中间"
-  left_zh_hk: "高峰日郁唔到正中間"
-  right_en: "It works when answers are only ordered"
-  right_zh: "答案只能排队时，它也能用"
-  right_zh_hk: "答案只能排隊時，佢都用得"
-  s1_en: "First, the rush day. We already saw it. Day 5 can grow from 460 to 4,000, and the middle stays 120. The average moves. The middle does not. A far day is called an outlier. The median is less affected by outliers."
-  s1_zh: "第一，高峰日。我们已经看过了。第5天可以从460涨到4,000，正中间还是120。平均数会动。正中间不动。离得这么远的一天叫作异常值。中位数比较不受异常值影响。"
-  s1_zh_hk: "第一，高峰日。我哋已經睇過。第5日可以由460升到4,000，正中間仲係120。平均數會郁。正中間唔郁。離得咁遠嘅一日叫做異常值。中位數比較唔受異常值影響。"
-  s2_en: "Second, some answers are only a line, not cups you can add. A customer says poor, fair, good, very good, or excellent. You can put those words in order. You cannot add good to excellent and divide."
-  s2_zh: "第二，有些答案只是一队，不是可以相加的杯数。顾客说差、一般、好、很好、或者非常好。这些词可以排好。你不能把“好”加上“非常好”再除。"
-  s2_zh_hk: "第二，有啲答案只係一隊，唔係可以加埋嘅杯數。顧客話差、一般、好、好好、或者非常好。呢啲詞可以排好。你唔可以將「好」加上「非常好」再除。"
-  s3_en: "The average needs numbers you can add. The middle only needs a line. Next we read the middle of five answers."
-  s3_zh: "平均数需要可以相加的数。正中间只需要一队。接下来读出五个答案的正中间。"
-  s3_zh_hk: "平均數需要可以加埋嘅數。正中間只需要一隊。跟住讀出五個答案嘅正中間。"
+  left_en: A rush day can't move it
+  left_zh: 高峰日挪不动它
+  left_zh_hk: 高峰日郁唔到佢
+  right_en: Works for ordered answers
+  right_zh: 只能排序的答案也能用
+  right_zh_hk: 只能排序嘅答案都用得
+  s1_en: Two things stand out, and both come from using place instead of size.
+  s1_zh: 有两件事特别突出，都来自它看位置、不看大小。
+  s1_zh_hk: 有兩件事特別突出，兩樣都係因為佢睇位置、唔睇大細。
+  s2_en: First, a rush day cannot move it. We saw Day 5 grow from 460 to 4,000 while the median stayed at 120. The average moves; the median does not. A measure that outliers barely move is called robust, and the median is robust.
+  s2_zh: 第一，高峰日挪不动它。我们看到第5天从460涨到4,000，中位数还是120。平均数会动，中位数不动。几乎不受异常值影响的量，叫作稳健，中位数就是稳健的。
+  s2_zh_hk: 第一，高峰日郁唔到佢。我哋見到第5日由460升到4,000，中位數仲係120。平均數會郁，中位數唔郁。幾乎唔受異常值影響嘅量，叫做穩健，中位數就係穩健嘅。
+  s3_en: Second, it works for answers you can only rank. A customer might say poor, fair, good, very good, or excellent. You can put those words in order, but you cannot add good to excellent and divide. The average needs numbers you can add. The median only needs an order.
+  s3_zh: 第二，只能排序的答案，它也能用。顾客可能说差、一般、好、很好、或者非常好。这些词可以排序，但你没法把“好”加上“非常好”再除。平均数需要能相加的数，中位数只需要一个顺序。
+  s3_zh_hk: 第二，只能排序嘅答案，佢都用得。顧客可能話差、一般、好、好好、或者非常好。呢啲詞可以排序，但你冇辦法將「好」加「非常好」再除。平均數要可以加埋嘅數，中位數只要一個次序。
 - id: likert
-  visual: steps
-  seconds: 42
+  visual: rank_line
+  seconds: 44
   kicker: Ordered Answers
   kicker_en: Ordered Answers
   kicker_zh: 只能排队的答案
   kicker_zh_hk: 只能排隊嘅答案
-  title_en: Five answers. Read the middle one.
-  title_zh: 五个答案。读出正中间那个。
-  title_zh_hk: 五個答案。讀出正中間嗰個。
-  step1_en: "Poor, fair, good"
-  step1_zh: "差，一般，好"
-  step1_zh_hk: "差，一般，好"
-  step2_en: "Very good, excellent"
-  step2_zh: "很好，非常好"
-  step2_zh_hk: "好好，非常好"
-  step3_en: "Five answers. Middle is good."
-  step3_zh: "五个答案。正中间是好。"
-  step3_zh_hk: "五個答案。正中間係好。"
-  s1_en: "Suppose five customers answer a satisfaction question. Line the answers up, from poor to excellent. Poor, fair, good, very good, excellent."
-  s1_zh: "假设五位顾客回答一个满意度问题。把答案从差排到非常好。差，一般，好，很好，非常好。"
-  s1_zh_hk: "假設五位顧客回答一個滿意度問題。將答案由差排到非常好。差，一般，好，好好，非常好。"
-  s2_en: "Five answers, so the middle is the third. The third is good. That is the typical answer. We did not add anything."
-  s2_zh: "五个答案，所以正中间是第三个。第三个是好。这就是最典型的答案。我们什么都没加。"
-  s2_zh_hk: "五個答案，所以正中間係第三個。第三個係好。呢個就係最典型嘅答案。我哋咩都冇加。"
-  s3_en: "This kind of line is called ordinal. The name can wait. The average does not apply, because the words are not cups. The middle does. Next, what the middle still cannot do."
-  s3_zh: "这种只能排队的答案叫作定序。名字可以等一等。平均数用不上，因为这些词不是杯数。正中间用得上。接下来，正中间仍然做不到什么。"
-  s3_zh_hk: "呢種只能排隊嘅答案叫做定序。名可以等一等。平均數用唔上，因為呢啲詞唔係杯數。正中間用得上。跟住，正中間仍然做唔到咩。"
+  title_en: 'Five answers: read the middle'
+  title_zh: 五个答案，读出正中间
+  title_zh_hk: 五個答案，讀出正中間
+  order: as_given
+  mark: middle
+  v1_en: Poor
+  v1_zh: 差
+  v1_zh_hk: 差
+  v2_en: Fair
+  v2_zh: 一般
+  v2_zh_hk: 一般
+  v3_en: Good
+  v3_zh: 好
+  v3_zh_hk: 好
+  v4_en: Very good
+  v4_zh: 很好
+  v4_zh_hk: 好好
+  v5_en: Excellent
+  v5_zh: 非常好
+  v5_zh_hk: 非常好
+  footer_en: Middle = good
+  footer_zh: 中间 = 好
+  footer_zh_hk: 中間 = 好
+  s1_en: 'Let''s try it. Suppose five customers answer a satisfaction question, and we line the answers up from poor to excellent: poor, fair, good, very good, excellent.'
+  s1_zh: 我们来试一试。假设五位顾客回答一个满意度问题，把答案从差排到非常好：差，一般，好，很好，非常好。
+  s1_zh_hk: 我哋試吓。假設五位顧客答一條滿意度問題，將答案由差排到非常好：差，一般，好，好好，非常好。
+  s2_en: Five answers on the numbered line, so the middle is the third place. Again, we did not add anything. We only ranked.
+  s2_zh: 五个答案放在编号线上，正中间就是第三个位置。同样，我们什么都没加，只是排了序。
+  s2_zh_hk: 五個答案擺喺編號線上，正中間就係第三個位置。同樣，我哋乜都冇加，只係排咗序。
+  s3_en: The third answer is good, so the typical answer is good. Answers like these, which can be ranked but not added, are called ordinal. The average does not apply to them, because the words are not cups. The median does. So is the median always enough?
+  s3_zh: 第三个答案是“好”，所以典型的答案就是“好”。这种能排序、不能相加的答案，叫作定序数据。平均数用不上，因为这些词不是杯数，中位数却用得上。那中位数是不是就够了？
+  s3_zh_hk: 第三個答案係「好」，所以典型嘅答案就係「好」。呢種排得到序、加唔到嘅答案，叫做定序數據。平均數用唔上，因為呢啲詞唔係杯數，中位數就用得上。咁係咪有中位數就夠？
 - id: limit
   visual: two_column
-  seconds: 44
+  seconds: 52
   kicker: The Limit
   kicker_en: The Limit
   kicker_zh: 限度
   kicker_zh_hk: 限度
-  title_en: A reason to check, not the only number
-  title_zh: 是检查的理由，不是唯一的数
-  title_zh_hk: 係檢查嘅理由，唔係唯一嘅數
-  left_en: Why it helps
-  left_zh: 它有什么用
-  left_zh_hk: 佢有咩用
-  right_en: What it is not
-  right_zh: 它不是什么
-  right_zh_hk: 佢唔係乜
-  s1_en: "So the middle has two uses. A rush day does not move it, and it works when the answers are only a line. Why is it still not the only number? It does not say how many cups the days sold in total."
-  s1_zh: "所以正中间有两个用处。高峰日挪不动它，答案只是一队时它也能用。为什么它仍然不是唯一的数？它不说这些天一共卖了多少杯。"
-  s1_zh_hk: "所以正中間有兩個用處。高峰日郁唔到佢，答案只係一隊時佢都用得。點解佢仍然唔係唯一嘅數？佢唔話呢啲日一共賣咗幾多杯。"
-  s2_en: "But the middle is not the only number. It does not say how many cups the days sold in total. It does not say the rush day is fine. Two different lines can also share the same middle. Keep the days in view."
-  s2_zh: "但正中间不是唯一的数。它不说这些天一共卖了多少杯。它也不说高峰日没问题。两种不同的排队，也可能有同一个正中间。所以还要看着原来的这些天。"
-  s2_zh_hk: "但正中間唔係唯一嘅數。佢唔話呢啲日一共賣咗幾多杯。佢亦唔話高峰日冇問題。兩種唔同嘅排隊，亦可能有同一個正中間。所以仲要睇住原本嘅呢啲日。"
-  s3_en: "And 120 is not an order to make every day sell 120. It has no plan in it. It says where the middle of these days sits."
-  s3_zh: "而且120不是让每一天都卖120杯的指令。它里面没有计划。它说的是这些天的正中间在哪里。"
-  s3_zh_hk: "而且120唔係叫每一日都賣120杯嘅指令。佢入面冇計劃。佢講嘅係呢啲日嘅正中間喺邊度。"
+  title_en: A middle, not the whole story
+  title_zh: 只是正中间，不是全部
+  title_zh_hk: 只係正中間，唔係全部
+  left_en: Tells you the typical day
+  left_zh: 说出普通的一天
+  left_zh_hk: 講出普通嘅一日
+  right_en: Hides the total and the rush
+  right_zh: 藏起总数和高峰
+  right_zh_hk: 收埋總數同高峰
+  s1_en: Not quite. Like every summary, the median keeps one thing and drops others. So what does it tell you, and what does it hide?
+  s1_zh: 不完全是。跟所有概括的数一样，中位数留下一样东西，也丢掉一些东西。那它告诉你什么，又藏起了什么？
+  s1_zh_hk: 唔完全係。同所有概括嘅數一樣，中位數留低一樣嘢，亦丟咗啲嘢。咁佢話你知啲乜，又收埋咗啲乜？
+  s2_en: It tells you where the typical day sits. At Shop A, an ordinary day sold about 120 cups. That is a fair picture of the four quiet days.
+  s2_zh: 它告诉你普通的一天落在哪里。A店普通的一天，卖120杯左右。这对那四个平稳的日子，是个公平的描述。
+  s2_zh_hk: 佢話你知普通嘅一日喺邊度。A店普通嘅一日，賣120杯左右。對嗰四個平穩嘅日子嚟講，係個公平嘅描述。
+  s3_en: But it hides the total and the rush. It does not say how many cups the five days sold, and it does not say whether the rush day was a problem. Two very different queues can share the same middle. And 120 is not an order for every day to sell 120. Keep the days themselves in view.
+  s3_zh: 可是它藏起了总数和高峰。它不说这五天一共卖了多少杯，也不说高峰日是不是问题。两队很不一样的数字，也可能有同一个正中间。而且120也不是要求每天都卖120杯。原来的这些天，还是要放在眼前。
+  s3_zh_hk: 但係佢收埋咗總數同高峰。佢唔話你知呢五日一共賣咗幾多杯，亦唔話你知高峰日係咪問題。兩隊好唔同嘅數字，都可以有同一個正中間。而且120唔係要每日都賣120杯。原本嗰啲日子，仲係要擺喺眼前。
 - id: answer
   visual: takeaway
-  seconds: 48
+  seconds: 64
   kicker: The Answer
   kicker_en: The Answer
   kicker_zh: 回答问题
   kicker_zh_hk: 回答問題
   title_en: Give the typical day the middle.
-  title_zh: 给普通的天正中间。
-  title_zh_hk: 畀普通嘅日正中間。
+  title_zh: 普通的一天，看正中间
+  title_zh_hk: 普通嘅一日，睇正中間
   q1_en: What does a typical day sell?
-  q1_zh: 一个普通的天通常卖多少？
-  q1_zh_hk: 一個普通嘅日通常賣幾多？
+  q1_zh: 普通的一天通常卖多少？
+  q1_zh_hk: 普通嘅一日通常賣幾多？
   q2_en: When do you still need the average?
   q2_zh: 什么时候还要用平均数？
   q2_zh_hk: 咩時候仲要用平均數？
-  s1_en: "Back to the question. A typical day at Shop A sold 120 cups. That is the middle of five days. The average, 180, sits above four of those days because of the rush."
-  s1_zh: "回到问题。A店一个普通的天卖了120杯。那就是五天的正中间。平均数180，因为高峰日，高于其中四天。"
-  s1_zh_hk: "返到問題。A店一個普通嘅日賣咗120杯。嗰個就係五日嘅正中間。平均數180，因為高峰日，高過其中四日。"
-  s2_en: "Shop B has four days, so there are two middles, 200 and 300. Share them, 250. Use the middle when you want a typical day, and one rush day would pull the average above the ordinary days. Use the average when you want the equal share of the total."
-  s2_zh: "B店有四天，所以有两个正中间，200和300。平均分，250。想要一个普通的天，而一个高峰日会把平均数拉到普通的天上面时，用正中间。想要总数的平均份额时，用平均数。"
-  s2_zh_hk: "B店有四日，所以有兩個正中間，200同300。平均分，250。想要一個普通嘅日，而一個高峰日會將平均數拉到普通嘅日上面時，用正中間。想要總數嘅平均份額時，用平均數。"
-  s3_en: "Neither number is always the right one. The question decides. Before you set the target, still look at the rush day. These numbers describe only the days we supposed. The median says where the middle sits. It does not write the target by itself."
-  s3_zh: "哪一个数都不总是对的。问题决定用哪一个。定目标之前，还是要看高峰日。这些数只描述我们假设的这些天。中位数说的是正中间在哪里。它不能单独写目标。"
-  s3_zh_hk: "邊一個數都唔係永遠啱。問題決定用邊一個。定目標之前，仲係要睇高峰日。呢啲數只係描述我哋假設嘅呢啲日。中位數講嘅係正中間喺邊度。佢唔可以單獨寫目標。"
+  s1_en: 'Back to head office''s question: what does a typical day sell? At Shop A, the median is 120 cups, the middle of five days. The average, 180, sits above four of those days because one rush pulled it up.'
+  s1_zh: 回到总部的问题：普通的一天卖多少？A店的中位数是120杯，就是五天的正中间。平均数180，因为一个高峰把它拉高了，高过其中四天。
+  s1_zh_hk: 返到總部嘅問題：普通嘅一日賣幾多？A店嘅中位數係120杯，即係五日嘅正中間。平均數180，因為一個高峰將佢拉高咗，高過其中四日。
+  s2_en: 'So what does a typical day sell? Sort the days and read the middle. With an even count, like Shop B''s four days, share the two middles: 200 and 300 give 250. When one rush day would pull the average above the ordinary days, give the median.'
+  s2_zh: 那普通的一天卖多少？把这些天排好，读出正中间。天数是偶数，比如B店四天，就把两个正中间平均分：200和300，得250。一个高峰日会把平均数拉到普通日子上面时，就报中位数。
+  s2_zh_hk: 咁普通嘅一日賣幾多？將啲日排好，讀出正中間。日數係雙數，好似B店四日，就將兩個正中間平均分：200同300，得出250。一個高峰日會將平均數拉到普通日子上面嗰陣，就報中位數。
+  s3_en: So when do you still need the average? When the question is about the total shared equally, for example planning the cups for all five days together. Neither number is always right; the question decides. These numbers describe only the days we supposed. Before you set any target, still look at the rush day itself.
+  s3_zh: 那什么时候还要用平均数？问题问的是总数平均分下来，比如一起规划五天总共要准备的杯数，就用平均数。哪个数都不是永远对的，看问题决定。这些数只描述我们假设的这几天。真要定目标之前，还是要看看那个高峰日本身。
+  s3_zh_hk: 咁咩時候仲要用平均數？問題問嘅係總數平分落嚟，好似一齊計五日總共要準備幾多杯，就用平均數。邊個數都唔係永遠啱，睇問題決定。呢啲數只係描述我哋假設嘅呢幾日。真係要定目標之前，仲要睇吓個高峰日本身。

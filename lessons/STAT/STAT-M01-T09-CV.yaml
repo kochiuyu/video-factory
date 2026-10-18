@@ -7,13 +7,13 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
-title_en: Comparing risk across different scales
-title_zh: 跨越规模比较经营风险
-title_zh_hk: 跨越規模比較經營風險
-objective_en: Define the coefficient of variation (CV) as standard deviation divided by the mean, explain how it strips away measurement units, and show how managers use it to fairly compare volatility across different store formats and currencies.
-objective_zh: 把变异系数（CV）定义为标准差除以均值，解释它如何消除度量单位的影响，并展示管理者如何用它公平比较不同规模分店与不同货币计价下的相对波动风险。
-objective_zh_hk: 將變異系數（CV）定義為標準差除以均值，解釋佢點樣消除度量單位嘅影響，並展示管理者點樣用佢公平比較唔同規模分店與唔同貨幣計價之下嘅相對波動風險。
+duration_target_s: 480
+title_en: What is the coefficient of variation?
+title_zh: 什么是变异系数？
+title_zh_hk: 咩係變異系數？
+objective_en: Explain why a bigger standard deviation does not always mean a harder-to-plan shop, compute the coefficient of variation as the standard deviation divided by the average, and say when to use it instead of the standard deviation and where it stops.
+objective_zh: 解释为什么标准差大，不一定表示这家店更难计划；用标准差除以平均数算出变异系数；并说明什么时候该用它代替标准差，以及它到哪里为止。
+objective_zh_hk: 解釋點解標準差大，唔一定代表間店更難計劃；用標準差除以平均數計出變異系數；再講清楚幾時應該用佢代替標準差，同埋佢去到邊度為止。
 glossary:
 - en: coefficient of variation
   zh: 变异系数
@@ -34,158 +34,298 @@ glossary:
 quiz:
 - id: Q1
   type: multiple_choice
-  question_en: Why can't a retail director directly compare the raw standard deviations of a street shop and a giant airport hub?
-  question_zh: 为什么零售总监不能直接用原始标准差来比较普通街边店与巨型机场枢纽店的经营风险？
-  question_zh_hk: 點解零售總監唔可以直接用原始標準差嚟比較普通街邊舖同巨型機場樞紐舖嘅經營風險？
+  question_en: Shop A sells about 300 cups a day with a standard deviation of 30. A large Shop B sells about 3,000 cups with
+    a standard deviation of 150. What is wrong with comparing 30 and 150 directly to decide which shop is harder to plan?
+  question_zh: A店平时一天卖大约300杯，标准差是30杯。规模大的B店一天卖大约3,000杯，标准差是150杯。直接拿30和150来比，判断哪家店更难计划，问题在哪里？
+  question_zh_hk: A店平時一日賣大約300杯，標準差係30杯。規模大嘅B店一日賣大約3,000杯，標準差係150杯。直接攞30同150嚟比，判斷邊間店更難計劃，問題喺邊？
   options_en:
-  - 'A: Standard deviation measures absolute spread, so a larger store naturally has bigger raw numbers without necessarily being riskier.'
-  - 'B: The airport store operates under foreign banking laws that forbid standard deviation.'
-  - 'C: Street shops only sell medium cups, making standard deviation mathematically impossible.'
-  - 'D: Standard deviation always equals zero for high-volume airport stores.'
+  - 'A: The standard deviation is in cups, so a bigger shop naturally has a bigger swing. You need to see the swing for the
+    shop''s size.'
+  - 'B: Nothing is wrong. 150 is five times 30, so Shop B is five times harder to plan.'
+  - 'C: You should compare the averages instead. The shop that sells more is always the harder one to plan.'
+  - 'D: The two numbers are in different units, so standard deviations of two shops can never be compared.'
   options_zh:
-  - 'A: 标准差衡量的是绝对离散度，体量更大的分店原始波动数值自然更大，但不代表其相对经营风险更高。'
-  - 'B: 机场店受外国银行法规约束，禁止计算标准差。'
-  - 'C: 街边店只卖中杯咖啡，在数学上无法计算标准差。'
-  - 'D: 大销量的机场店其标准差必然永远等于零。'
+  - A：标准差的单位是杯，店越大，晃动的杯数自然越大。要看的是按规模算的晃动。
+  - B：没有问题。150是30的五倍，所以B店难计划五倍。
+  - C：应该改比平均数。卖得越多的店，一定越难计划。
+  - D：两个数的单位不同，所以两家店的标准差永远不能比较。
   options_zh_hk:
-  - 'A: 標準差衡量嘅係絕對離散度，體量更大嘅分店原始波動數值自然更大，但唔代表佢嘅相對經營風險更高。'
-  - 'B: 機場舖受外國銀行法規約束，禁止計算標準差。'
-  - 'C: 街邊舖淨係賣中杯咖啡，喺數學上冇辦法計算標準差。'
-  - 'D: 大銷量嘅機場舖其標準差必然永遠等於零。'
+  - A：標準差嘅單位係杯，間店越大，搖動嘅杯數自然越大。要睇嘅係按規模計嘅搖動。
+  - B：冇問題。150係30嘅五倍，所以B店難計劃五倍。
+  - C：應該改為比平均數。賣得越多嘅店，一定越難計劃。
+  - D：兩個數嘅單位唔同，所以兩間店嘅標準差永遠唔可以比較。
   answer: A
-  explanation_en: Raw standard deviation scales with the size of the mean. A 200-cup wobble on a 4,000-cup base is far more stable than a 50-cup wobble on a 200-cup base.
-  explanation_zh: 原始标准差会随着总体规模的增大而变大。在 4,000 杯的基础上波动 200 杯（5%），远比在 200 杯的基础上波动 50 杯（25%）要稳定得多。
-  explanation_zh_hk: 原始標準差會隨住總體規模嘅增大而變大。喺 4,000 杯嘅基礎上面波動 200 杯（5%），遠比喺 200 杯嘅基礎上面波動 50 杯（25%）要穩定得多。
+  explanation_en: Both numbers are in cups, but a standard deviation grows with the size of the shop. For its size, Shop A
+    swings 30 / 300 = 10% and Shop B swings 150 / 3,000 = 5%. So Shop A is the harder one to plan, even though its standard
+    deviation is smaller.
+  explanation_zh: 两个数都以杯为单位，但标准差会跟着店的规模变大。按规模算，A店晃动 30 / 300 = 10%，B店晃动 150 / 3,000 = 5%。所以虽然A店的标准差比较小，它反而比较难计划。
+  explanation_zh_hk: 兩個數都係以杯做單位，但標準差會跟住間店嘅規模變大。按規模計，A店搖動 30 / 300 = 10%，B店搖動 150 / 3,000 = 5%。所以雖然A店嘅標準差細啲，佢反而比較難計劃。
 - id: Q2
   type: multiple_choice
-  question_en: How does the Coefficient of Variation (CV) make volatility comparable across different product lines or currencies?
-  question_zh: 变异系数（CV）是如何实现跨不同产品线或跨币种波动率公平比较的？
-  question_zh_hk: 變異系數（CV）係點樣實現跨唔同產品線或跨幣種波動率公平比較嘅？
+  question_en: Shop A's standard deviation is 30 cups on an average of 300 cups. How does the coefficient of variation (CV)
+    let you compare this swing with a shop of a different size, or with sales counted in dollars?
+  question_zh: A店的标准差是30杯，平均数是300杯。变异系数（CV）怎样让你把这个晃动跟另一家规模不同的店，或者用金额计算的销售作比较？
+  question_zh_hk: A店嘅標準差係30杯，平均數係300杯。變異系數（CV）點樣令你可以將呢個搖動同另一間規模唔同嘅店，或者用金額計嘅銷售作比較？
   options_en:
-  - 'A: By converting all monetary amounts into US dollars using fixed exchange rates.'
-  - 'B: By dividing standard deviation by the mean, canceling out units into a pure percentage of relative risk.'
-  - 'C: By multiplying standard deviation by the total number of cups sold.'
-  - 'D: By subtracting the minimum sales from the maximum revenue.'
+  - 'A: It subtracts the slowest day from the busiest day, so every shop is measured the same way.'
+  - 'B: It divides the standard deviation by the average. The units cancel and leave a percent: 30 / 300 = 10%.'
+  - 'C: It multiplies the standard deviation by the price of a cup, so every shop is measured in dollars.'
+  - 'D: It divides the standard deviation by the number of days, so a bigger shop gets a smaller number.'
   options_zh:
-  - 'A: 使用固定汇率将所有货币金额统一折算为美元。'
-  - 'B: 用标准差除以均值，彻底消去计量单位，转化为纯粹反映相对风险的百分比。'
-  - 'C: 将标准差乘以全店卖出的咖啡总杯数。'
-  - 'D: 用最高总收入直接减去最低总销量。'
+  - A：用最忙的一天减去最淡的一天，所以每家店都用同一种方法量度。
+  - B：用标准差除以平均数。单位约掉，剩下一个百分比：30 / 300 = 10%。
+  - C：用标准差乘以一杯的价钱，所以每家店都改用金额量度。
+  - D：用标准差除以天数，所以大店会得到比较小的数。
   options_zh_hk:
-  - 'A: 使用固定匯率將所有貨幣金額統一折算為美元。'
-  - 'B: 用標準差除以均值，徹底消去計量單位，轉化為純粹反映相對風險嘅百分比。'
-  - 'C: 將標準差乘以全舖賣出嘅咖啡總杯數。'
-  - 'D: 用最高總收入直接減去最低總銷量。'
+  - A：用最旺嗰日減最淡嗰日，所以每間店都用同一個方法量度。
+  - B：用標準差除以平均數。單位約咗，剩返一個百分比：30 / 300 = 10%。
+  - C：用標準差乘以一杯嘅價錢，所以每間店都改用金額量度。
+  - D：用標準差除以日數，所以大店會得到細啲嘅數。
   answer: B
-  explanation_en: Dividing standard deviation by the mean removes the original unit, producing a dimensionless measure of relative dispersion. The result can be expressed as a ratio or percentage.
-  explanation_zh: 用标准差除以均值消去了具体的物理或货币单位（杯、港元或欧元），得出一个无量纲比率，表示每单位均值所承受的相对离散度。
-  explanation_zh_hk: 用標準差除以均值消去咗具體嘅物理或貨幣單位（杯、港幣或歐元），得出一個無量綱比率，表示每單位均值所承受嘅相對離散度。
+  explanation_en: 'CV = standard deviation / average. Cups over cups, or dollars over dollars, cancel, so what is left is
+    a unitless percent. Shop A: 30 / 300 = 10%, and in dollars $1,200 / $12,000 is still 10%. Shop B: 150 / 3,000 = 5%.'
+  explanation_zh: CV = 标准差 / 平均数。杯除以杯、元除以元，单位都会约掉，剩下一个无量纲的百分比。A店：30 / 300 = 10%；改用金额，$1,200 / $12,000 仍然是 10%。B店：150 / 3,000
+    = 5%。
+  explanation_zh_hk: CV = 標準差 / 平均數。杯除以杯、蚊除以蚊，單位都會約咗，剩返一個無量綱嘅百分比。A店：30 / 300 = 10%；改用金額，$1,200 / $12,000 仍然係 10%。B店：150 /
+    3,000 = 5%。
 beats:
 - id: hook
   visual: title_card
-  seconds: 30
+  seconds: 52
   kicker: The Question
   kicker_en: The Question
-  kicker_zh: 商业问题
-  kicker_zh_hk: 商業問題
-  title_en: Which store is truly riskier?
-  title_zh: 究竟哪家门店的经营风险更高？
-  title_zh_hk: 究竟邊間門店嘅經營風險更高？
-  en: Suppose your quiet street kiosk sells 300 cups a day with a standard deviation of 30 cups. Meanwhile, your flagship airport terminal sells 3,000 cups with a standard deviation of 150 cups. The airport has five times the raw deviation. Does that mean the airport branch is five times more volatile and harder to manage?
-  zh: 假设你的一家清闲街头小店每天平均卖 300 杯，标准差是 30 杯。与此同时，旗舰机场航站楼店每天平均卖 3,000 杯，标准差是 150 杯。机场店的绝对标准差是街头小店的五倍。这是否意味着机场店的营运风险也高出五倍、更难管理？
-  zh_hk: 假設你一間清閑嘅街頭小舖每日平均賣 300 杯，標準差係 30 杯。與此同時，旗艦機場航站樓舖每日平均賣 3,000 杯，標準差係 150 杯。機場舖嘅絕對標準差係街頭小舖嘅五倍。呢個係咪意味住機場舖嘅營運風險亦都高出五倍、更加難管理？
-- id: define
+  kicker_zh: 业务问题
+  kicker_zh_hk: 業務問題
+  title_en: Coefficient of variation?
+  title_zh: 什么是变异系数？
+  title_zh_hk: 咩係變異系數？
+  en: "Suppose you run two coffee shops. Shop A is small. It sells about 300 cups on an ordinary day. Shop B is big, about 3,000 cups. Every morning each shop orders milk for the day, and you want a safety margin at the shop that is harder to predict. Here is the swing for each. Shop A's standard deviation is 30 cups. Shop B's is 150. B's number is five times bigger. So is B five times harder to plan? If you say yes, you may pile spare milk into B and leave A running short on its busy mornings. We need a fair way to compare swings across shops of different sizes. That tool is the coefficient of variation. So what is the coefficient of variation?"
+  zh: "假设你开了两家咖啡店。A店规模小，平常一天卖大约300杯。B店规模大，大约3,000杯。每天早上，两家店都要订当天用的牛奶，你想把多出来的安全余量留给比较难预测的那家。先看两家各晃多少。A店的标准差是30杯，B店是150杯。B店的数大了五倍。那B店就难计划五倍吗？如果你说是，你可能把多余的牛奶都堆到B店，A店忙的早上反而不够。我们需要一个公平的办法，比较不同规模的店晃得有多大。这个工具叫变异系数。那么，什么是变异系数？"
+  zh_hk: "假設你開咗兩間咖啡店。A店細，平時一日賣大約300杯。B店大，大約3,000杯。每朝兩間店都要訂當日用嘅牛奶，你想將多出嚟嘅安全餘量留畀比較難估嗰間。先睇兩間各自搖幾多。A店嘅標準差係30杯，B店係150杯。B店個數大咗五倍。咁B店係咪難計劃五倍？如果你話係，你可能將多餘嘅牛奶全部堆去B店，A店忙嗰啲朝早反而唔夠。我哋需要一個公平嘅方法，比較唔同規模嘅店搖得有幾大。呢個工具叫變異系數。咁，咩係變異系數？"
+- id: swing
   visual: definition_card
-  seconds: 34
-  kicker: What It Is
-  kicker_en: What It Is
-  kicker_zh: 核心概念
-  kicker_zh_hk: 核心概念
-  title_en: Standard deviation per unit of mean
-  title_zh: 每单位均值所承受的标准差
-  title_zh_hk: 每單位均值所承受嘅標準差
-  formula: CV = Standard Deviation / Mean
-  formula_zh: 变异系数 = 标准差 / 均值
-  formula_zh_hk: 變異系數 = 標準差 / 均值
-  formula_tex: \text{CV} = \frac{s}{\bar{x}} \times 100\%
-  s1_en: To compare volatility fairly across different business scales, managers use the coefficient of variation, or CV. It simply divides the standard deviation by the mean.
-  s1_zh: 为了在不同业务规模之间公平比较波动性，管理者使用变异系数，即 CV。它的计算非常简单：直接用标准差除以均值。
-  s1_zh_hk: 為咗喺唔同業務規模之間公平比較波動性，管理者使用變異系數，即係 CV。佢嘅計算非常簡單：直接用標準差除以均值。
-  s2_en: Dividing cups by cups cancels out the physical units completely. CV produces a pure, dimensionless percentage that measures relative risk per unit of business volume.
-  s2_zh: 用杯除以杯彻底消除了物理计量单位。变异系数给出了一个纯粹的、无量纲的百分比，用来度量单位销售规模所对应的相对风险。
-  s2_zh_hk: 用杯除以杯徹底消除咗物理計量單位。變異系數畀出咗一個純粹嘅、無量綱嘅百分比，用嚟度量單位銷售規模所對應嘅相對風險。
-- id: calc
-  visual: example
-  seconds: 36
-  kicker: Step by Step
-  kicker_en: Step by Step
-  kicker_zh: 算例对比
-  kicker_zh_hk: 算例對比
-  title_en: Street kiosk versus airport hub
-  title_zh: 街头小店对比机场枢纽
-  title_zh_hk: 街頭小舖對比機場樞紐
-  setup_en: 'Separate scale pair: kiosk mean 300, SD 30; airport mean 3,000, SD 150'
-  setup_zh: 单独尺度示例：小店均值 300、标准差 30；机场均值 3,000、标准差 150
-  setup_zh_hk: 單獨尺度示例：小店平均數 300、標準差 30；機場平均數 3,000、標準差 150
-  result_en: 'Kiosk CV: 10% | Airport CV: 5%'
-  result_zh: 街边店 CV：10% | 机场店 CV：5%
-  result_zh_hk: 街邊舖 CV：10% | 機場舖 CV：5%
-  s1_en: This pair is a separate scale illustration, not the Monday three-shop mean. For the street kiosk, divide standard deviation 30 by mean 300. 30 over 300 is a CV of ten percent.
-  s1_zh: 这一对是单独的尺度示例，不是周一三店的均值。街边小店用标准差 30 除以均值 300。30 除以 300，变异系数是百分之十。
-  s1_zh_hk: 呢一對係單獨嘅尺度示例，唔係星期一三店嘅平均數。街邊小店用標準差 30 除以平均數 300。30 除以 300，變異係數係百分之十。
-  s2_en: Now look at the giant airport terminal. Divide standard deviation 150 by mean 3,000. 150 over 3,000 gives a CV of just five percent.
-  s2_zh: 再来看巨大的机场航站楼店。用标准差 150 除以均值 3,000。150 除以 3,000 得出的 CV 仅有百分之五。
-  s2_zh_hk: 再睇吓巨大嘅機場航站樓舖。用標準差 150 除以均值 3,000。150 除以 3,000 計出嚟嘅 CV 得嗰百分之五。
-  s3_en: The conclusion changes. Although the airport store has the larger raw standard deviation, its volatility is smaller relative to its average sales volume. On this dataset, the airport store has the lower coefficient of variation.
-  s3_zh: 结论因此改变。尽管机场店的绝对标准差更大，但相对于其平均销量，相对波动更小。在这组假设数字中，机场店的变异系数更低，为5%，街头小店为10%。这不是预测保证。
-  s3_zh_hk: 結論因此改變。雖然機場舖嘅絕對標準差更大，但相對佢嘅平均銷量，相對波動更小。喺呢組假設數字入面，機場舖嘅變異系數更低，係5%，街頭小舖係10%。呢個唔係預測保證。
-- id: power
+  seconds: 46
+  kicker: The Swing
+  kicker_en: The Swing
+  kicker_zh: 晃动
+  kicker_zh_hk: 搖動
+  title_en: First, what 30 and 150 mean
+  title_zh: 先看30和150是什么
+  title_zh_hk: 先睇30同150係咩
+  formula: 'SD = typical distance from the average
+
+    A: about 300, give or take 30'
+  formula_zh: '标准差 = 每天离平均数的一般距离
+
+    A店：大约300，上下差30'
+  formula_zh_hk: '標準差 = 每日離平均數嘅一般距離
+
+    A店：大約300，上下差30'
+  s1_en: "Start with the two numbers we were handed. The average is the total divided by the number of days, so it is the usual day. The standard deviation, SD for short, is a typical distance of a day from that average, in cups. It answers one question: how far does an ordinary day land from the usual?"
+  s1_zh: "先看手上这两个数。平均数是总数除以天数，就是平常的一天。标准差是每天离这个平均数的一般距离，单位是杯。它回答一个问题：普通的一天，离平常差多远？"
+  s1_zh_hk: "先睇手上呢兩個數。平均數係總數除以日數，即係平常嘅一日。標準差係每日離呢個平均數嘅一般距離，單位係杯。佢答一條問題：普通一日，離平常差幾遠？"
+  s2_en: "So Shop A sells about 300 cups, give or take 30. Shop B sells about 3,000, give or take 150. Both numbers are in cups, and in cups B's swing really is bigger. But is a 150-cup swing big for a shop that sells 3,000?"
+  s2_zh: "所以A店大约卖300杯，上下差30。B店大约卖3,000杯，上下差150。两个数都是杯，按杯算，B店确实晃得多。但对一家卖3,000杯的店来说，晃150杯算大吗？"
+  s2_zh_hk: "所以A店大約賣300杯，上下差30。B店大約賣3,000杯，上下差150。兩個數都係杯，按杯計，B店真係搖得多啲。但對一間賣3,000杯嘅店嚟講，搖150杯算唔算大？"
+- id: size
+  visual: ratio_bars
+  seconds: 64
+  kicker: The Size
+  kicker_en: The Size
+  kicker_zh: 规模
+  kicker_zh_hk: 規模
+  title_en: Swing against the shop's size
+  title_zh: 跟店的规模比一比
+  title_zh_hk: 同店嘅規模比一比
+  means: 300;3000
+  sds: 30;150
+  unit_en: cups
+  unit_zh: 杯
+  unit_zh_hk: 杯
+  labels_en: Shop A;Shop B
+  labels_zh: A店;B店
+  labels_zh_hk: A店;B店
+  mark: highest
+  footer_en: 'A: 10% of its day. B: 5%.'
+  footer_zh: A店：一天的10%；B店：5%
+  footer_zh_hk: A店：一日嘅10%；B店：5%
+  s1_en: "Put the two swings side by side, on one scale of cups. Shop A's bar is 30. Shop B's is 150, five times taller. On raw cups, B looks like the wild one."
+  s1_zh: "把两家的晃动并排放，用同一把杯数的尺。A店的条是30，B店的是150，高了五倍。只看杯数，B店好像晃得最厉害。"
+  s1_zh_hk: "將兩間嘅搖動並排擺，用同一把杯數嘅尺。A店條棒係30，B店係150，高咗五倍。淨係睇杯數，B店好似搖得最犀利。"
+  s2_en: "Now stand each shop against its own day. Make each bar the shop's own average, 300 cups for A and 3,000 for B. The white slice on top is the swing. A's 30 cups is a clear slice of its 300. B's 150 cups is a thin strip on top of 3,000."
+  s2_zh: "现在让每家店跟自己的一天比。把每根条变成这家店自己的平均数：A店300杯，B店3,000杯。顶上白色的那一片就是晃动。A店的30杯，在300里是明显的一片。B店的150杯，放在3,000上面只是薄薄一条。"
+  s2_zh_hk: "而家畀每間店同自己嘅一日比。將每條棒變成呢間店自己嘅平均數：A店300杯，B店3,000杯。頂上白色嗰一片就係搖動。A店嘅30杯，喺300入面係明顯嘅一片。B店嘅150杯，擺喺3,000上面只係薄薄一條。"
+  s3_en: "Read each slice as a share of its own bar. 30 out of 300 is one tenth, ten percent. 150 out of 3,000 is one twentieth, five percent. For its size, Shop A swings twice as much as Shop B. So what should that change in the milk order?"
+  s3_zh: "把每一片看成占自己那根条的多少。300里的30，是十分之一，就是百分之十。3,000里的150，是二十分之一，就是百分之五。按规模算，A店晃得是B店的两倍。那么，牛奶的订单要怎么改？"
+  s3_zh_hk: "將每一片睇成佔自己條棒幾多。300入面嘅30，係十分之一，即係百分之十。3,000入面嘅150，係二十分之一，即係百分之五。按規模計，A店搖得係B店嘅兩倍。咁牛奶張訂單要點改？"
+- id: plan
   visual: two_column
-  seconds: 36
-  kicker: Superpower
-  kicker_en: Superpower
-  kicker_zh: 核心优势
-  kicker_zh_hk: 核心優勢
-  title_en: Comparing unlike scales fairly
-  title_zh: 跨越单位与币种的统一标尺
-  title_zh_hk: 跨越單位同幣種嘅統一把尺
-  left_en: Cups vs Dollars vs Yen
-  left_zh: 杯数对收入对不同货币
-  left_zh_hk: 杯數對收入對唔同貨幣
-  right_en: CV levels the playing field
-  right_zh: CV 提供公平竞争的统一标准
-  right_zh_hk: CV 提供公平競爭嘅統一步伐
-  s1_en: The major advantage of CV is that it removes units. This allows meaningful comparison of relative dispersion across business measures that operate on different scales.
-  s1_zh: 这是变异系数最不可替代的超能力：正因为它没有任何单位，管理层能够将完全不同维度的业务指标放在同一张表上直接对比。
-  s1_zh_hk: 呢個係變異系數最無可替代嘅超能力：正因為佢冇任何單位，管理層能夠將完全唔同維度嘅業務指標擺喺同一張表上面直接對比。
-  s2_en: Managers can compare coffee sales, pastry demand, or revenue series only after interpreting each as relative dispersion around its own mean.
-  s2_zh: 你可以拿咖啡杯数的波动率与烘焙糕点库存的波动率直接横向比较，甚至可以直接对比港币营收与日元分店营收的相对风险。
-  s2_zh_hk: 你可以攞咖啡杯數嘅波動率同烘焙西餅庫存嘅波動率直接橫向比較，甚至可以直接對比港幣營收同日圓分店營收嘅相對風險。
-  s3_en: CV does not eliminate the need for context. A lower CV indicates lower relative variability, but managers must still consider margins, service levels, and operational constraints.
-  s3_zh: 原始标准差无法把物理杯数与货币金额混在一起，但变异系数剥离了一切单位外壳，精准揭示真正的营运波动隐藏在哪里。
-  s3_zh_hk: 原始標準差冇辦法將物理杯數同貨幣金額混埋一齊，但變異系數剝離咗一切單位外殼，精準揭示真正嘅營運波動隱藏喺邊度。
-- id: takeaway
-  visual: takeaway
+  seconds: 50
+  kicker: The Plan
+  kicker_en: The Plan
+  kicker_zh: 订单
+  kicker_zh_hk: 訂單
+  title_en: Bigger swing, smaller share
+  title_zh: 晃得多，占比反而小
+  title_zh_hk: 搖得多，佔比反而細
+  left_en: 'A: 30 cups = 10%'
+  left_zh: A店：多备30杯 = 10%
+  left_zh_hk: A店：多備30杯 = 10%
+  right_en: 'B: 150 cups = 5%'
+  right_zh: B店：多备150杯 = 5%
+  right_zh_hk: B店：多備150杯 = 5%
+  s1_en: "It changes the plan. Suppose each shop keeps one standard deviation of milk spare, on top of an ordinary day."
+  s1_zh: "订单要改。假设每家店在平常一天之外，再多留一个标准差的牛奶。"
+  s1_zh_hk: "張訂單要改。假設每間店喺平常一日之外，再多留一個標準差嘅牛奶。"
+  s2_en: "For Shop A that is 30 extra cups, a tenth of its day. A small shop with a ten percent swing needs a cushion that is large for its size, or its busy mornings run short."
+  s2_zh: "A店就是多留30杯，是它一天的十分之一。一家晃动有百分之十的小店，需要一个按规模来说不小的缓冲，不然忙的早上就会不够。"
+  s2_zh_hk: "A店即係多留30杯，係佢一日嘅十分之一。一間搖動有百分之十嘅細店，需要一個按規模嚟講唔細嘅緩衝，唔係忙嗰啲朝早就會唔夠。"
+  s3_en: "For Shop B that is 150 extra cups, but only a twentieth of its day. In cups, B's cushion is bigger. As a share of the day, A's is the one to protect. Bigger swing in cups, smaller swing for the size. So how do we get that share for any shop?"
+  s3_zh: "B店是多留150杯，但只占它一天的二十分之一。按杯数，B店的缓冲比较大。按一天的比例，要护住的是A店。杯数晃得多，按规模反而晃得少。那么，任何一家店的这个比例，要怎么算？"
+  s3_zh_hk: "B店係多留150杯，但只係佔佢一日嘅二十分之一。按杯數，B店嘅緩衝大啲。按一日嘅比例，要護住嘅係A店。杯數搖得多，按規模反而搖得少。咁任何一間店嘅呢個比例，要點計？"
+- id: divide
+  visual: steps
+  layout: rows
+  seconds: 40
+  kicker: The Division
+  kicker_en: The Division
+  kicker_zh: 除一除
+  kicker_zh_hk: 除一除
+  title_en: Divide the swing by the average
+  title_zh: 晃动除以平均数
+  title_zh_hk: 搖動除以平均數
+  step1_en: 'A: 30 / 300 = 0.10'
+  step1_zh: A店：30 / 300 = 0.10
+  step1_zh_hk: A店：30 / 300 = 0.10
+  step2_en: 0.10 × 100 = 10%
+  step2_zh: 0.10 × 100 = 10%
+  step2_zh_hk: 0.10 × 100 = 10%
+  step3_en: 'B: 150 / 3,000 = 5%'
+  step3_zh: B店：150 / 3,000 = 5%
+  step3_zh_hk: B店：150 / 3,000 = 5%
+  s1_en: "Divide the swing by the average. For Shop A, 30 divided by 300 is 0.10. Cups divided by cups, so what is left is a plain number."
+  s1_zh: "用晃动除以平均数。A店是30除以300，等于0.10。杯除以杯，剩下的就是一个单纯的数。"
+  s1_zh_hk: "用搖動除以平均數。A店係30除以300，等於0.10。杯除以杯，剩低嘅就係一個單純嘅數。"
+  s2_en: "To read it as a percent, multiply by 100. 0.10 times 100 is ten percent. That is the one tenth we saw on the bar."
+  s2_zh: "想看成百分比，就乘以100。0.10乘100，是百分之十，就是刚才条上看到的十分之一。"
+  s2_zh_hk: "想睇成百分比，就乘100。0.10乘100，係百分之十，即係頭先條棒上面見到嘅十分之一。"
+  s3_en: "Shop B, the same way. 150 divided by 3,000 is 0.05, which is five percent. Ten percent against five: A swings twice as much for its size. So what is this number called?"
+  s3_zh: "B店也一样。150除以3,000，等于0.05，就是百分之五。百分之十对百分之五：按规模，A店晃得是B店的两倍。这个数叫什么？"
+  s3_zh_hk: "B店都一樣。150除以3,000，等於0.05，即係百分之五。百分之十對百分之五：按規模，A店搖得係B店嘅兩倍。呢個數叫咩名？"
+- id: name_cv
+  visual: title_card
+  seconds: 28
+  kicker: The Name
+  kicker_en: The Name
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Coefficient of variation
+  title_zh: 变异系数
+  title_zh_hk: 變異系數
+  en: "The coefficient of variation. CV for short. It is the standard deviation divided by the average, usually written as a percent. Shop A's CV is ten percent. Shop B's is five. It measures relative risk: how big the swing is for the size of the shop. So how do we write it as a rule?"
+  zh: "变异系数，简称CV。它就是标准差除以平均数，通常写成百分比。A店的变异系数是百分之十，B店是百分之五。它量的是相对风险：按店的规模来说，晃动有多大。那么，怎么把它写成一条规则？"
+  zh_hk: "變異系數，簡稱CV。佢就係標準差除以平均數，通常寫成百分比。A店嘅變異系數係百分之十，B店係百分之五。佢量嘅係相對風險：按間店嘅規模嚟講，搖動有幾大。咁點樣將佢寫成一條規則？"
+- id: rule
+  visual: definition_card
   seconds: 32
-  kicker: Decision Rule
-  kicker_en: Decision Rule
-  kicker_zh: 商业法则
-  kicker_zh_hk: 商業法則
-  title_en: Standardize before comparing risk
-  title_zh: 比较风险前务必标准化
-  title_zh_hk: 比較風險前務必標準化
-  q1_en: When should managers use CV instead of standard deviation?
-  q1_zh: 什么时候管理者应使用变异系数而非标准差？
-  q1_zh_hk: 幾時管理者應使用變異系數而唔係標準差？
-  q2_en: What did our 5% versus 10% result reveal?
-  q2_zh: 5% 对比 10% 的结果揭示了什么？
-  q2_zh_hk: 5% 對比 10% 嘅結果揭示咗咩？
-  s1_en: Use standard deviation when describing spread within a single operation measured in one unit and one scale.
-  s1_zh: 当你为单一门店、单一具体规格的商品设定本地物理安全库存时，看标准差。
-  s1_zh_hk: 當你為單一門店、單一具體規格嘅商品設定本地物理安全庫存嗰陣，睇標準差。
-  s2_en: Use the coefficient of variation when comparing volatility across different sizes, products, currencies, or business formats.
-  s2_zh: 但只要需要跨不同规模门店对比、评估不同品类产品线，或考核海外跨币种分支机构的营运风险时，务必换用变异系数。
-  s2_zh_hk: 但只要需要跨唔同規模門店對比、評估唔同品類產品線，或考核海外跨幣種分支機構嘅營運風險嗰陣，務必換用變異系數。
-  s3_en: 'The operating rule is simple: compare absolute spread with standard deviation, compare relative spread with CV.'
-  s3_zh: 标准差测量的是绝对的物理偏离距离，而变异系数揭示的才是真正的相对经营风险。
-  s3_zh_hk: 標準差測量嘅係絕對嘅物理偏離距離，而變異系數揭示嘅先至係真正嘅相對經營風險。
+  kicker: The Rule
+  kicker_en: The Rule
+  kicker_zh: 规则
+  kicker_zh_hk: 規則
+  title_en: Short names for the steps
+  title_zh: 给步骤起个短名字
+  title_zh_hk: 幫步驟改個短名
+  formula: 'CV = σ / μ × 100%
+
+    A: 30 / 300 × 100% = 10%'
+  formula_zh: 'CV = σ / μ × 100%
+
+    A店：30 / 300 × 100% = 10%'
+  formula_zh_hk: 'CV = σ / μ × 100%
+
+    A店：30 / 300 × 100% = 10%'
+  s1_en: "Here is the rule with short names. Sigma, the Greek letter σ, is the standard deviation. Mu, μ, is the average. CV is sigma divided by mu, times 100 to read it as a percent."
+  s1_zh: "用短名字写这条规则。希腊字母σ，读作sigma，是标准差。μ，读作mu，是平均数。CV就是σ除以μ，再乘100，读成百分比。"
+  s1_zh_hk: "用短名寫呢條規則。希臘字母σ，讀sigma，係標準差。μ，讀mu，係平均數。CV就係σ除以μ，再乘100，讀成百分比。"
+  s2_en: "Check it with Shop A. 30 over 300, times 100, is ten percent. Notice what happened to the units. Cups on top, cups on the bottom. So where did the cups go?"
+  s2_zh: "用A店验一下。30除以300，乘100，是百分之十。留意单位怎么了。上面是杯，下面也是杯。那么，杯去哪了？"
+  s2_zh_hk: "用A店驗吓。30除以300，乘100，係百分之十。留意吓單位點咗。上面係杯，下面都係杯。咁啲杯去咗邊？"
+- id: units
+  visual: steps
+  layout: rows
+  seconds: 46
+  kicker: The Units
+  kicker_en: The Units
+  kicker_zh: 单位
+  kicker_zh_hk: 單位
+  title_en: The units cancel
+  title_zh: 单位约掉了
+  title_zh_hk: 單位約咗
+  step1_en: 30 cups / 300 cups = 10%
+  step1_zh: 30 杯 / 300 杯 = 10%
+  step1_zh_hk: 30 杯 / 300 杯 = 10%
+  step2_en: $1,200 / $12,000 = 10%
+  step2_zh: $1,200 / $12,000 = 10%
+  step2_zh_hk: $1,200 / $12,000 = 10%
+  step3_en: 'No unit left: just 10%'
+  step3_zh: 没有单位，只剩10%
+  step3_zh_hk: 冇晒單位，淨係10%
+  s1_en: "The cups cancel, the way 3 over 3 is 1. Thirty cups over 300 cups is just ten percent, with no cups attached."
+  s1_zh: "杯约掉了，就像3除以3等于1。30杯除以300杯，就是百分之十，后面不再带杯。"
+  s1_zh_hk: "啲杯約咗，好似3除3等於1噉。30杯除300杯，就係百分之十，後面唔再帶杯。"
+  s2_en: "Suppose each cup sells for 40 dollars, and we measure Shop A in dollars instead. The swing becomes 1,200 dollars and the average 12,000. Divide, and it is still ten percent. The unit changed. The CV did not."
+  s2_zh: "假设一杯卖40元，我们改用钱来算A店。晃动变成1,200元，平均数变成12,000元。一除，还是百分之十。单位变了，CV没变。"
+  s2_zh_hk: "假設一杯賣40蚊，我哋改用錢嚟計A店。搖動變成1,200蚊，平均數變成12,000蚊。一除，仍然係百分之十。單位變咗，CV冇變。"
+  s3_en: "A number with no unit left is called unitless. That is why the CV can compare cups with dollars, a coffee line with a cake line, or a small shop with a big one. So can we use it for everything?"
+  s3_zh: "一个不再带单位的数，叫作无量纲。所以CV可以拿杯数跟金额比、咖啡跟蛋糕比，或者小店跟大店比。那它是不是什么都能用？"
+  s3_zh_hk: "一個唔再帶單位嘅數，叫做無量綱。所以CV可以將杯數同金額比、咖啡同蛋糕比，或者細店同大店比。咁係咪乜都用得？"
+- id: limit
+  visual: two_column
+  seconds: 64
+  kicker: The Limit
+  kicker_en: The Limit
+  kicker_zh: 限度
+  kicker_zh_hk: 限度
+  title_en: Where the CV stops
+  title_zh: CV到哪里为止
+  title_zh_hk: CV去到邊度為止
+  left_en: Fair across sizes and units
+  left_zh: 跨规模、跨单位都公平
+  left_zh_hk: 跨規模、跨單位都公平
+  right_en: 'Tiny average: CV blows up'
+  right_zh: 平均数很小：CV会暴涨
+  right_zh_hk: 平均數好細：CV會爆升
+  s1_en: "Not everything. First, what it is good for. It compares swings fairly across sizes and units, which raw standard deviations cannot do."
+  s1_zh: "不是。先说它好在哪。它能跨规模、跨单位公平地比较晃动，这是原始标准差做不到的。"
+  s1_zh_hk: "唔係。先講佢好喺邊。佢可以跨規模、跨單位公平噉比較搖動，呢樣原始標準差做唔到。"
+  s2_en: "Now the limit. The CV divides by the average. When the average is close to zero, a small swing becomes a huge percent. And for something that can go below zero, like daily profit, the average can be near zero or even negative, so the CV can mislead. Use it for positive measures, such as cups sold or sales in dollars."
+  s2_zh: "再说限度。CV是除以平均数的。平均数接近零的时候，一点点晃动就会变成一个很大的百分比。像每天的利润这种可以低于零的数，平均数可能接近零，甚至是负数，CV就会误导人。它适合用在一定是正数的量上，比如卖出的杯数、营业额。"
+  s2_zh_hk: "再講限度。CV係除以平均數嘅。平均數接近零嗰陣，少少搖動都會變成一個好大嘅百分比。好似每日利潤呢啲可以低過零嘅數，平均數可能接近零，甚至係負數，CV就會誤導人。佢適合用喺一定係正數嘅量，例如賣出嘅杯數、營業額。"
+  s3_en: "And a CV is a reason to look, not an order. Ten percent tells you A is harder to plan for its size. It does not tell you what running out costs, how long the milk keeps, or what a wasted litre costs. So which shop is really harder to plan?"
+  s3_zh: "而且CV是一个去检查的理由，不是指令。百分之十告诉你，按规模，A店比较难计划。它不会告诉你断货的成本、牛奶能放多久，或者倒掉一升牛奶要花多少钱。那么，究竟哪一家店比较难计划？"
+  s3_zh_hk: "而且CV係一個去檢查嘅理由，唔係指令。百分之十話畀你知，按規模，A店比較難計劃。佢唔會話你知斷貨嘅成本、牛奶放得幾耐，或者倒走一公升牛奶要幾多錢。咁，究竟邊間店比較難計劃？"
+- id: answer
+  visual: takeaway
+  seconds: 58
+  kicker: The Answer
+  kicker_en: The Answer
+  kicker_zh: 回答问题
+  kicker_zh_hk: 回答問題
+  title_en: Compare swings for the size
+  title_zh: 按规模比较晃动
+  title_zh_hk: 按規模比較搖動
+  q1_en: Which shop is harder to plan for its size?
+  q1_zh: 按规模，哪家店比较难计划？
+  q1_zh_hk: 按規模，邊間店比較難計劃？
+  q2_en: When do we use the SD, and when the CV?
+  q2_zh: 什么时候看标准差，什么时候看CV？
+  q2_zh_hk: 幾時睇標準差，幾時睇CV？
+  s1_en: "Back to the question. Shop B's standard deviation, 150 cups, is five times Shop A's 30. But B sells ten times as much. For its size, A swings ten percent and B five. A is the harder shop to plan, so for its size, A's cushion matters most."
+  s1_zh: "回到问题。B店的标准差150杯，是A店30杯的五倍。但B店的销量是A店的十倍。按规模，A店晃百分之十，B店晃百分之五。比较难计划的是A店，所以按它的规模，A店的缓冲最要紧。"
+  s1_zh_hk: "返到問題。B店嘅標準差150杯，係A店30杯嘅五倍。但B店嘅銷量係A店嘅十倍。按規模，A店搖百分之十，B店搖百分之五。比較難計劃嘅係A店，所以按佢嘅規模，A店嘅緩衝最緊要。"
+  s2_en: "Use the standard deviation inside one shop, in one unit: how many spare cups should this shop keep? Use the coefficient of variation when you compare across sizes, products or units: which shop swings more for its size?"
+  s2_zh: "在同一家店、同一种单位里，用标准差：这家店要多留多少杯？跨规模、跨产品、跨单位比较的时候，用变异系数：按规模，哪家店晃得多？"
+  s2_zh_hk: "喺同一間店、同一種單位入面，用標準差：呢間店要多留幾多杯？跨規模、跨產品、跨單位比較嗰陣，用變異系數：按規模，邊間店搖得多？"
+  s3_en: "These are numbers we supposed, not records. Before you change an order, check what running out costs and what waste costs. The CV tells you where to look first. It does not set the order by itself."
+  s3_zh: "这些是我们假设的数，不是真实记录。改订单之前，还要看断货的成本和浪费的成本。CV告诉你先看哪里，它不会自己决定订单。"
+  s3_zh_hk: "呢啲係我哋假設嘅數，唔係真實紀錄。改訂單之前，仲要睇斷貨嘅成本同浪費嘅成本。CV話畀你知先睇邊度，佢唔會自己決定訂單。"

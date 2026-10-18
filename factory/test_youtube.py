@@ -103,16 +103,26 @@ class YoutubeTitles(unittest.TestCase):
         )
 
     def test_description_length(self) -> None:
-        ok = {"id": "YT", "title_en": "Mean", "title_zh": "平均数", "youtube": {"description_en": "a" * DESCRIPTION_MAX}}
+        # Strictly less than 2500: 2499 is valid, 2500 is an error.
+        self.assertEqual(DESCRIPTION_MAX, 2500)
+        ok = {
+            "id": "YT",
+            "title_en": "Mean",
+            "title_zh": "平均数",
+            "youtube": {"description_en": "a" * (DESCRIPTION_MAX - 1)},
+        }
+        self.assertEqual(len(ok["youtube"]["description_en"]), 2499)
         self.assertEqual(youtube_errors(ok), [])
         over = {
             "id": "YT",
             "title_en": "Mean",
             "title_zh": "平均数",
-            "youtube": {"description_zh": "字" * (DESCRIPTION_MAX + 1)},
+            "youtube": {"description_zh": "字" * DESCRIPTION_MAX},
         }
+        self.assertEqual(len(over["youtube"]["description_zh"]), 2500)
         errors = youtube_errors(over)
         self.assertTrue(any("description_zh" in e and str(DESCRIPTION_MAX) in e for e in errors))
+        self.assertTrue(any("strictly less than 2500" in e for e in errors))
         self.assertTrue(any("youtube.description_zh" in e for e in validate(over, glyphs=False)))
 
     def test_mono_title_over_guide_is_an_error(self) -> None:

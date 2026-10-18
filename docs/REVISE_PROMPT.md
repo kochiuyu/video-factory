@@ -108,7 +108,7 @@ Stage counts:
 - Mention the factory, captions, gold bars, or PNG names in the speech.
 - Mix 简体 characters into `zh_hk`, or Cantonese particles into `zh`.
 - Append `(English)`, `(普通话)`, `(粵語)`, or a speech/slides tag to `title_*`. Those tags are added when the paste file is written.
-- Invent a `youtube:` description, or copy `objective_*` into one. Keep a `youtube:` block that is already there, unless the user asks to change it. Descriptions must stay within 5000 characters.
+- Invent a `youtube:` description, or copy `objective_*` into one. Keep a `youtube:` block that is already there, unless the user asks to change it. Descriptions must be strictly less than 2500 characters.
 
 Paste the YAML under this prompt.
 

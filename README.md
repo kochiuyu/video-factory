@@ -159,7 +159,7 @@ Do not invent topics, story numbers, or new quiz answers. If a suppose file must
 
 ## YouTube paste file
 
-A build writes one text file beside each requested cell MP4: `out/lessons/<ID>/cells/<ID>_<cell>.youtube.txt`. Line 1 is the short lesson title plus a language tag (`(English)`, `(普通话)`, `(粵語)`, or a speech/slides tag on a mixed cell). The optional `youtube:` descriptions follow. Nothing is uploaded. See `docs/SCHEMA.md`.
+A build writes one text file beside each requested cell MP4: `out/lessons/<ID>/cells/<ID>_<cell>.youtube.txt`. Line 1 is the short lesson title plus a language tag (`(English)`, `(普通话)`, `(粵語)`, or a speech/slides tag on a mixed cell). The optional `youtube:` descriptions follow. Each description must be strictly less than 2500 characters. Nothing is uploaded. See `docs/SCHEMA.md`.
 
 ## Out of scope
 

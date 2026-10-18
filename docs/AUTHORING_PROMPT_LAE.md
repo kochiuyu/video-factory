@@ -237,9 +237,11 @@ Bookends: exactly two beats, about 14 seconds each.
 - `*-IN` beat 1: `module_open` with `item1_*` … `item2_*` or `item3_*` matching the teaching shorts in that module. Beat 2: `title_card` stating what “done” will mean.
 - `*-OUT` both beats: `module_close` with `claim_*` and `next_*`. `next_*` names the next module’s question, except `LAE-M06-OUT`, which closes the course.
 
-Allowed visuals only: `title_card`, `definition_card`, `two_column`, `formula`, `takeaway`, `example`, `three_column`, `big_number`, `steps`, `module_open`, `module_close`, `payoff_matrix`.
+Allowed visuals only: `title_card`, `definition_card`, `two_column`, `formula`, `takeaway`, `example`, `three_column`, `big_number`, `steps`, `module_open`, `module_close`, `payoff_matrix`, `rank_line`, `freq_bars`, `balance_line`, `box_line`, `dev_bars`, `ratio_bars, quad_scatter (optional `mode: ruler` with `r` for the −1…+1 correlation scale)`.
 
 Do not use `payoff_matrix` in this course.
+
+`rank_line`, `freq_bars`, `balance_line`, `box_line`, `dev_bars`, and `ratio_bars` are available when a short needs an ordered line, category counts, a mean seesaw, a box from Q1 to Q3, signed distances from a mean (and their squares), or a swing compared with each shop's own size (coefficient of variation) (same fields as `docs/SCHEMA.md` / `docs/AUTHORING_PROMPT.md`). Prefer `freq_bars` when the lesson is which category wins by count; prefer `rank_line` for a median-style ordered line of 3–6 values, or a range (ends + span bracket); prefer `balance_line` when left pull equals right pull around a mean; prefer `box_line` for the width of the middle (IQR); prefer `dev_bars` for how far each value sits from the mean. Prefer `steps` for a spoken arithmetic list, not a chart. LAE shorts rarely need these; keep the corridor and one-claim rule first.
 
 ---
 
@@ -247,7 +249,14 @@ Do not use `payoff_matrix` in this course.
 
 - One claim per beat.
 - Staged visuals use only `s1_*`, `s2_*`, … Never also keep a whole-card `en` / `zh` / `zh_hk` on a staged beat.
-- Stage counts: `definition_card` and `formula` → 2; `two_column`, `example`, `takeaway`, `three_column`, `steps` → 3; `title_card`, `big_number`, `module_open`, `module_close` → 1 (`en` / `zh` / `zh_hk` only).
+- Stage counts: `definition_card` and `formula` → 2; `two_column`, `example`, `takeaway`, `three_column`, `steps`, `rank_line`, `freq_bars`, `balance_line`, `box_line`, `dev_bars`, `ratio_bars` → 3; `title_card`, `big_number`, `module_open`, `module_close` → 1 (`en` / `zh` / `zh_hk` only).
+- `rank_line` stages: s1 written values → s2 ordered line → s3 middle (or two middles, or the ends) + span + footer. Fields: `values` / `values_*` or `v1_*`…`v6_*`, `order: sorted` (default) or `as_given`, `mark: middle` (default), `ends` (first and last), `none`, or 1-based places such as `2;4`, optional chip labels via `labels` / `labels_*` or `l1_*`…`l6_*` (Shop A; they travel with their value when sorted), optional `span: ends` (or `2-4`) with `span_*` text for a bracket under the line, optional `break: last` (or a place such as `5`) for an axis break before one far value, optional `footer_*`.
+- `freq_bars` stages: s1 category labels → s2 bars and counts → s3 gold tallest (or none) + footer. Fields: `counts` (required), labels via `labels` / `labels_*` or `l1_*`…`l6_*`, `mark: tallest` (default; golds every bar tied for the max), `mark: none`, `mark: all`, or `mark: 2;3` (1-based), optional `footer_*`.
+- `balance_line` stages: s1 values on the line → s2 mean fulcrum → s3 left=right pulls + footer. Fields: `values` / `values_*` or `v1_*`…`v6_*`, `mean` (required; aliases `center`, `fulcrum`), optional labels via `labels` / `labels_*` or `l1_*`…`l6_*`, optional `left_*` / `right_*`, optional `footer_*`.
+- `box_line` stages: s1 values on a scale → s2 Q1 and Q3 → s3 box + whiskers + span + footer. Fields: `values` (3–8 numbers), optional `q1` / `q3` (default nearest rank: place = 0.25 × n or 0.75 × n, rounded up), optional `span_*` (default `Q3 − Q1 = …`; write it as a math line, `390 − 310 = 80 cups` / `390 − 310 = 80 杯`), optional `break: last` for one far value above Q3, optional `median`, optional `fences: on` or `fences: 190;510` (outlier screen: s1 box → s2 fences → s3 values outside gold), optional `tag_*`, optional `footer_*`.
+- `dev_bars` stages: power 1 — s1 values as dots against the mean line → s2 signed bars with distances → s3 far bars + footer; power 2–4 — s1 products row under muted bars → s2 the powered bars with values → s3 far bars + footer (optional `signed_first: true`: s1 = signed bars). Fields: `values` (3–6 numbers), `mean`, optional `labels_*`, optional `power` (1–4), optional `mark` (`far`|`none`|`all`|places), optional `values_b` + `name_a_*`/`name_b_*`, optional `signed_first`, optional `standardize: true` (power 2–4: powered distances ÷ σ to that power, so kurtosis bars read 6.25 not 12,960,000), optional `tag_*`, optional `footer_*`.
+- `ratio_bars` stages: s1 SDs on one shared scale → s2 each bar its own average with the SD slice → s3 CV % in each bar, `mark` gold + footer. Fields: `means` and `sds` (2–4 numbers each), optional `labels_*`, optional `unit_*`, optional `mark` (`highest`|`lowest`|`none`|`all`|places), optional `tag_*`/`tag1_*`…`tag3_*`, optional `footer_*`.
+- Numbers in Chinese lines are drawn to match the Chinese height and baseline; do not reword a line only to avoid a digit.
 - `takeaway` requires `q1_en` `q1_zh` `q1_zh_hk` and `q2_en` `q2_zh` `q2_zh_hk`.
 - Every on-screen field that the visual uses must exist in EN / 简 / 繁.
 - About 70 English words or 140 CJK characters fit a 20-second card. Longer speech is allowed; raise `seconds`. Do not fail a draft on length.
@@ -304,6 +313,15 @@ Do not ship if:
 ```
 
 ---
+
+
+## Shared factory rules (aligned with STAT authoring)
+
+- Speech follows the reveal: `s1` matches the first paint, `s2` the second, `s3` the third. Do not narrate a gold mark before it appears.
+- No handoff from another short in the hook; no "Next we…" teaser in the takeaway.
+- Neutral labels only when the story is generic (Vehicle A / Pad B). Do not invent real district names for filler examples.
+- Quiz distractors are realistic mistakes, not jokes.
+- Short equations: prefer `steps` with `layout: rows`. New visuals (`rank_line`, `freq_bars`, `balance_line`, `box_line`, `dev_bars`, `ratio_bars`, `quad_scatter`) follow the same field/stage contracts as `docs/SCHEMA.md` and `docs/AUTHORING_PROMPT.md`.
 
 ## Do not
 

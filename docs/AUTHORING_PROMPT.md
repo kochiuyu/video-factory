@@ -70,24 +70,35 @@ Stages by visual:
 * definition_card, formula → 2
 * two_column, example, takeaway, three_column, steps → 3
 * payoff_matrix → up to 5
-* table_grid, series, rank_line, schematic_chart, dag, pair, pair_chart, pair_box, pair_slope, redraw, turns, shrink, mix, coin → 3
+* table_grid, series, rank_line, freq_bars, balance_line, box_line, dev_bars, ratio_bars, quad_scatter (optional `mode: ruler` with `r` for the −1…+1 correlation scale), schematic_chart, dag, pair, pair_chart, pair_box, pair_slope, redraw, turns, shrink, mix, coin → 3
+* `rank_line` stages: s1 written values → s2 ordered line → s3 middle (or two middles) + footer; for a range, s3 golds the two ends (`mark: ends`) and draws the `span` bracket with its `span_*` text
+* `freq_bars` stages: s1 category labels on the axis → s2 bars and counts → s3 gold tallest (or none) + footer
+* `balance_line` stages: s1 values on the line → s2 mean fulcrum → s3 left=right pulls + footer
+* `box_line` stages: s1 values as dots on a scale → s2 Q1 and Q3 marked gold → s3 box from Q1 to Q3, whiskers to the ends, bracket with `span_*`, footer. With `fences`: s1 box + whiskers + Q labels → s2 dashed fences + bracket Q3 → upper fence (`1.5 × 80 = 120 cups`) → s3 values outside a fence gold + footer
+* `dev_bars` stages: power 1 — s1 days as dots above or below the mean line → s2 signed bars with each distance → s3 far bars gold + footer; power 2 (3, 4) — s1 the products row (`−65 × −65`) under muted, unlabelled bars that already point up → s2 the bars in full with each square → s3 far bars gold + footer (the previous beat shows the signed bars; `signed_first: true` restores s1 = signed bars)
+* `ratio_bars` stages: s1 each standard deviation as a bar on one shared scale → s2 each bar becomes its own average with the SD as the slice on top → s3 the share (CV %) written in each bar, the `mark` bar gold + footer
 
 Explain first. Do not cut a beginner explanation to hit a word count. A 20s card is comfortable near 70 English words or 140 简/繁 characters; if the line must be longer to provide clear exposition, raise `seconds` on that beat (up to 35–45s per staged card). The factory does not fail the build on length.
 
 ## Statistics voice & shared ledger
 
-A short may use its own setting. Do not require the shared Monday file, and do not open with "last time we looked at Wan Chai". Prefer generic shops, Shop A and Shop B, and days rather than place names. A place name should work for an international student. On a bilingual card the letter is the same object: Shop A, A店. Do not switch to 甲店. The old coffee ledger is optional, not required:
-* **Shops, if reused**: Wan Chai, Mong Kok, and Airport (plus Central and Tsim Sha Tsui when a larger cohort is needed).
-* **Rents**: 9,400 and 18,600 dollars.
+A short uses its own setting. Do not require the shared Monday file, and do not open with "last time we looked at Shop A". Neutral examples only. Never use Mong Kok, Wan Chai, Airport, or any other real district, landmark, or branch name. Use Shop A, Shop B, Shop C and days (Day 1, Monday). On a bilingual card the letter stays A, B, C (A店). Do not switch to 甲店. A short keeps its own setting; do not depend on a shared file from another short. The old coffee ledger below is optional, not required, and its shops are generic letters:
+
+* In M01 descriptive shorts, variance, standard deviation, covariance, and the correlation inputs that reuse them divide by **n** (population-style description of the file). Do not switch to n−1 / s² inside these shorts; that belongs to estimation.
+* Quiz distractors are plausible misconceptions, not jokes, prohibitions, fines, or magic. Keep the correct option readable (about 90 Latin / 40 CJK characters when you can).
+* Short equations belong on `steps` with `layout: rows` (or a footer/`span_*` math line). The factory keeps a short one-`=` line from wrapping for up to a 30% shrink — still write one equation per step.
+* **Shops, if reused**: Shop A, Shop B, and Shop E (a 24-hour site), plus Shop C and Shop D when a larger cohort is needed. No real place names.
+* **Association file (T13–T14 teaching pair, optional):** five shops — rent 10,000; 12,000; 13,000; 16,000; 19,000 dollars with cups 300; 330; 360; 400; 460. Means 14,000 and 370. Covariance (÷ n) = 176,000 dollar-cups. Correlation r ≈ +1.00. Do not revive the old 9,400 / 18,600 rents or a claimed r = +0.92 without a shown file.
+* **Rents (legacy two-shop cards only):** prefer the five-shop file above for new association shorts.
 * **Cup volumes (Daily)**: 
   * Street stores: 280, 310, 360, 390, and 420 cups.
-  * Outlier: 4,200 cups (the 24-hour Airport terminal branch, an extreme outlier pulling totals and boundaries).
+  * Outlier: 4,200 cups (Shop E, a 24-hour site, an extreme outlier pulling totals and boundaries).
 * **Teaching baselines**:
-  * **Teaching mean 365**: Two arrived street shops (Wan Chai 420 + Mong Kok 310 = 730 / 2).
-  * **Three-shop outlier jump**: Mean jumps to 1,643 cups when Airport (4,200) joins Wan Chai and Mong Kok (4,930 / 3).
-  * **Teaching median 420**: Rank order 310, 420, 4,200 picks Wan Chai at 420 as the robust middle.
-  * **Teaching range 110 vs 3,890**: Street span is 420 - 310 = 110; network span jumps to 4,200 - 310 = 3,890 with Airport.
-  * **The extra 30**: Wan Chai's 50 against Mong Kok's 20, staying a teaching card.
+  * **Teaching mean 365**: Two street shops (Shop A 420 + Shop B 310 = 730 / 2).
+  * **Three-shop outlier jump**: Mean jumps to 1,643 cups when Shop E (4,200) joins Shop A and Shop B (4,930 / 3).
+  * **Teaching median 420**: Rank order 310, 420, 4,200 picks Shop A at 420 as the robust middle.
+  * **Teaching range 110 vs 3,890**: Street span is 420 - 310 = 110; network span jumps to 4,200 - 310 = 3,890 with Shop E.
+  * **The extra 30**: Shop A's 50 against Shop B's 20, staying a teaching card.
 * **Product lines & discrete counts (Mode)**:
   * Cup sizes: Small (8 oz), Medium (12 oz), Large (16 oz).
   * Typical order tallies: Small = 40, Medium = 280 (the mode), Large = 100.
@@ -108,6 +119,8 @@ For foundational statistics lessons, build intuition before formal mechanics:
 
 ## Multiple-Choice Quizzes
 
+Wrong options must be realistic beginner mistakes (wrong formula, wrong interpretation, causation myth). Do not use joke bans, fines, or magical effects. Prefer short stems so bilingual learners can parse all four choices.
+
 Unless specifically authoring open-response items, provide two multiple-choice questions (`type: multiple_choice`):
 * **Q1 (Comprehension)**: Tests understanding of the underlying concept, calculation, or geometric property.
 * **Q2 (Application / Transfer)**: Tests whether the student can apply the concept to a real business management decision.
@@ -122,8 +135,15 @@ Pick a card that already exists:
 * `pair` for two sheets. `pair_box` for two shops on one cup scale. `pair_slope` for two Mondays and two lines. `pair_chart` for two histograms.
 * `dag` for arrows. Hold rain. Leave the queue.
 * `coin` for chosen against drawn. `redraw` for a handful. `turns` for a held Monday. `shrink` for a copied step pulled toward zero. `mix` for one gap and two unnamed parts.
-* `steps` with `step4_*` / `step5_*` when the list is longer than three. Optional `ex1_*`…`ex5_*` is the coffee example under that step.
-* `rank_line` for an ordered value line of 3–6 chips. Stage 1 is the written order, stage 2 sorts (or keeps `order: as_given`), stage 3 golds the middle cell, or the two middle cells when the count is even. Optional `footer_*`.
+* `steps` with `step4_*` / `step5_*` when the list is longer than three. Optional `ex1_*`…`ex5_*` is the coffee example under that step. A 4- or 5-row stack needs one speech stage per row (`s1`…`s4` or `s1`…`s5`); `validate.py` fails a mismatch. Keep stack rows within 30 Latin / 14 CJK characters.
+* `rank_line` for an ordered value line of 3–6 chips (median, ordered Likert, range). Stage 1 is the written order, stage 2 sorts (or keeps `order: as_given`), stage 3 golds the middle cell, or the two middle cells when the count is even. Fields: `values` / `values_*` or `v1_*`…`v6_*`, `order: sorted` (default) or `as_given`, `mark: middle` (default), `ends` (first and last), `none`, or 1-based places such as `2;4`, optional chip labels via `labels` / `labels_*` or `l1_*`…`l6_*` (Shop A; they travel with their value when sorted), optional `span: ends` (or `2-4`) with `span_*` text for a bracket under the line, optional `break: last` (or a place such as `5`) for an axis break before one far value, optional `footer_*`. `mark: ends` + `span: ends` is the range picture (max − min under a bracket); `break: last` shows one far value beyond an axis break. Speech only in `s1_*` / `s2_*` / `s3_*`.
+* `freq_bars` for category counts (mode, frequency, lid sizes, drink labels, grouped modal class). Two to six bars. Fields: `counts` (required), labels via `labels` / `labels_*` or `l1_*`…`l6_*`, `mark: tallest` (default; golds every bar tied for the max), `mark: none`, `mark: all`, or `mark: 2;3` (1-based indices), optional `footer_*`. Stage 1 shows labels, stage 2 grows bars and writes counts, stage 3 golds the tallest (or none) and shows the footer. Speech only in `s1_*` / `s2_*` / `s3_*`. Prefer `freq_bars` when the lesson is “which category wins by count.” Prefer `table_grid` for a Monday sheet of cells. Prefer `steps` for a spoken arithmetic list, not a bar chart.
+* `balance_line` for the mean as a seesaw balance point (3–6 numeric values). Fields: `values` / `values_*` or `v1_*`…`v6_*`, `mean` (required; aliases `center`, `fulcrum`), optional shop labels via `labels` / `labels_*` or `l1_*`…`l6_*`, optional `left_*` / `right_*` for the stage-3 pull captions (default auto “N below” / “N above”), optional `footer_*`. Stage 1 places values on the line, stage 2 marks the mean fulcrum, stage 3 shows signed distances and the balancing left/right pulls plus footer. Speech only in `s1_*` / `s2_*` / `s3_*`. Prefer `balance_line` when the lesson is “left pull equals right pull.” Prefer `rank_line` for a median order. Prefer `steps` for a spoken arithmetic list of deviations without a line.
+* `box_line` for the IQR or a box-plot picture (3–8 numeric values on one scale). Fields: `values` (required), optional `q1` / `q3` (default nearest rank: place = 0.25 × n or 0.75 × n, rounded up), optional `span_*` (default `Q3 − Q1 = …`; write it as a math line, `390 − 310 = 80 cups` / `390 − 310 = 80 杯`), optional `break: last` for one far value above Q3, optional `median`, optional `fences: on` (Q1 − 1.5 × IQR, Q3 + 1.5 × IQR) or `fences: 190;510` for an outlier screen, optional `tag_*`, optional `footer_*`. Q labels are language-neutral (`Q1 = 310`); no chip labels. Speech only in `s1_*` / `s2_*` / `s3_*`. Find each quartile first on a `rank_line` (`mark: '2'`, footer `0.25 × 5 = 1.25 → 2`), then draw the box. With `break: last`, one far value stretches the whiskers while the box barely moves. Say "about the middle half": on a few values the box holds 3 of 5.
+* `dev_bars` for deviations from the mean, the squares before the variance, or two shops' spread side by side (3–6 numeric values). Fields: `values` and `mean` (required), optional bar labels `labels_*` (`Day 1;Day 2;…`), optional `power: 1|2|3|4` (default 1), optional `mark: far|none|all|1;5` (default far = the largest distance), optional `values_b` + `name_a_*` / `name_b_*` for a second shop on the same scale, optional `tag_*`, optional `footer_*` (a sum such as `Sum of squares = 10,900` / `平方之和 = 10,900`). Bar numbers are computed; do not type them. Speech only in `s1_*` / `s2_*` / `s3_*`. Power 1 walks values → signed distances → far days; power 2 walks times itself (products row) → each square → sum. Even powers leave no room below the mean line, so the squares fill the card; optional `signed_first: true` opens on the signed bars instead (and keeps room below the line). Optional `standardize: true` (power 2–4) divides each powered distance by σ to that power (σ from that shop's days, divide by n), so a kurtosis card reads `6.25` / `2.56` / `0.81` instead of `12,960,000`; the row average is the kurtosis (raw; Normal = 3). Frame kurtosis as heavy tails, not peakedness. Prefer it to a 5-row `steps` stack of distances or squares.
+* `ratio_bars` for the coefficient of variation: 2–4 shops (or product lines) with `means` and `sds` (required, same unit), optional `labels_*`, optional `unit_*`, optional `mark: highest|lowest|none|all|places` (default highest CV), optional `tag_*` / `tag1_*`…`tag3_*`, optional `footer_*`. The percents are computed. Walk raw SDs → each against its own average → shares. Prefer it to a text `example` card that only states two CVs.
+* `steps` with `layout: rows` draws 1–3 short lines as full-width rows (one per stage) instead of three narrow columns. Use it for equations, so each stays on one line at a large size.
+* Numbers inside Chinese titles, spans and footers are fine; the factory draws them to match the Chinese height and baseline. Do not reword a title only to avoid a digit.
 
 ## YAML Formatting Guardrails
 
@@ -146,14 +166,19 @@ The lesson `title_en`, `title_zh`, and `title_zh_hk` are the YouTube title and t
 * Define every term before you use it. Say the idea, then the name. Average is the total divided by the number of days. Square means multiply a number by itself. Variance is the average of the squared distances. The square root undoes a square.
 * If a formula uses a symbol, the speech on that beat names it. Mu is the average. Each x is one day. n is the number of days. Sigma squared is the variance.
 * Do not mention a correction or a measure that belongs to another short. Dividing by n−1 belongs to estimation. Range and IQR belong to their own shorts.
-* Each short may have its own setting. Do not force Wan Chai or the shared Monday file. A place should work for an international student.
+* Each short has its own setting. Never use Mong Kok, Wan Chai, Airport, or any real place name: Shop A, Shop B, Shop C and days only. Do not force the shared Monday file.
 * Show the arithmetic. A square is 65 times 65. A total is the five days added up. Do not leave a number unexplained.
 
 ## Other rules
 
 * One learning objective. One worked example. Quiz items in EN / 简 / 繁.
 * One claim per beat. `duration_target_s` must equal the sum of `seconds`. A short module is often 60–240 seconds. A standalone teaching short may run longer when the beginner explanation needs it.
-* Use only these visuals: title_card, definition_card, two_column, formula, takeaway, example, three_column, big_number, steps, module_open, module_close, payoff_matrix, table_grid, series, rank_line, schematic_chart, dag, pair, pair_chart, pair_box, pair_slope, redraw, turns, shrink, mix, coin. Use `series` for two rows across up to six days. Use `rank_line` for one ordered line of 3–6 values.
+* On-screen text stays inside the bilingual budgets in SCHEMA "Bilingual on-screen budgets" (`validate.py` warns past them). Math lines differ across languages only by a unit word, so a bilingual card prints the equation once.
+* Use only these visuals: title_card, definition_card, two_column, formula, takeaway, example, three_column, big_number, steps, module_open, module_close, payoff_matrix, table_grid, series, rank_line, freq_bars, balance_line, box_line, dev_bars, ratio_bars, schematic_chart, dag, pair, pair_chart, pair_box, pair_slope, redraw, turns, shrink, mix, coin. Use `series` for two rows across up to six days. Use `rank_line` for one ordered line of 3–6 values (median middle, or range ends + span bracket). Use `freq_bars` for two to six category counts (mode / frequency). Use `balance_line` for the mean as a seesaw balance point. Use `box_line` for one box from Q1 to Q3 on a number line (IQR). Use `dev_bars` for signed distances from the mean and their squares (power 2), cubes or fourth powers. Use `ratio_bars` for the coefficient of variation (each SD as a slice of its own average).
+* Match speech to the visual. A series that names each day uses `reveal: cells`. A walk of distances from the mean uses `dev_bars` (values as dots → signed bars → far bars + footer); squares use `dev_bars` with `power: 2` (products row → squares → sum footer). A short spoken arithmetic list uses `steps`. A median walk uses `rank_line` (written → ordered → middle). A range walk uses `rank_line` with `mark: ends` and `span: ends` (written → ordered → gold ends + bracket max − min). A mode or frequency walk uses `freq_bars` (labels → bars+counts → tallest/none + footer). A mean balance walk uses `balance_line` (values → mean fulcrum → left=right pulls + footer). An IQR walk uses `box_line` (values → Q1 and Q3 → box + whiskers + span). An outlier screen uses `box_line` with `fences` (box → fences → values outside gold); put the fence arithmetic on a `steps` card with `layout: rows` first. A CV walk uses `ratio_bars` (raw SDs → each against its own average → shares + footer). Do not talk through an empty card.
+* Name cards: after the number is known, a `title_card` fills the screen with the main word (Median, Mode, Variance, …). Unstaged `title_card` speech uses `en` / `zh` / `zh_hk` only — never `s1_*` on a name card.
+* Quote any speech or on-screen line that contains a colon. An unquoted `shops: add` is a YAML mapping and will fail to parse.
+* Complete the rule when the short needs it. Median walks an odd line and an even line. Mode walks a winner, a tie, and no mode, then a grouped modal class. Do not invent numbers beyond the lesson brief.
 * Do not invent a visual. Field names are in `docs/SCHEMA.md`. A bilingual on-screen line is `field_en` / `field_zh` / `field_zh_hk`. Numbers in a Chinese line are drawn fullwidth, so write ordinary digits.
 * `takeaway` must include `q1_*` and `q2_*` in English, 简, and 繁.
 * Every spoken and on-screen field needs `*_en`, `*_zh`, `*_zh_hk`.

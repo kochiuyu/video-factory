@@ -1,0 +1,78 @@
+﻿id: FREQ-BARS-FIXTURE
+title_en: Freq bars fixture
+title_zh: 频数条形图样例
+title_zh_hk: 頻數條形圖樣例
+duration_target_s: 36
+beats:
+- id: winner
+  visual: freq_bars
+  seconds: 12
+  kicker_en: MODE
+  kicker_zh: 众数
+  kicker_zh_hk: 眾數
+  title_en: One tallest bar
+  title_zh: 一根最高的柱
+  title_zh_hk: 一根最高嘅柱
+  labels_en: Small;Medium;Large
+  labels_zh: 小杯;中杯;大杯
+  labels_zh_hk: 細杯;中杯;大杯
+  counts: 40;280;100
+  mark: tallest
+  footer_en: Mode = Medium
+  footer_zh: 众数 = 中杯
+  footer_zh_hk: 眾數 = 中杯
+  s1_en: Three sizes on the axis.
+  s1_zh: 轴上三种规格。
+  s1_zh_hk: 軸上三種規格。
+  s2_en: The bars show the counts.
+  s2_zh: 柱高就是次数。
+  s2_zh_hk: 柱高就係次數。
+  s3_en: The tallest bar is the mode.
+  s3_zh: 最高的柱就是众数。
+  s3_zh_hk: 最高嘅柱就係眾數。
+- id: tie
+  visual: freq_bars
+  seconds: 12
+  title_en: Two bars tie
+  title_zh: 两根柱并列
+  title_zh_hk: 兩根柱並列
+  labels_en: Small;Medium;Large
+  labels_zh: 小杯;中杯;大杯
+  labels_zh_hk: 細杯;中杯;大杯
+  counts: 40;150;150
+  mark: tallest
+  footer_en: Medium and Large
+  footer_zh: 中杯和大杯
+  footer_zh_hk: 中杯同大杯
+  s1_en: Three sizes again.
+  s1_zh: 还是三种规格。
+  s1_zh_hk: 仲係三種規格。
+  s2_en: Medium and Large share 150.
+  s2_zh: 中杯和大杯都是150。
+  s2_zh_hk: 中杯同大杯都係150。
+  s3_en: Both top bars are modes.
+  s3_zh: 两根最高的柱都是众数。
+  s3_zh_hk: 兩根最高嘅柱都係眾數。
+- id: none
+  visual: freq_bars
+  seconds: 12
+  title_en: No tallest bar
+  title_zh: 没有最高的柱
+  title_zh_hk: 冇最高嘅柱
+  labels_en: Small;Medium;Large
+  labels_zh: 小杯;中杯;大杯
+  labels_zh_hk: 細杯;中杯;大杯
+  counts: 1;1;1
+  mark: none
+  footer_en: No mode
+  footer_zh: 没有众数
+  footer_zh_hk: 冇眾數
+  s1_en: One order each.
+  s1_zh: 每种一笔。
+  s1_zh_hk: 每種一筆。
+  s2_en: The bars are the same height.
+  s2_zh: 柱一样高。
+  s2_zh_hk: 柱一樣高。
+  s3_en: Nothing repeats. No mode.
+  s3_zh: 没有重复。没有众数。
+  s3_zh_hk: 冇重複。冇眾數。

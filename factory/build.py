@@ -375,11 +375,16 @@ def collect_audio(lesson: dict, audio_root: Path, lang: str) -> list[Path] | Non
 
 
 def write_cell_covers(lesson_path: Path, lesson: dict, cells: dict, cell_slides: dict, out_dir: Path) -> None:
-    """One 1920x1080 cover per cell: topic, slide language, speech language."""
+    """One 1920x1080 cover per cell: topic, slide language, speech language.
+
+    Cover titles follow the cell name (en / zh / hk / en+zh / …), not the
+    shared --labels override used when painting video slides.
+    """
     cover_dir = out_dir / "covers"
     for name, (audio_lang, _sub, _slide) in cells.items():
-        code, second = cell_slides.get(name, ("en", None))
-        slide_key = code if not second else f"{code}+{second}"
+        # Cell name already encodes mono/bilingual slide language; do not use
+        # cell_slides (those follow the shared --labels override for video slides).
+        slide_key = name
         dest = cover_dir / f"{lesson['id']}_{name}.png"
         write_cover(lesson_path, slide_key, audio_lang, dest)
         print("cover:", dest)

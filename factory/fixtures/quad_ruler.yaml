@@ -1,0 +1,47 @@
+id: FIX-QUAD-RULER
+course: statistics
+course_en: Business Statistics
+course_zh: 商务统计
+course_zh_hk: 商務統計
+title_en: quad_scatter ruler fixture
+title_zh: 标尺夹具
+title_zh_hk: 標尺夾具
+duration_target_s: 30
+audience: fixture
+audience_en: fixture
+audience_zh: 夹具
+audience_zh_hk: 夾具
+beats:
+- id: demo
+  visual: quad_scatter
+  mode: ruler
+  seconds: 30
+  kicker: Fixture
+  kicker_en: Fixture
+  kicker_zh: 夹具
+  kicker_zh_hk: 夾具
+  title_en: From −1 to +1
+  title_zh: 从−1到+1
+  title_zh_hk: 由−1到+1
+  r: 0.996
+  left_en: Near −1
+  left_zh: 接近−1
+  left_zh_hk: 接近−1
+  mid_en: Near 0
+  mid_zh: 接近0
+  mid_zh_hk: 接近0
+  right_en: Near +1
+  right_zh: 接近+1
+  right_zh_hk: 接近+1
+  footer_en: "Our five shops: r ≈ +1.00"
+  footer_zh: "这五家店：r ≈ +1.00"
+  footer_zh_hk: "呢五間店：r ≈ +1.00"
+  s1_en: A unit-free ruler from minus one to plus one.
+  s1_zh: 一把从负一到正一的无单位标尺。
+  s1_zh_hk: 一把由負一到正一嘅無單位標尺。
+  s2_en: Tight down near minus one. Loose near zero. Tight up near plus one.
+  s2_zh: 接近负一是紧的下行。接近零是散的。接近正一是紧的上行。
+  s2_zh_hk: 接近負一係緊嘅下行。接近零係散。接近正一係緊嘅上行。
+  s3_en: Our five shops sit near plus one.
+  s3_zh: 我们这五家店落在接近正一的位置。
+  s3_zh_hk: 我哋呢五間店落喺接近正一嘅位置。

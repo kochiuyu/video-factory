@@ -3,7 +3,7 @@ id: RANK-LINE-FIXTURE
 title_en: Rank line fixture
 title_zh: 排序线示例
 title_zh_hk: 排序線示例
-duration_target_s: 48
+duration_target_s: 72
 beats:
 - id: odd
   visual: rank_line
@@ -100,3 +100,57 @@ beats:
   s3_en: The middle label is Fair.
   s3_zh: 中间的标签是中。
   s3_zh_hk: 中間嘅標籤係中。
+- id: ends_span
+  visual: rank_line
+  seconds: 12
+  kicker_en: RANGE
+  kicker_zh: 极差
+  kicker_zh_hk: 全距
+  title_en: Four shops, two ends
+  title_zh: 四家店，两端
+  title_zh_hk: 四間店，兩端
+  values: 380;310;420;370
+  labels_en: Shop A;Shop B;Shop C;Shop D
+  labels_zh: A店;B店;C店;D店
+  labels_zh_hk: A店;B店;C店;D店
+  order: sorted
+  mark: ends
+  span: ends
+  span_en: 420 − 310 = 110 cups
+  span_zh: 420 − 310 = 110 杯
+  span_zh_hk: 420 − 310 = 110 杯
+  s1_en: Four shops, in the order they were written.
+  s1_zh: 四家店，按写下的顺序。
+  s1_zh_hk: 四間店，按寫低嘅次序。
+  s2_en: Sort them from low to high. Each shop name travels with its number.
+  s2_zh: 从小到大排好，店名跟着数字走。
+  s2_zh_hk: 由細到大排好，店名跟住數字走。
+  s3_en: Gold the two ends and bracket the whole line. 420 minus 310 is 110.
+  s3_zh: 两端变金色，括住整条线。420 减 310 等于 110。
+  s3_zh_hk: 兩端變金色，括住成條線。420 減 310 等於 110。
+- id: part_span
+  visual: rank_line
+  seconds: 12
+  title_en: Mark positions, bracket a part
+  title_zh: 标出位置，括住一段
+  title_zh_hk: 標出位置，括住一段
+  values: 10;20;30;40;500
+  order: as_given
+  break: last
+  mark: 2;4
+  span: 2-4
+  span_en: Positions 2 to 4
+  span_zh: 第 2 到第 4 位
+  span_zh_hk: 第 2 至第 4 位
+  footer_en: Mark 2;4 with span 2-4
+  footer_zh: 标出 2;4，括住 2-4
+  footer_zh_hk: 標出 2;4，括住 2-4
+  s1_en: Five values, already in order.
+  s1_zh: 五个数，已经排好。
+  s1_zh_hk: 五個數，已經排好。
+  s2_en: Number the places.
+  s2_zh: 给位置编号。
+  s2_zh_hk: 為位置編號。
+  s3_en: Gold places 2 and 4 and bracket places 2 to 4.
+  s3_zh: 第 2 和第 4 位变金色，括住第 2 到第 4 位。
+  s3_zh_hk: 第 2 同第 4 位變金色，括住第 2 至第 4 位。

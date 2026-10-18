@@ -29,14 +29,16 @@ TRIO_STEMS = (
     "col1", "col2", "col3",
     "step1", "step2", "step3",
     "setup", "result", "q1", "q2",
-    "formula", "gloss", "footer", "note", "unit", "values",
+    "formula", "gloss", "footer", "note", "unit", "values", "labels", "span",
+    "name_a", "name_b", "tag", "tag1", "tag2", "tag3",
     "v1", "v2", "v3", "v4", "v5", "v6",
+    "l1", "l2", "l3", "l4", "l5", "l6",
     "row1", "row2", "row3",
     "item1", "item2", "item3", "item4",
     "claim", "next",
     "c11", "c12", "c13", "c21", "c22", "c23", "c31", "c32", "c33",
 )
-SCALAR = ("highlight", "rows", "cols", "chart", "number", "order", "mark")
+SCALAR = ("highlight", "rows", "cols", "chart", "number", "order", "mark", "span", "break", "mean", "q1", "q3", "median", "fences", "power", "values_b", "signed_first", "standardize", "means", "sds", "xs", "ys", "mean_x", "mean_y", "mode", "r", "value", "layout")
 SPEECH = ("en", "zh", "zh_hk", "s1_en", "s1_zh", "s1_zh_hk", "s2_en", "s2_zh", "s2_zh_hk", "s3_en", "s3_zh", "s3_zh_hk")
 SKIP_IMPORT = {"beat_id", "words_en", "chars_zh"}
 
@@ -51,7 +53,7 @@ VISUALS = (
     "title_card", "definition_card", "two_column", "formula", "takeaway",
     "example", "three_column", "big_number", "steps", "module_open",
     "module_close", "payoff_matrix", "table_grid", "schematic_chart", "dag",
-    "rank_line",
+    "rank_line", "freq_bars", "balance_line", "box_line", "dev_bars", "ratio_bars", "quad_scatter",
 )
 
 

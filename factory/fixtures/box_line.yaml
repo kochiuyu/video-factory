@@ -1,0 +1,134 @@
+# Shape fixture for the box_line visual. Not a lesson and not in lessons/.
+id: BOX-LINE-FIXTURE
+title_en: Box line fixture
+title_zh: 箱线示例
+title_zh_hk: 箱線示例
+duration_target_s: 72
+beats:
+- id: five
+  visual: box_line
+  seconds: 12
+  kicker_en: IQR
+  kicker_zh: 四分位距
+  kicker_zh_hk: 四分位距
+  title_en: Five values, one box
+  title_zh: 五个数，一个箱
+  title_zh_hk: 五個數，一個盒
+  values: 360;420;280;390;310
+  span_en: 390 − 310 = 80 cups
+  span_zh: 390 − 310 = 80 杯
+  span_zh_hk: 390 − 310 = 80 杯
+  footer_en: The box holds the middle shops
+  footer_zh: 箱子框住中间的店
+  footer_zh_hk: 個盒框住中間嘅店
+  s1_en: Five values on one line.
+  s1_zh: 五个数放在一条线上。
+  s1_zh_hk: 五個數放喺一條線上面。
+  s2_en: Q1 and Q3 by nearest rank.
+  s2_zh: 用最接近秩法找出 Q1 和 Q3。
+  s2_zh_hk: 用最接近秩法搵出 Q1 同 Q3。
+  s3_en: The box runs from Q1 to Q3.
+  s3_zh: 箱子从 Q1 画到 Q3。
+  s3_zh_hk: 個盒由 Q1 畫到 Q3。
+- id: far
+  visual: box_line
+  seconds: 12
+  title_en: One far value
+  title_zh: 一个很远的数
+  title_zh_hk: 一個好遠嘅數
+  values: 280;310;360;390;420;4,200
+  break: last
+  span_en: 420 − 310 = 110 cups
+  span_zh: 420 − 310 = 110 杯
+  span_zh_hk: 420 − 310 = 110 杯
+  footer_en: 'Whisker: 280 to 4,200'
+  footer_zh: 须线：280 到 4,200
+  footer_zh_hk: 鬚線：280 到 4,200
+  s1_en: Six values, one far away.
+  s1_zh: 六个数，一个离得很远。
+  s1_zh_hk: 六個數，一個離得好遠。
+  s2_en: Q1 is 310 and Q3 is 420.
+  s2_zh: Q1 是 310，Q3 是 420。
+  s2_zh_hk: Q1 係 310，Q3 係 420。
+  s3_en: The whisker stretches; the box barely moves.
+  s3_zh: 须线拉长了，箱子几乎没动。
+  s3_zh_hk: 鬚線拉長咗，個盒差唔多冇郁。
+- id: median
+  visual: box_line
+  seconds: 12
+  title_en: Given quartiles and a median
+  title_zh: 指定四分位数和中位数
+  title_zh_hk: 指定四分位數同中位數
+  values: 10;20;30;40;50;60;70;80
+  q1: 20
+  q3: 60
+  median: 45
+  s1_en: Eight values.
+  s1_zh: 八个数。
+  s1_zh_hk: 八個數。
+  s2_en: Given Q1 and Q3.
+  s2_zh: 指定的 Q1 和 Q3。
+  s2_zh_hk: 指定嘅 Q1 同 Q3。
+  s3_en: Default span text and a median line.
+  s3_zh: 默认括号文字，加一条中位线。
+  s3_zh_hk: 預設括號文字，加一條中位線。
+- id: three
+  visual: box_line
+  seconds: 12
+  title_en: Three values
+  title_zh: 三个数
+  title_zh_hk: 三個數
+  values: 5;9;7
+  s1_en: Three values.
+  s1_zh: 三个数。
+  s1_zh_hk: 三個數。
+  s2_en: Q1 is 5, Q3 is 9.
+  s2_zh: Q1 是 5，Q3 是 9。
+  s2_zh_hk: Q1 係 5，Q3 係 9。
+  s3_en: The box covers the whole line here.
+  s3_zh: 这里箱子盖住整条线。
+  s3_zh_hk: 呢度個盒蓋住成條線。
+- id: fences
+  visual: box_line
+  seconds: 12
+  title_en: Fences from five shops
+  title_zh: 用五家店定围栏
+  title_zh_hk: 用五間店定圍欄
+  values: 360;420;280;390;310;4,200
+  q1: 310
+  q3: 390
+  fences: 190;510
+  break: last
+  span_en: 1.5 × 80 = 120 cups
+  span_zh: 1.5 × 80 = 120 杯
+  span_zh_hk: 1.5 × 80 = 120 杯
+  footer_en: 4,200 − 510 = 3,690 cups
+  footer_zh: 4,200 − 510 = 3,690 杯
+  footer_zh_hk: 4,200 − 510 = 3,690 杯
+  s1_en: The box and whiskers from the five shops; one far value past a break.
+  s1_zh: 五家店的箱子和须线；一个很远的数在断开处之后。
+  s1_zh_hk: 五間店嘅盒同鬚線；一個好遠嘅數喺斷開位之後。
+  s2_en: Fences one and a half box widths out.
+  s2_zh: 围栏在箱子外一个半箱宽。
+  s2_zh_hk: 圍欄喺個盒外面一個半盒闊。
+  s3_en: The value past a fence turns gold.
+  s3_zh: 越过围栏的数变成金色。
+  s3_zh_hk: 越過圍欄嘅數變成金色。
+- id: fences_auto
+  visual: box_line
+  seconds: 12
+  title_en: Fences on, nearest rank
+  title_zh: 自动围栏，最接近秩法
+  title_zh_hk: 自動圍欄，最接近秩法
+  values: 280;310;360;390;420;4,200
+  fences: on
+  break: last
+  s1_en: Q1 310, Q3 420 by nearest rank.
+  s1_zh: 最接近秩法：Q1 是 310，Q3 是 420。
+  s1_zh_hk: 最接近秩法：Q1 係 310，Q3 係 420。
+  s2_en: Default bracket text, fences at 145 and 585.
+  s2_zh: 默认括号文字，围栏在 145 和 585。
+  s2_zh_hk: 預設括號文字，圍欄喺 145 同 585。
+  s3_en: The far value is still outside.
+  s3_zh: 很远的数仍在外面。
+  s3_zh_hk: 好遠嘅數仍然喺外面。

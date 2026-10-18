@@ -1,0 +1,50 @@
+id: FIX-QUAD-SCATTER
+course: statistics
+course_en: Business Statistics
+course_zh: 商务统计
+course_zh_hk: 商務統計
+title_en: quad_scatter fixture
+title_zh: 四象限散点夹具
+title_zh_hk: 四象限散點夾具
+duration_target_s: 30
+audience: fixture
+audience_en: fixture
+audience_zh: 夹具
+audience_zh_hk: 夾具
+beats:
+- id: demo
+  visual: quad_scatter
+  seconds: 30
+  kicker: Fixture
+  kicker_en: Fixture
+  kicker_zh: 夹具
+  kicker_zh_hk: 夾具
+  title_en: Rent and cups
+  title_zh: 租金与杯数
+  title_zh_hk: 租金同杯數
+  xs: 10000;12000;13000;16000;19000
+  ys: 300;330;360;400;460
+  mean_x: 14000
+  mean_y: 370
+  labels_en: Shop A;Shop B;Shop C;Shop D;Shop E
+  labels_zh: A店;B店;C店;D店;E店
+  labels_zh_hk: A店;B店;C店;D店;E店
+  x_axis_en: Rent ($)
+  x_axis_zh: 租金（元）
+  x_axis_zh_hk: 租金（蚊）
+  y_axis_en: Cups
+  y_axis_zh: 杯数
+  y_axis_zh_hk: 杯數
+  mark: same
+  footer_en: "Products 880,000 / 5 = 176,000"
+  footer_zh: "乘积 880,000 / 5 = 176,000"
+  footer_zh_hk: "乘積 880,000 / 5 = 176,000"
+  s1_en: Five shops on the plot.
+  s1_zh: 五家店落在图上。
+  s1_zh_hk: 五間店落喺圖上。
+  s2_en: Means cross. Same-sign quadrants are plus.
+  s2_zh: 平均数交叉。同号象限是正。
+  s2_zh_hk: 平均數交叉。同號象限係正。
+  s3_en: Each paired product is positive. Share by five.
+  s3_zh: 每个成对乘积都是正的。再平分到五。
+  s3_zh_hk: 每個成對乘積都係正。再平分到五。

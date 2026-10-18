@@ -1,0 +1,83 @@
+# Shape fixture for the ratio_bars visual. Not a lesson and not in lessons/.
+id: RATIO-BARS-FIXTURE
+title_en: Ratio bars fixture
+title_zh: 比例条示例
+title_zh_hk: 比例棒示例
+duration_target_s: 36
+beats:
+- id: two_shops
+  visual: ratio_bars
+  seconds: 12
+  kicker_en: Swing for the size
+  kicker_zh: 按规模看晃动
+  kicker_zh_hk: 按規模睇搖動
+  title_en: Same swing? Check the size
+  title_zh: 晃动一样？先看规模
+  title_zh_hk: 搖動一樣？先睇規模
+  means: 300;3000
+  sds: 30;150
+  unit_en: cups
+  unit_zh: 杯
+  unit_zh_hk: 杯
+  labels_en: Shop A;Shop B
+  labels_zh: A店;B店
+  labels_zh_hk: A店;B店
+  footer_en: 'A: 10% of its day. B: 5%.'
+  footer_zh: A店：一天的10%；B店：5%
+  footer_zh_hk: A店：一日嘅10%；B店：5%
+  s1_en: On raw cups, B swings five times as much.
+  s1_zh: 只看杯数，B店晃得多五倍。
+  s1_zh_hk: 淨係睇杯數，B店搖多五倍。
+  s2_en: Against its own average, B's slice is thin.
+  s2_zh: 跟自己的平均数比，B店那一片很薄。
+  s2_zh_hk: 同自己嘅平均數比，B店嗰一片好薄。
+  s3_en: A is 10%, B is 5%.
+  s3_zh: A店是10%，B店是5%。
+  s3_zh_hk: A店係10%，B店係5%。
+- id: three_lines
+  visual: ratio_bars
+  seconds: 12
+  title_en: Three product lines
+  title_zh: 三条产品线
+  title_zh_hk: 三條產品線
+  means: 400;120;2500
+  sds: 60;30;200
+  mark: lowest
+  labels_en: Coffee;Cakes;Water
+  labels_zh: 咖啡;蛋糕;水
+  labels_zh_hk: 咖啡;蛋糕;水
+  tag3_en: STEADIEST FOR ITS SIZE
+  tag3_zh: 按规模最稳
+  tag3_zh_hk: 按規模最穩
+  footer_en: Lowest share = steadiest line
+  footer_zh: 占比最小 = 最稳的产品线
+  footer_zh_hk: 佔比最細 = 最穩嘅產品線
+  s1_en: Raw swings first.
+  s1_zh: 先看原始晃动。
+  s1_zh_hk: 先睇原始搖動。
+  s2_en: Each against its own average.
+  s2_zh: 每条都跟自己的平均数比。
+  s2_zh_hk: 每條都同自己嘅平均數比。
+  s3_en: The lowest share lights up.
+  s3_zh: 占比最小的亮起来。
+  s3_zh_hk: 佔比最細嗰條亮起嚟。
+- id: four_bars
+  visual: ratio_bars
+  seconds: 12
+  title_en: Four shops
+  title_zh: 四家店
+  title_zh_hk: 四間店
+  means: 300;3000;800;1200
+  sds: 30;150;120;60
+  labels_en: Shop A;Shop B;Shop C;Shop D
+  labels_zh: A店;B店;C店;D店
+  labels_zh_hk: A店;B店;C店;D店
+  s1_en: Raw.
+  s1_zh: 原始。
+  s1_zh_hk: 原始。
+  s2_en: Own average.
+  s2_zh: 自己的平均。
+  s2_zh_hk: 自己嘅平均。
+  s3_en: Shares.
+  s3_zh: 占比。
+  s3_zh_hk: 佔比。

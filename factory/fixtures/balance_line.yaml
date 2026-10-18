@@ -1,0 +1,78 @@
+id: BALANCE-LINE-FIXTURE
+title_en: Balance line fixture
+title_zh: 平衡线样例
+title_zh_hk: 平衡線樣例
+duration_target_s: 36
+beats:
+- id: coffee
+  visual: balance_line
+  seconds: 12
+  kicker_en: MEAN
+  kicker_zh: 平均数
+  kicker_zh_hk: 平均數
+  title_en: Four shops balance
+  title_zh: 四家店平衡
+  title_zh_hk: 四間店平衡
+  values: 250;300;350;500
+  mean: 350
+  labels_en: A;B;C;D
+  labels_zh: A;B;C;D
+  labels_zh_hk: A;B;C;D
+  footer_en: "−100 − 50 + 0 + 150 = 0"
+  footer_zh: "−100 − 50 + 0 + 150 = 0"
+  footer_zh_hk: "−100 − 50 + 0 + 150 = 0"
+  s1_en: Four shops on a line.
+  s1_zh: 四家店排在一条线上。
+  s1_zh_hk: 四間店排喺一條線上。
+  s2_en: The mean sits at 350.
+  s2_zh: 平均数在350。
+  s2_zh_hk: 平均數喺350。
+  s3_en: Left 150 equals right 150.
+  s3_zh: 左边150等于右边150。
+  s3_zh_hk: 左邊150等於右邊150。
+- id: skewed
+  visual: balance_line
+  seconds: 12
+  title_en: Three shops
+  title_zh: 三家店
+  title_zh_hk: 三間店
+  values: 200;300;700
+  mean: 400
+  footer_en: "−200 − 100 + 300 = 0"
+  footer_zh: "−200 − 100 + 300 = 0"
+  footer_zh_hk: "−200 − 100 + 300 = 0"
+  s1_en: Three cup counts on the line.
+  s1_zh: 三个杯数在线上。
+  s1_zh_hk: 三個杯數喺線上。
+  s2_en: The mean is 400.
+  s2_zh: 平均数是400。
+  s2_zh_hk: 平均數係400。
+  s3_en: Below 300 balances above 300.
+  s3_zh: 下面300与上面300平衡。
+  s3_zh_hk: 下面300同上邊300平衡。
+- id: even
+  visual: balance_line
+  seconds: 12
+  title_en: Already on the mean
+  title_zh: 已有一点在平均数上
+  title_zh_hk: 已有一點喺平均數上
+  values: 10;20;30
+  mean: 20
+  left_en: 10 below
+  left_zh: 偏低 10
+  left_zh_hk: 偏低 10
+  right_en: 10 above
+  right_zh: 偏高 10
+  right_zh_hk: 偏高 10
+  footer_en: Left 10 = Right 10
+  footer_zh: 左 10 = 右 10
+  footer_zh_hk: 左 10 = 右 10
+  s1_en: Three values.
+  s1_zh: 三个数。
+  s1_zh_hk: 三個數。
+  s2_en: The fulcrum is 20.
+  s2_zh: 支点是20。
+  s2_zh_hk: 支點係20。
+  s3_en: The two sides match.
+  s3_zh: 两边一样。
+  s3_zh_hk: 兩邊一樣。

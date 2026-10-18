@@ -64,12 +64,17 @@ def draw_mixed(draw, xy, text, size, fill):
     """Latin glyphs from the Latin face, CJK glyphs from the CJK face."""
     x, y = xy
     run, cjk = "", None
+    line_cjk = has_cjk(text)
     def flush():
         nonlocal x, run, cjk
         if not run:
             return
         face = font(size, cjk=bool(cjk))
-        draw.text((x, y), run, font=face, fill=fill)
+        dy = 0
+        if not cjk and line_cjk:
+            # Put Latin / digits on the CJK baseline instead of their own ascent.
+            dy = font(size, cjk=True).getmetrics()[0] - face.getmetrics()[0]
+        draw.text((x, y + dy), run, font=face, fill=fill)
         x += draw.textlength(run, font=face)
         run = ""
     for ch in text:

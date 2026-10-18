@@ -16,7 +16,7 @@ A lesson is one YAML file under `lessons/<AREA>/`. The renderer looks up the fil
 | Field | Type | Rule |
 |--------|------|------|
 | `id` | string | Unique within the lesson. Used as the audio filename. |
-| `visual` | enum | `title_card`, `definition_card`, `two_column`, `formula`, `takeaway`, `example`, `three_column`, `big_number`, `steps`, `module_open`, `module_close`, `payoff_matrix`, `table_grid`, `series`, `schematic_chart`, `dag`, `pair`, `pair_chart`, `pair_box`, `pair_slope`, `redraw`, `turns`, `shrink`, `mix`, `coin`. |
+| `visual` | enum | `title_card`, `definition_card`, `two_column`, `formula`, `takeaway`, `example`, `three_column`, `big_number`, `steps`, `module_open`, `module_close`, `payoff_matrix`, `table_grid`, `series`, `rank_line`, `schematic_chart`, `dag`, `pair`, `pair_chart`, `pair_box`, `pair_slope`, `redraw`, `turns`, `shrink`, `mix`, `coin`. |
 | speech | trio | **One source only.** Unstaged card: `en` / `zh` / `zh_hk`. Staged card: `s1_en` `s1_zh` `s1_zh_hk` … Do not keep both. |
 
 Voice and captions join the stage lines in order. `validate.py` accepts either shape. Whole-card `en` on a staged beat is ignored when `s1_en` exists.
@@ -55,6 +55,7 @@ These visuals paint progressive stills. Write one spoken chunk per still:
 | `two_column`, `example`, `takeaway`, `three_column`, `steps` | 3 | `s1_*` … `s3_*` |
 | `payoff_matrix` | up to 5 | `s1_*` … `s5_*` |
 | `series` | 3, or cols+2 with `reveal: cells` | `s1_*` … `s3_*`. Fields: `row1`/`row2`, `col1`–`col6`, `c11`–`c26`, optional `footer`. Two rows across up to six days. Default: stage 2 fills row 1, stage 3 fills row 2 and the footer. `reveal: cells` fills row 1 one cell at a time during the first speech chunk, so a spoken count is on the card while it is named. |
+| `rank_line` | 3 | `s1_*` … `s3_*`. Stage 1 shows the values as written. Stage 2 draws the ordered line and numbers the positions. Stage 3 turns the middle gold and shows the footer. An odd count marks one cell. An even count marks the two middle cells. |
 | `table_grid`, `schematic_chart`, `dag`, `pair`, `pair_chart`, `pair_box`, `pair_slope`, `redraw`, `turns`, `shrink`, `mix`, `coin` | 3 | `s1_*` … `s3_*` |
 | `title_card`, `big_number`, `module_open`, `module_close` | 1 | `en` / `zh` / `zh_hk` only |
 
@@ -83,6 +84,7 @@ On-slide fields by visual:
 | `three_column` | `col1_*`, `col2_*`, `col3_*` |
 | `big_number` | `number` (or `formula`), `unit_*`, `caption_*` |
 | `steps` | `step1_*` … `step3_*` stay three columns. `step4_*` and `step5_*` switch the card to a numbered stack. Optional `ex1_*` … `ex5_*` is the coffee example under that step. |
+| `rank_line` | Three to six values on one line. `values: 80;200;120` (or `values_en` / `values_zh` / `values_zh_hk` when the chips are words). A YAML list is also read. `v1_*` … `v6_*` is the other shape, one chip per stem; `values` wins when both are set. `order: sorted` (default) rearranges numbers from low to high on stage 2. `order: as_given` keeps the written order, for a line that is already ranked. `mark: middle` (default) golds the middle; `mark: none` leaves the chips plain. Optional `footer_*` is the gold line on stage 3. Commas stay inside a value (`1,200;80;40`), so do not comma-separate the list. |
 | `payoff_matrix` | `row_player_*`, `col_player_*`, `row1_*` `row2_*`, `col1_*` `col2_*`, `c11` `c12` `c21` `c22`, optional `note_*`, `highlight: c12` |
 | `table_grid` | `rows` 2–4, `cols` 2 or 3, `row1_*`…, `col1_*`…, `c11`…. Optional `footer_*` and `stamp_*` (a gold line under the grid, used for “50 against 20. Extra 30.”). `highlight: c12` or `row1` / `col2` / `all`. A moving reading uses `highlight_s1`… and `caption_s1_*`. Cell format is `c21_fmt: blank` or `fmts: c21=blank, c13=mark`. `blank` is a missing cell, `mark` is a gold outline, `quiet` is a muted value. Optional `reveal: cols`. A six-cell grid reserves a caption band; do not put the caption inside a cell. |
 | `schematic_chart` | `chart:` `histogram` `scatter` `boxplot` `two_line` `residual` `guesses`. Scatter reads `points`, optional `flag`, `bins`, `fit: "9400,310; 18600,390"`, `curve`, `kink`. A band reads `band` (or `band_lo` / `band_hi`) and optional `wide`. A guesses strip reads `guesses`, `mark`, optional `claim`, and optional `line`. Dots at or past the line turn gold. `two_line` reads `event_*` and optional `dash_*` (the missing path, “if the rent had stayed”). Axes are `x_*` / `y_*`. |
@@ -97,7 +99,22 @@ On-slide fields by visual:
 | `coin` | Two faces. `left_*` is the chosen face, `right_*` is the drawn face. Optional `footer_*`. Stages: chosen, drawn, the note. |
 | `dag` | Nodes `n1_id` + `n1_*` … `n5_*` (or `nodes`). Edges `e1: X->T` … or `edges:` list. `highlight: X->Y`. Optional `role_*`. Stages: nodes, edges, highlight+role. |
 
-`validate.py` fails the section when the required stems above are empty.
+`validate.py` fails the section when the required stems above are empty. A `rank_line` with fewer than 3 or more than 6 values fails. Value lists that differ in length across languages fail.
+
+Shape only, not a lesson. Odd count, one middle. Even count, the two middles:
+
+```yaml
+# rank_line shape. Do not paste this in as a short.
+visual: rank_line
+values: 80;200;120
+order: sorted
+mark: middle
+footer_en: Middle = 120
+footer_zh: 中间 = 120
+footer_zh_hk: 中間 = 120
+# even: values 200;300;100;400, footer Share 200 and 300
+# words already in order: order as_given, and v1_en … v3_en instead of values
+```
 
 Glossary item: `en`, `zh`, `zh_hk` (optional), `lock` (boolean). If `lock: true`, neither the bot nor an RA may paraphrase that pair.
 
@@ -177,6 +194,7 @@ validation_profile:
     takeaway: 3
     three_column: 3
     steps: 3
+    rank_line: 3
     table_grid: 3
     schematic_chart: 3
     dag: 3

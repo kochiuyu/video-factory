@@ -3075,7 +3075,7 @@ async function loadGlyphs(file) {
     paintGapBox(extra);
   } catch (e) {}
 }
-const VISUALS = ['title_card','definition_card','two_column','formula','takeaway','example','three_column','big_number','steps','module_open','module_close','payoff_matrix','table_grid','series','pair','pair_chart','pair_box','schematic_chart','dag'];
+const VISUALS = ['title_card','definition_card','two_column','formula','takeaway','example','three_column','big_number','steps','module_open','module_close','payoff_matrix','table_grid','series','rank_line','pair','pair_chart','pair_box','schematic_chart','dag'];
 const VISUAL_NAMES = {
   title_card:'Title card',
   definition_card:'Definition card',
@@ -3091,6 +3091,7 @@ const VISUAL_NAMES = {
   payoff_matrix:'Payoff table',
   table_grid:'Table grid',
   series:'Five-day series',
+  rank_line:'Rank line',
   pair:'Pair of tables',
   pair_chart:'Pair of histograms',
   pair_box:'Pair of boxplots',
@@ -3112,6 +3113,7 @@ const VISUAL_FIELDS = {
   payoff_matrix: ['kicker','row_player','col_player','row1','row2','col1','col2','note','s1','s2','s3','s4','s5'],
   table_grid: ['kicker','row1','row2','row3','row4','col1','col2','footer','s1','s2','s3'],
   series: ['kicker','row1','row2','col1','col2','col3','col4','col5','footer','s1','s2','s3'],
+  rank_line: ['kicker','values','footer','s1','s2','s3'],
   pair: ['kicker','left','right','footer','s1','s2','s3'],
   pair_chart: ['kicker','left','right','footer','s1','s2','s3'],
   pair_box: ['kicker','left','right','footer','s1','s2','s3'],
@@ -3166,6 +3168,8 @@ const FIELD_META = {
   item3: ['Agenda item 3', 'Third bullet on a module-open card.'],
   item4: ['Agenda item 4', 'Fourth bullet on a module-open card.'],
   next: ['Next-unit line', 'What the close card says comes next.'],
+  values: ['Values', 'Semicolon list of 3 to 6 chips. Example: 80;200;120. The same numbers can sit in every language. v1 … v6 is the other shape, one chip per line.'],
+  footer: ['Footer', 'Gold line on the last stage. Example: Middle = 120, or Share 200 and 300.'],
   term: ['Locked term', 'Word the voice must keep. Same in all three languages.'],
   prompt: ['Question students see', 'The quiz stem. No answer here.'],
   answer: ['Answer key', 'For the marking sheet. Not shown to students.']

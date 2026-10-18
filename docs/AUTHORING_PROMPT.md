@@ -70,7 +70,7 @@ Stages by visual:
 * definition_card, formula → 2
 * two_column, example, takeaway, three_column, steps → 3
 * payoff_matrix → up to 5
-* table_grid, series, schematic_chart, dag, pair, pair_chart, pair_box, pair_slope, redraw, turns, shrink, mix, coin → 3
+* table_grid, series, rank_line, schematic_chart, dag, pair, pair_chart, pair_box, pair_slope, redraw, turns, shrink, mix, coin → 3
 
 Explain first. Do not cut a beginner explanation to hit a word count. A 20s card is comfortable near 70 English words or 140 简/繁 characters; if the line must be longer to provide clear exposition, raise `seconds` on that beat (up to 35–45s per staged card). The factory does not fail the build on length.
 
@@ -123,6 +123,7 @@ Pick a card that already exists:
 * `dag` for arrows. Hold rain. Leave the queue.
 * `coin` for chosen against drawn. `redraw` for a handful. `turns` for a held Monday. `shrink` for a copied step pulled toward zero. `mix` for one gap and two unnamed parts.
 * `steps` with `step4_*` / `step5_*` when the list is longer than three. Optional `ex1_*`…`ex5_*` is the coffee example under that step.
+* `rank_line` for an ordered value line of 3–6 chips. Stage 1 is the written order, stage 2 sorts (or keeps `order: as_given`), stage 3 golds the middle cell, or the two middle cells when the count is even. Optional `footer_*`.
 
 ## YAML Formatting Guardrails
 
@@ -152,7 +153,7 @@ The lesson `title_en`, `title_zh`, and `title_zh_hk` are the YouTube title and t
 
 * One learning objective. One worked example. Quiz items in EN / 简 / 繁.
 * One claim per beat. `duration_target_s` must equal the sum of `seconds`. A short module is often 60–240 seconds. A standalone teaching short may run longer when the beginner explanation needs it.
-* Use only these visuals: title_card, definition_card, two_column, formula, takeaway, example, three_column, big_number, steps, module_open, module_close, payoff_matrix, table_grid, series, schematic_chart, dag, pair, pair_chart, pair_box, pair_slope, redraw, turns, shrink, mix, coin. Use `series` for two rows across up to six days.
+* Use only these visuals: title_card, definition_card, two_column, formula, takeaway, example, three_column, big_number, steps, module_open, module_close, payoff_matrix, table_grid, series, rank_line, schematic_chart, dag, pair, pair_chart, pair_box, pair_slope, redraw, turns, shrink, mix, coin. Use `series` for two rows across up to six days. Use `rank_line` for one ordered line of 3–6 values.
 * Do not invent a visual. Field names are in `docs/SCHEMA.md`. A bilingual on-screen line is `field_en` / `field_zh` / `field_zh_hk`. Numbers in a Chinese line are drawn fullwidth, so write ordinary digits.
 * `takeaway` must include `q1_*` and `q2_*` in English, 简, and 繁.
 * Every spoken and on-screen field needs `*_en`, `*_zh`, `*_zh_hk`.

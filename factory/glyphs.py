@@ -36,6 +36,13 @@ ON_SCREEN_STEMS = (
     "row1",
     "row2",
     "note",
+    "values",
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
 )
 
 ON_SCREEN_PLAIN = ("formula", "number", "kicker", "c11", "c12", "c21", "c22")

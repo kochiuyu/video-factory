@@ -56,7 +56,7 @@ KICKER_I18N = {
 STAGEABLE = {
     "definition_card": 2, "formula": 2, "two_column": 3, "example": 3,
     "takeaway": 3, "three_column": 3, "steps": 3, "payoff_matrix": 5,
-    "table_grid": 3, "series": 3, "schematic_chart": 3, "dag": 3, "pair": 3, "pair_chart": 3, "pair_box": 3, "pair_slope": 3, "redraw": 3, "turns": 3, "shrink": 3, "mix": 3, "coin": 3,
+    "table_grid": 3, "series": 3, "rank_line": 3, "schematic_chart": 3, "dag": 3, "pair": 3, "pair_chart": 3, "pair_box": 3, "pair_slope": 3, "redraw": 3, "turns": 3, "shrink": 3, "mix": 3, "coin": 3,
 }
 MIN_STAGE_BEAT = 5.0
 MIN_SLICE = 1.2
@@ -2113,6 +2113,211 @@ def render_turns(draw, beat, code, y, theme, stage=None, second=None) -> None:
         _center(draw, (100, box_y + box_h - 48, W - 100, box_y + box_h - 12), footer, ff, theme["gold"])
 
 
+_RANK_SORTED = {"sorted", "sort", "asc", "ascending"}
+_RANK_GIVEN = {"as_given", "given", "raw", "unsorted", "written"}
+_RANK_MARK_OFF = {"none", "off", "no", "0"}
+_RANK_MARK_ON = {"middle", "mid", "center", "centre"}
+
+
+def _split_rank_list(raw) -> list[str]:
+    """Semicolon list, or a YAML list. Commas stay inside a value (4,200)."""
+    if raw is None or raw is False:
+        return []
+    if isinstance(raw, (list, tuple)):
+        return [str(part).strip() for part in raw if str(part).strip()]
+    text = str(raw).strip()
+    if not text:
+        return []
+    return [part.strip() for part in text.replace("；", ";").split(";") if part.strip()]
+
+
+def _rank_value_keys(code: str) -> tuple[str, ...]:
+    if code == "zh_hk":
+        return ("values_zh_hk", "values_zh", "values")
+    if code == "zh":
+        return ("values_zh_cn", "values_zh", "values")
+    return ("values_en", "values")
+
+
+def _values_for(beat: dict, code: str) -> list[str]:
+    for key in _rank_value_keys(code):
+        if key in beat and beat.get(key) not in (None, ""):
+            return _split_rank_list(beat.get(key))
+    return []
+
+
+def _vstem_count(beat: dict) -> int:
+    n = 0
+    for i in range(1, 7):
+        if not any(str(beat.get(f"v{i}{suf}") or "").strip() for suf in ("", "_en", "_zh", "_zh_cn", "_zh_hk")):
+            break
+        n += 1
+    return n
+
+
+def rank_value_count(beat: dict) -> int:
+    """How many chips this beat names, before the 6-chip paint cap."""
+    lists = [row for row in (_values_for(beat, code) for code in ("en", "zh", "zh_hk")) if row]
+    if lists:
+        return max(len(row) for row in lists)
+    return _vstem_count(beat)
+
+
+def _order_token(beat: dict) -> str:
+    return str(beat.get("order") or "").strip().lower().replace("-", "_").replace(" ", "_")
+
+
+def rank_order_mode(beat: dict) -> str:
+    """sorted rearranges; as_given keeps the written order."""
+    if _order_token(beat) in _RANK_GIVEN:
+        return "as_given"
+    return "sorted"
+
+
+def _rank_number(text: str):
+    primary = str(text or "").split("\n", 1)[0].strip()
+    token = (
+        primary.replace(",", "")
+        .replace(" ", "")
+        .replace("−", "-")
+        .replace("–", "-")
+        .replace("—", "-")
+    )
+    if not token:
+        return None
+    try:
+        return float(token)
+    except ValueError:
+        return None
+
+
+def rank_sorted(cells: list[str]) -> list[str]:
+    """Low to high when every value is a number. Otherwise A–Z on the primary label."""
+    nums = [_rank_number(cell) for cell in cells]
+    if nums and all(num is not None for num in nums):
+        order = sorted(range(len(cells)), key=lambda i: (nums[i], i))
+    else:
+        order = sorted(range(len(cells)), key=lambda i: (cells[i].split("\n", 1)[0].casefold(), i))
+    return [cells[i] for i in order]
+
+
+def rank_middles(n: int) -> list[int]:
+    """0-based. Odd n: the one middle. Even n: the two middle positions."""
+    if n <= 0:
+        return []
+    if n % 2:
+        return [n // 2]
+    return [n // 2 - 1, n // 2]
+
+
+def rank_marks_middle(beat: dict) -> bool:
+    raw = str(beat.get("mark") or "").strip().lower()
+    return raw not in _RANK_MARK_OFF
+
+
+def rank_cells(beat: dict, code: str = "en", second: str | None = None) -> list[str]:
+    """Up to six chips. `values` wins; otherwise v1..v6. Second language sits under the first."""
+    primary = _values_for(beat, code)
+    if primary:
+        cells = primary[:6]
+        if second and second != code:
+            other = _values_for(beat, second)[:6]
+            if other and other != cells:
+                paired = []
+                for i, left in enumerate(cells):
+                    right = other[i] if i < len(other) else ""
+                    paired.append(left if not right or right == left else f"{left}\n{right}")
+                cells = paired
+        return cells
+    n = _vstem_count(beat)
+    return [field2(beat, f"v{i}", code, second) for i in range(1, n + 1)][:6]
+
+
+def rank_line_problems(beat: dict) -> list[str]:
+    problems = []
+    n = rank_value_count(beat)
+    if n < 3 or n > 6:
+        problems.append(f"rank_line needs 3 to 6 values, found {n}.")
+    lengths = [len(row) for row in (_values_for(beat, code) for code in ("en", "zh", "zh_hk")) if row]
+    if len(set(lengths)) > 1:
+        problems.append("rank_line value lists differ in length across languages.")
+    order = _order_token(beat)
+    if order and order not in _RANK_SORTED and order not in _RANK_GIVEN:
+        problems.append("rank_line order must be sorted or as_given.")
+    mark = str(beat.get("mark") or "").strip().lower()
+    if mark and mark not in _RANK_MARK_ON and mark not in _RANK_MARK_OFF:
+        problems.append("rank_line mark must be middle or none.")
+    return problems
+
+
+def render_rank_line(draw, beat, code, y, theme, stage=None, second=None) -> None:
+    """An ordered value line. Stage 1 as written, stage 2 ordered, stage 3 gold middle(s) and footer.
+
+    Odd counts mark one cell. Even counts mark the two middle cells.
+    """
+    box_y = y + 8
+    box_h = _fill_h(box_y, 360)
+    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    tag = {"en": "RANK", "zh": "排序", "zh_hk": "排序"}.get(code, "RANK")
+    if second:
+        other = {"en": "RANK", "zh": "排序", "zh_hk": "排序"}.get(second)
+        if other and other != tag:
+            tag = f"{tag}  {other}"
+    _tag(draw, 108, box_y + 16, tag, theme)
+    footer = field2(beat, "footer", code, second) or field2(beat, "note", code, second)
+    given = rank_cells(beat, code, second)
+    ordered = given if rank_order_mode(beat) == "as_given" else rank_sorted(given)
+    show_ordered = _show(stage, 2)
+    cells = ordered if show_ordered else given
+    n = len(cells)
+    marked = set(rank_middles(n)) if show_ordered and _show(stage, 3) and rank_marks_middle(beat) else set()
+    foot = 88 if footer else 28
+    chip_h = 148
+    badge = 56
+    rule = 28
+    top_limit = box_y + 72
+    bottom_limit = box_y + box_h - foot
+    block = badge + chip_h + rule
+    chip_top = top_limit + badge + max(0, (bottom_limit - top_limit - block) // 2)
+    if n:
+        gap = 18 if n >= 5 else 28
+        max_w = W - 192
+        chip_w = max(96, (max_w - gap * (n - 1)) // n)
+        chip_w = min(chip_w, 320)
+        row_w = n * chip_w + (n - 1) * gap
+        x0 = (W - row_w) // 2
+        if show_ordered and n >= 2:
+            y_line = chip_top + chip_h + 16
+            draw.line([(x0, y_line), (x0 + row_w, y_line)], fill=theme["gold"], width=5)
+        white = theme.get("white") or (247, 244, 238)
+        x = x0
+        for i, val in enumerate(cells):
+            lit = i in marked
+            box = (x, chip_top, x + chip_w, chip_top + chip_h)
+            draw.rounded_rectangle(box, radius=18, fill=theme["gold"] if lit else white)
+            if show_ordered:
+                r = 20
+                cx = x + chip_w / 2
+                cy = chip_top - 32
+                if n >= 2:
+                    draw.line([(cx, chip_top + chip_h), (cx, chip_top + chip_h + 16)], fill=theme["gold"], width=4)
+                draw.ellipse([cx - r, cy - r, cx + r, cy + r], fill=theme["gold"] if lit else theme["bg"])
+                _center(
+                    draw,
+                    (cx - r, cy - r, cx + r, cy + r),
+                    str(i + 1),
+                    fit_font(draw, str(i + 1), 26, 34, True, 18, 1),
+                    theme["navy"],
+                )
+            if val:
+                vf = fit_font(draw, val, 48, chip_w - 28, True, 22, 2, chip_h - 28)
+                _center(draw, (x + 10, chip_top + 8, x + chip_w - 10, chip_top + chip_h - 8), val, vf, theme["navy"])
+            x += chip_w + gap
+    if footer and _show(stage, 3):
+        ff = fit_font(draw, footer, 28, W - 220, True, 20, 2)
+        _center(draw, (100, box_y + box_h - foot + 8, W - 100, box_y + box_h - 16), footer, ff, theme["gold"])
+
+
 def render_redraw(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """Two redraws. Stage 1 left handful, stage 2 right, stage 3 the repeated row."""
     box_y = y + 8
@@ -2172,6 +2377,7 @@ RENDERERS = {
     "payoff_matrix": render_payoff_matrix,
     "table_grid": render_table_grid,
     "series": render_series,
+    "rank_line": render_rank_line,
     "pair": render_pair,
     "pair_chart": render_pair_chart,
     "pair_box": render_pair_box,

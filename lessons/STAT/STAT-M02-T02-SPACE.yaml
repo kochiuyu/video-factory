@@ -1,0 +1,193 @@
+id: STAT-M02-T02-SPACE
+course: statistics
+course_en: Business Probability Foundations
+course_zh: 商务概率基础
+course_zh_hk: 商務概率基礎
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: "Defining the universe of outcomes"
+title_zh: "穷尽界定业务结果的全集"
+title_zh_hk: "窮盡界定業務結果嘅全集"
+objective_en: "Define sample spaces and events within a retail store context, explain the criteria of mutual exclusivity and collective exhaustiveness (MECE), and calculate baseline probabilities from transaction logs."
+objective_zh: "在零售门店场景下定义样本空间与事件，阐释互斥且完全穷尽（MECE）的核心准则，并基于交易账目计算基准概率。"
+objective_zh_hk: "喺零售門市場景之下定義樣本空間同事件，闡釋互斥且完全窮盡（MECE）嘅核心準則，並基於交易賬目計算基準概率。"
+glossary:
+- en: "sample space"
+  zh: "样本空间"
+  zh_hk: "樣本空間"
+  lock: true
+- en: "event"
+  zh: "事件"
+  zh_hk: "事件"
+  lock: true
+- en: "mutually exclusive"
+  zh: "互斥"
+  zh_hk: "互斥"
+  lock: true
+- en: "collectively exhaustive"
+  zh: "完全穷尽"
+  zh_hk: "完全窮盡"
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: "Why must the atomic outcomes in a business sample space be mutually exclusive and collectively exhaustive?"
+  question_zh: "为什么商业样本空间中的基本结果必须严格满足互斥且完全穷尽（MECE）？"
+  question_zh_hk: "點解商業樣本空間入面嘅基本結果必須嚴格滿足互斥且完全窮盡（MECE）？"
+  options_en:
+  - "A: To ensure every single transaction belongs to exactly one category and total probability sums to 1.0 without blind spots or double-counting."
+  - "B: To force all retail products to be priced at identical dollar amounts."
+  - "C: Because tax authorities require store receipts to be sorted alphabetically."
+  - "D: To ensure that store foot traffic drops to zero during afternoon hours."
+  options_zh:
+  - "A: 确保每一笔交易都归入且仅归入一个确定分类，使得总概率精确等于 1.0，杜绝决策盲区与重复计算。"
+  - "B: 强制要求所有零售商品的销售价格必须完全相等。"
+  - "C: 因为税务合规机构要求所有销售小票必须按英文字母顺序排列。"
+  - "D: 确保门店在下午时段的客流量彻底归零。"
+  options_zh_hk:
+  - "A: 確保每一筆交易都歸入而且淨係歸入一個確定分類，令到總概率精確等於 1.0，杜絕決策盲區同重複計算。"
+  - "B: 強制要求所有零售商品嘅銷售價格必須完全相等。"
+  - "C: 因為稅務合規機構要求所有銷售單據必須按英文字母順序排列。"
+  - "D: 確保門市喺下晝時段嘅人流量徹底歸零。"
+  answer: A
+  explanation_en: "Mutual exclusivity prevents overlapping counts, while collective exhaustiveness ensures no possible transaction is omitted. Together, they guarantee total probability equals 1.0."
+  explanation_zh: "互斥杜绝了重复计算，完全穷尽保证了没有任何遗漏。两者结合确保了所有可能性的概率之和严格等于 1.0。"
+  explanation_zh_hk: "互斥杜絕咗重複計算，完全窮盡保證咗冇任何遺漏。兩者結合確保咗所有可能性嘅概率之和嚴格等於 1.0。"
+- id: Q2
+  type: multiple_choice
+  question_en: "If 1,000 coffee orders yield 600 Beverage-Only, 100 Food-Only, and 300 Beverage-Plus-Food bundles, what is the probability of event A: 'Customer purchases food'?"
+  question_zh: "若 1,000 笔咖啡订单中包含 600 笔纯饮品、100 笔纯烘焙餐点、300 笔饮品加餐点组合，事件 A（顾客购买了食物）的概率是多少？"
+  question_zh_hk: "若 1,000 筆咖啡訂單入面包含 600 筆純飲品、100 筆純烘焙餐點、300 筆飲品加餐點組合，事件 A（顧客買咗食物）嘅概率係幾多？"
+  options_en:
+  - "A: 0.10"
+  - "B: 0.40"
+  - "C: 0.60"
+  - "D: 1.00"
+  options_zh:
+  - "A: 0.10"
+  - "B: 0.40"
+  - "C: 0.60"
+  - "D: 1.00"
+  options_zh_hk:
+  - "A: 0.10"
+  - "B: 0.40"
+  - "C: 0.60"
+  - "D: 1.00"
+  answer: B
+  explanation_en: "Event A contains two atomic outcomes: Food-Only (100) and Beverage-Plus-Food (300). Together they account for 400 out of 1,000 orders, or P(A) = 0.40."
+  explanation_zh: "事件 A 包含两个基本结果：纯烘焙餐点（100 笔）与组合单（300 笔）。合计为 1,000 笔中的 400 笔，即 P(A) = 0.40。"
+  explanation_zh_hk: "事件 A 包含兩個基本結果：純烘焙餐點（100 筆）同組合單（300 筆）。合計為 1,000 筆入面嘅 400 筆，即 P(A) = 0.40。"
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: "The Foundation"
+  kicker_en: "The Foundation"
+  kicker_zh: "底座基石"
+  kicker_zh_hk: "底座基石"
+  title_en: "What can possibly happen at the till?"
+  title_zh: "收银台前到底可能发生什么？"
+  title_zh_hk: "收銀機前到底可能發生咩事？"
+  en: "Before you can calculate the odds of any business success, you have to answer a deceptively simple question: what are all the things that could possibly occur? If you leave out even one type of customer transaction, your predictive models will collapse on bad math. How do operations planners draw a foolproof boundary around uncertainty?"
+  zh: "在计算任何商业决策的胜率之前，你必须先回答一个看似极其简单的问题：现场到底可能发生哪些情况？如果在梳理时遗漏了哪怕一种顾客交易形态，后续的预测模型就会因底层漏洞而轰然崩塌。运营规划者究竟该如何为不确定性画定一道滴水不漏的边界？"
+  zh_hk: "喺計算任何商業決策嘅勝率之前，你必須先回答一條睇落極之簡單嘅問題：現場到底可能發生邊啲情況？如果喺梳理嗰陣漏咗哪怕一種顧客交易形態，後續嘅預測模型就會因為底層漏洞而轟然倒下。營運規劃者究竟應該點樣為不確定性畫定一條滴水不漏嘅邊界？"
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: "What It Is"
+  kicker_en: "What It Is"
+  kicker_zh: "核心概念"
+  kicker_zh_hk: "核心概念"
+  title_en: "The sample space and its events"
+  title_zh: "样本空间与特定事件"
+  title_zh_hk: "樣本空間與特定事件"
+  formula: "S = {All atomic outcomes}; P(S) = 1.0"
+  formula_zh: "样本空间 S = {所有基本结果的集合}；总概率恒等于 1.0"
+  formula_zh_hk: "樣本空間 S = {所有基本結果嘅集合}；總概率恆等於 1.0"
+  s1_en: "In business probability, the complete universe of every possible distinct outcome is called the sample space, denoted as S."
+  s1_zh: "在商务概率论中，所有可能发生的互不相同的基本结果所构成的完整全集，被称为样本空间，通常记作 S。"
+  s1_zh_hk: "喺商務概率論入面，所有可能發生嘅互不相同嘅基本結果所構成嘅完整全集，被稱為樣本空間，通常記做 S。"
+  s2_en: "An event is simply any defined subset of outcomes that management cares about—such as a customer ordering food, or an order exceeding fifty dollars."
+  s2_zh: "而所谓事件，就是管理层所关心的某一组特定结果的子集——例如顾客购买了烘焙食品，或者订单金额超过了五十元。"
+  s2_zh_hk: "而所謂事件，就係管理層所關心嘅某一組特定結果嘅子集——好似顧客買咗烘焙食品，或者訂單金額超過咗五十蚊。"
+- id: mece
+  visual: two_column
+  seconds: 36
+  kicker: "The Rule"
+  kicker_en: "The Rule"
+  kicker_zh: "构建法则"
+  kicker_zh_hk: "構建法則"
+  title_en: "The MECE standard"
+  title_zh: "互斥且完全穷尽准则"
+  title_zh_hk: "互斥且完全窮盡準則"
+  left_en: "Mutually Exclusive: Zero overlap"
+  left_zh: "相互排斥：分类不重叠"
+  left_zh_hk: "相互排斥：分類唔重疊"
+  right_en: "Collectively Exhaustive: Zero gaps"
+  right_zh: "完全穷尽：包揽全局，绝无遗漏"
+  right_zh_hk: "完全窮盡：包攬全局，絕無遺漏"
+  s1_en: "To build a valid sample space, management must enforce the MECE principle: mutually exclusive and collectively exhaustive."
+  s1_zh: "为了搭建合格的样本空间，管理层必须恪守 MECE 原则：相互排斥且完全穷尽。"
+  s1_zh_hk: "為咗搭建合格嘅樣本空間，管理層必須恪守 MECE 原則：相互排斥且完全窮盡。"
+  s2_en: "Mutually exclusive means outcomes cannot happen at the same time: one order cannot be classified as both Beverage-Only and Combo."
+  s2_zh: "相互排斥意味着基本结果不能同时发生：一笔订单绝不能既被归为纯饮品，又被归为组合套餐。"
+  s2_zh_hk: "相互排斥意味住基本結果唔可以同時發生：一筆訂單絕唔可以既被歸為純飲品，又被歸為組合套餐。"
+  s3_en: "Collectively exhaustive means the list covers every operational possibility. When these two hold, the sum of all individual probabilities must equal exactly 1.0."
+  s3_zh: "完全穷尽则意味着清单涵盖了一切运营可能。当这两条铁律同时成立时，所有基本结果的概率之和必然严格等于 1.0。"
+  s3_zh_hk: "完全窮盡就意味住清單涵蓋咗一切營運可能。當呢兩條鐵律同時成立嗰陣，所有基本結果嘅概率之和必然嚴格等於 1.0。"
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: "The Ledger"
+  kicker_en: "The Ledger"
+  kicker_zh: "账目实操"
+  kicker_zh_hk: "賬目實操"
+  title_en: "Classifying 1,000 register orders"
+  title_zh: "拆解一千笔门店点单流水"
+  title_zh_hk: "拆解一千筆門市點單流水"
+  step1_en: "Beverage Only: 600 orders (0.60)"
+  step1_zh: "纯饮品单：600 笔（占比 0.60）"
+  step1_zh_hk: "純飲品單：600 筆（佔比 0.60）"
+  step2_en: "Food Only: 100 orders (0.10)"
+  step2_zh: "纯餐点单：100 笔（占比 0.10）"
+  step2_zh_hk: "純餐點單：100 筆（佔比 0.10）"
+  step3_en: "Bundle: 300 orders (0.30)"
+  step3_zh: "组合套餐：300 笔（占比 0.30）"
+  step3_zh_hk: "組合套餐：300 筆（佔比 0.30）"
+  s1_en: "Look at our 1,000-order Monday register ledger. Step one: 600 patrons buy only coffee, giving a probability of zero point six zero."
+  s1_zh: "来看周一收银账本里的 1,000 笔订单。第一步：600 位顾客只买了咖啡，对应概率为 0.60。"
+  s1_zh_hk: "睇吓周一收銀賬本入面嘅 1,000 筆訂單。第一步：600 位顧客淨係買咗咖啡，對應概率為 0.60。"
+  s2_en: "Step two: 100 patrons buy only a bakery pastry, giving a probability of zero point one zero."
+  s2_zh: "第二步：100 位顾客只买了烘焙点心，对应概率为 0.10。"
+  s2_zh_hk: "第二步：100 位顧客淨係買咗烘焙點心，對應概率為 0.10。"
+  s3_en: "Step three: 300 patrons buy both drink and food. Notice that 0.60 plus 0.10 plus 0.30 equals exactly 1.00. Our operational universe is closed and complete."
+  s3_zh: "第三步：300 位顾客同时购买了饮品与餐点。请注意，0.60 加 0.10 加 0.30 恰好等于 1.00。我们的业务全集封闭且完备。"
+  s3_zh_hk: "第三步：300 位顧客同時買咗飲品同餐點。請注意，0.60 加 0.10 加 0.30 啱啱好等於 1.00。我哋嘅業務全集封閉而且完備。"
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: "Decision Rule"
+  kicker_en: "Decision Rule"
+  kicker_zh: "商业法则"
+  kicker_zh_hk: "商業法則"
+  title_en: "Define the ground before calculating odds"
+  title_zh: "算胜率之前，先锁紧全集边界"
+  title_zh_hk: "算勝率之前，先鎖緊全集邊界"
+  q1_en: "What is the manager's first duty in probability?"
+  q1_zh: "管理者运用概率论的第一职责是什么？"
+  q1_zh_hk: "管理者運用概率論嘅第一職責係咩？"
+  q2_en: "How do we measure event probabilities?"
+  q2_zh: "我们该如何度量特定事件的概率？"
+  q2_zh_hk: "我哋應該點樣度量特定事件嘅概率？"
+  s1_en: "Never begin a risk analysis without verifying that your sample space is mutually exclusive and completely exhaustive."
+  s1_zh: "在未验证样本空间是否严格满足互斥与完全穷尽之前，切勿盲目启动任何商业风险分析。"
+  s1_zh_hk: "喺未驗證樣本空間係咪嚴格滿足互斥同完全窮盡之前，千祈唔好盲目啟動任何商業風險分析。"
+  s2_en: "To find the probability of any managerial event, sum the probabilities of the atomic outcomes that satisfy its criteria."
+  s2_zh: "度量任何管理事件的发生胜率，只需将所有满足该事件条件的基本结果概率直接相加。"
+  s2_zh_hk: "度量任何管理事件嘅發生勝率，淨係需要將所有滿足該事件條件嘅基本結果概率直接相加。"
+  s3_en: "For the food-purchase event, add Food Only and Bundle: 0.10 plus 0.30 equals 0.40. A complete, non-overlapping sample space makes that answer defensible."
+  s3_zh: "以顾客购买食物为例，把纯餐点单与组合套餐相加：0.10 加 0.30 等于 0.40。完整且不重叠的样本空间，让这个结论经得起检验。"
+  s3_zh_hk: "以顧客買食物為例，將純餐點單同組合套餐相加：0.10 加 0.30 等於 0.40。完整而且唔重疊嘅樣本空間，先至令呢個結論站得住腳。"

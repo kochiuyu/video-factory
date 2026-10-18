@@ -1,0 +1,221 @@
+id: STAT-M04-T12-STUDT
+course: STAT-M04
+course_en: Sampling Distributions, the Central Limit Theorem, and Interval Estimation
+course_zh: 抽样分布、中心极限定理与区间估计
+course_zh_hk: 抽樣分佈、中心極限定理與區間估計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: Unknown variance and Student's t
+title_zh: 未知的代价：学生氏 t 分布与厚尾惩罚
+title_zh_hk: 未知的代價：學生氏 t 分佈與厚尾懲罰
+objective_en: Distinguish between standard normal Z and Student's t distributions, explain why replacing unknown population
+  variance sigma with sample standard deviation s inflates estimation uncertainty through degrees of freedom df = n - 1, and
+  evaluate water filter hardness across a pilot sample of 10 taps at Wan Chai.
+objective_zh: 严格区分标准正态 Z 分布与学生氏 t 分布，解析在总体真实方差 sigma 未知时以样本标准差 s 替代所引入的双重不确定性及自由度 df = n - 1 的几何本质，并对湾仔店 10 个新装净水滤芯水质硬度进行小样本试点评估。
+objective_zh_hk: 嚴格區分標準正態 Z 分佈與學生氏 t 分佈，解析喺總體真實方差 sigma 未知嗰陣以樣本標準差 s 替代所引入嘅雙重不確定性及自由度 df = n - 1 嘅幾何本質，並對灣仔舖 10 個新裝淨水濾芯水質硬度進行小樣本試點評估。
+glossary:
+- en: Student's t-distribution
+  zh: 学生氏 t 分布
+  zh_hk: 學生氏 t 分佈
+  lock: true
+- en: degrees of freedom (df)
+  zh: 自由度 (df)
+  zh_hk: 自由度 (df)
+  lock: true
+- en: heavy-tail penalty
+  zh: 厚尾惩罚/重尾补偿
+  zh_hk: 厚尾懲罰/重尾補償
+  lock: true
+- en: dual estimation uncertainty
+  zh: 双重估计不确定性
+  zh_hk: 雙重估計不確定性
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why does the standardized statistic t = (X-bar - mu) / (s / sqrt(n)) follow Student's t-distribution with heavier
+    tails than the standard normal Z-distribution when sample size is small?
+  question_zh: 当样本量较小时，为什么标准化统计量 t = (X-bar - mu) / (s / 根号(n)) 服从尾部明显厚于标准正态 Z 分布的学生氏 t 分布？
+  question_zh_hk: 當樣本量較細嗰陣，點解標準化統計量 t = (X-bar - mu) / (s / 根號(n)) 服從尾部明顯厚過標準正態 Z 分佈嘅學生氏 t 分佈？
+  options_en:
+  - 'A: Because replacing the fixed constant sigma with the sample statistic s introduces an extra layer of random fluctuation
+    into the denominator, producing higher variability in extreme values.'
+  - 'B: Because water filtration instruments measure physical particles instead of economic currency.'
+  - 'C: Because William Sealy Gosset introduced a mathematical penalty to discourage small business experimentation.'
+  - 'D: Because degrees of freedom automatically convert continuous distributions into discrete integers.'
+  options_zh:
+  - 'A: 因为用变动的样本统计量 s 替代固定的总体常数 sigma，在分母中额外引入了一层随机波动来源，导致极值出现的概率显著增加。'
+  - 'B: 因为水质检测仪器测量的是物理微粒浓度而非商业货币金额。'
+  - 'C: 因为威廉·戈塞为了惩罚小型商业机构的小样本摸底而人为追加了惩罚常数。'
+  - 'D: 因为自由度机制会在运算底层强制将连续分布扭曲为离散整数。'
+  options_zh_hk:
+  - 'A: 因為用變動嘅樣本統計量 s 替代固定嘅總體常數 sigma，喺分母入面額外引入咗一層隨機波動來源，搞到極值出現嘅概率顯著增加。'
+  - 'B: 因為水質檢測儀器測量嘅係物理微粒濃度而唔係商業貨幣金額。'
+  - 'C: 因為威廉·戈塞為咗懲罰小型商業機構嘅小樣本摸底而人為追加咗懲罰常數。'
+  - 'D: 因為自由度機制會喺運算底層強制將連續分佈扭曲為離散整數。'
+  answer: A
+  explanation_en: In Z, only the numerator (X-bar) is random. In t, both the numerator (X-bar) and the denominator (s) are
+    random variables. When sample size is small, volatility in s causes t to spread further into the tails, requiring heavier
+    critical values.
+  explanation_zh: 在 Z 分数中，只有分子 X-bar 是随机变量。而在 t 统计量中，分子 X-bar 与分母 s 均为随机变量。小样本下 s 自身的剧烈晃动将概率向两翼尾部挤压，形成了更平缓、尾部更厚的 t 分布。
+  explanation_zh_hk: 喺 Z 分數入面，淨係得分子 X-bar 係隨機變量。而喺 t 統計量入面，分子 X-bar 同分母 s 均為隨機變量。小樣本下 s 自身嘅劇烈晃動將概率向兩翼尾部擠壓，形成咗更平緩、尾部更厚嘅 t 分佈。
+- id: Q2
+  type: multiple_choice
+  question_en: Metro tests water hardness across n = 10 filter taps at Wan Chai (df = 9) with unknown population variance.
+    To build a 95% confidence interval, why is using Z* = 1.960 managerial malpractice compared to the correct critical value
+    t* = 2.262?
+  question_zh: 都市咖啡工程部抽测湾仔店 n = 10 个新装水龙头滤芯的水质硬度（自由度 df = 9），总体方差未知。若构建 95% 置信区间，为什么使用 Z* = 1.960 属于严重失职，而必须采用临界值 t* = 2.262？
+  question_zh_hk: 都市咖啡工程部抽測灣仔舖 n = 10 個新裝水龍頭濾芯嘅水質硬度（自由度 df = 9），總體方差未知。若果構建 95% 置信區間，點解使用 Z* = 1.960 屬於嚴重失職，而必須採用臨界值 t* =
+    2.262？
+  options_en:
+  - 'A: Using Z* = 1.960 ignores denominator noise, understating the margin of error by over 13% and giving false statistical
+    certainty.'
+  - 'B: Because t* = 2.262 is legally required by municipal health departments.'
+  - 'C: Because 10 taps causes an immediate division by zero in the Z-score equation.'
+  - 'D: Because t-distributions only work when sample standard deviation equals zero.'
+  options_zh:
+  - 'A: 使用 Z* = 1.960 忽视了分母中样本标准差的抽样波动，使误差容限被人为低估超过 13%，释放出虚假的品控安全感。'
+  - 'B: 因为市政自来水卫生法规明文强制所有水质检测报告使用 t* = 2.262。'
+  - 'C: 因为 10 个受检水龙头会在 Z 分数底层公式中直接引发除以零的致命错误。'
+  - 'D: 因为学生氏 t 分布只有在样本标准差精确等于零时才能正常求解。'
+  options_zh_hk:
+  - 'A: 使用 Z* = 1.960 忽視咗分母入面樣本標準差嘅抽樣波動，令誤差容限被人為低估超過 13%，釋放出虛假嘅品控安全感。'
+  - 'B: 因為市政自來水衛生法規明文強制所有水質檢測報告使用 t* = 2.262。'
+  - 'C: 因為 10 個受檢水龍頭會喺 Z 分數底層公式入面直接引發除以零嘅致命錯誤。'
+  - 'D: 因為學生氏 t 分佈淨係喺樣本標準差精確等於零嗰陣先可以正常求解。'
+  answer: A
+  explanation_en: With df = 9, the 95% critical value is t* = 2.262. Using Z* = 1.960 produces an artificially narrow interval
+    that captures the true mean less than 95% of the time, dangerously underestimating operational quality risk.
+  explanation_zh: 在自由度为 9 时，95% 置信临界值为 t* = 2.262。若机械套用 Z* = 1.960，算出的区间过于窄小脆弱，真实覆盖率将显著跌破 95%，严重低估设备品控风险。
+  explanation_zh_hk: 喺自由度為 9 嗰陣，95% 置信臨界值為 t* = 2.262。若果機械套用 Z* = 1.960，計出嚟嘅區間過於窄細脆弱，真實覆蓋率將顯著跌破 95%，嚴重低估設備品控風險。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Unknown Variance Trap
+  kicker_en: The Unknown Variance Trap
+  kicker_zh: 未知方差的陷阱
+  kicker_zh_hk: 未知方差嘅陷阱
+  title_en: What happens when true volatility is completely invisible?
+  title_zh: 当总体波动深不可测：小样本摸底的隐秘凶险
+  title_zh_hk: 當總體波動深不可測：小樣本摸底嘅隱秘凶險
+  en: 'At the Wan Chai branch, the engineering crew installs ten cutting-edge water filtration taps to optimize espresso extraction.
+    The quality auditor tests water hardness across all ten taps, recording an average of seventy-two parts per million. But
+    here is the operational reality: because this filtration model is brand new, the true population standard deviation sigma
+    is completely unknown. A junior technician applies the standard normal Z score of one point nine six zero. Why is using
+    the Gaussian curve on small pilot data dangerously optimistic?'
+  zh: 在湾仔分店，工程部为优化意式浓缩萃取，全新换装了十个新一代多级净水滤龙头。质检员对这十个点位进行了水质硬度巡测，录得平均值为七十二个百万分比浓度。但严峻的现实摆在面前：由于该型号滤芯全网首发，总体的真实离散度 sigma 完全未知。助理技术员随手套用了标准正态的一点九六零标尺。为什么在未知方差的小样本面前，高斯钟形曲线成了一种危险的盲目自大？
+  zh_hk: 喺灣仔分舖，工程部為咗優化意式濃縮萃取，全新換裝咗十個新一代多級淨水濾龍頭。質檢員對呢十個點位進行咗水質硬度巡測，錄得平均值為七十二個百萬分比濃度。但嚴峻嘅現實擺喺眼前：由於嗰款濾芯全網首發，總體嘅真實離散度 sigma 完全未知。助理技術員隨手套用咗標準正態嘅一點九六零標尺。點解喺未知方差嘅小樣本面前，高斯鐘形曲線成咗一種危險嘅盲目自大？
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: What It Is
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: Student's t-distribution
+  title_zh: 学生氏 t 分布与双重估计不确定性
+  title_zh_hk: 學生氏 t 分佈與雙重估計不確定性
+  formula: t = (X-bar - mu) / (s / sqrt(n)) ~ t(df = n - 1)
+  formula_zh: t 统计量 = (样本均值 - 总体均值) / (样本标准差 / 根号(n))，服从自由度为 n - 1 的学生氏 t 分布
+  formula_zh_hk: t 統計量 = (樣本均值 - 總體均值) / (樣本標準差 / 根號(n))，服從自由度為 n - 1 嘅學生氏 t 分佈
+  formula_tex: t = \frac{\bar{X} - \mu}{S / \sqrt{n}} \sim t_{(df = n - 1)}
+  s1_en: When population sigma is unknown, we must substitute our empirical sample standard deviation s. But s is itself a
+    fluctuating random variable, injecting extra noise into our denominator.
+  s1_zh: 当总体标准差 sigma 未知时，我们不得不借由实测的样本标准差 s 代替。但 s 本身就是一个上蹿下跳的随机变量，在分母中额外注入了一重晃动的杂音。
+  s1_zh_hk: 當總體標準差 sigma 未知嗰陣，我哋不得不藉由實測嘅樣本標準差 s 代替。但 s 本身就係一個上擸下扯嘅隨機變量，喺分母入面額外注入咗一重晃動嘅雜音。
+  s2_en: In nineteen hundred and eight, Guinness brewer William Sealy Gosset proved that this dual uncertainty produces fatter,
+    heavier tails than the normal curve, defined by degrees of freedom df equals n minus one.
+  s2_zh: 一九零八年，健力士酒厂酿造化学家威廉·戈塞数学证明：这种双重估计不确定性必然孕育出比正态曲线更平缓、两翼尾部更肥厚的分布形态，其收敛轨迹由自由度 n 减一全权裁定。
+  s2_zh_hk: 一九零八年，健力士酒廠釀造化學家威廉·戈塞數學證明：呢種雙重估計不確定性必然孕育出比正態曲線更平緩、兩翼尾部更肥厚嘅分佈形態，其收斂軌跡由自由度 n 減一全權裁定。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  kicker: The Shape of Uncertainty
+  kicker_en: The Shape of Uncertainty
+  kicker_zh: 厚尾代价
+  kicker_zh_hk: 厚尾代價
+  title_en: The heavy-tail penalty of small degrees of freedom
+  title_zh: 小样本自由度下的厚尾惩罚机制
+  title_zh_hk: 小樣本自由度下嘅厚尾懲罰機制
+  left_en: 'Standard Normal Z: Tail-risk thin, assumes perfect knowledge of sigma'
+  left_zh: 标准正态 Z：双翼尖细单薄，建立在对总体方差了如指掌的幻象上
+  left_zh_hk: 標準正態 Z：雙翼尖細單薄，建立喺對總體方差瞭如指掌嘅幻象上
+  right_en: 'Student''s t (df = 9): Heavy tails push 95% cutoff from 1.960 to 2.262'
+  right_zh: 学生氏 t (df = 9)：厚尾重载迫使 95% 临界标尺从 1.960 飙升至 2.262
+  right_zh_hk: 學生氏 t (df = 9)：厚尾重載迫使 95% 臨界標尺由 1.960 飆升至 2.262
+  s1_en: Because the sample standard deviation s frequently underestimates true volatility in small trials, extreme standardized
+    deviations occur far more often than Gaussian math predicts.
+  s1_zh: 由于样本标准差 s 在小样本中极易低估总体真实离散度，极端离差出现的频率远高于经典高斯正态模型的预判。
+  s1_zh_hk: 由於樣本標準差 s 喺小樣本入面極易低估總體真實離散度，極端偏差出現嘅頻率遠高於經典高斯正態模型嘅預判。
+  s2_en: 'To compensate for this risk, the t-distribution imposes a heavy-tail penalty: the smaller your sample size, the
+    lower your degrees of freedom, and the wider your critical values must stretch.'
+  s2_zh: 为了防范这种未知风险，t 分布强制执行厚尾惩罚：抽检样本量越小，自由度越低，临界标尺就必须向外狠狠撑开。
+  s2_zh_hk: 為咗防範呢種未知風險，t 分佈強制執行厚尾懲罰：抽檢樣本量越細，自由度越低，臨界標尺就必須向外狠狠撐開。
+  s3_en: With only nine degrees of freedom, the ninety-five percent multiplier expands from one point nine six zero to two
+    point two six two. That fifteen percent penalty is the honest cost of ignorance.
+  s3_zh: 在仅有九个自由度时，九成五临界值由一点九六零被生生拔高至二点二六二。这百分之十五的厚尾溢价，正是企业为无知所支付的诚实公允代价。
+  s3_zh_hk: 喺淨係得九個自由度嗰陣，九成五臨界值由一點九六零被生生拔高至二點二六二。呢個百分之十五嘅厚尾溢價，正正係企業為無知所支付嘅誠實公允代價。
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: The Ledger
+  kicker_en: The Ledger
+  kicker_zh: 账目实算
+  kicker_zh_hk: 賬目實算
+  title_en: Auditing Wan Chai filter tap hardness
+  title_zh: 湾仔店滤水硬度厚尾修正精算
+  title_zh_hk: 灣仔舖濾水硬度厚尾修正精算
+  step1_en: 'Pilot draw: n = 10 taps, x-bar = 72.0 ppm, s = 4.2 ppm -> df = 10 - 1 = 9'
+  step1_zh: 试点抽检：n = 10 个龙头，均值 72.0 ppm，样本 s = 4.2 ppm -> 自由度 df = 9
+  step1_zh_hk: 試點抽檢：n = 10 個龍頭，均值 72.0 ppm，樣本 s = 4.2 ppm -> 自由度 df = 9
+  step2_en: 'Lookup cutoffs: Normal Z* = 1.960 vs Student''s t*(df = 9) = 2.262 (+15.4% expansion)'
+  step2_zh: 标尺对照：正态 Z* = 1.960 对决 学生氏 t*(df = 9) = 2.262（临界值撑大 15.4%）
+  step2_zh_hk: 標尺對照：正態 Z* = 1.960 對決 學生氏 t*(df = 9) = 2.262（臨界值撐大 15.4%）
+  step3_en: 'True uncertainty: SE = 4.2 / sqrt(10) ≈ 1.328 -> MOE_t = 2.262 * 1.328 = 3.00 ppm'
+  step3_zh: 真实容限：SE = 4.2 / 根号(10) ≈ 1.328 -> t 容限 = 3.00 ppm（Z 容限仅 2.60 ppm）
+  step3_zh_hk: 真實容限：SE = 4.2 / 根號(10) ≈ 1.328 -> t 容限 = 3.00 ppm（Z 容限淨係得 2.60 ppm）
+  s1_en: Inspect the engineering lab log at Wan Chai. Across ten sampled water filter taps, average total dissolved hardness
+    measures seventy-two point zero ppm, with sample standard deviation s of four point two ppm.
+  s1_zh: 查阅湾仔店水质工程巡检底册。在抽检的十个净水龙头上，实测总溶解固体硬度均值为七十二点零 ppm，样本标准差 s 为四点二 ppm。
+  s1_zh_hk: 查閱灣仔舖水質工程巡檢底冊。喺抽檢嘅十個淨水龍頭上，實測總溶解固體硬度均值為七十二點零 ppm，樣本標準差 s 為四點二 ppm。
+  s2_en: 'Step two establishes degrees of freedom: ten minus one equals nine. A naïve technician would use Z star of one point
+    nine six zero. But Student''s table dictates t star at nine degrees of freedom is two point two six two.'
+  s2_zh: 第二步核定自由度：十减一得九。盲目冒进的技术员会沿用 Z 星号一点九六零。然而翻开学生氏 t 分布表，自由度为九时的九成五临界值高达二点二六二。
+  s2_zh_hk: 第二步核定自由度：十減一得九。盲目冒進嘅技術員會沿用 Z 星號一點九六零。然而翻開學生氏 t 分佈表，自由度為九嗰陣嘅九成五臨界值高達二點二六二。
+  s3_en: 'Step three computes standard error: four point two divided by the square root of ten is one point three two eight
+    ppm. Multiplying by two point two six two yields a true margin of error of three point zero zero ppm. Using the normal
+    curve would have cheated our risk margin by fifteen percent!'
+  s3_zh: 第三步计算估计误差：四点二除以根号十得一点三二八 ppm。乘上二点二六二，真实误差容限锁定为三点零零 ppm。若当初侥幸套用正态公式，整整一成半的品控风险就会被掩耳盗铃般悄然抹杀！
+  s3_zh_hk: 第三步計算估計誤差：四點二除以根號十得一點三二八 ppm。乘上二點二六二，真實誤差容限鎖定為三點零零 ppm。若果當初僥倖套用正態公式，成成一成半嘅品控風險就會被掩耳盜鈴噉悄然抹殺！
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: Decision Rule
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Pay the heavy-tail tax when variance is unknown
+  title_zh: 方差未知需纳厚尾重税，样本不足莫逞高斯之勇
+  title_zh_hk: 方差未知需納厚尾重稅，樣本不足咪逞高斯之勇
+  q1_en: When does the Student's t-distribution converge back into the standard normal curve?
+  q1_zh: 学生氏 t 分布会在何时渐进收敛退化回标准正态 Z 曲线？
+  q1_zh_hk: 學生氏 t 分佈會喺幾時漸進收斂退化返標準正態 Z 曲線？
+  q2_en: How do we construct complete confidence intervals using t-distributions for core coffee metrics?
+  q2_zh: 在核心咖啡品控指标中，我们该如何完整落地构建 t 置信区间？
+  q2_zh_hk: 喺核心咖啡品控指標入面，我哋應該點樣完整落地構建 t 置信區間？
+  s1_en: Never use standard normal Z critical values on small samples when population variance is unknown; always enforce
+    Student's t to honor the true statistical noise.
+  s1_zh: 当总体方差未知且样本规模受限时，严禁滥用标准正态 Z 标尺；务必遵从学生氏 t 分布，如实接纳分母波动所带来的客观风险。
+  s1_zh_hk: 當總體方差未知兼且樣本規模受限嗰陣，嚴禁濫用標準正態 Z 標尺；務必遵從學生氏 t 分佈，如實接納分母波動所帶嚟嘅客觀風險。
+  s2_en: As sample size expands into hundreds, degrees of freedom climb, the tail penalty fades away, and t smoothly converges
+    back to Z.
+  s2_zh: 只有当抽样量逐步扩大至数百笔流水、自由度突破大关时，厚尾惩罚才会自然消退，t 分布方才平滑收敛回归至高斯正态。
+  s2_zh_hk: 淨係得當抽樣量逐步擴大至數百筆流水、自由度突破大關嗰陣，厚尾懲罰先會自然消退，t 分佈先至平滑收斂回歸至高斯正態。
+  s3_en: The operating rule is to use t star, not 1.960, when sigma is unknown and n is small. Ten taps and nine degrees of
+    freedom put the 95% cutoff at 2.262 and the margin at 3.00 ppm.
+  s3_zh: 操作规则是总体标准差未知且样本小时用 t 星号，不用 1.960。十个龙头、自由度 9，95% 临界值为 2.262，容限为 3.00 ppm。
+  s3_zh_hk: 操作規則係總體標準差未知兼且樣本細嗰陣用 t 星號，唔用 1.960。十個龍頭、自由度 9，95% 臨界值為 2.262，容限為 3.00 ppm。

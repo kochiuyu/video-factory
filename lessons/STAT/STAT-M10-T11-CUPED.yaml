@@ -1,0 +1,162 @@
+id: STAT-M10-T11-CUPED
+course: STAT-M10
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Variance Reduction with CUPED: Using Pre-Experiment Information'
+title_zh: CUPED 方差缩减：利用实验前信息提高精度
+title_zh_hk: CUPED 方差縮減：利用實驗前信息提高精度
+objective_en: Construct a CUPED-adjusted outcome from a pre-treatment covariate, calculate the optimal linear adjustment and idealized variance reduction, and identify the conditions needed to preserve a randomized treatment-effect estimand.
+objective_zh: 使用处理前协变量构建 CUPED 调整结果，计算最优线性调整与理想化方差缩减，并识别保持随机处理效应估计目标所需的条件。
+objective_zh_hk: 使用處理前協變量構建 CUPED 調整結果，計算最優線性調整同理想化方差縮減，並識別保持隨機處理效應估計目標所需嘅條件。
+glossary:
+- en: CUPED (Controlled-experiment Using Pre-Experiment Data)
+  zh: CUPED 方差缩减技术
+  zh_hk: CUPED 方差縮減技術
+  lock: true
+- en: Pre-Experiment Covariate
+  zh: 实验前协变量
+  zh_hk: 實驗前協變量
+  lock: true
+- en: Covariance Adjustment Parameter (Theta)
+  zh: 协方差调整系数（Theta）
+  zh_hk: 協方差調整系數（Theta）
+  lock: true
+- en: Variance Reduction Factor
+  zh: 方差缩减因子（1 - rho^2）
+  zh_hk: 方差縮減因子（1 - rho^2）
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Under the idealized population formula, the pre-experiment covariate and outcome have correlation rho = 0.707. Approximately what percentage of outcome variance is removed by the optimal linear adjustment?
+  question_zh: 在理想化总体公式下，实验前协变量与结果的相关系数 rho = 0.707。最优线性调整大约消除多少结果方差？
+  question_zh_hk: 喺理想化總體公式之下，實驗前協變量同結果嘅相關係數 rho = 0.707。最優線性調整大約消除幾多結果方差？
+  options_en:
+  - 'A: Approximately 50.0%'
+  - 'B: Approximately 70.7%'
+  - 'C: Approximately 29.3%'
+  - 'D: 0%'
+  options_zh:
+  - A：约 50.0%
+  - B：约 70.7%
+  - C：约 29.3%
+  - D：0%
+  options_zh_hk:
+  - A：約 50.0%
+  - B：約 70.7%
+  - C：約 29.3%
+  - D：0%
+  answer: A
+  explanation_en: The remaining variance fraction is 1 - rho squared. Since 0.707 squared is approximately 0.4998, the adjustment removes about 49.98% and leaves about 50.02% under the ideal assumptions.
+  explanation_zh: 剩余方差比例为 1 - rho 的平方。由于 0.707 的平方约为 0.4998，因此在理想假设下，调整约消除 49.98%，留下约 50.02%。
+  explanation_zh_hk: 剩餘方差比例係 1 - rho 嘅平方。由於 0.707 嘅平方約係 0.4998，所以喺理想假設之下，調整約消除 49.98%，留下約 50.02%。
+- id: Q2
+  type: multiple_choice
+  question_en: Why can a fixed adjustment based on a genuine pre-treatment covariate preserve the randomized mean treatment contrast in expectation?
+  question_zh: 为什么基于真正处理前协变量的固定调整，可以在期望意义上保持随机化均值处理对比？
+  question_zh_hk: 點解基於真正處理前協變量嘅固定調整，可以喺期望意義上保持隨機化平均數處理對比？
+  options_en:
+  - 'A: Random assignment makes the expected treatment-control difference in the pre-treatment covariate zero'
+  - 'B: Theta is always zero'
+  - 'C: The adjustment forces both groups to have identical observed outcomes'
+  - 'D: Every historical covariate is independent of the outcome'
+  options_zh:
+  - A：随机分配使处理组与对照组的处理前协变量差异在期望上为零
+  - B：Theta 永远等于零
+  - C：调整会强制两组具有完全相同的观测结果
+  - D：每个历史协变量都与结果独立
+  options_zh_hk:
+  - A：隨機分配令處理組同對照組嘅處理前協變量差異喺期望上等於零
+  - B：Theta 永遠等於零
+  - C：調整會強制兩組具有完全相同嘅觀測結果
+  - D：每個歷史協變量都同結果獨立
+  answer: A
+  explanation_en: Randomization balances a pre-treatment covariate in expectation. With a common, treatment-blind adjustment rule, subtracting its centered value does not shift the expected treatment-control contrast, although implementation and estimation choices still require care.
+  explanation_zh: 随机化使处理前协变量在期望意义上平衡。使用共同且不利用处理结果选择的调整规则时，扣除其中心化值不会改变处理组与对照组差异的期望，但实施与参数估计仍需谨慎。
+  explanation_zh_hk: 隨機化令處理前協變量喺期望意義上平衡。使用共同而且唔利用處理結果選擇嘅調整規則嗰陣，扣除佢嘅中心化值唔會改變處理組同對照組差異嘅期望，但實施同參數估計仍然要謹慎。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Precision Puzzle
+  kicker_zh: 精度提升难题
+  kicker_zh_hk: 精度提升難題
+  title_en: Can Historical Behavior Make a Randomized Test More Precise?
+  title_zh: 历史行为能让随机实验更精确吗？
+  title_zh_hk: 歷史行為可以令隨機實驗更精確嗎？
+  en: Suppose customer spending varies widely because some customers were already frequent buyers before an experiment began. Randomization protects the treatment comparison, but this stable baseline heterogeneity still increases noise. CUPED uses a pre-treatment measure that predicts the outcome and removes its centered linear component, seeking a more precise estimate without changing the treatment assignment.
+  zh: 假设顾客消费差异很大，因为部分顾客在实验开始前已经是高频买家。随机化保护了处理比较，但这种稳定的基准异质性仍会增加噪声。CUPED 使用能够预测结果的处理前指标，扣除其中心化线性成分，以在不改变处理分配的情况下提高估计精度。
+  zh_hk: 假設客人消費差異好大，因為部分客人喺實驗開始之前已經係高頻買家。隨機化保護咗處理比較，但呢種穩定嘅基準異質性仍然會增加雜音。CUPED 使用可以預測結果嘅處理前指標，扣除佢嘅中心化線性成分，以喺唔改變處理分配嘅情況下提高估計精度。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Adjusted outcome = Y - Theta × (X - mean X)
+  formula_zh: 调整结果 = Y - Theta ×（X - X 的均值）
+  formula_zh_hk: 調整結果 = Y - Theta ×（X - X 嘅平均數）
+  formula_tex: \widetilde{Y}_i=Y_i-\theta(X_i-\mu_X),\quad \theta^*=\frac{\mathrm{Cov}(Y,X)}{\mathrm{Var}(X)}
+  s1_en: CUPED uses a Pre-Experiment Covariate X measured before treatment. The Covariance Adjustment Parameter Theta controls how much of the centered baseline signal is subtracted from the experiment outcome Y.
+  s1_zh: CUPED 使用处理前测量的实验前协变量 X。协方差调整系数 Theta 控制从实验结果 Y 中扣除多少中心化基准信号。
+  s1_zh_hk: CUPED 使用處理之前量度嘅實驗前協變量 X。協方差調整系數 Theta 控制由實驗結果 Y 入面扣除幾多中心化基準信號。
+  s2_en: Under a population linear-projection calculation with the optimal Theta, the remaining outcome variance is Var(Y) times one minus rho squared. This expression is an ideal benchmark; estimated parameters, missing baselines, unequal eligibility, and model choices can alter realized performance.
+  s2_zh: 在使用最优 Theta 的总体线性投影计算下，剩余结果方差等于 Var(Y) 乘以一减 rho 的平方。该表达式是理想化基准；参数估计、基准缺失、资格不等与模型选择都可能改变实际表现。
+  s2_zh_hk: 喺使用最優 Theta 嘅總體線性投影計算之下，剩餘結果方差等於 Var(Y) 乘以一減 rho 嘅平方。呢個表達式係理想化基準；參數估計、基準缺失、資格不等同模型選擇都可能改變實際表現。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Valid Covariate
+  left_zh: 有效协变量
+  left_zh_hk: 有效協變量
+  right_en: Safe Adjustment
+  right_zh: 稳妥调整
+  right_zh_hk: 穩妥調整
+  s1_en: X must be determined before treatment and measured consistently for eligible units. A post-treatment variable, treatment-affected observation window, or differential missingness can compromise interpretation.
+  s1_zh: X 必须在处理前确定，并且对合资格单元一致测量。处理后变量、受处理影响的观测窗口或差异性缺失都可能损害解释。
+  s1_zh_hk: X 一定要喺處理之前確定，並且對合資格單元一致量度。處理後變量、受處理影響嘅觀測窗口或者差異性缺失都可能損害解讀。
+  s2_en: Estimate and apply the adjustment using a pre-specified, treatment-blind procedure. If the same experiment data tune many covariates or nonlinear models, use suitable safeguards such as sample splitting or cross-fitting and valid uncertainty estimation.
+  s2_zh: 应使用预先指定且不利用处理结果选择的程序估计并应用调整。如果使用同一实验数据调节许多协变量或非线性模型，应采用样本拆分、交叉拟合等保障措施，并进行有效的不确定性估计。
+  s2_zh_hk: 要使用預先指定而且唔利用處理結果選擇嘅程序估計並應用調整。如果使用同一實驗數據調節好多協變量或者非線性模型，就要採用樣本拆分、交叉擬合等保障措施，並進行有效嘅不確定性估計。
+  s3_en: Stronger correlation can improve precision, but CUPED does not create information from nothing. It cannot repair broken randomization, sample-ratio mismatch, inconsistent metric definitions, or poor outcome measurement.
+  s3_zh: 更强相关性可以提高精度，但 CUPED 不会凭空创造信息。它不能修复随机化故障、样本比例失配、指标定义不一致或结果测量不良。
+  s3_zh_hk: 更強相關性可以提高精度，但 CUPED 唔會憑空創造信息。佢唔可以修復隨機化故障、樣本比例失配、指標定義唔一致或者結果量度不良。
+- id: example
+  visual: example
+  seconds: 36
+  setup_en: 'Teaching assumptions: rho = 0.707; original variance = 2,500'
+  setup_zh: 教学假设：rho = 0.707；原方差 = 2,500
+  setup_zh_hk: 教學假設：rho = 0.707；原方差 = 2,500
+  result_en: Ideal remaining variance ≈ 1,250.38; reduction ≈ 49.98%
+  result_zh: 理想剩余方差约 1,250.38；缩减约 49.98%
+  result_zh_hk: 理想剩餘方差約 1,250.38；縮減約 49.98%
+  s1_en: Squaring 0.707 gives approximately 0.499849. The ideal remaining-variance factor is therefore 1 minus 0.499849, or 0.500151.
+  s1_zh: 0.707 的平方约为 0.499849。因此，理想剩余方差因子为 1 减 0.499849，即 0.500151。
+  s1_zh_hk: 0.707 嘅平方約係 0.499849。所以，理想剩餘方差因子係 1 減 0.499849，即係 0.500151。
+  s2_en: Multiplying 2,500 by 0.500151 gives approximately 1,250.38. Under otherwise unchanged simple power assumptions, required sample size would scale by the same variance ratio, approximately one half rather than exactly one half.
+  s2_zh: 用 2,500 乘以 0.500151，得到约 1,250.38。在其他简单功效假设不变时，所需样本量会按相同方差比例缩放，即约为一半，而不是正好一半。
+  s2_zh_hk: 用 2,500 乘以 0.500151，得到約 1,250.38。喺其他簡單功效假設不變嗰陣，所需樣本量會按照相同方差比例縮放，即係約為一半，而唔係正好一半。
+  s3_en: Calendar duration does not automatically halve. Runtime also depends on eligible traffic, covariate coverage, fixed ramp or minimum-duration rules, weekly cycles, attrition, and the chosen stopping procedure.
+  s3_zh: 日历时长不会自动减半。运行周期还取决于合资格流量、协变量覆盖、固定爬坡或最短时长规则、周周期、流失与停止程序。
+  s3_zh_hk: 日曆時長唔會自動減半。運行周期仲取決於合資格流量、協變量覆蓋、固定爬坡或者最短時長規則、週周期、流失同停止程序。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: What Does CUPED Improve?
+  q1_zh: CUPED 改善什么？
+  q1_zh_hk: CUPED 改善乜嘢？
+  q2_en: Decision Rule
+  q2_zh: 决策规则
+  q2_zh_hk: 決策規則
+  s1_en: CUPED can improve precision when a valid pre-treatment covariate predicts the outcome. The gain depends on correlation, coverage, implementation, and the estimator rather than on a universal promise of faster experiments.
+  s1_zh: 当有效处理前协变量能够预测结果时，CUPED 可以提高精度。收益取决于相关性、覆盖率、实施与估计量，而不是一个通用的实验提速承诺。
+  s1_zh_hk: 當有效處理前協變量可以預測結果嗰陣，CUPED 可以提高精度。收益取決於相關性、覆蓋率、實施同估計量，而唔係一個通用嘅實驗提速承諾。
+  s2_en: Pre-specify covariate eligibility, measurement windows, centering, parameter estimation, missing-data handling, and uncertainty calculation. Compare adjusted and unadjusted estimates as an integrity check.
+  s2_zh: 应预先指定协变量资格、测量窗口、中心化、参数估计、缺失数据处理与不确定性计算，并把调整后与未调整估计进行比较，作为完整性检查。
+  s2_zh_hk: 要預先指定協變量資格、量度窗口、中心化、參數估計、缺失數據處理同不確定性計算，並將調整後同未調整估計作比較，作為完整性檢查。
+  s3_en: Use CUPED to reduce avoidable baseline noise, not to rescue a defective experiment. Preserve the randomized estimand, report uncertainty, and verify realized variance reduction before changing sample-size or rollout decisions.
+  s3_zh: 应使用 CUPED 减少可避免的基准噪声，而不是挽救有缺陷的实验。应保持随机化估计目标、报告不确定性，并在改变样本量或推广决策前验证实际方差缩减。
+  s3_zh_hk: 要使用 CUPED 減少可以避免嘅基準雜音，而唔係挽救有缺陷嘅實驗。要保持隨機化估計目標、報告不確定性，並喺改變樣本量或者推廣決策之前驗證實際方差縮減。

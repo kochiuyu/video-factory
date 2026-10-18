@@ -1,5 +1,0 @@
-﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
-1,GAME-PD-01,comprehension,25,Who are the players in this story?,这个故事里，谁是参与人？,呢個故事入面，邊個係參與人？,The two partners. The police are not a third player.,两个同伙。警察不是第三个参与人。,兩個同夥。警察唔係第三個參與人。
-2,GAME-PD-01,comprehension,25,What may each partner post?,每个同伙能选什么？,每個同夥可以揀咩？,Silent or Talk. That is the strategy list.,沉默或招供。这就是策略清单。,沉默定招供。呢個就係策略清單。
-3,GAME-PD-01,check,25,Players: the two partners.,参与人：两个同伙。,參與人：兩個同夥。,,,
-4,GAME-PD-01,transfer,25,Strategies: Silent or Talk.,策略：沉默或招供。,策略：沉默定招供。,,,

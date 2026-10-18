@@ -1,0 +1,159 @@
+id: ACC-M02-MP
+course: accounting
+course_en: Introductory Accounting
+course_zh: 会计入门
+course_zh_hk: 會計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 96
+title_en: Matching Principle
+title_zh: 配比原则
+title_zh_hk: 配比原則
+objective_en: 'Second step of the timing unit: put the cost beside the revenue it helped to earn.'
+objective_zh: 期间单元的第二步：把成本放在它所帮助赚到的收入旁边。
+objective_zh_hk: 期間單元的第二步：把成本放在它所幫助賺到的收入旁邊。
+glossary:
+- en: matching principle
+  zh: 配比原则
+  zh_hk: 配比原則
+  lock: true
+- en: expense
+  zh: 费用
+  zh_hk: 費用
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: The matching principle places an expense with what?
+  zh: 配比原则把费用与什么放在一起？
+  zh_hk: 配比原則把費用與什麼放在一起？
+  answer_en: The related revenue in the same period.
+  answer_zh: 同一期间的相关收入。
+  answer_zh_hk: 同一期間的相關收入。
+- id: Q2
+  type: transfer
+  en: Goods sold in May are paid for in June. In which month is cost of sales recorded?
+  zh: 五月售出的商品六月才付款。销货成本记在哪一个月？
+  zh_hk: 五月售出的商品六月才付款。銷貨成本記在哪一個月？
+  answer_en: May, next to May revenue.
+  answer_zh: 五月，与五月收入配在一起。
+  answer_zh_hk: 五月，與五月收入配在一起。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Matching Principle
+  title_zh: 配比原则
+  title_zh_hk: 配比原則
+  en: Revenue is now dated to delivery. Profit still needs the other half of the story. Matching puts
+    the cost in the same period as that revenue — not on the day cash left the bank.
+  zh: 收入已经按交货落期。利润还缺故事的另一半。配比是把成本放进同一期，而不是放进钱离开银行的那天。
+  zh_hk: 收入已經按交貨落期。利潤還缺故事的另一半。配比是把成本放進同一期，而不是放進錢離開銀行的那天。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Same period, same story
+  title_zh: 同一期间，同一故事
+  title_zh_hk: 同一期間，同一故事
+  formula: Expense with the related revenue
+  formula_en: Expense with the related revenue
+  formula_zh: 费用与相关收入配比
+  formula_zh_hk: 費用與相關收入配比
+  gloss_en: Do not dump the cost only because the bill arrived.
+  gloss_zh: 不要只因为账单到了就把成本全部记下。
+  gloss_zh_hk: 不要只因為賬單到了就把成本全部記下。
+  en: The matching principle puts an expense in the same period as the revenue it helped to generate.
+    A cost without that link is still recorded, but not as a way to move profit between years.
+  zh: 配比原则把费用放进它帮助产生收入的同一个期间。没有这种联系的成本仍要入账，但不能用来在年度之间挪动利润。
+  zh_hk: 配比原則把費用放進它幫助產生收入的同一個期間。沒有這種聯繫的成本仍要入賬，但不能用來在年度之間挪動利潤。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Commission on this month’s sales
+  title_zh: 本月销售额的佣金
+  title_zh_hk: 本月銷售額的佣金
+  left_en: Sales booked this month
+  left_zh: 本月已记销售收入
+  left_zh_hk: 本月已記銷售收入
+  right_en: Commission paid next month
+  right_zh: 佣金下月才支付
+  right_zh_hk: 佣金下月才支付
+  en: Staff earn commission on this month’s sales and are paid next month. Match the commission to
+    this month. Waiting for the bank transfer would make this month look too cheap.
+  zh: 员工按本月销售额计提佣金，下月才发放。佣金应配比到本月。等到银行转账再记，本月就会显得过便宜。
+  zh_hk: 員工按本月銷售額計提佣金，下月才發放。佣金應配比到本月。等到銀行轉賬再記，本月就會顯得過便宜。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Pair the period
+  title_zh: 配上同一期间
+  title_zh_hk: 配上同一期間
+  formula: Expense with the related revenue
+  formula_en: Expense with the related revenue
+  formula_zh: 费用与相关收入配比
+  formula_zh_hk: 費用與相關收入配比
+  gloss_en: Same story, same month.
+  gloss_zh: 同一个故事，同一个月。
+  gloss_zh_hk: 同一個故事，同一個月份。
+  en: Matching puts the cost next to the revenue it helped to earn. A commission sits in the month
+    of the sale, not in the month of the bank transfer.
+  zh: 配比把费用放在它帮助赚得的收入旁边。佣金记在成交的月份，而不是银行到账的月份。
+  zh_hk: 配比把費用放在它幫助賺得的收入旁邊。佣金記在成交的月份，而不是銀行到賬的月份。
+- id: case
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Sale in March, pay in April
+  title_zh: 三月成交，四月付款
+  title_zh_hk: 三月成交，四月付款
+  setup_en: March sale is booked
+  setup_zh: 三月收入已入账
+  setup_zh_hk: 三月收入已入賬
+  result_en: March also books the commission
+  result_zh: 三月同时记佣金
+  result_zh_hk: 三月同時記佣金
+  en: The salesperson closes a deal in March. The firm pays the commission in April. Matching still
+    records both the sale and the commission in March.
+  zh: 销售三月成交。公司四月才付佣金。配比仍把收入和佣金都记在三月。
+  zh_hk: 銷售三月成交。公司四月才付佣金。配比仍把收入和佣金都記在三月。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Pair the cost
+  title_zh: 把成本配对
+  title_zh_hk: 把成本配對
+  q1_en: Which revenue did this cost help to earn?
+  q1_zh: 这项成本帮助赚得了哪一笔收入？
+  q1_zh_hk: 這項成本幫助賺得了哪一筆收入？
+  q2_en: Is that revenue in this period?
+  q2_zh: 那笔收入是否在本期？
+  q2_zh_hk: 那筆收入是否在本期？
+  en: If you can name the revenue, put the cost beside it. If the asset will work for several years,
+    the next lesson spreads that cost instead of dumping it on the purchase date.
+  zh: 能说出收入，就把成本放在旁边。若这项资产还要工作好几年，下一讲会把成本摊开，而不是全记在购买日。
+  zh_hk: 能說出收入，就把成本放在旁邊。若這項資產還要工作好幾年，下一講會把成本攤開，而不是全記在購買日。

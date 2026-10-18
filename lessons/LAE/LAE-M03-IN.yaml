@@ -1,0 +1,63 @@
+id: LAE-M03-IN
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: 'This sitting: the pad'
+title_zh: 这一讲：这块垫子
+title_zh_hk: 這一講：呢塊墊
+objective_en: Open the pad unit. Name the vertiport, then treat minutes on the pad as the scarce unit.
+objective_zh: 打开垫子这一讲。先给起降场起名，再把垫子上的分钟看成稀缺单位。
+objective_zh_hk: 打開墊呢一講。先畀起降場起名，再將墊上面嘅分鐘看成稀缺單位。
+glossary:
+- en: Open
+  zh: 开场
+  zh_hk: 開場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Which two pictures does this sitting draw?
+  zh: 这一讲画哪两张图？
+  zh_hk: 呢一講畫邊兩張圖？
+  answer_en: The pad where a flight begins and ends, then the minutes spent sitting on it.
+  answer_zh: 飞行开始和结束的垫子，然后垫子上坐着的那些分钟。
+  answer_zh_hk: 飛行開始同結束嘅墊，然後墊上面坐住嘅嗰啲分鐘。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: the pad'
+  title_zh: 这一讲：这块垫子
+  title_zh_hk: 這一講：呢塊墊
+  item1_en: Vertiport
+  item1_zh: 起降场
+  item1_zh_hk: 起降場
+  item2_en: Charge and turnaround
+  item2_zh: 充电与周转
+  item2_zh_hk: 充電同周轉
+  en: Two machines have names. Neither is a business in mid-air. Two shorts. First we name the pad. Then we ask what minutes on that pad cost.
+  zh: 两种机器已经有名字。停在半空都不是生意。两条短片。先给垫子起名。再问垫子上的分钟值什么。
+  zh_hk: 兩種機器已經有名。停喺半空都唔係生意。兩條短片。先畀墊起名。再問墊上面嘅分鐘值咩。
+- id: takeaway
+  visual: title_card
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: the pad'
+  title_zh: 这一讲：这块垫子
+  title_zh_hk: 這一講：呢塊墊
+  en: By the end, a roof in Shenzhen and a locker in Sha Tin should mean two pads. Minutes on those pads cap how many trips the line can sell — not two pretty views.
+  zh: 结束时，深圳的一个屋顶和沙田的一个储物柜，应是两块垫子。垫子上的分钟限制这条线能卖出多少趟——不是两处风景。
+  zh_hk: 結束時，深圳一個屋頂同沙田一個儲物櫃，應該係兩塊墊。墊上面嘅分鐘限制呢條線能賣出幾多轉——唔係兩處風景。

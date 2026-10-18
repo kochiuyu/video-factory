@@ -1,0 +1,125 @@
+id: LAE-M05-DL
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 92
+title_en: Last mile
+title_zh: 最后一公里
+title_zh_hk: 最後一公里
+objective_en: 'Willingness to pay for the parcel is the road’s failure on this corridor: jam, harbour, long ground loop.'
+objective_zh: 为这个包裹付钱，是因为这条路上的路不行：堵塞、海峡、绕远的地面。
+objective_zh_hk: 為呢個包裹畀錢，係因為呢條路上嘅路唔得：堵塞、海峽、繞遠嘅地面。
+glossary:
+- en: last mile
+  zh: 最后一公里
+  zh_hk: 最後一公里
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What is the buyer paying for on this parcel trip?
+  zh: 这趟包裹，买方付的是什么？
+  zh_hk: 呢轉包裹，買方付嘅係咩？
+  answer_en: Door-to-door minutes the road may not sell. Jam, harbour, or a long ground loop.
+  answer_zh: 路上未必卖得出的门到门分钟。堵塞、海峡、或绕远的地面。
+  answer_zh_hk: 路上未必賣得出嘅門到門分鐘。堵塞、海峽、或者繞遠嘅地面。
+- id: Q2
+  type: transfer
+  en: If the road from Shenzhen to Sha Tin were empty and direct, would the same parcel still pay for the slot?
+  zh: 若深圳到沙田的路是空的、直的，这个包裹还会为时段付钱吗？
+  zh_hk: 若深圳到沙田嘅路係空嘅、直嘅，呢個包裹仲會為時段畀錢嗎？
+  answer_en: Probably not. The payment is the road’s failure, not the airframe.
+  answer_zh: 多半不会。付的是路不行，不是那台机器本身。
+  answer_zh_hk: 多數唔會。付嘅係路唔得，唔係嗰部機器本身。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Last mile
+  title_zh: 最后一公里
+  title_zh_hk: 最後一公里
+  en: Last sitting named the slot. Keep the small parcel from a Shenzhen roof to a Sha Tin locker. This short asks why anyone pays to lift it off the road.
+  zh: 上一讲给时段起了名。还是深圳屋顶到沙田储物柜的那个小包裹。这条短片问：为什么有人付钱，把它从路上拿开。
+  zh_hk: 上一講畀時段起咗名。仲係深圳屋頂到沙田儲物櫃嗰個小包裹。呢條短片問：點解有人畀錢，將佢由路上攞開。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Last mile
+  title_zh: 最后一公里
+  title_zh_hk: 最後一公里
+  formula: parcel pays for minutes the road may not sell
+  formula_en: parcel pays for minutes the road may not sell
+  formula_zh: 包裹付的是路上卖不出的分钟
+  formula_zh_hk: 包裹付嘅係路上賣唔出嘅分鐘
+  gloss_en: Jam, harbour, long ground loop
+  gloss_zh: 堵塞、海峡、绕远的地面
+  gloss_zh_hk: 堵塞、海峽、繞遠嘅地面
+  s1_en: Last mile is the last stretch to the door. On this corridor the road can jam, hit a harbour, or take a long loop.
+  s1_zh: 最后一公里是到门口的最后一段。这条线上，路会堵，会碰到海峡，也会绕很远。
+  s1_zh_hk: 最後一公里係到門口最後嗰截。呢條線上，路會塞，會碰到海峽，亦都會繞好遠。
+  s2_en: Willingness to pay is that failure. The buyer is not buying a flying toy. The buyer is buying door-to-door minutes.
+  s2_zh: 愿意付钱，是因为路不行。买方不是在买一只会飞的玩具。买方买的是门到门的分钟。
+  s2_zh_hk: 願意畀錢，係因為路唔得。買方唔係喺度買一隻會飛嘅玩具。買方買嘅係門到門嘅分鐘。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: Contrast
+  kicker_en: Contrast
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Road versus this line
+  title_zh: 路，对这条线
+  title_zh_hk: 路，對呢條線
+  left_en: Ground loop
+  left_zh: 地面绕行
+  left_zh_hk: 地面繞行
+  right_en: The air line
+  right_zh: 空中这条线
+  right_zh_hk: 空中呢條線
+  s1_en: On a clear, short road the parcel stays on the van. There is no extra willingness to pay for the slot.
+  s1_zh: 路又空又短，包裹就留在车上。没有人为时段多付钱。
+  s1_zh_hk: 路又空又短，包裹就留喺車上。冇人為時段多畀錢。
+  s2_en: On this corridor the ground can fail. Jam. Harbour. A long loop. That is when the slot finds a buyer.
+  s2_zh: 这条线上，地面可能不行。堵。海峡。绕远。时段这时才找得到买方。
+  s2_zh_hk: 呢條線上，地面可能唔得。塞。海峽。繞遠。時段呢陣先搵到買方。
+  s3_en: Write the road’s failure first. Do not write a market size.
+  s3_zh: 先写路不行。不要写市场规模。
+  s3_zh_hk: 先寫路唔得。唔好寫市場規模。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Pay for the road’s miss
+  title_zh: 为路的缺口付钱
+  title_zh_hk: 為路嘅缺口畀錢
+  q1_en: What is the parcel paying for?
+  q1_zh: 这个包裹付的是什么？
+  q1_zh_hk: 呢個包裹付嘅係咩？
+  q2_en: When does the same parcel not pay?
+  q2_zh: 什么时候同一个包裹不会付？
+  q2_zh_hk: 幾時同一個包裹唔會付？
+  s1_en: The parcel pays for minutes the road may not sell.
+  s1_zh: 包裹付的是路上未必卖得出的分钟。
+  s1_zh_hk: 包裹付嘅係路上未必賣得出嘅分鐘。
+  s2_en: If the road is empty and direct, the slot has no buyer on this trip.
+  s2_zh: 路若又空又直，这一趟时段就没有买方。
+  s2_zh_hk: 路若又空又直，呢一轉時段就冇買方。
+  s3_en: Next short keeps the same corridor and changes the payload. The clock becomes a medical clock.
+  s3_zh: 下一支短片还是这条线，只换载荷。钟变成医疗上的钟。
+  s3_zh_hk: 下一條短片仲係呢條線，淨係換載荷。鐘變成醫療上嘅鐘。

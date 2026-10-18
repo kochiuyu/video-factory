@@ -1,0 +1,482 @@
+id: STAT-M01-T12-KURT
+course: statistics
+course_en: Business Statistics
+course_zh: 商务统计
+course_zh_hk: 商務統計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 668
+title_en: What is kurtosis?
+title_zh: 什么是峰度？
+title_zh_hk: 咩係峰度？
+objective_en: Compare two shops that match on the average, the variance, and the skewness, use the fourth power of the distances to see which shop has the higher kurtosis, and explain why that number alone cannot set the reserve.
+objective_zh: 比较两家平均数、方差和偏度都相同的门店，用距离的四次方看出哪家峰度更高，并说明这个数本身不能定储备。
+objective_zh_hk: 比較兩間平均數、方差同偏度都相同嘅門店，用距離嘅四次方睇出邊間峰度更高，並說明呢個數本身唔可以定儲備。
+glossary:
+- en: kurtosis
+  zh: 峰度
+  zh_hk: 峰度
+  lock: true
+- en: variance
+  zh: 方差
+  zh_hk: 方差
+  lock: true
+- en: skewness
+  zh: 偏度
+  zh_hk: 偏度
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Two shops average 100 cups, have the same variance, and both have zero skewness. Why might a manager still look at kurtosis before setting one reserve?
+  question_zh: 两家店平均都是100杯，方差相同，偏度都是零。为什么经理在定同一份储备之前仍然可能要看峰度？
+  question_zh_hk: 兩間店平均都係100杯，方差相同，偏度都係零。點解經理定同一份儲備之前仍然可能要睇峰度？
+  options_en:
+  - 'A: The three matching facts can still hide which shop has the higher fourth-power average.'
+  - 'B: Kurtosis replaces the average.'
+  - 'C: The same variance means the far days are the same.'
+  - 'D: Kurtosis tells you tomorrow''s sales.'
+  options_zh:
+  - 'A: 三个对得上的事实，仍然可能看不出哪家的四次方平均值更高。'
+  - 'B: 峰度可以代替平均数。'
+  - 'C: 方差相同，就表示远的天相同。'
+  - 'D: 峰度可以告诉你明天的销量。'
+  options_zh_hk:
+  - 'A: 三個對得上嘅事實，仍然可能睇唔出邊間嘅四次方平均值更高。'
+  - 'B: 峰度可以代替平均數。'
+  - 'C: 方差相同，就表示遠嘅日相同。'
+  - 'D: 峰度可以話你知聽日嘅銷量。'
+  answer: A
+  explanation_en: Shop A and Shop B both average 100, both have variance 1,440 cups squared, and both have skewness 0. Shop A stays in a band. Shop B has two far days and three days on the average. Kurtosis is the next question after those three facts.
+  explanation_zh: A店和B店平均都是100，方差都是1,440杯的平方，偏度都是0。A店停在一个区间里。B店有两个远的天，三天正好在平均数上。看完这三个事实，下一个问题就是峰度。
+  explanation_zh_hk: A店同B店平均都係100，方差都係1,440杯嘅平方，偏度都係0。A店停喺一個區間入面。B店有兩個遠嘅日，三日啱啱喺平均數上。睇完呢三個事實，下一個問題就係峰度。
+- id: Q2
+  type: multiple_choice
+  question_en: A third shop has raw kurtosis 3.25. For a Normal distribution, raw kurtosis is 3. What can the manager conclude?
+  question_zh: 第三家店的原始峰度是3.25。正态分布的原始峰度是3。经理可以得出什么结论？
+  question_zh_hk: 第三間店嘅原始峰度係3.25。正態分布嘅原始峰度係3。經理可以得出咩結論？
+  options_en:
+  - 'A: The standardized fourth-power average is above the Normal benchmark. The number alone does not set the reserve.'
+  - 'B: The reserve must be 3.25 cups.'
+  - 'C: The shop has no far days, because 3.25 is close to 3.'
+  - 'D: The average and the variance must both be 3.25.'
+  options_zh:
+  - 'A: 标准化距离的四次方平均值高于正态基准。这个数本身不定储备。'
+  - 'B: 储备必须是3.25杯。'
+  - 'C: 这家店没有远离平均数的日子，因为3.25接近3。'
+  - 'D: 平均数和方差都必须是3.25。'
+  options_zh_hk:
+  - 'A: 標準化距離嘅四次方平均值高過正態基準。呢個數本身唔定儲備。'
+  - 'B: 儲備一定要係3.25杯。'
+  - 'C: 呢間店冇遠離平均數嘅日子，因為3.25接近3。'
+  - 'D: 平均數同方差都一定要係3.25。'
+  answer: A
+  explanation_en: Raw kurtosis 3.25 means the standardized fourth-power average exceeds the Normal benchmark of 3. It does not identify a reserve quantity. A reserve still needs the cost of waste, the cost of running out, how soon the shop can restock, and whether these days will happen again.
+  explanation_zh: 原始峰度3.25表示标准化距离的四次方平均值超过正态基准3。它不定储备的数量。定储备仍然要看浪费的成本、卖完的成本、多久能补货，以及这些天会不会再发生。
+  explanation_zh_hk: 原始峰度3.25表示標準化距離嘅四次方平均值超過正態基準3。佢唔定儲備嘅數量。定儲備仍然要睇浪費嘅成本、賣晒嘅成本、幾耐可以補貨，以及呢啲日會唔會再發生。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 54
+  kicker: The Question
+  kicker_en: The Question
+  kicker_zh: 业务问题
+  kicker_zh_hk: 業務問題
+  title_en: What is kurtosis?
+  title_zh: 什么是峰度？
+  title_zh_hk: 咩係峰度？
+  en: "Imagine you manage two coffee shops. You set one reserve for both. Both averaged 100 cups a day over five weekdays. One reserve near 100 looks right for both. It may not be. One shop's days stay in a band. The other's days are ordinary, or far from 100. A far day can empty the shelf, or leave cups to throw out. Which shop needs a different reserve? The number that answers that is called kurtosis. What is kurtosis?"
+  zh: "假设你管着两家咖啡店。你给两家定同一份储备。五个工作日里，两家平均每天都卖100杯。一份靠近100的储备看起来两家都合适。它可能不是。一家店的每天停在一个区间里。另一家是普通的一天，或者远离100。远的那天可能卖完，也可能剩下杯子要倒掉。哪家店需要另一份储备？回答这个问题的数叫作峰度。什么是峰度？"
+  zh_hk: "假設你管緊兩間咖啡店。你畀兩間定同一份儲備。五個平日入面，兩間平均每日都賣100杯。一份靠近100嘅儲備睇落兩間都合適。佢可能唔係。一間店嘅每日停喺一個區間入面。另一間係普通嘅一日，或者遠離100。遠嗰日可能賣晒，亦可能剩低杯要倒走。邊間店需要另一份儲備？回答呢個問題嘅數叫做峰度。咩係峰度？"
+- id: data
+  visual: series
+  reveal: cells
+  seconds: 50
+  cols: 5
+  kicker: Five Days
+  kicker_en: Five Days
+  kicker_zh: 五天
+  kicker_zh_hk: 五日
+  title_en: Same average. Different days.
+  title_zh: 平均相同，每天不同
+  title_zh_hk: 平均相同，每日唔同
+  row1_en: Shop A
+  row1_zh: A店
+  row1_zh_hk: A店
+  row2_en: Shop B
+  row2_zh: B店
+  row2_zh_hk: B店
+  col1_en: Day 1
+  col1_zh: 第1天
+  col1_zh_hk: 第1日
+  col2_en: Day 2
+  col2_zh: 第2天
+  col2_zh_hk: 第2日
+  col3_en: Day 3
+  col3_zh: 第3天
+  col3_zh_hk: 第3日
+  col4_en: Day 4
+  col4_zh: 第4天
+  col4_zh_hk: 第4日
+  col5_en: Day 5
+  col5_zh: 第5天
+  col5_zh_hk: 第5日
+  c11: "52"
+  c12: "64"
+  c13: "100"
+  c14: "136"
+  c15: "148"
+  c21: "40"
+  c22: "100"
+  c23: "100"
+  c24: "100"
+  c25: "160"
+  footer_en: Both totals = 500
+  footer_zh: 两家合计都是 500
+  footer_zh_hk: 兩間合計都係 500
+  s1_en: "Here are the five days behind that reserve. Shop A, in cups sold. Day 1 sold 52. Day 2 sold 64. Day 3 sold 100. Day 4 sold 136. Day 5 sold 148."
+  s1_zh: "这就是那份储备背后的五天。A店卖出的杯数。第1天卖了52杯。第2天卖了64杯。第3天卖了100杯。第4天卖了136杯。第5天卖了148杯。"
+  s1_zh_hk: "呢個就係嗰份儲備背後嘅五日。A店賣出嚟嘅杯數。第1日賣咗52杯。第2日賣咗64杯。第3日賣咗100杯。第4日賣咗136杯。第5日賣咗148杯。"
+  s2_en: "Those five add to 500, so the average is 100. The days stay between 52 and 148. No day sits far out on its own."
+  s2_zh: "这五天加起来是500，所以平均数是100。每天停在52到148之间。没有一天单独离得很远。"
+  s2_zh_hk: "呢五日加起嚟係500，所以平均數係100。每日停喺52到148之間。冇一日單獨離得好遠。"
+  s3_en: "Shop B sold 40, 100, 100, 100, and 160. Same total, same average. Three days sit on 100. Two days sit far out, at 40 and 160."
+  s3_zh: "B店卖了40、100、100、100和160杯。总数一样，平均数一样。三天正好是100。两天很远，在40和160。"
+  s3_zh_hk: "B店賣咗40、100、100、100同160杯。總數一樣，平均數一樣。三日啱啱係100。兩日好遠，喺40同160。"
+- id: plans
+  visual: two_column
+  seconds: 46
+  kicker: The Plans
+  kicker_en: The Plans
+  kicker_zh: 两套储备
+  kicker_zh_hk: 兩套儲備
+  title_en: One reserve. Not the same risk.
+  title_zh: 一份储备，风险不同
+  title_zh_hk: 一份儲備，風險唔同
+  left_en: "A stays in a band. A reserve near 100 can hold."
+  left_zh: "A停在一个区间。靠近100的储备可以撑住。"
+  left_zh_hk: "A停喺一個區間。靠近100嘅儲備可以撐住。"
+  right_en: "B has two far days. That reserve can fail."
+  right_zh: "B有两个远的天。那份储备可能撑不住。"
+  right_zh_hk: "B有兩個遠嘅日。嗰份儲備可能撐唔住。"
+  s1_en: "So the averages match, and the days do not. Set one reserve near 100 for Shop A. Its days stay in a band. That reserve can hold."
+  s1_zh: "所以平均数一样，每天不一样。给A店定一份靠近100的储备。它的每天停在一个区间里。那份储备可以撑住。"
+  s1_zh_hk: "所以平均數一樣，每日唔一樣。畀A店定一份靠近100嘅儲備。佢嘅每日停喺一個區間入面。嗰份儲備可以撐住。"
+  s2_en: "Set the same reserve for Shop B. Three days sit on 100. But the day at 160 can empty the shelf, and the day at 40 can leave cups to throw out."
+  s2_zh: "给B店定同一份储备。三天正好是100。但160的那天可能卖完，40的那天可能剩下杯子要倒掉。"
+  s2_zh_hk: "畀B店定同一份儲備。三日啱啱係100。但160嗰日可能賣晒，40嗰日可能剩低杯要倒走。"
+  s3_en: "Same average, different days, different reserves. The average cannot say which shop fails. Next we check it properly, then the spread, to see if either number can."
+  s3_zh: "平均相同，每天不同，储备不同。平均数说不出哪家撑不住。接下来我们把它算清楚，再看分散，看这两个数能不能说。"
+  s3_zh_hk: "平均相同，每日唔同，儲備唔同。平均數講唔出邊間撐唔住。跟住我哋將佢計清楚，再睇分散，睇呢兩個數可唔可以講。"
+- id: average
+  visual: definition_card
+  seconds: 36
+  kicker: The Average
+  kicker_en: The Average
+  kicker_zh: 平均数
+  kicker_zh_hk: 平均數
+  title_en: First, the equal share
+  title_zh: 先算平均份额
+  title_zh_hk: 先計平均份額
+  formula: 'Average = total / number of days
+
+    500 / 5 = 100'
+  formula_zh: '平均数 = 合计 / 天数
+
+    500 / 5 = 100'
+  formula_zh_hk: '平均數 = 合計 / 日數
+
+    500 / 5 = 100'
+  s1_en: "So can either number tell them apart? First the average, the 100 on the reserve. Each shop sold 500 cups over the five days. The average is the total shared equally. 500 divided by 5 is 100 cups a day."
+  s1_zh: "那么这两个数能不能把它们分开？先看平均数，就是储备上的那个100。每家店五天一共卖了500杯。平均数就是把总数平均分。500除以5，等于每天100杯。"
+  s1_zh_hk: "咁呢兩個數可唔可以將佢哋分開？先睇平均數，就係儲備上嗰個100。每間店五日一共賣咗500杯。平均數就係將總數平均分。500除以5，等於每日100杯。"
+  s2_en: "That does not mean either shop sold 100 every day. It is one reference number. Next we set each day beside 100, and see how far it sits."
+  s2_zh: "这不表示两家店每天真的都卖了100杯。它只是一个用来比较的数。接下来，把每天放在100旁边，看看离得有多远。"
+  s2_zh_hk: "呢個唔代表兩間店每日真係都賣咗100杯。佢只係一個用嚟比較嘅數。跟住，將每日放喺100旁邊，睇吓離得有幾遠。"
+- id: distance
+  visual: steps
+  seconds: 44
+  kicker: How Far
+  kicker_en: How Far
+  kicker_zh: 有多远
+  kicker_zh_hk: 有幾遠
+  title_en: Each day minus 100
+  title_zh: 每天减去100
+  title_zh_hk: 每日減100
+  step1_en: "A: −48, −36, 0, +36, +48"
+  step1_zh: "A：−48，−36，0，+36，+48"
+  step1_zh_hk: "A：−48，−36，0，+36，+48"
+  step2_en: "B: −60, 0, 0, 0, +60"
+  step2_zh: "B：−60，0，0，0，+60"
+  step2_zh_hk: "B：−60，0，0，0，+60"
+  step3_en: "Both sides balance"
+  step3_zh: "两边都平衡"
+  step3_zh_hk: "兩邊都平衡"
+  s1_en: "Start with how far each day sits from 100. Write a minus if the day was below, a plus if it was above. Shop A is minus 48, minus 36, zero, plus 36, and plus 48."
+  s1_zh: "先看每天离100有多远。低于100就写负号，高于100就写正号。A店是负48、负36、零、正36和正48。"
+  s1_zh_hk: "先睇每日離100有幾遠。低過100就寫負號，高過100就寫正號。A店係負48、負36、零、正36同正48。"
+  s2_en: "Shop B is minus 60, zero, zero, zero, and plus 60. Three days match the average. Two days sit 60 cups away."
+  s2_zh: "B店是负60、零、零、零和正60。三天正好是平均数。两天离了60杯。"
+  s2_zh_hk: "B店係負60、零、零、零同正60。三日啱啱係平均數。兩日離咗60杯。"
+  s3_en: "Look at the two sides. A's plus 48 and minus 48 match. B's plus 60 and minus 60 match. Neither shop leans high or low. Next we check the size of the swing."
+  s3_zh: "看两边。A店的正48和负48对得上。B店的正60和负60也对得上。两家都不偏向高或低。接下来检查晃动有多大。"
+  s3_zh_hk: "睇兩邊。A店嘅正48同負48對得上。B店嘅正60同負60都對得上。兩間都唔偏向高或者低。跟住檢查搖動有幾大。"
+- id: squares
+  visual: steps
+  seconds: 46
+  kicker: The Spread
+  kicker_en: The Spread
+  kicker_zh: 分散
+  kicker_zh_hk: 分散
+  title_en: Multiply by itself, then share
+  title_zh: 乘以自己，再平分
+  title_zh_hk: 乘自己，再平分
+  step1_en: "48 × 48 = 2,304. 36 × 36 = 1,296."
+  step1_zh: "48 × 48 = 2,304。36 × 36 = 1,296。"
+  step1_zh_hk: "48 × 48 = 2,304。36 × 36 = 1,296。"
+  step2_en: "A sum = 7,200. 7,200 / 5 = 1,440."
+  step2_zh: "A 的和 = 7,200。7,200 / 5 = 1,440。"
+  step2_zh_hk: "A 嘅和 = 7,200。7,200 / 5 = 1,440。"
+  step3_en: "B: 60 × 60 = 3,600, twice. Also 7,200."
+  step3_zh: "B：60 × 60 = 3,600，两次。也是 7,200。"
+  step3_zh_hk: "B：60 × 60 = 3,600，兩次。都係 7,200。"
+  s1_en: "Can we just add those how-far numbers? The two sides balance, like a seesaw, so the sum is zero. That does not mean the shops did not swing. Multiply each by itself, so both sides count."
+  s1_zh: "能不能把这些“有多远”直接加起来？两边平衡，像一个跷跷板，所以加起来是零。零不表示这两家店没有晃。每一个都乘以自己，两边才都算。"
+  s1_zh_hk: "可唔可以將呢啲「有幾遠」直接加起嚟？兩邊平衡，好似一個蹺蹺板，所以加起嚟係零。零唔代表呢兩間店冇搖。每一個都乘自己，兩邊先都計。"
+  s2_en: "For A, 48 times 48 is 2,304, on both sides. 36 times 36 is 1,296, on both sides. Add them and you get 7,200. Divide by 5. That is 1,440. Cups times cups."
+  s2_zh: "A店这边，48乘48是2,304，两边一样。36乘36是1,296，两边一样。加起来是7,200。除以5，等于1,440。杯乘杯。"
+  s2_zh_hk: "A店呢邊，48乘48係2,304，兩邊一樣。36乘36係1,296，兩邊一樣。加起嚟係7,200。除以5，等於1,440。杯乘杯。"
+  s3_en: "For B, 60 times 60 is 3,600, and it happens twice. That is also 7,200, and also 1,440. We call it the variance. The spread matches. It still cannot say which shop has the far days."
+  s3_zh: "B店这边，60乘60是3,600，而且有两次。也是7,200，也是1,440。我们叫它方差。分散对得上。它仍然说不出哪家有远的天。"
+  s3_zh_hk: "B店呢邊，60乘60係3,600，而且有兩次。都係7,200，都係1,440。我哋叫佢做方差。分散對得上。佢仍然講唔出邊間有遠嘅日。"
+- id: balance
+  visual: two_column
+  seconds: 40
+  kicker: The Balance
+  kicker_en: The Balance
+  kicker_zh: 平衡
+  kicker_zh_hk: 平衡
+  title_en: The two sides cancel
+  title_zh: 两边互相抵消
+  title_zh_hk: 兩邊互相抵銷
+  left_en: "A cubes: the plus and the minus match"
+  left_zh: "A 的立方：正的和负的对得上"
+  left_zh_hk: "A 嘅立方：正嘅同負嘅對得上"
+  right_en: "B cubes: plus 60 and minus 60 match"
+  right_zh: "B 的立方：正60和负60对得上"
+  right_zh_hk: "B 嘅立方：正60同負60對得上"
+  s1_en: "So the average matches, and the spread matches. Is there still a lean? Multiply each distance by itself, then by itself again. That keeps the sign. A's plus 48 and minus 48 give the same size, on opposite sides."
+  s1_zh: "所以平均数对得上，分散也对得上。还有没有偏向？把每个距离乘以自己，再乘以自己一次。符号还在。A店的正48和负48大小一样，在相反的两侧。"
+  s1_zh_hk: "所以平均數對得上，分散都對得上。仲有冇偏向？將每個距離乘自己，再乘自己一次。符號仲喺度。A店嘅正48同負48大細一樣，喺相反嘅兩邊。"
+  s2_en: "B's plus 60 and minus 60 do the same. Add the cubes and you get zero, for both shops. We call that skewness. Here it is zero. Neither shop leans high or low."
+  s2_zh: "B店的正60和负60也一样。把立方加起来，两家都是零。我们叫它偏度。这里是零。两家都不偏向高或低。"
+  s2_zh_hk: "B店嘅正60同負60都一樣。將立方加起嚟，兩間都係零。我哋叫佢做偏度。呢度係零。兩間都唔偏向高或者低。"
+  s3_en: "Three facts now match: the average, the variance, and the skewness. The days still do not. What is left is how far the far days sit. Next we look at that pattern."
+  s3_zh: "三个事实现在都对上了：平均数、方差、偏度。每天仍然对不上。剩下的是远的天离得有多远。接下来看这个样子。"
+  s3_zh_hk: "三個事實而家都對上咗：平均數、方差、偏度。每日仍然對唔上。剩低嘅係遠嘅日離得有幾遠。跟住睇呢個樣。"
+- id: shape
+  visual: two_column
+  seconds: 44
+  kicker: The Days
+  kicker_en: The Days
+  kicker_zh: 每天
+  kicker_zh_hk: 每日
+  title_en: A band, or two far days
+  title_zh: 一个区间，或两个远的天
+  title_zh_hk: 一個區間，或者兩個遠嘅日
+  left_en: "A: 52 to 148. No day far out."
+  left_zh: "A：52 到 148。没有很远的一天。"
+  left_zh_hk: "A：52 到 148。冇好遠嘅一日。"
+  right_en: "B: 40 and 160. Three days on 100."
+  right_zh: "B：40 和 160。三天在 100。"
+  right_zh_hk: "B：40 同 160。三日喺 100。"
+  s1_en: "So the three facts match, and the days do not. Shop A stays in a band, from 52 to 148. No day sits far from 100 on its own. A reserve near 100 can hold."
+  s1_zh: "所以三个事实对得上，每天对不上。A店停在一个区间里，从52到148。没有一天单独离100很远。靠近100的储备可以撑住。"
+  s1_zh_hk: "所以三個事實對得上，每日對唔上。A店停喺一個區間入面，由52到148。冇一日單獨離100好遠。靠近100嘅儲備可以撐住。"
+  s2_en: "Shop B is the other pattern. Three days sit on 100. Two days sit far out, at 40 and 160. The ordinary days and the far days are separate."
+  s2_zh: "B店是另一种样子。三天正好是100。两天很远，在40和160。普通的天和远的天是分开的。"
+  s2_zh_hk: "B店係另一種樣。三日啱啱係100。兩日好遠，喺40同160。普通嘅日同遠嘅日係分開嘅。"
+  s3_en: "Think of a queue. A's people stand in a group. B's people mostly stand together, and two stand far out. We have seen the pattern. Now we need a number for how much those far days weigh."
+  s3_zh: "可以把它想成一队人。A店的人站成一团。B店的人大多站在一起，还有两个远远站在外面。样子已经看见了。现在我们需要一个数，来说那些远的天有多重。"
+  s3_zh_hk: "可以將佢想成一隊人。A店嘅人企成一團。B店嘅人大多企埋一齊，仲有兩個遠遠企喺出面。個樣已經睇到。而家我哋需要一個數，嚟講嗰啲遠嘅日有幾重。"
+- id: why_fourth
+  visual: steps
+  seconds: 48
+  kicker: Why the Fourth
+  kicker_en: Why the Fourth
+  kicker_zh: 为什么要四次方
+  kicker_zh_hk: 點解要四次方
+  title_en: Multiply by itself, three more times
+  title_zh: 乘以自己，再乘三次
+  title_zh_hk: 乘自己，再乘三次
+  step1_en: "2 × 2 = 4. The sign is gone."
+  step1_zh: "2 × 2 = 4。符号没有了。"
+  step1_zh_hk: "2 × 2 = 4。符號冇咗。"
+  step2_en: "2 × 2 × 2 × 2 = 16"
+  step2_zh: "2 × 2 × 2 × 2 = 16"
+  step2_zh_hk: "2 × 2 × 2 × 2 = 16"
+  step3_en: "−2 to the fourth is also 16"
+  step3_zh: "−2 的四次方也是 16"
+  step3_zh_hk: "−2 嘅四次方都係 16"
+  step4_en: "4 to the fourth is 256. A far day weighs more."
+  step4_zh: "4 的四次方是 256。远的一天更重。"
+  step4_zh_hk: "4 嘅四次方係 256。遠嘅一日更重。"
+  s1_en: "Variance already multiplied each distance by itself. That wiped the sign, and that is why the two shops matched on spread. Two times two is 4. Minus 2 times minus 2 is also 4."
+  s1_zh: "方差已经把每个距离乘以自己。符号被抹掉了，所以两家店在分散上才对得上。2乘2等于4。负2乘负2也等于4。"
+  s1_zh_hk: "方差已經將每個距離乘自己。符號被抹走咗，所以兩間店喺分散上先對得上。2乘2等於4。負2乘負2都等於4。"
+  s2_en: "This time we multiply by itself, then again, then again. Two times two times two times two is 16. That is the fourth power. A small example first."
+  s2_zh: "这一次，我们乘以自己，再乘，再乘。2乘2乘2乘2等于16。这就是四次方。先看一个小的。"
+  s2_zh_hk: "呢一次，我哋乘自己，再乘，再乘。2乘2乘2乘2等於16。呢個就係四次方。先睇一個細嘅。"
+  s3_en: "Minus 2 to the fourth is also 16. The sign is gone, as it was for variance. A day above 100 and a day below 100 count the same. And a far day weighs more: 4 to the fourth is 256, while 2 to the fourth is only 16."
+  s3_zh: "负2的四次方也是16。符号没有了，和方差一样。高于100的一天和低于100的一天算得一样。而且远的一天更重：4的四次方是256，2的四次方只有16。"
+  s3_zh_hk: "負2嘅四次方都係16。符號冇咗，同方差一樣。高過100嘅一日同低過100嘅一日計得一樣。而且遠嘅一日更重：4嘅四次方係256，2嘅四次方只有16。"
+- id: fourths
+  visual: steps
+  seconds: 48
+  kicker: The Far Days
+  kicker_en: The Far Days
+  kicker_zh: 远的天
+  kicker_zh_hk: 遠嘅日
+  title_en: The far days outweigh
+  title_zh: 远的天压过了普通的天
+  title_zh_hk: 遠嘅日壓過咗普通嘅日
+  step1_en: "B: 60 × 60 × 60 × 60 = 12,960,000"
+  step1_zh: "B：60 × 60 × 60 × 60 = 12,960,000"
+  step1_zh_hk: "B：60 × 60 × 60 × 60 = 12,960,000"
+  step2_en: "Twice. The three days on 100 give 0."
+  step2_zh: "两次。正好在100的三天是 0。"
+  step2_zh_hk: "兩次。啱啱喺100嘅三日係 0。"
+  step3_en: "A: 48 to the fourth is 5,308,416. 36 is 1,679,616."
+  step3_zh: "A：48 的四次方是 5,308,416。36 是 1,679,616。"
+  step3_zh_hk: "A：48 嘅四次方係 5,308,416。36 係 1,679,616。"
+  step4_en: "B's two far days weigh more than A's band"
+  step4_zh: "B 的两个远的天，比 A 的区间更重"
+  step4_zh_hk: "B 嘅兩個遠嘅日，比 A 嘅區間更重"
+  s1_en: "Now do that for the far days. Start with Shop B, the one whose reserve can fail. Sixty times itself, three more times, is 12,960,000. It happens twice, once for 40 and once for 160."
+  s1_zh: "现在对远的天这样做。先从B店开始，就是储备可能撑不住的那家。60乘自己，再乘三次，等于12,960,000。有两次，一次是40，一次是160。"
+  s1_zh_hk: "而家對遠嘅日咁做。先由B店開始，就係儲備可能撐唔住嗰間。60乘自己，再乘三次，等於12,960,000。有兩次，一次係40，一次係160。"
+  s2_en: "The three days on 100 give zero. So B's whole number comes from two far days. They outweigh the ordinary days."
+  s2_zh: "正好在100的三天是零。所以B店整个数都来自两个远的天。它们压过了普通的天。"
+  s2_zh_hk: "啱啱喺100嘅三日係零。所以B店成個數都嚟自兩個遠嘅日。佢哋壓過咗普通嘅日。"
+  s3_en: "Shop A has no day that far. Forty-eight to the fourth is 5,308,416, on both sides. Thirty-six is 1,679,616, on both sides. Large, but smaller than B's two days at 60. The far days weigh more."
+  s3_zh: "A店没有那么远的一天。48的四次方是5,308,416，两边一样。36是1,679,616，两边一样。很大，但比B店两个60的天小。远的天更重。"
+  s3_zh_hk: "A店冇咁遠嘅一日。48嘅四次方係5,308,416，兩邊一樣。36係1,679,616，兩邊一樣。好大，但比起B店兩個60嘅日細。遠嘅日更重。"
+- id: name_kurt
+  visual: title_card
+  seconds: 32
+  kicker: The Name
+  kicker_en: The Name
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Kurtosis
+  title_zh: 峰度
+  title_zh_hk: 峰度
+  s1_en: "Kurtosis. That is the name. It is the number that says how much the far days weigh, after the average, the variance, and the skewness have already matched. Next, the formula writes these same steps in short names."
+  s1_zh: "峰度。这就是那个名字。它是那个说远的天有多重的数，在平均数、方差和偏度已经对上之后。接下来，公式用简称写下刚才这些步骤。"
+  s1_zh_hk: "峰度。呢個就係嗰個名。佢係嗰個講遠嘅日有幾重嘅數，喺平均數、方差同偏度已經對上之後。跟住，公式用簡稱寫低頭先呢啲步驟。"
+- id: formula
+  visual: steps
+  seconds: 50
+  kicker: The Formula
+  kicker_en: The Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Nicknames for steps we already did
+  title_zh: 给已经做过的步骤起简称
+  title_zh_hk: 畀已經做過嘅步驟起簡稱
+  step1_en: "Each day is an x. The average is μ = 100."
+  step1_zh: "每一天是一个 x。平均数是 μ = 100。"
+  step1_zh_hk: "每一日係一個 x。平均數係 μ = 100。"
+  step2_en: "Fourth power of the how-far: (x − μ) four times"
+  step2_zh: "“有多远”的四次方：(x − μ) 乘四次"
+  step2_zh_hk: "「有幾遠」嘅四次方：(x − μ) 乘四次"
+  step3_en: "Σ means add. n is 5. Then divide by σ⁴."
+  step3_zh: "Σ 表示相加。n 是 5。再除以 σ⁴。"
+  step3_zh_hk: "Σ 表示相加。n 係 5。再除以 σ⁴。"
+  step4_en: "A about 1.3. B is 2.5."
+  step4_zh: "A 大约 1.3。B 是 2.5。"
+  step4_zh_hk: "A 大約 1.3。B 係 2.5。"
+  s1_en: "The formula is only nicknames for steps we already did. Each day is an x. The average is mu, 100. How far is x minus mu. We then multiply that by itself, three more times."
+  s1_zh: "公式只是给已经做过的步骤起简称。每一天是一个 x。平均数是 mu，100。有多远就是 x 减去 mu。然后我们把它乘以自己，再乘三次。"
+  s1_zh_hk: "公式只係畀已經做過嘅步驟起簡稱。每一日係一個 x。平均數係 mu，100。有幾遠就係 x 減 mu。跟住我哋將佢乘自己，再乘三次。"
+  s2_en: "Capital sigma means add every one of those, not just two. n is how many days, 5. Sigma is the standard deviation, the number that times itself gives the variance. Sigma to the fourth takes the cups out, so the two shops can be compared as plain numbers."
+  s2_zh: "大写西格玛表示每一个都加，不是只加两个。n 是有多少天，5。西格玛是标准差，就是自己乘自己得到方差的那个数。西格玛的四次方把杯这个单位去掉，所以两家店可以当成普通的数来比较。"
+  s2_zh_hk: "大寫西格瑪表示每一個都加，唔係只加兩個。n 係有幾多日，5。西格瑪係標準差，就係自己乘自己得到方差嗰個數。西格瑪嘅四次方將杯呢個單位拎走，所以兩間店可以當成普通嘅數嚟比較。"
+  s3_en: "For Shop A the result is about 1.3. For Shop B it is 2.5. Higher means the far days weigh more. The same steps have a written form."
+  s3_zh: "A店算出来大约是1.3。B店是2.5。更高表示远的天更重。同样的步骤有一个写法。"
+  s3_zh_hk: "A店計出嚟大約係1.3。B店係2.5。更高表示遠嘅日更重。同樣嘅步驟有一個寫法。"
+- id: defn
+  visual: definition_card
+  seconds: 44
+  kicker: The Definition
+  kicker_en: The Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Kurtosis, written down
+  title_zh: 峰度，写成公式
+  title_zh_hk: 峰度，寫成公式
+  formula: 'Kurtosis = (sum of fourth powers / n) / σ⁴'
+  formula_zh: '峰度 = （四次方之和 / n） / σ⁴'
+  formula_zh_hk: '峰度 = （四次方之和 / n） / σ⁴'
+  formula_tex: "\\dfrac{\\sum (x_i - \\mu)^4 / n}{\\sigma^4}"
+  gloss: 'A about 1.3. B is 2.5. A Normal benchmark is 3.'
+  gloss_zh: 'A 大约 1.3。B 是 2.5。正态基准是 3。'
+  gloss_zh_hk: 'A 大約 1.3。B 係 2.5。正態基準係 3。'
+  s1_en: "Here is the written form. Raise each day's distance from the average to the fourth power. Add those, divide by n, then divide by sigma to the fourth. That last divide takes the cups out."
+  s1_zh: "这就是写法。把每天离平均数的距离放到四次方。把这些加起来，除以 n，再除以西格玛的四次方。最后这一步把杯这个单位去掉。"
+  s1_zh_hk: "呢個就係寫法。將每日離平均數嘅距離放到四次方。將呢啲加起嚟，除以 n，再除以西格瑪嘅四次方。最後呢一步將杯呢個單位拎走。"
+  s2_en: "This is raw kurtosis. For a Normal distribution, the benchmark is 3. Excess kurtosis would subtract 3, so a Normal would read 0. Do not mix the two. A is about 1.3. B is 2.5. Both sit below 3. B is higher, because of the two far days. This is the definition. It is not an order to change the reserve."
+  s2_zh: "这是原始峰度。正态分布的基准是3。超额峰度会再减3，所以正态会读成0。不要把两种算法混在一起。A大约是1.3。B是2.5。两家都低于3。B更高，因为有两个远的天。这就是定义。它不是改储备的指令。"
+  s2_zh_hk: "呢個係原始峰度。正態分布嘅基準係3。超額峰度會再減3，所以正態會讀成0。唔好將兩種計法撈埋。A大約係1.3。B係2.5。兩間都低過3。B更高，因為有兩個遠嘅日。呢個就係定義。佢唔係改儲備嘅指令。"
+- id: limit
+  visual: two_column
+  seconds: 44
+  kicker: The Limit
+  kicker_en: The Limit
+  kicker_zh: 限度
+  kicker_zh_hk: 限度
+  title_en: A reason to check, not an order
+  title_zh: 是检查的理由，不是指令
+  title_zh_hk: 係檢查嘅理由，唔係指令
+  left_en: Why it helps
+  left_zh: 它有什么用
+  left_zh_hk: 佢有咩用
+  right_en: What it is not
+  right_zh: 它不是什么
+  right_zh_hk: 佢唔係乜
+  s1_en: "So why keep the number, if it is not an order? It uses every day. The fourth power makes a far day weigh more than it did in the variance. Even when the average, the variance, and the skewness match, we can still see that the reserves should differ."
+  s1_zh: "那么如果它不是指令，为什么还要留着这个数？它用到每一天。四次方让远的一天比在方差里更重。即使平均数、方差和偏度都一样，我们仍然看得出储备应该不同。"
+  s1_zh_hk: "咁如果佢唔係指令，點解仲要留住呢個數？佢用到每一日。四次方令遠嘅一日比起喺方差入面更重。就算平均數、方差同偏度都一樣，我哋仍然睇得出儲備應該唔同。"
+  s2_en: "One far morning can pull the number up, but the number is calculated from all five days. Two different patterns of days can also give the same number. Keep the five days in view."
+  s2_zh: "一个远离平均数的早晨可以把这个数拉高，但这个数是用全部五天算出来的。两种不同的五天，也可能算出同一个数。所以还要看着原来的五天。"
+  s2_zh_hk: "一個遠離平均數嘅早晨可以將呢個數拉高，但呢個數係用全部五日計出嚟嘅。兩種唔同嘅五日，亦可能計出同一個數。所以仲要睇住原本嘅五日。"
+  s3_en: "And 2.5 is not an order to hold 2.5 extra cups. It has no cups left in it. It says Shop B's two far days raise the fourth-power average. It does not say how many cups to hold."
+  s3_zh: "而且2.5不是多留2.5杯的指令。它里面已经没有杯了。它说明B店两个远的天抬高了四次方的平均值。它不说要留多少杯。"
+  s3_zh_hk: "而且2.5唔係多留2.5杯嘅指令。佢入面已經冇杯。佢講B店兩個遠嘅日抬高咗四次方嘅平均值。佢唔話要留幾多杯。"
+- id: answer
+  visual: takeaway
+  seconds: 48
+  kicker: The Answer
+  kicker_en: The Answer
+  kicker_zh: 回答问题
+  kicker_zh_hk: 回答問題
+  title_en: Same facts. Different reserves.
+  title_zh: 事实相同，储备不同
+  title_zh_hk: 事實相同，儲備唔同
+  q1_en: Which shop needs a different reserve?
+  q1_zh: 哪家店需要另一份储备？
+  q1_zh_hk: 邊間店需要另一份儲備？
+  q2_en: What else is needed before setting the reserve?
+  q2_zh: 定储备之前，还需要什么？
+  q2_zh_hk: 定儲備之前，仲需要咩？
+  s1_en: "Back to the question. Same average, same spread, same balance, different reserves. Shop A is about 1.3. Its days stay between 52 and 148. A reserve near 100 can hold."
+  s1_zh: "回到问题。平均相同，分散相同，平衡相同，储备不同。A店大约是1.3。每天停在52到148之间。靠近100的储备可以撑住。"
+  s1_zh_hk: "返到問題。平均相同，分散相同，平衡相同，儲備唔同。A店大約係1.3。每日停喺52到148之間。靠近100嘅儲備可以撐住。"
+  s2_en: "Shop B is 2.5. Three days sit on 100, and two days sit 60 cups away. Those two far days raise the number. A Normal benchmark is 3, and both shops sit below it. B is higher. That is the comparison."
+  s2_zh: "B店是2.5。三天正好是100，两天离了60杯。这两个远的天把数字抬高了。正态基准是3，两家都低于它。B更高。这是比较。"
+  s2_zh_hk: "B店係2.5。三日啱啱係100，兩日離咗60杯。呢兩個遠嘅日將數字抬高咗。正態基準係3，兩間都低過佢。B更高。呢個係比較。"
+  s3_en: "Before you set the reserve, check the cost of wasted cups, the cost of running out, how soon the shop can restock, and whether these five days will happen again. These numbers describe only the five days we supposed. Neither the average, nor the variance, nor the skewness, nor the kurtosis writes the reserve by itself."
+  s3_zh: "定储备之前，还要看倒掉杯子的成本、卖完的成本、多久能补货，以及这五天会不会再发生。这些数只描述我们假设的五天。平均数、方差、偏度、峰度，哪一个都不能单独写储备。"
+  s3_zh_hk: "定儲備之前，仲要睇倒走杯嘅成本、賣晒嘅成本、幾耐可以補貨，以及呢五日會唔會再發生。呢啲數只係描述我哋假設嘅五日。平均數、方差、偏度、峰度，邊一個都唔可以單獨寫儲備。"

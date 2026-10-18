@@ -1,0 +1,221 @@
+id: STAT-M05-T08-ONETAIL
+course: STAT-M05
+course_en: Hypothesis Testing & Store Experiments
+course_zh: 假设检验与门店运营实验
+course_zh_hk: 假設檢驗與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'One-Tailed versus Two-Tailed Tests: Choosing Direction Before Data'
+title_zh: 单尾与双尾检验：在查看数据前确定方向
+title_zh_hk: 單尾同雙尾檢驗：喺查看數據之前確定方向
+objective_en: Distinguish directional one-tailed alternatives from non-directional two-tailed alternatives, explain how alpha
+  is allocated, justify direction before data collection, calculate a left-tailed one-sample t-test, and avoid treating statistical
+  significance as automatic approval for an investment.
+objective_zh: 区分定向单尾备择与非定向双尾备择，解释 alpha 的分配方式，在收集数据前说明方向依据，计算左尾单样本 t 检验，并避免把统计显著性直接当作投资批准。
+objective_zh_hk: 區分定向單尾備擇同非定向雙尾備擇，解釋 alpha 嘅分配方式，喺收集數據之前說明方向依據，計算左尾單樣本 t 檢驗，並避免將統計顯著性直接當成投資批准。
+glossary:
+- en: one-tailed test
+  zh: 单尾检验/单侧检验
+  zh_hk: 單尾檢驗/單側檢驗
+  lock: true
+- en: two-tailed test
+  zh: 双尾检验/双侧检验
+  zh_hk: 雙尾檢驗/雙側檢驗
+  lock: true
+- en: directional alternative
+  zh: 定向备择假设
+  zh_hk: 定向備擇假設
+  lock: true
+- en: post-hoc directional bias
+  zh: 事后定向选择偏差
+  zh_hk: 事後定向選擇偏差
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: When is a directional one-tailed test methodologically defensible?
+  question_zh: 在何种特定的管理与商业战略前提下，决策层在方法论上才具有充分依据采用单向定向单尾检验？
+  question_zh_hk: 喺邊種特定嘅管理同商業戰略前提下，決策層喺方法論上先至具有充分依據採用單向定向單尾檢驗？
+  options_en:
+  - 'A: When the directional alternative is meaningful and specified before seeing the data, and the opposite direction does
+    not support that claim.'
+  - 'B: Whenever the initial sample size collected by store supervisors is fewer than 10 transactions.'
+  - 'C: Whenever the analyst glances at the sample mean and sees that it leans in a favorable direction.'
+  - 'D: Only when the metric being evaluated is recorded in Hong Kong Dollars rather than continuous seconds.'
+  options_zh:
+  - 'A: 当企业的资本行动具有严格的非对称性，即反方向的异动与毫无变化在商业后果上完全等价时（例如唯有确凿证实能够缩短工时才会批复改造预算）。'
+  - 'B: 只要门店值班主管在现场采集的初始样本量少于 10 笔订单流水时。'
+  - 'C: 只要数据分析师在瞥见实测样本均值后，发现其偏离方向对管理层立项有利时。'
+  - 'D: 唯有当受评指标是以港币金额结算而非以连续秒数计时的情况下。'
+  options_zh_hk:
+  - 'A: 當企業嘅資本行動具有嚴格嘅非對稱性，即係反方向嘅異動與毫無變化喺商業後果上完全等價嗰陣（好似淨係得確鑿證實能夠縮短工時先會批復改造預算）。'
+  - 'B: 只要門市值班主管喺現場採集嘅初始樣本量少過 10 筆訂單流水嗰陣。'
+  - 'C: 只要數據分析師喺睄到實測樣本均值後，發現其偏離方向對管理層立項有利嗰陣。'
+  - 'D: 淨係得當受評指標係以港幣金額結算而唔係以連續秒數計時嘅情況下。'
+  answer: A
+  explanation_en: A one-tailed test concentrates alpha in one prespecified direction. Selecting the direction after observing
+    results invalidates the intended error-control rule.
+  explanation_zh: 单尾检验将全部显著性 alpha 集中押注在单一侧尾部。唯有当管理层决策具有绝对的单向非对称性时才合法——即指标变差或毫无改善在商业决断上完全一样：坚决撤销立项。
+  explanation_zh_hk: 單尾檢驗將全部顯著性 alpha 集中押注喺單一側尾部。淨係得當管理層決策具有絕對嘅單向非對稱性嗰陣先至合法——即係指標變差或者毫無改善喺商業決斷上完全一樣：堅決撤銷立項。
+- id: Q2
+  type: multiple_choice
+  question_en: 'Assume H0: mu >= 42.0 s versus H1: mu < 42.0 s, n = 25, x-bar = 39.9 s, s = 5.0 s, and df = 24. What is the
+    left-tailed decision at alpha = 0.05?'
+  question_zh: '都市咖啡在旺角店测试吧台人体工效学改造（H0: mu >= 42.0 秒 对决 H1: mu < 42.0 秒）。抽测 n = 25 杯，测得均值 x-bar = 39.9 秒，样本标准差 s = 5.0 秒（自由度
+    df = 24）。在 alpha = 0.05 水平下，t_calc、临界值以及相较于双尾检验的裁决结果分别是什么？'
+  question_zh_hk: '都市咖啡喺旺角舖測試吧台人體工效學改造（H0: mu >= 42.0 秒 對決 H1: mu < 42.0 秒）。抽測 n = 25 杯，測得均值 x-bar = 39.9 秒，樣本標準差 s = 5.0
+    秒（自由度 df = 24）。喺 alpha = 0.05 水平下，t_calc、臨界值以及相較於雙尾檢驗嘅裁決結果分別係幾多？'
+  options_en:
+  - 'A: SE = 1.0 s; t = -2.10; cutoff = -1.711; p ≈ 0.0232; reject H0.'
+  - 'B: SE = 5.0 / 25 = 0.20s; t_calc = -10.5. Fail to reject H0.'
+  - 'C: t_calc = -2.10. One-tailed cutoff is -2.492. Fail to reject H0 under all conditions.'
+  - 'D: t_calc = +2.10; the test is statistically invalid because preparation time is positive.'
+  options_zh:
+  - 'A: SE = 5.0 / 根号(25) = 1.0 秒；t_calc = (39.9 - 42.0) / 1.0 = -2.10。单尾临界值为 -1.711。在单尾检验下坚决拒绝 H0（双尾临界值为 -2.064，此处同样拒绝）。'
+  - 'B: SE = 5.0 / 25 = 0.20 秒；t_calc = -10.5。判定不拒绝 H0。'
+  - 'C: t_calc = -2.10。单尾临界值为 -2.492。在任何条件下均判定不拒绝 H0。'
+  - 'D: t_calc = +2.10；检验在统计学上失效，因为出餐制作时间在物理上不可能为负数。'
+  options_zh_hk:
+  - 'A: SE = 5.0 / 根號(25) = 1.0 秒；t_calc = (39.9 - 42.0) / 1.0 = -2.10。單尾臨界值為 -1.711。喺單尾檢驗下堅決拒絕 H0（雙尾臨界值為 -2.064，呢度同樣拒絕）。'
+  - 'B: SE = 5.0 / 25 = 0.20 秒；t_calc = -10.5。判定唔拒絕 H0。'
+  - 'C: t_calc = -2.10。單尾臨界值為 -2.492。喺任何條件下均判定唔拒絕 H0。'
+  - 'D: t_calc = +2.10；檢驗喺統計學上失效，因為出餐製作時間喺物理上唔可能為負數。'
+  answer: A
+  explanation_en: SE = 5 / sqrt(25) = 1. The statistic is -2.10, below the left-tail cutoff -1.711, and the one-tailed p-value
+    is approximately 0.0232.
+  explanation_zh: 标准误 SE = 5.0 / 5 = 1.0 秒。检验统计量 t = (39.9 - 42.0) / 1.0 = -2.10。自由度 df = 24 且 alpha = 0.05 时，左侧单尾临界值为 -1.711。因
+    -2.10 显著跌破 -1.711，坚决拒绝 H0。单尾检验将全部拒绝概率集中于左尾，显著放大了证实提速的统计功效。
+  explanation_zh_hk: 標準誤 SE = 5.0 / 5 = 1.0 秒。檢驗統計量 t = (39.9 - 42.0) / 1.0 = -2.10。自由度 df = 24 且 alpha = 0.05 嗰陣，左側單尾臨界值為
+    -1.711。因 -2.10 顯著跌破 -1.711，堅決拒絕 H0。單尾檢驗將全部拒絕概率集中喺左尾，顯著放大咗證實提速嘅統計功效。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  kicker_en: The Ergonomic Bar Redesign
+  kicker_zh: 吧台动线重塑实验
+  kicker_zh_hk: 吧台動線重塑實驗
+  title_en: Should the test detect improvement only, or any change?
+  title_zh: 检验应只检测改善，还是检测任何变化？
+  title_zh_hk: 檢驗應該只檢測改善，定係檢測任何變化？
+  en: Metro Coffee is evaluating an assumed bar-layout redesign against a 42.0-second mean preparation benchmark. Management
+    must decide before examining results whether the statistical question is directional, asking only whether mean time is
+    lower, or non-directional, asking whether it differs in either direction. That choice determines where the significance
+    level is placed and which departures count as evidence.
+  zh: 都市咖啡正在评估一项假设的吧台动线改造，并以 42.0 秒平均制作时间为基准。管理层必须在查看结果前决定统计问题是否具有方向性：只问平均时间是否更低，还是进行非定向检验，询问平均时间是否向任一方向变化。该选择决定显著性水平如何分配，以及哪些偏离会被视为证据。
+  zh_hk: 都市咖啡正評估一項假設嘅吧台動線改造，並以 42.0 秒平均製作時間做基準。管理層必須喺查看結果之前決定統計問題係咪具有方向性：只問平均時間係咪更低，定係進行非定向檢驗，詢問平均時間係咪向任何一個方向變化。呢個選擇決定顯著性水平點樣分配，以及邊啲偏離會被視為證據。
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: Direction determines the alternative and rejection tail
+  title_zh: 方向决定备择假设与拒绝尾部
+  title_zh_hk: 方向決定備擇假設同拒絕尾部
+  formula: 'Two-sided: H1: mu != mu_0; left-tailed: H1: mu < mu_0'
+  formula_zh: '双侧：H1: mu != mu_0；左尾：H1: mu < mu_0'
+  formula_zh_hk: '雙側：H1: mu != mu_0；左尾：H1: mu < mu_0'
+  formula_tex: H_1:\mu\ne\mu_0\quad\text{or}\quad H_1:\mu<\mu_0
+  s1_en: A two-tailed test treats sufficiently large departures above or below the benchmark as evidence against H0. At level
+    alpha, the rejection probability is split across both tails, usually alpha over two in each tail for a symmetric test.
+  s1_zh: 双尾检验把高于或低于基准的充分大偏离都视为反对 H0 的证据。在显著性水平 alpha 下，对称检验通常把拒绝概率分到两个尾部，每侧为 alpha / 2。
+  s1_zh_hk: 雙尾檢驗將高過或者低過基準嘅充分大偏離都視為反對 H0 嘅證據。喺顯著性水平 alpha 之下，對稱檢驗通常將拒絕概率分到兩個尾部，每側係 alpha / 2。
+  s2_en: A one-tailed test places the rejection region in one prespecified direction. It is appropriate only when the directional
+    claim and its decision relevance are established before data inspection. Results in the opposite direction do not support
+    that directional alternative, even if they are operationally important.
+  s2_zh: 单尾检验把拒绝域放在预先指定的一个方向。只有在查看数据前已经确定方向性主张及其决策意义时才适用。反方向结果即使具有经营重要性，也不支持该定向备择。
+  s2_zh_hk: 單尾檢驗將拒絕域放喺預先指定嘅一個方向。只有喺查看數據之前已經確定方向性主張同決策意義嗰陣先適用。反方向結果即使具有營運重要性，亦唔支持嗰個定向備擇。
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  kicker_en: The Power Advantage
+  kicker_zh: 威力与红线
+  kicker_zh_hk: 威力與紅線
+  title_en: One tail increases directional power but narrows the claim
+  title_zh: 单尾提高定向功效，但缩窄可检验主张
+  title_zh_hk: 單尾提高定向功效，但收窄可檢驗主張
+  left_en: 'Left-tailed, df = 24, alpha = 0.05: cutoff = -1.711'
+  left_zh: 左尾，df = 24，alpha = 0.05：临界值 = -1.711
+  left_zh_hk: 左尾，df = 24，alpha = 0.05：臨界值 = -1.711
+  right_en: 'Two-tailed, df = 24, alpha = 0.05: cutoffs = +/-2.064'
+  right_zh: 双尾，df = 24，alpha = 0.05：临界值 = ±2.064
+  right_zh_hk: 雙尾，df = 24，alpha = 0.05：臨界值 = ±2.064
+  s1_en: Putting all alpha in the left tail moves the relevant cutoff from minus 2.064 to minus 1.711 for 24 degrees of freedom.
+    This gives greater power for a true decrease while providing no rejection region for an increase.
+  s1_zh: 当自由度为 24 时，把全部 alpha 放在左尾，会使相关临界点从 -2.064 移至 -1.711。这提高了检测真实下降的功效，但不会为上升方向设置拒绝域。
+  s1_zh_hk: 當自由度係 24 嗰陣，將全部 alpha 放喺左尾，會令相關臨界點由 -2.064 移至 -1.711。呢個提高咗檢測真實下降嘅功效，但唔會為上升方向設定拒絕域。
+  s2_en: Choosing one tail after seeing the sample invalidates the advertised error-control plan because the favorable direction
+    was selected using the same data. The alternative, alpha, outcome, and analysis rule should be documented before outcomes
+    are inspected.
+  s2_zh: 在看到样本后才选择单尾，会破坏所声称的错误控制方案，因为有利方向由同一批数据选出。备择假设、alpha、结果变量与分析规则应在查看结果前形成记录。
+  s2_zh_hk: 喺睇到樣本之後先選擇單尾，會破壞所聲稱嘅錯誤控制方案，因為有利方向由同一批數據選出。備擇假設、alpha、結果變量同分析規則應該喺查看結果之前形成記錄。
+  s3_en: A one-tailed result supports only the prespecified directional claim under the model. It does not establish profitability,
+    causality, rollout suitability, or the required capital decision. Those conclusions need separate evidence and documented
+    decision criteria.
+  s3_zh: 单尾结果只在既定模型下支持预先指定的方向性主张。它不能证明盈利、因果、推广适用性或所需资本决策。这些结论需要独立证据与有文件依据的决策标准。
+  s3_zh_hk: 單尾結果只喺既定模型之下支持預先指定嘅方向性主張。佢唔可以證明盈利、因果、推廣適用性或者所需資本決策。呢啲結論需要獨立證據同有文件依據嘅決策標準。
+- id: ledger
+  visual: steps
+  seconds: 38
+  kicker_en: The Ledger
+  kicker_zh: 台账实裁
+  kicker_zh_hk: 台賬實裁
+  title_en: Execute the assumed left-tailed preparation-time test
+  title_zh: 执行假设左尾制作时间检验
+  title_zh_hk: 執行假設左尾製作時間檢驗
+  step1_en: 'Pre-specify H0: mu >= 42.0 s versus H1: mu < 42.0 s; alpha = 0.05, n = 25, df = 24'
+  step1_zh: '预先设定 H0: mu >= 42.0 s 对 H1: mu < 42.0 s；alpha = 0.05，n = 25，df = 24'
+  step1_zh_hk: '預先設定 H0: mu >= 42.0 s 對 H1: mu < 42.0 s；alpha = 0.05，n = 25，df = 24'
+  step2_en: Assume x-bar = 39.9 s and s = 5.0 s; SE = 1.0 s; t = (39.9 - 42.0) / 1.0 = -2.10
+  step2_zh: 假设 x-bar = 39.9 s，s = 5.0 s；SE = 1.0 s；t = (39.9 - 42.0) / 1.0 = -2.10
+  step2_zh_hk: 假設 x-bar = 39.9 s，s = 5.0 s；SE = 1.0 s；t = (39.9 - 42.0) / 1.0 = -2.10
+  step3_en: Left-tailed cutoff = -1.711; p ≈ 0.0232; reject H0 at alpha = 0.05
+  step3_zh: 左尾临界值 = -1.711；p ≈ 0.0232；在 alpha = 0.05 时拒绝 H0
+  step3_zh_hk: 左尾臨界值 = -1.711；p ≈ 0.0232；喺 alpha = 0.05 嗰陣拒絕 H0
+  s1_en: For illustration, assume 25 independent drink-preparation times have a sample mean of 39.9 seconds and sample standard
+    deviation of 5.0 seconds. The benchmark is 42.0 seconds, and the left-tailed alternative was specified before observing
+    results. These are teaching assumptions, not verified store, investment, or engineering records.
+  s1_zh: 作为示例，假设 25 个独立饮品制作时间的样本均值为 39.9 秒，样本标准差为 5.0 秒，基准为 42.0 秒，并且左尾备择在查看结果前已经设定。这些数字是教学假设，并非已核实的门店、投资或工程记录。
+  s1_zh_hk: 作為例子，假設 25 個獨立飲品製作時間嘅樣本均值係 39.9 秒，樣本標準差係 5.0 秒，基準係 42.0 秒，而且左尾備擇喺查看結果之前已經設定。呢啲數字係教學假設，唔係已核實嘅門市、投資或者工程記錄。
+  s2_en: The estimated standard error is 5.0 divided by the square root of 25, equal to 1.0 second. The test statistic is
+    minus 2.10. With 24 degrees of freedom, the left-tail 5% cutoff is approximately minus 1.711.
+  s2_zh: 估计标准误为 5.0 除以根号 25，等于 1.0 秒。检验统计量为 -2.10。自由度为 24 时，5% 左尾临界值约为 -1.711。
+  s2_zh_hk: 估計標準誤係 5.0 除以根號 25，等於 1.0 秒。檢驗統計量係 -2.10。自由度係 24 嗰陣，5% 左尾臨界值約係 -1.711。
+  s3_en: Because minus 2.10 is below minus 1.711, reject H0; the one-tailed p-value is approximately 0.0232. Under the assumptions,
+    the sample supports a population mean below 42.0 seconds. It does not by itself authorize funding or show that the redesign
+    caused the reduction.
+  s3_zh: 由于 -2.10 低于 -1.711，拒绝 H0；单尾 p 值约为 0.0232。在既定假设下，样本支持总体均值低于 42.0 秒。它本身不能批准资金，也不能证明改造导致了时间下降。
+  s3_zh_hk: 由於 -2.10 低過 -1.711，拒絕 H0；單尾 p 值約係 0.0232。喺既定假設之下，樣本支持總體均值低過 42.0 秒。佢本身唔可以批准資金，亦唔可以證明改造導致時間下降。
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Choose the tail from the question, never from the result
+  title_zh: 根据问题选择尾部，绝不能根据结果选择
+  title_zh_hk: 根據問題選擇尾部，絕對唔可以根據結果選擇
+  q1_en: When is a one-tailed test defensible?
+  q1_zh: 什么时候使用单尾检验具有依据？
+  q1_zh_hk: 幾時使用單尾檢驗具有依據？
+  q2_en: What should accompany a significant directional result?
+  q2_zh: 显著的方向性结果还应配合哪些信息？
+  q2_zh_hk: 顯著嘅方向性結果仲應該配合邊啲資訊？
+  s1_en: Use a one-tailed test when the directional claim is scientifically and operationally meaningful, the opposite direction
+    does not count as evidence for that claim, and the direction is specified before data inspection. Otherwise, use a two-tailed
+    test.
+  s1_zh: 当方向性主张具有科学与经营意义、反方向不构成该主张的证据，并且方向在查看数据前已经设定时，可使用单尾检验；否则应使用双尾检验。
+  s1_zh_hk: 當方向性主張具有科學同營運意義、反方向唔構成嗰個主張嘅證據，而且方向喺查看數據之前已經設定嗰陣，可以使用單尾檢驗；否則應該使用雙尾檢驗。
+  s2_en: Report the prespecified hypotheses, direction, alpha, effect estimate, confidence interval, test statistic, p-value,
+    assumptions, and sampling design. Evaluate practical importance, costs, implementation risk, and causal evidence separately
+    from statistical significance.
+  s2_zh: 应报告预先指定的假设、方向、alpha、效应估计、置信区间、检验统计量、p 值、假设与抽样设计。实际重要性、成本、实施风险与因果证据应与统计显著性分开评估。
+  s2_zh_hk: 應該報告預先指定嘅假設、方向、alpha、效應估計、置信區間、檢驗統計量、p 值、假設同抽樣設計。實際重要性、成本、實施風險同因果證據應該同統計顯著性分開評估。
+  s3_en: For the assumed preparation-time example, t equals minus 2.10 and the left-tailed p-value is approximately 0.0232,
+    so the 5% test rejects H0. The narrow conclusion is evidence that the population mean is below 42.0 seconds under the
+    stated assumptions.
+  s3_zh: 在假设制作时间示例中，t = -2.10，左尾 p 值约为 0.0232，因此 5% 检验拒绝 H0。谨慎结论是：在既定假设下，有证据表明总体均值低于 42.0 秒。
+  s3_zh_hk: 喺假設製作時間例子入面，t = -2.10，左尾 p 值約係 0.0232，所以 5% 檢驗拒絕 H0。審慎結論係：喺既定假設之下，有證據表明總體均值低過 42.0 秒。

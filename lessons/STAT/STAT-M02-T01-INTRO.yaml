@@ -1,0 +1,167 @@
+id: STAT-M02-T01-INTRO
+course: statistics
+course_en: Business Probability Foundations
+course_zh: 商务概率基础
+course_zh_hk: 商務概率基礎
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 154
+title_en: "Seeing tomorrow through probability"
+title_zh: "用概率透视明天的商业不确定性"
+title_zh_hk: "用概率透視聽日嘅商業不確定性"
+objective_en: "Introduce probability as the forward-looking language of business risk, distinguish historical descriptive receipts from probabilistic forecasts, and establish the four core pillars of managerial decision-making under uncertainty."
+objective_zh: "将概率介绍为衡量企业未来风险的前瞻性语言，区分历史描述性账目与前瞻性概率预测，并确立不确定性下商业决策的四大核心支柱。"
+objective_zh_hk: "將概率介紹為衡量企業未來風險嘅前瞻性語言，區分歷史描述性賬目與前瞻性概率預測，並確立不確定性之下商業決策嘅四大核心支柱。"
+glossary:
+- en: "probability"
+  zh: "概率"
+  zh_hk: "概率"
+  lock: true
+- en: "uncertainty"
+  zh: "不确定性"
+  zh_hk: "不確定性"
+  lock: true
+- en: "risk management"
+  zh: "风险管理"
+  zh_hk: "風險管理"
+  lock: true
+- en: "sample space"
+  zh: "样本空间"
+  zh_hk: "樣本空間"
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: "What is the primary difference between descriptive statistics and business probability?"
+  question_zh: "描述性统计与商务概率论之间最根本的区别是什么？"
+  question_zh_hk: "描述性統計同商務概率論之間最根本嘅分別係咩？"
+  options_en:
+  - "A: Descriptive statistics summarizes historical past data, while probability quantifies future uncertainty for decision-making."
+  - "B: Descriptive statistics only uses addition, while probability only uses division."
+  - "C: Probability can only be calculated on government tax documents."
+  - "D: Descriptive statistics guarantees that future store sales will never change."
+  options_zh:
+  - "A: 描述性统计汇总的是过去的既成历史数据，而概率论量化的是面向未来的不确定性以指导决策。"
+  - "B: 描述性统计只涉及加法运算，而概率论只涉及除法运算。"
+  - "C: 概率只能用于政府税务合规文件的计算。"
+  - "D: 描述性统计能够百分之百保证未来的门店销量永远不再变化。"
+  options_zh_hk:
+  - "A: 描述性統計匯總嘅係過去嘅既成歷史數據，而概率論量化嘅係面向未來嘅不確定性以指導決策。"
+  - "B: 描述性統計淨係涉及加法運算，而概率論淨係涉及除法運算。"
+  - "C: 概率淨係可以用喺政府稅務合規文件嘅計算。"
+  - "D: 描述性統計能夠百分之百保證未來嘅門店銷量永遠唔再變化。"
+  answer: A
+  explanation_en: "Descriptive statistics looks backward at recorded receipts, while probability models the likelihood of future operational outcomes before they occur."
+  explanation_zh: "描述性统计向后回顾已经发生的账目流水，而概率论在事件发生前对未来的营运结果可能性进行前瞻量化。"
+  explanation_zh_hk: "描述性統計向後回顧已經發生咗嘅賬目流水，而概率論喺事件發生之前對未來嘅營運結果可能性進行前瞻量化。"
+- id: Q2
+  type: multiple_choice
+  question_en: "Why is a sound probabilistic decision still valuable even if a bad operational outcome occurs?"
+  question_zh: "为什么即便最终遭遇了不利的营运结果，一个优秀的概率决策依然极具管理价值？"
+  question_zh_hk: "點解就算最終遭遇咗唔好嘅營運結果，一個優秀嘅概率決策依然極具管理價值？"
+  options_en:
+  - "A: Good decision-making optimizes odds under uncertainty, distinguishing the quality of executive logic from unpredictable luck."
+  - "B: Regulators automatically refund all monetary losses if a probability formula was written down."
+  - "C: Probability calculations prevent bad weather from ever affecting retail stores."
+  - "D: Any decision involving probability is legally guaranteed to double company profit."
+  options_zh:
+  - "A: 优秀的决策是在不确定性下权衡最优胜率，将决策逻辑的严谨性与无法预测的随机运气区分开来。"
+  - "B: 只要在纸上写过概率计算公式，监管机构就会全额补偿所有经济损失。"
+  - "C: 概率计算可以彻底阻止恶劣天气对零售门店产生任何负面影响。"
+  - "D: 任何应用了概率论的商业决策，法律上都保证能让公司利润直接翻倍。"
+  options_zh_hk:
+  - "A: 優秀嘅決策係喺不確定性之下權衡最優勝率，將決策邏輯嘅嚴謹性同冇辦法預測嘅隨機運氣區分開嚟。"
+  - "B: 只要喺張紙度寫過概率計算公式，監管機構就會全額補償所有經濟損失。"
+  - "C: 概率計算可以徹底阻止惡劣天氣對零售門市產生任何負面影響。"
+  - "D: 任何應用咗概率論嘅商業決策，法律上都保證可以令公司利潤直接翻倍。"
+  answer: A
+  explanation_en: "Executives cannot control random luck, but they can control rational odds. Evaluating decisions by process rather than outcome alone protects the business over the long run."
+  explanation_zh: "管理者无法控制纯粹的随机运气，但可以掌控理性的胜率。依据决策过程而非单一偶发结果来评估管理，能在长期经营中守护企业。"
+  explanation_zh_hk: "管理者冇辦法控制純粹嘅隨機運氣，但可以掌控理性嘅勝率。依據決策過程而唔係單一偶發結果嚟評估管理，可以喺長期經營入面守護企業。"
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: "The Forward Challenge"
+  kicker_en: "The Forward Challenge"
+  kicker_zh: "前瞻挑战"
+  kicker_zh_hk: "前瞻挑戰"
+  title_en: "Looking past the cash register"
+  title_zh: "穿透收银机，望向未知的明天"
+  title_zh_hk: "穿透收銀機，望向未知嘅聽日"
+  en: "Our descriptive statistics course gave us the dials to summarize historical sales: Wan Chai averaged 420 cups, and the network standard deviation was 78 cups. But past receipts cannot change tomorrow. When tomorrow brings sudden storms, supply halts, or viral crowds, how do executives price the risks before they arrive?"
+  zh: "描述性统计课程赋予了我们总结历史销量的仪表盘：湾仔店日均 420 杯，全网标准差为 78 杯。但昨天的账本无法改变明天的事实。当明天可能突然遭遇暴雨、供应链断裂或突发客流时，管理者该如何在危机降临前精准衡量未来的风险？"
+  zh_hk: "描述性統計課程畀咗我哋總結歷史銷量嘅儀表板：灣仔舖日均 420 杯，全網標準差為 78 杯。但尋日嘅賬本冇辦法改變聽日嘅事實。當聽日可能突然遭遇暴雨、供應鏈斷裂或者突發客流嗰陣，管理者應該點樣喺危機降臨之前精準衡量未來嘅風險？"
+- id: roadmap
+  visual: module_open
+  seconds: 44
+  title_en: "The Four Probability Pillars"
+  title_zh: "管理不确定性的四大支柱"
+  title_zh_hk: "管理不確定性嘅四大支柱"
+  item1_en: "Universe: Defining all possible transaction outcomes"
+  item1_zh: "全集：穷尽界定所有可能的交易与营运结果"
+  item1_zh_hk: "全集：窮盡界定所有可能嘅交易同營運結果"
+  item2_en: "Conditioning: Updating odds when customer context changes"
+  item2_zh: "条件：根据顾客画像与场景动态更新胜率"
+  item2_zh_hk: "條件：根據顧客畫像同場景動態更新勝率"
+  item3_en: "Inversion: Diagnosing true equipment faults from alerts"
+  item3_zh: "逆转：透过传感器警报倒推设备真实故障率"
+  item3_zh_hk: "逆轉：透過傳感器警報倒推設備真實故障率"
+  item4_en: "Valuation: Pricing bets with Expected Monetary Value"
+  item4_zh: "定价：运用期望收益为保单与投资商业定价"
+  item4_zh_hk: "定價：運用期望收益為保單同投資商業定價"
+  en: "Navigating uncertainty requires four essential pillars. First, define the operational universe of all possible outcomes. Second, master conditioning to update probabilities as new data arrives. Third, use Bayesian inversion to diagnose real failures behind automated alarms. And fourth, weight financial stakes using expected value to make rational business bets."
+  zh: "驾驭商业不确定性需要四大支柱。第一，穷尽界定包含所有可能结果的业务全集。第二，掌握条件概率，随着新数据流入实时调整预判。第三，运用贝叶斯逆转，穿透自动化警报精准诊断底层真实故障。第四，运用期望值加权财务损益，做出理性的商业下注。"
+  zh_hk: "駕馭商業不確定性需要四大支柱。第一，窮盡界定包含所有可能結果嘅業務全集。第二，掌握條件概率，隨住新數據流入實時調整預判。第三，運用貝葉斯逆轉，穿透自動化警報精準診斷底層真實故障。第四，運用期望值加權財務損益，做出理性嘅商業下注。"
+- id: foundation
+  visual: two_column
+  seconds: 44
+  kicker: "The Paradigm Shift"
+  kicker_en: "The Paradigm Shift"
+  kicker_zh: "思维跃迁"
+  kicker_zh_hk: "思維躍遷"
+  title_en: "From description to prediction"
+  title_zh: "从回溯描述到前瞻推演"
+  title_zh_hk: "由回溯描述到前瞻推演"
+  left_en: "Descriptive: Recording what happened"
+  left_zh: "描述统计：忠实复盘既成事实"
+  left_zh_hk: "描述統計：忠實複盤既成事實"
+  right_en: "Probability: Quantifying what could happen"
+  right_zh: "概率模型：科学量化未来可能"
+  right_zh_hk: "概率模型：科學量化未來可能"
+  s1_en: "Descriptive statistics looks in the rearview mirror. It counts completed transactions and calculates historical variance to evaluate past execution."
+  s1_zh: "描述性统计看的是后视镜。它盘点已经完成的交易明细，计算历史方差，用来复盘过去的执行成效。"
+  s1_zh_hk: "描述性統計睇嘅係後視鏡。佢盤點已經完成嘅交易明細，計算歷史方差，用嚟複盤過去嘅執行成效。"
+  s2_en: "Probability looks through the front windshield. It maps uncertainty onto a rigorous zero-to-one scale so executives can commit resources before the future unfolds."
+  s2_zh: "概率论望向的是前挡风玻璃。它将商业不确定性严格标定在零到一的数轴上，让高管在未来真正展开前就能胸有成竹地调配资源。"
+  s2_zh_hk: "概率論望向嘅係前擋風玻璃。佢將商業不確定性嚴格標定喺零到一嘅數軸上，令高管喺未來真正展開之前就可以胸有成竹噉調配資源。"
+  s3_en: "Over the next twelve lessons, our coffee chain ledger moves from recording daily receipts to forecasting customer conversion, equipment reliability, and warranty payoffs."
+  s3_zh: "在接下来的十二节微课中，我们的咖啡账本将从记录每日收据，全面转向预测顾客转化率、设备可靠度以及维保对赌方案。"
+  s3_zh_hk: "喺跟住落嚟嘅十二節微課入面，我哋嘅咖啡賬本將會由記錄每日收據，全面轉向預測顧客轉化率、設備可靠度以及維保對賭方案。"
+- id: takeaway
+  visual: takeaway
+  seconds: 36
+  kicker: "The Forward Rule"
+  kicker_en: "The Forward Rule"
+  kicker_zh: "前瞻法则"
+  kicker_zh_hk: "前瞻法則"
+  title_en: "Manage by process, not pure outcome"
+  title_zh: "掌控科学决策过程，超越单一结果成败"
+  title_zh_hk: "掌控科學決策過程，超越單一結果成敗"
+  q1_en: "Why must business leaders learn probability?"
+  q1_zh: "为什么商业领袖必须系统学习概率？"
+  q1_zh_hk: "點解商業領袖必須系統學習概率？"
+  q2_en: "How does probability protect executive judgment?"
+  q2_zh: "概率论如何守护管理层的决策质量？"
+  q2_zh_hk: "概率論點樣守護管理層嘅決策質量？"
+  s1_en: "Probability provides the formal mathematical discipline required to make optimal bets in an unpredictable world."
+  s1_zh: "概率论为我们在充满变数的世界中做出最优商业博弈，提供了不可或缺的数学底层法则。"
+  s1_zh_hk: "概率論為我哋喺充滿變數嘅世界入面做出最優商業博弈，提供咗不可或缺嘅數學底層法則。"
+  s2_en: "A bad outcome does not mean the decision was wrong; a good decision maximizes odds before the roll of the dice."
+  s2_zh: "偶发的不利结果并不意味着最初的决策存在错误；真正卓越的决策是在掷骰子之前将胜率优化至最高。"
+  s2_zh_hk: "偶發嘅不利結果並唔意味住最初嘅決策存在錯誤；真正卓越嘅決策係喺擲骰仔之前將勝率優化到最高。"
+  s3_en: "Every probabilistic model starts by defining every possible outcome that could ever occur. Let us begin with the sample space."
+  s3_zh: "任何严谨的概率模型，都始于穷尽界定一切可能发生的潜在结果。让我们从样本空间正式启航。"
+  s3_zh_hk: "任何嚴謹嘅概率模型，都始於窮盡界定一切可能發生嘅潛在結果。等我哋由樣本空間正式啟航。"

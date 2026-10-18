@@ -1,0 +1,165 @@
+id: STAT-M08-T05-MAXLH
+course: STAT-M08
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Maximum Likelihood Intuition: Finding the Best-Fitting S-Curve'
+title_zh: 极大似然估计的直觉：搜寻最优 S 曲线
+title_zh_hk: 極大似然估計嘅直覺：搜尋最優 S 曲線
+objective_en: Explain the conceptual mechanics of Maximum Likelihood Estimation (MLE), construct the Bernoulli likelihood and log-likelihood functions, and contrast likelihood maximization against least-squares minimization.
+objective_zh: 阐明极大似然估计（MLE）的底层直觉机制，构建伯努利似然与对数似然函数，并对比似然最大化与最小二乘最小化的核心差异。
+objective_zh_hk: 闡明極大似然估計（MLE）嘅底層直覺機制，構建伯努利似然同對數似然函數，並對比似然最大化與最小二乘最小化嘅核心差異。
+glossary:
+- en: Maximum Likelihood Estimation
+  zh: 极大似然估计
+  zh_hk: 極大似然估計
+  lock: true
+- en: Likelihood Function
+  zh: 似然函数
+  zh_hk: 似然函數
+  lock: true
+- en: Log-Likelihood
+  zh: 对数似然
+  zh_hk: 對數似然
+  lock: true
+- en: Numerical Convergence
+  zh: 数值收敛迭代
+  zh_hk: 數值收斂迭代
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why does logistic maximum likelihood generally require iterative numerical optimization?
+  question_zh: 为什么逻辑回归的极大似然估计通常需要迭代数值优化？
+  question_zh_hk: 點解邏輯回歸嘅極大似然估計通常需要迭代數值優化？
+  options_en:
+  - 'A: The likelihood score equations are nonlinear in the coefficients, so there is generally no OLS-style closed-form matrix solution'
+  - 'B: Binary outcomes make computer memory crash instantly'
+  - 'C: Sample sizes in logistic regression can never exceed 100 observations'
+  - 'D: The normal distribution forbids probabilities between 0 and 1'
+  options_zh:
+  - 'A: 似然得分方程对系数是非线性的，因此通常不存在类似 OLS 的闭式矩阵解'
+  - 'B: 二元因变量会导致计算机内存瞬间崩溃溢出'
+  - 'C: 逻辑回归所允许的样本容量绝不能超过 100 个观测值'
+  - 'D: 正态分布在数学上严格禁止概率取在 0 与 1 之间'
+  options_zh_hk:
+  - 'A: 似然得分方程對系數係非線性，所以通常不存在類似 OLS 嘅閉式矩陣解'
+  - 'B: 二元因變量會搞到電腦記憶體即刻崩潰溢出'
+  - 'C: 邏輯回歸容許嘅樣本容量絕對唔可以多過 100 個觀測值'
+  - 'D: 正態分佈喺數學上嚴格禁止概率取值喺 0 同 1 之間'
+  answer: A
+  explanation_en: The logistic likelihood produces nonlinear score equations in beta. Standard software therefore uses iterative numerical algorithms rather than the OLS closed-form expression. This does not mean least-squares objectives can never be computed; it explains why MLE is solved iteratively.
+  explanation_zh: 逻辑似然产生关于 beta 的非线性得分方程，因此标准软件使用迭代数值算法，而不是 OLS 的闭式表达式。这并不表示平方误差目标无法计算，而是解释了 MLE 为何需要迭代求解。
+  explanation_zh_hk: 邏輯似然產生關於 beta 嘅非線性得分方程，所以標準軟件使用迭代數值算法，而唔係 OLS 嘅閉式表達式。呢個唔表示平方誤差目標無法計算，而係解釋 MLE 點解需要迭代求解。
+- id: Q2
+  type: multiple_choice
+  question_en: In a sample of two commuters, Customer 1 redeems a voucher (Y_1 = 1) with predicted p_1, and Customer 2 lets it expire (Y_2 = 0) with predicted p_2. What is the joint sample likelihood L(beta)?
+  question_zh: 在两名通勤客样本中，顾客 1 核销了卡券（Y_1 = 1），预测概率为 p_1；顾客 2 未使用作废（Y_2 = 0），预测概率为 p_2。该样本的联合似然值 L(beta) 是多少？
+  question_zh_hk: 喺兩個返工客樣本入面，顧客 1 換領咗張券（Y_1 = 1），預測概率係 p_1；顧客 2 冇用過期作廢（Y_2 = 0），預測概率係 p_2。呢個樣本嘅聯合似然值 L(beta) 係幾多？
+  options_en:
+  - 'A: L = p_1 + (1 - p_2)'
+  - 'B: L = p_1 * (1 - p_2)'
+  - 'C: L = p_1 / p_2'
+  - 'D: L = (p_1)^2 + (p_2)^2'
+  options_zh:
+  - 'A: L = p_1 + (1 - p_2)'
+  - 'B: L = p_1 * (1 - p_2)'
+  - 'C: L = p_1 / p_2'
+  - 'D: L = (p_1)^2 + (p_2)^2'
+  options_zh_hk:
+  - 'A: L = p_1 + (1 - p_2)'
+  - 'B: L = p_1 * (1 - p_2)'
+  - 'C: L = p_1 / p_2'
+  - 'D: L = (p_1)^2 + (p_2)^2'
+  answer: B
+  explanation_en: 'Assuming independent decisions, the joint likelihood is the product of individual probabilities: P(Y_1 = 1) * P(Y_2 = 0) = p_1 * (1 - p_2).'
+  explanation_zh: 在独立决策假定下，联合似然等于各样本事件发生概率的连乘积：P(Y_1 = 1) * P(Y_2 = 0) = p_1 * (1 - p_2)。
+  explanation_zh_hk: 喺獨立決策假定下，聯合似然等於各樣本事件發生概率嘅連乘積：P(Y_1 = 1) * P(Y_2 = 0) = p_1 * (1 - p_2)。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Estimation Engine Dilemma
+  kicker_zh: 求解引擎困境
+  kicker_zh_hk: 求解引擎困局
+  title_en: How Do We Fit a Curve to Non-Linear Dots?
+  title_zh: 面对散乱的零和一，怎样画出最准的 S 曲线？
+  title_zh_hk: 面對散亂嘅零同埋一，點樣畫出最準嘅 S 曲線？
+  en: A logistic model converts customer predictors into redemption probabilities, but the coefficients are unknown. Maximum Likelihood Estimation chooses the coefficient values that make the observed pattern of redemptions and non-redemptions most likely under the model. How is that objective constructed and optimized?
+  zh: 逻辑模型把顾客自变量转换为核销概率，但模型系数仍然未知。极大似然估计选择一组系数，使观测到的核销与未核销模式在模型下具有最高似然。这个目标函数如何构建并优化？
+  zh_hk: 邏輯模型將顧客自變量轉換做換領概率，但模型系數仍然未知。極大似然估計選擇一組系數，令觀測到嘅換領同未換領模式喺模型之下具有最高似然。呢個目標函數點樣構建同優化？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: L(beta) = Product(p_i^(Y_i) * (1 - p_i)^(1 - Y_i))
+  formula_zh: 伯努利似然函数：L(beta) = Product(p_i^(Y_i) * (1 - p_i)^(1 - Y_i))
+  formula_zh_hk: 伯努利似然函數：L(beta) = Product(p_i^(Y_i) * (1 - p_i)^(1 - Y_i))
+  formula_tex: L(\boldsymbol{\beta})=\prod_{i=1}^{n}p_i^{Y_i}(1-p_i)^{1-Y_i},\quad \ell(\boldsymbol{\beta})=\sum_{i=1}^{n}\left[Y_i\ln p_i+(1-Y_i)\ln(1-p_i)\right]
+  s1_en: For each candidate coefficient vector beta, the logistic model supplies probabilities p_i. The likelihood evaluates how compatible those probabilities are with the observed binary outcomes, treating the observed data as fixed while varying beta.
+  s1_zh: 对于每一组候选系数 beta，逻辑模型给出概率 p_i。似然函数在固定观测数据的情况下改变 beta，用于衡量这些概率与观测二元结果的相容程度。
+  s1_zh_hk: 對於每一組候選系數 beta，邏輯模型會畀出概率 p_i。似然函數喺固定觀測數據嘅情況下改變 beta，用嚟衡量呢啲概率同觀測二元結果嘅相容程度。
+  s2_en: An observation with Y equal to one contributes p_i; an observation with Y equal to zero contributes one minus p_i. Under the model’s conditional-independence factorization, multiplying these contributions gives the sample likelihood.
+  s2_zh: 当 Y 等于 1 时，单个观测贡献 p_i；当 Y 等于 0 时，贡献 1 减 p_i。在模型的条件独立分解下，将这些贡献相乘得到样本似然。
+  s2_zh_hk: 當 Y 等於 1 時，單個觀測貢獻 p_i；當 Y 等於 0 時，貢獻 1 減 p_i。喺模型嘅條件獨立分解之下，將呢啲貢獻相乘得到樣本似然。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: From Products to Sums
+  left_zh: 化连乘为对数求和
+  right_en: Numerical Hill-Climbing
+  right_zh: 数值算法登山迭代
+  s1_en: Products of many probabilities can become extremely small in finite-precision computation. Taking natural logs turns products into sums and usually improves numerical stability.
+  s1_zh: 大量概率连乘在有限精度计算中可能变得极小。取自然对数可把连乘转化为求和，通常能提高数值稳定性。
+  s1_zh_hk: 大量概率連乘喺有限精度計算入面可能變得極細。取自然對數可以將連乘轉化做求和，通常能提高數值穩定性。
+  s2_en: Because the logarithm is strictly increasing, the beta that maximizes the log-likelihood also maximizes the original likelihood. The transformation changes the arithmetic, not the optimizer.
+  s2_zh: 由于对数函数严格递增，最大化对数似然所得的 beta 也会最大化原始似然。该变换改变计算形式，但不改变最优解。
+  s2_zh_hk: 由於對數函數嚴格遞增，最大化對數似然所得嘅 beta 亦會最大化原始似然。個變換改變計算形式，但唔會改變最優解。
+  s3_en: Logistic maximum likelihood generally requires iterative optimization rather than the ordinary least-squares closed-form matrix expression. Algorithms such as Newton-Raphson or iteratively reweighted least squares update beta until a stated convergence criterion is met.
+  s3_zh: 逻辑回归的极大似然估计通常需要迭代优化，而不能使用普通最小二乘的闭式矩阵表达式。牛顿-拉夫逊或迭代加权最小二乘等算法会更新 beta，直到满足明确的收敛准则。
+  s3_zh_hk: 邏輯回歸嘅極大似然估計通常需要迭代優化，而唔可以使用普通最小二乘嘅閉式矩陣表達式。牛頓-拉夫遜或者迭代加權最小二乘等算法會更新 beta，直到滿足明確嘅收斂準則。
+  left_zh_hk: 化連乘為對數求和
+  right_zh_hk: 數值算法登山迭代
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Test Candidate Curve A
+  step1_zh: 试算候选曲线 A
+  step2_en: Test Candidate Curve B
+  step2_zh: 对比候选曲线 B
+  step3_en: Converge to Global Maximum
+  step3_zh: 收敛至全局最优极值
+  s1_en: 'Step one: Candidate A predicts 0.60 for a customer who redeems and 0.70 for a customer who does not. The likelihood contribution is 0.60 times one minus 0.70, which equals 0.18.'
+  s1_zh: 第一步：候选模型 A 对核销顾客预测 0.60，对未核销顾客预测 0.70。似然贡献为 0.60 乘以 1 减 0.70，即 0.18。
+  s1_zh_hk: 第一步：候選模型 A 對換領顧客預測 0.60，對未換領顧客預測 0.70。似然貢獻係 0.60 乘以 1 減 0.70，即 0.18。
+  s2_en: 'Step two: Candidate B predicts 0.80 for the customer who redeems and 0.20 for the customer who does not. Its likelihood is 0.80 times one minus 0.20, which equals 0.64. For these two observations, B has the larger likelihood.'
+  s2_zh: 第二步：候选模型 B 对核销顾客预测 0.80，对未核销顾客预测 0.20。其似然为 0.80 乘以 1 减 0.20，即 0.64。对于这两个观测，B 的似然更大。
+  s2_zh_hk: 第二步：候選模型 B 對換領顧客預測 0.80，對未換領顧客預測 0.20。似然係 0.80 乘以 1 減 0.20，即 0.64。對於呢兩個觀測，B 嘅似然較大。
+  s3_en: 'Step three: Software repeats this comparison over the full parameter space and sample until its stopping rule is satisfied. A convergence message indicates that the numerical criterion was met, but model adequacy still requires diagnostics and validation.'
+  s3_zh: 第三步：软件在完整参数空间和样本上重复这一比较，直到满足停止准则。收敛提示表示数值准则已达到，但模型是否适当仍需诊断与验证。
+  s3_zh_hk: 第三步：軟件喺完整參數空間同樣本上重複呢個比較，直到滿足停止準則。收斂提示表示數值準則已達到，但模型係咪適當仍然需要診斷同驗證。
+  step1_zh_hk: 試算候選曲線 A
+  step2_zh_hk: 對比候選曲線 B
+  step3_zh_hk: 收斂至全局最優極值
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Why Did We Abandon Least Squares?
+  q1_zh: 为何必须告别最小二乘法？
+  q2_en: 'Audit Rule: Check Iteration Convergence'
+  q2_zh: 审计准则：逻辑回归必验数值收敛
+  s1_en: Maximum likelihood estimates the logistic coefficients by maximizing the likelihood, or equivalently the log-likelihood, of the observed binary outcomes under the model.
+  s1_zh: 极大似然通过最大化观测二元结果在模型下的似然，或等价的对数似然，来估计逻辑回归系数。
+  s1_zh_hk: 極大似然透過最大化觀測二元結果喺模型之下嘅似然，或者等價嘅對數似然，嚟估計邏輯回歸系數。
+  s2_en: 'Decision rule: verify successful convergence, inspect warnings and coefficient stability, and evaluate specification and predictive performance. Convergence is necessary for interpreting the numerical solution, but it is not proof that the model is correct or decision-ready.'
+  s2_zh: 决策规则：核实模型成功收敛，检查警告与系数稳定性，并评估模型设定和预测表现。收敛是解读数值解的必要条件，但不能证明模型正确或已经适合决策。
+  s2_zh_hk: 決策規則：核實模型成功收斂，檢查警告同系數穩定性，並評估模型設定同預測表現。收斂係解讀數值解嘅必要條件，但唔能夠證明模型正確或者已經適合決策。
+  s3_en: In the two-observation example, Candidate B has likelihood 0.64 versus 0.18 for Candidate A. This illustrates the MLE objective without claiming that either candidate is the global optimum for a larger dataset.
+  s3_zh: 在两观测示例中，候选模型 B 的似然为 0.64，候选模型 A 为 0.18。这说明了 MLE 的目标，但并不表示任一候选模型是更大数据集的全局最优解。
+  s3_zh_hk: 喺兩觀測例子入面，候選模型 B 嘅似然係 0.64，候選模型 A 係 0.18。呢個說明 MLE 嘅目標，但唔表示任何一個候選模型係更大數據集嘅全局最優解。
+  q1_zh_hk: 點解必須向最小二乘法講再見？
+  q2_zh_hk: 審計準則：邏輯回歸必驗數值收斂

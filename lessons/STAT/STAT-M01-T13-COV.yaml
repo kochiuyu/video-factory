@@ -1,0 +1,194 @@
+id: STAT-M01-T13-COV
+course: statistics
+course_en: Business Statistics
+course_zh: 商务统计
+course_zh_hk: 商務統計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: Do they move together?
+title_zh: 两个变量是否同向变动？
+title_zh_hk: 兩個變量係咪同向變動？
+objective_en: Define sample covariance as the sum of paired deviation products divided by n minus 1, interpret its sign as the direction of linear co-movement, explain why its magnitude depends on measurement units, and avoid treating covariance as evidence of strength or causation.
+objective_zh: 把样本协方差定义为成对离差乘积之和除以n减1，把其符号解释为线性共同变动的方向，说明其数值大小为何取决于计量单位，并避免把协方差当作关系强度或因果关系的证据。
+objective_zh_hk: 將樣本協方差定義為成對偏差乘積之和除以n減1，將佢嘅符號解釋為線性共同變動嘅方向，說明佢嘅數值大小點解取決於計量單位，並避免將協方差當成關係強度或者因果關係嘅證據。
+glossary:
+- en: covariance
+  zh: 协方差
+  zh_hk: 協方差
+  lock: true
+- en: joint variation
+  zh: 联合变动
+  zh_hk: 聯合變動
+  lock: true
+- en: paired deviations
+  zh: 成对离差
+  zh_hk: 成對偏差
+  lock: true
+- en: unstandardized
+  zh: 未标准化
+  zh_hk: 未標準化
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: What does positive covariance between foot traffic and cup sales indicate?
+  question_zh: 客流量与咖啡销量之间呈正协方差，表示什么？
+  question_zh_hk: 人流量同咖啡銷量之間呈正協方差，表示咩？
+  options_en:
+  - 'A: Above-average traffic tends to pair with above-average sales, and below-average traffic tends to pair with below-average sales.'
+  - 'B: Foot traffic and coffee sales are completely independent of each other.'
+  - 'C: Increasing store foot traffic will permanently cut daily operating costs to zero.'
+  - 'D: The coffee chain is legally required to double its street rent immediately.'
+  options_zh:
+  - 'A: 高于平均水平的客流往往与高于平均水平的销量配对，而低于平均水平的客流往往与低于平均水平的销量配对。'
+  - 'B: 客流量与咖啡销量之间完全独立，没有任何关联。'
+  - 'C: 增加门店客流能够让日常营运成本永久归零。'
+  - 'D: 咖啡连锁在法律上必须立即将街头租金翻倍。'
+  options_zh_hk:
+  - 'A: 高過平均水平嘅人流往往同高過平均水平嘅銷量配對，而低過平均水平嘅人流往往同低過平均水平嘅銷量配對。'
+  - 'B: 人流量同咖啡銷量之間完全獨立，冇任何關聯。'
+  - 'C: 增加門店人流能夠令日常營運成本永久歸零。'
+  - 'D: 咖啡連鎖喺法律上必須即刻將街頭租金翻倍。'
+  answer: A
+  explanation_en: Positive covariance results when paired deviations tend to share the same sign. It indicates same-direction linear co-movement, not that one variable causes the other.
+  explanation_zh: 当成对离差通常同号时，协方差为正。它表示同向的线性共同变动，并不证明一个变量导致另一个变量。
+  explanation_zh_hk: 當成對偏差通常同號嗰陣，協方差為正。佢表示同向嘅線性共同變動，並唔證明一個變量導致另一個變量。
+- id: Q2
+  type: multiple_choice
+  question_en: Why is raw covariance unable to tell a manager the actual strength of a relationship between two variables?
+  question_zh: 为什么原始协方差无法直接告诉管理者两个变量之间关系的实际强弱？
+  question_zh_hk: 點解原始協方差冇辦法直接話畀管理者知兩個變量之間關係嘅實際強弱？
+  options_en:
+  - 'A: Its numerical magnitude depends entirely on the units of measurement, making big units produce huge numbers without indicating a stronger link.'
+  - 'B: Covariance can only produce numbers between zero and one.'
+  - 'C: It can only be calculated on text categories rather than numbers.'
+  - 'D: Accounting guidelines prohibit recording positive covariance in corporate spreadsheets.'
+  options_zh:
+  - 'A: 它的数值大小完全取决于计量单位，单位变大就会算出庞大数值，但这并不代表两者的关联更紧密。'
+  - 'B: 协方差的计算结果只能落在零与一之间。'
+  - 'C: 它只能用于文字分类，不能用于连续的财务数字。'
+  - 'D: 会计准则禁止在企业电子表格中记录正协方差。'
+  options_zh_hk:
+  - 'A: 佢嘅數值大細完全取決於計量單位，單位變大就會計出龐大數值，但呢個唔代表兩者嘅關聯更加緊密。'
+  - 'B: 協方差嘅計算結果淨係可以落喺零同埋一之間。'
+  - 'C: 佢淨係可以用喺文字分類，唔可以用喺連續嘅財務數字。'
+  - 'D: 會計準則禁止喺企業電子表格入面記錄正協方差。'
+  answer: A
+  explanation_en: Changing a variable from dollars to cents multiplies the covariance by 100 even though the underlying relationship is unchanged. Raw magnitude therefore cannot be interpreted as standardized strength.
+  explanation_zh: 把变量的单位从元改为分，会令协方差扩大100倍，但基础关系没有改变。因此，原始数值大小不能被解释为标准化的关系强度。
+  explanation_zh_hk: 將變量嘅單位由元改為分，會令協方差擴大100倍，但基礎關係冇改變。所以，原始數值大小唔可以被解釋為標準化嘅關係強度。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Question
+  kicker_en: The Question
+  kicker_zh: 商业问题
+  kicker_zh_hk: 商業問題
+  title_en: Do rent and sales move together?
+  title_zh: 租金与销量是否共同变动？
+  title_zh_hk: 租金同銷量係咪共同變動？
+  en: So far, we have examined one variable at a time. A property director now asks whether monthly rent and daily cup sales tend to move together across stores. A higher-rent location may also sell more, but we need a measure of joint movement before discussing strength or cause.
+  zh: 到目前为止，我们一直逐一研究单个变量。现在，选址总监想知道不同门店的月租与每日销量是否倾向于共同变动。高租金地点可能也卖得更多，但在讨论强度或因果关系前，我们需要先度量联合变动。
+  zh_hk: 到而家為止，我哋一直逐一研究單一變量。依家，選址總監想知道唔同門店嘅月租同每日銷量係咪傾向共同變動。高租金地點可能亦賣得更多，但喺討論強度或者因果關係之前，我哋需要先度量聯合變動。
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: What It Is
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: Averaging paired deviation products
+  title_zh: 计算成对离差乘积的平均
+  title_zh_hk: 計算成對偏差乘積嘅平均
+  formula: Sample covariance = Σ[(Xᵢ − X̄)(Yᵢ − Ȳ)] / (n − 1)
+  formula_zh: 样本协方差 = Σ[(Xᵢ − X̄)(Yᵢ − Ȳ)] / (n − 1)
+  formula_zh_hk: 樣本協方差 = Σ[(Xᵢ − X̄)(Yᵢ − Ȳ)] / (n − 1)
+  formula_tex: \text{Cov}(X, Y) = \frac{\sum (X_i - \bar{X})(Y_i - \bar{Y})}{n - 1}
+  s1_en: For each paired observation, subtract the mean of X and the mean of Y, then multiply the two deviations. Same-sign deviations produce positive products; opposite-sign deviations produce negative products.
+  s1_zh: 对每一组成对观测值，分别减去X与Y的均值，再把两个离差相乘。同号离差产生正乘积，异号离差产生负乘积。
+  s1_zh_hk: 對每一組成對觀測值，分別減去X同Y嘅均值，再將兩個偏差相乘。同號偏差產生正乘積，異號偏差產生負乘積。
+  s2_en: Sample covariance adds these cross-products and divides by n minus 1. A positive sign indicates same-direction linear co-movement; a negative sign indicates opposite-direction linear co-movement. A covariance near zero does not by itself prove independence.
+  s2_zh: 样本协方差把这些交叉乘积相加，再除以n减1。正号表示同向线性共同变动，负号表示反向线性共同变动。协方差接近零本身并不能证明独立。
+  s2_zh_hk: 樣本協方差將呢啲交叉乘積相加，再除以n減1。正號表示同向線性共同變動，負號表示反向線性共同變動。協方差接近零本身並唔可以證明獨立。
+- id: calc
+  visual: steps
+  seconds: 36
+  kicker: Step by Step
+  kicker_en: Step by Step
+  kicker_zh: 计算步骤
+  kicker_zh_hk: 計算步驟
+  title_en: A two-store illustration
+  title_zh: 两家门店的计算示例
+  title_zh_hk: 兩間門店嘅計算例子
+  step1_en: Find paired deviations
+  step1_zh: 计算成对离差
+  step1_zh_hk: 計算成對偏差
+  step2_en: Multiply pairs together
+  step2_zh: 成对离差逐项相乘
+  step2_zh_hk: 成對偏差逐項相乘
+  step3_en: Average the cross-products
+  step3_zh: 计算交叉乘积的平均
+  step3_zh_hk: 計算交叉乘積嘅平均
+  s1_en: Mong Kok pays 9,400 in rent and sells 310 cups; Wan Chai pays 18,600 and sells 420. Mean rent is 14,000 and mean sales is 365.
+  s1_zh: 旺角店月租9,400元、销量310杯；湾仔店月租18,600元、销量420杯。平均租金为14,000元，平均销量为365杯。
+  s1_zh_hk: 旺角舖月租9,400蚊、銷量310杯；灣仔舖月租18,600蚊、銷量420杯。平均租金係14,000蚊，平均銷量係365杯。
+  s2_en: Mong Kok has deviations of minus 4,600 and minus 55, giving a cross-product of positive 253,000. Wan Chai has plus 4,600 and plus 55, also giving positive 253,000.
+  s2_zh: 旺角的离差为负4,600元与负55杯，交叉乘积为正253,000。湾仔的离差为正4,600元与正55杯，交叉乘积同样为正253,000。
+  s2_zh_hk: 旺角嘅偏差係負4,600蚊同負55杯，交叉乘積係正253,000。灣仔嘅偏差係正4,600蚊同正55杯，交叉乘積同樣係正253,000。
+  s3_en: Add the products to get 506,000 and divide by n minus 1, which is one. The sample covariance is positive 506,000 dollar-cups. This demonstrates the calculation, but two stores are not enough for a stable business conclusion.
+  s3_zh: 把乘积相加得到506,000，再除以n减1，也就是1。样本协方差为正506,000元·杯。这个例子展示了计算方法，但两家门店不足以支持稳定的业务结论。
+  s3_zh_hk: 將乘積相加得到506,000，再除以n減1，即係1。樣本協方差係正506,000蚊·杯。呢個例子展示咗計算方法，但兩間門店不足以支持穩定嘅業務結論。
+- id: puzzle
+  visual: two_column
+  seconds: 36
+  kicker: The Limitation
+  kicker_en: The Limitation
+  kicker_zh: 核心局限
+  kicker_zh_hk: 核心局限
+  title_en: Direction is visible; strength is not
+  title_zh: 方向可见，强度不可直读
+  title_zh_hk: 方向可見，強度唔可以直讀
+  left_en: 'Sign: direction of co-movement'
+  left_zh: 符号：共同变动方向
+  left_zh_hk: 符號：共同變動方向
+  right_en: 'Magnitude: depends on units'
+  right_zh: 数值大小：取决于单位
+  right_zh_hk: 數值大小：取決於單位
+  s1_en: 'The sign is useful: positive covariance indicates that the variables tend to move in the same direction, while negative covariance indicates opposite-direction movement.'
+  s1_zh: 符号具有解释价值：正协方差表示两个变量倾向同向变动，负协方差表示倾向反向变动。
+  s1_zh_hk: 符號具有解釋價值：正協方差表示兩個變量傾向同向變動，負協方差表示傾向反向變動。
+  s2_en: The magnitude is unstandardized and carries compound units, here dollars times cups. Changing dollars to cents multiplies the covariance by 100 without changing the underlying paired pattern.
+  s2_zh: 数值大小未经标准化，并带有复合单位，这里是元乘杯。把元改成分会使协方差扩大100倍，但基础配对模式没有改变。
+  s2_zh_hk: 數值大小未經標準化，並帶有複合單位，呢度係蚊乘杯。將蚊改成仙會令協方差擴大100倍，但基礎配對模式冇改變。
+  s3_en: Raw covariance therefore cannot tell us whether the relationship is strong, and it cannot establish that higher rent causes higher sales. A larger, relevant paired dataset and further analysis are required.
+  s3_zh: 因此，原始协方差不能说明关系是否强，也不能证明高租金导致高销量。还需要更大且相关的成对数据集与进一步分析。
+  s3_zh_hk: 所以，原始協方差唔可以說明關係係咪強，亦唔可以證明高租金導致高銷量。仲需要更大而且相關嘅成對數據集同進一步分析。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: Decision Rule
+  kicker_en: Decision Rule
+  kicker_zh: 商业法则
+  kicker_zh_hk: 商業法則
+  title_en: Use covariance for direction, not causation
+  title_zh: 用协方差判断方向，不判断因果
+  title_zh_hk: 用協方差判斷方向，唔判斷因果
+  q1_en: What does covariance reveal to management?
+  q1_zh: 协方差为管理者揭示了什么？
+  q1_zh_hk: 協方差為管理者揭示咗咩？
+  q2_en: Why can raw covariance not measure standardized strength?
+  q2_zh: 为什么原始协方差不能衡量标准化的关系强度？
+  q2_zh_hk: 點解原始協方差唔可以衡量標準化嘅關係強度？
+  s1_en: Use covariance to summarize the direction of linear co-movement in paired numerical data. Always state whether the sample or population formula was used.
+  s1_zh: 用协方差概括成对数值数据线性共同变动的方向。应说明采用的是样本公式还是总体公式。
+  s1_zh_hk: 用協方差概括成對數值數據線性共同變動嘅方向。應該講明採用嘅係樣本公式定係總體公式。
+  s2_en: Do not compare raw covariance magnitudes across differently scaled variables or datasets, and do not interpret covariance as proof of causation or independence.
+  s2_zh: 不要直接比较不同尺度变量或数据集的原始协方差数值，也不要把协方差解释为因果关系或独立性的证明。
+  s2_zh_hk: 唔好直接比較唔同尺度變量或者數據集嘅原始協方差數值，亦唔好將協方差解釋為因果關係或者獨立性嘅證明。
+  s3_en: 'The operating rule is precise: read the sign for direction, do not read the raw magnitude as strength, and do not treat this two-shop illustration of 506,000 dollar-cups as a stable rent-sales benchmark.'
+  s3_zh: 经营规则很明确：用符号判断方向，不要把原始数值当作强度，也不要把这个两店示例的506,000元·杯当成稳定的租金与销量基准。
+  s3_zh_hk: 營運規則好清楚：用符號判斷方向，唔好將原始數值當成強度，亦唔好將呢個兩舖例子嘅506,000蚊·杯當成穩定嘅租金同銷量基準。

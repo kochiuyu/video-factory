@@ -1,0 +1,219 @@
+id: STAT-M05-T02-REJEC
+course: STAT-M05
+course_en: Hypothesis Testing & Store Experiments
+course_zh: 假设检验与门店运营实验
+course_zh_hk: 假設檢驗與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Rejection Regions and Critical Values: Setting the Decision Boundary'
+title_zh: 拒绝域与临界值：设定决策边界
+title_zh_hk: 拒絕域同臨界值：設定決策邊界
+objective_en: Define the significance level as the long-run Type I error rate under the null, use critical values to divide
+  a test-statistic distribution into rejection and nonrejection regions, calculate two-sided standard-normal cutoffs, and
+  translate those cutoffs into sample-mean boundaries for an assumed dispenser-calibration test.
+objective_zh: 把显著性水平定义为原假设成立时的长期第一类错误率，利用临界值把检验统计量分布划分为拒绝域与不拒绝域，计算双侧标准正态临界点，并把临界点转化为假设注杯校准检验中的样本均值边界。
+objective_zh_hk: 將顯著性水平定義為原假設成立嗰陣嘅長期第一類錯誤率，利用臨界值將檢驗統計量分佈劃分成拒絕域同唔拒絕域，計算雙側標準正態臨界點，並將臨界點轉化成假設注杯校準檢驗入面嘅樣本均值邊界。
+glossary:
+- en: significance level (alpha)
+  zh: 显著性水平 (alpha)
+  zh_hk: 顯著性水平 (alpha)
+  lock: true
+- en: rejection region
+  zh: 拒绝域/临界区域
+  zh_hk: 拒絕域/臨界區域
+  lock: true
+- en: retention region
+  zh: 保留域/接受域
+  zh_hk: 保留域/接受域
+  lock: true
+- en: critical value cutoff
+  zh: 临界分割点
+  zh_hk: 臨界分割點
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why should alpha and the critical-value rule be selected before examining the test result?
+  question_zh: 为什么企业决策层必须在调取运营审计数据之前，预先锁定显著性水平 alpha 及其对应的临界分割点？
+  question_zh_hk: 點解企業決策層必須喺調取營運審計數據之前，預先鎖定顯著性水平 alpha 及其對應嘅臨界分割點？
+  options_en:
+  - 'A: To preserve the intended error-control rule and reduce outcome-driven changes to the decision boundary.'
+  - 'B: Because standard normal distribution tables become legally void once data collection commences.'
+  - 'C: Because critical values change dynamically based on the retail price of beverage cups.'
+  - 'D: Because locking alpha eliminates the need for calculating standard errors.'
+  options_zh:
+  - 'A: 杜绝后验偏倚与主观移动球门线，确保无论由哪位审计员执裁，判定违规的客观边界都不可擅自篡改。'
+  - 'B: 因为一旦抽样数据录入系统，标准正态分布查分表在计量法上将立即失效。'
+  - 'C: 因为正态临界值的物理取值会随着现调饮品的零售标价动态自动跳变。'
+  - 'D: 因为预先锁定 alpha 可以在运算底层彻底省去推导抽样标准误的必要。'
+  options_zh_hk:
+  - 'A: 杜絕後驗偏倚與主觀移動球門線，確保無論由邊位審計員執裁，判定違規嘅客觀邊界都唔可以擅自篡改。'
+  - 'B: 因為一旦抽樣數據錄入系統，標準正態分佈查分表喺計量法上將會即刻失效。'
+  - 'C: 因為正態臨界值嘅物理取值會隨住現調飲品嘅零售標價動態自動跳變。'
+  - 'D: 因為預先鎖定 alpha 可以在運算底層徹底慳返推導抽樣標準誤嘅必要。'
+  answer: A
+  explanation_en: Preselecting the hypotheses, alpha, and rejection rule helps preserve the stated Type I error framework.
+    It does not eliminate all bias or replace data-quality and design checks.
+  explanation_zh: 在抽样前严格锁定 alpha 与临界值，能从制度上杜绝认知偏见与主观修改裁判标准的舞弊风险。客观的决策红线强制管理层完全基于数理证据推进行动。
+  explanation_zh_hk: 喺抽樣前嚴格鎖定 alpha 與臨界值，能由制度上杜絕認知偏見與主觀修改裁判標準嘅舞弊風險。客觀嘅決策紅線強制管理層完全基於數理證據推進步動。
+- id: Q2
+  type: multiple_choice
+  question_en: 'Assume H0: mu = 350 ml versus H1: mu != 350 ml, known sigma = 12 ml, n = 36, and alpha = 0.05 with Z-star
+    = 1.96. Which sample-mean values are in the rejection regions?'
+  question_zh: '都市咖啡审计机场店智能冷萃龙头：H0: mu = 350 ml 对决 H1: mu != 350 ml。设备注杯已知标准差 sigma = 12 ml，抽测 n = 36 杯。在 alpha = 0.05（Z*
+    = 1.96）下，样本平均注杯量落在什么区间会触发停机报修？'
+  question_zh_hk: '都市咖啡審計機場舖智能冷萃龍頭：H0: mu = 350 ml 對決 H1: mu != 350 ml。設備注杯已知標準差 sigma = 12 ml，抽測 n = 36 杯。喺 alpha = 0.05（Z*
+    = 1.96）下，樣本平均注杯量落喺咩區間會觸發停機報修？'
+  options_en:
+  - 'A: x-bar <= 346.08 ml or x-bar >= 353.92 ml, because SE = 2 ml and the mean cutoffs are 350 +/- 1.96(2).'
+  - 'B: Shutdown only if x-bar exactly equals 350.00 ml.'
+  - 'C: Shutdown if x-bar < 338.00 ml or x-bar > 362.00 ml.'
+  - 'D: Shutdown if x-bar is between 348.04 ml and 351.96 ml.'
+  options_zh:
+  - 'A: SE = 12 / 根号(36) = 2 ml；容限边界 = 350 ± 1.96 × 2 = 350 ± 3.92 ml。当均值小于 346.08 ml 或大于 353.92 ml 时触发停机。'
+  - 'B: 唯有当样本均值恰好分毫不差等于 350.00 ml 时才必须停机报修。'
+  - 'C: 当样本均值小于 338.00 ml 或大于 362.00 ml 时触发停机报修。'
+  - 'D: 当样本均值稳稳落在 348.04 ml 至 351.96 ml 之间时触发停机。'
+  options_zh_hk:
+  - 'A: SE = 12 / 根號(36) = 2 ml；容限邊界 = 350 ± 1.96 × 2 = 350 ± 3.92 ml。當均值細過 346.08 ml 或大過 353.92 ml 嗰陣觸發停機。'
+  - 'B: 淨係得當樣本均值啱啱好分毫不差等於 350.00 ml 嗰陣先必須停機報修。'
+  - 'C: 當樣本均值細過 338.00 ml 或大過 362.00 ml 嗰陣觸發停機報修。'
+  - 'D: 當樣本均值穩穩落喺 348.04 ml 至 351.96 ml 之間嗰陣觸發停機。'
+  answer: A
+  explanation_en: SE = 12 / sqrt(36) = 2 ml. The mean boundaries are 350 plus or minus 1.96 times 2, giving 346.08 and 353.92
+    ml. Values at or beyond those boundaries satisfy the stated rejection rule.
+  explanation_zh: 标准误 SE = 12 / 6 = 2 ml。临界容许偏差为 1.96 × 2 = 3.92 ml。接受保留域为 346.08 ml 至 353.92 ml。一旦落入两侧拒绝域（绝对值 |Z| >= 1.96），必须立即停机校准。
+  explanation_zh_hk: 標準誤 SE = 12 / 6 = 2 ml。臨界容許偏差為 1.96 × 2 = 3.92 ml。接受保留域為 346.08 ml 至 353.92 ml。一旦落入兩側拒絕域（絕對值 |Z| >= 1.96），必須即刻停機校準。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  kicker_en: The Cold Brew Calibration
+  kicker_zh: 冷萃分馏注杯之困
+  kicker_zh_hk: 冷萃分餾注杯之困
+  title_en: How far from target counts as statistically unusual?
+  title_zh: 偏离目标多远才算统计上异常？
+  title_zh_hk: 偏離目標幾遠先算統計上異常？
+  en: Metro Coffee is evaluating an automated cold-brew dispenser with a target mean fill of 350 milliliters. In an assumed
+    audit of 36 independent pours, the sample mean is 345.4 milliliters and the process standard deviation is treated as known
+    at 12 milliliters. Before seeing the result, management needs a decision boundary that separates ordinary sampling variation
+    from evidence against the target mean.
+  zh: 都市咖啡正在评估一台目标平均注杯量为 350 毫升的自动冷萃设备。在一个假设的 36 杯独立抽检中，样本均值为 345.4 毫升，流程标准差视为已知的 12 毫升。在查看结果前，管理层需要设定一条决策边界，把常规抽样波动与反对目标均值的证据区分开。
+  zh_hk: 都市咖啡正評估一部目標平均注杯量係 350 毫升嘅自動冷萃設備。喺一個假設嘅 36 杯獨立抽檢入面，樣本均值係 345.4 毫升，流程標準差視為已知嘅 12 毫升。喺查看結果之前，管理層需要設定一條決策邊界，將常規抽樣波動同反對目標均值嘅證據區分開。
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: Critical values divide nonrejection and rejection regions
+  title_zh: 临界值划分不拒绝域与拒绝域
+  title_zh_hk: 臨界值劃分唔拒絕域同拒絕域
+  formula: 'Two-sided Z test: reject H0 when |Z_calc| >= Z_(alpha/2)'
+  formula_zh: 双侧 Z 检验：当 |Z_calc| >= Z_(alpha/2) 时拒绝 H0
+  formula_zh_hk: 雙側 Z 檢驗：當 |Z_calc| >= Z_(alpha/2) 嗰陣拒絕 H0
+  formula_tex: \text{Reject }H_0\text{ when }|Z_{\mathrm{calc}}|\ge z_{\alpha/2}
+  s1_en: Under H0 and the stated standard-normal model, the test statistic is centered at zero. Values near zero are relatively
+    compatible with the benchmark, while sufficiently extreme values are less compatible with it.
+  s1_zh: 在 H0 与既定标准正态模型下，检验统计量以零为中心。接近零的数值与基准相对相容，而足够极端的数值与基准较不相容。
+  s1_zh_hk: 喺 H0 同既定標準正態模型之下，檢驗統計量以零為中心。接近零嘅數值同基準相對相容，而足夠極端嘅數值同基準較唔相容。
+  s2_en: The significance level alpha is the long-run probability of rejecting H0 when H0 is true, for a correctly implemented
+    test under its assumptions. In a two-sided test, alpha is divided between the two tails, and the corresponding critical
+    values define the rejection regions.
+  s2_zh: 显著性水平 alpha 是在检验假设成立且正确实施时，H0 为真却被拒绝的长期概率。在双侧检验中，alpha 分配到两个尾部，相应临界值定义拒绝域。
+  s2_zh_hk: 顯著性水平 alpha 係喺檢驗假設成立而且正確實施嗰陣，H0 為真但被拒絕嘅長期概率。喺雙側檢驗入面，alpha 分配到兩個尾部，相應臨界值定義拒絕域。
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  kicker_en: The Objective Rule
+  kicker_zh: 规则铁闸
+  kicker_zh_hk: 規則鐵閘
+  title_en: Choose the rule before inspecting the result
+  title_zh: 在查看结果前选定规则
+  title_zh_hk: 喺查看結果之前選定規則
+  left_en: 'Nonrejection region: -1.96 < Z_calc < 1.96'
+  left_zh: 不拒绝域：-1.96 < Z_calc < 1.96
+  left_zh_hk: 唔拒絕域：-1.96 < Z_calc < 1.96
+  right_en: 'Rejection regions: Z_calc <= -1.96 or Z_calc >= 1.96'
+  right_zh: 拒绝域：Z_calc <= -1.96 或 Z_calc >= 1.96
+  right_zh_hk: 拒絕域：Z_calc <= -1.96 或 Z_calc >= 1.96
+  s1_en: For a two-sided standard-normal test at alpha = 0.05, each tail receives probability 0.025. The critical values are
+    approximately -1.96 and 1.96. Equality is conventionally included in the rejection rule, although an exact equality has
+    probability zero under a continuous model.
+  s1_zh: 对于 alpha = 0.05 的双侧标准正态检验，每个尾部分配概率 0.025，临界值约为 -1.96 与 1.96。按惯例，等号包含在拒绝规则中，尽管在连续模型下恰好等于临界值的概率为零。
+  s1_zh_hk: 對於 alpha = 0.05 嘅雙側標準正態檢驗，每個尾部分配概率 0.025，臨界值約係 -1.96 同 1.96。按慣例，等號包含喺拒絕規則入面，儘管喺連續模型之下啱啱好等於臨界值嘅概率係零。
+  s2_en: Choosing alpha after seeing the sample can undermine the stated error rate and encourage outcome-driven decisions.
+    The benchmark, alternative, significance level, test statistic, and handling of unusual data should be specified as part
+    of the analysis plan.
+  s2_zh: 在查看样本后才选择 alpha，会破坏所声称的错误率，并鼓励由结果驱动的决策。基准、备择假设、显著性水平、检验统计量与异常数据处理方式都应写入分析方案。
+  s2_zh_hk: 喺查看樣本之後先選擇 alpha，會破壞所聲稱嘅錯誤率，並鼓勵由結果驅動嘅決策。基準、備擇假設、顯著性水平、檢驗統計量同異常數據處理方式都應該寫入分析方案。
+  s3_en: Crossing a critical boundary supports rejecting the tested mean under the model. It does not by itself prove a mechanical
+    fault or prescribe a shutdown. Operational action should also consider measurement validity, effect size, safety, product
+    tolerance, and the cost of both false alarms and missed faults.
+  s3_zh: 越过临界边界支持在既定模型下拒绝被检验均值，但本身不能证明机械故障，也不能自动规定停机。经营行动还应考虑测量有效性、效应大小、安全、产品公差，以及误报与漏报的成本。
+  s3_zh_hk: 越過臨界邊界支持喺既定模型之下拒絕被檢驗均值，但本身唔可以證明機械故障，亦唔可以自動規定停機。營運行動仲應該考慮量度有效性、效應大小、安全、產品公差，以及誤報同漏報嘅成本。
+- id: ledger
+  visual: steps
+  seconds: 38
+  kicker_en: The Ledger
+  kicker_zh: 台账实裁
+  kicker_zh_hk: 台賬實裁
+  title_en: Translate Z cutoffs into fill-volume boundaries
+  title_zh: 把 Z 临界点转化为注杯量边界
+  title_zh_hk: 將 Z 臨界點轉化成注杯量邊界
+  step1_en: 'Assume H0: mu = 350 ml, H1: mu != 350 ml, alpha = 0.05, and Z-star = 1.96'
+  step1_zh: '假设 H0: mu = 350 ml，H1: mu != 350 ml，alpha = 0.05，Z-star = 1.96'
+  step1_zh_hk: '假設 H0: mu = 350 ml，H1: mu != 350 ml，alpha = 0.05，Z-star = 1.96'
+  step2_en: Assume known sigma = 12 ml and n = 36; SE = 12 / sqrt(36) = 2 ml
+  step2_zh: 假设已知 sigma = 12 ml，n = 36；SE = 12 / √36 = 2 ml
+  step2_zh_hk: 假設已知 sigma = 12 ml，n = 36；SE = 12 / √36 = 2 ml
+  step3_en: Mean cutoffs = 350 +/- 1.96(2) = [346.08, 353.92] ml; x-bar = 345.4 gives Z = -2.30
+  step3_zh: 均值临界点 = 350 ± 1.96(2) = [346.08, 353.92] ml；x-bar = 345.4 得 Z = -2.30
+  step3_zh_hk: 均值臨界點 = 350 ± 1.96(2) = [346.08, 353.92] ml；x-bar = 345.4 得 Z = -2.30
+  s1_en: For illustration, assume 36 independent pours, a target population mean of 350 milliliters, and a known process standard
+    deviation of 12 milliliters. These are teaching assumptions, not verified equipment records or operating tolerances. A
+    two-sided test at alpha = 0.05 uses critical Z values of approximately plus or minus 1.96.
+  s1_zh: 作为示例，假设有 36 杯独立观测，目标总体均值为 350 毫升，流程标准差已知为 12 毫升。这些数字是教学假设，并非已核实的设备记录或经营公差。alpha = 0.05 的双侧检验使用约正负 1.96 的 Z 临界值。
+  s1_zh_hk: 作為例子，假設有 36 杯獨立觀測，目標總體均值係 350 毫升，流程標準差已知係 12 毫升。呢啲數字係教學假設，唔係已核實嘅設備記錄或者營運公差。alpha = 0.05 嘅雙側檢驗使用約正負 1.96 嘅 Z 臨界值。
+  s2_en: The standard error is 12 divided by the square root of 36, equal to 2 milliliters. Converting the Z boundaries into
+    sample-mean units gives 350 plus or minus 1.96 times 2, or lower and upper cutoffs of 346.08 and 353.92 milliliters.
+  s2_zh: 标准误为 12 除以根号 36，等于 2 毫升。把 Z 边界转化为样本均值单位，得到 350 ± 1.96 × 2，即下界 346.08 毫升、上界 353.92 毫升。
+  s2_zh_hk: 標準誤係 12 除以根號 36，等於 2 毫升。將 Z 邊界轉化成樣本均值單位，得到 350 ± 1.96 × 2，即係下界 346.08 毫升、上界 353.92 毫升。
+  s3_en: An assumed sample mean of 345.4 milliliters gives Z = (345.4 - 350) / 2 = -2.30, which lies in the lower rejection
+    region. Reject H0 at the 5% level. The statistical conclusion is evidence that the population mean differs from 350 milliliters
+    under the assumptions; engineering diagnosis and the response plan remain separate decisions.
+  s3_zh: 假设样本均值为 345.4 毫升，则 Z = (345.4 - 350) / 2 = -2.30，落入左侧拒绝域，因此在 5% 水平拒绝 H0。统计结论是在既定假设下存在总体均值不同于 350 毫升的证据；工程诊断与响应方案仍属于独立决策。
+  s3_zh_hk: 假設樣本均值係 345.4 毫升，則 Z = (345.4 - 350) / 2 = -2.30，落入左側拒絕域，所以喺 5% 水平拒絕 H0。統計結論係喺既定假設之下存在總體均值唔同於 350 毫升嘅證據；工程診斷同響應方案仍然屬於獨立決策。
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Predefine the boundary and interpret rejection narrowly
+  title_zh: 预先设定边界，并谨慎解释拒绝结论
+  title_zh_hk: 預先設定邊界，並審慎解讀拒絕結論
+  q1_en: What does alpha control in repeated use of a correctly specified test?
+  q1_zh: 在正确设定的检验被重复使用时，alpha 控制什么？
+  q1_zh_hk: 喺正確設定嘅檢驗被重複使用嗰陣，alpha 控制咩？
+  q2_en: Why is crossing a critical value not the same as proving equipment failure?
+  q2_zh: 为什么越过临界值不等于证明设备故障？
+  q2_zh_hk: 點解越過臨界值唔等於證明設備故障？
+  s1_en: Alpha controls the long-run Type I error rate under the null model, not the probability that this particular rejection
+    is wrong. Smaller alpha makes rejection harder and reduces false-positive risk, but it can increase the chance of missing
+    meaningful departures when other design features stay fixed.
+  s1_zh: alpha 控制原假设模型下的长期第一类错误率，而不是本次拒绝结论出错的概率。较小 alpha 会提高拒绝门槛并降低误报风险，但在其他设计特征不变时，也可能增加漏掉有意义偏离的机会。
+  s1_zh_hk: alpha 控制原假設模型之下嘅長期第一類錯誤率，而唔係今次拒絕結論出錯嘅概率。較細 alpha 會提高拒絕門檻並降低誤報風險，但喺其他設計特徵不變嗰陣，亦可能增加漏掉有意義偏離嘅機會。
+  s2_en: Report the hypotheses, alpha, critical values, statistic, and decision. Then evaluate data quality, independence,
+    model assumptions, effect magnitude, confidence intervals, process specifications, and operational consequences before
+    selecting an intervention.
+  s2_zh: 应报告假设、alpha、临界值、统计量与决策。随后，在选择干预措施前，应评估数据质量、独立性、模型假设、效应大小、置信区间、流程规格与经营后果。
+  s2_zh_hk: 應該報告假設、alpha、臨界值、統計量同決策。之後，喺選擇干預措施之前，應該評估數據質素、獨立性、模型假設、效應大小、置信區間、流程規格同營運後果。
+  s3_en: For the assumed dispenser audit, the nonrejection mean range is 346.08 to 353.92 milliliters, and 345.4 milliliters
+    falls below it. The test rejects a 350-milliliter mean at alpha = 0.05; it does not by itself determine the mechanical
+    cause or the appropriate operational response.
+  s3_zh: 在假设的设备抽检中，不拒绝样本均值范围为 346.08 至 353.92 毫升，而 345.4 毫升低于该范围。检验在 alpha = 0.05 时拒绝总体均值为 350 毫升；它本身不能确定机械原因或适当经营响应。
+  s3_zh_hk: 喺假設嘅設備抽檢入面，唔拒絕樣本均值範圍係 346.08 至 353.92 毫升，而 345.4 毫升低過呢個範圍。檢驗喺 alpha = 0.05 嗰陣拒絕總體均值係 350 毫升；佢本身唔可以確定機械原因或者適當營運響應。

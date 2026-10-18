@@ -1,0 +1,69 @@
+id: LAE-M01-OUT
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: The band, closed
+title_zh: 这一层，先说到这里
+title_zh_hk: 呢一層，先講到呢度
+objective_en: Close the band sitting. Next sitting names two machines that use the layer, one at a time.
+objective_zh: 收住空域这一讲。下一讲给占用这一层的两种机器起名，一次一种。
+objective_zh_hk: 收住空域呢一講。下一講畀佔用呢一層嘅兩種機器起名，一次一種。
+glossary:
+- en: Close
+  zh: 收束
+  zh_hk: 收束
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What two facts should you be able to state after this sitting?
+  zh: 这一讲结束后，你应能说出哪两件事？
+  zh_hk: 呢一講結束之後，你應該講得出邊兩件事？
+  answer_en: The band is the room below about 1,000 metres, and an extra flight adds delay to the others.
+  answer_zh: 这一层是大约一千米以下的空间，多一班飞行会给别人加上延误。
+  answer_zh_hk: 呢一層係大約一千米以下嘅空間，多一班飛會畀其他人加上延誤。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The band, closed
+  title_zh: 这一层，先说到这里
+  title_zh_hk: 呢一層，先講到呢度
+  claim_en: You can point at the room below about 1,000 metres, and treat an extra line as delay on the first.
+  claim_zh: 你能指大约一千米以下那一层，并把多一条线看成加在第一条上的延误。
+  claim_zh_hk: 你能夠指大約一千米以下嗰一層，並將多一條線看成加喺第一條上嘅延誤。
+  next_en: 'That is the band. Next sitting: what flies — two machines, one new noun each.'
+  next_zh: 空域这一讲到此。下一讲：什么在飞——两种机器，一种一个新词。
+  next_zh_hk: 空域呢一講到此。下一講：有咩喺度飛——兩種機器，一種一個新詞。
+  en: You can now point at the room below about one thousand metres, and you can treat an extra flight in the same hour as minutes taken from the first.
+  zh: 现在，你能指出大约一千米以下的那一层空间，也能把同一小时多出来的飞行，看成从第一班身上拿走的时间。
+  zh_hk: 而家，你能夠指大約一千米以下嗰一層空間，亦都能夠將同一個鐘多出嚟嘅飛行，看成由第一班身上攞走嘅時間。
+- id: takeaway
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The band, closed
+  title_zh: 这一层，先说到这里
+  title_zh_hk: 呢一層，先講到呢度
+  claim_en: You can point at the room below about 1,000 metres, and treat an extra line as delay on the first.
+  claim_zh: 你能指大约一千米以下那一层，并把多一条线看成加在第一条上的延误。
+  claim_zh_hk: 你能夠指大約一千米以下嗰一層，並將多一條線看成加喺第一條上嘅延誤。
+  next_en: 'That is the band. Next sitting: what flies — two machines, one new noun each.'
+  next_zh: 空域这一讲到此。下一讲：什么在飞——两种机器，一种一个新词。
+  next_zh_hk: 空域呢一講到此。下一講：有咩喺度飛——兩種機器，一種一個新詞。
+  en: 'That is the band. Next sitting: what flies — two machines, one new noun each.'
+  zh: 空域这一讲到此。下一讲：什么在飞——两种机器，一种一个新词。
+  zh_hk: 空域呢一講到此。下一講：有咩喺度飛——兩種機器，一種一個新詞。

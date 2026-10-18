@@ -1,0 +1,194 @@
+id: STAT-M02-T14-PVAR
+course: statistics
+course_en: Business Probability Foundations
+course_zh: 商务概率基础
+course_zh_hk: 商務概率基礎
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: "Pricing the volatility"
+title_zh: "给波动定价：随机变量的方差与标准差"
+title_zh_hk: "幫波動定價：隨機變量嘅方差與標準差"
+objective_en: "Define the variance and standard deviation of a discrete random variable, contrast expected payoffs with downside financial volatility, and explain why risk tolerance dictates whether small versus large businesses buy insurance."
+objective_zh: "把离散随机变量的方差与标准差定义为偏离期望值平方的概率加权平均数，对比期望收益与下行财务波动，并解释为什么风险承受力决定了小微店与大型连锁截然不同的投保决策。"
+objective_zh_hk: "將離散隨機變量嘅方差同標準差定義為偏離期望值平方嘅概率加權平均數，對比期望收益同下行財務波動，並解釋點解風險承受力決定咗小微舖同大型連鎖截然唔同嘅投保決策。"
+glossary:
+- en: "variance of a random variable"
+  zh: "随机变量方差"
+  zh_hk: "隨機變量方差"
+  lock: true
+- en: "standard deviation"
+  zh: "标准差"
+  zh_hk: "標準差"
+  lock: true
+- en: "risk tolerance"
+  zh: "风险承受力"
+  zh_hk: "風險承受力"
+  lock: true
+- en: "downside risk"
+  zh: "下行风险"
+  zh_hk: "下行風險"
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: "How does the variance of a discrete random variable Var(X) differ conceptually from the sample variance s^2 learned in descriptive statistics?"
+  question_zh: "离散随机变量的方差 Var(X) 与我们在描述统计学中学习的样本方差 s^2 在概念上有何不同？"
+  question_zh_hk: "離散隨機變量嘅方差 Var(X) 同我哋喺描述統計學入面學習嘅樣本方差 s^2 喺概念上有咩唔同？"
+  options_en:
+  - "A: Sample variance s^2 measures historical dispersion in recorded past data, while Var(X) measures dispersion under a specified probability distribution by weighting squared deviations by their probabilities."
+  - "B: Var(X) can only produce negative numbers."
+  - "C: Sample variance uses probabilities, while Var(X) only uses raw counts."
+  - "D: Corporate tax law forbids calculating Var(X) on capital equipment."
+  options_zh:
+  - "A: 样本方差 s^2 衡量的是历史账目已发生数据的离散程度，而 Var(X) 在给定概率分布下，以各结果的概率加权其对期望值的平方偏差。"
+  - "B: Var(X) 的计算结果只能是负数。"
+  - "C: 样本方差使用概率计算，而 Var(X) 只能使用原始频数。"
+  - "D: 企业税法明令禁止对固定资产设备计算 Var(X)。"
+  options_zh_hk:
+  - "A: 樣本方差 s^2 衡量嘅係歷史賬目已發生數據嘅離散程度，而 Var(X) 喺指定概率分布之下，以各結果嘅概率加權佢哋對期望值嘅平方偏差。"
+  - "B: Var(X) 嘅計算結果淨係可以係負數。"
+  - "C: 樣本方差使用概率計算，而 Var(X) 淨係可以使用原始頻數。"
+  - "D: 企業稅法明令禁止對固定資產設備計算 Var(X)。"
+  answer: A
+  explanation_en: "Sample variance s^2 is a descriptive summary of empirical observations. Population/model variance Var(X) = Sum of [(x_i - mu)^2 * P(x_i)] describes dispersion in the probability model for an uncertain payoff."
+  explanation_zh: "样本方差 s^2 是对既成经验观测值的描述性汇总。而理论方差 Var(X) = ∑ [(x_i - μ)^2 × P(x_i)] 描述的是不确定收益在概率模型中的离散程度。"
+  explanation_zh_hk: "樣本方差 s^2 係對既成經驗觀測值嘅描述性匯總。而理論方差 Var(X) = ∑ [(x_i - μ)^2 × P(x_i)] 描述嘅係不確定收益喺概率模型入面嘅離散程度。"
+- id: Q2
+  type: multiple_choice
+  question_en: "If self-insuring a coffee machine has an expected cost of $500 with a standard deviation of $2,179, why would a single independent cafe owner pay $600 for a warranty?"
+  question_zh: "如果一台咖啡机自担风险的期望维修成本为 500 元，但标准差高达 2,179 元，为什么一家单体独立咖啡馆老板依然愿意花费 600 元购买延保？"
+  question_zh_hk: "如果一部咖啡機自擔風險嘅期望維修成本為 500 蚊，但標準差高達 2,179 蚊，點解一間單體獨立咖啡館老闆依然願意使 600 蚊買延保？"
+  options_en:
+  - "A: To eliminate downside volatility: a $10,000 repair may be difficult for a small business to absorb, so paying an extra $100 over expected cost can transfer that modeled repair risk."
+  - "B: Because the warranty company guarantees to double customer foot traffic."
+  - "C: Because standard deviation can be deducted from utility bills."
+  - "D: The cafe owner is mathematically prohibited from calculating expected value."
+  options_zh:
+  - "A: 为了消除下行破产风险：一万元维修费可能令小企业难以承受，因此多付 100 元高于期望成本的保费，可以转移模型中的维修风险。"
+  - "B: 因为延保公司合同里保证会让门店的顾客人流量翻倍。"
+  - "C: 因为标准差可以直接从日常水电费账单中扣除。"
+  - "D: 法律禁止单体咖啡馆老板计算数学期望值。"
+  options_zh_hk:
+  - "A: 為咗消除下行破產風險：一萬蚊維修費可能令小企業難以承受，所以畀多 100 蚊高過期望成本嘅保費，可以轉移模型入面嘅維修風險。"
+  - "B: 因為延保公司合約入面保證會令門市嘅顧客人流量翻倍。"
+  - "C: 因為標準差可以直接由日常水電費賬單入面扣減。"
+  - "D: 法律禁止單體咖啡館老闆計算數學期望值。"
+  answer: A
+  explanation_en: "Risk-averse businesses buy insurance not because EMV is favorable, but to pay a risk premium that reduces the modeled repair-cost volatility and transfers part of the financial risk."
+  explanation_zh: "厌恶风险的小微企业之所以买保险，不是因为期望值划算，而是为了支付风险溢价，以降低模型中的维修成本波动并转移部分财务风险。"
+  explanation_zh_hk: "厭惡風險嘅小微企業之所以買保險，唔係因為期望值划算，而係為咗支付風險溢價，以降低模型入面嘅維修成本波動並轉移部分財務風險。"
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: "The Volatility Hazard"
+  kicker_en: "The Volatility Hazard"
+  kicker_zh: "波动之险"
+  kicker_zh_hk: "波動之險"
+  title_en: "Can you survive the ride to the average?"
+  title_zh: "你能在抵达平均值前挺过风暴吗？"
+  title_zh_hk: "你可唔可以喺抵達平均值前挺過風暴？"
+  en: "Self-insuring an espresso machine has an expected repair cost of five hundred dollars, compared with a certain six-hundred-dollar warranty premium. But the uninsured outcome is either zero or ten thousand dollars. How should a manager measure that financial volatility before choosing between the two options?"
+  zh: "一台意式咖啡机自担风险的期望维修成本为 500 元，而延保保费确定为 600 元。但自担风险的实际维修支出要么为 0 元，要么为 10,000 元。管理者在二者之间作选择前，应如何衡量这种财务波动？"
+  zh_hk: "一部意式咖啡機自擔風險嘅期望維修成本係 500 蚊，而延保保費確定係 600 蚊。但自擔風險嘅實際維修支出要麼係 0 蚊，要麼係 10,000 蚊。管理者喺兩者之間作選擇之前，應該點樣衡量呢種財務波動？"
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: "What It Is"
+  kicker_en: "What It Is"
+  kicker_zh: "核心概念"
+  kicker_zh_hk: "核心概念"
+  title_en: "Variance and standard deviation of X"
+  title_zh: "随机变量的方差与标准差"
+  title_zh_hk: "隨機變量嘅方差與標準差"
+  formula: "Var(X) = Sum of [ (x_i - mu)^2 * P(x_i) ]"
+  formula_zh: "Var(X) = 离差平方加权求和 = ∑ [ (财务值 - 期望均值)^2 × 发生概率 ]"
+  formula_zh_hk: "Var(X) = 偏差平方加權求和 = ∑ [ (財務值 - 期望均值)^2 × 發生概率 ]"
+  formula_tex: "\\sigma^2 = \\text{Var}(X) = \\sum (x_i - E[X])^2 P(X = x_i), \\quad \\sigma = \\sqrt{\\text{Var}(X)}"
+  s1_en: "Just as descriptive statistics squared deviations from the sample mean, probability theory squares deviations from the expected value and weights them by their probability."
+  s1_zh: "正如描述性统计将偏离样本均值的距离平方一样，概率论将每种可能情景偏离期望均值的差距取平方，并乘以对应的发生概率进行加权。"
+  s1_zh_hk: "正如描述性統計將偏離樣本均值嘅距離平方一樣，概率論將每種可能情景偏離期望均值嘅差距取平方，並乘以對應嘅發生概率進行加權。"
+  s2_en: "Variance measures volatility in squared dollars. Taking its square root restores original currency, giving the standard deviation: a scale measure of how dispersed possible dollar outcomes are around the expected value."
+  s2_zh: "方差度量的是以“元平方”为单位的纯粹波动。开平方根后恢复为原始货币单位，得出标准差：它是衡量各种可能财务结果围绕期望值分散程度的尺度。"
+  s2_zh_hk: "方差度量嘅係以「蚊平方」為單位嘅純粹波動。開平方根之後恢復為原始貨幣單位，得出標準差：佢係衡量各種可能財務結果圍繞期望值分散程度嘅尺度。"
+- id: contrast
+  visual: two_column
+  seconds: 36
+  kicker: "The Risk-Return Tradeoff"
+  kicker_en: "The Risk-Return Tradeoff"
+  kicker_zh: "胜率与波动的博弈"
+  kicker_zh_hk: "勝率與波動嘅博弈"
+  title_en: "Certain loss versus volatile edge"
+  title_zh: "确定的锁定损失与高波动的期望优势"
+  title_zh_hk: "確定嘅鎖定損失與高波動嘅期望優勢"
+  left_en: "Warranty premium: $600; model SD = $0"
+  left_zh: "购买延保：保费 600 元；模型标准差为 0 元"
+  left_zh_hk: "購買延保：保費 600 蚊；模型標準差係 0 蚊"
+  right_en: "Self-Insure: Cost = $500, SD = $2,179"
+  right_zh: "自担风险：期望成本 500 元，标准差高达 2,179 元"
+  right_zh_hk: "自擔風險：期望成本 500 蚊，標準差高達 2,179 蚊"
+  s1_en: "Look at the profound trade-off between the two strategies. In this simplified repair-cost model, the warranty premium is a certain six hundred dollars, so the modeled cost variance and standard deviation are zero."
+  s1_zh: "审视两种策略之间深刻的本质权衡。在这个简化维修成本模型中，延保保费确定为 600 元，因此模型中的成本方差和标准差为 0。"
+  s1_zh_hk: "審視兩種策略之間深刻嘅本質權衡。喺呢個簡化維修成本模型入面，延保保費確定係 600 蚊，所以模型入面嘅成本方差同標準差係 0。"
+  s2_en: "Self-insuring delivers a better expected cost of five hundred dollars, but it carries a standard deviation of two thousand one hundred and seventy-nine dollars."
+  s2_zh: "自担风险虽然能把期望成本压低到五百元，却背负着2,179 元的标准差。"
+  s2_zh_hk: "自擔風險雖然可以將期望成本壓低到五百蚊，卻背負住2,179 蚊嘅標準差。"
+  s3_en: "You are not merely deciding whether to save one hundred dollars; you are deciding whether paying an extra hundred dollars is worth reducing the modeled repair-cost volatility."
+  s3_zh: "管理层面临的绝不仅仅是能否省下一百元的选择，而是在权衡：多花这一百元溢价，是否值得降低模型中的维修成本波动。"
+  s3_zh_hk: "管理層面臨嘅絕唔單止係能唔能夠慳返一百蚊嘅選擇，而係喺度權衡：使多呢一百蚊溢價，係咪值得降低模型入面嘅維修成本波動。"
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: "The Ledger"
+  kicker_en: "The Ledger"
+  kicker_zh: "账目精算"
+  kicker_zh_hk: "賬目精算"
+  title_en: "Calculating the machine volatility"
+  title_zh: "测算单台咖啡机的下行波动方差"
+  title_zh_hk: "測算單部咖啡機嘅下行波動方差"
+  step1_en: "Breakdown gap: ($10,000 - $500)^2 * 0.05 = 4,512,500"
+  step1_zh: "故障情景：(10,000 - 500)^2 × 0.05 = 4,512,500"
+  step1_zh_hk: "故障情景：(10,000 - 500)^2 × 0.05 = 4,512,500"
+  step2_en: "Healthy gap: ($0 - $500)^2 * 0.95 = 237,500"
+  step2_zh: "正常情景：(0 - 500)^2 × 0.95 = 237,500"
+  step2_zh_hk: "正常情景：(0 - 500)^2 × 0.95 = 237,500"
+  step3_en: "Sum: Var = 4,750,000; SD = sqrt(Var) = $2,179"
+  step3_zh: "加总得方差：4,750,000；标准差开根号 = 2,179 元"
+  step3_zh_hk: "加總得方差：4,750,000；標準差開根號 = 2,179 蚊"
+  s1_en: "Let us compute the volatility step by step. Step one: in the five-percent breakdown scenario, ten thousand dollars minus the five hundred dollar mean is nine thousand five hundred. Squaring that and weighting by zero point zero five gives four million five hundred and twelve thousand five hundred."
+  s1_zh: "让我们步步推演方差。第一步：在 5% 的故障情景下，一万元支出减去五百元均值差额为九千五百元。平方后乘以概率 0.05，得出四百五十一万二千五百。"
+  s1_zh_hk: "等我哋步步推演方差。第一步：喺 5% 嘅故障情景下，一萬蚊支出減去五百蚊均值差額為九千五百蚊。平方後乘以概率 0.05，得出四百五十一萬二千五百。"
+  s2_en: "Step two: in the ninety-five-percent healthy scenario, zero minus five hundred squared is two hundred and fifty thousand. Weighting by zero point nine five gives two hundred and thirty-seven thousand five hundred."
+  s2_zh: "第二步：在 95% 的正常情景下，零支出减去五百元差额为负五百。平方后乘以概率 0.95，得出二十三万七千五百。"
+  s2_zh_hk: "第二步：喺 95% 嘅正常情景下，零支出減去五百蚊差額為負五百。平方後乘以概率 0.95，得出二十三萬七千五百。"
+  s3_en: "Step three: sum the components to get a variance of four million seven hundred and fifty thousand dollars squared. Take the square root: your financial standard deviation is two thousand one hundred and seventy-nine dollars."
+  s3_zh: "第三步：两项加总，得出四百七十五万的元平方方差。开平方根：真实的财务标准差高达 2,179 元。"
+  s3_zh_hk: "第三步：兩項加總，得出四百七十五萬嘅蚊平方方差。開平方根：真實嘅財務標準差高達 2,179 蚊。"
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: "Decision Rule"
+  kicker_en: "Decision Rule"
+  kicker_zh: "商业法则"
+  kicker_zh_hk: "商業法則"
+  title_en: "Expected value sets price, variance tests survival"
+  title_zh: "期望值决定价格底线，方差考验生存韧性"
+  title_zh_hk: "期望值決定價格底線，方差考驗生存韌性"
+  q1_en: "Why is expected value alone insufficient for small businesses?"
+  q1_zh: "为什么单凭期望值无法支撑小微企业的生存决策？"
+  q1_zh_hk: "點解單憑期望值冇辦法支撐小微企業嘅生存決策？"
+  q2_en: "How should executives balance risk and return?"
+  q2_zh: "高管团队应如何在期望收益与波动风险之间取得平衡？"
+  q2_zh_hk: "高管團隊應點樣喺期望收益同波動風險之間取得平衡？"
+  s1_en: "For risky decisions, compare expected value with dispersion and the organization’s capacity to absorb adverse outcomes; variance alone does not describe the size of the worst possible loss."
+  s1_zh: "评估风险决策时，应同时比较期望值、离散程度及组织承受不利结果的能力；方差本身并不说明最坏损失有多大。"
+  s1_zh_hk: "評估風險決策嗰陣，應該一齊比較期望值、離散程度同組織承受不利結果嘅能力；方差本身並唔說明最壞損失有幾大。"
+  s2_en: "Organizations with greater risk-bearing capacity may prefer self-insurance, while others may pay a premium to transfer risk; the choice depends on liquidity, diversification, contract coverage, and risk tolerance."
+  s2_zh: "风险承受能力较强的组织可能倾向自担风险，其他组织则可能支付保费来转移风险；选择取决于流动性、分散程度、合同保障和风险承受力。"
+  s2_zh_hk: "風險承受能力較強嘅組織可能傾向自擔風險，其他組織就可能支付保費嚟轉移風險；選擇取決於流動性、分散程度、合約保障同風險承受力。"
+  s3_en: "For this machine, self-insurance has an expected cost of 500 dollars and a standard deviation of about 2,179 dollars. Compare both figures with the certain 600-dollar premium and the warranty’s actual coverage before deciding."
+  s3_zh: "对这台机器，自担风险的期望成本为 500 元，标准差约为 2,179 元。决策前，应把两项指标与确定的 600 元保费及延保的实际保障范围一并比较。"
+  s3_zh_hk: "對呢部機器，自擔風險嘅期望成本係 500 蚊，標準差大約係 2,179 蚊。決策之前，應該將兩項指標同確定嘅 600 蚊保費以及延保嘅實際保障範圍一齊比較。"

@@ -1,0 +1,129 @@
+id: LAE-M06-XB
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 92
+title_en: Crossing
+title_zh: 过境
+title_zh_hk: 過境
+objective_en: 'The hop is two aviation authorities — CAAC and the Hong Kong Civil Aviation Department — plus, for a parcel, a customs gate.'
+objective_zh: 这一跳是两个航空当局——中国民航局和香港民航处——若是包裹，还要过一闸海关。
+objective_zh_hk: 呢一跳係兩個航空當局——中國民航局同香港民航處——若係包裹，仲要過一閘海關。
+glossary:
+- en: CAAC
+  zh: 中国民用航空局
+  zh_hk: 中國民用航空局
+  lock: true
+- en: Hong Kong Civil Aviation Department
+  zh: 香港民航处
+  zh_hk: 香港民航處
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: How many aviation books sit on the Shenzhen-to-Sha Tin hop?
+  zh: 深圳到沙田这一跳，有几本航空规则？
+  zh_hk: 深圳到沙田呢一跳，有幾本航空規則？
+  answer_en: Two. CAAC on one side. The Hong Kong Civil Aviation Department on the other.
+  answer_zh: 两本。一边是中国民航局。另一边是香港民航处。
+  answer_zh_hk: 兩本。一邊係中國民航局。另一邊係香港民航處。
+- id: Q2
+  type: transfer
+  en: A parcel crosses. An inspection of a GBA bridge may not. What extra gate does the parcel face?
+  zh: 包裹要过境。巡检大湾区一座桥，未必过境。包裹多面对的是哪一闸？
+  zh_hk: 包裹要過境。巡檢大灣區一座橋，未必過境。包裹多面對嘅係邊一閘？
+  answer_en: Customs. Two aviation books plus a customs gate.
+  answer_zh: 海关。两本航空规则，外加一闸海关。
+  answer_zh_hk: 海關。兩本航空規則，再加一閘海關。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Crossing
+  title_zh: 过境
+  title_zh_hk: 過境
+  en: The permit has a name. Keep the line from a Shenzhen roof to a Sha Tin locker. This short names the two books that line must pass, and the extra gate if the payload is a parcel.
+  zh: 许可已经有名字。还是深圳屋顶到沙田储物柜的那条线。这条短片给这条线必须经过的两本书起名；若载荷是包裹，再加一闸。
+  zh_hk: 許可已經有名。仲係深圳屋頂到沙田儲物櫃嗰條線。呢條短片畀呢條線必須經過嘅兩本書起名；若載荷係包裹，再加一閘。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Two books, one gate
+  title_zh: 两本书，一闸
+  title_zh_hk: 兩本書，一閘
+  formula: hop = CAAC + HK CAD (+ customs if a parcel)
+  formula_en: hop = CAAC + HK CAD (+ customs if a parcel)
+  formula_zh: 这一跳 = 中国民航局 + 香港民航处（包裹再加海关）
+  formula_zh_hk: 呢一跳 = 中國民航局 + 香港民航處（包裹再加海關）
+  gloss_en: Two aviation books. A parcel adds a gate.
+  gloss_zh: 两本航空规则。包裹再加一闸。
+  gloss_zh_hk: 兩本航空規則。包裹再加一閘。
+  s1_en: CAAC is the Civil Aviation Administration of China. Say the letters. On the other side, the Hong Kong Civil Aviation Department. Two books, not one.
+  s1_zh: CAAC 是中国民用航空局。说出这四个字母。另一边是香港民航处。两本书，不是一本。
+  s1_zh_hk: CAAC 係中國民用航空局。講出呢四個字母。另一邊係香港民航處。兩本書，缺一本都過唔到。
+  s2_en: A parcel also faces customs. The machine can be legal in both books and still stop at the gate.
+  s2_zh: 包裹还要过海关。机器可以在两本书里都合法，仍停在那一闸。
+  s2_zh_hk: 包裹仲要過海關大閘。機器可以喺兩本書入面都合法，包裹一樣可以卡喺閘口。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: Contrast
+  kicker_en: Contrast
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Same hop, two payloads
+  title_zh: 同一跳，两种载荷
+  title_zh_hk: 同一跳，兩種載荷
+  left_en: Parcel
+  left_zh: 包裹
+  left_zh_hk: 包裹
+  right_en: Inspection
+  right_zh: 巡检
+  right_zh_hk: 巡檢
+  s1_en: The parcel from the Shenzhen roof to the Sha Tin locker crosses. Two books, then customs.
+  s1_zh: 从深圳屋顶到沙田储物柜的包裹要过境。两本书，然后是海关。
+  s1_zh_hk: 由深圳屋頂到沙田儲物櫃嘅包裹要過境。兩本書，然後係海關。
+  s2_en: A GBA bridge inspection may stay on one side. It still needs a permit. It may not need the second book, or the gate.
+  s2_zh: 巡检大湾区一座桥，可以留在一侧。仍要许可。未必要第二本书，也未必要那一闸。
+  s2_zh_hk: 巡檢大灣區一座橋，可以留喺一側。仍然要許可。未必要第二本書，亦都未必要嗰一閘。
+  s3_en: Do not add visas, listings, or capital flows. The claim is aircraft, parcels, and two aviation books.
+  s3_zh: 不要再加人的签证、上市或资金流动。要记住的是飞行器、包裹，和两本航空规则。
+  s3_zh_hk: 唔好再加人嘅簽證、上市或者資金流動。要記住嘅係飛行器、包裹，同兩本航空規則。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Two books
+  title_zh: 两本书
+  title_zh_hk: 兩本書
+  q1_en: Who writes the two aviation books?
+  q1_zh: 两本航空规则是谁写的？
+  q1_zh_hk: 兩本航空規則係邊個寫嘅？
+  q2_en: What extra gate does a parcel face?
+  q2_zh: 包裹多面对哪一闸？
+  q2_zh_hk: 包裹多面對邊一閘？
+  s1_en: The hop is CAAC and the Hong Kong Civil Aviation Department.
+  s1_zh: 这一跳是中国民航局和香港民航处。
+  s1_zh_hk: 呢一跳係中國民航局同香港民航處。
+  s2_en: A parcel adds a customs gate. Two legal books can still leave the parcel at the gate.
+  s2_zh: 包裹再加一闸海关。两本合法的书，仍可能把包裹留在闸口。
+  s2_zh_hk: 包裹再加一閘海關。兩本合法嘅書，仍然可能將包裹留喺閘口。
+  s3_en: Both books can open. Next short asks whether that opening invents a buyer.
+  s3_zh: 两本书都可以打开。下一支短片问：打开会不会造出买方。
+  s3_zh_hk: 兩本書都可以打開。下一條短片問：打開會唔會造出買方。

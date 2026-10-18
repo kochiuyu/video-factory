@@ -1,0 +1,69 @@
+id: LAE-M05-OUT
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: Who pays, closed
+title_zh: 谁付钱，先说到这里
+title_zh_hk: 邊個畀錢，先講到呢度
+objective_en: Close the applications sitting. Next sitting asks whether opening the band can invent a buyer.
+objective_zh: 收住应用这一讲。下一讲问：打开这一层，能不能造出一个买方。
+objective_zh_hk: 收住應用呢一講。下一講問：打開呢一層，可唔可以造出一個買方。
+glossary:
+- en: Close
+  zh: 收束
+  zh_hk: 收束
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What three payments can you name?
+  zh: 你能说出哪三笔付款？
+  zh_hk: 你講得出邊三筆付款？
+  answer_en: The parcel pays for road delay; the AED pays for a tighter clock; inspection pays to take a person off the structure.
+  answer_zh: 包裹付路上的延误；AED 付更紧的钟；巡检付的是让人从结构上下来。
+  answer_zh_hk: 包裹付路上嘅延誤；AED 付更緊嘅鐘；巡檢付嘅係等人由結構落嚟。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: Who pays, closed
+  title_zh: 谁付钱，先说到这里
+  title_zh_hk: 邊個畀錢，先講到呢度
+  claim_en: You can name three payments — road delay, a medical clock, and a person off the structure — and refuse a catalogue of uses.
+  claim_zh: 你能说出三笔付款——路上的延误、医疗钟、人从结构上下来——并拒绝一份用途清单。
+  claim_zh_hk: 你講得出三筆付款——路上嘅延誤、醫療鐘、人由結構落嚟——並拒絕一份用途清單。
+  next_en: 'That is who pays. Next sitting: opening the band does not invent a buyer.'
+  next_zh: 谁付钱到此。下一讲：打开这一层，造不出一个买方。
+  next_zh_hk: 邊個畀錢到此。下一講：打開呢一層，造唔出一個買方。
+  en: You can say why a parcel, an AED, and an inspection each pay, and you can refuse tourism, a light show, and a farm as extra shorts.
+  zh: 你能说出包裹、AED 和巡检各自为什么付钱，也能拒绝把游览、演出和农田写成新的短片。
+  zh_hk: 你講得出包裹、AED 同巡檢各自點解畀錢，亦都拒絕將遊覽、演出同農田寫成新嘅短片。
+- id: takeaway
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: Who pays, closed
+  title_zh: 谁付钱，先说到这里
+  title_zh_hk: 邊個畀錢，先講到呢度
+  claim_en: You can name three payments — road delay, a medical clock, and a person off the structure — and refuse a catalogue of uses.
+  claim_zh: 你能说出三笔付款——路上的延误、医疗钟、人从结构上下来——并拒绝一份用途清单。
+  claim_zh_hk: 你講得出三筆付款——路上嘅延誤、醫療鐘、人由結構落嚟——並拒絕一份用途清單。
+  next_en: 'That is who pays. Next sitting: opening the band does not invent a buyer.'
+  next_zh: 谁付钱到此。下一讲：打开这一层，造不出一个买方。
+  next_zh_hk: 邊個畀錢到此。下一講：打開呢一層，造唔出一個買方。
+  en: 'That is who pays. Next sitting: opening the band does not invent a buyer.'
+  zh: 谁付钱到此。下一讲：打开这一层，造不出一个买方。
+  zh_hk: 邊個畀錢到此。下一講：打開呢一層，造唔出一個買方。

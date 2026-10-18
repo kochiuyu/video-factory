@@ -69,7 +69,6 @@ beats:
   c12: "(0, 5)"
   c21: "(5, 0)"
   c22: "(1, 1)"
-  highlight: c11
   note_en: Players on the axes. Strategies on the labels. Payoffs in the cells.
   note_zh: 轴上是参与人。边上是策略。格子里是报酬。
   note_zh_hk: 軸上面係參與人。旁邊係策略。格仔入面係報酬。

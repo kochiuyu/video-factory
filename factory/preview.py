@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import re
 import shutil
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 from PIL import Image
@@ -12,10 +13,38 @@ from PIL import Image
 import hashlib
 import json
 import os
+import time
 
-from langs import beat_text, bilingual_pair, label_code, script_langs
-from mux import _caption_card, _caption_letters, caption_pages, script_chunks
+from langs import bilingual_pair, label_code, script_langs
+from mux import _caption_card, _caption_letters, caption_pages, stage_scripts
 from slides import lesson_stamp, list_slide_pngs, render_lesson_slides, stamp_matches, write_stamp, write_stage_slides
+
+
+def _preview_workers() -> int:
+    raw = os.environ.get("VF_PREVIEW_JOBS") or os.environ.get("VF_CLIP_JOBS", "3")
+    try:
+        n = int(str(raw).strip() or "3")
+    except ValueError:
+        n = 3
+    cpu = os.cpu_count() or 2
+    return max(1, min(n, 4, cpu))
+
+
+def _stamp_caption_frame(slide: Path, page: str, bar_path: Path, dest: Path) -> tuple[Path, str | None]:
+    try:
+        if not slide.is_file():
+            raise FileNotFoundError(slide)
+        bar = _caption_card(page, bar_path)
+        base = Image.open(slide).convert("RGBA")
+        overlay = Image.open(bar).convert("RGBA")
+        if overlay.size != base.size:
+            overlay = overlay.resize(base.size)
+        base.paste(overlay, (0, 0), overlay)
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        base.convert("RGB").save(dest, "PNG")
+        return dest, None
+    except Exception as exc:  # noqa: BLE001
+        return dest, f"{type(exc).__name__}: {exc}"
 
 
 def _beat_for_slide(path: Path, beats: list[dict]) -> dict | None:
@@ -74,37 +103,35 @@ def render_caption_previews(
             continue
         done_folders.add(folder)
         plan_i += 1
+        fold_t0 = time.perf_counter()
         slide_dir = out_dir / "slides" / folder
         pack = sorted(p for p in slide_dir.glob("*.png")) if slide_dir.is_dir() else []
         need = lesson_stamp(lesson, theme, code, second, stage_cards)
-        if not pack or not stamp_matches(slide_dir, need):
-            try:
+        try:
+            if not pack or not stamp_matches(slide_dir, need):
                 pack = render_lesson_slides(
                     lesson, slide_dir, label_lang=code, theme=theme, second_lang=second
                 )
-                if stage_cards:
-                    staged, _holds = write_stage_slides(
-                        lesson,
-                        slide_dir,
-                        code,
-                        durations,
-                        theme=theme,
-                        force=True,
-                        second_lang=second,
-                    )
-                    if staged:
-                        pack = staged
                 write_stamp(slide_dir, need)
                 print(f"preview slides rebuilt {folder} ({len(pack)} png)")
-            except Exception as exc:  # noqa: BLE001
-                msg = f"preview cannot paint slides {folder}: {type(exc).__name__}: {exc}"
-                print(msg)
-                failures.append(msg)
-                continue
+            if stage_cards:
+                staged, _holds = write_stage_slides(
+                    lesson,
+                    slide_dir,
+                    code,
+                    durations,
+                    theme=theme,
+                    force=True,
+                    second_lang=second,
+                )
+                if staged:
+                    pack = staged
+        except Exception as exc:  # noqa: BLE001
+            msg = f"preview cannot paint slides {folder}: {type(exc).__name__}: {exc}"
+            print(msg)
+            failures.append(msg)
+            continue
         pack = [p for p in pack if p.is_file()]
-        staged = [p for p in pack if re.search(r"_s\d+$", p.stem)]
-        if staged:
-            pack = staged
         if not pack:
             msg = f"preview skip {folder}: no slide PNGs in {slide_dir}"
             print(msg)
@@ -118,8 +145,8 @@ def render_caption_previews(
             "opacity": os.environ.get("VF_CAPTION_OPACITY", ""),
             "lang": lang,
             "slides": lesson_stamp(lesson, theme, code, second, stage_cards),
-            "scripts": [beat_text(beat, lang) for beat in beats],
-            "v": "2026-09-13-full-script",
+            "scripts": [stage_scripts(beat, lang, 8) for beat in beats],
+            "v": "2026-09-19-preview-stage-lines",
         }
         cap_stamp = hashlib.sha256(
             json.dumps(cap_opts, sort_keys=True, ensure_ascii=False).encode("utf-8")
@@ -129,30 +156,17 @@ def render_caption_previews(
             written.extend(kept)
             print(f"preview reuse {folder} ({len(kept)} png)")
             print(f"progress: preview {plan_i}/{plan_n} {folder} reuse")
+            print(f"timing: captions {folder} {time.perf_counter() - fold_t0:.1f}s")
             continue
         dest_dir.mkdir(parents=True, exist_ok=True)
         for stale in dest_dir.glob("*.png"):
             stale.unlink()
         cap_dir = out_dir / "preview" / "_bars" / lang
+        jobs: list[tuple[Path, str, Path, Path]] = []
 
-        def stamp(slide: Path, page: str, stem: str) -> None:
-            try:
-                if not slide.is_file():
-                    raise FileNotFoundError(slide)
-                bar = _caption_card(page, cap_dir / f"{stem}.png")
-                base = Image.open(slide).convert("RGBA")
-                overlay = Image.open(bar).convert("RGBA")
-                if overlay.size != base.size:
-                    overlay = overlay.resize(base.size)
-                base.paste(overlay, (0, 0), overlay)
-                dest = dest_dir / f"{stem}.png"
-                base.convert("RGB").save(dest, "PNG")
-                written.append(dest)
-                print(f"preview {lang}/{stem}")
-            except Exception as exc:  # noqa: BLE001
-                msg = f"preview fail {folder}/{stem}: {type(exc).__name__}: {exc}"
-                print(msg)
-                failures.append(msg)
+        def stage_num(path: Path) -> int:
+            m = re.search(r"_s(\d+)$", path.stem)
+            return int(m.group(1)) if m else 0
 
         grouped: dict[str, list[tuple[Path, dict]]] = {}
         for slide in pack:
@@ -164,28 +178,39 @@ def render_caption_previews(
         for items in grouped.values():
             beat = items[0][1]
             slides_for = [s for s, _ in items]
-            text = beat_text(beat, lang)
-            pages_all: list[str] = []
-            if len(slides_for) > 1:
-                chunks = script_chunks(text, len(slides_for))
-                for slide, chunk in zip(slides_for, chunks):
-                    pages = caption_pages(chunk)
-                    pages_all.extend(pages)
-                    for i, page in enumerate(pages, start=1):
-                        stem = slide.stem if len(pages) == 1 else f"{slide.stem}_c{i}"
-                        stamp(slide, page, stem)
+            staged = [s for s in slides_for if stage_num(s)]
+            if staged:
+                slides_for = sorted(staged, key=stage_num)
             else:
-                pages = caption_pages(text)
-                pages_all = pages
-                slide = slides_for[0]
+                slides_for = sorted(slides_for, key=lambda p: p.name)
+            chunks = stage_scripts(beat, lang, len(slides_for))
+            pages_all: list[str] = []
+            for slide, chunk in zip(slides_for, chunks):
+                pages = caption_pages(chunk)
+                pages_all.extend(pages)
                 for i, page in enumerate(pages, start=1):
                     stem = slide.stem if len(pages) == 1 else f"{slide.stem}_c{i}"
-                    stamp(slide, page, stem)
-            if _caption_letters(text) != _caption_letters("".join(pages_all)):
+                    jobs.append((slide, page, cap_dir / f"{stem}.png", dest_dir / f"{stem}.png"))
+            expected = "".join(chunks)
+            if _caption_letters(expected) != _caption_letters("".join(pages_all)):
                 print(f"preview coverage miss {beat.get('id')} {lang}")
+        workers = _preview_workers()
+        print(f"preview stamp {folder}: {len(jobs)} frames, {workers} workers")
+        if jobs:
+            with ThreadPoolExecutor(max_workers=workers) as pool:
+                futs = [pool.submit(_stamp_caption_frame, *job) for job in jobs]
+                for fut in as_completed(futs):
+                    dest, err = fut.result()
+                    if err:
+                        msg = f"preview fail {folder}/{dest.stem}: {err}"
+                        print(msg)
+                        failures.append(msg)
+                    else:
+                        written.append(dest)
         if any(dest_dir.glob("*.png")):
             write_stamp(dest_dir, cap_stamp)
         print(f"progress: preview {plan_i}/{plan_n} {folder}")
+        print(f"timing: captions {folder} {time.perf_counter() - fold_t0:.1f}s")
     if not written:
         detail = "; ".join(failures[:6]) or "no caption frames"
         raise RuntimeError(f"caption preview wrote no frames ({detail})")

@@ -1,0 +1,136 @@
+id: ECON-CH-OC
+course: principles
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 88
+title_en: Opportunity Cost
+title_zh: 机会成本
+title_zh_hk: 機會成本
+objective_en: 'Second step of the choice unit: the economic cost is the next-best use of the same
+  time or money.'
+objective_zh: 选择单元的第二步：经济成本是同一笔时间或金钱的次优用途。
+objective_zh_hk: 選擇單元的第二步：經濟成本是同一筆時間或金錢的次優用途。
+glossary:
+- en: opportunity cost
+  zh: 机会成本
+  zh_hk: 機會成本
+  lock: true
+- en: trade-off
+  zh: 权衡
+  zh_hk: 權衡
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Opportunity cost equals the value of which forgone option?
+  zh: 机会成本等于所放弃的哪一个选项的价值？
+  zh_hk: 機會成本等於所放棄的哪一個選項的價值？
+  answer_en: The best (next-best) alternative, not every skipped option.
+  answer_zh: 最佳（次优）替代方案，而不是所有没选的选项。
+  answer_zh_hk: 最佳（次優）替代方案，而不是所有沒選的選項。
+- id: Q2
+  type: transfer
+  en: A student skips a paid shift to attend a free guest lecture. What is the opportunity cost
+    of attending?
+  zh: 一名学生放弃有薪值班去听免费讲座。听讲座的机会成本是什么？
+  zh_hk: 一名學生放棄有薪值班去聽免費講座。聽講座的機會成本是什麼？
+  answer_en: The wage and other value of that shift, if it was the best alternative.
+  answer_zh: 该班次的工资及其他价值（若它是最佳替代方案）。
+  answer_zh_hk: 該班次的工資及其他價值（若它是最佳替代方案）。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 20
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Opportunity Cost
+  title_zh: 机会成本
+  title_zh_hk: 機會成本
+  en: Last sitting named the trade-off. This sitting names its hidden price. Opportunity cost
+    is the next-best use of the same time or money, not the number on the receipt.
+  zh: 上一讲点出了权衡。这一讲给它看不见的价格起名。机会成本是同一笔时间或钱的次优用途，不是收据上的数字。
+  zh_hk: 上一講點出咗權衡。呢一講畀佢睇唔見嘅價格起名。機會成本係同一筆時間或錢嘅次優用途，唔係收據上嘅數字。
+- id: define
+  visual: definition_card
+  seconds: 22
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Opportunity cost
+  title_zh: 机会成本
+  title_zh_hk: 機會成本
+  formula: OC = value of the best forgone option
+  formula_en: OC = value of the best forgone option
+  formula_zh: 机会成本 = 次优选项的价值
+  formula_zh_hk: 機會成本 = 次優選項的價值
+  gloss_en: Not every skipped option. Only the best one.
+  gloss_zh: 不是所有没选的选项，只是最好的那一个
+  gloss_zh_hk: 不是所有沒選的選項，只是最好的那一個
+  s1_en: Opportunity cost is the value of the best alternative you give up when you choose.
+  s1_zh: 机会成本是你做出选择时所放弃的最佳替代方案的价值。
+  s1_zh_hk: 機會成本係你做出選擇時所放棄嘅最佳替代方案嘅價值。
+  s2_en: It is not every option you skip. Only the best one counts. Write that next-best use in
+    one line.
+  s2_zh: 不是所有没选的选项。只算最好的那一个。请用一句话写出那个次优用途。
+  s2_zh_hk: 唔係所有冇選嘅選項。淨係算最好嗰一個。請用一句話寫出嗰個次優用途。
+- id: example
+  visual: two_column
+  seconds: 24
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Lecture or shift
+  title_zh: 上课还是值班
+  title_zh_hk: 上課還是值班
+  left_en: Attend the lecture
+  left_zh: 去上课
+  left_zh_hk: 去上課
+  right_en: Work a paid shift
+  right_zh: 去值班赚钱
+  right_zh_hk: 去值班賺錢
+  s1_en: You have one afternoon. You can sit in the guest lecture, or work a paid shift. You cannot
+    do both.
+  s1_zh: 你只有一个下午。可以去听讲座，也可以去值班赚钱，但不能两件一起做。
+  s1_zh_hk: 你得一個下晝。可以去聽講座，亦可以去值班賺錢，但唔可以兩件一齊做。
+  s2_en: The left box is the lecture. That is what you get if you say yes.
+  s2_zh: 左栏是讲座。答应的话，你得到的是这一场。
+  s2_zh_hk: 左欄係講座。答應嘅話，你得到嘅係呢一場。
+  s3_en: The right box is the shift. If that wage is the next-best use of the hour, the lecture's
+    opportunity cost is the wage you did not earn.
+  s3_zh: 右栏是值班。若这笔工资是这一小时的次优用途，听讲座的机会成本就是没赚到的工资。
+  s3_zh_hk: 右欄係值班。若呢筆工資係呢個鐘嘅次優用途，聽講座嘅機會成本就係冇賺到嘅工資。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Compare the next-best use
+  title_zh: 比较次优用途
+  title_zh_hk: 比較次優用途
+  q1_en: What is the next-best use of this time or money?
+  q1_zh: 同一时间或金钱的次优用途是什么？
+  q1_zh_hk: 同一時間或金錢的次優用途是什麼？
+  q2_en: Is that better than the sticker price alone?
+  q2_zh: 这个比较是否比只看标价更重要？
+  q2_zh_hk: 這個比較是否比只看標價更重要？
+  s1_en: Before you choose, keep two questions.
+  s1_zh: 选择之前，先留两个问题。
+  s1_zh_hk: 選擇之前，先留兩個問題。
+  s2_en: What is the next-best use of this same time or money?
+  s2_zh: 同一时间或金钱的次优用途是什么？
+  s2_zh_hk: 同一時間或金錢嘅次優用途係咩？
+  s3_en: Is that comparison more useful than the sticker price alone? Next sitting we ask about
+    money that is already gone. A sunk cost is not part of this comparison.
+  s3_zh: 这个比较是否比只看标价更有用？下一讲处理已经花掉的钱。沉没成本不进入这个比较。
+  s3_zh_hk: 呢個比較係咪比淨睇標價更有用？下一講處理已經花咗嘅錢。沉沒成本唔入呢個比較。

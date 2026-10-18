@@ -1,0 +1,66 @@
+id: LAE-M06-IN
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: 'This sitting: who may enter'
+title_zh: 这一讲：谁可以进
+title_zh_hk: 這一講：邊個可以入
+objective_en: Open the policy unit. Three shorts. Who may fly, how the corridor crosses two books, then whether opening the band invents a buyer.
+objective_zh: 打开政策这一讲。三条短片。谁可以飞，这条线怎样跨过两本书，然后打开这一层会不会造出买方。
+objective_zh_hk: 打開政策呢一講。三條短片。邊個可以飛，呢條線點樣跨過兩本書，然後打開呢一層會唔會造出買方。
+glossary:
+- en: Open
+  zh: 开场
+  zh_hk: 開場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Which three pictures does this sitting draw?
+  zh: 这一讲画哪三张图？
+  zh_hk: 呢一講畫邊三張圖？
+  answer_en: The permit, the two books at the crossing, then opening without a buyer.
+  answer_zh: 许可，过境时的两本书，然后打开却没有买方。
+  answer_zh_hk: 許可，過境嗰陣嘅兩本書，然後打開但冇買方。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: who may enter'
+  title_zh: 这一讲：谁可以进
+  title_zh_hk: 這一講：邊個可以入
+  item1_en: Who may fly
+  item1_zh: 谁可以飞
+  item1_zh_hk: 邊個可以飛
+  item2_en: Crossing
+  item2_zh: 过境
+  item2_zh_hk: 過境
+  item3_en: Opening the band
+  item3_zh: 打开这一层
+  item3_zh_hk: 打開呢一層
+  en: Three buyers already have names. This sitting asks who may enter. Three shorts. A permit. Two books at the line. Then whether opening the band invents a fourth buyer.
+  zh: 三个买方已经有名字。这一讲问谁可以进。三条短片。一张许可。线上的两本书。然后打开这一层，会不会造出第四个买方。
+  zh_hk: 三個買方已經有名。但有買方唔代表想飛就飛。三條短片。一張許可。線上嘅兩本書。然後問：打開呢一層，會唔會憑空變出第四個買方。
+- id: takeaway
+  visual: title_card
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: who may enter'
+  title_zh: 这一讲：谁可以进
+  title_zh_hk: 這一講：邊個可以入
+  en: By the end, a closed band should mean exclusion, not delay, and an open band should still need a buyer.
+  zh: 结束时，关着的一层应是排除，不是延误；打开的一层，仍要有买方。
+  zh_hk: 結束時，冇許可係直接踢出門外，同塞車延誤係兩回事；打開咗嘅一層，仍然要有買方。

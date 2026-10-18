@@ -1,0 +1,85 @@
+id: ECON-CH-OUT
+course: economics
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 42
+title_en: Choice, closed
+title_zh: 选择，先说到这里
+title_zh_hk: 選擇，先講到呢度
+objective_en: Close. One person can choose forward. Next module puts a price on the street.
+objective_zh: 收住。一个人可以朝前选。下一单元给街上标一个价。
+objective_zh_hk: 收住。一個人可以朝前揀。下一單元俾街上標一個價。
+glossary:
+- en: sunk cost
+  zh: 沉没成本
+  zh_hk: 沉沒成本
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Where does a sunk cost belong?
+  zh: 沉没成本进哪一步？
+  zh_hk: 沉沒成本入邊一步？
+  answer_en: Nowhere. The next choice uses only future benefits and future costs.
+  answer_zh: 哪一步都不进。下一步只用未来的好处和未来的成本。
+  answer_zh_hk: 邊一步都唔入。下一步淨用未來嘅好處同未來嘅成本。
+- id: Q2
+  type: comprehension
+  en: What is the next module?
+  zh: 下一单元是什么？
+  zh_hk: 下一單元係咩？
+  answer_en: Price. Demand, supply, equilibrium, elasticity.
+  answer_zh: 价格。需求、供给、均衡、弹性。
+  answer_zh_hk: 價格。需求、供給、均衡、彈性。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 22
+  kicker: This module
+  kicker_en: This module
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Choice, closed
+  title_zh: 选择，先说到这里
+  title_zh_hk: 選擇，先講到呢度
+  claim_en: Trade-off. Opportunity cost. Ignore sunk. One more unit.
+  claim_zh: 权衡。机会成本。沉没不算。再一单位。
+  claim_zh_hk: 權衡。機會成本。沉沒唔計。再一單位。
+  next_en: Next module is price.
+  next_zh: 下一单元是价格。
+  next_zh_hk: 下一單元係價格。
+  en: You can now name the trade-off, the opportunity cost, the sunk cost, and whether one more
+    unit still pays. That is one person choosing.
+  zh: 你现在能说出权衡、机会成本、沉没成本，以及再一单位还值不值。这是一个人在选。
+  zh_hk: 你而家講得出權衡、機會成本、沉沒成本，以及再一單位仲值唔值。呢個係一個人喺度揀。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: This module
+  kicker_en: This module
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Next, a price
+  title_zh: 接下来，一个价
+  title_zh_hk: 跟住，一個價
+  q1_en: Decide forward.
+  q1_zh: 朝前做决定。
+  q1_zh_hk: 朝前做決定。
+  q2_en: Next module writes demand and supply.
+  q2_zh: 下一单元写需求和供给。
+  q2_zh_hk: 下一單元寫需求同供給。
+  s1_en: Take those four tools with you.
+  s1_zh: 这四件工具带走。
+  s1_zh_hk: 呢四件工具帶走。
+  s2_en: One person has chosen. The street outside has many people.
+  s2_zh: 一个人已经选完。外面街上有很多人。
+  s2_zh_hk: 一個人已經揀完。外面街上有好多人。
+  s3_en: Next module is price. We write the buyers' list, then the sellers' list, then let one
+    price clear the street.
+  s3_zh: 下一单元是价格。先写买家的清单，再写卖家的清单，再让一个价出清这条街。
+  s3_zh_hk: 下一單元係價格。先寫買家清單，再寫賣家清單，再讓一個價出清呢條街。

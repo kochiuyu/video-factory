@@ -1,0 +1,185 @@
+id: GBA-M01-FM
+course: gba
+course_en: Greater Bay Area
+course_zh: 粤港澳大湾区
+course_zh_hk: 粵港澳大灣區
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 112
+title_en: Factor Mobility
+title_zh: 要素流动
+title_zh_hk: 要素流動
+objective_en: 'Third step of the map unit: goods, capital, and people do not cross the same gate.'
+objective_zh: 地图单元的第三步：货、资金和人，不是同一道闸。
+objective_zh_hk: 地圖單元的第三步：貨、資金和人，不是同一道閘。
+glossary:
+- en: factor mobility
+  zh: 要素流动
+  zh_hk: 要素流動
+  lock: true
+- en: boundary
+  zh: 边界
+  zh_hk: 邊界
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Why should goods, people, and capital not be treated as one GBA flow?
+  zh: 为何不能把商品、人员和资本当成大湾区的同一股流量？
+  zh_hk: 為何不能把商品、人員和資本當成大灣區的同一股流量？
+  answer_en: They face different rules at the boundary.
+  answer_zh: 它们在边界上面对不同规则。
+  answer_zh_hk: 它們在邊界上面對不同規則。
+- id: Q2
+  type: transfer
+  en: A new bridge cuts truck time. Does that also free a nurse to work across the boundary?
+  zh: 一座新桥缩短了货车时间。这是否也让护士能跨境工作？
+  zh_hk: 一座新橋縮短了貨車時間。這是否也讓護士能跨境工作？
+  answer_en: Not by itself. Labour still needs its own permit.
+  answer_zh: 不会自动如此。劳动仍需要自己的许可。
+  answer_zh_hk: 不會自動如此。勞動仍需要自己的許可。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Factor Mobility
+  title_zh: 要素流动
+  title_zh_hk: 要素流動
+  en: A bridge moves trucks. It does not automatically move workers or bank deposits. Write the factor
+    before you call the GBA integrated.
+  zh: 桥能走货车。它不会自动把工人或存款一起送过去。先写明是哪种要素，再宣称大湾区已经一体化。
+  zh_hk: 橋能走貨車。它不會自動把工人或存款一起送過去。先寫明是哪種要素，再宣稱大灣區已經一體化。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Three different gates
+  title_zh: 三道不同的关
+  title_zh_hk: 三道不同的關
+  formula: Goods ≠ people ≠ capital
+  formula_en: Goods ≠ people ≠ capital
+  formula_zh: 货物 ≠ 人员 ≠ 资本
+  formula_zh_hk: 貨物 ≠ 人員 ≠ 資本
+  gloss_en: Mobility is the ease of crossing, not the wish to cross.
+  gloss_zh: 流动性是越过边界的难易，不是想过的愿望。
+  gloss_zh_hk: 流動性是越過邊界的難易，不是想過的願望。
+  en: Factor mobility is how easily labour, capital, and goods can move to a higher-value use. In
+    the GBA those three crossings face different rules, so they should not be treated as one flow.
+  zh: 要素流动是劳动、资本和商品转向更高价值用途的难易。在大湾区，这三种跨越面对不同规则，不能当成同一股流量。
+  zh_hk: 要素流動是勞動、資本和商品轉向更高價值用途的難易。在大灣區，這三種跨越面對不同規則，不能當成同一股流量。
+- id: example
+  visual: three_column
+  seconds: 16
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 比较
+  kicker_zh_hk: 比較
+  title_en: Same week, three gates
+  title_zh: 同一周，三道关
+  title_zh_hk: 同一週，三道關
+  col1_en: A container of parts
+  col1_zh: 一箱零件
+  col1_zh_hk: 一箱零件
+  col2_en: A work visa
+  col2_zh: 一张工作签证
+  col2_zh_hk: 一張工作簽證
+  col3_en: A savings deposit
+  col3_zh: 一笔储蓄
+  col3_zh_hk: 一筆儲蓄
+  en: Parts can clear a port in hours if papers match. A work visa can take months. Moving a deposit
+    may face a quota. Calling the cluster “open” hides which gate you mean.
+  zh: 文件齐全时，零件几小时就能过港。工作签证可能要几个月。搬存款可能碰到额度。说集群「开放」，会掩盖你指的是哪一道关。
+  zh_hk: 文件齊全時，零件幾小時就能過港。工作簽證可能要幾個月。搬存款可能碰到額度。說集群「開放」，會掩蓋你指的是哪一道關。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Three markets, three frictions
+  title_zh: 三个市场，三种摩擦
+  title_zh_hk: 三個市場，三種摩擦
+  formula: Goods ≠ people ≠ capital
+  formula_en: Goods ≠ people ≠ capital
+  formula_zh: 货物 ≠ 人员 ≠ 资本
+  formula_zh_hk: 貨物 ≠ 人員 ≠ 資本
+  gloss_en: A truck is not a visa.
+  gloss_zh: 卡车不是签证。
+  gloss_zh_hk: 卡車不是簽證。
+  en: Goods, workers, and money do not cross the same way. A customs lane can be fast while a work
+    permit is slow. Name which factor you mean.
+  zh: 货物、工人和资金不是同一条路。海关通道可以很快，工作许可可以很慢。先说你指哪一种要素。
+  zh_hk: 貨物、工人和資金不是同一條路。海關通道可以很快，工作許可可以很慢。先說你指哪一種要素。
+- id: lanes
+  visual: three_column
+  seconds: 16
+  kicker: Three parts
+  kicker_en: Three parts
+  kicker_zh: 三部分
+  kicker_zh_hk: 三部分
+  title_en: Watch the lanes
+  title_zh: 看三条道
+  title_zh_hk: 看三條道
+  col1_en: Goods
+  col1_zh: 货物
+  col1_zh_hk: 貨物
+  col2_en: People
+  col2_zh: 人员
+  col2_zh_hk: 人員
+  col3_en: Capital
+  col3_zh: 资本
+  col3_zh_hk: 資本
+  en: A policy that opens goods and locks people will move factories, not families. A policy that
+    opens capital and locks goods will move books, not boxes.
+  zh: 开放货物却锁住人员的政策，会移动工厂而不是家庭。开放资本却锁住货物的政策，会移动账本而不是箱子。
+  zh_hk: 開放貨物卻鎖住人員的政策，會移動工廠而不是家庭。開放資本卻鎖住貨物的政策，會移動賬本而不是箱子。
+- id: permit
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A weekend engineer
+  title_zh: 周末工程师
+  title_zh_hk: 週末工程師
+  setup_en: Can visit
+  setup_zh: 可以到访
+  setup_zh_hk: 可以到訪
+  result_en: Cannot stay on payroll
+  result_zh: 不能留在工资单上
+  result_zh_hk: 不能留在工資單上
+  en: The engineer can cross for a meeting and must go home. Capital already sits in both cities.
+    The binding friction is the person, not the money.
+  zh: 工程师可以过来开会，但必须回家。资本已经在两座城市。真正绷紧的摩擦是人，不是钱。
+  zh_hk: 工程師可以過來開會，但必須回家。資本已經在兩座城市。真正繃緊的摩擦是人，不是錢。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Name the factor
+  title_zh: 先说出是哪一种要素
+  title_zh_hk: 先說出是哪一種要素
+  q1_en: Which factor are you moving?
+  q1_zh: 你要流动的是哪一种要素？
+  q1_zh_hk: 你要流動的是哪一種要素？
+  q2_en: Which rule sits on that gate?
+  q2_zh: 那道关上是哪一条规则？
+  q2_zh_hk: 那道關上是哪一條規則？
+  en: 'A policy that opens goods does not open people. Next we look at the people gate in full: a
+    short commute is not one labour market — a licence and a contract still have to travel.'
+  zh: 放开货的政策，不会自动放开人。下一讲把人的闸口看完整：通勤短，并不等于一个劳动力市场——牌照和合同还是要过关。
+  zh_hk: 放開貨的政策，不會自動放開人。下一講把人的閘口看完整：通勤短，並不等於一個勞動力市場——牌照和合同還是要過關。

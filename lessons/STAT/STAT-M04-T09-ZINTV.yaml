@@ -1,0 +1,227 @@
+id: STAT-M04-T09-ZINTV
+course: STAT-M04
+course_en: Sampling Distributions, the Central Limit Theorem, and Interval Estimation
+course_zh: 抽样分布、中心极限定理与区间估计
+course_zh_hk: 抽樣分佈、中心極限定理與區間估計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: Constructing the Z-interval
+title_zh: 筑牢置信之界：构建 Z 区间与临界值博弈
+title_zh_hk: 築牢置信之界：構建 Z 區間與臨界值博弈
+objective_en: Derive two-sided normal critical values (Z* = 1.645, 1.960, and 2.576) from standard normal tables, calculate
+  the margin of error for known variance, examine how expanding confidence from 90% to 99% widens interval width by over 56%,
+  and construct milk foam temperature compliance brackets.
+objective_zh: 根据标准正态分布分位数推导双尾临界值（Z* = 1.645、1.960 与 2.576），计算总体方差已知下的误差容限，量化从 90% 提升至 99% 置信度导致区间宽度膨胀逾 56% 的边际代价，并构建奶泡打发温度品控合规区间。
+objective_zh_hk: 根據標準正態分佈分位數推導雙尾臨界值（Z* = 1.645、1.960 同 2.576），計算總體方差已知下嘅誤差容限，量化由 90% 提升至 99% 置信度搞到區間闊度膨脹超過 56% 嘅邊際代價，並構建奶泡打發溫度品控合規區間。
+glossary:
+- en: confidence level (1 - alpha)
+  zh: 置信水平/置信度
+  zh_hk: 置信水平/置信度
+  lock: true
+- en: critical value (Z*)
+  zh: 临界值 (Z*)
+  zh_hk: 臨界值 (Z*)
+  lock: true
+- en: margin of error
+  zh: 误差容限
+  zh_hk: 誤差容限
+  lock: true
+- en: Z-confidence interval
+  zh: Z 置信区间
+  zh_hk: Z 置信區間
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: When constructing a two-sided confidence interval for a population mean with known variance, why is the critical
+    value for a 95% confidence level Z* = 1.960 instead of Z* = 1.645?
+  question_zh: 在总体方差已知的双尾均值置信区间构建中，为什么 95% 置信水平对应的临界值是 Z* = 1.960，而不是 Z* = 1.645？
+  question_zh_hk: 喺總體方差已知嘅雙尾均值置信區間構建入面，點解 95% 置信水平對應嘅臨界值係 Z* = 1.960，而唔係 Z* = 1.645？
+  options_en:
+  - 'A: A 95% confidence interval isolates alpha = 5% split into two 2.5% tails, placing the upper critical cutoff at the
+    97.5th percentile where Z = 1.960.'
+  - 'B: Because commercial coffee regulations require adding a 0.315 safety buffer to all audit calculations.'
+  - 'C: Because 1.645 applies only to discrete variables, while 1.960 is reserved for continuous variables.'
+  - 'D: Because 1.960 represents the square root of 95%.'
+  options_zh:
+  - 'A: 95% 置信区间将 alpha = 5% 的显著性水平均分在两侧各 2.5% 的尾部，上临界值对应标准正态分布的第 97.5 百分位数（Z = 1.960）。'
+  - 'B: 因为商用咖啡品质法规要求在所有审计模型中人为追加 0.315 的风控缓冲。'
+  - 'C: 因为 1.645 仅适用于离散计数变量，而 1.960 则是连续变量的专用常数。'
+  - 'D: 因为 1.960 是 95% 这一数值在四舍五入后的直接平方根。'
+  options_zh_hk:
+  - 'A: 95% 置信區間將 alpha = 5% 嘅顯著性水平均分喺兩側各 2.5% 嘅尾部，上臨界值對應標準正態分佈嘅第 97.5 百分位數（Z = 1.960）。'
+  - 'B: 因為商用咖啡品質法規要求喺所有審計模型入面人為追加 0.315 嘅風控緩衝。'
+  - 'C: 因為 1.645 淨係適用於離散計數變量，而 1.960 則係連續變量嘅專用常數。'
+  - 'D: 因為 1.960 係 95% 嗰個數值喺四捨五入後嘅直接平方根。'
+  answer: A
+  explanation_en: In a two-sided interval, alpha = 1 - 0.95 = 0.05. Splitting equally across both tails leaves alpha / 2 =
+    0.025 in each tail. The cumulative probability is 1 - 0.025 = 0.9750, which corresponds to Z* = 1.960 on the standard
+    normal table.
+  explanation_zh: 在双尾区间中，未覆盖概率 alpha = 1 - 0.95 = 0.05。平分至两端尾部得每侧 alpha / 2 = 0.025。累积概率达到 0.9750 处对应的标准正态临界值恰为 Z* = 1.960。
+  explanation_zh_hk: 喺雙尾區間入面，未覆蓋概率 alpha = 1 - 0.95 = 0.05。平分至兩端尾部得每側 alpha / 2 = 0.025。累積概率達到 0.9750 處對應嘅標準正態臨界值啱啱好係 Z* =
+    1.960。
+- id: Q2
+  type: multiple_choice
+  question_en: Metro audits milk steaming temperature across n = 100 lattes. The sample mean is 65.0°C and population standard
+    deviation is known to be sigma = 2.5°C. What are the margins of error and interval widths for 90% versus 99% confidence?
+  question_zh: 都市咖啡抽检 n = 100 杯拿铁的打发奶温，样本均值为 65.0°C，已知总体标准差 sigma = 2.5°C。在 90% 与 99% 置信度下，其误差容限（MOE）与总区间宽度分别是多少？
+  question_zh_hk: 都市咖啡抽檢 n = 100 杯鮮奶咖啡嘅打發奶溫，樣本均值為 65.0°C，已知總體標準差 sigma = 2.5°C。喺 90% 同 99% 置信度下，其誤差容限（MOE）與總區間闊度分別係幾多？
+  options_en:
+  - 'A: SE = 0.25°C. At 90%: MOE = 0.411°C (width = 0.822°C). At 99%: MOE = 0.644°C (width = 1.288°C), expanding width by
+    ~56.6%.'
+  - 'B: SE = 2.50°C. At 90%: MOE = 4.11°C. At 99%: MOE = 6.44°C.'
+  - 'C: At 90%: width = 1.00°C. At 99%: width = 1.09°C.'
+  - 'D: Interval widths remain identical because sample size n = 100 is unchanged.'
+  options_zh:
+  - 'A: SE = 0.25°C。90% 时：MOE = 0.411°C（区间总宽度 0.822°C）；99% 时：MOE = 0.644°C（总宽度 1.288°C），宽度膨胀约 56.6%。'
+  - 'B: SE = 2.50°C。90% 时：MOE = 4.11°C；99% 时：MOE = 6.44°C。'
+  - 'C: 90% 时总宽度为 1.00°C；99% 时总宽度为 1.09°C。'
+  - 'D: 区间宽度绝对保持一致，因为样本量 n = 100 并未发生改变。'
+  options_zh_hk:
+  - 'A: SE = 0.25°C。90% 嗰陣：MOE = 0.411°C（區間總闊度 0.822°C）；99% 嗰陣：MOE = 0.644°C（總闊度 1.288°C），闊度膨脹約 56.6%。'
+  - 'B: SE = 2.50°C。90% 嗰陣：MOE = 4.11°C；99% 嗰陣：MOE = 6.44°C。'
+  - 'C: 90% 嗰陣總闊度為 1.00°C；99% 嗰陣總闊度為 1.09°C。'
+  - 'D: 區間闊度絕對保持一致，因為樣本量 n = 100 並冇發生改變。'
+  answer: A
+  explanation_en: SE = 2.5 / sqrt(100) = 0.25. MOE_90 = 1.645 * 0.25 = 0.41125°C (width = 0.8225°C). MOE_99 = 2.576 * 0.25
+    = 0.644°C (width = 1.288°C). Ratio is 2.576 / 1.645 ≈ 1.566, a 56.6% wider bracket.
+  explanation_zh: 标准误 SE = 2.5 / 10 = 0.25°C。90% 误差容限为 1.645 × 0.25 = 0.41125°C（总跨度 0.8225°C）；99% 误差容限为 2.576 × 0.25 = 0.644°C（总跨度
+    1.288°C）。临界值之比 2.576 / 1.645 约等于 1.566，区间宽度生生撑大 56.6%。
+  explanation_zh_hk: 標準誤 SE = 2.5 / 10 = 0.25°C。90% 誤差容限為 1.645 × 0.25 = 0.41125°C（總跨度 0.8225°C）；99% 誤差容限為 2.576 × 0.25 =
+    0.644°C（總跨度 1.288°C）。臨界值之比 2.576 / 1.645 約等於 1.566，區間闊度生生撐大 56.6%。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Steaming Foam Dispute
+  kicker_en: The Steaming Foam Dispute
+  kicker_zh: 奶泡温度之争
+  kicker_zh_hk: 奶泡溫度之爭
+  title_en: How wide must the quality bracket be?
+  title_zh: 品控区间究竟该拉多宽？
+  title_zh_hk: 品控區間究竟應該拉幾闊？
+  en: 'At Metro Coffee, temperature is flavor: steam milk past seventy degrees Celsius and the proteins scorch into bitter
+    sulphur; serve below sixty and latte foam collapses into watery liquid. In a quality audit of one hundred lattes across
+    Wan Chai and Mong Kok, average milk temperature measures sixty-five degrees. Marketing demands a razor-sharp, narrow bracket
+    to promote consistency in advertising. The legal compliance team demands near-absolute certainty to prevent consumer disputes.
+    How do critical Z multipliers mathematically govern this corporate compromise?'
+  zh: 在都市咖啡的出品法度中，温度决定风味：打发奶温一旦超过七十摄氏度，乳清蛋白变性焦糊，散发硫磺苦味；低于六十度，奶泡组织瞬间塌陷变稀。质检部抽测了湾仔与旺角的一百杯拿铁，测得平均奶温为六十五度。品牌营销部要求对外公布极窄的温控区间以彰显工艺严苛；法务风控部则坚持要求极高的把握度以杜绝虚假宣传纠纷。掌控正态分布两侧尾部的
+    Z 临界值，究竟如何裁定这场商业妥协？
+  zh_hk: 喺都市咖啡嘅出品法度入面，溫度決定風味：打發奶溫一旦超過七十攝氏度，乳清蛋白變性焦燶，散發硫磺苦味；低過六十度，奶泡組織瞬間塌陷變稀。質檢部抽測咗灣仔同旺角嘅一百杯鮮奶咖啡，測得平均奶溫為六十五度。品牌營銷部要求對外公佈極窄嘅溫控區間以彰顯工藝嚴苛；法務風控部就堅持要求極高嘅把握度以杜絕虛假宣傳糾紛。掌控正態分佈兩側尾部嘅
+    Z 臨界值，究竟點樣裁定呢場商業妥協？
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: What It Is
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: The Z-interval formula
+  title_zh: 均值 Z 置信区间的标准范式
+  title_zh_hk: 均值 Z 置信區間嘅標準範式
+  formula: CI = X-bar +/- Z*(alpha / 2) * (sigma / sqrt(n)); alpha = 1 - Confidence
+  formula_zh: 置信区间 = 样本均值 ± Z* 临界值 × 抽样标准误；显著性水平 alpha = 1 - 置信度
+  formula_zh_hk: 置信區間 = 樣本均值 ± Z* 臨界值 × 抽樣標準誤；顯著性水平 alpha = 1 - 置信度
+  formula_tex: \text{CI} = \bar{X} \pm Z^*_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}
+  s1_en: When the population standard deviation sigma is known and sample size is thirty or larger, the Central Limit Theorem
+    guarantees that our standardized sample mean behaves as a standard normal variable.
+  s1_zh: 当总体标准差 sigma 已知且样本量达到或超过三十时，中心极限定理确保标准化后的样本均值严格服从标准高斯正态分布。
+  s1_zh_hk: 當總體標準差 sigma 已知兼且樣本量達到或超過三十嗰陣，中心極限定理確保標準化後嘅樣本均值嚴格服從標準高斯正態分佈。
+  s2_en: To build a confidence level of one minus alpha, we split the uncaptured risk alpha equally across both tails. The
+    critical value Z star is the exact cutoff on the horizontal axis holding the middle percentage intact.
+  s2_zh: 为了构建把握度为 1 减 alpha 的置信区间，我们将落网风险 alpha 均等劈向钟形曲线两侧的尖尾。临界值 Z 星号正是水平轴上死死圈定中间目标面积的几何分界标尺。
+  s2_zh_hk: 為咗構建把握度為 1 減 alpha 嘅置信區間，我哋將脫網風險 alpha 均等劈向鐘形曲線兩側嘅尖尾。臨界值 Z 星號正正係水平軸上死死圈定中間目標面積嘅幾何分界標尺。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  kicker: The Critical Cutoffs
+  kicker_en: The Critical Cutoffs
+  kicker_zh: 三大标尺
+  kicker_zh_hk: 三大標尺
+  title_en: The three executive standards
+  title_zh: 商业界通用的三大置信标尺
+  title_zh_hk: 商業界通用嘅三大置信標尺
+  left_en: '90% Confidence: Z* = 1.645 (Nimble, 5% each tail)'
+  left_zh: 90% 置信水平：Z* = 1.645（紧凑敏捷，两翼各留 5% 风险）
+  left_zh_hk: 90% 置信水平：Z* = 1.645（緊湊敏捷，兩翼各留 5% 風險）
+  right_en: '95% and 99%: Z* = 1.960 and 2.576 (Conservative Fortresses)'
+  right_zh: 95% 与 99%：Z* = 1.960 与 2.576（风控铁闸，区间大幅拉宽）
+  right_zh_hk: 95% 與 99%：Z* = 1.960 與 2.576（風控鐵閘，區間大幅拉闊）
+  s1_en: Three critical values dominate executive boardrooms worldwide. Ninety percent confidence uses Z star of one point
+    six four five, leaving five percent in each tail for swift operational screening.
+  s1_zh: 三大经典临界值统领着全球商界的数据看板。百分之九十置信度对应 Z 星号等于一点六四五，两端各分流百分之五的尾部风险，适用于日常敏捷巡检。
+  s1_zh_hk: 三大經典臨界值統領住全球商界嘅數據看板。百分之九十置信度對應 Z 星號等於一點六四五，兩端各分流百分之五嘅尾部風險，適用於日常敏捷巡檢。
+  s2_en: The universal gold standard is ninety-five percent confidence, commanding Z star of one point nine six zero. It cuts
+    uncaptured risk to just two point five percent on either side.
+  s2_zh: 工业界通行的黄金法度是百分之九十五置信度，调遣 Z 星号等于一点九六零。它将两侧的脱靶风险严密压缩至各百分之二点五。
+  s2_zh_hk: 工業界通行嘅黃金法度係百分之九十五置信度，調遣 Z 星號等於一點九六零。佢將兩側嘅脫靶風險嚴密壓縮至各百分之二點五。
+  s3_en: 'For life-safety or legal liability compliance, executives mandate ninety-nine percent confidence with Z star of
+    two point five seven six. But beware: expanding from ninety to ninety-nine percent stretches interval width by over fifty-six
+    percent!'
+  s3_zh: 在食品安全与法律风控红线面前，管理层常强推百分之九十九置信度，调用 Z 星号等于二点五七六。但必须警惕：从九十攀升至九十九，区间跨度将硬生生拉宽超过百分之五十六！
+  s3_zh_hk: 喺食品安全與法律風控紅線面前，管理層常強推百分之九十九置信度，調用 Z 星號等於二點五七六。但必須警惕：由九十攀升至九十九，區間跨度將硬生生拉闊超過百分之五十六！
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: The Ledger
+  kicker_en: The Ledger
+  kicker_zh: 账目精算
+  kicker_zh_hk: 賬目精算
+  title_en: Auditing latte milk foam temperature
+  title_zh: 都市咖啡打发奶温阶梯区间精算
+  title_zh_hk: 都市咖啡打發奶溫階梯區間精算
+  step1_en: 'Audit baseline: n = 100 lattes, x-bar = 65.0°C, sigma = 2.5°C -> SE = 0.25°C'
+  step1_zh: 抽检基准：n = 100 杯，均值 65.0°C，已知总体 sigma = 2.5°C -> 标准误 SE = 0.25°C
+  step1_zh_hk: 抽檢基準：n = 100 杯，均值 65.0°C，已知總體 sigma = 2.5°C -> 標準誤 SE = 0.25°C
+  step2_en: '90% Interval: MOE = 1.645 * 0.25 = 0.41°C -> Bracket: [64.59°C, 65.41°C]'
+  step2_zh: 90% 置信区间：MOE = 1.645 × 0.25 = 0.41°C -> 认证范围：[64.59°C, 65.41°C]
+  step2_zh_hk: 90% 置信區間：MOE = 1.645 × 0.25 = 0.41°C -> 認證範圍：[64.59°C, 65.41°C]
+  step3_en: '99% Interval: MOE = 2.576 * 0.25 = 0.64°C -> Bracket: [64.36°C, 65.64°C] (+56% width)'
+  step3_zh: 99% 置信区间：MOE = 2.576 × 0.25 = 0.64°C -> 认证范围：[64.36°C, 65.64°C]（宽度撑大 56%）
+  step3_zh_hk: 99% 置信區間：MOE = 2.576 × 0.25 = 0.64°C -> 認證範圍：[64.36°C, 65.64°C]（闊度撐大 56%）
+  s1_en: 'Examine the Wan Chai and Mong Kok latte testing log. Across n equals one hundred audited cups, sample average milk
+    temperature is sixty-five point zero degrees. With population volatility established at sigma equals two point five, standard
+    error is two point five divided by ten: exactly zero point two five degrees.'
+  s1_zh: 调阅湾仔与旺角分店的拿铁巡检台账。在抽检的一百杯出品中，样本平均奶温录得六十五点零度。结合确凿的总体波动历史标准差二点五度，标准误为二点五除以十：精确得出零点二五摄氏度。
+  s1_zh_hk: 調閱灣仔同旺角分舖嘅鮮奶咖啡巡檢台賬。喺抽檢嘅一百杯出品入面，樣本平均奶溫錄得六十五點零度。結合確鑿嘅總體波動歷史標準差二點五度，標準誤為二點五除以十：精確得出零點二五攝氏度。
+  s2_en: For a swift ninety percent operational review, we multiply zero point two five by one point six four five, yielding
+    a margin of error of zero point four one degrees. The ninety percent certified bracket spans sixty-four point five nine
+    to sixty-five point four one degrees.
+  s2_zh: 针对追求紧凑敏捷的百分之九十日常运营审计，以零点二五乘上一点六四五，解出误差容限为零点四一度。百分之九十置信区间收敛在六十四点五九至六十五点四一度之间。
+  s2_zh_hk: 針對追求緊湊敏捷嘅百分之九十日常營運審計，以零點二五乘上一點六四五，解出誤差容限為零點四一度。百分之九十置信區間收斂喺六十四點五九至六十五點四一度之間。
+  s3_en: If legal insists on ninety-nine percent compliance, multiply zero point two five by two point five seven six. The
+    margin of error expands to zero point six four degrees, widening the interval to sixty-four point three six through sixty-five
+    point six four. That extra security cost us over fifty-six percent in interval precision!
+  s3_zh: 若法务风控坚持启用百分之九十九的高确定性，乘数跃升至二点五七六。误差容限膨胀到零点六四度，区间跨度拓宽至六十四点三六到六十五点六四度。这凭空换来的安全感，让我们的区间精度生生稀释了百分之五十六！
+  s3_zh_hk: 若果法務風控堅持啟用百分之九十九嘅高確定性，乘數躍升至二點五七六。誤差容限膨脹到零點六四度，區間跨度拓闊至六十四點三六到六十五點六四度。呢個憑空換嚟嘅安全感，等我哋嘅區間精度生生稀釋咗百分之五十六！
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: Decision Rule
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Match the critical multiplier to the operational cost of error
+  title_zh: 按风险代价核定乘数，绝不为虚幻安全盲目拉宽区间
+  title_zh_hk: 按風險代價核定乘數，絕唔為虛幻安全盲目拉闊區間
+  q1_en: Why should marketing and legal teams never use identical confidence levels?
+  q1_zh: 为什么营销品宣与法务风控在构建置信区间时不应生搬硬套相同的置信度？
+  q1_zh_hk: 點解營銷品宣與法務風控喺構建置信區間嗰陣唔應該生搬硬套相同嘅置信度？
+  q2_en: What does ninety-five percent confidence actually mean across one hundred independent auditors?
+  q2_zh: 当一百位独立审计员各自构建 95% 置信区间时，这百分之九十五在统计学本质上究竟意味着什么？
+  q2_zh_hk: 當一百位獨立審計員各自構建 95% 置信區間嗰陣，嗰個百分之九十五喺統計學本質上究竟意味住咩？
+  s1_en: Never pick confidence levels arbitrarily; moving from ninety to ninety-nine percent widens your interval by fifty-six
+    percent, trading sharp operational clarity for legal bulletproofing.
+  s1_zh: 切勿拍脑袋敲定置信水平；将置信度从九十拉升至九十九会将区间撑大百分之五十六，这是以牺牲清晰的运营精度为代价，来换取极致的法务风控避险。
+  s1_zh_hk: 切勿拍心口敲定置信水平；將置信度由九十拉升至九十九會將區間撐大百分之五十六，呢個係以犧牲清晰嘅營運精度為代價，嚟換取極致嘅法務風控避險。
+  s2_en: Use ninety percent for agile internal diagnostics, ninety-five percent for corporate quality benchmarks, and reserve
+    ninety-nine percent for severe contractual or food safety boundaries.
+  s2_zh: 日常内部排查宜用百分之九十以保敏捷，集团品质对标锁定百分之九十五黄金法则，唯有涉及重大违约赔偿或食品安全红线时，才值得动用百分之九十九铁闸。
+  s2_zh_hk: 日常內部排查宜用百分之九十以保敏捷，集團品質對標鎖定百分之九十五黃金法則，淨係得涉及重大違約賠償或者食品安全紅線嗰陣，先值得動用百分之九十九鐵閘。
+  s3_en: The operating rule is to match the multiplier to the cost of a miss. On these 100 lattes the 90% bracket is about
+    0.82 degrees wide and the 99% bracket is about 56% wider.
+  s3_zh: 操作规则是按脱靶代价选择乘数。这 100 杯拿铁的 90% 区间宽约 0.82 度，99% 区间大约再宽 56%。
+  s3_zh_hk: 操作規則係按脫靶代價選擇乘數。呢 100 杯鮮奶咖啡嘅 90% 區間闊約 0.82 度，99% 區間大約再闊 56%。

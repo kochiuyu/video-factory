@@ -1,0 +1,162 @@
+id: STAT-M10-T08-CLUST
+course: STAT-M10
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Cluster Randomization: Inference When Stores, Not Receipts, Are Assigned'
+title_zh: 集群随机化：当随机分配发生在门店而非交易层级
+title_zh_hk: 集群隨機化：當隨機分配發生喺分店而唔係交易層級
+objective_en: Explain why outcomes within randomized clusters are correlated, calculate the equal-size Design Effect, distinguish variance inflation from exact cluster-robust inference, and select an analysis aligned with the number and assignment of clusters.
+objective_zh: 解释随机集群内的结果为何相关，计算等集群大小下的设计效应，区分方差膨胀近似与精确的集群稳健推断，并选择与集群数量及分配方式一致的分析。
+objective_zh_hk: 解釋隨機集群入面嘅結果點解相關，計算等集群大小之下嘅設計效應，區分方差膨脹近似同精確嘅集群穩健推斷，並選擇同集群數量及分配方式一致嘅分析。
+glossary:
+- en: Cluster Randomization
+  zh: 集群随机化（整群随机化）
+  zh_hk: 集群隨機化（整群隨機化）
+  lock: true
+- en: Intra-Cluster Correlation (ICC)
+  zh: 组内相关系数（ICC）
+  zh_hk: 組內相關係數（ICC）
+  lock: true
+- en: Design Effect (Moulton Factor)
+  zh: 设计效应（莫尔顿膨胀因子）
+  zh_hk: 設計效應（莫爾頓膨脹因子）
+  lock: true
+- en: Cluster-Robust Standard Errors
+  zh: 集群稳健标准误
+  zh_hk: 集群穩健標準誤
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Under the equal-size approximation, m = 1,000 and ICC = 0.015. What is the Design Effect?
+  question_zh: 在等集群大小近似下，m = 1,000、ICC = 0.015。设计效应是多少？
+  question_zh_hk: 喺等集群大小近似之下，m = 1,000、ICC = 0.015。設計效應係幾多？
+  options_en:
+  - 'A: 15.985, approximately 16.0'
+  - 'B: 1.015'
+  - 'C: 150.0'
+  - 'D: 4.0'
+  options_zh:
+  - A：15.985，约为 16.0
+  - B：1.015
+  - C：150.0
+  - D：4.0
+  options_zh_hk:
+  - A：15.985，約為 16.0
+  - B：1.015
+  - C：150.0
+  - D：4.0
+  answer: A
+  explanation_en: Design Effect = 1 + (1,000 - 1) × 0.015 = 15.985. Its square root is about 4.0, which is the corresponding standard-error multiplier in this simplified approximation.
+  explanation_zh: 设计效应 = 1 + (1,000 - 1) × 0.015 = 15.985。其平方根约为 4.0，在这个简化近似中对应标准误倍数。
+  explanation_zh_hk: 設計效應 = 1 + (1,000 - 1) × 0.015 = 15.985。佢嘅平方根約為 4.0，喺呢個簡化近似入面對應標準誤倍數。
+- id: Q2
+  type: multiple_choice
+  question_en: Why can an individual-level analysis with ordinary independent-row standard errors be misleading in a store-randomized trial?
+  question_zh: 在门店级随机实验中，为什么使用普通独立行标准误的个体层分析可能产生误导？
+  question_zh_hk: 喺分店級隨機實驗入面，點解使用普通獨立行標準誤嘅個體層分析可能產生誤導？
+  options_en:
+  - 'A: Transactions in the same store may share shocks, so independent-row standard errors can understate uncertainty'
+  - 'B: OLS cannot process more than 1,000 rows'
+  - 'C: Clustering changes positive outcomes into negative outcomes'
+  - 'D: Every receipt within a store must have an identical value'
+  options_zh:
+  - A：同一门店的交易可能共享冲击，因此独立行标准误可能低估不确定性
+  - B：OLS 无法处理超过 1,000 行的数据
+  - C：集群化会把正结果变成负结果
+  - D：同一门店内每张小票的金额必须完全相同
+  options_zh_hk:
+  - A：同一分店嘅交易可能共享衝擊，所以獨立行標準誤可能低估不確定性
+  - B：OLS 無法處理超過 1,000 行嘅數據
+  - C：集群化會將正結果變成負結果
+  - D：同一分店入面每張單據嘅金額一定要完全相同
+  answer: A
+  explanation_en: Positive within-store correlation reduces the amount of independent information supplied by additional receipts. Inference should reflect the store-level assignment and use a method appropriate to the number of clusters.
+  explanation_zh: 正的门店内相关性会减少新增小票所提供的独立信息量。推断应反映门店级分配，并采用适合集群数量的方法。
+  explanation_zh_hk: 正嘅分店內相關性會減少新增單據所提供嘅獨立信息量。推斷要反映分店級分配，並採用適合集群數量嘅方法。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: False-Precision Puzzle
+  kicker_zh: 虚假精度难题
+  kicker_zh_hk: 虛假精度難題
+  title_en: Are 20,000 Receipts Really 20,000 Independent Experimental Units?
+  title_zh: 两万张小票真的是两万个独立实验单元吗？
+  title_zh_hk: 兩萬張單據真係兩萬個獨立實驗單元嗎？
+  en: Suppose a new display is randomly assigned to stores, while spending is recorded for thousands of transactions. Receipts inside the same store share staffing, layout, local demand, and other shocks. Treating every receipt as an independent randomized unit can make the estimate look far more precise than the design supports. The assignment occurred at the store level, so inference must respect that level.
+  zh: 假设新陈列方案随机分配给门店，而消费结果记录在数千笔交易上。同一门店内的小票共享人员、布局、本地需求及其他冲击。把每张小票都当成独立随机单元，可能使估计看起来比实验设计所支持的精度高得多。随机分配发生在门店层级，因此推断必须尊重该层级。
+  zh_hk: 假設新陳列方案隨機分配畀分店，而消費結果記錄喺幾千筆交易上。同一分店入面嘅單據共享人手、佈局、本地需求同其他衝擊。將每張單據都當成獨立隨機單元，可能令估計睇落比實驗設計所支持嘅精度高得多。隨機分配發生喺分店層級，所以推斷一定要尊重該層級。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: 'Equal-size approximation: Design Effect = 1 + (m - 1) × ICC'
+  formula_zh: 等集群大小近似：设计效应 = 1 + (m - 1) × ICC
+  formula_zh_hk: 等集群大小近似：設計效應 = 1 + (m - 1) × ICC
+  formula_tex: \mathrm{DE}=1+(m-1)\rho,\quad \mathrm{SE\ multiplier}\approx\sqrt{\mathrm{DE}}
+  s1_en: Cluster Randomization assigns treatment to groups such as stores, while outcomes may be measured on customers or transactions. The Intra-Cluster Correlation describes similarity among outcomes within the same cluster relative to outcomes from different clusters.
+  s1_zh: 集群随机化把处理分配给门店等群体，而结果可以在顾客或交易层测量。组内相关系数描述同一集群内结果相对于不同集群结果的相似程度。
+  s1_zh_hk: 集群隨機化將處理分配畀分店等群體，而結果可以喺客人或者交易層量度。組內相關係數描述同一集群內結果相對於唔同集群結果嘅相似程度。
+  s2_en: For equal cluster sizes and simple mean comparisons, the Design Effect approximates variance inflation relative to independent observations. It is useful for planning, but it is not a universal identity for every estimator, unequal cluster size, or fitted regression.
+  s2_zh: 对等集群大小与简单均值比较，设计效应近似表示相对于独立观测的方差膨胀。它适合用于规划，但并非适用于所有估计量、不等集群大小或回归模型的通用恒等式。
+  s2_zh_hk: 對等集群大小同簡單平均數比較，設計效應近似表示相對於獨立觀測嘅方差膨脹。佢適合用嚟規劃，但唔係適用於所有估計量、不等集群大小或者回歸模型嘅通用恆等式。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Planning Approximation
+  left_zh: 规划近似
+  left_zh_hk: 規劃近似
+  right_en: Analysis and Inference
+  right_zh: 分析与推断
+  right_zh_hk: 分析同推斷
+  s1_en: Even a small positive ICC can produce a large Design Effect when m is large. More receipts still add information, but usually less than the same number of observations drawn from new independent stores.
+  s1_zh: 即使 ICC 很小，只要 m 很大，也可能产生较大的设计效应。更多小票仍会增加信息，但通常少于来自新增独立门店的同等数量观测。
+  s1_zh_hk: 即使 ICC 好細，只要 m 好大，都可能產生較大嘅設計效應。更多單據仍然會增加信息，但通常少過來自新增獨立分店嘅同等數量觀測。
+  s2_en: Cluster-Robust Standard Errors can account for arbitrary within-cluster dependence under suitable conditions. With few clusters, conventional large-sample cluster-robust inference may be unreliable, so small-sample corrections, randomization inference, or cluster-level analyses may be preferable.
+  s2_zh: 在适当条件下，集群稳健标准误可以处理任意的集群内依赖。当集群数量较少时，传统大样本集群稳健推断可能不可靠，因此可能更适合采用小样本修正、随机化推断或集群层分析。
+  s2_zh_hk: 喺適當條件之下，集群穩健標準誤可以處理任意嘅集群內依賴。當集群數量較少，傳統大樣本集群穩健推斷可能唔可靠，所以可能更適合採用小樣本修正、隨機化推斷或者集群層分析。
+  s3_en: The effective sample size is not simply the receipt count, but neither is it always exactly the number of stores. Precision depends on cluster count, cluster sizes, ICC, treatment allocation, covariates, and the chosen estimator.
+  s3_zh: 有效样本量不等于小票数量，但也不总是正好等于门店数量。精度取决于集群数、集群大小、ICC、处理分配、协变量与所选估计量。
+  s3_zh_hk: 有效樣本量唔等於單據數量，但亦唔一定正好等於分店數量。精度取決於集群數、集群大小、ICC、處理分配、協變量同所選估計量。
+- id: example
+  visual: example
+  seconds: 36
+  setup_en: 'Teaching assumptions: 20 stores, m = 1,000, ICC = 0.015, naive SE = 0.25'
+  setup_zh: 教学假设：20 家门店，m = 1,000，ICC = 0.015，朴素标准误 = 0.25
+  setup_zh_hk: 教學假設：20 間分店，m = 1,000，ICC = 0.015，樸素標準誤 = 0.25
+  result_en: Design Effect = 15.985; illustrative SE multiplier ≈ 4.0; adjusted SE ≈ 1.00
+  result_zh: 设计效应 = 15.985；示例标准误倍数约 4.0；调整后标准误约 1.00
+  result_zh_hk: 設計效應 = 15.985；示例標準誤倍數約 4.0；調整後標準誤約 1.00
+  s1_en: Under the equal-size approximation, Design Effect equals 1 plus 999 times 0.015, which is 15.985. Its square root is approximately 3.998, conventionally rounded to 4.0.
+  s1_zh: 在等集群大小近似下，设计效应等于 1 加 999 乘 0.015，即 15.985。其平方根约为 3.998，通常四舍五入为 4.0。
+  s1_zh_hk: 喺等集群大小近似之下，設計效應等於 1 加 999 乘 0.015，即係 15.985。佢嘅平方根約為 3.998，通常四捨五入為 4.0。
+  s2_en: Multiplying a naive standard error of 0.25 by this planning multiplier gives approximately 1.00. An illustrative estimate of 1.60 would then have a ratio near 1.60 rather than 6.40.
+  s2_zh: 把朴素标准误 0.25 乘以该规划倍数，得到约 1.00。若示例估计值为 1.60，相应比值约为 1.60，而不是 6.40。
+  s2_zh_hk: 將樸素標準誤 0.25 乘以呢個規劃倍數，得到約 1.00。如果示例估計值係 1.60，相應比值約為 1.60，而唔係 6.40。
+  s3_en: This shortcut does not reproduce an exact cluster-robust standard error or p-value for a 20-store regression. Exact inference requires the underlying store data, estimator, degrees-of-freedom method, cluster-size pattern, and assignment design.
+  s3_zh: 该捷径不能还原 20 家门店回归的精确集群稳健标准误或 p 值。精确推断需要底层门店数据、估计量、自由度方法、集群大小模式与分配设计。
+  s3_zh_hk: 呢個捷徑唔可以還原 20 間分店回歸嘅精確集群穩健標準誤或者 p 值。精確推斷需要底層分店數據、估計量、自由度方法、集群大小模式同分配設計。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: What Determines Precision?
+  q1_zh: 什么决定推断精度？
+  q1_zh_hk: 乜嘢決定推斷精度？
+  q2_en: Decision Rule
+  q2_zh: 决策规则
+  q2_zh_hk: 決策規則
+  s1_en: In a store-randomized experiment, many receipts do not replace the need for enough independent stores. Both cluster count and within-cluster information contribute, but positive ICC creates diminishing returns from additional receipts in the same store.
+  s1_zh: 在门店随机实验中，大量小票不能替代足够数量的独立门店。集群数量与集群内信息都会贡献精度，但正 ICC 会使同一门店内新增小票的边际收益递减。
+  s1_zh_hk: 喺分店隨機實驗入面，大量單據唔可以取代足夠數量嘅獨立分店。集群數量同集群內信息都會貢獻精度，但正 ICC 會令同一分店內新增單據嘅邊際收益遞減。
+  s2_en: Plan sample size in clusters, account for ICC and unequal cluster sizes, and analyze at a level consistent with assignment. Report the number of clusters and the cluster-adjustment method.
+  s2_zh: 应按集群规划样本量，考虑 ICC 与不等集群大小，并在与分配一致的层级分析。报告中应说明集群数量及集群调整方法。
+  s2_zh_hk: 要按集群規劃樣本量，考慮 ICC 同不等集群大小，並喺同分配一致嘅層級分析。報告入面要說明集群數量同集群調整方法。
+  s3_en: Do not mechanically multiply one standard error by the square root of a planning Design Effect and call it exact inference. Use the actual design and an inference method appropriate for the available number of clusters.
+  s3_zh: 不要机械地把某个标准误乘以规划设计效应的平方根，就称为精确推断。应使用实际设计与适合集群数量的推断方法。
+  s3_zh_hk: 唔好機械噉將某個標準誤乘以規劃設計效應嘅平方根，就稱為精確推斷。要使用實際設計同適合集群數量嘅推斷方法。

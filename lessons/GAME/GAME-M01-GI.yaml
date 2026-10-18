@@ -1,0 +1,129 @@
+id: GAME-M01-GI
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: What one cart earns depends on the other
+title_zh: 一辆车赚多少，也看另一辆
+title_zh_hk: 一架車賺幾多，都睇另一架
+objective_en: Show why the two carts are already in a game. What one cart takes home depends on both prices.
+objective_zh: 说明这两辆车为什么已经在博弈里。一辆车能带走多少，取决于两个价格。
+objective_zh_hk: 講明呢兩架車點解已經喺博弈入面。一架車袋到幾多，取決於兩個價。
+glossary:
+- en: game
+  zh: 博弈
+  zh_hk: 博弈
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Why is posting a price on that path already a game?
+  zh: 为什么在那条路上标价已经是博弈？
+  zh_hk: 點解喺嗰條路標價已經係博弈？
+  answer_en: Because what one cart takes home also depends on the other cart's price.
+  answer_zh: 因为一辆车能带走多少，还取决于另一辆的价。
+  answer_zh_hk: 因為一架車袋到幾多，仲取決於另一架個價。
+- id: Q2
+  type: transfer
+  en: A puts a lower price up. B leaves its board. Does B still take home the same amount?
+  zh: 甲把价钱标低。乙牌子不动。乙带走的钱还一样吗？
+  zh_hk: 甲將價錢標低。乙塊牌唔郁。乙袋到嘅錢仲一樣嗎？
+  answer_en: No. Customers walk to A. B takes home less without touching the board.
+  answer_zh: 不一样。客人走向甲。乙没改牌子，带走的钱还是少了。
+  answer_zh_hk: 唔一樣。客人行去甲。乙冇改牌，袋到嘅錢都係少咗。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Cut the price, sell more?
+  title_zh: 降价就能多卖？
+  title_zh_hk: 減價就會多賣？
+  en: Look at those two carts again. Cart A is thinking, I will cut the price and sell more. Fine, if A is the only cart on the path. B is already there. Customers walk to the cheaper board. So when A sells more, those cups used to stop at B.
+  zh: 再看那两辆车。甲车在想，我降价就能多卖。路上如果只有甲，这话没问题。可乙车已经在那儿。客人会走向更便宜的牌子。所以甲多卖出去的杯子，本来是会在乙车停下的。
+  zh_hk: 再睇嗰兩架車。甲車喺度諗，我減價就會多賣。路上若得甲，呢句冇問題。但乙車已經喺度。客人會行去平啲嗰塊牌。所以甲多賣出去嘅杯，本來係會喺乙車停低嘅。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Both prices sit in the result
+  title_zh: 两个价都在结果里
+  title_zh_hk: 兩個價都喺結果度
+  formula: What one cart takes home depends on both prices
+  formula_en: What one cart takes home depends on both prices
+  formula_zh: 一辆车能带走多少，取决于两个价格
+  formula_zh_hk: 一架車袋到幾多，取決於兩個價
+  gloss_en: If you can ignore the other cart, this is not a game yet.
+  gloss_zh: 如果可以不理另一辆，这就还不是博弈。
+  gloss_zh_hk: 若可以唔理另一架，呢樣都未叫博弈。
+  en: Here is the idea. What one cart takes home that hour depends on both prices, not just its own. Try a test. Pretend the other cart is gone. If what you take home does not change, you are not in a game yet. You just have a shop on an empty path.
+  zh: 核心就这一句。这一小时一辆车能带走多少，要看两个价，不只看自己的。你可以试一下。假装另一辆车不在了。如果你能带走的钱也不变，你就还没进入博弈。那只是空路上的一家店。
+  zh_hk: 核心就呢一句。呢個鐘一架車袋到幾多，要睇兩個價，唔係淨睇自己嗰個。你可以試吓。當另一架唔喺度。若你袋到嘅錢都唔變，你都未入到博弈。嗰陣淨係空路上一家舖。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: One cart, or two
+  title_zh: 一辆车，还是两辆
+  title_zh_hk: 一架車，定兩架
+  left_en: One cart. Customers have nowhere else to go.
+  left_zh: 只有一辆车。客人没有别处可去。
+  left_zh_hk: 得一架車。客人冇第二度去。
+  right_en: Two carts. Customers look at both prices and walk.
+  right_zh: 两辆车。客人看两个价，然后走。
+  right_zh_hk: 兩架車。客人睇兩個價，然後行。
+  en: Think of one cart first. Customers have nowhere else to buy, so that cart can set a price and ignore everyone. On this path there are two carts. Customers look at both prices and walk to the cheaper one. Each cart has to think about the other board.
+  zh: 先想路上只有一辆车。客人没有别处可买，那辆车可以自己定价，不理别人。这条路上已经有两辆车。客人会看两个价，走向便宜的那辆。每一辆车都得想对面那块牌子。
+  zh_hk: 先想路上得一架車。客人冇第二度買，嗰架車可以自己定價，唔理人。呢條路已經有兩架車。客人會睇兩個價，行去平嗰架。每一架都要想對面嗰塊牌。
+- id: example
+  visual: example
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: B never changes the board
+  title_zh: 乙车没有改牌子
+  title_zh_hk: 乙車冇改牌子
+  setup_en: A puts a lower price up. B leaves its price. Customers walk to A.
+  setup_zh: 甲把价钱标低。乙的牌子不动。客人走向甲。
+  setup_zh_hk: 甲將價錢標低。乙塊牌唔郁。客人行去甲。
+  result_en: B never touches the board. B still takes home less.
+  result_zh: 乙车碰都没碰牌子。乙带走的钱还是少了。
+  result_zh_hk: 乙車碰都冇碰牌子。乙袋到嘅錢都係少咗。
+  en: Now watch B. A puts a lower price on the board. B leaves its price where it is. Customers walk over to A. B did not touch the board, and B still takes home less that hour. That is all I need you to see.
+  zh: 现在看乙车。甲把价钱标低。乙的牌子不动。客人走到甲那边。乙没碰牌子，这个小时乙能带走的钱还是少了。我只要你看见这一点。
+  zh_hk: 而家睇乙車。甲將價錢標低。乙塊牌唔郁。客人行去甲嗰邊。乙冇碰牌，呢個鐘乙袋到嘅錢都係少咗。我淨要你見到呢樣。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Two checks
+  title_zh: 先问两句
+  title_zh_hk: 先問兩句
+  q1_en: Can I say what this cart takes home without mentioning the other?
+  q1_zh: 不提另一辆，我说得出这辆车带走多少吗？
+  q1_zh_hk: 唔提另一架，我講唔講得出呢架袋到幾多？
+  q2_en: If the other board changes, does this cart take home less?
+  q2_zh: 对面牌子一变，这辆车带走的钱会变少吗？
+  q2_zh_hk: 對面牌一變，呢架袋到嘅錢會唔會少？
+  en: Use two checks. Can I say what this cart takes home without mentioning the other one? If the other board changes and this board does not, does this cart still take home less? If both answers are no, you can ignore the other cart. Next we name the players.
+  zh: 用这两问核对一下。不提另一辆车，我说得出这辆车带走多少吗？对面牌子变了，这辆车自己没改，带走的钱还会变少吗？两问都是否，你就可以不理另一辆。接下来点出参与人。
+  zh_hk: 用呢兩問核對吓。唔提另一架車，我講唔講得出呢架袋到幾多？對面牌變咗，呢架自己冇改，袋到嘅錢仲會唔會少？兩問都係唔會，你就可以唔理另一架。跟住點出參與人。

@@ -1,0 +1,129 @@
+id: LAE-M06-PL
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 92
+title_en: Opening the band
+title_zh: 打开这一层
+title_zh_hk: 打開呢一層
+objective_en: Opening the band creates legal room. It does not create a buyer.
+objective_zh: 打开这一层，造出的是合法空间。造不出买方。
+objective_zh_hk: 打開呢一層，造出嘅係合法空間。造唔出買方。
+glossary:
+- en: CAAC
+  zh: 中国民用航空局
+  zh_hk: 中國民用航空局
+  lock: true
+- en: Hong Kong Civil Aviation Department
+  zh: 香港民航处
+  zh_hk: 香港民航處
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What does opening the band create?
+  zh: 打开这一层，造出的是什么？
+  zh_hk: 打開呢一層，造出嘅係咩？
+  answer_en: Legal room. Not a buyer.
+  answer_zh: 合法空间。不是买方。
+  answer_zh_hk: 合法空間。唔係買方。
+- id: Q2
+  type: transfer
+  en: Both books open the Shenzhen-to-Sha Tin column. The road below is empty and direct. Does the parcel pay?
+  zh: 两本书都打开了深圳到沙田那一柱。下面的路又空又直。包裹还会付钱吗？
+  zh_hk: 兩本書都打開咗深圳到沙田嗰一柱。下面嘅路又空又直。包裹仲會畀錢嗎？
+  answer_en: No. Opening made the flight legal. The road’s failure was the payment. That failure is gone.
+  answer_zh: 不会。打开只是让飞行合法。付钱的是路不行。路已经行了。
+  answer_zh_hk: 唔會。打開淨係等飛行合法。畀錢嘅係路唔得。路已經得。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Opening the band
+  title_zh: 打开这一层
+  title_zh_hk: 打開呢一層
+  en: Both books can open. This short asks what that opening buys. Legal room is not a cheque.
+  zh: 两本书都可以打开。这条短片问：打开买到的是什么。合法空间不是一张支票。
+  zh_hk: 兩本書都可以打開。呢條短片問：打開買到嘅係咩。合法空間唔係一張找數支票。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Room, not a buyer
+  title_zh: 空间，不是买方
+  title_zh_hk: 空間，唔係買方
+  formula: opening = legal room, not a buyer
+  formula_en: opening = legal room, not a buyer
+  formula_zh: 打开 = 合法空间，不是买方
+  formula_zh_hk: 打開 = 合法空間，唔係買方
+  gloss_en: Policy can allow. It cannot invent payment.
+  gloss_zh: 政策可以允许。它造不出付款。
+  gloss_zh_hk: 政策可以允許。佢造唔出付款。
+  s1_en: Opening the band means the flight is allowed in. The exclusion from the last short is lifted. That is all the opening does.
+  s1_zh: 打开这一层，是说飞行被允许进入。上一支短片里的排除被拿掉。打开只做这一件事。
+  s1_zh_hk: 打開呢一層，係話飛行被允許進入。上一條短片入面嘅排除被攞走。打開淨係做呢一件事。
+  s2_en: It does not invent a buyer. Do not name a law after this sentence. Write the sentence.
+  s2_zh: 它造不出买方。不要给这句话再起一个定律的名字。写下这句话。
+  s2_zh_hk: 政策可以准你飛，但唔能夠逼客戶買單。唔好再畀呢句話起一個定律嘅名。寫低呢句話。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: Contrast
+  kicker_en: Contrast
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Allowed versus paid
+  title_zh: 被允许，还是被付钱
+  title_zh_hk: 被允許，定係被畀錢
+  left_en: Band open
+  left_zh: 这一层打开
+  left_zh_hk: 呢一層打開
+  right_en: A buyer on the line
+  right_zh: 这条线上的买方
+  right_zh_hk: 呢條線上嘅買方
+  s1_en: CAAC and the Hong Kong book can both say yes. The column is legal. The parcel still pays only if the road fails.
+  s1_zh: 中国民航局和香港那本书都可以说可以。这一柱合法了。包裹仍只在路不行时付钱。
+  s1_zh_hk: 民航局同民航處都可以開綠燈。呢一柱合法咗。路若暢通又平，普通包裹就唔會額外畀錢。
+  s2_en: The AED still needs a medical clock. The inspection still needs a person off the structure. Opening does not write those bills.
+  s2_zh: AED 仍需要那只医疗钟。巡检仍需要人从结构上下来。打开写不出这两张账单。
+  s2_zh_hk: AED 仍然需要嗰隻醫療鐘。巡檢仍然需要人由結構落嚟。打開寫唔出呢兩張賬單。
+  s3_en: Policy can clear the door. Demand still has to walk through it.
+  s3_zh: 政策可以清开门。需求还是要自己走进去。
+  s3_zh_hk: 政策可以清開門。需求仲係要自己行入去。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Open is not sold
+  title_zh: 打开不等于卖出
+  title_zh_hk: 打開唔等於賣出
+  q1_en: What does opening create?
+  q1_zh: 打开造出的是什么？
+  q1_zh_hk: 打開造出嘅係咩？
+  q2_en: What does opening not create?
+  q2_zh: 打开造不出什么？
+  q2_zh_hk: 打開造唔出咩？
+  s1_en: Opening the band creates legal room.
+  s1_zh: 打开这一层，造出的是合法空间。
+  s1_zh_hk: 打開呢一層，造出嘅係合法空間。
+  s2_en: It does not create a buyer. The three payments from last sitting still have to exist.
+  s2_zh: 造不出买方。上一讲的三笔付款，还是要在。
+  s2_zh_hk: 造唔出買方。上一講嘅三筆付款，仲係要喺度。
+  s3_en: That is the last claim. The course can now close on the same corridor it opened.
+  s3_zh: 这是最后一句判断。这门课可以在它开始的那条线上收住。
+  s3_zh_hk: 呢句係最後一句判斷。呢門課可以喺佢開始嗰條線上收住。

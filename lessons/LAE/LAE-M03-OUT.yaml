@@ -1,0 +1,69 @@
+id: LAE-M03-OUT
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: The pad, closed
+title_zh: 这块垫子，先说到这里
+title_zh_hk: 呢塊墊，先講到呢度
+objective_en: Close the pad sitting. Next sitting names the moving reservation. Two pads still meet in the air.
+objective_zh: 收住垫子这一讲。下一讲给空中的预约起名。两块垫子之间仍会在空中碰上。
+objective_zh_hk: 收住墊呢一講。下一講畀空中嘅預約起名。兩塊墊之間仍然會喺空中碰上。
+glossary:
+- en: Close
+  zh: 收束
+  zh_hk: 收束
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What two facts should you be able to state after this sitting?
+  zh: 这一讲结束后，你应能说出哪两件事？
+  zh_hk: 呢一講結束之後，你應該講得出邊兩件事？
+  answer_en: A flight begins and ends on a pad, and minutes on that pad are scarce.
+  answer_zh: 飞行在垫子上开始和结束，垫子上的分钟是稀缺的。
+  answer_zh_hk: 飛行喺墊上面開始同結束，墊上面嘅分鐘係稀缺嘅。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The pad, closed
+  title_zh: 这块垫子，先说到这里
+  title_zh_hk: 呢塊墊，先講到呢度
+  claim_en: You can name a vertiport as a pad, not a runway, and treat sitting time as minutes the node cannot sell.
+  claim_zh: 你能把起降场说成垫子而不是跑道，并把坐着的时间看成这个点卖不掉的分钟。
+  claim_zh_hk: 你能將起降場講成墊而唔係跑道，並將坐住嘅時間看成呢個點賣唔掉嘅分鐘。
+  next_en: 'That is the pad. Next sitting: the moving reservation that keeps two machines off the same point.'
+  next_zh: 垫子到此。下一讲：不让两台机器占同一个点的那段预约。
+  next_zh_hk: 墊到此。下一講：唔讓兩部機器佔同一個點嗰段預約。
+  en: You can point at two pads — a Shenzhen roof and a Sha Tin locker — and treat a waiting machine as capital sitting on a scarce node.
+  zh: 你能指出两块垫子——深圳的屋顶和沙田的储物柜——并把一台在等的机器看成占着稀缺点的资本。
+  zh_hk: 你指得出兩塊墊——深圳嘅屋頂同沙田嘅儲物櫃——並將一部喺度等嘅機器看成佔住稀缺點嘅資本。
+- id: takeaway
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The pad, closed
+  title_zh: 这块垫子，先说到这里
+  title_zh_hk: 呢塊墊，先講到呢度
+  claim_en: You can name a vertiport as a pad, not a runway, and treat sitting time as minutes the node cannot sell.
+  claim_zh: 你能把起降场说成垫子而不是跑道，并把坐着的时间看成这个点卖不掉的分钟。
+  claim_zh_hk: 你能將起降場講成墊而唔係跑道，並將坐住嘅時間看成呢個點賣唔掉嘅分鐘。
+  next_en: 'That is the pad. Next sitting: the moving reservation that keeps two machines off the same point.'
+  next_zh: 垫子到此。下一讲：不让两台机器占同一个点的那段预约。
+  next_zh_hk: 墊到此。下一講：唔讓兩部機器佔同一個點嗰段預約。
+  en: 'Ground pads hold the two ends. Flights still meet in the air. Next sitting: the moving reservation that keeps two machines off the same point.'
+  zh: 地面的垫子按住两端。空中的线仍会碰上。下一讲：不让两台机器占同一个点的那段预约。
+  zh_hk: 地面嘅墊按住兩端。空中嘅線仍然會碰上。下一講：唔讓兩部機器佔同一個點嗰段預約。

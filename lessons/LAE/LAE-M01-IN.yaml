@@ -1,0 +1,63 @@
+id: LAE-M01-IN
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: 'This sitting: the band'
+title_zh: 这一讲：这一层空域
+title_zh_hk: 這一講：呢一層空域
+objective_en: Open the band unit. Name the layer below about 1,000 metres, then treat extra flights as delay on others.
+objective_zh: 打开空域这一讲。先给大约一千米以下这一层起名，再把多出来的飞行看成加在别人身上的延误。
+objective_zh_hk: 打開空域呢一講。先畀大約一千米以下呢一層起名，再將多出嚟嘅飛行看成加喺其他人身上嘅延誤。
+glossary:
+- en: Open
+  zh: 开场
+  zh_hk: 開場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Which two pictures does this sitting draw?
+  zh: 这一讲画哪两张图？
+  zh_hk: 呢一講畫邊兩張圖？
+  answer_en: The layer below about 1,000 metres, then delay when that layer fills.
+  answer_zh: 大约一千米以下这一层，然后这一层变挤时的延误。
+  answer_zh_hk: 大約一千米以下呢一層，然後呢一層變擠嗰陣嘅延誤。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: the band'
+  title_zh: 这一讲：这一层空域
+  title_zh_hk: 這一講：呢一層空域
+  item1_en: The layer
+  item1_zh: 这一层
+  item1_zh_hk: 呢一層
+  item2_en: A crowded band
+  item2_zh: 挤在同一层
+  item2_zh_hk: 擠喺同一層
+  en: Two shorts. First we name the air just above the ground. Then we ask what a further flight does to the flights already there.
+  zh: 两条短片。先给紧贴地面的那一层空气起名，再看多一班飞行，会对已经在飞的班次造成什么影响。
+  zh_hk: 兩條短片。先畀貼住地面嗰一層空氣起個名，再睇下每多一班飛行，會對已經喺度飛緊嘅班次帶嚟咩影響。
+- id: takeaway
+  visual: title_card
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: the band'
+  title_zh: 这一讲：这一层空域
+  title_zh_hk: 這一講：呢一層空域
+  en: By the end, “low altitude” should mean a real band of physical room, not weather and not a poster about the future.
+  zh: 学完这一讲，“低空”应该是一层实实在在的物理空间，不是天气，也不是一张关于未来的海报。
+  zh_hk: 學完呢一講，「低空」應該係一層實實在在嘅物理空間，唔係天氣，亦都唔係一張講未來嘅海報。

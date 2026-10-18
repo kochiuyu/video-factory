@@ -1,4 +1,0 @@
-file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-EQ-01/clips/en-en-hk/01_hook.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-EQ-01/clips/en-en-hk/02_define.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-EQ-01/clips/en-en-hk/03_example.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-EQ-01/clips/en-en-hk/04_takeaway.mp4'

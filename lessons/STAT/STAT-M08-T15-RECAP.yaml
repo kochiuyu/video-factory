@@ -1,0 +1,165 @@
+id: STAT-M08-T15-RECAP
+course: STAT-M08
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The Executive Customer Choice Playbook: Synthesis & Retention Strategy'
+title_zh: 执行客户选择决策总览手册：综合复盘与留存战略
+title_zh_hk: 執行客戶選擇決策總覽手冊：綜合複盤與留存戰略
+objective_en: Synthesize logistic-regression formulation, estimation, interpretation, validation, threshold selection, churn scoring, and uplift evaluation into an evidence-based deployment checklist without relying on universal metric cutoffs.
+objective_zh: 将逻辑回归的设定、估计、解读、验证、阈值选择、流失评分与净增量评估整合为基于证据的部署清单，并避免依赖通用指标门槛。
+objective_zh_hk: 將邏輯回歸嘅設定、估計、解讀、驗證、門檻選擇、流失評分同淨增量評估整合做基於證據嘅部署清單，並避免依賴通用指標門檻。
+glossary:
+- en: Customer Choice Governance Scorecard
+  zh: 客户选择治理计分卡
+  zh_hk: 客戶選擇治理計分卡
+  lock: true
+- en: Five-Gate Econometric Audit
+  zh: 五阶计量风控审核
+  zh_hk: 五階計量風控審核
+  lock: true
+- en: Lifecycle Marketing Engine
+  zh: 生命周期营销引擎
+  zh_hk: 生命週期營銷引擎
+  lock: true
+- en: Net Margin Protection
+  zh: 净利润边际守护
+  zh_hk: 淨利潤邊際守護
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Which evidence sequence best supports deployment of an automated retention system?
+  question_zh: 哪一组证据流程最能支持自动化客户挽留系统的部署？
+  question_zh_hk: 邊一組證據流程最能夠支持自動化客戶挽留系統部署？
+  options_en:
+  - 'A: Define the decision and time structure; verify estimation and uncertainty; evaluate discrimination, calibration, thresholds, costs, and out-of-sample performance; test incremental intervention value; establish governance and monitoring'
+  - 'B: Raw OLS R-squared maximization, setting all cutoffs to 0.50, and removing all control groups'
+  - 'C: Running bivariate regressions on demographic variables and ignoring customer purchase history'
+  - 'D: Blasting vouchers to all registered users and assuming zero spontaneous return rate'
+  options_zh:
+  - 'A: 定义决策与时间结构；核实估计和不确定性；评估判别力、校准、阈值、成本与样本外表现；检验增量干预价值；建立治理与监测'
+  - 'B: 最大化原始 OLS 的 R平方、将所有决策门槛设为 0.50，并删除所有对照组'
+  - 'C: 仅对人口学变量进行单变量回归，完全忽略用户的历史消费行为'
+  - 'D: 向所有注册用户全量派发优惠券，并假设顾客自发回流率为零'
+  options_zh_hk:
+  - 'A: 定義決策同時間結構；核實估計同不確定性；評估判別力、校準、門檻、成本同樣本外表現；檢驗增量干預價值；建立治理同監測'
+  - 'B: 最大化原始 OLS 嘅 R平方、將所有決策門檻設做 0.50，並洗走所有對照組'
+  - 'C: 淨係對人口學變量行單變量回歸，完全唔理用戶嘅歷史消費行為'
+  - 'D: 向所有註冊用戶全量派優惠券，並假設顧客自發回流率係零'
+  answer: A
+  explanation_en: Deployment requires a connected evidence chain. Probability bounds and convergence are necessary checks, while validation, decision economics, causal evaluation, privacy, ownership, and monitoring determine whether the system is fit for its intended use.
+  explanation_zh: 部署需要相互连接的证据链。概率边界与收敛是必要检查，而验证、决策经济学、因果评估、隐私、责任归属与监测共同决定系统是否适合预定用途。
+  explanation_zh_hk: 部署需要相互連接嘅證據鏈。概率邊界同收斂係必要檢查，而驗證、決策經濟學、因果評估、私隱、責任歸屬同監測共同決定系統係咪適合預定用途。
+- id: Q2
+  type: multiple_choice
+  question_en: A retention model reports 96 percent accuracy, AUC 0.63, a fixed 0.50 cutoff despite asymmetric error costs, and no holdout group. What is the appropriate governance response?
+  question_zh: 某挽留模型报告 96% 准确率、AUC 0.63，在错误成本不对称时仍采用固定 0.50 阈值，且没有保留对照组。适当的治理回应是什么？
+  question_zh_hk: 某挽留模型報告 96% 準確率、AUC 0.63，喺錯誤成本不對稱時仍然採用固定 0.50 門檻，而且冇保留對照組。適當嘅治理回應係咩？
+  options_en:
+  - 'A: Disburse funds immediately because 96% accuracy is outstanding'
+  - 'B: Pause deployment and require class-balance context, calibration and threshold-cost analysis, representative validation, and a credible design for estimating incremental intervention value'
+  - 'C: Increase the voucher discount to force the AUC higher'
+  - 'D: Delete the confusion matrix and proceed with chain-wide rollout'
+  options_zh:
+  - 'A: 立即批准拨款，因为 96% 的准确率极为耀眼'
+  - 'B: 暂停部署，并要求类别比例背景、校准与阈值成本分析、代表性验证，以及估计增量干预价值的可信设计'
+  - 'C: 进一步加大优惠券折扣力度以强行拉高 AUC'
+  - 'D: 从汇报中删除混淆矩阵，直接在全网门店强行上线'
+  options_zh_hk:
+  - 'A: 即刻批出資金，因為 96% 嘅準確率極之亮麗'
+  - 'B: 暫停部署，並要求類別比例背景、校準同門檻成本分析、代表性驗證，以及估計增量干預價值嘅可信設計'
+  - 'C: 進一步加大優惠券折扣力度嚟夾硬拉高 AUC'
+  - 'D: 喺匯報入面刪走混淆矩陣，直接喺全線分店夾硬上線'
+  answer: B
+  explanation_en: The reported evidence is incomplete. Accuracy may be misleading under imbalance, AUC addresses ranking only, the chosen threshold ignores stated cost asymmetry, and without a credible control design incremental intervention value is unverified. These gaps justify pausing deployment for further validation, not predicting guaranteed waste.
+  explanation_zh: 现有证据不完整。类别不平衡时准确率可能具有误导性；AUC 只反映排序；所选阈值忽略已说明的成本不对称；缺乏可信对照设计时，增量干预价值尚未验证。这些缺口支持暂停部署并进一步验证，但不能断言一定造成浪费。
+  explanation_zh_hk: 現有證據唔完整。類別不平衡時準確率可能有誤導性；AUC 只反映排序；所選門檻忽略已說明嘅成本不對稱；缺乏可信對照設計時，增量干預價值仲未驗證。呢啲缺口支持暫停部署同進一步驗證，但唔可以斷言一定造成浪費。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Deployment Evidence Review
+  kicker_zh: 部署证据审核
+  kicker_zh_hk: 部署證據審核
+  title_en: Is the Automated Retention System Ready to Deploy?
+  title_zh: 自动化客户挽留系统是否适合部署？
+  title_zh_hk: 自動化客戶挽留系統係咪適合部署？
+  en: An executive committee is reviewing an automated retention system. The proposal contains bounded probabilities, maximum-likelihood estimates, classification metrics, cost-sensitive thresholds, and an uplift experiment. No single number can determine deployment readiness. The decision requires a traceable chain from outcome definition to operational monitoring.
+  zh: 某投资委员会正在审核自动化客户挽留系统。方案包含有界概率、极大似然估计、分类指标、成本敏感阈值与净增量实验。任何单一数值都不能决定系统是否适合部署；决策需要一条从结果定义到营运监测的可追溯证据链。
+  zh_hk: 某投資委員會正喺度審核自動化客戶挽留系統。方案包括有界概率、極大似然估計、分類指標、成本敏感門檻同淨增量實驗。任何單一數值都唔可以決定系統係咪適合部署；決策需要一條由結果定義到營運監測嘅可追溯證據鏈。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Deployment checklist = formulation + estimation + interpretation + validation + decision economics + causal evaluation + monitoring
+  formula_zh: 部署清单 = 模型设定 + 估计 + 解读 + 验证 + 决策经济学 + 因果评估 + 监测
+  formula_zh_hk: 部署清單 = 模型設定 + 估計 + 解讀 + 驗證 + 決策經濟學 + 因果評估 + 監測
+  formula_tex: \text{Deploy only if evidence supports formulation, estimation, validation, decision value, governance, and monitoring}
+  s1_en: Gate one verifies that the outcome, population, scoring time, predictors, and logistic probability mapping are appropriate. Gate two verifies numerical convergence, coefficient stability, warnings, and uncertainty.
+  s1_zh: 第一关核实结果、总体、评分时点、自变量与逻辑概率映射是否适当；第二关核实数值收敛、系数稳定性、警告与不确定性。
+  s1_zh_hk: 第一關核實結果、總體、評分時點、自變量同邏輯概率映射係咪適當；第二關核實數值收斂、系數穩定性、警告同不確定性。
+  s2_en: Later gates evaluate discrimination and calibration, threshold-specific errors and costs, out-of-sample performance, incremental treatment effects, privacy, fairness, capacity, and post-deployment monitoring. Metric thresholds should be justified for the specific decision rather than treated as universal standards.
+  s2_zh: 后续关卡评估判别力与校准、阈值特定错误与成本、样本外表现、增量处理效应、隐私、公平性、处理能力与部署后监测。指标门槛应针对具体决策提供依据，而不应被视为通用标准。
+  s2_zh_hk: 後續關卡評估判別力同校準、門檻特定錯誤同成本、樣本外表現、增量處理效應、私隱、公平性、處理能力同部署後監測。指標門檻應該針對具體決策提供依據，而唔應該當作通用標準。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: From Discrete Choice to Cash
+  left_zh: 从离散抉择到财务现金流
+  right_en: Disciplined Margin Defense
+  right_zh: 铁律守护企业利润边际
+  s1_en: Model formulation asks whether the binary event, observation unit, time horizon, and available information match the decision. A valid sigmoid output does not repair leakage, omitted structure, or an ill-defined outcome.
+  s1_zh: 模型设定关注二元事件、观测单位、时间范围与可用信息是否匹配决策。有效的 S 型输出不能修复信息泄漏、遗漏结构或定义不清的结果。
+  s1_zh_hk: 模型設定關注二元事件、觀測單位、時間範圍同可用資料係咪匹配決策。有效嘅 S 型輸出唔可以修復資料洩漏、遺漏結構或者定義唔清楚嘅結果。
+  s2_en: Interpretation separates log-odds, odds ratios, marginal effects, and predicted probabilities. Validation then separates ranking, calibration, classification at a chosen threshold, and expected decision value.
+  s2_zh: 解读应区分对数几率、几率比、边际效应与预测概率；验证则应区分排序能力、校准、指定阈值下的分类表现与期望决策价值。
+  s2_zh_hk: 解讀應該區分對數勝算、勝算比、邊際效應同預測概率；驗證就應該區分排序能力、校準、指定門檻之下嘅分類表現同期望決策價值。
+  s3_en: Prediction and intervention are different tasks. Churn risk identifies likely outcomes, while randomized holdouts or credible causal designs estimate whether an action changes outcomes. Deployment needs both when the system automatically allocates offers.
+  s3_zh: 预测与干预是不同任务。流失风险识别可能发生的结果，而随机保留组或可信因果设计估计行动是否改变结果。系统自动分配优惠时，两类证据都需要。
+  s3_zh_hk: 預測同干預係唔同任務。流失風險識別可能發生嘅結果，而隨機保留組或者可信因果設計估計行動係咪改變結果。系統自動分配優惠時，兩類證據都需要。
+  left_zh_hk: 由離散抉擇到財務現金流
+  right_zh_hk: 鐵律守護企業利潤邊際
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Screen Functional Bounds
+  step1_zh: 审查函数边界与算法收敛
+  step2_en: Audit Discrimination & Costs
+  step2_zh: 考核排序判别与成本门槛
+  step3_en: Release Automated Capital
+  step3_zh: 核准自动化系统资金拨付
+  s1_en: 'Step one: document the event, population, scoring date, feature window, model specification, estimation method, convergence output, coefficient uncertainty, and data-quality checks.'
+  s1_zh: 第一步：记录事件、总体、评分日期、特征窗口、模型设定、估计方法、收敛输出、系数不确定性与数据质量检查。
+  s1_zh_hk: 第一步：記錄事件、總體、評分日期、特徵窗口、模型設定、估計方法、收斂輸出、系數不確定性同數據質量檢查。
+  s2_en: 'Step two: evaluate discrimination, calibration, confusion matrices across relevant thresholds, expected loss, workload, and performance on representative out-of-sample data. Compare against practical baselines rather than fixed universal AUC or pseudo R-squared cutoffs.'
+  s2_zh: 第二步：在具有代表性的样本外数据上评估判别力、校准、相关阈值下的混淆矩阵、期望损失、工作量与表现。应与实际基准比较，而不是采用固定的通用 AUC 或伪 R平方 门槛。
+  s2_zh_hk: 第二步：喺具有代表性嘅樣本外數據上評估判別力、校準、相關門檻之下嘅混淆矩陣、期望損失、工作量同表現。應該同實際基準比較，而唔係採用固定通用 AUC 或者偽 R平方 門檻。
+  s3_en: 'Step three: if actions are assigned, preserve a credible control strategy and estimate incremental value with uncertainty. Approve deployment only with ownership, audit logs, privacy controls, monitoring triggers, rollback criteria, and periodic reassessment.'
+  s3_zh: 第三步：若系统分配行动，应保留可信对照策略，并在不确定性下估计增量价值。只有在明确负责人、审计记录、隐私控制、监测触发器、回滚准则与定期复核后，才批准部署。
+  s3_zh_hk: 第三步：如果系統分配行動，應該保留可信對照策略，並喺不確定性之下估計增量價值。只有喺明確負責人、審計記錄、私隱控制、監測觸發器、回滾準則同定期覆核之後，先批准部署。
+  step1_zh_hk: 審查函數邊界與算法收斂
+  step2_zh_hk: 考核排序判別與成本門檻
+  step3_zh_hk: 核准自動化系統資金撥付
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: How Does Choice Econometrics Transform Retail?
+  q1_zh: 选择计量学如何重塑现代零售商业？
+  q2_en: 'Audit Rule: Follow the Five Gates'
+  q2_zh: 审计准则：五关未破，分文不批
+  s1_en: Logistic regression is a probability-modeling component, not a complete decision system. Responsible use connects formulation, estimation, interpretation, validation, economics, causal evidence, and governance.
+  s1_zh: 逻辑回归是概率建模组件，而不是完整决策系统。负责任的应用应连接模型设定、估计、解读、验证、经济分析、因果证据与治理。
+  s1_zh_hk: 邏輯回歸係概率建模組件，而唔係完整決策系統。負責任嘅應用應該連接模型設定、估計、解讀、驗證、經濟分析、因果證據同治理。
+  s2_en: 'Decision rule: do not approve or reject a system from accuracy, AUC, pseudo R-squared, convergence, or uplift alone. Require a documented evidence package tied to the intended operating decision and validated on representative data.'
+  s2_zh: 决策规则：不要仅凭准确率、AUC、伪 R平方、收敛或净增量批准或否决系统。应要求与预定营运决策相联系、并在代表性数据上验证的完整证据包。
+  s2_zh_hk: 決策規則：唔好只憑準確率、AUC、偽 R平方、收斂或者淨增量批准或者否決系統。應該要求同預定營運決策相連、並喺代表性數據上驗證嘅完整證據包。
+  s3_en: 'The final checklist is iterative: monitor prevalence, calibration, error costs, workload, treatment effects, and drift after launch. When assumptions or operating conditions change, revalidate the model and decision rule before continuing automation.'
+  s3_zh: 最终清单是迭代性的：上线后持续监测基础发生率、校准、错误成本、工作量、处理效应与漂移。当假设或营运条件变化时，应在继续自动化前重新验证模型与决策规则。
+  s3_zh_hk: 最終清單係迭代性嘅：上線之後持續監測基礎發生率、校準、錯誤成本、工作量、處理效應同漂移。當假設或者營運條件改變時，應該喺繼續自動化之前重新驗證模型同決策規則。
+  q1_zh_hk: 選擇計量學點樣重塑現代零售商業？
+  q2_zh_hk: 審計準則：五關未過，分文不批

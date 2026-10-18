@@ -1,0 +1,219 @@
+id: STAT-M05-T03-PVALU
+course: STAT-M05
+course_en: Hypothesis Testing & Store Experiments
+course_zh: 假设检验与门店运营实验
+course_zh_hk: 假設檢驗與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The p-Value: Quantifying Compatibility with the Null'
+title_zh: p 值：量化数据与原假设的相容程度
+title_zh_hk: p 值：量化數據同原假設嘅相容程度
+objective_en: Define the p-value as a tail probability calculated under H0, distinguish it from the probability that H0 is
+  true, calculate a two-sided p-value from a standard-normal statistic, and interpret the result as statistical evidence without
+  converting it directly into a mechanical or operational diagnosis.
+objective_zh: 把 p 值定义为在 H0 成立条件下计算的尾部概率，区分 p 值与“H0 为真的概率”，由标准正态统计量计算双侧 p 值，并把结果解释为统计证据，而不直接转化为机械或经营诊断。
+objective_zh_hk: 將 p 值定義為喺 H0 成立條件之下計算嘅尾部概率，區分 p 值同「H0 為真嘅概率」，由標準正態統計量計算雙側 p 值，並將結果解讀成統計證據，而唔直接轉化成機械或者營運診斷。
+glossary:
+- en: p-value
+  zh: p 值
+  zh_hk: p 值
+  lock: true
+- en: weight of evidence
+  zh: 证据强度/证据权重
+  zh_hk: 證據強度/證據權重
+  lock: true
+- en: conditional probability under H0
+  zh: 原假设下的条件概率
+  zh_hk: 原假設下嘅條件概率
+  lock: true
+- en: p-value fallacy
+  zh: p 值认知谬误
+  zh_hk: p 值認知謬誤
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Which statement correctly defines a two-sided p-value?
+  question_zh: 在经典统计假设检验中，p 值的严密数学定义是什么？
+  question_zh_hk: 喺經典統計假設檢驗入面，p 值的嚴密數學定義係咩？
+  options_en:
+  - 'A: Under H0, the probability of a test statistic at least as extreme in absolute value as the observed statistic.'
+  - 'B: The probability that the null hypothesis H0 is factually true given the observed sample data.'
+  - 'C: The probability that management commits a business mistake when approving a store capital expenditure.'
+  - 'D: The exact percentage of customers who are dissatisfied with product quality.'
+  options_zh:
+  - 'A: 在原假设 H0 假定为真的前提下，观测到如同当前样本统计量或比其更为极端的证据的条件概率。'
+  - 'B: 在当前样本数据条件下，原假设 H0 在客观事实上成立为真的后验概率。'
+  - 'C: 管理层在审批门店重资产资本支出时犯下商业决策失误的确定性概率。'
+  - 'D: 对产品出品质量表示不满意的进店顾客在总体中的确切百分比。'
+  options_zh_hk:
+  - 'A: 喺原假設 H0 假定為真嘅前提下，觀測到如同當前樣本統計量或比佢更為極端嘅證據嘅條件概率。'
+  - 'B: 喺當前樣本數據條件下，原假設 H0 喺客觀事實上成立為真嘅後驗概率。'
+  - 'C: 管理層喺審批門市重資產資本支出嗰陣犯下商業決策失誤嘅確定性概率。'
+  - 'D: 對產品出品質量表示唔滿意嘅入舖顧客喺總體入面嘅確切百分比。'
+  answer: A
+  explanation_en: The p-value is calculated from the test-statistic distribution assuming H0. It is not P(H0 | data), and
+    its tail definition must match the stated alternative.
+  explanation_zh: p 值是 P(数据同样极端 | H0 为真)，绝非 P(H0 为真 | 获得数据)。它度量的是在现状无事发生的假定下，当前经验样本的罕见惊异程度。
+  explanation_zh_hk: p 值係 P(數據同樣極端 | H0 為真)，絕非 P(H0 為真 | 攞到數據)。佢度量嘅係喺現狀無事發生嘅假定下，當前經驗樣本嘅罕見驚異程度。
+- id: Q2
+  type: multiple_choice
+  question_en: 'Assume H0: mu = 93.0 C versus H1: mu != 93.0 C, known sigma = 1.6 C, n = 64, and x-bar = 93.49 C. What is
+    the two-sided p-value and the decision at alpha = 0.05?'
+  question_zh: 都市咖啡审计旺角店意式咖啡机水温稳定性，设定基准 mu_0 = 93.0°C（已知总体 sigma = 1.6°C，抽测 n = 64 杯）。实测样本均值 x-bar = 93.49°C，算得 Z_calc = +2.45。在
+    alpha = 0.05 下，其双尾 p 值与运营裁决分别是什么？
+  question_zh_hk: 都市咖啡審計旺角舖意式咖啡機水溫穩定性，設定基準 mu_0 = 93.0°C（已知總體 sigma = 1.6°C，抽測 n = 64 杯）。實測樣本均值 x-bar = 93.49°C，計得 Z_calc
+    = +2.45。喺 alpha = 0.05 下，其雙尾 p 值與營運裁決分別係幾多？
+  options_en:
+  - 'A: Z = 2.45; two-sided p ≈ 0.0142; reject H0 because p < 0.05.'
+  - 'B: Two-tailed p-value = 2.45 / 0.05 = 49.0. Fail to reject H0.'
+  - 'C: p-value = 0.0500 because alpha was set to 5%.'
+  - 'D: Two-tailed p-value = 1 - 0.0142 = 0.9858. Fail to reject H0.'
+  options_zh:
+  - 'A: 单尾概率 P(Z >= 2.45) = 0.0071；双尾 p 值 = 2 × 0.0071 = 0.0142。因 p = 0.0142 <= 0.05，坚决拒绝 H0 并报修校准锅炉。'
+  - 'B: 双尾 p 值 = 2.45 / 0.05 = 49.0。判定不拒绝 H0。'
+  - 'C: p 值恒等于 0.0500，因为事先已将 alpha 设定为 5%。'
+  - 'D: 双尾 p 值 = 1 - 0.0142 = 0.9858。判定不拒绝 H0。'
+  options_zh_hk:
+  - 'A: 單尾概率 P(Z >= 2.45) = 0.0071；雙尾 p 值 = 2 × 0.0071 = 0.0142。因 p = 0.0142 <= 0.05，堅決拒絕 H0 並報修校準鍋爐。'
+  - 'B: 雙尾 p 值 = 2.45 / 0.05 = 49.0。判定唔拒絕 H0。'
+  - 'C: p 值恆等於 0.0500，因為事先已將 alpha 設定為 5%。'
+  - 'D: 雙尾 p 值 = 1 - 0.0142 = 0.9858。判定唔拒絕 H0。'
+  answer: A
+  explanation_en: SE = 1.6 / sqrt(64) = 0.20. Thus Z = 0.49 / 0.20 = 2.45. The symmetric two-sided p-value is approximately
+    2 × 0.0071 = 0.0142, below 0.05.
+  explanation_zh: 查标准正态分布表，Z = +2.45 对应的上尾概率约为 0.0071。针对双尾检验，双倍对称计算得 p 值 = 0.0142。因为 p 值小于等于 alpha（0.0142 <= 0.05），推翻原假设，断定锅炉真实水温发生系统性漂移。
+  explanation_zh_hk: 查標準正態分佈表，Z = +2.45 對應嘅上尾概率約為 0.0071。針對雙尾檢驗，雙倍對稱計算得 p 值 = 0.0142。因為 p 值細過等於 alpha（0.0142 <= 0.05），推翻原假設，斷定鍋爐真實水溫發生系統性漂移。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  kicker_en: The Boiler Drift Inquiry
+  kicker_zh: 锅炉水温漂移疑云
+  kicker_zh_hk: 鍋爐水溫漂移疑雲
+  title_en: How unusual is the observed temperature shift under H0?
+  title_zh: 在 H0 下，观测温度偏移有多异常？
+  title_zh_hk: 喺 H0 之下，觀測溫度偏移有幾異常？
+  en: Metro Coffee is evaluating whether an espresso boiler remains centered at a target mean of 93.0 degrees Celsius. In
+    an assumed sample of 64 independent readings, the mean is 93.49 degrees and the process standard deviation is treated
+    as known at 1.6 degrees. A p-value summarizes how unusual an equally or more extreme test statistic would be if the target-mean
+    model were correct.
+  zh: 都市咖啡正在评估一台意式咖啡机锅炉的总体平均温度是否仍以 93.0 摄氏度为中心。在一个假设的 64 个独立读数样本中，均值为 93.49 度，流程标准差视为已知的 1.6 度。p 值概括：如果目标均值模型正确，出现同样或更极端检验统计量会有多异常。
+  zh_hk: 都市咖啡正評估一部意式咖啡機鍋爐嘅總體平均溫度係咪仍然以 93.0 攝氏度為中心。喺一個假設嘅 64 個獨立讀數樣本入面，均值係 93.49 度，流程標準差視為已知嘅 1.6 度。p 值概括：如果目標均值模型正確，出現同樣或者更極端檢驗統計量會有幾異常。
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: The p-value is a probability calculated under H0
+  title_zh: p 值是在 H0 条件下计算的概率
+  title_zh_hk: p 值係喺 H0 條件之下計算嘅概率
+  formula: Two-sided p-value = P(|Z| >= |Z_calc| given H0)
+  formula_zh: 双侧 p 值 = P(|Z| >= |Z_calc|｜H0 成立)
+  formula_zh_hk: 雙側 p 值 = P(|Z| >= |Z_calc|｜H0 成立)
+  formula_tex: p=P\!\left(|Z|\ge |z_{\mathrm{obs}}|\mid H_0\right)
+  s1_en: A p-value is the probability, calculated under the null model, of obtaining a test statistic at least as extreme
+    as the observed statistic in the direction or directions specified by the alternative hypothesis. The definition therefore
+    depends on the test statistic and whether the test is one-sided or two-sided.
+  s1_zh: p 值是在原假设模型下，按照备择假设指定的一个或多个方向，获得至少与观测统计量同样极端结果的概率。因此，它取决于检验统计量以及检验是单侧还是双侧。
+  s1_zh_hk: p 值係喺原假設模型之下，按照備擇假設指定嘅一個或者多個方向，得到至少同觀測統計量一樣極端結果嘅概率。所以，佢取決於檢驗統計量以及檢驗係單側定係雙側。
+  s2_en: Smaller p-values indicate that the observed statistic is less compatible with H0 under the maintained model. A p-value
+    does not measure effect size, practical importance, the probability that H0 is true, or the probability that the result
+    occurred purely by chance.
+  s2_zh: 较小的 p 值表示在既定模型下，观测统计量与 H0 较不相容。p 值不度量效应大小、实际重要性、H0 为真的概率，也不是“结果纯属偶然”的概率。
+  s2_zh_hk: 較細嘅 p 值表示喺既定模型之下，觀測統計量同 H0 較唔相容。p 值唔量度效應大小、實際重要性、H0 為真嘅概率，亦唔係「結果純屬偶然」嘅概率。
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  kicker_en: The Critical Correction
+  kicker_zh: 思维纠偏
+  kicker_zh_hk: 思維糾偏
+  title_en: Do not reverse the conditional probability
+  title_zh: 不要颠倒条件概率
+  title_zh_hk: 唔好顛倒條件概率
+  left_en: 'Correct: P(data this extreme or more | H0)'
+  left_zh: 正确：P(同样或更极端数据｜H0)
+  left_zh_hk: 正確：P(同樣或者更極端數據｜H0)
+  right_en: 'Incorrect: P(H0 | observed data)'
+  right_zh: 错误：P(H0｜观测数据)
+  right_zh_hk: 錯誤：P(H0｜觀測數據)
+  s1_en: A p-value of 0.0142 does not mean there is a 1.42% probability that H0 is true. Classical p-value calculations condition
+    on H0 and ask about the distribution of possible test statistics; they do not assign a posterior probability to H0.
+  s1_zh: p = 0.0142 并不表示 H0 为真的概率是 1.42%。经典 p 值计算以 H0 为条件，询问可能检验统计量的分布，并不给 H0 指定后验概率。
+  s1_zh_hk: p = 0.0142 並唔表示 H0 為真嘅概率係 1.42%。經典 p 值計算以 H0 為條件，詢問可能檢驗統計量嘅分佈，並唔會畀 H0 指定後驗概率。
+  s2_en: The decision rule compares p with a preselected significance level alpha. If p is less than or equal to alpha, reject
+    H0; otherwise, fail to reject H0. The threshold is a decision convention tied to error control, not a universal boundary
+    between truth and falsehood.
+  s2_zh: 决策规则把 p 与预先选定的显著性水平 alpha 比较。如果 p 小于等于 alpha，则拒绝 H0；否则不拒绝 H0。该阈值是与错误控制相关的决策约定，并非真与假的普遍分界。
+  s2_zh_hk: 決策規則將 p 同預先選定嘅顯著性水平 alpha 比較。如果 p 細過或者等於 alpha，就拒絕 H0；否則唔拒絕 H0。呢個門檻係同錯誤控制相關嘅決策約定，唔係真同假嘅普遍分界。
+  s3_en: Report the exact p-value when practical, together with the estimate, standard error, confidence interval, assumptions,
+    and sample design. Values just above and below alpha should not be described as fundamentally different evidence without
+    considering their uncertainty and practical context.
+  s3_zh: 在可行时应报告确切 p 值，并同时报告估计值、标准误、置信区间、假设与抽样设计。若 p 值仅略高或略低于 alpha，不应在忽略不确定性与实际情境的情况下，把两者描述为本质不同的证据。
+  s3_zh_hk: 喺可行嗰陣應該報告確切 p 值，並同時報告估計值、標準誤、置信區間、假設同抽樣設計。如果 p 值只係略高或者略低過 alpha，唔應該喺忽略不確定性同實際情境嘅情況之下，將兩者描述成本質唔同嘅證據。
+- id: ledger
+  visual: steps
+  seconds: 38
+  kicker_en: The Ledger
+  kicker_zh: 台账实录
+  kicker_zh_hk: 台賬實錄
+  title_en: Calculate the two-sided boiler-temperature p-value
+  title_zh: 计算锅炉温度的双侧 p 值
+  title_zh_hk: 計算鍋爐溫度嘅雙側 p 值
+  step1_en: 'Assume H0: mu = 93.0 C, H1: mu != 93.0 C, known sigma = 1.6 C, and n = 64'
+  step1_zh: '假设 H0: mu = 93.0 C，H1: mu != 93.0 C，已知 sigma = 1.6 C，n = 64'
+  step1_zh_hk: '假設 H0: mu = 93.0 C，H1: mu != 93.0 C，已知 sigma = 1.6 C，n = 64'
+  step2_en: SE = 1.6 / sqrt(64) = 0.20 C; Z = (93.49 - 93.0) / 0.20 = 2.45
+  step2_zh: SE = 1.6 / √64 = 0.20 C；Z = (93.49 - 93.0) / 0.20 = 2.45
+  step2_zh_hk: SE = 1.6 / √64 = 0.20 C；Z = (93.49 - 93.0) / 0.20 = 2.45
+  step3_en: Upper-tail area ≈ 0.0071; two-sided p ≈ 2(0.0071) = 0.0142; reject H0 at alpha = 0.05
+  step3_zh: 上尾面积约 0.0071；双侧 p 约 2(0.0071) = 0.0142；在 alpha = 0.05 时拒绝 H0
+  step3_zh_hk: 上尾面積約 0.0071；雙側 p 約 2(0.0071) = 0.0142；喺 alpha = 0.05 嗰陣拒絕 H0
+  s1_en: For illustration, assume 64 independent temperature readings have a sample mean of 93.49 degrees Celsius, the tested
+    mean is 93.0 degrees, and the population standard deviation is known to be 1.6 degrees. These are teaching assumptions,
+    not verified maintenance records or equipment specifications.
+  s1_zh: 作为示例，假设 64 个独立温度读数的样本均值为 93.49 摄氏度，被检验均值为 93.0 度，总体标准差已知为 1.6 度。这些数字是教学假设，并非已核实的维保记录或设备规格。
+  s1_zh_hk: 作為例子，假設 64 個獨立溫度讀數嘅樣本均值係 93.49 攝氏度，被檢驗均值係 93.0 度，總體標準差已知係 1.6 度。呢啲數字係教學假設，唔係已核實嘅維保記錄或者設備規格。
+  s2_en: The standard error is 1.6 divided by the square root of 64, equal to 0.20 degrees. The standardized statistic is
+    (93.49 minus 93.0) divided by 0.20, which equals 2.45 standard errors above the null benchmark.
+  s2_zh: 标准误为 1.6 除以根号 64，等于 0.20 度。标准化统计量为 (93.49 - 93.0) / 0.20，即样本均值位于原假设基准上方 2.45 个标准误。
+  s2_zh_hk: 標準誤係 1.6 除以根號 64，等於 0.20 度。標準化統計量係 (93.49 - 93.0) / 0.20，即係樣本均值位於原假設基準上方 2.45 個標準誤。
+  s3_en: For a symmetric two-sided Z test, the upper-tail probability beyond 2.45 is approximately 0.0071, so doubling gives
+    p approximately 0.0142. Since 0.0142 is below 0.05, reject H0. The result is evidence against a 93.0-degree population
+    mean under the assumptions; it does not identify a mechanical cause or automatically require a particular repair action.
+  s3_zh: 在对称的双侧 Z 检验中，超过 2.45 的上尾概率约为 0.0071，因此加倍得到 p 约为 0.0142。由于 0.0142 小于 0.05，拒绝 H0。该结果是在既定假设下反对总体均值为 93.0 度的证据；它不能识别机械原因，也不会自动要求某项维修行动。
+  s3_zh_hk: 喺對稱嘅雙側 Z 檢驗入面，超過 2.45 嘅上尾概率約係 0.0071，所以加倍得到 p 約係 0.0142。由於 0.0142 細過 0.05，拒絕 H0。呢個結果係喺既定假設之下反對總體均值係 93.0 度嘅證據；佢唔可以識別機械原因，亦唔會自動要求某項維修行動。
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Use p-values as evidence summaries, not automatic action codes
+  title_zh: 把 p 值作为证据摘要，而非自动行动指令
+  title_zh_hk: 將 p 值作為證據摘要，而唔係自動行動指令
+  q1_en: What probability does a p-value calculate?
+  q1_zh: p 值计算的是什么概率？
+  q1_zh_hk: p 值計算嘅係咩概率？
+  q2_en: What additional information is needed before an operational response?
+  q2_zh: 在采取经营响应前，还需要哪些信息？
+  q2_zh_hk: 喺採取營運響應之前，仲需要邊啲資訊？
+  s1_en: A p-value measures the tail probability of the observed or more extreme statistic under H0 and the specified test.
+    It is not the probability that H0 is true, the probability of a false decision, or a direct measure of the effect’s economic
+    importance.
+  s1_zh: p 值度量在 H0 与指定检验下，观测统计量或更极端统计量的尾部概率。它不是 H0 为真的概率，不是错误决策的概率，也不是效应经济重要性的直接度量。
+  s1_zh_hk: p 值量度喺 H0 同指定檢驗之下，觀測統計量或者更極端統計量嘅尾部概率。佢唔係 H0 為真嘅概率，唔係錯誤決策嘅概率，亦唔係效應經濟重要性嘅直接量度。
+  s2_en: Before acting, examine the estimated temperature difference, confidence interval, sensor calibration, independence,
+    distributional assumptions, process tolerance, safety consequences, and costs of false alarms and missed defects. Statistical
+    evidence is one input to the operating decision.
+  s2_zh: 采取行动前，应检查估计温差、置信区间、传感器校准、独立性、分布假设、流程公差、安全后果，以及误报与漏报成本。统计证据只是经营决策的一项输入。
+  s2_zh_hk: 採取行動之前，應該檢查估計溫差、置信區間、感應器校準、獨立性、分佈假設、流程公差、安全後果，以及誤報同漏報成本。統計證據只係營運決策嘅一項輸入。
+  s3_en: For the assumed boiler example, Z = 2.45 and the two-sided p-value is approximately 0.0142, so the 5% test rejects
+    a 93.0-degree population mean. Report that evidence precisely, while keeping mechanical diagnosis and operational action
+    separate.
+  s3_zh: 在假设锅炉示例中，Z = 2.45，双侧 p 值约为 0.0142，因此 5% 检验拒绝总体均值为 93.0 度。应准确报告该证据，同时把机械诊断与经营行动分开。
+  s3_zh_hk: 喺假設鍋爐例子入面，Z = 2.45，雙側 p 值約係 0.0142，所以 5% 檢驗拒絕總體均值係 93.0 度。應該準確報告呢項證據，同時將機械診斷同營運行動分開。

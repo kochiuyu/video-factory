@@ -1,0 +1,167 @@
+id: STAT-M03-T01-INTRO
+course: statistics
+course_en: "Discrete & Continuous Probability Distributions"
+course_zh: "离散与连续概率分布"
+course_zh_hk: "離散與連續概率分佈"
+audience: "first-year business students"
+audience_en: "first-year business students"
+audience_zh: "商学院一年级学生"
+audience_zh_hk: "商學院一年級學生"
+duration_target_s: 154
+title_en: "Modeling the operating engine"
+title_zh: "建模运营引擎：概率分布思维"
+title_zh_hk: "建模營運引擎：概率分佈思維"
+objective_en: "Introduce probability distributions as mathematical models of operational systems, contrast one-off single-event wagers with recurring population processes, and define random variables as quantitative functions that map business outcomes to numbers."
+objective_zh: "将概率分布介绍为刻画企业运营系统的数学模型，对比单次偶发博弈与规模化总体运行过程，并将随机变量定义为把业务结果映射为数值的定量函数。"
+objective_zh_hk: "將概率分佈介紹為刻畫企業營運系統嘅數學模型，對比單次偶發博弈與規模化總體運行過程，並將隨機變量定義為將業務結果映射為數值嘅定量函數。"
+glossary:
+- en: "random variable"
+  zh: "随机变量"
+  zh_hk: "隨機變量"
+  lock: true
+- en: "probability distribution"
+  zh: "概率分布"
+  zh_hk: "概率分佈"
+  lock: true
+- en: "discrete vs continuous"
+  zh: "离散与连续"
+  zh_hk: "離散與連續"
+  lock: true
+- en: "operational capacity"
+  zh: "运营承载力"
+  zh_hk: "營運承載力"
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: "Why is analyzing a single transaction's probability insufficient for executive-level retail planning?"
+  question_zh: "为什么分析单笔交易的发生概率无法满足高管层面的零售运营规划需求？"
+  question_zh_hk: "點解分析單筆交易嘅發生概率冇辦法滿足高管層面嘅零售營運規劃需求？"
+  options_en:
+  - "A: Executive decisions govern aggregate daily capacity, total inventory volume, and queue staffing across thousands of customers, which requires modeling the entire distribution of outcomes."
+  - "B: Corporate accounting software automatically deletes any calculation involving only one person."
+  - "C: Single transactions are legally exempt from probability rules under commercial law."
+  - "D: Individual customers always buy identical quantities of coffee every single day."
+  options_zh:
+  - "A: 高管决策管控的是成千上万顾客汇聚而成的大盘承载力、总库存规模及排班调度，这必须依赖对全部结果的概率分布建模。"
+  - "B: 企业的财务会计软件会自动删除仅涉及单一个体的任何计算结果。"
+  - "C: 商业法律明文规定单笔独立交易在法律层面上豁免遵循概率法则。"
+  - "D: 每一位顾客在现实中每天购买的咖啡杯数都是完全恒定相同的。"
+  options_zh_hk:
+  - "A: 高管決策管控嘅係成千上萬顧客匯聚而成嘅大盤承載力、總庫存規模同埋排班調度，呢個必須依賴對全部結果嘅概率分佈建模。"
+  - "B: 企業嘅財務會計軟件會自動刪除淨係涉及單一個體嘅任何計算結果。"
+  - "C: 商業法律明文規定單筆獨立交易喺法律層面上豁免遵循概率法則。"
+  - "D: 每一位顧客喺現實入面每日購買嘅咖啡杯數都係完全恆定相同嘅。"
+  answer: A
+  explanation_en: "While probability foundations examine individual event likelihoods, operational management requires probability distributions to model total volume, service queues, and aggregate demand."
+  explanation_zh: "虽然概率论基础研究的是单一事件的发生胜率，但运营管理必须借助概率分布来为总量规模、排队队列和总体需求进行系统建模。"
+  explanation_zh_hk: "雖然概率論基礎研究嘅係單一事件嘅發生勝率，但營運管理必須借助概率分佈嚟為總量規模、排隊隊列同埋總體需求進行系統建模。"
+- id: Q2
+  type: multiple_choice
+  question_en: "What mathematical transformation does a random variable X perform on real-world retail operations?"
+  question_zh: "在真实的零售业务中，随机变量 X 在数学上执行了怎样的核心转换？"
+  question_zh_hk: "喺真實嘅零售業務入面，隨機變量 X 喺數學上執行咗點樣嘅核心轉換？"
+  options_en:
+  - "A: It assigns a distinct numerical value to every possible qualitative operational outcome in the sample space."
+  - "B: It converts foreign currency transactions into domestic legal tender."
+  - "C: It replaces all customer order receipts with letters of the alphabet."
+  - "D: It guarantees that total monthly sales revenue will remain completely constant."
+  options_zh:
+  - "A: 它把样本空间中每一种可能出现的定性业务结果，精确映射为一个确定的数值。"
+  - "B: 它负责将跨国业务中的外币交易金额兑换为本国法定货币。"
+  - "C: 它把所有顾客的点单收据全部强制替换为英文字母。"
+  - "D: 它能确保门店全月的销售总收入在任何情况下都保持完全恒定。"
+  options_zh_hk:
+  - "A: 佢將樣本空間入面每一種可能出現嘅定性業務結果，精確映射為一個確定嘅數值。"
+  - "B: 佢負責將跨國業務入面嘅外幣交易金額兌換為本國法定貨幣。"
+  - "C: 佢將所有顧客嘅點單收據全部強制替換為英文字母。"
+  - "D: 佢能夠確保門市全月嘅銷售總收入喺任何情況下都保持完全恆定。"
+  answer: A
+  explanation_en: "A random variable X is a function that maps qualitative operational events (e.g., 'no pastry', 'one croissant') onto clean, numerical values (0, 1, 2, ...)."
+  explanation_zh: "随机变量 X 是一个映射函数，它把现实中定性的业务事件（如“未加点”、“加点一个可颂”）转换为清晰可运算的数值（0, 1, 2, ...）。"
+  explanation_zh_hk: "隨機變量 X 係一個映射函數，佢將現實入面定性嘅業務事件（好似「冇加點」、「加點一個牛角包」）轉換為清晰可運算嘅數值（0, 1, 2, ...）。"
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: "The Scale Challenge"
+  kicker_en: "The Scale Challenge"
+  kicker_zh: "规模化挑战"
+  kicker_zh_hk: "規模化挑戰"
+  title_en: "Beyond the single coffee ticket"
+  title_zh: "穿透单张小票，洞见系统全貌"
+  title_zh_hk: "穿透單張單據，洞見系統全貌"
+  en: "A fifty-store coffee chain processes ten thousand morning orders. Knowing the chance that one customer buys food does not directly show total pastry demand, queue load, or staffing pressure. How can management model the range of outcomes for the entire operating system?"
+  zh: "一家拥有五十间门店的咖啡连锁每天早晨处理一万笔订单。只知道单个顾客加购点心的概率，并不能直接说明点心总需求、排队负荷或排班压力。管理层该如何为整个运营系统的各种可能结果建立模型？"
+  zh_hk: "一間有五十間門市嘅咖啡連鎖每日朝早處理一萬筆訂單。淨係知道單個顧客加購點心嘅概率，並唔可以直接說明點心總需求、排隊負荷或者排班壓力。管理層應該點樣為成個營運系統嘅各種可能結果建立模型？"
+- id: roadmap
+  visual: module_open
+  seconds: 44
+  title_en: "The Four Distribution Pillars"
+  title_zh: "系统建模的四大分布支柱"
+  title_zh_hk: "系統建模嘅四大分佈支柱"
+  item1_en: "Mapping: Translating retail events into Random Variables"
+  item1_zh: "映射：将现实业务事件转化为定量随机变量"
+  item1_zh_hk: "映射：將現實業務事件轉化為定量隨機變量"
+  item2_en: "Counting: Modeling discrete batches and queue arrivals"
+  item2_zh: "计数：建立离散批次品控与高峰排队模型"
+  item2_zh_hk: "計數：建立離散批次品控與高峰排隊模型"
+  item3_en: "Measuring: Sizing continuous wait times and equipment lives"
+  item3_zh: "度量：测算连续服务等待耗时与设备寿命"
+  item3_zh_hk: "度量：測算連續服務等待耗時同設備壽命"
+  item4_en: "Buffering: Engineering safety stock with Normal curves"
+  item4_zh: "缓冲：运用正态钟形曲线科学设置安全库存"
+  item4_zh_hk: "緩衝：運用正態鐘形曲線科學設置安全庫存"
+  en: "Mastering probability distributions requires four foundational pillars. First, define random variables to convert messy business events into clean numbers. Second, use discrete distributions like the Binomial and Poisson to model batch defects and queue arrivals. Third, deploy continuous distributions like the Exponential to measure service times. And fourth, apply the Normal curve to size inventory safety buffers."
+  zh: "驾驭概率分布需要四大支柱。第一，定义随机变量，把纷繁的业务细节转化为清晰的数字。第二，运用二项分布与泊松分布等离散模型，刻画批次次品与排队客流。第三，使用指数分布等连续模型，精确度量等待时长与设备寿命。第四，依托正态曲线，科学核定库存安全缓冲。"
+  zh_hk: "駕馭概率分佈需要四大支柱。第一，定義隨機變量，將紛繁嘅業務細節轉化為清晰嘅數字。第二，運用二項分佈同泊松分佈等離散模型，刻畫批次次品同排隊客流。第三，使用指數分佈等連續模型，精確度量等待時長同設備壽命。第四，依託正態曲線，科學核定庫存安全緩衝。"
+- id: foundation
+  visual: two_column
+  seconds: 44
+  kicker: "The Paradigm Shift"
+  kicker_en: "The Paradigm Shift"
+  kicker_zh: "认知跃迁"
+  kicker_zh_hk: "認知躍遷"
+  title_en: "From point bets to population models"
+  title_zh: "从单点博弈到大盘模型"
+  title_zh_hk: "由單點博弈到大盤模型"
+  left_en: "Single Event: P(A) on one ticket"
+  left_zh: "单次事件：关注单张小票上的点购概率"
+  left_zh_hk: "單次事件：關注單張單據上嘅點購概率"
+  right_en: "Distribution: P(X = x) across the network"
+  right_zh: "概率分布：全网规模下各量级的整体全貌"
+  right_zh_hk: "概率分佈：全網規模下各量級嘅整體全貌"
+  s1_en: "A single event probability asks whether one particular customer buys a croissant. It is a one-off draw from uncertainty."
+  s1_zh: "单次事件概率关心的是某一位具体顾客是否会购买可颂。它是从不确定性中抽取的一次孤立结果。"
+  s1_zh_hk: "單次事件概率關心嘅係某一位具體顧客係咪會買牛角包。佢係由不確定性入面抽取嘅一次孤立結果。"
+  s2_en: "A random variable can represent the total number of croissant add-ons across the ten thousand orders. Its probability distribution assigns a probability to each possible total, such as zero, fifty, or five hundred add-ons, under the stated model assumptions."
+  s2_zh: "随机变量可以表示一万笔订单中的可颂加购总数；在给定模型假设下，它的概率分布为每个可能总数赋予概率，例如加购总数为 0、50 或 500。"
+  s2_zh_hk: "隨機變量可以表示一萬筆訂單入面嘅牛角包加購總數；喺指定模型假設之下，佢嘅概率分佈會為每個可能總數賦予概率，例如加購總數係 0、50 或者 500。"
+  s3_en: "The operating distinction is between one ticket and the distribution of outcomes across the system. Capacity decisions use that distribution, not a single anecdote."
+  s3_zh: "运营上的区分是单张小票与整个系统的结果分布。承载力决策应依据该分布，而不是个别个案。"
+  s3_zh_hk: "營運上嘅區分係單張單據同成個系統嘅結果分佈。承載力決策應該依據嗰個分佈，而唔係個別個案。"
+- id: takeaway
+  visual: takeaway
+  seconds: 36
+  kicker: "The Operating Rule"
+  kicker_en: "The Operating Rule"
+  kicker_zh: "运营法则"
+  kicker_zh_hk: "營運法則"
+  title_en: "Manage the distribution, not the anecdote"
+  title_zh: "管控总体分布，超越偶发个案"
+  title_zh_hk: "管控總體分佈，超越偶發個案"
+  q1_en: "Why do managers need probability distributions?"
+  q1_zh: "为什么企业管理者必须掌握概率分布？"
+  q1_zh_hk: "點解企業管理者必須掌握概率分佈？"
+  q2_en: "How do random variables empower strategy?"
+  q2_zh: "随机变量如何赋能经营战略？"
+  q2_zh_hk: "隨機變量點樣賦能經營戰略？"
+  s1_en: "Probability distributions organize uncertain operational outcomes into quantitative models that can inform staffing, baking, and logistics decisions."
+  s1_zh: "概率分布把不确定的运营结果整理为定量模型，为门店排班、工坊烘焙和冷链配发提供依据。"
+  s1_zh_hk: "概率分佈將不確定嘅營運結果整理成定量模型，為門市排班、工坊烘焙同冷鏈配發提供依據。"
+  s2_en: "By assigning numbers to operational outcomes, random variables let managers calculate quantities such as expected load and compare the probabilities of capacity thresholds."
+  s2_zh: "通过为业务结果赋予数值，随机变量让管理层能够计算期望负荷，并比较达到不同承载力阈值的概率。"
+  s2_zh_hk: "透過為業務結果賦予數值，隨機變量令管理層可以計算期望負荷，並比較達到唔同承載力門檻嘅概率。"
+  s3_en: "The operational rule is to define the outcome, map it to a random variable, decide whether it is discrete or continuous, and then select a distribution whose assumptions fit the process."
+  s3_zh: "运营规则是：先定义结果并映射为随机变量，再判断它属于离散计数还是连续度量，最后选择假设与业务过程相符的概率分布。"
+  s3_zh_hk: "營運規則係：先定義結果並映射成隨機變量，再判斷佢屬於離散計數定連續度量，最後選擇假設同業務過程相符嘅概率分佈。"

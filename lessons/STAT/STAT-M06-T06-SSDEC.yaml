@@ -1,0 +1,198 @@
+id: STAT-M06-T06-SSDEC
+course: STAT-M06
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Sum of Squares Decomposition: Total, Explained, and Residual Variation'
+title_zh: 平方和分解：总变异、解释变异与残差变异
+title_zh_hk: 平方和分解：總變異、解釋變異同殘差變異
+objective_en: Decompose outcome variation around the sample mean into regression and residual sums of squares, derive the
+  identity from fitted deviations and residuals, explain why the cross-product vanishes for OLS with an intercept, calculate
+  a numerical decomposition, and avoid interpreting explained variation as causal attribution.
+objective_zh: 把结果变量围绕样本均值的变异分解为回归平方和与残差平方和，从拟合偏差和残差推导该恒等式，解释为何含截距 OLS 的交叉乘积项为零，完成数值分解，并避免把解释变异视为因果归因。
+objective_zh_hk: 將結果變量圍繞樣本平均數嘅變異分解做回歸平方和同殘差平方和，由擬合偏差同殘差推導呢個恆等式，解釋點解含截距 OLS 嘅交叉乘積項係零，完成數值分解，並避免將解釋變異視為因果歸因。
+glossary:
+- en: Total Sum of Squares
+  zh: 总平方和
+  zh_hk: 總平方和
+  lock: true
+- en: Regression Sum of Squares
+  zh: 回归平方和
+  zh_hk: 回歸平方和
+  lock: true
+- en: Sum of Squared Errors
+  zh: 误差平方和
+  zh_hk: 誤差平方和
+  lock: true
+- en: Orthogonality
+  zh: 正交性
+  zh_hk: 正交性
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why does the cross-product term vanish in the standard OLS sum-of-squares decomposition?
+  question_zh: 为什么总平方和（SST）能够干净地分解为 SSR 与 SSE 之和，而没有任何交叉乘积交互项？
+  question_zh_hk: 點解總平方和（SST）可以乾淨俐落地拆解為 SSR 同 SSE 相加，而完全冇任何交叉乘積項？
+  options_en:
+  - 'A: The sample size is assumed to approach infinity'
+  - 'B: With an intercept, the OLS normal equations make residuals orthogonal to fitted-value deviations, so the summed cross-product
+    is zero'
+  - 'C: The dependent variable is standardized to have unit variance'
+  - 'D: Squaring individual store revenues forces cross-products to equal one'
+  options_zh:
+  - 'A: 假设样本容量趋于无穷大'
+  - 'B: OLS 正规方程在数学上保证了残差与拟合值严格正交，交叉项之和为零'
+  - 'C: 因变量经过标准化处理使其方差严格等于 1'
+  - 'D: 对各门店营业额求平方强制交叉乘积项恒等于 1'
+  options_zh_hk:
+  - 'A: 假設樣本容量趨向無限大'
+  - 'B: OLS 正則方程喺數學上保證咗殘差同擬合值嚴格正交，交叉乘積加埋剛好係零'
+  - 'C: 因變量經過標準化處理令其方差剛好等於 1'
+  - 'D: 對每間分店嘅營業額取平方，強制交叉乘積項必然等於 1'
+  answer: B
+  explanation_en: The decomposition is an algebraic property of the same-sample OLS projection with an intercept. It does
+    not depend on a large sample or standardized Y.
+  explanation_zh: 在包含截距项的 OLS 估计下，交叉乘积项 2 * Sum((Y_hat_i - Y_bar) * e_i) 严格归零，因为残差在几何与代数上与拟合值严格正交。
+  explanation_zh_hk: 喺包含截距項嘅 OLS 估計入面，交叉項 2 * Sum((Y_hat_i - Y_bar) * e_i) 必然歸零，因為殘差喺幾何同代數上同擬合值嚴格正交。
+- id: Q2
+  type: multiple_choice
+  question_en: For an intercept-including OLS model, SST = 10,000 and SSR = 8,200. What is SSE?
+  question_zh: 在包含湾仔、旺角与中环的三店样本中，总营收离散度 SST 等于 10,000。若回归解释变异 SSR 为 8,200，未解释残差平方和 SSE 是多少？
+  question_zh_hk: 喺包含灣仔、旺角同中環嘅三間分店樣本入面，總營業額離散度 SST 等於 10,000。如果回歸解釋變異 SSR 係 8,200，未解釋殘差平方和 SSE 係幾多？
+  options_en:
+  - 'A: SSE = 1,800'
+  - 'B: SSE = 8,200'
+  - 'C: SSE = 18,200'
+  - 'D: SSE = 82'
+  options_zh:
+  - 'A: SSE = 1,800'
+  - 'B: SSE = 8,200'
+  - 'C: SSE = 18,200'
+  - 'D: SSE = 82'
+  options_zh_hk:
+  - 'A: SSE = 1,800'
+  - 'B: SSE = 8,200'
+  - 'C: SSE = 18,200'
+  - 'D: SSE = 82'
+  answer: A
+  explanation_en: Use SST = SSR + SSE, so SSE = 10,000 - 8,200 = 1,800.
+  explanation_zh: 根据代数分解公式：SST = SSR + SSE。因此，SSE = SST - SSR = 10,000 - 8,200 = 1,800。
+  explanation_zh_hk: 根據代數分解公式：SST = SSR + SSE。因此，SSE = SST - SSR = 10,000 - 8,200 = 1,800。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  title_en: How much outcome variation does the fitted line capture?
+  title_zh: 拟合直线捕捉了多少结果变异？
+  title_zh_hk: 擬合直線捕捉咗幾多結果變異？
+  en: Metro Coffee is reviewing an assumed sample of store-day cup sales and predictions from a fitted traffic model. Sales
+    vary around their sample mean, while fitted values capture part of that movement and residuals capture the remaining vertical
+    misses. Sum-of-squares decomposition provides an exact sample accounting identity for an OLS model with an intercept,
+    but it does not label the explained component as causal traffic impact.
+  zh: 都市咖啡正在审视一组假设的门店日杯数销量，以及客流拟合模型给出的预测。销量围绕样本均值波动，拟合值捕捉其中一部分变化，残差则记录剩余的纵向偏差。对于含截距的 OLS 模型，平方和分解提供精确的样本核算恒等式，但不会把解释部分标记为客流的因果影响。
+  zh_hk: 都市咖啡正審視一組假設嘅門市日杯數銷量，以及人流擬合模型畀出嘅預測。銷量圍繞樣本平均數波動，擬合值捕捉其中一部分變化，殘差就記錄剩低嘅縱向偏差。對於含截距嘅 OLS 模型，平方和分解提供精確嘅樣本核算恆等式，但唔會將解釋部分標記做人流嘅因果影響。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Y_i - Y-bar = (Y-hat_i - Y-bar) + e_i; SST = SSR + SSE
+  formula_zh: Y_i - Y-bar = (Y-hat_i - Y-bar) + e_i；SST = SSR + SSE
+  formula_zh_hk: Y_i - Y-bar = (Y-hat_i - Y-bar) + e_i；SST = SSR + SSE
+  formula_tex: \underbrace{\sum_i(Y_i-\bar Y)^2}_{SST}=\underbrace{\sum_i(\hat Y_i-\bar Y)^2}_{SSR}+\underbrace{\sum_i(Y_i-\hat
+    Y_i)^2}_{SSE}
+  s1_en: SST measures observed Y variation around the sample mean. SSR measures fitted-value variation around that same mean.
+    SSE measures squared residual variation between observed and fitted outcomes. All three quantities use squared units of
+    Y.
+  s1_zh: SST 衡量观测 Y 围绕样本均值的变异；SSR 衡量拟合值围绕同一均值的变异；SSE 衡量观测结果与拟合结果之间的残差平方变异。三者单位都是 Y 的平方单位。
+  s1_zh_hk: SST 量度觀測 Y 圍繞樣本平均數嘅變異；SSR 量度擬合值圍繞同一平均數嘅變異；SSE 量度觀測結果同擬合結果之間嘅殘差平方變異。三者單位都係 Y 嘅平方單位。
+  s2_en: Squaring the observation-level identity creates a cross-product term. For an OLS fit with an intercept, residuals
+    are orthogonal to the fitted-value deviations, so that summed cross-product is zero and the clean decomposition follows.
+  s2_zh: 把观测层面的恒等式平方后，会出现交叉乘积项。对于含截距的 OLS 拟合，残差与拟合值离均差正交，因此交叉乘积之和为零，得到清晰分解。
+  s2_zh_hk: 將觀測層面嘅恆等式平方之後，會出現交叉乘積項。對於含截距嘅 OLS 擬合，殘差同擬合值離均差正交，所以交叉乘積之和係零，得到清晰分解。
+  title_en: Total deviation equals fitted deviation plus residual
+  title_zh: 总离均差等于拟合离均差加残差
+  title_zh_hk: 總離均差等於擬合離均差加殘差
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  left_en: Orthogonality removes the cross-product
+  left_zh: 正交性消除交叉乘积项
+  right_en: Accounting identity, not causal allocation
+  right_zh: 核算恒等式，不是因果分配
+  s1_en: With an intercept, the OLS normal equations imply that residuals sum to zero and are orthogonal to fitted values.
+    Hence the fitted deviations from Y-bar and the residuals contribute separate squared components with no summed overlap.
+  s1_zh: 当模型包含截距时，OLS 正规方程意味着残差和为零，且残差与拟合值正交。因此，拟合值相对 Y-bar 的偏差与残差形成彼此分离的平方分量，其交叉项总和为零。
+  s1_zh_hk: 當模型包含截距嗰陣，OLS 正規方程意味住殘差和係零，而且殘差同擬合值正交。所以，擬合值相對 Y-bar 嘅偏差同殘差形成彼此分離嘅平方分量，佢哋嘅交叉項總和係零。
+  s2_en: If the model omits an intercept, uses different weights, compares different samples, or defines sums around different
+    centers, the familiar SST equals SSR plus SSE formula may not hold in this form. The audit must verify the exact model
+    and definitions.
+  s2_zh: 若模型省略截距、使用不同权重、比较不同样本，或围绕不同中心定义平方和，熟悉的 SST = SSR + SSE 公式可能不以这种形式成立。审计时必须核实确切模型与定义。
+  s2_zh_hk: 如果模型省略截距、使用唔同權重、比較唔同樣本，或者圍繞唔同中心定義平方和，熟悉嘅 SST = SSR + SSE 公式可能唔以呢種形式成立。審計嗰陣必須核實確切模型同定義。
+  s3_en: SSR is model-explained sample variation, not proof that X caused Y. Omitted variables, common trends, selection,
+    and influential observations can generate explained variation. Operational attribution requires design evidence beyond
+    the decomposition.
+  s3_zh: SSR 是模型解释的样本变异，并不证明 X 导致 Y。遗漏变量、共同趋势、选择机制与强影响观测都可能产生解释变异。经营归因需要超越该分解的设计证据。
+  s3_zh_hk: SSR 係模型解釋嘅樣本變異，並唔證明 X 導致 Y。遺漏變量、共同趨勢、選擇機制同強影響觀測都可能產生解釋變異。營運歸因需要超越呢個分解嘅設計證據。
+  left_zh_hk: 正交性消除交叉乘積項
+  right_zh_hk: 核算恆等式，唔係因果分配
+  title_en: The identity depends on matched definitions and an intercept
+  title_zh: 该恒等式依赖匹配定义与截距项
+  title_zh_hk: 呢個恆等式依賴匹配定義同截距項
+- id: ledger
+  visual: steps
+  seconds: 38
+  step1_en: 'Observed cups: 310, 365, 420; Y-bar = 365; SST = 3,025 + 0 + 3,025 = 6,050 cups^2'
+  step1_zh: 观测杯数：310、365、420；Y-bar = 365；SST = 3,025 + 0 + 3,025 = 6,050 杯^2
+  step2_en: 'Assumed fitted cups: 320, 365, 410; SSR = 2,025 + 0 + 2,025 = 4,050 cups^2'
+  step2_zh: 假设拟合杯数：320、365、410；SSR = 2,025 + 0 + 2,025 = 4,050 杯^2
+  step3_en: 'Residuals: -10, 0, 10; SSE = 100 + 0 + 100 = 200 cups^2; this candidate is not an OLS decomposition because 4,050
+    + 200 does not equal 6,050'
+  step3_zh: 残差：-10、0、10；SSE = 100 + 0 + 100 = 200 杯^2；由于 4,050 + 200 不等于 6,050，该候选并非 OLS 平方和分解
+  s1_en: For illustration, assume three observed outcomes centered at 365 cups. Their total squared deviation is 6,050 cups
+    squared. These are teaching assumptions, not verified branch sales, demand, traffic, or performance records.
+  s1_zh: 作为示例，假设三个观测结果以 365 杯为中心，其总离均差平方和为 6,050 杯平方。这些数字是教学假设，并非已核实的门店销售、需求、客流或表现记录。
+  s1_zh_hk: 作為例子，假設三個觀測結果以 365 杯為中心，佢哋嘅總離均差平方和係 6,050 杯平方。呢啲數字係教學假設，唔係已核實嘅門市銷售、需求、人流或者表現記錄。
+  s2_en: The proposed fitted values have mean 365 and yield SSR 4,050. The corresponding residuals yield SSE 200. Since the
+    components sum to only 4,250, the missing 1,800 is the nonzero cross-product contribution.
+  s2_zh: 提出的拟合值均值为 365，得到 SSR = 4,050；对应残差得到 SSE = 200。由于两项合计只有 4,250，缺少的 1,800 来自非零交叉乘积项。
+  s2_zh_hk: 提出嘅擬合值平均數係 365，得到 SSR = 4,050；對應殘差得到 SSE = 200。由於兩項合計只有 4,250，欠缺嘅 1,800 來自非零交叉乘積項。
+  s3_en: 'This failure is diagnostically useful: the candidate fitted values are not the intercept-including OLS projection
+    for these outcomes and design values. For a valid OLS decomposition, the fitted values and residuals must come from the
+    same fitted model, and the cross-product must vanish.'
+  s3_zh: 这种失败具有诊断价值：该候选拟合值并非这些结果与设计值对应的含截距 OLS 投影。有效 OLS 分解要求拟合值与残差来自同一拟合模型，并且交叉乘积项必须为零。
+  s3_zh_hk: 呢種失敗具有診斷價值：呢個候選擬合值並唔係呢啲結果同設計值對應嘅含截距 OLS 投影。有效 OLS 分解要求擬合值同殘差來自同一擬合模型，而且交叉乘積項必須係零。
+  step1_zh_hk: 觀測杯數：310、365、420；Y-bar = 365；SST = 3,025 + 0 + 3,025 = 6,050 杯^2
+  step2_zh_hk: 假設擬合杯數：320、365、410；SSR = 2,025 + 0 + 2,025 = 4,050 杯^2
+  step3_zh_hk: 殘差：-10、0、10；SSE = 100 + 0 + 100 = 200 杯^2；由於 4,050 + 200 唔等於 6,050，呢個候選並唔係 OLS 平方和分解
+  title_en: Audit an assumed three-observation decomposition
+  title_zh: 审计假设的三观测平方和分解
+  title_zh_hk: 審計假設嘅三觀測平方和分解
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  q1_en: When does SST equal SSR plus SSE in the familiar form?
+  q1_zh: 熟悉形式下，SST 何时等于 SSR 加 SSE？
+  q2_en: What does explained variation not establish?
+  q2_zh: 解释变异不能证明什么？
+  s1_en: The clean identity holds for quantities defined on the same sample around the same mean when fitted values come from
+    OLS with an intercept. Orthogonality then makes the summed cross-product zero.
+  s1_zh: 当各平方和基于同一样本、围绕同一均值定义，并且拟合值来自含截距的 OLS 时，清晰恒等式成立；正交性使交叉乘积总和为零。
+  s1_zh_hk: 當各平方和基於同一樣本、圍繞同一平均數定義，而且擬合值來自含截距嘅 OLS 嗰陣，清晰恆等式成立；正交性令交叉乘積總和係零。
+  s2_en: Explained variation does not establish causality, business value, model stability, or out-of-sample accuracy. Report
+    the decomposition with model specification, sample, units, residual diagnostics, and design limitations.
+  s2_zh: 解释变异不能证明因果、商业价值、模型稳定性或样本外准确性。报告分解时，应同时说明模型设定、样本、单位、残差诊断与设计限制。
+  s2_zh_hk: 解釋變異唔可以證明因果、商業價值、模型穩定性或者樣本外準確性。報告分解嗰陣，應該同時說明模型設定、樣本、單位、殘差診斷同設計限制。
+  s3_en: In the assumed audit, SST is 6,050 but the proposed SSR plus SSE is only 4,250, exposing a nonzero cross-product
+    and an invalid OLS decomposition. Recalculate from the actual fitted OLS model before interpreting the components.
+  s3_zh: 在假设审计中，SST 为 6,050，但提出的 SSR + SSE 只有 4,250，暴露出非零交叉乘积与无效 OLS 分解。解释各分量前，应根据实际 OLS 拟合模型重新计算。
+  s3_zh_hk: 喺假設審計入面，SST 係 6,050，但提出嘅 SSR + SSE 只有 4,250，暴露出非零交叉乘積同無效 OLS 分解。解讀各分量之前，應該根據實際 OLS 擬合模型重新計算。
+  q1_zh_hk: 熟悉形式之下，SST 幾時等於 SSR 加 SSE？
+  q2_zh_hk: 解釋變異唔可以證明咩？
+  title_en: Verify the model before using the decomposition
+  title_zh: 使用平方和分解前先核实模型
+  title_zh_hk: 使用平方和分解之前先核實模型

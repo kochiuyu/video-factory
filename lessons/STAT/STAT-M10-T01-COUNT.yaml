@@ -1,0 +1,165 @@
+id: STAT-M10-T01-COUNT
+course: STAT-M10
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The Counterfactual Ideal: Why Randomization Defeats Observational Bias'
+title_zh: 反事实理想：为何随机化能彻底瓦解观测偏差
+title_zh_hk: 反事實理想：點解隨機化可以徹底擊破觀測偏差
+objective_en: Formulate the Potential Outcomes Framework, mathematically decompose observational comparisons into Average Treatment Effect and Selection Bias, and prove why randomized assignment eliminates confounding.
+objective_zh: 构建潜在结果分析框架，在数学上将观测差值严格分解为平均处理效应与选择偏差，并证明随机分组为何能彻底根除混杂因素。
+objective_zh_hk: 構建潛在結果分析架構，喺數學上將觀測差值嚴格分解做平均處理效應同選擇偏差，並證明隨機分組點樣徹底消除混淆變量。
+glossary:
+- en: Potential Outcomes Framework
+  zh: 潜在结果分析框架
+  zh_hk: 潛在結果分析架構
+  lock: true
+- en: Average Treatment Effect (ATE)
+  zh: 平均处理效应（ATE）
+  zh_hk: 平均處理效應（ATE）
+  lock: true
+- en: Selection Bias
+  zh: 选择偏差
+  zh_hk: 選擇偏差
+  lock: true
+- en: Randomized Controlled Trial (RCT)
+  zh: 随机对照实验（RCT）
+  zh_hk: 隨機對照實驗（RCT）
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Metro Coffee observes that loyalty app users who use mobile pre-ordering spend HK$540 per month, while counter-ordering users spend HK$400 per month (difference = +HK$140). Why is it a fatal corporate blunder to claim mobile pre-ordering caused HK$140 in incremental spend?
+  question_zh: Metro Coffee 观测到使用手机预点单的会员月均消费 540 港元，而柜台点单会员月均消费 400 港元（差额为 +140 港元）。为何直接宣称预点单功能创造了 140 港元的净增消费是致命的商业误判？
+  question_zh_hk: Metro Coffee 觀測到用手機預先落單嘅會員月均消費 540 港元，而櫃位落單嘅會員月均消費 400 港元（差額係 +140 港元）。點解直接宣稱預先落單功能創造咗 140 港元嘅淨增量係致命嘅商業誤判？
+  options_en:
+  - 'A: Heavy coffee drinkers and affluent Central commuters naturally self-select into mobile pre-ordering; the observed +HK$140 conflates true feature lift with pre-existing customer loyalty (Selection Bias)'
+  - 'B: The app database cannot store numbers larger than 500'
+  - 'C: Counter customers are legally prohibited from joining loyalty programs'
+  - 'D: Observational differences are always mathematically equal to zero'
+  options_zh:
+  - 'A: 重度咖啡依赖者与高收入中环通勤客本身就会自发选用手机点单；+140 港元将功能本身的真实增量与用户原有的忠诚度混为一谈（选择偏差）'
+  - 'B: App 数据库系统在技术上无法存储大于 500 的数值'
+  - 'C: 柜台到店顾客在法律上被严格禁止加入会员俱乐部'
+  - 'D: 观测性差额在数学定义上永远等于零'
+  options_zh_hk:
+  - 'A: 飲咖啡極多嘅熟客同高收入中環返工族本身就會自發揀用手機落單；+140 港元將功能本身嘅真實增量同客人原本嘅忠誠度混埋一齊（選擇偏差）'
+  - 'B: App 數據庫系統喺技術上根本儲存唔到大過 500 嘅數值'
+  - 'C: 櫃位門市顧客喺法律上被嚴格禁止加入會員計劃'
+  - 'D: 觀測性差額喺數學定義上永遠等於零'
+  answer: A
+  explanation_en: 'Observational comparisons suffer from self-selection: users choose their own treatment. The observed gap mixes the genuine causal feature lift with the baseline difference between early tech adopters and casual walk-in buyers.'
+  explanation_zh: 观测对比存在严重自选择：用户自行决定是否使用该功能。表面差额将功能带来的真实因果收益，与数字尝鲜客相较于普通散客原有的高消费底色纠缠在一起。
+  explanation_zh_hk: 觀測對比存在嚴重自選擇：客人自己決定用唔用嗰個功能。表面差額將功能帶嚟嘅真實因果收益，同數碼嘗鮮客相對普通散客原本嘅高消費底子撈埋一齊。
+- id: Q2
+  type: multiple_choice
+  question_en: In the Potential Outcomes Framework, what magical mathematical property does randomized assignment (T_i independent of (Y_i(1), Y_i(0))) guarantee?
+  question_zh: 在潜在结果分析框架中，随机分组（T_i 独立于潜在结果 (Y_i(1), Y_i(0))）在数学上保证了何种关键性质？
+  question_zh_hk: 喺潛在結果分析架構入面，隨機分組（T_i 獨立於潛在結果 (Y_i(1), Y_i(0))）喺數學上保證咗邊個關鍵性質？
+  options_en:
+  - 'A: Selection bias becomes exactly zero: the untreated baseline of the treatment group equals the observed baseline of the control group, so the observed difference equals the Average Treatment Effect'
+  - 'B: Every customer spends an identical amount of money down to the cent'
+  - 'C: Sample variance collapses to zero across all branches'
+  - 'D: The control group disappears from the dataset'
+  options_zh:
+  - 'A: 选择偏差严格归零：处理组未受干预时的潜在基准等于对照组的真实基准，观测差额严格等于平均处理效应（ATE）'
+  - 'B: 每位顾客的实际消费金额在数学上精确相等，分毫不差'
+  - 'C: 所有分店的样本方差在计算上彻底归零'
+  - 'D: 对照组在数据集中完全消失'
+  options_zh_hk:
+  - 'A: 選擇偏差嚴格變做零：處理組未受干預嗰陣嘅潛在基準等於對照組嘅真實基準，觀測差額嚴格等於平均處理效應（ATE）'
+  - 'B: 每個客人嘅實際消費額喺數學上精確相等，分毫無差'
+  - 'C: 所有分店嘅樣本方差喺計算上徹底變做零'
+  - 'D: 對照組喺數據集入面完全消失'
+  answer: A
+  explanation_en: 'Randomization breaks the correlation between treatment status and potential outcomes: E[Y(0) | T=1] = E[Y(0) | T=0]. Thus, Selection Bias = E[Y(0) | T=1] - E[Y(0) | T=0] = 0, leaving purely the true causal ATE.'
+  explanation_zh: 随机化切断了处理状态与潜在结果之间的内在联系：E[Y(0) | T=1] = E[Y(0) | T=0]。因此选择偏差 E[Y(0) | T=1] - E[Y(0) | T=0] = 0，使观测均值差纯粹反映真实的因果 ATE。
+  explanation_zh_hk: 隨機化切斷咗處理狀態同潛在結果之間嘅內在聯繫：E[Y(0) | T=1] = E[Y(0) | T=0]。因此選擇偏差 E[Y(0) | T=1] - E[Y(0) | T=0] = 0，令觀測平均數差純粹反映真實嘅因果 ATE。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Digital Attribution Illusion
+  kicker_zh: 数字化归因幻觉
+  kicker_zh_hk: 數碼化歸因幻覺
+  title_en: Did Mobile Pre-Ordering Really Create HK$140 in Extra Sales?
+  title_zh: 手机预点单真让顾客多消费了 140 港元，还是纯属虚功？
+  title_zh_hk: 手機預先落單真係令客人使多咗 140 港元，定係純屬虛火？
+  en: 'Metro Coffee''s digital product manager bursts into the boardroom with exciting news: loyalty app users who adopt mobile pre-ordering spend HK$540 per month, compared to just HK$400 for walk-in counter customers. The team requests two million dollars to expand the feature chain-wide, claiming a HK$140 monthly revenue lift per user. But the CFO hesitates: did the app feature create new coffee cravings, or did our wealthiest daily commuters simply self-select into using it?'
+  zh: Metro Coffee 数字化产品经理兴奋地冲进管理层会议室：数据显示，使用手机预点单的会员每月消费 540 港元，而柜台散客仅消费 400 港元。团队当即申请两百万港元预算向全网铺开该功能，声称每位用户每月能净增 140 港元营收。然而财务总监泼出冷水：究竟是这个功能激发了新的咖啡需求，还是本就天天到店的高薪白领自发选择了使用它？
+  zh_hk: Metro Coffee 數碼產品經理興奮噉衝入高層會議室：數據顯示，用手機預先落單嘅會員每個月消費 540 港元，而門市櫃位散客淨係消費 400 港元。團隊即刻申請兩百萬港元預算向全線分店鋪開功能，聲稱每個會員每月可以淨賺多 140 港元。點知財務總監當場淋冷水：到底係呢個功能激發咗新嘅咖啡需求，定係本身就日日到舖嘅高薪返工族自發揀用佢？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Observed Diff = ATT + Selection Bias where Selection Bias = E[Y_i(0)|T=1] - E[Y_i(0)|T=0]
+  formula_zh: 观测差值分解：Observed Diff = ATT + 选择偏差（其中选择偏差 = E[Y_i(0)|T=1] - E[Y_i(0)|T=0]）
+  formula_zh_hk: 觀測差值分解：Observed Diff = ATT + 選擇偏差（其中選擇偏差 = E[Y_i(0)|T=1] - E[Y_i(0)|T=0]）
+  formula_tex: \underbrace{E[Y_i \mid T_i=1] - E[Y_i \mid T_i=0]}_{\text{Observed Difference}} = \underbrace{E[Y_i(1) - Y_i(0) \mid T_i=1]}_{\text{ATT (Causal Lift)}} + \underbrace{\left( E[Y_i(0) \mid T_i=1] - E[Y_i(0) \mid T_i=0] \right)}_{\text{Selection Bias}}
+  s1_en: 'The Potential Outcomes Framework defines causal impact through parallel universes. For every customer i, there exist two states: Y_i(1), their monthly spend if given the feature, and Y_i(0), their spend without it.'
+  s1_zh: 潜在结果分析框架通过平行宇宙来定义因果关系。对每位顾客 i 而言，理论上存在两种潜在状态：使用该功能时的月消费 Y_i(1)，以及未使用该功能时的月消费 Y_i(0)。
+  s1_zh_hk: 潛在結果分析架構透過平行時空嚟定義因果關係。對每個客人 i 嚟講，理論上存在兩種潛在狀態：用咗呢個功能嗰陣嘅月度消費 Y_i(1)，以及冇用呢個功能嗰陣嘅月度消費 Y_i(0)。
+  s2_en: 'The Fundamental Problem of Causal Inference is that we only ever observe one reality for any single person. When customers choose their own features, observational differences become poisoned by Selection Bias: pre-existing baseline differences between adopters and non-adopters.'
+  s2_zh: 因果推断的根本难题在于：现实中我们永远无法同时观测到同一个人的两种状态。当顾客自行挑选功能时，简单的观测差值就会被选择偏差严重污染：即尝鲜群体与非尝鲜群体原有的消费底色差异。
+  s2_zh_hk: 因果推斷嘅根本難題在於：現實入面我哋永遠冇可能同時睇到同一個人嘅兩種狀態。當客人自己揀用邊個功能嗰陣，簡單嘅觀測差值就會被選擇偏差嚴重污染：即係嘗鮮客與非嘗鮮客本身原有嘅消費底子差異。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: The Illusion of Observational Data
+  left_zh: 观测数据的选择性陷阱
+  left_zh_hk: 觀測數據嘅選擇性陷阱
+  right_en: 'Randomization: The Pure Causal Scalpel'
+  right_zh: 随机化：纯净的因果解剖刀
+  right_zh_hk: 隨機化：純淨嘅因果手術刀
+  s1_en: In observational data, customers who adopt mobile ordering are disproportionately Central district bankers who purchase two specialty flat whites every morning regardless of technology.
+  s1_zh: 在被动收集的观测数据中，主动开通预点单的往往是中环核心商务区的金融白领。就算没有任何手机应用，他们每天清晨本就会雷打不动购买两杯精品澳白。
+  s1_zh_hk: 喺被動收集嘅觀測數據入面，主動開通預先落單嘅多數係中環核心商務區嘅金融精英。就算冇任何手機 App，佢哋每日清晨本來就會準時到店買兩杯精品 Flat White。
+  s2_en: Even if pre-ordering had zero causal impact, these heavy users would still spend far more than casual weekend shoppers in Mong Kok, manufacturing a huge, fake observational correlation.
+  s2_zh: 哪怕手机预点单的真实因果增益为零，这群重度忠诚用户的消费额也会天然碾压旺角周末的逛街散客，凭空炮制出巨大但虚假的观测关联。
+  s2_zh_hk: 就算手機預先落單嘅真實因果增益係零，呢班極度忠誠嘅熟客消費額亦會天然屌打旺角週末嘅逛街散客，憑空製造出巨大但虛假嘅觀測關聯。
+  s3_en: Randomized assignment solves this by flipping a coin. By forcibly assigning treatment independently of customer wealth or habits, the baseline expectation E[Y_i(0)] becomes identical across groups, vaporizing Selection Bias to zero!
+  s3_zh: 随机化分配通过抛硬币化解了这一困局。通过强行切断功能开通与顾客财富或个人习惯的关联，两组人未受干预时的潜在基线被强制抹平，将选择偏差彻底清零！
+  s3_zh_hk: 隨機化分配透過掟銀仔化解咗呢個困局。透過強制切斷功能開通同客人身家或個人習慣嘅牽連，兩組人未受干預嗰陣嘅潛在基準被強制拉平，將選擇偏差徹底化解變做零！
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Audit Observational Spend Gap
+  step1_zh: 审查被动观测表面差距
+  step1_zh_hk: 審查被動觀測表面差距
+  step2_en: Deploy Randomized 50/50 Rollout
+  step2_zh: 启动五万会员随机分流
+  step2_zh_hk: 啟動五萬會員隨機分流
+  step3_en: Deconstruct True Lift vs. Bias
+  step3_zh: 穿透对账真实因果净增量
+  step3_zh_hk: 穿透對賬真實因果淨增量
+  s1_en: 'Step one: Observational records across 50,000 loyalty accounts show self-selected mobile users spend HK$540/month, while counter users spend HK$400/month. The naive observed difference is +HK$140.'
+  s1_zh: 第一步：调取五万名在籍会员的被动消费记录：自发使用预点单的用户月均消费 540 港元，柜台用户为 400 港元。表面观测差距看似高达 +140 港元。
+  s1_zh_hk: 第一步：調取五萬個在籍會員嘅被動消費紀錄：自發用預先落單嘅客人月均消費 540 港元，門市櫃位客人係 400 港元。表面觀測差距睇落高達 +140 港元。
+  s2_en: 'Step two: Execute a rigorous A/B test. Randomly assign 25,000 members to receive the pre-order tab (Treatment), and 25,000 members to standard counter ordering only (Control).'
+  s2_zh: 第二步：上线严谨的 A/B 测试。将两万五千名会员随机赋予预点单入口（处理组），另外两万五千名会员保留纯柜台点单界面（对照组）。
+  s2_zh_hk: 第二步：上線嚴謹嘅 A/B 測試。將兩萬五千個會員隨機派發預先落單入口（處理組），另外兩萬五千個會員保留純櫃位落單介面（對照組）。
+  s3_en: 'Step three: True experimental results reveal Treatment average = HK$435/month, Control average = HK$400/month. True ATE is only +HK$35! Out of the +HK$140 observational gap, exactly HK$105 was pure Selection Bias!'
+  s3_zh: 第三步：实测揭晓：处理组月均实付 435 港元，对照组为 400 港元。真实因果增益仅为 +35 港元！此前 140 港元的差距中，整整 105 港元纯属用户自选择偏差的虚火！
+  s3_zh_hk: 第三步：實測揭盅：處理組月均實付 435 港元，對照組係 400 港元。真實因果增益淨係得 +35 港元！之前 140 港元嘅差距入面，足足 105 港元純屬客人自選擇偏差嘅虛火！
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Why Is Randomization the Gold Standard?
+  q1_zh: 随机化为何是商业因果检验的金标准？
+  q1_zh_hk: 隨機化點解係商業因果檢驗嘅金標準？
+  q2_en: 'Audit Rule: Never Confuse User Self-Selection with Feature Lift'
+  q2_zh: 审计准则：自选差异非功劳，随机对照验真金
+  q2_zh_hk: 審計準則：自選差異非功勞，隨機對照驗真金
+  s1_en: The counterfactual ideal is the cornerstone of scientific business management. It separates what customers would have spent anyway from the true incremental value generated by product engineering.
+  s1_zh: 反事实理想是现代科学化商业运营的奠基石。它无情剥离了顾客‘本就会花掉的存量现金’，精准锚定产品创新所创造的‘真正净增量’。
+  s1_zh_hk: 反事實理想係現代科學化商業營運嘅奠基石。佢無情剝離咗客人‘本來就會使嘅存量金錢’，精確鎖定產品創新所創造嘅‘真正淨增長’。
+  s2_en: Never disburse corporate capital based on observational comparisons. High-value users naturally flock to new digital tools; without a randomized control group, management will constantly fund expensive illusions.
+  s2_zh: 决不能基于被动的观测对比批准资本预算。高价值客群天然热衷于尝鲜数字化工具；若无随机对照组护航，企业将持续为虚假繁荣买单。
+  s2_zh_hk: 決不能單憑被動嘅觀測對比批出資本預算。高價值客群天然鍾意試用數碼新工具；如果冇隨機對照組護航，企業只會不斷為虛假繁榮貼錢埋單。
+  s3_en: The operating rule is to split an observational gap before spending capital. Random assignment is what sets the untreated baseline equal in expectation, so the observed difference can stand in for the treatment effect on the treated.
+  s3_zh: 操作规则是：动用资本之前先拆开观测差距。随机分配使未处理基准在期望上相等，观测差额才可以代表处理组的处理效应。
+  s3_zh_hk: 操作規則係：動用資本之前先拆開觀測差距。隨機分配令未處理基準喺期望上相等，觀測差額先可以代表處理組嘅處理效應。

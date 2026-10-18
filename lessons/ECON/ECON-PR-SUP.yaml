@@ -1,0 +1,128 @@
+id: ECON-PR-SUP
+course: economics
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 88
+title_en: Supply
+title_zh: 供给
+title_zh_hk: 供給
+objective_en: Name supply as how many buns sellers will bake at each price.
+objective_zh: 供给是每个价格下卖家愿意烘多少个面包。
+objective_zh_hk: 供給係每個價格下賣家愿意烘幾多個麵包。
+glossary:
+- en: supply
+  zh: 供给
+  zh_hk: 供給
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What does supply list?
+  zh: 供给列出的是什么？
+  zh_hk: 供給列出嘅係咩？
+  answer_en: How many units sellers will offer at each price.
+  answer_zh: 每个价格下卖家愿意提供多少。
+  answer_zh_hk: 每個價格下賣家愿意提供幾多。
+- id: Q2
+  type: transfer
+  en: The bun price rises. What happens along the supply list?
+  zh: 面包价上涨。沿着供给会怎样？
+  zh_hk: 麵包價上升。沿住供給會點？
+  answer_en: Sellers bake more buns.
+  answer_zh: 卖家会烘更多面包。
+  answer_zh_hk: 賣家會烘更多麵包。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: This module
+  kicker_en: This module
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Supply
+  title_zh: 供给
+  title_zh_hk: 供給
+  en: Buyers have a highest price. The shop has a lowest price that still covers the extra batch.
+    Write those lowest prices down. That list is supply.
+  zh: 买家有最高愿付的价。店家有一个刚够支付多烤一炉的最低价。把这些最低价写下来。那张清单就是供给。
+  zh_hk: 買家有最高願付嘅價。店家有一個啱啱夠支付多焗一爐嘅最低價。將呢啲最低價寫低。嗰張清單就係供給。
+- id: define
+  visual: definition_card
+  seconds: 22
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Supply
+  title_zh: 供给
+  title_zh_hk: 供給
+  formula: Supply = quantity sellers will offer at each price
+  formula_en: Supply = quantity sellers will offer at each price
+  formula_zh: 供给 = 每个价格下卖家愿意提供的数量
+  formula_zh_hk: 供給 = 每個價格下賣家愿意提供嘅數量
+  gloss_en: Not 'there is bread.' A list of prices and quantities.
+  gloss_zh: 不是一句“有面包”。是一张价和量的清单。
+  gloss_zh_hk: 唔係一句「有麵包」。係一張價同量嘅清單。
+  s1_en: Supply is how many buns the shop will offer at each price.
+  s1_zh: 供给是每个价格下店家愿意供应多少个面包。
+  s1_zh_hk: 供給係每個價格下店家願意供應幾多個麵包。
+  s2_en: It is not the pile already on the counter. That pile is stock. Supply is the list of
+    what they are willing to bake.
+  s2_zh: 不是柜上已经摆着的那一堆。那一堆是存货。供给是他们愿意再烤多少的清单。
+  s2_zh_hk: 唔係櫃上已經擺住嗰一堆。嗰一堆係存貨。供給係佢哋願意再焗幾多嘅清單。
+- id: example
+  visual: example
+  seconds: 24
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: The price rises
+  title_zh: 价格往上走
+  title_zh_hk: 價格往上走
+  setup_en: At four dollars one batch. At eight dollars a second batch pays.
+  setup_zh: 四块只烘一炉。八块再烘一炉才划算。
+  setup_zh_hk: 四蚊淨烘一爐。八蚊再烘一爐先至划算。
+  result_en: A higher price, more buns offered. That is movement along supply.
+  result_zh: 价更高，拿出来的面包更多。这是沿着供给在动。
+  result_zh_hk: 價更高，拎出嚟嘅麵包更多。呢個係沿住供給喺度郁。
+  s1_en: Same street, same shop. Only the posted price changes.
+  s1_zh: 同一条街，同一家店。只改牌价。
+  s1_zh_hk: 同一條街，同一間店。淨係改牌價。
+  s2_en: At four dollars the shop bakes one batch. The extra oven time is not worth a second batch.
+  s2_zh: 四块，店家只烤一炉。再开一炉的时间，这个价不划算。
+  s2_zh_hk: 四蚊，店家淨焗一爐。再開一爐嘅時間，呢個價唔划算。
+  s3_en: At eight dollars a second batch is worth the extra flour and late hour. The list did
+    not change. The price did.
+  s3_zh: 八块，第二炉的面粉和加班就值了。清单没有改。改的是价格。
+  s3_zh_hk: 八蚊，第二爐嘅麵粉同加班就值。清單冇改。改嘅係價格。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: This module
+  kicker_en: This module
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Both lists
+  title_zh: 两张清单
+  title_zh_hk: 兩張清單
+  q1_en: Supply is a list of price and quantity.
+  q1_zh: 供给是价和量的清单。
+  q1_zh_hk: 供給係價同量嘅清單。
+  q2_en: Next module puts both lists on one street.
+  q2_zh: 下一单元把两张清单放上同一条街。
+  q2_zh_hk: 下一單元將兩張清單放上同一條街。
+  s1_en: Keep both lists.
+  s1_zh: 两张清单都留下。
+  s1_zh_hk: 兩張清單都留低。
+  s2_en: Buyers on one side, sellers on the other.
+  s2_zh: 一边买家，一边卖家。
+  s2_zh_hk: 一邊買家，一邊賣家。
+  s3_en: Next we put them on one street and let the price move.
+  s3_zh: 接下来把他们放在同一条街上，让价格自己动。
+  s3_zh_hk: 跟住將佢哋放喺同一條街，等價格自己郁。

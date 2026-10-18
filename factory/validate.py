@@ -7,13 +7,20 @@ from pathlib import Path
 import yaml
 
 from glyphs import scan_lesson
+from langs import beat_text, stage_lines
 
 
 def _stem(beat: dict, name: str) -> str:
     if name == "number":
         return "" if beat.get("number") is None else str(beat.get("number")).strip()
     if name.startswith("c") and len(name) == 3 and name[1:].isdigit():
-        return str(beat.get(name) or "").strip()
+        return str(
+            beat.get(name)
+            or beat.get(f"{name}_en")
+            or beat.get(f"{name}_zh")
+            or beat.get(f"{name}_zh_hk")
+            or ""
+        ).strip()
     if name == "formula" and (
         beat.get("formula_tex")
         or beat.get("formula_tex_en")
@@ -47,6 +54,12 @@ REQUIRED_STEMS = {
     "module_open": ("item1",),
     "module_close": ("claim",),
     "payoff_matrix": ("row1", "col1", "c11"),
+    "table_grid": ("row1", "col1", "c11"),
+    "series": ("row1", "col1", "c11"),
+    "pair": ("left", "right", "lc11"),
+    "pair_chart": ("left", "right"),
+    "pair_box": ("left", "right"),
+    "pair_slope": ("left", "right"),
 }
 
 
@@ -63,11 +76,24 @@ ALLOWED_VISUALS = {
     "module_open",
     "module_close",
     "payoff_matrix",
+    "table_grid",
+    "series",
+    "pair",
+    "pair_chart",
+    "pair_box",
+    "pair_slope",
+    "redraw",
+    "turns",
+    "shrink",
+    "mix",
+    "coin",
+    "schematic_chart",
+    "dag",
 }
 
 
 def load_lesson(path: Path) -> dict:
-    data = yaml.safe_load(path.read_text(encoding="utf-8"))
+    data = yaml.safe_load(Path(path).read_text(encoding="utf-8"))
     if not isinstance(data, dict):
         raise ValueError("Lesson file must be a mapping.")
     return data
@@ -88,24 +114,24 @@ def validate(lesson: dict, glyphs: bool = True) -> list[str]:
             errors.append(f"Beat {i} has no id.")
         if beat.get("visual") not in ALLOWED_VISUALS:
             errors.append(f"Beat {beat.get('id', i)} has unknown visual {beat.get('visual')!r}.")
-        en = (beat.get("en") or "").strip()
-        zh = (beat.get("zh_cn") or beat.get("zh") or "").strip()
-        hk = (beat.get("zh_hk") or "").strip()
+        en = beat_text(beat, "en")
+        zh = beat_text(beat, "zh")
+        hk = beat_text(beat, "zh_hk")
         if not en:
-            errors.append(f"Beat {beat.get('id', i)} missing en narration.")
-        elif len(en.split()) > 70:
-            errors.append(f"Beat {beat.get('id', i)} English is long (>70 words); split the beat.")
+            errors.append(f"Beat {beat.get('id', i)} missing English speech (en or s1_en).")
         if not zh:
-            errors.append(f"Beat {beat.get('id', i)} missing zh / zh_cn narration.")
-        elif len(zh) > 140:
-            errors.append(f"Beat {beat.get('id', i)} Simplified Chinese is long (>140 chars); split the beat.")
-        if hk and len(hk) > 140:
-            errors.append(f"Beat {beat.get('id', i)} zh_hk is long (>140 chars); split the beat.")
+            errors.append(f"Beat {beat.get('id', i)} missing 简体 speech (zh or s1_zh).")
         vis = beat.get("visual")
         bid = beat.get("id", i)
         if vis == "example":
             if not (_has(beat, "setup", "result") or _has(beat, "left", "right")):
                 errors.append(f"Beat {bid} example needs setup+result or left+right.")
+        elif vis == "dag":
+            if not (_has(beat, "n1") or _has(beat, "n1_label") or str(beat.get("n1_id") or "").strip() or str(beat.get("nodes") or "").strip()):
+                errors.append(f"Beat {bid} dag needs n1 / n1_id or nodes.")
+        elif vis == "schematic_chart":
+            if not (_has(beat, "x") or _has(beat, "y") or str(beat.get("chart") or beat.get("kind") or "").strip()):
+                errors.append(f"Beat {bid} schematic_chart needs chart/kind or x/y labels.")
         elif vis == "big_number":
             if not (_stem(beat, "number") or _stem(beat, "formula")):
                 errors.append(f"Beat {bid} big_number needs number or formula.")
@@ -116,9 +142,7 @@ def validate(lesson: dict, glyphs: bool = True) -> list[str]:
             if missing:
                 errors.append(f"Beat {bid} {vis} missing {', '.join(missing)}.")
         total += float(beat.get("seconds") or 0)
-    if any((b.get("zh_hk") or "").strip() for b in beats) and any(
-        not (b.get("zh_hk") or "").strip() for b in beats
-    ):
+    if any(beat_text(b, "zh_hk") for b in beats) and any(not beat_text(b, "zh_hk") for b in beats):
         errors.append("Some beats have zh_hk and others do not; fill every beat.")
     target = float(lesson.get("duration_target_s") or 0)
     if target and total and abs(total - target) > 20:

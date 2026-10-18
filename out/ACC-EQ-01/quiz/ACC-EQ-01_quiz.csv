@@ -1,5 +1,0 @@
-﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
-1,ACC-EQ-01,comprehension,25,The accounting equation says assets equal what?,会计等式说资产等于什么？,會計等式說資產等於什麼？,Liabilities plus equity.,负债加权益。,負債加權益。
-2,ACC-EQ-01,transfer,25,Owners put in cash. Which two parts of the equation rise?,所有者投入现金。等式的哪两部分增加？,所有者投入現金。等式的哪兩部分增加？,Assets and equity. No new liability.,资产和权益。没有新增负债。,資產和權益。沒有新增負債。
-3,ACC-EQ-01,check,25,Which asset changed?,哪一项资产变了？,哪一項資產變了？,,,
-4,ACC-EQ-01,transfer,25,Which claim changed by the same amount?,哪一项主张按同样金额变了？,哪一項主張按同樣金額變了？,,,

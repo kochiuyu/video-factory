@@ -1,0 +1,175 @@
+id: STAT-M07-T01-TWOVR
+course: STAT-M07
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The Two-Variable Model: Solving Omitted Variable Bias'
+title_zh: 双变量模型：化解遗漏变量偏差
+title_zh_hk: 雙變量模型：化解遺漏變量偏差
+objective_en: Formulate the two-variable multiple regression equation, explain how conditioning on foot traffic resolves omitted variable bias on lease rent, and interpret partial regression slopes.
+objective_zh: 构建双自变量多元回归方程，阐明控制客流量如何化解商铺租金的遗漏变量偏差，并合理解读偏回归斜率。
+objective_zh_hk: 構建雙自變量多元回歸方程，闡明控制客流量點樣化解舖租嘅遺漏變量偏差，並合理解讀偏回歸斜率。
+glossary:
+- en: Multiple Linear Regression
+  zh: 多元线性回归
+  zh_hk: 多元線性回歸
+  lock: true
+  zh_zh_hk: 多元線性回歸
+- en: Partial Slope
+  zh: 偏斜率
+  zh_hk: 偏斜率
+  lock: true
+  zh_zh_hk: 偏斜率
+- en: Omitted Variable Bias
+  zh: 遗漏变量偏差
+  zh_hk: 遺漏變量偏差
+  lock: true
+  zh_zh_hk: 遺漏變量偏差
+- en: Ceteris Paribus
+  zh: 其他条件不变
+  zh_hk: 其他條件不變
+  lock: true
+  zh_zh_hk: 其他條件不變
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: In the multiple regression model Y_i = beta_0 + beta_1 * Rent_i + beta_2 * Traffic_i + e_i, how is the coefficient beta_1 interpreted by retail managers?
+  question_zh: 在多元回归模型 Y_i = beta_0 + beta_1 * Rent_i + beta_2 * Traffic_i + e_i 中，零售管理层应如何解读系数 beta_1？
+  question_zh_hk: 喺多元回歸模型 Y_i = beta_0 + beta_1 * Rent_i + beta_2 * Traffic_i + e_i 入面，零售管理層應該點樣解讀系數 beta_1？
+  options_en:
+  - 'A: The total change in daily sales when rent increases, ignoring customer traffic completely'
+  - 'B: The expected change in daily cup sales for each $1 increase in rent, holding pedestrian foot traffic strictly constant'
+  - 'C: The percentage of store foot traffic caused directly by commercial lease payments'
+  - 'D: The simple correlation coefficient between lease rent and barista shift hours'
+  options_zh:
+  - 'A: 当租金上涨时每日销量的总变动量，完全忽略街头客流的变化'
+  - 'B: 在街头行人客流量严格保持不变的前提下，商铺租金每增加 1 元所对应的预期日出杯量变动'
+  - 'C: 门面客流量中直接由支付昂贵商铺租金所诱发的百分比'
+  - 'D: 商铺租金与咖啡师排班工时之间的简单皮尔逊相关系数'
+  options_zh_hk:
+  - 'A: 當舖租增加嗰陣每日出杯量嘅總變動，完全忽視街頭人流嘅變化'
+  - 'B: 喺街頭行人客流嚴格保持唔變嘅前提下，舖租每增加 1 蚊所對應嘅預期每日出杯量變動'
+  - 'C: 門市人流之中直接由交貴舖租所引發嘅百分比'
+  - 'D: 舖租同咖啡師排班工時之間嘅簡單皮爾遜相關系數'
+  answer: B
+  explanation_en: In multiple regression, each slope is a partial slope representing the marginal effect of that specific predictor ceteris paribus (holding all other predictors in the model constant).
+  explanation_zh: 在多元回归中，每个斜率均为偏斜率，代表在‘其他条件不变’（模型中其他自变量均严格保持恒定）的前提下，该特定变量的边际效应。
+  explanation_zh_hk: 喺多元回歸入面，每個斜率都係偏斜率，代表喺‘其他條件不變’（模型入面其他自變量嚴格保持固定）嘅前提下，該自變量嘅邊際效應。
+- id: Q2
+  type: multiple_choice
+  question_en: A simple regression yields Sales = 50 + 0.08 * Rent. Adding foot traffic yields Sales = 40 + 0.02 * Rent + 0.50 * Traffic. Why did the rent slope drop from 0.08 to 0.02?
+  question_zh: 一元简单回归显示 销量 = 50 + 0.08 * 租金。加入客流量后变为 销量 = 40 + 0.02 * 租金 + 0.50 * 客流。为何租金斜率从 0.08 骤降至 0.02？
+  question_zh_hk: 一元簡單回歸顯示 銷量 = 50 + 0.08 * 舖租。加入人流之後變成 銷量 = 40 + 0.02 * 舖租 + 0.50 * 人流。點解舖租斜率由 0.08 急跌到 0.02？
+  options_en:
+  - 'A: The multiple regression model suffers from a degrees of freedom calculation error'
+  - 'B: The simple regression attributed foot traffic''s sales effect to rent; multiple regression controls for foot traffic, removing omitted variable bias'
+  - 'C: Rent payments systematically decreased after customer traffic was measured'
+  - 'D: Pedestrian foot traffic is perfectly collinear with daily cup sales'
+  options_zh:
+  - 'A: 多元回归模型在计算自由度时产生了严重的数学错误'
+  - 'B: 简单回归把客流对销量的拉动力错误归功于租金；多元回归控制了客流，化解了遗漏变量偏差'
+  - 'C: 在统计了客流量之后，各分店支付的商铺租金发生了系统性下调'
+  - 'D: 街头行人客流量与每日咖啡出杯量之间存在完全共线性'
+  options_zh_hk:
+  - 'A: 多元回歸模型喺計算自由度嗰陣出現咗嚴重嘅數學錯誤'
+  - 'B: 簡單回歸將人流對銷量嘅帶動力錯誤歸功於舖租；多元回歸控制咗人流，化解咗遺漏變量偏差'
+  - 'C: 喺統計咗人流之後，各間分店交嘅舖租出現咗系統性下調'
+  - 'D: 街頭行人客流同每日咖啡出杯量之間存在完全共線性'
+  answer: B
+  explanation_en: The simple slope of 0.08 was biased upward because expensive leases correlate with busy pedestrian zones. Controlling for foot traffic partials out that confounder, isolating the true direct rent coefficient of 0.02.
+  explanation_zh: 简单斜率 0.08 存在严重的向上虚增偏差，因为高租金往往伴随密集人流。控制客流量后剔除了该混淆因素，还原了租金真实的直接效应 0.02。
+  explanation_zh_hk: 簡單斜率 0.08 有好嚴重嘅向上虛報偏差，因為貴舖租往往伴隨旺區人流。控制咗人流之後剔除咗呢個混淆因素，還原咗舖租真實嘅直接效應 0.02。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Capital Allocation Dilemma
+  kicker_zh: 资本配置困境
+  kicker_zh_hk: 資本配置困局
+  title_en: Can Rent Predict Sales Without Foot Traffic?
+  title_zh: 不看客流，租金能否单独预测销量？
+  title_zh_hk: 唔睇人流，單憑舖租估唔估到銷量？
+  en: 'In simple regression, commercial lease rent appeared to have a massive positive slope: paying higher rent seemed to magically produce extra coffee sales. But retail landlords do not buy espresso; pedestrian commuters do. If we sign an expensive lease on a quiet street corner, sales will collapse. How do we build an econometric equation that evaluates rent while explicitly controlling for foot traffic?'
+  zh: 在一元简单回归中，商铺租金展现出巨大的正向斜率：支付更高租金仿佛能神奇地催生更多咖啡销量。然而商铺房东并不买咖啡，过路的通勤人潮才是真正的顾客。若我们在冷清街角签下一纸贵价租约，销售必将惨遭滑铁卢。我们该如何构建一个既能评估租金、又能显式控制客流量的计量模型？
+  zh_hk: 喺一元簡單回歸入面，舖租好似有一個好大嘅正向斜率：畀貴租好似識魔法噉憑空賣多好多咖啡。但業主唔會幫襯飲咖啡，路過嘅返工客先至係真正買家。如果我哋喺冷清街角簽張天價租約，生意一定會一敗塗地。我哋點樣可以構建一個既能評估舖租、又能明確控制客流量嘅計量模型？
+  zh_zh_hk: 喺一元簡單回歸入面，舖租好似有一個好大嘅正向斜率：畀貴租好似識魔法噉憑空賣多好多咖啡。但業主唔會幫襯飲咖啡，路過嘅返工客先至係真正買家。如果我哋喺冷清街角簽張天價租約，生意一定會一敗塗地。我哋點樣可以構建一個既能評估舖租、又能明確控制客流量嘅計量模型？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Y_i = beta_0 + beta_1 * X_1i + beta_2 * X_2i + e_i
+  formula_zh: 多元模型：Y_i = beta_0 + beta_1 * X_1i + beta_2 * X_2i + e_i
+  formula_zh_hk: 多元模型：Y_i = beta_0 + beta_1 * X_1i + beta_2 * X_2i + e_i
+  formula_tex: Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \varepsilon_i \quad \text{with OLS Normal Equations}
+  s1_en: A multiple linear regression model expands our framework to two or more explanatory predictors. Here, daily cup sales Y depends on both commercial lease rent X one and street pedestrian traffic X two, plus random error.
+  s1_zh: 多元线性回归模型将分析框架拓展至两个或多个解释变量。在此，每日出杯量 Y 同时取决于商铺租金 X_1 与街头行人客流量 X_2，再加上随机误差项。
+  s1_zh_hk: 多元線性回歸模型將分析架構擴展到兩個或更多解釋變量。喺度，每日出杯量 Y 同時取決於舖租 X_1 同街頭行人客流 X_2，再加上隨機誤差項。
+  s2_en: The parameter beta one is now a partial slope. It measures the expected marginal change in cup sales per unit increase in rent, holding pedestrian foot traffic strictly fixed under the ceteris paribus condition.
+  s2_zh: 此时参数 beta_1 成为偏斜率。它度量了在‘其他条件不变’、街头客流量严格保持固定的前提下，商铺租金每变动一个单位所对应的预期销量边际变动。
+  s2_zh_hk: 呢個時候參數 beta_1 變成咗偏斜率。佢衡量喺‘其他條件不變’、街頭客流嚴格保持固定嘅前提下，舖租每變動一個單位所帶來嘅預期銷量邊際變動。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Purging the Confounder
+  left_zh: 剔除混淆偏差
+  left_hk: 剔除混淆偏差
+  right_en: The Three-Dimensional Fit
+  right_zh: 三维拟合超平面
+  right_hk: 三維擬合超平面
+  s1_en: In simple regression, rent falsely claimed credit for pedestrian traffic because busy transit hubs command expensive rents. By including foot traffic directly in the equation, we block this confounding pathway entirely.
+  s1_zh: 在简单回归中，租金错误地掠夺了客流量的业绩功劳，因为繁忙的交通枢纽必然租金高昂。通过将客流量直接纳入回归方程，我们彻底阻断了这一混淆干扰路径。
+  s1_zh_hk: 喺簡單回歸入面，舖租錯誤噉搶走咗客流量嘅功勞，因為旺區交通樞紐必然租金極貴。透過將客流量直接擺入回歸方程，我哋徹底切斷咗呢條混淆干擾途徑。
+  s2_en: Geometrically, we are no longer fitting a two-dimensional line on a flat chart. Multiple regression fits a two-dimensional regression plane floating inside a three-dimensional space of rent, traffic, and sales.
+  s2_zh: 在几何视角上，我们不再是在平面散点图上拟合一条二维直线。多元回归是在租金、客流与销量的三维空间中，拟合一个悬浮的二维倾斜超平面。
+  s2_zh_hk: 喺幾何視角上，我哋唔再係喺平面散點圖上面畫一條二維直線。多元回歸係喺舖租、人流同銷量嘅三維空間入面，擬合一個懸浮嘅二維傾斜超平面。
+  s3_en: Slicing this plane at any fixed foot traffic level reveals the true partial slope for rent. The inflated simple slope collapses, shielding leadership from overpaying on retail leases.
+  s3_zh: 在任意固定的客流水平上对该超平面切片，即可得到租金真实的偏斜率。此前被虚增的简单斜率瞬间回落，保护管理层免于高价错签无效铺位。
+  s3_zh_hk: 喺任何固定嘅客流水平對呢個超平面切一刀，就可以得出舖租真實嘅偏斜率。之前被虛報吹大咗嘅簡單斜率即刻現形回落，保護管理層免於捱貴租簽錯舖位。
+  left_zh_hk: 剔除混淆偏差
+  right_zh_hk: 三維擬合超平面
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Review Naive Rent Estimate
+  step1_zh: 回顾朴素租金估计
+  step1_hk: 回顧樸素舖租估計
+  step2_en: Add Foot Traffic Control
+  step2_zh: 引入客流控制变量
+  step2_hk: 引入客流控制變量
+  step3_en: Audit Partial Slope Drop
+  step3_zh: 核验偏斜率回落幅度
+  step3_hk: 核驗偏斜率回落幅度
+  s1_en: 'Step one: Our baseline simple regression across Wan Chai and Mong Kok estimated Sales = 50 + 0.08 * Rent, suggesting each $1,000 in rent generated 80 cups.'
+  s1_zh: 第一步：湾仔店与旺角店的基准简单回归估算为：销量 = 50 + 0.08 * 租金，暗示每多付 1,000 元租金就能凭空带来 80 杯销量。
+  s1_zh_hk: 第一步：灣仔店同旺角店嘅基準簡單回歸估算係：銷量 = 50 + 0.08 * 舖租，暗示每畀多 1,000 蚊舖租好似就賣多 80 杯咖啡。
+  s2_en: 'Step two: Add daily street foot traffic X two to the model. OLS estimates Sales = 40 + 0.02 * Rent + 0.50 * Traffic across our retail network.'
+  s2_zh: 第二步：将每日街头客流量 X_2 引入模型。全网数据估算得到：销量 = 40 + 0.02 * 租金 + 0.50 * 客流。
+  s2_zh_hk: 第二步：將每日街頭客流量 X_2 納入模型。全網數據估算得出：銷量 = 40 + 0.02 * 舖租 + 0.50 * 客流。
+  s3_en: 'Step three: The true partial rent slope is only 0.02, or 20 cups per $1,000 rent. The remaining 60 cups were driven entirely by foot traffic, successfully resolving omitted variable bias.'
+  s3_zh: 第三步：租金真实的偏斜率仅为 0.02，即每千元租金对应 20 杯。原先的另外 60 杯完全是由人流驱动的，遗漏变量偏差被彻底化解。
+  s3_zh_hk: 第三步：舖租真實嘅偏斜率只有 0.02，即係每千蚊舖租對應 20 杯。原本另外嗰 60 杯完全係人流帶動嘅功勞，遺漏變量偏差被徹底破解。
+  step1_zh_hk: 回顧樸素舖租估計
+  step2_zh_hk: 引入客流控制變量
+  step3_zh_hk: 核驗偏斜率回落幅度
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Why Do Partial Slopes Change?
+  q1_zh: 为何偏斜率会与简单斜率不同？
+  q2_en: 'Audit Rule: Never Isolate Capital Costs'
+  q2_zh: 审计准则：决不可割裂成本与动能
+  s1_en: Multiple regression is the econometric engine that solves omitted variable bias. By including shared drivers directly in the model, it disentangles correlated business factors.
+  s1_zh: 多元回归是化解遗漏变量偏差的核心计量引擎。通过将共同的驱动因素直接纳入模型，它理清了高度交织的相关商业变量。
+  s1_zh_hk: 多元回歸係化解遺漏變量偏差嘅核心計量引擎。透過將共同驅動因素直接擺入模型，佢梳理晒高度交織嘅相關商業變量。
+  s2_en: Never evaluate commercial rental expenditure in isolation. Always condition on physical pedestrian foot traffic to discover whether a retail storefront generates independent operational yield.
+  s2_zh: 绝不能孤立评估商铺租金支出。必须在控制物理街头客流的前提下进行审视，以查明该铺面是否具备独立的营运净产出。
+  s2_zh_hk: 千祈唔好孤立評估舖租開支。必須喺控制街頭實體人流嘅前提下審查，睇清楚個舖位到底有冇獨立嘅營運淨產出。
+  s3_en: 'Decision rule: compare rent coefficients only after controlling for the demand drivers included in the model. This interpretation is conditional on the model specification and does not by itself prove that rent causes sales.'
+  s3_zh: 决策规则：只有在控制模型中已纳入的需求驱动因素后，才比较租金系数。这一解读取决于模型设定，本身并不能证明租金会导致销量变化。
+  s3_zh_hk: 決策規則：只可以喺控制咗模型入面已納入嘅需求驅動因素之後，先比較舖租系數。呢個解讀取決於模型設定，本身並唔能夠證明舖租會導致銷量變化。
+  q1_zh_hk: 點解偏斜率會同簡單斜率唔同？
+  q2_zh_hk: 審計準則：決不可割裂成本與動能

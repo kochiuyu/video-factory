@@ -1,0 +1,125 @@
+id: LAE-M05-EM
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 92
+title_en: Emergency minutes
+title_zh: 急救的分钟
+title_zh_hk: 急救嘅分鐘
+objective_en: 'Put an AED on the same corridor. Willingness to pay is minutes against a medical clock, not a higher airframe price.'
+objective_zh: 在同一条线上放一台 AED。愿意付钱，是医疗钟上的分钟，不是机身更贵。
+objective_zh_hk: 喺同一條線上放一部 AED。願意畀錢，係醫療鐘上嘅分鐘，唔係機身更貴。
+glossary:
+- en: last mile
+  zh: 最后一公里
+  zh_hk: 最後一公里
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What is the buyer paying for when the payload is an AED?
+  zh: 载荷是 AED 时，买方付的是什么？
+  zh_hk: 載荷係 AED 嗰陣，買方付嘅係咩？
+  answer_en: Minutes against a medical clock, not a dearer airframe.
+  answer_zh: 医疗钟上的分钟，不是更贵的机身。
+  answer_zh_hk: 醫療鐘上嘅分鐘，唔係更貴嘅機身。
+- id: Q2
+  type: transfer
+  en: Why can the same Shenzhen-to-Sha Tin line carry an AED even when a parcel would not pay?
+  zh: 为什么同一条深圳到沙田的线，包裹不付钱时，AED 仍可能付钱？
+  zh_hk: 點解同一條深圳到沙田嘅線，包裹唔畀錢嗰陣，AED 仍然可能畀錢？
+  answer_en: The medical clock is tighter than the parcel clock. The road’s delay is costlier when the payload is an AED.
+  answer_zh: 医疗钟比包裹的钟更紧。载荷是 AED 时，路上的延误更贵。
+  answer_zh_hk: 醫療鐘比包裹嘅鐘更緊。載荷係 AED 嗰陣，路上嘅延誤更貴。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Emergency minutes
+  title_zh: 急救的分钟
+  title_zh_hk: 急救嘅分鐘
+  en: Keep the same corridor. Change the payload. This short puts an AED on the line from a Shenzhen roof toward Sha Tin. The clock is no longer a parcel clock.
+  zh: 还是同一条线。只换载荷。这条短片在深圳屋顶往沙田的线上放一台 AED。钟不再是包裹的钟。
+  zh_hk: 仲係同一條線。淨係換載荷。呢條短片喺深圳屋頂去沙田嗰條線上放一部 AED。鐘唔再係包裹嘅鐘。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: AED on this line
+  title_zh: 这条线上的 AED
+  title_zh_hk: 呢條線上嘅 AED
+  formula: AED pays for minutes on a medical clock
+  formula_en: AED pays for minutes on a medical clock
+  formula_zh: AED 付的是医疗钟上的分钟
+  formula_zh_hk: AED 付嘅係醫療鐘上嘅分鐘
+  gloss_en: Same corridor, tighter clock
+  gloss_zh: 同一条线，更紧的钟
+  gloss_zh_hk: 同一條線，更緊嘅鐘
+  s1_en: An AED is a small kit that can restart a heart. Say the letters. Do not build a hospital in this short.
+  s1_zh: AED 是一个可以帮心脏重新跳的小盒子。说出这三个字母。这条短片不要建成一座医院。
+  s1_zh_hk: AED 係一個可以幫心臟重新跳嘅細盒。講出呢三個字母。呢條短片唔好建成一座醫院。
+  s2_en: Willingness to pay is minutes against that medical clock. It is not a higher price for the airframe.
+  s2_zh: 愿意付钱，是对着那只医疗钟的分钟。不是机身更贵。
+  s2_zh_hk: 願意畀錢，係對住嗰隻醫療鐘嘅分鐘。唔係機身更貴。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: Contrast
+  kicker_en: Contrast
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Two clocks, one line
+  title_zh: 两只钟，一条线
+  title_zh_hk: 兩隻鐘，一條線
+  left_en: Parcel clock
+  left_zh: 包裹的钟
+  left_zh_hk: 包裹嘅鐘
+  right_en: Medical clock
+  right_zh: 医疗的钟
+  right_zh_hk: 醫療嘅鐘
+  s1_en: The parcel pays only when the road fails. An empty road can leave the slot without a buyer.
+  s1_zh: 包裹只在路不行时付钱。路若是空的，时段可以没有买方。
+  s1_zh_hk: 包裹淨係路唔得嗰陣先畀錢。路若係空嘅，時段可以冇買方。
+  s2_en: The AED still pays when the road is slow. Those minutes sit on a tighter clock.
+  s2_zh: 路慢的时候，AED 仍会付钱。那些分钟落在更紧的钟上。
+  s2_zh_hk: 路慢嗰陣，AED 仍然會畀錢。嗰啲分鐘落喺更緊嘅鐘上面。
+  s3_en: Do not write that willingness to pay is infinite. Write that the clock is tighter.
+  s3_zh: 不要写愿意付的钱是无限的。请写这只钟更紧。
+  s3_zh_hk: 唔好寫願意付嘅錢係無限。請寫呢隻鐘更緊。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Same line, tighter clock
+  title_zh: 同一条线，更紧的钟
+  title_zh_hk: 同一條線，更緊嘅鐘
+  q1_en: What payload did we add?
+  q1_zh: 我们加上了什么载荷？
+  q1_zh_hk: 我哋加咗咩載荷？
+  q2_en: What is the buyer paying for?
+  q2_zh: 买方付的是什么？
+  q2_zh_hk: 買方付嘅係咩？
+  s1_en: An AED can ride the same corridor as the parcel.
+  s1_zh: AED 可以走包裹同一条线。
+  s1_zh_hk: AED 可以行包裹同一條線。
+  s2_en: The payment is minutes on a medical clock, not a dearer machine.
+  s2_zh: 付的是医疗钟上的分钟，不是更贵的机器。
+  s2_zh_hk: 付嘅係醫療鐘上嘅分鐘，唔係更貴嘅機器。
+  s3_en: Next short leaves the locker. One picture only. A person comes off a GBA structure.
+  s3_zh: 下一支短片离开储物柜。只留一张图。一个人从大湾区的一座结构上下来。
+  s3_zh_hk: 下一條短片離開儲物櫃。淨係留一張圖。一個人由大灣區一座結構落嚟。

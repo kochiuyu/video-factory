@@ -1,0 +1,162 @@
+id: STAT-M10-T02-UNITS
+course: STAT-M10
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Units of Randomization: User-Level, Order-Level, or Store-Level?'
+title_zh: 随机化单元：用户级、订单级还是门店级？
+title_zh_hk: 隨機化單元：用戶級、訂單級定係分店級？
+objective_en: Select a Randomization Unit that matches treatment delivery, explain contamination and clustered interference, and use deterministic assignment to keep eligible units in stable variants without overstating independence across experiments.
+objective_zh: 选择与处理投放方式匹配的随机化单元，解释跨组污染与集群干扰，并使用确定性分配使合资格单元稳定留在同一版本，同时避免夸大不同实验之间的独立性。
+objective_zh_hk: 選擇同處理投放方式匹配嘅隨機化單元，解釋跨組污染同集群干擾，並使用確定性分配令合資格單元穩定留喺同一版本，同時避免誇大唔同實驗之間嘅獨立性。
+glossary:
+- en: Randomization Unit
+  zh: 随机化单元
+  zh_hk: 隨機化單元
+  lock: true
+- en: Cross-Condition Contamination
+  zh: 跨组污染（跨条件污染）
+  zh_hk: 跨組污染（跨條件污染）
+  lock: true
+- en: Deterministic Hashing (Hash-Salt)
+  zh: 确定性哈希加盐算法
+  zh_hk: 確定性哈希加鹽算法
+  lock: true
+- en: Clustered Interference
+  zh: 集群干扰（组内溢出）
+  zh_hk: 集群干擾（組內溢出）
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: A checkout treatment persists in a customer's memory across purchases. What is the main risk of randomizing each order independently?
+  question_zh: 某结账处理的影响会在顾客多次购买之间持续。逐笔订单独立随机化的主要风险是什么？
+  question_zh_hk: 某個結賬處理嘅影響會喺客人多次購買之間持續。逐張訂單獨立隨機化嘅主要風險係乜嘢？
+  options_en:
+  - 'A: The same customer may see both variants, creating cross-condition contamination'
+  - 'B: Every repeat order is automatically deleted'
+  - 'C: The sample size becomes zero'
+  - 'D: Order identifiers become invalid'
+  options_zh:
+  - A：同一顾客可能看到两个版本，造成跨组污染
+  - B：所有重复订单都会自动删除
+  - C：样本量会变为零
+  - D：订单编号会失效
+  options_zh_hk:
+  - A：同一個客人可能睇到兩個版本，造成跨組污染
+  - B：所有重複訂單都會自動刪除
+  - C：樣本量會變成零
+  - D：訂單編號會失效
+  answer: A
+  explanation_en: When prior exposure can change later behavior, assigning separate orders to different variants violates the clean separation intended between treatment and control experiences.
+  explanation_zh: 当先前接触会改变后续行为时，把同一顾客的不同订单分到不同版本，会破坏处理组与对照组体验之间应有的清晰隔离。
+  explanation_zh_hk: 當之前接觸會改變之後行為，將同一個客人嘅唔同訂單分到唔同版本，就會破壞處理組同對照組體驗之間應有嘅清晰分隔。
+- id: Q2
+  type: multiple_choice
+  question_en: What does deterministic hashing with a fixed experiment-specific salt primarily provide?
+  question_zh: 使用固定实验专属盐值的确定性哈希主要提供什么？
+  question_zh_hk: 使用固定實驗專屬鹽值嘅確定性哈希主要提供乜嘢？
+  options_en:
+  - 'A: Stable assignment of the same unit to the same variant within that experiment'
+  - 'B: Guaranteed causal validity regardless of implementation'
+  - 'C: Exact 50/50 allocation in every realized sample'
+  - 'D: Automatic independence across every concurrent experiment'
+  options_zh:
+  - A：在该实验内把同一单元稳定分配到同一版本
+  - B：无论如何实施都保证因果有效性
+  - C：在每个实际样本中保证精确五五分流
+  - D：自动保证所有并行实验完全独立
+  options_zh_hk:
+  - A：喺該實驗內將同一單元穩定分配到同一版本
+  - B：無論點樣實施都保證因果有效性
+  - C：喺每個實際樣本入面保證精確五五分流
+  - D：自動保證所有並行實驗完全獨立
+  answer: A
+  explanation_en: The same identifier and salt map deterministically to the same bucket. Independence across experiments is not automatic and depends on the allocation architecture and interaction controls.
+  explanation_zh: 相同标识符与盐值会确定性地映射到同一分桶。不同实验之间的独立性并非自动成立，还取决于分配架构与交互控制。
+  explanation_zh_hk: 相同標識符同鹽值會確定性噉映射到同一分桶。唔同實驗之間嘅獨立性唔係自動成立，仲取決於分配架構同交互控制。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Randomization-Level Puzzle
+  kicker_zh: 随机层级难题
+  kicker_zh_hk: 隨機層級難題
+  title_en: Why Might One Customer See Two Checkout Experiences?
+  title_zh: 为什么同一顾客会看到两种结账体验？
+  title_zh_hk: 點解同一個客人會睇到兩種結賬體驗？
+  en: 'Suppose a regular customer receives express checkout in the morning but the old checkout flow in the afternoon because each order is randomized separately. The experience is inconsistent, and the morning exposure may change afternoon behavior. The statistical problem begins before model estimation: the assignment unit does not match the person who remembers the treatment.'
+  zh: 假设一位常客早上获得极速结账，下午却因每笔订单分别随机而看到旧流程。体验前后不一致，早上的接触还可能改变下午的行为。统计问题在模型估计前已经出现：分配单元与会记住处理体验的人并不一致。
+  zh_hk: 假設一位熟客朝早獲得極速結賬，下晝就因為每張訂單分開隨機而睇到舊流程。體驗前後唔一致，朝早嘅接觸仲可能改變下晝行為。統計問題喺模型估計之前已經出現：分配單元同會記住處理體驗嘅人並唔一致。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Variant = bucket(Hash(Unit_ID + experiment salt))
+  formula_zh: 版本 = 分桶（哈希〔单元 ID + 实验盐值〕）
+  formula_zh_hk: 版本 = 分桶（哈希〔單元 ID + 實驗鹽值〕）
+  formula_tex: B_i=H(u_i,s_e)\bmod K,\quad T_i=\mathbb{I}(B_i<c)
+  s1_en: The Randomization Unit is the entity assigned to treatment or control. It may be a user, order, session, store, region, or another cluster. The defensible choice depends on where treatment is delivered, where outcomes are measured, and where interference can occur.
+  s1_zh: 随机化单元是被分配到处理组或对照组的实体，可以是用户、订单、会话、门店、地区或其他集群。合理选择取决于处理在哪里投放、结果在哪里测量，以及干扰可能在哪里发生。
+  s1_zh_hk: 隨機化單元係被分配到處理組或者對照組嘅實體，可以係用戶、訂單、會話、分店、地區或者其他集群。合理選擇取決於處理喺邊度投放、結果喺邊度量度，同埋干擾可能喺邊度發生。
+  s2_en: Deterministic Hashing (Hash-Salt) can keep an identified unit in the same variant across repeated visits. It is an assignment implementation method, not by itself proof that allocation is balanced, independent, or free from logging defects.
+  s2_zh: 确定性哈希加盐算法可以使已识别单元在多次访问中保持同一版本。它是一种分配实施方法，本身不能证明分流平衡、实验相互独立或日志没有缺陷。
+  s2_zh_hk: 確定性哈希加鹽算法可以令已識別單元喺多次訪問入面保持同一版本。佢係一種分配實施方法，本身唔可以證明分流平衡、實驗互相獨立或者日誌冇缺陷。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Personal Digital Treatment
+  left_zh: 个人数字处理
+  left_zh_hk: 個人數碼處理
+  right_en: Shared Environment
+  right_zh: 共享环境
+  right_zh_hk: 共享環境
+  s1_en: For a persistent personal interface, user-level assignment can prevent the same identified customer from switching variants. Order-level assignment may be appropriate only when exposures are genuinely isolated and do not affect later orders.
+  s1_zh: 对持续性的个人界面，用户级分配可避免同一已识别顾客在版本之间切换。只有当各次接触真正独立且不会影响后续订单时，订单级分配才可能合适。
+  s1_zh_hk: 對持續性個人介面，用戶級分配可以避免同一個已識別客人喺版本之間轉換。只有當每次接觸真正獨立，而且唔會影響之後訂單，訂單級分配先可能合適。
+  s2_en: For a physical display seen by everyone in one store, user-level assignment cannot deliver separate conditions. Store-level cluster assignment may better match delivery, but fewer independent clusters usually reduce precision.
+  s2_zh: 对同一门店内所有人都能看到的实体展示，用户级分配无法分别投放不同条件。门店级集群分配可能更匹配处理投放，但独立集群较少通常会降低精度。
+  s2_zh_hk: 對同一分店入面所有人都睇到嘅實體展示，用戶級分配無法分別投放唔同條件。分店級集群分配可能更匹配處理投放，但獨立集群較少通常會降低精度。
+  s3_en: Clustered Interference occurs when one unit's treatment affects another unit's outcome within a shared cluster. Analysis must then reflect the randomization design rather than treating every order as an independent observation.
+  s3_zh: 当共享集群内一个单元的处理会影响另一单元的结果时，就会出现集群干扰。分析必须反映随机化设计，而不能把每笔订单都当作独立观测。
+  s3_zh_hk: 當共享集群入面一個單元嘅處理會影響另一單元嘅結果，就會出現集群干擾。分析一定要反映隨機化設計，而唔可以將每張訂單都當成獨立觀測。
+- id: example
+  visual: example
+  seconds: 36
+  setup_en: 'Teaching case: persistent checkout UI and shared in-store display'
+  setup_zh: 教学案例：持续结账界面与共享门店展示
+  setup_zh_hk: 教學案例：持續結賬介面同共享分店展示
+  result_en: 'Candidate units: user for the app; store cluster for the display'
+  result_zh: 候选单元：应用采用用户级；展示采用门店集群级
+  result_zh_hk: 候選單元：應用採用用戶級；展示採用分店集群級
+  s1_en: Assume checkout exposure persists across a customer's visits. Assigning the user account, rather than each order, keeps that identified customer in one interface and reduces Cross-Condition Contamination.
+  s1_zh: 假设结账体验会跨顾客访问持续影响。按用户账号而非逐笔订单分配，可使该已识别顾客保持使用同一界面，并减少跨组污染。
+  s1_zh_hk: 假設結賬體驗會跨客人訪問持續影響。按用戶賬號而唔係逐張訂單分配，可以令該已識別客人保持使用同一介面，並減少跨組污染。
+  s2_en: Assume a pickup display is physically shared by everyone in a store. Assigning whole stores can align the assignment with exposure, provided enough comparable stores are available and inference accounts for clustering.
+  s2_zh: 假设取餐展示由门店内所有人共同看到。整店分配可使随机化与实际接触一致，但前提是有足够的可比门店，并且推断考虑集群结构。
+  s2_zh_hk: 假設取餐展示由分店入面所有人一齊睇到。整間分店分配可以令隨機化同實際接觸一致，但前提係有足夠可比分店，而且推斷考慮集群結構。
+  s3_en: These are design recommendations for the stated teaching conditions, not universal rules. Identity coverage, shared devices, cross-store visits, staff behavior, sample size, implementation feasibility, and privacy constraints may change the choice.
+  s3_zh: 这些是针对给定教学条件的设计建议，并非通用规则。身份覆盖、共享设备、跨店访问、员工行为、样本量、实施可行性与隐私约束都可能改变选择。
+  s3_zh_hk: 呢啲係針對指定教學條件嘅設計建議，唔係通用規則。身份覆蓋、共享裝置、跨店訪問、員工行為、樣本量、實施可行性同私隱限制都可能改變選擇。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: How Should the Unit Be Chosen?
+  q1_zh: 应如何选择随机化单元？
+  q1_zh_hk: 應該點樣選擇隨機化單元？
+  q2_en: Decision Rule
+  q2_zh: 决策规则
+  q2_zh_hk: 決策規則
+  s1_en: Match the Randomization Unit to treatment delivery, persistence, outcome measurement, and plausible interference. The smallest technically available identifier is not automatically the correct unit.
+  s1_zh: 应使随机化单元与处理投放、持续性、结果测量及可能的干扰相匹配。技术上最细的标识符并不自动等于正确单元。
+  s1_zh_hk: 要令隨機化單元同處理投放、持續性、結果量度同可能干擾相匹配。技術上最細嘅標識符唔會自動等於正確單元。
+  s2_en: Use deterministic assignment for consistency, then audit allocation ratios, repeat exposure, missing identifiers, cross-experiment overlap, and logging. Consistency alone does not certify randomization quality.
+  s2_zh: 可使用确定性分配保持一致，再审查分配比例、重复接触、缺失标识符、跨实验重叠与日志。一致性本身不能证明随机化质量。
+  s2_zh_hk: 可以使用確定性分配保持一致，再審查分配比例、重複接觸、缺失標識符、跨實驗重疊同日誌。一致性本身唔可以證明隨機化質素。
+  s3_en: Pre-specify the unit and analyze outcomes at a level consistent with the assignment. If spillovers are expected, redesign the experiment or model the interference rather than assuming independence.
+  s3_zh: 应预先指定随机化单元，并在与分配一致的层级分析结果。如果预期存在溢出，应重新设计实验或对干扰建模，而不是假设独立性。
+  s3_zh_hk: 要預先指定隨機化單元，並喺同分配一致嘅層級分析結果。如果預期存在溢出，就要重新設計實驗或者對干擾建模，而唔係假設獨立性。

@@ -1,0 +1,201 @@
+id: STAT-M06-T05-SLOPE
+course: STAT-M06
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'OLS Slope and Intercept: Derivation, Units, and Interpretation'
+title_zh: OLS 斜率与截距：推导、单位与解释
+title_zh_hk: OLS 斜率同截距：推導、單位同解讀
+objective_en: Calculate the simple-regression OLS slope and intercept from centered sums, interpret the slope as a sample
+  linear association in outcome units per predictor unit, explain why the fitted line passes through the sample centroid,
+  and limit intercept and causal interpretations when zero or intervention claims lie outside the design.
+objective_zh: 利用中心化离差和计算简单回归的 OLS 斜率与截距，把斜率解释为每单位预测变量对应的结果变量样本线性关联，说明拟合线为何经过样本质心，并在零值或干预主张超出设计时限制截距与因果解释。
+objective_zh_hk: 利用中心化離差和計算簡單回歸嘅 OLS 斜率同截距，將斜率解讀做每單位預測變量對應嘅結果變量樣本線性關聯，說明擬合線點解經過樣本質心，並喺零值或者干預主張超出設計嗰陣限制截距同因果解讀。
+glossary:
+- en: Slope Estimator
+  zh: 斜率估计量
+  zh_hk: 斜率估計量
+  lock: true
+- en: Intercept Estimator
+  zh: 截距估计量
+  zh_hk: 截距估計量
+  lock: true
+- en: Marginal Conversion
+  zh: 边际转化率
+  zh_hk: 邊際轉化率
+  lock: true
+- en: Baseline Capacity
+  zh: 基准产能
+  zh_hk: 基準產能
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: In simple OLS regression, what does the fitted slope b_1 represent?
+  question_zh: 在 OLS 斜率公式 beta_1_hat = s_XY / s_X^2 中，计算出的系数在管理运营上代表什么？
+  question_zh_hk: 喺 OLS 斜率公式 beta_1_hat = s_XY / s_X^2 入面，計出嚟嘅系數喺管理營運上代表啲咩？
+  options_en:
+  - 'A: The total cup volume sold when pedestrian foot traffic is zero'
+  - 'B: The fitted change in Y associated with a one-unit increase in X, measured in Y-units per X-unit'
+  - 'C: The percentage of daily sales explained by total rental costs'
+  - 'D: The sample correlation divided by total store square footage'
+  options_zh:
+  - 'A: 当街头行人客流量为零时门店的总销售出杯量'
+  - 'B: 行人客流量每增加一个单位时，预期每日咖啡杯数的边际变动量'
+  - 'C: 每日销售额中由商铺总租金成本所能解释的百分比'
+  - 'D: 样本相关系数除以门店总营业面积的商'
+  options_zh_hk:
+  - 'A: 當街頭行人客流係零嗰陣門市嘅總出杯銷量'
+  - 'B: 行人人流每增加一個單位嗰陣，預期每日咖啡出杯量嘅邊際變動'
+  - 'C: 每日營業額入面由舖租總成本所能解釋嘅百分比'
+  - 'D: 樣本相關系數除以門市總營業面積得出嘅商數'
+  answer: B
+  explanation_en: The slope has outcome-per-predictor units and summarizes the sample linear association. Causal interpretation
+    requires additional design or identification assumptions.
+  explanation_zh: 回归斜率衡量边际响应：解释变量 X（客流量）每增加 1 个单位，响应变量 Y（日出杯量）预期变动 beta_1_hat 个单位。
+  explanation_zh_hk: 回歸斜率衡量邊際響應：解釋變量 X（客流量）每增加 1 個單位，響應變量 Y（每日出杯量）預期會變動 beta_1_hat 個單位。
+- id: Q2
+  type: multiple_choice
+  question_en: For assumed points (310, 310) and (420, 420), what are the OLS slope and intercept?
+  question_zh: Metro Coffee 分析两家街边店：旺角店为（310人次客流，310杯销量），湾仔店为（420人次客流，420杯销量）。估算出的 OLS 斜率 beta_1_hat 与截距 beta_0_hat 分别是多少？
+  question_zh_hk: Metro Coffee 分析兩間街舖：旺角店係（310人次客流，310杯銷量），灣仔店係（420人次客流，420杯銷量）。估計出嚟嘅 OLS 斜率 beta_1_hat 同截距 beta_0_hat 分別係幾多？
+  options_en:
+  - 'A: beta_1_hat = 1.00; beta_0_hat = 0'
+  - 'B: beta_1_hat = 0.50; beta_0_hat = 182.5'
+  - 'C: beta_1_hat = 1.00; beta_0_hat = 365'
+  - 'D: beta_1_hat = 1.35; beta_0_hat = -110'
+  options_zh:
+  - 'A: beta_1_hat = 1.00；beta_0_hat = 0'
+  - 'B: beta_1_hat = 0.50；beta_0_hat = 182.5'
+  - 'C: beta_1_hat = 1.00；beta_0_hat = 365'
+  - 'D: beta_1_hat = 1.35；beta_0_hat = -110'
+  options_zh_hk:
+  - 'A: beta_1_hat = 1.00；beta_0_hat = 0'
+  - 'B: beta_1_hat = 0.50；beta_0_hat = 182.5'
+  - 'C: beta_1_hat = 1.00；beta_0_hat = 365'
+  - 'D: beta_1_hat = 1.35；beta_0_hat = -110'
+  answer: A
+  explanation_en: The centered cross-product sum and centered X-square sum are both 6,050, so b_1 = 1.00. Then b_0 = 365 -
+    1.00(365) = 0.
+  explanation_zh: 斜率 beta_1_hat = Delta Y / Delta X = (420 - 310) / (420 - 310) = 110 / 110 = 1.00。截距 beta_0_hat = Y_bar -
+    beta_1_hat * X_bar = 365 - (1.00 * 365) = 0。
+  explanation_zh_hk: 斜率 beta_1_hat = Delta Y / Delta X = (420 - 310) / (420 - 310) = 110 / 110 = 1.00。截距 beta_0_hat = Y_bar
+    - beta_1_hat * X_bar = 365 - (1.00 * 365) = 0。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  title_en: What line summarizes the sample traffic-sales pattern?
+  title_zh: 哪条直线概括样本客流与销量关系？
+  title_zh_hk: 邊條直線概括樣本人流同銷量關係？
+  en: Metro Coffee is examining an assumed sample of store-day pedestrian traffic and cup sales. The OLS slope translates
+    centered co-movement into outcome units per predictor unit, while the intercept positions the line so that it passes through
+    the sample centroid. These coefficients summarize the fitted sample pattern; they do not by themselves show that changing
+    traffic will cause sales to change.
+  zh: 都市咖啡正在审视一组假设的门店日行人客流与杯数销量。OLS 斜率把中心化共动转化为每单位预测变量对应的结果变量单位，截距则把直线定位为经过样本质心。这些系数概括样本拟合图形，但本身不能证明改变客流会导致销量变化。
+  zh_hk: 都市咖啡正審視一組假設嘅門市日行人人流同杯數銷量。OLS 斜率將中心化共動轉化成每單位預測變量對應嘅結果變量單位，截距就將直線定位做經過樣本質心。呢啲系數概括樣本擬合圖形，但本身唔可以證明改變人流會導致銷量變化。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: b_1 = Sum[(X_i-X-bar)(Y_i-Y-bar)] / Sum[(X_i-X-bar)^2]; b_0 = Y-bar - b_1 X-bar
+  formula_zh: b_1 = Σ[(X_i-X-bar)(Y_i-Y-bar)] / Σ[(X_i-X-bar)^2]；b_0 = Y-bar - b_1 X-bar
+  formula_zh_hk: b_1 = Σ[(X_i-X-bar)(Y_i-Y-bar)] / Σ[(X_i-X-bar)^2]；b_0 = Y-bar - b_1 X-bar
+  formula_tex: b_1=\frac{\sum_i(X_i-\bar X)(Y_i-\bar Y)}{\sum_i(X_i-\bar X)^2}=\frac{s_{XY}}{s_X^2},\qquad b_0=\bar Y-b_1\bar
+    X
+  s1_en: The numerator measures how X and Y move together around their sample means. The denominator measures the sample spread
+    of X around its mean. Their ratio gives the fitted change in Y units associated with a one-unit increase in X along the
+    sample regression line.
+  s1_zh: 分子衡量 X 与 Y 围绕各自样本均值的共同变动，分母衡量 X 围绕其均值的样本离散。两者之比给出样本回归线上 X 增加一个单位时对应的 Y 单位拟合变化。
+  s1_zh_hk: 分子量度 X 同 Y 圍繞各自樣本平均數嘅共同變動，分母量度 X 圍繞佢平均數嘅樣本離散。兩者之比畀出樣本回歸線上 X 增加一個單位嗰陣對應嘅 Y 單位擬合變化。
+  s2_en: After calculating the slope, choose the intercept so that the fitted value at X-bar equals Y-bar. Therefore an OLS
+    line with an intercept passes through the sample centroid. The formula is undefined when X has no sample variation because
+    no slope can be learned from constant X.
+  s2_zh: 计算斜率后，选择截距，使 X-bar 处的拟合值等于 Y-bar。因此，含截距的 OLS 直线经过样本质心。若 X 没有样本变异，公式无定义，因为恒定 X 无法识别斜率。
+  s2_zh_hk: 計算斜率之後，選擇截距，令 X-bar 嗰度嘅擬合值等於 Y-bar。所以，含截距嘅 OLS 直線經過樣本質心。如果 X 冇樣本變異，公式冇定義，因為恆定 X 冇辦法識別斜率。
+  title_en: Slope is centered co-movement divided by centered X variation
+  title_zh: 斜率等于中心化共动除以 X 的中心化变异
+  title_zh_hk: 斜率等於中心化共動除以 X 嘅中心化變異
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  left_en: 'Slope: fitted Y-units per X-unit'
+  left_zh: 斜率：每单位 X 对应的拟合 Y 单位
+  right_en: 'Intercept: fitted Y when X equals zero'
+  right_zh: 截距：X 等于零时的拟合 Y
+  s1_en: If traffic is measured in hundreds of pedestrians and sales in cups, the slope is cups per additional hundred pedestrians.
+    Changing X units rescales the slope, while changing Y units also rescales both slope and intercept. Coefficient interpretation
+    must state the units explicitly.
+  s1_zh: 若客流以百人计量、销量以杯计量，斜率单位就是每增加一百名行人对应的杯数。改变 X 单位会重缩放斜率；改变 Y 单位也会重缩放斜率与截距。解释系数时必须明确单位。
+  s1_zh_hk: 如果人流以百人量度、銷量以杯量度，斜率單位就係每增加一百名行人對應嘅杯數。改變 X 單位會重新縮放斜率；改變 Y 單位亦會重新縮放斜率同截距。解讀系數嗰陣必須明確單位。
+  s2_en: The intercept is the fitted outcome at X equal to zero. It can serve as a mathematical anchor even when zero lies
+    far outside the observed X range. In that case, a literal operational interpretation is unsupported extrapolation.
+  s2_zh: 截距是 X = 0 时的拟合结果。即使零远离观测 X 范围，它仍可作为数学定位点；但在这种情况下，按字面作经营解释属于缺乏支持的外推。
+  s2_zh_hk: 截距係 X = 0 嗰陣嘅擬合結果。即使零遠離觀測 X 範圍，佢仍然可以作為數學定位點；但喺呢種情況之下，按字面作營運解讀屬於缺乏支持嘅外推。
+  s3_en: The slope is an association conditional on the fitted specification and observed design. It becomes causal only with
+    additional identification assumptions or experimental structure. A large positive slope alone does not justify a lease,
+    staffing change, or claim about pedestrian conversion.
+  s3_zh: 斜率是在既定拟合设定与观测设计下的关联。只有在具备额外识别假设或实验结构时，才能作因果解释。较大正斜率本身不能支持租赁、人手调整或行人转化主张。
+  s3_zh_hk: 斜率係喺既定擬合設定同觀測設計之下嘅關聯。只有喺具備額外識別假設或者實驗結構嗰陣，先可以作因果解讀。較大正斜率本身唔可以支持租賃、人手調整或者行人轉化主張。
+  left_zh_hk: 斜率：每單位 X 對應嘅擬合 Y 單位
+  right_zh_hk: 截距：X 等於零嗰陣嘅擬合 Y
+  title_en: Read coefficient units before assigning business meaning
+  title_zh: 先读取系数单位，再赋予商业含义
+  title_zh_hk: 先讀取系數單位，再賦予商業含義
+- id: ledger
+  visual: steps
+  seconds: 38
+  step1_en: Assume points (310 traffic, 310 cups) and (420 traffic, 420 cups); X-bar = Y-bar = 365
+  step1_zh: 假设点为（310 客流，310 杯）与（420 客流，420 杯）；X-bar = Y-bar = 365
+  step2_en: Centered cross-product sum = 6,050; centered X-square sum = 6,050; b_1 = 1.00 cup per traffic unit
+  step2_zh: 中心化乘积和 = 6,050；X 中心化平方和 = 6,050；b_1 = 每单位客流 1.00 杯
+  step3_en: 'b_0 = 365 - 1.00(365) = 0; fitted line: Y-hat = X'
+  step3_zh: b_0 = 365 - 1.00(365) = 0；拟合线：Y-hat = X
+  s1_en: For illustration, assume the two distinct observations shown. These are teaching assumptions, not verified traffic,
+    transaction, lease, or location records. With only two points, the fitted line passes through both points exactly.
+  s1_zh: 作为示例，假设存在上述两个不同观测。这些数字是教学假设，并非已核实的客流、交易、租约或选址记录。只有两个点时，拟合线会精确经过两点。
+  s1_zh_hk: 作為例子，假設存在上述兩個唔同觀測。呢啲數字係教學假設，唔係已核實嘅人流、交易、租約或者選址記錄。只有兩個點嗰陣，擬合線會精確經過兩點。
+  s2_en: The centered deviations are minus 55 and plus 55 for both variables. The cross-product sum and X-square sum are each
+    6,050, so their ratio is one. The fitted slope is one cup per traffic unit under the stated units.
+  s2_zh: 两个变量的中心化离差均为负 55 与正 55。中心化乘积和与 X 平方和都为 6,050，因此两者之比为一。在既定单位下，拟合斜率为每单位客流一杯。
+  s2_zh_hk: 兩個變量嘅中心化離差都係負 55 同正 55。中心化乘積和同 X 平方和都係 6,050，所以兩者之比係一。喺既定單位之下，擬合斜率係每單位人流一杯。
+  s3_en: Substituting the sample means gives an intercept of zero and fitted line Y-hat equals X. This exact fit is inevitable
+    for two distinct points and is weak evidence about a wider population. The zero intercept should not be treated as verified
+    zero-traffic sales.
+  s3_zh: 代入样本均值得到截距为零，拟合线为 Y-hat = X。两个不同点产生精确拟合是必然结果，对更广总体只提供弱证据。零截距不应被视为已核实的零客流销量。
+  s3_zh_hk: 代入樣本平均數得到截距係零，擬合線係 Y-hat = X。兩個唔同點產生精確擬合係必然結果，對更廣總體只提供弱證據。零截距唔應該被視為已核實嘅零人流銷量。
+  step1_zh_hk: 假設點係（310 人流，310 杯）同（420 人流，420 杯）；X-bar = Y-bar = 365
+  step2_zh_hk: 中心化乘積和 = 6,050；X 中心化平方和 = 6,050；b_1 = 每單位人流 1.00 杯
+  step3_zh_hk: b_0 = 365 - 1.00(365) = 0；擬合線：Y-hat = X
+  title_en: Calculate coefficients for an assumed two-point sample
+  title_zh: 计算假设两点样本的系数
+  title_zh_hk: 計算假設兩點樣本嘅系數
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  q1_en: What does the OLS slope describe?
+  q1_zh: OLS 斜率描述什么？
+  q2_en: When is the intercept operationally meaningful?
+  q2_zh: 截距何时具有经营含义？
+  s1_en: The slope describes the fitted linear change in Y associated with a one-unit increase in X, in explicit outcome-per-predictor
+    units. It is not automatically a causal marginal effect, especially in observational data.
+  s1_zh: 斜率描述 X 增加一个单位时，Y 的拟合线性变化，并具有明确的结果变量每预测变量单位。它不会自动成为因果边际效应，尤其是在观察性数据中。
+  s1_zh_hk: 斜率描述 X 增加一個單位嗰陣，Y 嘅擬合線性變化，並具有明確嘅結果變量每預測變量單位。佢唔會自動成為因果邊際效應，尤其係喺觀察性數據入面。
+  s2_en: The intercept has a direct operational interpretation only when X equal to zero is meaningful and supported by the
+    data range and model. Otherwise, treat it as the algebraic constant that positions the fitted line through the centroid.
+  s2_zh: 只有当 X = 0 有实际含义，并得到数据范围与模型支持时，截距才具有直接经营解释。否则，应把它视为使拟合线经过质心的代数常数。
+  s2_zh_hk: 只有當 X = 0 有實際含義，並得到數據範圍同模型支持嗰陣，截距先具有直接營運解讀。否則，應該將佢視為令擬合線經過質心嘅代數常數。
+  s3_en: For the assumed two-point sample, b_1 equals 1.00 and b_0 equals zero. Report that the exact fit arises from only
+    two points, and examine additional observations, functional form, influential cases, and causal design before making business
+    decisions.
+  s3_zh: 在假设两点样本中，b_1 = 1.00，b_0 = 0。应报告精确拟合仅源于两个点，并在作出商业决策前检查更多观测、函数形式、强影响案例与因果设计。
+  s3_zh_hk: 喺假設兩點樣本入面，b_1 = 1.00，b_0 = 0。應該報告精確擬合只源於兩個點，並喺作出商業決策之前檢查更多觀測、函數形式、強影響案例同因果設計。
+  q1_zh_hk: OLS 斜率描述咩？
+  q2_zh_hk: 截距幾時具有營運含義？
+  title_en: Report coefficients with units, range, uncertainty, and design limits
+  title_zh: 报告系数时同时说明单位、范围、不确定性与设计限制
+  title_zh_hk: 報告系數嗰陣同時說明單位、範圍、不確定性同設計限制

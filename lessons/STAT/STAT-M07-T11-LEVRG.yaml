@@ -1,0 +1,170 @@
+id: STAT-M07-T11-LEVRG
+course: STAT-M07
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Leverage & Outlier Audits: Isolating Airport Terminal Skew'
+title_zh: 杠杆点与离群值审计：隔离机场旗舰店的单点扭曲
+title_zh_hk: 槓桿點與極端值審計：隔離機場旗艦店嘅單點扭曲
+objective_en: Calculate leverage values and Cook's Distance, audit how extreme facilities pull multiple regression estimates, and apply sample stratification to isolate high-leverage assets.
+objective_zh: 计算杠杆值与库克距离，审查极端门店如何扭曲多元回归参数，并运用样本分层策略隔离高杠杆特殊资产。
+objective_zh_hk: 計算槓桿值同庫克距離，審查極端分店點樣扭曲多元回歸參數，並運用樣本分層策略隔離高槓桿特殊資產。
+glossary:
+- en: Leverage (Hat Matrix)
+  zh: 杠杆值（帽子矩阵）
+  zh_hk: 槓桿值（帽子矩陣）
+  lock: true
+  zh_zh_hk: 槓桿值（帽子矩陣）
+- en: Cook's Distance
+  zh: 库克距离
+  zh_hk: 庫克距離
+  lock: true
+  zh_zh_hk: 庫克距離
+- en: Influential Observation
+  zh: 强影响观测点
+  zh_hk: 強影響觀測點
+  lock: true
+  zh_zh_hk: 強影響觀測點
+- en: Sample Stratification
+  zh: 样本分层隔离
+  zh_hk: 樣本分層隔離
+  lock: true
+  zh_zh_hk: 樣本分層隔離
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: What is the key mathematical difference between an outlier and a high-leverage observation in multiple regression?
+  question_zh: 在多元回归中，离群值（Outlier）与高杠杆点（High Leverage Point）在数学上有何本质区别？
+  question_zh_hk: 喺多元回歸入面，極端值（Outlier）同高槓桿點（High Leverage Point）喺數學上有咩本質分別？
+  options_en:
+  - 'A: Outliers have extreme residual errors in Y, while high-leverage points sit far away from the centroid in explanatory predictor space X'
+  - 'B: High-leverage points always reduce R-squared to zero, while outliers do not'
+  - 'C: Outliers can only occur in dummy variables, whereas leverage only applies to sample size n'
+  - 'D: High-leverage points are mathematically deleted before running OLS'
+  options_zh:
+  - 'A: 离群值是指因变量 Y 具有极大的残差，而高杠杆点则是指其在自变量 X 预测空间中远离均值质心'
+  - 'B: 高杠杆点总是将 R平方 降为零，而离群值不会影响 R平方'
+  - 'C: 离群值仅出现在虚拟变量中，而杠杆值仅适用于样本总量 n'
+  - 'D: 在运行 OLS 之前，高杠杆点会被系统自动从数据集中直接删除'
+  options_zh_hk:
+  - 'A: 極端值係指因變量 Y 有極大嘅殘差，而高槓桿點就係指佢喺自變量 X 預測空間入面遠離均值質心'
+  - 'B: 高槓桿點永遠將 R平方 壓到變零，而極端值唔會影響 R平方'
+  - 'C: 極端值淨係會喺虛擬變量出現，而槓桿值淨係適用於樣本總量 n'
+  - 'D: 喺行 OLS 之前，高槓桿點會被系統自動喺數據集入面直接刪除'
+  answer: A
+  explanation_en: An outlier is unusual in the response dimension Y (large standardized residual e_i), whereas leverage h_ii measures geometric distance from the center of X. When an observation has both, Cook's Distance flags it as an influential point that tilts the regression plane.
+  explanation_zh: 离群值体现在因变量 Y 的剧烈偏差（残差极大），而杠杆值 h_ii 衡量其在自变量 X 空间的几何偏离度。若二者兼具，库克距离将其标记为严重扭曲拟合超平面的强影响点。
+  explanation_zh_hk: 極端值體現喺因變量 Y 嘅劇烈偏差（殘差好大），而槓桿值 h_ii 衡量佢喺自變量 X 空間嘅幾何偏離度。如果兩樣齊晒，庫克距離會將佢標記為嚴重扭曲擬合超平面嘅強影響點。
+- id: Q2
+  type: multiple_choice
+  question_en: Across n = 40 store shifts with k = 3 predictors, the average leverage is 0.10. Metro Coffee's 24-hour Airport branch reports leverage h_ii = 0.45 and studentized residual e_std = 3.0. Its Cook's Distance is D_i = 1.15. How should management audit this finding?
+  question_zh: 在 n = 40 个门店样本及 k = 3 个预测变量下，平均杠杆值为 0.10。24小时机场店杠杆值测得 h_ii = 0.45，学生化残差为 3.0，计算得库克距离 D_i = 1.15。管理层应如何处置该审计结果？
+  question_zh_hk: 喺 n = 40 個門市樣本同 k = 3 個預測變量下，平均槓桿值係 0.10。二十四小時機場店測得槓桿值 h_ii = 0.45，學生化殘差係 3.0，計出庫克距離 D_i = 1.15。管理層應該點樣處置呢個審計結果？
+  options_en:
+  - 'A: Ignore it because Cook''s Distance is below 10.0'
+  - 'B: Isolate and stratify: D_i exceeds the conservative audit threshold (4/n = 0.10 and D > 1.0), proving this single store exerts disproportionate influence over network-wide slopes'
+  - 'C: Permanently close the Airport terminal branch to restore model fit'
+  - 'D: Change the significance level alpha from 5% to 50%'
+  options_zh:
+  - 'A: 完全忽略，因为库克距离尚未达到 10.0'
+  - 'B: 隔离并分层建档：D_i 远超审计红线（4/n = 0.10 且绝对值大于 1.0），证实该单店过度绑架并扭曲了全网回归斜率'
+  - 'C: 立即永久关闭机场航站楼店以换取全网模型拟合度的提升'
+  - 'D: 将统计检验的显著性水平 alpha 从 5% 人为调高至 50%'
+  options_zh_hk:
+  - 'A: 完全唔使理，因為庫克距離仲未去到 10.0'
+  - 'B: 隔離並分層建檔：D_i 遠超審計紅線（4/n = 0.10 兼且絕對值大過 1.0），證實呢間分店過度綁架並扭曲咗全網回歸斜率'
+  - 'C: 即刻永久關閉機場客運大樓店，嚟換取全網模型擬合度嘅提升'
+  - 'D: 將統計檢驗嘅顯著性水平 alpha 由 5% 人為調高到 50%'
+  answer: B
+  explanation_en: A Cook's Distance exceeding 4/n (here 4/40 = 0.10) or crossing 1.0 indicates massive influence. The Airport store acts like a heavy weight tilting the entire OLS plane, requiring sample stratification.
+  explanation_zh: 库克距离超过 4/n（在此为 4/40 = 0.10）或突破 1.0 表明具有极其严重的单点影响力。机场店犹如沉重杠杆撬动了整个 OLS 超平面，必须执行样本分层隔离分析。
+  explanation_zh_hk: 庫克距離超過 4/n（喺度係 4/40 = 0.10）或者衝穿 1.0 代表具有極其嚴重嘅單點影響力。機場店好似一個超重槓桿撬郁咗成個 OLS 超平面，必須做樣本分層隔離分析。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Statistical Distortion Dilemma
+  kicker_zh: 样本失真困境
+  kicker_zh_hk: 樣本失真困局
+  title_en: Is One Flagship Store Distorting the Entire Chain?
+  title_zh: 一家特大型旗舰店是否正在绑架全网模型？
+  title_zh_hk: 一間特大型旗艦店係咪綁架緊全網模型？
+  en: Metro Coffee operates forty branch locations across Hong Kong. Thirty-nine are standard high-street and corporate stores selling between three hundred and five hundred cups daily. Then there is the 24-hour Airport terminal branch, operating at eighty labor hours and selling four thousand two hundred cups. Can a single extreme facility secretly tilt our entire multiple regression slope and mislead street lease decisions?
+  zh: Metro Coffee 在全港拥有四十家分店。其中三十九家属于标准街边店和写字楼店，日销量在三百至五百杯之间。然而，那家位于机场航站楼的24小时枢纽店，每天排班八十工时、出杯量突破四千二百杯。这家极端特异的超大规模门店，是否会暗中严重扭曲全网的回归斜率，误导普通的街区拓店决策？
+  zh_hk: Metro Coffee 喺全港有四十間分店。當中有三十九間屬於標準街舖同寫字樓舖，每日銷量喺三百到五百杯之間。偏偏嗰間設喺機場客運大樓嘅二十四小時樞紐店，每日排成八十個鐘工時、銷量高達四千二百杯。呢間極端特異嘅超大規模門市，會唔會暗中撬歪全網嘅回歸斜率，誤導平民街舖嘅租約決策？
+  zh_zh_hk: Metro Coffee 喺全港有四十間分店。當中有三十九間屬於標準街舖同寫字樓舖，每日銷量喺三百到五百杯之間。偏偏嗰間設喺機場客運大樓嘅二十四小時樞紐店，每日排成八十個鐘工時、銷量高達四千二百杯。呢間極端特異嘅超大規模門市，會唔會暗中撬歪全網嘅回歸斜率，誤導平民街舖嘅租約決策？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Cook's D_i = [ e_i^2 / ((k + 1) * s_e^2) ] * [ h_ii / (1 - h_ii)^2 ]
+  formula_zh: 库克距离：D_i = [ e_i^2 / ((k + 1) * s_e^2) ] * [ h_ii / (1 - h_ii)^2 ]
+  formula_zh_hk: 庫克距離：D_i = [ e_i^2 / ((k + 1) * s_e^2) ] * [ h_ii / (1 - h_ii)^2 ]
+  formula_tex: D_i = \frac{\sum_{j=1}^n (\hat{Y}_j - \hat{Y}_{j(i)})^2}{(k + 1) s_e^2} = \frac{e_i^2}{(k + 1) s_e^2} \left[ \frac{h_{ii}}{(1 - h_{ii})^2} \right]
+  s1_en: Leverage h ii measures how far an observation's predictor values sit from the sample mean of X. Sourced from the diagonal of the Hat Matrix, leverage ranges from one over n to one point zero, quantifying potential influence.
+  s1_zh: 杠杆值 h_ii 衡量单个样本点在自变量 X 维度上远离样本均值的几何距离。它取自帽子矩阵的对角线，取值范围介于 n分之一 与 1.0 之间，刻画了其潜在的影响力。
+  s1_zh_hk: 槓桿值 h_ii 衡量單個樣本點喺自變量 X 維度上遠離樣本平均數嘅幾何距離。佢嚟自帽子矩陣嘅對角線，取值範圍介乎 n分之一 同 1.0 之間，刻畫咗佢潛在嘅影響力。
+  s2_en: Cook's Distance combines residual size and leverage to summarize how much the fitted regression changes when one observation is omitted. It is a diagnostic for investigation, not an automatic deletion rule.
+  s2_zh: 库克距离结合残差大小与杠杆值，用于概括删除某一观测后拟合回归会发生多大变化。它是进一步调查的诊断指标，而不是自动删除规则。
+  s2_zh_hk: 庫克距離結合殘差大小同槓桿值，用嚟概括刪除某一觀測之後擬合回歸會發生幾大變化。佢係進一步調查嘅診斷指標，而唔係自動刪除規則。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: The Fulcrum & The Heavy Weight
+  left_zh: 阿基米德支点与重锤
+  right_en: Audit Rules & Stratification
+  right_zh: 审计红线与分层隔离
+  s1_en: Think of OLS regression as a balance sheet floating on a fulcrum. High leverage places a data point at the extreme end of the lever; if that point also has a large residual, it exerts tremendous gravitational pull.
+  s1_zh: 可将最小二乘法想象为一个架在支点上的天平。高杠杆点好比将数据悬挂在杠杆的最远端；一旦该点同时伴随巨大残差，就会对拟合平面产生无法阻挡的重力拖拽。
+  s1_zh_hk: 可以將最小二乘法想像成一個擺喺支點上面嘅天平。高槓桿點好似將數據擺喺槓桿嘅最邊端；一旦嗰個點同時伴隨巨大殘差，就會對擬合平面產生極強嘅重力拖拽。
+  s2_en: The Airport branch pulls the conversion slope toward itself. Standard high-street branches in Wan Chai or Mong Kok end up mispriced because the corporate model is skewed by an airport facility that never sleeps.
+  s2_zh: 机场店凭借超大体量将全网转化斜率强行拉向自己。这导致湾仔或旺角的标准街边店被严重误估，因为企业模型被一家从不打烊的枢纽巨无霸彻底带偏。
+  s2_zh_hk: 機場店憑住超大體量將全網轉化斜率夾硬拉向自己。搞到灣仔或者旺角嘅標準街舖被嚴重估錯，因為企業模型被一間通宵營業嘅機場龐然大物完全帶歪咗。
+  s3_en: Rules such as 4 divided by n or Cook's D near one are screening heuristics, not universal pass-fail thresholds. Stratification is justified only when business structure and validation evidence support distinct operating regimes.
+  s3_zh: 4 除以 n 或库克距离接近 1 等规则属于筛查启发式标准，并非通用的通过或失败阈值。只有业务结构和验证证据支持不同营运机制时，分层建模才有依据。
+  s3_zh_hk: 4 除以 n 或庫克距離接近 1 等規則屬於篩查啟發式標準，唔係通用嘅通過或失敗門檻。只有業務結構同驗證證據支持唔同營運機制時，分層建模先有依據。
+  left_zh_hk: 阿基米德支點與重錘
+  right_zh_hk: 審計紅線與分層隔離
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Compute Hat Leverage
+  step1_zh: 提取帽子矩阵杠杆值
+  step2_en: Calculate Cook's Distance
+  step2_zh: 核算机场店库克距离
+  step3_en: Stratify Operating Models
+  step3_zh: 执行门店分层隔离
+  s1_en: 'Step one: Across n = 40 store shifts, average leverage is (k + 1)/n = 4/40 = 0.10. Standard street branches sit between 0.03 and 0.08, while the 24-hour Airport branch spikes to h_ii = 0.45.'
+  s1_zh: 第一步：在 40 个门店样本中，平均杠杆值为 4 除以 40 等于 0.10。普通街边店集中在 0.03 至 0.08 之间，而机场店因极端工时与客流骤增至 h_ii = 0.45。
+  s1_zh_hk: 第一步：喺 40 個門市樣本入面，平均槓桿值係 4 除以 40 等於 0.10。普通街舖集中喺 0.03 到 0.08 之間，而機場店因極端工時同人流暴增到 h_ii = 0.45。
+  s2_en: 'Step two: The Airport store exhibits studentized residual e_std = 3.0. Multiplying through yields Cook''s D = 1.15, massively exceeding our audit threshold 4/n of 0.10. A single store is driving the network model.'
+  s2_zh: 第二步：机场店的学生化残差达到 3.0。带入公式算出库克距离 D_i = 1.15，极其严重地突破了 4/n 即 0.10 的审计红线。全网模型正被单一门店死死绑架。
+  s2_zh_hk: 第二步：機場店嘅學生化殘差達到 3.0。代入公式計出庫克距離 D_i = 1.15，嚴重衝穿咗 4/n 即係 0.10 嘅審計紅線。全網模型正正被單一分店死死綁架。
+  s3_en: 'Step three: Stratify the network. Model A covers 39 standard street and mall stores, where true labor yield is a stable 8 cups per hour. Model B serves the high-throughput airport hub independently.'
+  s3_zh: 第三步：对门店网络实施分层。模型 A 专门服务 39 家标准街边与商场店，测得纯粹的人工产出稳定在 8 杯/小时；模型 B 则为机场超级枢纽独立定制。
+  s3_zh_hk: 第三步：對門市網絡實施分層。模型 A 專門服務 39 間標準街舖同商場店，測得純粹嘅人工產能穩定喺 8 杯/小時；模型 B 則為機場超級樞紐獨立定制。
+  step1_zh_hk: 提取帽子矩陣槓桿值
+  step2_zh_hk: 核算機場店庫克距離
+  step3_zh_hk: 執行門市分層隔離
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Should We Delete High-Leverage Stores?
+  q1_zh: 发现高杠杆点是否可以直接删除？
+  q2_en: 'Audit Rule: Never Delete Truth, Stratify'
+  q2_zh: 审计准则：真金白银不准删，分层建模保精度
+  s1_en: Leverage identifies unusual predictor configurations, while Cook's Distance summarizes sensitivity of the fitted model to one observation. Neither diagnostic determines by itself whether an observation is wrong or should be removed.
+  s1_zh: 杠杆值识别不寻常的自变量组合，库克距离概括拟合模型对单个观测的敏感程度。两项诊断都不能单独判定该观测错误或应被删除。
+  s1_zh_hk: 槓桿值識別唔尋常嘅自變量組合，庫克距離概括擬合模型對單個觀測嘅敏感程度。兩項診斷都唔可以單獨判定該觀測錯誤或者應該刪除。
+  s2_en: 'Decision rule: investigate influential observations rather than deleting them automatically. Verify the record, compare fits with and without it, assess predictive performance, and document any business reason for stratification or redesign.'
+  s2_zh: 决策规则：调查强影响观测，而不是自动删除。应核对记录、比较包含与排除该点的拟合、评估预测表现，并记录分层或重新设计的业务依据。
+  s2_zh_hk: 決策規則：調查強影響觀測，而唔係自動刪除。要核對記錄、比較包含同排除該點嘅擬合、評估預測表現，並記錄分層或者重新設計嘅業務依據。
+  s3_en: For the supplied Airport observation, leverage is 0.45 and Cook's Distance is 1.15 versus average leverage 0.10. This is a strong signal for sensitivity analysis, not proof that the store must be excluded or modeled separately.
+  s3_zh: 给定机场店观测的杠杆值为 0.45、库克距离为 1.15，而平均杠杆值为 0.10。这是开展敏感性分析的强烈信号，但不能证明该门店必须被排除或单独建模。
+  s3_zh_hk: 畀定機場店觀測嘅槓桿值係 0.45、庫克距離係 1.15，而平均槓桿值係 0.10。呢個係做敏感性分析嘅強烈信號，但唔能夠證明該門市必須被排除或者單獨建模。
+  q1_zh_hk: 見到高槓桿點係咪可以直接刪走？
+  q2_zh_hk: 審計準則：真金白銀咪亂刪，分層建模保精度

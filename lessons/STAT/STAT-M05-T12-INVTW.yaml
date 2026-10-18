@@ -1,0 +1,219 @@
+id: STAT-M05-T12-INVTW
+course: STAT-M05
+course_en: Hypothesis Testing & Store Experiments
+course_zh: 假设检验与门店运营实验
+course_zh_hk: 假設檢驗與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Paired versus Independent Designs: Matching Architecture to the Intervention'
+title_zh: 配对与独立设计：让实验架构匹配干预特征
+title_zh_hk: 配對同獨立設計：令實驗架構匹配干預特徵
+objective_en: Compare paired within-unit and independent parallel-group designs, explain how covariance affects the variance
+  of a difference, identify carryover, period, order, and spillover risks, and choose a defensible design for an assumed store-software
+  pilot without inventing verified rollout facts or costs.
+objective_zh: 比较单元内配对设计与独立平行组设计，解释协方差如何影响差值方差，识别延续、时期、顺序与外溢风险，并为假设的门店软件试点选择有依据的设计，同时避免虚构已核实的推广事实或成本。
+objective_zh_hk: 比較單元內配對設計同獨立平行組設計，解釋協方差點樣影響差值方差，識別延續、時期、順序同外溢風險，並為假設嘅門市軟件試點選擇有依據嘅設計，同時避免虛構已核實嘅推廣事實或者成本。
+glossary:
+- en: within-subject design
+  zh: 被试内设计/自身对照设计
+  zh_hk: 被試內設計/自身對照設計
+  lock: true
+- en: between-subject design
+  zh: 被试间设计/独立分组设计
+  zh_hk: 被試間設計/獨立分組設計
+  lock: true
+- en: carryover effect
+  zh: 滞后效应/残留污染效应
+  zh_hk: 滯後效應/殘留污染效應
+  lock: true
+- en: covariance reduction term
+  zh: 协方差削减项 (-2Cov)
+  zh_hk: 協方差削減項 (-2Cov)
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why can a paired design have lower sampling variance than an independent design?
+  question_zh: 在实验设计的数理推演中，当两个测试阶段呈现显著的正相关性时，为什么配对（自身对照）设计能够比独立随机分组设计实现更高的统计效率？
+  question_zh_hk: 喺實驗設計嘅數理推演入面，當兩個測試階段呈現顯著嘅正相關性嗰陣，點解配對（自身對照）設計能夠比獨立隨機分組設計實現更高嘅統計效率？
+  options_en:
+  - 'A: Var(X1 - X2) subtracts 2Cov(X1,X2); with valid pairing and positive covariance, the variance of the difference is
+    reduced.'
+  - 'B: Because paired designs automatically round all sample sizes upward to the nearest multiple of 100.'
+  - 'C: Because POS software running in paired stores eliminates software licensing fees.'
+  - 'D: Because independent designs divide the test statistic by degrees of freedom squared.'
+  options_zh:
+  - 'A: 差值的方差包含了负向协方差削减项：Var(X1 - X2) = Var(X1) + Var(X2) - 2Cov(X1, X2)；当协方差为正时，总方差将大幅低于独立设计下的方差和。'
+  - 'B: 因为配对设计会自动将所有实际抽取的样本量向上进位到最接近的一百的整数倍。'
+  - 'C: 因为在配对门店中测试的收银软件系统能够免除向软件服务商缴纳的授权费。'
+  - 'D: 因为独立设计在公式运算底层会将检验统计量强制除以自由度的平方。'
+  options_zh_hk:
+  - 'A: 差值嘅方差包含咗負向協方差削減項：Var(X1 - X2) = Var(X1) + Var(X2) - 2Cov(X1, X2)；當協方差為正嗰陣，總方差將大幅低過獨立設計下嘅方差和。'
+  - 'B: 因為配對設計會自動將所有實際抽取嘅樣本量向上進位到最接近的一百嘅整數倍。'
+  - 'C: 因為喺配對門市入面測試嘅收銀軟件系統能夠免除向軟件服務商繳納嘅授權費。'
+  - 'D: 因為獨立設計喺公式運算底層會將檢驗統計量強制除以自由度嘅平方。'
+  answer: A
+  explanation_en: The precision gain comes from positive within-pair covariance. It depends on valid matching and comparable
+    measurement conditions, and it does not remove bias from carryover or period effects.
+  explanation_zh: 对相同门店自身前后配对时，基准高绩效往往伴随后续测试期的高表现（即 Cov > 0）。公式 Var(X1 - X2) = Var(X1) + Var(X2) - 2Cov(X1, X2) 中的负两倍协方差项扣除了共性方差，从而大幅压缩了标准误。
+  explanation_zh_hk: 對相同門市自身前後配對嗰陣，基準高績效往往伴隨後續測試期嘅高表現（即係 Cov > 0）。公式 Var(X1 - X2) = Var(X1) + Var(X2) - 2Cov(X1, X2) 入面嘅負兩倍協方差項扣除咗共性方差，從而大幅壓縮咗標準誤。
+- id: Q2
+  type: multiple_choice
+  question_en: When is an independent parallel-group design preferable to a paired crossover for a software pilot?
+  question_zh: 都市咖啡在全港 10 家门店测试全新 AI 智能收银派单系统。为什么运营高管层可能会否决配对交叉实验（即同一批门店交替按周使用新老软件），转而坚定选择 5 对 5 的独立平行门店分组设计？
+  question_zh_hk: 都市咖啡喺全港 10 間門市測試全新 AI 智能收銀派單系統。點解營運高管層可能會否決配對交叉實驗（即係同一批門市交替按周使用新舊軟件），轉而堅定選擇 5 對 5 嘅獨立平行門市分組設計？
+  options_en:
+  - 'A: When learning, habit, configuration, spillover, or inadequate washout could contaminate later periods and invalidate
+    the paired contrast.'
+  - 'B: Because municipal telecom regulations ban point-of-sale software from tracking more than 5 retail stores.'
+  - 'C: Because independent designs guarantee a p-value strictly equal to 0.0500.'
+  - 'D: Because paired crossover studies are mathematically prohibited from calculating t-statistics.'
+  options_zh:
+  - 'A: 防范严重的滞后污染效应与认知切换损耗：收银员一旦熟练掌握新界面，下周切回老系统时无法“逆向遗忘”，从而使基准对照组彻底被污染失真。'
+  - 'B: 因为香港电讯与商业法规明令禁止任何收银系统在多于 5 家零售门店中开展并行测试。'
+  - 'C: 因为独立平行分组设计能够在数理上保证最终算出的 p 值绝对分毫不差等于 0.0500。'
+  - 'D: 因为交叉配对研究在统计学法则上被严格禁止求解任何 t 检验统计量。'
+  options_zh_hk:
+  - 'A: 防範嚴重嘅滯後污染效應與認知切換損耗：收銀員一旦熟練掌握新界面，下個禮拜切返舊系統嗰陣冇辦法「逆向遺忘」，從而令基準對照組徹底被污染失真。'
+  - 'B: 因為香港電訊與商業法規明令禁止任何收銀系統喺多過 5 間零售門市入面開展並行測試。'
+  - 'C: 因為獨立平行分組設計能夠喺數理上保證最終計出嚟嘅 p 值絕對分毫不差等於 0.0500。'
+  - 'D: 因為交叉配對研究喺統計學法則上被嚴格禁止求解任何 t 檢驗統計量。'
+  answer: A
+  explanation_en: Independent groups avoid switching the same unit across conditions. They may sacrifice some precision, but
+    can protect the comparison when treatment effects persist or units interfere.
+  explanation_zh: 当实验干预涉及技能习得或操作习惯时，配对交叉设计极易遭受滞后效应的致命破坏。员工无法在一夜之间遗忘新系统的使用习惯，导致对照期被污染。独立平行分组设计能彻底阻断这一交互感染。
+  explanation_zh_hk: 當實驗干預涉及技能習得或者操作習慣嗰陣，配對交叉設計極易遭受滯後效應嘅致命破壞。員工冇辦法喺一夜之間遺忘新系統嘅使用習慣，搞到對照期被污染。獨立平行分組設計能徹底阻斷呢個交互感染。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  kicker_en: The POS Software Pilot
+  kicker_zh: 收银系统改造试点之争
+  kicker_zh_hk: 收銀系統改造試點之爭
+  title_en: Should the same stores switch systems, or should stores run in parallel?
+  title_zh: 同一批门店应切换系统，还是不同门店平行运行？
+  title_zh_hk: 同一批門市應該切換系統，定係唔同門市平行運行？
+  en: Metro Coffee is planning an assumed pilot of new order-routing software. A paired crossover design would let each store
+    use both systems, helping control stable store differences. An independent parallel design would assign different stores
+    to different systems, avoiding contamination across periods. The better architecture depends not only on statistical precision,
+    but also on whether learning, order, time, or spillover effects threaten a valid comparison.
+  zh: 都市咖啡正在规划一项假设的新派单软件试点。配对交叉设计让每家门店使用两套系统，有助于控制稳定的门店差异；独立平行设计则把不同门店分配到不同系统，避免跨期污染。更好的架构不仅取决于统计精度，也取决于学习、顺序、时间或外溢效应是否威胁比较的有效性。
+  zh_hk: 都市咖啡正規劃一項假設嘅新派單軟件試點。配對交叉設計令每間門市使用兩套系統，有助控制穩定嘅門市差異；獨立平行設計就將唔同門市分配到唔同系統，避免跨期污染。更好嘅架構唔只取決於統計精度，亦取決於學習、順序、時間或者外溢效應係咪威脅比較嘅有效性。
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: Covariance determines whether pairing reduces variance
+  title_zh: 协方差决定配对是否降低方差
+  title_zh_hk: 協方差決定配對係咪降低方差
+  formula: Var(X_1 - X_2) = Var(X_1) + Var(X_2) - 2Cov(X_1, X_2)
+  formula_zh: Var(X_1 - X_2) = Var(X_1) + Var(X_2) - 2Cov(X_1, X_2)
+  formula_zh_hk: Var(X_1 - X_2) = Var(X_1) + Var(X_2) - 2Cov(X_1, X_2)
+  formula_tex: \operatorname{Var}(X_1-X_2)=\operatorname{Var}(X_1)+\operatorname{Var}(X_2)-2\operatorname{Cov}(X_1,X_2)
+  s1_en: In a paired design, the same or deliberately matched unit contributes both measurements. Positive within-pair covariance
+    lowers the variance of the difference because the covariance term is subtracted. Stable high or low unit baselines can
+    therefore cancel in the comparison.
+  s1_zh: 在配对设计中，同一单元或刻意匹配的单元提供两个测量。正的配对内协方差会降低差值方差，因为协方差项被减去。因此，单元稳定的高低基准可以在比较中抵消。
+  s1_zh_hk: 喺配對設計入面，同一單元或者刻意匹配嘅單元提供兩個量度。正嘅配對內協方差會降低差值方差，因為協方差項被減去。所以，單元穩定嘅高低基準可以喺比較入面抵消。
+  s2_en: In an independent design, the groups provide unrelated information, so covariance between group estimators is zero
+    under independence. Their variance contributions add. This can be less precise, but it avoids within-unit carryover and
+    may better protect the treatment contrast.
+  s2_zh: 在独立设计中，两组提供彼此无关的信息，因此在独立条件下组估计量之间的协方差为零，方差贡献相加。这可能降低精度，但可避免单元内延续效应，并可能更好地保护处理对比。
+  s2_zh_hk: 喺獨立設計入面，兩組提供彼此無關嘅資訊，所以喺獨立條件之下組估計量之間嘅協方差係零，方差貢獻相加。呢個可能降低精度，但可以避免單元內延續效應，並可能更好噉保護處理對比。
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  kicker_en: The Architectural Trade-off
+  kicker_zh: 架构权衡
+  kicker_zh_hk: 架構權衡
+  title_en: Precision gains must be weighed against contamination risks
+  title_zh: 精度收益必须与污染风险权衡
+  title_zh_hk: 精度收益必須同污染風險權衡
+  left_en: 'Paired or crossover: controls stable unit differences, but vulnerable to carryover and order effects'
+  left_zh: 配对或交叉：控制稳定单元差异，但易受延续与顺序效应影响
+  left_zh_hk: 配對或者交叉：控制穩定單元差異，但容易受延續同順序效應影響
+  right_en: 'Independent parallel groups: avoids crossover contamination, but needs balance and often more units'
+  right_zh: 独立平行组：避免交叉污染，但需要组间平衡，且通常需要更多单元
+  right_zh_hk: 獨立平行組：避免交叉污染，但需要組間平衡，而且通常需要更多單元
+  s1_en: Paired crossover designs are attractive when treatment effects are reversible, periods are comparable, and a suitable
+    washout can remove residual influence. Randomizing treatment order can reduce systematic order bias, but it cannot guarantee
+    that carryover disappears.
+  s1_zh: 当处理效应可逆、时期可比，且适当洗脱期能够移除残留影响时，配对交叉设计很有吸引力。随机化处理顺序可减少系统性顺序偏差，但不能保证延续效应消失。
+  s1_zh_hk: 當處理效應可逆、時期可比，而且適當洗脫期可以移除殘留影響嗰陣，配對交叉設計好有吸引力。隨機化處理順序可以減少系統性順序偏差，但唔可以保證延續效應消失。
+  s2_en: Independent groups are preferable when an intervention creates durable learning, habit, configuration, brand, or
+    network effects that can contaminate later periods or neighboring units. Random assignment and blocking can improve baseline
+    comparability, but they do not remove every imbalance in a small pilot.
+  s2_zh: 当干预产生持久的学习、习惯、配置、品牌或网络效应，可能污染后续时期或相邻单元时，应优先考虑独立组设计。随机分配与区组可改善基线可比性，但不能消除小型试点中的所有不平衡。
+  s2_zh_hk: 當干預產生持久嘅學習、習慣、配置、品牌或者網絡效應，可能污染後續時期或者相鄰單元嗰陣，應該優先考慮獨立組設計。隨機分配同區組可以改善基線可比性，但唔可以消除細型試點入面嘅所有不平衡。
+  s3_en: The design choice should also consider unit availability, attrition, implementation burden, period trends, interference,
+    measurement consistency, analysis method, and the estimand of interest. No architecture is automatically superior for
+    every operational experiment.
+  s3_zh: 设计选择还应考虑单元可用性、样本流失、实施负担、时期趋势、干扰、测量一致性、分析方法与目标估计量。没有哪一种架构对所有经营实验都自动占优。
+  s3_zh_hk: 設計選擇仲應該考慮單元可用性、樣本流失、實施負擔、時期趨勢、干擾、量度一致性、分析方法同目標估計量。冇邊一種架構對所有營運實驗都自動佔優。
+- id: ledger
+  visual: steps
+  seconds: 38
+  kicker_en: The Ledger
+  kicker_zh: 方案决算
+  kicker_zh_hk: 方案決算
+  title_en: Quantify the potential precision gain, then test its assumptions
+  title_zh: 量化潜在精度收益，再检验其设计假设
+  title_zh_hk: 量化潛在精度收益，再檢驗佢嘅設計假設
+  step1_en: 'Teaching assumptions: Var(X_1) = 36 s^2, Var(X_2) = 36 s^2, correlation r = 0.80'
+  step1_zh: 教学假设：Var(X_1) = 36 s^2，Var(X_2) = 36 s^2，相关系数 r = 0.80
+  step1_zh_hk: 教學假設：Var(X_1) = 36 s^2，Var(X_2) = 36 s^2，相關係數 r = 0.80
+  step2_en: Cov = 0.80(6)(6) = 28.8 s^2; paired Var(diff) = 36 + 36 - 2(28.8) = 14.4 s^2
+  step2_zh: Cov = 0.80(6)(6) = 28.8 s^2；配对 Var(diff) = 36 + 36 - 2(28.8) = 14.4 s^2
+  step2_zh_hk: Cov = 0.80(6)(6) = 28.8 s^2；配對 Var(diff) = 36 + 36 - 2(28.8) = 14.4 s^2
+  step3_en: Independent variance benchmark = 72 s^2; paired reduction = 80%, conditional on valid pairing and no harmful carryover
+  step3_zh: 独立设计方差基准 = 72 s^2；配对降低 80%，前提是匹配有效且不存在有害延续效应
+  step3_zh_hk: 獨立設計方差基準 = 72 s^2；配對降低 80%，前提係匹配有效而且唔存在有害延續效應
+  s1_en: For illustration, assume each period has variance 36 seconds squared and the same-unit correlation is 0.80. These
+    are teaching assumptions, not verified store counts, software behavior, staff learning effects, or rollout decisions.
+    Each standard deviation is six seconds.
+  s1_zh: 作为示例，假设每个时期的方差均为 36 秒平方，同一单元跨期相关为 0.80。这些数字是教学假设，并非已核实的门店数量、软件行为、员工学习效应或推广决策。每期标准差为 6 秒。
+  s1_zh_hk: 作為例子，假設每個時期嘅方差都係 36 秒平方，同一單元跨期相關係 0.80。呢啲數字係教學假設，唔係已核實嘅門市數量、軟件行為、員工學習效應或者推廣決策。每期標準差係 6 秒。
+  s2_en: The covariance is 0.80 times six times six, equal to 28.8 seconds squared. Substituting into the difference-variance
+    formula gives 72 minus 57.6, or 14.4 seconds squared. Relative to 72, that is an 80% variance reduction.
+  s2_zh: 协方差为 0.80 × 6 × 6，等于 28.8 秒平方。代入差值方差公式，得到 72 - 57.6 = 14.4 秒平方。相对于 72，方差降低 80%。
+  s2_zh_hk: 協方差係 0.80 × 6 × 6，等於 28.8 秒平方。代入差值方差公式，得到 72 - 57.6 = 14.4 秒平方。相對於 72，方差降低 80%。
+  s3_en: That calculation shows a potential precision benefit, not a design verdict. If software learning persists after switching,
+    a paired crossover contrast may be biased despite its smaller sampling variance. The trial team should document whether
+    washout is credible; otherwise an independent or alternative randomized design may be safer.
+  s3_zh: 该计算显示的是潜在精度收益，而不是设计裁决。如果切换后软件学习仍然持续，配对交叉对比即使抽样方差较小，也可能有偏。试验团队应记录洗脱是否可信；否则独立设计或其他随机设计可能更稳妥。
+  s3_zh_hk: 呢個計算顯示嘅係潛在精度收益，而唔係設計裁決。如果切換之後軟件學習仍然持續，配對交叉對比即使抽樣方差較細，亦可能有偏。試驗團隊應該記錄洗脫係咪可信；否則獨立設計或者其他隨機設計可能更穩妥。
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Choose the architecture that protects the comparison you need
+  title_zh: 选择能够保护目标比较的实验架构
+  title_zh_hk: 選擇能夠保護目標比較嘅實驗架構
+  q1_en: When does positive covariance make pairing more efficient?
+  q1_zh: 正协方差何时会使配对设计更有效率？
+  q1_zh_hk: 正協方差幾時會令配對設計更有效率？
+  q2_en: Which risks can make an independent parallel design preferable?
+  q2_zh: 哪些风险会使独立平行设计更合适？
+  q2_zh_hk: 邊啲風險會令獨立平行設計更加合適？
+  s1_en: Positive covariance lowers the variance of a paired difference when the match is valid and both measurements target
+    comparable conditions. The benefit depends on the actual within-pair relationship and should be estimated rather than
+    assumed.
+  s1_zh: 当匹配有效且两次测量针对可比条件时，正协方差会降低配对差值方差。收益取决于实际配对内关系，应进行估计，而不是直接假定。
+  s1_zh_hk: 當匹配有效而且兩次量度針對可比條件嗰陣，正協方差會降低配對差值方差。收益取決於實際配對內關係，應該進行估計，而唔係直接假定。
+  s2_en: Use an independent design when persistent learning, spillover, interference, irreversible configuration, or inadequate
+    washout would contaminate later conditions. Then protect comparability through randomization, blocking, consistent measurement,
+    and a prespecified analysis.
+  s2_zh: 当持久学习、外溢、干扰、不可逆配置或洗脱不足会污染后续条件时，应使用独立设计，并通过随机化、区组、一致测量与预先指定分析来保护可比性。
+  s2_zh_hk: 當持久學習、外溢、干擾、不可逆配置或者洗脫不足會污染後續條件嗰陣，應該使用獨立設計，並透過隨機化、區組、一致量度同預先指定分析嚟保護可比性。
+  s3_en: For the assumed numerical illustration, positive covariance reduces paired difference variance from 72 to 14.4 seconds
+    squared. The final architecture still depends on whether the paired contrast remains unbiased and operationally feasible.
+    Precision cannot compensate for a contaminated comparison.
+  s3_zh: 在假设数值示例中，正协方差把配对差值方差从 72 降至 14.4 秒平方。最终架构仍取决于配对对比是否无偏且在经营上可行。精度无法补偿受到污染的比较。
+  s3_zh_hk: 喺假設數值例子入面，正協方差將配對差值方差由 72 降至 14.4 秒平方。最終架構仍然取決於配對對比係咪無偏而且喺營運上可行。精度冇辦法補償受到污染嘅比較。

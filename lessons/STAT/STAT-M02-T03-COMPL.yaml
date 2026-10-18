@@ -1,0 +1,194 @@
+id: STAT-M02-T03-COMPL
+course: statistics
+course_en: Business Probability Foundations
+course_zh: 商务概率基础
+course_zh_hk: 商務概率基礎
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: "The easy way to find failure"
+title_zh: "反向推演：用对立事件算清业务风险"
+title_zh_hk: "反向推演：用對立事件計清業務風險"
+objective_en: "State the core axioms of probability, explain the complement rule P(A complement) = 1 - P(A), and show how managers flip complex 'at least one failure' operational calculations into simple arithmetic."
+objective_zh: "阐明概率论的核心公理，解释对立事件法则 P(A补集) = 1 - P(A)，并展示管理者如何把复杂的“至少发生一次故障”的运算转化为极简算术。"
+objective_zh_hk: "闡明概率論嘅核心公理，解釋對立事件法則 P(A補集) = 1 - P(A)，並展示管理者點樣將複雜嘅「至少發生一次故障」嘅運算轉化為極簡算術。"
+glossary:
+- en: "axioms of probability"
+  zh: "概率公理"
+  zh_hk: "概率公理"
+  lock: true
+- en: "complement rule"
+  zh: "对立事件法则"
+  zh_hk: "對立事件法則"
+  lock: true
+- en: "at least one"
+  zh: "至少发生一次"
+  zh_hk: "至少發生一次"
+  lock: true
+- en: "exhaustive"
+  zh: "完备穷尽"
+  zh_hk: "完備窮盡"
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: "Why is the complement rule especially powerful when operations directors analyze multi-step service failures?"
+  question_zh: "在运营总监评估多环节服务失误时，为什么对立事件法则显得尤为高效？"
+  question_zh_hk: "喺營運總監評估多環節服務出錯嗰陣，點解對立事件法則顯得特別高效？"
+  options_en:
+  - "A: Instead of summing dozens of complex failure combinations, you calculate the single pristine success state and subtract it from 1.0."
+  - "B: The complement rule forces all store equipment warranties to be free of charge."
+  - "C: It allows probability values to exceed positive 2.0 during holiday promotions."
+  - "D: Subtracting from 1.0 legally shields store managers from customer refund requests."
+  options_zh:
+  - "A: 与其逐项加总几十种繁杂的故障组合，不如直接计算唯一完美的无故障状态，再用 1.0 减去它。"
+  - "B: 对立事件法则能够强制所有分店设备保修合同完全免费。"
+  - "C: 它允许节日促销期间的概率数值合法超过 2.0。"
+  - "D: 用 1.0 扣减能够在法律上免除分店经理向顾客退款的责任。"
+  options_zh_hk:
+  - "A: 與其逐項加總幾十種繁雜嘅出錯組合，不如直接計唯一完美嘅零出錯狀態，再用 1.0 扣減佢。"
+  - "B: 對立事件法則能夠強制所有分店設備保養合約完全免費。"
+  - "C: 佢容許節日促銷期間嘅概率數值合法超過 2.0。"
+  - "D: 用 1.0 扣減能夠喺法律上免除分店經理向顧客退款嘅責任。"
+  answer: A
+  explanation_en: "The complement of 'at least one defect occurs' is 'zero defects occur'. Finding one clean state and subtracting from 1.0 saves hours of tedious combinatorial math."
+  explanation_zh: "“至少出现一次瑕疵”的对立面就是“完全零瑕疵”。算出唯一的完美状态并用 1.0 扣减，能免去极其繁琐的组合枚举。"
+  explanation_zh_hk: "「至少出現一次出錯」嘅對立面就係「完全零出錯」。計出唯一嘅完美狀態並用 1.0 扣減，可以慳返極之繁複嘅組合枚舉。"
+- id: Q2
+  type: multiple_choice
+  question_en: "If the probability of a clean order with zero barista mistakes is 0.94, what is the probability that an order experiences at least one mistake?"
+  question_zh: "如果咖啡师制杯完全零失误的概率是 0.94，那么顾客点单遭遇至少一次失误的概率是多少？"
+  question_zh_hk: "如果咖啡師沖掣完全零出錯嘅概率係 0.94，噉顧客點單遭遇至少一次出錯嘅概率係幾多？"
+  options_en:
+  - "A: 0.06"
+  - "B: 0.94"
+  - "C: 0.50"
+  - "D: 1.94"
+  options_zh:
+  - "A: 0.06"
+  - "B: 0.94"
+  - "C: 0.50"
+  - "D: 1.94"
+  options_zh_hk:
+  - "A: 0.06"
+  - "B: 0.94"
+  - "C: 0.50"
+  - "D: 1.94"
+  answer: A
+  explanation_en: "By the complement rule, P(At least one mistake) = 1 - P(Zero mistakes) = 1 - 0.94 = 0.06."
+  explanation_zh: "根据对立事件法则，P(至少一次失误) = 1 - P(零失误) = 1 - 0.94 = 0.06。"
+  explanation_zh_hk: "根據對立事件法則，P(至少一次出錯) = 1 - P(零出錯) = 1 - 0.94 = 0.06。"
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: "The Calculation Trap"
+  kicker_en: "The Calculation Trap"
+  kicker_zh: "运算陷阱"
+  kicker_zh_hk: "運算陷阱"
+  title_en: "Too many ways to fail"
+  title_zh: "出错的方式实在太多了"
+  title_zh_hk: "出錯嘅方式實在太多喇"
+  en: "Suppose a customer orders an oat milk latte, extra hot, with sugar-free vanilla syrup. Think of all the ways that order could fail: wrong milk, wrong temperature, wrong syrup, wrong lid, or wrong bag. If you try to calculate the total risk by enumerating every single failure combination, your math will explode. How do smart operators shortcut this combinatorial nightmare?"
+  zh: "假设顾客点了一杯燕麦奶拿铁、要求特热、并加无糖香草糖浆。想想这杯咖啡出错的可能方式：用错奶类、温度不对、加错糖浆、拿错杯盖、或者打包漏单。如果试图通过罗列每一种失败路径来计算总体失误概率，数学复杂度将瞬间爆炸。聪明的运营者如何抄近路破解这个组合噩梦？"
+  zh_hk: "假設顧客點咗一杯燕麥奶拿鐵、要求特別熱、兼且加無糖雲呢拿糖漿。諗吓呢杯咖啡出錯嘅可能方式：用錯奶類、溫度唔啱、落錯糖漿、攞錯杯蓋、或者打包漏單。如果試圖透過枚舉每一種出錯路徑嚟計總體失誤概率，數學複雜度會即刻爆煲。聰明嘅營運者點樣抄捷徑破解呢個組合噩夢？"
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: "What It Is"
+  kicker_en: "What It Is"
+  kicker_zh: "核心概念"
+  kicker_zh_hk: "核心概念"
+  title_en: "The complement rule"
+  title_zh: "对立事件与补集法则"
+  title_zh_hk: "對立事件與補集法則"
+  formula: "P(A complement) = 1 - P(A)"
+  formula_tex: "P(A^c) = 1 - P(A)"
+  formula_zh: "P(A 的补集) = 1 - P(A)"
+  formula_zh_hk: "P(A 嘅補集) = 1 - P(A)"
+  s1_en: "Probability rests on three core axioms: probabilities cannot be negative, total probability over sample space S equals 1.0, and disjoint outcomes add together cleanly."
+  s1_zh: "概率论奠定在三条不可动摇的公理之上：概率不能为负数，样本空间 S 的总概率恒为 1.0，以及互斥事件的概率可以直接线性相加。"
+  s1_zh_hk: "概率論奠定喺三條不可動搖嘅公理之上：概率唔可以係負數，樣本空間 S 嘅總概率恆為 1.0，同埋互斥事件嘅概率可以直接線性相加。"
+  s2_en: "Because the total universe sums to 1.0, any event A and its exact opposite—A complement—partition the sample space into two exhaustive, mutually exclusive parts. Therefore, the probability of A not happening is simply 1.0 minus the probability that A does happen."
+  s2_zh: "因为全集总概率为 1.0，任何事件 A 及其完全相反的对立面（补集），恰好将世界切成互补的两半。因此，A 不发生的概率，就是用 1.0 减去 A 发生的概率。"
+  s2_zh_hk: "因為全集總概率為 1.0，任何事件 A 同佢完全相反嘅對立面（補集），啱啱好將世界切成互補嘅兩半。因此，A 唔發生嘅概率，就係用 1.0 減去 A 發生嘅概率。"
+- id: flip
+  visual: two_column
+  seconds: 36
+  kicker: "The Inversion Shortcut"
+  kicker_en: "The Inversion Shortcut"
+  kicker_zh: "反向捷径"
+  kicker_zh_hk: "反向捷徑"
+  title_en: "Forward slog versus reverse shortcut"
+  title_zh: "正面强攻与反向破局"
+  title_zh_hk: "正面強攻與反向破局"
+  left_en: "Direct: Enumerate 15 failure states"
+  left_zh: "正向计算：繁琐累加 15 种故障组合"
+  left_zh_hk: "正向計算：繁瑣累加 15 種故障組合"
+  right_en: "Complement: 1.0 minus flawless run"
+  right_zh: "反向求补：1.0 减去唯一完美运行"
+  right_zh_hk: "反向求補：1.0 減去唯一完美運行"
+  s1_en: "Whenever a business question asks for the probability of 'at least one problem', warning bells should ring. Never calculate that directly."
+  s1_zh: "每当业务问题中出现“至少出现一次故障”或“至少有一台机器停工”时，警铃就该拉响。永远不要正向强行枚举计算。"
+  s1_zh_hk: "每當業務問題入面出現「至少出現一次出錯」或者「至少有一部機停擺」嗰陣，警號就應該響起。永遠唔好正面夾硬枚舉計算。"
+  s2_en: "At least one defect could mean one defect, two defects, three defects, or everything breaking at once. Adding all those separate probabilities is an exhausting trap."
+  s2_zh: "“至少一次失误”可能是一次、两次、三次，甚至所有环节全盘崩溃。把这些独立分支逐一加总，是个极其繁琐的算术陷阱。"
+  s2_zh_hk: "「至少一次出錯」可能係一次、兩次、三次，甚至所有環節全面崩潰。將呢啲獨立分支逐一加埋，係個極之繁瑣嘅算術陷阱。"
+  s3_en: "The exact opposite of at least one defect is simple: zero defects. Find the single probability of a 100% clean, flawless run, and subtract it from 1.0."
+  s3_zh: "而“至少一次失误”在逻辑上的唯一对立面极其单纯：零失误。只需算出整个流程百分之百完美交付的单一概率，再用 1.0 轻轻一减即可破局。"
+  s3_zh_hk: "而「至少一次出錯」喺邏輯上嘅唯一對立面極之單純：零出錯。淨係需要計出成個流程百分之百完美交付嘅單一概率，再用 1.0 輕輕一減即可破局。"
+- id: example
+  visual: steps
+  seconds: 36
+  kicker: "The Ledger"
+  kicker_en: "The Ledger"
+  kicker_zh: "账目演算"
+  kicker_zh_hk: "賬目演算"
+  title_en: "Evaluating 1,000 espresso pours"
+  title_zh: "评估一千杯浓缩咖啡的萃取品质"
+  title_zh_hk: "評估一千杯濃縮咖啡嘅萃取品質"
+  step1_en: "Identify clean runs: 940 cups (0.94)"
+  step1_zh: "识别完美品控：940 杯（概率 0.94）"
+  step1_zh_hk: "識別完美品控：940 杯（概率 0.94）"
+  step2_en: "Define failure: At least one flaw"
+  step2_zh: "定义事件：至少遭遇一种瑕疵"
+  step2_zh_hk: "定義事件：至少遭遇一種瑕疵"
+  step3_en: "Subtract from 1.0: Risk = 0.06"
+  step3_zh: "运用补集扣减：失误风险 = 0.06"
+  step3_zh_hk: "運用補集扣減：出錯風險 = 0.06"
+  s1_en: "Let us check our Wan Chai quality inspection ledger across 1,000 espresso shots. 940 cups meet all extraction time, temperature, and crema standards."
+  s1_zh: "查看湾仔店 1,000 杯浓缩咖啡的质检账目。其中 940 杯在萃取时长、水温及油脂厚度上全部达标，完美无瑕。"
+  s1_zh_hk: "睇吓灣仔舖 1,000 杯濃縮咖啡嘅質檢賬目。其中 940 杯喺萃取時間、水溫以及油脂厚度上全部達標，完美無瑕。"
+  s2_en: "That gives a clean-run probability of zero point nine four. Management asks: what is the risk that a VIP customer receives a defective cup with at least one flaw?"
+  s2_zh: "完美交付的概率是 0.94。管理层提问：一位重要贵宾随机点单时，端上来的咖啡至少存在一项瑕疵的风险有多大？"
+  s2_zh_hk: "完美交付嘅概率係 0.94。管理層提問：一位重要貴賓隨機點單嗰陣，端出嚟嘅咖啡至少存在一項瑕疵嘅風險有幾大？"
+  s3_en: "Do not tally bitter extraction, cold groupheads, or channeling separately. Simply calculate 1.0 minus 0.94. The service risk is exactly zero point zero six."
+  s3_zh: "不要去逐一分类过度萃取、水温过低还是通道效应。直接用 1.0 减去 0.94，得出整体出品的瑕疵风险就是精确的 0.06。"
+  s3_zh_hk: "唔好去逐一分類過度萃取、水溫過低定係通道效應。直接用 1.0 減去 0.94，得出整體出品嘅瑕疵風險就係精確嘅 0.06。"
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: "Decision Rule"
+  kicker_en: "Decision Rule"
+  kicker_zh: "商业法则"
+  kicker_zh_hk: "商業法則"
+  title_en: "Flip the question to cut the work"
+  title_zh: "反向审视问题，化繁为简决策"
+  title_zh_hk: "反向審視問題，化繁為簡決策"
+  q1_en: "When should executives use the complement rule?"
+  q1_zh: "管理者何时必须激活对立事件法则？"
+  q1_zh_hk: "管理者幾時必須啟動對立事件法則？"
+  q2_en: "What makes 1 minus P(A) so dependable?"
+  q2_zh: "为什么用 1 减去 P(A) 能够百分之百可靠？"
+  q2_zh_hk: "點解用 1 減去 P(A) 能夠百分之百可靠？"
+  s1_en: "Whenever an operational dilemma contains the phrase 'at least one', invert the problem and calculate the odds of zero occurrences instead."
+  s1_zh: "每当业务决策涉及“至少发生一次”的表述时，立刻反转视角，改为计算“一次都不发生”的纯净概率。"
+  s1_zh_hk: "每當業務決策涉及「至少發生一次」嘅表述嗰陣，即刻反轉視角，改為計算「一次都唔發生」嘅純淨概率。"
+  s2_en: "Because the total probability across all possible realities must equal 1.0, subtracting the flawless run captures all residual failure paths with mathematical certainty."
+  s2_zh: "因为所有可能性的总概率必然等于 1.0，用 1 扣除完美状态，就能在数学上严丝合缝地囊括所有残余的失误可能。"
+  s2_zh_hk: "因為所有可能性嘅總概率必然等於 1.0，用 1 扣減完美狀態，就可以喺數學上滴水不漏噉包攬所有殘餘嘅出錯可能。"
+  s3_en: "For managers, the rule is practical: when 'at least one' creates many failure paths, calculate the probability of zero failures and subtract it from 1.0."
+  s3_zh: "对管理者来说，操作法则很直接：当“至少发生一次”包含许多失误路径时，先算“零失误”的概率，再用 1.0 减去它。"
+  s3_zh_hk: "對管理者嚟講，操作法則好直接：當「至少發生一次」包含好多出錯路徑嗰陣，先計「零出錯」嘅概率，再用 1.0 減佢。"

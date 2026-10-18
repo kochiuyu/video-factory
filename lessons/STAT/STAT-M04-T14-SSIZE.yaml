@@ -1,0 +1,222 @@
+id: STAT-M04-T14-SSIZE
+course: STAT-M04
+course_en: Sampling Distributions, the Central Limit Theorem, and Interval Estimation
+course_zh: 抽样分布、中心极限定理与区间估计
+course_zh_hk: 抽樣分佈、中心極限定理與區間估計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: Sample size engineering
+title_zh: 样本量工程学：神秘顾客巡店预算与精度逆解
+title_zh_hk: 樣本量工程學：神秘顧客巡舖預算與精度逆解
+objective_en: Derive sample size formulas for estimating means and proportions by inverting the margin of error equation,
+  apply the conservative variance heuristic (p* = 0.50), round sample sizes upward to the next integer, and budget quarterly
+  mystery shopper audits for customer queue wait times across Metro stores.
+objective_zh: 通过对误差容限方程进行代数逆解推导均值与比例的最优样本量公式，应用极端方差保守启发式准则（p* = 0.50），执行向上取整整数准则，并在都市咖啡全网神秘顾客排队等候工时季度巡检中精准核定审计预算。
+objective_zh_hk: 透過對誤差容限方程進行代數逆解推導均值同比例嘅最優樣本量公式，應用極端方差保守啟發式準則（p* = 0.50），執行向上取整整數準則，並喺都市咖啡全網神秘顧客排隊等候工時季度巡檢入面精準核定審計預算。
+glossary:
+- en: sample size determination
+  zh: 样本量确定/样本量工程
+  zh_hk: 樣本量確定/樣本量工程
+  lock: true
+- en: target margin of error (E)
+  zh: 目标误差容限 (E)
+  zh_hk: 目標誤差容限 (E)
+  lock: true
+- en: conservative proportion (p* = 0.5)
+  zh: 保守基准比例 (p* = 0.5)
+  zh_hk: 保守基準比例 (p* = 0.5)
+  lock: true
+- en: ceiling integer rule
+  zh: 向上取整准则
+  zh_hk: 向上取整準則
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Headquarters requires a 95% confidence interval for average customer queue wait time with a target margin of
+    error of no more than E = 3.0 seconds. Historical standard deviation is sigma = 18.0 seconds. What is the minimum number
+    of mystery shopper audits that must be funded?
+  question_zh: 总部要求构建 95% 置信区间评估顾客平均排队等候时间，目标误差容限不得超过 E = 3.0 秒。历史排队标准差为 sigma = 18.0 秒。管理层最少需要出资批复多少次神秘顾客独立抽查？
+  question_zh_hk: 總部要求構建 95% 置信區間評估顧客平均排隊等候時間，目標誤差容限唔可以超過 E = 3.0 秒。歷史排隊標準差為 sigma = 18.0 秒。管理層最少需要出資批復幾多次神秘顧客獨立抽查？
+  options_en:
+  - 'A: n = (1.960 * 18.0 / 3.0)^2 = (11.76)^2 = 138.2976 -> Must fund exactly 139 audits.'
+  - 'B: n = (1.960 * 18.0 / 3.0) = 11.76 -> 12 audits.'
+  - 'C: n = 18.0 / 3.0 = 6 audits.'
+  - 'D: n = 138 audits, rounding down to conserve administrative capital.'
+  options_zh:
+  - 'A: n = (1.960 × 18.0 / 3.0)^2 = (11.76)^2 = 138.2976 -> 向上取整，必须足额批复 139 次巡查。'
+  - 'B: n = (1.960 × 18.0 / 3.0) = 11.76 -> 向上取整为 12 次巡查。'
+  - 'C: n = 18.0 / 3.0 = 6 次巡查。'
+  - 'D: 向上舍入到 138 次，通过向下取整削减行政审计支出。'
+  options_zh_hk:
+  - 'A: n = (1.960 × 18.0 / 3.0)^2 = (11.76)^2 = 138.2976 -> 向上取整，必須足額批復 139 次巡查。'
+  - 'B: n = (1.960 × 18.0 / 3.0) = 11.76 -> 向上取整為 12 次巡查。'
+  - 'C: n = 18.0 / 3.0 = 6 次巡查。'
+  - 'D: 向上捨入到 138 次，透過向下取整削減行政審計支出。'
+  answer: A
+  explanation_en: 'Solving E = Z* * sigma / sqrt(n) for n gives n = (Z* * sigma / E)^2 = (1.96 * 18 / 3)^2 = 11.76^2 = 138.30.
+    Because 138 audits would result in an error exceeding 3.0 seconds, you must always round up to the next integer: 139 audits.'
+  explanation_zh: 对误差公式 E = Z* × sigma / 根号(n) 进行代数逆解，得 n = (Z* × sigma / E)^2 = (1.96 × 18 / 3)^2 = 11.76^2 = 138.30。若仅抽查
+    138 次，误差将微弱突破 3.0 秒红线，因此样本量工程必须严格执行向上取整：139 次。
+  explanation_zh_hk: 對誤差公式 E = Z* × sigma / 根號(n) 進行代數逆解，得 n = (Z* × sigma / E)^2 = (1.96 × 18 / 3)^2 = 11.76^2 = 138.30。若果淨係抽查
+    138 次，誤差將微弱突破 3.0 秒紅線，因此樣本量工程必須嚴格執行向上取整：139 次。
+- id: Q2
+  type: multiple_choice
+  question_en: When sizing a customer survey to estimate a market proportion with zero historical data, why is plugging in
+    p* = 0.50 the most conservative business practice?
+  question_zh: 在缺乏任何历史先验数据的前提下为市场比例调研规划样本量时，为什么代入 p* = 0.50 是最审慎保险的商业惯例？
+  question_zh_hk: 喺缺乏任何歷史先驗數據嘅前提下為市場比例調研規劃樣本量嗰陣，點解代入 p* = 0.50 係最審慎保險嘅商業慣例？
+  options_en:
+  - 'A: The product p(1 - p) achieves its absolute mathematical maximum at p = 0.50 (0.25), guaranteeing the resulting sample
+    size will be large enough for any true underlying proportion.'
+  - 'B: Because municipal marketing laws mandate that customer opinions start in equal balance.'
+  - 'C: Because 0.50 eliminates the need for calculating standard errors entirely.'
+  - 'D: Because setting p = 0.50 slashes required sample size by exactly half.'
+  options_zh:
+  - 'A: 二次函数 p(1 - p) 在 p = 0.50 处达到几何绝对极大值（0.25），在此基准下算出的样本量最为宏大，足以从容兜底任何未知的真实底层比例。'
+  - 'B: 因为商贸市调法规强制假定消费者的初始满意度处于五五开平衡。'
+  - 'C: 因为设定 0.50 可以在运算中彻底免除计算比例标准误的繁琐步骤。'
+  - 'D: 因为设定 p = 0.50 可以将原本所需的样本量直接砍半节约预算。'
+  options_zh_hk:
+  - 'A: 二次函數 p(1 - p) 喺 p = 0.50 處達到幾何絕對極大值（0.25），喺呢個基準下計出嚟嘅樣本量最為宏大，足以從容兜底任何未知嘅真實底層比例。'
+  - 'B: 因為商貿市調法規強制假定消費者嘅初始滿意度處於五五開平衡。'
+  - 'C: 因為設定 0.50 可以喺運算入面徹底免除計算比例標準誤嘅繁瑣步驟。'
+  - 'D: 因為設定 p = 0.50 可以將原本所需嘅樣本量直接斬半節約預算。'
+  answer: A
+  explanation_en: Variance p(1 - p) peaks at 0.50 * 0.50 = 0.25. Planning with p* = 0.50 represents the worst-case variance
+    scenario, ensuring the audit achieves the desired margin of error regardless of the true parameter.
+  explanation_zh: 方差函数 p(1 - p) 在 0.50 处取得峰值 0.25。采用 p* = 0.50 设定了方差的上限恶劣边界，无论最终测得的真实比例是多少，实际误差容限都绝不会超过预设目标。
+  explanation_zh_hk: 方差函數 p(1 - p) 喺 0.50 處取得峰值 0.25。採用 p* = 0.50 設定咗方差嘅上限惡劣邊界，無論最終測得嘅真實比例係幾多，實際誤差容限都絕唔會超過預設目標。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Mystery Audit Budget
+  kicker_en: The Mystery Audit Budget
+  kicker_zh: 神秘巡店的预算死局
+  kicker_zh_hk: 神秘巡舖嘅預算死局
+  title_en: How many audits must the CFO actually fund?
+  title_zh: 既要精度又要省钱：巡店预算到底该批多少单？
+  title_zh_hk: 既要精度又要慳錢：巡舖預算到底應該批幾多單？
+  en: 'At Metro Coffee headquarters, the Chief Operating Officer mandates a quarterly mystery shopper audit across Mong Kok,
+    Wan Chai, and the Airport to measure peak queue wait times. The target is non-negotiable: estimate average wait time with
+    ninety-five percent confidence to within plus-or-minus three seconds. The agency invoices four hundred dollars per secret
+    audit. The CFO objects: I will not sign a blank check for five hundred visits! How do operations engineers reverse-engineer
+    the math to purchase exactly the precision leadership demands without wasting a single dollar?'
+  zh: 在都市咖啡管理层季度例会上，首席运营官要求开展全港门店神秘顾客暗访，以摸清早高峰排队等待时间。考核底线不容商榷：在百分之九十五置信度下，平均排队时间的估算误差必须严格锁定在正负三秒以内。第三方市调机构开出每单四百元的暗访报价。财务总监当场拍板叫停：我绝不可能闭眼审批五百次巡查的巨额预算！运营工程师究竟该如何逆向反解数学公式，精准买到管理层所需的精度，且不多花一分冤枉钱？
+  zh_hk: 喺都市咖啡管理層季度例會上，首席營運官要求開展全港門市神秘顧客暗訪，以摸清朝高峰排隊等待時間。考核底線不容商榷：喺百分之九十五置信度下，平均排隊時間嘅估算誤差必須嚴格鎖定喺正負三秒之內。第三方市調機構開出每單四百蚊嘅暗訪報價。財務總監當場拍板叫停：我絕唔可能閉眼審批五百次巡查嘅巨額預算！營運工程師究竟應該點樣逆向反解數學公式，精準買到管理層所需嘅精度，兼且唔多使一分冤枉錢？
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: What It Is
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: The sample size equations
+  title_zh: 样本量逆解工程标准方程式
+  title_zh_hk: 樣本量逆解工程標準方程式
+  formula: 'Means: n = (Z* * sigma / E)^2; Proportions: n = (Z*^2 * p*(1 - p*)) / E^2'
+  formula_zh: 均值样本量：n = (Z* × sigma / E)^2；比例样本量：n = (Z*^2 × p*(1 - p*)) / E^2
+  formula_zh_hk: 均值樣本量：n = (Z* × sigma / E)^2；比例樣本量：n = (Z*^2 × p*(1 - p*)) / E^2
+  formula_tex: n = \left( \frac{Z^*_{\alpha/2} \cdot \sigma}{E} \right)^2, \quad n = \frac{(Z^*_{\alpha/2})^2 \cdot p^*(1
+    - p^*)}{E^2}
+  s1_en: Sample size engineering is algebra in reverse. Instead of collecting data and discovering your margin of error E,
+    leadership specifies target tolerance E upfront and solves for n.
+  s1_zh: 样本量工程在本质上是误差公式的代数逆解。与其被动收集数据后任凭误差容限 E 随遇而安，不如由管理层预先下达精度指标 E，再主动反解出所需的最少样本量 n。
+  s1_zh_hk: 樣本量工程喺本質上係誤差公式嘅代數逆解。與其被動收集數據後任憑誤差容限 E 隨遇而安，不如由管理層預先下達精度指標 E，再主動反解出所需嘅最少樣本量 n。
+  s2_en: 'Because the square root of n resides in the denominator of standard error, isolating n squares the entire ratio:
+    required sample size scales directly with variance and inversely with the square of target error.'
+  s2_zh: 由于样本量的平方根深埋在标准误分母之中，逆解 n 必然导致整个式子平方：所需样本量正比于方差波动，反比于容限指标 E 的平方。
+  s2_zh_hk: 由於樣本量嘅平方根深埋喺標準誤分母入面，逆解 n 必然搞到成個式子平方：所需樣本量正比於方差波動，反比於容限指標 E 嘅平方。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  kicker: The Two Iron Rules
+  kicker_en: The Two Iron Rules
+  kicker_zh: 两大铁律
+  kicker_zh_hk: 兩大鐵律
+  title_en: The ceiling rule and conservative baseline
+  title_zh: 向上取整铁律与极端方差防御
+  title_zh_hk: 向上取整鐵律與極端方差防禦
+  left_en: 'Ceiling Rule: Always round upward to the next integer (never round down)'
+  left_zh: 向上取整：即便算得 .01 也必须硬性进位，绝不允许四舍五入
+  left_zh_hk: 向上取整：就算計得 .01 都必須硬性進位，絕唔容許四捨五入
+  right_en: 'Conservative p*: Set p* = 0.50 when prior proportion is completely unknown'
+  right_zh: 保守基准：比例先验缺失时，强推 p* = 0.50 锁死最大方差极限
+  right_zh_hk: 保守基準：比例先驗缺失嗰陣，強推 p* = 0.50 鎖死最大方差極限
+  s1_en: 'In engineering sample sizes, statistical math mandates the ceiling rule: even if your calculation yields one hundred
+    and thirty-eight point one, you must round up to one hundred and thirty-nine.'
+  s1_zh: 在样本量工程的核算中，统计学法则严密执行向上取整规程：即便计算器吐出一百三十八点一，分母也必须强制向上进位至一百三十九。
+  s1_zh_hk: 喺樣本量工程嘅核算入面，統計學法則嚴密執行向上取整規程：就算計算機吐出一百三十八點一，分母都必須強制向上進位至一百三十九。
+  s2_en: Rounding down to one hundred and thirty-eight guarantees that your empirical margin of error will exceed management's
+    three-second target, violating the executive mandate.
+  s2_zh: 若图省事向下舍入到一百三十八，实际产生的误差容限必然会越过三秒红线，导致整份审计质量在法度上不及格。
+  s2_zh_hk: 若果圖省事向下捨入到一百三十八，實際產生嘅誤差容限必然會越過三秒紅線，搞到成份審計質量喺法度上唔及格。
+  s3_en: When budgeting for proportions without historical data, setting p star to zero point fifty maximizes variance at
+    zero point twenty-five, guaranteeing your budget holds in the worst-case scenario.
+  s3_zh: 而在没有历史先验数据规划比例调研时，将 p 星号设为零点五零能将方差锁定在零点二五的最大峰值，确保预算在最恶劣场景下依然固若金汤。
+  s3_zh_hk: 而喺冇歷史先驗數據規劃比例調研嗰陣，將 p 星號設為零點五零能將方差鎖定喺零點二五嘅最大峰值，確保預算喺最惡劣場景下依然固若金湯。
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: The Ledger
+  kicker_en: The Ledger
+  kicker_zh: 账目精算
+  kicker_zh_hk: 賬目精算
+  title_en: Budgeting Metro's mystery wait-time audit
+  title_zh: 都市咖啡神秘暗访样本量与预算精算
+  title_zh_hk: 都市咖啡神秘暗訪樣本量與預算精算
+  step1_en: 'Executive mandate: 95% confidence (Z* = 1.960), target error E = 3.0s, sigma = 18.0s'
+  step1_zh: 管理红线：95% 置信 (Z* = 1.960)，目标容限 E = 3.0 秒，历史波动 sigma = 18.0 秒
+  step1_zh_hk: 管理紅線：95% 置信 (Z* = 1.960)，目標容限 E = 3.0 秒，歷史波動 sigma = 18.0 秒
+  step2_en: 'Algebraic solve: n = (1.960 * 18.0 / 3.0)^2 = (11.76)^2 = 138.2976 audits'
+  step2_zh: 代数逆解：n = (1.960 × 18.0 / 3.0)^2 = (11.76)^2 = 138.2976 次暗访
+  step2_zh_hk: 代數逆解：n = (1.960 × 18.0 / 3.0)^2 = (11.76)^2 = 138.2976 次暗訪
+  step3_en: 'Ceiling rule: Round to n = 139 visits -> Budget = 139 * $400 = $55,600 (Saved $144k!)'
+  step3_zh: 进位裁决：向上取整至 139 次 -> 批复预算 139 × $400 = $55,600（省下十四万！）
+  step3_zh_hk: 進位裁決：向上取整至 139 次 -> 批復預算 139 × $400 = $55,600（慳返十四萬！）
+  s1_en: Review the quarterly mystery audit parameters. Management demands ninety-five percent confidence, locking critical
+    value Z star at one point nine six zero. The tolerance threshold E is three point zero seconds, and historical barista
+    queue volatility sigma is eighteen point zero seconds.
+  s1_zh: 审视全网暗访巡检参数底册。高管层强推百分之九十五置信度，敲定 Z 临界值为一点九六零。容许误差 E 设定为三点零秒，历史排队工时波动标准差 sigma 为十八点零秒。
+  s1_zh_hk: 審視全網暗訪巡檢參數底冊。高管層強推百分之九十五置信度，敲定 Z 臨界值為一點九六零。容許誤差 E 設定為三點零秒，歷史排隊工時波動標準差 sigma 為十八點零秒。
+  s2_en: Step two executes the algebra. One point nine six zero times eighteen divided by three equals eleven point seven
+    six. Squaring eleven point seven six yields exactly one hundred and thirty-eight point two nine eight required audits.
+  s2_zh: 第二步执行代数逆解：一点九六零乘十八除以三，等于十一点七六。将其平方，精准得出需要一百三十八点二九八次暗访。
+  s2_zh_hk: 第二步執行代數逆解：一點九六零乘十八除以三，等於十一點七六。將其平方，精準得出需要一百三十八點二九八次暗訪。
+  s3_en: 'Step three applies the ceiling rule. We round up to exactly one hundred and thirty-nine audits. At four hundred
+    dollars per visit, the required budget is fifty-five thousand six hundred dollars. The CFO signs the purchase order: instead
+    of spending two hundred thousand dollars on five hundred visits, we secured exact statistical compliance while preserving
+    one hundred and forty-four thousand dollars in cash!'
+  s3_zh: 第三步执行向上取整：严密进位到一百三十九次。以每单四百元计，批复预算恰为五万五千六百元。财务总监欣然落笔签署采购单：相比盲目排期五百单狂烧二十万，我们不仅分毫不差实现了统计合规，更为公司省下了整整十四万四千元现金流！
+  s3_zh_hk: 第三步執行向上取整：嚴密進位到一百三十九次。以每單四百蚊計，批復預算啱啱好係五萬五千六百蚊。財務總監欣然落筆簽署採購單：比起盲目排期五百單狂燒二十萬，我哋唔單止分毫不差實現咗統計合規，更加為公司慳返整整十四萬四千蚊現金流！
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: Decision Rule
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Price precision before launching operational capital
+  title_zh: 精度倒逼规模，进位捍卫法度：用逆解为资本支出护航
+  title_zh_hk: 精度倒逼規模，進位捍衛法度：用逆解為資本支出護航
+  q1_en: Why does cutting target margin of error in half quadruple your audit sample size?
+  q1_zh: 为什么将审计误差容限砍半，必然会导致所需样本量疯狂翻上四倍？
+  q1_zh_hk: 點解將審計誤差容限斬半，必然會搞到所需樣本量瘋狂翻上四倍？
+  q2_en: How do managers assemble this entire toolkit into a single master estimation workflow?
+  q2_zh: 运营管理者该如何将这一整套统计推断工具，融会贯通为一张总览全局的决策仪表盘？
+  q2_zh_hk: 營運管理者應該點樣將呢一整套統計推斷工具，融會貫通為一張總覽全局嘅決策儀表盤？
+  s1_en: Never guess an audit budget; establish target margin of error upfront and mathematically solve for sample size, always
+    applying the ceiling rule to protect compliance.
+  s1_zh: 切勿拍脑袋预估巡检预算；必须由管理层先敲定容限红线并逆解样本量，坚决贯彻向上取整法则以捍卫合规底线。
+  s1_zh_hk: 切勿拍心口預估巡檢預算；必須由管理層先敲定容限紅線並逆解樣本量，堅決貫徹向上取整法則以捍衛合規底線。
+  s2_en: 'Remember the quadratic penalty: shrinking error from three seconds to one point five seconds quadruples sample size
+    from one hundred and thirty-nine to five hundred and fifty-four visits.'
+  s2_zh: 时刻警惕二次方惩罚：将误差容限由三秒收窄至一点五秒，样本量将直接翻两番飙至五百五十四次，管理层必须清醒评估精度的边际成本。
+  s2_zh_hk: 時刻警惕二次方懲罰：將誤差容限由三秒收窄至一點五秒，樣本量將直接翻兩番飆到五百五十四次，管理層必須清醒評估精度嘅邊際成本。
+  s3_en: The operating rule is to solve for n and round up. A 3-second margin at sigma 18 needs 139 audits, not 138.
+  s3_zh: 操作规则是反解样本量并向上取整。标准差 18 秒、容限 3 秒，需要 139 次巡查，不是 138 次。
+  s3_zh_hk: 操作規則係反解樣本量並向上取整。標準差 18 秒、容限 3 秒，需要 139 次巡查，唔係 138 次。

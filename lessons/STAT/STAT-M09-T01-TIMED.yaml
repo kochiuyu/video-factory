@@ -1,0 +1,165 @@
+id: STAT-M09-T01-TIMED
+course: STAT-M09
+course_en: Business Time Series & Demand Forecasting
+course_zh: 商业时间序列与需求预测
+course_zh_hk: 商業時間序列與需求預測
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The Time Dimension: Why Sequential Data Breaks Cross-Sectional OLS Assumptions'
+title_zh: 时间维度：为何时序数据违反横截面 OLS 假设
+title_zh_hk: 時間維度：點解時序數據違反橫截面 OLS 假設
+objective_en: Define time-series data, explain serial dependence, and identify why correlated errors make conventional OLS inference unreliable.
+objective_zh: 界定时间序列数据，解释序列相关，并识别误差相关为何会使传统 OLS 推断不可靠。
+objective_zh_hk: 界定時間序列數據，解釋序列相關，並識別誤差相關點解會令傳統 OLS 推斷唔可靠。
+glossary:
+  - en: Time-Series Data
+    zh: 时间序列数据
+    zh_hk: 時間序列數據
+    lock: true
+  - en: Serial Dependency
+    zh: 序列相关性（时序依赖）
+    zh_hk: 序列相關性（時序依賴）
+    lock: true
+  - en: Lag Operator
+    zh: 滞后算子
+    zh_hk: 滯後算子
+    lock: true
+  - en: Autocorrelated Errors
+    zh: 自相关误差
+    zh_hk: 自相關誤差
+    lock: true
+quiz:
+  - id: Q1
+    type: multiple_choice
+    question_en: Why does shuffling daily observations damage time-series analysis?
+    question_zh: 为什么打乱每日观测会破坏时间序列分析？
+    question_zh_hk: 點解打亂每日觀測會破壞時間序列分析？
+    options_en:
+      - 'A: Time order carries lag relationships'
+      - 'B: Shuffling forces coefficients to zero'
+      - 'C: Unsorted data have no average'
+      - 'D: Shuffling creates dummy variables'
+    options_zh:
+      - A：时间顺序承载滞后关系
+      - B：打乱顺序会强制系数归零
+      - C：未排序数据没有平均数
+      - D：打乱顺序会产生虚拟变量
+    options_zh_hk:
+      - A：時間次序承載滯後關係
+      - B：打亂次序會強制係數歸零
+      - C：未排序數據冇平均數
+      - D：打亂次序會產生虛擬變量
+    answer: A
+    explanation_en: Chronology identifies which value precedes another and preserves lagged dependence.
+    explanation_zh: 时间顺序标明先后关系，并保留滞后依赖。
+    explanation_zh_hk: 時間次序標明先後關係，並保留滯後依賴。
+  - id: Q2
+    type: multiple_choice
+    question_en: What follows when adjacent OLS residuals are correlated?
+    question_zh: 当相邻 OLS 残差相关时，可以得出什么结论？
+    question_zh_hk: 當相鄰 OLS 殘差相關，可以得出乜嘢結論？
+    options_en:
+      - 'A: Conventional standard errors and tests may be unreliable'
+      - 'B: Every coefficient must be zero'
+      - 'C: Fitted values must be exact'
+      - 'D: All variables must be categorical'
+    options_zh:
+      - A：传统标准误与检验可能不可靠
+      - B：所有系数必定为零
+      - C：拟合值必定完全准确
+      - D：所有变量必须是分类变量
+    options_zh_hk:
+      - A：傳統標準誤同檢驗可能唔可靠
+      - B：所有係數一定係零
+      - C：擬合值一定完全準確
+      - D：所有變量必須係分類變量
+    answer: A
+    explanation_en: Serial correlation violates the condition used by conventional OLS inference, but does not by itself prove that every coefficient is biased.
+    explanation_zh: 序列相关违反传统 OLS 推断所依赖的条件，但不能单凭这一点断言所有系数都有偏。
+    explanation_zh_hk: 序列相關違反傳統 OLS 推斷依賴嘅條件，但唔可以單憑呢點斷言所有係數都有偏。
+beats:
+  - id: hook
+    visual: title_card
+    seconds: 30
+    kicker_en: Morning Stockout Puzzle
+    kicker_zh: 早高峰断货难题
+    kicker_zh_hk: 早市斷貨難題
+    title_en: Why Can Yesterday Change Today's Milk Demand?
+    title_zh: 为什么昨天会影响今天的鲜奶需求？
+    title_zh_hk: 點解尋日會影響今日嘅鮮奶需求？
+    en: >-
+      Metro Coffee uses 180 consecutive days of Wan Chai milk demand to plan tomorrow's order. A cross-sectional regression treats row order as uninformative, but a Monday stockout can affect Tuesday demand and inventory. The question is whether conventional OLS uncertainty measures remain trustworthy when adjacent days are connected.
+    zh: >-
+      Metro Coffee 用湾仔店连续 180 天的鲜奶需求安排明天订货。横截面回归把行顺序视为无关信息，但周一缺货可能影响周二的需求与库存。关键问题是，相邻日期彼此关联时，传统 OLS 的不确定性衡量是否仍然可信。
+    zh_hk: >-
+      Metro Coffee 用灣仔店連續 180 日嘅鮮奶需求安排聽日訂貨。橫截面回歸將行次序視為無關信息，但禮拜一斷貨可能影響禮拜二嘅需求同庫存。關鍵係，相鄰日子互相關連嗰陣，傳統 OLS 嘅不確定性衡量仲信唔信得過。
+  - id: define
+    visual: definition_card
+    seconds: 34
+    formula: 'Serial dependence: Cov(ε_t, ε_{t-s}) ≠ 0'
+    formula_zh: '序列相关：Cov(ε_t, ε_{t-s}) ≠ 0'
+    formula_zh_hk: '序列相關：Cov(ε_t, ε_{t-s}) ≠ 0'
+    formula_tex: '\mathrm{Cov}(\varepsilon_t,\varepsilon_{t-s})\ne 0'
+    s1_en: Time-Series Data are observations indexed in chronological order. The index is information because it identifies what came first and what may carry forward.
+    s1_zh: 时间序列数据是按时间先后排列的观测。时间索引本身就是信息，因为它标明先后关系与可能延续的影响。
+    s1_zh_hk: 時間序列數據係按時間先後排列嘅觀測。時間索引本身就係信息，因為佢標明先後關係同可能延續嘅影響。
+    s2_en: Serial Dependency means an outcome or unobserved shock is related to earlier periods. With Autocorrelated Errors, conventional OLS standard errors, confidence intervals, and tests may mislead.
+    s2_zh: 序列相关性（时序依赖）表示某期结果或未观测冲击与较早时期有关。存在自相关误差时，传统 OLS 标准误、置信区间与检验可能产生误导。
+    s2_zh_hk: 序列相關性（時序依賴）表示某期結果或者未觀測衝擊同較早時期有關。存在自相關誤差嗰陣，傳統 OLS 標準誤、置信區間同檢驗可能有誤導。
+  - id: mechanics
+    visual: two_column
+    seconds: 36
+    left_en: Cross-Sectional Order
+    left_zh: 横截面顺序
+    left_zh_hk: 橫截面次序
+    right_en: Time-Series Memory
+    right_zh: 时间序列记忆
+    right_zh_hk: 時間序列記憶
+    s1_en: In a cross section, moving one customer to another row normally changes neither that customer's values nor the sample's meaning.
+    s1_zh: 在横截面数据中，把一位顾客移到另一行，通常不改变其数值或样本含义。
+    s1_zh_hk: 喺橫截面數據入面，將一位顧客移去另一行，通常唔會改變佢嘅數值或者樣本含義。
+    s2_en: In a time series, swapping Monday and Tuesday erases which day came first and destroys lag relationships used to study demand and inventory carryover.
+    s2_zh: 在时间序列中，调换周一与周二会抹去先后关系，并破坏研究需求与库存延续所需的滞后结构。
+    s2_zh_hk: 喺時間序列入面，調轉禮拜一同禮拜二會抹走先後關係，亦會破壞研究需求同庫存延續所需嘅滯後結構。
+    s3_en: The Lag Operator records this structure. L applied to Y_t equals Y_{t-1}, the previous period's value. This notation supports testing; it does not by itself establish causation.
+    s3_zh: 滞后算子记录这种结构。L 作用于 Y_t 等于 Y_{t-1}，也就是上一期的数值。这种记号支持检验，但本身不能证明因果关系。
+    s3_zh_hk: 滯後算子記錄呢種結構。L 作用喺 Y_t 等於 Y_{t-1}，即係上一期嘅數值。呢種記號支持檢驗，但本身唔可以證明因果關係。
+  - id: example
+    visual: example
+    seconds: 36
+    setup_en: 'Illustration: consecutive milk-order residuals'
+    setup_zh: 示例：连续鲜奶订货残差
+    setup_zh_hk: 例子：連續鮮奶訂貨殘差
+    result_en: 'Pattern: +15, +12, +9 cartons'
+    result_zh: 模式：+15、+12、+9 箱
+    result_zh_hk: 模式：+15、+12、+9 箱
+    s1_en: Suppose a price-and-foot-traffic model underpredicts milk demand by 15 cartons on Day 42. The positive residual indicates an omitted influence that raised demand that day.
+    s1_zh: 假设一个包含价格与客流的模型在第 42 天少预测了 15 箱鲜奶。正残差表示模型遗漏了推高当天需求的因素。
+    s1_zh_hk: 假設一個包含價錢同人流嘅模型喺第 42 日少預測咗 15 箱鮮奶。正殘差表示模型漏咗推高當日需求嘅因素。
+    s2_en: Suppose the next residuals are also positive, at 12 and 9 cartons. This run does not prove serial correlation, but it warns that an omitted influence may persist.
+    s2_zh: 再假设随后两天的残差分别为正 12 箱与正 9 箱。这种连续模式不能证明序列相关，但提示遗漏影响可能持续存在。
+    s2_zh_hk: 再假設之後兩日嘅殘差分別係正 12 箱同正 9 箱。呢種連續模式唔可以證明序列相關，但提示遺漏影響可能持續存在。
+    s3_en: Inspect residuals across the full sequence and test serial dependence. If present, use a time-series specification or inference method that addresses it before relying on tests or forecasts.
+    s3_zh: 应检查完整序列的残差并检验序列相关。如果确实存在，应先使用能够处理它的时间序列设定或推断方法，再依赖检验或预测。
+    s3_zh_hk: 應該檢查完整序列嘅殘差並檢驗序列相關。如果真係存在，就要先用能夠處理佢嘅時間序列設定或者推斷方法，再依賴檢驗或者預測。
+  - id: takeaway
+    visual: takeaway
+    seconds: 32
+    q1_en: Can OLS Still Fit the Data?
+    q1_zh: OLS 还能拟合数据吗？
+    q1_zh_hk: OLS 仲可唔可以擬合數據？
+    q2_en: Decision Rule
+    q2_zh: 决策规则
+    q2_zh_hk: 決策規則
+    s1_en: OLS can still calculate a fitted line. The problem is that cross-sectional interpretation ignores temporal order and conventional uncertainty measures may fail with serially correlated errors.
+    s1_zh: OLS 仍能计算拟合线。问题是横截面式解释忽略时间顺序；当误差存在序列相关时，传统的不确定性衡量可能失效。
+    s1_zh_hk: OLS 仍然計到擬合線。問題係橫截面式解釋忽略時間次序；當誤差存在序列相關，傳統嘅不確定性衡量可能失效。
+    s2_en: Preserve dates, plot the series and residuals in order, and test whether errors remain related across lags before trusting conventional OLS tests.
+    s2_zh: 应保留日期，按顺序绘制原序列与残差，并在信任传统 OLS 检验前检查误差是否在不同滞后期相关。
+    s2_zh_hk: 要保留日期，按次序畫出原序列同殘差，並喺相信傳統 OLS 檢驗之前，檢查誤差喺唔同滯後期係咪相關。
+    s3_en: Chronology is data, not decoration. Diagnose serial dependence first, then choose a model and inference method that respect temporal structure before making replenishment decisions.
+    s3_zh: 时间顺序是数据，不是装饰。先诊断序列相关，再选择尊重时序结构的模型与推断方法，最后才作出补货决策。
+    s3_zh_hk: 時間次序係數據，唔係裝飾。先診斷序列相關，再選擇尊重時序結構嘅模型同推斷方法，最後先作出補貨決策。

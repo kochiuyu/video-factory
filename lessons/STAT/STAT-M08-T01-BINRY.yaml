@@ -1,0 +1,165 @@
+id: STAT-M08-T01-BINRY
+course: STAT-M08
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The Binary Decision Problem: Beyond Continuous Outcomes'
+title_zh: 二元决策问题：超越连续变量预测
+title_zh_hk: 二元決策問題：超越連續變量預測
+objective_en: Formulate the binary discrete choice problem, define conditional expectation as an event probability, and contrast continuous sales forecasting against discrete human decision modeling.
+objective_zh: 构建二元离散选择问题，将条件期望定义为事件发生概率，并对比连续销售额预测与离散人类决策建模的核心差异。
+objective_zh_hk: 構建二元離散選擇問題，將條件期望定義為事件發生概率，並對比連續銷售額預測與離散人類決策建模嘅核心差異。
+glossary:
+- en: Binary Dependent Variable
+  zh: 二元因变量
+  zh_hk: 二元因變量
+  lock: true
+- en: Conditional Probability
+  zh: 条件概率
+  zh_hk: 條件概率
+  lock: true
+- en: Discrete Choice
+  zh: 离散选择
+  zh_hk: 離散選擇
+  lock: true
+- en: Latent Decision Threshold
+  zh: 潜在决策阈值
+  zh_hk: 潛在決策門檻
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: When the response variable Y_i is binary (0 or 1), what does the conditional expectation E[Y_i | X_i] mathematically represent?
+  question_zh: 当因变量 Y_i 为二元变量（0 或 1）时，条件期望 E[Y_i | X_i] 在数学上代表什么？
+  question_zh_hk: 當因變量 Y_i 係二元變量（0 或者 1）嗰陣，條件期望 E[Y_i | X_i] 喺數學上代表啲咩？
+  options_en:
+  - 'A: The total dollar revenue earned from the customer'
+  - 'B: The conditional probability that the event occurs, P(Y_i = 1 | X_i)'
+  - 'C: The sample variance of predictor X_i'
+  - 'D: The median number of cups ordered per transaction'
+  options_zh:
+  - 'A: 从该顾客身上赚取的总销售金额'
+  - 'B: 事件发生的条件概率，即 P(Y_i = 1 | X_i)'
+  - 'C: 解释变量 X_i 的样本方差'
+  - 'D: 每笔交易中所点选咖啡杯数的中位数'
+  options_zh_hk:
+  - 'A: 喺該顧客身上賺取嘅總銷售金額'
+  - 'B: 事件發生嘅條件概率，即係 P(Y_i = 1 | X_i)'
+  - 'C: 解釋變量 X_i 嘅樣本方差'
+  - 'D: 每筆交易入面所買咖啡杯數嘅中位數'
+  answer: B
+  explanation_en: For a Bernoulli random variable where Y in {0, 1}, E[Y|X] = 1 * P(Y=1|X) + 0 * P(Y=0|X) = P(Y=1|X). The conditional mean directly equals the probability of success.
+  explanation_zh: 对于取值为 {0, 1} 的伯努利随机变量，E[Y|X] = 1 * P(Y=1|X) + 0 * P(Y=0|X) = P(Y=1|X)。条件均值在数学上严格等于事件发生的条件概率。
+  explanation_zh_hk: 對於取值為 {0, 1} 嘅伯努利隨機變量，E[Y|X] = 1 * P(Y=1|X) + 0 * P(Y=0|X) = P(Y=1|X)。條件平均值喺數學上嚴格等於事件發生嘅條件概率。
+- id: Q2
+  type: multiple_choice
+  question_en: Why does predicting customer app voucher redemption require a fundamentally different statistical approach than forecasting store cup volume?
+  question_zh: 为什么预测顾客手机 App 优惠券核销行为，与预测门店咖啡出杯量在统计方法上有着根本性的不同？
+  question_zh_hk: 點解預測顧客手機 App 優惠券換領行為，同預測門市咖啡出杯量喺統計方法上有本質上嘅唔同？
+  options_en:
+  - 'A: Cup volume is a continuous measure of operational capacity, whereas voucher redemption is a discrete yes-or-no human behavioral choice'
+  - 'B: Voucher data can never be recorded in retail spreadsheets'
+  - 'C: Cup sales models do not require sample sizes greater than 5'
+  - 'D: Discrete choices are immune to omitted variable bias'
+  options_zh:
+  - 'A: 出杯量是代表运营产能的连续数值，而优惠券核销是顾客非黑即白的离散人类决策'
+  - 'B: 优惠券数据在技术上绝不可能记录在零售商业表格中'
+  - 'C: 出杯量预测模型完全不需要大于 5 的样本量'
+  - 'D: 离散选择模型在理论上天然对遗漏变量偏差完全免疫'
+  options_zh_hk:
+  - 'A: 出杯量係代表營運產能嘅連續數值，而換領優惠券係顧客非黑即白嘅離散決策行為'
+  - 'B: 優惠券數據喺技術上絕不可能記錄喺零售商業表格入面'
+  - 'C: 出杯量預測模型完全唔需要大過 5 嘅樣本量'
+  - 'D: 離散選擇模型喺理論上天然對遺漏變量偏差完全免疫'
+  answer: A
+  explanation_en: Cup volume is a count outcome, while customer redemption is a binary indicator. A binary model estimates an event probability conditional on predictors; it is not immune to omitted-variable problems or other specification errors.
+  explanation_zh: 出杯量是计数结果，而顾客核销是二元指标。二元模型估计给定自变量后的事件概率；它并不能免受遗漏变量问题或其他模型设定错误的影响。
+  explanation_zh_hk: 出杯量係計數結果，而顧客換領係二元指標。二元模型估計畀定自變量之後嘅事件概率；佢唔會免受遺漏變量問題或者其他模型設定錯誤影響。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Digital Marketing Dilemma
+  kicker_zh: 数字营销困局
+  kicker_zh_hk: 數碼行銷困局
+  title_en: Will the Commuter Redeem the Ten-Dollar Voucher?
+  title_zh: 早高峰上班族究竟会不会核销这张十元券？
+  title_zh_hk: 朝早返工客到底會唔會用呢張十蚊券？
+  en: 'At 7:30 AM, Metro Coffee sends a ten-dollar breakfast voucher to ten thousand mobile-app users commuting through Central and Wan Chai. Store cup volume is a count, but each customer outcome is binary: the voucher is redeemed or it is not. How should a model represent this yes-or-no business outcome?'
+  zh: 清晨七点半，Metro Coffee 向经过中环与湾仔的一万名手机 App 用户发送十元早餐优惠券。门店出杯量是计数，但每名顾客的结果是二元的：优惠券要么被核销，要么没有被核销。模型应如何表示这种是或否的业务结果？
+  zh_hk: 朝早七點半，Metro Coffee 向經過中環同灣仔嘅一萬名手機 App 用戶發送十蚊早餐優惠券。門市出杯量係計數，但每個顧客嘅結果係二元：張券一係被換領，一係冇被換領。模型應該點樣表示呢種係或唔係嘅商業結果？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Y_i in {0, 1} and E[Y_i | X_i] = P(Y_i = 1 | X_i)
+  formula_zh: 二元因变量：Y_i 取值 {0, 1} 且 E[Y_i | X_i] = P(Y_i = 1 | X_i)
+  formula_zh_hk: 二元因變量：Y_i 取值 {0, 1} 兼且 E[Y_i | X_i] = P(Y_i = 1 | X_i)
+  formula_tex: Y_i \in \{0, 1\} \implies E[Y_i \mid X_i] = 1 \cdot P(Y_i = 1 \mid X_i) + 0 \cdot P(Y_i = 0 \mid X_i) = P(Y_i = 1 \mid X_i)
+  s1_en: 'A binary dependent variable Y takes only two discrete values: one if the target event occurs, and zero if it does not. In our mobile app ledger, Y equals one if the commuter redeems the voucher, and zero if it expires.'
+  s1_zh: 二元因变量 Y 仅取两个离散数值：若目标事件发生取值为 1，未发生则为 0。在我们的手机 App 台账中，通勤客若核销优惠券则 Y 等于 1，若卡券过期作废则 Y 等于 0。
+  s1_zh_hk: 二元因變量 Y 淨係取兩個離散數值：如果目標事件發生就攞 1，冇發生就攞 0。喺我哋嘅手機 App 台賬入面，返工客如果換領咗優惠券 Y 就等於 1，如果過期作廢 Y 就等於 0。
+  s2_en: Because Y is a Bernoulli random variable, its mathematical expectation conditional on predictors X collapses directly into the probability of success. Our modeling goal shifts from predicting physical volume to estimating bounded conditional probabilities.
+  s2_zh: 由于 Y 属于伯努利随机变量，在给定自变量 X 条件下它的数学期望，直接简化为成功事件发生的概率。我们的建模目标由此从预测物理数量，转变为估算受边界约束的条件概率。
+  s2_zh_hk: 因為 Y 屬於伯努利隨機變量，喺給定自變量 X 條件下佢嘅數學期望，直接簡化為成功事件發生嘅概率。我哋嘅建模目標由預測實質出杯數量，轉變為估算受邊界約束嘅條件概率。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: The Latent Threshold Mechanism
+  left_zh: 潜在效用阈值机制
+  right_en: The Probability Imperative
+  right_zh: 概率建模的核心铁律
+  s1_en: 'A latent-threshold story is one way to motivate a binary choice model: unobserved net utility may depend on time pressure, preferences, and savings, and the observed outcome equals one when that utility crosses a threshold. The latent variable is a modeling device, not directly observed evidence about an individual customer.'
+  s1_zh: 潜在阈值机制是解释二元选择模型的一种方式：不可观测的净效用可能取决于时间压力、偏好与节省金额，当净效用越过阈值时，观测结果记为 1。潜在变量是建模工具，并不是有关单个顾客的直接观测证据。
+  s1_zh_hk: 潛在門檻機制係解釋二元選擇模型嘅一種方式：不可觀測嘅淨效用可能取決於時間壓力、偏好同節省金額，當淨效用越過門檻時，觀測結果記做 1。潛在變量係建模工具，唔係關於單個顧客嘅直接觀測證據。
+  s2_en: Cup volume can take many count values, whereas a customer-level redemption indicator takes only zero or one. The conditional mean of that indicator is therefore a probability, even though the realized outcome remains discrete.
+  s2_zh: 出杯量可以取多个计数值，而顾客层面的核销指标只能取 0 或 1。因此，该指标的条件均值是概率，尽管实际结果仍然是离散的。
+  s2_zh_hk: 出杯量可以有多個計數值，而顧客層面嘅換領指標只可以係 0 或 1。所以，個指標嘅條件平均值係概率，雖然實際結果仍然係離散嘅。
+  s3_en: A probability model should deliver values between zero and one. This requirement motivates bounded-response models, but it does not by itself establish which model is best; calibration, discrimination, specification, and validation still matter.
+  s3_zh: 概率模型应输出 0 与 1 之间的数值。这一要求说明需要使用有界响应模型，但本身并不能决定哪一种模型最佳；仍需检查校准、区分能力、模型设定与验证表现。
+  s3_zh_hk: 概率模型應該輸出 0 同 1 之間嘅數值。呢個要求說明需要使用有界響應模型，但本身唔能夠決定邊一種模型最好；仍然要檢查校準、區分能力、模型設定同驗證表現。
+  left_zh_hk: 潛在效用門檻機制
+  right_zh_hk: 概率建模嘅核心鐵律
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Extract Customer Log
+  step1_zh: 调取用户行为日志
+  step2_en: Define Binary Response
+  step2_zh: 定义二元响应变量
+  step3_en: Map Probability Target
+  step3_zh: 锚定概率预测目标
+  s1_en: 'Step one: Use the supplied example of 10,000 customers who received the 7:30 AM voucher. Candidate predictors include historical spend, days since the last visit, and a Central-work-location indicator.'
+  s1_zh: 第一步：使用给定的一万名在早上七点半收到优惠券的顾客示例。候选自变量包括历史消费金额、距上次到店天数，以及是否在中环工作的指标。
+  s1_zh_hk: 第一步：使用畀定嘅一萬名喺朝早七點半收到優惠券嘅顧客例子。候選自變量包括歷史消費金額、距離上次到店日數，同埋係咪喺中環工作嘅指標。
+  s2_en: 'Step two: Code redemption before 10:00 AM as Y equals one and non-redemption as Y equals zero. In the supplied example, 2,400 of 10,000 customers redeem, so the sample redemption rate is 24 percent.'
+  s2_zh: 第二步：将在上午十点前核销编码为 Y 等于 1，未核销编码为 Y 等于 0。在给定示例中，一万名顾客有 2,400 人核销，因此样本核销率为 24%。
+  s2_zh_hk: 第二步：將喺朝早十點前換領編碼做 Y 等於 1，冇換領編碼做 Y 等於 0。喺畀定例子入面，一萬名顧客有 2,400 人換領，所以樣本換領率係 24%。
+  s3_en: 'Step three: Define p_i as the conditional probability that customer i redeems, given the included predictors. The aim is to estimate probabilities for defined customer profiles, not to claim certainty about any one person.'
+  s3_zh: 第三步：将 p_i 定义为在给定模型所含自变量后，顾客 i 核销优惠券的条件概率。目标是估计特定顾客画像的概率，而不是断言任何个人必然采取某种行为。
+  s3_zh_hk: 第三步：將 p_i 定義做喺畀定模型所含自變量之後，顧客 i 換領優惠券嘅條件概率。目標係估計特定顧客背景嘅概率，而唔係斷言任何個人一定會採取某種行為。
+  step1_zh_hk: 提取用戶行為日誌
+  step2_zh_hk: 定義二元響應變量
+  step3_zh_hk: 錨定概率預測目標
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Why Do Discrete Choices Break OLS?
+  q1_zh: 离散选择为何会挑战普通最小二乘法？
+  q2_en: 'Audit Rule: Model Probabilities, Not Physical Counts'
+  q2_zh: 审计准则：二元抉择审概率，切莫混同连续量
+  s1_en: A binary business outcome takes two coded values, but its conditional mean is a probability. This links observed yes-or-no choices to probability modeling without treating the realized outcome as continuous.
+  s1_zh: 二元业务结果只有两个编码值，但其条件均值是一个概率。这将观测到的是或否选择与概率建模联系起来，而不把实际结果视为连续变量。
+  s1_zh_hk: 二元商業結果只有兩個編碼值，但條件平均值係一個概率。呢個將觀測到嘅係或唔係選擇同概率建模連結起來，而唔會將實際結果當成連續變量。
+  s2_en: 'Decision rule: define the event, coding window, unit of analysis, and predictor information before fitting the model. Then evaluate whether predicted probabilities are valid and useful for the intended decision.'
+  s2_zh: 决策规则：拟合模型前，应先定义事件、编码时间窗口、分析单位与可用自变量信息。之后再评估预测概率是否有效，并适合预定决策。
+  s2_zh_hk: 決策規則：擬合模型之前，要先定義事件、編碼時間窗口、分析單位同可用自變量信息。之後再評估預測概率係咪有效，同埋適唔適合預定決定。
+  s3_en: In the supplied example, 2,400 of 10,000 customers redeem, giving a sample rate of 24 percent. Individual conditional probabilities may differ from that baseline because customer predictors differ.
+  s3_zh: 在给定示例中，一万名顾客有 2,400 人核销，样本核销率为 24%。由于顾客自变量不同，个人条件概率可能与该基准率不同。
+  s3_zh_hk: 喺畀定例子入面，一萬名顧客有 2,400 人換領，樣本換領率係 24%。由於顧客自變量唔同，個人條件概率可能同個基準率唔同。
+  q1_zh_hk: 離散選擇點解會挑戰普通最小二乘法？
+  q2_zh_hk: 審計準則：二元抉擇審概率，切莫混同連續量

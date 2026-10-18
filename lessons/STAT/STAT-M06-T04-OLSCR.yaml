@@ -1,0 +1,201 @@
+id: STAT-M06-T04-OLSCR
+course: STAT-M06
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The Ordinary Least Squares Criterion: Choosing the Line with Minimum Squared Error'
+title_zh: 普通最小二乘准则：选择误差平方和最小的直线
+title_zh_hk: 普通最小二乘準則：選擇誤差平方和最細嘅直線
+objective_en: Define fitted values and residuals, formulate the Ordinary Least Squares objective, explain why squared residuals
+  prevent cancellation and weight large misses more heavily, compare candidate lines by SSE, and state the zero-sum residual
+  property only for an OLS model that includes an intercept.
+objective_zh: 定义拟合值与残差，构建普通最小二乘目标函数，解释残差平方为何能防止正负抵消并对大偏差赋予更高权重，利用 SSE 比较候选直线，并将残差和为零的性质限定于包含截距的 OLS 模型。
+objective_zh_hk: 定義擬合值同殘差，構建普通最小二乘目標函數，解釋殘差平方點解可以防止正負抵消並對大偏差賦予更高權重，利用 SSE 比較候選直線，並將殘差和為零嘅性質限定於包含截距嘅 OLS 模型。
+glossary:
+- en: Ordinary Least Squares
+  zh: 普通最小二乘法
+  zh_hk: 普通最小二乘法
+  lock: true
+- en: Residual
+  zh: 残差
+  zh_hk: 殘差
+  lock: true
+- en: Fitted Value
+  zh: 拟合值
+  zh_hk: 擬合值
+  lock: true
+- en: Sum of Squared Errors
+  zh: 误差平方和
+  zh_hk: 誤差平方和
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why does OLS minimize squared residuals rather than the sum of raw residuals?
+  question_zh: 为什么普通最小二乘法（OLS）准则是最小化残差平方和，而不是最小化原始残差之和？
+  question_zh_hk: 點解普通最小二乘法（OLS）準則係將殘差平方和最小化，而唔係將原始殘差之和最小化？
+  options_en:
+  - 'A: Positive and negative raw residuals can cancel, while squaring preserves every miss and assigns more weight to larger
+    absolute residuals'
+  - 'B: Squaring residuals guarantees that the estimated slope coefficient is always positive'
+  - 'C: Raw residuals make it impossible to compute the sample mean of the dependent variable'
+  - 'D: Squaring residuals eliminates the need for collecting sample observations'
+  options_zh:
+  - 'A: 原始残差的正负预测偏差会相互抵消为零，无法惩罚预测失误'
+  - 'B: 对残差取平方可以保证估计出的斜率系数恒为正数'
+  - 'C: 原始残差会导致无法计算因变量的样本算术平均值'
+  - 'D: 对残差取平方后便不再需要在实际运营中收集样本观测值'
+  options_zh_hk:
+  - 'A: 原始殘差嘅正負預測偏差會互相抵消變成零，無法懲罰預測失誤'
+  - 'B: 對殘差取平方可以保證計出嚟嘅斜率系數一定係正數'
+  - 'C: 原始殘差會搞到冇辦法計出因變量嘅樣本算術平均值'
+  - 'D: 對殘差取平方之後就唔再需要喺實際營運入面收集樣本數據'
+  answer: A
+  explanation_en: Raw residual cancellation does not measure fit. Squaring produces nonnegative contributions and makes large
+    misses contribute disproportionately more to SSE.
+  explanation_zh: 若直接对原始残差求和，正向过高预测与负向过低预测会互相抵消，导致严重偏离的错误拟合线显得完美。平方既能防止相互抵消，又能重罚大额偏差。
+  explanation_zh_hk: 如果直接將原始殘差加埋，高估同低估嘅誤差會互相抵消，令一條錯到離譜嘅擬合線望落好似好完美。取平方既可以防止抵消，又可以重罰大額偏差。
+- id: Q2
+  type: multiple_choice
+  question_en: Actual demand is 390 kg and the fitted value is 360 kg. What are the residual and squared-error contribution?
+  question_zh: 在观塘中央烘焙厂，实际熟豆需求为 390 公斤。若预测线给出的拟合值为 360 公斤，其残差 e_i 与对应的平方误差贡献 e_i^2 分别是多少？
+  question_zh_hk: 喺觀塘中央烘焙廠，實際熟豆需求係 390 公斤。如果預測線畀出嘅擬合值係 360 公斤，計出嚟嘅殘差 e_i 同埋平方誤差貢獻 e_i^2 分別係幾多？
+  options_en:
+  - 'A: e_i = -30 kg; e_i^2 = -900 kg^2'
+  - 'B: e_i = +30 kg; e_i^2 = 900 kg^2'
+  - 'C: e_i = +30 kg; e_i^2 = 60 kg^2'
+  - 'D: e_i = +750 kg; e_i^2 = 1,440 kg^2'
+  options_zh:
+  - 'A: e_i = -30 公斤；e_i^2 = -900 公斤^2'
+  - 'B: e_i = +30 公斤；e_i^2 = 900 公斤^2'
+  - 'C: e_i = +30 公斤；e_i^2 = 60 公斤^2'
+  - 'D: e_i = +750 公斤；e_i^2 = 1,440 公斤^2'
+  options_zh_hk:
+  - 'A: e_i = -30 公斤；e_i^2 = -900 公斤^2'
+  - 'B: e_i = +30 公斤；e_i^2 = 900 公斤^2'
+  - 'C: e_i = +30 公斤；e_i^2 = 60 公斤^2'
+  - 'D: e_i = +750 公斤；e_i^2 = 1,440 公斤^2'
+  answer: B
+  explanation_en: 'Residual equals actual minus fitted: 390 - 360 = +30 kg. Its squared contribution is 30 squared, or 900
+    kg^2.'
+  explanation_zh: 残差 e_i = Y_i - Y_hat_i = 390 - 360 = +30 公斤。平方误差贡献为 (+30)^2 = 900 公斤^2。
+  explanation_zh_hk: 殘差 e_i = Y_i - Y_hat_i = 390 - 360 = +30 公斤。平方誤差貢獻係 (+30)^2 = 900 公斤^2。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  title_en: Which candidate line makes the smallest total squared miss?
+  title_zh: 哪条候选直线产生最小的总平方偏差？
+  title_zh_hk: 邊條候選直線產生最細嘅總平方偏差？
+  en: 'Metro Coffee is evaluating assumed weekly demand forecasts for a roasting facility. Many straight lines can be drawn
+    through a demand scatter plot, and each line produces different fitted values and residuals. Ordinary Least Squares supplies
+    a precise selection rule: among the candidate intercept-and-slope combinations, choose the line with the smallest sum
+    of squared vertical residuals.'
+  zh: 都市咖啡正在评估一家烘焙设施的假设每周需求预测。需求散点图上可以画出许多直线，每条线都会产生不同的拟合值与残差。普通最小二乘法提供明确选择规则：在候选截距与斜率组合中，选择纵向残差平方和最小的直线。
+  zh_hk: 都市咖啡正評估一間烘焙設施嘅假設每週需求預測。需求散點圖上可以畫出好多直線，每條線都會產生唔同嘅擬合值同殘差。普通最小二乘法提供明確選擇規則：喺候選截距同斜率組合入面，選擇縱向殘差平方和最細嘅直線。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Y-hat_i = b_0 + b_1 X_i; e_i = Y_i - Y-hat_i; choose b_0, b_1 to minimize SSE = Sum(e_i^2)
+  formula_zh: Y-hat_i = b_0 + b_1 X_i；e_i = Y_i - Y-hat_i；选择 b_0、b_1 使 SSE = Σe_i^2 最小
+  formula_zh_hk: Y-hat_i = b_0 + b_1 X_i；e_i = Y_i - Y-hat_i；選擇 b_0、b_1 令 SSE = Σe_i^2 最細
+  formula_tex: \hat Y_i=b_0+b_1X_i,\quad e_i=Y_i-\hat Y_i,\quad \min_{b_0,b_1}\sum_{i=1}^{n}e_i^2
+  s1_en: For observation i, the fitted value is the line’s predicted Y at X_i. The residual is actual minus fitted, so a positive
+    residual means the observation lies above the line and a negative residual means it lies below. These are vertical, outcome-unit
+    discrepancies.
+  s1_zh: 对于观测 i，拟合值是直线在 X_i 处预测的 Y。残差等于实际值减拟合值，因此正残差表示观测位于直线上方，负残差表示位于下方。残差是以结果变量单位计量的纵向偏差。
+  s1_zh_hk: 對於觀測 i，擬合值係直線喺 X_i 嗰度預測嘅 Y。殘差等於實際值減擬合值，所以正殘差表示觀測位於直線上方，負殘差表示位於下方。殘差係以結果變量單位量度嘅縱向偏差。
+  s2_en: OLS chooses the intercept and slope that minimize SSE over the observed sample. Squaring makes every contribution
+    nonnegative and gives larger absolute residuals disproportionately more weight. The criterion is mathematical; whether
+    squared error matches the organization’s real decision loss is a separate question.
+  s2_zh: OLS 选择使观测样本 SSE 最小的截距与斜率。平方使每项贡献均为非负，并赋予绝对值较大的残差更高权重。该准则是数学目标；平方误差是否匹配组织的真实决策损失，是另一项问题。
+  s2_zh_hk: OLS 選擇令觀測樣本 SSE 最細嘅截距同斜率。平方令每項貢獻都係非負，並賦予絕對值較大嘅殘差更高權重。呢個準則係數學目標；平方誤差係咪匹配組織嘅真實決策損失，係另一項問題。
+  title_en: OLS minimizes the sum of squared vertical residuals
+  title_zh: OLS 最小化纵向残差平方和
+  title_zh_hk: OLS 將縱向殘差平方和最小化
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  left_en: Why square residuals?
+  left_zh: 为什么平方残差？
+  right_en: What does the criterion imply?
+  right_zh: 该准则意味着什么？
+  s1_en: Summing raw residuals is not a useful fit criterion because positive and negative misses can cancel. With an intercept,
+    the OLS first-order condition actually makes their sum zero at the fitted solution, even when individual errors are large.
+  s1_zh: 原始残差之和不是有用的拟合准则，因为正负偏差会互相抵消。对于含截距的 OLS，拟合解的一阶条件甚至会使残差总和为零，即使个别误差仍然很大。
+  s1_zh_hk: 原始殘差之和唔係有用嘅擬合準則，因為正負偏差會互相抵消。對於含截距嘅 OLS，擬合解嘅一階條件甚至會令殘差總和係零，即使個別誤差仍然好大。
+  s2_en: A residual of 30 contributes 900 squared units, while a residual of 10 contributes 100. Thus one 30-unit miss contributes
+    as much SSE as nine 10-unit misses, not three. This makes OLS responsive to large discrepancies and sensitive to influential
+    outliers.
+  s2_zh: 残差 30 贡献 900 个平方单位，残差 10 贡献 100。因此，一个 30 单位偏差对 SSE 的贡献等于九个 10 单位偏差，而不是三个。这使 OLS 重视大偏差，也对强影响离群点敏感。
+  s2_zh_hk: 殘差 30 貢獻 900 個平方單位，殘差 10 貢獻 100。所以，一個 30 單位偏差對 SSE 嘅貢獻等於九個 10 單位偏差，而唔係三個。呢個令 OLS 重視大偏差，亦對強影響離群點敏感。
+  s3_en: When the model includes an intercept, OLS residuals sum to zero and the fitted line passes through the sample centroid.
+    Those are algebraic properties of the fitted sample, not evidence that the model is unbiased, causal, correctly specified,
+    or operationally optimal.
+  s3_zh: 当模型包含截距时，OLS 残差和为零，拟合线经过样本质心。这些是样本拟合的代数性质，并不能证明模型无偏、具有因果性、设定正确或在经营上最优。
+  s3_zh_hk: 當模型包含截距嗰陣，OLS 殘差和係零，擬合線經過樣本質心。呢啲係樣本擬合嘅代數性質，並唔可以證明模型無偏、具有因果性、設定正確或者喺營運上最優。
+  left_zh_hk: 點解要平方殘差？
+  right_zh_hk: 呢個準則意味住咩？
+  title_en: Squaring prevents cancellation but increases outlier sensitivity
+  title_zh: 平方防止正负抵消，但提高对离群点的敏感性
+  title_zh_hk: 平方防止正負抵消，但提高對離群點嘅敏感性
+- id: ledger
+  visual: steps
+  seconds: 38
+  step1_en: 'Actual demand: 310 kg and 420 kg; Rule A predicts 365 kg for both observations'
+  step1_zh: 实际需求：310 公斤与 420 公斤；规则 A 对两个观测均预测 365 公斤
+  step2_en: 'Rule A residuals: -55, +55; SSE_A = 55^2 + 55^2 = 6,050 kg^2'
+  step2_zh: 规则 A 残差：-55、+55；SSE_A = 55^2 + 55^2 = 6,050 公斤^2
+  step3_en: Rule B predicts 300 kg and 400 kg; residuals 10, 20; SSE_B = 100 + 400 = 500 kg^2, so B fits these observations
+    better
+  step3_zh: 规则 B 预测 300 与 400 公斤；残差为 10、20；SSE_B = 100 + 400 = 500 公斤^2，因此 B 对这些观测拟合更好
+  s1_en: For illustration, assume two observed demand values and two candidate forecasting rules. These are teaching assumptions,
+    not verified production, inventory, wastage, or branch-order records. Rule A assigns the common mean of 365 kilograms
+    to both observations.
+  s1_zh: 作为示例，假设有两个需求观测及两项候选预测规则。这些数字是教学假设，并非已核实的生产、库存、损耗或门店订货记录。规则 A 对两个观测都采用共同均值 365 公斤。
+  s1_zh_hk: 作為例子，假設有兩個需求觀測同兩項候選預測規則。呢啲數字係教學假設，唔係已核實嘅生產、庫存、損耗或者門市訂貨記錄。規則 A 對兩個觀測都採用共同平均數 365 公斤。
+  s2_en: Rule A’s residuals cancel in raw form, but its SSE is 6,050 kilograms squared. This shows why a zero residual sum
+    does not mean a line fits well. The squared criterion retains the size of both misses.
+  s2_zh: 规则 A 的原始残差互相抵消，但 SSE 为 6,050 公斤平方。这说明残差和为零并不表示直线拟合良好；平方准则保留了两个偏差的大小。
+  s2_zh_hk: 規則 A 嘅原始殘差互相抵消，但 SSE 係 6,050 公斤平方。呢個說明殘差和係零並唔表示直線擬合良好；平方準則保留咗兩個偏差嘅大小。
+  s3_en: Rule B has residuals 10 and 20 kilograms and SSE 500 kilograms squared, so it fits these two observations better
+    than Rule A. An OLS fit searches all eligible intercept-and-slope combinations for the minimum SSE, not merely these two
+    candidates.
+  s3_zh: 规则 B 的残差为 10 与 20 公斤，SSE 为 500 公斤平方，因此它对这两个观测的拟合优于规则 A。OLS 会在所有符合条件的截距与斜率组合中寻找最小 SSE，而不只是比较这两个候选规则。
+  s3_zh_hk: 規則 B 嘅殘差係 10 同 20 公斤，SSE 係 500 公斤平方，所以佢對呢兩個觀測嘅擬合優於規則 A。OLS 會喺所有符合條件嘅截距同斜率組合入面尋找最細 SSE，而唔只係比較呢兩個候選規則。
+  step1_zh_hk: 實際需求：310 公斤同 420 公斤；規則 A 對兩個觀測都預測 365 公斤
+  step2_zh_hk: 規則 A 殘差：-55、+55；SSE_A = 55^2 + 55^2 = 6,050 公斤^2
+  step3_zh_hk: 規則 B 預測 300 同 400 公斤；殘差係 10、20；SSE_B = 100 + 400 = 500 公斤^2，所以 B 對呢啲觀測擬合得更好
+  title_en: Compare two assumed forecasting rules by SSE
+  title_zh: 利用 SSE 比较两项假设预测规则
+  title_zh_hk: 利用 SSE 比較兩項假設預測規則
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  q1_en: Why are raw residuals not a sufficient fit criterion?
+  q1_zh: 为什么原始残差和不足以作为拟合准则？
+  q2_en: What should accompany an OLS fit audit?
+  q2_zh: 审计 OLS 拟合时还应检查什么？
+  s1_en: Positive and negative residuals can cancel, and with an intercept their fitted-sample sum is zero by construction.
+    SSE instead measures the combined squared size of the vertical misses and provides the OLS optimization target.
+  s1_zh: 正负残差可能抵消；对于含截距模型，其样本残差和按构造就是零。SSE 则衡量纵向偏差平方的合计大小，并构成 OLS 的优化目标。
+  s1_zh_hk: 正負殘差可能抵消；對於含截距模型，佢嘅樣本殘差和按構造就係零。SSE 就量度縱向偏差平方嘅合計大小，並構成 OLS 嘅優化目標。
+  s2_en: Inspect the scatter plot, residual pattern, influential observations, variable definitions, sampling design, functional
+    form, and out-of-sample performance. A smaller in-sample SSE does not establish causation or guarantee lower inventory
+    cost.
+  s2_zh: 应检查散点图、残差图形、强影响观测、变量定义、抽样设计、函数形式与样本外表现。较小的样本内 SSE 不能证明因果，也不能保证库存成本更低。
+  s2_zh_hk: 應該檢查散點圖、殘差圖形、強影響觀測、變量定義、抽樣設計、函數形式同樣本外表現。較細嘅樣本內 SSE 唔可以證明因果，亦唔可以保證庫存成本更低。
+  s3_en: In the assumed comparison, Rule B has SSE 500 versus Rule A’s 6,050, so B fits the two observed outcomes better.
+    The conclusion is limited to those observations and that squared-error criterion.
+  s3_zh: 在假设比较中，规则 B 的 SSE 为 500，规则 A 为 6,050，因此 B 对两个观测结果拟合更好。该结论仅限于这些观测与平方误差准则。
+  s3_zh_hk: 喺假設比較入面，規則 B 嘅 SSE 係 500，規則 A 係 6,050，所以 B 對兩個觀測結果擬合得更好。呢個結論只限於呢啲觀測同平方誤差準則。
+  q1_zh_hk: 點解原始殘差和不足以作為擬合準則？
+  q2_zh_hk: 審計 OLS 擬合嗰陣仲應該檢查咩？
+  title_en: Minimum sample SSE is a fitting rule, not a guarantee of good decisions
+  title_zh: 最小样本 SSE 是拟合规则，不是良好决策保证
+  title_zh_hk: 最細樣本 SSE 係擬合規則，唔係良好決策保證

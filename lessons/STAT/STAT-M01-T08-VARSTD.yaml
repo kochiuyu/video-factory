@@ -1,0 +1,574 @@
+id: STAT-M01-T08-VARSTD
+course: statistics
+course_en: Business Statistics
+course_zh: 商务统计
+course_zh_hk: 商務統計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 776
+title_en: What are variance and standard deviation?
+title_zh: 什么是方差和标准差？
+title_zh_hk: 咩係方差同標準差？
+objective_en: Explain how two shops can have the same average sales but different daily variation, and why that calls for different plans. Calculate variance and standard deviation for the five days, and explain what these results can and cannot tell a manager.
+objective_zh: 解释为什么两家店的平均销量相同、每天的波动却不同，以及为什么这需要不同的计划。计算这五天的方差和标准差，并说明这些结果能帮助经理了解什么、不能决定什么。
+objective_zh_hk: 解釋點解兩間店嘅平均銷量相同、每日嘅波動卻唔同，以及點解呢個需要唔同嘅計劃。計算呢五日嘅方差同標準差，再講清楚呢啲結果可以幫經理了解啲乜、唔可以決定啲乜。
+glossary:
+- en: variance
+  zh: 方差
+  zh_hk: 方差
+  lock: true
+- en: deviation
+  zh: 偏差
+  zh_hk: 偏差
+  lock: true
+- en: standard deviation
+  zh: 标准差
+  zh_hk: 標準差
+  lock: true
+- en: square root
+  zh: 平方根
+  zh_hk: 平方根
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Two shops have the same average daily sales. Why might a manager still need the standard deviation?
+  question_zh: 两家店的日均销量相同。为什么经理仍然可能需要标准差？
+  question_zh_hk: 兩間店嘅每日平均銷量相同。點解經理仍然可能需要標準差？
+  options_en:
+  - 'A: To summarise how spread out daily sales are around the average.'
+  - 'B: To replace every day with the average.'
+  - 'C: To prove that tomorrow will equal the average.'
+  - 'D: To set the exact number of staff with no other information.'
+  options_zh:
+  - 'A: 概括每天的销量在平均数周围有多分散。'
+  - 'B: 用平均数替换每一天。'
+  - 'C: 证明明天一定等于平均数。'
+  - 'D: 不需要其他信息就定出精确人数。'
+  options_zh_hk:
+  - 'A: 概括每日嘅銷量喺平均數附近有幾分散。'
+  - 'B: 用平均數取代每一日。'
+  - 'C: 證明聽日一定等於平均數。'
+  - 'D: 唔需要其他資料就定出精確人數。'
+  answer: A
+  explanation_en: The average is total sales divided by the number of days. Standard deviation summarises the spread around that average. It does not predict tomorrow's sales or set staffing by itself.
+  explanation_zh: 平均数是总销量除以天数。标准差概括销量在平均数周围有多分散。它不能预测明天的销量，也不能单独决定人手。
+  explanation_zh_hk: 平均數係總銷量除以日數。標準差概括銷量喺平均數附近有幾分散。佢唔可以預測聽日嘅銷量，亦唔可以單獨決定人手。
+- id: Q2
+  type: multiple_choice
+  question_en: A's standard deviation is about 47 cups; B's is 10 cups. Both average 365 cups a day. What should management do?
+  question_zh: A店的标准差约47杯，B店是10杯。两家平均每天都卖365杯。管理层应该怎么做？
+  question_zh_hk: A店嘅標準差大約47杯，B店係10杯。兩間平均每日都賣365杯。管理層應該點做？
+  options_en:
+  - 'A: Check whether A needs more staffing flexibility, using preparation time, acceptable waiting time, and staffing costs.'
+  - 'B: Add exactly 47 workers at A.'
+  - 'C: Staff both shops the same way, because both average 365.'
+  - 'D: Treat 47 as the ordinary average of the distances.'
+  options_zh:
+  - 'A: 结合做一杯的时间、可接受的等待时间和人手成本，检查A店是否需要更灵活的排班。'
+  - 'B: 在A店正好多安排47人。'
+  - 'C: 两家平均都是365，所以人手相同。'
+  - 'D: 把47当成这些距离的普通平均数。'
+  options_zh_hk:
+  - 'A: 配合整一杯嘅時間、可接受嘅等候時間同人手成本，檢查A店係咪需要更靈活嘅排班。'
+  - 'B: 喺A店啱啱好多安排47人。'
+  - 'C: 兩間平均都係365，所以人手相同。'
+  - 'D: 將47當成呢啲距離嘅普通平均數。'
+  answer: A
+  explanation_en: 'A''s larger standard deviation indicates more spread in these five days. It prompts a check of staffing flexibility, not an order to add 47 people. Standard deviation is not the ordinary average of the distances: A''s distances are 65, 35, 0, 35, and 65 cups, whose ordinary average is 40 cups, not 47.'
+  explanation_zh: A店的标准差更大，表示这五天的销量更分散。它提醒我们检查排班是否需要更灵活，不是增加47人的指令。标准差也不是距离的普通平均数：A店的距离是65、35、0、35和65杯，普通平均数是40杯，不是47杯。
+  explanation_zh_hk: A店嘅標準差較大，代表呢五日嘅銷量比較分散。佢提醒我哋檢查排班係咪需要更靈活，唔係增加47個人嘅指令。標準差亦唔係距離嘅普通平均數：A店嘅距離係65、35、0、35同65杯，普通平均數係40杯，唔係47杯。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 48
+  kicker: The Question
+  kicker_en: The Question
+  kicker_zh: 业务问题
+  kicker_zh_hk: 業務問題
+  title_en: Same average. Different plans.
+  title_zh: 平均相同，计划不同
+  title_zh_hk: 平均相同，計劃唔同
+  en: Imagine you manage two coffee shops. Both averaged 365 cups a day over five weekdays. Same average. But Shop A swings — quiet days and busy days. Shop B stays close to 365. If you give them the same staffing plan, A will be short on its busy day. Same average does not mean the same plan. We need a number for how much each shop swings.
+  zh: 假设你管着两家咖啡店。五个工作日里，两家平均每天都卖365杯。平均数一样。但A店在晃，有清闲的天，也有忙的天。B店每天都靠近365。如果你给两家同一套排班，A店忙的那天会人手不够。平均相同，不表示计划相同。我们需要一个数，来说每家店晃得有多大。
+  zh_hk: 假設你管緊兩間咖啡店。五個平日入面，兩間平均每日都賣365杯。平均數一樣。但A店喺度搖，有清閒嘅日，亦有忙嘅日。B店每日都靠近365。如果你畀兩間同一套排班，A店忙嗰日會人手唔夠。平均相同，唔代表計劃相同。我哋需要一個數，嚟講每間店搖得有幾大。
+- id: average
+  visual: definition_card
+  seconds: 40
+  kicker: The Average
+  kicker_en: The Average
+  kicker_zh: 平均数
+  kicker_zh_hk: 平均數
+  title_en: First, the equal share
+  title_zh: 先算平均份额
+  title_zh_hk: 先計平均份額
+  formula: 'Average = total / number of days
+
+    1,825 / 5 = 365'
+  formula_zh: '平均数 = 合计 / 天数
+
+    1,825 / 5 = 365'
+  formula_zh_hk: '平均數 = 合計 / 日數
+
+    1,825 / 5 = 365'
+  s1_en: "So what number says how much a shop swings? First we need the 365 we are swinging around. Suppose the five days add to 1,825 cups. We will see those days in a moment. The average is the total shared equally. 1,825 divided by 5 is 365 cups a day."
+  s1_zh: "那么哪个数能说一家店晃得有多大？先要有我们围着转的那个365。假设这五天加起来是1,825杯。等一下我们会看到这五天。平均数就是把总数平均分。1,825除以5，等于每天365杯。"
+  s1_zh_hk: "咁邊個數可以話一間店搖得有幾大？先要有我哋圍住轉嗰個365。假設呢五日加起嚟係1,825杯。等陣我哋會見到呢五日。平均數就係將總數平均分。1,825除以5，等於每日365杯。"
+  s2_en: "That does not mean either shop sold 365 every day. It is one reference number, like splitting a bill equally. Next we set each day's cups beside 365. The shop that stays close can keep a steady plan. The shop that swings needs a different one."
+  s2_zh: "这不表示两家店每天真的都卖了365杯。它只是一个用来比较的数，就好像把账单平均分摊。接下来，把每天的杯数放在365旁边。离得近的那家可以维持一套稳定的计划。晃得远的那家需要另一套。"
+  s2_zh_hk: "呢個唔代表兩間店每日真係都賣咗365杯。佢只係一個用嚟比較嘅數，就好似將帳單平均分攤。跟住，將每日嘅杯數放喺365旁邊。離得近嗰間可以維持一套穩定嘅計劃。搖得遠嗰間需要另一套。"
+- id: data
+  visual: series
+  reveal: cells
+  seconds: 50
+  cols: 5
+  kicker: Five Days
+  kicker_en: Five Days
+  kicker_zh: 五天
+  kicker_zh_hk: 五日
+  title_en: Same average. Different days.
+  title_zh: 平均相同，每天不同
+  title_zh_hk: 平均相同，每日唔同
+  row1_en: Shop A
+  row1_zh: A店
+  row1_zh_hk: A店
+  row2_en: Shop B
+  row2_zh: B店
+  row2_zh_hk: B店
+  col1_en: Day 1
+  col1_zh: 第1天
+  col1_zh_hk: 第1日
+  col2_en: Day 2
+  col2_zh: 第2天
+  col2_zh_hk: 第2日
+  col3_en: Day 3
+  col3_zh: 第3天
+  col3_zh_hk: 第3日
+  col4_en: Day 4
+  col4_zh: 第4天
+  col4_zh_hk: 第4日
+  col5_en: Day 5
+  col5_zh: 第5天
+  col5_zh_hk: 第5日
+  c11: "300"
+  c12: "330"
+  c13: "365"
+  c14: "400"
+  c15: "430"
+  c21: "350"
+  c22: "360"
+  c23: "365"
+  c24: "370"
+  c25: "380"
+  footer_en: Both averages = 365
+  footer_zh: 两个平均数都是 365
+  footer_zh_hk: 兩個平均數都係 365
+  s1_en: "Here are the five days for Shop A, in cups sold. Day 1 sold 300. Day 2 sold 330. Day 3 sold 365. Day 4 sold 400. Day 5 sold 430."
+  s1_zh: "这是A店五天卖出的杯数。第1天卖了300杯。第2天卖了330杯。第3天卖了365杯。第4天卖了400杯。第5天卖了430杯。"
+  s1_zh_hk: "呢個係A店五日賣出嚟嘅杯數。第1日賣咗300杯。第2日賣咗330杯。第3日賣咗365杯。第4日賣咗400杯。第5日賣咗430杯。"
+  s2_en: "Those five add to 1,825, so the average is 365, as we just used. The quietest day is 65 cups below, and the busiest is 65 above."
+  s2_zh: "这五天加起来是1,825，所以平均数是365，就是我们刚才用的那个。最清闲的那天低了65杯，最忙的那天高了65杯。"
+  s2_zh_hk: "呢五日加起嚟係1,825，所以平均數係365，就係我哋頭先用嗰個。最清閒嗰日低咗65杯，最忙嗰日高咗65杯。"
+  s3_en: "Shop B sold 350, 360, 365, 370, and 380. Same total, same average. But its quietest and busiest days are only 15 cups away."
+  s3_zh: "B店卖了350、360、365、370和380杯。总数一样，平均数一样。但它最清闲和最忙的两天，离平均数都只有15杯。"
+  s3_zh_hk: "B店賣咗350、360、365、370同380杯。總數一樣，平均數一樣。但佢最清閒同最忙嗰兩日，離平均數都只有15杯。"
+- id: plans
+  visual: two_column
+  seconds: 46
+  kicker: The Plans
+  kicker_en: The Plans
+  kicker_zh: 两套计划
+  kicker_zh_hk: 兩套計劃
+  title_en: Same average. Not the same plan.
+  title_zh: 平均相同，不是同一套计划
+  title_zh_hk: 平均相同，唔係同一套計劃
+  left_en: "A swings 65 cups. Plan for a busy day."
+  left_zh: "A店晃了65杯。按忙的那天来计划。"
+  left_zh_hk: "A店搖咗65杯。按忙嗰日嚟計劃。"
+  right_en: "B stays within 15. A steadier plan can hold."
+  right_zh: "B店只离了15杯。一套较稳的计划就够。"
+  right_zh_hk: "B店只離咗15杯。一套較穩嘅計劃就夠。"
+  s1_en: "So the averages match, and the days do not. That is the different swing. A moves 65 cups either side of 365. B stays within 15."
+  s1_zh: "所以平均数一样，每天不一样。这就是不同的晃动。A店在365两边各晃了65杯。B店始终离365不超过15杯。"
+  s1_zh_hk: "所以平均數一樣，每日唔一樣。呢個就係唔同嘅搖動。A店喺365兩邊各搖咗65杯。B店始終離365唔超過15杯。"
+  s2_en: "Staff A for a swing. On the busy day it needs more hands, or the queue grows. A steady plan built for 365 will be short."
+  s2_zh: "给A店按晃动来排班。忙的那天需要更多人手，不然队伍会变长。一套按365来的稳定计划会不够。"
+  s2_zh_hk: "畀A店按搖動嚟排班。忙嗰日需要更多人手，唔係隊伍會變長。一套按365嚟嘅穩定計劃會唔夠。"
+  s3_en: "Staff B closer to a steady 365. Its days barely move, so the same plan can hold. Same average, different swing, different plans. Now we need one number that says how big each swing is."
+  s3_zh: "给B店按较稳的365来排班。它的每天几乎不动，所以同一套计划可以撑住。平均相同，晃动不同，计划不同。现在我们需要一个数，来说每次晃动有多大。"
+  s3_zh_hk: "畀B店按較穩嘅365嚟排班。佢嘅每日幾乎唔郁，所以同一套計劃可以撐住。平均相同，搖動唔同，計劃唔同。而家我哋需要一個數，嚟講每次搖動有幾大。"
+- id: distance
+  visual: steps
+  seconds: 50
+  kicker: The Distances
+  kicker_en: The Distances
+  kicker_zh: 距离
+  kicker_zh_hk: 距離
+  title_en: Each day minus 365
+  title_zh: 每天减去365
+  title_zh_hk: 每日減365
+  step1_en: "Day 1: 300 − 365 = −65"
+  step1_zh: "第1天：300 − 365 = −65"
+  step1_zh_hk: "第1日：300 − 365 = −65"
+  step2_en: "Day 2: 330 − 365 = −35"
+  step2_zh: "第2天：330 − 365 = −35"
+  step2_zh_hk: "第2日：330 − 365 = −35"
+  step3_en: "Day 3: 365 − 365 = 0"
+  step3_zh: "第3天：365 − 365 = 0"
+  step3_zh_hk: "第3日：365 − 365 = 0"
+  step4_en: "Day 4: 400 − 365 = +35"
+  step4_zh: "第4天：400 − 365 = +35"
+  step4_zh_hk: "第4日：400 − 365 = +35"
+  step5_en: "Day 5: 430 − 365 = +65"
+  step5_zh: "第5天：430 − 365 = +65"
+  step5_zh_hk: "第5日：430 − 365 = +65"
+  s1_en: "Start with Shop A, the one that needs the flexible plan. Take each day and subtract 365. Write a minus if the day was below, a plus if it was above. Day 1 is 300 minus 365, so minus 65. Sixty-five cups below."
+  s1_zh: "先从A店开始，就是需要灵活计划的那家。用每天的杯数减去365。低于365就写负号，高于365就写正号。第1天是300减365，等于负65。低了65杯。"
+  s1_zh_hk: "先由A店開始，就係需要靈活計劃嗰間。用每日嘅杯數減365。低過365就寫負號，高過365就寫正號。第1日係300減365，等於負65。低咗65杯。"
+  s2_en: "Day 2 is 330 minus 365, so minus 35."
+  s2_zh: "第2天是330减365，等于负35。"
+  s2_zh_hk: "第2日係330減365，等於負35。"
+  s3_en: "Day 3 is exactly 365, so zero. That day matched the average."
+  s3_zh: "第3天正好是365，所以是零。那天和平均数一样。"
+  s3_zh_hk: "第3日啱啱係365，所以係零。嗰日同平均數一樣。"
+  s4_en: "Day 4 is 400 minus 365, so plus 35."
+  s4_zh: "第4天是400减365，等于正35。"
+  s4_zh_hk: "第4日係400減365，等於正35。"
+  s5_en: "Day 5 is 430 minus 365, so plus 65. A minus means the day was quiet. A plus means it was busy. These how-far numbers, with a plus or a minus, are called deviations. The name can wait. The idea is just how far, and which side."
+  s5_zh: "第5天是430减365，等于正65。负号表示那天比较清闲。正号表示那天比较忙。这些“有多远”、带正号或负号的数，叫作偏差。名字可以等一等。意思就是有多远，在哪一边。"
+  s5_zh_hk: "第5日係430減365，等於正65。負號表示嗰日比較清閒。正號表示嗰日比較忙。呢啲「有幾遠」、帶正號或者負號嘅數，叫做偏差。名可以等一等。意思就係有幾遠，喺邊一邊。"
+- id: cancel
+  visual: two_column
+  seconds: 42
+  kicker: Why Not Add
+  kicker_en: Why Not Add
+  kicker_zh: 为什么不能直接加
+  kicker_zh_hk: 點解唔可以直接加
+  title_en: The two sides cancel
+  title_zh: 两边互相抵消
+  title_zh_hk: 兩邊互相抵銷
+  left_en: "Below: 65 + 35 = 100"
+  left_zh: "低于365：65 + 35 = 100"
+  left_zh_hk: "低過365：65 + 35 = 100"
+  right_en: "Above: 35 + 65 = 100"
+  right_zh: "高于365：35 + 65 = 100"
+  right_zh_hk: "高過365：35 + 65 = 100"
+  s1_en: "Can we just add those five how-far numbers to measure the swing? Minus 65, minus 35, zero, plus 35, plus 65."
+  s1_zh: "能不能把这五个“有多远”直接加起来，来衡量晃动？负65、负35、零、正35、正65。"
+  s1_zh_hk: "可唔可以將呢五個「有幾遠」直接加起嚟，嚟量度搖動？負65、負35、零、正35、正65。"
+  s2_en: "The days below pull one way by 100 cups. The days above pull the other way by 100. Think of a seesaw. The two sides balance."
+  s2_zh: "低于365的那几天往一边拉了100杯。高于365的那几天往另一边拉了100杯。可以把它想成一个跷跷板。两边平衡。"
+  s2_zh_hk: "低過365嗰幾日往一邊拉咗100杯。高過365嗰幾日往另一邊拉咗100杯。可以將佢想成一個蹺蹺板。兩邊平衡。"
+  s3_en: "Add them and you get zero. Zero does not mean Shop A did not swing. We already saw the busy day. We need a count in which a day below and a day above do not cancel."
+  s3_zh: "加起来是零。零不表示A店没有晃。我们刚才已经看到了忙的那天。我们需要一种算法，让低于平均数的一天和高于平均数的一天不会互相抵消。"
+  s3_zh_hk: "加起嚟係零。零唔代表A店冇搖。我哋頭先已經見到忙嗰日。我哋需要一種計法，令低過平均數嘅一日同高過平均數嘅一日唔會互相抵銷。"
+- id: square
+  visual: steps
+  seconds: 50
+  kicker: Why Square
+  kicker_en: Why Square
+  kicker_zh: 为什么要平方
+  kicker_zh_hk: 點解要平方
+  title_en: Multiply a number by itself
+  title_zh: 把一个数乘以自己
+  title_zh_hk: 將一個數乘自己
+  step1_en: "3 × 3 = 9. That is 3 squared."
+  step1_zh: "3 × 3 = 9。这就是 3 的平方。"
+  step1_zh_hk: "3 × 3 = 9。呢個就係 3 嘅平方。"
+  step2_en: "−65 × −65 = +4,225"
+  step2_zh: "−65 × −65 = +4,225"
+  step2_zh_hk: "−65 × −65 = +4,225"
+  step3_en: "+65 × +65 = +4,225"
+  step3_zh: "+65 × +65 = +4,225"
+  step3_zh_hk: "+65 × +65 = +4,225"
+  step4_en: "A minus times a minus is a plus"
+  step4_zh: "负数乘负数，得到正数"
+  step4_zh_hk: "負數乘負數，得到正數"
+  s1_en: "We need a count that does not cancel. Here is a small one first. Three times three is 9. We say 3 squared. Squared only means a number times itself."
+  s1_zh: "我们需要一种不会抵消的算法。先看一个小的。3乘3等于9。我们说3的平方。平方只是一个数乘以自己。"
+  s1_zh_hk: "我哋需要一種唔會抵銷嘅計法。先睇一個細嘅。3乘3等於9。我哋話3嘅平方。平方只係一個數乘自己。"
+  s2_en: "Now the quiet day, 65 cups below. Minus 65 times minus 65. A minus times a minus is a plus. The answer is positive 4,225."
+  s2_zh: "现在看清闲的那天，低了65杯。负65乘负65。负数乘负数，得到正数。答案是正4,225。"
+  s2_zh_hk: "而家睇清閒嗰日，低咗65杯。負65乘負65。負數乘負數，得到正數。答案係正4,225。"
+  s3_en: "The busy day is 65 cups above. Plus 65 times plus 65 is also 4,225. Same size, same answer. The minus sign is gone."
+  s3_zh: "忙的那天高了65杯。正65乘正65，也是4,225。距离一样，答案一样。负号没有了。"
+  s3_zh_hk: "忙嗰日高咗65杯。正65乘正65，都係4,225。距離一樣，答案一樣。負號冇咗。"
+  s4_en: "So a day below counts the same as a day above. And a larger distance weighs more. Sixty-five times 65 is 4,225. Thirty-five times 35 is only 1,225. The busy day is not lost."
+  s4_zh: "所以低于平均数的一天和高于平均数的一天算得一样。而且距离大的更重。65乘65是4,225。35乘35只有1,225。忙的那天不会消失。"
+  s4_zh_hk: "所以低過平均數嘅一日同高過平均數嘅一日計得一樣。而且距離大嘅更重。65乘65係4,225。35乘35只有1,225。忙嗰日唔會消失。"
+- id: squares
+  visual: steps
+  seconds: 42
+  kicker: The Five Squares
+  kicker_en: The Five Squares
+  kicker_zh: 五个平方
+  kicker_zh_hk: 五個平方
+  title_en: Multiply every day by itself, then add
+  title_zh: 每一天都乘以自己，再相加
+  title_zh_hk: 每一日都乘自己，再相加
+  step1_en: "65 × 65 = 4,225"
+  step1_zh: "65 × 65 = 4,225"
+  step1_zh_hk: "65 × 65 = 4,225"
+  step2_en: "35 × 35 = 1,225"
+  step2_zh: "35 × 35 = 1,225"
+  step2_zh_hk: "35 × 35 = 1,225"
+  step3_en: "0 × 0 = 0"
+  step3_zh: "0 × 0 = 0"
+  step3_zh_hk: "0 × 0 = 0"
+  step4_en: "Squares: 4,225; 1,225; 0; 1,225; 4,225"
+  step4_zh: "平方：4,225；1,225；0；1,225；4,225"
+  step4_zh_hk: "平方：4,225；1,225；0；1,225；4,225"
+  step5_en: "Sum = 10,900"
+  step5_zh: "和 = 10,900"
+  step5_zh_hk: "和 = 10,900"
+  s1_en: "Now do that for every day at A. We already have the five how-far numbers: minus 65, minus 35, zero, plus 35, and plus 65."
+  s1_zh: "现在对A店的每一天都这样做。我们刚才已经有了五个“有多远”：负65、负35、零、正35和正65。"
+  s1_zh_hk: "而家對A店嘅每一日都咁做。我哋頭先已經有咗五個「有幾遠」：負65、負35、零、正35同正65。"
+  s2_en: "Sixty-five times 65 is 4,225, as we just did. Thirty-five times 35 is 1,225. Zero times zero is zero."
+  s2_zh: "65乘65是4,225，就是刚才算的。35乘35是1,225。零乘零是零。"
+  s2_zh_hk: "65乘65係4,225，就係頭先計嘅。35乘35係1,225。零乘零係零。"
+  s3_en: "The five squares are 4,225, 1,225, zero, 1,225, and 4,225. Add them. 4,225 plus 1,225 plus zero plus 1,225 plus 4,225 is 10,900."
+  s3_zh: "五个平方是4,225、1,225、零、1,225和4,225。把它们加起来。4,225加1,225加零加1,225加4,225，等于10,900。"
+  s3_zh_hk: "五個平方係4,225、1,225、零、1,225同4,225。將佢哋加起嚟。4,225加1,225加零加1,225加4,225，等於10,900。"
+- id: share
+  visual: steps
+  seconds: 40
+  kicker: The Share
+  kicker_en: The Share
+  kicker_zh: 平分
+  kicker_zh_hk: 平分
+  title_en: Share those numbers across the five days
+  title_zh: 把这些数平均分给五天
+  title_zh_hk: 將呢啲數平均分畀五日
+  step1_en: "Sum of squares = 10,900"
+  step1_zh: "平方之和 = 10,900"
+  step1_zh_hk: "平方之和 = 10,900"
+  step2_en: "Five days"
+  step2_zh: "五天"
+  step2_zh_hk: "五日"
+  step3_en: "10,900 / 5 = 2,180"
+  step3_zh: "10,900 / 5 = 2,180"
+  step3_zh_hk: "10,900 / 5 = 2,180"
+  step4_en: "2,180 square cups"
+  step4_zh: "2,180 平方杯"
+  step4_zh_hk: "2,180 平方杯"
+  s1_en: "We have 10,900. That is the total of the times-itself numbers. We are describing these five days, so share it equally, the same way we shared the cups."
+  s1_zh: "我们有了10,900。这是那些“自己乘自己”的总和。我们描述的是这五天，所以把它平均分，就好像刚才平分杯数一样。"
+  s1_zh_hk: "我哋有咗10,900。呢個係嗰啲「自己乘自己」嘅總和。我哋描述嘅係呢五日，所以將佢平均分，就好似頭先平分杯數一樣。"
+  s2_en: "Divide by 5. 10,900 divided by 5 is 2,180."
+  s2_zh: "除以5。10,900除以5等于2,180。"
+  s2_zh_hk: "除以5。10,900除以5等於2,180。"
+  s3_en: "That 2,180 is the average of those times-itself numbers. The unit is cups times cups, because we multiplied. This number has a name."
+  s3_zh: "这个2,180是那些“自己乘自己”的平均数。单位是杯乘杯，因为我们做了乘法。这个数有一个名字。"
+  s3_zh_hk: "呢個2,180係嗰啲「自己乘自己」嘅平均數。單位係杯乘杯，因為我哋做咗乘法。呢個數有一個名。"
+- id: name_var
+  visual: title_card
+  seconds: 36
+  kicker: The Name
+  kicker_en: The Name
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Variance
+  title_zh: 方差
+  title_zh_hk: 方差
+  s1_en: "Variance. That is the name. For Shop A, the variance is 2,180. Cups times cups. A manager cannot staff in that unit. The next card writes the same steps with short names."
+  s1_zh: "方差。这就是那个名字。A店的方差是2,180。杯乘杯。经理没法用这个单位来排班。下一张卡片用简称写下同样的步骤。"
+  s1_zh_hk: "方差。呢個就係嗰個名。A店嘅方差係2,180。杯乘杯。經理冇辦法用呢個單位嚟排班。下一張卡片用簡稱寫低同樣嘅步驟。"
+- id: variance
+  visual: steps
+  seconds: 56
+  kicker: The Formula
+  kicker_en: The Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Nicknames for steps we already did
+  title_zh: 给已经做过的步骤起简称
+  title_zh_hk: 畀已經做過嘅步驟起簡稱
+  step1_en: "Each day is an x. Day 1 is x₁ = 300."
+  step1_zh: "每一天是一个 x。第1天是 x₁ = 300。"
+  step1_zh_hk: "每一日係一個 x。第1日係 x₁ = 300。"
+  step2_en: "The average is μ. Here μ = 365."
+  step2_zh: "平均数是 μ。这里 μ = 365。"
+  step2_zh_hk: "平均數係 μ。呢度 μ = 365。"
+  step3_en: "How far: x − μ. Day 1 was −65."
+  step3_zh: "有多远：x − μ。第1天是 −65。"
+  step3_zh_hk: "有幾遠：x − μ。第1日係 −65。"
+  step4_en: "Σ means add. n is how many days: 5."
+  step4_zh: "Σ 表示相加。n 是有多少天：5。"
+  step4_zh_hk: "Σ 表示相加。n 係有幾多日：5。"
+  step5_en: "Variance σ² = add the squares, then ÷ n"
+  step5_zh: "方差 σ² = 把平方加起来，再 ÷ n"
+  step5_zh_hk: "方差 σ² = 將平方加起嚟，再 ÷ n"
+  s1_en: "The formula is only nicknames for steps we already did. Each day gets a letter x, with a small number. Day 1 is x one, and it is 300 cups. Day 5 is x five."
+  s1_zh: "公式只是给已经做过的步骤起简称。每一天用一个字母 x，带一个小数字。第1天是 x一，是300杯。第5天是 x五。"
+  s1_zh_hk: "公式只係畀已經做過嘅步驟起簡稱。每一日用一個字母 x，帶一個細數字。第1日係 x一，係300杯。第5日係 x五。"
+  s2_en: "The average already has a nickname. The Greek letter mu. Here mu is 365. It is the equal share we used. Nothing new."
+  s2_zh: "平均数已经有简称了。希腊字母 mu。这里 mu 是365。就是我们用过的那个平均份额。没有新东西。"
+  s2_zh_hk: "平均數已經有簡稱。希臘字母 mu。呢度 mu 係365。就係我哋用過嗰個平均份額。冇新嘢。"
+  s3_en: "How far a day sits from the average is x minus mu. For day 1, 300 minus 365, which was minus 65. The little number only says which day."
+  s3_zh: "一天离平均数有多远，就是 x 减去 mu。第1天是300减365，就是负65。小数字只是说哪一天。"
+  s3_zh_hk: "一日離平均數有幾遠，就係 x 減 mu。第1日係300減365，就係負65。細數字只係話邊一日。"
+  s4_en: "We then multiplied that distance by itself. Capital sigma means add every one of those, not just two. n is how many days, not a cup count. Here n is 5."
+  s4_zh: "然后我们把这个距离乘以自己。大写西格玛表示每一个都加，不是只加两个。n 是有多少天，不是杯数。这里 n 是5。"
+  s4_zh_hk: "跟住我哋將呢個距離乘自己。大寫西格瑪表示每一個都加，唔係只加兩個。n 係有幾多日，唔係杯數。呢度 n 係5。"
+  s5_en: "Sigma with a little 2 is the nickname for the variance. In words: add every times-itself number, then divide by n. For A that was 10,900 divided by 5, which is 2,180. Still cups times cups."
+  s5_zh: "带小2的西格玛是方差的简称。用话说：把每一个“自己乘自己”加起来，再除以 n。A店是10,900除以5，等于2,180。单位还是杯乘杯。"
+  s5_zh_hk: "帶細2嘅西格瑪係方差嘅簡稱。用話講：將每一個「自己乘自己」加起嚟，再除以 n。A店係10,900除以5，等於2,180。單位仲係杯乘杯。"
+- id: formula
+  visual: steps
+  seconds: 50
+  kicker: Back to Cups
+  kicker_en: Back to Cups
+  kicker_zh: 回到杯
+  kicker_zh_hk: 返到杯
+  title_en: What number times itself is 2,180?
+  title_zh: 哪个数乘自己等于2,180？
+  title_zh_hk: 邊個數乘自己等於2,180？
+  step1_en: "2,180 is cups times cups"
+  step1_zh: "2,180 是杯乘杯"
+  step1_zh_hk: "2,180 係杯乘杯"
+  step2_en: "10 × 10 = 100"
+  step2_zh: "10 × 10 = 100"
+  step2_zh_hk: "10 × 10 = 100"
+  step3_en: "47 × 47 is about 2,180"
+  step3_zh: "47 × 47 大约是 2,180"
+  step3_zh_hk: "47 × 47 大約係 2,180"
+  step4_en: "That 47 is the standard deviation"
+  step4_zh: "这个 47 就是标准差"
+  step4_zh_hk: "呢個 47 就係標準差"
+  s1_en: "So how do we get back to cups? 2,180 is cups times cups. A manager cannot staff with that. We ask a simpler question: what number times itself is about 2,180?"
+  s1_zh: "那么怎么回到杯呢？2,180是杯乘杯。经理没法用它来排班。我们问一个更简单的问题：哪个数乘自己，大约等于2,180？"
+  s1_zh_hk: "咁點樣返到杯呢？2,180係杯乘杯。經理冇辦法用佢嚟排班。我哋問一個更簡單嘅問題：邊個數乘自己，大約等於2,180？"
+  s2_en: "Try a small one first. Ten times ten is 100. So the number that times itself gives 100 is 10. That backward step is called a square root. The root sign means: find that number."
+  s2_zh: "先试一个小的。10乘10等于100。所以自己乘自己得到100的那个数是10。这一步往回走，叫作开平方。根号的意思就是：找出那个数。"
+  s2_zh_hk: "先試一個細嘅。10乘10等於100。所以自己乘自己得到100嗰個數係10。呢一步行返轉頭，叫做開平方。根號嘅意思就係：搵出嗰個數。"
+  s3_en: "For A, 47 times 47 is about 2,209, close to 2,180. So the number is about 47. We call it the standard deviation. The symbol is sigma without the little 2. Same idea, back in cups."
+  s3_zh: "A店这边，47乘47大约是2,209，靠近2,180。所以那个数大约是47。我们叫它标准差。符号是不带小2的西格玛。还是刚才那个想法，单位回到杯。"
+  s3_zh_hk: "A店呢邊，47乘47大約係2,209，靠近2,180。所以嗰個數大約係47。我哋叫佢做標準差。符號係唔帶細2嘅西格瑪。仲係頭先嗰個想法，單位返到杯。"
+  s4_en: "About 47 cups is a summary of how spread out these five days are. It does not mean every day is 47 cups away. If we had just averaged the distances, without multiplying, we would get 40 cups. 47 is larger because the far days were multiplied by themselves. This number has a name too."
+  s4_zh: "大约47杯概括的是这五天有多分散。它不表示每天都离平均数47杯。如果只把距离平均，不做乘法，会得到40杯。47更大，是因为远的那天被自己乘过。这个数也有一个名字。"
+  s4_zh_hk: "大約47杯概括嘅係呢五日有幾分散。佢唔代表每日都離平均數47杯。如果只將距離平均，唔做乘法，會得到40杯。47更大，係因為遠嗰日被自己乘過。呢個數都有一個名。"
+- id: name_sd
+  visual: title_card
+  seconds: 36
+  kicker: The Name
+  kicker_en: The Name
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Standard deviation
+  title_zh: 标准差
+  title_zh_hk: 標準差
+  s1_en: "Standard deviation. That is the name. For Shop A, it is about 47 cups. Same average, different plan: this is the number that says how big the swing is. Next we do Shop B."
+  s1_zh: "标准差。这就是那个名字。A店大约是47杯。平均相同，计划不同：这个数说的就是晃动有多大。接下来看B店。"
+  s1_zh_hk: "標準差。呢個就係嗰個名。A店大約係47杯。平均相同，計劃唔同：呢個數講嘅就係搖動有幾大。跟住睇B店。"
+- id: compare
+  visual: steps
+  seconds: 48
+  kicker: Shop B
+  kicker_en: Shop B
+  kicker_zh: B店
+  kicker_zh_hk: B店
+  title_en: Same steps. Smaller swing.
+  title_zh: 同样的步骤，晃得更小
+  title_zh_hk: 同樣嘅步驟，搖得更細
+  step1_en: "How far: −15, −5, 0, +5, +15"
+  step1_zh: "有多远：−15，−5，0，+5，+15"
+  step1_zh_hk: "有幾遠：−15，−5，0，+5，+15"
+  step2_en: "Times itself: 225; 25; 0; 25; 225"
+  step2_zh: "自己乘自己：225；25；0；25；225"
+  step2_zh_hk: "自己乘自己：225；25；0；25；225"
+  step3_en: "Add = 500. 500 / 5 = 100"
+  step3_zh: "相加 = 500。500 / 5 = 100"
+  step3_zh_hk: "相加 = 500。500 / 5 = 100"
+  step4_en: "10 × 10 = 100, so 10 cups"
+  step4_zh: "10 × 10 = 100，所以是 10 杯"
+  step4_zh_hk: "10 × 10 = 100，所以係 10 杯"
+  s1_en: "Now the same steps for Shop B, the one that can keep a steadier plan. How far is each day from 365? Minus 15, minus 5, zero, plus 5, and plus 15."
+  s1_zh: "现在用同样的步骤看B店，就是可以维持较稳计划的那家。每天离365有多远？负15、负5、零、正5和正15。"
+  s1_zh_hk: "而家用同樣嘅步驟睇B店，就係可以維持較穩計劃嗰間。每日離365有幾遠？負15、負5、零、正5同正15。"
+  s2_en: "Multiply each by itself. Fifteen times 15 is 225, on both sides. Five times 5 is 25, on both sides. Zero times zero is zero."
+  s2_zh: "每一个都乘以自己。15乘15是225，两边一样。5乘5是25，两边一样。零乘零是零。"
+  s2_zh_hk: "每一個都乘自己。15乘15係225，兩邊一樣。5乘5係25，兩邊一樣。零乘零係零。"
+  s3_en: "Add them and you get 500. Divide by 5. B's variance is 100 — cups times cups. Much smaller than A's 2,180."
+  s3_zh: "加起来是500。除以5。B店的方差是100，也就是杯乘杯。比A店的2,180小得多。"
+  s3_zh_hk: "加起嚟係500。除以5。B店嘅方差係100，亦就係杯乘杯。比起A店嘅2,180細好多。"
+  s4_en: "What number times itself is 100? Ten, because 10 times 10 is 100. B's standard deviation is 10 cups. Against A's about 47, B's five days sit much closer to the same average."
+  s4_zh: "哪个数乘自己等于100？是10，因为10乘10等于100。B店的标准差是10杯。和A店的大约47杯一比，B店这五天离同一个平均数近得多。"
+  s4_zh_hk: "邊個數乘自己等於100？係10，因為10乘10等於100。B店嘅標準差係10杯。同A店嘅大約47杯一比，B店呢五日離同一個平均數近好多。"
+- id: read
+  visual: two_column
+  seconds: 46
+  kicker: The Contrast
+  kicker_en: The Contrast
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: About 47 cups, against 10
+  title_zh: 大约47杯，对着10杯
+  title_zh_hk: 大約47杯，對住10杯
+  left_en: "A: about 47 cups. A flexible plan."
+  left_zh: "A：大约47杯。一套灵活的计划。"
+  left_zh_hk: "A：大約47杯。一套靈活嘅計劃。"
+  right_en: "B: 10 cups. A steadier plan can hold."
+  right_zh: "B：10杯。一套较稳的计划就够。"
+  right_zh_hk: "B：10杯。一套較穩嘅計劃就夠。"
+  s1_en: "So which shop swung more? Both average 365 cups a day. The standard deviation is the one number that says how spread out each shop's five days are."
+  s1_zh: "那么哪家店晃得更厉害？两家平均每天都是365杯。标准差就是那个概括每家店五天有多分散的数。"
+  s1_zh_hk: "咁邊間店搖得更厲害？兩間平均每日都係365杯。標準差就係嗰個概括每間店五日有幾分散嘅數。"
+  s2_en: "Shop A is about 47 cups. That is a summary of all five days, not a distance that fits each day. Day 1 was 65 below, and day 3 was exactly on the average. A needs the flexible plan."
+  s2_zh: "A店大约是47杯。这是五天合在一起的概括，不是每一天的实际距离。第1天低了65杯，第3天正好在平均数上。A店需要那套灵活的计划。"
+  s2_zh_hk: "A店大約係47杯。呢個係五日合埋嘅概括，唔係每一日嘅實際距離。第1日低咗65杯，第3日啱啱喺平均數上。A店需要嗰套靈活嘅計劃。"
+  s3_en: "Shop B is 10 cups. Same idea, smaller number. A steadier plan can hold. Same average, different swing, different plans. Neither number says what tomorrow will be, and 47 is rounded, so do not treat it as exact."
+  s3_zh: "B店是10杯。同样的想法，数字更小。一套较稳的计划可以撑住。平均相同，晃动不同，计划不同。这两个数都不能说明天会卖多少，而且47是四舍五入的，不要把它当成精确值。"
+  s3_zh_hk: "B店係10杯。同樣嘅想法，數字更細。一套較穩嘅計劃可以撐住。平均相同，搖動唔同，計劃唔同。呢兩個數都唔可以話聽日會賣幾多，而且47係四捨五入嘅，唔好當佢係精確值。"
+- id: limit
+  visual: two_column
+  seconds: 48
+  kicker: The Limit
+  kicker_en: The Limit
+  kicker_zh: 限度
+  kicker_zh_hk: 限度
+  title_en: A reason to check, not an order
+  title_zh: 是检查的理由，不是指令
+  title_zh_hk: 係檢查嘅理由，唔係指令
+  left_en: Why it helps
+  left_zh: 它有什么用
+  left_zh_hk: 佢有咩用
+  right_en: What it is not
+  right_zh: 它不是什么
+  right_zh_hk: 佢唔係乜
+  s1_en: "Why keep the number, then? It uses all five days. Multiplying by itself stops the two sides from cancelling, and asking what number times itself brings the answer back to cups. Even when the averages match, we can still see that the plans should differ."
+  s1_zh: "那为什么还要留着这个数？它用到了全部五天。自己乘自己让两边不再抵消，再问哪个数乘自己，答案就回到杯。即使平均数一样，我们仍然看得出计划应该不同。"
+  s1_zh_hk: "咁點解仲要留住呢個數？佢用到晒全部五日。自己乘自己令兩邊唔再抵銷，再問邊個數乘自己，答案就返到杯。就算平均數一樣，我哋仍然睇得出計劃應該唔同。"
+  s2_en: "But one number is not the whole file. A day far from the average, times itself, is a large number and can pull the standard deviation up. Two different patterns of days can also give the same number. Keep the five days in view."
+  s2_zh: "但一个数不是整份记录。某一天离平均数很远，自己乘自己就是一个大数，可能把标准差拉高。两种不同的五天，也可能算出同一个数。所以还要看着原来的五天。"
+  s2_zh_hk: "但一個數唔係成份紀錄。某一日離平均數好遠，自己乘自己就係一個大數，可能將標準差拉高。兩種唔同嘅五日，亦可能計出同一個數。所以仲要睇住原本嘅五日。"
+  s3_en: "And 47 cups is not an order to add 47 people, or to prepare 47 extra cups. It is a reason to check whether A needs a more flexible plan. It does not say what tomorrow will be, and it does not decide how much extra the shop needs."
+  s3_zh: "而且47杯不是多安排47人的指令，也不是多准备47杯的指令。它是一个理由，让我们去检查A店是否需要一套更灵活的计划。它不说明天会怎样，也不能决定这家店需要多准备多少。"
+  s3_zh_hk: "而且47杯唔係多安排47個人嘅指令，亦唔係多準備47杯嘅指令。佢係一個理由，令我哋去檢查A店係咪需要一套更靈活嘅計劃。佢唔話聽日會點，亦唔可以決定呢間店需要多準備幾多。"
+- id: answer
+  visual: takeaway
+  seconds: 48
+  kicker: The Answer
+  kicker_en: The Answer
+  kicker_zh: 回答问题
+  kicker_zh_hk: 回答問題
+  title_en: Same average. Different plans.
+  title_zh: 平均相同，计划不同
+  title_zh_hk: 平均相同，計劃唔同
+  q1_en: Why not use the same plan for both shops?
+  q1_zh: 为什么不能给两家用同一套计划？
+  q1_zh_hk: 點解唔可以畀兩間用同一套計劃？
+  q2_en: What do we do with 47 cups?
+  q2_zh: 47杯用来做什么？
+  q2_zh_hk: 47杯用嚟做咩？
+  s1_en: "Back to the question. Both shops average 365 cups, but the swing is not the same. A is about 47 cups. B is 10. Same average does not mean the same plan."
+  s1_zh: "回到问题。两家都是365杯，但晃动不一样。A店大约是47杯。B店是10杯。平均相同，不表示计划相同。"
+  s1_zh_hk: "返到問題。兩間都係365杯，但搖動唔一樣。A店大約係47杯。B店係10杯。平均相同，唔代表計劃相同。"
+  s2_en: "Give A a more flexible plan, so the busy day has enough hands. Give B a steadier plan, closer to 365. Use 47 as a reason to check, not as an order to add 47 people."
+  s2_zh: "给A店一套更灵活的计划，让忙的那天有足够的人手。给B店一套较稳的计划，靠近365。把47当作一个检查的理由，而不是加人47个的指令。"
+  s2_zh_hk: "畀A店一套更靈活嘅計劃，令忙嗰日有足夠嘅人手。畀B店一套較穩嘅計劃，靠近365。將47當作一個檢查嘅理由，而唔係加人47個嘅指令。"
+  s3_en: "Before you set the plan, check how long a cup takes, how long a customer will wait, and what too many or too few staff cost. These numbers describe only the five days we supposed. Use the average and the standard deviation with those details. Neither number decides the plan by itself."
+  s3_zh: "定排班之前，还要看做一杯要多久、顾客愿意等多久，以及人手太多或太少的成本。这些数只描述我们假设的五天。把平均数、标准差和这些经营细节放在一起看。哪一个数都不能单独决定排班。"
+  s3_zh_hk: "定排班之前，仲要睇整一杯要幾耐、顧客肯等幾耐，同埋人手太多或者太少嘅成本。呢啲數只係描述我哋假設嘅五日。將平均數、標準差同呢啲營運細節放埋一齊睇。邊一個數都唔可以單獨決定排班。"

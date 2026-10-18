@@ -1,0 +1,200 @@
+id: STAT-M06-T03-CORRE
+course: STAT-M06
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Pearson Correlation: Standardizing Linear Association'
+title_zh: 皮尔逊相关系数：标准化线性关联
+title_zh_hk: 皮爾遜相關系數：標準化線性關聯
+objective_en: Calculate Pearson’s sample correlation by standardizing covariance, interpret its sign and magnitude within
+  minus one and plus one, verify scale invariance, identify sensitivity to nonlinearity and influential observations, and
+  distinguish empirical linear association from prediction or causation.
+objective_zh: 通过标准化协方差计算皮尔逊样本相关系数，解释其在负一与正一之间的符号和大小，验证尺度不变性，识别非线性与强影响观测的敏感性，并区分经验线性关联、预测与因果关系。
+objective_zh_hk: 透過標準化協方差計算皮爾遜樣本相關系數，解讀佢喺負一同正一之間嘅符號同大小，驗證尺度不變性，識別非線性同強影響觀測嘅敏感性，並區分經驗線性關聯、預測同因果關係。
+glossary:
+- en: Correlation Coefficient
+  zh: 相关系数
+  zh_hk: 相關系數
+  lock: true
+- en: Scale Invariance
+  zh: 尺度不变性
+  zh_hk: 尺度不變性
+  lock: true
+- en: Standardized Covariance
+  zh: 标准化协方差
+  zh_hk: 標準化協方差
+  lock: true
+- en: Spurious Correlation
+  zh: 伪相关
+  zh_hk: 偽相關
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why does Pearson’s r divide sample covariance by s_X times s_Y?
+  question_zh: 为什么皮尔逊相关系数 r 需要将样本协方差除以两个变量样本标准差的乘积（s_X * s_Y）？
+  question_zh_hk: 點解皮爾遜相關系數 r 需要將樣本協方差除以兩個變量樣本標準差嘅乘積（s_X * s_Y）？
+  options_en:
+  - 'A: To force the slope of the future regression line to equal exactly 1.0'
+  - 'B: To remove the original units and express linear association on a common scale from -1 to +1'
+  - 'C: To eliminate the mathematical impact of extreme sample outliers'
+  - 'D: To prove that changes in variable X directly cause changes in variable Y'
+  options_zh:
+  - 'A: 迫使未来的回归方程斜率严格等于 1.0'
+  - 'B: 消除原始度量单位的影响，将线性关联强度规范化在 -1 至 +1 的固定区间内'
+  - 'C: 彻底消除样本中极端异常值所带来的数学影响'
+  - 'D: 证明变量 X 的变动能够直接因果驱动变量 Y 的变动'
+  options_zh_hk:
+  - 'A: 強制未來嘅回歸線斜率啱啱好等於 1.0'
+  - 'B: 抵消原始度量單位嘅影響，將線性關聯強度規範化喺 -1 至 +1 嘅固定區間入面'
+  - 'C: 徹底消除樣本入面極端離群值所帶來嘅數學干擾'
+  - 'D: 證明變量 X 嘅變動能夠直接因果帶動變量 Y 嘅變動'
+  answer: B
+  explanation_en: Dividing by both sample standard deviations standardizes covariance. The result is dimensionless and bounded,
+    but it remains sensitive to data shape and does not prove causation.
+  explanation_zh: 用协方差除以 s_X 与 s_Y 能够消除物理度量单位（如金额、小时、杯数），从而生成一个介于 -1 和 +1 之间的无量纲标准化指标。
+  explanation_zh_hk: 用協方差除以 s_X 同 s_Y 可以消走物理度量單位（例如港幣、鐘頭、杯數），計出一個介乎 -1 到 +1 之間嘅無量綱標準化指標。
+- id: Q2
+  type: multiple_choice
+  question_en: Two distinct data points lie on an upward-sloping line. What is their sample Pearson correlation?
+  question_zh: 在两家街边分店中，Metro Coffee 测得租金分别为 9,400 元与 18,600 元，日出杯量分别为 310 杯与 420 杯。若两点在坐标系中构成一条向右上倾斜的直线，皮尔逊相关系数 r 的值是多少？
+  question_zh_hk: 喺兩間街舖入面，Metro Coffee 測得舖租分別係 9,400 蚊同 18,600 蚊，每日出杯量分別係 310 杯同 420 杯。如果呢兩點喺坐標系入面剛好連成一條向右上斜嘅直線，皮爾遜相關系數 r
+    嘅數值係幾多？
+  options_en:
+  - 'A: r = 0.00'
+  - 'B: r = 0.50'
+  - 'C: r = 1.00'
+  - 'D: r = 9,200.00'
+  options_zh:
+  - 'A: r = 0.00'
+  - 'B: r = 0.50'
+  - 'C: r = 1.00'
+  - 'D: r = 9,200.00'
+  options_zh_hk:
+  - 'A: r = 0.00'
+  - 'B: r = 0.50'
+  - 'C: r = 1.00'
+  - 'D: r = 9,200.00'
+  answer: C
+  explanation_en: Any two distinct points define a perfect straight line. With positive slope, their sample correlation is
+    +1.00, although two points provide little evidence about population stability.
+  explanation_zh: 对于任意两点确定的斜率为正的直线，所有离均差严格落在一条直线上且毫无残差扩散，协方差恰好等于两标准差之积，因此 r = +1.00。
+  explanation_zh_hk: 對於任何由兩點決定、斜率為正嘅直線，所有離均差都完全貼合喺一條直線上而且毫無殘差擴散，協方差啱啱好等於兩個標準差相乘，因此 r = +1.00。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  title_en: How can relationships measured in different units be compared?
+  title_zh: 如何比较不同计量单位下的关联？
+  title_zh_hk: 點樣比較唔同量度單位之下嘅關聯？
+  en: 'Metro Coffee is examining assumed store-level relationships between cup sales and two very different variables: monthly
+    rent measured in Hong Kong dollars and labor measured in hours. Raw covariance cannot be compared directly because its
+    magnitude changes with units. Pearson correlation standardizes covariance to a common scale, but it still describes linear
+    association rather than a causal or controllable business mechanism.'
+  zh: 都市咖啡正在审视假设的门店层面关系：杯数销量分别与以港元计量的月租金、以及以小时计量的工时之间的关联。原始协方差不能直接比较，因为其大小会随单位改变。皮尔逊相关系数把协方差标准化到共同尺度，但它仍只描述线性关联，而不是因果或可控的商业机制。
+  zh_hk: 都市咖啡正審視假設嘅門市層面關係：杯數銷量分別同以港元量度嘅月租金、以及以小時量度嘅工時之間嘅關聯。原始協方差唔可以直接比較，因為佢嘅大小會隨單位改變。皮爾遜相關系數將協方差標準化到共同尺度，但佢仍然只描述線性關聯，而唔係因果或者可控嘅商業機制。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: r = s_XY / (s_X s_Y), with -1 <= r <= 1
+  formula_zh: r = s_XY / (s_X s_Y)，且 -1 <= r <= 1
+  formula_zh_hk: r = s_XY / (s_X s_Y)，而且 -1 <= r <= 1
+  formula_tex: r=\frac{s_{XY}}{s_Xs_Y}=\frac{\sum_i(X_i-\bar X)(Y_i-\bar Y)}{\sqrt{\sum_i(X_i-\bar X)^2\sum_i(Y_i-\bar Y)^2}}
+  s1_en: Pearson’s r divides sample covariance by the product of the two sample standard deviations. The units cancel, producing
+    a dimensionless measure of the direction and strength of linear association. It is defined only when both variables have
+    positive sample variation.
+  s1_zh: 皮尔逊 r 把样本协方差除以两个样本标准差的乘积。单位因此抵消，得到无量纲的线性关联方向与强度指标。只有当两个变量都存在正的样本变异时，r 才有定义。
+  s1_zh_hk: 皮爾遜 r 將樣本協方差除以兩個樣本標準差嘅乘積。單位因此抵消，得到無量綱嘅線性關聯方向同強度指標。只有當兩個變量都有正嘅樣本變異嗰陣，r 先有定義。
+  s2_en: The sign comes from covariance. Values near plus one indicate observations close to an upward straight line; values
+    near minus one indicate a downward straight line; values near zero indicate weak net linear association. Near zero does
+    not rule out a curved or grouped relationship.
+  s2_zh: 符号来自协方差。接近正一表示观测靠近向上直线；接近负一表示靠近向下直线；接近零表示净线性关联较弱。接近零并不能排除曲线或分组关系。
+  s2_zh_hk: 符號來自協方差。接近正一表示觀測靠近向上直線；接近負一表示靠近向下直線；接近零表示淨線性關聯較弱。接近零並唔可以排除曲線或者分組關係。
+  title_en: Standardize covariance by both variables’ sample spreads
+  title_zh: 用两个变量的样本离散度标准化协方差
+  title_zh_hk: 用兩個變量嘅樣本離散度標準化協方差
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  left_en: Scale-free linear comparison
+  left_zh: 无量纲线性比较
+  right_en: Design and shape still matter
+  right_zh: 设计与形态仍然重要
+  s1_en: Changing from dollars to thousands of dollars, or from hours to minutes, leaves r unchanged when the transformation
+    uses a positive multiplier. Reversing a variable’s direction with a negative multiplier reverses the sign. This makes
+    r comparable across differently scaled variables.
+  s1_zh: 把港元改成千港元，或把小时改成分钟，只要转换使用正倍数，r 就保持不变。若用负倍数反转变量方向，相关系数符号也会反转。因此 r 可用于比较不同尺度变量。
+  s1_zh_hk: 將港元改成千港元，或者將小時改成分鐘，只要轉換使用正倍數，r 就保持不變。如果用負倍數反轉變量方向，相關系數符號亦會反轉。所以 r 可以用嚟比較唔同尺度變量。
+  s2_en: Correlation summarizes linear pattern and can be strongly affected by influential observations, restricted ranges,
+    mixtures of groups, and measurement error. A scatter plot and data-design audit should accompany the coefficient.
+  s2_zh: 相关系数概括线性图形，并可能受到强影响观测、范围受限、组群混合与测量误差的显著影响。报告相关系数时应同时检查散点图与数据设计。
+  s2_zh_hk: 相關系數概括線性圖形，並可能受到強影響觀測、範圍受限、群組混合同量度誤差嘅顯著影響。報告相關系數嗰陣應該同時檢查散點圖同數據設計。
+  s3_en: A large absolute correlation does not identify which variable causes the other or exclude common causes. Store size,
+    district, demand, operating hours, and selection can affect both variables. Correlation alone does not authorize rent,
+    staffing, or investment decisions.
+  s3_zh: 较大的相关系数绝对值不能识别因果方向，也不能排除共同原因。门店面积、地区、需求、营业时间与选择机制都可能同时影响两个变量。仅凭相关系数不能决定租金、人手或投资。
+  s3_zh_hk: 較大嘅相關系數絕對值唔可以識別因果方向，亦唔可以排除共同原因。門市面積、地區、需求、營業時間同選擇機制都可能同時影響兩個變量。單憑相關系數唔可以決定租金、人手或者投資。
+  left_zh_hk: 無量綱線性比較
+  right_zh_hk: 設計同形態仍然重要
+  title_en: Scale invariance improves comparison, not causal interpretation
+  title_zh: 尺度不变性改善可比性，但不提供因果解释
+  title_zh_hk: 尺度不變性改善可比性，但唔提供因果解讀
+- id: ledger
+  visual: steps
+  seconds: 38
+  step1_en: Assume pairs (HK$9,400, 310 cups) and (HK$18,600, 420 cups)
+  step1_zh: 假设点对为（HK$9,400，310 杯）与（HK$18,600，420 杯）
+  step2_en: s_X = 6505.4, s_Y = 77.8, and s_XY = 506,000 HKD-cups
+  step2_zh: s_X = 6505.4，s_Y = 77.8，s_XY = 506,000 港元·杯
+  step3_en: r = 506,000 / (6505.4 x 77.8) = 1.00
+  step3_zh: r = 506,000 / (6505.4 × 77.8) = 1.00
+  s1_en: For illustration, assume two stores have the stated rent and cup-sales values. These are teaching assumptions, not
+    verified leases, sales records, investment cases, or location recommendations. With two distinct points, the sample pattern
+    lies exactly on one straight line.
+  s1_zh: 作为示例，假设两家门店具有上述租金与杯数销量。这些数字是教学假设，并非已核实的租约、销售记录、投资方案或选址建议。两个不同点必然严格落在同一条直线上。
+  s1_zh_hk: 作為例子，假設兩間門市具有上述租金同杯數銷量。呢啲數字係教學假設，唔係已核實嘅租約、銷售記錄、投資方案或者選址建議。兩個唔同點必然嚴格落喺同一條直線上。
+  s2_en: The sample standard deviations are approximately HK$6,505.4 and 77.8 cups, while covariance is positive 506,000 HKD-cups.
+    Dividing covariance by the product of those standard deviations removes the units.
+  s2_zh: 两个样本标准差约为 HK$6,505.4 与 77.8 杯，协方差为正 506,000 港元·杯。用协方差除以两个标准差的乘积后，单位被消除。
+  s2_zh_hk: 兩個樣本標準差約係 HK$6,505.4 同 77.8 杯，協方差係正 506,000 港元·杯。用協方差除以兩個標準差嘅乘積之後，單位被消除。
+  s3_en: The result is r equal to plus 1.00. This is mathematically inevitable for any two distinct observations with positive
+    slope, so it is not strong evidence of a stable population relationship. More observations and a design audit are needed
+    before forecasting or acting.
+  s3_zh: 结果为 r = +1.00。对于任意两个斜率为正的不同观测，这在数学上是必然结果，因此不能视为稳定总体关系的强证据。预测或行动前需要更多观测与设计审计。
+  s3_zh_hk: 結果係 r = +1.00。對於任何兩個斜率為正嘅唔同觀測，呢個喺數學上係必然結果，所以唔可以視為穩定總體關係嘅強證據。預測或者行動之前需要更多觀測同設計審計。
+  step1_zh_hk: 假設點對係（HK$9,400，310 杯）同（HK$18,600，420 杯）
+  step2_zh_hk: s_X = 6505.4，s_Y = 77.8，s_XY = 506,000 港元·杯
+  step3_zh_hk: r = 506,000 / (6505.4 × 77.8) = 1.00
+  title_en: Calculate r for an assumed two-store illustration
+  title_zh: 计算假设两店示例的 r
+  title_zh_hk: 計算假設兩店例子嘅 r
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  q1_en: What does standardization add to covariance?
+  q1_zh: 标准化为协方差增加了什么？
+  q2_en: Why is r = 1 with two points weak evidence?
+  q2_zh: 为什么两点得到 r = 1 仍是弱证据？
+  s1_en: Standardization removes the product units and places linear association on the common interval from minus one to
+    plus one. It does not remove nonlinear structure, influential observations, sampling error, or confounding.
+  s1_zh: 标准化消除复合单位，并把线性关联放在负一至正一的共同区间。它不能消除非线性结构、强影响观测、抽样误差或混杂。
+  s1_zh_hk: 標準化消除複合單位，並將線性關聯放喺負一至正一嘅共同區間。佢唔可以消除非線性結構、強影響觀測、抽樣誤差或者混雜。
+  s2_en: Any two distinct points define a perfect straight line, so their sample correlation has absolute value one. The coefficient
+    becomes informative about stability only with an adequate, representative set of observations and careful examination
+    of the plot.
+  s2_zh: 任意两个不同点都能确定一条完美直线，因此其样本相关系数绝对值为一。只有在观测数量充分且具有代表性，并仔细检查散点图后，该系数才能反映关系稳定性。
+  s2_zh_hk: 任何兩個唔同點都可以確定一條完美直線，所以佢哋嘅樣本相關系數絕對值係一。只有喺觀測數量充分而且具有代表性，並仔細檢查散點圖之後，呢個系數先可以反映關係穩定性。
+  s3_en: In the assumed example, r equals plus 1.00 because only two distinct positively sloped points are used. Report that
+    limitation explicitly and do not translate the result into causation, a marginal sales effect, or an automatic lease decision.
+  s3_zh: 在假设示例中，r = +1.00 是因为只使用了两个斜率为正的不同点。应明确报告这一限制，不要把结果转化为因果、边际销量效应或自动租赁决策。
+  s3_zh_hk: 喺假設例子入面，r = +1.00 係因為只使用咗兩個斜率為正嘅唔同點。應該明確報告呢個限制，唔好將結果轉化成因果、邊際銷量效應或者自動租賃決策。
+  q1_zh_hk: 標準化為協方差增加咗咩？
+  q2_zh_hk: 點解兩點得到 r = 1 仍然係弱證據？
+  title_en: Interpret r with the scatter plot, sample size, and design
+  title_zh: 结合散点图、样本量与设计解释 r
+  title_zh_hk: 結合散點圖、樣本量同設計解讀 r

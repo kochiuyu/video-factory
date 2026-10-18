@@ -1,0 +1,136 @@
+id: GAME-M05-BRM
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: Best response to a mix
+title_zh: 对混合的最优反应
+title_zh_hk: 對混合嘅最佳回應
+objective_en: If the copycat sits Left more than half the mornings, sit Right. If less than half, sit Left.
+objective_zh: 仿摊超过一半早晨停左，你就停右。不到一半，你就停左。
+objective_zh_hk: 仿攤超過一半朝早停左，你就停右。唔到一半，你就停左。
+glossary:
+- en: best response
+  zh: 最优反应
+  zh_hk: 最佳回應
+  lock: true
+- en: mixed strategy
+  zh: 混合策略
+  zh_hk: 混合策略
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: The copycat sits Left three mornings out of four. Where do you sit?
+  zh: 仿摊四个早晨里三个停左。你停哪？
+  zh_hk: 仿攤四個朝早入面三個停左。你停邊？
+  answer_en: Right. Left is crowded with the copycat.
+  answer_zh: 右。左边挤着仿摊。
+  answer_zh_hk: 右。左邊迫住仿攤。
+- id: Q2
+  type: transfer
+  en: The copycat sits Left half the mornings. Which pure side is better?
+  zh: 仿摊一半早晨停左。哪一侧纯停更好？
+  zh_hk: 仿攤一半朝早停左。邊一側純停更好？
+  answer_en: Neither. Left and Right pay you the same.
+  answer_zh: 哪一侧都不更好。停左和停右一样赚。
+  answer_zh_hk: 邊一側都唔更好。停左同停右一樣賺。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Fix the copycat's mix
+  title_zh: 先钉住仿摊的混合
+  title_zh_hk: 先釘住仿攤嘅混合
+  en: Pretend you already know the copycat's share. Three mornings Left, one Right. You still post one side this morning. Which side pays you more against that mix?
+  zh: 假装你已经知道仿摊的份额。三个早晨左，一个右。你这个早晨还是只停一侧。对着这个混合，哪一侧更赚？
+  zh_hk: 當你已經知仿攤嘅份額。三個朝早左，一個右。你呢個朝早都係淨停一側。對住呢個混合，邊一側更賺？
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: More than half, go the other way
+  title_zh: 超过一半，就走另一侧
+  title_zh_hk: 超過一半，就走另一側
+  formula: If they sit Left more than half the time, you sit Right
+  formula_en: If they sit Left more than half the time, you sit Right
+  formula_zh: 他们超过一半时间停左，你就停右
+  formula_zh_hk: 佢哋超過一半時間停左，你就停右
+  gloss_en: Same idea as one column. Now the column is a mix.
+  gloss_zh: 还是读一列。只是这一列变成了混合。
+  gloss_zh_hk: 都係讀一列。淨係呢一列變成咗混合。
+  en: Here is the idea. If the copycat sits Left more than half the mornings, Left is crowded. Right pays you more. If they sit Left less than half the mornings, Left pays you more. That is best response to a mix.
+  zh: 核心就这一句。仿摊超过一半早晨停左，左边就挤。你停右更赚。不到一半早晨停左，你停左更赚。这就是对混合的最优反应。
+  zh_hk: 核心就呢一句。仿攤超過一半朝早停左，左邊就迫。你停右更賺。唔到一半朝早停左，你停左更賺。呢個就係對混合嘅最佳回應。
+- id: steps
+  visual: steps
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Three checks
+  title_zh: 先看三问
+  title_zh_hk: 先睇三問
+  step1_en: Copycat Left more than half. You sit Right.
+  step1_zh: 仿摊左超过一半。你停右。
+  step1_zh_hk: 仿攤左超過一半。你停右。
+  step2_en: Copycat Left less than half. You sit Left.
+  step2_zh: 仿摊左不到一半。你停左。
+  step2_zh_hk: 仿攤左唔到一半。你停左。
+  step3_en: Copycat Left exactly half. Both sides pay you the same.
+  step3_zh: 仿摊刚好一半停左。两侧一样赚。
+  step3_zh_hk: 仿攤啱啱一半停左。兩側一樣賺。
+  en: More than half Left, you sit Right. Less than half, you sit Left. Exactly half, Left and Right pay you the same. At that share you are willing to mix too.
+  zh: 左超过一半，你停右。不到一半，你停左。刚好一半，两侧一样赚。到这个份额，你也愿意混合。
+  zh_hk: 左超過一半，你停右。唔到一半，你停左。啱啱一半，兩側一樣賺。到呢個份額，你都愿意混合。
+- id: example
+  visual: example
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Three out of four is not half
+  title_zh: 四个里三个不是一半
+  title_zh_hk: 四個入面三個唔係一半
+  setup_en: Copycat sits Left three mornings out of four.
+  setup_zh: 仿摊四个早晨里三个停左。
+  setup_zh_hk: 仿攤四個朝早入面三個停左。
+  result_en: Sit Right. Do not mix yet. The mix is theirs, not yours.
+  result_zh: 停右。先不要自己混合。混合是他们的，不是你的。
+  result_zh_hk: 停右。未好自己混合。混合係佢哋嘅，唔係你嘅。
+  en: Three mornings out of four is more than half. Sit Right every time against that mix. Do not flip a coin yet. Best response to a lopsided mix is still one side.
+  zh: 四个里三个，已经超过一半。对着这个混合，次次停右。先不要抛硬币。对一边倒的混合，最优反应仍是一侧。
+  zh_hk: 四個入面三個，已經超過一半。對住呢個混合，次次停右。未好掟硬幣。對一邊倒嘅混合，最佳回應都仲係一側。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Half is the hinge
+  title_zh: 一半是转轴
+  title_zh_hk: 一半係轉軸
+  q1_en: More than half Left, sit Right.
+  q1_zh: 左超过一半，停右。
+  q1_zh_hk: 左超過一半，停右。
+  q2_en: Exactly half, both sides pay the same.
+  q2_zh: 刚好一半，两侧一样赚。
+  q2_zh_hk: 啱啱一半，兩側一樣賺。
+  en: Keep the hinge. Half is where you stop preferring one side. Next we look for a pair of mixes where each is a best response to the other.
+  zh: 把这个转轴留下。一半就是你不再偏爱一侧的地方。接下来找一对混合，彼此都是对方的最优反应。
+  zh_hk: 將呢個轉軸留低。一半就係你唔再偏愛一側嘅地方。跟住搵一對混合，彼此都係對方嘅最佳回應。

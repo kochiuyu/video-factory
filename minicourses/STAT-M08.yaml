@@ -1,0 +1,30 @@
+id: STAT-M08
+kind: minicourse
+course: statistics
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+title_en: Logistic regression and customer choice for a coffee chain
+title_zh: 咖啡连锁的逻辑回归与客户选择
+title_zh_hk: 咖啡連鎖嘅邏輯回歸與客戶選擇
+objective_en: 'Fifteen standalone shorts on assumed Metro Coffee choice models: binary outcomes, the linear probability model, odds and log-odds, the sigmoid, maximum likelihood, odds ratios, marginal effects, multiple logit, the confusion matrix, cost-sensitive cutoffs, ROC and AUC, pseudo R-squared and likelihood-ratio tests, churn scoring, uplift, and a deployment checklist. Build each short on its own. This collection does not join them into one video.'
+objective_zh: 围绕假设都市咖啡选择模型的十五节独立短课：二元结果、线性概率模型、几率与对数几率、S 型曲线、极大似然、几率比、边际效应、多元 Logit、混淆矩阵、成本敏感门槛、ROC 与 AUC、伪 R 方与似然比检验、流失评分、净增量，以及部署清单。每节单独制作。本集合不把它们拼成一条视频。
+objective_zh_hk: 圍繞假設都市咖啡選擇模型嘅十五節獨立短課：二元結果、線性概率模型、勝算與對數勝算、S 型曲線、極大似然、勝算比、邊際效應、多元 Logit、混淆矩陣、成本敏感門檻、ROC 與 AUC、偽 R 方與似然比檢驗、流失評分、淨增量，以及部署清單。每節單獨製作。本集合唔會將佢哋拼成一條片。
+syllabus: docs/courses/STAT-M08.md
+duration_note: Each short is 168 seconds. The collection is not a 5–10 minute module.
+lessons:
+- STAT-M08-T01-BINRY
+- STAT-M08-T02-LPMFL
+- STAT-M08-T03-ODDSO
+- STAT-M08-T04-SIGMD
+- STAT-M08-T05-MAXLH
+- STAT-M08-T06-ODDSR
+- STAT-M08-T07-MARGE
+- STAT-M08-T08-MULTL
+- STAT-M08-T09-CONFZ
+- STAT-M08-T10-CUTOF
+- STAT-M08-T11-ROCAU
+- STAT-M08-T12-PSEUD
+- STAT-M08-T13-CHURN
+- STAT-M08-T14-UPLFT
+- STAT-M08-T15-RECAP

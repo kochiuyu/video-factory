@@ -1,0 +1,91 @@
+id: ECON-CH-IN
+course: economics
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 42
+title_en: Choice
+title_zh: 选择
+title_zh_hk: 選擇
+objective_en: Open. One person chooses. Four steps on that choice.
+objective_zh: 开场。一个人做选择。这一选择上的四步。
+objective_zh_hk: 開場。一個人做選擇。呢個選擇上面嘅四步。
+glossary:
+- en: opportunity cost
+  zh: 机会成本
+  zh_hk: 機會成本
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What four steps does this module use?
+  zh: 这一单元用哪四步？
+  zh_hk: 呢一單元用邊四步？
+  answer_en: Trade-off, opportunity cost, sunk cost, then one more unit.
+  answer_zh: 权衡、机会成本、沉没成本，然后是再一单位。
+  answer_zh_hk: 權衡、機會成本、沉沒成本，然後係再一單位。
+- id: Q2
+  type: comprehension
+  en: What comes after this module?
+  zh: 这一单元之后是什么？
+  zh_hk: 呢一單元之後係咩？
+  answer_en: Price. Demand, supply, equilibrium, elasticity.
+  answer_zh: 价格。需求、供给、均衡、弹性。
+  answer_zh_hk: 價格。需求、供給、均衡、彈性。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 22
+  kicker: This module
+  kicker_en: This module
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Choice
+  title_zh: 选择
+  title_zh_hk: 選擇
+  item1_en: Trade-off
+  item1_zh: 权衡
+  item1_zh_hk: 權衡
+  item2_en: Opportunity cost
+  item2_zh: 机会成本
+  item2_zh_hk: 機會成本
+  item3_en: Sunk cost
+  item3_zh: 沉没成本
+  item3_zh_hk: 沉沒成本
+  item4_en: One more unit
+  item4_zh: 再一单位
+  item4_zh_hk: 再一單位
+  en: This unit is one person choosing. First we name what you give up. Then the next-best use
+    of the same hour. Then we ignore what cannot come back. Last we ask whether one more unit
+    is still worth it.
+  zh: 这一单元是一个人在选。先说出你放弃了什么，再说同一小时的次优用途，然后把回不来的排除，最后问再做一单位还值不值。
+  zh_hk: 呢一單元係一個人喺度揀。先講你放棄咗咩，再講同一小時嘅次優用途，然後將返唔嚟嘅排除，最後問再做一單位仲值唔值。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: This module
+  kicker_en: This module
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Decide forward
+  title_zh: 朝前做决定
+  title_zh_hk: 朝前做決定
+  q1_en: Use future costs. Not the receipt.
+  q1_zh: 用未来的成本。不要用收据。
+  q1_zh_hk: 用未來嘅成本。唔好用收據。
+  q2_en: Next module is price.
+  q2_zh: 下一单元是价格。
+  q2_zh_hk: 下一單元係價格。
+  s1_en: That is the map for this unit. Four short sittings, one person.
+  s1_zh: 这就是这一单元的地图。四节短课，一个人。
+  s1_zh_hk: 呢個就係呢一單元嘅地圖。四節短課，一個人。
+  s2_en: We start by naming the trade-off.
+  s2_zh: 我们从点出权衡开始。
+  s2_zh_hk: 我哋由點出權衡開始。
+  s3_en: 'Next sitting: every yes uses time or money that cannot be spent twice.'
+  s3_zh: 下一讲：每一个“是”，都占用不能花第二次的时间或钱。
+  s3_zh_hk: 下一講：每一個「是」，都佔用唔可以花第二次嘅時間或錢。

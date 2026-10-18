@@ -1,0 +1,165 @@
+id: STAT-M10-T04-POWER
+course: STAT-M10
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Statistical Power and Sample Size: Planning a Minimum Detectable Effect'
+title_zh: 统计功效与样本量：精准计算最小可检测效应
+title_zh_hk: 統計功效與樣本量：精準計算最小可檢測效應
+objective_en: Define statistical power and Type II error, explain how MDE affects sample-size requirements, and interpret a non-significant result without claiming that the true effect is zero.
+objective_zh: 构建统计功效（1 - Beta）分析框架，运用最小可检测效应（MDE）公式精确求解所需样本量，并规避因功效不足而误杀盈利功能的决策陷阱。
+objective_zh_hk: 構建統計功效（1 - Beta）分析架構，運用最小可檢測效應（MDE）公式精確計出所需樣本量，並避開因功效不足而誤殺賺錢功能嘅決策陷阱。
+glossary:
+- en: Statistical Power (1 - Beta)
+  zh: 统计功效（1 - Beta）
+  zh_hk: 統計功效（1 - Beta）
+  lock: true
+- en: Type II Error (False Negative)
+  zh: 第二类错误（假阴性率，Beta）
+  zh_hk: 第二類錯誤（假陰性率，Beta）
+  lock: true
+- en: Minimum Detectable Effect (MDE)
+  zh: 最小可检测效应（MDE）
+  zh_hk: 最小可檢測效應（MDE）
+  lock: true
+- en: Underpowered Test Trap
+  zh: 低功效测试陷阱
+  zh_hk: 低功效測試陷阱
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: According to the sample size formula n* = (2 * (z_{alpha/2} + z_beta)^2 * sigma^2) / MDE^2, what happens to the required sample size per variant if product management decides to cut the Minimum Detectable Effect (MDE) in half (e.g., from 4% down to 2%)?
+  question_zh: 根据样本量计算公式 n* = (2 * (z_{alpha/2} + z_beta)^2 * sigma^2) / MDE^2，若产品团队决定将最小可检测效应（MDE）减半（例如从 4% 压缩至 2%），每个测试组所需的样本量会发生何种变化？
+  question_zh_hk: 根據樣本量計算公式 n* = (2 * (z_{alpha/2} + z_beta)^2 * sigma^2) / MDE^2，如果產品團隊決定將最小可檢測效應（MDE）減半（好似由 4% 縮窄到 2%），每個測試組所需嘅樣本量會出現咩變化？
+  options_en:
+  - 'A: Under this approximation, required sample size becomes four times as large'
+  - 'B: The required sample size is cut in half'
+  - 'C: The required sample size doubles (increases by 2x)'
+  - 'D: The required sample size remains completely unchanged'
+  options_zh:
+  - 'A: 所需样本量剧增至原来的四倍（4x），源于分母中 MDE 的平方反比关系'
+  - 'B: 所需样本量随之减半'
+  - 'C: 所需样本量刚好翻倍（2x）'
+  - 'D: 所需样本量完全保持不变'
+  options_zh_hk:
+  - 'A: 所需樣本量暴升到原本嘅四倍（4x），源於分母入面 MDE 嘅平方反比關係'
+  - 'B: 所需樣本量跟住減半'
+  - 'C: 所需樣本量剛好翻倍（2x）'
+  - 'D: 所需樣本量完全保持不變'
+  answer: A
+  explanation_en: The displayed approximation makes sample size proportional to 1/MDE squared. Halving MDE therefore multiplies the required sample by four when other inputs are fixed.
+  explanation_zh: 样本量与 MDE 的平方成反比（n* 正比于 1 / MDE^2）。将 MDE 减半意味着分母除以 4，因此所需流量必须翻两番达到整整 4 倍。
+  explanation_zh_hk: 樣本量同 MDE 嘅平方成反比（n* 正比於 1 / MDE^2）。將 MDE 減半代表分母除以 4，因此所需人流必須翻兩番達到足足 4 倍。
+- id: Q2
+  type: multiple_choice
+  question_en: Metro Coffee ran an app banner test for 3 days with only 400 total users (200 per group). Conversion rose from 5.0% to 6.2% (+1.2%), but the test reported p = 0.28. Marketing concluded 'the banner has zero effect'. What is the true statistical reality?
+  question_zh: Metro Coffee 的点单横幅测试仅运行 3 天，总计覆盖 400 名用户（每组 200 人）。转化率从 5.0% 升至 6.2%（+1.2%），但报告 p = 0.28。营销部据此断定‘横幅完全无效’。真实的统计学事实是什么？
+  question_zh_hk: Metro Coffee 嘅 App 橫幅測試淨係行咗 3 日，總共得 400 個用戶（每組 200 人）。轉化率由 5.0% 升到 6.2%（+1.2%），但報告 p = 0.28。宣傳部據此認定‘橫幅完全冇效’。真實嘅統計學真相係點？
+  options_en:
+  - 'A: The experiment may have low power for a 1.2 percentage-point effect; non-significance does not prove a zero effect'
+  - 'B: The p-value of 0.28 proves beyond doubt that the true lift is exactly 0.0%'
+  - 'C: The test suffered from a sample ratio mismatch'
+  - 'D: Oat milk sales are mathematically immune to digital advertising'
+  options_zh:
+  - A：该实验对 1.2 个百分点效应的功效可能较低；不显著不能证明效应为零
+  - 'B: p = 0.28 确凿证明该横幅的真实转化增益严格等于 0.0%'
+  - 'C: 该测试遭遇了严重的样本比例失配（SRM）'
+  - 'D: 燕麦奶销售在数学机制上天生对数字广告完全免疫'
+  options_zh_hk:
+  - A：該實驗對 1.2 個百分點效應嘅功效可能較低；唔顯著唔可以證明效應係零
+  - 'B: p = 0.28 鐵證該橫幅嘅真實轉化增長嚴格等於 0.0%'
+  - 'C: 該測試遇上咗嚴重嘅樣本比例失配（SRM）'
+  - 'D: 燕麥奶銷售喺數學機制上天生對數碼廣告完全免疫'
+  answer: A
+  explanation_en: A large p-value is not proof that the true effect is zero. Interpretation should use the effect estimate, confidence interval, planned MDE, achieved sample size, and experiment-integrity checks.
+  explanation_zh: 较大的 p 值不能证明真实效应为零。解释时应同时看效应估计、置信区间、计划的最小可检测效应、实际样本量，以及实验完整性检查。
+  explanation_zh_hk: 較大嘅 p 值唔可以證明真實效應係零。解讀嗰陣要同時睇效應估計、置信區間、計劃嘅最小可檢測效應、實際樣本量，同埋實驗完整性檢查。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Premature Experiment Termination
+  kicker_zh: 草率叫停误杀爆款
+  kicker_zh_hk: 草率叫停誤殺爆款
+  title_en: Does a Large p-Value Mean the Feature Has No Effect?
+  title_zh: 能净赚四十万港元的功能，为何被分析师亲手枪毙？
+  title_zh_hk: 可以淨賺四十萬港元嘅功能，點解被分析師親手槍斃？
+  en: Suppose a small banner experiment estimates a positive conversion difference but is not statistically significant. That does not establish a zero effect. The study may simply be too imprecise to separate a commercially relevant effect from sampling noise. Power planning asks what effect matters and how much information is needed before launch.
+  zh: 假设一个小型横幅实验估计出正向转化差异，但没有达到统计显著。这并不能证明效应为零。研究可能只是精度不足，无法把有商业意义的效应与抽样噪声分开。功效规划要在上线前问清：哪个效应重要，以及需要多少信息。
+  zh_hk: 假設一個小型橫幅實驗估計出正向轉化差異，但未達到統計顯著。呢個唔可以證明效應係零。研究可能只係精度不足，無法將有商業意義嘅效應同抽樣雜音分開。功效規劃要喺上線之前問清：邊個效應重要，以及需要幾多信息。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: n* = (2 * (z_{alpha/2} + z_beta)^2 * sigma^2) / MDE^2 where Power = 1 - beta = 0.80
+  formula_zh: 样本量公式：n* = (2 * (z_{alpha/2} + z_beta)^2 * sigma^2) / MDE^2（功效 = 1 - beta = 0.80）
+  formula_zh_hk: 樣本量公式：n* = (2 * (z_{alpha/2} + z_beta)^2 * sigma^2) / MDE^2（功效 = 1 - beta = 0.80）
+  formula_tex: n^* = \frac{2 \left( z_{\alpha/2} + z_{\beta} \right)^2 \sigma^2}{\text{MDE}^2} \approx \frac{15.7 \cdot \sigma^2}{\text{MDE}^2} \quad \text{with } \alpha = 0.05, \; \beta = 0.20
+  s1_en: Statistical Power (1 - Beta) is the probability that a specified analysis rejects the null when a particular alternative effect is true. Beta is the corresponding Type II Error probability for that planned effect.
+  s1_zh: 统计功效（1 - Beta）是指指定分析在某个特定备择效应为真时拒绝原假设的概率。Beta 是该计划效应对应的第二类错误概率。
+  s1_zh_hk: 統計功效（1 - Beta）係指指定分析喺某個特定備擇效應為真嗰陣拒絕原假設嘅概率。Beta 係該計劃效應對應嘅第二類錯誤概率。
+  s2_en: The Minimum Detectable Effect is the effect size used for planning, not the smallest effect the completed experiment could ever estimate. Required sample size also depends on the metric, baseline rate or variance, alpha, target power, allocation, test direction, and analysis method.
+  s2_zh: 最小可检测效应是用于规划的效应大小，不是完成后实验所能估计的最小效应。所需样本量还取决于指标、基准率或方差、alpha、目标功效、分配、检验方向与分析方法。
+  s2_zh_hk: 最小可檢測效應係用嚟規劃嘅效應大小，唔係完成之後實驗所能估計嘅最小效應。所需樣本量仲取決於指標、基準率或方差、alpha、目標功效、分配、檢驗方向同分析方法。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: The Inverse Square Penalty
+  left_zh: 平方反比的严苛代价
+  right_en: The False Negative Graveyard
+  right_zh: 被误杀的假阴性坟场
+  s1_en: Under the displayed approximation, sample size scales with one over MDE squared. Halving the planned effect multiplies the required sample by four when the other inputs stay fixed. A tenfold smaller effect would multiply it by about one hundred.
+  s1_zh: 在所示近似下，样本量与 MDE 的平方成反比。其他输入不变时，把计划效应减半会使所需样本变为四倍。效应缩小到十分之一，所需样本大约变为一百倍。
+  s1_zh_hk: 喺所示近似之下，樣本量同 MDE 嘅平方成反比。其他輸入不變嗰陣，將計劃效應減半會令所需樣本變成四倍。效應縮到十分之一，所需樣本大約變成一百倍。
+  s2_en: A non-significant result means the chosen test did not cross its rejection threshold. It does not by itself distinguish a zero effect from a small effect, noisy measurement, low power, implementation failure, or a wide confidence interval.
+  s2_zh: 不显著只表示所选检验没有越过拒绝阈值。它本身不能区分零效应、较小效应、测量噪声、低功效、实施故障或较宽的置信区间。
+  s2_zh_hk: 唔顯著只表示所選檢驗冇越過拒絕門檻。佢本身唔可以區分零效應、較細效應、量度雜音、低功效、實施故障或者較寬嘅置信區間。
+  s3_en: Avoid the underpowered-test trap by choosing the estimand, metric, MDE, alpha, target power, and stopping rule before launch. Report estimates and confidence intervals rather than only significant or not significant.
+  s3_zh: 应在上线前选定估计目标、指标、MDE、alpha、目标功效与停止规则，以避免低功效测试陷阱。报告估计值与置信区间，而不只报告显著或不显著。
+  s3_zh_hk: 要喺上線之前選定估計目標、指標、MDE、alpha、目標功效同停止規則，以避免低功效測試陷阱。報告估計值同置信區間，而唔只報告顯著或者唔顯著。
+  left_zh_hk: 平方反比嘅嚴苛代價
+  right_zh_hk: 被誤殺嘅假陰性墳場
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Specify Baseline, Effect Scale, and MDE
+  step1_zh: 锚定基准转化与目标 MDE
+  step2_en: Calculate an Approximate Sample Requirement
+  step2_zh: 求解各组刚性样本底线
+  step3_en: Adjust for the Intended Design and Analysis
+  step3_zh: 诊断湾仔测试功效崩塌
+  s1_en: 'Teaching approximation: use baseline conversion 0.05, variance 0.05 times 0.95 equals 0.0475, and an absolute MDE of 0.012.'
+  s1_zh: 第一步：湾仔店 App 早餐基准转化率为 5.0%（方差为 0.05 * 0.95 = 0.0475）。管理层希望捕捉具备重大商业价值的 +1.2% 增量（即 MDE = 0.012）。
+  s1_zh_hk: 第一步：灣仔店 App 早餐基準轉化率為 5.0%（方差係 0.05 * 0.95 = 0.0475）。管理層希望捕捉具備重大商業價值嘅 +1.2% 增量（即 MDE = 0.012）。
+  s2_en: With two-sided alpha 0.05, target power 0.80, and rounded normal critical values 1.96 and 0.84, the simplified equal-variance formula gives about 5,173 users per arm.
+  s2_zh: 在双侧 alpha 0.05、目标功效 0.80，并采用约 1.96 与 0.84 的正态临界值时，简化等方差公式得到每组约 5,173 人。
+  s2_zh_hk: 喺雙側 alpha 0.05、目標功效 0.80，並採用約 1.96 同 0.84 嘅正態臨界值嗰陣，簡化等方差公式得到每組約 5,173 人。
+  s3_en: This is a teaching approximation, not a universal conversion-test calculator. A production calculation should use the intended two-proportion method and adjust for unequal allocation, clustering, repeated measures, attrition, noncompliance, multiple testing, and planned variance reduction.
+  s3_zh: 这是教学近似，不是通用转化率检验计算器。正式计算应使用预定的两比例方法，并按不等分配、集群、重复测量、流失、不遵从、多重检验与计划中的方差缩减进行调整。
+  s3_zh_hk: 呢個係教學近似，唔係通用轉化率檢驗計算器。正式計算要使用預定嘅兩比例方法，並按不等分配、集群、重複量度、流失、不遵從、多重檢驗同計劃中嘅方差縮減進行調整。
+  step1_zh_hk: 錨定基準轉化與目標 MDE
+  step2_zh_hk: 求解各組剛性樣本底線
+  step3_zh_hk: 診斷灣仔測試功效崩塌
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Why Must We Size Sample Sizes Before Launch?
+  q1_zh: 为何必须在开跑前严谨测算样本量？
+  q2_en: 'Audit Rule: Never Call a Defeat on an Underpowered Test'
+  q2_zh: 审计准则：功效不足无发言权，未达标量休谈成败
+  s1_en: Power is tied to a specified alternative, not a permanent property of an experiment. Distinguish an absolute percentage-point change from a relative percentage change.
+  s1_zh: 功效依附于一个指定的备择效应，不是实验的永久属性。要把百分点的绝对变化与百分比的相对变化区分开。
+  s1_zh_hk: 功效依附於一個指定嘅備擇效應，唔係實驗嘅永久屬性。要將百分點嘅絕對變化同百分比嘅相對變化分開。
+  s2_en: Plan the MDE from business relevance, then calculate sample size using assumptions that match the outcome and analysis. Treat simple formulas as approximations.
+  s2_zh: 先按商业相关性设定 MDE，再用与结果和分析匹配的假设计算样本量。简单公式只作为近似。
+  s2_zh_hk: 先按商業相關性設定 MDE，再用同結果同分析匹配嘅假設計算樣本量。簡單公式只作為近似。
+  s3_en: If a result is non-significant, examine the estimate, confidence interval, experiment integrity, and effects still compatible with the data. Do not convert insufficient evidence into a claim of no effect.
+  s3_zh: 如果结果不显著，应检查估计值、置信区间、实验完整性，以及数据仍然支持的效应范围。不要把证据不足转化为没有效应的断言。
+  s3_zh_hk: 如果結果唔顯著，就要檢查估計值、置信區間、實驗完整性，同埋數據仍然支持嘅效應範圍。唔好將證據不足轉化成冇效應嘅斷言。
+  q1_zh_hk: 點解必須喺開跑前嚴謹測算樣本量？
+  q2_zh_hk: 審計準則：功效未夠冇發言權，未達標量咪判生死

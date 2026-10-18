@@ -1,0 +1,170 @@
+id: STAT-M07-T13-DIDRG
+course: STAT-M07
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Regression DiD: The Interaction Treatment Effect'
+title_zh: 回归型双重差分：交互项中的处理效应
+title_zh_hk: 回歸型雙重差分：交互項入面嘅處理效應
+objective_en: Estimate Difference-in-Differences with multiple regression, show that the Treat-by-Post interaction coefficient equals the 2x2 DiD contrast in the canonical model, and interpret its standard error and t-statistic under appropriate identification and inference assumptions.
+objective_zh: 使用多元回归估计双重差分，说明在标准模型中处理组与后时期交互项系数等于 2x2 DiD 对比，并在适当的识别与推断假设下解读其标准误和 t 统计量。
+objective_zh_hk: 使用多元回歸估計雙重差分，說明喺標準模型入面處理組同後時期交互項系數等於 2x2 DiD 對比，並喺適當嘅識別同推斷假設之下解讀標準誤同 t 統計量。
+glossary:
+- en: Regression DiD
+  zh: 回归型双重差分
+  zh_hk: 回歸型雙重差分
+  lock: true
+  zh_zh_hk: 回歸型雙重差分
+- en: Treatment Dummy
+  zh: 处理组虚拟变量
+  zh_hk: 處理組虛擬變量
+  lock: true
+  zh_zh_hk: 處理組虛擬變量
+- en: Post-Period Dummy
+  zh: 后时期虚拟变量
+  zh_hk: 後時期虛擬變量
+  lock: true
+  zh_zh_hk: 後時期虛擬變量
+- en: Interaction Treatment Effect
+  zh: 交互项处理效应
+  zh_hk: 交互項處理效應
+  lock: true
+  zh_zh_hk: 交互項處理效應
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: In the canonical regression DiD model, which coefficient equals the Difference-in-Differences contrast?
+  question_zh: 在标准回归型 DiD 模型中，哪一个系数等于双重差分对比？
+  question_zh_hk: 喺標準回歸型 DiD 模型入面，邊一個系數等於雙重差分對比？
+  options_en:
+  - 'A: beta_1 (The permanent baseline gap between treated and control stores)'
+  - 'B: beta_2 (The macro time trend shared by all stores)'
+  - 'C: beta_3 (The interaction term between the treatment group and the post-intervention period)'
+  - 'D: beta_0 (The baseline sales level of the control store before treatment)'
+  options_zh:
+  - 'A: beta_1（处理组与对照组门店之间的固有基准差距）'
+  - 'B: beta_2（所有门店共同经历的宏观时间趋势）'
+  - 'C: beta_3（处理组虚拟变量与后时期虚拟变量的乘积交互项）'
+  - 'D: beta_0（对照组门店在改造前的基准销量水平）'
+  options_zh_hk:
+  - 'A: beta_1（處理組同對照組門市之間嘅固定基線差距）'
+  - 'B: beta_2（所有門市共同經歷嘅宏觀時間趨勢）'
+  - 'C: beta_3（處理組虛擬變量同後時期虛擬變量嘅乘積交互項）'
+  - 'D: beta_0（對照組門市喺改裝前嘅基準銷量水平）'
+  answer: C
+  explanation_en: Beta three is the Treat-by-Post interaction coefficient. In the canonical 2x2 model it equals the treated group’s post-period change minus the control group’s post-period change. Causal interpretation additionally requires the DiD identification assumptions.
+  explanation_zh: beta_3 是 Treat 与 Post 的交互项系数。在标准 2x2 模型中，它等于处理组后时期变化减去对照组后时期变化。若作因果解释，还需要满足 DiD 识别假设。
+  explanation_zh_hk: beta_3 係 Treat 同 Post 嘅交互項系數。喺標準 2x2 模型入面，佢等於處理組後時期變化減去對照組後時期變化。如果作因果解讀，仲要滿足 DiD 識別假設。
+- id: Q2
+  type: multiple_choice
+  question_en: Regressing daily cups across 60 store-shifts yields Y_it = 310 + 70 * Treat_i + 20 * Post_t + 20 * (Treat_i * Post_t), with SE(beta_3_hat) = 5.0. What is the t-statistic on the equipment treatment effect?
+  question_zh: 在 60 个门店排班样本中进行回归，得出 Y_it = 310 + 70 * 处理组 + 20 * 后时期 + 20 * (处理组 * 后时期)，测得 SE(beta_3_hat) = 5.0。新设备的因果处理效应 t 统计量是多少？
+  question_zh_hk: 喺 60 個門市排班樣本入面做回歸，得出 Y_it = 310 + 70 * 處理組 + 20 * 後時期 + 20 * (處理組 * 後時期)，測得 SE(beta_3_hat) = 5.0。新設備嘅因果處理效應 t 統計量係幾多？
+  options_en:
+  - 'A: t = 4.00'
+  - 'B: t = 1.00 (Not statistically significant)'
+  - 'C: t = 14.00'
+  - 'D: t = 0.25'
+  options_zh:
+  - 'A: t = 4.00'
+  - 'B: t = 1.00（在统计上不显著）'
+  - 'C: t = 14.00'
+  - 'D: t = 0.25'
+  options_zh_hk:
+  - 'A: t = 4.00'
+  - 'B: t = 1.00（喺統計上唔顯著）'
+  - 'C: t = 14.00'
+  - 'D: t = 0.25'
+  answer: A
+  explanation_en: 'The interaction t-statistic is beta three hat divided by its standard error: 20 / 5.0 = 4.00. A precise p-value requires the relevant reference distribution and degrees of freedom.'
+  explanation_zh: 交互项 t 统计量为 beta_3 估计值除以其标准误：20 / 5.0 = 4.00。精确 p值 需要相应的参考分布和自由度。
+  explanation_zh_hk: 交互項 t 統計量係 beta_3 估計值除以標準誤：20 / 5.0 = 4.00。精確 p值 需要相應嘅參考分布同自由度。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Statistical Significance Dilemma
+  kicker_zh: 统计显著性困境
+  kicker_zh_hk: 統計顯著性困局
+  title_en: Is Our Twenty-Cup Net Gain Statistically Real?
+  title_zh: 扣减后的二十杯净增量在统计上靠谱吗？
+  title_zh_hk: 扣減後嘅二十杯淨增量喺統計上穩唔穩陣？
+  en: 'Our four-cell arithmetic grid successfully reduced Wan Chai''s forty-cup claim down to a twenty-cup net gain by subtracting Mong Kok''s macro surge. But board directors immediately push back: could that twenty-cup difference just be random daily operational noise? The simple arithmetic table provides no standard errors and no p-values. How do we embed the 2x2 grid inside a rigorous multiple regression model?'
+  zh: 通过扣减旺角店的大市涨幅，我们的四格算术矩阵成功将湾仔店的战功从四十杯压缩至二十杯真实净增量。然而董事会随即质询：这二十杯差距难道不可能只是日常排班的随机波动吗？算术表格算不出标准误，更给不出 p值。我们该如何将双重差分逻辑无缝融入严谨的多元回归模型中？
+  zh_hk: 透過扣減旺角店嘅大市漲幅，我哋嘅四格算術表成功將灣仔店自誇嘅四十杯水分，壓返落二十杯嘅實質淨增量。但董事會即刻提出質疑：呢二十杯差距會唔會純粹只係平日排班嘅隨機雜音？單憑算術表格計唔出標準誤，更加畀唔出 p值。我哋點樣可以將雙重差分無縫擺入嚴謹嘅多元回歸模型入面？
+  zh_zh_hk: 透過扣減旺角店嘅大市漲幅，我哋嘅四格算術表成功將灣仔店自誇嘅四十杯水分，壓返落二十杯嘅實質淨增量。但董事會即刻提出質疑：呢二十杯差距會唔會純粹只係平日排班嘅隨機雜音？單憑算術表格計唔出標準誤，更加畀唔出 p值。我哋點樣可以將雙重差分無縫擺入嚴謹嘅多元回歸模型入面？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Y_it = beta_0 + beta_1 * Treat_i + beta_2 * Post_t + beta_3 * (Treat_i * Post_t) + e_it
+  formula_zh: 回归 DiD 模型：Y_it = beta_0 + beta_1 * 处理组 + beta_2 * 后时期 + beta_3 * (处理组 * 后时期) + e_it
+  formula_zh_hk: 回歸 DiD 模型：Y_it = beta_0 + beta_1 * 處理組 + beta_2 * 後時期 + beta_3 * (處理組 * 後時期) + e_it
+  formula_tex: Y_{it} = \beta_0 + \beta_1 \text{Treat}_i + \beta_2 \text{Post}_t + \beta_3 (\text{Treat}_i \times \text{Post}_t) + \varepsilon_{it} \implies \hat{\beta}_3 = \hat{\delta}_{\text{DiD}}
+  s1_en: 'The regression formulation of Difference-in-Differences combines two binary indicators: a treatment dummy identifying Wan Chai, and a time dummy identifying shifts occurring after the tamper installation.'
+  s1_zh: 回归型双重差分模型融合了两个二元虚拟变量：标识湾仔店的处理组虚拟变量，以及标识自动填压机安装后各班次的后时期时间虚拟变量。
+  s1_zh_hk: 回歸型雙重差分模型結合咗兩個二元虛擬變量：標記灣仔店嘅處理組虛擬變量，以及標記自動填壓機安裝後各排班嘅後時期時間虛擬變量。
+  s2_en: The product of Treat and Post equals one only for treated observations in the post period. In the canonical 2x2 specification, beta three algebraically equals the Difference-in-Differences contrast. Interpreting it causally additionally requires credible parallel trends and the other design assumptions.
+  s2_zh: Treat 与 Post 的乘积只在处理组的后时期观测中等于 1。在标准 2x2 设定中，beta_3 在代数上等于双重差分对比。若要作因果解释，还需要可信的平行趋势及其他设计假设。
+  s2_zh_hk: Treat 同 Post 嘅乘積只會喺處理組後時期觀測入面等於 1。喺標準 2x2 設定入面，beta_3 喺代數上等於雙重差分對比。如果要作因果解讀，仲需要可信嘅平行趨勢同其他設計假設。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Decomposing the Four Cells
+  left_zh: 四格参数代数分解
+  right_en: Standard Errors & Controls
+  right_zh: 方差推断与协变量控制
+  s1_en: In the canonical model, beta zero is the control-group pre-period mean, beta one is the treated-versus-control baseline difference, and beta two is the control-group time change. These are statistical cell contrasts, not automatic labels for location quality or a specific external event.
+  s1_zh: 在标准模型中，beta_0 是对照组前时期均值，beta_1 是处理组相对于对照组的基准差异，beta_2 是对照组的时间变化。这些是统计上的单元格对比，并不自动代表地段质量或某一项具体外部事件。
+  s1_zh_hk: 喺標準模型入面，beta_0 係對照組前時期平均數，beta_1 係處理組相對於對照組嘅基準差異，beta_2 係對照組嘅時間變化。呢啲係統計上嘅單元格對比，唔會自動代表地段質素或者某一項具體外部事件。
+  s2_en: Beta three is the treated group’s additional post-period change beyond the baseline group difference and common time change represented in the model. It is the regression form of the second difference.
+  s2_zh: beta_3 表示处理组在后时期相对于模型所表示的基准组差异与共同时间变化之外的额外变化，也就是第二重差分的回归表达。
+  s2_zh_hk: beta_3 代表處理組喺後時期相對於模型所表示嘅基準組差異同共同時間變化之外嘅額外變化，亦即係第二重差分嘅回歸表達。
+  s3_en: Regression supplies a standard error for beta three and can include prespecified covariates. Reliable inference still requires an appropriate error structure, such as accounting for repeated observations within stores, and covariates do not repair a failed parallel-trends design.
+  s3_zh: 回归模型可为 beta_3 提供标准误，也可加入预先设定的协变量。可靠推断仍需要适当的误差结构，例如处理门店内部重复观测的相关性；加入协变量也不能修复失效的平行趋势设计。
+  s3_zh_hk: 回歸模型可以為 beta_3 提供標準誤，亦可以加入預先設定嘅協變量。可靠推斷仍然需要適當嘅誤差結構，例如處理門市內部重複觀測嘅相關性；加入協變量亦唔能夠修復失效嘅平行趨勢設計。
+  left_zh_hk: 四格參數代數分解
+  right_zh_hk: 方差推斷與協變量控制
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Structure Panel Dataset
+  step1_zh: 构建跨期面板数据
+  step2_en: Estimate DiD Interaction
+  step2_zh: 拟合交互回归方程
+  step3_en: Audit Statistical Power
+  step3_zh: 核验假设检验统计量
+  s1_en: 'Step one: Use the supplied 60 shift observations from Wan Chai and Mong Kok, covering pre- and post-installation periods. Code Treat for the treated store, Post for the post period, and their product for the interaction.'
+  s1_zh: 第一步：使用给定的 60 个湾仔与旺角排班观测，覆盖安装前与安装后时期。用 Treat 标识处理组门店，用 Post 标识后时期，并用二者乘积构成交互项。
+  s1_zh_hk: 第一步：使用畀定嘅 60 個灣仔同旺角排班觀測，涵蓋安裝前同安裝後時期。用 Treat 標記處理組門市，用 Post 標記後時期，再用兩者乘積構成交互項。
+  s2_en: 'Step two: The supplied OLS equation is Cups = 310 + 70 times Treat + 20 times Post + 20 times Treat times Post. The interaction estimate is +20 cups, matching the arithmetic 2x2 DiD contrast.'
+  s2_zh: 第二步：给定的 OLS 方程为：出杯量 = 310 + 70 乘以 Treat + 20 乘以 Post + 20 乘以 Treat 与 Post。交互项估计值为 +20 杯，与 2x2 算术 DiD 对比一致。
+  s2_zh_hk: 第二步：畀定嘅 OLS 方程係：出杯量 = 310 + 70 乘以 Treat + 20 乘以 Post + 20 乘以 Treat 同 Post。交互項估計值係 +20 杯，同 2x2 算術 DiD 對比一致。
+  s3_en: 'Step three: With the supplied standard error of 5.0 cups, the t-statistic is 20 divided by 5.0, or 4.00. A p-value cannot be fixed from this information alone without the inference method and degrees of freedom; statistical evidence also does not by itself establish profitability or causal validity.'
+  s3_zh: 第三步：根据给定的 5.0 杯标准误，t 统计量为 20 除以 5.0，即 4.00。若没有推断方法和自由度，仅凭这些信息无法确定具体 p值；统计证据本身也不能证明盈利能力或因果有效性。
+  s3_zh_hk: 第三步：根據畀定嘅 5.0 杯標準誤，t 統計量係 20 除以 5.0，即 4.00。如果冇推斷方法同自由度，單憑呢啲信息無法確定具體 p值；統計證據本身亦唔能夠證明盈利能力或者因果有效性。
+  step1_zh_hk: 構建跨期面板數據
+  step2_zh_hk: 擬合交互回歸方程
+  step3_zh_hk: 核驗假設檢驗統計量
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Why Convert Arithmetic into Regression?
+  q1_zh: 为何必须将算术矩阵转化为回归？
+  q2_en: 'Audit Rule: Demand the t-Statistic on beta_3'
+  q2_zh: 审计准则：因果认账必审交互项 t 值
+  s1_en: Regression DiD expresses the 2x2 second difference as an interaction coefficient and provides a framework for uncertainty estimation. The regression format strengthens measurement, but it does not replace the identification assumptions.
+  s1_zh: 回归型双重差分将 2x2 第二重差分表示为交互项系数，并提供估计不确定性的框架。回归形式强化了度量，但不能取代识别假设。
+  s1_zh_hk: 回歸型雙重差分將 2x2 第二重差分表示成交互項系數，並提供估計不確定性嘅框架。回歸形式加強咗量度，但唔可以取代識別假設。
+  s2_en: 'Decision rule: report beta three with its standard error and a stated inference method, then separately assess parallel trends, spillovers, differential shocks, and commercial materiality before approving a rollout.'
+  s2_zh: 决策规则：报告 beta_3、其标准误及明确的推断方法，再分别评估平行趋势、溢出效应、差异性冲击与商业重要性，然后才决定是否推广。
+  s2_zh_hk: 決策規則：報告 beta_3、標準誤同明確嘅推斷方法，再分別評估平行趨勢、溢出效應、差異性衝擊同商業重要性，然後先決定係咪推廣。
+  s3_en: For the supplied model, beta three equals +20 cups and its t-statistic equals 4.00. That resolves the estimation and arithmetic questions; causal and investment conclusions require the design and business checks stated above.
+  s3_zh: 在给定模型中，beta_3 等于 +20 杯，t 统计量等于 4.00。这解决了估计与算术问题；因果和投资结论仍需完成上述设计与业务检查。
+  s3_zh_hk: 喺畀定模型入面，beta_3 等於 +20 杯，t 統計量等於 4.00。呢個解決咗估計同算術問題；因果同投資結論仍然要完成上述設計同業務檢查。
+  q1_zh_hk: 點解必須將算術表格轉化做回歸？
+  q2_zh_hk: 審計準則：因果認賬必查交互項 t 值

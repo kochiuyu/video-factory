@@ -1,0 +1,220 @@
+id: STAT-M04-T10-INTER
+course: STAT-M04
+course_en: Sampling Distributions, the Central Limit Theorem, and Interval Estimation
+course_zh: 抽样分布、中心极限定理与区间估计
+course_zh_hk: 抽樣分佈、中心極限定理與區間估計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: Interpreting confidence
+title_zh: 真值恒定区间动：置信度的百人审计思想实验
+title_zh_hk: 真值恆定區間動：置信度嘅百人審計思想實驗
+objective_en: Correct the classical frequentist fallacy regarding confidence intervals, establish that the population parameter
+  is a fixed constant while intervals are random variables, simulate the 100-auditor thought experiment to demonstrate long-run
+  coverage rates, and interpret Metro Coffee customer spend audit brackets.
+objective_zh: 纠正将置信区间误读为参数落入概率的经典频率学派谬误，确立“总体参数为恒定客观常数，区间才是随机变动实体”的核心教义，通过 100 位审计员的思想实验阐明长期捕获覆盖率，并精准解读都市咖啡客单消费审计区间。
+objective_zh_hk: 糾正將置信區間誤讀為參數落入概率嘅經典頻率學派謬誤，確立「總體參數為恆定客觀常數，區間先係隨機變動實體」嘅核心教義，透過 100 位審計員嘅思想實驗闡明長期捕獲覆蓋率，並精準解讀都市咖啡客單消費審計區間。
+glossary:
+- en: frequentist interpretation
+  zh: 频率学派解释
+  zh_hk: 頻率學派解釋
+  lock: true
+- en: long-run coverage rate
+  zh: 长期覆盖率/捕获率
+  zh_hk: 長期覆蓋率/捕獲率
+  lock: true
+- en: fixed parameter vs random interval
+  zh: 固定参数与随机区间
+  zh_hk: 固定參數與隨機區間
+  lock: true
+- en: confidence fallacy
+  zh: 置信谬误
+  zh_hk: 置信謬誤
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: 'A junior analyst constructs a 95% confidence interval for average customer spend: [$46.00, $52.00]. Why is
+    the statement ''There is a 95% probability that true mean spend mu lies between $46 and $52'' mathematically incorrect
+    under frequentist statistics?'
+  question_zh: 初级分析师为客单价构建了 95% 置信区间 [$46.00, $52.00]。为什么在频率学派统计体系中，声称“真实平均消费 mu 落在 $46 至 $52 之间的概率为 95%”在数学上是错误的？
+  question_zh_hk: 初級分析師為客單價構建咗 95% 置信區間 [$46.00, $52.00]。點解喺頻率學派統計體系入面，聲稱「真實平均消費 mu 落喺 $46 至 $52 之間嘅概率為 95%」喺數學上係錯嘅？
+  options_en:
+  - 'A: The true parameter mu is a fixed, non-random constant; once the interval numbers are calculated, mu is either inside
+    the bracket (P = 1) or outside (P = 0). The 95% applies to the long-run procedure, not the static numbers.'
+  - 'B: Because customer spend can only be evaluated at 99% confidence, never 95%.'
+  - 'C: Because the sample size must be infinite before any probability statement can be made.'
+  - 'D: Because cash receipts follow Poisson jumps that invalidate real-valued intervals.'
+  options_zh:
+  - 'A: 总体真值 mu 是客观固定的常数而非随机变量；一旦计算出具体的数值区间，mu 要么在里面（概率 1），要么不在（概率 0）。95% 衡量的是抽样构建区间的长期工艺流程，而非这组算出的静态数字。'
+  - 'B: 因为商业客单分析强制要求采用 99% 置信度，95% 属于非法统计操作。'
+  - 'C: 因为在发表任何概率论断之前，实际抽查的小票样本量必须达到无穷大。'
+  - 'D: 因为收银台小票服从离散泊松跳跃，导致实数区间的概率测度失效。'
+  options_zh_hk:
+  - 'A: 總體真值 mu 係客觀固定嘅常數而唔係隨機變量；一旦計算出具體嘅數值區間，mu 一係喺入面（概率 1），一係唔喺（概率 0）。95% 衡量嘅係抽樣構建區間嘅長期工藝流程，而唔係呢組計出嚟嘅靜態數字。'
+  - 'B: 因為商業客單分析強制要求採用 99% 置信度，95% 屬於非法統計操作。'
+  - 'C: 因為喺發表任何概率論斷之前，實際抽查嘅單據樣本量必須達到無窮大。'
+  - 'D: 因為收銀台單據服從離散泊松跳躍，搞到實數區間嘅概率測度失效。'
+  answer: A
+  explanation_en: Parameters are fixed constants, not random variables. Once numbers are plugged into the formula, the interval
+    does not move; mu is either captured or missed. The 95% reflects the long-run success rate of the methodology across infinite
+    repeated samples.
+  explanation_zh: 总体参数是客观固定的常数，绝非随机变量。一旦数值代入完毕，区间已经定格；mu 要么被网住，要么脱网。95% 指的是在无数次独立重复抽样中，该方法构建出的区间捕获真值的长期成功率。
+  explanation_zh_hk: 總體參數係客觀固定嘅常數，絕非隨機變量。一旦數值代入完畢，區間已經定格；mu 一係被網住，一係脫網。95% 指嘅係喺無數次獨立重複抽樣入面，嗰個方法構建出嚟嘅區間捕獲真值嘅長期成功率。
+- id: Q2
+  type: multiple_choice
+  question_en: If 100 regional auditors independently draw random samples of 100 receipts across Metro branches and each constructs
+    their own 95% confidence interval for mu, what outcome should management expect?
+  question_zh: 若 100 位区域审计员各自独立在都市咖啡门店内随机抽取 100 张小票，并分别构建自身的 95% 置信区间，管理层在长期大盘上应当预期何种结果？
+  question_zh_hk: 若果 100 位區域審計員各自獨立喺都市咖啡門市入面隨機抽取 100 張單據，並分別構建自身嘅 95% 置信區間，管理層喺長期大盤上應當預期咩結果？
+  options_en:
+  - 'A: Approximately 95 of the 100 audit intervals will successfully contain the true parameter mu, while approximately 5
+    intervals will miss it entirely.'
+  - 'B: Every single one of the 100 intervals will be identical in width and center.'
+  - 'C: Exactly 95% of all receipts in the database will fall inside each auditor''s interval.'
+  - 'D: The auditors will systematically fail because samples of 100 receipts are too small to run CLT.'
+  options_zh:
+  - 'A: 这 100 个审计区间中，大约有 95 个能够成功包围捕获真实均值 mu，而大约有 5 个区间会完全脱靶脱网。'
+  - 'B: 这 100 个区间在中心位置和区间跨度上都必定分毫不差、完全一致。'
+  - 'C: 整个数据库中恰好有 95% 的原始顾客小票金额会落在每个审计员的区间内。'
+  - 'D: 审计员必定全部失败，因为 100 张小票体量过小，无法触发中心极限定理。'
+  options_zh_hk:
+  - 'A: 呢 100 個審計區間入面，大約有 95 個能夠成功包圍捕獲真實均值 mu，而大約有 5 個區間會完全脫靶脫網。'
+  - 'B: 呢 100 個區間喺中心位置同區間跨度上都必定分毫不差、完全一致。'
+  - 'C: 成個數據庫入面啱啱好有 95% 嘅原始顧客單據金額會落喺每個審計員嘅區間入面。'
+  - 'D: 審計員必定全部失敗，因為 100 張單據體量過細，冇辦法觸發中心極限定理。'
+  answer: A
+  explanation_en: 95% confidence is a property of the sampling procedure. Across repeated independent trials, approximately
+    95% of the resulting intervals cover the fixed true parameter mu, while 5% will miss due to extreme sampling draws.
+  explanation_zh: 95% 置信度是抽样工艺流程的长期属性。在多次独立重复抽检中，约 95% 的区间能够捕获不变的总体真值 mu，而约 5% 的区间则因抽样极端而遗憾脱靶。
+  explanation_zh_hk: 95% 置信度係抽樣工藝流程嘅長期屬性。喺多次獨立重複抽檢入面，約 95% 嘅區間能夠捕獲不變嘅總體真值 mu，而約 5% 嘅區間則因抽樣極端而遺憾脫靶。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Executive Fallacy
+  kicker_en: The Executive Fallacy
+  kicker_zh: 高管解读的致命误区
+  kicker_zh_hk: 高管解讀嘅致命誤區
+  title_en: Is there a 95% chance truth is inside your numbers?
+  title_zh: 真实客单落在四十六至五十二元的概率真的是百分之九十五吗？
+  title_zh_hk: 真實客單落喺四十六至五十二蚊嘅概率真係百分之九十五咩？
+  en: 'In the Metro Coffee boardroom, an auditor presents a ninety-five percent confidence interval for chain-wide customer
+    spend: forty-six to fifty-two dollars. The Chief Financial Officer concludes: Wonderful! That means there is a ninety-five
+    percent probability that our true average spend lies between forty-six and fifty-two dollars. The chief statistician intervenes:
+    Absolutely not! In professional decision science, that statement is completely false. If the probability is not ninety-five
+    percent, what does confidence actually mean?'
+  zh: 在都市咖啡的董事会汇报中，审计员呈递了一份关于全网平均客单价的百分之九十五置信区间：四十六元至五十二元。首席财务官欣慰地下达研判：太好了！这意味着真实的平均消费有百分之九十五的概率落在这六块钱的区间里。首席统计顾问当场反驳：大错特错！在现代决策科学的法度中，这句话在数学上彻底不成立。若不是九成五的命中概率，置信度究竟度量了什么？
+  zh_hk: 喺都市咖啡嘅董事會匯報入面，審計員呈遞咗一份關於全網平均客單價嘅百分之九十五置信區間：四十六蚊至五十二蚊。首席財務官欣慰噉下達研判：太好喇！呢個意味住真實嘅平均消費有百分之九十五嘅概率落喺呢六蚊嘅區間入面。首席統計顧問當場反駁：大錯特錯！喺現代決策科學嘅法度入面，呢句話喺數學上徹底唔成立。若果唔係九成五嘅命中概率，置信度究竟度量咗咩？
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: What It Is
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: Fixed parameter versus moving intervals
+  title_zh: 真值恒定不移，区间随波逐流
+  title_zh_hk: 真值恆定不移，區間隨波逐流
+  formula: P(L <= mu <= U) = 0.95 BEFORE sampling; P(46 <= mu <= 52) in {0, 1} AFTER sampling
+  formula_zh: 抽样前：随机区间捕获真值的概率为 P(L <= mu <= U) = 0.95；抽样后：固定区间 P(46 <= mu <= 52) 只能是 0 或 1
+  formula_zh_hk: 抽樣前：隨機區間捕獲真值嘅概率為 P(L <= mu <= U) = 0.95；抽樣後：固定區間 P(46 <= mu <= 52) 淨係可以係 0 或者 1
+  formula_tex: P\left(\bar{X} - Z^*\frac{\sigma}{\sqrt{n}} \le \mu \le \bar{X} + Z^*\frac{\sigma}{\sqrt{n}}\right) = 1 - \alpha
+  s1_en: Under frequentist statistics, the true population mean mu is an objective, immovable constant. It does not fluctuate,
+    wander, or have a probability distribution.
+  s1_zh: 在经典频率学派统计学中，总体的真实均值 mu 是一个客观存在且绝对恒定的物理常数。它不漂移、不晃动，更不存在自身的概率分布。
+  s1_zh_hk: 喺經典頻率學派統計學入面，總體嘅真實均值 mu 係一個客觀存在兼且絕對恆定嘅物理常數。佢唔漂移、唔晃動，更加唔存在自身嘅概率分佈。
+  s2_en: The random entity is the interval itself. Its boundaries depend on the specific sample mean drawn today. Once numbers
+    are calculated, the bracket either encloses the parameter or it misses entirely.
+  s2_zh: 真正处于随机跳跃之中的是区间本身。它的左右边界完全受制于今天碰巧抽中的样本均值。一旦算出具体数字，区间已死：它要么网中了真值，要么彻底脱网。
+  s2_zh_hk: 真正處於隨機跳躍之中嘅係區間本身。佢嘅左右邊界完全受制於今日碰啱抽中嘅樣本均值。一旦計出具體數字，區間已死：佢一係網中咗真值，一係徹底脫網。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  kicker: The Thought Experiment
+  kicker_en: The Thought Experiment
+  kicker_zh: 思想实验
+  kicker_zh_hk: 思想實驗
+  title_en: The 100-auditor thought experiment
+  title_zh: 一百位审计员的长期捕获率
+  title_zh_hk: 一百位審計員嘅長期捕獲率
+  left_en: 'The Net, Not the Fish: The method catches truth 95% of the time'
+  left_zh: 渔网而非游鱼：95% 度量的是织网工艺的长期捕捞成功率
+  left_zh_hk: 漁網而唔係游魚：95% 度量嘅係織網工藝嘅長期捕撈成功率
+  right_en: '5 Misses Guaranteed: 5 out of 100 independent nets land empty'
+  right_zh: 必然脱靶：每 100 张撒出的独立随机网中，约有 5 张注定落空
+  right_zh_hk: 必然脫靶：每 100 張撒出嘅獨立隨機網入面，約有 5 張注定落空
+  s1_en: Imagine sending one hundred independent regional auditors across Hong Kong. Each auditor collects their own sample
+    of one hundred receipts and constructs their own ninety-five percent interval.
+  s1_zh: 想象我们派出一百位相互独立的区域审计员巡视全港各店。每位审计员各自抽取一百张小票，独立构建各自的百分之九十五置信区间。
+  s1_zh_hk: 想像我哋派出一百位相互獨立嘅區域審計員巡視全港各舖。每位審計員各自抽取一百張單據，獨立構建各自嘅百分之九十五置信區間。
+  s2_en: Because each sample mean is different, each auditor gets a slightly different net. The true parameter mu sits quietly
+    at forty-eight dollars.
+  s2_zh: 因为各自抽中的小票不同，每位审计员编织出的区间渔网在位置上各不相同。而总体的真实客单均值 mu 确凿为四十八元，静静躺在坐标轴上。
+  s2_zh_hk: 因為各自抽中嘅單據唔同，每位審計員編織出嚟嘅區間漁網喺位置上各唔相同。而總體嘅真實客單均值 mu 確鑿為四十八蚊，靜靜躺喺坐標軸上。
+  s3_en: In the long run, exactly ninety-five of those one hundred nets will capture forty-eight dollars, while five auditors
+    will draw extreme batches whose intervals completely miss.
+  s3_zh: 在大盘长期推演中，这一百张渔网中约有整整九十五张能成功将四十八元捕获在网内，但注定约有五位审计员会抽到极端小票而遗憾脱靶。
+  s3_zh_hk: 喺大盤長期推演入面，呢一百張漁網入面約有整整九十五張能成功將四十八蚊捕獲喺網內，但注定約有五位審計員會抽到極端單據而遺憾脫靶。
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: The Ledger
+  kicker_en: The Ledger
+  kicker_zh: 台账实录
+  kicker_zh_hk: 台賬實錄
+  title_en: Tracking three auditors against macro truth
+  title_zh: 三位审计员面对宏观真值的实测较量
+  title_zh_hk: 三位審計員面對宏觀真值嘅實測較量
+  step1_en: 'Ground truth: Chain-wide true mu = $48.20 (Fixed, unknown constant)'
+  step1_zh: 宏观真容：全网总体客观均值 mu = $48.20（固定未知常数）
+  step1_zh_hk: 宏觀真容：全網總體客觀均值 mu = $48.20（固定未知常數）
+  step2_en: 'Auditor A (Mong Kok): x-bar = $48.65, MOE = $1.96 -> [$46.69, $50.61] (HIT!)'
+  step2_zh: 审计员 A（旺角）：均值 $48.65，容限 $1.96 -> [$46.69, $50.61]（成功捕获！）
+  step2_zh_hk: 審計員 A（旺角）：均值 $48.65，容限 $1.96 -> [$46.69, $50.61]（成功捕獲！）
+  step3_en: 'Auditor C (Extreme batch): x-bar = $50.80, MOE = $1.96 -> [$48.84, $52.76] (MISS!)'
+  step3_zh: 审计员 C（极端抽样）：均值 $50.80，容限 $1.96 -> [$48.84, $52.76]（彻底脱靶！）
+  step3_zh_hk: 審計員 C（極端抽樣）：均值 $50.80，容限 $1.96 -> [$48.84, $52.76]（徹底脫靶！）
+  s1_en: Let us review Metro Coffee's centralized audit database. Unknown to the branch auditors, today's true macro customer
+    spend mu is exactly forty-eight dollars and twenty cents.
+  s1_zh: 调取都市咖啡中央审计总账。在审计员不知情的前提下，站在上帝视角，今日全港客观客单均值 mu 确凿为四十八块两毛。
+  s1_zh_hk: 調取都市咖啡中央審計總賬。喺審計員不知情嘅前提下，企喺上帝視角，今日全港客觀客單均值 mu 確鑿為四十八蚊兩毫。
+  s2_en: Auditor A at Mong Kok draws a balanced sample with mean forty-eight sixty-five. Applying a margin of error of one
+    dollar and ninety-six cents produces forty-six sixty-nine to fifty sixty-one. Forty-eight twenty is captured inside!
+  s2_zh: 审计员 A 在旺角抽取了均衡样本，均值录得四十八块六毛五。套用一块九毛六的误差容限，生成四十六块六毛九至五十块六毛一的区间。真值四十八块两毛稳稳落入网中！
+  s2_zh_hk: 審計員 A 喺旺角抽取咗均衡樣本，均值錄得四十八蚊六毫五。套用一蚊九毫六嘅誤差容限，生成四十六蚊六毫九至五十蚊六毫一嘅區間。真值四十八蚊兩毫穩穩落入網入面！
+  s3_en: Auditor C draws an unusually heavy batch of catering tickets, getting a sample mean of fifty eighty. His interval
+    spans forty-eight eighty-four to fifty-two seventy-six. It missed forty-eight twenty completely! That five percent risk
+    is the cold statistical cost of doing business.
+  s3_zh: 然而审计员 C 碰巧抽中了过多大额团购单，均值飙至五十块八毛。其生成的区间下界为四十八块八毛四，完全滑出了四十八块两毛的真值！这脱网的百分之五，正是抽样推断必须承受的科学代价。
+  s3_zh_hk: 然而審計員 C 碰啱抽中咗過多大額團購單，均值飆到五十蚊八毫。其生成嘅區間下界為四十八蚊八毫四，完全跣出咗四十八蚊兩毫嘅真值！呢個脫網嘅百分之五，正正係抽樣推斷必須承受嘅科學代價。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: Decision Rule
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Trust the protocol, not the single net
+  title_zh: 敬畏流程长期胜率，莫对单一区间执迷绝对
+  title_zh_hk: 敬畏流程長期勝率，咪對單一區間執迷絕對
+  q1_en: Why is saying 'mu has a 95% probability of lying here' a red flag in executive presentations?
+  q1_zh: 为什么在管理层汇报中声称“总体均值有 95% 概率落在此处”会暴露不专业？
+  q1_zh_hk: 點解喺管理層匯報入面聲稱「總體均值有 95% 概率落喺呢度」會暴露唔專業？
+  q2_en: How do we construct confidence intervals when estimating binary proportions rather than continuous spend?
+  q2_zh: 当评估的指标不再是连续的客单金额，而是离散二元的业务转化比率时，区间又该如何构建？
+  q2_zh_hk: 當評估嘅指標唔再係連續嘅客單金額，而係離散二元嘅業務轉化比率嗰陣，區間又應該點樣構建？
+  s1_en: Never say the parameter has a ninety-five percent chance of being in your interval; the parameter is fixed, and your
+    calculated bracket either caught it or it did not.
+  s1_zh: 汇报时切勿声称总体参数有 95% 的概率落在你的区间内；参数客观恒定，你算出的区间要么命中、要么脱网，概率非零即一。
+  s1_zh_hk: 匯報嗰陣切勿聲稱總體參數有 95% 嘅概率落喺你嘅區間入面；參數客觀恆定，你計出嚟嘅區間一係命中、一係脫網，概率非零即一。
+  s2_en: 'State confidence correctly: we are ninety-five percent confident in our sampling methodology, knowing that repeated
+    audits will capture truth nineteen times out of twenty.'
+  s2_zh: 准确表述置信度：我们对该抽样质量控制规程抱有 95% 的信心，因为长期重复巡检构建的区间，每二十次必有十九次能精准捕获真值。
+  s2_zh_hk: 準確表述置信度：我哋對嗰個抽樣質量控制規程抱有 95% 嘅信心，因為長期重複巡檢構建嘅區間，每二十次必有十九次能精準捕獲真值。
+  s3_en: The operating rule is to trust the procedure, not one net. About 95 of 100 repeated intervals capture the fixed mean.
+    Auditor C's bracket from $48.84 missed $48.20.
+  s3_zh: 操作规则是信任流程，而不是信任一张网。重复构建的 100 个区间大约有 95 个罩住固定均值。审计员 C 从 $48.84 起的区间错过了 $48.20。
+  s3_zh_hk: 操作規則係信任流程，而唔係信任一張網。重複構建嘅 100 個區間大約有 95 個罩住固定均值。審計員 C 由 $48.84 起嘅區間錯過咗 $48.20。

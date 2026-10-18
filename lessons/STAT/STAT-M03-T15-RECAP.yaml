@@ -1,0 +1,167 @@
+id: STAT-M03-T15-RECAP
+course: statistics
+course_en: Discrete & Continuous Probability Distributions
+course_zh: 离散与连续概率分布
+course_zh_hk: 離散與連續概率分佈
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 164
+title_en: The operational distribution dashboard
+title_zh: 运营分布决策罗盘：知识体系全景与推演总括
+title_zh_hk: 營運分佈決策羅盤：知識體系全景與推演總括
+objective_en: Synthesize the discrete and continuous distribution taxonomy into an executive decision tree, contrast model selection criteria across operational scenarios, and bridge probability foundations to statistical inference and sampling theory.
+objective_zh: 将离散与连续概率分布的知识图谱归纳为高管运营决策树，横向对比各类业务场景下的选型判据，并搭建从概率分布理论通往统计推断与抽样大数定律的核心桥梁。
+objective_zh_hk: 將離散與連續概率分佈嘅知識圖譜歸納為高管營運決策樹，橫向對比各類業務場景下嘅選型判據，並搭建由概率分佈理論通往統計推斷與抽樣大數定律嘅核心橋樑。
+glossary:
+- en: distribution taxonomy
+  zh: 概率分布分类学/模型图谱
+  zh_hk: 概率分佈分類學/模型圖譜
+  lock: true
+- en: executive decision tree
+  zh: 高管决策树
+  zh_hk: 高管決策樹
+  lock: true
+- en: discrete vs continuous continuum
+  zh: 离散计数与连续度量分野
+  zh_hk: 離散計數與連續度量分野
+  lock: true
+- en: statistical inference bridge
+  zh: 统计推断衔接桥梁
+  zh_hk: 統計推斷銜接橋樑
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: When an operations manager encounters an unfamiliar business metric, what is the first diagnostic question they must ask to select the correct probability distribution?
+  question_zh: 当运营总监面对一项全新的业务监控指标时，选定匹配概率分布的第一道诊断性核心问题是什么？
+  question_zh_hk: 當營運總監面對一項全新嘅業務監控指標嗰陣，選定匹配概率分佈嘅第一道診斷性核心問題係咩？
+  options_en:
+  - 'A: Is the variable a countable integer outcome (discrete), or a measurable physical dimension along a scale (continuous)?'
+  - 'B: Which corporate accounting software program was used to record the invoice?'
+  - 'C: Does the metric increase the store manager''s annual year-end bonus?'
+  - 'D: How many characters are in the internal project code name?'
+  options_zh:
+  - 'A: 该指标属于跳跃可数的独立整数结果（离散），还是数轴上可被精细测量的物理连续尺度（连续）？'
+  - 'B: 记录该笔发票时所使用的是哪一家厂商的财务会计管理软件？'
+  - 'C: 该项业务指标是否能够直接提升分店店长年终奖金的提成比例？'
+  - 'D: 该项内部创新运营项目的英文代号到底由几个字母组合而成？'
+  options_zh_hk:
+  - 'A: 嗰個指標屬於跳躍可數嘅獨立整數結果（離散），定係數軸上可被精細測量嘅物理連續尺度（連續）？'
+  - 'B: 記錄嗰筆發票嗰陣所使用嘅係邊一間廠商嘅財務會計管理軟件？'
+  - 'C: 嗰項業務指標係咪能夠直接提升分店店長年終獎金嘅提成比例？'
+  - 'D: 嗰項內部創新營運項目嘅英文代號到底由幾個字母組合而成？'
+  answer: A
+  explanation_en: The master taxonomy bifurcates immediately into countable discrete variables (Bernoulli, Binomial, Poisson) versus measurable continuous variables (Uniform, Exponential, Normal).
+  explanation_zh: 概率分布体系的第一大分水岭，正是严格区分可数的离散型变量（伯努利、二项、泊松）与物理连续测量的连续型变量（均匀、指数、正态）。
+  explanation_zh_hk: 概率分佈體系嘅第一大分水嶺，正正係嚴格區分可數嘅離散型變量（伯努利、二項、泊松）與物理連續測量嘅連續型變量（均勻、指數、正態）。
+- id: Q2
+  type: multiple_choice
+  question_en: Which mapping lists plausible models when the stated assumptions for each process are satisfied?
+  question_zh: 在各过程满足相应假设时，下列哪组映射列出了合理的候选模型？
+  question_zh_hk: 當各個過程符合相應假設，下面邊組映射列出合理嘅候選模型？
+  options_en:
+  - 'A: QC mug batch defects -> Binomial; Rush hour arrival surges -> Poisson; Grinder burr lifespan -> Exponential; Aggregate chain-wide demand -> Normal.'
+  - 'B: QC mug batch defects -> Normal; Rush hour arrival surges -> Uniform; Grinder burr lifespan -> Binomial; Aggregate demand -> Poisson.'
+  - 'C: QC mug batch defects -> Exponential; Rush hour arrival surges -> Bernoulli; Grinder burr lifespan -> Uniform; Aggregate demand -> Binomial.'
+  - 'D: Every operational challenge in retail is exclusively modeled by the Bernoulli distribution.'
+  options_zh:
+  - 'A: 批次马克杯验收入库 -> 二项分布；早高峰客流浪涌到达 -> 泊松分布；磨豆机刀盘磨损寿命 -> 指数分布；全网大盘原料总需求 -> 正态分布。'
+  - 'B: 批次马克杯验收入库 -> 正态分布；早高峰客流浪涌到达 -> 均匀分布；磨豆机刀盘磨损寿命 -> 二项分布；全网大盘原料总需求 -> 泊松分布。'
+  - 'C: 批次马克杯验收入库 -> 指数分布；早高峰客流浪涌到达 -> 伯努利分布；磨豆机刀盘磨损寿命 -> 均匀分布；全网大盘原料总需求 -> 二项分布。'
+  - 'D: 零售商业运营中的所有挑战与不确定性，在数学上全部只能由伯努利分布独家建模。'
+  options_zh_hk:
+  - 'A: 批次馬克杯驗收入庫 -> 二項分佈；朝高峰客流浪湧到達 -> 泊松分佈；磨豆機刀盤磨損壽命 -> 指數分佈；全網大盤原料總需求 -> 正態分佈。'
+  - 'B: 批次馬克杯驗收入庫 -> 正態分佈；朝高峰客流浪湧到達 -> 均勻分佈；磨豆機刀盤磨損壽命 -> 二項分佈；全網大盤原料總需求 -> 泊松分佈。'
+  - 'C: 批次馬克杯驗收入庫 -> 指數分佈；朝高峰客流浪湧到達 -> 伯努利分佈；磨豆機刀盤磨損壽命 -> 均勻分佈；全網大盤原料總需求 -> 二項分佈。'
+  - 'D: 零售商業營運入面嘅所有挑戰同不確定性，喺數學上全部淨係可以由伯努利分佈獨家建模。'
+  answer: A
+  explanation_en: Under the relevant assumptions, fixed-trial defect counts may use Binomial, stable-rate interval arrivals may use Poisson, constant-hazard waiting times may use Exponential, and aggregate quantities may use Normal when supported by data.
+  explanation_zh: 在相应假设下，固定试验次品计数可考虑二项模型，稳定速率的区间到达可考虑泊松模型，恒定危险率等待时间可考虑指数模型，而聚合总量只有在数据支持时才考虑正态模型。
+  explanation_zh_hk: 喺相應假設之下，固定試驗次品計數可以考慮二項模型，穩定速率嘅區間到達可以考慮泊松模型，固定危險率等待時間可以考慮指數模型，而聚合總量只有喺數據支持嗰陣先考慮正態模型。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Executive Cockpit
+  kicker_en: The Executive Cockpit
+  kicker_zh: 掌舵者的仪表盘
+  kicker_zh_hk: 掌舵者嘅儀表盤
+  title_en: Deploying the right model for the right crisis
+  title_zh: 排兵布阵各就各位：运营分布的决策大盘
+  title_zh_hk: 排兵布陣各就各位：營運分佈嘅決策大盤
+  en: This module has used coffee-shop examples to study binary outcomes, fixed-trial counts, arrival counts, continuous measurements, waiting times, and aggregate demand. When a new metric appears, how can an analyst identify a plausible distribution, state its assumptions, and test whether the model fits?
+  zh: 本模块使用咖啡店示例研究二元结果、固定试验计数、到达计数、连续测量、等待时间与聚合需求。当出现新的业务指标时，分析者如何识别候选分布、说明模型假设，并检验模型是否适合？
+  zh_hk: 本模組用咖啡店示例研究二元結果、固定試驗計數、到達計數、連續測量、等待時間同聚合需求。當出現新嘅業務指標，分析者點樣識別候選分佈、講清楚模型假設，並檢驗模型係咪適合？
+- id: roadmap
+  visual: module_open
+  seconds: 44
+  title_en: The Grand Distribution Hierarchy
+  title_zh: 运营概率分布全景决策树
+  title_zh_hk: 營運概率分佈全景決策樹
+  item1_en: 'Discrete trials: Bernoulli (one binary trial) -> Binomial (fixed n trials)'
+  item1_zh: 离散批次序列：从伯努利单次原子，到二项批次品控
+  item1_zh_hk: 離散批次序列：由伯努利單次原子，到二項批次品控
+  item2_en: 'Interval counts: Poisson under stable-rate assumptions -> rare-event approximation'
+  item2_zh: 离散时间速率：从泊松早高峰浪涌，到罕见极限近似
+  item2_zh_hk: 離散時間速率：由泊松朝高峰浪湧，到罕見極限近似
+  item3_en: 'Continuous Spans: Uniform (flat windows) -> Exponential (lifespans & waiting)'
+  item3_zh: 连续物理时空：从均匀供货时间盲盒，到指数设备寿命
+  item3_zh_hk: 連續物理時空：由均勻供貨時間盲盒，到指數設備壽命
+  item4_en: 'Aggregate models: Normal when supported -> Z-scores -> probability thresholds'
+  item4_zh: 宏观聚合大盘：正态钟形总需求、Z 分数对标与安全库存
+  item4_zh_hk: 宏觀聚合大盤：正態鐘形總需求、Z 分數對標與安全庫存
+  en: Model selection begins with the variable and the data-generating process. For discrete outcomes, consider Bernoulli for one binary trial, Binomial for a fixed number of independent constant-probability trials, and Poisson for counts in an interval under a stable independent-event process. For continuous outcomes, Uniform, Exponential, and Normal models each require their own assumptions.
+  zh: 模型选择应从变量类型与数据生成过程开始。对离散结果，可分别考虑单次二元试验的伯努利模型、固定次数且独立同概率试验的二项模型，以及稳定独立事件过程中区间计数的泊松模型。对连续结果，均匀、指数与正态模型各有不同假设。
+  zh_hk: 模型選擇應該由變量類型同數據生成過程開始。對離散結果，可以分別考慮單次二元試驗嘅伯努利模型、固定次數兼獨立同概率試驗嘅二項模型，以及穩定獨立事件過程入面區間計數嘅泊松模型。對連續結果，均勻、指數同正態模型各有唔同假設。
+- id: matrix
+  visual: two_column
+  seconds: 44
+  kicker: The Master Matrix
+  kicker_en: The Master Matrix
+  kicker_zh: 决策矩阵
+  kicker_zh_hk: 決策矩陣
+  title_en: Matching business questions to mathematical engines
+  title_zh: 业务实战痛点与数学引擎严密对位
+  title_zh_hk: 業務實戰痛點與數學引擎嚴密對位
+  left_en: 'Discrete Space: PMF, CDF stairs, Countable n'
+  left_zh: 离散空间：PMF 质量分布、阶梯 CDF、聚焦件数与计数
+  left_zh_hk: 離散空間：PMF 質量分佈、階梯 CDF、聚焦件數同計數
+  right_en: 'Continuous Space: PDF density, interval integrals, measurement scale'
+  right_zh: 连续空间：PDF 密度、区间积分与测量尺度
+  right_zh_hk: 連續空間：PDF 密度、區間積分同測量尺度
+  s1_en: Each distribution answers a different probability question and is useful only when its assumptions are reasonable.
+  s1_zh: 每种分布回答不同的概率问题，只有在其假设合理时才适用。
+  s1_zh_hk: 每種分佈回答唔同嘅概率問題，只有喺佢嘅假設合理嗰陣先適用。
+  s2_en: Use Bernoulli for one clearly defined binary event. Use Binomial for the number of events in a fixed set of comparable independent trials. Use Poisson for interval counts with a stable rate, Uniform for constant density on a bounded interval, and Exponential for nonnegative waiting time with constant hazard.
+  s2_zh: 单个明确二元事件可用伯努利模型；固定组相互独立且概率相同的试验中，可用二项模型统计事件次数；稳定速率下的区间计数可考虑泊松模型；有界区间内恒定密度可考虑均匀模型；恒定危险率下的非负等待时间可考虑指数模型。
+  s2_zh_hk: 單個清楚定義嘅二元事件可以用伯努利模型；固定組互相獨立兼概率相同嘅試驗，可以用二項模型統計事件次數；穩定速率之下嘅區間計數可以考慮泊松模型；有界區間內固定密度可以考慮均勻模型；固定危險率之下嘅非負等待時間可以考慮指數模型。
+  s3_en: For aggregate quantities, a Normal model may be useful when the data and aggregation conditions support it. Z-scores then express observations in standard-deviation units, but they do not establish causation, performance, or financial stability.
+  s3_zh: 对于聚合总量，只有当数据与聚合条件支持时，正态模型才可能适用。Z 分数可把观测值转换为标准差单位，但不能证明因果关系、绩效或财务稳定性。
+  s3_zh_hk: 對聚合總量嚟講，只有當數據同聚合條件支持，正態模型先可能適用。Z 分數可以將觀測值轉換成標準差單位，但唔可以證明因果關係、績效或者財務穩定性。
+- id: takeaway
+  visual: takeaway
+  seconds: 46
+  kicker: The Bridge Ahead
+  kicker_en: The Bridge Ahead
+  kicker_zh: 通往未来
+  kicker_zh_hk: 通往未來
+  title_en: Choose the model, then check the assumptions
+  title_zh: 先选模型，再检查假设
+  title_zh_hk: 先選模型，再檢查假設
+  q1_en: What must be checked before a theoretical distribution is used for an operational decision?
+  q1_zh: 把理论分布用于运营决策前，必须检查什么？
+  q1_zh_hk: 將理論分佈用於營運決策之前，必須檢查咩？
+  q2_en: How should unknown parameters and uncertainty be handled?
+  q2_zh: 应如何处理未知参数与不确定性？
+  s1_en: In the worked examples, parameters such as p, lambda, mu, and sigma were stated as model inputs so that probabilities could be calculated.
+  s1_zh: 在各个例题中，p、lambda、mu 与 sigma 等参数被作为模型输入给出，以便计算相应概率。
+  s1_zh_hk: 喺各個例題入面，p、lambda、mu 同 sigma 等參數會作為模型輸入畀出，用嚟計相應概率。
+  s2_en: With operational data, parameters are generally unknown and must be estimated from samples. Analysts must also assess sampling quality, uncertainty, dependence, and model fit.
+  s2_zh: 在运营数据中，参数通常未知，需要从样本估计。分析者还应评估抽样质量、不确定性、相关性与模型拟合。
+  s2_zh_hk: 喺營運數據入面，參數通常未知，需要由樣本估計。分析者仲要評估抽樣質量、不確定性、相關性同模型擬合。
+  s3_en: 'The complete decision rule is: define the variable, identify the process, select a candidate distribution, verify its assumptions against data, estimate unknown parameters, and report uncertainty before acting.'
+  s3_zh: 完整决策规则是：定义变量、识别数据生成过程、选择候选分布、用数据检查假设、估计未知参数，并在行动前报告不确定性。
+  s3_zh_hk: 完整決策規則係：定義變量、識別數據生成過程、選擇候選分佈、用數據檢查假設、估計未知參數，並喺行動之前報告不確定性。
+  q2_zh_hk: 應該點樣處理未知參數同不確定性？

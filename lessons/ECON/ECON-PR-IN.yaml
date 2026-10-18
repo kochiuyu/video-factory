@@ -1,0 +1,91 @@
+id: ECON-PR-IN
+course: economics
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 42
+title_en: Price
+title_zh: 价格
+title_zh_hk: 價格
+objective_en: Open. Last module chose for one person. This module writes two lists and lets a
+  price move.
+objective_zh: 开场。上一单元是一个人的选择。这一单元写两张清单，让价格动。
+objective_zh_hk: 開場。上一單元係一個人嘅選擇。呢一單元寫兩張清單，等價格郁。
+glossary:
+- en: demand
+  zh: 需求
+  zh_hk: 需求
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What four steps does this module use?
+  zh: 这一单元用哪四步？
+  zh_hk: 呢一單元用邊四步？
+  answer_en: Demand, supply, equilibrium, elasticity.
+  answer_zh: 需求、供给、均衡、弹性。
+  answer_zh_hk: 需求、供給、均衡、彈性。
+- id: Q2
+  type: comprehension
+  en: What does this mini-course not cover?
+  zh: 这门小课不讲什么？
+  zh_hk: 呢門小課唔講咩？
+  answer_en: Trade and market failure. Those are later sittings.
+  answer_zh: 分工和市场失灵。那是以后的课。
+  answer_zh_hk: 分工同市場失靈。嗰啲係以後嘅課。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 22
+  kicker: This module
+  kicker_en: This module
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Price
+  title_zh: 价格
+  title_zh_hk: 價格
+  item1_en: Demand
+  item1_zh: 需求
+  item1_zh_hk: 需求
+  item2_en: Supply
+  item2_zh: 供给
+  item2_zh_hk: 供給
+  item3_en: Equilibrium
+  item3_zh: 均衡
+  item3_zh_hk: 均衡
+  item4_en: Elasticity
+  item4_zh: 弹性
+  item4_zh_hk: 彈性
+  en: Last module chose for one person. This module writes the buyers' list, then the sellers'
+    list, then lets one price clear the street, then asks what a rise does to the till.
+  zh: 上一单元是一个人在选。这一单元先写买家的清单，再写卖家的清单，再让一个价出清这条街，再问涨价之后柜上是多还是少。
+  zh_hk: 上一單元係一個人喺度揀。呢一單元先寫買家清單，再寫賣家清單，再讓一個價出清呢條街，再問加價之後櫃上係多定少。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: This module
+  kicker_en: This module
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Two lists, then a price
+  title_zh: 两张清单，然后一个价
+  title_zh_hk: 兩張清單，然後一個價
+  q1_en: Demand first. Then supply.
+  q1_zh: 先需求。再供给。
+  q1_zh_hk: 先需求。再供給。
+  q2_en: A rise does not always fill the till.
+  q2_zh: 涨价不一定多进账。
+  q2_zh_hk: 加價唔一定多進賬。
+  s1_en: That is the map. Four sittings on one street.
+  s1_zh: 这就是地图。同一条街上四节课。
+  s1_zh_hk: 呢個就係地圖。同一條街上四節課。
+  s2_en: We start with the buyers' list.
+  s2_zh: 从买家的清单开始。
+  s2_zh_hk: 由買家清單開始。
+  s3_en: That list is demand.
+  s3_zh: 那张清单叫需求。
+  s3_zh_hk: 嗰張清單叫需求。

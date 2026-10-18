@@ -1,0 +1,69 @@
+id: LAE-M02-OUT
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: Two vehicles, closed
+title_zh: 两种机器，先说到这里
+title_zh_hk: 兩種機器，先講到呢度
+objective_en: Close the vehicle sitting. Next sitting names the pad. Neither machine is a business without one.
+objective_zh: 收住机器这一讲。下一讲给起降的垫子起名。没有垫子，两种机器都不是生意。
+objective_zh_hk: 收住機器呢一講。下一講畀起降嘅墊起名。冇墊，兩種機器都唔係生意。
+glossary:
+- en: Close
+  zh: 收束
+  zh_hk: 收束
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What two machines can you name, and what rides on each?
+  zh: 你能说出哪两种机器，各自载的是什么？
+  zh_hk: 你講得出邊兩種機器，各自載嘅係咩？
+  answer_en: A drone carries a small parcel and no person. An eVTOL carries a person and costs more to make safe.
+  answer_zh: 无人机载小包裹，不载人。eVTOL 载人，为了安全要花更多资本。
+  answer_zh_hk: 無人機載小包裹，唔載人。eVTOL 載人，為咗安全要花更多資本。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: Two vehicles, closed
+  title_zh: 两种机器，先说到这里
+  title_zh_hk: 兩種機器，先講到呢度
+  claim_en: You can name a drone as unmanned with a battery-versus-parcel trade-off, and an eVTOL as a person on board at a higher capital cost.
+  claim_zh: 你能把无人机说成无人、电池与包裹互相挤占，把 eVTOL 说成机上有人、资本成本更高。
+  claim_zh_hk: 你能將無人機講成無人、電池同包裹互相擠佔，將 eVTOL 講成機上有人、資本成本更高。
+  next_en: 'That is two machines. Next sitting: the pad — where the flight begins, ends, and waits.'
+  next_zh: 两种机器到此。下一讲：垫子——飞行在哪里开始、结束、等待。
+  next_zh_hk: 兩種機器到此。下一講：墊——飛行喺邊度開始、結束、等待。
+  en: You can name two machines. A drone carries a small parcel and no person. An eVTOL carries a person, so the safety bar and the capital cost both rise.
+  zh: 你能说出两种机器。无人机载小包裹，不载人。eVTOL 载人，所以安全门槛和资本成本都会上升。
+  zh_hk: 你講得出兩種機器。無人機載小包裹，唔載人。eVTOL 載人，所以安全門檻同資本成本都會上升。
+- id: takeaway
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: Two vehicles, closed
+  title_zh: 两种机器，先说到这里
+  title_zh_hk: 兩種機器，先講到呢度
+  claim_en: You can name a drone as unmanned with a battery-versus-parcel trade-off, and an eVTOL as a person on board at a higher capital cost.
+  claim_zh: 你能把无人机说成无人、电池与包裹互相挤占，把 eVTOL 说成机上有人、资本成本更高。
+  claim_zh_hk: 你能將無人機講成無人、電池同包裹互相擠佔，將 eVTOL 講成機上有人、資本成本更高。
+  next_en: 'That is two machines. Next sitting: the pad — where the flight begins, ends, and waits.'
+  next_zh: 两种机器到此。下一讲：垫子——飞行在哪里开始、结束、等待。
+  next_zh_hk: 兩種機器到此。下一講：墊——飛行喺邊度開始、結束、等待。
+  en: 'That is two machines. Next sitting: the pad — where the flight begins, ends, and waits.'
+  zh: 两种机器到此。下一讲：垫子——飞行在哪里开始、结束、等待。
+  zh_hk: 兩種機器到此。下一講：墊——飛行喺邊度開始、結束、等待。

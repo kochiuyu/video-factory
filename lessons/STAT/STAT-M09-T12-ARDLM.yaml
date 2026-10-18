@@ -1,0 +1,165 @@
+id: STAT-M09-T12-ARDLM
+course: STAT-M09
+course_en: Business Time Series & Demand Forecasting
+course_zh: 商业时间序列与需求预测
+course_zh_hk: 商業時間序列與需求預測
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Autoregressive Distributed Lag Models: Internal Persistence and External Drivers'
+title_zh: 自回归分布滞后模型：内部持续性与外部驱动因素
+title_zh_hk: 自回歸分布滯後模型：內部持續性同外部驅動因素
+objective_en: Formulate an ARDL model, distinguish short-run coefficients from the long-run multiplier, calculate an ARDL(1,0) example, and verify dynamic stability and identification before interpreting persistent effects.
+objective_zh: 构建 ARDL 模型，区分短期系数与长期乘数，计算 ARDL(1,0) 示例，并在解释持续效应前验证动态稳定性与识别条件。
+objective_zh_hk: 構建 ARDL 模型，區分短期係數同長期乘數，計算 ARDL(1,0) 例子，並喺解讀持續效應之前驗證動態穩定性同識別條件。
+glossary:
+  - en: Autoregressive Distributed Lag (ARDL)
+    zh: 自回归分布滞后模型（ARDL）
+    zh_hk: 自回歸分布滯後模型（ARDL）
+    lock: true
+  - en: Short-Run Multiplier
+    zh: 短期动态乘数
+    zh_hk: 短期動態乘數
+    lock: true
+  - en: Long-Run Multiplier
+    zh: 长期均衡乘数
+    zh_hk: 長期均衡乘數
+    lock: true
+  - en: Habit Formation Carryover
+    zh: 习惯养成延续效应
+    zh_hk: 習慣養成延續效應
+    lock: true
+quiz:
+  - id: Q1
+    type: multiple_choice
+    question_en: 'For Y_t = 60 + 0.60 Y_{t-1} + 1.20 X_t + e_t, what is the long-run multiplier of a permanent one-unit increase in X under a stable model?'
+    question_zh: 对于 Y_t = 60 + 0.60 Y_{t-1} + 1.20 X_t + e_t，在模型稳定时，X 永久增加一个单位的长期乘数是多少？
+    question_zh_hk: 對於 Y_t = 60 + 0.60 Y_{t-1} + 1.20 X_t + e_t，喺模型穩定嗰陣，X 永久增加一個單位嘅長期乘數係幾多？
+    options_en:
+      - 'A: 3.0'
+      - 'B: 1.2'
+      - 'C: 2.0'
+      - 'D: 0.72'
+    options_zh:
+      - A：3.0
+      - B：1.2
+      - C：2.0
+      - D：0.72
+    options_zh_hk:
+      - A：3.0
+      - B：1.2
+      - C：2.0
+      - D：0.72
+    answer: A
+    explanation_en: 'The long-run multiplier is 1.20 / (1 - 0.60) = 3.0 outcome units per permanent unit of X under the stated stable model.'
+    explanation_zh: 在给定稳定模型下，长期乘数为 1.20 / (1 - 0.60) = 3.0，即 X 每永久增加一个单位，结果的长期水平相差 3.0 个单位。
+    explanation_zh_hk: 喺指定穩定模型下，長期乘數係 1.20 / (1 - 0.60) = 3.0，即係 X 每永久增加一個單位，結果嘅長期水平相差 3.0 個單位。
+  - id: Q2
+    type: multiple_choice
+    question_en: What is the general stability condition for the autoregressive part of an ARDL(p,q) model?
+    question_zh: ARDL(p,q) 模型中自回归部分的一般稳定条件是什么？
+    question_zh_hk: ARDL(p,q) 模型入面自回歸部分嘅一般穩定條件係乜嘢？
+    options_en:
+      - 'A: All roots of the autoregressive characteristic polynomial lie outside the unit circle'
+      - 'B: The autoregressive coefficients merely sum to less than one in every possible model'
+      - 'C: Every distributed-lag coefficient is positive'
+      - 'D: The Durbin-Watson statistic equals zero'
+    options_zh:
+      - A：自回归特征多项式的所有根都位于单位圆之外
+      - B：在任何模型中，自回归系数之和只要小于一即可
+      - C：每个分布滞后系数都为正
+      - D：德宾-沃森统计量等于零
+    options_zh_hk:
+      - A：自回歸特徵多項式嘅所有根都位於單位圓之外
+      - B：喺任何模型入面，自回歸係數之和只要細過一就可以
+      - C：每個分布滯後係數都係正數
+      - D：德賓-沃森統計量等於零
+    answer: A
+    explanation_en: Root stability is the general condition. For ARDL(1,q), it reduces to |Phi_1| < 1; the coefficient-sum shortcut is not sufficient for every higher-order autoregression.
+    explanation_zh: 根稳定性才是一般条件。对于 ARDL(1,q)，它简化为 |Phi_1| < 1；对所有高阶自回归而言，仅检查系数之和并不充分。
+    explanation_zh_hk: 根穩定性先係一般條件。對 ARDL(1,q)，佢簡化成 |Phi_1| < 1；對所有高階自回歸嚟講，只檢查係數之和並唔充分。
+beats:
+  - id: hook
+    visual: title_card
+    seconds: 30
+    kicker_en: Dynamic Forecasting Puzzle
+    kicker_zh: 动态预测难题
+    kicker_zh_hk: 動態預測難題
+    title_en: How Can One Model Combine Sales Memory and Campaign Timing?
+    title_zh: 一个模型如何结合销量记忆与营销时点？
+    title_zh_hk: 一個模型點樣結合銷量記憶同推廣時點？
+    en: >-
+      Suppose current sales depend partly on recent sales and partly on current or earlier campaign inputs. An autoregressive model captures internal persistence, while a distributed lag captures delayed associations with an external driver. ARDL combines both structures. The managerial challenge is to distinguish a short-run response from a stable long-run difference without mistaking persistence for habit formation or correlation for causation.
+    zh: >-
+      假设当前销量一部分取决于近期销量，另一部分与当期或较早的营销投入有关。自回归模型捕捉内部持续性，分布滞后模型捕捉外部驱动因素的延迟关联。ARDL 把两种结构结合起来。管理上的难点，是区分短期响应与稳定的长期差异，同时避免把持续性误称为习惯养成，或把相关性误称为因果关系。
+    zh_hk: >-
+      假設目前銷量一部分取決於近期銷量，另一部分同當期或者較早嘅推廣投入有關。自回歸模型捕捉內部持續性，分布滯後模型捕捉外部驅動因素嘅延遲關聯。ARDL 將兩種結構結合起嚟。管理上嘅難點，係區分短期反應同穩定長期差異，同時避免將持續性錯稱為習慣養成，或者將相關性錯稱為因果關係。
+  - id: define
+    visual: definition_card
+    seconds: 34
+    formula: 'ARDL(p,q): Y depends on p lags of Y and current through q lags of X'
+    formula_zh: 'ARDL(p,q)：Y 取决于 Y 的 p 阶滞后及 X 的当期至 q 阶滞后'
+    formula_zh_hk: 'ARDL(p,q)：Y 取決於 Y 嘅 p 階滯後，同 X 嘅當期至 q 階滯後'
+    formula_tex: 'Y_t=c+\sum_{i=1}^{p}\phi_iY_{t-i}+\sum_{j=0}^{q}\beta_jX_{t-j}+\varepsilon_t,\quad LRM=\frac{\sum_{j=0}^{q}\beta_j}{1-\sum_{i=1}^{p}\phi_i}'
+    s1_en: An Autoregressive Distributed Lag (ARDL) model places lags of the outcome and current or lagged values of X in one equation. The autoregressive terms represent persistence conditional on the specification; they do not by themselves identify its behavioral cause.
+    s1_zh: 自回归分布滞后模型（ARDL）把结果变量的滞后项，以及 X 的当期值或滞后值放在同一方程中。自回归项表示给定模型设定下的持续性，但本身不能识别其行为原因。
+    s1_zh_hk: 自回歸分布滯後模型（ARDL）將結果變量嘅滯後項，同 X 嘅當期值或者滯後值放喺同一條方程入面。自回歸項表示指定模型設定下嘅持續性，但本身唔可以識別佢嘅行為原因。
+    s2_en: Beta_0 is the immediate Short-Run Multiplier in this levels specification. When the autoregressive dynamics are stable, the Long-Run Multiplier for a permanent unit increase in X is the sum of the Beta coefficients divided by one minus the sum of the Phi coefficients.
+    s2_zh: 在这个水平值设定中，Beta_0 是即期的短期动态乘数。当自回归动态稳定时，X 永久增加一个单位的长期均衡乘数，等于各 Beta 系数之和除以一减各 Phi 系数之和。
+    s2_zh_hk: 喺呢個水平值設定入面，Beta_0 係即期嘅短期動態乘數。當自回歸動態穩定，X 永久增加一個單位嘅長期均衡乘數，就等於各 Beta 係數之和除以一減各 Phi 係數之和。
+  - id: mechanics
+    visual: two_column
+    seconds: 36
+    left_en: Dynamic Propagation
+    left_zh: 动态传递
+    left_zh_hk: 動態傳遞
+    right_en: Stability and Identification
+    right_zh: 稳定性与识别
+    right_zh_hk: 穩定性同識別
+    s1_en: In a stable ARDL(1,0), an initial one-unit effect Beta_0 is followed by Phi Beta_0, then Phi squared Beta_0, and so on. Their geometric sum produces the long-run multiplier.
+    s1_zh: 在稳定的 ARDL(1,0) 中，最初的单位效应为 Beta_0，随后依次为 Phi Beta_0、Phi 的平方乘 Beta_0，依此类推。这个几何级数之和形成长期乘数。
+    s1_zh_hk: 喺穩定嘅 ARDL(1,0) 入面，最初嘅單位效應係 Beta_0，之後依次係 Phi Beta_0、Phi 嘅平方乘 Beta_0，如此類推。呢個幾何級數之和形成長期乘數。
+    s2_en: The long-run multiplier need not exceed the immediate effect. Its magnitude and sign depend on the Beta coefficients and autoregressive dynamics; negative persistence or offsetting lag coefficients can reduce or reverse it.
+    s2_zh: 长期乘数不一定大于即期效应。它的大小与符号取决于 Beta 系数和自回归动态；负持续性或相互抵消的滞后系数可能缩小甚至反转长期效应。
+    s2_zh_hk: 長期乘數唔一定大過即期效應。佢嘅大小同符號取決於 Beta 係數同自回歸動態；負持續性或者互相抵消嘅滯後係數，可能縮細甚至反轉長期效應。
+    s3_en: For general ARDL(p,q), verify that all autoregressive roots lie outside the unit circle. Causal interpretation also requires sufficiently exogenous X and appropriate controls for trends, seasonality, anticipation, and omitted drivers.
+    s3_zh: 对一般 ARDL(p,q)，应验证所有自回归根都位于单位圆之外。因果解释还要求 X 具有充分外生性，并适当控制趋势、季节性、预期反应与遗漏驱动因素。
+    s3_zh_hk: 對一般 ARDL(p,q)，要驗證所有自回歸根都位於單位圓之外。因果解讀仲要求 X 具有充分外生性，並適當控制趨勢、季節性、預期反應同遺漏驅動因素。
+  - id: example
+    visual: example
+    seconds: 36
+    setup_en: 'Assume: Y_t = 60 + 0.60 Y_{t-1} + 1.20 X_t + e_t'
+    setup_zh: 假设：Y_t = 60 + 0.60 Y_{t-1} + 1.20 X_t + e_t
+    setup_zh_hk: 假設：Y_t = 60 + 0.60 Y_{t-1} + 1.20 X_t + e_t
+    result_en: 'Short run = 1.20; long run = 3.0'
+    result_zh: 短期 = 1.20；长期 = 3.0
+    result_zh_hk: 短期 = 1.20；長期 = 3.0
+    s1_en: For illustration, assume Phi equals 0.60 and Beta_0 equals 1.20. The immediate conditional difference associated with a one-unit increase in X is 1.20 outcome units.
+    s1_zh: 为便于说明，假设 Phi 等于 0.60、Beta_0 等于 1.20。X 增加一个单位所对应的即期条件差异为 1.20 个结果单位。
+    s1_zh_hk: 為咗方便說明，假設 Phi 等於 0.60、Beta_0 等於 1.20。X 增加一個單位所對應嘅即期條件差異係 1.20 個結果單位。
+    s2_en: Because the AR(1) component is stable, the long-run multiplier is 1.20 divided by one minus 0.60, which equals 3.0 outcome units for a permanent one-unit increase in X.
+    s2_zh: 因为 AR(1) 部分稳定，长期乘数为 1.20 除以一减 0.60，即在 X 永久增加一个单位时等于 3.0 个结果单位。
+    s2_zh_hk: 因為 AR(1) 部分穩定，長期乘數係 1.20 除以一減 0.60，即係 X 永久增加一個單位嗰陣等於 3.0 個結果單位。
+    s3_en: This arithmetic does not prove Habit Formation Carryover, campaign causality, profit, or ROI. Those conclusions need identification evidence plus prices, margins, costs, capacity, displacement effects, and forecast uncertainty.
+    s3_zh: 这个计算不能证明习惯养成延续效应、营销因果关系、利润或投资回报率。这些结论还需要识别证据，以及价格、毛利、成本、产能、替代效应与预测不确定性。
+    s3_zh_hk: 呢個計算唔可以證明習慣養成延續效應、推廣因果關係、利潤或者投資回報率。呢啲結論仲需要識別證據，以及價錢、毛利、成本、產能、替代效應同預測不確定性。
+  - id: takeaway
+    visual: takeaway
+    seconds: 32
+    q1_en: What Does ARDL Combine?
+    q1_zh: ARDL 结合了什么？
+    q1_zh_hk: ARDL 結合咗乜嘢？
+    q2_en: Decision Rule
+    q2_zh: 决策规则
+    q2_zh_hk: 決策規則
+    s1_en: ARDL combines persistence in the outcome with current and delayed associations from external predictors. It provides a coherent short-run and long-run accounting framework when the specification is stable.
+    s1_zh: ARDL 把结果变量的持续性与外部预测变量的当期及延迟关联结合起来。在模型设定稳定时，它提供一致的短期与长期核算框架。
+    s1_zh_hk: ARDL 將結果變量嘅持續性，同外部預測變量嘅當期及延遲關聯結合起嚟。喺模型設定穩定嗰陣，佢提供一致嘅短期同長期核算框架。
+    s2_en: Check autoregressive roots, lag choice, residuals, parameter stability, integration properties, and out-of-sample performance before trusting the long-run multiplier.
+    s2_zh: 在信任长期乘数前，应检查自回归根、滞后阶数、残差、参数稳定性、单整性质与样本外表现。
+    s2_zh_hk: 信任長期乘數之前，要檢查自回歸根、滯後階數、殘差、參數穩定性、單整性質同樣本外表現。
+    s3_en: Treat the multiplier as a model-based conditional result, not automatic evidence of durable habits or financial return. Use it operationally only after identification and decision inputs are adequate.
+    s3_zh: 应把乘数视为基于模型的条件结果，而不是持久习惯或财务回报的自动证据。只有识别条件与决策信息充分时，才适合用于运营。
+    s3_zh_hk: 應該將乘數視為基於模型嘅條件結果，而唔係持久習慣或者財務回報嘅自動證據。只有識別條件同決策信息充分嗰陣，先適合用喺營運。

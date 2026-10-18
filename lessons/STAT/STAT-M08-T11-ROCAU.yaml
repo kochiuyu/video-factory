@@ -1,0 +1,165 @@
+id: STAT-M08-T11-ROCAU
+course: STAT-M08
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The ROC Curve & AUC: Evaluating Model Discrimination Power'
+title_zh: ROC 曲线与 AUC：评估模型的全域判别力
+title_zh_hk: ROC 曲線與 AUC：評估模型嘅全域判別力
+objective_en: Construct an ROC curve from true-positive and false-positive rates across score thresholds, interpret AUC as a ranking statistic, and distinguish threshold-free discrimination from calibration and business value.
+objective_zh: 根据不同评分阈值下的真正例率与假正例率构建 ROC 曲线，将 AUC 解读为排序统计量，并区分不依赖单一阈值的判别力、概率校准与商业价值。
+objective_zh_hk: 根據唔同評分門檻之下嘅真正例率同假正例率構建 ROC 曲線，將 AUC 解讀做排序統計量，並區分唔依賴單一門檻嘅判別力、概率校準同商業價值。
+glossary:
+- en: ROC Curve
+  zh: ROC 曲线（受试者工作特征曲线）
+  zh_hk: ROC 曲線（受試者工作特徵曲線）
+  lock: true
+- en: Area Under the Curve (AUC)
+  zh: 曲线下面积（AUC）
+  zh_hk: 曲線下面積（AUC）
+  lock: true
+- en: True Positive Rate (Sensitivity)
+  zh: 真正例率（灵敏度）
+  zh_hk: 真正例率（靈敏度）
+  lock: true
+- en: False Positive Rate (1 - Specificity)
+  zh: 假正例率（1 - 特异度）
+  zh_hk: 假正例率（1 - 特異度）
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: What does an Area Under the Curve (AUC) value of exactly 0.50 indicate about a customer churn prediction model?
+  question_zh: 若某客户流失预警模型的曲线下面积（AUC）恰好为 0.50，这代表该模型具备何种判别能力？
+  question_zh_hk: 如果某個客戶流失預警模型嘅曲線下面積（AUC）剛好係 0.50，呢個代表該模型具備咩嘢判別能力？
+  options_en:
+  - 'A: Perfect discrimination with zero classification error'
+  - 'B: The model has chance-level ranking discrimination in that evaluation population'
+  - 'C: Exactly 50% of app users will renew their subscriptions'
+  - 'D: The model can only be used when sample sizes exceed 10,000'
+  options_zh:
+  - 'A: 具备完美的判别力，分类误差为零'
+  - 'B: 模型在该评估总体中具有机会水平的排序判别力'
+  - 'C: 恰好有 50% 的 App 会员会续订其会员权益'
+  - 'D: 该模型仅能在样本量超过 10,000 时方可使用'
+  options_zh_hk:
+  - 'A: 具備完美嘅判別力，分類誤差係零'
+  - 'B: 模型喺該評估總體入面具有機會水平嘅排序判別力'
+  - 'C: 剛好有 50% 嘅 App 會員會續訂其會員服務'
+  - 'D: 該模型淨係喺樣本量過 10,000 嗰陣先可以用'
+  answer: B
+  explanation_en: An AUC of 0.50 corresponds to chance-level ranking under the usual AUC definition. It does not imply that exactly half of customers experience the event, and no universal institutional threshold follows from this fact.
+  explanation_zh: AUC 为 0.50 在通常定义下对应机会水平排序。它并不意味着恰好一半顾客发生事件，也不能由此推出通用的企业级门槛。
+  explanation_zh_hk: AUC 係 0.50 喺通常定義之下對應機會水平排序。佢唔代表剛好一半顧客發生事件，亦唔可以由此推出通用企業級門檻。
+- id: Q2
+  type: multiple_choice
+  question_en: Two software vendors pitch competing churn scoring engines to Metro Coffee. Vendor A claims high recall at p = 0.20, while Vendor B claims high precision at p = 0.60. Why does the Chief Technology Officer demand their AUC scores instead?
+  question_zh: 两家外部供应商向 Metro Coffee 推销流失预警引擎。厂商 A 标榜在 p = 0.20 时的极高召回率，厂商 B 夸耀在 p = 0.60 时的极高查准率。为何首席技术官坚持要求对比两者的 AUC 指标？
+  question_zh_hk: 兩間外部供應商向 Metro Coffee 推銷流失預警引擎。廠商 A 標榜喺 p = 0.20 嗰陣嘅極高召回率，廠商 B 誇耀喺 p = 0.60 嗰陣嘅極高查準率。點解首席技術官堅持要求對比兩者嘅 AUC 指標？
+  options_en:
+  - 'A: AUC summarizes ranking discrimination across score thresholds rather than performance at one selected cutoff'
+  - 'B: AUC guarantees that False Positives will be reduced to zero'
+  - 'C: Vendors are legally required to provide AUC numbers under Hong Kong retail law'
+  - 'D: AUC calculates the exact dollar profit generated per coffee cup'
+  options_zh:
+  - 'A: AUC 汇总不同评分阈值下的排序判别力，而不是只衡量某一个所选门槛的表现'
+  - 'B: AUC 能够从数学上保证假阳性误伤直接降为零'
+  - 'C: 根据香港零售法例，软件供应商必须依法提供 AUC 数值'
+  - 'D: AUC 能够精确计算出单杯咖啡所创造的具体货币利润'
+  options_zh_hk:
+  - 'A: AUC 匯總唔同評分門檻之下嘅排序判別力，而唔係只量度某一個所選門檻嘅表現'
+  - 'B: AUC 能夠喺數學上保證假陽性誤傷直接變做零'
+  - 'C: 根據香港零售法例，軟件供應商必須依法提供 AUC 數值'
+  - 'D: AUC 能夠精確計出單杯咖啡所創造嘅具體貨幣利潤'
+  answer: A
+  explanation_en: Precision and recall depend on the selected threshold and event prevalence. AUC summarizes ROC ranking discrimination across thresholds. It still does not report calibration, expected profit, or the final operating point.
+  explanation_zh: 查准率与召回率取决于所选阈值和事件基础发生率。AUC 汇总不同阈值下的 ROC 排序判别力，但仍不报告校准、期望利润或最终营运点。
+  explanation_zh_hk: 查準率同召回率取決於所選門檻同事件基礎發生率。AUC 匯總唔同門檻之下嘅 ROC 排序判別力，但仍然唔報告校準、期望利潤或者最終營運點。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Vendor Evaluation Dilemma
+  kicker_zh: 软件采购评估困境
+  kicker_zh_hk: 軟件採購評估困局
+  title_en: Whose Churn Algorithm Actually Wins?
+  title_zh: 哪家供应商的流失预警算法真正更胜一筹？
+  title_zh_hk: 邊間供應商嘅流失預警算法真正更勝一籌？
+  en: Two churn models can advertise different precision or recall values simply because they use different classification thresholds. The ROC curve compares ranking performance across the full threshold sweep, while AUC summarizes that curve. What does AUC reveal, and what important questions does it leave unanswered?
+  zh: 两个流失模型可能仅因采用不同分类阈值，就展示不同的查准率或召回率。ROC 曲线比较完整阈值扫描下的排序表现，而 AUC 汇总整条曲线。AUC 能揭示什么？又有哪些重要问题无法回答？
+  zh_hk: 兩個流失模型可能只係因為採用唔同分類門檻，就展示唔同查準率或者召回率。ROC 曲線比較完整門檻掃描之下嘅排序表現，而 AUC 匯總成條曲線。AUC 可以揭示咩？又有邊啲重要問題答唔到？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: ROC plots TPR against FPR across score thresholds; AUC = area under the empirical ROC curve
+  formula_zh: ROC 在不同评分阈值下绘制 TPR 对 FPR；AUC = 经验 ROC 曲线下面积
+  formula_zh_hk: ROC 喺唔同評分門檻之下繪製 TPR 對 FPR；AUC = 經驗 ROC 曲線下面積
+  formula_tex: \operatorname{TPR}=\frac{TP}{TP+FN},\quad \operatorname{FPR}=\frac{FP}{FP+TN}=1-\operatorname{Specificity},\quad \operatorname{AUC}=\int_0^1 \operatorname{TPR}(u)\,du
+  s1_en: The ROC curve plots the true-positive rate on the vertical axis against the false-positive rate on the horizontal axis as the score threshold moves. For a finite sample, the empirical curve is a step function through attainable operating points.
+  s1_zh: ROC 曲线随着评分阈值移动，在纵轴绘制真正例率，在横轴绘制假正例率。对于有限样本，经验曲线是穿过可实现营运点的阶梯函数。
+  s1_zh_hk: ROC 曲線隨住評分門檻移動，喺縱軸繪製真正例率，喺橫軸繪製假正例率。對於有限樣本，經驗曲線係穿過可實現營運點嘅階梯函數。
+  s2_en: AUC summarizes discrimination. With the usual handling of ties, it equals the probability that a randomly selected positive receives a higher score than a randomly selected negative, plus half the probability of a tied score.
+  s2_zh: AUC 汇总模型判别力。按照通常的平分并列处理方式，它等于随机抽取的阳性案例评分高于随机抽取阴性案例评分的概率，再加上评分相同时概率的一半。
+  s2_zh_hk: AUC 匯總模型判別力。按照通常將並列平分嘅處理方式，佢等於隨機抽取嘅陽性案例評分高過隨機抽取陰性案例評分嘅概率，再加上評分相同時概率嘅一半。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Probabilistic Ranking Power
+  left_zh: 概率排序的核心真谛
+  right_en: The Institutional Quality Scale
+  right_zh: 企业级合规评级标尺
+  s1_en: The diagonal from zero-zero to one-one represents chance-level ranking. A curve that bows toward the upper-left indicates that many positives can be captured before many negatives are incorrectly flagged.
+  s1_zh: 从零零点到一一点的对角线代表机会水平排序。曲线越向左上方弯曲，表示在误报大量阴性案例之前能够识别更多阳性案例。
+  s1_zh_hk: 由零零點到一一點嘅對角線代表機會水平排序。曲線越向左上方彎曲，表示喺誤報大量陰性案例之前可以識別更多陽性案例。
+  s2_en: ROC AUC is unaffected by choosing one operating threshold, and the empirical ROC curve is invariant to prevalence when the class-conditional score distributions remain fixed. However, sample composition, spectrum effects, and distribution shift can change the measured AUC.
+  s2_zh: ROC AUC 不受某一个营运阈值选择影响；当类别条件评分分布保持不变时，经验 ROC 曲线也不随基础发生率改变。但样本构成、案例谱差异与分布漂移都可能改变测得的 AUC。
+  s2_zh_hk: ROC AUC 唔受某一個營運門檻選擇影響；當類別條件評分分布保持不變時，經驗 ROC 曲線亦唔會隨基礎發生率改變。但樣本構成、案例譜差異同分布漂移都可能改變量度到嘅 AUC。
+  s3_en: AUC does not measure probability calibration, profit, fairness, or performance at the selected threshold. It should be reported with uncertainty and evaluated on representative out-of-sample data alongside decision-specific metrics.
+  s3_zh: AUC 不衡量概率校准、利润、公平性或所选阈值处的表现。应在具有代表性的样本外数据上报告其不确定性，并与决策特定指标一同评估。
+  s3_zh_hk: AUC 唔量度概率校準、利潤、公平性或者所選門檻位置嘅表現。應該喺具有代表性嘅樣本外數據上報告不確定性，並同決策特定指標一齊評估。
+  left_zh_hk: 概率排序嘅核心真諦
+  right_zh_hk: 企業級合規評級標尺
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Sweep Threshold Spectrum
+  step1_zh: 连续扫描门槛全谱系
+  step2_en: Plot Sensitivity Trade-offs
+  step2_zh: 绘制敏感度置换轨迹
+  step3_en: Calculate Net AUC Area
+  step3_zh: 积分测算净 AUC 指标
+  s1_en: 'Step one: Sort the supplied risk scores from highest to lowest and sweep the threshold through each distinct score. At every threshold, calculate TPR and FPR from the resulting confusion matrix.'
+  s1_zh: 第一步：将给定风险评分从高到低排序，并让阈值依次经过每个不同评分。在每个阈值处，根据所得混淆矩阵计算 TPR 与 FPR。
+  s1_zh_hk: 第一步：將畀定風險評分由高到低排序，並令門檻依次經過每個唔同評分。喺每個門檻位置，根據所得混淆矩陣計算 TPR 同 FPR。
+  s2_en: 'Step two: Plot the attainable pairs from the starting point zero-zero to the ending point one-one. Better ranking typically produces a curve farther above the chance diagonal and closer to the upper-left region.'
+  s2_zh: 第二步：从起点零零到终点一一绘制所有可实现的坐标对。较好的排序通常使曲线更高于机会对角线，并更接近左上区域。
+  s2_zh_hk: 第二步：由起點零零到終點一一繪製所有可實現嘅座標對。較好排序通常令曲線高過機會對角線更多，並更接近左上區域。
+  s3_en: 'Step three: The supplied illustration reports AUC values of 0.86 and 0.62. The first model has better ranking discrimination in that evaluation sample, but procurement still requires uncertainty estimates, calibration checks, threshold-specific validation, and business-cost analysis.'
+  s3_zh: 第三步：给定示例报告 AUC 为 0.86 与 0.62。第一个模型在该评估样本中的排序判别力较好，但采购仍需不确定性估计、校准检查、阈值特定验证与业务成本分析。
+  s3_zh_hk: 第三步：畀定例子報告 AUC 係 0.86 同 0.62。第一個模型喺該評估樣本入面嘅排序判別力較好，但採購仍然需要不確定性估計、校準檢查、門檻特定驗證同業務成本分析。
+  step1_zh_hk: 連續掃描門檻全譜系
+  step2_zh_hk: 繪製敏感度置換軌跡
+  step3_zh_hk: 積分測算淨 AUC 指標
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Can AUC Be Artificially Faked?
+  q1_zh: AUC 能否被投机取巧伪造？
+  q2_en: 'Audit Rule: Never Compare Models Without AUC'
+  q2_zh: 审计准则：横向比选算法，首验全域 AUC
+  s1_en: ROC AUC is useful for comparing how well models rank positives above negatives across thresholds. It is a discrimination summary, not a complete model scorecard.
+  s1_zh: ROC AUC 适合比较模型在不同阈值下把阳性案例排在阴性案例之前的能力。它是判别力汇总，而不是完整模型计分卡。
+  s1_zh_hk: ROC AUC 適合比較模型喺唔同門檻之下將陽性案例排喺陰性案例之前嘅能力。佢係判別力匯總，而唔係完整模型計分卡。
+  s2_en: 'Decision rule: evaluate ROC AUC out of sample with confidence intervals, inspect the relevant part of the ROC curve, and separately assess calibration, operating-threshold metrics, error costs, capacity, and fairness requirements.'
+  s2_zh: 决策规则：在样本外评估 ROC AUC 并报告置信区间，检查 ROC 曲线的相关区域，并分别评估校准、营运阈值指标、错误成本、处理能力与公平性要求。
+  s2_zh_hk: 決策規則：喺樣本外評估 ROC AUC 並報告置信區間，檢查 ROC 曲線相關區域，並分別評估校準、營運門檻指標、錯誤成本、處理能力同公平性要求。
+  s3_en: In the supplied comparison, 0.86 exceeds 0.62, indicating stronger ranking discrimination in that sample. The values alone do not establish a universal quality grade or guarantee better operational outcomes.
+  s3_zh: 在给定比较中，0.86 高于 0.62，说明在该样本中排序判别力较强。仅凭这些数值不能建立通用质量等级，也不能保证营运结果更好。
+  s3_zh_hk: 喺畀定比較入面，0.86 高過 0.62，說明喺該樣本入面排序判別力較強。單憑呢啲數值唔可以建立通用質量等級，亦唔保證營運結果更好。
+  q1_zh_hk: AUC 可唔可以被投機取巧偽造？
+  q2_zh_hk: 審計準則：橫向比選算法，首驗全域 AUC

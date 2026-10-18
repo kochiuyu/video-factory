@@ -1,0 +1,30 @@
+id: STAT-M07
+kind: minicourse
+course: statistics
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+title_en: Multiple regression and store experiments for a coffee chain
+title_zh: 咖啡连锁的多元回归与门店实验
+title_zh_hk: 咖啡連鎖嘅多元回歸與門市實驗
+objective_en: 'Fifteen standalone shorts on assumed Metro Coffee models: two-variable OLS, partialling out, adjusted R-squared, VIF, district dummies, the dummy trap, multi-district controls, continuous and slope interactions, a joint F-test, leverage, the 2x2 DiD grid, regression DiD, parallel trends, and a model-review checklist. Build each short on its own. This collection does not join them into one video.'
+objective_zh: 围绕假设都市咖啡模型的十五节独立短课：双变量 OLS、偏回归净化、调整后 R 方、方差膨胀因子、商圈虚拟变量、虚拟变量陷阱、多区域控制、连续交互与斜率交互、联合 F 检验、杠杆点、2x2 双重差分、回归型双重差分、平行趋势，以及模型审查清单。每节单独制作。本集合不把它们拼成一条视频。
+objective_zh_hk: 圍繞假設都市咖啡模型嘅十五節獨立短課：雙變量 OLS、偏回歸淨化、調整後 R 方、方差膨脹因子、商圈虛擬變量、虛擬變量陷阱、多區域控制、連續交互同斜率交互、聯合 F 檢驗、槓桿點、2x2 雙重差分、回歸型雙重差分、平行趨勢，以及模型審查清單。每節單獨製作。本集合唔會將佢哋拼成一條片。
+syllabus: docs/courses/STAT-M07.md
+duration_note: Each short is 168 seconds. The collection is not a 5–10 minute module.
+lessons:
+- STAT-M07-T01-TWOVR
+- STAT-M07-T02-PARTO
+- STAT-M07-T03-ADJR2
+- STAT-M07-T04-MCVIF
+- STAT-M07-T05-DUMMY
+- STAT-M07-T06-DTRAP
+- STAT-M07-T07-MDIST
+- STAT-M07-T08-CCINT
+- STAT-M07-T09-DCINT
+- STAT-M07-T10-FTEST
+- STAT-M07-T11-LEVRG
+- STAT-M07-T12-DIDGR
+- STAT-M07-T13-DIDRG
+- STAT-M07-T14-PARAL
+- STAT-M07-T15-RECAP

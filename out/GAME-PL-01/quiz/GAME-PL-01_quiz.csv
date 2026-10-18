@@ -1,5 +1,0 @@
-﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
-1,GAME-PL-01,comprehension,25,Who counts as a player here?,这里谁算参与人？,呢度邊個算參與人？,"Someone who posts a price this morning, and who cares what the other cart posts.",今天早上会标价的人，而且在乎对面标什么。,今朝會標價嘅人，而且在意對面標咩。
-2,GAME-PL-01,transfer,25,Are the customers a third player?,客人是第三个参与人吗？,客人係唔係第三個參與人？,No. They walk to the cheaper cart. They do not post a price.,不是。他们走向更便宜的车。他们不标价。,唔係。佢哋行去平嗰架。佢哋唔標價。
-3,GAME-PL-01,check,25,Can this name post a price?,这个名字能标价吗？,呢個名可唔可以標價？,,,
-4,GAME-PL-01,transfer,25,"If not, is it the crowd, the weather, or just a phrase?",如果不能，它是客人、天气，还是一句空话？,若唔得，佢係客人、天氣，定一句空話？,,,

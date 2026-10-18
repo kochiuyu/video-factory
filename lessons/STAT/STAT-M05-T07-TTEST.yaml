@@ -1,0 +1,220 @@
+id: STAT-M05-T07-TTEST
+course: STAT-M05
+course_en: Hypothesis Testing & Store Experiments
+course_zh: 假设检验与门店运营实验
+course_zh_hk: 假設檢驗與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The One-Sample t-Test: Testing a Mean with Unknown Variance'
+title_zh: 单样本 t 检验：在方差未知时检验均值
+title_zh_hk: 單樣本 t 檢驗：喺方差未知嗰陣檢驗均值
+objective_en: Formulate and execute a two-sided one-sample t-test for a population mean when variance is unknown, calculate
+  the estimated standard error, t statistic, degrees of freedom, critical-value decision, and p-value, and distinguish statistical
+  evidence about a mean from operational diagnosis or employee-level conclusions.
+objective_zh: 在总体方差未知时构建并执行双侧单样本 t 均值检验，计算估计标准误、t 统计量、自由度、临界值决策与 p 值，并区分关于均值的统计证据与经营诊断或针对员工个人的结论。
+objective_zh_hk: 喺總體方差未知嗰陣構建並執行雙側單樣本 t 均值檢驗，計算估計標準誤、t 統計量、自由度、臨界值決策同 p 值，並區分關於均值嘅統計證據同營運診斷或者針對員工個人嘅結論。
+glossary:
+- en: one-sample t-test
+  zh: 单样本 t 检验
+  zh_hk: 單樣本 t 檢驗
+  lock: true
+- en: service level agreement (SLA)
+  zh: 服务等级协议 (SLA)
+  zh_hk: 服務等級協議 (SLA)
+  lock: true
+- en: sample standard deviation (s)
+  zh: 样本标准差 (s)
+  zh_hk: 樣本標準差 (s)
+  lock: true
+- en: degrees of freedom (df = n - 1)
+  zh: 自由度 (df = n - 1)
+  zh_hk: 自由度 (df = n - 1)
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why does a one-sample mean test use Student’s t when population sigma is unknown?
+  question_zh: 在抽样量仅为 n = 20 笔且方差未知的情形下审计门店服务工时，为什么审计师在数理上必须强制使用自由度为 n - 1 的学生氏 t 分布，而绝不能使用标准正态 Z 分布？
+  question_zh_hk: 喺抽樣量淨係得 n = 20 筆兼且方差未知嘅情形下審計門市服務工時，點解審計師喺數理上必須強制使用自由度為 n - 1 嘅學生氏 t 分佈，而絕唔可以使用標準正態 Z 分佈？
+  options_en:
+  - 'A: Because substituting sample standard deviation s adds uncertainty to the estimated standard error, producing a t reference
+    distribution under the stated assumptions.'
+  - 'B: Because commercial convection ovens operate under non-linear electrical voltages that distort the Gaussian bell curve.'
+  - 'C: Because the Central Limit Theorem automatically bans the normal distribution whenever time is measured in seconds.'
+  - 'D: Because degrees of freedom are legally mandated by corporate franchise agreements to penalize slow baristas.'
+  options_zh:
+  - 'A: 因为用样本标准差 s 替代未知的总体 sigma 给分母额外引入了抽样波动杂音，导致抽样分布呈现厚尾特征，必须调用更宽的 t* 临界值以防误报。'
+  - 'B: 因为商用风炉烤箱在运转中存在非线性电压波动，从而扭曲了高斯钟形曲线。'
+  - 'C: 因为中心极限定理规定凡是采用“秒”作为计量单位的连续指标皆自动禁用正态分布。'
+  - 'D: 因为企业特许经营合规法明文要求必须通过自由度惩罚出餐迟缓的员工。'
+  options_zh_hk:
+  - 'A: 因為用樣本標準差 s 替代未知嘅總體 sigma 給分母額外引入咗抽樣波動雜音，搞到抽樣分佈呈現厚尾特徵，必須調用更闊嘅 t* 臨界值以防誤報。'
+  - 'B: 因為商用風爐焗爐喺運轉入面存在非線性電壓波動，從而扭曲咗高斯鐘形曲線。'
+  - 'C: 因為中心極限定理規定凡係採用「秒」作為計量單位嘅連續指標皆自動禁用正態分佈。'
+  - 'D: 因為企業特許經營合規法明文要求必須透過自由度懲罰出餐遲緩嘅員工。'
+  answer: A
+  explanation_en: When sigma is unknown and estimated with s, the standardized mean follows Student’s t distribution under
+    the normal-population model, with df = n - 1.
+  explanation_zh: 当总体方差 sigma 未知且在中小样本中必须依赖样本标准差 s 替代时，标准化统计量服从自由度为 n - 1 的学生氏 t 分布。其厚尾形态精确吸收了 s 本身的随机晃动杂音。
+  explanation_zh_hk: 當總體方差 sigma 未知兼且喺中小樣本入面必須依賴樣本標準差 s 替代嗰陣，標準化統計量服從自由度為 n - 1 嘅學生氏 t 分佈。其厚尾形態精確吸收咗 s 本身嘅隨機晃動雜音。
+- id: Q2
+  type: multiple_choice
+  question_en: 'Assume H0: mu = 45.0 s versus H1: mu != 45.0 s, n = 20, x-bar = 48.2 s, and s = 6.0 s. With df = 19 and t-star
+    = 2.093, what is the decision?'
+  question_zh: 都市咖啡早市 SLA 设定牛角面包名义基准加热耗时为 mu_0 = 45.0 秒。湾仔店抽查 n = 20 单，测得样本均值 x-bar = 48.2 秒，样本标准差 s = 6.0 秒。在 alpha = 0.05
+    双尾检验下（df = 19，t* = 2.093），t_calc 与运营裁决分别是什么？
+  question_zh_hk: 都市咖啡早市 SLA 設定牛角包名義基準加熱耗時為 mu_0 = 45.0 秒。灣仔舖抽查 n = 20 單，測得樣本均值 x-bar = 48.2 秒，樣本標準差 s = 6.0 秒。喺 alpha = 0.05
+    雙尾檢驗下（df = 19，t* = 2.093），t_calc 與營運裁決分別係幾多？
+  options_en:
+  - 'A: SE ≈ 1.342 s; t ≈ 2.385; two-sided p ≈ 0.0276; reject H0 because |t| > 2.093.'
+  - 'B: SE = 6.0 / 20 = 0.30s; t_calc = +10.67. Fail to reject H0.'
+  - 'C: t_calc = (48.2 - 45.0) / 6.0 = +0.533. Retain H0 as fully compliant.'
+  - 'D: t_calc = +2.385; retain H0 because t_calc is less than the standard normal Z cutoff of 2.576.'
+  options_zh:
+  - 'A: SE = 6.0 / 根号(20) ≈ 1.342 秒；t_calc = (48.2 - 45.0) / 1.342 = +2.385。因 +2.385 > +2.093，拒绝 H0：加热耗时显著超时，严重违反 SLA。'
+  - 'B: SE = 6.0 / 20 = 0.30 秒；t_calc = +10.67。判定不拒绝 H0。'
+  - 'C: t_calc = (48.2 - 45.0) / 6.0 = +0.533。判定保留 H0，出餐完全达标。'
+  - 'D: t_calc = +2.385；判定保留 H0，因为该值小于标准正态 99% 的临界值 2.576。'
+  options_zh_hk:
+  - 'A: SE = 6.0 / 根號(20) ≈ 1.342 秒；t_calc = (48.2 - 45.0) / 1.342 = +2.385。因 +2.385 > +2.093，拒絕 H0：加熱耗時顯著超時，嚴重違反 SLA。'
+  - 'B: SE = 6.0 / 20 = 0.30 秒；t_calc = +10.67。判定唔拒絕 H0。'
+  - 'C: t_calc = (48.2 - 45.0) / 6.0 = +0.533。判定保留 H0，出餐完全達標。'
+  - 'D: t_calc = +2.385；判定保留 H0，因為嗰個值細過標準正態 99% 嘅臨界值 2.576。'
+  answer: A
+  explanation_en: SE = 6 / sqrt(20) ≈ 1.342. Thus t = 3.2 / 1.342 ≈ 2.385. Both the critical-value and p-value approaches
+    reject at alpha = 0.05.
+  explanation_zh: 标准误 SE = 6.0 / 根号(20) ≈ 1.3416 秒。计算 t_calc = 3.2 / 1.3416 ≈ +2.385。自由度 df = 19 时，双尾 5% 显著性临界值为 t* = 2.093。因
+    +2.385 突破了 +2.093，断然推翻原假设：加热动线已实质性拥堵违约。
+  explanation_zh_hk: 標準誤 SE = 6.0 / 根號(20) ≈ 1.3416 秒。計算 t_calc = 3.2 / 1.3416 ≈ +2.385。自由度 df = 19 嗰陣，雙尾 5% 顯著性臨界值為 t* =
+    2.093。因 +2.385 突破咗 +2.093，斷然推翻原假設：加熱動線已實質性擁堵違約。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  kicker_en: The Morning Pastry Bottleneck
+  kicker_zh: 早市烘焙堵塞疑云
+  kicker_zh_hk: 早市烘焙堵塞疑雲
+  title_en: Is the observed service-time gap larger than sampling uncertainty?
+  title_zh: 观测服务时差是否超过抽样不确定性？
+  title_zh_hk: 觀測服務時差係咪超過抽樣不確定性？
+  en: Metro Coffee is evaluating an assumed pastry-warming process against a benchmark mean of 45.0 seconds. In a teaching
+    sample of 20 independent orders, the mean is 48.2 seconds and the sample standard deviation is 6.0 seconds. Because the
+    population variance is unknown, the uncertainty estimate comes from the same sample, so the test must account for that
+    extra estimation uncertainty.
+  zh: 都市咖啡正在评估一项假设的点心加热流程，其基准总体均值为 45.0 秒。在一个包含 20 笔独立订单的教学样本中，均值为 48.2 秒，样本标准差为 6.0 秒。由于总体方差未知，不确定性估计来自同一样本，因此检验必须反映这项额外估计不确定性。
+  zh_hk: 都市咖啡正評估一項假設嘅點心加熱流程，基準總體均值係 45.0 秒。喺一個包括 20 筆獨立訂單嘅教學樣本入面，均值係 48.2 秒，樣本標準差係 6.0 秒。由於總體方差未知，不確定性估計來自同一個樣本，所以檢驗必須反映呢項額外估計不確定性。
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: Replace unknown sigma with s and use Student’s t
+  title_zh: 用 s 估计未知 sigma，并使用学生氏 t
+  title_zh_hk: 用 s 估計未知 sigma，並使用學生氏 t
+  formula: 'H0: mu = mu_0 versus H1: mu != mu_0; t = (x-bar - mu_0) / (s / sqrt(n)); df = n - 1'
+  formula_zh: 'H0: mu = mu_0 对 H1: mu != mu_0；t = (x-bar - mu_0) / (s / √n)；df = n - 1'
+  formula_zh_hk: 'H0: mu = mu_0 對 H1: mu != mu_0；t = (x-bar - mu_0) / (s / √n)；df = n - 1'
+  formula_tex: t=\frac{\bar X-\mu_0}{s/\sqrt n},\qquad df=n-1
+  s1_en: When sigma is unknown, estimate the standard error of the sample mean using s divided by the square root of n. Under
+    independent observations from a normal population, the resulting standardized statistic follows Student’s t distribution
+    with n minus one degrees of freedom.
+  s1_zh: 当 sigma 未知时，用 s 除以根号 n 估计样本均值的标准误。对于来自正态总体的独立观测，所得标准化统计量服从自由度为 n - 1 的学生氏 t 分布。
+  s1_zh_hk: 當 sigma 未知嗰陣，用 s 除以根號 n 估計樣本均值嘅標準誤。對於來自正態總體嘅獨立觀測，所得標準化統計量服從自由度係 n - 1 嘅學生氏 t 分佈。
+  s2_en: The t distribution has heavier tails because the denominator is estimated rather than fixed. With fewer degrees of
+    freedom, the critical value is farther from zero. As degrees of freedom increase, t approaches the standard normal distribution.
+  s2_zh: t 分布的尾部更厚，是因为分母由样本估计而非固定。自由度越少，临界值离零越远；随着自由度增加，t 分布逐渐接近标准正态分布。
+  s2_zh_hk: t 分佈嘅尾部更厚，係因為分母由樣本估計而唔係固定。自由度越少，臨界值離零越遠；隨住自由度增加，t 分佈逐漸接近標準正態分佈。
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  kicker_en: The Critical Difference
+  kicker_zh: 边界重构
+  kicker_zh_hk: 邊界重構
+  title_en: Check design and distribution conditions before using t
+  title_zh: 使用 t 前检查设计与分布条件
+  title_zh_hk: 使用 t 之前檢查設計同分佈條件
+  left_en: 'Design: independent, representative observations'
+  left_zh: 设计：独立且具代表性的观测
+  left_zh_hk: 設計：獨立而且具代表性嘅觀測
+  right_en: 'Shape: no severe skewness or influential outliers in a small sample'
+  right_zh: 形态：小样本中无严重偏斜或强影响异常值
+  right_zh_hk: 形態：細樣本入面冇嚴重偏斜或者強影響異常值
+  s1_en: The t formula cannot repair a biased or dependent sample. Orders should represent the process of interest, and repeated
+    observations should not be treated as independent when they share strong time, oven, batch, or operator effects.
+  s1_zh: t 公式不能修复有偏或相互依赖的样本。订单应代表所研究流程；若重复观测共享明显的时段、烤箱、批次或操作因素，就不应把它们视为独立。
+  s1_zh_hk: t 公式唔可以修復有偏或者互相依賴嘅樣本。訂單應該代表所研究流程；如果重複觀測共享明顯嘅時段、焗爐、批次或者操作因素，就唔應該將佢哋視為獨立。
+  s2_en: For exact small-sample inference, normal-population assumptions matter. Inspect the observations for severe skewness
+    and influential outliers. A single unusual order can affect both the sample mean and sample standard deviation.
+  s2_zh: 对于精确的小样本推断，正态总体假设很重要。应检查观测是否存在严重偏斜与强影响异常值。单个异常订单可能同时影响样本均值和样本标准差。
+  s2_zh_hk: 對於精確嘅細樣本推斷，正態總體假設好重要。應該檢查觀測係咪存在嚴重偏斜同強影響異常值。單個異常訂單可能同時影響樣本均值同樣本標準差。
+  s3_en: For n = 20, df = 19, a two-sided 5% t test uses a critical magnitude of approximately 2.093 rather than 1.960. This
+    wider cutoff reflects variance-estimation uncertainty, but it does not protect against poor sampling, invalid measurements,
+    or a misspecified benchmark.
+  s3_zh: 当 n = 20、df = 19 时，5% 双侧 t 检验使用约 2.093 的临界绝对值，而不是 1.960。更宽临界值反映方差估计不确定性，但不能防止不良抽样、无效测量或错误基准。
+  s3_zh_hk: 當 n = 20、df = 19 嗰陣，5% 雙側 t 檢驗使用約 2.093 嘅臨界絕對值，而唔係 1.960。更闊臨界值反映方差估計不確定性，但唔可以防止不良抽樣、無效量度或者錯誤基準。
+- id: ledger
+  visual: steps
+  seconds: 38
+  kicker_en: The Ledger
+  kicker_zh: 台账实录
+  kicker_zh_hk: 台賬實錄
+  title_en: Execute the assumed warming-time t test
+  title_zh: 执行假设加热时间 t 检验
+  title_zh_hk: 執行假設加熱時間 t 檢驗
+  step1_en: 'Set H0: mu = 45.0 s versus H1: mu != 45.0 s; n = 20, df = 19, alpha = 0.05'
+  step1_zh: '设定 H0: mu = 45.0 s 对 H1: mu != 45.0 s；n = 20，df = 19，alpha = 0.05'
+  step1_zh_hk: '設定 H0: mu = 45.0 s 對 H1: mu != 45.0 s；n = 20，df = 19，alpha = 0.05'
+  step2_en: With x-bar = 48.2 s and s = 6.0 s, SE = 6.0 / sqrt(20) ≈ 1.342 s; t ≈ 2.385
+  step2_zh: x-bar = 48.2 s，s = 6.0 s；SE = 6.0 / √20 ≈ 1.342 s；t ≈ 2.385
+  step2_zh_hk: x-bar = 48.2 s，s = 6.0 s；SE = 6.0 / √20 ≈ 1.342 s；t ≈ 2.385
+  step3_en: '|t| = 2.385 > 2.093; two-sided p ≈ 0.0276; reject H0 at alpha = 0.05'
+  step3_zh: '|t| = 2.385 > 2.093；双侧 p ≈ 0.0276；在 alpha = 0.05 时拒绝 H0'
+  step3_zh_hk: '|t| = 2.385 > 2.093；雙側 p ≈ 0.0276；喺 alpha = 0.05 嗰陣拒絕 H0'
+  s1_en: For illustration, assume 20 independent warming times have a sample mean of 48.2 seconds and sample standard deviation
+    of 6.0 seconds, with a tested population mean of 45.0 seconds. These are teaching assumptions, not verified service commitments,
+    branch records, or employee-performance evidence.
+  s1_zh: 作为示例，假设 20 个独立加热时间的样本均值为 48.2 秒、样本标准差为 6.0 秒，被检验总体均值为 45.0 秒。这些数字是教学假设，并非已核实的服务承诺、门店记录或员工表现证据。
+  s1_zh_hk: 作為例子，假設 20 個獨立加熱時間嘅樣本均值係 48.2 秒、樣本標準差係 6.0 秒，被檢驗總體均值係 45.0 秒。呢啲數字係教學假設，唔係已核實嘅服務承諾、門市記錄或者員工表現證據。
+  s2_en: The estimated standard error is 6.0 divided by the square root of 20, approximately 1.342 seconds. The sample gap
+    is 3.2 seconds, so the t statistic is approximately 3.2 divided by 1.342, or 2.385.
+  s2_zh: 估计标准误为 6.0 除以根号 20，约为 1.342 秒。样本差距为 3.2 秒，因此 t 统计量约为 3.2 除以 1.342，即 2.385。
+  s2_zh_hk: 估計標準誤係 6.0 除以根號 20，約係 1.342 秒。樣本差距係 3.2 秒，所以 t 統計量約係 3.2 除以 1.342，即係 2.385。
+  s3_en: Because 2.385 exceeds the two-sided critical value 2.093, reject H0 at the 5% level; the matching two-sided p-value
+    is approximately 0.0276. Under the assumptions, the evidence indicates a population mean different from 45.0 seconds,
+    with the observed direction above the benchmark. It does not identify the cause or assess any individual worker.
+  s3_zh: 由于 2.385 超过双侧临界值 2.093，在 5% 水平拒绝 H0；对应双侧 p 值约为 0.0276。在既定假设下，证据表示总体均值不同于 45.0 秒，观测方向高于基准。它不能识别原因，也不能评价任何个别员工。
+  s3_zh_hk: 由於 2.385 超過雙側臨界值 2.093，喺 5% 水平拒絕 H0；對應雙側 p 值約係 0.0276。喺既定假設之下，證據表示總體均值唔同於 45.0 秒，觀測方向高過基準。佢唔可以識別原因，亦唔可以評價任何個別員工。
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Use t for an unknown sigma, then keep the conclusion narrow
+  title_zh: sigma 未知时使用 t，并谨慎限定结论
+  title_zh_hk: sigma 未知嗰陣使用 t，並審慎限定結論
+  q1_en: Why does estimating sigma with s change the reference distribution?
+  q1_zh: 为什么用 s 估计 sigma 会改变参照分布？
+  q1_zh_hk: 點解用 s 估計 sigma 會改變參照分佈？
+  q2_en: What checks should follow a significant service-time result?
+  q2_zh: 服务时间结果显著后，还应进行哪些检查？
+  q2_zh_hk: 服務時間結果顯著之後，仲應該進行邊啲檢查？
+  s1_en: Estimating sigma from the same sample adds randomness to the denominator, so the standardized statistic follows a
+    t distribution under the stated normal model. Degrees of freedom determine how much wider its tails are than the normal
+    distribution.
+  s1_zh: 由同一样本估计 sigma 会给分母增加随机性，因此在既定正态模型下，标准化统计量服从 t 分布。自由度决定其尾部相对正态分布有多宽。
+  s1_zh_hk: 由同一個樣本估計 sigma 會畀分母增加隨機性，所以喺既定正態模型之下，標準化統計量服從 t 分佈。自由度決定佢嘅尾部相對正態分佈有幾闊。
+  s2_en: After rejection, report the mean difference, estimated standard error, degrees of freedom, confidence interval, t
+    statistic, p-value, assumptions, and sampling design. Then investigate timestamps, measurement validity, workflow, equipment,
+    demand mix, and process stability before selecting an intervention.
+  s2_zh: 拒绝后，应报告均值差、估计标准误、自由度、置信区间、t 统计量、p 值、假设与抽样设计。随后应调查时间戳、测量有效性、流程、设备、需求组合与流程稳定性，再选择干预措施。
+  s2_zh_hk: 拒絕之後，應該報告均值差、估計標準誤、自由度、置信區間、t 統計量、p 值、假設同抽樣設計。之後應該調查時間戳、量度有效性、流程、設備、需求組合同流程穩定性，再選擇干預措施。
+  s3_en: For the assumed warming-time sample, t is approximately 2.385 with 19 degrees of freedom and p approximately 0.0276,
+    so the 5% two-sided test rejects a 45.0-second mean. The result is evidence about the process mean, not proof of a specific
+    bottleneck, contractual breach, or employee fault.
+  s3_zh: 在假设加热时间样本中，t 约为 2.385，自由度为 19，p 约为 0.0276，因此 5% 双侧检验拒绝 45.0 秒总体均值。该结果是关于流程均值的证据，而不是对特定瓶颈、合约违约或员工过失的证明。
+  s3_zh_hk: 喺假設加熱時間樣本入面，t 約係 2.385，自由度係 19，p 約係 0.0276，所以 5% 雙側檢驗拒絕 45.0 秒總體均值。呢個結果係關於流程均值嘅證據，而唔係對特定樽頸、合約違約或者員工過失嘅證明。

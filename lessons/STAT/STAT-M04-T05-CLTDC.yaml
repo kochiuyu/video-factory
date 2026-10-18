@@ -1,0 +1,220 @@
+id: STAT-M04-T05-CLTDC
+course: STAT-M04
+course_en: Sampling Distributions, the Central Limit Theorem, and Interval Estimation
+course_zh: 抽样分布、中心极限定理与区间估计
+course_zh_hk: 抽樣分佈、中心極限定理與區間估計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: CLT on discrete demands
+title_zh: 离散需求的连续跃迁：中心极限定理与烘焙批次聚合
+title_zh_hk: 離散需求的連續躍遷：中心極限定理與烘焙批次聚合
+objective_en: Apply the Central Limit Theorem to discrete integer customer demands, model the transition from individual jumpy
+  Poisson or Binomial choices to smooth aggregate Gaussian curves, and calculate morning breakfast pastry production buffers.
+objective_zh: 将中心极限定理推广应用于离散整数型客户需求，解析底层跳跃的泊松或二项选择如何聚合成平滑连续的高斯正态曲线，并精准测算中央厨房早高峰点心生产备料缓冲。
+objective_zh_hk: 將中心極限定理推廣應用喺離散整數型客戶需求，解析底層跳躍嘅泊松或者二項選擇點樣聚合成平滑連續嘅高斯正態曲線，並精準測算中央廚房朝高峰點心生產備料緩衝。
+glossary:
+- en: discrete-to-continuous transition
+  zh: 离散到连续跃迁
+  zh_hk: 離散到連續躍遷
+  lock: true
+- en: aggregate demand sum
+  zh: 聚合需求总量
+  zh_hk: 聚合需求總量
+  lock: true
+- en: continuity correction
+  zh: 连续性修正
+  zh_hk: 連續性修正
+  lock: true
+- en: production batch buffer
+  zh: 生产批次缓冲
+  zh_hk: 生產批次緩衝
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why can central bakery planners use a continuous Normal distribution to forecast total croissant demand across
+    400 morning commuters, even though each individual customer can only buy an integer count (0, 1, 2, or 3 croissants)?
+  question_zh: 尽管每位进店顾客只能点选离散整数件点心（0、1、2 或 3 个可颂），为什么中央厨房排产负责人仍可使用连续正态分布来预测 400 位早餐客人的需求总量？
+  question_zh_hk: 儘管每位入舖顧客淨係可以點選離散整數件點心（0、1、2 或 3 個牛角包），點解中央廚房排產負責人仲可以用連續正態分佈嚟預測 400 位早餐客人嘅需求總量？
+  options_en:
+  - 'A: Because the sum S_n = Sum(X_i) of a large number of independent discrete random variables converges asymptotically
+    to a continuous Normal distribution under the CLT.'
+  - 'B: Because modern commercial ovens automatically bake decimal fractions of pastries.'
+  - 'C: Because individual customer choices lose all randomness as soon as cashiers ring the till.'
+  - 'D: Because Poisson distributions are legally redefined as continuous variables in food supply chains.'
+  options_zh:
+  - 'A: 因为根据中心极限定理，大量独立离散随机变量的聚合求和总数 S_n = Sum(X_i) 会在渐近意义上平滑收敛为连续正态分布。'
+  - 'B: 因为现代商用大型智能烤箱支持烘烤小数切片形式的糕点。'
+  - 'C: 因为每位顾客的选购行为只要经过收银台出票，其随机性就会瞬间归零。'
+  - 'D: 因为食品冷链供应链法规强制将泊松离散计数等价定义为连续变量。'
+  options_zh_hk:
+  - 'A: 因為根據中心極限定理，大量獨立離散隨機變量嘅聚合求和總數 S_n = Sum(X_i) 會喺漸近意義上平滑收斂為連續正態分佈。'
+  - 'B: 因為現代商用大型智能焗爐支持烘烤小數切片形式嘅糕點。'
+  - 'C: 因為每位顧客嘅選購行為只要經過收銀台出飛，其隨機性就會瞬間歸零。'
+  - 'D: 因為食品冷鏈供應鏈法規強制將泊松離散計數等價定義為連續變量。'
+  answer: A
+  explanation_en: The CLT applies to sums just as it does to sample means. Sum S_n = n * X-bar follows N(n*mu, n*sigma^2).
+    As n grows (n = 400), the discrete integer steps become imperceptibly tiny relative to total scale, enabling smooth Gaussian
+    modeling.
+  explanation_zh: 中心极限定理同样统帅聚合总量：总和 S_n = n × X-bar 服从正态 N(n*mu, n*sigma^2)。随着 n 扩大至 400，离散整数阶梯在庞大宏观总量面前变得极其微小平滑，完全可用高斯模型精准度量。
+  explanation_zh_hk: 中心極限定理同樣統領聚合總量：總和 S_n = n × X-bar 服從正態 N(n*mu, n*sigma^2)。隨住 n 擴大至 400，離散整數階梯喺龐大宏觀總量面前變得極其微細平滑，完全可以用高斯模型精準度量。
+- id: Q2
+  type: multiple_choice
+  question_en: Commuter breakfast croissant add-on demand per customer has mean mu = 0.75 and standard deviation sigma = 0.80.
+    Across n = 400 morning commuters at Wan Chai, what are the mean and standard deviation of total aggregate croissant demand?
+  question_zh: 湾仔店每位早间通勤客的点心加购量服从离散分布，均值 mu = 0.75 个，标准差 sigma = 0.80 个。若全早高峰接待 n = 400 位顾客，其可颂总需求量 S_n 的均值与标准差分别是多少？
+  question_zh_hk: 灣仔舖每位朝早返工客嘅點心加購量服從離散分佈，均值 mu = 0.75 個，標準差 sigma = 0.80 個。若全朝高峰接待 n = 400 位顧客，其牛角包總需求量 S_n 嘅均值與標準差分別係幾多？
+  options_en:
+  - 'A: Mean = 400 * 0.75 = 300 croissants; SD = sqrt(400) * 0.80 = 20 * 0.80 = 16 croissants'
+  - 'B: Mean = 300 croissants; SD = 400 * 0.80 = 320 croissants'
+  - 'C: Mean = 0.75 croissants; SD = 0.80 / sqrt(400) = 0.04 croissants'
+  - 'D: Mean = 400 croissants; SD = 16 croissants'
+  options_zh:
+  - 'A: 期望均值 = 400 × 0.75 = 300 个；总需求标准差 = 根号(400) × 0.80 = 20 × 0.80 = 16 个'
+  - 'B: 期望均值 = 300 个；总需求标准差 = 400 × 0.80 = 320 个'
+  - 'C: 期望均值 = 0.75 个；总需求标准差 = 0.80 / 根号(400) = 0.04 个'
+  - 'D: 期望均值 = 400 个；总需求标准差 = 16 个'
+  options_zh_hk:
+  - 'A: 期望均值 = 400 × 0.75 = 300 個；總需求標準差 = 根號(400) × 0.80 = 20 × 0.80 = 16 個'
+  - 'B: 期望均值 = 300 個；總需求標準差 = 400 × 0.80 = 320 個'
+  - 'C: 期望均值 = 0.75 個；總需求標準差 = 0.80 / 根號(400) = 0.04 個'
+  - 'D: 期望均值 = 400 個；總需求標準差 = 16 個'
+  answer: A
+  explanation_en: 'For sum S_n = Sum(X_i): E[S_n] = n * mu = 400 * 0.75 = 300. Var(S_n) = n * sigma^2 = 400 * 0.64 = 256.
+    SD(S_n) = sqrt(256) = 16 (or sqrt(n)*sigma = 20 * 0.80 = 16).'
+  explanation_zh: 聚合总和 S_n 满足：期望 E[S_n] = n × mu = 400 × 0.75 = 300 个。方差 Var(S_n) = n × sigma^2 = 400 × 0.64 = 256，开根号得标准差
+    SD = 16 个。
+  explanation_zh_hk: 聚合總和 S_n 滿足：期望 E[S_n] = n × mu = 400 × 0.75 = 300 個。方差 Var(S_n) = n × sigma^2 = 400 × 0.64 = 256，開根號得標準差
+    SD = 16 個。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Bakery Dilemma
+  kicker_en: The Bakery Dilemma
+  kicker_zh: 中央厨房排产之困
+  kicker_zh_hk: 中央廚房排產之困
+  title_en: From integer crumbs to smooth delivery curves
+  title_zh: 跳跃的整数点心，如何汇入光滑的配送曲线？
+  title_zh_hk: 跳躍嘅整數點心，點樣匯入光滑嘅配送曲線？
+  en: 'At 5:00 AM in our Kwun Tong central commissary, bakers load delivery vans for the Wan Chai morning rush. Each individual
+    customer order is stubbornly discrete: a commuter buys zero pastries, grabs one butter croissant, or takes two pain au
+    chocolats for a colleague. Fractional purchases do not exist. Yet logistics planning cannot operate on fragmented coin
+    flips. How does the Central Limit Theorem bridge discrete counter choices into an elegant continuous curve to guarantee
+    zero stockouts?'
+  zh: 凌晨五点，观塘中央烘焙工坊的师傅们正忙着往冷链配送车上装载供给湾仔早高峰的面点。在前台收银端，单个顾客的点单极为纯粹离散：要么不加购点心，要么拿一个原味可颂，亦或为同事顺带打包两个巧克力酥。现实中绝不存在半个点心的消费。然而工厂物流排产绝不可能靠掷硬币度日。中心极限定理究竟如何将数以百计跳跃的离散整数，无缝融合成平滑连续的高斯曲线以捍卫不断货承诺？
+  zh_hk: 凌晨五點，觀塘中央烘焙工坊嘅師傅們正忙住向冷鏈配送車上裝載供給灣仔朝高峰嘅面點。喺前台收銀端，單個顧客嘅點單極為純粹離散：一係唔加購點心，一係攞一個原味牛角包，抑或為同事順便打包兩個朱古力酥。現實入面絕唔存在半個點心嘅消費。然而工廠物流排產絕唔可能靠擲毫過日。中心極限定理究竟點樣將數以百計跳躍嘅離散整數，無縫融合成平滑連續嘅高斯曲線以捍衛不斷貨承諾？
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: What It Is
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: The Central Limit Theorem on aggregate sums
+  title_zh: 总量聚合中心极限定理
+  title_zh_hk: 總量聚合中心極限定理
+  formula: S_n = Sum(X_i) ~ N(n * mu, n * sigma^2); SD(S_n) = sqrt(n) * sigma
+  formula_zh: 总需求 S_n = Sum(X_i) 渐近服从正态 N(n × mu, n × sigma^2)；总需求波动标准差为 根号(n) × sigma
+  formula_zh_hk: 總需求 S_n = Sum(X_i) 漸近服從正態 N(n × mu, n × sigma^2)；總需求波動標準差為 根號(n) × sigma
+  formula_tex: S_n = \sum_{i=1}^n X_i \xrightarrow{d} N\left(n\mu, \, n\sigma^2\right) \quad \text{as } n \ge 30
+  s1_en: 'Most textbooks present the CLT purely in terms of the sample average X-bar. But for supply chain managers, the CLT
+    equally governs aggregate sums: S_n equals n times the sample mean.'
+  s1_zh: 多数商学教科书仅围绕样本均值 X-bar 阐释中心极限定理。但对于供应链与排产总监而言，CLT 同样以绝对主权统治着加总需求量：总和 S_n 不过是样本均值乘上了规模常数 n。
+  s1_zh_hk: 多數商學教科書淨係圍繞樣本均值 X-bar 闡釋中心極限定理。但對於供應鏈與排產總監而言，CLT 同樣以絕對主權統治住加總需求量：總和 S_n 不過係樣本均值乘上咗規模常數 n。
+  s2_en: When you sum hundreds of independent discrete random variables—whether Binomial defect hits or Poisson arrivals—the
+    discrete staircase steps shrink relative to macro volume, dissolving into a smooth Gaussian curve.
+  s2_zh: 当你将成百上千个独立的离散随机变量累加在一起时——不论是二项分布的合格品计数，还是泊松到达点单——阶梯状的离散台阶在宏观体量面前变得微不足道，彻底融解为平滑的高斯钟形线。
+  s2_zh_hk: 當你將成百上千個獨立嘅離散隨機變量累加喺一齊嗰陣——不論係二項分佈嘅合格品計數，抑或泊松到達點單——階梯狀嘅離散台階喺宏觀體量面前變得微不足道，徹底融解為平滑嘅高斯鐘形線。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  kicker: The Scale Effect
+  kicker_en: The Scale Effect
+  kicker_zh: 规模效应
+  kicker_zh_hk: 規模效應
+  title_en: Why relative volatility dampens at scale
+  title_zh: 为什么大盘相对波动随规模急剧收敛？
+  title_zh_hk: 點解大盤相對波動隨規模急劇收斂？
+  left_en: 'Absolute Growth: Mean grows as n; SD grows as sqrt(n)'
+  left_zh: 绝对量演进：总需求期望按 n 线性倍增，但标准差仅按根号 n 缓慢膨胀
+  left_zh_hk: 絕對量演進：總需求期望按 n 線性倍增，但標準差淨係按根號 n 緩慢膨脹
+  right_en: 'Relative Stability: CV = SD / Mean = sigma / (sqrt(n) * mu) shrinks'
+  right_zh: 相对抗风险：变异系数反比于根号 n 持续衰减，大盘确定性越发坚挺
+  right_zh_hk: 相對抗風險：變異系數反比於根號 n 持續衰減，大盤確定性越發堅挺
+  s1_en: Notice the vital divergence in growth rates. As customer traffic expands by n, expected total consumption multiplies
+    directly by n, but total volatility only expands by the square root of n.
+  s1_zh: 请深刻洞察两者在增长速度上的关键分化。随着进店客流规模放大 n 倍，大盘总需求期望随之线性翻 n 倍，但总量的波动标准差却仅仅按根号 n 的步调缓慢膨胀。
+  s1_zh_hk: 請深刻洞察兩者喺增長速度上嘅關鍵分化。隨住入舖客流規模放大 n 倍，大盤總需求期望隨之線性翻 n 倍，但總量嘅波動標準差卻淨係按根號 n 嘅步調緩慢膨脹。
+  s2_en: The coefficient of variation—spread divided by total volume—drops in proportion to one over the square root of n.
+    Large chains hold a massive mathematical efficiency advantage over single-stall cafes.
+  s2_zh: 以相对离散度衡量（标准差除以总期望），相对波动幅度反比于根号 n 持续衰减。大体量连锁体系因此在数学规律上天然享有战胜单体独立小档口的巨大确定性红利。
+  s2_zh_hk: 以相對離散度衡量（標準差除以總期望），相對波動幅度反比於根號 n 持續衰減。大體量連鎖體系因此喺數學規律上天然享有戰勝單體獨立細檔口嘅巨大確定性紅利。
+  s3_en: Because the aggregate total is continuous and normal, management can establish safety stock buffers using textbook
+    Z-scores rather than combinatoric factorials.
+  s3_zh: 正因为加总需求量跃升为平滑的正态分布，管理层终于彻底摆脱了阶乘组合数的运算苦海，直接调用标准正态 Z 分数从容核定安全库存缓冲。
+  s3_zh_hk: 正正因為加總需求量躍升為平滑嘅正態分佈，管理層終於徹底擺脫咗階乘組合數嘅運算苦海，直接調用標準正態 Z 分數從容核定安全庫存緩衝。
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: The Ledger
+  kicker_en: The Ledger
+  kicker_zh: 账目精算
+  kicker_zh_hk: 賬目精算
+  title_en: Sizing Wan Chai morning croissant bake
+  title_zh: 湾仔店早市可颂中央排产精算
+  title_zh_hk: 灣仔舖早市牛角包中央排產精算
+  step1_en: 'Discrete patron baseline: mu = 0.75 croissants, sigma = 0.80 croissants'
+  step1_zh: 微观离散基准：每客点心均值 mu = 0.75 个，个体标准差 sigma = 0.80 个
+  step1_zh_hk: 微觀離散基準：每客點心均值 mu = 0.75 個，個體標準差 sigma = 0.80 個
+  step2_en: 'Commuter aggregate (n = 400): E[S_n] = 400 * 0.75 = 300; SD = 20 * 0.80 = 16'
+  step2_zh: 早市聚合大盘：400 位客流 -> 总期望 300 个；总需求标准差 20 × 0.80 = 16 个
+  step2_zh_hk: 早市聚合大盤：400 位客流 -> 總期望 300 個；總需求標準差 20 × 0.80 = 16 個
+  step3_en: '97.5% Service Level: Buffer = 300 + 1.96 * 16 = 300 + 31.4 -> Bake 332 units'
+  step3_zh: 97.5% 防断供保供：备货 = 300 + 1.96 × 16 = 300 + 31.4 -> 实打实派发 332 个
+  step3_zh_hk: 97.5% 防斷供保供：備貨 = 300 + 1.96 × 16 = 300 + 31.4 -> 實打實派發 332 個
+  s1_en: Audit historical POS logs at Wan Chai. Across thousands of commuter transactions, customer pastry choice is discrete,
+    averaging zero point seven five croissants with a standard deviation of zero point eight zero.
+  s1_zh: 核查湾仔店历史收银流水。在成千上万张通勤小票中，客人的点心加购呈现典型的离散分布，均值为零点七五个可颂，离散标准差为零点八零个。
+  s1_zh_hk: 核查灣仔舖歷史收銀流水。喺成千上萬張返工單據入面，客人嘅點心加購呈現典型嘅離散分佈，均值為零點七五個牛角包，離散標準差為零點八零個。
+  s2_en: 'During the two-hour morning rush, four hundred commuters enter. Under the CLT on sums, expected total demand is
+    four hundred times zero point seven five: exactly three hundred croissants. Total standard deviation is the square root
+    of four hundred times zero point eight zero: exactly sixteen croissants.'
+  s2_zh: 在晨间早高峰两小时内，涌入四百位通勤上班族。依据总量中心极限定理，大盘总需求期望为四百乘零点七五，等于整整三百个。总标准差为根号四百乘零点八零，恰好等于十六个。
+  s2_zh_hk: 喺晨間朝高峰兩小時內，湧入四百位返工上班族。依據總量中心極限定理，大盤總需求期望為四百乘零點七五，等於整整三百個。總標準差為根號四百乘零點八零，啱啱好等於十六個。
+  s3_en: 'To protect an executive ninety-seven point five percent service level against stockouts, headquarters applies a
+    one-tailed buffer of one point nine six standard deviations: thirty-one point four extra pastries. Packing three hundred
+    and thirty-two croissants covers the morning surge with mathematical certainty.'
+  s3_zh: 为捍卫管理层设定的 97.5% 极高保供履约率，总部按单尾一倍点九六个标准差下达备用缓冲：即额外追加三十一点四个可颂。中央工坊实打实派发三百三十二个面点，便能万无一失吃定早高峰大盘。
+  s3_zh_hk: 為捍衛管理層設定嘅 97.5% 極高保供履約率，總部按單尾一倍點九六個標準差下達備用緩衝：即額外追加三十一點四個牛角包。中央工坊實打實派發三百三十二個面點，就可以萬無一失食定朝高峰大盤。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: Decision Rule
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Scale transforms fragmented counts into continuous certainty
+  title_zh: 微观离散不足惧，规模跃迁定乾坤
+  title_zh_hk: 微觀離散不足懼，規模躍遷定乾坤
+  q1_en: Why should supply chain leaders never worry about discrete units when ordering at scale?
+  q1_zh: 为什么供应链决策者在面对规模化大宗订货时，完全无需纠结微观层面的离散性？
+  q1_zh_hk: 點解供應鏈決策者喺面對規模化大宗訂貨嗰陣，完全唔需要糾結微觀層面嘅離散性？
+  q2_en: How does the Central Limit Theorem apply when the metric is a binary percentage like loyalty app scans?
+  q2_zh: 当被监测的指标不再是物理件数，而是二元离散的 App 会员扫码率时，中心极限定理又当如何施展？
+  q2_zh_hk: 當被監測嘅指標唔再係物理件數，而係二元離散嘅 App 會員掃碼率嗰陣，中心極限定理又當點樣施展？
+  s1_en: Never attempt to model massive retail logistics with complicated combinatorial formulas; once customer volume exceeds
+    thirty, aggregate discrete demands behave as clean, continuous normal variables.
+  s1_zh: 切勿在规模化零售物流中使用繁冗复杂的离散组合数学；只要消费客流跨越三十大关，聚合总需求便会无缝跃迁为优雅、连续且精准的高斯正态变量。
+  s1_zh_hk: 切勿喺規模化零售物流入面使用繁冗複雜嘅離散組合數學；只要消費客流跨越三十大關，聚合總需求就會無縫躍遷為優雅、連續兼且精準嘅高斯正態變量。
+  s2_en: 'Buffer aggregate capacity using the square root of n: as volume scales, relative risk steadily declines, yielding
+    massive margin economies of scale.'
+  s2_zh: 依托根号 n 的尺度规律科学核定产能安全缓冲：随着总体规模急剧扩容，相对风控成本持续递减，这正是大型商业连锁企业无往不利的规模经济护城河。
+  s2_zh_hk: 依托根號 n 嘅尺度規律科學核定產能安全緩衝：隨住總體規模急劇擴容，相對風控成本持續遞減，呢個正正係大型商業連鎖企業無往不利嘅規模經濟護城河。
+  s3_en: The operating rule is to buffer the sum, not the single order. Four hundred commuters imply 300 croissants plus 1.96
+    times 16, so the bake is 332.
+  s3_zh: 操作规则是给总量留缓冲，而不是给单笔订单留缓冲。四百位客人对应 300 个可颂再加 1.96 乘 16，出炉数为 332。
+  s3_zh_hk: 操作規則係畀總量留緩衝，而唔係畀單筆訂單留緩衝。四百位客人對應 300 個牛角包再加 1.96 乘 16，出爐數係 332。

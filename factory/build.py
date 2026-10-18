@@ -7,6 +7,30 @@ slides, TTS (if audio is missing), shared clock, four cells.
 
 from __future__ import annotations
 
+import sys
+from pathlib import Path as _PathForBoot
+
+_FACTORY = _PathForBoot(__file__).resolve().parent
+sys.path.insert(0, str(_FACTORY))
+try:
+    from utf8io import force_utf8  # noqa: E402
+except ModuleNotFoundError:
+    import os as _os
+
+    def force_utf8() -> None:
+        _os.environ.setdefault("PYTHONUTF8", "1")
+        _os.environ.setdefault("PYTHONIOENCODING", "utf-8")
+        for stream in (sys.stdin, sys.stdout, sys.stderr):
+            reconf = getattr(stream, "reconfigure", None)
+            if reconf is None:
+                continue
+            try:
+                reconf(encoding="utf-8", errors="replace")
+            except Exception:
+                pass
+
+force_utf8()
+
 import argparse
 import inspect
 import json
@@ -39,15 +63,19 @@ from mux import (  # noqa: E402
     page_holds,
     pages_for_stages,
     probe_duration,
+    stage_scripts,
     stamp_caption,
     write_srt,
 )
 from paths import fonts_dir  # noqa: E402
-from modules import build_module, is_module  # noqa: E402
+from modules import build_minicourse, build_module, is_minicourse, is_module  # noqa: E402
+from catalog import migrate_out_layout, out_dir as lesson_out_dir  # noqa: E402
 from pack import parse_speeds, write_experiment_pack  # noqa: E402
 from quiz import export_lesson_quiz  # noqa: E402
+from cover import write_cover  # noqa: E402
 from cache import digest_obj, file_fingerprint, stamp_ok, write_mark  # noqa: E402
 from preview import render_caption_previews  # noqa: E402
+from pdfexport import export_preview_pdfs  # noqa: E402
 from slides import (  # noqa: E402
     lesson_stamp,
     list_slide_pngs,
@@ -87,11 +115,12 @@ def _publish_caption_preview(stamped: Path, still: Path, preview_dir: Path, page
 
 
 def _clip_workers() -> int:
-    raw = os.environ.get("VF_CLIP_JOBS", "3")
+    default = "1" if sys.platform.startswith("win") else "3"
+    raw = os.environ.get("VF_CLIP_JOBS", default)
     try:
-        n = int(str(raw).strip() or "3")
+        n = int(str(raw).strip() or default)
     except ValueError:
-        n = 3
+        n = int(default)
     cpu = os.cpu_count() or 2
     return max(1, min(n, 4, cpu))
 
@@ -115,6 +144,7 @@ def _clip_key(stills: list[Path], holds: list[float], audio: Path, progress_bar:
 
 
 def _run_one_clip(stills, holds, audio, clip, key, bar: bool) -> Path:
+    print(f"clip: start {clip.name} ({len(stills)} stills)", flush=True)
     make_beat_clip(stills, holds, audio, clip, progress_bar=bar)
     write_mark(clip, key)
     return clip
@@ -287,6 +317,52 @@ class StepClock:
         return dt
 
 
+def sweep_intermediates(out_dir: Path, *, videos: bool = False) -> None:
+    """Drop build leftovers once the deliverables are on disk.
+
+    Keep cells, slides, caption previews, PDFs, quizzes, SRT, covers, and
+    the raw speech. Remove beat videos, caption overlays, padded audio,
+    bar frames, and concat lists. Set VF_KEEP_INTERMEDIATES=1 to skip.
+    """
+    if os.environ.get("VF_KEEP_INTERMEDIATES", "").strip().lower() in {"1", "true", "yes", "on"}:
+        return
+    if not out_dir.is_dir():
+        return
+    removed = 0
+
+    def drop_tree(path: Path) -> None:
+        nonlocal removed
+        if not path.is_dir():
+            return
+        shutil.rmtree(path, ignore_errors=True)
+        removed += 1
+
+    if videos:
+        drop_tree(out_dir / "clips")
+        drop_tree(out_dir / "captions")
+        drop_tree(out_dir / "audio" / "padded")
+    drop_tree(out_dir / "preview" / "_bars")
+    for path in out_dir.rglob("*"):
+        if not path.is_file():
+            continue
+        name = path.name
+        if name.endswith(".concat.txt") or ".tmp." in name or name.endswith(".tmp.mp4") or name.endswith(".tmp.mp3"):
+            path.unlink(missing_ok=True)
+            removed += 1
+    if removed:
+        print(f"cleanup: removed {removed} intermediate item(s)")
+
+
+def _write_preview_pdfs(lid: str, out_root: Path, kinds: tuple[str, ...]) -> None:
+    try:
+        written = export_preview_pdfs(lid, out_root, kinds)
+    except Exception as exc:  # noqa: BLE001
+        print(f"pdf skip: {exc}")
+        return
+    if written:
+        print("pdf:", ", ".join(p.name for p in written))
+
+
 def collect_audio(lesson: dict, audio_root: Path, lang: str) -> list[Path] | None:
     parts = []
     for beat in lesson["beats"]:
@@ -295,6 +371,18 @@ def collect_audio(lesson: dict, audio_root: Path, lang: str) -> list[Path] | Non
             return None
         parts.append(p)
     return parts
+
+
+
+def write_cell_covers(lesson_path: Path, lesson: dict, cells: dict, cell_slides: dict, out_dir: Path) -> None:
+    """One 1920x1080 cover per cell: topic, slide language, speech language."""
+    cover_dir = out_dir / "covers"
+    for name, (audio_lang, _sub, _slide) in cells.items():
+        code, second = cell_slides.get(name, ("en", None))
+        slide_key = code if not second else f"{code}+{second}"
+        dest = cover_dir / f"{lesson['id']}_{name}.png"
+        write_cover(lesson_path, slide_key, audio_lang, dest)
+        print("cover:", dest)
 
 
 def build(
@@ -313,9 +401,10 @@ def build(
     experiment_pack: bool = False,
     pack_speeds: list[float] | None = None,
     pack_nocap: bool = False,
+    write_pdfs: bool = True,
 ) -> None:
     lesson = load_lesson(lesson_path)
-    out_dir = out_root / lesson.get("id", lesson_path.stem)
+    out_dir = lesson_out_dir(lesson.get("id", lesson_path.stem), root=out_root)
     _attach_log(out_dir, lesson.get("id", lesson_path.stem))
     errors = validate(lesson)
     fatal = [e for e in errors if not e.startswith("Beat seconds")]
@@ -331,7 +420,7 @@ def build(
     cells = selected_cells(lesson, wanted_cells)
     if not match_titles:
         shared = label_code(label_lang)
-        matched = {"en", "zhcn", "zhhk", "en-en", "en-zh", "zh-en", "zh-zh"}
+        matched = {"en", "zh", "hk", "zhcn", "zhhk", "en-en", "zh-zh"}
         cells = {
             name: (voice, cap, slide if name not in matched else shared)
             for name, (voice, cap, slide) in cells.items()
@@ -366,10 +455,12 @@ def build(
         folder = code if not second else f"{code}+{second}"
         slide_dir = out_dir / "slides" / folder
         stamp = lesson_stamp(lesson, theme, code, second, stage_cards)
+        fold_t0 = time.perf_counter()
         if stamp_matches(slide_dir, stamp):
             slide_sets[(code, second)] = list_slide_pngs(slide_dir)
             print("slides: reuse", slide_dir, f"({len(slide_sets[(code, second)])} png)")
             print(f"progress: slides {slide_i}/{len(codes)} {folder} reuse")
+            print(f"timing: slides {folder} {fmt_duration(time.perf_counter() - fold_t0)}")
             continue
         slide_sets[(code, second)] = render_lesson_slides(
             lesson,
@@ -391,6 +482,7 @@ def build(
         write_stamp(slide_dir, stamp)
         print("slides:", slide_dir, "bilingual" if second else "single")
         print(f"progress: slides {slide_i}/{len(codes)} {folder}")
+        print(f"timing: slides {folder} {fmt_duration(time.perf_counter() - fold_t0)}")
     slides = slide_sets[codes[0]]
     jobs_path = write_narration_pack(lesson, out_dir)
     print("narration jobs:", jobs_path)
@@ -416,10 +508,20 @@ def build(
             raise SystemExit(1)
         print(f"caption-preview: wrote {len(previews)} stamped frames; skipped TTS and mux")
         clock.lap("caption preview")
+        if write_pdfs:
+            _write_preview_pdfs(lesson["id"], out_root, ("captions",))
+        write_cell_covers(lesson_path, lesson, cells, cell_slides, out_dir)
+        sweep_intermediates(out_dir)
+        clock.lap("covers")
         clock.total()
         return
     if slides_only:
         print(f"slides-only: wrote {sum(len(v) for v in slide_sets.values())} PNG files; skipped TTS and mux")
+        if write_pdfs:
+            _write_preview_pdfs(lesson["id"], out_root, ("slides",))
+        write_cell_covers(lesson_path, lesson, cells, cell_slides, out_dir)
+        sweep_intermediates(out_dir)
+        clock.lap("covers")
         clock.total()
         return
     require_ffmpeg()
@@ -468,7 +570,8 @@ def build(
         if plan == [0]:
             pages = caption_pages(text)
             return pages, page_holds(dur, pages), plan, [0] * max(1, len(pages))
-        pages, page_durs, still_idx = pages_for_stages(text, dur, len(plan))
+        chunks = stage_scripts(beat, sub_lang, len(plan))
+        pages, page_durs, still_idx = pages_for_stages(text, dur, len(plan), chunks=chunks)
         return pages, page_durs, plan, still_idx
 
     def cues(lang: str) -> list[tuple[float, float, str]]:
@@ -580,6 +683,10 @@ def build(
         csv_path = write_experiment_pack(out_dir, lesson["id"], cells, pack_speeds)
         print("experiment-pack:", csv_path)
         clock.lap("experiment pack")
+    write_cell_covers(lesson_path, lesson, cells, cell_slides, out_dir)
+    if all(tracks.values()):
+        sweep_intermediates(out_dir, videos=True)
+    clock.lap("covers")
     clock.total()
 
 
@@ -599,7 +706,7 @@ def main() -> None:
     p.add_argument(
         "--cells",
         default="",
-        help="Matched names (en,zhcn,zhhk) or mixes voice-caption-slide (en-zh-hk).",
+        help="Primary language (en, zh, hk) or primary+second for bilingual slides (en+zh, zh+en).",
     )
     p.add_argument(
         "--match-titles",
@@ -647,6 +754,9 @@ def main() -> None:
         help="Write CUHK-VF-<ECON|ACC|GBA>.zip from existing out/ files and exit.",
     )
     args = p.parse_args()
+    moved = migrate_out_layout()
+    for row in moved:
+        print("out-migrate:", row)
     off = {"0", "false", "no", "off"}
     progress_bar = not args.no_progress_bar and os.environ.get("VF_PROGRESS_BAR", "1").lower() not in off
     stage_cards = not args.no_stage_cards and os.environ.get("VF_STAGE_CARDS", "1").lower() not in off
@@ -668,6 +778,25 @@ def main() -> None:
         for path in paths:
             print(f"\n######## {path.name} ########")
             try:
+                if is_minicourse(path):
+                    build_minicourse(
+                        path,
+                        args.out,
+                        label_lang=args.labels,
+                        tts=not args.no_tts,
+                        force_tts=args.force_tts,
+                        wanted_cells=parse_wanted(args.cells),
+                        match_titles=args.match_titles,
+                        theme_name=args.theme,
+                        progress_bar=progress_bar,
+                        stage_cards=stage_cards,
+                        experiment_pack=experiment_pack,
+                        pack_speeds=pack_speeds,
+                        pack_nocap=pack_nocap,
+                        slides_only=args.slides_only,
+                        caption_preview=args.caption_preview,
+                    )
+                    continue
                 if is_module(path):
                     build_module(
                         path,
@@ -713,6 +842,25 @@ def main() -> None:
         return
     if args.lesson is None:
         raise SystemExit("Pass a lesson YAML or use --all")
+    if is_minicourse(args.lesson):
+        build_minicourse(
+            args.lesson,
+            args.out,
+            label_lang=args.labels,
+            tts=not args.no_tts,
+            force_tts=args.force_tts,
+            wanted_cells=parse_wanted(args.cells),
+            match_titles=args.match_titles,
+            theme_name=args.theme,
+            progress_bar=progress_bar,
+            stage_cards=stage_cards,
+            experiment_pack=experiment_pack,
+            pack_speeds=pack_speeds,
+            pack_nocap=pack_nocap,
+            slides_only=args.slides_only,
+            caption_preview=args.caption_preview,
+        )
+        return
     if is_module(args.lesson):
         build_module(
             args.lesson,

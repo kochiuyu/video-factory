@@ -1,0 +1,162 @@
+id: STAT-M10-T13-MULTT
+course: STAT-M10
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Multiple Testing: Controlling Family-Wise Errors and False Discoveries'
+title_zh: 多重假设检验：控制全域错误与错误发现
+title_zh_hk: 多重假設檢驗：控制全域錯誤同錯誤發現
+objective_en: Explain why testing many outcomes increases false-positive risk, calculate Family-Wise Error Rate under independence, apply Bonferroni and Benjamini-Hochberg procedures, and align multiplicity control with confirmatory or exploratory objectives.
+objective_zh: 解释为何检验多个结果会增加假阳性风险，在独立假设下计算全域错误率，应用邦弗朗尼与本贾米尼-霍赫贝格程序，并使多重性控制与验证性或探索性目标一致。
+objective_zh_hk: 解釋點解檢驗多個結果會增加假陽性風險，喺獨立假設之下計算全域錯誤率，應用邦弗朗尼同本賈米尼-霍赫貝格程序，並令多重性控制同驗證性或者探索性目標一致。
+glossary:
+- en: Family-Wise Error Rate (FWER)
+  zh: 全域错误率（FWER，第一类错误簇）
+  zh_hk: 全域錯誤率（FWER，第一類錯誤簇）
+  lock: true
+- en: False Discovery Rate (FDR)
+  zh: 错误发现率（FDR）
+  zh_hk: 錯誤發現率（FDR）
+  lock: true
+- en: Bonferroni Correction
+  zh: 邦弗朗尼校正准则
+  zh_hk: 邦弗朗尼校正準則
+  lock: true
+- en: Benjamini-Hochberg Procedure (BH)
+  zh: 本贾米尼-霍赫贝格法（BH 逐步法）
+  zh_hk: 本賈米尼-霍赫貝格法（BH 逐步法）
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: If 40 valid independent null tests each use alpha = 0.05, what is the probability of at least one false rejection?
+  question_zh: 如果 40 个有效且相互独立的原假设检验都使用 alpha = 0.05，至少出现一次错误拒绝的概率是多少？
+  question_zh_hk: 如果 40 個有效而且互相獨立嘅原假設檢驗都使用 alpha = 0.05，至少出現一次錯誤拒絕嘅概率係幾多？
+  options_en:
+  - 'A: Approximately 87.15%'
+  - 'B: Exactly 5.00%'
+  - 'C: Exactly 0.125%'
+  - 'D: Exactly 100%'
+  options_zh:
+  - A：约 87.15%
+  - B：正好 5.00%
+  - C：正好 0.125%
+  - D：正好 100%
+  options_zh_hk:
+  - A：約 87.15%
+  - B：正好 5.00%
+  - C：正好 0.125%
+  - D：正好 100%
+  answer: A
+  explanation_en: Under independence, FWER = 1 - (1 - 0.05)^40, which is approximately 0.8715. This calculation changes when tests are dependent.
+  explanation_zh: 在独立条件下，FWER = 1 - (1 - 0.05)^40，约为 0.8715。检验存在依赖时，该计算会改变。
+  explanation_zh_hk: 喺獨立條件之下，FWER = 1 - (1 - 0.05)^40，約為 0.8715。檢驗存在依賴嗰陣，呢個計算會改變。
+- id: Q2
+  type: multiple_choice
+  question_en: What is the main difference between Bonferroni and Benjamini-Hochberg?
+  question_zh: 邦弗朗尼与本贾米尼-霍赫贝格程序的主要区别是什么？
+  question_zh_hk: 邦弗朗尼同本賈米尼-霍赫貝格程序嘅主要分別係乜嘢？
+  options_en:
+  - 'A: Bonferroni controls FWER, while BH controls FDR under its stated conditions'
+  - 'B: Bonferroni is only for binary metrics, while BH is only for continuous metrics'
+  - 'C: BH changes every p-value to zero'
+  - 'D: Bonferroni requires a six-month experiment'
+  options_zh:
+  - A：邦弗朗尼控制 FWER，而 BH 在其适用条件下控制 FDR
+  - B：邦弗朗尼只用于二元指标，而 BH 只用于连续指标
+  - C：BH 会把每个 p 值改为零
+  - D：邦弗朗尼要求实验运行六个月
+  options_zh_hk:
+  - A：邦弗朗尼控制 FWER，而 BH 喺佢嘅適用條件之下控制 FDR
+  - B：邦弗朗尼只用於二元指標，而 BH 只用於連續指標
+  - C：BH 會將每個 p 值改為零
+  - D：邦弗朗尼要求實驗運行六個月
+  answer: A
+  explanation_en: Bonferroni limits the probability of one or more false rejections across the family. BH ranks p-values and controls the expected false-discovery proportion among rejections under appropriate assumptions.
+  explanation_zh: 邦弗朗尼限制整个检验族中出现一次或多次错误拒绝的概率。BH 对 p 值排序，并在适当假设下控制被拒绝假设中错误发现比例的期望。
+  explanation_zh_hk: 邦弗朗尼限制成個檢驗族入面出現一次或者多次錯誤拒絕嘅概率。BH 對 p 值排序，並喺適當假設之下控制被拒絕假設中錯誤發現比例嘅期望。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Dashboard Discovery Puzzle
+  kicker_zh: 看板发现难题
+  kicker_zh_hk: 看板發現難題
+  title_en: If Three of Forty Metrics Turn Green, Is the Experiment a Success?
+  title_zh: 四十个指标中三个变绿，实验就成功了吗？
+  title_zh_hk: 四十個指標入面三個變綠，實驗就成功咗嗎？
+  en: Suppose a primary outcome shows little evidence of change, but a search across forty secondary metrics produces several p-values below 0.05. Some may reflect real effects, while others may be chance findings created by the large search space. The statistical task is to define the family of claims, choose an error criterion, and distinguish confirmatory decisions from exploratory leads.
+  zh: 假设主要结果几乎没有变化证据，但搜索四十个次级指标后出现了几个低于 0.05 的 p 值。其中一些可能反映真实效应，另一些可能只是由较大搜索空间产生的偶然发现。统计任务是界定声明族、选择错误控制标准，并区分验证性决策与探索性线索。
+  zh_hk: 假設主要結果幾乎冇變化證據，但搜尋四十個次級指標之後出現咗幾個低過 0.05 嘅 p 值。其中一啲可能反映真實效應，另一啲可能只係由較大搜尋空間產生嘅偶然發現。統計任務係界定聲明族、選擇錯誤控制標準，並區分驗證性決策同探索性線索。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: 'Independent tests: FWER = 1 - (1 - alpha)^K; Bonferroni threshold = alpha / K'
+  formula_zh: 独立检验：FWER = 1 - (1 - alpha)^K；邦弗朗尼阈值 = alpha / K
+  formula_zh_hk: 獨立檢驗：FWER = 1 - (1 - alpha)^K；邦弗朗尼門檻 = alpha / K
+  formula_tex: \mathrm{FWER}=1-(1-\alpha)^K,\quad p_j\leq\alpha/K,\quad p_{(i)}\leq iq/K
+  s1_en: Family-Wise Error Rate is the probability of at least one false rejection in a defined family. The compound formula shown assumes valid independent tests; Bonferroni controls FWER at no more than alpha without requiring independence.
+  s1_zh: 全域错误率是指在已定义检验族中至少出现一次错误拒绝的概率。所示复合公式假设检验有效且相互独立；邦弗朗尼无需独立性即可把 FWER 控制在不超过 alpha。
+  s1_zh_hk: 全域錯誤率係指喺已定義檢驗族入面至少出現一次錯誤拒絕嘅概率。所示複合公式假設檢驗有效而且互相獨立；邦弗朗尼唔需要獨立性都可以將 FWER 控制喺不超過 alpha。
+  s2_en: False Discovery Rate is the expected false-discovery proportion among rejections, conventionally defined as E[V divided by max(R,1)]. The BH procedure controls FDR under independence and certain positive-dependence conditions; other dependence structures may require different procedures.
+  s2_zh: 错误发现率是被拒绝假设中错误发现比例的期望，通常定义为 E[V / max(R,1)]。BH 程序在独立及某些正依赖条件下控制 FDR；其他依赖结构可能需要不同程序。
+  s2_zh_hk: 錯誤發現率係被拒絕假設中錯誤發現比例嘅期望，通常定義為 E[V / max(R,1)]。BH 程序喺獨立同某啲正依賴條件之下控制 FDR；其他依賴結構可能需要唔同程序。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Bonferroni for Strong Error Control
+  left_zh: 邦弗朗尼的严格错误控制
+  left_zh_hk: 邦弗朗尼嘅嚴格錯誤控制
+  right_en: BH for Discovery Sets
+  right_zh: BH 的发现集合控制
+  right_zh_hk: BH 嘅發現集合控制
+  s1_en: Bonferroni tests each member of a K-test family at alpha divided by K. It is simple and valid under arbitrary dependence, but can have low power when the family is large or tests are strongly correlated.
+  s1_zh: 邦弗朗尼用 alpha 除以 K 作为检验族中每项检验的阈值。它简单且在任意依赖下有效，但当检验族很大或检验高度相关时，功效可能较低。
+  s1_zh_hk: 邦弗朗尼用 alpha 除以 K 作為檢驗族入面每項檢驗嘅門檻。佢簡單而且喺任意依賴之下有效，但當檢驗族好大或者檢驗高度相關嗰陣，功效可能較低。
+  s2_en: BH sorts p-values from smallest to largest, finds the largest rank i satisfying p at rank i less than or equal to i times q divided by K, and rejects all hypotheses through that rank. If no rank qualifies, none are rejected.
+  s2_zh: BH 把 p 值从小到大排序，找出满足第 i 个 p 值不大于 i × q / K 的最大序号 i，并拒绝从第一项到该序号的所有假设。如果没有序号满足条件，则不拒绝任何假设。
+  s2_zh_hk: BH 將 p 值由細到大排序，搵出滿足第 i 個 p 值不大於 i × q / K 嘅最大序號 i，並拒絕由第一項到該序號嘅所有假設。如果冇序號滿足條件，就唔拒絕任何假設。
+  s3_en: Define the hypothesis family before inspecting results. Primary outcomes, guardrails, related secondary metrics, repeated looks, variants, and subgroup searches can all create multiplicity, but they need not always belong to one identical family.
+  s3_zh: 应在查看结果前界定假设族。主要结果、护栏、相关次级指标、重复查看、多个版本及分群搜索都可能产生多重性，但未必都属于同一个完全相同的检验族。
+  s3_zh_hk: 要喺查看結果之前界定假設族。主要結果、護欄、相關次級指標、重複查看、多個版本同分群搜尋都可能產生多重性，但未必全部屬於同一個完全相同嘅檢驗族。
+- id: example
+  visual: example
+  seconds: 36
+  setup_en: 'Teaching inputs: K = 40, alpha = 0.05, q = 0.05; smallest p-values = 0.02, 0.03, 0.04'
+  setup_zh: 教学输入：K = 40，alpha = 0.05，q = 0.05；最小 p 值为 0.02、0.03、0.04
+  setup_zh_hk: 教學輸入：K = 40，alpha = 0.05，q = 0.05；最細 p 值係 0.02、0.03、0.04
+  result_en: Independent-null FWER ≈ 87.15%; Bonferroni and BH make no rejections in this example
+  result_zh: 独立原假设下 FWER 约 87.15%；本例中邦弗朗尼与 BH 均不拒绝任何假设
+  result_zh_hk: 獨立原假設之下 FWER 約 87.15%；本例中邦弗朗尼同 BH 都唔拒絕任何假設
+  s1_en: Under 40 independent true nulls, one minus 0.95 to the fortieth power is approximately 0.8715. This is a probability under the stated model, not proof that any particular observed low p-value is false.
+  s1_zh: 在 40 个相互独立且全部为真的原假设下，1 减 0.95 的 40 次方约为 0.8715。这是给定模型下的概率，并不能证明某个具体低 p 值一定是假发现。
+  s1_zh_hk: 喺 40 個互相獨立而且全部為真嘅原假設之下，1 減 0.95 嘅 40 次方約係 0.8715。呢個係指定模型之下嘅概率，並唔可以證明某個具體低 p 值一定係假發現。
+  s2_en: The Bonferroni threshold is 0.05 divided by 40, or 0.00125, so none of 0.02, 0.03, and 0.04 qualify. Bonferroni therefore makes no rejection from these values.
+  s2_zh: 邦弗朗尼阈值为 0.05 除以 40，即 0.00125，因此 0.02、0.03 与 0.04 都未达标。邦弗朗尼不会根据这些数值拒绝任何假设。
+  s2_zh_hk: 邦弗朗尼門檻係 0.05 除以 40，即係 0.00125，所以 0.02、0.03 同 0.04 都未達標。邦弗朗尼唔會根據呢啲數值拒絕任何假設。
+  s3_en: For BH at q = 0.05, the first three thresholds are 0.00125, 0.00250, and 0.00375. None of the three p-values qualifies, so BH also makes no rejection. This means insufficient multiplicity-adjusted evidence, not certification that every metric is pure noise.
+  s3_zh: 对 q = 0.05 的 BH，前三个阈值为 0.00125、0.00250 与 0.00375。三个 p 值均未达标，因此 BH 也不拒绝任何假设。这表示经多重性调整后的证据不足，并不是认证每个指标都是纯噪声。
+  s3_zh_hk: 對 q = 0.05 嘅 BH，頭三個門檻係 0.00125、0.00250 同 0.00375。三個 p 值都未達標，所以 BH 亦唔拒絕任何假設。呢個表示經多重性調整之後嘅證據不足，並唔係認證每個指標都係純雜音。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Which Error Criterion Matches the Decision?
+  q1_zh: 哪种错误控制标准符合决策？
+  q1_zh_hk: 邊種錯誤控制標準符合決策？
+  q2_en: Decision Rule
+  q2_zh: 决策规则
+  q2_zh_hk: 決策規則
+  s1_en: Use strong FWER control when even one false claim across the family is costly. Use an FDR approach when managing a set of discoveries and some controlled false-discovery proportion is acceptable under the application.
+  s1_zh: 当检验族中哪怕一个错误声明的代价都很高时，应采用严格 FWER 控制。当管理一组发现，且应用情境能够接受受控的错误发现比例时，可采用 FDR 方法。
+  s1_zh_hk: 當檢驗族入面邊怕一個錯誤聲明嘅代價都好高嗰陣，要採用嚴格 FWER 控制。當管理一組發現，而且應用情境可以接受受控嘅錯誤發現比例嗰陣，可以採用 FDR 方法。
+  s2_en: Pre-specify primary outcomes, metric families, variants, subgroup analyses, interim looks, alpha allocation, and the method for confirmatory claims. Label unplanned searches as exploratory and validate promising findings independently.
+  s2_zh: 应预先指定主要结果、指标族、版本、分群分析、中期查看、alpha 分配与验证性声明方法。未计划搜索应标记为探索性，并对有潜力的发现进行独立验证。
+  s2_zh_hk: 要預先指定主要結果、指標族、版本、分群分析、中期查看、alpha 分配同驗證性聲明方法。未計劃搜尋要標記為探索性，並對有潛力嘅發現進行獨立驗證。
+  s3_en: A non-rejection after correction is not proof of no effect. Report adjusted results and uncertainty, preserve the distinction between planned and exploratory analyses, and avoid declaring success from isolated unadjusted p-values.
+  s3_zh: 校正后不拒绝并不能证明没有效应。应报告调整后结果与不确定性，保持计划分析与探索分析的区别，并避免根据孤立的未校正 p 值宣布成功。
+  s3_zh_hk: 校正之後唔拒絕並唔可以證明冇效應。要報告調整後結果同不確定性，保持計劃分析同探索分析嘅分別，並避免根據孤立嘅未校正 p 值宣布成功。

@@ -1,0 +1,165 @@
+id: STAT-M08-T08-MULTL
+course: STAT-M08
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Multi-Predictor Logit: Controlling Confounders in Choice'
+title_zh: 多元逻辑回归：在离散抉择中控制混淆变量
+title_zh_hk: 多元邏輯回歸：喺離散抉擇中控制混淆變量
+objective_en: Formulate a multiple logistic regression, interpret adjusted odds ratios conditional on included predictors, and explain how omitted-variable confounding can change coefficient estimates without claiming that statistical adjustment alone proves causality.
+objective_zh: 构建多元逻辑回归，在已纳入自变量条件下解读调整后几率比，并解释遗漏变量混淆如何改变系数估计，同时避免把统计调整视为因果证明。
+objective_zh_hk: 構建多元邏輯回歸，喺已納入自變量條件之下解讀調整後勝算比，並解釋遺漏變量混淆點樣改變系數估計，同時避免將統計調整當作因果證明。
+glossary:
+- en: Multiple Logistic Regression
+  zh: 多元逻辑回归
+  zh_hk: 多元邏輯回歸
+  lock: true
+- en: Adjusted Odds Ratio
+  zh: 调整后几率比
+  zh_hk: 調整後勝算比
+  lock: true
+- en: Confounding in Choice
+  zh: 选择中的混淆偏误
+  zh_hk: 選擇中嘅混淆偏誤
+  lock: true
+- en: Partial Logit Slope
+  zh: 偏对数几率斜率
+  zh_hk: 偏對數勝算斜率
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: In a multiple logistic regression predicting corporate catering contract wins, the estimated slope for bid discount percentage is beta_1 = +0.05, holding company size and district fixed. What does exp(0.05) = 1.051 represent?
+  question_zh: 在预测企业团餐竞标中标的多元逻辑回归中，控制公司规模与区域后，折扣力度的偏斜率为 beta_1 = +0.05。exp(0.05) = 1.051 代表什么？
+  question_zh_hk: 喺預測企業團餐競標中標嘅多元邏輯回歸入面，控制公司規模同分區之後，折扣幅度嘅偏斜率係 beta_1 = +0.05。exp(0.05) = 1.051 代表啲咩？
+  options_en:
+  - 'A: Each 1% additional discount increases the probability of winning by 51 percentage points'
+  - 'B: Holding client headcount and district constant, each 1% additional discount increases the odds of winning by approximately 5.1%'
+  - 'C: Corporate clients demand an average discount of 5.1% before signing'
+  - 'D: The baseline win rate across all corporate proposals equals exactly 5.1%'
+  options_zh:
+  - 'A: 每多让利 1% 的折扣，中标概率就会直接飙升 51 个百分点'
+  - 'B: 在锁定客户员工规模与区域的前提下，折扣每多给 1 个百分点，中标的几率增加约 5.1%'
+  - 'C: 企业客户在签约前普遍要求至少 5.1% 的基础折扣'
+  - 'D: 所有竞标方案的全网平均中标概率严格等于 5.1%'
+  options_zh_hk:
+  - 'A: 每讓利多 1% 折扣，中標概率就會直接暴升 51 個百分點'
+  - 'B: 喺鎖定客戶員工規模同分區嘅前提下，折扣每畀多 1 個百分點，中標嘅勝算增加約 5.1%'
+  - 'C: 企業客戶喺簽約前普遍要求至少 5.1% 嘅基礎折扣'
+  - 'D: 所有競標方案嘅全網平均中標概率剛好等於 5.1%'
+  answer: B
+  explanation_en: exp(0.05) is approximately 1.0513. Holding client headcount and district fixed in the specified model, a one-percentage-point increase in discount is associated with about 5.13 percent higher fitted odds, not a 5.13-point probability increase.
+  explanation_zh: exp(0.05) 约为 1.0513。在既定模型中保持客户规模和区域不变时，折扣增加一个百分点与拟合中标几率约高 5.13% 相关，而不是概率增加 5.13 个百分点。
+  explanation_zh_hk: exp(0.05) 約為 1.0513。喺既定模型入面保持客戶規模同區域不變時，折扣增加一個百分點同擬合中標勝算約高 5.13% 相關，而唔係概率增加 5.13 個百分點。
+- id: Q2
+  type: multiple_choice
+  question_en: Why can adding client headcount change the sign of the discount coefficient in a multiple logit?
+  question_zh: 为什么在多元 Logit 中加入客户员工规模可能改变折扣系数的符号？
+  question_zh_hk: 點解喺多元 Logit 入面加入客戶員工規模可能改變折扣系數符號？
+  options_en:
+  - 'A: Client headcount was a confounding variable: Metro gave large discounts primarily to giant multinationals that run aggressive, multi-competitor tender bake-offs'
+  - 'B: Headcount mechanically inflated the sample size to infinity'
+  - 'C: OLS residuals became homoskedastic after adding headcount'
+  - 'D: Maximum likelihood estimators are biased whenever models contain fewer than 5 variables'
+  options_zh:
+  - 'A: 客户规模是一个关键的混淆变量：Metro 往往对跨国大企业给出大额折扣，但这类大客户竞标对手众多、竞争极烈'
+  - 'B: 员工规模变量在机械计算上把样本容量无限放大'
+  - 'C: 加入员工规模后，模型的 OLS 残差神奇地恢复了同方差性'
+  - 'D: 只要变量少于 5 个，极大似然估计量在理论上必然有偏'
+  options_zh_hk:
+  - 'A: 客戶規模係一個關鍵嘅混淆變量：Metro 往往對跨國大公司畀好大折扣，但呢類巨頭招標對手極多、競爭超烈'
+  - 'B: 員工人數變量喺機械計算上將樣本容量無限放大'
+  - 'C: 加入員工人數之後，模型嘅 OLS 殘差神奇噉恢復咗同方差性'
+  - 'D: 只要變量少過 5 個，極大似然估計量喺理論上必然有偏差'
+  answer: A
+  explanation_en: If headcount is associated with both discount size and contract-winning conditions, omitting it can confound the discount association. Adding headcount changes the conditional comparison and may reverse the coefficient. The reversal alone does not prove that the adjusted coefficient is causal.
+  explanation_zh: 如果员工规模同时与折扣大小和中标条件相关，遗漏它会混淆折扣关联。加入员工规模会改变条件比较，并可能使系数反转；但反转本身不能证明调整后系数具有因果意义。
+  explanation_zh_hk: 如果員工規模同時同折扣大小同中標條件相關，遺漏佢會混淆折扣關聯。加入員工規模會改變條件比較，並可能令系數反轉；但反轉本身唔能夠證明調整後系數有因果意義。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Corporate Bidding Puzzle
+  kicker_zh: 企业大单竞标谜题
+  kicker_zh_hk: 企業大單競標謎題
+  title_en: Why Did Big Price Discounts Seem to Lose Bids?
+  title_zh: 为何大幅让利的折扣方案反而看似屡战屡败？
+  title_zh_hk: 點解畀大折扣嘅提案反而睇落屢戰屢敗？
+  en: In a set of corporate catering proposals, larger discounts appear associated with lower win odds. But large discounts may be concentrated among large, highly competitive accounts. A multiple logit can compare discount levels while holding observed account characteristics fixed. What does that adjustment accomplish, and what can it not establish?
+  zh: 在一组企业团餐提案中，较大折扣看似与较低中标几率相关。但大折扣可能集中在规模大、竞争激烈的客户。多元 Logit 可以在保持已观测客户特征不变时比较折扣水平。这一调整实现了什么？又不能证明什么？
+  zh_hk: 喺一組企業團餐提案入面，較大折扣睇落同較低中標勝算相關。但大折扣可能集中喺規模大、競爭激烈嘅客戶。多元 Logit 可以喺保持已觀測客戶特徵不變時比較折扣水平。呢個調整做到啲咩？又唔可以證明啲咩？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: ln(p / (1 - p)) = beta_0 + beta_1 * Discount + beta_2 * Staff + delta * Central
+  formula_zh: 多元逻辑模型：ln(p / (1 - p)) = beta_0 + beta_1 * 折扣 + beta_2 * 规模 + delta * 中环
+  formula_zh_hk: 多元邏輯模型：ln(p / (1 - p)) = beta_0 + beta_1 * 折扣 + beta_2 * 規模 + delta * 中環
+  formula_tex: \ln\left(\frac{p_i}{1 - p_i}\right) = \beta_0 + \beta_1 \text{Discount}_i + \beta_2 \text{Staff}_i + \delta_1 D_{\text{Central}, i}
+  s1_en: Multiple logistic regression places several predictors in the same linear index, including continuous variables and appropriately coded categorical indicators. Each coefficient describes a conditional log-odds comparison within the specified model.
+  s1_zh: 多元逻辑回归把多个自变量放入同一个线性指数，包括连续变量和适当编码的分类指标。每个系数描述既定模型中的条件对数几率比较。
+  s1_zh_hk: 多元邏輯回歸將多個自變量放入同一個線性指數，包括連續變量同適當編碼嘅分類指標。每個系數描述既定模型入面嘅條件對數勝算比較。
+  s2_en: Exponentiating beta_j yields an adjusted odds ratio for a one-unit change in X_j, holding the other included predictors fixed. The word adjusted refers only to variables actually included and correctly specified; it does not guarantee removal of all confounding.
+  s2_zh: 对 beta_j 取指数得到 X_j 增加一个单位时的调整后几率比，前提是其他已纳入自变量保持不变。“调整后”只涉及实际纳入且设定正确的变量，并不保证消除所有混淆。
+  s2_zh_hk: 對 beta_j 取指數得到 X_j 增加一個單位時嘅調整後勝算比，前提係其他已納入自變量保持不變。「調整後」只涉及實際納入而且設定正確嘅變量，唔保證消除所有混淆。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Unmasking Confounding Channels
+  left_zh: 揭开混淆通道的障眼法
+  right_en: Adjusted Odds Ratios in Action
+  right_zh: 实战中的调整后几率比
+  s1_en: A confounder is associated with both the predictor of interest and the outcome. If larger accounts receive larger discounts and also face lower win rates for other reasons, omitting account size can distort the estimated discount coefficient.
+  s1_zh: 混淆变量同时与关注的自变量和结果相关。如果较大客户获得更大折扣，同时又因其他原因具有更低中标率，遗漏客户规模便可能扭曲折扣系数估计。
+  s1_zh_hk: 混淆變量同時同關注嘅自變量同結果相關。如果較大客戶獲得更大折扣，同時又因其他原因有較低中標率，遺漏客戶規模就可能扭曲折扣系數估計。
+  s2_en: Adding a relevant observed confounder changes the comparison from across all proposals to proposals with the same modeled covariate values. A coefficient reversal can reveal sensitivity to specification, but does not show which estimate is causal by itself.
+  s2_zh: 加入相关的已观测混淆变量，会把比较从所有提案之间的比较改为相同模型协变量取值下的比较。系数符号反转说明结果对模型设定敏感，但本身不能证明哪一个估计具有因果意义。
+  s2_zh_hk: 加入相關嘅已觀測混淆變量，會將比較由所有提案之間嘅比較改成相同模型協變量取值下嘅比較。系數符號反轉說明結果對模型設定敏感，但本身唔能夠證明邊一個估計有因果意義。
+  s3_en: Interpretation also depends on scale, coding, functional form, interactions, and overlap in the data. Diagnostics and subject-matter reasoning are needed before using an adjusted odds ratio for pricing decisions.
+  s3_zh: 解读还取决于变量尺度、编码、函数形式、交互项以及数据中的重叠范围。在把调整后几率比用于定价决策前，还需进行诊断并结合业务知识。
+  s3_zh_hk: 解讀亦取決於變量尺度、編碼、函數形式、交互項同數據重疊範圍。將調整後勝算比用於定價決定之前，仲需要做診斷同結合業務知識。
+  left_zh_hk: 揭開混淆通道嘅障眼法
+  right_zh_hk: 實戰中嘅調整後勝算比
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Expose Confounded Bivariate Logit
+  step1_zh: 暴露受混淆的一元模型
+  step2_en: Fit Multi-Predictor Logit
+  step2_zh: 拟合多元逻辑全模型
+  step3_en: Interpret Adjusted Odds Ratios
+  step3_zh: 解读调整后净几率比
+  s1_en: 'Step one: In the supplied bivariate model, the discount coefficient is -0.02 and its odds ratio is exp(-0.02), approximately 0.9802. This is an unadjusted model association; the reported p-value of 0.08 does not establish a discount effect.'
+  s1_zh: 第一步：在给定的一元模型中，折扣系数为 -0.02，几率比 exp(-0.02) 约为 0.9802。这是未调整的模型关联；报告的 p值 0.08 并不能确立折扣效应。
+  s1_zh_hk: 第一步：喺畀定嘅一元模型入面，折扣系數係 -0.02，勝算比 exp(-0.02) 約為 0.9802。呢個係未調整模型關聯；報告嘅 p值 0.08 唔能夠確立折扣效應。
+  s2_en: 'Step two: The supplied multiple logit is log-odds = -1.20 + 0.05 times Discount - 0.002 times Staff + 0.60 times Central. No standard errors are supplied, so coefficient significance is not asserted here.'
+  s2_zh: 第二步：给定多元 Logit 为：对数几率 = -1.20 + 0.05 乘以折扣 - 0.002 乘以规模 + 0.60 乘以中环。由于未提供标准误，这里不声称系数具有统计显著性。
+  s2_zh_hk: 第二步：畀定多元 Logit 係：對數勝算 = -1.20 + 0.05 乘以折扣 - 0.002 乘以規模 + 0.60 乘以中環。由於冇提供標準誤，呢度唔聲稱系數有統計顯著性。
+  s3_en: 'Step three: exp(0.05) is approximately 1.0513. Holding modeled staff size and district fixed, a one-percentage-point increase in discount is associated with about 5.13 percent higher fitted win odds. This is not a constant probability increase or automatic causal pricing effect.'
+  s3_zh: 第三步：exp(0.05) 约为 1.0513。在模型中的客户规模和区域保持不变时，折扣增加一个百分点与拟合中标几率约高 5.13% 相关。这不是固定的概率增幅，也不是自动成立的因果定价效应。
+  s3_zh_hk: 第三步：exp(0.05) 約為 1.0513。喺模型入面客戶規模同區域保持不變時，折扣增加一個百分點同擬合中標勝算約高 5.13% 相關。呢個唔係固定概率增幅，亦唔係自動成立嘅因果定價效應。
+  step1_zh_hk: 暴露受混淆嘅一元模型
+  step2_zh_hk: 擬合多元邏輯全模型
+  step3_zh_hk: 解讀調整後淨勝算比
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Can Omitted Variables Bias Choice Models?
+  q1_zh: 遗漏变量偏差是否同样会扭曲离散选择？
+  q2_en: 'Audit Rule: Never Trust Bivariate Pricing Slopes'
+  q2_zh: 审计准则：评估定价格局，严禁单变量管窥
+  s1_en: Multiple logit provides conditional comparisons across several modeled predictors. It can reduce confounding from well-measured included variables, but it does not guarantee that all relevant differences have been controlled.
+  s1_zh: 多元 Logit 能在多个模型自变量之间提供条件比较。它可以减少来自已纳入且测量良好变量的混淆，但不能保证所有相关差异都已得到控制。
+  s1_zh_hk: 多元 Logit 可以喺多個模型自變量之間提供條件比較。佢可以減少來自已納入而且量度良好變量嘅混淆，但唔保證所有相關差異都已經控制。
+  s2_en: 'Decision rule: choose controls using a defensible causal or business rationale, verify coding and functional form, inspect coefficient stability and overlap, report uncertainty, and avoid treating an adjusted odds ratio as causal without an appropriate design.'
+  s2_zh: 决策规则：根据可辩护的因果或业务逻辑选择控制变量，核对编码与函数形式，检查系数稳定性和数据重叠，报告不确定性，并避免在缺乏适当设计时把调整后几率比视为因果效应。
+  s2_zh_hk: 決策規則：根據可辯護嘅因果或者業務邏輯選擇控制變量，核對編碼同函數形式，檢查系數穩定性同數據重疊，報告不確定性，並避免喺缺乏適當設計時將調整後勝算比當成因果效應。
+  s3_en: In the supplied example, the discount coefficient changes from -0.02 in the bivariate model to +0.05 after adding staff size and district. The reversal is evidence of specification sensitivity, not proof that the adjusted estimate is the true causal effect.
+  s3_zh: 在给定示例中，加入客户规模和区域后，折扣系数从一元模型的 -0.02 变为 +0.05。符号反转说明估计对模型设定敏感，并不能证明调整后估计就是真实因果效应。
+  s3_zh_hk: 喺畀定例子入面，加入客戶規模同區域之後，折扣系數由一元模型嘅 -0.02 變成 +0.05。符號反轉說明估計對模型設定敏感，唔能夠證明調整後估計就係真實因果效應。
+  q1_zh_hk: 遺漏變量偏差係咪同樣會扭曲離散選擇？
+  q2_zh_hk: 審計準則：評估定價策略，切忌單變量摸象

@@ -1,0 +1,121 @@
+id: AUD-M01-IND
+course: auditing
+course_en: Introductory Auditing
+course_zh: 审计入门
+course_zh_hk: 審計入門
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 64
+title_en: Auditor Independence
+title_zh: 审计独立性
+title_zh_hk: 審計獨立性
+objective_en: 'Open the audit-process unit: judgment has to be separate from a financial or personal
+  interest in the client.'
+objective_zh: 打开审计过程单元：判断必须与对客户的金钱或私人利益分开。
+objective_zh_hk: 打開審計過程單元：判斷必須與對客戶的金錢或私人利益分開。
+glossary:
+- en: independence
+  zh: 独立性
+  zh_hk: 獨立性
+  lock: true
+- en: self-interest threat
+  zh: 自身利益威胁
+  zh_hk: 自身利益威脅
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Independence requires freedom from what?
+  zh: 独立性要求摆脱什么？
+  zh_hk: 獨立性要求擺脫什麼？
+  answer_en: An interest that could bend the audit opinion.
+  answer_zh: 可能扭曲审计意见的利益。
+  answer_zh_hk: 可能扭曲審計意見的利益。
+- id: Q2
+  type: transfer
+  en: The audit partner’s brother is the client’s finance director. What is the threat?
+  zh: 审计合伙人的兄弟是客户的财务总监。这是什么威胁？
+  zh_hk: 審計合夥人的兄弟是客戶的財務總監。這是什麼威脅？
+  answer_en: A familiarity or self-interest threat. The partner should not lead that audit.
+  answer_zh: 密切关系或自身利益威胁。该合伙人不应主导这项审计。
+  answer_zh_hk: 密切關係或自身利益威脅。該合夥人不應主導這項審計。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Auditor Independence
+  title_zh: 审计独立性
+  title_zh_hk: 審計獨立性
+  en: This sitting starts with the person who will sign. If the auditor needs the client’s fee or
+    friendship too much, the file is already tilted. Independence is the first control — on the auditor.
+  zh: 这一单元从签字的人讲起。若审计师太需要客户的费或人情，档案一开始就偏了。独立是加在审计师自己身上的第一道控制。
+  zh_hk: 這一單元從簽字的人講起。若審計師太需要客戶的費或人情，檔案一開始就偏了。獨立是加在審計師自己身上的第一道控制。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Free to disagree
+  title_zh: 能够不同意
+  title_zh_hk: 能夠不同意
+  formula: No interest that bends the opinion
+  formula_en: No interest that bends the opinion
+  formula_zh: 没有会扭曲意见的利害
+  formula_zh_hk: 沒有會扭曲意見的利害
+  gloss_en: Independence in mind and in appearance.
+  gloss_zh: 实质上独立，也要形式上独立。
+  gloss_zh_hk: 實質上獨立，也要形式上獨立。
+  en: Independence means the auditor’s judgment is not bent by a financial, family, or business interest
+    in the client. Others must also be able to see that freedom.
+  zh: 独立性是指审计判断不被对客户的金钱、亲属或业务利益所扭曲。旁人也要能看出这种自由。
+  zh_hk: 獨立性是指審計判斷不被對客戶的金錢、親屬或業務利益所扭曲。旁人也要能看出這種自由。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Shares in the client
+  title_zh: 持有客户股票
+  title_zh_hk: 持有客戶股票
+  left_en: Staff own client shares
+  left_zh: 项目人员持有客户股票
+  left_zh_hk: 項目人員持有客戶股票
+  right_en: Opinion can look bought
+  right_zh: 意见会看起来被买下
+  right_zh_hk: 意見會看起來被買下
+  en: A team member holds shares in the company being audited. A clean opinion would protect that
+    holding. Even if the work is careful, outsiders cannot see a free mind. The person should leave
+    the team.
+  zh: 一名组员持有被审计公司的股票。清洁意见会保护这份持股。即使工作认真，外人也无法看见一颗自由的头脑。该成员应退出项目组。
+  zh_hk: 一名組員持有被審計公司的股票。清潔意見會保護這份持股。即使工作認真，外人也無法看見一顆自由的頭腦。該成員應退出項目組。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Name the interest
+  title_zh: 说出那份利益
+  title_zh_hk: 說出那份利益
+  q1_en: What would you lose if you challenged this number?
+  q1_zh: 若你质疑这个数字，你会失去什么？
+  q1_zh_hk: 若你質疑這個數字，你會失去什麼？
+  q2_en: Would an outsider still trust the opinion?
+  q2_zh: 外人还会信任这份意见吗？
+  q2_zh_hk: 外人還會信任這份意見嗎？
+  en: 'Name the interest that would make a finding expensive to report. If you cannot name it, you
+    have not tested independence. Next we walk inside the firm: one person must not both create and
+    hide an error.'
+  zh: 说出那种会让“如实报告”变得很贵的利益。说不出来，就还没测过独立性。下一讲走进企业内部：同一人不能既制造错误，又把它藏起来。
+  zh_hk: 說出那種會讓「如實報告」變得很貴的利益。說不出來，就還沒測過獨立性。下一講走進企業內部：同一人不能既製造錯誤，又把它藏起來。

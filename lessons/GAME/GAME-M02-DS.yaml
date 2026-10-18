@@ -1,0 +1,132 @@
+id: GAME-M02-DS
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: Cross out what dies
+title_zh: 划掉会死掉的行
+title_zh_hk: 劃走會死人嘅行
+objective_en: Delete dominated strategies. Read the smaller table. If one cell remains, the game is dominance solvable.
+objective_zh: 删掉被占优的策略。读剩下的小表。如果只剩一格，这局就是重复删除可解。
+objective_zh_hk: 刪走被佔優嘅策略。讀剩低嘅細表。若淨剩一格，呢一局就係重複刪除可解。
+glossary:
+- en: dominance solvable
+  zh: 重复删除可解
+  zh_hk: 重複刪除可解
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: After you delete High for A, what do you do next?
+  zh: 划掉甲的高价之后，下一步做什么？
+  zh_hk: 劃走甲嘅貴之後，跟住做咩？
+  answer_en: Read B's numbers on the smaller table. See whether one of B's lines now dies too.
+  answer_zh: 在小表上读乙的数字。看乙是不是也有一行死掉。
+  answer_zh_hk: 喺細表度讀乙嘅數字。睇乙係咪都有一行死人。
+- id: Q2
+  type: transfer
+  en: Only Low-Low is left. What do we call that?
+  zh: 只剩下低价对低价。这叫什么？
+  zh_hk: 淨低平對平。呢樣叫咩？
+  answer_en: The game is dominance solvable. The table picked the cell.
+  answer_zh: 这局是重复删除可解。是表选出了这一格。
+  answer_zh_hk: 呢一局係重複刪除可解。係表揀咗呢一格。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Cross High out
+  title_zh: 把高价划掉
+  title_zh_hk: 將貴劃走
+  en: Low dominates High for A, so High can go. Do not stop talking after that. The table is smaller now. B is still choosing, and B can read the new table too.
+  zh: 甲的低价占优于高价，所以高价可以划掉。不要划完就停。表变小了。乙还在选，乙也能读这张新表。
+  zh_hk: 甲嘅平佔優過貴，所以貴可以劃走。唔好劃完就停。張表細咗。乙仲喺度揀，乙都讀得呢張新表。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Dominance solvable
+  title_zh: 重复删除可解
+  title_zh_hk: 重複刪除可解
+  formula: Delete a dominated line, then read the table again
+  formula_en: Delete a dominated line, then read the table again
+  formula_zh: 删掉被占优的一行，再读这张表
+  formula_zh_hk: 刪走被佔優嗰一行，再讀呢張表
+  gloss_en: If one cell remains, the table picked it.
+  gloss_zh: 如果只剩一格，就是表选出了它。
+  gloss_zh_hk: 若淨剩一格，就係表揀咗佢。
+  en: Here is the idea. Delete a dominated line. Read what is left. B may now have a line that dies too. If you keep deleting and one cell remains, we call the game dominance solvable. The table picked the cell. Nobody had to be clever.
+  zh: 核心就这一句。删掉被占优的一行。再读剩下的。乙现在也可能有一行死掉。一直删到只剩一格，这局就叫重复删除可解。是表选出了这一格。谁也不必更聪明。
+  zh_hk: 核心就呢一句。刪走被佔優嗰一行。再讀剩低嘅。乙而家都可能有一行死人。一路刪到淨剩一格，呢一局就叫重複刪除可解。係表揀咗呢一格。邊個都唔使更叻。
+- id: steps
+  visual: steps
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Delete, then look again
+  title_zh: 先删，再看
+  title_zh_hk: 先刪，再睇
+  step1_en: Cross out High for A.
+  step1_zh: 划掉甲的高价。
+  step1_zh_hk: 劃走甲嘅貴。
+  step2_en: On the smaller table, Low dominates High for B too.
+  step2_zh: 小表上，乙的低价也占优于高价。
+  step2_zh_hk: 細表上面，乙嘅平都佔優過貴。
+  step3_en: Only Low and Low remains.
+  step3_zh: 只剩下低价对低价。
+  step3_zh_hk: 淨低平對平。
+  en: Cross out High for A. On the smaller table B is only facing Low. Low still pays B more than High. Cross out High for B too. One cell is left. Low and Low.
+  zh: 划掉甲的高价。小表上乙只面对低价。乙标低价还是比标高价赚得多。乙的高价也划掉。只剩一格。低价对低价。
+  zh_hk: 劃走甲嘅貴。細表上面乙淨面對平。乙標平都係比標貴賺得多。乙嘅貴都劃走。淨剩一格。平對平。
+- id: example
+  visual: example
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: The table picked the cell
+  title_zh: 是表选出了这一格
+  title_zh_hk: 係表揀咗呢一格
+  setup_en: Both carts can see that High dies.
+  setup_zh: 两辆车都看得见，高价会死。
+  setup_zh_hk: 兩架車都睇得見，貴會死人。
+  result_en: Low versus Low. Neither had to guess first.
+  result_zh: 低价对低价。谁也不必先猜。
+  result_zh_hk: 平對平。邊個都唔使先估。
+  en: Both carts can see that High dies. They do not need a meeting. They do not need to guess who cuts first. The smaller table has one cell. That is what dominance solvable means on this path.
+  zh: 两辆车都看得见高价会死。不必开会。也不必猜谁先降价。小表上只有一格。这条路上，重复删除可解就是这个意思。
+  zh_hk: 兩架車都睇得見貴會死人。唔使開會。都唔使估邊個先減價。細表上面得一格。呢條路上面，重複刪除可解就係呢個意思。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Delete, then stop
+  title_zh: 删完再停
+  title_zh_hk: 刪完再停
+  q1_en: Did I check the smaller table after the first cut?
+  q1_zh: 划掉第一行之后，我有没有再读小表？
+  q1_zh_hk: 劃走第一行之後，我有冇再讀細表？
+  q2_en: Is one cell left?
+  q2_zh: 是不是只剩一格？
+  q2_zh_hk: 係唔係淨剩一格？
+  en: Cut once, then read again. If one cell is left, stop. The table picked it. Next we give this same payoff table its usual name, the prisoner's dilemma.
+  zh: 划一次，再读一次。只剩一格就停。是表选出了它。接下来给同一张报酬表取它常用的名字，囚徒困境。
+  zh_hk: 劃一次，再讀一次。淨剩一格就停。係表揀咗佢。跟住俾同一張報酬表改佢常用嗰個名，囚徒困境。

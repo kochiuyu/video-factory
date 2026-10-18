@@ -1,0 +1,125 @@
+id: LAE-M01-SC
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 92
+title_en: A crowded band
+title_zh: 挤在同一层
+title_zh_hk: 擠喺同一層
+objective_en: 'Treat an extra flight as delay: one more flight adds holding or rerouting time to the flights already in the band. The extra line counts its own clock.'
+objective_zh: 把多一班飞行看成延误：再多一班会给已经在同一层的班次加上等待或绕行的时间。多出来的那条线只算自己的钟。
+objective_zh_hk: 將多一班飛行看成延誤：再多一班會畀已經喺同一層嘅班次加上等待或者繞路嘅時間。多出嚟嗰條線淨係計自己嘅鐘。
+glossary:
+- en: low-altitude airspace
+  zh: 低空空域
+  zh_hk: 低空空域
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What does one extra flight impose on the flights already in the band?
+  zh: 多一班飞行，给已经在这一层的班次加上什么？
+  zh_hk: 多一班飛行，畀已經喺呢一層嘅班次加上咩？
+  answer_en: Extra holding or rerouting time. Congestion here is delay.
+  answer_zh: 额外的等待或绕行时间。这里的拥挤是延误。
+  answer_zh_hk: 額外嘅等待或者繞路時間。呢度嘅擠擁係延誤。
+- id: Q2
+  type: transfer
+  en: Why might the operator of the second line still add it?
+  zh: 第二条线的运营者为什么仍可能加上这条线？
+  zh_hk: 第二條線嘅營運者點解仍然可能加呢條線？
+  answer_en: It counts its own minutes. It does not pay the minutes taken from the first.
+  answer_zh: 它只算自己的分钟。它并不为从第一条线上拿走的分钟付钱。
+  answer_zh_hk: 佢淨係計自己嘅分鐘。佢唔會為由第一條線度攞走嘅分鐘畀錢。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: A crowded band
+  title_zh: 挤在同一层
+  title_zh_hk: 擠喺同一層
+  en: The band has a name. It does not stay empty. Keep the same line from a point in Shenzhen to a point in Sha Tin. Ask what a second line in the same hour does to the first.
+  zh: 这一层已经有名字。它不会一直空着。还是深圳一点到沙田一点的那条线。问同一小时再画一条线，对第一条做了什么。
+  zh_hk: 呢一層已經有名。佢唔會一直空。仲係深圳一點到沙田一點嗰條線。問同一小時再畫一條線，對第一條做咗咩。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Congestion as delay
+  title_zh: 拥挤即延误
+  title_zh_hk: 擠擁即延誤
+  formula: extra flight → extra delay for the others
+  formula_en: extra flight → extra delay for the others
+  formula_zh: 多一班飞行 → 给其他班次加上延误
+  formula_zh_hk: 多一班飛行 → 畀其他班次加上延誤
+  gloss_en: You count your own clock
+  gloss_zh: 你只看自己的表
+  gloss_zh_hk: 你淨係睇自己隻錶
+  s1_en: Congestion in this sitting is delay. One more flight adds holding or rerouting time to the flights already in the band.
+  s1_zh: 这一讲的拥挤是延误。再多一班，会给已经在这一层的班次加上等待或绕行的时间。
+  s1_zh_hk: 呢一講嘅擠擁係延誤。再多一班，會畀已經喺呢一層嘅班次加上等待或者繞路嘅時間。
+  s2_en: The operator of the second line counts its own minutes. It does not pay the minutes taken from the first.
+  s2_zh: 第二条线的运营者只算自己的分钟。它并不为从第一条线上拿走的分钟付钱。
+  s2_zh_hk: 第二條線嘅營運者淨係計自己嘅分鐘。佢唔會為由第一條線度攞走嘅分鐘畀錢。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: Contrast
+  kicker_en: Contrast
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: One line, then two
+  title_zh: 一条，然后两条
+  title_zh_hk: 一條，然後兩條
+  left_en: One line in the hour
+  left_zh: 这一小时只有一条线
+  left_zh_hk: 呢個鐘淨係一條線
+  right_en: A second line in the hour
+  right_zh: 同一小时再加一条
+  right_zh_hk: 同一個鐘再加一條
+  s1_en: One line from Shenzhen to Sha Tin, in an empty hour, uses the column and keeps its clock.
+  s1_zh: 深圳到沙田的一条线，若这一小时是空的，就占用那一柱空气，并保住自己的钟。
+  s1_zh_hk: 深圳到沙田嘅一條線，若呢個鐘係空嘅，就佔用嗰一柱空氣，並保住自己嘅鐘。
+  s2_en: A second line in the same hour still fits in height. It does not fit in time. Someone holds or bends.
+  s2_zh: 同一小时的第二条线，高度上还进得去。时间上挤。总有人要等或要绕。
+  s2_zh_hk: 同一個鐘嘅第二條線，高度上仲入得去。時間上擠。總有人要等或者要繞。
+  s3_en: That extra wait is the cost this short names. The second line does not remove the first. It slows it.
+  s3_zh: 多出来的等待，就是这条短片要起名的成本。第二条线不会把第一条拿掉。它把它变慢。
+  s3_zh_hk: 多出嚟嘅等待，就係呢條短片要起名嘅成本。第二條線唔會將第一條攞走。佢將佢變慢。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Delay, not a slogan
+  title_zh: 延误，不是口号
+  title_zh_hk: 延誤，唔係口號
+  q1_en: What does congestion mean in this sitting?
+  q1_zh: 这一讲的拥挤指什么？
+  q1_zh_hk: 呢一講嘅擠擁係指咩？
+  q2_en: Does the extra line pay for the delay it causes?
+  q2_zh: 多出来的那条线，会为它造成的延误付钱吗？
+  q2_zh_hk: 多出嚟嗰條線，會為佢造成嘅延誤畀錢嗎？
+  s1_en: Congestion here is time imposed on the flights already in the band.
+  s1_zh: 这里的拥挤，是加在已经在这一层的班次上的时间。
+  s1_zh_hk: 呢度嘅擠擁，係加喺已經喺呢一層嘅班次上嘅時間。
+  s2_en: The newcomer counts its own clock. The first line pays in minutes.
+  s2_zh: 新来的线只算自己的钟。第一条线用分钟来付。
+  s2_zh_hk: 新嚟嗰條線淨係計自己嘅鐘。第一條線用分鐘嚟付。
+  s3_en: 'The band is the scarce object. Next sitting asks what actually uses it: two kinds of machine, one at a time.'
+  s3_zh: 这一层就是稀缺的对象。下一讲问真正占用它的是什么：两种机器，一次讲一种。
+  s3_zh_hk: 呢一層就係稀缺嘅對象。下一講問真正佔用佢嘅係咩：兩種機器，一次講一種。

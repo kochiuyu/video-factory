@@ -1,0 +1,69 @@
+id: LAE-M06-OUT
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: Who may enter, closed
+title_zh: 谁可以进，先说到这里
+title_zh_hk: 邊個可以入，先講到呢度
+objective_en: Close the policy sitting and the course. Jobs or scale may be one line. Do not give a second definition of the low-altitude economy.
+objective_zh: 收住政策这一讲，也收住这门课。就业或规模可以有一句。不要再给低空经济第二个定义。
+objective_zh_hk: 收住政策呢一講，亦都收住呢門課。就業或者規模可以有一句。唔好再畀低空經濟第二個定義。
+glossary:
+- en: Close
+  zh: 收束
+  zh_hk: 收束
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What two facts should you take from this last sitting?
+  zh: 最后这一讲，你应带走哪两件事？
+  zh_hk: 最後呢一講，你應該帶走邊兩件事？
+  answer_en: No permit means excluded, and opening the band does not invent a buyer.
+  answer_zh: 没有许可是被排除，打开这一层造不出买方。
+  answer_zh_hk: 冇許可係被排除，打開呢一層造唔出買方。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: Who may enter, closed
+  title_zh: 谁可以进，先说到这里
+  title_zh_hk: 邊個可以入，先講到呢度
+  claim_en: You can treat a missing permit as exclusion, name two aviation books plus a customs gate, and refuse to let opening invent a buyer.
+  claim_zh: 你能把没有许可看成排除，说出两本航空规则外加一闸海关，并拒绝让打开造出买方。
+  claim_zh_hk: 你能將冇許可看成排除，講出兩本航空規則再加一閘海關，並拒絕等打開造出買方。
+  next_en: That is the course. The band, the machines, the pad, the slot, who pays, who may enter.
+  next_zh: 这门课到此。这一层，机器，垫子，时段，谁付钱，谁可以进。
+  next_zh_hk: 呢門課到此。呢一層，機器，墊，時段，邊個畀錢，邊個可以入。
+  en: You can walk the same line from a Shenzhen roof to a Sha Tin locker and say, in order, room, machine, pad, slot, payment, then entry.
+  zh: 你能沿着深圳屋顶到沙田储物柜的同一条线，按顺序说出空间、机器、垫子、时段、付款，然后是进入。
+  zh_hk: 你能夠沿住深圳屋頂到沙田儲物櫃同一條線，按順序講出空間、機器、墊、時段、付款，然後係進入。
+- id: takeaway
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: Who may enter, closed
+  title_zh: 谁可以进，先说到这里
+  title_zh_hk: 邊個可以入，先講到呢度
+  claim_en: You can treat a missing permit as exclusion, name two aviation books plus a customs gate, and refuse to let opening invent a buyer.
+  claim_zh: 你能把没有许可看成排除，说出两本航空规则外加一闸海关，并拒绝让打开造出买方。
+  claim_zh_hk: 你能將冇許可看成排除，講出兩本航空規則再加一閘海關，並拒絕等打開造出買方。
+  next_en: That is the course. The band, the machines, the pad, the slot, who pays, who may enter.
+  next_zh: 这门课到此。这一层，机器，垫子，时段，谁付钱，谁可以进。
+  next_zh_hk: 呢門課到此。呢一層，機器，墊，時段，邊個畀錢，邊個可以入。
+  en: That is the course. Scale is one person watching many machines, and only if a buyer is already on the line. Do not write a second definition.
+  zh: 这门课到此。规模是一个人看着许多机器，而且前提是这条线上已经有买方。不要再写第二个定义。
+  zh_hk: 呢門課到此。規模係一個人睇住好多部機器，而且一定要呢條線上已經有買方。低空唔係口號。唔好再寫第二個定義。

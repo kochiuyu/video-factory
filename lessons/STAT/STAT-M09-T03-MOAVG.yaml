@@ -1,0 +1,165 @@
+id: STAT-M09-T03-MOAVG
+course: STAT-M09
+course_en: Business Time Series & Demand Forecasting
+course_zh: 商业时间序列与需求预测
+course_zh_hk: 商業時間序列與需求預測
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Moving Averages: Filtering Noise from Daily Roastery Demand'
+title_zh: 移动平均法：过滤烘焙工坊的每日需求噪声
+title_zh_hk: 移動平均法：過濾烘焙工坊嘅每日需求雜音
+objective_en: Construct trailing and centered moving averages, explain the smoothing-responsiveness trade-off, and use smoothed demand as one input to capacity planning without treating it as a complete operating policy.
+objective_zh: 构建滞后式与中心移动平均，解释平滑性与响应速度之间的权衡，并把平滑需求作为产能规划的一项输入，而不是完整的运营政策。
+objective_zh_hk: 構建滯後式同中心移動平均，解釋平滑度同反應速度之間嘅權衡，並將平滑需求當成產能規劃嘅其中一項輸入，而唔係完整營運政策。
+glossary:
+  - en: Simple Moving Average (SMA)
+    zh: 简单移动平均（SMA）
+    zh_hk: 簡單移動平均（SMA）
+    lock: true
+  - en: Centered Moving Average
+    zh: 中心移动平均
+    zh_hk: 中心移動平均
+    lock: true
+  - en: Smoothing Window (k)
+    zh: 平滑窗口（k）
+    zh_hk: 平滑窗口（k）
+    lock: true
+  - en: Lag Latency Distortion
+    zh: 滞后延迟失真
+    zh_hk: 滯後延遲失真
+    lock: true
+quiz:
+  - id: Q1
+    type: multiple_choice
+    question_en: 'Orders for Days 1–5 are 280, 320, 300, 340, and 360 kg. What is the three-day SMA forecast for Day 6?'
+    question_zh: 第 1 至第 5 天的订单为 280、320、300、340 和 360 公斤。第 6 天的三日简单移动平均预测是多少？
+    question_zh_hk: 第 1 至第 5 日嘅訂單係 280、320、300、340 同 360 公斤。第 6 日嘅三日簡單移動平均預測係幾多？
+    options_en:
+      - 'A: Approximately 333.3 kg'
+      - 'B: 320.0 kg'
+      - 'C: 300.0 kg'
+      - 'D: 360.0 kg'
+    options_zh:
+      - A：约 333.3 公斤
+      - B：320.0 公斤
+      - C：300.0 公斤
+      - D：360.0 公斤
+    options_zh_hk:
+      - A：約 333.3 公斤
+      - B：320.0 公斤
+      - C：300.0 公斤
+      - D：360.0 公斤
+    answer: A
+    explanation_en: 'Use the latest three observations: (300 + 340 + 360) / 3 = 1000 / 3 ≈ 333.3 kg.'
+    explanation_zh: 使用最近三个观测值：(300 + 340 + 360) / 3 = 1000 / 3 ≈ 333.3 公斤。
+    explanation_zh_hk: 使用最近三個觀測值：(300 + 340 + 360) / 3 = 1000 / 3 ≈ 333.3 公斤。
+  - id: Q2
+    type: multiple_choice
+    question_en: What usually changes when the smoothing window grows from 7 to 28 days?
+    question_zh: 当平滑窗口从 7 天增至 28 天时，通常会发生什么变化？
+    question_zh_hk: 當平滑窗口由 7 日增至 28 日，通常會有乜嘢變化？
+    options_en:
+      - 'A: The series becomes smoother but responds more slowly to changes'
+      - 'B: All forecasting error disappears'
+      - 'C: The sample size becomes four times larger'
+      - 'D: The average becomes forward-looking'
+    options_zh:
+      - A：序列更平滑，但对变化的响应更慢
+      - B：所有预测误差都会消失
+      - C：样本量会变为四倍
+      - D：平均值会自动具有前瞻性
+    options_zh_hk:
+      - A：序列更平滑，但對變化嘅反應更慢
+      - B：所有預測誤差都會消失
+      - C：樣本量會變成四倍
+      - D：平均值會自動具有前瞻性
+    answer: A
+    explanation_en: A wider window averages away more short-run variation, but older observations retain influence longer, reducing responsiveness to a turning point.
+    explanation_zh: 更宽的窗口会平均掉更多短期波动，但较早观测保留影响的时间更长，因此对拐点的响应更慢。
+    explanation_zh_hk: 較闊嘅窗口會平均走更多短期波動，但較早觀測保留影響嘅時間更長，所以對拐點反應更慢。
+beats:
+  - id: hook
+    visual: title_card
+    seconds: 30
+    kicker_en: Capacity Planning Puzzle
+    kicker_zh: 产能规划难题
+    kicker_zh_hk: 產能規劃難題
+    title_en: Should One Noisy Day Reset the Roasting Schedule?
+    title_zh: 一个异常日是否应该重设烘焙排期？
+    title_zh_hk: 一個異常日應唔應該重設烘焙排期？
+    en: >-
+      Daily bean orders at the Kwun Tong commissary can jump and fall from one day to the next. If planners chase every movement, production becomes unstable. If they ignore recent changes, they may react too late. A moving average offers a middle path by replacing individual observations with a local average, but managers still need to choose how much history should influence today's signal.
+    zh: >-
+      观塘工坊的每日咖啡豆订单可能一天上升、一天下降。若规划人员追逐每次波动，生产安排会很不稳定；若忽略近期变化，又可能反应过慢。移动平均用局部平均值替代单个观测，提供一条折中路径，但管理者仍要决定今天的信号应该纳入多长的历史。
+    zh_hk: >-
+      觀塘工坊嘅每日咖啡豆訂單可能一日升、一日跌。規劃人員如果追住每次波動走，生產安排會好唔穩定；如果忽略近期變化，又可能反應太慢。移動平均用局部平均值取代單一觀測，提供一條折衷路徑，但管理者仍然要決定今日嘅訊號應該納入幾長嘅歷史。
+  - id: define
+    visual: definition_card
+    seconds: 34
+    formula: 'SMA_t(k) = [Y_t + Y_{t-1} + ... + Y_{t-k+1}] / k'
+    formula_zh: '简单移动平均：最近 k 期观测值的算术平均'
+    formula_zh_hk: '簡單移動平均：最近 k 期觀測值嘅算術平均'
+    formula_tex: '\mathrm{SMA}_t(k)=\frac{1}{k}\sum_{j=0}^{k-1}Y_{t-j}'
+    s1_en: A Simple Moving Average (SMA) takes the arithmetic mean of the latest k observations. The Smoothing Window (k) moves forward as each new observation arrives, adding the newest value and dropping the oldest.
+    s1_zh: 简单移动平均（SMA）计算最近 k 个观测值的算术平均。每当新观测到来，平滑窗口（k）便向前移动，加入最新值并移除最旧值。
+    s1_zh_hk: 簡單移動平均（SMA）計算最近 k 個觀測值嘅算術平均。每當新觀測到嚟，平滑窗口（k）就向前移，加入最新值並移除最舊值。
+    s2_en: A Centered Moving Average assigns an average to the middle period of its window, using observations on both sides. It is useful for describing historical trend, but it cannot be computed at the newest edge without future observations.
+    s2_zh: 中心移动平均把平均值放在窗口的中间时期，并使用前后两侧的观测。它适合描述历史趋势，但在序列最新端缺少未来观测时无法计算。
+    s2_zh_hk: 中心移動平均將平均值放喺窗口中間時期，並使用前後兩邊嘅觀測。佢適合描述歷史趨勢，但喺序列最新端缺少未來觀測嗰陣就計唔到。
+  - id: mechanics
+    visual: two_column
+    seconds: 36
+    left_en: Smaller Window
+    left_zh: 较小窗口
+    left_zh_hk: 較細窗口
+    right_en: Larger Window
+    right_zh: 较大窗口
+    right_zh_hk: 較大窗口
+    s1_en: A small k gives substantial weight to each recent observation. The average reacts quickly, but a one-day spike can still move it noticeably.
+    s1_zh: 较小的 k 让每个近期观测占据较大权重。平均值反应较快，但单日尖峰仍可能明显推动它。
+    s1_zh_hk: 較細嘅 k 令每個近期觀測佔較大權重。平均值反應較快，但單日尖峰仍可能明顯推動佢。
+    s2_en: A large k spreads weight across more observations. The path becomes smoother, but old demand remains in the calculation longer, so genuine changes appear more slowly.
+    s2_zh: 较大的 k 把权重分散到更多观测。曲线会更平滑，但旧需求留在计算中的时间更长，因此真实变化显现得更慢。
+    s2_zh_hk: 較大嘅 k 將權重分散到更多觀測。條線會更平滑，但舊需求留喺計算入面更耐，所以真實變化會較慢先顯現。
+    s3_en: This is the central trade-off behind Lag Latency Distortion. Window choice should be tested against forecast error and the decision horizon, rather than selected because one curve merely looks smoother.
+    s3_zh: 这就是滞后延迟失真背后的核心权衡。窗口选择应根据预测误差与决策周期进行检验，而不应只因为某条曲线看起来更平滑。
+    s3_zh_hk: 呢個就係滯後延遲失真背後嘅核心權衡。窗口選擇應該按預測誤差同決策周期去檢驗，而唔係只因為某條線睇落更平滑。
+  - id: example
+    visual: example
+    seconds: 36
+    setup_en: 'Latest orders: 300, 340, 360 kg'
+    setup_zh: 最近订单：300、340、360 公斤
+    setup_zh_hk: 最近訂單：300、340、360 公斤
+    result_en: 'Day 6 SMA forecast: 1000 / 3 ≈ 333.3 kg'
+    result_zh: 第 6 天 SMA 预测：1000 / 3 ≈ 333.3 公斤
+    result_zh_hk: 第 6 日 SMA 預測：1000 / 3 ≈ 333.3 公斤
+    s1_en: Suppose the five observed orders are 280, 320, 300, 340, and 360 kilograms. A three-day SMA forecast for Day 6 uses only the newest three values.
+    s1_zh: 假设五天观测订单为 280、320、300、340 和 360 公斤。第 6 天的三日简单移动平均预测只使用最新三个数值。
+    s1_zh_hk: 假設五日觀測訂單係 280、320、300、340 同 360 公斤。第 6 日嘅三日簡單移動平均預測只使用最新三個數值。
+    s2_en: Add 300, 340, and 360 to obtain 1000 kilograms. Dividing by three gives approximately 333.3 kilograms, because the exact fraction is recurring.
+    s2_zh: 将 300、340 和 360 相加得到 1000 公斤。除以 3 后约为 333.3 公斤，因为精确小数会循环。
+    s2_zh_hk: 將 300、340 同 360 加埋得到 1000 公斤。除以 3 之後約等於 333.3 公斤，因為精確小數會循環。
+    s3_en: The result is a mechanical baseline forecast, not a production instruction. Final roasting volume also depends on inventory, lead time, capacity, shelf life, service targets, and the cost of shortage versus waste.
+    s3_zh: 这个结果是机械式基准预测，不是生产指令。最终烘焙量还取决于库存、提前期、产能、保质期、服务目标，以及缺货与浪费的成本。
+    s3_zh_hk: 呢個結果係機械式基準預測，唔係生產指令。最終烘焙量仲取決於庫存、提前期、產能、保質期、服務目標，同埋缺貨與浪費嘅成本。
+  - id: takeaway
+    visual: takeaway
+    seconds: 32
+    q1_en: What Does a Moving Average Provide?
+    q1_zh: 移动平均提供什么？
+    q1_zh_hk: 移動平均提供乜嘢？
+    q2_en: Decision Rule
+    q2_zh: 决策规则
+    q2_zh_hk: 決策規則
+    s1_en: A moving average provides a transparent smoothed baseline. A trailing SMA can also generate a simple one-step forecast, while a centered average is mainly a historical descriptive filter.
+    s1_zh: 移动平均提供透明的平滑基准。滞后式简单移动平均也可产生简单的一步预测，而中心移动平均主要用于描述历史趋势。
+    s1_zh_hk: 移動平均提供透明嘅平滑基準。滯後式簡單移動平均亦可以產生簡單嘅一步預測，而中心移動平均主要用嚟描述歷史趨勢。
+    s2_en: Choose k according to the purpose and validate alternatives on historical data. Smaller windows favor responsiveness; larger windows favor stability and can hide turning points for longer.
+    s2_zh: 应根据用途选择 k，并用历史数据检验不同方案。较小窗口偏重响应速度；较大窗口偏重稳定性，也可能更久地掩盖拐点。
+    s2_zh_hk: 要按用途選擇 k，並用歷史數據檢驗唔同方案。較細窗口偏重反應速度；較大窗口偏重穩定性，亦可能更耐先反映拐點。
+    s3_en: Use the smoothed value as one planning input, not a complete policy. Pair it with operational constraints and monitor forecast errors so the chosen window remains useful when demand changes.
+    s3_zh: 应把平滑值作为规划的一项输入，而不是完整政策。还要结合运营约束并监测预测误差，确保需求变化时所选窗口仍然有用。
+    s3_zh_hk: 應該將平滑值當成規劃嘅其中一項輸入，而唔係完整政策。仲要配合營運限制並監察預測誤差，確保需求轉變嗰陣所選窗口仍然有用。

@@ -1,0 +1,129 @@
+id: LAE-M02-DR
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 92
+title_en: Drone
+title_zh: 无人机
+title_zh_hk: 無人機
+objective_en: 'Name the drone: no person on board. Battery weight crowds out parcel weight. The battery, not the sky, stops the flight.'
+objective_zh: 给无人机起名：机上没有人。电池的重量挤占包裹的重量。停下飞行的是电池，不是天空。
+objective_zh_hk: 畀無人機起名：機上冇人。電池嘅重量擠佔包裹嘅重量。停下飛行嘅係電池，唔係天空。
+glossary:
+- en: drone
+  zh: 无人机
+  zh_hk: 無人機
+  lock: true
+- en: unmanned aerial vehicle
+  zh: 无人驾驶航空器
+  zh_hk: 無人駕駛航空器
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What is not on board a drone?
+  zh: 无人机上没有什么？
+  zh_hk: 無人機上面冇咩？
+  answer_en: A person. The machine is unmanned.
+  answer_zh: 人。这台机器是无人驾驶的。
+  answer_zh_hk: 人。呢部機器係無人駕駛嘅。
+- id: Q2
+  type: transfer
+  en: Why can a small parcel use a drone on the Shenzhen-to-Sha Tin line, while a heavy load may not?
+  zh: 为什么深圳到沙田这条线上的小包裹能用无人机，而更重的货物未必能？
+  zh_hk: 點解深圳到沙田呢條線上嘅小包裹可以用無人機，而更重嘅貨物未必得？
+  answer_en: Battery weight crowds out payload. The battery, not the sky, stops the flight.
+  answer_zh: 电池的重量挤占货物的重量。停下飞行的是电池，不是天空。
+  answer_zh_hk: 電池嘅重量擠佔貨物嘅重量。停下飛行嘅係電池，唔係天空。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Drone
+  title_zh: 无人机
+  title_zh_hk: 無人機
+  en: Last sitting named the band. Keep the line from a point in Shenzhen to a point in Sha Tin. This short names the first machine that can carry a small parcel along that line, with no person on board.
+  zh: 上一讲给这一层起了名。还是深圳一点到沙田一点的那条线。这条短片给第一种能沿这条线带小包裹的机器起名，机上没有人。
+  zh_hk: 上一講畀呢一層起咗名。仲係深圳一點到沙田一點嗰條線。呢條短片畀第一種能沿呢條線帶小包裹嘅機器起名，機上冇人。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Drone
+  title_zh: 无人机
+  title_zh_hk: 無人機
+  formula: drone = unmanned aerial vehicle
+  formula_en: drone = unmanned aerial vehicle
+  formula_zh: 无人机 = 无人驾驶航空器
+  formula_zh_hk: 無人機 = 無人駕駛航空器
+  gloss_en: No person on board
+  gloss_zh: 机上没有人
+  gloss_zh_hk: 機上冇人
+  s1_en: A drone is an unmanned aerial vehicle. No person sits in it. That is the noun for this short.
+  s1_zh: 无人机是无人驾驶航空器。机上没有人坐。这就是这条短片要起的名。
+  s1_zh_hk: 無人機係無人駕駛航空器。機上冇人坐。呢個就係呢條短片要起嘅名。
+  s2_en: Because no person is on board, the useful load can be a small parcel. Name that before you praise the machine.
+  s2_zh: 因为机上没有人，有用的载荷可以是一个小包裹。先说出这一点，再夸这台机器。
+  s2_zh_hk: 因為機上冇人，有用嘅載荷可以係一個小包裹。先講呢一點，先至誇呢部機器。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: Contrast
+  kicker_en: Contrast
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Battery versus parcel
+  title_zh: 电池对包裹
+  title_zh_hk: 電池對包裹
+  left_en: Weight in the battery
+  left_zh: 电池里的重量
+  left_zh_hk: 電池入面嘅重量
+  right_en: Weight in the parcel
+  right_zh: 包裹里的重量
+  right_zh_hk: 包裹入面嘅重量
+  s1_en: What the battery weighs crowds out what the parcel may weigh. You cannot spend the same kilogram twice.
+  s1_zh: 电池有多重，包裹能有的重量就被挤掉多少。同一公斤不能花两次。
+  s1_zh_hk: 電池有幾重，包裹可以有嘅重量就被擠走幾多。同一公斤唔可以花兩次。
+  s2_en: A small parcel on the Shenzhen-to-Sha Tin line can fit that trade-off. A heavy crate may not.
+  s2_zh: 深圳到沙田线上的小包裹，还能落进这种权衡。一只很重的箱子未必能。
+  s2_zh_hk: 深圳到沙田線上嘅小包裹，仲可以落入呢種權衡。一隻好重嘅箱就未必得。
+  s3_en: The battery, not the sky, stops the flight. The band is still there. The stored energy is not.
+  s3_zh: 停下飞行的是电池，不是天空。这一层还在。存着的能量不在了。
+  s3_zh_hk: 停下飛行嘅係電池，唔係天空。呢一層仲喺度。存住嘅能量就唔喺度。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Unmanned, then limited
+  title_zh: 先是无人，然后是有限
+  title_zh_hk: 先係無人，然後係有限
+  q1_en: Who is not on the drone?
+  q1_zh: 谁不在无人机上？
+  q1_zh_hk: 邊個唔喺無人機上面？
+  q2_en: What crowds out the parcel?
+  q2_zh: 什么挤占了包裹的重量？
+  q2_zh_hk: 咩嘢擠佔咗包裹嘅重量？
+  s1_en: A drone has no person on board. Write that first.
+  s1_zh: 无人机上没有人。先把这句话写下来。
+  s1_zh_hk: 無人機上面冇人。先將呢句寫低。
+  s2_en: Battery weight crowds out parcel weight. The battery, not the sky, stops the flight.
+  s2_zh: 电池的重量挤占包裹的重量。停下飞行的是电池，不是天空。
+  s2_zh_hk: 電池嘅重量擠佔包裹嘅重量。停下飛行嘅係電池，唔係天空。
+  s3_en: Next short names a second machine. A person will be on board. That is a different payload.
+  s3_zh: 下一支短片给第二种机器起名。机上会有人。那是另一种载荷。
+  s3_zh_hk: 下一條短片畀第二種機器起名。機上會有人。嗰個係另一種載荷。

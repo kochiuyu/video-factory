@@ -1,0 +1,162 @@
+id: STAT-M10-T07-NOVEL
+course: STAT-M10
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Novelty and Primacy Effects: Treatment Effects That Change Over Time'
+title_zh: 新奇效应与首因效应：随时间变化的处理效应
+title_zh_hk: 新奇效應同首因效應：隨時間變化嘅處理效應
+objective_en: Distinguish positive novelty responses from initial primacy friction, describe treatment effects by time since exposure, and design longitudinal analyses that separate adaptation from calendar and cohort composition changes.
+objective_zh: 区分正向新奇反应与初期首因摩擦，按照接触后的时间描述处理效应，并设计纵向分析以区分适应过程、日历变化与队列构成变化。
+objective_zh_hk: 區分正向新奇反應同初期首因摩擦，按照接觸之後嘅時間描述處理效應，並設計縱向分析去區分適應過程、日曆變化同隊列構成變化。
+glossary:
+- en: Novelty Bias
+  zh: 新奇偏差（新奇效应）
+  zh_hk: 新奇偏差（新奇效應）
+  lock: true
+- en: Primacy Effect
+  zh: 首因效应（习惯阻滞）
+  zh_hk: 首因效應（習慣阻滯）
+  lock: true
+- en: Dynamic Treatment Effect
+  zh: 动态处理效应
+  zh_hk: 動態處理效應
+  lock: true
+- en: Steady-State Equilibrium Lift
+  zh: 稳态均衡增量
+  zh_hk: 穩態均衡增量
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: A feature shows a large positive effect immediately after launch and a much smaller effect among the same exposed cohort later. Which interpretation is plausible but still requires diagnostic checks?
+  question_zh: 某功能上线后立即出现较大正向效应，但同一接触队列之后的效应明显缩小。哪个解释合理但仍需诊断检查？
+  question_zh_hk: 某功能上線之後即刻出現較大正向效應，但同一接觸隊列之後嘅效應明顯縮細。邊個解釋合理但仍然需要診斷檢查？
+  options_en:
+  - 'A: A transient novelty response may be decaying, although instrumentation, composition, and calendar changes must also be checked'
+  - 'B: The Central Limit Theorem necessarily failed'
+  - 'C: The later estimate proves the initial data were fabricated'
+  - 'D: Every digital treatment must have zero long-run effect'
+  options_zh:
+  - A：短暂的新奇反应可能正在衰减，但仍应检查测量、构成与日历变化
+  - B：中心极限定理必然失效
+  - C：后期估计证明初期数据被伪造
+  - D：每个数字化处理的长期效应必定为零
+  options_zh_hk:
+  - A：短暫嘅新奇反應可能正在衰減，但仍然要檢查量度、構成同日曆變化
+  - B：中心極限定理一定失效
+  - C：後期估計證明初期數據被偽造
+  - D：每個數碼化處理嘅長期效應一定係零
+  answer: A
+  explanation_en: A declining effect is consistent with novelty decay, but the trajectory alone does not identify its cause. Stable logging, comparable cohorts, seasonality, repeated exposure, and uncertainty should also be examined.
+  explanation_zh: 效应下降与新奇效应衰减相符，但仅凭轨迹不能识别原因。还应检查日志稳定性、队列可比性、季节性、重复接触与不确定性。
+  explanation_zh_hk: 效應下降同新奇效應衰減相符，但單靠軌跡唔可以識別原因。仲要檢查日誌穩定性、隊列可比性、季節性、重複接觸同不確定性。
+- id: Q2
+  type: multiple_choice
+  question_en: Why is there no universal rule that every digital A/B test must run for exactly 14 or 21 days?
+  question_zh: 为什么不存在每个数字化 A/B 测试都必须正好运行 14 或 21 天的通用规则？
+  question_zh_hk: 點解唔存在每個數碼化 A/B 測試都一定要正好運行 14 或 21 日嘅通用規則？
+  options_en:
+  - 'A: Required duration depends on exposure frequency, adaptation, cycles, sample size, decision risk, and the pre-specified monitoring plan'
+  - 'B: Experiments cannot run across weekends'
+  - 'C: Statistical significance makes duration irrelevant'
+  - 'D: Duration is determined only by the color of the interface'
+  options_zh:
+  - A：所需时长取决于接触频率、适应过程、周期、样本量、决策风险与预先指定的监控方案
+  - B：实验不能跨越周末
+  - C：只要达到统计显著，时长就无关紧要
+  - D：时长只由界面颜色决定
+  options_zh_hk:
+  - A：所需時長取決於接觸頻率、適應過程、周期、樣本量、決策風險同預先指定嘅監控方案
+  - B：實驗唔可以跨越週末
+  - C：只要達到統計顯著，時長就無關重要
+  - D：時長只由介面顏色決定
+  answer: A
+  explanation_en: Duration should be set from the estimand, expected adaptation window, business cycles, exposure opportunity, power, and stopping policy. A fixed calendar rule cannot fit every product or metric.
+  explanation_zh: 实验时长应根据估计目标、预期适应窗口、业务周期、接触机会、功效与停止政策设定。固定日历规则不可能适用于所有产品或指标。
+  explanation_zh_hk: 實驗時長要根據估計目標、預期適應窗口、業務周期、接觸機會、功效同停止政策設定。固定日曆規則唔可能適用於所有產品或者指標。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Early-Win Puzzle
+  kicker_zh: 早期胜出难题
+  kicker_zh_hk: 早期勝出難題
+  title_en: Why Can an Early Treatment Effect Fade or Reverse?
+  title_zh: 为什么早期处理效应可能衰减甚至反转？
+  title_zh_hk: 點解早期處理效應可能衰減甚至反轉？
+  en: 'Suppose a redesigned app receives unusually high engagement immediately after launch, but the difference narrows as users gain experience. Another redesign may show the opposite pattern: initial confusion followed by improvement. A single pooled estimate can hide both trajectories. The experimental question is therefore not only whether treatment works, but for whom, after how much exposure, and over which decision horizon.'
+  zh: 假设新版应用上线后立即获得异常高的互动，但随着用户积累经验，差异逐渐缩小。另一种改版可能出现相反轨迹：初期困惑，之后改善。单一汇总估计可能掩盖这两种变化。因此，实验问题不仅是处理是否有效，还包括对谁有效、经历多少次接触后有效，以及在哪个决策周期内有效。
+  zh_hk: 假設新版應用上線之後即刻獲得異常高嘅互動，但隨住用戶累積經驗，差異逐漸縮細。另一種改版可能出現相反軌跡：初期困惑，之後改善。單一匯總估計可能掩蓋呢兩種變化。所以，實驗問題唔只係處理係咪有效，仲包括對邊啲人有效、經歷幾多次接觸之後有效，同埋喺邊個決策周期內有效。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: 'Illustrative trajectory: effect_t = long-run level + transient component'
+  formula_zh: 示例轨迹：时点效应 = 长期水平 + 暂时成分
+  formula_zh_hk: 示例軌跡：時點效應 = 長期水平 + 暫時成分
+  formula_tex: \tau(t)=\tau_{\infty}+\delta(t)
+  s1_en: Novelty Bias is a temporary response to newness that can inflate early engagement. A Primacy Effect is initial resistance or friction caused by established habits. Both imply a Dynamic Treatment Effect that changes with time since exposure.
+  s1_zh: 新奇偏差是对“新”的短暂反应，可能推高初期互动。首因效应则是既有习惯造成的初期抗拒或摩擦。两者都意味着动态处理效应会随接触后的时间变化。
+  s1_zh_hk: 新奇偏差係對「新」嘅短暫反應，可能推高初期互動。首因效應就係既有習慣造成嘅初期抗拒或者摩擦。兩者都意味住動態處理效應會隨接觸之後嘅時間變化。
+  s2_en: An exponential decay curve is one possible model, not a universal behavioral law. The long-run parameter in such a model is a fitted asymptote; calling it a Steady-State Equilibrium Lift requires sufficient follow-up and a stable environment.
+  s2_zh: 指数衰减曲线只是一种可能模型，并非通用行为定律。模型中的长期参数是拟合渐近值；若要称为稳态均衡增量，需要足够的后续观察与稳定环境。
+  s2_zh_hk: 指數衰減曲線只係一種可能模型，唔係通用行為定律。模型入面嘅長期參數係擬合漸近值；要稱為穩態均衡增量，就需要足夠嘅後續觀察同穩定環境。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Time Since First Exposure
+  left_zh: 首次接触后的时间
+  left_zh_hk: 首次接觸之後嘅時間
+  right_en: Calendar Time and Cohorts
+  right_zh: 日历时间与队列
+  right_zh_hk: 日曆時間同隊列
+  s1_en: Analyze effects by time since assignment or first exposure, not only by calendar week. Users may enter on different dates and accumulate different numbers of exposures, so calendar averages can mix lifecycle stages.
+  s1_zh: 应按照分配后或首次接触后的时间分析效应，而不能只看日历周。用户可能在不同日期进入，并经历不同接触次数，因此日历平均值可能混合多个生命周期阶段。
+  s1_zh_hk: 要按照分配之後或者首次接觸之後嘅時間分析效應，而唔可以只睇日曆週。用戶可能喺唔同日期進入，並經歷唔同接觸次數，所以日曆平均數可能混合多個生命周期階段。
+  s2_en: Track the same randomized cohorts longitudinally when feasible, and report uncertainty at each horizon. Also inspect instrumentation, attrition, repeated observations, seasonality, and concurrent product changes.
+  s2_zh: 可行时应纵向追踪同一随机队列，并报告每个时间点的不确定性。还要检查测量系统、流失、重复观测、季节性与同期产品变化。
+  s2_zh_hk: 可行嗰陣要縱向追蹤同一隨機隊列，並報告每個時間點嘅不確定性。仲要檢查量度系統、流失、重複觀測、季節性同同期產品變化。
+  s3_en: New users are not automatically free of novelty or comparable with existing users. They differ in tenure and selection, so subgroup comparisons should be pre-specified and treatment effects estimated within randomized strata or with justified interaction models.
+  s3_zh: 新用户并不会自动免疫新奇反应，也不一定与老用户可比。两者在使用年限与选择机制上不同，因此分群比较应预先指定，并在随机分层内估计处理效应，或使用有依据的交互模型。
+  s3_zh_hk: 新用戶唔會自動免疫新奇反應，亦唔一定同舊用戶可比。兩者喺使用年期同選擇機制上唔同，所以分群比較要預先指定，並喺隨機分層內估計處理效應，或者使用有理據嘅交互模型。
+- id: example
+  visual: example
+  seconds: 36
+  setup_en: 'Teaching trajectory: treatment CTR 24.5%, 20.2%, 17.8%, 17.3%; control 17.0% each week'
+  setup_zh: 教学轨迹：处理组点击率 24.5%、20.2%、17.8%、17.3%；对照组每周 17.0%
+  setup_zh_hk: 教學軌跡：處理組點擊率 24.5%、20.2%、17.8%、17.3%；對照組每週 17.0%
+  result_en: 'Percentage-point gaps: 7.5, 3.2, 0.8, 0.3'
+  result_zh: 百分点差异：7.5、3.2、0.8、0.3
+  result_zh_hk: 百分點差異：7.5、3.2、0.8、0.3
+  s1_en: For illustration, assume treatment click-through rates decline from 24.5 to 17.3 percent over four weeks while control remains at 17.0 percent. The corresponding absolute gaps are 7.5, 3.2, 0.8, and 0.3 percentage points.
+  s1_zh: 为便于说明，假设处理组点击率在四周内从 24.5% 降至 17.3%，而对照组保持 17.0%。相应绝对差异为 7.5、3.2、0.8 与 0.3 个百分点。
+  s1_zh_hk: 為咗方便說明，假設處理組點擊率喺四週內由 24.5% 降到 17.3%，而對照組保持 17.0%。相應絕對差異係 7.5、3.2、0.8 同 0.3 個百分點。
+  s2_en: This pattern is consistent with a transient positive response, but it does not prove exponential decay or reveal why the difference changed. Week-specific sample sizes, confidence intervals, exposure counts, logging, and cohort composition are required.
+  s2_zh: 该轨迹与短暂正向反应相符，但不能证明指数衰减，也不能解释差异为何变化。还需要各周样本量、置信区间、接触次数、日志与队列构成。
+  s2_zh_hk: 呢個軌跡同短暫正向反應相符，但唔可以證明指數衰減，亦唔可以解釋差異點解變化。仲需要各週樣本量、置信區間、接觸次數、日誌同隊列構成。
+  s3_en: Do not infer a 96 percent novelty share by dividing changes in percentage points, and do not treat a late non-significant estimate as proof of no durable effect. Estimate the full trajectory with uncertainty and align the decision horizon with expected use.
+  s3_zh: 不要通过百分点变化相除来推断“96% 属于新奇效应”，也不要把后期不显著估计视为没有持久效应的证明。应连同不确定性估计完整轨迹，并使决策周期与预期使用方式一致。
+  s3_zh_hk: 唔好透過百分點變化相除去推斷「96% 屬於新奇效應」，亦唔好將後期唔顯著估計視為冇持久效應嘅證明。要連同不確定性估計完整軌跡，並令決策周期同預期使用方式一致。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: What Does an Early Spike Establish?
+  q1_zh: 早期突升能够说明什么？
+  q1_zh_hk: 早期突升可以說明乜嘢？
+  q2_en: Decision Rule
+  q2_zh: 决策规则
+  q2_zh_hk: 決策規則
+  s1_en: An early spike establishes that behavior differed early in the experiment under the chosen analysis. It does not by itself establish lasting product value, novelty, profitability, or product-market fit.
+  s1_zh: 早期突升只能说明在所选分析下，实验初期行为存在差异。它本身不能证明持久产品价值、新奇效应、盈利能力或产品市场契合度。
+  s1_zh_hk: 早期突升只可以說明喺所選分析之下，實驗初期行為存在差異。佢本身唔可以證明持久產品價值、新奇效應、盈利能力或者產品市場適配度。
+  s2_en: Pre-specify relevant horizons and stopping rules. Run long enough to observe the exposure and business cycles needed for the decision, rather than following a universal two-week rule or stopping at first significance.
+  s2_zh: 应预先指定相关时间点与停止规则。实验应长到足以覆盖决策所需的接触与业务周期，而不是遵循通用两周规则或首次显著即停止。
+  s2_zh_hk: 要預先指定相關時間點同停止規則。實驗要長到足以覆蓋決策所需嘅接觸同業務周期，而唔係遵循通用兩週規則或者首次顯著就停止。
+  s3_en: Report treatment effects by time since exposure with confidence intervals, inspect cohort composition and measurement stability, and base rollout on the horizon that matches expected customer use.
+  s3_zh: 应按接触后的时间报告处理效应与置信区间，检查队列构成及测量稳定性，并根据符合预期顾客使用方式的时间点决定是否推广。
+  s3_zh_hk: 要按接觸之後嘅時間報告處理效應同置信區間，檢查隊列構成同量度穩定性，並根據符合預期客人使用方式嘅時間點決定係咪推廣。

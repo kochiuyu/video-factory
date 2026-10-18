@@ -1,0 +1,18 @@
+id: LAE-M02
+kind: module
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+duration_target_s: 240
+title_en: Two vehicles
+title_zh: 两种机器
+title_zh_hk: 兩種機器
+objective_en: Name the drone as an uncrewed machine whose battery crowds out payload, then name the eVTOL as a person on board — a higher safety bar and a higher capital cost.
+objective_zh: 先把无人机说成无人在机上、电池挤占货物重量的机器，再把 eVTOL 说成有人在机上——安全门槛更高，资本成本也更高。
+objective_zh_hk: 先將無人機講成無人喺機上、電池擠佔貨物重量嘅機器，再將 eVTOL 講成有人喺機上——安全門檻更高，資本成本都更高。
+lessons:
+- LAE-M02-IN
+- LAE-M02-DR
+- LAE-M02-VT
+- LAE-M02-OUT

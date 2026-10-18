@@ -1,0 +1,208 @@
+id: STAT-M06-T15-RECAP
+course: STAT-M06
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Regression Decision Review: Fit, Uncertainty, Diagnostics, and Validation'
+title_zh: 回归决策复核：拟合、不确定性、诊断与验证
+title_zh_hk: 回歸決策覆核：擬合、不確定性、診斷同驗證
+objective_en: Integrate coefficient interpretation, in-sample fit, residual error, slope uncertainty, diagnostics, causal
+  limits, and out-of-sample validation into a proportionate model-review framework, calculate and compare RMSE consistently,
+  and separate statistical evidence from capital authorization.
+objective_zh: 把系数解释、样本内拟合、残差误差、斜率不确定性、诊断、因果边界与样本外验证整合为适度的模型复核框架，一致地计算并比较 RMSE，并区分统计证据与资本授权。
+objective_zh_hk: 將系數解讀、樣本內擬合、殘差誤差、斜率不確定性、診斷、因果界線同樣本外驗證整合做適度嘅模型覆核框架，一致噉計算並比較 RMSE，並區分統計證據同資本授權。
+glossary:
+- en: Out-of-Sample Validation
+  zh: 样本外验证
+  zh_hk: 樣本外驗證
+  lock: true
+- en: Root Mean Squared Error
+  zh: 均方根误差
+  zh_hk: 均方根誤差
+  lock: true
+- en: Econometric Decision Matrix
+  zh: 计量决策矩阵
+  zh_hk: 計量決策矩陣
+  lock: true
+- en: Capital Allocation Gate
+  zh: 资本配置关卡
+  zh_hk: 資本配置關卡
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why should a model review include performance on genuinely unseen data rather than rely only on in-sample R-squared?
+  question_zh: 为什么执行计量决策矩阵要求进行样本外均方根误差（RMSE）测试，而不是仅仅依赖样本内的 R平方？
+  question_zh_hk: 點解執行計量決策矩陣要求進行樣本外均方根誤差（RMSE）測試，而唔係淨係依賴樣本內嘅 R平方？
+  options_en:
+  - 'A: In-sample fit can be optimistic after fitting and model selection, while unseen data assess generalization in a relevant
+    deployment setting'
+  - 'B: Out-of-sample testing eliminates the need to calculate degrees of freedom'
+  - 'C: RMSE is guaranteed to equal zero in successful business expansions'
+  - 'D: In-sample R-squared cannot be computed when sample size exceeds 20 stores'
+  options_zh:
+  - 'A: 样本内 R平方 极易因过拟合与离群值而被人为虚增，无法可靠预测新开门店未来的真实表现'
+  - 'B: 样本外测试彻底免除了计算模型自由度的必要性'
+  - 'C: 在成功的商业扩张中，均方根误差必然严格等于零'
+  - 'D: 当样本容量超过 20 家门店时将无法计算样本内 R平方'
+  options_zh_hk:
+  - 'A: 樣本內 R平方 好易因為過度擬合同離群值而被誇大，無法可靠預測新開門市未來嘅真實表現'
+  - 'B: 樣本外測試徹底免除咗計算模型自由度嘅必要'
+  - 'C: 喺成功嘅商業擴張入面，均方根誤差必然嚴格等於零'
+  - 'D: 當樣本容量超過 20 間分店嗰陣將會計唔到樣本內 R平方'
+  answer: A
+  explanation_en: R-squared summarizes in-sample fit. Properly separated validation data help assess generalization, provided
+    the split avoids leakage and matches the intended population and horizon.
+  explanation_zh: 样本内拟合指标（如 R平方）常因过度拟合而产生虚假确定性。样本外测试通过均方根误差 RMSE，严格检验模型对未见新门店的真实泛化预测能力。
+  explanation_zh_hk: 樣本內擬合指標（例如 R平方）好易因為過度擬合而畀出虛假安全感。樣本外測試透過均方根誤差 RMSE，嚴格檢驗模型對未知新門市嘅真實泛化預測能力。
+- id: Q2
+  type: multiple_choice
+  question_en: A model has strong in-sample fit but much worse RMSE on a relevant, leakage-free validation set. What is the
+    defensible response?
+  question_zh: 某门店扩张提案在训练集上显示 R² = 0.88 且 t = +4.10，但在新店测试集上，样本外预测误差 RMSE 从 12 杯飙升至 85 杯。投资委员会应该怎么做？
+  question_zh_hk: 某門市擴張提案喺訓練集上顯示 R² = 0.88 而且 t = +4.10，但喺新店測試集上，樣本外預測誤差 RMSE 由 12 杯暴升到 85 杯。投資委員會應該點樣決定？
+  options_en:
+  - 'A: Immediately authorize HK$25M expansion because in-sample R^2 exceeds 0.80'
+  - 'B: Pause deployment, investigate overfitting or distribution shift, compare baselines, and revise or reject the model
+    based on the prespecified decision process'
+  - 'C: Double all store lease rental payments to improve fit'
+  - 'D: Delete the test store data and rely strictly on the t-statistic'
+  options_zh:
+  - 'A: 立即批准 2,500 万港元扩张预算，因为样本内 R² 超过了 0.80'
+  - 'B: 否决或叫停扩张；误差严重发散表明模型存在过度拟合与脆弱性，未通过样本外验证'
+  - 'C: 将所有门店租金支出翻倍以提高拟合度'
+  - 'D: 删除新店测试数据，仅依靠 t 统计量进行决策'
+  options_zh_hk:
+  - 'A: 即刻批出 2,500 萬港元擴張預算，因為樣本內 R² 已經超過咗 0.80'
+  - 'B: 否決或者叫停擴張；誤差嚴重暴升代表模型過度擬合兼且極度脆弱，通唔過樣本外驗證'
+  - 'C: 將所有門市租金開支加倍嚟提升擬合度'
+  - 'D: 刪走新店測試數據，淨係單憑 t 統計量做決策'
+  answer: B
+  explanation_en: A large validation deterioration is evidence against reliable generalization. It warrants investigation
+    and governance review, not automatic funding or deletion of the validation data.
+  explanation_zh: 样本外测试集中 RMSE 发生剧烈飙升，证明该模型严重过度拟合了历史数据的偶发特征，在实际运营中必将惨败。资本关卡必须坚决叫停投资。
+  explanation_zh_hk: 樣本外測試集入面 RMSE 急劇暴升，證明呢個模型嚴重過度擬合咗歷史數據嘅個別雜音，喺實際營運入面必然失敗。資本閘口必須堅決叫停投資。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  title_en: What evidence is required before a regression informs expansion?
+  title_zh: 回归模型用于扩张前需要哪些证据？
+  title_zh_hk: 回歸模型用於擴張之前需要邊啲證據？
+  en: Metro Coffee is reviewing an assumed store-expansion forecast. A high R-squared or significant slope can look persuasive,
+    but neither establishes stable prediction, correct specification, causality, or commercial value. A defensible review
+    combines the decision target, coefficient magnitude, uncertainty, residual behavior, data design, and performance on genuinely
+    unseen observations before management considers capital allocation.
+  zh: 都市咖啡正在审视一项假设的门店扩张预测。较高的 R 平方或显著斜率可能看起来很有说服力，但两者都不能证明预测稳定、模型设定正确、具有因果性或商业价值。可辩护的复核应结合决策目标、系数大小、不确定性、残差表现、数据设计与真正未见观测上的表现，再由管理层考虑资本配置。
+  zh_hk: 都市咖啡正審視一項假設嘅門市擴張預測。較高嘅 R 平方或者顯著斜率可能睇落好有說服力，但兩者都唔可以證明預測穩定、模型設定正確、具有因果性或者商業價值。可辯護嘅覆核應該結合決策目標、系數大小、不確定性、殘差表現、數據設計同真正未見觀測上嘅表現，再由管理層考慮資本配置。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Review set = {estimand and design, coefficients and intervals, R^2 and s_e, diagnostics, validation error, costs
+    and constraints}
+  formula_zh: 复核集合 = {估计目标与设计、系数与区间、R^2 与 s_e、诊断、验证误差、成本与约束}
+  formula_zh_hk: 覆核集合 = {估計目標同設計、系數同區間、R^2 同 s_e、診斷、驗證誤差、成本同約束}
+  formula_tex: \mathcal{R}=\{\text{design},\ \hat\beta\ \&\ CI,\ R^2,\ s_e,\ \text{diagnostics},\ \text{validation loss},\
+    \text{decision costs}\}
+  s1_en: R-squared summarizes in-sample variation accounted for, while s_e summarizes residual scale in outcome units. A slope
+    estimate and its interval describe magnitude and uncertainty under the inferential method. Each answers a different question,
+    and none alone certifies a model for deployment.
+  s1_zh: R 平方概括样本内所核算的变异份额，s_e 则以结果单位概括残差尺度。斜率估计及其区间描述既定推断方法下的大小与不确定性。各指标回答不同问题，任何一个都不能单独认证模型可部署。
+  s1_zh_hk: R 平方概括樣本內所核算嘅變異份額，s_e 就以結果單位概括殘差尺度。斜率估計同佢嘅區間描述既定推斷方法之下嘅大小同不確定性。各指標回答唔同問題，任何一個都唔可以單獨認證模型可以部署。
+  s2_en: Residual plots assess functional form, changing variance, clustering, and unusual observations. Validation assesses
+    generalization to data not used for fitting or model selection. Causal use additionally requires a credible identification
+    design; predictive accuracy by itself does not establish intervention effects.
+  s2_zh: 残差图检查函数形式、变化方差、聚类与异常观测。验证则评估模型对未用于拟合或模型选择的数据的泛化。若用于因果决策，还需要可信识别设计；预测准确本身不能证明干预效应。
+  s2_zh_hk: 殘差圖檢查函數形式、變化方差、聚類同異常觀測。驗證就評估模型對未用於擬合或者模型選擇嘅數據嘅泛化。如果用於因果決策，仲需要可信識別設計；預測準確本身唔可以證明干預效應。
+  title_en: No single statistic is a universal approval gate
+  title_zh: 任何单一统计量都不是通用审批关卡
+  title_zh_hk: 任何單一統計量都唔係通用審批關卡
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  left_en: Model evidence
+  left_zh: 模型证据
+  right_en: Decision evidence
+  right_zh: 决策证据
+  s1_en: A useful model review reports effect estimates or predictive features, uncertainty, units, data coverage, residual
+    diagnostics, sensitivity to influential cases, and an error metric chosen before viewing the final test results. Model
+    comparison should use the same outcome definition and test observations.
+  s1_zh: 有用的模型复核应报告效应估计或预测特征、不确定性、单位、数据覆盖、残差诊断、对强影响案例的敏感性，以及在查看最终测试结果前选定的误差指标。模型比较应采用相同结果定义与测试观测。
+  s1_zh_hk: 有用嘅模型覆核應該報告效應估計或者預測特徵、不確定性、單位、數據覆蓋、殘差診斷、對強影響案例嘅敏感性，以及喺查看最終測試結果之前選定嘅誤差指標。模型比較應該採用相同結果定義同測試觀測。
+  s2_en: Out-of-sample data should reflect the deployment horizon and target population. Random splitting may be unsuitable
+    for time-dependent or geographically clustered data; temporal, grouped, or rolling validation may be more relevant. The
+    split rule must avoid leakage from future or related observations.
+  s2_zh: 样本外数据应反映部署时域与目标总体。对于时间依赖或地理聚类数据，随机拆分可能不适合；时间、分组或滚动验证可能更相关。拆分规则必须避免未来信息或相关观测泄漏。
+  s2_zh_hk: 樣本外數據應該反映部署時域同目標總體。對於時間依賴或者地理聚類數據，隨機拆分可能唔適合；時間、分組或者滾動驗證可能更加相關。拆分規則必須避免未來資訊或者相關觀測洩漏。
+  s3_en: Capital decisions also require forecast value, downside risk, costs, capacity constraints, reversibility, and governance
+    approval. Statistical thresholds should be prespecified and context-specific, not presented as universal rules such as
+    R-squared above 0.70 or p below 0.05.
+  s3_zh: 资本决策还需要考虑预测价值、下行风险、成本、产能约束、可逆性与治理审批。统计阈值应预先指定并适配情境，而不应被表述为 R 平方高于 0.70 或 p 小于 0.05 等通用规则。
+  s3_zh_hk: 資本決策仲需要考慮預測價值、下行風險、成本、產能約束、可逆性同治理審批。統計閾值應該預先指定並配合情境，而唔應該被表述做 R 平方高過 0.70 或者 p 細過 0.05 等通用規則。
+  left_zh_hk: 模型證據
+  right_zh_hk: 決策證據
+  title_en: Validation must match the intended deployment setting
+  title_zh: 验证必须匹配预期部署情境
+  title_zh_hk: 驗證必須匹配預期部署情境
+- id: ledger
+  visual: steps
+  seconds: 38
+  step1_en: 'Teaching assumptions: training residual scale s_e = 12 cups; five held-out errors = -10, 12, -14, 15, 13 cups'
+  step1_zh: 教学假设：训练残差尺度 s_e = 12 杯；五个留出误差 = -10、12、-14、15、13 杯
+  step2_en: Validation MSE = (100 + 144 + 196 + 225 + 169)/5 = 166.8 cups^2
+  step2_zh: 验证 MSE = (100 + 144 + 196 + 225 + 169)/5 = 166.8 杯^2
+  step3_en: Validation RMSE = sqrt(166.8) = 12.92 cups; compare with benchmarks and uncertainty, not an automatic approval
+    rule
+  step3_zh: 验证 RMSE = √166.8 = 12.92 杯；应与基准及不确定性比较，而不是作为自动审批规则
+  s1_en: For illustration, assume the fitted model has training residual standard error 12 cups and produces the five held-out
+    errors shown. These are teaching assumptions, not verified store openings, budgets, sales, leases, investment returns,
+    or approval records.
+  s1_zh: 作为示例，假设拟合模型的训练残差标准误为 12 杯，并产生上述五个留出误差。这些数字是教学假设，并非已核实的开店、预算、销售、租约、投资回报或审批记录。
+  s1_zh_hk: 作為例子，假設擬合模型嘅訓練殘差標準誤係 12 杯，並產生上述五個留出誤差。呢啲數字係教學假設，唔係已核實嘅開店、預算、銷售、租約、投資回報或者審批記錄。
+  s2_en: Square the held-out errors, average them using the validation sample size, and take the square root. The resulting
+    RMSE is approximately 12.92 cups and remains in the outcome unit, which supports direct comparison with operational tolerances
+    expressed in cups.
+  s2_zh: 将留出误差平方，以验证样本量取平均，再开平方。所得 RMSE 约为 12.92 杯，单位仍为结果单位，可与以杯表示的经营容忍范围直接比较。
+  s2_zh_hk: 將留出誤差平方，以驗證樣本量取平均，再開平方。所得 RMSE 約係 12.92 杯，單位仍然係結果單位，可以同以杯表示嘅營運容忍範圍直接比較。
+  s3_en: The validation RMSE is close to the training residual scale in this assumed example, but five observations provide
+    limited evidence and the denominators differ. Review error uncertainty, representativeness, baseline forecasts, subgroup
+    performance, and decision costs before drawing a deployment conclusion.
+  s3_zh: 在该假设示例中，验证 RMSE 接近训练残差尺度，但五个观测提供的证据有限，而且两者分母不同。作出部署结论前，应审查误差不确定性、代表性、基准预测、分组表现与决策成本。
+  s3_zh_hk: 喺呢個假設例子入面，驗證 RMSE 接近訓練殘差尺度，但五個觀測提供嘅證據有限，而且兩者分母唔同。作出部署結論之前，應該審查誤差不確定性、代表性、基準預測、分組表現同決策成本。
+  step1_zh_hk: 教學假設：訓練殘差尺度 s_e = 12 杯；五個留出誤差 = -10、12、-14、15、13 杯
+  step2_zh_hk: 驗證 MSE = (100 + 144 + 196 + 225 + 169)/5 = 166.8 杯^2
+  step3_zh_hk: 驗證 RMSE = √166.8 = 12.92 杯；應該同比較基準同不確定性，而唔係作為自動審批規則
+  title_en: Compare assumed training and validation error consistently
+  title_zh: 一致比较假设训练误差与验证误差
+  title_zh_hk: 一致比較假設訓練誤差同驗證誤差
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  q1_en: What does a complete regression review combine?
+  q1_zh: 完整回归复核应整合什么？
+  q2_en: What does validation error not decide by itself?
+  q2_zh: 验证误差本身不能决定什么？
+  s1_en: Combine the decision target and design with coefficient magnitude, intervals, fit, residual scale, diagnostics, leakage
+    controls, sensitivity analyses, and relevant out-of-sample performance. For causal decisions, add credible identification
+    evidence.
+  s1_zh: 应把决策目标与设计，同系数大小、区间、拟合、残差尺度、诊断、泄漏控制、敏感性分析及相关样本外表现结合。对于因果决策，还需加入可信识别证据。
+  s1_zh_hk: 應該將決策目標同設計，同系數大小、區間、擬合、殘差尺度、診斷、洩漏控制、敏感性分析及相關樣本外表現結合。對於因果決策，仲需要加入可信識別證據。
+  s2_en: Validation error does not by itself decide investment, staffing, pricing, or rollout. The decision requires a prespecified
+    loss function, comparison with practical baselines, uncertainty, costs, risk tolerance, operational feasibility, and accountable
+    approval.
+  s2_zh: 验证误差本身不能决定投资、人手、定价或推广。决策需要预先指定的损失函数、与实用基准的比较、不确定性、成本、风险容忍、经营可行性与明确审批责任。
+  s2_zh_hk: 驗證誤差本身唔可以決定投資、人手、定價或者推廣。決策需要預先指定嘅損失函數、同實用基準嘅比較、不確定性、成本、風險容忍、營運可行性同明確審批責任。
+  s3_en: In the assumed calculation, held-out RMSE is 12.92 cups versus training s_e of 12 cups. Treat that similarity as
+    one encouraging diagnostic, not certification, and document the remaining evidence and governance judgment.
+  s3_zh: 在假设计算中，留出 RMSE 为 12.92 杯，训练 s_e 为 12 杯。应把这种接近视为一项积极诊断，而不是认证，并记录其余证据与治理判断。
+  s3_zh_hk: 喺假設計算入面，留出 RMSE 係 12.92 杯，訓練 s_e 係 12 杯。應該將呢種接近視為一項正面診斷，而唔係認證，並記錄其餘證據同治理判斷。
+  q1_zh_hk: 完整回歸覆核應該整合咩？
+  q2_zh_hk: 驗證誤差本身唔可以決定咩？
+  title_en: Approve decisions through governance, not statistics alone
+  title_zh: 通过治理审批决策，而非只凭统计量
+  title_zh_hk: 透過治理審批決策，而唔係只憑統計量

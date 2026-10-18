@@ -1,0 +1,127 @@
+id: ECON-PR-DEM
+course: economics
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 88
+title_en: Demand
+title_zh: 需求
+title_zh_hk: 需求
+objective_en: Name demand as how many buns buyers will take at each price.
+objective_zh: 需求是每个价格下买家愿意买多少个面包。
+objective_zh_hk: 需求係每個價格下買家愿意買幾多個麵包。
+glossary:
+- en: demand
+  zh: 需求
+  zh_hk: 需求
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What does demand list?
+  zh: 需求列出的是什么？
+  zh_hk: 需求列出嘅係咩？
+  answer_en: How many units buyers will take at each price.
+  answer_zh: 每个价格下买家愿意买多少。
+  answer_zh_hk: 每個價格下買家愿意買幾多。
+- id: Q2
+  type: transfer
+  en: The bun price falls. What happens along the demand list?
+  zh: 面包价下跌。沿着需求会怎样？
+  zh_hk: 麵包價下跌。沿住需求會點？
+  answer_en: Buyers take more buns.
+  answer_zh: 买家会买更多面包。
+  answer_zh_hk: 買家會買更多麵包。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: This module
+  kicker_en: This module
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Demand
+  title_zh: 需求
+  title_zh_hk: 需求
+  en: Choice was one person. Now many people walk the street. Each has a highest price they will
+    pay for a bun. Write those willingnesses down. That list is demand.
+  zh: 选择是一个人。现在街上有很多人。每个人对一个面包都有一个最高愿付的价。把这些意愿写下来。那张清单就是需求。
+  zh_hk: 選擇係一個人。而家街上有好多人。每個人對一個麵包都有一個最高願付嘅價。將呢啲意願寫低。嗰張清單就係需求。
+- id: define
+  visual: definition_card
+  seconds: 22
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Demand
+  title_zh: 需求
+  title_zh_hk: 需求
+  formula: Demand = quantity buyers will take at each price
+  formula_en: Demand = quantity buyers will take at each price
+  formula_zh: 需求 = 每个价格下买家愿意买的数量
+  formula_zh_hk: 需求 = 每個價格下買家愿意買嘅數量
+  gloss_en: Not a wish. A list of prices and quantities.
+  gloss_zh: 不是愿望。是一张价和量的清单。
+  gloss_zh_hk: 唔係願望。係一張價同量嘅清單。
+  s1_en: Demand is how many buns buyers will take at each price.
+  s1_zh: 需求是每个价格下买家愿意买多少个面包。
+  s1_zh_hk: 需求係每個價格下買家願意買幾多個麵包。
+  s2_en: It is not the sentence 'people want bread.' Wanting is not a list. Demand is a list.
+  s2_zh: 不是一句“人想吃面包”。想要不是清单。需求才是清单。
+  s2_zh_hk: 唔係一句「人想食麵包」。想要唔係清單。需求先係清單。
+- id: example
+  visual: example
+  seconds: 24
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: The price falls
+  title_zh: 价格往下跌
+  title_zh_hk: 價格往下跌
+  setup_en: At eight dollars some walk past. At four dollars more stop.
+  setup_zh: 八块时有人走过。四块时停下的人更多。
+  setup_zh_hk: 八蚊嗰陣有人行過。四蚊嗰陣停低嘅人更多。
+  result_en: A lower price, more buns taken. That is movement along demand.
+  result_zh: 价更低，买走的面包更多。这是沿着需求在动。
+  result_zh_hk: 價更低，買走嘅麵包更多。呢個係沿住需求喺度郁。
+  s1_en: Hold the buyers' list still. Only the posted price changes.
+  s1_zh: 买家的清单先不动。只改牌价。
+  s1_zh_hk: 買家清單先唔郁。淨係改牌價。
+  s2_en: At eight dollars some customers walk past. That is a high price on the same list.
+  s2_zh: 八块，有些客人走过。同一张清单上，这是高价。
+  s2_zh_hk: 八蚊，有啲客人行過。同一張清單上，呢個係高價。
+  s3_en: At four dollars more of them stop. The list did not change. The price did. That is the
+    demand story.
+  s3_zh: 四块，停下的人更多。清单没有改。改的是价格。这就是需求要讲的事。
+  s3_zh_hk: 四蚊，停低嘅人更多。清單冇改。改嘅係價格。呢個就係需求要講嘅事。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: This module
+  kicker_en: This module
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Buyers first
+  title_zh: 先看买家
+  title_zh_hk: 先睇買家
+  q1_en: Demand is a list of price and quantity.
+  q1_zh: 需求是价和量的清单。
+  q1_zh_hk: 需求係價同量嘅清單。
+  q2_en: Next module is the seller's list.
+  q2_zh: 下一单元是卖家的清单。
+  q2_zh_hk: 下一單元係賣家嘅清單。
+  s1_en: Keep the buyers' list.
+  s1_zh: 先留下买家这张清单。
+  s1_zh_hk: 先留低買家呢張清單。
+  s2_en: Next we write the sellers' list.
+  s2_zh: 接下来写卖家的清单。
+  s2_zh_hk: 跟住寫賣家嘅清單。
+  s3_en: That second list is supply.
+  s3_zh: 那第二张叫供给。
+  s3_zh_hk: 嗰第二張叫供給。

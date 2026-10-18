@@ -1,0 +1,200 @@
+id: STAT-M06-T10-TSLOP
+course: STAT-M06
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The t-Test for a Regression Slope: Evidence, Magnitude, and Decision Limits'
+title_zh: 回归斜率 t 检验：证据、幅度与决策边界
+title_zh_hk: 回歸斜率 t 檢驗：證據、幅度同決策界線
+objective_en: Formulate and conduct a Student t-test for a simple-regression slope, calculate the test statistic and residual
+  degrees of freedom, interpret rejection and failure to reject correctly, connect a two-sided test with a matching confidence
+  interval, and separate statistical evidence from causality, economic importance, and payment or rollout decisions.
+objective_zh: 构建并执行简单回归斜率的学生氏 t 检验，计算检验统计量与残差自由度，正确解释拒绝与不拒绝结论，把双侧检验与匹配置信区间联系起来，并区分统计证据、因果关系、经济重要性以及付款或推广决策。
+objective_zh_hk: 構建並執行簡單回歸斜率嘅學生氏 t 檢驗，計算檢驗統計量同殘差自由度，正確解讀拒絕同唔拒絕結論，將雙側檢驗同匹配置信區間連繫起嚟，並區分統計證據、因果關係、經濟重要性以及付款或者推廣決策。
+glossary:
+- en: Slope t-Statistic
+  zh: 斜率 t 统计量
+  zh_hk: 斜率 t 統計量
+  lock: true
+- en: Null Slope Hypothesis
+  zh: 零斜率原假设
+  zh_hk: 零斜率原假設
+  lock: true
+- en: Statistical Significance
+  zh: 统计显著性
+  zh_hk: 統計顯著性
+  lock: true
+- en: Economic Significance
+  zh: 经济显著性
+  zh_hk: 經濟顯著性
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: 'What does failing to reject H0: beta_1 = 0 mean?'
+  question_zh: '未能拒绝原假设 H_0: beta_1 = 0 对 Metro Coffee 的营销决策层意味着什么？'
+  question_zh_hk: '未能拒絕原假設 H_0: beta_1 = 0 對 Metro Coffee 嘅營銷決策層代表緊啲咩？'
+  options_en:
+  - 'A: The marketing promotion reliably generates an exact 1-to-1 sales increase'
+  - 'B: The evidence is insufficient to reject a zero population slope under the specified model, test, and sample'
+  - 'C: Total retail sales will drop to zero if the marketing campaign continues'
+  - 'D: The true intercept of the regression model must be exactly zero'
+  options_zh:
+  - 'A: 营销推广能够确凿地带来 1 比 1 的销量增长'
+  - 'B: 实证数据不足以证明该推广活动对咖啡销量产生任何超出随机抽样噪声的线性影响'
+  - 'C: 若继续进行该营销活动，门市总销售额必然归零'
+  - 'D: 该回归模型的真实截距项必然严格等于零'
+  options_zh_hk:
+  - 'A: 行銷推廣能夠好穩陣噉帶嚟 1 比 1 嘅銷量增長'
+  - 'B: 實證數據唔足以證明呢個推廣活動對咖啡銷量產生任何超越隨機抽樣雜音嘅線性影響'
+  - 'C: 如果繼續搞呢個行銷活動，門市總營業額必然會跌到零'
+  - 'D: 呢個回歸模型嘅真實截距項必然嚴格等於零'
+  answer: B
+  explanation_en: Failure to reject is not proof that the slope equals zero or that the campaign has no effect. It is an evidence
+    statement conditional on the procedure and assumptions.
+  explanation_zh: 未能拒绝 beta_1 = 0 意味着样本斜率在统计上与零无显著差异；观测到的任何微弱增长都极有可能纯属随机抽样波动。
+  explanation_zh_hk: 未能拒絕 beta_1 = 0 代表樣本斜率喺統計上同零冇顯著分別；睇到嘅任何微小增長都好可能只係隨機抽樣波動引起。
+- id: Q2
+  type: multiple_choice
+  question_en: 'Assume b_1 = 0.60, SE(b_1) = 0.20, and H0: beta_1 = 0. What is the t statistic?'
+  question_zh: 对 App 折扣活动的审计测得样本斜率 beta_1_hat = +0.60 杯/元，斜率标准误 SE(beta_1_hat) = 0.20，样本为 18 个班次。计算出的 t 统计量是多少？
+  question_zh_hk: 對 App 優惠活動嘅審計測得樣本斜率 beta_1_hat = +0.60 杯/蚊，斜率標準誤 SE(beta_1_hat) = 0.20，樣本有 18 個排班。計算出嚟嘅 t 統計量係幾多？
+  options_en:
+  - 'A: t = +0.12'
+  - 'B: t = +3.00'
+  - 'C: t = +0.40'
+  - 'D: t = +1.50'
+  options_zh:
+  - 'A: t = +0.12'
+  - 'B: t = +3.00'
+  - 'C: t = +0.40'
+  - 'D: t = +1.50'
+  options_zh_hk:
+  - 'A: t = +0.12'
+  - 'B: t = +3.00'
+  - 'C: t = +0.40'
+  - 'D: t = +1.50'
+  answer: B
+  explanation_en: t = (0.60 - 0)/0.20 = 3.00. In simple regression with n = 18, the residual degrees of freedom are 16.
+  explanation_zh: 检验统计量为 t = (beta_1_hat - 0) / SE(beta_1_hat) = 0.60 / 0.20 = +3.00。
+  explanation_zh_hk: 檢驗統計量係 t = (beta_1_hat - 0) / SE(beta_1_hat) = 0.60 / 0.20 = +3.00。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  title_en: Is the estimated campaign slope distinguishable from zero?
+  title_zh: 估计活动斜率是否能与零区分？
+  title_zh_hk: 估計活動斜率係咪可以同零區分？
+  en: Metro Coffee is reviewing an assumed simple regression of store-shift cup sales on app-discount spending. The estimated
+    slope is positive, but sampling variation can produce a positive estimate even when the population slope is zero. A slope
+    t-test compares the estimate with its standard error under a stated null hypothesis. The result evaluates statistical
+    compatibility, not campaign causality, profitability, or entitlement to a performance payment.
+  zh: 都市咖啡正在审视一项假设的简单回归，以 App 折扣投入解释门店班次杯数销量。估计斜率为正，但即使总体斜率为零，抽样波动也可能产生正估计。斜率 t 检验在既定原假设下，把估计值与其标准误比较。结果评估统计相容性，而不能证明活动因果、盈利，或构成业绩付款依据。
+  zh_hk: 都市咖啡正審視一項假設嘅簡單回歸，以 App 優惠投入解釋門市排班杯數銷量。估計斜率係正，但即使總體斜率係零，抽樣波動亦可能產生正估計。斜率 t 檢驗喺既定原假設之下，將估計值同佢嘅標準誤比較。結果評估統計相容性，而唔可以證明活動因果、盈利，或者構成表現付款依據。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: t = (b_1 - beta_1,0) / SE(b_1), with df = n - 2 in simple regression
+  formula_zh: t = (b_1 - beta_1,0) / SE(b_1)；简单回归中 df = n - 2
+  formula_zh_hk: t = (b_1 - beta_1,0) / SE(b_1)；簡單回歸入面 df = n - 2
+  formula_tex: t=\frac{b_1-\beta_{1,0}}{\operatorname{SE}(b_1)},\qquad df=n-2
+  s1_en: The null hypothesis specifies a population slope, commonly beta_1 equal to zero. The test statistic measures how
+    many estimated slope standard errors the sample estimate lies above or below that null value. The numerator is not automatically
+    b_1 unless the null value is zero.
+  s1_zh: 原假设指定一个总体斜率，常见设定是 beta_1 = 0。检验统计量衡量样本估计位于原假设值上方或下方多少个斜率估计标准误。只有原假设值为零时，分子才直接等于 b_1。
+  s1_zh_hk: 原假設指定一個總體斜率，常見設定係 beta_1 = 0。檢驗統計量量度樣本估計位於原假設值上方或者下方幾多個斜率估計標準誤。只有原假設值係零嗰陣，分子先直接等於 b_1。
+  s2_en: In simple regression with an intercept and one slope, the reference t distribution uses n minus 2 residual degrees
+    of freedom. Exact small-sample t inference requires the stated regression assumptions, including an appropriate conditional
+    error model; otherwise robust or design-consistent inference may be needed.
+  s2_zh: 在包含截距与一个斜率的简单回归中，参考 t 分布使用 n - 2 个残差自由度。精确小样本 t 推断要求既定回归假设成立，包括适当的条件误差模型；否则可能需要稳健或与设计一致的推断。
+  s2_zh_hk: 喺包含截距同一個斜率嘅簡單回歸入面，參考 t 分佈使用 n - 2 個殘差自由度。精確小樣本 t 推斷要求既定回歸假設成立，包括適當嘅條件誤差模型；否則可能需要穩健或者同設計一致嘅推斷。
+  title_en: Standardize the estimated slope around the null value
+  title_zh: 围绕原假设值标准化估计斜率
+  title_zh_hk: 圍繞原假設值標準化估計斜率
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  left_en: Statistical evidence
+  left_zh: 统计证据
+  right_en: Practical and causal relevance
+  right_zh: 实际与因果相关性
+  s1_en: For a prespecified two-sided test, reject H0 when the absolute t statistic exceeds the appropriate critical value
+    or when the two-sided p-value is at most alpha. A matching confidence interval excludes the null value exactly when the
+    corresponding two-sided test rejects it.
+  s1_zh: 对于预先指定的双侧检验，当绝对 t 统计量超过适当临界值，或双侧 p 值不大于 alpha 时，拒绝 H0。匹配置信区间恰在对应双侧检验拒绝原假设值时排除该值。
+  s1_zh_hk: 對於預先指定嘅雙側檢驗，當絕對 t 統計量超過適當臨界值，或者雙側 p 值唔大過 alpha 嗰陣，拒絕 H0。匹配置信區間啱啱喺對應雙側檢驗拒絕原假設值嗰陣排除嗰個值。
+  s2_en: Failure to reject does not prove that the slope equals zero or that the campaign has no effect. It states that the
+    evidence is insufficient for rejection under the chosen model, test direction, significance level, and sample. Low precision
+    or low power may be relevant.
+  s2_zh: 不拒绝并不证明斜率等于零，也不证明活动没有效应。它表示在所选模型、检验方向、显著性水平与样本下，证据不足以拒绝原假设。精度不足或功效偏低可能有关。
+  s2_zh_hk: 唔拒絕並唔證明斜率等於零，亦唔證明活動冇效應。佢表示喺所選模型、檢驗方向、顯著性水平同樣本之下，證據不足以拒絕原假設。精度不足或者功效偏低可能有關。
+  s3_en: Statistical significance does not establish a causal campaign effect or adequate return on investment. Management
+    must separately examine randomization or confounding, effect magnitude, interval width, costs, spillovers, multiple analyses,
+    and the prespecified payment or rollout criteria.
+  s3_zh: 统计显著性不能证明活动具有因果效应，也不能证明投资回报足够。管理层还必须分别检查随机化或混杂、效应大小、区间宽度、成本、溢出效应、多项分析以及预设付款或推广标准。
+  s3_zh_hk: 統計顯著性唔可以證明活動具有因果效應，亦唔可以證明投資回報足夠。管理層仲必須分別檢查隨機化或者混雜、效應大小、區間闊度、成本、溢出效應、多項分析以及預設付款或者推廣標準。
+  left_zh_hk: 統計證據
+  right_zh_hk: 實際同因果相關性
+  title_en: A significance decision is narrower than a business decision
+  title_zh: 显著性决策比商业决策更为狭窄
+  title_zh_hk: 顯著性決策比商業決策更加狹窄
+- id: ledger
+  visual: steps
+  seconds: 38
+  step1_en: 'Teaching assumptions: b_1 = 0.60 cups per dollar, SE(b_1) = 0.20, n = 18, H0: beta_1 = 0'
+  step1_zh: '教学假设：b_1 = 每元 0.60 杯，SE(b_1) = 0.20，n = 18，H0: beta_1 = 0'
+  step2_en: t = (0.60 - 0)/0.20 = 3.00; df = 18 - 2 = 16
+  step2_zh: t = (0.60 - 0)/0.20 = 3.00；df = 18 - 2 = 16
+  step3_en: At alpha = 0.05, two-sided critical magnitude is about 2.12; reject H0 because 3.00 > 2.12
+  step3_zh: 在 alpha = 0.05 时，双侧临界绝对值约为 2.12；由于 3.00 > 2.12，拒绝 H0
+  s1_en: For illustration, assume 18 independent store shifts, a correctly specified simple-regression inferential model,
+    slope 0.60 cups per discount dollar, and estimated standard error 0.20. These are teaching assumptions, not verified sales,
+    campaign, invoice, bonus, or employee-performance records.
+  s1_zh: 作为示例，假设有 18 个独立门店班次、一个设定正确的简单回归推断模型、每元折扣投入 0.60 杯的斜率，以及 0.20 的估计标准误。这些数字是教学假设，并非已核实的销售、活动、发票、奖金或员工表现记录。
+  s1_zh_hk: 作為例子，假設有 18 個獨立門市排班、一個設定正確嘅簡單回歸推斷模型、每蚊優惠投入 0.60 杯嘅斜率，以及 0.20 嘅估計標準誤。呢啲數字係教學假設，唔係已核實嘅銷售、活動、發票、獎金或者員工表現記錄。
+  s2_en: The estimate is three estimated standard errors above zero, giving t equal to 3.00 with 16 residual degrees of freedom.
+    For a two-sided 5% test, the critical magnitude is approximately 2.12, so the zero-slope null is rejected under the assumptions.
+  s2_zh: 估计值位于零以上三个估计标准误处，得到 t = 3.00 与 16 个残差自由度。对于 5% 双侧检验，临界绝对值约为 2.12，因此在既定假设下拒绝零斜率原假设。
+  s2_zh_hk: 估計值位於零以上三個估計標準誤嗰度，得到 t = 3.00 同 16 個殘差自由度。對於 5% 雙側檢驗，臨界絕對值約係 2.12，所以喺既定假設之下拒絕零斜率原假設。
+  s3_en: The supported conclusion is that the data provide evidence against a zero population slope under this model. The
+    result does not confirm the campaign caused additional sales, guarantee profit, validate every assumption, or authorize
+    a payment. Those require separate verified evidence and governance criteria.
+  s3_zh: 可支持的结论是：在该模型下，数据提供了反对总体斜率为零的证据。结果不能确认活动导致额外销量、保证盈利、验证全部假设或授权付款。这些结论需要独立的已核实证据与治理标准。
+  s3_zh_hk: 可支持嘅結論係：喺呢個模型之下，數據提供咗反對總體斜率係零嘅證據。結果唔可以確認活動導致額外銷量、保證盈利、驗證全部假設或者授權付款。呢啲結論需要獨立嘅已核實證據同治理標準。
+  step1_zh_hk: '教學假設：b_1 = 每蚊 0.60 杯，SE(b_1) = 0.20，n = 18，H0: beta_1 = 0'
+  step2_zh_hk: t = (0.60 - 0)/0.20 = 3.00；df = 18 - 2 = 16
+  step3_zh_hk: 喺 alpha = 0.05 嗰陣，雙側臨界絕對值約係 2.12；由於 3.00 > 2.12，拒絕 H0
+  title_en: Execute an assumed two-sided slope test
+  title_zh: 执行假设的双侧斜率检验
+  title_zh_hk: 執行假設嘅雙側斜率檢驗
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  q1_en: What does rejecting a zero-slope null establish?
+  q1_zh: 拒绝零斜率原假设能证明什么？
+  q2_en: What does failure to reject not establish?
+  q2_zh: 不拒绝原假设不能证明什么？
+  s1_en: Rejection establishes that the sample evidence is inconsistent with the specified null at the chosen significance
+    level, conditional on the inferential model and design. Report the slope, standard error, t statistic, degrees of freedom,
+    p-value or critical rule, and confidence interval.
+  s1_zh: 拒绝表示在推断模型与设计成立的条件下，样本证据与指定原假设在所选显著性水平上不相容。应报告斜率、标准误、t 统计量、自由度、p 值或临界规则，以及置信区间。
+  s1_zh_hk: 拒絕表示喺推斷模型同設計成立嘅條件之下，樣本證據同指定原假設喺所選顯著性水平上唔相容。應該報告斜率、標準誤、t 統計量、自由度、p 值或者臨界規則，以及置信區間。
+  s2_en: Failure to reject does not prove no effect, no practical value, or an exactly zero slope. Rejection likewise does
+    not prove causality or profitability. Both decisions must stay within the model, sample, and prespecified inferential
+    question.
+  s2_zh: 不拒绝不能证明没有效应、没有实际价值或斜率恰好为零。拒绝同样不能证明因果或盈利。两类决策都必须限于模型、样本与预设推断问题的范围。
+  s2_zh_hk: 唔拒絕唔可以證明冇效應、冇實際價值或者斜率啱啱等於零。拒絕同樣唔可以證明因果或者盈利。兩類決策都必須限於模型、樣本同預設推斷問題嘅範圍。
+  s3_en: For the assumed example, t equals 3.00 with 16 degrees of freedom, so the two-sided 5% test rejects beta_1 equal
+    to zero. Keep campaign causality, ROI, payment, and rollout decisions separate from that statistical result.
+  s3_zh: 在假设示例中，t = 3.00，自由度为 16，因此 5% 双侧检验拒绝 beta_1 = 0。应把活动因果、投资回报、付款与推广决策同该统计结果分开。
+  s3_zh_hk: 喺假設例子入面，t = 3.00，自由度係 16，所以 5% 雙側檢驗拒絕 beta_1 = 0。應該將活動因果、投資回報、付款同推廣決策同呢個統計結果分開。
+  q1_zh_hk: 拒絕零斜率原假設可以證明咩？
+  q2_zh_hk: 唔拒絕原假設唔可以證明咩？
+  title_en: Report the estimate, uncertainty, assumptions, and decision scope
+  title_zh: 同时报告估计、不确定性、假设与决策范围
+  title_zh_hk: 同時報告估計、不確定性、假設同決策範圍

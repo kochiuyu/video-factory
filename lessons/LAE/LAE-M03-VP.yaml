@@ -1,0 +1,125 @@
+id: LAE-M03-VP
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 92
+title_en: Vertiport
+title_zh: 起降场
+title_zh_hk: 起降場
+objective_en: 'Name the vertiport: the flight starts and ends on a pad, not on a runway. Urban pads do not stack without limit.'
+objective_zh: 给起降场起名：飞行在垫子上开始和结束，不是在跑道上。城里的垫子不能无限制往上叠。
+objective_zh_hk: 畀起降場起名：飛行喺墊上面開始同結束，唔係喺跑道上面。城入面嘅墊唔可以無限往上疊。
+glossary:
+- en: vertiport
+  zh: 起降场
+  zh_hk: 起降場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Where does a low-altitude flight begin and end?
+  zh: 低空飞行在哪里开始、在哪里结束？
+  zh_hk: 低空飛行喺邊度開始、喺邊度結束？
+  answer_en: On a pad. Not on a runway.
+  answer_zh: 在垫子上。不是在跑道上。
+  answer_zh_hk: 喺墊上面。唔係喺跑道上面。
+- id: Q2
+  type: transfer
+  en: Why can a Shenzhen roof and a Sha Tin locker not host an unlimited number of pads?
+  zh: 为什么深圳的屋顶和沙田的储物柜，不能无限制地摆满垫子？
+  zh_hk: 點解深圳嘅屋頂同沙田嘅儲物櫃，唔可以無限擺滿墊？
+  answer_en: Urban pads do not stack without limit. Roof and locker space is scarce too.
+  answer_zh: 城里的垫子不能无限制往上叠。屋顶和储物柜的空间也稀缺。
+  answer_zh_hk: 城入面嘅墊唔可以無限往上疊。屋頂同儲物櫃嘅空間都稀缺。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Vertiport
+  title_zh: 起降场
+  title_zh_hk: 起降場
+  en: Last sitting named two machines. Keep the line from a point in Shenzhen to a point in Sha Tin. This short names the ground at each end.
+  zh: 上一讲给两种机器起了名。还是深圳一点到沙田一点的那条线。这条短片给两端的地面起名。
+  zh_hk: 上一講畀兩種機器起咗名。仲係深圳一點到沙田一點嗰條線。呢條短片畀兩端嘅地面起名。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Vertiport
+  title_zh: 起降场
+  title_zh_hk: 起降場
+  formula: vertiport = pad, not a runway
+  formula_en: vertiport = pad, not a runway
+  formula_zh: 起降场 = 垫子，不是跑道
+  formula_zh_hk: 起降場 = 墊，唔係跑道
+  gloss_en: Where the flight begins and ends
+  gloss_zh: 飞行开始和结束的地方
+  gloss_zh_hk: 飛行開始同結束嘅地方
+  s1_en: A vertiport is a pad. The machine goes straight up from it and comes straight down onto it. There is no long runway.
+  s1_zh: 起降场是一块垫子。机器从上面直着上去，再直着下来。没有一条长跑道。
+  s1_zh_hk: 起降場係一塊墊。機器由上面直直上去，再直直落嚟。冇一條長跑道。
+  s2_en: Say “vertiport” once, then say “pad.” The claim is the place, not the English word.
+  s2_zh: 先说一次起降场，然后说垫子。要记住的是这个地点，不是那个英文词。
+  s2_zh_hk: 先講一次起降場，然後講墊。要記住嘅係呢個地點，唔係嗰個英文詞。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: Contrast
+  kicker_en: Contrast
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Two ends of the line
+  title_zh: 这条线的两端
+  title_zh_hk: 呢條線嘅兩端
+  left_en: Shenzhen roof
+  left_zh: 深圳的屋顶
+  left_zh_hk: 深圳嘅屋頂
+  right_en: Sha Tin locker
+  right_zh: 沙田的储物柜
+  right_zh_hk: 沙田嘅儲物櫃
+  s1_en: The line still runs from a roof in Shenzhen to a locker in Sha Tin. Each end needs a pad.
+  s1_zh: 这条线还是从深圳的一个屋顶到沙田的一个储物柜。两端都要有垫子。
+  s1_zh_hk: 呢條線仲係由深圳一個屋頂到沙田一個儲物櫃。兩端都要有墊。
+  s2_en: A runway airport is the wrong picture. These pads sit on roofs and small plots. They do not stack without limit.
+  s2_zh: 不要画一座跑道机场。这些垫子落在屋顶和小地块上。不能无限制往上叠。
+  s2_zh_hk: 唔好畫一座跑道機場。呢啲墊落喺屋頂同細地塊上面。唔可以無限往上疊。
+  s3_en: If the pad is full, the next machine cannot land. The band above can still be empty. The bottleneck is the ground.
+  s3_zh: 垫子若已经满了，下一台机器就落不下来。上面那一层仍可能是空的。卡住的是地面。
+  s3_zh_hk: 墊若已經滿，下一部機器就落唔到。上面嗰一層仍然可能係空嘅。卡住嘅係地面。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Name the pad
+  title_zh: 说出这块垫子
+  title_zh_hk: 講出呢塊墊
+  q1_en: What is a vertiport?
+  q1_zh: 起降场是什么？
+  q1_zh_hk: 起降場係咩？
+  q2_en: Why can a city roof not hold unlimited pads?
+  q2_zh: 为什么城市屋顶不能无限制地放垫子？
+  q2_zh_hk: 點解城市屋頂唔可以無限放墊？
+  s1_en: A vertiport is the pad where the flight begins and ends.
+  s1_zh: 起降场是飞行开始和结束的那块垫子。
+  s1_zh_hk: 起降場係飛行開始同結束嗰塊墊。
+  s2_en: Urban pads do not stack without limit. Write the roof as scarce, not only the sky.
+  s2_zh: 城里的垫子不能无限制往上叠。请把屋顶也写成稀缺，不要只写天空。
+  s2_zh_hk: 城入面嘅墊唔可以無限往上疊。請將屋頂都寫成稀缺，唔好淨係寫天空。
+  s3_en: Next short asks what happens when the machine sits on that pad instead of flying.
+  s3_zh: 下一支短片问：机器若坐在垫子上而不飞，会发生什么。
+  s3_zh_hk: 下一條短片問：機器若坐喺墊上面而唔飛，會發生咩事。

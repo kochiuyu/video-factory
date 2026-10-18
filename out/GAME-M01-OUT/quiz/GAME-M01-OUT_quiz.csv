@@ -1,5 +1,0 @@
-﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
-1,GAME-M01-OUT,comprehension,25,What is on paper now?,现在纸上有什么？,而家紙上面有咩？,"The players, the strategies, and the payoffs.",参与人、策略和报酬。,參與人、策略同報酬。
-2,GAME-M01-OUT,comprehension,25,Has anyone picked a cell yet?,有没有人选出一格？,有冇人揀到一格？,No. What each cart would pick is the next sitting.,没有。每辆车会选哪一格，留给下一讲。,冇。每架車會揀邊一格，留俾下一講。
-3,GAME-M01-OUT,check,25,The table is written.,表已经写好。,張表已經寫好。,,,
-4,GAME-M01-OUT,transfer,25,Nobody has picked a cell yet.,还没有人选出一格。,都未有人揀到一格。,,,

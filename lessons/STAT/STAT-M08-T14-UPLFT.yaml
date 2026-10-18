@@ -1,0 +1,165 @@
+id: STAT-M08-T14-UPLFT
+course: STAT-M08
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Targeted Voucher Intervention: Estimating Uplift from Push Campaigns'
+title_zh: 定向优惠券干预：估算推送营销的真实增量
+title_zh_hk: 定向優惠券干預：估算推送營銷嘅真實增量
+objective_en: Define conditional promotional uplift as a treatment-effect contrast, explain why individual response types are latent, estimate average uplift from a randomized holdout, and design targeting decisions using uncertainty, cost, and validation.
+objective_zh: 将条件促销净增量定义为处理效应对比，解释个体响应类型为何不可直接观测，利用随机保留对照组估计平均净增量，并结合不确定性、成本与验证设计定向决策。
+objective_zh_hk: 將條件促銷淨增量定義做處理效應對比，解釋個體響應類型點解唔可以直接觀測，利用隨機保留對照組估計平均淨增量，並結合不確定性、成本同驗證設計定向決策。
+glossary:
+- en: Promotional Uplift
+  zh: 促销净增量（增益）
+  zh_hk: 促銷淨增量（增益）
+  lock: true
+- en: Persuadables
+  zh: 可说服客群
+  zh_hk: 可說服客群
+  lock: true
+- en: Sure Things
+  zh: 自然转化客群（铁杆客）
+  zh_hk: 自然轉化客群（鐵桿客）
+  lock: true
+- en: Lost Causes
+  zh: 无可挽回客群（沉默客）
+  zh_hk: 無可挽回客群（沉默客）
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: In promotional uplift modeling, why is blasting discount vouchers to the 'Sure Things' customer segment a commercial mistake?
+  question_zh: 在促销净增量（Uplift）建模中，为何向‘自然转化客群（Sure Things）’大规模派发折扣券是严重的商业失误？
+  question_zh_hk: 喺促銷淨增量（Uplift）建模入面，點解向‘自然轉化客群（Sure Things）’大規模狂派折扣券係嚴重嘅商業失誤？
+  options_en:
+  - 'A: Their baseline purchase probability is already high, so the expected incremental effect may be small and the voucher may subsidize purchases that would occur anyway'
+  - 'B: Sure Things are technically incapable of opening push notifications'
+  - 'C: Sending vouchers to loyal customers violates consumer protection laws'
+  - 'D: Sure Things always report a negative log-likelihood variance'
+  options_zh:
+  - 'A: 其基准购买概率已经较高，因此预期增量效应可能很小，优惠券可能只是在补贴本来就会发生的购买'
+  - 'B: 自然转化客群在技术上根本无法打开手机 App 的推送通知'
+  - 'C: 向忠诚老客赠送优惠券直接违反了消费者保护法例'
+  - 'D: 自然转化客群的对数似然方差在数学上始终为负数'
+  options_zh_hk:
+  - 'A: 佢哋嘅基準購買概率已經較高，所以預期增量效應可能好細，優惠券可能只係補貼本來就會發生嘅購買'
+  - 'B: 自然轉化客群喺技術上根本開唔到手機 App 嘅推送通知'
+  - 'C: 向忠實熟客派優惠券直接違反咗消費者保障條例'
+  - 'D: 自然轉化客群嘅對數似然方差喺數學上永遠係負數'
+  answer: A
+  explanation_en: Sure Things are conceptually customers with high outcomes under both treatment and control, so their individual uplift is near zero. In practice, that latent type is not directly observed and must not be treated as a certain customer label.
+  explanation_zh: 概念上，自然转化客群在处理与对照状态下都具有较高结果，因此其个体净增量接近零。实际应用中，这种潜在类型无法直接观测，不应被视为确定的个人标签。
+  explanation_zh_hk: 概念上，自然轉化客群喺處理同對照狀態之下都有較高結果，所以個體淨增量接近零。實際應用入面，呢種潛在類型無法直接觀測，唔應該當作確定嘅個人標籤。
+- id: Q2
+  type: multiple_choice
+  question_en: Metro Coffee runs an A/B push voucher experiment on 4,000 at-risk app users. The treated group (T = 1) achieves an 18% redemption rate, while the untreated control holdout (T = 0) achieves a 6% spontaneous return rate. What is the net causal uplift?
+  question_zh: Metro Coffee 对四千名高危流失会员开展 A/B 推送实验。发券组（T = 1）核销转化率为 18%，而未受干预的对照保留组（T = 0）自发到店率为 6%。该营销活动的因果净增量（Uplift）是多少？
+  question_zh_hk: Metro Coffee 對四千個高危流失會員做 A/B 推送實驗。派券組（T = 1）換領轉化率係 18%，而冇受干預嘅對照保留組（T = 0）自發幫襯率係 6%。呢個行銷活動嘅因果淨增量（Uplift）係幾多？
+  options_en:
+  - 'A: +18.0 percentage points'
+  - 'B: +12.0 percentage points (+0.12)'
+  - 'C: +24.0 percentage points'
+  - 'D: +3.0 percentage points'
+  options_zh:
+  - 'A: +18.0 个百分点'
+  - 'B: +12.0 个百分点（+0.12）'
+  - 'C: +24.0 个百分点'
+  - 'D: +3.0 个百分点'
+  options_zh_hk:
+  - 'A: +18.0 個百分點'
+  - 'B: +12.0 個百分點（+0.12）'
+  - 'C: +24.0 個百分點'
+  - 'D: +3.0 個百分點'
+  answer: B
+  explanation_en: The observed difference is 540/3,000 minus 60/1,000 = 0.18 minus 0.06 = 0.12, or 12 percentage points. With valid random assignment and consistent outcome measurement, this estimates the average treatment effect for the experimental population.
+  explanation_zh: 观测差异为 540/3,000 减 60/1,000 = 0.18 减 0.06 = 0.12，即 12 个百分点。在随机分配有效且结果测量一致时，它估计实验总体的平均处理效应。
+  explanation_zh_hk: 觀測差異係 540/3,000 減 60/1,000 = 0.18 減 0.06 = 0.12，即 12 個百分點。喺隨機分配有效而且結果量度一致時，佢估計實驗總體嘅平均處理效應。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Marketing Waste Dilemma
+  kicker_zh: 营销预算浪费困局
+  kicker_zh_hk: 行銷預算浪費困局
+  title_en: Did Our Ten-Dollar Voucher Generate Real Sales, or Free Subsidies?
+  title_zh: 十元优惠券换来的究竟是真增量，还是赔本免费补贴？
+  title_zh_hk: 十蚊優惠券換嚟嘅到底係真增量，定係貼錢免費補貼？
+  en: A voucher campaign can generate many redemptions even when some recipients would have purchased without the voucher. To measure incremental impact, the campaign needs a credible comparison between outcomes under treatment and no treatment. Uplift modeling asks whose outcome is likely to change because of the intervention, not merely who is likely to buy.
+  zh: 优惠券活动即使产生大量核销，也可能包括本来就会购买的顾客。要衡量增量影响，活动需要可信比较接受干预与未接受干预两种状态下的结果。净增量建模关注的是谁的结果可能因干预而改变，而不只是关注谁可能购买。
+  zh_hk: 優惠券活動即使產生大量換領，亦可能包括本來就會購買嘅顧客。要量度增量影響，活動需要可信比較接受干預同未接受干預兩種狀態之下嘅結果。淨增量建模關注嘅係邊個嘅結果可能因干預而改變，而唔只係關注邊個可能購買。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Uplift_i = P(Y_i = 1 | Voucher = 1, X_i) - P(Y_i = 1 | Voucher = 0, X_i)
+  formula_zh: 因果净增量：Uplift_i = P(Y_i = 1 | 发券, X_i) - P(Y_i = 1 | 未发券, X_i)
+  formula_zh_hk: 因果淨增量：Uplift_i = P(Y_i = 1 | 派券, X_i) - P(Y_i = 1 | 冇派券, X_i)
+  formula_tex: \text{Uplift}_i = P(Y_i = 1 \mid T_i = 1, \mathbf{X}_i) - P(Y_i = 1 \mid T_i = 0, \mathbf{X}_i) = \Delta p_i(\text{Promotion})
+  s1_en: Conditional uplift is the difference between the expected outcome under treatment and under control for customers with characteristics X. In potential-outcomes notation, it is E[Y(1) - Y(0) | X].
+  s1_zh: 条件净增量是具有特征 X 的顾客在处理状态与对照状态下期望结果之差。用潜在结果记法表示，即 E[Y(1) - Y(0) | X]。
+  s1_zh_hk: 條件淨增量係具有特徵 X 嘅顧客喺處理狀態同對照狀態之下期望結果嘅差。用潛在結果記法表示，即 E[Y(1) - Y(0) | X]。
+  s2_en: For each customer, only one treatment state is observed, so the individual treatment effect and the four response types cannot be directly identified from that person’s record. Random assignment identifies group-average contrasts, while heterogeneous uplift estimates require modeling and validation assumptions.
+  s2_zh: 每名顾客只会观测到一种处理状态，因此无法从个人记录直接识别其个体处理效应或四种响应类型。随机分配能够识别组平均对比，而异质净增量估计还需要建模与验证假设。
+  s2_zh_hk: 每個顧客只會觀測到一種處理狀態，所以無法由個人記錄直接識別個體處理效應或者四種響應類型。隨機分配可以識別組平均對比，而異質淨增量估計仲需要建模同驗證假設。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: The Four Customer Quadrants
+  left_zh: 客户响应四象限矩阵
+  right_en: Targeting the Persuadables
+  right_zh: 锁定黄金可说服客群
+  s1_en: The four conceptual response types are Sure Things, Persuadables, Lost Causes, and Sleeping Dogs. They are defined by the pair of potential outcomes under treatment and control, not by directly observed labels for individual customers.
+  s1_zh: 四种概念性响应类型包括自然转化客群、可说服客群、无可挽回客群与反作用客群。它们由处理和对照两种状态下的潜在结果组合定义，并不是个人顾客可直接观测的标签。
+  s1_zh_hk: 四種概念性響應類型包括自然轉化客群、可說服客群、無可挽回客群同反作用客群。佢哋由處理同對照兩種狀態之下嘅潛在結果組合定義，唔係個別顧客可以直接觀測嘅標籤。
+  s2_en: A standard response model estimates who is likely to buy under the observed campaign, but it can rank high-baseline customers who need no incentive. An uplift model instead estimates a contrast between treatment and control response probabilities.
+  s2_zh: 标准响应模型估计谁在现有活动下较可能购买，但可能把无需激励的高基准顾客排在前列。净增量模型则估计处理与对照响应概率之间的差。
+  s2_zh_hk: 標準響應模型估計邊個喺現有活動之下較可能購買，但可能將唔需要激勵嘅高基準顧客排喺前列。淨增量模型就估計處理同對照響應概率之間嘅差。
+  s3_en: Positive estimated uplift suggests possible incremental benefit, near-zero uplift suggests little modeled change, and negative uplift suggests possible harm. Targeting still requires confidence intervals, treatment cost, expected margin, capacity, and out-of-sample uplift validation.
+  s3_zh: 正的估计净增量表示可能存在增量收益，接近零表示模型预测改变很小，负值则表示可能产生反作用。定向决策仍需结合置信区间、处理成本、预期边际利润、处理能力与样本外净增量验证。
+  s3_zh_hk: 正嘅估計淨增量表示可能存在增量收益，接近零表示模型預測改變好細，負值就表示可能產生反作用。定向決策仍然需要結合置信區間、處理成本、預期邊際利潤、處理能力同樣本外淨增量驗證。
+  left_zh_hk: 客戶響應四象限矩陣
+  right_zh_hk: 鎖定黃金可說服客群
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Deploy Randomized Holdout
+  step1_zh: 设立随机保留对照组
+  step2_en: Measure Empirical Uplift
+  step2_zh: 测算实证因果净增量
+  step3_en: Optimize Allocation ROI
+  step3_zh: 重构预算配置投产比
+  s1_en: 'Step one: In the supplied randomized illustration, 3,000 accounts receive the HK$10 voucher and 1,000 accounts remain in the holdout control. Random assignment supports an average causal comparison when assignment is implemented correctly and outcomes are measured consistently.'
+  s1_zh: 第一步：在给定随机示例中，3,000 个账户收到 10 港元优惠券，1,000 个账户留在保留对照组。当随机分配正确实施且结果测量一致时，可以支持平均因果比较。
+  s1_zh_hk: 第一步：喺畀定隨機例子入面，3,000 個帳戶收到 10 港元優惠券，1,000 個帳戶留喺保留對照組。當隨機分配正確實施而且結果量度一致時，可以支持平均因果比較。
+  s2_en: 'Step two: The treatment group records 540 purchases out of 3,000, or 18 percent. The control group records 60 out of 1,000, or 6 percent. The difference in observed group rates is 12 percentage points.'
+  s2_zh: 第二步：处理组 3,000 人中有 540 人购买，转化率为 18%；对照组 1,000 人中有 60 人购买，转化率为 6%。观测组比率之差为 12 个百分点。
+  s2_zh_hk: 第二步：處理組 3,000 人入面有 540 人購買，轉化率係 18%；對照組 1,000 人入面有 60 人購買，轉化率係 6%。觀測組比率之差係 12 個百分點。
+  s3_en: 'Step three: Report uncertainty for the average uplift and evaluate any targeting model on held-out randomized data using uplift or policy-value metrics. The supplied counts do not establish the claimed 40 percent campaign reduction or 95 percent revenue retention, so those claims are not used.'
+  s3_zh: 第三步：报告平均净增量的不确定性，并在留出的随机数据上使用净增量或政策价值指标评估定向模型。给定计数无法确立活动规模减少 40% 或保留 95% 收入的主张，因此不采用这些说法。
+  s3_zh_hk: 第三步：報告平均淨增量嘅不確定性，並喺留出嘅隨機數據上使用淨增量或者政策價值指標評估定向模型。畀定計數無法確立活動規模減少 40% 或者保留 95% 收入嘅主張，所以唔採用呢啲說法。
+  step1_zh_hk: 設立隨機保留對照組
+  step2_zh_hk: 測算實證因果淨增量
+  step3_zh_hk: 重構預算配置投產比
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Why Is High Response Often an Illusion?
+  q1_zh: 高核销率为何往往只是一场幻象？
+  q2_en: 'Audit Rule: Never Blast Without Holdouts'
+  q2_zh: 审计准则：未设保留对照组，休夸促销立大功
+  s1_en: Uplift separates observed response from estimated incremental effect. A high redemption rate can coexist with low uplift when many customers would have responded without treatment.
+  s1_zh: 净增量将观测响应与估计增量效应区分开来。当很多顾客在未接受处理时也会响应，高核销率可以与低净增量同时出现。
+  s1_zh_hk: 淨增量將觀測響應同估計增量效應區分開。當好多顧客喺冇接受處理時都會響應，高換領率可以同低淨增量同時出現。
+  s2_en: 'Decision rule: preserve a credible control group, define treatment and outcome before analysis, estimate average and heterogeneous effects with uncertainty, validate targeting out of sample, and compare expected incremental margin with intervention cost and governance constraints.'
+  s2_zh: 决策规则：保留可信对照组，在分析前定义处理与结果，在不确定性下估计平均与异质效应，在样本外验证定向策略，并将预期增量边际利润与干预成本及治理约束比较。
+  s2_zh_hk: 決策規則：保留可信對照組，喺分析之前定義處理同結果，喺不確定性之下估計平均同異質效應，喺樣本外驗證定向策略，並將預期增量邊際利潤同干預成本及治理約束比較。
+  s3_en: For the supplied randomized comparison, the observed average uplift is 18 percent minus 6 percent, or 12 percentage points. This group-average result does not directly reveal each customer’s latent response type.
+  s3_zh: 对于给定随机比较，观测平均净增量为 18% 减 6%，即 12 个百分点。该组平均结果不能直接揭示每名顾客的潜在响应类型。
+  s3_zh_hk: 對於畀定隨機比較，觀測平均淨增量係 18% 減 6%，即 12 個百分點。個組平均結果唔可以直接揭示每個顧客嘅潛在響應類型。
+  q1_zh_hk: 高換領率點解往往只係一場幻象？
+  q2_zh_hk: 審計準則：未設保留對照組，切忌盲信促銷功

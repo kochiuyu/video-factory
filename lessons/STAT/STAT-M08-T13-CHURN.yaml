@@ -1,0 +1,165 @@
+id: STAT-M08-T13-CHURN
+course: STAT-M08
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Customer Churn Scoring: Auditing Metro Coffee Club Attrition'
+title_zh: 客户流失评分：审计会员俱乐部流失暗流
+title_zh_hk: 客戶流失評分：審計會員俱樂部流失暗湧
+objective_en: Define a churn outcome and prediction time, use RFM-style predictors to generate customer-level risk probabilities, and design an auditable scoring and retention workflow with validation, capacity, and privacy controls.
+objective_zh: 定义流失结果与预测时点，使用 RFM 类自变量生成顾客层面的风险概率，并在验证、处理能力与隐私控制下设计可审计的评分及挽留流程。
+objective_zh_hk: 定義流失結果同預測時點，使用 RFM 類自變量生成顧客層面嘅風險概率，並喺驗證、處理能力同私隱控制之下設計可審計嘅評分同挽留流程。
+glossary:
+- en: Customer Churn Scoring
+  zh: 客户流失评分
+  zh_hk: 客戶流失評分
+  lock: true
+- en: RFM Predictors
+  zh: RFM 行为特征（最近消费、频次、金额）
+  zh_hk: RFM 行為特徵（最近幫襯、頻次、金額）
+  lock: true
+- en: Individualized Risk Probability
+  zh: 个体风险概率
+  zh_hk: 個人化風險概率
+  lock: true
+- en: At-Risk Retention Ledger
+  zh: 高危挽留对账单
+  zh_hk: 高危挽留對賬單
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: 'Metro Coffee defines quarterly churn as zero visits over 90 days. For Member #8492, the fitted linear index is z_i = -1.50 + 0.08 * (DaysSinceLastVisit = 45) - 0.20 * (MonthlyVisits = 1) = +1.90. What is their predicted churn probability?'
+  question_zh: 'Metro Coffee 将连续 90 天未到店定义为季度流失。会员 #8492 的拟合线性指数为 z_i = -1.50 + 0.08 * (距上次进店天数 = 45) - 0.20 * (月均频次 = 1) = +1.90。该会员的预测流失概率是多少？'
+  question_zh_hk: 'Metro Coffee 將連續 90 日冇幫襯定義為季度流失。會員 #8492 嘅擬合線性指數係 z_i = -1.50 + 0.08 * (距上次幫襯日數 = 45) - 0.20 * (月均次數 = 1) = +1.90。該會員嘅預測流失概率係幾多？'
+  options_en:
+  - 'A: p_churn = 0.87 (87%)'
+  - 'B: p_churn = 0.13 (13%)'
+  - 'C: p_churn = 0.50 (50%)'
+  - 'D: p_churn = 1.90 (190%)'
+  options_zh:
+  - 'A: p_流失 = 0.87（87%）'
+  - 'B: p_流失 = 0.13（13%）'
+  - 'C: p_流失 = 0.50（50%）'
+  - 'D: p_流失 = 1.90（190%）'
+  options_zh_hk:
+  - 'A: p_流失 = 0.87（87%）'
+  - 'B: p_流失 = 0.13（13%）'
+  - 'C: p_流失 = 0.50（50%）'
+  - 'D: p_流失 = 1.90（190%）'
+  answer: A
+  explanation_en: Using the supplied index, p = 1 / (1 + exp(-1.90)) is approximately 0.8699, conventionally rounded to 0.87. This is an estimated probability under the fitted model, not a guaranteed outcome.
+  explanation_zh: 使用给定指数，p = 1 / (1 + exp(-1.90)) 约为 0.8699，通常四舍五入为 0.87。这是拟合模型下的估计概率，并非保证结果。
+  explanation_zh_hk: 使用畀定指數，p = 1 / (1 + exp(-1.90)) 約為 0.8699，通常四捨五入做 0.87。呢個係擬合模型之下嘅估計概率，唔係保證結果。
+- id: Q2
+  type: multiple_choice
+  question_en: Why is generating continuous probability scores (p_i) for each user superior to simply assigning binary 'churn / no churn' tags in commercial retention workflows?
+  question_zh: 在商业客户留存业务中，为什么为每位用户计算连续概率得分（p_i），远比仅贴上二元‘流失 / 未流失’标签更具决策价值？
+  question_zh_hk: 喺商業客戶留存業務入面，點解為每個用戶計算連續概率評分（p_i），遠比淨係貼上二元‘流失 / 冇流失’標籤更具決策價值？
+  options_en:
+  - 'A: Continuous probabilities preserve risk ordering and support thresholds or capacity-based prioritization, provided decisions also use validation, costs, and governance controls'
+  - 'B: Binary tags permanently crash the app database servers'
+  - 'C: Probabilities force all customer churn rates to drop to zero'
+  - 'D: Continuous scores can only be used on dummy variables'
+  options_zh:
+  - 'A: 连续概率保留风险排序，并支持阈值或基于处理能力的优先安排，但决策还需结合验证、成本与治理控制'
+  - 'B: 二元标签会在技术上导致 App 数据库服务器瞬间崩溃'
+  - 'C: 概率评分能从物理上直接将所有客户的流失率强制清零'
+  - 'D: 连续得分只能应用于虚拟变量'
+  options_zh_hk:
+  - 'A: 連續概率保留風險排序，並支持門檻或者基於處理能力嘅優先安排，但決策仲需要結合驗證、成本同治理控制'
+  - 'B: 二元標籤會喺技術上搞到 App 數據庫伺服器即刻崩潰'
+  - 'C: 概率評分可以喺物理上直接將所有客戶嘅流失率強制清零'
+  - 'D: 連續得分淨係可以用喺虛擬變量'
+  answer: A
+  explanation_en: Continuous scores retain more ranking information than a single binary tag and permit different operating rules. They do not reveal treatment effects or automatically determine the profitable intervention.
+  explanation_zh: 连续得分比单一二元标签保留更多排序信息，并允许采用不同营运规则。它们不能揭示干预效应，也不会自动决定有利可图的干预方式。
+  explanation_zh_hk: 連續得分比單一二元標籤保留更多排序資料，並容許採用唔同營運規則。佢哋唔能夠揭示干預效應，亦唔會自動決定有利可圖嘅干預方式。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Silent Churn Dilemma
+  kicker_zh: 隐形流失危机
+  kicker_zh_hk: 隱形流失危機
+  title_en: Why Did 4,000 Loyalty Members Quietly Vanish?
+  title_zh: 四千名会员俱乐部的忠诚老客，为何悄无声息地凭空蒸发？
+  title_zh_hk: 四千個會員俱樂部嘅忠實熟客，點解無聲無息噉憑空消失？
+  en: Customers rarely announce that they are about to stop buying. A churn model instead uses information available at a defined scoring date to estimate the probability of a specified future inactivity outcome. The operational challenge is to turn those probabilities into a validated, capacity-aware, and auditable retention workflow.
+  zh: 顾客很少会预先宣布自己即将停止消费。流失模型会使用明确评分日期时可获得的信息，估计某个指定未来不活跃结果的概率。营运上的挑战，是把这些概率转化为经过验证、符合处理能力且可审计的挽留流程。
+  zh_hk: 顧客好少會預先宣布自己就快停止消費。流失模型會使用明確評分日期嗰刻可以取得嘅資料，估計某個指定未來唔活躍結果嘅概率。營運上嘅挑戰，係將呢啲概率轉化做經過驗證、符合處理能力而且可審計嘅挽留流程。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: p_i,churn = 1 / (1 + exp(-[beta_0 + beta_1 * Recency + beta_2 * Freq + beta_3 * Spend]))
+  formula_zh: 流失概率公式：p_i = 1 / (1 + exp(-[beta_0 + beta_1 * 最近消费 + beta_2 * 频次 + beta_3 * 金额]))
+  formula_zh_hk: 流失概率公式：p_i = 1 / (1 + exp(-[beta_0 + beta_1 * 最近幫襯 + beta_2 * 頻次 + beta_3 * 金額]))
+  formula_tex: \hat{p}_{i, \text{churn}} = \frac{1}{1 + e^{-\left( \hat{\beta}_0 + \hat{\beta}_1 \text{Recency}_i + \hat{\beta}_2 \text{Freq}_i + \hat{\beta}_3 \text{Monetary}_i \right)}} \in (0, 1)
+  s1_en: Customer churn scoring predicts a clearly defined future event, such as no qualifying transaction during the next 90 days, using predictors measured at or before the scoring date. This separation helps prevent information from the outcome window leaking into the predictors.
+  s1_zh: 客户流失评分预测一个明确定义的未来事件，例如在未来 90 天内没有符合条件的交易，并只使用评分日期当日或之前测量的自变量。这种时间分隔有助于防止结果窗口的信息泄漏到自变量中。
+  s1_zh_hk: 客戶流失評分預測一個明確定義嘅未來事件，例如未來 90 日之內冇符合條件嘅交易，並只使用評分日期當日或者之前量度嘅自變量。呢種時間分隔有助防止結果窗口嘅資料洩漏到自變量入面。
+  s2_en: RFM-style predictors summarize recency, frequency, and monetary behavior. A fitted logistic model maps the predictor profile to an estimated churn probability strictly between zero and one for every finite linear index.
+  s2_zh: RFM 类自变量汇总最近消费、消费频次与消费金额行为。拟合后的逻辑模型把自变量画像映射为估计流失概率；对于任何有限线性指数，该概率严格介于 0 与 1 之间。
+  s2_zh_hk: RFM 類自變量匯總最近消費、消費頻次同消費金額行為。擬合後嘅邏輯模型將自變量背景映射做估計流失概率；對任何有限線性指數，個概率嚴格介乎 0 同 1 之間。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: The Anatomy of Attrition
+  left_zh: 流失行为特征解构
+  right_en: From Tags to Risk Deciles
+  right_zh: 从静态标签到动态十分位
+  s1_en: A positive recency coefficient means that, holding the other included predictors fixed, more days since the last visit are associated with higher fitted churn log-odds. The direction and size are model estimates, not universal behavioral laws.
+  s1_zh: 最近消费天数系数为正，表示在其他已纳入自变量保持不变时，距上次到店天数越多，与更高的拟合流失对数几率相关。方向与大小是模型估计，并非普遍行为定律。
+  s1_zh_hk: 最近消費日數系數係正，表示喺其他已納入自變量保持不變時，距離上次到店日數越多，同更高嘅擬合流失對數勝算相關。方向同大小係模型估計，唔係普遍行為定律。
+  s2_en: Negative frequency or spending coefficients mean that higher values are associated with lower fitted churn log-odds, conditional on the specification. Nonlinearity, interactions, seasonality, and changing customer behavior may require richer features or revised models.
+  s2_zh: 频次或消费金额系数为负，表示在既定模型条件下，数值较高与较低的拟合流失对数几率相关。非线性、交互作用、季节性与顾客行为变化可能需要更丰富的特征或重新建模。
+  s2_zh_hk: 頻次或者消費金額系數係負，表示喺既定模型條件之下，數值較高同較低嘅擬合流失對數勝算相關。非線性、交互作用、季節性同顧客行為變化可能需要更豐富嘅特徵或者重新建模。
+  s3_en: Continuous probabilities support ranking and threshold selection, but ranking alone does not determine whom to contact or which intervention to use. Decisions also require calibration, expected value, capacity, consent, fairness, and intervention-effect evidence.
+  s3_zh: 连续概率支持排序与阈值选择，但排序本身不能决定联系谁或采用哪种干预。决策还需要考虑校准、期望价值、处理能力、同意、程序公平与干预效果证据。
+  s3_zh_hk: 連續概率支持排序同門檻選擇，但排序本身唔可以決定聯絡邊個或者採用邊種干預。決策仲需要考慮校準、期望價值、處理能力、同意、程序公平同干預效果證據。
+  left_zh_hk: 流失行為特徵解構
+  right_zh_hk: 由靜態標籤到動態十分位
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Estimate Production Pipeline
+  step1_zh: 拟合生产环境计量模型
+  step2_en: Score Live Member Base
+  step2_zh: 全网会员实时概率打分
+  step3_en: Deploy Prioritized Ledger
+  step3_zh: 导出梯级挽留对账单
+  s1_en: 'Step one: Use the supplied scoring equation z = -1.50 + 0.08 times DaysSince - 0.20 times Visits - 0.005 times Spend. No standard errors or validation results are supplied, so statistical significance and deployment quality are not asserted.'
+  s1_zh: 第一步：使用给定评分方程 z = -1.50 + 0.08 乘以 DaysSince - 0.20 乘以 Visits - 0.005 乘以 Spend。由于未提供标准误或验证结果，这里不声称统计显著性或部署质量。
+  s1_zh_hk: 第一步：使用畀定評分方程 z = -1.50 + 0.08 乘以 DaysSince - 0.20 乘以 Visits - 0.005 乘以 Spend。由於冇提供標準誤或者驗證結果，呢度唔聲稱統計顯著性或者部署質量。
+  s2_en: 'Step two: For the supplied profile with DaysSince = 45, Visits = 1, and Spend omitted from this worked calculation, z = -1.50 + 3.60 - 0.20 = 1.90. The logistic transformation gives 1 divided by 1 plus e to the negative 1.90, approximately 0.8699.'
+  s2_zh: 第二步：对于给定画像 DaysSince = 45、Visits = 1，且本次演算未加入 Spend，z = -1.50 + 3.60 - 0.20 = 1.90。逻辑变换得到 1 除以 1 加 e 的 -1.90 次方，约为 0.8699。
+  s2_zh_hk: 第二步：對於畀定背景 DaysSince = 45、Visits = 1，而今次演算冇加入 Spend，z = -1.50 + 3.60 - 0.20 = 1.90。邏輯變換得到 1 除以 1 加 e 嘅 -1.90 次方，約為 0.8699。
+  s3_en: 'Step three: Before producing an at-risk ledger, select a threshold or ranking capacity using validation data and explicit costs. Record the scoring date, model version, input window, probability, decision rule, and action so the workflow can be audited and monitored.'
+  s3_zh: 第三步：在生成高风险清单前，应使用验证数据与明确成本选择阈值或排序容量。记录评分日期、模型版本、输入窗口、概率、决策规则与行动，使流程可以审计和监测。
+  s3_zh_hk: 第三步：生成高風險名單之前，應該使用驗證數據同明確成本選擇門檻或者排序容量。記錄評分日期、模型版本、輸入窗口、概率、決策規則同行動，令流程可以審計同監測。
+  step1_zh_hk: 擬合生產環境計量模型
+  step2_zh_hk: 全網會員實時概率打分
+  step3_zh_hk: 導出梯級挽留對賬單
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Why Is Churn Scoring Powerful?
+  q1_zh: 客户流失评分的威力何在？
+  q2_en: 'Audit Rule: Track Probabilities, Not Lagging Losses'
+  q2_zh: 审计准则：紧盯动态流失概率，莫待财报追悔莫及
+  s1_en: Churn scoring converts historical customer behavior into estimated future-event probabilities. Its value comes from disciplined outcome definition, leakage control, validation, and decision design, not from the score alone.
+  s1_zh: 流失评分把历史顾客行为转换为未来事件的估计概率。其价值来自严谨的结果定义、信息泄漏控制、验证与决策设计，而不是单凭分数本身。
+  s1_zh_hk: 流失評分將歷史顧客行為轉換做未來事件嘅估計概率。佢嘅價值來自嚴謹結果定義、資料洩漏控制、驗證同決策設計，而唔係單憑分數本身。
+  s2_en: 'Decision rule: define the population, scoring date, horizon, and churn event; use only information available at scoring; evaluate discrimination and calibration out of sample; then choose actions using costs, capacity, privacy, and retention-effect evidence.'
+  s2_zh: 决策规则：定义总体、评分日期、预测期限与流失事件；只使用评分时可获得的信息；在样本外评估判别力与校准；再根据成本、处理能力、隐私与挽留效果证据选择行动。
+  s2_zh_hk: 決策規則：定義總體、評分日期、預測期限同流失事件；只使用評分時可以取得嘅資料；喺樣本外評估判別力同校準；再根據成本、處理能力、私隱同挽留效果證據選擇行動。
+  s3_en: For the supplied profile, z equals 1.90 and the fitted churn probability is approximately 0.8699. This is a model-based risk estimate, not a certainty that the customer will churn or proof that a retention offer will change the outcome.
+  s3_zh: 对于给定画像，z 等于 1.90，拟合流失概率约为 0.8699。这是模型风险估计，并非顾客必然流失，也不能证明挽留优惠会改变结果。
+  s3_zh_hk: 對於畀定背景，z 等於 1.90，擬合流失概率約為 0.8699。呢個係模型風險估計，唔代表顧客必然流失，亦唔能夠證明挽留優惠會改變結果。
+  q1_zh_hk: 客戶流失評分嘅威力喺邊度？
+  q2_zh_hk: 審計準則：緊盯動態流失概率，咪等財報追悔莫及

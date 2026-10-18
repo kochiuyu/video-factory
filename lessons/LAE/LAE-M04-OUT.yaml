@@ -1,0 +1,69 @@
+id: LAE-M04-OUT
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: The slot, closed
+title_zh: 这段预约，先说到这里
+title_zh_hk: 呢段預約，先講到呢度
+objective_en: Close the traffic sitting. Next sitting asks who pays for the trip. A reserved slot is still only a path.
+objective_zh: 收住交通这一讲。下一讲问谁为这一趟付钱。占住的时段仍只是一条路径。
+objective_zh_hk: 收住交通呢一講。下一講問邊個為呢一轉畀錢。佔住嘅時段仍然只係一條路徑。
+glossary:
+- en: Close
+  zh: 收束
+  zh_hk: 收束
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What two facts should you be able to state after this sitting?
+  zh: 这一讲结束后，你应能说出哪两件事？
+  zh_hk: 呢一講結束之後，你應該講得出邊兩件事？
+  answer_en: UTM holds a moving reservation, and vehicle, pad, energy, and slot are complements.
+  answer_zh: UTM 占住一段移动的预约，而且机器、垫子、能量和时段是互补品。
+  answer_zh_hk: UTM 佔住一段移動嘅預約，而且機器、墊、能量同時段係互補品。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The slot, closed
+  title_zh: 这段预约，先说到这里
+  title_zh_hk: 呢段預約，先講到呢度
+  claim_en: You can name UTM as a moving reservation, and treat a missing vehicle, pad, energy, or slot as output of zero.
+  claim_zh: 你能把 UTM 说成一段移动的预约，并把缺机器、垫子、能量或时段看成产出为零。
+  claim_zh_hk: 你能將 UTM 講成一段移動嘅預約，並將缺機器、墊、能量或者時段看成產出為零。
+  next_en: 'That is the slot. Next sitting: who pays for the trip on that path.'
+  next_zh: 预约到此。下一讲：谁为这条路径上的一趟付钱。
+  next_zh_hk: 預約到此。下一講：邊個為呢條路徑上嘅一轉畀錢。
+  en: You can hold a path in time so two machines do not share a point, and you can name the four pieces that must all be present.
+  zh: 你能在时间里占住一条路径，让两台机器不占同一个点，也能说出四件必须同时在的东西。
+  zh_hk: 你能夠喺時間入面佔住一條路徑，等兩部機器唔佔同一個點，亦都講得出四件必須同時喺度嘅嘢。
+- id: takeaway
+  visual: module_close
+  seconds: 14
+  kicker: Close
+  kicker_en: Close
+  kicker_zh: 收束
+  kicker_zh_hk: 收束
+  title_en: The slot, closed
+  title_zh: 这段预约，先说到这里
+  title_zh_hk: 呢段預約，先講到呢度
+  claim_en: You can name UTM as a moving reservation, and treat a missing vehicle, pad, energy, or slot as output of zero.
+  claim_zh: 你能把 UTM 说成一段移动的预约，并把缺机器、垫子、能量或时段看成产出为零。
+  claim_zh_hk: 你能將 UTM 講成一段移動嘅預約，並將缺機器、墊、能量或者時段看成產出為零。
+  next_en: 'That is the slot. Next sitting: who pays for the trip on that path.'
+  next_zh: 预约到此。下一讲：谁为这条路径上的一趟付钱。
+  next_zh_hk: 預約到此。下一講：邊個為呢條路徑上嘅一轉畀錢。
+  en: 'That is the slot. Next sitting: who pays for the trip on that path.'
+  zh: 预约到此。下一讲：谁为这条路径上的一趟付钱。
+  zh_hk: 預約到此。下一講：邊個為呢條路徑上嘅一轉畀錢。

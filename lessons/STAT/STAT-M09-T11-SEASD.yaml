@@ -1,0 +1,165 @@
+id: STAT-M09-T11-SEASD
+course: STAT-M09
+course_en: Business Time Series & Demand Forecasting
+course_zh: 商业时间序列与需求预测
+course_zh_hk: 商業時間序列與需求預測
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Seasonal Dummy Regressions: Calendar Patterns and Weather Shocks'
+title_zh: 季节虚拟变量回归：日历模式与天气冲击
+title_zh_hk: 季節虛擬變量回歸：日曆模式同天氣衝擊
+objective_en: Encode recurring calendar categories and event indicators in a time-series regression, avoid the dummy variable trap, and interpret coefficients relative to a baseline while separating prediction from causal claims.
+objective_zh: 在时间序列回归中编码重复日历类别与事件指标，避免虚拟变量陷阱，并相对于基准组解释系数，同时区分预测与因果结论。
+objective_zh_hk: 喺時間序列回歸入面編碼重複日曆類別同事件指標，避開虛擬變量陷阱，並相對基準組解讀係數，同時區分預測同因果結論。
+glossary:
+  - en: Deterministic Seasonality
+    zh: 确定性季节性
+    zh_hk: 確定性季節性
+    lock: true
+  - en: Seasonal Dummy Variable
+    zh: 季节虚拟变量
+    zh_hk: 季節虛擬變量
+    lock: true
+  - en: Exogenous Shock Dummy
+    zh: 外生冲击虚拟变量
+    zh_hk: 外生衝擊虛擬變量
+    lock: true
+  - en: Baseline Reference Category
+    zh: 基准参照组
+    zh_hk: 基準參照組
+    lock: true
+quiz:
+  - id: Q1
+    type: multiple_choice
+    question_en: With an intercept and seven mutually exclusive day-of-week categories, how many day dummies should be included under reference coding?
+    question_zh: 当模型含有截距且一周七天类别互斥时，参照组编码应纳入多少个星期虚拟变量？
+    question_zh_hk: 當模型包含截距，而且一個禮拜七日類別互斥嗰陣，參照組編碼應該納入幾多個星期虛擬變量？
+    options_en:
+      - 'A: 6, with one day omitted as the reference category'
+      - 'B: 7, together with the intercept'
+      - 'C: 1'
+      - 'D: 14'
+    options_zh:
+      - A：6 个，并省略一天作为参照组
+      - B：7 个，并同时保留截距
+      - C：1 个
+      - D：14 个
+    options_zh_hk:
+      - A：6 個，並省略一日作為參照組
+      - B：7 個，並同時保留截距
+      - C：1 個
+      - D：14 個
+    answer: A
+    explanation_en: With an intercept, the seven day indicators sum to one, so including all seven creates exact collinearity. Omitting one day produces six coefficients interpreted relative to that reference day.
+    explanation_zh: 模型含截距时，七个日期指标之和恒为一，因此全部纳入会产生完全共线性。省略一天后，六个系数都相对于该参照日解释。
+    explanation_zh_hk: 模型包含截距嗰陣，七個日期指標加埋永遠等於一，所以全部納入會產生完全共線性。省略一日之後，六個係數都相對該參照日解讀。
+  - id: Q2
+    type: multiple_choice
+    question_en: 'Assume the fitted model is Sales = 300 + 120 D_Mon - 280 D_T8. What is the fitted value when D_Mon = 1 and D_T8 = 1?'
+    question_zh: 假设拟合模型为 Sales = 300 + 120 D_Mon - 280 D_T8。当 D_Mon = 1、D_T8 = 1 时，拟合值是多少？
+    question_zh_hk: 假設擬合模型係 Sales = 300 + 120 D_Mon - 280 D_T8。當 D_Mon = 1、D_T8 = 1 嗰陣，擬合值係幾多？
+    options_en:
+      - 'A: 140 cups'
+      - 'B: 420 cups'
+      - 'C: 20 cups'
+      - 'D: 300 cups'
+    options_zh:
+      - A：140 杯
+      - B：420 杯
+      - C：20 杯
+      - D：300 杯
+    options_zh_hk:
+      - A：140 杯
+      - B：420 杯
+      - C：20 杯
+      - D：300 杯
+    answer: A
+    explanation_en: 'Substitution gives 300 + 120 - 280 = 140 cups. This is the model-fitted value under the stated indicators, not a guaranteed observation.'
+    explanation_zh: 代入得到 300 + 120 - 280 = 140 杯。这是在给定指标下的模型拟合值，并非保证会出现的观测值。
+    explanation_zh_hk: 代入得到 300 + 120 - 280 = 140 杯。呢個係指定指標下嘅模型擬合值，唔係保證會出現嘅觀測值。
+beats:
+  - id: hook
+    visual: title_card
+    seconds: 30
+    kicker_en: Calendar-and-Weather Puzzle
+    kicker_zh: 日历与天气难题
+    kicker_zh_hk: 日曆同天氣難題
+    title_en: How Can a Forecast Recognize Mondays, Festivals, and Storm Days?
+    title_zh: 预测如何识别周一、节庆与风暴日？
+    title_zh_hk: 預測點樣識別禮拜一、節慶同風暴日？
+    en: >-
+      Retail demand can recur by weekday and also shift on named events such as festivals or severe-weather days. Treating every such movement as unexplained noise wastes known calendar information. Dummy variables encode these categories directly. The analytical challenge is to choose a clear reference category, avoid exact collinearity, and interpret event coefficients without automatically claiming causation.
+    zh: >-
+      零售需求可能按星期重复变化，也可能在节庆或恶劣天气等特定事件日发生转移。把这些变化全部当作无法解释的噪声，会浪费已知的日历信息。虚拟变量可以直接编码这些类别。分析时要选择清晰的参照组、避免完全共线性，并在不自动作出因果断言的前提下解释事件系数。
+    zh_hk: >-
+      零售需求可能按星期重複變化，亦可能喺節慶或者惡劣天氣等特定事件日出現轉移。將呢啲變化全部當成無法解釋嘅雜音，會浪費已知日曆信息。虛擬變量可以直接編碼呢啲類別。分析嗰陣要選擇清晰參照組、避免完全共線性，並喺唔自動作因果斷言嘅前提下解讀事件係數。
+  - id: define
+    visual: definition_card
+    seconds: 34
+    formula: 'Sales = baseline + day dummies + event dummies + other controls + error'
+    formula_zh: 销量 = 基准 + 星期虚拟变量 + 事件虚拟变量 + 其他控制项 + 误差
+    formula_zh_hk: 銷量 = 基準 + 星期虛擬變量 + 事件虛擬變量 + 其他控制項 + 誤差
+    formula_tex: 'Y_t=\beta_0+\sum_{j=1}^{m-1}\delta_jD_{j,t}+\gamma_FD_{F,t}+\gamma_SD_{S,t}+X_t\beta+\varepsilon_t'
+    s1_en: Deterministic Seasonality is a recurring pattern tied to known calendar positions. A Seasonal Dummy Variable equals one for its category and zero otherwise, shifting the conditional intercept relative to a Baseline Reference Category.
+    s1_zh: 确定性季节性是与已知日历位置相连的重复模式。季节虚拟变量在所属类别取一，否则取零，并相对于基准参照组移动条件截距。
+    s1_zh_hk: 確定性季節性係同已知日曆位置相連嘅重複模式。季節虛擬變量喺所屬類別取一，否則取零，並相對基準參照組移動條件截距。
+    s2_en: An Exogenous Shock Dummy can mark a defined event such as a storm-status day. With an intercept and m exhaustive, mutually exclusive categories, use m minus one category dummies or an equivalent alternative coding scheme to avoid the dummy variable trap.
+    s2_zh: 外生冲击虚拟变量可以标记定义明确的事件，例如特定风暴状态日。当模型含截距且有 m 个穷尽、互斥类别时，应使用 m - 1 个类别虚拟变量，或采用等价编码方式，以避免虚拟变量陷阱。
+    s2_zh_hk: 外生衝擊虛擬變量可以標記定義清楚嘅事件，例如特定風暴狀態日。當模型有截距，而且有 m 個窮盡、互斥類別，就應該使用 m - 1 個類別虛擬變量，或者採用等價編碼方式，去避開虛擬變量陷阱。
+  - id: mechanics
+    visual: two_column
+    seconds: 36
+    left_en: Reference-Group Interpretation
+    left_zh: 参照组解释
+    left_zh_hk: 參照組解讀
+    right_en: Event-Dummy Limits
+    right_zh: 事件变量限制
+    right_zh_hk: 事件變量限制
+    s1_en: If Sunday is omitted, the intercept is the fitted Sunday level for the specified values of all other controls. A Monday coefficient is the fitted Monday-minus-Sunday difference, holding those controls fixed.
+    s1_zh: 如果省略周日，截距表示在其他控制变量取指定值时的周日拟合水平。周一系数表示在控制变量不变时，周一相对于周日的拟合差异。
+    s1_zh_hk: 如果省略禮拜日，截距表示其他控制變量取指定值嗰陣嘅禮拜日擬合水平。禮拜一係數表示控制變量不變嗰陣，禮拜一相對禮拜日嘅擬合差異。
+    s2_en: A storm-dummy coefficient is likewise a conditional fitted difference between marked and unmarked days. It does not automatically isolate a causal weather effect if storm days differ in closures, transport, holidays, or other omitted conditions.
+    s2_zh: 风暴虚拟变量系数同样表示标记日与未标记日之间的条件拟合差异。如果风暴日还伴随停业、交通、节假日或其他遗漏条件，它不能自动隔离天气的因果效应。
+    s2_zh_hk: 風暴虛擬變量係數同樣表示標記日同未標記日之間嘅條件擬合差異。如果風暴日仲伴隨停業、交通、假期或者其他遺漏條件，佢唔可以自動隔離天氣嘅因果效應。
+    s3_en: Dummies do not guarantee unbiased baseline trends or accurate forecasts. Check interactions, omitted categories, trend and seasonal dynamics, residuals, sparse-event uncertainty, structural change, and validation performance.
+    s3_zh: 虚拟变量不能保证基准趋势无偏或预测准确。还应检查交互项、遗漏类别、趋势与季节动态、残差、稀少事件的不确定性、结构变化及验证表现。
+    s3_zh_hk: 虛擬變量唔保證基準趨勢無偏或者預測準確。仲要檢查交互項、遺漏類別、趨勢同季節動態、殘差、稀少事件嘅不確定性、結構轉變同驗證表現。
+  - id: example
+    visual: example
+    seconds: 36
+    setup_en: 'Assume: Sunday baseline 300, Monday +120, storm-status day -280'
+    setup_zh: 假设：周日基准 300、周一 +120、风暴状态日 -280
+    setup_zh_hk: 假設：禮拜日基準 300、禮拜一 +120、風暴狀態日 -280
+    result_en: 'Fitted Monday storm-day value: 140 cups'
+    result_zh: 周一风暴日拟合值：140 杯
+    result_zh_hk: 禮拜一風暴日擬合值：140 杯
+    s1_en: For illustration, assume the fitted intercept is 300 cups for the Sunday reference, the Monday coefficient is positive 120, and the defined storm-status coefficient is negative 280.
+    s1_zh: 为便于说明，假设周日参照组的拟合截距为 300 杯，周一系数为正 120，定义明确的风暴状态系数为负 280。
+    s1_zh_hk: 為咗方便說明，假設禮拜日參照組嘅擬合截距係 300 杯，禮拜一係數係正 120，而定義清楚嘅風暴狀態係數係負 280。
+    s2_en: When both the Monday and storm indicators equal one, the additive fitted value is 300 plus 120 minus 280, which equals 140 cups under the stated specification.
+    s2_zh: 当周一与风暴指标都等于一时，加法拟合值为 300 加 120 减 280，即在给定模型下等于 140 杯。
+    s2_zh_hk: 當禮拜一同風暴指標都等於一嗰陣，加法擬合值係 300 加 120 減 280，即係喺指定模型下等於 140 杯。
+    s3_en: This arithmetic assumes no Monday-by-storm interaction and does not determine replenishment by itself. Inventory, closures, capacity, lead time, perishability, forecast uncertainty, and shortage and waste costs still matter.
+    s3_zh: 该计算假设不存在周一与风暴的交互效应，也不能单独决定补货量。库存、停业安排、产能、提前期、易腐性、预测不确定性，以及缺货和浪费成本仍需考虑。
+    s3_zh_hk: 呢個計算假設冇禮拜一同風暴嘅交互效應，亦唔可以單獨決定補貨量。庫存、停業安排、產能、提前期、易腐性、預測不確定性，以及缺貨同浪費成本仍然要考慮。
+  - id: takeaway
+    visual: takeaway
+    seconds: 32
+    q1_en: What Do Dummy Coefficients Mean?
+    q1_zh: 虚拟变量系数表示什么？
+    q1_zh_hk: 虛擬變量係數表示乜嘢？
+    q2_en: Decision Rule
+    q2_zh: 决策规则
+    q2_zh_hk: 決策規則
+    s1_en: Dummy coefficients describe conditional fitted differences relative to an explicit reference category. Their meaning depends on the coding scheme, included controls, and any interactions.
+    s1_zh: 虚拟变量系数描述相对于明确参照组的条件拟合差异。其含义取决于编码方式、已纳入的控制变量及交互项。
+    s1_zh_hk: 虛擬變量係數描述相對明確參照組嘅條件擬合差異。佢嘅意思取決於編碼方式、已納入嘅控制變量同交互項。
+    s2_en: With an intercept, omit one of m exhaustive categories under reference coding. Define event indicators precisely, and do not label their coefficients causal without a defensible identification strategy.
+    s2_zh: 在参照组编码下，模型含截距时应从 m 个穷尽类别中省略一个。事件指标必须定义清楚，没有可靠识别策略时，不应把其系数称为因果效应。
+    s2_zh_hk: 喺參照組編碼下，模型有截距嗰陣，要由 m 個窮盡類別入面省略一個。事件指標一定要定義清楚，冇可靠識別策略嗰陣，唔應該將係數稱為因果效應。
+    s3_en: Use the fitted value as one forecasting input, then validate the model and combine it with operational constraints before changing production or replenishment.
+    s3_zh: 应把拟合值作为预测的一项输入，再验证模型，并结合运营约束后才调整生产或补货。
+    s3_zh_hk: 應該將擬合值當成預測嘅其中一項輸入，再驗證模型，並配合營運限制之後先調整生產或者補貨。

@@ -1,0 +1,218 @@
+id: STAT-M04-T02-POINT
+course: STAT-M04
+course_en: Sampling Distributions, the Central Limit Theorem, and Interval Estimation
+course_zh: 抽样分布、中心极限定理与区间估计
+course_zh_hk: 抽樣分佈、中心極限定理與區間估計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: The unbiased estimator
+title_zh: 不偏之度：样本均值与贝塞尔方差修正
+title_zh_hk: 不偏之度：樣本均值與貝塞爾方差修正
+objective_en: Define unbiased point estimators for population parameters, explain mathematically why dividing by n systematically
+  underestimates population variance, and apply Bessel's n-1 correction to evaluate customer spending volatility.
+objective_zh: 阐释总体参数的无偏点估计量定义，从数学几何本质解析为何除以 n 会系统性低估总体真实方差，并应用贝塞尔 n-1 修正准确度量客单消费波动。
+objective_zh_hk: 闡釋總體參數嘅無偏點估計量定義，由數學幾何本質解析點解除以 n 會系統性低估總體真實方差，並應用貝塞爾 n-1 修正準確度量客單消費波動。
+glossary:
+- en: point estimator
+  zh: 点估计量
+  zh_hk: 點估計量
+  lock: true
+- en: unbiasedness
+  zh: 无偏性
+  zh_hk: 無偏性
+  lock: true
+- en: Bessel's correction
+  zh: 贝塞尔修正
+  zh_hk: 貝塞爾修正
+  lock: true
+- en: degrees of freedom
+  zh: 自由度
+  zh_hk: 自由度
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why does dividing sum of squared deviations by n instead of n-1 create a biased estimator that systematically
+    underestimates population variance sigma^2?
+  question_zh: 为什么在计算样本方差时，若将离差平方和除以样本量 n 而非 n-1，会构成系统性低估总体真实方差 sigma^2 的有偏估计量？
+  question_zh_hk: 點解喺計算樣本方差嗰陣，若果將偏差平方和除以樣本量 n 而唔係 n-1，會構成系統性低估總體真實方差 sigma^2 嘅有偏估計量？
+  options_en:
+  - 'A: Because sample data points are naturally closer to their own sample mean x-bar than to the true, unknown population
+    mean mu, shrinking the squared deviations.'
+  - 'B: Because corporate accounting rules mandate a 1-unit discount on all retail inventory variances.'
+  - 'C: Because digital cash registers automatically drop the final receipt of every audit batch.'
+  - 'D: Because dividing by n-1 artificially inflates numbers to please conservative financial auditors.'
+  options_zh:
+  - 'A: 因为样本内各数据点到自身样本均值 x-bar 的离差平方和，在几何上必然小于或等于它们到真正总体均值 mu 的离差平方和，导致分子天然偏小。'
+  - 'B: 因为企业会计准则明文要求在所有零售库存方差计算中扣减一个单位的折让。'
+  - 'C: 因为智能收银机系统在导出审计批次时会自动强制丢弃最后一张结算小票。'
+  - 'D: 因为除以 n-1 只是审计师为了迎合保守派管理层而人为拔高波动数字的手段。'
+  options_zh_hk:
+  - 'A: 因為樣本內各數據點到自身樣本均值 x-bar 嘅偏差平方和，喺幾何上必然細過或等於佢哋到真正總體均值 mu 嘅偏差平方和，搞到分子天然偏細。'
+  - 'B: 因為企業會計準則明文要求喺所有零售庫存方差計算入面扣減一個單位嘅折讓。'
+  - 'C: 因為智能收銀機系統喺導出審計批次嗰陣會自動強制丟棄最後一張結算單據。'
+  - 'D: 因為除以 n-1 淨係審計師為咗迎合保守派管理層而人為拔高波動數字嘅手段。'
+  answer: A
+  explanation_en: The sample mean x-bar minimizes the sum of squared deviations for that specific sample. Sum of (X_i - x-bar)^2
+    is strictly less than Sum of (X_i - mu)^2 unless x-bar = mu. Dividing by n-1 scales the expected value back up to exactly
+    sigma^2.
+  explanation_zh: 样本均值 x-bar 使样本自身的离差平方和达到绝对最小值。只要 x-bar 不等于总体真实均值 mu，以 x-bar 为基准计算的平方和就必然小于以 mu 为基准的平方和。除以 n-1 恰好能将期望补偿至
+    sigma^2。
+  explanation_zh_hk: 樣本均值 x-bar 令樣本自身嘅偏差平方和達到絕對最小值。只要 x-bar 唔等於總體真實均值 mu，以 x-bar 為基準計算嘅平方和就必然細過以 mu 為基準嘅平方和。除以 n-1 啱啱好可以將期望補償返去
+    sigma^2。
+- id: Q2
+  type: multiple_choice
+  question_en: 'An auditor inspects n = 5 customer receipts at Mong Kok: $40, $45, $50, $55, $60. The sample mean is x-bar
+    = $50. What is the unbiased sample variance s^2?'
+  question_zh: 审计员在旺角店随机抽取 n = 5 张顾客小票：$40、$45、$50、$55、$60。算得样本均值 x-bar = $50。该样本的无偏样本方差 s^2 是多少？
+  question_zh_hk: 審計員喺旺角舖隨機抽取 n = 5 張顧客單據：$40、$45、$50、$55、$60。計得樣本均值 x-bar = $50。嗰個樣本嘅無偏樣本方差 s^2 係幾多？
+  options_en:
+  - 'A: s^2 = 250 / (5 - 1) = 250 / 4 = 62.50 dollars squared'
+  - 'B: s^2 = 250 / 5 = 50.00 dollars squared'
+  - 'C: s^2 = 50 / 5 = 10.00 dollars squared'
+  - 'D: s^2 = 250 / (5 + 1) = 41.67 dollars squared'
+  options_zh:
+  - 'A: s^2 = 250 / (5 - 1) = 250 / 4 = 62.50 平方元'
+  - 'B: s^2 = 250 / 5 = 50.00 平方元'
+  - 'C: s^2 = 50 / 5 = 10.00 平方元'
+  - 'D: s^2 = 250 / (5 + 1) = 41.67 平方元'
+  options_zh_hk:
+  - 'A: s^2 = 250 / (5 - 1) = 250 / 4 = 62.50 平方元'
+  - 'B: s^2 = 250 / 5 = 50.00 平方元'
+  - 'C: s^2 = 50 / 5 = 10.00 平方元'
+  - 'D: s^2 = 250 / (5 + 1) = 41.67 平方元'
+  answer: A
+  explanation_en: 'Deviations from 50 are -10, -5, 0, +5, +10. Squared deviations are 100, 25, 0, 25, 100, summing to 250.
+    Divide by degrees of freedom df = n - 1 = 4: 250 / 4 = 62.50.'
+  explanation_zh: 离均差分别为 -10, -5, 0, +5, +10。平方后为 100, 25, 0, 25, 100，总和为 250。除以自由度 df = 5 - 1 = 4，得 250 / 4 = 62.50。
+  explanation_zh_hk: 離均差分別係 -10, -5, 0, +5, +10。平方之後係 100, 25, 0, 25, 100，總和為 250。除以自由度 df = 5 - 1 = 4，得 250 / 4 = 62.50。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Missing Degree of Freedom
+  kicker_en: The Missing Degree of Freedom
+  kicker_zh: 遗失的自由度
+  kicker_zh_hk: 遺失嘅自由度
+  title_en: Why divide by n minus one?
+  title_zh: 求算平均波动，为何偏偏除以 n 减一？
+  title_zh_hk: 求算平均波動，點解偏偏除以 n 減一？
+  en: 'A junior operations analyst at our Mong Kok flagship audits customer basket spend across thirty morning receipts. He
+    calculates the average ticket, subtracts it from each purchase, squares the gaps, and divides by thirty. The financial
+    controller stops him immediately: You just understated our operational risk! To measure variance properly, you must divide
+    by twenty-nine, not thirty. Why does dividing by our actual sample count guarantee that our risk model cheats itself?'
+  zh: 旺角旗舰店的一名初级运营分析师抽检了早高峰的三十张出餐小票。他算出平均客单价，求出各笔金额与均值的差距平方，然后理所当然地除以三十。财务总监当场叫停：你刚刚严重低估了我们的运营风险！要正确度量方差，分母必须除以二十九，而不是三十。为什么机械地除以实际收集的样本量，反而注定会让我们的风险模型自欺欺人？
+  zh_hk: 旺角旗艦舖嘅一名初級營運分析師抽檢咗朝高峰嘅三十張出餐單據。佢計出平均客單價，求出各筆金額與均值嘅差距平方，然後順理成章噉除以三十。財務總監當場叫停：你啱啱嚴重低估咗我哋嘅營運風險！要正確度量方差，分母必須除以二十九，而唔係三十。點解機械噉除以實際收集嘅樣本量，反而注定會等我哋嘅風險模型自欺欺人？
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: What It Is
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: Unbiased estimators and Bessel's formula
+  title_zh: 无偏估计准则与贝塞尔公式
+  title_zh_hk: 無偏估計準則與貝塞爾公式
+  formula: E[X-bar] = mu; E[S^2] = sigma^2 only when S^2 = Sum(X_i - X-bar)^2 / (n - 1)
+  formula_zh: 样本均值天生无偏 E[X-bar] = mu；样本方差必须除以 n - 1 才能达成 E[S^2] = sigma^2
+  formula_zh_hk: 樣本均值天生無偏 E[X-bar] = mu；樣本方差必須除以 n - 1 先可以達成 E[S^2] = sigma^2
+  formula_tex: \bar{X} = \frac{1}{n}\sum_{i=1}^n X_i, \quad S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2
+  s1_en: A point estimator is unbiased if its expected value across infinite imaginary repeated samples equals the true, invisible
+    population parameter.
+  s1_zh: 如果一个点估计量在无数次独立重复抽样下的长期数学期望，恰好无偏差地等于总体那个看不见的真实参数，它就是无偏估计量。
+  s1_zh_hk: 如果一個點估計量喺無數次獨立重複抽樣下嘅長期數學期望，啱啱好無偏差噉等於總體嗰個睇唔見嘅真實參數，佢就係無偏估計量。
+  s2_en: 'The sample mean x-bar is naturally unbiased: its long-run center lands dead on mu. But if we divide sample squared
+    deviations by n, the expected value lands at n minus one over n times sigma squared—consistently too small.'
+  s2_zh: 样本均值 x-bar 天生具备完美的无偏性：其中心始终死死锚定在真实均值 mu 上。但若在样本方差中直接除以 n，其期望值只有总体方差的 n 分之 n 减 1——永远系统性偏小。
+  s2_zh_hk: 樣本均值 x-bar 天生具備完美嘅無偏性：其中心始終死死錨定喺真實均值 mu 上。但若果喺樣本方差入面直接除以 n，其期望值淨係得總體方差嘅 n 分之 n 減 1——永遠系統性偏細。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  kicker: The Geometry
+  kicker_en: The Geometry
+  kicker_zh: 几何本质
+  kicker_zh_hk: 幾何本質
+  title_en: Why sample deviations are too tight
+  title_zh: 为何样本离散度总是天然偏紧？
+  title_zh_hk: 點解樣本離散度總係天然偏緊？
+  left_en: 'True Deviations: Sum(X_i - mu)^2 (Wider Spread)'
+  left_zh: 围绕总体真值 mu：离差真实开阔，但总体 mu 现实中不可知
+  left_zh_hk: 圍繞總體真值 mu：偏差真實開闊，但總體 mu 現實中不可知
+  right_en: 'Sample Deviations: Sum(X_i - X-bar)^2 (Artificially Tight)'
+  right_zh: 围绕样本均值 x-bar：离差被就地拉平压缩，数值被人为缩水
+  right_zh_hk: 圍繞樣本均值 x-bar：偏差被就地拉平壓縮，數值被人為縮水
+  s1_en: By definition, the sample mean x-bar sits right at the physical center of your specific sample. It minimizes the
+    sum of squared distances for those exact points.
+  s1_zh: 从数学定义上讲，样本均值 x-bar 永远精准落在该批样本数据的几何正中心。它是能让这批观测点平方距离和达到绝对最小值的那个唯一支点。
+  s1_zh_hk: 由數學定義上講，樣本均值 x-bar 永遠精準落喺嗰批樣本數據嘅幾何正中心。佢係能令嗰批觀測點平方距離和達到絕對最小值嘅嗰個唯一支點。
+  s2_en: The true population mean mu is almost never equal to your sample mean. Distances measured from mu are almost always
+    wider than distances measured from x-bar.
+  s2_zh: 然而真实的总体均值 mu 几乎从不可能刚好等同于你的样本均值。数据点到真值 mu 的实际离差，几乎永远大于它们到就近就地计算出的 x-bar 的离差。
+  s2_zh_hk: 然而真實嘅總體均值 mu 幾乎從唔可能啱啱好等同於你嘅樣本均值。數據點到真值 mu 嘅實際偏差，幾乎永遠大過佢哋到就近就地計算出嘅 x-bar 嘅偏差。
+  s3_en: Because using x-bar steals one degree of freedom to pin down the center, Bessel's correction divides by n minus one,
+    perfectly restoring the missing volatility.
+  s3_zh: 因为用样本自身拟合均值消耗掉了一个自由度，贝塞尔修正通过在分母除以 n 减一，以优雅的比例回弹，严丝合缝地补偿了丢失的波动。
+  s3_zh_hk: 因為用樣本自身擬合均值消耗咗一個自由度，貝塞爾修正透過喺分母除以 n 減一，以優雅嘅比例回彈，嚴絲合縫噉補償咗丟失嘅波動。
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: The Ledger
+  kicker_en: The Ledger
+  kicker_zh: 账目实算
+  kicker_zh_hk: 賬目實算
+  title_en: Auditing Mong Kok's customer spend variance
+  title_zh: 旺角店早间客单消费方差实测
+  title_zh_hk: 旺角舖早間客單消費方差實測
+  step1_en: 'Sample audit: n = 5 receipts: $40, $45, $50, $55, $60 -> x-bar = $50'
+  step1_zh: 抽检样本：n = 5 张小票：$40, $45, $50, $55, $60 -> 样本均值 $50
+  step1_zh_hk: 抽檢樣本：n = 5 張單據：$40, $45, $50, $55, $60 -> 樣本均值 $50
+  step2_en: 'Sum of squared errors: (-10)^2 + (-5)^2 + 0^2 + 5^2 + 10^2 = 250'
+  step2_zh: 离差平方和：(-10)^2 + (-5)^2 + 0^2 + 5^2 + 10^2 = 250 平方元
+  step2_zh_hk: 偏差平方和：(-10)^2 + (-5)^2 + 0^2 + 5^2 + 10^2 = 250 平方元
+  step3_en: 'Bessel correction: s^2 = 250 / (5 - 1) = 62.50 -> s = $7.91 (Not $7.07!)'
+  step3_zh: 贝塞尔修正：s^2 = 250 / 4 = 62.50 -> 标准差 $7.91（除以 5 则仅得 $7.07）
+  step3_zh_hk: 貝塞爾修正：s^2 = 250 / 4 = 62.50 -> 標準差 $7.91（除以 5 就淨係得 $7.07）
+  s1_en: 'Examine five audit tickets pulled from Mong Kok registers: forty, forty-five, fifty, fifty-five, and sixty dollars.
+    Summing and dividing by five gives a clean sample mean of fifty dollars.'
+  s1_zh: 审视从旺角店收银机中抽取的五张审计小票：四十、四十五、五十、五十五和六十元。求和后除以五，得出干净利落的样本均值五十元整。
+  s1_zh_hk: 審視由旺角舖收銀機入面抽取嘅五張審計單據：四十、四十五、五十、五十五同六十蚊。求和後除以五，得出乾淨俐落嘅樣本均值五十蚊整。
+  s2_en: 'Step two computes squared distances from fifty: negative ten squared is one hundred, negative five squared is twenty-five,
+    all the way to positive ten squared. The total sum of squared deviations equals two hundred and fifty.'
+  s2_zh: 第二步计算到五十元的离差平方：负十的平方是一百，负五的平方是二十五，依次累加到正十的平方。离差平方总和恰好等于二百五十平方元。
+  s2_zh_hk: 第二步計算到五十蚊嘅偏差平方：負十嘅平方係一百，負五嘅平方係二十五，依次累加到正十嘅平方。偏差平方總和啱啱好等於二百五十平方元。
+  s3_en: 'Dividing by five yields fifty, giving a standard deviation of seven dollars and seven cents. But dividing by degrees
+    of freedom four yields sixty-two point five, giving the true unbiased standard deviation: seven dollars and ninety-one
+    cents. That extra eighty-four cents of volatility is real!'
+  s3_zh: 若除以样本量五，方差仅为五十，折算标准差为七块零七分。但除以自由度四，无偏方差跃升至六十二点五，折算标准差为七块九毛一。这多算出的八毛四分钱波动，正是保卫资金链免遭穿透的真实防线！
+  s3_zh_hk: 若除以樣本量五，方差淨係得五十，折算標準差為七蚊零七分。但除以自由度四，無偏方差躍升至六十二點五，折算標準差為七蚊九毫一。呢個多計出嘅八毫四分錢波動，正正係保衛資金鏈免遭穿透嘅真實防線！
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: Decision Rule
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Never skimp on degrees of freedom
+  title_zh: 分母常省一自由度，风控方显真担当
+  title_zh_hk: 分母常省一自由度，風控先顯真擔當
+  q1_en: When does the difference between n and n-1 cease to matter operationally?
+  q1_zh: 在实际业务操作中，除以 n 与除以 n-1 的差异会在何时逐渐微不足道？
+  q1_zh_hk: 喺實際業務操作入面，除以 n 同除以 n-1 嘅差異會喺幾時逐漸微不足道？
+  q2_en: How does the variance of sample averages behave as sample size expands?
+  q2_zh: 随着抽查样本量的逐步扩大，样本均值自身的波动方差又呈现何种收敛规律？
+  q2_zh_hk: 隨住抽查樣本量嘅逐步擴大，樣本均值自身嘅波動方差又呈現咩收斂規律？
+  s1_en: In small audits, dividing by n is managerial negligence; with five tickets, it slashes perceived risk by twenty percent.
+    Always use n minus one for sample variance.
+  s1_zh: 在小样本审计中直接除以 n 属于管理层失职；面对五张小票，它会生生抹杀百分之二十的风险认知。算样本方差，务必坚持除以 n 减一。
+  s1_zh_hk: 喺小樣本審計入面直接除以 n 屬於管理層失職；面對五張單據，佢會生生抹殺百分之二十嘅風險認知。計樣本方差，務必堅持除以 n 減一。
+  s2_en: As sample size grows into thousands, n minus one over n approaches one point zero, and the bias vanishes asymptotically
+    into the rounding noise.
+  s2_zh: 当样本量扩充至成千上万笔流水时，n 分之 n 减一无限逼近于 1.0，两者的微小差异才会渐进淡出、隐没在系统四舍五入的舍入精度之后。
+  s2_zh_hk: 當樣本量擴充至成千上萬筆流水嗰陣，n 分之 n 減一無限逼近於 1.0，兩者嘅微小差異先會漸進淡出、隱沒喺系統四捨五入嘅捨入精度之後。
+  s3_en: The operating rule is to divide squared deviations by n minus one. On these five tickets that raises the standard
+    deviation from $7.07 to $7.91.
+  s3_zh: 操作规则是离差平方和除以 n 减一。这五张小票上，标准差由 $7.07 升至 $7.91。
+  s3_zh_hk: 操作規則係偏差平方和除以 n 減一。呢五張單據上，標準差由 $7.07 升至 $7.91。

@@ -1,0 +1,203 @@
+id: STAT-M06-T14-OVBIA
+course: STAT-M06
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Omitted Variable Bias: Confounding, Direction, and Causal Limits'
+title_zh: 遗漏变量偏差：混杂、偏差方向与因果边界
+title_zh_hk: 遺漏變量偏差：混雜、偏差方向同因果界線
+objective_en: State the conditions for omitted variable bias, derive its direction and magnitude in simple regression, calculate
+  an assumed bias term consistently, distinguish association from causal effect, and specify a defensible confounder-audit
+  workflow before operational decisions.
+objective_zh: 说明遗漏变量偏差的形成条件，推导简单回归中偏差的方向与大小，一致地计算假设偏差项，区分统计关联与因果效应，并在经营决策前制定可辩护的混杂审计流程。
+objective_zh_hk: 說明遺漏變量偏差嘅形成條件，推導簡單回歸入面偏差嘅方向同大小，一致噉計算假設偏差項，區分統計關聯同因果效應，並喺營運決策之前制定可辯護嘅混雜審計流程。
+glossary:
+- en: Omitted Variable Bias
+  zh: 遗漏变量偏差
+  zh_hk: 遺漏變量偏差
+  lock: true
+- en: Confounder
+  zh: 混淆变量
+  zh_hk: 混淆變量
+  lock: true
+- en: Endogeneity
+  zh: 内生性
+  zh_hk: 內生性
+  lock: true
+- en: Direction of Bias
+  zh: 偏差方向
+  zh_hk: 偏差方向
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Under the stated linear model, when does omitting X_2 bias the estimated slope on X_1?
+  question_zh: 在什么条件下，遗漏变量 X_2 会导致自变量 X_1 的回归斜率 beta_1_hat 产生遗漏变量偏差（OVB）？
+  question_zh_hk: 喺咩條件下，遺漏變量 X_2 會搞到自變量 X_1 嘅回歸斜率 beta_1_hat 產生遺漏變量偏差（OVB）？
+  options_en:
+  - 'A: X_2 has no relationship with Y and is completely uncorrelated with X_1'
+  - 'B: X_2 affects Y and is correlated with X_1'
+  - 'C: X_2 is measured in units of currency rather than physical counts'
+  - 'D: The total sample size n is less than 30 store observations'
+  options_zh:
+  - 'A: X_2 与因变量 Y 完全无关，且与 X_1 也毫无相关性'
+  - 'B: X_2 是因变量 Y 的真实决定因素（beta_2 != 0），且 X_2 与自变量 X_1 存在相关性（Cov(X_1, X_2) != 0）'
+  - 'C: X_2 采用货币金额单位计量而非物理计数单位'
+  - 'D: 样本总量 n 小于 30 个门店观测值'
+  options_zh_hk:
+  - 'A: X_2 同因變量 Y 完全冇關，而且同 X_1 亦都完全冇相關性'
+  - 'B: X_2 係因變量 Y 嘅真實決定因素（beta_2 != 0），而且 X_2 同自變量 X_1 存在相關性（Cov(X_1, X_2) != 0）'
+  - 'C: X_2 採用貨幣金額計量而唔係實體數量單位'
+  - 'D: 樣本總量 n 細過 30 間分店嘅觀測值'
+  answer: B
+  explanation_en: The omitted-variable bias term is beta_2 Cov(X_1,X_2)/Var(X_1). It is nonzero when the omitted outcome effect
+    and the relevant covariance are both nonzero.
+  explanation_zh: 遗漏变量偏差存在的充要条件是：遗漏变量直接影响因变量 Y（beta_2 != 0），且遗漏变量与模型已包含的 X_1 存在相关性（Cov(X_1, X_2) != 0）。
+  explanation_zh_hk: 遺漏變量偏差存在嘅充要條件係：遺漏變量直接影響因變量 Y（beta_2 != 0），而且遺漏變量同模型包含嘅 X_1 存在相關性（Cov(X_1, X_2) != 0）。
+- id: Q2
+  type: multiple_choice
+  question_en: Assume the short-regression slope is 0.08, beta_2 = 0.50, Cov(X_1,X_2) = 1,200, and Var(X_1) = 10,000. What
+    are the bias and implied beta_1?
+  question_zh: 分析师将销售额对商铺租金回归，得出斜率 beta_1_hat = +0.08。租金真实效应为 beta_1 = 0，但客流直接促进销售（beta_2 = +0.50）且与租金正相关（Cov = +1,200；Var
+    = 10,000）。偏差项是多少？
+  question_zh_hk: 分析師將營業額對舖租做回歸，計出斜率 beta_1_hat = +0.08。舖租真實效應係 beta_1 = 0，但人流直接帶動銷售（beta_2 = +0.50）而且同舖租正相關（Cov = +1,200；Var
+    = 10,000）。偏差項係幾多？
+  options_en:
+  - 'A: Bias = +0.06; implied beta_1 = 0.02'
+  - 'B: Bias = 0.00; implied beta_1 = 0.08'
+  - 'C: Bias = -0.06; implied beta_1 = 0.14'
+  - 'D: Bias = +0.12; implied beta_1 = -0.04'
+  options_zh:
+  - 'A: 偏差 = +0.06（估计斜率极限 plim beta_1_hat = 0.06）'
+  - 'B: 偏差 = 0.00（无偏）'
+  - 'C: 偏差 = -0.50'
+  - 'D: 偏差 = +1.20'
+  options_zh_hk:
+  - 'A: 偏差 = +0.06（估計斜率極限 plim beta_1_hat = 0.06）'
+  - 'B: 偏差 = 0.00（無偏）'
+  - 'C: 偏差 = -0.50'
+  - 'D: 偏差 = +1.20'
+  answer: A
+  explanation_en: Bias = 0.50 x (1,200/10,000) = +0.06. Since the short-regression slope equals beta_1 plus bias, the implied
+    beta_1 is 0.08 - 0.06 = 0.02.
+  explanation_zh: 偏差 = beta_2 * (Cov(X_1, X_2) / Var(X_1)) = 0.50 * (1,200 / 10,000) = 0.50 * 0.12 = +0.06。回归模型错误地将客流量带来的业绩归功于高昂的租金。
+  explanation_zh_hk: 偏差 = beta_2 * (Cov(X_1, X_2) / Var(X_1)) = 0.50 * (1,200 / 10,000) = 0.50 * 0.12 = +0.06。回歸模型錯誤噉將人流帶嚟嘅銷量功勞歸咎於貴舖租。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  title_en: Does expensive rent cause higher coffee sales?
+  title_zh: 昂贵租金是否导致更高咖啡销量？
+  title_zh_hk: 昂貴租金係咪導致更高咖啡銷量？
+  en: 'Metro Coffee is reviewing an assumed regression in which store sales rise with lease rent. The pattern may reflect
+    location quality rather than a causal return to paying more rent: high-footfall sites can command higher rent and also
+    generate more sales. If foot traffic is omitted, the rent slope can absorb part of the traffic effect and become biased.'
+  zh: 都市咖啡正在审视一项假设回归，其中门店销量随租金上升。该形态可能反映选址质量，而不是支付更高租金的因果回报：高客流地点既可能租金更高，也可能销量更多。若遗漏客流，租金斜率会吸收部分客流效应并产生偏差。
+  zh_hk: 都市咖啡正審視一項假設回歸，其中門市銷量隨租金上升。呢個形態可能反映選址質素，而唔係支付更高租金嘅因果回報：高人流地點既可能租金更高，亦可能銷量更多。如果遺漏人流，租金斜率會吸收部分人流效應並產生偏差。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: plim(b_1 from short regression) = beta_1 + beta_2 Cov(X_1,X_2)/Var(X_1)
+  formula_zh: 短回归中 plim(b_1) = beta_1 + beta_2 Cov(X_1,X_2)/Var(X_1)
+  formula_zh_hk: 短回歸入面 plim(b_1) = beta_1 + beta_2 Cov(X_1,X_2)/Var(X_1)
+  formula_tex: \operatorname{plim}(b_1^{short})=\beta_1+\beta_2\frac{\operatorname{Cov}(X_1,X_2)}{\operatorname{Var}(X_1)}
+  s1_en: Suppose the correctly specified population model contains included regressor X_1 and omitted factor X_2. Omitting
+    X_2 biases the short-regression slope when X_2 affects Y and is correlated with X_1. If either beta_2 or the covariance
+    is zero, this particular omitted-variable bias term is zero.
+  s1_zh: 假设正确设定的总体模型包含已纳入变量 X_1 与被遗漏因素 X_2。当 X_2 影响 Y 且与 X_1 相关时，遗漏 X_2 会使短回归斜率产生偏差。若 beta_2 或协方差任一为零，这个特定遗漏变量偏差项就是零。
+  s1_zh_hk: 假設正確設定嘅總體模型包含已納入變量 X_1 同被遺漏因素 X_2。當 X_2 影響 Y 而且同 X_1 相關嗰陣，遺漏 X_2 會令短回歸斜率產生偏差。如果 beta_2 或者協方差任何一個係零，呢個特定遺漏變量偏差項就係零。
+  s2_en: The bias sign equals the sign of beta_2 multiplied by the sign of Cov(X_1,X_2), because Var(X_1) is positive whenever
+    X_1 varies. The formula is a population or probability-limit statement under the stated linear model, not a way to recover
+    truth from unverified assumed inputs.
+  s2_zh: 由于 X_1 存在变异时 Var(X_1) 为正，偏差符号等于 beta_2 的符号乘以 Cov(X_1,X_2) 的符号。该公式是在既定线性模型下的总体或概率极限陈述，并不能利用未经核实的假设输入恢复真实效应。
+  s2_zh_hk: 由於 X_1 存在變異嗰陣 Var(X_1) 係正，偏差符號等於 beta_2 嘅符號乘以 Cov(X_1,X_2) 嘅符號。呢個公式係喺既定線性模型之下嘅總體或者概率極限陳述，並唔可以利用未經核實嘅假設輸入恢復真實效應。
+  title_en: Bias requires outcome relevance and correlation with the included regressor
+  title_zh: 偏差需要结果相关性与同已纳入变量的相关性
+  title_zh_hk: 偏差需要結果相關性同已納入變量嘅相關性
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  left_en: Direction of bias
+  left_zh: 偏差方向
+  right_en: Identification limits
+  right_zh: 识别限制
+  s1_en: If foot traffic raises sales and is positively associated with rent, omitting traffic creates upward bias in the
+    rent slope. If one link is negative and the other positive, the bias is downward. Opposing omitted factors can also offset
+    one another, so a small net bias does not prove the model is well specified.
+  s1_zh: 若客流提高销量且与租金正相关，遗漏客流会使租金斜率向上偏。若一个关系为负而另一个为正，偏差向下。多个遗漏因素也可能相互抵消，因此净偏差较小并不能证明模型设定正确。
+  s1_zh_hk: 如果人流提高銷量而且同租金正相關，遺漏人流會令租金斜率向上偏。如果一個關係係負而另一個係正，偏差向下。多個遺漏因素亦可能互相抵消，所以淨偏差較細並唔證明模型設定正確。
+  s2_en: Adding a variable is appropriate only when its role, timing, measurement, and causal position are understood. Controlling
+    for mediators, colliders, or badly measured proxies can change the estimand or introduce other bias. A causal diagram
+    and domain knowledge should guide variable selection.
+  s2_zh: 只有在理解变量的作用、时序、测量与因果位置时，加入控制变量才是适当的。控制中介变量、碰撞变量或测量不良的代理变量，可能改变估计目标或引入其他偏差。变量选择应由因果图与领域知识指导。
+  s2_zh_hk: 只有喺理解變量嘅作用、時序、量度同因果位置嗰陣，加入控制變量先係適當。控制中介變量、碰撞變量或者量度不良嘅代理變量，可能改變估計目標或者引入其他偏差。變量選擇應該由因果圖同領域知識指導。
+  s3_en: Statistical significance, high R-squared, and a stable coefficient after adding one control do not by themselves
+    establish exogeneity. Remaining confounding, simultaneity, selection, measurement error, and functional-form misspecification
+    still require assessment.
+  s3_zh: 统计显著性、高 R 平方，以及加入一个控制变量后系数稳定，本身都不能证明外生性成立。剩余混杂、同时性、选择、测量误差与函数形式设定错误仍需评估。
+  s3_zh_hk: 統計顯著性、高 R 平方，以及加入一個控制變量之後系數穩定，本身都唔可以證明外生性成立。剩餘混雜、同時性、選擇、量度誤差同函數形式設定錯誤仍然需要評估。
+  left_zh_hk: 偏差方向
+  right_zh_hk: 識別限制
+  title_en: Use sign logic to diagnose direction, not to declare causality
+  title_zh: 用符号逻辑诊断方向，而非宣告因果
+  title_zh_hk: 用符號邏輯診斷方向，而唔係宣告因果
+- id: ledger
+  visual: steps
+  seconds: 38
+  step1_en: 'Teaching assumptions: short-regression rent slope = 0.08; beta_2 = 0.50; Cov(X_1,X_2) = 1,200; Var(X_1) = 10,000'
+  step1_zh: 教学假设：短回归租金斜率 = 0.08；beta_2 = 0.50；Cov(X_1,X_2) = 1,200；Var(X_1) = 10,000
+  step2_en: Bias = 0.50 x (1,200/10,000) = +0.06
+  step2_zh: 偏差 = 0.50 × (1,200/10,000) = +0.06
+  step3_en: Implied beta_1 = 0.08 - 0.06 = 0.02, conditional on all teaching assumptions being correct
+  step3_zh: 隐含 beta_1 = 0.08 - 0.06 = 0.02，前提是全部教学假设正确
+  s1_en: For illustration, assume the short-regression rent slope is 0.08, the omitted traffic effect is 0.50, and the covariance-to-variance
+    ratio is 0.12. These are teaching assumptions, not verified leases, sales, traffic counts, location values, or investment
+    records.
+  s1_zh: 作为示例，假设短回归租金斜率为 0.08，遗漏客流效应为 0.50，协方差与方差之比为 0.12。这些数字是教学假设，并非已核实的租约、销售、客流计数、选址价值或投资记录。
+  s1_zh_hk: 作為例子，假設短回歸租金斜率係 0.08，遺漏人流效應係 0.50，協方差同方差之比係 0.12。呢啲數字係教學假設，唔係已核實嘅租約、銷售、人流計數、選址價值或者投資記錄。
+  s2_en: The assumed omitted-variable bias is positive 0.06. Under this single-confounder linear decomposition, the short-regression
+    estimate equals the target coefficient plus that bias.
+  s2_zh: 假设遗漏变量偏差为正 0.06。在这个单一混杂因素的线性分解下，短回归估计等于目标系数加该偏差。
+  s2_zh_hk: 假設遺漏變量偏差係正 0.06。喺呢個單一混雜因素嘅線性分解之下，短回歸估計等於目標系數加呢個偏差。
+  s3_en: Subtracting 0.06 from 0.08 gives an implied coefficient of 0.02, not zero. This arithmetic is internally consistent
+    with the assumptions, but it is not an empirical correction unless beta_2 and the covariance ratio are credibly identified
+    from appropriate evidence.
+  s3_zh: 从 0.08 减去 0.06，得到隐含系数 0.02，而不是零。该算术与假设内部一致，但只有当 beta_2 与协方差比率由适当证据可信识别时，才能成为经验修正。
+  s3_zh_hk: 由 0.08 減去 0.06，得到隱含系數 0.02，而唔係零。呢個算術同假設內部一致，但只有當 beta_2 同協方差比率由適當證據可信識別嗰陣，先可以成為經驗修正。
+  step1_zh_hk: 教學假設：短回歸租金斜率 = 0.08；beta_2 = 0.50；Cov(X_1,X_2) = 1,200；Var(X_1) = 10,000
+  step2_zh_hk: 偏差 = 0.50 × (1,200/10,000) = +0.06
+  step3_zh_hk: 隱含 beta_1 = 0.08 - 0.06 = 0.02，前提係全部教學假設正確
+  title_en: Calculate an internally consistent assumed bias decomposition
+  title_zh: 计算内部一致的假设偏差分解
+  title_zh_hk: 計算內部一致嘅假設偏差分解
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  q1_en: When does an omitted factor bias the included slope?
+  q1_zh: 遗漏因素何时会使已纳入变量斜率产生偏差？
+  q2_en: What should precede a lease or location decision?
+  q2_zh: 租赁或选址决策前应完成什么？
+  s1_en: Bias arises when the omitted factor affects the outcome and is correlated with the included regressor, under the
+    stated model. Its direction follows the product of those two relationships; its magnitude also depends on their size and
+    the variation in X_1.
+  s1_zh: 在既定模型下，当遗漏因素影响结果且与已纳入解释变量相关时，就会产生偏差。偏差方向取决于两种关系的符号乘积，大小还取决于关系幅度与 X_1 的变异。
+  s1_zh_hk: 喺既定模型之下，當遺漏因素影響結果而且同已納入解釋變量相關嗰陣，就會產生偏差。偏差方向取決於兩種關係嘅符號乘積，大小仲取決於關係幅度同 X_1 嘅變異。
+  s2_en: Define the causal estimand, map plausible confounders, verify timing and measurement, compare justified specifications,
+    examine sensitivity, and use experimental or quasi-experimental evidence when available. A regression slope alone should
+    not authorize a high-rent lease.
+  s2_zh: 应定义因果估计目标、绘制合理混杂因素、核实时序与测量、比较有依据的模型设定、检查敏感性，并在可行时使用实验或准实验证据。单个回归斜率不应授权高租金租约。
+  s2_zh_hk: 應該定義因果估計目標、繪製合理混雜因素、核實時序同量度、比較有依據嘅模型設定、檢查敏感性，並喺可行嗰陣使用實驗或者準實驗證據。單個回歸斜率唔應該授權高租金租約。
+  s3_en: In the assumed numerical example, the bias is +0.06 and the implied target coefficient is 0.02. Report both as conditional
+    model quantities, together with uncertainty and identification limitations, rather than verified causal effects.
+  s3_zh: 在假设数值示例中，偏差为 +0.06，隐含目标系数为 0.02。应把两者连同不确定性与识别限制一起报告为条件模型量，而不是已核实因果效应。
+  s3_zh_hk: 喺假設數值例子入面，偏差係 +0.06，隱含目標系數係 0.02。應該將兩者連同不確定性同識別限制一齊報告做條件模型量，而唔係已核實因果效應。
+  q1_zh_hk: 遺漏因素幾時會令已納入變量斜率產生偏差？
+  q2_zh_hk: 租賃或者選址決策之前應該完成咩？
+  title_en: Audit the causal structure before treating a slope as a lever
+  title_zh: 把斜率当作管理杠杆前先审计因果结构
+  title_zh_hk: 將斜率當作管理槓桿之前先審計因果結構

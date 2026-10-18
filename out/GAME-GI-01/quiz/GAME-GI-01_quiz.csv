@@ -1,5 +1,0 @@
-﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
-1,GAME-GI-01,comprehension,25,Why is posting a price on that path already a game?,为什么在那条路上标价已经是博弈？,點解喺嗰條路標價已經係博弈？,Because what one cart takes home also depends on the other cart's price.,因为一辆车能带走多少，还取决于另一辆的价。,因為一架車袋到幾多，仲取決於另一架個價。
-2,GAME-GI-01,transfer,25,A puts a lower price up. B leaves its board. Does B still take home the same amount?,甲把价钱标低。乙牌子不动。乙带走的钱还一样吗？,甲將價錢標低。乙塊牌唔郁。乙袋到嘅錢仲一樣嗎？,No. Customers walk to A. B takes home less without touching the board.,不一样。客人走向甲。乙没改牌子，带走的钱还是少了。,唔一樣。客人行去甲。乙冇改牌，袋到嘅錢都係少咗。
-3,GAME-GI-01,check,25,Can I say what this cart takes home without mentioning the other?,不提另一辆，我说得出这辆车带走多少吗？,唔提另一架，我講唔講得出呢架袋到幾多？,,,
-4,GAME-GI-01,transfer,25,"If the other board changes, does this cart take home less?",对面牌子一变，这辆车带走的钱会变少吗？,對面牌一變，呢架袋到嘅錢會唔會少？,,,

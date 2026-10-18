@@ -1,0 +1,224 @@
+id: STAT-M05-T15-RECAP
+course: STAT-M05
+course_en: Hypothesis Testing & Store Experiments
+course_zh: 假设检验与门店运营实验
+course_zh_hk: 假設檢驗與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The Executive Testing Matrix: Choosing, Interpreting, and Auditing a Test'
+title_zh: 执行决策检验矩阵：选择、解释与审计统计检验
+title_zh_hk: 執行決策檢驗矩陣：選擇、解讀同審計統計檢驗
+objective_en: Select an appropriate mean or proportion test from the parameter, number of samples, dependence structure, and
+  variance information; connect two-sided tests with matching confidence intervals; and apply a statistical due-diligence
+  checklist that separates evidence, practical importance, causality, and operational action.
+objective_zh: 根据参数类型、样本数量、依赖结构与方差信息选择适当的均值或比例检验，把双侧检验与匹配置信区间联系起来，并应用统计尽调清单，区分统计证据、实际重要性、因果解释与经营行动。
+objective_zh_hk: 根據參數類型、樣本數量、依賴結構同方差資訊選擇適當嘅均值或者比例檢驗，將雙側檢驗同匹配置信區間連繫起嚟，並應用統計盡調清單，區分統計證據、實際重要性、因果解讀同營運行動。
+glossary:
+- en: testing decision taxonomy
+  zh: 假设检验决策树/分类法
+  zh_hk: 假設檢驗決策樹/分類法
+  lock: true
+- en: duality of intervals and tests
+  zh: 区间与检验的对偶性
+  zh_hk: 區間與檢驗嘅對偶性
+  lock: true
+- en: statistical due diligence
+  zh: 统计尽职调查/审计审查
+  zh_hk: 統計盡職調查/審計審查
+  lock: true
+- en: executive action standard
+  zh: 高管决策执行标准
+  zh_hk: 高管決策執行標準
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Which test is appropriate when the exact same 30 customers provide satisfaction scores before and after a store
+    change?
+  question_zh: 在执行官假设检验主决策树中，当评估旺角旗舰店重装改造后顾客满意度评分是否显著提升，且受测样本为完全同一批 30 名会员改造前后的打分时，应当沿用哪条决策路径？
+  question_zh_hk: 喺執行官假設檢驗主決策樹入面，當評估旺角旗艦舖重裝改造後顧客滿意度評分係咪顯著提升，且受測樣本為完全同一批 30 名會員改造前後嘅打分嗰陣，應當沿用邊條決策路徑？
+  options_en:
+  - 'A: A paired-difference t-test on 30 within-customer differences, with df = 29, if the difference-score conditions are
+    appropriate.'
+  - 'B: Two-sample pooled Z-test for proportions with p_pool = 0.50.'
+  - 'C: One-sample Z-test assuming infinite store population variance.'
+  - 'D: Independent Welch''s t-test assuming equal variances across time.'
+  options_zh:
+  - 'A: 配对差值 t 检验（自由度 df = 29），因为测量数据源自完全相同的个体单元前后对照，能彻底消除人际基准天赋噪音。'
+  - 'B: 双样本合并比例 Z 检验，并设定合并基准比例 p_pool = 0.50。'
+  - 'C: 单样本 Z 检验，并假设门店客流总体的方差为无穷大。'
+  - 'D: 独立双样本韦尔奇 t 检验，并假定前后时间维度的方差恒定相等。'
+  options_zh_hk:
+  - 'A: 配對差值 t 檢驗（自由度 df = 29），因為測量數據源自完全相同嘅個體單元前後對照，能徹底消除人際基準天賦噪音。'
+  - 'B: 雙樣本合併比例 Z 檢驗，並設定合併基準比例 p_pool = 0.50。'
+  - 'C: 單樣本 Z 檢驗，並假設門市客流總體嘅方差為無窮大。'
+  - 'D: 獨立雙樣本韋爾奇 t 檢驗，並假定前後時間維度嘅方差恆定相等。'
+  answer: A
+  explanation_en: The observations are matched within customer, so the analysis should preserve that dependence by reducing
+    each pair to a difference. Pairing can improve precision but does not eliminate every source of bias.
+  explanation_zh: 当在前后两种状态下追踪完全相同的个体或营运单元时，两期数据呈现强相关性。配对差值 t 检验将相关变量降维压缩为单列一维差值 D_i（自由度 n - 1 = 29），实现最高的统计检验功效。
+  explanation_zh_hk: 當喺前後兩種狀態下追蹤完全相同嘅個體或營運單元嗰陣，兩期數據呈現強相關性。配對差值 t 檢驗將相關變量降維壓縮為單列一維差值 D_i（自由度 n - 1 = 29），實現最高嘅統計檢驗功效。
+- id: Q2
+  type: multiple_choice
+  question_en: 'A matching two-sided 95% confidence interval for mu1 - mu2 is [1.20 s, 4.80 s]. What does the corresponding
+    alpha = 0.05 test of H0: mu1 - mu2 = 0 conclude?'
+  question_zh: '若针对两种不同门店形态的平均出餐用时之差构建的双尾 95% 置信区间为 [+1.20 秒, +4.80 秒]，那么在显著性水平 alpha = 0.05 下针对 H0: mu1 - mu2 = 0 的双尾假设检验将得出何种确定性裁决？'
+  question_zh_hk: '若果針對兩種唔同門市形態嘅平均出餐用時之差構建嘅雙尾 95% 置信區間為 [+1.20 秒, +4.80 秒]，噉喺顯著性水平 alpha = 0.05 下針對 H0: mu1 - mu2 = 0 嘅雙尾假設檢驗將得出咩確定性裁決？'
+  options_en:
+  - 'A: Reject H0 because zero lies outside the matching 95% confidence interval.'
+  - 'B: Fail to reject H0, because both bounds of the interval are positive numbers.'
+  - 'C: The test is inconclusive because confidence intervals and hypothesis tests are based on mutually incompatible mathematics.'
+  - 'D: Accept H0, because 1.20 seconds of difference is practically invisible to coffee drinkers.'
+  options_zh:
+  - 'A: 坚决拒绝 H0 且 p < 0.05，因为原假设所设定的零基准值（Delta_0 = 0）完全跌落在 95% 置信区间之外。'
+  - 'B: 判定不拒绝 H0，因为置信区间的上下界皆为正数。'
+  - 'C: 无法得出确定结论，因为区间估计与假设检验在数理底层采用互不兼容的数学公理。'
+  - 'D: 判定接受 H0，因为一点二秒的微弱出餐差距在实际消费体验中几乎无法察觉。'
+  options_zh_hk:
+  - 'A: 堅決拒絕 H0 且 p < 0.05，因為原假設所設定嘅零基準值（Delta_0 = 0）完全跌落喺 95% 置信區間之外。'
+  - 'B: 判定唔拒絕 H0，因為置信區間嘅上下界皆為正數。'
+  - 'C: 冇辦法得出確定結論，因為區間估計與假設檢驗喺數理底層採用互不兼容嘅數學公理。'
+  - 'D: 判定接受 H0，因為一點二秒嘅微弱出餐差距喺實際消費體驗入面幾乎冇辦法察覺。'
+  answer: A
+  explanation_en: For matching two-sided procedures, the 95% confidence interval contains exactly the null values not rejected
+    at alpha = 0.05. Because zero is outside [1.20, 4.80], reject the zero-difference null.
+  explanation_zh: 对偶性原理：95% 置信区间囊括了所有在 alpha = 0.05 水平下无法被拒绝的原假设取值集合。既然数值零完全脱落在 [+1.20, +4.80] 区间之外，在 alpha = 0.05 下必定义无反顾拒绝原假设。
+  explanation_zh_hk: 對偶性原理：95% 置信區間囊括咗所有喺 alpha = 0.05 水平下冇辦法被拒絕嘅原假設取值集合。既然數值零完全脫落喺 [+1.20, +4.80] 區間之外，喺 alpha = 0.05 下必定義無反顧拒絕原假設。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  kicker_en: The Five Million Dollar Decision
+  kicker_zh: 五百万资本开支的终审
+  kicker_zh_hk: 五百萬資本開支嘅終審
+  title_en: Which testing path matches the business question and data design?
+  title_zh: 哪条检验路径与业务问题及数据设计匹配？
+  title_zh_hk: 邊條檢驗路徑同業務問題及數據設計匹配？
+  en: 'Metro Coffee has several assumed evidence summaries: one process mean versus a benchmark, two independent store means,
+    matched before-and-after measurements, and two conversion rates. A p-value alone cannot identify the correct method. The
+    testing path must begin with the parameter, sampling units, dependence structure, variance information, direction, and
+    analysis plan.'
+  zh: 都市咖啡有多项假设证据摘要：一个流程均值与基准比较、两个独立门店均值比较、匹配的前后测量，以及两个转化率比较。仅凭 p 值无法确定正确方法。检验路径必须从参数、抽样单位、依赖结构、方差信息、方向与分析方案出发。
+  zh_hk: 都市咖啡有多項假設證據摘要：一個流程均值同基準比較、兩個獨立門市均值比較、匹配嘅前後量度，以及兩個轉化率比較。單憑 p 值冇辦法確定正確方法。檢驗路徑必須由參數、抽樣單位、依賴結構、方差資訊、方向同分析方案出發。
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker_en: The Master Architecture
+  kicker_zh: 主决策架构
+  kicker_zh_hk: 主決策架構
+  title_en: Choose the test from the estimand and design
+  title_zh: 根据估计目标与设计选择检验
+  title_zh_hk: 根據估計目標同設計選擇檢驗
+  formula: 'One mean: Z if sigma known, t if sigma unknown; two means: paired t or Welch t; two proportions: pooled Z for
+    H0: p1 = p2'
+  formula_zh: '一个均值：sigma 已知用 Z，未知用 t；两个均值：配对 t 或韦尔奇 t；两个比例：检验 H0: p1 = p2 时用合并 Z'
+  formula_zh_hk: '一個均值：sigma 已知用 Z，未知用 t；兩個均值：配對 t 或韋爾奇 t；兩個比例：檢驗 H0: p1 = p2 嗰陣用合併 Z'
+  formula_tex: \text{Method}=f(\text{parameter},\text{samples},\text{dependence},\text{variance information})
+  s1_en: For one population mean, compare the sample mean with a benchmark. Use a one-sample Z procedure only when the population
+    standard deviation is genuinely known; when it is estimated from the sample, use a one-sample t procedure under appropriate
+    conditions.
+  s1_zh: 对于一个总体均值，将样本均值与基准比较。只有在总体标准差确实已知时才使用单样本 Z 方法；若标准差由样本估计，则在条件适当时使用单样本 t 方法。
+  s1_zh_hk: 對於一個總體均值，將樣本均值同基準比較。只有喺總體標準差確實已知嗰陣先使用單樣本 Z 方法；如果標準差由樣本估計，就喺條件適當嗰陣使用單樣本 t 方法。
+  s2_en: 'For two means, preserve the design: analyze matched units through their differences, and use Welch’s test for independent
+    groups without imposing equal variances. For two independent binary rates under an equality null, use the pooled two-proportion
+    Z test when independence and expected-count conditions are credible.'
+  s2_zh: 对于两个均值，应保留设计结构：匹配单元通过差值分析；独立组则使用不强加方差相等条件的韦尔奇检验。对于相等原假设下的两个独立二元比例，在独立性与期望计数条件可信时使用合并双比例 Z 检验。
+  s2_zh_hk: 對於兩個均值，應該保留設計結構：匹配單元透過差值分析；獨立組就使用唔強加方差相等條件嘅韋爾奇檢驗。對於相等原假設之下嘅兩個獨立二元比例，喺獨立性同期望計數條件可信嗰陣使用合併雙比例 Z 檢驗。
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  kicker_en: The Duality Bridge
+  kicker_zh: 对偶合璧
+  kicker_zh_hk: 對偶合璧
+  title_en: Matching confidence intervals and two-sided tests tell the same inferential story
+  title_zh: 匹配置信区间与双侧检验讲述同一推断结论
+  title_zh_hk: 匹配置信區間同雙側檢驗講述同一推斷結論
+  left_en: 'Interval view: Is the null value inside the matching 1 - alpha confidence interval?'
+  left_zh: 区间视角：原假设值是否位于匹配的 1 - alpha 置信区间内？
+  left_zh_hk: 區間視角：原假設值係咪位於匹配嘅 1 - alpha 置信區間內？
+  right_en: 'Test view: Is the two-sided p-value less than or equal to alpha?'
+  right_zh: 检验视角：双侧 p 值是否小于等于 alpha？
+  right_zh_hk: 檢驗視角：雙側 p 值係咪細過或者等於 alpha？
+  s1_en: For a two-sided test and confidence interval built from the same model, standard error, critical distribution, and
+    significance level, the null value is rejected exactly when it lies outside the corresponding confidence interval. This
+    equivalence depends on using matching procedures.
+  s1_zh: 对于基于相同模型、标准误、临界分布与显著性水平构建的双侧检验和置信区间，当且仅当原假设值位于对应置信区间之外时，检验拒绝该值。该等价性依赖于使用匹配方法。
+  s1_zh_hk: 對於基於相同模型、標準誤、臨界分佈同顯著性水平構建嘅雙側檢驗同置信區間，當且僅當原假設值位於對應置信區間之外嗰陣，檢驗拒絕嗰個值。呢個等價性依賴使用匹配方法。
+  s2_en: An interval contributes more than a binary decision because it displays effect direction, magnitude, and precision.
+    Statistical rejection does not establish practical importance, while failure to reject does not prove that the effect
+    is exactly zero.
+  s2_zh: 置信区间提供的信息多于二元决策，因为它显示效应方向、大小与精度。统计拒绝并不能证明实际重要性，而不拒绝也不能证明效应恰好为零。
+  s2_zh_hk: 置信區間提供嘅資訊多過二元決策，因為佢顯示效應方向、大小同精度。統計拒絕並唔可以證明實際重要性，而唔拒絕亦唔可以證明效應啱啱等於零。
+  s3_en: The duality can fail when the interval and test use different standard errors, adjustments, directions, or models.
+    Multiple-testing corrections, one-sided inference, sequential monitoring, and complex designs require intervals and tests
+    constructed under the same rules.
+  s3_zh: 若区间与检验使用不同标准误、调整、方向或模型，对偶关系可能不成立。多重检验调整、单侧推断、序贯监测与复杂设计要求区间和检验依据同一规则构建。
+  s3_zh_hk: 如果區間同檢驗使用唔同標準誤、調整、方向或者模型，對偶關係可能唔成立。多重檢驗調整、單側推斷、序貫監測同複雜設計要求區間同檢驗根據同一規則構建。
+- id: ledger
+  visual: steps
+  seconds: 38
+  kicker_en: The Master Ledger
+  kicker_zh: 大盘巡裁
+  kicker_zh_hk: 大盤巡裁
+  title_en: Audit four assumed evidence summaries without overclaiming
+  title_zh: 审计四项假设证据摘要，同时避免过度结论
+  title_zh_hk: 審計四項假設證據摘要，同時避免過度結論
+  step1_en: 'One mean: verify known versus estimated sigma, sampling unit, and measurement validity before choosing Z or t'
+  step1_zh: 一个均值：选择 Z 或 t 前，核实 sigma 是已知还是估计，并检查抽样单位与测量有效性
+  step1_zh_hk: 一個均值：選擇 Z 或者 t 之前，核實 sigma 係已知定係估計，並檢查抽樣單位同量度有效性
+  step2_en: 'Two means: distinguish paired from independent units; for independent groups, avoid an unsupported equal-variance
+    assumption'
+  step2_zh: 两个均值：区分配对与独立单元；对于独立组，避免采用无依据的方差相等假设
+  step2_zh_hk: 兩個均值：區分配對同獨立單元；對於獨立組，避免採用冇依據嘅方差相等假設
+  step3_en: 'Two rates or many tests: verify independence and counts, define the comparison family, and account for monitoring
+    and multiplicity'
+  step3_zh: 两个比例或多项检验：核实独立性与计数条件，定义比较族，并处理监测与多重性
+  step3_zh_hk: 兩個比例或者多項檢驗：核實獨立性同計數條件，定義比較族，並處理監測同多重性
+  s1_en: 'For illustration, consider four teaching cases: a one-mean packaging audit, an independent-store mean comparison,
+    matched before-and-after measurements, and two conversion rates. These are method-selection exercises, not verified operational
+    records, business cases, or capital requests.'
+  s1_zh: 作为示例，考虑四个教学案例：单均值包装审计、独立门店均值比较、匹配前后测量，以及两个转化率比较。这些是方法选择练习，并非已核实的经营记录、商业方案或资本申请。
+  s1_zh_hk: 作為例子，考慮四個教學案例：單均值包裝審計、獨立門市均值比較、匹配前後量度，以及兩個轉化率比較。呢啲係方法選擇練習，唔係已核實嘅營運記錄、商業方案或者資本申請。
+  s2_en: For every case, report the estimand, estimate, standard error, confidence interval, test statistic, p-value, assumptions,
+    missingness, and design. If several outcomes, variants, or interim looks were examined, document the full family and apply
+    the prespecified adjustment or sequential method.
+  s2_zh: 对于每个案例，应报告估计目标、估计值、标准误、置信区间、检验统计量、p 值、假设、缺失情况与设计。若检查了多个结果、版本或中期时点，应记录完整检验族，并应用预先指定的调整或序贯方法。
+  s2_zh_hk: 對於每個案例，應該報告估計目標、估計值、標準誤、置信區間、檢驗統計量、p 值、假設、缺失情況同設計。如果檢查咗多個結果、版本或者中期時點，應該記錄完整檢驗族，並應用預先指定嘅調整或者序貫方法。
+  s3_en: The statistical result should remain narrower than the operating decision. Evidence of a shifted mean or rate does
+    not diagnose a mechanism, establish causality, quantify financial return, or authorize action against a person. Those
+    conclusions require additional verified evidence and decision criteria.
+  s3_zh: 统计结果应比经营决策更谨慎。均值或比例发生偏移的证据不能诊断机制、证明因果、量化财务回报，也不能授权针对个人采取行动。这些结论需要额外的已核实证据与决策标准。
+  s3_zh_hk: 統計結果應該比營運決策更加審慎。均值或者比例發生偏移嘅證據唔可以診斷機制、證明因果、量化財務回報，亦唔可以授權針對個人採取行動。呢啲結論需要額外嘅已核實證據同決策標準。
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  kicker_en: The Executive Mandate
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: A defensible decision combines the right method with disciplined interpretation
+  title_zh: 有依据的决策需要正确方法与严谨解释相结合
+  title_zh_hk: 有依據嘅決策需要正確方法同嚴謹解讀相結合
+  q1_en: What questions determine the correct branch of the testing matrix?
+  q1_zh: 哪些问题决定检验矩阵中的正确路径？
+  q1_zh_hk: 邊啲問題決定檢驗矩陣入面嘅正確路徑？
+  q2_en: What must be verified before statistical evidence becomes an operational recommendation?
+  q2_zh: 统计证据转化为经营建议前必须核实什么？
+  q2_zh_hk: 統計證據轉化成營運建議之前必須核實咩？
+  s1_en: Identify the parameter, benchmark or group contrast, number of samples, whether units are paired or independent,
+    whether sigma is known, whether the outcome is quantitative or binary, and whether the test is one-sided, multiple, or
+    sequential. Then choose a method whose assumptions match that architecture.
+  s1_zh: 应识别参数、基准或组间对比、样本数量、单元是配对还是独立、sigma 是否已知、结果是定量还是二元，以及检验属于单侧、多重还是序贯。随后选择假设与该架构匹配的方法。
+  s1_zh_hk: 應該識別參數、基準或者組間對比、樣本數量、單元係配對定係獨立、sigma 係咪已知、結果係定量定係二元，以及檢驗屬於單側、多重定係序貫。之後選擇假設同呢個架構匹配嘅方法。
+  s2_en: Before recommending action, verify data provenance, assignment, independence, measurement, exclusions, missingness,
+    model conditions, effect magnitude, interval precision, multiplicity, monitoring, practical thresholds, costs, and causal
+    identification. No p-value can replace that audit.
+  s2_zh: 提出行动建议前，应核实数据来源、分配方式、独立性、测量、排除、缺失、模型条件、效应大小、区间精度、多重性、监测、实际阈值、成本与因果识别。任何 p 值都不能替代这项审计。
+  s2_zh_hk: 提出行動建議之前，應該核實數據來源、分配方式、獨立性、量度、排除、缺失、模型條件、效應大小、區間精度、多重性、監測、實際閾值、成本同因果識別。任何 p 值都唔可以取代呢項審計。
+  s3_en: 'The executive testing matrix is therefore a sequence: frame the estimand, preserve the design, quantify uncertainty,
+    apply the planned decision rule, and interpret the result at the level the evidence supports. Statistical significance
+    is evidence, not an automatic operating command.'
+  s3_zh: 因此，执行检验矩阵是一套顺序：明确估计目标、保留设计结构、量化不确定性、应用预设决策规则，并在证据支持的层面解释结果。统计显著性是证据，而不是自动经营指令。
+  s3_zh_hk: 所以，執行檢驗矩陣係一套順序：明確估計目標、保留設計結構、量化不確定性、應用預設決策規則，並喺證據支持嘅層面解讀結果。統計顯著性係證據，而唔係自動營運指令。

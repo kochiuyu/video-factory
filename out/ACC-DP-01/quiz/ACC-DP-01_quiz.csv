@@ -1,5 +1,0 @@
-﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
-1,ACC-DP-01,comprehension,25,Depreciation allocates which amount over useful life?,折旧把哪一笔金额分摊到使用寿命？,折舊把哪一筆金額分攤到使用壽命？,Cost minus residual value.,成本减去残值。,成本減去殘值。
-2,ACC-DP-01,transfer,25,Buying a van uses cash this year. Does that whole cash outlay reduce this year’s profit?,今年用现金买一辆面包车。整笔现金支出是否都减少今年利润？,今年用現金買一輛客貨車。整筆現金支出是否都減少今年利潤？,No. Only this year’s depreciation hits profit.,不是。只有本年折旧计入利润。,不是。只有本年折舊計入利潤。
-3,ACC-DP-01,check,25,How long will this asset work?,这项资产还能工作多久？,這項資產還能工作多久？,,,
-4,ACC-DP-01,transfer,25,How much cost belongs to this year?,今年应承担多少成本？,今年應承擔多少成本？,,,

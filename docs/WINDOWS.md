@@ -1,7 +1,33 @@
 # Windows setup
 
 **First time on this PC?** Use [SETUP.md](SETUP.md) (Python, venv, fonts, console).
-This page is only the FFmpeg repair sheet.
+This page is the FFmpeg repair sheet and the UTF-8 note for Chinese YAML.
+
+## Chinese YAML on Windows (`charmap` codec)
+
+`charmap codec can't decode byte 0x8f` means a script opened a lesson file with the Windows code page instead of UTF-8.
+
+The factory already reads and writes YAML as UTF-8. `factory/app.py` and `factory/build.py` also call `force_utf8()` on start.
+
+If a helper script or Gemini's local runner still crashes:
+
+```python
+from pathlib import Path
+import yaml
+
+data = yaml.safe_load(Path("lessons/ECON/ECON-MB-01.yaml").read_text(encoding="utf-8"))
+Path("lessons/ECON/ECON-MB-01.yaml").write_text(
+    yaml.dump(data, allow_unicode=True, sort_keys=False),
+    encoding="utf-8",
+)
+```
+
+Optional for the whole machine (new terminals only):
+
+```powershell
+setx PYTHONUTF8 1
+setx PYTHONIOENCODING utf-8
+```
 
 The traceback `FileNotFoundError: [WinError 2]` on `ffprobe` / `ffmpeg` means Windows does not have FFmpeg on PATH. Speech may already have been written; assembly cannot start.
 

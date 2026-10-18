@@ -1,0 +1,165 @@
+id: STAT-M09-T13-FORAC
+course: STAT-M09
+course_en: Business Time Series & Demand Forecasting
+course_zh: 商业时间序列与需求预测
+course_zh_hk: 商業時間序列與需求預測
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Forecast Accuracy Metrics: Comparing MAE, RMSE, and MAPE'
+title_zh: 预测准确度指标：比较 MAE、RMSE 与 MAPE
+title_zh_hk: 預測準確度指標：比較 MAE、RMSE 同 MAPE
+objective_en: Calculate MAE, RMSE, and MAPE on a common evaluation sample, explain their different weighting and scale properties, and select metrics that match the forecasting decision and data limitations.
+objective_zh: 在同一评估样本上计算 MAE、RMSE 与 MAPE，解释其不同的加权与尺度性质，并选择符合预测决策与数据限制的指标。
+objective_zh_hk: 喺同一評估樣本上計算 MAE、RMSE 同 MAPE，解釋佢哋唔同嘅加權同尺度性質，並選擇符合預測決策同數據限制嘅指標。
+glossary:
+  - en: Mean Absolute Error (MAE)
+    zh: 平均绝对误差（MAE）
+    zh_hk: 平均絕對誤差（MAE）
+    lock: true
+  - en: Root Mean Squared Error (RMSE)
+    zh: 均方根误差（RMSE）
+    zh_hk: 均方根誤差（RMSE）
+    lock: true
+  - en: Mean Absolute Percentage Error (MAPE)
+    zh: 平均绝对百分比误差（MAPE）
+    zh_hk: 平均絕對百分比誤差（MAPE）
+    lock: true
+  - en: Quadratic Loss Penalty
+    zh: 二次方惩罚特性
+    zh_hk: 二次方懲罰特性
+    lock: true
+quiz:
+  - id: Q1
+    type: multiple_choice
+    question_en: 'For errors -10, 20, -30, and 20 kg, what is the Mean Absolute Error (MAE)?'
+    question_zh: 对于误差 -10、20、-30 与 20 公斤，平均绝对误差（MAE）是多少？
+    question_zh_hk: 對於誤差 -10、20、-30 同 20 公斤，平均絕對誤差（MAE）係幾多？
+    options_en:
+      - 'A: 20.0 kg'
+      - 'B: 0.0 kg'
+      - 'C: Approximately 21.2 kg'
+      - 'D: 80.0 kg'
+    options_zh:
+      - A：20.0 公斤
+      - B：0.0 公斤
+      - C：约 21.2 公斤
+      - D：80.0 公斤
+    options_zh_hk:
+      - A：20.0 公斤
+      - B：0.0 公斤
+      - C：約 21.2 公斤
+      - D：80.0 公斤
+    answer: A
+    explanation_en: 'MAE averages absolute errors: (10 + 20 + 30 + 20) / 4 = 20.0 kg.'
+    explanation_zh: MAE 对误差绝对值求平均：(10 + 20 + 30 + 20) / 4 = 20.0 公斤。
+    explanation_zh_hk: MAE 對誤差絕對值求平均：(10 + 20 + 30 + 20) / 4 = 20.0 公斤。
+  - id: Q2
+    type: multiple_choice
+    question_en: Why can RMSE rank models differently from MAE?
+    question_zh: 为什么 RMSE 对模型的排序可能与 MAE 不同？
+    question_zh_hk: 點解 RMSE 對模型嘅排序可能同 MAE 唔同？
+    options_en:
+      - 'A: Squaring gives larger errors more influence before averaging'
+      - 'B: RMSE always has a smaller numerical value than MAE'
+      - 'C: MAE requires normally distributed demand'
+      - 'D: RMSE ignores negative errors'
+    options_zh:
+      - A：平方会在求平均前赋予较大误差更大影响
+      - B：RMSE 的数值必定小于 MAE
+      - C：MAE 要求需求服从正态分布
+      - D：RMSE 会忽略负误差
+    options_zh_hk:
+      - A：平方會喺求平均之前畀較大誤差更大影響
+      - B：RMSE 嘅數值一定細過 MAE
+      - C：MAE 要求需求服從正態分佈
+      - D：RMSE 會忽略負誤差
+    answer: A
+    explanation_en: Squared errors make large misses contribute disproportionately to RMSE. That weighting may be useful when large errors matter more, but it is not itself a business cost function.
+    explanation_zh: 误差平方使较大偏差对 RMSE 的贡献不成比例地增加。当大误差更重要时，这种加权可能有用，但它本身并不是业务成本函数。
+    explanation_zh_hk: 誤差平方令較大偏差對 RMSE 嘅貢獻不成比例噉增加。當大誤差更重要，呢種加權可能有用，但佢本身唔係業務成本函數。
+beats:
+  - id: hook
+    visual: title_card
+    seconds: 30
+    kicker_en: Model-Comparison Puzzle
+    kicker_zh: 模型比较难题
+    kicker_zh_hk: 模型比較難題
+    title_en: Which Forecast Is Better When Metrics Use Different Scales?
+    title_zh: 当指标使用不同尺度时，哪个预测更好？
+    title_zh_hk: 當指標使用唔同尺度，邊個預測更好？
+    en: >-
+      Suppose two forecasting systems are evaluated with different metrics: one reports a percentage error, while another reports error in kilograms. Those numbers cannot be compared directly because they answer different questions. A fair audit uses the same holdout observations, computes several metrics consistently, and then chooses the metric whose weighting and scale match the decision.
+    zh: >-
+      假设两个预测系统使用不同指标评估：一个报告百分比误差，另一个报告以公斤计的误差。这些数字不能直接比较，因为它们回答不同问题。公平审计要使用同一组留出观测，一致地计算多个指标，再选择权重与尺度符合决策目标的指标。
+    zh_hk: >-
+      假設兩個預測系統使用唔同指標評估：一個報告百分比誤差，另一個報告以公斤計嘅誤差。呢啲數字唔可以直接比較，因為佢哋回答唔同問題。公平審核要使用同一組留出觀測，一致噉計算多個指標，再選擇權重同尺度符合決策目標嘅指標。
+  - id: define
+    visual: definition_card
+    seconds: 34
+    formula: 'MAE = mean absolute error; RMSE = root mean squared error; MAPE = mean absolute percentage error'
+    formula_zh: MAE = 绝对误差均值；RMSE = 平方误差均值的平方根；MAPE = 绝对百分比误差均值
+    formula_zh_hk: MAE = 絕對誤差平均；RMSE = 平方誤差平均嘅平方根；MAPE = 絕對百分比誤差平均
+    formula_tex: '\mathrm{MAE}=\frac{1}{H}\sum_{t=1}^{H}|e_t|,\quad \mathrm{RMSE}=\sqrt{\frac{1}{H}\sum_{t=1}^{H}e_t^2},\quad \mathrm{MAPE}=\frac{100}{H}\sum_{t=1}^{H}\left|\frac{e_t}{Y_t}\right|'
+    s1_en: Define forecast error as actual minus forecast. MAE and RMSE remove the sign before aggregation, so positive and negative errors do not cancel. Both remain in the outcome's physical units.
+    s1_zh: 把预测误差定义为实际值减预测值。MAE 与 RMSE 在汇总前消除正负号，因此正负误差不会相互抵消。两者都保留结果变量的物理单位。
+    s1_zh_hk: 將預測誤差定義成實際值減預測值。MAE 同 RMSE 喺匯總之前消除正負號，所以正負誤差唔會互相抵消。兩者都保留結果變量嘅物理單位。
+    s2_en: MAPE divides each absolute error by its actual value. It is unit-free, but it is undefined when an actual value is zero and can become unstable or overly influential when actual values are near zero.
+    s2_zh: MAPE 用每个绝对误差除以相应实际值。它没有物理单位，但当实际值为零时无定义；实际值接近零时，也可能变得不稳定或影响过大。
+    s2_zh_hk: MAPE 用每個絕對誤差除以相應實際值。佢冇物理單位，但當實際值係零就冇定義；實際值接近零嗰陣，亦可能變得唔穩定或者影響過大。
+  - id: mechanics
+    visual: two_column
+    seconds: 36
+    left_en: Absolute vs Squared Error
+    left_zh: 绝对误差与平方误差
+    left_zh_hk: 絕對誤差同平方誤差
+    right_en: Percentage Scaling
+    right_zh: 百分比尺度
+    right_zh_hk: 百分比尺度
+    s1_en: MAE weights each additional unit of absolute error linearly. It is easy to interpret as the average size of a miss in kilograms, cups, or another outcome unit.
+    s1_zh: MAE 对每增加一个单位的绝对误差给予线性权重，容易解释为以公斤、杯数或其他结果单位表示的平均偏差大小。
+    s1_zh_hk: MAE 對每增加一個單位嘅絕對誤差畀線性權重，容易解讀成以公斤、杯數或者其他結果單位表示嘅平均偏差大小。
+    s2_en: RMSE uses a Quadratic Loss Penalty inside the average, so large misses have more influence. RMSE is always at least as large as MAE on the same sample, with equality only when all absolute errors are equal.
+    s2_zh: RMSE 在求平均时使用二次方惩罚特性，因此较大偏差更具影响。在同一样本上，RMSE 不小于 MAE；只有所有绝对误差相等时，两者才相等。
+    s2_zh_hk: RMSE 喺求平均嗰陣使用二次方懲罰特性，所以較大偏差更有影響。喺同一樣本上，RMSE 唔會細過 MAE；只有所有絕對誤差相等，兩者先會相等。
+    s3_en: MAPE supports percentage interpretation, but comparisons across categories can still be distorted by zeros, near-zero actuals, aggregation level, and different demand distributions. No single metric is universally best.
+    s3_zh: MAPE 支持百分比解释，但跨品类比较仍可能受到零值、接近零的实际值、汇总层级与不同需求分布的扭曲。没有任何一个指标在所有场景都最佳。
+    s3_zh_hk: MAPE 支持百分比解讀，但跨品類比較仍然可能受到零值、接近零嘅實際值、匯總層級同唔同需求分布扭曲。冇任何一個指標喺所有場景都最好。
+  - id: example
+    visual: example
+    seconds: 36
+    setup_en: 'Assume errors: -10, 20, -30, 20 kg; actuals: 200, 250, 300, 200 kg'
+    setup_zh: 假设误差：-10、20、-30、20 公斤；实际值：200、250、300、200 公斤
+    setup_zh_hk: 假設誤差：-10、20、-30、20 公斤；實際值：200、250、300、200 公斤
+    result_en: 'MAE = 20.0 kg; RMSE ≈ 21.21 kg; MAPE = 8.25%'
+    result_zh: MAE = 20.0 公斤；RMSE ≈ 21.21 公斤；MAPE = 8.25%
+    result_zh_hk: MAE = 20.0 公斤；RMSE ≈ 21.21 公斤；MAPE = 8.25%
+    s1_en: For illustration, use four errors of negative 10, positive 20, negative 30, and positive 20 kilograms. Their absolute values sum to 80, so MAE equals exactly 20.0 kilograms.
+    s1_zh: 为便于说明，使用四个误差：负 10、正 20、负 30 与正 20 公斤。绝对值之和为 80，因此 MAE 正好等于 20.0 公斤。
+    s1_zh_hk: 為咗方便說明，使用四個誤差：負 10、正 20、負 30 同正 20 公斤。絕對值加埋係 80，所以 MAE 正好等於 20.0 公斤。
+    s2_en: Squared errors sum to 1,800. Dividing by four gives 450, and the square root is approximately 21.21 kilograms, so RMSE exceeds MAE in this sample.
+    s2_zh: 平方误差之和为 1,800，除以 4 得到 450，开平方后约为 21.21 公斤，因此本例中 RMSE 大于 MAE。
+    s2_zh_hk: 平方誤差加埋係 1,800，除以 4 得到 450，開平方之後約係 21.21 公斤，所以呢個例子入面 RMSE 大過 MAE。
+    s3_en: With actual values 200, 250, 300, and 200, the absolute percentage errors are 5, 8, 10, and 10 percent. Their mean is exactly 8.25 percent. That number is descriptive, not a pass-fail threshold unless a policy defines one.
+    s3_zh: 实际值为 200、250、300 与 200 时，绝对百分比误差为 5%、8%、10% 与 10%，平均正好为 8.25%。除非政策另有定义，否则该数字只是描述结果，不是自动的达标阈值。
+    s3_zh_hk: 實際值係 200、250、300 同 200 嗰陣，絕對百分比誤差係 5%、8%、10% 同 10%，平均正好係 8.25%。除非政策另有定義，否則呢個數字只係描述結果，唔係自動達標門檻。
+  - id: takeaway
+    visual: takeaway
+    seconds: 32
+    q1_en: What Does Each Metric Emphasize?
+    q1_zh: 每个指标强调什么？
+    q1_zh_hk: 每個指標強調乜嘢？
+    q2_en: Decision Rule
+    q2_zh: 决策规则
+    q2_zh_hk: 決策規則
+    s1_en: MAE reports average absolute miss in physical units. RMSE gives larger errors more influence. MAPE reports average percentage error but needs care around zero and small actual values.
+    s1_zh: MAE 报告物理单位下的平均绝对偏差；RMSE 让较大误差更具影响；MAPE 报告平均百分比误差，但对零值与较小实际值必须谨慎。
+    s1_zh_hk: MAE 報告物理單位下嘅平均絕對偏差；RMSE 令較大誤差更有影響；MAPE 報告平均百分比誤差，但對零值同較細實際值一定要小心。
+    s2_en: Compare models on the same observations and forecasting horizon. Report more than one metric when decisions care about both typical misses and large errors, and inspect error direction separately because all three metrics discard the sign.
+    s2_zh: 比较模型时应使用相同观测与预测周期。当决策同时关注典型偏差与大误差时，应报告多个指标；由于三者都丢弃误差方向，还要单独检查偏差方向。
+    s2_zh_hk: 比較模型嗰陣要使用相同觀測同預測周期。當決策同時關注典型偏差同大誤差，就要報告多個指標；由於三者都丟棄誤差方向，仲要另外檢查偏差方向。
+    s3_en: Choose the evaluation metric before comparing models and align it with an explicit loss or service objective. The metric summarizes forecast errors; it does not determine inventory policy by itself.
+    s3_zh: 比较模型前应先选择评估指标，并使其与明确的损失或服务目标一致。指标只汇总预测误差，不能单独决定库存政策。
+    s3_zh_hk: 比較模型之前要先選擇評估指標，並令佢同明確嘅損失或者服務目標一致。指標只係匯總預測誤差，唔可以單獨決定庫存政策。

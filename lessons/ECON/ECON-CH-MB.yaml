@@ -1,0 +1,188 @@
+id: ECON-CH-MB
+course: principles
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 134
+title_en: Marginal Thinking
+title_zh: 边际思维
+title_zh_hk: 邊際思維
+objective_en: 'Close the choice unit: decide with the extra benefit and extra cost of one more
+  unit, not the average so far.'
+objective_zh: 收住选择单元：用再一单位的额外好处和额外成本做决定，不用到目前为止的平均数。
+objective_zh_hk: 收住選擇單元：用再一單位的額外好處和額外成本做決定，不用到目前為止的平均數。
+glossary:
+- en: marginal benefit
+  zh: 边际收益
+  zh_hk: 邊際收益
+  lock: true
+- en: marginal cost
+  zh: 边际成本
+  zh_hk: 邊際成本
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: You keep going while which comparison holds?
+  zh: 在哪一种比较成立时，你应该继续？
+  zh_hk: 在哪一種比較成立時，你應該繼續？
+  answer_en: Marginal benefit is at least marginal cost.
+  answer_zh: 边际收益至少等于边际成本。
+  answer_zh_hk: 邊際收益至少等於邊際成本。
+- id: Q2
+  type: transfer
+  en: The first three coffees were useful. The fourth costs more than it helps. What should you
+    do?
+  zh: 前三杯咖啡有用。第四杯的成本高于好处。你该怎样？
+  zh_hk: 前三杯咖啡有用。第四杯的成本高於好處。你該怎樣？
+  answer_en: Stop at three. Past average benefit does not justify the fourth.
+  answer_zh: 停在三杯。过去的平均收益不能为第四杯辩护。
+  answer_zh_hk: 停在三杯。過去的平均收益不能為第四杯辯護。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 20
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Marginal Thinking
+  title_zh: 边际思维
+  title_zh_hk: 邊際思維
+  en: We have named the trade-off, the forward cost, and the cost that is already gone. The last
+    tool is the margin. The useful question is not whether this activity is good. It is whether
+    one more unit is still worth it.
+  zh: 权衡、向前看的成本、已经花掉的成本都有了名字。最后一件工具是边际。有用的问题不是这件事好不好，而是再做一单位还值不值。
+  zh_hk: 權衡、向前睇嘅成本、已經花咗嘅成本都有咗名。最後一件工具係邊際。有用嘅問題唔係呢件事好唔好，而係再做一單位仲值唔值。
+- id: define
+  visual: definition_card
+  seconds: 22
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Compare the next unit
+  title_zh: 比较下一单位
+  title_zh_hk: 比較下一單位
+  formula: Do more if MB ≥ MC
+  formula_en: Do more if MB ≥ MC
+  formula_zh: 若 MB ≥ MC 就多做
+  formula_zh_hk: 若 MB ≥ MC 就多做
+  gloss_en: MB and MC are for the next unit, not the average.
+  gloss_zh: 边际收益和边际成本针对下一单位，不是平均。
+  gloss_zh_hk: 邊際收益和邊際成本針對下一單位，不是平均。
+  s1_en: Marginal benefit is what you gain from one more unit. Marginal cost is what you give
+    up for that same unit.
+  s1_zh: 边际收益是再多一单位带来的好处。边际成本是为这一单位放弃的东西。
+  s1_zh_hk: 邊際收益係再多一單位帶來嘅好處。邊際成本係為呢一單位放棄嘅嘢。
+  s2_en: Do more only while the extra benefit covers the extra cost. Those two numbers are for
+    the next unit, not the average so far.
+  s2_zh: 只有额外好处盖住额外成本时，才继续做。这两个数字针对下一单位，不是到目前为止的平均。
+  s2_zh_hk: 只有額外好處蓋住額外成本，先繼續做。呢兩個數字針對下一單位，唔係到而家為止嘅平均。
+- id: example
+  visual: two_column
+  seconds: 24
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: One more hour of study
+  title_zh: 再读一小时
+  title_zh_hk: 再讀一小時
+  left_en: Extra marks from one hour
+  left_zh: 多一小时多得的分数
+  left_zh_hk: 多一小時多得的分數
+  right_en: Sleep or paid shift forgone
+  right_zh: 放弃的睡眠或工时
+  right_zh_hk: 放棄的睡眠或工時
+  s1_en: One more late hour of study. Put the extra marks on the left, and the sleep or paid shift
+    you give up on the right.
+  s1_zh: 再读一小时。左边写多得的分数，右边写你放弃的睡眠或工时。
+  s1_zh_hk: 再讀一小時。左邊寫多得嘅分數，右邊寫你放棄嘅睡眠或工時。
+  s2_en: The extra marks are the marginal benefit of that hour.
+  s2_zh: 多得的分数，就是这一小时的边际收益。
+  s2_zh_hk: 多得嘅分數，就係呢一小時嘅邊際收益。
+  s3_en: If that gain is smaller than the sleep or wage you give up, stop. The first hours can
+    still have been worth it.
+  s3_zh: 若这一点低于你放弃的睡眠或工资，就该停。前面几小时仍然可以是值得的。
+  s3_zh_hk: 若呢一點低過你放棄嘅睡眠或工資，就該停。前面幾小時仍然可以係值得嘅。
+- id: formula
+  visual: formula
+  seconds: 22
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: One more unit
+  title_zh: 再多一单位
+  title_zh_hk: 再多一單位
+  formula: Do more if MB ≥ MC
+  formula_en: Do more if MB ≥ MC
+  formula_zh: 若 MB ≥ MC 就多做
+  formula_zh_hk: 若 MB ≥ MC 就多做
+  gloss_en: Stop when the next unit fails.
+  gloss_zh: 下一单位失败就停止。
+  gloss_zh_hk: 下一單位失敗就停止。
+  s1_en: Write it as a rule. Do more if marginal benefit is at least marginal cost.
+  s1_zh: 写成一条规则。若边际收益至少等于边际成本，就多做。
+  s1_zh_hk: 寫成一條規則。若邊際收益至少等於邊際成本，就多做。
+  s2_en: Stop when the next unit fails that test. Ignore the pile already done.
+  s2_zh: 下一单位通不过，就停止。不管已经完成的那一堆。
+  s2_zh_hk: 下一單位通唔過，就停止。唔好理已經完成嗰一堆。
+- id: study
+  visual: example
+  seconds: 24
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: The fourth hour
+  title_zh: 第四个小时
+  title_zh_hk: 第四個小時
+  setup_en: MB of hour four is small
+  setup_zh: 第四小时的MB很小
+  setup_zh_hk: 第四小時的MB很小
+  result_en: MC is sleep you lose
+  result_zh: MC是失去的睡眠
+  result_zh_hk: MC是失去的睡眠
+  s1_en: The first hour of revision usually pays. Hold that as the setup.
+  s1_zh: 第一小时复习通常很值。先把这当成设定。
+  s1_zh_hk: 第一小時複習通常好值。先當呢個係設定。
+  s2_en: By hour four the extra marks are small, and the cost is a night of sleep.
+  s2_zh: 到第四小时，多得的分数已经很少，成本却是一整夜睡眠。
+  s2_zh_hk: 到第四小時，多得嘅分數已經好少，成本卻係一成夜睡眠。
+  s3_en: Stop where MB falls below MC, even if the exam is tomorrow. Yesterday's average does
+    not buy tonight's fourth hour.
+  s3_zh: 在边际收益低于边际成本处停，即使明天考试。昨天的平均，买不下今晚的第四小时。
+  s3_zh_hk: 喺邊際收益低過邊際成本處停，即使聽日考試。尋日嘅平均，買唔到今晚第四個鐘。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Ignore sunk averages
+  title_zh: 不要看已沉没的平均
+  title_zh_hk: 不要看已沉沒的平均
+  q1_en: What does one more unit add?
+  q1_zh: 再多一单位增加什么？
+  q1_zh_hk: 再多一單位增加什麼？
+  q2_en: What does that unit cost now?
+  q2_zh: 这一单位现在要付出什么？
+  q2_zh_hk: 這一單位現在要付出什麼？
+  s1_en: Averages describe the past. The next choice uses only what one more unit adds, and what
+    that unit costs now.
+  s1_zh: 平均数描述过去。下一步只用再一单位增加什么，以及这一单位现在要付出什么。
+  s1_zh_hk: 平均數描述過去。下一步只用再一單位增加咩，以及呢一單位而家要付出咩。
+  s2_en: What does one more unit add?
+  s2_zh: 再多一单位增加什么？
+  s2_zh_hk: 再多一單位增加咩？
+  s3_en: What does that unit cost now? That closes how one person chooses. Next module, two lists
+    share a street. That module is price.
+  s3_zh: 这一单位现在要付出什么？一个人怎么选，先说到这里。下一单元，两张清单站在同一条街上。那一单元叫价格。
+  s3_zh_hk: 呢一單位而家要付出咩？一個人點揀，先講到呢度。下一單元，兩張清單企喺同一條街。嗰一單元叫價格。

@@ -1,0 +1,201 @@
+id: STAT-M06-T11-CVIPI
+course: STAT-M06
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Confidence and Prediction Intervals: Mean Response versus Individual Outcome'
+title_zh: 置信区间与预测区间：均值响应与个体结果
+title_zh_hk: 置信區間同預測區間：平均響應同個別結果
+objective_en: Construct and distinguish a confidence interval for the conditional mean response and a prediction interval
+  for one future outcome, explain the additional individual-error term in the prediction standard error, calculate both intervals
+  at the sample mean, and limit operational decisions to the population, design, model assumptions, and forecast horizon supported
+  by the analysis.
+objective_zh: 构建并区分条件均值响应的置信区间与单个未来结果的预测区间，解释预测标准误中额外的个体误差项，在样本均值处计算两类区间，并把经营决策限制在分析所支持的总体、设计、模型假设与预测时域内。
+objective_zh_hk: 構建並區分條件平均響應嘅置信區間同單個未來結果嘅預測區間，解釋預測標準誤入面額外嘅個別誤差項，喺樣本平均數嗰度計算兩類區間，並將營運決策限制喺分析所支持嘅總體、設計、模型假設同預測時域之內。
+glossary:
+- en: Confidence Interval for Mean
+  zh: 均值置信区间
+  zh_hk: 平均數置信區間
+  lock: true
+- en: Prediction Interval
+  zh: 预测区间
+  zh_hk: 預測區間
+  lock: true
+- en: Individual Realization
+  zh: 个体实现值
+  zh_hk: 個體實現值
+  lock: true
+- en: Bow-Tie Dispersion
+  zh: 蝴蝶形离散效应
+  zh_hk: 領結形離散效應
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why is an individual-outcome prediction interval wider than the matching mean-response confidence interval
+    at the same X_0?
+  question_zh: 为什么在相同客流量水平下，单家门店日营收的预测区间必定始终宽于整个网络平均营收的置信区间？
+  question_zh_hk: 點解喺相同人流水平下，單一門市每日營業額嘅預測區間，必定永遠闊過成個網絡平均營業額嘅置信區間？
+  options_en:
+  - 'A: The single store interval uses a different significance level alpha'
+  - 'B: It includes both uncertainty in the estimated regression line and the new outcome’s own residual variation'
+  - 'C: Single store data violates the normality assumption of linear regression'
+  - 'D: The sample size for a single store is always fixed at n = 1'
+  options_zh:
+  - 'A: 单店区间采用了不同的显著性水平 alpha'
+  - 'B: 单家门店不仅承担回归参数估计的不确定性，还必须承担其自身的个体随机残差方差'
+  - 'C: 单店数据必然违反了线性回归的正态性假定'
+  - 'D: 单家门店的样本容量在计算中被强制固定为 n = 1'
+  options_zh_hk:
+  - 'A: 單店區間採用咗唔同嘅顯著性水平 alpha'
+  - 'B: 單一門市除咗要承受回歸參數估計嘅不確定性，仲必須承擔佢自身嘅個別隨機殘差方差'
+  - 'C: 單店數據必然違反咗線性回歸嘅常態分佈假定'
+  - 'D: 單一門市嘅樣本容量喺計算入面被強制鎖定為 n = 1'
+  answer: B
+  explanation_en: The prediction standard error adds the future-error variance term represented by 1 inside the square root.
+    Under the same model and confidence level, this makes the prediction interval wider.
+  explanation_zh: 预测网络平均营收只需考虑拟合线本身的抽样方差。而预测单店结果必须额外加上代表个体营运噪声的 +1 方差项：Var(Y_0 - Y_hat_0) = s_e^2 * (1 + 1/n + ...)。
+  explanation_zh_hk: 預測網絡平均營業額淨係需要計回歸線本身嘅抽樣方差。但預測單一門市結果必須額外計入代表個別營運雜音嘅 +1 方差項：Var(Y_0 - Y_hat_0) = s_e^2 * (1 + 1/n + ...)。
+- id: Q2
+  type: multiple_choice
+  question_en: At X_0 = X-bar, assume Y-hat_0 = 365 cups, s_e = 10 cups, n = 25, and t* = 2.00. What is the individual prediction
+    interval?
+  question_zh: 在客流 X_0 = X_bar 处，Metro Coffee 测得 Y_hat_0 = 365 杯，s_e = 10 杯，25 个排班样本下临界值 t* = 2.00。湾仔店明天的 95% 预测区间是多少？
+  question_zh_hk: 喺人流 X_0 = X_bar 嗰陣，Metro Coffee 測得 Y_hat_0 = 365 杯，s_e = 10 杯，25 個排班樣本下臨界值 t* = 2.00。灣仔店聽日嘅 95% 預測區間係幾多？
+  options_en:
+  - 'A: 365 ± 4.00 cups [361.00, 369.00]'
+  - 'B: 365 ± 20.40 cups [344.60, 385.40]'
+  - 'C: 365 ± 10.00 cups [355.00, 375.00]'
+  - 'D: 365 ± 40.00 cups [325.00, 405.00]'
+  options_zh:
+  - 'A: 365 ± 4.00 杯 [361.00, 369.00]'
+  - 'B: 365 ± 20.40 杯 [344.60, 385.40]'
+  - 'C: 365 ± 10.00 杯 [355.00, 375.00]'
+  - 'D: 365 ± 40.00 杯 [325.00, 405.00]'
+  options_zh_hk:
+  - 'A: 365 ± 4.00 杯 [361.00, 369.00]'
+  - 'B: 365 ± 20.40 杯 [344.60, 385.40]'
+  - 'C: 365 ± 10.00 杯 [355.00, 375.00]'
+  - 'D: 365 ± 40.00 杯 [325.00, 405.00]'
+  answer: B
+  explanation_en: The prediction standard error is 10 sqrt(1 + 1/25) = 10.20 cups. The margin is 2.00 x 10.20 = 20.40 cups,
+    giving [344.60, 385.40].
+  explanation_zh: 在均值 X_0 = X_bar 处离均差项为零。预测标准误为 s_e * sqrt(1 + 1/n) = 10 * sqrt(1.04) = 10.20 杯。误差边际为 2.00 * 10.20 = 20.40
+    杯：[344.60, 385.40]。
+  explanation_zh_hk: 喺平均數 X_0 = X_bar 嗰陣離均差項係零。預測標準誤係 s_e * sqrt(1 + 1/n) = 10 * sqrt(1.04) = 10.20 杯。誤差邊際係 2.00 * 10.20 =
+    20.40 杯：[344.60, 385.40]。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  title_en: Are we estimating an average response or one future outcome?
+  title_zh: 我们估计的是平均响应，还是单个未来结果？
+  title_zh_hk: 我哋估計嘅係平均響應，定係單個未來結果？
+  en: Metro Coffee is reviewing an assumed regression that predicts store-shift cup sales from pedestrian traffic. Finance
+    wants the expected mean sales level for comparable shifts at a stated traffic value, while operations wants a range for
+    one future shift. Both questions use the same fitted line, but the second includes the future shift’s own random deviation
+    and therefore requires a wider prediction interval.
+  zh: 都市咖啡正在审视一项假设回归，以行人客流预测门店班次杯数销量。财务部门希望估计既定客流值下可比班次的期望平均销量，营运部门则希望得到单个未来班次的结果范围。两项问题使用同一条拟合线，但后者还包含未来班次自身的随机偏差，因此需要更宽的预测区间。
+  zh_hk: 都市咖啡正審視一項假設回歸，以行人人流預測門市排班杯數銷量。財務部門希望估計既定人流值之下可比較排班嘅期望平均銷量，營運部門就希望得到單個未來排班嘅結果範圍。兩項問題使用同一條擬合線，但後者仲包含未來排班本身嘅隨機偏差，所以需要更闊嘅預測區間。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: 'Mean-response CI: Y-hat_0 +/- t* s_e sqrt(1/n + D_0); Individual PI: Y-hat_0 +/- t* s_e sqrt(1 + 1/n + D_0)'
+  formula_zh: 均值响应 CI：Y-hat_0 ± t* s_e √(1/n + D_0)；个体结果 PI：Y-hat_0 ± t* s_e √(1 + 1/n + D_0)
+  formula_zh_hk: 平均響應 CI：Y-hat_0 ± t* s_e √(1/n + D_0)；個別結果 PI：Y-hat_0 ± t* s_e √(1 + 1/n + D_0)
+  formula_tex: D_0=\frac{(X_0-\bar X)^2}{\sum_i(X_i-\bar X)^2},\quad CI:\ \hat Y_0\pm t^*s_e\sqrt{\frac1n+D_0},\quad PI:\
+    \hat Y_0\pm t^*s_e\sqrt{1+\frac1n+D_0}
+  s1_en: The confidence interval targets the conditional population mean E(Y given X_0). Its standard error reflects uncertainty
+    in the estimated regression line at X_0. It does not describe the full spread of individual future outcomes.
+  s1_zh: 置信区间针对条件总体均值 E(Y|X_0)。其标准误反映 X_0 处估计回归线的不确定性，并不描述单个未来结果的完整离散。
+  s1_zh_hk: 置信區間針對條件總體平均數 E(Y|X_0)。佢嘅標準誤反映 X_0 嗰度估計回歸線嘅不確定性，並唔描述單個未來結果嘅完整離散。
+  s2_en: The prediction interval targets one new Y outcome at X_0. It contains the same line-estimation uncertainty plus an
+    additional error-variance term represented by the 1 inside the square root. Under the same confidence level and model,
+    this makes the prediction interval wider.
+  s2_zh: 预测区间针对 X_0 处一个新的 Y 结果。它包含相同的回归线估计不确定性，并加入根号内由 1 表示的额外误差方差项。在相同置信水平与模型下，预测区间因此更宽。
+  s2_zh_hk: 預測區間針對 X_0 嗰度一個新嘅 Y 結果。佢包含相同嘅回歸線估計不確定性，並加入根號入面由 1 表示嘅額外誤差方差項。喺相同置信水平同模型之下，預測區間因此更闊。
+  title_en: The prediction interval adds future-outcome noise
+  title_zh: 预测区间加入未来个体结果噪声
+  title_zh_hk: 預測區間加入未來個別結果雜音
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  left_en: Target determines the interval
+  left_zh: 目标决定区间类型
+  right_en: Distance from X-bar determines leverage
+  right_zh: 远离 X-bar 的距离决定杠杆
+  s1_en: Use the mean-response confidence interval when the estimand is the average outcome across the target population at
+    X_0. Use the prediction interval when the estimand is one future outcome. Averaging many independent future outcomes is
+    a different target and requires a formula matched to that design.
+  s1_zh: 当估计目标是 X_0 处目标总体的平均结果时，使用均值响应置信区间；当估计目标是一个未来结果时，使用预测区间。多个独立未来结果的平均值属于不同目标，需要与该设计匹配的公式。
+  s1_zh_hk: 當估計目標係 X_0 嗰度目標總體嘅平均結果嗰陣，使用平均響應置信區間；當估計目標係一個未來結果嗰陣，使用預測區間。多個獨立未來結果嘅平均值屬於唔同目標，需要同嗰個設計匹配嘅公式。
+  s2_en: The distance term D_0 is zero at X_0 equal to X-bar, so both intervals are narrowest at the sample center. As X_0
+    moves away from X-bar, leverage increases and both standard errors widen.
+  s2_zh: 当 X_0 = X-bar 时，距离项 D_0 为零，因此两类区间在样本中心最窄。随着 X_0 远离 X-bar，杠杆增大，两类标准误都会扩大。
+  s2_zh_hk: 當 X_0 = X-bar 嗰陣，距離項 D_0 係零，所以兩類區間喺樣本中心最窄。隨住 X_0 遠離 X-bar，槓桿增大，兩類標準誤都會擴大。
+  s3_en: Intervals far outside the observed X range rely on extrapolation and may be misleading even when numerically computable.
+    Their interpretation also depends on independence, functional form, error variance, and the inferential method used.
+  s3_zh: 远离观测 X 范围的区间依赖外推，即使数值上可以计算，也可能具有误导性。其解释还取决于独立性、函数形式、误差方差与所用推断方法。
+  s3_zh_hk: 遠離觀測 X 範圍嘅區間依賴外推，即使數值上可以計算，亦可能具有誤導性。佢嘅解讀仲取決於獨立性、函數形式、誤差方差同所用推斷方法。
+  left_zh_hk: 目標決定區間類型
+  right_zh_hk: 遠離 X-bar 嘅距離決定槓桿
+  title_en: Both intervals widen away from the center of observed X
+  title_zh: 两类区间都会在远离 X 中心时变宽
+  title_zh_hk: 兩類區間都會喺遠離 X 中心嗰陣變闊
+- id: ledger
+  visual: steps
+  seconds: 38
+  step1_en: 'Teaching assumptions: X_0 = X-bar, Y-hat_0 = 365 cups, s_e = 10 cups, n = 25, t* = 2.00'
+  step1_zh: 教学假设：X_0 = X-bar，Y-hat_0 = 365 杯，s_e = 10 杯，n = 25，t* = 2.00
+  step2_en: Mean CI SE = 10 sqrt(1/25) = 2.00; margin = 4.00; CI = [361.00, 369.00] cups
+  step2_zh: 均值 CI 标准误 = 10√(1/25) = 2.00；误差边际 = 4.00；CI = [361.00, 369.00] 杯
+  step3_en: Individual PI SE = 10 sqrt(1 + 1/25) = 10.20; margin = 20.40; PI = [344.60, 385.40] cups
+  step3_zh: 个体 PI 标准误 = 10√(1 + 1/25) = 10.20；误差边际 = 20.40；PI = [344.60, 385.40] 杯
+  s1_en: For illustration, assume the point forecast is 365 cups at the sample mean, with residual standard error 10 cups,
+    sample size 25, and a critical value of 2.00. These are teaching assumptions, not verified branch, cash-flow, loan, inventory,
+    or solvency records.
+  s1_zh: 作为示例，假设样本均值处点预测为 365 杯，残差标准误为 10 杯，样本量为 25，临界值为 2.00。这些数字是教学假设，并非已核实的门店、现金流、贷款、库存或偿债记录。
+  s1_zh_hk: 作為例子，假設樣本平均數嗰度點預測係 365 杯，殘差標準誤係 10 杯，樣本量係 25，臨界值係 2.00。呢啲數字係教學假設，唔係已核實嘅門市、現金流、貸款、庫存或者償債記錄。
+  s2_en: At X-bar, the distance term is zero. The mean-response standard error is 2 cups, giving a margin of 4 and a confidence
+    interval from 361 to 369 cups. This interval targets the conditional mean, not one future shift.
+  s2_zh: 在 X-bar 处，距离项为零。均值响应标准误为 2 杯，误差边际为 4，置信区间为 361 至 369 杯。该区间针对条件均值，而不是一个未来班次。
+  s2_zh_hk: 喺 X-bar 嗰度，距離項係零。平均響應標準誤係 2 杯，誤差邊際係 4，置信區間係 361 至 369 杯。呢個區間針對條件平均數，而唔係一個未來排班。
+  s3_en: The individual prediction standard error is approximately 10.20 cups, giving a margin of 20.40 and interval [344.60,
+    385.40]. The wider range reflects both line-estimation uncertainty and a new outcome’s residual variation.
+  s3_zh: 个体预测标准误约为 10.20 杯，误差边际为 20.40，区间为 [344.60, 385.40]。更宽范围同时反映回归线估计不确定性与新结果的残差变异。
+  s3_zh_hk: 個別預測標準誤約係 10.20 杯，誤差邊際係 20.40，區間係 [344.60, 385.40]。更闊範圍同時反映回歸線估計不確定性同新結果嘅殘差變異。
+  step1_zh_hk: 教學假設：X_0 = X-bar，Y-hat_0 = 365 杯，s_e = 10 杯，n = 25，t* = 2.00
+  step2_zh_hk: 平均 CI 標準誤 = 10√(1/25) = 2.00；誤差邊際 = 4.00；CI = [361.00, 369.00] 杯
+  step3_zh_hk: 個別 PI 標準誤 = 10√(1 + 1/25) = 10.20；誤差邊際 = 20.40；PI = [344.60, 385.40] 杯
+  title_en: Calculate both intervals at the assumed sample mean
+  title_zh: 在假设样本均值处计算两类区间
+  title_zh_hk: 喺假設樣本平均數嗰度計算兩類區間
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  q1_en: Which interval answers the mean-response question?
+  q1_zh: 哪类区间回答均值响应问题？
+  q2_en: Which interval answers the individual-outcome question?
+  q2_zh: 哪类区间回答个体结果问题？
+  s1_en: Use the confidence interval for E(Y given X_0) when the target is the population mean response at X_0. State the
+    target population, confidence level, model, standard-error method, and observed X range.
+  s1_zh: 当目标是 X_0 处的总体平均响应 E(Y|X_0) 时，使用置信区间。应说明目标总体、置信水平、模型、标准误方法与观测 X 范围。
+  s1_zh_hk: 當目標係 X_0 嗰度嘅總體平均響應 E(Y|X_0) 嗰陣，使用置信區間。應該說明目標總體、置信水平、模型、標準誤方法同觀測 X 範圍。
+  s2_en: Use the prediction interval for one future Y outcome at X_0. Do not substitute the narrower mean-response interval
+    for individual risk. Even a valid prediction interval does not by itself set inventory, lending, or solvency policy.
+  s2_zh: 当目标是 X_0 处一个未来 Y 结果时，使用预测区间。不能用较窄的均值响应区间代替个体风险。即使预测区间有效，也不能单独设定库存、贷款或偿债政策。
+  s2_zh_hk: 當目標係 X_0 嗰度一個未來 Y 結果嗰陣，使用預測區間。唔可以用較窄嘅平均響應區間代替個別風險。即使預測區間有效，亦唔可以單獨設定庫存、貸款或者償債政策。
+  s3_en: In the assumed calculation at X-bar, the 95% mean-response interval is [361.00, 369.00] cups and the individual prediction
+    interval is [344.60, 385.40] cups. The difference comes from the added future-error term.
+  s3_zh: 在 X-bar 处的假设计算中，95% 均值响应区间为 [361.00, 369.00] 杯，个体预测区间为 [344.60, 385.40] 杯。差异来自额外的未来误差项。
+  s3_zh_hk: 喺 X-bar 嗰度嘅假設計算入面，95% 平均響應區間係 [361.00, 369.00] 杯，個別預測區間係 [344.60, 385.40] 杯。差異來自額外嘅未來誤差項。
+  q1_zh_hk: 邊類區間回答平均響應問題？
+  q2_zh_hk: 邊類區間回答個別結果問題？
+  title_en: Match the interval to the estimand and operating decision
+  title_zh: 让区间与估计目标及经营决策匹配
+  title_zh_hk: 令區間同估計目標及營運決策匹配

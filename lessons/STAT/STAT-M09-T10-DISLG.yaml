@@ -1,0 +1,165 @@
+id: STAT-M09-T10-DISLG
+course: STAT-M09
+course_en: Business Time Series & Demand Forecasting
+course_zh: 商业时间序列与需求预测
+course_zh_hk: 商業時間序列與需求預測
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Distributed Lag Regressions: Measuring Delayed Campaign Responses'
+title_zh: 分布滞后回归：衡量营销活动的延迟响应
+title_zh_hk: 分布滯後回歸：衡量推廣活動嘅延遲反應
+objective_en: Formulate a Finite Distributed Lag model, distinguish impact and interim multipliers, calculate the Long-Run Propensity, and interpret delayed associations without automatically treating them as causal campaign returns.
+objective_zh: 构建有限分布滞后模型，区分即期与中期滞后乘数，计算长期累积效应，并解释延迟关联而不自动把它们视为营销活动的因果回报。
+objective_zh_hk: 構建有限分布滯後模型，區分即期同中期滯後乘數，計算長期累積效應，並解讀延遲關聯，而唔係自動將佢哋當成推廣活動嘅因果回報。
+glossary:
+  - en: Finite Distributed Lag (FDL)
+    zh: 有限分布滞后（FDL）
+    zh_hk: 有限分布滯後（FDL）
+    lock: true
+  - en: Impact Multiplier
+    zh: 即期冲击乘数（Beta_0）
+    zh_hk: 即期衝擊乘數（Beta_0）
+    lock: true
+  - en: Interim Multipliers
+    zh: 中期滞后乘数（Beta_k）
+    zh_hk: 中期滯後乘數（Beta_k）
+    lock: true
+  - en: Long-Run Propensity (LRP)
+    zh: 长期累积效应（LRP）
+    zh_hk: 長期累積效應（LRP）
+    lock: true
+quiz:
+  - id: Q1
+    type: multiple_choice
+    question_en: 'In an FDL(2) model with coefficients 2.5, 1.8, and 0.9, what is the Long-Run Propensity (LRP)?'
+    question_zh: 在系数为 2.5、1.8 和 0.9 的 FDL(2) 模型中，长期累积效应（LRP）是多少？
+    question_zh_hk: 喺係數係 2.5、1.8 同 0.9 嘅 FDL(2) 模型入面，長期累積效應（LRP）係幾多？
+    options_en:
+      - 'A: 5.2'
+      - 'B: 2.5'
+      - 'C: 1.8'
+      - 'D: 0.9'
+    options_zh:
+      - A：5.2
+      - B：2.5
+      - C：1.8
+      - D：0.9
+    options_zh_hk:
+      - A：5.2
+      - B：2.5
+      - C：1.8
+      - D：0.9
+    answer: A
+    explanation_en: 'The LRP is the coefficient sum: 2.5 + 1.8 + 0.9 = 5.2 outcome units per unit of X under the stated model.'
+    explanation_zh: LRP 是各系数之和：2.5 + 1.8 + 0.9 = 5.2，即在给定模型下 X 每增加一个单位所对应的 5.2 个结果单位。
+    explanation_zh_hk: LRP 係各個係數之和：2.5 + 1.8 + 0.9 = 5.2，即係喺指定模型下 X 每增加一個單位所對應嘅 5.2 個結果單位。
+  - id: Q2
+    type: multiple_choice
+    question_en: What must be established before interpreting FDL coefficients as causal campaign effects?
+    question_zh: 在把 FDL 系数解释为营销活动的因果效应之前，必须确定什么？
+    question_zh_hk: 將 FDL 係數解讀成推廣活動嘅因果效應之前，必須確定乜嘢？
+    options_en:
+      - 'A: Current and lagged campaign inputs are sufficiently exogenous conditional on the model controls'
+      - 'B: Every lag coefficient is positive'
+      - 'C: The contemporaneous coefficient exceeds one'
+      - 'D: The model contains no intercept'
+    options_zh:
+      - A：在给定模型控制变量后，当期与滞后活动投入具有充分外生性
+      - B：每个滞后系数都为正
+      - C：即期系数大于一
+      - D：模型不含截距
+    options_zh_hk:
+      - A：喺指定模型控制變量之後，當期同滯後活動投入具有充分外生性
+      - B：每個滯後係數都係正數
+      - C：即期係數大過一
+      - D：模型唔包含截距
+    answer: A
+    explanation_en: Lag coefficients describe conditional associations unless the timing of X is sufficiently exogenous and relevant confounders, trends, seasonality, and dynamics are handled.
+    explanation_zh: 除非 X 的时点具有充分外生性，并妥善处理混杂因素、趋势、季节性与动态结构，否则滞后系数只能描述条件关联。
+    explanation_zh_hk: 除非 X 嘅時點具有充分外生性，並妥善處理混雜因素、趨勢、季節性同動態結構，否則滯後係數只可以描述條件關聯。
+beats:
+  - id: hook
+    visual: title_card
+    seconds: 30
+    kicker_en: Campaign Timing Puzzle
+    kicker_zh: 营销时点难题
+    kicker_zh_hk: 推廣時點難題
+    title_en: Does a Voucher Affect Only the Day It Is Sent?
+    title_zh: 优惠券只会影响发送当天吗？
+    title_zh_hk: 優惠券只會影響發送當日嗎？
+    en: >-
+      Suppose a digital voucher is sent today, but some customers respond tomorrow or two days later. A same-day regression records only the contemporaneous association and can miss delayed responses. A distributed lag model places current and lagged campaign inputs in one equation, allowing analysts to trace when an association appears. The key challenge is separating a useful dynamic description from an unsupported causal or ROI claim.
+    zh: >-
+      假设今天发送电子优惠券，但部分顾客会在明天或两天后才响应。只看当天的回归只能记录即期关联，可能遗漏延迟反应。分布滞后模型把当期与滞后的活动投入放在同一方程中，让分析师追踪关联何时出现。关键是区分有用的动态描述与缺乏依据的因果或投资回报结论。
+    zh_hk: >-
+      假設今日發送電子優惠券，但部分顧客會喺聽日或者兩日之後先反應。只睇當日嘅回歸只可以記錄即期關聯，可能漏咗延遲反應。分布滯後模型將當期同滯後活動投入放喺同一條方程，畀分析師追蹤關聯幾時出現。關鍵係分開有用嘅動態描述，同缺乏依據嘅因果或者投資回報結論。
+  - id: define
+    visual: definition_card
+    seconds: 34
+    formula: 'FDL(q): Y_t = Alpha + Beta_0 X_t + ... + Beta_q X_{t-q} + e_t; LRP = sum of Betas'
+    formula_zh: 'FDL(q)：Y_t = Alpha + Beta_0 X_t + ... + Beta_q X_{t-q} + e_t；LRP = 各 Beta 之和'
+    formula_zh_hk: 'FDL(q)：Y_t = Alpha + Beta_0 X_t + ... + Beta_q X_{t-q} + e_t；LRP = 各 Beta 之和'
+    formula_tex: 'Y_t=\alpha+\sum_{j=0}^{q}\beta_jX_{t-j}+\varepsilon_t,\quad \mathrm{LRP}=\sum_{j=0}^{q}\beta_j'
+    s1_en: A Finite Distributed Lag (FDL) model relates today's outcome to current and finitely many past values of X. The chosen lag order q sets the longest included delay; it does not prove that the real response ends there.
+    s1_zh: 有限分布滞后（FDL）模型把今天的结果与 X 的当期值及有限个过去值联系起来。选定的滞后阶数 q 决定纳入的最长延迟，但不能证明真实反应一定在此结束。
+    s1_zh_hk: 有限分布滯後（FDL）模型將今日結果同 X 嘅當期值，以及有限個過去值聯繫起嚟。選定嘅滯後階數 q 決定納入嘅最長延遲，但唔可以證明真實反應一定喺呢度結束。
+    s2_en: Beta_0 is the Impact Multiplier. Later Beta_k values are Interim Multipliers. Their sum is the Long-Run Propensity (LRP), interpreted as the eventual per-period change from a permanent one-unit increase in X when the model is stable and its assumptions hold.
+    s2_zh: Beta_0 是即期冲击乘数（Beta_0），后续 Beta_k 是中期滞后乘数（Beta_k）。各项之和是长期累积效应（LRP）：当模型稳定且假设成立时，它表示 X 永久增加一个单位后，结果最终每期改变多少。
+    s2_zh_hk: Beta_0 係即期衝擊乘數（Beta_0），之後嘅 Beta_k 係中期滯後乘數（Beta_k）。各項之和係長期累積效應（LRP）：當模型穩定而且假設成立，佢表示 X 永久增加一個單位之後，結果最終每期改變幾多。
+  - id: mechanics
+    visual: two_column
+    seconds: 36
+    left_en: Dynamic Profile
+    left_zh: 动态响应路径
+    left_zh_hk: 動態反應路徑
+    right_en: Interpretation Checks
+    right_zh: 解释前检查
+    right_zh_hk: 解讀前檢查
+    s1_en: For a one-time pulse in X, the coefficient sequence Beta_0 through Beta_q traces the modeled responses across successive periods. The pattern may decay, rise, change sign, or remain irregular; decay should not be assumed in advance.
+    s1_zh: 对 X 的一次性脉冲，各期系数 Beta_0 至 Beta_q 描绘连续时期中的模型响应。该路径可能衰减、上升、改变符号或并不规则，不能预先假定必然衰减。
+    s1_zh_hk: 對 X 嘅一次性脈衝，各期係數 Beta_0 至 Beta_q 描繪連續時期入面嘅模型反應。條路徑可能衰減、上升、轉換符號或者並唔規則，唔可以預先假定一定衰減。
+    s2_en: Omitting relevant lags can distort the contemporaneous coefficient, but bias is not automatic merely because customers may respond later. It depends on the omitted variables, correlations, and full data-generating process.
+    s2_zh: 遗漏相关滞后项可能扭曲即期系数，但顾客可能延迟响应并不自动意味着一定存在偏误。结果取决于遗漏变量、相关关系与完整的数据生成过程。
+    s2_zh_hk: 遺漏相關滯後項可能扭曲即期係數，但顧客可能延遲反應唔等於一定存在偏誤。結果取決於遺漏變量、相關關係同完整數據生成過程。
+    s3_en: Causal interpretation requires sufficiently exogenous campaign timing and controls for trends, seasonality, anticipation, other promotions, and serial dynamics. Lag order should be checked with business timing, information criteria, residuals, and validation.
+    s3_zh: 因果解释要求活动时点具有充分外生性，并控制趋势、季节性、预期反应、其他推广活动及序列动态。滞后阶数还应结合业务时点、信息准则、残差与验证表现检查。
+    s3_zh_hk: 因果解讀要求活動時點具有充分外生性，並控制趨勢、季節性、預期反應、其他推廣活動同序列動態。滯後階數仲要配合業務時點、信息準則、殘差同驗證表現檢查。
+  - id: example
+    visual: example
+    seconds: 36
+    setup_en: 'Assume FDL(2) coefficients: 2.5, 1.8, 0.9'
+    setup_zh: 假设 FDL(2) 系数：2.5、1.8、0.9
+    setup_zh_hk: 假設 FDL(2) 係數：2.5、1.8、0.9
+    result_en: 'Impact multiplier = 2.5; LRP = 5.2'
+    result_zh: 即期乘数 = 2.5；LRP = 5.2
+    result_zh_hk: 即期乘數 = 2.5；LRP = 5.2
+    s1_en: For illustration, assume an FDL(2) specification has coefficients 2.5 on X_t, 1.8 on X_{t-1}, and 0.9 on X_{t-2}. The same-period conditional association is 2.5 outcome units per unit of X.
+    s1_zh: 为便于说明，假设一个 FDL(2) 模型中 X_t、X_{t-1} 与 X_{t-2} 的系数分别为 2.5、1.8 和 0.9。同期条件关联为 X 每增加一个单位，结果增加 2.5 个单位。
+    s1_zh_hk: 為咗方便說明，假設一個 FDL(2) 模型入面 X_t、X_{t-1} 同 X_{t-2} 嘅係數分別係 2.5、1.8 同 0.9。同期條件關聯係 X 每增加一個單位，結果增加 2.5 個單位。
+    s2_en: Summing the coefficients gives 2.5 plus 1.8 plus 0.9, which equals 5.2. Under a permanent one-unit increase and the stated stable model, the eventual per-period difference is 5.2 outcome units.
+    s2_zh: 把系数相加得到 2.5 + 1.8 + 0.9 = 5.2。在 X 永久增加一个单位且给定稳定模型成立时，结果最终每期相差 5.2 个单位。
+    s2_zh_hk: 將係數加埋得到 2.5 + 1.8 + 0.9 = 5.2。喺 X 永久增加一個單位，而且指定穩定模型成立嗰陣，結果最終每期相差 5.2 個單位。
+    s3_en: This calculation alone does not establish revenue, profit, or ROI. Those require valid causal identification plus price, margin, campaign cost, redemption rules, capacity, and possible displacement of other sales.
+    s3_zh: 单凭这个计算不能确定营收、利润或投资回报率。还需要有效的因果识别，以及价格、毛利、活动成本、核销规则、产能与其他销量被替代的情况。
+    s3_zh_hk: 單靠呢個計算唔可以確定營業額、利潤或者投資回報率。仲需要有效因果識別，以及價錢、毛利、活動成本、換領規則、產能同其他銷量被取代嘅情況。
+  - id: takeaway
+    visual: takeaway
+    seconds: 32
+    q1_en: What Does an FDL Model Reveal?
+    q1_zh: FDL 模型揭示什么？
+    q1_zh_hk: FDL 模型揭示乜嘢？
+    q2_en: Decision Rule
+    q2_zh: 决策规则
+    q2_zh_hk: 決策規則
+    s1_en: An FDL model reveals how conditional associations with X are distributed over a finite set of lags. It separates the immediate multiplier from later modeled responses and their sum.
+    s1_zh: FDL 模型揭示 X 的条件关联如何分布在有限个滞后期，并区分即期乘数、后续模型响应及其总和。
+    s1_zh_hk: FDL 模型揭示 X 嘅條件關聯點樣分布喺有限個滯後期，並區分即期乘數、之後嘅模型反應同佢哋嘅總和。
+    s2_en: Do not judge a campaign from Day 0 alone, but do not assume every later association is caused by the campaign. Validate lag order, assumptions, residuals, stability, and out-of-sample performance.
+    s2_zh: 不要只根据第 0 天判断活动，也不要假设每个后续关联都由活动造成。应验证滞后阶数、模型假设、残差、稳定性与样本外表现。
+    s2_zh_hk: 唔好只根據第 0 日判斷活動，亦唔好假設每個之後嘅關聯都由活動造成。要驗證滯後階數、模型假設、殘差、穩定性同樣本外表現。
+    s3_en: Estimate financial return only after causal identification and the required cost and margin inputs are available. Use the FDL profile as evidence for timing, not as an automatic budget decision.
+    s3_zh: 只有在因果识别成立，并具备所需成本与毛利数据后，才能估算财务回报。应把 FDL 路径作为时点证据，而不是自动预算决策。
+    s3_zh_hk: 只有因果識別成立，並具備所需成本同毛利數據之後，先可以估算財務回報。應該將 FDL 路徑當成時點證據，而唔係自動預算決策。

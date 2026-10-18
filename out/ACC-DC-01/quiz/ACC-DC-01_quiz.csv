@@ -1,5 +1,0 @@
-﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
-1,ACC-DC-01,comprehension,25,"In every journal entry, what must be true of debits and credits?",在每笔分录中，借方和贷方必须满足什么？,在每筆分錄中，借方和貸方必須滿足什麼？,Total debits equal total credits.,借方合计等于贷方合计。,借方合計等於貸方合計。
-2,ACC-DC-01,transfer,25,The firm pays a supplier in cash. Which account is credited?,企业用现金付给供应商。贷记哪一个账户？,企業用現金付給供應商。貸記哪一個賬戶？,Cash. Cash on the right falls.,现金。右边的现金减少。,現金。右邊的現金減少。
-3,ACC-DC-01,check,25,Which account is debited?,借记哪一个账户？,借記哪一個賬戶？,,,
-4,ACC-DC-01,transfer,25,Which account is credited for the same amount?,贷记哪一个账户，金额是否相同？,貸記哪一個賬戶，金額是否相同？,,,

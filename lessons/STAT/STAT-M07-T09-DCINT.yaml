@@ -1,0 +1,170 @@
+id: STAT-M07-T09-DCINT
+course: STAT-M07
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Slope Interactions: Converting Commuters on Rainy Days'
+title_zh: 斜率交互项：雨天过路客流的转化倾角
+title_zh_hk: 斜率交互項：雨天過路客流嘅轉化傾角
+objective_en: Estimate dummy-by-continuous interaction models, interpret the interaction coefficient as a slope rotation, and evaluate how external weather shocks alter marginal foot traffic conversion rates.
+objective_zh: 构建虚拟变量与连续变量交互项模型，将交互系数解读为斜率旋转角度，并评估外部天气冲击如何改变街头客流的边际转化率。
+objective_zh_hk: 構建虛擬變量與連續變量交互項模型，將交互系數解讀為斜率旋轉角度，並評估外部天氣衝擊點樣改變街頭客流嘅邊際轉化率。
+glossary:
+- en: Slope Interaction
+  zh: 斜率交互项
+  zh_hk: 斜率交互項
+  lock: true
+  zh_zh_hk: 斜率交互項
+- en: Differential Slope
+  zh: 差异斜率
+  zh_hk: 差異斜率
+  lock: true
+  zh_zh_hk: 差異斜率
+- en: Slope Rotation
+  zh: 斜率旋转
+  zh_hk: 斜率旋轉
+  lock: true
+  zh_zh_hk: 斜率旋轉
+- en: Weather Shock
+  zh: 天气冲击
+  zh_hk: 天氣衝擊
+  lock: true
+  zh_zh_hk: 天氣衝擊
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: In the regression model Daily_Cups = 120 + 0.50 * Footfall - 30 * Rain - 0.20 * (Rain * Footfall), what is the marginal conversion rate of pedestrian foot traffic on a rainy day (Rain = 1)?
+  question_zh: 在回归模型 日出杯量 = 120 + 0.50 * 客流 - 30 * 雨天 - 0.20 * (雨天 * 客流) 中，在下雨天（雨天 = 1）时，过路客流的边际转化率是多少？
+  question_zh_hk: 喺回歸模型 每日出杯量 = 120 + 0.50 * 人流 - 30 * 雨天 - 0.20 * (雨天 * 人流) 入面，喺落雨天（雨天 = 1）嗰陣，過路客流嘅邊際轉化率係幾多？
+  options_en:
+  - 'A: 0.50 cups per pedestrian'
+  - 'B: 0.30 cups per pedestrian'
+  - 'C: -0.20 cups per pedestrian'
+  - 'D: 0.70 cups per pedestrian'
+  options_zh:
+  - 'A: 0.50 杯/人次'
+  - 'B: 0.30 杯/人次'
+  - 'C: -0.20 杯/人次'
+  - 'D: 0.70 杯/人次'
+  options_zh_hk:
+  - 'A: 0.50 杯/人次'
+  - 'B: 0.30 杯/人次'
+  - 'C: -0.20 杯/人次'
+  - 'D: 0.70 杯/人次'
+  answer: B
+  explanation_en: 'The marginal conversion rate is the derivative with respect to Footfall: d(Cups)/d(Footfall) = 0.50 - 0.20 * Rain. When Rain = 1, the slope becomes 0.50 - 0.20 = 0.30 cups per pedestrian.'
+  explanation_zh: 边际转化率是对客流求导：d(出杯量)/d(客流) = 0.50 - 0.20 * 雨天。当雨天 = 1 时，转化斜率变为 0.50 - 0.20 = 0.30 杯/人次。
+  explanation_zh_hk: 邊際轉化率係對人流求導數：d(出杯量)/d(人流) = 0.50 - 0.20 * 雨天。當雨天 = 1 嗰陣，轉化斜率變成 0.50 - 0.20 = 0.30 杯/人次。
+- id: Q2
+  type: multiple_choice
+  question_en: What geometric difference separates a simple additive dummy model from a dummy-by-continuous interaction model?
+  question_zh: 简单加法型虚拟变量模型与虚拟变量乘连续变量的交互模型，在几何形态上有何本质区别？
+  question_zh_hk: 簡單加法型虛擬變量模型同虛擬變量乘連續變量嘅交互模型，喺幾何形態上有咩本質分別？
+  options_en:
+  - 'A: Additive dummies shift the intercept creating parallel lines; interaction terms rotate the line, allowing the slope to differ across groups'
+  - 'B: Additive dummies curve into parabolas, while interaction terms always form circles'
+  - 'C: Additive dummies require sample sizes over 1,000, while interaction terms do not'
+  - 'D: Interaction terms force all group intercepts to equal zero'
+  options_zh:
+  - 'A: 加法型虚拟变量平移截距生成平行直线；交互项则旋转直线，允许各组别拥有截然不同的斜率倾角'
+  - 'B: 加法型虚拟变量弯曲为抛物线，而交互项始终呈现为圆形散点'
+  - 'C: 加法型虚拟变量要求样本量超过 1,000，而交互项完全没有样本要求'
+  - 'D: 交互项强制所有组别的常数截距严格归零'
+  options_zh_hk:
+  - 'A: 加法型虛擬變量平移截距產生平行直線；交互項則旋轉直線，容許唔同組別擁有完全唔同嘅斜率傾斜度'
+  - 'B: 加法型虛擬變量彎曲成拋物線，而交互項永遠呈現圓形散點'
+  - 'C: 加法型虛擬變量要求樣本量過 1,000，而交互項完全冇樣本限制'
+  - 'D: 交互項強制所有組別嘅常數截距嚴格變成零'
+  answer: A
+  explanation_en: An additive dummy changes only the intercept, so the two fitted lines remain parallel. Adding a dummy-by-continuous product term permits the slope to differ across groups; the lines need not be parallel.
+  explanation_zh: 加法型虚拟变量只改变截距，因此两条拟合线保持平行。加入虚拟变量与连续变量的乘积项后，各组斜率可以不同，拟合线不再必须平行。
+  explanation_zh_hk: 加法型虛擬變量只改變截距，所以兩條擬合線保持平行。加入虛擬變量同連續變量嘅乘積項之後，各組斜率可以唔同，擬合線唔再一定平行。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Weather Volatility Dilemma
+  kicker_zh: 极端天气经营困境
+  kicker_zh_hk: 惡劣天氣營運困局
+  title_en: Do Rainstorms Simply Shift Sales or Flatten Conversion?
+  title_zh: 暴雨仅仅拉低保底销量，还是压平了转化率？
+  title_zh_hk: 大雨淨係拉低底層銷量，定係壓平咗轉化率？
+  en: 'When seasonal rainstorms hit Hong Kong, Metro Coffee branch sales drop noticeably. Naive models simply subtract a flat penalty of thirty cups on wet days. But store managers notice a deeper shift: commuters carrying wet umbrellas walk faster, stare at their phones less, and rarely stop to buy coffee. Does bad weather just drop baseline volume, or does it fundamentally destroy pedestrian conversion efficiency?'
+  zh: 当季风暴雨席卷香港时，Metro Coffee 各门店的销量显著下滑。传统粗放模型仅仅在雨天下扣减三十杯保底销量。然而店长们观察到了更本质的异动：撑着湿雨伞的通勤人潮步履匆匆、无暇四顾，极少进店买咖啡。恶劣天气到底只是下调了基准底数，还是从根本上摧毁了路人的进店转化效率？
+  zh_hk: 當暴雨襲港嗰陣，Metro Coffee 各分店嘅銷量明顯下挫。傳統粗略模型淨係喺落雨天扣減三十杯保底銷量。但店長觀察到更本質嘅異動：擔住濕遮嘅返工客急步趕路、無心裝載，極少停步買咖啡。惡劣天氣到底只係拉低咗底層基數，定係由根本打沉咗過路客嘅轉化效率？
+  zh_zh_hk: 當暴雨襲港嗰陣，Metro Coffee 各分店嘅銷量明顯下挫。傳統粗略模型淨係喺落雨天扣減三十杯保底銷量。但店長觀察到更本質嘅異動：擔住濕遮嘅返工客急步趕路、無心裝載，極少停步買咖啡。惡劣天氣到底只係拉低咗底層基數，定係由根本打沉咗過路客嘅轉化效率？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Y_i = beta_0 + beta_1 * X_i + delta_1 * D_i + gamma_1 * (D_i * X_i) + e_i
+  formula_zh: 斜率交互模型：Y_i = beta_0 + beta_1 * X_i + delta_1 * D_i + gamma_1 * (D_i * X_i) + e_i
+  formula_zh_hk: 斜率交互模型：Y_i = beta_0 + beta_1 * X_i + delta_1 * D_i + gamma_1 * (D_i * X_i) + e_i
+  formula_tex: Y_i = \beta_0 + \beta_1 X_i + \delta_1 D_i + \gamma_1 (D_i X_i) + \varepsilon_i \implies \frac{\partial Y}{\partial X} = \beta_1 + \gamma_1 D_i
+  s1_en: A dummy-by-continuous interaction introduces both an additive dummy D and an interaction product term D times X. This specification allows both the intercept and the slope to vary across categories.
+  s1_zh: 虚拟变量与连续变量交互模型同时引入了加法虚拟变量 D 以及乘积项 D 乘以 X。这一设定允许截距与斜率在不同类别之间同时发生变动。
+  s1_zh_hk: 虛擬變量同連續變量交互模型同時引入咗加法虛擬變量 D 以及乘積項 D 乘 X。呢個設定容許截距同斜率喺唔同組別之間同時自由變動。
+  s2_en: The coefficient delta one shifts the intercept, while gamma one rotates the slope. Taking the derivative with respect to X shows that the marginal conversion rate equals beta one on clear days, and beta one plus gamma one on rainy days.
+  s2_zh: 系数 delta_1 负责平移截距，而 gamma_1 则负责旋转斜率。对客流 X 求导表明：晴天时转化斜率为 beta_1，而雨天时转化斜率则转变为 beta_1 加上 gamma_1。
+  s2_zh_hk: 系數 delta_1 負責平移截距，而 gamma_1 就負責旋轉斜率。對客流 X 求導數顯示：晴天嗰陣轉化斜率係 beta_1，而落雨天嗰陣轉化斜率就變成 beta_1 加埋 gamma_1。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Parallel vs. Rotating Lines
+  left_zh: 平行平移对比斜率旋转
+  right_en: Testing Structural Tilts
+  right_zh: 检验结构性斜率差异
+  s1_en: Without the interaction term, the additive model imposes the same footfall slope on clear and rainy days, producing parallel fitted lines. Adding gamma one allows the rainy-day slope to differ; whether this improves the specification must be assessed from the data and model assumptions.
+  s1_zh: 若不加入交互项，加法模型会对晴天与雨天施加相同的客流斜率，形成平行拟合线。加入 gamma_1 后，雨天斜率可以不同；这一设定是否更合适，需要根据数据与模型假设评估。
+  s1_zh_hk: 如果唔加入交互項，加法模型會對晴天同雨天施加相同嘅人流斜率，形成平行擬合線。加入 gamma_1 之後，雨天斜率可以唔同；呢個設定係咪更合適，要根據數據同模型假設評估。
+  s2_en: When gamma one is negative, the fitted rainy-day line is flatter. In this linear model, each additional pedestrian is associated with a smaller increase in predicted cups on rainy days than on clear days; this is not itself a customer-level purchase probability.
+  s2_zh: 当 gamma_1 为负时，拟合的雨天回归线更平。在这一线性模型中，雨天每增加一名行人与预测出杯量的增幅小于晴天；这并不等同于顾客层面的购买概率。
+  s2_zh_hk: 當 gamma_1 係負數時，擬合嘅雨天回歸線會較平。喺呢個線性模型入面，雨天每增加一個路人同預測出杯量嘅增幅細過晴天；呢個唔等同於顧客層面嘅購買概率。
+  s3_en: A t-test on gamma one evaluates the null hypothesis of no slope difference, conditional on the model assumptions. Statistical evidence of a difference does not by itself establish that rain caused the change, and operational action should also consider uncertainty and forecast validation.
+  s3_zh: 对 gamma_1 的 t 检验评估“斜率无差异”的原假设，前提是模型假设成立。存在统计差异的证据本身并不能证明雨天导致了变化；营运行动还应考虑不确定性和预测验证。
+  s3_zh_hk: 對 gamma_1 做 t 檢驗，係喺模型假設成立之下評估「斜率冇差異」嘅原假設。有統計差異嘅證據本身唔能夠證明落雨導致變化；營運行動亦要考慮不確定性同預測驗證。
+  left_zh_hk: 平行平移對比斜率旋轉
+  right_zh_hk: 檢驗結構性斜率差異
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Code Weather Dummy
+  step1_zh: 定义天气指示变量
+  step2_en: Estimate Slope Interaction
+  step2_zh: 拟合斜率交互模型
+  step3_en: Calculate Wet Day Conversion
+  step3_zh: 测算雨天边际转化率
+  s1_en: 'Step one: Code clear days as Rain = 0 and rainy days as Rain = 1 using a consistently defined weather indicator. The interpretation depends on what observations qualify as rainy days.'
+  s1_zh: 第一步：使用定义一致的天气指标，将晴天编码为 Rain = 0，将雨天编码为 Rain = 1。系数解读取决于哪些观测被归类为雨天。
+  s1_zh_hk: 第一步：使用定義一致嘅天氣指標，將晴天編碼為 Rain = 0，將雨天編碼為 Rain = 1。系數解讀取決於邊啲觀測被歸類做雨天。
+  s2_en: 'Step two: Use the supplied fitted equation Daily_Cups = 120 + 0.50 times Footfall - 30 times Rain - 0.20 times Rain times Footfall. No standard errors or degrees of freedom are supplied, so statistical significance is not asserted here.'
+  s2_zh: 第二步：使用给定的拟合方程：日出杯量 = 120 + 0.50 乘以客流 - 30 乘以雨天 - 0.20 乘以雨天与客流。由于未提供标准误和自由度，这里不声称统计显著性。
+  s2_zh_hk: 第二步：使用畀定嘅擬合方程：每日出杯量 = 120 + 0.50 乘以人流 - 30 乘以雨天 - 0.20 乘以雨天同人流。由於冇提供標準誤同自由度，呢度唔聲稱統計顯著性。
+  s3_en: 'Step three: The fitted clear-day slope is 0.50 cups per pedestrian. The fitted rainy-day slope is 0.50 minus 0.20, which equals 0.30. The rainy-day slope is therefore 0.20 lower, or 40 percent lower relative to 0.50.'
+  s3_zh: 第三步：晴天的拟合斜率为每人次 0.50 杯；雨天的拟合斜率为 0.50 减 0.20，即每人次 0.30 杯。因此，雨天斜率低 0.20，相对于 0.50 低 40%。
+  s3_zh_hk: 第三步：晴天嘅擬合斜率係每人次 0.50 杯；雨天嘅擬合斜率係 0.50 減 0.20，即每人次 0.30 杯。所以，雨天斜率低 0.20，相對於 0.50 低 40%。
+  step1_zh_hk: 定義天氣指示變量
+  step2_zh_hk: 擬合斜率交互模型
+  step3_zh_hk: 測算雨天邊際轉化率
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Do Shocks Only Shift Intercepts?
+  q1_zh: 外部冲击是否仅影响底数？
+  q2_en: 'Audit Rule: Rotate Slopes for External Shocks'
+  q2_zh: 审计准则：遇外部冲击必查斜率旋转
+  s1_en: A dummy-by-continuous interaction allows both the intercept and the slope to differ between clear and rainy days. In the supplied model, Rain changes the intercept by -30 and changes the footfall slope by -0.20.
+  s1_zh: 虚拟变量与连续变量交互项允许晴天与雨天的截距和斜率同时不同。在给定模型中，Rain 使截距改变 -30，并使客流斜率改变 -0.20。
+  s1_zh_hk: 虛擬變量同連續變量交互項容許晴天同雨天嘅截距同斜率同時唔同。喺畀定模型入面，Rain 令截距改變 -30，亦令人流斜率改變 -0.20。
+  s2_en: 'Decision rule: report separate conditional slopes for Rain = 0 and Rain = 1, together with uncertainty and the weather definition. Use inventory or staffing changes only after checking model fit, confounding, and performance on comparable future observations.'
+  s2_zh: 决策规则：分别报告 Rain = 0 与 Rain = 1 的条件斜率，同时说明不确定性和天气定义。只有在检查模型拟合、混淆因素以及可比未来观测上的表现后，才将结果用于库存或排班调整。
+  s2_zh_hk: 決策規則：分別報告 Rain = 0 同 Rain = 1 嘅條件斜率，同時交代不確定性同天氣定義。只有喺檢查模型擬合、混淆因素，同埋可比未來觀測嘅表現之後，先將結果用於庫存或者排班調整。
+  s3_en: Here, the fitted footfall slope is 0.50 cups per pedestrian on clear days and 0.30 on rainy days. The model therefore represents both a baseline shift and a slope difference, without by itself proving a causal weather effect.
+  s3_zh: 本例中，晴天的拟合客流斜率为每人次 0.50 杯，雨天为每人次 0.30 杯。因此，模型同时表示基准平移和斜率差异，但本身并不能证明天气的因果效应。
+  s3_zh_hk: 喺呢個例子，晴天嘅擬合人流斜率係每人次 0.50 杯，雨天係每人次 0.30 杯。所以，模型同時表示基準平移同斜率差異，但本身唔能夠證明天氣嘅因果效應。
+  q1_zh_hk: 外部衝擊係咪淨係影響底層基數？
+  q2_zh_hk: 審計準則：遇外部衝擊必查斜率旋轉

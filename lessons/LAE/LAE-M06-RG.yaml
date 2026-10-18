@@ -1,0 +1,125 @@
+id: LAE-M06-RG
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 92
+title_en: Who may fly
+title_zh: 谁可以飞
+title_zh_hk: 邊個可以飛
+objective_en: 'A flight without a permit is excluded, not delayed. BVLOS is the threshold that lets one person watch many drones instead of one drone.'
+objective_zh: 没有许可的飞行是被排除，不是被延误。BVLOS 是那道门槛：一个人看多架无人机，而不是一架。
+objective_zh_hk: 冇許可嘅飛行係被排除，唔係被延誤。BVLOS 係嗰度門檻：一個人睇多架無人機，而唔係一架。
+glossary:
+- en: BVLOS
+  zh: 超视距
+  zh_hk: 超視距
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What happens to a flight that has no permit?
+  zh: 没有许可的飞行会怎样？
+  zh_hk: 冇許可嘅飛行會點？
+  answer_en: It is excluded. It does not wait in the band. It is not allowed in.
+  answer_zh: 被排除。它不是在这一层里等。它进不去。
+  answer_zh_hk: 被排除。佢唔係喺呢一層入面等。佢入唔到。
+- id: Q2
+  type: transfer
+  en: Why does a Shenzhen-to-Sha Tin parcel need BVLOS, not only a permit to take off?
+  zh: 为什么深圳到沙田的包裹，不只需要一张起飞许可，还需要 BVLOS？
+  zh_hk: 點解深圳到沙田嘅包裹，唔只需要一張起飛許可，仲需要 BVLOS？
+  answer_en: The line is longer than one pair of eyes. BVLOS lets one person watch many machines on that line.
+  answer_zh: 这条线比一双眼睛更长。BVLOS 让一个人在这条线上看着许多机器。
+  answer_zh_hk: 呢條線比一對眼更長。BVLOS 等一個人喺呢條線上睇住好多部機器。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Who may fly
+  title_zh: 谁可以飞
+  title_zh_hk: 邊個可以飛
+  en: Last sitting named three buyers. This short asks who may enter the band at all. A slot is not a permit.
+  zh: 上一讲给三个买方起了名。这条短片问谁可以进这一层。时段不是许可。
+  zh_hk: 上一講畀三個買方起咗名。但就算有人肯畀錢，都唔係想飛就入得去。時段唔係許可。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Permit, then BVLOS
+  title_zh: 许可，然后是 BVLOS
+  title_zh_hk: 許可，然後係 BVLOS
+  formula: no permit = excluded, not delayed
+  formula_en: no permit = excluded, not delayed
+  formula_zh: 没有许可 = 被排除，不是被延误
+  formula_zh_hk: 冇許可 = 被排除，唔係被延誤
+  gloss_en: BVLOS lets one person watch many drones
+  gloss_zh: BVLOS 让一个人看多架无人机
+  gloss_zh_hk: BVLOS 等一個人睇多架無人機
+  s1_en: A flight without a permit does not wait in the band. It is not in. Exclusion is not the same verb as delay.
+  s1_zh: 没有许可的飞行，不是在这一层里等。它不在里面。排除和延误不是同一个动词。
+  s1_zh_hk: 冇許可嘅飛行，唔係喺呢一層入面排隊。佢入唔到。排除同延誤唔係同一個動詞。
+  s2_en: BVLOS means beyond visual line of sight. Say the letters. One person can then watch many machines, not one machine under one pair of eyes.
+  s2_zh: BVLOS 是超视距。说出这五个字母。然后一个人可以看许多机器，而不是一双眼睛对着一架。
+  s2_zh_hk: BVLOS 係超視距。講出呢五個字母。一定要人眼望住嚟飛，就只能一人盯一機；過咗呢度門檻，先可以一個人睇好多部。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: Contrast
+  kicker_en: Contrast
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Delay versus exclusion
+  title_zh: 延误，还是排除
+  title_zh_hk: 延誤，定係排除
+  left_en: Crowded band
+  left_zh: 这一层变挤
+  left_zh_hk: 呢一層變擠
+  right_en: No permit
+  right_zh: 没有许可
+  right_zh_hk: 冇許可
+  s1_en: Congestion slows a flight that is already allowed in. The machine is in the band. It waits or bends.
+  s1_zh: 拥挤让已经获准进入的飞行变慢。机器在这一层里。它等，或绕。
+  s1_zh_hk: 擠擁令已經獲准進入嘅飛行變慢。機器喺呢一層入面。佢等，或者繞。
+  s2_en: No permit stops the product before the pad. The Shenzhen roof can be empty. The flight still cannot start.
+  s2_zh: 没有许可，产品在垫子前就停掉。深圳的屋顶可以是空的。这趟仍不能开始。
+  s2_zh_hk: 冇許可，產品喺墊前面就停掉。深圳嘅屋頂可以係空嘅。呢轉仍然唔能夠開始。
+  s3_en: BVLOS is the scale threshold on this line. Without it, one person watches one drone. The parcel corridor does not pay for that.
+  s3_zh: BVLOS 是这条线上的规模门槛。没有它，一个人看一架。包裹这条线付不起那种算法。
+  s3_zh_hk: BVLOS 係呢條線上嘅規模門檻。冇佢，就係一人盯一機。送包裹嗰啲運費，頂唔住咁高嘅人工。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: In, or not in
+  title_zh: 在里面，还是不在
+  title_zh_hk: 喺入面，定係唔喺
+  q1_en: What is a flight without a permit?
+  q1_zh: 没有许可的飞行是什么？
+  q1_zh_hk: 冇許可嘅飛行係咩？
+  q2_en: What does BVLOS change?
+  q2_zh: BVLOS 改变了什么？
+  q2_zh_hk: BVLOS 改變咗咩？
+  s1_en: No permit means excluded, not delayed.
+  s1_zh: 没有许可是被排除，不是被延误。
+  s1_zh_hk: 冇許可係被排除，唔係被延誤。
+  s2_en: BVLOS lets one person watch many drones on a line longer than one pair of eyes.
+  s2_zh: BVLOS 让一个人在长过一双眼睛的线上，看着许多无人机。
+  s2_zh_hk: BVLOS 等一個人喺長過一對眼嘅線上，睇住好多架無人機。
+  s3_en: A permit is one book. Next short adds a second book, and a gate for the parcel.
+  s3_zh: 许可是一本书。下一支短片再加第二本，以及包裹要过的那一闸。
+  s3_zh_hk: 許可係一本書。下一條短片再加第二本，以及包裹要過嗰一閘。

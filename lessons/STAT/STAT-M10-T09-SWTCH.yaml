@@ -1,0 +1,162 @@
+id: STAT-M10-T09-SWTCH
+course: STAT-M10
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Switchback Experiments: Randomizing Shared Operations Over Time'
+title_zh: 时间轮换实验：在共享运营环境中按时间随机化
+title_zh_hk: 時間輪換實驗：喺共享營運環境入面按時間隨機化
+objective_en: Explain when time-block randomization is appropriate, diagnose temporal carryover and time-cluster dependence, choose evidence-based washout windows, and align inference with the assignment schedule.
+objective_zh: 解释何时适合采用时段块随机化，诊断跨期残留与时间集群依赖，选择基于证据的洗脱窗口，并使推断与分配时序一致。
+objective_zh_hk: 解釋幾時適合採用時段塊隨機化，診斷跨期殘留同時間集群依賴，選擇基於證據嘅洗脫窗口，並令推斷同分配時序一致。
+glossary:
+- en: Switchback Experiment (Time-Split Design)
+  zh: 时间轮换实验（分时段实验）
+  zh_hk: 時間輪換實驗（分時段實驗）
+  lock: true
+- en: Temporal Carryover Effect
+  zh: 跨期残留效应（时间结转效应）
+  zh_hk: 跨期殘留效應（時間結轉效應）
+  lock: true
+- en: Washout Period (Buffer Window)
+  zh: 洗脱缓冲期（消除期）
+  zh_hk: 洗脫緩衝期（消除期）
+  lock: true
+- en: Time-Cluster Correlation
+  zh: 时间集群自相关
+  zh_hk: 時間集群自相關
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: What is the purpose of a Washout Period between switchback blocks?
+  question_zh: 时间轮换时段块之间设置洗脱缓冲期的目的是什么？
+  question_zh_hk: 時間輪換時段塊之間設置洗脫緩衝期嘅目的係乜嘢？
+  options_en:
+  - 'A: Reduce contamination from outcomes or system states created under the previous assignment'
+  - 'B: Guarantee that all carryover is completely eliminated'
+  - 'C: Force customer arrivals to equal zero'
+  - 'D: Double sample size at every transition'
+  options_zh:
+  - A：减少前一个分配状态所产生的结果或系统状态对后续时段的污染
+  - B：保证所有残留效应被完全消除
+  - C：强制顾客到达量变为零
+  - D：在每次切换时把样本量翻倍
+  options_zh_hk:
+  - A：減少上一個分配狀態所產生嘅結果或者系統狀態對之後時段嘅污染
+  - B：保證所有殘留效應完全消除
+  - C：強制客人到達量變成零
+  - D：喺每次切換嗰陣將樣本量翻倍
+  answer: A
+  explanation_en: A washout removes or separately labels transition observations likely to remain affected by the previous state. It reduces carryover under stated assumptions but does not guarantee that all memory has disappeared.
+  explanation_zh: 洗脱期会剔除或单独标记可能仍受前一状态影响的过渡观测。它在给定假设下降低残留污染，但不能保证所有系统记忆都已消失。
+  explanation_zh_hk: 洗脫期會剔除或者另外標記可能仍然受上一個狀態影響嘅過渡觀測。佢喺指定假設之下降低殘留污染，但唔可以保證所有系統記憶都已經消失。
+- id: Q2
+  type: multiple_choice
+  question_en: What should govern the analysis of a switchback experiment?
+  question_zh: 时间轮换实验的分析应由什么决定？
+  question_zh_hk: 時間輪換實驗嘅分析應該由乜嘢決定？
+  options_en:
+  - 'A: The time-block assignment, serial dependence, repeated blocks, and randomization schedule'
+  - 'B: Treating every transaction as an independently randomized unit'
+  - 'C: The calendar year alone'
+  - 'D: The number of menu items'
+  options_zh:
+  - A：时段块分配、序列依赖、重复时段块与随机化时序
+  - B：把每笔交易都视为独立随机单元
+  - C：只看公历年份
+  - D：菜单项目数量
+  options_zh_hk:
+  - A：時段塊分配、序列依賴、重複時段塊同隨機化時序
+  - B：將每筆交易都視為獨立隨機單元
+  - C：只睇公曆年份
+  - D：餐牌項目數量
+  answer: A
+  explanation_en: Assignment occurs over time blocks, and nearby blocks may remain dependent. Inference should reproduce or account for the actual randomization and dependence structure rather than relying only on transaction-level clustering.
+  explanation_zh: 分配发生在时段块上，而邻近时段块可能仍然相互依赖。推断应重现或考虑实际随机化与依赖结构，而不能只依赖交易层聚类。
+  explanation_zh_hk: 分配發生喺時段塊上，而鄰近時段塊可能仍然互相依賴。推斷要重現或者考慮實際隨機化同依賴結構，而唔可以只依賴交易層聚類。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Shared-System Experiment Puzzle
+  kicker_zh: 共享系统实验难题
+  kicker_zh_hk: 共享系統實驗難題
+  title_en: How Can One Store Test Two Operating Policies?
+  title_zh: 一家门店如何检验两种运营政策？
+  title_zh_hk: 一間分店點樣檢驗兩種營運政策？
+  en: 'Suppose every customer in one store sees the same kitchen display, so simultaneous user-level assignment is impossible. Operations can instead randomize the display state across comparable time blocks. This creates a new challenge: queues, staff pacing, and demand shocks may persist across boundaries. A credible switchback design must define blocks, transitions, and inference together.'
+  zh: 假设一家门店内所有顾客都会看到同一块后厨看板，因此无法同时进行用户级分配。运营团队可以把看板状态随机分配到可比时段块。但这带来新的挑战：队列、员工节奏与需求冲击可能跨越时段边界持续存在。可信的时间轮换设计必须同时界定时段块、过渡与推断方法。
+  zh_hk: 假設一間分店入面所有客人都會睇到同一塊後廚看板，所以無法同時進行用戶級分配。營運團隊可以將看板狀態隨機分配到可比時段塊。但呢個帶來新挑戰：隊列、員工節奏同需求衝擊可能跨越時段邊界持續存在。可信嘅時間輪換設計一定要同時界定時段塊、過渡同推斷方法。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Assign state W_k to time block k; define transition handling before launch
+  formula_zh: 把状态 W_k 分配给时段块 k；实验前界定过渡处理
+  formula_zh_hk: 將狀態 W_k 分配畀時段塊 k；實驗之前界定過渡處理
+  formula_tex: W_k\in\{0,1\},\quad k=1,\ldots,K
+  s1_en: A Switchback Experiment assigns an intervention to discrete time blocks rather than individual users. Blocks should be chosen so treatment can be delivered consistently and repeated assignments can be compared across relevant operating conditions.
+  s1_zh: 时间轮换实验把干预分配给离散时段块，而不是个体用户。时段块应使处理能够一致投放，并让重复分配可以在相关运营条件下进行比较。
+  s1_zh_hk: 時間輪換實驗將干預分配畀離散時段塊，而唔係個體用戶。時段塊要令處理可以一致投放，並令重複分配可以喺相關營運條件之下進行比較。
+  s2_en: A Temporal Carryover Effect occurs when the previous block's assignment still changes outcomes in the current block. A Washout Period can exclude or model transition observations, but its duration must be supported by queue, service-time, or system-memory evidence.
+  s2_zh: 当前一时段块的分配仍会改变当前时段结果时，就存在跨期残留效应。洗脱缓冲期可以剔除过渡观测或对其建模，但时长必须由排队、服务时间或系统记忆证据支持。
+  s2_zh_hk: 當上一個時段塊嘅分配仍然會改變當前時段結果，就存在跨期殘留效應。洗脫緩衝期可以剔除過渡觀測或者對佢建模，但時長一定要由排隊、服務時間或者系統記憶證據支持。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Design Risks
+  left_zh: 设计风险
+  left_zh_hk: 設計風險
+  right_en: Design Responses
+  right_zh: 设计应对
+  right_zh_hk: 設計應對
+  s1_en: Short blocks create more treatment switches but can increase transition contamination. Long blocks reduce switching but may confound treatment with trends, weather, staffing, and demand cycles.
+  s1_zh: 较短时段块会增加处理切换次数，但也可能增加过渡污染。较长时段块减少切换，却可能使处理与趋势、天气、人员配置及需求周期混杂。
+  s1_zh_hk: 較短時段塊會增加處理切換次數，但亦可能增加過渡污染。較長時段塊減少切換，卻可能令處理同趨勢、天氣、人手配置同需求周期混雜。
+  s2_en: Balance or randomize assignments within relevant strata such as day and operating period. Monitor adherence, time-varying covariates, transition queues, and whether outcomes are indexed by order time, start time, or completion time.
+  s2_zh: 应在日期与运营时段等相关分层内平衡或随机分配。还需监测执行遵从、随时间变化的协变量、过渡队列，以及结果究竟按下单、开始还是完成时间归属。
+  s2_zh_hk: 要喺日期同營運時段等相關分層內平衡或者隨機分配。仲要監察執行遵從、隨時間變化嘅協變量、過渡隊列，以及結果究竟按落單、開始定係完成時間歸屬。
+  s3_en: Time-Cluster Correlation may extend beyond one block. Suitable inference may use the assignment randomization, block-level outcomes, heteroskedasticity-and-autocorrelation corrections, or other methods justified by the schedule and number of blocks.
+  s3_zh: 时间集群自相关可能延伸至多个时段块。合适推断可以使用分配随机化、时段块层结果、异方差与自相关修正，或由时序与时段块数量支持的其他方法。
+  s3_zh_hk: 時間集群自相關可能延伸到多個時段塊。合適推斷可以使用分配隨機化、時段塊層結果、異方差同自相關修正，或者由時序同時段塊數量支持嘅其他方法。
+- id: example
+  visual: example
+  seconds: 36
+  setup_en: 'Teaching design: one store, repeated randomized blocks, transitions handled separately'
+  setup_zh: 教学设计：一家门店，重复随机时段块，过渡期单独处理
+  setup_zh_hk: 教學設計：一間分店，重複隨機時段塊，過渡期另外處理
+  result_en: 'Estimand: policy effect for eligible stabilized operating periods'
+  result_zh: 估计目标：合资格稳定运营时段下的政策效应
+  result_zh_hk: 估計目標：合資格穩定營運時段之下嘅政策效應
+  s1_en: For illustration, divide comparable operating windows into pre-specified blocks and randomize display ON or OFF within day and time strata. Record assignment, actual display state, arrivals, queue length, staffing, and outcome timestamps.
+  s1_zh: 为便于说明，把可比运营窗口划分为预先指定的时段块，并在日期与时段分层内随机分配看板开启或关闭。记录分配、实际看板状态、到达量、队列长度、人员配置与结果时间戳。
+  s1_zh_hk: 為咗方便說明，將可比營運窗口劃分成預先指定嘅時段塊，並喺日期同時段分層內隨機分配看板開啟或者關閉。記錄分配、實際看板狀態、到達量、隊列長度、人手配置同結果時間戳。
+  s2_en: Choose a transition rule before launch. For example, exclude outcomes whose service overlaps a switch or model lagged assignment explicitly. A fixed ten-minute buffer is defensible only if operational evidence supports it.
+  s2_zh: 实验前应选择过渡规则。例如，排除服务过程跨越切换点的结果，或明确建模滞后分配。固定十分钟缓冲只有在运营证据支持时才合理。
+  s2_zh_hk: 實驗之前要選擇過渡規則。例如，排除服務過程跨越切換點嘅結果，或者明確建模滯後分配。固定十分鐘緩衝只有喺營運證據支持嗰陣先合理。
+  s3_en: Analyze according to the randomized schedule and report sensitivity to block length, carryover assumptions, and transition handling. Do not claim exact wait-time or throughput gains without the underlying randomized block data and valid inference.
+  s3_zh: 应按照随机化时序进行分析，并报告对时段块长度、残留假设与过渡处理的敏感性。没有底层随机时段块数据与有效推断时，不要声称精确等待时间或吞吐量增益。
+  s3_zh_hk: 要按照隨機化時序進行分析，並報告對時段塊長度、殘留假設同過渡處理嘅敏感性。冇底層隨機時段塊數據同有效推斷嗰陣，唔好聲稱精確等候時間或者吞吐量增益。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: When Is a Switchback Useful?
+  q1_zh: 何时适合使用时间轮换实验？
+  q1_zh_hk: 幾時適合使用時間輪換實驗？
+  q2_en: Decision Rule
+  q2_zh: 决策规则
+  q2_zh_hk: 決策規則
+  s1_en: Switchbacks are useful when treatment is shared within a system, can be changed repeatedly, and effects can plausibly be compared across time blocks. They are unsuitable when effects persist too long or the system cannot return to a comparable state.
+  s1_zh: 当处理在系统内共享、可以重复切换，并且不同时段块之间具有可比性时，时间轮换实验可能有用。如果效应持续过久或系统无法回到可比状态，则不适合采用。
+  s1_zh_hk: 當處理喺系統內共享、可以重複切換，而且唔同時段塊之間具有可比性，時間輪換實驗可能有用。如果效應持續太耐或者系統無法回到可比狀態，就唔適合採用。
+  s2_en: Pre-specify block construction, restricted randomization, washout or lag handling, adherence checks, the estimand, and inference method. A washout reduces carryover risk but also discards information.
+  s2_zh: 应预先指定时段块构建、限制随机化、洗脱或滞后处理、执行检查、估计目标与推断方法。洗脱期会降低残留风险，但也会丢失信息。
+  s2_zh_hk: 要預先指定時段塊構建、限制隨機化、洗脫或者滯後處理、執行檢查、估計目標同推斷方法。洗脫期會降低殘留風險，但亦會丟失信息。
+  s3_en: Match analysis to the actual time assignment and dependence structure. Transaction-level volume cannot substitute for enough randomized blocks, repeated switches, and credible transition handling.
+  s3_zh: 应使分析与实际时间分配及依赖结构一致。交易数量不能替代足够的随机时段块、重复切换与可信过渡处理。
+  s3_zh_hk: 要令分析同實際時間分配及依賴結構一致。交易數量唔可以取代足夠嘅隨機時段塊、重複切換同可信過渡處理。

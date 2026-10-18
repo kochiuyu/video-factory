@@ -1,0 +1,165 @@
+id: STAT-M08-T07-MARGE
+course: STAT-M08
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Marginal Effects at the Mean: Translating Logits to Real Probabilities'
+title_zh: 均值处的边际效应：将 Logit 还原为真实概率变化
+title_zh_hk: 均值處嘅邊際效應：將 Logit 還原做真實概率變動
+objective_en: Apply the logistic chain rule to calculate a continuous predictor’s marginal effect at a specified profile, distinguish MEM from AME, and use the divide-by-four result as a bound on the marginal effect magnitude.
+objective_zh: 应用逻辑回归链式法则，在指定画像处计算连续自变量的边际效应，区分均值处边际效应（MEM）与平均边际效应（AME），并将除以四结果用作边际效应绝对值的上界。
+objective_zh_hk: 應用邏輯回歸鏈式法則，喺指定背景計算連續自變量嘅邊際效應，區分均值處邊際效應（MEM）同平均邊際效應（AME），並將除以四結果用作邊際效應絕對值嘅上界。
+glossary:
+- en: Marginal Effect at the Mean
+  zh: 均值处的边际效应
+  zh_hk: 均值處嘅邊際效應
+  lock: true
+- en: Average Marginal Effect
+  zh: 平均边际效应
+  zh_hk: 平均邊際效應
+  lock: true
+- en: Divide-by-Four Rule
+  zh: 除以四法则
+  zh_hk: 除以四法則
+  lock: true
+- en: Probability Derivative
+  zh: 概率偏导数
+  zh_hk: 概率偏導數
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: In a standard logit model, beta_hat = 0.40 for a continuous predictor. What does the divide-by-four result imply?
+  question_zh: 在标准 Logit 模型中，某连续自变量的 beta_hat = 0.40。除以四结果意味着什么？
+  question_zh_hk: 喺標準 Logit 模型入面，某連續自變量嘅 beta_hat = 0.40。除以四結果代表咩？
+  options_en:
+  - 'A: 40.0 percentage points'
+  - 'B: 10.0 percentage points (+0.10)'
+  - 'C: 1.6 percentage points'
+  - 'D: 4.0 percentage points'
+  options_zh:
+  - 'A: 40.0 个百分点'
+  - 'B: 10.0 个百分点（+0.10）'
+  - 'C: 1.6 个百分点'
+  - 'D: 4.0 个百分点'
+  options_zh_hk:
+  - 'A: 40.0 個百分點'
+  - 'B: 10.0 個百分點（+0.10）'
+  - 'C: 1.6 個百分點'
+  - 'D: 4.0 個百分點'
+  answer: B
+  explanation_en: Because p(1-p) is at most 0.25, the instantaneous marginal-effect magnitude is at most 0.40 / 4 = 0.10, or 10 percentage points per unit. This maximum occurs at p = 0.50; it is not the effect for every observation.
+  explanation_zh: 由于 p(1-p) 最大为 0.25，瞬时边际效应绝对值最多为 0.40 / 4 = 0.10，即每单位 10 个百分点。该最大值在 p = 0.50 时出现，并非每个观测的效应。
+  explanation_zh_hk: 由於 p(1-p) 最大係 0.25，瞬時邊際效應絕對值最多係 0.40 / 4 = 0.10，即每單位 10 個百分點。個最大值喺 p = 0.50 時出現，唔係每個觀測嘅效應。
+- id: Q2
+  type: multiple_choice
+  question_en: Why does the marginal probability effect p(1-p)beta generally vary across observations in a logistic model?
+  question_zh: 为什么逻辑模型中的边际概率效应 p(1-p)beta 通常会随观测而变化？
+  question_zh_hk: 點解邏輯模型入面嘅邊際概率效應 p(1-p)beta 通常會隨觀測而變化？
+  options_en:
+  - 'A: The S-curve is non-linear; the slope depends directly on the customer''s baseline probability p, peaking at p = 0.50 and flattening toward the tails'
+  - 'B: Maximum likelihood estimation forces slope derivatives to oscillate at random'
+  - 'C: The sample size n shrinks with every additional unit of X'
+  - 'D: Marginal effects can only be computed when R-squared equals 1.0'
+  options_zh:
+  - 'A: S 型曲线具有非线性特征；其斜率直接取决于顾客当下的基准概率 p，在 p = 0.50 处达到峰值并在两端尾部趋于平缓'
+  - 'B: 极大似然估计强制斜率导数呈现纯粹的随机波动'
+  - 'C: 自变量 X 每增加一个单位，样本容量 n 都会机械性缩水'
+  - 'D: 边际效应唯有在 R平方 严格等于 1.0 时才能被计算'
+  options_zh_hk:
+  - 'A: S 型曲線具有非線性特徵；其斜率直接取決於顧客當前嘅基準概率 p，喺 p = 0.50 處去到最高峰並喺兩端尾部趨於平緩'
+  - 'B: 極大似然估計強制斜率導數展現純粹嘅隨機波動'
+  - 'C: 自變量 X 每增加一個單位，樣本容量 n 都會機械式縮水'
+  - 'D: 邊際效應淨係喺 R平方 嚴格等於 1.0 嗰陣先至計得出嚟'
+  answer: A
+  explanation_en: The factor p(1-p) depends on each observation’s fitted probability. It equals 0.25 at p = 0.50 and is 0.0475 at p = 0.95, so the same beta produces different local probability slopes across profiles.
+  explanation_zh: 因子 p(1-p) 取决于每个观测的拟合概率。它在 p = 0.50 时等于 0.25，在 p = 0.95 时等于 0.0475，因此同一 beta 会在不同画像处产生不同的局部概率斜率。
+  explanation_zh_hk: 因子 p(1-p) 取決於每個觀測嘅擬合概率。佢喺 p = 0.50 時等於 0.25，喺 p = 0.95 時等於 0.0475，所以同一 beta 會喺唔同背景產生唔同嘅局部概率斜率。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: C-Suite Financial Demand
+  kicker_zh: 财务高管质询
+  kicker_zh_hk: 財務高管質詢
+  title_en: How Many Percentage Points Does a Visit Actually Add?
+  title_zh: 多到店一次到底能多加几个百分点的概率？
+  title_zh_hk: 幫襯多一次到底可以加多幾個百分點嘅概率？
+  en: A logistic coefficient is measured in log-odds, but operating plans often need an estimated probability change. The conversion is not constant because the logistic curve changes slope across customer profiles. How can we calculate the local probability slope, and what does the divide-by-four result actually guarantee?
+  zh: 逻辑回归系数以对数几率计量，但营运计划通常需要估计概率变化。由于逻辑曲线在不同顾客画像处的斜率不同，这一换算并非常数。我们如何计算局部概率斜率？除以四结果究竟保证了什么？
+  zh_hk: 邏輯回歸系數以對數勝算計量，但營運計劃通常需要估計概率變化。由於邏輯曲線喺唔同顧客背景嘅斜率唔同，呢個換算唔係常數。我哋點樣計算局部概率斜率？除以四結果究竟保證咗咩？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: 'For continuous X_j: dp_i/dX_ij = p_i(1-p_i) beta_j; |dp_i/dX_ij| <= |beta_j|/4'
+  formula_zh: 连续变量 X_j：dp_i/dX_ij = p_i(1-p_i) beta_j；|dp_i/dX_ij| <= |beta_j|/4
+  formula_zh_hk: 連續變量 X_j：dp_i/dX_ij = p_i(1-p_i) beta_j；|dp_i/dX_ij| <= |beta_j|/4
+  formula_tex: \frac{\partial p_i}{\partial X_{ij}}=p_i(1-p_i)\beta_j,\quad \left|\frac{\partial p_i}{\partial X_{ij}}\right|\leq\frac{|\beta_j|}{4}
+  s1_en: For a continuous predictor in a standard logit model, the chain rule gives the local derivative p_i times one minus p_i times beta_j. Because p_i varies across observations, the probability-scale slope generally varies too.
+  s1_zh: 对于标准 Logit 模型中的连续自变量，链式法则给出局部导数 p_i 乘以 1 减 p_i 再乘以 beta_j。由于 p_i 随观测而变化，概率尺度上的斜率通常也会变化。
+  s1_zh_hk: 對於標準 Logit 模型入面嘅連續自變量，鏈式法則畀出局部導數 p_i 乘以 1 減 p_i 再乘以 beta_j。由於 p_i 隨觀測變化，概率尺度上嘅斜率通常亦會變化。
+  s2_en: MEM evaluates this derivative at a profile formed from predictor means. AME instead computes an observation-specific marginal effect and then averages those effects. The two summaries need not be equal, and a mean profile may not describe an actual customer.
+  s2_zh: MEM 在由各自变量均值组成的画像处计算该导数；AME 则先计算每个观测的边际效应，再对这些效应取平均。两种汇总不一定相等，而且均值画像未必对应真实顾客。
+  s2_zh_hk: MEM 喺由各自變量平均值組成嘅背景計算個導數；AME 就先計算每個觀測嘅邊際效應，再對呢啲效應取平均。兩種匯總唔一定相等，而且均值背景未必對應真實顧客。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: The Dynamic S-Curve Slope
+  left_zh: 沿曲线动态变化的斜率
+  right_en: The Divide-by-Four Quick Rule
+  right_zh: 除以四速算经验法则
+  s1_en: The factor p times one minus p reaches 0.25 at p equal to 0.50 and approaches zero in either tail. Consequently, the same coefficient produces its largest local probability-slope magnitude at the midpoint.
+  s1_zh: 因子 p 乘以 1 减 p 在 p 等于 0.50 时达到 0.25，并在两端逼近零。因此，同一系数在概率中点产生最大的局部概率斜率绝对值。
+  s1_zh_hk: 因子 p 乘以 1 減 p 喺 p 等於 0.50 時達到 0.25，並喺兩端逼近零。所以，同一系數喺概率中點產生最大嘅局部概率斜率絕對值。
+  s2_en: 'The divide-by-four result is an upper bound: the magnitude of a continuous predictor’s instantaneous marginal effect cannot exceed the coefficient magnitude divided by four in the standard logit model. Equality occurs only at p equal to 0.50.'
+  s2_zh: 除以四结果是一个上界：在标准 Logit 模型中，连续自变量的瞬时边际效应绝对值不能超过系数绝对值除以四。只有在 p 等于 0.50 时才取等号。
+  s2_zh_hk: 除以四結果係一個上界：喺標準 Logit 模型入面，連續自變量嘅瞬時邊際效應絕對值唔可以超過系數絕對值除以四。只有喺 p 等於 0.50 時先取等號。
+  s3_en: This derivative is a local change for a continuous predictor. For a dummy variable or a large discrete change, compare predicted probabilities before and after the change rather than treating the derivative as an exact finite difference.
+  s3_zh: 该导数描述连续自变量的局部变化。对于虚拟变量或较大的离散变化，应比较变化前后的预测概率，而不是把导数当作精确的有限差分。
+  s3_zh_hk: 個導數描述連續自變量嘅局部變化。對於虛擬變量或者較大嘅離散變化，應該比較變化前後嘅預測概率，而唔係將導數當作精確有限差分。
+  left_zh_hk: 沿曲線動態變化嘅斜率
+  right_zh_hk: 除以四速算經驗法則
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Audit Baseline Average Profile
+  step1_zh: 锚定全网均值基准画像
+  step2_en: Calculate Dampening Weight
+  step2_zh: 核算阻尼权重乘数
+  step3_en: Translate Concrete Percentage Lift
+  step3_zh: 兑现具体百分点增量
+  s1_en: 'Step one: At the supplied mean profile, the predicted redemption probability is p_bar = 0.24, and the estimated coefficient on monthly visits is beta_Visits = 0.20.'
+  s1_zh: 第一步：在给定均值画像处，预测核销概率为 p_bar = 0.24，月度到店次数的估计系数为 beta_Visits = 0.20。
+  s1_zh_hk: 第一步：喺畀定均值背景，預測換領概率係 p_bar = 0.24，月度到店次數嘅估計系數係 beta_Visits = 0.20。
+  s2_en: 'Step two: The logistic weighting factor is 0.24 times 0.76, which equals 0.1824.'
+  s2_zh: 第二步：逻辑权重因子为 0.24 乘以 0.76，等于 0.1824。
+  s2_zh_hk: 第二步：邏輯權重因子係 0.24 乘以 0.76，等於 0.1824。
+  s3_en: 'Step three: The MEM is 0.1824 times 0.20, which equals 0.03648, or about 3.65 percentage points per additional visit at that mean profile. This is a model-based local association, not a guaranteed causal revenue lift.'
+  s3_zh: 第三步：MEM 为 0.1824 乘以 0.20，等于 0.03648，即在该均值画像处每多到店一次约对应 3.65 个百分点的局部概率变化。这是模型条件关联，并非有保证的因果收入增量。
+  s3_zh_hk: 第三步：MEM 係 0.1824 乘以 0.20，等於 0.03648，即喺個均值背景每多到店一次，約對應 3.65 個百分點嘅局部概率變化。呢個係模型條件關聯，唔係有保證嘅因果收入增量。
+  step1_zh_hk: 錨定全網均值基準畫像
+  step2_zh_hk: 核算阻尼權重乘數
+  step3_zh_hk: 兌現具體百分點增量
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Can We Quote One Slope for All Customers?
+  q1_zh: 能否用单一斜率通吃所有顾客？
+  q2_en: 'Audit Rule: Never Give Raw Betas to Finance'
+  q2_zh: 审计准则：对财务汇报必将 Logit 换算为百分点
+  s1_en: Marginal effects translate a logistic coefficient into a local probability-scale slope. The result depends on the evaluation profile because the logistic curve is nonlinear.
+  s1_zh: 边际效应把逻辑回归系数转换为概率尺度上的局部斜率。由于逻辑曲线是非线性的，结果取决于评估画像。
+  s1_zh_hk: 邊際效應將邏輯回歸系數轉換做概率尺度上嘅局部斜率。由於邏輯曲線係非線性，結果取決於評估背景。
+  s2_en: 'Decision rule: state whether the summary is MEM, AME, or a discrete probability change; identify the evaluation profile; report uncertainty; and use the divide-by-four result only as a bound, not as the effect for every customer.'
+  s2_zh: 决策规则：说明所报告的是 MEM、AME 还是离散概率变化；明确评估画像；报告不确定性；并仅把除以四结果作为上界，而不是每名顾客的统一效应。
+  s2_zh_hk: 決策規則：說明所報告嘅係 MEM、AME，定係離散概率變化；明確評估背景；報告不確定性；並只將除以四結果當作上界，而唔係每個顧客嘅統一效應。
+  s3_en: For beta equal to 0.20, the maximum local marginal-effect magnitude is 0.05, or 5 percentage points, at p equal to 0.50. At the supplied mean profile with p equal to 0.24, the MEM is smaller at about 3.65 points.
+  s3_zh: 当 beta 等于 0.20 时，局部边际效应绝对值的上限为 0.05，即在 p 等于 0.50 时为 5 个百分点。在给定 p 等于 0.24 的均值画像处，MEM 较小，约为 3.65 个百分点。
+  s3_zh_hk: 當 beta 等於 0.20 時，局部邊際效應絕對值上限係 0.05，即喺 p 等於 0.50 時係 5 個百分點。喺畀定 p 等於 0.24 嘅均值背景，MEM 較細，約為 3.65 個百分點。
+  q1_zh_hk: 可唔可以用單一斜率代表晒所有顧客？
+  q2_zh_hk: 審計準則：對財務匯報必將 Logit 換算做百分點

@@ -1,0 +1,30 @@
+id: STAT-M05
+kind: minicourse
+course: statistics
+course_en: Hypothesis Testing & Store Experiments
+course_zh: 假设检验与门店运营实验
+course_zh_hk: 假設檢驗與門市營運實驗
+title_en: Hypothesis tests for a coffee chain
+title_zh: 咖啡连锁的假设检验
+title_zh_hk: 咖啡連鎖嘅假設檢驗
+objective_en: 'Fifteen standalone shorts on assumed Metro Coffee audits: frame a mean test, set a rejection region, read a p-value, balance Type I and Type II error, size for power, then run one-sample Z and t tests, one-tailed tests, independent and Welch comparisons, paired differences, a two-proportion Z test, and an A/B multiplicity audit. Build each short on its own. This collection does not join them into one video.'
+objective_zh: 围绕假设都市咖啡审计的十五节独立短课：构建均值检验、设定拒绝域、阅读 p 值、权衡两类错误、按功效规划样本量，然后做单样本 Z 与 t、单尾检验、独立组与韦尔奇比较、配对差值、双比例 Z 检验，以及 A/B 多重性审计。每节单独制作。本集合不把它们拼成一条视频。
+objective_zh_hk: 圍繞假設都市咖啡審計嘅十五節獨立短課：構建均值檢驗、設定拒絕域、閱讀 p 值、權衡兩類錯誤、按功效規劃樣本量，然後做單樣本 Z 同 t、單尾檢驗、獨立組同韋爾奇比較、配對差值、雙比例 Z 檢驗，以及 A/B 多重性審計。每節單獨製作。本集合唔會將佢哋拼成一條片。
+syllabus: docs/courses/STAT-M05.md
+duration_note: Each short is 168 seconds. The collection is not a 5–10 minute module.
+lessons:
+- STAT-M05-T01-FRAME
+- STAT-M05-T02-REJEC
+- STAT-M05-T03-PVALU
+- STAT-M05-T04-ERRORS
+- STAT-M05-T05-POWER
+- STAT-M05-T06-ZTEST
+- STAT-M05-T07-TTEST
+- STAT-M05-T08-ONETAIL
+- STAT-M05-T09-TWOIN
+- STAT-M05-T10-WELCH
+- STAT-M05-T11-PAIRD
+- STAT-M05-T12-INVTW
+- STAT-M05-T13-PROP2
+- STAT-M05-T14-ABTEST
+- STAT-M05-T15-RECAP

@@ -1,0 +1,165 @@
+id: STAT-M08-T10-CUTOF
+course: STAT-M08
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Optimizing the Probability Cutoff: Asymmetric Business Costs'
+title_zh: 优化概率决策门槛：非对称商业成本考量
+title_zh_hk: 優化概率決策門檻：非對稱商業成本考量
+objective_en: Derive a cost-sensitive classification threshold under stated assumptions, explain how threshold changes affect false positives and false negatives, and validate the selected rule using expected loss and deployment-representative data.
+objective_zh: 在明确假设下推导成本敏感的分类阈值，解释阈值变化如何影响假阳性与假阴性，并使用期望损失和具有部署代表性的数据验证所选规则。
+objective_zh_hk: 喺明確假設之下推導成本敏感嘅分類門檻，解釋門檻變化點樣影響假陽性同假陰性，並使用期望損失同具有部署代表性嘅數據驗證所選規則。
+glossary:
+- en: Classification Threshold
+  zh: 分类阈值（决策门槛）
+  zh_hk: 分類門檻（決策門檻）
+  lock: true
+- en: Asymmetric Error Costs
+  zh: 非对称错误成本
+  zh_hk: 非對稱錯誤成本
+  lock: true
+- en: Cost-Benefit Trade-off
+  zh: 成本效益权衡
+  zh_hk: 成本效益權衡
+  lock: true
+- en: Expected Financial Loss
+  zh: 期望商业损失
+  zh_hk: 期望商業損失
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: In Metro Coffee's corporate catering retention alerts, a False Positive (sending an unneeded HK$200 tasting gift to a safe client) costs HK$200, while a False Negative (missing an at-risk client who terminates a contract) loses HK$1,800. What is the cost-optimal decision threshold p*?
+  question_zh: 在 Metro Coffee 的企业团餐挽留预警中，假阳性误伤（向未流失客户赠送 200 港元品鉴礼盒）成本为 200 港元，而假阴性漏报（错失流失预警痛失续约）净损失 1,800 港元。最优决策概率阈值 p* 是多少？
+  question_zh_hk: 喺 Metro Coffee 嘅企業團餐挽留預警入面，假陽性誤傷（向未流失客戶送 200 港元試飲禮盒）成本係 200 港元，而假陰性漏報（錯失流失預警痛失續約）淨損失 1,800 港元。最優決策概率門檻 p* 係幾多？
+  options_en:
+  - 'A: p* = 0.50 (50%)'
+  - 'B: p* = 0.10 (10%)'
+  - 'C: p* = 0.90 (90%)'
+  - 'D: p* = 0.05 (5%)'
+  options_zh:
+  - 'A: p* = 0.50（50%）'
+  - 'B: p* = 0.10（10%）'
+  - 'C: p* = 0.90（90%）'
+  - 'D: p* = 0.05（5%）'
+  options_zh_hk:
+  - 'A: p* = 0.50（50%）'
+  - 'B: p* = 0.10（10%）'
+  - 'C: p* = 0.90（90%）'
+  - 'D: p* = 0.05（5%）'
+  answer: B
+  explanation_en: Under the stated two-action loss model, p* = C_FP / (C_FP + C_FN) = 200 / (200 + 1,800) = 0.10. The rule depends on calibrated probabilities and the stated cost assumptions.
+  explanation_zh: 在给定双行动损失模型下，p* = C_FP / (C_FP + C_FN) = 200 / (200 + 1,800) = 0.10。该规则依赖校准概率和给定成本假设。
+  explanation_zh_hk: 喺畀定雙行動損失模型之下，p* = C_FP / (C_FP + C_FN) = 200 / (200 + 1,800) = 0.10。個規則依賴校準概率同畀定成本假設。
+- id: Q2
+  type: multiple_choice
+  question_en: On the same set of probability scores, what generally happens when the classification threshold is lowered from 0.50 to 0.10?
+  question_zh: 在同一组概率评分上，当分类阈值从 0.50 降至 0.10 时，通常会发生什么？
+  question_zh_hk: 喺同一組概率評分上，當分類門檻由 0.50 降到 0.10 時，通常會發生咩？
+  options_en:
+  - 'A: More cases are predicted positive; recall cannot decrease, false positives cannot decrease, and precision often declines although it need not do so monotonically at every step'
+  - 'B: All model coefficients beta mechanically collapse to zero'
+  - 'C: False positives and false negatives both decline to zero simultaneously'
+  - 'D: R-squared becomes negative and the likelihood function cannot be solved'
+  options_zh:
+  - 'A: 更多案例被预测为阳性；召回率不会下降、假阳性不会减少，而查准率通常下降但不保证每一步都单调变化'
+  - 'B: 逻辑回归的所有系数 beta 在机械计算上全部归零'
+  - 'C: 假阳性与假阴性两类错误神奇地同时归零消除'
+  - 'D: R平方 瞬间变为负数且极大似然函数彻底无法求解'
+  options_zh_hk:
+  - 'A: 更多案例被預測做陽性；召回率唔會下降、假陽性唔會減少，而查準率通常下降但唔保證每一步都單調變化'
+  - 'B: 邏輯回歸嘅所有系數 beta 喺機械計算上全部變做零'
+  - 'C: 假陽性同假陰性兩類錯誤神奇噉同時消失變做零'
+  - 'D: R平方 即刻變做負數兼且極大似然函數徹底解唔出'
+  answer: A
+  explanation_en: Lowering the threshold expands the predicted-positive set. On a fixed scored sample, this makes recall non-decreasing and false positives non-decreasing. Precision often falls as weaker-score cases are included, but its exact path depends on the ordering of labels.
+  explanation_zh: 降低阈值会扩大预测阳性集合。在固定评分样本上，这使召回率不下降、假阳性不减少。随着较低分案例被纳入，查准率通常下降，但其具体路径取决于真实标签的排序。
+  explanation_zh_hk: 降低門檻會擴大預測陽性集合。喺固定評分樣本上，呢個令召回率唔下降、假陽性唔減少。隨住較低分案例被納入，查準率通常下降，但具體路徑取決於真實標籤排序。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Cost-Sensitive Decision Rule
+  kicker_zh: 成本敏感决策规则
+  kicker_zh_hk: 成本敏感決策規則
+  title_en: When Should a Churn Alert Trigger an Intervention?
+  title_zh: 何时应根据流失预警启动干预？
+  title_zh_hk: 幾時應該根據流失預警啟動干預？
+  en: A churn model assigns each corporate account a predicted non-renewal probability. Acting too often wastes retention resources, while acting too rarely misses valuable contracts. A useful threshold should therefore compare the expected loss of intervening with the expected loss of not intervening, rather than defaulting automatically to 0.50.
+  zh: 流失模型为每个企业客户给出预测不续约概率。干预过多会浪费挽留资源，干预过少则会错失有价值的合约。因此，有用的阈值应比较“采取干预”与“不采取干预”的期望损失，而不是自动采用 0.50。
+  zh_hk: 流失模型為每個企業客戶畀出預測唔續約概率。干預太多會浪費挽留資源，干預太少就會錯失有價值合約。所以，有用嘅門檻應該比較「採取干預」同「唔採取干預」嘅期望損失，而唔係自動採用 0.50。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: 'Under the stated two-action cost model: p* = Cost(FP) / [Cost(FP) + Cost(FN)]'
+  formula_zh: 在给定双行动成本模型下：p* = Cost(FP) / [Cost(FP) + Cost(FN)]
+  formula_zh_hk: 喺畀定雙行動成本模型之下：p* = Cost(FP) / [Cost(FP) + Cost(FN)]
+  formula_tex: p^*=\frac{C_{FP}}{C_{FP}+C_{FN}}\quad\text{when correct decisions have zero incremental cost and }p\text{ is calibrated}
+  s1_en: For a calibrated churn probability p, intervening has expected misclassification loss equal to one minus p times C_FP, while not intervening has expected loss equal to p times C_FN. The decision boundary occurs where these losses are equal.
+  s1_zh: 对于经过校准的流失概率 p，采取干预的预期误分类损失为 1 减 p 再乘以 C_FP；不采取干预的预期损失为 p 乘以 C_FN。两种损失相等的位置就是决策边界。
+  s1_zh_hk: 對於經過校準嘅流失概率 p，採取干預嘅預期誤分類損失係 1 減 p 再乘以 C_FP；唔採取干預嘅預期損失係 p 乘以 C_FN。兩種損失相等嘅位置就係決策邊界。
+  s2_en: The simple threshold formula assumes two actions, constant error costs, zero incremental cost for correct decisions, and a probability that is calibrated for the deployment population. If benefits, capacities, or costs vary by account, expected utility should be modeled directly.
+  s2_zh: 这一简单阈值公式假设只有两种行动、错误成本固定、正确决策没有新增成本，并且概率已针对部署总体完成校准。若收益、处理能力或成本因客户而异，应直接建立期望效用模型。
+  s2_zh_hk: 呢個簡單門檻公式假設只有兩種行動、錯誤成本固定、正確決策冇新增成本，而且概率已經針對部署總體完成校準。如果收益、處理能力或者成本因客戶而異，就應該直接建立期望效用模型。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Cheap Alarms vs. Fatal Losses
+  left_zh: 廉价虚警对比致命漏报
+  right_en: Sliding the Operational Cutoff
+  right_zh: 动态滑动分类门槛
+  s1_en: In the supplied example, a false-positive intervention costs HK$200, while a false negative costs HK$1,800. Because the missed-churn cost is nine times the unnecessary-intervention cost, the equal-loss boundary falls below 0.50.
+  s1_zh: 在给定示例中，假阳性干预成本为 200 港元，假阴性成本为 1,800 港元。由于漏报流失的成本是无须干预成本的九倍，等损失边界低于 0.50。
+  s1_zh_hk: 喺畀定例子入面，假陽性干預成本係 200 港元，假陰性成本係 1,800 港元。由於漏報流失嘅成本係無須干預成本嘅九倍，等損失邊界低過 0.50。
+  s2_en: Lowering a threshold classifies weakly more cases as positive. On the same scored sample, recall cannot decrease and false negatives cannot increase; false positives cannot decrease. Precision often falls, but it is not guaranteed to change monotonically at every threshold step.
+  s2_zh: 降低阈值会把更多或相同数量的案例判为阳性。在同一评分样本上，召回率不会下降、假阴性不会增加，而假阳性不会减少。查准率通常会下降，但并不保证在每次阈值调整中都单调变化。
+  s2_zh_hk: 降低門檻會將更多或者相同數量嘅案例判做陽性。喺同一評分樣本上，召回率唔會下降、假陰性唔會增加，而假陽性唔會減少。查準率通常會下降，但唔保證每次門檻調整都單調變化。
+  s3_en: A cost-derived threshold is a candidate decision rule, not a guarantee of realized savings. Its performance depends on probability calibration, stable costs, representative validation data, intervention effectiveness, and operational capacity.
+  s3_zh: 成本推导阈值是候选决策规则，并不保证实际节省。其表现取决于概率校准、成本稳定性、具有代表性的验证数据、干预有效性与营运处理能力。
+  s3_zh_hk: 成本推導門檻係候選決策規則，唔保證實際節省。佢嘅表現取決於概率校準、成本穩定性、具有代表性嘅驗證數據、干預有效性同營運處理能力。
+  left_zh_hk: 平價虛警對比致命漏報
+  right_zh_hk: 動態滑動分類門檻
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Price Asymmetric Error Costs
+  step1_zh: 核算两类错误真实财务定价
+  step2_en: Derive Cash-Optimal Cutoff
+  step2_zh: 解算资金最优决策门槛
+  step3_en: Audit Net Bottom-Line Impact
+  step3_zh: 对账企业最终减亏成效
+  s1_en: 'Step one: Use the supplied constant error costs C_FP = HK$200 and C_FN = HK$1,800. These amounts define the simplified loss calculation; the source does not provide enough confusion-matrix counts to verify a portfolio-wide savings claim.'
+  s1_zh: 第一步：使用给定固定错误成本 C_FP = 200 港元、C_FN = 1,800 港元。这些金额定义了简化损失计算；现有资料没有提供足够的混淆矩阵计数来核实整个客户组合的节省金额。
+  s1_zh_hk: 第一步：使用畀定固定錯誤成本 C_FP = 200 港元、C_FN = 1,800 港元。呢啲金額定義咗簡化損失計算；現有資料冇提供足夠混淆矩陣計數去核實成個客戶組合嘅節省金額。
+  s2_en: 'Step two: Set the expected losses equal: (1 - p) times 200 equals p times 1,800. Solving gives p star = 200 divided by 2,000, or 0.10.'
+  s2_zh: 第二步：令两种期望损失相等：(1 - p) 乘以 200 = p 乘以 1,800。解得 p* = 200 除以 2,000，即 0.10。
+  s2_zh_hk: 第二步：令兩種期望損失相等：(1 - p) 乘以 200 = p 乘以 1,800。解得 p* = 200 除以 2,000，即 0.10。
+  s3_en: 'Step three: Under the stated assumptions, intervene when the calibrated churn probability is at least 0.10 because expected loss from non-intervention is then no smaller. Before deployment, compare total validation loss across plausible thresholds and check workload capacity.'
+  s3_zh: 第三步：在给定假设下，当校准后的流失概率至少为 0.10 时采取干预，因为此时不干预的期望损失不低于干预损失。部署前，应比较多个可行阈值的验证总损失，并检查工作量容量。
+  s3_zh_hk: 第三步：喺畀定假設之下，當校準後嘅流失概率至少係 0.10 時採取干預，因為呢個時候唔干預嘅期望損失唔低過干預損失。部署之前，應該比較多個可行門檻嘅驗證總損失，並檢查工作量容量。
+  step1_zh_hk: 核算兩類錯誤真實財務定價
+  step2_zh_hk: 解算資金最優決策門檻
+  step3_zh_hk: 對賬企業最終減虧成效
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Is 0.50 Ever the Right Cutoff?
+  q1_zh: 0.50 门槛是否永远是错的？
+  q2_en: 'Audit Rule: Never Accept Default Thresholds'
+  q2_zh: 审计准则：调控分类门槛，必先核对真实账本
+  s1_en: There is no universally correct classification threshold. A threshold is a decision parameter that should reflect probabilities, consequences, available actions, and operating constraints.
+  s1_zh: 不存在普遍正确的分类阈值。阈值是一个决策参数，应反映概率、后果、可用行动与营运约束。
+  s1_zh_hk: 不存在普遍正確嘅分類門檻。門檻係一個決策參數，應該反映概率、後果、可用行動同營運約束。
+  s2_en: 'Decision rule: define the action and error costs, verify probability calibration, derive or search for a candidate threshold, validate expected loss and workload out of sample, and monitor costs and class rates after deployment.'
+  s2_zh: 决策规则：定义行动与错误成本，核实概率校准，推导或搜索候选阈值，在样本外验证期望损失与工作量，并在部署后监测成本和类别比例。
+  s2_zh_hk: 決策規則：定義行動同錯誤成本，核實概率校準，推導或者搜尋候選門檻，喺樣本外驗證期望損失同工作量，並喺部署之後監測成本同類別比例。
+  s3_en: For the supplied two-action example, HK$200 and HK$1,800 imply a candidate threshold of 0.10. The arithmetic is exact under the stated loss model; realized business value still requires empirical validation.
+  s3_zh: 在给定双行动示例中，200 港元与 1,800 港元意味着候选阈值为 0.10。该算术结果在给定损失模型下是准确的；实际业务价值仍需经验验证。
+  s3_zh_hk: 喺畀定雙行動例子入面，200 港元同 1,800 港元意味着候選門檻係 0.10。個算術結果喺畀定損失模型之下係準確嘅；實際業務價值仍然需要經驗驗證。
+  q1_zh_hk: 0.50 門檻係咪永遠都係錯？
+  q2_zh_hk: 審計準則：調控分類門檻，必先核對真實賬本

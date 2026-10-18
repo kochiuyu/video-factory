@@ -1,0 +1,170 @@
+id: STAT-M07-T08-CCINT
+course: STAT-M07
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Continuous Interactions: Complementary Baristas & Foot Traffic'
+title_zh: 连续变量交互项：咖啡师排班与客流的营运协同
+title_zh_hk: 連續變量交互項：咖啡師排班與人流嘅營運協同
+objective_en: Formulate continuous interaction terms, calculate non-constant marginal effects, and evaluate statistical complementarity between staffing levels and customer foot traffic.
+objective_zh: 构建连续变量交互项模型，计算变动边际效应，并评估员工排班与客流量之间的统计互补协同效应。
+objective_zh_hk: 構建連續變量交互項模型，計算變動邊際效應，並評估員工排班與客流量之間嘅統計互補協同效應。
+glossary:
+- en: Continuous Interaction
+  zh: 连续变量交互项
+  zh_hk: 連續變量交互項
+  lock: true
+  zh_zh_hk: 連續變量交互項
+- en: Operational Complementarity
+  zh: 营运互补性
+  zh_hk: 營運互補性
+  lock: true
+  zh_zh_hk: 營運互補性
+- en: Conditional Marginal Effect
+  zh: 条件边际效应
+  zh_hk: 條件邊際效應
+  lock: true
+  zh_zh_hk: 條件邊際效應
+- en: Synergy Term
+  zh: 协同效应项
+  zh_hk: 協同效應項
+  lock: true
+  zh_zh_hk: 協同效應項
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: In the regression model Daily_Cups = 50 + 4.0 * Hours + 0.20 * Traffic + 0.01 * (Hours * Traffic), what is the marginal effect of adding one barista hour when daily foot traffic is 400 pedestrians?
+  question_zh: 在回归模型 日出杯量 = 50 + 4.0 * 工时 + 0.20 * 客流 + 0.01 * (工时 * 客流) 中，当每日街头客流量为 400 人次时，增加 1 个咖啡师工时的边际效应是多少？
+  question_zh_hk: 喺回歸模型 每日出杯量 = 50 + 4.0 * 工時 + 0.20 * 人流 + 0.01 * (工時 * 人流) 入面，當每日街頭客流係 400 人次嗰陣，增加 1 個咖啡師工時嘅邊際效應係幾多？
+  options_en:
+  - 'A: 4.0 cups per hour'
+  - 'B: 8.0 cups per hour'
+  - 'C: 12.0 cups per hour'
+  - 'D: 0.01 cups per hour'
+  options_zh:
+  - 'A: 4.0 杯/小时'
+  - 'B: 8.0 杯/小时'
+  - 'C: 12.0 杯/小时'
+  - 'D: 0.01 杯/小时'
+  options_zh_hk:
+  - 'A: 4.0 杯/小時'
+  - 'B: 8.0 杯/小時'
+  - 'C: 12.0 杯/小時'
+  - 'D: 0.01 杯/小時'
+  answer: B
+  explanation_en: 'The marginal effect is the partial derivative with respect to Hours: d(Cups)/d(Hours) = 4.0 + 0.01 * Traffic. At Traffic = 400, the marginal effect equals 4.0 + 0.01 * 400 = 4.0 + 4.0 = 8.0 cups per hour.'
+  explanation_zh: 边际效应是对工时求偏导数：d(出杯量)/d(工时) = 4.0 + 0.01 * 客流。当客流 = 400 时，该边际效应等于 4.0 + 0.01 * 400 = 4.0 + 4.0 = 8.0 杯/小时。
+  explanation_zh_hk: 邊際效應係對工時求偏導數：d(出杯量)/d(工時) = 4.0 + 0.01 * 人流。當人流 = 400 嗰陣，該邊際效應等於 4.0 + 0.01 * 400 = 4.0 + 4.0 = 8.0 杯/小時。
+- id: Q2
+  type: multiple_choice
+  question_en: If the interaction coefficient beta_3 on (Hours * Traffic) is positive and statistically significant, what does this indicate to Metro Coffee's operations director?
+  question_zh: 若交互项 (工时 * 客流) 的回归系数 beta_3 为正且在统计上显著，这向 Metro Coffee 的运营总监传达了什么经营洞见？
+  question_zh_hk: 如果交互項 (工時 * 人流) 嘅回歸系數 beta_3 係正數而且統計上顯著，呢個向 Metro Coffee 嘅營運總監傳達咗咩營運洞見？
+  options_en:
+  - 'A: Baristas work slower during high-traffic shifts'
+  - 'B: Staffing and customer foot traffic are complementary; adding staff hours yields greater sales gains in high-traffic stores than in quiet stores'
+  - 'C: Foot traffic has no direct effect on sales when stores are fully staffed'
+  - 'D: The store should schedule zero barista hours during peak commute hours'
+  options_zh:
+  - 'A: 咖啡师在高客流高峰期的出餐速度系统性变慢'
+  - 'B: 人工排班与顾客客流存在互补协同效应；在高客流门店增加工时所带来的销量提升，显著高于在冷清门店增加工时的产出'
+  - 'C: 当门面员工充足时，街头客流对销量不再具有直接影响'
+  - 'D: 门店在早高峰通勤时段应安排零工时排班'
+  options_zh_hk:
+  - 'A: 咖啡師喺高人流高峰期嘅出餐速度系統性變慢'
+  - 'B: 人手排班與顧客人流存在互補協同效應；喺高人流門市加派人手所帶來嘅銷量提升，顯著高過喺冷清門市加人嘅產出'
+  - 'C: 當門市人手充裕嗰陣，街頭人流對銷量不再具有直接影響'
+  - 'D: 門市喺返工高峰時段應該排零工時'
+  answer: B
+  explanation_en: 'A positive interaction coefficient means the fitted cross-partial derivative is positive: the marginal effect of staffing increases with traffic. If the coefficient is statistically distinguishable from zero under the stated assumptions, the data support statistical complementarity in this model; causal interpretation requires additional design assumptions.'
+  explanation_zh: 正向交互项表示拟合交叉偏导数大于零：排班的边际效应随客流增加而上升。若在既定假设下该系数在统计上可与零区分，数据支持这一模型中的统计互补性；因果解读还需要额外的研究设计假设。
+  explanation_zh_hk: 正向交互項表示擬合交叉偏導數大過零：排班嘅邊際效應會隨人流增加而上升。如果喺既定假設之下，個系數喺統計上可以同零區分，數據支持呢個模型入面嘅統計互補性；因果解讀仲需要額外研究設計假設。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Scheduling Bottleneck
+  kicker_zh: 排班产能瓶颈
+  kicker_zh_hk: 排班產能瓶頸
+  title_en: Does an Extra Barista Yield the Same Output Everywhere?
+  title_zh: 多排一名咖啡师在所有门店产出相同吗？
+  title_zh_hk: 排多一個咖啡師喺所有分店產出係咪一樣？
+  en: Metro Coffee's standard regression models assume that adding an extra barista shift hour always yields a fixed number of cups, whether deployed at a quiet suburban corner or inside a bustling subway interchange. But floor managers argue that extra staff are wasted in empty shops, yet unlock massive transaction throughput during crowded morning rushes. How do we model inputs that actively reinforce each other?
+  zh: Metro Coffee 的标准回归模型机械地假设，增派一小时咖啡师排班总是带来固定杯数的销量提升，无论该工时是派往冷清的街角小店，还是繁忙的地铁换乘枢纽。然而一线店长坚称：空闲店铺多派人手纯属浪费，但在早高峰人海中加派人手却能彻底释放排队吞吐量。我们该如何建模这种相互强化的协同效应？
+  zh_hk: Metro Coffee 嘅標準回歸模型好死板噉假設，排多一個鐘咖啡師工時永遠都係賣多固定杯數，無論呢個鐘係擺喺冷清嘅街角，定係人來人往嘅地鐵轉車站。但一線店長話：靜局門市加人純屬白出糧，但喺朝早人頭湧湧嗰陣加人，就可以徹底打通收銀出餐嘅瓶頸。我哋點樣可以建模呢種互相放大嘅協同效應？
+  zh_zh_hk: Metro Coffee 嘅標準回歸模型好死板噉假設，排多一個鐘咖啡師工時永遠都係賣多固定杯數，無論呢個鐘係擺喺冷清嘅街角，定係人來人往嘅地鐵轉車站。但一線店長話：靜局門市加人純屬白出糧，但喺朝早人頭湧湧嗰陣加人，就可以徹底打通收銀出餐嘅瓶頸。我哋點樣可以建模呢種互相放大嘅協同效應？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Y_i = beta_0 + beta_1 * X_1i + beta_2 * X_2i + beta_3 * (X_1i * X_2i) + e_i
+  formula_zh: 连续交互模型：Y_i = beta_0 + beta_1 * X_1i + beta_2 * X_2i + beta_3 * (X_1i * X_2i) + e_i
+  formula_zh_hk: 連續交互模型：Y_i = beta_0 + beta_1 * X_1i + beta_2 * X_2i + beta_3 * (X_1i * X_2i) + e_i
+  formula_tex: Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \beta_3 (X_{1i} X_{2i}) + \varepsilon_i \implies \frac{\partial Y}{\partial X_1} = \beta_1 + \beta_3 X_2
+  s1_en: A continuous interaction model multiplies two numeric predictors together into a product term, X one times X two. This product allows the marginal effect of one predictor to depend directly on the level of the other.
+  s1_zh: 连续变量交互项模型将两个数值型自变量相乘构成乘积项 X_1 乘以 X_2。这一乘积项打破了固定斜率假定，使一个要素的边际效应直接取决于另一要素的数值水平。
+  s1_zh_hk: 連續變量交互項模型將兩個數值型自變量相乘形成乘積項 X_1 乘 X_2。呢個乘積項打破咗固定斜率嘅死板假定，令一個要素嘅邊際效應直接取決於另一個要素嘅數值高低。
+  s2_en: Taking the partial derivative with respect to X one yields beta one plus beta three times X two. The marginal return to labor is no longer a static constant; it expands or contracts dynamically based on customer foot traffic.
+  s2_zh: 对工时 X_1 求偏导数得到 beta_1 加上 beta_3 乘以客流 X_2。此时人工的边际回报不再是一个静态常数；它会随着顾客客流量的大小实现动态的放大或收缩。
+  s2_zh_hk: 對工時 X_1 求偏導數計出 beta_1 加埋 beta_3 乘人流 X_2。呢個時候人工嘅邊際回報唔再係固定常數；佢會隨住顧客客流量嘅多少產生動態嘅放大或者收縮。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Supermodularity & Synergy
+  left_zh: 超模态与营运协同
+  right_en: Centering to Tame Collinearity
+  right_zh: 中心化抑制共线性
+  s1_en: When beta three is positive, the fitted marginal effect of staffing increases with foot traffic, and the fitted marginal effect of traffic increases with staffing. This is statistical complementarity within the specified model, not automatic proof of a causal operational mechanism.
+  s1_zh: 当 beta_3 为正时，模型中的排班边际效应随客流增加而上升，客流边际效应也随排班增加而上升。这表示既定模型中的统计互补性，并不自动证明因果营运机制。
+  s1_zh_hk: 當 beta_3 係正數時，模型入面嘅排班邊際效應會隨人流增加而上升，人流邊際效應亦會隨排班增加而上升。呢個表示既定模型入面嘅統計互補性，唔會自動證明因果營運機制。
+  s2_en: The product term can be highly correlated with its component variables, especially when zero is far from their observed ranges. This can make lower-order coefficients harder to interpret and may increase their standard errors, but severe multicollinearity is not inevitable.
+  s2_zh: 当零点远离变量的观测范围时，乘积项可能与组成它的变量高度相关。这会使低阶系数更难解读，也可能增大其标准误，但严重多重共线性并非必然发生。
+  s2_zh_hk: 當零點遠離變量嘅觀測範圍時，乘積項可能同組成佢嘅變量高度相關。呢個會令低階系數更難解讀，亦可能增大標準誤，但嚴重多重共線性並唔係必然發生。
+  s3_en: 'Mean-centering changes the reference point for the lower-order coefficients: beta one becomes the staffing slope at average traffic, and beta two becomes the traffic slope at average staffing. With the same interaction specification, fitted values and the interaction coefficient are unchanged; centering is mainly an interpretation aid and may reduce nonessential collinearity.'
+  s3_zh: 均值中心化会改变低阶系数的参照点：beta_1 变为平均客流下的排班斜率，beta_2 变为平均排班下的客流斜率。在相同交互模型下，拟合值与交互项系数不变；中心化主要帮助解读，并可能降低非本质共线性。
+  s3_zh_hk: 均值中心化會改變低階系數嘅參照點：beta_1 變成平均人流之下嘅排班斜率，beta_2 變成平均排班之下嘅人流斜率。喺相同交互模型之下，擬合值同交互項系數不變；中心化主要幫助解讀，亦可能降低非本質共線性。
+  left_zh_hk: 超模態與營運協同
+  right_zh_hk: 中心化抑制共線性
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Estimate Interaction Model
+  step1_zh: 拟合连续交互模型
+  step2_en: Derive Conditional Yield
+  step2_zh: 推导条件边际产出
+  step3_en: Compare Quiet vs. Peak Shifts
+  step3_zh: 对比闲时与高峰效益
+  s1_en: 'Step one: Use the supplied fitted equation Daily_Cups = 50 + 4.0 times Hours + 0.20 times Traffic + 0.01 times Hours times Traffic. The interaction coefficient is positive, so the fitted staffing slope rises with traffic.'
+  s1_zh: 第一步：使用给定的拟合方程：日出杯量 = 50 + 4.0 乘以工时 + 0.20 乘以客流 + 0.01 乘以工时与客流。交互项系数为正，因此模型中的排班斜率随客流上升。
+  s1_zh_hk: 第一步：使用畀定嘅擬合方程：每日出杯量 = 50 + 4.0 乘以工時 + 0.20 乘以人流 + 0.01 乘以工時同人流。交互項系數係正數，所以模型入面嘅排班斜率會隨人流上升。
+  s2_en: 'Step two: Differentiate the fitted equation with respect to Hours. The conditional marginal effect is 4.0 + 0.01 times Traffic, measured in predicted cups per additional barista hour at a stated traffic level.'
+  s2_zh: 第二步：对拟合方程中的工时求偏导。条件边际效应为 4.0 + 0.01 乘以客流，表示在给定客流水平下，每增加一个咖啡师工时对应的预测出杯量变化。
+  s2_zh_hk: 第二步：對擬合方程入面嘅工時求偏導。條件邊際效應係 4.0 + 0.01 乘以人流，表示喺指定人流水平之下，每增加一個咖啡師工時對應嘅預測出杯量變化。
+  s3_en: 'Step three: At traffic 100, the fitted marginal effect is 5 cups per hour. At traffic 400, it is 8 cups per hour. The second value is 3 cups higher, or 60 percent higher relative to 5, within this fitted model.'
+  s3_zh: 第三步：客流为 100 时，拟合边际效应为每小时 5 杯；客流为 400 时，则为每小时 8 杯。在这一拟合模型中，后者高 3 杯，相对于 5 杯高 60%。
+  s3_zh_hk: 第三步：人流係 100 時，擬合邊際效應係每小時 5 杯；人流係 400 時，就係每小時 8 杯。喺呢個擬合模型入面，後者高 3 杯，相對於 5 杯高 60%。
+  step1_zh_hk: 擬合連續交互模型
+  step2_zh_hk: 推導條件邊際產出
+  step3_zh_hk: 對比清閒與高峰效益
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Are Labor and Foot Traffic Additive?
+  q1_zh: 工时与客流仅是简单的加总关系吗？
+  q2_en: 'Audit Rule: Target Staff to Unlock Synergy'
+  q2_zh: 审计准则：依据交互协同精准排班
+  s1_en: 'A continuous interaction allows a marginal effect to vary with another numeric predictor. Here, the staffing slope is not constant: it equals 4.0 plus 0.01 times traffic in the supplied fitted model.'
+  s1_zh: 连续变量交互项允许一个变量的边际效应随另一个数值变量变化。在给定拟合模型中，排班斜率并非常数，而是等于 4.0 加上 0.01 乘以客流。
+  s1_zh_hk: 連續變量交互項容許一個變量嘅邊際效應隨另一個數值變量變化。喺畀定嘅擬合模型入面，排班斜率唔係常數，而係等於 4.0 加 0.01 乘以人流。
+  s2_en: 'Decision rule: report conditional marginal effects at operationally relevant traffic levels rather than quoting beta one alone. Use staffing changes for decisions only after checking uncertainty, model fit, omitted confounders, and whether the interaction is credible over the observed data range.'
+  s2_zh: 决策规则：应在具有营运意义的客流水平下报告条件边际效应，而不是只引用 beta_1。将模型用于排班决策前，还应检查不确定性、模型拟合、遗漏混淆因素，以及交互关系在观测数据范围内是否可信。
+  s2_zh_hk: 決策規則：應該喺有營運意義嘅人流水平之下報告條件邊際效應，而唔係只引用 beta_1。將模型用於排班決定之前，亦要檢查不確定性、模型擬合、遺漏混淆因素，同埋交互關係喺觀測數據範圍內係咪可信。
+  s3_en: At traffic 400, the fitted effect of one additional barista hour is 8 cups; at traffic 100, it is 5 cups. This 3-cup conditional difference answers the scheduling question within the model without claiming a guaranteed causal gain.
+  s3_zh: 客流为 400 时，增加一个咖啡师工时的拟合效应为 8 杯；客流为 100 时则为 5 杯。模型中的 3 杯条件差异回答了排班问题，但不代表有保证的因果增益。
+  s3_zh_hk: 人流係 400 時，增加一個咖啡師工時嘅擬合效應係 8 杯；人流係 100 時就係 5 杯。模型入面嘅 3 杯條件差異回答咗排班問題，但唔代表有保證嘅因果增益。
+  q1_zh_hk: 工時同人流係咪淨係簡單相加？
+  q2_zh_hk: 審計準則：依據交互協同精準排班

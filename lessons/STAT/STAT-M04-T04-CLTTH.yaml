@@ -1,0 +1,217 @@
+id: STAT-M04-T04-CLTTH
+course: STAT-M04
+course_en: Sampling Distributions, the Central Limit Theorem, and Interval Estimation
+course_zh: 抽样分布、中心极限定理与区间估计
+course_zh_hk: 抽樣分佈、中心極限定理與區間估計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Order from chaos: the Central Limit Theorem'
+title_zh: 混沌中的秩序：中心极限定理与偏态驯服
+title_zh_hk: 混沌中的秩序：中心極限定理與偏態馴服
+objective_en: Formulate the Central Limit Theorem (CLT), explain why sample means converge to a normal distribution regardless
+  of underlying population skewness when sample size reaches n >= 30, and model right-skewed Mong Kok customer spend.
+objective_zh: 阐明中心极限定理（CLT）的数学内涵，解析为何当样本量达到 n >= 30 时样本均值会无视底层总体的偏态分布而收敛为正态分布，并将其应用于旺角店右偏客单消费建模。
+objective_zh_hk: 闡明中心極限定理（CLT）嘅數學內涵，解析點解當樣本量達到 n >= 30 嗰陣樣本均值會無視底層總體嘅偏態分佈而收斂為正態分佈，並將其應用喺旺角舖右偏客單消費建模。
+glossary:
+- en: Central Limit Theorem (CLT)
+  zh: 中心极限定理
+  zh_hk: 中心極限定理
+  lock: true
+- en: asymptotic normality
+  zh: 渐近正态性
+  zh_hk: 漸近正態性
+  lock: true
+- en: skewed population
+  zh: 偏态总体
+  zh_hk: 偏態總體
+  lock: true
+- en: rule of thumb (n >= 30)
+  zh: 经验阈值 (n >= 30)
+  zh_hk: 經驗閾值 (n >= 30)
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: According to the Central Limit Theorem, what happens to the distribution of the sample mean X-bar as sample
+    size n increases, if individual customer transactions are heavily right-skewed?
+  question_zh: 根据中心极限定理，若原始单个顾客的消费金额呈现严重的右偏态（极少数大单拉长右尾），随着样本量 n 的不断增大，样本均值 X-bar 的抽样分布会呈现何种演变趋势？
+  question_zh_hk: 根據中心極限定理，若原始單個顧客嘅消費金額呈現嚴重嘅右偏態（極少數大單拉長右尾），隨住樣本量 n 嘅不斷增大，樣本均值 X-bar 嘅抽樣分佈會呈現咩演變趨勢？
+  options_en:
+  - 'A: The distribution of X-bar becomes progressively more symmetric and bell-shaped, converging to N(mu, sigma^2 / n) as
+    n >= 30.'
+  - 'B: The distribution of X-bar becomes more extremely skewed with an even longer tail.'
+  - 'C: The distribution of X-bar transforms into a flat, bounded Uniform distribution.'
+  - 'D: The distribution collapses into a single deterministic integer with zero variance.'
+  options_zh:
+  - 'A: X-bar 的分布会逐渐摆脱原始右偏，变得越来越对称光滑，当 n >= 30 时渐近收敛为钟形正态分布 N(mu, sigma^2 / n)。'
+  - 'B: X-bar 的分布会变得更加极端偏斜，右侧尾部被拖拽得更长更尖锐。'
+  - 'C: X-bar 的分布会退化为一个高度平坦且边界固定的连续均匀分布。'
+  - 'D: X-bar 的分布会瞬间坍缩为一个完全确定的单一整数，方差归零。'
+  options_zh_hk:
+  - 'A: X-bar 嘅分佈會逐漸擺脫原始右偏，變得越嚟越對稱光滑，當 n >= 30 嗰陣漸近收斂為鐘形正態分佈 N(mu, sigma^2 / n)。'
+  - 'B: X-bar 嘅分佈會變得更加極端偏斜，右側尾部被拖拽得更長更尖銳。'
+  - 'C: X-bar 嘅分佈會退化為一個高度平坦兼且邊界固定嘅連續均勻分佈。'
+  - 'D: X-bar 嘅分佈會瞬間坍縮為一個完全確定嘅單一整數，方差歸零。'
+  answer: A
+  explanation_en: The CLT proves that the sum and average of independent random variables converge to a normal distribution
+    regardless of the underlying population shape, provided sample size is sufficiently large (typically n >= 30).
+  explanation_zh: 中心极限定理严格证明：只要样本量足够充分（经验上 n >= 30），独立随机变量的求和与均值抽样分布必然无视母体原始形态，自发收敛为正态分布。
+  explanation_zh_hk: 中心極限定理嚴格證明：只要樣本量足夠充分（經驗上 n >= 30），獨立隨機變量嘅求和同均值抽樣分佈必然無視母體原始形態，自發收斂為正態分佈。
+- id: Q2
+  type: multiple_choice
+  question_en: Mong Kok customer spend has a population mean mu = $45 and standard deviation sigma = $20, with severe right
+    skewness. If an auditor samples n = 64 random receipts, what is the probability that the sample mean X-bar exceeds $50?
+  question_zh: 旺角店单笔客单金额具有明显的右偏态，总体均值 mu = $45，标准差 sigma = $20。若审计员随机抽取 n = 64 张小票，这 64 张小票的样本平均金额 X-bar 突破 $50 的概率是多少？
+  question_zh_hk: 旺角舖單筆客單金額具有明顯嘅右偏態，總體均值 mu = $45，標準差 sigma = $20。若審計員隨機抽取 n = 64 張單據，呢 64 張單據嘅樣本平均金額 X-bar 突破 $50 嘅概率係幾多？
+  options_en:
+  - 'A: SE = 20 / sqrt(64) = $2.50; Z = (50 - 45) / 2.50 = +2.00; P(Z > 2.00) ≈ 0.0228 (2.28%)'
+  - 'B: Z = (50 - 45) / 20 = +0.25; P(Z > 0.25) ≈ 0.4013 (40.13%)'
+  - 'C: The probability cannot be computed because the population distribution is not normal.'
+  - 'D: P(X-bar > 50) = 50 / 64 = 0.7813 (78.13%)'
+  options_zh:
+  - 'A: SE = 20 / 根号(64) = $2.50；Z = (50 - 45) / 2.50 = +2.00；P(Z > 2.00) ≈ 0.0228（即 2.28%）'
+  - 'B: Z = (50 - 45) / 20 = +0.25；P(Z > 0.25) ≈ 0.4013（即 40.13%）'
+  - 'C: 无法计算该概率，因为母体客单并非正态分布，无法套用正态累积表。'
+  - 'D: P(X-bar > 50) = 50 / 64 = 0.7813（即 78.13%）'
+  options_zh_hk:
+  - 'A: SE = 20 / 根號(64) = $2.50；Z = (50 - 45) / 2.50 = +2.00；P(Z > 2.00) ≈ 0.0228（即 2.28%）'
+  - 'B: Z = (50 - 45) / 20 = +0.25；P(Z > 0.25) ≈ 0.4013（即 40.13%）'
+  - 'C: 冇辦法計算嗰個概率，因為母體客單唔係正態分佈，唔可以套用正態累積表。'
+  - 'D: P(X-bar > 50) = 50 / 64 = 0.7813（即 78.13%）'
+  answer: A
+  explanation_en: 'Because n = 64 >= 30, the CLT applies: X-bar ~ N(45, 2.50^2). Standardizing gives Z = (50 - 45) / 2.50
+    = +2.00. The upper tail P(Z > 2.00) is approximately 2.28%.'
+  explanation_zh: 因为 n = 64 远超经验阈值 30，中心极限定理生效：X-bar 服从正态 N(45, 2.5^2)。标准化解得 Z = 5 / 2.5 = +2.00。查表得上尾概率 P(Z > 2.00) 约为 2.28%。
+  explanation_zh_hk: 因為 n = 64 遠超經驗閾值 30，中心極限定理生效：X-bar 服從正態 N(45, 2.5^2)。標準化解得 Z = 5 / 2.5 = +2.00。查表得上尾概率 P(Z > 2.00) 約為
+    2.28%。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Skewed Reality
+  kicker_en: The Skewed Reality
+  kicker_zh: 偏态的零售现实
+  kicker_zh_hk: 偏態嘅零售現實
+  title_en: When real customer behavior looks nothing like a bell
+  title_zh: 小票千奇百怪：非正态现实如何催生正态神话？
+  title_zh_hk: 單據千奇百怪：非正態現實點樣催生正態神話？
+  en: 'Step into our Mong Kok flagship. Plotting twenty-five thousand individual receipts reveals a jagged, right-skewed mess:
+    eighty percent of patrons buy a single thirty-five dollar drip coffee, while rare office catering runs ring up eight hundred
+    dollars on specialty roasts. The population is visibly asymmetric, bimodal, and distinctly non-normal. How can executives
+    dare to use Gaussian bell curves when raw consumer reality violently violates every assumption of normality?'
+  zh: 走进旺角旗舰店后厨。若将两万五千张原始客单消费金额绘制成直方图，展现出的将是一幅极度不对称的严重右偏图景：八成进店散客只买一杯三十五元的当日黑咖啡，而极少数写字楼会议团购却能狂刷八百元精品豆套餐。母体数据犬牙差互，根本毫无正态特征可言。当商业底层现实彻底背离正态假定时，决策者凭什么敢自信搬出高斯钟形曲线推演大盘？
+  zh_hk: 行入旺角旗艦舖後廚。若果將兩萬五千張原始客單消費金額繪製成直方圖，展現出嘅將會係一幅極度唔對稱嘅嚴重右偏圖景：八成入舖散客淨係買一杯三十五蚊嘅當日黑咖啡，而極少數寫字樓會議團購就可以狂刷八百蚊精品豆套餐。母體數據犬牙差互，根本毫無正態特徵可言。當商業底層現實徹底背離正態假定嗰陣，決策者憑咩敢自信搬出高斯鐘形曲線推演大盤？
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: What It Is
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: The Central Limit Theorem
+  title_zh: 中心极限定理的数学真言
+  title_zh_hk: 中心極限定理嘅數學真言
+  formula: X-bar ~ N(mu, sigma^2 / n) as n -> infinity, for ANY population shape
+  formula_zh: 只要样本量 n 充分大（经验值 n >= 30），无论母体为何种形态，样本均值皆渐近收敛于正态分布 N(mu, sigma^2 / n)
+  formula_zh_hk: 只要樣本量 n 充分大（經驗值 n >= 30），無論母體係邊種形態，樣本均值皆漸近收斂於正態分佈 N(mu, sigma^2 / n)
+  formula_tex: \bar{X} \xrightarrow{d} N\left(\mu, \frac{\sigma^2}{n}\right) \quad \text{as } n \ge 30
+  s1_en: The Central Limit Theorem is the crowning crown jewel of statistical science. It states that the average of a sufficiently
+    large number of independent random variables converges to a normal distribution—regardless of the underlying population's
+    shape.
+  s1_zh: 中心极限定理是现代统计推断科学中最璀璨的皇冠明珠。它断言：只要抽取的独立随机样本体量足够大，其算术平均值的抽样分布便必然收敛为正态分布——母体原始形状究竟是偏态、双峰还是离散，全都不再重要。
+  s1_zh_hk: 中心極限定理係現代統計推斷科學入面最璀璨嘅皇冠明珠。佢斷言：只要抽取嘅獨立隨機樣本體量足夠大，其算術平均值嘅抽樣分佈就必然收斂為正態分佈——母體原始形狀究竟係偏態、雙峰抑或離散，全部都唔再重要。
+  s2_en: Whether the parent population is uniform, exponential, or violently skewed, the distribution of sample averages automatically
+    sheds the asymmetry and forms an impeccably smooth bell curve centered at mu.
+  s2_zh: 不论母体分布是平坦受限的均匀分布、陡峭衰减的指数分布，还是畸形倾斜的重偏态，样本均值的分布都会在反复加总求和中自动剥除一切不对称杂质，演变为以 mu 为中心的优雅钟形线。
+  s2_zh_hk: 不論母體分佈係平坦受限嘅均勻分佈、陡峭衰減嘅指數分佈，抑或畸形傾斜嘅重偏態，樣本均值嘅分佈都會喺反覆加總求和入面自動剝除一切唔對稱雜質，演變為以 mu 為中心嘅優雅鐘形線。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  kicker: The Mechanism
+  kicker_en: The Mechanism
+  kicker_zh: 运作机制
+  kicker_zh_hk: 運作機制
+  title_en: How aggregation destroys skewness
+  title_zh: 样本累加如何强行抹平偏态？
+  title_zh_hk: 樣本累加點樣強行抹平偏態？
+  left_en: 'Parent Population: High skew, single tickets dominate'
+  left_zh: 母体小票世界：严重右偏，单张大单产生巨大冲击
+  left_zh_hk: 母體單據世界：嚴重右偏，單張大單產生巨大衝擊
+  right_en: 'Sample Mean (n >= 30): Bilateral balancing, bell-shaped'
+  right_zh: 均值抽样世界 (n >= 30)：大单小单双向对冲，呈现对称钟形
+  right_zh_hk: 均值抽樣世界 (n >= 30)：大單細單雙向對沖，呈現對稱鐘形
+  s1_en: Why does the skewness vanish? In a single purchase, a rare eight-hundred-dollar catering order dominates the register
+    and distorts the immediate transaction record.
+  s1_zh: 为什么偏态会在求和均值中烟消云散？在考察单笔交易时，一张极为罕见的八百元团购大单会直接霸占收银台，将当下的交易数据彻底拉偏变形。
+  s1_zh_hk: 點解偏態會喺求和均值入面煙消雲散？喺考察單筆交易嗰陣，一張極為罕見嘅八百蚊團購大單會直接霸佔收銀台，將當下嘅交易數據徹底拉偏變形。
+  s2_en: When you average thirty or sixty random receipts together, the probability of drawing only extreme catering orders
+    is astronomically near zero; giant tickets are diluted by ordinary coffee drinkers.
+  s2_zh: 然而当你将三十甚至六十张随机小票捆绑求均值时，全抽中极端大单的复合概率微乎其微；罕见巨单被海量普通咖啡客稀释对冲，促成两翼概率的平衡。
+  s2_zh_hk: 然而當你將三十甚至六十張隨機單據捆綁求均值嗰陣，全抽中極端大單嘅複合概率微乎其微；罕見巨單被海量普通咖啡客稀釋對沖，促成兩翼概率嘅平衡。
+  s3_en: By industry convention, once sample size crosses thirty, the Central Limit Theorem grants complete statistical immunity
+    to model sample means using standard normal tools.
+  s3_zh: 在商业统计工程实践中，一旦样本量跨过三十这道经验门槛，中心极限定理便赋予分析师完全合法的豁免权，直接调用正态分布标尺推演均值。
+  s3_zh_hk: 喺商業統計工程實踐入面，一旦樣本量跨過三十呢道經驗門檻，中心極限定理就賦予分析師完全合法嘅豁免權，直接調用正態分佈標尺推演均值。
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: The Ledger
+  kicker_en: The Ledger
+  kicker_zh: 账目精算
+  kicker_zh_hk: 賬目精算
+  title_en: Auditing Mong Kok's high-spend surge risk
+  title_zh: 旺角店均值逆势破位风险测算
+  title_zh_hk: 旺角舖均值逆勢破位風險測算
+  step1_en: 'Skewed population: mu = $45.00, sigma = $20.00 (Heavy right tail)'
+  step1_zh: 偏态母体基准：总体均值 mu = $45.00，标准差 sigma = $20.00（严重右偏）
+  step1_zh_hk: 偏態母體基準：總體均值 mu = $45.00，標準差 sigma = $20.00（嚴重右偏）
+  step2_en: 'Sample audit: n = 64 receipts -> SE = 20 / sqrt(64) = 20 / 8 = $2.50'
+  step2_zh: 规模抽检审计：n = 64 张小票 -> 标准误 SE = 20 / 8 = $2.50
+  step2_zh_hk: 規模抽檢審計：n = 64 張單據 -> 標準誤 SE = 20 / 8 = $2.50
+  step3_en: 'Surge odds: Z = (50 - 45) / 2.50 = +2.00 -> P(X-bar > 50) = 2.28%'
+  step3_zh: 破位概率：Z = (50 - 45) / 2.50 = +2.00 -> 均值超五十元概率仅为 2.28%
+  step3_zh_hk: 破位概率：Z = (50 - 45) / 2.50 = +2.00 -> 均值超五十蚊概率淨係得 2.28%
+  s1_en: Audit the Mong Kok ledger. Individual customer tickets average forty-five dollars with a wide twenty-dollar standard
+    deviation, skewed hard to the right by occasional corporate orders.
+  s1_zh: 审视旺角店历史总流水。单张出餐小票真实均值为四十五元，标准差高达二十元，且因偶发企业团购而呈现严重的右向偏斜长尾。
+  s1_zh_hk: 審視旺角舖歷史總流水。單張出餐單據真實均值為四十五蚊，標準差高達二十蚊，兼且因偶發企業團購而呈現嚴重嘅右向偏斜長尾。
+  s2_en: 'Management wants to know: what are the odds that a random audit of sixty-four receipts averages over fifty dollars?
+    Step two computes standard error: twenty divided by eight is two dollars and fifty cents.'
+  s2_zh: 管理层提出风控诉求：随机核验六十四张小票，其平均客单价突破五十元警戒线的概率有多大？第二步求出标准误：二十除以八等于两块五毛。
+  s2_zh_hk: 管理層提出風控訴求：隨機核驗六十四張單據，其平均客單價突破五十蚊警戒線嘅概率有幾大？第二步求出標準誤：二十除以八等於兩蚊五毫。
+  s3_en: Step three applies the CLT. Fifty minus forty-five divided by two point fifty yields a Z-score of exactly plus two
+    point zero zero. The upper tail is just two point two eight percent! Despite wild underlying skewness, sample averages
+    behave with textbook precision.
+  s3_zh: 第三步依仗 CLT 实施正态推演。五十减四十五除以两块半，解出 Z 分数恰好为正 2.00。查表得上尾概率仅有 2.28%！尽管母体客单暴烈偏斜，样本均值却已规整如教科书般精准受控。
+  s3_zh_hk: 第三步依仗 CLT 實施正態推演。五十減四十五除以兩蚊半，解出 Z 分數啱啱好為正 2.00。查表得上尾概率淨係得 2.28%！儘管母體客單暴烈偏斜，樣本均值卻已經規整好似教科書噉精準受控。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: Decision Rule
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Trust the sample size, ignore the population shape
+  title_zh: 样本规模筑牢底气，母体偏态皆可成钟
+  title_zh_hk: 樣本規模築牢底氣，母體偏態皆可成鐘
+  q1_en: Why is the Central Limit Theorem the ultimate practical tool for business analysts?
+  q1_zh: 为什么中心极限定理被誉为商业数据分析师最不可或缺的底层护身符？
+  q1_zh_hk: 點解中心極限定理被譽為商業數據分析師最不可或缺嘅底層護身符？
+  q2_en: What happens when the underlying metric is not continuous dollars, but discrete pastry counts?
+  q2_zh: 如果分析的指标不再是连续的交易金额，而是离散跳跃的点心加购件数呢？
+  q2_zh_hk: 如果分析嘅指標唔再係連續嘅交易金額，而係離散跳躍嘅點心加購件數呢？
+  s1_en: Never abandon normal distribution tools just because individual customer behavior is skewed; as long as your audit
+    draws thirty or more independent tickets, the CLT secures your analysis.
+  s1_zh: 切勿仅因单个顾客点单偏斜就仓皇放弃正态分析武器；只要你的抽样批次达到或超过三十笔独立小票，中心极限定理便为你筑起坚实的理论护城河。
+  s1_zh_hk: 切勿淨係因單個顧客點單偏斜就倉皇放棄正態分析武器；只要你嘅抽樣批次達到或者超過三十筆獨立單據，中心極限定理就為你築起堅實嘅理論護城河。
+  s2_en: 'Focus executive monitoring on sample averages: they compress operational noise, smooth out unpredictable surges,
+    and unlock standard risk forecasting.'
+  s2_zh: 将高管层风控重心聚焦在批次均值之上：它能主动对冲运营杂音、平抑偶发脉冲大单，并解锁工业界成熟完备的正态风险预测工具箱。
+  s2_zh_hk: 將高管層風控重心聚焦喺批次均值之上：佢能主動對沖營運雜音、平抑偶發脈衝大單，並解鎖工業界成熟完備嘅正態風險預測工具箱。
+  s3_en: The operating rule is to trust the sample mean once n reaches 30, even if single tickets are skewed. On 64 Mong Kok
+    receipts the chance of a mean above $50 is about 2.28%.
+  s3_zh: 操作规则是样本量达到 30 后信任样本均值，即使单张小票偏斜。旺角 64 张小票的均值超过 $50 的概率约为 2.28%。
+  s3_zh_hk: 操作規則係樣本量達到 30 之後信任樣本均值，就算單張單據偏斜。旺角 64 張單據嘅均值超過 $50 嘅概率約為 2.28%。

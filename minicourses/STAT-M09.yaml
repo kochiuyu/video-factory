@@ -1,0 +1,30 @@
+id: STAT-M09
+kind: minicourse
+course: statistics
+course_en: Business Time Series & Demand Forecasting
+course_zh: 商业时间序列与需求预测
+course_zh_hk: 商業時間序列與需求預測
+title_en: Time series and demand forecasting for a coffee chain
+title_zh: 咖啡连锁的时间序列与需求预测
+title_zh_hk: 咖啡連鎖嘅時間序列與需求預測
+objective_en: 'Fifteen standalone shorts on assumed Metro Coffee series: time order, classical decomposition, moving averages, exponential smoothing, Holt-Winters, spurious regression, stationarity and differencing, correlograms, AR(1), distributed lags, seasonal dummies, ARDL, MAE/RMSE/MAPE, rolling-origin backtests, and a five-gate replenishment review. Build each short on its own. This collection does not join them into one video.'
+objective_zh: 围绕假设都市咖啡序列的十五节独立短课：时间顺序、经典分解、移动平均、指数平滑、霍尔特-温特斯、伪回归、平稳性与差分、自相关图、AR(1)、分布滞后、季节虚拟变量、ARDL、MAE/RMSE/MAPE、滚动原点回测，以及五阶补货审核。每节单独制作。本集合不把它们拼成一条视频。
+objective_zh_hk: 圍繞假設都市咖啡序列嘅十五節獨立短課：時間次序、經典分解、移動平均、指數平滑、霍爾特-溫特斯、偽回歸、平穩性與差分、自相關圖、AR(1)、分布滯後、季節虛擬變量、ARDL、MAE/RMSE/MAPE、滾動原點回測，以及五階補貨審核。每節單獨製作。本集合唔會將佢哋拼成一條片。
+syllabus: docs/courses/STAT-M09.md
+duration_note: Each short is 168 seconds. The collection is not a 5–10 minute module.
+lessons:
+- STAT-M09-T01-TIMED
+- STAT-M09-T02-DECOM
+- STAT-M09-T03-MOAVG
+- STAT-M09-T04-EXPSM
+- STAT-M09-T05-HTWIN
+- STAT-M09-T06-SPURG
+- STAT-M09-T07-STATN
+- STAT-M09-T08-CORRG
+- STAT-M09-T09-ARMOD
+- STAT-M09-T10-DISLG
+- STAT-M09-T11-SEASD
+- STAT-M09-T12-ARDLM
+- STAT-M09-T13-FORAC
+- STAT-M09-T14-OUTOF
+- STAT-M09-T15-RECAP

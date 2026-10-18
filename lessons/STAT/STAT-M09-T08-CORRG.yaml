@@ -1,0 +1,165 @@
+id: STAT-M09-T08-CORRG
+course: STAT-M09
+course_en: Business Time Series & Demand Forecasting
+course_zh: 商业时间序列与需求预测
+course_zh_hk: 商業時間序列與需求預測
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Autocorrelation and the Correlogram: Diagnosing Serial Dependence'
+title_zh: 自相关与自相关图：诊断序列相关
+title_zh_hk: 自相關與自相關圖：診斷序列相關
+objective_en: Interpret ACF and PACF values, read a correlogram with approximate white-noise bounds, and use residual serial-dependence evidence as a model-diagnostic signal rather than a causal conclusion.
+objective_zh: 解释 ACF 与 PACF，利用近似白噪声界限解读自相关图，并把残差序列相关证据作为模型诊断信号，而不是因果结论。
+objective_zh_hk: 解釋 ACF 同 PACF，利用近似白雜音界線解讀自相關圖，並將殘差序列相關證據當成模型診斷訊號，而唔係因果結論。
+glossary:
+  - en: Autocorrelation Function (ACF)
+    zh: 自相关函数（ACF）
+    zh_hk: 自相關函數（ACF）
+    lock: true
+  - en: Partial Autocorrelation Function (PACF)
+    zh: 偏自相关函数（PACF）
+    zh_hk: 偏自相關函數（PACF）
+    lock: true
+  - en: Correlogram
+    zh: 自相关图（相关图）
+    zh_hk: 自相關圖（相關圖）
+    lock: true
+  - en: Bartlett's Bounds
+    zh: 巴特利特置信界限（±1.96 / sqrt(T)）
+    zh_hk: 巴特利特置信界線（±1.96 / sqrt(T)）
+    lock: true
+quiz:
+  - id: Q1
+    type: multiple_choice
+    question_en: 'Using the simple ±1.96 / sqrt(T) approximation with T = 100, what are the bounds?'
+    question_zh: 使用简单近似 ±1.96 / sqrt(T)，当 T = 100 时界限是多少？
+    question_zh_hk: 使用簡單近似 ±1.96 / sqrt(T)，當 T = 100 嗰陣界線係幾多？
+    options_en:
+      - 'A: Approximately ±0.196'
+      - 'B: Approximately ±0.0196'
+      - 'C: Exactly ±0.500'
+      - 'D: Exactly ±0.050'
+    options_zh:
+      - A：约 ±0.196
+      - B：约 ±0.0196
+      - C：正好 ±0.500
+      - D：正好 ±0.050
+    options_zh_hk:
+      - A：約 ±0.196
+      - B：約 ±0.0196
+      - C：正好 ±0.500
+      - D：正好 ±0.050
+    answer: A
+    explanation_en: 'The approximation gives ±1.96 / 10 = approximately ±0.196. It is a pointwise screening bound under white-noise assumptions, not an exact universal cutoff.'
+    explanation_zh: 该近似给出 ±1.96 / 10，约为 ±0.196。它是在白噪声假设下的逐点筛查界限，并非精确的通用阈值。
+    explanation_zh_hk: 呢個近似得到 ±1.96 / 10，即係約 ±0.196。佢係白雜音假設下嘅逐點篩查界線，唔係精確通用門檻。
+  - id: Q2
+    type: multiple_choice
+    question_en: What does PACF at lag 2 measure?
+    question_zh: 滞后 2 阶的 PACF 衡量什么？
+    question_zh_hk: 滯後 2 階嘅 PACF 衡量乜嘢？
+    options_en:
+      - 'A: The association between Y_t and Y_{t-2} after controlling for intervening lags'
+      - 'B: A causal effect of Y_{t-2} on Y_t'
+      - 'C: A correlation that must always be negative'
+      - 'D: A statistic usable only for non-stationary data'
+    options_zh:
+      - A：控制中间滞后项后，Y_t 与 Y_{t-2} 的关联
+      - B：Y_{t-2} 对 Y_t 的因果效应
+      - C：必定为负的相关
+      - D：只能用于非平稳数据的统计量
+    options_zh_hk:
+      - A：控制中間滯後項之後，Y_t 同 Y_{t-2} 嘅關聯
+      - B：Y_{t-2} 對 Y_t 嘅因果效應
+      - C：一定係負數嘅相關
+      - D：只可以用喺非平穩數據嘅統計量
+    answer: A
+    explanation_en: PACF isolates the remaining linear association at a lag after accounting for shorter lags. It does not establish causality.
+    explanation_zh: PACF 在控制较短滞后项后，衡量该滞后期剩余的线性关联；它不能建立因果关系。
+    explanation_zh_hk: PACF 喺控制較短滯後項之後，衡量該滯後期剩低嘅線性關聯；佢唔可以建立因果關係。
+beats:
+  - id: hook
+    visual: title_card
+    seconds: 30
+    kicker_en: Residual Memory Puzzle
+    kicker_zh: 残差记忆难题
+    kicker_zh_hk: 殘差記憶難題
+    title_en: Does Yesterday's Forecast Error Still Echo Today?
+    title_zh: 昨天的预测误差今天仍有回声吗？
+    title_zh_hk: 尋日嘅預測誤差今日仲有回聲嗎？
+    en: >-
+      Suppose a croissant-demand model has been fitted, yet positive residuals keep arriving in runs. The model may be missing temporal structure, even if its overall fit looks acceptable. ACF, PACF, and a correlogram help reveal whether residuals remain related across lags. They diagnose predictive dependence, but they do not identify the operational cause by themselves.
+    zh: >-
+      假设一个牛角包需求模型已经拟合完成，但正残差仍持续成串出现。即使整体拟合看起来可以，模型也可能遗漏了时间结构。ACF、PACF 与自相关图可以显示残差是否跨滞后期相关，但它们只能诊断预测依赖，不能单独识别运营原因。
+    zh_hk: >-
+      假設一個牛角包需求模型已經擬合完成，但正殘差仍然成串出現。即使整體擬合睇落可以，模型都可能漏咗時間結構。ACF、PACF 同自相關圖可以顯示殘差係咪跨滯後期相關，但佢哋只可以診斷預測依賴，唔可以單獨識別營運原因。
+  - id: define
+    visual: definition_card
+    seconds: 34
+    formula: 'Sample ACF at lag k; approximate bounds = ±1.96 / sqrt(T)'
+    formula_zh: 样本 ACF 滞后 k；近似界限 = ±1.96 / sqrt(T)
+    formula_zh_hk: 樣本 ACF 滯後 k；近似界線 = ±1.96 / sqrt(T)
+    formula_tex: '\hat{\rho}_k=\frac{\sum_{t=k+1}^{T}(e_t-\bar e)(e_{t-k}-\bar e)}{\sum_{t=1}^{T}(e_t-\bar e)^2},\quad \pm\frac{1.96}{\sqrt{T}}'
+    s1_en: The Autocorrelation Function (ACF) measures linear association between a series and its own lagged values. A Correlogram plots estimated autocorrelations across several lags so the persistence pattern is visible.
+    s1_zh: 自相关函数（ACF）衡量序列与自身滞后值之间的线性关联。自相关图（相关图）把多个滞后期的估计自相关画出来，以显示持续模式。
+    s1_zh_hk: 自相關函數（ACF）衡量序列同自身滯後值之間嘅線性關聯。自相關圖（相關圖）將多個滯後期嘅估計自相關畫出嚟，用嚟顯示持續模式。
+    s2_en: Bartlett's Bounds supply a simple approximate pointwise reference under white-noise assumptions. A spike outside the bounds is evidence against zero autocorrelation at that lag, not conclusive proof of a business mechanism or of the whole model's failure.
+    s2_zh: 巴特利特置信界限（±1.96 / sqrt(T)）在白噪声假设下提供简单的逐点近似参考。柱条越界是该滞后期自相关不为零的证据，但不能最终证明某种商业机制或整个模型失效。
+    s2_zh_hk: 巴特利特置信界線（±1.96 / sqrt(T)）喺白雜音假設下提供簡單逐點近似參考。柱條越界係該滯後期自相關唔等於零嘅證據，但唔可以最終證明某種商業機制或者成個模型失效。
+  - id: mechanics
+    visual: two_column
+    seconds: 36
+    left_en: ACF
+    left_zh: 自相关函数
+    left_zh_hk: 自相關函數
+    right_en: PACF
+    right_zh: 偏自相关函数
+    right_zh_hk: 偏自相關函數
+    s1_en: ACF at lag 2 measures the overall linear association between the current value and the value two periods earlier, including association transmitted through lag 1.
+    s1_zh: 滞后 2 阶的 ACF 衡量当前值与前两期数值之间的总体线性关联，其中包括经滞后 1 阶传递的关联。
+    s1_zh_hk: 滯後 2 階嘅 ACF 衡量目前值同前兩期數值之間嘅整體線性關聯，當中包括經滯後 1 階傳遞嘅關聯。
+    s2_en: The Partial Autocorrelation Function (PACF) measures the remaining linear association at lag 2 after controlling for shorter lags. The word partial refers to statistical adjustment, not causal isolation.
+    s2_zh: 偏自相关函数（PACF）在控制较短滞后项后，衡量滞后 2 阶剩余的线性关联。“偏”表示统计控制，并不代表因果隔离。
+    s2_zh_hk: 偏自相關函數（PACF）喺控制較短滯後項之後，衡量滯後 2 階剩低嘅線性關聯。「偏」表示統計控制，唔代表因果隔離。
+    s3_en: ACF and PACF patterns can suggest candidate AR or MA structures, but visual cutoff rules are heuristics. Model choice should also use stationarity checks, information criteria, residual diagnostics, and validation performance.
+    s3_zh: ACF 与 PACF 模式可以提示候选 AR 或 MA 结构，但视觉截尾规则只是经验方法。模型选择还应结合平稳性检查、信息准则、残差诊断与验证表现。
+    s3_zh_hk: ACF 同 PACF 模式可以提示候選 AR 或 MA 結構，但視覺截尾規則只係經驗方法。模型選擇仲要配合平穩性檢查、信息準則、殘差診斷同驗證表現。
+  - id: example
+    visual: example
+    seconds: 36
+    setup_en: 'Assume: T = 100 and lag-1 residual ACF = 0.30'
+    setup_zh: 假设：T = 100，残差滞后 1 阶 ACF = 0.30
+    setup_zh_hk: 假設：T = 100，殘差滯後 1 階 ACF = 0.30
+    result_en: 'Approximate bounds: ±0.196; lag 1 is outside'
+    result_zh: 近似界限：±0.196；滞后 1 阶越界
+    result_zh_hk: 近似界線：±0.196；滯後 1 階越界
+    s1_en: For illustration, assume 100 residuals and use the simple bound ±1.96 divided by the square root of 100. The result is approximately ±0.196.
+    s1_zh: 为便于说明，假设有 100 个残差，并使用 ±1.96 除以 100 的平方根这一简单界限，结果约为 ±0.196。
+    s1_zh_hk: 為咗方便說明，假設有 100 個殘差，並使用 ±1.96 除以 100 平方根呢個簡單界線，結果約係 ±0.196。
+    s2_en: If the lag-1 residual autocorrelation is 0.30, that spike lies outside the approximate pointwise bounds. This is evidence that lag-1 dependence remains in the residuals under the stated assumptions.
+    s2_zh: 如果残差滞后 1 阶自相关为 0.30，该柱条位于近似逐点界限之外。在给定假设下，这说明残差仍存在滞后 1 阶依赖的证据。
+    s2_zh_hk: 如果殘差滯後 1 階自相關係 0.30，呢支柱位於近似逐點界線之外。喺指定假設下，呢個顯示殘差仍然有滯後 1 階依賴嘅證據。
+    s3_en: The spike does not reveal why dependence exists. Check omitted calendar effects, trend or seasonality, data quality, lag structure, and joint residual tests before revising or deploying the model.
+    s3_zh: 该柱条不能说明依赖为何存在。修改或部署模型前，应检查遗漏的日历效应、趋势或季节性、数据质量、滞后结构及联合残差检验。
+    s3_zh_hk: 呢支柱唔可以說明依賴點解存在。修改或者部署模型之前，要檢查遺漏嘅日曆效應、趨勢或季節性、數據質素、滯後結構同聯合殘差檢驗。
+  - id: takeaway
+    visual: takeaway
+    seconds: 32
+    q1_en: What Does the Correlogram Reveal?
+    q1_zh: 自相关图揭示什么？
+    q1_zh_hk: 自相關圖揭示乜嘢？
+    q2_en: Decision Rule
+    q2_zh: 决策规则
+    q2_zh_hk: 決策規則
+    s1_en: A correlogram shows where linear serial dependence may remain and how it changes across lags. It is a diagnostic display, not proof of causality or a complete model-selection procedure.
+    s1_zh: 自相关图显示线性序列依赖可能残留在哪些滞后期，以及它如何随滞后期变化。它是诊断图，不是因果证明或完整的模型选择程序。
+    s1_zh_hk: 自相關圖顯示線性序列依賴可能殘留喺邊啲滯後期，以及佢點樣隨滯後期變化。佢係診斷圖，唔係因果證明或者完整模型選擇程序。
+    s2_en: Treat isolated spikes cautiously because many lags are often inspected. Use joint tests and substantive knowledge alongside the ACF, PACF, and residual plots.
+    s2_zh: 由于通常会同时检查多个滞后期，应谨慎解释个别越界柱条，并结合联合检验、业务知识、ACF、PACF 与残差图。
+    s2_zh_hk: 由於通常會一齊檢查多個滯後期，要小心解讀個別越界柱條，並配合聯合檢驗、業務知識、ACF、PACF 同殘差圖。
+    s3_en: Before operational use, revise the specification if dependence remains, then recheck residuals and out-of-sample performance. A forecast is ready only when diagnostics and decision requirements are jointly acceptable.
+    s3_zh: 在运营使用前，如果依赖仍然存在，应修改模型设定，再次检查残差与样本外表现。只有诊断与决策要求都可接受时，预测才适合使用。
+    s3_zh_hk: 喺營運使用之前，如果依賴仍然存在，就要修改模型設定，再檢查殘差同樣本外表現。只有診斷同決策要求都可以接受，預測先適合使用。

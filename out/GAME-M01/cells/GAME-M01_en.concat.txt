@@ -1,6 +1,0 @@
-file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-M01-IN/cells/GAME-M01-IN_en.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-GI-01/cells/GAME-GI-01_en.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PL-01/cells/GAME-PL-01_en.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-ST-01/cells/GAME-ST-01_en.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PO-01/cells/GAME-PO-01_en.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-M01-OUT/cells/GAME-M01-OUT_en.mp4'

@@ -1,0 +1,30 @@
+id: STAT-M04
+kind: minicourse
+course: statistics
+course_en: Sampling Distributions, the Central Limit Theorem, and Interval Estimation
+course_zh: 抽样分布、中心极限定理与区间估计
+course_zh_hk: 抽樣分佈、中心極限定理與區間估計
+title_en: Sampling and interval estimation for a coffee chain
+title_zh: 咖啡连锁的抽样与区间估计
+title_zh_hk: 咖啡連鎖嘅抽樣與區間估計
+objective_en: 'Fifteen standalone shorts on assumed Metro Coffee audits: parameter versus statistic, Bessel correction, standard error, the central limit theorem for skewed spend and discrete pastry counts, proportion sampling, finite-population correction, interval construction, Z and t critical values, coverage reading, a kiosk proportion interval, and sample-size engineering. Build each short on its own. This collection does not join them into one video.'
+objective_zh: 围绕假设都市咖啡审计的十五节独立短课：参数与统计量、贝塞尔修正、标准误、偏态客单与离散点心的中心极限定理、比例抽样、有限总体修正、区间构建、Z 与 t 临界值、覆盖率读法、点单机比例区间，以及样本量工程。每节单独制作。本集合不把它们拼成一条视频。
+objective_zh_hk: 圍繞假設都市咖啡審計嘅十五節獨立短課：參數同統計量、貝塞爾修正、標準誤、偏態客單同離散點心嘅中心極限定理、比例抽樣、有限總體修正、區間構建、Z 同 t 臨界值、覆蓋率讀法、點單機比例區間，以及樣本量工程。每節單獨製作。本集合唔會將佢哋拼成一條片。
+syllabus: docs/courses/STAT-M04.md
+duration_note: Each short is 168 seconds. The collection is not a 5–10 minute module.
+lessons:
+- STAT-M04-T01-INTRO
+- STAT-M04-T02-POINT
+- STAT-M04-T03-STDERR
+- STAT-M04-T04-CLTTH
+- STAT-M04-T05-CLTDC
+- STAT-M04-T06-PROPO
+- STAT-M04-T07-FPCOR
+- STAT-M04-T08-CONCP
+- STAT-M04-T09-ZINTV
+- STAT-M04-T10-INTER
+- STAT-M04-T11-PROP1
+- STAT-M04-T12-STUDT
+- STAT-M04-T13-TINTV
+- STAT-M04-T14-SSIZE
+- STAT-M04-T15-RECAP

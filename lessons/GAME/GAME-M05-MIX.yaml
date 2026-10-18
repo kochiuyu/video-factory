@@ -1,0 +1,129 @@
+id: GAME-M05-MIX
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: A mix of mornings
+title_zh: 把早晨混起来
+title_zh_hk: 將朝早撈埋
+objective_en: A mixed strategy is a share of mornings on Left and on Right. Not a third pitch.
+objective_zh: 混合策略是一部分早晨停左、一部分停右。不是第三个摊位。
+objective_zh_hk: 混合策略係一部分朝早停左、一部分停右。唔係第三個攤位。
+glossary:
+- en: mixed strategy
+  zh: 混合策略
+  zh_hk: 混合策略
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What is a mix here?
+  zh: 这里的混合指什么？
+  zh_hk: 呢度嘅混合指咩？
+  answer_en: A share of mornings on Left and the rest on Right. Not a third side.
+  answer_zh: 一部分早晨停左，其余停右。不是路的第三侧。
+  answer_zh_hk: 一部分朝早停左，其餘停右。唔係路嘅第三側。
+- id: Q2
+  type: transfer
+  en: Is sitting Left every day a mix?
+  zh: 天天停左边算混合吗？
+  zh_hk: 日日停左邊算唔算混合？
+  answer_en: No. That is still one pure side. The copycat can lock onto it.
+  answer_zh: 不算。那仍是一个纯的一侧。仿摊可以对准它。
+  answer_zh_hk: 唔算。嗰啲仲係一個純嘅一側。仿攤可以對準佢。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Not a third side of the path
+  title_zh: 不是路的第三侧
+  title_zh_hk: 唔係路嘅第三側
+  en: You still have only Left and Right. What can change is how often you use each. Some mornings Left. Some Right. That is not a new pitch in the middle of the path.
+  zh: 你还是只有左和右。能变的是每一侧用多少个早晨。有些早晨左。有些右。那不是路中间多出来的摊位。
+  zh_hk: 你都係得左同右。可以變嘅係每一側用幾多個朝早。有啲朝早左。有啲右。嗰啲唔係路中間多出嚟嘅攤位。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: A mixed strategy
+  title_zh: 混合策略
+  title_zh_hk: 混合策略
+  formula: A share of mornings on each side
+  formula_en: A share of mornings on each side
+  formula_zh: 每一侧用掉多少个早晨
+  formula_zh_hk: 每一側用掉幾多個朝早
+  gloss_en: Left every day is not a mix.
+  gloss_zh: 天天停左，不是混合。
+  gloss_zh_hk: 日日停左，唔係混合。
+  en: Here is the idea. A mixed strategy is a share of mornings on Left and the rest on Right. Half and half is a mix. Three mornings Left and one Right is a mix. Left every day is still one pure side.
+  zh: 核心就这一句。混合策略就是一部分早晨停左，其余停右。一半一半是混合。四个早晨里三个左、一个右，也是混合。天天停左，仍是一个纯的一侧。
+  zh_hk: 核心就呢一句。混合策略就係一部分朝早停左，其餘停右。一半一半係混合。四個朝早入面三個左、一個右，都係混合。日日停左，仲係一個純嘅一側。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Pure, or mixed
+  title_zh: 纯的，还是混合
+  title_zh_hk: 純嘅，定混合
+  left_en: Left every morning. The copycat can sit Left and wait.
+  left_zh: 天天停左。仿摊可以对准左边等。
+  left_zh_hk: 日日停左。仿攤可以對準左邊等。
+  right_en: Half the mornings Left. The copycat cannot lock one side.
+  right_zh: 一半早晨停左。仿摊对不准一侧。
+  right_zh_hk: 一半朝早停左。仿攤對唔準一側。
+  en: If you sit Left every morning, the copycat sits Left and waits. If you sit Left half the mornings, the copycat cannot lock one side. That is the point of a mix. You are not adding a new board.
+  zh: 天天停左，仿摊就停左等。一半早晨停左，仿摊对不准一侧。混合的用处就在这里。你不是多立一块牌子。
+  zh_hk: 日日停左，仿攤就停左等。一半朝早停左，仿攤對唔準一側。混合嘅用處就喺呢度。你唔係多企一塊牌。
+- id: example
+  visual: example
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: A coin is a mix
+  title_zh: 一枚硬币也是混合
+  title_zh_hk: 一枚硬幣都係混合
+  setup_en: Each morning you flip. Heads Left. Tails Right.
+  setup_zh: 每个早晨抛一次。正面停左。反面停右。
+  setup_zh_hk: 每個朝早掟一次。正面停左。反面停右。
+  result_en: That is half and half. Still only two sides.
+  result_zh: 那就是一半一半。仍然只有两侧。
+  result_zh_hk: 嗰啲就係一半一半。都仲係得兩側。
+  en: Each morning you flip a coin. Heads Left, tails Right. That is a mix of half and half. Customers still see one board. The copycat still sees only two places to sit.
+  zh: 每个早晨抛一枚硬币。正面停左，反面停右。这就是一半一半的混合。客人看见的还是一块牌子。仿摊能停的还是两个位置。
+  zh_hk: 每個朝早掟一枚硬幣。正面停左，反面停右。呢個就係一半一半嘅混合。客人見到嘅都係一塊牌。仿攤停得嘅都係兩個位。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: A share, not a new side
+  title_zh: 是份额，不是新的一侧
+  title_zh_hk: 係份額，唔係新嘅一側
+  q1_en: A mix is a share of mornings on each side.
+  q1_zh: 混合是每一侧用掉多少个早晨。
+  q1_zh_hk: 混合係每一側用掉幾多個朝早。
+  q2_en: Left every day is not a mix.
+  q2_zh: 天天停左不是混合。
+  q2_zh_hk: 日日停左唔係混合。
+  en: Keep the share. Next we fix the copycat's mix and ask which pure side pays you more. That question is best response to a mix.
+  zh: 把份额留下。接下来钉住仿摊的混合，问你停哪一侧更赚。那一问就是对混合的最优反应。
+  zh_hk: 將份額留低。跟住釘住仿攤嘅混合，問你停邊一側更賺。呢一問就係對混合嘅最佳回應。

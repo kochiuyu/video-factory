@@ -1,0 +1,63 @@
+id: LAE-M04-IN
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: 'This sitting: the slot'
+title_zh: 这一讲：这段预约
+title_zh_hk: 這一講：呢段預約
+objective_en: Open the traffic unit. Name the moving reservation, then treat vehicle, pad, energy, and slot as complements.
+objective_zh: 打开交通这一讲。先给空中的预约起名，再把机器、垫子、能量和时段看成互补品。
+objective_zh_hk: 打開交通呢一講。先畀空中嘅預約起名，再將機器、墊、能量同時段看成互補品。
+glossary:
+- en: Open
+  zh: 开场
+  zh_hk: 開場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Which two pictures does this sitting draw?
+  zh: 这一讲画哪两张图？
+  zh_hk: 呢一講畫邊兩張圖？
+  answer_en: A moving reservation that keeps two machines off one point, then the four pieces that must all be present.
+  answer_zh: 不让两台机器占同一个点的预约，然后四件必须同时在的东西。
+  answer_zh_hk: 唔讓兩部機器佔同一個點嘅預約，然後四件必須同時喺度嘅嘢。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: the slot'
+  title_zh: 这一讲：这段预约
+  title_zh_hk: 這一講：呢段預約
+  item1_en: UTM
+  item1_zh: UTM
+  item1_zh_hk: UTM
+  item2_en: Complements
+  item2_zh: 互补品
+  item2_zh_hk: 互補品
+  en: Two pads hold the ends. Flights still meet in the air. Two shorts. First we name the reservation. Then we ask what happens if any one piece is missing.
+  zh: 两块垫子按住两端。空中的线仍会碰上。两条短片。先给预约起名。再问缺了一件会怎样。
+  zh_hk: 兩塊墊按住兩端。空中嘅線仍然會碰上。兩條短片。先畀預約起名。再問缺咗一件會點。
+- id: takeaway
+  visual: title_card
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: the slot'
+  title_zh: 这一讲：这段预约
+  title_zh_hk: 這一講：呢段預約
+  en: By the end, a slot should mean a held path in time, not a radio catalogue and not a crash film.
+  zh: 结束时，时段应是一条被占住的路径加时间，不是一份无线电清单，也不是一部事故片。
+  zh_hk: 結束時，時段應該係一條被佔住嘅路徑加時間，唔係一份無線電清單，亦都唔係一部意外片。

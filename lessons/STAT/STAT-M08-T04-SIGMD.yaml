@@ -1,0 +1,165 @@
+id: STAT-M08-T04-SIGMD
+course: STAT-M08
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The Sigmoid Logistic Curve: Enforcing the [0, 1] Boundary'
+title_zh: S 型逻辑斯蒂曲线：概率边界的终极守护
+title_zh_hk: S 型邏輯斯蒂曲線：概率邊界嘅終極守護
+objective_en: Invert the logit transformation to derive the standard sigmoid logistic function, demonstrate how it guarantees bounded probabilities in [0, 1], and analyze tail saturation.
+objective_zh: 逆向求解 Logit 变换推导标准 S 型逻辑斯蒂函数，论证其如何确保概率严格收敛于 [0, 1]，并解析尾部饱和效应。
+objective_zh_hk: 逆向求解 Logit 變換推導標準 S 型邏輯斯蒂函數，論證佢點樣確保概率嚴格收斂喺 [0, 1]，並解析尾部飽和效應。
+glossary:
+- en: Sigmoid Logistic Function
+  zh: S 型逻辑斯蒂函数
+  zh_hk: S 型邏輯斯蒂函數
+  lock: true
+- en: Inverse Logit
+  zh: Logit 逆变换
+  zh_hk: Logit 逆變換
+  lock: true
+- en: Tail Saturation
+  zh: 尾部饱和效应
+  zh_hk: 尾部飽和效應
+  lock: true
+- en: Inflection Point
+  zh: 拐点
+  zh_hk: 拐點
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: If the estimated linear index z_i = beta_0 + beta_1 * Spend_i equals +2.0 for a high-spending customer, what is their predicted voucher redemption probability under the logistic function?
+  question_zh: 若某位高消费会员的线性指数估算值 z_i = beta_0 + beta_1 * 消费额 为 +2.0，在逻辑斯蒂函数下，其预测卡券核销概率是多少？
+  question_zh_hk: 如果某個高消費會員嘅線性指數估算值 z_i = beta_0 + beta_1 * 消費額 係 +2.0，喺邏輯斯蒂函數下，佢嘅預測卡券換領概率係幾多？
+  options_en:
+  - 'A: 0.50 (50%)'
+  - 'B: 0.88 (88%)'
+  - 'C: 2.00 (200%)'
+  - 'D: 0.12 (12%)'
+  options_zh:
+  - 'A: 0.50 (50%)'
+  - 'B: 0.88 (88%)'
+  - 'C: 2.00 (200%)'
+  - 'D: 0.12 (12%)'
+  options_zh_hk:
+  - 'A: 0.50 (50%)'
+  - 'B: 0.88 (88%)'
+  - 'C: 2.00 (200%)'
+  - 'D: 0.12 (12%)'
+  answer: B
+  explanation_en: Under the inverse logit function, p = 1 / (1 + e^(-z)). With z = +2.0, p = 1 / (1 + e^(-2)) = 1 / (1 + 0.1353) = 1 / 1.1353 ≈ 0.8808, or 88%.
+  explanation_zh: 根据 Logit 逆变换公式：p = 1 / (1 + e^(-z))。当 z = +2.0 时，p = 1 / (1 + e^(-2)) = 1 / (1 + 0.1353) ≈ 0.8808，即 88%。
+  explanation_zh_hk: 根據 Logit 逆變換公式：p = 1 / (1 + e^(-z))。當 z = +2.0 嗰陣，p = 1 / (1 + e^(-2)) = 1 / (1 + 0.1353) ≈ 0.8808，即係 88%。
+- id: Q2
+  type: multiple_choice
+  question_en: What mathematical property does tail saturation describe in the logistic curve?
+  question_zh: 尾部饱和描述逻辑斯蒂曲线的哪一种数学性质？
+  question_zh_hk: 尾部飽和描述邏輯斯蒂曲線邊一種數學性質？
+  options_en:
+  - 'A: The derivative p(1-p) approaches zero as p approaches zero or one, so equal index changes produce smaller probability changes in the tails'
+  - 'B: All customers buy coffee completely at random regardless of price'
+  - 'C: Total sales drop to zero whenever advertising spending increases'
+  - 'D: High-spending customers consume less caffeine than low-spending customers'
+  options_zh:
+  - 'A: 当 p 逼近 0 或 1 时，导数 p(1-p) 逼近零，因此相同指数变化在尾部产生较小的概率变化'
+  - 'B: 无论价格如何变动，所有顾客购买咖啡完全呈现纯粹的随机状态'
+  - 'C: 无论何时只要增加广告预算，总销售额必然直接坍塌归零'
+  - 'D: 相比低消费客群，高消费客群对咖啡因的实际生理摄入量显著更低'
+  options_zh_hk:
+  - 'A: 當 p 逼近 0 或 1 時，導數 p(1-p) 逼近零，所以相同指數變化喺尾部產生較細嘅概率變化'
+  - 'B: 無論價錢點變，所有顧客買咖啡完全呈現純粹嘅隨機狀態'
+  - 'C: 無論幾時只要加宣傳預算，總營業額必然直接崩潰變零'
+  - 'D: 相對低消費客群，高消費客群對咖啡因嘅實際生理攝入量顯著更低'
+  answer: A
+  explanation_en: The logistic derivative with respect to z is p(1-p). It is largest at p = 0.50 and approaches zero in both tails. This is a property of the fitted response function, not by itself evidence about the causal return to a marketing intervention.
+  explanation_zh: 逻辑概率对 z 的导数为 p(1-p)，在 p = 0.50 时最大，并在两端逼近零。这是拟合响应函数的性质，本身并不是营销干预因果回报的证据。
+  explanation_zh_hk: 邏輯概率對 z 嘅導數係 p(1-p)，喺 p = 0.50 時最大，並喺兩端逼近零。呢個係擬合響應函數嘅性質，本身唔係推廣干預因果回報嘅證據。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Mathematical Inversion Dilemma
+  kicker_zh: 数学逆向解算困局
+  kicker_zh_hk: 數學逆向解算困局
+  title_en: How Do We Translate Real-Line Logits Back into Probabilities?
+  title_zh: 如何将实数轴上的对数几率还原为业务概率？
+  title_zh_hk: 點樣將實數軸上嘅對數勝算還原做業務概率？
+  en: A logistic model produces a linear index z that can take any real value, but managers need probabilities between zero and one. The inverse-logit function converts each index into a valid probability. How does that transformation create the S-shaped curve, and what does its changing slope mean?
+  zh: 逻辑模型产生的线性指数 z 可以取任意实数，但管理者需要 0 与 1 之间的概率。Logit 逆变换将每个指数转换为有效概率。这一变换如何形成 S 型曲线？曲线斜率的变化又意味着什么？
+  zh_hk: 邏輯模型產生嘅線性指數 z 可以取任何實數，但管理者需要 0 同 1 之間嘅概率。Logit 逆變換將每個指數轉換做有效概率。呢個變換點樣形成 S 型曲線？曲線斜率變化又代表咩？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: p_i = 1 / (1 + e^(-z_i)) = e^(z_i) / (1 + e^(z_i))
+  formula_zh: 逻辑斯蒂函数：p_i = 1 / (1 + e^(-z_i)) = e^(z_i) / (1 + e^(z_i))
+  formula_zh_hk: 邏輯斯蒂函數：p_i = 1 / (1 + e^(-z_i)) = e^(z_i) / (1 + e^(z_i))
+  formula_tex: p_i=\Lambda(z_i)=\frac{1}{1+e^{-z_i}}=\frac{e^{z_i}}{1+e^{z_i}},\quad z_i=\beta_0+\beta_1X_{1i}+\cdots+\beta_kX_{ki}
+  s1_en: The inverse logit exponentiates the linear index and solves for probability. For every finite z, the resulting probability lies strictly between zero and one.
+  s1_zh: Logit 逆变换对线性指数取指数并解出概率。对于任何有限的 z，所得概率都严格介于 0 与 1 之间。
+  s1_zh_hk: Logit 逆變換對線性指數取指數並解出概率。對任何有限嘅 z，所得概率都嚴格介乎 0 同 1 之間。
+  s2_en: As z moves from negative infinity to positive infinity, the probability approaches zero and one asymptotically without reaching either boundary at a finite index. This produces the familiar sigmoid, or S-shaped, curve.
+  s2_zh: 当 z 从负无穷移动到正无穷时，概率渐近逼近 0 与 1，但在有限指数下不会达到边界，由此形成熟悉的 S 型曲线。
+  s2_zh_hk: 當 z 由負無限大移動到正無限大時，概率漸近逼近 0 同 1，但喺有限指數之下唔會到達邊界，由此形成熟悉嘅 S 型曲線。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: The Central Inflection Point
+  left_zh: 中央对称拐点
+  right_en: Tail Saturation Dynamics
+  right_zh: 尾部饱和与边际递减
+  s1_en: At z equal to zero, the logistic probability is 0.50. The curve has its inflection point there, and the derivative with respect to z reaches its maximum value of 0.25.
+  s1_zh: 当 z 等于 0 时，逻辑概率为 0.50。曲线在此处达到拐点，概率对 z 的导数达到最大值 0.25。
+  s1_zh_hk: 當 z 等於 0 時，邏輯概率係 0.50。曲線喺呢度達到拐點，概率對 z 嘅導數達到最大值 0.25。
+  s2_en: The derivative is dp/dz = p times one minus p, so the probability is most responsive to a change in the index near p equal to 0.50. The effect of a particular predictor also depends on its coefficient because dp/dx_j = beta_j p(1-p).
+  s2_zh: 导数为 dp/dz = p 乘以 1 减 p，因此概率在 p 等于 0.50 附近对指数变化最敏感。特定自变量的效应还取决于其系数，因为 dp/dx_j = beta_j p(1-p)。
+  s2_zh_hk: 導數係 dp/dz = p 乘以 1 減 p，所以概率喺 p 等於 0.50 附近對指數變化最敏感。特定自變量嘅效應亦取決於其系數，因為 dp/dx_j = beta_j p(1-p)。
+  s3_en: In the tails, p times one minus p approaches zero, so the same change in z produces a smaller probability change. This is mathematical saturation of the response curve; it does not by itself prove diminishing returns from a specific marketing action.
+  s3_zh: 在曲线尾部，p 乘以 1 减 p 逼近零，因此相同的 z 变化会产生较小的概率变化。这是响应曲线的数学饱和性质，本身并不能证明某项营销行动存在边际收益递减。
+  s3_zh_hk: 喺曲線尾部，p 乘以 1 減 p 逼近零，所以相同嘅 z 變化會產生較細嘅概率變化。呢個係響應曲線嘅數學飽和性質，本身唔能夠證明某項推廣行動存在邊際收益遞減。
+  left_zh_hk: 中央對稱拐點
+  right_zh_hk: 尾部飽和與邊際遞減
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Evaluate Dormant Negative Index
+  step1_zh: 测算沉睡客群负指数
+  step2_en: Anchor Midpoint Commuter
+  step2_zh: 锚定中间摇摆客群
+  step3_en: Cap Hyper-Loyal Saturation
+  step3_zh: 封顶忠诚客群饱和度
+  s1_en: 'Step one: At z equal to -2.20, p equals 1 divided by 1 plus e to the 2.20, approximately 0.0998. The probability is about 10 percent.'
+  s1_zh: 第一步：当 z = -2.20 时，p 等于 1 除以 1 加 e 的 2.20 次方，约为 0.0998，即约 10%。
+  s1_zh_hk: 第一步：當 z = -2.20 時，p 等於 1 除以 1 加 e 嘅 2.20 次方，約為 0.0998，即約 10%。
+  s2_en: 'Step two: At z equal to zero, p equals 1 divided by 1 plus e to the zero, or 0.50. This is the midpoint and steepest part of the curve with respect to z.'
+  s2_zh: 第二步：当 z = 0 时，p 等于 1 除以 1 加 e 的零次方，即 0.50。这是曲线中点，也是概率相对于 z 最陡峭的位置。
+  s2_zh_hk: 第二步：當 z = 0 時，p 等於 1 除以 1 加 e 嘅零次方，即 0.50。呢個係曲線中點，亦係概率相對於 z 最陡峭嘅位置。
+  s3_en: 'Step three: At z equal to 2.00, p equals 1 divided by 1 plus e to the negative two, approximately 0.8808. The prediction remains below one even though the linear index is positive and unbounded.'
+  s3_zh: 第三步：当 z = 2.00 时，p 等于 1 除以 1 加 e 的负二次方，约为 0.8808。即使线性指数为正且无界，预测概率仍低于 1。
+  s3_zh_hk: 第三步：當 z = 2.00 時，p 等於 1 除以 1 加 e 嘅負二次方，約為 0.8808。即使線性指數係正數而且無界，預測概率仍然低過 1。
+  step1_zh_hk: 測算沉睡客群負指數
+  step2_zh_hk: 錨定中間猶豫客群
+  step3_zh_hk: 封頂忠誠客群飽和度
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Why Is the Sigmoid Curve Ideal for Retail?
+  q1_zh: 为何 S 型曲线是零售决策的天作之合？
+  q2_en: 'Audit Rule: Target the Steep Slope, Avoid Dead Tails'
+  q2_zh: 审计准则：聚焦陡峭中间态，莫在饱和尾部掷千金
+  s1_en: The sigmoid logistic function maps an unrestricted linear index into a valid probability. Its slope varies with the baseline probability, so logistic effects are not constant on the probability scale.
+  s1_zh: S 型逻辑斯蒂函数把无约束线性指数映射为有效概率。其斜率随基准概率变化，因此逻辑模型在概率尺度上的效应并非常数。
+  s1_zh_hk: S 型邏輯斯蒂函數將無約束線性指數映射做有效概率。斜率會隨基準概率變化，所以邏輯模型喺概率尺度上嘅效應唔係常數。
+  s2_en: 'Decision rule: convert index values to probabilities before communicating risk or response. Evaluate marginal effects at relevant customer profiles, and do not infer campaign profitability from the curve shape alone.'
+  s2_zh: 决策规则：沟通风险或响应前，应先把指数转换为概率。在相关顾客画像上评估边际效应，不能仅凭曲线形状推断营销活动是否盈利。
+  s2_zh_hk: 決策規則：溝通風險或者響應之前，要先將指數轉換做概率。喺相關顧客背景上評估邊際效應，唔可以只憑曲線形狀推斷推廣活動係咪有盈利。
+  s3_en: For the supplied indices, z values of -2.20, 0.00, and 2.00 map to probabilities of approximately 0.0998, 0.5000, and 0.8808. All remain strictly inside the probability interval.
+  s3_zh: 对于给定指数，z 为 -2.20、0.00 与 2.00 时，概率分别约为 0.0998、0.5000 与 0.8808，全部严格位于概率区间内部。
+  s3_zh_hk: 對於畀定指數，z 係 -2.20、0.00 同 2.00 時，概率分別約為 0.0998、0.5000 同 0.8808，全部嚴格位於概率區間之內。
+  q1_zh_hk: 點解 S 型曲線係零售決策嘅天作之合？
+  q2_zh_hk: 審計準則：聚焦陡峭中間態，莫喺飽和尾部擲千金

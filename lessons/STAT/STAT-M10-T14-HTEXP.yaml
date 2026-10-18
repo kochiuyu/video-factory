@@ -1,0 +1,162 @@
+id: STAT-M10-T14-HTEXP
+course: STAT-M10
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Heterogeneous Treatment Effects: Auditing Subgroup Differences'
+title_zh: 异质性处理效应：审查子群效应差异
+title_zh_hk: 異質性處理效應：審查子群效應差異
+objective_en: Define HTE and CATE, interpret a treatment-by-subgroup interaction model, distinguish subgroup effects from interaction evidence, and conduct pre-specified or honestly exploratory subgroup analysis with multiplicity control and validation.
+objective_zh: 定义 HTE 与 CATE，解释处理与子群交互模型，区分子群内效应与交互证据，并在多重性控制与验证下开展预先指定或如实标记的探索性子群分析。
+objective_zh_hk: 定義 HTE 同 CATE，解釋處理同子群交互模型，區分子群內效應同交互證據，並喺多重性控制同驗證之下進行預先指定或者如實標記嘅探索性子群分析。
+glossary:
+- en: Heterogeneous Treatment Effects (HTE)
+  zh: 异质性处理效应（HTE）
+  zh_hk: 異質性處理效應（HTE）
+  lock: true
+- en: Conditional Average Treatment Effect (CATE)
+  zh: 条件平均处理效应（CATE）
+  zh_hk: 條件平均處理效應（CATE）
+  lock: true
+- en: Pre-Registered Segmentation
+  zh: 事前预注册客群细分
+  zh_hk: 事前預註冊客群細分
+  lock: true
+- en: Subgroup p-Hacking Trap
+  zh: 子群事后捕捞陷阱（p-hacking）
+  zh_hk: 子群事後捕撈陷阱（p-hacking）
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: What is the correct way to test whether treatment effects differ between two pre-specified subgroups?
+  question_zh: 检验两个预先指定子群的处理效应是否不同，正确方法是什么？
+  question_zh_hk: 檢驗兩個預先指定子群嘅處理效應係咪唔同，正確方法係乜嘢？
+  options_en:
+  - 'A: Test the treatment-by-subgroup interaction and report both subgroup estimates with uncertainty'
+  - 'B: Declare heterogeneity whenever one subgroup is significant and the other is not'
+  - 'C: Compare only the signs of the two point estimates'
+  - 'D: Choose the subgroup with the smallest unadjusted p-value after inspecting many splits'
+  options_zh:
+  - A：检验处理与子群交互项，并报告两个子群估计及其不确定性
+  - B：只要一个子群显著而另一个不显著，就宣布存在异质性
+  - C：只比较两个点估计的正负号
+  - D：查看许多切分后，选择未校正 p 值最小的子群
+  options_zh_hk:
+  - A：檢驗處理同子群交互項，並報告兩個子群估計同佢哋嘅不確定性
+  - B：只要一個子群顯著而另一個唔顯著，就宣布存在異質性
+  - C：只比較兩個點估計嘅正負號
+  - D：查看好多切分之後，選擇未校正 p 值最細嘅子群
+  answer: A
+  explanation_en: A difference between significant and non-significant subgroup results is not itself a significant difference. The interaction directly tests effect modification, while subgroup estimates show its direction and magnitude.
+  explanation_zh: 一个子群显著而另一个不显著，并不等于两者差异显著。交互项直接检验效应修饰，而子群估计说明差异方向与大小。
+  explanation_zh_hk: 一個子群顯著而另一個唔顯著，唔等於兩者差異顯著。交互項直接檢驗效應修飾，而子群估計說明差異方向同大小。
+- id: Q2
+  type: multiple_choice
+  question_en: What is the main risk of searching many unplanned subgroup definitions after seeing the overall result?
+  question_zh: 查看整体结果后再搜索许多未计划的子群定义，主要风险是什么？
+  question_zh_hk: 查看整體結果之後再搜尋好多未計劃嘅子群定義，主要風險係乜嘢？
+  options_en:
+  - 'A: Multiple searching can produce unstable chance findings that will not replicate'
+  - 'B: Every exploratory subgroup estimate is necessarily false'
+  - 'C: Interaction models always reduce the sample size to zero'
+  - 'D: Pre-registration removes all sampling uncertainty'
+  options_zh:
+  - A：多次搜索可能产生不稳定且无法复现的偶然发现
+  - B：每个探索性子群估计都必定为假
+  - C：交互模型总会把样本量降为零
+  - D：预注册会消除所有抽样不确定性
+  options_zh_hk:
+  - A：多次搜尋可能產生唔穩定而且無法重現嘅偶然發現
+  - B：每個探索性子群估計都一定係假
+  - C：交互模型總會將樣本量降到零
+  - D：預註冊會消除所有抽樣不確定性
+  answer: A
+  explanation_en: Unplanned subgroup searches create multiplicity and selection bias. Exploratory work remains useful when labeled honestly, adjusted where appropriate, and validated in new data or a follow-up experiment.
+  explanation_zh: 未计划的子群搜索会产生多重性与选择偏差。探索分析仍然有用，但应如实标记、在适当时进行校正，并用新数据或后续实验验证。
+  explanation_zh_hk: 未計劃嘅子群搜尋會產生多重性同選擇偏差。探索分析仍然有用，但要如實標記、喺適當嗰陣進行校正，並用新數據或者後續實驗驗證。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Average-versus-Segment Puzzle
+  kicker_zh: 均值与分群难题
+  kicker_zh_hk: 平均數同分群難題
+  title_en: Can a Small Average Effect Hide Larger Subgroup Differences?
+  title_zh: 较小的平均效应会掩盖更大的子群差异吗？
+  title_zh_hk: 較細嘅平均效應會掩蓋更大嘅子群差異嗎？
+  en: Suppose an experiment has a small overall treatment estimate, while two pre-defined customer groups show estimates in different directions. The aggregate result alone does not reveal whether the difference is real, precise, or useful for targeting. A credible HTE analysis asks whether treatment effects differ, quantifies uncertainty, and checks whether the subgroup definition existed before outcomes were inspected.
+  zh: 假设实验的整体处理估计较小，而两个预先定义的顾客群得到方向不同的估计。仅看总体结果，无法判断这种差异是否真实、精确或适合用于定向决策。可信的 HTE 分析会检验处理效应是否不同、量化不确定性，并确认子群定义是否在查看结果前已经确定。
+  zh_hk: 假設實驗嘅整體處理估計較細，而兩個預先定義嘅客群得到方向唔同嘅估計。單靠整體結果，無法判斷呢種差異係咪真實、精確或者適合用於定向決策。可信嘅 HTE 分析會檢驗處理效應係咪唔同、量化不確定性，並確認子群定義係咪喺查看結果之前已經確定。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: CATE(x) = E[Y(1) - Y(0) | X = x]
+  formula_zh: 条件平均处理效应：CATE(x) = E[Y(1) - Y(0) | X = x]
+  formula_zh_hk: 條件平均處理效應：CATE(x) = E[Y(1) - Y(0) | X = x]
+  formula_tex: \mathrm{CATE}(x)=\mathbb{E}[Y_i(1)-Y_i(0)\mid X_i=x]
+  s1_en: Heterogeneous Treatment Effects mean that the treatment effect varies across units or groups. A CATE averages the causal effect within units sharing a pre-treatment characteristic X equal to x.
+  s1_zh: 异质性处理效应表示处理效应会在不同单元或群体之间变化。CATE 对处理前特征 X 等于 x 的单元求平均因果效应。
+  s1_zh_hk: 異質性處理效應表示處理效應會喺唔同單元或者群體之間變化。CATE 對處理前特徵 X 等於 x 嘅單元計算平均因果效應。
+  s2_en: For a binary subgroup indicator X in the model Y = beta0 + tau T + gamma X + delta T-times-X + error, tau is the treatment effect when X equals zero, tau plus delta is the effect when X equals one, and delta is the interaction contrast.
+  s2_zh: 对二元子群指示变量 X，在模型 Y = beta0 + tau T + gamma X + delta T乘X + 误差中，tau 是 X 等于零时的处理效应，tau 加 delta 是 X 等于一时的效应，而 delta 是交互对比。
+  s2_zh_hk: 對二元子群指示變量 X，喺模型 Y = beta0 + tau T + gamma X + delta T乘X + 誤差入面，tau 係 X 等於零嗰陣嘅處理效應，tau 加 delta 係 X 等於一嗰陣嘅效應，而 delta 係交互對比。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Confirmatory Heterogeneity
+  left_zh: 验证性异质性分析
+  left_zh_hk: 驗證性異質性分析
+  right_en: Exploratory Heterogeneity
+  right_zh: 探索性异质性分析
+  right_zh_hk: 探索性異質性分析
+  s1_en: Pre-specify a small number of plausible effect modifiers, their coding, contrasts, and multiplicity plan. Power the interaction because detecting between-subgroup differences often requires more information than detecting an overall effect.
+  s1_zh: 应预先指定少量合理的效应修饰变量、编码、对比与多重性方案，并围绕交互项规划功效，因为检测子群间差异通常比检测整体效应需要更多信息。
+  s1_zh_hk: 要預先指定少量合理嘅效應修飾變量、編碼、對比同多重性方案，並圍繞交互項規劃功效，因為檢測子群之間差異通常比檢測整體效應需要更多信息。
+  s2_en: Do not infer heterogeneity merely because one subgroup estimate is significant and another is not. Test the interaction directly and report subgroup estimates, confidence intervals, sample sizes, and the outcome scale.
+  s2_zh: 不要仅因一个子群估计显著而另一个不显著，就推断存在异质性。应直接检验交互项，并报告子群估计、置信区间、样本量与结果尺度。
+  s2_zh_hk: 唔好只因為一個子群估計顯著而另一個唔顯著，就推斷存在異質性。要直接檢驗交互項，並報告子群估計、置信區間、樣本量同結果尺度。
+  s3_en: Data-driven trees and flexible models can discover candidate structure, but their in-sample differences may be optimistic. Use honest sample splitting, cross-fitting, shrinkage, multiplicity-aware inference, and external or prospective validation.
+  s3_zh: 数据驱动树模型与灵活模型可以发现候选结构，但样本内差异可能过于乐观。应采用诚实样本拆分、交叉拟合、收缩、多重性感知推断，以及外部或前瞻验证。
+  s3_zh_hk: 數據驅動樹模型同靈活模型可以發現候選結構，但樣本內差異可能過於樂觀。要採用誠實樣本拆分、交叉擬合、收縮、多重性感知推斷，以及外部或者前瞻驗證。
+- id: example
+  visual: example
+  seconds: 36
+  setup_en: 'Teaching coefficients: tau = -14; delta = 30; X is a pre-specified binary subgroup indicator'
+  setup_zh: 教学系数：tau = -14；delta = 30；X 为预先指定的二元子群指示变量
+  setup_zh_hk: 教學係數：tau = -14；delta = 30；X 係預先指定嘅二元子群指示變量
+  result_en: CATE at X=0 = -14; CATE at X=1 = +16; interaction contrast = +30
+  result_zh: X=0 时 CATE = -14；X=1 时 CATE = +16；交互对比 = +30
+  result_zh_hk: X=0 嗰陣 CATE = -14；X=1 嗰陣 CATE = +16；交互對比 = +30
+  s1_en: In the illustrative treatment-coded model, the treatment effect for X equals zero is tau, or minus 14. For X equals one, the effect is tau plus delta, or minus 14 plus 30 equals plus 16.
+  s1_zh: 在示例处理编码模型中，X 等于零时的处理效应为 tau，即负 14。X 等于一时的效应为 tau 加 delta，即负 14 加 30 等于正 16。
+  s1_zh_hk: 喺示例處理編碼模型入面，X 等於零嗰陣嘅處理效應係 tau，即係負 14。X 等於一嗰陣嘅效應係 tau 加 delta，即係負 14 加 30 等於正 16。
+  s2_en: Delta equals 30 and represents the between-subgroup difference in treatment effects. The opposite signs are descriptive until standard errors, confidence intervals, the interaction test, and the subgroup analysis plan are supplied.
+  s2_zh: delta 等于 30，表示两个子群处理效应之间的差异。在提供标准误、置信区间、交互检验与子群分析方案前，正负方向只是描述性结果。
+  s2_zh_hk: delta 等於 30，表示兩個子群處理效應之間嘅差異。喺提供標準誤、置信區間、交互檢驗同子群分析方案之前，正負方向只係描述性結果。
+  s3_en: These coefficients do not establish profitability, customer motives, annual value, or a targeting rule. A deployment decision also requires subgroup prevalence, costs, guardrails, fairness review where relevant, and prospective validation.
+  s3_zh: 这些系数不能证明盈利能力、顾客动机、年度价值或定向规则。推广决策还需要子群占比、成本、护栏、适用时的公平性审查与前瞻验证。
+  s3_zh_hk: 呢啲係數唔可以證明盈利能力、客人動機、年度價值或者定向規則。推廣決策仲需要子群佔比、成本、護欄、適用嗰陣嘅公平性審查同前瞻驗證。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: What Establishes Heterogeneity?
+  q1_zh: 什么证据能够建立异质性？
+  q1_zh_hk: 乜嘢證據可以建立異質性？
+  q2_en: Decision Rule
+  q2_zh: 决策规则
+  q2_zh_hk: 決策規則
+  s1_en: HTE analysis asks whether treatment effects differ across pre-treatment characteristics. The interaction contrast, not separate significance labels, is the direct evidence for a subgroup difference.
+  s1_zh: HTE 分析询问处理效应是否随处理前特征而不同。交互对比，而不是各子群分别贴上的显著或不显著标签，才是子群差异的直接证据。
+  s1_zh_hk: HTE 分析詢問處理效應係咪隨處理前特徵而唔同。交互對比，而唔係各子群分別貼上嘅顯著或者唔顯著標籤，先係子群差異嘅直接證據。
+  s2_en: Pre-specify decision-relevant modifiers when possible. Treat unplanned segmentation as hypothesis generation, control multiplicity, and validate before personalizing treatment or excluding a group.
+  s2_zh: 可行时应预先指定与决策相关的修饰变量。未计划分群应视为假设生成，控制多重性，并在个性化处理或排除某群体前进行验证。
+  s2_zh_hk: 可行嗰陣要預先指定同決策相關嘅修飾變量。未計劃分群要視為假設生成，控制多重性，並喺個性化處理或者排除某個群體之前進行驗證。
+  s3_en: Report subgroup definitions, prevalence, estimates, uncertainty, interaction tests, and whether analyses were planned or exploratory. Do not turn unstable subgroup patterns into immediate targeting claims.
+  s3_zh: 应报告子群定义、占比、估计、不确定性、交互检验，以及分析属于计划还是探索。不要把不稳定的子群模式立即转化为定向声明。
+  s3_zh_hk: 要報告子群定義、佔比、估計、不確定性、交互檢驗，以及分析屬於計劃定係探索。唔好將唔穩定嘅子群模式即刻轉化成定向聲明。

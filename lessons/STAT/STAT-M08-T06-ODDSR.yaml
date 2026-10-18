@@ -1,0 +1,165 @@
+id: STAT-M08-T06-ODDSR
+course: STAT-M08
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Interpreting Odds Ratios: Multiplicative Risk in Retail'
+title_zh: 解读几率比：零售业务中的乘数效应
+title_zh_hk: 解讀勝算比：零售業務入面嘅乘數效應
+objective_en: Exponentiate logistic regression coefficients to obtain odds ratios, translate odds ratios into percentage changes in odds, and distinguish odds changes from probability changes.
+objective_zh: 对逻辑回归系数取指数以获得几率比，将几率比转化为几率百分比变化，并区分几率变化与概率变化。
+objective_zh_hk: 對邏輯回歸系數取指數以得到勝算比，將勝算比轉化做勝算百分比變化，並區分勝算變化同概率變化。
+glossary:
+- en: Odds Ratio
+  zh: 几率比
+  zh_hk: 勝算比
+  lock: true
+- en: Exponentiated Coefficient
+  zh: 指数化系数
+  zh_hk: 指數化系數
+  lock: true
+- en: Multiplicative Effect
+  zh: 乘数效应
+  zh_hk: 乘數效應
+  lock: true
+- en: Percentage Change in Odds
+  zh: 几率百分比变化
+  zh_hk: 勝算百分比變動
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: In a logistic regression predicting coffee app voucher redemption, the estimated slope for Metro Club Gold Tier membership is beta_hat = +0.693. What is the corresponding Odds Ratio (OR)?
+  question_zh: 在预测咖啡 App 卡券核销的逻辑回归模型中，Metro Club 金卡会员的估计斜率为 beta_hat = +0.693。其对应的几率比（OR）是多少？
+  question_zh_hk: 喺預測咖啡 App 優惠券換領嘅邏輯回歸模型入面，Metro Club 金卡會員嘅估計斜率係 beta_hat = +0.693。佢對應嘅勝算比（OR）係幾多？
+  options_en:
+  - 'A: OR = 0.693'
+  - 'B: OR = 2.00'
+  - 'C: OR = 1.693'
+  - 'D: OR = 0.50'
+  options_zh:
+  - 'A: OR = 0.693'
+  - 'B: OR = 2.00'
+  - 'C: OR = 1.693'
+  - 'D: OR = 0.50'
+  options_zh_hk:
+  - 'A: OR = 0.693'
+  - 'B: OR = 2.00'
+  - 'C: OR = 1.693'
+  - 'D: OR = 0.50'
+  answer: B
+  explanation_en: OR = exp(0.693) is approximately 1.9997, conventionally rounded to 2.00. Holding the other included variables fixed, this means twice the odds relative to the zero-coded reference group, not twice the probability.
+  explanation_zh: OR = exp(0.693) 约为 1.9997，通常四舍五入为 2.00。在其他已纳入变量保持不变时，这表示相对于取值为 0 的基准组，几率约为两倍，而不是概率为两倍。
+  explanation_zh_hk: OR = exp(0.693) 約為 1.9997，通常四捨五入做 2.00。喺其他已納入變量保持不變時，呢個表示相對於取值為 0 嘅基準組，勝算約為兩倍，而唔係概率兩倍。
+- id: Q2
+  type: multiple_choice
+  question_en: A logistic regression reports an Odds Ratio of OR = 0.75 for customers who commute in bad weather. How should an analyst explain this to senior management?
+  question_zh: 某逻辑回归模型报告雨天通勤变量的几率比为 OR = 0.75。分析师应如何向管理层准确解释这一商业结果？
+  question_zh_hk: 某邏輯回歸模型報告雨天返工變量嘅勝算比係 OR = 0.75。分析師應該點樣向管理層準確解釋呢個商業結果？
+  options_en:
+  - 'A: The probability of buying coffee drops by exactly 75 percentage points'
+  - 'B: The odds of redemption decrease by 25% ((0.75 - 1) * 100%) during bad weather'
+  - 'C: Exactly 75% of customers will refuse the voucher'
+  - 'D: Rain increases sales odds by 75%'
+  options_zh:
+  - 'A: 顾客购买咖啡的概率直接下降了 75 个百分点'
+  - 'B: 在恶劣雨天下，卡券核销的几率相比晴天下降了 25%（即 (0.75 - 1) * 100%）'
+  - 'C: 恰好有 75% 的顾客会直接拒用该优惠券'
+  - 'D: 下雨天会使咖啡销售的几率提高 75%'
+  options_zh_hk:
+  - 'A: 顧客買咖啡嘅概率直接跌咗 75 個百分點'
+  - 'B: 喺惡劣雨天之下，優惠券換領嘅勝算比起晴天跌咗 25%（即係 (0.75 - 1) * 100%）'
+  - 'C: 剛好有 75% 嘅顧客會直接拒絕用呢張優惠券'
+  - 'D: 落雨天會令咖啡銷售嘅勝算提升 75%'
+  answer: B
+  explanation_en: An odds ratio of 0.75 means the fitted odds are multiplied by 0.75, equivalent to a 25 percent reduction in odds relative to the stated reference condition, holding other included variables fixed. It does not mean a 25-point probability reduction.
+  explanation_zh: 几率比 0.75 表示拟合几率乘以 0.75，等价于在其他已纳入变量保持不变时，相对于所述基准条件，几率降低 25%。这并不表示概率降低 25 个百分点。
+  explanation_zh_hk: 勝算比 0.75 表示擬合勝算乘以 0.75，等價於喺其他已納入變量保持不變時，相對於所述基準條件，勝算降低 25%。呢個唔表示概率降低 25 個百分點。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Executive Communication Dilemma
+  kicker_zh: 管理层汇报沟通困境
+  kicker_zh_hk: 管理層匯報溝通困局
+  title_en: What Does a Logit Slope of Plus 0.693 Actually Mean?
+  title_zh: 正 0.693 的 Logit 斜率到底意味着什么？
+  title_zh_hk: 正 0.693 嘅 Logit 斜率到底代表緊啲咩？
+  en: A logistic model reports a coefficient of 0.693 for Gold-tier membership. On the log-odds scale, that number is difficult to communicate. Exponentiating it gives an odds ratio near 2.00. What exactly doubles, what remains conditional on the model, and why does this not mean probability doubles?
+  zh: 某逻辑模型对金卡会员报告系数 0.693。这个对数几率尺度上的数值不易沟通；取指数后得到约 2.00 的几率比。究竟是什么翻倍？这一解释依赖哪些模型条件？为什么这不等于概率翻倍？
+  zh_hk: 某邏輯模型對金卡會員報告系數 0.693。呢個對數勝算尺度上嘅數值唔容易溝通；取指數之後得到約 2.00 嘅勝算比。究竟係咩翻倍？呢個解讀依賴邊啲模型條件？點解唔等於概率翻倍？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: OR = Odds(X + 1) / Odds(X) = exp(beta_1)
+  formula_zh: 几率比公式：OR = Odds(X + 1) / Odds(X) = exp(beta_1)
+  formula_zh_hk: 勝算比公式：OR = Odds(X + 1) / Odds(X) = exp(beta_1)
+  formula_tex: \operatorname{OR}_j=\exp(\beta_j),\quad \frac{\operatorname{Odds}(Y=1\mid x_j+1,\mathbf{x}_{-j})}{\operatorname{Odds}(Y=1\mid x_j,\mathbf{x}_{-j})}=e^{\beta_j}
+  s1_en: For a one-unit increase in predictor x_j, holding the other included predictors fixed, the odds are multiplied by exp(beta_j). For a binary predictor, the comparison is one group versus the zero-coded reference group.
+  s1_zh: 当自变量 x_j 增加一个单位且模型中其他自变量保持不变时，几率会乘以 exp(beta_j)。对于二元自变量，该比较是取值为 1 的组相对于取值为 0 的基准组。
+  s1_zh_hk: 當自變量 x_j 增加一個單位，而且模型入面其他自變量保持不變時，勝算會乘以 exp(beta_j)。對於二元自變量，個比較係取值為 1 嘅組相對於取值為 0 嘅基準組。
+  s2_en: Exponentiation converts an additive change in log-odds into a multiplicative change in odds. It does not directly produce a constant probability-point change because the probability effect depends on the baseline probability and the full predictor profile.
+  s2_zh: 取指数把对数几率的加法变化转化为几率的乘法变化。它不会直接给出固定的概率百分点变化，因为概率效应取决于基准概率和完整的自变量组合。
+  s2_zh_hk: 取指數將對數勝算嘅加法變化轉化做勝算嘅乘法變化。佢唔會直接畀出固定嘅概率百分點變化，因為概率效應取決於基準概率同完整自變量組合。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Multiplicative Benchmarking
+  left_zh: 几率比的三大参照基准
+  right_en: Percentage Interpretation
+  right_zh: 转化为几率百分比增减
+  s1_en: An odds ratio of one means no conditional association on the odds scale. An odds ratio above one means higher fitted odds, while an odds ratio below one means lower fitted odds, holding the other model variables fixed.
+  s1_zh: 几率比等于 1 表示在几率尺度上没有条件关联；高于 1 表示拟合几率较高；低于 1 表示拟合几率较低，前提是模型中其他变量保持不变。
+  s1_zh_hk: 勝算比等於 1 表示喺勝算尺度上冇條件關聯；高過 1 表示擬合勝算較高；低過 1 表示擬合勝算較低，前提係模型入面其他變量保持不變。
+  s2_en: For an odds ratio above one, the percentage increase in odds is 100 times OR minus one. For an odds ratio below one, 100 times OR minus one gives a negative percentage change; equivalently, the odds are 100 times one minus OR percent lower.
+  s2_zh: 当几率比高于 1 时，几率百分比增幅为 100 乘以 OR 减 1；当几率比低于 1 时，100 乘以 OR 减 1 得到负的百分比变化，等价地说，几率降低 100 乘以 1 减 OR%。
+  s2_zh_hk: 當勝算比高過 1 時，勝算百分比增幅係 100 乘以 OR 減 1；當勝算比低過 1 時，100 乘以 OR 減 1 得到負百分比變化，等價噉講，勝算降低 100 乘以 1 減 OR%。
+  s3_en: Odds ratios describe model-based associations unless the research design supports a causal interpretation. They should be reported with uncertainty, such as confidence intervals, rather than as exact operational laws.
+  s3_zh: 除非研究设计支持因果解释，否则几率比描述的是模型条件关联。报告时应同时提供置信区间等不确定性信息，而不应将其视为精确的营运定律。
+  s3_zh_hk: 除非研究設計支持因果解讀，否則勝算比描述嘅係模型條件關聯。報告時應該同時提供置信區間等不確定性信息，而唔應該將佢當成精確營運定律。
+  left_zh_hk: 勝算比嘅三大參照基準
+  right_zh_hk: 轉化為勝算百分比增減
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Extract Raw Logit Slopes
+  step1_zh: 提取原始 Logit 斜率
+  step2_en: Exponentiate to Odds Ratios
+  step2_zh: 指数化还原几率比
+  step3_en: Deliver Boardroom Narrative
+  step3_zh: 交付高管业务洞察
+  s1_en: 'Step one: The supplied model estimates beta_Gold = 0.693 and beta_Rain = -0.288. These are conditional differences on the log-odds scale.'
+  s1_zh: 第一步：给定模型估计 beta_Gold = 0.693，beta_Rain = -0.288。这些是对数几率尺度上的条件差异。
+  s1_zh_hk: 第一步：畀定模型估計 beta_Gold = 0.693，beta_Rain = -0.288。呢啲係對數勝算尺度上嘅條件差異。
+  s2_en: 'Step two: Exponentiating gives exp(0.693) approximately 1.9997, reported as 2.00, and exp(-0.288) approximately 0.7498, reported as 0.75.'
+  s2_zh: 第二步：取指数后，exp(0.693) 约为 1.9997，报告为 2.00；exp(-0.288) 约为 0.7498，报告为 0.75。
+  s2_zh_hk: 第二步：取指數之後，exp(0.693) 約為 1.9997，報告做 2.00；exp(-0.288) 約為 0.7498，報告做 0.75。
+  s3_en: 'Step three: Holding the other included variables fixed, Gold-tier membership is associated with about twice the redemption odds relative to the reference tier, while the rain indicator is associated with about 25 percent lower redemption odds relative to its zero-coded reference condition.'
+  s3_zh: 第三步：在模型中其他变量保持不变时，金卡会员相对于基准会员的核销几率约为两倍；雨天指标相对于其取值为 0 的基准条件，与约低 25% 的核销几率相关。
+  s3_zh_hk: 第三步：喺模型入面其他變量保持不變時，金卡會員相對於基準會員嘅換領勝算約為兩倍；雨天指標相對於取值為 0 嘅基準條件，同約低 25% 嘅換領勝算相關。
+  step1_zh_hk: 提取原始 Logit 斜率
+  step2_zh_hk: 指數化還原勝算比
+  step3_zh_hk: 交付高管業務洞察
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Does an OR of 2.0 Mean Probability Doubles?
+  q1_zh: OR 等于 2.0 是否等于概率翻倍？
+  q2_en: 'Audit Rule: Distinguish Odds from Probability'
+  q2_zh: 审计准则：几率绝非概率，倍数莫要混淆
+  s1_en: Odds ratios translate logistic coefficients into multiplicative comparisons on the odds scale. They are often easier to communicate than log-odds, but they are not probabilities or probability ratios.
+  s1_zh: 几率比把逻辑回归系数转化为几率尺度上的乘法比较。它通常比对数几率更易沟通，但既不是概率，也不是概率比。
+  s1_zh_hk: 勝算比將邏輯回歸系數轉化做勝算尺度上嘅乘法比較。佢通常比對數勝算容易溝通，但既唔係概率，亦唔係概率比。
+  s2_en: 'Decision rule: report the comparison unit, reference group, held-constant variables, and uncertainty. Convert to predicted probabilities for representative profiles when stakeholders need probability-point differences.'
+  s2_zh: 决策规则：报告比较单位、基准组、保持不变的变量与不确定性。当利益相关者需要概率百分点差异时，应针对代表性画像转换为预测概率。
+  s2_zh_hk: 決策規則：報告比較單位、基準組、保持不變嘅變量同不確定性。當持份者需要概率百分點差異時，應該針對代表性背景轉換做預測概率。
+  s3_en: For the supplied coefficients, 0.693 maps to an odds ratio of about 2.00 and -0.288 maps to about 0.75. These mean approximately 100 percent higher odds and 25 percent lower odds, not fixed probability changes.
+  s3_zh: 对于给定系数，0.693 对应约 2.00 的几率比，-0.288 对应约 0.75。这表示几率约高 100% 和低 25%，而不是固定的概率变化。
+  s3_zh_hk: 對於畀定系數，0.693 對應約 2.00 嘅勝算比，-0.288 對應約 0.75。呢個表示勝算約高 100% 同低 25%，而唔係固定概率變化。
+  q1_zh_hk: OR 等於 2.0 係咪代表概率翻倍？
+  q2_zh_hk: 審計準則：勝算唔係概率，倍數咪搞混亂

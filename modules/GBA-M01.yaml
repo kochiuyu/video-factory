@@ -14,8 +14,8 @@ objective_zh: 先给大湾区下定义，把桥看成省下的时间，再分清
 objective_zh_hk: 先給大灣區下定義，把橋看成省下的時間，再分清貨、資金和人——換工作是許可，不只是火車。
 lessons:
 - GBA-M01-IN
-- GBA-OV-01
-- GBA-IF-01
-- GBA-FM-01
-- GBA-LM-01
+- GBA-M01-OV
+- GBA-M01-IF
+- GBA-M01-FM
+- GBA-M01-LM
 - GBA-M01-OUT

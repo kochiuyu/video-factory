@@ -1,0 +1,194 @@
+id: STAT-M02-T04-TABLE
+course: statistics
+course_en: Business Probability Foundations
+course_zh: 商务概率基础
+course_zh_hk: 商務概率基礎
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: "Reading the 2x2 retail matrix"
+title_zh: "读懂 2x2 零售矩阵：边缘与联合概率"
+title_zh_hk: "讀識 2x2 零售矩陣：邊緣與聯合概率"
+objective_en: "Construct and interpret a 2x2 contingency table, distinguish marginal probabilities on the outer margins from joint intersection probabilities in the interior cells, and calculate them using retail cross-selling data."
+objective_zh: "构建并解读 2x2 列联表，区分外侧边缘概率与内部单元格联合概率，并运用零售连带交叉销售数据进行计算。"
+objective_zh_hk: "構建並解讀 2x2 列聯表，區分外側邊緣概率同內部單元格聯合概率，並運用零售連帶交叉銷售數據進行計算。"
+glossary:
+- en: "contingency table"
+  zh: "列联表"
+  zh_hk: "列聯表"
+  lock: true
+- en: "marginal probability"
+  zh: "边缘概率"
+  zh_hk: "邊緣概率"
+  lock: true
+- en: "joint probability"
+  zh: "联合概率"
+  zh_hk: "聯合概率"
+  lock: true
+- en: "intersection"
+  zh: "交集"
+  zh_hk: "交集"
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: "In a 2x2 contingency table tracking customer orders, where are the marginal probabilities located?"
+  question_zh: "在记录顾客点单的 2x2 列联表中，边缘概率通常位于表格的哪个位置？"
+  question_zh_hk: "喺記錄顧客點單嘅 2x2 列聯表入面，邊緣概率通常位於表格嘅邊個位置？"
+  options_en:
+  - "A: Along the outer row and column margins, representing the total probability of a single variable ignoring all others."
+  - "B: Only in the exact center cell of the table."
+  - "C: In a separate appendix document required by corporate auditors."
+  - "D: In negative numbers outside the table boundary."
+  options_zh:
+  - "A: 位于表格最外侧的行与列边缘合计处，代表不考虑其他变量时某一单一变量的总体概率。"
+  - "B: 仅存在于表格正中心的那一个单元格中。"
+  - "C: 存放在企业审计师专门要求的独立附录文件中。"
+  - "D: 以负数形式标注在表格边界之外。"
+  options_zh_hk:
+  - "A: 位於表格最外側嘅行同列邊緣合計位，代表唔考慮其他變量嗰陣某一個單一變量嘅總體概率。"
+  - "B: 淨係存在喺表格正中心嗰一個單元格入面。"
+  - "C: 存放喺企業審計師專門要求嘅獨立附錄文件入面。"
+  - "D: 以負數形式標注喺表格邊界之外。"
+  answer: A
+  explanation_en: "Marginal probabilities sit on the borders (margins) of the table. They sum across interior cells to show the unconditional probability of one characteristic alone."
+  explanation_zh: "边缘概率坐落在表格的边框（边缘）位置。它们通过汇总内部单元格得出，展示单一特征的无条件总体概率。"
+  explanation_zh_hk: "邊緣概率坐落喺表格嘅邊框（邊緣）位置。佢哋透過匯總內部單元格得出，展示單一特徵嘅無條件總體概率。"
+- id: Q2
+  type: multiple_choice
+  question_en: "Across 1,000 coffee shop orders, 400 patrons order Iced Coffee and 300 order Bakery items, with 120 patrons ordering both. What is the joint probability P(Iced Coffee AND Bakery)?"
+  question_zh: "在 1,000 笔咖啡门店订单中，有 400 位点了冰咖啡，300 位点了烘焙点心，其中两者都买的有 120 位。联合概率 P(冰咖啡 且 烘焙点心) 是多少？"
+  question_zh_hk: "喺 1,000 筆咖啡門店訂單入面，有 400 位點咗凍咖啡，300 位點咗烘焙點心，其中兩樣都買嘅有 120 位。聯合概率 P(凍咖啡 兼 烘焙點心) 係幾多？"
+  options_en:
+  - "A: 0.12"
+  - "B: 0.30"
+  - "C: 0.40"
+  - "D: 0.70"
+  options_zh:
+  - "A: 0.12"
+  - "B: 0.30"
+  - "C: 0.40"
+  - "D: 0.70"
+  options_zh_hk:
+  - "A: 0.12"
+  - "B: 0.30"
+  - "C: 0.40"
+  - "D: 0.70"
+  answer: A
+  explanation_en: "Joint probability is the intersection of both events divided by the grand total: 120 / 1,000 = 0.12."
+  explanation_zh: "联合概率是两个事件交集的订单数除以总样本量：120 / 1,000 = 0.12。"
+  explanation_zh_hk: "聯合概率係兩個事件交集嘅訂單數除以總樣本量：120 / 1,000 = 0.12。"
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: "The Retail Dilemma"
+  kicker_en: "The Retail Dilemma"
+  kicker_zh: "经营困惑"
+  kicker_zh_hk: "經營困惑"
+  title_en: "Tracking customer combinations"
+  title_zh: "顾客的点单组合藏着什么规律？"
+  title_zh_hk: "顧客嘅點單組合藏住咩規律？"
+  en: "A marketing manager looks at monthly receipts and sees two facts: 40 percent of customers order iced drinks, and 30 percent buy pastries. If you treat those two percentages as if they describe separate customers, you can miscount bundle demand and distort inventory planning. How do executives view two intersecting customer choices at a single glance?"
+  zh: "市场营销主管审视月度账单时发现了两个数字：40% 的顾客点冷饮，30% 的顾客买烘焙甜点。如果把这两个百分比误当成互不重叠的顾客群，就可能算错套餐需求，并扭曲备货计划。经营管理者究竟该如何一眼看透两项交织重叠的消费行为？"
+  zh_hk: "市場營銷主管審視月度賬單嗰陣發現咗兩個數字：40% 嘅顧客點凍飲，30% 嘅顧客買烘焙點心。如果將呢兩個百分比誤當成互不重疊嘅顧客群，就可能計錯套餐需求，亦會扭曲備貨計劃。經營管理者究竟應該點樣一眼睇透兩項交織重疊嘅消費行為？"
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: "What It Is"
+  kicker_en: "What It Is"
+  kicker_zh: "核心概念"
+  kicker_zh_hk: "核心概念"
+  title_en: "The two-way contingency table"
+  title_zh: "双向列联表的解构之道"
+  title_zh_hk: "雙向列聯表嘅解構之道"
+  formula: "Grand Total = Sum of Interior Cells = Sum of Margins"
+  formula_tex: 'N = \sum_{i,j} n_{ij}'
+  formula_zh: "全集总样本 = 内部单元格之和 = 边缘合计之和"
+  formula_zh_hk: "全集總樣本 = 內部單元格之和 = 邊緣合計之和"
+  s1_en: "To map two business variables simultaneously, statistics uses a contingency table—often called a cross-tab or 2x2 matrix."
+  s1_zh: "为了同时洞察两个业务变量的互动关系，统计学使用列联表——通常也称为交叉制表或 2x2 矩阵。"
+  s1_zh_hk: "為咗同時洞察兩個業務變量嘅互動關係，統計學使用列聯表——通常亦稱為交叉制表或者 2x2 矩陣。"
+  s2_en: "It categorizes every single customer into rows by drink temperature and columns by pastry purchase. This simple grid separates what happens together from what happens in total."
+  s2_zh: "它把每一位顾客在行维度按饮品温度分类，在列维度按是否选购烘焙分类。这张整齐的网格将“同时发生”与“总体发生”清晰区隔开来。"
+  s2_zh_hk: "佢將每一位顧客喺行維度按飲品溫度分類，喺列維度按係咪選購烘焙分類。呢張整齊嘅網格將「同時發生」同「總體發生」清晰區隔開嚟。"
+- id: matrix
+  visual: two_column
+  seconds: 36
+  kicker: "The Two Layers"
+  kicker_en: "The Two Layers"
+  kicker_zh: "表内乾坤"
+  kicker_zh_hk: "表內乾坤"
+  title_en: "Margins versus intersections"
+  title_zh: "外侧边缘与内部交集"
+  title_zh_hk: "外側邊緣與內部交集"
+  left_en: "Marginal: Outer borders (P(A), P(B))"
+  left_zh: "边缘概率：坐落外侧外沿（单一总体）"
+  left_zh_hk: "邊緣概率：坐落外側外沿（單一總體）"
+  right_en: "Joint: Interior cells (P(A and B))"
+  right_zh: "联合概率：内部交叉重叠（两者兼备）"
+  right_zh_hk: "聯合概率：內部交叉重疊（兩者兼備）"
+  s1_en: "Every cell inside the grid holds a joint probability—the likelihood of meeting two conditions simultaneously, written as P of A intersection B."
+  s1_zh: "表格内部的每一个单元格记录的都是联合概率——代表同时满足两种特定条件交集的发生概率，记作 P(A 且 B)。"
+  s1_zh_hk: "表格內部嘅每一個單元格記錄嘅都係聯合概率——代表同時滿足兩種特定條件交集嘅發生概率，記做 P(A 兼 B)。"
+  s2_en: "The cells at the bottom and right edges hold marginal probabilities. They sum up entire rows or columns, showing the unconditional probability of one factor alone."
+  s2_zh: "而位于底部与右侧边框的合计数，则是边缘概率。它们对整行或整列进行累加，展示单一维度剥离其他干扰后的无条件概率。"
+  s2_zh_hk: "而位於底部同右側邊框嘅合計數，就係邊緣概率。佢哋對成行或者成列進行累加，展示單一維度剝離其他干擾之後嘅無條件概率。"
+  s3_en: "The bottom-right corner is the grand anchor: it always sums to exactly 1,000 orders, or a total probability of 1.0."
+  s3_zh: "表格最右下角的终极总计则是全盘基石：它必然等于全部 1,000 笔订单总和，对应总概率恒为 1.0。"
+  s3_zh_hk: "表格最右下角嘅終極總計就係全盤基石：佢必然等於全部 1,000 筆訂單總和，對應總概率恆為 1.0。"
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: "The Ledger"
+  kicker_en: "The Ledger"
+  kicker_zh: "账目实操"
+  kicker_zh_hk: "賬目實操"
+  title_en: "Reading 1,000 coffee chain tickets"
+  title_zh: "拆解 1,000 笔门店客单组合"
+  title_zh_hk: "拆解 1,000 筆門市客單組合"
+  step1_en: "Joint: 120 buy Iced and Pastry (0.12)"
+  step1_zh: "联合交集：120 人兼买冷饮与甜点（0.12）"
+  step1_zh_hk: "聯合交集：120 人兼買凍飲同甜點（0.12）"
+  step2_en: "Marginal: 400 total buy Iced (0.40)"
+  step2_zh: "边缘总体：总计 400 人选择冷饮（0.40）"
+  step2_zh_hk: "邊緣總體：總計 400 人選擇凍飲（0.40）"
+  step3_en: "Marginal: 300 total buy Pastry (0.30)"
+  step3_zh: "边缘总体：总计 300 人选购甜点（0.30）"
+  step3_zh_hk: "邊緣總體：總計 300 人選購甜點（0.30）"
+  s1_en: "Check our Wan Chai ledger of 1,000 orders. Exactly 120 patrons buy both iced coffee and a pastry. That interior cell gives a joint probability of zero point one two."
+  s1_zh: "来看湾仔店 1,000 笔订单台账。恰好有 120 位顾客同时购买了冰咖啡与烘焙甜点。那个内部单元格对应的联合概率就是 0.12。"
+  s1_zh_hk: "睇吓灣仔舖 1,000 筆訂單台賬。啱啱好有 120 位顧客同時買咗凍咖啡同烘焙甜點。嗰個內部單元格對應嘅聯合概率就係 0.12。"
+  s2_en: "Sum across the entire row: 120 pastry-buyers plus 280 non-pastry buyers gives 400 total iced orders. That margin gives a marginal probability of zero point four zero."
+  s2_zh: "沿着该行向外累加：120 笔配有点心加上 280 笔未配点心，合计冷饮 400 笔。最右侧边缘概率为 0.40。"
+  s2_zh_hk: "沿住嗰行向外累加：120 筆配有點心加上 280 筆未配點心，合計凍飲 400 筆。最右側邊緣概率為 0.40。"
+  s3_en: "Sum down the first column: 120 iced plus 180 hot gives 300 total pastry buyers. The bottom margin gives a marginal pastry probability of zero point three zero."
+  s3_zh: "顺着第一列向下累加：120 笔冷饮加上 180 笔热饮，合计甜点单 300 笔。底部边缘概率确立为 0.30。"
+  s3_zh_hk: "順住第一列向下累加：120 筆凍飲加上 180 筆熱飲，合計甜點單 300 筆。底部邊緣概率確立為 0.30。"
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: "Decision Rule"
+  kicker_en: "Decision Rule"
+  kicker_zh: "商业法则"
+  kicker_zh_hk: "商業法則"
+  title_en: "Do not confuse the edge with the center"
+  title_zh: "莫将外沿合计数，混同内部交集度"
+  title_zh_hk: "莫將外沿合計數，混同內部交集度"
+  q1_en: "What is the critical distinction in a 2x2 table?"
+  q1_zh: "2x2 列联表中最重要的边界区分是什么？"
+  q1_zh_hk: "2x2 列聯表入面最重要嘅邊界區分係咩？"
+  q2_en: "How does this prevent marketing blunders?"
+  q2_zh: "它如何帮助管理者避开营销失策？"
+  q2_zh_hk: "佢點樣幫管理者避開營銷失策？"
+  s1_en: "Always distinguish marginal totals from interior joint cells: margins measure standalone category scale, while interior cells reveal bundle attachment."
+  s1_zh: "永远区分边缘合计与内部单元格：边缘数字衡量的是单一品类的总体规模，而内部单元格才揭示出连带捆绑的真实深度。"
+  s1_zh_hk: "永遠區分邊緣合計與內部單元格：邊緣數字衡量嘅係單一品類嘅總體規模，而內部單元格先揭示出連帶捆綁嘅真實深度。"
+  s2_en: "Never assume that adding two separate marginal demands will accurately forecast combination bundle adoption."
+  s2_zh: "绝不能天真地以为把两个独立的边缘需求简单相加，就能准确预估二者组合套餐的实际转化。"
+  s2_zh_hk: "絕唔可以天真噉以為將兩個獨立嘅邊緣需求簡單相加，就可以準確預估兩者組合套餐嘅實際轉化。"
+  s3_en: "For a sound bundle decision, read the interior joint cell directly and use the margins only for the overall scale of each category."
+  s3_zh: "要做出可靠的套餐决策，应直接读取内部的联合单元格；边缘合计只用来判断各品类的总体规模。"
+  s3_zh_hk: "要做可靠嘅套餐決策，應該直接讀取內部嘅聯合單元格；邊緣合計只用嚟判斷各品類嘅整體規模。"

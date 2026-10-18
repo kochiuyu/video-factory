@@ -1,0 +1,218 @@
+id: STAT-M05-T11-PAIRD
+course: STAT-M05
+course_en: Hypothesis Testing & Store Experiments
+course_zh: 假设检验与门店运营实验
+course_zh_hk: 假設檢驗與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The Paired-Difference t-Test: Testing Change within Matched Units'
+title_zh: 配对差值 t 检验：检验匹配单元内的变化
+title_zh_hk: 配對差值 t 檢驗：檢驗匹配單元內嘅變化
+objective_en: Convert matched before-and-after observations into one difference score per unit, formulate and execute a one-sample
+  t-test on those differences, explain when pairing can improve precision and when it cannot, and interpret an assumed workflow-training
+  result without making employee-level or causal claims beyond the design.
+objective_zh: 把匹配的前后观测转化为每个单元一个差值，对这些差值构建并执行单样本 t 检验，解释配对何时可以提高精度、何时不能，并解释假设的流程培训结果，同时避免作出超出设计范围的员工个人或因果结论。
+objective_zh_hk: 將匹配嘅前後觀測轉化成每個單元一個差值，對呢啲差值構建並執行單樣本 t 檢驗，解釋配對幾時可以提高精度、幾時唔可以，並解讀假設嘅流程培訓結果，同時避免作出超出設計範圍嘅員工個人或者因果結論。
+glossary:
+- en: paired-difference t-test
+  zh: 配对差值 t 检验
+  zh_hk: 配對差值 t 檢驗
+  lock: true
+- en: difference score (D_i)
+  zh: 配对差值 (D_i)
+  zh_hk: 配對差值 (D_i)
+  lock: true
+- en: between-subject heterogeneity
+  zh: 个体间异质性/个体天赋差异
+  zh_hk: 個體間異質性/個體天賦差異
+  lock: true
+- en: within-subject design
+  zh: 被试内设计/自身对照设计
+  zh_hk: 被試內設計/自身對照設計
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why can a paired design be more precise than an independent-groups comparison?
+  question_zh: 在对同一批员工开展技能培训效果评估时，为什么配对差值 t 检验在统计功效上远胜于独立的双样本 t 检验？
+  question_zh_hk: 喺對同一批員工開展技能培訓效果評估嗰陣，點解配對差值 t 檢驗喺統計功效上遠勝於獨立嘅雙樣本 t 檢驗？
+  options_en:
+  - 'A: Valid within-unit subtraction can remove stable unit-level variation when paired outcomes are positively related,
+    reducing variance of the differences.'
+  - 'B: Because paired tests automatically double the reported degrees of freedom from n to 2n.'
+  - 'C: Because individual employee performance records are legally exempt from variance calculations under labor regulations.'
+  - 'D: Because paired difference calculations force the post-training sample mean to equal zero.'
+  options_zh:
+  - 'A: 因为对每位员工自身做差 D_i 能够完美扣除其固有基准速度差异，彻底消除了个体间天赋异质性杂音，从而大幅压缩了标准误。'
+  - 'B: 因为配对检验会自动将报告的自由度从 n 翻倍扩充至 2n。'
+  - 'C: 因为劳工合规准则明文规定员工个人的绩效台账在运算中豁免方差核算。'
+  - 'D: 因为配对差值算法会在推导底层强制将培训后的样本均值对齐归零。'
+  options_zh_hk:
+  - 'A: 因為對每位員工自身做差 D_i 能夠完美扣除其固有基準速度差異，徹底消除咗個體間天賦異質性雜音，從而大幅壓縮咗標準誤。'
+  - 'B: 因為配對檢驗會自動將報告嘅自由度由 n 翻倍擴充至 2n。'
+  - 'C: 因為勞工合規準則明文規定員工個人嘅績效台賬喺運算入面豁免方差核算。'
+  - 'D: 因為配對差值算法會喺推導底層強制將培訓後嘅樣本均值對齊歸零。'
+  answer: A
+  explanation_en: The gain comes from the within-pair covariance and valid matching. Pairing does not automatically eliminate
+    all noise, guarantee higher power, or prove causation.
+  explanation_zh: 通过对同一批员工进行前后自身配对，每位咖啡师都充当了自身的基准参照物。这消除了人与人之间的天赋离散度，使差值均值的标准误急剧收窄，显著放大了探测微小提速效应的统计检验力。
+  explanation_zh_hk: 透過對同一批員工進行前後自身配對，每位咖啡師都充當咗自身嘅基準參照物。呢個消除咗人同人之間嘅天賦離散度，使差值均值嘅標準誤急劇收窄，顯著放大咗探測微細提速效應嘅統計檢驗力。
+- id: Q2
+  type: multiple_choice
+  question_en: 'Assume n = 15 valid pairs, D-bar = -4.20 s for after minus before, and s_D = 3.873 s. What is the two-sided
+    paired t result for H0: mu_D = 0?'
+  question_zh: 都市咖啡追踪 n = 15 位咖啡师在参加为期 3 天的学院提速特训前后的出杯用时。实测出杯耗时平均缩短了 D_bar = -4.2 秒（训后减训前），差值样本标准差 s_D = 3.873 秒。在 alpha =
+    0.05 双尾基准下（df = 14，t* = 2.145），t_calc 与决策裁决分别是什么？
+  question_zh_hk: 都市咖啡追蹤 n = 15 位咖啡師喺參加為期 3 日嘅學院提速特訓前後嘅出杯用時。實測出杯耗時平均縮短咗 D_bar = -4.2 秒（訓後減訓前），差值樣本標準差 s_D = 3.873 秒。喺 alpha
+    = 0.05 雙尾基準下（df = 14，t* = 2.145），t_calc 與決策裁決分別係幾多？
+  options_en:
+  - 'A: SE_D ≈ 1.000 s; t ≈ -4.20; df = 14; p ≈ 0.0009; reject H0 at alpha = 0.05.'
+  - 'B: SE_D = 3.873 / 15 = 0.258s; t_calc = -4.2 / 0.258 = -16.28. Fail to reject H0.'
+  - 'C: t_calc = -4.20; fail to reject H0 because n = 15 is smaller than the CLT threshold of 30.'
+  - 'D: t_calc = -4.2 / 3.873 = -1.084. Fail to reject H0: training had no measurable impact.'
+  options_zh:
+  - 'A: SE_D = 3.873 / 根号(15) = 1.00 秒；t_calc = (-4.2 - 0) / 1.00 = -4.20。因 |-4.20| > 2.145（p = 0.0009），坚决拒绝 H0：特训提速效果获得铁证证实。'
+  - 'B: SE_D = 3.873 / 15 = 0.258 秒；t_calc = -4.2 / 0.258 = -16.28。判定不拒绝 H0。'
+  - 'C: t_calc = -4.20；判定不拒绝 H0，因为 15 位受训人员少于中心极限定理所要求的 30 人阈值。'
+  - 'D: t_calc = -4.2 / 3.873 = -1.084。判定不拒绝 H0：特训未产生可衡量的实质影响。'
+  options_zh_hk:
+  - 'A: SE_D = 3.873 / 根號(15) = 1.00 秒；t_calc = (-4.2 - 0) / 1.00 = -4.20。因 |-4.20| > 2.145（p = 0.0009），堅決拒絕 H0：特訓提速效果獲得鐵證證實。'
+  - 'B: SE_D = 3.873 / 15 = 0.258 秒；t_calc = -4.2 / 0.258 = -16.28。判定唔拒絕 H0。'
+  - 'C: t_calc = -4.20；判定唔拒絕 H0，因為 15 位受訓人員少過中心極限定理所要求嘅 30 人閾值。'
+  - 'D: t_calc = -4.2 / 3.873 = -1.084。判定唔拒絕 H0：特訓未產生可衡量嘅實質影響。'
+  answer: A
+  explanation_en: SE_D = 3.873 / sqrt(15) ≈ 1.000. Thus t ≈ -4.20. With 14 degrees of freedom, the two-sided p-value is approximately
+    0.0009.
+  explanation_zh: 差值标准误 SE_D = s_D / 根号(n) = 3.873 / 3.873 = 1.00 秒。检验统计量 t = (-4.20 - 0) / 1.00 = -4.20。自由度 df = 14 时双尾临界值为
+    2.145。因绝对值 4.20 远超 2.145，断然推翻原假设（p = 0.0009）。特训扎扎实实砍掉了四秒以上的出餐耗时。
+  explanation_zh_hk: 差值標準誤 SE_D = s_D / 根號(n) = 3.873 / 3.873 = 1.00 秒。檢驗統計量 t = (-4.20 - 0) / 1.00 = -4.20。自由度 df = 14 嗰陣雙尾臨界值為
+    2.145。因絕對值 4.20 遠超 2.145，斷然推翻原假設（p = 0.0009）。特訓扎扎實實斬跌咗四秒以上嘅出餐耗時。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  kicker_en: The Barista Academy Experiment
+  kicker_zh: 咖啡师集训提速考
+  kicker_zh_hk: 咖啡師集訓提速考
+  title_en: What changed within the same operational units?
+  title_zh: 同一批经营单元内部发生了什么变化？
+  title_zh_hk: 同一批營運單元內部發生咗咩變化？
+  en: 'Metro Coffee is evaluating an assumed workflow-training program by measuring preparation time on the same 15 operational
+    units before and after training. Comparing unrelated before and after groups would mix the training question with pre-existing
+    differences between units. Pairing preserves the match and asks a cleaner question: what is the average within-unit change?'
+  zh: 都市咖啡正在评估一项假设的工作流程培训，并对同一批 15 个经营单元在培训前后测量制作时间。比较彼此无关的前后两组，会把培训问题与单元原有差异混在一起。配对保留匹配关系，并提出更清晰的问题：单元内部的平均变化是多少？
+  zh_hk: 都市咖啡正評估一項假設嘅工作流程培訓，並對同一批 15 個營運單元喺培訓前後量度製作時間。比較彼此無關嘅前後兩組，會將培訓問題同單元原有差異混埋一齊。配對保留匹配關係，並提出更清晰嘅問題：單元內部嘅平均變化係幾多？
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: Reduce each matched pair to one difference
+  title_zh: 把每个匹配对转化为一个差值
+  title_zh_hk: 將每個匹配對轉化成一個差值
+  formula: D_i = X_after,i - X_before,i; t = (D-bar - Delta_0) / (s_D / sqrt(n)); df = n - 1
+  formula_zh: D_i = X_after,i - X_before,i；t = (D-bar - Delta_0) / (s_D / √n)；df = n - 1
+  formula_zh_hk: D_i = X_after,i - X_before,i；t = (D-bar - Delta_0) / (s_D / √n)；df = n - 1
+  formula_tex: t=\frac{\bar D-\Delta_0}{s_D/\sqrt n},\qquad df=n-1
+  s1_en: A paired design links two observations from the same unit or a deliberately matched pair. Define the difference direction
+    before analysis. Here, after minus before means a negative difference represents a shorter preparation time.
+  s1_zh: 配对设计把来自同一单元或刻意匹配单元的两个观测联系起来。分析前应先定义差值方向。在本例中，训后减训前，因此负差值表示制作时间缩短。
+  s1_zh_hk: 配對設計將來自同一單元或者刻意匹配單元嘅兩個觀測連繫起嚟。分析之前應該先定義差值方向。喺本例入面，訓後減訓前，所以負差值表示製作時間縮短。
+  s2_en: Once the differences are calculated, the analysis is a one-sample t-test on the difference scores. The parameter
+    is the population mean difference mu_D, and the standard error uses the sample standard deviation of differences, not
+    the separate before and after standard deviations.
+  s2_zh: 计算差值后，分析就是针对差值分数的单样本 t 检验。参数是总体平均差值 mu_D，标准误使用差值的样本标准差，而不是分别使用前测与后测标准差。
+  s2_zh_hk: 計算差值之後，分析就係針對差值分數嘅單樣本 t 檢驗。參數係總體平均差值 mu_D，標準誤使用差值嘅樣本標準差，而唔係分別使用前測同後測標準差。
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  kicker_en: The Noise Annihilation
+  kicker_zh: 杂音湮灭
+  kicker_zh_hk: 雜音湮滅
+  title_en: Pairing helps only when the match is valid and informative
+  title_zh: 只有匹配有效且有信息时，配对才有帮助
+  title_zh_hk: 只有匹配有效而且有資訊嗰陣，配對先有幫助
+  left_en: 'Valid pairing: same unit, consistent outcome, complete correspondence'
+  left_zh: 有效配对：同一单元、结果定义一致、对应关系完整
+  left_zh_hk: 有效配對：同一單元、結果定義一致、對應關係完整
+  right_en: 'Invalid pairing: mismatched units, carryover, time trends, dependent pairs'
+  right_zh: 无效配对：单元错配、延续效应、时间趋势、配对间依赖
+  right_zh_hk: 無效配對：單元錯配、延續效應、時間趨勢、配對之間依賴
+  s1_en: Pairing can improve precision when before and after outcomes from the same unit are positively related, because stable
+    unit-level differences cancel in the subtraction. The gain is not guaranteed and depends on the covariance within pairs.
+  s1_zh: 当同一单元的前后结果正相关时，配对可以提高精度，因为稳定的单元层面差异会在相减中抵消。精度提升并非保证，而取决于配对内协方差。
+  s1_zh_hk: 當同一單元嘅前後結果正相關嗰陣，配對可以提高精度，因為穩定嘅單元層面差異會喺相減入面抵消。精度提升並非保證，而係取決於配對內協方差。
+  s2_en: Pairing does not eliminate all noise or isolate a pure treatment effect. Period effects, demand changes, practice,
+    instrumentation, attrition, and other simultaneous changes can also affect the differences. Causal interpretation requires
+    a design that addresses those alternatives.
+  s2_zh: 配对不会消除所有噪声，也不会自动隔离纯粹处理效应。时段效应、需求变化、练习、测量工具、样本流失与其他同期变化也会影响差值。因果解释需要能够处理这些替代解释的设计。
+  s2_zh_hk: 配對唔會消除所有雜音，亦唔會自動隔離純粹處理效應。時段效應、需求變化、練習、量度工具、樣本流失同其他同期變化都會影響差值。因果解讀需要能夠處理呢啲替代解釋嘅設計。
+  s3_en: The observations across pairs should be independent, and for a small sample the distribution of differences should
+    not show severe skewness or influential outliers. The assumptions concern the differences, not the separate marginal distributions.
+  s3_zh: 不同配对之间的观测应相互独立；对于小样本，差值分布不应存在严重偏斜或强影响异常值。这些假设针对差值，而不是分别针对两个边际分布。
+  s3_zh_hk: 唔同配對之間嘅觀測應該互相獨立；對於細樣本，差值分佈唔應該存在嚴重偏斜或者強影響異常值。呢啲假設針對差值，而唔係分別針對兩個邊際分佈。
+- id: ledger
+  visual: steps
+  seconds: 38
+  kicker_en: The Ledger
+  kicker_zh: 台账实录
+  kicker_zh_hk: 台賬實錄
+  title_en: Execute the assumed paired-difference test
+  title_zh: 执行假设配对差值检验
+  title_zh_hk: 執行假設配對差值檢驗
+  step1_en: Define D = after - before; n = 15 pairs, D-bar = -4.20 s, s_D = 3.873 s, df = 14
+  step1_zh: 定义 D = 训后 - 训前；n = 15 对，D-bar = -4.20 s，s_D = 3.873 s，df = 14
+  step1_zh_hk: 定義 D = 訓後 - 訓前；n = 15 對，D-bar = -4.20 s，s_D = 3.873 s，df = 14
+  step2_en: SE_D = 3.873 / sqrt(15) ≈ 1.000 s; t = (-4.20 - 0) / 1.000 ≈ -4.20
+  step2_zh: SE_D = 3.873 / √15 ≈ 1.000 s；t = (-4.20 - 0) / 1.000 ≈ -4.20
+  step2_zh_hk: SE_D = 3.873 / √15 ≈ 1.000 s；t = (-4.20 - 0) / 1.000 ≈ -4.20
+  step3_en: 'Two-sided critical magnitude = 2.145; p ≈ 0.0009; reject H0: mu_D = 0 at alpha = 0.05'
+  step3_zh: '双侧临界绝对值 = 2.145；p ≈ 0.0009；在 alpha = 0.05 时拒绝 H0: mu_D = 0'
+  step3_zh_hk: '雙側臨界絕對值 = 2.145；p ≈ 0.0009；喺 alpha = 0.05 嗰陣拒絕 H0: mu_D = 0'
+  s1_en: For illustration, assume 15 valid matched units have a mean after-minus-before difference of minus 4.20 seconds and
+    a sample standard deviation of differences of 3.873 seconds. These are teaching assumptions, not verified training, store,
+    cost, or employee-performance records.
+  s1_zh: 作为示例，假设 15 个有效匹配单元的训后减训前平均差值为负 4.20 秒，差值样本标准差为 3.873 秒。这些数字是教学假设，并非已核实的培训、门店、成本或员工表现记录。
+  s1_zh_hk: 作為例子，假設 15 個有效匹配單元嘅訓後減訓前平均差值係負 4.20 秒，差值樣本標準差係 3.873 秒。呢啲數字係教學假設，唔係已核實嘅培訓、門市、成本或者員工表現記錄。
+  s2_en: The estimated standard error is 3.873 divided by the square root of 15, approximately 1.000 second. Standardizing
+    the mean difference gives t approximately minus 4.20 with 14 degrees of freedom.
+  s2_zh: 估计标准误为 3.873 除以根号 15，约为 1.000 秒。把平均差值标准化后，得到 t 约为负 4.20，自由度为 14。
+  s2_zh_hk: 估計標準誤係 3.873 除以根號 15，約係 1.000 秒。將平均差值標準化之後，得到 t 約係負 4.20，自由度係 14。
+  s3_en: Because the absolute t statistic exceeds 2.145, reject a zero population mean difference at the 5% two-sided level;
+    the p-value is approximately 0.0009. Under the assumptions, the evidence supports a negative mean after-minus-before difference.
+    It does not by itself prove that training caused the change or justify a rollout.
+  s3_zh: 由于 t 统计量绝对值超过 2.145，在 5% 双侧水平拒绝总体平均差值为零；p 值约为 0.0009。在既定假设下，证据支持训后减训前的总体平均差值为负。它本身不能证明培训导致变化，也不能直接支持推广。
+  s3_zh_hk: 由於 t 統計量絕對值超過 2.145，喺 5% 雙側水平拒絕總體平均差值係零；p 值約係 0.0009。喺既定假設之下，證據支持訓後減訓前嘅總體平均差值係負。佢本身唔可以證明培訓導致變化，亦唔可以直接支持推廣。
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Analyze differences, preserve the match, and limit the claim
+  title_zh: 分析差值、保留匹配关系，并限定结论
+  title_zh_hk: 分析差值、保留匹配關係，並限定結論
+  q1_en: When can pairing improve precision, and when can it fail?
+  q1_zh: 配对何时能提高精度，何时可能失效？
+  q1_zh_hk: 配對幾時可以提高精度，幾時可能失效？
+  q2_en: What evidence is needed before attributing a before-after change to training?
+  q2_zh: 把前后变化归因于培训前，还需要什么证据？
+  q2_zh_hk: 將前後變化歸因於培訓之前，仲需要咩證據？
+  s1_en: Pairing is useful when the correspondence is valid and within-pair outcomes are informative about one another. Mismatching
+    units destroys the design, while weak or negative within-pair association may provide little or no precision gain.
+  s1_zh: 当对应关系有效且配对内两个结果彼此提供信息时，配对很有用。单元错配会破坏设计，而较弱或负的配对内关联可能几乎不带来精度提升。
+  s1_zh_hk: 當對應關係有效而且配對內兩個結果彼此提供資訊嗰陣，配對好有用。單元錯配會破壞設計，而較弱或者負嘅配對內關聯可能幾乎唔帶嚟精度提升。
+  s2_en: Before causal attribution, examine concurrent changes, time trends, practice effects, measurement consistency, missing
+    pairs, and whether a comparison or randomized design was used. Report the mean difference, confidence interval, t statistic,
+    p-value, and assumptions separately from operational recommendations.
+  s2_zh: 在作出因果归因前，应检查同期变化、时间趋势、练习效应、测量一致性、缺失配对，以及是否使用比较组或随机设计。应把平均差值、置信区间、t 统计量、p 值与假设同经营建议分开报告。
+  s2_zh_hk: 喺作出因果歸因之前，應該檢查同期變化、時間趨勢、練習效應、量度一致性、缺失配對，以及係咪使用比較組或者隨機設計。應該將平均差值、置信區間、t 統計量、p 值同假設同營運建議分開報告。
+  s3_en: For the assumed paired sample, t is approximately minus 4.20 with 14 degrees of freedom and p approximately 0.0009,
+    so the 5% two-sided test rejects a zero mean difference. The narrow conclusion is evidence of an average within-unit decrease
+    under the stated design and assumptions.
+  s3_zh: 在假设配对样本中，t 约为负 4.20，自由度为 14，p 约为 0.0009，因此 5% 双侧检验拒绝平均差值为零。谨慎结论是：在既定设计与假设下，有证据表明单元内部平均值下降。
+  s3_zh_hk: 喺假設配對樣本入面，t 約係負 4.20，自由度係 14，p 約係 0.0009，所以 5% 雙側檢驗拒絕平均差值係零。審慎結論係：喺既定設計同假設之下，有證據表明單元內部平均值下降。

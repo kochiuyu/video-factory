@@ -1,0 +1,199 @@
+id: STAT-M06-T09-SLPSE
+course: STAT-M06
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Standard Error of the OLS Slope: Quantifying Sampling Precision'
+title_zh: OLS 斜率标准误：量化抽样精度
+title_zh_hk: OLS 斜率標準誤：量化抽樣精度
+objective_en: Calculate the estimated standard error of the simple-regression OLS slope, explain how residual spread and predictor
+  dispersion affect precision, interpret its units correctly, distinguish a standard error from a confidence interval or causal
+  effect, and evaluate design choices without encouraging biased or unsafe sampling.
+objective_zh: 计算简单回归 OLS 斜率的估计标准误，解释残差离散与预测变量离散度如何影响精度，正确解读其单位，区分标准误、置信区间与因果效应，并在不鼓励有偏或不安全抽样的前提下评估设计选择。
+objective_zh_hk: 計算簡單回歸 OLS 斜率嘅估計標準誤，解釋殘差離散同預測變量離散度點樣影響精度，正確解讀佢嘅單位，區分標準誤、置信區間同因果效應，並喺唔鼓勵有偏或者唔安全抽樣嘅前提之下評估設計選擇。
+glossary:
+- en: Sampling Distribution of Slope
+  zh: 斜率抽样分布
+  zh_hk: 斜率抽樣分佈
+  lock: true
+- en: Standard Error of the Slope
+  zh: 斜率标准误
+  zh_hk: 斜率標準誤
+  lock: true
+- en: Explanatory Dispersion
+  zh: 解释变量离散度
+  zh_hk: 解釋變量離散度
+  lock: true
+- en: Estimation Precision
+  zh: 估计精度
+  zh_hk: 估計精度
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Which combination produces a smaller estimated standard error for the simple-regression slope?
+  question_zh: 以下哪种运营审计条件能够使回归斜率估计标准误 SE(beta_1_hat) 达到最小？
+  question_zh_hk: 以下邊一種營運審計條件能夠令回歸斜率估計標準誤 SE(beta_1_hat) 減到最細？
+  options_en:
+  - 'A: Auditing stores with virtually identical foot traffic clustered tightly around the mean'
+  - 'B: Lower residual standard error and greater valid centered variation in X'
+  - 'C: Increasing the magnitude of the estimated intercept beta_0_hat'
+  - 'D: Reducing the total sample size of audited branches to three'
+  options_zh:
+  - 'A: 仅审计客流量高度聚集在均值附近的相似门店'
+  - 'B: 极低的残差方差 s_e 结合客流量的高度离散分布 Sum((X_i - X_bar)^2)'
+  - 'C: 人为提高截距估计量 beta_0_hat 的绝对数值'
+  - 'D: 将审计的分店样本量缩减至三家'
+  options_zh_hk:
+  - 'A: 淨係審計人流量高度集中喺平均值附近嘅相似分店'
+  - 'B: 極低嘅殘差方差 s_e 配合人流量極度分散嘅離散分佈 Sum((X_i - X_bar)^2)'
+  - 'C: 人為調高截距估計量 beta_0_hat 嘅絕對數值'
+  - 'D: 將審計嘅分店樣本量縮減到得返三間'
+  answer: B
+  explanation_en: The formula places residual spread in the numerator and the square root of centered X variation in the denominator.
+    Validity and representativeness must still be preserved.
+  explanation_zh: 由公式 SE(beta_1_hat) = s_e / sqrt(Sum((X_i - X_bar)^2)) 可知，当残差噪声 s_e 越小且解释变量 X 的离散离差平方和越大时，标准误越小，估计精度越高。
+  explanation_zh_hk: 由公式 SE(beta_1_hat) = s_e / sqrt(Sum((X_i - X_bar)^2)) 可以睇到，當殘差雜音 s_e 越細而且解釋變量 X 嘅離均差平方和越大嗰陣，標準誤越細，估計精確度就越高。
+- id: Q2
+  type: multiple_choice
+  question_en: Assume s_e = 10 cups and Sum((X_i - X-bar)^2) = 2,500 pedestrians squared. What is SE(b_1)?
+  question_zh: Metro Coffee 拟合了一套模型，测得估计标准误 s_e = 10 杯。20 个门店班次的客流离均差平方和 Sum((X_i - X_bar)^2) 等于 2,500。斜率标准误 SE(beta_1_hat)
+    是多少？
+  question_zh_hk: Metro Coffee 擬合咗一套模型，測得估計標準誤 s_e = 10 杯。20 個門市排班嘅人流離均差平方和 Sum((X_i - X_bar)^2) 等於 2,500。斜率標準誤 SE(beta_1_hat)
+    係幾多？
+  options_en:
+  - 'A: 0.20 cups per pedestrian'
+  - 'B: 5.00 cups per pedestrian'
+  - 'C: 0.04 cups per pedestrian'
+  - 'D: 2.50 cups per pedestrian'
+  options_zh:
+  - 'A: 0.20 杯/人次'
+  - 'B: 5.00 杯/人次'
+  - 'C: 0.04 杯/人次'
+  - 'D: 2.50 杯/人次'
+  options_zh_hk:
+  - 'A: 0.20 杯/人次'
+  - 'B: 5.00 杯/人次'
+  - 'C: 0.04 杯/人次'
+  - 'D: 2.50 杯/人次'
+  answer: A
+  explanation_en: SE(b_1) = 10/sqrt(2,500) = 10/50 = 0.20 cups per pedestrian.
+  explanation_zh: SE(beta_1_hat) = s_e / sqrt(Sum((X_i - X_bar)^2)) = 10 / sqrt(2,500) = 10 / 50 = 0.20 杯/人次。
+  explanation_zh_hk: SE(beta_1_hat) = s_e / sqrt(Sum((X_i - X_bar)^2)) = 10 / sqrt(2,500) = 10 / 50 = 0.20 杯/人次。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  title_en: How precisely has the sample slope been estimated?
+  title_zh: 样本斜率的估计有多精确？
+  title_zh_hk: 樣本斜率嘅估計有幾精確？
+  en: Metro Coffee is reviewing an assumed simple regression of store-day cup sales on pedestrian traffic. The fitted slope
+    is 0.28 cups per pedestrian, but another representative sample would generally produce a different estimate. The slope
+    standard error measures that estimated sampling uncertainty under the regression assumptions. It does not turn the slope
+    into a causal conversion rate or a guaranteed commercial return.
+  zh: 都市咖啡正在审视一项假设的简单回归，以行人客流解释门店日杯数销量。拟合斜率为每名行人 0.28 杯，但另一组具有代表性的样本通常会产生不同估计。斜率标准误在回归假设下衡量这种估计抽样不确定性。它不会把斜率转化为因果转化率或有保证的商业回报。
+  zh_hk: 都市咖啡正審視一項假設嘅簡單回歸，以行人人流解釋門市日杯數銷量。擬合斜率係每名行人 0.28 杯，但另一組具有代表性嘅樣本通常會產生唔同估計。斜率標準誤喺回歸假設之下量度呢種估計抽樣不確定性。佢唔會將斜率轉化成因果轉化率或者有保證嘅商業回報。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: SE(b_1) = s_e / sqrt[Sum((X_i - X-bar)^2)]
+  formula_zh: SE(b_1) = s_e / √[Σ(X_i - X-bar)^2]
+  formula_zh_hk: SE(b_1) = s_e / √[Σ(X_i - X-bar)^2]
+  formula_tex: \operatorname{SE}(b_1)=\frac{s_e}{\sqrt{\sum_{i=1}^{n}(X_i-\bar X)^2}}
+  s1_en: The numerator is the residual standard error, which estimates the outcome noise around the fitted line. More residual
+    spread makes the slope harder to pin down and increases its estimated standard error.
+  s1_zh: 分子是残差标准误，用于估计拟合线周围的结果噪声。残差离散越大，斜率越难精确确定，其估计标准误也越大。
+  s1_zh_hk: 分子係殘差標準誤，用嚟估計擬合線周圍嘅結果雜音。殘差離散越大，斜率越難精確確定，佢嘅估計標準誤亦越大。
+  s2_en: The denominator is the square root of the centered sum of squares for X. Greater predictor variation supplies more
+    geometric information about the tilt of the line and lowers the standard error, provided the extra range belongs to the
+    target population and the linear specification remains credible.
+  s2_zh: 分母是 X 中心化离差平方和的平方根。更大的预测变量变异为直线倾斜程度提供更多几何信息，从而降低标准误，前提是新增范围属于目标总体，且线性设定仍然可信。
+  s2_zh_hk: 分母係 X 中心化離差平方和嘅平方根。更大嘅預測變量變異為直線傾斜程度提供更多幾何資訊，從而降低標準誤，前提係新增範圍屬於目標總體，而且線性設定仍然可信。
+  title_en: Precision improves with lower residual spread and wider X variation
+  title_zh: 残差离散降低、X 变异扩大时，精度提高
+  title_zh_hk: 殘差離散降低、X 變異擴大嗰陣，精度提高
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  left_en: Precision drivers
+  left_zh: 精度驱动因素
+  right_en: Validity safeguards
+  right_zh: 有效性保障
+  s1_en: Precision can improve through lower measurement noise, a larger representative sample, and meaningful spread in X.
+    Because centered X variation generally grows with both sample size and dispersion, the formula reflects more than simple
+    headcount.
+  s1_zh: 通过降低测量噪声、扩大具有代表性的样本，以及获得有意义的 X 离散，可以提高精度。由于中心化 X 变异通常同时随样本量与离散度增长，该公式反映的不只是样本个数。
+  s1_zh_hk: 透過降低量度雜音、擴大具有代表性嘅樣本，以及獲得有意義嘅 X 離散，可以提高精度。由於中心化 X 變異通常同時隨樣本量同離散度增長，呢個公式反映嘅唔只係樣本個數。
+  s2_en: Deliberately selecting only extreme X values can change the target population, magnify leverage, and hide nonlinearity.
+    A wider range is helpful only when observations are valid, safely obtained, and relevant to the inference being made.
+  s2_zh: 刻意只选择极端 X 值可能改变目标总体、放大杠杆并掩盖非线性。只有当观测有效、获取方式安全且与目标推断相关时，更宽范围才有帮助。
+  s2_zh_hk: 刻意只選擇極端 X 值可能改變目標總體、放大槓桿並掩蓋非線性。只有當觀測有效、獲取方式安全而且同目標推斷相關嗰陣，更闊範圍先有幫助。
+  s3_en: The standard error has the same units as the slope, such as cups per pedestrian. It is not itself a plus-or-minus
+    interval. Confidence bounds require a critical value and degrees of freedom, and causal interpretation requires an appropriate
+    research design.
+  s3_zh: 标准误与斜率具有相同单位，例如杯每名行人。它本身不是正负区间。置信界限还需要临界值与自由度，而因果解释需要适当研究设计。
+  s3_zh_hk: 標準誤同斜率具有相同單位，例如杯每名行人。佢本身唔係正負區間。置信界限仲需要臨界值同自由度，而因果解讀需要適當研究設計。
+  left_zh_hk: 精度驅動因素
+  right_zh_hk: 有效性保障
+  title_en: Design can improve precision only if validity is preserved
+  title_zh: 只有保持有效性，设计才能提高精度
+  title_zh_hk: 只有保持有效性，設計先可以提高精度
+- id: ledger
+  visual: steps
+  seconds: 38
+  step1_en: 'Teaching assumptions: s_e = 10 cups and Sum((X_i - X-bar)^2) = 2,500 pedestrian^2'
+  step1_zh: 教学假设：s_e = 10 杯，Σ(X_i - X-bar)^2 = 2,500 行人^2
+  step2_en: sqrt(2,500) = 50 pedestrians
+  step2_zh: √2,500 = 50 名行人
+  step3_en: SE(b_1) = 10/50 = 0.20 cups per pedestrian
+  step3_zh: SE(b_1) = 10/50 = 每名行人 0.20 杯
+  s1_en: For illustration, assume the fitted simple regression has residual standard error 10 cups and centered traffic sum
+    of squares 2,500 pedestrians squared. These are teaching assumptions, not verified branch, traffic, sales, lease, or employee-performance
+    records.
+  s1_zh: 作为示例，假设拟合简单回归的残差标准误为 10 杯，中心化客流平方和为 2,500 行人平方。这些数字是教学假设，并非已核实的门店、客流、销售、租约或员工表现记录。
+  s1_zh_hk: 作為例子，假設擬合簡單回歸嘅殘差標準誤係 10 杯，中心化人流平方和係 2,500 行人平方。呢啲數字係教學假設，唔係已核實嘅門市、人流、銷售、租約或者員工表現記錄。
+  s2_en: The denominator is 50 pedestrians. Dividing 10 cups by 50 pedestrians gives an estimated slope standard error of
+    0.20 cups per pedestrian. The units confirm that this measures uncertainty in a slope, not residual outcome spread.
+  s2_zh: 分母为 50 名行人。用 10 杯除以 50 名行人，得到斜率估计标准误为每名行人 0.20 杯。单位确认该指标衡量斜率不确定性，而不是结果残差离散。
+  s2_zh_hk: 分母係 50 名行人。用 10 杯除以 50 名行人，得到斜率估計標準誤係每名行人 0.20 杯。單位確認呢個指標量度斜率不確定性，而唔係結果殘差離散。
+  s3_en: The defensible conclusion is an estimated sampling-uncertainty scale of 0.20 cups per pedestrian under the model
+    assumptions. It is incorrect to state that the slope is automatically plus or minus 0.20 or that this uncertainty proves
+    the effect is nonzero.
+  s3_zh: 可辩护结论是：在模型假设下，斜率的估计抽样不确定性尺度为每名行人 0.20 杯。不能说斜率自动落在正负 0.20 内，也不能说该不确定性证明效应不为零。
+  s3_zh_hk: 可辯護結論係：喺模型假設之下，斜率嘅估計抽樣不確定性尺度係每名行人 0.20 杯。唔可以話斜率自動落喺正負 0.20 之內，亦唔可以話呢個不確定性證明效應唔等於零。
+  step1_zh_hk: 教學假設：s_e = 10 杯，Σ(X_i - X-bar)^2 = 2,500 行人^2
+  step2_zh_hk: √2,500 = 50 名行人
+  step3_zh_hk: SE(b_1) = 10/50 = 每名行人 0.20 杯
+  title_en: Calculate the slope standard error for an assumed design
+  title_zh: 计算假设设计下的斜率标准误
+  title_zh_hk: 計算假設設計之下嘅斜率標準誤
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  q1_en: What reduces the slope standard error?
+  q1_zh: 什么会降低斜率标准误？
+  q2_en: What must accompany the standard error before making a claim?
+  q2_zh: 作出结论前，标准误还需要搭配什么？
+  s1_en: Lower residual spread and greater valid centered variation in X reduce the estimated slope standard error. Larger
+    samples often help because they add information, but sampling must remain representative and consistent with the target
+    estimand.
+  s1_zh: 较低的残差离散与更大的有效 X 中心化变异会降低斜率估计标准误。更大样本通常有帮助，因为它增加信息，但抽样仍需具有代表性并与目标估计量一致。
+  s1_zh_hk: 較低嘅殘差離散同更大嘅有效 X 中心化變異會降低斜率估計標準誤。更大樣本通常有幫助，因為佢增加資訊，但抽樣仍然需要具有代表性並同目標估計量一致。
+  s2_en: Use the standard error with the slope estimate, residual degrees of freedom, a prespecified test or confidence procedure,
+    diagnostics, and the research design. Statistical precision does not establish practical importance or causality.
+  s2_zh: 应把标准误与斜率估计、残差自由度、预先指定的检验或置信程序、诊断与研究设计一起使用。统计精度不能证明实际重要性或因果关系。
+  s2_zh_hk: 應該將標準誤同斜率估計、殘差自由度、預先指定嘅檢驗或者置信程序、診斷同研究設計一齊使用。統計精度唔可以證明實際重要性或者因果關係。
+  s3_en: For the assumed design, SE(b_1) equals 0.20 cups per pedestrian. Report the assumptions and units, then use an appropriate
+    inferential procedure rather than treating one standard error as a decision boundary.
+  s3_zh: 在假设设计中，SE(b_1) 等于每名行人 0.20 杯。应报告假设与单位，再使用适当推断程序，而不是把一个标准误当作决策边界。
+  s3_zh_hk: 喺假設設計入面，SE(b_1) 等於每名行人 0.20 杯。應該報告假設同單位，再使用適當推斷程序，而唔係將一個標準誤當作決策邊界。
+  q1_zh_hk: 咩會降低斜率標準誤？
+  q2_zh_hk: 作出結論之前，標準誤仲需要配合咩？
+  title_en: Precision comes from signal-rich, valid data, not extremes alone
+  title_zh: 精度来自信息充足且有效的数据，而非单纯极端值
+  title_zh_hk: 精度來自資訊充足而且有效嘅數據，而唔係單純極端值

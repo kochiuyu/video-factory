@@ -1,5 +1,0 @@
-file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-M01-IN/cells/ACC-M01-IN_zhhk.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-EQ-01/cells/ACC-EQ-01_zhhk.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-DC-01/cells/ACC-DC-01_zhhk.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-AC-01/cells/ACC-AC-01_zhhk.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-M01-OUT/cells/ACC-M01-OUT_zhhk.mp4'

@@ -1,0 +1,227 @@
+id: STAT-M05-T13-PROP2
+course: STAT-M05
+course_en: Hypothesis Testing & Store Experiments
+course_zh: 假设检验与门店运营实验
+course_zh_hk: 假設檢驗與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The Two-Sample Proportion Z-Test: Comparing Independent Conversion Rates'
+title_zh: 双样本比例 Z 检验：比较两个独立转化率
+title_zh_hk: 雙樣本比例 Z 檢驗：比較兩個獨立轉化率
+objective_en: Formulate and execute a pooled two-sample proportion Z-test for two independent conversion rates, explain why
+  the null standard error uses a pooled proportion, verify the large-count condition using expected successes and failures
+  under H0, and interpret an assumed kiosk-versus-counter comparison without converting statistical significance into staffing,
+  causal, or rollout conclusions.
+objective_zh: 构建并执行两个独立转化率的合并双样本比例 Z 检验，解释原假设标准误为何使用合并比例，利用 H0 下的期望成功与失败次数核验大计数条件，并解释假设的点单机与柜台比较，同时避免把统计显著性转化为人员配置、因果或推广结论。
+objective_zh_hk: 構建並執行兩個獨立轉化率嘅合併雙樣本比例 Z 檢驗，解釋原假設標準誤點解使用合併比例，利用 H0 之下嘅期望成功同失敗次數核驗大計數條件，並解讀假設嘅點單機同櫃台比較，同時避免將統計顯著性轉化成人員配置、因果或者推廣結論。
+glossary:
+- en: two-sample proportion test
+  zh: 双样本比例检验
+  zh_hk: 雙樣本比例檢驗
+  lock: true
+- en: pooled sample proportion
+  zh: 合并样本比例
+  zh_hk: 合併樣本比例
+  lock: true
+- en: upsell conversion rate
+  zh: 加购转化率/升单率
+  zh_hk: 加購轉化率/升單率
+  lock: true
+- en: pooling logic under H0
+  zh: 原假设下的合并逻辑
+  zh_hk: 原假設下嘅合併邏輯
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: 'Why is a pooled proportion used in the standard two-sample test of H0: p1 = p2?'
+  question_zh: 在双样本比例假设检验中，为什么分析师在标准误分母中必须计算单一的合并比例 p_pool = (X1 + X2) / (n1 + n2)，而在构建两比例之差 (p1 - p2) 的置信区间时却采用各自独立的非合并比例？
+  question_zh_hk: 喺雙樣本比例假設檢驗入面，點解分析師喺標準誤分母入面必須計算單一嘅合併比例 p_pool = (X1 + X2) / (n1 + n2)，而喺構建兩比例之差 (p1 - p2) 嘅置信區間嗰陣卻採用各自獨立嘅非合併比例？
+  options_en:
+  - 'A: Under H0 both groups share one population proportion, so pooling all successes and trials estimates the common rate
+    used in the null standard error.'
+  - 'B: Because confidence intervals only apply to continuous dollar revenue, while hypothesis tests only apply to discrete
+    integer counts.'
+  - 'C: Because digital touchscreen kiosks produce binary data that legally overrides the Central Limit Theorem.'
+  - 'D: Because unpooled proportions cause division-by-zero crashes in statistical spreadsheets.'
+  options_zh:
+  - 'A: 原假设明确假定 p1 = p2 = p（两组无差异）；既然在 H0 为真的前提下两组共享完全相同的真实参数，整合所有成功次数除以总样本量的合并比例就是对该共同参数的最优无偏估计。'
+  - 'B: 因为置信区间在商业法规上仅适用于连续型货币营收，而假设检验仅适用于离散整数计数。'
+  - 'C: 因为智能触控屏点单机生成的二元数据在计量法上自动豁免中心极限定理。'
+  - 'D: 因为直接采用各自独立的非合并比例会在统计学电子表格中引发除以零的致命错误。'
+  options_zh_hk:
+  - 'A: 原假設明確假定 p1 = p2 = p（兩組無差異）；既然喺 H0 為真嘅前提下兩組共享完全相同嘅真實參數，整合所有成功次數除以總樣本量嘅合併比例就係對嗰個共同參數嘅最優無偏估計。'
+  - 'B: 因為置信區間喺商業法規上淨係適用於連續型貨幣營收，而假設檢驗淨係適用於離散整數計數。'
+  - 'C: 因為智能觸控屏點單機生成嘅二元數據喺計量法上自動豁免中心極限定理。'
+  - 'D: 因為直接採用各自獨立嘅非合併比例會喺統計學電子表格入面引發除以零嘅致命錯誤。'
+  answer: A
+  explanation_en: Pooling follows from the equality null. A confidence interval usually uses separate proportions because
+    it does not impose p1 = p2.
+  explanation_zh: '在假设检验中，我们在立案时假定原假设 H0: p1 = p2 为真。在此基准下，两组背后只存在一个唯一的共同参数 p，因此必须合并全部样本求出最优估计量 p_pool。而在置信区间构建中，我们预先未作任何相等假设，故必须保留各自独立的离散度。'
+  explanation_zh_hk: '喺假設檢驗入面，我哋喺立案嗰陣假定原假設 H0: p1 = p2 為真。喺呢個基準下，兩組背後淨係存在一個唯一嘅共同參數 p，因此必須合併全部樣本求出最優估計量 p_pool。而喺置信區間構建入面，我哋預先未作任何相等假設，故必須保留各自獨立嘅離散度。'
+- id: Q2
+  type: multiple_choice
+  question_en: 'Assume independent groups with X1 = 160 of n1 = 400 and X2 = 105 of n2 = 350. What is the two-sided pooled
+    Z-test result for H0: p1 = p2?'
+  question_zh: 在机场航站楼店，通道 A（触控点单机）在 n1 = 400 笔订单中录得 X1 = 160 笔加购点心（p1_hat = 0.40）。通道 B（人工收银台）在 n2 = 350 笔订单中录得 X2 = 105 笔加购（p2_hat
+    = 0.30）。在 alpha = 0.05 双尾基准下，合并比例 p_pool、Z_calc 与运营裁决分别是什么？
+  question_zh_hk: 喺機場航站樓舖，通道 A（觸控點單機）喺 n1 = 400 筆訂單入面錄得 X1 = 160 筆加購點心（p1_hat = 0.40）。通道 B（人工收銀台）喺 n2 = 350 筆訂單入面錄得 X2 = 105
+    筆加購（p2_hat = 0.30）。喺 alpha = 0.05 雙尾基準下，合併比例 p_pool、Z_calc 與營運裁決分別係幾多？
+  options_en:
+  - 'A: p_pool ≈ 0.3533; SE_pool ≈ 0.0350; Z ≈ 2.86; p ≈ 0.0042; reject H0 at alpha = 0.05.'
+  - 'B: p_pool = (0.40 + 0.30) / 2 = 0.3500; SE_pool = 0.10; Z_calc = +1.00. Fail to reject H0.'
+  - 'C: Z_calc = (160 - 105) / sqrt(400 + 350) = 55 / 27.39 ≈ +2.01. Fail to reject H0.'
+  - 'D: Z_calc = +2.86; fail to reject H0 because human cashiers build stronger emotional connection than kiosks.'
+  options_zh:
+  - 'A: p_pool = 265 / 750 ≈ 0.3533；SE_pool = 根号(0.3533 × 0.6467 × (1/400 + 1/350)) ≈ 0.0350；Z_calc = (0.40 - 0.30) / 0.0350
+    ≈ +2.86。因 +2.86 > +1.96（p = 0.0042），拒绝 H0：数字点单机加购转化率显著碾压人工收银。'
+  - 'B: p_pool = (0.40 + 0.30) / 2 = 0.3500；SE_pool = 0.10；Z_calc = +1.00。判定不拒绝 H0。'
+  - 'C: Z_calc = (160 - 105) / 根号(400 + 350) = 55 / 27.39 ≈ +2.01。判定不拒绝 H0。'
+  - 'D: Z_calc = +2.86；判定不拒绝 H0，因为人工收银台建立的情感连接在商业战略上优先于机器效率。'
+  options_zh_hk:
+  - 'A: p_pool = 265 / 750 ≈ 0.3533；SE_pool = 根號(0.3533 × 0.6467 × (1/400 + 1/350)) ≈ 0.0350；Z_calc = (0.40 - 0.30) / 0.0350
+    ≈ +2.86。因 +2.86 > +1.96（p = 0.0042），拒絕 H0：數碼點單機加購轉化率顯著碾壓人工收銀。'
+  - 'B: p_pool = (0.40 + 0.30) / 2 = 0.3500；SE_pool = 0.10；Z_calc = +1.00。判定唔拒絕 H0。'
+  - 'C: Z_calc = (160 - 105) / 根號(400 + 350) = 55 / 27.39 ≈ +2.01。判定唔拒絕 H0。'
+  - 'D: Z_calc = +2.86；判定唔拒絕 H0，因為人工收銀台建立嘅情感連接喺商業戰略上優先於機器效率。'
+  answer: A
+  explanation_en: The pooled rate is 265/750 ≈ 0.3533. The pooled standard error is approximately 0.0350, so the 0.10 difference
+    gives Z ≈ 2.86 and a two-sided p-value around 0.0042.
+  explanation_zh: 加总加购次数 = 160 + 105 = 265。加总订单量 = 400 + 350 = 750。合并转化率 p_pool = 265 / 750 ≈ 0.3533。合并标准误 SE_pool = 根号(0.3533
+    × 0.6467 × (1/400 + 1/350)) ≈ 0.03499。标准化 Z = 0.10 / 0.03499 ≈ +2.86。因绝对值超越 1.96，断然推翻原假设（p = 0.0042）。
+  explanation_zh_hk: 加總加購次數 = 160 + 105 = 265。加總訂單量 = 400 + 350 = 750。合併轉化率 p_pool = 265 / 750 ≈ 0.3533。合併標準誤 SE_pool = 根號(0.3533
+    × 0.6467 × (1/400 + 1/350)) ≈ 0.03499。標準化 Z = 0.10 / 0.03499 ≈ +2.86。因絕對值超越 1.96，斷然推翻原假設（p = 0.0042）。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  kicker_en: The Man Versus Machine Test
+  kicker_zh: 人机对决的转化大考
+  kicker_zh_hk: 人機對決嘅轉化大考
+  title_en: Is a ten-percentage-point conversion gap larger than sampling variation?
+  title_zh: 十个百分点的转化率差异是否超过抽样波动？
+  title_zh_hk: 十個百分點嘅轉化率差異係咪超過抽樣波動？
+  en: Metro Coffee is comparing pastry add-on conversion in two assumed, independently assigned ordering channels. Channel
+    1 records 160 add-ons among 400 orders, while Channel 2 records 105 among 350. The observed rates are 40% and 30%. A two-sample
+    proportion Z-test evaluates whether this ten-percentage-point sample gap is difficult to reconcile with equal population
+    conversion rates.
+  zh: 都市咖啡正在比较两个假设且独立分配的点单渠道中的点心加购转化率。渠道 1 在 400 笔订单中录得 160 次加购，渠道 2 在 350 笔订单中录得 105 次。观测转化率分别为 40% 与 30%。双样本比例 Z 检验评估：这十个百分点的样本差距是否难以与两个总体转化率相等的模型相容。
+  zh_hk: 都市咖啡正比較兩個假設而且獨立分配嘅點單渠道入面嘅點心加購轉化率。渠道 1 喺 400 筆訂單入面錄得 160 次加購，渠道 2 喺 350 筆訂單入面錄得 105 次。觀測轉化率分別係 40% 同 30%。雙樣本比例 Z 檢驗評估：呢十個百分點嘅樣本差距係咪難以同兩個總體轉化率相等嘅模型相容。
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: Pool the proportion because H0 specifies one shared rate
+  title_zh: H0 指定共同转化率，因此检验标准误使用合并比例
+  title_zh_hk: H0 指定共同轉化率，所以檢驗標準誤使用合併比例
+  formula: p_pool = (X_1 + X_2) / (n_1 + n_2); Z = (p1-hat - p2-hat) / sqrt(p_pool(1-p_pool)(1/n_1 + 1/n_2))
+  formula_zh: p_pool = (X_1 + X_2) / (n_1 + n_2)；Z = (p1-hat - p2-hat) / √[p_pool(1-p_pool)(1/n_1 + 1/n_2)]
+  formula_zh_hk: p_pool = (X_1 + X_2) / (n_1 + n_2)；Z = (p1-hat - p2-hat) / √[p_pool(1-p_pool)(1/n_1 + 1/n_2)]
+  formula_tex: \hat p_{\mathrm{pool}}=\frac{X_1+X_2}{n_1+n_2},\qquad Z=\frac{\hat p_1-\hat p_2}{\sqrt{\hat p_{\mathrm{pool}}(1-\hat
+    p_{\mathrm{pool}})(1/n_1+1/n_2)}}
+  s1_en: The null hypothesis states p1 equals p2. Under that model, both groups share one unknown population proportion, so
+    all successes and trials are pooled to estimate the common rate used in the null standard error.
+  s1_zh: 原假设表示 p1 等于 p2。在该模型下，两组共享一个未知总体比例，因此把所有成功次数与试验次数合并，以估计原假设标准误所使用的共同转化率。
+  s1_zh_hk: 原假設表示 p1 等於 p2。喺呢個模型之下，兩組共享一個未知總體比例，所以將所有成功次數同試驗次數合併，以估計原假設標準誤所使用嘅共同轉化率。
+  s2_en: Pooling is specific to the standard equality test. A confidence interval for p1 minus p2 usually uses separate sample
+    proportions because interval estimation does not impose equality. Tests of nonzero null differences or other models require
+    a standard error matched to that hypothesis.
+  s2_zh: 合并比例专用于标准的两比例相等检验。p1 - p2 的置信区间通常使用各自样本比例，因为区间估计不强加相等条件。检验非零原假设差值或其他模型时，需要使用与该假设匹配的标准误。
+  s2_zh_hk: 合併比例專用於標準嘅兩比例相等檢驗。p1 - p2 嘅置信區間通常使用各自樣本比例，因為區間估計唔強加相等條件。檢驗非零原假設差值或者其他模型嗰陣，需要使用同嗰個假設匹配嘅標準誤。
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  kicker_en: The Pooling Logic
+  kicker_zh: 合并逻辑
+  kicker_zh_hk: 合併邏輯
+  title_en: Check independence and expected counts under the null model
+  title_zh: 检查独立性与原假设下的期望计数
+  title_zh_hk: 檢查獨立性同原假設之下嘅期望計數
+  left_en: 'Design: independent groups and independent observations within groups'
+  left_zh: 设计：组间独立，组内观测也应独立
+  left_zh_hk: 設計：組間獨立，組內觀測亦應該獨立
+  right_en: 'Large-count check under H0: n_i p_pool and n_i(1-p_pool) sufficiently large'
+  right_zh: H0 下大计数检查：n_i p_pool 与 n_i(1-p_pool) 足够大
+  right_zh_hk: H0 之下大計數檢查：n_i p_pool 同 n_i(1-p_pool) 足夠大
+  s1_en: The normal approximation requires enough expected successes and failures in each group under the null model. A common
+    classroom guideline checks at least ten of each, but the threshold is a rule of thumb rather than a universal guarantee.
+  s1_zh: 正态近似要求每组在原假设模型下都有足够的期望成功与失败次数。常见课堂准则检查每类至少 10 个，但该门槛是经验规则，而不是普遍保证。
+  s1_zh_hk: 正態近似要求每組喺原假設模型之下都有足夠嘅期望成功同失敗次數。常見課堂準則檢查每類至少 10 個，但呢個門檻係經驗規則，而唔係普遍保證。
+  s2_en: The observational unit must match the assignment and analysis. Multiple orders from the same customer, store, day,
+    or kiosk may be correlated. If assignment or outcomes are clustered, an ordinary two-sample proportion test can understate
+    uncertainty.
+  s2_zh: 观测单位必须与分配及分析相匹配。同一顾客、门店、日期或设备产生的多笔订单可能相关。如果分配或结果存在聚类，普通双样本比例检验可能低估不确定性。
+  s2_zh_hk: 觀測單位必須同分配同分析相匹配。同一顧客、門市、日期或者設備產生嘅多筆訂單可能相關。如果分配或者結果存在聚類，普通雙樣本比例檢驗可能低估不確定性。
+  s3_en: A significant rate difference does not establish that the channel caused the difference. Customer mix, product availability,
+    prompts, queue selection, time of day, and missing transactions can all matter. Staffing, investment, and rollout decisions
+    require separate evidence.
+  s3_zh: 显著的转化率差异不能证明渠道导致了差异。顾客组合、产品可得性、提示方式、队列选择、时段与缺失交易都可能有关。人员配置、投资与推广决策需要独立证据。
+  s3_zh_hk: 顯著嘅轉化率差異唔可以證明渠道導致咗差異。顧客組合、產品可得性、提示方式、隊列選擇、時段同缺失交易都可能有關。人員配置、投資同推廣決策需要獨立證據。
+- id: ledger
+  visual: steps
+  seconds: 38
+  kicker_en: The Ledger
+  kicker_zh: 台账实裁
+  kicker_zh_hk: 台賬實裁
+  title_en: Execute the assumed two-proportion comparison
+  title_zh: 执行假设双比例比较
+  title_zh_hk: 執行假設雙比例比較
+  step1_en: 'Group 1: X1 = 160, n1 = 400, p1-hat = 0.40; Group 2: X2 = 105, n2 = 350, p2-hat = 0.30'
+  step1_zh: 第 1 组：X1 = 160，n1 = 400，p1-hat = 0.40；第 2 组：X2 = 105，n2 = 350，p2-hat = 0.30
+  step1_zh_hk: 第 1 組：X1 = 160，n1 = 400，p1-hat = 0.40；第 2 組：X2 = 105，n2 = 350，p2-hat = 0.30
+  step2_en: p_pool = 265/750 ≈ 0.3533; SE_pool ≈ 0.0350; expected counts in both groups exceed 10
+  step2_zh: p_pool = 265/750 ≈ 0.3533；SE_pool ≈ 0.0350；两组各类期望计数均超过 10
+  step2_zh_hk: p_pool = 265/750 ≈ 0.3533；SE_pool ≈ 0.0350；兩組各類期望計數都超過 10
+  step3_en: Z = (0.40 - 0.30)/0.0350 ≈ 2.86; two-sided p ≈ 0.0042; reject H0 at alpha = 0.05
+  step3_zh: Z = (0.40 - 0.30)/0.0350 ≈ 2.86；双侧 p ≈ 0.0042；在 alpha = 0.05 时拒绝 H0
+  step3_zh_hk: Z = (0.40 - 0.30)/0.0350 ≈ 2.86；雙側 p ≈ 0.0042；喺 alpha = 0.05 嗰陣拒絕 H0
+  s1_en: For illustration, assume the two channels are independently assigned and the binary outcome is measured consistently.
+    These are teaching assumptions, not verified airport, staffing, customer, or rollout records. The null states that the
+    two population conversion rates are equal.
+  s1_zh: 作为示例，假设两个渠道独立分配，且二元结果的测量方式一致。这些数字是教学假设，并非已核实的机场、人员配置、顾客或推广记录。原假设表示两个总体转化率相等。
+  s1_zh_hk: 作為例子，假設兩個渠道獨立分配，而且二元結果嘅量度方式一致。呢啲數字係教學假設，唔係已核實嘅機場、人員配置、顧客或者推廣記錄。原假設表示兩個總體轉化率相等。
+  s2_en: Pooling gives 265 successes among 750 orders, or approximately 0.3533. The pooled standard error is approximately
+    0.0350. Under H0, the expected successes and failures are about 141.3 and 258.7 in Group 1, and 123.7 and 226.3 in Group
+    2, comfortably above the classroom threshold.
+  s2_zh: 合并后为 750 笔订单中的 265 次成功，即约 0.3533。合并标准误约为 0.0350。在 H0 下，第 1 组期望成功与失败约为 141.3 和 258.7，第 2 组约为 123.7 和 226.3，均明显高于课堂门槛。
+  s2_zh_hk: 合併之後係 750 筆訂單入面嘅 265 次成功，即係約 0.3533。合併標準誤約係 0.0350。喺 H0 之下，第 1 組期望成功同失敗約係 141.3 同 258.7，第 2 組約係 123.7 同 226.3，都明顯高過課堂門檻。
+  s3_en: The observed difference of 0.10 gives Z approximately 2.86 and a two-sided p-value approximately 0.0042. Reject equal
+    population conversion rates at the 5% level under the assumptions. The result supports a rate difference, with Group 1
+    higher in the sample, but does not establish causation or authorize automation.
+  s3_zh: 观测差异 0.10 得到 Z 约 2.86，双侧 p 值约 0.0042。在既定假设下，于 5% 水平拒绝两个总体转化率相等。结果支持转化率存在差异，样本中第 1 组较高，但不能证明因果，也不能授权自动化。
+  s3_zh_hk: 觀測差異 0.10 得到 Z 約 2.86，雙側 p 值約 0.0042。喺既定假設之下，喺 5% 水平拒絕兩個總體轉化率相等。結果支持轉化率存在差異，樣本入面第 1 組較高，但唔可以證明因果，亦唔可以授權自動化。
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Pool under equality, verify the design, and limit the conclusion
+  title_zh: 在相等原假设下合并比例，核实设计，并限定结论
+  title_zh_hk: 喺相等原假設之下合併比例，核實設計，並限定結論
+  q1_en: Why does the equality test use a pooled proportion?
+  q1_zh: 为什么比例相等检验使用合并比例？
+  q1_zh_hk: 點解比例相等檢驗使用合併比例？
+  q2_en: What must be checked before acting on a significant conversion difference?
+  q2_zh: 依据显著转化率差异采取行动前，应检查什么？
+  q2_zh_hk: 根據顯著轉化率差異採取行動之前，應該檢查咩？
+  s1_en: 'Under H0: p1 equals p2, both groups share one population rate, so pooled successes and trials estimate the null
+    variance. The same pooling logic should not be transferred automatically to confidence intervals or tests with a different
+    null structure.'
+  s1_zh: '在 H0: p1 = p2 下，两组共享一个总体比例，因此以合并成功次数与试验次数估计原假设方差。该合并逻辑不应自动套用于置信区间或具有不同原假设结构的检验。'
+  s1_zh_hk: '喺 H0: p1 = p2 之下，兩組共享一個總體比例，所以用合併成功次數同試驗次數估計原假設方差。呢個合併邏輯唔應該自動套用於置信區間或者具有唔同原假設結構嘅檢驗。'
+  s2_en: Before acting, verify randomization or comparability, independence, clustering, outcome definitions, exposure, missingness,
+    multiple outcomes, effect size, confidence interval, and practical costs. Statistical significance is one input, not a
+    staffing or investment rule.
+  s2_zh: 采取行动前，应核实随机化或可比性、独立性、聚类、结果定义、暴露程度、缺失、多结果分析、效应大小、置信区间与实际成本。统计显著性只是一项输入，并非人员配置或投资规则。
+  s2_zh_hk: 採取行動之前，應該核實隨機化或者可比性、獨立性、聚類、結果定義、暴露程度、缺失、多結果分析、效應大小、置信區間同實際成本。統計顯著性只係一項輸入，唔係人員配置或者投資規則。
+  s3_en: For the assumed comparison, Z is approximately 2.86 and p approximately 0.0042, so the 5% two-sided test rejects
+    equal conversion rates. Report the ten-percentage-point estimate with uncertainty and keep causal, staffing, and rollout
+    decisions separate.
+  s3_zh: 在假设比较中，Z 约为 2.86，p 约为 0.0042，因此 5% 双侧检验拒绝两个转化率相等。应报告十个百分点的估计差异及其不确定性，并把因果、人员配置与推广决策分开。
+  s3_zh_hk: 喺假設比較入面，Z 約係 2.86，p 約係 0.0042，所以 5% 雙側檢驗拒絕兩個轉化率相等。應該報告十個百分點嘅估計差異同佢嘅不確定性，並將因果、人員配置同推廣決策分開。

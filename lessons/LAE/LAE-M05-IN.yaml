@@ -1,0 +1,66 @@
+id: LAE-M05-IN
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: 'This sitting: who pays'
+title_zh: 这一讲：谁付钱
+title_zh_hk: 這一講：邊個畀錢
+objective_en: Open the applications unit. Three shorts. Who pays for the parcel, the AED, and the inspection.
+objective_zh: 打开应用这一讲。三条短片。谁为包裹、AED 和巡检付钱。
+objective_zh_hk: 打開應用呢一講。三條短片。邊個為包裹、AED 同巡檢畀錢。
+glossary:
+- en: Open
+  zh: 开场
+  zh_hk: 開場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Which three payments does this sitting name?
+  zh: 这一讲给哪三笔付款起名？
+  zh_hk: 呢一講畀邊三筆付款起名？
+  answer_en: The parcel, the AED, then the inspection.
+  answer_zh: 包裹，然后是 AED，然后是巡检。
+  answer_zh_hk: 包裹，然後係 AED，然後係巡檢。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: who pays'
+  title_zh: 这一讲：谁付钱
+  title_zh_hk: 這一講：邊個畀錢
+  item1_en: Last mile
+  item1_zh: 最后一公里
+  item1_zh_hk: 最後一公里
+  item2_en: Emergency minutes
+  item2_zh: 急救的分钟
+  item2_zh_hk: 急救嘅分鐘
+  item3_en: Production
+  item3_zh: 生产上的巡检
+  item3_zh_hk: 生產上嘅巡檢
+  en: A slot is only a path. Three shorts ask who pays to use it. A parcel. An AED. Then one inspection. We do not mix the three prices on the first card.
+  zh: 时段只是一条路径。三条短片问谁付钱来用它。一个包裹。一台 AED。然后一次巡检。第一张卡片上不要把三笔价钱混在一起。
+  zh_hk: 時段只係一條路徑。三條短片問邊個畀錢嚟用佢。一個包裹。一部 AED。然後一次巡檢。第一張卡上面唔好將三筆價錢撈埋一齊。
+- id: takeaway
+  visual: title_card
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: who pays'
+  title_zh: 这一讲：谁付钱
+  title_zh_hk: 這一講：邊個畀錢
+  en: By the end, “use case” should mean who pays and why, not a catalogue of hobbies in the air.
+  zh: 结束时，“应用”应是谁付钱、为什么付，不是一份空中爱好清单。
+  zh_hk: 結束時，「應用」應該係邊個畀錢、點解付，唔係一份空中嗜好清單。

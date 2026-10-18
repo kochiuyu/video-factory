@@ -14,7 +14,7 @@ objective_zh: 按机会成本分工，把产品看成跨城的一串步骤，再
 objective_zh_hk: 按機會成本分工，把產品看成跨城的一串步驟，再把集群看成共用的人和配套。
 lessons:
 - GBA-M02-IN
-- GBA-CA-01
-- GBA-SC-01
-- GBA-IN-01
+- GBA-M02-CA
+- GBA-M02-SC
+- GBA-M02-INN
 - GBA-M02-OUT

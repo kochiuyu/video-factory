@@ -1,18 +1,32 @@
 #!/usr/bin/env python3
-"""Local TTS backend. Default is Microsoft Edge neural voices via edge-tts.
+"""TTS backends.
 
-Voices can be overridden:
+Default is Microsoft Edge neural voices via edge-tts.
+Google Cloud TTS is selected with VF_TTS=google.
+
+Edge voices can be overridden:
   VF_VOICE_EN=en-US-GuyNeural
   VF_VOICE_ZH=zh-CN-YunxiNeural
   VF_VOICE_ZH_CN=zh-CN-YunxiNeural
   VF_VOICE_ZH_HK=zh-HK-WanLungNeural
+
+Google Cloud TTS:
+  VF_TTS=google
+  VF_GOOGLE_TTS_KEY=<API key>   (or GOOGLE_API_KEY)
+  VF_VOICE_EN=en-US-Neural2-D
+  VF_VOICE_ZH_CN=cmn-CN-Neural2-C
+  VF_VOICE_ZH_HK=yue-HK-Neural2-D
 """
 
 from __future__ import annotations
 
 import asyncio
+import base64
+import json
 import os
 import time
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 from cache import digest_obj, stamp_ok, write_mark
@@ -22,6 +36,23 @@ from paths import replace_file
 
 TTS_TRIES = max(1, int(os.environ.get("VF_TTS_TRIES", "4")))
 TTS_WAIT = float(os.environ.get("VF_TTS_WAIT", "2"))
+
+GOOGLE_TTS_URL = "https://texttospeech.googleapis.com/v1/text:synthesize"
+GOOGLE_VOICES = {
+    "en": "en-US-Neural2-D",
+    "zh": "cmn-CN-Neural2-C",
+    "zh_cn": "cmn-CN-Neural2-C",
+    "zh_hk": "yue-HK-Neural2-D",
+}
+
+
+def tts_backend() -> str:
+    raw = os.environ.get("VF_TTS", "edge").strip().lower()
+    if raw in {"google", "gcloud", "google-cloud", "gcp"}:
+        return "google"
+    if raw in {"edge-then-google", "edge+google", "fallback"}:
+        return "edge-then-google"
+    return "edge"
 
 
 def tts_jobs() -> int:
@@ -33,12 +64,108 @@ def tts_jobs() -> int:
     return max(1, min(n, 4))
 
 
+def google_api_key() -> str:
+    key = _read_google_key()
+    if not key:
+        looked = (
+            "VF_GOOGLE_TTS_KEY, GOOGLE_API_KEY, GOOGLE_CLOUD_API_KEY, "
+            "a .env in the video-factory root, or secrets/google-tts-key.txt"
+        )
+        raise RuntimeError(
+            "Google Cloud TTS is selected but no API key was found. "
+            f"Looked in: {looked}. "
+            "An API key is not the same as a service-account JSON. "
+            "Create a key in Google Cloud Console, enable Cloud Text-to-Speech, "
+            "then put the key in one of those places and restart the console."
+        )
+    return key
+
+
+def _read_google_key() -> str:
+    for name in ("VF_GOOGLE_TTS_KEY", "GOOGLE_API_KEY", "GOOGLE_CLOUD_API_KEY"):
+        val = (os.environ.get(name) or "").strip()
+        if val:
+            return val
+    _load_dotenv()
+    for name in ("VF_GOOGLE_TTS_KEY", "GOOGLE_API_KEY", "GOOGLE_CLOUD_API_KEY"):
+        val = (os.environ.get(name) or "").strip()
+        if val:
+            return val
+    for path in _key_file_candidates():
+        try:
+            text = path.read_text(encoding="utf-8").strip()
+        except OSError:
+            continue
+        if text:
+            return text.splitlines()[0].strip().strip('"').strip("'")
+    return ""
+
+
+def _project_root() -> Path:
+    return Path(__file__).resolve().parent.parent
+
+
+def _key_file_candidates() -> list[Path]:
+    named = (os.environ.get("VF_GOOGLE_TTS_KEY_FILE") or "").strip()
+    root = _project_root()
+    paths = []
+    if named:
+        paths.append(Path(named))
+    paths.extend([
+        root / "secrets" / "google-tts-key.txt",
+        root / ".google-tts-key",
+        root / "google-tts-key.txt",
+    ])
+    return paths
+
+
+def _load_dotenv() -> None:
+    path = _project_root() / ".env"
+    if not path.is_file():
+        return
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except OSError:
+        return
+    for raw in lines:
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, val = line.partition("=")
+        key = key.strip()
+        val = val.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = val
+
+
 def voice_for(language: str) -> str:
+    backend = tts_backend()
     if language == "zh_hk":
-        return os.environ.get("VF_VOICE_ZH_HK", "zh-HK-WanLungNeural")
+        env = os.environ.get("VF_VOICE_ZH_HK")
+        if env:
+            return env
+        return GOOGLE_VOICES["zh_hk"] if backend == "google" else "zh-HK-WanLungNeural"
     if language.startswith("zh"):
-        return os.environ.get("VF_VOICE_ZH_CN") or os.environ.get("VF_VOICE_ZH", "zh-CN-YunxiNeural")
-    return os.environ.get("VF_VOICE_EN", "en-US-GuyNeural")
+        env = os.environ.get("VF_VOICE_ZH_CN") or os.environ.get("VF_VOICE_ZH")
+        if env:
+            return env
+        return GOOGLE_VOICES["zh"] if backend == "google" else "zh-CN-YunxiNeural"
+    env = os.environ.get("VF_VOICE_EN")
+    if env:
+        return env
+    return GOOGLE_VOICES["en"] if backend == "google" else "en-US-GuyNeural"
+
+
+def language_code_for(language: str, voice: str) -> str:
+    if voice and "-" in voice:
+        parts = voice.split("-")
+        if len(parts) >= 2:
+            return f"{parts[0]}-{parts[1]}"
+    if language == "zh_hk":
+        return "yue-HK"
+    if language.startswith("zh"):
+        return "cmn-CN"
+    return "en-US"
 
 
 def tts_rate() -> str:
@@ -53,8 +180,40 @@ def tts_pitch() -> str:
     return os.environ.get("VF_TTS_PITCH", "+0Hz")
 
 
-async def _save(text: str, voice: str, dest: Path) -> None:
+def _speaking_rate() -> float:
+    raw = tts_rate().strip().rstrip("%")
+    try:
+        pct = float(raw)
+    except ValueError:
+        return 1.0
+    return max(0.25, min(4.0, 1.0 + pct / 100.0))
+
+
+def _pitch_semitones() -> float:
+    raw = tts_pitch().strip().lower().rstrip("hz")
+    try:
+        hz = float(raw)
+    except ValueError:
+        return 0.0
+    # Rough map: Edge pitch is in Hz; Google expects semitones.
+    return max(-20.0, min(20.0, hz / 10.0))
+
+
+async def _save_edge(text: str, voice: str, dest: Path) -> None:
     import edge_tts
+    import edge_tts.communicate as edge_communicate
+    import edge_tts.constants as edge_constants
+
+    token = getattr(edge_constants, "TRUSTED_CLIENT_TOKEN", "6A5AA1D4EAFF4E9FB37E23D68491D6F4")
+    new_wss = (
+        "wss://api.msedgeservices.com/tts/cognitiveservices/websocket/v1"
+        f"?Ocp-Apim-Subscription-Key={token}"
+    )
+    # communicate.py binds WSS_URL at import time, so patching constants alone
+    # leaves the old host in the request that actually gets sent.
+    edge_constants.WSS_URL = new_wss
+    edge_communicate.WSS_URL = new_wss
+    print("tts: using api.msedgeservices.com")
 
     dest.parent.mkdir(parents=True, exist_ok=True)
     comm = edge_tts.Communicate(
@@ -65,6 +224,75 @@ async def _save(text: str, voice: str, dest: Path) -> None:
         pitch=tts_pitch(),
     )
     await comm.save(str(dest))
+
+
+async def _save_google(text: str, voice: str, dest: Path, language: str) -> None:
+    key = google_api_key()
+    payload = {
+        "input": {"text": text},
+        "voice": {
+            "languageCode": language_code_for(language, voice),
+            "name": voice,
+        },
+        "audioConfig": {
+            "audioEncoding": "MP3",
+            "speakingRate": _speaking_rate(),
+            "pitch": _pitch_semitones(),
+        },
+    }
+    data = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(
+        GOOGLE_TTS_URL,
+        data=data,
+        headers={
+            "Content-Type": "application/json; charset=utf-8",
+            "X-Goog-Api-Key": key,
+        },
+        method="POST",
+    )
+    dest.parent.mkdir(parents=True, exist_ok=True)
+
+    def _call() -> bytes:
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                body = json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", errors="replace")
+            raise RuntimeError(
+                f"Google Cloud TTS HTTP {exc.code}: {detail[:400]}"
+            ) from exc
+        audio = body.get("audioContent")
+        if not audio:
+            raise RuntimeError("Google Cloud TTS returned no audioContent")
+        return base64.b64decode(audio)
+
+    audio = await asyncio.to_thread(_call)
+    dest.write_bytes(audio)
+
+
+async def _save(text: str, voice: str, dest: Path, language: str = "en") -> None:
+    backend = tts_backend()
+    if backend == "google":
+        await _save_google(text, voice, dest, language)
+        return
+    if backend == "edge-then-google":
+        try:
+            await _save_edge(text, voice, dest)
+            return
+        except Exception as exc:  # noqa: BLE001
+            print(f"tts: Edge failed ({type(exc).__name__}); trying Google")
+            google_voice = _google_voice(language)
+            await _save_google(text, google_voice, dest, language)
+            return
+    await _save_edge(text, voice, dest)
+
+
+def _google_voice(language: str) -> str:
+    if language == "zh_hk":
+        return os.environ.get("VF_VOICE_ZH_HK_GOOGLE") or GOOGLE_VOICES["zh_hk"]
+    if language.startswith("zh"):
+        return os.environ.get("VF_VOICE_ZH_CN_GOOGLE") or GOOGLE_VOICES["zh"]
+    return os.environ.get("VF_VOICE_EN_GOOGLE") or GOOGLE_VOICES["en"]
 
 
 def _tmp_mp3(dest: Path, attempt: int) -> Path:
@@ -85,7 +313,7 @@ def synthesize(text: str, language: str, dest: Path) -> Path:
         tmp = _tmp_mp3(dest, attempt)
         try:
             _drop_tmp(tmp)
-            asyncio.run(_save(text, voice, tmp))
+            asyncio.run(_save(text, voice, tmp, language))
             if not tmp.exists() or tmp.stat().st_size < 256:
                 raise RuntimeError(f"TTS produced no audio: {dest}")
             replace_file(tmp, dest)
@@ -95,22 +323,35 @@ def synthesize(text: str, language: str, dest: Path) -> Path:
             print(f"tts retry {attempt}/{TTS_TRIES} {language} {dest.stem}: {type(exc).__name__}")
             _drop_tmp(tmp)
             time.sleep(TTS_WAIT * attempt)
-    raise RuntimeError(
-        "Speech service dropped the connection. "
-        "Keep existing audio and run Build cells again without Regenerate speech, "
-        f"or retry in a minute. Last error: {last}"
-    ) from last
+    raise RuntimeError(_fail_message(last)) from last
 
 
 def _speech_key(text: str, lang: str) -> str:
     return digest_obj(
         {
+            "backend": tts_backend(),
             "text": text,
             "voice": voice_for(lang),
             "rate": tts_rate(),
             "volume": tts_volume(),
             "pitch": tts_pitch(),
         }
+    )
+
+
+def _fail_message(last: Exception | None) -> str:
+    if tts_backend() == "google":
+        return (
+            "Google Cloud TTS failed. Check VF_GOOGLE_TTS_KEY, that the "
+            "Text-to-Speech API is enabled, and that the voice name is valid. "
+            f"Last error: {last}"
+        )
+    return (
+        "Speech service refused the connection (403). "
+        "Microsoft moved the Edge TTS host in October 2026; "
+        "the factory now points at api.msedgeservices.com. "
+        "If this still fails, wait a minute and rebuild without Regenerate speech, "
+        f"or set VF_TTS=google. Last error: {last}"
     )
 
 
@@ -121,7 +362,7 @@ async def _save_with_retries(text: str, lang: str, dest: Path) -> Path:
         tmp = _tmp_mp3(dest, attempt)
         try:
             _drop_tmp(tmp)
-            await _save(text, voice, tmp)
+            await _save(text, voice, tmp, lang)
             if not tmp.exists() or tmp.stat().st_size < 256:
                 raise RuntimeError(f"TTS produced no audio: {dest}")
             if os.name == "nt":
@@ -133,11 +374,7 @@ async def _save_with_retries(text: str, lang: str, dest: Path) -> Path:
             print(f"tts retry {attempt}/{TTS_TRIES} {lang} {dest.stem}: {type(exc).__name__}")
             _drop_tmp(tmp)
             await asyncio.sleep(TTS_WAIT * attempt)
-    raise RuntimeError(
-        "Speech service dropped the connection. "
-        "Keep existing audio and run Build cells again without Regenerate speech, "
-        f"or retry in a minute. Last error: {last}"
-    ) from last
+    raise RuntimeError(_fail_message(last)) from last
 
 
 def synthesize_lesson(
@@ -152,6 +389,7 @@ def synthesize_lesson(
     planned = [(lang, beat) for lang in langs for beat in lesson["beats"]]
     total = max(1, len(planned))
     done = 0
+    print(f"tts backend: {tts_backend()}")
     for lang in langs:
         print(
             f"tts voice {lang}: {voice_for(lang)} "

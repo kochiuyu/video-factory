@@ -1,0 +1,165 @@
+id: STAT-M10-T06-SUTVA
+course: STAT-M10
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Network Interference and SUTVA: When Treatment Spills Across Units'
+title_zh: 网络干扰与 SUTVA 假设：中环与金钟的客流溢出陷阱
+title_zh_hk: 網絡干擾與 SUTVA 假設：中環與金鐘嘅客流溢出陷阱
+objective_en: Explain the no-interference and no-hidden-versions components of SUTVA, diagnose spatial spillovers, distinguish observed aggregate change from a causal effect, and select a defensible cluster or exposure-based design.
+objective_zh: 界定个体处理效应稳定性假设（SUTVA），诊断相邻零售网点间的空间客流蚕食溢出效应，并实施带有地理缓冲区的一体化集群随机化。
+objective_zh_hk: 界定個體處理效應穩定性假設（SUTVA），診斷相鄰門市之間嘅空間客流蠶食溢出效應，並實施帶有地理緩衝區嘅一體化集群隨機化。
+glossary:
+- en: Stable Unit Treatment Value Assumption (SUTVA)
+  zh: 个体处理效应稳定性假设（SUTVA）
+  zh_hk: 個體處理效應穩定性假設（SUTVA）
+  lock: true
+- en: No-Interference Condition
+  zh: 无干扰假定
+  zh_hk: 無干擾假定
+  lock: true
+- en: Spatial Cannibalization Spillover
+  zh: 空间客流蚕食溢出
+  zh_hk: 空間客流蠶食溢出
+  lock: true
+- en: Geographic Cluster Buffer
+  zh: 地理集群隔离缓冲
+  zh_hk: 地理集群隔離緩衝
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: What does the fundamental 'No-Interference' component of SUTVA require mathematically and operationally in a retail A/B test?
+  question_zh: 在零售 A/B 测试中，SUTVA 假设中最核心的‘无干扰假定’在数学与业务操作上意味着什么？
+  question_zh_hk: 喺零售 A/B 測試入面，SUTVA 假設中最核心嘅‘無干擾假定’喺數學同業務操作上代表咩嘢？
+  options_en:
+  - 'A: The potential outcome of unit i depends solely on its own treatment assignment, remaining completely unaffected by treatments assigned to other units (Y_i(T_i, T_{-i}) = Y_i(T_i))'
+  - 'B: All retail branches must report identical profit margins down to the exact dollar'
+  - 'C: Sample sizes across all physical store locations must be strictly infinite'
+  - 'D: The control group must be physically located outside the retail chain''s home territory'
+  options_zh:
+  - 'A: 单元 i 的潜在结果仅取决于自身是否接受干预，完全不受任何其他单元 j 处理状态的影响（Y_i(T_i, T_{-i}) = Y_i(T_i)）'
+  - 'B: 所有零售分店的单日净利润必须完全相等，精确到每一元'
+  - 'C: 所有线下物理门店的样本容量在数学上必须严格为无穷大'
+  - 'D: 对照组在地理位置上必须强制设立于零售品牌所在核心市场之外'
+  options_zh_hk:
+  - 'A: 單元 i 嘅潛在結果淨係取決於自身有冇接受干預，完全唔受任何其他單元 j 處理狀態嘅影響（Y_i(T_i, T_{-i}) = Y_i(T_i)）'
+  - 'B: 所有零售分店嘅單日淨利潤必須完全一樣，精確到每一蚊'
+  - 'C: 所有線下實體門市嘅樣本容量喺數學上必須嚴格係無限大'
+  - 'D: 對照組喺地理位置上必須強制設喺零售品牌所處核心市場之外'
+  answer: A
+  explanation_en: The no-interference condition requires that treatment applied to one unit does not spill over to impact the outcomes of other units. When store promotions divert foot traffic from neighboring control branches, SUTVA is violated.
+  explanation_zh: 无干扰假定要求施加于某一单元的处理绝不能外溢影响其他单元的结果。当某店的促销把隔壁对照店的客流横向截流抽走时，SUTVA 假定当场破裂。
+  explanation_zh_hk: 無干擾假定要求施加喺某一單元嘅處理絕不能外溢影響其他單元嘅結果。當某間舖嘅促銷將隔籬對照舖嘅人流橫向搶走嗰陣，SUTVA 假定當場崩潰。
+- id: Q2
+  type: multiple_choice
+  question_en: Metro Coffee runs a 20% discount test exclusively at Central, while nearby Admiralty serves as untreated Control. Sales in Central rise by +300 cups (+30%), but Admiralty plunges by -220 cups (-22%) as commuters walk three minutes across. What is the net causal brand expansion, and why is comparing Central directly to Admiralty deceptive?
+  question_zh: Metro Coffee 仅在中环旗舰店测试八折优惠，邻近的金钟店作为未受干预的对照组。中环出杯量暴涨 +300 杯（+30%），但金钟却骤降 -220 杯（-22%），因上班族步行 3 分钟转场。品牌整体净增量是多少？为何直接对比中环与金钟极具欺骗性？
+  question_zh_hk: Metro Coffee 淨係喺中環旗艦店測試八折優惠，隔離嘅金鐘店作為未受干預嘅對照組。中環出杯量暴升 +300 杯（+30%），但金鐘卻暴跌 -220 杯（-22%），因為返工族行多 3 分鐘轉場。品牌整體淨增量係幾多？點解直接對比中環同金鐘極具欺騙性？
+  options_en:
+  - 'A: The observed two-store aggregate change is +80 cups, but it is not automatically a causal effect'
+  - 'B: Net brand expansion is +520 cups because control units are subtracted'
+  - 'C: Net brand expansion is zero because coffee demand is legally fixed in Hong Kong'
+  - 'D: The test conclusively proves the Admiralty branch should be permanently shut down'
+  options_zh:
+  - A：两店观测总量变化为 +80 杯，但不能自动视为因果效应
+  - 'B: 品牌净增量达到 +520 杯，因为对照组损失的客流应转化为处理组战功'
+  - 'C: 净增量严格为零，因为香港法例规定全港咖啡总需求必须固定'
+  - 'D: 该测试确凿证明金钟分店经营不善，应被永久关闭'
+  options_zh_hk:
+  - A：兩店觀測總量變化係 +80 杯，但唔可以自動視為因果效應
+  - 'B: 品牌淨增量達到 +520 杯，因為對照組損失嘅客流應計入處理組戰功'
+  - 'C: 淨增量嚴格係零，因為香港法例規定全港咖啡總需求必須固定'
+  - 'D: 該測試鐵證金鐘分店營運不善，應該被永久關閉'
+  answer: A
+  explanation_en: Adding the two observed changes gives +80 cups. Calling that change causal requires a credible counterfactual for combined sales without treatment; the direct 520-cup contrast may mix direct and spillover effects.
+  explanation_zh: 两个观测变化相加得到 +80 杯。把该变化称为因果效应，需要没有处理时合计销量的可信反事实；520 杯的直接对比可能混合了直接效应与溢出效应。
+  explanation_zh_hk: 兩個觀測變化相加得到 +80 杯。將呢個變化稱為因果效應，需要冇處理嗰陣合計銷量嘅可信反事實；520 杯嘅直接對比可能混合咗直接效應同溢出效應。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Cannibalization Paradox
+  kicker_zh: 客流蚕食悖论
+  kicker_zh_hk: 客流蠶食悖論
+  title_en: Did Central's 30% Boom Come at Admiralty's Expense?
+  title_zh: 中环猛增 30% 的捷报背后，金钟为何离奇暴跌？
+  title_zh_hk: 中環暴升 30% 嘅捷報背後，金鐘點解離奇暴瀉？
+  en: 'Metro Coffee launches an exclusive twenty-percent breakfast promotion at its Central flagship kiosk, keeping the nearby Admiralty station branch as an untreated control. At week''s end, Central celebrates: morning sales exploded by thirty percent, up three hundred cups! But five hundred meters away, Admiralty''s manager is in panic: sales plunged by twenty-two percent. Did marketing expand the total coffee market, or did cross-district walkers cannibalize our own stores?'
+  zh: Metro Coffee 在中环旗舰店试点早餐八折优惠，将相隔仅数百米的金钟地铁站店作为未受干预的对照组。周末复盘，中环店一片欢腾：早高峰出杯量狂飙 30%，净增三百杯！然而五百米外的金钟店长却焦头烂额：营业额离奇暴跌 22%。营销策划真的做大了全港咖啡大盘，还是赶早白领的跨区转场演变成了一场手足相残的内卷？
+  zh_hk: Metro Coffee 喺中環旗艦店搞早餐八折試點，將相隔幾百米嘅金鐘地鐵站店作為未受干預嘅對照組。週末結算，中環店開香檳慶祝：早高峰出杯量狂升 30%，淨多咗三百杯！點知五百米外嘅金鐘店長就頭都大埋：營業額離奇暴跌 22%。促銷真係做大咗全港咖啡大盤，定係返工族行多兩步轉場，演變成一場自相殘殺嘅內訌？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Y_i(T_i, T_{-i}) != Y_i(T_i) violates SUTVA No-Interference
+  formula_zh: SUTVA 无干扰破裂：Y_i(T_i, T_{-i}) != Y_i(T_i)（个体潜在结果受外部干预污染）
+  formula_zh_hk: SUTVA 無干擾破裂：Y_i(T_i, T_{-i}) != Y_i(T_i)（個體潛在結果受外部干預污染）
+  formula_tex: 'Y_i\left(T_i, \mathbf{T}_{-i}\right) \neq Y_i(T_i) \implies \text{SUTVA Violated: } Y_{\text{Admiralty}} = f(T_{\text{Admiralty}}, T_{\text{Central}})'
+  s1_en: SUTVA commonly combines no interference between units with no hidden versions of treatment. Under no interference, a unit potential outcome does not depend on other units assignments.
+  s1_zh: SUTVA 通常把单元之间无干扰与处理没有隐藏版本合在一起。在无干扰下，一个单元的潜在结果不取决于其他单元的分配。
+  s1_zh_hk: SUTVA 通常將單元之間無干擾同處理冇隱藏版本合埋一齊。喺無干擾之下，一個單元嘅潛在結果唔取決於其他單元嘅分配。
+  s2_en: When treatment at one store changes demand at another, the simple no-interference model is inappropriate. Potential outcomes should instead reflect the relevant treatment vector or exposure mapping.
+  s2_zh: 当一家门店的处理改变另一家门店的需求时，简单的无干扰模型就不适用。潜在结果应反映相关的处理向量或接触映射。
+  s2_zh_hk: 當一間分店嘅處理改變另一間分店嘅需求，簡單嘅無干擾模型就唔適用。潛在結果要反映相關嘅處理向量或者接觸映射。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: The Double-Counting Mirage
+  left_zh: 双重虚夸的差值假象
+  right_en: Geographic Cluster Isolation
+  right_zh: 地理集群隔离缓冲区
+  s1_en: 'Comparing treatment directly to a cannibalized control creates an illusion: Central gained 300 cups, while Admiralty dropped 220 cups. The naive difference appears to be 520 cups, vastly exaggerating market expansion.'
+  s1_zh: 把处理店直接与被蚕食的对照店比较会制造假象：中环增加 300 杯，金钟减少 220 杯。朴素差额看起来是 520 杯，会大幅夸大市场扩张。
+  s1_zh_hk: 將處理店直接同被蠶食嘅對照店比較會製造假象：中環增加 300 杯，金鐘減少 220 杯。樸素差額睇落係 520 杯，會大幅誇大市場擴張。
+  s2_en: Across the two stores, the observed aggregate change is +80 cups. This arithmetic is descriptive, not automatically the causal brand effect, because the untreated aggregate counterfactual is unknown.
+  s2_zh: 两店合计的观测变化是 +80 杯。这只是描述性算术，不能自动当成品牌的因果效应，因为未处理时的合计反事实并不知道。
+  s2_zh_hk: 兩店合計嘅觀測變化係 +80 杯。呢個只係描述性算術，唔可以自動當成品牌嘅因果效應，因為未處理嗰陣嘅合計反事實並唔知道。
+  s3_en: Cluster randomization can assign connected stores together. Buffer zones should be based on mobility or network evidence; no fixed distance guarantees isolation. Other options include saturation or two-stage designs.
+  s3_zh: 集群随机化可以把相连门店一起分配。缓冲区应根据流动或网络证据设定；没有固定距离能保证隔离。其他选择包括饱和设计或两阶段设计。
+  s3_zh_hk: 集群隨機化可以將相連分店一齊分配。緩衝區要根據流動或者網絡證據設定；冇固定距離可以保證隔離。其他選擇包括飽和設計或者兩階段設計。
+  left_zh_hk: 雙重虛報嘅差額假象
+  right_zh_hk: 地理集群隔離緩衝區
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Map Plausible Cross-Store Interference
+  step1_zh: 审查双店异常客流迁徙
+  step2_en: Separate Direct Contrast from Aggregate Change
+  step2_zh: 拆解表面差额双重泡沫
+  step3_en: Choose a Cluster or Exposure-Based Design
+  step3_zh: 重组商务走廊集群对照
+  s1_en: 'Teaching assumptions: Store A changes by +300 cups and nearby Store B by -220 cups. These figures illustrate possible interference; they are not verified company results or proof of customer movement.'
+  s1_zh: 教学假设：A 店变化 +300 杯，邻近 B 店变化 -220 杯。这些数字只说明可能的干扰，不是已核实的公司结果，也不能证明顾客移动。
+  s1_zh_hk: 教學假設：A 店變化 +300 杯，鄰近 B 店變化 -220 杯。呢啲數字只說明可能嘅干擾，唔係已核實嘅公司結果，亦唔可以證明客人移動。
+  s2_en: The direct contrast is 300 - (-220) = 520 cups, while the observed two-store aggregate change is 300 + (-220) = +80 cups. Neither is automatically a causal treatment effect.
+  s2_zh: 直接对比是 300 - (-220) = 520 杯，两店合计的观测变化是 300 + (-220) = +80 杯。两者都不能自动成为因果处理效应。
+  s2_zh_hk: 直接對比係 300 - (-220) = 520 杯，兩店合計嘅觀測變化係 300 + (-220) = +80 杯。兩者都唔可以自動成為因果處理效應。
+  s3_en: Estimate a causal aggregate effect using a credible untreated counterfactual, such as randomized comparable clusters, while accounting for wider substitution, time trends, costs, and spillovers.
+  s3_zh: 估计因果合计效应需要可信的未处理反事实，例如随机化的可比集群，并同时考虑更广的替代、时间趋势、成本与溢出。
+  s3_zh_hk: 估計因果合計效應需要可信嘅未處理反事實，例如隨機化嘅可比集群，並同時考慮更廣嘅替代、時間趨勢、成本同溢出。
+  step1_zh_hk: 審查雙店異常客流遷徙
+  step2_zh_hk: 拆解表面差額雙重泡沫
+  step3_zh_hk: 重組商務走廊集群對照
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Why Is SUTVA Non-Negotiable in Retail?
+  q1_zh: 实体零售为何必须死守 SUTVA 准则？
+  q2_en: Decision Rule
+  q2_zh: 审计准则：相邻门店禁分流，集群隔离防自残
+  s1_en: Under interference, a unit outcome can depend on neighbors assignments, so a simple treated-control contrast may mix direct and spillover effects.
+  s1_zh: 存在干扰时，一个单元的结果可以取决于邻近单元的分配，因此简单的处理对照对比可能混合直接效应与溢出效应。
+  s1_zh_hk: 存在干擾嗰陣，一個單元嘅結果可以取決於鄰近單元嘅分配，所以簡單嘅處理對照對比可能混合直接效應同溢出效應。
+  s2_en: Map likely interference before randomization. Assign connected units together, use evidence-based buffers, or adopt a design that varies both treatment and exposure.
+  s2_zh: 随机化之前应先画出可能的干扰。把相连单元一起分配，使用有证据支持的缓冲区，或采用同时改变处理与接触的设计。
+  s2_zh_hk: 隨機化之前要先畫出可能嘅干擾。將相連單元一齊分配，使用有證據支持嘅緩衝區，或者採用同時改變處理同接觸嘅設計。
+  s3_en: Define the estimand and exposure mapping explicitly, then analyze at the randomization level. Do not call an observed aggregate change causal without a credible untreated counterfactual.
+  s3_zh: 应明确界定估计目标与接触映射，并在随机化层级分析。没有可信的未处理反事实时，不要把观测总量变化称为因果效应。
+  s3_zh_hk: 要明確界定估計目標同接觸映射，並喺隨機化層級分析。冇可信嘅未處理反事實嗰陣，唔好將觀測總量變化稱為因果效應。
+  q1_zh_hk: 實體零售點解必須死守 SUTVA 準則？
+  q2_zh_hk: 審計準則：相鄰門市咪分流，集群隔離防內耗

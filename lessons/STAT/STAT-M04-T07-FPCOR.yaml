@@ -1,0 +1,226 @@
+id: STAT-M04-T07-FPCOR
+course: STAT-M04
+course_en: Sampling Distributions, the Central Limit Theorem, and Interval Estimation
+course_zh: 抽样分布、中心极限定理与区间估计
+course_zh_hk: 抽樣分佈、中心極限定理與區間估計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: The finite population correction
+title_zh: 小机队的约束：有限总体修正与无放回抽样
+title_zh_hk: 小機隊嘅約束：有限總體修正與無放回抽樣
+objective_en: Calculate the Finite Population Correction (FPC) factor for sampling without replacement, apply the 5% threshold
+  rule (n / N > 0.05) to adjust the standard error of the mean, and evaluate boiler maintenance wear across Metro's commercial
+  espresso machine fleet.
+objective_zh: 计算无放回抽样下的有限总体修正（FPC）系数，运用 5% 抽样比例阈值法则（n / N > 0.05）校准样本均值的标准误，并在都市咖啡商用浓缩咖啡机机队锅炉磨损巡检中实现精准审计。
+objective_zh_hk: 計算無放回抽樣下嘅有限總體修正（FPC）系數，運用 5% 抽樣比例閾值法則（n / N > 0.05）校準樣本均值嘅標準誤，並喺都市咖啡商用濃縮咖啡機機隊鍋爐磨損巡檢入面實現精準審計。
+glossary:
+- en: Finite Population Correction (FPC)
+  zh: 有限总体修正系数
+  zh_hk: 有限總體修正系數
+  lock: true
+- en: sampling without replacement
+  zh: 不放回抽样
+  zh_hk: 無放回抽樣
+  lock: true
+- en: sampling fraction
+  zh: 抽样比例/抽样比
+  zh_hk: 抽樣比例/抽樣比
+  lock: true
+- en: 5% threshold rule
+  zh: 5% 经验判定准则
+  zh_hk: 5% 經驗判定準則
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: When sampling without replacement from a finite population of size N, why does drawing a large fraction of
+    the population (n / N > 0.05) shrink the standard error of the sample mean below sigma / sqrt(n)?
+  question_zh: 在总体容量为 N 的有限总体中进行无放回抽样时，为什么当抽样比例突破 5% 阈值（n / N > 0.05）后，样本均值的真实标准误会系统性小于传统的 sigma / 根号(n)？
+  question_zh_hk: 喺總體容量為 N 嘅有限總體入面進行無放回抽樣嗰陣，點解當抽樣比例突破 5% 閾值（n / N > 0.05）之後，樣本均值嘅真實標準誤會系統性細過傳統嘅 sigma / 根號(n)？
+  options_en:
+  - 'A: Because each sampled unit removes uncertainty about the remaining population; if you inspect all N units, the sampling
+    error drops to exactly zero.'
+  - 'B: Because machines audited earlier perform better in subsequent operational shifts.'
+  - 'C: Because the Central Limit Theorem only functions when populations exceed one million units.'
+  - 'D: Because engineering accounting rules enforce an arbitrary 10% discount on all equipment variance.'
+  options_zh:
+  - 'A: 因为每无放回地抽检一台设备，就锁定了总体的部分真值并消除了剩余未知；若抽检全量 N 台，抽样不确定度将彻底归零。'
+  - 'B: 因为较早接受审计的机器会在后续排班中自动提升运转效率。'
+  - 'C: 因为中心极限定理在数学法则上仅对突破一百万的大型总体生效。'
+  - 'D: 因为工程设备会计准则强制对所有硬件方差施加 10% 的折价扣减。'
+  options_zh_hk:
+  - 'A: 因為每無放回噉抽檢一部設備，就鎖定咗總體嘅部分真值並消除咗剩餘未知；若果抽檢全量 N 部，抽樣不確定度將徹底歸零。'
+  - 'B: 因為較早接受審計嘅機器會喺後續排班入面自動提升運轉效率。'
+  - 'C: 因為中心極限定理喺數學法則上淨係對突破一百萬嘅大型總體生效。'
+  - 'D: 因為工程設備會計準則強制對所有硬件方差施加 10% 嘅折價扣減。'
+  answer: A
+  explanation_en: In sampling without replacement, draws are not independent. As sample size n approaches population size
+    N, the remaining pool of unknown units shrinks. At n = N, the census is complete, FPC = sqrt(0) = 0, and standard error
+    becomes 0.
+  explanation_zh: 在无放回抽样中，各次抽取不再相互独立。随着样本量 n 逐步逼近总体总量 N，未被核查的未知单元越来越少。当 n = N 时普查完成，FPC = 根号(0) = 0，抽样标准误彻底降为零。
+  explanation_zh_hk: 喺無放回抽樣入面，各次抽取唔再相互獨立。隨住樣本量 n 逐步逼近總體總量 N，未被核查嘅未知單元越嚟越少。當 n = N 嗰陣普查完成，FPC = 根號(0) = 0，抽樣標準誤徹底降為零。
+- id: Q2
+  type: multiple_choice
+  question_en: Metro's engineering department audits n = 40 espresso machines from its total fleet of N = 120 units across
+    Hong Kong. Equipment wear standard deviation is sigma = 15.0 scale points. What is the FPC factor and the corrected standard
+    error of the mean?
+  question_zh: 都市咖啡工程部从全港各门店共计 N = 120 台商用咖啡机中，无放回抽取 n = 40 台进行锅炉磨损审计。设备磨损标准差为 sigma = 15.0 分。该审计的有限总体修正系数（FPC）与校准后的真实标准误分别是多少？
+  question_zh_hk: 都市咖啡工程部由全港各門市共計 N = 120 部商用咖啡機入面，無放回抽取 n = 40 部進行鍋爐磨損審計。設備磨損標準差為 sigma = 15.0 分。嗰個審計嘅有限總體修正系數（FPC）與校準後嘅真實標準誤分別係幾多？
+  options_en:
+  - 'A: FPC = sqrt((120 - 40) / 119) = sqrt(80 / 119) ≈ 0.820; Corrected SE = (15 / sqrt(40)) * 0.820 ≈ 2.372 * 0.820 ≈ 1.94
+    points'
+  - 'B: FPC = 40 / 120 = 0.333; Corrected SE = 2.372 * 0.333 ≈ 0.79 points'
+  - 'C: FPC = sqrt(40 / 120) ≈ 0.577; Corrected SE = 15 * 0.577 ≈ 8.66 points'
+  - 'D: FPC = 1.000; Corrected SE = 15 / sqrt(40) ≈ 2.37 points, because equipment fleets do not require correction'
+  options_zh:
+  - 'A: FPC = 根号((120 - 40) / 119) = 根号(80 / 119) ≈ 0.820；校准后标准误 = (15 / 根号(40)) × 0.820 ≈ 2.372 × 0.820 ≈ 1.94 分'
+  - 'B: FPC = 40 / 120 = 0.333；校准后标准误 = 2.372 × 0.333 ≈ 0.79 分'
+  - 'C: FPC = 根号(40 / 120) ≈ 0.577；校准后标准误 = 15 × 0.577 ≈ 8.66 分'
+  - 'D: FPC = 1.000；校准后标准误 = 15 / 根号(40) ≈ 2.37 分，因为硬件资产不适用修正'
+  options_zh_hk:
+  - 'A: FPC = 根號((120 - 40) / 119) = 根號(80 / 119) ≈ 0.820；校準後標準誤 = (15 / 根號(40)) × 0.820 ≈ 2.372 × 0.820 ≈ 1.94 分'
+  - 'B: FPC = 40 / 120 = 0.333；校準後標準誤 = 2.372 × 0.333 ≈ 0.79 分'
+  - 'C: FPC = 根號(40 / 120) ≈ 0.577；校準後標準誤 = 15 × 0.577 ≈ 8.66 分'
+  - 'D: FPC = 1.000；校準後標準誤 = 15 / 根號(40) ≈ 2.37 分，因為硬件資產唔適用修正'
+  answer: A
+  explanation_en: Sampling fraction is 40 / 120 = 33.3% > 5%, requiring FPC. FPC = sqrt((120 - 40) / (120 - 1)) = sqrt(80
+    / 119) ≈ 0.820. Unadjusted SE = 15 / sqrt(40) ≈ 2.372. Adjusted SE = 2.372 * 0.820 ≈ 1.94 points.
+  explanation_zh: 抽样比例为 40 / 120 = 33.3% > 5%，必须启用 FPC。FPC = 根号((120 - 40) / 119) = 根号(80 / 119) ≈ 0.820。未修正标准误为 15 / 根号(40)
+    ≈ 2.372。修正后真实标准误 = 2.372 × 0.820 ≈ 1.94 分。
+  explanation_zh_hk: 抽樣比例為 40 / 120 = 33.3% > 5%，必須啟用 FPC。FPC = 根號((120 - 40) / 119) = 根號(80 / 119) ≈ 0.820。未修正標準誤為 15 / 根號(40)
+    ≈ 2.372。修正後真實標準誤 = 2.372 × 0.820 ≈ 1.94 分。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Small Fleet Audit
+  kicker_en: The Small Fleet Audit
+  kicker_zh: 闭环资产盘点之谜
+  kicker_zh_hk: 閉環資產盤點之謎
+  title_en: When the population is not an endless sea
+  title_zh: 并非取之不尽：有限资产池中的抽样真相
+  title_zh_hk: 並非取之不盡：有限資產池入面嘅抽樣真相
+  en: 'When Metro Coffee audits daily customer receipts, the population is practically boundless—tens of thousands of transactions
+    flowing without end. But consider our engineering division: across all branches in Wan Chai, Mong Kok, and the Airport,
+    we operate a total fleet of exactly one hundred and twenty commercial espresso machines. To inspect boiler scaling, the
+    maintenance director audits forty machines without replacement. Standard statistical textbooks say standard error is sigma
+    over the square root of n. But does an audit covering one-third of our entire physical universe follow the infinite formula?'
+  zh: 当都市咖啡审计每日流水小票时，总体规模浩瀚无边——数以万计的刷卡交易滔滔不绝。但请将目光转向工程维保部：在湾仔、旺角和机场的全部网点中，我们重金投入的商用浓缩咖啡机队总共只有一百二十台。为了排查锅炉水垢磨损，维保总监无放回抽检了整整四十台机器。经典教科书断言标准误等于
+    sigma 除以根号 n。但在一个抽查比例高达三分之一的封闭资产池里，无限总体的公式真的还适用吗？
+  zh_hk: 當都市咖啡審計每日流水單據嗰陣，總體規模浩瀚無邊——數以萬計嘅出單交易滔滔不絕。但請將目光轉向工程維保部：喺灣仔、旺角同機場嘅全部網點入面，我哋重金投入嘅商用濃縮咖啡機隊總共淨係得一百二十部。為咗排查鍋爐水垢磨損，維保總監無放回抽檢咗整整四十部機器。經典教科書斷言標準誤等於
+    sigma 除以根號 n。但喺一個抽查比例高達三分之一嘅封閉資產池入面，無限總體嘅公式真係仲適用咩？
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: What It Is
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: The Finite Population Correction factor
+  title_zh: 有限总体修正系数数学表达式
+  title_zh_hk: 有限總體修正系數數學表達式
+  formula: FPC = sqrt((N - n) / (N - 1)); SE_adj = (sigma / sqrt(n)) * FPC
+  formula_zh: 修正系数 FPC = 根号((N - n) / (N - 1))；校准后标准误 SE_adj = (sigma / 根号(n)) × FPC
+  formula_zh_hk: 修正系數 FPC = 根號((N - n) / (N - 1))；校準後標準誤 SE_adj = (sigma / 根號(n)) × FPC
+  formula_tex: \text{FPC} = \sqrt{\frac{N - n}{N - 1}}, \quad \text{SE}_{\bar{X}} = \frac{\sigma}{\sqrt{n}}\sqrt{\frac{N -
+    n}{N - 1}}
+  s1_en: Standard sampling theory assumes infinite populations or sampling with replacement, meaning each draw is completely
+    independent and leaves the pool unchanged.
+  s1_zh: 标准统计抽样理论默认总体趋于无限大，或采用有放回抽样，这意味着每次抽取严格独立，且总体的未知状态从未被真正消耗。
+  s1_zh_hk: 標準統計抽樣理論默認總體趨於無限大，抑或採用有放回抽樣，呢個意味住每次抽取嚴格獨立，兼且總體嘅未知狀態從未被真正消耗。
+  s2_en: In physical equipment audits, we sample without replacement. The Finite Population Correction, or FPC, adjusts the
+    variance downward because every machine inspected locks in known truth and shrinks remaining uncertainty.
+  s2_zh: 但在实体资产巡检中，我们绝不会将拆解过的机器放回重复抽检。有限总体修正系数（FPC）通过向下校准方差，奖励已知信息：每核验一台设备，剩余总体的未知空间便缩小一分。
+  s2_zh_hk: 但喺實體資產巡檢入面，我哋絕唔會將拆解過嘅機器放返入去重複抽檢。有限總體修正系數（FPC）透過向下校準方差，獎勵已知信息：每核驗一部設備，剩餘總體嘅未知空間就縮細一分。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  kicker: The Decision Threshold
+  kicker_en: The Decision Threshold
+  kicker_zh: 判定边界
+  kicker_zh_hk: 判定邊界
+  title_en: The 5% sampling fraction rule
+  title_zh: 百分之五抽样比经验法则
+  title_zh_hk: 百分之五抽樣比經驗法則
+  left_en: 'Infinite Regime (n / N <= 0.05): FPC ≈ 1.0, ignore correction'
+  left_zh: 无限视界 (n / N <= 0.05)：FPC 逼近 1.0，忽略修正安全无虞
+  left_zh_hk: 無限視界 (n / N <= 0.05)：FPC 逼近 1.0，忽略修正安全無虞
+  right_en: 'Finite Regime (n / N > 0.05): FPC < 1.0, correction mandatory'
+  right_zh: 有限视界 (n / N > 0.05)：FPC 显著低于 1.0，必须强制校准
+  right_zh_hk: 有限視界 (n / N > 0.05)：FPC 顯著低過 1.0，必須強制校準
+  s1_en: When your sample fraction n over N is less than five percent—like four hundred receipts out of twenty-five thousand—the
+    FPC is greater than zero point nine nine seven. The correction is negligible.
+  s1_zh: 当抽样比例 n 比 N 低于百分之五时——例如从两万五千张小票中抽取四百张——FPC 计算值大于零点九九七。此时修正效果极其微弱，可以直接忽略。
+  s1_zh_hk: 當抽樣比例 n 比 N 低過百分之五嗰陣——好似由兩萬五千張單據入面抽取四百張——FPC 計算值大過零點九九七。呢個時候修正效果極其微弱，可以直接忽略。
+  s2_en: Once the sample consumes more than five percent of the population, ignoring the FPC artificially inflates standard
+    error, making your audit look far less precise than it actually is.
+  s2_zh: 然而一旦样本量吞噬了总体百分之五以上的份额，若仍闭眼沿用老公式，就会人为虚增标准误，导致你的审计结论看起来比真实水平拙劣迟钝得多。
+  s2_zh_hk: 然而一旦樣本量吞噬咗總體百分之五以上嘅份額，若果仲係閉眼沿用舊公式，就會人為虛增標準誤，搞到你嘅審計結論睇落去比真實水平拙劣遲鈍得多。
+  s3_en: In the extreme limit where n equals N, the numerator becomes N minus N, collapsing FPC to zero. When you inspect
+    every single machine, sampling variance completely ceases to exist.
+  s3_zh: 在极端极限情况下，若样本量 n 最终等于总体总量 N，分子中的 N 减 N 归零，FPC 瞬间塌陷为零。全量普查之下，抽样方差在物理世界彻底不复存在。
+  s3_zh_hk: 喺極端極限情況下，若果樣本量 n 最終等於總體總量 N，分子入面嘅 N 減 N 歸零，FPC 瞬間塌陷為零。全量普查之下，抽樣方差喺物理世界徹底不復存在。
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: The Ledger
+  kicker_en: The Ledger
+  kicker_zh: 账目精算
+  kicker_zh_hk: 賬目精算
+  title_en: Auditing Metro's 120-unit espresso fleet
+  title_zh: 全港一百二十台咖啡机磨损实测精算
+  title_zh_hk: 全港一百二十部咖啡機磨損實測精算
+  step1_en: 'Fleet baseline: N = 120 machines, sample n = 40, wear sigma = 15.0 points'
+  step1_zh: 机队基准：全网 N = 120 台，抽样 n = 40 台，磨损标准差 sigma = 15.0 分
+  step1_zh_hk: 機隊基準：全網 N = 120 部，抽樣 n = 40 部，磨損標準差 sigma = 15.0 分
+  step2_en: 'Check ratio: n / N = 40 / 120 = 33.3% > 5% -> FPC = sqrt(80 / 119) ≈ 0.820'
+  step2_zh: 核验抽样比：40 / 120 = 33.3% > 5% -> FPC = 根号(80 / 119) ≈ 0.820
+  step2_zh_hk: 核驗抽樣比：40 / 120 = 33.3% > 5% -> FPC = 根號(80 / 119) ≈ 0.820
+  step3_en: 'Precision gain: Raw SE = 2.37 -> Corrected SE = 2.37 * 0.820 = 1.94 points'
+  step3_zh: 精度跃升：原始 SE = 2.37 分 -> 校准后 SE = 2.37 × 0.820 = 1.94 分（收窄 18%）
+  step3_zh_hk: 精度躍升：原始 SE = 2.37 分 -> 校準後 SE = 2.37 × 0.820 = 1.94 分（收窄 18%）
+  s1_en: Inspect Metro Coffee's engineering ledger. Across all outlets, our entire boiler fleet contains exactly N equals
+    one hundred and twenty espresso machines, with wear volatility sigma equal to fifteen points.
+  s1_zh: 查阅都市咖啡工程设备台账。全网各门店的商用咖啡机队总计仅有整整一百二十台，锅炉内壁磨损指数的历史波动标准差 sigma 为十五分。
+  s1_zh_hk: 查閱都市咖啡工程設備台賬。全網各門市嘅商用咖啡機隊總計淨係得整整一百二十部，鍋爐內壁磨損指數嘅歷史波動標準差 sigma 為十五分。
+  s2_en: 'The maintenance crew draws a sample of forty machines without replacement. Step two checks the sampling fraction:
+    forty over one hundred and twenty is thirty-three point three percent, vastly exceeding our five percent rule. The FPC
+    is the square root of eighty over one hundred and nineteen, yielding zero point eight two zero.'
+  s2_zh: 维保班组无放回抽验了其中的四十台。第二步核查抽样比：四十除以一百二十达百分之三十三点三，大幅越过百分之五红线。修正系数为根号下八十除以一百一十九，精确得出零点八二零。
+  s2_zh_hk: 維保班組無放回抽驗咗其中嘅四十部。第二步核查抽樣比：四十除以一百二十達百分之三十三點三，大幅越過百分之五紅線。修正系數為根號下八十除以一百一十九，精確得出零點八二零。
+  s3_en: Step three computes the true uncertainty. Unadjusted standard error is fifteen divided by the square root of forty,
+    or two point three seven points. Multiplying by zero point eight two zero drops the real standard error to one point nine
+    four points. We gained eighteen percent more precision without spending another dollar!
+  s3_zh: 第三步测算真实不确定度。未修正的标准误为十五除以根号四十，得两分三七。乘上零点八二零的修正因子后，真实标准误锐减至一分九四。没多花一分钱维保预算，我们的评估精度凭空提升了整整百分之十八！
+  s3_zh_hk: 第三步測算真實不確定度。未修正嘅標準誤為十五除以根號四十，得兩分三七。乘上零點八二零嘅修正因子後，真實標準誤銳減至一分九四。冇多使一分錢維保預算，我哋嘅評估精度憑空提升咗整整百分之十八！
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: Decision Rule
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Claim the statistical dividend of small closed systems
+  title_zh: 收割封闭总体确定性红利，守住有限视界精算底线
+  title_zh_hk: 收割封閉總體確定性紅利，守住有限視界精算底線
+  q1_en: Why does sampling without replacement yield higher precision than sampling with replacement?
+  q1_zh: 为什么无放回抽样的估算精度天然高于有放回抽样？
+  q1_zh_hk: 點解無放回抽樣嘅估算精度天然高過有放回抽樣？
+  q2_en: When should executives reject requests to expand equipment audit sample sizes?
+  q2_zh: 高管层在何时应当断然拒绝技术团队盲目追加设备抽检样本量的申请？
+  q2_zh_hk: 高管層喺幾時應當斷然拒絕技術團隊盲目追加設備抽檢樣本量嘅申請？
+  s1_en: Never use the infinite population standard error when auditing closed asset fleets; whenever your sample exceeds
+    five percent of total inventory, apply the FPC to claim the precision you already bought.
+  s1_zh: 巡检封闭资产底册时，切勿盲目套用无限总体标准误；只要抽样份额超过总资产的百分之五，务必启用 FPC，全额兑现你本就应得的高估算精度。
+  s1_zh_hk: 巡檢封閉資產底冊嗰陣，切勿盲目套用無限總體標準誤；只要抽樣份額超過總資產嘅百分之五，務必啟用 FPC，全額兌現你本來就應得嘅高估算精度。
+  s2_en: 'Audit budgets must account for finite gains: when thirty percent of the fleet is already inspected, the FPC shrinks
+    your margin of error, making expensive extra teardowns wasteful.'
+  s2_zh: 资产审计预算必须考虑有限修正带来的信息红利：当三成机队已被核验时，FPC 已显著压缩误差区间，继续盲目拆检只会徒增沉没成本。
+  s2_zh_hk: 資產審計預算必須考慮有限修正帶嚟嘅信息紅利：當三成機隊已經被核驗嗰陣，FPC 已經顯著壓縮誤差區間，繼續盲目拆檢淨係會徒增沉沒成本。
+  s3_en: The operating rule is to apply the finite correction once the draw exceeds 5% of a closed fleet. Forty of 120 machines
+    cuts the standard error from 2.37 to 1.94 points.
+  s3_zh: 操作规则是封闭机队抽样超过 5% 时乘上有限修正。120 台中抽 40 台，标准误由 2.37 分降到 1.94 分。
+  s3_zh_hk: 操作規則係封閉機隊抽樣超過 5% 嗰陣乘上有限修正。120 部入面抽 40 部，標準誤由 2.37 分降到 1.94 分。

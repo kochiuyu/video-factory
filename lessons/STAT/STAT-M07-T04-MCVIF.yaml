@@ -1,0 +1,170 @@
+id: STAT-M07-T04-MCVIF
+course: STAT-M07
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: Multicollinearity & Variance Inflation Factors
+title_zh: 多重共线性与方差膨胀因子
+title_zh_hk: 多重共線性與方差膨脹因子
+objective_en: Diagnose multicollinearity in multiple regression, calculate the Variance Inflation Factor (VIF), and identify how collinear operational inputs inflate parameter standard errors without degrading overall prediction.
+objective_zh: 诊断多元回归中的多重共线性，计算方差膨胀因子（VIF），并辨识高度相关的营运输入如何在不损害整体预测精度的前提下人为膨胀参数标准误。
+objective_zh_hk: 診斷多元回歸入面嘅多重共線性，計算方差膨脹因子（VIF），並指出高度相關嘅營運輸入點樣喺唔影響整體預測嘅前提下，夾硬放大參數標準誤。
+glossary:
+- en: Multicollinearity
+  zh: 多重共线性
+  zh_hk: 多重共線性
+  lock: true
+  zh_zh_hk: 多重共線性
+- en: Variance Inflation Factor
+  zh: 方差膨胀因子
+  zh_hk: 方差膨脹因子
+  lock: true
+  zh_zh_hk: 方差膨脹因子
+- en: Auxiliary R-Squared
+  zh: 辅助判定系数
+  zh_hk: 輔助判定系數
+  lock: true
+  zh_zh_hk: 輔助判定系數
+- en: Standard Error Inflation
+  zh: 标准误膨胀
+  zh_hk: 標準誤膨脹
+  lock: true
+  zh_zh_hk: 標準誤膨脹
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: If two explanatory variables in a store model (e.g., espresso shots pulled and steamed milk volume) have an auxiliary correlation of R_j^2 = 0.90, what is the resulting Variance Inflation Factor (VIF_j)?
+  question_zh: 若某门店模型中两个解释变量（如浓缩咖啡萃取份数与蒸奶毫升数）的辅助回归拟合度达到 R_j^2 = 0.90，其对应的方差膨胀因子（VIF_j）是多少？
+  question_zh_hk: 如果門市模型入面兩個解釋變量（例如 Espresso 萃取份數同蒸奶毫升數）嘅輔助回歸擬合度達到 R_j^2 = 0.90，計出嚟嘅方差膨脹因子（VIF_j）係幾多？
+  options_en:
+  - 'A: VIF_j = 1.11'
+  - 'B: VIF_j = 10.00'
+  - 'C: VIF_j = 0.10'
+  - 'D: VIF_j = 9.00'
+  options_zh:
+  - 'A: VIF_j = 1.11'
+  - 'B: VIF_j = 10.00'
+  - 'C: VIF_j = 0.10'
+  - 'D: VIF_j = 9.00'
+  options_zh_hk:
+  - 'A: VIF_j = 1.11'
+  - 'B: VIF_j = 10.00'
+  - 'C: VIF_j = 0.10'
+  - 'D: VIF_j = 9.00'
+  answer: B
+  explanation_en: VIF_j = 1 / (1 - R_j^2). With R_j^2 = 0.90, VIF_j = 1 / 0.10 = 10.00. This indicates substantial variance inflation; interpretation should consider the modeling purpose rather than a universal cutoff.
+  explanation_zh: VIF_j = 1 / (1 - R_j^2)。当 R_j^2 = 0.90 时，VIF_j = 1 / 0.10 = 10.00，表示方差出现明显膨胀；解读时应结合建模目的，而不是套用统一红线。
+  explanation_zh_hk: VIF_j = 1 / (1 - R_j^2)。當 R_j^2 = 0.90 時，VIF_j = 1 / 0.10 = 10.00，表示方差有明顯膨脹；解讀時要配合建模目的，而唔係套用統一紅線。
+- id: Q2
+  type: multiple_choice
+  question_en: When severe multicollinearity exists between two store inputs, what is the exact statistical consequence for the regression results?
+  question_zh: 当两个门店投入要素之间存在严重的多重共线性时，回归结果会面临何种确切的统计后果？
+  question_zh_hk: 當兩個門市投入要素之間存在嚴重嘅多重共線性嗰陣，回歸結果會面對咩具體嘅統計後果？
+  options_en:
+  - 'A: The overall model R-squared collapses to zero and cannot predict store sales'
+  - 'B: Individual slope standard errors explode, driving t-statistics down and making individual parameters appear statistically insignificant'
+  - 'C: OLS estimators become systematically biased away from population truth'
+  - 'D: The regression intercept mechanically equals the sample mean of sales'
+  options_zh:
+  - 'A: 模型整体的 R平方 瞬间坍塌归零，彻底失去对门店销量的预测能力'
+  - 'B: 单独斜率的标准误剧烈膨胀，压低 t 统计量，导致原本关键的变量表面上看似均不显著'
+  - 'C: OLS 估计量产生系统性偏差，彻底偏离总体真实均值'
+  - 'D: 回归方程的常数截距项在数值上必然等于销量的样本均值'
+  options_zh_hk:
+  - 'A: 模型整體嘅 R平方 即刻冧到變零，完全失去對門市銷量嘅預測能力'
+  - 'B: 單獨斜率嘅標準誤急劇放大，壓低 t 統計量，搞到本來好緊要嘅變量表面上睇落全部唔顯著'
+  - 'C: OLS 估計量產生系統性偏差，徹底偏離母體真實平均數'
+  - 'D: 回歸方程嘅常數截距項喺數值上必然等於銷量嘅樣本平均數'
+  answer: B
+  explanation_en: Multicollinearity does not bias OLS estimates or hurt overall R-squared forecasting; instead, it inflates parameter variances SE(beta_j), eroding individual t-statistics and obscuring which specific input drives output.
+  explanation_zh: 多重共线性既不导致 OLS 估计量有偏，也不破坏整体 R平方 的预测精度；它的唯一破坏力在于膨胀参数的标准误 SE(beta_j)，吞噬单个变量的 t 统计量，使管理层无法辨识究竟是哪个变量在发挥作用。
+  explanation_zh_hk: 多重共線性既唔會令 OLS 估計量有偏差，亦唔會打沉整體 R平方 嘅預測準繩度；佢唯一嘅破壞力係急劇放大參數標準誤 SE(beta_j)，削弱個別變量嘅 t 統計量，令管理層分唔清到底係邊個變量喺度發力。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Barista Scheduling Dilemma
+  kicker_zh: 吧台排产困境
+  kicker_zh_hk: 吧檯排產困局
+  title_en: Why Did Two Proven Drivers Both Become Insignificant?
+  title_zh: 为何两项公认的核心指标双双变得不显著？
+  title_zh_hk: 點解兩大核心營運指標會雙雙變到唔顯著？
+  en: 'Metro Coffee''s roast commissary models beverage output using two operational metrics: total espresso shots extracted and total milliliters of steamed milk. Common sense confirms both directly determine latte sales. But when both appear together in a multiple regression, their t-statistics plummet and both show up with p-values over zero point twenty. How can two indispensable ingredients look statistically useless at the same time?'
+  zh: Metro Coffee 烘焙工厂利用两项指标建模饮品产能：意式浓缩萃取总份数与蒸奶总毫升数。常识告诉我们，两者共同决定了拿铁销量。然而，当把两项指标同时放入多元回归模型时，两者的 t 统计量双双暴跌，p值 全部超过 0.20。为什么两个缺一不可的核心业务要素，在统计软件里看起来会同时毫无用处？
+  zh_hk: Metro Coffee 烘焙廠用兩組指標預測飲品產能：Espresso 萃取總份數同蒸奶總毫升數。常識話畀我哋知，兩樣嘢合埋先整到拿鐵出嚟。點知將佢哋一齊放入多元回歸嗰陣，兩者嘅 t 統計量同時暴跌，p值 全部大過 0.20。點解兩個不可或缺嘅核心指標，喺統計軟件入面望落會雙雙變成廢柴？
+  zh_zh_hk: Metro Coffee 烘焙廠用兩組指標預測飲品產能：Espresso 萃取總份數同蒸奶總毫升數。常識話畀我哋知，兩樣嘢合埋先整到拿鐵出嚟。點知將佢哋一齊放入多元回歸嗰陣，兩者嘅 t 統計量同時暴跌，p值 全部大過 0.20。點解兩個不可或缺嘅核心指標，喺統計軟件入面望落會雙雙變成廢柴？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: SE(beta_j_hat) = [ s_e / sqrt(Sum((X_ji - X_j_bar)^2)) ] * sqrt(VIF_j)
+  formula_zh: 标准误膨胀：SE(beta_j_hat) = [ s_e / sqrt(Sum((X_ji - X_j_bar)^2)) ] * sqrt(VIF_j)
+  formula_zh_hk: 標準誤膨脹：SE(beta_j_hat) = [ s_e / sqrt(Sum((X_ji - X_j_bar)^2)) ] * sqrt(VIF_j)
+  formula_tex: \text{SE}(\hat{\beta}_j) = \frac{s_e}{\sqrt{\sum_{i=1}^n (X_{ji} - \bar{X}_j)^2}} \sqrt{\text{VIF}_j}, \quad \text{VIF}_j = \frac{1}{1 - R_j^2}
+  s1_en: Multicollinearity occurs when two or more explanatory variables in a regression model are highly linearly correlated with each other. It inflates the sampling variance of estimated regression coefficients without introducing bias.
+  s1_zh: 多重共线性是指回归模型中的两个或多个解释变量之间存在高度的线性相关性。它不会使参数估计量产生偏差，却会系统性地急剧放大回归斜率的抽样方差。
+  s1_zh_hk: 多重共線性係指回歸模型入面嘅兩個或多個解釋變量之間，存在極高嘅線性相關性。佢唔會搞到參數估計量有偏差，但會好嚴重噉放大回歸斜率嘅抽樣方差。
+  s2_en: The Variance Inflation Factor, or VIF, measures this expansion. Defined as one divided by one minus R j squared from an auxiliary regression, its square root directly multiplies the slope's baseline standard error.
+  s2_zh: 方差膨胀因子 VIF 精确量化了这种放大程度。它定义为 1 除以 1 减去自变量辅助回归的 R_j 方；VIF 的平方根直接以乘法形式，成倍拉大斜率的标准误。
+  s2_zh_hk: 方差膨脹因子 VIF 精確量化咗呢種放大倍數。佢定義為 1 除以 1 減自變量輔助回歸嘅 R_j 方；VIF 嘅根號會直接以乘法倍數，硬生生拉大斜率嘅標準誤。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: The Credit Assignment Dilemma
+  left_zh: 功劳归属分配僵局
+  right_en: Preserved Global Fit
+  right_zh: 全局预测依然稳健
+  s1_en: Because every latte recipe calls for both a shot and milk together, espresso volume and steamed milk track each other in near-lockstep. OLS cannot determine which input truly generated the incremental dollar.
+  s1_zh: 因为制作一杯拿铁必须同时消耗浓缩与鲜奶，萃取量与蒸奶量几乎步调一致。最小二乘法由此陷入僵局，无法判断多卖出的一杯咖啡究竟该归功于浓缩还是鲜奶。
+  s1_zh_hk: 因為沖一杯拿鐵實要同時落 Espresso 同熱鮮奶，咖啡量同蒸奶量基本上形影不離。最小二乘法即刻卡死，根本分唔清多賣出嘅嗰杯咖啡到底係邊個嘅功勞。
+  s2_en: As auxiliary R squared approaches one, VIF explodes toward infinity. The standard error inflates, shrinking t-statistics below critical values and tricking managers into discarding vital operational metrics.
+  s2_zh: 当自变量之间的辅助 R方 逼近 1 时，VIF 趋于无穷大。膨胀的标准误把 t 统计量压至临界值以下，误导管理者将至关重要的营运指标误判为无关紧要。
+  s2_zh_hk: 當自變量之間嘅輔助 R方 接近 1 嗰陣，VIF 會暴升到無限大。被誇大嘅標準誤將 t 統計量壓低過臨界值，誤導管理層以為核心營運指標冇用而亂咁減走。
+  s3_en: Critically, multicollinearity damages individual parameter precision, not total predictive power. If your only goal is forecasting total commissary bean orders, collinear predictors will still predict accurately.
+  s3_zh: 至关重要的是，多重共线性仅破坏单个参数的精度，并不损害模型的总预测力。若目标纯粹是预测工厂总备货量，共线性模型依然能给出高精度的预测值。
+  s3_zh_hk: 最關鍵嘅係，多重共線性淨係打沉單個參數嘅精確度，完全唔影響整體預測能力。如果目標只係預測中央廠嘅總訂貨量，共線性模型依然可以預測得好準。
+  left_zh_hk: 功勞歸屬分配死局
+  right_zh_hk: 全局預測依然穩陣
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Run Auxiliary Regression
+  step1_zh: 运行自变量辅助回归
+  step2_en: Solve Variance Inflation
+  step2_zh: 求解方差膨胀因子
+  step3_en: Interpret the Precision Loss
+  step3_zh: 解读精度损失
+  s1_en: 'Step one: Regress steamed milk volume on espresso shot counts across our Hong Kong branches. The two track each other so tightly that auxiliary R squared equals zero point ninety-five.'
+  s1_zh: 第一步：在全港门店中将蒸奶用量对浓缩咖啡萃取量做辅助回归。两者配合极度紧密，辅助 R方 高达 0.95。
+  s1_zh_hk: 第一步：喺全港分店入面將蒸奶用量對 Espresso 萃取份數做輔助回歸。兩者高度同步，輔助 R方 高達 0.95。
+  s2_en: 'Step two: Compute the inflation factor. One minus zero point ninety-five equals zero point zero five. One divided by zero point zero five yields a massive VIF of exactly twenty point zero.'
+  s2_zh: 第二步：计算膨胀因子。1 减 0.95 等于 0.05。1 除以 0.05 得出方差膨胀因子 VIF 恰好等于 20.0。
+  s2_zh_hk: 第二步：計算膨脹因子。1 減 0.95 等於 0.05。1 除以 0.05 計出方差膨脹因子 VIF 啱啱好等於 20.0。
+  s3_en: 'Step three: VIF equals 20, so the standard-error multiplier is the square root of 20, approximately 4.47. This indicates substantial loss of coefficient precision, but VIF alone does not create a universal deletion rule.'
+  s3_zh: 第三步：VIF 等于 20，因此标准误乘数为根号 20，约等于 4.47。这表明系数精度大幅下降，但 VIF 本身并不产生通用的删变量规则。
+  s3_zh_hk: 第三步：VIF 等於 20，所以標準誤乘數係根號 20，約等於 4.47。呢個結果顯示系數精度大幅下降，但 VIF 本身並唔產生通用嘅刪變量規則。
+  step1_zh_hk: 運行自變量輔助回歸
+  step2_zh_hk: 求解方差膨脹因子
+  step3_zh_hk: 解讀精度損失
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Does Collinearity Mean the Model Fails?
+  q1_zh: 共线性是否意味着模型整体失效？
+  q2_en: 'Audit Rule: Check VIF Before Pruning'
+  q2_zh: 审计准则：盲目删变量前必查 VIF
+  s1_en: Multicollinearity is a data overlap problem, not a modeling flaw. It occurs when business inputs move together so closely that statistical models cannot assign distinct operational credit.
+  s1_zh: 多重共线性是数据重叠引发的问题，而非模型设定有误。当多项业务要素同步变动时，统计模型便无法合理分配各要素的独立功劳。
+  s1_zh_hk: 多重共線性係數據重疊引起嘅問題，而唔係模型寫錯。當幾項營運要素步調太過一致嗰陣，統計模型就無法分清邊個先至係實質推手。
+  s2_en: 'Decision rule: inspect VIF together with the modeling goal. If separate coefficient interpretation matters, reconsider redundant predictors, collect more informative variation, or use a justified composite measure. Do not delete a variable solely because its t-statistic is low.'
+  s2_zh: 决策规则：结合建模目标检查 VIF。若重点是分别解释系数，可重新考虑冗余变量、收集更有辨识力的数据，或采用有依据的综合指标。不要仅因 t 统计量偏低就删除变量。
+  s2_zh_hk: 決策規則：要配合建模目標檢查 VIF。如果重點係分別解讀系數，可以重新考慮重疊變量、收集更有辨識力嘅數據，或者採用有理據嘅綜合指標。唔好只因為 t 統計量低就刪除變量。
+  s3_en: In this example, an auxiliary R-squared of 0.95 gives VIF equal to 20 and a standard-error multiplier of approximately 4.47. The conclusion is imprecise separate slopes, not automatic model failure; forecast quality should be checked on new or held-out data.
+  s3_zh: 本例中，辅助 R方 为 0.95，对应 VIF = 20，标准误乘数约为 4.47。结论是单独斜率估计不精确，而不是模型自动失效；预测质量应在新数据或留出样本上检验。
+  s3_zh_hk: 喺呢個例子，輔助 R方 係 0.95，對應 VIF = 20，標準誤乘數約為 4.47。結論係個別斜率估計唔精確，而唔係模型自動失效；預測質素要喺新數據或者留出樣本上檢驗。
+  q1_zh_hk: 共線性係咪代表成個模型玩完？
+  q2_zh_hk: 審計準則：胡亂斬變量前必查 VIF

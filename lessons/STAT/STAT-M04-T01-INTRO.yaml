@@ -1,0 +1,216 @@
+id: STAT-M04-T01-INTRO
+course: STAT-M04
+course_en: Sampling Distributions, the Central Limit Theorem, and Interval Estimation
+course_zh: 抽样分布、中心极限定理与区间估计
+course_zh_hk: 抽樣分佈、中心極限定理與區間估計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: The sampling mandate
+title_zh: 抽样法度：总体真容与样本杂音
+title_zh_hk: 抽樣法度：總體真容與樣本雜音
+objective_en: Distinguish unknown population parameters from observed sample statistics, recognize the physical and economic
+  necessity of sampling across massive transaction flows, and diagnose sampling error versus selection bias in retail audits.
+objective_zh: 严格区分未知的总体参数与实际观测的样本统计量，阐明海量业务流水下全量普查的物理与经济不可能三角，并在零售审计场景中精准诊断抽样随机误差与系统性选择偏差。
+objective_zh_hk: 嚴格區分未知嘅總體參數同實際觀測嘅樣本統計量，闡明海量業務流水下全量普查嘅物理同經濟不可能三角，並喺零售審計場景入面精準診斷抽樣隨機誤差同系統性選擇偏差。
+glossary:
+- en: population parameter
+  zh: 总体参数
+  zh_hk: 總體參數
+  lock: true
+- en: sample statistic
+  zh: 样本统计量
+  zh_hk: 樣本統計量
+  lock: true
+- en: sampling error
+  zh: 抽样误差/随机波动
+  zh_hk: 抽樣誤差/隨機波動
+  lock: true
+- en: selection bias
+  zh: 选择偏差/抽样偏倚
+  zh_hk: 選擇偏差/抽樣偏倚
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: What is the fundamental mathematical distinction between a population parameter (such as mu) and a sample statistic
+    (such as x-bar)?
+  question_zh: 总体参数（如总体均值 mu）与样本统计量（如样本均值 x-bar）在数学本质上的核心区别是什么？
+  question_zh_hk: 總體參數（好似總體均值 mu）同樣本統計量（好似樣本均值 x-bar）喺數學本質上嘅核心區別係咩？
+  options_en:
+  - 'A: The parameter is a fixed, unknown constant of the entire population; the statistic is a random variable calculated
+    from observed sample data that varies across different draws.'
+  - 'B: The parameter is always an integer, whereas the statistic is always a percentage.'
+  - 'C: The parameter only applies to non-profit entities, while the statistic is used exclusively by commercial enterprises.'
+  - 'D: The parameter changes dynamically every second, while the statistic never changes once recorded.'
+  options_zh:
+  - 'A: 总体参数是整个宏观总体客观存在但未知的固定常数；样本统计量则是从有限抽样数据中计算得出的随机变量，随不同抽样结果动态浮动。'
+  - 'B: 总体参数永远必须是整数，而样本统计量在数学定义上永远只能是百分比。'
+  - 'C: 总体参数仅适用于非营利机构审计，而样本统计量则由商业上市公司独家使用。'
+  - 'D: 总体参数每秒钟都在动态剧烈变化，而样本统计量一旦录入便在物理上永恒不变。'
+  options_zh_hk:
+  - 'A: 總體參數係成個宏觀總體客觀存在但未知嘅固定常數；樣本統計量則係由有限抽樣數據入面計算得出嘅隨機變量，隨唔同抽樣結果動態浮動。'
+  - 'B: 總體參數永遠必須係整數，而樣本統計量喺數學定義上永遠淨係可以係百分比。'
+  - 'C: 總體參數淨係適用於非牟利機構審計，而樣本統計量則由商業上市公司獨家使用。'
+  - 'D: 總體參數每秒鐘都喺度動態劇烈變化，而樣本統計量一旦錄入就喺物理上永恆不變。'
+  answer: A
+  explanation_en: Parameters (mu, sigma, p) are fixed structural constants of the whole population. Statistics (x-bar, s,
+    p-hat) are random variables because their values depend on the specific random sample drawn.
+  explanation_zh: 参数（mu, sigma, p）属于总体固有的客观常数。统计量（x-bar, s, p-hat）是随机变量，因为不同抽样批次会产生不同的样本取值。
+  explanation_zh_hk: 參數（mu, sigma, p）屬於總體固有嘅客觀常數。統計量（x-bar, s, p-hat）係隨機變量，因為唔同抽樣批次會產生唔同嘅樣本取值。
+- id: Q2
+  type: multiple_choice
+  question_en: If Metro headquarters audits average customer spend exclusively from 500 mobile app orders at the Airport branch,
+    why is the resulting sample mean x-bar = $68.50 flawed for forecasting chain-wide performance?
+  question_zh: 若总部仅抽取机场店手机 App 预点单的 500 张小票计算客单价（得 x-bar = $68.50），为什么该指标在预测全网经营真容时存在致命缺陷？
+  question_zh_hk: 若總部淨係抽取機場舖手機 App 預點單嘅 500 張單據計算客單價（得 x-bar = $68.50），點解嗰個指標喺預測全網經營真容嗰陣存在致命缺陷？
+  options_en:
+  - 'A: It suffers from systematic selection bias: Airport travelers and digital pre-order users have higher purchasing power
+    than ordinary street commuters in Mong Kok or Wan Chai.'
+  - 'B: Because mobile application data is legally barred from statistical spreadsheets.'
+  - 'C: Because 500 receipts causes combinatorial overflow in computer databases.'
+  - 'D: Because sample means can never be expressed with decimal cents.'
+  options_zh:
+  - 'A: 它存在严重的系统性选择偏差：机场高净值旅客与移动端深度用户的消费偏好，无法代表旺角或湾仔沿街线下排队的普通通勤顾客。'
+  - 'B: 因为商业计量法规明文禁止将线上点单数据输入统计学电子表格。'
+  - 'C: 因为 500 笔订单在计算机底层数据库中会引发组合数爆炸并导致宕机。'
+  - 'D: 因为任何样本均值在会计法则上都严禁保留小数点后面的分币零头。'
+  options_zh_hk:
+  - 'A: 佢存在嚴重嘅系統性選擇偏差：機場高淨值旅客同流動端深度用戶嘅消費偏好，冇辦法代表旺角或者灣仔沿街線下排隊嘅普通返工客。'
+  - 'B: 因為商業計量法規明文禁止將線上點單數據輸入統計學電子表格。'
+  - 'C: 因為 500 筆訂單喺電腦底層數據庫入面會引發組合數爆炸並搞到冧機。'
+  - 'D: 因為任何樣本均值喺會計法則上都嚴禁保留小數點後面嘅分幣零頭。'
+  answer: A
+  explanation_en: A sample must be representative of the target population. Sampling only high-spend Airport app users introduces
+    selection bias, skewing the estimate away from the true chain-wide population mean mu.
+  explanation_zh: 样本必须对目标总体具备无偏代表性。仅对机场 App 订单采样会引入选择偏差，导致估算结果系统性偏离全网真实的总体均值 mu。
+  explanation_zh_hk: 樣本必須對目標總體具備無偏代表性。淨係對機場 App 訂單採樣會引入選擇偏差，搞到估算結果系統性偏離全網真實嘅總體均值 mu。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The 25,000 Receipt Crisis
+  kicker_en: The 25,000 Receipt Crisis
+  kicker_zh: 两万五千张票据的困局
+  kicker_zh_hk: 兩萬五千張單據嘅困局
+  title_en: When counting everything is physically impossible
+  title_zh: 全网两万五千张小票：我们真能算尽一切吗？
+  title_zh_hk: 全網兩萬五千張單據：我哋真係算得盡一切咩？
+  en: 'Across our retail network—from the morning rush at Mong Kok to the business corridors of Wan Chai and the terminals
+    at the Airport—Metro Coffee Chain logs twenty-five thousand customer receipts every single day. The Chief Operating Officer
+    demands to know: What is our exact chain-wide customer spend today? To audit every transaction would halt register servers,
+    cost thousands in manual labor, and paralyze evening closing. How do leaders see the whole forest by examining only a
+    handful of leaves?'
+  zh: 横跨全港零售版图——从旺角的清晨客流、湾仔的写字楼商圈，到香港国际机场的离港航站楼——都市咖啡连锁店每天吐出整整两万五千张交易小票。首席运营官在晨会上严厉发问：今天全网真实的平均客单价究竟是多少？若要对每一笔交易进行全量人工复核，不仅会拖垮结算服务器，耗费巨额人力，更会导致晚间清账彻底瘫痪。管理者究竟该如何通过审视几片落叶，洞悉整片森林的真容？
+  zh_hk: 橫跨全港零售版圖——由旺角嘅清晨客流、灣仔嘅寫字樓商圈，到香港國際機場嘅離港航站樓——都市咖啡連鎖舖每日印出整整兩萬五千張交易單據。首席營運官喺晨會上嚴厲發問：今日全網真實嘅平均客單價究竟係幾多？若果要對每一筆交易進行全量人工復核，唔單止會拖冧結算伺服器，耗費巨額人力，更加會搞到晚間清賬徹底癱瘓。管理者究竟應該點樣透過審視幾片落葉，洞悉成片森林嘅真容？
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: What It Is
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: Parameters versus statistics
+  title_zh: 总体参数与样本统计量的大道之别
+  title_zh_hk: 總體參數與樣本統計量嘅大道之別
+  formula: Population (mu, sigma, p) <--- INFERENCE <--- Sample (x-bar, s, p-hat)
+  formula_zh: 宏观总体（mu, sigma, p 为固定真值） <--- 统计推断 <--- 微观样本（x-bar, s, p-hat 为随机变量）
+  formula_zh_hk: 宏觀總體（mu, sigma, p 為固定真值） <--- 統計推斷 <--- 微觀樣本（x-bar, s, p-hat 為隨機變量）
+  formula_tex: \theta \in \{\mu, \sigma, p\} \quad \xleftarrow{\text{Inference}} \quad \hat{\theta} \in \{\bar{X}, S, \hat{p}\}
+  s1_en: In probability theory, we pretended population parameters like mu, sigma, and p were handed down from above. In real-world
+    business, ground truth is unknown, invisible, and fixed.
+  s1_zh: 在先前的概率论世界中，我们始终假设总体参数 mu、sigma 和 p 是天生已知的神赐真值。然而在真实商业战场上，总体真容深不可测、隐秘未知，却又客观恒定。
+  s1_zh_hk: 喺之前嘅概率論世界入面，我哋始終假設總體參數 mu、sigma 同 p 係天生已知嘅神賜真值。然而喺真實商業戰場上，總體真容深不可測、隱秘未知，但又客觀恆定。
+  s2_en: 'To uncover it, we draw an empirical sample n and calculate statistics: the sample mean x-bar, the sample standard
+    deviation s, and the sample proportion p-hat. Statistics are random variables that change with every draw.'
+  s2_zh: 为了探寻真理，我们抽取大小为 n 的样本并计算统计量：样本均值 x-bar、样本标准差 s 以及样本比例 p-hat。统计量是随抽样批次不断浮动的随机变量。
+  s2_zh_hk: 為咗探尋真理，我哋抽取大小為 n 嘅樣本並計算統計量：樣本均值 x-bar、樣本標準差 s 以及樣本比例 p-hat。統計量係隨抽樣批次不斷浮動嘅隨機變量。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  kicker: The Two Pitfalls
+  kicker_en: The Two Pitfalls
+  kicker_zh: 微观陷阱
+  kicker_zh_hk: 微觀陷阱
+  title_en: Sampling error versus selection bias
+  title_zh: 天然的随机误差，与致命的选择偏差
+  title_zh_hk: 天然嘅隨機誤差，與致命嘅選擇偏差
+  left_en: 'Sampling Error: Natural, symmetric chance noise'
+  left_zh: 抽样误差：不可避免的随机涨落，数学工具可驯服
+  left_zh_hk: 抽樣誤差：無可避免嘅隨機漲落，數學工具可馴服
+  right_en: 'Selection Bias: Fatal, systematic distortion'
+  right_zh: 选择偏差：样本结构系统性失真，算力再大也无效
+  right_zh_hk: 選擇偏差：樣本結構系統性失真，算力再大都無效
+  s1_en: Whenever we inspect a sample instead of the whole census, our statistic will never equal the parameter exactly. This
+    unavoidable gap is sampling error.
+  s1_zh: 只要我们用抽样代替全量普查，计算出的样本统计量就绝不可能严丝合缝等同于总体真值。这种不可避免的天然偏差被称为抽样误差。
+  s1_zh_hk: 只要我哋用抽樣代替全量普查，計算出嚟嘅樣本統計量就絕唔可能嚴絲合縫等同於總體真值。呢種無可避免嘅天然偏差被稱為抽樣誤差。
+  s2_en: 'Sampling error is harmless random noise that statistical math can bound. But selection bias is fatal: when your
+    sample systematically excludes key parts of your business, your numbers lie.'
+  s2_zh: 抽样误差只是中性的随机杂音，现代统计学完全有能力将其精确量化约束。但选择偏差则是致命的毒药：当抽样机制系统性遗漏了特定客群，数据便开始公开说谎。
+  s2_zh_hk: 抽樣誤差淨係中性嘅隨機雜音，現代統計學完全有能力將佢精確量化約束。但選擇偏差就係致命嘅毒藥：當抽樣機制系統性遺漏咗特定客群，數據就開始公開講大話。
+  s3_en: A sample of five hundred receipts from the Airport terminal will systematically overestimate average spend because
+    international flyers have larger travel budgets than local students.
+  s3_zh: 若仅仅抽取机场航站楼的五百张小票，得出的平均客单价必定严重虚高，因为赶飞机的商旅旅客其消费能力天然碾压街头的普通学生。
+  s3_zh_hk: 若果淨係抽取機場航站樓嘅五百張單據，得出嘅平均客單價必定嚴重虛高，因為趕飛機嘅商旅旅客其消費能力天然碾壓街頭嘅普通學生。
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: The Ledger
+  kicker_en: The Ledger
+  kicker_zh: 账目实查
+  kicker_zh_hk: 賬目實查
+  title_en: Auditing Metro Coffee's 25,000 ticket ledger
+  title_zh: 都市咖啡两万五千张流水实测抽样
+  title_zh_hk: 都市咖啡兩萬五千張流水實測抽樣
+  step1_en: 'Census truth: N = 25,000 tickets, true mu = $48.20 (Unknown to HQ)'
+  step1_zh: 宏观真值：全天 N = 25,000 张小票，真实均值 mu = $48.20（总部未知）
+  step1_zh_hk: 宏觀真值：全日 N = 25,000 張單據，真實均值 mu = $48.20（總部未知）
+  step2_en: 'Biased sample: 400 Airport morning tickets -> x-bar = $64.10 (Skewed!)'
+  step2_zh: 偏倚样本：仅抽取机场早高峰 400 张票据 -> 样本均值 $64.10（严重失真）
+  step2_zh_hk: 偏倚樣本：淨係抽取機場朝高峰 400 張單據 -> 樣本均值 $64.10（嚴重失真）
+  step3_en: 'Random audit: 400 stratified tickets across all stores -> x-bar = $48.65'
+  step3_zh: 分层随机：跨全港门店均衡抽验 400 张票据 -> 样本均值 $48.65（极度逼近）
+  step3_zh_hk: 分層隨機：跨全港門市均衡抽驗 400 張單據 -> 樣本均值 $48.65（極度逼近）
+  s1_en: Look inside Metro Coffee's centralized server ledger. Across all branches, exactly twenty-five thousand tickets were
+    printed today. The omniscient true population mean mu is forty-eight dollars and twenty cents.
+  s1_zh: 调取都市咖啡总部中央服务器流水台账。全天全港门店共吐出整整两万五千张票据。站在上帝视角，总体的绝对客观均值 mu 确凿为四十八块两毛。
+  s1_zh_hk: 調取都市咖啡總部中央伺服器流水台賬。全日全港門市共印出整整兩萬五千張單據。企喺上帝視角，總體嘅絕對客觀均值 mu 確鑿為四十八蚊兩毫。
+  s2_en: If an auditor lazily grabs four hundred receipts exclusively from the Airport terminal, the sample mean x-bar lands
+    at sixty-four dollars and ten cents. Selection bias inflates the ticket by thirty-three percent.
+  s2_zh: 若审计员图省事，仅从机场店前台截留四百张出餐小票，算出的样本均值高达六十四块一毛。系统性选择偏差将真实水平硬生生拔高了百分之三十三。
+  s2_zh_hk: 若審計員圖省事，淨係由機場舖前台截留四百張出餐單據，計出嘅樣本均值高達六十四蚊一毫。系統性選擇偏差將真實水平硬生生拔高咗百分之三十三。
+  s3_en: When we draw a stratified random sample of four hundred tickets across all districts, x-bar hits forty-eight dollars
+    and sixty-five cents. The tiny forty-five cent gap is pure sampling error—ready to be tamed by statistical theory.
+  s3_zh: 而当我们在全港各网点严格按客流比例随机抽取四百张小票时，样本均值录得四十八块六毛五。区区四毛五的微小差异，纯属良性抽样误差——完全在统计理论的掌控之中。
+  s3_zh_hk: 而當我哋喺全港各網點嚴格按客流比例隨機抽取四百張單據嗰陣，樣本均值錄得四十八蚊六毫五。區區四毫五嘅微小差異，純屬良性抽樣誤差——完全喺統計理論嘅掌控之中。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: Decision Rule
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Protect the sampling design before computing the math
+  title_zh: 方案设计捍卫代表性，样本无偏方得大乾坤
+  title_zh_hk: 方案設計捍衛代表性，樣本無偏先得大乾坤
+  q1_en: Why is an expensive bad sample worse than a cheap random sample?
+  q1_zh: 为什么一份耗资巨大的劣质样本，远比一份低成本的纯随机样本更具破坏性？
+  q1_zh_hk: 點解一份耗資巨大嘅劣質樣本，遠比一份低成本嘅純隨機樣本更具破壞性？
+  q2_en: Why does an Airport-only draw fail even when the sample is large?
+  q2_zh: 为什么只抽机场店的大样本仍然失败？
+  q2_zh_hk: 點解淨係抽機場舖嘅大樣本仍然失敗？
+  s1_en: Never confuse sample size with sample quality; ten thousand biased receipts will reliably mislead executive strategy,
+    while four hundred randomized tickets reveal ground truth.
+  s1_zh: 切勿将样本数量与样本质量混为一谈；一万张充满偏倚的小票只会坚定地误导高管战略，而四百张严密随机抽样的票据却足以精准洞察总体真容。
+  s1_zh_hk: 切勿將樣本數量同樣本質量混為一談；一萬張充滿偏倚嘅單據淨係會堅定噉誤導高管戰略，而四百張嚴密隨機抽樣嘅單據就足以精準洞察總體真容。
+  s2_en: 'Embrace the sampling mandate: accept that parameters are forever invisible, and master the art of statistical inference
+    to make defensible capital decisions.'
+  s2_zh: 深刻领会抽样的宿命法度：坦然接纳总体真值不可全见的事实，熟稔掌握统计推断之术，方能在风云变幻的商界做出无懈可击的战略决断。
+  s2_zh_hk: 深刻領會抽樣嘅宿命法度：坦然接納總體真值不可全見嘅事實，熟練掌握統計推斷之術，先可以喺風雲變幻嘅商界做出無懈可擊嘅戰略決斷。
+  s3_en: The operating rule is to protect the sampling design before any calculation. A stratified draw across stores can
+    sit near the unknown mean. An Airport-only draw cannot.
+  s3_zh: 操作规则是先守住抽样设计，再做任何计算。跨店分层抽取可以贴近未知均值。只抽机场店则不能。
+  s3_zh_hk: 操作規則係先守住抽樣設計，再做任何計算。跨舖分層抽取可以貼近未知均值。淨係抽機場舖就唔得。

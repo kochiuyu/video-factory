@@ -1,0 +1,165 @@
+id: STAT-M09-T05-HTWIN
+course: STAT-M09
+course_en: Business Time Series & Demand Forecasting
+course_zh: 商业时间序列与需求预测
+course_zh_hk: 商業時間序列與需求預測
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Holt-Winters Forecasting: Level, Trend, and Day-of-Week Seasonality'
+title_zh: 霍尔特-温特斯预测：水平、趋势与星期季节性
+title_zh_hk: 霍爾特-溫特斯預測：水平、趨勢同星期季節性
+objective_en: Explain multiplicative Holt-Winters forecasting, interpret its level, trend, and seasonal components, and calculate a one-step retail forecast while recognizing model-selection and operational limitations.
+objective_zh: 解释乘法霍尔特-温特斯预测，理解水平、趋势与季节成分，并计算零售一步预测，同时识别模型选择与运营限制。
+objective_zh_hk: 解釋乘法霍爾特-溫特斯預測，理解水平、趨勢同季節成分，並計算零售一步預測，同時識別模型選擇同營運限制。
+glossary:
+  - en: Holt-Winters Triple Exponential Smoothing
+    zh: 霍尔特-温特斯三重指数平滑
+    zh_hk: 霍爾特-溫特斯三重指數平滑
+    lock: true
+  - en: Level Equation (Alpha)
+    zh: 水平基准方程（Alpha）
+    zh_hk: 水平基準方程（Alpha）
+    lock: true
+  - en: Trend Slope Equation (Beta)
+    zh: 趋势斜率方程（Beta）
+    zh_hk: 趨勢斜率方程（Beta）
+    lock: true
+  - en: Seasonal Component (Gamma)
+    zh: 季节周期分量（Gamma）
+    zh_hk: 季節週期分量（Gamma）
+    lock: true
+quiz:
+  - id: Q1
+    type: multiple_choice
+    question_en: 'Assume level = 500, daily trend = 10, and the relevant Saturday seasonal factor = 1.40. What is the one-day-ahead multiplicative forecast?'
+    question_zh: 假设水平为 500、每日趋势为 10，相关周六季节因子为 1.40。乘法模型的一步预测是多少？
+    question_zh_hk: 假設水平係 500、每日趨勢係 10，相關禮拜六季節因子係 1.40。乘法模型嘅一步預測係幾多？
+    options_en:
+      - 'A: 714 croissants'
+      - 'B: 510 croissants'
+      - 'C: 700 croissants'
+      - 'D: 524 croissants'
+    options_zh:
+      - A：714 个牛角包
+      - B：510 个牛角包
+      - C：700 个牛角包
+      - D：524 个牛角包
+    options_zh_hk:
+      - A：714 個牛角包
+      - B：510 個牛角包
+      - C：700 個牛角包
+      - D：524 個牛角包
+    answer: A
+    explanation_en: 'Under the stated multiplicative forecast, (500 + 1 × 10) × 1.40 = 714 croissants.'
+    explanation_zh: 按照给定乘法预测，(500 + 1 × 10) × 1.40 = 714 个牛角包。
+    explanation_zh_hk: 按照指定乘法預測，(500 + 1 × 10) × 1.40 = 714 個牛角包。
+  - id: Q2
+    type: multiple_choice
+    question_en: When is multiplicative Holt-Winters a reasonable candidate?
+    question_zh: 什么情况下乘法霍尔特-温特斯是合理的候选模型？
+    question_zh_hk: 乜嘢情況下乘法霍爾特-溫特斯係合理候選模型？
+    options_en:
+      - 'A: When trend and recurring seasonality are present and seasonal amplitude changes with the level'
+      - 'B: Whenever fewer than 30 observations are available'
+      - 'C: When all seasonal effects are exactly zero'
+      - 'D: When the forecast must equal the latest observation'
+    options_zh:
+      - A：存在趋势与重复季节性，且季节波幅随水平变化时
+      - B：只要观测少于 30 个时
+      - C：所有季节效应都正好为零时
+      - D：预测必须等于最新观测时
+    options_zh_hk:
+      - A：存在趨勢同重複季節性，而且季節波幅隨水平變化嗰陣
+      - B：只要觀測少過 30 個嗰陣
+      - C：所有季節效應都正好係零嗰陣
+      - D：預測必須等於最新觀測嗰陣
+    answer: A
+    explanation_en: Multiplicative Holt-Winters represents seasonal effects as proportions of the level. Its suitability should be checked against additive alternatives using validation data.
+    explanation_zh: 乘法霍尔特-温特斯把季节效应表示为水平的比例；是否适合还应通过验证数据与加法模型比较。
+    explanation_zh_hk: 乘法霍爾特-溫特斯將季節效應表示成水平嘅比例；係咪適合仲要用驗證數據同加法模型比較。
+beats:
+  - id: hook
+    visual: title_card
+    seconds: 30
+    kicker_en: Weekend Bakery Planning
+    kicker_zh: 周末烘焙规划
+    kicker_zh_hk: 週末烘焙規劃
+    title_en: Why Can a Flat Forecast Miss Both Growth and Saturday Peaks?
+    title_zh: 为什么水平预测会同时错过增长与周六高峰？
+    title_zh_hk: 點解水平預測會同時錯過增長同禮拜六高峰？
+    en: >-
+      Suppose Mong Kok pastry demand has a rising baseline and a recurring Saturday peak. A level-only forecast can smooth recent observations, but it does not separately project growth or the day-of-week pattern. Holt-Winters addresses this by maintaining three evolving pieces: level, trend, and seasonality. The planning question is whether those components improve forecasts enough to justify using the more complex model.
+    zh: >-
+      假设旺角店的糕点需求既有上升基线，也有重复出现的周六高峰。只建模水平的预测能够平滑近期观测，却不会单独外推增长或星期模式。霍尔特-温特斯通过维护水平、趋势和季节性三个动态成分来处理这一问题。规划者要判断的是，这些成分能否显著改善预测，从而值得采用更复杂的模型。
+    zh_hk: >-
+      假設旺角店嘅糕點需求既有上升基線，亦有重複出現嘅禮拜六高峰。只建模水平嘅預測可以平滑近期觀測，但唔會分開外推增長或者星期模式。霍爾特-溫特斯透過維持水平、趨勢同季節性三個動態成分去處理呢個問題。規劃者要判斷嘅係，呢啲成分可唔可以明顯改善預測，值得採用更複雜嘅模型。
+  - id: define
+    visual: definition_card
+    seconds: 34
+    formula: 'Forecast = (current level + h × trend) × matching seasonal factor'
+    formula_zh: 预测 =（当前水平 + h × 趋势）× 对应季节因子
+    formula_zh_hk: 預測 =（目前水平 + h × 趨勢）× 對應季節因子
+    formula_tex: '\hat{Y}_{t+h}=(\ell_t+h b_t)s_{t+h-m},\quad 1\leq h\leq m'
+    s1_en: Holt-Winters Triple Exponential Smoothing updates a level, a trend, and a repeating seasonal pattern. In the multiplicative form, the seasonal component scales the projected level and trend by a proportion.
+    s1_zh: 霍尔特-温特斯三重指数平滑会更新水平、趋势与重复季节模式。在乘法形式中，季节成分按比例缩放外推后的水平与趋势。
+    s1_zh_hk: 霍爾特-溫特斯三重指數平滑會更新水平、趨勢同重複季節模式。喺乘法形式入面，季節成分按比例縮放外推後嘅水平同趨勢。
+    s2_en: For daily data with a weekly pattern, m equals seven. The displayed formula covers horizons within the next seasonal cycle; longer horizons reuse the appropriate seasonal position through seasonal indexing.
+    s2_zh: 对具有周度模式的日数据，m 等于 7。这里的公式适用于下一个季节周期内的预测；更长预测期需要通过季节索引重复使用相应位置的季节因子。
+    s2_zh_hk: 對有每週模式嘅日數據，m 等於 7。呢條公式適用於下一個季節周期內嘅預測；更長預測期要透過季節索引重用相應位置嘅季節因子。
+  - id: mechanics
+    visual: two_column
+    seconds: 36
+    left_en: Component Updates
+    left_zh: 成分更新
+    left_zh_hk: 成分更新
+    right_en: Model Choice
+    right_zh: 模型选择
+    right_zh_hk: 模型選擇
+    s1_en: The Level Equation (Alpha) updates the current baseline after accounting for seasonality. The Trend Slope Equation (Beta) updates the direction and pace of movement in that baseline.
+    s1_zh: 水平基准方程（Alpha）在考虑季节性后更新当前基线。趋势斜率方程（Beta）更新该基线移动的方向与速度。
+    s1_zh_hk: 水平基準方程（Alpha）喺考慮季節性之後更新目前基線。趨勢斜率方程（Beta）更新基線移動嘅方向同速度。
+    s2_en: The Seasonal Component (Gamma) updates the recurring day-of-week effect. The three smoothing parameters control how strongly each component responds to new information.
+    s2_zh: 季节周期分量（Gamma）更新重复出现的星期效应。三个平滑参数控制各成分对新信息的响应强度。
+    s2_zh_hk: 季節週期分量（Gamma）更新重複出現嘅星期效應。三個平滑參數控制各成分對新信息嘅反應強度。
+    s3_en: Multiplicative seasonality is not automatically preferable. Use it when seasonal swings grow with the series level, and compare it with additive or damped alternatives using out-of-sample errors.
+    s3_zh: 乘法季节性并非自动更优。只有当季节波幅随序列水平扩大时才应考虑，并要通过样本外误差与加法或阻尼趋势方案比较。
+    s3_zh_hk: 乘法季節性唔係自動更好。只有當季節波幅隨序列水平放大先應該考慮，並要用樣本外誤差同加法或者阻尼趨勢方案比較。
+  - id: example
+    visual: example
+    seconds: 36
+    setup_en: 'Assume: level 500, trend +10 per day, Saturday factor 1.40'
+    setup_zh: 假设：水平 500、每日趋势 +10、周六因子 1.40
+    setup_zh_hk: 假設：水平 500、每日趨勢 +10、禮拜六因子 1.40
+    result_en: 'Saturday forecast: (500 + 10) × 1.40 = 714'
+    result_zh: 周六预测：(500 + 10) × 1.40 = 714
+    result_zh_hk: 禮拜六預測：(500 + 10) × 1.40 = 714
+    s1_en: For illustration, assume Friday's fitted level is 500 croissants per day, the fitted daily trend is positive 10, and the relevant Saturday factor is 1.40.
+    s1_zh: 为便于说明，假设周五的拟合水平为每天 500 个牛角包，拟合的每日趋势为正 10，相关周六因子为 1.40。
+    s1_zh_hk: 為咗方便說明，假設禮拜五嘅擬合水平係每日 500 個牛角包，擬合嘅每日趨勢係正 10，相關禮拜六因子係 1.40。
+    s2_en: One day ahead, the unseasonalized projection is 500 plus 10, or 510. Multiplying by 1.40 gives an exact model forecast of 714 croissants under these assumptions.
+    s2_zh: 一步向前时，未作季节调整的外推值为 500 加 10，即 510。乘以 1.40 后，在这些假设下得到模型预测 714 个牛角包。
+    s2_zh_hk: 向前一步，未作季節調整嘅外推值係 500 加 10，即係 510。乘 1.40 之後，喺呢啲假設下得到模型預測 714 個牛角包。
+    s3_en: The calculation does not prove that baking 714 is the best operating decision. Inventory on hand, batch sizes, capacity, shelf life, service targets, and shortage and waste costs must also be considered.
+    s3_zh: 这个计算不能证明烘焙 714 个就是最佳运营决策。还要考虑现有库存、批量、产能、保质期、服务目标，以及缺货与浪费成本。
+    s3_zh_hk: 呢個計算唔可以證明烘焙 714 個就係最佳營運決策。仲要考慮現有庫存、批量、產能、保質期、服務目標，以及缺貨同浪費成本。
+  - id: takeaway
+    visual: takeaway
+    seconds: 32
+    q1_en: What Does Holt-Winters Add?
+    q1_zh: 霍尔特-温特斯增加了什么？
+    q1_zh_hk: 霍爾特-溫特斯增加咗乜嘢？
+    q2_en: Decision Rule
+    q2_zh: 决策规则
+    q2_zh_hk: 決策規則
+    s1_en: Holt-Winters extends level smoothing by modeling trend and recurring seasonality explicitly. This can produce forecasts that rise over time while still repeating day-of-week peaks and troughs.
+    s1_zh: 霍尔特-温特斯在水平平滑之上明确建模趋势与重复季节性，因此预测可以随时间上升，同时重复星期高峰与低谷。
+    s1_zh_hk: 霍爾特-溫特斯喺水平平滑之上明確建模趨勢同重複季節性，所以預測可以隨時間上升，同時重複星期高峰同低谷。
+    s2_en: Use the model only after identifying a stable seasonal frequency and comparing additive, multiplicative, and relevant trend variants on validation data. More components do not guarantee better forecasts.
+    s2_zh: 只有在识别出稳定季节频率，并使用验证数据比较加法、乘法及相关趋势形式后，才应采用该模型。成分更多并不保证预测更好。
+    s2_zh_hk: 只有識別到穩定季節頻率，並用驗證數據比較加法、乘法同相關趨勢形式之後，先應該採用呢個模型。成分更多唔保證預測更好。
+    s3_en: Treat the forecast as one planning input. Monitor out-of-sample errors and combine the forecast with operational constraints before setting bakery production quantities.
+    s3_zh: 应把预测作为规划的一项输入。持续监测样本外误差，并在设定烘焙产量前结合运营约束。
+    s3_zh_hk: 應該將預測當成規劃嘅其中一項輸入。持續監察樣本外誤差，並喺設定烘焙產量之前配合營運限制。

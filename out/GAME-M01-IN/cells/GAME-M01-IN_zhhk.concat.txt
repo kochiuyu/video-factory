@@ -1,4 +1,0 @@
-file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-M01-IN/clips/zhhk/01_hook.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-M01-IN/clips/zhhk/02_define.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-M01-IN/clips/zhhk/03_plan.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-M01-IN/clips/zhhk/04_takeaway.mp4'

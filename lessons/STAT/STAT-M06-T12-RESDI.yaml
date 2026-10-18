@@ -1,0 +1,203 @@
+id: STAT-M06-T12-RESDI
+course: STAT-M06
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Residual Diagnostics: Linearity, Constant Variance, and Model Risk'
+title_zh: 残差诊断：线性、恒定方差与模型风险
+title_zh_hk: 殘差診斷：線性、恆定方差同模型風險
+objective_en: Construct and interpret residual-versus-fitted plots, distinguish random constant-width scatter from fanning
+  and curvature, explain how heteroskedasticity affects conventional OLS inference without overstating its effect on coefficients,
+  and select proportionate diagnostic responses before operational use.
+objective_zh: 构建并解读残差对拟合值图，区分随机恒宽散点、漏斗形扩散与曲线形态，解释异方差如何影响传统 OLS 推断而不夸大其对系数的影响，并在经营使用前选择适度的诊断应对措施。
+objective_zh_hk: 構建並解讀殘差對擬合值圖，區分隨機恆闊散點、漏斗形擴散同曲線形態，解釋異方差點樣影響傳統 OLS 推斷而唔誇大佢對系數嘅影響，並喺營運使用之前選擇適度嘅診斷應對措施。
+glossary:
+- en: Homoskedasticity
+  zh: 同方差性
+  zh_hk: 同方差性
+  lock: true
+- en: Heteroskedasticity
+  zh: 异方差性
+  zh_hk: 異方差性
+  lock: true
+- en: Residual Plot
+  zh: 残差图
+  zh_hk: 殘差圖
+  lock: true
+- en: Fanning Pattern
+  zh: 漏斗形扩散
+  zh_hk: 漏斗形擴散
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Which residual-versus-fitted pattern is most compatible with homoskedasticity and a linear mean specification?
+  question_zh: 将残差 e_i 对拟合值 Y_hat_i 作图时，哪种形态表明满足同方差假定？
+  question_zh_hk: 將殘差 e_i 對擬合值 Y_hat_i 畫圖嗰陣，邊種形態代表符合同方差假定？
+  options_en:
+  - 'A: Residuals form an upward-sloping straight line'
+  - 'B: Residuals form a roughly random horizontal band of stable width around zero'
+  - 'C: Residuals expand into a wide horn or funnel shape at higher sales levels'
+  - 'D: Residuals curve into a distinct U-shaped parabola'
+  options_zh:
+  - 'A: 残差散点呈现向上倾斜的直线分布'
+  - 'B: 残差散点在围绕零线的恒定宽度水平带内呈完全随机分布'
+  - 'C: 残差散点在高销量水平下呈现显著的喇叭形或漏斗形扩散'
+  - 'D: 残差散点呈现清晰的 U 型抛物线弯曲分布'
+  options_zh_hk:
+  - 'A: 殘差散點呈現向上斜嘅直線分佈'
+  - 'B: 殘差散點喺圍繞零線嘅恆定闊度水平帶入面呈完全隨機分佈'
+  - 'C: 殘差散點喺高銷量水平下呈現顯著嘅喇叭形或者漏斗形擴散'
+  - 'D: 殘差散點呈現清晰嘅 U 型拋物線彎曲分佈'
+  answer: B
+  explanation_en: A stable, patternless band supports constant conditional variance and no obvious mean curvature over the
+    observed range. It is diagnostic support, not proof.
+  explanation_zh: 同方差性要求误差方差在所有拟合值水平下均保持恒定：Var(e_i | X_i) = sigma^2，在视觉上表现为围绕零线均匀宽度的水平散点带。
+  explanation_zh_hk: 同方差性要求誤差方差喺所有擬合值水平下都保持恆定：Var(e_i | X_i) = sigma^2，喺視覺上表現為圍繞零線均勻闊度嘅水平散點帶。
+- id: Q2
+  type: multiple_choice
+  question_en: What is the most defensible response when residual spread fans out as fitted values increase?
+  question_zh: 若 Metro Coffee 的残差图在机场早高峰呈现严重的漏斗形发散（异方差），标准回归输出会出现什么问题？
+  question_zh_hk: 如果 Metro Coffee 嘅殘差圖喺機場早高峰出現嚴重嘅漏斗形發散（異方差），標準回歸輸出會出現咩問題？
+  options_en:
+  - 'A: The slope coefficient beta_1_hat becomes mechanically equal to zero'
+  - 'B: Investigate the pattern and use appropriately justified robust inference or a variance model rather than relying on
+    conventional homoskedastic standard errors'
+  - 'C: The coefficient of determination R-squared becomes strictly greater than 1.0'
+  - 'D: All sample store observations must be deleted from the audit ledger'
+  options_zh:
+  - 'A: 斜率估计量 beta_1_hat 在计算上必然变为零'
+  - 'B: 标准 OLS 标准误产生系统性偏差而失效，扭曲 t 统计量与置信区间'
+  - 'C: 判定系数 R平方 在数值上必定突破 1.0'
+  - 'D: 必须将所有样本门店记录从审计台账中彻底删除'
+  options_zh_hk:
+  - 'A: 斜率估計量 beta_1_hat 喺計算上必然變成零'
+  - 'B: 標準 OLS 標準誤產生系統性偏差而失效，扭曲 t 統計量同置信區間'
+  - 'C: 判定系數 R平方 喺數值上必定大過 1.0'
+  - 'D: 必須將所有樣本門市紀錄由審計台賬入面徹底刪除'
+  answer: B
+  explanation_en: Fanning is compatible with heteroskedasticity. It calls for diagnosis and an inference method matched to
+    the variance structure; it does not mechanically set the slope to zero or require deleting all observations.
+  explanation_zh: 在异方差存在时，OLS 斜率点估计依然无偏，但标准误会产生偏差而失效，导致基于该标准误的假设检验、t 统计量及置信区间全部失真。
+  explanation_zh_hk: 喺異方差存在嗰陣，OLS 斜率點估計依然無偏，但標準誤會產生偏差而失效，搞到基於該標準誤嘅假設檢驗、t 統計量同置信區間全部失真。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  title_en: Does prediction error stay stable across operating conditions?
+  title_zh: 预测误差在不同经营条件下是否保持稳定？
+  title_zh_hk: 預測誤差喺唔同營運條件之下係咪保持穩定？
+  en: Metro Coffee is auditing an assumed demand regression before using it for staffing and inventory planning. A coefficient
+    table cannot show whether errors widen at high fitted sales, curve systematically, or contain influential observations.
+    Plotting residuals against fitted values turns those hidden patterns into visible evidence and identifies where the model
+    or conventional uncertainty calculations may be unreliable.
+  zh: 都市咖啡正在审计一项假设需求回归，准备将其用于人手与库存规划。系数表不能显示误差是否在高拟合销量时扩大、是否系统弯曲，或是否包含强影响观测。把残差对拟合值作图，可以把这些隐藏形态转化为可见证据，并识别模型或传统不确定性计算可能失效的位置。
+  zh_hk: 都市咖啡正審計一項假設需求回歸，準備將佢用於人手同庫存規劃。系數表唔可以顯示誤差係咪喺高擬合銷量嗰陣擴大、係咪系統性彎曲，或者係咪包含強影響觀測。將殘差對擬合值畫圖，可以將呢啲隱藏形態轉化成可見證據，並識別模型或者傳統不確定性計算可能失效嘅位置。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: 'e_i = Y_i - Y-hat_i; homoskedasticity: Var(error_i | X_i) = sigma^2'
+  formula_zh: e_i = Y_i - Y-hat_i；同方差性：Var(error_i | X_i) = sigma^2
+  formula_zh_hk: e_i = Y_i - Y-hat_i；同方差性：Var(error_i | X_i) = sigma^2
+  formula_tex: e_i=Y_i-\hat Y_i,\qquad \operatorname{Var}(\varepsilon_i\mid X_i)=\sigma^2
+  s1_en: A residual-versus-fitted plot places fitted outcomes on the horizontal axis and residuals on the vertical axis. A
+    model consistent with linear mean structure and constant conditional variance should show residuals scattered around zero
+    without a systematic curve and with roughly stable vertical width.
+  s1_zh: 残差对拟合值图把拟合结果放在横轴、残差放在纵轴。与线性均值结构及恒定条件方差相容的模型，应显示残差围绕零散布，没有系统曲线，且纵向宽度大致稳定。
+  s1_zh_hk: 殘差對擬合值圖將擬合結果放喺橫軸、殘差放喺縱軸。同線性平均結構及恆定條件方差相容嘅模型，應該顯示殘差圍繞零散布，冇系統曲線，而且縱向闊度大致穩定。
+  s2_en: A funnel or fan suggests nonconstant variance. Curvature suggests the fitted mean function may be misspecified. Clusters,
+    gaps, and isolated points can indicate omitted groups, range limitations, unusual records, or dependence that requires
+    further investigation.
+  s2_zh: 漏斗形或扇形提示方差不恒定；曲线形态提示拟合均值函数可能设定错误。组群、空缺与孤立点可能表示遗漏分组、范围限制、异常记录或依赖结构，需要进一步调查。
+  s2_zh_hk: 漏斗形或者扇形提示方差唔恆定；曲線形態提示擬合平均函數可能設定錯誤。群組、空缺同孤立點可能表示遺漏分組、範圍限制、異常記錄或者依賴結構，需要進一步調查。
+  title_en: Residual plots audit variance and functional form
+  title_zh: 残差图审计方差与函数形式
+  title_zh_hk: 殘差圖審計方差同函數形式
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  left_en: Spread patterns
+  left_zh: 离散形态
+  right_en: Mean and design patterns
+  right_zh: 均值与设计形态
+  s1_en: If vertical spread grows with fitted values, conventional homoskedastic OLS standard errors can be inconsistent,
+    distorting t-tests and confidence intervals. The OLS coefficient need not mechanically become zero or biased solely because
+    variance is nonconstant; coefficient properties still depend on exogeneity and specification.
+  s1_zh: 若纵向离散随拟合值增大，传统同方差 OLS 标准误可能不一致，从而扭曲 t 检验与置信区间。仅仅因为方差不恒定，OLS 系数并不会机械地变为零或必然有偏；系数性质仍取决于外生性与模型设定。
+  s1_zh_hk: 如果縱向離散隨擬合值增大，傳統同方差 OLS 標準誤可能唔一致，從而扭曲 t 檢驗同置信區間。單單因為方差唔恆定，OLS 系數並唔會機械噉變成零或者必然有偏；系數性質仍然取決於外生性同模型設定。
+  s2_en: A U-shape or inverted U-shape points to an inadequate straight-line mean, but it does not dictate one automatic transformation.
+    Analysts should compare plausible nonlinear terms, transformations, segments, and domain mechanisms, then validate the
+    revised specification.
+  s2_zh: U 形或倒 U 形提示直线均值设定不足，但并不指定某一种自动变换。分析人员应比较合理的非线性项、变换、分段与领域机制，再验证修订模型。
+  s2_zh_hk: U 形或者倒 U 形提示直線平均設定不足，但並唔指定某一種自動變換。分析人員應該比較合理嘅非線性項、變換、分段同領域機制，再驗證修訂模型。
+  s3_en: Residual plots are diagnostic evidence, not formal proof. Scale-location plots, standardized residuals, influence
+    measures, robust standard errors, specification checks, and out-of-sample validation can supplement the visual audit.
+  s3_zh: 残差图是诊断证据，而不是正式证明。尺度-位置图、标准化残差、影响度量、稳健标准误、设定检查与样本外验证都可补充视觉审计。
+  s3_zh_hk: 殘差圖係診斷證據，而唔係正式證明。尺度-位置圖、標準化殘差、影響度量、穩健標準誤、設定檢查同樣本外驗證都可以補充視覺審計。
+  left_zh_hk: 離散形態
+  right_zh_hk: 平均同設計形態
+  title_en: Different residual patterns imply different follow-up questions
+  title_zh: 不同残差形态对应不同后续问题
+  title_zh_hk: 唔同殘差形態對應唔同後續問題
+- id: ledger
+  visual: steps
+  seconds: 38
+  step1_en: Plot residuals against fitted sales and add a horizontal reference at zero
+  step1_zh: 把残差对拟合销量作图，并加入零水平参考线
+  step2_en: Compare center, width, curvature, clusters, and isolated observations across the fitted range
+  step2_zh: 比较整个拟合范围内的中心、宽度、曲率、组群与孤立观测
+  step3_en: 'Match the response to the diagnosed risk: robust inference, revised mean function, variance model, design correction,
+    or data review'
+  step3_zh: 让应对措施与诊断风险匹配：稳健推断、修订均值函数、方差模型、设计修正或数据复核
+  s1_en: For illustration, assume residual spread is approximately plus or minus 5 cups around fitted sales of 310, but approximately
+    plus or minus 300 cups around fitted sales of 4,000. These are teaching assumptions, not verified store, airport, queue,
+    inventory, staffing, or performance records.
+  s1_zh: 作为示例，假设拟合销量约为 310 杯时，残差离散约为正负 5 杯；拟合销量约为 4,000 杯时，残差离散约为正负 300 杯。这些数字是教学假设，并非已核实的门店、机场、排队、库存、人手或表现记录。
+  s1_zh_hk: 作為例子，假設擬合銷量約係 310 杯嗰陣，殘差離散約係正負 5 杯；擬合銷量約係 4,000 杯嗰陣，殘差離散約係正負 300 杯。呢啲數字係教學假設，唔係已核實嘅門市、機場、排隊、庫存、人手或者表現記錄。
+  s2_en: The widening band is compatible with heteroskedasticity and warns against relying on conventional constant-variance
+    standard errors. Before concluding, verify that the pattern is not driven by a few influential records, mixed store types,
+    time dependence, data errors, or a misspecified mean.
+  s2_zh: 不断扩宽的带状形态与异方差相容，并警示不能依赖传统恒定方差标准误。作出结论前，应核实该形态并非由少数强影响记录、混合门店类型、时间依赖、数据错误或均值设定错误所驱动。
+  s2_zh_hk: 不斷擴闊嘅帶狀形態同異方差相容，並警示唔可以依賴傳統恆定方差標準誤。作出結論之前，應該核實呢個形態並唔係由少數強影響記錄、混合門市類型、時間依賴、數據錯誤或者平均設定錯誤所驅動。
+  s3_en: If the variance pattern remains credible, report heteroskedasticity-robust inference or an appropriately justified
+    variance model. If curvature remains after accounting for groups and data quality, revise the mean specification and validate
+    it rather than adopting a transformation automatically.
+  s3_zh: 若方差形态仍然可信，应报告异方差稳健推断或有充分依据的方差模型。若在处理分组与数据质量后曲线形态仍然存在，应修订并验证均值设定，而不是自动采用某种变换。
+  s3_zh_hk: 如果方差形態仍然可信，應該報告異方差穩健推斷或者有充分依據嘅方差模型。如果喺處理分組同數據質量之後曲線形態仍然存在，就應該修訂並驗證平均設定，而唔係自動採用某種變換。
+  step1_zh_hk: 將殘差對擬合銷量畫圖，並加入零水平參考線
+  step2_zh_hk: 比較成個擬合範圍內嘅中心、闊度、曲率、群組同孤立觀測
+  step3_zh_hk: 令應對措施同診斷風險匹配：穩健推斷、修訂平均函數、方差模型、設計修正或者數據覆核
+  title_en: Audit an assumed residual pattern without overdiagnosing
+  title_zh: 审计假设残差形态，同时避免过度诊断
+  title_zh_hk: 審計假設殘差形態，同時避免過度診斷
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  q1_en: What does a random constant-width band support?
+  q1_zh: 随机恒宽带状形态支持什么？
+  q2_en: What should a funnel or curve trigger?
+  q2_zh: 漏斗形或曲线形态应触发什么？
+  s1_en: A roughly random horizontal band around zero with stable width supports, but does not prove, a linear conditional
+    mean and constant conditional variance over the observed range.
+  s1_zh: 在观测范围内，围绕零大致随机且宽度稳定的水平带支持线性条件均值与恒定条件方差，但不能证明它们必然成立。
+  s1_zh_hk: 喺觀測範圍之內，圍繞零大致隨機而且闊度穩定嘅水平帶支持線性條件平均同恆定條件方差，但唔可以證明佢哋必然成立。
+  s2_en: A funnel should trigger variance and inference checks; a curve should trigger mean-function checks. Neither pattern
+    justifies deleting all observations or choosing one remedy without investigating data provenance, design, and business
+    mechanism.
+  s2_zh: 漏斗形应触发方差与推断检查；曲线形态应触发均值函数检查。两者都不能成为删除全部观测或未经调查就选择单一修正方法的理由。
+  s2_zh_hk: 漏斗形應該觸發方差同推斷檢查；曲線形態應該觸發平均函數檢查。兩者都唔可以成為刪除全部觀測或者未經調查就選擇單一修正方法嘅理由。
+  s3_en: For the assumed pattern, residual width grows sharply from low to high fitted sales, so conventional homoskedastic
+    standard errors are not defensible without further analysis. Operational action still requires validated forecasts, costs,
+    constraints, and decision thresholds.
+  s3_zh: 在假设形态中，残差宽度从低拟合销量到高拟合销量急剧扩大，因此未经进一步分析，传统同方差标准误并不可靠。经营行动仍需要经过验证的预测、成本、约束与决策阈值。
+  s3_zh_hk: 喺假設形態入面，殘差闊度由低擬合銷量到高擬合銷量急劇擴大，所以未經進一步分析，傳統同方差標準誤並唔可靠。營運行動仍然需要經過驗證嘅預測、成本、約束同決策閾值。
+  q1_zh_hk: 隨機恆闊帶狀形態支持咩？
+  q2_zh_hk: 漏斗形或者曲線形態應該觸發咩？
+  title_en: Inspect residuals before trusting uncertainty or deployment
+  title_zh: 信任不确定性或部署模型前先检查残差
+  title_zh_hk: 信任不確定性或者部署模型之前先檢查殘差

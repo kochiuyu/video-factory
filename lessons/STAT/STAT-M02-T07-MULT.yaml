@@ -1,0 +1,194 @@
+id: STAT-M02-T07-MULT
+course: statistics
+course_en: Business Probability Foundations
+course_zh: 商务概率基础
+course_zh_hk: 商務概率基礎
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: "The mechanics of bundling"
+title_zh: "组合连带的演化机制：乘法法则"
+title_zh_hk: "組合連帶嘅演化機制：乘法法則"
+objective_en: "Derive the General Multiplication Rule P(A and B) = P(B) * P(A|B) from conditional probability, explain how sequential operational conversion funnels work, and apply the formula to forecast combination retail sales."
+objective_zh: "由条件概率推导一般乘法法则 P(A 且 B) = P(B) * P(A|B)，阐释序列化业务转化漏斗的运作机理，并运用该公式预测零售组合套餐的实际销量。"
+objective_zh_hk: "由條件概率推導一般乘法法則 P(A 兼 B) = P(B) * P(A|B)，闡釋序列化業務轉化漏斗嘅運作機理，並運用呢條公式預測零售組合套餐嘅實際銷量。"
+glossary:
+- en: "multiplication rule"
+  zh: "乘法法则"
+  zh_hk: "乘法法則"
+  lock: true
+- en: "joint probability"
+  zh: "联合概率"
+  zh_hk: "聯合概率"
+  lock: true
+- en: "conversion funnel"
+  zh: "转化漏斗"
+  zh_hk: "轉化漏斗"
+  lock: true
+- en: "sequential events"
+  zh: "序列事件"
+  zh_hk: "序列事件"
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: "How is the General Multiplication Rule derived from the definition of conditional probability?"
+  question_zh: "一般乘法法则在数学上是如何从条件概率的定义中推导出来的？"
+  question_zh_hk: "一般乘法法則喺數學上係點樣由條件概率嘅定義入面推導出嚟嘅？"
+  options_en:
+  - "A: By multiplying both sides of P(A|B) = P(A and B) / P(B) by P(B)."
+  - "B: By subtracting the mean from the median."
+  - "C: By setting the probability of condition B strictly to zero."
+  - "D: By dividing total store revenue by the number of cash registers."
+  options_zh:
+  - "A: 将条件概率公式 P(A|B) = P(A 且 B) / P(B) 等号两边同时乘以 P(B)。"
+  - "B: 从中位数中直接减去均值。"
+  - "C: 将条件 B 的发生概率强制设定为严格等于零。"
+  - "D: 用门店总销售额除以收银机的台数。"
+  options_zh_hk:
+  - "A: 將條件概率公式 P(A|B) = P(A 兼 B) / P(B) 等號兩邊同時乘以 P(B)。"
+  - "B: 由中位數入面直接減去均值。"
+  - "C: 將條件 B 嘅發生概率強制設定為嚴格等於零。"
+  - "D: 用門市總銷售額除以收銀機嘅部數。"
+  answer: A
+  explanation_en: "Rearranging P(A|B) = P(A and B) / P(B) isolates the joint probability: P(A and B) = P(B) * P(A|B)."
+  explanation_zh: "对公式 P(A|B) = P(A 且 B) / P(B) 两边同乘分母 P(B)，即可分离出联合概率：P(A 且 B) = P(B) * P(A|B)。"
+  explanation_zh_hk: "對公式 P(A|B) = P(A 兼 B) / P(B) 兩邊同乘分母 P(B)，就可以分離出聯合概率：P(A 兼 B) = P(B) * P(A|B)。"
+- id: Q2
+  type: multiple_choice
+  question_en: "If 40% of customers order iced drinks, and among those iced drink buyers, 30% add a bakery pastry, what percentage of all store orders will be an Iced Drink + Pastry bundle?"
+  question_zh: "若全店有 40% 的顾客点冷饮，且在冷饮顾客中有 30% 会加购烘焙点心，那么全店总客单中冷饮加点心套餐的占比是多少？"
+  question_zh_hk: "若全店有 40% 嘅顧客點凍飲，兼且喺凍飲顧客入面有 30% 會加購烘焙點心，噉全店總客單入面凍飲加點心套餐嘅佔比係幾多？"
+  options_en:
+  - "A: 70%"
+  - "B: 12%"
+  - "C: 30%"
+  - "D: 10%"
+  options_zh:
+  - "A: 70%"
+  - "B: 12%"
+  - "C: 30%"
+  - "D: 10%"
+  options_zh_hk:
+  - "A: 70%"
+  - "B: 12%"
+  - "C: 30%"
+  - "D: 10%"
+  answer: B
+  explanation_en: "Using the multiplication rule: P(Iced and Pastry) = P(Iced) * P(Pastry|Iced) = 0.40 * 0.30 = 0.12 (12%)."
+  explanation_zh: "运用乘法法则：P(冷饮 且 点心) = P(冷饮) * P(点心|冷饮) = 0.40 * 0.30 = 0.12（即 12%）。"
+  explanation_zh_hk: "運用乘法法則：P(凍飲 兼 點心) = P(凍飲) * P(點心|凍飲) = 0.40 * 0.30 = 0.12（即 12%）。"
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: "The Forecasting Challenge"
+  kicker_en: "The Forecasting Challenge"
+  kicker_zh: "预测挑战"
+  kicker_zh_hk: "預測挑戰"
+  title_en: "Forecasting the multi-step sale"
+  title_zh: "如何科学预测两步连带转化？"
+  title_zh_hk: "點樣科學預測兩步連帶轉化？"
+  en: "A commercial manager wants to introduce a breakfast bundle: cold brew plus a warmed croissant. We know from pilot tests that forty percent of morning patrons order cold brew, and thirty percent of those cold brew drinkers accept the croissant upsell. How does the executive forecast the exact proportion of overall store tickets that will purchase the full combo?"
+  zh: "商业运营总监计划推出一款早餐组合：冷萃咖啡加温热可颂。先导测试表明，早间有 40% 的进店顾客会购买冷萃，而在这些冷萃顾客中，有 30% 会接受店员推荐加购可颂。管理者究竟该如何精准预测全店客单中完整购买该套餐的比例？"
+  zh_hk: "商業營運總監計劃推出一款早餐組合：冷萃咖啡加溫熱牛角包。先導測試表明，朝早有 40% 嘅入舖顧客會買冷萃，兼且喺呢啲冷萃顧客入面，有 30% 會接受店員推銷加購牛角包。管理者究竟應該點樣精準預測全店客單入面完整購買呢個套餐嘅比例？"
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: "What It Is"
+  kicker_en: "What It Is"
+  kicker_zh: "核心概念"
+  kicker_zh_hk: "核心概念"
+  title_en: "The general multiplication rule"
+  title_zh: "概率的一般乘法法则"
+  title_zh_hk: "概率嘅一般乘法法則"
+  formula: "P(A and B) = P(B) * P(A|B)"
+  formula_tex: 'P(A\cap B) = P(B) \times P(A\mid B)'
+  formula_zh: "P(A 且 B) = P(B) × P(A|B)"
+  formula_zh_hk: "P(A 兼 B) = P(B) × P(A|B)"
+  s1_en: "In conditional probability, we divided the joint overlap by condition B. By flipping that formula around, we get the General Multiplication Rule."
+  s1_zh: "在学习条件概率时，我们用联合交集除以条件 B。只要将公式两边同乘以 P(B)，就能推导出一般乘法法则。"
+  s1_zh_hk: "喺學習條件概率嗰陣，我哋用聯合交集除以條件 B。只要將公式兩邊同乘以 P(B)，就可以推導出一般乘法法則。"
+  s2_en: "The probability that both event A and event B happen together equals the probability of condition B occurring first, multiplied by the conditional probability of A given that B has occurred."
+  s2_zh: "两个事件 A 与 B 同时发生的概率，等于第一阶段条件 B 发生的概率，乘以在 B 已经发生的前提下 A 发生的条件概率。"
+  s2_zh_hk: "兩個事件 A 同 B 同時發生嘅概率，等於第一階段條件 B 發生嘅概率，乘以喺 B 已經發生嘅前提下 A 發生嘅條件概率。"
+- id: funnel
+  visual: two_column
+  seconds: 36
+  kicker: "The Mechanism"
+  kicker_en: "The Mechanism"
+  kicker_zh: "转化机理"
+  kicker_zh_hk: "轉化機理"
+  title_en: "The operational conversion funnel"
+  title_zh: "业务转化漏斗的层层渗透"
+  title_zh_hk: "業務轉化漏斗嘅層層滲透"
+  left_en: "Stage 1: P(B) enters the gate"
+  left_zh: "第一阶段：P(B) 入局初筛门槛"
+  left_zh_hk: "第一階段：P(B) 入局初篩門檻"
+  right_en: "Stage 2: P(A|B) completes the sale"
+  right_zh: "第二阶段：P(A|B) 承接后续转化"
+  right_zh_hk: "第二階段：P(A|B) 承接後續轉化"
+  s1_en: "Think of the multiplication rule as a multi-stage retail funnel. To get a customer to buy the combo, they must pass through two successive gates."
+  s1_zh: "把乘法法则想象成多级零售转化漏斗。要促成顾客购买组合套餐，顾客必须顺次跨过两道关键门槛。"
+  s1_zh_hk: "將乘法法則想像成多級零售轉化漏斗。要促成顧客購買組合套餐，顧客必須順次跨過兩道關鍵門檻。"
+  s2_en: "First, forty percent of total patrons enter gate B by ordering an iced drink. The remaining sixty percent walk away without cold brew, ending their bundle journey."
+  s2_zh: "首先，有 40% 的大盘顾客跨过门槛 B，选择了冷萃。另外 60% 的顾客未点冷萃，其套餐转化的可能性当即终结。"
+  s2_zh_hk: "首先，有 40% 嘅大盤顧客跨過門檻 B，選擇咗凍冷萃。另外 60% 嘅顧客冇點冷萃，佢哋套餐轉化嘅可能性即時終結。"
+  s3_en: "Second, among those surviving the first gate, only thirty percent accept the pastry. Multiplying shrinks the funnel at each step, yielding the true compound conversion."
+  s3_zh: "其次，在跨过首道门槛的客群中，仅有 30% 进一步加点了点心。连续相乘真实刻画了漏斗的层层收窄，最终锁定复合转化率。"
+  s3_zh_hk: "其次，喺跨過首道門檻嘅客群入面，淨係得 30% 進一步加點咗點心。連續相乘真實刻畫咗漏斗嘅層層收窄，最終鎖定複合轉化率。"
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: "The Ledger"
+  kicker_en: "The Ledger"
+  kicker_zh: "账目推演"
+  kicker_zh_hk: "賬目推演"
+  title_en: "Forecasting Mong Kok bundle orders"
+  title_zh: "测算旺角店组合套餐预估体量"
+  title_zh_hk: "測算旺角舖組合套餐預估體量"
+  step1_en: "Base cold brew rate: P(B) = 0.40"
+  step1_zh: "基准冷萃选择率：P(B) = 0.40"
+  step1_zh_hk: "基準冷萃選擇率：P(B) = 0.40"
+  step2_en: "Croissant upsell rate: P(A|B) = 0.30"
+  step2_zh: "点心连带加购率：P(A|B) = 0.30"
+  step2_zh_hk: "點心連帶加購率：P(A|B) = 0.30"
+  step3_en: "Compound combo sales: 0.40 * 0.30 = 0.12"
+  step3_zh: "复合套餐达成率：0.40 × 0.30 = 0.12"
+  step3_zh_hk: "複合套餐達成率：0.40 × 0.30 = 0.12"
+  s1_en: "Apply this to our Mong Kok morning forecast. Step one: out of 1,000 projected customers, forty percent will order an iced cold brew."
+  s1_zh: "将此代入旺角店早间的经营测算。第一步：在预计的一千位进店顾客中，有 40% 会选购冰冷萃咖啡。"
+  s1_zh_hk: "將呢個代入旺角舖朝早嘅經營測算。第一步：喺預計嘅一千位入舖顧客入面，有 40% 會選購凍冷萃咖啡。"
+  s2_en: "Step two: our barista suggestive selling data shows a conditional conversion rate of thirty percent among those specific buyers."
+  s2_zh: "第二步：一线咖啡师的连带推销数据显示，在该特定客群内部，点心的条件转化率为 30%。"
+  s2_zh_hk: "第二步：一線咖啡師嘅連帶推銷數據顯示，喺嗰個特定客群內部，點心嘅條件轉化率為 30%。"
+  s3_en: "Step three: multiply zero point four zero by zero point three zero. Exactly twelve percent of all store tickets—or one hundred and twenty bundles—will be sold."
+  s3_zh: "第三步：用 0.40 乘以 0.30。全店总客单中恰好有 12%（即 120 套套餐）将被顺利售出。"
+  s3_zh_hk: "第三步：用 0.40 乘以 0.30。全店總客單入面啱啱好有 12%（即 120 套套餐）會被順利售出。"
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: "Decision Rule"
+  kicker_en: "Decision Rule"
+  kicker_zh: "商业法则"
+  kicker_zh_hk: "商業法則"
+  title_en: "Multiply sequential odds down the funnel"
+  title_zh: "顺沿转化漏斗，链式相乘定局"
+  title_zh_hk: "順沿轉化漏斗，鏈式相乘定局"
+  q1_en: "When should executives use the multiplication rule?"
+  q1_zh: "管理者何时必须激活概率乘法法则？"
+  q1_zh_hk: "管理者幾時必須啟動概率乘法法則？"
+  q2_en: "Why is multiplying margins alone dangerous?"
+  q2_zh: "为什么直接将大盘边缘概率相乘极具危险性？"
+  q2_zh_hk: "點解直接將大盤邊緣概率相乘極具危險性？"
+  s1_en: "Whenever a business strategy requires multiple operational milestones to succeed sequentially, multiply step probabilities down the chain."
+  s1_zh: "每当一项商业模式需要跨越多个阶段才能最终成单时，顺着业务链路逐级相乘各阶段转化率。"
+  s1_zh_hk: "每當一項商業模式需要跨越幾多個階段先可以最終成單嗰陣，順住業務鏈路逐級相乘各階段轉化率。"
+  s2_en: "Never multiply unconditional margins unless you have proven that the customer behaviors do not influence each other."
+  s2_zh: "切勿盲目把大盘无条件概率直接相乘，除非你已经证明两项顾客行为之间毫无相互影响。"
+  s2_zh_hk: "切勿盲目將大盤無條件概率直接相乘，除非你已經證明兩項顧客行為之間毫無相互影響。"
+  s3_en: "For the breakfast bundle, multiply the 40 percent cold-brew rate by the 30 percent conditional croissant rate: forecast 12 percent of all tickets, or 120 bundles per 1,000 customers."
+  s3_zh: "针对早餐套餐，用 40% 的冷萃购买率乘以 30% 的条件可颂加购率：预计占全部订单的 12%，即每 1,000 位顾客售出 120 套。"
+  s3_zh_hk: "針對早餐套餐，用 40% 嘅凍冷萃購買率乘以 30% 嘅條件牛角包加購率：預計佔全部訂單 12%，即係每 1,000 位顧客售出 120 套。"

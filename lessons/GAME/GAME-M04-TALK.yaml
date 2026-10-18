@@ -1,0 +1,133 @@
+id: GAME-M04-TALK
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: I will sit Left
+title_zh: 我停左边
+title_zh_hk: 我停左邊
+objective_en: Cheap talk can tip coordination. Both want to match, so the sentence can be believed.
+objective_zh: 便宜的话可以推动协调。两车都想停一起，所以这句话可以信。
+objective_zh_hk: 平嘅說話可以推動協調。兩架都想停一齊，所以呢句可以信。
+glossary:
+- en: cheap talk
+  zh: 便宜的话
+  zh_hk: 平嘅說話
+  lock: true
+- en: focal point
+  zh: 焦点
+  zh_hk: 焦點
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Why can I will sit Left work on the wide path?
+  zh: 宽路上，为什么“我停左边”可能有用？
+  zh_hk: 闊路上面，點解「我停左邊」可能有用？
+  answer_en: Both want to match. Neither gains by saying Left and sitting Right.
+  answer_zh: 两车都想停一起。说左却停右，对自己没有好处。
+  answer_zh_hk: 兩架都想停一齊。講左卻停右，對自己冇好處。
+- id: Q2
+  type: transfer
+  en: Does the sentence change the payoff numbers?
+  zh: 这句话会改报酬数字吗？
+  zh_hk: 呢句會改報酬數字嗎？
+  answer_en: No. It is another label both can hear.
+  answer_zh: 不会。它只是两车都能听见的另一个标签。
+  answer_zh_hk: 唔會。佢淨係兩架都听見嘅另一個標籤。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: I will sit Left
+  title_zh: 我停左边
+  title_zh_hk: 我停左邊
+  en: Before the boards go up, A says I will sit Left. No contract. No fine if A sits Right. It is only a sentence. Ask whether B should believe it on this path.
+  zh: 牌子还没立，甲说，我停左边。没有合同。甲改停右边也不罚。只是一句话。问乙在这条路上该不该信。
+  zh_hk: 牌都未企，甲講，我停左邊。冇合約。甲改停右邊都唔罰。淨係一句。問乙喺呢條路該唔該信。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Cheap talk
+  title_zh: 便宜的话
+  title_zh_hk: 平嘅說話
+  formula: A sentence that does not change the payoffs
+  formula_en: A sentence that does not change the payoffs
+  formula_zh: 一句不改报酬的话
+  formula_zh_hk: 一句唔改報酬嘅話
+  gloss_en: It can still work when both want to match.
+  gloss_zh: 两边都想停一起时，它仍可能有用。
+  gloss_zh_hk: 兩邊都想停一齊嗰陣，佢都可能有用。
+  en: Here is the idea. Cheap talk is a sentence that does not change the payoff table. No deposit. No fine. On the wide path both carts want to match, so saying Left and sitting Left is already what A wants. B can use the sentence as a label.
+  zh: 核心就这一句。便宜的话不改报酬表。没有押金。也不罚款。宽路上两车都想停一起，甲说左并停左，本来就是甲想做的。乙可以把这句话当标签。
+  zh_hk: 核心就呢一句。平嘅說話唔改報酬表。冇按金。都唔罰款。闊路兩架都想停一齊，甲講左並停左，本來就係甲想做。乙可以將呢句當標籤。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Why B can listen
+  title_zh: 乙为什么可以听
+  title_zh_hk: 乙點解可以听
+  left_en: A says Left and sits Left. Both take three.
+  left_zh: 甲说左并停左。两车各三。
+  left_zh_hk: 甲講左並停左。兩架各三。
+  right_en: A says Left and sits Right. They split. Both take zero.
+  right_zh: 甲说左却停右。分开了。两车各零。
+  right_zh_hk: 甲講左卻停右。分開咗。兩架各零。
+  en: If A says Left and sits Left, both take three. If A says Left and sits Right, they split and take zero. A does not gain by lying. That is why the sentence can tip both Left.
+  zh: 甲说左并停左，两车各三。甲说左却停右，分开了，各零。甲说谎没有好处。所以这句话可以把人推向都在左。
+  zh_hk: 甲講左並停左，兩架各三。甲講左卻停右，分開咗，各零。甲講大话冇好處。所以呢句可以將人推去都喺左。
+- id: example
+  visual: example
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Still not a contract
+  title_zh: 仍然不是合同
+  title_zh_hk: 都仲未係合約
+  setup_en: Someone writes, the sentence forces A to sit Left.
+  setup_zh: 有人写，这句话强迫甲停左边。
+  setup_zh_hk: 有人寫，呢句強迫甲停左邊。
+  result_en: No. It is a label B can use. A still chooses.
+  result_zh: 不是。它是乙可以用的标签。甲还是自己选。
+  result_zh_hk: 唔係。佢係乙用得嘅標籤。甲都係自己揀。
+  en: Someone writes, the sentence forces A to sit Left. Cross that out. There is no fine. B sits Left because matching still pays. The sentence only made Left easier to find.
+  zh: 有人写，这句话强迫甲停左边。划掉。没有罚款。乙停左，是因为停一起仍更赚。这句话只是让左更好找。
+  zh_hk: 有人寫，呢句強迫甲停左邊。劃走。冇罰款。乙停左，係因為停一齊都仲更賺。呢句淨係令左更好搵。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Talk works when they match
+  title_zh: 想停一起，话才有用
+  title_zh_hk: 想停一齊，話先有用
+  q1_en: Cheap talk does not change the numbers.
+  q1_zh: 便宜的话不改数字。
+  q1_zh_hk: 平嘅說話唔改數字。
+  q2_en: On the wide path, lying does not pay.
+  q2_zh: 宽路上，说谎没有好处。
+  q2_zh_hk: 闊路上面，講大话冇好處。
+  en: Keep that test. If lying does not pay, the sentence can be a focal point. Next we take the same sentence to the gate. I will Hold. See why it is no longer cheap.
+  zh: 留下这一问。说谎没有好处，这句话才当得了焦点。接下来把同一句话带到门口。我占住。看它为什么不再便宜。
+  zh_hk: 留低呢一問。講大话冇好處，呢句先當得焦點。跟住將同一句帶去門口。我佔住。睇佢點解唔再平。

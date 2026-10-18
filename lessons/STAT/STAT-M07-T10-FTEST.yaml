@@ -1,0 +1,170 @@
+id: STAT-M07-T10-FTEST
+course: STAT-M07
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Joint Hypothesis Testing: The Kitchen Upgrade F-Test'
+title_zh: 联合假设检验：门店后厨改造的 F 检验
+title_zh_hk: 聯合假設檢驗：門市後廚改裝嘅 F 檢驗
+objective_en: Conduct a joint F-test using restricted and unrestricted regression models to evaluate whether a multi-variable operational package has a statistically significant overall effect.
+objective_zh: 利用受约束与无约束回归模型执行联合 F 检验，评估多变量运营升级组合包是否具有统计上显著的整体提升效应。
+objective_zh_hk: 利用受約束與無約束回歸模型執行聯合 F 檢驗，評估多變量營運升級組合包係咪具備統計上顯著嘅整體提升效應。
+glossary:
+- en: Joint Hypothesis Test
+  zh: 联合假设检验
+  zh_hk: 聯合假設檢驗
+  lock: true
+  zh_zh_hk: 聯合假設檢驗
+- en: Unrestricted Model
+  zh: 无约束模型
+  zh_hk: 無約束模型
+  lock: true
+  zh_zh_hk: 無約束模型
+- en: Restricted Model
+  zh: 受约束模型
+  zh_hk: 受約束模型
+  lock: true
+  zh_zh_hk: 受約束模型
+- en: F-Statistic
+  zh: F 统计量
+  zh_hk: F 統計量
+  lock: true
+  zh_zh_hk: F 統計量
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why is a joint F-test useful when evaluating whether three store-upgrade coefficients are all zero?
+  question_zh: 在评估三个门店升级系数是否同时为零时，为什么联合 F 检验有用？
+  question_zh_hk: 喺評估三個門市升級系數係咪同時為零時，點解聯合 F 檢驗有用？
+  options_en:
+  - 'A: Conducting multiple separate t-tests inflates Type I error, and collinearity among upgrades can hide joint significance'
+  - 'B: The t-distribution cannot be calculated when sample size exceeds 30 stores'
+  - 'C: An F-test forces all regression coefficients to be strictly positive numbers'
+  - 'D: Individual t-tests can only be used on dummy variables, never on continuous metrics'
+  options_zh:
+  - 'A: 进行多次独立的 t 检验会累积放大第一类错误概率，且各项升级之间的共线性会掩盖整体的联合显著性'
+  - 'B: 当样本门店数量超过 30 家时，学生氏 t 分布在数学上无法计算'
+  - 'C: F 检验强制要求所有回归系数在数值上必须严格为正数'
+  - 'D: 单独的 t 检验只能用于虚拟变量，绝不能用于连续型变量'
+  options_zh_hk:
+  - 'A: 做多次獨立嘅 t 檢驗會累積放大第一類錯誤概率，而且各項升級之間嘅共線性會掩蓋整體嘅聯合顯著性'
+  - 'B: 當樣本門市數量超過 30 間嗰陣，學生氏 t 分佈喺數學上計唔到'
+  - 'C: F 檢驗強制要求所有回歸系數喺數值上必須嚴格係正數'
+  - 'D: 單獨嘅 t 檢驗淨係可以用喺虛擬變量，絕唔可以用喺連續型變量'
+  answer: A
+  explanation_en: The F-test evaluates the restrictions jointly in one hypothesis. Separate t-tests answer different one-coefficient questions and do not directly test whether all three coefficients are zero together; correlation among estimates can also affect individual precision.
+  explanation_zh: F 检验在一个假设中联合评估这些约束。单独 t 检验回答的是不同的单系数问题，不能直接检验三个系数是否同时为零；估计值之间的相关性也会影响单个系数的精度。
+  explanation_zh_hk: F 檢驗喺一個假設入面聯合評估呢啲約束。單獨 t 檢驗回答嘅係唔同單系數問題，唔可以直接檢驗三個系數係咪同時為零；估計值之間嘅相關性亦會影響個別系數嘅精度。
+- id: Q2
+  type: multiple_choice
+  question_en: Metro Coffee fits an unrestricted model (k = 5, n = 36) with SSE_U = 1,500. Restricting q = 3 upgrade coefficients to zero causes SSE_R to increase to 1,950. What is the calculated F-statistic?
+  question_zh: Metro Coffee 拟合了无约束模型（k = 5，n = 36），测得 SSE_U = 1,500。将 q = 3 个后厨改造变量约束为零后，受约束模型的 SSE_R 上升至 1,950。计算出的 F 统计量是多少？
+  question_zh_hk: Metro Coffee 擬合咗無約束模型（k = 5，n = 36），測得 SSE_U = 1,500。將 q = 3 個後廚改裝變量約束為零之後，受約束模型嘅 SSE_R 升到 1,950。計算出嚟嘅 F 統計量係幾多？
+  options_en:
+  - 'A: F = 9.00'
+  - 'B: F = 3.00'
+  - 'C: F = 1.30'
+  - 'D: F = 4.50'
+  options_zh:
+  - 'A: F = 9.00'
+  - 'B: F = 3.00'
+  - 'C: F = 1.30'
+  - 'D: F = 4.50'
+  options_zh_hk:
+  - 'A: F = 9.00'
+  - 'B: F = 3.00'
+  - 'C: F = 1.30'
+  - 'D: F = 4.50'
+  answer: B
+  explanation_en: 'Numerator: (1,950 - 1,500) / 3 = 150. Denominator: 1,500 / (36 - 5 - 1) = 50. Therefore F = 150 / 50 = 3.00.'
+  explanation_zh: 分子：(1,950 - 1,500) / 3 = 150。分母：1,500 / (36 - 5 - 1) = 50。因此 F = 150 / 50 = 3.00。
+  explanation_zh_hk: 分子：(1,950 - 1,500) / 3 = 150。分母：1,500 / (36 - 5 - 1) = 50。所以 F = 150 / 50 = 3.00。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Capital Investment Dilemma
+  kicker_zh: 资本审批困局
+  kicker_zh_hk: 資本審批困局
+  title_en: Did the HK$1.5M Kitchen Overhaul Fail?
+  title_zh: 一百五十万的后厨改造真的彻底失败了吗？
+  title_zh_hk: 百五萬嘅後廚改裝係咪真係徹底失敗？
+  en: Metro Coffee piloted a major kitchen redesign across trial branches, bundling rapid pickup shelves, turbo convection ovens, and digital queue monitors. But when finance inspected the regression readout, every single upgrade had a t-statistic with p greater than zero point ten. The CFO wants to scrap the program. Did the upgrade fail, or did separate t-tests miss the bundle's collective power?
+  zh: Metro Coffee 在试点门店推行了一套重磅后厨改造方案，打包引入了极速自提架、商用对流烤箱与数字化出餐排队屏。然而当财务部审查回归报表时，发现三项升级各自的 t 统计量对应 p值 全都大于 0.10。财务总监准备立刻叫停该方案。改造项目真的无效，还是独立的 t 检验误杀了整体组合拳？
+  zh_hk: Metro Coffee 喺試點分店推行咗一套重點後廚改裝工程，打包引入咗極速自提架、商用對流焗爐同埋數碼叫號顯示屏。點知財務部睇回歸報表嗰陣，發現三項升級各自嘅 t 統計量 p值 全部大過 0.10。財務總監諗住即刻叫停計劃。成個改裝真係無用，定係個別嘅 t 檢驗睇唔穿成套組合拳嘅威力？
+  zh_zh_hk: Metro Coffee 喺試點分店推行咗一套重點後廚改裝工程，打包引入咗極速自提架、商用對流焗爐同埋數碼叫號顯示屏。點知財務部睇回歸報表嗰陣，發現三項升級各自嘅 t 統計量 p值 全部大過 0.10。財務總監諗住即刻叫停計劃。成個改裝真係無用，定係個別嘅 t 檢驗睇唔穿成套組合拳嘅威力？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: F = [ (SSE_R - SSE_U) / q ] / [ SSE_U / (n - k - 1) ] ~ F(q, n - k - 1)
+  formula_zh: 联合 F 检验：F = [ (SSE_R - SSE_U) / q ] / [ SSE_U / (n - k - 1) ]
+  formula_zh_hk: 聯合 F 檢驗：F = [ (SSE_R - SSE_U) / q ] / [ SSE_U / (n - k - 1) ]
+  formula_tex: F_{\text{calc}} = \frac{(\text{SSE}_R - \text{SSE}_U) / q}{\text{SSE}_U / (n - k - 1)} \sim F_{(q, \, n - k - 1)}
+  s1_en: A joint hypothesis test evaluates whether a group of q coefficients are simultaneously equal to zero. The null hypothesis H zero asserts that beta three, beta four, and beta five all equal zero at the same time.
+  s1_zh: 联合假设检验用于评估一组包含 q 个系数的变量集合是否同时等于零。原假设 H_0 断言：后厨改造中的 beta_3、beta_4 与 beta_5 同时等于零。
+  s1_zh_hk: 聯合假設檢驗用嚟評估一組包含 q 個系數嘅變量集合係咪同時等於零。原假設 H_0 指出：後廚改裝嘅 beta_3、beta_4 同埋 beta_5 同一時間全部等於零。
+  s2_en: We compare the unrestricted model containing all predictors against the restricted model where the q upgrade terms are dropped. The F-statistic measures the normalized surge in residual error SSE caused by imposing this restriction.
+  s2_zh: 我们将包含所有变量的无约束模型，与剔除这 q 项改造的受约束模型进行对比。F 统计量精确衡量了剥离这组变量后，误差平方和 SSE 所出现的相对暴增幅度。
+  s2_zh_hk: 我哋將包含所有變量嘅無約束模型，同埋抽走咗呢 q 個改裝項目嘅受約束模型做對比。F 統計量精確衡量抽走呢組變量之後，誤差平方和 SSE 出現嘅相對暴升幅度。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Collinear Synergy Inside Bundles
+  left_zh: 组合内部的共线遮蔽
+  right_en: Controlling False Positive Risk
+  right_zh: 严防假阳性错误累积
+  s1_en: When upgrade indicators move together, their coefficient estimates may be correlated and individual standard errors may be large. A weak individual t-statistic does not answer the joint question of whether all upgrade coefficients equal zero.
+  s1_zh: 当多个升级指标同步变化时，其系数估计可能彼此相关，单个标准误也可能较大。较弱的单项 t 统计量不能回答“所有升级系数是否同时为零”这一联合问题。
+  s1_zh_hk: 當多個升級指標同步變化時，系數估計可能彼此相關，個別標準誤亦可能較大。較弱嘅單項 t 統計量唔能夠回答「所有升級系數係咪同時為零」呢個聯合問題。
+  s2_en: The joint F-test compares the increase in SSE caused by imposing all q restrictions with the unrestricted model residual variance. A larger ratio indicates that the restrictions worsen fit by more than expected from residual noise under the null model.
+  s2_zh: 联合 F 检验将施加全部 q 个约束所造成的 SSE 增量，与无约束模型的残差方差进行比较。比率越大，表示在原假设模型下，这些约束造成的拟合恶化越难仅由残差噪声解释。
+  s2_zh_hk: 聯合 F 檢驗將施加全部 q 個約束造成嘅 SSE 增量，同無約束模型嘅殘差方差比較。比率越大，表示喺原假設模型之下，呢啲約束造成嘅擬合惡化越難只由殘差噪聲解釋。
+  s3_en: One omnibus test evaluates the prespecified family of restrictions at the chosen significance level. The exact family-wise error from separate tests depends on their dependence and decision rule, so no universal 14 percent figure is assumed.
+  s3_zh: 一个总体检验可以在选定显著性水平下评估预先设定的一组约束。多个单独检验的确切家族错误率取决于检验之间的相关性和决策规则，因此这里不假定统一的 14%。
+  s3_zh_hk: 一個總體檢驗可以喺選定顯著性水平之下評估預先設定嘅一組約束。多個單獨檢驗嘅確切家族錯誤率取決於檢驗之間嘅相關性同決策規則，所以呢度唔假定統一嘅 14%。
+  left_zh_hk: 組合內部嘅共線遮蔽
+  right_zh_hk: 嚴防假陽性錯誤累積
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Estimate Unrestricted Model
+  step1_zh: 运行无约束全模型
+  step2_en: Enforce Null Restrictions
+  step2_zh: 施加约束剔除改造项
+  step3_en: Compute Omnibus F-Ratio
+  step3_zh: 求解全局 F 统计量
+  s1_en: 'Step one: Fit the unrestricted model on n = 36 observations with k = 5 predictors plus an intercept. SSE_U is 1,500, and the unrestricted residual degrees of freedom are 36 - 5 - 1 = 30.'
+  s1_zh: 第一步：在 n = 36 个观测值上拟合无约束模型，其中包含 k = 5 个自变量和一个截距。SSE_U = 1,500，无约束模型的残差自由度为 36 - 5 - 1 = 30。
+  s1_zh_hk: 第一步：喺 n = 36 個觀測值上擬合無約束模型，其中包含 k = 5 個自變量同一個截距。SSE_U = 1,500，無約束模型嘅殘差自由度係 36 - 5 - 1 = 30。
+  s2_en: 'Step two: Impose q = 3 restrictions by setting the three upgrade coefficients to zero. The restricted SSE is 1,950, so the restriction increases SSE by 450.'
+  s2_zh: 第二步：将三个升级系数设为零，施加 q = 3 个约束。受约束模型的 SSE 为 1,950，因此约束使 SSE 增加 450。
+  s2_zh_hk: 第二步：將三個升級系數設為零，施加 q = 3 個約束。受約束模型嘅 SSE 係 1,950，所以約束令 SSE 增加 450。
+  s3_en: 'Step three: The numerator mean square is 450 / 3 = 150, and the unrestricted residual mean square is 1,500 / 30 = 50. Therefore F = 150 / 50 = 3.00. A rejection decision requires the chosen significance level or the corresponding p-value; neither is inferred from the statistic alone.'
+  s3_zh: 第三步：分子均方为 450 / 3 = 150，无约束残差均方为 1,500 / 30 = 50。因此 F = 150 / 50 = 3.00。是否拒绝原假设还需要选定显著性水平或对应 p值，不能只凭统计量本身推断。
+  s3_zh_hk: 第三步：分子均方係 450 / 3 = 150，無約束殘差均方係 1,500 / 30 = 50。所以 F = 150 / 50 = 3.00。係咪拒絕原假設仲需要選定顯著性水平或者對應 p值，唔可以只憑統計量本身推斷。
+  step1_zh_hk: 運行無約束全模型
+  step2_zh_hk: 施加約束抽走改裝項
+  step3_zh_hk: 求解全局 F 統計量
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Why Did Separate t-Tests Deceive Us?
+  q1_zh: 为何单独的 t 检验会产生误导？
+  q2_en: 'Audit Rule: Test Capital Bundles Jointly'
+  q2_zh: 审计准则：捆绑式投资必做联合 F 检验
+  s1_en: A joint F-test asks whether a prespecified group of coefficients satisfies all stated restrictions at once. It complements individual t-tests because the joint null is a different statistical question.
+  s1_zh: 联合 F 检验用于判断预先设定的一组系数是否同时满足全部约束。它补充单独 t 检验，因为联合原假设是一个不同的统计问题。
+  s1_zh_hk: 聯合 F 檢驗用嚟判斷預先設定嘅一組系數係咪同時滿足全部約束。佢補充單獨 t 檢驗，因為聯合原假設係一個唔同嘅統計問題。
+  s2_en: 'Decision rule: define the coefficient bundle before testing, compute the restricted and unrestricted models on the same sample, and compare the resulting F-statistic with the correct F distribution using q and n - k - 1 degrees of freedom. Statistical rejection does not by itself establish profitability or causality.'
+  s2_zh: 决策规则：检验前先定义系数组合，在同一样本上估计受约束与无约束模型，并使用 q 与 n - k - 1 自由度对应的 F 分布解读统计量。统计拒绝本身并不能证明盈利能力或因果关系。
+  s2_zh_hk: 決策規則：檢驗之前先定義系數組合，喺同一樣本上估計受約束同無約束模型，並使用 q 同 n - k - 1 自由度對應嘅 F 分布解讀統計量。統計拒絕本身唔能夠證明盈利能力或者因果關係。
+  s3_en: For the supplied values, F equals 3.00 with numerator degrees of freedom 3 and denominator degrees of freedom 30. This completes the calculation; the final decision must use a stated significance level or p-value and the business evidence for the upgrade package.
+  s3_zh: 根据给定数值，F = 3.00，分子自由度为 3，分母自由度为 30。计算至此完成；最终判断必须结合明确的显著性水平或 p值，以及升级组合的业务证据。
+  s3_zh_hk: 根據畀定數值，F = 3.00，分子自由度係 3，分母自由度係 30。計算到此完成；最終判斷必須結合明確嘅顯著性水平或者 p值，同埋升級組合嘅業務證據。
+  q1_zh_hk: 點解單獨嘅 t 檢驗會誤導決策？
+  q2_zh_hk: 審計準則：組合式投資必做聯合 F 檢驗

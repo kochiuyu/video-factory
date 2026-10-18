@@ -11,7 +11,7 @@ Deterministic factory for 1–3 minute educational explainers. One lesson file b
 
 The picture is shared. Language lives only in audio and burned-in captions.
 
-This repository is the transferable object. A Grok chat is not. Give collaborators the repo, `docs/SETUP.md`, `docs/SOP.md`, and `docs/AUTHORING_PROMPT.md`. Do not give them a transcript of the original design conversation and expect the same videos.
+This repository is the transferable object. A Grok chat is not. Give collaborators the repo, `docs/SETUP.md`, `docs/SOP.md`, `docs/AUTHORING_PROMPT.md`, and `docs/QA_CHECKLIST.md`. Do not give them a transcript of the original design conversation and expect the same videos.
 
 ## Quick start
 
@@ -51,6 +51,28 @@ export VF_FONT_CJK_BOLD=/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc
 | `docs/SOP-faculty.html` | Faculty teaching from a finished pack |
 | `docs/SCHEMA.md` | YAML fields and visuals |
 | `docs/AUTHORING_PROMPT.md` | LLM or RA drafting YAML |
+| `docs/REVISE_PROMPT.md` | Rewrite an existing YAML, especially 简 / 繁 |
+| `docs/QA_CHECKLIST.md` | Delivery gate after authoring or revision |
+| `docs/courses/STAT-M01.md` | Descriptive mini-course syllabus |
+| `minicourses/STAT-M01.yaml` | Collection of 15 standalone shorts; not joined |
+| `docs/courses/STAT-M02.md` | Probability mini-course syllabus |
+| `minicourses/STAT-M02.yaml` | Collection of 15 standalone shorts; not joined |
+| `docs/courses/STAT-M03.md` | Distributions mini-course syllabus |
+| `minicourses/STAT-M03.yaml` | Collection of 15 standalone shorts; not joined |
+| `docs/courses/STAT-M04.md` | Sampling, CLT, and interval mini-course syllabus |
+| `minicourses/STAT-M04.yaml` | Collection of 15 standalone shorts; not joined |
+| `docs/courses/STAT-M05.md` | Hypothesis-testing mini-course syllabus |
+| `minicourses/STAT-M05.yaml` | Collection of 15 standalone shorts; not joined |
+| `docs/courses/STAT-M06.md` | Regression mini-course syllabus |
+| `minicourses/STAT-M06.yaml` | Collection of 15 standalone shorts; not joined |
+| `docs/courses/STAT-M07.md` | Multiple-regression and store-experiment mini-course syllabus |
+| `minicourses/STAT-M07.yaml` | Collection of 15 standalone shorts; not joined |
+| `docs/courses/STAT-M08.md` | Logistic-regression and customer-choice mini-course syllabus |
+| `minicourses/STAT-M08.yaml` | Collection of 15 standalone shorts; not joined |
+| `docs/courses/STAT-M09.md` | Time-series and demand-forecasting mini-course syllabus |
+| `minicourses/STAT-M09.yaml` | Collection of 15 standalone shorts; not joined |
+| `docs/courses/STAT-M10.md` | Applied A/B-testing mini-course syllabus |
+| `minicourses/STAT-M10.yaml` | Collection of 15 standalone shorts; not joined |
 | `docs/THEMES.md` | Slide palettes |
 | `docs/WINDOWS.md` | Windows FFmpeg only |
 | `lessons/ECON-QA-01.yaml` | Feature-test short |

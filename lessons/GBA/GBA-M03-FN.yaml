@@ -1,0 +1,227 @@
+id: GBA-M03-FN
+course: gba
+course_en: Greater Bay Area
+course_zh: 粤港澳大湾区
+course_zh_hk: 粵港澳大灣區
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 146
+title_en: Financial Services
+title_zh: 金融服务
+title_zh_hk: 金融服務
+objective_en: 'Second step of the crossing unit: listing, banking, and payments sit under different
+  GBA doors.'
+objective_zh: 过关单元的第二步：上市、银行、支付，走的是大湾区不同的门。
+objective_zh_hk: 過關單元的第二步：上市、銀行、支付，走的是大灣區不同的門。
+glossary:
+- en: financial services
+  zh: 金融服务
+  zh_hk: 金融服務
+  lock: true
+- en: listing
+  zh: 上市
+  zh_hk: 上市
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Why might a GBA firm split listing and production across cities?
+  zh: 为何大湾区企业可能把上市和生产拆到不同城市？
+  zh_hk: 為何大灣區企業可能把上市和生產拆到不同城市？
+  answer_en: Those jobs sit under different rule books and different opportunity costs.
+  answer_zh: 这些工作处于不同规则书，也有不同的机会成本。
+  answer_zh_hk: 這些工作處於不同規則書，也有不同的機會成本。
+- id: Q2
+  type: transfer
+  en: A shop in Shenzhen takes a card issued in Hong Kong. Which money job is that?
+  zh: 深圳商店接受香港发行的卡。这是哪一种钱的工作？
+  zh_hk: 深圳商店接受香港發行的卡。這是哪一種錢的工作？
+  answer_en: Payment. It is not the same job as listing the shop’s parent.
+  answer_zh: 支付。这与让商店母公司上市不是同一份工作。
+  answer_zh_hk: 支付。這與讓商店母公司上市不是同一份工作。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Financial Services
+  title_zh: 金融服务
+  title_zh_hk: 金融服務
+  en: Trade costs hit goods. Finance hits the money that pays for those goods. Raising capital, holding
+    deposits, and moving a payment can live in different cities under different rules.
+  zh: 贸易成本打在货上。金融打在为货付款的钱上。筹资、存款、支付，可以住在不同城市、受不同规则管。
+  zh_hk: 貿易成本打在貨上。金融打在為貨付款的錢上。籌資、存款、支付，可以住在不同城市、受不同規則管。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Three money jobs
+  title_zh: 三种和钱有关的工作
+  title_zh_hk: 三種和錢有關的工作
+  formula: List · bank · pay
+  formula_en: List · bank · pay
+  formula_zh: 上市 · 银行 · 支付
+  formula_zh_hk: 上市 · 銀行 · 支付
+  gloss_en: Each job has its own rule book.
+  gloss_zh: 每种工作有自己的规则书。
+  gloss_zh_hk: 每種工作有自己的規則書。
+  en: Financial services cover listing and fundraising, taking deposits and making loans, and moving
+    payments. In the GBA those jobs often sit in different legal systems, so a firm may split them
+    on purpose.
+  zh: 金融服务包括上市筹资、吸收存款与放贷，以及移动支付。在大湾区，这些工作常常处于不同法律体系，企业可能有意把它们拆开。
+  zh_hk: 金融服務包括上市籌資、吸收存款與放貸，以及移動支付。在大灣區，這些工作常常處於不同法律體系，企業可能有意把它們拆開。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Raise here, operate there
+  title_zh: 在这里筹资，在那里经营
+  title_zh_hk: 在這裏籌資，在那裏經營
+  left_en: List the company in Hong Kong
+  left_zh: 公司在香港上市
+  left_zh_hk: 公司在香港上市
+  right_en: Run plants in Guangdong
+  right_zh: 工厂在广东运转
+  right_zh_hk: 工廠在廣東運轉
+  en: A manufacturer can raise funds on a Hong Kong exchange and keep the plants in Guangdong. Investors
+    read one set of listing rules. The machines follow another city’s labour and tax rules.
+  zh: 制造企业可以在香港交易所筹资，工厂留在广东。投资者读的是一套上市规则。机器遵循的是另一座城市的劳动和税收规则。
+  zh_hk: 製造企業可以在香港交易所籌資，工廠留在廣東。投資者讀的是一套上市規則。機器遵循的是另一座城市的勞動和稅收規則。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Three doors
+  title_zh: 三扇门
+  title_zh_hk: 三扇門
+  formula: List · bank · pay
+  formula_en: List · bank · pay
+  formula_zh: 上市 · 银行 · 支付
+  formula_zh_hk: 上市 · 銀行 · 支付
+  gloss_en: Each door has its own rule.
+  gloss_zh: 每扇门有自己的规则。
+  gloss_zh_hk: 每扇門有自己的規則。
+  en: Financial services in the GBA are not one industry. Listing, banking, and payments use different
+    licences and different clocks. Name the door.
+  zh: 大湾区的金融不是一个行业。上市、银行和支付用不同牌照、不同时钟。先说是哪扇门。
+  zh_hk: 大灣區的金融不是一個行業。上市、銀行和支付用不同牌照、不同時鐘。先說是哪扇門。
+- id: doors
+  visual: three_column
+  seconds: 16
+  kicker: Three parts
+  kicker_en: Three parts
+  kicker_zh: 三部分
+  kicker_zh_hk: 三部分
+  title_en: Walk each door
+  title_zh: 走过每扇门
+  title_zh_hk: 走過每扇門
+  col1_en: Where can you list?
+  col1_zh: 在哪上市？
+  col1_zh_hk: 在哪上市？
+  col2_en: Where can you borrow?
+  col2_zh: 在哪借款？
+  col2_zh_hk: 在哪借款？
+  col3_en: Where can you settle?
+  col3_zh: 在哪结算？
+  col3_zh_hk: 在哪結算？
+  en: A firm can list in one city, borrow in another, and pay suppliers in a third. Treat those as
+    three maps, not one logo.
+  zh: 企业可以在一座城市上市，在另一座借款，在第三座付给供应商。把它们当成三张地图，而不是一个标志。
+  zh_hk: 企業可以在一座城市上市，在另一座借款，在第三座付給供應商。把它們當成三張地圖，而不是一個標誌。
+- id: pay
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A supplier across the river
+  title_zh: 河对岸的供应商
+  title_zh_hk: 河對岸的供應商
+  setup_en: Invoice today
+  setup_zh: 今天的账单
+  setup_zh_hk: 今天的賬單
+  result_en: Settlement takes a corridor
+  result_zh: 结算要走通道
+  result_zh_hk: 結算要走通道
+  en: The factory is ready. The payment is not a walk across the bridge. It is a corridor with hours
+    and caps. Finance here is a timetable.
+  zh: 工厂已准备好。付款不是走过桥。它是一条有时间和额度的通道。这里的金融是一张时刻表。
+  zh_hk: 工廠已準備好。付款不是走過橋。它是一條有時間和額度的通道。這裏的金融是一張時刻表。
+- id: risk
+  visual: two_column
+  seconds: 16
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Licence versus distance
+  title_zh: 牌照对距离
+  title_zh_hk: 牌照對距離
+  left_en: Close in kilometres
+  left_zh: 公里很近
+  left_zh_hk: 公里很近
+  right_en: Far in permission
+  right_zh: 许可很远
+  right_zh_hk: 許可很遠
+  en: Two towers can see each other and still not share a licence. Distance in the GBA is often legal,
+    not geographic.
+  zh: 两座楼可以互相看见，却仍不能共享一张牌照。大湾区的距离常常是法律上的，不是地理上的。
+  zh_hk: 兩座樓可以互相看見，卻仍不能共享一張牌照。大灣區的距離常常是法律上的，不是地理上的。
+- id: choose
+  visual: steps
+  seconds: 18
+  kicker: Steps
+  kicker_en: Steps
+  kicker_zh: 步骤
+  kicker_zh_hk: 步驟
+  title_en: Pick a door first
+  title_zh: 先选一扇门
+  title_zh_hk: 先選一扇門
+  step1_en: State the task
+  step1_zh: 说出任务
+  step1_zh_hk: 說出任務
+  step2_en: Find the licence city
+  step2_zh: 找到牌照所在城市
+  step2_zh_hk: 找到牌照所在城市
+  step3_en: Then price the minutes
+  step3_zh: 再为分钟定价
+  step3_zh_hk: 再為分鐘定價
+  en: Say whether you need a listing, a loan, or a payment. Find where that licence actually lives.
+    Only then count travel time. Otherwise you price the wrong trip.
+  zh: 先说你需要上市、贷款还是支付。找到牌照真正所在的地方。然后再数旅行时间。否则你为错误的行程定价。
+  zh_hk: 先說你需要上市、貸款還是支付。找到牌照真正所在的地方。然後再數旅行時間。否則你為錯誤的行程定價。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Name the money job
+  title_zh: 说出是哪一种钱的工作
+  title_zh_hk: 說出是哪一種錢的工作
+  q1_en: Is this listing, banking, or payment?
+  q1_zh: 这是上市、银行还是支付？
+  q1_zh_hk: 這是上市、銀行還是支付？
+  q2_en: Which city’s rule book applies?
+  q2_zh: 适用哪一座城市的规则书？
+  q2_zh_hk: 適用哪一座城市的規則書？
+  en: Do not say “GBA finance” as if it were one counter. Write the job and the rule book first. Next
+    we treat those rule books as the design of the cluster, not as a rounding error.
+  zh: 不要把“大湾区金融”说成一个柜台。先写明是哪一项活、哪一本规则。下一讲把这些规则书当成集群的设计，而不是误差。
+  zh_hk: 不要把「大灣區金融」說成一個櫃檯。先寫明是哪一項活、哪一本規則。下一講把這些規則書當成集群的設計，而不是誤差。

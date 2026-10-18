@@ -1,0 +1,20 @@
+id: ECON-PR
+kind: module
+course: economics
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+duration_target_s: 580
+title_en: Price
+title_zh: 价格
+title_zh_hk: 價格
+objective_en: "Demand, supply, a price that clears, then what a rise does to the till."
+objective_zh: "需求、供给、出清的价格，然后涨价对柜台做什么。"
+objective_zh_hk: "需求、供給、出清嘅價格，然後加價對櫃枱做咩。"
+lessons:
+- ECON-PR-IN
+- ECON-PR-DEM
+- ECON-PR-SUP
+- ECON-PR-EQ
+- ECON-PR-EL
+- ECON-PR-OUT

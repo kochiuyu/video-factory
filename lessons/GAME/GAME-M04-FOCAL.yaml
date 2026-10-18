@@ -1,0 +1,149 @@
+id: GAME-M04-FOCAL
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: The shady side
+title_zh: 有荫的那一侧
+title_zh_hk: 有蔭嗰一側
+objective_en: A focal point is a label both carts can see. On the wide path it can tip both Left or both Right.
+objective_zh: 焦点是两车都能看见的标签。宽路上，它可以把人推向都在左或都在右。
+objective_zh_hk: 焦點係兩架都見到嘅標籤。闊路上面，佢可以將人推去都喺左定都喺右。
+glossary:
+- en: focal point
+  zh: 焦点
+  zh_hk: 焦點
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What is the shady side doing on this table?
+  zh: 有荫的那一侧在这张表上起什么作用？
+  zh_hk: 有蔭嗰一側喺呢張表起咩作用？
+  answer_en: It is a label both can see. It does not change the numbers.
+  answer_zh: 它是两车都能看见的标签。数字没有变。
+  answer_zh_hk: 佢係兩架都見到嘅標籤。數字冇變。
+- id: Q2
+  type: transfer
+  en: Does a focal point delete a Nash cell?
+  zh: 焦点会删掉一格纳什吗？
+  zh_hk: 焦點會刪走一格納什嗎？
+  answer_en: No. Both cells stay Nash. One becomes easier to find.
+  answer_zh: 不会。两格仍是纳什。其中一格更好找。
+  answer_zh_hk: 唔會。兩格都仲係納什。其中一格更好搵。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: The shady side
+  title_zh: 有荫的那一侧
+  title_zh_hk: 有蔭嗰一側
+  en: Same wide path. Same Left and Right. Same three and three if they match. This morning one side has shade. Both carts can see it before they park.
+  zh: 还是那条宽路。还是左和右。停在一起还是各三。今天有一侧有荫。两车停之前都看得见。
+  zh_hk: 都係嗰條闊路。都係左同右。停一齊都係各三。今日有一側有蔭。兩架停之前都睇得見。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: A focal point
+  title_zh: 焦点
+  title_zh_hk: 焦點
+  formula: A label both can see, before anyone posts
+  formula_en: A label both can see, before anyone posts
+  formula_zh: 还没停之前，两车都能看见的标签
+  formula_zh_hk: 都未停之前，兩架都見到嘅標籤
+  gloss_en: The numbers do not change.
+  gloss_zh: 数字没有变。
+  gloss_zh_hk: 數字冇變。
+  en: Here is the idea. A focal point is a label both carts can see before they post. The shady side. Yesterday's side. A sign already there. It does not rewrite the payoff table. It can tip which Nash cell they find.
+  zh: 核心就这一句。焦点是停之前两车都能看见的标签。有荫的一侧。昨天停过的一侧。已经立在那里的牌子。它不改报酬表。它可以把人推向其中一格纳什。
+  zh_hk: 核心就呢一句。焦點係停之前兩架都見到嘅標籤。有蔭嗰一側。尋日停過嗰一側。已經企喺度嘅牌。佢唔改報酬表。佢可以將人推去其中一格納什。
+- id: matrix
+  visual: payoff_matrix
+  seconds: 28
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Same numbers, one hint
+  title_zh: 数字一样，多一个提示
+  title_zh_hk: 數字一樣，多一個提示
+  row_player_en: Cart A
+  row_player_zh: 甲车
+  row_player_zh_hk: 甲車
+  col_player_en: Cart B
+  col_player_zh: 乙车
+  col_player_zh_hk: 乙車
+  row1_en: Left
+  row1_zh: 左
+  row1_zh_hk: 左
+  row2_en: Right
+  row2_zh: 右
+  row2_zh_hk: 右
+  col1_en: Left
+  col1_zh: 左
+  col1_zh_hk: 左
+  col2_en: Right
+  col2_zh: 右
+  col2_zh_hk: 右
+  c11: "(3, 3)"
+  c12: "(0, 0)"
+  c21: "(0, 0)"
+  c22: "(3, 3)"
+  highlight: c11
+  note_en: Shade is on the Left. Both cells stay Nash.
+  note_zh: 荫在左边。两格仍是纳什。
+  note_zh_hk: 蔭喺左邊。兩格都仲係納什。
+  en: Look. The cells did not move. Both Left still pays three. Both Right still pays three. If both carts can see the shade on the Left, Left becomes easier to find. Right is still Nash. It is just less obvious.
+  zh: 看。格子没有动。都在左还是各三。都在右还是各三。两车都看见荫在左边，左就更好找。右仍是纳什。只是不那么显眼。
+  zh_hk: 睇。格仔冇郁。都喺左都係各三。都喺右都係各三。兩架都見到蔭喺左邊，左就更好搵。右都仲係納什。淨係冇咁顯眼。
+- id: example
+  visual: example
+  seconds: 22
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Yesterday is a label too
+  title_zh: 昨天也是一个标签
+  title_zh_hk: 尋日都係一個標籤
+  setup_en: Both sat Left yesterday. Customers already look Left.
+  setup_zh: 昨天都停在左。客人已经往左看。
+  setup_zh_hk: 尋日都停喺左。客人已經望左。
+  result_en: That history is a focal point. Not a new payoff.
+  result_zh: 这段过去就是焦点。不是新的报酬。
+  result_zh_hk: 呢段過去就係焦點。唔係新嘅報酬。
+  en: Both sat Left yesterday, and customers already look Left. That history is another label. It does not pay extra in the cell. It only makes both Left easier to find this morning.
+  zh: 昨天都停在左，客人已经往左看。这段过去也是一个标签。格子里的钱没有变多。只是这个早晨，都在左更好找。
+  zh_hk: 尋日都停喺左，客人已經望左。呢段過去都係一個標籤。格仔入面嘅錢冇變多。淨係呢個朝早，都喺左更好搵。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: A label, not a new cell
+  title_zh: 是标签，不是新格子
+  title_zh_hk: 係標籤，唔係新格仔
+  q1_en: A focal point is a label both can see.
+  q1_zh: 焦点是两车都能看见的标签。
+  q1_zh_hk: 焦點係兩架都見到嘅標籤。
+  q2_en: Both Nash cells stay on the table.
+  q2_zh: 两格纳什都还在表上。
+  q2_zh_hk: 兩格納什都仲喺表上面。
+  en: Keep the label. It does not delete a cell. Next someone says the label out loud. I will sit Left. Ask whether that sentence helps.
+  zh: 把标签留下。它不删格子。接下来有人把标签说出来。我停左边。问这句话有没有用。
+  zh_hk: 將標籤留低。佢唔刪格仔。跟住有人將標籤講出嚟。我停左邊。問呢句有冇用。

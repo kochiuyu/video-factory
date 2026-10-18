@@ -1,0 +1,190 @@
+id: STAT-M01-T05-RANGE
+course: statistics
+course_en: Business Statistics
+course_zh: 商务统计
+course_zh_hk: 商務統計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: How wide is the demand span?
+title_zh: 需求的完整跨度有多大？
+title_zh_hk: 需求嘅完整跨度有幾大？
+objective_en: Define the range as maximum minus minimum, calculate and compare street-store and network ranges, and explain why it reveals observed outer boundaries but cannot by itself describe typical variability.
+objective_zh: 把极差定义为最大值减去最小值，计算并比较街头门店与全网络的极差，并解释它为何能显示观测边界，却不能单独描述典型波动。
+objective_zh_hk: 將全距定義為最大值減去最小值，計算並比較街頭門店同全網絡嘅全距，並解釋佢點解可以顯示觀測邊界，卻唔可以單獨描述典型波動。
+glossary:
+- en: range
+  zh: 极差
+  zh_hk: 全距
+  lock: true
+- en: maximum
+  zh: 最大值
+  zh_hk: 最大值
+  lock: true
+- en: minimum
+  zh: 最小值
+  zh_hk: 最小值
+  lock: true
+- en: spread
+  zh: 离散程度
+  zh_hk: 離散程度
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: How do you calculate the range of store sales?
+  question_zh: 如何计算门店销量的极差（全距）？
+  question_zh_hk: 點樣計算門店銷量嘅全距？
+  options_en:
+  - 'A: Add the smallest and largest values and divide by two.'
+  - 'B: Subtract the minimum sales value from the maximum sales value.'
+  - 'C: Count how many stores reported valid sales numbers.'
+  - 'D: Subtract the average sales from the highest store sales.'
+  options_zh:
+  - 'A: 将最小值与最大值相加，再除以二。'
+  - 'B: 用最大销售数值减去最小销售数值。'
+  - 'C: 统计有多少家门店上报了有效销售数字。'
+  - 'D: 用最高门店销量减去平均销量。'
+  options_zh_hk:
+  - 'A: 將最小值同最大值加埋，再除以二。'
+  - 'B: 用最大銷售數值減去最少銷售數值。'
+  - 'C: 統計有幾多間門店上報咗有效銷售數字。'
+  - 'D: 用最高門店銷量減去平均銷量。'
+  answer: B
+  explanation_en: 'The range is the full observed span: Maximum minus Minimum. It uses only the two endpoints and retains the original unit, here cups.'
+  explanation_zh: 极差是完整观测跨度：最大值减去最小值。它只使用两个端点，并保留原始单位，这里是杯。
+  explanation_zh_hk: 全距係完整觀測跨度：最大值減去最小值。佢只使用兩個端點，並保留原始單位，呢度係杯。
+- id: Q2
+  type: multiple_choice
+  question_en: Why is the range vulnerable when planning staff for regular street shops?
+  question_zh: 为什么在为普通街头分店安排人手时，极差容易产生误导？
+  question_zh_hk: 點解喺為普通街頭分店安排人手嗰陣，全距好容易產生誤導？
+  options_en:
+  - 'A: It uses only the minimum and maximum, so one unusual endpoint can dominate while all middle observations are ignored.'
+  - 'B: It requires dividing by the total number of stores in the chain.'
+  - 'C: It can only be calculated on text categories rather than numbers.'
+  - 'D: It always equals zero whenever sales are positive.'
+  options_zh:
+  - 'A: 它只使用最小值与最大值，因此一个异常端点就可能主导结果，而中间所有观测值都被忽略。'
+  - 'B: 它必须除以连锁公司旗下的门店总数。'
+  - 'C: 它只能用于文字分类，不能用于具体数字。'
+  - 'D: 只要销量为正数，它就必然等于零。'
+  options_zh_hk:
+  - 'A: 佢只使用最小值同最大值，所以一個異常端點就可能主導結果，而中間所有觀測值都被忽略。'
+  - 'B: 佢必須除以連鎖公司旗下嘅門店總數。'
+  - 'C: 佢淨係可以用喺文字分類，唔可以用喺具體數字。'
+  - 'D: 只要銷量係正數，佢就必然等於零。'
+  answer: A
+  explanation_en: One extreme endpoint can greatly enlarge the range without revealing how the remaining stores are distributed.
+  explanation_zh: 一个极端端点就能大幅扩大极差，却不会说明其余门店如何分布。
+  explanation_zh_hk: 一個極端端點就可以大幅擴大全距，卻唔會說明其餘門店點樣分佈。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Question
+  kicker_en: The Question
+  kicker_zh: 商业问题
+  kicker_zh_hk: 商業問題
+  title_en: How far apart are your stores?
+  title_zh: 分店之间的差距到底有多大？
+  title_zh_hk: 分店之間嘅差距到底有幾大？
+  en: A regional director knows average demand, but still needs the observed boundaries. How far apart are the lowest- and highest-demand stores in the report? If that span is wide, one uniform staffing or inventory plan may fail at both ends. We need a measure of the full distance between the two endpoints.
+  zh: 区域总监知道平均需求，却仍要掌握观测边界：报表中需求最低与最高的门店相差多远？如果跨度很宽，一套统一的排班或库存方案可能在两个端点都失效。我们需要衡量两个端点之间完整距离的指标。
+  zh_hk: 區域總監知道平均需求，但仍然要掌握觀測邊界：報表入面需求最低同最高嘅門店相差幾遠？如果跨度好闊，一套統一嘅排班或者庫存方案可能喺兩個端點都失效。我哋需要衡量兩個端點之間完整距離嘅指標。
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: What It Is
+  kicker_en: What It Is
+  kicker_zh: 概念定义
+  kicker_zh_hk: 概念定義
+  title_en: The span between the extremes
+  title_zh: 两个极端之间的总跨度
+  title_zh_hk: 兩個極端之間嘅總跨度
+  formula: Range = Maximum value - Minimum value
+  formula_zh: 极差 = 最大值 - 最小值
+  formula_zh_hk: 全距 = 最大值 - 最小值
+  s1_en: The range is the simplest measure of spread. It equals the maximum observed value minus the minimum observed value, reporting the full numerical span covered by the data.
+  s1_zh: 极差是最简单的离散程度指标，等于观测最大值减去观测最小值，表示数据覆盖的完整数值跨度。
+  s1_zh_hk: 全距係最簡單嘅離散程度指標，等於觀測最大值減去觀測最小值，表示數據覆蓋嘅完整數值跨度。
+  s2_en: It uses only those two endpoints. It tells you how far apart the extremes are, but nothing about where the observations between them are concentrated.
+  s2_zh: 它只使用两个端点，能说明极端值相隔多远，却不会告诉你中间观测值集中在哪里。
+  s2_zh_hk: 佢只使用兩個端點，可以說明極端值相隔幾遠，卻唔會話畀你知中間觀測值集中喺邊度。
+- id: calc
+  visual: example
+  seconds: 36
+  kicker: Step by Step
+  kicker_en: Step by Step
+  kicker_zh: 算例推演
+  kicker_zh_hk: 算例推演
+  title_en: Checking the Monday span
+  title_zh: 核算周一的销售跨度
+  title_zh_hk: 核算周一嘅銷售跨度
+  setup_en: 'Wan Chai (Max): 420 cups | Mong Kok (Min): 310 cups'
+  setup_zh: 湾仔（最大值）：420杯 | 旺角（最小值）：310杯
+  setup_zh_hk: 灣仔（最大值）：420杯 | 旺角（最小值）：310杯
+  result_en: 'Range: 420 - 310 = 110 cups'
+  result_zh: 极差：420 - 310 = 110 杯
+  result_zh_hk: 全距：420 - 310 = 110 杯
+  s1_en: 'Calculating the range takes two steps. Step one: identify the smallest and largest values in your dataset. Looking at our street stores on Monday, Mong Kok sold 310 cups, and Wan Chai sold 420 cups.'
+  s1_zh: 计算极差只需要两步。第一步：找出数据集里的最小值和最大值。查看我们周一的街头门店，旺角店卖了310杯，湾仔店卖了420杯。
+  s1_zh_hk: 計算全距淨係需要兩步。第一步：搵出數據集入面嘅最小值同最大值。睇吓我哋周一嘅街頭門店，旺角舖賣咗310杯，灣仔舖賣咗420杯。
+  s2_en: 'Step two: subtract the minimum from the maximum. 420 minus 310 gives a street store range of exactly 110 cups.'
+  s2_zh: 第二步：用最大值减去最小值。420减去310，算出的街头门店极差正好是110杯。
+  s2_zh_hk: 第二步：用最大值減去最小值。420減去310，計出嚟嘅街頭門店全距啱啱好係110杯。
+  s3_en: 'Interpret 110 carefully: the two observed street-store sales figures are 110 cups apart. It does not mean a typical shop varies by 110 cups, and it describes no observations between the endpoints.'
+  s3_zh: 要谨慎解释110杯：观测到的两家街头门店相差110杯。它不表示典型门店会波动110杯，也没有描述端点之间的观测值。
+  s3_zh_hk: 要小心解釋110杯：觀測到嘅兩間街頭門店相差110杯。佢唔代表典型門店會波動110杯，亦冇描述端點之間嘅觀測值。
+- id: trap
+  visual: two_column
+  seconds: 36
+  kicker: The Limitation
+  kicker_en: The Limitation
+  kicker_zh: 关键局限
+  kicker_zh_hk: 關鍵局限
+  title_en: One endpoint can dominate
+  title_zh: 一个端点就能主导结果
+  title_zh_hk: 一個端點就可以主導結果
+  left_en: 'Street range: 110 cups'
+  left_zh: 街边店极差：110 杯
+  left_zh_hk: 街邊舖全距：110 杯
+  right_en: 'With Airport: 3,890 cups'
+  right_zh: 加入机场后：3,890杯
+  right_zh_hk: 加入機場後：3,890杯
+  s1_en: The range is highly sensitive to an extreme endpoint because it uses no other observations. Add the 24-hour Airport branch at 4,200 cups, and the maximum changes immediately.
+  s1_zh: 极差对极端端点非常敏感，因为它不使用其他观测值。加入销量4,200杯的24小时机场店后，最大值立刻改变。
+  s1_zh_hk: 全距對極端端點非常敏感，因為佢唔使用其他觀測值。加入銷量4,200杯嘅24小時機場舖之後，最大值即刻改變。
+  s2_en: The network range becomes 4,200 minus 310, or 3,890 cups. Compared with the 110-cup street-store range, that is about 35.4 times as large.
+  s2_zh: 全网络极差变为4,200减310，即3,890杯。与110杯的街头门店极差相比，大约是其35.4倍。
+  s2_zh_hk: 全網絡全距變成4,200減310，即3,890杯。同110杯嘅街頭門店全距相比，大約係佢嘅35.4倍。
+  s3_en: Both calculations are correct, but they describe different populations. The network range includes the Airport format and should not be presented as the routine spread of ordinary street stores.
+  s3_zh: 两个计算都正确，但描述的是不同总体。全网络极差包含机场店这种业态，不应被表述为普通街头门店的常规波动。
+  s3_zh_hk: 兩個計算都正確，但描述嘅係唔同總體。全網絡全距包括機場舖呢種業態，唔應該被講成普通街頭門店嘅常規波動。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: Decision Rule
+  kicker_en: Decision Rule
+  kicker_zh: 商业法则
+  kicker_zh_hk: 商業法則
+  title_en: Use the range as an endpoint check
+  title_zh: 把极差用作端点检查
+  title_zh_hk: 將全距用作端點檢查
+  q1_en: What does the range tell a manager?
+  q1_zh: 极差给管理者传达了什么？
+  q1_zh_hk: 全距畀管理者傳達咗咩？
+  q2_en: Why should you handle it with caution?
+  q2_zh: 为什么必须谨慎使用极差？
+  q2_zh_hk: 點解必須謹慎使用全距？
+  s1_en: Use the range to identify the observed outer span and flag whether capacity plans must accommodate very different endpoints. It is a quick boundary check, not a complete staffing formula.
+  s1_zh: 用极差识别观测到的外围跨度，并检查容量方案是否需要应对差异悬殊的端点。它是快速的边界检查，不是完整的排班公式。
+  s1_zh_hk: 用全距識別觀測到嘅外圍跨度，並檢查容量方案係咪需要應對差異懸殊嘅端點。佢係快速嘅邊界檢查，唔係完整嘅排班公式。
+  s2_en: Do not use the range alone to describe routine variability. It ignores every middle observation and changes sharply when either endpoint changes.
+  s2_zh: 不要只用极差描述常规波动。它忽略所有中间观测值，而且任何端点改变时都可能大幅变化。
+  s2_zh_hk: 唔好只用全距描述常規波動。佢忽略所有中間觀測值，而且任何端點改變嗰陣都可能大幅變化。
+  s3_en: 'The operating rule is precise: report maximum minus minimum, state which population is included, and pair the range with a measure that describes the middle of the distribution.'
+  s3_zh: 经营规则很明确：报告最大值减最小值，说明纳入的是哪个总体，并同时采用能够描述分布中间部分的指标。
+  s3_zh_hk: 營運規則好清楚：報告最大值減最小值，說明納入嘅係邊個總體，並同時採用可以描述分佈中間部分嘅指標。

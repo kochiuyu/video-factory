@@ -1,0 +1,165 @@
+id: STAT-M09-T02-DECOM
+course: STAT-M09
+course_en: Business Time Series & Demand Forecasting
+course_zh: 商业时间序列与需求预测
+course_zh_hk: 商業時間序列與需求預測
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Classical Time-Series Decomposition: Trend, Seasonality, and Shocks'
+title_zh: 经典时间序列分解：长期趋势、季节性与随机冲击
+title_zh_hk: 經典時間序列分解：長期趨勢、季節性與隨機衝擊
+objective_en: Decompose a retail time series into trend, seasonal, and irregular components; distinguish additive from multiplicative forms; and interpret adjusted results without making causal claims.
+objective_zh: 将零售时间序列分解为趋势、季节性与不规则成分，区分加法和乘法形式，并在不作因果断言的前提下解释调整结果。
+objective_zh_hk: 將零售時間序列分解成趨勢、季節性同不規則成分，區分加法同乘法形式，並喺唔作因果斷言嘅前提下解讀調整結果。
+glossary:
+  - en: Time-Series Decomposition
+    zh: 时间序列分解
+    zh_hk: 時間序列分解
+    lock: true
+  - en: Secular Trend
+    zh: 长期趋势
+    zh_hk: 長期趨勢
+    lock: true
+  - en: Seasonal Index
+    zh: 季节性指数（周期因子）
+    zh_hk: 季節性指數（週期因子）
+    lock: true
+  - en: Irregular Shock
+    zh: 不规则冲击（随机扰动）
+    zh_hk: 不規則衝擊（隨機擾動）
+    lock: true
+quiz:
+  - id: Q1
+    type: multiple_choice
+    question_en: 'Assume T_t = 300 kg, S_t = 1.30, and I_t = 0.90. Under multiplicative decomposition, what is Y_t?'
+    question_zh: 假设 T_t = 300 公斤、S_t = 1.30、I_t = 0.90。在乘法分解下，Y_t 是多少？
+    question_zh_hk: 假設 T_t = 300 公斤、S_t = 1.30、I_t = 0.90。喺乘法分解下，Y_t 係幾多？
+    options_en:
+      - 'A: 351 kg'
+      - 'B: 390 kg'
+      - 'C: 270 kg'
+      - 'D: 301.2 kg'
+    options_zh:
+      - A：351 公斤
+      - B：390 公斤
+      - C：270 公斤
+      - D：301.2 公斤
+    options_zh_hk:
+      - A：351 公斤
+      - B：390 公斤
+      - C：270 公斤
+      - D：301.2 公斤
+    answer: A
+    explanation_en: 'Under the stated model, Y_t = T_t × S_t × I_t = 300 × 1.30 × 0.90 = 351 kg.'
+    explanation_zh: 在给定模型下，Y_t = T_t × S_t × I_t = 300 × 1.30 × 0.90 = 351 公斤。
+    explanation_zh_hk: 喺指定模型下，Y_t = T_t × S_t × I_t = 300 × 1.30 × 0.90 = 351 公斤。
+  - id: Q2
+    type: multiple_choice
+    question_en: When is a multiplicative decomposition more appropriate than an additive one?
+    question_zh: 什么时候乘法分解比加法分解更合适？
+    question_zh_hk: 幾時乘法分解會比加法分解更合適？
+    options_en:
+      - 'A: When seasonal amplitude grows roughly in proportion to the series level'
+      - 'B: When sales never vary across the week'
+      - 'C: When every residual is uniformly distributed'
+      - 'D: Whenever the dataset has fewer than ten observations'
+    options_zh:
+      - A：当季节波动幅度大致随序列水平按比例扩大时
+      - B：当一周内销量从不变化时
+      - C：当所有残差都服从均匀分布时
+      - D：只要数据少于十个观测时
+    options_zh_hk:
+      - A：當季節波幅大致隨序列水平按比例放大嗰陣
+      - B：當一個禮拜內銷量從來唔變嗰陣
+      - C：當所有殘差都服從均勻分佈嗰陣
+      - D：只要數據少過十個觀測嗰陣
+    answer: A
+    explanation_en: An additive model represents a roughly constant absolute seasonal effect, while a multiplicative model represents a roughly constant proportional effect.
+    explanation_zh: 加法模型表示绝对幅度大致固定的季节效应；乘法模型则表示比例大致固定的季节效应。
+    explanation_zh_hk: 加法模型表示絕對幅度大致固定嘅季節效應；乘法模型就表示比例大致固定嘅季節效應。
+beats:
+  - id: hook
+    visual: title_card
+    seconds: 30
+    kicker_en: Marketing Credit Puzzle
+    kicker_zh: 营销归因难题
+    kicker_zh_hk: 行銷歸因難題
+    title_en: Was It the Campaign, or a Regular Monday?
+    title_zh: 销量上涨，是营销效果还是周一规律？
+    title_zh_hk: 銷量上升，係行銷效果定禮拜一規律？
+    en: >-
+      Central branch sales are 25 percent above a 400-cup baseline on Monday. Marketing points to a weekend campaign, but Monday may already have a recurring demand pattern. Before assigning credit, managers must separate three ideas: the underlying level, the calendar pattern, and what remains unexplained. Time-Series Decomposition supplies that accounting framework, but it does not by itself prove what caused the remainder.
+    zh: >-
+      中环店周一销量比 400 杯基准高出 25%。营销团队把增长归功于周末推广，但周一本身也可能存在重复的需求规律。在分配功劳之前，管理者要区分基础水平、日历模式和仍未解释的部分。时间序列分解提供了这套核算框架，但仅凭分解不能证明剩余部分由什么原因造成。
+    zh_hk: >-
+      中環店禮拜一銷量比 400 杯基準高 25%。行銷團隊將增長歸功於週末宣傳，但禮拜一本身都可能有重複嘅需求規律。分配功勞之前，管理者要分開基礎水平、日曆模式，同埋仍然未解釋嘅部分。時間序列分解提供呢套核算框架，但單靠分解唔可以證明剩餘部分由乜嘢造成。
+  - id: define
+    visual: definition_card
+    seconds: 34
+    formula: 'Additive: Y_t = T_t + S_t + I_t | Multiplicative: Y_t = T_t × S_t × I_t'
+    formula_zh: 加法：Y_t = T_t + S_t + I_t｜乘法：Y_t = T_t × S_t × I_t
+    formula_zh_hk: 加法：Y_t = T_t + S_t + I_t｜乘法：Y_t = T_t × S_t × I_t
+    formula_tex: 'Y_t=T_t+S_t+I_t\quad\mathrm{or}\quad Y_t=T_t\cdot S_t\cdot I_t'
+    s1_en: Time-Series Decomposition separates an observed value into a Secular Trend, a recurring Seasonal Index, and an Irregular Shock. These are model components, not automatically independent causes.
+    s1_zh: 时间序列分解把观测值拆成长期趋势、重复出现的季节性指数（周期因子），以及不规则冲击（随机扰动）。它们是模型成分，不应被自动视为相互独立的原因。
+    s1_zh_hk: 時間序列分解將觀測值拆成長期趨勢、重複出現嘅季節性指數（週期因子），同埋不規則衝擊（隨機擾動）。佢哋係模型成分，唔應該自動當成互相獨立嘅原因。
+    s2_en: Choose the form by examining scale. Additive decomposition suits seasonal swings that stay roughly constant in units. Multiplicative decomposition suits swings that stay roughly constant as a percentage of the level. Neither form should be chosen merely because the business is retail.
+    s2_zh: 模型形式要根据波动与规模的关系选择。若季节波动的绝对数量大致固定，可用加法分解；若季节波动大致保持固定比例，可用乘法分解。不能只因为业务属于零售业就默认采用乘法模型。
+    s2_zh_hk: 模型形式要睇波動同規模嘅關係。季節波動嘅絕對數量大致固定，可以用加法分解；季節波動大致維持固定比例，就可以用乘法分解。唔可以只因為係零售業，就預設一定用乘法模型。
+  - id: mechanics
+    visual: two_column
+    seconds: 36
+    left_en: Three Components
+    left_zh: 三个组成部分
+    left_zh_hk: 三個組成部分
+    right_en: Adjusted Series
+    right_zh: 调整后的序列
+    right_zh_hk: 調整後嘅序列
+    s1_en: Trend represents the slowly moving baseline. Seasonality represents a pattern that repeats at a known calendar frequency, such as a weekly cycle.
+    s1_zh: 趋势表示缓慢变化的基础水平。季节性表示按照已知日历频率重复出现的模式，例如每周循环。
+    s1_zh_hk: 趨勢表示慢慢變化嘅基礎水平。季節性表示按照已知日曆頻率重複出現嘅模式，例如每週循環。
+    s2_en: The irregular component is what remains after the fitted trend and seasonality are removed. It may contain weather, promotions, measurement error, omitted variables, or ordinary randomness, so it is not a label for one known cause.
+    s2_zh: 去除拟合的趋势和季节性后，剩余部分就是不规则成分。它可能包含天气、推广、测量误差、遗漏变量或一般随机性，因此不能把它直接当作某个已知原因的标签。
+    s2_zh_hk: 扣除擬合嘅趨勢同季節性之後，剩低嘅就係不規則成分。佢可能包括天氣、宣傳、量度誤差、遺漏變量或者一般隨機性，所以唔可以直接當成某一個已知原因嘅標籤。
+    s3_en: Under a multiplicative model, dividing Y_t by the Seasonal Index removes the fitted seasonal multiplier. The adjusted series is easier to compare across weekdays, but causal attribution still requires a separate research design.
+    s3_zh: 在乘法模型下，用 Y_t 除以季节性指数（周期因子），可以去除拟合的季节乘数。调整后的序列更便于跨工作日比较，但因果归因仍需要单独的研究设计。
+    s3_zh_hk: 喺乘法模型下，用 Y_t 除以季節性指數（週期因子），可以扣除擬合嘅季節乘數。調整後嘅序列比較容易跨工作日比較，但因果歸因仍然需要另一套研究設計。
+  - id: example
+    visual: example
+    seconds: 36
+    setup_en: 'Assume: T_t = 400 cups and S_Mon = 1.30'
+    setup_zh: 假设：T_t = 400 杯，S_周一 = 1.30
+    setup_zh_hk: 假設：T_t = 400 杯，S_禮拜一 = 1.30
+    result_en: 'Observed: 500 cups | I_t ≈ 0.962'
+    result_zh: 观测值：500 杯｜I_t ≈ 0.962
+    result_zh_hk: 觀測值：500 杯｜I_t ≈ 0.962
+    s1_en: For illustration, assume Central's fitted trend is 400 cups and Monday's Seasonal Index is 1.30. Under the multiplicative model, the seasonally expected Monday level is 400 times 1.30, or 520 cups.
+    s1_zh: 为便于说明，假设中环店的拟合趋势为 400 杯，周一的季节性指数（周期因子）为 1.30。在乘法模型下，周一的季节预期水平是 400 × 1.30 = 520 杯。
+    s1_zh_hk: 為咗方便說明，假設中環店嘅擬合趨勢係 400 杯，禮拜一嘅季節性指數（週期因子）係 1.30。喺乘法模型下，禮拜一嘅季節預期水平係 400 × 1.30 = 520 杯。
+    s2_en: If observed sales are 500 cups, the fitted irregular factor is 500 divided by 520, approximately 0.962. Sales are therefore about 3.8 percent below the model's seasonally expected Monday level, despite being 25 percent above 400.
+    s2_zh: 如果观测销量为 500 杯，拟合的不规则因子是 500 ÷ 520 ≈ 0.962。因此，销量虽然比 400 杯高 25%，却比模型给出的周一季节预期低约 3.8%。
+    s2_zh_hk: 如果觀測銷量係 500 杯，擬合嘅不規則因子係 500 ÷ 520 ≈ 0.962。所以，銷量雖然比 400 杯高 25%，但比模型畀出嘅禮拜一季節預期低大約 3.8%。
+    s3_en: This calculation challenges the claim that the raw increase is wholly incremental. It does not show that marketing had zero effect, because the irregular factor combines all influences not captured by the fitted trend and seasonality.
+    s3_zh: 这个计算说明，不能把原始增幅全部视为新增效果。但它也不能证明营销效果为零，因为不规则因子混合了拟合趋势与季节性之外的所有影响。
+    s3_zh_hk: 呢個計算說明，唔可以將原始升幅全部當成新增效果。但佢亦唔可以證明行銷效果係零，因為不規則因子混合咗擬合趨勢同季節性以外嘅所有影響。
+  - id: takeaway
+    visual: takeaway
+    seconds: 32
+    q1_en: What Did Decomposition Reveal?
+    q1_zh: 分解揭示了什么？
+    q1_zh_hk: 分解揭示咗乜嘢？
+    q2_en: Decision Rule
+    q2_zh: 决策规则
+    q2_zh_hk: 決策規則
+    s1_en: Decomposition revealed that 500 cups can be above the 400-cup trend yet below the 520-cup Monday expectation. Raw growth and seasonally adjusted performance answer different questions.
+    s1_zh: 分解显示，500 杯可以高于 400 杯趋势水平，却低于 520 杯的周一季节预期。原始增长与季节调整后的表现回答的是不同问题。
+    s1_zh_hk: 分解顯示，500 杯可以高過 400 杯趨勢水平，但又低過 520 杯嘅禮拜一季節預期。原始增長同季節調整後嘅表現，回答嘅係唔同問題。
+    s2_en: Before evaluating a campaign, select and validate a decomposition form, remove the recurring seasonal pattern, and report the assumptions behind the fitted components.
+    s2_zh: 在评价推广活动之前，应选择并检验合适的分解形式，去除重复的季节模式，并说明拟合成分背后的假设。
+    s2_zh_hk: 評價宣傳活動之前，要選擇同檢驗合適嘅分解形式，扣除重複嘅季節模式，並講清楚擬合成分背後嘅假設。
+    s3_en: Use decomposition to describe and compare patterns, not to award causal credit. A campaign-effect claim needs additional evidence that separates marketing from weather, holidays, and other omitted influences.
+    s3_zh: 应使用分解来描述和比较模式，而不是直接作出因果归功。要判断推广效果，还需要额外证据，把营销与天气、节假日及其他遗漏影响区分开来。
+    s3_zh_hk: 應該用分解去描述同比較模式，而唔係直接作因果歸功。要判斷宣傳效果，仲需要額外證據，將行銷同天氣、假期以及其他遺漏影響分開。

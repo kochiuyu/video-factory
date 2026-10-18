@@ -1,0 +1,161 @@
+id: STAT-M02-T15-RECAP
+course: statistics
+course_en: Business Probability Foundations
+course_zh: 商务概率基础
+course_zh_hk: 商務概率基礎
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 162
+title_en: "The probabilistic risk dashboard"
+title_zh: "管理层概率风险仪表盘与前瞻矩阵"
+title_zh_hk: "管理層概率風險儀表板與前瞻矩陣"
+objective_en: "Synthesize the core probability concepts into an integrated executive risk matrix, connecting sample spaces, conditioning, Bayesian belief updating, and expected value with volatility to navigate business uncertainty."
+objective_zh: "将核心概率概念整合为统一的高管风险决策矩阵，连通样本空间、条件约束、贝叶斯信念更新以及兼顾波动的期望价值，系统驾驭商业不确定性。"
+objective_zh_hk: "將核心概率概念整合為統一嘅高管風險決策矩陣，連通樣本空間、條件約束、貝葉斯信念更新以及兼顧波動嘅期望價值，系統駕馭商業不確定性。"
+glossary:
+- en: "risk dashboard"
+  zh: "风险仪表盘"
+  zh_hk: "風險儀表板"
+  lock: true
+- en: "probabilistic thinking"
+  zh: "概率思维"
+  zh_hk: "概率思維"
+  lock: true
+- en: "belief updating"
+  zh: "信念更新"
+  zh_hk: "信念更新"
+  lock: true
+- en: "risk-reward balance"
+  zh: "风险收益权衡"
+  zh_hk: "風險收益權衡"
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: "How does the executive probability framework fundamentally shift managerial strategy from descriptive reporting?"
+  question_zh: "高管概率决策框架是如何从根本上转变传统描述性报表管理模式的？"
+  question_zh_hk: "高管概率決策框架係點樣由根本上轉變傳統描述性報表管理模式嘅？"
+  options_en:
+  - "A: It replaces backward-looking ledger summaries with forward-looking risk modeling, dynamic belief updating, and volatility-adjusted decision payoffs."
+  - "B: It requires all commercial retail operations to cease during rainy weather."
+  - "C: It forces corporate headquarters to charge identical prices across all franchise locations."
+  - "D: It guarantees that random equipment failures will drop to zero percent."
+  options_zh:
+  - "A: 它以前瞻性风险建模、动态信念更新以及兼顾波动的决策损益评估，取代了单纯回溯历史流水账的被动模式。"
+  - "B: 它要求所有商业零售企业在遭遇阴雨天气时必须全面停业。"
+  - "C: 它强制企业总部在所有加盟门店内实施完全统一的固定价格体系。"
+  - "D: 它能百分之百保证设备在实际运营中的偶发故障率彻底清零。"
+  options_zh_hk:
+  - "A: 佢以前瞻性風險建模、動態信念更新以及兼顧波動嘅決策損益評估，取代咗單純回溯歷史流水賬嘅被動模式。"
+  - "B: 佢要求所有商業零售企業喺遭遇陰雨天氣嗰陣必須全面停業。"
+  - "C: 佢強制企業總部喺所有加盟門市入面實施完全統一嘅固定價格體系。"
+  - "D: 佢能夠百分之百保證設備喺實際營運入面嘅偶發故障率徹底清零。"
+  answer: A
+  explanation_en: "Probability equips leaders to evaluate choices based on odds before outcomes occur, updating assumptions with Bayes' rule and balancing return against volatility."
+  explanation_zh: "概率论赋予领导者在结果发生前预判胜率的能力，能运用贝叶斯法则随新证据动态修正认知，并在期望收益与波动风险之间取得理性平衡。"
+  explanation_zh_hk: "概率論賦予領導者喺結果發生前預判勝率嘅能力，能運用貝葉斯法則隨新證據動態修正認知，並喺期望收益同波動風險之間取得理性平衡。"
+- id: Q2
+  type: multiple_choice
+  question_en: "When an executive plans morning logistics, investigates an IoT sensor alarm, and evaluates capital risk, which probability tools govern each?"
+  question_zh: "当管理者规划早间物流链条、排查物联网报警真伪、并核算重大资本风险时，分别由哪些概率工具主导？"
+  question_zh_hk: "當管理者規劃朝早物流鏈條、排查物聯網報警真偽、兼且核算重大資本風險嗰陣，分別由邊啲概率工具主導？"
+  options_en:
+  - "A: Probability Trees for multi-stage logistics, Bayes' Rule for alert diagnosis, and Expected Value with Variance for capital risk."
+  - "B: Addition Rule for all three operational dilemmas exclusively."
+  - "C: Complement Rule for logistics, Marginal Totals for alerts, and Skewness for capital decisions."
+  - "D: Store managers rely solely on personal intuition without mathematical formulas."
+  options_zh:
+  - "A: 概率树梳理多阶段物流链路，贝叶斯法则诊断警报真伪，结合方差的期望值评估资本风险。"
+  - "B: 这三项运营决策完全仅由加法法则单独主导。"
+  - "C: 补集法则用于物流，边缘概率用于警报，偏度用于资本决策。"
+  - "D: 门店经理仅凭个人直觉经验行事，不需要任何数学公式辅助。"
+  options_zh_hk:
+  - "A: 概率樹梳理多階段物流鏈路，貝葉斯法則診斷警報真偽，結合方差嘅期望值評估資本風險。"
+  - "B: 呢三項營運決策完全淨係由加法法則單獨主導。"
+  - "C: 補集法則用喺物流，邊緣概率用喺警報，偏度用喺資本決策。"
+  - "D: 門市經理淨係憑個人直覺經驗行事，唔需要任何數學公式輔助。"
+  answer: A
+  explanation_en: "Sequential trees trace multi-step path risks; Bayes' rule inverts diagnostic evidence; EMV and variance balance monetary returns against financial volatility."
+  explanation_zh: "序贯概率树追踪链式路径风险，贝叶斯法则逆转诊断实测证据，而期望值与方差则统领货币收益与下行波动的权衡。"
+  explanation_zh_hk: "序貫概率樹追蹤鏈式路徑風險，貝葉斯法則逆轉診斷實測證據，而期望值同方差就統領貨幣收益同下行波動嘅權衡。"
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: "The Synthesis"
+  kicker_en: "The Synthesis"
+  kicker_zh: "前瞻全景"
+  kicker_zh_hk: "前瞻全景"
+  title_en: "Governing the uncertain business"
+  title_zh: "在充满变数的世界中稳健掌舵"
+  title_zh_hk: "喺充滿變數嘅世界入面穩健掌舵"
+  en: "A manager may need to forecast a supply path, interpret a sensor alert, and compare financial risks on the same day. Which probability tool belongs to each decision, and how can the results fit into one coherent risk dashboard?"
+  zh: "管理者可能在同一天既要预测供应链路径，又要判断传感器警报，还要比较财务风险。每项决策应使用哪种概率工具？又该如何把结果整合到同一块风险仪表盘上？"
+  zh_hk: "管理者可能喺同一日既要預測供應鏈路徑，又要判斷傳感器警報，仲要比較財務風險。每項決策應該用邊種概率工具？又應該點樣將結果整合到同一塊風險儀表板上？"
+- id: matrix
+  visual: module_close
+  seconds: 44
+  title_en: "The Probabilistic Decision Matrix"
+  title_zh: "商务概率全景决策矩阵"
+  title_zh_hk: "商務概率全景決策矩陣"
+  claim_en: "Four probability tiers organize uncertain business questions into clearly defined calculations and decision checks."
+  claim_zh: "四个概率层级把不确定的商业问题整理为定义清晰的计算与决策检查。"
+  claim_zh_hk: "四個概率層級將不確定嘅商業問題整理成定義清晰嘅計算同決策檢查。"
+  next_en: "Operational rule: define the event, select the matching probability tool, calculate, and test the decision against risk capacity."
+  next_zh: "运营规则：定义事件，选择匹配的概率工具，完成计算，再按风险承受能力检验决策。"
+  next_zh_hk: "營運規則：定義事件，選擇匹配嘅概率工具，完成計算，再按風險承受能力檢驗決策。"
+  en: "Look at your risk dashboard across four clear tiers. Tier One sets the boundaries: Sample Spaces define which outcomes are included, the Complement Rule cuts through complex failure math, and 2x2 Tables separate margins from intersections. Tier Two tracks combinations: the Addition Rule corrects double-counting when events overlap, while Conditional Odds and Multiplication Funnels forecast sequential conversions."
+  zh: "将你的风险仪表盘拆解为四个清晰层级。第一层划定边界：样本空间界定纳入分析的结果，补集法则化繁为简破解复杂故障，2x2 列联表严正划清大盘边缘与内部重合。第二层追踪协同：加法法则在事件重叠时扣除重复计算，条件概率与乘法漏斗层层穿透序列化转化路径。"
+  zh_hk: "將你嘅風險儀表板拆解為四個清晰層級。第一層劃定邊界：樣本空間界定納入分析嘅結果，補集法則化繁為簡破解複雜故障，2x2 列聯表嚴正劃清大盤邊緣同內部重合。第二層追蹤協同：加法法則喺事件重疊嗰陣扣除重複計算，條件概率同乘法漏斗層層穿透序列化轉化路徑。"
+- id: reasoning
+  visual: two_column
+  seconds: 48
+  kicker: "Updating and Valuation"
+  kicker_en: "Updating and Valuation"
+  kicker_zh: "更新与定价"
+  kicker_zh_hk: "更新與定價"
+  title_en: "Revising beliefs and balancing risk"
+  title_zh: "破除执念动态更新，兼顾波动从容博弈"
+  title_zh_hk: "破除執念動態更新，兼顧波動從容博弈"
+  left_en: "Inversion: Total Probability & Bayes"
+  left_zh: "逆转推断：全概率统揽与贝叶斯归因"
+  left_zh_hk: "逆轉推斷：全概率統攬與貝葉斯歸因"
+  right_en: "Valuation: Expected Value & Volatility"
+  right_zh: "理性定价：期望货币价值与方差约束"
+  right_zh_hk: "理性定價：預期貨幣價值與方差約束"
+  s1_en: "Tier Three updates beliefs: Probability Trees map cascading supply bottlenecks, Total Probability stitches supplier risks into enterprise totals, and Bayes' Rule inverts evidence without succumbing to the base rate trap."
+  s1_zh: "第三层动态更新信念：概率树图拆解供应链瀑布瓶颈，全概率公式缝合多元供货风险，而贝叶斯法则逆转诊断证据，抵御基准率认知谬误。"
+  s1_zh_hk: "第三層動態更新信念：概率樹圖拆解供應鏈瀑布瓶頸，全概率公式縫合多元供貨風險，而貝葉斯法則逆轉診斷證據，抵禦基準率認知謬誤。"
+  s2_en: "Finally, Tier Four values the gamble: Expected Monetary Value identifies the long-run mathematical edge, while Variance and Standard Deviation measure dispersion, which managers compare with liquidity and risk tolerance."
+  s2_zh: "最后，第四层完成商业下注定价：预期货币价值锁定长线数学胜率，而方差与标准差衡量离散程度，管理者再把它与流动性和风险承受力比较。"
+  s2_zh_hk: "最後，第四層完成商業下注定價：預期貨幣價值鎖定長線數學勝率，而方差同標準差衡量離散程度，管理者再將佢同流動性及風險承受力比較。"
+  s3_en: "Together, these tools make assumptions, probabilities, and financial trade-offs explicit; they improve decision discipline without eliminating uncertainty."
+  s3_zh: "这些工具把假设、概率和财务权衡明确呈现出来，在不消除不确定性的前提下提升决策纪律。"
+  s3_zh_hk: "呢啲工具將假設、概率同財務權衡清楚呈現出嚟，喺唔消除不確定性嘅前提之下提升決策紀律。"
+- id: takeaway
+  visual: takeaway
+  seconds: 40
+  kicker: "Executive Rule"
+  kicker_en: "Executive Rule"
+  kicker_zh: "高管守则"
+  kicker_zh_hk: "高管守則"
+  title_en: "Optimize the process, balance the gamble"
+  title_zh: "掌控理性决策过程，平衡胜率与生存底线"
+  title_zh_hk: "掌控理性決策過程，平衡勝率與生存底線"
+  q1_en: "How should an executive lead under uncertainty?"
+  q1_zh: "领导者在面对不确定性时应如何科学决断？"
+  q1_zh_hk: "領導者喺面對不確定性嗰陣應點樣科學決斷？"
+  q2_en: "What comes next in the business modeling journey?"
+  q2_zh: "商业建模征程的下一步我们将走向何方？"
+  q2_zh_hk: "商業建模征程嘅下一步我哋將走向邊度？"
+  s1_en: "Do not judge a decision only by its realized outcome. Review whether the events, assumptions, probabilities, alternatives, and consequences were assessed with the information available at the time."
+  s1_zh: "不要只凭最终结果评价决策。应复核当时是否根据可得信息评估了事件、假设、概率、备选方案和后果。"
+  s1_zh_hk: "唔好淨係憑最終結果評價決策。應該覆核當時有冇根據可得資料評估事件、假設、概率、備選方案同後果。"
+  s2_en: "Compare expected value with variance or standard deviation, then test whether adverse outcomes fit the organization’s liquidity, controls, and risk tolerance."
+  s2_zh: "把期望值与方差或标准差一并比较，再检验不利结果是否符合组织的流动性、控制措施和风险承受力。"
+  s2_zh_hk: "將期望值同方差或者標準差一齊比較，再檢驗不利結果係咪符合組織嘅流動性、控制措施同風險承受力。"
+  s3_en: "Use the dashboard in sequence: define the sample space, model combinations or paths, update beliefs when evidence arrives, and compare expected value with dispersion before acting."
+  s3_zh: "按顺序使用仪表盘：定义样本空间，建立组合或路径模型，在新证据出现时更新信念，并在行动前比较期望值与离散程度。"
+  s3_zh_hk: "按次序使用儀表板：定義樣本空間，建立組合或者路徑模型，喺新證據出現嗰陣更新信念，並喺行動之前比較期望值同離散程度。"

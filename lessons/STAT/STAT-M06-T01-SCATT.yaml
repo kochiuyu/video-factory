@@ -1,0 +1,196 @@
+id: STAT-M06-T01-SCATT
+course: STAT-M06
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Scatter Plots and Empirical Association: Seeing the Data Before Modeling'
+title_zh: 散点图与经验关联：建模前先看数据
+title_zh_hk: 散點圖同經驗關聯：建模之前先睇數據
+objective_en: Construct and interpret a bivariate scatter plot, identify direction, form, strength, clusters, and influential
+  observations, calculate the sample centroid, and distinguish empirical association from prediction or causation.
+objective_zh: 构建并解读双变量散点图，识别方向、形态、强度、组群与强影响观测，计算样本质心，并区分经验关联、预测与因果关系。
+objective_zh_hk: 構建並解讀雙變量散點圖，識別方向、形態、強度、群組同強影響觀測，計算樣本質心，並區分經驗關聯、預測同因果關係。
+glossary:
+- en: Scatter Plot
+  zh: 散点图
+  zh_hk: 散點圖
+  lock: true
+- en: Bivariate Observation
+  zh: 双变量观测值
+  zh_hk: 雙變量觀測值
+  lock: true
+- en: Linear Association
+  zh: 线性关联
+  zh_hk: 線性關聯
+  lock: true
+- en: Centroid
+  zh: 质心
+  zh_hk: 質心
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: In a scatter plot with store-day pedestrian traffic on X and store-day cup sales on Y, what does one point
+    represent?
+  question_zh: 将行人客流量置于横轴、咖啡杯数置于纵轴时，散点图上的每一个单独数据点代表什么？
+  question_zh_hk: 將行人客流量放喺橫軸、咖啡銷量杯數放喺縱軸嗰陣，散點圖上面嘅每一個單獨數據點代表啲咩？
+  options_en:
+  - 'A: The network-wide daily average of foot traffic and sales'
+  - 'B: One store-day bivariate observation pairing its traffic count with its cup-sales count'
+  - 'C: The theoretical maximum sales capacity achievable by any branch'
+  - 'D: The marginal profit gained from serving one additional pedestrian customer'
+  options_zh:
+  - 'A: 全网络客流量与销售额的单日总体均值'
+  - 'B: 记录特定门店在特定营业日客流量与杯数的一组双变量观测值'
+  - 'C: 任意分店在理论上所能达到的最高销售产能'
+  - 'D: 每服务一位额外行人顾客所带来的边际利润'
+  options_zh_hk:
+  - 'A: 全線門市客流量同銷售額嘅單日總體平均值'
+  - 'B: 記錄特定分店喺特定營業日客流量同杯數嘅一組雙變量觀測值'
+  - 'C: 任何分店喺理論上可以達到嘅最高銷量上限'
+  - 'D: 每服務一位額外過路顧客所帶來嘅邊際利潤'
+  answer: B
+  explanation_en: Each point must represent one common observational unit measured on both variables. Here that unit is a
+    store-day.
+  explanation_zh: 散点图映射的是配对的二元数据 (X_i, Y_i)。在零售计量中，每一个点均代表一个具体的经验观测单元——在此即特定门店在特定日期的运营记录。
+  explanation_zh_hk: 散點圖投射嘅係成對嘅二元數據 (X_i, Y_i)。喺零售計量學入面，每一個點都代表一個具體嘅營運觀測單元——即係指定分店喺特定日子嘅營運紀錄。
+- id: Q2
+  type: multiple_choice
+  question_en: For assumed points (310, 310) and (420, 420), what is the sample centroid?
+  question_zh: Metro Coffee 分析两家街边店：旺角店记录为（310人次客流，310杯销量），湾仔店为（420人次客流，420杯销量）。该双变量样本的质心坐标 (X_bar, Y_bar) 是多少？
+  question_zh_hk: Metro Coffee 分析兩間街舖：旺角分店紀錄係（310人次客流，310杯銷量），灣仔分店係（420人次客流，420杯銷量）。呢個雙變量樣本嘅質心坐標 (X_bar, Y_bar) 係幾多？
+  options_en:
+  - 'A: (310, 310)'
+  - 'B: (365, 365)'
+  - 'C: (420, 420)'
+  - 'D: (730, 730)'
+  options_zh:
+  - 'A: (310, 310)'
+  - 'B: (365, 365)'
+  - 'C: (420, 420)'
+  - 'D: (730, 730)'
+  options_zh_hk:
+  - 'A: (310, 310)'
+  - 'B: (365, 365)'
+  - 'C: (420, 420)'
+  - 'D: (730, 730)'
+  answer: B
+  explanation_en: 'Average each coordinate separately: X-bar = 365 and Y-bar = 365, so the centroid is (365, 365).'
+  explanation_zh: 样本质心定义为算术平均值点对 (X_bar, Y_bar)。X 均值为 (310 + 420) / 2 = 365；Y 均值为 (310 + 420) / 2 = 365。因此样本质心为 (365, 365)。
+  explanation_zh_hk: 樣本質心定義為算術平均值坐標對 (X_bar, Y_bar)。X 軸平均值係 (310 + 420) / 2 = 365；Y 軸平均值係 (310 + 420) / 2 = 365。因此樣本質心正正坐落喺
+    (365, 365)。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  title_en: What does the traffic-sales pattern actually show?
+  title_zh: 客流与销量的图形到底说明什么？
+  title_zh_hk: 人流同銷量嘅圖形到底說明咩？
+  en: 'Metro Coffee is evaluating an assumed set of store-day observations before using pedestrian traffic to forecast cup
+    sales. Each point pairs one store-day traffic count with its sales count. The scatter plot is the first audit: it can
+    reveal direction, curvature, clusters, and unusual observations, but it cannot by itself prove that traffic causes sales
+    or that a lease will be profitable.'
+  zh: 都市咖啡正在评估一组假设的门店日观测，准备在用行人客流预测杯数销量前先检查数据。每个点把同一门店日的客流量与销量配成一对。散点图是第一道审计：它能揭示方向、曲线形态、组群与异常观测，但本身不能证明客流导致销量，也不能证明租约必然盈利。
+  zh_hk: 都市咖啡正評估一組假設嘅門市日觀測，準備喺用行人人流預測杯數銷量之前先檢查數據。每個點將同一門市日嘅人流同銷量配成一對。散點圖係第一道審計：佢可以揭示方向、曲線形態、群組同異常觀測，但本身唔可以證明人流導致銷量，亦唔可以證明租約一定有利潤。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: 'Observation i: (X_i, Y_i); centroid = (X-bar, Y-bar)'
+  formula_zh: 观测 i：(X_i, Y_i)；样本质心 = (X-bar, Y-bar)
+  formula_zh_hk: 觀測 i：(X_i, Y_i)；樣本質心 = (X-bar, Y-bar)
+  formula_tex: (X_i,Y_i),\qquad (\bar X,\bar Y)=\left(\frac{1}{n}\sum_i X_i,\frac{1}{n}\sum_i Y_i\right)
+  s1_en: A scatter plot displays paired quantitative observations. Put the explanatory or predictor variable X on the horizontal
+    axis and the response variable Y on the vertical axis. The observational unit must be explicit; here it is one store-day,
+    not one pedestrian and not a network average.
+  s1_zh: 散点图展示成对的定量观测。解释变量或预测变量 X 放在横轴，响应变量 Y 放在纵轴。必须明确观测单位；本例是一个门店日，而不是一名行人，也不是全网络平均值。
+  s1_zh_hk: 散點圖展示成對嘅定量觀測。解釋變量或者預測變量 X 放喺橫軸，響應變量 Y 放喺縱軸。必須明確觀測單位；本例係一個門市日，而唔係一名行人，亦唔係全線平均值。
+  s2_en: The centroid is the coordinate formed by the two sample means. It summarizes the cloud’s center but not its slope,
+    spread, shape, or causal structure. A fitted ordinary least-squares line with an intercept passes through the sample centroid,
+    but the centroid alone does not determine that line.
+  s2_zh: 质心由两个样本均值组成，用于概括散点云中心，但不能概括斜率、离散度、形态或因果结构。带截距的普通最小二乘拟合线会经过样本质心，但仅凭质心不能确定该直线。
+  s2_zh_hk: 質心由兩個樣本平均數組成，用嚟概括散點雲中心，但唔可以概括斜率、離散度、形態或者因果結構。帶截距嘅普通最小二乘擬合線會經過樣本質心，但單憑質心唔可以確定嗰條直線。
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  left_en: Direction and form
+  left_zh: 方向与形态
+  right_en: Spread, clusters, and influence
+  right_zh: 离散、组群与影响
+  s1_en: An upward pattern indicates positive empirical association; a downward pattern indicates negative association. A
+    curved pattern can still be systematic even when a straight line is inadequate. No visible pattern means the plot provides
+    little evidence of a stable bivariate form.
+  s1_zh: 向上图形表示正向经验关联，向下图形表示负向关联。曲线形态仍可能具有系统性，即使直线并不适合。若没有可见图形，散点图就很少提供稳定双变量形态的证据。
+  s1_zh_hk: 向上圖形表示正向經驗關聯，向下圖形表示負向關聯。曲線形態仍然可能具有系統性，即使直線並唔適合。如果冇可見圖形，散點圖就好少提供穩定雙變量形態嘅證據。
+  s2_en: Strength concerns how tightly observations follow the apparent form. Vertical spread at similar X values signals
+    unexplained variation. Distinct clusters may indicate store format, district, time period, or another omitted grouping
+    variable that should be investigated rather than silently pooled.
+  s2_zh: 强度涉及观测点围绕表面形态聚集得有多紧。在相近 X 值处出现较大纵向离散，表示仍有未解释波动。不同组群可能对应门店形态、地区、时段或其他遗漏分组变量，应进一步调查，而不是直接合并。
+  s2_zh_hk: 強度涉及觀測點圍繞表面形態聚集得有幾緊。喺相近 X 值嗰度出現較大縱向離散，表示仍然有未解釋波動。唔同群組可能對應門市形態、地區、時段或者其他遺漏分組變量，應該進一步調查，而唔係直接合併。
+  s3_en: An observation far from the main X range can have high leverage and may strongly affect a fitted line. An observation
+    with an unusual Y value is an outlier in the response direction. These ideas overlap but are not identical, so the record
+    should be verified and analyzed rather than automatically deleted.
+  s3_zh: 远离主要 X 范围的观测可能具有高杠杆，并强烈影响拟合线；Y 值异常的观测则是响应方向上的离群点。两者可能重叠但并不相同，因此应核实并分析记录，而不是自动删除。
+  s3_zh_hk: 遠離主要 X 範圍嘅觀測可能具有高槓桿，並強烈影響擬合線；Y 值異常嘅觀測就係響應方向上嘅離群點。兩者可能重疊但並唔相同，所以應該核實並分析記錄，而唔係自動刪除。
+  left_zh_hk: 方向同形態
+  right_zh_hk: 離散、群組同影響
+  title_en: Read direction and form before judging strength
+  title_zh: 先读方向与形态，再判断强度
+  title_zh_hk: 先睇方向同形態，再判斷強度
+- id: ledger
+  visual: steps
+  seconds: 38
+  step1_en: 'Plot two assumed store-days: (310, 310) and (420, 420)'
+  step1_zh: 绘制两个假设门店日：(310, 310) 与 (420, 420)
+  step2_en: Centroid = ((310 + 420)/2, (310 + 420)/2) = (365, 365)
+  step2_zh: 质心 = ((310 + 420)/2, (310 + 420)/2) = (365, 365)
+  step3_en: Add assumed point (4200, 4200); new centroid = (1643.3, 1643.3)
+  step3_zh: 加入假设点 (4200, 4200)；新质心 = (1643.3, 1643.3)
+  s1_en: For illustration, use two assumed store-day pairs measured in the same units. Their coordinates lie exactly on a
+    rising diagonal. With only two points, however, the plot cannot establish a stable population relationship or support
+    a reliable forecast.
+  s1_zh: 作为示例，使用两个以相同单位测量的假设门店日点对。它们恰好位于上升对角线上。但只有两个点，图形不能建立稳定总体关系，也不能支持可靠预测。
+  s1_zh_hk: 作為例子，使用兩個以相同單位量度嘅假設門市日點對。佢哋啱啱位於上升對角線上。但只有兩個點，圖形唔可以建立穩定總體關係，亦唔可以支持可靠預測。
+  s2_en: Averaging the X coordinates gives 365, and averaging the Y coordinates gives 365, so the centroid is (365, 365).
+    This calculation is descriptive and exact for the assumed two-point sample.
+  s2_zh: X 坐标平均为 365，Y 坐标平均也为 365，因此质心为 (365, 365)。该计算对假设的两点样本而言是描述性且精确的。
+  s2_zh_hk: X 坐標平均係 365，Y 坐標平均都係 365，所以質心係 (365, 365)。呢個計算對假設嘅兩點樣本而言係描述性而且精確嘅。
+  s3_en: Adding the assumed point (4200, 4200) moves each mean to 4930/3, approximately 1643.3. The large shift demonstrates
+    sensitivity of means to extreme values. It does not justify deleting the point; analysts should verify comparability and
+    report sensitivity with and without the unusual unit.
+  s3_zh: 加入假设点 (4200, 4200) 后，每个均值变为 4930/3，约 1643.3。巨大位移说明均值对极端值敏感，但并不证明应删除该点。分析人员应核实可比性，并报告包含与不包含异常单元的敏感性结果。
+  s3_zh_hk: 加入假設點 (4200, 4200) 之後，每個平均數變成 4930/3，約 1643.3。巨大位移說明平均數對極端值敏感，但並唔證明應該刪除嗰個點。分析人員應該核實可比性，並報告包含同唔包含異常單元嘅敏感性結果。
+  step1_zh_hk: 繪製兩個假設門市日：(310, 310) 同 (420, 420)
+  step2_zh_hk: 質心 = ((310 + 420)/2, (310 + 420)/2) = (365, 365)
+  step3_zh_hk: 加入假設點 (4200, 4200)；新質心 = (1643.3, 1643.3)
+  title_en: Calculate the center, then test sensitivity to an extreme point
+  title_zh: 计算中心，再检验极端点敏感性
+  title_zh_hk: 計算中心，再檢驗極端點敏感性
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  q1_en: What should a scatter-plot audit describe?
+  q1_zh: 散点图审计应描述什么？
+  q2_en: What can the plot not establish by itself?
+  q2_zh: 散点图本身不能证明什么？
+  s1_en: Describe the observational unit, axes, direction, form, strength, spread, clusters, missing regions, and unusual
+    observations. Check units and data provenance before fitting a regression model.
+  s1_zh: 应描述观测单位、坐标轴、方向、形态、强度、离散、组群、缺失区域与异常观测。在拟合回归模型前，应核实单位与数据来源。
+  s1_zh_hk: 應該描述觀測單位、坐標軸、方向、形態、強度、離散、群組、缺失區域同異常觀測。喺擬合回歸模型之前，應該核實單位同數據來源。
+  s2_en: A scatter plot can show empirical association, but it cannot by itself establish causation, rule out confounding,
+    guarantee prediction accuracy, or determine whether an investment is profitable.
+  s2_zh: 散点图可以显示经验关联，但本身不能证明因果、排除混杂、保证预测准确性，或判断投资是否盈利。
+  s2_zh_hk: 散點圖可以顯示經驗關聯，但本身唔可以證明因果、排除混雜、保證預測準確性，或者判斷投資係咪有利潤。
+  s3_en: In the assumed example, the two-point centroid is (365, 365), while adding the extreme point moves it to approximately
+    (1643.3, 1643.3). Report that sensitivity transparently and investigate the design before modeling.
+  s3_zh: 在假设示例中，两点质心为 (365, 365)，加入极端点后移至约 (1643.3, 1643.3)。应透明报告这种敏感性，并在建模前调查设计。
+  s3_zh_hk: 喺假設例子入面，兩點質心係 (365, 365)，加入極端點之後移到約 (1643.3, 1643.3)。應該透明報告呢種敏感性，並喺建模之前調查設計。
+  q1_zh_hk: 散點圖審計應該描述咩？
+  q2_zh_hk: 散點圖本身唔可以證明咩？
+  title_en: Plot first, describe carefully, and avoid causal overreach
+  title_zh: 先作图、谨慎描述，并避免因果越界
+  title_zh_hk: 先畫圖、審慎描述，並避免因果越界

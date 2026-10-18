@@ -1,0 +1,129 @@
+id: LAE-M04-CM
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 92
+title_en: Complements
+title_zh: 互补品
+title_zh_hk: 互補品
+objective_en: 'Treat vehicle, pad, energy, and slot as complements: any missing piece takes output to zero. Congestion only slows; a missing complement stops the product.'
+objective_zh: 把机器、垫子、能量和时段看成互补品：缺任何一件，产出就掉到零。拥挤只是变慢；缺互补品是停掉。
+objective_zh_hk: 將機器、墊、能量同時段看成互補品：缺任何一件，產出就跌到零。擠擁只係變慢；缺互補品係停掉。
+glossary:
+- en: complement
+  zh: 互补品
+  zh_hk: 互補品
+  lock: true
+- en: UTM
+  zh: 无人驾驶航空器交通管理
+  zh_hk: 無人駕駛航空器交通管理
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What happens if any one of vehicle, pad, energy, or slot is missing?
+  zh: 机器、垫子、能量、时段，缺了任何一件会怎样？
+  zh_hk: 機器、墊、能量、時段，缺咗任何一件會點？
+  answer_en: Output goes to zero. The product does not fly.
+  answer_zh: 产出掉到零。这趟飞不起来。
+  answer_zh_hk: 產出跌到零。呢轉飛唔起。
+- id: Q2
+  type: transfer
+  en: The Shenzhen roof has a drone and a slot, but the pad is full. Is that the same as a crowded band?
+  zh: 深圳屋顶上有无人机，也有时段，但垫子是满的。这和这一层变挤是一回事吗？
+  zh_hk: 深圳屋頂有無人機，亦都有時段，但墊係滿嘅。呢個同呢一層變擠係唔係同一件事？
+  answer_en: No. A missing pad stops the trip. A crowded band only slows the others.
+  answer_zh: 不是。缺垫子，这趟停掉。这一层变挤，只是让别人变慢。
+  answer_zh_hk: 唔係。缺墊，呢轉停掉。呢一層變擠，只係令其他人變慢。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Complements
+  title_zh: 互补品
+  title_zh_hk: 互補品
+  en: The slot has a name. A reservation alone cannot move a parcel. This short names the set. A trip from the Shenzhen roof to the Sha Tin locker needs all of them.
+  zh: 时段已经有名字。单凭一段预约，搬不走包裹。这条短片给这一整套起名。从深圳屋顶到沙田储物柜的一趟，四件都要在。
+  zh_hk: 時段已經有名。單憑一段預約，搬唔走包裹。呢條短片畀呢一套起名。由深圳屋頂到沙田儲物櫃嗰轉，四件都要喺度。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Complements
+  title_zh: 互补品
+  title_zh_hk: 互補品
+  formula: 'output = 0 if any piece is missing'
+  formula_en: 'output = 0 if any piece is missing'
+  formula_zh: 缺任何一件，产出 = 0
+  formula_zh_hk: 缺任何一件，產出 = 0
+  gloss_en: Vehicle, pad, energy, slot
+  gloss_zh: 机器、垫子、能量、时段
+  gloss_zh_hk: 機器、墊、能量、時段
+  s1_en: A complement is a piece the product cannot do without. Vehicle, pad, energy, and slot are complements for this trip.
+  s1_zh: 互补品是缺了就做不成的那一件。对这一趟来说，机器、垫子、能量和时段都是互补品。
+  s1_zh_hk: 互補品係缺咗就做唔成嗰一件。對呢一轉嚟講，機器、墊、能量同時段都係互補品。
+  s2_en: If any one is missing, output goes to zero. The parcel does not move. Do not add a fifth name.
+  s2_zh: 缺任何一件，产出就掉到零。包裹不动。不要再加第五个名字。
+  s2_zh_hk: 缺任何一件，產出就跌到零。包裹唔郁。唔好再加第五個名。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: Contrast
+  kicker_en: Contrast
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Slow versus stop
+  title_zh: 变慢，还是停掉
+  title_zh_hk: 變慢，定係停掉
+  left_en: Crowded band
+  left_zh: 这一层变挤
+  left_zh_hk: 呢一層變擠
+  right_en: A missing piece
+  right_zh: 缺了一件
+  right_zh_hk: 缺咗一件
+  s1_en: Congestion from the first sitting only slows the others. The flights are still in the band. They wait or bend. The trip can still finish.
+  s1_zh: 第一讲的拥挤，只是让别人变慢。班次还在这一层里。它们等，或绕。这趟仍可能走完。
+  s1_zh_hk: 第一講嘅擠擁，只係令其他人變慢。班次仲喺呢一層入面。佢哋等，或者繞。呢轉仍然可能行完。
+  s2_en: A missing complement stops the product. No pad, no energy, no vehicle, or no slot — output is zero.
+  s2_zh: 缺互补品，产出停掉。没有垫子、没有能量、没有机器、或没有时段——产出就是零。
+  s2_zh_hk: 缺互補品，產出停掉。冇墊、冇能量、冇機器、或者冇時段——產出就係零。
+  s3_en: Write slow on the left. Write stop on the right. Do not mix the two cards.
+  s3_zh: 左边写变慢。右边写停掉。不要把两张卡片写成一张。
+  s3_zh_hk: 左邊寫變慢。右邊寫停掉。唔好將兩張卡寫成一張。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: All four, or none
+  title_zh: 四件都在，否则没有
+  title_zh_hk: 四件都喺度，否則冇
+  q1_en: Name the four complements for this trip.
+  q1_zh: 这一趟的四件互补品是什么？
+  q1_zh_hk: 呢一轉嘅四件互補品係咩？
+  q2_en: How is a missing pad different from a crowded band?
+  q2_zh: 缺一块垫子，和这一层变挤，差在哪里？
+  q2_zh_hk: 缺一塊墊，同呢一層變擠，差喺邊？
+  s1_en: Vehicle, pad, energy, slot. Any missing piece takes output to zero.
+  s1_zh: 机器、垫子、能量、时段。缺任何一件，产出掉到零。
+  s1_zh_hk: 機器、墊、能量、時段。缺任何一件，產出跌到零。
+  s2_en: Congestion slows. A missing complement stops. Keep those two verbs apart.
+  s2_zh: 拥挤是变慢。缺互补品是停掉。这两个动词请分开写。
+  s2_zh_hk: 擠擁係變慢。缺互補品係停掉。呢兩個動詞請分開寫。
+  s3_en: A reserved slot is still only a path. Next sitting asks who pays for the trip on that path.
+  s3_zh: 占住的时段仍只是一条路径。下一讲问：谁为这条路径上的一趟付钱。
+  s3_zh_hk: 佔住嘅時段仍然只係一條路徑。下一講問：邊個為呢條路徑上嘅一轉畀錢。

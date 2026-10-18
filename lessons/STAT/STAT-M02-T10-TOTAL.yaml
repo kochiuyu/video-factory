@@ -1,0 +1,194 @@
+id: STAT-M02-T10-TOTAL
+course: statistics
+course_en: Business Probability Foundations
+course_zh: 商务概率基础
+course_zh_hk: 商務概率基礎
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: "Stitching the network together"
+title_zh: "全网缝合：全概率公式与风险汇总"
+title_zh_hk: "全網縫合：全概率公式與風險匯總"
+objective_en: "Define the Law of Total Probability as a weighted average across mutually exclusive and collectively exhaustive partitions, calculate network-wide defect rates across multiple regional bakery suppliers, and demonstrate how corporate headquarters aggregates operational risk."
+objective_zh: "将全概率公式定义为跨越互斥且完全穷尽分区的加权平均数，计算多家区域烘焙供应商的全网综合次品率，并展示企业总部如何完成营运风险的全局汇总。"
+objective_zh_hk: "將全概率公式定義為跨越互斥且完全窮盡分區嘅加權平均數，計算幾間區域烘焙供應商嘅全網綜合次品率，並展示企業總部點樣完成營運風險嘅全局匯總。"
+glossary:
+- en: "Law of Total Probability"
+  zh: "全概率公式"
+  zh_hk: "全概率公式"
+  lock: true
+- en: "partition"
+  zh: "划分/分区"
+  zh_hk: "劃分/分區"
+  lock: true
+- en: "weighted average"
+  zh: "加权平均"
+  zh_hk: "加權平均"
+  lock: true
+- en: "aggregate risk"
+  zh: "综合/总体风险"
+  zh_hk: "綜合/總體風險"
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: "What structural requirement must the operational categories (B1, B2, ..., Bk) satisfy for the Law of Total Probability to apply?"
+  question_zh: "要应用全概率公式，各业务分类（B1, B2, ..., Bk）在结构上必须满足什么前提条件？"
+  question_zh_hk: "要應用全概率公式，各業務分類（B1, B2, ..., Bk）喺結構上必須滿足咩前提條件？"
+  options_en:
+  - "A: They must form a valid partition: mutually exclusive (no overlap) and collectively exhaustive (sum to 1.0)."
+  - "B: Every supplier must produce an identical number of units each month."
+  - "C: All conditional defect probabilities must equal exactly 0.50."
+  - "D: The categories must be approved by the regional transport authority."
+  options_zh:
+  - "A: 它们必须构成合规的完备分区：彼此严格互斥（无重叠）且完全穷尽（概率总和为 1.0）。"
+  - "B: 每一个供应商每个月生产的商品件数必须完全相等。"
+  - "C: 所有供应商的条件次品率都必须严格等于 0.50。"
+  - "D: 所有业务分类必须事先获得区域交通管理局的审批批准。"
+  options_zh_hk:
+  - "A: 佢哋必須構成合規嘅完備分區：彼此嚴格互斥（冇重疊）兼且完全窮盡（概率總和為 1.0）。"
+  - "B: 每一個供應商每個月生產嘅商品件數必須完全相等。"
+  - "C: 所有供應商嘅條件次品率都必須嚴格等於 0.50。"
+  - "D: 所有業務分類必須事先獲得區域交通管理局嘅審批批准。"
+  answer: A
+  explanation_en: "The Law of Total Probability requires that the conditioning events form a partition of the sample space so that every transaction belongs to exactly one category without omission or double-counting."
+  explanation_zh: "全概率公式要求作为划分的前提事件必须构成样本空间的完备分区，确保每笔交易有且仅属于一个类别，既无遗漏也无重复计算。"
+  explanation_zh_hk: "全概率公式要求作為劃分嘅前提事件必須構成樣本空間嘅完備分區，確保每筆交易有且僅屬於一個類別，既冇遺漏亦都冇重複計算。"
+- id: Q2
+  type: multiple_choice
+  question_en: "Bakery X supplies 60% of croissants with a 2% defect rate, and Bakery Y supplies 40% with a 5% defect rate. What is the total probability that a randomly chosen croissant is defective?"
+  question_zh: "工坊 X 供应了全网 60% 的可颂，次品率为 2%；工坊 Y 供应了 40%，次品率为 5%。随机抽取一个可颂，它是次品的总概率是多少？"
+  question_zh_hk: "工坊 X 供應咗全網 60% 嘅牛角包，次品率為 2%；工坊 Y 供應咗 40%，次品率為 5%。隨機抽取一個牛角包，佢係次品嘅總概率係幾多？"
+  options_en:
+  - "A: 0.032"
+  - "B: 0.035"
+  - "C: 0.070"
+  - "D: 0.020"
+  options_zh:
+  - "A: 0.032"
+  - "B: 0.035"
+  - "C: 0.070"
+  - "D: 0.020"
+  options_zh_hk:
+  - "A: 0.032"
+  - "B: 0.035"
+  - "C: 0.070"
+  - "D: 0.020"
+  answer: A
+  explanation_en: "Using the Law of Total Probability: P(Defect) = (0.60 * 0.02) + (0.40 * 0.05) = 0.012 + 0.020 = 0.032 (3.2%)."
+  explanation_zh: "运用全概率公式：P(次品) = (0.60 × 0.02) + (0.40 × 0.05) = 0.012 + 0.020 = 0.032（即 3.2%）。"
+  explanation_zh_hk: "運用全概率公式：P(次品) = (0.60 × 0.02) + (0.40 × 0.05) = 0.012 + 0.020 = 0.032（即 3.2%）。"
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: "The Executive Puzzle"
+  kicker_en: "The Executive Puzzle"
+  kicker_zh: "高管困惑"
+  kicker_zh_hk: "高管困惑"
+  title_en: "What is our true network defect rate?"
+  title_zh: "全网总体的真实次品率究竟是多少？"
+  title_zh_hk: "全網總體嘅真實次品率究竟係幾多？"
+  en: "Headquarters audits pastry quality across fifty metro stores and uncovers a fragmented supply chain: three regional bakeries bake our croissants. Each bakery has a different production volume and a different defect record. How does the chief operating officer synthesize these scattered local records into one single, indisputable enterprise defect rate?"
+  zh: "总部对五十家市区门店的点心品质进行审计，发现了一个分散复杂的供应链：三家区域工坊为我们供应可颂。每家工坊的供货配额不同，质检品控记录也参差不齐。首席运营官究竟该如何把这些分散割裂的局部数据，融汇成全网统一步调的综合次品率？"
+  zh_hk: "總部對五十間市區門市嘅點心品質進行審計，發現咗一個分散複雜嘅供應鏈：三間區域工坊為我哋供應牛角包。每間工坊嘅供貨配額唔同，質檢品控記錄亦都參差不齊。首席營運官究竟應該點樣將呢啲分散割裂嘅局部數據，融匯成全網統一步調嘅綜合次品率？"
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: "What It Is"
+  kicker_en: "What It Is"
+  kicker_zh: "核心概念"
+  kicker_zh_hk: "核心概念"
+  title_en: "The Law of Total Probability"
+  title_zh: "全概率公式的逻辑内核"
+  title_zh_hk: "全概率公式嘅邏輯內核"
+  formula: "P(A) = Sum of [ P(Bi) * P(A|Bi) ]"
+  formula_zh: "P(A) = 各分区贡献累加之和 = ∑ [ P(Bi) × P(A|Bi) ]"
+  formula_zh_hk: "P(A) = 各分區貢獻累加之和 = ∑ [ P(Bi) × P(A|Bi) ]"
+  formula_tex: "P(A) = \\sum_{i=1}^{k} P(B_i) P(A \\mid B_i)"
+  s1_en: "The Law of Total Probability allows managers to calculate the overall probability of an event by breaking the world into separate, non-overlapping channels called partitions."
+  s1_zh: "全概率公式允许管理者通过将业务全集切分为互不重叠且完全穷尽的渠道（即划分或分区），来推导某一宏观事件的全局总体发生概率。"
+  s1_zh_hk: "全概率公式允許管理者透過將業務全集切分為互不重疊兼且完全窮盡嘅渠道（即劃分或者分區），嚟推導某一宏觀事件嘅全局總體發生概率。"
+  s2_en: "Think of it as a rigorous weighted average: the unconditional probability of event A is the sum of A occurring within each channel, weighted by the market share of that channel."
+  s2_zh: "把它理解为一种严谨的加权平均：事件 A 的无条件总体概率，等于 A 在每个渠道内的条件概率，乘以该渠道所占份额后的逐项累加。"
+  s2_zh_hk: "將佢理解為一種嚴謹嘅加權平均：事件 A 嘅無條件總體概率，等於 A 喺每個渠道內部嘅條件概率，乘以該渠道所佔份額之後嘅逐項累加。"
+- id: partition
+  visual: two_column
+  seconds: 36
+  kicker: "The Partition Principle"
+  kicker_en: "The Partition Principle"
+  kicker_zh: "完备分区准则"
+  kicker_zh_hk: "完備分區準則"
+  title_en: "Slicing the operational cake"
+  title_zh: "切分业务全景，不留任何死角"
+  title_zh_hk: "切分業務全景，唔留任何死角"
+  left_en: "Partitions (B1, B2, B3): MECE chunks"
+  left_zh: "完备分区：各渠道互斥穷尽，份额和为 1.0"
+  left_zh_hk: "完備分區：各渠道互斥窮盡，份額和為 1.0"
+  right_en: "Outcome (A): Thread running through all"
+  right_zh: "目标事件：穿透各分区切片的共性特征"
+  right_zh_hk: "目標事件：穿透各分區切片嘅共性特徵"
+  s1_en: "To use the formula correctly, the underlying channels B1 through Bk must slice the entire operational universe into clean, mutually exclusive, and collectively exhaustive slices."
+  s1_zh: "为了正确运用该公式，底层渠道 B1 到 Bk 必须将整个业务宇宙切割为清晰、互斥且完全穷尽的切片。"
+  s1_zh_hk: "為咗正確運用呢條公式，底層渠道 B1 到 Bk 必須將成個業務宇宙切割為清晰、互斥兼且完全窮盡嘅切片。"
+  s2_en: "Every single croissant delivered to our counters must come from Bakery One, Bakery Two, or Bakery Three—no overlaps and no unknown ghost kitchens."
+  s2_zh: "送达吧台的每一个可颂，必须且只能来自一号、二号或三号工坊——既不能跨厂重复归属，也不能来自不知名的幽灵作坊。"
+  s2_zh_hk: "送達吧台嘅每一個牛角包，必須兼且淨係可以嚟自一號、二號或者三號工坊——既唔可以跨廠重複歸屬，亦都唔可以嚟自唔知名嘅幽靈作坊。"
+  s3_en: "The defect event A cuts across every slice. We calculate the slice of defect risk from each supplier and stitch them together into the enterprise total."
+  s3_zh: "瑕疵事件 A 穿透了每一个切片。我们计算出每个供应商贡献的瑕疵切片大小，最终把它们严丝合缝地缝合为企业大盘总体。"
+  s3_zh_hk: "瑕疵事件 A 穿透咗每一個切片。我哋計算出每個供應商貢獻嘅瑕疵切片大細，最終將佢哋嚴絲合縫噉縫合為企業大盤總體。"
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: "The Ledger"
+  kicker_en: "The Ledger"
+  kicker_zh: "账目实核"
+  kicker_zh_hk: "賬目實核"
+  title_en: "Auditing 1,000 network croissants"
+  title_zh: "核算全网一千件可颂的瑕疵贡献"
+  title_zh_hk: "核算全網一千件牛角包嘅瑕疵貢獻"
+  step1_en: "Bakery 1: 50% volume * 2% defect = 0.010"
+  step1_zh: "工坊一：50% 份额 × 2% 次品率 = 0.010"
+  step1_zh_hk: "工坊一：50% 份額 × 2% 次品率 = 0.010"
+  step2_en: "Bakery 2: 30% volume * 4% defect = 0.012"
+  step2_zh: "工坊二：30% 份额 × 4% 次品率 = 0.012"
+  step2_zh_hk: "工坊二：30% 份額 × 4% 次品率 = 0.012"
+  step3_en: "Bakery 3: 20% volume * 5% defect = 0.010"
+  step3_zh: "工坊三：20% 份额 × 5% 次品率 = 0.010"
+  step3_zh_hk: "工坊三：20% 份額 × 5% 次品率 = 0.010"
+  s1_en: "Inspect our supply ledger for 1,000 croissants. Bakery One handles fifty percent of production with a two percent defect rate, contributing ten defective croissants."
+  s1_zh: "审查一千件可颂的采购台账。一号工坊承担 50% 供应，次品率为 2%，向全网输送了 10 个瑕疵品。"
+  s1_zh_hk: "審查一千件牛角包嘅採購台賬。一號工坊承擔 50% 供應，次品率為 2%，向全網輸送咗 10 個瑕疵品。"
+  s2_en: "Bakery Two supplies thirty percent with a four percent defect rate, contributing twelve defects. Bakery Three supplies twenty percent with a five percent defect rate, adding ten defects."
+  s2_zh: "二号工坊供应 30%，次品率为 4%，贡献了 12 个瑕疵品。三号工坊供应 20%，次品率为 5%，增加了 10 个瑕疵品。"
+  s2_zh_hk: "二號工坊供應 30%，次品率為 4%，貢獻咗 12 個瑕疵品。三號工坊供應 20%，次品率為 5%，增加咗 10 個瑕疵品。"
+  s3_en: "Sum across all three branches: zero point zero one zero plus zero point zero one two plus zero point zero one zero equals zero point zero three two. Our total network defect rate is exactly three point two percent."
+  s3_zh: "将三个分区的风险贡献相加：0.010 加 0.012 加 0.010 等于 0.032。全网总体的真实瑕疵率精确锁定在 3.2%。"
+  s3_zh_hk: "將三個分區嘅風險貢獻相加：0.010 加 0.012 加 0.010 等於 0.032。全網總體嘅真實瑕疵率精確鎖定喺 3.2%。"
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: "Decision Rule"
+  kicker_en: "Decision Rule"
+  kicker_zh: "商业法则"
+  kicker_zh_hk: "商業法則"
+  title_en: "Weight by volume to find true risk"
+  title_zh: "按业务份额加权，方得全局真实风险"
+  title_zh_hk: "按業務份額加權，先得全局真實風險"
+  q1_en: "Why is taking a simple average of supplier defect rates wrong?"
+  q1_zh: "为什么把各供应商的次品率直接求简单平均是严重的管理失误？"
+  q1_zh_hk: "點解將各供應商嘅次品率直接求簡單平均係嚴重嘅管理失誤？"
+  q2_en: "How does total probability empower executive control?"
+  q2_zh: "全概率公式如何赋能高管的统筹掌控？"
+  q2_zh_hk: "全概率公式點樣賦能高管嘅統籌掌控？"
+  s1_en: "Never take an unweighted average of supplier defect rates. Weight each conditional defect rate by that supplier's share of total volume, then add the contributions."
+  s1_zh: "切勿直接对各工坊的次品率求算术平均。应按各工坊在总供货量中的份额加权，再把各项风险贡献相加。"
+  s1_zh_hk: "千祈唔好直接對各工坊嘅次品率求算術平均。應該按各工坊喺總供貨量入面嘅份額加權，再將各項風險貢獻加埋。"
+  s2_en: "The Law of Total Probability gives executives a unified macro lens to evaluate complex, decentralized operating environments."
+  s2_zh: "全概率公式为管理者提供了一副宏观透视镜，能在高度分散的分布式营运环境中准确把握全局底牌。"
+  s2_zh_hk: "全概率公式為管理者提供咗一副宏觀透視鏡，可以喺高度分散嘅分佈式營運環境入面準確把握全局底牌。"
+  s3_en: "For the network audit, weight each bakery by its supply share: 0.010 plus 0.012 plus 0.010 equals 0.032, so the overall defect rate is 3.2 percent."
+  s3_zh: "这次全网审计应按供货份额加权：0.010 加 0.012 加 0.010 等于 0.032，因此总体次品率为 3.2%。"
+  s3_zh_hk: "今次全網審計應該按供貨份額加權：0.010 加 0.012 加 0.010 等於 0.032，所以總體次品率係 3.2%。"

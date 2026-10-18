@@ -1,0 +1,227 @@
+id: GBA-M02-CA
+course: gba
+course_en: Greater Bay Area
+course_zh: 粤港澳大湾区
+course_zh_hk: 粵港澳大灣區
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 146
+title_en: City Comparative Advantage
+title_zh: 城市比较优势
+title_zh_hk: 城市比較優勢
+objective_en: 'Open the production unit: assign a GBA task by lower opportunity cost across cities,
+  not by who is bigger.'
+objective_zh: 打开生产单元：按各城更低的机会成本分工，不按谁更大。
+objective_zh_hk: 打開生產單元：按各城更低的機會成本分工，不按誰更大。
+glossary:
+- en: comparative advantage
+  zh: 比较优势
+  zh_hk: 比較優勢
+  lock: true
+- en: opportunity cost
+  zh: 机会成本
+  zh_hk: 機會成本
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: City comparative advantage is defined by what?
+  zh: 城市比较优势由什么定义？
+  zh_hk: 城市比較優勢由什麼定義？
+  answer_en: Lower opportunity cost for that task, not larger size.
+  answer_zh: 该任务上更低的机会成本，而不是更大的体量。
+  answer_zh_hk: 該任務上更低的機會成本，而不是更大的體量。
+- id: Q2
+  type: transfer
+  en: A bank can put a back office in Hong Kong or Dongguan. How should it choose?
+  zh: 银行可以把后台放在香港或东莞。它该如何选择？
+  zh_hk: 銀行可以把後台放在香港或東莞。它該如何選擇？
+  answer_en: Compare what each city gives up. Put the back office where that hidden cost is lower.
+  answer_zh: 比较两座城市各自放弃什么。把后台放在隐藏成本更低的地方。
+  answer_zh_hk: 比較兩座城市各自放棄什麼。把後台放在隱藏成本更低的地方。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: City Comparative Advantage
+  title_zh: 城市比较优势
+  title_zh_hk: 城市比較優勢
+  en: Last sitting mapped who can move. This sitting maps who should do the work. A larger city is
+    not the right place for every task. Ask which city gives up less to do it.
+  zh: 上一单元画了谁过得去。这一单元画谁该干活。更大的城市不是每件事的正确地点。问哪座城做这件事放弃得更少。
+  zh_hk: 上一單元畫了誰過得去。這一單元畫誰該幹活。更大的城市不是每件事的正確地點。問哪座城做這件事放棄得更少。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Lower hidden cost
+  title_zh: 更低的隐藏成本
+  title_zh_hk: 更低的隱藏成本
+  formula: CA = lower opportunity cost in that city
+  formula_en: CA = lower opportunity cost in that city
+  formula_zh: 比较优势 = 该城市机会成本更低
+  formula_zh_hk: 比較優勢 = 該城市機會成本更低
+  gloss_en: Size is not the same as a low hidden cost.
+  gloss_zh: 体量不等于隐藏成本低。
+  gloss_zh_hk: 體量不等於隱藏成本低。
+  en: A city has a comparative advantage in a task when its opportunity cost of doing that task is
+    lower than in the next city. The next-best use of its people and land is the hidden cost.
+  zh: 若一座城市做某事的机会成本低于下一座城市，它就有比较优势。人力和土地的次优用途，就是隐藏成本。
+  zh_hk: 若一座城市做某事的機會成本低於下一座城市，它就有比較優勢。人力和土地的次優用途，就是隱藏成本。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Listing versus assembly
+  title_zh: 上市与组装
+  title_zh_hk: 上市與組裝
+  left_en: Hong Kong listing desk
+  left_zh: 香港的上市团队
+  left_zh_hk: 香港的上市團隊
+  right_en: Pearl River factory floor
+  right_zh: 珠三角的车间
+  right_zh_hk: 珠三角的車間
+  en: A firm can list in Hong Kong and assemble in a Guangdong factory. Hong Kong’s next-best use
+    of that floor space is not a production line. The factory’s next-best use is not a listing desk.
+    Split the tasks.
+  zh: 企业可以在香港上市，在广东工厂组装。香港那块空间的次优用途不是生产线。工厂的次优用途也不是上市团队。把任务拆开。
+  zh_hk: 企業可以在香港上市，在廣東工廠組裝。香港那塊空間的次優用途不是生產線。工廠的次優用途也不是上市團隊。把任務拆開。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: City by task
+  title_zh: 按任务看城市
+  title_zh_hk: 按任務看城市
+  formula: CA = lower opportunity cost in that city
+  formula_en: CA = lower opportunity cost in that city
+  formula_zh: 比较优势 = 该城市机会成本更低
+  formula_zh_hk: 比較優勢 = 該城市機會成本更低
+  gloss_en: Not “which city is best.”
+  gloss_zh: 不是「哪座城市最好」。
+  gloss_zh_hk: 不是「哪座城市最好」。
+  en: A city has comparative advantage in a task when it gives up less of other work to do that task.
+    Rank tasks, not skylines.
+  zh: 一座城市在某任务上有比较优势，是因为它做这件事时少放弃其他工作。给任务排序，不要给天际线排序。
+  zh_hk: 一座城市在某任務上有比較優勢，是因為它做這件事時少放棄其他工作。給任務排序，不要給天際線排序。
+- id: slices
+  visual: three_column
+  seconds: 16
+  kicker: Three parts
+  kicker_en: Three parts
+  kicker_zh: 三部分
+  kicker_zh_hk: 三部分
+  title_en: A typical split
+  title_zh: 一种常见切开
+  title_zh_hk: 一種常見切開
+  col1_en: Finance desk
+  col1_zh: 金融台
+  col1_zh_hk: 金融臺
+  col2_en: Factory floor
+  col2_zh: 工厂车间
+  col2_zh_hk: 工廠車間
+  col3_en: Port and yard
+  col3_zh: 港口堆场
+  col3_zh_hk: 港口堆場
+  en: One city may run the desk, another the floor, a third the yard. That split is comparative advantage
+    if each slice is cheaper there in opportunity-cost terms.
+  zh: 一座城市可能管台面，另一座管车间，第三座管堆场。若每一片在当地的机会成本更低，这种切开就是比较优势。
+  zh_hk: 一座城市可能管檯面，另一座管車間，第三座管堆場。若每一片在當地的機會成本更低，這種切開就是比較優勢。
+- id: ib
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A listing team
+  title_zh: 一个上市小组
+  title_zh_hk: 一個上市小組
+  setup_en: Legal work in one city
+  setup_zh: 法律工作在一座城市
+  setup_zh_hk: 法律工作在一座城市
+  result_en: Plant tour in another
+  result_zh: 厂房考察在另一座
+  result_zh_hk: 廠房考察在另一座
+  en: The prospectus is drafted where the rule book is thick. The plant tour happens where the machines
+    are. Both cities can win the same deal by taking different slices.
+  zh: 招股书在规则更厚的地方起草。考察在机器所在的地方进行。两座城市可以靠不同切片赢同一单。
+  zh_hk: 招股書在規則更厚的地方起草。考察在機器所在的地方進行。兩座城市可以靠不同切片贏同一單。
+- id: policy
+  visual: two_column
+  seconds: 16
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Do not clone the skyline
+  title_zh: 不要复制天际线
+  title_zh_hk: 不要複製天際線
+  left_en: Copying every sector
+  left_zh: 复制每个行业
+  left_zh_hk: 複製每個行業
+  right_en: Deepening one slice
+  right_zh: 加厚一个切片
+  right_zh_hk: 加厚一個切片
+  en: A city that tries to host every slice pays a high opportunity cost. Deepening the slice it already
+    does cheaply is the quieter strategy.
+  zh: 想承接每一片的城市，机会成本很高。加厚自己已经做得便宜的那一片，是更安静的策略。
+  zh_hk: 想承接每一片的城市，機會成本很高。加厚自己已經做得便宜的那一片，是更安靜的策略。
+- id: ask
+  visual: steps
+  seconds: 18
+  kicker: Steps
+  kicker_en: Steps
+  kicker_zh: 步骤
+  kicker_zh_hk: 步驟
+  title_en: Three questions
+  title_zh: 三个问题
+  title_zh_hk: 三個問題
+  step1_en: What does this city already do?
+  step1_zh: 这座城市已经在做什么？
+  step1_zh_hk: 這座城市已經在做什麼？
+  step2_en: What must it give up to add a task?
+  step2_zh: 加一项任务要放弃什么？
+  step2_zh_hk: 加一項任務要放棄什麼？
+  step3_en: Who does that other task better?
+  step3_zh: 谁更擅长被放弃的事？
+  step3_zh_hk: 誰更擅長被放棄的事？
+  en: List current work. Name the sacrifice of a new task. See which neighbour already does the sacrificed
+    work. That is the comparative-advantage worksheet.
+  zh: 列出当前工作。说出新任务的牺牲。看哪位邻居已经在做被牺牲的工作。那就是比较优势工作纸。
+  zh_hk: 列出當前工作。說出新任務的犧牲。看哪位鄰居已經在做被犧牲的工作。那就是比較優勢工作紙。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Do not copy every city
+  title_zh: 不要每座城市都做同样的事
+  title_zh_hk: 不要每座城市都做同樣的事
+  q1_en: What does this city give up to take the task?
+  q1_zh: 这座城市接下任务要放弃什么？
+  q1_zh_hk: 這座城市接下任務要放棄什麼？
+  q2_en: Is that cost lower than in the next city?
+  q2_zh: 这个成本是否低于下一座城市？
+  q2_zh_hk: 這個成本是否低於下一座城市？
+  en: Copying the same industry into every GBA city raises hidden costs. Assign the task where the
+    forgone alternative is smallest. Next we string those assigned steps into one product.
+  zh: 把同一产业复制进每座大湾区城市，会抬高隐性成本。把任务放在放弃得最少的地方。下一讲把这些分好的步骤串成一件产品。
+  zh_hk: 把同一產業複製進每座大灣區城市，會抬高隱性成本。把任務放在放棄得最少的地方。下一講把這些分好的步驟串成一件產品。

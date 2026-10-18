@@ -1,0 +1,165 @@
+id: STAT-M09-T04-EXPSM
+course: STAT-M09
+course_en: Business Time Series & Demand Forecasting
+course_zh: 商业时间序列与需求预测
+course_zh_hk: 商業時間序列與需求預測
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Exponential Smoothing: Weighting Recent Shifts in Milk Consumption'
+title_zh: 指数平滑法：为近期奶类消费变化赋予更高权重
+title_zh_hk: 指數平滑法：畀近期奶類消費變化更高權重
+objective_en: Formulate Simple Exponential Smoothing, interpret its error-correction and declining-weight structures, and select the smoothing parameter by balancing responsiveness and stability through forecast validation.
+objective_zh: 构建简单指数平滑模型，解释其误差修正与递减权重结构，并通过预测验证在响应速度与稳定性之间选择平滑参数。
+objective_zh_hk: 構建簡單指數平滑模型，解釋佢嘅誤差修正同遞減權重結構，並透過預測驗證喺反應速度同穩定性之間選擇平滑參數。
+glossary:
+  - en: Simple Exponential Smoothing (SES)
+    zh: 简单指数平滑（SES）
+    zh_hk: 簡單指數平滑（SES）
+    lock: true
+  - en: Smoothing Parameter (Alpha)
+    zh: 平滑参数（Alpha）
+    zh_hk: 平滑參數（Alpha）
+    lock: true
+  - en: Exponential Decay Weights
+    zh: 指数衰减权重
+    zh_hk: 指數衰減權重
+    lock: true
+  - en: Error-Correction Form
+    zh: 误差修正形式
+    zh_hk: 誤差修正形式
+    lock: true
+quiz:
+  - id: Q1
+    type: multiple_choice
+    question_en: 'Suppose the current forecast is 80 cartons, actual demand is 110 cartons, and Alpha = 0.40. What is the next SES forecast?'
+    question_zh: 假设当前预测为 80 箱，实际需求为 110 箱，Alpha = 0.40。下一期 SES 预测是多少？
+    question_zh_hk: 假設目前預測係 80 箱，實際需求係 110 箱，Alpha = 0.40。下一期 SES 預測係幾多？
+    options_en:
+      - 'A: 92 cartons'
+      - 'B: 110 cartons'
+      - 'C: 95 cartons'
+      - 'D: 80 cartons'
+    options_zh:
+      - A：92 箱
+      - B：110 箱
+      - C：95 箱
+      - D：80 箱
+    options_zh_hk:
+      - A：92 箱
+      - B：110 箱
+      - C：95 箱
+      - D：80 箱
+    answer: A
+    explanation_en: 'Using the Error-Correction Form, the update is 80 + 0.40 × (110 - 80) = 92 cartons.'
+    explanation_zh: 使用误差修正形式，更新值为 80 + 0.40 × (110 - 80) = 92 箱。
+    explanation_zh_hk: 使用誤差修正形式，更新值係 80 + 0.40 × (110 - 80) = 92 箱。
+  - id: Q2
+    type: multiple_choice
+    question_en: What is the usual effect of choosing a larger Alpha in SES?
+    question_zh: 在 SES 中选择较大的 Alpha，通常会产生什么影响？
+    question_zh_hk: 喺 SES 入面選擇較大嘅 Alpha，通常會有乜嘢影響？
+    options_en:
+      - 'A: Faster response to recent errors, with less smoothing'
+      - 'B: Every future forecast becomes zero'
+      - 'C: Trend and seasonality are automatically modeled'
+      - 'D: Forecast error is guaranteed to disappear'
+    options_zh:
+      - A：对近期误差响应更快，但平滑程度较低
+      - B：所有未来预测都会变为零
+      - C：趋势与季节性会被自动建模
+      - D：预测误差必定消失
+    options_zh_hk:
+      - A：對近期誤差反應更快，但平滑程度較低
+      - B：所有未來預測都會變成零
+      - C：趨勢同季節性會自動建模
+      - D：預測誤差一定會消失
+    answer: A
+    explanation_en: A larger Alpha places more weight on the latest observation and corrects a larger share of the newest error. It improves responsiveness but can transmit more short-run noise.
+    explanation_zh: 较大的 Alpha 会给最新观测更高权重，并修正更大比例的最新误差。响应会更快，但也可能传递更多短期噪声。
+    explanation_zh_hk: 較大嘅 Alpha 會畀最新觀測更高權重，並修正更大比例嘅最新誤差。反應會更快，但亦可能傳遞更多短期雜音。
+beats:
+  - id: hook
+    visual: title_card
+    seconds: 30
+    kicker_en: Oat-Milk Replenishment Puzzle
+    kicker_zh: 燕麦奶补货难题
+    kicker_zh_hk: 燕麥奶補貨難題
+    title_en: How Quickly Should a Forecast Learn from a Demand Jump?
+    title_zh: 需求突然上升时，预测应多快调整？
+    title_zh_hk: 需求突然上升嗰陣，預測應該幾快調整？
+    en: >-
+      Suppose Wan Chai's oat-milk forecast is 80 cartons, but actual demand reaches 110. An equal-weight average may respond slowly because older days receive the same weight as recent ones. Simple Exponential Smoothing offers a recursive update: correct part of the latest forecast error now, while retaining part of the previous forecast. The management choice is how much of that error to absorb in one step.
+    zh: >-
+      假设湾仔店的燕麦奶预测为 80 箱，实际需求却达到 110 箱。等权平均可能调整较慢，因为较早日期与近期日期的权重相同。简单指数平滑提供递归更新：立即修正一部分最新预测误差，同时保留一部分原预测。管理者要决定的是，每次更新应吸收多少误差。
+    zh_hk: >-
+      假設灣仔店嘅燕麥奶預測係 80 箱，實際需求就去到 110 箱。等權平均可能調整得較慢，因為較早日子同近期日子嘅權重一樣。簡單指數平滑提供遞歸更新：即時修正一部分最新預測誤差，同時保留一部分原有預測。管理者要決定嘅係，每次更新應該吸收幾多誤差。
+  - id: define
+    visual: definition_card
+    seconds: 34
+    formula: 'Forecast next = Alpha × Actual now + (1 - Alpha) × Forecast now'
+    formula_zh: 下一期预测 = Alpha × 本期实际值 + (1 - Alpha) × 本期预测值
+    formula_zh_hk: 下一期預測 = Alpha × 今期實際值 + (1 - Alpha) × 今期預測值
+    formula_tex: '\hat{Y}_{t+1}=\alpha Y_t+(1-\alpha)\hat{Y}_t=\hat{Y}_t+\alpha(Y_t-\hat{Y}_t),\quad 0\leq\alpha\leq1'
+    s1_en: Simple Exponential Smoothing (SES) combines the latest observation with the current forecast. The Smoothing Parameter (Alpha), between zero and one, determines the weight placed on the latest observation.
+    s1_zh: 简单指数平滑（SES）把最新观测与当前预测结合起来。平滑参数（Alpha）介于 0 与 1 之间，决定最新观测所占的权重。
+    s1_zh_hk: 簡單指數平滑（SES）將最新觀測同目前預測結合。平滑參數（Alpha）介乎 0 同 1 之間，決定最新觀測佔幾多權重。
+    s2_en: The equivalent Error-Correction Form starts from the current forecast and adds Alpha times the latest error. A positive error raises the next forecast; a negative error lowers it.
+    s2_zh: 等价的误差修正形式从当前预测出发，再加上 Alpha 乘以最新误差。正误差会提高下一期预测，负误差会降低下一期预测。
+    s2_zh_hk: 等價嘅誤差修正形式由目前預測出發，再加 Alpha 乘最新誤差。正誤差會提高下一期預測，負誤差就會降低下一期預測。
+  - id: mechanics
+    visual: two_column
+    seconds: 36
+    left_en: Declining Historical Weights
+    left_zh: 递减的历史权重
+    left_zh_hk: 遞減嘅歷史權重
+    right_en: Responsiveness vs Stability
+    right_zh: 响应速度与稳定性
+    right_zh_hk: 反應速度與穩定性
+    s1_en: Repeated substitution produces Exponential Decay Weights. Recent observations receive larger weights, while earlier observations receive geometrically smaller weights. The initialization still retains a residual weight, so the precise expansion depends on how SES was started.
+    s1_zh: 反复代入公式会产生指数衰减权重。近期观测获得较大权重，较早观测获得按几何比例缩小的权重。初始值仍保留剩余权重，因此精确展开式取决于 SES 的初始化方式。
+    s1_zh_hk: 反覆代入公式會產生指數衰減權重。近期觀測得到較大權重，較早觀測得到按幾何比例縮細嘅權重。初始值仍然保留剩餘權重，所以精確展開式取決於 SES 點樣初始化。
+    s2_en: A larger Alpha makes the forecast respond more strongly to the latest error, but it also passes more short-term variation into the forecast. A smaller Alpha changes more gradually and can take longer to reflect a genuine shift.
+    s2_zh: 较大的 Alpha 让预测更强烈地响应最新误差，但也会把更多短期波动传入预测。较小的 Alpha 更新更缓慢，可能需要更长时间才能反映真实变化。
+    s2_zh_hk: 較大嘅 Alpha 令預測更強烈噉回應最新誤差，但亦會將更多短期波動帶入預測。較細嘅 Alpha 更新得較慢，可能要更長時間先反映真實變化。
+    s3_en: SES is designed for a series whose underlying level is reasonably stable and has no explicit trend or seasonal pattern. If those structures remain in the data, a different model or prior adjustment is needed.
+    s3_zh: SES 适用于基础水平相对稳定、且没有显式趋势或季节模式的序列。如果数据中仍存在这些结构，就需要改用其他模型或先作调整。
+    s3_zh_hk: SES 適合基礎水平相對穩定，而且冇明顯趨勢或者季節模式嘅序列。如果數據仍然有呢啲結構，就要改用其他模型或者先作調整。
+  - id: example
+    visual: example
+    seconds: 36
+    setup_en: 'Assume: forecast = 80, actual = 110, Alpha = 0.40'
+    setup_zh: 假设：预测 = 80，实际 = 110，Alpha = 0.40
+    setup_zh_hk: 假設：預測 = 80，實際 = 110，Alpha = 0.40
+    result_en: 'Next forecast: 80 + 0.40 × 30 = 92 cartons'
+    result_zh: 下一期预测：80 + 0.40 × 30 = 92 箱
+    result_zh_hk: 下一期預測：80 + 0.40 × 30 = 92 箱
+    s1_en: For illustration, assume the current forecast is 80 cartons and actual demand is 110. The latest forecast error is 110 minus 80, or positive 30 cartons.
+    s1_zh: 为便于说明，假设当前预测为 80 箱，实际需求为 110 箱。最新预测误差是 110 减 80，即正 30 箱。
+    s1_zh_hk: 為咗方便說明，假設目前預測係 80 箱，實際需求係 110 箱。最新預測誤差係 110 減 80，即係正 30 箱。
+    s2_en: With Alpha equal to 0.40, SES absorbs 40 percent of that error. The correction is 12 cartons, so the next forecast is exactly 92 cartons under the stated update rule.
+    s2_zh: 当 Alpha 等于 0.40 时，SES 吸收该误差的 40%。修正量为 12 箱，因此按照给定更新规则，下一期预测正好是 92 箱。
+    s2_zh_hk: 當 Alpha 等於 0.40，SES 會吸收呢個誤差嘅 40%。修正量係 12 箱，所以按照指定更新規則，下一期預測正好係 92 箱。
+    s3_en: The forecast does not jump all the way to 110, and the calculation does not guarantee that 92 cartons is the correct replenishment quantity. Inventory, lead time, shelf life, service targets, and shortage and waste costs still matter.
+    s3_zh: 预测不会直接跳到 110 箱，而这个计算也不能保证 92 箱就是正确补货量。库存、提前期、保质期、服务目标，以及缺货和浪费成本仍需纳入决策。
+    s3_zh_hk: 預測唔會直接跳到 110 箱，而呢個計算亦唔保證 92 箱就係正確補貨量。庫存、提前期、保質期、服務目標，以及缺貨同浪費成本仍然要納入決策。
+  - id: takeaway
+    visual: takeaway
+    seconds: 32
+    q1_en: What Does SES Improve?
+    q1_zh: SES 改善了什么？
+    q1_zh_hk: SES 改善咗乜嘢？
+    q2_en: Decision Rule
+    q2_zh: 决策规则
+    q2_zh_hk: 決策規則
+    s1_en: SES updates a level forecast efficiently without storing a fixed rolling window. Its declining weights let recent observations matter more while older information fades gradually rather than disappearing abruptly.
+    s1_zh: SES 无需保存固定滚动窗口，也能高效更新水平预测。递减权重让近期观测更重要，而较早信息会逐渐淡化，而不是突然消失。
+    s1_zh_hk: SES 唔需要保留固定滾動窗口，都可以有效更新水平預測。遞減權重令近期觀測更重要，而較早信息會逐步淡化，唔係突然消失。
+    s2_en: Do not assume that a larger Alpha is always better. Compare candidate values using out-of-sample forecast errors at the relevant horizon, and check whether level-only SES matches the series structure.
+    s2_zh: 不要假设 Alpha 越大越好。应在相关预测周期上比较候选参数的样本外误差，并检查只建模水平的 SES 是否符合序列结构。
+    s2_zh_hk: 唔好假設 Alpha 越大越好。要喺相關預測周期比較候選參數嘅樣本外誤差，並檢查只建模水平嘅 SES 係咪符合序列結構。
+    s3_en: Use the SES forecast as one planning input. Choose Alpha through validation, monitor errors after deployment, and combine the forecast with operational constraints before making replenishment decisions.
+    s3_zh: 应把 SES 预测作为规划的一项输入。通过验证选择 Alpha，部署后持续监测误差，并在作出补货决策前结合运营约束。
+    s3_zh_hk: 應該將 SES 預測當成規劃嘅其中一項輸入。透過驗證選擇 Alpha，部署之後持續監察誤差，並喺作出補貨決策之前配合營運限制。

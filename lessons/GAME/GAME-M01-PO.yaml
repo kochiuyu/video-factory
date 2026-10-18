@@ -1,0 +1,162 @@
+id: GAME-M01-PO
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 136
+title_en: The payoff table
+title_zh: 报酬表
+title_zh_hk: 報酬表
+objective_en: Name the payoff table. Read a cell. First number is A. A row is one strategy for A.
+objective_zh: 点出报酬表。读一格。头一个数字是甲。一行是甲的一个策略。
+objective_zh_hk: 點出報酬表。讀一格。第一個數字係甲。一行係甲嘅一個策略。
+glossary:
+- en: payoff table
+  zh: 报酬表
+  zh_hk: 報酬表
+  lock: true
+- en: payoff
+  zh: 报酬
+  zh_hk: 報酬
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: In the cell 0 then 5, who gets 5?
+  zh: 格子里先 0 后 5，谁拿到 5？
+  zh_hk: 格仔入面先 0 後 5，邊個攞到 5？
+  answer_en: Cart B. The first number is always A. Those two numbers are the payoffs.
+  answer_zh: 乙车。头一个数字永远是甲。这两个数字就是报酬。
+  answer_zh_hk: 乙車。第一個數字永遠係甲。呢兩個數字就係報酬。
+- id: Q2
+  type: transfer
+  en: Both post Low. Why is the cell 1 and 1, not 5 and 5?
+  zh: 两车都卖低价。为什么是 1 和 1，不是 5 和 5？
+  zh_hk: 兩架都賣平。點解係 1 同 1，唔係 5 同 5？
+  answer_en: They split a thin margin. Five appears only if the other cart stays High.
+  answer_zh: 他们在分很薄的利润。那个五只有对面仍卖高价才会出现。
+  answer_zh_hk: 佢哋喺分好薄嘅利潤。嗰個五要對面仲賣貴先會出現。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Put the morning on one page
+  title_zh: 把早晨放进一页
+  title_zh_hk: 將朝早放入一頁
+  en: We know the players, and we know the strategies are High or Low. Now put every pair of prices on one page. That page is the payoff table. Each cell is what A and B take home that hour.
+  zh: 参与人我们知道了。策略是高价或低价，我们也知道了。现在把每一对价格放进一页。这一页就是报酬表。每一格是那个小时甲和乙带走的钱。
+  zh_hk: 參與人我哋知。策略係貴定平，我哋都知。而家將每一對價放入一頁。呢一頁就係報酬表。每一格係嗰個鐘甲同乙袋走嘅錢。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: How to read the payoff table
+  title_zh: 报酬表怎么读
+  title_zh_hk: 報酬表點讀
+  formula: A is the row. B is the column. First number is A.
+  formula_en: A is the row. B is the column. First number is A.
+  formula_zh: 甲是行。乙是列。头一个数字是甲。
+  formula_zh_hk: 甲係行。乙係列。第一個數字係甲。
+  gloss_en: One busy hour in every cell.
+  gloss_zh: 每格都用一个高峰小时。
+  gloss_zh_hk: 每格都用一個高峰小時。
+  en: Here is the idea. Cart A is the row. Cart B is the column. The first number is always A. A row is one strategy for A against both of B's boards. Those pairs are the payoffs. The whole grid is the payoff table.
+  zh: 核心就这一句。甲车是行。乙车是列。头一个数字永远是甲。一行是甲的一个策略，对着乙的两块牌子。这些数字对就是报酬。整张格子就是报酬表。
+  zh_hk: 核心就呢一句。甲車係行。乙車係列。第一個數字永遠係甲。一行係甲嘅一個策略，對住乙兩塊牌。呢啲數字對就係報酬。成張格仔就係報酬表。
+- id: matrix
+  visual: payoff_matrix
+  seconds: 40
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: The payoff table
+  title_zh: 报酬表
+  title_zh_hk: 報酬表
+  row_player_en: Cart A
+  row_player_zh: 甲车
+  row_player_zh_hk: 甲車
+  col_player_en: Cart B
+  col_player_zh: 乙车
+  col_player_zh_hk: 乙車
+  row1_en: High
+  row1_zh: 高价
+  row1_zh_hk: 貴
+  row2_en: Low
+  row2_zh: 低价
+  row2_zh_hk: 平
+  col1_en: High
+  col1_zh: 高价
+  col1_zh_hk: 貴
+  col2_en: Low
+  col2_zh: 低价
+  col2_zh_hk: 平
+  c11: "(3, 3)"
+  c12: "(0, 5)"
+  c21: "(5, 0)"
+  c22: "(1, 1)"
+  highlight: c12
+  highlight_s3: c11
+  highlight_s4: c12
+  highlight_s5: c21
+  note_en: First number is A. Second is B.
+  note_zh: 头一个数字是甲。第二个是乙。
+  note_zh_hk: 第一個數字係甲。第二個係乙。
+  s1_en: Both stay High. Demand splits. Each takes home three. That cell is (3, 3).
+  s1_zh: 都卖高价。客流对半。各带走三。这一格是 (3, 3)。
+  s1_zh_hk: 都賣貴。客流對半。各袋走三。呢一格係 (3, 3)。
+  s2_en: A stays High. B cuts Low. The street walks to B. The cell is (0, 5).
+  s2_zh: 甲仍卖高价。乙改低价。客人走向乙。这一格是 (0, 5)。
+  s2_zh_hk: 甲仲賣貴。乙改賣平。客人行去乙。呢一格係 (0, 5)。
+  s3_en: Flip it. A cuts and B holds. A takes five. B takes zero. The cell is (5, 0).
+  s3_zh: 反过来。甲降、乙守。甲带走五。乙带走零。这一格是 (5, 0)。
+  s3_zh_hk: 掉轉。甲減、乙守。甲袋走五。乙袋走零。呢一格係 (5, 0)。
+- id: example
+  visual: example
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Both Low is one and one
+  title_zh: 都卖低价是一和一
+  title_zh_hk: 都賣平係一同一
+  setup_en: Both carts cut to Low.
+  setup_zh: 两车都改卖低价。
+  setup_zh_hk: 兩架都改賣平。
+  result_en: Read one and one. Not five and five.
+  result_zh: 读一和一。不要读五和五。
+  result_zh_hk: 讀一同一。唔好讀五同五。
+  en: Now both carts cut, because neither wants to be the expensive board. Read one and one. Not five and five. Five only appears if the other cart is still selling High, and that morning is gone.
+  zh: 现在两车都降了，谁也不想当贵的那块牌子。读一和一。不要读五和五。那个五只有对面还卖高价才会出现，而那个早晨已经没了。
+  zh_hk: 而家兩架都減咗，邊個都唔想做貴嗰塊牌。讀一同一。唔好讀五同五。嗰個五要對面仲賣貴先會出現，而嗰個朝早已經冇咗。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Keep this page
+  title_zh: 把这一页留下
+  title_zh_hk: 將呢一頁留低
+  q1_en: This grid is the payoff table.
+  q1_zh: 这张格子就是报酬表。
+  q1_zh_hk: 呢張格仔就係報酬表。
+  q2_en: First number is A. A row is one strategy for A.
+  q2_zh: 头一个数字是甲。一行是甲的一个策略。
+  q2_zh_hk: 第一個數字係甲。一行係甲嘅一個策略。
+  en: Keep this page. It is the payoff table. If you can read every cell, the morning is on paper. Next we close on this same page. Nobody has picked a cell yet.
+  zh: 把这一页留下。它就是报酬表。每格都能读，这个早晨就写在纸上了。接下来用同一页收住。还没有人选出一格。
+  zh_hk: 將呢一頁留低。佢就係報酬表。每格都讀得明，呢個朝早就寫咗喺紙度。跟住用同一頁收住。都未有人揀到一格。

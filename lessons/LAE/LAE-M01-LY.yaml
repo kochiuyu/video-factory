@@ -1,0 +1,129 @@
+id: LAE-M01-LY
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 92
+title_en: The layer
+title_zh: 这一层
+title_zh_hk: 呢一層
+objective_en: 'Open the band unit: low-altitude airspace is the room below about 1,000 metres, not the cruise band airliners use.'
+objective_zh: 打开空域单元：低空空域是大约一千米以下的空间，不是客机巡航用的那一层。
+objective_zh_hk: 打開空域單元：低空空域係大約一千米以下嘅空間，唔係客機巡航用嗰一層。
+glossary:
+- en: low-altitude economy
+  zh: 低空经济
+  zh_hk: 低空經濟
+  lock: true
+- en: low-altitude airspace
+  zh: 低空空域
+  zh_hk: 低空空域
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Low-altitude airspace is which band?
+  zh: 低空空域是哪一层？
+  zh_hk: 低空空域係邊一層？
+  answer_en: The room below about 1,000 metres, not the cruise band.
+  answer_zh: 大约一千米以下的空间，不是巡航那一层。
+  answer_zh_hk: 大約一千米以下嘅空間，唔係巡航嗰一層。
+- id: Q2
+  type: transfer
+  en: A line from a point in Shenzhen to a point in Sha Tin sits in which kind of room?
+  zh: 从深圳一点到沙田一点的这条线，占用的是哪种空间？
+  zh_hk: 由深圳一點到沙田一點呢條線，佔用嘅係邊一種空間？
+  answer_en: The column of air just above the ground, in the low-altitude band.
+  answer_zh: 紧贴地面的那一柱空气，落在低空这一层。
+  answer_zh_hk: 貼住地面嗰一柱空氣，落喺低空呢一層。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: The layer
+  title_zh: 这一层
+  title_zh_hk: 呢一層
+  en: This sitting starts with the air just above us. Draw a line from a point in Shenzhen to a point in Sha Tin. The question is not what will fly it. The question is which band of room that line uses.
+  zh: 这一讲从紧贴我们头顶的空气讲起。先画一条线，从深圳一点连到沙田一点。我们先不问飞的是什么，先问这条线到底占用了哪一层空间。
+  zh_hk: 呢一講由貼住我哋頭頂嘅空氣講起。先畫一條線，由深圳一點連到沙田一點。我哋先唔好問飛緊啲咩，先問呢條線到底佔用咗邊一層空間。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Low-altitude airspace
+  title_zh: 低空空域
+  title_zh_hk: 低空空域
+  formula: 'low-altitude band = room below about 1,000 m'
+  formula_en: 'low-altitude band = room below about 1,000 m'
+  formula_zh: 低空这一层 = 大约一千米以下的空间
+  formula_zh_hk: 低空呢一層 = 大約一千米以下嘅空間
+  gloss_en: Room above the ground, not weather
+  gloss_zh: 地面之上的空间，不是天气
+  gloss_zh_hk: 地面之上嘅空間，唔係天氣
+  s1_en: Low-altitude airspace is the room below about one thousand metres. It is usable space above the ground. It is not a weather forecast.
+  s1_zh: 低空空域是大约一千米以下的空间。它是紧贴地面之上的可用空间。它不是天气预报。
+  s1_zh_hk: 低空空域係大約一千米以下嘅空間。佢係貼住地面之上嘅可用空間。佢唔係天氣預報。
+  s2_en: The low-altitude economy uses that band as an input. Name the band first. What uses it comes next sitting.
+  s2_zh: 低空经济把这一层当作投入。先给这一层起名。什么东西用它，下一讲再讲。
+  s2_zh_hk: 低空經濟將呢一層當作投入。先畀呢一層起名。有咩嘢用佢，下一講再講。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: Contrast
+  kicker_en: Contrast
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Two bands
+  title_zh: 两层
+  title_zh_hk: 兩層
+  left_en: Low-altitude band
+  left_zh: 低空这一层
+  left_zh_hk: 低空呢一層
+  right_en: Cruise band
+  right_zh: 巡航那一层
+  right_zh_hk: 巡航嗰一層
+  s1_en: Airliners cruise much higher, thousands of metres up, on long hauls. That is a different band.
+  s1_zh: 客机巡航要高得多，在几千米上飞长途。那是另一层。
+  s1_zh_hk: 客機巡航要高得多，喺幾千米上面飛長途。嗰個係另一層。
+  s2_en: The left column is the air just above streets and roofs. A line from Shenzhen to Sha Tin in this course sits there.
+  s2_zh: 左栏是街道和屋顶之上的空气。本课里深圳到沙田的那条线，就落在这一层。
+  s2_zh_hk: 左欄係街道同屋頂之上嘅空氣。呢一課入面深圳到沙田嗰條線，就落喺呢一層。
+  s3_en: Do not mix the two bands. A seat on a long-haul flight is not a claim on the room above a campus roof.
+  s3_zh: 不要把两层混在一起。长途航班上的一个座位，不是对校园屋顶之上那一层空间的权利。
+  s3_zh_hk: 唔好將兩層撈埋一齊。長途航班上嘅一個座位，唔係對校園屋頂之上嗰層空間嘅權利。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Name the band
+  title_zh: 说出这一层
+  title_zh_hk: 講出呢一層
+  q1_en: How high is the low-altitude band?
+  q1_zh: 低空这一层大概有多高？
+  q1_zh_hk: 低空呢一層大概有幾高？
+  q2_en: Why is that not the same as cruise aviation?
+  q2_zh: 为什么那不是巡航航空的同一层？
+  q2_zh_hk: 點解嗰個唔係巡航航空嘅同一層？
+  s1_en: When you hear low-altitude airspace, point at the room below about one thousand metres.
+  s1_zh: 听到低空空域，先指大约一千米以下那一层。
+  s1_zh_hk: 聽到低空空域，先指大約一千米以下嗰一層。
+  s2_en: Treat it as scarce room above the ground, not as weather and not as a slogan.
+  s2_zh: 把它看成地面之上有限的空间，不是天气，也不是一句口号。
+  s2_zh_hk: 將佢看成地面之上有限嘅空間，唔係天氣，亦都唔係一句口號。
+  s3_en: 'Next short: that room does not stay empty. What does one more flight do to the flights already in it?'
+  s3_zh: 下一支短片：这一层不会一直空着。再多一班飞行，对已经在里面的班次做什么？
+  s3_zh_hk: 下一條短片：呢一層唔會一直空。再多一班飛行，對已經喺入面嘅班次做咩？

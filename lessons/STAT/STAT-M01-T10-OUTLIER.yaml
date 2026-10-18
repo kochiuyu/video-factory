@@ -1,0 +1,194 @@
+id: STAT-M01-T10-OUTLIER
+course: statistics
+course_en: Business Statistics
+course_zh: 商务统计
+course_zh_hk: 商務統計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: Signal or noise?
+title_zh: 异常值是商业信号还是数据问题？
+title_zh_hk: 異常值係商業訊號定數據問題？
+objective_en: Define an outlier as an unusually distant observation, apply the 1.5×IQR screening rule using the course quartile convention, and distinguish verified data errors from valid but unusual business observations before deciding how to treat them.
+objective_zh: 把异常值定义为距离主体数据异常遥远的观测值，按照本课程的四分位数约定应用1.5倍IQR筛查规则，并在决定处理方式前区分已核实的数据错误与真实但不寻常的业务观测。
+objective_zh_hk: 將異常值定義為距離主體數據異常遙遠嘅觀測值，按照本課程嘅四分位數約定應用1.5倍IQR篩查規則，並喺決定處理方式之前，區分已核實嘅數據錯誤同真實但不尋常嘅業務觀測。
+glossary:
+- en: outlier
+  zh: 异常值
+  zh_hk: 異常值
+  lock: true
+- en: IQR
+  zh: 四分位距
+  zh_hk: 四分位距
+  lock: true
+- en: screening rule
+  zh: 筛查规则
+  zh_hk: 篩查規則
+  lock: true
+- en: data error
+  zh: 数据错误
+  zh_hk: 數據錯誤
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: What is the purpose of the 1.5×IQR rule?
+  question_zh: 1.5倍IQR规则的作用是什么？
+  question_zh_hk: 1.5倍IQR規則有咩作用？
+  options_en:
+  - 'A: Automatically delete unusual observations.'
+  - 'B: Screen for observations that deserve further investigation.'
+  - 'C: Compute the arithmetic mean.'
+  - 'D: Convert variance into standard deviation.'
+  options_zh:
+  - 'A: 自动删除异常观测值。'
+  - 'B: 筛查值得进一步调查的观测值。'
+  - 'C: 计算算术平均数。'
+  - 'D: 将方差转换为标准差。'
+  options_zh_hk:
+  - 'A: 自動刪除異常觀測值。'
+  - 'B: 篩查值得進一步調查嘅觀測值。'
+  - 'C: 計算算術平均數。'
+  - 'D: 將方差轉換為標準差。'
+  answer: B
+  explanation_en: The 1.5×IQR rule flags observations for review. It does not determine whether they are errors or whether they should be removed.
+  explanation_zh: 1.5倍IQR规则把观测值标记出来供复查，但不能判断该值是否错误，也不能自动决定是否删除。
+  explanation_zh_hk: 1.5倍IQR規則將觀測值標記出嚟供複查，但唔可以判斷個數值係咪錯誤，亦唔可以自動決定係咪刪除。
+- id: Q2
+  type: multiple_choice
+  question_en: An airport store sells 4,200 cups while ordinary stores sell around 300–400 cups. What should a manager do first?
+  question_zh: 机场店卖出4200杯，而普通门店约为300至400杯。管理者首先应做什么？
+  question_zh_hk: 機場舖賣出4200杯，而普通門店大約300至400杯。管理者首先應該做咩？
+  options_en:
+  - 'A: Delete the observation immediately.'
+  - 'B: Investigate whether it is a data error, a one-time event, or a valid business signal.'
+  - 'C: Replace it with the mean.'
+  - 'D: Ignore it completely.'
+  options_zh:
+  - 'A: 立刻删除该观测值。'
+  - 'B: 调查它是数据错误、一次性事件，还是有效的业务信号。'
+  - 'C: 用平均数替换它。'
+  - 'D: 完全忽略它。'
+  options_zh_hk:
+  - 'A: 即刻刪除呢個觀測值。'
+  - 'B: 調查佢係數據錯誤、一次性事件，定係有效嘅業務訊號。'
+  - 'C: 用平均數取代佢。'
+  - 'D: 完全忽略佢。'
+  answer: B
+  explanation_en: An unusual observation may be invalid data or a valid business event. Verify its source and operating context before changing the dataset.
+  explanation_zh: 不寻常的观测值可能是无效数据，也可能是真实业务事件。修改数据集前，应先核实来源与运营背景。
+  explanation_zh_hk: 不尋常嘅觀測值可能係無效數據，亦可能係真實業務事件。修改數據集之前，應該先核實來源同營運背景。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: The Question
+  kicker_zh: 商业问题
+  kicker_zh_hk: 商業問題
+  title_en: The 4,200-cup mystery
+  title_zh: 4200杯之谜
+  title_zh_hk: 4200杯之謎
+  en: Most street stores report roughly 300 to 400 cups, while the Airport branch reports 4,200. The number is unusual, but unusual does not mean wrong. Before changing the report, management needs a consistent screening method and a disciplined process for checking the cause.
+  zh: 大部分街头门店报告约300至400杯，而机场店报告4,200杯。这个数字不寻常，但不寻常并不等于错误。在修改报表前，管理层需要一致的筛查方法，并按规范查清成因。
+  zh_hk: 大部分街頭門店報告大約300至400杯，而機場舖報告4,200杯。呢個數字唔尋常，但唔尋常唔等於錯。喺修改報表之前，管理層需要一致嘅篩查方法，並按規範查清楚成因。
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: A candidate for investigation
+  title_zh: 需要调查的候选观测值
+  title_zh_hk: 需要調查嘅候選觀測值
+  formula: 'Lower fence = Q1 − 1.5×IQR
+
+    Upper fence = Q3 + 1.5×IQR'
+  formula_zh: '下界 = Q1 − 1.5×IQR
+
+    上界 = Q3 + 1.5×IQR'
+  formula_zh_hk: '下界 = Q1 − 1.5×IQR
+
+    上界 = Q3 + 1.5×IQR'
+  s1_en: An outlier is an observation unusually distant from the main body of the data. It may affect the mean, variance, and other summaries, but statistical distance alone does not reveal the cause.
+  s1_zh: 异常值是与数据主体距离异常遥远的观测值。它可能影响平均数、方差与其他汇总指标，但统计距离本身无法说明成因。
+  s1_zh_hk: 異常值係同數據主體距離異常遙遠嘅觀測值。佢可能影響平均數、方差同其他匯總指標，但統計距離本身無法說明成因。
+  s2_en: A common boxplot rule flags values below Q1 minus 1.5×IQR or above Q3 plus 1.5×IQR. These fences identify candidates for review; they do not prove that a value is invalid.
+  s2_zh: 常见的箱线图规则会标记低于Q1减1.5倍IQR或高于Q3加1.5倍IQR的数值。围栏只找出复查候选值，并不能证明该值无效。
+  s2_zh_hk: 常見嘅箱線圖規則會標記低過Q1減1.5倍IQR或者高過Q3加1.5倍IQR嘅數值。圍欄只係搵出複查候選值，並唔可以證明個數值無效。
+- id: calc
+  visual: steps
+  seconds: 38
+  kicker_en: Step by Step
+  kicker_zh: 识别步骤
+  kicker_zh_hk: 識別步驟
+  title_en: Screening the airport store
+  title_zh: 筛查机场店
+  title_zh_hk: 篩查機場舖
+  step1_en: Calculate IQR
+  step2_en: Build fences
+  step3_en: Compare observation
+  step1_zh: 计算IQR
+  step2_zh: 建立边界
+  step3_zh: 比较观测值
+  step1_zh_hk: 計算IQR
+  step2_zh_hk: 建立邊界
+  step3_zh_hk: 比較觀測值
+  s1_en: 'Step one: using the course quartile convention for comparable street stores, Q1 is 310 cups, Q3 is 390 cups, and the IQR is 80 cups.'
+  s1_zh: 第一步：按照本课程对可比街头门店采用的四分位数约定，Q1为310杯，Q3为390杯，IQR为80杯。
+  s1_zh_hk: 第一步：按照本課程對可比街頭門店採用嘅四分位數約定，Q1係310杯，Q3係390杯，IQR係80杯。
+  s2_en: 'Step two: 1.5 times 80 equals 120 cups. The lower fence is 310 minus 120, or 190 cups. The upper fence is 390 plus 120, or 510 cups.'
+  s2_zh: 第二步：1.5乘80等于120杯。下界为310减120，即190杯；上界为390加120，即510杯。
+  s2_zh_hk: 第二步：1.5乘80等於120杯。下界係310減120，即190杯；上界係390加120，即510杯。
+  s3_en: 'Step three: 4,200 cups exceeds the 510-cup upper fence by 3,690 cups, so it is flagged as a potential outlier. The calculation triggers investigation; it does not diagnose the cause.'
+  s3_zh: 第三步：4,200杯高出510杯上界3,690杯，因此被标记为潜在异常值。计算只会触发调查，并不会诊断成因。
+  s3_zh_hk: 第三步：4,200杯高出510杯上界3,690杯，所以被標記為潛在異常值。計算只會觸發調查，並唔會診斷成因。
+- id: interpret
+  visual: two_column
+  seconds: 34
+  kicker_en: Managerial Meaning
+  kicker_zh: 管理含义
+  kicker_zh_hk: 管理含義
+  title_en: Error, special event, or structural difference?
+  title_zh: 错误、特殊事件，还是结构差异？
+  title_zh_hk: 錯誤、特殊事件，定係結構差異？
+  left_en: Invalid record
+  right_en: Valid unusual observation
+  left_zh: 无效记录
+  right_zh: 真实但不寻常的观测
+  left_zh_hk: 無效記錄
+  right_zh_hk: 真實但唔尋常嘅觀測
+  s1_en: First verify the record by checking source transactions, units, duplicate processing, and system logs. If evidence confirms an error, correct the record and document the change.
+  s1_zh: 首先核实记录，检查交易源数据、单位、重复处理与系统日志。如果证据确认错误，就修正记录并记录改动。
+  s1_zh_hk: 首先核實記錄，檢查交易源數據、單位、重複處理同系統日誌。如果證據確認錯誤，就修正記錄並記錄改動。
+  s2_en: If the record is valid, examine operating context. It may reflect a one-time event, promotion, unusual traffic, or a branch format that is not comparable with ordinary street stores.
+  s2_zh: 如果记录有效，就检查运营背景。它可能反映一次性事件、推广活动、异常客流，或与普通街头门店不可直接比较的业态。
+  s2_zh_hk: 如果記錄有效，就檢查營運背景。佢可能反映一次性事件、推廣活動、異常客流，或者同普通街頭門店唔可以直接比較嘅業態。
+  s3_en: A valid outlier may be retained, analyzed separately, or reported through sensitivity analysis. The treatment should follow the analytical question and be documented transparently.
+  s3_zh: 真实异常值可以保留、单独分析，或通过敏感性分析报告。处理方式应服从分析问题，并透明记录。
+  s3_zh_hk: 真實異常值可以保留、單獨分析，或者透過敏感性分析報告。處理方式應該服從分析問題，並透明記錄。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker_en: Decision Rule
+  kicker_zh: 商业法则
+  kicker_zh_hk: 商業法則
+  title_en: Flag, verify, explain, decide
+  title_zh: 标记、核实、解释、决策
+  title_zh_hk: 標記、核實、解釋、決策
+  q1_en: What does the 1.5×IQR rule do?
+  q1_zh: 1.5倍IQR规则做什么？
+  q1_zh_hk: 1.5倍IQR規則做咩？
+  q2_en: How should managers respond?
+  q2_zh: 管理者应如何回应？
+  q2_zh_hk: 管理者應該點樣回應？
+  s1_en: Use the 1.5×IQR fences as a consistent screening rule, not as an automatic cleaning command.
+  s1_zh: 把1.5倍IQR围栏用作一致的筛查规则，而不是自动清洗命令。
+  s1_zh_hk: 將1.5倍IQR圍欄用作一致嘅篩查規則，而唔係自動清洗命令。
+  s2_en: Verify whether the observation is erroneous, event-driven, or structurally different from the comparison group before changing the dataset.
+  s2_zh: 在修改数据集前，核实该观测值是错误、事件驱动，还是与比较总体存在结构差异。
+  s2_zh_hk: 喺修改數據集之前，核實個觀測值係錯誤、事件驅動，定係同比較總體存在結構差異。
+  s3_en: 'The operating rule is precise: flag statistically, verify operationally, document the explanation, and then decide whether to correct, retain, segment, or report sensitivity results.'
+  s3_zh: 经营规则很明确：用统计方法标记，用运营证据核实，记录解释，再决定修正、保留、分组，或报告敏感性结果。
+  s3_zh_hk: 營運規則好清楚：用統計方法標記，用營運證據核實，記錄解釋，再決定修正、保留、分組，或者報告敏感性結果。

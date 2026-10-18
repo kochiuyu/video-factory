@@ -13,8 +13,8 @@ objective_zh: 点出占优策略。删掉被占优的行。讲清囚徒困境，
 objective_zh_hk: 點出佔優策略。刪走被佔優嘅行。講清囚徒困境，並解出呢一局。
 lessons:
 - GAME-M02-IN
-- GAME-DOM-01
-- GAME-DS-01
-- GAME-PD-01
-- GAME-PD-02
+- GAME-M02-DOM
+- GAME-M02-DS
+- GAME-M02-PD
+- GAME-M02-PD-02
 - GAME-M02-OUT

@@ -1,0 +1,170 @@
+id: STAT-M07-T15-RECAP
+course: STAT-M07
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: The Executive Multiple Regression Playbook
+title_zh: 执行多元回归决策总览手册
+title_zh_hk: 執行多元回歸決策總覽手冊
+objective_en: Synthesize partialling out, multicollinearity diagnostics, adjusted R-squared, joint tests, influence checks, interactions, and Difference-in-Differences into a model-review checklist for store investment decisions.
+objective_zh: 整合偏回归、多重共线性诊断、调整后 R方、联合检验、影响度检查、交互项与双重差分，构建用于门店投资决策的模型审查清单。
+objective_zh_hk: 整合偏回歸、多重共線性診斷、調整後 R方、聯合檢驗、影響度檢查、交互項同雙重差分，構建用於門市投資決定嘅模型審查清單。
+glossary:
+- en: Due-Diligence Scorecard
+  zh: 尽职调查计分卡
+  zh_hk: 盡職審查計分卡
+  lock: true
+  zh_zh_hk: 盡職審查計分卡
+- en: Model Specification Flow
+  zh: 模型设定决策流
+  zh_hk: 模型設定決策流
+  lock: true
+  zh_zh_hk: 模型設定決策流
+- en: Capital Allocation Hurdle
+  zh: 资本配置准入门槛
+  zh_hk: 資本配置準入門檻
+  lock: true
+  zh_zh_hk: 資本配置準入門檻
+- en: Empirical Governance
+  zh: 实证治理规范
+  zh_hk: 實證治理規範
+  lock: true
+  zh_zh_hk: 實證治理規範
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Which sequence best represents a disciplined model review before a store investment decision?
+  question_zh: 在门店投资决策前，哪一套流程最能代表严谨的模型审查？
+  question_zh_hk: 喺門市投資決定之前，邊一套流程最能夠代表嚴謹嘅模型審查？
+  options_en:
+  - 'A: Define the modeling goal; review specification and precision; test coefficient bundles; investigate influence; then assess causal identification and commercial value where relevant'
+  - 'B: Raw R-squared maximization, deleting all control stores, and running separate unadjusted t-tests'
+  - 'C: Setting all dummy variables to zero, ignoring foot traffic, and running simple bivariate regression'
+  - 'D: Running only a pre-post comparison without control groups or standard errors'
+  options_zh:
+  - 'A: 明确建模目标；审查设定与精度；检验系数组合；调查影响度；再在相关时评估因果识别与商业价值'
+  - 'B: 最大化原始 R方、剔除所有对照门店，并分别运行未调整的独立 t 检验'
+  - 'C: 将所有虚拟变量设为零、忽略街头客流，仅运行单变量一元回归'
+  - 'D: 仅进行无对照组且无标准误的前后粗略差值对比'
+  options_zh_hk:
+  - 'A: 明確建模目標；審查設定同精度；檢驗系數組合；調查影響度；再喺相關時評估因果識別同商業價值'
+  - 'B: 最大化原始 R方、洗走所有對照門市，並分別行未調整嘅獨立 t 檢驗'
+  - 'C: 將所有虛擬變量設做零、唔理街頭人流，淨係行單變量一元回歸'
+  - 'D: 淨係做冇對照組兼且冇標準誤嘅前後粗略差值對比'
+  answer: A
+  explanation_en: A disciplined review begins with the decision question and model purpose, then examines specification, precision, joint evidence, influence, causal assumptions when relevant, and commercial materiality. The sequence is a checklist, not a universal set of numeric cutoffs.
+  explanation_zh: 严谨审查从决策问题与模型目的开始，再检查设定、精度、联合证据、影响度、相关的因果假设与商业重要性。这是一份审查清单，而不是通用数字阈值组合。
+  explanation_zh_hk: 嚴謹審查由決策問題同模型目的開始，再檢查設定、精度、聯合證據、影響度、相關嘅因果假設同商業重要性。呢個係一份審查清單，而唔係通用數字門檻組合。
+- id: Q2
+  type: multiple_choice
+  question_en: A proposal has raw R-squared 0.89, VIF 18 for two inputs, and a pre-period placebo interaction t-statistic of 3.40. What is the most defensible next step?
+  question_zh: 某提案的原始 R方 为 0.89，两项投入的 VIF 为 18，处理前安慰剂交互项 t 统计量为 3.40。最稳妥的下一步是什么？
+  question_zh_hk: 某提案嘅原始 R方 係 0.89，兩項投入嘅 VIF 係 18，處理前安慰劑交互項 t 統計量係 3.40。最穩妥嘅下一步係咩？
+  options_en:
+  - 'A: Immediately disburse the HK$30M because raw R^2 is nearly 0.90'
+  - 'B: Pause authorization and redesign or investigate the model: assess coefficient instability, examine pre-trend divergence, and rebuild the evidence before deciding'
+  - 'C: Double the marketing budget to force parallel trends into alignment'
+  - 'D: Delete the placebo test from the slide deck and proceed'
+  options_zh:
+  - 'A: 立即批复 3,000 万港元资金，因为原始 R方 接近 0.90'
+  - 'B: 暂停审批并重新设计或调查模型：评估系数不稳定性，检查处理前趋势分化，并在决策前重建证据'
+  - 'C: 将营销预算翻倍以强行熨平趋势分化'
+  - 'D: 将安慰剂检验从汇报材料中删除后直接放行'
+  options_zh_hk:
+  - 'A: 即刻批出 3,000 萬港元資金，因為原始 R方 接近 0.90'
+  - 'B: 暫停審批並重新設計或者調查模型：評估系數不穩定性，檢查處理前趨勢分化，並喺決定之前重建證據'
+  - 'C: 將行銷預算加倍嚟夾硬熨平趨勢分化'
+  - 'D: 將安慰劑檢驗由匯報投影片入面刪走然後直接放行'
+  answer: B
+  explanation_en: The high raw R-squared does not resolve coefficient instability or a concerning placebo result. VIF 18 calls for a precision and specification review, while a large placebo t-statistic indicates detectable pre-period divergence that threatens the DiD design. These findings justify pausing and redesigning the evidence, not automatic permanent rejection.
+  explanation_zh: 较高的原始 R方 不能解决系数不稳定或令人担忧的安慰剂结果。VIF 18 需要精度与设定审查，较大的安慰剂 t 统计量则表明存在可检测的处理前分化，威胁 DiD 设计。这些发现支持暂停并重建证据，而不是自动永久否决。
+  explanation_zh_hk: 較高嘅原始 R方 唔能夠解決系數不穩定或者令人擔心嘅安慰劑結果。VIF 18 需要精度同設定審查，較大嘅安慰劑 t 統計量就表示存在可檢測嘅處理前分化，威脅 DiD 設計。呢啲發現支持暫停並重建證據，而唔係自動永久否決。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Capital Gate Review
+  kicker_zh: 资本终审关卡
+  kicker_zh_hk: 資本終審關卡
+  title_en: Deploying HK$30M Across Forty Hong Kong Branches
+  title_zh: 审批三千万港元全港四十家门店扩张预算
+  title_zh_hk: 審批三千萬港元全港四十間門市擴張預算
+  en: Metro Coffee is reviewing a major multi-branch investment proposal supported by several regression models. The materials contain high R-squared values, interaction terms, and claims about equipment effects. Before committing capital, decision-makers need a structured way to separate model fit, coefficient precision, influence diagnostics, causal identification, and commercial value.
+  zh: Metro Coffee 正在审查一项由多套回归模型支持的重大多门店投资方案。材料中包含较高的 R方、交互项和设备效应主张。在投入资本前，决策者需要一套结构化方法，分别审查模型拟合、系数精度、影响度诊断、因果识别与商业价值。
+  zh_hk: Metro Coffee 正在審查一項由多套回歸模型支持嘅重大多門市投資方案。材料入面包括較高嘅 R方、交互項同設備效應主張。投入資本之前，決策者需要一套結構化方法，分別審查模型擬合、系數精度、影響度診斷、因果識別同商業價值。
+  zh_zh_hk: Metro Coffee 正在審查一項由多套回歸模型支持嘅重大多門市投資方案。材料入面包括較高嘅 R方、交互項同設備效應主張。投入資本之前，決策者需要一套結構化方法，分別審查模型擬合、系數精度、影響度診斷、因果識別同商業價值。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: 'Model Review: Specification + Precision + Joint Evidence + Influence + Identification'
+  formula_zh: 模型审查：设定 + 精度 + 联合证据 + 影响度 + 识别
+  formula_zh_hk: 模型審查：設定 + 精度 + 聯合證據 + 影響度 + 識別
+  formula_tex: \text{Review} = \{\text{Specification, Precision, Joint Evidence, Influence, Identification}\}
+  s1_en: The Due-Diligence Scorecard is a sequence of questions rather than a universal numeric pass-fail formula. Different modeling goals require different diagnostics, thresholds, and evidence.
+  s1_zh: 尽职调查计分卡是一组依次提出的问题，而不是通用的数字化通过或失败公式。不同建模目标需要不同的诊断、阈值与证据。
+  s1_zh_hk: 盡職審查計分卡係一組依次提出嘅問題，而唔係通用嘅數字化通過或失敗公式。唔同建模目標需要唔同嘅診斷、門檻同證據。
+  s2_en: Start with specification and interpretation, then examine coefficient precision and complexity, test prespecified coefficient bundles, investigate influential observations, and apply causal-design checks only when the proposal makes causal claims.
+  s2_zh: 先审查模型设定与系数解读，再检查系数精度与复杂度，检验预先设定的系数组合，调查强影响观测，并仅在提案提出因果主张时应用因果设计检查。
+  s2_zh_hk: 先審查模型設定同系數解讀，再檢查系數精度同複雜度，檢驗預先設定嘅系數組合，調查強影響觀測，並只喺提案提出因果主張時應用因果設計檢查。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Observational vs. Causal Gates
+  left_zh: 观测控制与因果准入分流
+  right_en: Disciplined Capital Guardrails
+  right_zh: 严谨资本风控铁律
+  s1_en: For descriptive or predictive models, partial slopes, district controls, interactions, residual diagnostics, and held-out performance answer different questions. No single statistic establishes overall model quality or operational productivity.
+  s1_zh: 对于描述或预测模型，偏斜率、区域控制、交互项、残差诊断与留出样本表现分别回答不同问题。任何单一统计量都不能确立整体模型质量或营运生产力。
+  s1_zh_hk: 對於描述或者預測模型，偏斜率、區域控制、交互項、殘差診斷同留出樣本表現分別回答唔同問題。任何單一統計量都唔能夠確立整體模型質素或者營運生產力。
+  s2_en: For causal claims about equipment or promotions, the review shifts to research design. A comparison group, credible parallel trends, no important spillovers, appropriate uncertainty estimates, and checks for differential shocks are central to a DiD interpretation.
+  s2_zh: 对于设备或促销的因果主张，审查重点转向研究设计。对照组、可信的平行趋势、无重要溢出、适当的不确定性估计，以及差异性冲击检查，是解释 DiD 的核心。
+  s2_zh_hk: 對於設備或者推廣嘅因果主張，審查重點會轉向研究設計。對照組、可信嘅平行趨勢、冇重要溢出、適當嘅不確定性估計，同埋差異性衝擊檢查，係解讀 DiD 嘅核心。
+  s3_en: A concerning diagnostic should trigger investigation or redesign, not automatic deletion, rejection, or approval. Statistical evidence must be considered together with data quality, effect size, uncertainty, implementation cost, and business risk.
+  s3_zh: 令人担忧的诊断结果应触发调查或重新设计，而不是自动删除、拒绝或批准。统计证据必须与数据质量、效应大小、不确定性、实施成本和业务风险共同考虑。
+  s3_zh_hk: 令人擔心嘅診斷結果應該觸發調查或者重新設計，而唔係自動刪除、拒絕或者批准。統計證據必須同數據質素、效應大小、不確定性、實施成本同業務風險一齊考慮。
+  left_zh_hk: 觀測控制與因果準入分流
+  right_zh_hk: 嚴謹資本風控鐵律
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Review Specification & Precision
+  step1_zh: 审查设定与估计精度
+  step2_en: Test Bundles & Influence
+  step2_zh: 检验组合与影响度
+  step3_en: Assess Identification & Value
+  step3_zh: 评估识别与商业价值
+  s1_en: 'Step one: confirm that controls and interactions match the business question. Use VIF as a contextual precision diagnostic, compare adjusted fit and held-out performance, and avoid deleting predictors by a universal cutoff alone.'
+  s1_zh: 第一步：确认控制变量与交互项符合业务问题。将 VIF 作为结合情境的精度诊断，比较调整后拟合与留出样本表现，并避免只凭通用阈值删除自变量。
+  s1_zh_hk: 第一步：確認控制變量同交互項符合業務問題。將 VIF 當作配合情境嘅精度診斷，比較調整後擬合同留出樣本表現，並避免只憑通用門檻刪除自變量。
+  s2_en: 'Step two: use joint tests for prespecified coefficient bundles and investigate leverage or Cook’s Distance through record checks and sensitivity analysis. Separate modeling is justified only when evidence supports distinct operating regimes.'
+  s2_zh: 第二步：对预先设定的系数组合使用联合检验，并通过记录核对与敏感性分析调查杠杆值或库克距离。只有证据支持不同营运机制时，才有理由分开建模。
+  s2_zh_hk: 第二步：對預先設定嘅系數組合使用聯合檢驗，並透過記錄核對同敏感性分析調查槓桿值或者庫克距離。只有證據支持唔同營運機制時，先有理由分開建模。
+  s3_en: 'Step three: for causal proposals, report the DiD estimate and uncertainty, inspect multiple pre-periods and placebo results, and assess spillovers and differential shocks. Then compare the plausible business benefit with implementation cost and downside risk before deciding.'
+  s3_zh: 第三步：对于因果提案，报告 DiD 估计值与不确定性，检查多个处理前时期和安慰剂结果，并评估溢出与差异性冲击。之后再将可信的业务收益与实施成本和下行风险比较，才作决定。
+  s3_zh_hk: 第三步：對於因果提案，報告 DiD 估計值同不確定性，檢查多個處理前時期同安慰劑結果，並評估溢出同差異性衝擊。之後再將可信嘅業務收益同實施成本同下行風險比較，先作決定。
+  step1_zh_hk: 審查設定同估計精度
+  step2_zh_hk: 檢驗組合同影響度
+  step3_zh_hk: 評估識別同商業價值
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: How Does Regression Protect Capital?
+  q1_zh: 多元回归如何守护企业资本？
+  q2_en: 'Audit Rule: Follow the Five Gates'
+  q2_zh: 审计准则：五关未过，分文不拔
+  s1_en: The Model Specification Flow separates prediction, explanation, and causal evaluation. Each purpose needs evidence tailored to its question, so high raw R-squared or one small p-value is never a complete investment case.
+  s1_zh: 模型设定决策流区分预测、解释与因果评估。每种目的都需要与问题相匹配的证据，因此较高的原始 R方 或一个较小的 p值 都不能构成完整投资依据。
+  s1_zh_hk: 模型設定決策流區分預測、解釋同因果評估。每種目的都需要同問題相匹配嘅證據，所以較高嘅原始 R方 或者一個較小嘅 p值 都唔能夠構成完整投資依據。
+  s2_en: 'Decision rule: document the modeling goal, review specification and diagnostics, quantify uncertainty and sensitivity, test causal assumptions when relevant, and combine the statistical case with commercial costs, benefits, and governance requirements.'
+  s2_zh: 决策规则：记录建模目标，审查模型设定与诊断，量化不确定性和敏感性，在相关时检验因果假设，并将统计依据与商业成本、收益及治理要求结合。
+  s2_zh_hk: 決策規則：記錄建模目標，審查模型設定同診斷，量化不確定性同敏感性，喺相關時檢驗因果假設，並將統計依據同商業成本、收益同治理要求結合。
+  s3_en: A sound capital recommendation is therefore conditional, transparent, and reproducible. It explains what the model supports, what remains uncertain, which assumptions matter, and what evidence would change the decision.
+  s3_zh: 因此，可靠的资本建议应当有条件、透明且可复现。它要说明模型支持什么、仍有哪些不确定性、哪些假设关键，以及什么证据会改变决策。
+  s3_zh_hk: 所以，可靠嘅資本建議應該有條件、透明同可重現。佢要說明模型支持咩、仲有邊啲不確定性、邊啲假設關鍵，同埋咩證據會改變決定。
+  q1_zh_hk: 多元回歸點樣守護企業資本？
+  q2_zh_hk: 審計準則：五關未過，分文不批

@@ -1,0 +1,282 @@
+id: ECON-CH-QA
+course: factory-qa
+course_en: Factory quality check
+course_zh: 工厂质检课
+course_zh_hk: 工廠質檢課
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 220
+title_en: Trade-offs
+title_zh: 权衡
+title_zh_hk: 權衡
+objective_en: 'Open the choice unit: every yes uses time or money that cannot be spent twice.'
+objective_zh: 打开选择单元：每一个“是”都占用不能花第二次的时间或金钱。
+objective_zh_hk: 打開選擇單元：每一個「是」都佔用不能花第二次的時間或金錢。
+glossary:
+- en: trade-off
+  zh: 权衡
+  zh_hk: 權衡
+  lock: true
+- en: opportunity cost
+  zh: 机会成本
+  zh_hk: 機會成本
+  lock: true
+- en: incentive
+  zh: 激励
+  zh_hk: 激勵
+  lock: true
+- en: sunk cost
+  zh: 沉没成本
+  zh_hk: 沉沒成本
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Opportunity cost counts which forgone option?
+  zh: 机会成本计算的是哪一个放弃的选项？
+  zh_hk: 機會成本計算的是哪一個放棄的選項？
+  answer_en: Only the single best alternative.
+  answer_zh: 只算那个次优选项。
+  answer_zh_hk: 只算那個次優選項。
+- id: Q2
+  type: transfer
+  en: Should a sunk cost decide the next step?
+  zh: 沉没成本应不应该决定下一步？
+  zh_hk: 沉沒成本應不應該決定下一步？
+  answer_en: No. Weigh only future benefits and future costs.
+  answer_zh: 不应该。只权衡未来收益和未来成本。
+  answer_zh_hk: 不應該。只權衡未來收益和未來成本。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Trade-offs
+  title_zh: 权衡
+  title_zh_hk: 權衡
+  en: We start with a choice you already make. Say yes to one thing, and the same hour or the
+    same money cannot go to something else. Before you praise what you get, name what you give
+    up.
+  zh: 我们从你每天都在做的选择讲起。答应一件事，同一个小时或同一笔钱就不能再给另一件事。夸你得到了什么之前，先说出你放弃了什么。
+  zh_hk: 我哋由你每日都喺度做嘅選擇講起。答應一件事，同一個鐘或者同一筆錢就唔可以再畀另一件事。誇你得到咩之前，先講你放棄咗咩。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Trade-off
+  title_zh: 权衡
+  title_zh_hk: 權衡
+  formula: trade-off = give up one thing to get another
+  formula_en: trade-off = give up one thing to get another
+  formula_zh: 权衡 = 放弃一样去得到另一样
+  formula_zh_hk: 權衡 = 放棄一樣去得到另一樣
+  gloss_en: Time, money, and attention are limited
+  gloss_zh: 时间、金钱和注意力都有限
+  gloss_zh_hk: 時間、金錢和注意力都有限
+  s1_en: A trade-off is that swap. You use a scarce thing one way, so you cannot use it the other
+    way at the same time.
+  s1_zh: 权衡就是这种交换。你把有限的东西用在一边，同一时间就不能再用在另一边。
+  s1_zh_hk: 權衡就係呢種交換。你將有限嘅嘢用喺一邊，同一時間就唔可以再用喺另一邊。
+  s2_en: Time, money, and attention are all limited. Saying yes to a group project this afternoon
+    is saying no to the next-best use of that same afternoon. Write both sides before you call
+    the choice cheap.
+  s2_zh: 时间、金钱和注意力都有限。答应今天下午做一个小组作业，就是拒绝同一下午的次优用途。说便宜之前，先把两边都写下来。
+  s2_zh_hk: 時間、金錢同注意力都有限。答應今日下晝做小組功課，就係拒絕同一下晝嘅次優用途。話便宜之前，先將兩邊都寫低。
+- id: formula
+  visual: formula
+  seconds: 24
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Opportunity cost
+  title_zh: 机会成本
+  title_zh_hk: 機會成本
+  formula: OC = value of the best forgone option
+  formula_en: OC = value of the best forgone option
+  formula_zh: 机会成本 = 次优选项的价值
+  formula_zh_hk: 機會成本 = 次優選項的價值
+  gloss_en: Count only the next-best use, not every dream
+  gloss_zh: 只算次优用途，不算所有愿望
+  gloss_zh_hk: 只算次優用途，不算所有願望
+  s1_en: 'The hidden price of that swap has a name: opportunity cost. It is the value of the single
+    best option you give up, not a pile of every option you can dream up.'
+  s1_zh: 这种交换背后的价格叫机会成本。它是你放弃的那个次优选项的价值，不是把所有想得到的选项加在一起。
+  s1_zh_hk: 呢種交換背後嘅價格叫機會成本。佢係你放棄嗰個次優選項嘅價值，唔係將所有諗到嘅選項加埋一齊。
+  s2_en: If you spend tonight on one problem set, the cost is the next-best tonight, maybe dinner
+    with a friend, not the whole rest of the semester. Write that next-best use in one line.
+  s2_zh: 若今晚只做一套题，成本是次优的那个今晚，也许是和朋友吃饭，不是整个学期。请用一句话写出那个次优用途。
+  s2_zh_hk: 若今晚淨係做一套題，成本係次優嗰個今晚，可能係同朋友食飯，唔係成個學期。請用一句話寫出嗰個次優用途。
+- id: predict
+  visual: two_column
+  seconds: 26
+  kicker: Predict
+  kicker_en: Predict
+  kicker_zh: 预测
+  kicker_zh_hk: 預測
+  title_en: Raise the reward
+  title_zh: 提高回报
+  title_zh_hk: 提高回報
+  left_en: Stronger incentive
+  left_zh: 更强激励
+  left_zh_hk: 更強激勵
+  right_en: More of that action
+  right_zh: 更多该行动
+  right_zh_hk: 更多該行動
+  s1_en: An incentive is a reason to act. Before you change a bonus or a grade rule, write the
+    incentive on the left and the action you expect on the right.
+  s1_zh: 激励是行动的理由。改奖金或成绩规则之前，左边写下激励，右边写下你预期的行为。
+  s1_zh_hk: 激勵係行動嘅理由。改獎金或者成績規則之前，左邊寫激勵，右邊寫你預期嘅行為。
+  s2_en: If you raise the reward for one action, people usually do more of it. That is the left
+    box.
+  s2_zh: 提高某一行动的回报，人们通常会做更多。这是左栏。
+  s2_zh_hk: 提高某一行動嘅回報，人通常會做多啲。呢個係左欄。
+  s3_en: The right box is the behaviour you should write down before the rule changes, so you
+    can check later whether it actually moved.
+  s3_zh: 右栏是改规则之前就该写下的行为，方便之后核对它有没有真的增加。
+  s3_zh_hk: 右欄係改規則之前就該寫低嘅行為，方便之後核對佢有冇真係增加。
+- id: example
+  visual: example
+  seconds: 26
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Night bonus
+  title_zh: 夜间奖金
+  title_zh_hk: 夜間獎金
+  setup_en: Late-night bonus per completed drop
+  setup_zh: 夜间每单完成支付奖金
+  setup_zh_hk: 夜間每單完成支付獎金
+  result_en: Faster deliveries / more accidents
+  result_zh: 更快送达 / 更多事故
+  result_zh_hk: 更快送達 / 更多事故
+  s1_en: Here is a delivery platform. It wants more completed drops after dark, so it pays extra
+    for each late order.
+  s1_zh: 看一个外卖平台。它希望夜里完成更多订单，于是每完成一单夜间单就多付钱。
+  s1_zh_hk: 睇一個外賣平台。佢想夜晚完成多啲訂單，於是每完成一單夜間單就多俾錢。
+  s2_en: The bonus is the incentive. Each finished drop pays more, so riders have a reason to
+    stay out later.
+  s2_zh: 奖金就是激励。每完成一单多付钱，骑手就有理由留得更晚。
+  s2_zh_hk: 獎金就係激勵。每完成一單多俾錢，騎手就有理由留得更夜。
+  s3_en: Riders do finish more orders. They also take riskier routes, and accidents rise. That
+    extra harm is a side effect you should have written before the bonus went live.
+  s3_zh: 骑手确实完成了更多订单。他们也走更险的路线，事故上升。多出来的伤害，是奖金上线前就该写下来的副作用。
+  s3_zh_hk: 騎手的確完成多咗訂單。佢哋亦走更險嘅路線，事故上升。多出嚟嘅傷害，係獎金上線前就該寫低嘅副作用。
+- id: compare
+  visual: three_column
+  seconds: 26
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 比较
+  kicker_zh_hk: 比較
+  title_en: Three checks
+  title_zh: 三项检查
+  title_zh_hk: 三項檢查
+  col1_en: Name the incentive
+  col1_zh: 说出激励
+  col1_zh_hk: 說出激勵
+  col2_en: Predict the action
+  col2_zh: 预测行为
+  col2_zh_hk: 預測行為
+  col3_en: Check the side effect
+  col3_zh: 检查副作用
+  col3_zh_hk: 檢查副作用
+  s1_en: Before you change a grade rule or a bonus, name the incentive in one short phrase. What
+    exactly are you paying for?
+  s1_zh: 改成绩规则或奖金之前，用一句短语说出激励。你到底在为哪件事付钱？
+  s1_zh_hk: 改成績規則或者獎金之前，用一句短語講出激勵。你到底喺為邊件事俾錢？
+  s2_en: Then predict the action. Who will do more of what, if that reward goes up?
+  s2_zh: 然后预测行为。回报提高之后，谁会多做什么？
+  s2_zh_hk: 然後預測行為。回報提高之後，邊個會多做咩？
+  s3_en: Last, ask what else might rise that you do not want, like accidents or rushed work. If
+    one of the three checks is blank, stop before the policy goes out.
+  s3_zh: 最后问：还有什么你不想增加的东西，比如事故或赶工。三项里缺一项，就先停，不要出台政策。
+  s3_zh_hk: 最後問：仲有咩你唔想增加嘅嘢，例如意外或者趕工。三項入面缺一項，就停低，唔好出臺政策。
+- id: rule
+  visual: steps
+  seconds: 26
+  kicker: Rule
+  kicker_en: Rule
+  kicker_zh: 规则
+  kicker_zh_hk: 規則
+  title_en: Ignore sunk cost
+  title_zh: 忽略沉没成本
+  title_zh_hk: 忽略沉沒成本
+  step1_en: Name future benefits
+  step1_zh: 写出未来收益
+  step1_zh_hk: 寫出未來收益
+  step2_en: Name future costs
+  step2_zh: 写出未来成本
+  step2_zh_hk: 寫出未來成本
+  step3_en: Leave the sunk cost out
+  step3_zh: 沉没成本不入账
+  step3_zh_hk: 沉沒成本不入賬
+  s1_en: A sunk cost is money or time already gone. You cannot get last term’s tuition back. So
+    start with the future benefits of staying on the path.
+  s1_zh: 沉没成本是已经花掉、拿不回来的钱或时间。上学期的学费收不回来。所以先写继续走这条路的未来收益。
+  s1_zh_hk: 沉沒成本係已經花咗、攞唔返嘅錢或者時間。上學期學費收唔返。所以先寫繼續行呢條路嘅未來收益。
+  s2_en: 'Then name the future costs of staying: more evenings, more fees, more stress still ahead.'
+  s2_zh: 再写留下来的未来成本：还要投入的晚上、费用和压力。
+  s2_zh_hk: 再寫留低嘅未來成本：仲要投入嘅夜晚、費用同壓力。
+  s3_en: Leave the tuition already paid off the page. The next choice only weighs what is still
+    ahead, not what you already spent.
+  s3_zh: 已交学费不要入账。下一步只权衡还没发生的事，不算已经花掉的。
+  s3_zh_hk: 已交學費唔好入賬。下一步只權衡仲未發生嘅事，唔好計已經花咗嘅。
+- id: number
+  visual: big_number
+  seconds: 22
+  kicker: Fact
+  kicker_en: Fact
+  kicker_zh: 数据
+  kicker_zh_hk: 數據
+  title_en: Night bonus
+  title_zh: 夜间奖金
+  title_zh_hk: 夜間獎金
+  unit_en: more late drops
+  unit_zh: 夜间单量
+  unit_zh_hk: 夜間單量
+  caption_en: and more accidents on the same nights
+  caption_zh: 同一夜间事故也更多
+  caption_zh_hk: 同一夜間事故也更多
+  number: 2x
+  en: Suppose late drops double after the bonus. That two-times figure is not a verdict by itself.
+    Ask whether accidents, complaints, or quits moved on the same nights. A big number should
+    make you pause and ask what else you need to measure.
+  zh: 假设奖金之后夜间单量翻倍。这个两倍本身不是结论。要问同一夜间事故、投诉或离职有没有一起变。大数字是让你停下来，问还要量什么。
+  zh_hk: 假設獎金之後夜間單量翻倍。呢個兩倍本身唔係結論。要問同一夜間意外、投訴或者離職有冇一齊變。大數字係等你停低，問仲要量咩。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Two questions
+  title_zh: 两个问题
+  title_zh_hk: 兩個問題
+  q1_en: What do you give up if you say yes tonight?
+  q1_zh: 若今晚答应，你放弃的是什么？
+  q1_zh_hk: 若今晚答應，你放棄的是什麼？
+  q2_en: If that cost were not yet sunk, would you still choose this path?
+  q2_zh: 若那笔成本尚未沉没，你今天还会选这条路吗？
+  q2_zh_hk: 若那筆成本尚未沉沒，你今天還會選這條路嗎？
+  s1_en: Keep two questions on the table after this sitting.
+  s1_zh: 这一讲结束，桌上只留两个问题。
+  s1_zh_hk: 呢一講完，桌上只留兩個問題。
+  s2_en: 'First: if you say yes tonight, what is the next-best use of that same night that you
+    give up?'
+  s2_zh: 第一：今晚说是，你放弃的同一晚的次优用途是什么？
+  s2_zh_hk: 第一：今晚話是，你放棄嘅同一晚次優用途係咩？
+  s3_en: 'Second: if that cost were not yet sunk, would you still choose this path? Next sitting
+    we stay with that hidden price and call it opportunity cost.'
+  s3_zh: 第二：若那笔成本还没花掉，你今天还会选这条路吗？下一讲我们继续谈这个看不见的价格，它叫机会成本。
+  s3_zh_hk: 第二：若嗰筆成本仲未花，你今日仲會唔會揀呢條路？下一講我哋繼續講呢個睇唔見嘅價格，佢叫機會成本。

@@ -1,0 +1,259 @@
+id: ECON-EX
+course: principles
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 190
+title_en: Externalities
+title_zh: 外部性
+title_zh_hk: 外部性
+objective_en: 'Close the unit: when a third party bears a cost or benefit that the price never
+  recorded, private cost is not social cost.'
+objective_zh: 收住本单元：第三者承担了价格从未记下的成本或好处时，私人成本就不是社会成本。
+objective_zh_hk: 收住本單元：第三者承擔了價格從未記下的成本或好處時，私人成本就不是社會成本。
+glossary:
+- en: externality
+  zh: 外部性
+  zh_hk: 外部性
+  lock: true
+- en: social cost
+  zh: 社会成本
+  zh_hk: 社會成本
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Social cost equals which two pieces?
+  zh: 社会成本等于哪两部分？
+  zh_hk: 社會成本等於哪兩部分？
+  answer_en: Private cost plus external cost.
+  answer_zh: 私人成本加上外部成本。
+  answer_zh_hk: 私人成本加上外部成本。
+- id: Q2
+  type: transfer
+  en: A student shares clean lecture notes with the whole group chat. What kind of externality
+    is that?
+  zh: 一名学生把整洁的课堂笔记发到全组群。这是哪类外部性？
+  zh_hk: 一名學生把整潔的課堂筆記發到全組群。這是哪類外部性？
+  answer_en: A positive externality. Others gain without paying the note-taker.
+  answer_zh: 正外部性。别人受益却没有付给做笔记的人。
+  answer_zh_hk: 正外部性。別人受益卻沒有付給做筆記的人。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 20
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Externalities
+  title_zh: 外部性
+  title_zh_hk: 外部性
+  en: A price can clear and still miss a bill. Some costs never appear on the buyer's or seller's
+    invoice. They still get paid — by someone standing off to the side.
+  zh: 一个价格可以出清，却仍漏掉一张账单。有些成本从来不会出现在买家或卖家的发票上。它们仍有人付——站在旁边的那个人。
+  zh_hk: 一個價格可以出清，卻仲漏咗一張賬單。有啲成本從來唔會出現喺買家或賣家發票上面。佢哋都有人付——企喺旁邊嗰個人。
+- id: define
+  visual: definition_card
+  seconds: 22
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Spillover
+  title_zh: 外溢
+  title_zh_hk: 外溢
+  formula: Social cost = private cost + external cost
+  formula_en: Social cost = private cost + external cost
+  formula_zh: 社会成本 = 私人成本 + 外部成本
+  formula_zh_hk: 社會成本 = 私人成本 + 外部成本
+  gloss_en: A positive externality is a spillover benefit.
+  gloss_zh: 正外部性是外溢的好处。
+  gloss_zh_hk: 正外部性是外溢的好處。
+  s1_en: An externality is a cost or benefit that falls on a third party who did not choose the
+    action.
+  s1_zh: 外部性是落在第三方身上的成本或好处，而这个人并没有选择这项行动。
+  s1_zh_hk: 外部性係落喺第三方身上嘅成本或好處，而呢個人並冇揀呢項行動。
+  s2_en: Markets that see only the private cost will overdo harmful acts and underdo helpful ones.
+  s2_zh: 只看见私人成本的市场，会把有害的事做多，把有益的事做少。
+  s2_zh_hk: 淨係睇見私人成本嘅市場，會將有害嘅事做多，將有益嘅事做少。
+- id: example
+  visual: two_column
+  seconds: 24
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Late practice room
+  title_zh: 深夜琴房
+  title_zh_hk: 深夜琴房
+  left_en: Player pays the booking fee
+  left_zh: 演奏者支付预约费
+  left_zh_hk: 演奏者支付預約費
+  right_en: Neighbours lose sleep
+  right_zh: 邻居失去睡眠
+  right_zh_hk: 鄰居失去睡眠
+  s1_en: A late booking in a thin-walled hostel.
+  s1_zh: 隔音很差的旅馆里，一单深夜预订。
+  s1_zh_hk: 隔音好差嘅旅館入面，一單深夜預訂。
+  s2_en: The booking fee is the private cost. The guest pays that.
+  s2_zh: 预订费是私人成本。客人付的是这一笔。
+  s2_zh_hk: 預訂費係私人成本。客人付嘅係呢一筆。
+  s3_en: The lost sleep next door is an external cost. Social cost is both together, so too many
+    late bookings happen if only the fee is charged.
+  s3_zh: 隔壁少睡的觉是外部成本。社会成本是两者加总。若只收预订费，深夜预订就会过多。
+  s3_zh_hk: 隔籬少瞓嘅覺係外部成本。社會成本係兩者加總。若淨收預訂費，深夜預訂就會過多。
+- id: formula
+  visual: formula
+  seconds: 20
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Add the missing cost
+  title_zh: 补上缺少的成本
+  title_zh_hk: 補上缺少的成本
+  formula: Social cost = private cost + external cost
+  formula_en: Social cost = private cost + external cost
+  formula_zh: 社会成本 = 私人成本 + 外部成本
+  formula_zh_hk: 社會成本 = 私人成本 + 外部成本
+  gloss_en: Markets price the private part.
+  gloss_zh: 市场给私人部分定价。
+  gloss_zh_hk: 市場給私人部分定價。
+  s1_en: A factory pays wages and fuel. That is the private bill.
+  s1_zh: 工厂付工资和燃料。这是私人账单。
+  s1_zh_hk: 工廠付工資同燃料。呢個係私人賬單。
+  s2_en: Neighbours pay the smoke. Social cost is both. If only the factory's bill is priced,
+    output is too high.
+  s2_zh: 邻居在付那团烟。社会成本是两者。若只给工厂的账单定价，产量就会偏高。
+  s2_zh_hk: 鄰居喺度付嗰團煙。社會成本係兩者。若淨畀工廠賬單定價，產量就會偏高。
+- id: sign
+  visual: two_column
+  seconds: 22
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Two externalities
+  title_zh: 两种外部性
+  title_zh_hk: 兩種外部性
+  left_en: 'Negative: smoke, noise'
+  left_zh: 负：烟雾、噪音
+  left_zh_hk: 負：煙霧、噪音
+  right_en: 'Positive: vaccine, garden'
+  right_zh: 正：疫苗、花园
+  right_zh_hk: 正：疫苗、花園
+  s1_en: The sign of the externality tells you the direction of the mistake.
+  s1_zh: 外部性的正负，告诉你错在哪一边。
+  s1_zh_hk: 外部性嘅正負，話你知錯喺邊邊。
+  s2_en: Negative externalities mean too much of the activity. A tax or a fee can pull it back.
+  s2_zh: 负外部性意味着活动太多。税或费可以往回收。
+  s2_zh_hk: 負外部性意味住活動太多。稅或者費可以收回少少。
+  s3_en: Positive externalities mean too little. A subsidy can support it.
+  s3_zh: 正外部性意味着活动太少。补贴可以托一把。
+  s3_zh_hk: 正外部性意味住活動太少。補貼可以托一把。
+- id: port
+  visual: example
+  seconds: 22
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A noisy night port
+  title_zh: 嘈杂的夜间港口
+  title_zh_hk: 嘈雜的夜間港口
+  setup_en: Ships save waiting time
+  setup_zh: 船节省等待
+  setup_zh_hk: 船節省等待
+  result_en: Residents lose sleep
+  result_zh: 居民失眠
+  result_zh_hk: 居民失眠
+  s1_en: Night berths in a harbour.
+  s1_zh: 港口的夜间泊位。
+  s1_zh_hk: 港口嘅夜間泊位。
+  s2_en: They cut queue costs for ships. That is a private gain for the operators.
+  s2_zh: 它们减少船只排队的成本。对营运方是私人好处。
+  s2_zh_hk: 佢哋減少船隻排隊成本。對營運方係私人好處。
+  s3_en: They also cut sleep for the block next door. Price the berth with both costs, or the
+    night shift will over-expand.
+  s3_zh: 它们也让隔壁少睡。泊位的价格要把两边成本都算进去，否则夜班会扩得过大。
+  s3_zh_hk: 佢哋亦令隔籬少瞓。泊位價格要將兩邊成本都計入去，否則夜班會擴得過大。
+- id: policy
+  visual: steps
+  seconds: 24
+  kicker: Steps
+  kicker_en: Steps
+  kicker_zh: 步骤
+  kicker_zh_hk: 步驟
+  title_en: A repair kit
+  title_zh: 一套修补
+  title_zh_hk: 一套修補
+  step1_en: Measure the external piece
+  step1_zh: 测量外部那一块
+  step1_zh_hk: 測量外部那一塊
+  step2_en: Put it on the bill
+  step2_zh: 把它写进账单
+  step2_zh_hk: 把它寫進賬單
+  step3_en: Recheck quantity
+  step3_zh: 再看数量
+  step3_zh_hk: 再看數量
+  s1_en: Name the missing cost or benefit in money, even as a rough range.
+  s1_zh: 先用钱把缺掉的成本或好处说出来，即使只是一个粗范围。
+  s1_zh_hk: 先用錢將缺咗嘅成本或好處講出嚟，即使只係一個粗範圍。
+  s2_en: Attach it with a tax, a fee, or a subsidy.
+  s2_zh: 再用税、费或补贴把它接回去。
+  s2_zh_hk: 再用稅、費或補貼將佢接返去。
+  s3_en: Then look again at how much of the activity remains.
+  s3_zh: 然后再看这项活动还剩多少。
+  s3_zh_hk: 然後再睇呢項活動仲剩幾多。
+- id: gap
+  visual: big_number
+  seconds: 16
+  kicker: Number
+  kicker_en: Number
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: The unpriced slice
+  title_zh: 未定价的那片
+  title_zh_hk: 未定價的那片
+  unit_en: on the invoice
+  unit_zh: 发票上
+  unit_zh_hk: 發票上
+  caption_en: If it is missing, quantity is wrong.
+  caption_zh: 缺了，数量就错。
+  caption_zh_hk: 缺了，數量就錯。
+  number: '?'
+  en: You do not need a perfect number to see the direction. If a real cost is off the invoice,
+    the market quantity is not the social quantity.
+  zh: 不必有一个完美数字才看得出方向。若真实成本不在发票上，市场数量就不是社会数量。
+  zh_hk: 唔使有一個完美數字先睇到方向。若真實成本唔喺發票上面，市場數量就唔係社會數量。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Name the missing party
+  title_zh: 说出缺席的那一方
+  title_zh_hk: 說出缺席的那一方
+  q1_en: Who is affected but not paying?
+  q1_zh: 谁受影响却没有付钱？
+  q1_zh_hk: 誰受影響卻沒有付錢？
+  q2_en: Is the spillover a cost or a benefit?
+  q2_zh: 外溢是成本还是收益？
+  q2_zh_hk: 外溢是成本還是收益？
+  s1_en: Write private cost and social cost as two lines.
+  s1_zh: 把私人成本和社会成本写成两行。
+  s1_zh_hk: 將私人成本同社會成本寫成兩行。
+  s2_en: If they differ, the market price is not the full story.
+  s2_zh: 若两行不同，市场价格就不是全部故事。
+  s2_zh_hk: 若兩行唔同，市場價格就唔係全部故事。
+  s3_en: A price can clear, and still miss a third party. Hidden action after a contract is a
+    later sitting.
+  s3_zh: 一个价格可以出清，却仍漏掉第三方。合约之后的隐藏行动，留到下一讲。
+  s3_zh_hk: 一個價格可以出清，卻仲漏咗第三方。合約之後嘅隱藏行動，留到下一講。

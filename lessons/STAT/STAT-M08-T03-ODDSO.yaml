@@ -1,0 +1,165 @@
+id: STAT-M08-T03-ODDSO
+course: STAT-M08
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Odds & Log-Odds: Mapping Probabilities to the Real Line'
+title_zh: 几率与对数几率：将概率映射至实数轴
+title_zh_hk: 勝算與對數勝算：將概率映射至實數軸
+objective_en: Convert probabilities into odds, apply the natural logarithm to construct log-odds (logits), and explain how this transformation maps bounded [0, 1] probabilities onto the unbounded real number line.
+objective_zh: 将概率转化为几率，运用自然对数构建对数几率（Logit），并阐明该变换如何将受限在 [0, 1] 内的概率无约束映射至整条实数轴。
+objective_zh_hk: 將概率轉化為勝算，運用自然對數構建對數勝算（Logit），並闡明呢個變換點樣將受限喺 [0, 1] 內嘅概率無約束映射至成條實數軸。
+glossary:
+- en: Odds
+  zh: 几率
+  zh_hk: 勝算
+  lock: true
+- en: Log-Odds (Logit)
+  zh: 对数几率（Logit）
+  zh_hk: 對數勝算（Logit）
+  lock: true
+- en: Unbounded Mapping
+  zh: 无界映射
+  zh_hk: 無界映射
+  lock: true
+- en: Monotonic Transformation
+  zh: 单调变换
+  zh_hk: 單調變換
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: If a Metro Coffee app commuter has an 80% probability of redeeming a morning rush breakfast voucher (p = 0.80), what are their odds of redemption?
+  question_zh: 若某位 Metro Coffee App 通勤会员核销早高峰早餐券的概率为 80%（p = 0.80），其核销几率（Odds）是多少？
+  question_zh_hk: 如果某個 Metro Coffee App 返工會員換領早高峰早餐券嘅概率係 80%（p = 0.80），佢嘅換領勝算（Odds）係幾多？
+  options_en:
+  - 'A: 0.80'
+  - 'B: 4.00 (or 4 to 1)'
+  - 'C: 0.25 (or 1 to 4)'
+  - 'D: 1.25'
+  options_zh:
+  - 'A: 0.80'
+  - 'B: 4.00（或 4 比 1）'
+  - 'C: 0.25（或 1 比 4）'
+  - 'D: 1.25'
+  options_zh_hk:
+  - 'A: 0.80'
+  - 'B: 4.00（即係 4 比 1）'
+  - 'C: 0.25（即係 1 比 4）'
+  - 'D: 1.25'
+  answer: B
+  explanation_en: Odds = p / (1 - p) = 0.80 / 0.20 = 4.00. This is a ratio of event probability to non-event probability. It does not guarantee four redemptions in every five trials.
+  explanation_zh: 几率 = p / (1 - p) = 0.80 / 0.20 = 4.00。这是事件发生概率与不发生概率的比值，并不保证每五次试验必有四次核销。
+  explanation_zh_hk: 勝算 = p / (1 - p) = 0.80 / 0.20 = 4.00。呢個係事件發生概率同唔發生概率嘅比值，唔保證每五次試驗一定有四次換領。
+- id: Q2
+  type: multiple_choice
+  question_en: What happens to the log-odds, ln(p / (1 - p)), as the probability p varies from exactly 0.50 down toward 0, and up toward 1?
+  question_zh: 当概率 p 从 0.50 分别向 0 和向 1 逼近时，对数几率 ln(p / (1 - p)) 的取值会发生什么变化？
+  question_zh_hk: 當概率 p 由 0.50 分別向 0 同向 1 逼近嗰陣，對數勝算 ln(p / (1 - p)) 嘅取值會出現咩變化？
+  options_en:
+  - 'A: It remains strictly fixed between 0 and 1'
+  - 'B: At p = 0.50, log-odds = 0; as p approaches 0, it plunges to -infinity; as p approaches 1, it climbs to +infinity'
+  - 'C: It oscillates between -1.0 and +1.0 in a cosine curve'
+  - 'D: It mechanically forces residual variance to equal zero'
+  options_zh:
+  - 'A: 它的数值被严格锁定在 0 与 1 之间'
+  - 'B: 当 p = 0.50 时，对数几率为 0；当 p 逼近 0 时，暴跌至负无穷大；当 p 逼近 1 时，攀升至正无穷大'
+  - 'C: 它在 -1.0 到 +1.0 之间呈现余弦曲线震荡'
+  - 'D: 它在数学上机械性地将残差方差强制归零'
+  options_zh_hk:
+  - 'A: 佢嘅數值被嚴格鎖死喺 0 同 1 之間'
+  - 'B: 當 p = 0.50 嗰陣，對數勝算係 0；當 p 逼近 0 嗰陣，跌到負無限大；當 p 逼近 1 嗰陣，升到正無限大'
+  - 'C: 佢喺 -1.0 到 +1.0 之間展現餘弦波形震盪'
+  - 'D: 佢喺數學上機械式將殘差方差強制變做零'
+  answer: B
+  explanation_en: When p = 0.50, Odds = 1.0 and ln(1) = 0. As p -> 0, Odds -> 0 and ln(Odds) -> -infinity. As p -> 1, Odds -> +infinity and ln(Odds) -> +infinity. This maps bounded probabilities to the entire real line (-infinity, +infinity).
+  explanation_zh: 当 p = 0.50 时，几率 = 1.0，ln(1) = 0。当 p 趋近于 0 时，几率趋近于 0，ln(几率) 跌向负无穷大；当 p 趋近于 1 时，几率趋近正无穷大，ln(几率) 升向正无穷大。该变换成功将有界概率映射至整条实数轴 (-infinity, +infinity)。
+  explanation_zh_hk: 當 p = 0.50 嗰陣，勝算 = 1.0，ln(1) = 0。當 p 趨向 0 嗰陣，勝算趨向 0，ln(勝算) 跌到負無限大；當 p 趨向 1 嗰陣，勝算趨向正無限大，ln(勝算) 升到正無限大。呢個變換成功將有界概率映射到成條實數軸 (-infinity, +infinity)。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Mathematical Mapping Dilemma
+  kicker_zh: 数学映射困境
+  kicker_zh_hk: 數學映射困局
+  title_en: How Do We Break the [0, 1] Probability Wall?
+  title_zh: 如何打破零与一之间的概率围墙？
+  title_zh_hk: 點樣打破零同埋一之間嘅概率圍牆？
+  en: A probability must stay between zero and one, but a linear predictor can range across the entire real line. Logistic regression connects these spaces by transforming probability into odds and then log-odds. How do those transformations work, and how should a business reader interpret them?
+  zh: 概率必须处于 0 与 1 之间，但线性预测值可以覆盖整条实数轴。逻辑回归通过先把概率转化为几率，再转化为对数几率，把两个空间连接起来。这些变换如何运作？业务读者应当如何解读？
+  zh_hk: 概率必須處於 0 同 1 之間，但線性預測值可以覆蓋成條實數軸。邏輯回歸透過先將概率轉化做勝算，再轉化做對數勝算，將兩個空間連結起來。呢啲變換點樣運作？業務讀者應該點樣解讀？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Odds = p / (1 - p) and Logit(p) = ln(p / (1 - p))
+  formula_zh: 几率公式：Odds = p / (1 - p) 且 对数几率：Logit(p) = ln(p / (1 - p))
+  formula_zh_hk: 勝算公式：Odds = p / (1 - p) 兼且 對數勝算：Logit(p) = ln(p / (1 - p))
+  formula_tex: \operatorname{Odds}(p_i)=\frac{p_i}{1-p_i}\in(0,\infty),\quad \operatorname{logit}(p_i)=\ln\!\left(\frac{p_i}{1-p_i}\right)\in(-\infty,\infty),\quad 0<p_i<1
+  s1_en: For a probability strictly between zero and one, odds equal the probability of the event divided by the probability of no event. Odds below one favor non-occurrence, odds equal to one represent equal chances, and odds above one favor occurrence.
+  s1_zh: 对于严格介于 0 与 1 之间的概率，几率等于事件发生概率除以事件不发生概率。几率低于 1 表示不发生更占优势，等于 1 表示机会相等，高于 1 表示发生更占优势。
+  s1_zh_hk: 對於嚴格介乎 0 同 1 之間嘅概率，勝算等於事件發生概率除以事件唔發生概率。勝算低過 1 表示唔發生較佔優，等於 1 表示機會相等，高過 1 表示發生較佔優。
+  s2_en: Taking the natural logarithm of the odds gives the log-odds, or logit. For probabilities strictly between zero and one, this transformation maps the open probability interval onto the entire real line. At p equal to zero or one, the logit is not finite and is understood through limits.
+  s2_zh: 对几率取自然对数得到对数几率，即 Logit。对于严格介于 0 与 1 之间的概率，该变换把开放概率区间映射到整条实数轴。当 p 等于 0 或 1 时，Logit 不是有限值，只能通过极限理解。
+  s2_zh_hk: 對勝算取自然對數得到對數勝算，即 Logit。對於嚴格介乎 0 同 1 之間嘅概率，呢個變換將開放概率區間映射到成條實數軸。當 p 等於 0 或 1 時，Logit 唔係有限值，只可以透過極限理解。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: The Two-Step Bridge
+  left_zh: 两步跨越的无界桥梁
+  right_en: Monotonic Alignment
+  right_zh: 严格单调保序特性
+  s1_en: 'The odds transformation removes the upper probability ceiling: as p approaches one, one minus p approaches zero and the odds grow without bound. As p approaches zero, the odds approach zero but remain positive for interior probabilities.'
+  s1_zh: 几率变换消除了概率的上限：当 p 逼近 1 时，1 减 p 逼近 0，几率无界增长；当 p 逼近 0 时，几率逼近 0，但对区间内部概率仍保持为正。
+  s1_zh_hk: 勝算變換消除咗概率上限：當 p 逼近 1 時，1 減 p 逼近 0，勝算無界增長；當 p 逼近 0 時，勝算逼近 0，但對區間內部概率仍然保持正數。
+  s2_en: The logarithm then maps positive odds to the real line. Odds below one become negative log-odds, odds equal to one become zero, and odds above one become positive log-odds.
+  s2_zh: 自然对数进一步把正几率映射到实数轴。几率低于 1 时，对数几率为负；几率等于 1 时为零；几率高于 1 时为正。
+  s2_zh_hk: 自然對數進一步將正勝算映射到實數軸。勝算低過 1 時，對數勝算係負數；勝算等於 1 時係零；勝算高過 1 時係正數。
+  s3_en: Both transformations are strictly increasing for probabilities between zero and one. They preserve probability ordering, although equal changes in probability do not correspond to equal changes in odds or log-odds.
+  s3_zh: 对于 0 与 1 之间的概率，这两个变换都严格递增，因此会保留概率排序；但相同的概率变化并不对应相同的几率或对数几率变化。
+  s3_zh_hk: 對於 0 同 1 之間嘅概率，兩個變換都嚴格遞增，所以會保留概率排序；但相同嘅概率變化唔對應相同嘅勝算或者對數勝算變化。
+  left_zh_hk: 兩步跨越嘅無界橋樑
+  right_zh_hk: 嚴格單調保序特性
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Examine Low Probability Segment
+  step1_zh: 测算低潜客群负向映射
+  step2_en: Audit Fifty-Fifty Midpoint
+  step2_zh: 对账五五均势对数原点
+  step3_en: Scale Loyal High Probability
+  step3_zh: 拓展忠诚客群正向无界
+  s1_en: 'Step one: At p equal to 0.10, odds equal 0.10 divided by 0.90, approximately 0.111. The log-odds are ln(0.111), approximately -2.20.'
+  s1_zh: 第一步：当 p = 0.10 时，几率为 0.10 除以 0.90，约为 0.111；对数几率为 ln(0.111)，约为 -2.20。
+  s1_zh_hk: 第一步：當 p = 0.10 時，勝算係 0.10 除以 0.90，約為 0.111；對數勝算係 ln(0.111)，約為 -2.20。
+  s2_en: 'Step two: At p equal to 0.50, odds equal 1.00 and log-odds equal ln(1), or exactly zero. This is the midpoint of the probability scale and the origin of the logit scale.'
+  s2_zh: 第二步：当 p = 0.50 时，几率为 1.00，对数几率为 ln(1)，即恰好为 0。这是概率尺度的中点，也是 Logit 尺度的原点。
+  s2_zh_hk: 第二步：當 p = 0.50 時，勝算係 1.00，對數勝算係 ln(1)，即係剛好為 0。呢個係概率尺度中點，亦係 Logit 尺度原點。
+  s3_en: 'Step three: At p equal to 0.80, odds equal 0.80 divided by 0.20, or 4.00. The log-odds are ln(4), approximately 1.39. Odds of four mean four event chances for every one non-event chance, not four events guaranteed in five trials.'
+  s3_zh: 第三步：当 p = 0.80 时，几率为 0.80 除以 0.20，即 4.00；对数几率为 ln(4)，约为 1.39。四比一的几率表示事件机会与非事件机会之比，而不是保证五次试验必有四次发生。
+  s3_zh_hk: 第三步：當 p = 0.80 時，勝算係 0.80 除以 0.20，即 4.00；對數勝算係 ln(4)，約為 1.39。四比一勝算表示事件機會同非事件機會之比，而唔係保證五次試驗一定有四次發生。
+  step1_zh_hk: 測算低潛客群負向映射
+  step2_zh_hk: 對賬五五均勢對數原點
+  step3_zh_hk: 拓展忠誠客群正向無界
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Why Do Econometricians Love Log-Odds?
+  q1_zh: 计量经济学家为何偏爱对数几率？
+  q2_en: 'Audit Rule: Never Fit Probabilities Directly, Fit Logits'
+  q2_zh: 审计准则：直拟概率必碰壁，映射 Logit 解千愁
+  s1_en: Odds compare event and non-event probabilities, while log-odds place that comparison on an unbounded additive scale. The logit transformation therefore provides a convenient scale for a linear predictor.
+  s1_zh: 几率比较事件发生与不发生的概率，而对数几率把这一比较放到无界的加法尺度上。因此，Logit 变换为线性预测值提供了便利尺度。
+  s1_zh_hk: 勝算比較事件發生同唔發生嘅概率，而對數勝算將呢個比較放到無界加法尺度上。所以，Logit 變換為線性預測值提供方便尺度。
+  s2_en: 'Decision rule: distinguish probability, odds, and log-odds in every report. State the scale before interpreting a number, and convert back to probability when communicating operational likelihoods.'
+  s2_zh: 决策规则：每份报告都应区分概率、几率与对数几率。解读数值前先说明尺度，在沟通营运可能性时应转换回概率。
+  s2_zh_hk: 決策規則：每份報告都應該區分概率、勝算同對數勝算。解讀數值之前先說明尺度，溝通營運可能性時應該轉換返概率。
+  s3_en: For the supplied values, probabilities 0.10, 0.50, and 0.80 map to log-odds of approximately -2.20, 0.00, and 1.39. The ordering is preserved while the transformed scale spans the real line.
+  s3_zh: 对于给定数值，概率 0.10、0.50 与 0.80 分别映射为约 -2.20、0.00 与 1.39 的对数几率。排序保持不变，而变换后的尺度覆盖整条实数轴。
+  s3_zh_hk: 對於畀定數值，概率 0.10、0.50 同 0.80 分別映射做約 -2.20、0.00 同 1.39 嘅對數勝算。排序保持不變，而變換後尺度覆蓋成條實數軸。
+  q1_zh_hk: 計量經濟學家點解咁鍾意對數勝算？
+  q2_zh_hk: 審計準則：直擬概率必撞牆，映射 Logit 解千愁

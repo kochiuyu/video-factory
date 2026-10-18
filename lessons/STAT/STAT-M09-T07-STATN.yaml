@@ -1,0 +1,166 @@
+id: STAT-M09-T07-STATN
+course: STAT-M09
+course_en: Business Time Series & Demand Forecasting
+course_zh: 商业时间序列与需求预测
+course_zh_hk: 商業時間序列與需求預測
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Stationarity and Differencing: Managing Drift for Valid Inference'
+title_zh: 平稳性与差分：处理时序漂移以支持有效推断
+title_zh_hk: 平穩性與差分：處理時序漂移以支持有效推斷
+objective_en: Define weak stationarity, explain when first differencing can remove a unit-root stochastic trend, and evaluate whether the transformed series is suitable for inference without discarding possible long-run information.
+objective_zh: 界定弱平稳性，解释一阶差分何时能够去除单位根随机趋势，并评估变换后的序列是否适合推断，同时避免丢失可能存在的长期信息。
+objective_zh_hk: 界定弱平穩性，解釋一階差分幾時可以移除單位根隨機趨勢，並評估變換後嘅序列係咪適合推斷，同時避免丟失可能存在嘅長期信息。
+glossary:
+  - en: Weak Stationarity (Covariance Stationarity)
+    zh: 弱平稳性（协方差平稳性）
+    zh_hk: 弱平穩性（協方差平穩性）
+    lock: true
+  - en: First Differencing
+    zh: 一阶差分
+    zh_hk: 一階差分
+    lock: true
+  - en: Unit Root Process
+    zh: 单位根过程
+    zh_hk: 單位根過程
+    lock: true
+  - en: Integrated of Order 1, I(1)
+    zh: 一阶单整，I(1)
+    zh_hk: 一階單整，I(1)
+    lock: true
+quiz:
+  - id: Q1
+    type: multiple_choice
+    question_en: Which conditions define weak stationarity?
+    question_zh: 哪些条件界定弱平稳性？
+    question_zh_hk: 邊啲條件界定弱平穩性？
+    options_en:
+      - 'A: Constant mean, finite constant variance, and autocovariance depending only on lag'
+      - 'B: Every observation equals zero and variance is infinite'
+      - 'C: A perfectly rising straight line with no error'
+      - 'D: Durbin-Watson always equals 4'
+    options_zh:
+      - A：均值恒定、方差有限且恒定，自协方差只取决于滞后期
+      - B：所有观测都等于零，且方差无穷大
+      - C：无误差地沿直线上升
+      - D：德宾-沃森统计量始终等于 4
+    options_zh_hk:
+      - A：平均數固定、方差有限兼固定，自協方差只取決於滯後期
+      - B：所有觀測都等於零，而且方差無限大
+      - C：冇誤差噉沿直線上升
+      - D：德賓-沃森統計量永遠等於 4
+    answer: A
+    explanation_en: Weak stationarity requires a time-invariant mean, a finite time-invariant variance, and autocovariance determined by the lag rather than the calendar date.
+    explanation_zh: 弱平稳性要求均值不随时间变化、方差有限且不随时间变化，并且自协方差由滞后期而非具体日期决定。
+    explanation_zh_hk: 弱平穩性要求平均數唔隨時間變、方差有限兼唔隨時間變，而自協方差由滯後期而唔係具體日期決定。
+  - id: Q2
+    type: multiple_choice
+    question_en: When does first differencing a Unit Root Process produce a stationary change series?
+    question_zh: 对单位根过程进行一阶差分，什么时候会得到平稳变化序列？
+    question_zh_hk: 對單位根過程做一階差分，幾時會得到平穩變化序列？
+    options_en:
+      - 'A: When the innovation process is stationary and the series is I(1)'
+      - 'B: For every trending series without further checks'
+      - 'C: Only when all differences are negative'
+      - 'D: Whenever R-squared equals 1'
+    options_zh:
+      - A：当创新过程平稳且原序列为 I(1) 时
+      - B：对任何趋势序列都无须进一步检查
+      - C：只有所有差分都为负数时
+      - D：只要 R平方 等于 1
+    options_zh_hk:
+      - A：當創新過程平穩，而且原序列係 I(1) 嗰陣
+      - B：對任何趨勢序列都唔需要再檢查
+      - C：只有所有差分都係負數嗰陣
+      - D：只要 R平方 等於 1
+    answer: A
+    explanation_en: If Y_t = Y_{t-1} + u_t and u_t is stationary, then First Differencing gives Delta Y_t = u_t. Differencing does not guarantee stationarity for every series.
+    explanation_zh: 如果 Y_t = Y_{t-1} + u_t 且 u_t 平稳，那么一阶差分得到 Delta Y_t = u_t。差分并不保证任何序列都会平稳。
+    explanation_zh_hk: 如果 Y_t = Y_{t-1} + u_t，而且 u_t 平穩，咁一階差分就得到 Delta Y_t = u_t。差分唔保證任何序列都會平穩。
+beats:
+  - id: hook
+    visual: title_card
+    seconds: 30
+    kicker_en: Drifting Revenue Puzzle
+    kicker_zh: 营收漂移难题
+    kicker_zh_hk: 營業額漂移難題
+    title_en: How Can We Transform Drifting Data Without Losing the Business Question?
+    title_zh: 如何变换漂移数据，同时保留商业问题？
+    title_zh_hk: 點樣變換漂移數據，同時保留商業問題？
+    en: >-
+      Suppose daily revenue keeps drifting upward. A regression in raw levels may reflect accumulated time movement rather than a stable relationship. One possible transformation is to replace each level with its change from yesterday. But differencing is not automatic repair: analysts must first diagnose the source of non-stationarity and then check what information the transformation removes.
+    zh: >-
+      假设每日营收持续向上漂移。直接用水平值回归，可能反映的是随时间累积的移动，而不是稳定关系。一种可能的变换，是把每个水平值改为相对昨天的变化。但差分不是自动修复工具：分析师必须先诊断非平稳性的来源，再检查变换删除了哪些信息。
+    zh_hk: >-
+      假設每日營業額持續向上漂移。直接用水平值做回歸，可能反映嘅係隨時間累積嘅移動，而唔係穩定關係。一種可能嘅變換，係將每個水平值改成相對尋日嘅變化。但差分唔係自動修復工具：分析師要先診斷非平穩性來源，再檢查變換刪走咗邊啲信息。
+  - id: define
+    visual: definition_card
+    seconds: 34
+    formula: 'First difference: Delta Y_t = Y_t - Y_{t-1} = (1 - L)Y_t'
+    formula_zh: 一阶差分：Delta Y_t = Y_t - Y_{t-1} = (1 - L)Y_t
+    formula_zh_hk: 一階差分：Delta Y_t = Y_t - Y_{t-1} = (1 - L)Y_t
+    formula_tex: '\Delta Y_t=Y_t-Y_{t-1}=(1-L)Y_t'
+    s1_en: Weak Stationarity (Covariance Stationarity) means the mean and finite variance do not change with time, while covariance between observations depends only on their lag. It does not require observations to be independent or constant.
+    s1_zh: 弱平稳性（协方差平稳性）表示均值与有限方差不随时间变化，而观测之间的协方差只取决于滞后期。它并不要求各观测相互独立或数值恒定。
+    s1_zh_hk: 弱平穩性（協方差平穩性）表示平均數同有限方差唔隨時間變，而觀測之間嘅協方差只取決於滯後期。佢唔要求各個觀測互相獨立或者數值固定。
+    s2_en: First Differencing subtracts the previous level from the current one. For a Unit Root Process whose first difference is stationary, the original series is Integrated of Order 1, I(1). This is a model property to test, not a label inferred from a rising chart alone.
+    s2_zh: 一阶差分用当前水平减去上一期水平。若单位根过程的一阶差分平稳，原序列就是一阶单整，I(1)。这是需要检验的模型性质，不能只凭上升图形判断。
+    s2_zh_hk: 一階差分用目前水平減上一期水平。如果單位根過程嘅一階差分平穩，原序列就係一階單整，I(1)。呢個係要檢驗嘅模型性質，唔可以只憑上升圖形判斷。
+  - id: mechanics
+    visual: two_column
+    seconds: 36
+    left_en: What Differencing Can Do
+    left_zh: 差分可能做到什么
+    left_zh_hk: 差分可能做到乜嘢
+    right_en: What It Cannot Guarantee
+    right_zh: 差分不能保证什么
+    right_zh_hk: 差分唔保證乜嘢
+    s1_en: For the random walk Y_t = Y_{t-1} + u_t, the first difference is Delta Y_t = u_t. If the innovation u_t is stationary, differencing removes the accumulated stochastic trend.
+    s1_zh: 对随机游走 Y_t = Y_{t-1} + u_t，一阶差分得到 Delta Y_t = u_t。如果创新项 u_t 平稳，差分就会去除累积的随机趋势。
+    s1_zh_hk: 對隨機遊走 Y_t = Y_{t-1} + u_t，一階差分得到 Delta Y_t = u_t。如果創新項 u_t 平穩，差分就會移除累積嘅隨機趨勢。
+    s2_en: A visible trend may instead be deterministic, seasonal, structural, or part of a stable long-run relationship. Differencing without diagnosis can over-difference the data or discard information about levels.
+    s2_zh: 可见趋势也可能是确定性趋势、季节性、结构变化，或稳定长期关系的一部分。未经诊断就差分，可能导致过度差分，或丢失水平值中的信息。
+    s2_zh_hk: 見到嘅趨勢亦可能係確定性趨勢、季節性、結構轉變，或者穩定長期關係嘅一部分。未診斷就做差分，可能會過度差分，或者丟失水平值入面嘅信息。
+    s3_en: After transformation, stationarity and residual assumptions must be checked again. Valid inference depends on the completed model specification, not on differencing alone.
+    s3_zh: 变换后仍须重新检查平稳性与残差假设。推断是否有效，取决于完整的模型设定，而不是差分操作本身。
+    s3_zh_hk: 變換之後仍然要重新檢查平穩性同殘差假設。推斷係咪有效，取決於完整模型設定，而唔係差分操作本身。
+  - id: example
+    visual: example
+    seconds: 36
+    setup_en: 'Assume revenue levels: 100, 108, 113, 121'
+    setup_zh: 假设营收水平：100、108、113、121
+    setup_zh_hk: 假設營業額水平：100、108、113、121
+    result_en: 'First differences: 8, 5, 8'
+    result_zh: 一阶差分：8、5、8
+    result_zh_hk: 一階差分：8、5、8
+    s1_en: For illustration, suppose four consecutive revenue levels are 100, 108, 113, and 121. The original series shows the accumulated level at each date.
+    s1_zh: 为便于说明，假设连续四期营收水平为 100、108、113 和 121。原序列表示每个日期累计形成的水平。
+    s1_zh_hk: 為咗方便說明，假設連續四期營業額水平係 100、108、113 同 121。原序列表示每個日期累積形成嘅水平。
+    s2_en: >-
+      Subtract adjacent levels: 108 minus 100 equals 8, 113 minus 108 equals 5, and 121 minus 113 equals 8. The transformed series describes period-to-period changes rather than absolute scale.
+    s2_zh: 对相邻水平相减：108 减 100 等于 8，113 减 108 等于 5，121 减 113 等于 8。变换后的序列描述期与期之间的变化，而不是绝对规模。
+    s2_zh_hk: 將相鄰水平相減：108 減 100 等於 8，113 減 108 等於 5，121 減 113 等於 8。變換後嘅序列描述每期間嘅變化，而唔係絕對規模。
+    s3_en: These three values are not enough to establish stationarity. The analyst still needs a longer series, diagnostic plots or tests, and a model that preserves any economically meaningful long-run relationship.
+    s3_zh: 这三个数值不足以证明平稳性。分析师仍需要更长序列、诊断图或检验，以及能够保留有经济意义长期关系的模型。
+    s3_zh_hk: 呢三個數值唔足以證明平穩性。分析師仍然需要更長序列、診斷圖或者檢驗，同埋可以保留有經濟意義長期關係嘅模型。
+  - id: takeaway
+    visual: takeaway
+    seconds: 32
+    q1_en: When Does Differencing Help?
+    q1_zh: 差分什么时候有帮助？
+    q1_zh_hk: 差分幾時有幫助？
+    q2_en: Decision Rule
+    q2_zh: 决策规则
+    q2_zh_hk: 決策規則
+    s1_en: Differencing helps when a diagnosed integration process makes changes stationary. It changes the business interpretation from levels to period-by-period movements.
+    s1_zh: 当诊断出的单整过程经过差分后变得平稳时，差分会有帮助。它也会把商业解释从水平值改为逐期变化。
+    s1_zh_hk: 當診斷出嘅單整過程經過差分之後變得平穩，差分就有幫助。佢亦會將商業解讀由水平值改成逐期變化。
+    s2_en: Do not treat First Differencing as a universal antidote. Diagnose unit roots, deterministic trends, seasonality, breaks, and possible long-run relationships before choosing the transformation.
+    s2_zh: 不要把一阶差分视为万能解药。选择变换前，应诊断单位根、确定性趋势、季节性、结构突变及可能存在的长期关系。
+    s2_zh_hk: 唔好將一階差分當成萬能解藥。選擇變換之前，要診斷單位根、確定性趨勢、季節性、結構突變，同埋可能存在嘅長期關係。
+    s3_en: After differencing, verify stationarity and residual behavior, then evaluate out-of-sample performance. Only then should the transformed model inform operational decisions.
+    s3_zh: 差分后要验证平稳性与残差表现，并评估样本外表现。完成这些工作后，变换模型才适合用于支持运营决策。
+    s3_zh_hk: 差分之後要驗證平穩性同殘差表現，再評估樣本外表現。完成呢啲工作之後，變換模型先適合用嚟支持營運決策。

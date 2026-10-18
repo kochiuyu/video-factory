@@ -1,0 +1,491 @@
+id: STAT-M01-T04-MODE
+course: statistics
+course_en: Business Statistics
+course_zh: 商务统计
+course_zh_hk: 商務統計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 570
+title_en: What is the mode?
+title_zh: 什么是众数？
+title_zh_hk: 咩係眾數？
+objective_en: Decide which lid to run largest when the sizes are labels you cannot average, count which size customers choose most, and see a tie and a Monday with no mode.
+objective_zh: 当杯型是不能相加的标签时，判断该把哪一种杯盖安排最大的批次，清点顾客最常选的规格，并看到并列和没有众数的周一。
+objective_zh_hk: 當杯型係唔可以加埋嘅標籤時，判斷該將邊一種杯蓋安排最大嘅批次，清點顧客最常揀嘅規格，並睇到並列同冇眾數嘅星期一。
+glossary:
+- en: mode
+  zh: 众数
+  zh_hk: 眾數
+  lock: true
+- en: frequency
+  zh: 频数
+  zh_hk: 頻數
+  lock: true
+- en: categorical data
+  zh: 分类数据
+  zh_hk: 分類數據
+  lock: true
+- en: bimodal
+  zh: 双峰
+  zh_hk: 雙峰
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: How do you identify the mode in a customer sales record?
+  question_zh: 如何从顾客销售记录中找出众数？
+  question_zh_hk: 點樣喺顧客銷售記錄入面搵出眾數？
+  options_en:
+  - 'A: Add up all the numbers and divide by the customer count.'
+  - 'B: Sort all values in line and pick the exact middle item.'
+  - 'C: Count how often each value or category appears and select the one or more with the highest frequency.'
+  - 'D: Subtract the smallest order size from the largest order size.'
+  options_zh:
+  - 'A: 把所有数字加起来，除以顾客总人数。'
+  - 'B: 把所有数值排成一列，挑出正中间的那一个。'
+  - 'C: 统计每个数值或类别出现的次数，选出频数最高的一个或多个选项。'
+  - 'D: 用最大订单量减去最小订单量。'
+  options_zh_hk:
+  - 'A: 將所有數字加埋一齊，除以顧客總人數。'
+  - 'B: 將所有數值排成一列，揀出正中間嗰一個。'
+  - 'C: 統計每個數值或者類別出現嘅次數，揀出頻數最高嘅一個或者多個選項。'
+  - 'D: 用最大訂單量減去最少訂單量。'
+  answer: C
+  explanation_en: The mode is determined by frequency. A dataset may have one mode, more than one mode when top frequencies tie, or no mode when no value repeats.
+  explanation_zh: 众数由频数决定。最高频数没有并列时有一个众数；最高频数并列时可以有多个众数；没有任何数值重复时则可能没有众数。
+  explanation_zh_hk: 眾數由頻數決定。最高頻數冇並列嗰陣有一個眾數；最高頻數並列嗰陣可以有多個眾數；冇任何數值重複嗰陣就可能冇眾數。
+- id: Q2
+  type: multiple_choice
+  question_en: Why is the mode appropriate for choosing which categorical cup lid to prioritize?
+  question_zh: 为什么众数适合用来决定优先准备哪一类杯盖？
+  question_zh_hk: 點解眾數適合用嚟決定優先準備邊一類杯蓋？
+  options_en:
+  - 'A: Categories such as Small, Medium, and Large cannot be meaningfully averaged, but their frequencies can be counted.'
+  - 'B: The mode is always mathematically larger than the mean.'
+  - 'C: Retail inventory formulas ban the use of division.'
+  - 'D: The mode eliminates all competition between store branches.'
+  options_zh:
+  - 'A: 小杯、中杯和大杯等类别无法进行有意义的平均，但可以统计各自的频数。'
+  - 'B: 众数在数学上总是大于算术平均数。'
+  - 'C: 零售库存管理公式禁止使用除法运算。'
+  - 'D: 众数消除了所有门店分店之间的竞争。'
+  options_zh_hk:
+  - 'A: 細杯、中杯同大杯等類別冇辦法做有意義嘅平均，但可以統計各自嘅頻數。'
+  - 'B: 眾數喺數學上總是大多過算術平均數。'
+  - 'C: 零售庫存管理公式禁止使用除法運算。'
+  - 'D: 眾數消除咗所有門店分店之間嘅競爭。'
+  answer: A
+  explanation_en: For nominal categories, mean and median are not meaningful, but frequency is. The mode identifies the most common category and helps managers prioritize matching inventory.
+  explanation_zh: 对于名义分类数据，平均数与中位数没有意义，但频数有意义。众数找出最常见的类别，帮助管理者优先准备相应库存。
+  explanation_zh_hk: 對於名義分類數據，平均數同中位數冇意義，但頻數有意義。眾數搵出最常見嘅類別，幫管理者優先準備相應庫存。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 54
+  kicker: The Question
+  kicker_en: The Question
+  kicker_zh: 业务问题
+  kicker_zh_hk: 業務問題
+  title_en: What is the mode?
+  title_zh: 什么是众数？
+  title_zh_hk: 咩係眾數？
+  en: "Imagine you manage a coffee shop. The factory asks which lid should get the largest run before Monday. You sell Small, Medium, and Large. Each needs its own lid. A wrong mix means Medium runs out while Small lids pile up, even if the total looks enough. Which size do customers choose most? The number that answers that is called the mode. What is the mode?"
+  zh: "假设你管着一家咖啡店。工厂问，周一之前哪一种杯盖该安排最大的批次。你卖小杯、中杯和大杯。每一种都要自己的盖。规格错了，中杯会卖完，小杯盖会堆着，就算总数看起来够。顾客最常选哪一种？回答这个问题的数叫作众数。什么是众数？"
+  zh_hk: "假設你管緊一間咖啡店。工廠問，星期一之前邊一種杯蓋該安排最大嘅批次。你賣細杯、中杯同大杯。每一種都要自己嘅蓋。規格錯咗，中杯會賣晒，細杯蓋會堆住，就算總數睇落夠。顧客最常揀邊一種？回答呢個問題嘅數叫做眾數。咩係眾數？"
+- id: data
+  visual: table_grid
+  seconds: 46
+  rows: 3
+  cols: 2
+  kicker: Monday Orders
+  kicker_en: Monday Orders
+  kicker_zh: 周一订单
+  kicker_zh_hk: 星期一訂單
+  title_en: Three sizes. Count the orders.
+  title_zh: 三种规格。清点订单。
+  title_zh_hk: 三種規格。清點訂單。
+  row1_en: Small
+  row1_zh: 小杯
+  row1_zh_hk: 細杯
+  row2_en: Medium
+  row2_zh: 中杯
+  row2_zh_hk: 中杯
+  row3_en: Large
+  row3_zh: 大杯
+  row3_zh_hk: 大杯
+  col1_en: Size
+  col1_zh: 规格
+  col1_zh_hk: 規格
+  col2_en: Orders
+  col2_zh: 订单数
+  col2_zh_hk: 訂單數
+  c11_en: Small
+  c11_zh: 小杯
+  c11_zh_hk: 細杯
+  c12: "40"
+  c21_en: Medium
+  c21_zh: 中杯
+  c21_zh_hk: 中杯
+  c22: "280"
+  c31_en: Large
+  c31_zh: 大杯
+  c31_zh_hk: 大杯
+  c32: "100"
+  footer_en: 40, 280, 100
+  footer_zh: 40、280、100
+  footer_zh_hk: 40、280、100
+  s1_en: "Here are Monday's orders, grouped by size. Small, 40 orders. Medium, 280 orders. Large, 100 orders."
+  s1_zh: "这就是周一的订单，按规格分好。小杯，40笔。中杯，280笔。大杯，100笔。"
+  s1_zh_hk: "呢個就係星期一嘅訂單，按規格分好。細杯，40筆。中杯，280筆。大杯，100筆。"
+  s2_en: "These are labels, not cups you can add. Small plus Medium is not a size. You cannot share them equally and get a lid the factory can make."
+  s2_zh: "这些是标签，不是可以相加的杯数。小杯加中杯不是一种规格。你不能把它们平均分，得到一个工厂能做的盖。"
+  s2_zh_hk: "呢啲係標籤，唔係可以加埋嘅杯數。細杯加中杯唔係一種規格。你唔可以將佢哋平均分，得到一個工廠做得嘅蓋。"
+  s3_en: "So neither the average nor the middle of a line can answer the factory. Next we see why."
+  s3_zh: "所以平均数和排队的正中间都回答不了工厂。接下来看为什么。"
+  s3_zh_hk: "所以平均數同排隊嘅正中間都回答唔到工廠。跟住睇點解。"
+- id: why_not
+  visual: two_column
+  seconds: 48
+  kicker: Why Not
+  kicker_en: Why Not
+  kicker_zh: 为什么不行
+  kicker_zh_hk: 點解唔得
+  title_en: Mean and median need the wrong thing
+  title_zh: 平均数和中位数要的东西不对
+  title_zh_hk: 平均數同中位數要嘅嘢唔啱
+  left_en: "Mean needs numbers you can add"
+  left_zh: "平均数需要可以相加的数"
+  left_zh_hk: "平均數需要可以加埋嘅數"
+  right_en: "Median needs a real order"
+  right_zh: "中位数需要真正的次序"
+  right_zh_hk: "中位數需要真正嘅次序"
+  s1_en: "The average needs numbers you can add, then share. Small plus Medium is not a size. There is no average lid the factory can make."
+  s1_zh: "平均数需要可以相加的数，然后再平分。小杯加中杯不是一种规格。没有一个工厂能做的平均杯盖。"
+  s1_zh_hk: "平均數需要可以加埋嘅數，然後再平分。細杯加中杯唔係一種規格。冇一個工廠做得嘅平均杯蓋。"
+  s2_en: "The median needs a real line. You can force Small, Medium, Large into an order, but the middle of that line is not the size customers choose most. And drink names have no order at all. Americano, latte, cappuccino. No middle drink."
+  s2_zh: "中位数需要真正的一队。你可以把小杯、中杯、大杯硬排成一队，但那一队的正中间，不是顾客选得最多的规格。饮品的名字更没有次序。美式、拿铁、卡布奇诺。没有正中间的饮品。"
+  s2_zh_hk: "中位數需要真正嘅一隊。你可以將細杯、中杯、大杯硬排成一隊，但嗰一隊嘅正中間，唔係顧客揀得最多嘅規格。飲品嘅名更加冇次序。美式、拿鐵、卡布奇諾。冇正中間嘅飲品。"
+  s3_en: "So mean and median do not fit this question. We need a count of how often each size appears. Next we see what an equal run does."
+  s3_zh: "所以平均数和中位数都不适合这个问题。我们需要清点每一种规格出现多少次。接下来看平均分配的批次会怎样。"
+  s3_zh_hk: "所以平均數同中位數都唔適合呢個問題。我哋需要清點每一種規格出現幾多次。跟住睇平均分配嘅批次會點。"
+- id: plans
+  visual: two_column
+  seconds: 44
+  kicker: The Plans
+  kicker_en: The Plans
+  kicker_zh: 两套批次
+  kicker_zh_hk: 兩套批次
+  title_en: Equal lids. Medium runs out.
+  title_zh: 平均分配。中杯卖完。
+  title_zh_hk: 平均分配。中杯賣晒。
+  left_en: "Equal run: Small piles up"
+  left_zh: "平均分配：小杯盖堆着"
+  left_zh_hk: "平均分配：細杯蓋堆住"
+  right_en: "Medium has 280 orders"
+  right_zh: "中杯有 280 笔"
+  right_zh_hk: "中杯有 280 筆"
+  s1_en: "So which lid do you run largest? Suppose you split the run equally across the three sizes. Small has only 40 orders. Those lids pile up."
+  s1_zh: "那么哪一种安排最大？假设你把批次平均分给三种规格。小杯只有40笔。那些盖会堆着。"
+  s1_zh_hk: "咁邊一種安排最大？假設你將批次平均分畀三種規格。細杯只有40筆。嗰啲蓋會堆住。"
+  s2_en: "Medium has 280 orders. An equal share is not enough. Medium runs out, while Small lids sit in the box."
+  s2_zh: "中杯有280笔。平均的那一份不够。中杯会卖完，小杯盖还在箱子里。"
+  s2_zh_hk: "中杯有280筆。平均嗰一份唔夠。中杯會賣晒，細杯蓋仲喺箱入面。"
+  s3_en: "The factory needs the size customers choose most. Next we compare the three counts."
+  s3_zh: "工厂要的是顾客最常选的规格。接下来比较这三个数。"
+  s3_zh_hk: "工廠要嘅係顧客最常揀嘅規格。跟住比較呢三個數。"
+- id: count
+  visual: steps
+  seconds: 42
+  kicker: The Count
+  kicker_en: The Count
+  kicker_zh: 清点
+  kicker_zh_hk: 清點
+  title_en: Which count is highest?
+  title_zh: 哪个数最高？
+  title_zh_hk: 邊個數最高？
+  step1_en: "Small: 40"
+  step1_zh: "小杯：40"
+  step1_zh_hk: "細杯：40"
+  step2_en: "Medium: 280"
+  step2_zh: "中杯：280"
+  step2_zh_hk: "中杯：280"
+  step3_en: "Large: 100"
+  step3_zh: "大杯：100"
+  step3_zh_hk: "大杯：100"
+  step4_en: "280 is the highest"
+  step4_zh: "280 最高"
+  step4_zh_hk: "280 最高"
+  s1_en: "Count how often each size appears. That count is the frequency. Small appears 40 times."
+  s1_zh: "清点每一种规格出现多少次。这个次数叫作频数。小杯出现了40次。"
+  s1_zh_hk: "清點每一種規格出現幾多次。呢個次數叫做頻數。細杯出現咗40次。"
+  s2_en: "Medium appears 280 times. Large appears 100 times. We have not added the sizes. We have only counted the orders."
+  s2_zh: "中杯出现了280次。大杯出现了100次。我们没有把规格加起来。只是清点了订单。"
+  s2_zh_hk: "中杯出現咗280次。大杯出現咗100次。我哋冇將規格加起嚟。只係清點咗訂單。"
+  s3_en: "280 is higher than 40, and higher than 100. Medium is the size customers chose most. This count has a name."
+  s3_zh: "280高于40，也高于100。中杯是顾客选得最多的规格。这个次数有一个名字。"
+  s3_zh_hk: "280高過40，亦高過100。中杯係顧客揀得最多嘅規格。呢個次數有一個名。"
+- id: name_mode
+  visual: title_card
+  seconds: 32
+  kicker: The Name
+  kicker_en: The Name
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Mode
+  title_zh: 众数
+  title_zh_hk: 眾數
+  s1_en: "Mode. That is the name. It is the value, or the category, that appears most often. On this Monday it is Medium, with 280 orders. It works for numbers, and it extends to labels."
+  s1_zh: "众数。这就是那个名字。它是出现得最多的那个数，或者那个类别。这个周一是中杯，280笔。它对数用得上，也能用到标签上。"
+  s1_zh_hk: "眾數。呢個就係嗰個名。佢係出現得最多嗰個數，或者嗰個類別。呢個星期一係中杯，280筆。佢對數用得上，亦用到標籤上。"
+- id: good
+  visual: two_column
+  seconds: 44
+  kicker: Why It Helps
+  kicker_en: Why It Helps
+  kicker_zh: 它好在哪里
+  kicker_zh_hk: 佢好喺邊度
+  title_en: It extends to labels
+  title_zh: 它也能用到标签上
+  title_zh_hk: 佢都用到標籤上
+  left_en: "Numbers: count the value"
+  left_zh: "数字：清点那个数"
+  left_zh_hk: "數字：清點嗰個數"
+  right_en: "Labels: count the category"
+  right_zh: "标签：清点那个类别"
+  right_zh_hk: "標籤：清點嗰個類別"
+  s1_en: "The mode started as a count of a number. It extends to categorical data, labels you cannot add. Small, Medium, and Large are labels. You can still count them."
+  s1_zh: "众数起初是清点一个数。它也能用到分类数据上，就是不能相加的标签。小杯、中杯、大杯是标签。你仍然可以清点。"
+  s1_zh_hk: "眾數起初係清點一個數。佢都用到分類數據上，就係唔可以加埋嘅標籤。細杯、中杯、大杯係標籤。你仍然可以清點。"
+  s2_en: "The same is true of drink names. Americano, latte, cappuccino. No average drink, and no middle drink. But each order still adds one to a count. The highest count is the mode."
+  s2_zh: "饮品的名字也一样。美式、拿铁、卡布奇诺。没有平均的饮品，也没有正中间的饮品。但每一笔订单仍然给一个计数加一。最高的计数就是众数。"
+  s2_zh_hk: "飲品嘅名都一樣。美式、拿鐵、卡布奇諾。冇平均嘅飲品，亦冇正中間嘅飲品。但每一筆訂單仍然畀一個計數加一。最高嘅計數就係眾數。"
+  s3_en: "So the mode reaches further than the average or the middle. It has two drawbacks. Next, a Monday where two sizes tie."
+  s3_zh: "所以众数比平均数和正中间走得更远。它有两个缺点。接下来，一个两种规格并列的周一。"
+  s3_zh_hk: "所以眾數比起平均數同正中間行得更遠。佢有兩個缺點。跟住，一個兩種規格並列嘅星期一。"
+- id: tie
+  visual: table_grid
+  seconds: 44
+  rows: 3
+  cols: 2
+  kicker: A Tie
+  kicker_en: A Tie
+  kicker_zh: 并列
+  kicker_zh_hk: 並列
+  title_en: Two sizes share the highest count
+  title_zh: 两种规格并列最高
+  title_zh_hk: 兩種規格並列最高
+  row1_en: Small
+  row1_zh: 小杯
+  row1_zh_hk: 細杯
+  row2_en: Medium
+  row2_zh: 中杯
+  row2_zh_hk: 中杯
+  row3_en: Large
+  row3_zh: 大杯
+  row3_zh_hk: 大杯
+  col1_en: Size
+  col1_zh: 规格
+  col1_zh_hk: 規格
+  col2_en: Orders
+  col2_zh: 订单数
+  col2_zh_hk: 訂單數
+  c11_en: Small
+  c11_zh: 小杯
+  c11_zh_hk: 細杯
+  c12: "40"
+  c21_en: Medium
+  c21_zh: 中杯
+  c21_zh_hk: 中杯
+  c22: "150"
+  c31_en: Large
+  c31_zh: 大杯
+  c31_zh_hk: 大杯
+  c32: "150"
+  footer_en: Medium and Large both 150
+  footer_zh: 中杯和大杯都是 150
+  footer_zh_hk: 中杯同大杯都係 150
+  s1_en: "Suppose a second Monday. Small 40, Medium 150, Large 150. Medium and Large share the highest count."
+  s1_zh: "假设另一个周一。小杯40，中杯150，大杯150。中杯和大杯并列最高。"
+  s1_zh_hk: "假設另一個星期一。細杯40，中杯150，大杯150。中杯同大杯並列最高。"
+  s2_en: "There is no single winner. Both are modes. Two sizes should get the large run, not one."
+  s2_zh: "没有唯一的赢家。两个都是众数。两种规格都该安排大的批次，不是一种。"
+  s2_zh_hk: "冇唯一嘅贏家。兩個都係眾數。兩種規格都該安排大嘅批次，唔係一種。"
+  s3_en: "When two categories tie for the highest count, we say the file is bimodal. The name can wait. Next, a Monday with no mode."
+  s3_zh: "当两个类别并列最高时，我们说这份记录是双峰的。名字可以等一等。接下来，一个没有众数的周一。"
+  s3_zh_hk: "當兩個類別並列最高時，我哋話呢份記錄係雙峰嘅。名可以等一等。跟住，一個冇眾數嘅星期一。"
+- id: none
+  visual: table_grid
+  seconds: 40
+  rows: 3
+  cols: 2
+  kicker: No Mode
+  kicker_en: No Mode
+  kicker_zh: 没有众数
+  kicker_zh_hk: 冇眾數
+  title_en: Every size appears once
+  title_zh: 每种规格只出现一次
+  title_zh_hk: 每種規格只出現一次
+  row1_en: Small
+  row1_zh: 小杯
+  row1_zh_hk: 細杯
+  row2_en: Medium
+  row2_zh: 中杯
+  row2_zh_hk: 中杯
+  row3_en: Large
+  row3_zh: 大杯
+  row3_zh_hk: 大杯
+  col1_en: Size
+  col1_zh: 规格
+  col1_zh_hk: 規格
+  col2_en: Orders
+  col2_zh: 订单数
+  col2_zh_hk: 訂單數
+  c11_en: Small
+  c11_zh: 小杯
+  c11_zh_hk: 細杯
+  c12: "1"
+  c21_en: Medium
+  c21_zh: 中杯
+  c21_zh_hk: 中杯
+  c22: "1"
+  c31_en: Large
+  c31_zh: 大杯
+  c31_zh_hk: 大杯
+  c32: "1"
+  footer_en: No size appears more than the others
+  footer_zh: 没有一种比其他的更多
+  footer_zh_hk: 冇一種多過其他
+  s1_en: "One more case, so the rule is complete. Suppose three orders, one of each size. Small once, Medium once, Large once."
+  s1_zh: "再补一种情况，规则才完整。假设三笔订单，每种规格一笔。小杯一次，中杯一次，大杯一次。"
+  s1_zh_hk: "再補一種情況，規則先完整。假設三筆訂單，每種規格一筆。細杯一次，中杯一次，大杯一次。"
+  s2_en: "No size appears more often than the others. There is no mode. The count does not pick a winner."
+  s2_zh: "没有一种比其他的出现得更多。没有众数。这个清点选不出赢家。"
+  s2_zh_hk: "冇一種多過其他出現。冇眾數。呢個清點揀唔出贏家。"
+  s3_en: "Two drawbacks. There may be more than one mode, as on the tie. There may be no mode, as when nothing repeats. Hence we also read the mode from grouped data. Next, five days that never repeat."
+  s3_zh: "两个缺点。可能有不止一个众数，就像刚才的并列。也可能没有众数，就像没有任何重复。所以我们也从分组数据里读众数。接下来，五天都不重复。"
+  s3_zh_hk: "兩個缺點。可能有多過一個眾數，好似頭先嘅並列。亦可能冇眾數，好似冇任何重複。所以我哋都由分組數據入面讀眾數。跟住，五日都唔重複。"
+- id: grouped
+  visual: table_grid
+  seconds: 48
+  rows: 3
+  cols: 2
+  kicker: Grouped Data
+  kicker_en: Grouped Data
+  kicker_zh: 分组数据
+  kicker_zh_hk: 分組數據
+  title_en: Group the days. Count the groups.
+  title_zh: 把这些天分组。清点每一组。
+  title_zh_hk: 將呢啲日分組。清點每一組。
+  row1_en: Under 100
+  row1_zh: 100 以下
+  row1_zh_hk: 100 以下
+  row2_en: 100 to 150
+  row2_zh: 100 到 150
+  row2_zh_hk: 100 到 150
+  row3_en: Over 150
+  row3_zh: 150 以上
+  row3_zh_hk: 150 以上
+  col1_en: Group
+  col1_zh: 组别
+  col1_zh_hk: 組別
+  col2_en: Days
+  col2_zh: 天数
+  col2_zh_hk: 日數
+  c11_en: 52, 64
+  c11_zh: 52、64
+  c11_zh_hk: 52、64
+  c12: "2"
+  c21_en: 100, 136, 148
+  c21_zh: 100、136、148
+  c21_zh_hk: 100、136、148
+  c22: "3"
+  c31_en: none
+  c31_zh: 没有
+  c31_zh_hk: 冇
+  c32: "0"
+  footer_en: Modal class is 100 to 150
+  footer_zh: 众数组是 100 到 150
+  footer_zh_hk: 眾數組係 100 到 150
+  s1_en: "Suppose five days sold 52, 64, 100, 136, and 148 cups. Every day is different. Nothing repeats, so there is no mode."
+  s1_zh: "假设五天卖了52、64、100、136和148杯。每一天都不同。没有重复，所以没有众数。"
+  s1_zh_hk: "假設五日賣咗52、64、100、136同148杯。每一日都唔同。冇重複，所以冇眾數。"
+  s2_en: "Group them. Under 100 has two days. From 100 to 150 has three days. Over 150 has none. We have not added the cups. We have only counted the groups."
+  s2_zh: "把它们分组。100以下有两天。100到150有三天。150以上没有。我们没有把杯数加起来。只是清点了每一组。"
+  s2_zh_hk: "將佢哋分組。100以下有兩日。100到150有三日。150以上冇。我哋冇將杯數加起嚟。只係清點咗每一組。"
+  s3_en: "The group with the highest count is the modal class. Here it is 100 to 150. That is the mode for grouped data. It does not name one day. It names the busiest band."
+  s3_zh: "次数最高的那一组叫作众数组。这里是100到150。这就是分组数据的众数。它不说出某一天。它说出最忙的那一段。"
+  s3_zh_hk: "次數最高嗰一組叫做眾數組。呢度係100到150。呢個就係分組數據嘅眾數。佢唔講出某一日。佢講出最忙嗰一段。"
+- id: defn
+  visual: definition_card
+  seconds: 42
+  kicker: The Definition
+  kicker_en: The Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Mode, written down
+  title_zh: 众数，写成定义
+  title_zh_hk: 眾數，寫成定義
+  formula: 'Mode = the value or category with the highest frequency'
+  formula_zh: '众数 = 频数最高的数值或类别'
+  formula_zh_hk: '眾數 = 頻數最高嘅數值或者類別'
+  gloss: 'Monday: Medium, 280. Grouped: 100 to 150.'
+  gloss_zh: '周一：中杯，280。分组：100 到 150。'
+  gloss_zh_hk: '星期一：中杯，280。分組：100 到 150。'
+  s1_en: "Here is the written form. Count how often each value, or each category, appears. The one with the highest count is the mode. If two tie, both are modes. If nothing repeats, there is no mode, so group the values and read the busiest band."
+  s1_zh: "这就是写法。清点每个数，或者每个类别，出现多少次。次数最高的那个就是众数。如果两个并列，两个都是。如果没有重复，就没有众数，所以把这些数分组，读出最忙的那一段。"
+  s1_zh_hk: "呢個就係寫法。清點每個數，或者每個類別，出現幾多次。次數最高嗰個就係眾數。如果兩個並列，兩個都係。如果冇重複，就冇眾數，所以將呢啲數分組，讀出最忙嗰一段。"
+  s2_en: "On the first Monday the mode is Medium, 280 orders. It is about how often, not about adding the sizes. This is the definition. It is not an order to make only Medium lids."
+  s2_zh: "第一个周一，众数是中杯，280笔。它看的是出现多少次，不是把规格加起来。这就是定义。它不是只做中杯盖的指令。"
+  s2_zh_hk: "第一個星期一，眾數係中杯，280筆。佢睇嘅係出現幾多次，唔係將規格加起嚟。呢個就係定義。佢唔係只做中杯蓋嘅指令。"
+- id: limit
+  visual: two_column
+  seconds: 44
+  kicker: The Limit
+  kicker_en: The Limit
+  kicker_zh: 限度
+  kicker_zh_hk: 限度
+  title_en: Prioritize the mode. Stock the rest.
+  title_zh: 优先众数。其余也要备。
+  title_zh_hk: 優先眾數。其餘都要備。
+  left_en: Why it helps
+  left_zh: 它有什么用
+  left_zh_hk: 佢有咩用
+  right_en: What it is not
+  right_zh: 它不是什么
+  right_zh_hk: 佢唔係乜
+  s1_en: "So why keep the mode? It tells the factory which lid customers choose most, and it works when the labels cannot be added. Medium should get the largest run."
+  s1_zh: "那么为什么还要留着众数？它告诉工厂顾客最常选哪一种盖，而且标签不能相加时它也能用。中杯该安排最大的批次。"
+  s1_zh_hk: "咁點解仲要留住眾數？佢話工廠知顧客最常揀邊一種蓋，而且標籤唔可以加埋時佢都用得。中杯該安排最大嘅批次。"
+  s2_en: "But the mode is not an order to make only Medium. Small and Large still have 140 orders. Those customers need lids too. Two different mixes can also share the same mode. Keep the full table in view."
+  s2_zh: "但众数不是只做中杯盖的指令。小杯和大杯还有140笔。那些顾客也要盖。两种不同的组合，也可能有同一个众数。所以还要看着整张表。"
+  s2_zh_hk: "但眾數唔係只做中杯蓋嘅指令。細杯同大杯仲有140筆。嗰啲顧客都要蓋。兩種唔同嘅組合，亦可能有同一個眾數。所以仲要睇住成張表。"
+  s3_en: "And 280 is not an order to make exactly 280 Medium lids. It has no safety stock in it. It says which size appears most."
+  s3_zh: "而且280不是正好做280个中杯盖的指令。它里面没有安全库存。它说的是哪一种出现得最多。"
+  s3_zh_hk: "而且280唔係啱啱做280個中杯蓋嘅指令。佢入面冇安全庫存。佢講嘅係邊一種出現得最多。"
+- id: answer
+  visual: takeaway
+  seconds: 48
+  kicker: The Answer
+  kicker_en: The Answer
+  kicker_zh: 回答问题
+  kicker_zh_hk: 回答問題
+  title_en: Run Medium largest. Stock the rest.
+  title_zh: 中杯最大。其余也备。
+  title_zh_hk: 中杯最大。其餘都備。
+  q1_en: Which lid should get the largest run?
+  q1_zh: 哪一种杯盖该安排最大的批次？
+  q1_zh_hk: 邊一種杯蓋該安排最大嘅批次？
+  q2_en: What else is needed before you set the run?
+  q2_zh: 定批次之前，还需要什么？
+  q2_zh_hk: 定批次之前，仲需要咩？
+  s1_en: "Back to the question. Medium. It appears 280 times, more than Small at 40 and Large at 100. Medium is the mode, so it gets the largest run."
+  s1_zh: "回到问题。中杯。它出现了280次，多于小杯的40和大杯的100。中杯是众数，所以它安排最大的批次。"
+  s1_zh_hk: "返到問題。中杯。佢出現咗280次，多過細杯嘅40同大杯嘅100。中杯係眾數，所以佢安排最大嘅批次。"
+  s2_en: "A tie means two modes, and both get a large run. No repeat means no mode, and the count does not pick. Use the mode when the labels cannot be added, and you need the most common choice."
+  s2_zh: "并列就是两个众数，两个都安排大的批次。没有重复就没有众数，清点选不出。标签不能相加，而你要最常见的选择时，用众数。"
+  s2_zh_hk: "並列就係兩個眾數，兩個都安排大嘅批次。冇重複就冇眾數，清點揀唔出。標籤唔可以加埋，而你要最常見嘅選擇時，用眾數。"
+  s3_en: "Before you set the run, still look at Small and Large. These numbers describe only the Monday we supposed. The mode says which size appears most. It does not write the full order by itself."
+  s3_zh: "定批次之前，还是要看小杯和大杯。这些数只描述我们假设的这个周一。众数说的是哪一种出现得最多。它不能单独写下整张订单。"
+  s3_zh_hk: "定批次之前，仲係要睇細杯同大杯。呢啲數只係描述我哋假設嘅呢個星期一。眾數講嘅係邊一種出現得最多。佢唔可以單獨寫低成張訂單。"

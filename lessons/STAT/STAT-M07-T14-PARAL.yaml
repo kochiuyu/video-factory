@@ -1,0 +1,170 @@
+id: STAT-M07-T14-PARAL
+course: STAT-M07
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: Parallel Trends & Placebo Audits
+title_zh: 平行趋势假定与安慰剂检验
+title_zh_hk: 平行趨勢假定與安慰劑檢驗
+objective_en: Evaluate the Parallel Trends Assumption in Difference-in-Differences, use pre-intervention plots and placebo tests as diagnostic evidence, and identify differential local trends that threaten the design.
+objective_zh: 评估双重差分法中的平行趋势假定，使用干预前趋势图和安慰剂检验作为诊断证据，并识别威胁研究设计的局部差异趋势。
+objective_zh_hk: 評估雙重差分法入面嘅平行趨勢假定，使用干預前趨勢圖同安慰劑檢驗作為診斷證據，並識別威脅研究設計嘅局部差異趨勢。
+glossary:
+- en: Parallel Trends Assumption
+  zh: 平行趋势假定
+  zh_hk: 平行趨勢假定
+  lock: true
+  zh_zh_hk: 平行趨勢假定
+- en: Placebo Test
+  zh: 安慰剂检验
+  zh_hk: 安慰劑檢驗
+  lock: true
+  zh_zh_hk: 安慰劑檢驗
+- en: Counterfactual Trajectory
+  zh: 反事实轨迹
+  zh_hk: 反事實軌跡
+  lock: true
+  zh_zh_hk: 反事實軌跡
+- en: Differential Local Trend
+  zh: 局部差异趋势
+  zh_hk: 局部差異趨勢
+  lock: true
+  zh_zh_hk: 局部差異趨勢
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: What does the Parallel Trends assumption fundamentally state in Metro Coffee's automated tamper experiment?
+  question_zh: 在 Metro Coffee 的自动填压机实验中，平行趋势假定的核心含义是什么？
+  question_zh_hk: 喺 Metro Coffee 嘅自動填壓機實驗入面，平行趨勢假定嘅核心含義係咩？
+  options_en:
+  - 'A: Treated Wan Chai and control Mong Kok must sell the exact same baseline cup volume before treatment'
+  - 'B: In the absence of the tamper upgrade, the sales trajectory of Wan Chai would have evolved parallel to that of Mong Kok'
+  - 'C: Both branches must have identical store floor square footage and employee headcount'
+  - 'D: The coefficient of determination R-squared must equal 1.0 in both branches'
+  options_zh:
+  - 'A: 改造前处理组湾仔店与对照组旺角店的基础出杯量必须绝对相等'
+  - 'B: 若没有安装自动填压机，湾仔店的销量演进轨迹应与旺角店保持平行'
+  - 'C: 两家门店的营业建筑面积与员工总人数必须完全一致'
+  - 'D: 两家门店各自回归模型的判定系数 R平方 必须严格等于 1.0'
+  options_zh_hk:
+  - 'A: 改裝前處理組灣仔店同對照組旺角店嘅基礎出杯量必須絕對相等'
+  - 'B: 如果冇裝自動填壓機，灣仔店嘅銷量演進軌跡理應同旺角店保持平行'
+  - 'C: 兩間門市嘅營業樓面面積同員工總人數必須完全一樣'
+  - 'D: 兩間門市各自回歸模型嘅判定系數 R平方 必須嚴格等於 1.0'
+  answer: B
+  explanation_en: Parallel trends does not require equal baseline levels. It requires that, without treatment, the groups would have experienced the same average change over time, possibly conditional on prespecified covariates.
+  explanation_zh: 平行趋势不要求基准水平相等，而是要求在没有处理时，两组会经历相同的平均时间变化；该要求也可以是在预先设定协变量条件下成立。
+  explanation_zh_hk: 平行趨勢唔要求基準水平相等，而係要求喺冇處理時，兩組會經歷相同嘅平均時間變化；個要求亦可以喺預先設定協變量條件之下成立。
+- id: Q2
+  type: multiple_choice
+  question_en: Which placebo result would be most consistent with, but would not prove, parallel pre-treatment trends?
+  question_zh: 哪一种安慰剂结果最符合处理前平行趋势，但仍不能证明该假定？
+  question_zh_hk: 邊一種安慰劑結果最符合處理前平行趨勢，但仍然唔能夠證明個假定？
+  options_en:
+  - 'A: A placebo interaction estimate close to zero relative to its uncertainty'
+  - 'B: The placebo interaction coefficient beta_3 is positive and exceeds +50 cups'
+  - 'C: R-squared drops to zero while residual variance becomes negative'
+  - 'D: The main effect of the treatment dummy beta_1 disappears completely'
+  options_zh:
+  - 'A: 安慰剂交互项估计值相对于其不确定性接近零'
+  - 'B: 安慰剂交互项系数 beta_3 显著为正且超过 +50 杯'
+  - 'C: R平方 跌落为零且残差方差变为负数'
+  - 'D: 处理组主效应虚拟变量系数 beta_1 完全消失归零'
+  options_zh_hk:
+  - 'A: 安慰劑交互項估計值相對於不確定性接近零'
+  - 'B: 安慰劑交互項系數 beta_3 顯著係正數兼且超過 +50 杯'
+  - 'C: R平方 跌到變零而且殘差方差變成負數'
+  - 'D: 處理組主效應虛擬變量系數 beta_1 完全消失變做零'
+  answer: A
+  explanation_en: Because no true treatment occurred in the placebo window, an estimate near zero relative to its uncertainty is consistent with no detectable differential pre-trend. It does not prove parallel trends, especially when the test has limited power.
+  explanation_zh: 由于安慰剂窗口内没有真实处理，相对于不确定性接近零的估计值与未检测到差异性处理前趋势一致。但它不能证明平行趋势，尤其是在检验能力有限时。
+  explanation_zh_hk: 由於安慰劑窗口入面冇真實處理，相對於不確定性接近零嘅估計值同未檢測到差異性處理前趨勢一致。但佢唔能夠證明平行趨勢，尤其係檢驗能力有限時。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Boardroom Challenge
+  kicker_zh: 董事会质询
+  kicker_zh_hk: 董事會質詢
+  title_en: Was Wan Chai Already Outpacing Mong Kok?
+  title_zh: 湾仔店此前是否本就增长得更快？
+  title_zh_hk: 灣仔店之前係咪本來就升得快過旺角？
+  en: Metro Coffee estimates a 20-cup DiD increase after automated tampers are installed at Wan Chai. But suppose Wan Chai had already been growing faster than Mong Kok before installation. The estimated effect could then mix the upgrade with a pre-existing local trend. How can historical data help assess whether Mong Kok is a credible comparison store?
+  zh: Metro Coffee 在湾仔安装自动填压机后估计出 20 杯的 DiD 增量。但如果湾仔在装机前本来就比旺角增长更快，估计值便可能混合设备升级与既有的局部趋势。历史数据如何帮助评估旺角是否为可信的对照门店？
+  zh_hk: Metro Coffee 喺灣仔安裝自動填壓機之後，估計出 20 杯嘅 DiD 增量。但如果灣仔喺裝機之前本來就升得快過旺角，估計值就可能混合設備升級同既有局部趨勢。歷史數據點樣幫助評估旺角係咪可信嘅對照門市？
+  zh_zh_hk: Metro Coffee 喺灣仔安裝自動填壓機之後，估計出 20 杯嘅 DiD 增量。但如果灣仔喺裝機之前本來就升得快過旺角，估計值就可能混合設備升級同既有局部趨勢。歷史數據點樣幫助評估旺角係咪可信嘅對照門市？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: 'Parallel Trends: E[Y_T,post(0) - Y_T,pre(0)] = E[Y_C,post(0) - Y_C,pre(0)]'
+  formula_zh: 平行趋势假定：E[Y_处理,后(0) - Y_处理,前(0)] = E[Y_对照,后(0) - Y_对照,前(0)]
+  formula_zh_hk: 平行趨勢假定：E[Y_處理,後(0) - Y_處理,前(0)] = E[Y_對照,後(0) - Y_對照,前(0)]
+  formula_tex: E[Y_{T,\text{post}}(0)-Y_{T,\text{pre}}(0)] = E[Y_{C,\text{post}}(0)-Y_{C,\text{pre}}(0)]
+  s1_en: The Parallel Trends Assumption states that, without treatment, the treated and comparison groups would have experienced the same average change over time. It concerns the unobserved untreated trajectory after intervention, so it cannot be verified directly.
+  s1_zh: 平行趋势假定认为，在没有处理的情况下，处理组与对照组的平均结果会随时间发生相同变化。它涉及干预后不可观测的未处理轨迹，因此无法被直接验证。
+  s1_zh_hk: 平行趨勢假定認為，喺冇處理嘅情況之下，處理組同對照組嘅平均結果會隨時間發生相同變化。佢涉及干預後不可觀測嘅未處理軌跡，所以無法直接驗證。
+  s2_en: Parallel trends does not require equal starting levels. Wan Chai may begin above Mong Kok. The identifying requirement is equality of untreated average changes, after accounting for the design and any prespecified conditioning variables.
+  s2_zh: 平行趋势不要求两组起始水平相等，湾仔可以高于旺角。识别要求是在研究设计及预先设定的条件变量下，两组未处理的平均变化相同。
+  s2_zh_hk: 平行趨勢唔要求兩組起始水平相等，灣仔可以高過旺角。識別要求係喺研究設計同預先設定嘅條件變量之下，兩組未處理嘅平均變化相同。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: The Unobservable Counterfactual
+  left_zh: 不可观测的反事实困境
+  right_en: The Pre-Period Placebo Test
+  right_zh: 干预前安慰剂检验
+  s1_en: Because Wan Chai actually received the tampers, its untreated post-period state is an unobservable counterfactual. We can never directly observe Wan Chai in the post-period without the machines.
+  s1_zh: 因为湾仔店确实安装了新机器，它在改造后‘若未装机’的状态属于不可直接观测的反事实。我们永远无法在现实中观测到同一个湾仔在后时期不装机器的模样。
+  s1_zh_hk: 因為灣仔店確實裝咗新機，佢喺改裝後‘如果冇裝機’嘅狀態屬於不可直接觀測嘅反事實。我哋永遠冇可能喺現實睇到同一間灣仔店喺後期冇裝機嘅樣。
+  s2_en: Historical pre-treatment outcomes can be plotted and modeled to look for differential movement before rollout. A placebo intervention date asks whether the design would falsely report an effect before treatment actually occurred.
+  s2_zh: 可以绘制并建模处理前历史结果，以检查推广前是否已经存在差异性变化。设定虚构干预日期的安慰剂检验，用于判断该设计是否会在实际处理发生前错误报告效应。
+  s2_zh_hk: 可以繪製同建模處理前歷史結果，檢查推廣之前係咪已經存在差異性變化。設定虛構干預日期嘅安慰劑檢驗，用嚟判斷個設計會唔會喺實際處理發生之前錯誤報告效應。
+  s3_en: A placebo estimate near zero is evidence consistent with parallel pre-trends, but failure to reject zero does not prove the assumption. Power may be limited, and post-treatment differential shocks can still invalidate the design.
+  s3_zh: 接近零的安慰剂估计值与处理前平行趋势一致，但未能拒绝零并不能证明假定成立。检验能力可能有限，处理后的差异性冲击仍可能使设计失效。
+  s3_zh_hk: 接近零嘅安慰劑估計值同處理前平行趨勢一致，但未能拒絕零並唔能夠證明假定成立。檢驗能力可能有限，處理後嘅差異性衝擊仍然可能令設計失效。
+  left_zh_hk: 不可觀測嘅反事實困境
+  right_zh_hk: 干預前安慰劑檢驗
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Isolate Pre-Rollout Window
+  step1_zh: 提取干预前历史窗口
+  step2_en: Inject Fake Placebo Timing
+  step2_zh: 注入虚构安慰剂时间点
+  step3_en: Audit Placebo Interaction
+  step3_zh: 核查伪交互项显著性
+  s1_en: 'Step one: Use the supplied pre-installation observations from weeks -4 through -1 for Wan Chai and Mong Kok. Inspect the level paths and period-to-period changes before defining any placebo date.'
+  s1_zh: 第一步：使用给定的湾仔与旺角第 -4 周至第 -1 周装机前观测。在设定任何安慰剂日期前，先检查水平路径与各期变化。
+  s1_zh_hk: 第一步：使用畀定嘅灣仔同旺角第 -4 個禮拜至第 -1 個禮拜裝機前觀測。設定任何安慰劑日期之前，先檢查水平路徑同各期變化。
+  s2_en: 'Step two: Set a pseudo-intervention at week -2 and estimate a pre-period DiD with Treat, FakePost, and Treat times FakePost. The placebo interaction asks whether the groups changed differently around a date when no upgrade occurred.'
+  s2_zh: 第二步：在第 -2 周设定虚构干预，并使用 Treat、FakePost 及 Treat 与 FakePost 的交互项估计处理前 DiD。安慰剂交互项检验在没有升级发生的日期前后，两组变化是否不同。
+  s2_zh_hk: 第二步：喺第 -2 個禮拜設定虛構干預，並使用 Treat、FakePost 同 Treat 同 FakePost 嘅交互項估計處理前 DiD。安慰劑交互項檢驗喺冇升級發生嘅日期前後，兩組變化係咪唔同。
+  s3_en: 'Step three: The supplied placebo estimate is +1.2 cups with standard error 4.8, giving t = 1.2 / 4.8 = 0.25. This estimate is imprecise and close to zero, so it does not reveal a detectable placebo shift; it does not prove exact parallel trends.'
+  s3_zh: 第三步：给定安慰剂估计值为 +1.2 杯，标准误为 4.8，因此 t = 1.2 / 4.8 = 0.25。该估计不精确且接近零，未显示可检测的安慰剂变化，但不能证明趋势完全平行。
+  s3_zh_hk: 第三步：畀定安慰劑估計值係 +1.2 杯，標準誤係 4.8，所以 t = 1.2 / 4.8 = 0.25。個估計唔精確而且接近零，未顯示可檢測嘅安慰劑變化，但唔能夠證明趨勢完全平行。
+  step1_zh_hk: 提取改裝前歷史窗口
+  step2_zh_hk: 注入虛構安慰劑時間點
+  step3_zh_hk: 核查假交互項顯著性
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: What Happens When Trends Diverge?
+  q1_zh: 若平行趋势破裂会导致什么？
+  q2_en: 'Audit Rule: Never Trust DiD Without Placebos'
+  q2_zh: 审计准则：未过安慰剂，断不可认因果
+  s1_en: Parallel trends is the central identifying assumption behind a standard DiD interpretation. Divergent untreated trends can contaminate the interaction estimate because the comparison group no longer represents the treated group’s counterfactual change.
+  s1_zh: 平行趋势是标准 DiD 解读的核心识别假设。若未处理趋势出现分化，对照组便不再代表处理组的反事实变化，交互项估计可能受到混淆。
+  s1_zh_hk: 平行趨勢係標準 DiD 解讀嘅核心識別假設。如果未處理趨勢出現分化，對照組就唔再代表處理組嘅反事實變化，交互項估計可能受到混淆。
+  s2_en: 'Decision rule: inspect multiple pre-periods visually and statistically, report placebo estimates with uncertainty, investigate differential local shocks, and avoid treating a non-significant placebo as proof. If pre-trends diverge materially, redesign the comparison strategy.'
+  s2_zh: 决策规则：使用多个处理前时期进行图形与统计检查，连同不确定性报告安慰剂估计，调查局部差异冲击，并避免把不显著的安慰剂结果当作证明。若处理前趋势存在实质分化，应重新设计对照策略。
+  s2_zh_hk: 決策規則：使用多個處理前時期做圖形同統計檢查，連同不確定性報告安慰劑估計，調查局部差異衝擊，並避免將唔顯著嘅安慰劑結果當作證明。如果處理前趨勢有實質分化，就應該重新設計對照策略。
+  s3_en: Here, the placebo interaction is +1.2 cups with standard error 4.8 and t = 0.25. The result is consistent with no detectable pre-period shift, but the DiD design still requires broader trend and shock checks.
+  s3_zh: 本例中，安慰剂交互项为 +1.2 杯，标准误为 4.8，t = 0.25。该结果与未检测到处理前变化一致，但 DiD 设计仍需更广泛的趋势与冲击检查。
+  s3_zh_hk: 喺呢個例子，安慰劑交互項係 +1.2 杯，標準誤係 4.8，t = 0.25。個結果同未檢測到處理前變化一致，但 DiD 設計仍然需要更廣泛嘅趨勢同衝擊檢查。
+  q1_zh_hk: 如果平行趨勢破裂會點？
+  q2_zh_hk: 審計準則：未過安慰劑，絕唔認因果

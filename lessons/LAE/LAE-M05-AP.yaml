@@ -1,0 +1,125 @@
+id: LAE-M05-AP
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 92
+title_en: Production
+title_zh: 生产上的巡检
+title_zh_hk: 生產上嘅巡檢
+objective_en: 'One picture: inspect a GBA bridge or power line from the air. The saving is labour and fall risk, not speed of a parcel.'
+objective_zh: 只留一张图：从空中巡检大湾区的一座桥或一条电线。省下的是人工和坠落风险，不是包裹的速度。
+objective_zh_hk: 淨係留一張圖：由空中巡檢大灣區一座橋或者一條電線。慳返嘅係人工同墜落風險，唔係包裹嘅速度。
+glossary:
+- en: Greater Bay Area
+  zh: 粤港澳大湾区
+  zh_hk: 粵港澳大灣區
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What is the buyer paying for in this short?
+  zh: 这条短片里，买方付的是什么？
+  zh_hk: 呢條短片入面，買方付嘅係咩？
+  answer_en: Keeping a person off the structure. Labour and fall risk, not parcel speed.
+  answer_zh: 不让人爬上去。人工和坠落风险，不是包裹的速度。
+  answer_zh_hk: 唔讓人爬上去。人工同墜落風險，唔係包裹嘅速度。
+- id: Q2
+  type: transfer
+  en: Why is a bridge inspection not the same payment as the Shenzhen-to-Sha Tin parcel?
+  zh: 为什么巡检一座桥，和深圳到沙田的包裹，不是同一笔付款？
+  zh_hk: 點解巡檢一座橋，同深圳到沙田嘅包裹，唔係同一筆付款？
+  answer_en: The parcel pays when the road is slow. The inspection pays to take a person off the structure.
+  answer_zh: 包裹在路慢时付钱。巡检付钱，是为了让人从结构上下来。
+  answer_zh_hk: 包裹喺路慢嗰陣畀錢。巡檢畀錢，係為咗等人由結構落嚟。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Production
+  title_zh: 生产上的巡检
+  title_zh_hk: 生產上嘅巡檢
+  en: Leave the locker. One picture only. A GBA bridge or a power line. Someone used to climb it. This short asks what the owner pays to stop that climb.
+  zh: 离开储物柜。只留一张图。大湾区的一座桥，或一条电线。曾经有人爬上去。这条短片问：业主付钱，是为了不再爬。
+  zh_hk: 離開儲物櫃。淨係留一張圖。大灣區一座橋，或者一條電線。曾經有人爬上去。呢條短片問：業主畀錢，係為咗唔再爬。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Inspect from the air
+  title_zh: 从空中看
+  title_zh_hk: 由空中睇
+  formula: inspection pays to take a person off the structure
+  formula_en: inspection pays to take a person off the structure
+  formula_zh: 巡检付的是让人从结构上下来
+  formula_zh_hk: 巡檢付嘅係等人由結構落嚟
+  gloss_en: Labour and fall risk, not parcel speed
+  gloss_zh: 人工和坠落风险，不是包裹速度
+  gloss_zh_hk: 人工同墜落風險，唔係包裹速度
+  s1_en: The machine flies the structure and looks. The owner is not buying a faster parcel. The owner is buying a person off the steel.
+  s1_zh: 机器沿着结构飞，并看。业主不是在买一只更快的包裹。业主买的是人从钢结构上下来。
+  s1_zh_hk: 機器沿住結構飛，並睇。業主唔係喺度買一隻更快嘅包裹。業主買嘅係人由鋼結構落嚟。
+  s2_en: That is labour and fall risk. Write those two words. Do not add a farm, a show, or a tour.
+  s2_zh: 那是人工和坠落风险。写下这两个词。不要再加农田、演出或游览。
+  s2_zh_hk: 嗰個係人工同墜落風險。寫低呢兩個詞。唔好再加農田、演出或者遊覽。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: Contrast
+  kicker_en: Contrast
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Two payments
+  title_zh: 两笔付款
+  title_zh_hk: 兩筆付款
+  left_en: Parcel on the corridor
+  left_zh: 这条线上的包裹
+  left_zh_hk: 呢條線上嘅包裹
+  right_en: Inspection of a structure
+  right_zh: 巡检一座结构
+  right_zh_hk: 巡檢一座結構
+  s1_en: The parcel pays because the road is slow. The inspection pays because a person should not hang on the span.
+  s1_zh: 包裹付钱，是因为路慢。巡检付钱，是因为人不该挂在桥上。
+  s1_zh_hk: 包裹畀錢，係因為路慢。巡檢畀錢，係因為人唔應該掛喺橋上面。
+  s2_en: Same kind of machine. Different bill. The road being empty does not cancel this payment. Do not stack the two bills into one slogan.
+  s2_zh: 同一种机器。两张不同的账单。路空了，这笔巡检费也不会取消。不要把两笔付款叠成一句口号。
+  s2_zh_hk: 同一種機器。兩張唔同嘅賬單。路空咗，呢筆巡檢費都唔會取消。唔好將兩筆付款疊成一句口號。
+  s3_en: One picture is enough. A GBA bridge or a power line. Stop there.
+  s3_zh: 一张图就够。大湾区的一座桥，或一条电线。到此为止。
+  s3_zh_hk: 一張圖就夠。大灣區一座橋，或者一條電線。到此為止。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: A different bill
+  title_zh: 另一张账单
+  title_zh_hk: 另一張賬單
+  q1_en: What does inspection replace?
+  q1_zh: 巡检替换的是什么？
+  q1_zh_hk: 巡檢替換嘅係咩？
+  q2_en: Why is that not last-mile speed?
+  q2_zh: 为什么那不是最后一公里的速度？
+  q2_zh_hk: 點解嗰個唔係最後一公里嘅速度？
+  s1_en: Inspection pays to take a person off the structure.
+  s1_zh: 巡检付钱，是为了让人从结构上下来。
+  s1_zh_hk: 巡檢畀錢，係為咗等人由結構落嚟。
+  s2_en: That bill is labour and fall risk. It is not the parcel’s clock.
+  s2_zh: 那张账单是人工和坠落风险。不是包裹的钟。
+  s2_zh_hk: 嗰張賬單係人工同墜落風險。唔係包裹嘅鐘。
+  s3_en: Three buyers, three reasons. Next sitting asks whether opening the band can invent a fourth.
+  s3_zh: 三个买方，三个理由。下一讲问：打开这一层，能不能造出第四个。
+  s3_zh_hk: 三個買方，三個理由。下一講問：打開呢一層，可唔可以造出第四個。

@@ -1,0 +1,125 @@
+id: LAE-M04-UT
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 92
+title_en: UTM
+title_zh: UTM
+title_zh_hk: UTM
+objective_en: 'Name UTM: software holds a moving reservation so two vehicles do not share a point in the same minute.'
+objective_zh: 给 UTM 起名：软件占住一段移动的预约，两台机器就不会在同一分钟占同一个点。
+objective_zh_hk: 畀 UTM 起名：軟件佔住一段移動嘅預約，兩部機器就唔會喺同一分鐘佔同一個點。
+glossary:
+- en: UTM
+  zh: 无人驾驶航空器交通管理
+  zh_hk: 無人駕駛航空器交通管理
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What does UTM hold?
+  zh: UTM 占住的是什么？
+  zh_hk: UTM 佔住嘅係咩？
+  answer_en: A moving reservation. Two machines do not share a point in the same minute.
+  answer_zh: 一段移动的预约。两台机器不会在同一分钟占同一个点。
+  answer_zh_hk: 一段移動嘅預約。兩部機器唔會喺同一分鐘佔同一個點。
+- id: Q2
+  type: transfer
+  en: Two drones want the Shenzhen-to-Sha Tin line in the same minute. What does UTM do?
+  zh: 两架无人机想在同一分钟走深圳到沙田这条线。UTM 做什么？
+  zh_hk: 兩架無人機想喺同一分鐘行深圳到沙田呢條線。UTM 做咩？
+  answer_en: It holds the path for one and makes the other wait or take another minute.
+  answer_zh: 它把路径占给其中一架，另一架要等，或换一分钟。
+  answer_zh_hk: 佢將路徑佔畀其中一架，另一架要等，或者換一分鐘。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: UTM
+  title_zh: UTM
+  title_zh_hk: UTM
+  en: Last sitting named two pads. The roof and the locker are still there. This short names what holds the air between them so two machines do not share a point.
+  zh: 上一讲给两块垫子起了名。屋顶和储物柜还在。这条短片给中间那层空气里的占位起名，好让两台机器不占同一个点。
+  zh_hk: 上一講畀兩塊墊起咗名。屋頂同儲物櫃仲喺度。呢條短片畀中間嗰層空氣入面嘅佔位起名，等兩部機器唔好佔同一個點。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: UTM
+  title_zh: UTM
+  title_zh_hk: UTM
+  formula: UTM = a moving reservation
+  formula_en: UTM = a moving reservation
+  formula_zh: UTM = 一段移动的预约
+  formula_zh_hk: UTM = 一段移動嘅預約
+  gloss_en: Software holds the path for a minute
+  gloss_zh: 软件把这条路径占住一分钟
+  gloss_zh_hk: 軟件將呢條路徑佔住一分鐘
+  s1_en: UTM is unmanned-aircraft traffic management. Say the long name once. Then say UTM. The claim is a reservation, not a hardware list.
+  s1_zh: UTM 是无人驾驶航空器交通管理。长名字说一次。然后说 UTM。要记住的是预约，不是一份设备清单。
+  s1_zh_hk: UTM 係無人駕駛航空器交通管理。長名講一次。然後講 UTM。要記住嘅係預約，唔係一份設備清單。
+  s2_en: The software holds a moving path for a window of time. Two vehicles do not share a point in the same minute.
+  s2_zh: 软件占住一段会移动的路径，再占住一段时间。两台机器就不会在同一分钟占同一个点。
+  s2_zh_hk: 軟件佔住一段會移動嘅路徑，再佔住一段時間。兩部機器就唔會喺同一分鐘佔同一個點。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: Contrast
+  kicker_en: Contrast
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Same minute, two claims
+  title_zh: 同一分钟，两个占位
+  title_zh_hk: 同一分鐘，兩個佔位
+  left_en: No reservation
+  left_zh: 没有预约
+  left_zh_hk: 冇預約
+  right_en: A held slot
+  right_zh: 占住的时段
+  right_zh_hk: 佔住嘅時段
+  s1_en: Two lines on the Shenzhen-to-Sha Tin column, in the same minute, both want the same point. Without a hold, both try to take it.
+  s1_zh: 深圳到沙田那一柱上，同一分钟有两条线，都想占同一个点。没有人占住，两条都会去抢。
+  s1_zh_hk: 深圳到沙田嗰一柱上面，同一分鐘有兩條線，都想佔同一個點。冇人佔住，兩條都會去搶。
+  s2_en: UTM gives the path to one line for that minute. The other waits on the pad or takes a later minute. That is the slot.
+  s2_zh: UTM 把这一分钟的路径给其中一条。另一条在垫子上等，或换更晚的一分钟。这就是时段。
+  s2_zh_hk: UTM 將呢一分鐘嘅路徑畀其中一條。另一條喺墊上面等，或者換遲啲嘅一分鐘。呢個就係時段。
+  s3_en: Do not list radios. The scarce object is the held path in time.
+  s3_zh: 不要列无线电。稀缺的是被占住的那条路径加时间。
+  s3_zh_hk: 唔好列無線電。稀缺嘅係被佔住嗰條路徑加時間。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Hold the path
+  title_zh: 占住这条路径
+  title_zh_hk: 佔住呢條路徑
+  q1_en: What does UTM reserve?
+  q1_zh: UTM 预约的是什么？
+  q1_zh_hk: UTM 預約嘅係咩？
+  q2_en: What happens to the second machine in the same minute?
+  q2_zh: 同一分钟的第二台机器会怎样？
+  q2_zh_hk: 同一分鐘嘅第二部機器會點？
+  s1_en: UTM is a moving reservation. Write that, not a catalogue of kit.
+  s1_zh: UTM 是一段移动的预约。请写这一句，不要写设备清单。
+  s1_zh_hk: UTM 係一段移動嘅預約。請寫呢一句，唔好寫設備清單。
+  s2_en: Two machines do not share a point in the same minute. One holds. One waits.
+  s2_zh: 两台机器不会在同一分钟占同一个点。一台占住。一台等。
+  s2_zh_hk: 兩部機器唔會喺同一分鐘佔同一個點。一部佔住。一部等。
+  s3_en: A slot is one piece. Next short asks what happens if the vehicle, the pad, or the energy is missing.
+  s3_zh: 时段只是其中一件。下一支短片问：机器、垫子或能量若缺了，会怎样。
+  s3_zh_hk: 時段只係其中一件。下一條短片問：機器、墊或者能量若缺咗，會點。

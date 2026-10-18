@@ -1,0 +1,194 @@
+id: STAT-M01-T01-INTRO
+course: statistics
+course_en: Business Statistics
+course_zh: 商务统计
+course_zh_hk: 商務統計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: Seeing the business through data
+title_zh: 透视商业数据的四维全貌
+title_zh_hk: 透視商業數據嘅四維全貌
+objective_en: 'Frame a Monday coffee file with four questions: center, spread, shape, and association, and refuse to answer all four with one row.'
+objective_zh: 用四个问题框定一份周一咖啡文件：中心、离散、形态和关联，并拒绝用一行回答全部问题。
+objective_zh_hk: 用四個問題框定一份星期一咖啡檔案：中心、離散、形態同關聯，並拒絕用一行回答全部問題。
+glossary:
+- en: descriptive statistics
+  zh: 描述性统计
+  zh_hk: 描述性統計
+  lock: true
+- en: center
+  zh: 集中趋势
+  zh_hk: 集中趨勢
+  lock: true
+- en: spread
+  zh: 离散程度
+  zh_hk: 離散程度
+  lock: true
+- en: association
+  zh: 关联关系
+  zh_hk: 關聯關係
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why is a raw, unorganized spreadsheet of store transactions dangerous for an executive?
+  question_zh: 为什么一份未经汇总、杂乱无章的门店交易明细流水账对管理层极其危险？
+  question_zh_hk: 點解一份未經匯總、亂七八糟嘅門店交易明細流水賬對管理層極其危險？
+  options_en:
+  - 'A: It overwhelms decision-makers with raw operational noise while concealing the true underlying business patterns.'
+  - 'B: Spreadsheets with more than ten rows automatically delete company accounting entries.'
+  - 'C: Raw data only records numbers that are strictly positive.'
+  - 'D: Commercial landlords prohibit storing daily retail sales numbers on computers.'
+  options_zh:
+  - 'A: 它用海量的细节噪音淹没了决策者，同时掩盖了底层真实的业务运行规律与风险。'
+  - 'B: 超过十行的电子表格会自动删除公司的会计记录。'
+  - 'C: 原始流水账只能记录严格大于零的正数。'
+  - 'D: 商业写字楼房东明令禁止在电脑上存储每日零售数据。'
+  options_zh_hk:
+  - 'A: 佢用海量嘅細節噪音淹沒咗決策者，同時掩蓋咗底層真實嘅業務運行規律同風險。'
+  - 'B: 超過十行嘅電子表格會自動刪除公司嘅會計記錄。'
+  - 'C: 原始流水賬淨係可以記錄嚴格大過零嘅正數。'
+  - 'D: 商業寫字樓業主明令禁止喺電腦上儲存每日零售數據。'
+  answer: A
+  explanation_en: Descriptive statistics synthesizes thousands of daily transactions into actionable dimensions, cutting through operational noise.
+  explanation_zh: 描述性统计将成千上万条日常交易提炼为可直接指导行动的几个关键维度，拨开运营噪音直击核心。
+  explanation_zh_hk: 描述性統計將成千上萬條日常交易提煉為可直接指導行動嘅幾個關鍵維度，撥開營運噪音直擊核心。
+- id: Q2
+  type: multiple_choice
+  question_en: Which four core questions form the foundation of managerial data literacy in this course?
+  question_zh: 本课程中构建管理层数据素养的四大核心问题是什么？
+  question_zh_hk: 本課程入面構建管理層數據素養嘅四大核心問題係咩？
+  options_en:
+  - 'A: Center, Spread, Shape, and Association.'
+  - 'B: Addition, Subtraction, Multiplication, and Division.'
+  - 'C: Profit, Tax, Debt, and Bankruptcy.'
+  - 'D: Morning, Afternoon, Evening, and Night.'
+  options_zh:
+  - 'A: 中心水平、离散程度、分布形态与协同关联。'
+  - 'B: 加法、减法、乘法与除法。'
+  - 'C: 利润、税费、负债与破产。'
+  - 'D: 早班、午班、晚班与通宵班。'
+  options_zh_hk:
+  - 'A: 中心水平、離散程度、分佈形態與協同關聯。'
+  - 'B: 加法、減法、乘法同除法。'
+  - 'C: 利潤、稅費、負債同破產。'
+  - 'D: 早更、午更、夜更同通宵更。'
+  answer: A
+  explanation_en: A business manager understands any system by answering where it centers, how wide it wobbles, how its tails behave, and how variables move together.
+  explanation_zh: 管理者通过回答四个维度来掌握任何业务体系：中心在哪里、摆动有多宽、尾部如何分布，以及各变量如何联动。
+  explanation_zh_hk: 管理者透過回答四個維度嚟掌握任何業務體系：中心喺邊度、擺動有幾闊、尾部點樣分佈，同埋各變量點樣聯動。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Challenge
+  kicker_en: The Challenge
+  kicker_zh: 管理挑战
+  kicker_zh_hk: 管理挑戰
+  title_en: Three Monday rows, four questions
+  title_zh: 周一三行，四个问题
+  title_zh_hk: 星期一三行，四個問題
+  en: 'A Monday file lands on the desk: Mong Kok sold 310 cups, Wan Chai sold 420, and the Airport branch sold 4,200. Three rows already pull in different directions. Raw rows cannot manage a shop. Which questions turn this file into a decision, without treating one row as the whole chain?'
+  zh: 周一文件放到桌上：旺角卖了 310 杯，湾仔卖了 420 杯，机场店卖了 4,200 杯。三行数据已经指向不同方向。原始行不能管理一家店。哪些问题能把这份文件变成决策，又不会把一行当成整条连锁？
+  zh_hk: 星期一檔案放到檯上：旺角賣咗 310 杯，灣仔賣咗 420 杯，機場店賣咗 4,200 杯。三行數據已經指向唔同方向。原始行唔可以管理一間舖。邊啲問題可以將呢份檔案變成決策，又唔會將一行當成成條連鎖？
+- id: roadmap
+  visual: module_open
+  seconds: 34
+  title_en: The Four Executive Questions
+  title_zh: 管理者透视业务的四大维度
+  title_zh_hk: 管理者透視業務嘅四大維度
+  item1_en: 'Center: Where does typical demand settle?'
+  item1_zh: 中心：常规的业务基准究竟落在哪里？
+  item1_zh_hk: 中心：常規嘅業務基準究竟落喺邊度？
+  item2_en: 'Spread: How wide is the operational wobble?'
+  item2_zh: 离散：业务摆动与安全缓冲需要多宽？
+  item2_zh_hk: 離散：業務擺動同安全緩衝需要幾闊？
+  item3_en: 'Shape: Are we exposed to sudden tail shocks?'
+  item3_zh: 形态：我们是否暴露在极端长尾风险之下？
+  item3_zh_hk: 形態：我哋係咪暴露喺極端長尾風險之下？
+  item4_en: 'Association: Which business drivers move together?'
+  item4_zh: 关联：哪些经营杠杆正在同频共振？
+  item4_zh_hk: 關聯：邊啲經營槓桿正在同頻共振？
+  en: To master business data, you do not need complex algorithms; you need to master four fundamental questions. First, what is the center? Second, how wide is the spread? Third, what is the shape of the tails? And fourth, how do key business variables move together?
+  zh: 要驾驭商业数据，你不需要高深莫测的复杂算法，而是要牢牢掌握四个最根本的管理维度。第一，业务的中心在哪里？第二，运营的波动有多宽？第三，极端长尾呈现怎样的形态？第四，关键的经营变量之间如何同频联动？
+  zh_hk: 要駕馭商業數據，你唔需要高深莫測嘅複雜算法，而係要牢牢掌握四個最根本嘅管理維度。第一，業務嘅中心喺邊度？第二，營運嘅波動有幾闊？第三，極端長尾呈現點樣嘅形態？第四，關鍵嘅經營變量之間點樣同頻聯動？
+  kicker_en: Four questions
+  kicker_zh: 四个问题
+  kicker_zh_hk: 四個問題
+- id: foundation
+  visual: two_column
+  seconds: 36
+  kicker: The Core Tool
+  kicker_en: The Core Tool
+  kicker_zh: 核心工具
+  kicker_zh_hk: 核心工具
+  title_en: Descriptive statistics is your compass
+  title_zh: 描述性统计是你的管理罗盘
+  title_zh_hk: 描述性統計係你嘅管理羅盤
+  left_en: 'Monday file: 310, 420, 4,200'
+  left_zh: 周一文件：310、420、4,200
+  left_zh_hk: 星期一檔案：310、420、4,200
+  right_en: Four questions, not one row
+  right_zh: 四个问题，而不是一行
+  right_zh_hk: 四個問題，而唔係一行
+  s1_en: Descriptive statistics condenses observed rows into summaries. On this Monday file, center asks where typical demand sits, spread asks how far the shops sit apart, shape asks whether one tail is pulling, and association asks which paired measures move together.
+  s1_zh: 描述性统计把已观测的行收成摘要。在这份周一文件上，中心问常规需求落在哪里，离散问各店相距多远，形态问是否有一条尾在拉动，关联问哪些成对指标一起变动。
+  s1_zh_hk: 描述性統計將已觀測嘅行收成摘要。喺呢份星期一檔案上，中心問常規需求落喺邊度，離散問各店相距幾遠，形態問係咪有一條尾喺度拉，關聯問邊啲成對指標一齊變動。
+  s2_en: The same three rows can support more than one summary. A mean uses every cup. A median uses the middle rank. A range uses only the endpoints. The question decides which summary is allowed to speak.
+  s2_zh: 同样三行可以支持不止一种摘要。均值用上每一杯。中位数用中间名次。极差只用两端。问题决定哪一种摘要可以发言。
+  s2_zh_hk: 同樣三行可以支持唔止一種摘要。平均數用上每一杯。中位數用中間名次。極差只用兩端。問題決定邊一種摘要可以發言。
+  s3_en: These questions do not by themselves set staffing or inventory. They name what the file can show. A later decision still needs the comparison group, the period, and the unit.
+  s3_zh: 这些问题本身不能规定人手或库存。它们只说明这份文件能够显示什么。之后的决策仍然需要比较总体、期间和单位。
+  s3_zh_hk: 呢啲問題本身唔可以規定人手或者庫存。佢哋只說明呢份檔案可以顯示咩。之後嘅決策仍然需要比較總體、期間同單位。
+- id: file
+  visual: example
+  seconds: 36
+  kicker_en: The file
+  kicker_zh: 这份文件
+  kicker_zh_hk: 呢份檔案
+  title_en: One Monday, three shops
+  title_zh: 一个周一，三家店
+  title_zh_hk: 一個星期一，三間舖
+  setup_en: Mong Kok 310 | Wan Chai 420 | Airport 4,200
+  setup_zh: 旺角 310｜湾仔 420｜机场 4,200
+  setup_zh_hk: 旺角 310｜灣仔 420｜機場 4,200
+  result_en: Same rows, different questions
+  result_zh: 同一行，不同问题
+  result_zh_hk: 同一行，唔同問題
+  s1_en: Keep the illustration small and explicit. Three Monday shops sold 310, 420, and 4,200 cups. The file is a teaching ledger, not a locked company result.
+  s1_zh: 把示例保持得小而明确。三家周一门店卖了 310、420 和 4,200 杯。这是教学账本，不是已锁定的公司结果。
+  s1_zh_hk: 將示例保持得細而且明確。三間星期一門店賣咗 310、420 同 4,200 杯。呢個係教學賬本，唔係已鎖定嘅公司結果。
+  s2_en: Center can ask for a total or a typical shop. Spread can ask for the street gap or the network span. Shape can ask whether 4,200 is pulling the picture. Association needs a second measure, such as rent, before it can speak.
+  s2_zh: 中心可以问总量或一家典型店。离散可以问街店差距或全网跨度。形态可以问 4,200 是否在拉动整幅图。关联需要第二个指标，例如租金，才能发言。
+  s2_zh_hk: 中心可以問總量或者一間典型店。離散可以問街舖差距或者全網跨度。形態可以問 4,200 係咪喺度拉成幅圖。關聯需要第二個指標，例如租金，先可以發言。
+  s3_en: Do not answer all four questions with one number. Name the question, the shops included, and the unit before the summary is used.
+  s3_zh: 不要用一个数字回答全部四个问题。使用摘要之前，先写明问题、纳入的店和单位。
+  s3_zh_hk: 唔好用一個數字回答全部四個問題。使用摘要之前，先寫明問題、納入嘅店同單位。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: The Starting Rule
+  kicker_en: The Starting Rule
+  kicker_zh: 启程法则
+  kicker_zh_hk: 啟程法則
+  title_en: Master the dials, steer the business
+  title_zh: 看清仪表盘，精准掌舵商业
+  title_zh_hk: 看清儀表板，精準掌舵商業
+  q1_en: What is the primary role of descriptive statistics?
+  q1_zh: 描述性统计的核心使命是什么？
+  q1_zh_hk: 描述性統計嘅核心使命係咩？
+  q2_en: How will these tools protect your company?
+  q2_zh: 这些工具如何为企业筑牢防线？
+  q2_zh_hk: 呢啲工具點樣為企業築牢防線？
+  s1_en: Start from the decision question, then choose the summary that matches it. On this file, a total and a typical shop are different answers.
+  s1_zh: 先从决策问题出发，再选择与之匹配的摘要。在这份文件上，总量和一家典型店是不同的答案。
+  s1_zh_hk: 先由決策問題出發，再選擇同佢匹配嘅摘要。喺呢份檔案上，總量同一間典型店係唔同嘅答案。
+  s2_en: Pair center with spread before acting. Shape and association are further questions, not automatic substitutes for the first two.
+  s2_zh: 行动前把中心和离散配在一起。形态和关联是进一步的问题，不能自动代替前两个。
+  s2_zh_hk: 行動之前將中心同離散配埋一齊。形態同關聯係進一步嘅問題，唔可以自動代替頭兩個。
+  s3_en: The operating rule is to name the question, the shops, and the unit before using a summary. Do not treat one Monday row as the chain.
+  s3_zh: 操作规则是：使用摘要之前写明问题、店铺和单位。不要把周一的一行当成整条连锁。
+  s3_zh_hk: 操作規則係：使用摘要之前寫明問題、店舖同單位。唔好將星期一嘅一行當成成條連鎖。

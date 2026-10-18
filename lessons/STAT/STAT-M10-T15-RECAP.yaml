@@ -1,0 +1,162 @@
+id: STAT-M10-T15-RECAP
+course: STAT-M10
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Executive Experimentation Playbook: Synthesis and Platform Governance'
+title_zh: 数字化实验管理手册：综合复盘与平台治理
+title_zh_hk: 數碼化實驗管理手冊：綜合複盤同平台治理
+objective_en: Synthesize the course into a five-gate experimentation governance scorecard that evaluates design validity, execution integrity, statistical readiness, decision quality, and operational safety before rollout or investment.
+objective_zh: 将课程内容综合为五阶实验治理计分卡，在推广或投资前评估设计有效性、执行完整性、统计准备度、决策质量与运营安全。
+objective_zh_hk: 將課程內容綜合成五階實驗治理計分卡，喺推廣或者投資之前評估設計有效性、執行完整性、統計準備度、決策質素同營運安全。
+glossary:
+- en: Experimentation Governance Scorecard
+  zh: 数字化实验治理计分卡
+  zh_hk: 數碼化實驗治理計分卡
+  lock: true
+- en: Five-Gate Experimentation Audit
+  zh: 五阶数字化实验风控审核
+  zh_hk: 五階數碼化實驗風控審核
+  lock: true
+- en: Guardrail Metrics
+  zh: 护栏指标（安全防御指标）
+  zh_hk: 護欄指標（安全防禦指標）
+  lock: true
+- en: Sample Ratio Mismatch Clearance
+  zh: 样本比例失配放行审查
+  zh_hk: 樣本比例失配放行審查
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Which governance sequence is most defensible before relying on an experiment for rollout or investment?
+  question_zh: 在依赖实验进行推广或投资前，哪套治理顺序最稳妥？
+  question_zh_hk: 喺依賴實驗進行推廣或者投資之前，邊套治理次序最穩妥？
+  options_en:
+  - 'A: Validate assignment; audit execution and SRM; check interference and analysis level; confirm power and planned estimation; evaluate primary outcomes, multiplicity, and guardrails'
+  - 'B: Select the largest observed lift, then inspect implementation only if rollout fails'
+  - 'C: Require every experiment to run for the same fixed duration regardless of design'
+  - 'D: Ignore control groups when the vendor dashboard reports a positive trend'
+  options_zh:
+  - A：验证分配；审计执行与 SRM；检查干扰与分析层级；确认功效与计划估计；评估主要结果、多重性与护栏
+  - B：选择最大的观测增量，只有推广失败后才检查实施
+  - C：无论设计如何，都要求每个实验运行相同固定时长
+  - D：当供应商看板显示正向趋势时忽略对照组
+  options_zh_hk:
+  - A：驗證分配；審計執行同 SRM；檢查干擾同分析層級；確認功效同計劃估計；評估主要結果、多重性同護欄
+  - B：選擇最大嘅觀測增量，只有推廣失敗之後先檢查實施
+  - C：無論設計點樣，都要求每個實驗運行相同固定時長
+  - D：當供應商看板顯示正向趨勢嗰陣忽略對照組
+  answer: A
+  explanation_en: The scorecard begins with whether assignment created the intended comparison, then checks whether the pipeline preserved it, whether dependence was handled, whether the study could answer the question, and whether the decision respects uncertainty and operational risk.
+  explanation_zh: 计分卡先检查分配是否建立了预期比较，再检查数据管线是否保留该比较、依赖结构是否得到处理、研究能否回答问题，以及决策是否尊重不确定性与运营风险。
+  explanation_zh_hk: 計分卡先檢查分配係咪建立咗預期比較，再檢查數據管線係咪保留呢個比較、依賴結構係咪得到處理、研究可唔可以回答問題，以及決策係咪尊重不確定性同營運風險。
+- id: Q2
+  type: multiple_choice
+  question_en: A test reports a large positive primary metric, but also shows severe SRM and a material deterioration in a safety guardrail. What is the appropriate conclusion?
+  question_zh: 某实验报告主要指标大幅上升，但同时出现严重 SRM 与安全护栏明显恶化。应得出什么结论？
+  question_zh_hk: 某實驗報告主要指標大幅上升，但同時出現嚴重 SRM 同安全護欄明顯惡化。應該得出乜嘢結論？
+  options_en:
+  - 'A: Do not authorize rollout from that result; investigate the mismatch and guardrail failure before interpreting the lift'
+  - 'B: Roll out immediately because the primary metric has priority over data integrity'
+  - 'C: Treat SRM as proof that a specific crash mechanism caused the lift'
+  - 'D: Extend the experiment by exactly one hour and accept the result'
+  options_zh:
+  - A：不要依据该结果批准推广；应先调查失配与护栏失败，再解释增量
+  - B：立即推广，因为主要指标优先于数据完整性
+  - C：把 SRM 当作某种具体闪退机制造成增量的证明
+  - D：把实验正好延长一小时并接受结果
+  options_zh_hk:
+  - A：唔好根據呢個結果批准推廣；要先調查失配同護欄失敗，再解讀增量
+  - B：即刻推廣，因為主要指標優先過數據完整性
+  - C：將 SRM 當成某種具體閃退機制造成增量嘅證明
+  - D：將實驗正好延長一個鐘並接受結果
+  answer: A
+  explanation_en: SRM shows that observed allocation is inconsistent with the planned design, while guardrail deterioration signals operational harm. Neither fact identifies a precise mechanism, but together they make an unqualified rollout decision indefensible.
+  explanation_zh: SRM 表明观测分配与计划设计不一致，而护栏恶化提示运营伤害。两者都不能单独识别具体机制，但共同说明无条件批准推广缺乏依据。
+  explanation_zh_hk: SRM 表明觀測分配同計劃設計唔一致，而護欄惡化提示營運傷害。兩者都唔可以單獨識別具體機制，但共同說明無條件批准推廣缺乏理據。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Executive Decision Puzzle
+  kicker_zh: 管理决策难题
+  kicker_zh_hk: 管理決策難題
+  title_en: What Evidence Should an Experimentation Platform Be Trusted to Produce?
+  title_zh: 实验平台必须产生什么证据，才值得信任？
+  title_zh_hk: 實驗平台一定要產生乜嘢證據，先值得信任？
+  en: An experimentation platform is more than a traffic switch and a dashboard. Management relies on it to create valid comparisons, detect implementation failures, quantify uncertainty, and prevent unsafe rollout. A governance scorecard turns those responsibilities into explicit gates, so investment and product decisions depend on evidence quality rather than the largest displayed lift.
+  zh: 实验平台不只是流量开关与数据看板。管理层依赖它建立有效比较、发现实施故障、量化不确定性，并防止不安全推广。治理计分卡把这些责任转化为明确关卡，使投资与产品决策取决于证据质量，而不是看板上最大的增量。
+  zh_hk: 實驗平台唔只係流量開關同數據看板。管理層依賴佢建立有效比較、發現實施故障、量化不確定性，並防止唔安全推廣。治理計分卡將呢啲責任轉化成明確關卡，令投資同產品決策取決於證據質素，而唔係看板上最大嘅增量。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Decision readiness = valid assignment + execution integrity + appropriate inference + decision protocol + safe guardrails
+  formula_zh: 决策准备度 = 有效分配 + 执行完整性 + 适当推断 + 决策规范 + 安全护栏
+  formula_zh_hk: 決策準備度 = 有效分配 + 執行完整性 + 適當推斷 + 決策規範 + 安全護欄
+  formula_tex: \mathrm{Ready}=A\cap E\cap I\cap D\cap G
+  s1_en: The Five-Gate Experimentation Audit is a governance checklist, not a universal mathematical theorem. Its thresholds and evidence standards should be defined before results and tailored to the experiment's risk, design, and decision.
+  s1_zh: 五阶数字化实验风控审核是一套治理检查表，并非通用数学定理。阈值与证据标准应在查看结果前定义，并与实验风险、设计及决策相匹配。
+  s1_zh_hk: 五階數碼化實驗風控審核係一套治理檢查表，唔係通用數學定理。門檻同證據標準要喺查看結果之前定義，並同實驗風險、設計同決策相匹配。
+  s2_en: Gate 1 validates assignment and baseline behavior. Gate 2 audits exposure, exclusions, logging, and Sample Ratio Mismatch Clearance. Gate 3 aligns interference, clustering, and time dependence with design. Gate 4 checks estimands, power, duration, and variance reduction. Gate 5 evaluates outcomes, multiplicity, uncertainty, guardrails, and decision rules.
+  s2_zh: 第一关验证分配与基准表现；第二关审计接触、排除、日志与样本比例失配放行审查；第三关使干扰、集群及时间依赖与设计一致；第四关检查估计目标、功效、时长与方差缩减；第五关评估结果、多重性、不确定性、护栏与决策规则。
+  s2_zh_hk: 第一關驗證分配同基準表現；第二關審計接觸、排除、日誌同樣本比例失配放行審查；第三關令干擾、集群同時間依賴與設計一致；第四關檢查估計目標、功效、時長同方差縮減；第五關評估結果、多重性、不確定性、護欄同決策規則。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Evidence Gates
+  left_zh: 证据关卡
+  left_zh_hk: 證據關卡
+  right_en: Governance Decisions
+  right_zh: 治理决策
+  right_zh_hk: 治理決策
+  s1_en: Passing one gate cannot compensate for failing another. Strong significance cannot rescue broken assignment, large traffic imbalance, unmodeled interference, underpowered estimation, or a material guardrail breach.
+  s1_zh: 通过一道关卡不能弥补另一道关卡失败。统计显著不能挽救分配故障、严重流量失衡、未建模干扰、低功效估计或重大护栏突破。
+  s1_zh_hk: 通過一道關卡唔可以彌補另一道關卡失敗。統計顯著唔可以挽救分配故障、嚴重流量失衡、未建模干擾、低功效估計或者重大護欄突破。
+  s2_en: Gate outcomes need not be only pass or fail. A review can approve, approve with restrictions, request remediation and rerun, or reject, depending on uncertainty, reversibility, harm, and decision cost.
+  s2_zh: 关卡结果不必只有通过或否决。评审可根据不确定性、可逆性、伤害与决策成本，选择批准、附条件批准、要求修复并重跑，或拒绝。
+  s2_zh_hk: 關卡結果唔一定只有通過或者否決。評審可以根據不確定性、可逆性、傷害同決策成本，選擇批准、附條件批准、要求修復再重跑，或者拒絕。
+  s3_en: A platform procurement review should examine documented capabilities, validation evidence, access controls, auditability, monitoring, rollback, operating ownership, and total cost. Statistical results from one demonstration do not alone establish platform value.
+  s3_zh: 平台采购评审应检查已记录的能力、验证证据、访问控制、可审计性、监控、回滚、运营责任与总成本。单次演示的统计结果本身不能建立平台价值。
+  s3_zh_hk: 平台採購評審要檢查已記錄嘅能力、驗證證據、存取控制、可審計性、監控、回滾、營運責任同總成本。單次示範嘅統計結果本身唔可以建立平台價值。
+- id: example
+  visual: example
+  seconds: 36
+  setup_en: 'Teaching review: strong apparent lift, severe SRM, and a worsened safety guardrail'
+  setup_zh: 教学评审：表面增量强劲、SRM 严重、安全护栏恶化
+  setup_zh_hk: 教學評審：表面增量強勁、SRM 嚴重、安全護欄惡化
+  result_en: 'Decision: withhold rollout, diagnose the pipeline and harm, then rerun under a pre-specified protocol'
+  result_zh: 决策：暂缓推广，诊断管线与伤害，再按预先指定方案重跑
+  result_zh_hk: 決策：暫緩推廣，診斷管線同傷害，再按預先指定方案重跑
+  s1_en: A large headline lift does not override an SRM alarm. The mismatch indicates that observed group counts do not follow the planned allocation model closely enough, but it does not by itself identify who is missing or why.
+  s1_zh: 醒目的大幅增量不能凌驾于 SRM 警报之上。失配表示观测组数与计划分配模型不够一致，但它本身不能识别哪些单元缺失或缺失原因。
+  s1_zh_hk: 醒目嘅大幅增量唔可以凌駕於 SRM 警報之上。失配表示觀測組數同計劃分配模型唔夠一致，但佢本身唔可以識別邊啲單元缺失或者缺失原因。
+  s2_en: A worsened crash, latency, safety, margin, or complaint guardrail may make rollout unacceptable even when a primary outcome improves. The acceptable threshold should be defined from operational risk rather than invented after seeing the result.
+  s2_zh: 即使主要结果改善，闪退、延迟、安全、毛利或投诉护栏恶化也可能使推广不可接受。可接受阈值应根据运营风险预先定义，而不能在查看结果后临时设定。
+  s2_zh_hk: 即使主要結果改善，閃退、延遲、安全、毛利或者投訴護欄惡化都可能令推廣唔可以接受。可接受門檻要根據營運風險預先定義，而唔可以喺查看結果之後臨時設定。
+  s3_en: The defensible response is to preserve logs, locate the divergence through the funnel, investigate the guardrail mechanism, repair implementation, and rerun or reanalyze under a documented protocol. Do not claim that SRM alone proves survivorship bias or a specific crash mechanism.
+  s3_zh: 可辩护的应对是保留日志、通过漏斗定位分叉、调查护栏机制、修复实施，并按有记录的方案重跑或重新分析。不要声称 SRM 单独证明幸存者偏差或某种具体闪退机制。
+  s3_zh_hk: 有理據嘅應對係保留日誌、透過漏斗定位分叉、調查護欄機制、修復實施，並按有記錄嘅方案重跑或者重新分析。唔好聲稱 SRM 單獨證明倖存者偏差或者某種具體閃退機制。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: What Makes an Experiment Decision-Ready?
+  q1_zh: 什么使实验达到决策准备状态？
+  q1_zh_hk: 乜嘢令實驗達到決策準備狀態？
+  q2_en: Executive Rule
+  q2_zh: 管理规则
+  q2_zh_hk: 管理規則
+  s1_en: Decision readiness requires a valid comparison, intact execution, analysis matched to the randomization and dependence structure, adequate information, and acceptable outcomes across primary and guardrail metrics.
+  s1_zh: 决策准备度要求比较有效、执行完整、分析与随机化及依赖结构匹配、信息充足，并且主要指标与护栏指标的结果可接受。
+  s1_zh_hk: 決策準備度要求比較有效、執行完整、分析同隨機化及依賴結構匹配、信息充足，並且主要指標同護欄指標嘅結果可以接受。
+  s2_en: Pre-specify standards, preserve an audit trail, separate product evidence from platform procurement evidence, and document who can launch, pause, approve, and roll back experiments.
+  s2_zh: 应预先指定标准、保留审计轨迹、区分产品证据与平台采购证据，并记录谁可以启动、暂停、批准及回滚实验。
+  s2_zh_hk: 要預先指定標準、保留審計軌跡、區分產品證據同平台採購證據，並記錄邊個可以啟動、暫停、批准同回滾實驗。
+  s3_en: Do not authorize rollout or capital merely because a dashboard looks persuasive. Approve only when the five evidence gates and the broader operational, security, privacy, ownership, and cost review support the decision.
+  s3_zh: 不要仅因为看板具有说服力就批准推广或资本投入。只有当五道证据关卡及更广泛的运营、安全、隐私、责任与成本评审共同支持时，才应批准。
+  s3_zh_hk: 唔好只因為看板有說服力就批准推廣或者資本投入。只有當五道證據關卡同更廣泛嘅營運、安全、私隱、責任同成本評審共同支持嗰陣，先應該批准。

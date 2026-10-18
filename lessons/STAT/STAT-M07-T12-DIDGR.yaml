@@ -1,0 +1,170 @@
+id: STAT-M07-T12-DIDGR
+course: STAT-M07
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The 2x2 DiD Grid: Isolating Automated Tamper Upgrades'
+title_zh: 2x2 双重差分矩阵：剥离自动填压机升级效应
+title_zh_hk: 2x2 雙重差分矩陣：剝離自動填壓機升級效應
+objective_en: Construct the four-cell Difference-in-Differences (DiD) grid, subtract the contemporaneous change observed in an untreated control store, and interpret the resulting estimate under the parallel-trends assumption.
+objective_zh: 构建四格双重差分（DiD）矩阵，扣除未受干预对照门店的同期变化，并在平行趋势假设下解读所得估计值。
+objective_zh_hk: 構建四格雙重差分（DiD）矩陣，扣除未受干預對照門市嘅同期變化，並喺平行趨勢假設之下解讀所得估計值。
+glossary:
+- en: Difference-in-Differences
+  zh: 双重差分法
+  zh_hk: 雙重差分法
+  lock: true
+  zh_zh_hk: 雙重差分法
+- en: Contemporaneous Shock
+  zh: 同期宏观冲击
+  zh_hk: 同期宏觀衝擊
+  lock: true
+  zh_zh_hk: 同期宏觀衝擊
+- en: First Difference
+  zh: 一重差分（时间纵向变动）
+  zh_hk: 一重差分（時間縱向變動）
+  lock: true
+  zh_zh_hk: 一重差分（時間縱向變動）
+- en: Second Difference
+  zh: 二重差分（跨组横向净变动）
+  zh_hk: 二重差分（跨組橫向淨變動）
+  lock: true
+  zh_zh_hk: 二重差分（跨組橫向淨變動）
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why is a simple before-and-after comparison of sales at Wan Chai (420 - 380 = +40 cups) a flawed measure of the automated tamper upgrade?
+  question_zh: 为什么直接对比湾仔店改造前后的出杯量（420 - 380 = +40 杯）是对自动填压机升级效果的有偏度量？
+  question_zh_hk: 點解直接對比灣仔店改裝前後嘅出杯量（420 - 380 = +40 杯）係對自動填壓機升級效果嘅有偏差度量？
+  options_en:
+  - 'A: It fails to calculate the regression intercept beta_0'
+  - 'B: It conflates the true equipment effect with contemporaneous macro shocks, such as a city festival that lifted demand network-wide'
+  - 'C: Automated tampers always break down within seven days of installation'
+  - 'D: Before-and-after differences can only be calculated on dollar revenue, never physical cup counts'
+  options_zh:
+  - 'A: 该计算未能求出回归模型的常数截距 beta_0'
+  - 'B: 它将设备的真实提效与同期外部宏观冲击混为一谈（例如全城节日狂欢拉动了全网总体需求）'
+  - 'C: 自动化填压机在安装后七天内必然发生机械故障'
+  - 'D: 前后对比差值只能在销售金额上计算，绝不能用于物理出杯量'
+  options_zh_hk:
+  - 'A: 呢個計算未能求出回歸模型嘅常數截距 beta_0'
+  - 'B: 佢將設備嘅真實提效同同期外部宏觀衝擊混為一談（例如全城嘉年華拉動咗全網整體需求）'
+  - 'C: 自動填壓機喺安裝之後七日內必然壞機'
+  - 'D: 前後對比差值淨係可以喺銷售金額上計，絕唔可以用喺實質出杯量'
+  answer: B
+  explanation_en: A raw before-and-after change combines the treatment with any time-varying factors affecting the treated store. A credible untreated comparison group helps estimate the counterfactual time change, subject to the DiD assumptions.
+  explanation_zh: 简单前后变化混合了处理效应与影响处理组的其他时间变化因素。可信的未处理对照组有助于估计反事实时间变化，但仍需满足 DiD 假设。
+  explanation_zh_hk: 簡單前後變化混合咗處理效應同影響處理組嘅其他時間變化因素。可信嘅未處理對照組有助估計反事實時間變化，但仍然要滿足 DiD 假設。
+- id: Q2
+  type: multiple_choice
+  question_en: Wan Chai rises from 380 to 420 cups, while Mong Kok rises from 310 to 330 over the same period. What is the Difference-in-Differences estimate?
+  question_zh: 同期内，湾仔店从 380 杯升至 420 杯，旺角店从 310 杯升至 330 杯。双重差分估计值是多少？
+  question_zh_hk: 同期內，灣仔店由 380 杯升到 420 杯，旺角店由 310 杯升到 330 杯。雙重差分估計值係幾多？
+  options_en:
+  - 'A: +40 cups daily'
+  - 'B: +20 cups daily'
+  - 'C: +90 cups daily'
+  - 'D: +10 cups daily'
+  options_zh:
+  - 'A: 每日 +40 杯'
+  - 'B: 每日 +20 杯'
+  - 'C: 每日 +90 杯'
+  - 'D: 每日 +10 杯'
+  options_zh_hk:
+  - 'A: 每日 +40 杯'
+  - 'B: 每日 +20 杯'
+  - 'C: 每日 +90 杯'
+  - 'D: 每日 +10 杯'
+  answer: B
+  explanation_en: DiD = (420 - 380) - (330 - 310) = 40 - 20 = +20 cups. Calling this a causal effect additionally requires credible parallel trends and the other identifying assumptions.
+  explanation_zh: DiD = (420 - 380) - (330 - 310) = 40 - 20 = +20 杯。若要称为因果效应，还必须具备可信的平行趋势及其他识别假设。
+  explanation_zh_hk: DiD = (420 - 380) - (330 - 310) = 40 - 20 = +20 杯。如果要稱為因果效應，仲必須具備可信嘅平行趨勢同其他識別假設。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Equipment Rollout Dilemma
+  kicker_zh: 设备升级评估困局
+  kicker_zh_hk: 設備升級評估困局
+  title_en: Did Automated Tampers Truly Generate Forty Extra Cups?
+  title_zh: 自动填压机真的凭空带来了四十杯增量吗？
+  title_zh_hk: 自動填壓機真係憑空帶嚟四十杯增量？
+  en: Operations installed precision automated espresso tampers at Wan Chai to speed up morning counter workflow. In the week following the rollout, daily sales climbed from 380 to 420 cups. The branch manager claimed credit for a forty-cup lift and requested an immediate chain-wide equipment rollout. Did the hardware truly cause that increase, or did external luck inflate the numbers?
+  zh: 运营部在湾仔店试点安装了商用精密自动咖啡填压机，以加速早高峰出餐。安装后一周，日出杯量从 380 杯迅速蹿升至 420 杯。店长坚称设备带来了四十杯的净增量，并催促总部立刻全网采购铺开。这四十杯真的是新设备带来的吗，还是被外部顺风虚增的假象？
+  zh_hk: 營運部喺灣仔店試行安裝咗精密自動咖啡填壓機，諗住加快早高峰吧檯出餐。裝咗一個禮拜之後，每日銷量由 380 杯急升到 420 杯。店長力爭話新機帶嚟咗四十杯嘅淨增長，叫總部即刻全線換機。呢四十杯真係新機嘅功勞，定係純粹撞正外部好運吹大咗個數？
+  zh_zh_hk: 營運部喺灣仔店試行安裝咗精密自動咖啡填壓機，諗住加快早高峰吧檯出餐。裝咗一個禮拜之後，每日銷量由 380 杯急升到 420 杯。店長力爭話新機帶嚟咗四十杯嘅淨增長，叫總部即刻全線換機。呢四十杯真係新機嘅功勞，定係純粹撞正外部好運吹大咗個數？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: DiD = (Y_T,post - Y_T,pre) - (Y_C,post - Y_C,pre)
+  formula_zh: 双重差分矩阵：DiD = (Y_处理,后 - Y_处理,前) - (Y_对照,后 - Y_对照,前)
+  formula_zh_hk: 雙重差分矩陣：DiD = (Y_處理,後 - Y_處理,前) - (Y_對照,後 - Y_對照,前)
+  formula_tex: \hat{\delta}_{\text{DiD}} = \left( \bar{Y}_{T, \text{post}} - \bar{Y}_{T, \text{pre}} \right) - \left( \bar{Y}_{C, \text{post}} - \bar{Y}_{C, \text{pre}} \right)
+  s1_en: Difference-in-Differences compares the treated group change over time with the contemporaneous change in a comparison group. Under parallel trends and no treatment spillovers or other differential shocks, the second difference can identify an average treatment effect for the treated group.
+  s1_zh: 双重差分法比较处理组随时间的变化与对照组的同期变化。在平行趋势、无处理溢出且不存在其他差异性冲击的条件下，第二重差分可识别处理组的平均处理效应。
+  s1_zh_hk: 雙重差分法比較處理組隨時間嘅變化同對照組嘅同期變化。喺平行趨勢、冇處理溢出，而且不存在其他差異性衝擊嘅條件之下，第二重差分可以識別處理組嘅平均處理效應。
+  s2_en: The first differences measure before-to-after changes within each group. The second difference removes the comparison group change from the treated group change. This adjustment controls for common time shocks only when the comparison group provides a credible counterfactual trend.
+  s2_zh: 第一重差分衡量各组内部从前期到后期的变化；第二重差分从处理组变化中减去对照组变化。只有当对照组能够提供可信的反事实趋势时，这一调整才能控制共同时间冲击。
+  s2_zh_hk: 第一重差分衡量各組由前期到後期嘅變化；第二重差分由處理組變化入面減去對照組變化。只有當對照組可以提供可信嘅反事實趨勢時，呢個調整先可以控制共同時間衝擊。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: The Four-Cell Grid
+  left_zh: 四格算术对账表
+  right_en: Filtering the Common Shock
+  right_zh: 剥离宏观同步噪音
+  s1_en: 'We arrange our data into a clean two-by-two grid: rows represent Wan Chai and untreated Mong Kok, while columns capture the pre-installation and post-installation audit periods.'
+  s1_zh: 我们将营运数据整理为整齐的 2x2 四格表格：行代表接受改造的湾仔店与未做变动的旺角店；列代表安装前与安装后的两期审计时间窗口。
+  s1_zh_hk: 我哋將營運數據排做整整齊齊嘅 2x2 四格表格：行代表改裝咗嘅灣仔店同冇郁過嘅旺角店；列代表安裝前同安裝後嘅兩期審計時間窗口。
+  s2_en: Over the same measurement window, untreated Mong Kok rises from 310 to 330 cups. That 20-cup change is used as the comparison trend; the source does not establish which external event produced it.
+  s2_zh: 在相同测量窗口内，未接受升级的旺角店从 310 杯升至 330 杯。这 20 杯变化被用作对照趋势；现有资料并未证明它由哪一项外部事件造成。
+  s2_zh_hk: 喺相同量度窗口入面，冇接受升級嘅旺角店由 310 杯升到 330 杯。呢 20 杯變化會用作對照趨勢；現有資料並未證明係由邊一項外部事件造成。
+  s3_en: Subtracting the 20-cup comparison change from Wan Chai’s 40-cup change gives a DiD estimate of 20 cups. It is interpreted as a treatment effect only if parallel trends and the other design assumptions are credible.
+  s3_zh: 从湾仔店的 40 杯变化中减去对照组的 20 杯变化，得到 20 杯的 DiD 估计值。只有当平行趋势及其他设计假设可信时，才能将其解释为处理效应。
+  s3_zh_hk: 由灣仔店嘅 40 杯變化減去對照組嘅 20 杯變化，得到 20 杯嘅 DiD 估計值。只有當平行趨勢同其他設計假設可信時，先可以將佢解讀為處理效應。
+  left_zh_hk: 四格算術對賬表
+  right_zh_hk: 剝離宏觀同步雜音
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Calculate Treated Shift
+  step1_zh: 测算处理组纵向差分
+  step2_en: Calculate Control Trend
+  step2_zh: 核算对照组自然趋势
+  step3_en: Deduct Baseline Shock
+  step3_zh: 双重扣减求解因果效应
+  s1_en: 'Step one: Wan Chai rises from a pre-period average of 380 cups to a post-period average of 420 cups. Its observed first difference is 420 minus 380, or +40 cups.'
+  s1_zh: 第一步：湾仔店从前期平均 380 杯升至后期平均 420 杯。处理组的一重差分为 420 减 380，即 +40 杯。
+  s1_zh_hk: 第一步：灣仔店由前期平均 380 杯升到後期平均 420 杯。處理組嘅一重差分係 420 減 380，即 +40 杯。
+  s2_en: 'Step two: Mong Kok rises from a pre-period average of 310 cups to a post-period average of 330 cups. Its comparison-group first difference is 330 minus 310, or +20 cups.'
+  s2_zh: 第二步：旺角店从前期平均 310 杯升至后期平均 330 杯。对照组的一重差分为 330 减 310，即 +20 杯。
+  s2_zh_hk: 第二步：旺角店由前期平均 310 杯升到後期平均 330 杯。對照組嘅一重差分係 330 減 310，即 +20 杯。
+  s3_en: 'Step three: The second difference is +40 minus +20, which equals a DiD estimate of +20 cups. This is half of the raw Wan Chai increase, but causal interpretation depends on the identifying assumptions rather than the arithmetic alone.'
+  s3_zh: 第三步：第二重差分为 +40 减 +20，得到 +20 杯的 DiD 估计值。这是湾仔原始增幅的一半，但因果解读取决于识别假设，而不仅是算术结果。
+  s3_zh_hk: 第三步：第二重差分係 +40 減 +20，得到 +20 杯嘅 DiD 估計值。呢個係灣仔原始增幅嘅一半，但因果解讀取決於識別假設，而唔只係算術結果。
+  step1_zh_hk: 測算處理組縱向差分
+  step2_zh_hk: 核算對照組自然趨勢
+  step3_zh_hk: 雙重扣減求解因果效應
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Can Before-and-After Prove Causality?
+  q1_zh: 单凭前后对比能否断定因果？
+  q2_en: 'Audit Rule: Never Evaluate Without a Control'
+  q2_zh: 审计准则：未设对照组，严禁评功过
+  s1_en: Difference-in-Differences improves on a raw before-and-after comparison by using a comparison group to estimate the untreated time trend. Its validity rests on design assumptions, especially parallel trends.
+  s1_zh: 双重差分法利用对照组估计未处理的时间趋势，因此比简单前后对比更有信息量。其有效性取决于研究设计假设，尤其是平行趋势。
+  s1_zh_hk: 雙重差分法利用對照組估計未處理嘅時間趨勢，所以比簡單前後對比更有信息量。佢嘅有效性取決於研究設計假設，尤其係平行趨勢。
+  s2_en: 'Decision rule: select a credible comparison group, inspect pre-treatment trends when multiple pre-periods are available, check for spillovers and differential shocks, and report the DiD estimate with uncertainty before making an equipment decision.'
+  s2_zh: 决策规则：选择可信的对照组；若有多个处理前时期，应检查处理前趋势；同时检查溢出效应与差异性冲击，并在设备决策前连同不确定性报告 DiD 估计值。
+  s2_zh_hk: 決策規則：選擇可信嘅對照組；如果有多個處理前時期，就要檢查處理前趨勢；同時檢查溢出效應同差異性衝擊，並喺設備決定之前連同不確定性報告 DiD 估計值。
+  s3_en: For the supplied grid, Wan Chai changes by +40 cups and Mong Kok by +20 cups, so the DiD estimate is +20 cups. That resolves the arithmetic question; whether it is causal depends on the comparison design.
+  s3_zh: 在给定矩阵中，湾仔变化 +40 杯，旺角变化 +20 杯，因此 DiD 估计值为 +20 杯。这解决了算术问题；能否作因果解释取决于对照设计。
+  s3_zh_hk: 喺畀定矩陣入面，灣仔變化 +40 杯，旺角變化 +20 杯，所以 DiD 估計值係 +20 杯。呢個解決咗算術問題；可唔可以作因果解讀取決於對照設計。
+  q1_zh_hk: 單憑前後對比斷唔斷定到因果？
+  q2_zh_hk: 審計準則：未設對照組，切忌論功過

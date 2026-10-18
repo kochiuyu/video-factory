@@ -1,2 +1,0 @@
-file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-M01-IN/clips/en/01_hook.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/ACC-M01-IN/clips/en/02_takeaway.mp4'

@@ -14,7 +14,7 @@ objective_zh: 先独立，再看企业内部的职责分离，然后才是撑得
 objective_zh_hk: 先獨立，再看企業內部的職責分離，然後才是撐得住結論的證據。
 lessons:
 - AUD-M01-IN
-- AUD-IN-01
-- AUD-IC-01
-- AUD-EV-01
+- AUD-M01-IND
+- AUD-M01-IC
+- AUD-M01-EV
 - AUD-M01-OUT

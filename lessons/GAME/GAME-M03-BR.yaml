@@ -1,0 +1,132 @@
+id: GAME-M03-BR
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: Best response
+title_zh: 最优反应
+title_zh_hk: 最佳回應
+objective_en: Fix the other cart's column. A's best response is the row that pays A more in that column.
+objective_zh: 先钉住对面那一列。甲的最优反应，就是这一列里更赚的那一行。
+objective_zh_hk: 先釘住對面嗰一列。甲嘅最佳回應，就係呢一列裏面更賺嗰一行。
+glossary:
+- en: best response
+  zh: 最优反应
+  zh_hk: 最佳回應
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: B sits Left. What is A's best response?
+  zh: 乙停在左。甲的最优反应是什么？
+  zh_hk: 乙停喺左。甲嘅最佳回應係咩？
+  answer_en: Left. Three beats zero in that column.
+  answer_zh: 左。这一列里三比零大。
+  answer_zh_hk: 左。呢一列裏面三比零大。
+- id: Q2
+  type: transfer
+  en: Do you need to know what B will do later?
+  zh: 要不要先知道乙以后会怎么停？
+  zh_hk: 要唔要先知乙以後會點停？
+  answer_en: No. Best response fixes one column and reads only that column.
+  answer_zh: 不必。最优反应只钉住一列，只读这一列。
+  answer_zh_hk: 唔使。最佳回應淨釘住一列，淨讀呢一列。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Fix one column
+  title_zh: 先钉住一列
+  title_zh_hk: 先釘住一列
+  en: Stay on the same payoff table. Do not ask what B will do in the end. Pretend B has already sat Left. Which row pays A more in that column?
+  zh: 还看同一张报酬表。先不要问乙最后会停哪。假装乙已经停在左。这一列里，甲哪一行更赚？
+  zh_hk: 仲睇同一張報酬表。未好問乙最後會停邊。當乙已經停喺左。呢一列裏面，甲邊一行更賺？
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Best response
+  title_zh: 最优反应
+  title_zh_hk: 最佳回應
+  formula: Given B's column, pick the row that pays A more
+  formula_en: Given B's column, pick the row that pays A more
+  formula_zh: 钉住乙的那一列，选甲更赚的那一行
+  formula_zh_hk: 釘住乙嗰一列，揀甲更賺嗰一行
+  gloss_en: One column at a time. That is all.
+  gloss_zh: 一次只看一列。就这一句。
+  gloss_zh_hk: 一次淨睇一列。就呢一句。
+  en: Here is the idea. A best response is the row that pays you more, given the other cart's column. You do not need a story about courage. You compare two numbers in one column.
+  zh: 核心就这一句。最优反应就是，钉住对面那一列，选你更赚的那一行。不必讲勇气。只要比这一列里的两个数字。
+  zh_hk: 核心就呢一句。最佳回應就係，釘住對面嗰一列，揀你更賺嗰一行。唔使講勇氣。淨要比呢一列裏面兩個數字。
+- id: steps
+  visual: steps
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Read one column
+  title_zh: 只读一列
+  title_zh_hk: 淨讀一列
+  step1_en: B sits Left. A's Left pays 3. A's Right pays 0.
+  step1_zh: 乙在左。甲停左得 3。甲停右得 0。
+  step1_zh_hk: 乙喺左。甲停左得 3。甲停右得 0。
+  step2_en: So Left is A's best response to Left.
+  step2_zh: 所以左是甲对左的最优反应。
+  step2_zh_hk: 所以左係甲對左嘅最佳回應。
+  step3_en: B sits Right. A's best response is Right.
+  step3_zh: 乙在右。甲的最优反应是右。
+  step3_zh_hk: 乙喺右。甲嘅最佳回應係右。
+  en: B sits Left. A's Left pays 3, Right pays 0. Left is the best response. B sits Right. Right pays 3, Left pays 0. Right is the best response. Same work for B.
+  zh: 乙在左。甲停左得 3，停右得 0。左就是最优反应。乙在右。右得 3，左得 0。右就是最优反应。乙那边同样做一遍。
+  zh_hk: 乙喺左。甲停左得 3，停右得 0。左就係最佳回應。乙喺右。右得 3，左得 0。右就係最佳回應。乙嗰邊同樣做一遍。
+- id: example
+  visual: example
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Not a plan for the whole morning
+  title_zh: 不是整个早晨的计划
+  title_zh_hk: 唔係成個朝早嘅計劃
+  setup_en: Someone writes, best response means sit Left all day.
+  setup_zh: 有人写，最优反应就是整天停左边。
+  setup_zh_hk: 有人寫，最佳回應就係成日停左邊。
+  result_en: No. It is an answer to one column, not a mood.
+  result_zh: 不是。它是对一列的回答，不是一种脾气。
+  result_zh_hk: 唔係。佢係對一列嘅回答，唔係一種脾氣。
+  en: Someone writes, best response means sit Left all day. Cross that out. Best response is an answer to one column. Change the column, and the answer can change.
+  zh: 有人写，最优反应就是整天停左边。划掉。最优反应是对一列的回答。列一换，答案可以换。
+  zh_hk: 有人寫，最佳回應就係成日停左邊。劃走。最佳回應係對一列嘅回答。列一換，答案可以換。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: One column, one answer
+  title_zh: 一列，一个答案
+  title_zh_hk: 一列，一個答案
+  q1_en: If B is Left, A's best response is Left.
+  q1_zh: 乙在左，甲的最优反应是左。
+  q1_zh_hk: 乙喺左，甲嘅最佳回應係左。
+  q2_en: If B is Right, A's best response is Right.
+  q2_zh: 乙在右，甲的最优反应是右。
+  q2_zh_hk: 乙喺右，甲嘅最佳回應係右。
+  en: Say the pair. One column, one answer. Next we look for a cell where A's answer and B's answer sit together. That cell is Nash.
+  zh: 两句成对说。一列，一个答案。接下来找一格，甲的答案和乙的答案坐在一起。那一格就是纳什。
+  zh_hk: 兩句成對講。一列，一個答案。跟住搵一格，甲嘅答案同乙嘅答案坐一齊。嗰一格就係納什。

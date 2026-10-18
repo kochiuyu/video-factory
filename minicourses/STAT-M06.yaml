@@ -1,0 +1,30 @@
+id: STAT-M06
+kind: minicourse
+course: statistics
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+title_en: Regression diagnostics and modeling for a coffee chain
+title_zh: 咖啡连锁的回归诊断与建模
+title_zh_hk: 咖啡連鎖嘅回歸診斷與建模
+objective_en: 'Fifteen standalone shorts on assumed Metro Coffee regressions: scatter and centroid, covariance, correlation, the OLS criterion, slope and intercept, sum-of-squares, R-squared, residual standard error, slope standard error, a slope t-test, mean-response versus prediction intervals, residual diagnostics, log-log elasticity, omitted-variable bias, and a validation review. Build each short on its own. This collection does not join them into one video.'
+objective_zh: 围绕假设都市咖啡回归的十五节独立短课：散点与质心、协方差、相关、OLS 准则、斜率与截距、平方和、R 平方、残差标准误、斜率标准误、斜率 t 检验、均值响应区间与预测区间、残差诊断、双对数弹性、遗漏变量偏差，以及验证复核。每节单独制作。本集合不把它们拼成一条视频。
+objective_zh_hk: 圍繞假設都市咖啡回歸嘅十五節獨立短課：散點同質心、協方差、相關、OLS 準則、斜率同截距、平方和、R 平方、殘差標準誤、斜率標準誤、斜率 t 檢驗、平均響應區間同預測區間、殘差診斷、雙對數彈性、遺漏變量偏差，以及驗證覆核。每節單獨製作。本集合唔會將佢哋拼成一條片。
+syllabus: docs/courses/STAT-M06.md
+duration_note: Each short is 168 seconds. The collection is not a 5–10 minute module.
+lessons:
+- STAT-M06-T01-SCATT
+- STAT-M06-T02-COVAR
+- STAT-M06-T03-CORRE
+- STAT-M06-T04-OLSCR
+- STAT-M06-T05-SLOPE
+- STAT-M06-T06-SSDEC
+- STAT-M06-T07-RSQRD
+- STAT-M06-T08-STDER
+- STAT-M06-T09-SLPSE
+- STAT-M06-T10-TSLOP
+- STAT-M06-T11-CVIPI
+- STAT-M06-T12-RESDI
+- STAT-M06-T13-LOGLG
+- STAT-M06-T14-OVBIA
+- STAT-M06-T15-RECAP

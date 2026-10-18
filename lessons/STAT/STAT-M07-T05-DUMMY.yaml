@@ -1,0 +1,170 @@
+id: STAT-M07-T05-DUMMY
+course: STAT-M07
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: Indicator Dummies & Binary Group Premiums
+title_zh: 虚拟变量与二元群体溢价
+title_zh_hk: 虛擬變量與二元群體溢價
+objective_en: Incorporate binary indicator dummy variables into multiple regression, interpret the dummy coefficient as a parallel intercept shift, and quantify district pricing premiums.
+objective_zh: 在多元回归中纳入二元指示虚拟变量，将虚拟变量系数解读为平行的截距平移，并量化商圈溢价。
+objective_zh_hk: 喺多元回歸入面納入二元指示虛擬變量，將虛擬變量系數解讀為平行嘅截距平移，並量化商圈溢價。
+glossary:
+- en: Dummy Variable
+  zh: 虚拟变量
+  zh_hk: 虛擬變量
+  lock: true
+  zh_zh_hk: 虛擬變量
+- en: Reference Group
+  zh: 基准对照组
+  zh_hk: 基準對照組
+  lock: true
+  zh_zh_hk: 基準對照組
+- en: Intercept Shift
+  zh: 截距平移
+  zh_hk: 截距平移
+  lock: true
+  zh_zh_hk: 截距平移
+- en: District Premium
+  zh: 商圈溢价
+  zh_hk: 商圈溢價
+  lock: true
+  zh_zh_hk: 商圈溢價
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: In the estimated regression model Daily_Cups = 150 + 0.40 * Footfall + 80 * Corporate_Dummy, what does the coefficient +80 represent?
+  question_zh: 在估算的回归模型 日出杯量 = 150 + 0.40 * 客流 + 80 * 商务区虚拟变量 中，系数 +80 代表什么？
+  question_zh_hk: 喺估算嘅回歸模型 每日出杯量 = 150 + 0.40 * 人流 + 80 * 商務區虛擬變量 入面，系數 +80 代表啲咩？
+  options_en:
+  - 'A: Corporate district stores sell an additional 80 cups per pedestrian customer'
+  - 'B: Holding pedestrian foot traffic constant, corporate district stores sell an average of 80 cups more per day than baseline street stores'
+  - 'C: Total daily coffee sales in street retail branches equal exactly 80 cups'
+  - 'D: Corporate district stores experience an 80% higher conversion slope'
+  options_zh:
+  - 'A: 商务区门店每位过路顾客能多买 80 杯咖啡'
+  - 'B: 在街头客流量相同的前提下，商务区门店比基准街边店平均每天多卖 80 杯咖啡'
+  - 'C: 街边零售分店的每日咖啡总出杯量严格等于 80 杯'
+  - 'D: 商务区门店的客流转化斜率高出 80%'
+  options_zh_hk:
+  - 'A: 商務區分店每位過路顧客可以買多 80 杯咖啡'
+  - 'B: 喺街頭人流完全相同嘅前提下，商務區門市比起基準街舖平均每日賣多 80 杯咖啡'
+  - 'C: 街邊零售分店嘅每日咖啡總銷量剛好等於 80 杯'
+  - 'D: 商務區門市嘅人流轉化斜率高出咗 80%'
+  answer: B
+  explanation_en: The dummy coefficient is an estimated intercept shift. When Corporate_Dummy = 1, expected sales are 80 cups higher than for the D = 0 reference group at the same footfall, under the model specification.
+  explanation_zh: 虚拟变量系数是估计的截距平移量。当商务区虚拟变量 = 1 时，在相同客流和既定模型设定下，预期销量比 D = 0 的基准组高 80 杯。
+  explanation_zh_hk: 虛擬變量系數係估計嘅截距平移量。當商務區虛擬變量 = 1 時，喺相同人流同既定模型設定之下，預期出杯量比 D = 0 嘅基準組高 80 杯。
+- id: Q2
+  type: multiple_choice
+  question_en: Wan Chai is a corporate district branch (Dummy = 1) with 420 daily footfall. Mong Kok is a street retail branch (Dummy = 0) with 420 daily footfall. Using Daily_Cups = 150 + 0.40 * Footfall + 80 * Dummy, what are their respective predicted sales?
+  question_zh: 湾仔店为商务区门店（虚拟变量 = 1），日客流为 420 人。旺角店为街边零售店（虚拟变量 = 0），日客流同样为 420 人。根据模型 日出杯量 = 150 + 0.40 * 客流 + 80 * 虚拟变量，两家门店的预测销量分别是多少？
+  question_zh_hk: 灣仔店係商務區分店（虛擬變量 = 1），每日人流 420 人。旺角店係街舖（虛擬變量 = 0），每日人流同樣係 420 人。根據模型 每日出杯量 = 150 + 0.40 * 人流 + 80 * 虛擬變量，兩間舖嘅預測銷量分別係幾多？
+  options_en:
+  - 'A: Mong Kok = 318 cups; Wan Chai = 398 cups'
+  - 'B: Mong Kok = 318 cups; Wan Chai = 318 cups'
+  - 'C: Mong Kok = 150 cups; Wan Chai = 230 cups'
+  - 'D: Mong Kok = 398 cups; Wan Chai = 318 cups'
+  options_zh:
+  - 'A: 旺角店 = 318 杯；湾仔店 = 398 杯'
+  - 'B: 旺角店 = 318 杯；湾仔店 = 318 杯'
+  - 'C: 旺角店 = 150 杯；湾仔店 = 230 杯'
+  - 'D: 旺角店 = 398 杯；湾仔店 = 318 杯'
+  options_zh_hk:
+  - 'A: 旺角店 = 318 杯；灣仔店 = 398 杯'
+  - 'B: 旺角店 = 318 杯；灣仔店 = 318 杯'
+  - 'C: 旺角店 = 150 杯；灣仔店 = 230 杯'
+  - 'D: 旺角店 = 398 杯；灣仔店 = 318 杯'
+  answer: A
+  explanation_en: 'Mong Kok (D = 0): 150 + 0.40 * 420 + 80 * 0 = 150 + 168 = 318 cups. Wan Chai (D = 1): 150 + 0.40 * 420 + 80 * 1 = 318 + 80 = 398 cups. The gap is exactly the +80 corporate premium.'
+  explanation_zh: 旺角店（D = 0）：150 + 0.40 * 420 + 80 * 0 = 318 杯。湾仔店（D = 1）：150 + 0.40 * 420 + 80 * 1 = 318 + 80 = 398 杯。两店差距恰好为 +80 杯商务区溢价。
+  explanation_zh_hk: 旺角店（D = 0）：150 + 0.40 * 420 + 80 * 0 = 318 杯。灣仔店（D = 1）：150 + 0.40 * 420 + 80 * 1 = 318 + 80 = 398 杯。兩間舖嘅差距剛好就係 +80 杯商務區溢價。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Commercial Location Dilemma
+  kicker_zh: 选址溢价困境
+  kicker_zh_hk: 選址溢價困局
+  title_en: Does Office District Prestige Command Extra Sales?
+  title_zh: 高端商务核心区能否带来天然销量溢价？
+  title_zh_hk: 核心商業區係咪真係有天然銷量溢價？
+  en: Metro Coffee is expanding along Hong Kong Island. Leasing agents argue that opening in corporate office hubs like Wan Chai commands premium pricing because white-collar office commuters consume coffee habitually. But Mong Kok street stores also boast intense pedestrian traffic. How do we incorporate non-numeric district categories into our regression model to measure the corporate premium?
+  zh: Metro Coffee 正计划沿港岛核心区拓店。中介极力推销湾仔等商务办公区，声称白领习惯性消费能带来天然溢价。然而旺角街边店同样拥有庞大的人潮客流。我们该如何把这类非数值型的商圈分类纳入回归模型，以严谨量化商务区到底值多少杯额外销量？
+  zh_hk: Metro Coffee 計劃沿港島核心區擴張。地產經紀猛話灣仔呢類商業區寫字樓林立，白領返工飲咖啡有剛需，自帶天然溢價。但旺角街舖同樣人流如潮。我哋點樣可以將呢啲非數字嘅商圈類別擺入回歸模型，嚴格量化出商業區到底值幾多杯額外銷量？
+  zh_zh_hk: Metro Coffee 計劃沿港島核心區擴張。地產經紀猛話灣仔呢類商業區寫字樓林立，白領返工飲咖啡有剛需，自帶天然溢價。但旺角街舖同樣人流如潮。我哋點樣可以將呢啲非數字嘅商圈類別擺入回歸模型，嚴格量化出商業區到底值幾多杯額外銷量？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Y_i = beta_0 + beta_1 * Footfall_i + delta_1 * D_Corporate_i + e_i
+  formula_zh: 二元虚拟变量模型：Y_i = beta_0 + beta_1 * 客流_i + delta_1 * D_商务_i + e_i
+  formula_zh_hk: 二元虛擬變量模型：Y_i = beta_0 + beta_1 * 人流_i + delta_1 * D_商務_i + e_i
+  formula_tex: Y_i = \beta_0 + \beta_1 X_i + \delta_1 D_i + \varepsilon_i \quad \text{where } D_i \in \{0, 1\}
+  s1_en: An indicator or dummy variable translates qualitative categorical attributes into binary numbers. It takes the value 1 if an observation possesses the specific attribute, and 0 otherwise.
+  s1_zh: 指示变量或虚拟变量将定性分类属性转换为二元数字。若观测值具备该特定商业属性，取值为 1；否则取值为 0。
+  s1_zh_hk: 指示變量或者虛擬變量將定性分類屬性轉換做二元數字。如果觀測值具備嗰個特定商業屬性，就攞數值 1；如果冇就攞 0。
+  s2_en: The omitted state where D equals zero forms our reference or benchmark group. The coefficient delta one measures the differential intercept shift, capturing the average gap between groups holding foot traffic fixed.
+  s2_zh: D 等于 0 的省略状态构成基准对照组。参数 delta_1 衡量截距平移量，捕捉在街头客流量严格相同的条件下，两类商圈之间的平均销量差距。
+  s2_zh_hk: D 等於 0 嘅狀態構成基準對照組。參數 delta_1 衡量截距平移量，捕捉喺街頭人流完全一樣嘅條件下，兩類商圈之間嘅平均銷量差距。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Parallel Regression Lines
+  left_zh: 两条平行的回归线
+  right_en: The Benchmark Zero Group
+  right_zh: 基准零状态参照系
+  s1_en: Adding an additive dummy variable creates two parallel regression lines with identical slopes. For street retail where D is zero, the intercept is beta zero; for corporate stores where D is one, the intercept jumps to beta zero plus delta one.
+  s1_zh: 引入加法型虚拟变量会生成两条斜率完全相同的平行回归线。对于 D 为 0 的街边店，截距为 beta_0；对于 D 为 1 的商务店，截距上跃至 beta_0 加上 delta_1。
+  s1_zh_hk: 引入加法型虛擬變量會產生兩條斜率完全一樣嘅平行回歸線。對於 D 係 0 嘅街舖，截距係 beta_0；對於 D 係 1 嘅商務店，截距向上跳到 beta_0 加埋 delta_1。
+  s2_en: With only an additive dummy, the model imposes the same footfall slope beta one for both store formats. Delta one represents a constant conditional gap in expected cups across footfall levels; this parallel-lines assumption should be checked rather than treated as automatic.
+  s2_zh: 当模型只加入加法型虚拟变量时，它对两种门店业态施加相同的客流斜率 beta_1。delta_1 表示各客流水平下预期出杯量的固定条件差距；平行线假设需要检验，而不能视为当然成立。
+  s2_zh_hk: 當模型只加入加法型虛擬變量時，佢會對兩種門市形態施加相同嘅人流斜率 beta_1。delta_1 代表各人流水平之下預期出杯量嘅固定條件差距；平行線假設需要檢查，唔可以當成必然成立。
+  s3_en: A t-test on delta one evaluates the null hypothesis of no conditional intercept difference, given the model assumptions. A p-value above a chosen significance level means the data do not provide sufficient evidence against that null; it does not prove that the district effect is zero.
+  s3_zh: 对 delta_1 的 t 检验评估“条件截距差异为零”的原假设，前提是模型假设成立。若 p值 高于选定的显著性水平，表示数据不足以反对该原假设，并不证明商圈效应等于零。
+  s3_zh_hk: 對 delta_1 做 t 檢驗，係喺模型假設成立之下評估「條件截距差異為零」嘅原假設。如果 p值 高過選定嘅顯著性水平，代表數據不足以反對原假設，並唔係證明商圈效應等於零。
+  left_zh_hk: 兩條平行嘅回歸線
+  right_zh_hk: 基準零狀態參照系
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Define Binary Dummies
+  step1_zh: 定义二元哑变量
+  step2_en: Estimate Parallel Lines
+  step2_zh: 估算平行回归方程
+  step3_en: Quantify District Lift
+  step3_zh: 量化商圈净溢价
+  s1_en: 'Step one: Code our store ledger. Mong Kok street branch is coded D = 0 as the reference group. Wan Chai corporate office branch is coded D = 1.'
+  s1_zh: 第一步：在门店台账中编码。旺角街边店设 D = 0，作为基准参照组；湾仔商务办公店设 D = 1。
+  s1_zh_hk: 第一步：喺門市台賬入面編碼。旺角街舖設 D = 0，作為基準參照組；灣仔商務寫字樓店設 D = 1。
+  s2_en: 'Step two: Regressing daily cups on pedestrian foot traffic and the dummy yields: Daily_Cups = 150 + 0.40 * Footfall + 80 * Corporate_Dummy, with standard error of delta equal to 20.'
+  s2_zh: 第二步：将日出杯量对街头客流与虚拟变量做多元回归，得出：出杯量 = 150 + 0.40 * 客流 + 80 * 商务区变量，delta 的标准误为 20。
+  s2_zh_hk: 第二步：將每日出杯量對街頭人流同虛擬變量做多元回歸，得出：出杯量 = 150 + 0.40 * 人流 + 80 * 商務區變量，delta 嘅標準誤係 20。
+  s3_en: 'Step three: The estimated t-statistic for delta is 80 divided by 20, which equals 4.00. The fitted model estimates an 80-cup conditional difference at equal footfall; statistical significance still depends on the reference distribution, degrees of freedom, and stated assumptions.'
+  s3_zh: 第三步：delta 的估计 t 统计量为 80 除以 20，即 4.00。拟合模型估计，在相同客流条件下，两类门店的预期日出杯量相差 80 杯；统计显著性仍取决于参考分布、自由度和既定假设。
+  s3_zh_hk: 第三步：delta 嘅估計 t 統計量係 80 除以 20，即係 4.00。擬合模型估計，喺相同人流之下，兩類門市嘅預期每日出杯量相差 80 杯；統計顯著性仍然取決於參考分布、自由度同既定假設。
+  step1_zh_hk: 定義二元虛擬變量
+  step2_zh_hk: 估算平行回歸方程
+  step3_zh_hk: 量化商圈淨溢價
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Does Prestige Guarantee Profit?
+  q1_zh: 商圈溢价能否覆盖租金成本？
+  q2_en: 'Audit Rule: Compare Premium to Rent Gap'
+  q2_zh: 审计准则：拿杯数溢价对冲铺租差价
+  s1_en: Dummy variables allow a regression to represent a binary category. In this additive specification, the dummy coefficient is a conditional intercept difference relative to the D equals zero reference group, not an automatic causal effect.
+  s1_zh: 虚拟变量让回归模型能够表示二元类别。在这一加法设定中，虚拟变量系数是相对于 D 等于 0 基准组的条件截距差异，而不是自动成立的因果效应。
+  s1_zh_hk: 虛擬變量令回歸模型可以表示二元類別。喺呢個加法設定入面，虛擬變量系數係相對於 D 等於 0 基準組嘅條件截距差異，而唔係自動成立嘅因果效應。
+  s2_en: 'Decision rule: compare the estimated 80-cup conditional gap with the lease-cost difference only after checking model specification, uncertainty, and whether important district confounders are omitted. Convert cups to margin using defensible business inputs before making a location decision.'
+  s2_zh: 决策规则：只有在检查模型设定、不确定性以及是否遗漏重要商圈混淆因素后，才将估计的 80 杯条件差距与租金差额比较。作出选址决策前，应使用有依据的业务参数把杯数转换为利润。
+  s2_zh_hk: 決策規則：只有喺檢查模型設定、不確定性，同埋係咪遺漏重要商圈混淆因素之後，先將估計嘅 80 杯條件差距同租金差額比較。作出選址決定之前，要用有理據嘅業務參數將杯數轉換成利潤。
+  s3_en: For 420 daily pedestrians, the model predicts 318 cups for the D equals zero reference store and 398 cups for the D equals one corporate store. The 80-cup gap is the fitted intercept shift under the shared-slope specification.
+  s3_zh: 当日客流为 420 人时，模型对 D 等于 0 的基准门店预测 318 杯，对 D 等于 1 的商务区门店预测 398 杯。80 杯差距是共同斜率设定下的拟合截距平移。
+  s3_zh_hk: 當每日人流係 420 人時，模型對 D 等於 0 嘅基準門市預測 318 杯，對 D 等於 1 嘅商務區門市預測 398 杯。80 杯差距係共同斜率設定之下嘅擬合截距平移。
+  q1_zh_hk: 商圈溢價夠唔夠填補租金差價？
+  q2_zh_hk: 審計準則：用銷量溢價對沖舖租差價

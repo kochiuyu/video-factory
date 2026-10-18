@@ -1,0 +1,167 @@
+id: STAT-M01-T15-RECAP
+course: statistics
+course_en: Business Statistics
+course_zh: 商务统计
+course_zh_hk: 商務統計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 162
+title_en: The executive decision dashboard
+title_zh: 管理层决策仪表盘
+title_zh_hk: 管理層決策儀表板
+objective_en: Synthesize the module’s descriptive statistics into a managerial decision framework, showing how leaders combine measures of center, position, spread, shape, data quality, and association while respecting each measure’s limitations.
+objective_zh: 把本模块的描述性统计整合为管理决策框架，说明领导者如何结合中心、位置、离散、形态、数据质量与关联指标，同时尊重每项指标的局限。
+objective_zh_hk: 將本模組嘅描述性統計整合成管理決策框架，說明領導者點樣結合中心、位置、離散、形態、數據質量同關聯指標，同時尊重每項指標嘅局限。
+glossary:
+- en: decision framework
+  zh: 决策框架
+  zh_hk: 決策框架
+  lock: true
+- en: executive dashboard
+  zh: 管理层仪表盘
+  zh_hk: 管理層儀表板
+  lock: true
+- en: complementary measures
+  zh: 互补指标
+  zh_hk: 互補指標
+  lock: true
+- en: limitation
+  zh: 局限
+  zh_hk: 局限
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why should a manager avoid evaluating business performance with only one summary statistic?
+  question_zh: 为什么管理者不应只用一个汇总统计量评估业务绩效？
+  question_zh_hk: 點解管理者唔應該只用一個匯總統計量評估業務績效？
+  options_en:
+  - 'A: Each statistic answers a particular question and may omit important information about position, spread, shape, unusual observations, or relationships.'
+  - 'B: One measure is always sufficient when the dataset is large.'
+  - 'C: Multiple measures automatically prove causation.'
+  - 'D: Every statistic answers exactly the same business question.'
+  options_zh:
+  - 'A: 每个统计量只回答特定问题，并可能遗漏位置、离散、形态、异常观测值或变量关系等重要信息。'
+  - 'B: 只要数据集足够大，一个指标就永远足够。'
+  - 'C: 使用多个指标会自动证明因果关系。'
+  - 'D: 每个统计量都回答完全相同的业务问题。'
+  options_zh_hk:
+  - 'A: 每個統計量只回答特定問題，並可能遺漏位置、離散、形態、異常觀測值或者變量關係等重要資訊。'
+  - 'B: 只要數據集足夠大，一個指標就永遠足夠。'
+  - 'C: 使用多個指標會自動證明因果關係。'
+  - 'D: 每個統計量都回答完全相同嘅業務問題。'
+  answer: A
+  explanation_en: A useful dashboard combines complementary measures. Center does not describe spread; spread does not describe asymmetry; association does not establish causation.
+  explanation_zh: 有效的仪表盘会组合互补指标。中心指标不描述离散，离散指标不描述不对称性，关联指标也不能证明因果关系。
+  explanation_zh_hk: 有效嘅儀表板會組合互補指標。中心指標唔描述離散，離散指標唔描述唔對稱性，關聯指標亦唔可以證明因果關係。
+- id: Q2
+  type: multiple_choice
+  question_en: Which combination best supports a balanced review of branch performance?
+  question_zh: 哪一种组合最适合对分店业绩进行平衡评估？
+  question_zh_hk: 邊一種組合最適合對分店業績作平衡評估？
+  options_en:
+  - 'A: A measure of typical performance, a measure of spread, an inspection of distribution shape and outliers, and relevant association analysis.'
+  - 'B: The range alone for every decision.'
+  - 'C: The mean alone, regardless of outliers or business format.'
+  - 'D: Correlation alone as proof that one operational variable causes another.'
+  options_zh:
+  - 'A: 典型业绩指标、离散指标、分布形态与异常值检查，以及相关的关联分析。'
+  - 'B: 所有决策都只使用极差。'
+  - 'C: 不考虑异常值或门店业态，只使用平均数。'
+  - 'D: 只用相关系数证明一个运营变量导致另一个变量。'
+  options_zh_hk:
+  - 'A: 典型業績指標、離散指標、分佈形態同異常值檢查，以及相關嘅關聯分析。'
+  - 'B: 所有決策都只使用全距。'
+  - 'C: 唔考慮異常值或者門店業態，只使用平均數。'
+  - 'D: 只用相關系數證明一個營運變量導致另一個變量。'
+  answer: A
+  explanation_en: Balanced decisions combine measures that answer different questions. The appropriate selection depends on the business objective, comparison group, data quality, and limitations of each statistic.
+  explanation_zh: 平衡决策会组合回答不同问题的指标。具体选择取决于业务目标、比较总体、数据质量与各统计量的局限。
+  explanation_zh_hk: 平衡決策會組合回答唔同問題嘅指標。具體選擇取決於業務目標、比較總體、數據質量同各統計量嘅局限。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Synthesis
+  kicker_en: The Synthesis
+  kicker_zh: 综合视野
+  kicker_zh_hk: 綜合視野
+  title_en: Turn separate measures into one decision process
+  title_zh: 把分散指标整合为决策流程
+  title_zh_hk: 將分散指標整合成決策流程
+  en: Across this module, we moved from raw store records to measures of center, position, spread, shape, unusual observations, and relationships. The final task is not to display every formula at once. It is to choose a small, complementary set of measures that answers the business question without hiding important limitations.
+  zh: 本模块把原始门店记录逐步转化为中心、位置、离散、形态、异常观测值与变量关系等指标。最后的任务不是同时展示所有公式，而是选择一组精简而互补的指标，在回答业务问题的同时不掩盖重要局限。
+  zh_hk: 本模組將原始門店記錄逐步轉化成中心、位置、離散、形態、異常觀測值同變量關係等指標。最後嘅任務唔係同時展示所有公式，而係選擇一組精簡而互補嘅指標，喺回答業務問題嘅同時唔掩蓋重要局限。
+- id: matrix
+  visual: module_close
+  seconds: 44
+  title_en: A four-layer decision framework
+  title_zh: 四层决策框架
+  title_zh_hk: 四層決策框架
+  claim_en: Start with the decision, then select complementary measures and state their limitations.
+  claim_zh: 先明确决策问题，再选择互补指标，并说明各自局限。
+  claim_zh_hk: 先明確決策問題，再選擇互補指標，並講明各自局限。
+  next_en: Close the review when each chosen measure has a stated comparison group and a stated limitation.
+  next_zh: 当每个选用指标都写明比较总体与局限时，这次复核就可以收束。
+  next_zh_hk: 當每個選用指標都寫明比較總體同局限嗰陣，呢次覆核就可以收束。
+  en: 'Layer one describes center and position: mean, median, mode, and percentiles answer different questions about total scale, typical observations, common categories, and relative standing. Layer two describes variability: range, IQR, variance, standard deviation, and coefficient of variation compare outer span, middle spread, squared spread, spread in original units, and relative dispersion. None of these measures is an automatic staffing, inventory, or target formula.'
+  zh: 第一层描述中心与位置：平均数、中位数、众数与百分位数分别回答总体规模、典型观测、常见类别与相对位置问题。第二层描述离散：极差、四分位距、方差、标准差与变异系数分别反映外围跨度、中间跨度、平方离散、原始单位离散与相对离散。任何一个指标都不是自动生成排班、库存或目标的公式。
+  zh_hk: 第一層描述中心同位置：平均數、中位數、眾數同百分位數分別回答總體規模、典型觀測、常見類別同相對位置問題。第二層描述離散：全距、四分位距、方差、標準差同變異系數分別反映外圍跨度、中間跨度、平方離散、原始單位離散同相對離散。任何一個指標都唔係自動生成排班、庫存或者目標嘅公式。
+  kicker_en: Review
+  kicker_zh: 复核
+  kicker_zh_hk: 覆核
+  next_label_en: Rule
+  next_label_zh: 规则
+  next_label_zh_hk: 規則
+- id: shape_link
+  visual: two_column
+  seconds: 48
+  kicker: Shape and Drivers
+  kicker_en: Shape, Quality, and Relationships
+  kicker_zh: 形态、质量与变量关系
+  kicker_zh_hk: 形態、質量同變量關係
+  title_en: Inspect what summaries can conceal
+  title_zh: 检查汇总指标可能掩盖的信息
+  title_zh_hk: 檢查匯總指標可能掩蓋嘅資訊
+  left_en: 'Shape and quality: outliers, skewness, kurtosis'
+  left_zh: 形态与质量：异常值、偏度、峰度
+  left_zh_hk: 形態同質量：異常值、偏度、峰度
+  right_en: 'Relationships: covariance and correlation'
+  right_zh: 变量关系：协方差与相关系数
+  right_zh_hk: 變量關係：協方差同相關系數
+  s1_en: Layer three checks data shape and quality. Outlier rules flag observations for investigation; skewness describes asymmetry; kurtosis describes the influence of extreme observations. These measures guide review and stress testing, but they do not diagnose causes or predict disasters by themselves.
+  s1_zh: 第三层检查数据形态与质量。异常值规则把观测值标记出来供调查；偏度描述不对称性；峰度描述极端观测值的影响。这些指标可以引导复查与压力测试，但本身不能诊断成因或预测灾难。
+  s1_zh_hk: 第三層檢查數據形態同質量。異常值規則將觀測值標記出嚟供調查；偏度描述唔對稱性；峰度描述極端觀測值嘅影響。呢啲指標可以引導複查同壓力測試，但本身唔可以診斷成因或者預測災難。
+  s2_en: Layer four examines paired variables. Covariance gives the direction of linear co-movement, while correlation standardizes that relationship to a unit-free scale from minus one to plus one. Neither measure proves causation.
+  s2_zh: 第四层研究成对变量。协方差表示线性共同变动的方向，相关系数则把关系标准化到负一至正一的无单位尺度。两者都不能证明因果关系。
+  s2_zh_hk: 第四層研究成對變量。協方差表示線性共同變動嘅方向，相關系數就將關係標準化到負一至正一嘅無單位尺度。兩者都唔可以證明因果關係。
+  s3_en: Across all four layers, managers should verify the comparison group, time period, units, sample or population convention, data quality, and business context before acting.
+  s3_zh: 在四个层次中，管理者都应在行动前核实比较总体、统计期间、单位、样本或总体约定、数据质量与业务背景。
+  s3_zh_hk: 喺四個層次入面，管理者都應該喺行動之前核實比較總體、統計期間、單位、樣本或者總體約定、數據質量同業務背景。
+- id: takeaway
+  visual: takeaway
+  seconds: 40
+  kicker: Executive Rule
+  kicker_en: Executive Rule
+  kicker_zh: 高管守则
+  kicker_zh_hk: 高管守則
+  title_en: Never manage by a single statistic
+  title_zh: 永远不要只凭单一统计量管理
+  title_zh_hk: 永遠唔好只憑單一統計量管理
+  q1_en: How should managers build the dashboard?
+  q1_zh: 管理者应如何构建仪表盘？
+  q1_zh_hk: 管理者應該點樣構建儀表板？
+  q2_en: What is descriptive statistics designed to support?
+  q2_zh: 描述性统计旨在支持什么？
+  q2_zh_hk: 描述性統計旨在支持咩？
+  s1_en: Begin with the decision question. Pair an appropriate measure of center or position with relevant measures of spread, then inspect shape, outliers, and relationships when they matter.
+  s1_zh: 从决策问题出发。把合适的中心或位置指标与相关离散指标配对，并在需要时检查形态、异常值与变量关系。
+  s1_zh_hk: 由決策問題出發。將合適嘅中心或者位置指標同相關離散指標配對，並喺需要嗰陣檢查形態、異常值同變量關係。
+  s2_en: Descriptive statistics summarizes the observed data and reveals patterns worth investigating. It does not replace managerial judgment, establish causation, or remove uncertainty.
+  s2_zh: 描述性统计用于概括已观测数据，并揭示值得调查的模式。它不能取代管理判断、证明因果关系或消除不确定性。
+  s2_zh_hk: 描述性統計用嚟概括已觀測數據，並揭示值得調查嘅模式。佢唔可以取代管理判斷、證明因果關係或者消除不確定性。
+  s3_en: 'The executive rule is precise: select complementary measures, state assumptions and limitations, investigate unusual results, and connect every statistic to a specific business question before deciding.'
+  s3_zh: 管理规则很明确：选择互补指标，说明假设与局限，调查异常结果，并在决策前把每个统计量对应到具体业务问题。
+  s3_zh_hk: 管理規則好清楚：選擇互補指標，講明假設同局限，調查異常結果，並喺決策之前將每個統計量對應到具體業務問題。

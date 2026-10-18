@@ -1,0 +1,194 @@
+id: STAT-M02-T08-INDEP
+course: statistics
+course_en: Business Probability Foundations
+course_zh: 商务概率基础
+course_zh_hk: 商務概率基礎
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: "Are they really unrelated?"
+title_zh: "它们真的毫无瓜葛吗？统计独立性"
+title_zh_hk: "佢哋真係毫無瓜葛嗎？統計獨立性"
+objective_en: "Define statistical independence mathematically using P(A|B) = P(A) and P(A and B) = P(A) * P(B), contrast casual assumptions of independence with data-driven dependence tests, and apply the concept to retail merchandising and stock allocation."
+objective_zh: "通过 P(A|B) = P(A) 及 P(A 且 B) = P(A) * P(B) 在数学上界定统计独立性，对比盲目主观假定独立与基于数据的关联检验，并将其应用于零售品类连带及库存备货。"
+objective_zh_hk: "透過 P(A|B) = P(A) 同 P(A 兼 B) = P(A) * P(B) 喺數學上界定統計獨立性，對比盲目主觀假定獨立與基於數據嘅關聯檢驗，並將其應用喺零售品類連帶同庫存備貨。"
+glossary:
+- en: "statistical independence"
+  zh: "统计独立性"
+  zh_hk: "統計獨立性"
+  lock: true
+- en: "dependence"
+  zh: "统计相关/依赖"
+  zh_hk: "統計相關/相依"
+  lock: true
+- en: "test of independence"
+  zh: "独立性检验"
+  zh_hk: "獨立性檢驗"
+  lock: true
+- en: "decoupled"
+  zh: "解耦无联动"
+  zh_hk: "解耦冇聯動"
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: "Which mathematical condition definitively proves that event A and event B are statistically independent?"
+  question_zh: "下列哪项数学条件能够确凿证明事件 A 与事件 B 在统计学上完全独立？"
+  question_zh_hk: "下列邊項數學條件能夠確鑿證明事件 A 同事件 B 喺統計學上完全獨立？"
+  options_en:
+  - "A: P(A|B) = P(A), meaning the occurrence of condition B has zero effect on the probability of event A."
+  - "B: P(A and B) = 1.0, meaning both events happen simultaneously on every order."
+  - "C: P(A) + P(B) = 0, meaning neither event can legally occur."
+  - "D: The retail store manager signs a waiver stating the products are unrelated."
+  options_zh:
+  - "A: P(A|B) = P(A)，意味着已知条件 B 的发生对事件 A 的发生概率毫无半点影响。"
+  - "B: P(A 且 B) = 1.0，意味着两项事件在每一笔客单中都百分之百同时发生。"
+  - "C: P(A) + P(B) = 0，意味着两个事件在法律上都绝不能发生。"
+  - "D: 零售门店店长签署一份书面免责声明，确认两种商品完全毫无关联。"
+  options_zh_hk:
+  - "A: P(A|B) = P(A)，意味住已知條件 B 嘅發生對事件 A 嘅發生概率毫無半點影響。"
+  - "B: P(A 兼 B) = 1.0，意味住兩項事件喺每一筆客單入面都百分之百同時發生。"
+  - "C: P(A) + P(B) = 0，意味住兩個事件喺法律上都絕唔可以發生。"
+  - "D: 零售門市店長簽署一份書面免責聲明，確認兩種商品完全毫無關聯。"
+  answer: A
+  explanation_en: "Two events are independent if and only if knowledge of one does not alter the likelihood of the other: P(A|B) = P(A)."
+  explanation_zh: "当且仅当获知一个事件的信息丝毫不会改变另一事件的发生概率时，两事件独立：P(A|B) = P(A)。"
+  explanation_zh_hk: "當且僅當獲知一個事件嘅資訊絲毫唔會改變另一個事件嘅發生概率嗰陣，兩個事件獨立：P(A|B) = P(A)。"
+- id: Q2
+  type: multiple_choice
+  question_en: "Across 1,000 coffee orders, 20% request Oat Milk overall. Among 150 Decaf orders, exactly 60 request Oat Milk. Are Decaf and Oat Milk independent?"
+  question_zh: "在 1,000 笔咖啡订单中，大盘有 20% 要求加燕麦奶。在 150 笔低因咖啡订单中，恰好有 60 笔要求加燕麦奶。低因与燕麦奶是否独立？"
+  question_zh_hk: "喺 1,000 筆咖啡訂單入面，大盤有 20% 要求加燕麥奶。喺 150 筆低因咖啡訂單入面，啱啱好有 60 筆要求加燕麥奶。低因同燕麥奶係咪獨立？"
+  options_en:
+  - "A: No, because P(Oat Milk|Decaf) = 60/150 = 0.40, which differs from the baseline rate of 0.20."
+  - "B: Yes, because both decaf and oat milk are plant-derived products."
+  - "C: Yes, because 60 is an even number."
+  - "D: No, because oat milk is prohibited in decaf espresso drinks."
+  options_zh:
+  - "A: 不独立，因为 P(燕麦奶|低因) = 60/150 = 0.40，不同于大盘基准概率 0.20。"
+  - "B: 独立，因为低因咖啡与燕麦奶在商业分类上都属于植物基健康饮品。"
+  - "C: 独立，因为 60 是一个可以被整除的偶数。"
+  - "D: 不独立，因为食品法规明令禁止在低因浓缩咖啡中添加燕麦奶。"
+  options_zh_hk:
+  - "A: 唔獨立，因為 P(燕麥奶|低因) = 60/150 = 0.40，唔同於大盤基準概率 0.20。"
+  - "B: 獨立，因為低因咖啡同燕麥奶喺商業分類上都屬於植物基健康飲品。"
+  - "C: 獨立，因為 60 係一個可以被整除嘅雙數。"
+  - "D: 唔獨立，因為食品法規明令禁止喺低因濃縮咖啡入面添加燕麥奶。"
+  answer: A
+  explanation_en: "Since P(Oat Milk|Decaf) = 0.40 != P(Oat Milk) = 0.20, the two events are not independent in this dataset."
+  explanation_zh: "因为 P(燕麦奶|低因) = 0.40 不等于 P(燕麦奶) = 0.20，这两个事件在这组数据中并不独立。"
+  explanation_zh_hk: "因為 P(燕麥奶|低因) = 0.40 唔等於 P(燕麥奶) = 0.20，呢兩個事件喺呢組數據入面並唔獨立。"
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: "The Inventory Guess"
+  kicker_en: "The Inventory Guess"
+  kicker_zh: "库存盲猜"
+  kicker_zh_hk: "庫存盲估"
+  title_en: "Can you just multiply the averages?"
+  title_zh: "把大盘均值直接相乘，真能行吗？"
+  title_zh_hk: "將大盤均值直接相乘，真係得咩？"
+  en: "A supply chain analyst needs to order oat milk cartons for a specialized health store. Across the network, twenty percent of drinks take oat milk, and fifteen percent of orders choose decaf beans. The analyst multiplies twenty percent by fifteen percent, budgeting just three percent for decaf-oat milk drinks. By noon, the store runs out of oat milk completely. Where did the assumption fail?"
+  zh: "供应链分析师需要为一家主打健康概念的分店采购燕麦奶。全网大盘数据显示，有 20% 的饮品会升级燕麦奶，15% 的顾客会选择低因豆。分析师直接将 20% 乘以 15%，得出只有 3% 的人会喝低因燕麦奶。结果中午刚过，燕麦奶就被抢购断货。究竟哪里的假设出了致命纰漏？"
+  zh_hk: "供應鏈分析師需要為一間主打健康概念嘅分店採購燕麥奶。全網大盤數據顯示，有 20% 嘅飲品會升級燕麥奶，15% 嘅顧客會選擇低因豆。分析師直接將 20% 乘以 15%，得出得 3% 嘅人會飲低因燕麥奶。結果下晝啱啱過，燕麥奶就即刻斷貨。究竟邊度嘅假設出咗致命紕漏？"
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: "What It Is"
+  kicker_en: "What It Is"
+  kicker_zh: "核心概念"
+  kicker_zh_hk: "核心概念"
+  title_en: "The strict test of independence"
+  title_zh: "统计独立性的严谨定义"
+  title_zh_hk: "統計獨立性嘅嚴謹定義"
+  formula: "P(A|B) = P(A) <=> P(A and B) = P(A) * P(B)"
+  formula_tex: 'P(A\mid B) = P(A) \Longleftrightarrow P(A\cap B) = P(A)P(B)'
+  formula_zh: "P(A|B) = P(A) 充要等价于 P(A 且 B) = P(A) × P(B)"
+  formula_zh_hk: "P(A|B) = P(A) 充要等價於 P(A 兼 B) = P(A) × P(B)"
+  s1_en: "In business, people casually say two events are independent when they merely sound unrelated. In probability, independence has a strict mathematical definition."
+  s1_zh: "在商业日常沟通中，只要两件事听起来风马牛不相及，人们就会随口称其“毫无关联”。但在概率论中，独立性有着不可含糊的严苛数学定义。"
+  s1_zh_hk: "喺商業日常溝通入面，只要兩件事聽落風馬牛不相及，大家就會隨口話佢哋「毫無關聯」。但喺概率論入面，獨立性有住唔可以含糊嘅嚴苛數學定義。"
+  s2_en: "Two events A and B are statistically independent if and only if knowing that B occurred provides zero new information about A. The conditional probability P(A|B) stays exactly equal to the baseline P(A)."
+  s2_zh: "两项事件 A 与 B 统计独立，当且仅当获知 B 已经发生的信息，对推断 A 的胜率提供不了任何新增情报。此时条件概率 P(A|B) 严格等于大盘基准 P(A)。"
+  s2_zh_hk: "兩項事件 A 同 B 統計獨立，當且僅當獲知 B 已經發生嘅資訊，對推斷 A 嘅勝率提供唔到任何新增情報。呢個時候條件概率 P(A|B) 嚴格等於大盤基準 P(A)。"
+- id: test
+  visual: two_column
+  seconds: 36
+  kicker: "The Two Tests"
+  kicker_en: "The Two Tests"
+  kicker_zh: "两项试金石"
+  kicker_zh_hk: "兩項試金石"
+  title_en: "Testing for true decoupling"
+  title_zh: "检验真实解耦的两道法则"
+  title_zh_hk: "檢驗真實解耦嘅兩道法則"
+  left_en: "Conditional Test: P(A|B) = P(A)"
+  left_zh: "条件检验：给定场景后胜率不变"
+  left_zh_hk: "條件檢驗：給定場景後勝率不變"
+  right_en: "Multiplication Test: Joint = Product"
+  right_zh: "乘积检验：联合概率等于边际之积"
+  right_zh_hk: "乘積檢驗：聯合概率等於邊際之積"
+  s1_en: "You can verify independence using either of two equivalent tests. The conditional test checks whether shifting contexts changes the outcome rate."
+  s1_zh: "你可以通过两种完全等价的检验法则验证独立性。条件检验法则用于审查特定背景是否会改变最终事件的发生率。"
+  s1_zh_hk: "你可以透過兩種完全等價嘅檢驗法則驗證獨立性。條件檢驗法則用嚟審查特定背景係咪會改變最終事件嘅發生率。"
+  s2_en: "The multiplication test checks whether the joint intersection P of A and B equals the pure product of their individual marginal probabilities."
+  s2_zh: "而乘积检验法则则直接核算两者同时发生的联合交集概率，是否完全等于各自大盘边缘概率的简单乘积。"
+  s2_zh_hk: "而乘積檢驗法則就直接核算兩者同時發生嘅聯合交集概率，係咪完全等於各自大盤邊緣概率嘅簡單乘積。"
+  s3_en: "If the equality fails beyond ordinary rounding, the events are dependent in this dataset. The result shows association, not proof that one customer choice causes the other."
+  s3_zh: "如果等式的差异超过一般四舍五入误差，就应判定这组数据中的事件并不独立。这个结果说明存在关联，但不能证明一种选择导致另一种选择。"
+  s3_zh_hk: "如果等式嘅差異超過一般四捨五入誤差，就應該判定呢組數據入面嘅事件並唔獨立。呢個結果反映關聯，但唔可以證明一種選擇導致另一種選擇。"
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: "The Ledger"
+  kicker_en: "The Ledger"
+  kicker_zh: "账目实核"
+  kicker_zh_hk: "賬目實核"
+  title_en: "Auditing decaf and oat milk sales"
+  title_zh: "审计低因咖啡与燕麦奶客单"
+  title_zh_hk: "審計低因咖啡同燕麥奶客單"
+  step1_en: "Baseline rate: P(Oat Milk) = 0.20"
+  step1_zh: "全网大盘基准：P(燕麦奶) = 0.20"
+  step1_zh_hk: "全網大盤基準：P(燕麥奶) = 0.20"
+  step2_en: "Conditioned: 60 of 150 Decafs take Oat Milk"
+  step2_zh: "局部条件：150 笔低因中 60 笔配燕麦奶"
+  step2_zh_hk: "局部條件：150 筆低因中 60 筆配燕麥奶"
+  step3_en: "Compare: 0.40 != 0.20 (Not Independent)"
+  step3_zh: "比较判定：0.40 != 0.20（并不独立）"
+  step3_zh_hk: "比較判定：0.40 != 0.20（並不獨立）"
+  s1_en: "Let us inspect 1,000 transaction receipts. Overall, 200 customers choose oat milk, giving a baseline marginal probability of zero point two zero."
+  s1_zh: "核查 1,000 笔真实的门店收据。全大盘有 200 位顾客选了燕麦奶，对应无条件的边缘概率为 0.20。"
+  s1_zh_hk: "核查 1,000 筆真實嘅門市收據。全大盤有 200 位顧客揀咗燕麥奶，對應無條件嘅邊緣概率為 0.20。"
+  s2_en: "Now zoom into the 150 customers who ordered decaf coffee. Out of those 150 decaf customers, exactly 60 added oat milk."
+  s2_zh: "现在把镜头收窄到那 150 位点了低因咖啡的顾客身上。在这 150 位低因咖啡顾客中，恰好有 60 位加购了燕麦奶。"
+  s2_zh_hk: "而家將鏡頭收窄到嗰 150 位點咗低因咖啡嘅顧客身上。喺呢 150 位低因咖啡顧客入面，啱啱好有 60 位加購咗燕麥奶。"
+  s3_en: "Divide 60 by 150: P of Oat Milk given Decaf is zero point four zero. Because zero point four zero does not equal the baseline zero point two zero, the events are not independent in this dataset."
+  s3_zh: "用 60 除以 150：低因客群选燕麦奶的条件概率高达 0.40。因为 0.40 不等于基准 0.20，所以这两个事件在这组数据中并不独立。"
+  s3_zh_hk: "用 60 除以 150：低因客群揀燕麥奶嘅條件概率高達 0.40。因為 0.40 唔等於基準 0.20，所以呢兩個事件喺呢組數據入面並唔獨立。"
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: "Decision Rule"
+  kicker_en: "Decision Rule"
+  kicker_zh: "商业法则"
+  kicker_zh_hk: "商業法則"
+  title_en: "Never assume independence without data"
+  title_zh: "未见数据实证，切莫轻言独立"
+  title_zh_hk: "未見數據實證，千祈咪話獨立"
+  q1_en: "Why is assuming independence risky in retail?"
+  q1_zh: "在零售运营中盲目假设独立为何风险极大？"
+  q1_zh_hk: "喺零售營運入面盲目假設獨立點解風險極大？"
+  q2_en: "How do managers prove genuine synergy?"
+  q2_zh: "管理者应如何客观实证品类间的连带联动？"
+  q2_zh_hk: "管理者應點樣客觀實證品類之間嘅連帶聯動？"
+  s1_en: "Never assume two consumer choices are independent just because they sit in different product categories."
+  s1_zh: "绝不能仅因为两款商品归属于不同的货架品类，就想当然地假设顾客的选购行为相互独立。"
+  s1_zh_hk: "絕唔可以淨係因為兩款商品歸屬於唔同嘅貨架品類，就想當然噉假設顧客嘅選購行為相互獨立。"
+  s2_en: "Always run the conditional test: if P(A|B) differs from P(A), build bundled inventory buffers to match the true joint demand."
+  s2_zh: "务必运行条件概率检验：只要 P(A|B) 偏离大盘 P(A)，就必须按真实的连带转化配置捆绑库存与备货缓冲。"
+  s2_zh_hk: "務必運行條件概率檢驗：只要 P(A|B) 偏離大盤 P(A)，就必須按真實嘅連帶轉化配置捆綁庫存同備貨緩衝。"
+  s3_en: "For this inventory decision, do not use the three-percent independence forecast. Use the observed joint demand: 60 of 1,000 orders, or six percent, include both decaf and oat milk."
+  s3_zh: "对于这次库存决策，不应采用独立假设下的 3% 预测。应使用实际联合需求：1,000 笔订单中有 60 笔同时选择低因与燕麦奶，即 6%。"
+  s3_zh_hk: "對今次庫存決策，唔應該採用獨立假設之下嘅 3% 預測。應該用實際聯合需求：1,000 筆訂單入面有 60 筆同時揀低因同燕麥奶，即係 6%。"

@@ -1,0 +1,194 @@
+id: STAT-M02-T12-BASER
+course: statistics
+course_en: Business Probability Foundations
+course_zh: 商务概率基础
+course_zh_hk: 商務概率基礎
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: "The rare disaster trap"
+title_zh: "罕见灾难陷阱：基准率谬误"
+title_zh_hk: "罕見災難陷阱：基準率謬誤"
+objective_en: "Define the Base Rate Fallacy in business operations, explain why extremely low prior probabilities cause high-accuracy automated detection systems to produce mostly false alarms, and evaluate mobile payment fraud detection alerts."
+objective_zh: "在商业运营中界定基准率谬误，解释为什么极低的先验基础概率会导致高精度的自动化拦截系统依然产生大量的虚假警报，并对移动支付反欺诈预警系统进行量化评估。"
+objective_zh_hk: "喺商業營運入面界定基準率謬誤，解釋點解極低嘅先驗基礎概率會搞到高精度嘅自動化攔截系統依然產生大量嘅虛假警報，並對手機支付反欺詐預警系統進行量化評估。"
+glossary:
+- en: "base rate fallacy"
+  zh: "基准率谬误"
+  zh_hk: "基準率謬誤"
+  lock: true
+- en: "false positive rate"
+  zh: "假阳性率/误报率"
+  zh_hk: "假陽性率/誤報率"
+  lock: true
+- en: "prior base rate"
+  zh: "先验基准发生率"
+  zh_hk: "先驗基準發生率"
+  lock: true
+- en: "fraud detection"
+  zh: "欺诈检测"
+  zh_hk: "欺詐檢測"
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: "What cognitive error defines the Base Rate Fallacy among business managers?"
+  question_zh: "商业管理者常犯的“基准率谬误”究竟是指哪种典型的认知偏差？"
+  question_zh_hk: "商業管理者常犯嘅「基準率謬誤」究竟係指邊種典型嘅認知偏差？"
+  options_en:
+  - "A: Overemphasizing high diagnostic test accuracy while completely ignoring how rarely the underlying condition naturally occurs in the population."
+  - "B: Forgetting to charge local sales tax on corporate invoice payments."
+  - "C: Believing that mobile payment apps operate free of electricity costs."
+  - "D: Demanding that bank fraud investigators inspect 100% of all cash bills."
+  options_zh:
+  - "A: 过度聚焦于检测工具本身的高准确度，而彻底忽略了该目标事件在总体环境中发生概率原本就极低的事实。"
+  - "B: 在向企业客户开具付款发票时忘记申报和计提销售税费。"
+  - "C: 误以为移动端电子支付应用在运行过程中完全不需要消耗电力成本。"
+  - "D: 强制要求银行反欺诈调查员对每一张流通的实体纸币进行全量人工查验。"
+  options_zh_hk:
+  - "A: 過度聚焦喺檢測工具本身嘅高準確度，而徹底忽視咗嗰個目標事件喺總體環境入面發生概率原本就極之低嘅事實。"
+  - "B: 喺向企業客戶開具付款發票嗰陣唔記得申報同計提銷售稅費。"
+  - "C: 誤以為手機端電子支付應用喺運行過程入面完全唔需要消耗電力成本。"
+  - "D: 強制要求銀行反欺詐調查員對每一張流通嘅實體紙幣進行全量人工查驗。"
+  answer: A
+  explanation_en: "The Base Rate Fallacy occurs when people evaluate conditional probability by looking only at test sensitivity, forgetting that an extremely low base rate anchors the true odds near zero."
+  explanation_zh: "基准率谬误发生在决策者只看测试工具的高灵敏度，而忘记了极低的基准发生率会将真实的后验胜率牢牢按在低位。"
+  explanation_zh_hk: "基準率謬誤發生喺決策者淨係睇測試工具嘅高靈敏度，而唔記得咗極低嘅基準發生率會將真實嘅後驗勝率牢牢禁喺低位。"
+- id: Q2
+  type: multiple_choice
+  question_en: "Out of 10,000 mobile app coffee transactions, only 10 are fraudulent (0.1% base rate). A security algorithm flags all 10 fraudulent orders and produces 100 false flags among the 9,990 legitimate orders. When a customer order is flagged, what is the probability it is actual fraud?"
+  question_zh: "在一万笔移动 App 咖啡订单中，仅有 10 笔属于真实信用卡欺诈（基准率 0.1%）。一套安全风控算法识别出全部 10 笔真实欺诈订单，同时在 9,990 笔正常订单中产生了 100 次误报。当顾客订单被系统拦截警报时，它属于真实欺诈的概率是多少？"
+  question_zh_hk: "喺一萬筆手機 App 咖啡訂單入面，淨係得 10 筆屬於真實信用卡欺詐（基準率 0.1%）。一套安全風控算法識別出全部 10 筆真實欺詐訂單，同時喺 9,990 筆正常訂單入面產生咗 100 次誤報。當顧客訂單被系統攔截警報嗰陣，佢屬於真實欺詐嘅概率係幾多？"
+  options_en:
+  - "A: 10 / 110 ≈ 9.1%"
+  - "B: 99.0%"
+  - "C: 10 / 10,000 = 0.1%"
+  - "D: 50.0%"
+  options_zh:
+  - "A: 10 / 110 ≈ 9.1%"
+  - "B: 99.0%"
+  - "C: 10 / 10,000 = 0.1%"
+  - "D: 50.0%"
+  options_zh_hk:
+  - "A: 10 / 110 ≈ 9.1%"
+  - "B: 99.0%"
+  - "C: 10 / 10,000 = 0.1%"
+  - "D: 50.0%"
+  answer: A
+  explanation_en: "Total flags = 10 true frauds + 100 false alarms = 110. The posterior probability of genuine fraud is 10 / 110 ≈ 9.1%."
+  explanation_zh: "系统拦截报警总数 = 10 次真实欺诈 + 100 次误报 = 110 次。真正欺诈的后验概率为 10 / 110 ≈ 9.1%。"
+  explanation_zh_hk: "系統攔截報警總數 = 10 次真實欺詐 + 100 次誤報 = 110 次。真正欺詐嘅後驗概率為 10 / 110 ≈ 9.1%。"
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: "The Security Nightmare"
+  kicker_en: "The Security Nightmare"
+  kicker_zh: "风控噩梦"
+  kicker_zh_hk: "風控噩夢"
+  title_en: "Why is our 99% security system blocking honest guests?"
+  title_zh: "为什么 99% 准确率的风控系统总在误伤良民？"
+  title_zh_hk: "點解 99% 準確率嘅風控系統總係誤傷良民？"
+  en: "A mobile-payment fraud screen reviews 10,000 coffee orders. It catches all 10 fraudulent orders but also flags 100 legitimate orders. Why are only about one in eleven flagged orders genuine fraud, even though the screen catches every fraud in this ledger?"
+  zh: "移动支付反欺诈系统审查了 10,000 笔咖啡订单。它识别出全部 10 笔真实欺诈，却同时误报了 100 笔正常订单。既然这份台账中的欺诈都被识别出来，为什么每 11 笔警报中只有约 1 笔是真欺诈？"
+  zh_hk: "手機支付反欺詐系統審查咗 10,000 筆咖啡訂單。佢識別出全部 10 筆真實欺詐，但同時誤報咗 100 筆正常訂單。既然呢份台賬入面嘅欺詐全部被識別，點解每 11 筆警報入面只有大約 1 筆係真欺詐？"
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: "What It Is"
+  kicker_en: "What It Is"
+  kicker_zh: "核心概念"
+  kicker_zh_hk: "核心概念"
+  title_en: "The Base Rate Fallacy"
+  title_zh: "基准率谬误的心理机制"
+  title_zh_hk: "基準率謬誤嘅心理機制"
+  formula: "Tiny Base Rate * Huge Population >> High Test Accuracy"
+  formula_tex: 'P(F\mid +) = \frac{P(+\mid F)P(F)}{P(+\mid F)P(F)+P(+\mid F^c)P(F^c)}'
+  formula_zh: "微小的基准率 × 庞大的正常总体 >> 看似微弱的误报率"
+  formula_zh_hk: "微小嘅基準率 × 龐大嘅正常總體 >> 睇落微弱嘅誤報率"
+  s1_en: "The Base Rate Fallacy is the powerful cognitive blindspot where human intuition fixates on diagnostic test accuracy and ignores how rare the event is in the baseline population."
+  s1_zh: "基准率谬误是一种极其普遍的认知盲区：人类的直觉本能往往过分迷信检测工具的高指标，却彻底忽视了目标事件在底层总体中极度罕见的客观基准。"
+  s1_zh_hk: "基準率謬誤係一種極之普遍嘅認知盲區：人類嘅直覺本能往往過分迷信檢測工具嘅高指標，卻徹底忽視咗目標事件喺底層總體入面極度罕見嘅客觀基準。"
+  s2_en: "When an operational disaster or criminal fraud is extremely rare, the tiny percentage of false alarms generated by the massive healthy majority will dwarf the real culprits."
+  s2_zh: "当某种运营灾难或违规欺诈极为罕见时，哪怕只有百分之一的轻微误报率，乘上海量的正常群体基数后，产生的假警报也会以压倒性优势碾压真实警报。"
+  s2_zh_hk: "當某種營運災難或者違規欺詐極之罕見嗰陣，就算淨係得百分之一嘅輕微誤報率，乘上海量嘅正常群體基數之後，產生嘅假警報亦都會以壓倒性優勢碾壓真實警報。"
+- id: imbalance
+  visual: two_column
+  seconds: 36
+  kicker: "The Numbers Mismatch"
+  kicker_en: "The Numbers Mismatch"
+  kicker_zh: "体量不对称"
+  kicker_zh_hk: "體量唔對稱"
+  title_en: "Tiny fraction of huge beats large fraction of tiny"
+  title_zh: "庞大总体的微弱误判，击穿罕见事件的精准拦截"
+  title_zh_hk: "龐大總體嘅微弱誤判，擊穿罕見事件嘅精準攔截"
+  left_en: "Real Frauds: 10 orders (0.1% pool)"
+  left_zh: "真实欺诈：仅 10 笔（全盘占比 0.1%）"
+  left_zh_hk: "真實欺詐：得 10 筆（全盤佔比 0.1%）"
+  right_en: "Honest Orders: 9,990 orders (99.9% pool)"
+  right_zh: "正常顾客：高达 9,990 笔（全盘占比 99.9%）"
+  right_zh_hk: "正常顧客：高達 9,990 筆（全盤佔比 99.9%）"
+  s1_en: "Consider the scale of the two opposing groups. Real fraudsters account for only one out of every one thousand digital orders."
+  s1_zh: "看看这两个对抗群体的实际体量反差。真正的欺诈者在数字化点单中每一千笔里可能只有寥寥一笔。"
+  s1_zh_hk: "睇吓呢兩個對抗群體嘅實際體量反差。真正嘅欺詐者喺數碼化點單入面每一千筆入面可能淨係得寥寥一筆。"
+  s2_en: "The honest population is huge: nine thousand nine hundred and ninety orders. A one-percent false positive rate applied to that massive army produces nearly one hundred innocent victims."
+  s2_zh: "而合法合规的正常顾客群极为庞大：足足有九千九百九十笔。只要对这个庞大群体产生百分之一的误判，就会制造出近百名被误伤的无辜受害者。"
+  s2_zh_hk: "而合法合規嘅正常顧客群極之龐大：足足有九千九百九十筆。只要對呢個龐大群體產生百分之一嘅誤判，就會製造出近百名被誤傷嘅無辜受害者。"
+  s3_en: "A tiny slice of a massive mountain is still vastly bigger than almost the entirety of a tiny pebble."
+  s3_zh: "万丈高山上切下的一小撮碎石，其体量也远远大过整整一颗原本就微不足道的砂砾。"
+  s3_zh_hk: "萬丈高山上面切落嚟嘅一小撮碎石，其體量亦都遠遠大過成粒原本就微不足道嘅沙石。"
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: "The Ledger"
+  kicker_en: "The Ledger"
+  kicker_zh: "账目实核"
+  kicker_zh_hk: "賬目實核"
+  title_en: "Auditing 10,000 mobile transactions"
+  title_zh: "审计一万笔移动支付拦截台账"
+  title_zh_hk: "審計一萬筆手機支付攔截台賬"
+  step1_en: "Frauds: 10 * 99% accuracy = 10 caught"
+  step1_zh: "真欺诈：10 笔；全部 10 笔被标记"
+  step1_zh_hk: "真欺詐：10 筆；全部 10 筆被標記"
+  step2_en: "Honest: 9,990 * 1% error = 100 false alarms"
+  step2_zh: "正常订单：9,990 笔；其中 100 笔被误报"
+  step2_zh_hk: "正常訂單：9,990 筆；其中 100 筆被誤報"
+  step3_en: "Precision: 10 / 110 = 9.1% actual fraud rate"
+  step3_zh: "真实有效报警率：10 / 110 ≈ 仅 9.1% 是真欺诈"
+  step3_zh_hk: "真實有效報警率：10 / 110 ≈ 得 9.1% 係真欺詐"
+  s1_en: "Audit our 10,000-order app transaction log. Exactly ten transactions are real fraud. In this ledger, the security algorithm flags all ten fraudulent orders."
+  s1_zh: "审查一万笔手机 App 交易台账。其中恰好有 10 笔是真实盗刷。在这份台账中，系统将 10 笔真实欺诈订单全部标记出来。"
+  s1_zh_hk: "審查一萬筆手機 App 交易台賬。其中啱啱好有 10 筆係真實盜刷。喺呢份台賬入面，系統將 10 筆真實欺詐訂單全部標記出嚟。"
+  s2_en: "Now look at the 9,990 honest customers. Among the 9,990 legitimate orders, the algorithm produces 100 false flags, a false-positive rate of about 1.0 percent."
+  s2_zh: "再看剩下的 9,990 笔正常客单。在 9,990 笔正常订单中，系统产生 100 次误报，对应约 1.0% 的假阳性率。"
+  s2_zh_hk: "再睇淨低嘅 9,990 筆正常客單。喺 9,990 筆正常訂單入面，系統產生 100 次誤報，對應大約 1.0% 嘅假陽性率。"
+  s3_en: "Add them up: 110 red flags ring in the security dashboard. Divide 10 by 110: only nine point one percent of flagged orders are genuine fraud. Over ninety percent are innocent patrons being turned away."
+  s3_zh: "加在一起：风控后台总共弹出了 110 次拦截报警。用 10 除以 110：被拦截的订单中真正有罪的仅占 9.1%。超过 90% 的被拦截者全是被粗暴拒之门外的无辜熟客。"
+  s3_zh_hk: "加埋一齊：風控後台總共彈出咗 110 次攔截報警。用 10 除以 110：被攔截嘅訂單入面真正有罪嘅淨係得 9.1%。超過 90% 嘅被攔截者全係被粗暴拒之門外嘅無辜熟客。"
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: "Decision Rule"
+  kicker_en: "Decision Rule"
+  kicker_zh: "商业法则"
+  kicker_zh_hk: "商業法則"
+  title_en: "Check the base rate before setting hard barriers"
+  title_zh: "筑设硬性阻拦前，先算底层基准率"
+  title_zh_hk: "築設硬性阻攔前，先計底層基準率"
+  q1_en: "Why do automated screens fail in low-frequency events?"
+  q1_zh: "为什么面对低频事件，自动化拦截机制极易失效？"
+  q1_zh_hk: "點解面對低頻事件，自動化攔截機制極易失效？"
+  q2_en: "How should managers design alert responses?"
+  q2_zh: "管理者在设计警报响应时应采取怎样的审慎分级？"
+  q2_zh_hk: "管理者喺設計警報響應嗰陣應採取點樣嘅審慎分級？"
+  s1_en: "A low base rate can make false flags outnumber true flags, depending on the screen’s sensitivity and false-positive rate; calculate the posterior rate from the actual alert counts."
+  s1_zh: "较低的基准率可能使误报多于真警报，具体取决于系统灵敏度和假阳性率；应根据实际警报数量计算后验概率。"
+  s1_zh_hk: "較低嘅基準率可能令誤報多過真警報，實際情況取決於系統靈敏度同假陽性率；應該按實際警報數量計算後驗概率。"
+  s2_en: "Treat a flag as evidence rather than proof. Design the response by combining the posterior fraud probability with verified risk, customer impact, and the organization’s approved controls."
+  s2_zh: "应把警报视为证据而非定论，并结合后验欺诈概率、已核实风险、顾客影响及组织批准的控制措施来设计响应。"
+  s2_zh_hk: "應該將警報視為證據而唔係定論，並結合後驗欺詐概率、已核實風險、顧客影響同組織批准嘅控制措施嚟設計回應。"
+  s3_en: "For this ledger, 10 of 110 flags are genuine fraud, so the posterior fraud probability is about 9.1 percent; the remaining 100 flags are false positives."
+  s3_zh: "在这份台账中，110 次警报里有 10 次是真实欺诈，因此后验欺诈概率约为 9.1%；其余 100 次是假阳性误报。"
+  s3_zh_hk: "喺呢份台賬入面，110 次警報有 10 次係真實欺詐，所以後驗欺詐概率大約係 9.1%；其餘 100 次係假陽性誤報。"

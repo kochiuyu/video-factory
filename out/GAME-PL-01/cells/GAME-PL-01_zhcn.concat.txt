@@ -1,5 +1,0 @@
-file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PL-01/clips/zhcn/01_hook.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PL-01/clips/zhcn/02_define.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PL-01/clips/zhcn/03_roster.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PL-01/clips/zhcn/04_example.mp4'
-file 'C:/Users/kochi/Dropbox/video-factory/out/GAME-PL-01/clips/zhcn/05_takeaway.mp4'

@@ -1,0 +1,221 @@
+id: STAT-M05-T05-POWER
+course: STAT-M05
+course_en: Hypothesis Testing & Store Experiments
+course_zh: 假设检验与门店运营实验
+course_zh_hk: 假設檢驗與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Statistical Power and Experiment Sizing: Designing to Detect Meaningful Effects'
+title_zh: 统计功效与实验规模：为检测重要效应而设计
+title_zh_hk: 統計功效同實驗規模：為檢測重要效應而設計
+objective_en: Define statistical power at a specified alternative, explain how sample size, alpha, effect size, and variability
+  affect power, distinguish a low-powered nonsignificant result from evidence of no effect, and calculate an approximate one-sample
+  Z-test size for an assumed queue-time experiment.
+objective_zh: 在指定备择状态下定义统计功效，解释样本量、alpha、效应大小与波动如何影响功效，区分低功效下的不显著结果与“无效应”的证据，并为假设排队时间实验计算近似单样本 Z 检验规模。
+objective_zh_hk: 喺指定備擇狀態之下定義統計功效，解釋樣本量、alpha、效應大小同波動點樣影響功效，區分低功效之下嘅唔顯著結果同「冇效應」嘅證據，並為假設排隊時間實驗計算近似單樣本 Z 檢驗規模。
+glossary:
+- en: statistical power (1 - beta)
+  zh: 统计功效/统计检验力 (1 - beta)
+  zh_hk: 統計功效/統計檢驗力 (1 - beta)
+  lock: true
+- en: effect size (Delta)
+  zh: 效应量 (Delta)
+  zh_hk: 效應量 (Delta)
+  lock: true
+- en: underpowered experiment
+  zh: 功效不足的实验
+  zh_hk: 功效不足嘅實驗
+  lock: true
+- en: experimental sample sizing
+  zh: 实验样本量测算
+  zh_hk: 實驗樣本量測算
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: What does 80% power mean for a specified effect Delta under a fixed testing design?
+  question_zh: 在零售门店运营实验的语境中，统计功效（1 - beta）所代表的商业统计含义是什么？
+  question_zh_hk: 喺零售門市營運實驗嘅語境入面，統計功效（1 - beta）所代表嘅商業統計含義係咩？
+  options_en:
+  - 'A: If that specified effect is the true state and assumptions hold, the procedure rejects H0 in 80% of repeated studies.'
+  - 'B: The percentage of store employees who approve of a corporate scheduling policy.'
+  - 'C: The probability that an experiment yields a zero error rate under all market conditions.'
+  - 'D: The total kilowatt-hours of electrical power consumed by commercial coffee equipment.'
+  options_zh:
+  - 'A: 当特定幅度的运营流程改善在客观上确实存在时，该项实验审计能够成功拒绝原假设并抓住胜利的概率。'
+  - 'B: 参与运营实验的一线门店员工中赞同集团排班制度的人员百分比。'
+  - 'C: 某项门店实验在任何宏观市场波动下均能保证误差率绝对归零的概率。'
+  - 'D: 商用咖啡冲煮与冷藏设备在实验周期内所消耗的总千瓦时用电量。'
+  options_zh_hk:
+  - 'A: 當特定幅度嘅營運流程改善喺客觀上確實存在嗰陣，嗰項實驗審計能夠成功拒絕原假設並抓住勝利嘅概率。'
+  - 'B: 參與營運實驗嘅一線門市員工入面贊同集團排班制度嘅人員百分比。'
+  - 'C: 某項門市實驗喺任何宏觀市場波動下均能保證誤差率絕對歸零嘅概率。'
+  - 'D: 商用咖啡沖煮與冷藏設備喺實驗週期入面所消耗嘅總千瓦時用電量。'
+  answer: A
+  explanation_en: Power is a repeated-sampling probability at a specified alternative. It is not an 80% probability that this
+    study is correct or that the intervention works.
+  explanation_zh: 统计功效等于 1 - beta。它度量的是实验检出真实效应并成功推翻错误原假设的概率。80% 的功效意味着若业务优化确实奏效，我们有八成的确定性能够证实这一胜利。
+  explanation_zh_hk: 統計功效等於 1 - beta。佢度量嘅係實驗檢出真實效應並成功推翻錯誤原假設嘅概率。80% 嘅功效意味住若果業務優化確實奏效，我哋有八成嘅確定性可以證實呢個勝利。
+- id: Q2
+  type: multiple_choice
+  question_en: For an approximate two-sided one-sample Z-test plan with Delta = 10, known sigma = 20, alpha = 0.05, and target
+    power = 0.80, what simple-design sample size is produced?
+  question_zh: 都市咖啡在湾仔店测试快取货架，旨在将顾客等候时间缩短 Delta = 10.0 秒（工时波动标准差 sigma = 20.0 秒，显著性 alpha = 0.05 双尾，Z_alpha/2 = 1.96）。若管理层要求达到行业通行的
+    80% 统计功效（Z_beta = 0.84），最少需要抽查多少位顾客？
+  question_zh_hk: 都市咖啡喺灣仔舖測試快取貨架，旨在將顧客等候時間縮短 Delta = 10.0 秒（工時波動標準差 sigma = 20.0 秒，顯著性 alpha = 0.05 雙尾，Z_alpha/2 = 1.96）。若果管理層要求達到行業通行嘅
+    80% 統計功效（Z_beta = 0.84），最少需要抽查幾多位顧客？
+  options_en:
+  - 'A: n = ((1.96 + 0.84) × 20 / 10)^2 = 31.36, so round upward to 32 usable independent observations.'
+  - 'B: n = (1.96 * 20.0 / 10.0)^2 = 3.92^2 = 15.37 -> 16 customers.'
+  - 'C: n = 20.0 / 10.0 = 2 customers.'
+  - 'D: n = 80 customers because power is set to 80%.'
+  options_zh:
+  - 'A: n = ((1.96 + 0.84) × 20.0 / 10.0)^2 = (2.80 × 2)^2 = 5.6^2 = 31.36 -> 向上取整，最少需要 32 位顾客。'
+  - 'B: n = (1.96 × 20.0 / 10.0)^2 = 3.92^2 = 15.37 -> 向上取整为 16 位顾客。'
+  - 'C: n = 20.0 / 10.0 = 2 位顾客。'
+  - 'D: n = 80 位顾客，因为统计功效设定为 80%。'
+  options_zh_hk:
+  - 'A: n = ((1.96 + 0.84) × 20.0 / 10.0)^2 = (2.80 × 2)^2 = 5.6^2 = 31.36 -> 向上取整，最少需要 32 位顧客。'
+  - 'B: n = (1.96 × 20.0 / 10.0)^2 = 3.92^2 = 15.37 -> 向上取整為 16 位顧客。'
+  - 'C: n = 20.0 / 10.0 = 2 位顧客。'
+  - 'D: n = 80 位顧客，因為統計功效設定為 80%。'
+  answer: A
+  explanation_en: The normal-approximation formula gives 31.36. The ceiling rule gives 32. The actual field target may require
+    adjustment if the simple independent-observation assumptions do not hold.
+  explanation_zh: 实验功效样本量公式为 n = ((Z_alpha/2 + Z_beta) × sigma / Delta)^2。此处为 ((1.96 + 0.84) × 20 / 10)^2 = (2.80 × 2)^2 =
+    5.6^2 = 31.36。根据向上取整铁律，必须实测 32 位顾客。
+  explanation_zh_hk: 實驗功效樣本量公式為 n = ((Z_alpha/2 + Z_beta) × sigma / Delta)^2。呢度為 ((1.96 + 0.84) × 20 / 10)^2 = (2.80 × 2)^2
+    = 5.6^2 = 31.36。根據向上取整鐵律，必須實測 32 位顧客。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  kicker_en: The Abandoned Innovation
+  kicker_zh: 夭折的提速创新
+  kicker_zh_hk: 夭折嘅提速創新
+  title_en: Could an experiment miss an improvement that truly exists?
+  title_zh: 实验会不会漏掉真实存在的改善？
+  title_zh_hk: 實驗會唔會漏掉真實存在嘅改善？
+  en: Metro Coffee is planning an assumed trial of an express pickup process intended to reduce mean customer wait time. A
+    nonsignificant pilot result would not automatically show that the process has no effect, especially if the experiment
+    had little chance to detect the improvement management considers meaningful. Power analysis makes that detection capability
+    explicit before data collection.
+  zh: 都市咖啡正在规划一项假设的快速取餐流程试验，目标是降低顾客平均等待时间。试点结果不显著，并不会自动证明流程无效，尤其当实验本来就几乎没有机会检测到管理层认为重要的改善时。功效分析会在收集数据前明确这种检测能力。
+  zh_hk: 都市咖啡正規劃一項假設嘅快速取餐流程試驗，目標係降低顧客平均等候時間。試點結果唔顯著，並唔會自動證明流程冇效，尤其當實驗本來就幾乎冇機會檢測到管理層認為重要嘅改善嗰陣。功效分析會喺收集數據之前明確呢種檢測能力。
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: Power is defined for a particular alternative effect
+  title_zh: 功效针对特定备择效应定义
+  title_zh_hk: 功效針對特定備擇效應定義
+  formula: Power at Delta = P(reject H0 | true effect = Delta) = 1 - beta(Delta)
+  formula_zh: 效应为 Delta 时的功效 = P(拒绝 H0｜真实效应 = Delta) = 1 - beta(Delta)
+  formula_zh_hk: 效應係 Delta 嗰陣嘅功效 = P(拒絕 H0｜真實效應 = Delta) = 1 - beta(Delta)
+  formula_tex: \text{Power}(\Delta)=P(\text{reject }H_0\mid \Delta)=1-\beta(\Delta)
+  s1_en: 'Statistical power is the probability that a specified testing procedure rejects H0 when a particular alternative
+    effect is true. Power is not one universal property of a study: it changes with the effect size being considered and the
+    rest of the design.'
+  s1_zh: 统计功效是：当某个特定备择效应真实存在时，指定检验程序拒绝 H0 的概率。功效并不是一项研究唯一且固定的属性；它会随所考虑的效应大小及其他设计要素改变。
+  s1_zh_hk: 統計功效係：當某個特定備擇效應真實存在嗰陣，指定檢驗程序拒絕 H0 嘅概率。功效並唔係一項研究唯一而固定嘅屬性；佢會隨所考慮嘅效應大小同其他設計要素改變。
+  s2_en: Beta is the probability of failing to reject H0 at that specified alternative, so power equals one minus beta. A
+    target such as 80% is a planning choice, not a universal guarantee or proof that a detected result is true.
+  s2_zh: beta 是在该指定备择状态下不拒绝 H0 的概率，因此功效等于 1 - beta。80% 等目标是规划选择，并非普遍保证，也不能证明被检出的结果为真。
+  s2_zh_hk: beta 係喺嗰個指定備擇狀態之下唔拒絕 H0 嘅概率，所以功效等於 1 - beta。80% 等目標係規劃選擇，唔係普遍保證，亦唔可以證明被檢出嘅結果為真。
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  kicker_en: The Four Drivers
+  kicker_zh: 四大杠杆
+  kicker_zh_hk: 四大槓桿
+  title_en: Power rises when signal grows or uncertainty shrinks
+  title_zh: 信号增强或不确定性下降时，功效提高
+  title_zh_hk: 訊號增強或者不確定性下降嗰陣，功效提高
+  left_en: 'More signal: larger meaningful effect Delta'
+  left_zh: 更多信号：更大的重要效应 Delta
+  left_zh_hk: 更多訊號：更大嘅重要效應 Delta
+  right_en: 'Less uncertainty: larger effective n or lower sigma'
+  right_zh: 更少不确定性：更大的有效 n 或更低 sigma
+  right_zh_hk: 更少不確定性：更大嘅有效 n 或者更低 sigma
+  s1_en: Larger effects are easier to distinguish from the null benchmark. Smaller effects require more information. The effect
+    used in planning should be the minimum difference that would matter operationally, not an optimistic value chosen only
+    to make the required sample look small.
+  s1_zh: 较大效应更容易与原假设基准区分；较小效应需要更多信息。规划所用效应应是具有经营意义的最小差异，而不是为了让所需样本看起来更小而选用的乐观数字。
+  s1_zh_hk: 較大效應更容易同原假設基準區分；較細效應需要更多資訊。規劃所用效應應該係具有營運意義嘅最小差異，而唔係為咗令所需樣本睇落更細而選用嘅樂觀數字。
+  s2_en: A larger effective sample or lower outcome variability reduces the standard error and usually increases power. Repeated
+    observations that are strongly correlated may add less information than independent observations, so effective sample
+    size matters more than the raw record count.
+  s2_zh: 更大的有效样本或更低的结果波动会降低标准误，并通常提高功效。高度相关的重复观测，新增信息可能少于独立观测，因此有效样本量比原始记录数更重要。
+  s2_zh_hk: 更大嘅有效樣本或者更低嘅結果波動會降低標準誤，並通常提高功效。高度相關嘅重複觀測，新增資訊可能少過獨立觀測，所以有效樣本量比原始記錄數更加重要。
+  s3_en: For fixed n, effect, and variability, increasing alpha raises power by making rejection easier, but also raises Type
+    I error. Test direction and design efficiency also affect power. These choices should be justified before results are
+    observed.
+  s3_zh: 当 n、效应与波动固定时，提高 alpha 会因更容易拒绝 H0 而提高功效，但也会提高第一类错误。检验方向与设计效率同样影响功效。这些选择应在查看结果前说明依据。
+  s3_zh_hk: 當 n、效應同波動固定嗰陣，提高 alpha 會因為更容易拒絕 H0 而提高功效，但亦會提高第一類錯誤。檢驗方向同設計效率同樣影響功效。呢啲選擇應該喺查看結果之前說明依據。
+- id: ledger
+  visual: steps
+  seconds: 38
+  kicker_en: The Ledger
+  kicker_zh: 台账精算
+  kicker_zh_hk: 台賬精算
+  title_en: Size an approximate two-sided one-sample Z test
+  title_zh: 规划近似双侧单样本 Z 检验规模
+  title_zh_hk: 規劃近似雙側單樣本 Z 檢驗規模
+  step1_en: Assume Delta = 10.0 s, known sigma = 20.0 s, alpha = 0.05 two-sided, target power = 0.80
+  step1_zh: 假设 Delta = 10.0 秒，已知 sigma = 20.0 秒，双侧 alpha = 0.05，目标功效 = 0.80
+  step1_zh_hk: 假設 Delta = 10.0 秒，已知 sigma = 20.0 秒，雙側 alpha = 0.05，目標功效 = 0.80
+  step2_en: Use Z_(alpha/2) = 1.96 and Z_(1-beta) = 0.84; approximate n = ((1.96 + 0.84) × 20 / 10)^2
+  step2_zh: 用 Z_(alpha/2) = 1.96 与 Z_(1-beta) = 0.84；近似 n = ((1.96 + 0.84) × 20 / 10)^2
+  step2_zh_hk: 用 Z_(alpha/2) = 1.96 同 Z_(1-beta) = 0.84；近似 n = ((1.96 + 0.84) × 20 / 10)^2
+  step3_en: n = 31.36; round upward to 32 independent usable observations, then adjust for the actual design
+  step3_zh: n = 31.36；向上取整为 32 个独立且可用的观测，再按实际设计调整
+  step3_zh_hk: n = 31.36；向上取整做 32 個獨立而且可用嘅觀測，再按實際設計調整
+  s1_en: For illustration, assume the minimum meaningful reduction is ten seconds, the population standard deviation is known
+    or externally specified as twenty seconds, the test is two-sided at alpha 0.05, and target power is 0.80. These are teaching
+    assumptions, not verified branch records, engineering commitments, or universal planning standards.
+  s1_zh: 作为示例，假设最小有意义缩短为 10 秒，总体标准差已知或由外部指定为 20 秒，检验为 alpha = 0.05 的双侧检验，目标功效为 0.80。这些数字是教学假设，并非已核实的门店记录、工程承诺或普遍规划标准。
+  s1_zh_hk: 作為例子，假設最小有意義縮短係 10 秒，總體標準差已知或者由外部指定做 20 秒，檢驗係 alpha = 0.05 嘅雙側檢驗，目標功效係 0.80。呢啲數字係教學假設，唔係已核實嘅門市記錄、工程承諾或者普遍規劃標準。
+  s2_en: Using the common normal-approximation planning formula gives the sum 1.96 plus 0.84, equal to 2.80. Multiplying by
+    twenty and dividing by ten gives 5.60. Squaring produces 31.36.
+  s2_zh: 使用常见正态近似规划公式，先得 1.96 + 0.84 = 2.80。乘以 20 再除以 10，得到 5.60；平方后得到 31.36。
+  s2_zh_hk: 使用常見正態近似規劃公式，先得到 1.96 + 0.84 = 2.80。乘 20 再除 10，得到 5.60；平方之後得到 31.36。
+  s3_en: Apply the ceiling rule to obtain 32 independent usable observations as the simple-design baseline. This formula is
+    approximate and does not automatically cover unknown variance, paired or clustered data, attrition, noncompliance, repeated
+    looks, or a final analysis method different from the planning model.
+  s3_zh: 按向上取整准则，得到 32 个独立且可用观测，作为简单设计基线。该公式是近似值，并不会自动处理未知方差、配对或聚类数据、样本流失、不依从、重复查看数据，或最终分析方法与规划模型不同的情况。
+  s3_zh_hk: 按向上取整準則，得到 32 個獨立而且可用觀測，作為簡單設計基線。呢個公式係近似值，並唔會自動處理未知方差、配對或者聚類數據、樣本流失、不依從、重複查看數據，或者最終分析方法同規劃模型唔同嘅情況。
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Plan power before data collection, and interpret low power carefully
+  title_zh: 在收集数据前规划功效，并谨慎解释低功效结果
+  title_zh_hk: 喺收集數據之前規劃功效，並審慎解讀低功效結果
+  q1_en: Why is power meaningless without a specified effect size?
+  q1_zh: 为什么不指定效应大小，功效就没有明确含义？
+  q1_zh_hk: 點解唔指定效應大小，功效就冇明確含義？
+  q2_en: What should be aligned between the power calculation and final analysis?
+  q2_zh: 功效计算与最终分析之间应对齐哪些内容？
+  q2_zh_hk: 功效計算同最終分析之間應該對齊邊啲內容？
+  s1_en: Power must be attached to an alternative effect because large effects are easier to detect than small ones. A nonsignificant
+    result from a low-powered study is inconclusive about the absence of a meaningful effect; it is not proof that the intervention
+    failed.
+  s1_zh: 功效必须对应某个备择效应，因为大效应比小效应更容易检测。低功效研究中的不显著结果，对“是否不存在有意义效应”并不能提供确定结论，也不等于证明干预失败。
+  s1_zh_hk: 功效必須對應某個備擇效應，因為大效應比細效應更加容易檢測。低功效研究入面嘅唔顯著結果，對「係咪唔存在有意義效應」並唔可以提供確定結論，亦唔等於證明干預失敗。
+  s2_en: The planning calculation should match the final outcome definition, estimand, allocation, test direction, alpha,
+    variance assumptions, dependence structure, and analysis method. If the real design differs, recalculate rather than relying
+    on the simple baseline.
+  s2_zh: 规划计算应与最终的结果定义、估计目标、分配方式、检验方向、alpha、方差假设、依赖结构与分析方法一致。如果实际设计不同，应重新计算，而不是依赖简单基线。
+  s2_zh_hk: 規劃計算應該同最終嘅結果定義、估計目標、分配方式、檢驗方向、alpha、方差假設、依賴結構同分析方法一致。如果實際設計唔同，應該重新計算，而唔係依賴簡單基線。
+  s3_en: For the assumed simple Z-test plan, the approximation gives 31.36 and rounds upward to 32 usable independent observations.
+    Treat 32 as a teaching baseline, document every planning input, and add design-specific allowances when the field experiment
+    introduces missingness, clustering, or other complications.
+  s3_zh: 在假设的简单 Z 检验方案中，近似计算得到 31.36，向上取整为 32 个可用且独立的观测。应把 32 视为教学基线，记录每项规划输入，并在实地实验存在缺失、聚类或其他复杂因素时加入针对性调整。
+  s3_zh_hk: 喺假設嘅簡單 Z 檢驗方案入面，近似計算得到 31.36，向上取整做 32 個可用而且獨立嘅觀測。應該將 32 視為教學基線，記錄每項規劃輸入，並喺實地實驗存在缺失、聚類或者其他複雜因素嗰陣加入針對性調整。

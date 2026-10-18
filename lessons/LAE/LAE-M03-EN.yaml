@@ -1,0 +1,125 @@
+id: LAE-M03-EN
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 92
+title_en: Charge and turnaround
+title_zh: 充电与周转
+title_zh_hk: 充電同周轉
+objective_en: 'Treat minutes on the pad as the scarce unit. A vehicle waiting for energy is capital sitting on a scarce node.'
+objective_zh: 把垫子上的分钟看成稀缺单位。等能量的机器，是占着稀缺点的资本。
+objective_zh_hk: 將墊上面嘅分鐘看成稀缺單位。等能量嘅機器，係佔住稀缺點嘅資本。
+glossary:
+- en: vertiport
+  zh: 起降场
+  zh_hk: 起降場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What is the scarce unit in this short?
+  zh: 这条短片里的稀缺单位是什么？
+  zh_hk: 呢條短片入面嘅稀缺單位係咩？
+  answer_en: Minutes on the pad.
+  answer_zh: 垫子上的分钟。
+  answer_zh_hk: 墊上面嘅分鐘。
+- id: Q2
+  type: transfer
+  en: A drone sits on the Shenzhen roof until it has energy again. What does that sit-time use up?
+  zh: 一架无人机停在深圳屋顶上，直到重新有能量。这段坐着的时间用掉了什么？
+  zh_hk: 一架無人機停喺深圳屋頂，直到重新有能量。呢段坐住嘅時間用咗咩？
+  answer_en: Pad minutes. That node cannot launch the next parcel while this machine waits.
+  answer_zh: 垫子上的分钟。机器在等的时候，这个点不能再送出下一件包裹。
+  answer_zh_hk: 墊上面嘅分鐘。機器喺度等嘅時候，呢個點唔可以再送出下一件包裹。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Charge and turnaround
+  title_zh: 充电与周转
+  title_zh_hk: 充電同周轉
+  en: The pad has a name. A machine lands on it. This short asks what those sitting minutes cost, before the machine can leave again.
+  zh: 垫子已经有名字。机器落在上面。这条短片问：再出发之前，这些坐着的分钟值什么。
+  zh_hk: 墊已經有名。機器落喺上面。呢條短片問：再出發之前，呢啲坐住嘅分鐘值咩。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Pad minutes
+  title_zh: 垫子上的分钟
+  title_zh_hk: 墊上面嘅分鐘
+  formula: waiting on the pad = minutes the node cannot sell
+  formula_en: waiting on the pad = minutes the node cannot sell
+  formula_zh: 在垫子上等待 = 这个点卖不掉的分钟
+  formula_zh_hk: 喺墊上面等待 = 呢個點賣唔掉嘅分鐘
+  gloss_en: The scarce unit is time on the pad
+  gloss_zh: 稀缺单位是垫子上的时间
+  gloss_zh_hk: 稀缺單位係墊上面嘅時間
+  s1_en: After a hop, the machine often sits. It is waiting for energy. Those minutes belong to the pad, not to the sky.
+  s1_zh: 飞完一趟，机器常常还要坐着。它在等能量。这些分钟属于垫子，不属于天空。
+  s1_zh_hk: 飛完一轉，機器好多時仲要坐住。佢喺度等能量。呢啲分鐘屬於墊，唔屬於天空。
+  s2_en: Do not open the battery. The claim is dwell time. A vehicle waiting for energy is capital sitting on a scarce node. Those minutes freeze the pad for everyone else.
+  s2_zh: 不要打开电池。要记住的是停留时间。等能量的机器，是占着稀缺点的资本。这些分钟把垫子冻住，别人也用不上。
+  s2_zh_hk: 唔好打開電池。要記住嘅係停留時間。等能量嘅機器，係佔住稀缺點嘅資本。呢啲分鐘將墊凍住，其他人亦都用唔到。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: Contrast
+  kicker_en: Contrast
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Flying versus sitting
+  title_zh: 在飞，还是在坐
+  title_zh_hk: 喺度飛，定係喺度坐
+  left_en: Minutes in the band
+  left_zh: 在这一层里的分钟
+  left_zh_hk: 喺呢一層入面嘅分鐘
+  right_en: Minutes on the pad
+  right_zh: 在垫子上的分钟
+  right_zh_hk: 喺墊上面嘅分鐘
+  s1_en: A short hop from the Shenzhen roof toward Sha Tin can be brief. The wait on the roof can last longer than the hop.
+  s1_zh: 从深圳屋顶飞向沙田的那一截，可以很短。屋顶上的等待，可以比那一截更长。
+  s1_zh_hk: 由深圳屋頂飛向沙田嗰截，可以好短。屋頂上面嘅等待，可以比嗰截更長。
+  s2_en: While it sits, the pad cannot launch the next parcel. Turnaround is how many trips the node can sell in an hour.
+  s2_zh: 它坐着的时候，垫子不能再送出下一件包裹。周转就是这个点一小时能卖出多少趟。
+  s2_zh_hk: 佢坐住嘅時候，墊唔可以再送出下一件包裹。周轉就係呢個點一個鐘能賣出幾多轉。
+  s3_en: The scarce unit in this short is pad minutes. Not a plug. Not a cell. Minutes.
+  s3_zh: 这条短片的稀缺单位是垫子上的分钟。不是插头。不是电芯。是分钟。
+  s3_zh_hk: 呢條短片嘅稀缺單位係墊上面嘅分鐘。唔係插頭。唔係電芯。係分鐘。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Sitting is not free
+  title_zh: 坐着不是免费的
+  title_zh_hk: 坐住唔係免費
+  q1_en: What does a waiting machine use up?
+  q1_zh: 一台在等的机器用掉了什么？
+  q1_zh_hk: 一部喺度等嘅機器用咗咩？
+  q2_en: What happens to the next parcel while this one sits?
+  q2_zh: 这一件还在坐着时，下一件包裹怎样？
+  q2_zh_hk: 呢一件仲坐住嗰陣，下一件包裹點？
+  s1_en: Minutes on the pad are the scarce unit.
+  s1_zh: 垫子上的分钟就是稀缺单位。
+  s1_zh_hk: 墊上面嘅分鐘就係稀缺單位。
+  s2_en: A machine waiting for energy is capital on a scarce node. The next parcel waits too.
+  s2_zh: 等能量的机器，是占着稀缺点的资本。下一件包裹也在等。
+  s2_zh_hk: 等能量嘅機器，係佔住稀缺點嘅資本。下一件包裹都喺度等。
+  s3_en: Two pads can still meet in the air. Next sitting names the reservation that keeps two machines off the same point.
+  s3_zh: 两块垫子之间，仍可能在空中碰上。下一讲给那个不让两台机器占同一个点的预约起名。
+  s3_zh_hk: 兩塊墊之間，仍然可能喺空中碰上。下一講畀嗰個唔讓兩部機器佔同一個點嘅預約起名。

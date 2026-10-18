@@ -1,0 +1,194 @@
+id: STAT-M02-T11-BAYES
+course: statistics
+course_en: Business Probability Foundations
+course_zh: 商务概率基础
+course_zh_hk: 商務概率基礎
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: "Inverting the diagnostic evidence"
+title_zh: "证据逆转：贝叶斯法则与设备故障排查"
+title_zh_hk: "證據逆轉：貝葉斯法則與設備故障排查"
+objective_en: "Derive Bayes' Rule as the inversion of conditional probability, distinguish prior belief from posterior probability, and apply Bayesian updating to diagnose true machine breakdowns following an automated IoT sensor alert."
+objective_zh: "把贝叶斯法则推导为条件概率的逆转运算，区分先验信念与后验概率，并运用贝叶斯更新在物联网传感器报警后诊断机器的真实故障率。"
+objective_zh_hk: "將貝葉斯法則推導為條件概率嘅逆轉運算，區分先驗信念與後驗概率，並運用貝葉斯更新喺物聯網傳感器報警之後診斷機器嘅真實故障率。"
+glossary:
+- en: "Bayes' Rule"
+  zh: "贝叶斯法则"
+  zh_hk: "貝葉斯法則"
+  lock: true
+- en: "prior probability"
+  zh: "先验概率"
+  zh_hk: "先驗概率"
+  lock: true
+- en: "posterior probability"
+  zh: "后验概率"
+  zh_hk: "後驗概率"
+  lock: true
+- en: "diagnostic test"
+  zh: "诊断检测"
+  zh_hk: "診斷檢測"
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: "Why is the test accuracy P(Alert | Broken) fundamentally different from the managerial diagnosis P(Broken | Alert)?"
+  question_zh: "为什么设备报警准确率 P(报警|真故障) 与管理者所需的诊断胜率 P(真故障|报警) 在本质上完全不同？"
+  question_zh_hk: "點解設備報警準確率 P(報警|真故障) 同管理者所需嘅診斷勝率 P(真故障|報警) 喺本質上完全唔同？"
+  options_en:
+  - "A: P(Alert | Broken) evaluates sensor engineering on known broken machines, while P(Broken | Alert) updates executive belief after an alert sounds in an uncertain world."
+  - "B: P(Alert | Broken) is calculated in dollars, while P(Broken | Alert) is calculated in hours."
+  - "C: They are mathematically identical and can be used interchangeably in financial reporting."
+  - "D: Inverting conditional probability requires written approval from local equipment inspectors."
+  options_zh:
+  - "A: P(报警|真故障) 是在已知故障前提下评估传感器的工程灵敏度，而 P(真故障|报警) 是在现实不确定世界中听到警报后反推机器真坏的后验概率。"
+  - "B: P(报警|真故障) 的单位是元，而 P(真故障|报警) 的计量单位是小时。"
+  - "C: 两者在数学上完全等价，在编制财务报表时可以毫无区别地随意替换。"
+  - "D: 对条件概率进行求逆计算，必须事先取得当地特种设备质检部门的书面批件。"
+  options_zh_hk:
+  - "A: P(報警|真故障) 係喺已知故障前提下評估傳感器嘅工程靈敏度，而 P(真故障|報警) 係喺現實不確定世界入面聽到警報之後反推機器真壞嘅後驗概率。"
+  - "B: P(報警|真故障) 嘅單位係蚊，而 P(真故障|報警) 嘅計量單位係鐘頭。"
+  - "C: 兩者喺數學上完全等價，喺編制財務報表嗰陣可以毫無分別噉隨意替換。"
+  - "D: 對條件概率進行求逆計算，必須事先取得當地特種設備質檢部門嘅書面批件。"
+  answer: A
+  explanation_en: "Conditioning direction matters: the laboratory measures how well the sensor catches known faults, but the operator must deduce whether an observed alarm indicates a genuine operational breakdown."
+  explanation_zh: "条件的作用方向至关重要：实验室测试的是传感器捕捉已知故障的敏锐度，而现场管理者必须根据出现的警报倒推机器是否真的坏了。"
+  explanation_zh_hk: "條件嘅作用方向至關重要：實驗室測試嘅係傳感器捕捉已知故障嘅敏銳度，而現場管理者必須根據出現嘅警報倒推機器係咪真係壞咗。"
+- id: Q2
+  type: multiple_choice
+  question_en: "Out of 1,000 coffee machine operational hours, 40 hours suffer true boiler failure while 960 hours are healthy. An automated sensor generates 36 true alarms and 48 false alarms. When an alarm flashes, what is P(Broken | Alarm)?"
+  question_zh: "在一千个咖啡机运转工时中，有 40 小时发生真实锅炉故障，960 小时运转正常。自动传感器发出了 36 次正确报警和 48 次虚警误报。当警报红灯闪烁时，真实故障的后验概率 P(真坏|报警) 是多少？"
+  question_zh_hk: "喺一千個咖啡機運轉工時入面，有 40 個鐘發生真實鍋爐故障，960 個鐘運轉正常。自動傳感器發出咗 36 次正確報警同 48 次虛警誤報。當警報紅燈閃爍嗰陣，真實故障嘅後驗概率 P(真壞|報警) 係幾多？"
+  options_en:
+  - "A: 36 / 84 ≈ 0.429"
+  - "B: 36 / 40 = 0.900"
+  - "C: 48 / 960 = 0.050"
+  - "D: 84 / 1,000 = 0.084"
+  options_zh:
+  - "A: 36 / 84 ≈ 0.429"
+  - "B: 36 / 40 = 0.900"
+  - "C: 48 / 960 = 0.050"
+  - "D: 84 / 1,000 = 0.084"
+  options_zh_hk:
+  - "A: 36 / 84 ≈ 0.429"
+  - "B: 36 / 40 = 0.900"
+  - "C: 48 / 960 = 0.050"
+  - "D: 84 / 1,000 = 0.084"
+  answer: A
+  explanation_en: "Total alarms = 36 true + 48 false = 84 alarms. P(Broken | Alarm) = 36 / 84 ≈ 42.9%."
+  explanation_zh: "警报总次数 = 36 次真警报 + 48 次虚警 = 84 次。P(真坏|报警) = 36 / 84 ≈ 42.9%。"
+  explanation_zh_hk: "警報總次數 = 36 次真警報 + 48 次虛警 = 84 次。P(真壞|報警) = 36 / 84 ≈ 42.9%。"
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: "The Sensor Paradox"
+  kicker_en: "The Sensor Paradox"
+  kicker_zh: "传感器悖论"
+  kicker_zh_hk: "傳感器悖論"
+  title_en: "The alarm is screaming, but is it broken?"
+  title_zh: "警报疯狂尖叫，机器真坏了吗？"
+  title_zh_hk: "警報瘋狂尖叫，部機真係壞咗？"
+  en: "At 7:00 AM in our busy Airport terminal branch, the IoT boiler pressure alarm flashes bright red. The equipment manual boasts ninety percent diagnostic sensitivity: whenever a boiler fails, the sensor sounds the alarm ninety percent of the time. Does that mean there is a ninety percent chance the machine is actually broken? Before pausing service or dispatching an engineer, managers need the probability of a real breakdown given the alert. How do they reverse the conditioning direction?"
+  zh: "早晨七点整，机场航站楼店人潮汹涌，浓缩咖啡机锅炉的物联网压力警报突然亮起刺目红光。设备说明书骄傲地标榜着 90% 的检测灵敏度：只要锅炉发生真实故障，传感器有 90% 的概率会精准鸣叫。这是否意味着机器真坏了的概率就是 90%？在暂停营业或派工程师到场之前，管理者真正需要的是“已知报警时发生真实故障”的概率。该如何把条件方向逆转过来？"
+  zh_hk: "朝早七點正，機場航站樓舖人潮湧湧，濃縮咖啡機鍋爐嘅物聯網壓力警報突然閃起刺眼紅光。設備說明書驕傲噉標榜住 90% 嘅檢測靈敏度：只要鍋爐發生真實故障，傳感器有 90% 嘅概率會精準鳴叫。呢個係咪意味住部機真係壞咗嘅概率就係 90%？喺暫停營業或者派工程師到場之前，管理者真正需要嘅係「已知報警時發生真故障」嘅概率。應該點樣將條件方向逆轉過嚟？"
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: "What It Is"
+  kicker_en: "What It Is"
+  kicker_zh: "核心概念"
+  kicker_zh_hk: "核心概念"
+  title_en: "Bayes' Rule: Inverting conditional odds"
+  title_zh: "贝叶斯法则：条件概率的逆转"
+  title_zh_hk: "貝葉斯法則：條件概率嘅逆轉"
+  formula: "P(B|A) = [ P(A|B) * P(B) ] / P(A)"
+  formula_zh: "后验概率 P(B|A) = [ 条件胜率 P(A|B) × 先验基准 P(B) ] / 全局证据 P(A)"
+  formula_zh_hk: "後驗概率 P(B|A) = [ 條件勝率 P(A|B) × 先驗基準 P(B) ] / 全局證據 P(A)"
+  formula_tex: "P(B_i \\mid A) = \\frac{P(A \\mid B_i) P(B_i)}{P(A)} = \\frac{P(A \\mid B_i) P(B_i)}{\\sum P(A \\mid B_j) P(B_j)}"
+  s1_en: "Bayes' Rule provides the mathematical mechanism to invert a conditional probability, flipping P of evidence given cause into P of cause given evidence."
+  s1_zh: "贝叶斯法则提供了逆转条件概率的数学桥梁，它能把“已知原因求证据”的概率，完美颠覆为“目睹证据倒推真实原因”的后验推断。"
+  s1_zh_hk: "貝葉斯法則提供咗逆轉條件概率嘅數學橋樑，佢可以將「已知原因求證據」嘅概率，完美顛覆為「目睹證據倒推真實原因」嘅後驗推斷。"
+  s2_en: "It updates our prior belief about machine health by incorporating new observational evidence: the automated alarm. The denominator P of A is computed using the Law of Total Probability."
+  s2_zh: "它借助新观察到的实测证据（自动警报），实时更新我们对机器健康状况的先验认知。分母上的全局证据概率 P(A)，可通过所有可能状态下的警报概率加权求和得到。"
+  s2_zh_hk: "佢借助新觀察到嘅實測證據（自動警報），實時更新我哋對機器健康狀況嘅先驗認知。分母上面嘅全局證據概率 P(A)，可以將所有可能狀態之下嘅警報概率加權再加埋。"
+- id: invert
+  visual: two_column
+  seconds: 36
+  kicker: "The Critical Distinction"
+  kicker_en: "The Critical Distinction"
+  kicker_zh: "本质辨析"
+  kicker_zh_hk: "本質辨析"
+  title_en: "Prior beliefs versus posterior diagnosis"
+  title_zh: "先验基准认知与后验诊断胜率"
+  title_zh_hk: "先驗基準認知與後驗診斷勝率"
+  left_en: "Prior P(Broken): Base failure rate before alert"
+  left_zh: "先验概率：听到警报前机器自然故障的基准概率"
+  left_zh_hk: "先驗概率：聽到警報前機器自然故障嘅基準概率"
+  right_en: "Posterior P(Broken | Alert): Revised belief after alert"
+  right_zh: "后验概率：警报骤响后更新修正的真实故障率"
+  right_zh_hk: "後驗概率：警報驟響後更新修正嘅真實故障率"
+  s1_en: "Never confuse the sensor's sensitivity with the manager's posterior diagnosis. P of Alert given Broken measures how often the sensor alerts among known broken-machine hours."
+  s1_zh: "切莫将传感器的工程可靠性，与管理者所需的诊断确定性混为一谈。P(报警|真故障) 是在受控实验室里测得的硬件工程技术指标。"
+  s1_zh_hk: "千祈唔好將傳感器嘅工程可靠性，同管理者所需嘅診斷確定性混為一談。P(報警|真故障) 係喺受控實驗室入面測得嘅硬件工程技術指標。"
+  s2_en: "P of Broken given Alert is the operational reality managers face when staring at a flashing red light on a chaotic shop floor."
+  s2_zh: "而 P(真故障|报警) 才是当管理人员站在嘈杂的门店吧台、面对疯狂闪烁的红灯时，必须据此作出营运决策的现实概率。"
+  s2_zh_hk: "而 P(真故障|報警) 先係當管理人員企喺嘈雜嘅門市吧台、面對瘋狂閃爍嘅紅燈嗰陣，必須據此作出營運決策嘅現實概率。"
+  s3_en: "Because machines are healthy most of the time, false alarms generated by healthy operating hours can easily overwhelm true alarms from genuine breakdowns."
+  s3_zh: "因为机器在绝大多数时间里都是健康运转的，海量正常工时里偶发的少量虚警误报，极易在绝对数量上彻底淹没真实故障的警报声。"
+  s3_zh_hk: "因為機器喺絕大多數時間入面都係健康運轉嘅，海量正常工時入面偶發嘅少量虛警誤報，極易喺絕對數量上徹底淹沒真實故障嘅警報聲。"
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: "The Ledger"
+  kicker_en: "The Ledger"
+  kicker_zh: "账目实推"
+  kicker_zh_hk: "賬目實推"
+  title_en: "Diagnosing 1,000 machine hours"
+  title_zh: "推演一千个机器工时的警报台账"
+  title_zh_hk: "推演一千個機器工時嘅警報台賬"
+  step1_en: "True Broken: 40 hrs; 90% alert = 36 true alarms"
+  step1_zh: "真故障：40 工时；90% 报警 = 36 次真警报"
+  step1_zh_hk: "真故障：40 工時；90% 報警 = 36 次真警報"
+  step2_en: "Healthy: 960 hrs; 5% false alarm = 48 false alarms"
+  step2_zh: "健康运转：960 工时；5% 误报 = 48 次虚警"
+  step2_zh_hk: "健康運轉：960 工時；5% 誤報 = 48 次虛警"
+  step3_en: "Total alarms = 84; P(Broken | Alert) = 36/84 = 42.9%"
+  step3_zh: "报警总计 = 84 次；P(真坏|报警) = 36/84 ≈ 42.9%"
+  step3_zh_hk: "報警總計 = 84 次；P(真壞|報警) = 36/84 ≈ 42.9%"
+  s1_en: "Track 1,000 operating hours on our Airport machine. Historically, only 40 hours suffer real boiler failure (a 4% prior rate). With 90% sensor sensitivity, it sounds 36 true alarms."
+  s1_zh: "追踪机场店这台咖啡机的一千个运转工时。历史数据显示仅 40 个工时发生真故障（先验概率 4%）。按 90% 的灵敏度，它会发出 36 次正确的真报警。"
+  s1_zh_hk: "追蹤機場舖呢部咖啡機嘅一千個運轉工時。歷史數據顯示淨係得 40 個工時發生真故障（先驗概率 4%）。按 90% 嘅靈敏度，佢會發出 36 次正確嘅真報警。"
+  s2_en: "The remaining 960 hours are completely healthy. But the sensor has a 5% false positive rate: 5% of 960 healthy hours generates 48 false alarms."
+  s2_zh: "其余 960 个工时完全正常运转。但传感器存在 5% 的误报率：960 个正常工时的 5% 会凭空制造出 48 次虚假警报。"
+  s2_zh_hk: "其餘 960 個工時完全正常運轉。但傳感器存在 5% 嘅誤報率：960 個正常工時嘅 5% 會憑空製造出 48 次虛假警報。"
+  s3_en: "Total alarms buzzing on the wall: 36 plus 48 equals 84. When the alarm sounds, the probability that the machine is actually broken is 36 divided by 84—just 42.9%."
+  s3_zh: "墙上警报骤响的总次数是 36 加 48 等于 84 次。当警报响起时，机器真正损坏的概率是 36 除以 84——仅仅只有 42.9%。"
+  s3_zh_hk: "牆上警報驟響嘅總次數係 36 加 48 等於 84 次。當警報響起嗰陣，部機真正損壞嘅概率係 36 除以 84——僅僅得 42.9%。"
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: "Decision Rule"
+  kicker_en: "Decision Rule"
+  kicker_zh: "商业法则"
+  kicker_zh_hk: "商業法則"
+  title_en: "Invert before you dispatch"
+  title_zh: "呼叫抢修之前，务必贝叶斯逆转"
+  title_zh_hk: "呼叫搶修之前，務必貝葉斯逆轉"
+  q1_en: "Why does high sensor accuracy fail to guarantee a breakdown?"
+  q1_zh: "为什么高达 90% 的传感器灵敏度保不住现场判断？"
+  q1_zh_hk: "點解高達 90% 嘅傳感器靈敏度保唔住現場判斷？"
+  q2_en: "How should managers act on diagnostic alerts?"
+  q2_zh: "管理者面对自动化警报应遵循怎样的决策流程？"
+  q2_zh_hk: "管理者面對自動化警報應遵循點樣嘅決策流程？"
+  s1_en: "Never equate diagnostic test accuracy with the truth of the underlying condition; an alarm is merely new evidence to be blended with prior base rates."
+  s1_zh: "绝不能将诊断仪器的测试准确率直接等同于设备真实故障的确定性；警报仅仅是新证据，必须与底层先验基准结合评判。"
+  s1_zh_hk: "絕唔可以將診斷儀器嘅測試準確率直接等同於設備真實故障嘅確定性；警報僅僅係新證據，必須同底層先驗基準結合評判。"
+  s2_en: "Use the posterior probability together with safety procedures, inspection evidence, and the operational cost of each action before deciding whether to pause service or dispatch maintenance."
+  s2_zh: "在决定是否暂停服务或派出维修人员时，应把后验概率与安全程序、现场检查证据以及各项行动成本一并考虑。"
+  s2_zh_hk: "喺決定係咪暫停服務或者派維修人員嗰陣，應該將後驗概率同安全程序、現場檢查證據以及各項行動成本一齊考慮。"
+  s3_en: "In this ledger, 36 of 84 alarms coincide with real breakdowns, so P(Broken given Alert) is 42.9 percent, not the sensor sensitivity of 90 percent."
+  s3_zh: "在这份台账中，84 次警报里有 36 次对应真实故障，因此 P(真坏|报警) 是 42.9%，而不是传感器灵敏度 90%。"
+  s3_zh_hk: "喺呢份台賬入面，84 次警報有 36 次對應真故障，所以 P(真壞|報警) 係 42.9%，而唔係傳感器靈敏度 90%。"

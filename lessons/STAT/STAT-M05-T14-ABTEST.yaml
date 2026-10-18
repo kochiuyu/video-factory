@@ -1,0 +1,223 @@
+id: STAT-M05-T14-ABTEST
+course: STAT-M05
+course_en: Hypothesis Testing & Store Experiments
+course_zh: 假设检验与门店运营实验
+course_zh_hk: 假設檢驗與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Commercial A/B Testing Pitfalls: Peeking, Multiplicity, and False Positives'
+title_zh: 商业 A/B 测试陷阱：数据窥探、多重检验与假阳性
+title_zh_hk: 商業 A/B 測試陷阱：數據窺探、多重檢驗同假陽性
+objective_en: Explain why optional stopping and repeated unadjusted looks invalidate a fixed-sample significance rule, calculate
+  family-wise error under independent tests, apply a Bonferroni threshold, and audit an assumed multi-variant app experiment
+  without labeling a non-adjusted result as proof of success or failure.
+objective_zh: 解释为什么选择性早停与未经调整的重复查看会破坏固定样本显著性规则，在独立检验条件下计算族系错误率，应用邦弗朗尼阈值，并审计假设的多版本 App 实验，同时避免把未经调整的结果视为成功或失败的证明。
+objective_zh_hk: 解釋點解選擇性早停同未經調整嘅重複查看會破壞固定樣本顯著性規則，喺獨立檢驗條件之下計算族系錯誤率，應用邦弗朗尼閾值，並審計假設嘅多版本 App 實驗，同時避免將未經調整嘅結果視為成功或者失敗嘅證明。
+glossary:
+- en: continuous peeking problem
+  zh: 连续窥探/频繁偷看数据问题
+  zh_hk: 連續窺探/頻繁偷睇數據問題
+  lock: true
+- en: family-wise error rate (FWER)
+  zh: 族系误差率/全族显著性水平
+  zh_hk: 族系誤差率/全族顯著性水平
+  lock: true
+- en: Bonferroni correction
+  zh: 邦弗朗尼修正
+  zh_hk: 邦弗朗尼修正
+  lock: true
+- en: pre-registered stopping rule
+  zh: 预设样本终止准则
+  zh_hk: 預設樣本終止準則
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why is it invalid to repeatedly check a fixed-sample A/B test and stop only when p first falls below 0.05?
+  question_zh: 在数字端实时 A/B 测试中，为什么频繁刷新监控看板并一抓到 p < 0.05 就擅自提前终止实验（即“频繁偷看数据”），会彻底摧毁实验的统计有效性？
+  question_zh_hk: 喺數碼端實時 A/B 測試入面，點解頻繁刷新監控看板並一捉到 p < 0.05 就擅自提前終止實驗（即係「頻繁偷睇數據」），會徹底摧毀實驗嘅統計有效性？
+  options_en:
+  - 'A: The stopping time is selected using observed outcomes, giving noise repeated opportunities to cross the threshold
+    and invalidating the nominal fixed-sample Type I error.'
+  - 'B: Because modern cloud web servers crash when SQL queries are refreshed more than once an hour.'
+  - 'C: Because the Bonferroni correction is strictly illegal under commercial retail marketing laws.'
+  - 'D: Because early stopping automatically transforms sample proportions into continuous student-t variables.'
+  options_zh:
+  - 'A: 即使原假设完全为真且毫无真实业务提升，随机游走的累积随机性注定会偶发性地暂时刺破 p < 0.05 红线；伺机早停会使真实的假阳性误报率从 5% 恶性膨胀至 30% 以上。'
+  - 'B: 因为现代云端零售数据库在单小时内被执行超过一次 SQL 监控查询时会自动引发宕机。'
+  - 'C: 因为商业零售营销管理法规明文禁止在数字看板中运行邦弗朗尼修正算法。'
+  - 'D: 因为提前叫停实验会在运算底层强制将样本二元比率自动扭曲为连续型学生氏 t 变量。'
+  options_zh_hk:
+  - 'A: 就算原假設完全為真兼且毫無真實業務提升，隨機遊走嘅累積隨機性注定會偶發性噉暫時刺破 p < 0.05 紅線；伺機早停會令真實嘅假陽性誤報率由 5% 惡性膨脹到 30% 以上。'
+  - 'B: 因為現代雲端零售數據庫喺單小時內被執行超過一次 SQL 監控查詢嗰陣會自動引發冧機。'
+  - 'C: 因為商業零售營銷管理法規明文禁止喺數碼看板入面運行邦弗朗尼修正算法。'
+  - 'D: 因為提前叫停實驗會喺運算底層強制將樣本二元比率自動扭曲為連續型學生氏 t 變量。'
+  answer: A
+  explanation_en: Optional stopping changes the testing procedure. Valid interim monitoring requires a prespecified sequential
+    method or adjusted boundaries; no universal inflation percentage follows without a specific monitoring plan.
+  explanation_zh: 在数据累积过程中反复进行显著性检验，无异于给随机杂音提供了多次掷骰子触发假阳性的机会。一旦随机漫步偶然击穿 0.05 便立即叫停，本质上是选择性截留了概率异常值，人为制造了高达三成以上的误报率。
+  explanation_zh_hk: 喺數據累積過程中反覆進行顯著性檢驗，無異於畀隨機雜音提供咗多次擲骰子觸發假陽性嘅機會。一旦隨機漫步偶然擊穿 0.05 就即刻叫停，本質上係選擇性截留咗概率異常值，人為製造咗高達三成以上嘅誤報率。
+- id: Q2
+  type: multiple_choice
+  question_en: Assume k = 10 independent true-null tests, each run at alpha = 0.05. What are the FWER and the Bonferroni per-test
+    threshold for family alpha 0.05?
+  question_zh: 都市咖啡数字营销团队在 alpha = 0.05 基准下，同时并行测试 k = 10 种不同的会员 App 优惠券推送文案。若不加任何修正，全族误报率（FWER）是多少？若采用邦弗朗尼修正，每个测试单项必须越过怎样的显著性阈值？
+  question_zh_hk: 都市咖啡數碼營銷團隊喺 alpha = 0.05 基準下，同時並行測試 k = 10 種唔同嘅會員 App 優惠券推送文案。若果唔加任何修正，全族誤報率（FWER）係幾多？若果採用邦弗朗尼修正，每個測試單項必須越過點樣嘅顯著性閾值？
+  options_en:
+  - 'A: FWER = 1 - 0.95^10 ≈ 0.4013; Bonferroni threshold = 0.05/10 = 0.005.'
+  - 'B: FWER = 10 * 0.05 = 0.5000; Bonferroni threshold = 0.05 * 10 = 0.5000.'
+  - 'C: FWER = 0.0500; Bonferroni threshold = 0.0500 because parallel tests are completely independent.'
+  - 'D: FWER = 1 - 0.05 / 10 = 0.9950; Bonferroni threshold = 0.0100.'
+  options_zh:
+  - 'A: 全族误报率 FWER = 1 - (1 - 0.05)^10 = 1 - 0.5987 ≈ 0.4013（高达 40.13% 虚假报警风险）；邦弗朗尼修正阈值 = 0.05 / 10 = 0.0050。'
+  - 'B: 全族误报率 FWER = 10 × 0.05 = 0.5000；邦弗朗尼修正阈值 = 0.05 × 10 = 0.5000。'
+  - 'C: 全族误报率恒为 0.0500；修正阈值为 0.0500，因为并行实验在业务上相互独立。'
+  - 'D: 全族误报率 FWER = 1 - 0.05 / 10 = 0.9950；邦弗朗尼修正阈值 = 0.0100。'
+  options_zh_hk:
+  - 'A: 全族誤報率 FWER = 1 - (1 - 0.05)^10 = 1 - 0.5987 ≈ 0.4013（高達 40.13% 虛假報警風險）；邦弗朗尼修正閾值 = 0.05 / 10 = 0.0050。'
+  - 'B: 全族誤報率 FWER = 10 × 0.05 = 0.5000；邦弗朗尼修正閾值 = 0.05 × 10 = 0.5000。'
+  - 'C: 全族誤報率恆為 0.0500；修正閾值為 0.0500，因為並行實驗喺業務上相互獨立。'
+  - 'D: 全族誤報率 FWER = 1 - 0.05 / 10 = 0.9950；邦弗朗尼修正閾值 = 0.0100。'
+  answer: A
+  explanation_en: Under independence, the chance of no false positives is 0.95^10, so FWER is approximately 0.4013. Bonferroni
+    uses 0.005 per comparison to control family-wise error at no more than 0.05.
+  explanation_zh: 在 10 项独立检验中，至少捕获一次假阳性的综合概率为 1 - (0.95)^10 ≈ 40.13%。为将全族总误报率严格锁死在 5%，邦弗朗尼修正要求将 alpha 均分除以 k：0.05 / 10 = 0.0050。单项
+    p 值必须跌破 0.005 方能宣告真正见效。
+  explanation_zh_hk: 喺 10 項獨立檢驗入面，至少捕獲一次假陽性嘅綜合概率為 1 - (0.95)^10 ≈ 40.13%。為將全族總誤報率嚴格鎖死喺 5%，邦弗朗尼修正要求將 alpha 均分除以 k：0.05 / 10
+    = 0.0050。單項 p 值必須跌破 0.005 先至可以宣告真正見效。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  kicker_en: The Growth Hacker's Mirage
+  kicker_zh: 增长黑客的幻影
+  kicker_zh_hk: 增長黑客嘅幻影
+  title_en: How can a dashboard manufacture an apparent winner?
+  title_zh: 实时看板如何制造表面赢家？
+  title_zh_hk: 實時看板點樣製造表面贏家？
+  en: 'Metro Coffee is running an assumed app experiment with ten promotional headlines. One headline produces a raw p-value
+    of 0.035 after the team repeatedly checks accumulating results. That value is below 0.05, but the experiment contains
+    two threats to the advertised error rate: multiple comparisons and a stopping decision influenced by interim outcomes.
+    The analysis must account for the testing process, not only the final p-value.'
+  zh: 都市咖啡正在进行一项假设的 App 实验，同时测试十款促销文案。团队反复查看不断累积的结果后，其中一款文案得到原始 p 值 0.035。该数值低于 0.05，但实验包含两项威胁既定错误率的问题：多重比较，以及受中期结果影响的停止决策。分析必须考虑整个检验过程，而不能只看最终
+    p 值。
+  zh_hk: 都市咖啡正進行一項假設嘅 App 實驗，同時測試十款促銷文案。團隊反覆查看不斷累積嘅結果之後，其中一款文案得到原始 p 值 0.035。呢個數值低過 0.05，但實驗包含兩項威脅既定錯誤率嘅問題：多重比較，以及受中期結果影響嘅停止決策。分析必須考慮成個檢驗過程，而唔可以只睇最終
+    p 值。
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: Repeated looks and multiple tests create extra chances for false positives
+  title_zh: 重复查看与多重检验增加假阳性机会
+  title_zh_hk: 重複查看同多重檢驗增加假陽性機會
+  formula: 'Independent tests: FWER = 1 - (1 - alpha)^k; Bonferroni per-test threshold = alpha_family / k'
+  formula_zh: 独立检验：FWER = 1 - (1 - alpha)^k；邦弗朗尼单项阈值 = alpha_family / k
+  formula_zh_hk: 獨立檢驗：FWER = 1 - (1 - alpha)^k；邦弗朗尼單項閾值 = alpha_family / k
+  formula_tex: \mathrm{FWER}=1-(1-\alpha)^k,\qquad \alpha_{\mathrm{Bonf}}=\alpha_{\mathrm{family}}/k
+  s1_en: A conventional fixed-sample p-value assumes the analysis and stopping rule were specified independently of the observed
+    outcomes. Repeatedly testing accumulating data and stopping only when significance appears changes the procedure and generally
+    increases its Type I error unless a valid sequential method is used.
+  s1_zh: 常规固定样本 p 值假定分析方案与停止规则不受观测结果影响。反复检验累积数据，并只在显著性出现时停止，会改变检验程序；除非使用有效的序贯方法，否则通常会提高第一类错误率。
+  s1_zh_hk: 常規固定樣本 p 值假定分析方案同停止規則唔受觀測結果影響。反覆檢驗累積數據，並只喺顯著性出現嗰陣停止，會改變檢驗程序；除非使用有效嘅序貫方法，否則通常會提高第一類錯誤率。
+  s2_en: Testing many hypotheses also creates more opportunities for at least one false positive. For k independent true-null
+    tests, the exact probability of one or more false rejections is one minus one minus alpha raised to k. With dependence,
+    that expression need not be exact.
+  s2_zh: 同时检验多个假设，也会增加至少出现一次假阳性的机会。对于 k 个彼此独立且原假设均为真的检验，至少一次错误拒绝的确切概率为 1 - (1 - alpha)^k。若检验之间相关，该表达式未必精确。
+  s2_zh_hk: 同時檢驗多個假設，亦會增加至少出現一次假陽性嘅機會。對於 k 個彼此獨立而且原假設都為真嘅檢驗，至少一次錯誤拒絕嘅確切概率係 1 - (1 - alpha)^k。如果檢驗之間相關，呢個表達式未必精確。
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  kicker_en: The Multiple Testing Trap
+  kicker_zh: 多重检验陷阱
+  kicker_zh_hk: 多重檢驗陷阱
+  title_en: Control the family, and plan interim monitoring explicitly
+  title_zh: 控制检验族，并明确规划中期查看
+  title_zh_hk: 控制檢驗族，並明確規劃中期查看
+  left_en: 'Multiplicity: define the family, then adjust or model the comparisons'
+  left_zh: 多重性：先定义检验族，再调整或建模各项比较
+  left_zh_hk: 多重性：先定義檢驗族，再調整或者建模各項比較
+  right_en: 'Monitoring: predefine sample size, looks, boundaries, and stopping rules'
+  right_zh: 监测：预先设定样本量、查看次数、边界与停止规则
+  right_zh_hk: 監測：預先設定樣本量、查看次數、邊界同停止規則
+  s1_en: Bonferroni controls family-wise error by testing each of k hypotheses at alpha_family divided by k. It is valid without
+    requiring independence, although it can be conservative when tests are strongly related or numerous. Other prespecified
+    multiplicity methods may be more powerful.
+  s1_zh: 邦弗朗尼方法通过把每个检验的阈值设为 alpha_family / k 来控制族系错误率。它不要求检验独立，但在检验高度相关或数量较多时可能较保守。其他预先指定的多重性方法可能具有更高功效。
+  s1_zh_hk: 邦弗朗尼方法透過將每個檢驗嘅閾值設定做 alpha_family / k 嚟控制族系錯誤率。佢唔要求檢驗獨立，但喺檢驗高度相關或者數量較多嗰陣可能較保守。其他預先指定嘅多重性方法可能具有更高功效。
+  s2_en: Interim monitoring is not inherently invalid. It becomes valid when the design uses an appropriate sequential framework
+    with prespecified looks and decision boundaries. A fixed-sample threshold applied opportunistically after unknown numbers
+    of looks does not preserve its nominal interpretation.
+  s2_zh: 中期查看本身并非无效。若设计采用适当的序贯框架，并预先设定查看次数与决策边界，中期监测可以有效。相反，在查看次数不明的情况下，机会主义地套用固定样本阈值，不能保持其名义解释。
+  s2_zh_hk: 中期查看本身並非無效。如果設計採用適當嘅序貫框架，並預先設定查看次數同決策邊界，中期監測可以有效。相反，喺查看次數不明嘅情況之下，機會主義噉套用固定樣本閾值，唔可以保持佢嘅名義解讀。
+  s3_en: Define primary outcomes and variants before launch, distinguish exploratory from confirmatory analyses, document
+    exclusions and stopping rules, and report all tested comparisons. Adjustment is not a substitute for randomization, valid
+    measurement, or adequate power.
+  s3_zh: 实验启动前应定义主要结果与版本，区分探索性与验证性分析，记录排除标准与停止规则，并报告所有已检验比较。多重性调整不能替代随机化、有效测量或足够功效。
+  s3_zh_hk: 實驗啟動之前應該定義主要結果同版本，區分探索性同驗證性分析，記錄排除標準同停止規則，並報告所有已檢驗比較。多重性調整唔可以取代隨機化、有效量度或者足夠功效。
+- id: ledger
+  visual: steps
+  seconds: 38
+  kicker_en: The Ledger
+  kicker_zh: 台账实审
+  kicker_zh_hk: 台賬實審
+  title_en: Audit the assumed ten-variant headline experiment
+  title_zh: 审计假设的十版本文案实验
+  title_zh_hk: 審計假設嘅十版本文案實驗
+  step1_en: Assume k = 10 independent true-null tests, nominal alpha = 0.05, and one raw result p = 0.035
+  step1_zh: 假设 k = 10 个独立且原假设为真的检验，名义 alpha = 0.05，其中一个原始结果 p = 0.035
+  step1_zh_hk: 假設 k = 10 個獨立而且原假設為真嘅檢驗，名義 alpha = 0.05，其中一個原始結果 p = 0.035
+  step2_en: FWER = 1 - 0.95^10 ≈ 0.4013; Bonferroni threshold = 0.05/10 = 0.005
+  step2_zh: FWER = 1 - 0.95^10 ≈ 0.4013；邦弗朗尼阈值 = 0.05/10 = 0.005
+  step2_zh_hk: FWER = 1 - 0.95^10 ≈ 0.4013；邦弗朗尼閾值 = 0.05/10 = 0.005
+  step3_en: Because 0.035 > 0.005, the result is not significant under this Bonferroni family-wise rule
+  step3_zh: 由于 0.035 > 0.005，该结果在此邦弗朗尼族系规则下不显著
+  step3_zh_hk: 由於 0.035 > 0.005，呢個結果喺此邦弗朗尼族系規則之下唔顯著
+  s1_en: For illustration, assume ten independent comparisons are all true nulls and each is tested at 0.05. These are teaching
+    assumptions, not verified campaign counts, customer records, budgets, or deployment decisions. Under those assumptions,
+    the family-wise false-positive probability is approximately 40.13%.
+  s1_zh: 作为示例，假设十项独立比较的原假设全部为真，且每项按 0.05 检验。这些是教学假设，并非已核实的活动数量、顾客记录、预算或部署决策。在这些假设下，族系假阳性概率约为 40.13%。
+  s1_zh_hk: 作為例子，假設十項獨立比較嘅原假設全部為真，而且每項按 0.05 檢驗。呢啲係教學假設，唔係已核實嘅活動數量、顧客記錄、預算或者部署決策。喺呢啲假設之下，族系假陽性概率約係 40.13%。
+  s2_en: To control the family-wise level at 0.05 with Bonferroni, each comparison uses a threshold of 0.005. The observed
+    raw p-value of 0.035 is below 0.05 but above 0.005, so it does not meet this confirmatory family-wise criterion.
+  s2_zh: 若用邦弗朗尼把族系水平控制在 0.05，每项比较采用 0.005 的阈值。观测原始 p 值 0.035 低于 0.05，但高于 0.005，因此不满足该验证性族系标准。
+  s2_zh_hk: 如果用邦弗朗尼將族系水平控制喺 0.05，每項比較採用 0.005 嘅閾值。觀測原始 p 值 0.035 低過 0.05，但高過 0.005，所以唔滿足呢個驗證性族系標準。
+  s3_en: This does not prove the headline has zero effect or that the result is literally a false positive. It means the available
+    result is insufficient for rejection under the stated Bonferroni rule. Repeated peeking creates an additional issue that
+    requires the actual monitoring plan or a valid sequential analysis.
+  s3_zh: 这并不能证明该文案效应为零，也不能断定该结果本身就是假阳性。它表示现有结果不足以在既定邦弗朗尼规则下拒绝原假设。反复查看构成另一项问题，需要依据实际监测方案或有效序贯分析处理。
+  s3_zh_hk: 呢個並唔可以證明嗰款文案效應係零，亦唔可以斷定呢個結果本身就係假陽性。佢表示現有結果不足以喺既定邦弗朗尼規則之下拒絕原假設。反覆查看構成另一項問題，需要根據實際監測方案或者有效序貫分析處理。
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Prespecify the family, monitoring plan, and decision rule
+  title_zh: 预先设定检验族、监测方案与决策规则
+  title_zh_hk: 預先設定檢驗族、監測方案同決策規則
+  q1_en: Why does optional stopping invalidate a fixed-sample p-value rule?
+  q1_zh: 为什么选择性早停会使固定样本 p 值规则失效？
+  q1_zh_hk: 點解選擇性早停會令固定樣本 p 值規則失效？
+  q2_en: What does a Bonferroni-adjusted nonsignificant result mean?
+  q2_zh: 邦弗朗尼调整后不显著意味着什么？
+  q2_zh_hk: 邦弗朗尼調整之後唔顯著意味住咩？
+  s1_en: Stopping when a favorable p-value first appears selects the stopping time using the observed noise, so a fixed-sample
+    threshold no longer has its advertised Type I error. Use a prespecified fixed sample or a valid sequential design with
+    planned monitoring boundaries.
+  s1_zh: 在有利 p 值首次出现时停止，是利用观测噪声选择停止时点，因此固定样本阈值不再具有所声称的第一类错误率。应使用预先设定的固定样本方案，或采用具有规划监测边界的有效序贯设计。
+  s1_zh_hk: 喺有利 p 值首次出現嗰陣停止，係利用觀測雜音選擇停止時點，所以固定樣本閾值唔再具有所聲稱嘅第一類錯誤率。應該使用預先設定嘅固定樣本方案，或者採用具有規劃監測邊界嘅有效序貫設計。
+  s2_en: Failure to cross an adjusted threshold means the evidence is insufficient for the specified family-wise claim. It
+    is not proof of no effect. Report effect estimates and intervals, all comparisons, the adjustment method, monitoring history,
+    and whether the analysis was confirmatory or exploratory.
+  s2_zh: 未越过调整后阈值，表示证据不足以支持指定的族系层面主张，并不证明没有效应。应报告效应估计与区间、所有比较、调整方法、监测历史，以及分析属于验证性还是探索性。
+  s2_zh_hk: 未越過調整之後嘅閾值，表示證據不足以支持指定嘅族系層面主張，並唔證明冇效應。應該報告效應估計同區間、所有比較、調整方法、監測歷史，以及分析屬於驗證性定係探索性。
+  s3_en: For the assumed ten-test illustration, independent-test FWER is approximately 0.4013 and the Bonferroni threshold
+    is 0.005. A raw p-value of 0.035 does not satisfy that rule. The appropriate next step is not automatic rollout or rejection,
+    but transparent reporting and a design-consistent decision.
+  s3_zh: 在假设的十项检验示例中，独立检验下的 FWER 约为 0.4013，邦弗朗尼阈值为 0.005。原始 p 值 0.035 不满足该规则。适当做法不是自动推广或否定，而是透明报告，并依据与设计一致的规则决策。
+  s3_zh_hk: 喺假設嘅十項檢驗例子入面，獨立檢驗之下嘅 FWER 約係 0.4013，邦弗朗尼閾值係 0.005。原始 p 值 0.035 唔滿足呢個規則。適當做法唔係自動推廣或者否定，而係透明報告，並根據同設計一致嘅規則決策。

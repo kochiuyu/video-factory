@@ -1,0 +1,165 @@
+id: STAT-M09-T06-SPURG
+course: STAT-M09
+course_en: Business Time Series & Demand Forecasting
+course_zh: 商业时间序列与需求预测
+course_zh_hk: 商業時間序列與需求預測
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The Spurious Regression Trap: Why Trending Non-Stationary Series Mislead'
+title_zh: 伪回归陷阱：趋势性非平稳序列为何会误导
+title_zh_hk: 偽回歸陷阱：帶趨勢嘅非平穩序列點解會誤導
+objective_en: Explain how unrelated non-stationary series can produce misleading regression significance, interpret high R-squared with strongly autocorrelated residuals as a warning, and identify the diagnostic work required before causal or operational use.
+objective_zh: 解释无关的非平稳序列为何可能产生误导性的回归显著性，把高 R平方 与强残差自相关理解为警示，并识别进行因果或运营应用前所需的诊断工作。
+objective_zh_hk: 解釋無關嘅非平穩序列點解可能產生誤導性回歸顯著性，將高 R平方 同強烈殘差自相關理解成警號，並識別用作因果或者營運決策之前所需嘅診斷工作。
+glossary:
+  - en: Spurious Regression
+    zh: 伪回归（虚假回归）
+    zh_hk: 偽回歸（虛假回歸）
+    lock: true
+  - en: Non-Stationary Series
+    zh: 非平稳序列
+    zh_hk: 非平穩序列
+    lock: true
+  - en: Stochastic Drift
+    zh: 随机漂移
+    zh_hk: 隨機漂移
+    lock: true
+  - en: Granger-Newbold Rule
+    zh: 格兰杰-纽博尔德法则
+    zh_hk: 格蘭傑-紐博爾德法則
+    lock: true
+quiz:
+  - id: Q1
+    type: multiple_choice
+    question_en: 'Suppose a levels regression reports R-squared = 0.94 and Durbin-Watson d = 0.32. What is the most defensible interpretation?'
+    question_zh: 假设一个水平值回归报告 R平方 = 0.94、德宾-沃森 d = 0.32。最稳妥的解释是什么？
+    question_zh_hk: 假設一個水平值回歸報告 R平方 = 0.94、德賓-沃森 d = 0.32。最穩妥嘅解讀係乜嘢？
+    options_en:
+      - 'A: It is a warning of possible spurious regression and residual autocorrelation, requiring further testing'
+      - 'B: The explanatory variable has been proven to cause 94 percent of the outcome'
+      - 'C: The model is automatically suitable for procurement'
+      - 'D: Standard errors cannot be calculated'
+    options_zh:
+      - A：这是可能存在伪回归与残差自相关的警示，需要进一步检验
+      - B：解释变量已被证明导致结果的 94%
+      - C：该模型自动适合采购决策
+      - D：标准误无法计算
+    options_zh_hk:
+      - A：呢個係可能存在偽回歸同殘差自相關嘅警號，需要進一步檢驗
+      - B：解釋變量已經證明導致結果嘅 94%
+      - C：呢個模型自動適合採購決策
+      - D：標準誤無法計算
+    answer: A
+    explanation_en: The Granger-Newbold Rule is a diagnostic warning, not a proof. High fit combined with low Durbin-Watson should trigger stationarity, residual, and long-run relationship checks.
+    explanation_zh: 格兰杰-纽博尔德法则是诊断警示，不是证明。高拟合度与低德宾-沃森值同时出现时，应检查平稳性、残差与长期关系。
+    explanation_zh_hk: 格蘭傑-紐博爾德法則係診斷警號，唔係證明。高擬合度同低德賓-沃森值一齊出現嗰陣，要檢查平穩性、殘差同長期關係。
+  - id: Q2
+    type: multiple_choice
+    question_en: What is the core danger of regressing two unrelated random-walk-like series in levels?
+    question_zh: 将两个无关、类似随机游走的序列用水平值相互回归，核心风险是什么？
+    question_zh_hk: 將兩個無關、類似隨機遊走嘅序列用水平值互相回歸，核心風險係乜嘢？
+    options_en:
+      - 'A: Conventional t-tests can reject too often because their usual reference distribution is invalid'
+      - 'B: Every estimated slope must equal zero'
+      - 'C: R-squared must converge to zero'
+      - 'D: The residuals must be uniformly distributed'
+    options_zh:
+      - A：传统 t 检验可能过度拒绝，因为通常的参考分布不再有效
+      - B：所有估计斜率必定等于零
+      - C：R平方 必定收敛到零
+      - D：残差必定服从均匀分布
+    options_zh_hk:
+      - A：傳統 t 檢驗可能過度拒絕，因為一般使用嘅參考分佈唔再有效
+      - B：所有估計斜率一定等於零
+      - C：R平方 一定收斂到零
+      - D：殘差一定服從均勻分佈
+    answer: A
+    explanation_en: With non-stationary stochastic trends, conventional OLS test statistics need not follow their standard distributions. Apparently strong significance can therefore be misleading.
+    explanation_zh: 存在非平稳随机趋势时，传统 OLS 检验统计量不一定服从标准分布，因此表面上的强显著性可能具有误导性。
+    explanation_zh_hk: 存在非平穩隨機趨勢嗰陣，傳統 OLS 檢驗統計量未必服從標準分佈，所以表面上嘅強顯著性可能有誤導。
+beats:
+  - id: hook
+    visual: title_card
+    seconds: 30
+    kicker_en: Macroeconomic Model Check
+    kicker_zh: 宏观模型核查
+    kicker_zh_hk: 宏觀模型核查
+    title_en: Does a High R-Squared Prove Airport Traffic Drives Coffee Sales?
+    title_zh: 高 R平方 能证明机场客流推动咖啡销量吗？
+    title_zh_hk: 高 R平方 證明到機場客流推動咖啡銷量嗎？
+    en: >-
+      Suppose an analyst regresses Metro Coffee sales on airport passenger arrivals and obtains R-squared of 0.94 with a large t-statistic. Both series, however, rise through time. A regression can mistake parallel movement for a business relationship when persistent trends dominate the data. Before using the model, managers must ask whether the apparent fit survives stationarity and residual diagnostics.
+    zh: >-
+      假设分析师把 Metro Coffee 销量对机场抵港旅客人数进行回归，得到 0.94 的 R平方 和很大的 t 统计量。然而，两条序列都随时间上升。当持续趋势主导数据时，回归可能把平行移动误当作商业关系。使用模型之前，管理者必须检查这种拟合能否通过平稳性与残差诊断。
+    zh_hk: >-
+      假設分析師將 Metro Coffee 銷量對機場抵港旅客人數做回歸，得到 0.94 嘅 R平方 同好大嘅 t 統計量。不過，兩條序列都隨時間上升。當持續趨勢主導數據，回歸可能將平行移動錯當成商業關係。使用模型之前，管理者一定要檢查呢種擬合可唔可以通過平穩性同殘差診斷。
+  - id: define
+    visual: definition_card
+    seconds: 34
+    formula: 'Levels regression: Y_t = a + b X_t + e_t'
+    formula_zh: 水平值回归：Y_t = a + b X_t + e_t
+    formula_zh_hk: 水平值回歸：Y_t = a + b X_t + e_t
+    formula_tex: 'Y_t=a+bX_t+e_t,\quad Y_t=Y_{t-1}+u_t,\quad X_t=X_{t-1}+v_t'
+    s1_en: Spurious Regression describes an apparently strong relationship produced by the time-series properties of the variables rather than a meaningful connection. A common case arises when unrelated Non-Stationary Series contain persistent trends or Stochastic Drift.
+    s1_zh: 伪回归（虚假回归）是指变量的时间序列性质制造出表面强关系，而不是存在有意义的联系。常见情形是无关的非平稳序列带有持续趋势或随机漂移。
+    s1_zh_hk: 偽回歸（虛假回歸）係指變量嘅時間序列性質製造出表面強關係，而唔係真係有有意義嘅聯繫。常見情況係無關嘅非平穩序列帶有持續趨勢或者隨機漂移。
+    s2_en: In such settings, conventional OLS standard errors and t-tests may not have their usual interpretation. A high R-squared or small p-value alone neither establishes causality nor confirms that the regression is statistically valid.
+    s2_zh: 在这种情形下，传统 OLS 标准误与 t 检验可能不再具有通常的解释。仅凭高 R平方 或小 p 值，既不能建立因果关系，也不能确认回归在统计上有效。
+    s2_zh_hk: 喺呢種情況下，傳統 OLS 標準誤同 t 檢驗可能唔再有一般嘅解讀。單靠高 R平方 或者細 p 值，既唔可以建立因果關係，亦唔可以確認回歸喺統計上有效。
+  - id: mechanics
+    visual: two_column
+    seconds: 36
+    left_en: Why the Fit Looks Strong
+    left_zh: 拟合为何看似强劲
+    left_zh_hk: 擬合點解睇落強勁
+    right_en: Diagnostic Red Flags
+    right_zh: 诊断警示
+    right_zh_hk: 診斷警號
+    s1_en: When two persistent series move upward for unrelated reasons, OLS can align their broad time paths. The fitted relationship may then summarize shared time movement rather than a stable economic mechanism.
+    s1_zh: 当两条持续性序列因不同原因同时上升时，OLS 可能会对齐它们的大致时间路径。拟合关系反映的可能只是共同的时间移动，而不是稳定的经济机制。
+    s1_zh_hk: 當兩條持續性序列因為唔同原因一齊上升，OLS 可能會對齊佢哋大致嘅時間路徑。擬合關係反映嘅可能只係共同時間移動，而唔係穩定嘅經濟機制。
+    s2_en: Persistent residual runs are another warning. A low Durbin-Watson statistic can indicate positive residual autocorrelation, meaning important time structure remains unexplained.
+    s2_zh: 持续成串的残差也是警示。较低的德宾-沃森统计量可能表明残差存在正自相关，即重要的时间结构仍未得到解释。
+    s2_zh_hk: 持續成串嘅殘差亦係警號。較低嘅德賓-沃森統計量可能表示殘差有正自相關，即係重要嘅時間結構仍然未解釋。
+    s3_en: The Granger-Newbold Rule treats high R-squared relative to Durbin-Watson d as a practical red flag for possible spurious regression. It is a screening heuristic, not a formal proof or a substitute for stationarity and long-run relationship tests.
+    s3_zh: 格兰杰-纽博尔德法则把相对于德宾-沃森 d 较高的 R平方 视为可能存在伪回归的实用警示。它是筛查经验法则，不是正式证明，也不能替代平稳性与长期关系检验。
+    s3_zh_hk: 格蘭傑-紐博爾德法則將相對德賓-沃森 d 較高嘅 R平方 視為可能存在偽回歸嘅實用警號。佢係篩查經驗法則，唔係正式證明，亦唔可以取代平穩性同長期關係檢驗。
+  - id: example
+    visual: example
+    seconds: 36
+    setup_en: 'Assume: R-squared = 0.94 and Durbin-Watson d = 0.32'
+    setup_zh: 假设：R平方 = 0.94，德宾-沃森 d = 0.32
+    setup_zh_hk: 假設：R平方 = 0.94，德賓-沃森 d = 0.32
+    result_en: 'Interpretation: serious warning, not proof'
+    result_zh: 解释：严重警示，并非证明
+    result_zh_hk: 解讀：嚴重警號，並非證明
+    s1_en: For illustration, assume a levels regression reports R-squared of 0.94, a large t-statistic, and Durbin-Watson d of 0.32. The fit looks impressive, but the residual diagnostic is poor.
+    s1_zh: 为便于说明，假设一个水平值回归报告 R平方 为 0.94、t 统计量很大、德宾-沃森 d 为 0.32。拟合看似出色，但残差诊断很差。
+    s1_zh_hk: 為咗方便說明，假設一個水平值回歸報告 R平方 係 0.94、t 統計量好大、德賓-沃森 d 係 0.32。擬合睇落出色，但殘差診斷好差。
+    s2_en: Because 0.94 exceeds 0.32, the Granger-Newbold screening rule raises a strong warning. It does not identify which variable is non-stationary, prove independence, or establish that the coefficient is meaningless.
+    s2_zh: 因为 0.94 大于 0.32，格兰杰-纽博尔德筛查法则发出强烈警示。但它不能识别哪个变量非平稳，不能证明变量相互独立，也不能直接断言系数毫无意义。
+    s2_zh_hk: 因為 0.94 大過 0.32，格蘭傑-紐博爾德篩查法則發出強烈警號。但佢唔可以識別邊個變量非平穩，唔可以證明變量互相獨立，亦唔可以直接斷言個係數毫無意義。
+    s3_en: The responsible next step is to inspect the series, test their time-series properties, examine residuals, and consider whether a defensible long-run relationship exists before interpreting p-values or linking procurement to the model.
+    s3_zh: 负责任的下一步是检查序列、检验其时间序列性质、审查残差，并在解释 p 值或把采购与模型联动之前，判断是否存在可辩护的长期关系。
+    s3_zh_hk: 負責任嘅下一步係檢查序列、檢驗佢哋嘅時間序列性質、審查殘差，並喺解讀 p 值或者將採購同模型掛鈎之前，判斷係咪存在有理據嘅長期關係。
+  - id: takeaway
+    visual: takeaway
+    seconds: 32
+    q1_en: What Makes the Regression Spurious?
+    q1_zh: 什么使回归成为伪回归？
+    q1_zh_hk: 乜嘢令回歸變成偽回歸？
+    q2_en: Decision Rule
+    q2_zh: 决策规则
+    q2_zh_hk: 決策規則
+    s1_en: The danger is not simply that both series rise. It is that non-stationary persistence can invalidate conventional inference and make unrelated series appear strongly connected.
+    s1_zh: 风险并不只是两条序列同时上升，而是非平稳持续性可能使传统推断失效，并让无关序列看似高度相关。
+    s1_zh_hk: 風險唔只係兩條序列一齊上升，而係非平穩持續性可能令傳統推斷失效，並令無關序列睇落高度相關。
+    s2_en: Treat high R-squared with low Durbin-Watson as a warning, not an automatic rejection rule. Verify stationarity, residual behavior, model specification, and any defensible long-run relationship.
+    s2_zh: 应把高 R平方 与低德宾-沃森值视为警示，而不是自动否决规则。要验证平稳性、残差表现、模型设定及任何可辩护的长期关系。
+    s2_zh_hk: 要將高 R平方 同低德賓-沃森值視為警號，而唔係自動否決規則。要驗證平穩性、殘差表現、模型設定，同埋任何有理據嘅長期關係。
+    s3_en: Do not base operational decisions on the levels regression until those checks are complete and out-of-sample performance is assessed. Statistical fit alone is neither causality nor a procurement policy.
+    s3_zh: 在完成这些检查并评估样本外表现之前，不要依据水平值回归作出运营决策。统计拟合本身既不代表因果关系，也不是采购政策。
+    s3_zh_hk: 完成呢啲檢查同評估樣本外表現之前，唔好根據水平值回歸作營運決策。統計擬合本身既唔代表因果關係，亦唔係採購政策。

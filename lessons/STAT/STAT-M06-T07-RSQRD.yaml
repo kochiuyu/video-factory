@@ -1,0 +1,198 @@
+id: STAT-M06-T07-RSQRD
+course: STAT-M06
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The Coefficient of Determination: Interpreting R-Squared without Overclaiming'
+title_zh: 判定系数：正确解释 R 平方并避免过度结论
+title_zh_hk: 判定系數：正確解讀 R 平方並避免過度結論
+objective_en: Calculate R-squared from explained and residual sums of squares, interpret it as the in-sample proportion of
+  outcome variation accounted for by an intercept-including model, verify that R-squared equals Pearson correlation squared
+  in simple OLS regression, and audit high-fit claims for causality, overfitting, influential observations, and out-of-sample
+  performance.
+objective_zh: 根据解释平方和与残差平方和计算 R 平方，把它解释为含截距模型在样本内所核算的结果变异比例，验证简单 OLS 回归中 R 平方等于皮尔逊相关系数的平方，并从因果、过拟合、强影响观测与样本外表现角度审计高拟合主张。
+objective_zh_hk: 根據解釋平方和同殘差平方和計算 R 平方，將佢解讀做含截距模型喺樣本內所核算嘅結果變異比例，驗證簡單 OLS 回歸入面 R 平方等於皮爾遜相關系數嘅平方，並由因果、過度擬合、強影響觀測同樣本外表現角度審計高擬合主張。
+glossary:
+- en: Coefficient of Determination
+  zh: 判定系数
+  zh_hk: 判定系數
+  lock: true
+- en: Explained Variance Proportion
+  zh: 解释方差比例
+  zh_hk: 解釋方差比例
+  lock: true
+- en: Goodness of Fit
+  zh: 拟合优度
+  zh_hk: 擬合優度
+  lock: true
+- en: Spurious Fit
+  zh: 虚假拟合
+  zh_hk: 虛假擬合
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: An intercept-including regression has R-squared = 0.81. Which interpretation is correct?
+  question_zh: 若利用促销展牌投入预测门店日销量的简单线性回归模型算得 R² 为 0.81，这向管理层传达了什么信息？
+  question_zh_hk: 如果利用宣傳展架投入預測門市日銷量嘅簡單線性回歸模型計出 R² 係 0.81，呢個向管理層傳達緊啲咩信息？
+  options_en:
+  - 'A: Exactly 81% of daily sales volume is directly caused by the signage'
+  - 'B: The fitted model accounts for 81% of the observed sample variation in Y around its mean under this specification'
+  - 'C: Store profits will increase by 81% next quarter'
+  - 'D: The slope of the regression line equals 0.81'
+  options_zh:
+  - 'A: 门店每日出杯销量的 81% 直接由宣传展牌因果产生'
+  - 'B: 门店销售额围绕均值的总方差变异中，有 81% 可由该展牌模型解释'
+  - 'C: 门店下季度的净利润必然增长 81%'
+  - 'D: 回归方程的斜率参数严格等于 0.81'
+  options_zh_hk:
+  - 'A: 門市每日出杯銷量嘅 81% 直接由宣傳展架因果產生'
+  - 'B: 門市營業額圍繞平均數嘅總方差變異入面，有 81% 可以由呢個展架模型解釋'
+  - 'C: 門市下個季度嘅淨利潤必然會增長 81%'
+  - 'D: 回歸線嘅斜率參數剛好等於 0.81'
+  answer: B
+  explanation_en: R-squared is an in-sample variation-accounting ratio. It does not state a causal percentage, profit change,
+    or slope magnitude.
+  explanation_zh: 判定系数 R² 衡量因变量总方差变异（SST）中被回归线（SSR）解释的比例：R² = SSR / SST = 0.81。它不代表因果因果强度，亦不代表利润增长率。
+  explanation_zh_hk: 判定系數 R² 衡量因變量總方差變異（SST）入面被回歸線（SSR）解釋嘅比例：R² = SSR / SST = 0.81。佢唔代表因果強度，亦唔代表利潤增長率。
+- id: Q2
+  type: multiple_choice
+  question_en: In simple OLS regression with an intercept, Pearson correlation is r = -0.90. What is R-squared?
+  question_zh: 在客流量与出杯量的简单线性回归中，皮尔逊相关系数为 r = +0.90。判定系数 R² 的数值是多少？
+  question_zh_hk: 喺人流同出杯量嘅簡單線性回歸入面，皮爾遜相關系數係 r = +0.90。判定系數 R² 嘅數值係幾多？
+  options_en:
+  - 'A: R^2 = 0.90'
+  - 'B: R^2 = 0.81'
+  - 'C: R^2 = 0.45'
+  - 'D: R^2 = 1.80'
+  options_zh:
+  - 'A: R^2 = 0.90'
+  - 'B: R^2 = 0.81'
+  - 'C: R^2 = 0.45'
+  - 'D: R^2 = 1.80'
+  options_zh_hk:
+  - 'A: R^2 = 0.90'
+  - 'B: R^2 = 0.81'
+  - 'C: R^2 = 0.45'
+  - 'D: R^2 = 1.80'
+  answer: B
+  explanation_en: R-squared equals r squared in simple OLS with an intercept, so (-0.90)^2 = 0.81. Squaring removes the direction,
+    which must be recovered from the slope or r.
+  explanation_zh: 在简单一元双变量线性回归中，判定系数严格等于皮尔逊相关系数的平方：R² = r^2 = (0.90)^2 = 0.81。
+  explanation_zh_hk: 喺簡單一元雙變量線性回歸入面，判定系數嚴格等於皮爾遜相關系數嘅平方：R² = r^2 = (0.90)^2 = 0.81。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  title_en: Does a high R-squared make a promotional rollout safe?
+  title_zh: 高 R 平方是否意味着促销推广稳妥？
+  title_zh_hk: 高 R 平方係咪意味住宣傳推廣穩妥？
+  en: Metro Coffee is reviewing an assumed simple regression linking promotional-display exposure with store-day cup sales.
+    The fitted model reports a high R-squared, which summarizes how closely the fitted values account for observed sales variation
+    in this sample. Before treating that number as a rollout signal, management must separate in-sample fit from causality,
+    commercial return, and future predictive performance.
+  zh: 都市咖啡正在审视一项假设的简单回归，把促销展示暴露与门店日杯数销量联系起来。拟合模型报告了较高的 R 平方，它概括拟合值在该样本内核算观测销量变异的程度。管理层在把该数值视为推广信号前，必须区分样本内拟合、因果关系、商业回报与未来预测表现。
+  zh_hk: 都市咖啡正審視一項假設嘅簡單回歸，將宣傳展示接觸同門市日杯數銷量連繫起嚟。擬合模型報告較高嘅 R 平方，佢概括擬合值喺呢個樣本內核算觀測銷量變異嘅程度。管理層喺將呢個數值視為推廣信號之前，必須區分樣本內擬合、因果關係、商業回報同未來預測表現。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: R^2 = SSR / SST = 1 - SSE / SST, for the standard intercept-including OLS decomposition
+  formula_zh: R^2 = SSR / SST = 1 - SSE / SST，适用于标准含截距 OLS 分解
+  formula_zh_hk: R^2 = SSR / SST = 1 - SSE / SST，適用於標準含截距 OLS 分解
+  formula_tex: R^2=\frac{SSR}{SST}=1-\frac{SSE}{SST}
+  s1_en: SST measures the observed outcome variation around the sample mean. SSR is the portion represented by fitted-value
+    variation, and SSE is the squared residual remainder. Under the standard OLS decomposition with an intercept, R-squared
+    is the explained share SSR divided by SST.
+  s1_zh: SST 衡量观测结果围绕样本均值的变异；SSR 是由拟合值变异表示的部分；SSE 是残差平方余项。在标准含截距 OLS 分解下，R 平方等于解释份额 SSR 除以 SST。
+  s1_zh_hk: SST 量度觀測結果圍繞樣本平均數嘅變異；SSR 係由擬合值變異表示嘅部分；SSE 係殘差平方餘項。喺標準含截距 OLS 分解之下，R 平方等於解釋份額 SSR 除以 SST。
+  s2_en: An R-squared of 0.81 means that 81% of this sample’s Y variation around its mean is accounted for by the fitted model,
+    using these variables and this specification. It does not mean that 81% of individual sales, profits, or causal impact
+    comes from X.
+  s2_zh: R 平方为 0.81，表示在这些变量与该模型设定下，拟合模型核算了该样本中 Y 围绕均值变异的 81%。它不表示单笔销量、利润或因果影响有 81% 来自 X。
+  s2_zh_hk: R 平方係 0.81，表示喺呢啲變量同呢個模型設定之下，擬合模型核算咗呢個樣本入面 Y 圍繞平均數變異嘅 81%。佢唔表示單筆銷量、利潤或者因果影響有 81% 來自 X。
+  title_en: R-squared compares explained variation with total variation
+  title_zh: R 平方比较解释变异与总变异
+  title_zh_hk: R 平方比較解釋變異同總變異
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  left_en: 'Simple OLS: R-squared equals r squared'
+  left_zh: 简单 OLS：R 平方等于 r 的平方
+  right_en: Fit is not validity
+  right_zh: 拟合度不等于有效性
+  s1_en: In simple linear regression with one predictor and an intercept, R-squared equals the square of Pearson’s sample
+    correlation between X and Y. The sign disappears when r is squared, so R-squared measures fit magnitude but does not reveal
+    whether the slope is positive or negative.
+  s1_zh: 在包含一个预测变量与截距的简单线性回归中，R 平方等于 X 与 Y 的皮尔逊样本相关系数平方。r 平方后符号消失，因此 R 平方衡量拟合强度，但不能显示斜率是正还是负。
+  s1_zh_hk: 喺包含一個預測變量同截距嘅簡單線性回歸入面，R 平方等於 X 同 Y 嘅皮爾遜樣本相關系數平方。r 平方之後符號消失，所以 R 平方量度擬合強度，但唔可以顯示斜率係正定係負。
+  s2_en: R-squared normally does not decrease when additional predictors are added to the same OLS sample, even if those variables
+    contribute little useful predictive information. Model comparison should therefore consider adjusted measures, validation
+    data, and substantive plausibility rather than chasing fit alone.
+  s2_zh: 在同一 OLS 样本中加入更多预测变量时，R 平方通常不会下降，即使新增变量几乎没有提供有用预测信息。因此，模型比较应考虑调整指标、验证数据与实质合理性，而不能只追逐拟合度。
+  s2_zh_hk: 喺同一 OLS 樣本入面加入更多預測變量嗰陣，R 平方通常唔會下降，即使新增變量幾乎冇提供有用預測資訊。所以，模型比較應該考慮調整指標、驗證數據同實質合理性，而唔可以只追逐擬合度。
+  s3_en: A high R-squared can reflect common trends, group differences, restricted samples, leakage, or influential observations.
+    It does not prove causal impact, correct functional form, stable coefficients, accurate extrapolation, or profitable implementation.
+  s3_zh: 高 R 平方可能反映共同趋势、组群差异、受限样本、信息泄漏或强影响观测。它不能证明因果影响、函数形式正确、系数稳定、外推准确或实施盈利。
+  s3_zh_hk: 高 R 平方可能反映共同趨勢、群組差異、受限樣本、資訊洩漏或者強影響觀測。佢唔可以證明因果影響、函數形式正確、系數穩定、外推準確或者實施有利潤。
+  left_zh_hk: 簡單 OLS：R 平方等於 r 嘅平方
+  right_zh_hk: 擬合度唔等於有效性
+  title_en: High fit can coexist with weak evidence for action
+  title_zh: 高拟合可以与薄弱行动证据同时存在
+  title_zh_hk: 高擬合可以同薄弱行動證據同時存在
+- id: ledger
+  visual: steps
+  seconds: 38
+  step1_en: 'Teaching assumptions: SST = 10,000 cups^2 and SSR = 8,100 cups^2'
+  step1_zh: 教学假设：SST = 10,000 杯^2，SSR = 8,100 杯^2
+  step2_en: SSE = 10,000 - 8,100 = 1,900 cups^2; R^2 = 8,100/10,000 = 0.81
+  step2_zh: SSE = 10,000 - 8,100 = 1,900 杯^2；R^2 = 8,100/10,000 = 0.81
+  step3_en: If simple-regression r = +0.90 or -0.90, then r^2 = 0.81; inspect slope sign and design separately
+  step3_zh: 若简单回归 r = +0.90 或 -0.90，则 r^2 = 0.81；斜率符号与设计需另行检查
+  s1_en: For illustration, assume an intercept-including OLS model has total sum of squares 10,000 and regression sum of squares
+    8,100. These are teaching assumptions, not verified campaign, sales, budget, profitability, or rollout records.
+  s1_zh: 作为示例，假设一个含截距 OLS 模型的总平方和为 10,000，回归平方和为 8,100。这些数字是教学假设，并非已核实的活动、销售、预算、盈利或推广记录。
+  s1_zh_hk: 作為例子，假設一個含截距 OLS 模型嘅總平方和係 10,000，回歸平方和係 8,100。呢啲數字係教學假設，唔係已核實嘅活動、銷售、預算、盈利或者推廣記錄。
+  s2_en: The residual sum of squares is 1,900, so the fitted model accounts for 81% of the observed sample variation and leaves
+    19% in squared residual variation. Those percentages describe the sample decomposition, not a guarantee for future stores
+    or periods.
+  s2_zh: 残差平方和为 1,900，因此拟合模型核算了观测样本变异的 81%，另有 19% 留在残差平方变异中。这些百分比描述样本分解，并不保证未来门店或时期表现。
+  s2_zh_hk: 殘差平方和係 1,900，所以擬合模型核算咗觀測樣本變異嘅 81%，另外有 19% 留喺殘差平方變異入面。呢啲百分比描述樣本分解，並唔保證未來門市或者時期表現。
+  s3_en: In simple OLS, either positive or negative 0.90 correlation produces R-squared 0.81. The coefficient of determination
+    therefore cannot replace the slope sign, effect estimate, uncertainty, residual diagnostics, or research design.
+  s3_zh: 在简单 OLS 中，正 0.90 或负 0.90 的相关系数都会产生 R 平方 0.81。因此，判定系数不能替代斜率符号、效应估计、不确定性、残差诊断或研究设计。
+  s3_zh_hk: 喺簡單 OLS 入面，正 0.90 或者負 0.90 嘅相關系數都會產生 R 平方 0.81。所以，判定系數唔可以取代斜率符號、效應估計、不確定性、殘差診斷或者研究設計。
+  step1_zh_hk: 教學假設：SST = 10,000 杯^2，SSR = 8,100 杯^2
+  step2_zh_hk: SSE = 10,000 - 8,100 = 1,900 杯^2；R^2 = 8,100/10,000 = 0.81
+  step3_zh_hk: 如果簡單回歸 r = +0.90 或者 -0.90，咁 r^2 = 0.81；斜率符號同設計需要另外檢查
+  title_en: Calculate and audit an assumed R-squared
+  title_zh: 计算并审计假设的 R 平方
+  title_zh_hk: 計算並審計假設嘅 R 平方
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  q1_en: What does an R-squared of 0.81 say?
+  q1_zh: R 平方为 0.81 说明什么？
+  q2_en: What must be checked before acting on a high R-squared?
+  q2_zh: 依据高 R 平方采取行动前必须检查什么？
+  s1_en: It says that the fitted model accounts for 81% of the observed Y variation around its sample mean under the stated
+    sample and specification. It does not say 81% of Y is caused by X, nor that the slope equals 0.81.
+  s1_zh: 它表示在既定样本与模型设定下，拟合模型核算了观测 Y 围绕样本均值变异的 81%。它不表示 Y 有 81% 由 X 导致，也不表示斜率等于 0.81。
+  s1_zh_hk: 佢表示喺既定樣本同模型設定之下，擬合模型核算咗觀測 Y 圍繞樣本平均數變異嘅 81%。佢唔表示 Y 有 81% 由 X 導致，亦唔表示斜率等於 0.81。
+  s2_en: Check the scatter plot, residuals, influential cases, sample construction, leakage, omitted variables, functional
+    form, uncertainty, and performance on new data. Then evaluate costs and causal evidence separately from fit.
+  s2_zh: 应检查散点图、残差、强影响案例、样本构建、信息泄漏、遗漏变量、函数形式、不确定性与新数据表现，并把成本与因果证据同拟合度分开评估。
+  s2_zh_hk: 應該檢查散點圖、殘差、強影響案例、樣本構建、資訊洩漏、遺漏變量、函數形式、不確定性同新數據表現，並將成本同因果證據同擬合度分開評估。
+  s3_en: For the assumed decomposition, R-squared is 0.81 and the residual share is 0.19. The defensible conclusion is a strong
+    in-sample fit under the stated model, not guaranteed profit, causal impact, or successful rollout.
+  s3_zh: 在假设分解中，R 平方为 0.81，残差份额为 0.19。可辩护结论是既定模型下样本内拟合较强，而不是保证盈利、因果影响或推广成功。
+  s3_zh_hk: 喺假設分解入面，R 平方係 0.81，殘差份額係 0.19。可辯護結論係既定模型之下樣本內擬合較強，而唔係保證盈利、因果影響或者推廣成功。
+  q1_zh_hk: R 平方係 0.81 說明咩？
+  q2_zh_hk: 根據高 R 平方採取行動之前必須檢查咩？
+  title_en: Treat R-squared as one fit diagnostic, not a decision rule
+  title_zh: 把 R 平方视为一项拟合诊断，而非决策规则
+  title_zh_hk: 將 R 平方視為一項擬合診斷，而唔係決策規則

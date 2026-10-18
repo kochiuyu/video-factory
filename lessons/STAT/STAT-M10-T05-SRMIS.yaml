@@ -1,0 +1,162 @@
+id: STAT-M10-T05-SRMIS
+course: STAT-M10
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Sample Ratio Mismatch: Auditing Assignment and Observation Pipelines'
+title_zh: 样本比例失配：审计分配与观测管线
+title_zh_hk: 樣本比例失配：審計分配同觀測管線
+objective_en: Define Sample Ratio Mismatch, calculate a Goodness-of-Fit Chi-Square Test against a planned allocation, distinguish detection from root-cause diagnosis, and explain why differential observation can bias downstream metrics.
+objective_zh: 定义样本比例失配，针对计划分配计算卡方拟合优度检验，区分异常检出与根因诊断，并解释差异性观测为何可能使下游指标产生偏差。
+objective_zh_hk: 定義樣本比例失配，針對計劃分配計算卡方擬合優度檢驗，區分異常檢出同根因診斷，並解釋差異性觀測點解可能令下游指標產生偏差。
+glossary:
+- en: Sample Ratio Mismatch (SRM)
+  zh: 样本比例失配（SRM）
+  zh_hk: 樣本比例失配（SRM）
+  lock: true
+- en: Goodness-of-Fit Chi-Square Test
+  zh: 卡方拟合优度检验
+  zh_hk: 卡方擬合優度檢驗
+  lock: true
+- en: Survivorship Bias
+  zh: 幸存者偏差
+  zh_hk: 倖存者偏差
+  lock: true
+- en: Funnel Leakage Audit
+  zh: 漏斗泄露审计
+  zh_hk: 漏斗洩漏審計
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: A planned 50/50 test records 52,400 control units and 48,100 treatment units. The SRM chi-square statistic is approximately 183.98. What is the defensible conclusion?
+  question_zh: 计划五五分流的实验记录到对照组 52,400 个单元、处理组 48,100 个单元，SRM 卡方统计量约为 183.98。哪个结论最稳妥？
+  question_zh_hk: 計劃五五分流嘅實驗記錄到對照組 52,400 個單元、處理組 48,100 個單元，SRM 卡方統計量約係 183.98。邊個結論最穩妥？
+  options_en:
+  - 'A: The observed allocation is highly inconsistent with the planned 50/50 ratio and requires investigation before effect interpretation'
+  - 'B: The treatment effect is positive because treatment has fewer observations'
+  - 'C: A large total sample makes the mismatch irrelevant'
+  - 'D: The test proves that a specific device crash caused the mismatch'
+  options_zh:
+  - A：观测分配与计划五五比例高度不一致，在解释效应前必须调查
+  - B：处理组观测较少，因此处理效应为正
+  - C：总样本很大，所以失配无关紧要
+  - D：该检验证明某种设备闪退是失配原因
+  options_zh_hk:
+  - A：觀測分配同計劃五五比例高度唔一致，解讀效應之前一定要調查
+  - B：處理組觀測較少，所以處理效應係正數
+  - C：總樣本好大，所以失配無關重要
+  - D：呢個檢驗證明某種裝置閃退係失配原因
+  answer: A
+  explanation_en: The chi-square result detects incompatibility with the planned ratio. It does not identify the mechanism. Assignment, eligibility, exposure, exclusions, missingness, and logging must be audited before downstream effects are trusted.
+  explanation_zh: 卡方结果检出了观测比例与计划比例不相容，但不能识别具体机制。必须审计分配、合资格性、实际接触、排除、缺失与日志，之后才能信任下游效应。
+  explanation_zh_hk: 卡方結果檢出觀測比例同計劃比例唔相容，但唔可以識別具體機制。一定要審計分配、合資格性、實際接觸、排除、缺失同日誌，之後先可以信任下游效應。
+- id: Q2
+  type: multiple_choice
+  question_en: Why can treatment-specific observation loss bias a downstream average?
+  question_zh: 为什么只发生在处理组的观测流失可能使下游平均值产生偏差？
+  question_zh_hk: 點解只發生喺處理組嘅觀測流失可能令下游平均數產生偏差？
+  options_en:
+  - 'A: The observed treatment sample may no longer represent all assigned treatment units'
+  - 'B: Every missing unit necessarily had a zero outcome'
+  - 'C: Chi-square directly estimates the treatment effect'
+  - 'D: Larger groups always have lower outcome means'
+  options_zh:
+  - A：被观测到的处理组样本可能不再代表所有被分配至处理组的单元
+  - B：每个缺失单元的结果必定为零
+  - C：卡方统计量会直接估计处理效应
+  - D：较大的组别必定具有较低结果均值
+  options_zh_hk:
+  - A：被觀測到嘅處理組樣本可能唔再代表所有被分配到處理組嘅單元
+  - B：每個缺失單元嘅結果一定係零
+  - C：卡方統計量會直接估計處理效應
+  - D：較大嘅組別一定具有較低結果平均數
+  answer: A
+  explanation_en: If observation depends on treatment and unit characteristics related to the outcome, conditioning on observed survivors can change group composition and create Survivorship Bias. The direction and size of bias are not determined by SRM alone.
+  explanation_zh: 如果能否被观测同时取决于处理状态及与结果相关的单元特征，只分析留下来的观测会改变组别构成并造成幸存者偏差。仅凭 SRM 不能确定偏差方向与大小。
+  explanation_zh_hk: 如果能否被觀測同時取決於處理狀態，同埋同結果相關嘅單元特徵，只分析留低嘅觀測就會改變組別構成並造成倖存者偏差。單靠 SRM 唔可以確定偏差方向同大小。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Experiment-Integrity Puzzle
+  kicker_zh: 实验完整性难题
+  kicker_zh_hk: 實驗完整性難題
+  title_en: Why Did a Planned 50/50 Test Produce Unequal Counts?
+  title_zh: 为什么计划五五分流的实验出现了不等组数？
+  title_zh_hk: 點解計劃五五分流嘅實驗出現唔等組數？
+  en: Suppose a checkout experiment plans an equal split but later records 52,400 control units and 48,100 treatment units. The imbalance may reflect chance, assignment defects, eligibility differences, exposure failures, exclusions, missing telemetry, or other pipeline behavior. Before celebrating or rejecting a metric lift, analysts should first ask whether the observed sample still reflects the intended randomized experiment.
+  zh: 假设一个结账实验计划等比分流，但后来记录到对照组 52,400 个单元、处理组 48,100 个单元。失衡可能来自偶然波动、分配缺陷、合资格差异、接触失败、排除、遥测缺失或其他管线行为。在庆祝或否定指标增量前，分析师应先确认观测样本是否仍反映原定随机实验。
+  zh_hk: 假設一個結賬實驗計劃等比分流，但之後記錄到對照組 52,400 個單元、處理組 48,100 個單元。失衡可能來自偶然波動、分配缺陷、合資格差異、接觸失敗、排除、遙測缺失或者其他管線行為。慶祝或者否定指標增量之前，分析師要先確認觀測樣本係咪仍然反映原定隨機實驗。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: SRM chi-square = sum over variants of (Observed - Expected)^2 / Expected
+  formula_zh: SRM 卡方统计量 = 各版本（观测数 - 期望数）的平方除以期望数之和
+  formula_zh_hk: SRM 卡方統計量 = 各版本（觀測數 - 期望數）嘅平方除以期望數之和
+  formula_tex: \chi^2=\sum_{k=1}^{K}\frac{(O_k-E_k)^2}{E_k},\quad df=K-1
+  s1_en: Sample Ratio Mismatch occurs when observed variant counts are inconsistent with the allocation probabilities defined for the eligible analysis population. The expected counts must therefore reflect the actual planned ratio, not always 50/50.
+  s1_zh: 样本比例失配是指观测到的各版本数量与合资格分析总体所定义的分配概率不一致。因此，期望数量应反映实际计划比例，并不总是五五分流。
+  s1_zh_hk: 樣本比例失配係指觀測到嘅各版本數量，同合資格分析總體所定義嘅分配概率唔一致。所以，期望數量要反映實際計劃比例，唔一定永遠係五五分流。
+  s2_en: The Goodness-of-Fit Chi-Square Test measures how far observed counts depart from expected counts. A small p-value flags incompatibility with the allocation model, but it does not identify whether the cause lies in assignment, delivery, filtering, joining, or logging.
+  s2_zh: 卡方拟合优度检验衡量观测数量偏离期望数量的程度。较小的 p 值提示数据与分配模型不相容，但不能识别根因是在分配、投放、过滤、数据连接还是日志。
+  s2_zh_hk: 卡方擬合優度檢驗衡量觀測數量偏離期望數量嘅程度。較細嘅 p 值提示數據同分配模型唔相容，但唔可以識別根因係分配、投放、過濾、數據連接定係日誌。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Detection
+  left_zh: 异常检出
+  left_zh_hk: 異常檢出
+  right_en: Diagnosis and Consequences
+  right_zh: 根因诊断与后果
+  right_zh_hk: 根因診斷同後果
+  s1_en: Compute SRM on the pre-specified eligible unit population using the actual assignment probabilities. Avoid repeatedly checking and stopping on the same fixed threshold without an appropriate monitoring plan.
+  s1_zh: 应在预先指定的合资格单元总体上，按照实际分配概率计算 SRM。没有合适监控方案时，不应反复检查并按同一固定阈值随时停止。
+  s1_zh_hk: 要喺預先指定嘅合資格單元總體上，按照實際分配概率計算 SRM。冇合適監控方案嗰陣，唔應該反覆檢查並按同一固定門檻隨時停止。
+  s2_en: A Funnel Leakage Audit traces counts from eligibility and assignment through exposure, event logging, joins, exclusions, and final analysis. This identifies where units diverge, while the SRM test by itself only flags the mismatch.
+  s2_zh: 漏斗泄露审计会追踪从合资格与分配，到实际接触、事件日志、数据连接、排除及最终分析的各阶段数量。这样才能定位单元在哪里分叉，而 SRM 检验本身只负责报警。
+  s2_zh_hk: 漏斗洩漏審計會追蹤由合資格同分配，到實際接觸、事件日誌、數據連接、排除同最終分析嘅各階段數量。咁樣先可以定位單元喺邊度分叉，而 SRM 檢驗本身只負責響警號。
+  s3_en: If loss is treatment-specific and related to outcomes, comparing observed survivors can introduce Survivorship Bias. Not every SRM biases every metric, and neither its direction nor magnitude follows from the count imbalance alone.
+  s3_zh: 如果流失只发生在特定处理组，并且与结果有关，比较被观测到的幸存单元就会引入幸存者偏差。并非每个 SRM 都会使每项指标产生偏差，其方向与幅度也不能由数量失衡单独推出。
+  s3_zh_hk: 如果流失只發生喺特定處理組，而且同結果有關，比較被觀測到嘅倖存單元就會引入倖存者偏差。唔係每個 SRM 都會令每項指標產生偏差，方向同幅度亦唔可以由數量失衡單獨推出。
+- id: example
+  visual: example
+  seconds: 36
+  setup_en: 'Teaching assumptions: planned 50/50; Control 52,400; Treatment 48,100'
+  setup_zh: 教学假设：计划五五分流；对照组 52,400；处理组 48,100
+  setup_zh_hk: 教學假設：計劃五五分流；對照組 52,400；處理組 48,100
+  result_en: Expected 50,250 per arm; chi-square approximately 183.98
+  result_zh: 每组期望 50,250；卡方统计量约 183.98
+  result_zh_hk: 每組期望 50,250；卡方統計量約 183.98
+  s1_en: The total observed count is 100,500. Under the stated equal-allocation assumption, each group has an expected count of 50,250, so the deviations are plus and minus 2,150.
+  s1_zh: 观测总数为 100,500。在给定等比分配假设下，每组期望数量为 50,250，因此两组偏差分别为正负 2,150。
+  s1_zh_hk: 觀測總數係 100,500。喺指定等比分配假設之下，每組期望數量係 50,250，所以兩組偏差分別係正負 2,150。
+  s2_en: Substitution gives 2,150 squared divided by 50,250 for each arm, for a total chi-square statistic of approximately 183.98 with one degree of freedom. This is overwhelming evidence against the planned 50/50 observation ratio.
+  s2_zh: 代入后，每组贡献为 2,150 的平方除以 50,250，总卡方统计量约为 183.98，自由度为一。这是反对计划五五观测比例的强烈证据。
+  s2_zh_hk: 代入之後，每組貢獻係 2,150 嘅平方除以 50,250，總卡方統計量約係 183.98，自由度係一。呢個係反對計劃五五觀測比例嘅強烈證據。
+  s3_en: The calculation does not prove a device crash, identify missing units, or quantify bias in conversion or order value. Pause causal interpretation, preserve assignment logs, and locate the divergence through the funnel before deciding whether and how to reanalyze.
+  s3_zh: 该计算不能证明设备闪退、识别具体缺失单元，也不能量化转化率或客单价偏差。应暂停因果解释、保留分配日志，并先通过漏斗定位分叉，再决定是否及如何重新分析。
+  s3_zh_hk: 呢個計算唔可以證明裝置閃退、識別具體缺失單元，亦唔可以量化轉化率或者客單價偏差。要暫停因果解讀、保留分配日誌，並先透過漏斗定位分叉，再決定係咪同點樣重新分析。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: What Does an SRM Alarm Mean?
+  q1_zh: SRM 警报表示什么？
+  q1_zh_hk: SRM 警報表示乜嘢？
+  q2_en: Decision Rule
+  q2_zh: 决策规则
+  q2_zh_hk: 決策規則
+  s1_en: SRM is an integrity alarm showing that observed counts do not follow the planned allocation model closely enough. It is not a treatment-effect estimate and does not supply a root cause.
+  s1_zh: SRM 是完整性警报，表示观测数量与计划分配模型不够一致。它不是处理效应估计，也不能提供根因。
+  s1_zh_hk: SRM 係完整性警報，表示觀測數量同計劃分配模型唔夠一致。佢唔係處理效應估計，亦唔可以提供根因。
+  s2_en: When SRM is detected, investigate the full path from eligibility and assignment to the analysis table before relying on downstream metrics. Document the affected population, timing, and pipeline stage.
+  s2_zh: 检出 SRM 后，应先调查从合资格与分配到分析表的完整路径，再决定能否依赖下游指标，并记录受影响总体、时点与管线阶段。
+  s2_zh_hk: 檢出 SRM 之後，要先調查由合資格同分配到分析表嘅完整路徑，再決定可唔可以依賴下游指標，並記錄受影響總體、時點同管線階段。
+  s3_en: Do not automatically label every downstream estimate invalid or every imbalance technical. Determine whether the mismatch is expected, whether observation depends on assignment and outcomes, and whether a defensible analysis population can be reconstructed.
+  s3_zh: 不要自动把每个下游估计都判为无效，也不要把每次失衡都归因于技术。应判断失配是否符合预期、观测是否同时依赖分配与结果，以及能否重建可辩护的分析总体。
+  s3_zh_hk: 唔好自動將每個下游估計都判定為無效，亦唔好將每次失衡都歸因於技術。要判斷失配係咪符合預期、觀測係咪同時依賴分配同結果，以及可唔可以重建有理據嘅分析總體。

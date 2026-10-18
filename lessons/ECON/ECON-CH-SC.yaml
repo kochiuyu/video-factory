@@ -1,0 +1,196 @@
+id: ECON-CH-SC
+course: principles
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 136
+title_en: Sunk Cost
+title_zh: 沉没成本
+title_zh_hk: 沉沒成本
+objective_en: 'Third step of the choice unit: ignore costs that cannot change, whatever you do
+  next.'
+objective_zh: 选择单元的第三步：下一步无论怎么选都无法改变的成本，不要再算进去。
+objective_zh_hk: 選擇單元的第三步：下一步無論怎麼選都無法改變的成本，不要再算進去。
+glossary:
+- en: sunk cost
+  zh: 沉没成本
+  zh_hk: 沉沒成本
+  lock: true
+- en: sunk cost fallacy
+  zh: 沉没成本谬误
+  zh_hk: 沉沒成本謬誤
+  lock: true
+- en: opportunity cost
+  zh: 机会成本
+  zh_hk: 機會成本
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Which costs should enter the next decision?
+  zh: 下一步决策应纳入哪些成本？
+  zh_hk: 下一步決策應納入哪些成本？
+  answer_en: Future costs and opportunity costs, not sunk costs.
+  answer_zh: 未来成本与机会成本，而不是沉没成本。
+  answer_zh_hk: 未來成本與機會成本，而不是沉沒成本。
+- id: Q2
+  type: transfer
+  en: A firm has already spent money building a feature customers ignore. What error is it if
+    that past spending is used to justify continuing?
+  zh: 公司已在顾客不用的功能上花了钱。若用这笔已花的钱来为继续投入辩护，这是什么错误？
+  zh_hk: 公司已在顧客不用的功能上花了錢。若用這筆已花的錢來為繼續投入辯護，這是什麼錯誤？
+  answer_en: The sunk cost fallacy.
+  answer_zh: 沉没成本谬误。
+  answer_zh_hk: 沉沒成本謬誤。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 20
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Sunk Cost
+  title_zh: 沉没成本
+  title_zh_hk: 沉沒成本
+  en: Opportunity cost looks forward. The ticket already paid does not. Stay or leave, that money
+    is gone. A sunk cost is not an opportunity cost.
+  zh: 机会成本朝前看。已经付掉的票款不朝前看。留或走，那笔钱都回不来。沉没成本不是机会成本。
+  zh_hk: 機會成本朝前睇。已經付咗嘅票款唔朝前睇。留定走，嗰筆錢都返唔嚟。沉沒成本唔係機會成本。
+- id: define
+  visual: definition_card
+  seconds: 22
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Sunk cost
+  title_zh: 沉没成本
+  title_zh_hk: 沉沒成本
+  formula: sunk cost = paid and unrecoverable
+  formula_en: sunk cost = paid and unrecoverable
+  formula_zh: 沉没成本 = 已付且无法收回
+  formula_zh_hk: 沉沒成本 = 已付且無法收回
+  gloss_en: Tuition already paid / a non-refundable deposit
+  gloss_zh: 已交学费 / 不可退订金
+  gloss_zh_hk: 已交學費 / 不可退訂金
+  s1_en: A sunk cost is a cost you have already paid and cannot get back.
+  s1_zh: 沉没成本是已经支付、无法收回的成本。
+  s1_zh_hk: 沉沒成本係已經支付、無法收回嘅成本。
+  s2_en: Last month's tuition, a non-refundable deposit, hours already spent — none of these change
+    with your next move.
+  s2_zh: 上月学费、不可退订金、已花掉的时间，都不会因下一步而改变。
+  s2_zh_hk: 上月學費、不可退訂金、已花嘅時間，都唔會因下一步而改變。
+- id: rule
+  visual: steps
+  seconds: 24
+  kicker: Rule
+  kicker_en: Rule
+  kicker_zh: 规则
+  kicker_zh_hk: 規則
+  title_en: Ignore it going forward
+  title_zh: 向前看时忽略它
+  title_zh_hk: 向前看時忽略它
+  step1_en: Name future benefits
+  step1_zh: 列出未来收益
+  step1_zh_hk: 列出未來收益
+  step2_en: Name future costs
+  step2_zh: 列出未来成本
+  step2_zh_hk: 列出未來成本
+  step3_en: Leave the sunk cost out
+  step3_zh: 把沉没成本排除
+  step3_zh_hk: 把沉沒成本排除
+  s1_en: When you choose what to do next, first name the future benefits of staying on the path.
+  s1_zh: 选择下一步时，先写出留下来的未来收益。
+  s1_zh_hk: 揀下一步時，先寫留低嘅未來收益。
+  s2_en: 'Then name the future costs still ahead: more time, more fees, more stress.'
+  s2_zh: 再写出还没发生的成本：还要投入的时间、费用和压力。
+  s2_zh_hk: 再寫仲未發生嘅成本：仲要投入嘅時間、費用同壓力。
+  s3_en: Leave the sunk cost out. It sits on both sides, so it cannot tell you which option is
+    better.
+  s3_zh: 沉没成本不要入账。它在两边都一样，所以不能告诉你哪边更好。
+  s3_zh_hk: 沉沒成本唔好入賬。佢兩邊都一樣，所以唔可以話你知邊邊更好。
+- id: example
+  visual: two_column
+  seconds: 24
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Stay or leave
+  title_zh: 留下还是离场
+  title_zh_hk: 留下還是離場
+  left_en: Stay to the end
+  left_zh: 看到终场
+  left_zh_hk: 看到終場
+  right_en: Leave and use the time
+  right_zh: 离场做别的事
+  right_zh_hk: 離場做別的事
+  s1_en: You already paid for the show. The film is dull. Stay to the end, or leave and use the
+    two hours.
+  s1_zh: 票已经买了。片子很闷。看到终场，还是离场去做别的事？
+  s1_zh_hk: 票已經買咗。片好悶。睇到終場，定係離場做第二啲事？
+  s2_en: Staying does not recover the ticket price. That money is already gone.
+  s2_zh: 留下并不能把票款赚回来。那笔钱已经没了。
+  s2_zh_hk: 留低並唔能夠將票款賺返。嗰筆錢已經冇咗。
+  s3_en: The relevant cost of staying is the opportunity cost of those two hours — the best other
+    use of the same time.
+  s3_zh: 留下的相关代价，是这两小时的机会成本，也就是同一时间的最佳其他用途。
+  s3_zh_hk: 留低嘅相關代價，係呢兩小時嘅機會成本，亦即同一時間嘅最佳其他用途。
+- id: business
+  visual: example
+  seconds: 24
+  kicker: Business
+  kicker_en: Business
+  kicker_zh: 企业
+  kicker_zh_hk: 企業
+  title_en: Kill or continue
+  title_zh: 停还是继续
+  title_zh_hk: 停還是繼續
+  setup_en: $500,000 already spent on an unused feature
+  setup_zh: 已在无人使用的功能上投入五十万
+  setup_zh_hk: 已在無人使用的功能上投入五十萬
+  result_en: Past spending is not a reason to continue
+  result_zh: 已花的钱不是继续投入的理由
+  result_zh_hk: 已花的錢不是繼續投入的理由
+  s1_en: Same logic in a firm. A team has already spent five hundred thousand on a feature nobody
+    uses.
+  s1_zh: 公司里也一样。团队已在无人使用的功能上投入五十万。
+  s1_zh_hk: 公司入面都一樣。團隊已經喺無人用嘅功能上投入五十萬。
+  s2_en: That past spending is the setup. It cannot come back, whatever you do next.
+  s2_zh: 已经花掉的是设定。下一步无论怎么选，都拿不回来。
+  s2_zh_hk: 已經花咗嘅係設定。下一步無論點揀，都攞唔返。
+  s3_en: Spending more only because the money is gone is the sunk cost fallacy. Continue only
+    if future benefit still covers future cost.
+  s3_zh: 只因为钱已经花了就继续投入，就是沉没成本谬误。只有未来收益仍盖住未来成本，才继续。
+  s3_zh_hk: 淨係因為錢已經花咗就繼續投入，就係沉沒成本謬誤。只有未來收益仲蓋得住未來成本，先繼續。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Would you start today
+  title_zh: 若尚未开始，今天还会选吗
+  title_zh_hk: 若尚未開始，今天還會選嗎
+  q1_en: If that money were not yet spent, would you choose this path today?
+  q1_zh: 若那笔钱还没花，今天还会选这条路吗？
+  q1_zh_hk: 若那筆錢還沒花，今天還會選這條路嗎？
+  q2_en: If not, do not let a sunk cost trap the next choice.
+  q2_zh: 若不会，就不要让沉没成本绑架下一步。
+  q2_zh_hk: 若不會，就不要讓沉沒成本綁架下一步。
+  s1_en: Ask one question before you double down.
+  s1_zh: 加码之前，先问一句。
+  s1_zh_hk: 加碼之前，先問一句。
+  s2_en: If that money were not yet spent, would you choose this path today?
+  s2_zh: 若那笔钱还没花，你今天还会选这条路吗？
+  s2_zh_hk: 若嗰筆錢仲未花，你今日仲會唔會揀呢條路？
+  s3_en: If not, do not let a sunk cost trap the next choice. Next sitting we look at one more
+    unit from here, not the average of what is already done.
+  s3_zh: 若不会，就不要让沉没成本绑住下一步。下一讲只看从现在起的再一单位，不看已经做完的平均数。
+  s3_zh_hk: 若唔會，就唔好讓沉沒成本綁住下一步。下一講只睇由而家起再一單位，唔睇已經做完嘅平均數。

@@ -1,0 +1,20 @@
+id: ECON-CH
+kind: module
+course: economics
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+duration_target_s: 480
+title_en: Choice
+title_zh: 选择
+title_zh_hk: 選擇
+objective_en: "One person chooses. Trade-off, opportunity cost, sunk cost, then one more unit."
+objective_zh: "一个人做选择。权衡、机会成本、沉没成本，然后是再一单位。"
+objective_zh_hk: "一個人做選擇。權衡、機會成本、沉沒成本，然後係再一單位。"
+lessons:
+- ECON-CH-IN
+- ECON-CH-QA
+- ECON-CH-OC
+- ECON-CH-SC
+- ECON-CH-MB
+- ECON-CH-OUT

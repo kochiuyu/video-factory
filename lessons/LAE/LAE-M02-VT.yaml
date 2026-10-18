@@ -1,0 +1,129 @@
+id: LAE-M02-VT
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 92
+title_en: eVTOL
+title_zh: eVTOL
+title_zh_hk: eVTOL
+objective_en: 'Name the eVTOL after the drone: a person on board is a different payload. That raises the safety bar and the capital cost.'
+objective_zh: 在无人机之后给 eVTOL 起名：机上有人，是另一种载荷。安全门槛更高，资本成本也更高。
+objective_zh_hk: 喺無人機之後畀 eVTOL 起名：機上有人，係另一種載荷。安全門檻更高，資本成本都更高。
+glossary:
+- en: eVTOL
+  zh: 电动垂直起降航空器
+  zh_hk: 電動垂直起降航空器
+  lock: true
+- en: drone
+  zh: 无人机
+  zh_hk: 無人機
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What payload makes an eVTOL a different machine from the drone?
+  zh: 哪种载荷让 eVTOL 成为与无人机不同的机器？
+  zh_hk: 邊種載荷令 eVTOL 成為同無人機唔同嘅機器？
+  answer_en: A person on board.
+  answer_zh: 机上有人。
+  answer_zh_hk: 機上有人。
+- id: Q2
+  type: transfer
+  en: Why is an eVTOL a poor first choice for the small Shenzhen-to-Sha Tin parcel?
+  zh: 为什么深圳到沙田的小包裹，不宜先选 eVTOL？
+  zh_hk: 點解深圳到沙田嘅小包裹，不宜先揀 eVTOL？
+  answer_en: A person on board raises the safety bar and the capital cost. The parcel does not need that payload.
+  answer_zh: 机上有人会抬高安全门槛和资本成本。小包裹不需要那种载荷。
+  answer_zh_hk: 機上有人會抬高安全門檻同資本成本。小包裹唔需要嗰種載荷。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 22
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: eVTOL
+  title_zh: eVTOL
+  title_zh_hk: eVTOL
+  en: The drone already has a name. A small parcel can ride it. This short names a second machine. Someone sits in it.
+  zh: 无人机已经有名字。小包裹可以坐它。这条短片给第二种机器起名。有人坐在里面。
+  zh_hk: 無人機已經有名。小包裹可以坐佢。呢條短片畀第二種機器起名。有人坐喺入面。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: eVTOL
+  title_zh: eVTOL
+  title_zh_hk: eVTOL
+  formula: 'eVTOL = electric, vertical take-off, person on board'
+  formula_en: 'eVTOL = electric, vertical take-off, person on board'
+  formula_zh: eVTOL = 电动、垂直起降、机上有人
+  formula_zh_hk: eVTOL = 電動、垂直起降、機上有人
+  gloss_en: A person is the payload
+  gloss_zh: 载荷是人
+  gloss_zh_hk: 載荷係人
+  s1_en: An eVTOL is an electric machine that leaves the ground going straight up, like a small helicopter, and carries a person.
+  s1_zh: eVTOL 是电动的机器，离地时向上走，像一架小型直升机，并且载人。
+  s1_zh_hk: eVTOL 係電動嘅機器，離地嗰陣向上行，好似一架小型直升機，並且載人。
+  s2_en: Keep the letters. Say “eVTOL” in all three languages. The new claim is the person, not the spelling.
+  s2_zh: 这三个字母保留。三种语言都说 eVTOL。新的判断是人，不是拼写。
+  s2_zh_hk: 呢三個字母留住。三種語言都講 eVTOL。新嘅判斷係人，唔係拼寫。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: Contrast
+  kicker_en: Contrast
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Parcel, then person
+  title_zh: 先是包裹，然后是人
+  title_zh_hk: 先係包裹，然後係人
+  left_en: Drone
+  left_zh: 无人机
+  left_zh_hk: 無人機
+  right_en: eVTOL
+  right_zh: eVTOL
+  right_zh_hk: eVTOL
+  s1_en: The drone you just named carries no person. The eVTOL does. That is the fork.
+  s1_zh: 你刚起名的无人机不载人。eVTOL 载人。分叉就在这里。
+  s1_zh_hk: 你啱起名嘅無人機唔載人。eVTOL 載人。分叉就喺呢度。
+  s2_en: A person on board raises the safety bar. The machine must be built for a life, not only for a box.
+  s2_zh: 机上有人，安全门槛就抬高。这台机器要为一条生命来建造，不只为一只箱子。
+  s2_zh_hk: 機上有人，安全門檻就抬高。呢部機器要為一條命嚟建造，唔只為一隻箱。
+  s3_en: That bar is a capital cost. The small parcel on our line does not buy a person-shaped seat. Do not sell this short as a lifestyle hop.
+  s3_zh: 那道门槛是资本成本。我们这条线上的小包裹，买的不是一个给人坐的位子。这条短片不要写成生活方式。
+  s3_zh_hk: 嗰度門檻係資本成本。我哋呢條線上嘅小包裹，買嘅唔係一個畀人坐嘅位。呢條短片唔好寫成生活方式。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: A different payload
+  title_zh: 另一种载荷
+  title_zh_hk: 另一種載荷
+  q1_en: What sits in the eVTOL that does not sit in the drone?
+  q1_zh: eVTOL 上有什么是无人机上没有的？
+  q1_zh_hk: eVTOL 上面有咩係無人機上面冇嘅？
+  q2_en: What two prices rise when a person is on board?
+  q2_zh: 机上有人时，哪两样价格会上升？
+  q2_zh_hk: 機上有人嗰陣，邊兩樣價錢會上升？
+  s1_en: An eVTOL carries a person. That is the new noun.
+  s1_zh: eVTOL 载人。这就是新词。
+  s1_zh_hk: eVTOL 載人。呢個就係新詞。
+  s2_en: The safety bar and the capital cost both rise. Write those two lines before you praise the ride.
+  s2_zh: 安全门槛和资本成本都会上升。先写下这两句，再夸这一趟。
+  s2_zh_hk: 安全門檻同資本成本都會上升。先寫低呢兩句，先至誇呢一轉。
+  s3_en: Neither machine is a business in mid-air. Next sitting names the pad where the flight begins and waits.
+  s3_zh: 两种机器都不是停在半空里的生意。下一讲给飞行开始和等待的那块垫子起名。
+  s3_zh_hk: 兩種機器都唔係停喺半空嘅生意。下一講畀飛行開始同等待嗰塊墊起名。

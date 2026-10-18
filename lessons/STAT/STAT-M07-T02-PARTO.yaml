@@ -1,0 +1,170 @@
+id: STAT-M07-T02-PARTO
+course: STAT-M07
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Partialling Out: The Ceteris Paribus Principle'
+title_zh: 偏回归净化：其他条件不变原则
+title_zh_hk: 偏回歸淨化：其他條件不變原則
+objective_en: Apply the Frisch-Waugh-Lovell partialling out logic to isolate the pure marginal effect of an operational input by purging shared confounding variation.
+objective_zh: 应用弗里施-沃-洛弗尔偏回归净化逻辑，剔除共享混淆变异，以分离运营要素的纯粹边际效应。
+objective_zh_hk: 應用弗里施-沃-洛弗爾偏回歸淨化邏輯，剔除共享混淆變異，以分離營運要素嘅純粹邊際效應。
+glossary:
+- en: Partialling Out
+  zh: 偏回归净化
+  zh_hk: 偏回歸淨化
+  lock: true
+  zh_zh_hk: 偏回歸淨化
+- en: Residual on Residual
+  zh: 残差对残差回归
+  zh_hk: 殘差對殘差回歸
+  lock: true
+  zh_zh_hk: 殘差對殘差回歸
+- en: Net Marginal Yield
+  zh: 净边际产出
+  zh_hk: 淨邊際產出
+  lock: true
+  zh_zh_hk: 淨邊際產出
+- en: Frisch-Waugh-Lovell
+  zh: 弗里施-沃-洛弗尔定理
+  zh_hk: 弗里施-沃-洛弗爾定理
+  lock: true
+  zh_zh_hk: 弗里施-沃-洛弗爾定理
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: According to the Frisch-Waugh-Lovell theorem, how is the partial slope beta_1_hat of barista hours calculated in a model that also controls for store floor area?
+  question_zh: 根据弗里施-沃-洛弗尔定理，在同时控制店铺面积的模型中，咖啡师工时的偏斜率 beta_1_hat 是如何计算的？
+  question_zh_hk: 根據弗里施-沃-洛弗爾定理，喺同時控制門市面積嘅模型入面，咖啡師工時嘅偏斜率 beta_1_hat 係點樣計出嚟嘅？
+  options_en:
+  - 'A: By running a simple regression of total sales on total barista hours, ignoring store area'
+  - 'B: By regressing sales residuals (after netting out area) on barista hours residuals (after netting out area)'
+  - 'C: By multiplying the two simple regression slopes together'
+  - 'D: By dividing total daily cups sold by the total square footage of the branch'
+  options_zh:
+  - 'A: 直接将总销售额对总工时做一元简单回归，完全忽略面积'
+  - 'B: 将已剔除面积影响的销售额残差，对已剔除面积影响的工时残差做回归'
+  - 'C: 将工时与面积各自的一元回归斜率直接相乘'
+  - 'D: 用门店每日总出杯量除以门店的总营业面积'
+  options_zh_hk:
+  - 'A: 直接將總營業額對總工時做一元簡單回歸，完全唔理面積'
+  - 'B: 將剔除咗面積影響嘅營業額殘差，對剔除咗面積影響嘅工時殘差做回歸'
+  - 'C: 將工時同面積各自嘅一元回歸斜率直接乘埋'
+  - 'D: 用門市每日總出杯量除以門市嘅總營業面積'
+  answer: B
+  explanation_en: The Frisch-Waugh-Lovell theorem proves that beta_1_hat equals the slope from regressing the residual of Y purged of X_2 on the residual of X_1 purged of X_2.
+  explanation_zh: 弗里施-沃-洛弗尔定理严格证明：多元回归中的 beta_1_hat，恰好等于‘剔除 X_2 后的 Y 残差’对‘剔除 X_2 后的 X_1 残差’进行一元回归所得的斜率。
+  explanation_zh_hk: 弗里施-沃-洛弗爾定理嚴格證明：多元回歸入面嘅 beta_1_hat，剛好等於‘剔除咗 X_2 後嘅 Y 殘差’對‘剔除咗 X_2 後嘅 X_1 殘差’做一元回歸計出嚟嘅斜率。
+- id: Q2
+  type: multiple_choice
+  question_en: After netting out store floor area, Wan Chai's isolated barista shift shock is +10 hours and its unexpected sales shock is +80 cups. Across audit shops, Sum(e_hours^2) = 200 and Sum(e_hours * e_sales) = 1,600. What is the net marginal yield per barista hour?
+  question_zh: 在剔除营业面积后，湾仔店的独立工时冲击为 +10 小时，独立销量冲击为 +80 杯。样本总和为 Sum(e_工时^2) = 200，Sum(e_工时 * e_销量) = 1,600。咖啡师每工时的净边际产出是多少？
+  question_zh_hk: 喺剔除咗營業面積之後，灣仔店嘅獨立工時衝擊係 +10 個鐘，獨立銷量衝擊係 +80 杯。樣本總和係 Sum(e_工時^2) = 200，Sum(e_工時 * e_銷量) = 1,600。咖啡師每工時嘅淨邊際產出係幾多？
+  options_en:
+  - 'A: 8.0 cups per hour'
+  - 'B: 0.125 cups per hour'
+  - 'C: 80.0 cups per hour'
+  - 'D: 16.0 cups per hour'
+  options_zh:
+  - 'A: 8.0 杯/小时'
+  - 'B: 0.125 杯/小时'
+  - 'C: 80.0 杯/小时'
+  - 'D: 16.0 杯/小时'
+  options_zh_hk:
+  - 'A: 8.0 杯/小時'
+  - 'B: 0.125 杯/小時'
+  - 'C: 80.0 杯/小時'
+  - 'D: 16.0 杯/小時'
+  answer: A
+  explanation_en: 'By partialling out: beta_1_hat = Sum(e_hours * e_sales) / Sum(e_hours^2) = 1,600 / 200 = 8.0 cups per barista hour.'
+  explanation_zh: 根据偏回归净化公式：beta_1_hat = Sum(e_工时 * e_销量) / Sum(e_工时^2) = 1,600 / 200 = 8.0 杯/小时。
+  explanation_zh_hk: 根據偏回歸淨化公式：beta_1_hat = Sum(e_工時 * e_銷量) / Sum(e_工時^2) = 1,600 / 200 = 8.0 杯/小時。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Labor Allocation Dilemma
+  kicker_zh: 排班调度困境
+  kicker_zh_hk: 排班調度困局
+  title_en: How Productive Is an Extra Barista Hour?
+  title_zh: 多排一小时工时到底能多卖多少杯？
+  title_zh_hk: 排多一個鐘工時到底可以賣多幾多杯？
+  en: Metro Coffee's regional managers know that spacious flagship stores schedule more barista hours and sell more coffee. But when head office asks for the marginal sales association of adding one extra shift hour, raw data is misleading. Is the increase linked to staffing, or does a larger floor area naturally attract more footfall? How can the model isolate the staffing effect while holding store size constant?
+  zh: Metro Coffee 的区域经理发现，营业面积大的旗舰店通常排班工时更多，出杯量也更高。然而，当总部询问增加一小时排班与销量之间的边际关系时，原始数据可能产生误导。销量增加与排班有关，还是因为大店本身吸引了更多客流？模型如何在保持门店面积不变的条件下分离排班效应？
+  zh_hk: Metro Coffee 嘅區域經理發現，地方大嘅旗艦店通常排班工時更多，出杯量亦更高。不過，當總部想知道增加一個鐘排班同銷量之間嘅邊際關係時，原始數據可能會有誤導。銷量增加同排班有關，定係因為大店本身吸引更多人流？模型點樣可以喺保持門市面積不變之下分離排班效應？
+  zh_zh_hk: Metro Coffee 嘅區域經理發現，地方大嘅旗艦店通常排班工時更多，出杯量亦更高。不過，當總部想知道增加一個鐘排班同銷量之間嘅邊際關係時，原始數據可能會有誤導。銷量增加同排班有關，定係因為大店本身吸引更多人流？模型點樣可以喺保持門市面積不變之下分離排班效應？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: beta_1_hat = Sum(e_X1.X2 * e_Y.X2) / Sum(e_X1.X2^2)
+  formula_zh: 偏斜率公式：beta_1_hat = Sum(e_X1.X2 * e_Y.X2) / Sum(e_X1.X2^2)
+  formula_zh_hk: 偏斜率公式：beta_1_hat = Sum(e_X1.X2 * e_Y.X2) / Sum(e_X1.X2^2)
+  formula_tex: \hat{\beta}_1 = \frac{\sum_{i=1}^n e_{X_{1} \cdot X_{2}, i} \, e_{Y \cdot X_{2}, i}}{\sum_{i=1}^n e_{X_{1} \cdot X_{2}, i}^2} \quad \text{(Frisch-Waugh-Lovell Theorem)}
+  s1_en: The Frisch-Waugh-Lovell theorem reveals the inner mechanics of multiple regression. To hold shop size constant, we first purge the effect of square footage from both barista hours and coffee sales by running two auxiliary regressions.
+  s1_zh: 弗里施-沃-洛弗尔定理揭示了多元回归的底层运行机制。为了保持门店面积恒定，我们先运行两组辅助回归，分别从工时和销量中剔除掉营业面积的系统性影响。
+  s1_zh_hk: 弗里施-沃-洛弗爾定理揭示咗多元回歸嘅底層運作機制。為咗保持門市面積固定，我哋先做兩組輔助回歸，分別由工時同銷量入面洗走營業面積嘅系統性影響。
+  s2_en: The two sets of residuals retain variation not linearly explained by store area. Regressing sales residuals on labor residuals yields the same estimated partial slope for barista hours as the corresponding multiple regression.
+  s2_zh: 两组残差保留了无法由门店面积线性解释的变异。将销量残差对工时残差做回归，所得咖啡师工时偏斜率估计值与相应多元回归中的估计值相同。
+  s2_zh_hk: 兩組殘差保留咗未能由門市面積線性解釋嘅變異。將銷量殘差對工時殘差做回歸，所得咖啡師工時偏斜率估計值，同相應多元回歸入面嘅估計值相同。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Purging the Shared Variation
+  left_zh: 剥离共享重叠变异
+  right_en: Residual on Residual Yield
+  right_zh: 残差对残差的净产出
+  s1_en: Large shops naturally have higher staff and higher sales. That overlapping correlation is shared information. Partialling out explicitly subtracts the variation that store size explains from both sides.
+  s1_zh: 大店自然配备更多员工，销量也自然更高。这种重叠的相关性属于共有信息。偏回归净化的实质，正是从两端明确扣除掉已被店铺面积所解释的共有变异。
+  s1_zh_hk: 大舖自然請多啲人，銷量自然亦大啲。呢種重疊嘅相關性屬於共有信息。偏回歸淨化嘅本質，正正就係喺兩邊徹底扣減走已經被店舖面積所解釋咗嘅重疊變異。
+  s2_en: 'What remains in the labor residuals are unexpected staffing shocks: shifts where managers over-staffed or under-staffed relative to physical store capacity.'
+  s2_zh: 工时残差中剩下的，纯粹是超额或不足的排班独立冲击：即相对于物理店面而言，店长在特定营业日特意多配或少配咖啡师的净变动。
+  s2_zh_hk: 工時殘差入面剩低嘅，純粹係排班嘅獨立衝擊：即係相對於實體店面面積嚟講，店長喺特定日子特登排多咗或者排少咗咖啡師嘅淨變動。
+  s3_en: Sales residuals capture throughput variation not linearly explained by store area. Their residual-on-residual slope estimates how sales vary with staffing after removing the linear association of floor area from both variables.
+  s3_zh: 销量残差反映未能由门店面积线性解释的出杯量变异。残差对残差回归的斜率估计，在从两个变量中剔除面积的线性关联后，销量如何随排班变化。
+  s3_zh_hk: 銷量殘差反映未能由門市面積線性解釋嘅出杯量變異。殘差對殘差回歸嘅斜率估計，喺兩個變量都剔除面積嘅線性關聯之後，銷量點樣隨排班變化。
+  left_zh_hk: 剝離共享重疊變異
+  right_zh_hk: 殘差對殘差嘅淨產出
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Purge Area from Hours
+  step1_zh: 从工时中净化面积
+  step2_en: Purge Area from Cups
+  step2_zh: 从出杯量中净化面积
+  step3_en: Solve Net Hourly Yield
+  step3_zh: 求解工时净边际产出
+  s1_en: 'Step one: Regress barista hours on store floor area across our street shops. Wan Chai''s actual 40 hours produces a positive residual of +10 hours above its floor area prediction.'
+  s1_zh: 第一步：在各街边分店中将咖啡师工时对营业面积做回归。湾仔店实际 40 工时，相比面积预测值产生了 +10 小时的独立超额排班残差。
+  s1_zh_hk: 第一步：喺各街舖入面將咖啡師工時對營業面積做回歸。灣仔店實際 40 個鐘，比起面積預測值多出咗 +10 個鐘嘅獨立超額排班殘差。
+  s2_en: 'Step two: Regress daily cup sales on store area. Wan Chai''s actual 420 cups generates an unexplained residual of +80 cups above its store size baseline.'
+  s2_zh: 第二步：将日出杯量对营业面积做回归。湾仔店实际 420 杯出杯量，比起面积基准线产生了 +80 杯的未被面积解释的独立销量残差。
+  s2_zh_hk: 第二步：將每日出杯量對營業面積做回歸。灣仔店實際 420 杯銷量，比起面積基準多出咗 +80 杯完全冇被面積解釋嘅獨立銷量殘差。
+  s3_en: 'Step three: Across all audited shops, the cross-product sum is 1,600 and labor residual sum of squares is 200. Dividing 1,600 by 200 gives beta_1_hat = 8.0 cups per barista hour.'
+  s3_zh: 第三步：汇总全网审计门店，残差交叉乘积和为 1,600，工时残差平方和为 200。1,600 除以 200 得出偏斜率 beta_1_hat = 8.0 杯/小时。
+  s3_zh_hk: 第三步：匯總所有審計門市，殘差交叉乘積和係 1,600，工時殘差平方和係 200。1,600 除以 200 計出偏斜率 beta_1_hat = 8.0 杯/小時。
+  step1_zh_hk: 由工時入面淨化面積
+  step2_zh_hk: 由出杯量入面淨化面積
+  step3_zh_hk: 求解工時淨邊際產出
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: What Does FWL Prove to Managers?
+  q1_zh: FWL 定理向管理者证实了什么？
+  q2_en: 'Audit Rule: Check What Was Controlled'
+  q2_zh: 审计准则：认清偏斜率锁定的背景
+  s1_en: The Frisch-Waugh-Lovell theorem demonstrates that multiple regression is not an opaque mathematical black box; it is an active sorting mechanism that purges shared confounds.
+  s1_zh: 弗里施-沃-洛弗尔定理向我们证明，多元回归绝非不可捉摸的数学黑箱；它是一套精准的分离机制，自动剔除交织在一起的混淆因素。
+  s1_zh_hk: 弗里施-沃-洛弗爾定理向我哋證明，多元回歸絕非神秘嘅數學黑盒；佢係一套好精準嘅過濾機制，自動洗走糾纏不清嘅混淆因素。
+  s2_en: Every reported coefficient in multiple regression is a partial slope. It tells leadership what happens when that specific operational input changes while all other included variables are held fixed.
+  s2_zh: 多元回归中的每一个斜率都是偏斜率。它明确告知管理层，当该特定要素独立变动而模型中其余变量被严格锁定时，业务的真实净响应幅度。
+  s2_zh_hk: 多元回歸入面嘅每一個斜率都係偏斜率。佢清清楚楚話畀管理層知，當嗰個特定要素自己變動而其餘變量被鎖死嗰陣，業務嘅真實淨回報有幾多。
+  s3_en: 'Decision rule: read the 8.0-cup estimate as the staffing slope conditional on store area, not as an unconditional causal guarantee. Before acting, verify which controls are included and whether important confounders remain omitted.'
+  s3_zh: 决策规则：将 8.0 杯解读为控制门店面积后的排班斜率，而不是无条件的因果保证。采取行动前，应核对模型纳入了哪些控制变量，并检查是否仍遗漏重要混淆因素。
+  s3_zh_hk: 決策規則：將 8.0 杯解讀為控制門市面積之後嘅排班斜率，而唔係無條件嘅因果保證。採取行動之前，要核對模型納入咗邊啲控制變量，亦要檢查係咪仍然遺漏重要混淆因素。
+  q1_zh_hk: FWL 定理向管理者證實咗啲咩？
+  q2_zh_hk: 審計準則：睇清偏斜率鎖定嘅背景

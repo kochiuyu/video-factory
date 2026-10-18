@@ -1,0 +1,199 @@
+id: STAT-M01-T07-IQR
+course: statistics
+course_en: Business Statistics
+course_zh: 商务统计
+course_zh_hk: 商務統計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: How wide is the middle fifty percent?
+title_zh: 中间百分之五十的跨度有多大？
+title_zh_hk: 中間百分之五十嘅跨度有幾大？
+objective_en: Define the interquartile range as Q3 minus Q1, connect quartiles to the 25th and 75th percentiles, calculate the IQR using the course quartile convention, and explain why it is less sensitive than the range while remaining dependent on the dataset and quartile method.
+objective_zh: 把四分位距定义为Q3减去Q1，将四分位数与第25和第75百分位数联系起来，使用本课程的四分位数约定计算IQR，并解释它为何比极差更不易受极端值影响，同时仍取决于数据集与四分位数算法。
+objective_zh_hk: 將四分位距定義為Q3減去Q1，將四分位數同第25同第75百分位數連結起來，使用本課程嘅四分位數約定計算IQR，並解釋佢點解比全距更唔容易受極端值影響，同時仍然取決於數據集同四分位數算法。
+glossary:
+- en: interquartile range
+  zh: 四分位距
+  zh_hk: 四分位距
+  lock: true
+- en: quartile
+  zh: 四分位数
+  zh_hk: 四分位數
+  lock: true
+- en: outlier
+  zh: 异常值
+  zh_hk: 異常值
+  lock: true
+- en: spread
+  zh: 离散程度
+  zh_hk: 離散程度
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: How does the Interquartile Range (IQR) measure data spread?
+  question_zh: 四分位距（IQR）是如何衡量数据离散程度的？
+  question_zh_hk: 四分位距（IQR）係點樣衡量數據離散程度嘅？
+  options_en:
+  - 'A: It calculates the distance between the smallest and largest values in the entire file.'
+  - 'B: It measures the distance between Q1 and Q3, the boundaries of the middle 50% of ordered observations.'
+  - 'C: It divides the arithmetic mean by the number of stores.'
+  - 'D: It adds all four quartiles together into a grand total.'
+  options_zh:
+  - 'A: 它计算整个数据表中最小数值与最大数值之间的距离。'
+  - 'B: 它测量Q1与Q3之间的距离，也就是有序观测值中间50%的边界跨度。'
+  - 'C: 它用算术平均数除以门店总数。'
+  - 'D: 它把所有四个四分位数直接相加得出总和。'
+  options_zh_hk:
+  - 'A: 佢計算成張數據表入面最少數值同最大數值之間嘅距離。'
+  - 'B: 佢測量Q1同Q3之間嘅距離，即係有序觀測值中間50%嘅邊界跨度。'
+  - 'C: 佢用算術平均數除以門店總數。'
+  - 'D: 佢將所有四個四分位數直接加埋得出總和。'
+  answer: B
+  explanation_en: The IQR equals Q3 minus Q1 and describes the span of the middle 50%. It is less sensitive to extreme endpoints than the range, but Q1, Q3, and the IQR can still change when the dataset changes.
+  explanation_zh: 四分位距等于Q3减去Q1，描述中间50%的跨度。它比极差更不易受极端端点影响，但数据集改变时，Q1、Q3与IQR仍可能改变。
+  explanation_zh_hk: 四分位距等於Q3減去Q1，描述中間50%嘅跨度。佢比全距更唔容易受極端端點影響，但數據集改變嗰陣，Q1、Q3同IQR仍然可能改變。
+- id: Q2
+  type: multiple_choice
+  question_en: Why can the IQR be more useful than the range for describing routine street-store variation?
+  question_zh: 为什么四分位距可能比极差更适合描述街头门店的常规波动？
+  question_zh_hk: 點解四分位距可能比全距更適合描述街頭門店嘅常規波動？
+  options_en:
+  - 'A: It focuses on the middle 50%, so a single extreme endpoint usually has less influence than it has on the range.'
+  - 'B: The IQR is always equal to zero in profitable coffee shops.'
+  - 'C: Financial auditors prohibit using the simple range in accounting reports.'
+  - 'D: The IQR automatically doubles store revenue.'
+  options_zh:
+  - 'A: 它聚焦中间50%，因此单个极端端点通常不像影响极差那样强烈地影响IQR。'
+  - 'B: 在盈利的咖啡店里，IQR 永远等于零。'
+  - 'C: 财务审计师明令禁止在会计报告中使用极差。'
+  - 'D: IQR 能自动让分店的营业额翻倍。'
+  options_zh_hk:
+  - 'A: 佢聚焦中間50%，所以單一極端端點通常唔會好似影響全距噉強烈影響IQR。'
+  - 'B: 喺賺錢嘅咖啡店入面，IQR 永遠等於零。'
+  - 'C: 財務審計師明令禁止喺會計報告入面使用全距。'
+  - 'D: IQR 可以自動令分店嘅營業額翻倍。'
+  answer: A
+  explanation_en: The range uses only the minimum and maximum. The IQR uses quartile boundaries around the middle half, so one isolated endpoint often has less influence, although Q1 and Q3 can still change when the dataset changes.
+  explanation_zh: 极差只使用最小值和最大值。IQR使用围绕中间一半的四分位边界，因此单个孤立端点通常影响较小；但数据集改变时，Q1与Q3仍可能改变。
+  explanation_zh_hk: 全距只使用最小值同最大值。IQR使用圍繞中間一半嘅四分位邊界，所以單一孤立端點通常影響較小；但數據集改變嗰陣，Q1同Q3仍然可能改變。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Question
+  kicker_en: The Question
+  kicker_zh: 商业问题
+  kicker_zh_hk: 商業問題
+  title_en: How wide is normal store variation?
+  title_zh: 常规分店的日常波动到底有多大？
+  title_zh_hk: 常規分店嘅日常波動到底有幾大？
+  en: The range can become enormous when one unusual Airport branch enters the report. But headquarters still needs a picture of routine variation among ordinary stores. Instead of measuring from the absolute minimum to the absolute maximum, how can managers focus on the spread of the middle half of the ordered data?
+  zh: 当一家异常的机场店进入报表时，极差可能变得非常大。但总部仍需要了解普通门店的常规波动。管理者如何不再从绝对最小值量到绝对最大值，而是聚焦有序数据中间一半的跨度？
+  zh_hk: 當一間異常嘅機場舖進入報表嗰陣，全距可能變得非常大。但總部仍然需要了解普通門店嘅常規波動。管理者點樣唔再由絕對最小值量到絕對最大值，而係聚焦有序數據中間一半嘅跨度？
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: What It Is
+  kicker_en: What It Is
+  kicker_zh: 概念定义
+  kicker_zh_hk: 概念定義
+  title_en: The span between two percentile landmarks
+  title_zh: 两个百分位界标之间的跨度
+  title_zh_hk: 兩個百分位界標之間嘅跨度
+  formula: 'IQR = Q3 − Q1
+
+    Q3 = 75th percentile, Q1 = 25th'
+  formula_zh: '四分位距 = Q3 − Q1
+
+    Q3 = 第75百分位数，Q1 = 第25百分位数'
+  formula_zh_hk: '四分位距 = Q3 − Q1
+
+    Q3 = 第75百分位數，Q1 = 第25百分位數'
+  s1_en: 'Percentiles divide ordered data into relative positions. Quartiles are special percentile landmarks: Q1 is the 25th percentile and Q3 is the 75th percentile.'
+  s1_zh: 百分位数把有序数据划分为相对位置。四分位数是特殊的百分位界标：Q1是第25百分位数，Q3是第75百分位数。
+  s1_zh_hk: 百分位數將有序數據劃分成相對位置。四分位數係特殊嘅百分位界標：Q1係第25百分位數，Q3係第75百分位數。
+  s2_en: The interquartile range is Q3 minus Q1. Rather than deleting observations, it focuses measurement on the middle 50% bounded by these two quartiles, a region often used to summarize routine operating conditions.
+  s2_zh: 四分位距等于Q3减去Q1。它并不是删除观测值，而是把度量重点放在由两个四分位数界定的中间50%，这个区域常用于概括常规运营状况。
+  s2_zh_hk: 四分位距等於Q3減去Q1。佢並唔係刪除觀測值，而係將度量重點放喺由兩個四分位數界定嘅中間50%，呢個區域常用嚟概括常規營運狀況。
+- id: calc
+  visual: steps
+  seconds: 36
+  kicker: Step by Step
+  kicker_en: Step by Step
+  kicker_zh: 计算步骤
+  kicker_zh_hk: 計算步驟
+  title_en: Measuring the middle spread
+  title_zh: 测量中间50%的跨度
+  title_zh_hk: 測量中間50%嘅跨度
+  step1_en: Find Q1 boundary
+  step1_zh: 锁定 Q1 分界点
+  step1_zh_hk: 鎖定 Q1 分界點
+  step2_en: Find Q3 boundary
+  step2_zh: 锁定 Q3 分界点
+  step2_zh_hk: 鎖定 Q3 分界點
+  step3_en: Subtract Q1 from Q3
+  step3_zh: 用 Q3 减去 Q1
+  step3_zh_hk: 用 Q3 減去 Q1
+  s1_en: 'Step one: use the five street-store volumes 280, 310, 360, 390, and 420. Under the nearest-rank convention used with that file, Q1 is the 310-cup observation.'
+  s1_zh: 第一步：使用五家街店的销量 280、310、360、390 和 420。按该文件所用的最近名次约定，Q1 是 310 杯那个观测。
+  s1_zh_hk: 第一步：使用五間街舖嘅銷量 280、310、360、390 同 420。按該檔案所用嘅最近名次約定，Q1 係 310 杯嗰個觀測。
+  s2_en: 'Step two: under the same convention, Q3 is the 390-cup observation. Another software rule can move the quartile, so the method has to travel with the number.'
+  s2_zh: 第二步：按同一约定，Q3 是 390 杯那个观测。另一种软件规则可能移动四分位数，所以方法必须和数字一起报告。
+  s2_zh_hk: 第二步：按同一約定，Q3 係 390 杯嗰個觀測。另一種軟件規則可能移動四分位數，所以方法一定要同數字一齊報告。
+  s3_en: 'Step three: subtract Q1 from Q3. The IQR is 390 minus 310, or 80 cups. This is the width of the middle 50% under the stated convention, not a claim that every ordinary store varies by 80 cups.'
+  s3_zh: 第三步：用Q3减去Q1。IQR为390减310，即80杯。这是在所说明约定下中间50%的宽度，并不表示每家普通门店都会波动80杯。
+  s3_zh_hk: 第三步：用Q3減去Q1。IQR係390減310，即80杯。呢個係喺所講明約定下中間50%嘅寬度，並唔代表每間普通門店都會波動80杯。
+- id: power
+  visual: two_column
+  seconds: 36
+  kicker: Why It Is Robust
+  kicker_en: Why It Is Robust
+  kicker_zh: 为何较稳健
+  kicker_zh_hk: 點解較穩健
+  title_en: Less sensitive to extreme endpoints
+  title_zh: 对极端端点较不敏感
+  title_zh_hk: 對極端端點較不敏感
+  left_en: Airport sells 4,200 cups
+  left_zh: 机场店售出 4,200 杯
+  left_zh_hk: 機場舖售出 4,200 杯
+  right_en: 'Middle IQR: 80 cups'
+  right_zh: 中间IQR：80杯
+  right_zh_hk: 中間IQR：80杯
+  s1_en: Now consider the 24-hour Airport branch at 4,200 cups. That value dramatically changes the maximum and therefore the range.
+  s1_zh: 现在考虑销量4,200杯的24小时机场店。这个数值会大幅改变最大值，因此也会大幅改变极差。
+  s1_zh_hk: 而家考慮銷量4,200杯嘅24小時機場舖。呢個數值會大幅改變最大值，所以亦會大幅改變全距。
+  s2_en: Because the IQR is determined by quartile boundaries around the middle half, one isolated extreme observation often has much less influence than it has on the range.
+  s2_zh: 由于IQR由围绕中间一半的四分位边界决定，单个孤立的极端观测值通常不像影响极差那样强烈地影响IQR。
+  s2_zh_hk: 由於IQR由圍繞中間一半嘅四分位邊界決定，單一孤立嘅極端觀測值通常唔會好似影響全距噉強烈影響IQR。
+  s3_en: But robust does not mean immune. If the dataset, number of extreme observations, or quartile convention changes, Q1, Q3, and the IQR may also change.
+  s3_zh: 但稳健并不表示完全免疫。如果数据集、极端观测值的数量或四分位数约定改变，Q1、Q3与IQR也可能改变。
+  s3_zh_hk: 但穩健並唔代表完全免疫。如果數據集、極端觀測值嘅數量或者四分位數約定改變，Q1、Q3同IQR亦可能改變。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: Decision Rule
+  kicker_en: Decision Rule
+  kicker_zh: 商业法则
+  kicker_zh_hk: 商業法則
+  title_en: Use IQR to inform routine operating bands
+  title_zh: 用IQR辅助设定常规运营区间
+  title_zh_hk: 用IQR輔助設定常規營運區間
+  q1_en: What does the IQR tell headquarters?
+  q1_zh: IQR 告诉了总部什么信息？
+  q1_zh_hk: IQR 話咗畀總部知咩資訊？
+  q2_en: Why pair IQR with other measures?
+  q2_zh: 为什么要把IQR与其他指标结合？
+  q2_zh_hk: 點解要將IQR同其他指標結合？
+  s1_en: The IQR can help managers describe routine demand spread and inform staffing bands or inventory buffers for comparable street stores.
+  s1_zh: IQR可以帮助管理者描述常规需求的离散程度，并为可比街头门店的排班区间或库存缓冲提供依据。
+  s1_zh_hk: IQR可以幫管理者描述常規需求嘅離散程度，並為可比街頭門店嘅排班區間或者庫存緩衝提供依據。
+  s2_en: It should not replace the range or operational investigation. The range reports the full observed span, while the IQR summarizes the middle half and may conceal important extreme events.
+  s2_zh: 它不应取代极差或运营调查。极差报告完整观测跨度，而IQR概括中间一半，也可能掩盖重要的极端事件。
+  s2_zh_hk: 佢唔應該取代全距或者營運調查。全距報告完整觀測跨度，而IQR概括中間一半，亦可能掩蓋重要嘅極端事件。
+  s3_en: 'The operating rule is precise: state the quartile convention, calculate Q3 minus Q1, interpret the result as the width of the middle 50%, and use it alongside measures of center and the outer boundaries.'
+  s3_zh: 经营规则很明确：说明四分位数约定，计算Q3减Q1，把结果解释为中间50%的宽度，并与中心指标及外围边界指标结合使用。
+  s3_zh_hk: 營運規則好清楚：講明四分位數約定，計算Q3減Q1，將結果解釋為中間50%嘅寬度，並同中心指標及外圍邊界指標一齊使用。

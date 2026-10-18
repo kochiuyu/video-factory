@@ -1,0 +1,133 @@
+id: GAME-M06-APP-02
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: The same plug
+title_zh: 同一只插头
+title_zh_hk: 同一隻插頭
+objective_en: A standard is coordination. Two Nash. A focal plug can tip one cell. Deletion will not.
+objective_zh: 标准是协调。两格纳什。一只显眼的插头可以推向一格。删除推不动。
+objective_zh_hk: 標準係協調。兩格納什。一隻顯眼嘅插頭可以推去一格。刪除推唔動。
+glossary:
+- en: coordination
+  zh: 协调
+  zh_hk: 協調
+  lock: true
+- en: focal point
+  zh: 焦点
+  zh_hk: 焦點
+  lock: true
+quiz:
+- id: Q1
+  type: transfer
+  en: Two phone makers pick a charger. What tool first?
+  zh: 两家手机制造商选充电器。先用哪样工具？
+  zh_hk: 兩間手機制造商揀充電器。先用邊樣工具？
+  answer_en: Best response, then Nash. Then a focal label if two cells remain.
+  answer_zh: 先最优反应，再纳什。还剩两格，再找焦点。
+  answer_zh_hk: 先最佳回應，再納什。仲剩兩格，再搵焦點。
+- id: Q2
+  type: transfer
+  en: Why can a regulator's label tip the standard?
+  zh: 为什么监管的标签推得动标准？
+  zh_hk: 點解監管嘅標籤推得動標準？
+  answer_en: Both want to match. The label is a landmark both can see.
+  answer_zh: 两边都想用同一只插头。标签是两边都看得见的地标。
+  answer_zh_hk: 兩邊都想用同一隻插頭。標籤係兩邊都睇得見嘅地標。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: The same plug
+  title_zh: 同一只插头
+  title_zh_hk: 同一隻插頭
+  en: Two firms each pick a charger. Customers hate two plugs in one bag. Each firm takes home more if they match. That is the wide path, with a cable instead of a side.
+  zh: 两家公司各选一种充电器。客人讨厌包里两只插头。用同一只，两家带走的都更多。就是那条宽路，侧换成了线。
+  zh_hk: 兩間公司各揀一種充電器。客人討厭袋入面兩隻插頭。用同一隻，兩間袋走嘅都更多。就係嗰條闊路，側換成咗線。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Match is Nash twice
+  title_zh: 跟上，两次都是纳什
+  title_zh_hk: 跟上，兩次都係納什
+  formula: Both plugs can be Nash. Deletion will not pick.
+  formula_en: Both plugs can be Nash. Deletion will not pick.
+  formula_zh: 两只插头都可以是纳什。删除选不出来。
+  formula_zh_hk: 兩隻插頭都可以係納什。刪除揀唔出。
+  gloss_en: Store hours and software platforms look the same.
+  gloss_zh: 营业时间和软件平台，也是这样。
+  gloss_zh_hk: 營業時間同軟件平台，都係噉。
+  en: Here is the idea. Plug A with Plug A is Nash. Plug B with Plug B is Nash. Neither dominates. Two malls choosing the same late hours, or two apps on the same login, use the same table.
+  zh: 核心就这一句。插头甲对插头甲是纳什。插头乙对插头乙也是纳什。谁也不占优。两家商场选同一个晚间营业时间，或两个应用同一套登录，用的是同一张表。
+  zh_hk: 核心就呢一句。插頭甲對插頭甲係納什。插頭乙對插頭乙都係納什。邊個都唔佔優。兩間商場揀同一個夜晚營業時間，或兩個應用同一套登入，用嘅係同一張表。
+- id: example
+  visual: example
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: A label on the plug
+  title_zh: 插头上的标签
+  title_zh_hk: 插頭上面嘅標籤
+  setup_en: A rule or a big brand already uses one plug.
+  setup_zh: 一条规则，或一个大牌子，已经在用其中一只。
+  setup_zh_hk: 一條規則，或一個大牌，已經喺度用其中一隻。
+  result_en: That is the shady side. The other Nash cell is still there.
+  result_zh: 那就是有荫的一侧。另一格纳什还在。
+  result_zh_hk: 嗰啲就係有蔭嗰一側。另一格納什仲喺。
+  en: A rule, or a brand everyone already carries, is a focal point. It does not delete the other plug. It makes one Nash cell easier to find, like shade on the Left.
+  zh: 一条规则，或人人已经带着的品牌，就是焦点。它不删掉另一只插头。它只是让其中一格纳什更好找，像左边的荫。
+  zh_hk: 一條規則，或人人已經帶住嘅品牌，就係焦點。佢唔刪走另一隻插頭。佢淨係等其中一格納什更好搵，好似左邊嘅蔭。
+- id: compare
+  visual: two_column
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Hours, and platforms
+  title_zh: 营业时间，和平台
+  title_zh_hk: 營業時間，同平台
+  left_en: Two shops on a street pick 8pm or 10pm close.
+  left_zh: 一条街上两家店，选八点关或十点关。
+  left_zh_hk: 一條街兩間店，揀八點關定十點關。
+  right_en: Two software tools pick the same file type.
+  right_zh: 两个软件工具选同一种文件格式。
+  right_zh_hk: 兩個軟件工具揀同一種檔案格式。
+  en: Closing hours and file types are the same shape. Customers want one answer. Cheap talk can work when lying does not pay. I will close at ten is like I will sit Left.
+  zh: 打烊时间和文件格式，形状一样。客人想要一个答案。说谎没有好处时，便宜的话有用。我十点关，就像我停左边。
+  zh_hk: 關門時間同檔案格式，形狀一樣。客人想要一個答案。講大话冇好處嗰陣，平嘅說話有用。我十點關，就好似我停左邊。
+- id: takeaway
+  visual: takeaway
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Two cells, then a label
+  title_zh: 先两格，再标签
+  title_zh_hk: 先兩格，再標籤
+  q1_en: A standard is coordination.
+  q1_zh: 标准是协调。
+  q1_zh_hk: 標準係協調。
+  q2_en: A focal plug tips. It does not delete.
+  q2_zh: 焦点插头是推，不是删。
+  q2_zh_hk: 焦點插頭係推，唔係刪。
+  en: Mark both Nash cells. Then look for a label. Next one slot that two firms cannot both take. Talk will not be cheap.
+  zh: 两格纳什都标上。再找标签。接下来一个名额，两家不能一起占。话就不会便宜。
+  zh_hk: 兩格納什都標上。再搵標籤。跟住一個名額，兩間唔可以一齊佔。話就唔會平。

@@ -1,0 +1,170 @@
+id: STAT-M07-T06-DTRAP
+course: STAT-M07
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: The Dummy Variable Trap & Base Categories
+title_zh: 虚拟变量陷阱与基准参照组
+title_zh_hk: 虛擬變量陷阱與基準參照組
+objective_en: Identify the dummy variable trap, demonstrate how perfect collinearity causes singular matrix inversion failure, and apply the n minus one rule to select reference categories.
+objective_zh: 识别虚拟变量陷阱，阐明完全多重共线性如何引发奇异矩阵求逆崩溃，并运用 n 减 1 准则合理设定基准参照组。
+objective_zh_hk: 識別虛擬變量陷阱，闡明完全多重共線性點樣引致奇異矩陣求逆崩潰，並運用 n 減 1 準則合理設定基準參照組。
+glossary:
+- en: Dummy Variable Trap
+  zh: 虚拟变量陷阱
+  zh_hk: 虛擬變量陷阱
+  lock: true
+  zh_zh_hk: 虛擬變量陷阱
+- en: Perfect Multicollinearity
+  zh: 完全多重共线性
+  zh_hk: 完全多重共線性
+  lock: true
+  zh_zh_hk: 完全多重共線性
+- en: Singular Design Matrix
+  zh: 奇异设计矩阵
+  zh_hk: 奇異設計矩陣
+  lock: true
+  zh_zh_hk: 奇異設計矩陣
+- en: Base Category
+  zh: 基准类别
+  zh_hk: 基準類別
+  lock: true
+  zh_zh_hk: 基準類別
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: What mathematical error occurs if a regression model with an intercept beta_0 simultaneously includes separate dummy variables for all m categorical groups?
+  question_zh: 若一个包含常数截距项 beta_0 的回归模型同时纳入了所有 m 个分类组别的独立虚拟变量，会触发何种数学错误？
+  question_zh_hk: 如果一個包含常數截距項 beta_0 嘅回歸模型，同時納入晒所有 m 個分類組別嘅獨立虛擬變量，會引發咩數學錯誤？
+  options_en:
+  - 'A: The sum of the dummy columns perfectly equals the constant column (1.0), making matrix (X''X) non-invertible due to perfect multicollinearity'
+  - 'B: The sample size n is mechanically reduced to zero'
+  - 'C: Residual variance s_e becomes strictly infinite'
+  - 'D: The coefficient of determination R-squared becomes strictly negative'
+  options_zh:
+  - 'A: 所有虚拟变量列的总和严格等于常数截距列（1.0），引发完全多重共线性，导致矩阵 (X''X) 奇异而无法求逆'
+  - 'B: 样本容量 n 在计算上被机械性扣减为零'
+  - 'C: 残差方差 s_e 在数值上必然趋于正无穷大'
+  - 'D: 判定系数 R平方 在数值上必定变为负数'
+  options_zh_hk:
+  - 'A: 所有虛擬變量列加埋啱啱好等於常數截距列（1.0），引發完全多重共線性，搞到矩陣 (X''X) 奇異而無法求逆'
+  - 'B: 樣本容量 n 喺計算上被機械式扣減到變零'
+  - 'C: 殘差方差 s_e 喺數值上必然趨向正無限大'
+  - 'D: 判定系數 R平方 喺數值上必定變成負數'
+  answer: A
+  explanation_en: When all m dummies are included alongside an intercept, Sum(D_k) = 1.0 for every observation. This perfect linear relationship creates a singular X'X design matrix that cannot be inverted by OLS.
+  explanation_zh: 当在常数项之外同时引入全部 m 个虚拟变量时，每个样本点的虚拟变量和恒等于 1.0。这种完全线性相关使设计矩阵 X'X 出现奇异性，导致 OLS 无法完成矩阵求逆。
+  explanation_zh_hk: 當喺常數項之外同時擺入晒全部 m 個虛擬變量嗰陣，每個樣本點嘅虛擬變量總和必然等於 1.0。呢種完全線性相關令設計矩陣 X'X 產生奇異性，搞到 OLS 根本逆唔到矩陣。
+- id: Q2
+  type: multiple_choice
+  question_en: 'Metro Coffee categorizes branches into three distinct formats: Street, Mall, and Office. How many dummy indicator variables should be entered into a standard regression model containing an intercept?'
+  question_zh: Metro Coffee 将门店划分为三种独立业态：街边店、商场店与办公楼店。在包含常数截距项的标准回归模型中，应输入多少个虚拟指示变量？
+  question_zh_hk: Metro Coffee 將分店劃分為三種獨立營運形態：街舖、商場舖同寫字樓舖。喺包含常數截距項嘅標準回歸模型入面，應該輸入幾多個虛擬指示變量？
+  options_en:
+  - 'A: Exactly 3 dummy variables'
+  - 'B: Exactly 2 dummy variables, omitting 1 format as the base category'
+  - 'C: Exactly 1 dummy variable'
+  - 'D: Exactly 6 dummy variables to account for cross-interactions'
+  options_zh:
+  - 'A: 恰好输入 3 个虚拟变量'
+  - 'B: 恰好输入 2 个虚拟变量，省略 1 种业态作为基准对照组'
+  - 'C: 恰好输入 1 个虚拟变量'
+  - 'D: 恰好输入 6 个虚拟变量以核算交叉交互项'
+  options_zh_hk:
+  - 'A: 啱啱好輸入 3 個虛擬變量'
+  - 'B: 啱啱好輸入 2 個虛擬變量，省略 1 種形態作為基準對照組'
+  - 'C: 啱啱好輸入 1 個虛擬變量'
+  - 'D: 啱啱好輸入 6 個虛擬變量用嚟核算交叉交互項'
+  answer: B
+  explanation_en: To avoid the dummy variable trap, an m-category qualitative attribute requires exactly m - 1 dummy variables in models with a constant intercept. Here, 3 - 1 = 2 dummies.
+  explanation_zh: 为避开虚拟变量陷阱，在包含截距的模型中，具有 m 个互斥分类的定性变量必须且仅能引入 m - 1 个虚拟变量。在此即 3 - 1 = 2 个。
+  explanation_zh_hk: 為咗避開虛擬變量陷阱，喺包含常數項嘅模型入面，擁有 m 個互斥分類嘅變量必須且只可以引入 m - 1 個虛擬變量。喺度即係 3 - 1 = 2 個。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Software Crash Dilemma
+  kicker_zh: 系统报错困境
+  kicker_zh_hk: 系統崩潰困局
+  title_en: Why Did Adding Branch Formats Crash the Model?
+  title_zh: 为何引入门店分类会导致算法彻底报错？
+  title_zh_hk: 點解入齊分店分類會搞到算法直接崩潰？
+  en: 'An analyst building Metro Coffee''s network sales model creates three binary indicator columns for our store formats: Street Store, Mall Store, and Office Store. Every single shop belongs to exactly one category. But when running OLS, the statistical software throws an immediate fatal error: Singular Matrix, Inversion Failed. How can perfectly organized business categories break a regression equation?'
+  zh: 分析师在搭建 Metro Coffee 销售模型时，为三种门店业态创建了三列二元虚拟变量：街边店、商场店和写字楼店。全网每家门店都清晰归入其中一类。然而在运行 OLS 时，统计软件却直接弹出致命报错：矩阵奇异，求逆失败。整整齐齐的商业分类，怎么会让数学算法彻底瘫痪？
+  zh_hk: 分析師喺建立 Metro Coffee 銷量模型嗰陣，為三種門市形態整咗三列二元虛擬變量：街舖、商場舖同寫字樓舖。全網每間分店都清清楚楚屬於其中一類。點知行 OLS 嗰陣，統計軟件即刻彈出致命錯誤：矩陣奇異，求逆失敗。排得整整齊齊嘅商業分類，點解會搞到數學算法徹底癱瘓？
+  zh_zh_hk: 分析師喺建立 Metro Coffee 銷量模型嗰陣，為三種門市形態整咗三列二元虛擬變量：街舖、商場舖同寫字樓舖。全網每間分店都清清楚楚屬於其中一類。點知行 OLS 嗰陣，統計軟件即刻彈出致命錯誤：矩陣奇異，求逆失敗。排得整整齊齊嘅商業分類，點解會搞到數學算法徹底癱瘓？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: 'Perfect Linear Dependency: Sum(D_k) = 1.0 = X_0 (Constant Intercept)'
+  formula_zh: 完全线性依赖：Sum(D_k) = 1.0 = X_0（常数截距列）
+  formula_zh_hk: 完全線性依賴：Sum(D_k) = 1.0 = X_0（常數截距列）
+  formula_tex: \sum_{k=1}^m D_{ki} = 1 = X_{0i} \implies \operatorname{rank}(\mathbf{X}) < p \implies \det(\mathbf{X}'\mathbf{X}) = 0
+  s1_en: The dummy variable trap occurs when an exhaustive set of categorical dummy variables is included in a model that already contains a constant intercept term. The sum of all dummy indicators perfectly equals one for every observation.
+  s1_zh: 虚拟变量陷阱是指在已包含常数截距项的模型中，同时引入了全套互斥分类的虚拟变量。对每一家门店而言，所有分类虚拟变量加总在数值上恒等于 1。
+  s1_zh_hk: 虛擬變量陷阱係指喺經已包含常數截距項嘅模型入面，同時塞入晒成套互斥分類嘅虛擬變量。對每一間分店嚟講，所有分類虛擬變量加埋喺數值上必定等於 1。
+  s2_en: Because the intercept column is also a vector of ones, one design-matrix column is an exact linear combination of the others. The design matrix is not full rank, so the usual inverse of X prime X does not exist and the full set of coefficients is not uniquely identified.
+  s2_zh: 由于截距列本身也是全为 1 的向量，设计矩阵中的一列可以由其他列精确线性表示。设计矩阵不满秩，因此 X'X 的通常逆矩阵不存在，完整系数集合无法被唯一识别。
+  s2_zh_hk: 由於截距列本身都係全為 1 嘅向量，設計矩陣其中一欄可以由其他欄精確線性表示。設計矩陣唔滿秩，所以 X'X 嘅一般逆矩陣唔存在，完整系數組合無法被唯一識別。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: The m Minus One Rule
+  left_zh: m 减 1 基准法则
+  right_en: Relative Interpretation
+  right_zh: 相对基准参数解读
+  s1_en: For the standard parameterization with an intercept and m mutually exclusive, exhaustive categories, include m minus one dummy variables. The omitted category becomes the reference group. Equivalent full-rank parameterizations are possible, but the intercept-plus-all-dummies specification is not.
+  s1_zh: 在包含截距且类别互斥并穷尽全部观测的标准参数化中，m 个类别应放入 m 减 1 个虚拟变量，省略的类别成为基准组。其他满秩参数化也可以使用，但不能同时保留截距与全部虚拟变量。
+  s1_zh_hk: 喺包含截距，而且類別互斥並涵蓋全部觀測值嘅標準參數化入面，m 個類別應放入 m 減 1 個虛擬變量，省略嘅類別成為基準組。其他滿秩參數化亦可以使用，但唔可以同時保留截距同全部虛擬變量。
+  s2_en: Omitting one dummy removes the exact linear dependency. The intercept then represents the expected outcome for the reference category when the other regressors equal zero, while each retained dummy coefficient measures a conditional difference from that reference.
+  s2_zh: 省略一个虚拟变量可消除精确线性依赖。此时，截距表示其他自变量等于零时基准类别的预期结果；每个保留的虚拟变量系数表示相对于基准组的条件差异。
+  s2_zh_hk: 省略一個虛擬變量可以消除精確線性依賴。呢個時候，截距代表其他自變量等於零時基準類別嘅預期結果；每個保留嘅虛擬變量系數就代表相對於基準組嘅條件差異。
+  s3_en: A positive retained coefficient means the fitted outcome is higher than the reference category, conditional on the included controls. A negative coefficient means it is lower. These are model-based differences, not automatic causal effects.
+  s3_zh: 在控制模型中已纳入变量的条件下，保留系数为正表示拟合结果高于基准类别，为负则表示低于基准类别。这些是模型条件差异，并非自动成立的因果效应。
+  s3_zh_hk: 喺控制模型已納入變量嘅條件之下，保留系數為正表示擬合結果高過基準類別，為負就表示低過基準類別。呢啲係模型條件差異，唔係自動成立嘅因果效應。
+  left_zh_hk: m 減 1 基準法則
+  right_zh_hk: 相對基準參數解讀
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Audit Three Formats
+  step1_zh: 梳理三类业态分类
+  step2_en: Drop Reference Base
+  step2_zh: 剔除基准对照组
+  step3_en: Estimate Relative Shifts
+  step3_zh: 解算相对截距位移
+  s1_en: 'Step one: Metro Coffee uses three mutually exclusive store formats: Street, Office, and Mall. With an intercept present, including all three dummy columns makes their sum identical to the intercept column.'
+  s1_zh: 第一步：Metro Coffee 使用三种互斥的门店业态：街边店、写字楼店和商场店。模型含有截距时，三个虚拟变量列之和与截距列完全相同。
+  s1_zh_hk: 第一步：Metro Coffee 使用三種互斥嘅門市形態：街舖、寫字樓店同商場店。模型包含截距時，三個虛擬變量欄加埋同截距欄完全一樣。
+  s2_en: 'Step two: Apply the m minus one rule. Select Street store as the base category and drop its dummy column, keeping only D_Mall and D_Office in the design matrix.'
+  s2_zh: 第二步：应用 m 减 1 准则。选取街边店作为基准参照组并剔除其虚拟变量列，在设计矩阵中仅保留商场店 D_Mall 与写字楼店 D_Office。
+  s2_zh_hk: 第二步：應用 m 減 1 準則。選取街舖作為基準參照組並抽走佢嘅虛擬變量列，喺設計矩陣入面淨係保留商場店 D_Mall 同寫字樓店 D_Office。
+  s3_en: 'Step three: The fitted model is Daily_Cups = 200 + 0.30 times Footfall + 40 times D_Mall + 80 times D_Office. At the same footfall, the fitted conditional differences are 40 cups for Mall versus Street and 80 cups for Office versus Street.'
+  s3_zh: 第三步：拟合模型为：出杯量 = 200 + 0.30 乘以客流 + 40 乘以商场店变量 + 80 乘以写字楼店变量。在客流相同的条件下，商场店相对街边店的拟合差异为 40 杯，写字楼店相对街边店的拟合差异为 80 杯。
+  s3_zh_hk: 第三步：擬合模型係：出杯量 = 200 + 0.30 乘以人流 + 40 乘以商場店變量 + 80 乘以寫字樓店變量。喺人流相同嘅條件之下，商場店相對街舖嘅擬合差異係 40 杯，寫字樓店相對街舖嘅擬合差異係 80 杯。
+  step1_zh_hk: 梳理三類營運形態
+  step2_zh_hk: 抽走基準對照組
+  step3_zh_hk: 解算相對截距位移
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Why Must We Drop a Dummy?
+  q1_zh: 为何必须主动剔除一个虚拟变量？
+  q2_en: 'Audit Rule: Count Levels, Enter m-1'
+  q2_zh: 审计准则：核点分类总数，坚守 m 减 1
+  s1_en: The dummy variable trap is exact linear dependence created by combining an intercept with a complete set of mutually exclusive, exhaustive dummies. The problem is identification, not the business categories themselves.
+  s1_zh: 虚拟变量陷阱是由截距与一整套互斥且穷尽类别的虚拟变量共同造成的精确线性依赖。问题在于参数识别，而不在于商业分类本身。
+  s1_zh_hk: 虛擬變量陷阱係由截距同一整套互斥兼涵蓋全部類別嘅虛擬變量共同造成嘅精確線性依賴。問題在於參數識別，而唔係商業分類本身。
+  s2_en: 'Decision rule: with an intercept and m exhaustive categories, encode m minus one dummies and document the omitted reference category. Choose the reference for interpretability, because changing it alters coefficient comparisons but not the fitted values.'
+  s2_zh: 决策规则：当模型包含截距和 m 个穷尽类别时，编码 m 减 1 个虚拟变量，并明确记录被省略的基准类别。基准组应便于解读，因为更换基准组会改变系数比较方式，但不会改变拟合值。
+  s2_zh_hk: 決策規則：當模型包含截距同 m 個涵蓋全部觀測嘅類別時，編碼 m 減 1 個虛擬變量，並清楚記錄被省略嘅基準類別。基準組應該方便解讀，因為更換基準組會改變系數比較方式，但唔會改變擬合值。
+  s3_en: For Street, Mall, and Office formats, keep two dummy columns when an intercept is included. Using Street as the reference makes the fitted 40-cup and 80-cup coefficients conditional differences for Mall and Office relative to Street.
+  s3_zh: 对于街边店、商场店和写字楼店三个类别，模型含截距时保留两个虚拟变量。以街边店为基准后，40 杯和 80 杯系数分别表示商场店和写字楼店相对于街边店的条件拟合差异。
+  s3_zh_hk: 對於街舖、商場店同寫字樓店三個類別，模型包含截距時保留兩個虛擬變量。以街舖做基準之後，40 杯同 80 杯系數分別代表商場店同寫字樓店相對街舖嘅條件擬合差異。
+  q1_zh_hk: 點解必須主動抽走一個虛擬變量？
+  q2_zh_hk: 審計準則：數清分類總數，堅持 m 減 1

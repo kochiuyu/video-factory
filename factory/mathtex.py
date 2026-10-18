@@ -50,14 +50,6 @@ def tex_field(beat: dict, code: str) -> str:
         val = (beat.get(key) or "").strip()
         if val:
             return val
-    plain = (
-        beat.get(f"formula_{code}")
-        or beat.get("formula_zh" if code in {"zh", "zh_cn"} else f"formula_{code}")
-        or beat.get("formula")
-        or ""
-    ).strip()
-    if looks_like_tex(plain):
-        return plain
     return ""
 
 

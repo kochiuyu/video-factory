@@ -1,0 +1,293 @@
+id: STAT-M01-T02-MEAN
+course: statistics
+course_en: Business Statistics
+course_zh: 商务统计
+course_zh_hk: 商務統計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 306
+title_en: What is the mean?
+title_zh: 什么是平均数？
+title_zh_hk: 咩係平均數？
+objective_en: Find one number that summarizes four shops, compute it as the total divided by the number of shops, and show that the signed deviations from it add up to zero. It is not generally the midpoint of the smallest and largest values, and it does not describe each shop.
+objective_zh: 找出一个概括四家店的数，把它算成总数除以门店数，并说明离它的带符号离差加起来等于零。它一般不是最小值和最大值的中点，也不描述每一家店。
+objective_zh_hk: 搵出一個概括四間店嘅數，將佢計成總數除以門店數，並說明離佢嘅帶符號離差加起嚟等於零。佢一般唔係最小值同最大值嘅中點，亦唔描述每一間店。
+glossary:
+- en: mean
+  zh: 平均数
+  zh_hk: 平均數
+  lock: true
+- en: average
+  zh: 平均数
+  zh_hk: 平均數
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Four shops sold 250, 300, 350, and 500 cups. Why is their mean 350?
+  question_zh: 四家店卖了250、300、350和500杯。为什么它们的平均数是350？
+  question_zh_hk: 四間店賣咗250、300、350同500杯。點解佢哋嘅平均數係350？
+  options_en:
+  - 'A: The signed deviations from 350 add up to zero. The left sum equals the right sum.'
+  - 'B: 350 is halfway between 250 and 500.'
+  - 'C: 350 is what every shop sold.'
+  - 'D: 350 is the busiest shop.'
+  options_zh:
+  - 'A: 离350的带符号离差加起来等于零。左边之和等于右边之和。'
+  - 'B: 350是250和500的正中间。'
+  - 'C: 350是每家店卖出的杯数。'
+  - 'D: 350是最忙的那家店。'
+  options_zh_hk:
+  - 'A: 離350嘅帶符號離差加起嚟等於零。左邊之和等於右邊之和。'
+  - 'B: 350係250同500嘅正中間。'
+  - 'C: 350係每間店賣出嘅杯數。'
+  - 'D: 350係最忙嗰間店。'
+  answer: A
+  explanation_en: The signed deviations from 350 are minus 100, minus 50, zero, and plus 150, so they add up to zero. Equivalently, the 150 cups below 350 balance the 150 cups above it. Halfway between 250 and 500 is 375, not 350. The mean is not generally the midpoint of the smallest and largest values.
+  explanation_zh: 离350的带符号离差是负100、负50、0和正150，所以它们的和等于零。换一种说法，350以下的150杯与350以上的150杯互相平衡。250和500的中点是375，不是350。平均数一般不是最小值和最大值的中点。
+  explanation_zh_hk: 離350嘅帶符號離差係負100、負50、0同正150，所以佢哋嘅和等於零。換句話講，350以下嘅150杯同350以上嘅150杯互相平衡。250同500嘅中點係375，唔係350。平均數一般唔係最小值同最大值嘅中點。
+- id: Q2
+  type: multiple_choice
+  question_en: Three other shops sold 200, 300, and 700 cups. What is their mean?
+  question_zh: 另外三家店卖了200、300和700杯。它们的平均数是多少？
+  question_zh_hk: 另外三間店賣咗200、300同700杯。佢哋嘅平均數係幾多？
+  options_en:
+  - 'A: 400, because 1,200 divided by 3 is 400.'
+  - 'B: 450, because it is halfway between 200 and 700.'
+  - 'C: 300, because it is the middle observation.'
+  - 'D: 700, because it is the largest observation.'
+  options_zh:
+  - 'A: 400，因为1,200除以3等于400。'
+  - 'B: 450，因为它是200和700的正中间。'
+  - 'C: 300，因为它是中间的那个观测。'
+  - 'D: 700，因为它是最大的那个观测。'
+  options_zh_hk:
+  - 'A: 400，因為1,200除以3等於400。'
+  - 'B: 450，因為佢係200同700嘅正中間。'
+  - 'C: 300，因為佢係中間嗰個觀測。'
+  - 'D: 700，因為佢係最大嗰個觀測。'
+  answer: A
+  explanation_en: 200 plus 300 plus 700 is 1,200. Divide by 3 and the mean is 400. Halfway between 200 and 700 is 450. The middle observation is 300. Neither of those is the mean.
+  explanation_zh: 200加300加700等于1,200。除以3，平均数是400。200和700的正中间是450。中间的观测是300。这两个都不是平均数。
+  explanation_zh_hk: 200加300加700等於1,200。除以3，平均數係400。200同700嘅正中間係450。中間嘅觀測係300。呢兩個都唔係平均數。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 42
+  kicker: The Question
+  kicker_en: The Question
+  kicker_zh: 业务问题
+  kicker_zh_hk: 業務問題
+  title_en: What is the mean?
+  title_zh: 什么是平均数？
+  title_zh_hk: 咩係平均數？
+  en: Imagine you manage four coffee shops. On Monday, each sold a different number of cups. Head office asks for one number that shows how the group is doing overall. So which figure do you give them? If you only use the busiest shop, the group looks stronger than it really is. If you only use the quietest, it looks weaker. What number fairly represents all four shops? Let's look at them.
+  zh: 假设你管着四家咖啡店。星期一，每家卖出的杯数都不一样。总部要一个数，想知道整体卖得怎么样。你给他们哪个数呢？如果只用最忙的那家，整体看起来会比实际好。如果只用最清闲的那家，又会看起来更差。到底哪个数才能公平地代表这四家店？我们来看看。
+  zh_hk: 假設你管緊四間咖啡店。星期一，每間賣出嚟嘅杯數都唔同。總部要一個數，想知道整體賣得點樣。你畀佢哋邊個數呢？如果只用最忙嗰間，整體睇起嚟會好過實際。如果只用最清閒嗰間，又會睇起嚟更差。到底邊個數先可以公平代表呢四間店？我哋嚟睇吓。
+- id: data
+  visual: series
+  reveal: cells
+  seconds: 40
+  cols: 4
+  kicker: The File
+  kicker_en: The File
+  kicker_zh: 四家店
+  kicker_zh_hk: 四間店
+  title_en: Four coffee shops. Four Monday counts.
+  title_zh: 四家咖啡店，星期一四个杯数
+  title_zh_hk: 四間咖啡店，星期一四個杯數
+  row1_en: Cups sold
+  row1_zh: 卖出杯数
+  row1_zh_hk: 賣出杯數
+  row2_en: Equal share
+  row2_zh: 平分
+  row2_zh_hk: 平分
+  col1_en: Shop A
+  col1_zh: A店
+  col1_zh_hk: A店
+  col2_en: Shop B
+  col2_zh: B店
+  col2_zh_hk: B店
+  col3_en: Shop C
+  col3_zh: C店
+  col3_zh_hk: C店
+  col4_en: Shop D
+  col4_zh: D店
+  col4_zh_hk: D店
+  c11: "250"
+  c12: "300"
+  c13: "350"
+  c14: "500"
+  c21: "350"
+  c22: "350"
+  c23: "350"
+  c24: "350"
+  footer_en: Total = 1,400
+  footer_zh: 合计 = 1,400
+  footer_zh_hk: 合計 = 1,400
+  s1_en: Here are the four coffee shops, and the cups each sold on Monday. Shop A sold 250 cups. Shop B sold 300. Shop C sold 350. And Shop D sold 500. Which of these should the manager use for the whole group?
+  s1_zh: 这就是四家咖啡店，以及星期一各自卖出的杯数。A店卖了250杯，B店卖了300杯，C店卖了350杯，D店卖了500杯。经理该用哪一个来代表整个组呢？
+  s1_zh_hk: 呢個就係四間咖啡店，同埋星期一各自賣出嚟嘅杯數。A店賣咗250杯，B店賣咗300杯，C店賣咗350杯，D店賣咗500杯。經理應該用邊一個嚟代表成個組呢？
+  s2_en: First, let's see what happens if we just pick one end. If we copied Shop D and used 500 for every shop, we would be planning for 2,000 cups. But the four shops only sold 1,400. If we used Shop A's 250 for every shop, we would only get 1,000 — 400 short. Neither extreme keeps the real total.
+  s2_zh: 先看看如果只挑一端会怎样。如果照抄D店，每家都按500杯算，那就是2,000杯。但四家店实际只卖了1,400杯。如果每家都用A店的250杯，只会得到1,000杯，少了400杯。两个极端都保不住真实的总数。
+  s2_zh_hk: 先睇吓如果只揀一端會點。如果照抄D店，每間都按500杯計，嗰個就係2,000杯。但四間店實際只賣咗1,400杯。如果每間都用A店嘅250杯，只會得到1,000杯，少咗400杯。兩個極端都保唔住真正嘅總數。
+  s3_en: So what number does keep the total? Think of it like sharing a bill fairly among friends. We take the total of 1,400 and divide it equally by the four shops. Each share is 350. And four times 350 still equals 1,400. The total is preserved.
+  s3_zh: 那么哪个数能保住总数呢？就好像朋友一起公平分摊账单一样。我们把1,400平均分给四家店，每份是350。350乘以4还是1,400，总数就保住了。
+  s3_zh_hk: 咁邊個數可以保住總數呢？就好似朋友一齊公平分攤帳單一樣。我哋將1,400平均分畀四間店，每份係350。350乘4都係1,400，總數就保住咗。
+- id: arithmetic
+  visual: steps
+  seconds: 40
+  kicker: The Sum
+  kicker_en: The Sum
+  kicker_zh: 相加
+  kicker_zh_hk: 相加
+  title_en: Add the cups, then share them
+  title_zh: 先把杯数相加，再平分
+  title_zh_hk: 先將杯數相加，再平分
+  step1_en: "250 + 300 + 350 + 500 = 1,400"
+  step1_zh: "250 + 300 + 350 + 500 = 1,400"
+  step1_zh_hk: "250 + 300 + 350 + 500 = 1,400"
+  step2_en: "Four shops"
+  step2_zh: "四家店"
+  step2_zh_hk: "四間店"
+  step3_en: "1,400 / 4 = 350 cups"
+  step3_zh: "1,400 / 4 = 350 杯"
+  step3_zh_hk: "1,400 / 4 = 350 杯"
+  step4_en: "4 × 350 = 1,400. The total is kept."
+  step4_zh: "4 × 350 = 1,400。总数还在。"
+  step4_zh_hk: "4 × 350 = 1,400。總數仲喺度。"
+  s1_en: The total we just used is 1,400. Let's confirm how those four numbers add up to it. 250 plus 300 plus 350 plus 500 comes to 1,400 cups. That's everything the four shops sold together.
+  s1_zh: 我们刚才用的总数是1,400。我们来确认这四个数是怎么加到它的。250加300加350加500，等于1,400杯。这就是四家店卖出的全部。
+  s1_zh_hk: 我哋啱先用嘅總數係1,400。我哋嚟確認吓呢四個數係點加到佢嘅。250加300加350加500，等於1,400杯。呢個就係四間店賣出嘅全部。
+  s2_en: Now, why do we divide? Because we want an equal share of that total. 1,400 divided by 4 is 350. That equal share is the average, or the mean. It's the amount each shop would have sold if the total had been shared evenly.
+  s2_zh: 为什么要除呢？因为我们想要总数的平均份额。1,400除以4等于350。这个平均份额就是平均数。如果总数被平均分享，每家店就会卖出这么多。
+  s2_zh_hk: 點解要除呢？因為我哋想要總數嘅平均份額。1,400除以4等於350。呢個平均份額就係平均數。如果總數被平均分享，每間店就會賣出咁多。
+  s3_en: Does this preserve the total? Four times 350 is still 1,400, so yes. But is 350 the halfway point between the smallest and largest? Halfway between 250 and 500 is 375, not 350. The mean is not the midpoint of the extremes. The formula records exactly this equal-share calculation.
+  s3_zh: 这样能保住总数吗？350乘以4还是1,400，所以可以。但350是最小值和最大值的正中间吗？250和500的中点是375，不是350。平均数并不是两端的中点。公式记下的就是这个平分的计算。
+  s3_zh_hk: 咁樣可以保住總數嗎？350乘4都係1,400，所以可以。但350係最小值同最大值嘅正中間嗎？250同500嘅中點係375，唔係350。平均數並唔係兩端嘅中點。公式記低嘅就係呢個平分嘅計算。
+- id: formula
+  visual: steps
+  seconds: 52
+  kicker: The Formula
+  kicker_en: The Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Name the shops, then add, then share
+  title_zh: 先给门店编号，再相加，再平分
+  title_zh_hk: 先畀門店編號，再相加，再平分
+  step1_en: "x₁, x₂, x₃, x₄ are the four cup counts"
+  step1_zh: "x₁、x₂、x₃、x₄ 是四家店的杯数"
+  step1_zh_hk: "x₁、x₂、x₃、x₄ 係四間店嘅杯數"
+  step2_en: "n is how many shops: here, 4"
+  step2_zh: "n 是有多少家店：这里是 4"
+  step2_zh_hk: "n 係有幾多間店：呢度係 4"
+  step3_en: "Σ means add every x"
+  step3_zh: "Σ 表示把每一个 x 加起来"
+  step3_zh_hk: "Σ 表示將每一個 x 加起嚟"
+  step4_en: "x̄ = Σ xᵢ / n"
+  step4_zh: "x̄ = Σ xᵢ / n"
+  step4_zh_hk: "x̄ = Σ xᵢ / n"
+  s1_en: "The formula is a short way to write the equal share. First, the shops. We label them x with a small number: x one is Shop A's 250, x two is 300, x three is 350, x four is 500. The little number just says which shop. In general we write x one, x two, up to x n — one label for each shop."
+  s1_zh: "公式是平分的简写。先看门店。我们用带小数字的 x 来标记：x一是A店的250，x二是300，x三是350，x四是500。小数字只是说哪一家店。一般写成 x一、x二，一直到 x n，每家店一个标记。"
+  s1_zh_hk: "公式係平分嘅簡寫。先睇門店。我哋用帶細數字嘅 x 嚟標記：x一係A店嘅250，x二係300，x三係350，x四係500。細數字只係話邊一間店。一般寫成 x一、x二，一直到 x n，每間店一個標記。"
+  s2_en: "n is not a cup count. n is how many shops we are averaging. Here there are four shops, so n is 4. If there were ten shops, n would be 10. The little i in x i runs from 1 up to n."
+  s2_zh: "n 不是杯数。n 是我们在平均的门店有多少家。这里有四家店，所以 n 是 4。如果有十家店，n 就是 10。x i 里的小 i 从 1 走到 n。"
+  s2_zh_hk: "n 唔係杯數。n 係我哋喺平均嘅門店有幾多間。呢度有四間店，所以 n 係 4。如果有十間店，n 就係 10。x i 入面嘅細 i 由 1 行到 n。"
+  s3_en: "The capital sigma means add. Sigma of x i means add x one, plus x two, plus x three, plus x four — every shop, not just two of them. That sum is 1,400."
+  s3_zh: "大写西格玛表示相加。x i 的西格玛就是 x一加 x二加 x三加 x四，每一家店都加，不是只加其中两家。这个和是 1,400。"
+  s3_zh_hk: "大寫西格瑪表示相加。x i 嘅西格瑪就係 x一加 x二加 x三加 x四，每一間店都加，唔係只加其中兩間。呢個和係 1,400。"
+  s4_en: "The bar over x means the average. The formula says: add every cup count, then divide by n, the number of shops. 1,400 divided by 4 is 350. Same two steps, for any number of shops."
+  s4_zh: "x 上面的横线表示平均数。公式说的是：把每家店的杯数加起来，再除以 n，也就是门店的数量。1,400 除以 4 等于 350。同样两步，适用于任何数量的门店。"
+  s4_zh_hk: "x 上面嘅橫線表示平均數。公式講嘅係：將每間店嘅杯數加起嚟，再除以 n，亦就係門店嘅數量。1,400 除以 4 等於 350。同樣兩步，適用於任何數量嘅門店。"
+- id: balance
+  visual: steps
+  seconds: 48
+  kicker: The Center
+  kicker_en: The Center
+  kicker_zh: 中心
+  kicker_zh_hk: 中心
+  title_en: The signed distances add to zero
+  title_zh: 带符号的距离加起来等于零
+  title_zh_hk: 帶符號嘅距離加起嚟等於零
+  step1_en: "A: 250 − 350 = −100"
+  step1_zh: "A：250 − 350 = −100"
+  step1_zh_hk: "A：250 − 350 = −100"
+  step2_en: "B: 300 − 350 = −50"
+  step2_zh: "B：300 − 350 = −50"
+  step2_zh_hk: "B：300 − 350 = −50"
+  step3_en: "C: 350 − 350 = 0"
+  step3_zh: "C：350 − 350 = 0"
+  step3_zh_hk: "C：350 − 350 = 0"
+  step4_en: "D: 500 − 350 = +150"
+  step4_zh: "D：500 − 350 = +150"
+  step4_zh_hk: "D：500 − 350 = +150"
+  step5_en: "−100 − 50 + 0 + 150 = 0"
+  step5_zh: "−100 − 50 + 0 + 150 = 0"
+  step5_zh_hk: "−100 − 50 + 0 + 150 = 0"
+  s1_en: "Each shop sits a certain distance from 350, and we keep the sign so we know which side. Shop A is 100 cups below, so minus 100."
+  s1_zh: "每家店都离350有一定的距离，我们保留正负号，好知道它在哪一边。A店低了100杯，所以是负100。"
+  s1_zh_hk: "每間店都離350有一定嘅距離，我哋保留正負號，好知道佢喺邊一邊。A店低咗100杯，所以係負100。"
+  s2_en: "Shop B is 50 below, so minus 50."
+  s2_zh: "B店低了50杯，所以是负50。"
+  s2_zh_hk: "B店低咗50杯，所以係負50。"
+  s3_en: "Shop C is exactly on 350, so zero."
+  s3_zh: "C店正好在350上，所以是零。"
+  s3_zh_hk: "C店正好喺350上，所以係零。"
+  s4_en: "Shop D is 150 above, so plus 150."
+  s4_zh: "D店高出150杯，所以是正150。"
+  s4_zh_hk: "D店高出150杯，所以係正150。"
+  s5_en: "Add those signed distances: minus 100, minus 50, zero, and plus 150. They sum to zero. Think of a seesaw. The cups below 350 pull one way by 150, and the cups above pull the other way by 150. The two sides balance. That is why 350 is the centre."
+  s5_zh: "把这些带符号的距离加起来：负100、负50、零和正150。它们的和是零。可以把它想象成一个跷跷板。350以下的杯数往一边拉了150，350以上的杯数往另一边拉了150。两边平衡。这就是为什么350是中心。"
+  s5_zh_hk: "將呢啲帶符號嘅距離加起嚟：負100、負50、零同正150。佢哋嘅和係零。可以將佢想像成一個蹺蹺板。350以下嘅杯數往一邊拉咗150，350以上嘅杯數往另一邊拉咗150。兩邊平衡。呢個就係點解350係中心。"
+- id: limit
+  visual: two_column
+  seconds: 40
+  kicker: The Limit
+  kicker_en: The Limit
+  kicker_zh: 限度
+  kicker_zh_hk: 限度
+  title_en: A number for the four shops, not for each shop
+  title_zh: 是四家店的数，不是每家店的数
+  title_zh_hk: 係四間店嘅數，唔係每間店嘅數
+  left_en: Why it helps
+  left_zh: 它有什么用
+  left_zh_hk: 佢有咩用
+  right_en: What it is not
+  right_zh: 它不是什么
+  right_zh_hk: 佢唔係乜
+  s1_en: Both ideas give the same answer. The average gives us one number that summarizes these four shops. For these sales figures, that number is 350 cups — the equal share of the total, and the balance point.
+  s1_zh: 两个想法给出同一个答案。平均数给我们一个概括这四家店的数。对于这些销量，这个数是350杯——总数的平均份额，也是平衡点。
+  s1_zh_hk: 兩個想法畀出同一個答案。平均數畀我哋一個概括呢四間店嘅數。對於呢啲銷量，呢個數係350杯——總數嘅平均份額，亦係平衡點。
+  s2_en: But does that mean every shop sold 350? No. Only Shop C sold exactly 350. Shop A sold 250, and Shop D sold 500. The mean describes the group, not each individual shop.
+  s2_zh: 但这是不是说每家店都卖了350？不是。只有C店正好卖了350。A店卖了250，D店卖了500。平均数说的是整体，不是每一家店。
+  s2_zh_hk: 但呢個係咪話每間店都賣咗350？唔係。只有C店正好賣咗350。A店賣咗250，D店賣咗500。平均數講嘅係整體，唔係每一間店。
+  s3_en: Relative to what we observed, 350 sits below Shop D's 500 and above Shop A's 250. Can the manager simply use 350 as the delivery amount for every shop? No. Just knowing the mean does not tell us how much each shop needs. So let's return to the manager's original question.
+  s3_zh: 相对于我们实际看到的销量，350低于D店的500杯，高于A店的250杯。经理能不能直接把350当作每家店的配送量？不能。仅仅知道平均数并不能告诉我们每家店需要多少。所以我们回到经理最初的问题。
+  s3_zh_hk: 相對我哋實際見到嘅銷量，350低過D店嘅500杯，高過A店嘅250杯。經理可唔可以直接將350當作每間店嘅配送量？唔可以。淨係知道平均數並唔可以話畀我哋知每間店需要幾多。所以我哋返到經理最初嘅問題。
+- id: answer
+  visual: takeaway
+  seconds: 44
+  kicker: The Answer
+  kicker_en: The Answer
+  kicker_zh: 回答问题
+  kicker_zh_hk: 回答問題
+  title_en: For these four shops, the mean is 350.
+  title_zh: 对这四家店，平均数是350。
+  title_zh_hk: 對呢四間店，平均數係350。
+  q1_en: Why is the mean of these four shops 350?
+  q1_zh: 为什么这四家店的平均数是350？
+  q1_zh_hk: 點解呢四間店嘅平均數係350？
+  q2_en: Is 350 halfway between the smallest and largest values?
+  q2_zh: 350是最小值和最大值的中点吗？
+  q2_zh_hk: 350係最小值同最大值嘅中點？
+  s1_en: "Back to the question: what number should the manager use for the four shops? The mean is 350. It is the equal share of the total, and it is the balance point."
+  s1_zh: 回到问题：经理应该用哪个数来代表这四家店？平均数是350。它是总数的平均份额，也是平衡点。
+  s1_zh_hk: 返到問題：經理應該用邊個數嚟代表呢四間店？平均數係350。佢係總數嘅平均份額，亦係平衡點。
+  s2_en: From one angle, the signed deviations — minus 100, minus 50, zero, and plus 150 — add to zero. The shortfall below 350 balances the surplus above it. From another angle, we simply divided the total of 1,400 by 4.
+  s2_zh: 从一种角度看，带符号离差——负100、负50、零和正150——加起来等于零。350以下的缺口与350以上的超出部分互相平衡。从另一种角度看，我们只是把总数1,400除以4。
+  s2_zh_hk: 從一種角度睇，帶符號離差——負100、負50、零同正150——加起嚟等於零。350以下嘅缺口同350以上嘅超出部分互相平衡。從另一種角度睇，我哋只係將總數1,400除以4。
+  s3_en: Is 350 halfway between the smallest and largest values? No — that midpoint is 375. And it does not tell us what each shop sold. The mean summarizes the four sales figures together. It does not, by itself, tell the manager how much to deliver to each shop. For that, you still need each shop's demand, the cost of waste, the cost of running out, and how quickly you can restock.
+  s3_zh: 350是最小值和最大值的正中间吗？不是，那个中点是375。它也不告诉我们每家店各自卖了多少。平均数概括的是这四个销量合在一起的情况。它本身并不能告诉经理该给每家店配送多少。要做到这一点，还需要每家店的需求、浪费的成本、卖完的成本，以及多久可以补货。
+  s3_zh_hk: 350係最小值同最大值嘅正中間嗎？唔係，嗰個中點係375。佢亦唔話畀我哋知每間店各自賣咗幾多。平均數概括嘅係呢四個銷量合埋一齊嘅情況。佢本身並唔可以話畀經理知應該畀每間店配送幾多。要做到呢一點，仲需要每間店嘅需求、浪費嘅成本、賣晒嘅成本，以及幾耐可以補貨。

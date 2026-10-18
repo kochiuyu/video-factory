@@ -1,0 +1,165 @@
+id: STAT-M08-T09-CONFZ
+course: STAT-M08
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The Confusion Matrix: Precision, Recall, and Classification Trade-offs'
+title_zh: 混淆矩阵：查准率、召回率与分类权衡
+title_zh_hk: 混淆矩陣：查準率、召回率與分類權衡
+objective_en: Construct a 2x2 confusion matrix at a stated decision threshold, calculate accuracy, precision, recall, and specificity, and evaluate false-positive and false-negative trade-offs under class imbalance.
+objective_zh: 在明确决策阈值下构建 2x2 混淆矩阵，计算准确率、查准率、召回率与特异度，并在类别不平衡下评估假阳性与假阴性的取舍。
+objective_zh_hk: 喺明確決策門檻之下構建 2x2 混淆矩陣，計算準確率、查準率、召回率同特異度，並喺類別不平衡之下評估假陽性同假陰性嘅取捨。
+glossary:
+- en: Confusion Matrix
+  zh: 混淆矩阵
+  zh_hk: 混淆矩陣
+  lock: true
+- en: Precision (Positive Predictive Value)
+  zh: 查准率（阳性预测值）
+  zh_hk: 查準率（陽性預測值）
+  lock: true
+- en: Recall (Sensitivity)
+  zh: 召回率（灵敏度）
+  zh_hk: 召回率（靈敏度）
+  lock: true
+- en: Specificity (True Negative Rate)
+  zh: 特异度（真阴性率）
+  zh_hk: 特異度（真陰性率）
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Metro Coffee deploys an automated loyalty fraud detection model. Across 10,000 active app accounts, 200 are true fraudsters. An algorithm flags 300 accounts, correctly identifying 150 fraudsters while falsely accusing 150 innocent members. What is the model's precision?
+  question_zh: Metro Coffee 上线了会员积分黑产防刷模型。在一万个账户中，真实黑产号为 200 个。算法标记了 300 个嫌疑账户，其中准确抓出 150 个真实黑产，但误伤了 150 个无辜正常会员。该模型的查准率（Precision）是多少？
+  question_zh_hk: Metro Coffee 上線咗會員積分防刷黑產模型。喺一萬個帳戶入面，真實黑產號有 200 個。算法標記咗 300 個嫌疑帳戶，當中準確捉到 150 個真實黑產，但誤傷咗 150 個無辜正常會員。呢個模型嘅查準率（Precision）係幾多？
+  options_en:
+  - 'A: 50.0% (150 / 300)'
+  - 'B: 75.0% (150 / 200)'
+  - 'C: 97.0% (9,700 / 10,000)'
+  - 'D: 2.0% (200 / 10,000)'
+  options_zh:
+  - 'A: 50.0%（150 / 300）'
+  - 'B: 75.0%（150 / 200）'
+  - 'C: 97.0%（9,700 / 10,000）'
+  - 'D: 2.0%（200 / 10,000）'
+  options_zh_hk:
+  - 'A: 50.0%（150 / 300）'
+  - 'B: 75.0%（150 / 200）'
+  - 'C: 97.0%（9,700 / 10,000）'
+  - 'D: 2.0%（200 / 10,000）'
+  answer: A
+  explanation_en: 'Precision equals TP divided by TP plus FP: 150 / (150 + 150) = 0.50, or 50.0 percent. This means half of the flagged accounts are true positives in the supplied sample.'
+  explanation_zh: 查准率等于 TP 除以 TP 加 FP：150 / (150 + 150) = 0.50，即 50.0%。这表示在给定样本中，被标记账户有一半是真正例。
+  explanation_zh_hk: 查準率等於 TP 除以 TP 加 FP：150 / (150 + 150) = 0.50，即 50.0%。呢個表示喺畀定樣本入面，被標記帳戶有一半係真正例。
+- id: Q2
+  type: multiple_choice
+  question_en: Why can overall accuracy be misleading when the positive class has a 2 percent base rate?
+  question_zh: 当阳性类别基础发生率为 2% 时，为什么总体准确率可能具有误导性？
+  question_zh_hk: 當陽性類別基礎發生率係 2% 時，點解整體準確率可能有誤導性？
+  options_en:
+  - 'A: A naive dummy model that predicts zero fraud for every single user achieves 98% accuracy while catching zero fraudsters'
+  - 'B: Accuracy cannot be computed when sample size exceeds 1,000'
+  - 'C: Accuracy forces all regression coefficients to equal zero'
+  - 'D: True negative accounts are forbidden from using the app'
+  options_zh:
+  - 'A: 一个盲目将所有账户全盘判定为‘正常’的白痴模型，能轻松坐享 98% 的高准确率，却完全抓不出任何一个黑产欺诈'
+  - 'B: 当样本容量超过 1,000 时，准确率在数学上无法计算'
+  - 'C: 准确率指标会强制要求逻辑回归的所有系数归零'
+  - 'D: 判定为真阴性的正常账户在商业规则上被禁止登录 App'
+  options_zh_hk:
+  - 'A: 一個盲目將所有帳戶全盤判定為‘正常’嘅盲眼模型，可以輕易坐享 98% 嘅高準確率，但完全捉唔到任何一個黑產騙子'
+  - 'B: 當樣本容量超過 1,000 嗰陣，準確率喺數學上計唔出嚟'
+  - 'C: 準確率指標會強制要求邏輯回歸嘅所有系數變成零'
+  - 'D: 判定為真陰性嘅正常帳戶喺商業規則上被禁止登入 App'
+  answer: A
+  explanation_en: If 98 percent of cases are negative, a classifier that predicts every case as negative obtains 98 percent accuracy while recall for the positive class is zero. Accuracy therefore needs to be read alongside the confusion matrix and class-specific metrics.
+  explanation_zh: 如果 98% 的案例为阴性，一个把所有案例都预测为阴性的分类器仍可获得 98% 准确率，但阳性类别召回率为零。因此，准确率必须与混淆矩阵和类别特定指标一同解读。
+  explanation_zh_hk: 如果 98% 案例係陰性，一個將所有案例都預測做陰性嘅分類器仍然可以有 98% 準確率，但陽性類別召回率係零。所以，準確率必須同混淆矩陣同類別特定指標一齊解讀。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Loyalty Fraud Dilemma
+  kicker_zh: 会员防刷治理困局
+  kicker_zh_hk: 會員防刷治理困局
+  title_en: Did Our 98% Accurate Anti-Fraud Bot Alienate Real Customers?
+  title_zh: 高达 98% 准确率的防刷算法，为何惹怒了大批忠诚老客？
+  title_zh_hk: 高達 98% 準確率嘅防刷算法，點解惹怒咗大批熟客？
+  en: 'A fraud model can achieve high overall accuracy simply because most accounts are legitimate. That headline may hide two operational failures: freezing legitimate customers and missing fraudulent accounts. A confusion matrix separates these outcomes so the decision rule can be evaluated against the actual business costs.'
+  zh: 由于绝大多数账户都是正常账户，欺诈模型可能轻易取得很高的总体准确率。但这一 表面指标 可能掩盖两类营运失败：冻结正常顾客，以及漏掉欺诈账户。混淆矩阵将这些结果分开，使决策规则能够结合实际业务成本进行评估。
+  zh_hk: 由於絕大多數帳戶都係正常帳戶，欺詐模型可能輕易取得好高嘅整體準確率。但呢個表面指標可能掩蓋兩類營運失誤：凍結正常顧客，同埋漏掉欺詐帳戶。混淆矩陣將呢啲結果分開，令決策規則可以結合實際業務成本作評估。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Rows = Actual {1, 0}; Columns = Predicted {1, 0}; Precision = TP/(TP+FP); Recall = TP/(TP+FN); Specificity = TN/(TN+FP)
+  formula_zh: 行 = 实际类别 {1, 0}；列 = 预测类别 {1, 0}；查准率 = TP/(TP+FP)；召回率 = TP/(TP+FN)；特异度 = TN/(TN+FP)
+  formula_zh_hk: 行 = 實際類別 {1, 0}；列 = 預測類別 {1, 0}；查準率 = TP/(TP+FP)；召回率 = TP/(TP+FN)；特異度 = TN/(TN+FP)
+  formula_tex: \text{Precision}=\frac{TP}{TP+FP},\quad \text{Recall}=\frac{TP}{TP+FN},\quad \text{Specificity}=\frac{TN}{TN+FP},\quad \text{Accuracy}=\frac{TP+TN}{n}
+  s1_en: A probability score becomes a predicted class only after a threshold is specified. A threshold of 0.50 is common in examples, but it is not universally optimal and should not be treated as a default business rule without justification.
+  s1_zh: 概率分数只有在明确阈值后才会转化为预测类别。0.50 常用于示例，但并非普遍最优，也不应在缺乏依据时被视为默认业务规则。
+  s1_zh_hk: 概率分數只有喺明確門檻之後先會轉化做預測類別。0.50 常用於例子，但唔係普遍最優，亦唔應該喺缺乏依據時當作預設業務規則。
+  s2_en: True positives and true negatives are correct classifications. False positives are negative cases incorrectly flagged as positive, while false negatives are positive cases incorrectly cleared. The meaning of positive must be defined before interpreting the matrix.
+  s2_zh: 真正例与真阴性是正确分类；假阳性是被错误标记为阳性的阴性案例；假阴性是被错误放行为阴性的阳性案例。解读矩阵前必须先定义“阳性”的含义。
+  s2_zh_hk: 真正例同真陰性係正確分類；假陽性係被錯誤標記做陽性嘅陰性案例；假陰性係被錯誤放行做陰性嘅陽性案例。解讀矩陣之前必須先定義「陽性」嘅意思。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: 'Precision: Avoiding False Alarms'
+  left_zh: 查准率：杜绝误伤忠诚老客
+  right_en: 'Recall: Closing the Catch Net'
+  right_zh: 召回率：织密防风控漏网之鱼
+  s1_en: 'Precision asks: among all predicted positives, what fraction are truly positive? It is especially relevant when acting on a positive prediction is costly or disruptive.'
+  s1_zh: 查准率回答：在所有预测为阳性的案例中，真正阳性的比例是多少？当对阳性预测采取行动成本高或干扰大时，这一指标尤其重要。
+  s1_zh_hk: 查準率回答：喺所有預測做陽性嘅案例入面，真正陽性比例係幾多？當對陽性預測採取行動成本高或者干擾大時，呢個指標尤其重要。
+  s2_en: 'Recall, or sensitivity, asks: among all actual positives, what fraction are detected? Specificity asks the corresponding question for actual negatives. These metrics describe different parts of performance and should not be substituted for one another.'
+  s2_zh: 召回率或灵敏度回答：在所有实际阳性案例中，有多少被检测出来？特异度则对实际阴性案例提出对应问题。这些指标描述不同的表现维度，不能互相替代。
+  s2_zh_hk: 召回率或者靈敏度回答：喺所有實際陽性案例入面，有幾多被檢測出嚟？特異度就對實際陰性案例提出對應問題。呢啲指標描述唔同表現維度，唔可以互相取代。
+  s3_en: Changing the threshold usually changes false positives and false negatives in opposite directions. The threshold should therefore reflect error costs, capacity constraints, and validation evidence rather than accuracy alone.
+  s3_zh: 改变阈值通常会使假阳性与假阴性朝相反方向变化。因此，阈值应结合错误成本、处理能力与验证证据，而不能只看准确率。
+  s3_zh_hk: 改變門檻通常會令假陽性同假陰性向相反方向變化。所以，門檻應該結合錯誤成本、處理能力同驗證證據，而唔可以只睇準確率。
+  left_zh_hk: 查準率：杜絕誤傷忠實熟客
+  right_zh_hk: 召回率：織密風控防漏天網
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Audit 10,000 App Users
+  step1_zh: 盘点一万名活跃账户底数
+  step2_en: Cross-Tabulate Predictions
+  step2_zh: 交叉归类生成混淆四格
+  step3_en: Compute Precision vs. Recall
+  step3_zh: 拆解查准与召回真实表现
+  s1_en: 'Step one: Among 10,000 supplied accounts, 200 are actual positives and 9,800 are actual negatives. The positive-class base rate is therefore 200 divided by 10,000, or 2 percent.'
+  s1_zh: 第一步：在给定的一万个账户中，200 个为实际阳性，9,800 个为实际阴性。因此，阳性类别基础发生率为 200 除以 10,000，即 2%。
+  s1_zh_hk: 第一步：喺畀定嘅一萬個帳戶入面，200 個係實際陽性，9,800 個係實際陰性。所以，陽性類別基礎發生率係 200 除以 10,000，即 2%。
+  s2_en: 'Step two: The supplied counts are TP = 150, FP = 150, FN = 50, and TN = 9,650. They sum to 10,000 and reproduce the 200 actual positives and 300 predicted positives.'
+  s2_zh: 第二步：给定计数为 TP = 150、FP = 150、FN = 50、TN = 9,650。四项合计 10,000，并对应 200 个实际阳性和 300 个预测阳性。
+  s2_zh_hk: 第二步：畀定計數係 TP = 150、FP = 150、FN = 50、TN = 9,650。四項合計 10,000，並對應 200 個實際陽性同 300 個預測陽性。
+  s3_en: 'Step three: Accuracy is 98.0 percent, precision is 50.0 percent, recall is 75.0 percent, and specificity is approximately 98.47 percent. The high accuracy is driven partly by the large number of true negatives and does not summarize the error trade-off.'
+  s3_zh: 第三步：准确率为 98.0%，查准率为 50.0%，召回率为 75.0%，特异度约为 98.47%。较高准确率部分来自大量真阴性，无法概括两类错误之间的取舍。
+  s3_zh_hk: 第三步：準確率係 98.0%，查準率係 50.0%，召回率係 75.0%，特異度約係 98.47%。較高準確率部分來自大量真陰性，無法概括兩類錯誤之間嘅取捨。
+  step1_zh_hk: 盤點一萬個活躍帳戶底數
+  step2_zh_hk: 交叉歸類生成混淆四格
+  step3_zh_hk: 拆解查準與召回真實表現
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Can We Trust Overall Accuracy?
+  q1_zh: 总体准确率到底可不可信？
+  q2_en: 'Audit Rule: Never Judge Without Precision and Recall'
+  q2_zh: 审计准则：未验查准与召回，切莫轻信高准确
+  s1_en: A confusion matrix makes class-specific successes and errors visible. Under class imbalance, accuracy can remain high even when precision or recall is inadequate for the intended decision.
+  s1_zh: 混淆矩阵能够展示各类别的正确与错误分类。在类别不平衡时，即使查准率或召回率不足以支持预定决策，准确率仍可能很高。
+  s1_zh_hk: 混淆矩陣可以展示各類別嘅正確同錯誤分類。喺類別不平衡時，即使查準率或者召回率不足以支持預定決定，準確率仍然可能好高。
+  s2_en: 'Decision rule: state the positive class and threshold, report the full matrix and relevant rates, quantify false-positive and false-negative costs, and validate performance on data representative of deployment.'
+  s2_zh: 决策规则：说明阳性类别与阈值，报告完整矩阵和相关比率，量化假阳性与假阴性成本，并在具有部署代表性的数据上验证表现。
+  s2_zh_hk: 決策規則：說明陽性類別同門檻，報告完整矩陣同相關比率，量化假陽性同假陰性成本，並喺具有部署代表性嘅數據上驗證表現。
+  s3_en: For the supplied matrix, one half of flagged accounts are true positives and one quarter of actual positives are missed. Those facts are visible in precision and recall, but not in the 98 percent accuracy figure alone.
+  s3_zh: 在给定矩阵中，被标记账户有一半是真正例，实际阳性中有四分之一被漏掉。这些事实可以从查准率与召回率看出，但无法仅从 98% 的准确率看出。
+  s3_zh_hk: 喺畀定矩陣入面，被標記帳戶有一半係真正例，實際陽性入面有四分之一被漏掉。呢啲事實可以由查準率同召回率睇到，但無法只由 98% 準確率睇到。
+  q1_zh_hk: 整體準確率到底可唔可信？
+  q2_zh_hk: 審計準則：未驗查準與召回，切忌盲信高準確

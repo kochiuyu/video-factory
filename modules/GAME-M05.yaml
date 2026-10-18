@@ -13,8 +13,8 @@ objective_zh: 读一张没有纯策略纳什的表。点出混合策略。对一
 objective_zh_hk: 讀一張冇純策略納什嘅表。點出混合策略。對一個混合做最佳回應。搵出混合納什。
 lessons:
 - GAME-M05-IN
-- GAME-NP-01
-- GAME-MIX-01
-- GAME-BRM-01
-- GAME-MN-01
+- GAME-M05-NP
+- GAME-M05-MIX
+- GAME-M05-BRM
+- GAME-M05-MN
 - GAME-M05-OUT

@@ -1,0 +1,165 @@
+id: STAT-M08-T12-PSEUD
+course: STAT-M08
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: Pseudo R-Squared & Likelihood Ratio Tests
+title_zh: 伪 R平方 与似然比检验：评估整体拟合优度
+title_zh_hk: 偽 R平方 與似然比檢驗：評估整體擬合優度
+objective_en: Calculate McFadden’s Pseudo R-squared, conduct a likelihood-ratio test for nested logistic models, and distinguish model improvement and joint statistical evidence from predictive performance or causal validity.
+objective_zh: 计算麦克法登伪 R平方，对嵌套逻辑模型进行似然比检验，并区分模型改善与联合统计证据、预测表现及因果有效性。
+objective_zh_hk: 計算麥克法登偽 R平方，對嵌套邏輯模型進行似然比檢驗，並區分模型改善同聯合統計證據、預測表現及因果有效性。
+glossary:
+- en: McFadden's Pseudo R-Squared
+  zh: 麦克法登伪 R平方
+  zh_hk: 麥克法登偽 R平方
+  lock: true
+- en: Likelihood Ratio Test
+  zh: 似然比检验
+  zh_hk: 似然比檢驗
+  lock: true
+- en: Null Model (Intercept-Only)
+  zh: 空模型（仅含常数项）
+  zh_hk: 空模型（淨含常數項）
+  lock: true
+- en: Deviance Difference
+  zh: 偏差差值
+  zh_hk: 偏差差值
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: An analyst presents a customer churn logistic regression with a McFadden's Pseudo R-squared of 0.28. How should executive leadership interpret this metric?
+  question_zh: 分析师呈报了一份麦克法登伪 R平方 为 0.28 的客户流失逻辑回归模型。管理层应如何解读该指标？
+  question_zh_hk: 分析師交咗份麥克法登偽 R平方 係 0.28 嘅客戶流失邏輯回歸模型。管理層應該點樣解讀呢個指標？
+  options_en:
+  - 'A: The model is a severe failure because in OLS an R-squared of 0.28 indicates weak explanatory power'
+  - 'B: The fitted model improves its maximized log-likelihood relative to the stated null model by McFadden’s definition, but 0.28 is not variance explained and needs contextual evaluation'
+  - 'C: Exactly 28% of customer records had missing data entries'
+  - 'D: The model has negative log-likelihood variance'
+  options_zh:
+  - 'A: 该模型属于严重失败，因为在线性回归中 0.28 的 R平方 代表极差的解释力度'
+  - 'B: 按麦克法登定义，拟合模型相对于指定空模型改善了最大化对数似然，但 0.28 不是方差解释比例，仍需结合情境评估'
+  - 'C: 样本中恰好有 28% 的客户记录存在数据缺失'
+  - 'D: 模型的对数似然方差已变为负数'
+  options_zh_hk:
+  - 'A: 該模型屬於嚴重失敗，因為喺線性回歸入面 0.28 嘅 R平方 代表極差嘅解釋力度'
+  - 'B: 按麥克法登定義，擬合模型相對於指定空模型改善咗最大化對數似然，但 0.28 唔係方差解釋比例，仍然要結合情境評估'
+  - 'C: 樣本入面剛好有 28% 嘅客戶記錄存在數據缺失'
+  - 'D: 模型嘅對數似然方差已經變做負數'
+  answer: B
+  explanation_en: McFadden’s measure is based on a ratio of maximized log-likelihoods. It is not OLS R-squared, does not equal 28 percent variance explained, and has no universal conversion to an OLS value or fixed quality grade.
+  explanation_zh: 麦克法登指标基于最大化对数似然之比。它不是 OLS R平方，不等于解释 28% 方差，也不存在通用的 OLS 换算或固定质量等级。
+  explanation_zh_hk: 麥克法登指標建基於最大化對數似然之比。佢唔係 OLS R平方，唔等於解釋 28% 方差，亦不存在通用 OLS 換算或者固定質量等級。
+- id: Q2
+  type: multiple_choice
+  question_en: In a corporate catering churn model (n = 500), the null intercept-only model reports ln(L_0) = -300.0, while adding q = 3 operational predictors lifts full log-likelihood to ln(L_full) = -216.0. What is the Likelihood Ratio (LR) test statistic G?
+  question_zh: 在某企业团餐流失模型（n = 500）中，仅含常数项的空模型对数似然为 ln(L_0) = -300.0，加入 q = 3 个运营解释变量后全模型对数似然升至 ln(L_full) = -216.0。似然比（LR）检验统计量 G 是多少？
+  question_zh_hk: 喺某個企業團餐流失模型（n = 500）入面，淨含常數項嘅空模型對數似然係 ln(L_0) = -300.0，加入 q = 3 個營運解釋變量之後全模型對數似然升到 ln(L_full) = -216.0。似然比（LR）檢驗統計量 G 係幾多？
+  options_en:
+  - 'A: G = 40.0'
+  - 'B: G = 168.0, compared asymptotically with a chi-square distribution having 3 degrees of freedom under the stated nested-model conditions'
+  - 'C: G = 20.0'
+  - 'D: G = 560.0'
+  options_zh:
+  - 'A: G = 40.0'
+  - 'B: G = 168.0，在所述嵌套模型条件下渐近对照自由度为 3 的卡方分布'
+  - 'C: G = 20.0'
+  - 'D: G = 560.0'
+  options_zh_hk:
+  - 'A: G = 40.0'
+  - 'B: G = 168.0，喺所述嵌套模型條件下漸近對照自由度為 3 嘅卡方分佈'
+  - 'C: G = 20.0'
+  - 'D: G = 560.0'
+  answer: B
+  explanation_en: G = 2[-216 - (-300)] = 168.0. With three added slopes, the usual asymptotic reference is chi-square with three degrees of freedom when the models are nested and regularity conditions hold. The same log-likelihoods give McFadden’s Pseudo R-squared of 0.28.
+  explanation_zh: G = 2[-216 - (-300)] = 168.0。新增三个斜率时，若模型嵌套且正则条件成立，通常使用自由度为 3 的渐近卡方参考分布。同一组对数似然对应麦克法登伪 R平方 0.28。
+  explanation_zh_hk: G = 2[-216 - (-300)] = 168.0。新增三個斜率時，如果模型嵌套而且正則條件成立，通常使用自由度係 3 嘅漸近卡方參考分布。同一組對數似然對應麥克法登偽 R平方 0.28。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Goodness-of-Fit Panic
+  kicker_zh: 拟合度汇报恐慌
+  kicker_zh_hk: 擬合度匯報恐慌
+  title_en: Is an R-Squared of 0.28 an Executive Failure?
+  title_zh: 仅有 0.28 的 R平方 是否代表模型彻底失败？
+  title_zh_hk: 得嗰 0.28 嘅 R平方 係咪代表模型徹底失敗？
+  en: A logistic regression reports McFadden’s Pseudo R-squared of 0.28. Reading that number as if it were the ordinary least-squares R-squared would be misleading because the two measures use different definitions. What does the pseudo R-squared compare, and how can a likelihood-ratio test assess whether added predictors improve a nested model jointly?
+  zh: 某逻辑回归报告麦克法登伪 R平方 为 0.28。若把它当作普通最小二乘 R平方 解读便会产生误导，因为两项指标定义不同。伪 R平方 比较什么？似然比检验又如何评估新增自变量是否共同改善嵌套模型？
+  zh_hk: 某邏輯回歸報告麥克法登偽 R平方 係 0.28。如果將佢當作普通最小二乘 R平方 解讀就會有誤導，因為兩項指標定義唔同。偽 R平方 比較咩？似然比檢驗又點樣評估新增自變量係咪共同改善嵌套模型？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: R^2_McFadden = 1 - ln(L_full) / ln(L_null)
+  formula_zh: 麦克法登伪 R平方：R^2_McFadden = 1 - ln(L_full) / ln(L_null)
+  formula_zh_hk: 麥克法登偽 R平方：R^2_McFadden = 1 - ln(L_full) / ln(L_null)
+  formula_tex: R^2_{\text{McFadden}} = 1 - \frac{\ln L_{\text{full}}}{\ln L_{\text{null}}}, \quad G = 2 \left[ \ln L_{\text{full}} - \ln L_{\text{null}} \right] \sim \chi^2_{(q)}
+  s1_en: McFadden’s Pseudo R-squared compares the maximized log-likelihood of a fitted model with that of a specified null model, commonly an intercept-only model. It is not the proportion of outcome variance explained and is not numerically comparable to OLS R-squared.
+  s1_zh: 麦克法登伪 R平方 比较拟合模型的最大化对数似然与指定空模型的最大化对数似然，空模型通常仅含截距项。它不是结果方差解释比例，也不能与 OLS R平方 作数值对应。
+  s1_zh_hk: 麥克法登偽 R平方 比較擬合模型嘅最大化對數似然同指定空模型嘅最大化對數似然，空模型通常只含截距項。佢唔係結果方差解釋比例，亦唔可以同 OLS R平方 作數值對應。
+  s2_en: Because a fitted model’s maximized log-likelihood is at least as large as that of a nested null model, useful added predictors move the log-likelihood toward zero. McFadden’s measure summarizes the relative improvement, but its magnitude must be interpreted in context.
+  s2_zh: 由于拟合模型的最大化对数似然至少不低于嵌套空模型，新增有效自变量会使对数似然更接近零。麦克法登指标汇总相对改善，但其数值大小必须结合情境解读。
+  s2_zh_hk: 由於擬合模型嘅最大化對數似然至少唔低過嵌套空模型，新增有效自變量會令對數似然更接近零。麥克法登指標匯總相對改善，但數值大小必須結合情境解讀。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: The Non-Linear Grading Scale
+  left_zh: 非线性度量衡的真实基准
+  right_en: The Likelihood Ratio Test
+  right_zh: 似然比卡方检验全闭环
+  s1_en: There is no universal conversion from McFadden’s Pseudo R-squared to OLS R-squared, and fixed quality bands are not a substitute for comparison with relevant benchmarks, alternative specifications, and out-of-sample performance.
+  s1_zh: 麦克法登伪 R平方 与 OLS R平方 之间不存在通用换算，固定质量区间也不能替代相关基准、替代设定与样本外表现的比较。
+  s1_zh_hk: 麥克法登偽 R平方 同 OLS R平方 之間不存在通用換算，固定質量區間亦唔可以取代相關基準、替代設定同樣本外表現嘅比較。
+  s2_en: For nested models, the likelihood-ratio statistic is twice the difference between the maximized full-model and restricted-model log-likelihoods. Under standard regularity conditions and the null hypothesis, it has an asymptotic chi-square distribution.
+  s2_zh: 对于嵌套模型，似然比统计量等于全模型与受限模型最大化对数似然差的两倍。在标准正则条件与原假设下，它渐近服从卡方分布。
+  s2_zh_hk: 對於嵌套模型，似然比統計量等於全模型同受限模型最大化對數似然差嘅兩倍。喺標準正則條件同原假設之下，佢漸近服從卡方分布。
+  s3_en: When the restricted model is intercept-only and the full model adds q slopes, the test evaluates the joint null that those q slopes equal zero. Rejection indicates joint statistical evidence of improved fit, not causal validity, calibration, or strong prediction.
+  s3_zh: 当受限模型仅含截距，而全模型新增 q 个斜率时，检验评估这些斜率同时为零的联合原假设。拒绝原假设说明存在改善拟合的联合统计证据，但不能证明因果有效性、校准良好或预测能力强。
+  s3_zh_hk: 當受限模型只含截距，而全模型新增 q 個斜率時，檢驗評估呢啲斜率同時為零嘅聯合原假設。拒絕原假設說明存在改善擬合嘅聯合統計證據，但唔能夠證明因果有效性、校準良好或者預測能力強。
+  left_zh_hk: 非線性度量衡嘅真實基準
+  right_zh_hk: 似然比卡方檢驗全閉環
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Fit Null Baseline Intercept
+  step1_zh: 拟合纯截距空模型基准
+  step2_en: Compute McFadden's Pseudo R^2
+  step2_zh: 核算麦克法登伪拟合度
+  step3_en: Execute Likelihood Ratio Test
+  step3_zh: 执行似然比卡方检验
+  s1_en: 'Step one: The supplied intercept-only model for 500 observations has log-likelihood -300.0. The full model adds three predictors and has log-likelihood -216.0.'
+  s1_zh: 第一步：给定的 500 个观测截距模型对数似然为 -300.0。全模型新增三个自变量，对数似然为 -216.0。
+  s1_zh_hk: 第一步：畀定嘅 500 個觀測截距模型對數似然係 -300.0。全模型新增三個自變量，對數似然係 -216.0。
+  s2_en: 'Step two: McFadden’s Pseudo R-squared equals 1 minus negative 216 divided by negative 300, which is 1 minus 0.72, or 0.28. This reports relative log-likelihood improvement over the stated null model.'
+  s2_zh: 第二步：麦克法登伪 R平方 等于 1 减去 -216 除以 -300，即 1 减 0.72，结果为 0.28。它报告相对于指定空模型的对数似然改善。
+  s2_zh_hk: 第二步：麥克法登偽 R平方 等於 1 減去 -216 除以 -300，即 1 減 0.72，結果係 0.28。佢報告相對於指定空模型嘅對數似然改善。
+  s3_en: 'Step three: The likelihood-ratio statistic is 2 times [-216 minus (-300)], which equals 168.0 with three degrees of freedom under the usual nested-model test. This is far above the 5 percent chi-square critical value of approximately 7.815, so the joint null is rejected under the stated asymptotic test.'
+  s3_zh: 第三步：似然比统计量为 2 乘以 [-216 减去 (-300)]，等于 168.0；在通常的嵌套模型检验下，自由度为 3。该值远高于 5% 水平的卡方临界值约 7.815，因此在给定渐近检验下拒绝联合原假设。
+  s3_zh_hk: 第三步：似然比統計量係 2 乘以 [-216 減去 (-300)]，等於 168.0；喺通常嘅嵌套模型檢驗之下，自由度係 3。個值遠高過 5% 水平嘅卡方臨界值約 7.815，所以喺畀定漸近檢驗之下拒絕聯合原假設。
+  step1_zh_hk: 擬合純截距空模型基準
+  step2_zh_hk: 核算麥克法登偽擬合度
+  step3_zh_hk: 執行似然比卡方檢驗
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Should We Demand OLS-Level R^2?
+  q1_zh: 能否苛求逻辑回归达到线性 R平方？
+  q2_en: 'Audit Rule: Calibrate to Non-Linear Standards'
+  q2_zh: 审计准则：非线性模型审伪 R方，联合显著验似然比
+  s1_en: Pseudo R-squared and the likelihood-ratio test answer different questions. The first summarizes improvement relative to a chosen null model; the second tests a specified set of restrictions for nested models.
+  s1_zh: 伪 R平方 与似然比检验回答不同问题。前者汇总相对于所选空模型的改善，后者为嵌套模型检验一组指定约束。
+  s1_zh_hk: 偽 R平方 同似然比檢驗回答唔同問題。前者匯總相對於所選空模型嘅改善，後者為嵌套模型檢驗一組指定約束。
+  s2_en: 'Decision rule: state the pseudo R-squared definition and null model, report both log-likelihoods and LR degrees of freedom, verify nesting and regularity conditions, and assess calibration and out-of-sample prediction separately.'
+  s2_zh: 决策规则：说明伪 R平方 定义与空模型，报告两个对数似然及 LR 自由度，核实嵌套关系与正则条件，并分别评估校准和样本外预测。
+  s2_zh_hk: 決策規則：說明偽 R平方 定義同空模型，報告兩個對數似然及 LR 自由度，核實嵌套關係同正則條件，並分別評估校準同樣本外預測。
+  s3_en: For the supplied values, McFadden’s Pseudo R-squared is 0.28 and the LR statistic is 168.0 with three degrees of freedom. These calculations support improvement over the specified null model, but do not by themselves establish model quality for deployment.
+  s3_zh: 对于给定数值，麦克法登伪 R平方 为 0.28，LR 统计量为 168.0，自由度为 3。这些计算支持模型相对于指定空模型有所改善，但本身不能确立部署质量。
+  s3_zh_hk: 對於畀定數值，麥克法登偽 R平方 係 0.28，LR 統計量係 168.0，自由度係 3。呢啲計算支持模型相對於指定空模型有所改善，但本身唔能夠確立部署質量。
+  q1_zh_hk: 可唔可以苛求邏輯回歸達到線性 R平方？
+  q2_zh_hk: 審計準則：非線性模型審偽 R方，聯合顯著驗似然比

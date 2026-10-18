@@ -1,0 +1,19 @@
+id: LAE-M06
+kind: module
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+duration_target_s: 332
+title_en: Policy
+title_zh: 谁可以进
+title_zh_hk: 邊個可以入
+objective_en: Ask who may enter. A flight without a permit is excluded. The corridor is two aviation books plus a customs gate. Opening the band does not invent a buyer.
+objective_zh: 问谁可以进。没有许可的飞行是被排除，不是被延误。这条线是两本航空规则，外加一个海关。打开这一层，造不出买方。
+objective_zh_hk: 問邊個可以入。冇許可嘅飛行係被排除，唔係被延誤。呢條線係兩本航空規則，再加一個海關。打開呢一層，造唔出買方。
+lessons:
+- LAE-M06-IN
+- LAE-M06-RG
+- LAE-M06-XB
+- LAE-M06-PL
+- LAE-M06-OUT

@@ -1,5 +1,0 @@
-﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
-1,GAME-M01-IN,comprehension,25,When do we call this morning a game?,什么时候这个早晨叫博弈？,幾時呢個朝早叫博弈？,When what one cart takes home depends on the other cart's choice.,当一辆车能带走多少，还取决于另一辆怎么选。,當一架車袋到幾多，仲取決於另一架點揀。
-2,GAME-M01-IN,comprehension,25,What will this unit write down next?,接下来要写下来的是什么？,跟住要寫低嘅係咩？,"That the two carts are in a game. Then players, strategies, and payoffs.",两辆车已经在博弈里。然后是参与人、策略和报酬。,兩架車已經喺博弈入面。然後係參與人、策略同報酬。
-3,GAME-M01-IN,check,25,What one cart takes home depends on the other.,一辆车带走多少，还看另一辆。,一架車袋到幾多，都睇另一架。,,,
-4,GAME-M01-IN,transfer,25,Don't pick a price yet.,先不要定哪个价。,未好定邊個價。,,,

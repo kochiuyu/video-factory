@@ -1,0 +1,162 @@
+id: STAT-M10-T10-FACTR
+course: STAT-M10
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: '2x2 Factorial Designs: Main Effects and Interactions'
+title_zh: 2x2 全析因实验：主效应与交互效应
+title_zh_hk: 2x2 全析因實驗：主效應同交互效應
+objective_en: Construct a 2x2 factorial design, interpret treatment-coded main and interaction coefficients, compute cell contrasts, and plan power separately for main effects and interactions.
+objective_zh: 构建 2x2 全析因实验，解释处理编码下的主效应与交互系数，计算单元格对比，并分别为主效应与交互效应规划功效。
+objective_zh_hk: 構建 2x2 全析因實驗，解釋處理編碼之下嘅主效應同交互系數，計算單元格對比，並分別為主效應同交互效應規劃功效。
+glossary:
+- en: 2x2 Factorial Design
+  zh: 2x2 全析因实验
+  zh_hk: 2x2 全析因實驗
+  lock: true
+- en: Main Effect
+  zh: 策略主效应
+  zh_hk: 策略主效應
+  lock: true
+- en: Interaction Effect (Synergy)
+  zh: 交互协同效应
+  zh_hk: 交互協同效應
+  lock: true
+- en: Orthogonal Experimental Design
+  zh: 正交实验设计
+  zh_hk: 正交實驗設計
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: What does a balanced 2x2 factorial design add beyond two isolated single-factor tests?
+  question_zh: 与两个彼此隔离的单因素测试相比，平衡的 2x2 全析因设计增加了什么？
+  question_zh_hk: 同兩個彼此隔離嘅單因素測試相比，平衡嘅 2x2 全析因設計增加咗乜嘢？
+  options_en:
+  - 'A: It estimates whether the effect of one factor changes with the level of the other factor'
+  - 'B: It removes the need for random assignment'
+  - 'C: It guarantees equal outcomes in all four cells'
+  - 'D: It guarantees adequate power for every interaction without additional planning'
+  options_zh:
+  - A：它能够估计一个因素的效应是否会随另一个因素的水平而变化
+  - B：它不再需要随机分配
+  - C：它保证四个单元格的结果完全相同
+  - D：它无需额外规划就保证每个交互效应都有足够功效
+  options_zh_hk:
+  - A：佢可以估計一個因素嘅效應係咪會隨另一個因素嘅水平而改變
+  - B：佢唔再需要隨機分配
+  - C：佢保證四個單元格嘅結果完全相同
+  - D：佢唔使額外規劃就保證每個交互效應都有足夠功效
+  answer: A
+  explanation_en: The four cells identify an interaction contrast, showing whether one factor's effect differs across the other factor's levels. Efficiency depends on the estimand and allocation; interaction power is not free.
+  explanation_zh: 四个单元格可以识别交互对比，显示一个因素的效应是否因另一个因素的水平而不同。效率取决于估计目标与分配，交互效应的功效并非免费获得。
+  explanation_zh_hk: 四個單元格可以識別交互對比，顯示一個因素嘅效應係咪因另一個因素嘅水平而唔同。效率取決於估計目標同分配，交互效應嘅功效並唔係免費獲得。
+- id: Q2
+  type: multiple_choice
+  question_en: Teaching cell means are 5.0%, 7.5%, 6.2%, and 9.8% for (A,B) = (0,0), (1,0), (0,1), and (1,1). What is the interaction contrast on the percentage-point scale?
+  question_zh: 教学单元格均值依次为 5.0%、7.5%、6.2% 与 9.8%，对应 (A,B) = (0,0)、(1,0)、(0,1)、(1,1)。百分点尺度上的交互对比是多少？
+  question_zh_hk: 教學單元格平均數依次係 5.0%、7.5%、6.2% 同 9.8%，對應 (A,B) = (0,0)、(1,0)、(0,1)、(1,1)。百分點尺度上嘅交互對比係幾多？
+  options_en:
+  - 'A: +1.1 percentage points'
+  - 'B: +4.8 percentage points'
+  - 'C: +3.7 percentage points'
+  - 'D: -1.1 percentage points'
+  options_zh:
+  - A：+1.1 个百分点
+  - B：+4.8 个百分点
+  - C：+3.7 个百分点
+  - D：-1.1 个百分点
+  options_zh_hk:
+  - A：+1.1 個百分點
+  - B：+4.8 個百分點
+  - C：+3.7 個百分點
+  - D：-1.1 個百分點
+  answer: A
+  explanation_en: Interaction = 9.8 - 7.5 - 6.2 + 5.0 = +1.1 percentage points. This is descriptive unless uncertainty and the randomized analysis support a causal interaction.
+  explanation_zh: 交互对比 = 9.8 - 7.5 - 6.2 + 5.0 = +1.1 个百分点。除非不确定性评估与随机化分析提供支持，否则这只是描述性结果。
+  explanation_zh_hk: 交互對比 = 9.8 - 7.5 - 6.2 + 5.0 = +1.1 個百分點。除非不確定性評估同隨機化分析提供支持，否則呢個只係描述性結果。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Two-Lever Experiment Puzzle
+  kicker_zh: 双策略实验难题
+  kicker_zh_hk: 雙策略實驗難題
+  title_en: What If a Discount Works Differently With a New Banner?
+  title_zh: 如果折扣在新横幅下产生不同效果怎么办？
+  title_zh_hk: 如果折扣喺新橫幅之下產生唔同效果點算？
+  en: Suppose a team wants to test a discount and a redesigned banner. Two separate experiments can estimate each intervention in isolation, but they cannot directly reveal whether the discount works differently when the new banner is present. A 2x2 factorial design assigns both factors jointly, creating four cells and making the interaction an explicit estimand.
+  zh: 假设团队希望检验折扣与新版横幅。两个独立实验可以分别估计每项干预，但不能直接揭示折扣在新版横幅存在时是否产生不同效果。2x2 全析因设计联合分配两个因素，形成四个单元格，并把交互效应明确设为估计目标。
+  zh_hk: 假設團隊希望檢驗折扣同新版橫幅。兩個獨立實驗可以分別估計每項干預，但唔可以直接揭示折扣喺新版橫幅存在嗰陣係咪產生唔同效果。2x2 全析因設計聯合分配兩個因素，形成四個單元格，並將交互效應明確設為估計目標。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Y = beta_0 + beta_1 A + beta_2 B + beta_3 AB + error
+  formula_zh: 双因素模型：Y = beta_0 + beta_1 A + beta_2 B + beta_3 AB + 误差
+  formula_zh_hk: 雙因素模型：Y = beta_0 + beta_1 A + beta_2 B + beta_3 AB + 誤差
+  formula_tex: Y_i=\beta_0+\beta_1A_i+\beta_2B_i+\beta_3A_iB_i+\varepsilon_i
+  s1_en: A 2x2 Factorial Design contains control, A only, B only, and A plus B. Balanced independent randomization makes factor assignments orthogonal in expectation, although realized samples should still be audited.
+  s1_zh: 2x2 全析因实验包含对照、仅 A、仅 B，以及 A 与 B 同时出现四个单元格。平衡且独立的随机分配使因素分配在期望意义上正交，但仍应审查实际样本。
+  s1_zh_hk: 2x2 全析因實驗包含對照、只有 A、只有 B，以及 A 同 B 同時出現四個單元格。平衡而且獨立嘅隨機分配令因素分配喺期望意義上正交，但仍然要審查實際樣本。
+  s2_en: With zero-one treatment coding, beta_1 is the effect of A when B equals zero, beta_2 is the effect of B when A equals zero, and beta_3 is the difference-in-differences interaction. These are conditional effects, not automatically marginal Main Effects.
+  s2_zh: 在零一处理编码下，beta_1 是 B 等于零时 A 的效应，beta_2 是 A 等于零时 B 的效应，beta_3 是双重差分式交互项。这些是条件效应，并不自动等于边际策略主效应。
+  s2_zh_hk: 喺零一處理編碼之下，beta_1 係 B 等於零嗰陣 A 嘅效應，beta_2 係 A 等於零嗰陣 B 嘅效應，beta_3 係雙重差分式交互項。呢啲係條件效應，並唔自動等於邊際策略主效應。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: What Factorials Estimate
+  left_zh: 析因设计估计什么
+  left_zh_hk: 析因設計估計乜嘢
+  right_en: Efficiency and Risks
+  right_zh: 效率与风险
+  right_zh_hk: 效率同風險
+  s1_en: Cell contrasts reveal the effect of A at each level of B, the effect of B at each level of A, and whether these effects differ. On an additive scale, a positive interaction means the combined cell exceeds the sum of the two isolated increments.
+  s1_zh: 单元格对比可以揭示 B 每个水平下 A 的效应、A 每个水平下 B 的效应，以及这些效应是否不同。在加法尺度上，正交互表示组合单元格超过两个单独增量之和。
+  s1_zh_hk: 單元格對比可以揭示 B 每個水平之下 A 嘅效應、A 每個水平之下 B 嘅效應，以及呢啲效應係咪唔同。喺加法尺度上，正交互表示組合單元格超過兩個單獨增量之和。
+  s2_en: A balanced factorial can estimate both factors in one experiment and may be more efficient than separate studies for specified contrasts. It does not guarantee zero sample-size penalty, and interactions usually require more information than similarly sized main effects.
+  s2_zh: 平衡析因设计可以在一个实验中估计两个因素，并可能针对特定对比比独立研究更有效率。但它不能保证零样本量代价，而且交互效应通常比同等大小的主效应需要更多信息。
+  s2_zh_hk: 平衡析因設計可以喺一個實驗入面估計兩個因素，並可能針對特定對比比獨立研究更有效率。但佢唔可以保證零樣本量代價，而且交互效應通常比同等大小嘅主效應需要更多信息。
+  s3_en: Plan allocation and power around the primary estimands. Check sample-ratio balance across all four cells, treatment delivery, multiplicity, incompatible factor combinations, and whether the chosen outcome scale matches the intended business interpretation.
+  s3_zh: 应围绕主要估计目标规划分配与功效，并检查四个单元格的样本比例平衡、处理投放、多重性、不兼容因素组合，以及结果尺度是否符合商业解释。
+  s3_zh_hk: 要圍繞主要估計目標規劃分配同功效，並檢查四個單元格嘅樣本比例平衡、處理投放、多重性、不兼容因素組合，以及結果尺度係咪符合商業解讀。
+- id: example
+  visual: example
+  seconds: 36
+  setup_en: 'Teaching cell means: control 5.0%; A only 7.5%; B only 6.2%; A+B 9.8%'
+  setup_zh: 教学单元格均值：对照 5.0%；仅 A 7.5%；仅 B 6.2%；A+B 9.8%
+  setup_zh_hk: 教學單元格平均數：對照 5.0%；只有 A 7.5%；只有 B 6.2%；A+B 9.8%
+  result_en: 'Conditional effects: A|B=0 = 2.5 pp; B|A=0 = 1.2 pp; interaction = 1.1 pp'
+  result_zh: 条件效应：A|B=0 = 2.5 个百分点；B|A=0 = 1.2 个百分点；交互 = 1.1 个百分点
+  result_zh_hk: 條件效應：A|B=0 = 2.5 個百分點；B|A=0 = 1.2 個百分點；交互 = 1.1 個百分點
+  s1_en: From the teaching cell means, A raises the outcome by 7.5 minus 5.0, or 2.5 percentage points, when B is absent. B raises it by 6.2 minus 5.0, or 1.2 points, when A is absent.
+  s1_zh: 根据教学单元格均值，当 B 不存在时，A 的效应为 7.5 减 5.0，即 2.5 个百分点；当 A 不存在时，B 的效应为 6.2 减 5.0，即 1.2 个百分点。
+  s1_zh_hk: 根據教學單元格平均數，當 B 唔存在嗰陣，A 嘅效應係 7.5 減 5.0，即係 2.5 個百分點；當 A 唔存在嗰陣，B 嘅效應係 6.2 減 5.0，即係 1.2 個百分點。
+  s2_en: The combined increase over control is 9.8 minus 5.0, or 4.8 points. The additive prediction is 2.5 plus 1.2, or 3.7 points, leaving an interaction contrast of 1.1 points.
+  s2_zh: 组合组相对对照的增量为 9.8 减 5.0，即 4.8 个百分点。加法预测为 2.5 加 1.2，即 3.7 个百分点，因此交互对比为 1.1 个百分点。
+  s2_zh_hk: 組合組相對對照嘅增量係 9.8 減 5.0，即係 4.8 個百分點。加法預測係 2.5 加 1.2，即係 3.7 個百分點，所以交互對比係 1.1 個百分點。
+  s3_en: The positive contrast is consistent with super-additivity on the percentage-point scale, but it does not prove a psychological mechanism, significance, or profit maximization. Those claims require uncertainty estimates, costs, and a pre-specified analysis.
+  s3_zh: 正对比与百分点尺度上的超加性相符，但不能证明心理机制、统计显著性或利润最大化。这些结论需要不确定性估计、成本信息及预先指定的分析。
+  s3_zh_hk: 正對比同百分點尺度上嘅超加性相符，但唔可以證明心理機制、統計顯著性或者利潤最大化。呢啲結論需要不確定性估計、成本信息同預先指定嘅分析。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: What Is the Interaction Question?
+  q1_zh: 交互效应要回答什么问题？
+  q1_zh_hk: 交互效應要回答乜嘢問題？
+  q2_en: Decision Rule
+  q2_zh: 决策规则
+  q2_zh_hk: 決策規則
+  s1_en: An interaction asks whether one factor's effect changes across levels of the other. Its value depends on the outcome scale and coding, so report the four cell means and planned contrasts alongside model coefficients.
+  s1_zh: 交互效应询问一个因素的效应是否随另一个因素的水平而变化。其数值取决于结果尺度与编码，因此应同时报告四个单元格均值、计划对比与模型系数。
+  s1_zh_hk: 交互效應詢問一個因素嘅效應係咪隨另一個因素嘅水平而改變。佢嘅數值取決於結果尺度同編碼，所以要同時報告四個單元格平均數、計劃對比同模型系數。
+  s2_en: Use factorial designs when factor combinations are operationally feasible and interactions matter. Pre-specify primary main and interaction contrasts and power the study for the hardest decision-relevant effect.
+  s2_zh: 当因素组合在运营上可行且交互效应重要时，可使用析因设计。应预先指定主要主效应与交互对比，并围绕最难检测且与决策相关的效应规划功效。
+  s2_zh_hk: 當因素組合喺營運上可行，而且交互效應重要嗰陣，可以使用析因設計。要預先指定主要主效應同交互對比，並圍繞最難檢測而且同決策相關嘅效應規劃功效。
+  s3_en: Do not equate simultaneous testing with free precision. Audit all four cells, quantify uncertainty, and combine causal evidence with costs and implementation constraints before choosing a bundle.
+  s3_zh: 不要把同步测试等同于免费精度。应审查四个单元格、量化不确定性，并在选择组合方案前把因果证据与成本及实施约束结合。
+  s3_zh_hk: 唔好將同步測試等同於免費精度。要審查四個單元格、量化不確定性，並喺選擇組合方案之前將因果證據同成本及實施限制結合。

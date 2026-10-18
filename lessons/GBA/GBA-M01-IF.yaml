@@ -1,0 +1,162 @@
+id: GBA-M01-IF
+course: gba
+course_en: Greater Bay Area
+course_zh: 粤港澳大湾区
+course_zh_hk: 粵港澳大灣區
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 96
+title_en: Infrastructure Links
+title_zh: 基础设施连接
+title_zh_hk: 基礎設施連接
+objective_en: 'Second step of the map unit: treat a crossing as saved door-to-door time, not as instant
+  integration.'
+objective_zh: 地图单元的第二步：把通道看成省下的门到门时间，不是瞬间一体化。
+objective_zh_hk: 地圖單元的第二步：把通道看成省下的門到門時間，不是瞬間一體化。
+glossary:
+- en: infrastructure
+  zh: 基础设施
+  zh_hk: 基礎設施
+  lock: true
+- en: travel time
+  zh: 旅行时间
+  zh_hk: 旅行時間
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What does new GBA infrastructure directly change?
+  zh: 新的大湾区基础设施直接改变的是什么？
+  zh_hk: 新的大灣區基礎設施直接改變的是什麼？
+  answer_en: Travel time and physical risk, not the whole rule book.
+  answer_zh: 旅行时间和物理风险，而不是整本规则书。
+  answer_zh_hk: 旅行時間和物理風險，而不是整本規則書。
+- id: Q2
+  type: transfer
+  en: Rail time falls by 30 minutes. Border inspection stays 90 minutes. How much did the full trip
+    fall?
+  zh: 轨道时间减少三十分钟。过关检查仍是九十分钟。整段行程减少多少？
+  zh_hk: 軌道時間減少三十分鐘。過關檢查仍是九十分鐘。整段行程減少多少？
+  answer_en: Thirty minutes, unless the queue also moved.
+  answer_zh: 三十分钟，除非队伍也一起变了。
+  answer_zh_hk: 三十分鐘，除非隊伍也一起變了。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 16
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Infrastructure Links
+  title_zh: 基础设施连接
+  title_zh_hk: 基礎設施連接
+  en: The map has names. A new crossing changes a clock. It does not, by itself, change a visa or
+    a tax file. Count the whole trip, not the ribbon-cutting.
+  zh: 地图上有了名字。新通道改的是钟点。它本身改不了签证或税档。要数完整行程，不要数剪彩。
+  zh_hk: 地圖上有了名字。新通道改的是鐘點。它本身改不了簽證或稅檔。要數完整行程，不要數剪彩。
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Time, not a merger
+  title_zh: 是时间，不是合并
+  title_zh_hk: 是時間，不是合併
+  formula: Link = lower travel time
+  formula_en: Link = lower travel time
+  formula_zh: 连通 = 更短的通行时间
+  formula_zh_hk: 連通 = 更短的通行時間
+  gloss_en: Integration needs rules as well as concrete.
+  gloss_zh: 一体化既需要规则，也需要混凝土。
+  gloss_zh_hk: 一體化既需要規則，也需要混凝土。
+  en: Infrastructure is the physical network that cuts the time and risk of moving goods or people.
+    It is an input into integration. It is not the same thing as one market.
+  zh: 基础设施是降低货物或人员移动时间和风险的物理网络。它是一体化的一种投入。它不等于同一个市场。
+  zh_hk: 基礎設施是降低貨物或人員移動時間和風險的物理網絡。它是一體化的一種投入。它不等於同一個市場。
+- id: example
+  visual: two_column
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Faster, still two queues
+  title_zh: 更快了，仍是两队
+  title_zh_hk: 更快了，仍是兩隊
+  left_en: Shorter ride to the gate
+  left_zh: 到关口的车程更短
+  left_zh_hk: 到關口的車程更短
+  right_en: Two inspection lines remain
+  right_zh: 两条检查队伍还在
+  right_zh_hk: 兩條檢查隊伍還在
+  en: A bridge can cut the ride to the checkpoint. The checkpoint can still take longer than the ride.
+    The student who only times the car will misread the trip.
+  zh: 一座桥可以缩短到检查站的车程。检查站仍可能比车程更久。只给汽车计时的学生，会读错这一趟。
+  zh_hk: 一座橋可以縮短到檢查站的車程。檢查站仍可能比車程更久。只給汽車計時的學生，會讀錯這一趟。
+- id: formula
+  visual: formula
+  seconds: 16
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: Time is the good
+  title_zh: 时间才是产品
+  title_zh_hk: 時間才是產品
+  formula: Link = lower travel time
+  formula_en: Link = lower travel time
+  formula_zh: 连通 = 更短的通行时间
+  formula_zh_hk: 連通 = 更短的通行時間
+  gloss_en: A bridge is a time machine.
+  gloss_zh: 一座桥是一台时间机器。
+  gloss_zh_hk: 一座橋是一台時間機器。
+  en: Infrastructure in the GBA is not a postcard. It is a cut in minutes between a factory, a port,
+    and a payroll office. Count the minutes.
+  zh: 大湾区的基础设施不是明信片。它是工厂、港口和发薪办公室之间减少的分钟。先数分钟。
+  zh_hk: 大灣區的基礎設施不是明信片。它是工廠、港口和發薪辦公室之間減少的分鐘。先數分鐘。
+- id: bridge
+  visual: example
+  seconds: 16
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: One crossing
+  title_zh: 一次过海
+  title_zh_hk: 一次過海
+  setup_en: 'Before: a long detour'
+  setup_zh: 之前：很长的绕路
+  setup_zh_hk: 之前：很長的繞路
+  result_en: 'After: a shorter truck run'
+  result_zh: 之后：卡车更短
+  result_zh_hk: 之後：卡車更短
+  en: A new crossing deletes a detour. The firm does not buy the concrete. It buys the hours the driver
+    used to sit in the queue.
+  zh: 新通道删掉绕路。企业买的不是混凝土。它买的是司机曾经排在队里的小时。
+  zh_hk: 新通道刪掉繞路。企業買的不是混凝土。它買的是司機曾經排在隊裏的小時。
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Time the whole trip
+  title_zh: 给整段行程计时
+  title_zh_hk: 給整段行程計時
+  q1_en: How much time did the link save?
+  q1_zh: 这条连接节省了多少时间？
+  q1_zh_hk: 這條連接節省了多少時間？
+  q2_en: How much time still sits in the queue?
+  q2_zh: 队伍里还剩多少时间？
+  q2_zh_hk: 隊伍裏還剩多少時間？
+  en: 'Count door-to-door time, not ribbon-cutting time. Concrete is only the middle of the trip.
+    Next we ask what actually travels on that clock: goods, capital, and people each have their own
+    gate.'
+  zh: 数门到门的时间，不要数剪彩的时间。混凝土只是行程的中间一段。下一讲问这座钟上真正走的是什么：货、资金和人，各有各的闸口。
+  zh_hk: 數門到門的時間，不要數剪彩的時間。混凝土只是行程的中間一段。下一講問這座鐘上真正走的是什麼：貨、資金和人，各有各的閘口。

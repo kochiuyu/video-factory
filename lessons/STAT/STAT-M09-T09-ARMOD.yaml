@@ -1,0 +1,165 @@
+id: STAT-M09-T09-ARMOD
+course: STAT-M09
+course_en: Business Time Series & Demand Forecasting
+course_zh: 商业时间序列与需求预测
+course_zh_hk: 商業時間序列與需求預測
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Autoregressive Models: Using Past Sales to Forecast the Next Period'
+title_zh: 自回归模型：利用过去销量预测下一期
+title_zh_hk: 自回歸模型：利用過去銷量預測下一期
+objective_en: Formulate an AR(1) model, interpret persistence and the stationarity condition, calculate its unconditional mean and one-step forecast, and treat PACF patterns as one input to lag-order selection.
+objective_zh: 构建 AR(1) 模型，解释持续性与平稳条件，计算无条件均值与一步预测，并把 PACF 模式作为滞后阶数选择的一项依据。
+objective_zh_hk: 構建 AR(1) 模型，解釋持續性同平穩條件，計算無條件平均數同一步預測，並將 PACF 模式當成滯後階數選擇嘅其中一項依據。
+glossary:
+  - en: Autoregressive Model (AR)
+    zh: 自回归模型（AR）
+    zh_hk: 自回歸模型（AR）
+    lock: true
+  - en: Persistence Parameter (Phi)
+    zh: 持续性参数（Phi）
+    zh_hk: 持續性參數（Phi）
+    lock: true
+  - en: Stationary Mean / Equilibrium
+    zh: 平稳均值（长期稳态均衡）
+    zh_hk: 平穩平均數（長期穩態均衡）
+    lock: true
+  - en: PACF Cutoff Rule
+    zh: 偏自相关截断准则
+    zh_hk: 偏自相關截斷準則
+    lock: true
+quiz:
+  - id: Q1
+    type: multiple_choice
+    question_en: 'For Y_t = 120 + 0.70 Y_{t-1} + e_t, what is the unconditional mean when the AR(1) process is stationary?'
+    question_zh: 对于 Y_t = 120 + 0.70 Y_{t-1} + e_t，当 AR(1) 过程平稳时，无条件均值是多少？
+    question_zh_hk: 對於 Y_t = 120 + 0.70 Y_{t-1} + e_t，當 AR(1) 過程平穩嗰陣，無條件平均數係幾多？
+    options_en:
+      - 'A: 400 cups'
+      - 'B: 120 cups'
+      - 'C: Approximately 171.4 cups'
+      - 'D: 204 cups'
+    options_zh:
+      - A：400 杯
+      - B：120 杯
+      - C：约 171.4 杯
+      - D：204 杯
+    options_zh_hk:
+      - A：400 杯
+      - B：120 杯
+      - C：約 171.4 杯
+      - D：204 杯
+    answer: A
+    explanation_en: 'Because |0.70| < 1, the stationary mean is c / (1 - Phi) = 120 / 0.30 = 400 cups.'
+    explanation_zh: 因为 |0.70| < 1，平稳均值为 c / (1 - Phi) = 120 / 0.30 = 400 杯。
+    explanation_zh_hk: 因為 |0.70| < 1，平穩平均數係 c / (1 - Phi) = 120 / 0.30 = 400 杯。
+  - id: Q2
+    type: multiple_choice
+    question_en: How should PACF be used when selecting an AR lag order?
+    question_zh: 选择 AR 滞后阶数时，应如何使用 PACF？
+    question_zh_hk: 選擇 AR 滯後階數嗰陣，應該點樣使用 PACF？
+    options_en:
+      - 'A: Use an apparent cutoff as a candidate-order clue, then validate with other diagnostics'
+      - 'B: Treat the first large spike as proof of the true order'
+      - 'C: Choose the number of calendar days in the month'
+      - 'D: Add lags until Durbin-Watson becomes zero'
+    options_zh:
+      - A：把明显截尾视为候选阶数线索，再结合其他诊断验证
+      - B：把第一个大柱条当作真实阶数的证明
+      - C：把当月日历天数定为阶数
+      - D：不断加滞后项，直到德宾-沃森值变为零
+    options_zh_hk:
+      - A：將明顯截尾視為候選階數線索，再配合其他診斷驗證
+      - B：將第一支大柱當成真實階數嘅證明
+      - C：將當月日曆日數定為階數
+      - D：不斷加滯後項，直到德賓-沃森值變成零
+    answer: A
+    explanation_en: The PACF Cutoff Rule is a useful identification heuristic for a pure AR process, not a guarantee. Information criteria, residual diagnostics, and out-of-sample performance should also be checked.
+    explanation_zh: 偏自相关截断准则是识别纯 AR 过程的有用经验方法，并非保证。还应检查信息准则、残差诊断与样本外表现。
+    explanation_zh_hk: 偏自相關截斷準則係識別純 AR 過程嘅有用經驗方法，唔係保證。仲要檢查信息準則、殘差診斷同樣本外表現。
+beats:
+  - id: hook
+    visual: title_card
+    seconds: 30
+    kicker_en: Internal-Memory Forecast
+    kicker_zh: 内部记忆预测
+    kicker_zh_hk: 內部記憶預測
+    title_en: Can Past Sales Help When External Predictors Are Unavailable?
+    title_zh: 外部预测变量不可用时，过去销量能帮忙吗？
+    title_zh_hk: 外部預測變量用唔到嗰陣，過去銷量幫唔幫到手？
+    en: >-
+      Suppose external predictors are temporarily unavailable, but a branch still has its own historical sales. An autoregressive model asks whether recent values contain useful predictive information about the next period. This can provide a transparent baseline, but past sales alone may miss weather, promotions, calendar effects, or structural changes. The business question is whether the internal memory is stable and useful enough to improve forecasts.
+    zh: >-
+      假设外部预测变量暂时不可用，但门店仍有自身历史销量。自回归模型会询问近期数值是否包含预测下一期的有用信息。它可以提供透明的基准预测，但只依赖过去销量可能遗漏天气、推广、日历效应或结构变化。商业问题是，这种内部记忆是否稳定，并足以改善预测。
+    zh_hk: >-
+      假設外部預測變量暫時用唔到，但分店仍然有自己嘅歷史銷量。自回歸模型會問近期數值係咪包含預測下一期嘅有用信息。佢可以提供透明基準預測，但只靠過去銷量可能漏咗天氣、推廣、日曆效應或者結構轉變。商業問題係，呢種內部記憶係咪穩定，同埋足唔足以改善預測。
+  - id: define
+    visual: definition_card
+    seconds: 34
+    formula: 'AR(1): Y_t = c + Phi × Y_{t-1} + e_t; stationarity requires |Phi| < 1'
+    formula_zh: 'AR(1)：Y_t = c + Phi × Y_{t-1} + e_t；平稳条件为 |Phi| < 1'
+    formula_zh_hk: 'AR(1)：Y_t = c + Phi × Y_{t-1} + e_t；平穩條件係 |Phi| < 1'
+    formula_tex: 'Y_t=c+\phi Y_{t-1}+\varepsilon_t,\quad |\phi|<1,\quad \mu=\frac{c}{1-\phi}'
+    s1_en: An Autoregressive Model (AR) explains the current value using its own lagged values. In an AR(1), c is the intercept, the Persistence Parameter (Phi) measures one-period dependence, and e_t is the new innovation.
+    s1_zh: 自回归模型（AR）使用序列自身的滞后值解释当前值。在 AR(1) 中，c 是截距，持续性参数（Phi）衡量一期依赖，而 e_t 是新的创新项。
+    s1_zh_hk: 自回歸模型（AR）使用序列自己嘅滯後值解釋目前值。喺 AR(1) 入面，c 係截距，持續性參數（Phi）衡量一期依賴，而 e_t 係新嘅創新項。
+    s2_en: For the standard AR(1) with stable parameters and suitable innovations, |Phi| below one gives covariance stationarity. Its Stationary Mean / Equilibrium is c divided by one minus Phi. Positive Phi gives gradual mean reversion; negative Phi produces alternating adjustment.
+    s2_zh: 对参数稳定且创新项合适的标准 AR(1)，|Phi| 小于 1 会带来协方差平稳。平稳均值（长期稳态均衡）是 c 除以 1 减 Phi。正 Phi 表示逐步均值回归，负 Phi 则产生交替调整。
+    s2_zh_hk: 對參數穩定而且創新項合適嘅標準 AR(1)，|Phi| 細過 1 會帶來協方差平穩。平穩平均數（長期穩態均衡）係 c 除以 1 減 Phi。正 Phi 表示逐步均值回歸，負 Phi 就會產生交替調整。
+  - id: mechanics
+    visual: two_column
+    seconds: 36
+    left_en: Persistence and Reversion
+    left_zh: 持续性与回归
+    left_zh_hk: 持續性與回歸
+    right_en: Selecting the Lag Order
+    right_zh: 选择滞后阶数
+    right_zh_hk: 選擇滯後階數
+    s1_en: If Phi is 0.70, a one-unit deviation from equilibrium carries 0.70 units into the next period. The following periods retain 0.70 squared, then 0.70 cubed, so the effect decays geometrically under the model.
+    s1_zh: 如果 Phi 为 0.70，偏离均衡 1 个单位后，下一期会保留 0.70 个单位。随后各期依次保留 0.70 的平方、立方，因此影响会按几何比例衰减。
+    s1_zh_hk: 如果 Phi 係 0.70，偏離均衡 1 個單位之後，下一期會保留 0.70 個單位。之後各期依次保留 0.70 嘅平方、立方，所以影響會按幾何比例衰減。
+    s2_en: The PACF Cutoff Rule says that a pure AR(p) process often shows PACF values near zero beyond lag p, while its ACF tails off. In a finite sample, the pattern can be noisy rather than perfectly sharp.
+    s2_zh: 偏自相关截断准则指出，纯 AR(p) 过程的 PACF 在滞后 p 阶之后通常接近零，而 ACF 会逐渐衰减。在有限样本中，该模式可能含有噪声，并不会完美截断。
+    s2_zh_hk: 偏自相關截斷準則指出，純 AR(p) 過程嘅 PACF 喺滯後 p 階之後通常接近零，而 ACF 會逐步衰減。喺有限樣本入面，呢個模式可能有雜音，唔會完美截斷。
+    s3_en: Therefore, PACF suggests candidate orders rather than choosing p by itself. Compare candidates using information criteria, residual whiteness, parameter stability, and forecasting performance at the relevant horizon.
+    s3_zh: 因此，PACF 只是提示候选阶数，不能单独决定 p。应利用信息准则、残差白噪声表现、参数稳定性及相关预测周期的表现比较候选模型。
+    s3_zh_hk: 所以，PACF 只係提示候選階數，唔可以單獨決定 p。要利用信息準則、殘差白雜音表現、參數穩定性，同相關預測周期嘅表現比較候選模型。
+  - id: example
+    visual: example
+    seconds: 36
+    setup_en: 'Assume: Y_t = 120 + 0.70 Y_{t-1} + e_t; latest sales = 500'
+    setup_zh: 假设：Y_t = 120 + 0.70 Y_{t-1} + e_t；最新销量 = 500
+    setup_zh_hk: 假設：Y_t = 120 + 0.70 Y_{t-1} + e_t；最新銷量 = 500
+    result_en: 'Mean = 400; one-step point forecast = 470 cups'
+    result_zh: 均值 = 400；一步点预测 = 470 杯
+    result_zh_hk: 平均數 = 400；一步點預測 = 470 杯
+    s1_en: For illustration, assume c equals 120 and Phi equals 0.70. Because the absolute value of Phi is below one, the model's unconditional mean is 120 divided by 0.30, which equals 400 cups.
+    s1_zh: 为便于说明，假设 c 等于 120、Phi 等于 0.70。因为 Phi 的绝对值小于 1，模型的无条件均值为 120 除以 0.30，即 400 杯。
+    s1_zh_hk: 為咗方便說明，假設 c 等於 120、Phi 等於 0.70。因為 Phi 嘅絕對值細過 1，模型嘅無條件平均數係 120 除以 0.30，即係 400 杯。
+    s2_en: If the latest observed sales equal 500 cups and the next innovation has conditional expectation zero, the one-step point forecast is 120 plus 0.70 times 500, which equals 470 cups.
+    s2_zh: 如果最新观测销量为 500 杯，且下一期创新项的条件期望为零，一步点预测就是 120 加 0.70 乘 500，即 470 杯。
+    s2_zh_hk: 如果最新觀測銷量係 500 杯，而且下一期創新項嘅條件期望係零，一步點預測就係 120 加 0.70 乘 500，即係 470 杯。
+    s3_en: The 470-cup result is a conditional forecast, not an inventory order or a guaranteed outcome. Replenishment also requires inventory, yield, lead time, capacity, service targets, uncertainty, and shortage and waste costs.
+    s3_zh: 470 杯是条件预测，不是库存订单或保证结果。补货还需考虑库存、产出率、提前期、产能、服务目标、不确定性，以及缺货和浪费成本。
+    s3_zh_hk: 470 杯係條件預測，唔係庫存訂單或者保證結果。補貨仲要考慮庫存、產出率、提前期、產能、服務目標、不確定性，以及缺貨同浪費成本。
+  - id: takeaway
+    visual: takeaway
+    seconds: 32
+    q1_en: What Does an AR Model Add?
+    q1_zh: AR 模型增加了什么？
+    q1_zh_hk: AR 模型增加咗乜嘢？
+    q2_en: Decision Rule
+    q2_zh: 决策规则
+    q2_zh_hk: 決策規則
+    s1_en: An AR model turns stable serial dependence into a forecast based on recent values. It is most defensible when the modeled series is stationary and the parameters remain stable.
+    s1_zh: AR 模型把稳定的序列依赖转化为基于近期数值的预测。只有当所建模序列平稳且参数保持稳定时，这种做法才最具合理性。
+    s1_zh_hk: AR 模型將穩定嘅序列依賴轉化成基於近期數值嘅預測。只有當所建模序列平穩，而且參數保持穩定，呢種做法先最有理據。
+    s2_en: Use the PACF Cutoff Rule to propose candidate lag orders, then confirm the specification with information criteria, residual diagnostics, stability checks, and out-of-sample forecasts.
+    s2_zh: 可利用偏自相关截断准则提出候选滞后阶数，再通过信息准则、残差诊断、稳定性检查与样本外预测确认模型设定。
+    s2_zh_hk: 可以利用偏自相關截斷準則提出候選滯後階數，再透過信息準則、殘差診斷、穩定性檢查同樣本外預測確認模型設定。
+    s3_en: Use the point forecast as one planning input, not a complete operating policy. When external drivers matter, compare the AR benchmark with models that include those drivers.
+    s3_zh: 应把点预测作为规划的一项输入，而不是完整运营政策。当外部驱动因素重要时，应把 AR 基准与包含这些因素的模型进行比较。
+    s3_zh_hk: 應該將點預測當成規劃嘅其中一項輸入，而唔係完整營運政策。當外部驅動因素重要，就要將 AR 基準同包含呢啲因素嘅模型比較。

@@ -1,0 +1,170 @@
+id: STAT-M07-T07-MDIST
+course: STAT-M07
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Multi-District Controls: Fixed Store Format Comparisons'
+title_zh: 多区域控制模型：固定门店形态基准对比
+title_zh_hk: 多區域控制模型：固定門市形態基準對比
+objective_en: Estimate a multiple regression model with multi-category district dummy controls, establish an operational base store, and interpret differential district intercepts relative to the benchmark.
+objective_zh: 构建包含多区域虚拟变量控制的多元回归模型，确立营运基准门店，并解读各区域相对于基准的差异截距。
+objective_zh_hk: 構建包含多區域虛擬變量控制嘅多元回歸模型，確立營運基準門市，並解讀各區域相對於基準嘅差異截距。
+glossary:
+- en: Multi-Category Dummies
+  zh: 多分类虚拟变量
+  zh_hk: 多分類虛擬變量
+  lock: true
+  zh_zh_hk: 多分類虛擬變量
+- en: Baseline Store
+  zh: 基准门店
+  zh_hk: 基準門市
+  lock: true
+  zh_zh_hk: 基準門市
+- en: Differential Intercept
+  zh: 差异截距
+  zh_hk: 差異截距
+  lock: true
+  zh_zh_hk: 差異截距
+- en: Fixed Format Control
+  zh: 固定形态控制
+  zh_hk: 固定形態控制
+  lock: true
+  zh_zh_hk: 固定形態控制
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: In the regression model Daily_Cups = 210 + 0.35 * Footfall + 50 * D_WanChai + 90 * D_Central + 3800 * D_Airport, with Mong Kok as the omitted base, what does the coefficient +90 indicate?
+  question_zh: 在回归模型 日出杯量 = 210 + 0.35 * 客流 + 50 * 湾仔虚拟变量 + 90 * 中环虚拟变量 + 3800 * 机场虚拟变量（以旺角店为省略基准）中，系数 +90 代表什么？
+  question_zh_hk: 喺回歸模型 每日出杯量 = 210 + 0.35 * 人流 + 50 * 灣仔虛擬變量 + 90 * 中環虛擬變量 + 3800 * 機場虛擬變量（以旺角店為省略基準）入面，系數 +90 代表啲咩？
+  options_en:
+  - 'A: Central branch sells an additional 90 cups for every pedestrian customer walking past'
+  - 'B: Holding pedestrian footfall constant, Central branch sells an average of 90 cups more per day than the baseline Mong Kok street branch'
+  - 'C: Central branch sells an average of 90 cups more per day than the Wan Chai branch'
+  - 'D: The baseline sales capacity of Central branch equals exactly 90 cups when footfall is zero'
+  options_zh:
+  - 'A: 中环店每有一位过路行人经过，就能多卖出 90 杯咖啡'
+  - 'B: 在控制街头客流量相同的前提下，中环店平均每天比基准旺角街边店多卖出 90 杯咖啡'
+  - 'C: 中环店平均每天比湾仔店多卖出 90 杯咖啡'
+  - 'D: 当客流量为零时，中环店的基础出杯产能恰好为 90 杯'
+  options_zh_hk:
+  - 'A: 中環店每多一個路人行過，就可以賣多 90 杯咖啡'
+  - 'B: 喺控制街頭人流完全相同嘅前提下，中環店平均每日比起基準旺角街舖賣多 90 杯咖啡'
+  - 'C: 中環店平均每日比起灣仔店賣多 90 杯咖啡'
+  - 'D: 當人流係零嗰陣，中環店嘅基礎出杯產能剛好等於 90 杯'
+  answer: B
+  explanation_en: In an m - 1 specification, each retained dummy coefficient is interpreted relative to the omitted category. Under this fitted model, Central has a conditional intercept 90 cups above Mong Kok at the same footfall; this is a model-based difference, not automatically a causal premium.
+  explanation_zh: 在 m - 1 设定中，每个保留的虚拟变量系数都相对于被省略类别解读。在这一拟合模型下，中环在相同客流时的条件截距比旺角高 90 杯；这是模型差异，并不自动构成因果溢价。
+  explanation_zh_hk: 喺 m - 1 設定入面，每個保留嘅虛擬變量系數都相對於被省略類別解讀。喺呢個擬合模型之下，中環喺相同人流時嘅條件截距比旺角高 90 杯；呢個係模型差異，唔會自動構成因果溢價。
+- id: Q2
+  type: multiple_choice
+  question_en: 'Metro Coffee operates across four Hong Kong districts: Mong Kok (base), Wan Chai, Central, and Airport. At a foot traffic level of 400 pedestrians, what is the model-predicted daily cup volume for Wan Chai using Daily_Cups = 210 + 0.35 * Footfall + 50 * D_WanChai + 90 * D_Central + 3800 * D_Airport?'
+  question_zh: Metro Coffee 覆盖香港四个区域：旺角（基准）、湾仔、中环与机场。在客流为 400 人次时，根据模型 日出杯量 = 210 + 0.35 * 客流 + 50 * 湾仔 + 90 * 中环 + 3800 * 机场，湾仔店的预测日出杯量是多少？
+  question_zh_hk: Metro Coffee 覆蓋香港四個區域：旺角（基準）、灣仔、中環同機場。喺人流為 400 人次嗰陣，根據模型 每日出杯量 = 210 + 0.35 * 人流 + 50 * 灣仔 + 90 * 中環 + 3800 * 機場，灣仔店嘅預測每日出杯量係幾多？
+  options_en:
+  - 'A: 350 cups'
+  - 'B: 400 cups'
+  - 'C: 440 cups'
+  - 'D: 4,150 cups'
+  options_zh:
+  - 'A: 350 杯'
+  - 'B: 400 杯'
+  - 'C: 440 杯'
+  - 'D: 4,150 杯'
+  options_zh_hk:
+  - 'A: 350 杯'
+  - 'B: 400 杯'
+  - 'C: 440 杯'
+  - 'D: 4,150 杯'
+  answer: B
+  explanation_en: For Wan Chai, D_WanChai = 1 while D_Central = 0 and D_Airport = 0. Predicted cups = 210 + 0.35 * 400 + 50 * 1 = 210 + 140 + 50 = 400 cups.
+  explanation_zh: 对湾仔店而言，D_WanChai = 1，而 D_Central = 0 且 D_Airport = 0。预测出杯量 = 210 + 0.35 * 400 + 50 * 1 = 210 + 140 + 50 = 400 杯。
+  explanation_zh_hk: 對灣仔店嚟講，D_WanChai = 1，而 D_Central = 0 兼且 D_Airport = 0。預測出杯量 = 210 + 0.35 * 400 + 50 * 1 = 210 + 140 + 50 = 400 杯。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Territory Expansion Dilemma
+  kicker_zh: 跨区拓展困境
+  kicker_zh_hk: 跨區拓展困局
+  title_en: Can One Master Model Forecast Across All Hong Kong Districts?
+  title_zh: 一套主模型能否同时预测全港多元商圈？
+  title_zh_hk: 一套主模型可唔可以同時預測全港多元商圈？
+  en: 'Metro Coffee operates across fundamentally different Hong Kong commercial zones: dense street retail in Mong Kok, corporate offices in Wan Chai, financial towers in Central, and 24-hour transit at the Airport. Building separate regression equations for every district splinters data and prevents network benchmarking. How do we unite all four operating environments into a single master forecasting equation?'
+  zh: Metro Coffee 的业务版图跨越香港截然不同的商业土壤：旺角的高密街边零售、湾仔的商务写字楼、中环的金融摩天大楼以及机场的24小时交通枢纽。若为每个区域单独搭建回归方程，会割裂样本数据并丧失全网横向对账基准。我们该如何将这四种异质环境整合进单一的主预测方程中？
+  zh_hk: Metro Coffee 嘅業務版圖跨越香港完全唔同嘅商業土壤：旺角嘅高密度街舖、灣仔嘅商業寫字樓、中環嘅金融核心大廈以及機場嘅二十四小時交通樞紐。如果幫每個分區單獨起一條回歸方程，會切碎數據兼且冇咗全網橫向對賬嘅基準。我哋點樣可以將呢四種營運環境整合入單一嘅主預測方程入面？
+  zh_zh_hk: Metro Coffee 嘅業務版圖跨越香港完全唔同嘅商業土壤：旺角嘅高密度街舖、灣仔嘅商業寫字樓、中環嘅金融核心大廈以及機場嘅二十四小時交通樞紐。如果幫每個分區單獨起一條回歸方程，會切碎數據兼且冇咗全網橫向對賬嘅基準。我哋點樣可以將呢四種營運環境整合入單一嘅主預測方程入面？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Y_i = beta_0 + beta_1 * Footfall_i + Sum(delta_k * D_k_i) + e_i
+  formula_zh: 多区域控制模型：Y_i = beta_0 + beta_1 * 客流_i + Sum(delta_k * D_k_i) + e_i
+  formula_zh_hk: 多區域控制模型：Y_i = beta_0 + beta_1 * 人流_i + Sum(delta_k * D_k_i) + e_i
+  formula_tex: Y_i = \beta_0 + \beta_1 X_i + \delta_{\text{WC}} D_{\text{WC}, i} + \delta_{\text{CEN}} D_{\text{CEN}, i} + \delta_{\text{AIR}} D_{\text{AIR}, i} + \varepsilon_i
+  s1_en: To incorporate four distinct retail districts without triggering the dummy variable trap, we designate our core Mong Kok street store as the omitted baseline reference group.
+  s1_zh: 为了将四个异质商业区域全部纳入模型且不触发虚拟变量陷阱，我们选取核心旺角街边店作为被省略的基准参照组。
+  s1_zh_hk: 為咗將四個完全唔同嘅商業分區全部納入模型而且唔踩虛擬變量陷阱，我哋揀選核心旺角街舖作為被省略嘅基準參照組。
+  s2_en: We enter three dummy indicators for Wan Chai, Central, and Airport. The constant beta zero captures Mong Kok's baseline sales, while each delta coefficient measures that district's differential intercept relative to Mong Kok.
+  s2_zh: 我们在模型中放入湾仔、中环和机场三个虚拟变量。常数项 beta_0 代表旺角店的基础产能，而每个 delta 系数则精准度量该区域相对于旺角的差异截距。
+  s2_zh_hk: 我哋喺模型入面擺入灣仔、中環同機場三個虛擬變量。常數項 beta_0 代表旺角店嘅基礎產能，而每個 delta 系數就精確衡量嗰個區域相對於旺角嘅差異截距。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Network Benchmarking
+  left_zh: 全网对账标尺
+  right_en: Shared Conversion Slope
+  right_zh: 共享转化斜率
+  s1_en: A pooled model uses all branch observations and estimates one shared footfall slope plus district intercept shifts. Pooling can improve precision when the shared-slope specification is appropriate, but it does not automatically outperform separate district models.
+  s1_zh: 汇总模型使用全部门店观测值，估计一个共同客流斜率和多个区域截距平移。当共同斜率设定合理时，汇总可能提高估计精度，但并不自动优于分区域模型。
+  s1_zh_hk: 匯總模型使用全部門市觀測值，估計一個共同人流斜率同多個區域截距平移。當共同斜率設定合理時，匯總可能提高估計精度，但並唔會自動優於分區模型。
+  s2_en: Each delta coefficient is a conditional fitted difference from the omitted Mong Kok category at the same footfall. The coefficients summarize model-based district contrasts; they do not by themselves identify the business cause of each difference.
+  s2_zh: 每个 delta 系数表示在客流相同条件下，相对于被省略的旺角类别的条件拟合差异。这些系数概括模型中的区域对比，但本身不能识别差异的业务成因。
+  s2_zh_hk: 每個 delta 系數代表喺人流相同之下，相對於被省略嘅旺角類別嘅條件擬合差異。呢啲系數概括模型入面嘅區域對比，但本身唔能夠識別差異嘅業務成因。
+  s3_en: This additive model imposes one shared footfall slope across districts. Districts may have different intercepts, but a different conversion slope requires an interaction term or another specification; the shared-slope assumption should be checked.
+  s3_zh: 这一加法模型对所有区域施加同一个客流斜率。各区域可以有不同截距，但若转化斜率不同，就需要交互项或其他模型设定；共同斜率假设应当接受检验。
+  s3_zh_hk: 呢個加法模型對所有區域施加同一個人流斜率。各區可以有唔同截距，但如果轉化斜率唔同，就需要交互項或者其他模型設定；共同斜率假設應該接受檢查。
+  left_zh_hk: 全網對賬標尺
+  right_zh_hk: 共享轉化斜率
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Establish Base Anchor
+  step1_zh: 确立旺角基准原点
+  step2_en: Estimate District Shifts
+  step2_zh: 估算各区差异截距
+  step3_en: Audit Regional Predictions
+  step3_zh: 横向核验区域预测
+  s1_en: 'Step one: Set Mong Kok as the baseline format with footfall slope beta_1 = 0.35 cups per pedestrian. Mong Kok''s baseline intercept beta_0 is estimated at 210 cups.'
+  s1_zh: 第一步：设旺角店为基准业态，客流斜率 beta_1 为每位行人 0.35 杯。旺角店的基础截距 beta_0 估算为 210 杯。
+  s1_zh_hk: 第一步：設旺角店為基準形態，人流斜率 beta_1 係每位行人 0.35 杯。旺角店嘅基礎截距 beta_0 估算為 210 杯。
+  s2_en: 'Step two: In the supplied fitted model, the district coefficients are delta_WanChai = +50 cups, delta_Central = +90 cups, and delta_Airport = +3,800 cups, each measured relative to Mong Kok at the same footfall.'
+  s2_zh: 第二步：在给定的拟合模型中，区域系数为：湾仔 delta = +50 杯、中环 delta = +90 杯、机场 delta = +3,800 杯；它们都表示在客流相同条件下相对于旺角的差异。
+  s2_zh_hk: 第二步：喺畀定嘅擬合模型入面，區域系數係：灣仔 delta = +50 杯、中環 delta = +90 杯、機場 delta = +3,800 杯；全部都代表喺人流相同之下相對於旺角嘅差異。
+  s3_en: 'Step three: At footfall 400, the fitted predictions are 350 cups for Mong Kok, 400 for Wan Chai, 440 for Central, and 4,150 for Airport. These values follow directly from the supplied coefficients and shared-slope specification.'
+  s3_zh: 第三步：当客流为 400 时，拟合预测分别为：旺角 350 杯、湾仔 400 杯、中环 440 杯、机场 4,150 杯。这些数值直接来自给定系数和共同斜率设定。
+  s3_zh_hk: 第三步：當人流係 400 時，擬合預測分別係：旺角 350 杯、灣仔 400 杯、中環 440 杯、機場 4,150 杯。呢啲數值直接來自畀定系數同共同斜率設定。
+  step1_zh_hk: 確立旺角基準原點
+  step2_zh_hk: 估算各區差異截距
+  step3_zh_hk: 橫向核驗區域預測
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Why Use One Model Instead of Four?
+  q1_zh: 为何用一套主模型而非分散建模？
+  q2_en: 'Audit Rule: Anchor to a Stable Benchmark'
+  q2_zh: 审计准则：全网对账必立稳定基准
+  s1_en: Multi-category dummies let one regression represent several districts through a reference category and conditional intercept differences. This is useful when a common slope is defensible and the categories are coded consistently.
+  s1_zh: 多分类虚拟变量通过一个基准类别和多个条件截距差异，使一套回归模型能够表示多个区域。当共同斜率具有合理依据且分类编码一致时，这种设定很有用。
+  s1_zh_hk: 多分類虛擬變量透過一個基準類別同多個條件截距差異，令一套回歸模型可以表示多個區域。當共同斜率有合理依據，而且分類編碼一致時，呢種設定會有用。
+  s2_en: 'Decision rule: choose and document a reference district for interpretability, verify the shared-slope assumption, and interpret every district coefficient relative to that reference. Changing the reference changes the reported contrasts, not the fitted predictions.'
+  s2_zh: 决策规则：选择并记录便于解读的基准区域，检验共同斜率假设，并将每个区域系数都相对于该基准解读。更换基准会改变报告中的对比方式，但不会改变拟合预测。
+  s2_zh_hk: 決策規則：選擇並記錄方便解讀嘅基準區域，檢查共同斜率假設，並將每個區域系數都相對於呢個基準解讀。更換基準會改變報告入面嘅對比方式，但唔會改變擬合預測。
+  s3_en: With Mong Kok omitted, the model estimates conditional shifts of +50 for Wan Chai, +90 for Central, and +3,800 for Airport. At footfall 400, the corresponding fitted values are 350, 400, 440, and 4,150 cups.
+  s3_zh: 以旺角为省略基准时，模型估计湾仔、中环和机场的条件平移分别为 +50、+90 和 +3,800 杯。客流为 400 时，对应拟合值为 350、400、440 和 4,150 杯。
+  s3_zh_hk: 以旺角做省略基準時，模型估計灣仔、中環同機場嘅條件平移分別係 +50、+90 同 +3,800 杯。人流係 400 時，對應擬合值係 350、400、440 同 4,150 杯。
+  q1_zh_hk: 點解用一套主模型而唔分開起四條線？
+  q2_zh_hk: 審計準則：全網對賬必立穩定基準

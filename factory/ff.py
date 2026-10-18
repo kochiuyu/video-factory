@@ -68,14 +68,18 @@ def ffmpeg_exe() -> str:
 
 
 def run(args: list[str], **kwargs) -> subprocess.CompletedProcess:
-    cmd = [ffmpeg_exe(), *args]
+    cmd = [ffmpeg_exe(), "-hide_banner", "-nostdin", *args]
     if sys.platform.startswith("win"):
         kwargs.setdefault("creationflags", getattr(subprocess, "CREATE_NO_WINDOW", 0))
+        kwargs.setdefault("stdin", subprocess.DEVNULL)
     return subprocess.run(cmd, **kwargs)
 
 
-def check_call(args: list[str]) -> None:
-    proc = run(args, capture_output=True, text=True)
+def check_call(args: list[str], timeout: int = 180) -> None:
+    try:
+        proc = run(args, capture_output=True, text=True, timeout=timeout)
+    except subprocess.TimeoutExpired as exc:
+        raise RuntimeError(f"ffmpeg timed out after {timeout}s\n{' '.join(args[:8])}") from exc
     if proc.returncode != 0:
         tail = ((proc.stderr or "") + (proc.stdout or ""))[-2000:]
         raise RuntimeError(

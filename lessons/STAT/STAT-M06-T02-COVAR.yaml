@@ -1,0 +1,193 @@
+id: STAT-M06-T02-COVAR
+course: STAT-M06
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Sample Covariance: Measuring the Direction of Joint Variation'
+title_zh: 样本协方差：衡量联合变动方向
+title_zh_hk: 樣本協方差：量度聯合變動方向
+objective_en: Calculate sample covariance from centered cross-products, interpret its sign as the direction of linear co-movement,
+  explain why its magnitude depends on measurement units, and distinguish association from causal or operational conclusions.
+objective_zh: 利用中心化离均差乘积计算样本协方差，把其符号解释为线性共动方向，说明其绝对大小为何依赖测量单位，并区分统计关联、因果与经营结论。
+objective_zh_hk: 利用中心化離均差乘積計算樣本協方差，將佢嘅符號解讀做線性共動方向，說明佢嘅絕對大小點解依賴量度單位，並區分統計關聯、因果同營運結論。
+glossary:
+- en: Sample Covariance
+  zh: 样本协方差
+  zh_hk: 樣本協方差
+  lock: true
+- en: Co-movement
+  zh: 协同变动
+  zh_hk: 協同變動
+  lock: true
+- en: Cross-Product Deviation
+  zh: 离均差乘积
+  zh_hk: 離均差乘積
+  lock: true
+- en: Scale Dependence
+  zh: 量纲依赖性
+  zh_hk: 量綱依賴性
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: What does a strictly positive sample covariance between labor hours and cup sales indicate?
+  question_zh: 如果咖啡师工时与每日咖啡出杯量之间的样本协方差严格为正（s_XY > 0），这在数学上代表什么？
+  question_zh_hk: 如果咖啡師工時同每日咖啡出杯量之間嘅樣本協方差大過零（s_XY > 0），呢個喺數學上代表緊啲咩？
+  options_en:
+  - 'A: Barista labor hours cause cup sales to increase at a fixed linear rate'
+  - 'B: Same-sign deviations tend to dominate: above-average labor aligns with above-average sales, and below-average labor
+    aligns with below-average sales'
+  - 'C: The relationship between labor hours and cup sales is perfectly linear with zero residual noise'
+  - 'D: A one-hour increase in labor guarantees exactly s_XY additional cups sold'
+  options_zh:
+  - 'A: 咖啡师工时以固定的线性速率因果驱动咖啡销量的增长'
+  - 'B: 高于平均工时的营业日系统性地对应高于平均销量的营业日'
+  - 'C: 工时与销量之间呈现完全线性关系且残差噪声严格为零'
+  - 'D: 工时每增加一小时必然保证多卖出恰好 s_XY 杯咖啡'
+  options_zh_hk:
+  - 'A: 咖啡師工時以固定嘅線性比率因果帶動咖啡銷量上升'
+  - 'B: 高過平均工時嘅營業日好有規律噉對應住高過平均銷量嘅營業日'
+  - 'C: 工時同銷量之間呈現完美線性關係而且完全冇殘差雜音'
+  - 'D: 工時每增加一個鐘必然保證賣多啱啱好 s_XY 杯咖啡'
+  answer: B
+  explanation_en: Positive covariance summarizes positive linear co-movement in the sample. It does not establish a fixed
+    marginal effect, perfect fit, or causation.
+  explanation_zh: 正协方差表明同向协同变动：当 X 高于其均值时，Y 往往也高于其均值，从而产生正向离均差乘积 (X_i - X_bar)(Y_i - Y_bar) > 0。
+  explanation_zh_hk: 正協方差代表同向協同變動：當 X 高過平均值嗰陣，Y 往往亦都高過平均值，得出正數嘅離均差乘積 (X_i - X_bar)(Y_i - Y_bar) > 0。
+- id: Q2
+  type: multiple_choice
+  question_en: If X-bar = 30 hours, Y-bar = 365 cups, and one store-day records (40, 420), what is its cross-product contribution?
+  question_zh: Metro Coffee 测算班次工时（均值 = 30 小时）与售出杯数（均值 = 365 杯）。湾仔店记录为 40 小时和 420 杯。湾仔店对样本协方差分子（离均差乘积和）的贡献是多少？
+  question_zh_hk: Metro Coffee 測算排班工時（平均 = 30 個鐘）同賣出杯數（平均 = 365 杯）。灣仔店紀錄係 40 個鐘同 420 杯。灣仔店對樣本協方差分子（離均差乘積和）嘅貢獻係幾多？
+  options_en:
+  - 'A: +550 hour-cups'
+  - 'B: +16,800 hour-cups'
+  - 'C: +55 hour-cups'
+  - 'D: -550 hour-cups'
+  options_zh:
+  - 'A: +550 小时·杯'
+  - 'B: +16,800 小时·杯'
+  - 'C: +55 小时·杯'
+  - 'D: -550 小时·杯'
+  options_zh_hk:
+  - 'A: +550 小時·杯'
+  - 'B: +16,800 小時·杯'
+  - 'C: +55 小時·杯'
+  - 'D: -550 小時·杯'
+  answer: A
+  explanation_en: The contribution is (40 - 30)(420 - 365) = 10 x 55 = positive 550 hour-cups.
+  explanation_zh: 单点贡献等于离均差乘积：(X_i - X_bar) * (Y_i - Y_bar) = (40 - 30) * (420 - 365) = (+10) * (+55) = +550 小时·杯。
+  explanation_zh_hk: 單店貢獻等於離均差乘積：(X_i - X_bar) * (Y_i - Y_bar) = (40 - 30) * (420 - 365) = (+10) * (+55) = +550 小時·杯。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  title_en: Do labor hours and cup sales move together?
+  title_zh: 工时与杯数销量是否同向变动？
+  title_zh_hk: 工時同杯數銷量係咪同向變動？
+  en: Metro Coffee is reviewing an assumed set of store-day labor hours and cup sales. Managers want to know whether days
+    with above-average staffing also tend to have above-average sales. Sample covariance converts the scatter plot’s directional
+    pattern into one signed number, but it does not establish that labor causes sales or determine whether additional staffing
+    is profitable.
+  zh: 都市咖啡正在审视一组假设的门店日工时与杯数销量。管理人员想知道：工时高于平均值的营业日，销量是否也往往高于平均值。样本协方差把散点图的方向性图形转化为一个带符号数值，但不能证明工时导致销量，也不能判断增派人手是否盈利。
+  zh_hk: 都市咖啡正審視一組假設嘅門市日工時同杯數銷量。管理人員想知道：工時高過平均值嘅營業日，銷量係咪亦往往高過平均值。樣本協方差將散點圖嘅方向性圖形轉化成一個帶符號數值，但唔可以證明工時導致銷量，亦唔可以判斷加派人手係咪有利潤。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: s_XY = Sum[(X_i - X-bar)(Y_i - Y-bar)] / (n - 1)
+  formula_zh: s_XY = Σ[(X_i - X-bar)(Y_i - Y-bar)] / (n - 1)
+  formula_zh_hk: s_XY = Σ[(X_i - X-bar)(Y_i - Y-bar)] / (n - 1)
+  formula_tex: s_{XY}=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar X)(Y_i-\bar Y)
+  s1_en: Center each variable by subtracting its sample mean. For observation i, multiply the centered X value by the centered
+    Y value. The cross-product is positive when both deviations have the same sign and negative when they have opposite signs.
+  s1_zh: 先分别减去样本均值，使两个变量中心化。对于观测 i，把中心化后的 X 值与 Y 值相乘。当两个离均差同号时，乘积为正；异号时，乘积为负。
+  s1_zh_hk: 先分別減去樣本平均數，令兩個變量中心化。對於觀測 i，將中心化之後嘅 X 值同 Y 值相乘。當兩個離均差同號嗰陣，乘積係正；異號嗰陣，乘積係負。
+  s2_en: Add the cross-products and divide by n minus one to obtain the usual sample covariance. A positive result signals
+    positive linear co-movement, a negative result signals negative linear co-movement, and a value near zero signals little
+    net linear co-movement, not necessarily no relationship.
+  s2_zh: 把离均差乘积相加，再除以 n - 1，得到通常定义的样本协方差。正值表示正向线性共动，负值表示负向线性共动；接近零表示净线性共动较弱，并不必然表示没有任何关系。
+  s2_zh_hk: 將離均差乘積相加，再除以 n - 1，得到通常定義嘅樣本協方差。正值表示正向線性共動，負值表示負向線性共動；接近零表示淨線性共動較弱，並唔必然表示冇任何關係。
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  left_en: Sign from centered quadrants
+  left_zh: 由中心化象限决定符号
+  right_en: Magnitude changes with scale
+  right_zh: 绝对大小随尺度改变
+  s1_en: Observations in the upper-right and lower-left relative to the centroid contribute positive cross-products. Observations
+    in the upper-left and lower-right contribute negative cross-products. Covariance summarizes which type dominates after
+    all contributions are combined.
+  s1_zh: 相对于质心，右上与左下区域的观测贡献正离均差乘积；左上与右下区域贡献负乘积。协方差汇总全部贡献后，反映哪类方向占主导。
+  s1_zh_hk: 相對於質心，右上同左下區域嘅觀測貢獻正離均差乘積；左上同右下區域貢獻負乘積。協方差匯總全部貢獻之後，反映邊類方向佔主導。
+  s2_en: Opposing contributions can cancel. A covariance near zero can occur with a curved pattern, separate clusters, or
+    strong positive and negative subgroups. Inspect the scatter plot before treating covariance as a complete description.
+  s2_zh: 方向相反的贡献可能互相抵消。协方差接近零时，数据仍可能存在曲线形态、不同组群，或强烈的正负子组。把协方差视为完整描述前，应先检查散点图。
+  s2_zh_hk: 方向相反嘅貢獻可能互相抵消。協方差接近零嗰陣，數據仍然可能存在曲線形態、唔同群組，或者強烈嘅正負子組。將協方差視為完整描述之前，應該先檢查散點圖。
+  s3_en: Covariance is expressed in the product of the original units. Converting labor hours to minutes multiplies the covariance
+    by sixty, while changing cups to dozens divides it by twelve. The underlying observations have not become more or less
+    tightly related, so raw covariance magnitudes are not comparable across scales.
+  s3_zh: 协方差单位是两个原始单位的乘积。把工时从小时改成分钟，会把协方差乘以 60；把杯数改成打数，则会除以 12。底层观测的关联紧密程度并未因此改变，所以不能跨尺度比较原始协方差大小。
+  s3_zh_hk: 協方差單位係兩個原始單位嘅乘積。將工時由小時改成分鐘，會將協方差乘以 60；將杯數改成打數，就會除以 12。底層觀測嘅關聯緊密程度並冇因此改變，所以唔可以跨尺度比較原始協方差大小。
+  left_zh_hk: 由中心化象限決定符號
+  right_zh_hk: 絕對大小隨尺度改變
+  title_en: Cross-products reveal direction, while units control magnitude
+  title_zh: 离均差乘积揭示方向，测量单位决定数值大小
+  title_zh_hk: 離均差乘積揭示方向，量度單位決定數值大小
+- id: ledger
+  visual: steps
+  seconds: 38
+  step1_en: Assume points (20 hours, 310 cups) and (40 hours, 420 cups); means are (30, 365)
+  step1_zh: 假设点为（20 小时，310 杯）与（40 小时，420 杯）；均值为（30，365）
+  step2_en: 'Cross-products: (-10)(-55) = 550 and (10)(55) = 550; sum = 1100 hour-cups'
+  step2_zh: 离均差乘积：(-10)(-55) = 550，(10)(55) = 550；总和 = 1100 小时·杯
+  step3_en: s_XY = 1100/(2 - 1) = 1100 hour-cups; sign is positive
+  step3_zh: s_XY = 1100/(2 - 1) = 1100 小时·杯；符号为正
+  s1_en: For illustration, assume two store-days with the stated values. Their mean labor is 30 hours and mean sales are 365
+    cups. These figures are teaching assumptions, not verified staffing, overtime, productivity, or financial records.
+  s1_zh: 作为示例，假设两个门店日具有上述数值。平均工时为 30 小时，平均销量为 365 杯。这些数字是教学假设，并非已核实的人员配置、加班、生产率或财务记录。
+  s1_zh_hk: 作為例子，假設兩個門市日具有上述數值。平均工時係 30 小時，平均銷量係 365 杯。呢啲數字係教學假設，唔係已核實嘅人員配置、加班、生產率或者財務記錄。
+  s2_en: The first point contributes positive 550 because both deviations are negative. The second also contributes positive
+    550 because both deviations are positive. Their cross-product sum is positive 1100 hour-cups.
+  s2_zh: 第一个点的两个离均差都为负，因此贡献正 550；第二个点的两个离均差都为正，也贡献正 550。离均差乘积总和为正 1100 小时·杯。
+  s2_zh_hk: 第一個點嘅兩個離均差都係負，所以貢獻正 550；第二個點嘅兩個離均差都係正，亦貢獻正 550。離均差乘積總和係正 1100 小時·杯。
+  s3_en: With n equal to two, divide by one, giving sample covariance 1100 hour-cups. The positive sign is consistent with
+    same-direction movement in this assumed sample. With only two observations, the number is descriptive and cannot establish
+    a stable population pattern or causal staffing effect.
+  s3_zh: 当 n = 2 时，分母为 1，因此样本协方差为 1100 小时·杯。正号与该假设样本中的同向变化一致。由于只有两个观测，这个数值只是描述性结果，不能建立稳定总体规律或工时因果效应。
+  s3_zh_hk: 當 n = 2 嗰陣，分母係 1，所以樣本協方差係 1100 小時·杯。正號同呢個假設樣本入面嘅同向變化一致。由於只有兩個觀測，呢個數值只係描述性結果，唔可以建立穩定總體規律或者工時因果效應。
+  step1_zh_hk: 假設點係（20 小時，310 杯）同（40 小時，420 杯）；平均數係（30，365）
+  step2_zh_hk: 離均差乘積：(-10)(-55) = 550，(10)(55) = 550；總和 = 1100 小時·杯
+  step3_zh_hk: s_XY = 1100/(2 - 1) = 1100 小時·杯；符號係正
+  title_en: Calculate covariance for two assumed store-days
+  title_zh: 计算两个假设门店日的协方差
+  title_zh_hk: 計算兩個假設門市日嘅協方差
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  q1_en: What does the covariance sign summarize?
+  q1_zh: 协方差符号概括什么？
+  q2_en: Why is raw covariance unsuitable for comparing strength?
+  q2_zh: 为什么原始协方差不适合比较强度？
+  s1_en: Positive covariance means same-sign deviations dominate; negative covariance means opposite-sign deviations dominate.
+    Near-zero covariance means little net linear co-movement, but the scatter plot may still contain nonlinear or grouped
+    structure.
+  s1_zh: 正协方差表示同号离均差乘积占主导；负协方差表示异号乘积占主导。接近零表示净线性共动较弱，但散点图仍可能包含非线性或组群结构。
+  s1_zh_hk: 正協方差表示同號離均差乘積佔主導；負協方差表示異號乘積佔主導。接近零表示淨線性共動較弱，但散點圖仍然可能包含非線性或者群組結構。
+  s2_en: Raw covariance changes when either variable is rescaled, so its magnitude cannot be interpreted on a universal scale.
+    Always report the variable definitions and units, and use a standardized measure when scale-free comparison is required.
+  s2_zh: 只要任一变量改变尺度，原始协方差就会变化，因此其绝对大小没有统一解释尺度。应报告变量定义与单位；需要无量纲比较时，应使用标准化指标。
+  s2_zh_hk: 只要任何一個變量改變尺度，原始協方差就會變化，所以佢嘅絕對大小冇統一解讀尺度。應該報告變量定義同單位；需要無量綱比較嗰陣，應該使用標準化指標。
+  s3_en: In the assumed two-point example, covariance is positive 1100 hour-cups. That supports a positive sample co-movement
+    description only. It does not quantify a one-hour sales effect, prove causation, or authorize staffing changes.
+  s3_zh: 在假设的两点示例中，协方差为正 1100 小时·杯。它只支持样本正向共动的描述，不能量化增加一小时的销量效应、证明因果，或授权人员配置变更。
+  s3_zh_hk: 喺假設嘅兩點例子入面，協方差係正 1100 小時·杯。佢只支持樣本正向共動嘅描述，唔可以量化增加一小時嘅銷量效應、證明因果，或者授權人員配置變更。
+  q1_zh_hk: 協方差符號概括咩？
+  q2_zh_hk: 點解原始協方差唔適合比較強度？
+  title_en: Use covariance for direction, not standardized strength
+  title_zh: 用协方差判断方向，不用其衡量标准化强度
+  title_zh_hk: 用協方差判斷方向，唔用佢量度標準化強度

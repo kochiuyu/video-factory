@@ -1,0 +1,225 @@
+id: STAT-M05-T10-WELCH
+course: STAT-M05
+course_en: Hypothesis Testing & Store Experiments
+course_zh: 假设检验与门店运营实验
+course_zh_hk: 假設檢驗與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Welch’s Two-Sample t-Test: Comparing Means without Equal Variances'
+title_zh: 韦尔奇双样本 t 检验：不假定方差相等的均值比较
+title_zh_hk: 韋爾奇雙樣本 t 檢驗：唔假定方差相等嘅均值比較
+objective_en: Apply Welch’s two-sample t-test to compare two independent population means without assuming equal variances,
+  calculate the unpooled standard error and Welch-Satterthwaite degrees of freedom, assess design and distribution conditions,
+  and interpret an assumed service-time difference without converting it into a causal, operational, or employee-level conclusion.
+objective_zh: 在不假定方差相等的情况下，应用韦尔奇双样本 t 检验比较两个独立总体均值，计算非合并标准误与韦尔奇-萨特思韦特自由度，评估设计与分布条件，并解释假设的服务时间差异，同时避免把结果转化为因果、经营或针对员工个人的结论。
+objective_zh_hk: 喺唔假定方差相等嘅情況之下，應用韋爾奇雙樣本 t 檢驗比較兩個獨立總體均值，計算非合併標準誤同韋爾奇-薩特思韋特自由度，評估設計同分佈條件，並解讀假設嘅服務時間差異，同時避免將結果轉化成因果、營運或者針對員工個人嘅結論。
+glossary:
+- en: Welch's t-test
+  zh: 韦尔奇 t 检验
+  zh_hk: 韋爾奇 t 檢驗
+  lock: true
+- en: unpooled variance
+  zh: 非合并方差/不齐性方差
+  zh_hk: 非合併方差/不齊性方差
+  lock: true
+- en: Welch-Satterthwaite degrees of freedom
+  zh: 韦尔奇-萨特思韦特自由度
+  zh_hk: 韋爾奇-薩特思韋特自由度
+  lock: true
+- en: variance heterogeneity
+  zh: 方差齐性破缺/方差异质性
+  zh_hk: 方差齊性破缺/方差異質性
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why use Welch’s two-sample t-test instead of a pooled-variance t-test when equal variances are not justified?
+  question_zh: 在对比两个零售门店群体时，为什么现代统计学家与运筹分析师强烈建议默认采用韦尔奇 t 检验，而非学生氏合并方差两样本 t 检验？
+  question_zh_hk: 喺對比兩個零售門市群體嗰陣，點解現代統計學家與運籌分析師強烈建議默認採用韋爾奇 t 檢驗，而唔係學生氏合併方差兩樣本 t 檢驗？
+  options_en:
+  - 'A: Welch estimates each group’s variance contribution separately and adjusts degrees of freedom, avoiding the additional
+    equal-variance assumption while retaining other design assumptions.'
+  - 'B: Because Student''s pooled test can only be performed using physical paper ledgers, while Welch''s test works on computers.'
+  - 'C: Because Welch''s test automatically forces both sample means to equal zero before computing test statistics.'
+  - 'D: Because retail accounting rules make it illegal to calculate degrees of freedom as an integer.'
+  options_zh:
+  - 'A: 现实商业门店天然具有不同的方差与样本量；当总体方差不相等时，机械合并方差会使第一类错误率严重失真失控，而韦尔奇检验在任何方差与样本量组合下均稳健可靠。'
+  - 'B: 因为学生氏合并方差检验在法规上只能在纸质账本上手算，而韦尔奇检验则专用于电子表格。'
+  - 'C: 因为韦尔奇检验在运算底层会强制将两组样本均值先归零再开始推导统计量。'
+  - 'D: 因为零售特许经营会计法严禁在管理报告中将自由度表示为整数。'
+  options_zh_hk:
+  - 'A: 現實商業門市天然具有唔同嘅方差與樣本量；當總體方差唔相等嗰陣，機械合併方差會令第一類錯誤率嚴重失真失控，而韋爾奇檢驗喺任何方差與樣本量組合下均穩健可靠。'
+  - 'B: 因為學生氏合併方差檢驗喺法規上淨係可以喺紙質賬本上手計，而韋爾奇檢驗就專用於電子表格。'
+  - 'C: 因為韋爾奇檢驗喺運算底層會強制將兩組樣本均值先歸零再開始推導統計量。'
+  - 'D: 因為零售特許經營會計法嚴禁喺管理報告入面將自由度表示為整數。'
+  answer: A
+  explanation_en: 'Welch addresses unequal population variances. It does not make every comparison robust: independence, sampling
+    quality, measurement validity, and distributional behavior still matter.'
+  explanation_zh: 传统合并方差 t 检验严格依赖两组方差齐性的苛刻假设。一旦实际方差与样本量不对称，合并检验会剧烈扭曲真实的显著性水平 alpha。韦尔奇检验抛弃了方差齐性假定，在异质商业场景中具有极高稳健性。
+  explanation_zh_hk: 傳統合併方差 t 檢驗嚴格依賴兩組方差齊性嘅苛刻假設。一旦實際方差與樣本量唔對稱，合併檢驗會劇烈扭曲真實嘅顯著性水平 alpha。韋爾奇檢驗拋棄咗方差齊性假定，喺異質商業場景入面具有極高穩健性。
+- id: Q2
+  type: multiple_choice
+  question_en: 'Assume independent groups with n1 = 16, x1-bar = 38.0 s, s1 = 4.0 s and n2 = 25, x2-bar = 44.0 s, s2 = 10.0
+    s. What is the Welch result for H0: mu1 - mu2 = 0?'
+  question_zh: '都市咖啡审计出餐制作速度：旺角店（n1 = 16，均值 38.0 秒，s1 = 4.0 秒）对决 机场店（n2 = 25，均值 44.0 秒，s2 = 10.0 秒）。在 H0: mu1 - mu2 = 0 下，非合并标准误
+    SE_diff、t_Welch 统计量及 alpha = 0.05 时的结论是什么？'
+  question_zh_hk: '都市咖啡審計出餐製作速度：旺角舖（n1 = 16，均值 38.0 秒，s1 = 4.0 秒）對決 機場舖（n2 = 25，均值 44.0 秒，s2 = 10.0 秒）。喺 H0: mu1 - mu2 = 0
+    下，非合併標準誤 SE_diff、t_Welch 統計量及 alpha = 0.05 嗰陣嘅結論係咩？'
+  options_en:
+  - 'A: SE ≈ 2.236 s; t ≈ -2.68; df ≈ 34.6; two-sided p ≈ 0.011; reject H0 at alpha = 0.05.'
+  - 'B: SE_diff = 4.0 + 10.0 = 14.0s; t_Welch = -6.0 / 14.0 ≈ -0.43. Fail to reject H0.'
+  - 'C: SE_diff = sqrt(16 + 25) = 6.40s; t_Welch = -6.0 / 6.40 = -0.94. Fail to reject H0.'
+  - 'D: t_Welch = -2.68; retain H0 because airport flight schedules legally override shop floor statistics.'
+  options_zh:
+  - 'A: SE_diff = 根号(16/16 + 100/25) = 根号(1.0 + 4.0) = 根号(5.0) ≈ 2.236 秒；t_Welch = (38.0 - 44.0) / 2.236 ≈ -2.68。自由度 df ≈
+    34.6（临界值 t* ≈ 2.032），拒绝 H0：两店出餐效率存在显著结构性落差。'
+  - 'B: SE_diff = 4.0 + 10.0 = 14.0 秒；t_Welch = -6.0 / 14.0 ≈ -0.43。判定不拒绝 H0。'
+  - 'C: SE_diff = 根号(16 + 25) = 6.40 秒；t_Welch = -6.0 / 6.40 = -0.94。判定不拒绝 H0。'
+  - 'D: t_Welch = -2.68；判定保留 H0，因为机场航班时刻表的特殊性在商业逻辑上自动豁免出餐考核。'
+  options_zh_hk:
+  - 'A: SE_diff = 根號(16/16 + 100/25) = 根號(1.0 + 4.0) = 根號(5.0) ≈ 2.236 秒；t_Welch = (38.0 - 44.0) / 2.236 ≈ -2.68。自由度 df ≈
+    34.6（臨界值 t* ≈ 2.032），拒絕 H0：兩舖出餐效率存在顯著結構性落差。'
+  - 'B: SE_diff = 4.0 + 10.0 = 14.0 秒；t_Welch = -6.0 / 14.0 ≈ -0.43。判定唔拒絕 H0。'
+  - 'C: SE_diff = 根號(16 + 25) = 6.40 秒；t_Welch = -6.0 / 6.40 = -0.94。判定唔拒絕 H0。'
+  - 'D: t_Welch = -2.68；判定保留 H0，因為機場航班時刻表嘅特殊性喺商業邏輯上自動豁免出餐考核。'
+  answer: A
+  explanation_en: SE = sqrt(16/16 + 100/25) = sqrt(5) ≈ 2.236. The minus-6-second difference gives t ≈ -2.68. Welch df is
+    approximately 34.6, producing a two-sided p-value around 0.011.
+  explanation_zh: 非合并标准误 SE_diff = 根号(4^2/16 + 10^2/25) = 根号(1 + 4) = 根号(5) ≈ 2.236 秒。检验统计量 t_Welch = -6.0 / 2.236 ≈ -2.68。萨特思韦特公式解得有效自由度约为
+    34.6。因绝对值 2.68 大于临界值 2.032，坚决拒绝 H0（p ≈ 0.011）。
+  explanation_zh_hk: 非合併標準誤 SE_diff = 根號(4^2/16 + 10^2/25) = 根號(1 + 4) = 根號(5) ≈ 2.236 秒。檢驗統計量 t_Welch = -6.0 / 2.236 ≈ -2.68。薩特思韋特公式解得有效自由度約為
+    34.6。因絕對值 2.68 大過臨界值 2.032，堅決拒絕 H0（p ≈ 0.011）。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  kicker_en: The Unequal Battlefield
+  kicker_zh: 异质战场的交锋
+  kicker_zh_hk: 異質戰場嘅交鋒
+  title_en: How should two independent means be compared when variability differs?
+  title_zh: 两组独立均值的波动不同时，应如何比较？
+  title_zh_hk: 兩組獨立均值嘅波動唔同嗰陣，應該點樣比較？
+  en: Metro Coffee is comparing preparation times in two assumed, independently sampled store processes. Group 1 has 16 observations
+    with a mean of 38.0 seconds and a standard deviation of 4.0 seconds. Group 2 has 25 observations with a mean of 44.0 seconds
+    and a standard deviation of 10.0 seconds. Because the groups differ in both sample size and variability, the analysis
+    should not require a shared population variance.
+  zh: 都市咖啡正在比较两个假设且独立抽样的门店流程中的制作时间。第 1 组有 16 个观测，均值为 38.0 秒，标准差为 4.0 秒；第 2 组有 25 个观测，均值为 44.0 秒，标准差为 10.0 秒。由于两组的样本量与波动都不同，分析不应强制要求它们共享同一个总体方差。
+  zh_hk: 都市咖啡正比較兩個假設而且獨立抽樣嘅門市流程入面嘅製作時間。第 1 組有 16 個觀測，均值係 38.0 秒，標準差係 4.0 秒；第 2 組有 25 個觀測，均值係 44.0 秒，標準差係 10.0 秒。由於兩組嘅樣本量同波動都唔同，分析唔應該強制要求佢哋共享同一個總體方差。
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: Estimate each group’s variance contribution separately
+  title_zh: 分别估计各组的方差贡献
+  title_zh_hk: 分別估計各組嘅方差貢獻
+  formula: t = ((x1-bar - x2-bar) - Delta_0) / sqrt(s1^2/n1 + s2^2/n2); df by Welch-Satterthwaite
+  formula_zh: t = ((x1-bar - x2-bar) - Delta_0) / √(s1^2/n1 + s2^2/n2)；df 由韦尔奇-萨特思韦特公式计算
+  formula_zh_hk: t = ((x1-bar - x2-bar) - Delta_0) / √(s1^2/n1 + s2^2/n2)；df 由韋爾奇-薩特思韋特公式計算
+  formula_tex: t=\frac{(\bar X_1-\bar X_2)-\Delta_0}{\sqrt{s_1^2/n_1+s_2^2/n_2}}
+  s1_en: Welch’s test compares two independent population means while allowing their variances to differ. Its standard error
+    keeps each group’s sample variance and sample size separate rather than replacing them with one pooled variance estimate.
+  s1_zh: 韦尔奇检验比较两个独立总体均值，同时允许总体方差不同。其标准误分别保留各组样本方差与样本量，而不是用一个合并方差估计替代两者。
+  s1_zh_hk: 韋爾奇檢驗比較兩個獨立總體均值，同時容許總體方差唔同。佢嘅標準誤分別保留各組樣本方差同樣本量，而唔係用一個合併方差估計取代兩者。
+  s2_en: The Welch-Satterthwaite formula converts the two variance contributions into an approximate reference degrees of
+    freedom. The result may be non-integer and can be smaller than n1 plus n2 minus two, reflecting uncertainty from unequal
+    estimated variances.
+  s2_zh: 韦尔奇-萨特思韦特公式把两组方差贡献转化为近似参照自由度。结果可以不是整数，也可能小于 n1 + n2 - 2，以反映不等方差估计带来的不确定性。
+  s2_zh_hk: 韋爾奇-薩特思韋特公式將兩組方差貢獻轉化成近似參照自由度。結果可以唔係整數，亦可能細過 n1 + n2 - 2，以反映不等方差估計帶嚟嘅不確定性。
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  kicker_en: The Downside Risk
+  kicker_zh: 误用代价
+  kicker_zh_hk: 誤用代價
+  title_en: Welch removes the equal-variance requirement, not every assumption
+  title_zh: 韦尔奇方法移除方差齐性要求，但并非移除所有假设
+  title_zh_hk: 韋爾奇方法移除方差齊性要求，但唔係移除所有假設
+  left_en: 'Welch: separate variance contributions; approximate df'
+  left_zh: 韦尔奇：分别计算方差贡献；使用近似自由度
+  left_zh_hk: 韋爾奇：分別計算方差貢獻；使用近似自由度
+  right_en: 'Still required: independent groups, credible measurements, suitable sampling'
+  right_zh: 仍需满足：组间独立、测量可信、抽样适当
+  right_zh_hk: 仍然需要：組間獨立、量度可信、抽樣適當
+  s1_en: A pooled two-sample t-test adds the assumption that both population variances are equal. Welch’s test does not require
+    that equality. The pooled method can be sensitive when variances and sample sizes are both unequal, especially when the
+    smaller group is more variable.
+  s1_zh: 合并方差双样本 t 检验额外假设两个总体方差相等；韦尔奇检验不需要该相等条件。当方差与样本量同时不等时，合并方法可能较敏感，特别是在较小组波动更大的情况下。
+  s1_zh_hk: 合併方差雙樣本 t 檢驗額外假設兩個總體方差相等；韋爾奇檢驗唔需要呢個相等條件。當方差同樣本量同時唔相等嗰陣，合併方法可能較敏感，特別係較細組波動更大嘅情況。
+  s2_en: Welch’s test still assumes the two groups provide independent information. With small samples, each group’s distribution
+    should be inspected for severe skewness and influential outliers. Pairing, clustering, repeated measures, or biased sampling
+    require a method matched to that design.
+  s2_zh: 韦尔奇检验仍假设两组提供独立信息。对于小样本，应检查各组是否存在严重偏斜与强影响异常值。配对、聚类、重复测量或有偏抽样需要与相应设计匹配的方法。
+  s2_zh_hk: 韋爾奇檢驗仍然假設兩組提供獨立資訊。對於細樣本，應該檢查各組係咪存在嚴重偏斜同強影響異常值。配對、聚類、重複量度或者有偏抽樣需要同相應設計匹配嘅方法。
+  s3_en: No method is robust under all conditions. Welch’s test addresses unequal variances, but it does not establish causation,
+    diagnose a bottleneck, validate timestamps, or justify action against a store or employee. Those questions require separate
+    design and operational evidence.
+  s3_zh: 没有任何方法在所有条件下都稳健。韦尔奇检验处理不等方差，但不能证明因果、诊断瓶颈、验证时间戳，也不能支持针对门店或员工的行动。这些问题需要独立的设计与经营证据。
+  s3_zh_hk: 冇任何方法喺所有條件之下都穩健。韋爾奇檢驗處理不等方差，但唔可以證明因果、診斷樽頸、驗證時間戳，亦唔可以支持針對門市或者員工嘅行動。呢啲問題需要獨立嘅設計同營運證據。
+- id: ledger
+  visual: steps
+  seconds: 38
+  kicker_en: The Ledger
+  kicker_zh: 台账实裁
+  kicker_zh_hk: 台賬實裁
+  title_en: Execute the assumed Welch comparison
+  title_zh: 执行假设韦尔奇均值比较
+  title_zh_hk: 執行假設韋爾奇均值比較
+  step1_en: 'Group 1: n1 = 16, x1-bar = 38.0 s, s1 = 4.0 s; Group 2: n2 = 25, x2-bar = 44.0 s, s2 = 10.0 s'
+  step1_zh: 第 1 组：n1 = 16，x1-bar = 38.0 s，s1 = 4.0 s；第 2 组：n2 = 25，x2-bar = 44.0 s，s2 = 10.0 s
+  step1_zh_hk: 第 1 組：n1 = 16，x1-bar = 38.0 s，s1 = 4.0 s；第 2 組：n2 = 25，x2-bar = 44.0 s，s2 = 10.0 s
+  step2_en: SE = sqrt(4^2/16 + 10^2/25) = sqrt(5) ≈ 2.236 s; Welch df ≈ 34.6
+  step2_zh: SE = √(4^2/16 + 10^2/25) = √5 ≈ 2.236 s；韦尔奇 df ≈ 34.6
+  step2_zh_hk: SE = √(4^2/16 + 10^2/25) = √5 ≈ 2.236 s；韋爾奇 df ≈ 34.6
+  step3_en: t = (38.0 - 44.0) / 2.236 ≈ -2.68; two-sided p ≈ 0.011; reject H0 at alpha = 0.05
+  step3_zh: t = (38.0 - 44.0) / 2.236 ≈ -2.68；双侧 p ≈ 0.011；在 alpha = 0.05 时拒绝 H0
+  step3_zh_hk: t = (38.0 - 44.0) / 2.236 ≈ -2.68；雙側 p ≈ 0.011；喺 alpha = 0.05 嗰陣拒絕 H0
+  s1_en: For illustration, assume the two store-process samples are independent and have the stated summary values. These
+    are teaching assumptions, not verified branch, airport, workflow, or employee-performance records. The null states that
+    the two population mean preparation times are equal.
+  s1_zh: 作为示例，假设两个门店流程样本相互独立，并具有上述汇总值。这些数字是教学假设，并非已核实的门店、机场、工作流程或员工表现记录。原假设表示两个总体平均制作时间相等。
+  s1_zh_hk: 作為例子，假設兩個門市流程樣本互相獨立，並具有上述匯總值。呢啲數字係教學假設，唔係已核實嘅門市、機場、工作流程或者員工表現記錄。原假設表示兩個總體平均製作時間相等。
+  s2_en: The first variance contribution is 4 squared over 16, equal to 1. The second is 10 squared over 25, equal to 4. Their
+    sum is 5, so the unpooled standard error is the square root of 5, approximately 2.236 seconds. The Welch-Satterthwaite
+    calculation gives approximately 34.6 degrees of freedom.
+  s2_zh: 第一组方差贡献为 4 平方除以 16，等于 1；第二组为 10 平方除以 25，等于 4。两者之和为 5，因此非合并标准误为根号 5，约 2.236 秒。韦尔奇-萨特思韦特计算得到约 34.6 个自由度。
+  s2_zh_hk: 第一組方差貢獻係 4 平方除以 16，等於 1；第二組係 10 平方除以 25，等於 4。兩者之和係 5，所以非合併標準誤係根號 5，約 2.236 秒。韋爾奇-薩特思韋特計算得到約 34.6 個自由度。
+  s3_en: The observed difference is minus 6.0 seconds, giving t approximately minus 2.68 and a two-sided p-value approximately
+    0.011. Reject equal population means at the 5% level under the assumptions. The result supports a mean difference, with
+    Group 1 lower in the sample, but it does not identify the cause or prescribe a redesign.
+  s3_zh: 观测差异为负 6.0 秒，得到 t 约为负 2.68，双侧 p 值约为 0.011。在既定假设下，于 5% 水平拒绝两个总体均值相等。结果支持均值存在差异，样本中第 1 组较低，但不能识别原因或规定改造方案。
+  s3_zh_hk: 觀測差異係負 6.0 秒，得到 t 約係負 2.68，雙側 p 值約係 0.011。喺既定假設之下，喺 5% 水平拒絕兩個總體均值相等。結果支持均值存在差異，樣本入面第 1 組較低，但唔可以識別原因或者規定改造方案。
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Use Welch for independent means when equal variance is not justified
+  title_zh: 比较独立均值且方差齐性无依据时使用韦尔奇检验
+  title_zh_hk: 比較獨立均值而方差齊性冇依據嗰陣使用韋爾奇檢驗
+  q1_en: What problem does Welch’s test solve, and what assumptions remain?
+  q1_zh: 韦尔奇检验解决什么问题，哪些假设仍然存在？
+  q1_zh_hk: 韋爾奇檢驗解決咩問題，邊啲假設仍然存在？
+  q2_en: What should be checked before acting on a significant group difference?
+  q2_zh: 依据显著组间差异采取行动前，应检查什么？
+  q2_zh_hk: 根據顯著組間差異採取行動之前，應該檢查咩？
+  s1_en: Welch’s test removes the equal-population-variance requirement by estimating each group’s variance contribution separately
+    and adjusting the reference degrees of freedom. It still requires independent groups, credible measurements, an appropriate
+    sampling design, and suitable distributional behavior for the sample sizes involved.
+  s1_zh: 韦尔奇检验通过分别估计各组方差贡献并调整参照自由度，移除总体方差相等的要求。它仍要求组间独立、测量可信、抽样设计适当，并要求分布表现与相应样本量下的推断方法相适应。
+  s1_zh_hk: 韋爾奇檢驗透過分別估計各組方差貢獻並調整參照自由度，移除總體方差相等嘅要求。佢仍然要求組間獨立、量度可信、抽樣設計適當，並要求分佈表現同相應樣本量之下嘅推斷方法相適應。
+  s2_en: Before acting, inspect raw observations, timestamps, outliers, missingness, sampling frames, group comparability,
+    effect size, confidence interval, and operational context. A significant comparison does not establish that store format,
+    location, or staff caused the difference.
+  s2_zh: 采取行动前，应检查原始观测、时间戳、异常值、缺失情况、抽样框、组间可比性、效应大小、置信区间与经营情境。显著比较并不能证明门店形态、地点或员工导致了差异。
+  s2_zh_hk: 採取行動之前，應該檢查原始觀測、時間戳、異常值、缺失情況、抽樣框、組間可比性、效應大小、置信區間同營運情境。顯著比較並唔可以證明門市形態、地點或者員工導致咗差異。
+  s3_en: For the assumed comparison, Welch t is approximately minus 2.68 with about 34.6 degrees of freedom and p approximately
+    0.011, so the 5% two-sided test rejects equal means. Report the estimated minus-6.0-second difference with uncertainty
+    and keep diagnosis and intervention separate.
+  s3_zh: 在假设比较中，韦尔奇 t 约为负 2.68，自由度约为 34.6，p 约为 0.011，因此 5% 双侧检验拒绝两个均值相等。应报告估计的负 6.0 秒差异及其不确定性，并把诊断与干预分开。
+  s3_zh_hk: 喺假設比較入面，韋爾奇 t 約係負 2.68，自由度約係 34.6，p 約係 0.011，所以 5% 雙側檢驗拒絕兩個均值相等。應該報告估計嘅負 6.0 秒差異同佢嘅不確定性，並將診斷同干預分開。

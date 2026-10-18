@@ -1,0 +1,220 @@
+id: STAT-M04-T06-PROPO
+course: STAT-M04
+course_en: Sampling Distributions, the Central Limit Theorem, and Interval Estimation
+course_zh: 抽样分布、中心极限定理与区间估计
+course_zh_hk: 抽樣分佈、中心極限定理與區間估計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: The sampling distribution of proportions
+title_zh: 比率的度量衡：样本比例的抽样分布与数字化渗透率
+title_zh_hk: 比率嘅度量衡：樣本比例嘅抽樣分佈與數碼化滲透率
+objective_en: Model sample proportions p-hat = X / n as random variables, derive the standard error formula SE_p = sqrt(p(1
+  - p) / n), verify the success-failure normal approximation condition (np >= 10 and n(1 - p) >= 10), and evaluate Metro Loyalty
+  QR scan compliance.
+objective_zh: 将样本比例 p-hat = X / n 建模为随机变量，推导比例标准误公式 SE_p = 根号(p(1 - p) / n)，核验成功-失败正态近似判定准则（np >= 10 且 n(1 - p) >= 10），并在机场分店会员
+  App 扫码审计中识别真伪异动。
+objective_zh_hk: 將樣本比例 p-hat = X / n 建模為隨機變量，推導比例標準誤公式 SE_p = 根號(p(1 - p) / n)，核驗成功-失敗正態近似判定準則（np >= 10 且 n(1 - p) >= 10），並喺機場分舖會員
+  App 掃碼審計入面識別真偽異動。
+glossary:
+- en: sample proportion (p-hat)
+  zh: 样本比例 (p-hat)
+  zh_hk: 樣本比例 (p-hat)
+  lock: true
+- en: standard error of proportion
+  zh: 比例标准误
+  zh_hk: 比例標準誤
+  lock: true
+- en: success-failure condition
+  zh: 成功-失败充分性准则
+  zh_hk: 成功-失敗充分性準則
+  lock: true
+- en: digital adoption rate
+  zh: 数字化渗透率/采纳率
+  zh_hk: 數碼化滲透率/採納率
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: What operational condition must be satisfied to justify using a Normal distribution to model the sample proportion
+    p-hat of digital loyalty scans?
+  question_zh: 在运用正态分布对数字化会员扫码样本比例 p-hat 进行建模推演前，必须在业务数据上严格核验哪项充分性判定准则？
+  question_zh_hk: 喺運用正態分佈對數碼化會員掃碼樣本比例 p-hat 進行建模推演前，必須喺業務數據上嚴格核驗邊項充分性判定準則？
+  options_en:
+  - 'A: The success-failure condition: both expected successes np and expected failures n(1 - p) must equal or exceed 10.'
+  - 'B: The total number of audited receipts must exceed 100,000 transactions.'
+  - 'C: The store must only accept digital wallet payments and ban all physical cash.'
+  - 'D: The sample proportion p-hat must be strictly greater than 0.50.'
+  options_zh:
+  - 'A: 成功-失败准则：预期成功次数 np 与预期失败次数 n(1 - p) 必须双双大于或等于 10。'
+  - 'B: 参与审计的收银小票总流水必须硬性突破十万笔交易。'
+  - 'C: 门店必须全线禁用现金找零，实现百分之百移动电子支付。'
+  - 'D: 实际测算出的样本比例 p-hat 必须严格大于 0.50（50%）。'
+  options_zh_hk:
+  - 'A: 成功-失敗準則：預期成功次數 np 同預期失敗次數 n(1 - p) 必須雙雙大過或等於 10。'
+  - 'B: 參與審計嘅收銀單據總流水必須硬性突破十萬筆交易。'
+  - 'C: 門市必須全線禁用現金找續，實現百分之百流動電子支付。'
+  - 'D: 實際測算出嘅樣本比例 p-hat 必須嚴格大過 0.50（50%）。'
+  answer: A
+  explanation_en: Under the Central Limit Theorem for Bernoulli sums, the sampling distribution of p-hat converges to Normal
+    only when both np >= 10 and n(1 - p) >= 10, preventing boundary skew near 0 or 1.
+  explanation_zh: 基于伯努利求和的中心极限定理，只有当预期成功 np 与预期失败 n(1 - p) 均不小于 10 时，二项阶梯才能摆脱贴近 0 或 1 边界的严重偏斜，收敛为对称平滑的正态分布。
+  explanation_zh_hk: 基於伯努利求和嘅中心極限定理，淨係得當預期成功 np 同預期失敗 n(1 - p) 均唔細過 10 嗰陣，二項階梯先可以擺脫貼近 0 或者 1 邊界嘅嚴重偏斜，收斂為對稱平滑嘅正態分佈。
+- id: Q2
+  type: multiple_choice
+  question_en: Metro's benchmark app adoption rate is p = 0.30. In an audit of n = 200 Airport counter orders, 52 patrons
+    scan the app (p-hat = 0.26). What is the standard error and resulting Z-score of this outcome?
+  question_zh: 都市咖啡全网设定的会员扫码基准渗透率为 p = 0.30。在机场店抽查的 n = 200 笔柜台订单中，实测 52 位顾客扫码（p-hat = 0.26）。该结果的抽样标准误 SE 与对应的 Z 分数分别是多少？
+  question_zh_hk: 都市咖啡全網設定嘅會員掃碼基準滲透率為 p = 0.30。喺機場舖抽查嘅 n = 200 筆櫃檯訂單入面，實測 52 位顧客掃碼（p-hat = 0.26）。嗰個結果嘅抽樣標準誤 SE 同對應嘅 Z 分數分別係幾多？
+  options_en:
+  - 'A: SE = sqrt(0.30 * 0.70 / 200) = sqrt(0.00105) ≈ 0.0324 (3.24%); Z = (0.26 - 0.30) / 0.0324 ≈ -1.23'
+  - 'B: SE = 0.30 / sqrt(200) ≈ 0.0212; Z = (0.26 - 0.30) / 0.0212 ≈ -1.89'
+  - 'C: SE = 0.26 * 0.74 = 0.1924; Z = -0.04'
+  - 'D: SE = sqrt(200 * 0.30 * 0.70) ≈ 6.48; Z = -4.00'
+  options_zh:
+  - 'A: 比例标准误 SE = 根号(0.30 × 0.70 / 200) ≈ 0.0324（3.24%）；Z = (0.26 - 0.30) / 0.0324 ≈ -1.23'
+  - 'B: 比例标准误 SE = 0.30 / 根号(200) ≈ 0.0212；Z = (0.26 - 0.30) / 0.0212 ≈ -1.89'
+  - 'C: 比例标准误 SE = 0.26 × 0.74 = 0.1924；Z = -0.04'
+  - 'D: 比例标准误 SE = 根号(200 × 0.30 × 0.70) ≈ 6.48；Z = -4.00'
+  options_zh_hk:
+  - 'A: 比例標準誤 SE = 根號(0.30 × 0.70 / 200) ≈ 0.0324（3.24%）；Z = (0.26 - 0.30) / 0.0324 ≈ -1.23'
+  - 'B: 比例標準誤 SE = 0.30 / 根號(200) ≈ 0.0212；Z = (0.26 - 0.30) / 0.0212 ≈ -1.89'
+  - 'C: 比例標準誤 SE = 0.26 × 0.74 = 0.1924；Z = -0.04'
+  - 'D: 比例標準誤 SE = 根號(200 × 0.30 × 0.70) ≈ 6.48；Z = -4.00'
+  answer: A
+  explanation_en: 'Variance of p-hat is p(1 - p) / n = 0.21 / 200 = 0.00105, giving SE = sqrt(0.00105) ≈ 0.0324. Standardizing:
+    Z = (0.26 - 0.30) / 0.0324 = -1.23. The deviation is within ordinary sampling noise (|Z| < 1.96).'
+  explanation_zh: 样本比例方差为 p(1 - p) / n = 0.21 / 200 = 0.00105，开根号得 SE ≈ 0.0324。计算标准化 Z = -0.04 / 0.0324 = -1.23。因绝对值小于 1.96，该下滑属于合理的抽样随机扰动。
+  explanation_zh_hk: 樣本比例方差為 p(1 - p) / n = 0.21 / 200 = 0.00105，開根號得 SE ≈ 0.0324。計算標準化 Z = -0.04 / 0.0324 = -1.23。因絕對值細過
+    1.96，嗰個下滑屬於合理嘅抽樣隨機擾動。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The KPI Panic
+  kicker_en: The KPI Panic
+  kicker_zh: 考核指标虚惊
+  kicker_zh_hk: 考核指標虛驚
+  title_en: Did the branch actually fail its digital target?
+  title_zh: 实测百分之二十六：分店真的没有达标吗？
+  title_zh_hk: 實測百分之二十六：分舖真係冇達標咩？
+  en: 'Metro headquarters mandates a strict corporate benchmark: thirty percent of all counter transactions must scan the
+    Metro Loyalty QR code to drive customer lifetime value. In a random audit of two hundred orders at the Airport terminal,
+    only fifty-two patrons scan the app—a sample adoption rate of twenty-six percent. The regional director prepares a formal
+    reprimand for the store manager. But wait: is this four-point drop genuine operational negligence, or simply harmless
+    sampling noise?'
+  zh: 都市咖啡总部向全港各网点下达了一项硬性数字化考核指标：所有柜台收银交易中，必须达到百分之三十的会员 App 扫码渗透率。在对机场航站楼店两百笔随机订单的抽样审计中，仅有五十二位顾客出示了会员码——实测样本渗透率仅为百分之二十六。区域总监当即准备对店长发出问责警告。然而，这微弱的四个百分点下滑，究竟是店员执行不力的真滑坡，还是纯属良性的抽样随机杂音？
+  zh_hk: 都市咖啡總部向全港各網點下達咗一項硬性數碼化考核指標：所有櫃檯收銀交易入面，必須達到百分之三十嘅會員 App 掃碼滲透率。喺對機場航站樓舖兩百筆隨機訂單嘅抽樣審計入面，淨係得五十二位顧客出示咗會員碼——實測樣本滲透率淨係得百分之二十六。區域總監當即準備對店長發出問責警告。然而，呢個微弱嘅四個百分點下滑，究竟係店員執行不力嘅真滑坡，定係純屬良性嘅抽樣隨機雜音？
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: What It Is
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: The sampling distribution of p-hat
+  title_zh: 样本比例抽样分布的数学机理
+  title_zh_hk: 樣本比例抽樣分佈嘅數學機理
+  formula: p-hat ~ N(p, p*(1 - p) / n) when np >= 10 and n*(1 - p) >= 10
+  formula_zh: 样本比例 p-hat 渐近服从正态 N(p, p*(1 - p) / n)，前提是满足成功-失败充分性准则：np >= 10 且 n*(1 - p) >= 10
+  formula_zh_hk: 樣本比例 p-hat 漸近服從正態 N(p, p*(1 - p) / n)，前提係滿足成功-失敗充分性準則：np >= 10 且 n*(1 - p) >= 10
+  formula_tex: \hat{p} \xrightarrow{d} N\left(p, \, \frac{p(1 - p)}{n}\right) \quad \text{as } np \ge 10 \text{ and } n(1
+    - p) \ge 10
+  s1_en: 'A proportion is simply the average of binary zeros and ones: one if the customer scans the loyalty code, zero if
+    they pay anonymously.'
+  s1_zh: 比例在数学本质上就是一串二元零和一序列的算术平均值：如果顾客出示会员码扫码则记为 1，匿名支付则记为 0。
+  s1_zh_hk: 比例喺數學本質上就係一串二元零同埋一序列嘅算術平均值：如果顧客出示會員碼掃碼就記為 1，匿名支付就記為 0。
+  s2_en: Because p-hat is a sample average, the Central Limit Theorem asserts full dominion. Its expected center equals the
+    true population rate p, and its standard error shrinks as the square root of p times one minus p divided by n.
+  s2_zh: 正因为 p-hat 本质上是一个样本均值，中心极限定理对其拥有完整的统治力。其期望中心精准对齐总体真实渗透率 p，而其离散标准误严格收缩为根号下 p 乘 1 减 p 除以 n。
+  s2_zh_hk: 正正因為 p-hat 本質上係一個樣本均值，中心極限定理對佢擁有完整嘅統治力。其期望中心精準對齊總體真實滲透率 p，而其離散標準誤嚴格收縮為根號下 p 乘 1 減 p 除以 n。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  kicker: The Rule of Thumb
+  kicker_en: The Rule of Thumb
+  kicker_zh: 判定准则
+  kicker_zh_hk: 判定準則
+  title_en: The success-failure test for normality
+  title_zh: 成功-失败法则：正态近似的通行证
+  title_zh_hk: 成功-失敗法則：正態近似嘅通行證
+  left_en: 'Symmetry Condition: np >= 10 and n(1 - p) >= 10'
+  left_zh: 对称准则：预期成功与失败双双不少于十次
+  left_zh_hk: 對稱準則：預期成功與失敗雙雙唔少於十次
+  right_en: 'Boundary Risk: Extreme p creates severe binomial skew'
+  right_zh: 边界风险：极端的极低或极高比率将导致二项阶梯严重畸形
+  right_zh_hk: 邊界風險：極端嘅極低或者極高比率將搞到二項階梯嚴重畸形
+  s1_en: Proportions are bounded between zero and one. When the underlying rate p is extreme—say, a rare one percent coupon
+    fraud—the binomial curve slams into the boundary and skews heavily.
+  s1_zh: 比率天然被禁锢在 0 到 1 的物理边界之间。当基准概率 p 处于极端区间时（例如千分之一的偶发虚假刷单），分布会被硬生生挤压在边界处，呈现出严重的偏斜变形。
+  s1_zh_hk: 比率天然被禁錮喺 0 到 1 嘅物理邊界之間。當基準概率 p 處於極端區間嗰陣（好似千分之一嘅偶發虛假刷單），分佈會被硬生生擠壓喺邊界處，呈現出嚴重嘅偏斜變形。
+  s2_en: 'To safely deploy normal Z-tables, auditors must confirm the success-failure condition: your sample must anticipate
+    at least ten successes and at least ten failures.'
+  s2_zh: 若要安全合法地调用标准正态 Z 标尺，审计分析师必须严格核验成功-失败准则：样本预期必须涵盖至少十次成功扫码，以及至少十次失败放弃。
+  s2_zh_hk: 若要安全合法噉調用標準正態 Z 標尺，審計分析師必須嚴格核驗成功-失敗準則：樣本預期必須涵蓋至少十次成功掃碼，以及至少十次失敗放棄。
+  s3_en: With two hundred audits at a thirty percent target, we expect sixty scans and one hundred and forty non-scans. The
+    test easily passes; normality is guaranteed.
+  s3_zh: 以两百笔抽样和百分之三十的基准计算，预期扫码六十人、未扫码一百四十人，两者均远超十次阈值。正态近似通行证毫无悬念获批。
+  s3_zh_hk: 以兩百筆抽樣同百分之三十嘅基準計算，預期掃碼六十人、未掃碼一百四十人，兩者均遠超十次閾值。正態近似通行證毫無懸念獲批。
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: The Ledger
+  kicker_en: The Ledger
+  kicker_zh: 账目审计
+  kicker_zh_hk: 賬目審計
+  title_en: Auditing Airport app compliance
+  title_zh: 机场店数字化扫码合规实测
+  title_zh_hk: 機場舖數碼化掃碼合規實測
+  step1_en: 'Baseline benchmark: p = 0.30; Audit draw: n = 200, X = 52 -> p-hat = 0.26'
+  step1_zh: 考核基准：p = 0.30；抽查核验：n = 200 笔，实测 X = 52 人扫码 -> 样本比例 0.26
+  step1_zh_hk: 考核基準：p = 0.30；抽查核驗：n = 200 筆，實測 X = 52 人掃碼 -> 樣本比例 0.26
+  step2_en: 'Standard Error: SE_p = sqrt(0.30 * 0.70 / 200) = sqrt(0.00105) ≈ 0.0324 (3.24%)'
+  step2_zh: 标准误推演：SE_p = 根号(0.30 × 0.70 / 200) = 根号(0.00105) ≈ 0.0324（3.24%）
+  step2_zh_hk: 標準誤推演：SE_p = 根號(0.30 × 0.70 / 200) = 根號(0.00105) ≈ 0.0324（3.24%）
+  step3_en: 'Z-score verdict: Z = (0.26 - 0.30) / 0.0324 = -1.23 -> Well within random noise!'
+  step3_zh: Z 分数裁决：Z = (0.26 - 0.30) / 0.0324 = -1.23 -> 绝对值小于 1.96，纯属良性抽样杂音！
+  step3_zh_hk: Z 分數裁決：Z = (0.26 - 0.30) / 0.0324 = -1.23 -> 絕對值細過 1.96，純屬良性抽樣雜音！
+  s1_en: Audit the Airport terminal POS ledger. Corporate sets target adoption at p equals zero point thirty. Out of two hundred
+    sampled receipts, fifty-two patrons scanned their loyalty code, yielding a sample proportion of zero point twenty-six.
+  s1_zh: 调取机场航站楼收银系统台账。集团设定的基准渗透率 p 确凿为零点三零。在抽查的两百张小票中，实测五十二位顾客完成了扫码，样本比例录得零点二六。
+  s1_zh_hk: 調取機場航站樓收銀系統台賬。集團設定嘅基準滲透率 p 確鑿為零點三零。喺抽查嘅兩百張單據入面，實測五十二位顧客完成咗掃碼，樣本比例錄得零點二六。
+  s2_en: 'Step two computes the standard error of this proportion: the square root of zero point thirty times zero point seventy
+    divided by two hundred. That gives zero point zero three two four, or roughly three point two four percent.'
+  s2_zh: 第二步计算此比率的抽样标准误：根号下零点三零乘零点七零除以两百。精准求得零点零三二四，折合约三个百分点的固有抽样摆幅。
+  s2_zh_hk: 第二步計算呢個比率嘅抽樣標準誤：根號下零點三零乘零點七零除以兩百。精準求得零點零三二四，折合約三個百分點嘅固有抽樣擺幅。
+  s3_en: Step three benchmarks the gap. Twenty-six minus thirty divided by three point twenty-four percent gives a Z-score
+    of negative one point two three. Since this is well within the normal two-standard-deviation window, the store is compliant.
+    The four percent drop was pure chance.
+  s3_zh: 第三步进行标准化裁决。零点二六减零点三零除以百分之三点二四，得出 Z 分数仅为负的一点二三。由于该数值稳稳落在两个标准差的安全带内，门店完全合规。所谓的四个百分点下滑纯属无害的概率抖动！
+  s3_zh_hk: 第三步進行標準化裁決。零點二六減零點三零除以百分之三點二四，得出 Z 分數淨係得負嘅一點二三。由於嗰個數值穩穩落喺兩個標準差嘅安全帶入面，門市完全合規。所謂嘅四個百分點下滑純屬無害嘅概率抖動！
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: Decision Rule
+  kicker_en: Decision Rule
+  kicker_zh: 商业法度
+  kicker_zh_hk: 商業法度
+  title_en: Never discipline managers over standard error noise
+  title_zh: 莫将抽样杂音当违纪，看透比率方定功过
+  title_zh_hk: 莫將抽樣雜音當違紀，睇透比率先定功過
+  q1_en: Why is a raw percentage drop in a small sample never conclusive proof of failure?
+  q1_zh: 为什么小样本中原始百分比的微弱下滑，绝不能作为判定运营失败的铁证？
+  q1_zh_hk: 點解小樣本入面原始百分比嘅微弱下滑，絕唔可以作為判定營運失敗嘅鐵證？
+  q2_en: What happens when our total customer or asset population is small and finite rather than infinite?
+  q2_zh: 当所审计的资产或顾客总体规模高度受限且有限时，抽样标准误该如何二次校准？
+  q2_zh_hk: 當所審計嘅資產或者顧客總體規模高度受限兼且有限嗰陣，抽樣標準誤應該點樣二次校準？
+  s1_en: Never evaluate percentage performance without checking its standard error; a four percent deficit on two hundred
+    customers is ordinary variance, not managerial failure.
+  s1_zh: 考核比率绩效切忌脱离标准误盲目下结论；在两百张小票的样本中出现四个点的落差，纯属统计学允许的随机浮动，绝非管理层的运营渎职。
+  s1_zh_hk: 考核比率績效切忌脫離標準誤盲目下結論；喺兩百張單據嘅樣本入面出現四個點嘅落差，純屬統計學容許嘅隨機浮動，絕非管理層嘅營運瀆職。
+  s2_en: 'Always confirm the success-failure condition before applying Z-scores: verify that both np and n times one minus
+    p reach ten to keep your conclusions statistically sound.'
+  s2_zh: 调用 Z 分数研判比例异动前，务必先检核成功-失败法则：确保 np 与 n 乘 1 减 p 均达到十次，方能立于严密无懈的科学法度之上。
+  s2_zh_hk: 調用 Z 分數研判比例異動前，務必先檢核成功-失敗法則：確保 np 同 n 乘 1 減 p 均達到十次，先可以立於嚴密無懈嘅科學法度之上。
+  s3_en: The operating rule is to score the gap against the proportion standard error. Fifty-two scans out of 200 is Z about
+    -1.23, inside ordinary noise around a 30% target.
+  s3_zh: 操作规则是用比例标准误衡量落差。200 笔中 52 次扫码，Z 约为 -1.23，落在 30% 目标的普通噪声内。
+  s3_zh_hk: 操作規則係用比例標準誤衡量落差。200 筆入面 52 次掃碼，Z 約為 -1.23，落喺 30% 目標嘅普通雜音內。

@@ -1,0 +1,30 @@
+id: STAT-M03
+kind: minicourse
+course: statistics
+course_en: Discrete and Continuous Probability Distributions
+course_zh: 离散与连续概率分布
+course_zh_hk: 離散與連續概率分佈
+title_en: Distributions for a coffee chain
+title_zh: 咖啡连锁的概率分布
+title_zh_hk: 咖啡連鎖嘅概率分佈
+objective_en: 'Fifteen standalone shorts on one coffee-chain ledger: discrete mass, binomial and Poisson counts, continuous density, and normal buffers. Build each short on its own. This collection does not join them into one video.'
+objective_zh: 围绕同一份咖啡连锁台账的十五节独立短课：离散质量、二项与泊松计数、连续密度，以及正态缓冲。每节单独制作。本集合不把它们拼成一条视频。
+objective_zh_hk: 圍繞同一份咖啡連鎖台賬嘅十五節獨立短課：離散質量、二項與泊松計數、連續密度，以及正態緩衝。每節單獨製作。本集合唔會將佢哋拼成一條片。
+syllabus: docs/courses/STAT-M03.md
+duration_note: Each short is about 150–170 seconds. The collection is not a 5–10 minute module.
+lessons:
+- STAT-M03-T01-INTRO
+- STAT-M03-T02-DISCR
+- STAT-M03-T03-DICDF
+- STAT-M03-T04-BERN
+- STAT-M03-T05-BINOM
+- STAT-M03-T06-POISS
+- STAT-M03-T07-POAPP
+- STAT-M03-T08-CONTP
+- STAT-M03-T09-COCDF
+- STAT-M03-T10-UNIF
+- STAT-M03-T11-EXPON
+- STAT-M03-T12-NORM
+- STAT-M03-T13-ZSCOR
+- STAT-M03-T14-EMPIR
+- STAT-M03-T15-RECAP

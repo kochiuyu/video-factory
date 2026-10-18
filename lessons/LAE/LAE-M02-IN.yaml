@@ -1,0 +1,63 @@
+id: LAE-M02-IN
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 28
+title_en: 'This sitting: two vehicles'
+title_zh: 这一讲：两种机器
+title_zh_hk: 這一講：兩種機器
+objective_en: Open the vehicle unit. Name the drone, then name the eVTOL. One new noun each.
+objective_zh: 打开机器这一讲。先给无人机起名，再给 eVTOL 起名。一种一个新词。
+objective_zh_hk: 打開機器呢一講。先畀無人機起名，再畀 eVTOL 起名。一種一個新詞。
+glossary:
+- en: Open
+  zh: 开场
+  zh_hk: 開場
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Which two machines does this sitting name?
+  zh: 这一讲给哪两种机器起名？
+  zh_hk: 呢一講畀邊兩種機器起名？
+  answer_en: The drone, then the eVTOL.
+  answer_zh: 先是无人机，然后是 eVTOL。
+  answer_zh_hk: 先係無人機，然後係 eVTOL。
+beats:
+- id: hook
+  visual: module_open
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: two vehicles'
+  title_zh: 这一讲：两种机器
+  title_zh_hk: 這一講：兩種機器
+  item1_en: Drone
+  item1_zh: 无人机
+  item1_zh_hk: 無人機
+  item2_en: eVTOL
+  item2_zh: eVTOL
+  item2_zh_hk: eVTOL
+  en: The band already has a name. Two shorts name what uses it. First the drone. Then the eVTOL. We do not mix the two claims on the first card.
+  zh: 这一层已经有名字。两条短片给占用它的东西起名。先是无人机。然后是 eVTOL。第一张卡片上不要把两种判断混在一起。
+  zh_hk: 呢一層已經有名。兩條短片畀佔用佢嘅嘢起名。先係無人機。然後係 eVTOL。第一張卡上面唔好將兩種判斷撈埋一齊。
+- id: takeaway
+  visual: title_card
+  seconds: 14
+  kicker: Open
+  kicker_en: Open
+  kicker_zh: 开场
+  kicker_zh_hk: 開場
+  title_en: 'This sitting: two vehicles'
+  title_zh: 这一讲：两种机器
+  title_zh_hk: 這一講：兩種機器
+  en: By the end you should be able to point at two machines and say what rides on each — a small parcel, or a person.
+  zh: 结束时，你应能指出两种机器，并说出各自载的是什么——小包裹，还是人。
+  zh_hk: 結束時，你應該指得出兩種機器，並講得出各自載嘅係咩——小包裹，定係人。

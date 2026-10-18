@@ -13,7 +13,7 @@ objective_zh: 先等式、再借贷，然后分清收付与权责——一笔事
 objective_zh_hk: 先等式、再借貸，然後分清收付與權責——一筆事項如何寫進賬。
 lessons:
 - ACC-M01-IN
-- ACC-EQ-01
-- ACC-DC-01
-- ACC-AC-01
+- ACC-M01-EQ
+- ACC-M01-DC
+- ACC-M01-AC
 - ACC-M01-OUT

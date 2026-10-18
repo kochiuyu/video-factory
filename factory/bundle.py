@@ -8,7 +8,7 @@ import io
 import zipfile
 from pathlib import Path
 
-from catalog import MODULES, iter_lesson_paths
+from catalog import MODULES, is_module_id, iter_lesson_paths, lesson_path, out_dir as lesson_out_dir
 
 ROOT = Path(__file__).resolve().parents[1]
 LESSONS = ROOT / "lessons"
@@ -39,6 +39,22 @@ COURSES = {
         "title_zh_hk": "粵港澳大灣區",
         "dept": "GBA / area studies",
         "prefixes": ("GBA-",),
+    },
+    "LAE": {
+        "id": "LAE",
+        "title_en": "Low-Altitude Economy",
+        "title_zh": "低空经济",
+        "title_zh_hk": "低空經濟",
+        "dept": "Economics / LAE",
+        "prefixes": ("LAE-",),
+    },
+    "GAME": {
+        "id": "GAME",
+        "title_en": "Game Theory",
+        "title_zh": "博弈论",
+        "title_zh_hk": "博弈論",
+        "dept": "Economics / GAME",
+        "prefixes": ("GAME-",),
     },
 }
 
@@ -125,9 +141,9 @@ def sop_html(course_id: str | None = None) -> str:
   <table>
     <tr><th>Arm</th><th>File to post</th><th>Why</th></tr>
     <tr><td>A · matched EN</td><td><code>…__en__cap-burn__1p00x.mp4</code></td><td>Baseline, English-medium section</td></tr>
-    <tr><td>B · matched 简</td><td><code>…__zhcn__cap-burn__1p00x.mp4</code></td><td>Putonghua section</td></tr>
-    <tr><td>C · matched 繁</td><td><code>…__zhhk__cap-burn__1p00x.mp4</code></td><td>Cantonese section</td></tr>
-    <tr><td>D · mix slides</td><td><code>…__en-en-zh__cap-burn__1p00x.mp4</code></td><td>EN speech, bilingual slides</td></tr>
+    <tr><td>B · matched 简</td><td><code>…__zh__cap-burn__1p00x.mp4</code></td><td>Putonghua section</td></tr>
+    <tr><td>C · matched 繁</td><td><code>…__hk__cap-burn__1p00x.mp4</code></td><td>Cantonese section</td></tr>
+    <tr><td>D · bilingual slides</td><td><code>…__en+zh__cap-burn__1p00x.mp4</code></td><td>EN speech, bilingual slides</td></tr>
     <tr><td>E · speed</td><td>same cell at <code>1p50x</code> or <code>2p00x</code></td><td>Grant playback-speed arm; fall back to 1.25× if 2× is too fast</td></tr>
     <tr><td>F · no caption</td><td><code>…__cap-off__1p00x.mp4</code></td><td>Year-2 subtitle-off / accessibility contrast</td></tr>
   </table>
@@ -191,13 +207,13 @@ def write_course_zip(course_id: str, out_root: Path | None = None) -> Path:
         )
         zf.writestr("README.txt", readme)
         for mid in spec["modules"]:
-            root = out_root / mid
+            root = lesson_out_dir(mid, module=True, root=out_root)
             for folder, label in (("cells", "video"), ("pack", "treatment"), ("quiz", "quiz"), ("srt", "subtitle")):
                 n = _add_tree(zf, root / folder, f"modules/{mid}/{folder}")
                 if n:
                     manifest_rows.append({"path": f"modules/{mid}/{folder}/", "kind": label, "id": mid, "files": n})
         for lid in spec["lessons"]:
-            root = out_root / lid
+            root = lesson_out_dir(lid, module=False, root=out_root)
             for folder, label in (("cells", "video"), ("pack", "treatment"), ("quiz", "quiz"), ("srt", "subtitle")):
                 n = _add_tree(zf, root / folder, f"lessons/{lid}/{folder}")
                 if n:
@@ -210,3 +226,122 @@ def write_course_zip(course_id: str, out_root: Path | None = None) -> Path:
     zip_path.write_bytes(buf.getvalue())
     print(f"bundle: {zip_path} ({zip_path.stat().st_size} bytes, {len(manifest_rows)} folders)")
     return zip_path
+
+
+_RA_SKIP_SUFFIX = {".tmp", ".wav", ".stamp"}
+_RA_SKIP_NAME = {".stamp", "treatments.csv"}
+
+
+def _ra_members(lid: str) -> tuple[str, list[str], Path | None]:
+    stem = Path(str(lid)).stem
+    mod_path = MODULES / f"{stem}.yaml"
+    if mod_path.is_file():
+        try:
+            from modules import load_module
+
+            mod = load_module(mod_path)
+            kids = [str(x) for x in (mod.get("lessons") or []) if x]
+        except Exception:
+            kids = []
+        return stem, kids or [stem], mod_path
+    return stem, [stem], None
+
+
+def _add_ra_file(zf: zipfile.ZipFile, src: Path, arc: str) -> int:
+    if not src.is_file():
+        return 0
+    if src.suffix in _RA_SKIP_SUFFIX or src.name in _RA_SKIP_NAME:
+        return 0
+    if src.name.endswith(".concat.txt") or src.name.endswith(".stamp"):
+        return 0
+    zf.write(src, arc)
+    return 1
+
+
+def write_ra_zip(lid: str, out_root: Path | None = None) -> tuple[Path, dict]:
+    """YAML + edit sheets + slide/caption PDFs + cells for one short or one module. No experiment pack."""
+    from pdfexport import export_preview_pdfs
+    from validate import load_lesson
+    from xlsx_lesson import export_lesson
+
+    out_root = out_root or OUT
+    stem, members, mod_path = _ra_members(lid)
+    pack_dir = out_root / "_packs"
+    pack_dir.mkdir(parents=True, exist_ok=True)
+    zip_path = pack_dir / f"RA-{stem}.zip"
+    missing: list[str] = []
+    added: list[str] = []
+    try:
+        export_preview_pdfs(stem, out_root, ("slides", "captions"))
+    except Exception as exc:  # noqa: BLE001
+        missing.append(f"pdf export failed: {exc}")
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zf:
+        lines = [
+            f"RA review pack  {stem}",
+            "Input YAML, Excel edit sheets, slide PDFs, caption PDFs, and built videos.",
+            "Not a faculty course pack. No experiment-speed twins.",
+            "",
+        ]
+        if mod_path and mod_path.is_file():
+            if _add_ra_file(zf, mod_path, f"{stem}/yaml/{mod_path.name}"):
+                added.append(mod_path.name)
+        elif is_module_id(stem):
+            missing.append(f"no module yaml for {stem}")
+        for child in members:
+            src = lesson_path(child)
+            if src and src.is_file():
+                if _add_ra_file(zf, src, f"{stem}/yaml/{src.name}"):
+                    added.append(src.name)
+                try:
+                    import tempfile
+                    with tempfile.TemporaryDirectory() as tmp:
+                        xlsx_path = Path(tmp) / f"{child}.xlsx"
+                        export_lesson(load_lesson(src), xlsx_path)
+                        if _add_ra_file(zf, xlsx_path, f"{stem}/xlsx/{child}.xlsx"):
+                            added.append(f"{child}.xlsx")
+                except Exception as exc:  # noqa: BLE001
+                    missing.append(f"xlsx export failed for {child}: {exc}")
+            else:
+                missing.append(f"missing yaml {child}")
+            root = lesson_out_dir(child, module=False, root=out_root)
+            pdf_n = 0
+            pdf_dir = root / "pdf"
+            if pdf_dir.is_dir():
+                for path in sorted(pdf_dir.glob("*.pdf")):
+                    pdf_n += _add_ra_file(zf, path, f"{stem}/pdf/{child}/{path.name}")
+            cells = root / "cells"
+            vid_n = 0
+            if cells.is_dir():
+                for path in sorted(cells.rglob("*.mp4")):
+                    rel = path.relative_to(cells).as_posix()
+                    vid_n += _add_ra_file(zf, path, f"{stem}/video/{child}/{rel}")
+            srt_n = 0
+            srt_dir = root / "srt"
+            if srt_dir.is_dir():
+                for path in sorted(srt_dir.glob("*.srt")):
+                    srt_n += _add_ra_file(zf, path, f"{stem}/srt/{child}/{path.name}")
+            if pdf_n == 0:
+                missing.append(f"no pdf for {child}")
+            if vid_n == 0:
+                missing.append(f"no video for {child}")
+            added.append(f"{child}: {pdf_n} pdf, {vid_n} mp4, {srt_n} srt")
+        mod_root = lesson_out_dir(stem, module=True, root=out_root) if is_module_id(stem) else None
+        if mod_root and mod_root.is_dir():
+            for path in sorted(mod_root.rglob("*.mp4")):
+                if "pack" in path.parts:
+                    continue
+                rel = path.relative_to(mod_root).as_posix()
+                _add_ra_file(zf, path, f"{stem}/video/_module/{rel}")
+            for path in sorted((mod_root / "pdf").glob("*.pdf")) if (mod_root / "pdf").is_dir() else []:
+                _add_ra_file(zf, path, f"{stem}/pdf/_module/{path.name}")
+        lines.append("Included:")
+        lines.extend(f"  {row}" for row in added)
+        lines.append("")
+        if missing:
+            lines.append("Missing (build that lesson first):")
+            lines.extend(f"  {row}" for row in missing)
+        zf.writestr(f"{stem}/MANIFEST.txt", "\n".join(lines) + "\n")
+    zip_path.write_bytes(buf.getvalue())
+    print(f"ra-zip: {zip_path} ({zip_path.stat().st_size} bytes)")
+    return zip_path, {"id": stem, "members": members, "missing": missing}

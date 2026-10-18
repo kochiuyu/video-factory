@@ -1,0 +1,165 @@
+id: STAT-M08-T02-LPMFL
+course: STAT-M08
+course_en: Logistic Regression & Customer Choice Modeling
+course_zh: 逻辑回归与客户选择建模
+course_zh_hk: 邏輯回歸與客戶選擇建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'The Linear Probability Model: Why OLS Breaks on Probabilities'
+title_zh: 线性概率模型：为何 OLS 预测概率必然失效
+title_zh_hk: 線性概率模型：點解 OLS 預測概率必然崩潰
+objective_en: Analyze the Linear Probability Model (LPM), calculate out-of-range fitted values, explain its conditional heteroskedasticity, and identify when robust inference or a bounded-response model is more appropriate.
+objective_zh: 分析线性概率模型（LPM），计算越界拟合值，解释其条件异方差性，并判断何时应采用稳健推断或有界响应模型。
+objective_zh_hk: 分析線性概率模型（LPM），計算越界擬合值，解釋條件異方差性，並判斷幾時應該採用穩健推斷或者有界響應模型。
+glossary:
+- en: Linear Probability Model
+  zh: 线性概率模型
+  zh_hk: 線性概率模型
+  lock: true
+- en: Out-of-Bounds Prediction
+  zh: 越界预测
+  zh_hk: 越界預測
+  lock: true
+- en: Inherent Heteroskedasticity
+  zh: 固有异方差性
+  zh_hk: 固有異方差性
+  lock: true
+- en: Non-Normal Residuals
+  zh: 非正态残差
+  zh_hk: 非正態殘差
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: An analyst estimates the Linear Probability Model Redemption = -0.10 + 0.08 * Visits. For an inactive customer with 0 visits and a loyal member with 15 visits, what are the predicted probabilities?
+  question_zh: 分析师估计了线性概率模型 核销率 = -0.10 + 0.08 * 到店频次。对于到店 0 次的沉睡会员与到店 15 次的高频会员，该模型给出的预测概率分别是多少？
+  question_zh_hk: 分析師估計咗線性概率模型 換領率 = -0.10 + 0.08 * 到店頻次。對於到店 0 次嘅沉睡會員同到店 15 次嘅高頻會員，呢個模型畀出嘅預測概率分別係幾多？
+  options_en:
+  - 'A: 0.00 and 1.00'
+  - 'B: -0.10 (-10%) and 1.10 (110%)'
+  - 'C: 0.10 (10%) and 0.90 (90%)'
+  - 'D: 0.50 and 0.50'
+  options_zh:
+  - 'A: 0.00 与 1.00'
+  - 'B: -0.10 (-10%) 与 1.10 (110%)'
+  - 'C: 0.10 (10%) 与 0.90 (90%)'
+  - 'D: 0.50 与 0.50'
+  options_zh_hk:
+  - 'A: 0.00 同 1.00'
+  - 'B: -0.10 (-10%) 同 1.10 (110%)'
+  - 'C: 0.10 (10%) 同 0.90 (90%)'
+  - 'D: 0.50 同 0.50'
+  answer: B
+  explanation_en: 'At Visits = 0: P_hat = -0.10 + 0.08(0) = -0.10 (-10%). At Visits = 15: P_hat = -0.10 + 0.08(15) = -0.10 + 1.20 = 1.10 (110%). Both violate the fundamental axiom that probabilities must lie within [0, 1].'
+  explanation_zh: 当到店频次 = 0 时：P_hat = -0.10 (-10%)；当到店频次 = 15 时：P_hat = -0.10 + 1.20 = 1.10 (110%)。两者均严重违反了概率必须严格介于 [0, 1] 之间的公理。
+  explanation_zh_hk: 當到店頻次 = 0 嗰陣：P_hat = -0.10 (-10%)；當到店頻次 = 15 嗰陣：P_hat = -0.10 + 1.20 = 1.10 (110%)。兩者都嚴重違反咗概率必須嚴格喺 [0, 1] 之間嘅基本公理。
+- id: Q2
+  type: multiple_choice
+  question_en: In the Linear Probability Model, why is the conditional error variance generally heteroskedastic when the event probability varies with X_i?
+  question_zh: 在线性概率模型中，当事件概率随 X_i 变化时，为什么误差项条件方差通常存在异方差？
+  question_zh_hk: 喺線性概率模型入面，當事件概率隨 X_i 變化時，點解誤差項條件方差通常存在異方差？
+  options_en:
+  - 'A: The error variance equals p_i * (1 - p_i), which mechanically varies with the value of predictor X_i'
+  - 'B: Binary outcomes always force residual variance to equal infinity'
+  - 'C: OLS estimators become algebraically undefined when Y has only zeros and ones'
+  - 'D: Sample size n cannot be determined in binary datasets'
+  options_zh:
+  - 'A: 误差项方差严格等于 p_i * (1 - p_i)，其数值随自变量 X_i 的变动而机械性改变，天生具有异方差性'
+  - 'B: 二元因变量总是强制残差方差变为无穷大'
+  - 'C: 当 Y 仅包含 0 和 1 时，OLS 估计量在代数上完全无法定义'
+  - 'D: 在二元数据集中样本容量 n 无法被统计软件识别'
+  options_zh_hk:
+  - 'A: 誤差項方差嚴格等於 p_i * (1 - p_i)，其數值隨住自變量 X_i 嘅變動而機械式改變，天生具有異方差性'
+  - 'B: 二元因變量永遠強制殘差方差變到無限大'
+  - 'C: 當 Y 淨係得 0 同 1 嗰陣，OLS 估計量喺代數上完全定義唔到'
+  - 'D: 喺二元數據集入面樣本容量 n 根本計唔出嚟'
+  answer: A
+  explanation_en: For a correctly specified conditional mean p_i, a Bernoulli outcome has Var(e_i | X_i) = p_i(1 - p_i). When p_i varies with X_i, the conditional variance varies too. If p_i were constant, this particular variance would be constant.
+  explanation_zh: 对于正确设定的条件均值 p_i，伯努利结果满足 Var(e_i | X_i) = p_i(1 - p_i)。当 p_i 随 X_i 变化时，条件方差也会变化；若 p_i 为常数，该方差才会保持不变。
+  explanation_zh_hk: 對於正確設定嘅條件平均值 p_i，伯努利結果滿足 Var(e_i | X_i) = p_i(1 - p_i)。當 p_i 隨 X_i 變化時，條件方差亦會變化；如果 p_i 係常數，個方差先會保持不變。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Marketing Audit Failure
+  kicker_zh: 营销预算审计翻车
+  kicker_zh_hk: 行銷預算審計翻車
+  title_en: Can a Customer Have a 110% Chance of Buying Coffee?
+  title_zh: 顾客买咖啡的概率怎么可能是百分之一百一十？
+  title_zh_hk: 顧客買咖啡嘅概率點可能係百分之一百一十？
+  en: Metro Coffee fits an OLS line that uses monthly visits to predict breakfast-voucher redemption. The supplied equation gives -10 percent for a customer with zero visits and 110 percent for a customer with fifteen visits. The arithmetic is correct, but the fitted values are not valid probabilities. Which features of the Linear Probability Model create this problem, and what can still be learned from it?
+  zh: Metro Coffee 使用月度到店次数拟合一条 OLS 直线来预测早餐券核销。给定方程对零次到店顾客预测 -10%，对十五次到店顾客预测 110%。算术没有错误，但这些拟合值不是有效概率。线性概率模型的哪些特征造成了这一问题？我们仍能从模型中学到什么？
+  zh_hk: Metro Coffee 用每月到店次數擬合一條 OLS 直線，預測早餐券換領。畀定方程對零次到店顧客預測 -10%，對十五次到店顧客預測 110%。算術冇錯，但呢啲擬合值唔係有效概率。線性概率模型邊啲特徵造成呢個問題？我哋仍然可以由模型學到啲咩？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: 'LPM: Y_i = beta_0 + beta_1 * X_i + e_i where E[Y_i | X_i] = p_i'
+  formula_zh: 线性概率模型：Y_i = beta_0 + beta_1 * X_i + e_i 且 E[Y_i | X_i] = p_i
+  formula_zh_hk: 線性概率模型：Y_i = beta_0 + beta_1 * X_i + e_i 兼且 E[Y_i | X_i] = p_i
+  formula_tex: Y_i = \beta_0 + \beta_1 X_i + \varepsilon_i \implies \hat{p}_i = \hat{\beta}_0 + \hat{\beta}_1 X_i \notin [0, 1] \quad \text{for extreme } X_i
+  s1_en: The Linear Probability Model applies ordinary least squares to a binary zero-or-one outcome. When the conditional mean is linear, the slope is interpreted as a constant change in probability, measured in probability points, for a one-unit increase in the predictor.
+  s1_zh: 线性概率模型将普通最小二乘法应用于取值为 0 或 1 的二元结果。当条件均值为线性时，斜率表示自变量每增加一个单位，概率发生的固定百分点变化。
+  s1_zh_hk: 線性概率模型將普通最小二乘法應用於取值為 0 或 1 嘅二元結果。當條件平均值係線性時，斜率表示自變量每增加一個單位，概率發生嘅固定百分點變化。
+  s2_en: An unconstrained linear function can produce fitted values below zero or above one, especially when evaluated at predictor values far from the center of the observed sample. Out-of-range predictions are possible, not inevitable for every dataset or observation.
+  s2_zh: 无约束线性函数可能产生低于 0 或高于 1 的拟合值，特别是在远离样本中心的自变量取值上。越界预测是可能发生的，并非每个数据集或每个观测都必然发生。
+  s2_zh_hk: 冇約束嘅線性函數可能產生低過 0 或者高過 1 嘅擬合值，特別係喺遠離樣本中心嘅自變量取值。越界預測係可能發生，而唔係每個數據集或者每個觀測都必然發生。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Inherent Heteroskedasticity
+  left_zh: 固有的异方差陷阱
+  right_en: Non-Normal Binary Errors
+  right_zh: 离散残差违背正态
+  s1_en: For a Bernoulli outcome with conditional probability p_i, the conditional error variance is p_i times one minus p_i. Unless p_i is constant, that variance changes with the predictors, so the LPM is conditionally heteroskedastic.
+  s1_zh: 对于条件概率为 p_i 的伯努利结果，误差项条件方差为 p_i 乘以 1 减 p_i。除非 p_i 为常数，否则方差会随自变量变化，因此 LPM 存在条件异方差。
+  s1_zh_hk: 對於條件概率係 p_i 嘅伯努利結果，誤差項條件方差係 p_i 乘以 1 減 p_i。除非 p_i 係常數，否則方差會隨自變量變化，所以 LPM 存在條件異方差。
+  s2_en: Heteroskedasticity does not make the OLS coefficient formula undefined. Under suitable exogeneity conditions, the coefficient estimates can still target a linear conditional-mean relationship, but conventional homoskedastic standard errors are inappropriate. Heteroskedasticity-robust standard errors are needed for large-sample inference.
+  s2_zh: 异方差不会使 OLS 系数公式无法定义。在适当外生性条件下，系数估计仍可针对线性条件均值关系，但传统同方差标准误并不合适。大样本推断应采用异方差稳健标准误。
+  s2_zh_hk: 異方差唔會令 OLS 系數公式無法定義。喺適當外生性條件之下，系數估計仍然可以針對線性條件平均值關係，但傳統同方差標準誤並唔合適。大樣本推斷應該採用異方差穩健標準誤。
+  s3_en: 'Conditional on the predictors, an LPM residual takes one of two values: one minus the fitted probability or negative the fitted probability. The residual is therefore not normally distributed. This rules out normal-error exact inference, although asymptotic inference may still be used with appropriate methods and regularity conditions.'
+  s3_zh: 给定自变量后，LPM 残差只能取两个值：1 减拟合概率，或拟合概率的负值。因此残差并不服从正态分布，不能使用正态误差下的精确推断；但在适当方法与正则条件下，仍可采用渐近推断。
+  s3_zh_hk: 畀定自變量之後，LPM 殘差只可以取兩個值：1 減擬合概率，或者擬合概率嘅負值。所以殘差唔服從正態分布，唔可以使用正態誤差之下嘅精確推斷；但喺適當方法同正則條件之下，仍然可以採用漸近推斷。
+  left_zh_hk: 固有嘅異方差陷阱
+  right_zh_hk: 離散殘差違背正態
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Fit Naive OLS Line
+  step1_zh: 拟合粗糙 OLS 直线
+  step2_en: Expose Bounded Violations
+  step2_zh: 暴露边界破裂实录
+  step3_en: Diagnose Variance Instability
+  step3_zh: 诊断方差失真根源
+  s1_en: 'Step one: Use the supplied fitted line Redemption = -0.10 + 0.08 times Visits. Within this linear specification, one additional monthly visit is associated with an 8-percentage-point increase in the fitted redemption probability.'
+  s1_zh: 第一步：使用给定拟合直线：核销 = -0.10 + 0.08 乘以到店次数。在这一线性设定中，每月多到店一次与拟合核销概率增加 8 个百分点相关。
+  s1_zh_hk: 第一步：使用畀定擬合直線：換領 = -0.10 + 0.08 乘以到店次數。喺呢個線性設定入面，每月多到店一次同擬合換領概率增加 8 個百分點相關。
+  s2_en: 'Step two: At zero visits, the fitted value is -0.10. At fifteen visits, it is -0.10 plus 0.08 times 15, which equals 1.10. Both fall outside the valid probability interval from zero to one.'
+  s2_zh: 第二步：到店 0 次时，拟合值为 -0.10；到店 15 次时，拟合值为 -0.10 加 0.08 乘以 15，即 1.10。两者都超出从 0 到 1 的有效概率区间。
+  s2_zh_hk: 第二步：到店 0 次時，擬合值係 -0.10；到店 15 次時，擬合值係 -0.10 加 0.08 乘以 15，即 1.10。兩者都超出由 0 到 1 嘅有效概率區間。
+  s3_en: 'Step three: If p equals 0.50, the Bernoulli variance is 0.50 times 0.50, or 0.25. If p equals 0.10, it is 0.10 times 0.90, or 0.09. The unequal variances illustrate conditional heteroskedasticity.'
+  s3_zh: 第三步：若 p = 0.50，伯努利方差为 0.50 乘以 0.50，即 0.25；若 p = 0.10，则为 0.10 乘以 0.90，即 0.09。方差不同说明存在条件异方差。
+  s3_zh_hk: 第三步：如果 p = 0.50，伯努利方差係 0.50 乘以 0.50，即 0.25；如果 p = 0.10，就係 0.10 乘以 0.90，即 0.09。方差唔同說明存在條件異方差。
+  step1_zh_hk: 擬合粗糙 OLS 直線
+  step2_zh_hk: 暴露邊界破裂實錄
+  step3_zh_hk: 診斷方差失真根源
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Is LPM Ever Acceptable?
+  q1_zh: LPM 是否真的一无是处？
+  q2_en: 'Audit Rule: Never Trust Out-of-Bounds Linear Predictions'
+  q2_zh: 审计准则：线性概率有边界，越界预测必叫停
+  s1_en: The LPM is simple and its slope can be easy to interpret. It may serve as a descriptive approximation or a robustness check when fitted values stay in a relevant range and robust standard errors are used.
+  s1_zh: LPM 结构简单，斜率也较易解读。当拟合值处于相关区间且采用稳健标准误时，它可以作为描述性近似或稳健性检查。
+  s1_zh_hk: LPM 結構簡單，斜率亦比較容易解讀。當擬合值處於相關區間而且採用穩健標準誤時，佢可以作為描述性近似或者穩健性檢查。
+  s2_en: 'Decision rule: audit the fitted probability range and use heteroskedasticity-robust inference. If valid probabilities across the decision range are essential, compare a bounded-response model and assess calibration and predictive performance.'
+  s2_zh: 决策规则：检查拟合概率范围，并采用异方差稳健推断。若整个决策范围内的有效概率至关重要，应比较有界响应模型，并评估校准与预测表现。
+  s2_zh_hk: 決策規則：檢查擬合概率範圍，並採用異方差穩健推斷。如果成個決策範圍內嘅有效概率非常重要，就應該比較有界響應模型，並評估校準同預測表現。
+  s3_en: In the supplied example, the LPM produces -0.10 and 1.10 at zero and fifteen visits. Those values demonstrate the boundary problem, while the variance calculations 0.25 and 0.09 demonstrate heteroskedasticity.
+  s3_zh: 在给定示例中，LPM 在到店 0 次与 15 次时产生 -0.10 与 1.10。这些数值展示了边界问题，而方差 0.25 与 0.09 展示了异方差。
+  s3_zh_hk: 喺畀定例子入面，LPM 喺到店 0 次同 15 次時產生 -0.10 同 1.10。呢啲數值展示咗邊界問題，而方差 0.25 同 0.09 展示咗異方差。
+  q1_zh_hk: LPM 係咪真係完全用唔過？
+  q2_zh_hk: 審計準則：線性概率有邊界，越界預測即叫停

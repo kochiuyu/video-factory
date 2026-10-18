@@ -1,0 +1,290 @@
+id: ECON-PR-EL
+course: principles
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 216
+title_en: Price Elasticity
+title_zh: 价格弹性
+title_zh_hk: 價格彈性
+objective_en: 'After a clearing price: whether a price rise raises revenue depends on how many
+  buyers walk away.'
+objective_zh: 收住交易单元：涨价会不会增加收入，取决于有多少买家走开。
+objective_zh_hk: 收住交易單元：漲價會不會增加收入，取決於有多少買家走開。
+glossary:
+- en: price elasticity of demand
+  zh: 需求价格弹性
+  zh_hk: 需求價格彈性
+  lock: true
+- en: revenue
+  zh: 收入
+  zh_hk: 收入
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: If |Ed| is greater than one, what happens to revenue when price rises?
+  zh: 若弹性绝对值大于一，涨价时收入会怎样？
+  zh_hk: 若彈性絕對值大於一，漲價時收入會怎樣？
+  answer_en: Revenue falls. Quantity drops by more than the price rises.
+  answer_zh: 收入下降。数量下降的比例大于价格上升的比例。
+  answer_zh_hk: 收入下降。數量下降的比例大於價格上升的比例。
+- id: Q2
+  type: transfer
+  en: A unique required textbook has almost no substitute. Should a small price rise raise revenue?
+  zh: 一本必修且几乎无替代的教材小幅涨价，收入会不会增加？
+  zh_hk: 一本必修且幾乎無替代的教材小幅漲價，收入會不會增加？
+  answer_en: Yes, if demand is inelastic. Few students can drop the book.
+  answer_zh: 会，若需求缺乏弹性。很少学生能不用这本书。
+  answer_zh_hk: 會，若需求缺乏彈性。很少學生能不用這本書。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 20
+  kicker: Concept
+  kicker_en: Concept
+  kicker_zh: 概念
+  kicker_zh_hk: 概念
+  title_en: Price Elasticity
+  title_zh: 价格弹性
+  title_zh_hk: 價格彈性
+  en: The street already has a price that clears. Raising that price does not always raise the
+    cash in the till. It depends how many buyers walk away. That sensitivity is the elasticity
+    of demand.
+  zh: 街上已经有一个出清的价。提高这个价，柜上的钱不一定变多。要看有多少买家走开。这种敏感度就是需求弹性。
+  zh_hk: 街上已經有一個出清嘅價。提高呢個價，櫃上嘅錢唔一定變多。要睇有幾多買家行開。呢種敏感度就係需求彈性。
+- id: define
+  visual: definition_card
+  seconds: 22
+  kicker: Definition
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Response over price
+  title_zh: 数量变化相对价格
+  title_zh_hk: 數量變化相對價格
+  formula: '|Ed| = percent change in Qd / percent change in P'
+  formula_tex: '|E_d| = \frac{\Delta Q_d}{\Delta P}'
+  formula_en: '|Ed| = percent change in Qd / percent change in P'
+  formula_zh: '|Ed| = 需求量变动百分比 / 价格变动百分比'
+  formula_zh_hk: '|Ed| = 需求量變動百分比 / 價格變動百分比'
+  gloss_en: Elastic means buyers leave quickly. Inelastic means they stay.
+  gloss_zh: 有弹性表示买家很快离开。缺乏弹性表示他们留下。
+  gloss_zh_hk: 有彈性表示買家很快離開。缺乏彈性表示他們留下。
+  s1_en: Price elasticity of demand is the percent change in quantity demanded divided by the
+    percent change in price.
+  s1_zh: 需求价格弹性，是需求量变动的百分比，除以价格变动的百分比。
+  s1_zh_hk: 需求價格彈性，係需求量變動嘅百分比，除以價格變動嘅百分比。
+  s2_en: If that ratio is above one, quantity moves more than price. We call demand elastic.
+  s2_zh: 若这个比值大于一，数量动得比价格多。我们就说需求有弹性。
+  s2_zh_hk: 若呢個比值大過一，數量郁得多過價格。我哋就話需求有彈性。
+- id: example
+  visual: two_column
+  seconds: 24
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: Canteen rice vs late-night snack
+  title_zh: 食堂米饭和宵夜
+  title_zh_hk: 食堂米飯和宵夜
+  left_en: Staple rice — inelastic
+  left_zh: 主食米饭，缺乏弹性
+  left_zh_hk: 主食米飯，缺乏彈性
+  right_en: Optional snack — elastic
+  right_zh: 可有可无的宵夜，有弹性
+  right_zh_hk: 可有可無的宵夜，有彈性
+  s1_en: Same size price rise, two goods.
+  s1_zh: 同样幅度的涨价，两样东西。
+  s1_zh_hk: 同樣幅度嘅加價，兩樣嘢。
+  s2_en: A small rise in the rice price barely cuts bowls sold, so revenue can rise.
+  s2_zh: 米价小涨，卖掉的碗数几乎不减，营业收入可以上升。
+  s2_zh_hk: 米價細加，賣出嘅碗數幾乎唔減，營業額可以升。
+  s3_en: The same rise on a snack people can skip empties the queue and can cut revenue.
+  s3_zh: 同样涨在可有可无的小吃上，队伍会散，营业收入可能下降。
+  s3_zh_hk: 同樣加喺可有可無嘅小吃上面，隊伍會散，營業額可能跌。
+- id: formula
+  visual: formula
+  seconds: 20
+  kicker: Formula
+  kicker_en: Formula
+  kicker_zh: 公式
+  kicker_zh_hk: 公式
+  title_en: A ratio of percentages
+  title_zh: 百分比之比
+  title_zh_hk: 百分比之比
+  formula: '|Ed| = percent change in Qd / percent change in P'
+  formula_tex: '|E_d| = \frac{\Delta Q_d}{\Delta P}'
+  formula_en: '|Ed| = percent change in Qd / percent change in P'
+  formula_zh: '|Ed| = 需求量变动百分比 / 价格变动百分比'
+  formula_zh_hk: '|Ed| = 需求量變動百分比 / 價格變動百分比'
+  gloss_en: Above one is elastic.
+  gloss_zh: 大于一就是有弹性。
+  gloss_zh_hk: 大於一就是有彈性。
+  s1_en: Elasticity is not the slope of the curve. Slope still has units in it.
+  s1_zh: 弹性不是曲线的斜率。斜率里还带着单位。
+  s1_zh_hk: 彈性唔係曲線嘅斜率。斜率入面仲帶住單位。
+  s2_en: It is how much quantity moves when price moves by one percent. Units cancel. The ratio
+    stays.
+  s2_zh: 它是价格变动百分之一时，数量变动多少。单位消掉。比值留下。
+  s2_zh_hk: 佢係價格變動百分之一時，數量變動幾多。單位消咗。比值留低。
+- id: split
+  visual: two_column
+  seconds: 22
+  kicker: Compare
+  kicker_en: Compare
+  kicker_zh: 对照
+  kicker_zh_hk: 對照
+  title_en: Elastic versus not
+  title_zh: 有弹性对无弹性
+  title_zh_hk: 有彈性對無彈性
+  left_en: '|Ed| > 1 buyers leave'
+  left_zh: '|Ed| > 1 买家离开'
+  left_zh_hk: '|Ed| > 1 買家離開'
+  right_en: '|Ed| < 1 buyers stay'
+  right_zh: '|Ed| < 1 买家留下'
+  right_zh_hk: '|Ed| < 1 買家留下'
+  s1_en: Split the revenue story in two.
+  s1_zh: 把营业收入的故事拆成两栏。
+  s1_zh_hk: 將營業額嘅故事拆成兩欄。
+  s2_en: If quantity jumps more than price, demand is elastic. A higher price can shrink revenue.
+  s2_zh: 若数量跳得比价格多，需求有弹性。涨价可能让营业收入变少。
+  s2_zh_hk: 若數量跳得多過價格，需求有彈性。加價可能令營業額變少。
+  s3_en: If quantity barely moves, demand is inelastic. A higher price can raise revenue.
+  s3_zh: 若数量几乎不动，需求缺乏弹性。涨价可能让营业收入变多。
+  s3_zh_hk: 若數量幾乎唔郁，需求缺乏彈性。加價可能令營業額變多。
+- id: mtr
+  visual: example
+  seconds: 22
+  kicker: Example
+  kicker_en: Example
+  kicker_zh: 例子
+  kicker_zh_hk: 例子
+  title_en: A fare rise
+  title_zh: 票价上调
+  title_zh_hk: 票價上調
+  setup_en: Price up 10 percent
+  setup_zh: 价格升10%
+  setup_zh_hk: 價格升10%
+  result_en: Rides down 3 percent
+  result_zh: 乘次降3%
+  result_zh_hk: 乘次降3%
+  s1_en: A city raises the metro fare by ten percent.
+  s1_zh: 城市把地铁票价提高百分之十。
+  s1_zh_hk: 城市將地鐵票價提高百分之十。
+  s2_en: Rides fall by three percent.
+  s2_zh: 乘次下降百分之三。
+  s2_zh_hk: 乘次下降百分之三。
+  s3_en: The absolute elasticity is 0.3. Demand here is inelastic, so revenue rises even as some
+    riders leave.
+  s3_zh: 弹性的绝对值是 0.3。这里需求缺乏弹性，所以即使有人离开，营业收入仍上升。
+  s3_zh_hk: 彈性嘅絕對值係 0.3。呢度需求缺乏彈性，所以即使有人離開，營業額都仲升。
+- id: drivers
+  visual: three_column
+  seconds: 24
+  kicker: Three parts
+  kicker_en: Three parts
+  kicker_zh: 三部分
+  kicker_zh_hk: 三部分
+  title_en: What bends |Ed|
+  title_zh: 什么改变|Ed|
+  title_zh_hk: 什麼改變|Ed|
+  col1_en: Substitutes
+  col1_zh: 替代品
+  col1_zh_hk: 替代品
+  col2_en: Budget share
+  col2_zh: 预算份额
+  col2_zh_hk: 預算份額
+  col3_en: Time to adjust
+  col3_zh: 调整时间
+  col3_zh_hk: 調整時間
+  s1_en: More substitutes raise elasticity. If another line exists, more riders walk away after
+    a rise.
+  s1_zh: 替代品越多，弹性越大。若有另一条线，涨价后走开的人更多。
+  s1_zh_hk: 替代品越多，彈性越大。若有另一條線，加價之後行開嘅人更多。
+  s2_en: A larger share of income also raises it. A fare that eats the weekly budget hurts more.
+  s2_zh: 占收入的份额更大，弹性也更大。吃掉一周预算的票价更痛。
+  s2_zh_hk: 佔收入份額更大，彈性都更大。食咗一週預算嘅票價更痛。
+  s3_en: A longer month raises it too. A morning commute with one line is less elastic than a
+    weekend lunch you can skip.
+  s3_zh: 时间更长，弹性也更大。只有一条线的早高峰，比可去可不去的周末午饭更缺乏弹性。
+  s3_zh_hk: 時間更長，彈性都更大。得一條線嘅早高峰，比可去可不去嘅週末午飯更缺乏彈性。
+- id: use
+  visual: steps
+  seconds: 24
+  kicker: Steps
+  kicker_en: Steps
+  kicker_zh: 步骤
+  kicker_zh_hk: 步驟
+  title_en: Before you raise price
+  title_zh: 提价之前
+  title_zh_hk: 提價之前
+  step1_en: Estimate |Ed|
+  step1_zh: 估计|Ed|
+  step1_zh_hk: 估計|Ed|
+  step2_en: Check revenue direction
+  step2_zh: 看收入方向
+  step2_zh_hk: 看收入方向
+  step3_en: Name the leftover riders
+  step3_zh: 说出留下的乘客
+  step3_zh_hk: 說出留下的乘客
+  s1_en: Before you raise a fare, write a guess for the absolute elasticity.
+  s1_zh: 涨价之前，先写下弹性绝对值的猜测。
+  s1_zh_hk: 加價之前，先寫低彈性絕對值嘅猜測。
+  s2_en: If it is below one, revenue may rise.
+  s2_zh: 若低于一，营业收入可能上升。
+  s2_zh_hk: 若低過一，營業額可能升。
+  s3_en: 'Still ask who remains: students, tourists, or people with no other line. The till is
+    not the whole story.'
+  s3_zh: 仍要问留下的是谁：学生、游客，还是没有其他线路的人。柜上的钱不是全部故事。
+  s3_zh_hk: 都要問留低嘅係邊個：學生、遊客，定係冇其他線路嘅人。櫃上嘅錢唔係全部故事。
+- id: cut
+  visual: big_number
+  seconds: 18
+  kicker: Number
+  kicker_en: Number
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: The threshold
+  title_zh: 那条界
+  title_zh_hk: 那條界
+  unit_en: unitless
+  unit_zh: 无单位
+  unit_zh_hk: 無單位
+  caption_en: Cross one and the story flips.
+  caption_zh: 越过一，故事就翻转。
+  caption_zh_hk: 越過一，故事就翻轉。
+  number: 1
+  en: One is the hinge. Above it, quantity dominates the revenue story. Below it, price does.
+    Do not quote a slope and call it elasticity.
+  zh: 一是分界。高于一，数量主导营业收入的故事。低于一，价格主导。不要把斜率叫成弹性。
+  zh_hk: 一係分界。高過一，數量主導營業額嘅故事。低過一，價格主導。唔好將斜率叫成彈性。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Check substitutes first
+  title_zh: 先看替代品
+  title_zh_hk: 先看替代品
+  q1_en: Can buyers switch easily?
+  q1_zh: 买家能否轻易换别的？
+  q1_zh_hk: 買家能否輕易換別的？
+  q2_en: Will revenue rise or fall?
+  q2_zh: 收入会升还是会降？
+  q2_zh_hk: 收入會升還是會降？
+  s1_en: Many substitutes mean elastic demand.
+  s1_zh: 替代品多，需求就有弹性。
+  s1_zh_hk: 替代品多，需求就有彈性。
+  s2_en: A price rise then loses quantity faster than it gains on each unit.
+  s2_zh: 这时涨价，丢掉的数量快过每单位多收的钱。
+  s2_zh_hk: 呢時加價，掉咗嘅數量快過每單位多收嘅錢。
+  s3_en: That is this topic. Choice, then price. The mini-course stops here.
+  s3_zh: 这一讲就是这件事。选择，然后价格。这门小课到此为止。
+  s3_zh_hk: 呢一講就係呢件事。選擇，然後價格。呢門小課到此為止。

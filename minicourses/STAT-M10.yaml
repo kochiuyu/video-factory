@@ -1,0 +1,30 @@
+id: STAT-M10
+kind: minicourse
+course: statistics
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+title_en: Applied A/B testing and digital experimentation for a coffee chain
+title_zh: 咖啡连锁的商业 A/B 测试与数字化实验
+title_zh_hk: 咖啡連鎖嘅商業 A/B 測試與數碼化實驗
+objective_en: 'Fifteen standalone shorts on assumed Metro Coffee experiments: counterfactuals and selection bias, randomization units, A/A calibration, power and MDE, sample-ratio mismatch, interference, novelty trajectories, cluster design effects, switchbacks, factorials, CUPED, bandit regret, multiplicity, heterogeneous effects, and a five-gate rollout review. Build each short on its own. This collection does not join them into one video.'
+objective_zh: 围绕假设都市咖啡实验的十五节独立短课：反事实与选择偏差、随机化单元、A/A 校准、功效与最小可检测效应、样本比例失配、干扰、新奇轨迹、集群设计效应、时间轮换、析因、CUPED、老虎机后悔值、多重检验、异质效应，以及五阶推广审核。每节单独制作。本集合不把它们拼成一条视频。
+objective_zh_hk: 圍繞假設都市咖啡實驗嘅十五節獨立短課：反事實同選擇偏差、隨機化單元、A/A 校準、功效同最小可檢測效應、樣本比例失配、干擾、新奇軌跡、集群設計效應、時間輪換、析因、CUPED、老虎機後悔值、多重檢驗、異質效應，以及五階推廣審核。每節單獨製作。本集合唔會將佢哋拼成一條片。
+syllabus: docs/courses/STAT-M10.md
+duration_note: Each short is 168 seconds. The collection is not a 5–10 minute module.
+lessons:
+- STAT-M10-T01-COUNT
+- STAT-M10-T02-UNITS
+- STAT-M10-T03-AABAL
+- STAT-M10-T04-POWER
+- STAT-M10-T05-SRMIS
+- STAT-M10-T06-SUTVA
+- STAT-M10-T07-NOVEL
+- STAT-M10-T08-CLUST
+- STAT-M10-T09-SWTCH
+- STAT-M10-T10-FACTR
+- STAT-M10-T11-CUPED
+- STAT-M10-T12-BANDT
+- STAT-M10-T13-MULTT
+- STAT-M10-T14-HTEXP
+- STAT-M10-T15-RECAP

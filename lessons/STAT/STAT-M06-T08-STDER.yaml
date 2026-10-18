@@ -1,0 +1,197 @@
+id: STAT-M06-T08-STDER
+course: STAT-M06
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Residual Standard Error: Measuring Typical Regression Error in Outcome Units'
+title_zh: 残差标准误：以结果单位衡量典型回归误差
+title_zh_hk: 殘差標準誤：以結果單位量度典型回歸誤差
+objective_en: Calculate the residual standard error in simple linear regression, explain the n minus 2 residual degrees of
+  freedom, interpret the result in outcome units, distinguish residual spread from slope uncertainty and prediction intervals,
+  and avoid converting a model-fit statistic into an automatic inventory or service-level rule.
+objective_zh: 计算简单线性回归的残差标准误，解释 n - 2 残差自由度，以结果变量单位解读该指标，区分残差离散、斜率不确定性与预测区间，并避免把模型拟合统计量直接转化为自动库存或服务水平规则。
+objective_zh_hk: 計算簡單線性回歸嘅殘差標準誤，解釋 n - 2 殘差自由度，以結果變量單位解讀呢個指標，區分殘差離散、斜率不確定性同預測區間，並避免將模型擬合統計量直接轉化成自動庫存或者服務水平規則。
+glossary:
+- en: Standard Error of the Estimate
+  zh: 估计标准误
+  zh_hk: 估計標準誤
+  lock: true
+- en: Degrees of Freedom Penalty
+  zh: 自由度惩罚
+  zh_hk: 自由度扣減
+  lock: true
+- en: Residual Variance
+  zh: 残差方差
+  zh_hk: 殘差方差
+  lock: true
+- en: Safety Stock Buffer
+  zh: 安全库存缓冲
+  zh_hk: 安全庫存緩衝
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why is SSE divided by n - 2 in a simple regression with an intercept and one slope?
+  question_zh: 在计算估计标准误 s_e 时，为什么误差平方和（SSE）除以 n - 2 而不是 n？
+  question_zh_hk: 喺計算估計標準誤 s_e 嗰陣，點解誤差平方和（SSE）要除以 n - 2 而唔係除以 n？
+  options_en:
+  - 'A: Estimating the intercept and slope uses two degrees of freedom, leaving n - 2 residual degrees of freedom'
+  - 'B: Two store locations are systematically excluded as outliers'
+  - 'C: To ensure the estimated standard error is strictly greater than total variance'
+  - 'D: Sample sizes in regression models are always halved to prevent overfitting'
+  options_zh:
+  - 'A: 估算回归截距与斜率两个参数消耗掉了两个样本自由度'
+  - 'B: 在数据清洗时系统性地剔除了两家作为异常值的门店'
+  - 'C: 确保估算出的标准误在数值上严格大于总方差'
+  - 'D: 回归模型中样本量自动减半以防止过度拟合'
+  options_zh_hk:
+  - 'A: 估計回歸截距同斜率兩個參數消耗咗兩個樣本自由度'
+  - 'B: 喺數據清洗嗰陣系統性噉剔除咗兩間屬於極端值嘅分店'
+  - 'C: 確保計出嚟嘅標準誤喺數值上必定大過總方差'
+  - 'D: 回歸模型嘅樣本量會自動減半以防止過度擬合'
+  answer: A
+  explanation_en: The denominator reflects the number of residual degrees of freedom after estimating two regression coefficients.
+    It is not caused by deleting two observations.
+  explanation_zh: 计算拟合值需要先估计截距 beta_0 与斜率 beta_1 两个参数。每一个被估计的参数都会对残差施加一个线性约束，因此剩余自由度为 n - 2。
+  explanation_zh_hk: 計算擬合值需要先估計截距 beta_0 同斜率 beta_1 兩個參數。每一個估計咗嘅參數都會對殘差施加一條線性約束，所以剩低嘅自由度係 n - 2。
+- id: Q2
+  type: multiple_choice
+  question_en: A simple regression has n = 18 and SSE = 1,600 cartons squared. What is the residual standard error?
+  question_zh: 对湾仔店 18 个高峰班次的鲜奶消耗量审计测得 SSE = 1,600 盒平方。该回归模型的估计标准误 s_e 是多少？
+  question_zh_hk: 對灣仔店 18 個高峰排班嘅鮮奶消耗量進行審計，測得 SSE = 1,600 盒平方。呢個回歸模型嘅估計標準誤 s_e 係幾多？
+  options_en:
+  - 'A: s_e = 100 cartons'
+  - 'B: s_e = 10 cartons'
+  - 'C: s_e = 88.9 cartons'
+  - 'D: s_e = 16 cartons'
+  options_zh:
+  - 'A: s_e = 100 盒'
+  - 'B: s_e = 10 盒'
+  - 'C: s_e = 88.9 盒'
+  - 'D: s_e = 16 盒'
+  options_zh_hk:
+  - 'A: s_e = 100 盒'
+  - 'B: s_e = 10 盒'
+  - 'C: s_e = 88.9 盒'
+  - 'D: s_e = 16 盒'
+  answer: B
+  explanation_en: Residual degrees of freedom are 16. The variance estimate is 1,600/16 = 100 cartons squared, so s_e = 10
+    cartons.
+  explanation_zh: 样本量 n = 18，自由度为 n - 2 = 16。残差方差为 1,600 / 16 = 100 盒平方。开平方得出 s_e = sqrt(100) = 10 盒。
+  explanation_zh_hk: 樣本量 n = 18，自由度係 n - 2 = 16。殘差方差係 1,600 / 16 = 100 盒平方。開根號計出 s_e = sqrt(100) = 10 盒。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  title_en: How far do actual outcomes typically fall from the fitted line?
+  title_zh: 实际结果通常偏离拟合线多远？
+  title_zh_hk: 實際結果通常偏離擬合線幾遠？
+  en: Metro Coffee is reviewing an assumed regression that predicts milk-carton use from transaction volume. R-squared reports
+    a relative share of variation, but operations also needs an error measure in cartons. The residual standard error summarizes
+    the scale of in-sample residuals in the outcome unit. It is a model diagnostic, not by itself a safety-stock quantity,
+    forecast interval, or guaranteed service level.
+  zh: 都市咖啡正在审视一项假设回归，利用交易量预测鲜奶盒用量。R 平方报告相对变异份额，但经营管理还需要以盒为单位的误差指标。残差标准误概括样本内残差在结果单位上的尺度。它是一项模型诊断，本身并不是安全库存数量、预测区间或有保证的服务水平。
+  zh_hk: 都市咖啡正審視一項假設回歸，利用交易量預測鮮奶盒用量。R 平方報告相對變異份額，但營運管理仲需要以盒為單位嘅誤差指標。殘差標準誤概括樣本內殘差喺結果單位上嘅尺度。佢係一項模型診斷，本身並唔係安全庫存數量、預測區間或者有保證嘅服務水平。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: s_e = sqrt[SSE / (n - 2)]
+  formula_zh: s_e = √[SSE / (n - 2)]
+  formula_zh_hk: s_e = √[SSE / (n - 2)]
+  formula_tex: s_e=\sqrt{\frac{SSE}{n-2}}=\sqrt{\frac{\sum_{i=1}^{n}(Y_i-\hat Y_i)^2}{n-2}}
+  s1_en: SSE adds the squared vertical residuals. Dividing by the residual degrees of freedom estimates the error variance,
+    and taking the square root returns the statistic to the original Y unit. Thus, if Y is measured in cartons, s_e is also
+    measured in cartons.
+  s1_zh: SSE 汇总纵向残差平方。除以残差自由度可估计误差方差，再开平方后，统计量回到 Y 的原始单位。因此，若 Y 以盒计量，s_e 也以盒计量。
+  s1_zh_hk: SSE 匯總縱向殘差平方。除以殘差自由度可以估計誤差方差，再開平方之後，統計量返回 Y 嘅原始單位。所以，如果 Y 以盒量度，s_e 亦以盒量度。
+  s2_en: In simple regression with an intercept and one slope, two coefficients are estimated, leaving n minus 2 residual
+    degrees of freedom. More generally, residual degrees of freedom equal the sample size minus the number of estimated regression
+    coefficients.
+  s2_zh: 在包含截距与一个斜率的简单回归中，需要估计两个系数，因此残差自由度为 n - 2。更一般地，残差自由度等于样本量减去估计的回归系数数量。
+  s2_zh_hk: 喺包含截距同一個斜率嘅簡單回歸入面，需要估計兩個系數，所以殘差自由度係 n - 2。更一般嚟講，殘差自由度等於樣本量減去估計嘅回歸系數數量。
+  title_en: Estimate residual spread after fitting two coefficients
+  title_zh: 拟合两个系数后估计残差离散
+  title_zh_hk: 擬合兩個系數之後估計殘差離散
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  left_en: Residual spread in Y units
+  left_zh: 以 Y 单位表示的残差离散
+  right_en: Prediction requires more information
+  right_zh: 预测需要更多信息
+  s1_en: A smaller s_e means observed outcomes lie more tightly around the fitted line in the estimation sample, all else
+    equal. Because the statistic uses Y units, it can be compared with operational tolerances stated in the same units.
+  s1_zh: 在其他条件相同时，较小的 s_e 表示估计样本中的观测结果更紧密地围绕拟合线。由于该指标使用 Y 单位，可与采用相同单位表达的经营容忍范围比较。
+  s1_zh_hk: 喺其他條件相同嗰陣，較細嘅 s_e 表示估計樣本入面嘅觀測結果更緊密噉圍繞擬合線。由於呢個指標使用 Y 單位，可以同採用相同單位表達嘅營運容忍範圍比較。
+  s2_en: The residual standard error is not the standard error of the slope. It also is not a prediction interval for a new
+    observation. Prediction uncertainty depends on s_e, the new X value, sample size, and the spread of observed X values,
+    together with model assumptions.
+  s2_zh: 残差标准误不是斜率标准误，也不是新观测的预测区间。预测不确定性取决于 s_e、新 X 值、样本量、观测 X 的离散程度以及模型假设。
+  s2_zh_hk: 殘差標準誤唔係斜率標準誤，亦唔係新觀測嘅預測區間。預測不確定性取決於 s_e、新 X 值、樣本量、觀測 X 嘅離散程度同模型假設。
+  s3_en: Rules such as plus or minus two s_e require distributional and design assumptions and still do not automatically
+    determine inventory. A stock decision also needs demand timing, lead time, service targets, shortage costs, spoilage costs,
+    and forecast calibration.
+  s3_zh: 正负两个 s_e 等规则需要分布与设计假设，也不能自动决定库存。库存决策还需要需求时点、交付周期、服务目标、缺货成本、损耗成本与预测校准信息。
+  s3_zh_hk: 正負兩個 s_e 呢類規則需要分佈同設計假設，亦唔可以自動決定庫存。庫存決策仲需要需求時點、交付週期、服務目標、缺貨成本、損耗成本同預測校準資訊。
+  left_zh_hk: 以 Y 單位表示嘅殘差離散
+  right_zh_hk: 預測需要更多資訊
+  title_en: Outcome-unit error is useful, but it is not a complete forecast distribution
+  title_zh: 结果单位误差很有用，但并非完整预测分布
+  title_zh_hk: 結果單位誤差好有用，但並唔係完整預測分佈
+- id: ledger
+  visual: steps
+  seconds: 38
+  step1_en: 'Teaching assumptions: n = 18 observations and SSE = 1,600 cartons^2'
+  step1_zh: 教学假设：n = 18 个观测，SSE = 1,600 盒^2
+  step2_en: Residual df = 18 - 2 = 16; estimated residual variance = 1,600/16 = 100 cartons^2
+  step2_zh: 残差自由度 = 18 - 2 = 16；估计残差方差 = 1,600/16 = 100 盒^2
+  step3_en: s_e = sqrt(100) = 10 cartons
+  step3_zh: s_e = √100 = 10 盒
+  s1_en: For illustration, assume a simple regression with 18 observations and SSE of 1,600 cartons squared. These are teaching
+    assumptions, not verified branch, inventory, transaction, shortage, or service-level records.
+  s1_zh: 作为示例，假设一个简单回归包含 18 个观测，SSE 为 1,600 盒平方。这些数字是教学假设，并非已核实的门店、库存、交易、缺货或服务水平记录。
+  s1_zh_hk: 作為例子，假設一個簡單回歸包含 18 個觀測，SSE 係 1,600 盒平方。呢啲數字係教學假設，唔係已核實嘅門市、庫存、交易、缺貨或者服務水平記錄。
+  s2_en: Estimating the intercept and slope leaves 16 residual degrees of freedom. The estimated residual variance is 100
+    cartons squared. Its square root restores the original unit and gives a residual standard error of 10 cartons.
+  s2_zh: 估计截距与斜率后剩余 16 个残差自由度。估计残差方差为 100 盒平方，开平方恢复原始单位，得到残差标准误 10 盒。
+  s2_zh_hk: 估計截距同斜率之後剩低 16 個殘差自由度。估計殘差方差係 100 盒平方，開平方恢復原始單位，得到殘差標準誤 10 盒。
+  s3_en: The defensible interpretation is that residuals have an estimated standard-deviation scale of 10 cartons under the
+    fitted model. It does not mean every forecast misses by 10 cartons or that adding 10 or 20 cartons guarantees a chosen
+    service level.
+  s3_zh: 可辩护解释是：在拟合模型下，残差的估计标准差尺度为 10 盒。它不表示每次预测都会偏差 10 盒，也不表示增加 10 或 20 盒即可保证某个服务水平。
+  s3_zh_hk: 可辯護解讀係：喺擬合模型之下，殘差嘅估計標準差尺度係 10 盒。佢唔表示每次預測都會偏差 10 盒，亦唔表示增加 10 或者 20 盒就可以保證某個服務水平。
+  step1_zh_hk: 教學假設：n = 18 個觀測，SSE = 1,600 盒^2
+  step2_zh_hk: 殘差自由度 = 18 - 2 = 16；估計殘差方差 = 1,600/16 = 100 盒^2
+  step3_zh_hk: s_e = √100 = 10 盒
+  title_en: Calculate the residual standard error for an assumed sample
+  title_zh: 计算假设样本的残差标准误
+  title_zh_hk: 計算假設樣本嘅殘差標準誤
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  q1_en: What does s_e measure?
+  q1_zh: s_e 衡量什么？
+  q2_en: What does s_e not determine by itself?
+  q2_zh: s_e 本身不能决定什么？
+  s1_en: It estimates the residual standard-deviation scale around the fitted line in the original outcome unit. In simple
+    regression, calculate it from SSE divided by n minus 2, then take the square root.
+  s1_zh: 它以结果变量原始单位估计拟合线周围的残差标准差尺度。在简单回归中，用 SSE 除以 n - 2，再开平方。
+  s1_zh_hk: 佢以結果變量原始單位估計擬合線周圍嘅殘差標準差尺度。喺簡單回歸入面，用 SSE 除以 n - 2，再開平方。
+  s2_en: It does not by itself determine a confidence interval, prediction interval, stock buffer, shortage probability, or
+    service level. Those require the relevant inferential formula, model diagnostics, operating costs, and decision objectives.
+  s2_zh: 它本身不能决定置信区间、预测区间、库存缓冲、缺货概率或服务水平。这些需要相应推断公式、模型诊断、经营成本与决策目标。
+  s2_zh_hk: 佢本身唔可以決定置信區間、預測區間、庫存緩衝、缺貨概率或者服務水平。呢啲需要相應推斷公式、模型診斷、營運成本同決策目標。
+  s3_en: For the assumed data, s_e equals 10 cartons. Report the sample, model, residual degrees of freedom, units, and diagnostics,
+    and keep inventory policy separate from the fit statistic.
+  s3_zh: 在假设数据中，s_e 等于 10 盒。应报告样本、模型、残差自由度、单位与诊断，并把库存政策与拟合统计量分开。
+  s3_zh_hk: 喺假設數據入面，s_e 等於 10 盒。應該報告樣本、模型、殘差自由度、單位同診斷，並將庫存政策同擬合統計量分開。
+  q1_zh_hk: s_e 量度咩？
+  q2_zh_hk: s_e 本身唔可以決定咩？
+  title_en: Use s_e as a scale diagnostic, then build the decision model
+  title_zh: 把 s_e 用作尺度诊断，再建立决策模型
+  title_zh_hk: 將 s_e 用作尺度診斷，再建立決策模型

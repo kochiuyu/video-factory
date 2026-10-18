@@ -1,0 +1,166 @@
+id: STAT-M09-T15-RECAP
+course: STAT-M09
+course_en: Business Time Series & Demand Forecasting
+course_zh: 商业时间序列与需求预测
+course_zh_hk: 商業時間序列與需求預測
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Executive Forecast Governance: A Five-Gate Replenishment Review'
+title_zh: 管理层预测治理：补货决策的五阶审核
+title_zh_hk: 管理層預測治理：補貨決策嘅五階審核
+objective_en: Synthesize time-series diagnosis, model design, forecast evaluation, and operational safeguards into a five-gate review for automated replenishment decisions.
+objective_zh: 把时间序列诊断、模型设计、预测评估与运营保障整合为自动补货决策的五阶审核框架。
+objective_zh_hk: 將時間序列診斷、模型設計、預測評估同營運保障整合成自動補貨決策嘅五階審核框架。
+glossary:
+  - en: Supply Chain Governance Scorecard
+    zh: 供应链治理计分卡
+    zh_hk: 供應鏈治理計分卡
+    lock: true
+  - en: Five-Gate Forecasting Audit
+    zh: 五阶时序预测风控审核
+    zh_hk: 五階時序預測風控審核
+    lock: true
+  - en: Automated Commissary Replenishment
+    zh: 工坊全自动补货系统
+    zh_hk: 工坊全自動補貨系統
+    lock: true
+  - en: Safety Stock Buffer
+    zh: 动态安全库存缓冲
+    zh_hk: 動態安全庫存緩衝
+    lock: true
+quiz:
+  - id: Q1
+    type: multiple_choice
+    question_en: Which review sequence best represents a defensible five-gate forecast-governance process?
+    question_zh: 哪个审核顺序最能代表可辩护的五阶预测治理流程？
+    question_zh_hk: 邊個審核次序最能夠代表有理據嘅五階預測治理流程？
+    options_en:
+      - 'A: Data and time structure; specification and stability; residual diagnostics; out-of-sample accuracy; inventory-policy simulation and controls'
+      - 'B: Maximize in-sample R-squared; remove safety stock; automate immediately'
+      - 'C: Randomly shuffle dates; select the smallest training error; ignore residuals'
+      - 'D: Choose one universal error threshold for every product and horizon'
+    options_zh:
+      - A：数据与时间结构；模型设定与稳定性；残差诊断；样本外准确度；库存政策模拟与控制
+      - B：最大化样本内 R平方；取消安全库存；立即自动化
+      - C：随机打乱日期；选择训练误差最小的模型；忽略残差
+      - D：为所有产品与预测期选择同一个通用误差阈值
+    options_zh_hk:
+      - A：數據同時間結構；模型設定同穩定性；殘差診斷；樣本外準確度；庫存政策模擬同控制
+      - B：最大化樣本內 R平方；取消安全庫存；立即自動化
+      - C：隨機打亂日期；選擇訓練誤差最細嘅模型；忽略殘差
+      - D：為所有產品同預測期選擇同一個通用誤差門檻
+    answer: A
+    explanation_en: The sequence moves from valid data structure to model adequacy, forecast validation, and finally the separate operational decision layer. No single statistic authorizes automation.
+    explanation_zh: 该顺序从有效的数据结构，推进至模型充分性、预测验证，最后进入独立的运营决策层。任何单一统计量都不能授权自动化。
+    explanation_zh_hk: 呢個次序由有效數據結構，推進到模型充分性、預測驗證，最後進入獨立營運決策層。任何單一統計量都唔可以授權自動化。
+  - id: Q2
+    type: multiple_choice
+    question_en: What does a residual ACF spike outside an approximate pointwise bound imply?
+    question_zh: 残差 ACF 柱条超出近似逐点界限，意味着什么？
+    question_zh_hk: 殘差 ACF 柱條超出近似逐點界線，意味住乜嘢？
+    options_en:
+      - 'A: Remaining serial dependence may exist and should be investigated with additional diagnostics'
+      - 'B: The model has been proven spurious and must always be rejected'
+      - 'C: Inventory will certainly run out'
+      - 'D: The forecast has a causal interpretation'
+    options_zh:
+      - A：可能仍存在序列依赖，应结合其他诊断进一步检查
+      - B：模型已被证明是伪回归，任何情况下都必须否决
+      - C：库存必定见底
+      - D：预测具有因果解释
+    options_zh_hk:
+      - A：可能仍然存在序列依賴，要配合其他診斷進一步檢查
+      - B：模型已經證明係偽回歸，任何情況都一定要否決
+      - C：庫存一定見底
+      - D：預測具有因果解讀
+    answer: A
+    explanation_en: A residual spike is a diagnostic warning, not proof of causality, spurious regression, or operational failure. Joint tests, specification review, and validation remain necessary.
+    explanation_zh: 残差柱条是诊断警示，并非因果关系、伪回归或运营失败的证明。仍需联合检验、模型设定审查与预测验证。
+    explanation_zh_hk: 殘差柱條係診斷警號，唔係因果關係、偽回歸或者營運失敗嘅證明。仍然要做聯合檢驗、模型設定審查同預測驗證。
+beats:
+  - id: hook
+    visual: title_card
+    seconds: 30
+    kicker_en: Automation Approval Puzzle
+    kicker_zh: 自动化审批难题
+    kicker_zh_hk: 自動化審批難題
+    title_en: What Evidence Is Enough Before Replenishment Goes Automatic?
+    title_zh: 补货自动化之前，什么证据才算足够？
+    title_zh_hk: 補貨自動化之前，乜嘢證據先算足夠？
+    en: >-
+      Suppose a forecasting vendor proposes Automated Commissary Replenishment. A polished fit statistic or low historical error cannot answer whether the system is stable, leakage-free, operationally useful, and safe under uncertainty. Managers need a structured review that separates model diagnosis from forecast validation and separates both from inventory policy. The Five-Gate Forecasting Audit provides that sequence.
+    zh: >-
+      假设预测服务商提出工坊全自动补货系统。漂亮的拟合统计量或较低的历史误差，不能回答系统是否稳定、没有信息泄露、具备运营价值，并能在不确定性下安全运行。管理者需要结构化审核，把模型诊断与预测验证分开，也把两者与库存政策分开。五阶时序预测风控审核提供了这套顺序。
+    zh_hk: >-
+      假設預測服務商提出工坊全自動補貨系統。靚嘅擬合統計量或者較低歷史誤差，唔可以回答系統係咪穩定、冇信息洩漏、具有營運價值，同埋可以喺不確定性之下安全運行。管理者需要結構化審核，將模型診斷同預測驗證分開，亦將兩者同庫存政策分開。五階時序預測風控審核提供呢套次序。
+  - id: define
+    visual: definition_card
+    seconds: 34
+    formula: 'Five gates: data structure; specification and stability; residuals; out-of-sample forecasts; operational policy'
+    formula_zh: 五阶审核：数据结构；设定与稳定性；残差；样本外预测；运营政策
+    formula_zh_hk: 五階審核：數據結構；設定同穩定性；殘差；樣本外預測；營運政策
+    formula_tex: '\mathrm{Data}\rightarrow\mathrm{Model}\rightarrow\mathrm{Residuals}\rightarrow\mathrm{Backtest}\rightarrow\mathrm{Policy}'
+    s1_en: A Supply Chain Governance Scorecard records evidence at five distinct gates. Gate one checks data quality, time order, seasonality, breaks, and stationarity. Gate two checks specification, lag choice, parameter stability, and any causal assumptions.
+    s1_zh: 供应链治理计分卡在五个独立关卡记录证据。第一关检查数据质量、时间顺序、季节性、结构突变与平稳性。第二关检查模型设定、滞后选择、参数稳定性及任何因果假设。
+    s1_zh_hk: 供應鏈治理計分卡喺五個獨立關卡記錄證據。第一關檢查數據質素、時間次序、季節性、結構突變同平穩性。第二關檢查模型設定、滯後選擇、參數穩定性同任何因果假設。
+    s2_en: Gate three tests residual dependence and other remaining structure. Gate four compares forecasts out of sample on matched origins and horizons. Gate five simulates inventory policies using costs, lead times, receipts, capacity, uncertainty, and service objectives.
+    s2_zh: 第三关检验残差依赖及其他剩余结构。第四关在相同原点与预测期上比较样本外预测。第五关利用成本、提前期、到货、产能、不确定性与服务目标模拟库存政策。
+    s2_zh_hk: 第三關檢驗殘差依賴同其他剩餘結構。第四關喺相同原點同預測期上比較樣本外預測。第五關利用成本、提前期、到貨、產能、不確定性同服務目標模擬庫存政策。
+  - id: mechanics
+    visual: two_column
+    seconds: 36
+    left_en: Diagnostic Evidence
+    left_zh: 诊断证据
+    left_zh_hk: 診斷證據
+    right_en: Decision Evidence
+    right_zh: 决策证据
+    right_zh_hk: 決策證據
+    s1_en: No transformation is mandatory for every series. Differencing is appropriate only when diagnosed integration supports it; deterministic trends, seasonality, structural breaks, and defensible long-run relationships need different treatment.
+    s1_zh: 没有任何变换适用于所有序列。只有确诊的单整过程支持时，差分才合适；确定性趋势、季节性、结构突变与可辩护的长期关系需要不同处理。
+    s1_zh_hk: 冇任何變換適用於所有序列。只有診斷到嘅單整過程支持嗰陣，差分先合適；確定性趨勢、季節性、結構突變同有理據嘅長期關係需要唔同處理。
+    s2_en: Residual diagnostics are also evidence, not automatic pass-fail rules. Durbin-Watson near two and ACF spikes within approximate bounds may be reassuring in suitable settings, but joint tests, model context, and multiple-lag inspection still matter.
+    s2_zh: 残差诊断同样是证据，并非自动的通过或否决规则。在适当情形下，德宾-沃森值接近二、ACF 柱条位于近似界限内可能令人放心，但联合检验、模型背景与多滞后检查仍然重要。
+    s2_zh_hk: 殘差診斷同樣係證據，唔係自動通過或者否決規則。喺合適情況下，德賓-沃森值接近二、ACF 柱條位於近似界線內可能令人放心，但聯合檢驗、模型背景同多滯後檢查仍然重要。
+    s3_en: Forecast thresholds and the Safety Stock Buffer must come from explicit service and cost objectives. Statistical metrics do not guarantee zero stockouts, zero waste, profit maximization, or approval of capital spending.
+    s3_zh: 预测阈值与动态安全库存缓冲必须来自明确的服务与成本目标。统计指标不能保证零断货、零浪费、利润最大化，也不能自动批准资本支出。
+    s3_zh_hk: 預測門檻同動態安全庫存緩衝一定要來自明確服務同成本目標。統計指標唔可以保證零斷貨、零浪費、利潤最大化，亦唔可以自動批准資本開支。
+  - id: example
+    visual: example
+    seconds: 36
+    setup_en: 'Assume a candidate model clears Gates 1–4; Gate 5 remains'
+    setup_zh: 假设候选模型通过第 1–4 关；第 5 关仍待审核
+    setup_zh_hk: 假設候選模型通過第 1–4 關；第 5 關仍然待審
+    result_en: 'Outcome: forecast candidate, not automatic replenishment approval'
+    result_zh: 结论：可作为预测候选，但未自动获准补货
+    result_zh_hk: 結論：可以作為預測候選，但未自動獲准補貨
+    s1_en: For illustration, suppose a candidate has appropriate transformations, stable dynamics, acceptable residual diagnostics, and better rolling-origin errors than the approved benchmark on matched horizons. That evidence supports forecast selection.
+    s1_zh: 为便于说明，假设候选模型采用适当变换、动态稳定、残差诊断可接受，并在相同预测期的滚动原点评估中优于已批准基准。这些证据支持选择该预测方法。
+    s1_zh_hk: 為咗方便說明，假設候選模型採用合適變換、動態穩定、殘差診斷可以接受，並喺相同預測期嘅滾動原點評估入面優於已批准基準。呢啲證據支持選擇呢個預測方法。
+    s2_en: It still does not determine order quantities. Gate five must combine signed forecast errors with starting inventory, scheduled receipts, lead-time uncertainty, yield, capacity, perishability, shortage cost, excess cost, and service targets.
+    s2_zh: 但这些证据仍不能决定订货量。第五关必须把带方向的预测误差与期初库存、计划到货、提前期不确定性、产出率、产能、易腐性、缺货成本、过量成本及服务目标结合。
+    s2_zh_hk: 但呢啲證據仍然唔可以決定訂貨量。第五關一定要將有方向嘅預測誤差，同期初庫存、計劃到貨、提前期不確定性、產出率、產能、易腐性、缺貨成本、過量成本同服務目標結合。
+    s3_en: >-
+      The governance decision can therefore be staged: retain the model as a forecasting candidate, test inventory policies in simulation, define human override and monitoring controls, and authorize deployment only within documented limits.
+    s3_zh: 因此，治理决策可以分阶段进行：保留该模型作为预测候选，在模拟中检验库存政策，定义人工干预与监控控制，并仅在已记录的限制内授权部署。
+    s3_zh_hk: 所以，治理決策可以分階段進行：保留呢個模型作為預測候選，喺模擬入面檢驗庫存政策，定義人工介入同監控控制，並只喺已記錄限制內授權部署。
+  - id: takeaway
+    visual: takeaway
+    seconds: 32
+    q1_en: What Does the Five-Gate Review Protect?
+    q1_zh: 五阶审核保护什么？
+    q1_zh_hk: 五階審核保護乜嘢？
+    q2_en: Decision Rule
+    q2_zh: 决策规则
+    q2_zh_hk: 決策規則
+    s1_en: The Five-Gate Forecasting Audit prevents one attractive statistic from standing in for the entire evidence chain. It connects data validity, model adequacy, residual behavior, forecast generalization, and operational consequences.
+    s1_zh: 五阶时序预测风控审核防止用一个漂亮统计量取代完整证据链。它把数据有效性、模型充分性、残差表现、预测泛化与运营后果连接起来。
+    s1_zh_hk: 五階時序預測風控審核防止用一個靚統計量取代完整證據鏈。佢將數據有效性、模型充分性、殘差表現、預測泛化同營運後果連接起嚟。
+    s2_en: Do not use universal numerical cutoffs unless policy, costs, and service objectives justify them. Record the evidence and limitations at every gate, and compare alternatives using the same information set and horizon.
+    s2_zh: 除非政策、成本与服务目标提供依据，否则不要使用通用数值阈值。应在每一关记录证据与限制，并使用相同信息集与预测期比较不同方案。
+    s2_zh_hk: 除非政策、成本同服務目標提供依據，否則唔好使用通用數值門檻。要喺每一關記錄證據同限制，並使用相同信息集同預測期比較唔同方案。
+    s3_en: Authorize Automated Commissary Replenishment only when forecast evidence, inventory simulation, implementation controls, and accountable human oversight are jointly adequate. Automation is a governed operating system, not a model score.
+    s3_zh: 只有当预测证据、库存模拟、实施控制与明确负责的人工监督都充分时，才应授权工坊全自动补货系统。自动化是受治理的运营系统，而不是一个模型分数。
+    s3_zh_hk: 只有當預測證據、庫存模擬、實施控制同有明確責任嘅人工監督都充分，先應該授權工坊全自動補貨系統。自動化係受治理嘅營運系統，唔係一個模型分數。

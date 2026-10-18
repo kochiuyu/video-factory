@@ -1,5 +1,0 @@
-﻿item,source,type,points,prompt_en,prompt_zh,prompt_zh_hk,answer_en,answer_zh,answer_zh_hk
-1,GAME-DS-01,comprehension,25,"After you delete High for A, what do you do next?",划掉甲的高价之后，下一步做什么？,劃走甲嘅貴之後，跟住做咩？,Read B's numbers on the smaller table. See whether one of B's lines now dies too.,在小表上读乙的数字。看乙是不是也有一行死掉。,喺細表度讀乙嘅數字。睇乙係咪都有一行死人。
-2,GAME-DS-01,transfer,25,Only Low-Low is left. What do we call that?,只剩下低价对低价。这叫什么？,淨低平對平。呢樣叫咩？,The game is dominance solvable. The table picked the cell.,这局是重复删除可解。是表选出了这一格。,呢一局係重複刪除可解。係表揀咗呢一格。
-3,GAME-DS-01,check,25,Did I check the smaller table after the first cut?,划掉第一行之后，我有没有再读小表？,劃走第一行之後，我有冇再讀細表？,,,
-4,GAME-DS-01,transfer,25,Is one cell left?,是不是只剩一格？,係唔係淨剩一格？,,,

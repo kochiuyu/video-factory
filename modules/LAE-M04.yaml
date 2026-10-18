@@ -1,0 +1,18 @@
+id: LAE-M04
+kind: module
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+duration_target_s: 240
+title_en: Traffic
+title_zh: 空中的预约
+title_zh_hk: 空中嘅預約
+objective_en: Name UTM as a moving reservation that keeps two machines off the same point, then treat vehicle, pad, energy, and slot as complements.
+objective_zh: 先把 UTM 说成不让两台机器占同一个点的预约，再把机器、垫子、能量和时段看成互补品。
+objective_zh_hk: 先將 UTM 講成唔讓兩部機器佔同一個點嘅預約，再將機器、墊、能量同時段看成互補品。
+lessons:
+- LAE-M04-IN
+- LAE-M04-UT
+- LAE-M04-CM
+- LAE-M04-OUT

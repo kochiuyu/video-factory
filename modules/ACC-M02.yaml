@@ -14,7 +14,7 @@ objective_zh: 交货才确认收入，费用跟它所帮助赚到的收入同一
 objective_zh_hk: 交貨才確認收入，費用跟它所幫助賺到的收入同一期，機器成本按使用年份攤開。
 lessons:
 - ACC-M02-IN
-- ACC-RR-01
-- ACC-MP-01
-- ACC-DP-01
+- ACC-M02-RR
+- ACC-M02-MP
+- ACC-M02-DP
 - ACC-M02-OUT

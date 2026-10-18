@@ -1,0 +1,191 @@
+id: STAT-M01-T09-CV
+course: statistics
+course_en: Business Statistics
+course_zh: 商务统计
+course_zh_hk: 商務統計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: Comparing risk across different scales
+title_zh: 跨越规模比较经营风险
+title_zh_hk: 跨越規模比較經營風險
+objective_en: Define the coefficient of variation (CV) as standard deviation divided by the mean, explain how it strips away measurement units, and show how managers use it to fairly compare volatility across different store formats and currencies.
+objective_zh: 把变异系数（CV）定义为标准差除以均值，解释它如何消除度量单位的影响，并展示管理者如何用它公平比较不同规模分店与不同货币计价下的相对波动风险。
+objective_zh_hk: 將變異系數（CV）定義為標準差除以均值，解釋佢點樣消除度量單位嘅影響，並展示管理者點樣用佢公平比較唔同規模分店與唔同貨幣計價之下嘅相對波動風險。
+glossary:
+- en: coefficient of variation
+  zh: 变异系数
+  zh_hk: 變異系數
+  lock: true
+- en: standard deviation
+  zh: 标准差
+  zh_hk: 標準差
+  lock: true
+- en: relative risk
+  zh: 相对风险
+  zh_hk: 相對風險
+  lock: true
+- en: unitless
+  zh: 无量纲
+  zh_hk: 無量綱
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why can't a retail director directly compare the raw standard deviations of a street shop and a giant airport hub?
+  question_zh: 为什么零售总监不能直接用原始标准差来比较普通街边店与巨型机场枢纽店的经营风险？
+  question_zh_hk: 點解零售總監唔可以直接用原始標準差嚟比較普通街邊舖同巨型機場樞紐舖嘅經營風險？
+  options_en:
+  - 'A: Standard deviation measures absolute spread, so a larger store naturally has bigger raw numbers without necessarily being riskier.'
+  - 'B: The airport store operates under foreign banking laws that forbid standard deviation.'
+  - 'C: Street shops only sell medium cups, making standard deviation mathematically impossible.'
+  - 'D: Standard deviation always equals zero for high-volume airport stores.'
+  options_zh:
+  - 'A: 标准差衡量的是绝对离散度，体量更大的分店原始波动数值自然更大，但不代表其相对经营风险更高。'
+  - 'B: 机场店受外国银行法规约束，禁止计算标准差。'
+  - 'C: 街边店只卖中杯咖啡，在数学上无法计算标准差。'
+  - 'D: 大销量的机场店其标准差必然永远等于零。'
+  options_zh_hk:
+  - 'A: 標準差衡量嘅係絕對離散度，體量更大嘅分店原始波動數值自然更大，但唔代表佢嘅相對經營風險更高。'
+  - 'B: 機場舖受外國銀行法規約束，禁止計算標準差。'
+  - 'C: 街邊舖淨係賣中杯咖啡，喺數學上冇辦法計算標準差。'
+  - 'D: 大銷量嘅機場舖其標準差必然永遠等於零。'
+  answer: A
+  explanation_en: Raw standard deviation scales with the size of the mean. A 200-cup wobble on a 4,000-cup base is far more stable than a 50-cup wobble on a 200-cup base.
+  explanation_zh: 原始标准差会随着总体规模的增大而变大。在 4,000 杯的基础上波动 200 杯（5%），远比在 200 杯的基础上波动 50 杯（25%）要稳定得多。
+  explanation_zh_hk: 原始標準差會隨住總體規模嘅增大而變大。喺 4,000 杯嘅基礎上面波動 200 杯（5%），遠比喺 200 杯嘅基礎上面波動 50 杯（25%）要穩定得多。
+- id: Q2
+  type: multiple_choice
+  question_en: How does the Coefficient of Variation (CV) make volatility comparable across different product lines or currencies?
+  question_zh: 变异系数（CV）是如何实现跨不同产品线或跨币种波动率公平比较的？
+  question_zh_hk: 變異系數（CV）係點樣實現跨唔同產品線或跨幣種波動率公平比較嘅？
+  options_en:
+  - 'A: By converting all monetary amounts into US dollars using fixed exchange rates.'
+  - 'B: By dividing standard deviation by the mean, canceling out units into a pure percentage of relative risk.'
+  - 'C: By multiplying standard deviation by the total number of cups sold.'
+  - 'D: By subtracting the minimum sales from the maximum revenue.'
+  options_zh:
+  - 'A: 使用固定汇率将所有货币金额统一折算为美元。'
+  - 'B: 用标准差除以均值，彻底消去计量单位，转化为纯粹反映相对风险的百分比。'
+  - 'C: 将标准差乘以全店卖出的咖啡总杯数。'
+  - 'D: 用最高总收入直接减去最低总销量。'
+  options_zh_hk:
+  - 'A: 使用固定匯率將所有貨幣金額統一折算為美元。'
+  - 'B: 用標準差除以均值，徹底消去計量單位，轉化為純粹反映相對風險嘅百分比。'
+  - 'C: 將標準差乘以全舖賣出嘅咖啡總杯數。'
+  - 'D: 用最高總收入直接減去最低總銷量。'
+  answer: B
+  explanation_en: Dividing standard deviation by the mean removes the original unit, producing a dimensionless measure of relative dispersion. The result can be expressed as a ratio or percentage.
+  explanation_zh: 用标准差除以均值消去了具体的物理或货币单位（杯、港元或欧元），得出一个无量纲比率，表示每单位均值所承受的相对离散度。
+  explanation_zh_hk: 用標準差除以均值消去咗具體嘅物理或貨幣單位（杯、港幣或歐元），得出一個無量綱比率，表示每單位均值所承受嘅相對離散度。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Question
+  kicker_en: The Question
+  kicker_zh: 商业问题
+  kicker_zh_hk: 商業問題
+  title_en: Which store is truly riskier?
+  title_zh: 究竟哪家门店的经营风险更高？
+  title_zh_hk: 究竟邊間門店嘅經營風險更高？
+  en: Suppose your quiet street kiosk sells 300 cups a day with a standard deviation of 30 cups. Meanwhile, your flagship airport terminal sells 3,000 cups with a standard deviation of 150 cups. The airport has five times the raw deviation. Does that mean the airport branch is five times more volatile and harder to manage?
+  zh: 假设你的一家清闲街头小店每天平均卖 300 杯，标准差是 30 杯。与此同时，旗舰机场航站楼店每天平均卖 3,000 杯，标准差是 150 杯。机场店的绝对标准差是街头小店的五倍。这是否意味着机场店的营运风险也高出五倍、更难管理？
+  zh_hk: 假設你一間清閑嘅街頭小舖每日平均賣 300 杯，標準差係 30 杯。與此同時，旗艦機場航站樓舖每日平均賣 3,000 杯，標準差係 150 杯。機場舖嘅絕對標準差係街頭小舖嘅五倍。呢個係咪意味住機場舖嘅營運風險亦都高出五倍、更加難管理？
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: What It Is
+  kicker_en: What It Is
+  kicker_zh: 核心概念
+  kicker_zh_hk: 核心概念
+  title_en: Standard deviation per unit of mean
+  title_zh: 每单位均值所承受的标准差
+  title_zh_hk: 每單位均值所承受嘅標準差
+  formula: CV = Standard Deviation / Mean
+  formula_zh: 变异系数 = 标准差 / 均值
+  formula_zh_hk: 變異系數 = 標準差 / 均值
+  formula_tex: \text{CV} = \frac{s}{\bar{x}} \times 100\%
+  s1_en: To compare volatility fairly across different business scales, managers use the coefficient of variation, or CV. It simply divides the standard deviation by the mean.
+  s1_zh: 为了在不同业务规模之间公平比较波动性，管理者使用变异系数，即 CV。它的计算非常简单：直接用标准差除以均值。
+  s1_zh_hk: 為咗喺唔同業務規模之間公平比較波動性，管理者使用變異系數，即係 CV。佢嘅計算非常簡單：直接用標準差除以均值。
+  s2_en: Dividing cups by cups cancels out the physical units completely. CV produces a pure, dimensionless percentage that measures relative risk per unit of business volume.
+  s2_zh: 用杯除以杯彻底消除了物理计量单位。变异系数给出了一个纯粹的、无量纲的百分比，用来度量单位销售规模所对应的相对风险。
+  s2_zh_hk: 用杯除以杯徹底消除咗物理計量單位。變異系數畀出咗一個純粹嘅、無量綱嘅百分比，用嚟度量單位銷售規模所對應嘅相對風險。
+- id: calc
+  visual: example
+  seconds: 36
+  kicker: Step by Step
+  kicker_en: Step by Step
+  kicker_zh: 算例对比
+  kicker_zh_hk: 算例對比
+  title_en: Street kiosk versus airport hub
+  title_zh: 街头小店对比机场枢纽
+  title_zh_hk: 街頭小舖對比機場樞紐
+  setup_en: 'Separate scale pair: kiosk mean 300, SD 30; airport mean 3,000, SD 150'
+  setup_zh: 单独尺度示例：小店均值 300、标准差 30；机场均值 3,000、标准差 150
+  setup_zh_hk: 單獨尺度示例：小店平均數 300、標準差 30；機場平均數 3,000、標準差 150
+  result_en: 'Kiosk CV: 10% | Airport CV: 5%'
+  result_zh: 街边店 CV：10% | 机场店 CV：5%
+  result_zh_hk: 街邊舖 CV：10% | 機場舖 CV：5%
+  s1_en: This pair is a separate scale illustration, not the Monday three-shop mean. For the street kiosk, divide standard deviation 30 by mean 300. 30 over 300 is a CV of ten percent.
+  s1_zh: 这一对是单独的尺度示例，不是周一三店的均值。街边小店用标准差 30 除以均值 300。30 除以 300，变异系数是百分之十。
+  s1_zh_hk: 呢一對係單獨嘅尺度示例，唔係星期一三店嘅平均數。街邊小店用標準差 30 除以平均數 300。30 除以 300，變異係數係百分之十。
+  s2_en: Now look at the giant airport terminal. Divide standard deviation 150 by mean 3,000. 150 over 3,000 gives a CV of just five percent.
+  s2_zh: 再来看巨大的机场航站楼店。用标准差 150 除以均值 3,000。150 除以 3,000 得出的 CV 仅有百分之五。
+  s2_zh_hk: 再睇吓巨大嘅機場航站樓舖。用標準差 150 除以均值 3,000。150 除以 3,000 計出嚟嘅 CV 得嗰百分之五。
+  s3_en: The conclusion changes. Although the airport store has the larger raw standard deviation, its volatility is smaller relative to its average sales volume. On this dataset, the airport store has the lower coefficient of variation.
+  s3_zh: 结论因此改变。尽管机场店的绝对标准差更大，但相对于其平均销量，相对波动更小。在这组假设数字中，机场店的变异系数更低，为5%，街头小店为10%。这不是预测保证。
+  s3_zh_hk: 結論因此改變。雖然機場舖嘅絕對標準差更大，但相對佢嘅平均銷量，相對波動更小。喺呢組假設數字入面，機場舖嘅變異系數更低，係5%，街頭小舖係10%。呢個唔係預測保證。
+- id: power
+  visual: two_column
+  seconds: 36
+  kicker: Superpower
+  kicker_en: Superpower
+  kicker_zh: 核心优势
+  kicker_zh_hk: 核心優勢
+  title_en: Comparing unlike scales fairly
+  title_zh: 跨越单位与币种的统一标尺
+  title_zh_hk: 跨越單位同幣種嘅統一把尺
+  left_en: Cups vs Dollars vs Yen
+  left_zh: 杯数对收入对不同货币
+  left_zh_hk: 杯數對收入對唔同貨幣
+  right_en: CV levels the playing field
+  right_zh: CV 提供公平竞争的统一标准
+  right_zh_hk: CV 提供公平競爭嘅統一步伐
+  s1_en: The major advantage of CV is that it removes units. This allows meaningful comparison of relative dispersion across business measures that operate on different scales.
+  s1_zh: 这是变异系数最不可替代的超能力：正因为它没有任何单位，管理层能够将完全不同维度的业务指标放在同一张表上直接对比。
+  s1_zh_hk: 呢個係變異系數最無可替代嘅超能力：正因為佢冇任何單位，管理層能夠將完全唔同維度嘅業務指標擺喺同一張表上面直接對比。
+  s2_en: Managers can compare coffee sales, pastry demand, or revenue series only after interpreting each as relative dispersion around its own mean.
+  s2_zh: 你可以拿咖啡杯数的波动率与烘焙糕点库存的波动率直接横向比较，甚至可以直接对比港币营收与日元分店营收的相对风险。
+  s2_zh_hk: 你可以攞咖啡杯數嘅波動率同烘焙西餅庫存嘅波動率直接橫向比較，甚至可以直接對比港幣營收同日圓分店營收嘅相對風險。
+  s3_en: CV does not eliminate the need for context. A lower CV indicates lower relative variability, but managers must still consider margins, service levels, and operational constraints.
+  s3_zh: 原始标准差无法把物理杯数与货币金额混在一起，但变异系数剥离了一切单位外壳，精准揭示真正的营运波动隐藏在哪里。
+  s3_zh_hk: 原始標準差冇辦法將物理杯數同貨幣金額混埋一齊，但變異系數剝離咗一切單位外殼，精準揭示真正嘅營運波動隱藏喺邊度。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: Decision Rule
+  kicker_en: Decision Rule
+  kicker_zh: 商业法则
+  kicker_zh_hk: 商業法則
+  title_en: Standardize before comparing risk
+  title_zh: 比较风险前务必标准化
+  title_zh_hk: 比較風險前務必標準化
+  q1_en: When should managers use CV instead of standard deviation?
+  q1_zh: 什么时候管理者应使用变异系数而非标准差？
+  q1_zh_hk: 幾時管理者應使用變異系數而唔係標準差？
+  q2_en: What did our 5% versus 10% result reveal?
+  q2_zh: 5% 对比 10% 的结果揭示了什么？
+  q2_zh_hk: 5% 對比 10% 嘅結果揭示咗咩？
+  s1_en: Use standard deviation when describing spread within a single operation measured in one unit and one scale.
+  s1_zh: 当你为单一门店、单一具体规格的商品设定本地物理安全库存时，看标准差。
+  s1_zh_hk: 當你為單一門店、單一具體規格嘅商品設定本地物理安全庫存嗰陣，睇標準差。
+  s2_en: Use the coefficient of variation when comparing volatility across different sizes, products, currencies, or business formats.
+  s2_zh: 但只要需要跨不同规模门店对比、评估不同品类产品线，或考核海外跨币种分支机构的营运风险时，务必换用变异系数。
+  s2_zh_hk: 但只要需要跨唔同規模門店對比、評估唔同品類產品線，或考核海外跨幣種分支機構嘅營運風險嗰陣，務必換用變異系數。
+  s3_en: 'The operating rule is simple: compare absolute spread with standard deviation, compare relative spread with CV.'
+  s3_zh: 标准差测量的是绝对的物理偏离距离，而变异系数揭示的才是真正的相对经营风险。
+  s3_zh_hk: 標準差測量嘅係絕對嘅物理偏離距離，而變異系數揭示嘅先至係真正嘅相對經營風險。

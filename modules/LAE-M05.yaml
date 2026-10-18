@@ -1,0 +1,19 @@
+id: LAE-M05
+kind: module
+course: lae
+course_en: Low-Altitude Economy
+course_zh: 低空经济
+course_zh_hk: 低空經濟
+duration_target_s: 332
+title_en: Applications
+title_zh: 谁付钱
+title_zh_hk: 邊個畀錢
+objective_en: Ask who pays on this corridor. A parcel pays for road delay; an AED pays for medical minutes; inspection pays to keep a person off the structure.
+objective_zh: 问这条线上谁付钱。包裹付的是路上的延误；AED 付的是医疗钟上的分钟；巡检付的是不让人爬上去。
+objective_zh_hk: 問呢條線上邊個畀錢。包裹付嘅係路上嘅延誤；AED 付嘅係醫療鐘上嘅分鐘；巡檢付嘅係唔讓人爬上去。
+lessons:
+- LAE-M05-IN
+- LAE-M05-DL
+- LAE-M05-EM
+- LAE-M05-AP
+- LAE-M05-OUT

@@ -1,0 +1,162 @@
+id: STAT-M10-T12-BANDT
+course: STAT-M10
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Multi-Armed Bandits and Fixed Experiments: Regret, Learning, and Inference'
+title_zh: 多臂老虎机与固定实验：后悔值、学习与推断
+title_zh_hk: 多臂老虎機同固定實驗：後悔值、學習同推斷
+objective_en: Explain exploration and exploitation, calculate expected cumulative regret under a stated reward model, describe Thompson Sampling for Bernoulli outcomes, and choose between adaptive allocation and fixed randomization based on the decision objective.
+objective_zh: 解释探索与利用，按照给定奖励模型计算预期累积后悔值，描述二元结果下的汤普森采样，并根据决策目标选择自适应分配或固定随机化。
+objective_zh_hk: 解釋探索同利用，按照指定獎勵模型計算預期累積後悔值，描述二元結果之下嘅湯普森採樣，並根據決策目標選擇自適應分配或者固定隨機化。
+glossary:
+- en: Multi-Armed Bandit (MAB)
+  zh: 多臂老虎机（多臂强盗算法）
+  zh_hk: 多臂老虎機（多臂強盜算法）
+  lock: true
+- en: Exploration vs. Exploitation
+  zh: 探索与利用的权衡
+  zh_hk: 探索與利用嘅權衡
+  lock: true
+- en: Cumulative Regret
+  zh: 累积后悔值（机会损失）
+  zh_hk: 累積後悔值（機會損失）
+  lock: true
+- en: Thompson Sampling
+  zh: 汤普森采样（贝叶斯后验分配）
+  zh_hk: 湯普森採樣（貝葉斯後驗分配）
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: In a short-lived campaign, what is the main potential advantage of adaptive allocation over a fixed equal split?
+  question_zh: 在生命周期较短的活动中，自适应分配相对于固定等比分流的主要潜在优势是什么？
+  question_zh_hk: 喺生命周期較短嘅活動入面，自適應分配相對於固定等比分流嘅主要潛在優勢係乜嘢？
+  options_en:
+  - 'A: It can direct more future traffic toward arms that currently appear promising, reducing expected regret'
+  - 'B: It guarantees identification of the best arm after the first observation'
+  - 'C: It eliminates the need to measure outcomes'
+  - 'D: It makes every arm equally effective'
+  options_zh:
+  - A：它可以把更多后续流量分配给当前看起来较有潜力的方案，从而降低预期后悔值
+  - B：它保证在第一次观测后识别最佳方案
+  - C：它不再需要测量结果
+  - D：它会使每个方案同样有效
+  options_zh_hk:
+  - A：佢可以將更多後續流量分配畀目前睇落較有潛力嘅方案，從而降低預期後悔值
+  - B：佢保證喺第一次觀測之後識別最佳方案
+  - C：佢唔再需要量度結果
+  - D：佢會令每個方案同樣有效
+  answer: A
+  explanation_en: Adaptive policies use accumulating outcomes to favor promising arms while retaining some exploration. They can reduce expected opportunity loss, but they do not guarantee that an early leader is truly best.
+  explanation_zh: 自适应策略利用持续累积的结果倾斜流量，同时保留部分探索，因此可能降低预期机会损失，但不能保证早期领先方案就是真正最佳方案。
+  explanation_zh_hk: 自適應策略利用持續累積嘅結果傾斜流量，同時保留部分探索，所以可能降低預期機會損失，但唔可以保證早期領先方案就係真正最佳方案。
+- id: Q2
+  type: multiple_choice
+  question_en: What changes statistically when allocation probabilities depend on earlier outcomes?
+  question_zh: 当分配概率取决于先前结果时，统计上发生了什么变化？
+  question_zh_hk: 當分配概率取決於之前結果嗰陣，統計上發生咗乜嘢變化？
+  options_en:
+  - 'A: The data collection is adaptive, so naive fixed-design standard errors and p-values may no longer be calibrated'
+  - 'B: Every sample mean must be biased upward'
+  - 'C: Randomness disappears from all outcomes'
+  - 'D: The reward variance becomes exactly zero'
+  options_zh:
+  - A：数据收集变为自适应，因此朴素固定设计的标准误与 p 值可能不再校准
+  - B：每个样本均值必定向上偏
+  - C：所有结果中的随机性都会消失
+  - D：奖励方差会正好变为零
+  options_zh_hk:
+  - A：數據收集變成自適應，所以樸素固定設計嘅標準誤同 p 值可能唔再校準
+  - B：每個樣本平均數一定向上偏
+  - C：所有結果入面嘅隨機性都會消失
+  - D：獎勵方差會正好變成零
+  answer: A
+  explanation_en: Outcome-dependent allocation changes the sampling process. Valid estimation and inference must account for the policy, time variation, stopping rule, and target estimand rather than automatically applying fixed-design formulas.
+  explanation_zh: 依赖结果的分配改变了抽样过程。有效估计与推断必须考虑分配策略、时间变化、停止规则与估计目标，而不能自动套用固定设计公式。
+  explanation_zh_hk: 依賴結果嘅分配改變咗抽樣過程。有效估計同推斷一定要考慮分配策略、時間變化、停止規則同估計目標，而唔可以自動套用固定設計公式。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Learning-versus-Earning Puzzle
+  kicker_zh: 学习与收益难题
+  kicker_zh_hk: 學習同收益難題
+  title_en: Should Traffic Stay Equal While Evidence Changes?
+  title_zh: 当证据持续变化时，流量还应保持平均吗？
+  title_zh_hk: 當證據持續改變嗰陣，流量仲應該保持平均嗎？
+  en: Suppose four campaign creatives share traffic equally, but one begins to look more promising as outcomes accumulate. A fixed experiment preserves a planned comparison until its stopping rule, while a bandit can adapt future allocation. The choice is not between science and revenue in the abstract. It depends on whether the priority is a stable treatment comparison, reward earned during learning, or both under an explicitly designed adaptive policy.
+  zh: 假设四套活动创意平均分配流量，但随着结果累积，其中一套开始显得更有潜力。固定实验会按计划保持比较直至停止规则触发，而老虎机策略可以调整后续分配。选择并不是抽象的“科学还是收益”，而取决于优先目标是稳定处理比较、学习期间获得的奖励，还是在明确设计的自适应策略下兼顾两者。
+  zh_hk: 假設四套活動創意平均分配流量，但隨住結果累積，其中一套開始顯得更有潛力。固定實驗會按計劃保持比較直到停止規則觸發，而老虎機策略可以調整之後嘅分配。選擇並唔係抽象嘅「科學定收益」，而取決於優先目標係穩定處理比較、學習期間獲得嘅獎勵，定係喺明確設計嘅自適應策略之下兼顧兩者。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: Expected regret = sum over time of (best mean reward - assigned arm mean reward)
+  formula_zh: 预期后悔值 = 各时点（最佳平均奖励 - 被分配方案平均奖励）之和
+  formula_zh_hk: 預期後悔值 = 各時點（最佳平均獎勵 - 被分配方案平均獎勵）之和
+  formula_tex: R(T)=\sum_{t=1}^{T}\left(\mu^*-\mathbb{E}[\mu_{I_t}]\right)
+  s1_en: Exploration vs. Exploitation describes the choice between gathering information about uncertain arms and assigning traffic to arms currently believed to perform well. Cumulative Regret measures expected reward forgone relative to a specified oracle benchmark.
+  s1_zh: 探索与利用的权衡描述在收集不确定方案的信息与把流量分配给当前认为表现较好的方案之间的选择。累积后悔值衡量相对于指定全知基准所放弃的预期奖励。
+  s1_zh_hk: 探索與利用嘅權衡描述喺收集不確定方案嘅信息，同將流量分配畀目前認為表現較好嘅方案之間嘅選擇。累積後悔值衡量相對於指定全知基準所放棄嘅預期獎勵。
+  s2_en: For binary rewards, Thompson Sampling commonly updates a Beta posterior for each arm, draws one plausible success probability per arm, and assigns the next unit to the arm with the largest draw. Other outcomes require other likelihood or reward models.
+  s2_zh: 对二元奖励，汤普森采样通常为每个方案更新 Beta 后验，从各后验抽取一个可能成功率，并把下一个单元分配给抽样值最大的方案。其他结果需要其他似然或奖励模型。
+  s2_zh_hk: 對二元獎勵，湯普森採樣通常為每個方案更新 Beta 後驗，由各後驗抽取一個可能成功率，並將下一個單元分配畀抽樣值最大嘅方案。其他結果需要其他似然或者獎勵模型。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Fixed Randomization
+  left_zh: 固定随机化
+  left_zh_hk: 固定隨機化
+  right_en: Adaptive Allocation
+  right_zh: 自适应分配
+  right_zh_hk: 自適應分配
+  s1_en: A fixed design pre-specifies allocation and analysis, making standard randomized contrasts comparatively transparent when implementation and stopping follow the protocol. It can test more than two variants and need not wait until a seasonal window closes.
+  s1_zh: 固定设计预先指定分配与分析，在实施与停止遵循方案时，使标准随机对比较为透明。它可以检验两个以上版本，也不必等到季节窗口结束才分析。
+  s1_zh_hk: 固定設計預先指定分配同分析，喺實施同停止遵循方案嗰陣，令標準隨機對比較為透明。佢可以檢驗兩個以上版本，亦唔使等到季節窗口結束先分析。
+  s2_en: Adaptive allocation can place more future traffic on promising arms and reduce expected regret. Its performance depends on priors, reward delay, nonstationarity, constraints, minimum exploration, and how quickly feedback arrives.
+  s2_zh: 自适应分配可以把更多后续流量放在有潜力的方案上，并降低预期后悔值。其表现取决于先验、奖励延迟、非平稳性、约束、最低探索量与反馈速度。
+  s2_zh_hk: 自適應分配可以將更多後續流量放喺有潛力嘅方案上，並降低預期後悔值。佢嘅表現取決於先驗、獎勵延遲、非平穩性、限制、最低探索量同反饋速度。
+  s3_en: Adaptation does not make causal inference impossible, and sample means are not universally biased upward. However, naive fixed-design tests can be miscalibrated; policy-aware estimators, simulations, or randomization-based methods may be needed.
+  s3_zh: 自适应分配不会使因果推断变得不可能，样本均值也并非普遍向上偏。但是，朴素固定设计检验可能失准，因此可能需要考虑策略的估计量、模拟或随机化推断方法。
+  s3_zh_hk: 自適應分配唔會令因果推斷變成不可能，樣本平均數亦唔係普遍向上偏。但係，樸素固定設計檢驗可能失準，所以可能需要考慮策略嘅估計量、模擬或者隨機化推斷方法。
+- id: example
+  visual: example
+  seconds: 36
+  setup_en: 'Teaching oracle comparison: 140,000 impressions; best arm 6.0%; three others 2.5%'
+  setup_zh: 教学全知基准比较：140,000 次展示；最佳方案 6.0%；其余三个方案 2.5%
+  setup_zh_hk: 教學全知基準比較：140,000 次展示；最佳方案 6.0%；其餘三個方案 2.5%
+  result_en: Equal split expected conversions = 4,725; oracle = 8,400; expected regret = 3,675 conversions
+  result_zh: 等比分流预期转化 = 4,725；全知基准 = 8,400；预期后悔值 = 3,675 次转化
+  result_zh_hk: 等比分流預期轉化 = 4,725；全知基準 = 8,400；預期後悔值 = 3,675 次轉化
+  s1_en: Under the stated teaching means, an equal split sends 35,000 impressions to each arm. The best arm contributes an expected 2,100 conversions, and the three other arms together contribute 2,625, for a total of 4,725.
+  s1_zh: 在给定教学均值下，等比分流把 35,000 次展示分配给每个方案。最佳方案预期贡献 2,100 次转化，其余三个方案合计贡献 2,625 次，总计 4,725 次。
+  s1_zh_hk: 喺指定教學平均數之下，等比分流將 35,000 次展示分配畀每個方案。最佳方案預期貢獻 2,100 次轉化，其餘三個方案合計貢獻 2,625 次，總計 4,725 次。
+  s2_en: An oracle that knew the best arm in advance would expect 140,000 times 0.06, or 8,400 conversions. The oracle regret of equal allocation is therefore 8,400 minus 4,725, or 3,675 conversions.
+  s2_zh: 如果全知基准事先知道最佳方案，预期转化为 140,000 乘 0.06，即 8,400 次。因此，等比分配相对全知基准的后悔值为 8,400 减 4,725，即 3,675 次转化。
+  s2_zh_hk: 如果全知基準事先知道最佳方案，預期轉化係 140,000 乘 0.06，即係 8,400 次。所以，等比分配相對全知基準嘅後悔值係 8,400 減 4,725，即係 3,675 次轉化。
+  s3_en: This is an ex post oracle benchmark, not proof that a bandit would recover all 3,675 conversions. Actual regret depends on the policy and realized data; any margin calculation also requires a supported per-conversion value.
+  s3_zh: 这是事后全知基准，并不能证明老虎机策略会收回全部 3,675 次转化。实际后悔值取决于策略与实现数据；任何毛利计算还需要有依据的单次转化价值。
+  s3_zh_hk: 呢個係事後全知基準，並唔可以證明老虎機策略會收回全部 3,675 次轉化。實際後悔值取決於策略同實現數據；任何毛利計算仲需要有依據嘅單次轉化價值。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Which Objective Comes First?
+  q1_zh: 哪个目标应优先？
+  q1_zh_hk: 邊個目標應該優先？
+  q2_en: Decision Rule
+  q2_zh: 决策规则
+  q2_zh_hk: 決策規則
+  s1_en: Choose the design from the estimand and loss function. Fixed randomization favors transparent planned comparisons; bandits favor reward during learning. Hybrid designs can reserve exploration while adapting remaining traffic.
+  s1_zh: 应根据估计目标与损失函数选择设计。固定随机化有利于透明的计划比较；老虎机有利于学习期间的奖励。混合设计可以保留探索流量，同时调整其余流量。
+  s1_zh_hk: 要根據估計目標同損失函數選擇設計。固定隨機化有利於透明嘅計劃比較；老虎機有利於學習期間嘅獎勵。混合設計可以保留探索流量，同時調整其餘流量。
+  s2_en: Before launch, specify priors, reward definition and delay, guardrails, minimum allocation, stopping, nonstationarity handling, and the inference plan. Evaluate policies by simulation under plausible scenarios.
+  s2_zh: 上线前应指定先验、奖励定义与延迟、护栏、最低分配、停止规则、非平稳处理与推断方案，并在合理情境下通过模拟评估策略。
+  s2_zh_hk: 上線之前要指定先驗、獎勵定義同延遲、護欄、最低分配、停止規則、非平穩處理同推斷方案，並喺合理情境之下透過模擬評估策略。
+  s3_en: Do not adopt a universal rule that fixed tests are for truth and bandits are for cash. Both can support learning and decisions when their allocation, estimand, and inference methods are designed coherently.
+  s3_zh: 不要采用“固定测试只为求真、老虎机只为赚钱”的通用规则。只要分配、估计目标与推断方法协调设计，两者都可以支持学习与决策。
+  s3_zh_hk: 唔好採用「固定測試只為求真、老虎機只為賺錢」嘅通用規則。只要分配、估計目標同推斷方法協調設計，兩者都可以支持學習同決策。

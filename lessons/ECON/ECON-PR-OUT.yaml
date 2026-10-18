@@ -1,0 +1,84 @@
+id: ECON-PR-OUT
+course: economics
+course_en: Principles of Economics
+course_zh: 经济学原理
+course_zh_hk: 經濟學原理
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 42
+title_en: Price, closed
+title_zh: 价格，先说到这里
+title_zh_hk: 價格，先講到呢度
+objective_en: Close the mini-course. Choice, then price. We stop.
+objective_zh: 收住这门小课。选择，然后价格。到此为止。
+objective_zh_hk: 收住呢門小課。選擇，然後價格。到此為止。
+glossary:
+- en: elasticity
+  zh: 弹性
+  zh_hk: 彈性
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: What four tools did this module use?
+  zh: 这一单元用了哪四样工具？
+  zh_hk: 呢一單元用咗邊四樣工具？
+  answer_en: Demand, supply, equilibrium, elasticity.
+  answer_zh: 需求、供给、均衡、弹性。
+  answer_zh_hk: 需求、供給、均衡、彈性。
+- id: Q2
+  type: comprehension
+  en: What is not in this mini-course?
+  zh: 这门小课没有讲什么？
+  zh_hk: 呢門小課冇講咩？
+  answer_en: Trade and a cost the price cannot see.
+  answer_zh: 分工，以及价格看不见的成本。
+  answer_zh_hk: 分工，以及價格睇唔見嘅成本。
+beats:
+- id: hook
+  visual: module_close
+  seconds: 22
+  kicker: This module
+  kicker_en: This module
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Price, closed
+  title_zh: 价格，先说到这里
+  title_zh_hk: 價格，先講到呢度
+  claim_en: Two lists. One clearing price. A rise can empty the till.
+  claim_zh: 两张清单。一个出清的价。涨价可以清空柜台。
+  claim_zh_hk: 兩張清單。一個出清嘅價。加價可以清空櫃枱。
+  next_en: This mini-course stops here.
+  next_zh: 这门小课停在这里。
+  next_zh_hk: 呢門小課停喺呢度。
+  en: Demand and supply are lists. Shortage and surplus move the price. Elasticity says whether
+    a rise fills the till.
+  zh: 需求和供给是清单。短缺和过剩推动价格。弹性说明涨价之后柜上是多还是少。
+  zh_hk: 需求同供給係清單。短缺同過剩推動價格。彈性說明加價之後櫃上係多定少。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: This module
+  kicker_en: This module
+  kicker_zh: 这一单元
+  kicker_zh_hk: 呢一單元
+  title_en: Choice, then price
+  title_zh: 选择，然后价格
+  title_zh_hk: 選擇，然後價格
+  q1_en: One person, then the street.
+  q1_zh: 先一个人，再一条街。
+  q1_zh_hk: 先一個人，再一條街。
+  q2_en: We stop.
+  q2_zh: 到此为止。
+  q2_zh_hk: 到此為止。
+  s1_en: Take the two lists and the clearing price with you.
+  s1_zh: 两张清单和出清价格，带走。
+  s1_zh_hk: 兩張清單同出清價格，帶走。
+  s2_en: Choice first. Then price.
+  s2_zh: 先是选择。然后是价格。
+  s2_zh_hk: 先係選擇。然後係價格。
+  s3_en: That is the mini-course. We stop here.
+  s3_zh: 这门小课到此为止。
+  s3_zh_hk: 呢門小課到此為止。

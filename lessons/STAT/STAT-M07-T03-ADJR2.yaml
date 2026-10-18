@@ -1,0 +1,170 @@
+id: STAT-M07-T03-ADJR2
+course: STAT-M07
+course_en: Applied Multiple Regression & Store Experiments
+course_zh: 多元回归与门店运营实验
+course_zh_hk: 多元回歸與門市營運實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: Adjusted R-Squared & Model Complexity
+title_zh: 调整后 R方 与模型复杂度
+title_zh_hk: 調整後 R方 與模型複雜度
+objective_en: Explain why raw R-squared mechanically inflates when adding predictors, calculate adjusted R-squared, and use its complexity penalty to audit models against over-fitting.
+objective_zh: 阐明自变量增加时原始 R方 机械递增的原理，计算调整后 R方，并利用其复杂度惩罚机制防范模型过度拟合。
+objective_zh_hk: 闡明加入自變量嗰陣原始 R方 機械式遞增嘅原理，計算調整後 R方，並利用其複雜度扣減機制防範模型過度擬合。
+glossary:
+- en: Adjusted R-Squared
+  zh: 调整后 R方
+  zh_hk: 調整後 R方
+  lock: true
+  zh_zh_hk: 調整後 R方
+- en: Mechanical Inflation
+  zh: 机械性虚增
+  zh_hk: 機械式虛增
+  lock: true
+  zh_zh_hk: 機械式虛增
+- en: Degrees of Freedom Loss
+  zh: 自由度损耗
+  zh_hk: 自由度損耗
+  lock: true
+  zh_zh_hk: 自由度損耗
+- en: Complexity Penalty
+  zh: 复杂度惩罚
+  zh_hk: 複雜度扣減
+  lock: true
+  zh_zh_hk: 複雜度扣減
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Why can raw R-squared never decrease when a new explanatory variable is added to a multiple linear regression model?
+  question_zh: 为什么在多元线性回归模型中加入新的解释变量时，原始 R方 绝不可能下降？
+  question_zh_hk: 點解喺多元線性回歸模型入面加新嘅解釋變量嗰陣，原始 R方 絕不可能下跌？
+  options_en:
+  - 'A: OLS optimization can always assign a zero coefficient to the new predictor, ensuring SSE never increases'
+  - 'B: The total sum of squares SST automatically increases with every additional predictor'
+  - 'C: Sample sizes are legally required to expand whenever a new variable is included'
+  - 'D: The critical t-statistic decreases to zero mechanically'
+  options_zh:
+  - 'A: OLS 优化求解时总能给新自变量赋予零系数，从而保证误差平方和 SSE 绝不增加'
+  - 'B: 每增加一个解释变量，总离差平方和 SST 都会自动膨胀'
+  - 'C: 统计法规要求每次纳入新变量时必须同步扩大样本容量'
+  - 'D: 临界 t 统计量在计算上会自动归零'
+  options_zh_hk:
+  - 'A: OLS 最優化求解嗰陣總可以畀個新變量零系數，從而保證誤差平方和 SSE 絕不上升'
+  - 'B: 每加一個解釋變量，總離差平方和 SST 都會自動膨脹'
+  - 'C: 統計法規要求每次納入新變量嗰陣必須同步擴大樣本容量'
+  - 'D: 臨界 t 統計量喺計算上會自動變做零'
+  answer: A
+  explanation_en: Because OLS minimizes SSE across parameter space, adding a variable expands the choice set; at worst, setting the new slope to zero preserves the previous SSE, so raw R-squared (1 - SSE/SST) can only stay constant or increase.
+  explanation_zh: 由于 OLS 致力于最小化 SSE，增加变量只会扩大参数可选空间；最差情况下将新斜率设为 0 也能维持原有 SSE，因此原始 R方（1 - SSE/SST）只增不减。
+  explanation_zh_hk: 因為 OLS 致力於將 SSE 最小化，加變量只會擴大參數選擇空間；最差情況將新斜率設做 0 亦能維持原本嘅 SSE，所以原始 R方（1 - SSE/SST）只會升唔會跌。
+- id: Q2
+  type: multiple_choice
+  question_en: A store model with n = 25 shifts has SST = 10,000. Model A (k = 2) has SSE = 1,900. An intern adds ambient music volume (Model B, k = 3), slightly reducing SSE to 1,880. What happened to Adjusted R-squared?
+  question_zh: 某门店模型样本为 n = 25 个班次，SST = 10,000。模型 A（k = 2）的 SSE = 1,900。实习生加入背景音乐音量指标（模型 B，k = 3），SSE 微降至 1,880。调整后 R方 发生了什么变化？
+  question_zh_hk: 某門市模型樣本為 n = 25 個排班，SST = 10,000。模型 A（k = 2）嘅 SSE = 1,900。實習生加咗背景音樂音量指標（模型 B，k = 3），SSE 微跌到 1,880。調整後 R方 出現咗咩變化？
+  options_en:
+  - 'A: Adjusted R-squared increased from 0.810 to 0.812'
+  - 'B: Adjusted R-squared dropped from 0.793 to 0.785'
+  - 'C: Adjusted R-squared remained strictly identical at 0.800'
+  - 'D: Adjusted R-squared became negative'
+  options_zh:
+  - 'A: 调整后 R方 从 0.810 提升到了 0.812'
+  - 'B: 调整后 R方 从 0.793 跌落到了 0.785'
+  - 'C: 调整后 R方 严格保持在 0.800 不变'
+  - 'D: 调整后 R方 变成了负数'
+  options_zh_hk:
+  - 'A: 調整後 R方 由 0.810 升到 0.812'
+  - 'B: 調整後 R方 由 0.793 跌落到 0.785'
+  - 'C: 調整後 R方 嚴格保持喺 0.800 唔變'
+  - 'D: 調整後 R方 變咗做負數'
+  answer: B
+  explanation_en: 'Model A: R^2_adj = 1 - [(1900/22) / (10000/24)] = 1 - [86.36 / 416.67] = 0.7927. Model B: R^2_adj = 1 - [(1880/21) / (10000/24)] = 1 - [89.52 / 416.67] = 0.7852. Because the marginal reduction in SSE (20) did not compensate for losing 1 degree of freedom, Adjusted R-squared declined.'
+  explanation_zh: 模型 A：R^2_adj = 1 - [(1900/22)/(10000/24)] = 0.7927。模型 B：R^2_adj = 1 - [(1880/21)/(10000/24)] = 0.7852。因 SSE 的微小降幅（20）不足以补偿损耗 1 个自由度的代价，调整后 R方 出现倒退。
+  explanation_zh_hk: 模型 A：R^2_adj = 1 - [(1900/22)/(10000/24)] = 0.7927。模型 B：R^2_adj = 1 - [(1880/21)/(10000/24)] = 0.7852。因為 SSE 嘅微小跌幅（20）補唔返冇咗 1 個自由度嘅代價，調整後 R方 不升反跌。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Model Selection Dilemma
+  kicker_zh: 模型筛选困境
+  kicker_zh_hk: 模型篩選困局
+  title_en: Does Adding Variables Always Improve Forecasts?
+  title_zh: 不断堆砌自变量是否真能提升预测？
+  title_zh_hk: 係噉加自變量係咪真係可以提升預測？
+  en: Metro Coffee compares two sales models. The larger model reports a raw R-squared of 85 percent after adding background music volume, indoor humidity, and apron color. Raw R-squared rises with every added column. Does that increase show a better forecasting model, or is it a mechanical consequence of adding predictors?
+  zh: Metro Coffee 正在比较两个销量模型。扩展模型加入背景音乐音量、室内湿度和围裙颜色后，原始 R方 达到 85%。每增加一列，原始 R方 都会上升。这是否说明预测模型更好，还是仅仅反映了增加自变量所带来的机械结果？
+  zh_hk: Metro Coffee 正在比較兩個銷量模型。擴展模型加入背景音樂音量、室內濕度同圍裙顏色之後，原始 R方 達到 85%。每增加一欄，原始 R方 都會上升。呢個升幅係咪代表預測模型更好，定只係增加自變量帶來嘅機械結果？
+  zh_zh_hk: Metro Coffee 正在比較兩個銷量模型。擴展模型加入背景音樂音量、室內濕度同圍裙顏色之後，原始 R方 達到 85%。每增加一欄，原始 R方 都會上升。呢個升幅係咪代表預測模型更好，定只係增加自變量帶來嘅機械結果？
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: R^2_adj = 1 - [ (SSE / (n - k - 1)) / (SST / (n - 1)) ]
+  formula_zh: 调整后 R方：R^2_adj = 1 - [ (SSE / (n - k - 1)) / (SST / (n - 1)) ]
+  formula_zh_hk: 調整後 R方：R^2_adj = 1 - [ (SSE / (n - k - 1)) / (SST / (n - 1)) ]
+  formula_tex: R^2_{\text{adj}} = 1 - \left[ \frac{\text{SSE} / (n - k - 1)}{\text{SST} / (n - 1)} \right] = 1 - (1 - R^2)\frac{n - 1}{n - k - 1}
+  s1_en: Raw R-squared cannot decrease when predictors are added to an OLS model fitted to the same observations. The expanded model can always reproduce the previous fit by assigning zero to each new coefficient, so its SSE cannot be larger.
+  s1_zh: 当 OLS 模型使用同一组观测值时，加入自变量不会使原始 R方 下降。扩展模型总可以把新增系数设为零，复制原模型的拟合结果，因此 SSE 不会增大。
+  s1_zh_hk: 當 OLS 模型使用同一組觀測值時，加入自變量唔會令原始 R方 下跌。擴展模型總可以將新增系數設為零，重現原模型嘅擬合結果，所以 SSE 唔會增加。
+  s2_en: Adjusted R-squared compares residual mean square with total mean square. Because SSE is divided by n minus k minus one, an added predictor must reduce SSE enough to offset the lost degree of freedom.
+  s2_zh: 调整后 R方 比较残差均方与总离差均方。由于 SSE 要除以 n 减 k 减 1，新增自变量必须使 SSE 下降得足够多，才能抵消一个自由度的损失。
+  s2_zh_hk: 調整後 R方 比較殘差均方同總離差均方。由於 SSE 要除以 n 減 k 減 1，新增自變量必須令 SSE 跌得足夠多，先可以抵消一個自由度嘅損失。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Degrees of Freedom Penalty
+  left_zh: 自由度损耗惩罚
+  right_en: The Threshold for Inclusion
+  right_zh: 变量准入门槛条件
+  s1_en: Every added predictor reduces residual degrees of freedom by one. If the associated reduction in SSE is too small, the estimated residual variance rises and Adjusted R-squared falls.
+  s1_zh: 每增加一个自变量，残差自由度就减少一个。若 SSE 的降幅太小，估计残差方差会上升，调整后 R方 就会下降。
+  s1_zh_hk: 每增加一個自變量，殘差自由度就減少一個。如果 SSE 嘅跌幅太細，估計殘差方差會上升，調整後 R方 就會下跌。
+  s2_en: For one added predictor in nested OLS models fitted to the same sample, Adjusted R-squared increases exactly when the absolute t-statistic for that predictor exceeds 1. This is an inclusion benchmark, not a conventional significance threshold.
+  s2_zh: 对于在同一样本上拟合的嵌套 OLS 模型，当只增加一个自变量时，只有该变量 t 统计量的绝对值大于 1，调整后 R方 才会上升。这是变量纳入的比较门槛，并非常规显著性标准。
+  s2_zh_hk: 對於喺同一樣本上擬合嘅嵌套 OLS 模型，如果只增加一個自變量，只有當該變量 t 統計量嘅絕對值大過 1，調整後 R方 先會上升。呢個係變量納入嘅比較門檻，唔係一般顯著性標準。
+  s3_en: Adjusted R-squared can be negative. That occurs when the model's degrees-of-freedom-adjusted residual variation exceeds the total variation benchmark around the sample mean.
+  s3_zh: 调整后 R方 可以为负。当模型经自由度调整后的残差变异高于围绕样本均值计算的总变异基准时，就会出现这种情况。
+  s3_zh_hk: 調整後 R方 可以係負數。當模型經自由度調整後嘅殘差變異，高過以樣本平均數計算嘅總變異基準時，就會出現呢種情況。
+  left_zh_hk: 自由度損耗扣減
+  right_zh_hk: 變量准入門檻條件
+- id: ledger
+  visual: steps
+  seconds: 36
+  step1_en: Audit Baseline Model A
+  step1_zh: 核算基准模型 A
+  step2_en: Add Noise Variable B
+  step2_zh: 加入噪声变量得到 B
+  step3_en: Compare Penalty Impact
+  step3_zh: 对比惩罚后指标表现
+  s1_en: 'Step one: With n equal to 25, SST equal to 10,000, k equal to 2, and SSE equal to 1,900, Model A has raw R-squared 0.810 and Adjusted R-squared approximately 0.793.'
+  s1_zh: 第一步：当 n = 25、SST = 10,000、k = 2、SSE = 1,900 时，模型 A 的原始 R方 为 0.810，调整后 R方 约为 0.793。
+  s1_zh_hk: 第一步：當 n = 25、SST = 10,000、k = 2、SSE = 1,900 時，模型 A 嘅原始 R方 係 0.810，調整後 R方 約為 0.793。
+  s2_en: 'Step two: Model B adds background music volume, so k becomes 3 and SSE falls to 1,880. Raw R-squared rises to 0.812, but that increase alone does not establish better forecasting performance.'
+  s2_zh: 第二步：模型 B 加入背景音乐音量，因此 k 变为 3，SSE 降至 1,880。原始 R方 升至 0.812，但这一升幅本身不能证明预测表现更好。
+  s2_zh_hk: 第二步：模型 B 加入背景音樂音量，所以 k 變成 3，SSE 跌至 1,880。原始 R方 升至 0.812，但呢個升幅本身唔能夠證明預測表現更好。
+  s3_en: 'Step three: Residual degrees of freedom fall from 22 to 21. Adjusted R-squared therefore declines from approximately 0.793 to 0.785, so the extra in-sample fit does not offset the complexity penalty.'
+  s3_zh: 第三步：残差自由度从 22 降至 21。因此，调整后 R方 从约 0.793 降至 0.785，说明新增的样本内拟合改善不足以抵消复杂度惩罚。
+  s3_zh_hk: 第三步：殘差自由度由 22 降至 21。因此，調整後 R方 由約 0.793 跌至 0.785，表示新增嘅樣本內擬合改善不足以抵消複雜度扣減。
+  step1_zh_hk: 核算基準模型 A
+  step2_zh_hk: 加入雜音變量得出 B
+  step3_zh_hk: 對比扣減後指標表現
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: Does Raw R² Prove Model Superiority?
+  q1_zh: 原始 R方 上升能否证明模型更优？
+  q2_en: 'Audit Rule: Penalize Complexity'
+  q2_zh: 审计准则：调增自变量必核调整后 R方
+  s1_en: A rise in raw R-squared does not by itself establish that a larger model is better. Adjusted R-squared asks whether the reduction in SSE is large enough to justify the added parameter.
+  s1_zh: 原始 R方 上升本身不能证明更大的模型更好。调整后 R方 检查 SSE 的降幅是否足以补偿新增参数。
+  s1_zh_hk: 原始 R方 上升本身唔能夠證明更大嘅模型更好。調整後 R方 會檢查 SSE 嘅跌幅係咪足以補償新增參數。
+  s2_en: 'Decision rule: when comparing nested OLS models on the same sample, prefer the added predictor on this criterion only if Adjusted R-squared rises. For forecasting decisions, also check performance on new or held-out data.'
+  s2_zh: 决策规则：在同一样本上比较嵌套 OLS 模型时，只有调整后 R方 上升，才依据这一指标保留新增变量。若目标是预测，还应检查新数据或留出样本上的表现。
+  s2_zh_hk: 決策規則：喺同一樣本上比較嵌套 OLS 模型時，只有調整後 R方 上升，先根據呢個指標保留新增變量。如果目標係預測，亦要檢查新數據或者留出樣本嘅表現。
+  s3_en: Here, raw R-squared rises from 0.810 to 0.812, while Adjusted R-squared falls from approximately 0.793 to 0.785. The added music-volume variable therefore fails this complexity-adjusted in-sample comparison.
+  s3_zh: 本例中，原始 R方 从 0.810 升至 0.812，而调整后 R方 从约 0.793 降至 0.785。因此，背景音乐音量未通过这项经复杂度调整的样本内比较。
+  s3_zh_hk: 喺呢個例子，原始 R方 由 0.810 升至 0.812，但調整後 R方 由約 0.793 跌至 0.785。所以，背景音樂音量未能通過呢項經複雜度調整嘅樣本內比較。
+  q1_zh_hk: 原始 R方 上升係咪代表模型更好？
+  q2_zh_hk: 審計準則：加自變量必查調整後 R方

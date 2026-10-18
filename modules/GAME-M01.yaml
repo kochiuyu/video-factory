@@ -13,8 +13,8 @@ objective_zh: 先说出参与人、策略，以及随策略组合而变的报酬
 objective_zh_hk: 先說出參與人、策略，以及隨策略組合而變的報酬——再問每個人會選什麼。
 lessons:
 - GAME-M01-IN
-- GAME-GI-01
-- GAME-PL-01
-- GAME-ST-01
-- GAME-PO-01
+- GAME-M01-GI
+- GAME-M01-PL
+- GAME-M01-ST
+- GAME-M01-PO
 - GAME-M01-OUT

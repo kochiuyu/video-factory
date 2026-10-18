@@ -8,7 +8,7 @@ Faculty teaching from a finished pack should print [SOP-faculty.html](SOP-facult
 | Role | Owns | Does not own |
 |------|------|----------------|
 | Faculty | Glossary lock, conceptual sign-off, course zip | ffmpeg, file mux |
-| Drafter (RA or any LLM using `AUTHORING_PROMPT.md`) | YAML draft, quiz stems | Final terms |
+| Drafter (RA or any LLM using `AUTHORING_PROMPT.md`) | YAML draft, quiz stems | Final terms. Delivery uses `QA_CHECKLIST.md`. |
 | Operator | Validate, TTS, `build.py`, duration check | Changing the claim |
 | Reviewer | Watch one matched video end-to-end; spot-check the other two languages | Rewriting the lesson |
 
@@ -31,7 +31,7 @@ Optional:
 ## Cycle for one topic (target: one working day after the template is familiar)
 
 1. Faculty commissions a topic in the console (or from `docs/AUTHORING_PROMPT.md`). Do not start from `briefs/` — that folder is leftover.
-2. Drafter writes `lessons/<ID>.yaml`. Check must be clean (including takeaway `q1`/`q2`) before Build.
+2. Drafter writes `lessons/<AREA>/<ID>.yaml` from `docs/AUTHORING_PROMPT.md`. Check must be clean, and `docs/QA_CHECKLIST.md` must pass, before Build.
 3. Faculty locks glossary pairs and the example.
 4. Run one production command:
 
@@ -43,6 +43,8 @@ Optional:
 7. Copy the four files into the experiment library. Do not rename cells after fielding.
 
 ## QA gate (all must pass)
+
+Lesson YAML also passes `docs/QA_CHECKLIST.md` before delivery: standalone hook and takeaway, evidence labels, model assumptions, and the multiple-choice quiz shape.
 
 - [ ] Glossary locked strings appear verbatim in both scripts.
 - [ ] No extra English sentence on the ZH-labelled picture, and the reverse.

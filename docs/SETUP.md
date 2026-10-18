@@ -359,7 +359,7 @@ build without touching the environment.
 
 ## 11. What “done with setup” allows next
 
-- Faculty / RA writes YAML → see `docs/SCHEMA.md` and `docs/AUTHORING_PROMPT.md`.
+- Faculty / RA writes YAML → see `docs/SCHEMA.md`, `docs/AUTHORING_PROMPT.md`, and `docs/QA_CHECKLIST.md`. Revise an existing file with `docs/REVISE_PROMPT.md`.
 - Day-to-day production → `docs/SOP.md`.
 - Windows-only FFmpeg notes → `docs/WINDOWS.md`.
 

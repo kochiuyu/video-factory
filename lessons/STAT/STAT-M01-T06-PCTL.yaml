@@ -1,0 +1,202 @@
+id: STAT-M01-T06-PCTL
+course: statistics
+course_en: Business Statistics
+course_zh: 商务统计
+course_zh_hk: 商務統計
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: Where does this shop rank?
+title_zh: 这家分店处于什么位置？
+title_zh_hk: 呢間分店排喺咩位置？
+objective_en: Define a percentile as a relative position in ordered data, calculate the 80th percentile using the nearest-rank method, interpret percentile standing for branch benchmarking, and explain why the method, period, and comparison group must be stated.
+objective_zh: 把百分位数定义为有序数据中的相对位置，使用最接近秩法计算第80百分位数，解释百分位排名如何用于门店基准比较，并说明为何必须交代计算方法、统计期间与比较总体。
+objective_zh_hk: 將百分位數定義為有序數據入面嘅相對位置，使用最接近秩法計算第80百分位數，解釋百分位排名點樣用於門店基準比較，並說明點解一定要交代計算方法、統計期間同比較總體。
+glossary:
+- en: percentile
+  zh: 百分位数
+  zh_hk: 百分位數
+  lock: true
+- en: percentile rank
+  zh: 百分位排名
+  zh_hk: 百分位排名
+  lock: true
+- en: ordered data
+  zh: 有序数据
+  zh_hk: 有序數據
+  lock: true
+- en: nearest-rank method
+  zh: 最接近秩法
+  zh_hk: 最接近秩法
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Using the nearest-rank method with five ordered values, which observation defines the 80th percentile?
+  question_zh: 使用最接近秩法处理五个有序观测值时，哪一个观测值决定第80百分位数？
+  question_zh_hk: 使用最接近秩法處理五個有序觀測值嗰陣，邊一個觀測值決定第80百分位數？
+  options_en:
+  - 'A: The first observation.'
+  - 'B: The second observation.'
+  - 'C: The fourth observation.'
+  - 'D: The fifth observation.'
+  options_zh:
+  - 'A: 第一个观测值。'
+  - 'B: 第二个观测值。'
+  - 'C: 第四个观测值。'
+  - 'D: 第五个观测值。'
+  options_zh_hk:
+  - 'A: 第一個觀測值。'
+  - 'B: 第二個觀測值。'
+  - 'C: 第四個觀測值。'
+  - 'D: 第五個觀測值。'
+  answer: C
+  explanation_en: The nearest-rank position is ceiling(0.80 × 5) = 4, so the fourth ordered observation defines the 80th percentile.
+  explanation_zh: 最接近秩位置为向上取整(0.80 × 5) = 4，因此第四个有序观测值决定第80百分位数。
+  explanation_zh_hk: 最接近秩位置係向上取整(0.80 × 5) = 4，所以第四個有序觀測值決定第80百分位數。
+- id: Q2
+  type: multiple_choice
+  question_en: What does an 80th-percentile sales threshold of 390 cups mean in this lesson?
+  question_zh: 本课中，第80百分位数为390杯代表什么？
+  question_zh_hk: 本課入面，第80百分位數係390杯代表咩？
+  options_en:
+  - 'A: Every shop must sell exactly 390 cups.'
+  - 'B: Under the stated method, approximately 80% of observed shops are at or below 390 cups.'
+  - 'C: The average shop sells 390 cups.'
+  - 'D: The top 80% of shops all sell more than 390 cups.'
+  options_zh:
+  - 'A: 每家门店都必须刚好卖390杯。'
+  - 'B: 按本课说明的方法，约80%的观测门店销量不高于390杯。'
+  - 'C: 平均每家门店卖390杯。'
+  - 'D: 排名前80%的门店销量都高于390杯。'
+  options_zh_hk:
+  - 'A: 每間門店都一定要啱啱賣390杯。'
+  - 'B: 按本課講明嘅方法，大約80%嘅觀測門店銷量唔高過390杯。'
+  - 'C: 平均每間門店賣390杯。'
+  - 'D: 排名前80%嘅門店銷量都高過390杯。'
+  answer: B
+  explanation_en: A percentile is a position statement, not an average or target. Its interpretation depends on the observed comparison group and the stated calculation method.
+  explanation_zh: 百分位数描述的是相对位置，不是平均数或硬性目标。它的解释取决于比较总体、统计期间与所采用的计算方法。
+  explanation_zh_hk: 百分位數描述嘅係相對位置，唔係平均數或者硬性目標。佢嘅解釋取決於比較總體、統計期間同所採用嘅計算方法。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: The Question
+  kicker_en: The Question
+  kicker_zh: 商业问题
+  kicker_zh_hk: 商業問題
+  title_en: Is 390 cups strong performance?
+  title_zh: 390杯算不算强劲业绩？
+  title_zh_hk: 390杯算唔算強勁業績？
+  en: A branch sold 390 cups on Monday. That number sounds healthy, but a manager still cannot judge it in isolation. Is 390 near the middle of the network, or does it place the branch among the top performers? To answer, we need to compare its position with every other observed branch.
+  zh: 一家分店周一卖了390杯。这个数字听起来不错，但管理者不能孤立判断：390杯接近比较总体的中间，还是处于较高位置？要回答这个问题，必须把它与其他观测门店一起排序。
+  zh_hk: 一間分店星期一賣咗390杯。呢個數字聽落唔錯，但管理者唔可以孤立判斷：390杯接近比較總體嘅中間，定係處於較高位置？要回答呢個問題，一定要將佢同其他觀測門店一齊排序。
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: What It Is
+  kicker_en: What It Is
+  kicker_zh: 概念定义
+  kicker_zh_hk: 概念定義
+  title_en: A position in ordered data
+  title_zh: 有序数据中的相对位置
+  title_zh_hk: 有序數據入面嘅相對位置
+  formula: 'p-th percentile = value at rank p
+
+    about p% of observations fall at or below it'
+  formula_zh: '第 p 百分位数 = 排在第 p 位的值
+
+    大约 p% 的观测落在该值或以下'
+  formula_zh_hk: '第 p 百分位數 = 排喺第 p 位嘅值
+
+    大約 p% 嘅觀測落喺該值或以下'
+  gloss_en: Percentiles define cutoff values for ranked groups.
+  gloss_zh: 百分位数用于界定有序数据中的相对位置门槛。
+  gloss_zh_hk: 百分位數用嚟界定有序數據入面嘅相對位置門檻。
+  s1_en: A percentile describes relative position. After arranging observations from smallest to largest, the p-th percentile marks a value at or below which approximately p percent of observations fall.
+  s1_zh: 百分位数描述相对位置。将观测值从小到大排列后，第p百分位数标记一个数值，约有p%的观测值不高于它。
+  s1_zh_hk: 百分位數描述相對位置。將觀測值由細到大排列之後，第p百分位數標記一個數值，大約有p%嘅觀測值唔高過佢。
+  s2_en: 'It does not report distance between shops and it is not the mean. It answers a ranking question: how far through the ordered comparison group must we move before reaching this threshold?'
+  s2_zh: 它不衡量门店之间的数值距离，也不是平均数。它回答的是排名问题：在有序比较总体中，要到达什么位置才会触及这个门槛？
+  s2_zh_hk: 佢唔衡量門店之間嘅數值距離，亦唔係平均數。佢回答嘅係排名問題：喺有序比較總體入面，要去到咩位置先會到達呢個門檻？
+- id: calc
+  visual: steps
+  seconds: 38
+  kicker: Step by Step
+  kicker_en: Step by Step
+  kicker_zh: 计算步骤
+  kicker_zh_hk: 計算步驟
+  title_en: Finding the 80th percentile
+  title_zh: 找出第80百分位数
+  title_zh_hk: 搵出第80百分位數
+  step1_en: Sort the five stores
+  step1_zh: 排列五家门店
+  step1_zh_hk: 排列五間門店
+  step2_en: Compute the nearest rank
+  step2_zh: 计算最接近秩
+  step2_zh_hk: 計算最接近秩
+  step3_en: Read the ranked value
+  step3_zh: 读出对应数值
+  step3_zh_hk: 讀出對應數值
+  s1_en: 'Step one: order the five street-store volumes: 280, 310, 360, 390, and 420 cups.'
+  s1_zh: 第一步：将五家街头门店的销量从小到大排列为280、310、360、390和420杯。
+  s1_zh_hk: 第一步：將五間街頭門店嘅銷量由細到大排列為280、310、360、390同420杯。
+  s2_en: 'Step two: this lesson uses the nearest-rank method. Multiply 0.80 by 5 to get 4, then round upward if necessary. The required rank is the fourth observation.'
+  s2_zh: 第二步：本课采用最接近秩法。用0.80乘以5得到4；如有小数则向上取整。因此需要第四个观测值。
+  s2_zh_hk: 第二步：本課採用最接近秩法。用0.80乘以5得到4；如果有小數就向上取整。所以需要第四個觀測值。
+  s3_en: 'Step three: the fourth ordered value is 390 cups. Under this stated method and dataset, 390 cups is the 80th-percentile threshold.'
+  s3_zh: 第三步：第四个有序数值是390杯。在本课说明的方法与数据集中，390杯就是第80百分位门槛。
+  s3_zh_hk: 第三步：第四個有序數值係390杯。喺本課講明嘅方法同數據集入面，390杯就係第80百分位門檻。
+- id: interpret
+  visual: two_column
+  seconds: 34
+  kicker: Managerial Meaning
+  kicker_en: Managerial Meaning
+  kicker_zh: 管理含义
+  kicker_zh_hk: 管理含義
+  title_en: Rank depends on the comparison group
+  title_zh: 排名取决于比较总体
+  title_zh_hk: 排名取決於比較總體
+  left_en: Street-store benchmark
+  left_zh: 街头门店基准
+  left_zh_hk: 街頭門店基準
+  right_en: Network-wide benchmark
+  right_zh: 全网络基准
+  right_zh_hk: 全網絡基準
+  s1_en: The 80th-percentile threshold helps managers identify relatively high performers without confusing rank with average size. A store at 390 cups is high relative to these five street-store observations.
+  s1_zh: 第80百分位门槛帮助管理者识别相对较高的观测值，同时避免把排名误当成平均规模。相对于这五家街头门店，390杯处于较高位置。
+  s1_zh_hk: 第80百分位門檻幫管理者識別相對較高嘅觀測值，同時避免將排名誤當成平均規模。相對於呢五間街頭門店，390杯處於較高位置。
+  s2_en: But percentile standing changes when the comparison group changes. Adding Airport branches, closed stores, or a different period may change both the ordering and the threshold.
+  s2_zh: 但比较总体改变时，百分位排名也会改变。加入机场店、停业门店，或改用不同期间，都可能改变排序与门槛。
+  s2_zh_hk: 但比較總體改變嗰陣，百分位排名亦會改變。加入機場舖、停業門店，或者改用唔同期間，都可能改變排序同門檻。
+  s3_en: Software packages may also use different interpolation conventions. For reproducible reporting, state the dataset, period, and percentile method rather than presenting the threshold without context.
+  s3_zh: 不同软件也可能采用不同的插值约定。为了让报告可复现，应说明数据集、统计期间与百分位计算方法，而不是脱离背景只给出门槛。
+  s3_zh_hk: 唔同軟件亦可能採用唔同嘅插值約定。為咗令報告可以重現，應該講明數據集、統計期間同百分位計算方法，而唔係離開背景只講門檻。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: Decision Rule
+  kicker_en: Decision Rule
+  kicker_zh: 商业法则
+  kicker_zh_hk: 商業法則
+  title_en: Use percentiles for relative standing
+  title_zh: 用百分位数判断相对位置
+  title_zh_hk: 用百分位數判斷相對位置
+  q1_en: What does the 80th percentile describe?
+  q1_zh: 第80百分位数描述什么？
+  q1_zh_hk: 第80百分位數描述咩？
+  q2_en: What context must accompany it?
+  q2_zh: 报告时必须同时说明什么？
+  q2_zh_hk: 報告嗰陣一定要同時講明咩？
+  s1_en: 'Use percentiles when the managerial question is relative standing: which branches are near the top, middle, or bottom of a defined comparison group?'
+  s1_zh: 当管理问题关注相对位置时，可以使用百分位数：在明确的比较总体中，哪些门店接近顶部、中部或底部？
+  s1_zh_hk: 當管理問題關注相對位置嗰陣，可以用百分位數：喺明確嘅比較總體入面，邊啲門店接近頂部、中部或者底部？
+  s2_en: Do not turn a percentile threshold into a universal target. It summarizes observed rank and may move when the population, period, or method changes.
+  s2_zh: 不要把百分位门槛变成普遍适用的硬性目标。它概括的是观测排名；总体、期间或方法改变时，门槛也可能移动。
+  s2_zh_hk: 唔好將百分位門檻變成普遍適用嘅硬性目標。佢概括嘅係觀測排名；總體、期間或者方法改變嗰陣，門檻亦可能移動。
+  s3_en: 'The operating rule is precise: sort the correct comparison group, state the percentile convention, calculate the ranked threshold, and interpret it as position rather than average performance.'
+  s3_zh: 经营规则很明确：对正确的比较总体排序，说明百分位约定，计算对应排位门槛，并把它解释为位置而不是平均业绩。
+  s3_zh_hk: 營運規則好清楚：對正確嘅比較總體排序，講明百分位約定，計算對應排位門檻，並將佢解釋為位置，而唔係平均業績。

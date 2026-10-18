@@ -1,0 +1,162 @@
+id: STAT-M10-T03-AABAL
+course: STAT-M10
+course_en: Applied A/B Testing & Digital Experimentation
+course_zh: 商业应用 A/B 测试与数字化实验
+course_zh_hk: 商業應用 A/B 測試與數碼化實驗
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'A/A Testing and Balance Auditing: Checking the Experimentation Engine'
+title_zh: A/A 测试与平衡审计：检查实验基础设施
+title_zh_hk: A/A 測試與平衡審計：檢查實驗基礎設施
+objective_en: Explain what A/A tests can diagnose, interpret nominal false-positive rates and null p-value behavior correctly, and combine covariate balance checks with allocation, exposure, and logging audits.
+objective_zh: 解释 A/A 测试能够诊断什么，正确理解名义假阳性率与原假设下的 p 值表现，并把协变量平衡检查与分配、接触及日志审计结合。
+objective_zh_hk: 解釋 A/A 測試可以診斷乜嘢，正確理解名義假陽性率同原假設下嘅 p 值表現，並將協變量平衡檢查同分配、接觸及日誌審計結合。
+glossary:
+- en: A/A Testing
+  zh: A/A 测试
+  zh_hk: A/A 測試
+  lock: true
+- en: False Positive Rate (Type I Error)
+  zh: 假阳性率（第一类错误率）
+  zh_hk: 假陽性率（第一類錯誤率）
+  lock: true
+- en: Uniform p-value Distribution
+  zh: p值均匀分布，U(0, 1)
+  zh_hk: p值均勻分佈，U(0, 1)
+  lock: true
+- en: Covariate Balance Check
+  zh: 协变量平衡性检验
+  zh_hk: 協變量平衡性檢驗
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: Across 100 independent, valid A/A tests at alpha = 0.05, how many false positives are expected under the null?
+  question_zh: 在 100 次相互独立且检验有效的 A/A 测试中，若 alpha = 0.05，原假设下预期有多少次假阳性？
+  question_zh_hk: 喺 100 次互相獨立而且檢驗有效嘅 A/A 測試入面，如果 alpha = 0.05，原假設下預期有幾多次假陽性？
+  options_en:
+  - 'A: About 5, although the realized count need not equal 5'
+  - 'B: Exactly 0 because the experiences are identical'
+  - 'C: Exactly 50'
+  - 'D: Exactly 95'
+  options_zh:
+  - A：约 5 次，但实际次数不必正好等于 5
+  - B：正好 0 次，因为体验相同
+  - C：正好 50 次
+  - D：正好 95 次
+  options_zh_hk:
+  - A：約 5 次，但實際次數唔一定正好等於 5
+  - B：正好 0 次，因為體驗相同
+  - C：正好 50 次
+  - D：正好 95 次
+  answer: A
+  explanation_en: Each valid test has a 5% false-rejection probability under its null. The expected count is 100 times 0.05, or 5, but random variation means the observed count can differ.
+  explanation_zh: 每次有效检验在原假设下都有 5% 的错误拒绝概率，因此预期次数为 100 × 0.05 = 5，但实际次数会因随机波动而不同。
+  explanation_zh_hk: 每次有效檢驗喺原假設下都有 5% 嘅錯誤拒絕概率，所以預期次數係 100 × 0.05 = 5，但實際次數會因為隨機波動而唔同。
+- id: Q2
+  type: multiple_choice
+  question_en: What is the most defensible response if repeated A/A tests reject far more often than the nominal level?
+  question_zh: 如果重复 A/A 测试的拒绝比例远高于名义水平，最稳妥的处理是什么？
+  question_zh_hk: 如果重複 A/A 測試嘅拒絕比例遠高過名義水平，最穩妥嘅處理係乜嘢？
+  options_en:
+  - 'A: Investigate assignment, analysis assumptions, dependence, exposure, missingness, and logging before using the platform'
+  - 'B: Conclude immediately that hashing is the sole cause'
+  - 'C: Treat the excess rejections as proof of product lift'
+  - 'D: Ignore the result because all A/A tests must reject sometimes'
+  options_zh:
+  - A：在使用平台前检查分配、分析假设、依赖性、实际接触、缺失与日志
+  - B：立即断定哈希是唯一原因
+  - C：把额外拒绝视为产品增量的证明
+  - D：忽略结果，因为 A/A 测试有时必然拒绝
+  options_zh_hk:
+  - A：使用平台之前檢查分配、分析假設、依賴性、實際接觸、缺失同日誌
+  - B：即刻斷定哈希係唯一原因
+  - C：將額外拒絕視為產品增量嘅證明
+  - D：忽略結果，因為 A/A 測試有時一定會拒絕
+  answer: A
+  explanation_en: Excess rejection is a diagnostic warning, not a unique diagnosis. Possible causes include invalid standard errors, dependence, assignment defects, exposure differences, missing data, or logging problems.
+  explanation_zh: 过度拒绝是诊断警示，而不是唯一诊断。可能原因包括标准误无效、观测依赖、分配缺陷、接触差异、数据缺失或日志问题。
+  explanation_zh_hk: 過度拒絕係診斷警號，唔係唯一診斷。可能原因包括標準誤無效、觀測依賴、分配缺陷、接觸差異、數據缺失或者日誌問題。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker_en: Experiment-Engine Health Check
+  kicker_zh: 实验引擎健康检查
+  kicker_zh_hk: 實驗引擎健康檢查
+  title_en: Why Can Identical Experiences Still Produce a Small p-Value?
+  title_zh: 为什么相同体验仍可能产生很小的 p 值？
+  title_zh_hk: 點解相同體驗仍然可能產生好細嘅 p 值？
+  en: 'Suppose two randomly assigned groups receive the same checkout experience, yet one comparison reports a small p-value. That can occur by chance at the chosen significance level, but repeated excess false alarms may reveal a problem in assignment, measurement, or analysis. An A/A test is therefore a diagnostic exercise: it checks whether the complete experimentation process behaves as expected when no treatment contrast exists.'
+  zh: 假设两个随机分组得到相同的结账体验，但一次比较却报告很小的 p 值。这可能只是按既定显著性水平发生的偶然结果；不过，如果重复测试持续出现过多误报，就可能说明分配、测量或分析存在问题。因此，A/A 测试是一项诊断工作：它检查在没有处理差异时，完整实验流程是否按预期运行。
+  zh_hk: 假設兩個隨機分組得到相同嘅結賬體驗，但一次比較就報告好細嘅 p 值。呢個可能只係按既定顯著性水平出現嘅偶然結果；不過，如果重複測試持續出現過多誤報，就可能表示分配、量度或者分析有問題。所以，A/A 測試係一項診斷工作：佢檢查喺冇處理差異嗰陣，完整實驗流程係咪按預期運行。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: 'Under a valid continuous null test: P(p ≤ alpha) = alpha'
+  formula_zh: 在有效的连续型原假设检验下：P(p ≤ alpha) = alpha
+  formula_zh_hk: 喺有效嘅連續型原假設檢驗下：P(p ≤ alpha) = alpha
+  formula_tex: H_0:\theta_{A_1}=\theta_{A_2},\quad p\sim U(0,1),\quad P(p\leq\alpha\mid H_0)=\alpha
+  s1_en: A/A Testing assigns units to two labels but delivers the same intended experience to both. It can exercise assignment, exposure, metric computation, and inference without introducing a deliberate product difference.
+  s1_zh: A/A 测试把单元分到两个标签，但向两组提供相同的预期体验。它可以在不刻意制造产品差异的情况下，检查分配、实际接触、指标计算与推断。
+  s1_zh_hk: A/A 測試將單元分到兩個標籤，但向兩組提供相同嘅預期體驗。佢可以喺唔刻意製造產品差異嘅情況下，檢查分配、實際接觸、指標計算同推斷。
+  s2_en: For a correctly calibrated continuous test under its null, p-values follow a Uniform p-value Distribution and fall below alpha with probability alpha. Discrete outcomes, conservative tests, dependence, or model misspecification can change the exact shape.
+  s2_zh: 对在原假设下校准正确的连续型检验，p 值服从 p值均匀分布，低于 alpha 的概率为 alpha。离散结果、保守检验、依赖性或模型设定错误都可能改变其精确形状。
+  s2_zh_hk: 對喺原假設下校準正確嘅連續型檢驗，p 值服從 p值均勻分佈，低過 alpha 嘅概率係 alpha。離散結果、保守檢驗、依賴性或者模型設定錯誤都可能改變佢嘅精確形狀。
+- id: mechanics
+  visual: two_column
+  seconds: 36
+  left_en: Calibration Evidence
+  left_zh: 校准证据
+  left_zh_hk: 校準證據
+  right_en: Balance Evidence
+  right_zh: 平衡证据
+  right_zh_hk: 平衡證據
+  s1_en: One small p-value in an A/A test is not proof that the engine is broken. Repeated tests or simulations can assess rejection rates and p-value behavior, but they must reproduce the intended assignment, dependence, metric, and analysis pipeline.
+  s1_zh: 一次 A/A 测试得到很小的 p 值，并不能证明引擎损坏。重复测试或模拟可以评估拒绝率与 p 值表现，但必须重现预期的分配、依赖结构、指标与分析流程。
+  s1_zh_hk: 一次 A/A 測試得到好細嘅 p 值，唔可以證明引擎損壞。重複測試或者模擬可以評估拒絕率同 p 值表現，但一定要重現預期嘅分配、依賴結構、指標同分析流程。
+  s2_en: A Covariate Balance Check asks whether pre-treatment characteristics look consistent with random assignment. Exact equality is not expected, and testing many covariates will produce some small p-values by chance.
+  s2_zh: 协变量平衡性检验检查处理前特征是否与随机分配相符。不能期待完全相等，而且同时检验许多协变量时，部分 p 值会因偶然而较小。
+  s2_zh_hk: 協變量平衡性檢驗檢查處理之前特徵係咪同隨機分配相符。唔可以期望完全相等，而且同時檢驗好多協變量嗰陣，部分 p 值會因為偶然而較細。
+  s3_en: Balance auditing should therefore examine standardized differences, allocation ratios, missingness, and joint patterns rather than declaring success from non-significant tests alone. Post-treatment variables must not be used as baseline balance evidence.
+  s3_zh: 因此，平衡审计应检查标准化差异、分配比例、缺失与联合模式，而不能仅凭检验不显著就宣布成功。处理后变量不能作为基线平衡证据。
+  s3_zh_hk: 所以，平衡審計要檢查標準化差異、分配比例、缺失同聯合模式，而唔可以只憑檢驗唔顯著就宣布成功。處理後變量唔可以當成基線平衡證據。
+- id: example
+  visual: example
+  seconds: 36
+  setup_en: 'Teaching assumptions: 100 independent valid A/A tests at alpha = 0.05'
+  setup_zh: 教学假设：100 次相互独立且有效的 A/A 测试，alpha = 0.05
+  setup_zh_hk: 教學假設：100 次互相獨立而且有效嘅 A/A 測試，alpha = 0.05
+  result_en: Expected false positives = 5; realized count is random
+  result_zh: 预期假阳性次数 = 5；实际次数具有随机性
+  result_zh_hk: 預期假陽性次數 = 5；實際次數具有隨機性
+  s1_en: Under the stated assumptions, each test has a five-percent false-positive probability. Multiplying 100 by 0.05 gives an expected count of five false positives.
+  s1_zh: 在给定假设下，每次检验的假阳性概率为 5%。用 100 乘以 0.05，得到预期五次假阳性。
+  s1_zh_hk: 喺指定假設下，每次檢驗嘅假陽性概率係 5%。用 100 乘 0.05，得到預期五次假陽性。
+  s2_en: The word expected does not mean exactly five must occur. Even with a valid engine and analysis, the realized count can be lower or higher because of sampling variation.
+  s2_zh: “预期”并不表示实际必须正好出现五次。即使引擎与分析都有效，实际次数也会因抽样波动而更低或更高。
+  s2_zh_hk: 「預期」唔代表實際一定要正好出現五次。即使引擎同分析都有效，實際次數亦會因為抽樣波動而更低或者更高。
+  s3_en: If the observed rejection rate is far above the nominal level, investigate rather than assign a single cause. Check sample-ratio mismatch, repeated-unit dependence, standard errors, exposure, exclusions, missing outcomes, metric code, and event logging.
+  s3_zh: 如果观测拒绝率远高于名义水平，应展开调查，而不是指定单一原因。需要检查样本比例失配、重复单元依赖、标准误、实际接触、排除规则、结果缺失、指标代码与事件日志。
+  s3_zh_hk: 如果觀測拒絕率遠高過名義水平，就要展開調查，而唔係指定單一原因。需要檢查樣本比例失配、重複單元依賴、標準誤、實際接觸、排除規則、結果缺失、指標代碼同事件日誌。
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  q1_en: What Can an A/A Test Establish?
+  q1_zh: A/A 测试能够说明什么？
+  q1_zh_hk: A/A 測試可以說明乜嘢？
+  q2_en: Decision Rule
+  q2_zh: 决策规则
+  q2_zh_hk: 決策規則
+  s1_en: A/A testing can reveal whether the implemented experimentation pipeline behaves plausibly under no intended treatment difference. It is a health check, not a guarantee that every future A/B test is unbiased or correctly analyzed.
+  s1_zh: A/A 测试可以揭示在没有预期处理差异时，已实施的实验流程是否表现合理。它是一项健康检查，并不能保证未来每次 A/B 测试都无偏或分析正确。
+  s1_zh_hk: A/A 測試可以揭示喺冇預期處理差異嗰陣，已實施嘅實驗流程係咪表現合理。佢係一項健康檢查，唔可以保證未來每次 A/B 測試都無偏或者分析正確。
+  s2_en: Use repeated calibration evidence together with allocation, exposure, logging, and pre-treatment balance audits. Investigate deviations in context rather than relying on one p-value or one universal certification cutoff.
+  s2_zh: 应把重复校准证据与分配、实际接触、日志及处理前平衡审计结合。应结合具体背景调查偏离，而不是依赖单个 p 值或一个通用认证阈值。
+  s2_zh_hk: 要將重複校準證據同分配、實際接觸、日誌同處理前平衡審計結合。要配合具體背景調查偏離，而唔係依賴單個 p 值或者一個通用認證門檻。
+  s3_en: Document the assignment and analysis protocol before launch, then monitor sample ratios, missingness, dependence, and metric integrity continuously. Passing an A/A review supports use of the platform but does not replace experiment-specific design checks.
+  s3_zh: 上线前应记录分配与分析方案，之后持续监测样本比例、缺失、依赖性与指标完整性。通过 A/A 审查可支持使用平台，但不能替代每个实验自身的设计检查。
+  s3_zh_hk: 上線之前要記錄分配同分析方案，之後持續監察樣本比例、缺失、依賴性同指標完整性。通過 A/A 審查可以支持使用平台，但唔可以取代每個實驗本身嘅設計檢查。

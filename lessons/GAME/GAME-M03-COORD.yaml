@@ -1,0 +1,149 @@
+id: GAME-M03-COORD
+course: game
+course_en: Game Theory
+course_zh: 博弈论
+course_zh_hk: 博弈論
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 120
+title_en: Same side of the path
+title_zh: 路的同一侧
+title_zh_hk: 路同一側
+objective_en: Both carts want the same side so customers find them. Nothing is dominated. Two cells both look good.
+objective_zh: 两车都想停同一侧，好让客人找得到。没有被占优的行。有两格都说得通。
+objective_zh_hk: 兩架都想停同一側，等客人搵到。冇被佔優嘅行。有兩格都講得通。
+glossary:
+- en: coordination
+  zh: 协调
+  zh_hk: 協調
+  lock: true
+quiz:
+- id: Q1
+  type: comprehension
+  en: Why do both carts want the same side?
+  zh: 为什么两车都想停同一侧？
+  zh_hk: 點解兩架都想停同一側？
+  answer_en: Customers look once. If the boards sit together, both take home more.
+  answer_zh: 客人只看一次。两块牌子在一起，两车带走的都更多。
+  answer_zh_hk: 客人淨睇一次。兩塊牌一齊，兩架袋走嘅都更多。
+- id: Q2
+  type: transfer
+  en: Does Left dominate Right for A?
+  zh: 甲的左侧占优于右侧吗？
+  zh_hk: 甲嘅左側佔優過右側嗎？
+  answer_en: No. Left is better only if B is Left. Right is better if B is Right.
+  answer_zh: 不占优。只有乙在左，左才更好。乙在右，右才更好。
+  answer_zh_hk: 唔佔優。淨係乙喺左，左先更好。乙喺右，右先更好。
+beats:
+- id: hook
+  visual: title_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Same side of the path
+  title_zh: 路的同一侧
+  title_zh_hk: 路同一側
+  en: The path is wide this morning. Each cart may sit Left or Right. Customers walk the path once. If both boards sit on the same side, they find coffee. If the boards split, they walk past.
+  zh: 今天路很宽。每辆车可以停左边或右边。客人只走一遍。两块牌子在同一侧，他们找得到咖啡。牌子分开，他们就走过了。
+  zh_hk: 今日路好闊。每架車可以停左邊定右邊。客人淨行一遍。兩塊牌喺同一側，佢哋搵到咖啡。牌分開，佢哋就行過。
+- id: define
+  visual: definition_card
+  seconds: 24
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Coordination
+  title_zh: 协调
+  title_zh_hk: 協調
+  formula: Both take home more when they match
+  formula_en: Both take home more when they match
+  formula_zh: 停在同一侧，两车带走的都更多
+  formula_zh_hk: 停喺同一側，兩架袋走嘅都更多
+  gloss_en: Matching is the point. Not undercutting.
+  gloss_zh: 重点是停在一起。不是抢着降价。
+  gloss_zh_hk: 重點係停一齊。唔係搶住減價。
+  en: Here is the idea. Both carts take home more when they sit on the same side. That is coordination. It is not last unit's price cut. Nothing here is dominated. Deletion does not pick a side.
+  zh: 核心就这一句。停在同一侧，两车带走的都更多。这叫协调。不是上一讲那种降价。这里没有被占优的行。删除选不出该停哪一侧。
+  zh_hk: 核心就呢一句。停喺同一側，兩架袋走嘅都更多。呢個叫協調。唔係上一講嗰種減價。呢度冇被佔優嘅行。刪除揀唔出該停邊一側。
+- id: matrix
+  visual: payoff_matrix
+  seconds: 28
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Two good cells
+  title_zh: 有两格都好
+  title_zh_hk: 有兩格都好
+  row_player_en: Cart A
+  row_player_zh: 甲车
+  row_player_zh_hk: 甲車
+  col_player_en: Cart B
+  col_player_zh: 乙车
+  col_player_zh_hk: 乙車
+  row1_en: Left
+  row1_zh: 左
+  row1_zh_hk: 左
+  row2_en: Right
+  row2_zh: 右
+  row2_zh_hk: 右
+  col1_en: Left
+  col1_zh: 左
+  col1_zh_hk: 左
+  col2_en: Right
+  col2_zh: 右
+  col2_zh_hk: 右
+  c11: "(3, 3)"
+  c12: "(0, 0)"
+  c21: "(0, 0)"
+  c22: "(3, 3)"
+  highlight: c11
+  note_en: First number is A. Match pays three. Split pays zero.
+  note_zh: 头一个数字是甲。停一起各三。分开各零。
+  note_zh_hk: 第一個數字係甲。停一齊各三。分開各零。
+  en: Same reading rule. If both sit Left, each takes three. If both sit Right, each takes three. If they split, customers miss them and each takes zero. Left does not dominate Right.
+  zh: 读法不变。都停左边，各带走三。都停右边，各带走三。分开停，客人找不到，各带走零。左边不占优于右边。
+  zh_hk: 讀法不變。都停左邊，各袋走三。都停右邊，各袋走三。分開停，客人搵唔到，各袋走零。左邊唔佔優過右邊。
+- id: example
+  visual: example
+  seconds: 22
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Deletion stops
+  title_zh: 删除停住了
+  title_zh_hk: 刪除停咗
+  setup_en: Check A's Left row against both columns.
+  setup_zh: 看甲的左行，对着两列。
+  setup_zh_hk: 睇甲嘅左行，對住兩列。
+  result_en: Left wins one column. Right wins the other. Nothing dies.
+  result_zh: 左赢一列。右赢一列。谁也不死。
+  result_zh_hk: 左贏一列。右贏一列。邊個都唔死。
+  en: Check A's Left row. It pays 3 if B is Left, and 0 if B is Right. Right does the opposite. Neither row loses in every column. Last unit's tool stops here.
+  zh: 看甲的左行。乙在左得 3，乙在右得 0。右行正好相反。没有一行在每一列都更差。上一讲的工具到这里就停。
+  zh_hk: 睇甲嘅左行。乙喺左得 3，乙喺右得 0。右行啱啱相反。冇一行喺每一列都更差。上一講嘅工具到呢度就停。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: This part
+  kicker_en: This part
+  kicker_zh: 这一部分
+  kicker_zh_hk: 呢一部分
+  title_en: Two cells, no deletion
+  title_zh: 两格，删不掉
+  title_zh_hk: 兩格，刪唔走
+  q1_en: Both Left and both Right pay three each.
+  q1_zh: 都在左和都在右，各带走三。
+  q1_zh_hk: 都喺左同都喺右，各袋走三。
+  q2_en: Nothing is dominated.
+  q2_zh: 没有被占优的行。
+  q2_zh_hk: 冇被佔優嘅行。
+  en: Keep both good cells. The table did not pick. Next we fix one column and ask which row pays A more. That question is best response.
+  zh: 两格都留下。表没有选。接下来先钉住一列，问甲哪一行更赚。那一问就是最优反应。
+  zh_hk: 兩格都留低。張表冇揀。跟住先釘住一列，問甲邊一行更賺。呢一問就係最佳回應。

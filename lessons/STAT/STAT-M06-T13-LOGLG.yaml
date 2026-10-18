@@ -1,0 +1,199 @@
+id: STAT-M06-T13-LOGLG
+course: STAT-M06
+course_en: Linear Regression & Econometric Modeling
+course_zh: 线性回归与计量经济建模
+course_zh_hk: 線性回歸與計量經濟建模
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: 'Log-Log Demand Models: Estimating and Applying Price Elasticity'
+title_zh: 双对数需求模型：估计与应用价格弹性
+title_zh_hk: 雙對數需求模型：估計同應用價格彈性
+objective_en: Formulate a log-log demand model, interpret its slope as constant price elasticity under the stated specification,
+  distinguish local percentage approximations from exact finite-change calculations, assess revenue implications with appropriate
+  qualifications, and audit positivity, confounding, functional form, and uncertainty before pricing decisions.
+objective_zh: 构建双对数需求模型，在既定设定下把斜率解释为恒定价格弹性，区分局部百分比近似与有限变动的精确计算，在适当限定下评估收入含义，并在定价决策前审计正值要求、混杂、函数形式与不确定性。
+objective_zh_hk: 構建雙對數需求模型，喺既定設定之下將斜率解讀做恆定價格彈性，區分局部百分比近似同有限變動嘅精確計算，喺適當限定之下評估收入含義，並喺定價決策之前審計正值要求、混雜、函數形式同不確定性。
+glossary:
+- en: Log-Log Model
+  zh: 双对数模型
+  zh_hk: 雙對數模型
+  lock: true
+- en: Price Elasticity of Demand
+  zh: 需求价格弹性
+  zh_hk: 需求價格彈性
+  lock: true
+- en: Constant Elasticity
+  zh: 恒定弹性
+  zh_hk: 恆定彈性
+  lock: true
+- en: Logarithmic Transformation
+  zh: 对数变换
+  zh_hk: 對數變換
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: In ln(Q) = 6.2 - 1.4 ln(P), how should the slope be interpreted for a small price change?
+  question_zh: 在估算的计量需求模型 ln(Q_i) = 6.2 - 1.4 * ln(P_i) 中，管理层应如何解读斜率系数 -1.4？
+  question_zh_hk: 喺估算嘅計量需求模型 ln(Q_i) = 6.2 - 1.4 * ln(P_i) 入面，管理層應該點樣解讀斜率系數 -1.4？
+  options_en:
+  - 'A: Every $1.00 increase in espresso price reduces sales by exactly 1.4 cups'
+  - 'B: A 1% price increase is associated with an approximately 1.4% decrease in fitted quantity under the model'
+  - 'C: Espresso sales will hit zero if price increases by 1.4%'
+  - 'D: The price elasticity of demand increases as more coffee is sold'
+  options_zh:
+  - 'A: 意式浓缩咖啡价格每上涨 1.00 元，销量严格减少 1.4 杯'
+  - 'B: 意式浓缩咖啡价格每上涨 1%，预期每日出杯量将减少 1.4%'
+  - 'C: 若咖啡价格上调 1.4%，咖啡销量将彻底归零'
+  - 'D: 需求价格弹性会随着咖啡销量的增加而不断上升'
+  options_zh_hk:
+  - 'A: 意式濃縮咖啡價格每加 1.00 蚊，銷量剛好減少 1.4 杯'
+  - 'B: 意式濃縮咖啡價格每加 1%，預期每日出杯量會減少 1.4%'
+  - 'C: 如果咖啡價格上調 1.4%，咖啡銷量就會徹底跌到零'
+  - 'D: 需求價格彈性會隨住咖啡銷量增加而係噉上升'
+  answer: B
+  explanation_en: In a log-log model, the slope is elasticity. The statement is model-based and approximately applies to small
+    finite percentage changes; it does not by itself establish causality.
+  explanation_zh: 在双对数模型中，beta_1 代表弹性：d(ln Q)/d(ln P) = (% Delta Q) / (% Delta P)。系数 -1.4 表明价格每上涨 1%，需求量预期下降 1.4%。
+  explanation_zh_hk: 喺雙對數模型入面，beta_1 代表彈性：d(ln Q)/d(ln P) = (% Delta Q) / (% Delta P)。系數 -1.4 代表價格每加 1%，需求量預期會跌 1.4%。
+- id: Q2
+  type: multiple_choice
+  question_en: With elasticity -1.2, what is the first-order approximation to the quantity change from a 5% price increase?
+  question_zh: Metro Coffee 目前 Flat White 售价为 38 元。财务部计划涨价 5%。若测得价格弹性为 beta_1 = -1.2，预期每日出杯量的百分比变动是多少？
+  question_zh_hk: Metro Coffee 目前 Flat White 賣緊 38 蚊。財務部計劃加價 5%。如果測得價格彈性係 beta_1 = -1.2，預期每日出杯量嘅百分比變動係幾多？
+  options_en:
+  - 'A: Volume decreases by 6.0%'
+  - 'B: Volume decreases by 1.2%'
+  - 'C: Volume decreases by 0.24%'
+  - 'D: Volume increases by 5.0%'
+  options_zh:
+  - 'A: 出杯量预期减少 6.0%'
+  - 'B: 出杯量预期减少 1.2%'
+  - 'C: 出杯量预期减少 0.24%'
+  - 'D: 出杯量预期增加 5.0%'
+  options_zh_hk:
+  - 'A: 出杯量預期減少 6.0%'
+  - 'B: 出杯量預期減少 1.2%'
+  - 'C: 出杯量預期減少 0.24%'
+  - 'D: 出杯量預期增加 5.0%'
+  answer: A
+  explanation_en: 'Approximate percentage quantity change equals elasticity times percentage price change: -1.2 x 5% = -6.0%.
+    For larger finite changes, use the exact power formula.'
+  explanation_zh: '% Delta Q = 弹性 * (% Delta P) = (-1.2) * (+5%) = -6.0%。每日出杯量预期下滑 6%。'
+  explanation_zh_hk: '% Delta Q = 彈性 * (% Delta P) = (-1.2) * (+5%) = -6.0%。每日出杯量預期下跌 6%。'
+beats:
+- id: hook
+  visual: title_card
+  seconds: 28
+  title_en: How sensitive is quantity demanded to a percentage price change?
+  title_zh: 需求量对价格百分比变化有多敏感？
+  title_zh_hk: 需求量對價格百分比變化有幾敏感？
+  en: Metro Coffee is evaluating an assumed Flat White pricing scenario. A level-level regression reports cups per currency
+    unit, while management wants a scale-free percentage response. A log-log model expresses both price and quantity in natural
+    logarithms, so its slope can summarize constant price elasticity within the observed design. That interpretation still
+    depends on model specification and does not by itself identify a causal price effect.
+  zh: 都市咖啡正在评估一个假设的澳白咖啡定价情境。水平对水平回归报告每单位货币对应的杯数变化，但管理层希望得到无量纲的百分比响应。双对数模型对价格与数量同时取自然对数，因此其斜率可在观测设计范围内概括恒定价格弹性。该解释仍依赖模型设定，本身不能识别价格的因果效应。
+  zh_hk: 都市咖啡正評估一個假設嘅澳白咖啡定價情境。水平對水平回歸報告每單位貨幣對應嘅杯數變化，但管理層希望得到無量綱嘅百分比響應。雙對數模型對價格同數量同時取自然對數，所以佢嘅斜率可以喺觀測設計範圍之內概括恆定價格彈性。呢個解讀仍然依賴模型設定，本身唔可以識別價格嘅因果效應。
+- id: define
+  visual: definition_card
+  seconds: 34
+  formula: ln(Q_i) = beta_0 + beta_1 ln(P_i) + error_i; beta_1 = d ln(Q) / d ln(P)
+  formula_zh: ln(Q_i) = beta_0 + beta_1 ln(P_i) + error_i；beta_1 = d ln(Q) / d ln(P)
+  formula_zh_hk: ln(Q_i) = beta_0 + beta_1 ln(P_i) + error_i；beta_1 = d ln(Q) / d ln(P)
+  formula_tex: \ln Q_i=\beta_0+\beta_1\ln P_i+\varepsilon_i,\qquad \beta_1=\frac{d\ln Q}{d\ln P}
+  s1_en: If the conditional mean follows a constant-elasticity power relationship, Q equals A times P raised to beta_1. Taking
+    natural logs converts that multiplicative relationship into a line. The model requires strictly positive price and quantity
+    values unless a separately justified treatment is used.
+  s1_zh: 若条件均值遵循恒定弹性的幂函数关系，则 Q 等于 A 乘以 P 的 beta_1 次幂。取自然对数后，乘法关系转化为直线。除非采用另有充分依据的处理方法，否则模型要求价格与数量严格为正。
+  s1_zh_hk: 如果條件平均遵循恆定彈性嘅冪函數關係，咁 Q 等於 A 乘以 P 嘅 beta_1 次方。取自然對數之後，乘法關係轉化成直線。除非採用另外有充分依據嘅處理方法，否則模型要求價格同數量嚴格係正數。
+  s2_en: For an infinitesimal change, beta_1 is the proportional change in Q per proportional change in P. For a small change,
+    a 1% price increase is associated with approximately beta_1 percent change in quantity. For a finite price change, the
+    exact fitted quantity ratio is (P_new/P_old) raised to beta_1.
+  s2_zh: 对于无穷小变动，beta_1 是 P 的比例变化对应的 Q 比例变化。对于小幅变动，价格上升 1% 与数量约变化 beta_1% 相关。对于有限价格变动，精确拟合数量比为 (P_new/P_old) 的 beta_1 次方。
+  s2_zh_hk: 對於無窮小變動，beta_1 係 P 嘅比例變化對應嘅 Q 比例變化。對於小幅變動，價格上升 1% 同數量約變化 beta_1% 相關。對於有限價格變動，精確擬合數量比係 (P_new/P_old) 嘅 beta_1 次方。
+  title_en: The slope is elasticity in a log-log specification
+  title_zh: 双对数设定中的斜率就是弹性
+  title_zh_hk: 雙對數設定入面嘅斜率就係彈性
+- id: mechanics
+  visual: two_column
+  seconds: 34
+  left_en: Scale-free interpretation
+  left_zh: 无量纲解释
+  right_en: Model and decision limits
+  right_zh: 模型与决策限制
+  s1_en: Because elasticity is dimensionless, coefficients can be compared across products measured in different price and
+    quantity units, provided the models, populations, periods, and definitions are genuinely comparable.
+  s1_zh: 由于弹性无量纲，只要模型、总体、时期与定义确实可比，就可以比较不同价格和数量单位下的产品系数。
+  s1_zh_hk: 由於彈性無量綱，只要模型、總體、時期同定義確實可比，就可以比較唔同價格同數量單位之下嘅產品系數。
+  s2_en: With quantity revenue equal to P times Q and a constant-elasticity fitted demand curve, an elasticity below minus
+    one implies that a small price increase is associated with lower fitted revenue, while elasticity between minus one and
+    zero implies higher fitted revenue. This is a local model implication, not a profit rule.
+  s2_zh: 当销售收入等于 P 乘 Q，且拟合需求曲线具有恒定弹性时，弹性小于负一意味着小幅提价与较低拟合收入相关；弹性介于负一与零之间意味着较高拟合收入。这是局部模型含义，不是利润规则。
+  s2_zh_hk: 當銷售收入等於 P 乘 Q，而且擬合需求曲線具有恆定彈性嗰陣，彈性細過負一意味住小幅加價同較低擬合收入相關；彈性介乎負一同零之間意味住較高擬合收入。呢個係局部模型含義，唔係利潤規則。
+  s3_en: Logging can compress large values and sometimes improve variance patterns, but it does not guarantee homoskedasticity,
+    correct functional form, or causal identification. Residual diagnostics, uncertainty, omitted variables, competitor responses,
+    costs, and implementation constraints still require review.
+  s3_zh: 取对数会压缩大值，有时可改善方差形态，但不能保证同方差、函数形式正确或因果识别成立。仍需检查残差诊断、不确定性、遗漏变量、竞争者反应、成本与执行约束。
+  s3_zh_hk: 取對數會壓縮大值，有時可以改善方差形態，但唔保證同方差、函數形式正確或者因果識別成立。仍然需要檢查殘差診斷、不確定性、遺漏變量、競爭者反應、成本同執行約束。
+  left_zh_hk: 無量綱解讀
+  right_zh_hk: 模型同決策限制
+  title_en: Elasticity aids comparison, but not automatic pricing
+  title_zh: 弹性有助比较，但不能自动决定价格
+  title_zh_hk: 彈性有助比較，但唔可以自動決定價格
+- id: ledger
+  visual: steps
+  seconds: 38
+  step1_en: 'Teaching assumptions: elasticity beta_1 = -1.40; price changes from 38 to 42'
+  step1_zh: 教学假设：弹性 beta_1 = -1.40；价格从 38 调整到 42
+  step2_en: Price change = 42/38 - 1 = 10.53%; linear approximation for quantity = -1.40 x 10.53% = -14.74%
+  step2_zh: 价格变化 = 42/38 - 1 = 10.53%；数量的线性近似 = -1.40 × 10.53% = -14.74%
+  step3_en: Exact fitted quantity change = (42/38)^(-1.40) - 1 = -13.07%; exact fitted revenue change = (42/38)^(1 - 1.40)
+    - 1 = -3.92%
+  step3_zh: 精确拟合数量变化 = (42/38)^(-1.40) - 1 = -13.07%；精确拟合收入变化 = (42/38)^(1 - 1.40) - 1 = -3.92%
+  s1_en: For illustration, assume a verified fitted elasticity of minus 1.40 and a price change from 38 to 42 currency units.
+    These are teaching assumptions, not verified prices, sales, margins, costs, customer behavior, or approved pricing decisions.
+  s1_zh: 作为示例，假设拟合弹性经核实为负 1.40，价格从 38 个货币单位调整为 42。这些数字是教学假设，并非已核实的价格、销售、毛利、成本、顾客行为或获批定价决策。
+  s1_zh_hk: 作為例子，假設擬合彈性經核實係負 1.40，價格由 38 個貨幣單位調整做 42。呢啲數字係教學假設，唔係已核實嘅價格、銷售、毛利、成本、顧客行為或者獲批定價決策。
+  s2_en: The price increase is 10.53%. Multiplying by minus 1.40 gives a first-order approximation of a 14.74% quantity decline.
+    Because the change is not infinitesimal, the exact constant-elasticity calculation is preferable.
+  s2_zh: 价格上涨 10.53%。乘以负 1.40 得到数量下降 14.74% 的一阶近似。由于该变动并非无穷小，更适合使用恒定弹性的精确计算。
+  s2_zh_hk: 價格上升 10.53%。乘以負 1.40 得到數量下降 14.74% 嘅一階近似。由於呢個變動並唔係無窮小，更適合使用恆定彈性嘅精確計算。
+  s3_en: The exact fitted quantity decline is approximately 13.07%, and the corresponding fitted revenue change is approximately
+    minus 3.92% before costs or uncertainty. This does not establish profit impact or causal response and should not authorize
+    a price change by itself.
+  s3_zh: 精确拟合数量降幅约为 13.07%，在未计成本与不确定性前，对应拟合收入变化约为负 3.92%。这不能证明利润影响或因果响应，也不能单独授权调价。
+  s3_zh_hk: 精確擬合數量跌幅約係 13.07%，喺未計成本同不確定性之前，對應擬合收入變化約係負 3.92%。呢個唔可以證明利潤影響或者因果響應，亦唔可以單獨授權調價。
+  step1_zh_hk: 教學假設：彈性 beta_1 = -1.40；價格由 38 調整到 42
+  step2_zh_hk: 價格變化 = 42/38 - 1 = 10.53%；數量嘅線性近似 = -1.40 × 10.53% = -14.74%
+  step3_zh_hk: 精確擬合數量變化 = (42/38)^(-1.40) - 1 = -13.07%；精確擬合收入變化 = (42/38)^(1 - 1.40) - 1 = -3.92%
+  title_en: Compare approximate and exact changes in an assumed scenario
+  title_zh: 在假设情境中比较近似与精确变化
+  title_zh_hk: 喺假設情境入面比較近似同精確變化
+- id: takeaway
+  visual: takeaway
+  seconds: 34
+  q1_en: How is a log-log slope interpreted?
+  q1_zh: 如何解释双对数模型斜率？
+  q2_en: What must be checked before acting?
+  q2_zh: 采取行动前必须检查什么？
+  s1_en: The slope is the fitted percentage change in Q associated with a 1% change in P for small changes, under a constant-elasticity
+    specification. For finite changes, use the power-ratio formula rather than relying only on the linear approximation.
+  s1_zh: 在恒定弹性设定下，对于小幅变动，斜率表示 P 变化 1% 所关联的 Q 拟合百分比变化。对于有限变动，应使用幂比公式，而不应只依赖线性近似。
+  s1_zh_hk: 喺恆定彈性設定之下，對於小幅變動，斜率表示 P 變化 1% 所關聯嘅 Q 擬合百分比變化。對於有限變動，應該使用冪比公式，而唔應該只依賴線性近似。
+  s2_en: Check positivity, data provenance, price variation, confounding, simultaneity, functional form, diagnostics, standard
+    errors, interval estimates, competitive response, costs, and the decision objective. Statistical significance alone is
+    insufficient.
+  s2_zh: 应检查正值要求、数据来源、价格变异、混杂、同时性、函数形式、诊断、标准误、区间估计、竞争反应、成本与决策目标。仅有统计显著性并不足够。
+  s2_zh_hk: 應該檢查正值要求、數據來源、價格變異、混雜、同時性、函數形式、診斷、標準誤、區間估計、競爭反應、成本同決策目標。只有統計顯著性並唔足夠。
+  s3_en: In the assumed scenario, the exact fitted quantity change is minus 13.07% and fitted revenue change is minus 3.92%.
+    Report these as model-based estimates with uncertainty, not verified business outcomes.
+  s3_zh: 在假设情境中，精确拟合数量变化为负 13.07%，拟合收入变化为负 3.92%。应把它们报告为带不确定性的模型估计，而不是已核实商业结果。
+  s3_zh_hk: 喺假設情境入面，精確擬合數量變化係負 13.07%，擬合收入變化係負 3.92%。應該將佢哋報告做帶不確定性嘅模型估計，而唔係已核實商業結果。
+  q1_zh_hk: 點樣解讀雙對數模型斜率？
+  q2_zh_hk: 採取行動之前必須檢查咩？
+  title_en: Use elasticity as an estimate with assumptions, not a pricing command
+  title_zh: 把弹性用作带假设的估计，而不是定价命令
+  title_zh_hk: 將彈性用作帶假設嘅估計，而唔係定價命令

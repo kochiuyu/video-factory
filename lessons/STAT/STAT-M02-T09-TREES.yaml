@@ -1,0 +1,194 @@
+id: STAT-M02-T09-TREES
+course: statistics
+course_en: Business Probability Foundations
+course_zh: 商务概率基础
+course_zh_hk: 商務概率基礎
+audience: first-year business students
+audience_en: first-year business students
+audience_zh: 商学院一年级学生
+audience_zh_hk: 商學院一年級學生
+duration_target_s: 168
+title_en: "Mapping chain reactions"
+title_zh: "绘制连锁反应：概率树与序贯决策"
+title_zh_hk: "繪製連鎖反應：概率樹與序貫決策"
+objective_en: "Construct and evaluate sequential probability trees, explain the two fundamental tree mechanics (multiplying branch probabilities along a path and summing across paths), and trace multi-stage cold-chain supply delivery risks."
+objective_zh: "构建并评估序贯概率树，阐释树状图的两大运算基石（沿路径连乘分支概率，跨路径相加目标结局），并对多环节冷链物流的履约风险进行全程追踪。"
+objective_zh_hk: "構建並評估序貫概率樹，闡釋樹狀圖嘅兩大運算基石（沿路徑連乘分支概率，跨路徑相加目標結局），並對多環節冷鏈物流嘅履約風險進行全程追蹤。"
+glossary:
+- en: "probability tree"
+  zh: "概率树"
+  zh_hk: "概率樹"
+  lock: true
+- en: "sequential process"
+  zh: "序贯流程"
+  zh_hk: "序貫流程"
+  lock: true
+- en: "path probability"
+  zh: "路径联合概率"
+  zh_hk: "路徑聯合概率"
+  lock: true
+- en: "bottleneck"
+  zh: "运营瓶颈"
+  zh_hk: "營運瓶頸"
+  lock: true
+quiz:
+- id: Q1
+  type: multiple_choice
+  question_en: "What are the two golden mathematical rules when calculating probabilities on a sequential probability tree?"
+  question_zh: "在序贯概率树上进行概率计算时，必须遵守的两大核心黄金法则是什么？"
+  question_zh_hk: "喺序貫概率樹上進行概率計算嗰陣，必須遵守嘅兩大核心黃金法則係咩？"
+  options_en:
+  - "A: Multiply along branches to find individual path probabilities; sum across mutually exclusive end paths to find the total probability of an outcome."
+  - "B: Add along branches and multiply across endpoints."
+  - "C: Subtract branch values from the number of leaves on the tree."
+  - "D: Divide all node values by the total company employee headcount."
+  options_zh:
+  - "A: 沿树枝向深处连乘计算单一路径的联合概率；跨越互斥的末端路径求和计算复合结局的总体概率。"
+  - "B: 沿树枝向前相加，并在不同终点之间直接相乘。"
+  - "C: 用树上的末端叶子节点数量减去每个树枝分支的数值。"
+  - "D: 将所有节点上的数值统一除以全公司的员工总人数。"
+  options_zh_hk:
+  - "A: 沿樹枝向深處連乘計算單一路徑嘅聯合概率；跨越互斥嘅末端路徑求和計算複合結局嘅總體概率。"
+  - "B: 沿樹枝向前相加，兼且喺唔同終點之間直接相乘。"
+  - "C: 用樹上面嘅末端葉子節點數量減去每個樹枝分支嘅數值。"
+  - "D: 將所有節點上面嘅數值統一除以全公司嘅員工總人數。"
+  answer: A
+  explanation_en: "By the multiplication rule, successive events along a path are multiplied: P(A and B) = P(A) * P(B|A). By the addition rule, disjoint final paths that lead to the same operational outcome are added together."
+  explanation_zh: "依据乘法法则，沿单一路径连续发生的分支应连乘：P(A 且 B) = P(A) * P(B|A)；依据加法法则，通往同一结果的互斥末端路径应求和汇总。"
+  explanation_zh_hk: "依據乘法法則，沿單一路徑連續發生嘅分支應連乘：P(A 兼 B) = P(A) * P(B|A)；依據加法法則，通往同一結果嘅互斥末端路徑應求和匯總。"
+- id: Q2
+  type: multiple_choice
+  question_en: "A bakery batch passes roasting inspection with probability 0.95. If it passes, the probability of on-time cold-chain delivery is 0.90. What is the probability that a batch passes inspection AND arrives on time?"
+  question_zh: "烘焙批次通过中心烘焙质检的概率为 0.95。质检合格后，冷链冷藏车准时送达的概率为 0.90。批次既通过质检且准时送达的联合概率是多少？"
+  question_zh_hk: "烘焙批次通過中心烘焙質檢嘅概率為 0.95。質檢合格之後，冷鏈冷藏車準時送達嘅概率為 0.90。批次既通過質檢兼且準時送達嘅聯合概率係幾多？"
+  options_en:
+  - "A: 0.855"
+  - "B: 0.950"
+  - "C: 0.050"
+  - "D: 1.850"
+  options_zh:
+  - "A: 0.855"
+  - "B: 0.950"
+  - "C: 0.050"
+  - "D: 1.850"
+  options_zh_hk:
+  - "A: 0.855"
+  - "B: 0.950"
+  - "C: 0.050"
+  - "D: 1.850"
+  answer: A
+  explanation_en: "Multiplying along the successful tree branch: P(Pass and On-Time) = 0.95 * 0.90 = 0.855 (85.5%)."
+  explanation_zh: "沿成功路径相乘：P(合格 且 准时) = 0.95 * 0.90 = 0.855（即 85.5%）。"
+  explanation_zh_hk: "沿成功路徑相乘：P(合格 兼 準時) = 0.95 * 0.90 = 0.855（即 85.5%）。"
+beats:
+- id: hook
+  visual: title_card
+  seconds: 30
+  kicker: "The Fragile Chain"
+  kicker_en: "The Fragile Chain"
+  kicker_zh: "脆弱链路"
+  kicker_zh_hk: "脆弱鏈路"
+  title_en: "Where does the morning supply break?"
+  title_zh: "早晨的供应链究竟在哪一步断裂？"
+  title_zh_hk: "朝早嘅供應鏈究竟喺邊一步斷裂？"
+  en: "Fresh croissants delivered to thirty metro stores do not just magically appear. Flour must clear batch testing, bakery ovens must hold temperature, and refrigerated vans must navigate tunnel traffic before six in the morning. When operations stretch across multiple sequential steps, how do executives visualize all possible paths and pinpoint the exact source of failure?"
+  zh: "每天清晨准时送达三十家市区门店的新鲜可颂，绝非凭空变出来的。面粉必须通过批次质检，商用烤炉必须温控达标，冷链冷藏车必须在清晨六点前穿过跨海隧道。当业务流程横跨多个序贯环节时，管理者究竟该如何看清所有可能的演化分支，精准揪出潜伏的故障源头？"
+  zh_hk: "每日清晨準時送達三十間市區門市嘅新鮮牛角包，絕非憑空變出嚟嘅。麵粉必須通過批次質檢，商用焗爐必須溫控達標，冷鏈冷藏車必須喺清晨六點前穿過跨海隧道。當業務流程橫跨多個序貫環節嗰陣，管理者究竟應該點樣睇清所有可能嘅演化分支，精準揪出潛伏嘅故障源頭？"
+- id: define
+  visual: definition_card
+  seconds: 34
+  kicker: "What It Is"
+  kicker_en: "What It Is"
+  kicker_zh: "核心概念"
+  kicker_zh_hk: "核心概念"
+  title_en: "The sequential probability tree"
+  title_zh: "序贯概率树图的结构与逻辑"
+  title_zh_hk: "序貫概率樹圖嘅結構與邏輯"
+  formula: "Path P = Branch 1 * Branch 2 * ... * Branch K"
+  formula_tex: 'P(\mathrm{path}) = \prod_{k=1}^{K} P(B_k\mid B_1,\ldots,B_{k-1})'
+  formula_zh: "完整路径联合概率 = 分支 1 × 分支 2 × ... × 分支 K"
+  formula_zh_hk: "完整路徑聯合概率 = 分支 1 × 分支 2 × ... × 分支 K"
+  s1_en: "A probability tree is a graphical model that decomposes a multi-stage business process into sequential chronological branches."
+  s1_zh: "概率树是一种结构化的图形模型，它把多阶段的复杂业务流程按照时间发生的先后顺序，逐级拆解为树状分支。"
+  s1_zh_hk: "概率樹係一種結構化嘅圖形模型，佢將多階段嘅複雜業務流程按照時間發生嘅先後順序，逐級拆解為樹狀分支。"
+  s2_en: "Starting from a single root node on the left, each stage branches into all possible mutually exclusive outcomes, labeling each limb with its conditional probability."
+  s2_zh: "从左侧单一的起点根节点出发，每个阶段都向右分裂出所有互斥的可能走势，并在每根树枝上清晰标注其发生条件概率。"
+  s2_zh_hk: "由左側單一嘅起點根節點出發，每個階段都向右分裂出所有互斥嘅可能走勢，並喺每條樹枝上清晰標注其發生條件概率。"
+- id: rules
+  visual: two_column
+  seconds: 36
+  kicker: "The Two Golden Rules"
+  kicker_en: "The Two Golden Rules"
+  kicker_zh: "两大运算铁律"
+  kicker_zh_hk: "兩大運算鐵律"
+  title_en: "Multiply along, sum across"
+  title_zh: "沿径连乘求交集，跨径相加定全盘"
+  title_zh_hk: "沿徑連乘求交集，跨徑相加定全盤"
+  left_en: "Along: Multiply branch probabilities"
+  left_zh: "顺沿路径：连乘树枝概率得联合交集"
+  left_zh_hk: "順沿路徑：連乘樹枝概率得聯合交集"
+  right_en: "Across: Sum up disjoint final paths"
+  right_zh: "跨越路径：累加互斥末端得复合胜率"
+  right_zh_hk: "跨越路徑：累加互斥末端得複合勝率"
+  s1_en: "Navigating a probability tree follows two universal mathematical rules. First, to calculate the probability of any full path, multiply the probabilities along that branch from root to tip."
+  s1_zh: "推演概率树严格遵循两条通用的数学铁律。第一，要计算任何一条完整业务路径的最终概率，只需从根部到末梢顺着树枝一路相乘。"
+  s1_zh_hk: "推演概率樹嚴格遵循兩條通用嘅數學鐵律。第一，要計算任何一條完整業務路徑嘅最終概率，淨係需要由根部到末梢順住樹枝一路相乘。"
+  s2_en: "This reflects the general multiplication rule: each step is conditioned on the branch that came before it."
+  s2_zh: "这正是乘法法则的直观体现：后一阶段的数值，均是在前一步骤已经发生的前提下的条件概率。"
+  s2_zh_hk: "呢個正正係乘法法則嘅直觀體現：後一階段嘅數值，都係喺前一步驟已經發生嘅前提下嘅條件概率。"
+  s3_en: "Second, if an operational outcome can be reached through multiple distinct pathways, sum the probabilities of those final endpoints together."
+  s3_zh: "第二，如果某种运营结局（例如“门店遭遇延误”）可以通过数条互斥的末端路径抵达，只需将这些互斥的末端概率加总即可。"
+  s3_zh_hk: "第二，如果某種營運結局（好似「門市遭遇延誤」）可以透過幾條互斥嘅末端路徑抵達，淨係需要將呢啲互斥嘅末端概率加總即可。"
+- id: ledger
+  visual: steps
+  seconds: 36
+  kicker: "The Ledger"
+  kicker_en: "The Ledger"
+  kicker_zh: "链路实测"
+  kicker_zh_hk: "鏈路實測"
+  title_en: "Tracing the fresh croissant supply chain"
+  title_zh: "全流程推演冷链可颂配送网络"
+  title_zh_hk: "全流程推演冷鏈牛角包配送網絡"
+  step1_en: "Stage 1: Baking pass (0.95) vs Fail (0.05)"
+  step1_zh: "阶段一：烘焙达标（0.95）与报废（0.05）"
+  step1_zh_hk: "階段一：烘焙達標（0.95）與報廢（0.05）"
+  step2_en: "Stage 2: On-time transit (0.90) given pass"
+  step2_zh: "阶段二：达标后冷链准点送达（0.90）"
+  step2_zh_hk: "階段二：達標後冷鏈準點送達（0.90）"
+  step3_en: "Path: 0.95 * 0.90 = 0.855 success"
+  step3_zh: "全链路达标：0.95 × 0.90 = 0.855 成功率"
+  step3_zh_hk: "全鏈路達標：0.95 × 0.90 = 0.855 成功率"
+  s1_en: "Look at our central bakery logistics ledger. Step one: central ovens produce compliant batches ninety-five percent of the time, while five percent fail inspection."
+  s1_zh: "来看中央烘焙工坊的物流台账。第一步：中央烤箱烘焙出合格批次的概率是 95%，另外 5% 质检不达标当场报废。"
+  s1_zh_hk: "睇吓中央烘焙工坊嘅物流台賬。第一步：中央焗爐烘焙出合格批次嘅概率係 95%，另外 5% 質檢唔達標當場報廢。"
+  s2_en: "Step two: given a compliant batch, cold-chain trucks deliver to Mong Kok on time ninety percent of the time, while cross-harbor congestion delays ten percent."
+  s2_zh: "第二步：在批次达标的前提下，冷链车准时送达旺角店的概率为 90%，过海隧道拥堵延误的概率为 10%。"
+  s2_zh_hk: "第二步：喺批次達標嘅前提下，冷鏈車準時送達旺角舖嘅概率為 90%，過海隧道擁堵延誤嘅概率為 10%。"
+  s3_en: "Step three: multiply zero point nine five by zero point nine zero. The probability of clean baking and on-time arrival is zero point eight five five. The complementary probability of failing inspection or missing the on-time target is 1 minus 0.855, which equals 0.145, or 14.5 percent."
+  s3_zh: "第三步：将 0.95 乘以 0.90。既合格又准时送达的概率是 0.855。其对立事件，也就是质检不合格或未能准时送达的概率，为 1 - 0.855 = 0.145，即 14.5%。"
+  s3_zh_hk: "第三步：將 0.95 乘以 0.90。既合格又準時送達嘅概率係 0.855。佢嘅對立事件，即係質檢唔合格或者未能準時送達嘅概率，係 1 - 0.855 = 0.145，即係 14.5%。"
+- id: takeaway
+  visual: takeaway
+  seconds: 32
+  kicker: "Decision Rule"
+  kicker_en: "Decision Rule"
+  kicker_zh: "商业法则"
+  kicker_zh_hk: "商業法則"
+  title_en: "Map the tree to uncover hidden drag"
+  title_zh: "树状拆解链路，揪出隐形损耗"
+  title_zh_hk: "樹狀拆解鏈路，揪出隱形損耗"
+  q1_en: "Why are probability trees vital for operations?"
+  q1_zh: "为什么概率树是精细化运营的利器？"
+  q1_zh_hk: "點解概率樹係精細化營運嘅利器？"
+  q2_en: "How do managers locate the weak link?"
+  q2_zh: "管理者应如何利用树状图锁定薄弱环节？"
+  q2_zh_hk: "管理者應點樣利用樹狀圖鎖定薄弱環節？"
+  s1_en: "Always draw a probability tree when evaluating multi-stage processes to ensure no sequential failure branch is forgotten."
+  s1_zh: "在评估多阶段复杂流程时，务必绘制概率树，确保没有遗漏任何一个可能导致失误的序贯分支。"
+  s1_zh_hk: "喺評估多階段複雜流程嗰陣，務必繪製概率樹，確保冇遺漏任何一個可能搞到出錯嘅序貫分支。"
+  s2_en: "Multiplying along branches shows how stage-level success rates combine into the end-to-end probability of completing the process successfully."
+  s2_zh: "顺着树枝连乘，可以看清各阶段成功率如何共同决定整个流程最终顺利完成的概率。"
+  s2_zh_hk: "順住樹枝連乘，就可以睇清各階段成功率點樣共同決定成個流程最終順利完成嘅概率。"
+  s3_en: "For this supply chain, the tree gives an 85.5 percent clean-and-on-time path and a 14.5 percent complementary disruption risk; managers can inspect each branch before changing the process."
+  s3_zh: "对这条供应链，概率树给出 85.5% 的合格且准时路径，以及 14.5% 的对立风险；管理者可逐条检查分支，再决定改进哪个环节。"
+  s3_zh_hk: "對呢條供應鏈，概率樹計出 85.5% 嘅合格兼準時路徑，同埋 14.5% 嘅對立風險；管理者可以逐條檢查分支，再決定改善邊個環節。"

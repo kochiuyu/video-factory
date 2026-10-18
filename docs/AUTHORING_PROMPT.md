@@ -172,7 +172,7 @@ youtube:
     ...
 ```
 
-Each description must be at most 5000 characters. A mixed cell uses the speech language: `en+zh` pastes `description_en`. The factory writes `out/lessons/<ID>/cells/<ID>_<cell>.youtube.txt` (title, blank line, description). It does not upload to YouTube.
+Each description must be strictly less than 2500 characters. A mixed cell uses the speech language: `en+zh` pastes `description_en`. The factory writes `out/lessons/<ID>/cells/<ID>_<cell>.youtube.txt` (title, blank line, description). It does not upload to YouTube.
 
 ## Beginner standalone rules
 

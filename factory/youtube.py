@@ -13,7 +13,10 @@ from pathlib import Path
 from langs import is_tri, parse_cell, slide_folder
 
 TITLE_GUIDE = 100
-DESCRIPTION_MAX = 5000
+# Exclusive ceiling. len(description) >= DESCRIPTION_MAX is an error:
+# the body must be strictly less than 2500 so mixed-language uploads
+# keep headroom. Counted after normalize_description (trim).
+DESCRIPTION_MAX = 2500
 DESCRIPTION_KEYS = ("description_en", "description_zh", "description_zh_hk")
 
 # Slide-script names. Speech labels are separate: English / 普通话 / 粵語.
@@ -163,10 +166,10 @@ def youtube_errors(lesson: dict) -> list[str]:
                     errors.append(f"youtube.{key} must be a string.")
                     continue
                 body = normalize_description(value)
-                if len(body) > DESCRIPTION_MAX:
+                if len(body) >= DESCRIPTION_MAX:
                     errors.append(
                         f"youtube.{key} is {len(body)} characters;"
-                        f" the maximum is {DESCRIPTION_MAX}."
+                        f" it must be strictly less than {DESCRIPTION_MAX}."
                     )
     for cell in cells_to_check(lesson):
         status, message = title_issue(lesson, cell)

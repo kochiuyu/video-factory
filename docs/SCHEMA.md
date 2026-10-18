@@ -281,7 +281,7 @@ English tags use a leading space and halfwidth parentheses. Chinese tags sit aga
 
 Limits, counted after trimming the description and on the full YouTube title including the tag:
 
-- Description over 5000 characters is an error.
+- A description must be strictly less than 2500 characters. 2500 or more is an error.
 - A mono YouTube title over 100 characters is an error when the base title itself is still within 100.
 - A mono title over 100 is only a warning when the base title is already over 100, so an existing long cover title does not fail the lesson.
 - A mixed-cell title over 100 is a warning. The speech/slides tag is longer, and some existing English titles plus that tag already pass 100. The sidecar is still written. Shorten the base title before upload.

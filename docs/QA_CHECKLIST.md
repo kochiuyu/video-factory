@@ -51,7 +51,7 @@ For `title_card`, `big_number`, `module_open`, and `module_close`:
 ### Staged beats
 - [ ] `definition_card` and `formula` have exactly 2 stages.
 - [ ] `two_column`, `example`, `takeaway`, `three_column`, and 3-step `steps` have exactly 3 stages.
-- [ ] `table_grid`, `schematic_chart`, `dag`, `pair`, `pair_chart`, `pair_box`, `pair_slope`, `redraw`, `turns`, `shrink`, `mix`, and `coin` have exactly 3 stages.
+- [ ] `table_grid`, `rank_line`, `schematic_chart`, `dag`, `pair`, `pair_chart`, `pair_box`, `pair_slope`, `redraw`, `turns`, `shrink`, `mix`, and `coin` have exactly 3 stages.
 - [ ] `payoff_matrix` has no more than 5 stages and matches its intended reveal sequence.
 - [ ] Every stage contains English, 简体, and 繁體.
 - [ ] No whole-beat `en`, `zh`, or `zh_hk` duplicates staged speech.

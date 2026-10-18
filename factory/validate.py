@@ -78,6 +78,7 @@ ALLOWED_VISUALS = {
     "payoff_matrix",
     "table_grid",
     "series",
+    "rank_line",
     "pair",
     "pair_chart",
     "pair_box",
@@ -137,6 +138,11 @@ def validate(lesson: dict, glyphs: bool = True) -> list[str]:
                 errors.append(f"Beat {bid} big_number needs number or formula.")
             if not _stem(beat, "unit"):
                 errors.append(f"Beat {bid} big_number needs unit.")
+        elif vis == "rank_line":
+            from slides import rank_line_problems
+
+            for msg in rank_line_problems(beat):
+                errors.append(f"Beat {bid} {msg}")
         else:
             missing = [s for s in REQUIRED_STEMS.get(vis, ()) if not _stem(beat, s)]
             if missing:

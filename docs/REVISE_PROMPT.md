@@ -65,7 +65,7 @@ Whenever a YAML script is provided, return:
 ## Speech structure — one source
 
 - Unstaged beats (`title_card`, `big_number`, `module_open`, `module_close`): speech only in `en` / `zh` / `zh_hk`.
-- Staged beats (`definition_card`, `formula`, `two_column`, `example`, `takeaway`, `three_column`, `steps`, `payoff_matrix`, `table_grid`, `series`, `schematic_chart`, `dag`): speech only in `s1_*` / `s2_*` and further stages. Delete leftover whole-card `en` / `zh` / `zh_hk` on those beats.
+- Staged beats (`definition_card`, `formula`, `two_column`, `example`, `takeaway`, `three_column`, `steps`, `payoff_matrix`, `table_grid`, `series`, `rank_line`, `schematic_chart`, `dag`): speech only in `s1_*` / `s2_*` and further stages. Delete leftover whole-card `en` / `zh` / `zh_hk` on those beats.
 - `s1` matches `_s1` (first column, first step, definition line). `s2` matches `_s2`. Same for `s3`.
 
 Stage counts:
@@ -74,7 +74,7 @@ Stage counts:
 - `two_column`, `example`, `takeaway`, `three_column`: exactly 3
 - `steps`: 3, or 4–5 when the arithmetic is a numbered stack (`step4_*`, `step5_*`). Speech stages match the steps.
 - `payoff_matrix`: up to 5
-- `table_grid`, `series`, `schematic_chart`, `dag`: 3. A series that names each cell uses `reveal: cells`.
+- `table_grid`, `series`, `rank_line`, `schematic_chart`, `dag`: 3. A series that names each cell uses `reveal: cells`. A rank line uses `s1` for the written values, `s2` for the ordered line, `s3` for the middle.
 - unstaged: one block
 
 ## YAML hygiene

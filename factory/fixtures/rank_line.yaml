@@ -1,0 +1,102 @@
+# Shape fixture for the rank_line visual. Not a lesson and not in lessons/.
+id: RANK-LINE-FIXTURE
+title_en: Rank line fixture
+title_zh: 排序线示例
+title_zh_hk: 排序線示例
+duration_target_s: 48
+beats:
+- id: odd
+  visual: rank_line
+  seconds: 12
+  kicker_en: MEDIAN
+  kicker_zh: 中位数
+  kicker_zh_hk: 中位數
+  title_en: Three values
+  title_zh: 三个数
+  title_zh_hk: 三個數
+  values: 80;200;120
+  order: sorted
+  mark: middle
+  footer_en: Middle = 120
+  footer_zh: 中间 = 120
+  footer_zh_hk: 中間 = 120
+  s1_en: Three values, in the order they were written.
+  s1_zh: 三个数，按写下的顺序。
+  s1_zh_hk: 三個數，按寫低嘅次序。
+  s2_en: Sort them from low to high.
+  s2_zh: 从小到大排好。
+  s2_zh_hk: 由細到大排好。
+  s3_en: One middle cell. The middle is 120.
+  s3_zh: 奇数个，中间一格，是 120。
+  s3_zh_hk: 單數個，中間一格，係 120。
+- id: even
+  visual: rank_line
+  seconds: 12
+  kicker_en: MEDIAN
+  kicker_zh: 中位数
+  kicker_zh_hk: 中位數
+  title_en: Four values
+  title_zh: 四个数
+  title_zh_hk: 四個數
+  values: 200;300;100;400
+  order: sorted
+  footer_en: Share 200 and 300
+  footer_zh: 平分 200 和 300
+  footer_zh_hk: 平分 200 同 300
+  s1_en: Four values, still in the written order.
+  s1_zh: 四个数，还是写下的顺序。
+  s1_zh_hk: 四個數，仍然係寫低嘅次序。
+  s2_en: Put them in order.
+  s2_zh: 排成一条线。
+  s2_zh_hk: 排成一條線。
+  s3_en: Two middle cells. Share 200 and 300.
+  s3_zh: 偶数个，中间两格，平分 200 和 300。
+  s3_zh_hk: 雙數個，中間兩格，平分 200 同 300。
+- id: six
+  visual: rank_line
+  seconds: 12
+  title_en: Six values
+  title_zh: 六个数
+  title_zh_hk: 六個數
+  values: 60;10;40;20;50;30
+  order: sorted
+  footer_en: Share 30 and 40
+  footer_zh: 平分 30 和 40
+  footer_zh_hk: 平分 30 同 40
+  s1_en: Six values, written out of order.
+  s1_zh: 六个数，写下时没有排序。
+  s1_zh_hk: 六個數，寫低嗰陣未排。
+  s2_en: The line runs from low to high.
+  s2_zh: 这条线从小到大。
+  s2_zh_hk: 呢條線由細到大。
+  s3_en: The two middle positions are 30 and 40.
+  s3_zh: 中间两格是 30 和 40。
+  s3_zh_hk: 中間兩格係 30 同 40。
+- id: labels
+  visual: rank_line
+  seconds: 12
+  title_en: Already ordered
+  title_zh: 已经排好
+  title_zh_hk: 已經排好
+  order: as_given
+  v1_en: Poor
+  v1_zh: 差
+  v1_zh_hk: 差
+  v2_en: Fair
+  v2_zh: 中
+  v2_zh_hk: 中
+  v3_en: Good
+  v3_zh: 好
+  v3_zh_hk: 好
+  footer_en: Middle = Fair
+  footer_zh: 中间 = 中
+  footer_zh_hk: 中間 = 中
+  s1_en: Three labels, already written in order.
+  s1_zh: 三个标签，已经按顺序写好。
+  s1_zh_hk: 三個標籤，已經按次序寫好。
+  s2_en: This line stays as written.
+  s2_zh: 这条线保持写下的顺序。
+  s2_zh_hk: 呢條線保持寫低嘅次序。
+  s3_en: The middle label is Fair.
+  s3_zh: 中间的标签是中。
+  s3_zh_hk: 中間嘅標籤係中。

@@ -1,22 +1,43 @@
 # Video factory
 
-Deterministic factory for 1–3 minute educational explainers. One lesson file becomes four experimental cells:
+Short educational videos from a text lesson file — no video editor required.
 
-| Cell | Narration | Captions |
-|------|-----------|----------|
-| `en-en` | English | English |
-| `en-zh` | English | Chinese |
-| `zh-en` | Chinese | English |
-| `zh-zh` | Chinese | Chinese |
+## What you get
 
-The picture is shared. Language lives only in audio and burned-in captions.
+Finished **slide-film** explainers: still slides that advance with a spoken lecture and burned-in captions. One lesson can ship in several languages (English, Mainland Chinese / Putonghua, Hong Kong Chinese / Cantonese). The picture stays the same; only the voice, captions, and (optionally) on-slide labels change.
 
-This repository is the transferable object. A Grok chat is not. Give collaborators the repo, `docs/SETUP.md`, `docs/SOP.md`, `docs/AUTHORING_PROMPT.md`, and `docs/QA_CHECKLIST.md`. Do not give them a transcript of the original design conversation and expect the same videos.
+The reference course in this repo is **Practical Business Statistics**, module 1 — fifteen standalone shorts on center, spread, shape, and association (`lessons/STAT/STAT-M01-T01` … `T15`). See [docs/M01_BEGINNER_REVIEW.md](docs/M01_BEGINNER_REVIEW.md) for the latest beginner-teaching conventions.
+
+This repository is what you hand to collaborators. Give them the repo and the docs below — not a chat transcript.
+
+## What you write
+
+You author **one YAML file per short**. That file is the whole lesson:
+
+- the spoken script in each language
+- which on-screen visual to paint (table, number line, bars, formula, …)
+- titles, labels, and a short quiz
+
+You do **not** scrub a timeline, place clips, or record in a video suite. If a claim is not in the YAML, it will not appear in the video.
+
+Example path: `lessons/STAT/STAT-M01-T02-MEAN.yaml`.
+
+## What the factory does
+
+When you build a lesson, the tools under `factory/` run a fixed pipeline:
+
+1. **Paint slides** — render PNG stills from the YAML visual fields
+2. **Synthesize speech** — text-to-speech for each language (or reuse MP3s you supply)
+3. **Align timing** — pad the shorter languages so every language shares one clock per section
+4. **Burn captions and mux** — combine slides + audio into language **cells** (finished MP4s, one primary language each; bilingual slide variants such as English voice with Chinese labels are optional)
+
+A browser console (`python factory/app.py` → `http://127.0.0.1:8765`) can preview slides and kick off the same builds.
+
+**Glossary (first use):** A **beat** is one scene/card in the YAML. **Staged speech** means the narration is split to match progressive reveals on that card (`s1`, `s2`, `s3`). A **cell** is one finished language cut of the short.
 
 ## Quick start
 
-**First run:** follow [docs/SETUP.md](docs/SETUP.md) in order. That is the
-necessary-steps list (Python, venv, fonts, diagnose, console, first video).
+First run on a blank machine: follow [docs/SETUP.md](docs/SETUP.md) (venv, fonts, diagnose, console). Windows FFmpeg notes: [docs/WINDOWS.md](docs/WINDOWS.md).
 
 ```bash
 python -m venv .venv
@@ -27,11 +48,7 @@ python factory/diagnose.py
 python factory/app.py
 ```
 
-Browser: `http://127.0.0.1:8765`. Select `ECON-QA-01.yaml` → **Preview slides only**.
-Then **Preview captions**, then **Build this lesson**. Leave the terminal open.
-
-The same tree runs on Windows, macOS, and Linux. First run: `docs/SETUP.md`.
-Windows FFmpeg repair: `docs/WINDOWS.md`.
+Browser console: `http://127.0.0.1:8765`. Leave the terminal open while the console runs.
 
 On another machine, point fonts at local Noto files if needed:
 
@@ -42,49 +59,103 @@ export VF_FONT_CJK=/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc
 export VF_FONT_CJK_BOLD=/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc
 ```
 
-## Documents for other people
+## Repo layout
 
-| File | Audience |
-|------|----------|
-| `docs/SETUP.md` | Install and start the console |
-| `docs/SOP.md` | RA / operator after the console runs |
-| `docs/SOP-faculty.html` | Faculty teaching from a finished pack |
-| `docs/SCHEMA.md` | YAML fields and visuals |
-| `docs/AUTHORING_PROMPT.md` | LLM or RA drafting YAML |
-| `docs/REVISE_PROMPT.md` | Rewrite an existing YAML, especially 简 / 繁 |
-| `docs/QA_CHECKLIST.md` | Delivery gate after authoring or revision |
-| `docs/courses/STAT-M01.md` | Descriptive mini-course syllabus |
-| `minicourses/STAT-M01.yaml` | Collection of 15 standalone shorts; not joined |
-| `docs/courses/STAT-M02.md` | Probability mini-course syllabus |
-| `minicourses/STAT-M02.yaml` | Collection of 15 standalone shorts; not joined |
-| `docs/courses/STAT-M03.md` | Distributions mini-course syllabus |
-| `minicourses/STAT-M03.yaml` | Collection of 15 standalone shorts; not joined |
-| `docs/courses/STAT-M04.md` | Sampling, CLT, and interval mini-course syllabus |
-| `minicourses/STAT-M04.yaml` | Collection of 15 standalone shorts; not joined |
-| `docs/courses/STAT-M05.md` | Hypothesis-testing mini-course syllabus |
-| `minicourses/STAT-M05.yaml` | Collection of 15 standalone shorts; not joined |
-| `docs/courses/STAT-M06.md` | Regression mini-course syllabus |
-| `minicourses/STAT-M06.yaml` | Collection of 15 standalone shorts; not joined |
-| `docs/courses/STAT-M07.md` | Multiple-regression and store-experiment mini-course syllabus |
-| `minicourses/STAT-M07.yaml` | Collection of 15 standalone shorts; not joined |
-| `docs/courses/STAT-M08.md` | Logistic-regression and customer-choice mini-course syllabus |
-| `minicourses/STAT-M08.yaml` | Collection of 15 standalone shorts; not joined |
-| `docs/courses/STAT-M09.md` | Time-series and demand-forecasting mini-course syllabus |
-| `minicourses/STAT-M09.yaml` | Collection of 15 standalone shorts; not joined |
-| `docs/courses/STAT-M10.md` | Applied A/B-testing mini-course syllabus |
-| `minicourses/STAT-M10.yaml` | Collection of 15 standalone shorts; not joined |
-| `docs/THEMES.md` | Slide palettes |
-| `docs/WINDOWS.md` | Windows FFmpeg only |
-| `lessons/ECON-QA-01.yaml` | Feature-test short |
+| Path | Role |
+|------|------|
+| `factory/` | Pipeline code: build, validate, console, slides, speech, mux |
+| `lessons/<AREA>/` | Lesson YAML by subject area (`STAT`, `ECON`, `LAE`, …). Drafts: `lessons/_inbox/`; retired: `lessons/_attic/` |
+| `docs/` | Schema, authoring/revise prompts, QA, setup, SOP |
+| `minicourses/` | Lists of shorts in a module (e.g. `STAT-M01.yaml`); collections are **not** joined into one video |
+| `themes/` | Slide color palettes |
+| `fonts/` | Bundled Latin + CJK fonts |
+| `out/` | Build output (slides, audio, finished cells) |
 
-`docs/INSTALL.md` and `docs/BRIEF.template.md` are pointers only. Do not keep a second copy of setup or briefing steps.
+The renderer also accepts a leftover flat `lessons/<ID>.yaml`.
+
+## Validate and build
+
+Check the **saved** YAML before you treat a lesson as done:
+
+```bash
+python factory/validate.py lessons/STAT/STAT-M01-T02-MEAN.yaml
+```
+
+Prints `OK <id> N beats` or `INVALID` with errors. Usage: `validate.py LESSON.yaml`.
+
+Build one lesson (paint → speech → align → cells):
+
+```bash
+python factory/build.py lessons/STAT/STAT-M01-T02-MEAN.yaml --cells en,zh,hk --match-titles
+```
+
+Useful flags (see `python factory/build.py -h`):
+
+| Flag | Meaning |
+|------|---------|
+| `--cells en,zh,hk` | Which language cuts to produce. Also accepts bilingual slide cells such as `en+zh`, `zh+en` |
+| `--match-titles` | Paint slide titles in that cell's language (EN / 简体 / 繁體) |
+| `--slides-only` | PNG stills only — no speech or mux |
+| `--caption-preview` | Stills + caption bars; no speech or mux |
+| `--force-tts` | Regenerate all beat audio |
+| `--no-tts` | Require existing MP3s on the usual paths |
+| `--all` | Every YAML under `lessons/` with the same flags |
+| `--theme <name>` | Palette from `themes/<name>.yaml` |
+
+For a three-language lesson, default cells are `en`, `zh`, and `hk`. Files land under `out/<ID>/cells/`.
+
+Day-to-day operator steps: [docs/SOP.md](docs/SOP.md). Faculty one-pager: [docs/SOP-faculty.html](docs/SOP-faculty.html).
+
+## Doc map — when to use which
+
+| Doc | Use it when |
+|------|-------------|
+| [docs/SCHEMA.md](docs/SCHEMA.md) | Field reference, stage counts, **visual index**, bilingual budgets, IDs |
+| [docs/AUTHORING_PROMPT.md](docs/AUTHORING_PROMPT.md) | Drafting a **new** lesson (paste as standing instructions) |
+| [docs/REVISE_PROMPT.md](docs/REVISE_PROMPT.md) | Rewriting an **existing** YAML — especially elevating 简 / 繁 and matching speech to visuals |
+| [docs/QA_CHECKLIST.md](docs/QA_CHECKLIST.md) | Delivery gate after authoring or revision |
+| [docs/AUTHORING_PROMPT_LAE.md](docs/AUTHORING_PROMPT_LAE.md) | Parallel track: Low-Altitude Economy (`LAE`) on the same factory contract |
+| [docs/M01_BEGINNER_REVIEW.md](docs/M01_BEGINNER_REVIEW.md) | What the M01 beginner pass fixed; conventions below |
+| [docs/SETUP.md](docs/SETUP.md) | Install and first console run |
+| [docs/THEMES.md](docs/THEMES.md) | Slide palettes |
+| [docs/WINDOWS.md](docs/WINDOWS.md) | Windows FFmpeg repair only |
+
+`docs/INSTALL.md` and `docs/BRIEF.template.md` are pointers only — do not keep a second copy of setup steps.
+
+**Visual catalogue:** do not duplicate SCHEMA here. Open [docs/SCHEMA.md](docs/SCHEMA.md) → **Stage speech** (fields and reveal order) and **Visual contract → Visual index** (when to use `rank_line`, `freq_bars`, `dev_bars`, `ratio_bars`, `quad_scatter`, …).
+
+## Beginner conventions (current)
+
+Keep these in every new or revised short (full detail in SCHEMA / AUTHORING / REVISE / QA):
+
+1. **Standalone** — Open on a business cost; close by answering that question. No "last short…" handoff and no "next we will…" teaser.
+2. **Staged speech** — Progressive cards use `s1_*` / `s2_*` / `s3_*` only (not a whole-card `en` on the same beat). Narration follows what appears on screen.
+3. **Work numbers on screen** — Do not speak a finished result unless a card already showed the arithmetic or footer.
+4. **Realistic quiz distractors** — Wrong answers are beginner mistakes (wrong formula, wrong interpretation, causation myth), not jokes or bans. Prefer shorter correct options when you can; keep the answer letter unless asked to change it.
+5. **M01 descriptive divisor** — Variance / covariance and related descriptive formulas divide by **n** (`/n`), not `n-1` (estimation is another short).
+6. **Neutral shops** — Shop A / B / C and days. No Mong Kok, Wan Chai, Airport, or other real place names; Chinese cards keep A店 (not 甲店).
+7. **Uncluttered bilingual** — Stay inside SCHEMA on-screen budgets; put equation walks on `steps` with `layout: rows`; one idea per card when the picture would clutter.
+8. **Define before name** — Plain idea, then the term. Name every symbol in speech on the formula beat.
+
+Speech standards in-repo: **T02-MEAN** for teaching voice; **T08-VARSTD** for beginner math.
+
+## Revise workflow (one short at a time)
+
+How M01 was revised (VF-Revise style):
+
+1. Edit **one** lesson YAML.
+2. `python factory/validate.py lessons/.../<ID>.yaml`
+3. **Stop for OK** before the next short (and before any video build).
+4. After OK to build: `python factory/build.py ... --cells ... --match-titles`, then **stop for OK** again before the next build or commit.
+
+Do not invent topics, story numbers, or new quiz answers. If a suppose file must be added so a card can teach, flag it and wait.
 
 ## Design that must stay fixed
 
-1. Schema first. If it is not in the YAML, it is not in the video.
-2. One clock per section. Pad audio to `max(English, 简, 繁)` per section, then join clips.
-3. TTS is inside `build.py` (Edge neural voices by default). `--no-tts` accepts vendor MP3s on the same paths.
-4. Template changes are code reviews, not chat improvisation.
+1. Schema first — if it is not in the YAML, it is not in the video.
+2. One clock per section — pad audio to `max(English, 简, 繁)` per section, then join clips.
+3. Speech synthesis lives inside `build.py` (Edge neural voices by default); `--no-tts` accepts vendor MP3s on the same paths.
+4. Template / renderer changes are code reviews, not chat improvisation.
 
 ## Out of scope
 

@@ -157,6 +157,10 @@ Do not invent topics, story numbers, or new quiz answers. If a suppose file must
 3. Speech synthesis lives inside `build.py` (Edge neural voices by default); `--no-tts` accepts vendor MP3s on the same paths.
 4. Template / renderer changes are code reviews, not chat improvisation.
 
+## YouTube paste file
+
+A build writes one text file beside each requested cell MP4: `out/lessons/<ID>/cells/<ID>_<cell>.youtube.txt`. Line 1 is the short lesson title plus a language tag (`(English)`, `(普通话)`, `(粵語)`, or a speech/slides tag on a mixed cell). The optional `youtube:` descriptions follow. Nothing is uploaded. See `docs/SCHEMA.md`.
+
 ## Out of scope
 
 Avatar lip-sync, generative B-roll that differs by language, and live lecture capture. Those are a different factory.

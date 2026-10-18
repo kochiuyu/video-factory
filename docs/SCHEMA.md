@@ -7,7 +7,7 @@ A lesson is one YAML file under `lessons/<AREA>/`. The renderer looks up the fil
 | Field | Type | Rule |
 |--------|------|------|
 | `id` | string | Stable experiment/lesson ID. Must match the filename stem. See **IDs** below. |
-| `title_en`, `title_zh`, `title_zh_hk` | string | YouTube title and cover title. Name the topic so it stands alone. Do not depend on the example. |
+| `title_en`, `title_zh`, `title_zh_hk` | string | Short base title. Used on the cover and as the start of the YouTube title. Name the topic so it stands alone. Do not depend on the example. Do not append `(English)`, `(普通话)`, or `(粵語)` here. |
 | `duration_target_s` | number | Must equal the sum of beat `seconds`. A short module is often 60–240. A standalone teaching short may run longer when the beginner explanation needs it. `validate.py` currently errors only when the absolute gap exceeds 20 seconds. |
 | `beats` | list | Ordered scenes. One claim or concept per beat. |
 
@@ -69,7 +69,7 @@ These visuals paint progressive stills. Write one spoken chunk per still:
 
 ## Optional fields
 
-Lesson: `course`, `course_en`, `course_zh`, `course_zh_hk`, `audience`, `audience_en`, `audience_zh`, `audience_zh_hk`, `objective_en`, `objective_zh`, `objective_zh_hk`, `glossary`, `quiz`.
+Lesson: `course`, `course_en`, `course_zh`, `course_zh_hk`, `audience`, `audience_en`, `audience_zh`, `audience_zh_hk`, `objective_en`, `objective_zh`, `objective_zh_hk`, `youtube`, `glossary`, `quiz`.
 
 Beat: `kicker` (or `kicker_en` / `kicker_zh` / `kicker_zh_hk`), `title_en`, `title_zh`, `title_zh_hk`, `formula`, `gloss_*`, `left_*`, `right_*`, `setup_*`, `result_*`, `q1_*`, `q2_*`, `col1_*`, `col2_*`, `col3_*`, `step1_*`, `step2_*`, `step3_*`, `s1_*` … `s5_*`, `number`, `unit_*`, `caption_*`, `seconds`. Common English kickers (Concept, Definition, Example, Takeaway, …) are translated when labels are Chinese.
 
@@ -240,6 +240,53 @@ footer_en: "Five shops: r ≈ +1.00"
 ```
 
 Glossary item: `en`, `zh`, `zh_hk` (optional), `lock` (boolean). If `lock: true`, neither the bot nor an RA may paraphrase that pair.
+
+## YouTube upload text
+
+Optional. v1 writes a paste file only. There is no YouTube API upload, no JSON sidecar, and no copy from `objective_*`.
+
+```yaml
+youtube:
+  description_en: |
+    ...
+  description_zh: |
+    ...
+  description_zh_hk: |
+    ...
+```
+
+Each requested cell gets one file beside its MP4:
+
+```
+out/lessons/<ID>/cells/<ID>_<cell>.youtube.txt
+```
+
+Line 1 is the YouTube title. A blank line follows. The description body is the rest. A missing description still writes the file: the title, a blank line, and an empty body.
+
+The factory builds the title from the short base title plus a language tag. The description follows the **speech** language, so `en+zh` uses `description_en`.
+
+| Cell | Title |
+|------|--------|
+| `en` | `title_en` + ` (English)` |
+| `zh` | `title_zh` + ` (普通话)` |
+| `hk` | `title_zh_hk` + ` (粵語)` |
+| `en+zh` | `title_en` + ` (Speech: English · Slides: 简体)` |
+| `en+hk` | `title_en` + ` (Speech: English · Slides: 繁體)` |
+| `zh+en` | `title_zh` + `（旁白：普通话 · 画面：English）` |
+| `zh+hk` | `title_zh` + `（旁白：普通话 · 画面：繁體）` |
+| `hk+en` | `title_zh_hk` + `（旁白：粵語 · 畫面：English）` |
+| `hk+zh` | `title_zh_hk` + `（旁白：粵語 · 畫面：简体）` |
+
+English tags use a leading space and halfwidth parentheses. Chinese tags sit against the title and use fullwidth parentheses. Putonghua tags stay in 简体 (`画面`). Cantonese tags stay in 繁體 (`畫面`). The dot is `·`.
+
+Limits, counted after trimming the description and on the full YouTube title including the tag:
+
+- Description over 5000 characters is an error.
+- A mono YouTube title over 100 characters is an error when the base title itself is still within 100.
+- A mono title over 100 is only a warning when the base title is already over 100, so an existing long cover title does not fail the lesson.
+- A mixed-cell title over 100 is a warning. The speech/slides tag is longer, and some existing English titles plus that tag already pass 100. The sidecar is still written. Shorten the base title before upload.
+
+`validate.py` prints title warnings and still exits 0. A description error exits 1.
 
 ## Quiz schema
 
@@ -455,11 +502,14 @@ Beat `id` is a different namespace: `hook`, `define`, `takeaway` inside one less
 ```
 lessons/<AREA>/<ID>.yaml
 modules/<AREA-M##>.yaml
-out/<ID>/slides/<lang or zh+en>/<nn>_<beat_id>[_sN].png
-out/<ID>/preview/<lang>/…
-out/<ID>/audio/{en,zh_cn,zh_hk}/<beat_id>.mp3
-out/<ID>/cells/<ID>_{en,zh,hk,en+zh,…}.mp4
+out/lessons/<ID>/slides/<lang or zh+en>/<nn>_<beat_id>[_sN].png
+out/lessons/<ID>/preview/<lang>/…
+out/lessons/<ID>/audio/{en,zh_cn,zh_hk}/<beat_id>.mp3
+out/lessons/<ID>/cells/<ID>_{en,zh,hk,en+zh,…}.mp4
+out/lessons/<ID>/cells/<ID>_{en,zh,hk,en+zh,…}.youtube.txt
 ```
+
+The `.youtube.txt` file is the paste title and description for that cell. See **YouTube upload text**.
 
 Primary language sets voice, captions, and primary slide labels: `en`, `zh` (Putonghua / 简), `hk` (Cantonese / 繁). A name with `+second` adds that language on the slides, for example `en+zh` is English speech and captions with bilingual English + 简 slides. Voice and captions stay the same language.
 

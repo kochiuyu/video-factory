@@ -8,6 +8,7 @@ import yaml
 
 from glyphs import scan_lesson
 from langs import beat_text, stage_lines
+from youtube import youtube_errors, youtube_warnings
 
 
 def _stem(beat: dict, name: str) -> str:
@@ -238,6 +239,7 @@ def validate(lesson: dict, glyphs: bool = True) -> list[str]:
         if key not in lesson:
             errors.append(f"Missing field: {key}")
     beats = lesson.get("beats") or []
+    errors.extend(youtube_errors(lesson))
     if not beats:
         errors.append("No beats.")
         return errors
@@ -330,6 +332,7 @@ def main() -> int:
     lesson = load_lesson(path)
     errors = validate(lesson)
     warns = text_length_warnings(lesson)
+    warns.extend(youtube_warnings(lesson))
     if errors:
         print("INVALID")
         for e in errors:

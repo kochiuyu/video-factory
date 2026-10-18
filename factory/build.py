@@ -88,6 +88,7 @@ from slides import (  # noqa: E402
     write_stage_slides,
 )
 from theme import load_theme  # noqa: E402
+from youtube import write_youtube_sidecars, youtube_warnings  # noqa: E402
 from tts import synthesize_lesson  # noqa: E402
 from validate import load_lesson, validate  # noqa: E402
 
@@ -434,6 +435,10 @@ def build(
     print("tracks:", ", ".join(langs) or "(none)")
     print("cells:", ", ".join(cells) or "(none)")
     print("titles:", "match cell language" if match_titles else f"shared {label_lang}")
+    for warning in youtube_warnings(lesson, cells):
+        print("warn:", warning)
+    for path in write_youtube_sidecars(lesson, cells, out_dir):
+        print("youtube:", path)
     clock = StepClock()
     theme = load_theme(theme_name)
     cell_slides: dict[str, tuple[str, str | None]] = {}

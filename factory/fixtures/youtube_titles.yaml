@@ -1,0 +1,12 @@
+# Shape fixture for YouTube title tags. Not a lesson and not in lessons/.
+id: YT-TITLE-FIXTURE
+title_en: What is the mean?
+title_zh: 什么是平均数？
+title_zh_hk: 咩係平均數？
+youtube:
+  description_en: |
+    The mean is the total divided by the number of days.
+  description_zh: |
+    平均数就是把总数除以天数。
+  description_zh_hk: |
+    平均數就係將總數除以日數。

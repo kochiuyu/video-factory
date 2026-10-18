@@ -32,6 +32,9 @@ Use this checklist after authoring or revising a lesson and before delivery. Val
 ## 4. Lesson-level completeness
 - [ ] Required lesson fields are present.
 - [ ] Titles and objective are synchronized across English, 简体, and 繁體.
+- [ ] `title_*` is the short cover title only. It does not already contain `(English)`, `(普通话)`, `(粵語)`, or a speech/slides tag.
+- [ ] If `youtube:` is present, it has only `description_en`, `description_zh`, and `description_zh_hk`. Each description is at most 5000 characters. It was not copied from `objective_*`.
+- [ ] A mono YouTube title (base title plus the language tag) is within 100 characters. A mixed-cell title over 100 is a warning to shorten before upload, not a reason to invent a second title field.
 - [ ] `duration_target_s` equals the sum of beat `seconds`. A short module is often 60–240. A standalone teaching short may run longer when the beginner explanation is split.
 - [ ] Glossary items contain required language fields.
 - [ ] Every `lock: true` glossary string is preserved exactly.

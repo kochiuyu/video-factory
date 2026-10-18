@@ -151,14 +151,28 @@ Pick a card that already exists:
 2. **Comparison operators**: In ordinary text, write `>`, `<`, `>=`, and `<=` without backslashes. Never emit invalid YAML escapes such as `\>`, `\<`, or `\=`. Reserve LaTeX-style escaping for `formula_tex`.
 3. **Never Output Citation Markers**: Do not output raw markdown reference tags or bracketed citation markers inside YAML lesson files.
 
-## YouTube title
+## YouTube title and description
 
-The lesson `title_en`, `title_zh`, and `title_zh_hk` are the YouTube title and the cover title. A viewer sees them with no other context.
+`title_en`, `title_zh`, and `title_zh_hk` are the short base title. The cover uses them as written. The factory appends the language tag when it writes the YouTube paste file. Do not put `(English)`, `(普通话)`, or `(粵語)` in the YAML title.
 
 - Name the topic. A viewer who has not opened the video must know what it teaches. The hook card uses the same name: "What is skewness?"
 - Do not depend on the example. "The four shops", "this shop", and "these days" are inside the short. They are not the title.
-- Keep it short enough for a 1920x1080 cover, usually one line in English.
+- Keep it short enough for a 1920x1080 cover, usually one line in English. Leave room for the language tag: a mono YouTube title over 100 characters fails validation when the base title itself still fits in 100.
 - The three languages ask the same question.
+
+Optional upload description. Leave it out until the description is actually written. Do not copy `objective_*` into it. A missing description is valid; the paste file still contains the title.
+
+```yaml
+youtube:
+  description_en: |
+    ...
+  description_zh: |
+    ...
+  description_zh_hk: |
+    ...
+```
+
+Each description must be at most 5000 characters. A mixed cell uses the speech language: `en+zh` pastes `description_en`. The factory writes `out/lessons/<ID>/cells/<ID>_<cell>.youtube.txt` (title, blank line, description). It does not upload to YouTube.
 
 ## Beginner standalone rules
 

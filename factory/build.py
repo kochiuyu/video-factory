@@ -57,10 +57,12 @@ from langs import (  # noqa: E402
     selected_langs,
 )
 from mux import (  # noqa: E402
+    CAP_TIME_WEIGHT,
+    CAP_TIME_WORDS,
     caption_pages,
     concat_clips,
+    holds_for_pages,
     make_beat_clip,
-    page_holds,
     pages_for_stages,
     probe_duration,
     stage_scripts,
@@ -89,7 +91,7 @@ from slides import (  # noqa: E402
 )
 from theme import load_theme  # noqa: E402
 from youtube import write_youtube_sidecars, youtube_warnings  # noqa: E402
-from tts import synthesize_lesson  # noqa: E402
+from tts import load_word_times, synthesize_lesson  # noqa: E402
 from validate import load_lesson, validate  # noqa: E402
 
 FONTSDIR = fonts_dir()
@@ -126,7 +128,14 @@ def _clip_workers() -> int:
     return max(1, min(n, 4, cpu))
 
 
-def _clip_key(stills: list[Path], holds: list[float], audio: Path, progress_bar: bool, cap: str) -> str:
+def _clip_key(
+    stills: list[Path],
+    holds: list[float],
+    audio: Path,
+    progress_bar: bool,
+    cap: str,
+    cap_time: str = CAP_TIME_WEIGHT,
+) -> str:
     from mux import clip_fps
 
     payload = {
@@ -139,7 +148,7 @@ def _clip_key(stills: list[Path], holds: list[float], audio: Path, progress_bar:
         "beat_fade": os.environ.get("VF_BEAT_FADE", "0"),
         "fps": clip_fps(),
         "join": "concat",
-        "cap_time": "speech-weight",
+        "cap_time": cap_time,
     }
     return digest_obj(payload)
 
@@ -574,21 +583,36 @@ def build(
         print("stage stills:", out_dir / "slides" / folder)
     clock.lap("stage stills")
 
-    def beat_pages_and_holds(beat: dict, dur: float, sub_lang: str) -> tuple[list[str], list[float], list[int], list[int]]:
+    def beat_pages_and_holds(
+        beat: dict,
+        dur: float,
+        sub_lang: str,
+        spoken_lang: str | None = None,
+    ) -> tuple[list[str], list[float], list[int], list[int], str]:
+        # Captions are sub_lang. Word times come from the spoken MP3 so a
+        # bilingual cell follows that cell's voice. A mismatch falls back.
+        spoken = spoken_lang or sub_lang
+        words = load_word_times(audio_root / spoken / f"{beat['id']}.mp3")
         plan = stage_plan(beat, dur) if stage_cards else [0]
         text = beat_text(beat, sub_lang)
         if plan == [0]:
             pages = caption_pages(text)
-            return pages, page_holds(dur, pages), plan, [0] * max(1, len(pages))
-        chunks = stage_scripts(beat, sub_lang, len(plan))
-        pages, page_durs, still_idx = pages_for_stages(text, dur, len(plan), chunks=chunks)
-        return pages, page_durs, plan, still_idx
+            holds, how = holds_for_pages(dur, pages, words)
+            still_idx = [0] * max(1, len(pages))
+        else:
+            chunks = stage_scripts(beat, sub_lang, len(plan))
+            pages, holds, still_idx, how = pages_for_stages(
+                text, dur, len(plan), chunks=chunks, words=words
+            )
+        if words and how != CAP_TIME_WORDS:
+            print(f"caption timing: {spoken}/{beat['id']} word match failed; speech-weight")
+        return pages, holds, plan, still_idx, how
 
-    def cues(lang: str) -> list[tuple[float, float, str]]:
+    def cues(spoken_lang: str, caption_lang: str) -> list[tuple[float, float, str]]:
         t = 0.0
         out = []
         for beat, d in zip(lesson["beats"], durations):
-            pages, holds, _plan, _idx = beat_pages_and_holds(beat, d, lang)
+            pages, holds, _plan, _idx, _how = beat_pages_and_holds(beat, d, caption_lang, spoken_lang)
             for page, hold in zip(pages, holds):
                 out.append((t, t + max(hold - 0.02, 0.35), page))
                 t += hold
@@ -623,8 +647,10 @@ def build(
             parts = tracks[audio_lang]
             pending: list[tuple] = []
             for i, (beat, dur, audio) in enumerate(zip(lesson["beats"], durations, parts), start=1):
-                pages, holds, plan, still_idx = beat_pages_and_holds(beat, dur, sub_lang)
-                print(f"captions {name}/{beat['id']}: {len(pages)} cards")
+                pages, holds, plan, still_idx, cap_time = beat_pages_and_holds(
+                    beat, dur, sub_lang, audio_lang
+                )
+                print(f"captions {name}/{beat['id']}: {len(pages)} cards ({cap_time})")
                 base = stills_for_beat(slide_dir, i, beat, plan)
                 if not base:
                     continue
@@ -636,7 +662,7 @@ def build(
                     stamped.append(dest)
                     _publish_caption_preview(dest, still, out_dir / "preview" / folder, j, len(pages))
                 clip = clip_dir / f"{i:02d}_{beat['id']}.mp4"
-                clip_key = _clip_key(stamped, holds, audio, progress_bar, cap="on")
+                clip_key = _clip_key(stamped, holds, audio, progress_bar, cap="on", cap_time=cap_time)
                 clips.append(clip)
                 if stamp_ok(clip, clip_key):
                     print(f"clip: reuse {clip.name}")
@@ -644,7 +670,9 @@ def build(
                     pending.append((clip, stamped, holds, audio, clip_key, f"{name}/{beat['id']}", progress_bar))
                 if experiment_pack and pack_nocap:
                     raw_clip = clip_dir / f"{i:02d}_{beat['id']}_nocap.mp4"
-                    raw_key = _clip_key(stills[: len(holds)], holds, audio, progress_bar, cap="off")
+                    raw_key = _clip_key(
+                        stills[: len(holds)], holds, audio, progress_bar, cap="off", cap_time=cap_time
+                    )
                     nocap_clips.append(raw_clip)
                     if stamp_ok(raw_clip, raw_key):
                         print(f"clip: reuse {raw_clip.name}")
@@ -672,7 +700,7 @@ def build(
             else:
                 concat_clips(clips, dest)
                 write_mark(dest, join_key)
-            write_srt(cues(sub_lang), srt_dir / f"{name}.srt")
+            write_srt(cues(audio_lang, sub_lang), srt_dir / f"{name}.srt")
             print("cell:", dest, f"({probe_duration(dest):.1f}s)")
             if experiment_pack and pack_nocap and nocap_clips:
                 off = out_dir / "cells" / f"{lesson['id']}_{name}_nocap.mp4"

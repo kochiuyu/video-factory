@@ -4,6 +4,10 @@
 Default is Microsoft Edge neural voices via edge-tts.
 Google Cloud TTS is selected with VF_TTS=google.
 
+Edge writes ``<beat>.mp3.words.json`` beside each MP3: word start/end in
+seconds. Caption timing prefers that file and falls back to speech-weight
+when it is missing or does not match the cards. Google does not write one.
+
 Edge voices can be overridden:
   VF_VOICE_EN=en-US-GuyNeural
   VF_VOICE_ZH=zh-CN-YunxiNeural
@@ -199,6 +203,97 @@ def _pitch_semitones() -> float:
     return max(-20.0, min(20.0, hz / 10.0))
 
 
+# Edge WordBoundary offset/duration are in 100 ns ticks.
+EDGE_TICKS_PER_SECOND = 10_000_000
+
+
+def words_sidecar(audio: Path) -> Path:
+    """Word times for audio/en/beat.mp3 live at audio/en/beat.mp3.words.json."""
+    return audio.with_name(audio.name + ".words.json")
+
+
+def word_times_required() -> bool:
+    """Edge speech is not reusable without the sidecar. Google stays weight-timed."""
+    return tts_backend() == "edge"
+
+
+def words_from_edge_ndjson(path: Path) -> list[dict]:
+    """Normalize edge-tts WordBoundary NDJSON into seconds."""
+    words: list[dict] = []
+    if not path.is_file():
+        return words
+    for line in path.read_text(encoding="utf-8").splitlines():
+        raw = line.strip()
+        if not raw:
+            continue
+        row = json.loads(raw)
+        if not isinstance(row, dict) or row.get("type") != "WordBoundary":
+            continue
+        start = round(float(row["offset"]) / EDGE_TICKS_PER_SECOND, 3)
+        end = round(start + float(row["duration"]) / EDGE_TICKS_PER_SECOND, 3)
+        words.append({"text": str(row.get("text") or ""), "start": start, "end": end})
+    return words
+
+
+def write_words_sidecar(audio: Path, words: list[dict], backend: str = "edge") -> Path:
+    dest = words_sidecar(audio)
+    payload = {
+        "words": [
+            {
+                "text": str(word.get("text") or ""),
+                "start": round(float(word["start"]), 3),
+                "end": round(float(word["end"]), 3),
+            }
+            for word in words
+        ],
+        "backend": backend,
+    }
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    tmp = dest.with_name(f"{dest.name}.{os.getpid()}.tmp.json")
+    tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return replace_file(tmp, dest)
+
+
+def _load_words_payload(path: Path) -> dict | None:
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError):
+        return None
+    if not isinstance(data, dict) or data.get("backend") != "edge":
+        return None
+    words = data.get("words")
+    if not isinstance(words, list):
+        return None
+    for word in words:
+        if not isinstance(word, dict):
+            return None
+        if "text" not in word or "start" not in word or "end" not in word:
+            return None
+        try:
+            float(word["start"])
+            float(word["end"])
+        except (TypeError, ValueError):
+            return None
+    return data
+
+
+def words_sidecar_ok(audio: Path) -> bool:
+    return _load_words_payload(words_sidecar(audio)) is not None
+
+
+def load_word_times(audio: Path) -> list[dict] | None:
+    """Word timings for this MP3, or None when the sidecar is missing or unusable."""
+    data = _load_words_payload(words_sidecar(audio))
+    if data is None:
+        return None
+    return [
+        {"text": str(word["text"]), "start": float(word["start"]), "end": float(word["end"])}
+        for word in data["words"]
+    ]
+
+
 async def _save_edge(text: str, voice: str, dest: Path) -> None:
     import edge_tts
     import edge_tts.communicate as edge_communicate
@@ -216,14 +311,24 @@ async def _save_edge(text: str, voice: str, dest: Path) -> None:
     print("tts: using api.msedgeservices.com")
 
     dest.parent.mkdir(parents=True, exist_ok=True)
-    comm = edge_tts.Communicate(
-        text,
-        voice,
-        rate=tts_rate(),
-        volume=tts_volume(),
-        pitch=tts_pitch(),
-    )
-    await comm.save(str(dest))
+    meta = dest.with_name(dest.name + ".boundary.ndjson")
+    try:
+        comm = edge_tts.Communicate(
+            text,
+            voice,
+            rate=tts_rate(),
+            volume=tts_volume(),
+            pitch=tts_pitch(),
+            boundary="WordBoundary",
+        )
+        await comm.save(str(dest), str(meta))
+        words = words_from_edge_ndjson(meta)
+        write_words_sidecar(dest, words)
+    finally:
+        try:
+            meta.unlink(missing_ok=True)
+        except OSError:
+            pass
 
 
 async def _save_google(text: str, voice: str, dest: Path, language: str) -> None:
@@ -300,10 +405,29 @@ def _tmp_mp3(dest: Path, attempt: int) -> Path:
 
 
 def _drop_tmp(path: Path) -> None:
-    try:
-        path.unlink(missing_ok=True)
-    except OSError:
-        pass
+    for extra in (path, words_sidecar(path), path.with_name(path.name + ".boundary.ndjson")):
+        try:
+            extra.unlink(missing_ok=True)
+        except OSError:
+            pass
+
+
+def _commit_audio(tmp: Path, dest: Path) -> Path:
+    """Move the MP3 into place, and the word sidecar with it.
+
+    A Google take has no sidecar, so any previous Edge timings are removed
+    before the new audio replaces the old file.
+    """
+    side_tmp = words_sidecar(tmp)
+    side_dest = words_sidecar(dest)
+    if side_tmp.is_file():
+        replace_file(side_tmp, side_dest)
+    else:
+        try:
+            side_dest.unlink(missing_ok=True)
+        except OSError:
+            pass
+    return replace_file(tmp, dest)
 
 
 def synthesize(text: str, language: str, dest: Path) -> Path:
@@ -316,8 +440,7 @@ def synthesize(text: str, language: str, dest: Path) -> Path:
             asyncio.run(_save(text, voice, tmp, language))
             if not tmp.exists() or tmp.stat().st_size < 256:
                 raise RuntimeError(f"TTS produced no audio: {dest}")
-            replace_file(tmp, dest)
-            return dest
+            return _commit_audio(tmp, dest)
         except Exception as exc:  # noqa: BLE001
             last = exc
             print(f"tts retry {attempt}/{TTS_TRIES} {language} {dest.stem}: {type(exc).__name__}")
@@ -326,17 +449,30 @@ def synthesize(text: str, language: str, dest: Path) -> Path:
     raise RuntimeError(_fail_message(last)) from last
 
 
+def _speech_payload(text: str, lang: str) -> dict:
+    payload = {
+        "backend": tts_backend(),
+        "text": text,
+        "voice": voice_for(lang),
+        "rate": tts_rate(),
+        "volume": tts_volume(),
+        "pitch": tts_pitch(),
+    }
+    if word_times_required():
+        payload["timestamps"] = "edge-words"
+    return payload
+
+
 def _speech_key(text: str, lang: str) -> str:
-    return digest_obj(
-        {
-            "backend": tts_backend(),
-            "text": text,
-            "voice": voice_for(lang),
-            "rate": tts_rate(),
-            "volume": tts_volume(),
-            "pitch": tts_pitch(),
-        }
-    )
+    return digest_obj(_speech_payload(text, lang))
+
+
+def _reuse_speech(dest: Path, key: str) -> bool:
+    if not dest.exists() or not audio_ok(dest) or not stamp_ok(dest, key):
+        return False
+    if word_times_required() and not words_sidecar_ok(dest):
+        return False
+    return True
 
 
 def _fail_message(last: Exception | None) -> str:
@@ -367,8 +503,7 @@ async def _save_with_retries(text: str, lang: str, dest: Path) -> Path:
                 raise RuntimeError(f"TTS produced no audio: {dest}")
             if os.name == "nt":
                 await asyncio.sleep(0.2)
-            replace_file(tmp, dest)
-            return dest
+            return _commit_audio(tmp, dest)
         except Exception as exc:  # noqa: BLE001
             last = exc
             print(f"tts retry {attempt}/{TTS_TRIES} {lang} {dest.stem}: {type(exc).__name__}")
@@ -401,10 +536,19 @@ def synthesize_lesson(
             text = beat_text(beat, lang)
             key = _speech_key(text, lang)
             out[lang].append(dest)
-            if dest.exists() and not overwrite and audio_ok(dest) and stamp_ok(dest, key):
+            if _reuse_speech(dest, key) and not overwrite:
                 print(f"progress: speech {done}/{total} {lang}/{beat['id']} reuse")
                 continue
-            if dest.exists() and not overwrite and audio_ok(dest) and not stamp_ok(dest, key):
+            if (
+                dest.exists()
+                and not overwrite
+                and audio_ok(dest)
+                and stamp_ok(dest, key)
+                and word_times_required()
+                and not words_sidecar_ok(dest)
+            ):
+                print(f"tts: word times missing {lang}/{beat['id']}")
+            elif dest.exists() and not overwrite and audio_ok(dest) and not stamp_ok(dest, key):
                 print(f"tts: script changed {lang}/{beat['id']}")
             elif dest.exists() and not overwrite:
                 print(f"tts: replacing broken {lang}/{beat['id']}")
@@ -423,6 +567,11 @@ def synthesize_lesson(
             async with sem:
                 print(f"tts: {lang}/{beat['id']}")
                 await _save_with_retries(text, lang, dest)
+                words = load_word_times(dest)
+                if words:
+                    print(f"tts: {lang}/{beat['id']} {len(words)} word times")
+                elif word_times_required():
+                    print(f"tts: {lang}/{beat['id']} no word times")
                 write_mark(dest, key)
                 finished += 1
                 print(f"progress: speech {finished}/{len(pending)} {lang}/{beat['id']}")

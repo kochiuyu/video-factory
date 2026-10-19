@@ -572,6 +572,101 @@ def _caption_letters(text: str) -> str:
     return "".join(ch for ch in (text or "") if not ch.isspace())
 
 
+CAP_TIME_WORDS = "tts-words"
+CAP_TIME_WEIGHT = "speech-weight"
+
+
+def _letter_starts(words: list[dict]) -> list[tuple[str, float]] | None:
+    """One (character, start-second) per spoken letter.
+
+    Letters inside a single Edge word share that word's span evenly, so a
+    caption wrap can cut a CJK token without losing the match.
+    """
+    out: list[tuple[str, float]] = []
+    for word in words:
+        if not isinstance(word, dict):
+            return None
+        try:
+            start = float(word["start"])
+            end = float(word["end"])
+        except (KeyError, TypeError, ValueError):
+            return None
+        if start < 0 or end < start:
+            return None
+        letters = _caption_letters(str(word.get("text") or ""))
+        if not letters:
+            continue
+        step = (end - start) / len(letters)
+        for i, ch in enumerate(letters):
+            out.append((ch, start + i * step))
+    return out
+
+
+def holds_from_word_times(duration: float, pages: list[str], words: list[dict]) -> list[float] | None:
+    """Tile `duration` by caption pages using word times.
+
+    Returns None when the word letter stream does not match the pages.
+    The first card owns any leading silence. The last card runs through
+    trailing and pad silence to the full beat length.
+    """
+    if not pages or not words:
+        return None
+    letters = _letter_starts(words)
+    if not letters:
+        return None
+    cursor = 0
+    page_starts: list[float] = []
+    for page in pages:
+        chars = _caption_letters(page)
+        if not chars:
+            return None
+        first_t: float | None = None
+        for ch in chars:
+            if cursor >= len(letters) or letters[cursor][0] != ch:
+                return None
+            if first_t is None:
+                first_t = letters[cursor][1]
+            cursor += 1
+        if first_t is None:
+            return None
+        page_starts.append(first_t)
+    if cursor != len(letters):
+        return None
+    duration = max(float(duration), 0.05)
+    if any(t < -0.02 for t in page_starts):
+        return None
+    if any(page_starts[i] + 1e-3 < page_starts[i - 1] for i in range(1, len(page_starts))):
+        return None
+    if len(pages) == 1:
+        return [duration]
+    if any(t > duration + 1e-3 for t in page_starts[1:]):
+        return None
+    bounds = [0.0]
+    for raw in page_starts[1:]:
+        t = min(max(raw, bounds[-1]), duration)
+        if t <= bounds[-1] + 1e-3:
+            return None
+        bounds.append(t)
+    holds = [bounds[i + 1] - bounds[i] for i in range(len(bounds) - 1)]
+    holds.append(duration - bounds[-1])
+    if holds[-1] <= 1e-3 or any(h < 0 for h in holds):
+        return None
+    return holds
+
+
+def holds_for_pages(
+    duration: float,
+    pages: list[str],
+    words: list[dict] | None = None,
+) -> tuple[list[float], str]:
+    """Prefer Edge word times. Fall back to speech-weight when they do not fit."""
+    if words:
+        timed = holds_from_word_times(duration, pages, words)
+        if timed is not None:
+            return timed, CAP_TIME_WORDS
+    return page_holds(duration, pages), CAP_TIME_WEIGHT
+
+
 def _split_sentences(text: str) -> list[str]:
     raw = (text or "").strip()
     if not raw:
@@ -633,11 +728,19 @@ def stage_scripts(beat: dict, lang: str, n: int) -> list[str]:
     return script_chunks(body, n) if n > 1 else [body or " "]
 
 
-def pages_for_stages(text: str, total_dur: float, n_stages: int = 1, chunks: list[str] | None = None) -> tuple[list[str], list[float], list[int]]:
+def pages_for_stages(
+    text: str,
+    total_dur: float,
+    n_stages: int = 1,
+    chunks: list[str] | None = None,
+    words: list[dict] | None = None,
+) -> tuple[list[str], list[float], list[int], str]:
     """Caption cards follow the spoken line across the whole beat.
 
     Stage stills change when the script reaches that chunk. Timing is not
     trapped inside the visual stage clock, which made captions race ahead.
+    Word timestamps time the pages when `words` matches; otherwise the
+    holds stay on speech-weight.
     """
     n = max(1, int(n_stages))
     chunks = list(chunks) if chunks else (script_chunks(text, n) if n > 1 else [text])
@@ -651,8 +754,9 @@ def pages_for_stages(text: str, total_dur: float, n_stages: int = 1, chunks: lis
     got = _caption_letters("".join(pages))
     if src and got != src:
         print("caption coverage miss:", len(got), "of", len(src), "chars")
-    holds = page_holds(total_dur, pages or [" "])
-    return pages or [" "], holds, stills or [0]
+    shown = pages or [" "]
+    holds, how = holds_for_pages(total_dur, shown, words)
+    return shown, holds, stills or [0], how
 
 
 def _env_seconds(name: str, default: float, cap: float) -> float:

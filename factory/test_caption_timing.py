@@ -17,6 +17,7 @@ from cache import digest_obj, write_mark
 from mux import (
     CAP_TIME_WEIGHT,
     CAP_TIME_WORDS,
+    _caption_letters,
     holds_for_pages,
     holds_from_word_times,
     page_holds,
@@ -88,6 +89,36 @@ class WordHoldMapping(unittest.TestCase):
         self.assertEqual(how, CAP_TIME_WORDS)
         self.assertAlmostEqual(holds[0], 0.50)
         self.assertAlmostEqual(holds[1], 2.0)
+
+    def test_script_punctuation_matches_words_without_it(self) -> None:
+        """Edge WordBoundary text has no .,!? while the caption script does."""
+        self.assertEqual(_caption_letters("Hello, world!? 平均数。"), "Helloworld平均数")
+        pages = ["Hello, world.", "Next! Done?"]
+        words = [
+            _word("Hello", 0.20, 0.40),
+            _word("world", 0.40, 0.80),
+            _word("Next", 1.00, 1.30),
+            _word("Done", 1.30, 1.60),
+        ]
+        holds, how = holds_for_pages(4.0, pages, words)
+        self.assertEqual(how, CAP_TIME_WORDS)
+        self.assertAlmostEqual(holds[0], 1.0)
+        self.assertAlmostEqual(holds[-1], 3.0)
+        self.assertAlmostEqual(sum(holds), 4.0)
+
+        cjk_pages = ["平均数。", "是总和！"]
+        cjk_words = [
+            _word("平均", 0.10, 0.40),
+            _word("数", 0.40, 0.70),
+            _word("是", 0.80, 1.00),
+            _word("总", 1.00, 1.20),
+            _word("和", 1.20, 1.40),
+        ]
+        cjk_holds, cjk_how = holds_for_pages(3.0, cjk_pages, cjk_words)
+        self.assertEqual(cjk_how, CAP_TIME_WORDS)
+        self.assertAlmostEqual(cjk_holds[0], 0.80)
+        self.assertAlmostEqual(cjk_holds[1], 2.20)
+        self.assertAlmostEqual(sum(cjk_holds), 3.0)
 
     def test_one_page_uses_the_full_beat_when_words_match(self) -> None:
         holds, how = holds_for_pages(3.5, ["Hello world"], [_word("Hello", 0.2, 0.5), _word("world", 0.5, 0.9)])

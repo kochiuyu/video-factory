@@ -569,7 +569,12 @@ def page_holds(duration: float, pages: list[str]) -> list[float]:
 
 
 def _caption_letters(text: str) -> str:
-    return "".join(ch for ch in (text or "") if not ch.isspace())
+    """Alphanumerics used to align caption cards with spoken words.
+
+    Edge WordBoundary text drops punctuation, so a script comma or period
+    must not fail the match. CJK characters count as alphanumeric.
+    """
+    return "".join(ch for ch in (text or "") if ch.isalnum())
 
 
 CAP_TIME_WORDS = "tts-words"

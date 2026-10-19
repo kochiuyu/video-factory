@@ -735,7 +735,7 @@ def main() -> None:
         "--out",
         type=Path,
         default=None,
-        help="Lesson output root. Default: $VF_OUT if set, otherwise <repo>/out.",
+        help="Lesson output root. Default: $VF_OUT if set, otherwise <Downloads>/video-factory-out (fallback <repo>/out).",
     )
     p.add_argument("--labels", choices=("en", "zh"), default="en")
     p.add_argument("--no-tts", action="store_true", help="Do not call TTS; require existing MP3s.")

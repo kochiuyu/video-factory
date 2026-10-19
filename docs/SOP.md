@@ -27,7 +27,7 @@ Required (see [SETUP.md](SETUP.md) for the exact clicks):
 Optional:
 
 - Alternative TTS MP3s dropped into the output root under `<ID>/audio/{en,zh}/` if you pass `--no-tts`
-- `VF_OUT` or `--out` set to an absolute directory outside Dropbox when the repo itself is in Dropbox (lesson YAML stays here). See [SETUP.md](SETUP.md).
+- `VF_OUT` or `--out` only when the output root should not be `<Downloads>/video-factory-out` (lesson YAML stays here). See [SETUP.md](SETUP.md).
 
 ## Cycle for one topic (target: one working day after the template is familiar)
 

@@ -77,14 +77,6 @@ $env:VF_FONT_CJK="C:\Windows\Fonts\NotoSansCJKsc-Regular.otf"
 $env:VF_FONT_LATIN="C:\Windows\Fonts\NotoSans-Regular.ttf"
 ```
 
-## Output folder outside Dropbox
+## Output folder
 
-If the repo is under Dropbox, keep build files outside it so PNG, MP3, and MP4
-sync does not pin the client. Lesson YAML stays in the repo.
-
-```powershell
-$env:VF_OUT = "C:\Users\kochi\video-factory-out"
-python factory\app.py
-```
-
-`python factory\build.py --out C:\Users\kochi\video-factory-out ...` is the same switch for one build. Unset, output stays in `<repo>\out`. Details: [SETUP.md](SETUP.md).
+Build files go to `%USERPROFILE%\Downloads\video-factory-out` unless you override them. Lesson YAML stays in the repo, so a Dropbox checkout does not sync the PNG, MP3, and MP4 files. A machine that already has User `VF_OUT` set keeps that path. Set `VF_OUT` or pass `--out` only to use a different directory. If Downloads cannot be used, output falls back to `<repo>\out`. Details: [SETUP.md](SETUP.md).

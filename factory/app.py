@@ -4280,7 +4280,7 @@ def main() -> None:
         "--out",
         type=Path,
         default=None,
-        help="Lesson output root. Default: $VF_OUT if set, otherwise <repo>/out.",
+        help="Lesson output root. Default: $VF_OUT if set, otherwise <Downloads>/video-factory-out (fallback <repo>/out).",
     )
     args = parser.parse_args()
     if args.out is not None:

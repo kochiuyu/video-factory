@@ -13,12 +13,14 @@ ROOT = Path(__file__).resolve().parents[1]
 LESSONS = ROOT / "lessons"
 MODULES = ROOT / "modules"
 MINICOURSES = ROOT / "minicourses"
-# In-repo default only. Readers and writers call out_root() so VF_OUT / --out apply.
+# In-repo fallback when Downloads cannot be used. Call out_root() for the live root.
 OUT = ROOT / "out"
 OUT_LESSONS = OUT / "lessons"
 OUT_MODULES = OUT / "modules"
 OUT_RESERVED = {"lessons", "modules", "_packs", "_mathtex"}
 HIDDEN_DIRS = {"_inbox", "_attic", "_drafts"}
+# Per-user default: ~/Downloads/video-factory-out (Windows: %USERPROFILE%\Downloads\...).
+DOWNLOADS_OUT_NAME = "video-factory-out"
 
 
 def _is_inside(path: Path, parent: Path) -> bool:
@@ -31,23 +33,62 @@ def _is_inside(path: Path, parent: Path) -> bool:
 
 def _unsafe_out_message(path: Path) -> str:
     return (
-        f"Refusing output root {path}. Point VF_OUT or --out at a directory outside the repo "
-        "(for example C:\\Users\\kochi\\video-factory-out), or leave the override unset to keep "
-        "<repo>/out. The repo root, its parents, and other in-repo folders are refused so a "
+        f"Refusing output root {path}. Point VF_OUT or --out at a directory outside the repo, "
+        "or leave both unset to use <Downloads>/video-factory-out. "
+        "The repo root, its parents, and other in-repo folders are refused so a "
         "build cannot move lesson YAML."
     )
+
+
+def _allowed_out_root(resolved: Path) -> bool:
+    """Allow <repo>/out or any directory outside the repo."""
+    repo = ROOT.resolve()
+    if resolved == repo or resolved in repo.parents or _is_inside(repo, resolved):
+        return False
+    if _is_inside(resolved, repo):
+        default = OUT.resolve()
+        if resolved != default and not _is_inside(resolved, default):
+            return False
+    return True
 
 
 def _ensure_safe_out_root(path: Path) -> Path:
     """Allow <repo>/out or any directory outside the repo. Refuse everything else."""
     resolved = path.resolve()
-    repo = ROOT.resolve()
-    if resolved == repo or resolved in repo.parents or _is_inside(repo, resolved):
+    if not _allowed_out_root(resolved):
         raise SystemExit(_unsafe_out_message(resolved))
-    if _is_inside(resolved, repo):
-        default = OUT.resolve()
-        if resolved != default and not _is_inside(resolved, default):
-            raise SystemExit(_unsafe_out_message(resolved))
+    return resolved
+
+
+def _user_downloads() -> Path | None:
+    """``~/Downloads``. ``Path.home()`` is ``%USERPROFILE%`` on Windows."""
+    try:
+        home = Path.home()
+    except (RuntimeError, OSError):
+        return None
+    if not home.is_absolute():
+        return None
+    return home / "Downloads"
+
+
+def _downloads_out() -> Path | None:
+    """``<Downloads>/video-factory-out``, created if missing. None when unusable."""
+    downloads = _user_downloads()
+    if downloads is None:
+        return None
+    dest = downloads / DOWNLOADS_OUT_NAME
+    try:
+        resolved = dest.resolve()
+    except OSError:
+        return None
+    if not _allowed_out_root(resolved):
+        return None
+    try:
+        resolved.mkdir(parents=True, exist_ok=True)
+    except OSError:
+        return None
+    if not resolved.is_dir():
+        return None
     return resolved
 
 
@@ -63,15 +104,19 @@ def out_root(override: Path | str | None = None) -> Path:
     """Lesson output root (slides, audio, cells, packs, logs).
 
     Precedence: explicit override (CLI ``--out``), then ``VF_OUT``, then
-    ``<repo>/out``. Lesson YAML is not affected. Relative overrides are
-    resolved from the repo root so the console and ``build.py`` agree
-    even when their working directories differ.
+    ``<Downloads>/video-factory-out``, then ``<repo>/out`` when Downloads
+    cannot be resolved or created. Lesson YAML is not affected. Relative
+    overrides are resolved from the repo root so the console and
+    ``build.py`` agree even when their working directories differ.
     """
     if override is not None and str(override).strip():
         return _out_path(override)
     env = os.environ.get("VF_OUT", "").strip()
     if env:
         return _out_path(env)
+    downloads = _downloads_out()
+    if downloads is not None:
+        return downloads
     return OUT
 
 

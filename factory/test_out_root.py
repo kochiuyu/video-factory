@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Output root: default repo out/, VF_OUT, and --out."""
+"""Output root: Downloads default, VF_OUT, --out, and repo out fallback."""
 
 from __future__ import annotations
 
 import html
 import http.client
 import os
+import site
 import subprocess
 import sys
 import tempfile
@@ -19,7 +20,7 @@ from urllib.request import urlopen
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from cache import write_mark
-from catalog import OUT, ROOT, media_href, migrate_out_layout, out_dir, out_root
+from catalog import DOWNLOADS_OUT_NAME, OUT, ROOT, media_href, migrate_out_layout, out_dir, out_root
 from mathtex import cache_dir
 from youtube import write_youtube_sidecars
 
@@ -28,17 +29,41 @@ def _without_vf_out():
     return patch.dict(os.environ, {k: v for k, v in os.environ.items() if k != "VF_OUT"}, clear=True)
 
 
-class OutRoot(unittest.TestCase):
-    def test_default_is_repo_out(self) -> None:
-        with _without_vf_out():
-            self.assertEqual(out_root(), OUT)
-            self.assertEqual(out_root(), ROOT / "out")
-            self.assertEqual(out_dir("ZZ-NOT-A-MODULE"), OUT / "lessons" / "ZZ-NOT-A-MODULE")
-            self.assertEqual(out_dir("ACC-M01"), OUT / "modules" / "ACC-M01")
+def _downloads_root(home: Path) -> Path:
+    return (home / "Downloads" / DOWNLOADS_OUT_NAME).resolve()
 
-    def test_blank_vf_out_is_default(self) -> None:
-        with patch.dict(os.environ, {"VF_OUT": "   "}):
-            self.assertEqual(out_root(), OUT)
+
+def _env_with_home(home: Path) -> dict[str, str]:
+    """Child env with no VF_OUT. Keep this interpreter's user site on PYTHONPATH."""
+    env = {k: v for k, v in os.environ.items() if k != "VF_OUT"}
+    env["HOME"] = str(home)
+    env["USERPROFILE"] = str(home)
+    env["PYTHONUTF8"] = "1"
+    user_site = site.getusersitepackages()
+    prior = env.get("PYTHONPATH", "")
+    env["PYTHONPATH"] = os.pathsep.join(p for p in (user_site, prior) if p)
+    return env
+
+
+class OutRoot(unittest.TestCase):
+    def test_default_is_downloads(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            home = Path(tmp) / "home"
+            expected = _downloads_root(home)
+            with _without_vf_out(), patch("catalog.Path.home", return_value=home):
+                self.assertEqual(out_root(), expected)
+                self.assertTrue(expected.is_dir())
+                self.assertEqual(out_dir("ZZ-NOT-A-MODULE"), expected / "lessons" / "ZZ-NOT-A-MODULE")
+                self.assertEqual(out_dir("ACC-M01"), expected / "modules" / "ACC-M01")
+                self.assertEqual(out_root(), expected)
+
+    def test_blank_vf_out_is_downloads(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            home = Path(tmp) / "home"
+            expected = _downloads_root(home)
+            with patch.dict(os.environ, {"VF_OUT": "   "}), patch("catalog.Path.home", return_value=home):
+                self.assertEqual(out_root(), expected)
+                self.assertTrue(expected.is_dir())
 
     def test_vf_out_and_cli_override(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -64,6 +89,43 @@ class OutRoot(unittest.TestCase):
                     media_href("ZZ-REL", "cells", "a.mp4", root=rel),
                     "/media/lessons/ZZ-REL/cells/a.mp4",
                 )
+
+    def test_repo_out_when_downloads_unusable(self) -> None:
+        with self.subTest("home unavailable"):
+            with _without_vf_out(), patch("catalog.Path.home", side_effect=RuntimeError("no home")):
+                self.assertEqual(out_root(), OUT)
+                self.assertEqual(out_root(), ROOT / "out")
+
+        with self.subTest("downloads is not a directory"):
+            with tempfile.TemporaryDirectory() as tmp:
+                home = Path(tmp) / "home"
+                home.mkdir()
+                (home / "Downloads").write_text("nope", encoding="utf-8")
+                with _without_vf_out(), patch("catalog.Path.home", return_value=home):
+                    self.assertEqual(out_root(), OUT)
+
+        with self.subTest("video-factory-out exists as a file"):
+            with tempfile.TemporaryDirectory() as tmp:
+                home = Path(tmp) / "home"
+                (home / "Downloads").mkdir(parents=True)
+                (home / "Downloads" / DOWNLOADS_OUT_NAME).write_text("file", encoding="utf-8")
+                with _without_vf_out(), patch("catalog.Path.home", return_value=home):
+                    self.assertEqual(out_root(), OUT)
+
+        with self.subTest("downloads out would sit inside the repo"):
+            with _without_vf_out(), patch("catalog.Path.home", return_value=ROOT):
+                self.assertEqual(out_root(), OUT)
+            self.assertFalse((ROOT / "Downloads").exists())
+            self.assertFalse((ROOT / DOWNLOADS_OUT_NAME).exists())
+
+        with self.subTest("downloads symlink points at the repo"):
+            with tempfile.TemporaryDirectory() as tmp:
+                home = Path(tmp) / "home"
+                home.mkdir()
+                (home / "Downloads").symlink_to(ROOT, target_is_directory=True)
+                with _without_vf_out(), patch("catalog.Path.home", return_value=home):
+                    self.assertEqual(out_root(), OUT)
+                self.assertFalse((ROOT / DOWNLOADS_OUT_NAME).exists())
 
     def test_refuses_repo_and_other_in_repo_dirs(self) -> None:
         with _without_vf_out():
@@ -143,6 +205,45 @@ class OutRoot(unittest.TestCase):
             )
             self.assertEqual(proc.returncode, 0, proc.stderr)
             self.assertIn("VF_OUT", proc.stdout)
+            self.assertIn("video-factory-out", proc.stdout)
+
+    def test_build_cli_defaults_to_downloads(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            home = Path(tmp) / "home"
+            expected = _downloads_root(home)
+            proc = subprocess.run(
+                [sys.executable, str(ROOT / "factory" / "build.py"), str(ROOT / "missing.yaml"), "--slides-only"],
+                cwd=str(ROOT),
+                env=_env_with_home(home),
+                capture_output=True,
+                text=True,
+            )
+            self.assertNotEqual(proc.returncode, 0, proc.stderr)
+            self.assertIn(f"output root: {expected}", proc.stdout, proc.stderr)
+            self.assertTrue(expected.is_dir())
+            self.assertFalse((OUT / "lessons" / "missing").exists())
+
+    def test_build_cli_out_wins_over_downloads(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            home = Path(tmp) / "home"
+            cli_root = Path(tmp) / "cli"
+            proc = subprocess.run(
+                [
+                    sys.executable,
+                    str(ROOT / "factory" / "build.py"),
+                    str(ROOT / "missing.yaml"),
+                    "--slides-only",
+                    "--out",
+                    str(cli_root),
+                ],
+                cwd=str(ROOT),
+                env=_env_with_home(home),
+                capture_output=True,
+                text=True,
+            )
+            self.assertNotEqual(proc.returncode, 0, proc.stderr)
+            self.assertIn(f"output root: {cli_root.resolve()}", proc.stdout, proc.stderr)
+            self.assertFalse(_downloads_root(home).exists())
 
     def test_console_build_forwards_out_root(self) -> None:
         import app

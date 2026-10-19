@@ -8,11 +8,17 @@ import io
 import zipfile
 from pathlib import Path
 
-from catalog import MODULES, is_module_id, iter_lesson_paths, lesson_path, out_dir as lesson_out_dir
+from catalog import (
+    MODULES,
+    is_module_id,
+    iter_lesson_paths,
+    lesson_path,
+    out_dir as lesson_out_dir,
+    out_root as default_out_root,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 LESSONS = ROOT / "lessons"
-OUT = ROOT / "out"
 DOCS = ROOT / "docs"
 
 COURSES = {
@@ -188,7 +194,7 @@ def _add_tree(zf: zipfile.ZipFile, src: Path, arc: str) -> int:
 def write_course_zip(course_id: str, out_root: Path | None = None) -> Path:
     if course_id not in COURSES:
         raise ValueError(f"Unknown course {course_id}")
-    out_root = out_root or OUT
+    out_root = Path(out_root) if out_root is not None else default_out_root()
     spec = course_members(course_id)
     pack_dir = out_root / "_packs"
     pack_dir.mkdir(parents=True, exist_ok=True)
@@ -264,7 +270,7 @@ def write_ra_zip(lid: str, out_root: Path | None = None) -> tuple[Path, dict]:
     from validate import load_lesson
     from xlsx_lesson import export_lesson
 
-    out_root = out_root or OUT
+    out_root = Path(out_root) if out_root is not None else default_out_root()
     stem, members, mod_path = _ra_members(lid)
     pack_dir = out_root / "_packs"
     pack_dir.mkdir(parents=True, exist_ok=True)

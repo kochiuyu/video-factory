@@ -271,8 +271,9 @@ python factory/build.py --all --match-titles --cells zhhk --caption-preview
 | `--match-titles` | EN / 简体 / 繁體 titles on the matching cell |
 | `--cells en,zhcn,zhhk` | Build only those arms |
 | `--force-tts` | Redo speech |
-| `--no-tts` | Use MP3s already in `out/<ID>/audio/` |
+| `--no-tts` | Use MP3s already in the output root under `<ID>/audio/` |
 | `--all` | Every YAML in `lessons/` |
+| `--out <dir>` | Lesson output root. Default: `$VF_OUT` if set, otherwise `<repo>/out` |
 
 ---
 
@@ -294,6 +295,9 @@ python factory/app.py
 
 Then work only in the browser. YAML files live in `lessons/`.
 New files dropped onto the page are saved there automatically.
+
+If this folder is inside Dropbox, set `VF_OUT` to a directory outside Dropbox
+before that command. See “Build files outside Dropbox” below.
 
 ---
 
@@ -350,10 +354,37 @@ $env:VF_TTS_PITCH="+0Hz"
 $env:VF_FONT_LATIN="C:\Windows\Fonts\arial.ttf"
 $env:VF_FONT_CJK="C:\Windows\Fonts\msyh.ttc"
 $env:VF_FFMPEG="C:\ffmpeg\bin\ffmpeg.exe"
+$env:VF_OUT="C:\Users\kochi\video-factory-out"
 ```
 
 The console Options panel sets the voice / rate / caption values for that
 build without touching the environment.
+
+### Build files outside Dropbox
+
+`VF_OUT` is the lesson output root: slides, audio, caption overlays, cells,
+YouTube sidecars, packs, PDFs, and logs. Lesson YAML stays in the repo.
+Leave `VF_OUT` unset and the factory still writes `<repo>\out`.
+
+If the checkout is inside Dropbox (`…\Dropbox\video-factory\github`), set the
+root to an absolute directory **outside** Dropbox before you build. Otherwise
+every PNG and MP4 syncs and keeps Dropbox busy.
+
+```powershell
+$env:VF_OUT = "C:\Users\kochi\video-factory-out"
+python factory\app.py
+```
+
+The same switch on one command:
+
+```powershell
+python factory\build.py lessons\STAT\STAT-M01-T02-MEAN.yaml --out C:\Users\kochi\video-factory-out --slides-only
+python factory\app.py --out C:\Users\kochi\video-factory-out
+```
+
+`--out` wins over `VF_OUT` when both are set. Copy an existing `out` folder
+to that directory if you want to keep renders you already have. The factory
+does not move lesson YAML.
 
 ---
 

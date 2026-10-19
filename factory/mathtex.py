@@ -11,8 +11,14 @@ from pathlib import Path
 
 from PIL import Image
 
-_CACHE = Path(__file__).resolve().parents[1] / "out" / "_mathtex"
 _LATEXISH = re.compile(r"[\\^_{}]|\\frac|\\sum|\\int|\\sqrt|\\cdot|\\times|\\leq|\\geq")
+
+
+def cache_dir() -> Path:
+    """Reserved math-PNG directory under the lesson output root."""
+    from catalog import out_root
+
+    return out_root() / "_mathtex"
 
 
 def looks_like_tex(text: str) -> bool:

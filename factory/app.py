@@ -34,6 +34,8 @@ except ModuleNotFoundError:
 
 force_utf8()
 
+import argparse
+import html
 import json
 import mimetypes
 import os
@@ -55,7 +57,6 @@ ROOT = Path(__file__).resolve().parents[1]
 FACTORY = Path(__file__).resolve().parent
 LESSONS = ROOT / "lessons"
 MODULES = ROOT / "modules"
-OUT = ROOT / "out"
 sys.path.insert(0, str(FACTORY))
 
 
@@ -73,7 +74,7 @@ def _rel_to_root(path: Path | str) -> str:
 from langs import beat_text, bilingual_pair, cells_for, is_tri, script_langs, selected_cells  # noqa: E402
 from build import write_cell_covers  # noqa: E402
 from modules import load_module, module_errors  # noqa: E402
-from catalog import existing_out_dir as lesson_out_dir, media_href, migrate_out_layout, out_dir as new_out_dir  # noqa: E402
+from catalog import existing_out_dir as lesson_out_dir, media_href, migrate_out_layout, out_dir as new_out_dir, out_root  # noqa: E402
 from quiz import export_lesson_quiz, export_module_quiz  # noqa: E402
 from pdfexport import export_preview_pdfs  # noqa: E402
 from bundle import COURSES, course_of, write_course_zip, write_ra_zip, write_sop  # noqa: E402
@@ -166,10 +167,11 @@ def _cell_urls(lid: str) -> list[str]:
 
 def _all_cell_urls() -> list[str]:
     urls: list[str] = []
-    if not OUT.is_dir():
+    root = out_root()
+    if not root.is_dir():
         return urls
     for kind in ("lessons", "modules"):
-        base = OUT / kind
+        base = root / kind
         if not base.is_dir():
             continue
         for folder in sorted(base.iterdir()):
@@ -720,7 +722,7 @@ def export_pdf_now(filename: str, kind: str = "") -> dict:
         lid = (load_lesson(path).get("id") or path.stem)
     try:
         kinds = ("slides",) if kind == "slides" else (("captions",) if kind == "captions" else ("slides", "captions"))
-        files = export_preview_pdfs(lid, OUT, kinds)
+        files = export_preview_pdfs(lid, out_root(), kinds)
     except Exception as exc:  # noqa: BLE001
         return {"ok": False, "error": str(exc)}
     if not files:
@@ -858,8 +860,9 @@ def _list_cache_key() -> tuple:
     for path in list(iter_lesson_paths()) + list(iter_module_paths()):
         st = path.stat()
         parts.append((str(path), int(st.st_mtime), st.st_size))
+    root = out_root()
     for kind in ("lessons", "modules"):
-        base = OUT / kind
+        base = root / kind
         if not base.is_dir():
             continue
         for folder in base.iterdir():
@@ -1348,7 +1351,7 @@ def run_build(
         with _job_lock:
             _job.update(status="error", log="YAML file not found.", step="Build failed", detail="YAML file not found.", pct=0, cells=[])
         return
-    cmd = [sys.executable, str(FACTORY / "build.py")]
+    cmd = [sys.executable, str(FACTORY / "build.py"), "--out", str(out_root())]
     if all_lessons:
         cmd.append("--all")
     else:
@@ -1453,8 +1456,8 @@ def run_build(
             lesson = load_lesson(path)
             lid = lesson.get("id") or path.stem
             lesson_name = path.name
-        lesson_log = lesson_out_dir(lid) / "build.log" if lid != "batch" else OUT / "last_build.log"
-        latest = OUT / "last_build.log"
+        lesson_log = lesson_out_dir(lid) / "build.log" if lid != "batch" else out_root() / "last_build.log"
+        latest = out_root() / "last_build.log"
         latest.parent.mkdir(parents=True, exist_ok=True)
         lesson_log.parent.mkdir(parents=True, exist_ok=True)
         stamp = f"\n===== console {lesson_name} =====\n"
@@ -2273,7 +2276,7 @@ HTML = """<!DOCTYPE html>
         <div class="actions" style="margin:8px 0 0">
           <button id="bundle-ra" type="button">Zip this for RA</button>
         </div>
-        <p class="hint" id="rahint">Lands in out/_packs/ as RA-&lt;id&gt;.zip.</p>
+        <p class="hint" id="rahint">Lands in __OUT_ROOT__/_packs/ as RA-&lt;id&gt;.zip.</p>
         <h3>Course pack for faculty <span class="badge-def">pilots</span></h3>
         <p class="def-note">One A4 SOP plus videos, quizzes, and treatments already built for that course. No source YAML. Build the modules first if the zip looks thin.</p>
         <div class="actions" style="margin:8px 0 0">
@@ -2283,7 +2286,7 @@ HTML = """<!DOCTYPE html>
           <button id="bundle-lae" type="button">Zip LAE</button>
           <button id="bundle-game" type="button">Zip Game</button>
         </div>
-        <p class="hint" id="bundlehint">Lands in out/_packs/ as CUHK-VF-ECON.zip and the other course names.</p>
+        <p class="hint" id="bundlehint">Lands in __OUT_ROOT__/_packs/ as CUHK-VF-ECON.zip and the other course names.</p>
       </div>
       </details>
       <details class="options">
@@ -2439,7 +2442,7 @@ HTML = """<!DOCTYPE html>
         </div>
         <pre id="log">Idle.</pre>
       </div>
-      <p class="muted" id="logpath">Logs: <a href="/media/last_build.log" id="logpathlink">out/last_build.log</a></p>
+      <p class="muted" id="logpath">Logs: <a href="/media/last_build.log" id="logpathlink">__OUT_ROOT__/last_build.log</a></p>
       </details>
     </section>
     </section>
@@ -4049,7 +4052,8 @@ class Handler(BaseHTTPRequestHandler):
         parsed = urlparse(self.path)
         path = unquote(parsed.path)
         if path in {"/", "/index.html"}:
-            self._bytes(200, HTML.encode("utf-8"), "text/html; charset=utf-8")
+            page = HTML.replace("__OUT_ROOT__", html.escape(str(out_root())))
+            self._bytes(200, page.encode("utf-8"), "text/html; charset=utf-8")
             return
         if path == "/api/lessons":
             self._json(200, list_lessons())
@@ -4071,7 +4075,7 @@ class Handler(BaseHTTPRequestHandler):
             if yaml_path is None or yaml_path.parent.name in {"modules", "minicourses"}:
                 self._json(404, {"ok": False, "error": "Pick a short, not a module or mini-course."})
                 return
-            dest = OUT / "_packs" / f"{yaml_path.stem}.xlsx"
+            dest = out_root() / "_packs" / f"{yaml_path.stem}.xlsx"
             export_lesson(load_lesson(yaml_path), dest)
             data = dest.read_bytes()
             self.send_response(200)
@@ -4095,8 +4099,9 @@ class Handler(BaseHTTPRequestHandler):
             return
         if path.startswith("/media/"):
             rel = path[len("/media/") :]
-            target = (OUT / rel).resolve()
-            if OUT.resolve() not in target.parents and target != OUT.resolve():
+            root = out_root().resolve()
+            target = (root / rel).resolve()
+            if root not in target.parents and target != root:
                 self._json(403, {"error": "forbidden"})
                 return
             if not target.is_file():
@@ -4150,8 +4155,8 @@ class Handler(BaseHTTPRequestHandler):
             if cid not in COURSES:
                 self._json(400, {"ok": False, "error": "Pick ECON, ACC, GBA, LAE, or GAME."})
                 return
-            zpath = write_course_zip(cid, OUT)
-            sop = write_sop(OUT / "_packs" / f"SOP-{cid}.html", cid)
+            zpath = write_course_zip(cid, out_root())
+            sop = write_sop(out_root() / "_packs" / f"SOP-{cid}.html", cid)
             self._json(200, {
                 "ok": True,
                 "course": cid,
@@ -4166,7 +4171,7 @@ class Handler(BaseHTTPRequestHandler):
             if not stem:
                 self._json(400, {"ok": False, "error": "Pick a short or a module first."})
                 return
-            zpath, meta = write_ra_zip(stem, OUT)
+            zpath, meta = write_ra_zip(stem, out_root())
             self._json(200, {
                 "ok": True,
                 "id": meta.get("id") or stem,
@@ -4185,7 +4190,7 @@ class Handler(BaseHTTPRequestHandler):
             if not raw:
                 self._json(400, {"ok": False, "error": "No workbook uploaded."})
                 return
-            tmp = OUT / "_packs" / f"{yaml_path.stem}.import.xlsx"
+            tmp = out_root() / "_packs" / f"{yaml_path.stem}.import.xlsx"
             tmp.parent.mkdir(parents=True, exist_ok=True)
             tmp.write_bytes(raw)
             result = import_workbook(yaml_path, tmp, _dump_yaml)
@@ -4270,13 +4275,25 @@ def _parse_upload(content_type: str, raw: bytes) -> tuple[str, bytes]:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Local web console for the video factory.")
+    parser.add_argument(
+        "--out",
+        type=Path,
+        default=None,
+        help="Lesson output root. Default: $VF_OUT if set, otherwise <repo>/out.",
+    )
+    args = parser.parse_args()
+    if args.out is not None:
+        os.environ["VF_OUT"] = str(Path(args.out).expanduser())
+    root = out_root()
     LESSONS.mkdir(exist_ok=True)
-    OUT.mkdir(exist_ok=True)
-    for row in migrate_out_layout():
+    root.mkdir(parents=True, exist_ok=True)
+    for row in migrate_out_layout(root):
         print("out-migrate:", row)
     server = ThreadingHTTPServer((HOST, PORT), Handler)
     url = f"http://{HOST}:{PORT}"
     print(f"Video factory console: {url}")
+    print(f"Output root: {root}")
     print("Leave this terminal open. Choose a YAML in the browser and click Build.")
     try:
         webbrowser.open(url)

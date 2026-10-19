@@ -229,12 +229,21 @@ def main() -> None:
     parser.add_argument("lesson")
     parser.add_argument("--slide", default="en")
     parser.add_argument("--speech", default="en")
-    parser.add_argument("--out", default="")
+    parser.add_argument(
+        "--out",
+        default="",
+        help="PNG file path. Default: <output root>/lessons/<id>/covers/<name>.png.",
+    )
     args = parser.parse_args()
     lesson_path = Path(args.lesson)
     lesson = yaml.safe_load(lesson_path.read_text(encoding="utf-8"))
     name = f"{lesson['id']}_slides-{args.slide}_speech-{args.speech}.png"
-    dest = Path(args.out) if args.out else ROOT / "out" / "lessons" / lesson["id"] / "covers" / name
+    if args.out:
+        dest = Path(args.out)
+    else:
+        from catalog import out_root
+
+        dest = out_root() / "lessons" / lesson["id"] / "covers" / name
     print(write_cover(lesson_path, args.slide, args.speech, dest))
 
 

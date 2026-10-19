@@ -71,7 +71,7 @@ from mux import (  # noqa: E402
 )
 from paths import fonts_dir  # noqa: E402
 from modules import build_minicourse, build_module, is_minicourse, is_module  # noqa: E402
-from catalog import migrate_out_layout, out_dir as lesson_out_dir  # noqa: E402
+from catalog import migrate_out_layout, out_dir as lesson_out_dir, out_root as resolve_out_root  # noqa: E402
 from pack import parse_speeds, write_experiment_pack  # noqa: E402
 from quiz import export_lesson_quiz  # noqa: E402
 from cover import write_cover  # noqa: E402
@@ -203,10 +203,10 @@ class _Tee:
             stream.flush()
 
 
-def _attach_log(out_dir: Path, lesson_id: str) -> Path:
+def _attach_log(out_dir: Path, lesson_id: str, root: Path | None = None) -> Path:
     out_dir.mkdir(parents=True, exist_ok=True)
     lesson_log = out_dir / "build.log"
-    latest = ROOT / "out" / "last_build.log"
+    latest = (Path(root) if root is not None else resolve_out_root()) / "last_build.log"
     latest.parent.mkdir(parents=True, exist_ok=True)
     handle = lesson_log.open("a", encoding="utf-8")
     latest_handle = latest.open("a", encoding="utf-8")
@@ -420,7 +420,7 @@ def build(
 ) -> None:
     lesson = load_lesson(lesson_path)
     out_dir = lesson_out_dir(lesson.get("id", lesson_path.stem), root=out_root)
-    _attach_log(out_dir, lesson.get("id", lesson_path.stem))
+    _attach_log(out_dir, lesson.get("id", lesson_path.stem), out_root)
     errors = validate(lesson)
     fatal = [e for e in errors if not e.startswith("Beat seconds")]
     if fatal:
@@ -731,7 +731,12 @@ def build(
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("lesson", type=Path, nargs="?", help="Lesson YAML, or omit with --all.")
-    p.add_argument("--out", type=Path, default=ROOT / "out")
+    p.add_argument(
+        "--out",
+        type=Path,
+        default=None,
+        help="Lesson output root. Default: $VF_OUT if set, otherwise <repo>/out.",
+    )
     p.add_argument("--labels", choices=("en", "zh"), default="en")
     p.add_argument("--no-tts", action="store_true", help="Do not call TTS; require existing MP3s.")
     p.add_argument("--force-tts", action="store_true", help="Regenerate all beat audio.")
@@ -792,7 +797,9 @@ def main() -> None:
         help="Write CUHK-VF-<ECON|ACC|GBA>.zip from existing out/ files and exit.",
     )
     args = p.parse_args()
-    moved = migrate_out_layout()
+    args.out = resolve_out_root(args.out)
+    print("output root:", args.out)
+    moved = migrate_out_layout(args.out)
     for row in moved:
         print("out-migrate:", row)
     off = {"0", "false", "no", "off"}

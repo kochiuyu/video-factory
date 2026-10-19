@@ -511,6 +511,8 @@ out/lessons/<ID>/cells/<ID>_{en,zh,hk,en+zh,…}.youtube.txt
 
 The `.youtube.txt` file is the paste title and description for that cell. See **YouTube upload text**.
 
+`out/` in these paths is the lesson output root. It is `<repo>/out` unless `VF_OUT` or `--out` points somewhere else (use an absolute directory outside Dropbox when the repo lives in Dropbox). Lesson YAML stays in `lessons/`. See `docs/SETUP.md`.
+
 Primary language sets voice, captions, and primary slide labels: `en`, `zh` (Putonghua / 简), `hk` (Cantonese / 繁). A name with `+second` adds that language on the slides, for example `en+zh` is English speech and captions with bilingual English + 简 slides. Voice and captions stay the same language.
 
 Faculty do not start from `briefs/`. Use the console Check tab and `docs/SOP-faculty.html`. Course zips: `out/_packs/CUHK-VF-{ECON,ACC,GBA}.zip`.

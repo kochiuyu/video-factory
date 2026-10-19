@@ -69,9 +69,18 @@ export VF_FONT_CJK_BOLD=/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc
 | `minicourses/` | Lists of shorts in a module (e.g. `STAT-M01.yaml`); collections are **not** joined into one video |
 | `themes/` | Slide color palettes |
 | `fonts/` | Bundled Latin + CJK fonts |
-| `out/` | Build output (slides, audio, finished cells) |
+| `out/` | Build output (slides, audio, finished cells). Default location; move it with `VF_OUT` or `--out` |
 
 The renderer also accepts a leftover flat `lessons/<ID>.yaml`.
+
+Build products stay under the output root: `<repo>/out` unless you set `VF_OUT` or pass `--out`. Lesson YAML stays in the repo. If this checkout lives in Dropbox, point the output root outside Dropbox so slide PNGs, audio, and MP4s are not synced:
+
+```powershell
+$env:VF_OUT = "C:\Users\kochi\video-factory-out"
+python factory\app.py
+```
+
+`python factory\build.py --out C:\Users\kochi\video-factory-out ...` and `python factory\app.py --out C:\Users\kochi\video-factory-out` do the same thing. Copy an existing `out\` folder to that path if you want to keep renders you already have. See [docs/SETUP.md](docs/SETUP.md).
 
 ## Validate and build
 
@@ -101,6 +110,7 @@ Useful flags (see `python factory/build.py -h`):
 | `--no-tts` | Require existing MP3s on the usual paths |
 | `--all` | Every YAML under `lessons/` with the same flags |
 | `--theme <name>` | Palette from `themes/<name>.yaml` |
+| `--out <dir>` | Lesson output root. Default: `$VF_OUT` if set, otherwise `<repo>/out` |
 
 For a three-language lesson, default cells are `en`, `zh`, and `hk`. Files land under `out/<ID>/cells/`.
 

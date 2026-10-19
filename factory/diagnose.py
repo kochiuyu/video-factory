@@ -10,6 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from PIL import Image, ImageDraw, ImageFont
 
+from catalog import out_root
 from glyphs import char_ok, face_paths, scan_lesson
 from paths import bundled_cjk, bundled_latin, caption_font_name, cjk_regular, extra_cjk, fonts_dir, latin_regular
 from validate import load_lesson
@@ -34,7 +35,7 @@ def main() -> None:
     if latin:
         draw.text((40, 40), "Incentives  Ag", font=ImageFont.truetype(latin, 48), fill=(11, 31, 58))
     draw.text((40, 140), "激励，沉没。機會？", font=ImageFont.truetype(cjk, 48), fill=(11, 31, 58))
-    out = Path(__file__).resolve().parents[1] / "out" / "cjk_probe.png"
+    out = out_root() / "cjk_probe.png"
     out.parent.mkdir(parents=True, exist_ok=True)
     img.save(out)
     print("probe   :", out)

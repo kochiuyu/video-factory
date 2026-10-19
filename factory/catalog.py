@@ -6,17 +6,73 @@ lessons/*.yaml fallback so old trees still build.
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LESSONS = ROOT / "lessons"
 MODULES = ROOT / "modules"
 MINICOURSES = ROOT / "minicourses"
+# In-repo default only. Readers and writers call out_root() so VF_OUT / --out apply.
 OUT = ROOT / "out"
 OUT_LESSONS = OUT / "lessons"
 OUT_MODULES = OUT / "modules"
 OUT_RESERVED = {"lessons", "modules", "_packs", "_mathtex"}
 HIDDEN_DIRS = {"_inbox", "_attic", "_drafts"}
+
+
+def _is_inside(path: Path, parent: Path) -> bool:
+    try:
+        path.resolve().relative_to(parent.resolve())
+    except ValueError:
+        return False
+    return True
+
+
+def _unsafe_out_message(path: Path) -> str:
+    return (
+        f"Refusing output root {path}. Point VF_OUT or --out at a directory outside the repo "
+        "(for example C:\\Users\\kochi\\video-factory-out), or leave the override unset to keep "
+        "<repo>/out. The repo root, its parents, and other in-repo folders are refused so a "
+        "build cannot move lesson YAML."
+    )
+
+
+def _ensure_safe_out_root(path: Path) -> Path:
+    """Allow <repo>/out or any directory outside the repo. Refuse everything else."""
+    resolved = path.resolve()
+    repo = ROOT.resolve()
+    if resolved == repo or resolved in repo.parents or _is_inside(repo, resolved):
+        raise SystemExit(_unsafe_out_message(resolved))
+    if _is_inside(resolved, repo):
+        default = OUT.resolve()
+        if resolved != default and not _is_inside(resolved, default):
+            raise SystemExit(_unsafe_out_message(resolved))
+    return resolved
+
+
+def _out_path(value: Path | str) -> Path:
+    """Absolute output directory. Relative values are rooted at the repo."""
+    path = Path(value).expanduser()
+    if not path.is_absolute():
+        path = ROOT / path
+    return _ensure_safe_out_root(path)
+
+
+def out_root(override: Path | str | None = None) -> Path:
+    """Lesson output root (slides, audio, cells, packs, logs).
+
+    Precedence: explicit override (CLI ``--out``), then ``VF_OUT``, then
+    ``<repo>/out``. Lesson YAML is not affected. Relative overrides are
+    resolved from the repo root so the console and ``build.py`` agree
+    even when their working directories differ.
+    """
+    if override is not None and str(override).strip():
+        return _out_path(override)
+    env = os.environ.get("VF_OUT", "").strip()
+    if env:
+        return _out_path(env)
+    return OUT
 
 
 def area_for_id(lid: str) -> str:
@@ -102,7 +158,7 @@ def out_dir(lid: str, *, module: bool | None = None, root: Path | None = None) -
     """Painted outputs: <root>/lessons/<id> or <root>/modules/<id>."""
     stem = Path(str(lid)).stem
     use_mod = is_module_id(stem) if module is None else bool(module)
-    base = Path(root) if root is not None else OUT
+    base = Path(root) if root is not None else out_root()
     return (base / "modules" if use_mod else base / "lessons") / stem
 
 
@@ -111,7 +167,7 @@ def existing_out_dir(lid: str, *, module: bool | None = None, root: Path | None 
     modern = out_dir(lid, module=module, root=root)
     if modern.exists():
         return modern
-    base = Path(root) if root is not None else OUT
+    base = Path(root) if root is not None else out_root()
     legacy = base / Path(str(lid)).stem
     if legacy.exists() and legacy.name not in OUT_RESERVED:
         return legacy
@@ -120,7 +176,7 @@ def existing_out_dir(lid: str, *, module: bool | None = None, root: Path | None 
 
 def media_href(lid: str, *parts: str, module: bool | None = None, root: Path | None = None) -> str:
     dest = existing_out_dir(lid, module=module, root=root)
-    base = Path(root) if root is not None else OUT
+    base = Path(root) if root is not None else out_root()
     try:
         rel = dest.resolve().relative_to(base.resolve()).as_posix()
     except ValueError:
@@ -145,17 +201,18 @@ def _merge_move(src: Path, dest: Path) -> int:
     return moved
 
 
-def migrate_out_layout() -> list[str]:
-    """Move out/<id> into out/lessons/<id> or out/modules/<id> once."""
+def migrate_out_layout(root: Path | None = None) -> list[str]:
+    """Move <root>/<id> into <root>/lessons/<id> or <root>/modules/<id> once."""
     moved: list[str] = []
-    if not OUT.is_dir():
+    base = _ensure_safe_out_root(Path(root) if root is not None else out_root())
+    if not base.is_dir():
         return moved
-    OUT_LESSONS.mkdir(parents=True, exist_ok=True)
-    OUT_MODULES.mkdir(parents=True, exist_ok=True)
-    for child in list(OUT.iterdir()):
+    (base / "lessons").mkdir(parents=True, exist_ok=True)
+    (base / "modules").mkdir(parents=True, exist_ok=True)
+    for child in list(base.iterdir()):
         if not child.is_dir() or child.name in OUT_RESERVED or child.name.startswith("."):
             continue
-        dest = out_dir(child.name)
+        dest = out_dir(child.name, root=base)
         if dest.resolve() == child.resolve():
             continue
         dest.parent.mkdir(parents=True, exist_ok=True)
@@ -164,8 +221,8 @@ def migrate_out_layout() -> list[str]:
             if child.exists() and not any(child.iterdir()):
                 child.rmdir()
             if n:
-                moved.append(f"{child.name} ⇉ {dest.relative_to(OUT).as_posix()} ({n} files)")
+                moved.append(f"{child.name} ⇉ {dest.relative_to(base).as_posix()} ({n} files)")
             continue
         child.rename(dest)
-        moved.append(f"{child.name} → {dest.relative_to(OUT).as_posix()}")
+        moved.append(f"{child.name} → {dest.relative_to(base).as_posix()}")
     return moved

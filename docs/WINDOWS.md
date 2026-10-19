@@ -76,3 +76,15 @@ If Chinese on slides looks like boxes, install Noto Sans CJK and set:
 $env:VF_FONT_CJK="C:\Windows\Fonts\NotoSansCJKsc-Regular.otf"
 $env:VF_FONT_LATIN="C:\Windows\Fonts\NotoSans-Regular.ttf"
 ```
+
+## Output folder outside Dropbox
+
+If the repo is under Dropbox, keep build files outside it so PNG, MP3, and MP4
+sync does not pin the client. Lesson YAML stays in the repo.
+
+```powershell
+$env:VF_OUT = "C:\Users\kochi\video-factory-out"
+python factory\app.py
+```
+
+`python factory\build.py --out C:\Users\kochi\video-factory-out ...` is the same switch for one build. Unset, output stays in `<repo>\out`. Details: [SETUP.md](SETUP.md).

@@ -265,6 +265,8 @@ Line 1 is the YouTube title. A blank line follows. The description body is the r
 
 The factory builds the title from the short base title plus a language tag. The description follows the **speech** language, so `en+zh` uses `description_en`.
 
+YouTube Studio rejects ASCII `<` and `>` in the title and the description. On write, `normalize_description` and `sidecar_text` replace each one with the fullwidth form (`＜`, `＞`), so `1.25 -> 2` is pasted as `1.25 -＞ 2`. The swap is one character for one character. It runs after trim and does not change the length check. Lesson YAML stays as written. Authors should prefer wording that avoids ASCII angle brackets: “to”, the arrow `→`, or the fullwidth forms. Speech and on-screen text are unchanged; this rule is only for the paste title and description.
+
 | Cell | Title |
 |------|--------|
 | `en` | `title_en` + ` (English)` |
@@ -279,7 +281,7 @@ The factory builds the title from the short base title plus a language tag. The 
 
 English tags use a leading space and halfwidth parentheses. Chinese tags sit against the title and use fullwidth parentheses. Putonghua tags stay in 简体 (`画面`). Cantonese tags stay in 繁體 (`畫面`). The dot is `·`.
 
-Limits, counted after trimming the description and on the full YouTube title including the tag:
+Limits, counted after trimming and bracket replacement on the description, and on the full YouTube title including the tag:
 
 - A description must be strictly less than 2500 characters. 2500 or more is an error.
 - A mono YouTube title over 100 characters is an error when the base title itself is still within 100.

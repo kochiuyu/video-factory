@@ -4,6 +4,10 @@
 The lesson ``title_*`` fields stay the short cover title. This module appends
 the language tag, picks the description for the speech language, and writes
 one paste file next to the cell MP4. It does not call the YouTube API.
+
+YouTube Studio rejects ASCII ``<`` and ``>`` in the title and the description.
+``normalize_description`` and ``sidecar_text`` replace them with fullwidth
+``＜`` and ``＞`` so the paste file can be saved. Lesson YAML is left as written.
 """
 
 from __future__ import annotations
@@ -15,7 +19,9 @@ from langs import is_tri, parse_cell, slide_folder
 TITLE_GUIDE = 100
 # Exclusive ceiling. len(description) >= DESCRIPTION_MAX is an error:
 # the body must be strictly less than 2500 so mixed-language uploads
-# keep headroom. Counted after normalize_description (trim).
+# keep headroom. Counted after normalize_description (newline normalize,
+# trim, and ASCII angle-bracket replacement). The replacement does not
+# change the count.
 DESCRIPTION_MAX = 2500
 DESCRIPTION_KEYS = ("description_en", "description_zh", "description_zh_hk")
 
@@ -54,23 +60,47 @@ def youtube_title(lesson: dict, cell: str) -> str:
     Mono cells name the speech language only. Mixed cells name speech and
     the extra slide language. English tags use halfwidth parentheses.
     Chinese tags use fullwidth parentheses. Putonghua tags stay in 简体
-    (画面); Cantonese tags stay in 繁體 (畫面).
+    (画面); Cantonese tags stay in 繁體 (畫面). ASCII ``<`` and ``>`` in the
+    base title are replaced with fullwidth forms.
     """
     voice, second = _voice_and_second(cell)
     base = base_title(lesson, voice)
     if voice == "en":
         if not second:
-            return f"{base} (English)"
-        return f"{base} (Speech: English · Slides: {_SLIDE_LABEL[second]})"
-    speech = "普通话" if voice in {"zh", "zh_cn"} else "粵語"
-    if not second:
-        return f"{base} ({speech})"
-    picture = "画面" if voice in {"zh", "zh_cn"} else "畫面"
-    return f"{base}（旁白：{speech} · {picture}：{_SLIDE_LABEL[second]}）"
+            title = f"{base} (English)"
+        else:
+            title = f"{base} (Speech: English · Slides: {_SLIDE_LABEL[second]})"
+    else:
+        speech = "普通话" if voice in {"zh", "zh_cn"} else "粵語"
+        if not second:
+            title = f"{base} ({speech})"
+        else:
+            picture = "画面" if voice in {"zh", "zh_cn"} else "畫面"
+            title = f"{base}（旁白：{speech} · {picture}：{_SLIDE_LABEL[second]}）"
+    return sanitize_youtube_text(title)
+
+
+def sanitize_youtube_text(value: str) -> str:
+    """Replace ASCII ``<`` and ``>`` with fullwidth ``＜`` and ``＞``.
+
+    YouTube Studio will not save a title or description that contains the
+    ASCII brackets. Fullwidth forms keep an arrow such as ``->`` readable
+    as ``-＞``. The swap is one character for one character.
+    """
+    if "<" not in value and ">" not in value:
+        return value
+    return value.replace("<", "＜").replace(">", "＞")
 
 
 def normalize_description(value: str) -> str:
-    return value.replace("\r\n", "\n").replace("\r", "\n").strip()
+    """Trim the body and make it safe to paste into YouTube Studio.
+
+    Newlines are normalized and surrounding whitespace is removed. ASCII
+    ``<`` and ``>`` become fullwidth ``＜`` and ``＞``. Length is counted
+    after this step; the bracket swap does not change it.
+    """
+    text = value.replace("\r\n", "\n").replace("\r", "\n").strip()
+    return sanitize_youtube_text(text)
 
 
 def _description_key(voice: str) -> str:
@@ -94,11 +124,16 @@ def description_for_cell(lesson: dict, cell: str) -> str:
 
 
 def sidecar_text(title: str, description: str) -> str:
-    """Line 1 is the title, then a blank line, then the description body."""
+    """Line 1 is the title, then a blank line, then the description body.
+
+    The title and the body are both sanitized, so the paste file contains
+    no ASCII ``<`` or ``>`` even when the caller passes raw lesson text.
+    """
+    safe_title = sanitize_youtube_text(title)
     body = normalize_description(description) if description else ""
     if body:
-        return f"{title}\n\n{body}\n"
-    return f"{title}\n\n"
+        return f"{safe_title}\n\n{body}\n"
+    return f"{safe_title}\n\n"
 
 
 def _uses_hk(lesson: dict) -> bool:

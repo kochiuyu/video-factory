@@ -109,6 +109,7 @@ Stage counts:
 - Mix 简体 characters into `zh_hk`, or Cantonese particles into `zh`.
 - Append `(English)`, `(普通话)`, `(粵語)`, or a speech/slides tag to `title_*`. Those tags are added when the paste file is written.
 - Invent a `youtube:` description, or copy `objective_*` into one. Keep a `youtube:` block that is already there, unless the user asks to change it. Descriptions must be strictly less than 2500 characters.
+- Put ASCII `<` or `>` into `title_*` or a `youtube:` description. YouTube Studio rejects them. Prefer “to”, `→`, or fullwidth `＜` / `＞`. The factory replaces ASCII `<` and `>` with fullwidth `＜` and `＞` when it writes the paste file, so leave an existing description in place rather than rewriting it only to swap those characters. Speech and on-screen comparison operators stay as written.
 
 Paste the YAML under this prompt.
 

@@ -17,6 +17,7 @@ from youtube import (
     DESCRIPTION_MAX,
     TITLE_GUIDE,
     description_for_cell,
+    normalize_description,
     sidecar_text,
     write_youtube_sidecars,
     youtube_errors,
@@ -153,6 +154,71 @@ class YoutubeTitles(unittest.TestCase):
         self.assertEqual(len(warnings), 1)
         self.assertIn("en+zh", warnings[0])
         self.assertEqual(youtube_warnings(lesson, ["en"]), [])
+
+    def test_ascii_angle_brackets_become_fullwidth(self) -> None:
+        # Studio rejects ASCII < and >. Arrows stay readable; length is unchanged.
+        raw = "Nearest rank: 1.25 -> 2 and 3.75 -> 4. Also a < b, a > b, a <= b, a >= b."
+        normalized = normalize_description(" \r\n" + raw + "\r\n ")
+        self.assertNotIn("<", normalized)
+        self.assertNotIn(">", normalized)
+        self.assertEqual(
+            normalized,
+            "Nearest rank: 1.25 -＞ 2 and 3.75 -＞ 4. Also a ＜ b, a ＞ b, a ＜= b, a ＞= b.",
+        )
+        self.assertEqual(len(normalized), len(raw))
+        self.assertEqual(normalize_description(normalized), normalized)
+        self.assertEqual(normalize_description("1.25 → 2 and ＜already＞"), "1.25 → 2 and ＜already＞")
+
+        lesson = {
+            "id": "YT-BRACKETS",
+            "title_en": "When x < y",
+            "title_zh": "当 x > y",
+            "title_zh_hk": "當 x < y",
+            "youtube": {
+                "description_en": "Place 1.25 -> 2.\n",
+                "description_zh": "位置 3.75 -> 4。\n",
+                "description_zh_hk": "位置 1.25 -> 2。\n",
+            },
+        }
+        self.assertEqual(youtube_title(lesson, "en"), "When x ＜ y (English)")
+        self.assertEqual(youtube_title(lesson, "zh"), "当 x ＞ y (普通话)")
+        self.assertEqual(
+            youtube_title(lesson, "en+zh"),
+            "When x ＜ y (Speech: English · Slides: 简体)",
+        )
+        self.assertEqual(description_for_cell(lesson, "en+zh"), "Place 1.25 -＞ 2.")
+        self.assertEqual(description_for_cell(lesson, "zh"), "位置 3.75 -＞ 4。")
+        self.assertEqual(youtube_errors(lesson), [])
+
+        direct = sidecar_text("Raw <title>", "body a -> b")
+        self.assertNotRegex(direct, r"[<>]")
+        self.assertEqual(direct, "Raw ＜title＞\n\nbody a -＞ b\n")
+        self.assertEqual(sidecar_text("Plain title", ""), "Plain title\n\n")
+
+        capped = ">" * (DESCRIPTION_MAX - 1)
+        at_limit = {
+            "id": "YT",
+            "title_en": "Mean",
+            "title_zh": "平均数",
+            "youtube": {"description_en": capped},
+        }
+        self.assertEqual(youtube_errors(at_limit), [])
+        self.assertEqual(description_for_cell(at_limit, "en"), "＞" * (DESCRIPTION_MAX - 1))
+
+        with tempfile.TemporaryDirectory() as tmp:
+            write_youtube_sidecars(
+                lesson,
+                {"en": ("en", "en", "en"), "zh": ("zh_cn", "zh_cn", "zh_cn"), "hk": ("zh_hk", "zh_hk", "zh_hk")},
+                Path(tmp),
+            )
+            cells = Path(tmp) / "cells"
+            for name in ("en", "zh", "hk"):
+                text = (cells / f"YT-BRACKETS_{name}.youtube.txt").read_text(encoding="utf-8")
+                self.assertNotRegex(text, r"[<>]")
+            en = (cells / "YT-BRACKETS_en.youtube.txt").read_text(encoding="utf-8")
+            zh = (cells / "YT-BRACKETS_zh.youtube.txt").read_text(encoding="utf-8")
+        self.assertEqual(en, "When x ＜ y (English)\n\nPlace 1.25 -＞ 2.\n")
+        self.assertEqual(zh, "当 x ＞ y (普通话)\n\n位置 3.75 -＞ 4。\n")
 
     def test_unknown_youtube_field(self) -> None:
         lesson = {"id": "YT", "title_en": "Mean", "title_zh": "平均数", "youtube": {"description_cn": "nope", "tags": ["a"]}}

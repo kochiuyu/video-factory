@@ -174,6 +174,8 @@ youtube:
 
 Each description must be strictly less than 2500 characters. A mixed cell uses the speech language: `en+zh` pastes `description_en`. The factory writes `out/lessons/<ID>/cells/<ID>_<cell>.youtube.txt` (title, blank line, description). It does not upload to YouTube.
 
+Write the title and the description without ASCII `<` or `>`. YouTube Studio rejects those characters. Prefer “to”, the arrow `→`, or fullwidth `＜` / `＞`. If the YAML still has ASCII brackets, the factory replaces them with the fullwidth forms when it writes the paste file (`1.25 -> 2` becomes `1.25 -＞ 2`). This applies only to the paste title and description. Comparison operators in speech and on-screen text stay unescaped ASCII.
+
 ## Beginner standalone rules
 
 * Open on a business question this short can answer. Close by answering it. No handoff from the previous short, no teaser for the next.

@@ -23,14 +23,9 @@ English is spoken lecture English.
 Area code `LAE`. Course keys on every file:
 
 ```yaml
-course: lae
 course_en: Low-Altitude Economy
 course_zh: 低空经济
 course_zh_hk: 低空經濟
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
 ```
 
 Six modules on one running path. Each module asks one question. Each teaching short introduces **one new noun**, then makes **one claim**. Hooks open from the previous short. Takeaways hand off to the next short.
@@ -199,7 +194,6 @@ Keep UTM, BVLOS, eVTOL, AED as English letters inside the Cantonese line.
 ```yaml
 id: LAE-M01
 kind: module
-course: lae
 course_en: Low-Altitude Economy
 course_zh: 低空经济
 course_zh_hk: 低空經濟
@@ -207,9 +201,6 @@ duration_target_s: 420
 title_en: The band
 title_zh: 这一层空域
 title_zh_hk: 呢一層空域
-objective_en: Name the low-altitude band and treat extra flights as delay imposed on others.
-objective_zh: 说出低空这一层，并把多出来的飞行看成加在别人身上的延误。
-objective_zh_hk: 講出低空呢一層，並把多出嚟嘅飛行看成加喺其他人身上嘅延誤。
 lessons:
 - LAE-M01-IN
 - LAE-LY-01
@@ -223,7 +214,7 @@ lessons:
 
 ## Lesson YAML shape
 
-Teaching short: one objective, glossary used in that short, two quiz items (`comprehension` then `transfer`), beats that sum to `duration_target_s`.
+Teaching short: glossary used in that short, two quiz items (`comprehension` then `transfer`), beats that sum to `duration_target_s`. Do not add `objective_*`, bare `course:`, or `audience` / `audience_*` (deprecated; console/Excel only if already present). Keep `course_en` / `course_zh` / `course_zh_hk` for covers. Prefer `youtube.description_*` for upload copy. Timing is `duration_target_s` only.
 
 Typical teaching-short beats (adapt, do not clone blindly):
 

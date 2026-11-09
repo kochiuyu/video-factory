@@ -8,21 +8,42 @@
 #   variance — symbol-by-symbol nickname walk (companion to formula; denser)
 # Suggested split: CORE now; come back for average + variance if the formula card felt fast.
 id: STAT-M01-T08-VARSTD
-course: statistics
 course_en: Business Statistics
 course_zh: 商务统计
 course_zh_hk: 商務統計
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 910
+duration_target_s: 882
 title_en: What are variance and standard deviation?
 title_zh: 什么是方差和标准差？
 title_zh_hk: 咩係方差同標準差？
-objective_en: Explain how two shops can have the same average sales but different daily variation, and why that calls for different plans. Calculate variance and standard deviation for the five days, and explain what these results can and cannot tell a manager.
-objective_zh: 解释为什么两家店的平均销量相同、每天的波动却不同，以及为什么这需要不同的计划。计算这五天的方差和标准差，并说明这些结果能帮助经理了解什么、不能决定什么。
-objective_zh_hk: 解釋點解兩間店嘅平均銷量相同、每日嘅波動卻唔同，以及點解呢個需要唔同嘅計劃。計算呢五日嘅方差同標準差，再講清楚呢啲結果可以幫經理了解啲乜、唔可以決定啲乜。
+youtube:
+  description_en: |
+    What are variance and standard deviation?
+    
+    Two shops both average 365 cups over five days (1,825 / 5). Shop A: 300, 330, 365, 400, 430 - swings about 65 either side. Shop B: 350, 360, 365, 370, 380 - stays within 15. Same average, different staffing plan.
+    
+    Signed gaps from 365 cancel to zero, so we square them. For A the sum of squares is 10,900; share by 5: variance = 2,180 square cups. Standard deviation is the square root, about 47 cups. Shop B: variance 100, SD = 10. SD uses every day and speaks in cups - it is not an order to add 47 staff cups by itself.
+    
+    Business Statistics - Module 1 - Short 8 (variance and SD)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    什么是方差和标准差？
+    
+    两家店五天平均都是365杯（1,825 / 5）。A店：300、330、365、400、430 - 大约上下摆65。B店：350、360、365、370、380 - 留在15以内。平均数相同，人手计划不同。
+    
+    相对365的带符号差距加总为零，所以要平方。A店平方和10,900；除以5：方差=2,180平方杯。标准差是开方，约47杯。B店：方差100，标准差=10。标准差用上每一天，单位是杯 - 它本身不是“多加47杯人手”的订单。
+    
+    商务统计 - 模块1 - 短片8（方差与标准差）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    咩係方差同標準差？
+    
+    兩間店五日平均都係365杯（1,825 / 5）。A店：300、330、365、400、430 - 大約上下擺65。B店：350、360、365、370、380 - 留喺15以內。平均數相同，人手計劃唔同。
+    
+    相對365嘅帶符號差距加總為零，所以要平方。A店平方和10,900；除以5：方差=2,180平方杯。標準差係開方，約47杯。B店：方差100，標準差=10。標準差用晒每日，單位係杯 - 佢本身唔係「多加47杯人手」嘅訂單。
+    
+    商務統計 - 模組1 - 短片8（方差同標準差）
+    覺得有用嘅話，訂閱下一集。
+
 glossary:
 - en: variance
   zh: 方差
@@ -113,9 +134,7 @@ beats:
   title_en: First, the equal share
   title_zh: 先算平均份额
   title_zh_hk: 先計平均份額
-  formula: 'Average = total / number of days
-
-    1,825 / 5 = 365'
+  formula: 'Average = total / number of days'
   formula_zh: '平均数 = 合计 / 天数
 
     1,825 / 5 = 365'
@@ -268,6 +287,7 @@ beats:
   s3_zh_hk: "低過平均數嗰兩日，係65加35，即係100杯。高過平均數嗰兩日，係35加65，都係100杯。五個偏差全部加埋，等於零。零唔代表A店冇搖，我哋頭先已經見到忙嗰日。咁要點計，先可以令低嘅一日同高嘅一日唔會互相抵銷？"
 - id: square
   visual: steps
+  layout: rows
   seconds: 57
   kicker: Why Square
   kicker_en: Why Square
@@ -373,6 +393,7 @@ beats:
   zh_hk: "方差。呢個就係佢個名。A店嘅方差係2,180平方杯。經理冇辦法用「杯乘杯」嚟排班。咁同樣嘅步驟，可以點樣寫得簡單啲？"
 - id: variance
   visual: steps
+  layout: rows
   seconds: 85
   kicker: The Formula
   kicker_en: The Formula
@@ -413,6 +434,7 @@ beats:
   s5_zh_hk: "而家合埋佢。帶細2嘅西格瑪係方差嘅簡稱。每個 x 減 mu，再乘自己，就係括號後面嗰個細2。用西格瑪全部加埋，再除以 n。A店係10,900除以5，等於2,180。單位仲係杯乘杯。咁點樣返到杯？"
 - id: formula
   visual: steps
+  layout: rows
   seconds: 73
   kicker: Back to Cups
   kicker_en: Back to Cups
@@ -547,7 +569,7 @@ beats:
   s3_zh_hk: "但47杯唔係多安排47個人嘅指令，亦唔係多準備47杯嘅指令。佢係一個理由，令我哋去檢查A店係咪需要一套更靈活嘅計劃。而且一個數唔係成份紀錄。某一日離平均數好遠，自己乘自己就係一個大數，可能將標準差拉高；兩種唔同嘅五日，亦可能計出同一個數。所以仲要睇住原本嘅五日。"
 - id: answer
   visual: takeaway
-  seconds: 58
+  seconds: 30
   kicker: The Answer
   kicker_en: The Answer
   kicker_zh: 回答问题
@@ -555,18 +577,27 @@ beats:
   title_en: Same average. Different plans.
   title_zh: 平均相同，计划不同
   title_zh_hk: 平均相同，計劃唔同
-  q1_en: Why not use the same plan for both shops?
-  q1_zh: 为什么不能给两家用同一套计划？
-  q1_zh_hk: 點解唔可以畀兩間用同一套計劃？
-  q2_en: What do we do with 47 cups?
-  q2_zh: 47杯用来做什么？
-  q2_zh_hk: 47杯用嚟做咩？
-  s1_en: "Back to the question. Both shops average 365 cups, but the swing is not the same. A is about 47 cups. B is 10. Same average does not mean the same plan."
-  s1_zh: "回到问题。两家都是365杯，但晃动不一样。A店大约是47杯。B店是10杯。平均相同，不表示计划相同。"
-  s1_zh_hk: "返到問題。兩間都係365杯，但搖動唔一樣。A店大約係47杯。B店係10杯。平均相同，唔代表計劃相同。"
-  s2_en: "Give A a more flexible plan, so the busy day has enough hands. Give B a steadier plan, closer to 365. Use 47 as a reason to check, not as an order to add 47 people."
-  s2_zh: "给A店一套更灵活的计划，让忙的那天有足够的人手。给B店一套较稳的计划，靠近365。把47当作一个检查的理由，而不是加人47个的指令。"
-  s2_zh_hk: "畀A店一套更靈活嘅計劃，令忙嗰日有足夠嘅人手。畀B店一套較穩嘅計劃，靠近365。將47當作一個檢查嘅理由，而唔係加人47個嘅指令。"
-  s3_en: "Before you set the plan, check how long a cup takes, how long a customer will wait, and what too many or too few staff cost. These numbers describe only the five days we supposed. Use the average and the standard deviation with those details. Neither number decides the plan by itself."
-  s3_zh: "定排班之前，还要看做一杯要多久、顾客愿意等多久，以及人手太多或太少的成本。这些数只描述我们假设的五天。把平均数、标准差和这些经营细节放在一起看。哪一个数都不能单独决定排班。"
-  s3_zh_hk: "定排班之前，仲要睇整一杯要幾耐、顧客肯等幾耐，同埋人手太多或者太少嘅成本。呢啲數只係描述我哋假設嘅五日。將平均數、標準差同呢啲營運細節放埋一齊睇。邊一個數都唔可以單獨決定排班。"
+  q1_en: 'Why not the same plan for both? → Same average; A ~47 cups, B only 10'
+  q1_zh: 为什么不能给两家用同一套计划？→ 平均相同；A约47杯，B只有10
+  q1_zh_hk: 點解唔可以畀兩間用同一套計劃？→ 平均相同；A約47杯，B得10
+  q2_en: 'What do we do with 47 cups? → A reason to check — not an order to add 47'
+  q2_zh: 47杯用来做什么？→ 检查的理由——不是加人47个
+  q2_zh_hk: 47杯用嚟做咩？→ 檢查嘅理由——唔係加人47個
+  s1_en: >-
+    Both shops average 365 cups, but A swings about 47 and B only 10.
+  s1_zh: >-
+    两家都是365杯，但A店大约晃47杯，B店只有10杯。
+  s1_zh_hk: >-
+    兩間都係365杯，但A店大約搖47杯，B店得10杯。
+  s2_en: >-
+    Same average does not mean the same plan. Give A more flexibility; keep B steadier.
+  s2_zh: >-
+    平均相同，不表示计划相同。给A更灵活；给B更稳。
+  s2_zh_hk: >-
+    平均相同，唔代表計劃相同。畀A更靈活；畀B更穩。
+  s3_en: >-
+    Use 47 as a reason to check, not an order to add 47 people. That is the answer.
+  s3_zh: >-
+    把47当作检查的理由，而不是加人47个的指令。这就是答案。
+  s3_zh_hk: >-
+    將47當作檢查嘅理由，而唔係加人47個嘅指令。呢個就係答案。

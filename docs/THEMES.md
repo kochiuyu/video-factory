@@ -46,3 +46,18 @@ corner: true
 
 `blobs` and `corner` only toggle decoration. Do not invent a new card
 layout in a theme file; that is a `slides.py` change and a schema review.
+
+## Typography (opt-in)
+
+Two optional keys change type, not colour. Leave them out and slides render exactly as before.
+
+```yaml
+typography: 2          # body text regular weight, capped at ~0.65x the title (title stays bold)
+title_font: NotoSansCJK-Bold.ttc      # optional; replaces the bold face (titles)
+body_font: NotoSansCJK-Regular.ttc    # optional; replaces the regular face (body, second-language lines)
+```
+
+- `typography: 2` applies to `two_column`, `takeaway`, `example`, `three_column` and `steps` bodies: about 54 px single-language and 47 px bilingual, regular weight, so the bold title leads.
+- A font path is tried as given, then under `fonts/`, `themes/` and the repo root. It is used only when it paints a CJK + Latin sample (简体, 繁體, digits, `%`, `=`); otherwise the build prints `theme: title_font … ignored` and keeps the current faces.
+- `VF_TYPOGRAPHY=2` turns it on for one build without editing a theme. The setting is part of the slide cache key, so stills re-render.
+- Shipped example: `themes/cuhk-navy-type2.yaml` (cuhk-navy colours + `typography: 2`). Use it with `python factory/build.py lessons/STAT/<lesson>.yaml --theme cuhk-navy-type2`. No lesson or module selects a theme in YAML, so nothing switches by default; pass the flag for the M04 builds.

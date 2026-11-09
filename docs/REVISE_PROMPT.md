@@ -56,6 +56,9 @@ When the logical flow is sound but the speech is mechanical, revise the spoken l
 - Quiz wrong answers must be realistic beginner mistakes (wrong formula, wrong interpretation, causation myth), not jokes, bans, fines, or magical effects. Prefer correct options under about 90 Latin / 40 CJK characters when possible. Keep the answer letter unless the user asks to change it.
 - Agent / editor workflow: revise one short at a time; validate; stop for the user's OK before the next short. Do not invent topics, story numbers, or new quiz answers. If a suppose file must be added so a card can teach, flag it and wait.
 - Prefer uncluttered bilingual cards: stay inside SCHEMA on-screen budgets; put equations on `steps` with `layout: rows` so each stays one line; do not pack three ideas on one `two_column` when a second card would clear the picture.
+- Bilingual definition/formula: speech-language line is primary (larger); secondary language is smaller. Show the numeric calc once — do not repeat the same arithmetic under both languages. Prefer primary = words + calc, secondary = word-formula only.
+- Never mid-wrap a number or short equation in a grid, column, or step (`7200`, `48×48=2304`). Prefer denser rows (`layout: rows`), one equation per row, shorter labels, or a break before the figure — not a mid-digit wrap.
+- CJK caption compounds stay whole across caption frames (`门店`, `标准差`). Prefer punctuation-aware wrap points. If a compound still splits across frames, reword so it is not cut at a frame boundary.
 
 ## Output
 
@@ -69,7 +72,7 @@ Whenever a YAML script is provided, return:
 1. Spoken English (`en` / `s1_en` to `s3_en`): university lecture. No layout talk (left box, gold bar, this card). Conversational, not a textbook abstract. Ask questions. Use one analogy. Show the idea from more than one angle.
 2. Spoken 简体 (`zh` / `s1_zh` to `s3_zh`): Putonghua lecture. No 书面腔, no 该/其/之, no “这是否意味着” / “以便” / “观测到” unless a locked term needs them. Full-width Chinese punctuation. Natural spoken sentences, not a translation of the English.
 3. Spoken 繁體 (`zh_hk` / `s1_zh_hk` to `s3_zh_hk`): Hong Kong business-lecture Cantonese in traditional characters. Rewrite from the meaning. Do not convert 简体 character by character. Particles such as 嘅、唔、咗、喺、嗰 are expected in speech.
-4. On-screen fields (`title_*`, `left_*`, `step1_*`, `q1_*`) stay short labels. Spoken paragraphs live only in speech keys. Keep them inside the bilingual budgets in SCHEMA "Bilingual on-screen budgets" (for example title 32 Latin / 14 CJK characters); `validate.py` warns past them. Write math lines so the two languages differ only by a unit word ("1,400 / 4 = 350 cups" / "1,400 / 4 = 350 杯"); the factory then prints the equation once on a bilingual card.
+4. On-screen fields (`title_*`, `left_*`, `step1_*`, `q1_*`) stay short labels. Spoken paragraphs live only in speech keys. Keep them inside the bilingual budgets in SCHEMA "Bilingual on-screen budgets" (for example title 32 Latin / 14 CJK characters); `validate.py` warns past them. Write math lines so the two languages differ only by a unit word ("1,400 / 4 = 350 cups" / "1,400 / 4 = 350 杯"); the factory then prints the equation once on a bilingual card. On `definition_card` / `formula`, speech language is the larger primary line; secondary is smaller; the shared numeric calc appears once (not twice under both languages).
 
 ## Speech structure — one source
 
@@ -86,6 +89,17 @@ Stage counts:
 - `table_grid`, `series`, `rank_line`, `freq_bars`, `balance_line`, `box_line`, `dev_bars`, `ratio_bars`, `schematic_chart`, `dag`, `pair`, `pair_chart`, `pair_box`, `pair_slope`, `redraw`, `turns`, `shrink`, `mix`, `coin`: 3. A series that names each cell uses `reveal: cells`. A rank line uses `s1` for the written values, `s2` for the ordered line, `s3` for the middle (or the ends) + span + footer. Fields for `rank_line`: `values` / `values_*` or `v1_*`…`v6_*`, `order: sorted` (default) or `as_given`, `mark: middle` (default), `ends` (first and last), `none`, or 1-based places such as `2;4`, optional chip labels via `labels` / `labels_*` or `l1_*`…`l6_*` (Shop A; they travel with their value when sorted), optional `span: ends` (or `2-4`) with `span_*` text for a bracket under the line, optional `break: last` (or a place such as `5`) for an axis break before one far value, optional `footer_*`. A freq bar chart uses `s1` for the category labels, `s2` for the bars and counts, `s3` for the tallest bar(s) (or none) and footer. Fields for `freq_bars`: `counts`, labels via `labels`/`labels_*` or `l1_*`…`l6_*`, `mark` (`tallest`|`none`|`all`|indices), optional `footer_*`. A balance line uses `s1` for the values on the line, `s2` for the mean fulcrum, `s3` for left=right pulls + footer. Fields for `balance_line`: `values`/`values_*` or `v1_*`…`v6_*`, `mean` (aliases `center`/`fulcrum`), optional labels via `labels`/`labels_*` or `l1_*`…`l6_*`, optional `left_*`/`right_*`, optional `footer_*`. A box line uses `s1` for the values on a scale, `s2` for Q1 and Q3, `s3` for the box, whiskers, span and footer. Fields for `box_line`: `values` (3–8 numbers), optional `q1`/`q3` (default nearest rank, place = 0.25 × n or 0.75 × n rounded up), optional `span_*`, optional `break: last`, optional `median`, optional `fences: on` or two numbers (`190;510`) for an outlier screen (s1 box, s2 fences, s3 values outside), optional `tag_*`, optional `footer_*`. A deviation bar chart uses `s1` for the days as dots against the mean line (power 1) or the products row under muted bars (power 2–4), `s2` for the signed bars (power 1) or the powered bars with their values (power 2–4), `s3` for the far bars and the footer. Fields for `dev_bars`: `values` (3–6 numbers), `mean`, optional labels via `labels`/`labels_*` or `l1_*`…`l6_*`, optional `power` (1–4, default 1), optional `mark` (`far` default, `none`, `all`, or places), optional `values_b` + `name_a_*`/`name_b_*`, optional `signed_first: true` (power 2–4 opens on the signed bars), optional `standardize: true` (power 2–4 divides each powered distance by σ to that power, so a kurtosis walk shows `6.25`, `2.56`, `0.81` instead of 7-digit fourth powers), optional `tag_*`, optional `footer_*`. A ratio bar chart uses `s1` for the SDs on one scale, `s2` for each bar as its own average with the SD slice, `s3` for the CV shares and the footer. Fields for `ratio_bars`: `means` and `sds` (2–4 numbers, same unit), optional labels via `labels`/`labels_*`, optional `unit_*`, optional `mark` (`highest` default, `lowest`, `none`, `all`, or places), optional `tag_*`/`tag1_*`…`tag3_*`, optional `footer_*`. A quad scatter uses `s1` for the points, `s2` for the mean cross-hairs and quadrant signs, `s3` for the paired products and footer. Fields for `quad_scatter`: `xs` and `ys` (3–8), optional `mean_x`/`mean_y`, labels via `labels`/`labels_*` or `l1_*`…, optional `x_axis_*`/`y_axis_*`, optional `mark` (`same` default), optional `footer_*`. Set `mode: ruler` for the −1…+1 scale (correlation): no `xs`/`ys`; required `r`; optional `left_*`/`mid_*`/`right_*`; `s1` ruler → `s2` three mini clouds → `s3` gold pin + footer. A confounder picture can use `dag` (nodes `n1_id`+`n1_*`, edges `e1: A->B`, optional `highlight`, `role_*`). A short equation (one `=`, a number on the right) is kept on one line: the card shrinks it up to 30% before it may wrap, so write each equation as one step.
 - unstaged: one block
 
+## Numbers → chart
+
+When a slide compares numbers, draw them; do not write them in two text panels.
+
+- Two or more shops' swings or averages (`300 cups, SD 30` vs `3,000 cups, SD 150`) → `ratio_bars` (`means: 300;3000`, `sds: 30;150`).
+- Counts per category (`Small 40 · Medium 280 · Large 100`) → `freq_bars` (`counts: 40;280;100`).
+- Several values where order, middle or range matters (`280;310;360;390;420`) → `rank_line`.
+- Keep `two_column` for words vs words (a claim vs its counter-claim). `validate.py` warns when both sides of a `two_column` contain digits.
+- Do not type `1.` / `2、` at the start of `step<n>_*`: the row badge numbers it.
+- Keep each `s<n>_*` stage under ~20 s of speech (≈45 English words, ≈80 Chinese characters); split longer ones.
+
 ## YAML hygiene
 
 - Use plain scalars only for simple identifiers, booleans, enums, and numbers.
@@ -97,7 +111,10 @@ Stage counts:
 - No markdown citation tags or reference brackets inside the YAML block.
 - UTF-8. Keep locked glossary strings exact (`lock: true`).
 - `duration_target_s` should match the sum of beat `seconds`.
-- Math lives in `formula_tex` only. Leave `formula_*` as readable text. Do not move a whole definition sentence into `formula_tex` because it contains `S_i`.
+- Math lives in `formula_tex` only. Leave `formula_*` as readable text (single-line ASCII fallback). Do not move a whole definition sentence into `formula_tex` because it contains `S_i`.
+- Two equations on one define/formula card: one `formula_tex` with both sides joined by `\\qquad`; keep plain `formula` as a **single** line (no `;` / `；` split). Never use `\\begin{aligned}` — matplotlib mathtext rejects it and the card falls back to ASCII. Prefer `\\frac`, `\\left`/`\\right`, `\\bar{X}`, `\\widehat{p}`. Do not put display math on `steps` (TeX will not paint there).
+- **Bars / hats / stars:** never ASCII `x-bar` or Unicode combining x̄ on plain cells; use `formula_tex` with `\\bar{X}`, `\\widehat{p}`, `Z^{*}`, `t^{*}`. Speech may gloss 样本均值（x-bar） once.
+- **Chinese tech names (zh / zh_hk):** Chinese term on slides and speech (样本量, 误差容限, 标准误, 自由度, 临界值, 置信区间, **学生 t** not 学生氏); English abbr only as first-time gloss. Keep math symbols on formula/ledger cards.
 
 ## Do not
 
@@ -109,7 +126,7 @@ Stage counts:
 - Mix 简体 characters into `zh_hk`, or Cantonese particles into `zh`.
 - Append `(English)`, `(普通话)`, `(粵語)`, or a speech/slides tag to `title_*`. Those tags are added when the paste file is written.
 - Invent a `youtube:` description, or copy `objective_*` into one. Keep a `youtube:` block that is already there, unless the user asks to change it. Descriptions must be strictly less than 2500 characters.
-- Put ASCII `<` or `>` into `title_*` or a `youtube:` description. YouTube Studio rejects them. Prefer “to”, `→`, or fullwidth `＜` / `＞`. The factory replaces ASCII `<` and `>` with fullwidth `＜` and `＞` when it writes the paste file, so leave an existing description in place rather than rewriting it only to swap those characters. Speech and on-screen comparison operators stay as written.
+- Invent `objective_*`, bare `course:`, or `audience` / `audience_*` on a revise pass. Those fields are deprecated. Leave existing ones alone unless the user asks to remove them. Do not invent bare `duration_target`; keep `duration_target_s`.
 
 Paste the YAML under this prompt.
 
@@ -118,13 +135,13 @@ Preserve valid existing fields unless one of these conditions applies:
 
 - the user requests a different lesson number or module;
 - the source `id` conflicts with the requested topic;
-- the filename, `id`, and `course` are inconsistent;
+- the filename and `id` are inconsistent (or `course_en` / folder area clearly wrong);
 - a structural field violates SCHEMA;
 - a required multilingual, quiz, takeaway, visual, or stage field is missing;
 - `duration_target_s` does not equal the sum of beat seconds.
 
 When correction is required:
-- update `id`, `course`, and filename together when applicable;
+- update `id` and filename together when applicable; refresh `course_*` labels if the course name changed;
 - preserve the existing visual unless it is invalid or incompatible with the required fields;
 - preserve valid unaffected content;
 - record the structural correction in the revision memo when a memo is requested.

@@ -7,8 +7,8 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
-title_en: 'Two Independent Samples: Testing a Difference in Means'
+duration_target_s: 340
+title_en: 'Two Independent Samples: Comparing Means'
 title_zh: 双独立样本：检验两个总体均值之差
 title_zh_hk: 雙獨立樣本：檢驗兩個總體均值之差
 objective_en: Formulate a test for the difference between two independent population means, derive the standard error with
@@ -16,6 +16,37 @@ objective_en: Formulate a test for the difference between two independent popula
   interpret an assumed customer-spend comparison without turning association into a pricing or causal conclusion.
 objective_zh: 构建两个独立总体均值之差的检验，明确协方差项并推导标准误，在大样本下使用各组样本方差进行正态近似，并解释假设的顾客消费比较，同时避免把统计关联转化为定价或因果结论。
 objective_zh_hk: 構建兩個獨立總體均值之差嘅檢驗，明確協方差項並推導標準誤，喺大樣本之下使用各組樣本方差進行正態近似，並解讀假設嘅顧客消費比較，同時避免將統計關聯轉化成定價或者因果結論。
+youtube:
+  description_en: |
+    Two Independent Samples: Comparing Means
+
+    Suppose Shop A and Shop B each sample their own customers. Shop A averages HK$52.40 a visit, Shop B HK$46.80, a gap of HK$5.60. Call that gap real when it is only sampling luck, and a manager may copy the wrong shop. Both averages wobble, so how big must the gap be?
+
+    A two-independent-samples comparison looks at the difference between means. Under large samples, a Normal approximation uses each group's own sample variance. The standard error of the difference is the square root of the sum of the two variance-over-n terms.
+
+    In an assumed example, 2.70 + 1.50 = 4.20, so SE ≈ √4.20 ≈ HK$2.049. Then Z = 5.60 / 2.049 ≈ 2.73, and the two-sided p-value is about 0.0063. At the 5 percent level we reject equal means.
+
+    Rule: this is evidence the averages differ, not proof of why, and not a reason to copy a shop or change prices.
+  description_zh: |
+    双独立样本：检验两个总体均值之差
+
+    假设A店和B店各自抽了一批顾客。A店平均每次消费 HK$52.40，B店 HK$46.80，差了 HK$5.60。要是这个差距只是抽样的运气，却当成真的，经理可能就去学错了店。两个平均都会晃，差距要多大才算数？
+
+    双独立样本比较看的是均值之差。大样本之下，正态近似用各组自己的样本方差。均值差的标准误，是两个“方差除以 n”相加后再开方。
+
+    在一个假设的例子里，2.70 + 1.50 = 4.20，标准误 ≈ √4.20 ≈ HK$2.049。于是 Z = 5.60 / 2.049 ≈ 2.73，双侧 p 值大约 0.0063。在 5% 水平拒绝均值相等。
+
+    规则：这是两家平均不同的证据，不是原因的证明，也不是去学哪家店或改价的理由。
+  description_zh_hk: |
+    雙獨立樣本：檢驗兩個總體均值之差
+
+    假設A店同B店各自抽咗一批顧客。A店平均每次消費 HK$52.40，B店 HK$46.80，差咗 HK$5.60。如果呢個差距淨係抽樣嘅運氣，你又當咗佢係真，經理可能就去學錯間舖。兩個平均都會晃，差距要幾大先算數？
+
+    雙獨立樣本比較睇嘅係均值之差。大樣本之下，正態近似用各組自己嘅樣本方差。均值差嘅標準誤，係兩個「方差除以 n」加埋之後再開方。
+
+    喺一個假設嘅例子入面，2.70 + 1.50 = 4.20，標準誤 ≈ √4.20 ≈ HK$2.049。於是 Z = 5.60 / 2.049 ≈ 2.73，雙側 p 值大約 0.0063。喺 5% 水平拒絕均值相等。
+
+    規則：呢個係兩間舖平均唔同嘅證據，唔係原因嘅證明，亦唔係去學邊間舖或者改價嘅理由。
 glossary:
 - en: two independent samples
   zh: 双独立样本
@@ -36,189 +67,255 @@ glossary:
 quiz:
 - id: Q1
   type: multiple_choice
-  question_en: Why do the variance terms add when subtracting two independent sample means?
-  question_zh: 为什么两个独立样本均值之差的方差 Var(X1_bar - X2_bar) 等于 (sigma1^2 / n1) + (sigma2^2 / n2)，即两组方差必须相加而非相减？
-  question_zh_hk: 點解兩個獨立樣本均值之差嘅方差 Var(X1_bar - X2_bar) 等於 (sigma1^2 / n1) + (sigma2^2 / n2)，即係兩組方差必須相加而唔係相減？
+  question_en: Why do the variance terms add when we subtract two independent sample means?
+  question_zh: 两个独立样本均值相减，为什么它们的方差反而要相加？
+  question_zh_hk: 兩個獨立樣本均值相減，點解佢哋嘅方差反而要相加？
   options_en:
-  - 'A: In general Var(A - B) = Var(A) + Var(B) - 2Cov(A,B); independence makes covariance zero, leaving the sum.'
-  - 'B: Because financial regulations forbid negative signs in retail operations variance formulas.'
-  - 'C: Because the Central Limit Theorem requires all subtraction operators to convert to addition.'
-  - 'D: Because sample sizes n1 and n2 cancel each other out in the denominator.'
+  - 'A: In general Var(A − B) = Var(A) + Var(B) − 2Cov(A, B); independence makes the covariance zero, leaving the sum.'
+  - 'B: Because a minus sign cancels the noise, so Var(A − B) = Var(A) − Var(B).'
+  - 'C: Because the larger group''s variance is the only one that counts, so we just use the bigger one.'
+  - 'D: Because the variances add only when the two sample sizes are equal.'
   options_zh:
-  - 'A: 因为独立的随机不确定性必然复合叠加；求两组充满随机扰动的测量值之差会放大总波动，故方差恒为相加：Var(X - Y) = Var(X) + Var(Y)。'
-  - 'B: 因为商业审计法规明文禁止在零售运营的方差核算公式中出现减号。'
-  - 'C: 因为中心极限定理强制要求在推导过程中将所有减法算子自动替换为加法。'
-  - 'D: 因为两组样本量 n1 与 n2 会在公式分母中相互抵消归零。'
+  - 'A: 一般来说 Var(A − B) = Var(A) + Var(B) − 2Cov(A, B)；两组独立时协方差为零，就只剩两项相加。'
+  - 'B: 因为减号会把噪声抵掉，所以 Var(A − B) = Var(A) − Var(B)。'
+  - 'C: 因为只有样本量大的那组方差才算数，直接用大的那个就行。'
+  - 'D: 因为只有两组样本量相等时，方差才相加。'
   options_zh_hk:
-  - 'A: 因為獨立嘅隨機不確定性必然複合疊加；求兩組充滿隨機擾動嘅測量值之差會放大總波動，故方差恆為相加：Var(X - Y) = Var(X) + Var(Y)。'
-  - 'B: 因為商業審計法規明文禁止喺零售營運嘅方差核算公式入面出現減號。'
-  - 'C: 因為中心極限定理強制要求喺推導過程入面將所有減法算子自動替換為加法。'
-  - 'D: 因為兩組樣本量 n1 同 n2 會喺公式分母入面相互抵消歸零。'
+  - 'A: 一般嚟講 Var(A − B) = Var(A) + Var(B) − 2Cov(A, B)；兩組獨立嗰陣協方差係零，就淨低兩項相加。'
+  - 'B: 因為減號會將雜音抵銷，所以 Var(A − B) = Var(A) − Var(B)。'
+  - 'C: 因為淨係樣本量大嗰組嘅方差先計數，直接用大嗰個就得。'
+  - 'D: 因為淨係兩組樣本量相等嗰陣，方差先至相加。'
   answer: A
-  explanation_en: The variance formula includes covariance. For independent sample means, covariance is zero, so subtracting
-    the means still leads to adding their variance contributions.
-  explanation_zh: 方差度量的是离散波动跨度而非方向。对于两个独立的随机变量，做差必然导致不确定性进一步扩散：Var(A - B) = Var(A) + (-1)^2 × Var(B) = Var(A) + Var(B)。
-  explanation_zh_hk: 方差度量嘅係離散波動跨度而唔係方向。對於兩個獨立嘅隨機變量，做差必然搞到不確定性進一步擴散：Var(A - B) = Var(A) + (-1)^2 × Var(B) = Var(A) + Var(B)。
+  explanation_en: The variance of a difference includes a covariance term. For independent sample means the covariance is
+    zero, so subtracting the means still adds their variance contributions. B subtracts the variances, C drops one group,
+    and D invents an equal-size condition.
+  explanation_zh: 差的方差里有一项协方差。两个样本均值独立时，协方差是零，所以均值相减，方差照样相加。B 把方差相减了，C 丢掉了一组，D 编了一个样本量相等的条件。
+  explanation_zh_hk: 差嘅方差入面有一項協方差。兩個樣本均值獨立嗰陣，協方差係零，所以均值相減，方差照樣相加。B 將方差相減咗，C 漏咗一組，D 作咗個樣本量相等嘅條件。
 - id: Q2
   type: multiple_choice
-  question_en: 'Assume independent groups with n1 = 120, x1-bar = HK$52.40, s1 = HK$18.00 and n2 = 150, x2-bar = HK$46.80,
-    s2 = HK$15.00. What is the large-sample two-sided result for H0: mu1 - mu2 = 0?'
-  question_zh: '都市咖啡审计客单价：湾仔店（n1 = 120，均值 $52.40，s1 = $18.00）对决 旺角店（n2 = 150，均值 $46.80，s2 = $15.00）。在 H0: mu1 - mu2 = 0 下，检验统计量
-    Z_calc 与 alpha = 0.05 的裁决分别是什么？'
-  question_zh_hk: '都市咖啡審計客單價：灣仔舖（n1 = 120，均值 $52.40，s1 = $18.00）對決 旺角舖（n2 = 150，均值 $46.80，s2 = $15.00）。喺 H0: mu1 - mu2 = 0
-    下，檢驗統計量 Z_calc 與 alpha = 0.05 嘅裁決分別係幾多？'
+  question_en: 'Assume independent groups: Shop A n1 = 120, mean HK$52.40, s1 = HK$18.00; Shop B n2 = 150, mean HK$46.80,
+    s2 = HK$15.00. What is the large-sample two-sided result for H0: μ1 − μ2 = 0 at α = 0.05?'
+  question_zh: '假设两组独立：A店 n1 = 120，均值 HK$52.40，s1 = HK$18.00；B店 n2 = 150，均值 HK$46.80，s2 = HK$15.00。在 H0: μ1 − μ2 = 0、α = 0.05 下，大样本双尾检验的结论是什么？'
+  question_zh_hk: '假設兩組獨立：A店 n1 = 120，均值 HK$52.40，s1 = HK$18.00；B店 n2 = 150，均值 HK$46.80，s2 = HK$15.00。喺 H0: μ1 − μ2 = 0、α = 0.05 之下，大樣本雙尾檢驗嘅結論係乜嘢？'
   options_en:
-  - 'A: SE_diff ≈ HK$2.049; Z ≈ 2.73; two-sided p ≈ 0.0063; reject H0 at alpha = 0.05.'
-  - 'B: SE_diff = 18.00 - 15.00 = $3.00; Z_calc = 5.60 / 3.00 = +1.87. Fail to reject H0.'
-  - 'C: Z_calc = (52.40 - 46.80) / sqrt(120 + 150) = 5.60 / 16.43 ≈ +0.34. Retain H0.'
-  - 'D: Z_calc = +2.73; fail to reject H0 because retail customer spend is legally immune to regional variation.'
+  - 'A: SE ≈ HK$2.049; Z ≈ 2.73; two-sided p ≈ 0.0063; reject H0.'
+  - 'B: SE = 18.00 − 15.00 = HK$3.00; Z = 5.60 / 3.00 ≈ 1.87; fail to reject H0.'
+  - 'C: SE = √(120 + 150) ≈ 16.43; Z = 5.60 / 16.43 ≈ 0.34; fail to reject H0.'
+  - 'D: SE = √(18² + 15²) ≈ 23.43; Z = 5.60 / 23.43 ≈ 0.24; fail to reject H0.'
   options_zh:
-  - 'A: SE_diff = 根号(18^2 / 120 + 15^2 / 150) = 根号(2.70 + 1.50) = 根号(4.20) ≈ $2.049；Z_calc = (52.40 - 46.80) / 2.049 ≈ +2.73。因
-    +2.73 > +1.96（p = 0.0063），拒绝 H0：两区客单价存在显著结构性分化。'
-  - 'B: SE_diff = 18.00 - 15.00 = $3.00；Z_calc = 5.60 / 3.00 = +1.87。判定不拒绝 H0。'
-  - 'C: Z_calc = (52.40 - 46.80) / 根号(120 + 150) = 5.60 / 16.43 ≈ +0.34。判定保留 H0。'
-  - 'D: Z_calc = +2.73；判定不拒绝 H0，因为各区客单在商业法规上不允许存在结构性差异。'
+  - 'A: SE ≈ HK$2.049；Z ≈ 2.73；双尾 p ≈ 0.0063；拒绝 H0。'
+  - 'B: SE = 18.00 − 15.00 = HK$3.00；Z = 5.60 / 3.00 ≈ 1.87；不拒绝 H0。'
+  - 'C: SE = √(120 + 150) ≈ 16.43；Z = 5.60 / 16.43 ≈ 0.34；不拒绝 H0。'
+  - 'D: SE = √(18² + 15²) ≈ 23.43；Z = 5.60 / 23.43 ≈ 0.24；不拒绝 H0。'
   options_zh_hk:
-  - 'A: SE_diff = 根號(18^2 / 120 + 15^2 / 150) = 根號(2.70 + 1.50) = 根號(4.20) ≈ $2.049；Z_calc = (52.40 - 46.80) / 2.049 ≈ +2.73。因
-    +2.73 > +1.96（p = 0.0063），拒絕 H0：兩區客單價存在顯著結構性分化。'
-  - 'B: SE_diff = 18.00 - 15.00 = $3.00；Z_calc = 5.60 / 3.00 = +1.87。判定唔拒絕 H0。'
-  - 'C: Z_calc = (52.40 - 46.80) / 根號(120 + 150) = 5.60 / 16.43 ≈ +0.34。判定保留 H0。'
-  - 'D: Z_calc = +2.73；判定唔拒絕 H0，因為各區客單喺商業法規上唔容許存在結構性差異。'
+  - 'A: SE ≈ HK$2.049；Z ≈ 2.73；雙尾 p ≈ 0.0063；拒絕 H0。'
+  - 'B: SE = 18.00 − 15.00 = HK$3.00；Z = 5.60 / 3.00 ≈ 1.87；唔拒絕 H0。'
+  - 'C: SE = √(120 + 150) ≈ 16.43；Z = 5.60 / 16.43 ≈ 0.34；唔拒絕 H0。'
+  - 'D: SE = √(18² + 15²) ≈ 23.43；Z = 5.60 / 23.43 ≈ 0.24；唔拒絕 H0。'
   answer: A
-  explanation_en: The estimated variance is 18^2/120 + 15^2/150 = 4.20, so SE_diff ≈ 2.049. The HK$5.60 difference gives Z
-    ≈ 2.73 and p ≈ 0.0063.
-  explanation_zh: 均值差方差为 324/120 + 225/150 = 2.70 + 1.50 = 4.20。开根号得均值差标准误 SE_diff ≈ $2.049。标准化 Z = 5.60 / 2.049 ≈ +2.73。由于
-    +2.73 显著超越 +1.96，断然推翻原假设（p = 0.0063）。
-  explanation_zh_hk: 均值差方差為 324/120 + 225/150 = 2.70 + 1.50 = 4.20。開根號得均值差標準誤 SE_diff ≈ $2.049。標準化 Z = 5.60 / 2.049 ≈ +2.73。由於
-    +2.73 顯著超越 +1.96，斷然推翻原假設（p = 0.0063）。
+  explanation_en: The estimated variance of the difference is 18²/120 + 15²/150 = 2.70 + 1.50 = 4.20, so SE ≈ 2.049. The
+    HK$5.60 gap gives Z ≈ 2.73 and p ≈ 0.0063, so reject H0. B subtracts the standard deviations, C uses the sample sizes
+    as if they were spread, and D forgets to divide by n.
+  explanation_zh: 均值差的估计方差是 18²/120 + 15²/150 = 2.70 + 1.50 = 4.20，所以 SE ≈ 2.049。HK$5.60 的差距得到 Z ≈ 2.73，p ≈ 0.0063，拒绝 H0。B 把两个标准差相减了，C 把样本量当成了波动，D 忘了除以 n。
+  explanation_zh_hk: 均值差嘅估計方差係 18²/120 + 15²/150 = 2.70 + 1.50 = 4.20，所以 SE ≈ 2.049。HK$5.60 嘅差距得到 Z ≈ 2.73，p ≈ 0.0063，拒絕 H0。B 將兩個標準差相減咗，C 將樣本量當咗做波動，D 唔記得除 n。
 beats:
 - id: hook
   visual: title_card
-  seconds: 28
-  kicker_en: The Two-Store Divergence
-  kicker_zh: 两店客单分化之辨
-  kicker_zh_hk: 兩舖客單分化之辨
-  title_en: Is the observed difference larger than combined sampling noise?
-  title_zh: 观测差异是否超过两组抽样噪声？
-  title_zh_hk: 觀測差異係咪超過兩組抽樣雜音？
-  en: Metro Coffee is comparing customer spend in two assumed, independently sampled store populations. Group 1 has a sample
-    mean of HK$52.40 and Group 2 has a sample mean of HK$46.80, an observed gap of HK$5.60. The raw difference is not enough
-    for a conclusion because each sample mean carries uncertainty. A two-sample procedure standardizes the gap using the combined
-    uncertainty from both groups.
-  zh: 都市咖啡正在比较两个假设且独立抽样的门店总体中的顾客消费。第 1 组样本均值为 HK$52.40，第 2 组为 HK$46.80，观测差距为 HK$5.60。仅凭原始差异不足以下结论，因为每个样本均值都带有不确定性。双样本方法会利用两组的合并不确定性把差距标准化。
-  zh_hk: 都市咖啡正比較兩個假設而且獨立抽樣嘅門市總體入面嘅顧客消費。第 1 組樣本均值係 HK$52.40，第 2 組係 HK$46.80，觀測差距係 HK$5.60。單憑原始差異唔足以下結論，因為每個樣本均值都帶有不確定性。雙樣本方法會利用兩組嘅合併不確定性將差距標準化。
+  seconds: 40
+  kicker_en: A real gap, or just noise?
+  kicker_zh: 差距是真的吗
+  kicker_zh_hk: 差距係真嘅？
+  title_en: Two shops, two averages
+  title_zh: 两家店，两个平均
+  title_zh_hk: 兩間舖，兩個平均
+  en: >-
+    Suppose Shop A and Shop B each sample their own customers. Shop A averages HK$52.40 a visit, Shop B HK$46.80, a gap
+    of HK$5.60. Call that gap real when it is only sampling luck, and a manager may copy the wrong shop. Both averages
+    wobble, so how big must the gap be? These are made-up teaching numbers.
+  zh: >-
+    假设A店和B店各自抽了一批顾客。A店平均每次消费 HK$52.40，B店 HK$46.80，差了 HK$5.60。要是这个差距只是抽样的运气，却当成真的，经理可能就去学错了店。两个平均都会晃，差距要多大才算数？下面都是教学用的假设数字。
+  zh_hk: >-
+    假設A店同B店各自抽咗一批顧客。A店平均每次消費 HK$52.40，B店 HK$46.80，差咗 HK$5.60。如果呢個差距淨係抽樣嘅運氣，你又當咗佢係真，經理可能就去學錯間舖。兩個平均都會晃，差距要幾大先算數？以下都係教學用嘅假設數字。
 - id: define
   visual: definition_card
-  seconds: 34
-  kicker_en: What It Is
+  seconds: 56
+  kicker_en: What it is
   kicker_zh: 核心概念
   kicker_zh_hk: 核心概念
-  title_en: Standardize the difference between independent sample means
-  title_zh: 标准化两个独立样本均值之差
-  title_zh_hk: 標準化兩個獨立樣本均值之差
-  formula: 'H0: mu_1 - mu_2 = Delta_0; Z = ((x1-bar - x2-bar) - Delta_0) / sqrt(s1^2/n1 + s2^2/n2)'
-  formula_zh: 'H0: mu_1 - mu_2 = Delta_0；Z = ((x1-bar - x2-bar) - Delta_0) / √(s1^2/n1 + s2^2/n2)'
-  formula_zh_hk: 'H0: mu_1 - mu_2 = Delta_0；Z = ((x1-bar - x2-bar) - Delta_0) / √(s1^2/n1 + s2^2/n2)'
-  formula_tex: Z=\frac{(\bar X_1-\bar X_2)-\Delta_0}{\sqrt{s_1^2/n_1+s_2^2/n_2}}
-  s1_en: The parameter is the difference between two population means. The null commonly sets that difference to zero, while
-    a two-sided alternative asks whether it differs from zero in either direction. The samples must represent distinct groups
-    and provide independent information across groups.
-  s1_zh: 参数是两个总体均值之差。原假设通常把该差设为零，双侧备择则询问其是否向任一方向偏离零。样本必须代表不同组，并在组间提供独立信息。
-  s1_zh_hk: 參數係兩個總體均值之差。原假設通常將嗰個差設做零，雙側備擇就詢問佢係咪向任何一個方向偏離零。樣本必須代表唔同組，並喺組間提供獨立資訊。
-  s2_en: With sufficiently large, well-behaved samples, the difference in sample means can be approximated by a normal distribution,
-    and each population variance may be estimated by its group sample variance. This is a large-sample approximation, not
-    a guarantee triggered by a universal sample-size cutoff.
-  s2_zh: 当样本足够大且表现良好时，样本均值之差可近似服从正态分布，各总体方差可由对应组样本方差估计。这是大样本近似，而不是由某个普遍样本量门槛自动保证。
-  s2_zh_hk: 當樣本足夠大而且表現良好嗰陣，樣本均值之差可以近似服從正態分佈，各總體方差可以由對應組樣本方差估計。呢個係大樣本近似，唔係由某個普遍樣本量門檻自動保證。
+  title_en: Gap over its standard error
+  title_zh: 差距除以它的标准误
+  title_zh_hk: 差距除以佢嘅標準誤
+  formula: 'H0: μ1 − μ2 = 0   Z = gap / SE'
+  formula_zh: 'H0: μ1 − μ2 = 0   Z = 差距 / SE'
+  formula_zh_hk: 'H0: μ1 − μ2 = 0   Z = 差距 / SE'
+  formula_tex: 'H_0:\ \mu_1 - \mu_2 = 0 \qquad Z = \frac{\bar{X}_1 - \bar{X}_2}{\sqrt{s_1^2/n_1 + s_2^2/n_2}}'
+  s1_en: >-
+    On the left, the null. Mu one and mu two are the true average spends at the two shops. H0 says their difference is
+    zero. The alternative is two-sided, because a gap either way would matter.
+  s1_zh: >-
+    左边是原假设。mu 一、mu 二是两家店真实的平均消费。H0 说两者之差是零。备择是双侧的，因为不管哪边高，都有意义。
+  s1_zh_hk: >-
+    左邊係原假設。mu 一、mu 二係兩間舖真實嘅平均消費。H0 話兩者之差係零。備擇係雙側嘅，因為邊邊高都有意義。
+  s2_en: >-
+    On the right, the test statistic. On top is the gap between the two sample means. Underneath is its standard error,
+    built from each shop's s squared over its n. Z says how many standard errors apart the shops are.
+  s2_zh: >-
+    右边是检验统计量。上面是两个样本均值的差距，下面是这个差距的标准误，由每家店的 s 平方除以各自的 n 拼起来。Z 告诉我们，两家店相差几个标准误。
+  s2_zh_hk: >-
+    右邊係檢驗統計量。上面係兩個樣本均值嘅差距，下面係呢個差距嘅標準誤，由每間舖嘅 s 平方除以各自嘅 n 砌出嚟。Z 話俾我哋知，兩間舖差幾多個標準誤。
+  s3_en: >-
+    With large samples, Z is close to Normal, and each shop's sample variance stands in for its unknown true one. That is
+    a large-sample approximation, not a guarantee from one magic sample size.
+  s3_zh: >-
+    样本够大时，Z 接近正态分布，每家店的样本方差可以代替它未知的真实方差。这是大样本近似，不是某个神奇样本量一到就自动保证。
+  s3_zh_hk: >-
+    樣本夠大嗰陣，Z 接近正態分佈，每間舖嘅樣本方差可以代替佢未知嘅真實方差。呢個係大樣本近似，唔係某個神奇樣本量一到就自動保證。
+- id: name_twoin
+  visual: title_card
+  seconds: 18
+  kicker_en: The names
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Two independent samples
+  title_zh: 双独立样本与均值差标准误
+  title_zh_hk: 雙獨立樣本同均值差標準誤
+  en: >-
+    Now the names. Two groups sampled separately, with no link between them, are two independent samples. The bottom of
+    our Z is the standard error of the difference.
+  zh: >-
+    现在给它们起名字。两组分开抽、彼此没有关联，叫双独立样本（two independent samples）。Z 下面那个数，叫均值差标准误（standard error of difference）。
+  zh_hk: >-
+    而家幫佢哋改名。兩組分開抽、彼此冇關連，叫雙獨立樣本（two independent samples）。Z 下面嗰個數，叫均值差標準誤（standard error of difference）。
 - id: mechanics
   visual: two_column
-  seconds: 34
-  kicker_en: The Variance Rule
-  kicker_zh: 方差叠加律
-  kicker_zh_hk: 方差疊加律
-  title_en: Variances add only after accounting for covariance
-  title_zh: 先处理协方差，才可判断方差如何合并
-  title_zh_hk: 先處理協方差，先可以判斷方差點樣合併
-  left_en: 'General rule: Var(A - B) = Var(A) + Var(B) - 2Cov(A,B)'
-  left_zh: 一般规则：Var(A - B) = Var(A) + Var(B) - 2Cov(A,B)
-  left_zh_hk: 一般規則：Var(A - B) = Var(A) + Var(B) - 2Cov(A,B)
-  right_en: 'Independent groups: Cov(A,B) = 0, so the variances add'
-  right_zh: 独立组：Cov(A,B) = 0，因此方差相加
-  right_zh_hk: 獨立組：Cov(A,B) = 0，所以方差相加
-  s1_en: The minus sign in a difference does not mean its variance terms should be subtracted. In general, variance of A minus
-    B includes a covariance term. When the two sample means are independent, covariance is zero, leaving the sum of their
-    variances.
-  s1_zh: 差值中的减号并不表示方差项应相减。一般而言，A - B 的方差包含协方差项。当两个样本均值独立时，协方差为零，于是剩下两者方差之和。
-  s1_zh_hk: 差值入面嘅減號唔表示方差項應該相減。一般而言，A - B 嘅方差包含協方差項。當兩個樣本均值獨立嗰陣，協方差係零，於是剩低兩者方差之和。
-  s2_en: If observations are paired, repeated, clustered, or otherwise dependent across groups, the independence formula is
-    inappropriate. The design determines the covariance structure, so analysts must identify the sampling unit before choosing
-    the standard-error formula.
-  s2_zh: 如果观测是配对、重复、聚类，或组间存在其他依赖，独立样本公式就不适用。设计决定协方差结构，因此分析人员必须先识别抽样单位，再选择标准误公式。
-  s2_zh_hk: 如果觀測係配對、重複、聚類，或者組間存在其他依賴，獨立樣本公式就唔適用。設計決定協方差結構，所以分析人員必須先識別抽樣單位，再選擇標準誤公式。
-  s3_en: A statistically detectable group difference does not explain why the groups differ. Customer mix, time of day, product
-    mix, promotions, selection, and measurement processes may all matter. A two-sample test alone does not establish a pricing
-    effect or causal mechanism.
-  s3_zh: 统计上可检测的组间差异并不能解释差异为何存在。顾客组合、时段、产品组合、促销、选择机制与测量流程都可能有关。双样本检验本身不能证明定价效应或因果机制。
-  s3_zh_hk: 統計上可檢測嘅組間差異並唔可以解釋差異點解存在。顧客組合、時段、產品組合、促銷、選擇機制同量度流程都可能有關。雙樣本檢驗本身唔可以證明定價效應或者因果機制。
+  seconds: 62
+  kicker_en: Why variances add
+  kicker_zh: 方差为什么相加
+  kicker_zh_hk: 方差點解相加
+  title_en: Subtract means, add variances
+  title_zh: 均值相减，方差相加
+  title_zh_hk: 均值相減，方差相加
+  left_en: 'Linked: covariance counts'
+  left_zh: 有关联的两组：协方差要算
+  left_zh_hk: 有關連嘅兩組：協方差要計
+  right_en: 'Independent: variances add'
+  right_zh: 独立的两组：方差直接相加
+  right_zh_hk: 獨立嘅兩組：方差直接相加
+  s1_en: >-
+    Why does the bottom add, when the top subtracts? Each average wobbles on its own. Take one wobbly number away from
+    another, and the gap wobbles even more, not less. A minus sign does not cancel noise.
+  s1_zh: >-
+    上面是相减，下面为什么是相加？每个平均都在自己晃。一个会晃的数减去另一个会晃的数，差距只会晃得更厉害，不会更少。减号抵不掉噪声。
+  s1_zh_hk: >-
+    上面係相減，下面點解係相加？每個平均都喺度自己晃。一個會晃嘅數減另一個會晃嘅數，差距只會晃得更犀利，唔會少啲。減號抵銷唔到雜音。
+  s2_en: >-
+    The full rule has one more piece. The variance of A minus B is the variance of A, plus the variance of B, minus twice
+    their covariance, how much they move together. If the groups are linked, like the same customers measured twice, that
+    piece matters.
+  s2_zh: >-
+    完整的规则还多一项：A 减 B 的方差，等于 A 的方差加 B 的方差，再减两倍的协方差，也就是两者一起动的程度。如果两组有关联，比如同一批顾客量两次，这一项就不能忽略。
+  s2_zh_hk: >-
+    完整嘅規則仲多一項：A 減 B 嘅方差，等於 A 嘅方差加 B 嘅方差，再減兩倍嘅協方差，即係兩者一齊郁嘅程度。如果兩組有關連，例如同一批顧客量兩次，呢一項就唔可以唔理。
+  s3_en: >-
+    With two independent samples, the covariance is zero, so the variances simply add. That is why we check the design
+    first. Paired, repeated, or clustered data need a different standard error.
+  s3_zh: >-
+    双独立样本的协方差是零，所以方差直接相加。这就是为什么要先看研究设计：配对、重复测量或者成群抽样的数据，标准误要换一种算法。
+  s3_zh_hk: >-
+    雙獨立樣本嘅協方差係零，所以方差直接相加。呢個就係點解要先睇研究設計：配對、重複量度或者成群抽樣嘅數據，標準誤要換一種計法。
 - id: ledger
   visual: steps
-  seconds: 38
-  kicker_en: The Ledger
-  kicker_zh: 台账实裁
-  kicker_zh_hk: 台賬實裁
-  title_en: Execute the assumed two-group spend comparison
-  title_zh: 执行假设两组顾客消费比较
-  title_zh_hk: 執行假設兩組顧客消費比較
-  step1_en: 'Group 1: n1 = 120, x1-bar = HK$52.40, s1 = HK$18.00; Group 2: n2 = 150, x2-bar = HK$46.80, s2 = HK$15.00'
-  step1_zh: 第 1 组：n1 = 120，x1-bar = HK$52.40，s1 = HK$18.00；第 2 组：n2 = 150，x2-bar = HK$46.80，s2 = HK$15.00
-  step1_zh_hk: 第 1 組：n1 = 120，x1-bar = HK$52.40，s1 = HK$18.00；第 2 組：n2 = 150，x2-bar = HK$46.80，s2 = HK$15.00
-  step2_en: SE_diff = sqrt(18^2/120 + 15^2/150) = sqrt(4.20) ≈ HK$2.049
-  step2_zh: SE_diff = √(18^2/120 + 15^2/150) = √4.20 ≈ HK$2.049
-  step2_zh_hk: SE_diff = √(18^2/120 + 15^2/150) = √4.20 ≈ HK$2.049
-  step3_en: Z = 5.60 / 2.049 ≈ 2.73; two-sided p ≈ 0.0063; reject H0 at alpha = 0.05
-  step3_zh: Z = 5.60 / 2.049 ≈ 2.73；双侧 p ≈ 0.0063；在 alpha = 0.05 时拒绝 H0
-  step3_zh_hk: Z = 5.60 / 2.049 ≈ 2.73；雙側 p ≈ 0.0063；喺 alpha = 0.05 嗰陣拒絕 H0
-  s1_en: For illustration, assume two independently sampled groups provide the stated sample sizes, means, and standard deviations.
-    These are teaching assumptions, not verified store, customer-segment, pricing, or transaction records. The null states
-    that the population mean difference equals zero.
-  s1_zh: 作为示例，假设两个独立抽样组提供上述样本量、均值与标准差。这些数字是教学假设，并非已核实的门店、顾客分群、定价或交易记录。原假设表示总体均值之差为零。
-  s1_zh_hk: 作為例子，假設兩個獨立抽樣組提供上述樣本量、均值同標準差。呢啲數字係教學假設，唔係已核實嘅門市、顧客分群、定價或者交易記錄。原假設表示總體均值之差係零。
-  s2_en: The estimated variance of the difference is 18 squared over 120 plus 15 squared over 150, equal to 2.70 plus 1.50,
-    or 4.20. Taking the square root gives an estimated standard error of approximately HK$2.049.
-  s2_zh: 均值差的估计方差为 18 平方除以 120，加上 15 平方除以 150，即 2.70 + 1.50 = 4.20。开根号后，估计标准误约为 HK$2.049。
-  s2_zh_hk: 均值差嘅估計方差係 18 平方除以 120，加上 15 平方除以 150，即係 2.70 + 1.50 = 4.20。開根號之後，估計標準誤約係 HK$2.049。
-  s3_en: The observed difference is HK$5.60, giving Z approximately 2.73 and a two-sided p-value approximately 0.0063. Reject
-    equality of population means at the 5% level under the large-sample assumptions. The result supports a mean difference,
-    but not a causal explanation or an automatic pricing decision.
-  s3_zh: 观测差异为 HK$5.60，得到 Z 约 2.73，双侧 p 值约 0.0063。在大样本假设下，于 5% 水平拒绝总体均值相等。该结果支持均值存在差异，但不提供因果解释，也不能自动决定定价。
-  s3_zh_hk: 觀測差異係 HK$5.60，得到 Z 約 2.73，雙側 p 值約 0.0063。喺大樣本假設之下，喺 5% 水平拒絕總體均值相等。呢個結果支持均值存在差異，但唔提供因果解釋，亦唔可以自動決定定價。
+  layout: rows
+  seconds: 110
+  kicker_en: A worked example
+  kicker_zh: 算一次看看
+  kicker_zh_hk: 計一次睇吓
+  title_en: 'Shop A vs Shop B'
+  title_zh: A店对B店
+  title_zh_hk: A店對B店
+  step1_en: 'Gap = 52.40 − 46.80 = HK$5.60'
+  step1_zh: '差距 = 52.40 − 46.80 = HK$5.60'
+  step1_zh_hk: '差距 = 52.40 − 46.80 = HK$5.60'
+  step2_en: '2.70 + 1.50 = 4.20'
+  step2_zh: '2.70 + 1.50 = 4.20'
+  step2_zh_hk: '2.70 + 1.50 = 4.20'
+  step3_en: 'SE = √4.20 ≈ HK$2.049'
+  step3_zh: 'SE = √4.20 ≈ HK$2.049'
+  step3_zh_hk: 'SE = √4.20 ≈ HK$2.049'
+  step4_en: 'Z = 5.60 / 2.049 ≈ 2.73'
+  step4_zh: 'Z = 5.60 / 2.049 ≈ 2.73'
+  step4_zh_hk: 'Z = 5.60 / 2.049 ≈ 2.73'
+  step5_en: 'p ≈ 0.0063; reject H0'
+  step5_zh: 'p ≈ 0.0063；拒绝 H0'
+  step5_zh_hk: 'p ≈ 0.0063；拒絕 H0'
+  s1_en: >-
+    Let us work it through. Suppose Shop A samples 120 independent visits, with a mean of HK$52.40 and s of HK$18.00.
+    Shop B samples 150 visits, with a mean of HK$46.80 and s of HK$15.00. The gap is HK$5.60.
+  s1_zh: >-
+    我们来算一遍。假设A店抽了 120 次互相独立的消费，平均 HK$52.40，s 是 HK$18.00；B店抽了 150 次，平均 HK$46.80，s 是 HK$15.00。差距是 HK$5.60。
+  s1_zh_hk: >-
+    我哋計一次。假設A店抽咗 120 次互相獨立嘅消費，平均 HK$52.40，s 係 HK$18.00；B店抽咗 150 次，平均 HK$46.80，s 係 HK$15.00。差距係 HK$5.60。
+  s2_en: >-
+    Now each shop's wobble. For Shop A, 18 times 18 is 324, and divided by 120 that is 2.70. For Shop B, 15 times 15 is
+    225, and divided by 150 that is 1.50.
+  s2_zh: >-
+    接着算每家店各自晃多少。A店，18 乘 18 是 324，除以 120，是 2.70；B店，15 乘 15 是 225，除以 150，是 1.50。
+  s2_zh_hk: >-
+    跟住計每間舖各自晃幾多。A店，18 乘 18 係 324，除 120，係 2.70；B店，15 乘 15 係 225，除 150，係 1.50。
+  s3_en: >-
+    The groups are independent, so we add. 2.70 plus 1.50 is 4.20. What number times itself is 4.20? About 2.049. So the
+    standard error of the difference is about HK$2.049.
+  s3_zh: >-
+    两组独立，所以相加：2.70 加 1.50 是 4.20。什么数乘自己等于 4.20？大约 2.049。所以均值差标准误大约是 HK$2.049。
+  s3_zh_hk: >-
+    兩組獨立，所以相加：2.70 加 1.50 係 4.20。乜嘢數乘自己等於 4.20？大約 2.049。所以均值差標準誤大約係 HK$2.049。
+  s4_en: >-
+    Measure the gap in that unit. 5.60 divided by 2.049 gives Z of about 2.73. The two-sided critical value at 5 percent
+    is 1.96, and 2.73 is past it. The two-sided p-value is about 0.0063. Both rules agree.
+  s4_zh: >-
+    再用这个单位量差距：5.60 除以 2.049，Z 大约 2.73。5% 双尾的临界值是 1.96，2.73 越过了它。双尾 p 值大约 0.0063。两种规则说的是同一件事。
+  s4_zh_hk: >-
+    再用呢個單位量差距：5.60 除 2.049，Z 大約 2.73。5% 雙尾嘅臨界值係 1.96，2.73 越過咗佢。雙尾 p 值大約 0.0063。兩種規則講緊同一件事。
+  s5_en: >-
+    So we reject H0 at the 5 percent level. The evidence says the true averages differ. It does not say why. Customer mix,
+    time of day, or promotions could explain it, so this alone is not a pricing decision.
+  s5_zh: >-
+    所以，在 5% 的水平下拒绝 H0。证据显示两家店的真实平均不一样，但没说为什么。顾客构成、时段、促销都可能是原因，所以单凭这一点，不能拿来定价。
+  s5_zh_hk: >-
+    所以，喺 5% 嘅水平之下拒絕 H0。證據顯示兩間舖嘅真實平均唔一樣，但冇講點解。顧客組成、時段、推廣都可能係原因，所以單憑呢一點，唔可以攞嚟定價。
 - id: takeaway
   visual: takeaway
-  seconds: 34
-  kicker_en: Decision Rule
-  kicker_zh: 商业法度
-  kicker_zh_hk: 商業法度
-  title_en: Verify independence, estimate uncertainty, and interpret narrowly
-  title_zh: 核实独立性、估计不确定性，并谨慎解释
-  title_zh_hk: 核實獨立性、估計不確定性，並審慎解讀
-  q1_en: Why do the variance terms add for independent sample means?
-  q1_zh: 为什么独立样本均值的方差项相加？
-  q1_zh_hk: 點解獨立樣本均值嘅方差項相加？
-  q2_en: What must be checked before turning a group difference into a business action?
-  q2_zh: 把组间差异转化为商业行动前必须检查什么？
-  q2_zh_hk: 將組間差異轉化成商業行動之前必須檢查咩？
-  s1_en: For independent sample means, covariance is zero, so the variance of their difference equals the sum of their variances.
-    If the design creates dependence, use a method that represents that covariance instead of applying the independent-groups
-    formula.
-  s1_zh: 对于独立样本均值，协方差为零，因此其差值方差等于两者方差之和。如果设计产生依赖，应使用能够反映协方差的方法，而不是套用独立组公式。
-  s1_zh_hk: 對於獨立樣本均值，協方差係零，所以佢哋差值嘅方差等於兩者方差之和。如果設計產生依賴，應該使用能夠反映協方差嘅方法，而唔係套用獨立組公式。
-  s2_en: Before acting, verify sampling frames, independence, measurement consistency, outliers, group comparability, missingness,
-    effect size, confidence interval, and practical costs. Observational differences may reflect composition or selection
-    rather than a controllable treatment effect.
-  s2_zh: 采取行动前，应核实抽样框、独立性、测量一致性、异常值、组间可比性、缺失情况、效应大小、置信区间与实际成本。观察性差异可能反映构成或选择，而不是可控处理效应。
-  s2_zh_hk: 採取行動之前，應該核實抽樣框、獨立性、量度一致性、異常值、組間可比性、缺失情況、效應大小、置信區間同實際成本。觀察性差異可能反映構成或者選擇，而唔係可控處理效應。
-  s3_en: For the assumed comparison, Z is approximately 2.73 and p approximately 0.0063, so the 5% two-sided large-sample
-    test rejects equal population means. Report the estimated HK$5.60 difference with its uncertainty and keep pricing and
-    causal decisions separate.
-  s3_zh: 在假设比较中，Z 约为 2.73，p 约为 0.0063，因此 5% 双侧大样本检验拒绝总体均值相等。应报告估计的 HK$5.60 差异及其不确定性，并把定价和因果决策分开。
-  s3_zh_hk: 喺假設比較入面，Z 約係 2.73，p 約係 0.0063，所以 5% 雙側大樣本檢驗拒絕總體均值相等。應該報告估計嘅 HK$5.60 差異同佢嘅不確定性，並將定價同因果決策分開。
+  seconds: 54
+  kicker_en: Decision rule
+  kicker_zh: 决策规则
+  kicker_zh_hk: 決策規則
+  title_en: Check the design, then the gap
+  title_zh: 先看设计，再看差距
+  title_zh_hk: 先睇設計，再睇差距
+  q1_en: Why do the variances add?
+  q1_zh: 为什么方差要相加？
+  q1_zh_hk: 點解方差要相加？
+  q2_en: What to check before acting?
+  q2_zh: 行动之前要查什么？
+  q2_zh_hk: 行動之前要查乜嘢？
+  s1_en: >-
+    For two independent samples, the covariance is zero, so the variance of the gap is the sum of the two variances. If
+    the groups are linked, use a method that counts the covariance instead.
+  s1_zh: >-
+    双独立样本的协方差是零，所以差距的方差等于两个方差之和。如果两组有关联，就要换一个把协方差算进去的方法。
+  s1_zh_hk: >-
+    雙獨立樣本嘅協方差係零，所以差距嘅方差等於兩個方差之和。如果兩組有關連，就要換一個將協方差計埋落去嘅方法。
+  s2_en: >-
+    Before acting, check how each sample was drawn, whether spend was measured the same way, outliers, and whether the
+    groups are really comparable. Report the gap with its uncertainty, and weigh costs separately from the test.
+  s2_zh: >-
+    行动之前，要查每组样本是怎么抽的、消费是不是用同一种方法量的、有没有异常值、两组是不是真的可比。报告差距时要带上它的不确定性，成本要和检验分开评估。
+  s2_zh_hk: >-
+    行動之前，要查每組樣本係點抽、消費係咪用同一種方法量、有冇異常值、兩組係咪真係可比。報告差距嗰陣要連埋佢嘅不確定性，成本要同檢驗分開評估。
+  s3_en: >-
+    So, real gap or just noise? Here Z is about 2.73 and p about 0.0063, so the HK$5.60 gap is larger than sampling noise
+    would usually make. That is evidence the averages differ, not proof of why, and not a reason to copy a shop.
+  s3_zh: >-
+    所以，差距是真的还是噪声？这里 Z 大约 2.73，p 大约 0.0063，HK$5.60 的差距比抽样噪声通常造成的要大。这是两家平均不同的证据，不是原因的证明，也不是去学哪家店的理由。
+  s3_zh_hk: >-
+    所以，差距係真定係雜音？呢度 Z 大約 2.73，p 大約 0.0063，HK$5.60 嘅差距大過抽樣雜音通常整到嘅。呢個係兩間舖平均唔同嘅證據，唔係原因嘅證明，亦唔係去學邊間舖嘅理由。

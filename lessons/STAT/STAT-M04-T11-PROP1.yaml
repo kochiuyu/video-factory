@@ -7,213 +7,373 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
+duration_target_s: 316
 title_en: Estimating market proportions
-title_zh: 比率的置信区间：自助点单机加购转化率测定
-title_zh_hk: 比率嘅置信區間：自助點單機加購轉化率測定
-objective_en: Construct two-sided confidence intervals for a population proportion using sample proportion p-hat and estimated
-  standard error, verify the sample size sufficiency criteria, and evaluate pastry upsell conversion rates on Airport digital
-  kiosks before approving chain-wide hardware rollouts.
-objective_zh: 利用样本比例 p-hat 及其估计标准误构建双尾总体比例置信区间，核验正态近似充分性准则，并在全网推广前对机场店自助点单机烘焙点心加购转化率实施科学区间测定与资本回报评估。
-objective_zh_hk: 利用樣本比例 p-hat 同其估計標準誤構建雙尾總體比例置信區間，核驗正態近似充分性準則，並喺全網推廣前對機場舖自助點單機烘焙點心加購轉化率實施科學區間測定與資本回報評估。
+title_zh: 比例的置信区间
+title_zh_hk: 比例嘅置信區間
+objective_en: Construct a two-sided confidence interval for a population proportion using the sample proportion and its estimated
+  standard error, check the success-failure counts, and read a kiosk upsell conversion bracket before a rollout decision.
+objective_zh: 用样本比例及其估计标准误构建总体比例的双尾置信区间，核验成功-失败次数，并在门店自助点单机加购试点上读出转化率区间再做铺开决策。
+objective_zh_hk: 用樣本比例同其估計標準誤構建總體比例嘅雙尾置信區間，核驗成功-失敗次數，並喺門市自助點單機加購試點上讀出轉化率區間先至做鋪開決策。
+youtube:
+  description_en: |-
+    What is a confidence interval for a proportion?
+
+    Suppose Shop A pilots a pastry upsell prompt on self-ordering kiosks. Out of 350 orders, 140 customers add a pastry — a sample share of 40%. A manager is ready to roll the hardware out on that single number. How wide is the true network conversion bracket?
+
+    For a binary yes/no outcome, the sample proportion is p-hat = X / n. When the success-failure check clears (n × p-hat and n × (1 − p-hat) both at least 10), a Normal Z-interval is fair:
+    CI = p-hat ± Z* × SE, with SE = sqrt(p-hat × (1 − p-hat) / n).
+
+    Made-up Shop A numbers: n = 350, X = 140, so p-hat = 0.40.
+    Successes 140 and failures 210 both clear 10.
+    0.40 × 0.60 = 0.24; 0.24 / 350 ≈ 0.000686; SE ≈ sqrt(0.000686) ≈ 0.0262.
+    At 95%, Z* = 1.960, so margin of error ≈ 1.960 × 0.0262 ≈ 0.0513.
+    Interval: 0.40 ± 0.0513 → about [34.87%, 45.13%].
+
+    Rule: do not pitch a rollout on the raw 40% alone. Pressure-test the plan against the lower bound of the interval.
+  description_zh: |-
+    什么是比例的置信区间？
+
+    假设A店在自助点单机上试点烘焙点心加购提示。350 笔订单里有 140 位顾客加购——样本份额 40%。有人准备只凭这一个数字铺开硬件。全网真实转化率的区间到底有多宽？
+
+    对是/否这类二元结果，样本比例 = X / n。当成功-失败检查通过（n × 样本比例 与 n × (1 − 样本比例) 都至少为 10）时，可用正态 Z 区间：
+    置信区间 = 样本比例 ± 临界值 × 标准误，标准误 = 根号(样本比例 × (1 − 样本比例) / n)。
+
+    假设A店数字：n = 350，X = 140，所以样本比例 = 0.40。
+    成功 140、失败 210，都超过 10。
+    0.40 × 0.60 = 0.24；0.24 / 350 ≈ 0.000686；标准误 ≈ 根号(0.000686) ≈ 0.0262。
+    95% 时临界值 = 1.960，误差容限 ≈ 1.960 × 0.0262 ≈ 0.0513。
+    区间：0.40 ± 0.0513 → 大约 [34.87%, 45.13%]。
+
+    规则：不要只凭原始的 40% 去推铺开方案。用区间下界压力测试计划。
+  description_zh_hk: |-
+    乜嘢係比例嘅置信區間？
+
+    假設A店喺自助點單機上試點烘焙點心加購提示。350 筆訂單入面有 140 位顧客加購——樣本份額 40%。有人準備淨係憑呢一個數字鋪開硬件。全網真實轉化率嘅區間到底有幾闊？
+
+    對係/否呢類二元結果，樣本比例 = X / n。當成功-失敗檢查通過（n × 樣本比例 同 n × (1 − 樣本比例) 都至少為 10）嗰陣，可用正態 Z 區間：
+    置信區間 = 樣本比例 ± 臨界值 × 標準誤，標準誤 = 根號(樣本比例 × (1 − 樣本比例) / n)。
+
+    假設A店數字：n = 350，X = 140，所以樣本比例 = 0.40。
+    成功 140、失敗 210，都超過 10。
+    0.40 × 0.60 = 0.24；0.24 / 350 ≈ 0.000686；標準誤 ≈ 根號(0.000686) ≈ 0.0262。
+    95% 時臨界值 = 1.960，誤差容限 ≈ 1.960 × 0.0262 ≈ 0.0513。
+    區間：0.40 ± 0.0513 → 大約 [34.87%, 45.13%]。
+
+    規則：唔好淨係憑原始嘅 40% 去推鋪開方案。用區間下界壓力測試計劃。
 glossary:
-- en: confidence interval for proportions
+- en: confidence interval for a proportion
   zh: 比例置信区间
   zh_hk: 比例置信區間
   lock: true
+- en: sample proportion (p-hat)
+  zh: 样本比例
+  zh_hk: 樣本比例
+  lock: true
 - en: estimated standard error of p-hat
-  zh: 样本比例估计标准误
-  zh_hk: 樣本比例估計標準誤
+  zh: 样本比例的估计标准误
+  zh_hk: 樣本比例嘅估計標準誤
   lock: true
-- en: upsell conversion rate
-  zh: 加购转化率
-  zh_hk: 加購轉化率
-  lock: true
-- en: conservative financial ROI
-  zh: 保守商业投资回报测算
-  zh_hk: 保守商業投資回報測算
+- en: margin of error
+  zh: 误差容限
+  zh_hk: 誤差容限
   lock: true
 quiz:
 - id: Q1
   type: multiple_choice
-  question_en: When constructing a confidence interval for an unknown population proportion p, why must the standard error
-    formula substitute the sample proportion p-hat in place of the true population parameter p?
-  question_zh: 在构建未知总体比例 p 的置信区间时，为什么在标准误计算中必须以样本比例 p-hat 替代总体真实参数 p？
-  question_zh_hk: 喺構建未知總體比例 p 嘅置信區間嗰陣，點解喺標準誤計算入面必須以樣本比例 p-hat 替代總體真實參數 p？
+  question_en: When constructing a confidence interval for an unknown population proportion p, why does the standard error formula plug in the sample proportion p-hat instead of the true p?
+  question_zh: 在构建未知总体比例 p 的置信区间时，为什么标准误公式要用样本比例代入，而不是真实的 p？
+  question_zh_hk: 喺構建未知總體比例 p 嘅置信區間嗰陣，點解標準誤公式要用樣本比例代入，而唔係真實嘅 p？
   options_en:
-  - 'A: Because the true population parameter p is unknown and precisely the value being estimated, so p-hat serves as the
-    best empirical plug-in estimate for variance.'
-  - 'B: Because statistical software algorithms crash if the true parameter p is used in denominators.'
-  - 'C: Because sample proportions always equal exactly 0.50 under market equilibrium.'
-  - 'D: Because using p-hat artificially widens the interval to satisfy government accounting audits.'
+  - 'A: Because the true p is unknown — it is exactly the value we are estimating — so p-hat is the plug-in we have for the variance.'
+  - 'B: Because using the true p would always make the standard error equal to zero.'
+  - 'C: Because the Normal table requires p-hat to be exactly 0.50 before any interval is valid.'
+  - 'D: Because plugging in p-hat automatically doubles the margin of error for every sample size.'
   options_zh:
-  - 'A: 因为总体真实比例 p 本身客观未知且正是待估目标，因而样本比例 p-hat 是计算抽样离散方差的最优实证代入估计量。'
-  - 'B: 因为若在分母中强行调用总体参数 p，统计分析软件的底层算法会直接宕机崩溃。'
-  - 'C: 因为在零售市场均衡状态下，所有产品的样本加购比例在数学上必定恒等于 0.50。'
-  - 'D: 因为代入 p-hat 能够人为拉宽区间宽度，从而迎合政府监管部门的合规审计。'
+  - 'A: 因为真实的 p 本身未知——它正是要估计的目标——所以只能把样本比例代入方差。'
+  - 'B: 因为如果用真实的 p，标准误会永远等于零。'
+  - 'C: 因为正态表要求样本比例必须恰好等于 0.50，区间才有效。'
+  - 'D: 因为代入样本比例会自动把任何样本量下的误差容限加倍。'
   options_zh_hk:
-  - 'A: 因為總體真實比例 p 本身客觀未知兼且正正係待估目標，因而樣本比例 p-hat 係計算抽樣離散方差嘅最優實證代入估計量。'
-  - 'B: 因為若果喺分母入面強行調用總體參數 p，統計分析軟件嘅底層算法會直接冧機崩潰。'
-  - 'C: 因為喺零售市場均衡狀態下，所有產品嘅樣本加購比例喺數學上必定恆等於 0.50。'
-  - 'D: 因為代入 p-hat 能夠人為拉闊區間闊度，從而迎合政府監管部門嘅合規審計。'
+  - 'A: 因為真實嘅 p 本身未知——佢正正係要估計嘅目標——所以淨係可以將樣本比例代入方差。'
+  - 'B: 因為如果用真實嘅 p，標準誤會永遠等於零。'
+  - 'C: 因為正態表要求樣本比例必須啱啱等於 0.50，區間先有效。'
+  - 'D: 因為代入樣本比例會自動將任何樣本量下嘅誤差容限加倍。'
   answer: A
-  explanation_en: In estimation problems, the true parameter p is unknown. We estimate the standard error SE_p by plugging
-    in the observed point estimator p-hat into sqrt(p-hat * (1 - p-hat) / n).
-  explanation_zh: 在统计参数估计场景中，真值 p 客观未知。我们只能将实际观测到的无偏点估计量 p-hat 代入公式 根号(p-hat * (1 - p-hat) / n) 来估算抽样分布的标准误。
-  explanation_zh_hk: 喺統計參數估計場景入面，真值 p 客觀未知。我哋淨係可以將實際觀測到嘅無偏點估計量 p-hat 代入公式 根號(p-hat * (1 - p-hat) / n) 嚟估算抽樣分佈嘅標準誤。
+  explanation_en: In estimation, p is unknown. The estimated standard error therefore uses sqrt(p-hat × (1 − p-hat) / n), with the observed sample proportion as the plug-in.
+  explanation_zh: 在估计问题里，p 未知。估计标准误因此用 根号(样本比例 × (1 − 样本比例) / n)，把样本里的比例作为代入值。
+  explanation_zh_hk: 喺估計問題入面，p 未知。估計標準誤因此用 根號(樣本比例 × (1 − 樣本比例) / n)，將樣本入面嘅比例作為代入值。
 - id: Q2
   type: multiple_choice
-  question_en: In a pilot test of self-ordering kiosks at the Airport branch, 140 out of 350 patrons accept a pastry upsell
-    prompt (p-hat = 0.40). What is the 95% confidence interval for the true network conversion rate?
-  question_zh: 在机场店自助点单机的试点排查中，350 位顾客中有 140 位接受了点心加购推荐（p-hat = 0.40）。该点单机全网真实加购转化率的 95% 置信区间是多少？
-  question_zh_hk: 喺機場舖自助點單機嘅試點排查入面，350 位顧客入面有 140 位接受咗點心加購推薦（p-hat = 0.40）。嗰個點單機全網真實加購轉化率嘅 95% 置信區間係幾多？
+  question_en: 'Suppose Shop B runs a kiosk pilot: n = 200 orders, X = 70 pastry accepts, so p-hat = 0.35. What are the estimated SE and the 95% Z-interval (Z* = 1.960)?'
+  question_zh: 假设B店试点自助点单机：n = 200 笔，加购 X = 70，样本比例 = 0.35。估计标准误与 95% 的 Z 置信区间（临界值 = 1.960）分别是多少？
+  question_zh_hk: 假設B店試點自助點單機：n = 200 筆，加購 X = 70，樣本比例 = 0.35。估計標準誤同 95% 嘅 Z 置信區間（臨界值 = 1.960）分別係幾多？
   options_en:
-  - 'A: SE ≈ sqrt(0.40 * 0.60 / 350) ≈ 0.0262; MOE = 1.96 * 0.0262 ≈ 0.0513 (5.13%); CI = [0.3487, 0.4513] or [34.87%, 45.13%]'
-  - 'B: SE = 0.40 / sqrt(350) ≈ 0.0214; CI = [0.3581, 0.4419]'
-  - 'C: MOE = 140 / 350 = 0.4000; CI = [0.0000, 0.8000]'
-  - 'D: CI = [0.4000, 0.4000], because 350 transactions eliminates all estimation uncertainty'
+  - 'A: SE ≈ 0.0337; interval about [0.284, 0.416]'
+  - 'B: SE ≈ 0.0337; interval about [0.316, 0.384] (plus or minus one SE only)'
+  - 'C: SE = 0.35 / sqrt(200) ≈ 0.0247; interval about [0.302, 0.398]'
+  - 'D: SE ≈ 0.0337; interval about [0.263, 0.437] using Z* = 2.576'
   options_zh:
-  - 'A: SE ≈ 根号(0.40 × 0.60 / 350) ≈ 0.0262；MOE = 1.96 × 0.0262 ≈ 0.0513（5.13%）；置信区间为 [34.87%, 45.13%]'
-  - 'B: SE = 0.40 / 根号(350) ≈ 0.0214；置信区间为 [35.81%, 44.19%]'
-  - 'C: MOE = 140 / 350 = 0.4000；置信区间为 [0.0000, 0.8000]'
-  - 'D: 置信区间为 [0.4000, 0.4000]，因为 350 笔订单样本足以消除一切抽样不确定度'
+  - 'A: 标准误 ≈ 0.0337；区间大约 [0.284, 0.416]'
+  - 'B: 标准误 ≈ 0.0337；区间大约 [0.316, 0.384]（只加减一个标准误）'
+  - 'C: 标准误 = 0.35 / 根号(200) ≈ 0.0247；区间大约 [0.302, 0.398]'
+  - 'D: 标准误 ≈ 0.0337；区间大约 [0.263, 0.437]（误用临界值 2.576）'
   options_zh_hk:
-  - 'A: SE ≈ 根號(0.40 × 0.60 / 350) ≈ 0.0262；MOE = 1.96 × 0.0262 ≈ 0.0513（5.13%）；置信區間為 [34.87%, 45.13%]'
-  - 'B: SE = 0.40 / 根號(350) ≈ 0.0214；置信區間為 [35.81%, 44.19%]'
-  - 'C: MOE = 140 / 350 = 0.4000；置信區間為 [0.0000, 0.8000]'
-  - 'D: 置信區間為 [0.4000, 0.4000]，因為 350 筆訂單樣本足以消除一切抽樣不確定度'
+  - 'A: 標準誤 ≈ 0.0337；區間大約 [0.284, 0.416]'
+  - 'B: 標準誤 ≈ 0.0337；區間大約 [0.316, 0.384]（淨係加減一個標準誤）'
+  - 'C: 標準誤 = 0.35 / 根號(200) ≈ 0.0247；區間大約 [0.302, 0.398]'
+  - 'D: 標準誤 ≈ 0.0337；區間大約 [0.263, 0.437]（誤用臨界值 2.576）'
   answer: A
-  explanation_en: Variance is 0.40 * 0.60 / 350 = 0.0006857, giving SE = sqrt(0.0006857) ≈ 0.02619. For 95% confidence, MOE
-    = 1.960 * 0.02619 ≈ 0.0513. The interval is 0.40 +/- 0.0513, yielding [34.87%, 45.13%].
-  explanation_zh: 方差项为 0.40 × 0.60 / 350 ≈ 0.0006857，开根号得估计标准误 SE ≈ 0.02619。对应 95% 置信度，MOE = 1.960 × 0.02619 ≈ 0.0513。区间为
-    0.40 ± 0.0513，即 [34.87%, 45.13%]。
-  explanation_zh_hk: 方差項為 0.40 × 0.60 / 350 ≈ 0.0006857，開根號得估計標準誤 SE ≈ 0.02619。對應 95% 置信度，MOE = 1.960 × 0.02619 ≈ 0.0513。區間為
-    0.40 ± 0.0513，即 [34.87%, 45.13%]。
+  explanation_en: 'SE = sqrt(0.35 × 0.65 / 200) = sqrt(0.0011375) ≈ 0.0337. Margin of error = 1.960 × 0.0337 ≈ 0.0661, so 0.35 ± 0.0661 ≈ [0.284, 0.416]. B uses ± one SE; C uses the wrong SE shape; D plugs in the 99% critical value.'
+  explanation_zh: '标准误 = 根号(0.35 × 0.65 / 200) = 根号(0.0011375) ≈ 0.0337。误差容限 = 1.960 × 0.0337 ≈ 0.0661，于是 0.35 ± 0.0661 ≈ [0.284, 0.416]。B 只用了 ± 一个标准误；C 用了错误的标准误形状；D 误用了 99% 的临界值。'
+  explanation_zh_hk: '標準誤 = 根號(0.35 × 0.65 / 200) = 根號(0.0011375) ≈ 0.0337。誤差容限 = 1.960 × 0.0337 ≈ 0.0661，於是 0.35 ± 0.0661 ≈ [0.284, 0.416]。B 淨係用咗 ± 一個標準誤；C 用咗錯誤嘅標準誤形狀；D 誤用咗 99% 嘅臨界值。'
 beats:
 - id: hook
   visual: title_card
-  seconds: 30
-  kicker: The Kiosk Rollout Bet
-  kicker_en: The Kiosk Rollout Bet
-  kicker_zh: 自助点单机千万元豪赌
-  kicker_zh_hk: 自助點單機千萬元豪賭
-  title_en: Will pastry upsells justify the digital investment?
-  title_zh: 加购转化实测四成：我们真能全网铺开点单机吗？
-  title_zh_hk: 加購轉化實測四成：我哋真係可以全網鋪開點單機咩？
-  en: 'Metro Coffee considers investing ten million dollars to install interactive digital self-ordering kiosks across Wan
-    Chai, Mong Kok, and the Airport. The commercial business case hinges entirely on automated pastry upsells: popping up
-    a heated butter croissant prompt before checkout. In a trial run at the Airport terminal, one hundred and forty out of
-    three hundred and fifty customers accept the pastry prompt—a sample conversion rate of exactly forty percent. The Chief
-    Commercial Officer is ready to sign the contract. But wait: what is the true conversion bracket across the entire network?'
-  zh: 都市咖啡正评估一项耗资千万的重磅数字化基建：在湾仔、旺角和机场全线门店加装交互式自助点单机。这项巨额投资的财务回报模型，完全押注在结账前自动弹窗推荐烘焙可颂的加购转化率上。在机场店的设备试运行中，三百五十位点单顾客中有整整一百四十位顺手加购了面点——实测样本转化率整整达到百分之四十。商务总监迫不及待准备签字拍板。然而，这套交互界面在全港大盘上的真实转化区间究竟落在何处？
-  zh_hk: 都市咖啡正評估一項耗資千萬嘅重磅數碼化基建：喺灣仔、旺角同機場全線門市加裝交互式自助點單機。呢項巨額投資嘅財務回報模型，完全押注喺結賬前自動彈窗推薦烘焙牛角包嘅加購轉化率上。喺機場舖嘅設備試運行入面，三百五十位點單顧客入面有整整一百四十位順便加購咗面點——實測樣本轉化率整整達到百分之四十。商務總監迫不及待準備簽字拍板。然而，呢套交互界面喺全港大盤上嘅真實轉化區間究竟落喺邊度？
+  seconds: 38
+  kicker: A rollout on one number
+  kicker_en: A rollout on one number
+  kicker_zh: 只凭一个数铺开
+  kicker_zh_hk: 淨係憑一個數鋪開
+  title_en: What is a CI for a proportion?
+  title_zh: 什么是比例的置信区间？
+  title_zh_hk: 乜嘢係比例嘅置信區間？
+  en: >-
+    Suppose Shop A pilots a pastry upsell prompt on self-ordering kiosks. Out of
+    three hundred and fifty orders, one hundred and forty customers add a pastry —
+    a sample share of forty percent. A manager is ready to roll the hardware out
+    on that single number. How wide is the true network conversion bracket? That
+    tool is a confidence interval for a proportion.
+  zh: >-
+    假设A店在自助点单机上试点烘焙点心加购提示。三百五十笔订单里，有一百四十位顾客加购——样本份额百分之四十。有人准备只凭这一个数字铺开硬件。全网真实转化率的区间到底有多宽？答案就是比例的置信区间。
+  zh_hk: >-
+    假設A店喺自助點單機上試點烘焙點心加購提示。三百五十筆訂單入面，有一百四十位顧客加購——樣本份額百分之四十。有人準備淨係憑呢一個數字鋪開硬件。全網真實轉化率嘅區間到底有幾闊？答案就係比例嘅置信區間。
 - id: define
   visual: definition_card
-  seconds: 34
-  kicker: What It Is
-  kicker_en: What It Is
-  kicker_zh: 核心概念
-  kicker_zh_hk: 核心概念
-  title_en: The proportion confidence interval
-  title_zh: 总体比例置信区间数学范式
-  title_zh_hk: 總體比例置信區間數學範式
-  formula: CI = p-hat +/- Z*(alpha / 2) * sqrt(p-hat * (1 - p-hat) / n)
-  formula_zh: 比例置信区间 = 样本比例 ± Z* 临界值 × 根号下 (p-hat × (1 - p-hat) / n)
-  formula_zh_hk: 比例置信區間 = 樣本比例 ± Z* 臨界值 × 根號下 (p-hat × (1 - p-hat) / n)
-  formula_tex: \text{CI} = \hat{p} \pm Z^*_{\alpha/2} \cdot \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}
-  s1_en: When analyzing binary outcomes like upselling or churn, the true population proportion p is unknown. We use the observed
-    sample proportion p-hat as our unbiased point estimator.
-  s1_zh: 在度量加购成功与否或客户流失这类二元商业行为时，总体真实比率 p 隐秘未知。我们选取实际观测到的样本比例 p-hat 作为最客观的无偏点估计量。
-  s1_zh_hk: 喺度量加購成功與否抑或客戶流失呢類二元商業行為嗰陣，總體真實比率 p 隱秘未知。我哋選取實際觀測到嘅樣本比例 p-hat 作為最客觀嘅無偏點估計量。
-  s2_en: Because we cannot know true p to calculate variance, we plug in p-hat to estimate standard error. Multiplying by
-    critical value Z star generates a robust confidence interval around our estimate.
-  s2_zh: 正因为真值 p 未知导致我们无法直接计算理论方差，我们以 p-hat 代入来估算抽样标准误。乘上对应的 Z 临界值，便在点估计周围撑起了一道无惧波动的置信区间。
-  s2_zh_hk: 正正因為真值 p 未知搞到我哋冇辦法直接計算理論方差，我哋以 p-hat 代入嚟估算抽樣標準誤。乘上對應嘅 Z 臨界值，就喺點估計周圍撐起咗一道無懼波動嘅置信區間。
-- id: mechanics
-  visual: two_column
-  seconds: 36
-  kicker: The Prerequisite Check
-  kicker_en: The Prerequisite Check
-  kicker_zh: 准入核验
-  kicker_zh_hk: 准入核驗
-  title_en: The empirical success-failure check
-  title_zh: 实证层面的成功-失败核验
-  title_zh_hk: 實證層面嘅成功-失敗核驗
-  left_en: 'Sample Rule: n*p-hat >= 10 and n*(1 - p-hat) >= 10'
-  left_zh: 实操准则：实测成功数与失败数双双不少于十例
-  left_zh_hk: 實操準則：實測成功數與失敗數雙雙唔少於十例
-  right_en: 'Skew Trap: Small samples or extreme proportions break normality'
-  right_zh: 偏斜陷阱：样本不足或极端比率将导致区间边界严重失真
-  right_zh_hk: 偏斜陷阱：樣本不足或極端比率將搞到區間邊界嚴重失真
-  s1_en: 'Before deploying normal Z multipliers on proportions, we must verify the empirical success-failure rule using our
-    observed counts: n times p-hat and n times one minus p-hat must both reach at least ten.'
-  s1_zh: 在将正态 Z 标尺应用于比例估计之前，必须用实测数据严格检核成功-失败法则：观测到的成功次数 n 乘 p-hat 与失败次数 n 乘 1 减 p-hat 必须双双达到十次以上。
-  s1_zh_hk: 喺將正態 Z 標尺應用喺比例估計之前，必須用實測數據嚴格檢核成功-失敗法則：觀測到嘅成功次數 n 乘 p-hat 與失敗次數 n 乘 1 減 p-hat 必須雙雙達到十次以上。
-  s2_en: If an upsell is extremely rare—say, only two customers out of one hundred accept—the binomial distribution skews
-    hard against zero, and the standard symmetric Z-interval breaks down.
-  s2_zh: 若加购行为极其罕见——比如一百人中仅有两人接受——二项分布会死死撞在零值边界上发生剧烈偏倚，此时标准对称的 Z 区间公式将彻底失效。
-  s2_zh_hk: 若果加購行為極其罕見——好似一百人入面淨係得兩個人接受——二項分佈會死死撞喺零值邊界上發生劇烈偏倚，呢個時候標準對稱嘅 Z 區間公式將徹底失效。
-  s3_en: In our Airport pilot, one hundred and forty successes and two hundred and ten failures easily clear the hurdle, unlocking
-    rigorous normal inference.
-  s3_zh: 在机场店试点中，实测一百四十次成功加购与二百一十次未加购，轻松跨过十次门槛，完全具备调用正态推断的合法资格。
-  s3_zh_hk: 喺機場舖試點入面，實測一百四十次成功加購與二百一十次未加購，輕鬆跨過十次門檻，完全具備調用正態推斷嘅合法資格。
-- id: ledger
+  seconds: 46
+  kicker: What it is
+  kicker_en: What it is
+  kicker_zh: 它是什么
+  kicker_zh_hk: 佢係乜
+  title_en: p-hat ± Z* × SE
+  title_zh: 样本比例 ± 临界值 × 标准误
+  title_zh_hk: 樣本比例 ± 臨界值 × 標準誤
+  formula: 'CI = p-hat ± Z* × SE'
+  formula_zh: 置信区间 = 样本比例 ± 临界值 × 标准误
+  formula_zh_hk: 置信區間 = 樣本比例 ± 臨界值 × 標準誤
+  formula_tex: '\widehat{p}\ \pm\ Z^{*}\cdot\sqrt{\widehat{p}(1-\widehat{p})/n}'
+  gloss_en: 'SE = sqrt(p-hat(1 − p-hat)/n)'
+  gloss_zh: 标准误 = 根号(样本比例×(1−样本比例)/n)
+  gloss_zh_hk: 標準誤 = 根號(樣本比例×(1−樣本比例)/n)
+  s1_en: >-
+    For a yes-or-no outcome — accept the pastry prompt, or skip it — the unknown
+    population share is p. The sample proportion p-hat equals X over n: the count
+    of yeses divided by the sample size. That is our point estimate.
+  s1_zh: >-
+    对「接受加购提示」或「跳过」这类是非结果，未知的总体份额是 p。样本比例等于 X 除以 n：成功次数除以样本量。这就是点估计。
+  s1_zh_hk: >-
+    對「接受加購提示」或者「跳過」呢類係非結果，未知嘅總體份額係 p。樣本比例等於 X 除以 n：成功次數除以樣本量。呢個就係點估計。
+  s2_en: >-
+    Because true p is unknown, we estimate the standard error by plugging p-hat
+    into the square-root formula. Multiply by the critical value Z-star — for
+    ninety-five percent, one point nine six zero — and the confidence interval
+    stretches left and right around the point estimate.
+  s2_zh: >-
+    因为真实的 p 未知，我们把样本比例代入开根号公式，得到估计标准误。再乘上临界值；百分之九十五时是一点九六零。置信区间就在点估计左右撑开。
+  s2_zh_hk: >-
+    因為真實嘅 p 未知，我哋將樣本比例代入開根號公式，得到估計標準誤。再乘上臨界值；百分之九十五時係一點九六零。置信區間就喺點估計左右撐開。
+- id: name_phat
+  visual: title_card
+  seconds: 16
+  kicker: The name
+  kicker_en: The name
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Sample proportion p-hat
+  title_zh: 样本比例
+  title_zh_hk: 樣本比例
+  en: >-
+    Say it once: sample proportion, written p-hat. It is the share of ones in the
+    sample — the count of yeses over n — before we build any interval around it.
+  zh: >-
+    大声念一次：样本比例。它是样本里「是」的份额——成功次数除以 n——之后才在它周围撑起区间。
+  zh_hk: >-
+    大聲唸一次：樣本比例。佢係樣本入面「係」嘅份額——成功次數除以 n——之後先喺佢周圍撐起區間。
+- id: condition
   visual: steps
-  seconds: 36
-  kicker: The Ledger
-  kicker_en: The Ledger
-  kicker_zh: 账目精算
-  kicker_zh_hk: 賬目精算
-  title_en: Auditing Airport kiosk upsell conversion
-  title_zh: 机场店自助加购转化区间实算
-  title_zh_hk: 機場舖自助加購轉化區間實算
-  step1_en: 'Pilot baseline: n = 350, X = 140 accepts -> p-hat = 140 / 350 = 0.40 (40.0%)'
-  step1_zh: 试点基准：n = 350 笔，加购 X = 140 单 -> 样本转化率 p-hat = 140 / 350 = 0.40
-  step1_zh_hk: 試點基準：n = 350 筆，加購 X = 140 單 -> 樣本轉化率 p-hat = 140 / 350 = 0.40
-  step2_en: 'Estimated SE: sqrt(0.40 * 0.60 / 350) = sqrt(0.000686) ≈ 0.0262 (2.62%)'
-  step2_zh: 估计标准误：根号(0.40 × 0.60 / 350) = 根号(0.000686) ≈ 0.0262（2.62%）
-  step2_zh_hk: 估計標準誤：根號(0.40 × 0.60 / 350) = 根號(0.000686) ≈ 0.0262（2.62%）
-  step3_en: '95% Bracket: 0.40 +/- 1.96 * 0.0262 = 0.40 +/- 0.0513 -> [34.87%, 45.13%]'
-  step3_zh: 95% 置信区间：0.40 ± 1.96 × 0.0262 = 0.40 ± 0.0513 -> 认证区间：[34.87%, 45.13%]
-  step3_zh_hk: 95% 置信區間：0.40 ± 1.96 × 0.0262 = 0.40 ± 0.0513 -> 認證區間：[34.87%, 45.13%]
-  s1_en: Audit the Airport terminal digital pilot log. Across n equals three hundred and fifty kiosk transactions, exactly
-    one hundred and forty customers clicked add a pastry to order, establishing our empirical point estimate at forty percent.
-  s1_zh: 调阅机场航站楼数字试点日志。在三百五十笔自助点单机交易中，恰好有一百四十位顾客点击了“加购现烤可颂”，样本点估计转化率实打实录得百分之四十。
-  s1_zh_hk: 調閱機場航站樓數碼試點日誌。喺三百五十筆自助點單機交易入面，啱啱好有一百四十位顧客點擊咗「加購現烤牛角包」，樣本點估計轉化率實打實錄得百分之四十。
-  s2_en: 'Step two computes estimated standard error: zero point forty times zero point sixty divided by three hundred and
-    fifty, all under the square root. That yields zero point zero two six two, or roughly two point six percent.'
-  s2_zh: 第二步计算样本比例的估计标准误：零点四零乘零点六零除以三百五十，整体开平方根。精确求得零点零二六二，折合约二点六个百分点的抽样离散幅度。
-  s2_zh_hk: 第二步計算樣本比例嘅估計標準誤：零點四零乘零點六零除以三百五十，整體開平方根。精確求得零點零二六二，折合約二點六個百分點嘅抽樣離散幅度。
-  s3_en: Step three scales by our ninety-five percent critical multiplier of one point nine six, giving a margin of error
-    of five point one three percent. Our ninety-five percent certified conversion bracket spans thirty-four point eight seven
-    to forty-five point one three percent.
-  s3_zh: 第三步乘上百分之九十五置信水平的一点九六临界乘数，得出误差容限为五个点一三。全网真实转化率的百分之九十五认证区间落定在百分之三十四点八七至四十五点一三之间。
-  s3_zh_hk: 第三步乘上百分之九十五置信水平嘅一點九六臨界乘數，得出誤差容限為五個點一三。全網真實轉化率嘅百分之九十五認證區間落定喺百分之三十四點八七至四十五點一三之間。
+  layout: rows
+  seconds: 48
+  kicker: Before the Normal tool
+  kicker_en: Before the Normal tool
+  kicker_zh: 动用正态工具之前
+  kicker_zh_hk: 用正態工具之前
+  title_en: Success-failure check
+  title_zh: 成功-失败检查
+  title_zh_hk: 成功-失敗檢查
+  step1_en: 'Need n × p-hat ≥ 10'
+  step1_zh: '需要 n × 样本比例 ≥ 10'
+  step1_zh_hk: '需要 n × 樣本比例 ≥ 10'
+  step2_en: 'Need n × (1 − p-hat) ≥ 10'
+  step2_zh: '需要 n × (1 − 样本比例) ≥ 10'
+  step2_zh_hk: '需要 n × (1 − 樣本比例) ≥ 10'
+  step3_en: 'Shop A: 140 and 210 both clear'
+  step3_zh: 'A店：140 与 210 都过线'
+  step3_zh_hk: 'A店：140 同 210 都過線'
+  s1_en: >-
+    Before you multiply by a Normal Z-star, check the counts. n times p-hat — the
+    number of observed successes — must reach at least ten.
+  s1_zh: >-
+    乘上正态临界值之前，先检查次数。n 乘样本比例——样本里的成功次数——至少要到十。
+  s1_zh_hk: >-
+    乘上正態臨界值之前，先檢查次數。n 乘樣本比例——樣本入面嘅成功次數——至少要到十。
+  s2_en: >-
+    And n times one minus p-hat — the failures — must also reach at least ten.
+    Extreme shares or tiny samples leave the binomial skewed against zero or one,
+    and the symmetric Z-interval stops being fair.
+  s2_zh: >-
+    n 乘一减样本比例——失败次数——也至少要到十。份额太极端或样本太小，二项分布会贴着零或一偏斜，对称的 Z 区间就不再公道。
+  s2_zh_hk: >-
+    n 乘一減樣本比例——失敗次數——都至少要到十。份額太極端或者樣本太細，二項分佈會貼住零或者一偏斜，對稱嘅 Z 區間就唔再公道。
+  s3_en: >-
+    On the made-up Shop A pilot, one hundred forty accepts and two hundred ten
+    skips both clear the bar, so the Normal Z-interval is on the table.
+  s3_zh: >-
+    在假设的A店试点里，一百四十次加购、二百一十次未加购，都过了门槛，所以可以动用正态 Z 区间。
+  s3_zh_hk: >-
+    喺假設嘅A店試點入面，一百四十次加購、二百一十次未加購，都過咗門檻，所以可以用正態 Z 區間。
+- id: ledger_se
+  visual: steps
+  layout: rows
+  seconds: 56
+  kicker: A worked example
+  kicker_en: A worked example
+  kicker_zh: 算一次看看
+  kicker_zh_hk: 計一次睇吓
+  title_en: 'Shop A: find the SE'
+  title_zh: A店：先算标准误
+  title_zh_hk: A店：先計標準誤
+  step1_en: '140 / 350 = 0.40'
+  step1_zh: '140 / 350 = 0.40'
+  step1_zh_hk: '140 / 350 = 0.40'
+  step2_en: '0.40 × 0.60 = 0.24'
+  step2_zh: '0.40 × 0.60 = 0.24'
+  step2_zh_hk: '0.40 × 0.60 = 0.24'
+  step3_en: '0.24 / 350 ≈ 0.000686'
+  step3_zh: '0.24 / 350 ≈ 0.000686'
+  step3_zh_hk: '0.24 / 350 ≈ 0.000686'
+  step4_en: 'SE ≈ √0.000686 ≈ 0.0262'
+  step4_zh: '标准误 ≈ √0.000686 ≈ 0.0262'
+  step4_zh_hk: '標準誤 ≈ √0.000686 ≈ 0.0262'
+  s1_en: >-
+    Start with the point estimate. One hundred forty accepts over three hundred
+    fifty orders is exactly zero point forty — forty percent.
+  s1_zh: >-
+    先写点估计。一百四十次加购除以三百五十笔订单，正好是零点四十——百分之四十。
+  s1_zh_hk: >-
+    先寫點估計。一百四十次加購除以三百五十筆訂單，啱啱係零點四十——百分之四十。
+  s2_en: >-
+    Next form p-hat times one minus p-hat: zero point forty times zero point sixty
+    equals zero point twenty-four. That is the estimated Bernoulli variance factor.
+  s2_zh: >-
+    下一步算样本比例乘以一减样本比例：零点四十乘零点六十等于零点二十四。这是伯努利方差里的估计因子。
+  s2_zh_hk: >-
+    下一步計樣本比例乘以一減樣本比例：零點四十乘零點六十等於零點二十四。呢個係伯努利方差入面嘅估計因子。
+  s3_en: >-
+    Divide that factor by n: zero point twenty-four over three hundred fifty is
+    about zero point zero zero zero six eight six.
+  s3_zh: >-
+    把这个因子除以 n：零点二十四除以三百五十，大约零点零零零六八六。
+  s3_zh_hk: >-
+    將呢個因子除以 n：零點二十四除以三百五十，大約零點零零零六八六。
+  s4_en: >-
+    Take the square root. The estimated standard error is about zero point zero
+    two six two — roughly two point six percentage points of sampling noise.
+  s4_zh: >-
+    开平方。估计标准误大约零点零二六二——大约两个六点百分点的抽样噪声。
+  s4_zh_hk: >-
+    開平方。估計標準誤大約零點零二六二——大約兩個六個百分點嘅抽樣噪聲。
+- id: ledger_ci
+  visual: steps
+  layout: rows
+  seconds: 52
+  kicker: A worked example
+  kicker_en: A worked example
+  kicker_zh: 算一次看看
+  kicker_zh_hk: 計一次睇吓
+  title_en: 'Shop A: 95% bracket'
+  title_zh: A店：95% 区间
+  title_zh_hk: A店：95% 區間
+  step1_en: 'Z* = 1.960'
+  step1_zh: '临界值 = 1.960'
+  step1_zh_hk: '臨界值 = 1.960'
+  step2_en: 'MOE = 1.960 × 0.0262 ≈ 0.0513'
+  step2_zh: '误差容限 = 1.960 × 0.0262 ≈ 0.0513'
+  step2_zh_hk: '誤差容限 = 1.960 × 0.0262 ≈ 0.0513'
+  step3_en: '0.40 ± 0.0513 → [34.87%, 45.13%]'
+  step3_zh: '0.40 ± 0.0513 → [34.87%, 45.13%]'
+  step3_zh_hk: '0.40 ± 0.0513 → [34.87%, 45.13%]'
+  s1_en: >-
+    For a ninety-five percent two-sided interval, the Normal table critical value
+    is one point nine six zero — the same Z-star we used for means when sigma
+    was known.
+  s1_zh: >-
+    百分之九十五的双尾区间，正态表临界值是一点九六零——和总体标准差已知时均值区间用的临界值相同。
+  s1_zh_hk: >-
+    百分之九十五嘅雙尾區間，正態表臨界值係一點九六零——同總體標準差已知時均值區間用嘅臨界值相同。
+  s2_en: >-
+    Margin of error equals Z-star times the standard error: one point nine six
+    zero times zero point zero two six two is about zero point zero five one three,
+    or five point one three percentage points.
+  s2_zh: >-
+    误差容限等于临界值乘以标准误：一点九六零乘零点零二六二，大约零点零五一三，也就是五个点一三个百分点。
+  s2_zh_hk: >-
+    誤差容限等於臨界值乘以標準誤：一點九六零乘零點零二六二，大約零點零五一三，亦即係五個點一三個百分點。
+  s3_en: >-
+    Add and subtract that margin from forty percent. The ninety-five percent
+    conversion bracket runs from about thirty-four point nine percent up to
+    forty-five point one percent.
+  s3_zh: >-
+    从百分之四十加减这段误差容限。百分之九十五的转化率区间大约从百分之三十四点九到四十五点一。
+  s3_zh_hk: >-
+    由百分之四十加減呢段誤差容限。百分之九十五嘅轉化率區間大約由百分之三十四點九到四十五點一。
 - id: takeaway
   visual: takeaway
-  seconds: 32
-  kicker: Decision Rule
-  kicker_en: Decision Rule
-  kicker_zh: 商业法度
-  kicker_zh_hk: 商業法度
-  title_en: Anchor capital budgets to the lower confidence bound
-  title_zh: 资本预算锚定下界，审慎防守方保投资不亏
-  title_zh_hk: 資本預算錨定下界，審慎防守先保投資唔蝕
-  q1_en: Why should corporate financial models always budget against the lower bound of an upsell interval?
-  q1_zh: 为什么商业财务回报模型必须严格依据转化率区间的下界来进行保守测算？
-  q1_zh_hk: 點解商業財務回報模型必須嚴格依據轉化率區間嘅下界嚟進行保守測算？
-  q2_en: What happens when our sample size is small and we don't know the population standard deviation?
-  q2_zh: 若样本量极小且总体真实方差未知，正态分布模型又将面临何种致命挑战？
-  q2_zh_hk: 若果樣本量極細兼且總體真實方差未知，正態分佈模型又將面臨咩致命挑戰？
-  s1_en: Never pitch a digital transformation business case using raw sample conversion; forty percent was merely an empirical
-    snapshot subject to random sampling error.
-  s1_zh: 切勿仅凭单一样本转化率就仓促提交数字化转型提案；百分之四十仅仅是特定样本的微观抓拍，随时受制于随机抽样波动。
-  s1_zh_hk: 切勿淨係憑單一樣本轉化率就倉促提交數碼化轉型提案；百分之四十淨係特定樣本嘅微觀抓拍，隨時受制於隨機抽樣波動。
-  s2_en: 'Pressure-test return on investment against the lower bound: if Metro''s hardware rollout remains profitable at thirty-four
-    point nine percent conversion, the project is commercially bulletproof.'
-  s2_zh: 用区间下界压力测试投资回报：若全港铺设点单机在百分之三十四点九的最悲观底线下依然盈利，该千万级硬件投资方能立于不败之地。
-  s2_zh_hk: 用區間下界壓力測試投資回報：若果全港鋪設點單機喺百分之三十四點九嘅最悲觀底線下依然有得賺，嗰個千萬級硬件投資先可以立於不敗之地。
-  s3_en: The operating rule is to budget against the lower bound. One hundred forty accepts out of 350 give a 95% bracket
-    of 34.87% to 45.13%.
-  s3_zh: 操作规则是按区间下界做预算。350 笔中 140 次加购，95% 区间为 34.87% 至 45.13%。
-  s3_zh_hk: 操作規則係按區間下界做預算。350 筆入面 140 次加購，95% 區間為 34.87% 至 45.13%。
+  seconds: 60
+  kicker: Decision rule
+  kicker_en: Decision rule
+  kicker_zh: 决策规则
+  kicker_zh_hk: 決策規則
+  title_en: Budget against the lower bound
+  title_zh: 按区间下界做预算
+  title_zh_hk: 按區間下界做預算
+  q1_en: Why not pitch the rollout on raw 40%?
+  q1_zh: 为什么不能只凭原始的 40% 铺开？
+  q1_zh_hk: 點解唔可以淨係憑原始嘅 40% 鋪開？
+  q2_en: 'Shop A 140/350: what is the 95% bracket?'
+  q2_zh: A店 140/350 的 95% 区间是多少？
+  q2_zh_hk: A店 140/350 嘅 95% 區間係幾多？
+  s1_en: >-
+    Forty percent was one sample snapshot. Sampling noise still swings the share
+    by a few percentage points either way — that is what the standard error
+    measured.
+  s1_zh: >-
+    百分之四十只是一次样本快照。抽样噪声仍会让份额左右摆几个百分点——标准误量的就是这件事。
+  s1_zh_hk: >-
+    百分之四十淨係一次樣本快照。抽樣噪聲仍然會令份額左右擺幾個百分點——標準誤量嘅就係呢件事。
+  s2_en: >-
+    Pressure-test the hardware plan against the lower bound. If the rollout still
+    looks workable near thirty-five percent conversion, the case is sturdier than
+    a pitch that needs the lucky forty.
+  s2_zh: >-
+    用区间下界压力测试硬件方案。如果转化率靠近百分之三十五时方案仍然说得通，就比必须押中幸运的百分之四十更稳。
+  s2_zh_hk: >-
+    用區間下界壓力測試硬件方案。如果轉化率靠近百分之三十五時方案仍然講得通，就比一定要押中幸運嘅百分之四十更穩。
+  s3_en: >-
+    Operating rule: for a yes-or-no share, build p-hat ± Z-star times SE after the
+    success-failure check. On Shop A, one hundred forty of three hundred fifty
+    give about thirty-four point nine to forty-five point one percent at ninety-five
+    percent confidence.
+  s3_zh: >-
+    操作规则：对是非份额，通过成功-失败检查后，建「样本比例 ± 临界值 × 标准误」。A店三百五十笔里一百四十次加购，百分之九十五置信下大约百分之三十四点九到四十五点一。
+  s3_zh_hk: >-
+    操作規則：對係非份額，通過成功-失敗檢查之後，建「樣本比例 ± 臨界值 × 標準誤」。A店三百五十筆入面一百四十次加購，百分之九十五置信下大約百分之三十四點九到四十五點一。

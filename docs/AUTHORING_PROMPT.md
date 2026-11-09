@@ -199,7 +199,11 @@ Write the title and the description without ASCII `<` or `>`. YouTube Studio rej
 * `takeaway` must include `q1_*` and `q2_*` in English, 简, and 繁.
 * Every spoken and on-screen field needs `*_en`, `*_zh`, `*_zh_hk`.
 * Fill the fields that belong to the visual: left/right, setup/result, q1/q2, col1–col3, step1–step3, or number/unit/caption.
-* Equations: put the math only in `formula_tex` (mathtext). Keep a short plain `formula` / `formula_zh` line on the card. Never put a lecture sentence in `formula_tex`. An underscore in `formula_en` is ordinary text, not LaTeX.
+* Equations: put the math only in `formula_tex` (matplotlib mathtext). Keep a short plain `formula` / `formula_zh` line on the card as a single-line ASCII fallback. Never put a lecture sentence in `formula_tex`. An underscore in `formula_en` is ordinary text, not LaTeX.
+* Two equations on one `definition_card` / `formula` beat: put both in **one** `formula_tex` string side-by-side with `\\qquad` (e.g. `n=\\left(\\frac{Z^{*}\\sigma}{E}\\right)^{2}\\qquad n=\\frac{(Z^{*})^{2}p^{*}(1-p^{*})}{E^{2}}`). Keep `formula` / `formula_zh` as **one** plain line (no `;` / `；` / newline that would split into two). The renderer clears `formula_tex` when the plain `formula` has two or more equation lines, and matplotlib mathtext does **not** support `\\begin{aligned}` / `\\begin{array}`. Prefer `\\frac`, `\\left`/`\\right`, `\\bar{X}`, `\\widehat{p}`, `\\qquad`. Steps cards cannot paint TeX — put display math on `definition_card` / `formula` only.
+* **Bars, hats, stars on slides:** never write ASCII `x-bar` / `X-bar`, never use a Unicode combining overbar (x̄) in plain `formula` / steps / title cells — Chinese fonts often paint it as `x¯`. Put sample means, hats, and starred critical values in `formula_tex` only: `\\bar{x}` / `\\bar{X}`, `\\widehat{p}`, `Z^{*}`, `t^{*}`. Speech may say 样本均值 with a first-time gloss（x-bar）.
+* **Chinese tech names (zh / zh_hk):** on slides and in speech use the Chinese term (样本量, 误差容限, 标准误, 自由度, 临界值, 置信区间, 学生 t 分布 — prefer **学生 t**, not 学生氏). English abbreviations (MOE, SE, df, CI) appear only as a first-time gloss in parentheses. Keep μ, σ, n, `\\bar{X}` as symbols on formula/ledger cards; do not spell the Chinese name inside every equation.
+
 * If a glossary pair is marked `lock: true`, reuse those strings exactly.
 * Do not invent citations, numbers, or institutional policies.
 * Do not suggest HeyGen, avatars, or a new visual style.

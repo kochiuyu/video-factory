@@ -1,19 +1,45 @@
 id: STAT-M03-T05-BINOM
-course: statistics
 course_en: "Discrete & Continuous Probability Distributions"
 course_zh: "离散与连续概率分布"
 course_zh_hk: "離散與連續概率分佈"
-audience: "first-year business students"
-audience_en: "first-year business students"
-audience_zh: "商学院一年级学生"
-audience_zh_hk: "商學院一年級學生"
-duration_target_s: 168
+duration_target_s: 166
 title_en: "The batch inspection ledger"
 title_zh: "批次质检台账：二项分布与抽检决策"
 title_zh_hk: "批次質檢台賬：二項分佈與抽檢決策"
-objective_en: "Define the Binomial distribution as the sum of n independent identical Bernoulli trials, apply its probability formula using combinations, calculate its mean np and variance np(1-p), and evaluate warehouse batch acceptance sampling for ceramic mugs."
-objective_zh: "将二项分布定义为 n 次独立同分布伯努利试验的总和，运用组合数二项公式计算概率，推导期望 np 与方差 np(1-p)，并将其应用于陶瓷马克杯入库批次抽检决策。"
-objective_zh_hk: "將二項分佈定義為 n 次獨立同分佈伯努利試驗嘅總和，運用組合數二項公式計算概率，推導期望 np 同方差 np(1-p)，並將其應用喺陶瓷馬克杯入庫批次抽檢決策。"
+youtube:
+  description_en: |
+    The batch inspection ledger
+    
+    A warehouse inspects a random sample of twenty ceramic mugs from a large shipment and counts defects. Inspecting every mug may be impractical, but a sample result alone does not automatically determine acceptance.
+    
+    Under fixed n, binary outcomes, independence, and constant p, the Binomial models the defect count. With n=20 and p=0.05, E[X]=1.0, P(X=0)≈0.358, and P(X=1)≈0.377 — about 73.5% chance of at most one defect after assumptions hold.
+    
+    Design sampling rules around cumulative binomial risk, plus AQL and producer/consumer risk. If defects cluster or p drifts, reassess before you use the simple Binomial.
+    
+    Discrete & Continuous Probability Distributions - Module 3 - Short 5 (BINOM)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    批次质检台账：二项分布与抽检决策
+    
+    仓库从一大批陶瓷杯里随机抽 20 只，数次品。逐只全检可能不现实，但一次抽样也不能自动决定收不收货。
+    
+    在固定 n、二元结果、独立、恒定 p 的假设下，二项分布给次品数建模。n=20、p=0.05 时，E[X]=1.0，P(X=0)≈0.358，P(X=1)≈0.377——假设成立后，「至多一件」约 73.5%。
+    
+    基于累积二项概率筑验收防线，还要 AQL 与产消双方风险。次品成团或 p 漂移时，先重新评估再套简单二项。
+    
+    离散与连续概率分布 - 模块3 - 短片5（BINOM）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    批次質檢台賬：二項分佈與抽檢決策
+    
+    倉庫由一大批陶瓷杯入面隨機抽 20 隻，數次品。逐隻全檢可能唔現實，但一次抽樣亦唔可以自動決定收唔收貨。
+    
+    喺固定 n、二元結果、獨立、恆定 p 嘅假設之下，二項分佈畀次品數建模。n=20、p=0.05 嗰陣，E[X]=1.0，P(X=0)≈0.358，P(X=1)≈0.377——假設成立之後，「至多一件」約 73.5%。
+    
+    基於累積二項概率築驗收防線，仲要 AQL 同產消雙方風險。次品成團或者 p 漂移嗰陣，先重新評估再套簡單二項。
+    
+    離散與連續概率分佈 - 模組3 - 短片5（BINOM）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: "Binomial distribution"
   zh: "二项分布"
@@ -92,8 +118,8 @@ beats:
   title_zh: "整批验收放行，还是整托退货拒收？"
   title_zh_hk: "成批驗收放行，定係成托退貨拒收？"
   en: "A warehouse inspects a random sample of twenty ceramic mugs from a large shipment and counts defects. Inspecting every mug may be impractical, but a sample result alone does not automatically determine acceptance. How can the Binomial distribution model the defect count under stated assumptions and support a documented sampling rule?"
-  zh: "仓库从一批陶瓷马克杯中随机抽取 20 只并清点次品。逐只检验可能不切实际，但单次样本结果也不能自动决定是否验收。二项分布如何在明确假设下为次品数建模，并支持有记录的抽样规则？"
-  zh_hk: "倉庫由一批陶瓷馬克杯入面隨機抽取 20 隻，再清點次品。逐隻檢驗可能唔實際，但單次樣本結果亦唔可以自動決定係咪驗收。二項分佈點樣喺清楚假設之下為次品數建模，並支援有記錄嘅抽樣規則？"
+  zh: "仓库从一大批陶瓷杯里随机抽 20 只，数次品。逐只全检可能不现实，但一次抽样也不能自动决定收不收货。二项分布在什么假设下给次品数建模，并支撑有记录的抽样规则？"
+  zh_hk: "倉庫由一大批陶瓷杯入面隨機抽 20 隻，數次品。逐隻全檢可能唔現實，但一次抽樣亦唔可以自動決定收唔收貨。二項分佈喺咩假設之下畀次品數建模，並支撐有記錄嘅抽樣規則？"
 - id: define
   visual: definition_card
   seconds: 34
@@ -109,8 +135,8 @@ beats:
   formula_zh_hk: "P(X = k) = 組合數 C(n, k) × p^k × (1 - p)^(n - k)"
   formula_tex: "P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}, \\quad k = 0, 1, \\dots, n"
   s1_en: "A Binomial model applies to a fixed number n of trials when each trial has two outcomes, trials are independent, and the event probability p remains constant. X counts how many times the event occurs."
-  s1_zh: "当试验次数 n 固定、每次只有两个结果、各次试验相互独立，而且事件概率 p 保持不变时，可以使用二项模型。X 统计该事件出现的次数。"
-  s1_zh_hk: "當試驗次數 n 固定、每次只有兩個結果、各次試驗互相獨立，而且事件概率 p 保持不變，就可以用二項模型。X 統計嗰個事件出現嘅次數。"
+  s1_zh: "固定做 n 次独立的是非试验，每次成功概率都是同一个 p，成功次数就服从二项分布。"
+  s1_zh_hk: "固定做 n 次獨立嘅是非試驗，每次成功概率都係同一個 p，成功次數就服從二項分佈。"
   s2_en: "The formula combines three operational pieces: the probability of k successes, the probability of n minus k failures, and the combination term that counts every sequence where those k defects could appear."
   s2_zh: "该公式由三个业务要素相乘而成：k 次缺陷发生的概率、n 减 k 次合格的概率，以及用于统计这 k 个次品在箱内所有可能出现顺序的组合项。"
   s2_zh_hk: "嗰條公式由三個業務要素相乘而成：k 次缺陷發生嘅概率、n 減 k 次合格嘅概率，以及用嚟統計嗰 k 個次品喺箱內所有可能出現順序嘅組合項。"
@@ -169,7 +195,7 @@ beats:
   s3_zh_hk: "第三步測算啱啱好出現一隻瑕疵嘅概率：20 種排列組合乘以 0.05 再乘 0.95 嘅 19 次方，得出 37.7%。頭兩項相加表明，73.5% 嘅貨箱瑕疵數都喺一隻及以內。"
 - id: takeaway
   visual: takeaway
-  seconds: 32
+  seconds: 30
   kicker: "Decision Rule"
   kicker_en: "Decision Rule"
   kicker_zh: "商业法则"
@@ -177,18 +203,18 @@ beats:
   title_en: "Design sampling rules around cumulative binomial risk"
   title_zh: "基于累积二项概率，筑牢供货验收防线"
   title_zh_hk: "基於累積二項概率，築牢供貨驗收防線"
-  q1_en: "How do managers set acceptance sampling cutoffs?"
-  q1_zh: "管理者应如何设定入库抽检的放行与拒收阈值？"
-  q1_zh_hk: "管理者應點樣設定入庫抽檢嘅放行同拒收閾值？"
-  q2_en: "What is the crucial operational assumption of the Binomial?"
-  q2_zh: "二项分布在实际营运中必须坚守哪项核心假设？"
-  q2_zh_hk: "二項分佈喺實際營運入面必須堅守邊項核心假設？"
-  s1_en: "Do not derive an acceptance cutoff from the Binomial calculation alone. A sampling plan must specify the sample design, acceptable quality level, producer and consumer risks, and the action attached to each defect count."
-  s1_zh: "不要只凭二项概率计算就设定验收阈值。抽样方案还应明确抽样设计、可接受质量水平、生产方与使用方风险，以及各次品数对应的处理措施。"
-  s1_zh_hk: "唔好淨係靠二項概率計算就設定驗收門檻。抽樣方案仲要講清楚抽樣設計、可接受質量水平、生產方同使用方風險，以及各個次品數對應嘅處理措施。"
-  s2_en: "Check the assumptions before using the model. If defects are related within cartons or the defect probability varies across mugs, the simple Binomial model may not fit; revise the sampling design or use a model that accounts for dependence or varying probabilities."
-  s2_zh: "使用模型前应检查假设。如果同一箱内的次品相互关联，或不同杯子的次品概率并不相同，简单二项模型可能不适用；应调整抽样设计，或采用能够处理相关性或变动概率的模型。"
-  s2_zh_hk: "用模型之前要檢查假設。如果同一箱入面嘅次品互相關聯，或者唔同杯嘅次品概率並唔相同，簡單二項模型可能唔適用；應該調整抽樣設計，或者採用可以處理相關性或變動概率嘅模型。"
-  s3_en: "For n = 20 and p = 0.05, the model gives E[X] = 1, P(X = 0) about 35.8%, and P(X <= 1) about 73.5%. Use these probabilities only after confirming the fixed-n, binary, constant-p, and independence assumptions."
-  s3_zh: "当 n=20、p=0.05 时，模型给出 E[X]=1、P(X=0) 约为 35.8%，P(X≤1) 约为 73.5%。只有确认固定 n、二元结果、固定 p 与独立性假设后，才应使用这些概率。"
-  s3_zh_hk: "當 n=20、p=0.05，模型會畀出 E[X]=1、P(X=0) 大約 35.8%，P(X≤1) 大約 73.5%。只有確認固定 n、二元結果、固定 p 同獨立性假設之後，先應該使用呢啲概率。"
+  q1_en: "Acceptance cutoff? → Not from Binomial alone — need the full sampling plan"
+  q1_zh: "验收线怎么定？→ 不能只靠二项计算——要完整抽样方案"
+  q1_zh_hk: "驗收線點定？→ 唔可以淨靠二項計算——要完整抽樣方案"
+  q2_en: "Key assumptions? → Fixed n, binary, independent, constant p"
+  q2_zh: "关键假设？→ 固定 n、二元、独立、p 恒定"
+  q2_zh_hk: "關鍵假設？→ 固定 n、二元、獨立、p 恆定"
+  s1_en: "A sampling plan also needs design, AQL, producer/consumer risk, and what to do at each defect count."
+  s1_zh: "抽样方案还要写清设计、可接受质量水平、双方风险，以及每个次品数怎么处置。"
+  s1_zh_hk: "抽樣方案仲要寫清設計、可接受質量水平、雙方風險，以及每個次品數點處置。"
+  s2_en: "If defects cluster in cartons or p drifts, the simple Binomial may not fit — check before you use it."
+  s2_zh: "如果次品在箱内成团，或 p 会飘，简单二项可能不适用——先检查再使用。"
+  s2_zh_hk: "如果次品喺箱入面成團，或者 p 會飄，簡單二項可能唔適用——先檢查再用。"
+  s3_en: "For n=20, p=0.05: E[X]=1, P(X=0)≈35.8%, P(X≤1)≈73.5% — only after the assumptions hold."
+  s3_zh: "n=20、p=0.05 时：E[X]=1，P(X=0)约 35.8%，P(X≤1)约 73.5%——前提是假设成立。"
+  s3_zh_hk: "n=20、p=0.05 嗰陣：E[X]=1，P(X=0)約 35.8%，P(X≤1)約 73.5%——前提係假設成立。"

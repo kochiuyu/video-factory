@@ -1,19 +1,45 @@
 id: STAT-M03-T15-RECAP
-course: statistics
 course_en: Discrete & Continuous Probability Distributions
 course_zh: 离散与连续概率分布
 course_zh_hk: 離散與連續概率分佈
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 164
+duration_target_s: 150
 title_en: The operational distribution dashboard
 title_zh: 运营分布决策罗盘：知识体系全景与推演总括
 title_zh_hk: 營運分佈決策羅盤：知識體系全景與推演總括
-objective_en: Synthesize the discrete and continuous distribution taxonomy into an executive decision tree, contrast model selection criteria across operational scenarios, and bridge probability foundations to statistical inference and sampling theory.
-objective_zh: 将离散与连续概率分布的知识图谱归纳为高管运营决策树，横向对比各类业务场景下的选型判据，并搭建从概率分布理论通往统计推断与抽样大数定律的核心桥梁。
-objective_zh_hk: 將離散與連續概率分佈嘅知識圖譜歸納為高管營運決策樹，橫向對比各類業務場景下嘅選型判據，並搭建由概率分佈理論通往統計推斷與抽樣大數定律嘅核心橋樑。
+youtube:
+  description_en: |
+    The operational distribution dashboard
+    
+    This module used coffee-shop examples for binary outcomes, fixed-trial counts, arrivals, continuous measures, waits, and aggregate demand. When a new metric shows up, how do you pick a candidate distribution, state assumptions, and check whether the model fits?
+    
+    Model selection starts with the variable and the data-generating process: Bernoulli for one binary trial, Binomial for fixed independent trials, Poisson for interval counts under a stable rate; Uniform, Exponential, and Normal each carry their own continuous assumptions.
+    
+    Choose the model, then check the assumptions. In the worked examples p, λ, μ, and σ were handed to you; with real data those parameters are unknown — estimate them, then decide.
+    
+    Discrete & Continuous Probability Distributions - Module 3 - Short 15 (RECAP)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    运营分布决策罗盘：知识体系全景与推演总括
+    
+    这一模块用咖啡店例子走过二元结果、固定次数计数、到达计数、连续度量、等待时间和加总需求。来了新指标，你怎么认候选分布、讲清假设，再检验合不合适？
+    
+    模型选择从变量与数据生成过程开始：单次二元用伯努利，固定独立试验用二项，稳定速率区间计数用泊松；均匀、指数、正态各有连续假设。
+    
+    先选模型，再检查假设。例题里 p、λ、μ、σ 是给定的；真实数据里参数未知——先估计，再决策。
+    
+    离散与连续概率分布 - 模块3 - 短片15（RECAP）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    營運分佈決策羅盤：知識體系全景與推演總括
+    
+    呢個模組用咖啡店例子行過二元結果、固定次數計數、到達計數、連續度量、等待時間同加總需求。嚟咗新指標，你點樣認候選分佈、講清假設，再檢驗合唔合適？
+    
+    模型選擇由變量同數據生成過程開始：單次二元用伯努利，固定獨立試驗用二項，穩定速率區間計數用泊松；均勻、指數、正態各有連續假設。
+    
+    先選模型，再檢查假設。例題入面 p、λ、μ、σ 係畀定嘅；真實數據入面參數未知——先估計，再決策。
+    
+    離散與連續概率分佈 - 模組3 - 短片15（RECAP）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: distribution taxonomy
   zh: 概率分布分类学/模型图谱
@@ -91,9 +117,9 @@ beats:
   title_en: Deploying the right model for the right crisis
   title_zh: 排兵布阵各就各位：运营分布的决策大盘
   title_zh_hk: 排兵布陣各就各位：營運分佈嘅決策大盤
-  en: This module has used coffee-shop examples to study binary outcomes, fixed-trial counts, arrival counts, continuous measurements, waiting times, and aggregate demand. When a new metric appears, how can an analyst identify a plausible distribution, state its assumptions, and test whether the model fits?
-  zh: 本模块使用咖啡店示例研究二元结果、固定试验计数、到达计数、连续测量、等待时间与聚合需求。当出现新的业务指标时，分析者如何识别候选分布、说明模型假设，并检验模型是否适合？
-  zh_hk: 本模組用咖啡店示例研究二元結果、固定試驗計數、到達計數、連續測量、等待時間同聚合需求。當出現新嘅業務指標，分析者點樣識別候選分佈、講清楚模型假設，並檢驗模型係咪適合？
+  en: "This module used coffee-shop examples for binary outcomes, fixed-trial counts, arrivals, continuous measures, waits, and aggregate demand. When a new metric shows up, how do you pick a candidate distribution, state assumptions, and check whether the model fits?"
+  zh: "这一模块用咖啡店例子走过二元结果、固定次数计数、到达计数、连续度量、等待时间和加总需求。来了新指标，你怎么认候选分布、讲清假设，再检验合不合适？"
+  zh_hk: "呢個模組用咖啡店例子行過二元結果、固定次數計數、到達計數、連續度量、等待時間同加總需求。嚟咗新指標，你點樣認候選分佈、講清假設，再檢驗合唔合適？"
 - id: roadmap
   visual: module_open
   seconds: 44
@@ -142,7 +168,7 @@ beats:
   s3_zh_hk: 對聚合總量嚟講，只有當數據同聚合條件支持，正態模型先可能適用。Z 分數可以將觀測值轉換成標準差單位，但唔可以證明因果關係、績效或者財務穩定性。
 - id: takeaway
   visual: takeaway
-  seconds: 46
+  seconds: 32
   kicker: The Bridge Ahead
   kicker_en: The Bridge Ahead
   kicker_zh: 通往未来
@@ -150,18 +176,18 @@ beats:
   title_en: Choose the model, then check the assumptions
   title_zh: 先选模型，再检查假设
   title_zh_hk: 先選模型，再檢查假設
-  q1_en: What must be checked before a theoretical distribution is used for an operational decision?
-  q1_zh: 把理论分布用于运营决策前，必须检查什么？
-  q1_zh_hk: 將理論分佈用於營運決策之前，必須檢查咩？
-  q2_en: How should unknown parameters and uncertainty be handled?
-  q2_zh: 应如何处理未知参数与不确定性？
-  s1_en: In the worked examples, parameters such as p, lambda, mu, and sigma were stated as model inputs so that probabilities could be calculated.
-  s1_zh: 在各个例题中，p、lambda、mu 与 sigma 等参数被作为模型输入给出，以便计算相应概率。
-  s1_zh_hk: 喺各個例題入面，p、lambda、mu 同 sigma 等參數會作為模型輸入畀出，用嚟計相應概率。
-  s2_en: With operational data, parameters are generally unknown and must be estimated from samples. Analysts must also assess sampling quality, uncertainty, dependence, and model fit.
-  s2_zh: 在运营数据中，参数通常未知，需要从样本估计。分析者还应评估抽样质量、不确定性、相关性与模型拟合。
-  s2_zh_hk: 喺營運數據入面，參數通常未知，需要由樣本估計。分析者仲要評估抽樣質量、不確定性、相關性同模型擬合。
-  s3_en: 'The complete decision rule is: define the variable, identify the process, select a candidate distribution, verify its assumptions against data, estimate unknown parameters, and report uncertainty before acting.'
-  s3_zh: 完整决策规则是：定义变量、识别数据生成过程、选择候选分布、用数据检查假设、估计未知参数，并在行动前报告不确定性。
-  s3_zh_hk: 完整決策規則係：定義變量、識別數據生成過程、選擇候選分佈、用數據檢查假設、估計未知參數，並喺行動之前報告不確定性。
-  q2_zh_hk: 應該點樣處理未知參數同不確定性？
+  q1_en: "Before any textbook law? → Define the variable and stress-test assumptions"
+  q1_zh: "套用任何课本分布前？→ 先定义变量，再压测假设"
+  q1_zh_hk: "套用任何課本分佈之前？→ 先定義變量，再壓測假設"
+  q2_en: "Unknown parameters? → Estimate from samples — and own the uncertainty"
+  q2_zh: "参数未知？→ 用样本估计——并承认不确定性"
+  s1_en: "In the worked examples, p, λ, μ, and σ were handed to you so the arithmetic could run."
+  s1_zh: "例题里 p、λ、μ、σ 是直接给出的，方便把概率算出来。"
+  s1_zh_hk: "例題入面 p、λ、μ、σ 係直接畀出嚟，方便將概率計出嚟。"
+  s2_en: "With real data those parameters are unknown — estimate them, and watch sampling quality, dependence, and misspecification."
+  s2_zh: "真实数据里参数通常未知——要估计，还要盯抽样质量、相关性和设定偏差。"
+  s2_zh_hk: "真實數據入面參數通常未知——要估計，仲要睇抽樣質量、相關性同設定偏差。"
+  s3_en: "Rule: define → process → candidate law → verify assumptions → estimate → only then decide."
+  s3_zh: "口诀：定义变量 → 认过程 → 选候选分布 → 核对假设 → 估计参数 → 再决策。"
+  s3_zh_hk: "口訣：定義變量 → 認過程 → 揀候選分佈 → 核對假設 → 估計參數 → 先至決策。"
+  q2_zh_hk: "參數未知？→ 用樣本估計——並承認不確定性"

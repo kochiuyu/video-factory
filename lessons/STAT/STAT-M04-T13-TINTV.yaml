@@ -7,15 +7,61 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
+duration_target_s: 390
 title_en: Constructing the t-interval
-title_zh: 小样本的淬炼：构建 t 置信区间与萃取率品控
-title_zh_hk: 小樣本嘅淬煉：構建 t 置信區間與萃取率品控
+title_zh: 构建 t 置信区间
+title_zh_hk: 構建 t 置信區間
 objective_en: Construct one-sample t confidence intervals for a population mean with unknown variance, determine critical
   values t* based on degrees of freedom df = n - 1, state underlying normality assumptions, and evaluate espresso extraction
   yield compliance across a 12-shot pilot audit at Mong Kok.
 objective_zh: 在总体方差未知情形下构建单样本 t 均值置信区间，基于自由度 df = n - 1 查验临界值 t*，核验底层总体正态性前提假设，并在旺角店 12 杯意式浓缩咖啡萃取率品控抽检中完成合规认证。
 objective_zh_hk: 喺總體方差未知情形下構建單樣本 t 均值置信區間，基於自由度 df = n - 1 查驗臨界值 t*，核驗底層總體正態性前提假設，並喺旺角舖 12 杯意式濃縮咖啡萃取率品控抽檢入面完成合規認證。
+youtube:
+  description_en: |-
+    What is a one-sample t-interval?
+
+    Suppose Shop A pulls twelve espresso shots for a quality pilot. Industry Golden Cup guidance wants total dissolved solids between 18% and 22%. The sample mean lands at 19.80%, with sample standard deviation s = 1.20%. Population sigma is unknown, and twelve cups are too few for the Central Limit Theorem to rescue a skewed parent. Can this short pilot certify the bar — or only the sample average?
+
+    When sigma is unknown, replace Z* with Student's t critical value t* at df = n − 1:
+    CI = sample mean ± t* × SE, with SE = s / √n.
+
+    Made-up Shop A numbers: n = 12, sample mean = 19.80%, s = 1.20%.
+    df = 12 − 1 = 11; t*(95%, df = 11) = 2.201.
+    √12 ≈ 3.464, so SE = 1.20 / 3.464 ≈ 0.346%.
+    Margin of error = 2.201 × 0.346 ≈ 0.76%.
+    Interval: 19.80% ± 0.76% → [19.04%, 20.56%], inside the 18%–22% window.
+
+    Rule: certify the whole t-interval against the tolerance band, not the sample mean alone. On small n, also check that the parent process looks roughly symmetric and free of wild outliers.
+  description_zh: |-
+    什么是单样本 t 置信区间？
+
+    假设A店抽测十二杯意式浓缩做品控试点。行业金杯指引希望总溶解固体萃取率落在 18% 至 22%。样本均值 19.80%，样本标准差 s = 1.20%。总体 sigma 未知，十二杯也太少，中心极限定理救不了偏态母体。这段短试点能不能给吧台背书——还是只能证明样本均值？
+
+    当 sigma 未知时，用学生 t 临界值 t*（自由度 df = n − 1）替换 Z 临界值：
+    置信区间 = 样本均值 ± t 临界值 × 标准误，标准误 = s / √n。
+
+    假设A店数字：n = 12，样本均值 = 19.80%，s = 1.20%。
+    自由度 = 12 − 1 = 11；95% 时 t 临界值（自由度 11）= 2.201。
+    √12 ≈ 3.464，所以标准误 = 1.20 / 3.464 ≈ 0.346%。
+    误差容限 = 2.201 × 0.346 ≈ 0.76%。
+    区间：19.80% ± 0.76% → [19.04%, 20.56%]，落在 18%–22% 窗口内。
+
+    规则：用整段 t 置信区间对照公差带做认证，不要只看样本均值。样本量小时，还要核验母体过程大致对称、没有极端离群点。
+  description_zh_hk: |-
+    乜嘢係單樣本 t 置信區間？
+
+    假設A店抽測十二杯意式濃縮做品控試點。行業金杯指引希望總溶解固體萃取率落喺 18% 至 22%。樣本均值 19.80%，樣本標準差 s = 1.20%。總體 sigma 未知，十二杯亦太少，中心極限定理救唔到偏態母體。呢段短試點可唔可以為吧台背書——定係淨係證明樣本均值？
+
+    當 sigma 未知嗰陣，用學生 t 臨界值 t*（自由度 df = n − 1）替換 Z 臨界值：
+    置信區間 = 樣本均值 ± t 臨界值 × 標準誤，標準誤 = s / √n。
+
+    假設A店數字：n = 12，樣本均值 = 19.80%，s = 1.20%。
+    自由度 = 12 − 1 = 11；95% 時 t 臨界值（自由度 11）= 2.201。
+    √12 ≈ 3.464，所以標準誤 = 1.20 / 3.464 ≈ 0.346%。
+    誤差容限 = 2.201 × 0.346 ≈ 0.76%。
+    區間：19.80% ± 0.76% → [19.04%, 20.56%]，落喺 18%–22% 窗口內。
+
+    規則：用成段 t 置信區間對照公差帶做認證，唔好淨係睇樣本均值。樣本量細嗰陣，仲要核驗母體過程大致對稱、冇極端離群點。
 glossary:
 - en: one-sample t-interval
   zh: 单样本 t 置信区间
@@ -36,11 +82,11 @@ glossary:
 quiz:
 - id: Q1
   type: multiple_choice
-  question_en: Quality control tests n = 12 espresso shots at Mong Kok to measure extraction yield. The sample mean is 19.80%
+  question_en: Quality control tests n = 12 espresso shots at Shop B to measure extraction yield. The sample mean is 19.80%
     and sample standard deviation is s = 1.20%. For a 95% confidence level, what degrees of freedom and critical value t*
     must be used?
-  question_zh: 旺角店质检团队抽测 n = 12 杯意式浓缩咖啡的萃取率，算得样本均值为 19.80%，样本标准差 s = 1.20%。若构建 95% 置信区间，必须调用的自由度 df 与临界值 t* 分别是多少？
-  question_zh_hk: 旺角舖質檢團隊抽測 n = 12 杯意式濃縮咖啡嘅萃取率，計得樣本均值為 19.80%，樣本標準差 s = 1.20%。若果構建 95% 置信區間，必須調用嘅自由度 df 與臨界值 t* 分別係幾多？
+  question_zh: B店质检团队抽测 n = 12 杯意式浓缩咖啡的萃取率，算得样本均值为 19.80%，样本标准差 s = 1.20%。若构建 95% 置信区间，必须调用的自由度 df 与临界值 t* 分别是多少？
+  question_zh_hk: B店質檢團隊抽測 n = 12 杯意式濃縮咖啡嘅萃取率，計得樣本均值為 19.80%，樣本標準差 s = 1.20%。若果構建 95% 置信區間，必須調用嘅自由度 df 與臨界值 t* 分別係幾多？
   options_en:
   - 'A: df = 12 - 1 = 11; t* = 2.201'
   - 'B: df = 12; t* = 1.960'
@@ -59,14 +105,14 @@ quiz:
   answer: A
   explanation_en: 'Degrees of freedom equals sample size minus one: df = 12 - 1 = 11. On the Student''s t-table, the two-tailed
     95% critical value for df = 11 is exactly t* = 2.201.'
-  explanation_zh: 自由度等于样本容量减一：df = 12 - 1 = 11。查阅学生氏 t 分布表，双尾 95% 置信水平且自由度为 11 对应的临界值精确为 t* = 2.201。
-  explanation_zh_hk: 自由度等於樣本容量減一：df = 12 - 1 = 11。查閱學生氏 t 分佈表，雙尾 95% 置信水平兼且自由度為 11 對應嘅臨界值精確為 t* = 2.201。
+  explanation_zh: 自由度等于样本容量减一：df = 12 - 1 = 11。查阅学生 t 分布表，双尾 95% 置信水平且自由度为 11 对应的临界值精确为 t* = 2.201。
+  explanation_zh_hk: 自由度等於樣本容量減一：df = 12 - 1 = 11。查閱學生 t 分佈表，雙尾 95% 置信水平兼且自由度為 11 對應嘅臨界值精確為 t* = 2.201。
 - id: Q2
   type: multiple_choice
-  question_en: With sample mean x-bar = 19.80%, sample standard deviation s = 1.20%, and n = 12 shots (t* = 2.201), what is
-    the certified 95% t-confidence interval for true average espresso extraction yield?
-  question_zh: 已知样本均值 x-bar = 19.80%，样本标准差 s = 1.20%，抽检杯数 n = 12 杯（t* = 2.201），真实平均意式浓缩萃取率的 95% t 置信区间是多少？
-  question_zh_hk: 已知樣本均值 x-bar = 19.80%，樣本標準差 s = 1.20%，抽檢杯數 n = 12 杯（t* = 2.201），真實平均意式濃縮萃取率嘅 95% t 置信區間係幾多？
+  question_en: 'With sample mean = 19.80%, sample standard deviation s = 1.20%, and n = 12 shots (t* = 2.201), what is
+    the certified 95% t-confidence interval for true average espresso extraction yield?'
+  question_zh: 已知样本均值 = 19.80%，样本标准差 s = 1.20%，抽检杯数 n = 12 杯（t* = 2.201），真实平均意式浓缩萃取率的 95% t 置信区间是多少？
+  question_zh_hk: 已知樣本均值 = 19.80%，樣本標準差 s = 1.20%，抽檢杯數 n = 12 杯（t* = 2.201），真實平均意式濃縮萃取率嘅 95% t 置信區間係幾多？
   options_en:
   - 'A: SE = 1.20 / sqrt(12) ≈ 0.3464%; MOE = 2.201 * 0.3464% ≈ 0.76%; CI = [19.04%, 20.56%]'
   - 'B: SE = 1.20 / 12 = 0.1000%; MOE = 1.96 * 0.10% = 0.20%; CI = [19.60%, 20.00%]'
@@ -92,130 +138,285 @@ quiz:
 beats:
 - id: hook
   visual: title_card
-  seconds: 30
-  kicker: The Golden Cup Audit
-  kicker_en: The Golden Cup Audit
-  kicker_zh: 金杯萃取的认证大考
-  kicker_zh_hk: 金杯萃取嘅認證大考
-  title_en: Can twelve test cups certify chain-wide quality?
-  title_zh: 仅凭十二杯测试样，真能为全店出品背书吗？
-  title_zh_hk: 淨憑十二杯測試樣，真係能為全舖出品背書咩？
-  en: 'At Metro Coffee''s Mong Kok flagship, quality control tests a pilot batch of twelve espresso shots using an optical
-    refractometer. Industry standards require total extraction yield to sit strictly between eighteen and twenty-two percent:
-    under-extract below eighteen and coffee tastes hollow and sharply sour; over-extract past twenty-two and bitter astringency
-    ruins the cup. The sample average lands at nineteen point eight percent. But pulling hundreds of destructive test shots
-    is commercially impossible. How do executives build an ironclad quality interval from just twelve cups?'
-  zh: 在都市咖啡旺角旗舰店吧台前，质检团队手持光学折光仪对十二杯浓缩咖啡进行了抽验。精品咖啡行业金杯准则严苛规定：总溶解固体萃取率必须死死咬合在百分之十八至二十二之间：低于十八度则风味寡淡尖酸，高于二十二度则焦苦干涩锁喉。抽查均值录得百分之十九点八。但每杯测试样都意味着豆子与工时的报废，不可能无休止破坏性抽检数百杯。管理层究竟该如何仅凭十二杯小样，筑起无懈可击的品控认证区间？
-  zh_hk: 喺都市咖啡旺角旗艦舖吧台前，質檢團隊手持光學折光儀對十二杯濃縮咖啡進行咗抽驗。精品咖啡行業金杯準則嚴苛規定：總溶解固體萃取率必須死死咬合喺百分之十八至二十二之間：低過十八度就風味寡淡尖酸，高過二十二度就焦苦乾澀鎖喉。抽查均值錄得百分之十九點八。但每杯測試樣都意味住豆同工時嘅報廢，唔可能無休止破壞性抽檢幾百杯。管理層究竟應該點樣淨憑十二杯細樣，築起無懈可擊嘅品控認證區間？
+  seconds: 44
+  kicker: The Golden Cup audit
+  kicker_en: The Golden Cup audit
+  kicker_zh: 金杯萃取的认证
+  kicker_zh_hk: 金杯萃取嘅認證
+  title_en: What is a t-interval?
+  title_zh: 什么是 t 置信区间？
+  title_zh_hk: 乜嘢係 t 置信區間？
+  en: >-
+    Suppose Shop A pulls twelve espresso shots for a quality pilot. Industry
+    Golden Cup guidance wants total dissolved solids between eighteen and
+    twenty-two percent — under eighteen tastes hollow and sharp; past twenty-two
+    turns bitter. The sample mean lands at nineteen point eight zero percent,
+    with sample standard deviation one point two zero percent. Population sigma
+    is unknown, and twelve cups are too few to lean on the Central Limit Theorem.
+    Can this short pilot certify the bar, or only the sample average? The tool
+    is the one-sample t-interval.
+  zh: >-
+    假设A店抽测十二杯意式浓缩做品控试点。行业金杯指引希望总溶解固体萃取率落在百分之十八至二十二——低过十八会寡淡尖酸，高过二十二会焦苦。样本均值百分之十九点八零，样本标准差百分之一点二零。总体 sigma 未知，十二杯也太少，撑不起中心极限定理。这段短试点能不能给吧台背书，还是只能证明样本均值？要用的工具就是单样本 t 置信区间。
+  zh_hk: >-
+    假設A店抽測十二杯意式濃縮做品控試點。行業金杯指引希望總溶解固體萃取率落喺百分之十八至二十二——低過十八會寡淡尖酸，高過二十二會焦苦。樣本均值百分之十九點八零，樣本標準差百分之一點二零。總體 sigma 未知，十二杯亦太少，撐唔起中心極限定理。呢段短試點可唔可以為吧台背書，定係淨係證明樣本均值？要用嘅工具就係單樣本 t 置信區間。
 - id: define
   visual: definition_card
-  seconds: 34
-  kicker: What It Is
-  kicker_en: What It Is
-  kicker_zh: 核心概念
-  kicker_zh_hk: 核心概念
-  title_en: The one-sample t-interval formula
-  title_zh: 单样本 t 置信区间标准构型
-  title_zh_hk: 單樣本 t 置信區間標準構型
-  formula: CI = x-bar +/- t*(alpha / 2, df = n - 1) * (s / sqrt(n))
-  formula_zh: t 置信区间 = 样本均值 ± t* 临界值(自由度 df = n - 1) × (样本标准差 / 根号(n))
-  formula_zh_hk: t 置信區間 = 樣本均值 ± t* 臨界值(自由度 df = n - 1) × (樣本標準差 / 根號(n))
-  formula_tex: \text{CI}_t = \bar{X} \pm t^*_{\alpha/2, \, n-1} \cdot \frac{S}{\sqrt{n}}
-  s1_en: When population variance sigma is unknown and sample size n is modest, we replace standard normal Z with Student's
-    critical value t star, determined by degrees of freedom df equals n minus one.
-  s1_zh: 当总体方差 sigma 深不可测且样本量偏小时，我们以样本标准差 s 估算离散度，并坚决用学生氏临界值 t 星号取代正态 Z 标尺，其取值完全由自由度 df 等于 n 减一所规约。
-  s1_zh_hk: 當總體方差 sigma 深不可測兼且樣本量偏細嗰陣，我哋以樣本標準差 s 估算離散度，並堅決用學生氏臨界值 t 星號取代正態 Z 標尺，其取值完全由自由度 df 等於 n 減一所規約。
-  s2_en: The margin of error equals t star multiplied by s divided by the square root of n. This expands the interval width
-    just enough to absorb the random fluctuations of our estimated sample variance.
-  s2_zh: 误差容限严格等于 t 星号乘上 s 除以根号 n。这种外扩补偿恰如其分地吸收了样本方差自身的随机晃动，赋予小样本推断经得起推敲的统计严密性。
-  s2_zh_hk: 誤差容限嚴格等於 t 星號乘上 s 除以根號 n。呢種外擴補償啱啱好吸收咗樣本方差自身嘅隨機晃動，賦予小樣本推斷經得起推敲嘅統計嚴密性。
-- id: mechanics
+  seconds: 48
+  kicker: What it is
+  kicker_en: What it is
+  kicker_zh: 它是什么
+  kicker_zh_hk: 佢係乜
+  title_en: The one-sample t-interval
+  title_zh: 单样本 t 置信区间
+  title_zh_hk: 單樣本 t 置信區間
+  formula: 'CI = mean ± t*(df=n−1) × (s/√n)'
+  formula_zh: 置信区间 = 样本均值 ± t 临界值(自由度=n−1) × (s/√n)
+  formula_zh_hk: 置信區間 = 樣本均值 ± t 臨界值(自由度=n−1) × (s/√n)
+  formula_tex: \text{CI}_t = \bar{X} \pm t^*_{\alpha/2,\,n-1}\cdot\frac{S}{\sqrt{n}}
+  s1_en: >-
+    When population sigma is unknown and n is modest, keep the sample standard
+    deviation s in the denominator, and replace the Normal cutoff with Student's
+    t critical value. That critical value is locked by degrees of freedom df
+    equals n minus one.
+  s1_zh: >-
+    当总体标准差 sigma 未知、样本量又不大时，分母继续用样本标准差 s，并把正态临界值换成学生 t 临界值。这个临界值由自由度决定——自由度等于 n 减一。
+  s1_zh_hk: >-
+    當總體標準差 sigma 未知、樣本量又唔大嗰陣，分母繼續用樣本標準差 s，並將正態臨界值換成學生 t 臨界值。呢個臨界值由自由度決定——自由度等於 n 減一。
+  s2_en: >-
+    Margin of error is t-star times s over square root of n. Multiplying by the
+    heavier t cutoff widens the bracket just enough to pay for estimating sigma
+    with a wobbling s.
+  s2_zh: >-
+    误差容限等于 t 临界值乘上 s 再除以根号 n。乘上更厚的 t 临界值，区间会略微变宽，正好补偿用晃动的 s 去估计 sigma。
+  s2_zh_hk: >-
+    誤差容限等於 t 臨界值乘上 s 再除以根號 n。乘上更厚嘅 t 臨界值，區間會略為變闊，啱啱補償用晃動嘅 s 去估計 sigma。
+- id: name_tstar
+  visual: title_card
+  seconds: 18
+  kicker: The name
+  kicker_en: The name
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: t critical value
+  title_zh: t 临界值
+  title_zh_hk: t 臨界值
+  en: >-
+    Say the name once: t critical value, written t-star. It is the Student's t
+    cutoff that matches your confidence level and your degrees of freedom.
+  zh: >-
+    大声念一次：t 临界值，写作 t 星号。它是对应你的置信水平和自由度的学生 t 分界。
+  zh_hk: >-
+    大聲唸一次：t 臨界值，寫作 t 星號。佢係對應你嘅置信水平同自由度嘅學生 t 分界。
+- id: name_ci
+  visual: title_card
+  seconds: 16
+  kicker: The name
+  kicker_en: The name
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Confidence interval
+  title_zh: 置信区间
+  title_zh_hk: 置信區間
+  en: >-
+    And the finished object: a confidence interval — sample mean plus or minus
+    the margin of error. Certify the whole bracket, not a single point.
+  zh: >-
+    再记住成品的名字：置信区间——样本均值加减误差容限。认证看整段区间，不是看一个点。
+  zh_hk: >-
+    再記住成品嘅名：置信區間——樣本均值加減誤差容限。認證睇成段區間，唔係睇一個點。
+- id: normality
   visual: two_column
-  seconds: 36
-  kicker: The Underlying Contract
-  kicker_en: The Underlying Contract
-  kicker_zh: 底层契约
-  kicker_zh_hk: 底層契約
-  title_en: The normality assumption in small samples
-  title_zh: 小样本依赖的正态性母体假设
-  title_zh_hk: 小樣本依賴嘅正態性母體假設
-  left_en: 'Large Samples (n >= 30): CLT guarantees normality regardless of parent shape'
-  left_zh: 大样本世界 (n >= 30)：中心极限定理生效，母体偏态皆可被自然抹平
-  left_zh_hk: 大樣本世界 (n >= 30)：中心極限定理生效，母體偏態皆可被自然抹平
-  right_en: 'Small Samples (n < 30): Parent population must be roughly normal and outlier-free'
-  right_zh: 小样本世界 (n < 30)：丧失大数庇护，要求母体大体对称且绝无极端离群点
-  right_zh_hk: 小樣本世界 (n < 30)：喪失大數庇護，要求母體大體對稱兼且絕無極端離群點
-  s1_en: 'In large samples, the Central Limit Theorem rescues us: sample means converge to normal even if individual customer
-    receipts are wildly skewed.'
-  s1_zh: 面对动辄上百笔的大样本，中心极限定理赐予我们免死金牌：哪怕底层原始客单严重偏态，加总均值依然会自然收敛为对称正态。
-  s1_zh_hk: 面對郁啖上百筆嘅大樣本，中心極限定理賜予我哋免死金牌：哪怕底層原始客單嚴重偏態，加總均值依然會自然收斂為對稱正態。
-  s2_en: With only twelve coffee shots, the CLT cannot operate. The mathematical derivation of the t-distribution strictly
-    requires that the underlying physical extraction process itself is approximately bell-shaped.
-  s2_zh: 但在仅抽检十二杯咖啡的小样本情境下，CLT 无法触发。学生氏 t 分布在数学推导上严格依赖一项物理契约：即机器真实的单杯萃取率本身必须大致对称、符合正态形态。
-  s2_zh_hk: 但喺淨係抽檢十二杯咖啡嘅小樣本情境下，CLT 冇辦法觸發。學生氏 t 分佈喺數學推導上嚴格依賴一項物理契約：即係機器真實嘅單杯萃取率本身必須大致對稱、符合正態形態。
-  s3_en: Before publishing a small-sample t-interval, quality managers must verify that the twelve sample readings show no
-    severe skewness or wild outliers.
-  s3_zh: 在对外出具小样本 t 置信区间之前，品质总监必须先审视数据箱线图或直方图，核验这十二个样本点不存在明显的偏斜畸形或破坏性离群极值。
-  s3_zh_hk: 喺對外出具小樣本 t 置信區間之前，品質總監必須先審視數據箱線圖或者直方圖，核驗呢十二個樣本點唔存在明顯嘅偏斜畸形或者破壞性離群極值。
-- id: ledger
+  seconds: 52
+  kicker: The small-sample contract
+  kicker_en: The small-sample contract
+  kicker_zh: 小样本的前提
+  kicker_zh_hk: 小樣本嘅前提
+  title_en: When can you trust a t-interval?
+  title_zh: 何时能信 t 区间？
+  title_zh_hk: 幾時可以信 t 區間？
+  left_en: 'Large n (~30+): CLT helps'
+  left_zh: 大样本(~30+)：CLT 可帮扶
+  left_zh_hk: 大樣本(~30+)：CLT 可幫扶
+  right_en: 'Small n: ~normal parent'
+  right_zh: 小样本：母体宜大致正态
+  right_zh_hk: 小樣本：母體宜大致正態
+  s1_en: >-
+    With a large sample, the Central Limit Theorem helps the sample mean look
+    Normal even when single cups are a bit skewed.
+  s1_zh: >-
+    样本量够大时，中心极限定理会帮样本均值靠近正态，即使单杯萃取略有偏斜。
+  s1_zh_hk: >-
+    樣本量夠大嗰陣，中心極限定理會幫樣本均值靠近正態，即使單杯萃取略有偏斜。
+  s2_en: >-
+    With only twelve cups, that rescue is weak. The t-interval derivation wants
+    the underlying extraction process itself to be roughly bell-shaped.
+  s2_zh: >-
+    只有十二杯时，这个救援很弱。t 区间的推导希望底层萃取过程本身大致呈钟形。
+  s2_zh_hk: >-
+    淨係十二杯嗰陣，呢個救援好弱。t 區間嘅推導希望底層萃取過程本身大致呈鐘形。
+  s3_en: >-
+    So before publishing the bracket, glance at a histogram or box plot of the
+    twelve readings. Strong skew or a wild outlier means fix the process first,
+    then compute.
+  s3_zh: >-
+    所以在对外给出区间前，先看这十二个读数的直方图或箱线图。若严重偏斜或有极端离群点，先理顺工艺，再计算。
+  s3_zh_hk: >-
+    所以喺對外出區間前，先睇呢十二個讀數嘅直方圖或者箱線圖。若果嚴重偏斜或者有極端離群點，先理順工藝，再計算。
+- id: givens
+  visual: formula
+  seconds: 20
+  kicker: A worked example
+  kicker_en: A worked example
+  kicker_zh: 算一次看看
+  kicker_zh_hk: 計一次睇吓
+  title_en: 'Shop A: the givens'
+  title_zh: A店：已知条件
+  title_zh_hk: A店：已知條件
+  formula: 'n=12 · mean=19.80% · s=1.20%'
+  formula_zh: n=12 · 均值=19.80% · s=1.20%
+  formula_zh_hk: n=12 · 均值=19.80% · s=1.20%
+  formula_tex: 'n=12,\ \bar{X}=19.80\%,\ s=1.20\%'
+  en: >-
+    Use made-up Shop A numbers. Twelve pilot shots. Sample mean nineteen point
+    eight zero percent. Sample standard deviation s one point two zero percent.
+    Population sigma stays unknown.
+  zh: >-
+    用一组假设的A店数字。十二杯试点。样本均值百分之十九点八零。样本标准差 s 百分之一点二零。总体 sigma 仍然未知。
+  zh_hk: >-
+    用一組假設嘅A店數字。十二杯試點。樣本均值百分之十九點八零。樣本標準差 s 百分之一點二零。總體 sigma 仍然未知。
+- id: ledger_se
   visual: steps
-  seconds: 36
-  kicker: The Ledger
-  kicker_en: The Ledger
-  kicker_zh: 账目精算
-  kicker_zh_hk: 賬目精算
-  title_en: Certifying Mong Kok espresso extraction yield
-  title_zh: 旺角旗舰店浓缩萃取率实测认证
-  title_zh_hk: 旺角旗艦舖濃縮萃取率實測認證
-  step1_en: 'Audit baseline: n = 12 shots -> x-bar = 19.80%, s = 1.20% -> df = 12 - 1 = 11'
-  step1_zh: 抽检基准：n = 12 杯，均值 x-bar = 19.80%，样本 s = 1.20% -> 自由度 df = 11
-  step1_zh_hk: 抽檢基準：n = 12 杯，均值 x-bar = 19.80%，樣本 s = 1.20% -> 自由度 df = 11
-  step2_en: 'Critical value: Table t*(0.025, 11) = 2.201; SE = 1.20 / sqrt(12) = 0.346%'
-  step2_zh: 查定临界值：查表双尾 t*(0.025, 11) = 2.201；标准误 SE = 1.20 / 根号(12) = 0.346%
-  step2_zh_hk: 查定臨界值：查表雙尾 t*(0.025, 11) = 2.201；標準誤 SE = 1.20 / 根號(12) = 0.346%
-  step3_en: '95% Bracket: MOE = 2.201 * 0.346% = 0.76% -> CI: [19.04%, 20.56%] (Passed!)'
-  step3_zh: 认证区间：MOE = 2.201 × 0.346% = 0.76% -> 区间：[19.04%, 20.56%]（全线达标！）
-  step3_zh_hk: 認證區間：MOE = 2.201 × 0.346% = 0.76% -> 區間：[19.04%, 20.56%]（全線達標！）
-  s1_en: Review the quality audit log at Mong Kok. Across twelve consecutive test shots on the central espresso bar, average
-    extraction yield is nineteen point eight zero percent, with sample standard deviation s of one point two zero percent.
-  s1_zh: 审视旺角店吧台的品质巡检流水。在主意式机连续抽取的十二杯测试浓缩中，平均萃取率录得百分之十九点八零，样本标准差 s 为百分之一点二零。
-  s1_zh_hk: 審視旺角舖吧台嘅品質巡檢流水。喺主意式機連續抽取嘅十二杯測試濃縮入面，平均萃取率錄得百分之十九點八零，樣本標準差 s 為百分之一點二零。
-  s2_en: 'Step two checks degrees of freedom: twelve minus one is eleven. Consulting the Student''s t table for ninety-five
-    percent confidence yields t star of two point two zero one. Standard error is one point twenty divided by the square root
-    of twelve: zero point three four six percent.'
-  s2_zh: 第二步核定自由度：十二减一等于十一。翻开学生氏 t 分布表，百分之九十五双尾置信度对应的临界值 t 星号确凿为二点二零一。标准误为一点二零除以根号十二，算得百分之零点三四六。
-  s2_zh_hk: 第二步核定自由度：十二減一等於十一。翻開學生氏 t 分佈表，百分之九十五雙尾置信度對應嘅臨界值 t 星號確鑿為二點二零一。標準誤為一點二零除以根號十二，計得百分之零點三四六。
-  s3_en: 'Step three computes the margin of error: two point two zero one times zero point three four six is zero point seven
-    six percent. Our ninety-five percent certified extraction bracket spans nineteen point zero four to twenty point five
-    six percent. Because the entire interval sits securely inside the golden eighteen to twenty-two percent window, the machine
-    calibration is certified!'
-  s3_zh: 第三步计算误差容限：二点二零一乘百分之零点三四六得百分之零点七六。求出经九成五认证的真实萃取区间为百分之十九点零四至二十点五六。由于该区间从上限到下限全线死死锁在十八至二十二黄金带之内，吧台校准大获全胜！
-  s3_zh_hk: 第三步計算誤差容限：二點二零一乘百分之零點三四六得百分之零點七六。求出經九成五認證嘅真實萃取區間為百分之十九點零四至二十點五六。由於嗰個區間由上限到下限全線死死鎖喺十八至二十二黃金帶入面，吧台校準大獲全勝！
+  layout: rows
+  seconds: 64
+  kicker: A worked example
+  kicker_en: A worked example
+  kicker_zh: 算一次看看
+  kicker_zh_hk: 計一次睇吓
+  title_en: 'Shop A: df, t*, and SE'
+  title_zh: A店：自由度、临界值与标准误
+  title_zh_hk: A店：自由度、臨界值同標準誤
+  step1_en: 'df = 12 − 1 = 11'
+  step1_zh: '自由度 = 12 − 1 = 11'
+  step1_zh_hk: '自由度 = 12 − 1 = 11'
+  step2_en: 't*(95%, df=11) = 2.201'
+  step2_zh: 't 临界值(95%，自由度11) = 2.201'
+  step2_zh_hk: 't 臨界值(95%，自由度11) = 2.201'
+  step3_en: 'SE = 1.20 / √12 ≈ 0.346%'
+  step3_zh: '标准误 = 1.20 / √12 ≈ 0.346%'
+  step3_zh_hk: '標準誤 = 1.20 / √12 ≈ 0.346%'
+  s1_en: >-
+    Degrees of freedom first: twelve shots minus one free parameter for the mean
+    leaves eleven. Write df equals eleven.
+  s1_zh: >-
+    先算自由度：十二杯，减去均值占去的一个自由参数，剩下十一。写下自由度等于十一。
+  s1_zh_hk: >-
+    先計自由度：十二杯，減去均值佔去嘅一個自由參數，剩低十一。寫低自由度等於十一。
+  s2_en: >-
+    Open the Student's t table at ninety-five percent, two tails, eleven degrees
+    of freedom. The critical value t-star is two point two zero one — larger than
+    the Normal one point nine six zero.
+  s2_zh: >-
+    翻开学生 t 表，百分之九十五、双尾、自由度十一。临界值 t 星号是二点二零一——比正态的一点九六零更大。
+  s2_zh_hk: >-
+    翻開學生 t 表，百分之九十五、雙尾、自由度十一。臨界值 t 星號係二點二零一——比正態嘅一點九六零更大。
+  s3_en: >-
+    Standard error is one point two zero divided by the square root of twelve.
+    Square root of twelve is about three point four six four, so SE is about
+    zero point three four six percent.
+  s3_zh: >-
+    标准误是一点二零除以根号十二。根号十二大约三点四六四，所以标准误大约百分之零点三四六。
+  s3_zh_hk: >-
+    標準誤係一點二零除以根號十二。根號十二大約三點四六四，所以標準誤大約百分之零點三四六。
+- id: ledger_ci
+  visual: steps
+  layout: rows
+  seconds: 70
+  kicker: Attach the margin
+  kicker_en: Attach the margin
+  kicker_zh: 接上误差容限
+  kicker_zh_hk: 接上誤差容限
+  title_en: 'Shop A: MOE and the interval'
+  title_zh: A店：误差容限与区间
+  title_zh_hk: A店：誤差容限同區間
+  step1_en: 'MOE = 2.201 × 0.346% ≈ 0.76%'
+  step1_zh: '误差容限 = 2.201 × 0.346% ≈ 0.76%'
+  step1_zh_hk: '誤差容限 = 2.201 × 0.346% ≈ 0.76%'
+  step2_en: 'CI = 19.80% ± 0.76%'
+  step2_zh: '置信区间 = 19.80% ± 0.76%'
+  step2_zh_hk: '置信區間 = 19.80% ± 0.76%'
+  step3_en: 'CI = [19.04%, 20.56%]'
+  step3_zh: '置信区间 = [19.04%, 20.56%]'
+  step3_zh_hk: '置信區間 = [19.04%, 20.56%]'
+  step4_en: 'Inside 18%–22% window'
+  step4_zh: '落在 18%–22% 金杯窗口内'
+  step4_zh_hk: '落喺 18%–22% 金杯窗口內'
+  s1_en: >-
+    Margin of error is t-star times standard error: two point two zero one times
+    zero point three four six percent is about zero point seven six percent.
+  s1_zh: >-
+    误差容限等于 t 临界值乘上标准误：二点二零一乘百分之零点三四六，大约百分之零点七六。
+  s1_zh_hk: >-
+    誤差容限等於 t 臨界值乘上標準誤：二點二零一乘百分之零點三四六，大約百分之零點七六。
+  s2_en: >-
+    Center the bracket on the sample mean: nineteen point eight zero percent
+    plus or minus zero point seven six percent.
+  s2_zh: >-
+    把区间以样本均值为中心：百分之十九点八零加减百分之零点七六。
+  s2_zh_hk: >-
+    將區間以樣本均值為中心：百分之十九點八零加減百分之零點七六。
+  s3_en: >-
+    That lands at nineteen point zero four to twenty point five six percent.
+    Write the confidence interval as that closed bracket.
+  s3_zh: >-
+    得到百分之十九点零四到二十点五六。把置信区间写成这段闭区间。
+  s3_zh_hk: >-
+    得到百分之十九點零四到二十點五六。將置信區間寫成呢段閉區間。
+  s4_en: >-
+    The entire interval sits inside the eighteen to twenty-two percent Golden Cup
+    window. So the pilot can certify the bar — because the whole t-interval cleared
+    the band, not because the sample mean alone looked pretty.
+  s4_zh: >-
+    整段区间都落在百分之十八至二十二的金杯窗口内。所以试点可以为吧台背书——因为整段 t 置信区间过关，而不是因为样本均值看起来好看。
+  s4_zh_hk: >-
+    成段區間都落喺百分之十八至二十二嘅金杯窗口內。所以試點可以為吧台背書——因為成段 t 置信區間過關，而唔係因為樣本均值睇落靚。
 - id: takeaway
   visual: takeaway
-  seconds: 32
-  kicker: Decision Rule
-  kicker_en: Decision Rule
-  kicker_zh: 商业法度
-  kicker_zh_hk: 商業法度
-  title_en: Certify small pilots with rigorous t-bounds
-  title_zh: 用 t 区间严把试产关口，既省抽检成本又拒侥幸过关
-  title_zh_hk: 用 t 區間嚴把試產關口，既省抽檢成本又拒僥倖過關
-  q1_en: Why is a sample mean inside specification limits never sufficient proof of product quality?
-  q1_zh: 为什么样本均值落在公差规格之内，绝不代表产品质量已经合格？
-  q1_zh_hk: 點解樣本均值落喺公差規格之內，絕唔代表產品質量已經合格？
-  q2_en: How do managers determine the exact sample size needed before spending money on audits?
-  q2_zh: 管理层该如何在掏出真金白银开展审计前，精准逆向求解所需的最优样本量？
-  q2_zh_hk: 管理層應該點樣喺掏出真金白銀開展審計前，精準逆向求解所需嘅最優樣本量？
-  s1_en: Never declare a pilot test compliant just because the sample average hits the target; you must verify that the entire
-    t-interval falls comfortably within engineering tolerance limits.
-  s1_zh: 切勿仅凭样本均值看似达标便轻率宣告试产合格；必须严格核验整段 t 置信区间是否完完全全被包容在工程公差边界之内。
-  s1_zh_hk: 切勿淨係憑樣本均值睇落達標就輕率宣告試產合格；必須嚴格核驗成段 t 置信區間係咪完完全全被包容喺工程公差邊界入面。
-  s2_en: 'Respect the normality condition on small samples: if your process suffers from severe skewness or unstable machine
-    jams, fix the operational pipeline before computing t-intervals.'
-  s2_zh: 敬畏小样本的正态前提：若生产流程存在严重的出料偏倚或设备卡顿，务必先在工程现场理顺工艺流线，切忌在畸形数据上强行套用 t 区间掩耳盗铃。
-  s2_zh_hk: 敬畏小樣本嘅正態前提：若果生產流程存在嚴重嘅出料偏倚或者設備卡頓，務必先喺工程現場理順工藝流線，切忌喺畸形數據上強行套用 t 區間掩耳盜鈴。
-  s3_en: The operating rule is to certify the whole interval, not the sample mean. Twelve shots give [19.04%, 20.56%], inside
-    the 18% to 22% window.
-  s3_zh: 操作规则是认证整段区间，而不是认证样本均值。十二杯给出 [19.04%, 20.56%]，落在 18% 至 22% 的窗口内。
-  s3_zh_hk: 操作規則係認證成段區間，而唔係認證樣本均值。十二杯畀出 [19.04%, 20.56%]，落喺 18% 至 22% 嘅窗口內。
+  seconds: 58
+  kicker: Decision rule
+  kicker_en: Decision rule
+  kicker_zh: 决策规则
+  kicker_zh_hk: 決策規則
+  title_en: Certify the whole interval
+  title_zh: 认证整段区间
+  title_zh_hk: 認證成段區間
+  q1_en: Why is the sample mean alone not enough?
+  q1_zh: 为什么样本均值落在公差内还不够？
+  q1_zh_hk: 點解樣本均值落喺公差內都唔夠？
+  q2_en: Did Shop A's twelve cups certify the bar?
+  q2_zh: A店这十二杯能为吧台背书吗？
+  q2_zh_hk: A店呢十二杯可唔可以為吧台背書？
+  s1_en: >-
+    Never declare a pilot compliant just because the sample average sits inside
+    the tolerance band. You must check that the entire t-interval fits inside
+    the band as well.
+  s1_zh: >-
+    不要只因为样本均值落在公差带内就宣布试点合格。还必须核验整段 t 置信区间是否也落在公差带内。
+  s1_zh_hk: >-
+    唔好淨係因為樣本均值落喺公差帶內就宣佈試點合格。仲必須核驗成段 t 置信區間係咪都落喺公差帶內。
+  s2_en: >-
+    On small n, respect the normality contract: if the twelve readings look
+    badly skewed or spiked by outliers, fix the process before you publish a
+    t-interval.
+  s2_zh: >-
+    样本量小时，守住正态性前提：若这十二个读数严重偏斜或被离群点拉歪，先理顺工艺，再发布 t 区间。
+  s2_zh_hk: >-
+    樣本量細嗰陣，守住正態性前提：若果呢十二個讀數嚴重偏斜或者被離群點拉歪，先理順工藝，再發佈 t 區間。
+  s3_en: >-
+    For Shop A's twelve cups, the ninety-five percent t-interval is nineteen
+    point zero four to twenty point five six percent — inside eighteen to
+    twenty-two. That answers the hook: twelve cups can certify the bar when the
+    whole interval clears the Golden Cup window.
+  s3_zh: >-
+    对A店这十二杯，百分之九十五的 t 置信区间是百分之十九点零四至二十点五六——落在十八至二十二之内。这就回答了开场：当整段区间清过金杯窗口时，十二杯可以为吧台背书。
+  s3_zh_hk: >-
+    對A店呢十二杯，百分之九十五嘅 t 置信區間係百分之十九點零四至二十點五六——落喺十八至二十二之內。呢個就回答咗開場：當成段區間清過金杯窗口嗰陣，十二杯可以為吧台背書。

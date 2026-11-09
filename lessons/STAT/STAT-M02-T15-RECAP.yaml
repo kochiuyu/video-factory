@@ -1,19 +1,39 @@
 id: STAT-M02-T15-RECAP
-course: statistics
 course_en: Business Probability Foundations
 course_zh: 商务概率基础
 course_zh_hk: 商務概率基礎
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 162
+duration_target_s: 152
 title_en: "The probabilistic risk dashboard"
 title_zh: "管理层概率风险仪表盘与前瞻矩阵"
 title_zh_hk: "管理層概率風險儀表板與前瞻矩陣"
-objective_en: "Synthesize the core probability concepts into an integrated executive risk matrix, connecting sample spaces, conditioning, Bayesian belief updating, and expected value with volatility to navigate business uncertainty."
-objective_zh: "将核心概率概念整合为统一的高管风险决策矩阵，连通样本空间、条件约束、贝叶斯信念更新以及兼顾波动的期望价值，系统驾驭商业不确定性。"
-objective_zh_hk: "將核心概率概念整合為統一嘅高管風險決策矩陣，連通樣本空間、條件約束、貝葉斯信念更新以及兼顧波動嘅期望價值，系統駕馭商業不確定性。"
+youtube:
+  description_en: |
+    The probabilistic risk dashboard
+
+    This recap closes Module 2. Lead under uncertainty by judging the process you chose — events, assumptions, probabilities, alternatives, consequences — not one realized roll.
+
+    Use the dashboard in order: lock an MECE sample space, model combinations or paths, update beliefs when evidence arrives, then compare expected value with dispersion before you act. That is the close of this short — no teaser for another module.
+
+    Business Probability Foundations - Module 2 - Short 15 (recap)
+    If this helped, subscribe for more shorts.
+  description_zh: |
+    概率风险仪表盘
+
+    本集收束模块2。不确定下的领导力，要评判你当时选用的过程——事件、假设、概率、备选与后果——而不是一次实现的结果。
+
+    仪表盘按序使用：锁紧 MECE 样本空间，为组合或路径建模，证据到来时更新信念，行动前比较期望与离散。这就是本集的收束——不再预告其他模块。
+
+    商务概率基础 - 模块2 - 短片15（回顾）
+    觉得有用的话，订阅获取更多短片。
+  description_zh_hk: |
+    概率風險儀表板
+
+    本集收束模組2。不確定下嘅領導力，要評判你當時選用嘅過程——事件、假設、概率、備選同後果——而唔係一次實現嘅結果。
+
+    儀表板按序使用：鎖緊 MECE 樣本空間，為組合或者路徑建模，證據到嚟時更新信念，行動前比較期望同離散。呢個就係本集嘅收束——唔再預告其他模組。
+
+    商務概率基礎 - 模組2 - 短片15（回顧）
+    覺得有用嘅話，訂閱獲取更多短片。
 glossary:
 - en: "risk dashboard"
   zh: "风险仪表盘"
@@ -92,8 +112,8 @@ beats:
   title_zh: "在充满变数的世界中稳健掌舵"
   title_zh_hk: "喺充滿變數嘅世界入面穩健掌舵"
   en: "A manager may need to forecast a supply path, interpret a sensor alert, and compare financial risks on the same day. Which probability tool belongs to each decision, and how can the results fit into one coherent risk dashboard?"
-  zh: "管理者可能在同一天既要预测供应链路径，又要判断传感器警报，还要比较财务风险。每项决策应使用哪种概率工具？又该如何把结果整合到同一块风险仪表盘上？"
-  zh_hk: "管理者可能喺同一日既要預測供應鏈路徑，又要判斷傳感器警報，仲要比較財務風險。每項決策應該用邊種概率工具？又應該點樣將結果整合到同一塊風險儀表板上？"
+  zh: "管理者同一天可能既要预测供应链路径，又要判断传感器警报，还要比较财务风险。每项决策该用哪种概率工具？又该怎么把结果收进同一块风险仪表盘？"
+  zh_hk: "管理者同一日可能既要預測供應鏈路徑，又要判斷傳感器警報，仲要比較財務風險。每項決策應該用邊種概率工具？又應該點樣將結果收入同一塊風險儀表板度？"
 - id: matrix
   visual: module_close
   seconds: 44
@@ -107,8 +127,8 @@ beats:
   next_zh: "运营规则：定义事件，选择匹配的概率工具，完成计算，再按风险承受能力检验决策。"
   next_zh_hk: "營運規則：定義事件，選擇匹配嘅概率工具，完成計算，再按風險承受能力檢驗決策。"
   en: "Look at your risk dashboard across four clear tiers. Tier One sets the boundaries: Sample Spaces define which outcomes are included, the Complement Rule cuts through complex failure math, and 2x2 Tables separate margins from intersections. Tier Two tracks combinations: the Addition Rule corrects double-counting when events overlap, while Conditional Odds and Multiplication Funnels forecast sequential conversions."
-  zh: "将你的风险仪表盘拆解为四个清晰层级。第一层划定边界：样本空间界定纳入分析的结果，补集法则化繁为简破解复杂故障，2x2 列联表严正划清大盘边缘与内部重合。第二层追踪协同：加法法则在事件重叠时扣除重复计算，条件概率与乘法漏斗层层穿透序列化转化路径。"
-  zh_hk: "將你嘅風險儀表板拆解為四個清晰層級。第一層劃定邊界：樣本空間界定納入分析嘅結果，補集法則化繁為簡破解複雜故障，2x2 列聯表嚴正劃清大盤邊緣同內部重合。第二層追蹤協同：加法法則喺事件重疊嗰陣扣除重複計算，條件概率同乘法漏斗層層穿透序列化轉化路徑。"
+  zh: "把风险仪表盘拆成四层。第一层划边界：样本空间界定纳入哪些结果，补集法则简化复杂故障计算，2x2 列联表分清边缘和大盘重合。第二层追组合：加法法则在重叠时扣掉重复计算，条件概率和乘法漏斗顺着序列转化往下算。"
+  zh_hk: "將風險儀表板拆成四層。第一層劃邊界：樣本空間界定納入邊啲結果，補集法則簡化複雜故障計算，2x2 列聯表分清邊緣同大盤重合。第二層追組合：加法法則喺重疊嗰陣扣走重複計算，條件概率同乘法漏斗順住序列轉化落去計。"
 - id: reasoning
   visual: two_column
   seconds: 48
@@ -126,17 +146,17 @@ beats:
   right_zh: "理性定价：期望货币价值与方差约束"
   right_zh_hk: "理性定價：預期貨幣價值與方差約束"
   s1_en: "Tier Three updates beliefs: Probability Trees map cascading supply bottlenecks, Total Probability stitches supplier risks into enterprise totals, and Bayes' Rule inverts evidence without succumbing to the base rate trap."
-  s1_zh: "第三层动态更新信念：概率树图拆解供应链瀑布瓶颈，全概率公式缝合多元供货风险，而贝叶斯法则逆转诊断证据，抵御基准率认知谬误。"
-  s1_zh_hk: "第三層動態更新信念：概率樹圖拆解供應鏈瀑布瓶頸，全概率公式縫合多元供貨風險，而貝葉斯法則逆轉診斷證據，抵禦基準率認知謬誤。"
+  s1_zh: "第三层更新信念：概率树拆开供应链层层瓶颈，全概率把多家供货风险缝成大盘，贝叶斯把证据方向反过来，并避开基准率陷阱。"
+  s1_zh_hk: "第三層更新信念：概率樹拆開供應鏈層層瓶頸，全概率將多家供貨風險縫成大盤，貝葉斯將證據方向反轉過嚟，並避開基準率陷阱。"
   s2_en: "Finally, Tier Four values the gamble: Expected Monetary Value identifies the long-run mathematical edge, while Variance and Standard Deviation measure dispersion, which managers compare with liquidity and risk tolerance."
-  s2_zh: "最后，第四层完成商业下注定价：预期货币价值锁定长线数学胜率，而方差与标准差衡量离散程度，管理者再把它与流动性和风险承受力比较。"
-  s2_zh_hk: "最後，第四層完成商業下注定價：預期貨幣價值鎖定長線數學勝率，而方差同標準差衡量離散程度，管理者再將佢同流動性及風險承受力比較。"
+  s2_zh: "第四层给下注定价：预期货币价值锁定长线数学胜率，方差和标准差量离散，再拿去对照流动性和风险承受力。"
+  s2_zh_hk: "第四層幫下注定價：預期貨幣價值鎖定長線數學勝率，方差同標準差量離散，再攞去對照流動性同風險承受力。"
   s3_en: "Together, these tools make assumptions, probabilities, and financial trade-offs explicit; they improve decision discipline without eliminating uncertainty."
-  s3_zh: "这些工具把假设、概率和财务权衡明确呈现出来，在不消除不确定性的前提下提升决策纪律。"
-  s3_zh_hk: "呢啲工具將假設、概率同財務權衡清楚呈現出嚟，喺唔消除不確定性嘅前提之下提升決策紀律。"
+  s3_zh: "这些工具把假设、概率和财务权衡讲清楚；它们提高决策纪律，但消除不了不确定。"
+  s3_zh_hk: "呢啲工具將假設、概率同財務權衡講清楚；佢哋提高決策紀律，但消除唔到唔確定。"
 - id: takeaway
   visual: takeaway
-  seconds: 40
+  seconds: 30
   kicker: "Executive Rule"
   kicker_en: "Executive Rule"
   kicker_zh: "高管守则"
@@ -144,18 +164,18 @@ beats:
   title_en: "Optimize the process, balance the gamble"
   title_zh: "掌控理性决策过程，平衡胜率与生存底线"
   title_zh_hk: "掌控理性決策過程，平衡勝率與生存底線"
-  q1_en: "How should an executive lead under uncertainty?"
-  q1_zh: "领导者在面对不确定性时应如何科学决断？"
-  q1_zh_hk: "領導者喺面對不確定性嗰陣應點樣科學決斷？"
-  q2_en: "What comes next in the business modeling journey?"
-  q2_zh: "商业建模征程的下一步我们将走向何方？"
-  q2_zh_hk: "商業建模征程嘅下一步我哋將走向邊度？"
-  s1_en: "Do not judge a decision only by its realized outcome. Review whether the events, assumptions, probabilities, alternatives, and consequences were assessed with the information available at the time."
-  s1_zh: "不要只凭最终结果评价决策。应复核当时是否根据可得信息评估了事件、假设、概率、备选方案和后果。"
-  s1_zh_hk: "唔好淨係憑最終結果評價決策。應該覆核當時有冇根據可得資料評估事件、假設、概率、備選方案同後果。"
-  s2_en: "Compare expected value with variance or standard deviation, then test whether adverse outcomes fit the organization’s liquidity, controls, and risk tolerance."
-  s2_zh: "把期望值与方差或标准差一并比较，再检验不利结果是否符合组织的流动性、控制措施和风险承受力。"
-  s2_zh_hk: "將期望值同方差或者標準差一齊比較，再檢驗不利結果係咪符合組織嘅流動性、控制措施同風險承受力。"
-  s3_en: "Use the dashboard in sequence: define the sample space, model combinations or paths, update beliefs when evidence arrives, and compare expected value with dispersion before acting."
-  s3_zh: "按顺序使用仪表盘：定义样本空间，建立组合或路径模型，在新证据出现时更新信念，并在行动前比较期望值与离散程度。"
-  s3_zh_hk: "按次序使用儀表板：定義樣本空間，建立組合或者路徑模型，喺新證據出現嗰陣更新信念，並喺行動之前比較期望值同離散程度。"
+  q1_en: "Lead under uncertainty? → Judge the process, not one outcome"
+  q1_zh: "不确定下如何领导？→ 评过程，不评单次结果"
+  q1_zh_hk: "不確定下點樣領導？→ 評過程，唔評單次結果"
+  q2_en: "Close the dashboard? → Space → update → EMV vs spread"
+  q2_zh: "如何收束仪表盘？→ 空间→路径→更新→期望对离散"
+  q2_zh_hk: "點樣收束儀表板？→ 空間→路徑→更新→期望對離散"
+  s1_en: "Do not judge a decision only by its realized outcome. Review the process you chose with the information you had."
+  s1_zh: "不要只凭实现结果评判决策。用当时信息回看你选用的过程。"
+  s1_zh_hk: "唔好淨憑實現結果評判決策。用當時資訊回睇你選用嘅過程。"
+  s2_en: "Compare expected value with dispersion, then test liquidity and risk tolerance."
+  s2_zh: "比较期望与离散，再检验流动性与风险承受力。"
+  s2_zh_hk: "比較期望同離散，再檢驗流動性同風險承受力。"
+  s3_en: "Dashboard order: sample space, paths, update on evidence, then EMV versus spread."
+  s3_zh: "仪表盘顺序：样本空间、路径、依证据更新，再比较期望与离散。"
+  s3_zh_hk: "儀表板順序：樣本空間、路徑、依證據更新，再比較期望同離散。"

@@ -57,7 +57,37 @@ class WordHoldMapping(unittest.TestCase):
         self.assertGreater(holds[-1], 1.90 - 1.00)
         self.assertAlmostEqual(sum(holds), 4.0)
 
+    def test_cjk_compound_men_dian_stays_one_token(self) -> None:
+        from slides import _cjk_tokens
+        from mux import _wrap_caption_line, _caption_font
+
+        toks = _cjk_tokens("先从门店开始")
+        self.assertIn("门店", toks)
+        font = _caption_font("先从门店开始", 42)
+        for mw in (84, 126, 168, 210, 252):
+            lines = _wrap_caption_line("先从门店开始给每个杯数一个标签", font, mw)
+            for a, b in zip(lines, lines[1:]):
+                self.assertFalse(a.endswith("门") and b.startswith("店"), lines)
+
+    def test_cjk_compound_topic_names_stay_one_token(self) -> None:
+        from slides import _cjk_tokens, _CJK_COMPOUNDS
+
+        samples = {
+            "中位数": "中位数是正中间",
+            "众数": "众数是出现最多",
+            "协方差": "协方差看同向",
+            "相关系数": "相关系数没有单位",
+            "百分位数": "第八十百分位数",
+            "四分位距": "四分位距是中间宽",
+            "异常值": "异常值先标记",
+            "标准差": "标准差回到杯",
+        }
+        for compound, phrase in samples.items():
+            self.assertIn(compound, _CJK_COMPOUNDS)
+            self.assertIn(compound, _cjk_tokens(phrase), phrase)
+
     def test_cjk_wrap_splits_inside_one_edge_word(self) -> None:
+
         pages = ["平均", "数"]
         words = [_word("平均数", 0.0, 0.9)]
         holds = holds_from_word_times(2.0, pages, words)
@@ -313,6 +343,75 @@ class SpeechAndClipCache(unittest.TestCase):
         words = _clip_key([], holds, audio, True, "on", cap_time=CAP_TIME_WORDS)
         self.assertNotEqual(weight, words)
         self.assertEqual(weight, _clip_key([], holds, audio, True, "on"))
+
+
+class BalancedCaptionCards(unittest.TestCase):
+    """C5: sentence cards are balanced, never end on a 1-2 word / 1-3 char card."""
+
+    EN = ("If you treat the quietest row as the whole chain, the busy shop runs out "
+          "of stock before lunch on most weekdays.")
+    ZH = "要是把最清闲的那一行当成整条连锁，忙店中午前就会断货，周末还会更早断货。"
+
+    def _cards(self, text):
+        from mux import _caption_font, _wrap_caption_line, CAPTION_PILL_MAX, CAPTION_PAD_X
+
+        font = _caption_font(text, 42)
+        return [c for c in _wrap_caption_line(text, font, CAPTION_PILL_MAX - 2 * CAPTION_PAD_X) if c.strip()]
+
+    def test_letters_are_preserved(self) -> None:
+        for text in (self.EN, self.ZH):
+            cards = self._cards(text)
+            self.assertEqual(_caption_letters("".join(cards)), _caption_letters(text))
+
+    def test_no_orphan_last_card(self) -> None:
+        from mux import caption_orphans
+
+        en = self._cards(self.EN)
+        zh = self._cards(self.ZH)
+        if len(en) > 1:
+            self.assertGreaterEqual(len(en[-1].split()), 3, en)
+        if len(zh) > 1:
+            self.assertGreaterEqual(sum(1 for ch in zh[-1] if "\u4e00" <= ch <= "\u9fff"), 4, zh)
+        self.assertEqual(caption_orphans(self.EN), [])
+        self.assertEqual(caption_orphans(self.ZH), [])
+
+    def test_balanced_cards_minimises_raggedness(self) -> None:
+        from mux import balanced_cards
+
+        units = [w + " " for w in "one two three four five six seven eight nine ten".split()]
+        cards = balanced_cards(units, lambda s: len(s.strip()), 30, cjk=False)
+        self.assertEqual(len(cards), 2)
+        self.assertLessEqual(abs(len(cards[0]) - len(cards[1])), 8)
+
+    def test_greedy_fallback_env(self) -> None:
+        from unittest import mock
+
+        with mock.patch.dict(os.environ, {"VF_CAPTION_GREEDY": "1"}):
+            cards = self._cards(self.EN)
+        self.assertEqual(_caption_letters("".join(cards)), _caption_letters(self.EN))
+
+    def test_word_times_still_align_after_balancing(self) -> None:
+        words = [_word(w, i * 0.4, i * 0.4 + 0.35) for i, w in enumerate(self.EN.split())]
+        pages, holds, idx, how = pages_for_stages(self.EN, 20.0, 1, chunks=[self.EN], words=words)
+        self.assertEqual(how, CAP_TIME_WORDS)
+        self.assertAlmostEqual(sum(holds), 20.0, places=2)
+
+    def test_srt_break_is_balanced(self) -> None:
+        from mux import _break_caption
+
+        out = _break_caption("二元结果、固定次数计数、到达时间和等待的分布形状", 22)
+        lines = out.split("\n")
+        self.assertEqual("".join(lines), "二元结果、固定次数计数、到达时间和等待的分布形状")
+        self.assertTrue(all(len(ln) >= 4 for ln in lines), lines)
+
+
+class DecimalPointIsNotSentenceEnd(unittest.TestCase):
+    def test_decimal_kept_in_one_sentence(self):
+        from mux import _sentences, _split_sentences
+        for fn in (_sentences, _split_sentences):
+            self.assertEqual(fn("A店是30除以300，等于0.10。杯除以杯。"),
+                             ["A店是30除以300，等于0.10。", "杯除以杯。"])
+            self.assertEqual(fn("It is 0.80. Then 5."), ["It is 0.80.", "Then 5."])
 
 
 if __name__ == "__main__":

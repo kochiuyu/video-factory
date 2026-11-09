@@ -1,19 +1,45 @@
 id: STAT-M03-T08-CONTP
-course: statistics
 course_en: "Discrete & Continuous Probability Distributions"
 course_zh: "离散与连续概率分布"
 course_zh_hk: "離散與連續概率分佈"
-audience: "first-year business students"
-audience_en: "first-year business students"
-audience_zh: "商学院一年级学生"
-audience_zh_hk: "商學院一年級學生"
-duration_target_s: 168
+duration_target_s: 166
 title_en: "The zero-probability paradox"
 title_zh: "单点概率为零之谜：连续密度与区间面积"
 title_zh_hk: "單點概率為零之謎：連續密度與區間面積"
-objective_en: "Explain the fundamental shift from discrete mass to continuous probability density functions (PDF), resolve the zero-probability paradox P(X = c) = 0 for single points, and calculate service time likelihoods using interval areas."
-objective_zh: "阐释从离散质量函数向连续概率密度函数（PDF）的本质跃迁，破解单点概率严格为零 P(X = c) = 0 的反直觉悖论，并运用曲线下面积测算饮品制作时长区间的达标胜率。"
-objective_zh_hk: "闡釋由離散質量函數向連續概率密度函數（PDF）嘅本質躍遷，破解單點概率嚴格為零 P(X = c) = 0 嘅反直覺悖論，並運用曲線下面積測算飲品製作時長區間嘅達標勝率。"
+youtube:
+  description_en: |
+    The zero-probability paradox
+    
+    A store models pour-over time as continuous. Under that model, finishing in exactly 45 seconds has probability zero — even though every cup gets a recorded time. Why can a possible outcome have zero point mass?
+    
+    Continuous probability lives in interval area under a density, not in single-point spikes. Exact clock readings still get logged, but the managerial question is the chance of landing inside a service band — not the chance of one exact second.
+    
+    Manage through intervals, not pinpoints. Design SLAs and process checks around bands of time, not one stopwatch reading.
+    
+    Discrete & Continuous Probability Distributions - Module 3 - Short 8 (CONTP)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    单点概率为零之谜：连续密度与区间面积
+    
+    门店把手冲时间建成连续型变量。模型里「恰好 45 秒完成」的概率是零，可每杯还是会记下时间。可能发生的结果为什么单点概率为零？
+    
+    连续概率活在密度曲线下的区间面积里，不在单点尖峰上。秒表仍会记录，但管理层该算的是落在服务带宽内的概率，不是某一整秒。
+    
+    以区间带宽管理业务，切莫执念单点绝对值。服务承诺与过程检查都按时间带设计。
+    
+    离散与连续概率分布 - 模块3 - 短片8（CONTP）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    單點概率為零之謎：連續密度與區間面積
+    
+    門市將手沖時間建成連續型變量。模型入面「啱啱好 45 秒完成」嘅概率係零，但每杯都仲會記低時間。可能發生嘅結果點解單點概率係零？
+    
+    連續概率活喺密度曲線底下嘅區間面積入面，唔喺單點尖峰上面。秒錶都仲會記錄，但管理層應該計嘅係落喺服務帶寬入面嘅概率，唔係某一整秒。
+    
+    以區間帶寬管理業務，咪執念單點絕對值。服務承諾同過程檢查都按時間帶設計。
+    
+    離散與連續概率分佈 - 模組3 - 短片8（CONTP）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: "continuous random variable"
   zh: "连续型随机变量"
@@ -91,9 +117,9 @@ beats:
   title_en: "What are the odds of taking exactly 45 seconds?"
   title_zh: "精准耗时四十五秒整的概率，竟是零？"
   title_zh_hk: "精準耗時四十五秒整嘅概率，竟然係零？"
-  en: "A store models pour-over preparation time as a continuous random variable. Under that model, the probability of finishing at exactly 45 seconds is zero, even though every observed brew receives some recorded time. How can a possible outcome have zero point probability, and what probability should management calculate instead?"
-  zh: "门店把手冲制作时间建模为连续型随机变量。在该模型下，恰好 45 秒完成的概率为零，尽管每杯咖啡最终都会记录一个时间。一个可能发生的结果为何具有零单点概率？管理层真正应该计算哪种概率？"
-  zh_hk: "門市將手沖製作時間建模成連續型隨機變量。喺呢個模型之下，啱啱好 45 秒完成嘅概率係零，雖然每杯咖啡最後都會記錄一個時間。一個可能發生嘅結果點解會有零單點概率？管理層真正應該計邊種概率？"
+  en: "A store models pour-over time as continuous. Under that model, finishing in exactly 45 seconds has probability zero — even though every cup gets a recorded time. Why can a possible outcome have zero point mass, and what should managers calculate instead?"
+  zh: "门店把手冲时间建成连续型变量。模型里“恰好 45 秒完成”的概率是零，可每杯还是会记下时间。可能发生的结果为什么单点概率为零？管理层真正该算的是哪种概率？"
+  zh_hk: "門市將手沖時間建成連續型變量。模型入面「啱啱好 45 秒完成」嘅概率係零，但每杯都仲會記低時間。可能發生嘅結果點解單點概率係零？管理層真正應該計邊種概率？"
 - id: define
   visual: definition_card
   seconds: 34
@@ -109,8 +135,8 @@ beats:
   formula_zh_hk: "P(a <= X <= b) = 區間 [a, b] 曲線下嘅積分面積；兼且單點 P(X = c) = 0"
   formula_tex: "P(a \\le X \\le b) = \\int_{a}^{b} f(x)\\,dx, \\quad P(X = c) = \\int_{c}^{c} f(x)\\,dx = 0"
   s1_en: "Continuous variables like time, temperature, and weight can take an uncountably infinite number of values along a continuum."
-  s1_zh: "诸如制作耗时、牛奶温度和咖啡豆重量等连续型变量，可以在连续数轴上取不可数无穷多个潜在数值。"
-  s1_zh_hk: "好似製作耗時、牛奶溫度同咖啡豆重量呢啲連續型變量，可以喺連續數軸上面攞到不可數無窮多個潛在數值。"
+  s1_zh: "连续型变量可以取一段区间里的任意实数。在绝对连续模型里，单个精确点的概率是零。"
+  s1_zh_hk: "連續型變量可以取一段區間入面嘅任意實數。喺絕對連續模型入面，單個精確點嘅概率係零。"
   s2_en: "A probability density function f(x) is nonnegative and has total area one. Probabilities come from integrating the density over intervals; the value f(x) is a density per unit, not the probability of the single point x."
   s2_zh: "概率密度函数 f(x) 必须非负，而且曲线下总面积为 1。概率来自对区间上的密度积分；f(x) 是单位尺度上的密度，并不是单点 x 的概率。"
   s2_zh_hk: "概率密度函數 f(x) 必須非負，而且曲線下總面積係 1。概率來自對區間上嘅密度積分；f(x) 係每個單位尺度嘅密度，唔係單點 x 嘅概率。"
@@ -146,9 +172,9 @@ beats:
   kicker_en: "The Ledger"
   kicker_zh: "账目实测"
   kicker_zh_hk: "賬目實測"
-  title_en: "Auditing Wan Chai pour-over prep times"
-  title_zh: "实测湾仔店手冲出餐耗时区间"
-  title_zh_hk: "實測灣仔舖手沖出餐耗時區間"
+  title_en: "Auditing Shop A pour-over prep times"
+  title_zh: "实测A店手冲出餐耗时区间"
+  title_zh_hk: "實測A舖手沖出餐耗時區間"
   step1_en: "Density spread: Uniform between 40s and 60s; f(x) = 1/20 = 0.05"
   step1_zh: "密度分布：耗时在 40 至 60 秒均匀分布；恒定高度 f(x) = 1/20 = 0.05"
   step1_zh_hk: "密度分佈：耗時喺 40 至 60 秒均勻分佈；恆定高度 f(x) = 1/20 = 0.05"
@@ -158,9 +184,9 @@ beats:
   step3_en: "Interval SLA: P(45 <= X <= 55) = (55 - 45) * 0.05 = 50% on-time"
   step3_zh: "服务承诺：P(45 <= X <= 55) = (55 - 45) × 0.05 = 50% 达标胜率"
   step3_zh_hk: "服務承諾：P(45 <= X <= 55) = (55 - 45) × 0.05 = 50% 達標勝率"
-  s1_en: "For this Wan Chai illustration, assume brew time is uniformly distributed from 40 to 60 seconds. The density is therefore constant at one over twenty, or 0.05 per second."
-  s1_zh: "在这个湾仔店示例中，假设制作时间在 40 至 60 秒之间均匀分布，因此密度恒为 1/20，即每秒 0.05。"
-  s1_zh_hk: "喺呢個灣仔舖示例入面，假設製作時間喺 40 至 60 秒之間均勻分佈，所以密度固定係 1/20，即係每秒 0.05。"
+  s1_en: "For this Shop A illustration, assume brew time is uniformly distributed from 40 to 60 seconds. The density is therefore constant at one over twenty, or 0.05 per second."
+  s1_zh: "在这个A店示例中，假设制作时间在 40 至 60 秒之间均匀分布，因此密度恒为 1/20，即每秒 0.05。"
+  s1_zh_hk: "喺呢個A舖示例入面，假設製作時間喺 40 至 60 秒之間均勻分佈，所以密度固定係 1/20，即係每秒 0.05。"
   s2_en: "Step two asks for the probability that the unrounded continuous time equals exactly 45 seconds. Under the model it is zero; this does not mean a stopwatch cannot display 45 seconds after rounding."
   s2_zh: "第二步计算未经取整的连续时间恰好等于 45 秒的概率。在模型下结果为零；这不表示秒表四舍五入后不能显示 45 秒。"
   s2_zh_hk: "第二步計未經取整嘅連續時間啱啱好等於 45 秒嘅概率。喺模型之下結果係零；呢個唔表示秒錶四捨五入之後唔可以顯示 45 秒。"
@@ -169,7 +195,7 @@ beats:
   s3_zh_hk: "第三步計 45 至 55 秒區間。喺均勻模型之下，用 10 秒寬度乘以密度 0.05，得到概率 0.50。"
 - id: takeaway
   visual: takeaway
-  seconds: 32
+  seconds: 30
   kicker: "Decision Rule"
   kicker_en: "Decision Rule"
   kicker_zh: "商业法则"
@@ -177,18 +203,18 @@ beats:
   title_en: "Manage through intervals, not pinpoints"
   title_zh: "以区间带宽管理业务，切莫执念单点绝对值"
   title_zh_hk: "以區間帶寬管理業務，咪執念單點絕對值"
-  q1_en: "Why must operational SLAs define target intervals instead of single numbers?"
-  q1_zh: "为什么商业服务协议必须设定区间范围，而非单一数字指标？"
-  q1_zh_hk: "點解商業服務協議必須設定區間範圍，而唔係單一數字指標？"
-  q2_en: "What tool accumulates continuous probability across entire ranges?"
-  q2_zh: "在连续型随机变量中，哪项工具负责累积整段区间的概率？"
-  q2_zh_hk: "喺連續型隨機變量入面，邊項工具負責累積成段區間嘅概率？"
-  s1_en: "If compliance is defined through a continuous measurement model, an interval or one-sided threshold usually supports a meaningful probability calculation. The chosen tolerance must come from operational or contractual requirements, not from probability theory alone."
-  s1_zh: "如果达标判断采用连续测量模型，区间或单侧阈值通常更适合计算概率。容差范围应来自运营或合同要求，而不能仅由概率理论决定。"
-  s1_zh_hk: "如果達標判斷採用連續測量模型，區間或者單側門檻通常更適合計概率。容差範圍應該來自營運或者合約要求，唔可以淨係由概率理論決定。"
-  s2_en: "For an absolutely continuous distribution, including or excluding finitely many endpoints does not change probability. Therefore P(X <= c) equals P(X < c)."
-  s2_zh: "在连续型变量中，包含端点与否对结果毫无影响：P(X <= c) 与严格小于的 P(X < c) 在数值上完全等价，因为边界单点概率严格为零。"
-  s2_zh_hk: "喺連續型變量入面，包唔包端點對結果毫無影響：P(X <= c) 同嚴格細過嘅 P(X < c) 喺數值上完全等價，因為邊界單點概率嚴格為零。"
-  s3_en: "Under the uniform 40-to-60-second model, P(X=45)=0 while P(45<=X<=55)=0.50. The operating rule is to calculate continuous probabilities as interval areas and to interpret recorded rounded values according to their measurement intervals."
-  s3_zh: "在 40 至 60 秒的均匀模型下，P(X=45)=0，而 P(45≤X≤55)=0.50。运营规则是把连续概率计算为区间面积，并按照相应测量区间解释经过取整的记录值。"
-  s3_zh_hk: "喺 40 至 60 秒嘅均勻模型之下，P(X=45)=0，而 P(45≤X≤55)=0.50。營運規則係將連續概率計成區間面積，並按照相應測量區間解釋經過取整嘅記錄值。"
+  q1_en: "Point target on a continuous clock? → Probability zero — use an interval"
+  q1_zh: "连续时间盯单点？→ 概率为零——改用区间"
+  q1_zh_hk: "連續時間盯單點？→ 概率為零——改用區間"
+  q2_en: "Where does continuous probability live? → Area under the density over a range"
+  q2_zh: "连续概率在哪？→ 密度曲线下一段区间的面积"
+  q2_zh_hk: "連續概率喺邊？→ 密度曲線下一段區間嘅面積"
+  s1_en: "For continuous compliance, write an interval or one-sided threshold from ops or the contract — not from theory alone."
+  s1_zh: "连续达标要用区间或单侧阈值，来自运营或合同，不能只靠理论拍脑袋。"
+  s1_zh_hk: "連續達標要用區間或者單側門檻，嚟自營運或者合約，唔可以淨靠理論拍腦袋。"
+  s2_en: "With an absolutely continuous law, endpoints do not matter: P(X≤c)=P(X<c)."
+  s2_zh: "绝对连续时，端点包不包含无所谓：P(X≤c)=P(X<c)。"
+  s2_zh_hk: "絕對連續嗰陣，端點包唔包含冇所謂：P(X≤c)=P(X<c)。"
+  s3_en: "Uniform 40–60s: P(X=45)=0 while P(45≤X≤55)=0.50 — compute areas, not points."
+  s3_zh: "均匀 40–60 秒：P(X=45)=0，而 P(45≤X≤55)=0.50——算面积，不算单点。"
+  s3_zh_hk: "均勻 40–60 秒：P(X=45)=0，而 P(45≤X≤55)=0.50——計面積，唔好計單點。"

@@ -1,19 +1,45 @@
 id: STAT-M03-T06-POISS
-course: statistics
 course_en: "Discrete & Continuous Probability Distributions"
 course_zh: "离散与连续概率分布"
 course_zh_hk: "離散與連續概率分佈"
-audience: "first-year business students"
-audience_en: "first-year business students"
-audience_zh: "商学院一年级学生"
-audience_zh_hk: "商學院一年級學生"
-duration_target_s: 168
+duration_target_s: 166
 title_en: "Managing the morning rush"
 title_zh: "早高峰排队调度：泊松分布与客流涌入"
 title_zh_hk: "朝高峰排隊調度：泊松分佈與客流湧入"
-objective_en: "Define the Poisson distribution as a model for discrete event arrivals over continuous time, explain the arrival rate parameter lambda, leverage the equality E[X] = Var(X) = lambda, and calculate queue capacity risks during morning rush hours."
-objective_zh: "将泊松分布定义为连续时间流中离散事件到达的模型，解析到达率参数 lambda，掌握期望与方差均等于 lambda 的核心特性，并测算早高峰时段排队容量击穿风险。"
-objective_zh_hk: "將泊松分佈定義為連續時間流入面離散事件到達嘅模型，解析到達率參數 lambda，掌握期望同方差均等於 lambda 嘅核心特性，並測算朝高峰時段排隊容量擊穿風險。"
+youtube:
+  description_en: |
+    Managing the morning rush
+    
+    Shop B averages two arrivals per minute in the morning rush, but the count jumps around. You need the chance of a quiet minute and the chance of overflowing capacity.
+    
+    When a Poisson model fits a stable independent-event rate, mean and variance both equal λ. For λ=2: P(X=0)≈13.5%, P(X=1)≈27.1%, P(X=2)≈27.1%. With a service threshold of four arrivals per minute, P(X at least 5)≈5.3%.
+    
+    Staff for the Poisson wave, not the flat average. Pick capacity from the upper tail you care about — after checking rate stability and independence.
+    
+    Discrete & Continuous Probability Distributions - Module 3 - Short 6 (POISS)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    早高峰排队调度：泊松分布与客流涌入
+    
+    B店早高峰平均每分钟来 2 位客人，但实际人数会跳来跳去。你要知道安静一分钟的概率，也要知道挤爆服务能力的概率。
+    
+    泊松合用时，均值与方差都等于 λ。λ=2 时：P(X=0)约 13.5%，P(X=1)约 27.1%，P(X=2)约 27.1%。服务阈值按每分钟 4 人计，P(X 至少 5)约 5.3%。
+    
+    按泊松浪涌峰值排班，莫被平滑均值麻痹。按你关心的上尾选承载力——先核对速率稳定与独立性。
+    
+    离散与连续概率分布 - 模块3 - 短片6（POISS）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    朝高峰排隊調度：泊松分佈與客流湧入
+    
+    B舖朝早繁忙時段平均每分鐘嚟 2 位客人，但實際人數會跳嚟跳去。你要知安靜一分鐘嘅概率，亦要知迫爆服務能力嘅概率。
+    
+    泊松合用嗰陣，均值同方差都等於 λ。λ=2 嗰陣：P(X=0)約 13.5%，P(X=1)約 27.1%，P(X=2)約 27.1%。服務門檻按每分鐘 4 人計，P(X 至少 5)約 5.3%。
+    
+    按泊松浪湧峰值排班，咪被平滑均值麻痹。按你關心嘅上尾揀承載力——先核對速率穩定同獨立性。
+    
+    離散與連續概率分佈 - 模組3 - 短片6（POISS）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: "Poisson distribution"
   zh: "泊松分布"
@@ -91,9 +117,9 @@ beats:
   title_en: "When sixty customers hit the counter at once"
   title_zh: "六十杯订单汹涌而至，吧台如何招架？"
   title_zh_hk: "六十杯訂單洶湧而至，吧台點樣招架？"
-  en: "A Mong Kok counter receives an average of two customer arrivals per minute during the morning rush, but the actual count varies from minute to minute. Management needs the probability of quiet minutes and of arrival counts that exceed service capacity. When is a Poisson model appropriate for this problem?"
-  zh: "旺角店早高峰期间平均每分钟有 2 位顾客到达，但实际人数会逐分钟变化。管理层需要知道安静时段的概率，以及到达人数超过服务能力的概率。泊松模型在什么条件下适合处理这个问题？"
-  zh_hk: "旺角舖朝早繁忙時段平均每分鐘有 2 位顧客到達，但實際人數會逐分鐘變化。管理層需要知道安靜分鐘嘅概率，以及到達人數超過服務能力嘅概率。泊松模型喺咩條件之下適合處理呢個問題？"
+  en: "Shop B averages two arrivals per minute in the morning rush, but the count jumps around. You need the chance of a quiet minute and the chance of overflowing capacity. When is a Poisson model the right tool?"
+  zh: "B 店早高峰平均每分钟来 2 位客人，但实际人数会跳来跳去。你要知道安静一分钟的概率，也要知道挤爆服务能力的概率。泊松模型在什么条件下合适？"
+  zh_hk: "B 舖朝早繁忙時段平均每分鐘嚟 2 位客人，但實際人數會跳嚟跳去。你要知安靜一分鐘嘅概率，亦要知迫爆服務能力嘅概率。泊松模型喺咩條件之下先合適？"
 - id: define
   visual: definition_card
   seconds: 34
@@ -109,8 +135,8 @@ beats:
   formula_zh_hk: "P(X = k) = (lambda^k × e^(-lambda)) / k!，其中 k = 0, 1, 2, ..."
   formula_tex: "P(X = k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}, \\quad k \\in \\{0, 1, 2, \\dots\\}"
   s1_en: "A Poisson count model is appropriate when events occur independently, the average rate is constant over the interval, and simultaneous arrivals are negligible at a sufficiently small scale. X counts events in a specified interval of time or space."
-  s1_zh: "当事件相互独立、区间内平均速率保持稳定，而且在足够小的尺度上同时发生多个事件的概率可以忽略时，可使用泊松计数模型。X 统计指定时间或空间区间内的事件数。"
-  s1_zh_hk: "當事件互相獨立、區間內平均速率保持穩定，而且喺足夠細嘅尺度上同時發生多個事件嘅概率可以忽略，就可以用泊松計數模型。X 統計指定時間或者空間區間入面嘅事件數。"
+  s1_zh: "在一段固定时间里，如果到达速率大致稳定、事件又近似独立，计数常常用泊松来建模，参数是 λ。"
+  s1_zh_hk: "喺一段固定時間入面，如果到達速率大致穩定、事件又近似獨立，計數成日用泊松嚟建模，參數係 λ。"
   s2_en: "Unlike a Binomial count, a Poisson count has no fixed upper trial limit. Its support is the non-negative integers, and lambda is the expected number of events in the specified interval."
   s2_zh: "与二项计数不同，泊松计数没有固定的试验上限；其取值为非负整数，lambda 表示指定区间内的期望事件数。"
   s2_zh_hk: "同二項計數唔同，泊松計數冇固定嘅試驗上限；佢嘅取值係非負整數，而 lambda 表示指定區間內嘅期望事件數。"
@@ -146,9 +172,9 @@ beats:
   kicker_en: "The Ledger"
   kicker_zh: "账目实推"
   kicker_zh_hk: "賬目實推"
-  title_en: "Staffing Mong Kok at 2 arrivals per minute"
-  title_zh: "推演旺角店每分钟到达两人的排班压力"
-  title_zh_hk: "推演旺角舖每分鐘到達兩人嘅排班壓力"
+  title_en: "Staffing Shop B at 2 arrivals per minute"
+  title_zh: "推演B店每分钟到达两人的排班压力"
+  title_zh_hk: "推演B舖每分鐘到達兩人嘅排班壓力"
   step1_en: "Baseline rate: lambda = 2.0 arrivals per minute; e^(-2) = 0.1353"
   step1_zh: "到达基准：平均每分钟到达 lambda = 2 人；底数常数 e^(-2) ≈ 0.1353"
   step1_zh_hk: "到達基準：平均每分鐘到達 lambda = 2 人；底數常數 e^(-2) ≈ 0.1353"
@@ -158,9 +184,9 @@ beats:
   step3_en: "Capacity overflow: P(X >= 5) = 1 - F(4) = 1 - 0.9473 = 5.3% queue shock"
   step3_zh: "击穿吧台：P(X >= 5) = 1 - F(4) = 5.3% 的分钟会出现 5人以上拥堵"
   step3_zh_hk: "擊穿吧台：P(X >= 5) = 1 - F(4) = 5.3% 嘅分鐘會出現 5人以上擁堵"
-  s1_en: "For this Mong Kok illustration, assume a constant rate of lambda equals two arrivals per minute and that the Poisson assumptions are reasonable. The exponential factor e to the negative two is about zero point one three five."
-  s1_zh: "在这个旺角店示例中，假设到达率恒定为每分钟 lambda=2，并且泊松假设基本成立。指数项 e 的负二次方约为 0.1353。"
-  s1_zh_hk: "喺呢個旺角舖示例入面，假設到達率固定係每分鐘 lambda=2，而且泊松假設大致成立。指數項 e 嘅負二次方大約係 0.1353。"
+  s1_en: "For this Shop B illustration, assume a constant rate of lambda equals two arrivals per minute and that the Poisson assumptions are reasonable. The exponential factor e to the negative two is about zero point one three five."
+  s1_zh: "在这个B店示例中，假设到达率恒定为每分钟 lambda=2，并且泊松假设基本成立。指数项 e 的负二次方约为 0.1353。"
+  s1_zh_hk: "喺呢個B舖示例入面，假設到達率固定係每分鐘 lambda=2，而且泊松假設大致成立。指數項 e 嘅負二次方大約係 0.1353。"
   s2_en: "Step two gives the modeled probabilities: zero arrivals has probability thirteen point five percent, exactly one has twenty-seven point one percent, and exactly two also has twenty-seven point one percent."
   s2_zh: "第二步给出模型概率：零人到达为 13.5%，恰好 1 人为 27.1%，恰好 2 人也为 27.1%。"
   s2_zh_hk: "第二步畀出模型概率：零人到達係 13.5%，啱啱好 1 人係 27.1%，啱啱好 2 人亦係 27.1%。"
@@ -169,7 +195,7 @@ beats:
   s3_zh_hk: "作為示例，假設服務門檻係每分鐘 4 人。CDF 累加到 4 大約係 0.9473，所以 5 人或以上嘅模型概率大約係 0.0527。呢個係到達門檻計算，唔係完整嘅排隊分析。"
 - id: takeaway
   visual: takeaway
-  seconds: 32
+  seconds: 30
   kicker: "Decision Rule"
   kicker_en: "Decision Rule"
   kicker_zh: "商业法则"
@@ -177,18 +203,18 @@ beats:
   title_en: "Staff for the Poisson wave, not the flat average"
   title_zh: "按泊松浪涌峰值排班，莫被平滑均值麻痹"
   title_zh_hk: "按泊松浪湧峰值排班，咪被平滑均值麻痹"
-  q1_en: "Why does staffing for average arrivals cause lines to spill out the door?"
-  q1_zh: "为什么按照平均客流配置人手会导致排队必然失控溢出？"
-  q1_zh_hk: "點解按照平均客流配置人手會搞到排隊必然失控溢出？"
-  q2_en: "How does the Poisson distribution link batches to continuous time?"
-  q2_zh: "泊松分布是如何在批次抽样与连续时间之间搭建桥梁的？"
-  q2_zh_hk: "泊松分佈係點樣喺批次抽樣同連續時間之間搭建橋樑嘅？"
-  s1_en: "If a Poisson model fits the arrivals, counts above the mean have positive probability. Staffing decisions should therefore consider an acceptable exceedance probability, service time, existing queue, and service target rather than lambda alone."
-  s1_zh: "如果泊松模型适合到达过程，高于均值的计数具有正概率。因此排班不应只看 lambda，还应考虑可接受的超标概率、服务时间、现有队列和服务目标。"
-  s1_zh_hk: "如果泊松模型適合到達過程，高過均值嘅計數有正概率。所以排班唔應該淨係睇 lambda，仲要考慮可接受嘅超標概率、服務時間、現有隊列同服務目標。"
-  s2_en: "Do not use a universal two-standard-deviation buffer. Select capacity from the relevant Poisson tail probability and combine it with service-time and queueing information."
-  s2_zh: "不要采用统一的“两倍标准差”缓冲。应根据相关泊松上尾概率选择产能，并结合服务时间与排队信息。"
-  s2_zh_hk: "唔好採用劃一嘅「兩倍標準差」緩衝。應該根據相關泊松上尾概率選擇產能，再結合服務時間同排隊資料。"
-  s3_en: "For lambda = 2, P(X = 0) is about 13.5% and P(X >= 5) is about 5.3%. Use those tail probabilities for threshold planning only after checking rate stability and arrival independence, and do not treat them as a complete queueing model."
-  s3_zh: "当 lambda=2 时，P(X=0) 约为 13.5%，P(X≥5) 约为 5.3%。只有检查速率稳定性与到达独立性后，才可将这些上尾概率用于阈值规划，而且不能把它们当作完整的排队模型。"
-  s3_zh_hk: "當 lambda=2，P(X=0) 大約係 13.5%，P(X≥5) 大約係 5.3%。只有檢查速率穩定性同到達獨立性之後，先可以將呢啲上尾概率用於門檻規劃，而且唔可以將佢哋當成完整嘅排隊模型。"
+  q1_en: "Staff only to the mean? → Tails still hit — plan an exceedance level"
+  q1_zh: "只按均值排人？→ 上尾仍会撞线——要定可接受超标水平"
+  q1_zh_hk: "淨按均值排人？→ 上尾都會撞線——要定可接受超標水平"
+  q2_en: "Poisson link? → Counts in a fixed interval under a stable rate"
+  q2_zh: "泊松连什么？→ 稳定速率下、固定时段内的计数"
+  q2_zh_hk: "泊松連咩？→ 穩定速率下、固定時段內嘅計數"
+  s1_en: "If Poisson fits, counts above the mean still have positive probability — fold in service time, queue, and service goals."
+  s1_zh: "泊松合用时，高于均值的计数仍有正概率——排班还要把服务时间、现有队列和服务目标算进去。"
+  s1_zh_hk: "泊松合用嗰陣，高過均值嘅計數都有正概率——排班仲要將服務時間、現有隊列同服務目標計入去。"
+  s2_en: "Skip a one-size “two-sigma” buffer. Pick capacity from the Poisson tail you care about."
+  s2_zh: "别套用统一的“两倍标准差”缓冲。按你关心的泊松上尾来选承载力。"
+  s2_zh_hk: "唔好套用統一嘅「兩倍標準差」緩衝。按你關心嘅泊松上尾嚟揀承載力。"
+  s3_en: "For λ=2: P(X=0)≈13.5%, P(X≥5)≈5.3% — after checking rate stability and independence."
+  s3_zh: "λ=2 时：P(X=0)约 13.5%，P(X≥5)约 5.3%——先核对速率稳定与独立性。"
+  s3_zh_hk: "λ=2 嗰陣：P(X=0)約 13.5%，P(X≥5)約 5.3%——先核對速率穩定同獨立性。"

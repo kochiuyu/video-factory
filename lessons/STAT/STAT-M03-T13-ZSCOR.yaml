@@ -1,19 +1,45 @@
 id: STAT-M03-T13-ZSCOR
-course: statistics
 course_en: "Discrete & Continuous Probability Distributions"
 course_zh: "离散与连续概率分布"
 course_zh_hk: "離散與連續概率分佈"
-audience: "first-year business students"
-audience_en: "first-year business students"
-audience_zh: "商学院一年级学生"
-audience_zh_hk: "商學院一年級學生"
-duration_target_s: 168
+duration_target_s: 166
 title_en: "The universal operational yardstick"
 title_zh: "通用的运营度量衡：标准化与 Z 分数"
 title_zh_hk: "通用嘅營運度量衡：標準化與 Z 分數"
-objective_en: "Define the standard normal distribution Z ~ N(0, 1), apply the standardization formula Z = (X - mu) / sigma to convert arbitrary normal distributions onto a universal scale, and benchmark sales surges across disparate retail branches."
-objective_zh: "定义标准正态分布 Z ~ N(0, 1)，运用标准化转换公式 Z = (X - mu) / sigma 将任意正态分布统一映射至全局通用标尺，并对不同体量与波动背景的连锁分店进行业绩爆单公平对标。"
-objective_zh_hk: "定義標準正態分佈 Z ~ N(0, 1)，運用標準化轉換公式 Z = (X - mu) / sigma 將任意正態分佈統一映射至全局通用標尺，並對唔同體量與波動背景嘅連鎖分店進行業績爆單公平對標。"
+youtube:
+  description_en: |
+    The universal operational yardstick
+    
+    Ops compares two cold-brew days: 710 cups at Shop C and 520 at Shop B. Raw totals differ because baselines and spreads differ. How does standardization put each reading back on its own scale before you compare statistical extremity?
+    
+    Shop B: 520 against mean 450 and sd 35 gives Z=+2.00. Shop C: 710 against mean 600 and sd 50 gives Z=+2.20. Raw totals differ by 190 cups, yet Shop C sits farther above its own mean.
+    
+    Compare relative positions with validated baselines — aligned metrics, windows, and data-generating process — not raw cup counts alone.
+    
+    Discrete & Continuous Probability Distributions - Module 3 - Short 13 (ZSCOR)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    通用的运营度量衡：标准化与 Z 分数
+    
+    运营比较两个冷萃日：C店 710 杯，B店 520 杯。基准和波动不同，原始总量不能直接比谁更「离谱」。
+    
+    B店：520 相对均值 450、标准差 35，Z=+2.00。C店：710 相对均值 600、标准差 50，Z=+2.20。原始总量相差 190 杯，但 C店相对自身均值更远。
+    
+    使用经过验证的基准比较相对位置——对齐指标、窗口与生成过程——别只盯杯数差额。
+    
+    离散与连续概率分布 - 模块3 - 短片13（ZSCOR）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    通用嘅營運度量衡：標準化與 Z 分數
+    
+    營運比較兩個冷萃日：C舖 710 杯，B舖 520 杯。基準同波動唔同，原始總量唔可以直接比邊個更「離譜」。
+    
+    B舖：520 相對均值 450、標準差 35，Z=+2.00。C舖：710 相對均值 600、標準差 50，Z=+2.20。原始總量相差 190 杯，但 C舖相對自身均值更遠。
+    
+    使用經過驗證嘅基準比較相對位置——對齊指標、窗口同生成過程——唔好淨係睇杯數差額。
+    
+    離散與連續概率分佈 - 模組3 - 短片13（ZSCOR）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: "standard normal distribution"
   zh: "标准正态分布"
@@ -58,28 +84,28 @@ quiz:
   explanation_zh_hk: "減去均值 mu 完成中心平移令新均值為 0；除以 sigma 完成尺度歸一化令新標準差同方差均為 1。"
 - id: Q2
   type: multiple_choice
-  question_en: "Mong Kok sells 520 cold brews on a day when its baseline is N(450, 35^2). Airport sells 710 cold brews when its baseline is N(600, 50^2). Which branch achieved the more extraordinary demand surge?"
-  question_zh: "旺角店某日售出 520 杯冷萃（该店基准为 N(450, 35^2)）。机场店同日售出 710 杯冷萃（该店基准为 N(600, 50^2)）。哪家分店取得了更为罕见、相对冲击力更大的爆单突破？"
-  question_zh_hk: "旺角舖某日賣出 520 杯冷萃（該舖基準為 N(450, 35^2)）。機場舖同日賣出 710 杯冷萃（該舖基準為 N(600, 50^2)）。邊間分店攞到更為罕見、相對衝擊力更大嘅爆單突破？"
+  question_en: "Shop B sells 520 cold brews on a day when its baseline is N(450, 35^2). Shop C sells 710 cold brews when its baseline is N(600, 50^2). Which branch achieved the more extraordinary demand surge?"
+  question_zh: "B店某日售出 520 杯冷萃（该店基准为 N(450, 35^2)）。C店同日售出 710 杯冷萃（该店基准为 N(600, 50^2)）。哪家分店取得了更为罕见、相对冲击力更大的爆单突破？"
+  question_zh_hk: "B舖某日賣出 520 杯冷萃（該舖基準為 N(450, 35^2)）。C舖同日賣出 710 杯冷萃（該舖基準為 N(600, 50^2)）。邊間分店攞到更為罕見、相對衝擊力更大嘅爆單突破？"
   options_en:
-  - "A: Airport, because Z_Airport = (710 - 600) / 50 = +2.20, which is higher than Mong Kok's Z_MK = (520 - 450) / 35 = +2.00."
-  - "B: Mong Kok, because 520 is closer to its mean."
+  - "A: Shop C, because Z_C = (710 - 600) / 50 = +2.20, which is higher than Shop B's Z_B = (520 - 450) / 35 = +2.00."
+  - "B: Shop B, because 520 is closer to its mean."
   - "C: Both branches performed identically because both Z-scores are positive."
   - "D: Neither branch experienced a surge because cold brew is a seasonal item."
   options_zh:
-  - "A: 机场店，因为机场店的 Z 分数为 (710 - 600) / 50 = +2.20，高于旺角店的 Z 分数 (520 - 450) / 35 = +2.00。"
-  - "B: 旺角店，因为 520 比 710 更接近其日常均值。"
+  - "A: C店，因为C店的 Z 分数为 (710 - 600) / 50 = +2.20，高于B店的 Z 分数 (520 - 450) / 35 = +2.00。"
+  - "B: B店，因为 520 比 710 更接近其日常均值。"
   - "C: 两家门店表现完全相同，因为两者的 Z 分数全部都是正数。"
   - "D: 两家店均未出现爆单，因为冷萃咖啡属于强季节性商品。"
   options_zh_hk:
-  - "A: 機場舖，因為機場舖嘅 Z 分數為 (710 - 600) / 50 = +2.20，高過旺角舖嘅 Z 分數 (520 - 450) / 35 = +2.00。"
-  - "B: 旺角舖，因為 520 仲接近其日常均值。"
+  - "A: C舖，因為C舖嘅 Z 分數為 (710 - 600) / 50 = +2.20，高過B舖嘅 Z 分數 (520 - 450) / 35 = +2.00。"
+  - "B: B舖，因為 520 仲接近其日常均值。"
   - "C: 兩間門市表現完全相同，因為兩者嘅 Z 分數全部都係正數。"
   - "D: 兩間舖都冇出現爆單，因為冷萃咖啡屬於強季節性商品。"
   answer: A
-  explanation_en: "Z_Airport = 110 / 50 = +2.20 standard deviations above mean; Z_MK = 70 / 35 = +2.00 standard deviations above mean. Airport was 2.20 sigmas out, representing a rarer statistical surge."
-  explanation_zh: "机场店 Z = 110 / 50 = +2.20 个标准差；旺角店 Z = 70 / 35 = +2.00 个标准差。机场店偏离均值更远，代表了统计概率上更为罕见、相对幅度更大的销售爆发。"
-  explanation_zh_hk: "機場舖 Z = 110 / 50 = +2.20 個標準差；旺角舖 Z = 70 / 35 = +2.00 個標準差。機場舖偏離均值更遠，代表咗統計概率上更為罕見、相對幅度更大嘅銷售爆發。"
+  explanation_en: "Z_C = 110 / 50 = +2.20 standard deviations above mean; Z_B = 70 / 35 = +2.00 standard deviations above mean. Shop C was 2.20 sigmas out, representing a rarer statistical surge."
+  explanation_zh: "C店 Z = 110 / 50 = +2.20 个标准差；B店 Z = 70 / 35 = +2.00 个标准差。C店偏离均值更远，代表了统计概率上更为罕见、相对幅度更大的销售爆发。"
+  explanation_zh_hk: "C舖 Z = 110 / 50 = +2.20 個標準差；B舖 Z = 70 / 35 = +2.00 個標準差。C舖偏離均值更遠，代表咗統計概率上更為罕見、相對幅度更大嘅銷售爆發。"
 beats:
 - id: hook
   visual: title_card
@@ -91,9 +117,9 @@ beats:
   title_en: "Who had the more impressive sales surge?"
   title_zh: "七百一十对五百二十：究竟谁的表现更卓越？"
   title_zh_hk: "七百一十對五百二十：究竟邊個嘅表現更卓越？"
-  en: "An operations team compares two daily cold-brew demand signals: 710 cups at Airport and 520 at Mong Kok. Raw totals differ because the locations have different baselines and variability. How can standardization express each observation relative to its own distribution before the team compares their statistical extremeness?"
-  zh: "运营团队比较两个单日冷萃需求信号：机场店 710 杯，旺角店 520 杯。由于两地基准与波动程度不同，原始总量不能直接反映相对偏离程度。标准化如何先把每个观测值放回各自分布，再比较其统计极端程度？"
-  zh_hk: "營運團隊比較兩個單日冷萃需求訊號：機場舖 710 杯，旺角舖 520 杯。由於兩地基準同波動程度唔同，原始總量唔可以直接反映相對偏離程度。標準化點樣先將每個觀測值放返各自分佈，再比較佢哋嘅統計極端程度？"
+  en: "Ops compares two cold-brew days: 710 cups at Shop C and 520 at Shop B. Raw totals differ because baselines and spreads differ. How does standardization put each reading back on its own scale before you compare statistical extremity?"
+  zh: "运营比较两个冷萃日：C店 710 杯，B 店 520 杯。基准和波动不同，原始总量不能直接比谁更“离谱”。标准化怎么先把每个观测放回自己的分布，再比统计极端程度？"
+  zh_hk: "營運比較兩個冷萃日：C舖 710 杯，B 舖 520 杯。基準同波動唔同，原始總量唔可以直接比邊個更「離譜」。標準化點樣先將每個觀測放返自己嘅分佈，再比統計極端程度？"
 - id: define
   visual: definition_card
   seconds: 34
@@ -109,8 +135,8 @@ beats:
   formula_zh_hk: "Z = (X - mu) / sigma；標準化後嘅新變量 Z 服從標準正態 N(0, 1)"
   formula_tex: "Z = \\frac{X - \\mu}{\\sigma}, \\quad Z \\sim N(0, 1)"
   s1_en: "For any variable with finite mean mu and positive standard deviation sigma, standardization produces the dimensionless Z-score. If X is Normal, the transformed variable follows the Standard Normal distribution N(0,1)."
-  s1_zh: "对于具有有限均值 mu 与正标准差 sigma 的变量，标准化会产生无量纲的 Z 分数。如果 X 服从正态分布，转换后的变量便服从标准正态分布 N(0,1)。"
-  s1_zh_hk: "對具有有限均值 mu 同正標準差 sigma 嘅變量，標準化會產生無量綱嘅 Z 分數。如果 X 服從正態分佈，轉換後嘅變量就服從標準正態分佈 N(0,1)。"
+  s1_zh: "Z 分数把观测值换成“离均值多少个标准差”：Z=(x−μ)/σ。"
+  s1_zh_hk: "Z 分數將觀測值換成「離均值幾多個標準差」：Z=(x−μ)/σ。"
   s2_en: "Subtracting the store mean shifts the center to exactly zero. Dividing by the store standard deviation rescales spread to exactly one, producing the Standard Normal distribution, Z."
   s2_zh: "分子减去门店基准均值，将坐标中心精准平移归零；分母除以该店的标准差，将离散宽度统一压缩缩放为 1。由此诞生了统领全局的标准正态分布 Z。"
   s2_zh_hk: "分子減去門市基準均值，將坐標中心精準平移歸零；分母除以嗰間舖嘅標準差，將離散闊度統一壓縮縮放為 1。由此誕生咗統領全局嘅標準正態分佈 Z。"
@@ -146,30 +172,30 @@ beats:
   kicker_en: "The Ledger"
   kicker_zh: "账目实算"
   kicker_zh_hk: "賬目實算"
-  title_en: "Comparing Mong Kok and Airport demand signals"
-  title_zh: "旺角店与机场店冷萃需求信号比较"
-  title_zh_hk: "旺角舖與機場舖冷萃需求訊號比較"
-  step1_en: "Mong Kok: X = 520, mu = 450, sigma = 35 -> Z = (520 - 450) / 35 = +2.00"
-  step1_zh: "旺角店核算：销量 520，均值 450，标准差 35 -> Z = (520 - 450) / 35 = +2.00"
-  step1_zh_hk: "旺角舖核算：銷量 520，均值 450，標準差 35 -> Z = (520 - 450) / 35 = +2.00"
-  step2_en: "Airport: X = 710, mu = 600, sigma = 50 -> Z = (710 - 600) / 50 = +2.20"
-  step2_zh: "机场店核算：销量 710，均值 600，标准差 50 -> Z = (710 - 600) / 50 = +2.20"
-  step2_zh_hk: "機場舖核算：銷量 710，均值 600，標準差 50 -> Z = (710 - 600) / 50 = +2.20"
-  step3_en: "Verdict: Z_Airport (+2.20) > Z_MK (+2.00) -> Airport surge was rarer!"
-  step3_zh: "裁决评定：机场店 Z 分数 (+2.20) 高于旺角店 (+2.00) -> 机场店突破更为罕见！"
-  step3_zh_hk: "裁決評定：機場舖 Z 分數 (+2.20) 高過旺角舖 (+2.00) -> 機場舖突破更為罕見！"
-  s1_en: "Audit the cold brew ledger. Mong Kok sells 520 cups against a baseline mean of 450 and standard deviation of 35. Five hundred and twenty minus four hundred and fifty is seventy cups over baseline. Dividing by thirty-five gives a Z-score of exactly plus two point zero zero."
-  s1_zh: "核查冷萃咖啡出餐流水。旺角店售出 520 杯，其常态基准均值为 450 杯、标准差为 35 杯。净超出均值七十杯，除以三十五得出旺角店的 Z 分数恰好为正 2.00。"
-  s1_zh_hk: "核查冷萃咖啡出餐流水。旺角舖賣出 520 杯，其常態基準均值為 450 杯、標準差為 35 杯。淨超出均值七十杯，除以三十五得出旺角舖嘅 Z 分數啱啱好為正 2.00。"
-  s2_en: "Airport sells 710 cups against its baseline mean of 600 and standard deviation of 50. Seven-ten minus six hundred is one hundred and ten cups above baseline. Dividing by fifty gives a Z-score of plus two point two zero."
-  s2_zh: "再看机场店：单日卖出 710 杯，常态基准均值为 600 杯、标准差为 50 杯。净超出基准一百一十杯，除以五十计算出机场店的 Z 分数高达正 2.20。"
-  s2_zh_hk: "再睇機場舖：單日賣出 710 杯，常態基準均值為 600 杯、標準差為 50 杯。淨超出基準一百一十杯，除以五十計算出機場舖嘅 Z 分數高達正 2.20。"
-  s3_en: "Raw totals differ by 190 cups. Relative to the stated baselines, Airport has Z=2.20 and Mong Kok has Z=2.00, so the Airport observation is farther above its own mean. This comparison describes demand extremeness, not employee contribution or entitlement to a reward."
-  s3_zh: "原始总量相差 190 杯。相对于给定基准，机场店 Z=2.20，旺角店 Z=2.00，因此机场店的观测值偏离自身均值更远。该比较描述需求信号的极端程度，并不衡量员工贡献或奖励资格。"
-  s3_zh_hk: "原始總量相差 190 杯。相對於指定基準，機場舖 Z=2.20，旺角舖 Z=2.00，所以機場舖嘅觀測值偏離自身均值更遠。呢個比較描述需求訊號嘅極端程度，唔係衡量員工貢獻或者獎勵資格。"
+  title_en: "Comparing Shop B and Shop C demand signals"
+  title_zh: "B店与C店冷萃需求信号比较"
+  title_zh_hk: "B舖與C舖冷萃需求訊號比較"
+  step1_en: "Shop B: X = 520, mu = 450, sigma = 35 -> Z = (520 - 450) / 35 = +2.00"
+  step1_zh: "B店核算：销量 520，均值 450，标准差 35 -> Z = (520 - 450) / 35 = +2.00"
+  step1_zh_hk: "B舖核算：銷量 520，均值 450，標準差 35 -> Z = (520 - 450) / 35 = +2.00"
+  step2_en: "Shop C: X = 710, mu = 600, sigma = 50 -> Z = (710 - 600) / 50 = +2.20"
+  step2_zh: "C店核算：销量 710，均值 600，标准差 50 -> Z = (710 - 600) / 50 = +2.20"
+  step2_zh_hk: "C舖核算：銷量 710，均值 600，標準差 50 -> Z = (710 - 600) / 50 = +2.20"
+  step3_en: "Verdict: Z_C (+2.20) > Z_B (+2.00) -> Shop C surge was rarer!"
+  step3_zh: "裁决评定：C店 Z 分数 (+2.20) 高于B店 (+2.00) -> C店突破更为罕见！"
+  step3_zh_hk: "裁決評定：C舖 Z 分數 (+2.20) 高過B舖 (+2.00) -> C舖突破更為罕見！"
+  s1_en: "Audit the cold brew ledger. Shop B sells 520 cups against a baseline mean of 450 and standard deviation of 35. Five hundred and twenty minus four hundred and fifty is seventy cups over baseline. Dividing by thirty-five gives a Z-score of exactly plus two point zero zero."
+  s1_zh: "核查冷萃咖啡出餐流水。B店售出 520 杯，其常态基准均值为 450 杯、标准差为 35 杯。净超出均值七十杯，除以三十五得出B店的 Z 分数恰好为正 2.00。"
+  s1_zh_hk: "核查冷萃咖啡出餐流水。B舖賣出 520 杯，其常態基準均值為 450 杯、標準差為 35 杯。淨超出均值七十杯，除以三十五得出B舖嘅 Z 分數啱啱好為正 2.00。"
+  s2_en: "Shop C sells 710 cups against its baseline mean of 600 and standard deviation of 50. Seven-ten minus six hundred is one hundred and ten cups above baseline. Dividing by fifty gives a Z-score of plus two point two zero."
+  s2_zh: "再看C店：单日卖出 710 杯，常态基准均值为 600 杯、标准差为 50 杯。净超出基准一百一十杯，除以五十计算出C店的 Z 分数高达正 2.20。"
+  s2_zh_hk: "再睇C舖：單日賣出 710 杯，常態基準均值為 600 杯、標準差為 50 杯。淨超出基準一百一十杯，除以五十計算出C舖嘅 Z 分數高達正 2.20。"
+  s3_en: "Raw totals differ by 190 cups. Relative to the stated baselines, Shop C has Z=2.20 and Shop B has Z=2.00, so the Shop C observation is farther above its own mean. This comparison describes demand extremeness, not employee contribution or entitlement to a reward."
+  s3_zh: "原始总量相差 190 杯。相对于给定基准，C店 Z=2.20，B店 Z=2.00，因此C店的观测值偏离自身均值更远。该比较描述需求信号的极端程度，并不衡量员工贡献或奖励资格。"
+  s3_zh_hk: "原始總量相差 190 杯。相對於指定基準，C舖 Z=2.20，B舖 Z=2.00，所以C舖嘅觀測值偏離自身均值更遠。呢個比較描述需求訊號嘅極端程度，唔係衡量員工貢獻或者獎勵資格。"
 - id: takeaway
   visual: takeaway
-  seconds: 32
+  seconds: 30
   kicker: "Decision Rule"
   kicker_en: "Decision Rule"
   kicker_zh: "商业法则"
@@ -177,18 +203,18 @@ beats:
   title_en: "Compare relative positions with validated baselines"
   title_zh: "使用经过验证的基准比较相对位置"
   title_zh_hk: "使用經過驗證嘅基準比較相對位置"
-  q1_en: "What does a Z-score contribute when comparing demand observations across locations?"
-  q1_zh: "比较不同地点的需求观测值时，Z 分数提供了什么信息？"
-  q1_zh_hk: "比較唔同地點嘅需求觀測值嗰陣，Z 分數提供咗咩資料？"
-  q2_en: "What common threshold defines an operational anomaly or outlier?"
-  q2_zh: "在日常业务监控中，通常以多大的 Z 分数阈值来界定突发异常值？"
-  q2_zh_hk: "喺日常業務監控入面，通常以幾大嘅 Z 分數閾值嚟界定突發異常值？"
-  s1_en: "Use Z-scores to compare observations relative to their stated baselines, not to evaluate individual managers. Confirm that the metrics, reference periods, and data-generating processes are comparable before interpreting the difference."
-  s1_zh: "可用 Z 分数比较观测值相对于各自基准的位置，但不要用它评价个别经理。解释差异前，应确认指标、参考期间和数据生成过程具有可比性。"
-  s1_zh_hk: "可以用 Z 分數比較觀測值相對於各自基準嘅位置，但唔好用佢評價個別經理。解釋差異之前，應該確認指標、參考期間同數據生成過程具有可比性。"
-  s2_en: "Thresholds such as |Z|>2 or |Z|>3 are screening conventions, not universal anomaly rules. Select thresholds using the Normal-model fit, monitoring frequency, false-alarm cost, and operational consequences."
-  s2_zh: "|Z|>2 或 |Z|>3 只是筛选惯例，并非普遍异常规则。阈值应结合正态模型拟合、监测频率、误报成本与运营后果来选择。"
-  s2_zh_hk: "|Z|>2 或者 |Z|>3 只係篩選慣例，唔係普遍異常規則。門檻應該結合正態模型擬合、監測頻率、誤報成本同營運後果嚟選擇。"
-  s3_en: "For the stated demand baselines, Mong Kok has Z=2.00 and Airport has Z=2.20. The Airport observation is farther above its own mean, but the conclusion depends on valid, comparable baselines and does not establish causation or individual performance."
-  s3_zh: "在给定需求基准下，旺角店 Z=2.00，机场店 Z=2.20。机场店的观测值高于自身均值的程度更大，但结论依赖有效且可比的基准，也不能证明因果关系或个人绩效。"
-  s3_zh_hk: "喺指定需求基準之下，旺角舖 Z=2.00，機場舖 Z=2.20。機場舖嘅觀測值高過自身均值嘅程度更大，但結論依賴有效兼可比嘅基準，亦唔可以證明因果關係或者個人績效。"
+  q1_en: "Z-score across sites? → Compare vs each baseline — not people"
+  q1_zh: "跨店 Z 分数？→ 相对各自基准比——不拿来评人"
+  q1_zh_hk: "跨舖 Z 分數？→ 相對各自基準比——唔好攞嚟評人"
+  q2_en: "|Z|>2 or 3? → Screening conventions, not universal laws"
+  q2_zh: "|Z|>2 或 3？→ 筛查惯例，不是万能法则"
+  q2_zh_hk: "|Z|>2 或者 3？→ 篩查慣例，唔係萬能法則"
+  s1_en: "Align metrics, windows, and data-generating process before you interpret a gap."
+  s1_zh: "解释差距前，先对齐指标、时间窗和数据生成过程。"
+  s1_zh_hk: "解釋差距之前，先對齊指標、時間窗同數據生成過程。"
+  s2_en: "Choose thresholds from model fit, monitoring rate, and false-alarm cost — not from habit alone."
+  s2_zh: "阈值要看拟合、监测频率和误报成本——别只凭习惯。"
+  s2_zh_hk: "門檻要睇擬合、監測頻率同誤報成本——唔好淨憑習慣。"
+  s3_en: "Shop B Z=2.00, Shop C Z=2.20 — Shop C sits farther above its own mean, given comparable setups."
+  s3_zh: "B 店 Z=2.00，C店 Z=2.20——在设定可比时，C店相对自身均值更靠上。"
+  s3_zh_hk: "B 舖 Z=2.00，C舖 Z=2.20——喺設定可比嗰陣，C舖相對自身均值更靠上。"

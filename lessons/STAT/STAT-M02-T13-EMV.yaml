@@ -1,19 +1,39 @@
 id: STAT-M02-T13-EMV
-course: statistics
 course_en: Business Probability Foundations
 course_zh: 商务概率基础
 course_zh_hk: 商務概率基礎
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
+duration_target_s: 166
 title_en: "Pricing the gamble"
 title_zh: "给风险定价：预期货币价值与理性博弈"
 title_zh_hk: "幫風險定價：預期貨幣價值與理性博弈"
-objective_en: "Define Expected Monetary Value (EMV) as the probability-weighted sum of financial payoffs, construct decision payoff tables, and evaluate commercial warranty decisions under uncertainty."
-objective_zh: "把预期货币价值（EMV）定义为以概率加权的财务收益之和，构建决策收益矩阵表，并在不确定性下理性评估商业设备保修决策。"
-objective_zh_hk: "將預期貨幣價值（EMV）定義為以概率加權嘅財務收益之和，構建決策收益矩陣表，並喺不確定性之下理性評估商業設備保養決策。"
+youtube:
+  description_en: |
+    Pricing the gamble
+
+    Expected monetary value (EMV) weights each payoff by its probability and sums. Use it to compare average financial outcomes — then check whether cash can absorb the bad path.
+
+    In a simplified machine ledger, self-insuring costs an expected 500 dollars versus a certain 600-dollar warranty. The 100-dollar EMV edge must still clear cash-flow risk and what the contract actually covers.
+
+    Business Probability Foundations - Module 2 - Short 13 (EMV)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    给这场赌注定价
+
+    预期货币价值（EMV）用概率给每个损益加权再求和。用它比较平均财务结果——然后检查现金能否扛住坏路径。
+
+    简化机台账本里，自担的期望成本是 500 美元，保修费是确定的 600 美元。100 美元的 EMV 优势，仍要过现金流风险与合同真实覆盖这一关。
+
+    商务概率基础 - 模块2 - 短片13（期望货币价值）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    為呢場賭注定價
+
+    預期貨幣價值（EMV）用概率為每個損益加權再求和。用佢比較平均財務結果——然後檢查現金可唔可以扛住壞路徑。
+
+    簡化機台賬本入面，自擔嘅期望成本係 500 美元，保修費係確定嘅 600 美元。100 美元嘅 EMV 優勢，仍然要過現金流風險同合約真實覆蓋呢一關。
+
+    商務概率基礎 - 模組2 - 短片13（預期貨幣價值）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: "Expected Monetary Value (EMV)"
   zh: "预期货币价值"
@@ -92,8 +112,8 @@ beats:
   title_zh: "我们究竟该不该买设备延保？"
   title_zh_hk: "我哋究竟應唔應該買設備延保？"
   en: "Every regional manager faces this sales pitch: the equipment vendor offers an extended warranty on thirty store espresso machines for six hundred dollars each per year. If a boiler blows up without coverage, the replacement costs ten thousand dollars. Fear whispers that you should pay eighteen thousand dollars right now for total peace of mind. How do executives replace emotional panic with cold, calculated expected value?"
-  zh: "每一位区域运营总监都听过设备商的推销：为全网三十家门店的咖啡机购买延保，每台每年固定收费六百元。如果一台机器的锅炉在没有保修的情况下彻底爆裂，维修更换需要一万元巨款。恐惧往往驱使管理者立即掏出一万八千元全额购买安心。高管究竟该如何剥离情绪恐慌，用严谨理性的期望值给风险精准定价？"
-  zh_hk: "每一位區域營運總監都聽過設備商嘅推銷：為全網三十間門市嘅咖啡機買延保，每部每年固定收費六百蚊。如果一部機器嘅鍋爐喺冇保養嘅情況下徹底爆裂，維修更換需要一萬蚊巨款。恐懼往往驅使管理者即刻攞出一萬八千蚊全額買個安心。高管究竟應該點樣剝離情緒恐慌，用嚴謹理性嘅期望值幫風險精準定價？"
+  zh: "每位区域经理都听过设备商这句推销：给全网三十家店的咖啡机买延保，每台每年六百元。要是锅炉在没有保修时彻底爆了，更换要一万元。恐惧常让人立刻掏出一万八千元买个安心。高管该怎么把情绪恐慌剥开，用期望值给风险定个价？"
+  zh_hk: "每位區域經理都聽過設備商呢句推銷：畀全網三十間舖嘅咖啡機買延保，每部每年六百蚊。如果鍋爐喺冇保養嗰陣徹底爆咗，更換要一萬蚊。恐懼成日令人即刻攞出一萬八千蚊買個安心。高管應該點樣將情緒恐慌剝開，用期望值幫風險定個價？"
 - id: define
   visual: definition_card
   seconds: 34
@@ -109,11 +129,11 @@ beats:
   formula_zh_hk: "EMV = 各狀態真實損益加權之和 = ∑ [ 財務結果 × 發生概率 ]"
   formula_tex: "E[X] = \\sum_{i=1}^{n} x_i \\cdot P(X = x_i)"
   s1_en: "Expected Monetary Value translates probabilistic odds into real financial balances by weighting each possible dollar payoff by its probability of occurrence."
-  s1_zh: "预期货币价值通过将每一种潜在的现金收支金额，与其发生的客观概率进行加权相乘，把抽象的概率胜率转化为白纸黑字的财务期权价值。"
-  s1_zh_hk: "預期貨幣價值透過將每一種潛在嘅現金收支金額，同佢發生嘅客觀概率進行加權相乘，將抽象嘅概率勝率轉化為白紙黑字嘅財務期權價值。"
+  s1_zh: "预期货币价值，是把每种可能的现金收支，乘上它发生的概率再加总，把抽象胜率换成可以比较的金额。"
+  s1_zh_hk: "預期貨幣價值，係將每種可能嘅現金收支，乘上佢發生嘅概率再加總，將抽象勝率換成可以比較嘅金額。"
   s2_en: "EMV does not predict what will happen on a single lucky or unlucky Tuesday; it describes the long-run average outcome under repeated comparable decisions; any finite portfolio can still differ from that average."
-  s2_zh: "预期货币价值并不预测某一个具体周二会交好运还是倒大霉；它描述的是在大量可比决策反复发生时的长期平均损益；有限规模的实际结果仍可能偏离这个平均值。"
-  s2_zh_hk: "預期貨幣價值並唔預測某一個具體禮拜二會行好運定係行衰運；佢描述嘅係大量可比決策反覆發生嗰陣嘅長期平均損益；有限規模嘅實際結果仍然可能偏離呢個平均值。"
+  s2_zh: "EMV 不预测某一个周二会走运还是倒霉；它说的是大量可比决策反复发生时的长期平均。有限规模的实际结果，仍可能偏离这个平均。"
+  s2_zh_hk: "EMV 唔預測某一個禮拜二會行好運定行衰運；佢講嘅係大量可比決策反覆發生嗰陣嘅長期平均。有限規模嘅實際結果，仍然可能偏離呢個平均。"
 - id: table
   visual: two_column
   seconds: 36
@@ -131,14 +151,14 @@ beats:
   right_zh: "策略二：选择风险自担（按故障概率加权均摊）"
   right_zh_hk: "策略二：選擇風險自擔（按故障概率加權均攤）"
   s1_en: "To compare competing strategies, executives construct a decision payoff table listing mutually exclusive choices against all potential future states of nature."
-  s1_zh: "为了客观权衡不同对策，高管团队会构建决策收益矩阵表，将互斥的商业选项与未来可能发生的各种自然状态并列对照。"
-  s1_zh_hk: "為咗客觀權衡唔同對策，高管團隊會構建決策收益矩陣表，將互斥嘅商業選項同未來可能發生嘅各種自然狀態並列對照。"
+  s1_zh: "要比较不同对策，就做一张决策收益表：互斥选项对着可能出现的各种自然状态。"
+  s1_zh_hk: "要比較唔同對策，就做一張決策收益表：互斥選項對住可能出現嘅各種自然狀態。"
   s2_en: "Option One makes the warranty premium certain in this simplified comparison: you hand over a guaranteed six hundred dollars per machine regardless of whether anything breaks."
-  s2_zh: "在这个简化比较中，选项一使延保保费成为确定支出：无论机器是否损坏，你都必须为每台机器确定无疑地拱手交出六百元保费。"
-  s2_zh_hk: "喺呢個簡化比較入面，選項一令延保保費成為確定支出：無論機器係咪損壞，你都必須為每部機器確定無疑噉拱手交出六百蚊保費。"
+  s2_zh: "在这个简化比较里，选项一让延保保费变成确定支出：机器坏不坏，你都得为每台交出六百元。"
+  s2_zh_hk: "喺呢個簡化比較入面，選項一令延保保費變成確定支出：部機壞唔壞，你都要為每部交出六百蚊。"
   s3_en: "Option Two embraces variance: ninety-five percent of the time you pay zero, and five percent of the time you pay a massive ten thousand dollars."
-  s3_zh: "选项二则坦然接纳了波动：有 95% 的时间你一分钱不用掏，只有在 5% 的极端情况下才会面临一万元的维修支出。"
-  s3_zh_hk: "選項二就坦然接納咗波動：有 95% 嘅時間你一毫子唔使畀，淨係喺 5% 嘅極端情況下先會面臨一萬蚊嘅維修支出。"
+  s3_zh: "选项二接受波动：有 95% 的时间你一分不用付，只有 5% 的情况会面对一万元维修。"
+  s3_zh_hk: "選項二接受波動：有 95% 嘅時間你一毫子都唔使畀，淨係 5% 嘅情況會面對一萬蚊維修。"
 - id: ledger
   visual: steps
   seconds: 36
@@ -149,27 +169,27 @@ beats:
   title_en: "Evaluating thirty espresso machines"
   title_zh: "全网三十台咖啡机的财务精算"
   title_zh_hk: "全網三十部咖啡機嘅財務精算"
-  step1_en: "Self-insure EMV: (0.05 * -$10,000) + (0.95 * $0) = -$500"
-  step1_zh: "自担单台 EMV：(0.05 × -10,000) + (0.95 × 0) = -500 元"
-  step1_zh_hk: "自擔單部 EMV：(0.05 × -10,000) + (0.95 × 0) = -500 蚊"
-  step2_en: "Warranty EMV: 100% * -$600 = -$600 certain cost"
-  step2_zh: "延保单台 EMV：100% × -600 = -600 元确定成本"
-  step2_zh_hk: "延保單部 EMV：100% × -600 = -600 蚊確定成本"
-  step3_en: "Network net edge: 30 machines * $100 saved = $3,000 gain"
-  step3_zh: "期望成本差额：30 台 × 100 元 = 低 3,000 元"
-  step3_zh_hk: "期望成本差額：30 部 × 100 蚊 = 低 3,000 蚊"
+  step1_en: "Self-insure EMV = −$500"
+  step1_zh: "自保 EMV = -$500"
+  step1_zh_hk: "自保 EMV = -$500"
+  step2_en: "Warranty = −$600 certain"
+  step2_zh: "保修 = -$600 确定"
+  step2_zh_hk: "保修 = -$600 確定"
+  step3_en: "30 × $100 edge = $3,000"
+  step3_zh: "30x$100 优势 = $3,000"
+  step3_zh_hk: "30x$100 優勢 = $3,000"
   s1_en: "Run the math across our network ledger. Step one: calculate the expected cost of self-insuring. Five percent chance of ten thousand dollars plus ninety-five percent chance of zero equals five hundred dollars per machine."
-  s1_zh: "基于全网台账运行精算模型。第一步：测算自担风险的单机期望成本。5% 概率支出一万元，加上 95% 概率零支出，单台期望成本为五百元。"
-  s1_zh_hk: "基於全網台賬運行精算模型。第一步：測算自擔風險嘅單部期望成本。5% 概率支出一萬蚊，加上 95% 概率零支出，單部期望成本為五百蚊。"
+  s1_zh: "按全网账来算。第一步：自担风险的单台期望成本。5% 概率付一万元，加 95% 概率付零，单台期望是五百元。"
+  s1_zh_hk: "按全網賬嚟計。第一步：自擔風險嘅單部期望成本。5% 概率畀一萬蚊，加 95% 概率畀零，單部期望係五百蚊。"
   s2_en: "Step two: evaluate the warranty contract. It charges a fixed six hundred dollars with absolute certainty, which is one hundred dollars more than the five-hundred-dollar expected repair cost per machine."
-  s2_zh: "第二步：评估延保合同。该合同确定收费六百元，相较于客观期望值，比每台 500 元的期望维修成本高 100 元。"
-  s2_zh_hk: "第二步：評估延保合約。嗰份合約確定收費六百蚊，相較於客觀期望值，比每部 500 蚊嘅期望維修成本高 100 蚊。"
+  s2_zh: "第二步：看延保合同。它确定收六百元，比每台五百元的期望维修成本高一百元。"
+  s2_zh_hk: "第二步：睇延保合約。佢確定收六百蚊，比每部五百蚊嘅期望維修成本高一百蚊。"
   s3_en: "Step three: scale up to all thirty metro cafes. Across thirty machines, self-insuring has an expected cost three thousand dollars lower than buying the warranty, before considering risk tolerance and contract details."
-  s3_zh: "第三步：放大到全网三十家门店。按三十台机器计算，自担风险的期望成本比购买延保低 3,000 元；实际决策仍需考虑风险承受能力和合同细节。"
-  s3_zh_hk: "第三步：放大到全網三十間門市。按三十部機器計，自擔風險嘅期望成本比購買延保低 3,000 蚊；實際決策仍然要考慮風險承受能力同合約細節。"
+  s3_zh: "第三步：放大到三十家店。三十台机器算下来，自担的期望成本比买延保低三千元；实际决策还要看风险承受力和合同细节。"
+  s3_zh_hk: "第三步：放大到三十間舖。三十部機器計落，自擔嘅期望成本比買延保低三千蚊；實際決策仲要睇風險承受力同合約細節。"
 - id: takeaway
   visual: takeaway
-  seconds: 32
+  seconds: 30
   kicker: "Decision Rule"
   kicker_en: "Decision Rule"
   kicker_zh: "商业法则"
@@ -177,18 +197,18 @@ beats:
   title_en: "Let mathematics conquer fear"
   title_zh: "用概率期望战胜恐慌，理性自担分散风险"
   title_zh_hk: "用概率期望戰勝恐慌，理性自擔分散風險"
-  q1_en: "When should an enterprise self-insure?"
-  q1_zh: "企业在何时应当果断选择风险自担？"
-  q1_zh_hk: "企業喺幾時應當果斷選擇風險自擔？"
-  q2_en: "What is the core executive promise of EMV?"
-  q2_zh: "预期货币价值给予管理层的核心底气是什么？"
-  q2_zh_hk: "預期貨幣價值畀管理層嘅核心底氣係咩？"
-  s1_en: "Use EMV to compare average financial outcomes, but also test whether the organization can absorb adverse outcomes and whether risks are sufficiently diversified."
-  s1_zh: "可用 EMV 比较平均财务结果，但还应检验组织能否承受不利结果，以及风险是否得到充分分散。"
-  s1_zh_hk: "可以用 EMV 比較平均財務結果，但亦要檢驗組織能否承受不利結果，同埋風險係咪得到充分分散。"
-  s2_en: "A warranty premium may exceed expected repair cost because it also transfers risk and may include service benefits; compare those features with the organization’s capacity to self-insure."
-  s2_zh: "延保保费可能高于期望维修成本，因为它还转移风险并可能包含服务权益；应把这些权益与组织自担风险的能力一并比较。"
-  s2_zh_hk: "延保保費可能高過期望維修成本，因為佢亦會轉移風險，仲可能包括服務權益；應該將呢啲權益同組織自擔風險嘅能力一齊比較。"
-  s3_en: "In this simplified comparison, self-insuring costs an expected 500 dollars per machine versus a certain 600-dollar warranty premium; the 100-dollar EMV advantage must be weighed against cash-flow risk and contract benefits."
-  s3_zh: "在这个简化比较中，自担风险的单台期望成本为 500 元，而延保保费确定为 600 元；这 100 元的 EMV 优势仍需与现金流风险及合同权益一并权衡。"
-  s3_zh_hk: "喺呢個簡化比較入面，自擔風險嘅單部期望成本係 500 蚊，而延保保費確定係 600 蚊；呢 100 蚊嘅 EMV 優勢仍然要同現金流風險及合約權益一齊權衡。"
+  q1_en: "When self-insure? → When EMV wins and cash can absorb hits"
+  q1_zh: "何时自担？→ EMV 更优且现金扛得住冲击"
+  q1_zh_hk: "幾時自擔？→ EMV 更優而且現金扛得住衝擊"
+  q2_en: "EMV promise? → Compare averages, then test survival"
+  q2_zh: "EMV 的承诺？→ 先比平均，再测能否存活"
+  q2_zh_hk: "EMV 嘅承諾？→ 先比平均，再測可唔可以存活"
+  s1_en: "Use EMV to compare average outcomes, then test whether cash can absorb the bad path."
+  s1_zh: "用 EMV 比较平均结果，再检查现金能否扛住坏路径。"
+  s1_zh_hk: "用 EMV 比較平均結果，再檢查現金可唔可以扛住壞路徑。"
+  s2_en: "A warranty may cost more than expected repairs because it also transfers risk."
+  s2_zh: "保修费可以高于期望维修费，因为它同时转移了风险。"
+  s2_zh_hk: "保修費可以高過期望維修費，因為佢同時轉移咗風險。"
+  s3_en: "Self-insure EMV 500 versus premium 600 — weigh the 100-dollar edge against cash-flow risk."
+  s3_zh: "自担期望 500 对保费 600——一百元优势要对照现金流风险。"
+  s3_zh_hk: "自擔期望 500 對保費 600——一百蚊優勢要對照現金流風險。"

@@ -1,19 +1,45 @@
 id: STAT-M03-T11-EXPON
-course: statistics
 course_en: "Discrete & Continuous Probability Distributions"
 course_zh: "离散与连续概率分布"
 course_zh_hk: "離散與連續概率分佈"
-audience: "first-year business students"
-audience_en: "first-year business students"
-audience_zh: "商学院一年级学生"
-audience_zh_hk: "商學院一年級學生"
-duration_target_s: 168
+duration_target_s: 166
 title_en: "Service times and machine lifespans"
 title_zh: "服务耗时与设备寿命：指数分布与无记忆性"
 title_zh_hk: "服務耗時與設備壽命：指數分佈與無記憶性"
-objective_en: "Define the Exponential distribution Exp(lambda) as the continuous waiting time between Poisson events, explain its mean 1/lambda and memoryless property, and evaluate commercial espresso grinder burr lifespans to schedule preventative maintenance."
-objective_zh: "将指数分布 Exp(lambda) 定义为泊松事件之间的连续等待时间模型，阐释其期望均值 1/lambda 与反直觉的“无记忆性”，并将其应用于商用磨豆机刀盘寿命测算以制定预防性维保排期。"
-objective_zh_hk: "將指數分佈 Exp(lambda) 定義為泊松事件之間嘅連續等待時間模型，闡釋其期望均值 1/lambda 同反直覺嘅「無記憶性」，並將其應用喺商用磨豆機刀盤壽命測算以制定預防性維保排期。"
+youtube:
+  description_en: |
+    Service times and machine lifespans
+    
+    Shop C models grinder-burr lifetime with an average of 500 operating hours. A set fails after only 100 hours. Under an Exponential model, how likely is failure before 100 hours, and what does memorylessness say about a set that has already survived that long?
+    
+    With mean 500 hours, λ=0.002 per hour and F(100)≈18.1%. Memorylessness says that after surviving 100 hours, expected remaining life is still 500 hours under this model — which fails when hazard changes with age.
+    
+    Stock spares for the crash, not the average life. Early-fail probability informs spares; downtime cost and lead time still decide the policy.
+    
+    Discrete & Continuous Probability Distributions - Module 3 - Short 11 (EXPON)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    服务耗时与设备寿命：指数分布与无记忆性
+    
+    C店用平均 500 运转小时给磨豆刀盘建模。一套只跑了 100 小时就坏。指数模型下，100 小时前失效的概率多大？已经跑了 100 小时还没坏，无记忆性又意味着什么？
+    
+    均值 500 小时时 λ=0.002/小时，F(100)≈18.1%。无记忆性说：撑过 100 小时后，期望剩余寿命仍是 500 小时——危险率随年龄变化时，这个模型就失效。
+    
+    备件储备防范早夭突袭，预防维保勿信平均寿命。早夭概率影响备件；停机成本与提前期仍决定政策。
+    
+    离散与连续概率分布 - 模块3 - 短片11（EXPON）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    服務耗時與設備壽命：指數分佈與無記憶性
+    
+    C舖用平均 500 運轉鐘畀磨豆刀盤建模。一套淨係跑咗 100 個鐘就壞。指數模型下，100 個鐘之前失效嘅概率幾大？已經跑咗 100 個鐘都未壞，無記憶性又意味住咩？
+    
+    均值 500 個鐘嗰陣 λ=0.002/鐘，F(100)≈18.1%。無記憶性話：撐過 100 個鐘之後，期望剩餘壽命都仲係 500 個鐘——危險率隨年齡變化嗰陣，呢個模型就失效。
+    
+    備件儲備防範早夭突襲，預防維保咪信平均壽命。早夭概率影響備件；停機成本同提前期都仲決定政策。
+    
+    離散與連續概率分佈 - 模組3 - 短片11（EXPON）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: "Exponential distribution"
   zh: "指数分布"
@@ -91,9 +117,9 @@ beats:
   title_en: "When the primary grinder jams at 8:30 AM"
   title_zh: "早八点半磨豆机骤停：设备寿命的隐形倒计时"
   title_zh_hk: "朝八點半磨豆機驟停：設備壽命嘅隱形倒計時"
-  en: "An Airport store models grinder-burr lifetime with an average of 500 operating hours. A set fails after only 100 hours. Under an Exponential model, how likely is failure before 100 hours, and what does memorylessness say about a set that has already survived that long?"
-  zh: "机场店用平均 500 个运转小时为磨豆机刀盘寿命建模。一套刀盘只运行 100 小时便失效。在指数模型下，100 小时前失效的概率是多少？已经运行 100 小时仍未失效的刀盘，其无记忆性又意味着什么？"
-  zh_hk: "機場舖用平均 500 個運轉鐘為磨豆機刀盤壽命建模。一套刀盤淨係運行 100 個鐘就失效。喺指數模型之下，100 個鐘之前失效嘅概率係幾多？已經運行 100 個鐘仍未失效嘅刀盤，佢嘅無記憶性又意味住咩？"
+  en: "Shop C models grinder-burr lifetime with an average of 500 operating hours. A set fails after only 100 hours. Under an Exponential model, how likely is failure before 100 hours, and what does memorylessness say about a set that has already survived that long?"
+  zh: "C店用平均 500 运转小时给磨豆刀盘建模。一套只跑了 100 小时就坏。指数模型下，100 小时前失效的概率多大？已经跑了 100 小时还没坏，无记忆性又意味着什么？"
+  zh_hk: "C舖用平均 500 運轉鐘畀磨豆刀盤建模。一套淨係跑咗 100 個鐘就壞。指數模型下，100 個鐘之前失效嘅概率幾大？已經跑咗 100 個鐘都未壞，無記憶性又意味住咩？"
 - id: define
   visual: definition_card
   seconds: 34
@@ -109,8 +135,8 @@ beats:
   formula_zh_hk: "密度 f(t) = lambda × e^(-lambda × t)；累積失效 F(t) = 1 - e^(-lambda × t)"
   formula_tex: "f(t) = \\lambda e^{-\\lambda t}, \\quad F(t) = 1 - e^{-\\lambda t}, \\quad t \\ge 0"
   s1_en: "In a homogeneous Poisson process with constant rate lambda, event counts are Poisson and the waiting times between consecutive events are Exponential. The lifetime interpretation therefore assumes a constant hazard rate."
-  s1_zh: "在速率 lambda 恒定的齐次泊松过程中，事件计数服从泊松分布，相邻事件之间的等待时间服从指数分布。用于寿命时，这意味着假设危险率恒定。"
-  s1_zh_hk: "喺速率 lambda 固定嘅齊次泊松過程入面，事件計數服從泊松分佈，相鄰事件之間嘅等待時間服從指數分佈。用於壽命嗰陣，呢個意味住假設危險率固定。"
+  s1_zh: "指数分布常用来写等待时间或寿命，风险率恒定；均值是 1/λ。"
+  s1_zh_hk: "指數分佈成日用嚟寫等待時間或者壽命，風險率恆定；均值係 1/λ。"
   s2_en: "With lambda greater than zero, the density starts at lambda when t equals zero and decreases exponentially. The survival function is P(T>t)=e^(-lambda t), and the hazard remains lambda."
   s2_zh: "当 lambda 大于零时，密度在 t=0 处等于 lambda，随后指数下降。生存函数为 P(T>t)=e^(-lambda t)，危险率保持为 lambda。"
   s2_zh_hk: "當 lambda 大過零，密度喺 t=0 嗰陣等於 lambda，之後指數下降。生存函數係 P(T>t)=e^(-lambda t)，危險率保持做 lambda。"
@@ -146,9 +172,9 @@ beats:
   kicker_en: "The Ledger"
   kicker_zh: "账目实算"
   kicker_zh_hk: "賬目實算"
-  title_en: "Modeling Airport grinder-burr lifetime"
-  title_zh: "机场店磨豆机刀盘寿命模型"
-  title_zh_hk: "機場舖磨豆機刀盤壽命模型"
+  title_en: "Modeling Shop C grinder-burr lifetime"
+  title_zh: "C店磨豆机刀盘寿命模型"
+  title_zh_hk: "C舖磨豆機刀盤壽命模型"
   step1_en: "Rate: E[T] = 500 hours -> lambda = 1/500 = 0.002 failure/hour"
   step1_zh: "失效率核定：期望寿命 500 小时 -> lambda = 1/500 = 0.002/小时"
   step1_zh_hk: "失效率核定：期望壽命 500 個鐘 -> lambda = 1/500 = 0.002/個鐘"
@@ -158,9 +184,9 @@ beats:
   step3_en: "Surviving mean: E[T - 100 | T > 100] = 500 hours remaining!"
   step3_zh: "条件剩余期望：在指数模型下，运行 100 小时后仍为 500 小时"
   step3_zh_hk: "條件剩餘期望：喺指數模型下，運行 100 個鐘後仍然係 500 個鐘"
-  s1_en: "For this Airport illustration, assume grinder-burr lifetime is Exponential with mean 500 operating hours. Then lambda equals one over 500, or 0.002 per hour."
-  s1_zh: "在这个机场店示例中，假设磨豆机刀盘寿命服从均值为 500 运转小时的指数分布，因此 lambda=1/500=0.002/小时。"
-  s1_zh_hk: "喺呢個機場舖示例入面，假設磨豆機刀盤壽命服從均值為 500 個運轉鐘嘅指數分佈，所以 lambda=1/500=0.002/個鐘。"
+  s1_en: "For this Shop C illustration, assume grinder-burr lifetime is Exponential with mean 500 operating hours. Then lambda equals one over 500, or 0.002 per hour."
+  s1_zh: "在这个C店示例中，假设磨豆机刀盘寿命服从均值为 500 运转小时的指数分布，因此 lambda=1/500=0.002/小时。"
+  s1_zh_hk: "喺呢個C舖示例入面，假設磨豆機刀盤壽命服從均值為 500 個運轉鐘嘅指數分佈，所以 lambda=1/500=0.002/個鐘。"
   s2_en: "Step two computes the modeled probability of failure before 100 hours: F(100)=1-e^(-0.2), approximately 0.181 or 18.1%."
   s2_zh: "第二步计算 100 小时前失效的模型概率：F(100)=1-e^(-0.2)，约为 0.181，即 18.1%。"
   s2_zh_hk: "第二步計 100 個鐘之前失效嘅模型概率：F(100)=1-e^(-0.2)，大約係 0.181，即係 18.1%。"
@@ -169,7 +195,7 @@ beats:
   s3_zh_hk: "喺呢個模型之下，100 個鐘之前失效嘅概率係 18.1%。喺已經生存到 100 個鐘嘅條件下，無記憶性畀出嘅剩餘期望壽命係 500 個鐘，而唔係 400 個鐘。"
 - id: takeaway
   visual: takeaway
-  seconds: 32
+  seconds: 30
   kicker: "Decision Rule"
   kicker_en: "Decision Rule"
   kicker_zh: "商业法则"
@@ -177,18 +203,18 @@ beats:
   title_en: "Stock spares for the crash, not the average life"
   title_zh: "备件储备防范早夭突袭，预防维保勿信平均寿命"
   title_zh_hk: "備件儲備防範早夭突襲，預防維保咪信平均壽命"
-  q1_en: "What does an Exponential model contribute to spare-parts planning?"
-  q1_zh: "指数模型可为备件规划提供什么信息？"
-  q1_zh_hk: "指數模型可以為備件規劃提供咩資料？"
-  q2_en: "When does the memoryless assumption fail in operational engineering?"
-  q2_zh: "在工程运维中，指数分布的无记忆性假设会在何时宣告失效？"
-  q2_zh_hk: "喺工程運維入面，指數分佈嘅無記憶性假設會喺幾時宣告失效？"
-  s1_en: "The 18.1% early-failure probability can inform a spare-parts decision, but stock levels also depend on downtime cost, replacement lead time, failure consequences, and model fit."
-  s1_zh: "18.1% 的早期失效概率可为备件决策提供依据，但库存水平还取决于停机成本、补货提前期、失效后果和模型拟合程度。"
-  s1_zh_hk: "18.1% 嘅早期失效概率可以為備件決策提供依據，但庫存水平仲取決於停機成本、補貨提前期、失效後果同模型擬合程度。"
-  s2_en: "If the observed hazard changes with age because of wear, burn-in, or other mechanisms, the constant-hazard Exponential model may not fit. Use diagnostics and consider a model that allows age-dependent hazard."
-  s2_zh: "如果因为磨损、磨合期或其他机制，观察到的危险率随年龄变化，则恒定危险率的指数模型可能不适用。应使用诊断并考虑允许危险率随年龄变化的模型。"
-  s2_zh_hk: "如果因為磨損、磨合期或者其他機制，觀察到嘅危險率會隨年齡變化，固定危險率嘅指數模型可能唔適用。應該使用診斷，並考慮容許危險率隨年齡變化嘅模型。"
-  s3_en: "For an Exponential lifetime with mean 500 hours, lambda=0.002, P(T<=100)=18.1%, and the expected remaining life after surviving 100 hours is still 500 hours. These conclusions depend on the constant-hazard assumption."
-  s3_zh: "对于均值为 500 小时的指数寿命，lambda=0.002，P(T≤100)=18.1%；在已运行 100 小时的条件下，剩余期望寿命仍为 500 小时。这些结论依赖恒定危险率假设。"
-  s3_zh_hk: "對均值為 500 個鐘嘅指數壽命嚟講，lambda=0.002，P(T≤100)=18.1%；喺已經運行 100 個鐘嘅條件下，剩餘期望壽命仍然係 500 個鐘。呢啲結論依賴固定危險率假設。"
+  q1_en: "Early-fail probability? → Informs spares — still need cost, lead time, fit"
+  q1_zh: "早期失效概率？→ 可助备件决策——仍要成本、交期、拟合"
+  q1_zh_hk: "早期失效概率？→ 可助備件決策——仍然要成本、交期、擬合"
+  q2_en: "Memoryless fails when? → Hazard changes with age (wear, burn-in)"
+  q2_zh: "无记忆何时失效？→ 风险随年龄变（磨损、磨合）"
+  q2_zh_hk: "無記憶幾時失效？→ 風險隨年齡變（磨損、磨合）"
+  s1_en: "18.1% early failure can shape spare stock, but downtime cost and lead time still decide the policy."
+  s1_zh: "18.1% 的早期失效概率能帮你想备件，但停机成本和补货提前期仍决定政策。"
+  s1_zh_hk: "18.1% 嘅早期失效概率可以幫你諗備件，但停機成本同補貨提前期仍然決定政策。"
+  s2_en: "If hazard rises or falls with age, drop constant-hazard Exponential and check another model."
+  s2_zh: "如果失效率随年龄升或降，就别死守恒定风险的指数，去核对别的模型。"
+  s2_zh_hk: "如果失效率隨年齡升或者降，就唔好死守恆定風險嘅指數，去核對第二個模型。"
+  s3_en: "Mean 500h → λ=0.002, P(T≤100)=18.1%, and after surviving 100h the expected remaining life is still 500h under memorylessness."
+  s3_zh: "均值 500 小时 → λ=0.002，P(T≤100)=18.1%；在无记忆下，活过 100 小时后期望剩余寿命仍是 500 小时。"
+  s3_zh_hk: "均值 500 個鐘 → λ=0.002，P(T≤100)=18.1%；喺無記憶之下，活過 100 個鐘之後期望剩餘壽命仍然係 500 個鐘。"

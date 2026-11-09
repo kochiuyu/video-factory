@@ -1,19 +1,40 @@
 id: STAT-M01-T05-RANGE
-course: statistics
 course_en: Business Statistics
 course_zh: 商务统计
 course_zh_hk: 商務統計
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 528
+duration_target_s: 494
 title_en: What is the range?
 title_zh: 什么是极差？
 title_zh_hk: 咩係全距？
-objective_en: Decide whether one delivery size can fit every shop when two days share the same average, find the range as maximum minus minimum, and see why one far shop can dominate it while the shops in between are ignored.
-objective_zh: 两天的平均数一样时，判断一个送货量能不能照顾所有店，用最大值减最小值求出极差，并看到为什么一家很远的店就能主导极差，而中间的店完全没算进去。
-objective_zh_hk: 兩日嘅平均數一樣時，判斷一個送貨量夠唔夠照顧晒所有店，用最大值減最小值計出全距，並睇到點解一間好遠嘅店就可以主導全距，而中間嘅店完全冇計入去。
+youtube:
+  description_en: |
+    What is the range?
+    
+    Four shops average 370 cups on both Monday and Tuesday (1,480 / 4). Same average does not mean the same delivery. Monday: 380, 310, 420, 370. Sort and take max minus min: 420 - 310 = 110 cups. Send everyone 370 and Shop C is 50 short while Shop B has 60 left over. Tuesday: 360, 380, 350, 390. Range is 390 - 350 = 40 cups, so one size of 370 fits better.
+    
+    The range is maximum minus minimum. It uses only the two ends - Monday skips 370 and 380 in the middle. Add Shop E, a 24-hour site at 4,200, and the range jumps to 4,200 - 310 = 3,890. Street shops alone stay at 110. Check the range before one truck size, and say which shops are included.
+    
+    Business Statistics - Module 1 - Short 5 (range)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    什么是极差？
+    
+    四家店星期一和星期二的平均数都是370杯（1,480 / 4）。平均数相同，送货计划未必相同。星期一：380、310、420、370。排序后最大减最小：420 - 310 = 110杯。每家都送370，C店短缺50，B店多出60。星期二：360、380、350、390。极差是390 - 350 = 40杯，一份370更合适。
+    
+    极差就是最大值减最小值。它只用两端 - 星期一中间的370和380根本没用上。加上24小时店E的4,200杯，极差跳到4,200 - 310 = 3,890；只看街边店仍是110。统一配送前先看极差，并说清楚算进了哪些店。
+    
+    商务统计 - 模块1 - 短片5（极差）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    咩係全距？
+    
+    四間店星期一同星期二嘅平均數都係370杯（1,480 / 4）。平均數相同，送貨計劃未必相同。星期一：380、310、420、370。排好之後最大減最小：420 - 310 = 110杯。每間都送370，C店短缺50，B店多出60。星期二：360、380、350、390。全距係390 - 350 = 40杯，一份370更合適。
+    
+    全距就係最大值減最小值。佢淨係用兩端 - 星期一中間嘅370同380根本無用到。加上24小時店E嘅4,200杯，全距跳到4,200 - 310 = 3,890；淨睇街邊店仍然係110。統一配送前先睇全距，並講清楚計入咗邊啲店。
+    
+    商務統計 - 模組1 - 短片5（全距）
+    覺得有用嘅話，訂閱下一集。
+
 glossary:
 - en: range
   zh: 极差
@@ -362,8 +383,8 @@ beats:
   left_zh: 街边店：110 杯
   left_zh_hk: 街邊店：110 杯
   right_en: 'With Shop E: 3,890 cups'
-  right_zh: 加上E店：3,890 杯
-  right_zh_hk: 加埋E店：3,890 杯
+  right_zh: +E店：3,890 杯
+  right_zh_hk: +E店：3,890 杯
   s1_en: Both. Each subtraction is correct. They answer the question for different groups of shops.
   s1_zh: 两个都对，每一道减法都没算错。只是它们回答的，是不同一组店的问题。
   s1_zh_hk: 兩個都啱，每一條減數都冇計錯。只不過佢哋答緊嘅，係唔同一組店嘅問題。
@@ -406,7 +427,7 @@ beats:
   s3_zh_hk: 佢話唔到你知，一般嘅店同其他店差幾遠。全距110，唔代表每間店都會上落110杯，淨係兩頭嗰兩間店先差咁多。而且只要任何一頭一變，佢就會大跳，E店就係例子。
 - id: answer
   visual: takeaway
-  seconds: 66
+  seconds: 32
   kicker: The Answer
   kicker_en: The Answer
   kicker_zh: 答案
@@ -414,24 +435,27 @@ beats:
   title_en: One size? Check the range first.
   title_zh: 统一送货？先看极差
   title_zh_hk: 統一送貨？先睇全距
-  q1_en: Can one delivery fit every shop?
-  q1_zh: 一个送货量能照顾所有店吗？
-  q1_zh_hk: 一個送貨量啱唔啱晒所有店？
-  q2_en: When can the range mislead?
-  q2_zh: 极差什么时候会误导人？
-  q2_zh_hk: 全距幾時會誤導人？
-  s1_en: Back to the morning truck. Can one delivery size fit every shop? The average alone cannot tell you. It was 370 cups on both Monday and Tuesday.
-  s1_zh: 回到早上那辆货车。一个送货量，能不能照顾所有店？只看平均数答不了，星期一和星期二都是370杯。
-  s1_zh_hk: 返去朝早嗰架貨車。一個送貨量，啱唔啱晒所有店？淨係睇平均數答唔到，星期一同星期二都係370杯。
+  q1_en: 'Can one delivery fit every shop? → Check the range first'
+  q1_zh: 一个送货量能照顾所有店吗？→ 先看极差
+  q1_zh_hk: 一個送貨量啱唔啱晒所有店？→ 先睇全距
+  q2_en: 'When can the range mislead? → One far shop blows up the ends'
+  q2_zh: 极差什么时候会误导人？→ 一家很远的店撑大两头
+  q2_zh_hk: 全距幾時會誤導人？→ 一間好遠嘅店撐大兩頭
+  s1_en: >-
+    Back to the morning truck. Same average both days — 370. The range decides.
+  s1_zh: >-
+    回到早上那辆货车。两天平均数都是370。要看极差。
+  s1_zh_hk: >-
+    返去朝早嗰架貨車。兩日平均數都係370。要睇全距。
   s2_en: >-
-    The range can. Sort the shops, then take the maximum minus the minimum. Tuesday's range is 40 cups, so one size of 370 works.
-    Monday's range is 110 cups, so the same size leaves Shop C 50 short and Shop B with 60 to throw away.
-    Check the range before you send everyone the same amount.
-  s2_zh: 极差答得了。先把店排好，再用最大值减最小值。星期二的极差是40杯，所以统一送370行得通。星期一的极差是110杯，同样的量会让C店缺50杯，B店扔掉60杯。给每家店送同样的量之前，先看一看极差。
-  s2_zh_hk: 全距答得到。先將啲店排好，再用最大值減最小值。星期二嘅全距係40杯，所以統一送370行得通。星期一嘅全距係110杯，同一個量會搞到C店缺50杯，B店要掉60杯。畀每間店送同一個量之前，先睇吓全距。
+    Tuesday's range is 40 — one size works. Monday's is 110 — it does not.
+  s2_zh: >-
+    星期二极差40——统一送货行得通。星期一是110——行不通。
+  s2_zh_hk: >-
+    星期二全距40——統一送貨行得通。星期一係110——行唔通。
   s3_en: >-
-    When can the range mislead? It uses only the two ends, so one far shop, like Shop E, can blow it up from 110 to 3,890.
-    Say which shops are included, and look at the shops in between, not just the ends.
-    These numbers describe only the days we supposed. The range tells you how far one plan must stretch, not what each shop needs.
-  s3_zh: 极差什么时候会误导人？它只用两头，所以一家很远的店，比如E店，就能把它从110撑到3,890。报的时候要讲清楚算了哪些店，也要看看中间的店，不要只看两头。这些数字只描述我们假设的这两天。极差告诉你一个方案要撑多宽，而不是每家店各要多少。
-  s3_zh_hk: 全距幾時會誤導人？佢淨係用兩頭，所以一間好遠嘅店，好似E店，就可以將佢由110撐到3,890。報嘅時候要講清楚計咗邊幾間店，亦要睇吓中間啲店，唔好淨係睇兩頭。呢啲數字只係描述我哋假設嘅呢兩日。全距話你知一個方案要撐幾闊，而唔係每間店各自要幾多。
+    One far shop like Shop E can blow the range up. Check the ends, then the shops between. That is the answer.
+  s3_zh: >-
+    一家很远的店，比如E店，能把极差撑大。先看两头，再看中间。这就是答案。
+  s3_zh_hk: >-
+    一間好遠嘅店，好似E店，可以把全距撐大。先睇兩頭，再睇中間。呢個就係答案。

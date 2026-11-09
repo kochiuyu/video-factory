@@ -1,19 +1,40 @@
 id: STAT-M01-T09-CV
-course: statistics
 course_en: Business Statistics
 course_zh: 商务统计
 course_zh_hk: 商務統計
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 480
+duration_target_s: 440
 title_en: What is the coefficient of variation?
 title_zh: 什么是变异系数？
 title_zh_hk: 咩係變異系數？
-objective_en: Explain why a bigger standard deviation does not always mean a harder-to-plan shop, compute the coefficient of variation as the standard deviation divided by the average, and say when to use it instead of the standard deviation and where it stops.
-objective_zh: 解释为什么标准差大，不一定表示这家店更难计划；用标准差除以平均数算出变异系数；并说明什么时候该用它代替标准差，以及它到哪里为止。
-objective_zh_hk: 解釋點解標準差大，唔一定代表間店更難計劃；用標準差除以平均數計出變異系數；再講清楚幾時應該用佢代替標準差，同埋佢去到邊度為止。
+youtube:
+  description_en: |
+    What is the coefficient of variation?
+    
+    Shop A is small: about 300 cups a day, SD 30. Shop B is big: about 3,000 cups, SD 150. In raw cups B swings five times more. Relative to its own day, A is 30 / 300 = 10%, and B is 150 / 3,000 = 5%. For its size, A is the harder shop to plan.
+    
+    CV = (standard deviation / average) x 100%, a unit-free percent - cups cancel. The same 10% can appear for dollars too. Watch tiny averages: CV can blow up. Use CV when shops differ in size and you need a fair share-of-swing comparison.
+    
+    Business Statistics - Module 1 - Short 9 (CV)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    什么是变异系数？
+    
+    A店小：一天大约300杯，标准差30。B店大：大约3,000杯，标准差150。按杯数算，B的摆幅大5倍。相对各自日销量，A是30 / 300 = 10%，B是150 / 3,000 = 5%。按规模看，A更难计划。
+    
+    CV =（标准差 / 平均数）x 100%，是无单位的百分比 - 杯会约掉。美元也可以得到同样的10%。平均极小时CV会爆。店铺规模不同、又要公平比较摆幅占比时，用CV。
+    
+    商务统计 - 模块1 - 短片9（变异系数）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    咩係變異系數？
+    
+    A店細：一日大約300杯，標準差30。B店大：大約3,000杯，標準差150。按杯數計，B嘅擺幅大5倍。相對各自日銷量，A係30 / 300 = 10%，B係150 / 3,000 = 5%。按規模睇，A更難計劃。
+    
+    CV =（標準差 / 平均數）x 100%，係無單位嘅百分比 - 杯會約走。美元都可以得到同樣嘅10%。平均極細時CV會爆。店鋪規模唔同、又要公平比較擺幅佔比時，用CV。
+    
+    商務統計 - 模組1 - 短片9（變異系數）
+    覺得有用嘅話，訂閱下一集。
+
 glossary:
 - en: coefficient of variation
   zh: 变异系数
@@ -235,15 +256,13 @@ beats:
   title_en: Short names for the steps
   title_zh: 给步骤起个短名字
   title_zh_hk: 幫步驟改個短名
-  formula: 'CV = σ / μ × 100%
-
-    A: 30 / 300 × 100% = 10%'
+  formula: 'CV = σ / μ × 100%'
   formula_zh: 'CV = σ / μ × 100%
 
-    A店：30 / 300 × 100% = 10%'
+    A: 30 / 300 × 100% = 10%'
   formula_zh_hk: 'CV = σ / μ × 100%
 
-    A店：30 / 300 × 100% = 10%'
+    A: 30 / 300 × 100% = 10%'
   s1_en: "Here is the rule with short names. Sigma, the Greek letter σ, is the standard deviation. Mu, μ, is the average. CV is sigma divided by mu, times 100 to read it as a percent."
   s1_zh: "用短名字写这条规则。希腊字母σ，读作sigma，是标准差。μ，读作mu，是平均数。CV就是σ除以μ，再乘100，读成百分比。"
   s1_zh_hk: "用短名寫呢條規則。希臘字母σ，讀sigma，係標準差。μ，讀mu，係平均數。CV就係σ除以μ，再乘100，讀成百分比。"
@@ -281,7 +300,7 @@ beats:
   s3_zh_hk: "一個唔再帶單位嘅數，叫做無量綱。所以CV可以將杯數同金額比、咖啡同蛋糕比，或者細店同大店比。咁係咪乜都用得？"
 - id: limit
   visual: two_column
-  seconds: 64
+  seconds: 52
   kicker: The Limit
   kicker_en: The Limit
   kicker_zh: 限度
@@ -306,7 +325,7 @@ beats:
   s3_zh_hk: "而且CV係一個去檢查嘅理由，唔係指令。百分之十話畀你知，按規模，A店比較難計劃。佢唔會話你知斷貨嘅成本、牛奶放得幾耐，或者倒走一公升牛奶要幾多錢。咁，究竟邊間店比較難計劃？"
 - id: answer
   visual: takeaway
-  seconds: 58
+  seconds: 30
   kicker: The Answer
   kicker_en: The Answer
   kicker_zh: 回答问题
@@ -314,18 +333,27 @@ beats:
   title_en: Compare swings for the size
   title_zh: 按规模比较晃动
   title_zh_hk: 按規模比較搖動
-  q1_en: Which shop is harder to plan for its size?
-  q1_zh: 按规模，哪家店比较难计划？
-  q1_zh_hk: 按規模，邊間店比較難計劃？
-  q2_en: When do we use the SD, and when the CV?
-  q2_zh: 什么时候看标准差，什么时候看CV？
-  q2_zh_hk: 幾時睇標準差，幾時睇CV？
-  s1_en: "Back to the question. Shop B's standard deviation, 150 cups, is five times Shop A's 30. But B sells ten times as much. For its size, A swings ten percent and B five. A is the harder shop to plan, so for its size, A's cushion matters most."
-  s1_zh: "回到问题。B店的标准差150杯，是A店30杯的五倍。但B店的销量是A店的十倍。按规模，A店晃百分之十，B店晃百分之五。比较难计划的是A店，所以按它的规模，A店的缓冲最要紧。"
-  s1_zh_hk: "返到問題。B店嘅標準差150杯，係A店30杯嘅五倍。但B店嘅銷量係A店嘅十倍。按規模，A店搖百分之十，B店搖百分之五。比較難計劃嘅係A店，所以按佢嘅規模，A店嘅緩衝最緊要。"
-  s2_en: "Use the standard deviation inside one shop, in one unit: how many spare cups should this shop keep? Use the coefficient of variation when you compare across sizes, products or units: which shop swings more for its size?"
-  s2_zh: "在同一家店、同一种单位里，用标准差：这家店要多留多少杯？跨规模、跨产品、跨单位比较的时候，用变异系数：按规模，哪家店晃得多？"
-  s2_zh_hk: "喺同一間店、同一種單位入面，用標準差：呢間店要多留幾多杯？跨規模、跨產品、跨單位比較嗰陣，用變異系數：按規模，邊間店搖得多？"
-  s3_en: "These are numbers we supposed, not records. Before you change an order, check what running out costs and what waste costs. The CV tells you where to look first. It does not set the order by itself."
-  s3_zh: "这些是我们假设的数，不是真实记录。改订单之前，还要看断货的成本和浪费的成本。CV告诉你先看哪里，它不会自己决定订单。"
-  s3_zh_hk: "呢啲係我哋假設嘅數，唔係真實紀錄。改訂單之前，仲要睇斷貨嘅成本同浪費嘅成本。CV話畀你知先睇邊度，佢唔會自己決定訂單。"
+  q1_en: 'Which shop is harder for its size? → Shop A — CV 10% vs B''s 5%'
+  q1_zh: 按规模，哪家店比较难计划？→ A店——CV百分之十，对B的百分之五
+  q1_zh_hk: 按規模，邊間店比較難計劃？→ A店——CV百分之十，對B嘅百分之五
+  q2_en: 'When SD, when CV? → SD inside one shop; CV across sizes'
+  q2_zh: 什么时候看标准差，什么时候看CV？→ 店内看标准差；跨规模看CV
+  q2_zh_hk: 幾時睇標準差，幾時睇CV？→ 店內睇標準差；跨規模睇CV
+  s1_en: >-
+    B's SD is five times A's, but B sells ten times as much. For its size, A swings 10%, B 5%.
+  s1_zh: >-
+    B店的标准差是A店的五倍，但销量是十倍。按规模，A晃百分之十，B百分之五。
+  s1_zh_hk: >-
+    B店嘅標準差係A店嘅五倍，但銷量係十倍。按規模，A搖百分之十，B百分之五。
+  s2_en: >-
+    A is harder to plan. Use the SD inside one shop; use the CV across sizes.
+  s2_zh: >-
+    比较难计划的是A。店内用标准差；跨规模用CV。
+  s2_zh_hk: >-
+    比較難計劃嘅係A。店內用標準差；跨規模用CV。
+  s3_en: >-
+    The CV tells you where to look first — it does not set the order. That is the answer.
+  s3_zh: >-
+    CV告诉你先看哪里——它不会自己决定订单。这就是答案。
+  s3_zh_hk: >-
+    CV話畀你知先睇邊度——佢唔會自己決定訂單。呢個就係答案。

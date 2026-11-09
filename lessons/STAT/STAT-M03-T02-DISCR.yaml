@@ -1,19 +1,45 @@
 id: STAT-M03-T02-DISCR
-course: statistics
 course_en: "Discrete & Continuous Probability Distributions"
 course_zh: "离散与连续概率分布"
 course_zh_hk: "離散與連續概率分佈"
-audience: "first-year business students"
-audience_en: "first-year business students"
-audience_zh: "商学院一年级学生"
-audience_zh_hk: "商學院一年級學生"
-duration_target_s: 168
+duration_target_s: 166
 title_en: "The discrete probability engine"
 title_zh: "离散概率引擎：概率质量函数与数学期望"
 title_zh_hk: "離散概率引擎：概率質量函數與數學期望"
-objective_en: "Define discrete random variables and probability mass functions (PMF), verify the foundational condition that all probabilities sum to 1.0, and calculate the expected value E[X] for inventory demand planning."
-objective_zh: "定义离散型随机变量与概率质量函数（PMF），验证各项概率之和严格等于 1.0 的公理基石，并计算数学期望 E[X] 以指导烘焙点心备货与销量规划。"
-objective_zh_hk: "定義離散型隨機變量同概率質量函數（PMF），驗證各項概率之和嚴格等於 1.0 嘅公理基石，並計算數學期望 E[X] 用嚟指導烘焙點心備貨同銷量規劃。"
+youtube:
+  description_en: |
+    The discrete probability engine
+    
+    Shop A must decide how many croissants to bake for the morning. Too few means stockouts; too many means waste. How do you list the possible add-on counts, attach probabilities, and get a planning baseline?
+    
+    A discrete random variable takes countable values such as 0, 1, 2, or 3 croissants. Its PMF assigns each value a probability between 0 and 1, and those probabilities must sum to 1.0. Expected value E[X] is the probability-weighted average — the center of gravity of the PMF, not a promise on any single ticket.
+    
+    With weights 0 (0.50), 1 (0.30), 2 (0.15), 3 (0.05), E[X] = 0.75 croissants per patron. Four hundred morning tickets times 0.75 gives a baseline of 300 croissants — an average plan, still needing swings, waste tolerance, and service targets before you lock the bake.
+    
+    Discrete & Continuous Probability Distributions - Module 3 - Short 2 (DISCR)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    离散概率引擎：概率质量函数与数学期望
+    
+    A店要决定早市烤多少可颂。少了会断货，多了会浪费。你怎么把可能的加购件数列出来、配上概率，再算出一个规划基准？
+    
+    离散随机变量取可数取值，比如 0、1、2、3 件可颂。PMF 给每个取值配 0 到 1 之间的概率，且全部加起来必须等于 1.0。期望 E[X] 是概率加权平均——整块 PMF 的重心，不是某张小票上的保证。
+    
+    权重 0（0.50）、1（0.30）、2（0.15）、3（0.05）时，E[X]=0.75 件/客。四百笔早市订单乘以 0.75，基准是 300 件可颂——是平均规划，定产量前还要把波动、浪费容忍和服务目标算进去。
+    
+    离散与连续概率分布 - 模块3 - 短片2（DISCR）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    離散概率引擎：概率質量函數與數學期望
+    
+    A舖要決定朝早焗幾多件牛角包。少咗會斷貨，多咗會浪費。你點樣將可能嘅加購件數列出嚟、配上概率，再計一個規劃基準？
+    
+    離散隨機變量取可數取值，好似 0、1、2、3 件牛角包。PMF 畀每個取值配 0 到 1 之間嘅概率，兼且全部加埋必須等於 1.0。期望 E[X] 係概率加權平均——成塊 PMF 嘅重心，唔係某張單據上面嘅保證。
+    
+    權重 0（0.50）、1（0.30）、2（0.15）、3（0.05）嗰陣，E[X]=0.75 件/客。四百筆朝早訂單乘以 0.75，基準係 300 件牛角包——係平均規劃，定產量之前仲要將波動、浪費容忍同服務目標計入去。
+    
+    離散與連續概率分佈 - 模組3 - 短片2（DISCR）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: "discrete random variable"
   zh: "离散型随机变量"
@@ -91,9 +117,9 @@ beats:
   title_en: "How many pastries will actually leave the shelf?"
   title_zh: "今天到底会有多少件点心被买走？"
   title_zh_hk: "今日到底會有幾多件點心被買走？"
-  en: "The Wan Chai store must decide how many croissants to prepare for the morning trade. Producing too few risks stockouts, while producing too many creates waste. How can managers represent the possible add-on quantities, attach probabilities to them, and calculate a useful planning baseline?"
-  zh: "湾仔店必须决定早市应准备多少件可颂。生产太少可能缺货，生产太多则会造成浪费。管理者该如何表示各种可能的加购数量，为它们赋予概率，并计算一个有用的规划基准？"
-  zh_hk: "灣仔舖必須決定早市應該準備幾多件牛角包。生產得太少可能缺貨，生產得太多就會造成浪費。管理者應該點樣表示各種可能嘅加購數量，為佢哋賦予概率，並計算一個有用嘅規劃基準？"
+  en: "Shop A must decide how many croissants to bake for the morning. Too few means stockouts; too many means waste. How do you list the possible add-on counts, attach probabilities, and get a planning baseline?"
+  zh: "A店要决定早市烤多少可颂。少了会断货，多了会浪费。你怎么把可能的加购件数列出来、配上概率，再算出一个规划基准？"
+  zh_hk: "A舖要決定朝早焗幾多件牛角包。少咗會斷貨，多咗會浪費。你點樣將可能嘅加購件數列出嚟、配上概率，再計一個規劃基準？"
 - id: define
   visual: definition_card
   seconds: 34
@@ -109,11 +135,11 @@ beats:
   formula_zh_hk: "P(X = x) >= 0；兼且所有可能取值嘅概率累加之和恆等於 1.0"
   formula_tex: "p(x) = P(X = x), \\quad \\sum_{x} p(x) = 1.0"
   s1_en: "When a quantity can take a countable set of distinct values, such as zero, one, two, or three croissants, it can be modeled as a discrete random variable X."
-  s1_zh: "当一个数量只能取可数的不同数值，例如 0、1、2 或 3 件可颂时，就可以把它建模为离散型随机变量 X。"
-  s1_zh_hk: "當一個數量只可以取可數嘅唔同數值，例如 0、1、2 或者 3 件牛角包，就可以將佢建模成離散型隨機變量 X。"
+  s1_zh: "如果一个量只能取可数的几个值——比如 0、1、2、3 件可颂——就可以把它建成离散型随机变量 X。"
+  s1_zh_hk: "如果一個量只可以取可數嘅幾個值——好似 0、1、2、3 件牛角包——就可以將佢建成離散型隨機變量 X。"
   s2_en: "Its Probability Mass Function, or PMF, assigns a probability to each possible value. Every probability must lie between zero and one, and the probabilities over all possible values must sum to 1.0."
-  s2_zh: "概率质量函数（PMF）为随机变量的每个可能取值赋予概率。每项概率必须介于 0 与 1 之间，而且所有可能取值的概率之和必须等于 1.0。"
-  s2_zh_hk: "概率質量函數（PMF）會為隨機變量嘅每個可能取值賦予概率。每項概率必須介乎 0 同 1 之間，而且所有可能取值嘅概率總和必須等於 1.0。"
+  s2_zh: "概率质量函数，也就是 PMF，给每个可能取值配一个概率。每个概率都要在 0 到 1 之间，而且全部加起来必须等于 1.0。"
+  s2_zh_hk: "概率質量函數，即係 PMF，會畀每個可能取值配一個概率。每個概率都要喺 0 到 1 之間，而且全部加埋必須等於 1.0。"
 - id: expectation
   visual: two_column
   seconds: 36
@@ -131,14 +157,14 @@ beats:
   right_zh: "期望值 E[X]：概率加权产生的总体物理重心"
   right_zh_hk: "期望值 E[X]：概率加權產生嘅總體物理重心"
   s1_en: "To find the baseline operational load, managers calculate the Expected Value, denoted as E of X or mu."
-  s1_zh: "为了敲定基准运营负荷，管理者会计算随机变量的数学期望，记作 E[X] 或希腊字母 mu。"
-  s1_zh_hk: "為咗敲定基準營運負荷，管理者會計算隨機變量嘅數學期望，記做 E[X] 或者希臘字母 mu。"
+  s1_zh: "要找基准负荷，就算期望值，记作 E[X]，也常写成 mu。"
+  s1_zh_hk: "要搵基準負荷，就計期望值，記做 E[X]，亦經常寫成 mu。"
   s2_en: "Think of expected value not as a number you will see on any single ticket, but as the physical center of gravity of the PMF probability seesaw."
-  s2_zh: "不要把期望值看作某张小票上可能出现的具体数字，而要把它理解为整个 PMF 概率跷跷板的物理支点与质心。"
-  s2_zh_hk: "唔好將期望值當成某張單據上面可能出現嘅具體數字，而要將佢理解為成個 PMF 概率搖搖板嘅物理支點同質心。"
+  s2_zh: "别把期望当成某张小票上一定会出现的数字。把它想成整块 PMF 跷跷板的重心。"
+  s2_zh_hk: "唔好將期望當成某張單據上面一定會出現嘅數字。將佢想像成成塊 PMF 搖搖板嘅重心。"
   s3_en: "Multiply each possible count by its PMF probability and add the products. The result is the long-run average per ticket under the model, which provides a baseline rather than a guaranteed daily outcome."
-  s3_zh: "将每个可能件数乘以其 PMF 概率并求和。结果是在模型下的长期单笔平均值，可作为规划基准，但并不保证每天都会实现。"
-  s3_zh_hk: "將每個可能件數乘以佢嘅 PMF 概率再加埋。結果係模型之下嘅長期單筆平均值，可以作為規劃基準，但唔保證每日都會實現。"
+  s3_zh: "每个可能件数乘上自己的概率，再加总。得到的是模型下的长期单笔平均——是基准，不是每天的保证。"
+  s3_zh_hk: "每個可能件數乘上自己嘅概率，再加總。得出嚟嘅係模型之下嘅長期單筆平均——係基準，唔係每日嘅保證。"
 - id: ledger
   visual: steps
   seconds: 36
@@ -146,9 +172,9 @@ beats:
   kicker_en: "The Ledger"
   kicker_zh: "账目实算"
   kicker_zh_hk: "賬目實算"
-  title_en: "Auditing 1,000 register tickets"
-  title_zh: "审计一千笔客单的可颂加购分布"
-  title_zh_hk: "審計一千筆客單嘅牛角包加購分佈"
+  title_en: "Walking through 1,000 register tickets"
+  title_zh: "假设有一千笔客单的可颂加购"
+  title_zh_hk: "假設有一千筆客單嘅牛角包加購"
   step1_en: "PMF weights: 0 (0.50), 1 (0.30), 2 (0.15), 3 (0.05)"
   step1_zh: "PMF 赋权：0件(0.50)，1件(0.30)，2件(0.15)，3件(0.05)"
   step1_zh_hk: "PMF 賦權：0件(0.50)，1件(0.30)，2件(0.15)，3件(0.05)"
@@ -158,37 +184,37 @@ beats:
   step3_en: "Compute E[X]: 0 + 0.30 + 0.30 + 0.15 = 0.75 units/ticket"
   step3_zh: "推演期望均值：单笔客单平均加购 0.75 件可颂"
   step3_zh_hk: "推演期望均值：單筆客單平均加購 0.75 件牛角包"
-  s1_en: "Examine 1,000 breakfast receipts at our Wan Chai branch. Half of all customers buy zero food. Thirty percent add one croissant, fifteen percent add two, and five percent buy three."
-  s1_zh: "审查湾仔店的一千张早餐流水单。半数顾客未加购任何烘焙，30% 的顾客加购一件可颂，15% 加购两件，还有 5% 买了三件。"
-  s1_zh_hk: "審查灣仔舖嘅一千張早餐流水單。半數顧客冇加購任何烘焙，30% 嘅顧客加購一件牛角包，15% 加購兩件，仲有 5% 買咗三件。"
+  s1_en: "Suppose 1,000 breakfast tickets at Shop A. Half of customers buy no food. Thirty percent add one croissant, fifteen percent add two, and five percent buy three."
+  s1_zh: "假设 A 店有一千张早餐小票。一半客人没买烘焙；30% 加一件可颂，15% 加两件，5% 买了三件。"
+  s1_zh_hk: "假設 A 舖有一千張早餐單據。一半客人冇買烘焙；30% 加一件牛角包，15% 加兩件，5% 買咗三件。"
   s2_en: "First check: zero point five zero plus zero point three zero plus zero point one five plus zero point zero five equals 1.0, so the listed values form a valid PMF for this model."
-  s2_zh: "首先验证：0.50 加 0.30 加 0.15 加 0.05 等于 1.0，因此这些取值在本模型中构成有效的 PMF。"
-  s2_zh_hk: "首先驗證：0.50 加 0.30 加 0.15 加 0.05 等於 1.0，所以呢啲取值喺本模型入面構成有效嘅 PMF。"
+  s2_zh: "先核对：0.50 加 0.30 加 0.15 加 0.05 等于 1.0，所以这份表在本模型里是合格的 PMF。"
+  s2_zh_hk: "先核對：0.50 加 0.30 加 0.15 加 0.05 等於 1.0，所以呢份表喺本模型入面係合格嘅 PMF。"
   s3_en: "Now weight each count: zero times 0.50 is 0; one times 0.30 is 0.30; two times 0.15 is 0.30; three times 0.05 is 0.15. Sum them up: the expected demand is 0.75 croissants per patron."
-  s3_zh: "逐项加权：0 乘 0.50 得 0；1 乘 0.30 得 0.30；2 乘 0.15 得 0.30；3 乘 0.05 得 0.15。相加得单客期望需求为 0.75 件可颂。"
-  s3_zh_hk: "逐項加權：0 乘 0.50 得 0；1 乘 0.30 得 0.30；2 乘 0.15 得 0.30；3 乘 0.05 得 0.15。相加得單客期望需求為 0.75 件牛角包。"
+  s3_zh: "再加权：0×0.50=0；1×0.30=0.30；2×0.15=0.30；3×0.05=0.15。加起来，单客期望需求是 0.75 件可颂。"
+  s3_zh_hk: "再加權：0×0.50=0；1×0.30=0.30；2×0.15=0.30；3×0.05=0.15。加埋，單客期望需求係 0.75 件牛角包。"
 - id: takeaway
   visual: takeaway
-  seconds: 32
+  seconds: 30
   kicker: "Decision Rule"
   kicker_en: "Decision Rule"
   kicker_zh: "商业法则"
   kicker_zh_hk: "商業法則"
   title_en: "Scale the expected value to size the batch"
-  title_zh: "以单客期望均值，杠杆放大全天排产"
-  title_zh_hk: "以單客期望均值，槓桿放大全日排產"
-  q1_en: "How does E[X] guide central production?"
-  q1_zh: "数学期望如何直接指导中央厨房排产？"
-  q1_zh_hk: "數學期望點樣直接指導中央廚房排產？"
-  q2_en: "What is the limitation of point probabilities?"
-  q2_zh: "只看单点概率存在怎样的决策局限？"
-  q2_zh_hk: "淨係睇單點概率存在點樣嘅決策局限？"
-  s1_en: "Multiply the per-ticket expected value by forecasted ticket volume to estimate baseline demand, then consider demand variability, waste tolerance, and service targets before setting production."
-  s1_zh: "用单笔订单的期望需求乘以预测订单量，可估算基准需求；确定产量时还要考虑需求波动、浪费容忍度和服务目标。"
-  s1_zh_hk: "用單筆訂單嘅期望需求乘以預測訂單量，可以估算基準需求；決定產量嗰陣亦要考慮需求波動、浪費容忍度同服務目標。"
-  s2_en: "With four hundred forecast morning tickets and an expected value of 0.75, baseline expected demand is 300 croissants. This is an average planning figure, not a promise that exactly 300 will be sold."
-  s2_zh: "若预测早市有 400 笔订单，单笔期望值为 0.75，则基准期望需求为 300 件可颂。这是平均规划值，并不保证实际销量恰好为 300 件。"
-  s2_zh_hk: "如果預測早市有 400 筆訂單，而單筆期望值係 0.75，基準期望需求就係 300 件牛角包。呢個係平均規劃值，唔保證實際銷量啱啱好係 300 件。"
-  s3_en: "The operating rule is to verify that the PMF is valid, calculate expected demand as a weighted average, and treat the result as a baseline that must be combined with variability and service objectives."
-  s3_zh: "运营规则是：先验证 PMF 有效，再以概率加权平均计算期望需求，并把结果视为基准，与需求波动和服务目标一并使用。"
-  s3_zh_hk: "營運規則係：先驗證 PMF 有效，再用概率加權平均計算期望需求，並將結果視為基準，同需求波動及服務目標一齊使用。"
+  title_zh: "用期望做基准，再乘上客流"
+  title_zh_hk: "用期望做基準，再乘上客流"
+  q1_en: "How does E[X] size the batch? → Scale it by forecasted tickets"
+  q1_zh: "期望怎么定产量？→ 乘上预测客单量"
+  q1_zh_hk: "期望點定產量？→ 乘上預測客單量"
+  q2_en: "Is E[X] a promise? → No — baseline plus variability and service goals"
+  q2_zh: "期望是保证吗？→ 不是——基准还要加上波动和服务目标"
+  q2_zh_hk: "期望係保證嗎？→ 唔係——基準仲要加上波動同服務目標"
+  s1_en: "Check the PMF sums to one, then take the probability-weighted average — that is E[X]."
+  s1_zh: "先确认 PMF 加总为 1，再做概率加权平均——那就是 E[X]。"
+  s1_zh_hk: "先確認 PMF 加總為 1，再做概率加權平均——嗰個就係 E[X]。"
+  s2_en: "Four hundred morning tickets times 0.75 gives a baseline of 300 croissants — an average plan, not a guarantee."
+  s2_zh: "四百笔早市订单乘以 0.75，基准是 300 件可颂——是平均规划，不是保证卖出 300。"
+  s2_zh_hk: "四百筆朝早訂單乘以 0.75，基準係 300 件牛角包——係平均規劃，唔係保證賣出 300。"
+  s3_en: "Fold in demand swings, waste tolerance, and service targets before you lock the bake."
+  s3_zh: "定产量之前，还要把需求波动、浪费容忍和服务目标一起算进去。"
+  s3_zh_hk: "定產量之前，仲要將需求波動、浪費容忍同服務目標一齊計入去。"

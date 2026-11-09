@@ -1,19 +1,40 @@
 id: STAT-M01-T06-PCTL
-course: statistics
 course_en: Business Statistics
 course_zh: 商务统计
 course_zh_hk: 商務統計
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 540
+duration_target_s: 500
 title_en: What is a percentile?
 title_zh: 什么是百分位数？
 title_zh_hk: 咩係百分位數？
-objective_en: Decide whether one shop's sales are strong by finding its place in the ordered line of shops, turn that place into a percentile rank, find a percentile with the nearest-rank method (round the place up), and see why the answer depends on the group, period and method.
-objective_zh: 通过找出一家店在排好的一排店里的位置，判断它的销量强不强；把位置换算成百分位排名，用最接近秩法（位置向上取整）求出百分位数，并看到答案为什么取决于比较哪组店、哪段时间和用什么方法。
-objective_zh_hk: 透過搵出一間店喺排好嘅一排店入面嘅位置，判斷佢嘅銷量勁唔勁；將位置換算成百分位排名，用最接近秩法（位置向上取整）搵出百分位數，並睇到答案點解取決於比較邊組店、邊段時間同用咩方法。
+youtube:
+  description_en: |
+    What is a percentile?
+    
+    Head office wants strong shops to visit. Shop D sold 390 cups. Alone, 390 cannot say if that is strong. Five shops Monday: 360, 420, 280, 390, 310. Average about 352 puts D only 38 above average. On the ordered line D is 4th of 5: 4 shops sit at or below 390, so 4 / 5 = 80%. 390 is the 80th percentile; Shop D's percentile rank is 80%.
+    
+    To find the 80th: sort, 0.80 x 5 = 4, read place 4 = 390. For the 50th, 0.50 x 5 = 2.5 rounds up to place 3. Add Shop F above 420 and 4 of 6 at or below 390 is about 67%. A percentile is a place in line, not how far ahead. Report the group, period, and method.
+    
+    Business Statistics - Module 1 - Short 6 (percentile)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    什么是百分位数？
+    
+    总部想先拜访强店。D店卖了390杯。单看390说不出强不强。五家店星期一：360、420、280、390、310。平均数约352，D只高38。排序后D是第4/5名：4家在390及以下，4 / 5 = 80%。390是第80百分位数；D店的百分位秩是80%。
+    
+    找第80：排序，0.80 x 5 = 4，读第4位=390。第50时，0.50 x 5 = 2.5向上取整到第3位。再加高于420的F店，4/6约67%。百分位数是队列位置，不是领先多少。要写明店铺组、时期和方法。
+    
+    商务统计 - 模块1 - 短片6（百分位数）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    咩係百分位數？
+    
+    總部想先拜訪強店。D店賣咗390杯。單睇390講唔出強唔強。五間店星期一：360、420、280、390、310。平均數約352，D只高38。排好之後D係第4/5名：4間喺390及以下，4 / 5 = 80%。390係第80百分位數；D店嘅百分位秩係80%。
+    
+    搵第80：排序，0.80 x 5 = 4，讀第4位=390。第50時，0.50 x 5 = 2.5向上取整到第3位。再加高過420嘅F店，4/6約67%。百分位數係隊列位置，唔係領先幾多。要寫明店鋪組、時期同方法。
+    
+    商務統計 - 模組1 - 短片6（百分位數）
+    覺得有用嘅話，訂閱下一集。
+
 glossary:
 - en: percentile
   zh: 百分位数
@@ -172,6 +193,7 @@ beats:
   s3_zh_hk: 排好嗰條線，直接答到真正嘅問題：五間店入面有四間賣咗390杯或者更少。呢個講嘅係位置，唔係大細。咁點樣將「五間入面有四間」變成一個經理可以攞嚟比較嘅數？
 - id: share
   visual: steps
+  layout: rows
   seconds: 40
   kicker: The Share
   kicker_en: The Share
@@ -180,9 +202,9 @@ beats:
   title_en: From 4 of 5 to a percent
   title_zh: 从五分之四到百分比
   title_zh_hk: 由五分之四到百分比
-  step1_en: 4 shops at or below 390
-  step1_zh: 四家不高于 390
-  step1_zh_hk: 四間唔高過 390
+  step1_en: 4 of 5 shops ≤ 390
+  step1_zh: 四家 ≤ 390
+  step1_zh_hk: 四間 ≤ 390
   step2_en: 4 ÷ 5 = 0.80
   step2_zh: 4 ÷ 5 = 0.80
   step2_zh_hk: 4 ÷ 5 = 0.80
@@ -233,9 +255,9 @@ beats:
   formula_en: 'pth percentile: about p% at or below'
   formula_zh: 第 p 百分位数：约 p% 不高于它
   formula_zh_hk: 第 p 百分位數：約 p% 唔高過佢
-  gloss_en: 390 = 80th percentile of the five
-  gloss_zh: 390 是五家店的第八十百分位数
-  gloss_zh_hk: 390 係五間店嘅第八十百分位數
+  gloss_en: 390 = 80th percentile (of 5)
+  gloss_zh: 390 = 五家的第80百分位数
+  gloss_zh_hk: 390 = 五間嘅第80百分位數
   s1_en: >-
     Here it is in words. Put the values in order. The p-th percentile is a value with about p percent of the values at or below it.
     p is just the percent you ask about, 80 for the 80th, 50 for the 50th. And a value's percentile rank is the share of values at or below it.
@@ -248,6 +270,7 @@ beats:
   s2_zh_hk: 星期一嘅數據入面，390杯係第80百分位數，D店嘅百分位排名係80%。留意「大約」呢兩個字：得五間店，每間店就係20%嘅一級。而家假設經理倒轉問：畀我第80百分位數。你應該讀邊間店？
 - id: find80
   visual: steps
+  layout: rows
   seconds: 42
   kicker: The Other Way
   kicker_en: The Other Way
@@ -262,9 +285,9 @@ beats:
   step2_en: 0.80 × 5 = 4
   step2_zh: 0.80 × 5 = 4
   step2_zh_hk: 0.80 × 5 = 4
-  step3_en: Place 4 = 390 cups
-  step3_zh: 第 4 位 = 390 杯
-  step3_zh_hk: 第 4 位 = 390 杯
+  step3_en: Place 4 → 390 cups
+  step3_zh: 第4位 → 390 杯
+  step3_zh_hk: 第4位 → 390 杯
   s1_en: Use the same five shops. Step one, sort them, from 280 up to 420. A percentile only makes sense on ordered data.
   s1_zh: 还是这五家店。第一步，把它们排好，从280排到420。百分位数只对有序数据才有意义。
   s1_zh_hk: 都係呢五間店。第一步，將佢哋排好，由280排到420。百分位數只係對有序數據先有意思。
@@ -378,7 +401,7 @@ beats:
   s3_zh_hk: 佢話唔到你知距離。其他店拋離幾多、落後幾多，佢都唔理；F店實際賣咗幾多，由頭到尾都冇關係。佢亦唔係每間店都要做到嘅目標。佢只係屬於一組店、一段時間、一種計法。任何一樣變咗，多一間店、換一個星期、換一種取整嘅方法，答案都可能會變。
 - id: answer
   visual: takeaway
-  seconds: 70
+  seconds: 30
   kicker: The Answer
   kicker_en: The Answer
   kicker_zh: 答案
@@ -386,22 +409,27 @@ beats:
   title_en: Strong? Check the percentile.
   title_zh: 强不强？先看排第几
   title_zh_hk: 勁唔勁？先睇排第幾
-  q1_en: What does the 80th percentile describe?
-  q1_zh: 第八十百分位数描述什么？
-  q1_zh_hk: 第八十百分位數描述咩？
-  q2_en: What context must accompany it?
-  q2_zh: 报告时必须同时说明什么？
-  q2_zh_hk: 報告嗰陣一定要同時講明咩？
-  s1_en: Back to head office and Shop D. Is 390 cups a strong day? On its own, 390 could not tell you. Lined up with the other four shops, it sits in place 4 of 5.
-  s1_zh: 回到总部和D店。390杯算不算强？单看390，你判断不了。跟另外四家店排在一起，它在五家里排第4位。
-  s1_zh_hk: 返去總部同D店。390杯算唔算勁？淨係睇390，你判斷唔到。同另外四間店排埋一齊，佢喺五間入面排第4位。
+  q1_en: 'What does the 80th percentile describe? → About 80% at or below — here 390 cups'
+  q1_zh: 第八十百分位数描述什么？→ 大约80%不高于它——这里是390杯
+  q1_zh_hk: 第八十百分位數描述咩？→ 大約80%唔高過佢——呢度係390杯
+  q2_en: 'What context must accompany it? → Group, period, and method'
+  q2_zh: 报告时必须同时说明什么？→ 哪组店、哪段时间、什么方法
+  q2_zh_hk: 報告嗰陣一定要同時講明咩？→ 邊組店、邊段時間、咩方法
+  s1_en: >-
+    Back to Shop D. Is 390 strong? Alone, no. In place 4 of 5, that is the 80th percentile.
+  s1_zh: >-
+    回到D店。390算不算强？单看不行。在五家里排第4，就是第80百分位。
+  s1_zh_hk: >-
+    返到D店。390算唔算勁？淨睇唔得。喺五間入面排第4，就係第80百分位。
   s2_en: >-
-    What does the 80th percentile describe? A value with about 80 percent of the group at or below it. Here that value is 390 cups, so Shop D's percentile rank is 80 percent,
-    near the top, with only Shop B ahead. To find it, sort the shops, multiply the percent by the count, round up if the place has a decimal, and read that place.
-  s2_zh: 第80百分位数描述什么？一个大约有80%的店不高于它的数值。这里这个数值是390杯，所以D店的百分位排名是80%，接近顶端，只有B店在它前面。找的方法是：把店排好，用百分比乘以店的数目，位置有小数就向上取整，然后读出那个位置。
-  s2_zh_hk: 第80百分位數描述咩？一個大約有80%嘅店唔高過佢嘅數值。呢度呢個數值係390杯，所以D店嘅百分位排名係80%，接近頂端，得B店喺佢前面。搵嘅方法係：將啲店排好，用百分比乘店嘅數目，位置有小數就向上取整，然後讀出嗰個位置。
+    About 80 percent of the group sold at or below it — near the top.
+  s2_zh: >-
+    大约80%的店卖得不比它多——接近顶端。
+  s2_zh_hk: >-
+    大約80%嘅店賣得唔多過佢——接近頂端。
   s3_en: >-
-    What context must accompany it? The group of shops, the period, and the method, here the nearest-rank method. Add one bigger shop, and Shop D slips to about 67 percent.
-    These are numbers we supposed for one Monday. A percentile tells you where a shop stands in its line, not how much more it sold, and not what any shop should sell.
-  s3_zh: 报告时必须同时说明什么？比较的是哪组店、哪段时间、用什么方法，这里是最接近秩法。多加一家更大的店，D店就掉到大约67%。这些都是我们为一个星期一假设的数字。百分位数告诉你一家店在这一排里站在哪里，不告诉你它多卖了多少，也不告诉你哪家店应该卖多少。
-  s3_zh_hk: 報告嗰陣一定要同時講明咩？比較嘅係邊組店、邊段時間、用咩方法，呢度係最接近秩法。加多一間大啲嘅店，D店就跌到大約67%。呢啲都係我哋為一個星期一假設嘅數字。百分位數話你知一間店喺呢一排入面企喺邊，唔話你知佢多賣咗幾多，亦唔話你知邊間店應該賣幾多。
+    Report the group, the period, and the method with it. That is the answer.
+  s3_zh: >-
+    报告时写明哪组店、哪段时间、什么方法。这就是答案。
+  s3_zh_hk: >-
+    報告嗰陣寫明邊組店、邊段時間、咩方法。呢個就係答案。

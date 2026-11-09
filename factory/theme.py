@@ -56,6 +56,15 @@ def resolve(raw: dict | None) -> dict:
     }
     for key in ("bg", "ink", "muted", "white", "navy", "gold", "emerald", "wash", "wash2"):
         theme[key] = hex_rgb(src[key])
+    # Optional typography keys (see docs/THEMES.md). Absent = original look.
+    if src.get("typography") not in (None, ""):
+        try:
+            theme["typography"] = int(src.get("typography"))
+        except (TypeError, ValueError):
+            pass
+    for key in ("title_font", "body_font"):
+        if src.get(key):
+            theme[key] = str(src[key])
     return theme
 
 

@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import os
+import re
 import sys
 from pathlib import Path
 
@@ -8,7 +10,7 @@ import yaml
 
 from glyphs import scan_lesson
 from langs import beat_text, stage_lines
-from youtube import youtube_errors, youtube_warnings
+from youtube import load_series_links, youtube_errors, youtube_warnings
 
 
 def _stem(beat: dict, name: str) -> str:
@@ -226,6 +228,67 @@ def text_length_warnings(lesson: dict) -> list[str]:
     return warns
 
 
+STEP_NUM_RE = re.compile(r"^\s*\d{1,2}\s*[.、)）．](?!\d)\s*")
+_DIGIT_RE = re.compile(r"\d")
+# Rough speech rates for the hold estimate (build.py measures the real audio).
+_RATE_WORDS_EN = 2.3
+_RATE_CJK = 4.2
+
+
+def _lang_fields(beat: dict, stem: str):
+    for sfx in ("", "_en", "_zh", "_zh_cn", "_zh_hk"):
+        val = beat.get(f"{stem}{sfx}")
+        if isinstance(val, str) and val.strip():
+            yield sfx or "_", val
+
+
+def _speech_seconds(text: str) -> float:
+    cjk = _cjk_len(text)
+    if cjk:
+        return cjk / _RATE_CJK
+    return len(str(text).split()) / _RATE_WORDS_EN
+
+
+def qa_warnings(lesson: dict) -> list[str]:
+    """Layout QA (warnings only): numbered step text, numbers in two_column,
+    stage scripts long enough to hold one still > 20 s."""
+    warns: list[str] = []
+    try:
+        hold_warn = float(os.environ.get("VF_HOLD_WARN") or 20)
+    except ValueError:
+        hold_warn = 20.0
+    for i, beat in enumerate(lesson.get("beats") or [], start=1):
+        bid = beat.get("id", i)
+        vis = beat.get("visual")
+        if vis == "steps":
+            for k in range(1, 7):
+                for sfx, val in _lang_fields(beat, f"step{k}"):
+                    if STEP_NUM_RE.match(val):
+                        warns.append(
+                            f"Beat {bid} step{k}{sfx.strip('_') and sfx} starts with a typed number ({val.strip()[:16]!r}); "
+                            "the row badge already numbers it, drop the prefix."
+                        )
+        if vis == "two_column":
+            left = [v for _s, v in _lang_fields(beat, "left")]
+            right = [v for _s, v in _lang_fields(beat, "right")]
+            if any(_DIGIT_RE.search(v) for v in left) and any(_DIGIT_RE.search(v) for v in right):
+                warns.append(
+                    f"Beat {bid} two_column has numbers on both sides; a chart "
+                    "(rank_line, freq_bars or ratio_bars) usually compares them better."
+                )
+        for k in range(1, 9):
+            for sfx, val in _lang_fields(beat, f"s{k}"):
+                if sfx in ("_", ""):
+                    continue
+                secs = _speech_seconds(val)
+                if secs > hold_warn:
+                    warns.append(
+                        f"Beat {bid} s{k}{sfx} reads ~{secs:.0f}s on one still (> {hold_warn:.0f}s); "
+                        "split it into two stages."
+                    )
+    return warns
+
+
 def load_lesson(path: Path) -> dict:
     data = yaml.safe_load(Path(path).read_text(encoding="utf-8"))
     if not isinstance(data, dict):
@@ -332,7 +395,8 @@ def main() -> int:
     lesson = load_lesson(path)
     errors = validate(lesson)
     warns = text_length_warnings(lesson)
-    warns.extend(youtube_warnings(lesson))
+    warns.extend(youtube_warnings(lesson, None, load_series_links(path, str(lesson.get("id") or ""))))
+    warns.extend(qa_warnings(lesson))
     if errors:
         print("INVALID")
         for e in errors:

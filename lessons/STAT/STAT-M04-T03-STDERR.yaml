@@ -7,14 +7,51 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
-title_en: The standard error
-title_zh: 均值的锚点：标准误与平方根递减律
-title_zh_hk: 均值的錨點：標準誤與平方根遞減律
+duration_target_s: 220
+title_en: What is the standard error?
+title_zh: 什么是标准误？
+title_zh_hk: 乜嘢係標準誤？
 objective_en: Define the standard error of the sample mean SE = sigma / sqrt(n), explain the square-root law of precision,
   contrast individual dispersion sigma with sampling uncertainty SE, and calculate audit sample sizes under budget trade-offs.
 objective_zh: 定义样本均值的标准误 SE = sigma / 根号(n)，解析精度提升的平方根边际递减法则，严格区分个体波动 sigma 与抽样不确定度 SE，并在审计预算约束下权衡抽检规模。
 objective_zh_hk: 定義樣本均值嘅標準誤 SE = sigma / 根號(n)，解析精度提升嘅平方根邊際遞減法則，嚴格區分個體波動 sigma 與抽樣不確定度 SE，並喺審計預算約束下權衡抽檢規模。
+youtube:
+  description_en: |
+    What is the standard error?
+
+    Suppose the manager of Shop A wants to know the average spend per customer. One receipt is a single coffee, the next is a whole office order, so single receipts swing a lot. If she treats the average of a sample as if it swings like one receipt, she misreads every change; if she checks more receipts than she needs, she pays for precision she does not use.
+
+    The standard deviation, sigma, is how much single receipts spread. The standard error, SE, is how much the sample average would move from one random sample to the next. In an average, high and low receipts partly cancel, so SE = sigma / √n, where √n is the number that times itself gives n.
+
+    In an assumed example, sigma = $18. With n = 25 receipts, √25 = 5, so SE = 18 / 5 = $3.60. With n = 100 receipts, √100 = 10, so SE = 18 / 10 = $1.80.
+
+    Four times the receipts, four times the checking work, but the standard error only halves. To cut it to a tenth, you need a hundred times the receipts. That is the square-root law, and it is why precision has diminishing returns.
+
+    Rule: SE = sigma / √n. Halving the standard error takes four times the sample, so weigh the checking cost against the cost of a wrong read before you grow n. This assumes the receipts are drawn at random and independently.
+  description_zh: |
+    什么是标准误？
+
+    假设A店的经理想知道每位顾客平均花多少钱。一张小票可能只是一杯咖啡，下一张却是整个办公室的订单，单张小票波动很大。如果把样本平均当成单张小票那样晃，每次变动都会看错；如果抽查的小票比需要的多，就是花钱买了用不上的精度。
+
+    标准差 sigma，看的是单张小票分散得多开。标准误 SE，看的是换一批随机样本，样本平均会移动多少。求平均的时候，高的和低的会部分抵消，所以 SE = sigma / √n。√n 就是哪个数自己乘自己等于 n。
+
+    在一个假设的例子里，sigma = $18。抽 25 张小票，√25 = 5，SE = 18 / 5 = $3.60。抽 100 张小票，√100 = 10，SE = 18 / 10 = $1.80。
+
+    小票多了四倍，查账的工作也多了四倍，标准误却只减了一半。想把它缩到十分一，就要一百倍的小票。这就是平方根法则，也是精度边际收益递减的原因。
+
+    规则：SE = sigma / √n。标准误减半要四倍的样本，所以扩大 n 以前，先比较抽查成本和看错的代价。这里假设小票是随机、独立抽出来的。
+  description_zh_hk: |
+    乜嘢係標準誤？
+
+    假設A店嘅經理想知每位客人平均使幾多錢。一張單可能只係一杯咖啡，下一張就係成個辦公室嘅訂單，單張單波動好大。如果將樣本平均當成單張單噉郁，每次變動都會睇錯；如果抽查嘅單多過需要，就係用錢買咗用唔着嘅精度。
+
+    標準差 sigma，睇嘅係單張單散得幾開。標準誤 SE，睇嘅係換一批隨機樣本，樣本平均會郁幾多。計平均嗰陣，高嘅同低嘅會部分抵銷，所以 SE = sigma / √n。√n 即係邊個數自己乘自己等於 n。
+
+    喺一個假設嘅例子入面，sigma = $18。抽 25 張單，√25 = 5，SE = 18 / 5 = $3.60。抽 100 張單，√100 = 10，SE = 18 / 10 = $1.80。
+
+    單多咗四倍，查數嘅工夫都多咗四倍，標準誤就只係減咗一半。想將佢縮到十分一，就要一百倍嘅單。呢個就係平方根法則，亦都係精度邊際收益遞減嘅原因。
+
+    規則：SE = sigma / √n。標準誤減半要四倍嘅樣本，所以加大 n 以前，先比較抽查成本同睇錯嘅代價。呢度假設啲單係隨機、獨立抽出嚟嘅。
 glossary:
 - en: standard error (SE)
   zh: 标准误
@@ -35,180 +72,189 @@ glossary:
 quiz:
 - id: Q1
   type: multiple_choice
-  question_en: If individual customer spend has a standard deviation of sigma = $18, what happens to the standard error of
-    the sample mean if management expands the audit sample from n = 25 to n = 100 tickets?
-  question_zh: 若单个顾客消费金额的标准差为 sigma = $18，当审计抽检量从 n = 25 张小票扩充至 n = 100 张小票时，样本均值的标准误会发生何种变化？
-  question_zh_hk: 若單個顧客消費金額嘅標準差為 sigma = $18，當審計抽檢量由 n = 25 張單據擴充至 n = 100 張單據嗰陣，樣本均值嘅標準誤會發生咩變化？
+  question_en: Suppose single receipts at Shop B have a standard deviation of sigma = $18. What happens to the standard error
+    of the sample mean if the manager checks n = 100 receipts instead of n = 25?
+  question_zh: 假设B店单张小票的标准差是 sigma = $18。经理抽查的小票从 n = 25 张加到 n = 100 张，样本均值的标准误会怎样变？
+  question_zh_hk: 假設B店單張單嘅標準差係 sigma = $18。經理抽查嘅單由 n = 25 張加到 n = 100 張，樣本均值嘅標準誤會點變？
   options_en:
-  - 'A: It is cut exactly in half, dropping from $3.60 to $1.80, because sample size quadrupled under the square-root denominator.'
-  - 'B: It decreases by 75% because sample size increased by a factor of 4.'
-  - 'C: It remains unchanged at $18 because individual customer volatility is fixed.'
-  - 'D: It increases to $72 because auditing more receipts introduces more administrative error.'
+  - 'A: It halves, from $3.60 to $1.80, because √100 = 10 is only twice √25 = 5.'
+  - 'B: It falls by 75%, to $0.90, because n grew four times.'
+  - 'C: It stays at $18, because single receipts swing just as much as before.'
+  - 'D: It rises, because more receipts bring in more extreme orders.'
   options_zh:
-  - 'A: 恰好减半，从 $3.60 下降至 $1.80，因为分母中的样本量开根号后仅变为原来的 2 倍。'
-  - 'B: 降幅达 75%，因为抽检小票数量扩大了整整 4 倍。'
-  - 'C: 恒定保持在 $18 不变，因为顾客个体的固有消费波动是客观固定的。'
-  - 'D: 膨胀增加至 $72，因为抽查更多小票必然会引入更多的人工录入误差。'
+  - 'A: 减半，从 $3.60 降到 $1.80，因为 √100 = 10 只是 √25 = 5 的两倍。'
+  - 'B: 降 75%，变成 $0.90，因为 n 大了四倍。'
+  - 'C: 还是 $18，因为单张小票的波动没变。'
+  - 'D: 变大，因为小票多了，极端的大单也会更多。'
   options_zh_hk:
-  - 'A: 啱啱好減半，由 $3.60 下降至 $1.80，因為分母入面嘅樣本量開根號後淨係變為原本嘅 2 倍。'
-  - 'B: 降幅達 75%，因為抽檢單據數量擴大咗整整 4 倍。'
-  - 'C: 恆定保持喺 $18 唔變，因為顧客個體嘅固有消費波動係客觀固定嘅。'
-  - 'D: 膨脹增加至 $72，因為抽查更多單據必然會引入更多嘅人工錄入誤差。'
+  - 'A: 減半，由 $3.60 跌到 $1.80，因為 √100 = 10 只係 √25 = 5 嘅兩倍。'
+  - 'B: 跌 75%，變成 $0.90，因為 n 大咗四倍。'
+  - 'C: 仲係 $18，因為單張單嘅波動冇變。'
+  - 'D: 變大，因為單多咗，極端嘅大單都會多咗。'
   answer: A
-  explanation_en: SE_25 = 18 / sqrt(25) = 18 / 5 = $3.60. SE_100 = 18 / sqrt(100) = 18 / 10 = $1.80. Quadrupling n only halves
-    the standard error due to the square-root relationship.
-  explanation_zh: n = 25 时，SE = 18 / 5 = $3.60；n = 100 时，SE = 18 / 10 = $1.80。由于分母存在根号约束，样本量扩充至 4 倍仅能换来标准误减半（精度提升 2 倍）。
-  explanation_zh_hk: n = 25 嗰陣，SE = 18 / 5 = $3.60；n = 100 嗰陣，SE = 18 / 10 = $1.80。由於分母存在根號約束，樣本量擴充至 4 倍淨係可以換嚟標準誤減半（精度提升 2
-    倍）。
+  explanation_en: SE = 18 / √25 = 18 / 5 = $3.60, and SE = 18 / √100 = 18 / 10 = $1.80. Four times the receipts only doubles
+    the square root, so the standard error halves. B divides by n instead of √n; C confuses sigma with SE; D forgets that
+    highs and lows cancel in an average.
+  explanation_zh: SE = 18 / √25 = 18 / 5 = $3.60；SE = 18 / √100 = 18 / 10 = $1.80。小票多四倍，根号只大两倍，所以标准误减半。B 除的是 n 不是 √n；C 把 sigma 当成了 SE；D 忘了求平均时高低会抵消。
+  explanation_zh_hk: SE = 18 / √25 = 18 / 5 = $3.60；SE = 18 / √100 = 18 / 10 = $1.80。單多四倍，開方只係大兩倍，所以標準誤減半。B 除嘅係 n 唔係 √n；C 將 sigma 當咗係 SE；D 唔記得計平均嗰陣高低會抵銷。
 - id: Q2
   type: multiple_choice
-  question_en: What is the core conceptual difference between population standard deviation sigma and standard error SE?
-  question_zh: 总体标准差 sigma 与抽样标准误 SE 之间的核心概念区别是什么？
-  question_zh_hk: 總體標準差 sigma 與抽樣標準誤 SE 之間嘅核心概念區別係咩？
+  question_en: What is the difference between the standard deviation sigma and the standard error SE?
+  question_zh: 标准差 sigma 和标准误 SE 有什么不同？
+  question_zh_hk: 標準差 sigma 同標準誤 SE 有乜嘢唔同？
   options_en:
-  - 'A: Sigma measures the dispersion of individual customers in the real world; SE measures the uncertainty and variability
-    of the sample average across repeated sample draws.'
-  - 'B: Sigma is used only for retail accounting, whereas SE is used only for warehouse logistics.'
-  - 'C: Sigma is calculated with n-1, whereas SE is always calculated with n+1.'
-  - 'D: There is no mathematical difference; SE is simply an abbreviation for sigma.'
+  - 'A: Sigma is how much single receipts spread; SE is how much the sample average moves from one sample to the next.'
+  - 'B: They are the same spread; SE is just a shorter name for sigma.'
+  - 'C: Sigma shrinks as we check more receipts, while SE stays fixed.'
+  - 'D: SE is how far one receipt sits from the sample average.'
   options_zh:
-  - 'A: sigma 度量现实世界中每个独立顾客行为的天然离散度；SE 则度量在反复抽样推演中，样本平均值这一估计量自身的抖动不确定性。'
-  - 'B: sigma 专用于门店财务做账，而 SE 则专门用于仓库货品物流盘点。'
-  - 'C: sigma 在运算中强制除以 n-1，而 SE 在运算中永远强制除以 n+1。'
-  - 'D: 两者在数学定义上毫无区别；SE 仅仅是统计软件对 sigma 的英文缩写。'
+  - 'A: sigma 是单张小票分散多开；SE 是换一批样本，样本平均会移动多少。'
+  - 'B: 两个是同一种波动，SE 只是 sigma 的简称。'
+  - 'C: 小票查得越多，sigma 越小，SE 不变。'
+  - 'D: SE 是一张小票离样本平均有多远。'
   options_zh_hk:
-  - 'A: sigma 度量現實世界入面每個獨立顧客行為嘅天然離散度；SE 就度量喺反覆抽樣推演入面，樣本平均值呢個估計量自身嘅抖動不確定性。'
-  - 'B: sigma 專用於門市財務做賬，而 SE 就專門用於倉庫貨品物流盤點。'
-  - 'C: sigma 喺運算入面強制除以 n-1，而 SE 喺運算入面永遠強制除以 n+1。'
-  - 'D: 兩者喺數學定義上毫無區別；SE 淨係統計軟件對 sigma 嘅英文縮寫。'
+  - 'A: sigma 係單張單散得幾開；SE 係換一批樣本，樣本平均會郁幾多。'
+  - 'B: 兩個係同一種波動，SE 只係 sigma 嘅簡稱。'
+  - 'C: 單查得越多，sigma 越細，SE 唔變。'
+  - 'D: SE 係一張單離樣本平均有幾遠。'
   answer: A
-  explanation_en: Standard deviation sigma is a fixed property of individual entities in the population. Standard error is
-    the standard deviation of a sample statistic across repeated random draws, shrinking with larger n.
-  explanation_zh: 标准差 sigma 刻画总体中单张小票、单个客人的固有离散度；标准误 SE 则是样本均值这个统计量自身的标准差，随着样本量 n 的增大而逐步收敛变窄。
-  explanation_zh_hk: 標準差 sigma 刻畫總體入面單張單據、單個客人嘅固有離散度；標準誤 SE 就係樣本均值呢個統計量自身嘅標準差，隨住樣本量 n 嘅增大而逐步收斂變窄。
+  explanation_en: Sigma belongs to single customers and does not shrink when we check more receipts. SE belongs to the sample
+    average; it equals sigma / √n, so it shrinks as n grows. C has the two the wrong way round, and D describes one receipt's
+    distance, not the swing of the average.
+  explanation_zh: sigma 属于单个顾客，多查小票它也不会变小。SE 属于样本平均，等于 sigma / √n，n 越大它越小。C 把两者调转了，D 讲的是一张小票的距离，不是平均的波动。
+  explanation_zh_hk: sigma 屬於單個客人，查多啲單佢都唔會變細。SE 屬於樣本平均，等於 sigma / √n，n 越大佢越細。C 將兩樣調轉咗，D 講嘅係一張單嘅距離，唔係平均嘅波動。
 beats:
 - id: hook
   visual: title_card
   seconds: 30
-  kicker: The Shrinking Fluctuation
-  kicker_en: The Shrinking Fluctuation
-  kicker_zh: 被驯服的波动
-  kicker_zh_hk: 被馴服嘅波動
-  title_en: Why is the group average calmer than the customer?
-  title_zh: 为什么百人均值远比单个顾客沉稳百倍？
-  title_zh_hk: 點解百人均值遠比單個顧客沉穩百倍？
-  en: 'At the Wan Chai register during the morning commute, individual order totals are wild: one patron pays twenty-two dollars
-    for black coffee, while the next drops four hundred dollars on cold brew for their entire trading desk. Individual spend
-    swings erratically. Yet when headquarters averages the receipts of one hundred random patrons, that average hardly budges
-    from day to day. What mathematical brake calms the volatility of sample averages?'
-  zh: 清晨早高峰的湾仔店收银台前，单笔客单金额极端分化：上一位赶时间的白领只花二十二元买一杯美式，下一位交易室助理却豪掷四百元为整个团队打包精品冷萃。个体消费上蹿下跳。然而，当总部调取一百位随机顾客的平均消费时，这个百人均值在日复一日的审计中却稳如泰山。究竟是什么数学刹车，驯服了样本均值的剧烈震荡？
-  zh_hk: 清晨朝高峰嘅灣仔舖收銀台前，單筆客單金額極端分化：上一位趕時間嘅白領淨係使二十二蚊買一杯美式，下一位交易室助理就豪擲四百蚊為成個團隊打包精品冷萃。個體消費上擸下扯。然而，當總部調取一百位隨機顧客嘅平均消費嗰陣，嗰個百人均值喺日復一日嘅審計入面卻穩如泰山。究竟係咩數學剎車，馴服咗樣本均值嘅劇烈震盪？
+  kicker: One receipt vs the average
+  kicker_en: One receipt vs the average
+  kicker_zh: 一张小票与平均
+  kicker_zh_hk: 一張單同平均
+  title_en: What is the standard error?
+  title_zh: 什么是标准误？
+  title_zh_hk: 乜嘢係標準誤？
+  en: Suppose the manager of Shop A wants to know the average spend per customer. One receipt is a single coffee; the next
+    is a whole office order. Single receipts swing a lot. Treat the average as if it swings like one receipt, and she misreads
+    every change. Check more receipts than she needs, and she pays for precision she never uses. So how much does an average
+    swing? That number is the standard error.
+  zh: 假设A店的经理想知道，每位顾客平均花多少钱。一张小票可能只是一杯咖啡，下一张却是整个办公室的订单，单张小票波动很大。要是把平均也当成单张小票那样晃，每次变动她都会看错；要是抽查的小票比需要的多，就是花钱买了用不上的精度。那么，平均到底会晃多少？这个数，就叫标准误。
+  zh_hk: 假設A店嘅經理想知，每位客人平均使幾多錢。一張單可能只係一杯咖啡，下一張就係成個辦公室嘅訂單，單張單波動好大。如果將平均都當成單張單噉郁，每次變動佢都會睇錯；如果抽查嘅單多過需要，就係用錢買咗用唔着嘅精度。咁，平均究竟會郁幾多？呢個數，就叫標準誤。
 - id: define
   visual: definition_card
-  seconds: 34
-  kicker: What It Is
-  kicker_en: What It Is
+  seconds: 36
+  kicker: What it is
+  kicker_en: What it is
   kicker_zh: 核心概念
   kicker_zh_hk: 核心概念
-  title_en: The standard error formula
-  title_zh: 样本均值的标准误数学表达式
-  title_zh_hk: 樣本均值嘅標準誤數學表達式
-  formula: SE = sigma / sqrt(n); Var(X-bar) = sigma^2 / n
-  formula_zh: 均值标准误 SE = 总体标准差 sigma / 根号(n)；样本均值的方差为 sigma^2 / n
-  formula_zh_hk: 均值標準誤 SE = 總體標準差 sigma / 根號(n)；樣本均值嘅方差為 sigma^2 / n
-  formula_tex: \text{SE}_{\bar{X}} = \sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}
-  s1_en: Standard deviation sigma measures the natural spread of individual items. Standard error measures the uncertainty
-    of our sample estimate across repeated audit batches.
-  s1_zh: 标准差 sigma 衡量的是现实中个体数据的天然离散程度；而标准误 SE 衡量的，则是我们在多次独立抽检中估算出的样本均值自身的晃动不确定度。
-  s1_zh_hk: 標準差 sigma 衡量嘅係現實中個體數據嘅天然離散程度；而標準誤 SE 衡量嘅，就係我哋喺多次獨立抽檢入面估算出嘅樣本均值自身嘅晃動不確定度。
-  s2_en: Because extreme highs and extreme lows cancel each other out when averaged together, the variance of the sample mean
-    drops to sigma squared over n, leaving standard error equal to sigma divided by the square root of n.
-  s2_zh: 因为在求平均值的过程中，极端的高额大单与极低的零头小单相互抵消，样本均值的方差直接被压缩至原方差的 n 分之一，对应的标准误等于 sigma 除以根号 n。
-  s2_zh_hk: 因為喺求平均值嘅過程入面，極端嘅高額大單同極低嘅零頭細單相互抵消，樣本均值嘅方差直接被壓縮至原方差嘅 n 分之一，對應嘅標準誤等於 sigma 除以根號 n。
-- id: mechanics
-  visual: two_column
-  seconds: 36
-  kicker: The Trade-off
-  kicker_en: The Trade-off
-  kicker_zh: 边际代价
-  kicker_zh_hk: 邊際代價
-  title_en: The square-root law of diminishing precision
-  title_zh: 平方根约束下的精度边际递减法则
-  title_zh_hk: 平方根約束下嘅精度邊際遞減法則
-  left_en: 'Linear Cost: 4x sample size costs 4x audit labor'
-  left_zh: 线性成本：样本量扩大 4 倍，审计工时与开支同步翻 4 倍
-  left_zh_hk: 線性成本：樣本量擴大 4 倍，審計工時與開支同步翻 4 倍
-  right_en: 'Square-Root Return: Standard error only cuts by half (1/sqrt(4))'
-  right_zh: 根号收益：标准误仅收窄至二分之一（1/根号(4) = 1/2）
-  right_zh_hk: 根號收益：標準誤淨係收窄至二分之一（1/根號(4) = 1/2）
-  s1_en: Notice the square root resting quietly in the denominator. To cut your estimation uncertainty in half, you cannot
-    simply double your sample—you must quadruple it.
-  s1_zh: 请密切注意潜伏在分母中的那个平方根号。如果想要将均值的估算误差直接砍半，绝不能仅仅把样本量翻倍——你必须耗费整整四倍的样本体量。
-  s1_zh_hk: 請密切注意潛伏喺分母入面嘅嗰個平方根號。如果想要將均值嘅估算誤差直接斬半，絕唔可以淨係將樣本量翻倍——你必須耗費整整四倍嘅樣本體量。
-  s2_en: To shrink standard error by a factor of ten, you must audit one hundred times as many receipts. Information gains
-    face brutally diminishing marginal returns.
-  s2_zh: 若想把标准误收窄至原来的十分之一，门店必须核查整整一百倍的小票。统计信息精度的提升，面临着极其残酷的边际收益递减法则。
-  s2_zh_hk: 若想將標準誤收窄至原本嘅十分之一，門市必須核查整整一百倍嘅單據。統計信息精度嘅提升，面臨住極其殘酷嘅邊際收益遞減法則。
-  s3_en: 'Executive leadership must recognize this engineering limit: chasing near-zero standard error by ballooning audit
-    batch sizes rapidly incinerates operational capital.'
-  s3_zh: 高管层必须清醒认识到这个工程约束：若试图通过无限扩大抽查样本量来追求近乎为零的标准误，只会迅速烧光企业的经营审计预算。
-  s3_zh_hk: 高管層必須清醒認識到呢個工程約束：若試圖透過無限擴大抽查樣本量嚟追求近乎為零嘅標準誤，淨係會迅速燒光企業嘅經營審計預算。
+  title_en: Standard error of the mean
+  title_zh: 样本均值的标准误
+  title_zh_hk: 樣本均值嘅標準誤
+  formula: SE = σ / √n
+  formula_zh: SE = σ / √n
+  formula_zh_hk: SE = σ / √n
+  formula_tex: \text{SE} = \frac{\sigma}{\sqrt{n}}
+  s1_en: Two spreads, two jobs. The standard deviation, sigma, says how much single receipts spread. The standard error says
+    how much the sample average would move if we drew a fresh random sample of the same size, again and again.
+  s1_zh: 两种波动，各管一件事。标准差 sigma，说的是单张小票分散得多开。标准误说的是，同样多的小票，再随机抽一批、再抽一批，样本平均每次会移动多少。
+  s1_zh_hk: 兩種波動，各自管一樣嘢。標準差 sigma，講嘅係單張單散得幾開。標準誤講嘅係，同樣咁多張單，再隨機抽一批、再抽一批，樣本平均每次會郁幾多。
+  s2_en: Why does the average move less? A big order and a small one partly cancel. So the standard error is sigma over
+    the square root of n, the number of receipts. That root is the number that times itself gives n.
+  s2_zh: 为什么平均晃得比较少？求平均的时候，大单和小单会部分抵消。所以标准误等于 sigma 除以根号 n，n 是小票的张数。根号 n，就是哪个数自己乘自己等于 n。
+  s2_zh_hk: 點解平均郁得冇咁多？計平均嗰陣，大單同細單會部分抵銷。所以標準誤等於 sigma 除以 n 開方，n 係單嘅張數。n 開方，即係邊個數自己乘自己等於 n。
 - id: ledger
   visual: steps
-  seconds: 36
-  kicker: The Ledger
-  kicker_en: The Ledger
-  kicker_zh: 账目精算
-  kicker_zh_hk: 賬目精算
-  title_en: Auditing Wan Chai basket spend uncertainty
-  title_zh: 湾仔店客单均值标准误阶梯实测
-  title_zh_hk: 灣仔舖客單均值標準誤階梯實測
-  step1_en: 'Baseline dispersion: Individual customer sigma = $18.00'
-  step1_zh: 个体离散基准：单张客单波动标准差 sigma = $18.00
-  step1_zh_hk: 個體離散基準：單張客單波動標準差 sigma = $18.00
-  step2_en: 'Pilot audit (n = 25): SE = 18 / sqrt(25) = 18 / 5 = $3.60'
-  step2_zh: 初级抽检 (n = 25)：SE = 18 / 根号(25) = 18 / 5 = $3.60 估算震荡
-  step2_zh_hk: 初級抽檢 (n = 25)：SE = 18 / 根號(25) = 18 / 5 = $3.60 估算震盪
-  step3_en: 'Scale audit (n = 100): SE = 18 / sqrt(100) = 18 / 10 = $1.80 (50% cut!)'
-  step3_zh: 规模扩检 (n = 100)：SE = 18 / 根号(100) = 18 / 10 = $1.80（误差砍半）
-  step3_zh_hk: 規模擴檢 (n = 100)：SE = 18 / 根號(100) = 18 / 10 = $1.80（誤差斬半）
-  s1_en: Audit historical receipts at Wan Chai. Individual spend has an established standard deviation sigma of eighteen dollars,
-    reflecting diverse breakfast orders.
-  s1_zh: 核查湾仔店的历史出餐台账。单笔点单金额的标准差 sigma 确凿为十八元，忠实反映了从单杯浓缩到大型套餐的个体消费悬殊。
-  s1_zh_hk: 核查灣仔舖嘅歷史出餐台賬。單筆點單金額嘅標準差 sigma 確鑿為十八蚊，忠實反映咗由單杯濃縮到大型套餐嘅個體消費懸殊。
-  s2_en: 'A quick audit of twenty-five tickets produces a standard error of eighteen divided by five: three dollars and sixty
-    cents. Our sample mean still fluctuates noticeably across daily draws.'
-  s2_zh: 若快速抽查二十五张小票，标准误为十八除以五，录得三块六毛。这意味着不同抽检批次的样本均值，仍在数元区间内明显摇摆。
-  s2_zh_hk: 若快速抽查二十五張單據，標準誤為十八除以五，錄得三蚊六毫。呢個意味住唔同抽檢批次嘅樣本均值，仲喺幾蚊區間內明顯搖擺。
-  s3_en: 'Quadruple the audit to one hundred receipts: standard error drops to eighteen divided by ten, exactly one dollar
-    and eighty cents. For four times the cost, our estimate is now twice as sharp.'
-  s3_zh: 将抽检量狂扩四倍至一百张小票：标准误骤降至十八除以十，精准收敛到一块八毛。耗费四倍的审计成本，换来了两倍的估算精度。
-  s3_zh_hk: 將抽檢量狂擴四倍至一百張單據：標準誤驟降至十八除以十，精準收斂到一蚊八毫。耗費四倍嘅審計成本，換嚟咗兩倍嘅估算精度。
+  layout: rows
+  seconds: 62
+  kicker: A worked example
+  kicker_en: A worked example
+  kicker_zh: 算一次看看
+  kicker_zh_hk: 計一次睇吓
+  title_en: Shop A, σ = $18
+  title_zh: A店，σ = $18
+  title_zh_hk: A店，σ = $18
+  step1_en: 5 × 5 = 25, so √25 = 5
+  step1_zh: 5 × 5 = 25，所以 √25 = 5
+  step1_zh_hk: 5 × 5 = 25，所以 √25 = 5
+  step2_en: 'n = 25: 18 / 5 = $3.60'
+  step2_zh: 'n = 25：18 / 5 = $3.60'
+  step2_zh_hk: 'n = 25：18 / 5 = $3.60'
+  step3_en: 10 × 10 = 100, so √100 = 10
+  step3_zh: 10 × 10 = 100，所以 √100 = 10
+  step3_zh_hk: 10 × 10 = 100，所以 √100 = 10
+  step4_en: 'n = 100: 18 / 10 = $1.80'
+  step4_zh: 'n = 100：18 / 10 = $1.80'
+  step4_zh_hk: 'n = 100：18 / 10 = $1.80'
+  s1_en: Let us work it with made-up numbers. Suppose single receipts at Shop A have a standard deviation of eighteen dollars.
+    The manager checks twenty-five receipts. What number times itself gives twenty-five? Five, because five times five is
+    twenty-five.
+  s1_zh: 我们用一组假设的数字来算。假设A店单张小票的标准差是十八块，经理抽查二十五张。哪个数自己乘自己等于二十五？是五，因为五乘五等于二十五。
+  s1_zh_hk: 我哋用一組假設嘅數字嚟計。假設A店單張單嘅標準差係十八蚊，經理抽查二十五張。邊個數自己乘自己等於二十五？係五，因為五乘五等於二十五。
+  s2_en: So the standard error is eighteen divided by five, three dollars and sixty cents. Single receipts spread by about
+    eighteen dollars, but an average of twenty-five moves by only about three sixty from sample to sample.
+  s2_zh: 所以标准误是十八除以五，等于三块六。单张小票大约差十八块，可是二十五张的平均，换一批样本，只会移动大约三块六。
+  s2_zh_hk: 所以標準誤係十八除以五，等於三蚊六。單張單大約差十八蚊，但二十五張嘅平均，換一批樣本，只會郁大約三蚊六。
+  s3_en: Now she checks four times as many, one hundred receipts. What number times itself gives one hundred? Ten, because
+    ten times ten is one hundred. The receipts grew four times, but the square root only doubled, from five to ten.
+  s3_zh: 现在她抽查四倍的量，一百张。哪个数自己乘自己等于一百？是十，因为十乘十等于一百。小票多了四倍，根号却只从五变成十，只大了两倍。
+  s3_zh_hk: 而家佢抽查四倍嘅量，一百張。邊個數自己乘自己等於一百？係十，因為十乘十等於一百。單多咗四倍，開方就只係由五變做十，大咗兩倍。
+  s4_en: So the standard error is eighteen divided by ten, one dollar and eighty cents. Four times the receipts, and the standard
+    error is only cut in half, from three sixty to one eighty.
+  s4_zh: 所以标准误是十八除以十，等于一块八。小票多了四倍，标准误只是减半，从三块六降到一块八。
+  s4_zh_hk: 所以標準誤係十八除以十，等於一蚊八。單多咗四倍，標準誤只係減半，由三蚊六跌到一蚊八。
+- id: mechanics
+  visual: two_column
+  seconds: 44
+  kicker: The trade-off
+  kicker_en: The trade-off
+  kicker_zh: 代价
+  kicker_zh_hk: 代價
+  title_en: The square-root law
+  title_zh: 平方根法则
+  title_zh_hk: 平方根法則
+  left_en: Cost grows with n
+  left_zh: 成本跟着 n 涨
+  left_zh_hk: 成本跟住 n 升
+  right_en: SE shrinks with √n
+  right_zh: SE 跟着 √n 缩
+  right_zh_hk: SE 跟住 √n 縮
+  s1_en: Now look at the bill. Checking receipts takes staff time, and every receipt costs about the same. Four times the
+    receipts means about four times the checking work. The cost grows in step with n.
+  s1_zh: 再看成本。查小票要花人手，每一张的工夫差不多。小票多四倍，查账的工作也差不多多四倍。成本是跟着 n 一起涨的。
+  s1_zh_hk: 再睇成本。查單要用人手，每一張嘅工夫差唔多。單多四倍，查數嘅工夫都差唔多多四倍。成本係跟住 n 一齊升嘅。
+  s2_en: But the standard error shrinks only with the square root of n. Four times the work halves it. To cut it to a tenth,
+    you need ten times ten, a hundred times the receipts. This is the square-root law.
+  s2_zh: 可是标准误只跟着根号 n 缩小。四倍的工作，只换来一半。想把它缩到十分一，要十乘十，也就是一百倍的小票。这就叫平方根法则。
+  s2_zh_hk: 但標準誤只係跟住 n 開方縮細。四倍嘅工夫，只換到一半。想將佢縮到十分一，要十乘十，即係一百倍嘅單。呢個就叫平方根法則。
+  s3_en: So each extra receipt buys less precision than the one before. We call this diminishing precision returns. Past
+    some point, more checking costs more than the extra sharpness is worth.
+  s3_zh: 所以每多查一张，买到的精度都比上一张少。这叫精度边际收益递减。过了某个点，多查的成本，就会比多出来的那点精度更贵。
+  s3_zh_hk: 所以每多查一張，買到嘅精度都少過上一張。呢個叫精度邊際收益遞減。過咗某個位，多查嘅成本，就會貴過多出嚟嗰少少精度。
 - id: takeaway
   visual: takeaway
-  seconds: 32
-  kicker: Decision Rule
-  kicker_en: Decision Rule
-  kicker_zh: 商业法则
-  kicker_zh_hk: 商業法則
-  title_en: Price precision using the square root
-  title_zh: 用平方根为精度定价，绝不做过度抽检的冤大头
-  title_zh_hk: 用平方根為精度定價，絕唔做過度抽檢嘅冤大頭
-  q1_en: Why should executives never confuse sigma with standard error?
-  q1_zh: 为什么高管绝不能在运营汇报中将 sigma 与标准误混为一谈？
-  q1_zh_hk: 點解高管絕唔可以喺營運匯報入面將 sigma 與標準誤混為一談？
-  q2_en: What mathematical theorem guarantees the shape of sample means when n grows?
-  q2_zh: 当样本量持续扩大时，是哪条统领统计学的大法则保证了均值形态的归宿？
-  q2_zh_hk: 當樣本量持續擴大嗰陣，係邊條統領統計學嘅大法則保證咗均值形態嘅歸宿？
-  s1_en: Never confuse sigma with standard error; sigma describes the spread of individual customers, while standard error
-    defines the precision of your executive estimate.
-  s1_zh: 切勿混淆 sigma 与标准误；sigma 刻画的是市场上具体消费者的离散画像，而标准误度量的则是管理决策层对大盘认知的估算清晰度。
-  s1_zh_hk: 切勿混淆 sigma 與標準誤；sigma 刻畫嘅係市場上具體消費者嘅離散畫像，而標準誤度量嘅就係管理決策層對大盤認知嘅估算清晰度。
-  s2_en: 'Budget sample audits by solving for standard error: demand double the accuracy only when the commercial risk of
-    estimation error exceeds four times the audit expense.'
-  s2_zh: 依据标准误反向制定抽查预算：只有当估算误差引发的商业决策风险远超四倍的抽查成本时，才值得授权将抽样量翻两番。
-  s2_zh_hk: 依據標準誤反向制定抽查預算：淨係得當估算誤差引發嘅商業決策風險遠超四倍嘅抽查成本嗰陣，先值得授權將抽樣量翻兩番。
-  s3_en: The operating rule is to price precision with the square root. Quadrupling the audit from 25 to 100 tickets cuts
-    the standard error from $3.60 to $1.80, not to a quarter.
-  s3_zh: 操作规则是用平方根为精度定价。抽检从 25 张扩到 100 张，标准误由 $3.60 降到 $1.80，而不是降到四分之一。
-  s3_zh_hk: 操作規則係用平方根為精度定價。抽檢由 25 張擴到 100 張，標準誤由 $3.60 降到 $1.80，而唔係降到四分之一。
+  seconds: 48
+  kicker: The rule
+  kicker_en: The rule
+  kicker_zh: 规则
+  kicker_zh_hk: 規則
+  title_en: Price precision with √n
+  title_zh: 用 √n 为精度定价
+  title_zh_hk: 用 √n 為精度定價
+  q1_en: 'n = 25 → SE = $3.60'
+  q1_zh: 'n = 25 → SE = $3.60'
+  q1_zh_hk: 'n = 25 → SE = $3.60'
+  q2_en: 'n = 100 → SE = $1.80'
+  q2_zh: 'n = 100 → SE = $1.80'
+  q2_zh_hk: 'n = 100 → SE = $1.80'
+  s1_en: Back to the manager of Shop A. Single receipts swing by about eighteen dollars, but that is sigma, not the swing
+    of her average. With twenty-five receipts, the average moves by about three dollars and sixty cents.
+  s1_zh: 回到A店的经理。单张小票大约差十八块，可那是 sigma，不是她那个平均的波动。抽二十五张，平均大约只会移动三块六。
+  s1_zh_hk: 返到A店嘅經理。單張單大約差十八蚊，但嗰個係 sigma，唔係佢個平均嘅波動。抽二十五張，平均大約只會郁三蚊六。
+  s2_en: Should she check a hundred? That halves the standard error to one dollar and eighty cents, at four times the checking
+    work. It pays only if a wrong read of about three sixty costs her more than the extra work.
+  s2_zh: 要不要查一百张？标准误会减半到一块八，可查账工作是四倍。只有当看错三块六左右的代价，比多出来的工作更大，才值得。
+  s2_zh_hk: 使唔使查一百張？標準誤會減半到一蚊八，但查數工夫係四倍。只有當睇錯三蚊六左右嘅代價，大過多出嚟嘅工夫，先至值得。
+  s3_en: 'So the rule: the standard error is sigma over the square root of n, and halving it takes four times the sample.
+    This assumes the receipts are drawn at random and independently.'
+  s3_zh: 所以规则是：标准误等于 sigma 除以根号 n，想把它减半，就要四倍的样本。这里假设小票是随机、独立抽出来的。
+  s3_zh_hk: 所以規則係：標準誤等於 sigma 除以 n 開方，想將佢減半，就要四倍嘅樣本。呢度假設啲單係隨機、獨立抽出嚟嘅。

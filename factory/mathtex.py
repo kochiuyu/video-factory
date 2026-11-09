@@ -25,6 +25,8 @@ def looks_like_tex(text: str) -> bool:
     raw = (text or "").strip()
     if not raw:
         return False
+    if any("\u3400" <= ch <= "\u9fff" or "\uf900" <= ch <= "\ufaff" for ch in raw) and not raw.startswith(("$", r"\(", r"\[")):
+        return False  # prose with CJK is not TeX; mathtext has no CJK glyphs
     if raw.startswith("$") or raw.startswith(r"\(") or raw.startswith(r"\["):
         return True
     return bool(_LATEXISH.search(raw))

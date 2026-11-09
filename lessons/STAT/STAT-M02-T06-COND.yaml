@@ -1,19 +1,39 @@
 id: STAT-M02-T06-COND
-course: statistics
 course_en: Business Probability Foundations
 course_zh: 商务概率基础
 course_zh_hk: 商務概率基礎
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
+duration_target_s: 166
 title_en: "Restricting the operational universe"
 title_zh: "收窄视野：条件概率与样本空间缩减"
 title_zh_hk: "收窄視野：條件概率與樣本空間縮減"
-objective_en: "Define conditional probability P(A|B) as the probability of event A occurring given that event B has already occurred, demonstrate how condition B shrinks the denominator from the grand total to a restricted subset, and calculate conversion rates using loyalty app data."
-objective_zh: "把条件概率 P(A|B) 定义为已知事件 B 发生的前提下事件 A 发生的概率，演示条件 B 如何将分母从全局样本缩减至特定子集，并运用会员 App 转化数据完成计算。"
-objective_zh_hk: "將條件概率 P(A|B) 定義為已知事件 B 發生嘅前提下事件 A 發生嘅概率，演示條件 B 點樣將分母由全局樣本縮減至特定子集，並運用會員 App 轉化數據完成計算。"
+youtube:
+  description_en: |
+    Restricting the operational universe
+
+    Conditional probability P(A|B) asks: given we already sit inside B, what is the chance of A? Shrink the denominator to condition B before you quote a rate.
+
+    Among 1,000 tickets, 400 are iced. Of those, 120 also take a pastry. So P(pastry | iced) = 120 / 400 = 0.30 — not the unconditional pastry margin of 0.30 on the whole store, read inside the iced segment.
+
+    Business Probability Foundations - Module 2 - Short 6 (conditional probability)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    缩小运营世界再算概率
+
+    条件概率 P(A|B) 问的是：已经处在 B 里，A 的机会有多大？报价率之前，先把分母收缩到条件 B。
+
+    1,000 笔里有 400 笔冷饮；其中 120 笔兼买甜点。所以 P(甜点|冷饮) = 120/400 = 0.30——在冷饮细分里读，而不是只看全店甜点边缘。
+
+    商务概率基础 - 模块2 - 短片6（条件概率）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    收細營運世界再計概率
+
+    條件概率 P(A|B) 問嘅係：已經處喺 B 入面，A 嘅機會有幾大？報價率之前，先將分母收縮到條件 B。
+
+    1,000 筆入面有 400 筆凍飲；其中 120 筆兼買甜點。所以 P(甜點|凍飲) = 120/400 = 0.30——喺凍飲細分入面讀，而唔係淨係睇全店甜點邊緣。
+
+    商務概率基礎 - 模組2 - 短片6（條件概率）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: "conditional probability"
   zh: "条件概率"
@@ -92,8 +112,8 @@ beats:
   title_zh: "大盘平均顾客，误导营销策略"
   title_zh_hk: "大盤平均顧客，誤導營銷策略"
   en: "Storewide data says thirty percent of patrons purchase a bakery item. But treat every customer walking through the door as a thirty percent prospect, and you will misallocate staff and waste marketing push notifications. An iced-drink customer may have a different pastry rate from the storewide average. How should managers recalculate when the customer segment is already known?"
-  zh: "全店大盘数据显示，有 30% 的顾客会购买烘焙点心。但如果你把进门的每一位顾客都当成只有 30% 购买概率的普通客群，就会错配烘焙人手并浪费精准推送。冷饮顾客的点心购买率可能不同于全店平均值。当顾客所属群体已经明确时，管理者应如何重新计算？"
-  zh_hk: "全店大盤數據顯示，有 30% 嘅顧客會買烘焙點心。但如果你將入舖嘅每一位顧客都當成淨係得 30% 購買概率嘅普通客群，就會錯配烘焙人手兼且浪費精準推送。凍飲顧客買點心嘅比率可能同全店平均值唔同。當顧客所屬群體已經知道，管理者應該點樣重新計算？"
+  zh: "全店数据显示，有 30% 的顾客会买烘焙点心。可要是把进门的每一位都当成只有 30% 购买概率的普通人，烘焙人手会配错，推送也会浪费。冷饮顾客的点心购买率，可能跟全店平均不一样。顾客所属群体已经清楚时，该怎么重算？"
+  zh_hk: "全店數據顯示，有 30% 嘅顧客會買烘焙點心。但係如果將入舖每一位都當成淨係得 30% 購買概率嘅普通人，烘焙人手會配錯，推送都會浪費。凍飲顧客買點心嘅比率，可能同全店平均唔同。顧客所屬群體已經清楚嗰陣，應該點樣重計？"
 - id: define
   visual: definition_card
   seconds: 34
@@ -109,11 +129,11 @@ beats:
   formula_zh: "P(A|B) = P(A 且 B) / P(B)"
   formula_zh_hk: "P(A|B) = P(A 兼 B) / P(B)"
   s1_en: "Conditional probability measures the likelihood of event A occurring given that event B is already known to have happened, written as P of A vertical bar B."
-  s1_zh: "条件概率度量的是在已知事件 B 已经发生的前提下，事件 A 发生的可能性，记作 P(A|B)，读作在给定 B 条件下 A 的概率。"
-  s1_zh_hk: "條件概率度量嘅係喺已知事件 B 已經發生嘅前提下，事件 A 發生嘅可能性，記做 P(A|B)，讀做喺給定 B 條件下 A 嘅概率。"
+  s1_zh: "条件概率量的是：已知事件 B 已经发生，事件 A 还有多大可能。写作 P(A|B)，读作「在 B 的条件下，A 的概率」。"
+  s1_zh_hk: "條件概率量嘅係：已知事件 B 已經發生，事件 A 仲有幾大可能。寫做 P(A|B)，讀做「喺 B 嘅條件下，A 嘅概率」。"
   s2_en: "The vertical bar represents a lens: everything outside condition B disappears. The denominator is no longer the entire store ledger; it shrinks strictly to the subset of condition B."
-  s2_zh: "竖线宛如一个滤镜：满足条件 B 之外的所有其他情况全部隐去。计算的分母不再是全店总账，而是严格缩窄为条件 B 这个局部子集。"
-  s2_zh_hk: "條豎線就似一個濾鏡：滿足條件 B 之外嘅所有其他情況全部隱去。計算嘅分母唔再係全店總賬，而係嚴格縮窄為條件 B 呢個局部子集。"
+  s2_zh: "那条竖线像滤镜：条件 B 以外的情况都隐去。分母不再是全店总账，而是收窄到条件 B 这一块。"
+  s2_zh_hk: "嗰條豎線好似濾鏡：條件 B 以外嘅情況都隱走。分母唔再係全店總賬，而係收窄到條件 B 呢一塊。"
 - id: mechanism
   visual: two_column
   seconds: 36
@@ -131,45 +151,80 @@ beats:
   right_zh: "条件概率：分母仅保留子集 B 的体量"
   right_zh_hk: "條件概率：分母淨係保留子集 B 嘅體量"
   s1_en: "When evaluating unconditioned customer choices, your reference point is the entire sample space of all one thousand transactions."
-  s1_zh: "在评估无条件的大盘顾客偏好时，你的基准参照系是包含全部一千笔订单的完整样本空间。"
-  s1_zh_hk: "喺評估無條件嘅大盤顧客偏好嗰陣，你嘅基準參照系係包含全部一千筆訂單嘅完整樣本空間。"
+  s1_zh: "看无条件的大盘偏好时，参照系是全部一千笔订单的样本空间。"
+  s1_zh_hk: "睇無條件嘅大盤偏好嗰陣，參照系係全部一千筆訂單嘅樣本空間。"
   s2_en: "The moment you ask 'given iced drinks', the six hundred hot coffee orders are discarded. They cannot happen under this condition."
-  s2_zh: "但一旦你提出“在点了冷饮的前提下”，另外六百笔热咖啡订单就被立即剔除，因为在此条件下它们绝不可能出现。"
-  s2_zh_hk: "但一旦你提出「喺點咗凍飲嘅前提下」，另外六百筆熱咖啡訂單就被即刻剔除，因為喺呢個條件下佢哋絕唔可能出現。"
+  s2_zh: "一旦问「在点了冷饮的前提下」，另外六百笔热咖啡就要拿掉——在这个条件下，它们不会出现。"
+  s2_zh_hk: "一旦問「喺點咗凍飲嘅前提下」，另外六百筆熱咖啡就要攞走——喺呢個條件下，佢哋唔會出現。"
   s3_en: "The new universe consists solely of the four hundred iced drink tickets, and conditional probability counts what fraction of those four hundred included food."
-  s3_zh: "全新的分析宇宙仅由这四百笔冷饮订单构成，条件概率所计算的，正是这四百笔订单中究竟有多大比例加购了餐点。"
-  s3_zh_hk: "全新嘅分析宇宙淨係由呢四百筆凍飲訂單構成，條件概率所計算嘅，正正係呢四百筆訂單入面究竟有幾大比例加購咗餐點。"
+  s3_zh: "新的世界只剩这四百笔冷饮单。条件概率算的，就是这四百笔里有多大比例加了餐点。"
+  s3_zh_hk: "新嘅世界淨係剩呢四百筆凍飲單。條件概率計嘅，就係呢四百筆入面有幾大比例加咗餐點。"
 - id: ledger
-  visual: steps
+  visual: table_grid
   seconds: 36
+  rows: 3
+  cols: 3
   kicker: "The Ledger"
   kicker_en: "The Ledger"
   kicker_zh: "账目实操"
   kicker_zh_hk: "賬目實操"
-  title_en: "Calculating conversion given iced orders"
-  title_zh: "推演冷饮顾客的加购转化率"
-  title_zh_hk: "推演凍飲顧客嘅加購轉化率"
-  step1_en: "Identify new denominator: 400 Iced tickets"
-  step1_zh: "锁定新分母：400 笔冷饮订单"
-  step1_zh_hk: "鎖定新分母：400 筆凍飲訂單"
-  step2_en: "Locate joint numerator: 120 combo orders"
-  step2_zh: "提取分子交集：120 笔组合订单"
-  step2_zh_hk: "提取分子交集：120 筆組合訂單"
-  step3_en: "Calculate ratio: 120 / 400 = 0.30"
-  step3_zh: "计算条件胜率：120 / 400 = 0.30"
-  step3_zh_hk: "計算條件勝率：120 / 400 = 0.30"
-  s1_en: "Look back at our Wan Chai ledger. Step one: identify the condition. Four hundred patrons purchased iced coffee; four hundred is our new denominator."
-  s1_zh: "回到湾仔店的交易台账。第一步：锁定已知条件。四百位顾客购买了冷饮，四百就是计算的新分母。"
-  s1_zh_hk: "返去灣仔舖嘅交易台賬。第一步：鎖定已知條件。四百位顧客買咗凍飲，四百就係計算嘅新分母。"
+  title_en: "Conversion given iced orders"
+  title_zh: "给定冷饮单的转化率"
+  title_zh_hk: "給定凍飲單嘅轉化率"
+  row1_en: "Iced"
+  row1_zh: "冷饮"
+  row1_zh_hk: "凍飲"
+  row2_en: "Hot"
+  row2_zh: "热饮"
+  row2_zh_hk: "熱飲"
+  row3_en: "Total"
+  row3_zh: "合计"
+  row3_zh_hk: "合計"
+  col1_en: "Pastry"
+  col1_zh: "甜点"
+  col1_zh_hk: "甜點"
+  col2_en: "No pastry"
+  col2_zh: "无甜点"
+  col2_zh_hk: "無甜點"
+  col3_en: "Total"
+  col3_zh: "合计"
+  col3_zh_hk: "合計"
+  c11: "120"
+  c12: "280"
+  c13: "400"
+  c21: "180"
+  c22: "420"
+  c23: "600"
+  c31: "300"
+  c32: "700"
+  c33: "1,000"
+  highlight_s1: row1
+  highlight_s2: c11
+  highlight_s3: c13
+  footer_en: "Condition on iced: shrink to the iced row"
+  footer_zh: "条件在冷饮：收缩到冷饮这一行"
+  footer_zh_hk: "條件喺凍飲：收縮到凍飲呢一行"
+  caption_s1_en: "New denom = iced margin 400"
+  caption_s1_zh: "新分母 = 冷饮边缘 400"
+  caption_s1_zh_hk: "新分母 = 凍飲邊緣 400"
+  caption_s2_en: "Numer = iced and pastry 120"
+  caption_s2_zh: "分子 = 冷饮且甜点 120"
+  caption_s2_zh_hk: "分子 = 凍飲兼甜點 120"
+  caption_s3_en: "P(pastry | iced) = 120/400 = 0.30"
+  caption_s3_zh: "P(甜点|冷饮) = 120/400 = 0.30"
+  caption_s3_zh_hk: "P(甜點|凍飲) = 120/400 = 0.30"
+  s1_en: "Look back at our Shop A ledger. Step one: identify the condition. Four hundred patrons purchased iced coffee; four hundred is our new denominator."
+  s1_zh: "回到A店台账。第一步：锁定条件。四百位顾客买了冷饮，四百就是新分母。"
+  s1_zh_hk: "返去A舖台賬。第一步：鎖定條件。四百位顧客買咗凍飲，四百就係新分母。"
   s2_en: "Step two: identify how many tickets inside that specific group also ordered a pastry. The cross-tab shows exactly one hundred and twenty."
-  s2_zh: "第二步：在这一特定客群中，找出有多少张小票同时加点了烘焙点心。交叉制表显示恰好是一百二十笔。"
-  s2_zh_hk: "第二步：喺呢個特定客群入面，搵出有幾多張單同時加點咗烘焙點心。交叉制表顯示啱啱好係一百二十筆。"
+  s2_zh: "第二步：在这一群里，有多少单同时加了烘焙点心？交叉表显示正好一百二十笔。"
+  s2_zh_hk: "第二步：喺呢一班入面，有幾多單同時加咗烘焙點心？交叉表顯示啱啱一百二十筆。"
   s3_en: "Step three: divide one hundred and twenty by four hundred. The conditional probability of buying a pastry given an iced drink is zero point three zero."
-  s3_zh: "第三步：用一百二十除以四百。在已知购买冷饮的前提下，加购烘焙点心的条件概率是 0.30。"
-  s3_zh_hk: "第三步：用一百二十除以四百。喺已知購買凍飲嘅前提下，加購烘焙點心嘅條件概率係 0.30。"
+  s3_zh: "第三步：一百二十除以四百。已知买了冷饮，再加点心的条件概率是 0.30。"
+  s3_zh_hk: "第三步：一百二十除以四百。已知買咗凍飲，再加點心嘅條件概率係 0.30。"
 - id: takeaway
   visual: takeaway
-  seconds: 32
+  seconds: 30
   kicker: "Decision Rule"
   kicker_en: "Decision Rule"
   kicker_zh: "商业法则"
@@ -177,18 +232,18 @@ beats:
   title_en: "Context resets the denominator"
   title_zh: "场景重置分母，条件决定胜率"
   title_zh_hk: "場景重置分母，條件決定勝率"
-  q1_en: "How should managers interpret P(A|B)?"
-  q1_zh: "管理者应如何正确解读条件概率 P(A|B)？"
-  q1_zh_hk: "管理者應點樣正確解讀條件概率 P(A|B)？"
-  q2_en: "Why is conditioning essential for precision?"
-  q2_zh: "为什么条件思维是精细化运营的核心？"
-  q2_zh_hk: "點解條件思維係精細化營運嘅核心？"
-  s1_en: "Whenever you evaluate risk with prior business information, shrink your universe to condition B before calculating odds."
-  s1_zh: "每当借助已知的商业背景信息评估风险时，在核算胜率前，务必先将分析全集缩减至条件 B 所在的范畴。"
-  s1_zh_hk: "每當借助已知嘅商業背景資訊評估風險嗰陣，喺核算勝率之前，務必先將分析全集縮減至條件 B 所在嘅範疇。"
-  s2_en: "Managing by unconditional averages leads to blunt operations; conditioning turns blunt averages into sharp, tailored segmentation."
-  s2_zh: "依赖大盘无条件均值做管理会导致运营粗放，而条件概率能把粗放的均值淬炼成精准定制的客群分层策略。"
-  s2_zh_hk: "依賴大盤無條件均值做管理會搞到營運粗放，而條件概率可以將粗放嘅均值淬煉成精準定製嘅客群分層策略。"
-  s3_en: "For the iced-drink segment, use 400 as the denominator and 120 as the joint numerator: the relevant pastry rate is 30 percent."
-  s3_zh: "针对冷饮客群，应以 400 为分母、120 为联合分子：相关的点心购买率就是 30%。"
-  s3_zh_hk: "針對凍飲客群，應該用 400 做分母、120 做聯合分子：相關嘅點心購買率就係 30%。"
+  q1_en: "Read P(A|B)? → Shrink the universe to B first"
+  q1_zh: "如何读 P(A|B)？→ 先把世界缩到 B"
+  q1_zh_hk: "點樣讀 P(A|B)？→ 先將世界縮到 B"
+  q2_en: "Why condition? → Blunt averages become sharp segments"
+  q2_zh: "为何要条件化？→ 把粗平均变成细分层"
+  q2_zh_hk: "點解要條件化？→ 將粗平均變成細分層"
+  s1_en: "With prior information, shrink the universe to condition B before you quote odds."
+  s1_zh: "已有先验信息时，先把全集缩到条件 B，再报价率。"
+  s1_zh_hk: "已有先驗資訊嗰陣，先將全集縮到條件 B，再報價率。"
+  s2_en: "Unconditional averages stay blunt; conditioning turns them into tailored segments."
+  s2_zh: "无条件平均仍然粗糙；条件化才能做成精准分层。"
+  s2_zh_hk: "無條件平均仍然粗糙；條件化先做得成精準分層。"
+  s3_en: "Iced segment: 120 over 400 — pastry rate 30 percent inside that world."
+  s3_zh: "冷饮细分：120 除以 400——这个世界里点心率是 30%。"
+  s3_zh_hk: "凍飲細分：120 除以 400——呢個世界入面點心率係 30%。"

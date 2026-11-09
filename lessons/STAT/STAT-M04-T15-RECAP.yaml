@@ -7,15 +7,70 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
+duration_target_s: 298
 title_en: The executive estimation dashboard
-title_zh: 总揽全局：执行官区间估计总览看板与假设检验之桥
-title_zh_hk: 總攬全局：執行官區間估計總覽看板與假設檢驗之橋
+title_zh: 区间估计总览看板
+title_zh_hk: 區間估計總覽看板
 objective_en: Synthesize the complete estimation toolkit across means, proportions, finite corrections, and sample size engineering
   into an executive decision tree, contrast estimation with hypothesis testing, and formulate evidence-based operational strategy
   across Metro branches.
 objective_zh: 将均值估计、比例估计、有限总体修正及样本量工程学融会贯通为高管级统计决策树，阐明参数估计与假设检验的对偶桥梁关系，并针对都市咖啡全港连锁网络制定基于证据的运营决断战略。
 objective_zh_hk: 將均值估計、比例估計、有限總體修正及樣本量工程學融會貫通為高管級統計決策樹，闡明參數估計同假設檢驗嘅對偶橋樑關係，並針對都市咖啡全港連鎖網絡制定基於證據嘅營運決斷戰略。
+youtube:
+  description_en: |-
+    What is the estimation dashboard?
+
+    Across this module the coffee chain faced the same question in many uniforms: which interval tool fits which metric? Shop A basket spend with a large n, a kiosk conversion proportion, a twelve-shot espresso pilot with unknown sigma, and a mystery-audit sample-size plan.
+
+    Master branch logic:
+    Metric → mean or proportion.
+    Mean: Z if sigma known, student t if unknown.
+    Proportion: Z when success-failure clears.
+    If n/N exceeds about 5%, multiply SE by the finite population correction (FPC).
+    Always: CI = point estimate ± (critical value × SE × [FPC]).
+
+    Module numbers kept as-is:
+    Shop A spend, n = 100 → 95% CI about [$46.69, $50.61].
+    Shop E kiosk, n = 350 → 95% CI about [34.87%, 45.13%].
+    Shop A espresso, n = 12 → 95% t-CI [19.04%, 20.56%].
+
+    Duality: a hypothesized mu_0 is rejected at alpha = 0.05 (two-tailed) exactly when it sits outside the 95% CI.
+  description_zh: |-
+    什么是区间估计总览看板？
+
+    整门课里，连锁咖啡反复遇到同一问题的不同制服：哪个区间工具配哪个指标？A店大样本客单、点单机转化比例、十二杯未知 sigma 的意式浓缩试点，还有神秘暗访的样本量计划。
+
+    主分支逻辑：
+    指标 → 均值或比例。
+    均值：sigma 已知用 Z，未知用学生 t。
+    比例：成败条件过关时用 Z。
+    若 n/N 大约超过 5%，标准误再乘有限总体修正（FPC）。
+    通式：置信区间 = 点估计 ±（临界值 × 标准误 × [FPC]）。
+
+    本课沿用模块数字：
+    A店客单，n = 100 → 95% 区间约 [$46.69, $50.61]。
+    E店点单机，n = 350 → 95% 区间约 [34.87%, 45.13%]。
+    A店萃取，n = 12 → 95% t 区间 [19.04%, 20.56%]。
+
+    对偶：原假设值 mu_0 在 alpha = 0.05 双尾检验中被拒绝，当且仅当它落在 95% 置信区间之外。
+  description_zh_hk: |-
+    乜嘢係區間估計總覽看板？
+
+    成門課入面，連鎖咖啡反覆遇到同一問題嘅唔同制服：邊個區間工具配邊個指標？A店大樣本客單、點單機轉化比例、十二杯未知 sigma 嘅意式濃縮試點，仲有神秘暗訪嘅樣本量計劃。
+
+    主分支邏輯：
+    指標 → 均值或比例。
+    均值：sigma 已知用 Z，未知用學生 t。
+    比例：成敗條件過關嗰陣用 Z。
+    若果 n/N 大約超過 5%，標準誤再乘有限總體修正（FPC）。
+    通式：置信區間 = 點估計 ±（臨界值 × 標準誤 × [FPC]）。
+
+    本課沿用模組數字：
+    A店客單，n = 100 → 95% 區間約 [$46.69, $50.61]。
+    E店點單機，n = 350 → 95% 區間約 [34.87%, 45.13%]。
+    A店萃取，n = 12 → 95% t 區間 [19.04%, 20.56%]。
+
+    對偶：原假設值 mu_0 喺 alpha = 0.05 雙尾檢驗入面被拒絕，當且僅當佢落喺 95% 置信區間之外。
 glossary:
 - en: estimation taxonomy
   zh: 参数估计决策树/分类法
@@ -36,184 +91,267 @@ glossary:
 quiz:
 - id: Q1
   type: multiple_choice
-  question_en: Which master decision path should Metro leadership follow when auditing average daily spend per transaction
-    across a new pilot branch with n = 45 receipts and completely unknown population variance sigma?
-  question_zh: 当都市咖啡管理层审计某新开试点分店的平均单笔客单价时（抽查 n = 45 张小票，总体方差 sigma 完全未知），应当沿用哪条经典统计决策路径？
-  question_zh_hk: 當都市咖啡管理層審計某新開試點分舖嘅平均單筆客單價嗰陣（抽查 n = 45 張單據，總體方差 sigma 完全未知），應當沿用邊條經典統計決策路徑？
+  question_en: Which master decision path should leadership follow when auditing average daily spend per transaction at a
+    new pilot shop with n = 45 receipts and completely unknown population variance sigma?
+  question_zh: 当管理层审计某新开试点店的平均单笔客单价时（抽查 n = 45 张小票，总体方差 sigma 完全未知），应当沿用哪条经典统计决策路径？
+  question_zh_hk: 當管理層審計某新開試點店嘅平均單筆客單價嗰陣（抽查 n = 45 張單據，總體方差 sigma 完全未知），應當沿用邊條經典統計決策路徑？
   options_en:
-  - 'A: Use the one-sample t-interval (or normal approximation since n >= 30, with s in place of sigma) because the parameter
+  - 'A: Use the one-sample t-interval (or a Normal approximation since n >= 30, with s in place of sigma) because the parameter
     is a continuous mean with unknown population variance.'
-  - 'B: Use the proportion formula with p* = 0.50 because customer spend is recorded digitally.'
+  - 'B: Use the proportion formula with p* = 0.50 because spend is recorded digitally.'
   - 'C: Use the Finite Population Correction because 45 receipts exceeds 5% of the pilot''s customers.'
-  - 'D: Reject the audit entirely because estimation is impossible without knowing population sigma.'
+  - 'D: Abandon the audit because estimation is impossible without knowing population sigma.'
   options_zh:
-  - 'A: 采用单样本 t 置信区间（或鉴于 n >= 30 中心极限定理生效，以样本标准差 s 替代并调用正态临界值），因为所测指标为总体方差未知的连续均值。'
-  - 'B: 采用保守基准比例公式 p* = 0.50，因为客单消费是以电子数字化方式结算的。'
-  - 'C: 强制启用有限总体修正（FPC），因为 45 张小票突破了该店客流的 5%。'
-  - 'D: 彻底废弃该项审计，因为在总体方差 sigma 未知的情形下在数学上根本无法实施参数估计。'
+  - 'A: 采用单样本 t 置信区间（或鉴于 n >= 30，以样本标准差 s 替代并可用正态近似），因为所测指标为总体方差未知的连续均值。'
+  - 'B: 采用保守基准比例公式 p* = 0.50，因为客单是电子结算的。'
+  - 'C: 启用有限总体修正（FPC），因为 45 张小票突破了该店客流的 5%。'
+  - 'D: 放弃该项审计，因为总体方差 sigma 未知时无法做参数估计。'
   options_zh_hk:
-  - 'A: 採用單樣本 t 置信區間（或鑑於 n >= 30 中心極限定理生效，以樣本標準差 s 替代並調用正態臨界值），因為所測指標為總體方差未知嘅連續均值。'
-  - 'B: 採用保守基準比例公式 p* = 0.50，因為客單消費係以電子數碼化方式結算嘅。'
-  - 'C: 強制啟用有限總體修正（FPC），因為 45 張單據突破咗該舖客流嘅 5%。'
-  - 'D: 徹底廢棄嗰項審計，因為喺總體方差 sigma 未知嘅情形下喺數學上根本冇辦法實施參數估計。'
+  - 'A: 採用單樣本 t 置信區間（或鑑於 n >= 30，以樣本標準差 s 替代並可用正態近似），因為所測指標為總體方差未知嘅連續均值。'
+  - 'B: 採用保守基準比例公式 p* = 0.50，因為客單係電子結算嘅。'
+  - 'C: 啟用有限總體修正（FPC），因為 45 張單據突破咗該店客流嘅 5%。'
+  - 'D: 放棄嗰項審計，因為總體方差 sigma 未知嗰陣冇辦法做參數估計。'
   answer: A
-  explanation_en: Transaction spend is a continuous mean. Because true sigma is unknown, we use sample standard deviation
-    s. With n = 45 >= 30, the CLT guarantees normality of the sample mean, and t_(df=44) converges closely to the normal distribution.
-  explanation_zh: 客单交易金额属于连续型均值指标。由于总体标准差未知，以样本标准差 s 估算。加之样本量 n = 45 >= 30，中心极限定理生效，可直接采用单样本 t 流程（自由度 df = 44，渐近等价于正态分布）。
-  explanation_zh_hk: 客單交易金額屬於連續型均值指標。由於總體標準差未知，以樣本標準差 s 估算。加之樣本量 n = 45 >= 30，中心極限定理生效，可以直接採用單樣本 t 流程（自由度 df = 44，漸近等價於正態分佈）。
+  explanation_en: Transaction spend is a continuous mean. Because true sigma is unknown, use sample standard deviation s.
+    With n = 45 >= 30, the CLT supports treating the sample mean as roughly normal, and t with df = 44 sits close to Normal.
+  explanation_zh: 客单交易金额属于连续型均值指标。由于总体标准差未知，以样本标准差 s 估算。加之样本量 n = 45 >= 30，中心极限定理支持，可采用单样本 t 流程（自由度 df = 44，接近正态）。
+  explanation_zh_hk: 客單交易金額屬於連續型均值指標。由於總體標準差未知，以樣本標準差 s 估算。加之樣本量 n = 45 >= 30，中心極限定理支持，可以採用單樣本 t 流程（自由度 df = 44，接近正態）。
 - id: Q2
   type: multiple_choice
-  question_en: What is the profound structural duality between a two-sided 95% confidence interval and a two-tailed hypothesis
-    test at significance level alpha = 0.05?
-  question_zh: 双尾 95% 置信区间与显著性水平 alpha = 0.05 的双尾假设检验之间，存在何种深刻的结构对偶关系？
-  question_zh_hk: 雙尾 95% 置信區間與顯著性水平 alpha = 0.05 嘅雙尾假設檢驗之間，存在咩深刻嘅結構對偶關係？
+  question_en: What is the structural duality between a two-sided 95% confidence interval and a two-tailed hypothesis test
+    at significance level alpha = 0.05?
+  question_zh: 双尾 95% 置信区间与显著性水平 alpha = 0.05 的双尾假设检验之间，存在何种结构对偶关系？
+  question_zh_hk: 雙尾 95% 置信區間與顯著性水平 alpha = 0.05 嘅雙尾假設檢驗之間，存在咩結構對偶關係？
   options_en:
-  - 'A: A hypothesized null value mu_0 will be rejected by an alpha = 0.05 two-tailed test if and only if that value falls
-    completely outside the 95% confidence interval.'
-  - 'B: Confidence intervals are designed exclusively for marketing, while hypothesis tests are reserved for legal teams.'
-  - 'C: If the confidence interval captures zero, all future hypothesis tests will produce p-values of 1.0.'
-  - 'D: There is no mathematical relationship; estimation and hypothesis testing are mutually exclusive.'
+  - 'A: A hypothesized null value mu_0 is rejected by an alpha = 0.05 two-tailed test if and only if that value falls outside
+    the 95% confidence interval.'
+  - 'B: Confidence intervals are only for reporting, while hypothesis tests are only for legal review.'
+  - 'C: If the confidence interval contains zero, every future hypothesis test must produce a p-value of 1.0.'
+  - 'D: There is no mathematical link; estimation and hypothesis testing are unrelated.'
   options_zh:
-  - 'A: 当且仅当原假设设定的目标值 mu_0 完全落在 95% 置信区间之外时，该零假设才会在 alpha = 0.05 的双尾检验中被正式拒绝。'
-  - 'B: 置信区间是专为品牌营销设计的报表，而假设检验则是法务与合规团队的专用工具。'
-  - 'C: 只要置信区间包含了数值零，未来所有的假设检验都会得出恒等于 1.0 的 p 值。'
-  - 'D: 两者在数学结构上毫无关联；参数估计与假设检验属于非此即彼的对立体系。'
+  - 'A: 当且仅当原假设设定的目标值 mu_0 完全落在 95% 置信区间之外时，该零假设才会在 alpha = 0.05 的双尾检验中被拒绝。'
+  - 'B: 置信区间只用于报表展示，假设检验只供法务审阅。'
+  - 'C: 只要置信区间包含零，未来所有假设检验的 p 值都必然等于 1.0。'
+  - 'D: 两者在数学上没有关系；参数估计与假设检验互不相关。'
   options_zh_hk:
-  - 'A: 當且僅當原假設設定嘅目標值 mu_0 完全落喺 95% 置信區間之外嗰陣，嗰個零假設先至會喺 alpha = 0.05 嘅雙尾檢驗入面被正式拒絕。'
-  - 'B: 置信區間係專為品牌營銷設計嘅報表，而假設檢驗就係法務與合規團隊嘅專用工具。'
-  - 'C: 只要置信區間包含咗數值零，未來所有嘅假設檢驗都會得出恆等於 1.0 嘅 p 值。'
-  - 'D: 兩者喺數學結構上毫無關聯；參數估計與假設檢驗屬於非此即彼嘅對立體系。'
+  - 'A: 當且僅當原假設設定嘅目標值 mu_0 完全落喺 95% 置信區間之外嗰陣，嗰個零假設先至會喺 alpha = 0.05 嘅雙尾檢驗入面被拒絕。'
+  - 'B: 置信區間淨係用於報表展示，假設檢驗淨係供法務審閱。'
+  - 'C: 只要置信區間包含零，未來所有假設檢驗嘅 p 值都必然等於 1.0。'
+  - 'D: 兩者喺數學上冇關係；參數估計同假設檢驗互唔相關。'
   answer: A
-  explanation_en: A confidence interval contains all plausible null hypotheses that cannot be rejected at alpha = 1 - Confidence.
-    If the corporate benchmark mu_0 lies outside the 95% interval, the difference is statistically significant at the 5% level.
-  explanation_zh: 置信区间本质上囊括了在显著性水平 alpha 下无法被拒绝的所有合理零假设取值集合。若管理层设定的基准值 mu_0 落在 95% 区间外部，则在 5% 显著性水平下必定拒绝原假设。
-  explanation_zh_hk: 置信區間本質上囊括咗喺顯著性水平 alpha 下冇辦法被拒絕嘅所有合理零假設取值集合。若果管理層設定嘅基準值 mu_0 落喺 95% 區間外部，噉喺 5% 顯著性水平下必定拒絕原假設。
+  explanation_en: A confidence interval contains all null values that would not be rejected at alpha = 1 − confidence. If
+    the corporate benchmark mu_0 lies outside the 95% interval, the difference is statistically significant at the 5% level.
+  explanation_zh: 置信区间囊括了在显著性水平 alpha 下无法被拒绝的所有合理零假设取值。若管理层设定的基准值 mu_0 落在 95% 区间外部，则在 5% 显著性水平下必定拒绝原假设。
+  explanation_zh_hk: 置信區間囊括咗喺顯著性水平 alpha 下冇辦法被拒絕嘅所有合理零假設取值。若果管理層設定嘅基準值 mu_0 落喺 95% 區間外部，噉喺 5% 顯著性水平下必定拒絕原假設。
 beats:
 - id: hook
   visual: title_card
-  seconds: 30
-  kicker: The Executive Mandate
-  kicker_en: The Executive Mandate
-  kicker_zh: 首席执行官的考题
-  kicker_zh_hk: 首席執行官嘅考題
-  title_en: How do leaders navigate the estimation matrix?
-  title_zh: 面对万千业务指标：管理者如何执掌推断总则？
-  title_zh_hk: 面對萬千業務指標：管理者點樣執掌推斷總則？
-  en: 'From morning rushes at Wan Chai and Mong Kok to late departures at the Airport, Metro Coffee executives face endless
-    audit dilemmas: Should we use Z or t? Are transactions continuous dollars or discrete proportions? Does our espresso machine
-    audit require a finite correction? Operating without a master navigational chart invites strategic paralysis. How do leaders
-    synthesize all fifteen tools of statistical inference into a unified decision dashboard that steers multi-million-dollar
-    capital investments?'
-  zh: 从湾仔与旺角的早高峰出餐，到国际机场航站楼的午夜航班，都市咖啡的管理层每天都面临着复杂的统计抉择：面对未知方差该调遣 Z 还是 t？加购点心应当套用连续均值还是二元比例？机队巡检是否触发有限修正红线？若缺乏宏观航标，决策者极易在指标迷宫中陷入瘫痪。高管层究竟该如何将十五节课的推断法度融会贯通为统一看板，从容掌舵数以千万计的商业资本决断？
-  zh_hk: 由灣仔同旺角嘅朝高峰出餐，到國際機場航站樓嘅午夜航班，都市咖啡嘅管理層每日都面臨住複雜嘅統計抉擇：面對未知方差應該調遣 Z 定係 t？加購點心應當套用連續均值定係二元比例？機隊巡檢係咪觸發有限修正紅線？若果缺乏宏觀航標，決策者極易喺指標迷宮入面陷入癱瘓。高管層究竟應該點樣將十五節課嘅推斷法度融會貫通為統一看板，從容掌舵數以千萬計嘅商業資本決斷？
+  seconds: 44
+  kicker: The executive mandate
+  kicker_en: The executive mandate
+  kicker_zh: 高管的考题
+  kicker_zh_hk: 高管嘅考題
+  title_en: How do leaders pick tools?
+  title_zh: 管理者如何选对区间工具？
+  title_zh_hk: 管理者點樣揀啱區間工具？
+  en: >-
+    From morning rushes at Shop A and Shop B to late shifts at Shop E, a
+    24-hour site, leaders face the same audit fork again and again: Z or
+    student t? A continuous mean or a binary proportion? Does this closed
+    asset need a finite correction? Without a master chart, the team freezes.
+    How do you fold the module's estimation tools into one dashboard that
+    steers capital without guessing?
+  zh: >-
+    从A店、B店的早高峰，到E店这家二十四小时店的夜班，管理层反复撞上同一道分岔：用 Z 还是学生 t？连续均值还是二元比例？封闭资产要不要做有限总体修正？没有总览航标，团队很容易瘫痪。你该怎样把本模块的估计工具收成一张看板，用证据掌舵资本，而不是拍脑袋？
+  zh_hk: >-
+    由A店、B店嘅朝高峰，到E店呢間二十四小時店嘅夜班，管理層反覆撞上同一道分岔：用 Z 定係學生 t？連續均值定係二元比例？封閉資產要唔要做有限總體修正？冇總覽航標，團隊好容易癱瘓。你應該點樣將本模組嘅估計工具收成一張看板，用證據掌舵資本，而唔係拍心口？
 - id: define
   visual: definition_card
-  seconds: 34
-  kicker: The Taxonomy
-  kicker_en: The Taxonomy
+  seconds: 46
+  kicker: The taxonomy
+  kicker_en: The taxonomy
   kicker_zh: 总览体系
   kicker_zh_hk: 總覽體系
   title_en: The master estimation taxonomy
-  title_zh: 统计推断四大核心分支
-  title_zh_hk: 統計推斷四大核心分支
-  formula: Metric -> [Mean (Z if sigma known, t if unknown) | Proportion (Z if np, n(1-p)>=10)] * [FPC if n/N > 0.05]
-  formula_zh: 业务指标 -> [均值：sigma 已知用 Z，未知用 t] 或 [比例：np 与 n(1-p) >= 10 用 Z]；若抽样比突破 5% 乘 FPC
-  formula_zh_hk: 業務指標 -> [均值：sigma 已知用 Z，未知用 t] 或 [比例：np 同 n(1-p) >= 10 用 Z]；若果抽樣比突破 5% 乘 FPC
-  formula_tex: \text{CI} = \text{Point Estimate} \pm \left( \text{Multiplier} \cdot \text{SE} \cdot [\text{FPC}] \right)
-  s1_en: 'Statistical estimation follows a clear branch logic. First classify the metric: continuous operational metrics belong
-    to means; binary success rates belong to proportions.'
-  s1_zh: 现代参数估计遵循严密的决策树逻辑。首要任务是定性指标归属：连续型工时与消费流水归属于均值轨道；二元对立的扫码与加购转化归属于比例轨道。
-  s1_zh_hk: 現代參數估計遵循嚴密嘅決策樹邏輯。首要任務係定性指標歸屬：連續型工時同消費流水歸屬於均值軌道；二元對立嘅掃碼與加購轉化歸屬於比例軌道。
-  s2_en: 'For means, determine variance: if population sigma is known, use normal Z; if unknown, invoke Student''s t. For
-    closed systems where sample fraction exceeds five percent, apply the Finite Population Correction.'
-  s2_zh: 针对均值核查方差状态：总体真实 sigma 已知调用 Z 标尺，未知则启用学生氏 t 分布。若在封闭资产中抽样比突破百分之五，强制乘上 FPC 锁定高精度。
-  s2_zh_hk: 針對均值核查方差狀態：總體真實 sigma 已知調用 Z 標尺，未知就啟用學生氏 t 分佈。若果喺封閉資產入面抽樣比突破百分之五，強制乘上 FPC 鎖定高精度。
-- id: mechanics
+  title_zh: 估计决策树
+  title_zh_hk: 估計決策樹
+  formula: 'CI = point ± (crit × SE × [FPC])'
+  formula_zh: '置信区间 = 点估计 ±（临界值 × 标准误 × [FPC]）'
+  formula_zh_hk: '置信區間 = 點估計 ±（臨界值 × 標準誤 × [FPC]）'
+  formula_tex: '\mathrm{CI}=\widehat{\theta}\pm\big(c^{*}\cdot\mathrm{SE}\cdot[\mathrm{FPC}]\big)'
+  s1_en: >-
+    Estimation follows a branch tree. First classify the metric: continuous
+    spend and wait times ride the mean track; yes-or-no conversion rides the
+    proportion track.
+  s1_zh: >-
+    参数估计走一棵决策树。先给指标定性：连续的客单与等待时间走均值轨道；是或否的转化走比例轨道。
+  s1_zh_hk: >-
+    參數估計行一樖決策樹。先俾指標定性：連續嘅客單同等待時間行均值軌道；係定唔係嘅轉化行比例軌道。
+  s2_en: >-
+    For means: if population sigma is known, use Z; if unknown, use student t.
+    For proportions, clear the success-failure check, then use Z. When the
+    sample grabs more than about five percent of a closed population, multiply
+    the standard error by the finite population correction.
+  s2_zh: >-
+    对均值：总体 sigma 已知用 Z，未知用学生 t。对比例：先过成败条件，再用 Z。当样本占封闭总体大约超过百分之五时，标准误再乘有限总体修正。
+  s2_zh_hk: >-
+    對均值：總體 sigma 已知用 Z，未知用學生 t。對比例：先過成敗條件，再用 Z。當樣本佔封閉總體大約超過百分之五嗰陣，標準誤再乘有限總體修正。
+- id: name_ci
+  visual: title_card
+  seconds: 28
+  kicker: Name it
+  kicker_en: Name it
+  kicker_zh: 先定名
+  kicker_zh_hk: 先定名
+  title_en: Confidence interval (CI)
+  title_zh: 置信区间（CI）
+  title_zh_hk: 置信區間（CI）
+  en: >-
+    Say the finished product once: confidence interval — written CI. Point
+    estimate plus or minus critical value times standard error, with FPC when
+    the closed-population share is large.
+  zh: >-
+    大声念一次成品名：置信区间，写作 CI。点估计加减临界值乘标准误；封闭总体占比大时，再乘有限总体修正。
+  zh_hk: >-
+    大聲念一次成品名：置信區間，寫作 CI。點估計加減臨界值乘標準誤；封閉總體佔比大嗰陣，再乘有限總體修正。
+- id: name_t
+  visual: title_card
+  seconds: 28
+  kicker: Name it
+  kicker_en: Name it
+  kicker_zh: 先定名
+  kicker_zh_hk: 先定名
+  title_en: Student's t
+  title_zh: 学生 t 分布
+  title_zh_hk: 學生 t 分佈
+  en: >-
+    And the small-sample name: student t. When sigma is unknown and n is not
+    huge, replace Z-star with a t critical value at degrees of freedom n minus
+    one.
+  zh: >-
+    还有小样本的名字：学生 t 分布。当 sigma 未知、样本量又不够大时，用自由度等于 n 减一的 t 临界值替换 Z 临界值。
+  zh_hk: >-
+    仲有小樣本嘅名：學生 t 分佈。當 sigma 未知、樣本量又唔夠大嗰陣，用自由度等於 n 減一嘅 t 臨界值替換 Z 臨界值。
+- id: bridge
   visual: two_column
-  seconds: 36
-  kicker: The Dual Engine
-  kicker_en: The Dual Engine
-  kicker_zh: 对偶双璧
-  kicker_zh_hk: 對偶雙璧
-  title_en: Estimation as the bridge to hypothesis testing
-  title_zh: 区间估计与假设检验的对偶纽带
-  title_zh_hk: 區間估計與假設檢驗嘅對偶紐帶
-  left_en: 'Estimation (What is the parameter?): Brackets the true state of nature'
-  left_zh: 参数估计（真值为几何？）：构建区间，框定未知的客观世界真容
-  left_zh_hk: 參數估計（真值係幾多？）：構建區間，框定未知嘅客觀世界真容
-  right_en: 'Testing (Did performance change?): Rejects null benchmark if outside CI'
-  right_zh: 假设检验（变革是否奏效？）：当既定基准脱网于区间外时，坚决证伪
-  right_zh_hk: 假設檢驗（變革係咪奏效？）：當既定基準脫網喺區間外嗰陣，堅決證偽
-  s1_en: 'Confidence intervals and hypothesis tests are mathematical twins. Estimation answers: What is the parameter? It
-    builds a bracket containing all plausible truths supported by data.'
-  s1_zh: 置信区间与假设检验在数学底层是孪生对偶体。参数估计回答“宏观真值究竟是多少”，它用数据划定出一片包容所有合理解释的安全区间。
-  s1_zh_hk: 置信區間與假設檢驗喺數學底層係孿生對偶體。參數估計回答「宏觀真值究竟係幾多」，佢用數據劃定出一片包容所有合理解釋嘅安全區間。
-  s2_en: 'Hypothesis testing answers: Did our operational intervention make an impact? It tests whether an executive performance
-    benchmark remains plausible.'
-  s2_zh: 而假设检验则追问“我们的业务变革是否真实产生了效果”。它严密核验既定的绩效基准在统计上是否站得住脚。
-  s2_zh_hk: 而假設檢驗就追問「我哋嘅業務變革係咪真實產生咗效果」。佢嚴密核驗既定嘅績效基準喺統計上係咪企得穩陣腳。
-  s3_en: If the corporate benchmark falls outside your ninety-five percent confidence interval, a two-tailed test at alpha
-    point zero five is mathematically guaranteed to reject it. Estimation sets the foundation for testing.
-  s3_zh: 只要集团考核基准完全跌落在这段 95% 置信区间之外，在 5% 显著性水平的双尾检验中，该基准便在数学上注定被推翻拒绝。区间估计正是通往假设检验的基石。
-  s3_zh_hk: 只要集團考核基準完全跌落喺呢段 95% 置信區間之外，喺 5% 顯著性水平嘅雙尾檢驗入面，嗰個基準就喺數學上注定被推翻拒絕。區間估計正正係通往假設檢驗嘅基石。
+  seconds: 50
+  kicker: Dual engines
+  kicker_en: Dual engines
+  kicker_zh: 对偶双引擎
+  kicker_zh_hk: 對偶雙引擎
+  title_en: Estimation bridges to testing
+  title_zh: 估计通向假设检验
+  title_zh_hk: 估計通向假設檢驗
+  left_en: 'Estimation: what is theta?'
+  left_zh: 估计：参数大概是多少？
+  left_zh_hk: 估計：參數大概係幾多？
+  right_en: 'Testing: benchmark survive?'
+  right_zh: 检验：基准还站得住吗？
+  right_zh_hk: 檢驗：基準仲企唔企得住？
+  s1_en: >-
+    Confidence intervals and hypothesis tests are mathematical twins.
+    Estimation asks what the parameter is, and brackets every value the data
+    still find plausible.
+  s1_zh: >-
+    置信区间与假设检验在数学上是孪生对偶。参数估计问真值大概是多少，并用数据框出仍说得通的取值范围。
+  s1_zh_hk: >-
+    置信區間同假設檢驗喺數學上係孿生對偶。參數估計問真值大概係幾多，並用數據框出仍然講得通嘅取值範圍。
+  s2_en: >-
+    Hypothesis testing asks whether an executive benchmark still survives.
+    It checks whether a named null value remains inside that plausible set.
+  s2_zh: >-
+    假设检验追问：管理层定下的基准还站不站得住？它核验那个点名的原假设取值是否仍落在可信集合里。
+  s2_zh_hk: >-
+    假設檢驗追問：管理層定低嘅基準仲企唔企得住？佢核驗嗰個點名嘅原假設取值係咪仍然落喺可信集合入面。
+  s3_en: >-
+    If the corporate benchmark falls outside your ninety-five percent interval,
+    a two-tailed test at alpha zero point zero five is guaranteed to reject it.
+    The interval is the bridge.
+  s3_zh: >-
+    只要考核基准完全落在这段百分之九十五置信区间之外，在百分之五显著性的双尾检验里，它在数学上注定被拒绝。区间就是那座桥。
+  s3_zh_hk: >-
+    只要考核基準完全落喺呢段百分之九十五置信區間之外，喺百分之五顯著性嘅雙尾檢驗入面，佢喺數學上注定被拒絕。區間就係嗰座橋。
 - id: ledger
   visual: steps
-  seconds: 36
-  kicker: The Master Ledger
-  kicker_en: The Master Ledger
-  kicker_zh: 大盘巡检
-  kicker_zh_hk: 大盤巡檢
-  title_en: Consolidated executive audit dashboard
-  title_zh: 都市咖啡全港三大业务支柱推断矩阵
-  title_zh_hk: 都市咖啡全港三大業務支柱推斷矩陣
-  step1_en: 'Customer spend (Wan Chai, n = 100): CLT normal mean -> 95% CI = [$46.69, $50.61]'
-  step1_zh: 客单消费（湾仔店，n = 100）：大样本 CLT 均值 -> 95% 区间 [$46.69, $50.61]
-  step1_zh_hk: 客單消費（灣仔舖，n = 100）：大樣本 CLT 均值 -> 95% 區間 [$46.69, $50.61]
-  step2_en: 'Digital conversion (Airport, n = 350): Kiosk upsell -> 95% CI = [34.87%, 45.13%]'
-  step2_zh: 数字转化（机场店，n = 350）：二元触控屏比例 -> 95% 区间 [34.87%, 45.13%]
-  step2_zh_hk: 數字轉化（機場舖，n = 350）：二元觸控屏比例 -> 95% 區間 [34.87%, 45.13%]
-  step3_en: 'Quality yield (Mong Kok, n = 12): Unknown sigma -> 95% t-CI = [19.04%, 20.56%]'
-  step3_zh: 出品萃取（旺角店，n = 12）：未知方差小样本 -> 95% t 区间 [19.04%, 20.56%]
-  step3_zh_hk: 出品萃取（旺角舖，n = 12）：未知方差小樣本 -> 95% t 區間 [19.04%, 20.56%]
-  s1_en: Consolidate the quarterly executive dashboard. In customer spend at Wan Chai, one hundred tickets leverage the Central
-    Limit Theorem to bound average basket size between forty-six sixty-nine and fifty sixty-one.
-  s1_zh: 聚合全港季度高管看板。在湾仔店的客单消费审计中，一百张流水依托中心极限定理，将大盘均值死死框定在四十六块六毛九至五十块六毛一之间。
-  s1_zh_hk: 聚合全港季度高管看板。喺灣仔舖嘅客單消費審計入面，一百張流水依托中心極限定理，將大盤均值死死框定喺四十六蚊六毫九至五十蚊六毫一之間。
-  s2_en: In digital growth at the Airport terminal, three hundred and fifty kiosk transactions yield a proportion bracket
-    of thirty-four point eight seven to forty-five point thirteen percent, conclusively securing our thirty-three percent
-    investment hurdle.
-  s2_zh: 在机场航站楼的数字化渗透战役中，三百五十笔点单机流水构建的转化区间为百分之三十四点八七至四十五点一三，彻底锁死三十三保本线。
-  s2_zh_hk: 喺機場航站樓嘅數碼化滲透戰役入面，三百五十筆點單機流水構建嘅轉化區間為百分之三十四點八七至四十五點一三，徹底鎖死三十三保本線。
-  s3_en: In Mong Kok coffee extraction, twelve pilot shots command Student's t critical values to certify extraction yield
-    between nineteen point zero four and twenty point five six percent. Every business challenge finds its exact mathematical
-    match.
-  s3_zh: 而在旺角旗舰店的品质巡检中，十二杯小样本调遣学生氏 t 分布，将真实萃取率认证在百分之十九点零四至二十点五六黄金带。每一项商业决策，均有法度完备的数学工具精准对位。
-  s3_zh_hk: 而喺旺角旗艦舖嘅品質巡檢入面，十二杯小樣本調遣學生氏 t 分佈，將真實萃取率認證喺百分之十九點零四至二十點五六黃金帶。每一項商業決策，均有法度完備嘅數學工具精準對位。
+  seconds: 54
+  kicker: The master ledger
+  kicker_en: The master ledger
+  kicker_zh: 大盘看板
+  kicker_zh_hk: 大盤看板
+  title_en: Three module audits, one matrix
+  title_zh: 三笔模块审计，一张矩阵
+  title_zh_hk: 三筆模組審計，一張矩陣
+  layout: rows
+  step1_en: 'Shop A spend n=100 → [$46.69, $50.61]'
+  step1_zh: 'A店客单 n=100 → [$46.69, $50.61]'
+  step1_zh_hk: 'A店客單 n=100 → [$46.69, $50.61]'
+  step2_en: 'Shop E kiosk n=350 → [34.87%, 45.13%]'
+  step2_zh: 'E店点单机 n=350 → [34.87%, 45.13%]'
+  step2_zh_hk: 'E店點單機 n=350 → [34.87%, 45.13%]'
+  step3_en: 'Shop A n=12 → t-CI [19.04%, 20.56%]'
+  step3_zh: 'A店萃取 n=12 → t区间 [19.04%, 20.56%]'
+  step3_zh_hk: 'A店萃取 n=12 → t區間 [19.04%, 20.56%]'
+  s1_en: >-
+    Pull the module dashboard. Shop A's large basket sample of one hundred
+    tickets uses a Normal mean interval and lands about forty-six sixty-nine
+    to fifty sixty-one dollars.
+  s1_zh: >-
+    拉开模块看板。A店一百张客单的大样本走正态均值区间，大约落在四十六块六毛九至五十块六毛一。
+  s1_zh_hk: >-
+    拉開模組看板。A店一百張客單嘅大樣本行正態均值區間，大約落喺四十六蚊六毫九至五十蚊六毫一。
+  s2_en: >-
+    Shop E's kiosk pilot of three hundred fifty orders builds a proportion
+    bracket from thirty-four point eight seven to forty-five point thirteen
+    percent — the same arithmetic as the pastry upsell short.
+  s2_zh: >-
+    E店三百五十笔点单机构建比例区间百分之三十四点八七至四十五点一三——算术与加购比例那一课相同。
+  s2_zh_hk: >-
+    E店三百五十筆點單機構建比例區間百分之三十四點八七至四十五點一三——算術同加購比例嗰一課相同。
+  s3_en: >-
+    Shop A's twelve-shot espresso pilot with unknown sigma calls student t and
+    certifies yield between nineteen point zero four and twenty point five six
+    percent. Each challenge already had its matching tool in the module.
+  s3_zh: >-
+    A店十二杯意式浓缩试点、总体方差未知，调用学生 t，把萃取率认证在百分之十九点零四至二十点五六。每一道业务题，模块里都有对位工具。
+  s3_zh_hk: >-
+    A店十二杯意式濃縮試點、總體方差未知，調用學生 t，將萃取率認證喺百分之十九點零四至二十點五六。每一道業務題，模組入面都有對位工具。
 - id: takeaway
   visual: takeaway
-  seconds: 32
-  kicker: The Executive Takeaway
-  kicker_en: The Executive Takeaway
-  kicker_zh: 商业法度
-  kicker_zh_hk: 商業法度
-  title_en: Lead with statistical confidence
-  title_zh: 用区间框定大局，以严密推断启航假设检验
-  title_zh_hk: 用區間框定大局，以嚴密推斷啟航假設檢驗
-  q1_en: How does interval estimation prevent executive teams from committing catastrophic capital errors?
-  q1_zh: 区间估计如何从根本上杜绝管理层在商业扩张中犯下灾难性的重资产投资失误？
-  q1_zh_hk: 區間估計點樣由根本上杜絕管理層喺商業擴張入面犯下災難性嘅重資產投資失誤？
-  q2_en: Which interval belongs to a 12-shot pilot with unknown variance?
-  q2_zh: 方差未知的十二杯试点应当使用哪一种区间？
-  q2_zh_hk: 方差未知嘅十二杯試點應當使用邊一種區間？
-  s1_en: Never make a high-stakes capital allocation based on a raw sample average; always demand its confidence interval
-    to inspect the downside boundary before committing shareholder resources.
-  s1_zh: 切勿基于裸露的样本均值孤注一掷下达资本决断；务必调阅置信区间并严审悲观下界，方可在未知风险面前捍卫股东的真金白银。
-  s1_zh_hk: 切勿基於裸露嘅樣本均值孤注一擲下達資本決斷；務必調閱置信區間並嚴審悲觀下界，先可以喺未知風險面前捍衛股東嘅真金白銀。
-  s2_en: 'Follow the master taxonomy: apply Z for large means and proportions, t for unknown variance in small pilots, and
-    the FPC whenever auditing over five percent of closed physical assets.'
-  s2_zh: 严守推断分类法度：大样本均值与二元比例调用 Z 标尺，小样本未知方差启用 t 分布，资产抽验超 5% 坚决执行 FPC 修正。
-  s2_zh_hk: 嚴守推斷分類法度：大樣本均值與二元比例調用 Z 標尺，小樣本未知方差啟用 t 分佈，資產抽驗超 5% 堅決執行 FPC 修正。
-  s3_en: The operating rule is to match the metric before spending the capital. Spend uses a mean interval, kiosk conversion
-    uses a proportion interval, and a 12-shot pilot uses t.
-  s3_zh: 操作规则是先对上指标，再动用资本。客单用均值区间，点单机转化用比例区间，十二杯试点用 t。
-  s3_zh_hk: 操作規則係先對上指標，再動用資本。客單用均值區間，點單機轉化用比例區間，十二杯試點用 t。
+  seconds: 48
+  kicker: Decision rule
+  kicker_en: Decision rule
+  kicker_zh: 决策规则
+  kicker_zh_hk: 決策規則
+  title_en: Match the metric, then fund
+  title_zh: 先对上指标，再动用资本
+  title_zh_hk: 先對上指標，再動用資本
+  q1_en: Why demand a CI before a capital call?
+  q1_zh: 为什么资本决策前先要置信区间？
+  q1_zh_hk: 點解資本決策前先要置信區間？
+  q2_en: Which tool fits a 12-shot unknown-sigma?
+  q2_zh: 十二杯未知方差试点该用哪种工具？
+  q2_zh_hk: 十二杯未知方差試點應該用邊種工具？
+  s1_en: >-
+    Never green-light a high-stakes spend on a naked sample average. Demand
+    the confidence interval and read the downside bound before shareholder
+    cash moves.
+  s1_zh: >-
+    不要只凭裸露的样本均值就放行高风险支出。先调出置信区间，看清悲观下界，再动股东的真金白银。
+  s1_zh_hk: >-
+    唔好淨憑裸露嘅樣本均值就放行高風險支出。先調出置信區間，睇清悲觀下界，再郁股東嘅真金白銀。
+  s2_en: >-
+    Follow the taxonomy: Z for large means and cleared proportions, student t
+    when sigma is unknown on small pilots, and FPC when you audit more than
+    about five percent of a closed asset base.
+  s2_zh: >-
+    守住分类法：大样本均值与过关的比例用 Z；小样本未知方差用学生 t；抽验封闭资产超过大约百分之五时用有限总体修正。
+  s2_zh_hk: >-
+    守住分類法：大樣本均值同過關嘅比例用 Z；小樣本未知方差用學生 t；抽驗封閉資產超過大約百分之五嗰陣用有限總體修正。
+  s3_en: >-
+    That answers the hook. Leaders navigate the matrix by matching the metric
+    first — spend means, kiosk proportions, twelve-shot t — then reading the
+    whole interval before they fund.
+  s3_zh: >-
+    这就回答了开场。管理者先对上指标——客单走均值，点单机走比例，十二杯走 t——再读完整段区间，然后才批预算。
+  s3_zh_hk: >-
+    呢個就回答咗開場。管理者先對上指標——客單行均值，點單機行比例，十二杯行 t——再讀完整段區間，然後先至批預算。

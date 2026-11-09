@@ -1,19 +1,62 @@
 id: STAT-M01-T01-INTRO
-course: statistics
 course_en: Business Statistics
 course_zh: 商务统计
 course_zh_hk: 商務統計
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 524
+duration_target_s: 480
 title_en: What is descriptive statistics?
 title_zh: 什么是描述性统计？
 title_zh_hk: 咩係描述性統計？
-objective_en: 'Frame a Monday coffee file with four questions: center, spread, shape, and association, and refuse to answer all four with one row or one number.'
-objective_zh: 用四个问题框定一份周一咖啡文件：中心、离散、形态和关联，并拒绝用一行或一个数回答全部问题。
-objective_zh_hk: 用四個問題框定一份星期一咖啡檔案：中心、離散、形態同關聯，並拒絕用一行或者一個數回答全部問題。
+youtube:
+  description_en: |
+    What is descriptive statistics?
+    
+    A Monday coffee file lands with three shops: Shop A sold 310 cups, Shop B sold 420, and Shop C sold 4,200. Copy the busiest row and you over-order milk. Copy the quietest and the busy shop runs dry. Raw rows alone do not manage a chain.
+    
+    This short names the toolkit that turns that file into a decision: descriptive statistics. Before any summary, ask four dials on the same file:
+    
+    - Center - where a typical shop sits
+    - Spread - how wide the line runs
+    - Shape - which side is long (here the high end stretches far: 4,200 - 310 = 3,890 cups)
+    - Association - whether two measures move together (cups alone are not enough; pair cups with something like monthly rent)
+    
+    One Monday row or one number is not four answers. Name the dial, the shops, and the unit before you trust a summary. These dials condense the file you have - they do not by themselves set staffing, inventory, or prices.
+    
+    Business Statistics - Module 1 - Short 1 (intro)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    什么是描述性统计？
+    
+    一份周一咖啡文件落到桌上：A店卖出310杯，B店420杯，C店4,200杯。照搬最忙的一行，你会多订牛奶；照搬最闲的一行，忙店午饭前就会断货。原始行本身管不了连锁店。
+    
+    本短片讲的工具包，就是把这份文件变成决策的描述性统计。动手汇总之前，先对同一份文件问四个刻度：
+    
+    - 中心 - 典型门店落在哪里
+    - 离散 - 这条线有多宽
+    - 形态 - 哪一侧更长（这里高端拉得很远：4,200 - 310 = 3,890杯）
+    - 关联 - 两个量是否一起动（只有杯数不够；要把杯数和例如月租配成一对）
+    
+    用周一的一行或一个数，回答不了四个刻度。信任任何摘要之前，先点名刻度、门店和单位。这些刻度压缩的是你手里的文件 - 它们本身不会定人手、库存或价格。
+    
+    商务统计 - 模块1 - 短片1（导论）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    咩係描述性統計？
+    
+    一份星期一咖啡檔案落到檯面：A店賣出310杯，B店420杯，C店4,200杯。照搬最忙嗰一行，你會多訂牛奶；照搬最閒嗰一行，忙店午飯前就會斷貨。原始行本身管唔到連鎖店。
+    
+    呢條短片講嘅工具包，就係把呢份檔案變成決策嘅描述性統計。動手匯總之前，先對同一份檔案問四個刻度：
+    
+    - 中心 - 典型門店落喺邊度
+    - 離散 - 呢條線有幾闊
+    - 形態 - 邊一側更長（呢度高端拉得好遠：4,200 - 310 = 3,890杯）
+    - 關聯 - 兩個量係咪一齊郁（淨係杯數唔夠；要把杯數同例如月租配成一對）
+    
+    用星期一嘅一行或者一個數，答唔到四個刻度。信任任何摘要之前，先點名刻度、門店同單位。呢啲刻度壓縮嘅係你手上嘅檔案 - 佢哋本身唔會定人手、庫存或者價格。
+    
+    商務統計 - 模組1 - 短片1（導論）
+    覺得有用嘅話，訂閱下一集。
+
+
 glossary:
 - en: descriptive statistics
   zh: 描述性统计
@@ -416,7 +459,7 @@ beats:
     關聯淨係標出值得核對嘅模式；佢本身講唔完成個業務故事。
 - id: limit
   visual: two_column
-  seconds: 60
+  seconds: 48
   kicker: The Limit
   kicker_en: The Limit
   kicker_zh: 边界
@@ -459,7 +502,7 @@ beats:
     相信數字之前，先點名刻度。
 - id: answer
   visual: takeaway
-  seconds: 62
+  seconds: 30
   kicker: The Rule
   kicker_en: The Rule
   kicker_zh: 规则
@@ -467,36 +510,27 @@ beats:
   title_en: Ask four dials, then summarize
   title_zh: 先问四个刻度，再做摘要
   title_zh_hk: 先問四個刻度，再做摘要
-  q1_en: What does descriptive statistics do?
-  q1_zh: 描述性统计做什么？
-  q1_zh_hk: 描述性統計做咩？
-  q2_en: How do you read one Monday file?
-  q2_zh: 怎样读一份周一文件？
-  q2_zh_hk: 點樣讀一份星期一檔案？
+  q1_en: 'What does descriptive statistics do? → Readable summaries of the file'
+  q1_zh: 描述性统计做什么？→ 把文件收成读得懂的摘要
+  q1_zh_hk: 描述性統計做咩？→ 將檔案收成讀得明嘅摘要
+  q2_en: 'How do you read one Monday file? → Name dial, shops, and unit first'
+  q2_zh: 怎样读一份周一文件？→ 先写明刻度、店铺和单位
+  q2_zh_hk: 點樣讀一份星期一檔案？→ 先寫明刻度、店舖同單位
   s1_en: >-
-    Descriptive statistics turns raw shop rows into a few readable summaries.
-    On this Monday file, start with center, spread, shape, and association.
+    Descriptive statistics turns raw shop rows into a few readable summaries: center, spread, shape, association.
   s1_zh: >-
-    描述性统计把原始门店行，收成几个读得懂的摘要。
-    面对这份周一文件，先从中心、离散、形态和关联问起。
+    描述性统计把原始门店行，收成几个读得懂的摘要：中心、离散、形态、关联。
   s1_zh_hk: >-
-    描述性統計將原始門店行，收成幾個讀得明嘅摘要。
-    面對呢份星期一檔案，先由中心、離散、形態同關聯問起。
+    描述性統計將原始門店行，收成幾個讀得明嘅摘要：中心、離散、形態、關聯。
   s2_en: >-
-    Pair center with spread before you act. Check whether one side is long.
-    Bring in a second measure before you talk about association.
+    Pair center with spread. Check whether one side is long. Bring in a second measure before association.
   s2_zh: >-
-    行动前把中心和离散配在一起。再看是不是有一边特别长。
-    谈关联之前，先加上第二个指标。
+    把中心和离散配在一起。再看是不是有一边特别长。谈关联之前，先加上第二个指标。
   s2_zh_hk: >-
-    行動前將中心同離散配埋一齊。再睇係咪有一邊特別長。
-    傾關聯之前，先加上第二個指標。
+    將中心同離散配埋一齊。再睇係咪有一邊特別長。傾關聯之前，先加上第二個指標。
   s3_en: >-
-    The operating rule: name the dial, the shops, and the unit before you use a summary.
-    Do not treat one Monday row as the whole chain.
+    Name the dial, the shops, and the unit before you use a summary. That is the answer.
   s3_zh: >-
-    操作规则：使用摘要之前，写明刻度、店铺和单位。
-    不要把周一的一行当成整条连锁。
+    使用摘要之前，写明刻度、店铺和单位。这就是答案。
   s3_zh_hk: >-
-    操作規則：使用摘要之前，寫明刻度、店舖同單位。
-    唔好將星期一嘅一行當成成條連鎖。
+    使用摘要之前，寫明刻度、店舖同單位。呢個就係答案。

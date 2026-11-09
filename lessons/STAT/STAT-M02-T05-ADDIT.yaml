@@ -1,19 +1,39 @@
 id: STAT-M02-T05-ADDIT
-course: statistics
 course_en: Business Probability Foundations
 course_zh: 商务概率基础
 course_zh_hk: 商務概率基礎
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
+duration_target_s: 166
 title_en: "Don't count the pastry twice"
 title_zh: "切莫将甜点算了两遍：概率加法法则"
 title_zh_hk: "千祈咪將甜點計咗兩次：概率加法法則"
-objective_en: "Define the General Addition Rule for probability, explain why overlapping joint outcomes must be subtracted to prevent double-counting, contrast mutually exclusive and non-mutually exclusive events, and apply the rule to retail promotional campaigns."
-objective_zh: "阐释概率的一般加法法则，解释为何必须剔除重叠的联合事件以防重复计算，辨析互斥事件与非互斥事件的区别，并将其应用于零售促销预算测算。"
-objective_zh_hk: "闡釋概率嘅一般加法法則，解釋點解必須扣除重疊嘅聯合事件以防重複計算，辨析互斥事件同非互斥事件嘅分別，並將其應用喺零售促銷預算測算。"
+youtube:
+  description_en: |
+    Don't count the pastry twice
+
+    The general addition rule prices OR events: P(A or B) = P(A) + P(B) − P(A and B). When categories overlap, adding margins alone double-counts the bridge.
+
+    If iced coffee is 0.40, pastry is 0.30, and both together are 0.12, then either item appears on 0.40 + 0.30 − 0.12 = 0.58 of tickets. Budget the promotion for 58 percent — not 70 percent.
+
+    Business Probability Foundations - Module 2 - Short 5 (addition rule)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    别把甜点算两次
+
+    一般加法法则给“或”事件定价：P(A 或 B) = P(A) + P(B) − P(A 且 B)。品类有重叠时，只加边缘会把交集算两遍。
+
+    若冷饮 0.40、甜点 0.30、两者兼有 0.12，则至少买其一的比例是 0.40 + 0.30 − 0.12 = 0.58。促销预算按 58% 计，而不是 70%。
+
+    商务概率基础 - 模块2 - 短片5（加法法则）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    唔好將甜點計兩次
+
+    一般加法法則為「或」事件定價：P(A 或 B) = P(A) + P(B) − P(A 兼 B)。品類有重疊嗰陣，淨係加邊緣會將交集計兩次。
+
+    若凍飲 0.40、甜點 0.30、兩者兼有 0.12，則至少買其一嘅比例係 0.40 + 0.30 − 0.12 = 0.58。促銷預算按 58% 計，而唔係 70%。
+
+    商務概率基礎 - 模組2 - 短片5（加法法則）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: "addition rule"
   zh: "加法法则"
@@ -92,8 +112,8 @@ beats:
   title_zh: "我们究竟要送出多少折扣？"
   title_zh_hk: "我哋究竟要送出幾多折扣？"
   en: "Marketing launches a flash promotion: get two dollars off if your order includes an iced drink OR a bakery pastry. The junior analyst sums the margins: forty percent order iced drinks, thirty percent order pastries, so seventy percent of tickets will get discounted. If finance budgets for seventy percent, it will overstate the expected discount cost. Where did the extra twelve percentage points come from?"
-  zh: "市场部推出限时闪促销：只要订单包含冷饮“或者”烘焙点心，立减两元。初级分析师直接加总边缘数值：40% 顾客点冷饮，30% 顾客买点心，断定有 70% 的订单会享受折扣。如果财务按 70% 编列预算，就会高估预期折扣成本。多出来的 12 个百分点究竟从哪里来？"
-  zh_hk: "市場部推出限時促銷：只要訂單包含凍飲「或者」烘焙點心，即減兩蚊。初級分析師直接加總邊緣數值：40% 顧客點凍飲，30% 顧客買點心，斷定有 70% 嘅訂單會享受折扣。如果財務按 70% 編列預算，就會高估預期折扣成本。多出嚟嗰 12 個百分點究竟係邊度嚟？"
+  zh: "市场部做限时促销：订单里有冷饮「或者」烘焙点心，就减两元。初级分析师把边缘一加：40% 点冷饮，30% 买点心，断定 70% 的单会打折。财务要是按 70% 编预算，折扣成本就会估高。多出来的 12 个百分点，到底从哪来？"
+  zh_hk: "市場部做限時促銷：訂單入面有凍飲「或者」烘焙點心，就減兩蚊。初級分析師將邊緣一加：40% 點凍飲，30% 買點心，斷定 70% 嘅單會打折。財務如果按 70% 編預算，折扣成本就會估高。多出嚟嗰 12 個百分點，到底喺邊度嚟？"
 - id: define
   visual: definition_card
   seconds: 34
@@ -109,11 +129,11 @@ beats:
   formula_zh: "P(A 或 B) = P(A) + P(B) - P(A 且 B)"
   formula_zh_hk: "P(A 或 B) = P(A) + P(B) - P(A 兼 B)"
   s1_en: "When calculating the probability of event A or event B occurring, we are looking for the union of both groups."
-  s1_zh: "在计算事件 A 或事件 B 发生的概率时，我们寻找的是两个群体的并集。"
-  s1_zh_hk: "喺計算事件 A 或事件 B 發生嘅概率嗰陣，我哋尋找嘅係兩個群體嘅並集。"
+  s1_zh: "算事件 A「或者」事件 B 的概率，找的是两个群体的并集。"
+  s1_zh_hk: "計事件 A「或者」事件 B 嘅概率，搵嘅係兩個群體嘅並集。"
   s2_en: "Because customers who purchase both products sit inside group A and also inside group B, simply adding the totals counts them twice. To find the true reach, you must subtract the overlapping intersection once."
-  s2_zh: "因为两样商品兼买的顾客既属于群体 A，又同时包含在群体 B 之中，直接相加会把他们重复计算两次。为了得出真实的覆盖面，必须扣减一次重叠的交集。"
-  s2_zh_hk: "因為兩樣商品都買嘅顧客既屬於群體 A，又同時包含喺群體 B 入面，直接相加會將佢哋重複計咗兩次。為咗得出真實嘅覆蓋面，必須扣減一次重疊嘅交集。"
+  s2_zh: "两样都买的人，既在 A 里又在 B 里。直接相加，会把他们算两次。要得到真实覆盖，得把重叠的交集减一次。"
+  s2_zh_hk: "兩樣都買嘅人，既喺 A 入面又喺 B 入面。直接相加，會將佢哋計兩次。要得到真實覆蓋，要將重疊嘅交集減一次。"
 - id: venn
   visual: two_column
   seconds: 36
@@ -131,14 +151,14 @@ beats:
   right_zh: "非互斥事件：存在交集，必须去重"
   right_zh_hk: "非互斥事件：存在交集，必須去重"
   s1_en: "If two events are mutually exclusive—meaning they cannot occur together—their overlap is zero. Ordering a small cup and ordering a large cup are mutually exclusive; simply add their odds."
-  s1_zh: "如果两个事件互斥（即绝不可能同时发生），它们的交集为零。比如点小杯与点大杯是互斥的，概率可以直接相加。"
-  s1_zh_hk: "如果兩個事件互斥（即絕唔可能同時發生），佢哋嘅交集為零。好似點細杯同埋點大杯係互斥嘅，概率可以直接相加。"
+  s1_zh: "如果两个事件互斥——绝不可能同时发生——重叠就是零。比如点小杯和点大杯互斥，概率可以直接加。"
+  s1_zh_hk: "如果兩個事件互斥——絕唔可能同時發生——重疊就係零。好似點細杯同點大杯互斥，概率可以直接加。"
   s2_en: "In retail, customer behaviors frequently overlap. Ordering an iced drink does not prevent ordering a muffin. They are non-mutually exclusive."
-  s2_zh: "但在零售场景中，顾客行为往往重叠交织。点冷饮并不会妨碍顾客同时点松饼。它们是非互斥事件。"
-  s2_zh_hk: "但喺零售場景入面，顧客行為往往重疊交織。點凍飲並唔會妨礙顧客同時點鬆餅。佢哋係非互斥事件。"
+  s2_zh: "零售里，顾客行为常常重叠。点了冷饮，不妨碍再点松饼。它们不是互斥的。"
+  s2_zh_hk: "零售入面，顧客行為成日重疊。點咗凍飲，唔妨礙再點鬆餅。佢哋唔係互斥嘅。"
   s3_en: "Whenever events overlap, failing to subtract the middle intersection creates phantom customers who exist only on paper."
-  s3_zh: "每当事件存在交集，漏掉扣除中间重叠部分的操作，就会在账面上凭空捏造出一批根本不存在的“幽灵顾客”。"
-  s3_zh_hk: "每當事件存在交集，漏咗扣除中間重疊部分嘅操作，就會喺賬面上憑空捏造出一批根本唔存在嘅「幽靈顧客」。"
+  s3_zh: "事件有重叠时，忘了减中间那一块，账面上就会多出一批根本不存在的「幽灵顾客」。"
+  s3_zh_hk: "事件有重疊嗰陣，唔記得減中間嗰一塊，賬面就會多出一批根本唔存在嘅「幽靈顧客」。"
 - id: ledger
   visual: steps
   seconds: 36
@@ -149,27 +169,27 @@ beats:
   title_en: "Fixing the promotional budget"
   title_zh: "修正促销活动覆盖率预算"
   title_zh_hk: "修正促銷活動覆蓋率預算"
-  step1_en: "Add marginals: 0.40 + 0.30 = 0.70"
-  step1_zh: "加总边缘概率：0.40 + 0.30 = 0.70"
-  step1_zh_hk: "加總邊緣概率：0.40 + 0.30 = 0.70"
-  step2_en: "Identify overlap: 120 combo orders (0.12)"
-  step2_zh: "识别重叠交集：120 笔兼买订单（0.12）"
-  step2_zh_hk: "識別重疊交集：120 筆兼買訂單（0.12）"
-  step3_en: "Subtract overlap: 0.70 - 0.12 = 0.58"
-  step3_zh: "扣减交集去重：0.70 - 0.12 = 0.58"
-  step3_zh_hk: "扣減交集去重：0.70 - 0.12 = 0.58"
-  s1_en: "Let us return to our Wan Chai matrix. Adding marginal iced orders of zero point four zero and pastry orders of zero point three zero gives zero point seven zero."
-  s1_zh: "回到湾仔店的列联表。将边缘冷饮概率 0.40 与甜点概率 0.30 相加，得到名义上的 0.70。"
-  s1_zh_hk: "返去灣仔舖嘅列聯表。將邊緣凍飲概率 0.40 同甜點概率 0.30 相加，得到名義上嘅 0.70。"
+  step1_en: "Add margins: 0.40 + 0.30 = 0.70"
+  step1_zh: "加边缘: 0.40+0.30=0.70"
+  step1_zh_hk: "加邊緣: 0.40+0.30=0.70"
+  step2_en: "Overlap: 120 combos (0.12)"
+  step2_zh: "重叠: 120 套餐 (0.12)"
+  step2_zh_hk: "重疊: 120 套餐 (0.12)"
+  step3_en: "OR = 0.70 - 0.12 = 0.58"
+  step3_zh: "或事件=0.70-0.12=0.58"
+  step3_zh_hk: "或事件=0.70-0.12=0.58"
+  s1_en: "Let us return to our Shop A matrix. Adding marginal iced orders of zero point four zero and pastry orders of zero point three zero gives zero point seven zero."
+  s1_zh: "回到A店的列联表。边缘冷饮 0.40 加点心 0.30，名义上得到 0.70。"
+  s1_zh_hk: "返去A舖嘅列聯表。邊緣凍飲 0.40 加點心 0.30，名義上得到 0.70。"
   s2_en: "Recall that 120 patrons bought both. Those 120 people are counted once in the iced row and counted a second time in the pastry column."
-  s2_zh: "回顾之前的账目，有 120 位顾客两者兼买。这 120 位顾客在冷饮行被计入了一次，在甜点列又被计入了第二次。"
-  s2_zh_hk: "回顧之前嘅賬目，有 120 位顧客兩樣都買。呢 120 位顧客喺凍飲行被計入咗一次，喺甜點列又被計入咗第二次。"
+  s2_zh: "记得有 120 位顾客两样都买。这 120 人在冷饮行算过一次，在点心列又算了第二次。"
+  s2_zh_hk: "記得有 120 位顧客兩樣都買。呢 120 人喺凍飲行計過一次，喺點心列又計咗第二次。"
   s3_en: "Subtract the double-counted twelve percent: 0.70 minus 0.12 equals exactly 0.58. Fifty-eight percent of tickets qualify for the discount—not seventy."
-  s3_zh: "扣减这重复核算的 12%：0.70 减去 0.12，得到准确的 0.58。实际享受折扣的客单比例是 58%，绝非 70%。"
-  s3_zh_hk: "扣減呢個重複核算嘅 12%：0.70 減去 0.12，得到準確嘅 0.58。實際享受折扣嘅客單比例係 58%，絕非 70%。"
+  s3_zh: "把重复的 12% 减掉：0.70 减 0.12，得到准确的 0.58。真正能打折的客单是 58%，不是 70%。"
+  s3_zh_hk: "將重複嘅 12% 減走：0.70 減 0.12，得到準確嘅 0.58。真正可以打折嘅客單係 58%，唔係 70%。"
 - id: takeaway
   visual: takeaway
-  seconds: 32
+  seconds: 30
   kicker: "Decision Rule"
   kicker_en: "Decision Rule"
   kicker_zh: "商业法则"
@@ -177,18 +197,18 @@ beats:
   title_en: "Add the groups, subtract the bridge"
   title_zh: "群体加总汇合，必扣中间桥梁"
   title_zh_hk: "群體加總匯合，必扣中間橋樑"
-  q1_en: "What is the universal rule for OR logic?"
-  q1_zh: "处理“或”逻辑的通用法则是怎样的？"
-  q1_zh_hk: "處理「或」邏輯嘅通用法則係點樣嘅？"
-  q2_en: "How does this safeguard financial budgets?"
-  q2_zh: "它如何守住企业的财务预算红线？"
-  q2_zh_hk: "佢點樣守住企業嘅財務預算紅線？"
-  s1_en: "When joining non-mutually exclusive categories, always subtract the joint intersection to avoid phantom double-counts."
-  s1_zh: "当汇总非互斥客群时，务必扣除一次联合交集，避免把重叠顾客重复计算。"
-  s1_zh_hk: "當匯總量並兼具非互斥屬性嘅客群嗰陣，務必主動扣除聯合交集，杜絕憑空多計嘅幻象。"
-  s2_en: "Accurate promotional forecasting requires knowing not just who buys each product, but how many buy both."
-  s2_zh: "精准的营销预算预测，不仅要清楚谁购买了单品，更必须掌握究竟有多少人同时选购了两款商品。"
-  s2_zh_hk: "精準嘅營銷預算預測，唔單止要清楚邊個買咗單品，更加必須掌握究竟有幾多人同時選購咗兩款商品。"
-  s3_en: "For the promotion, budget for 58 percent of tickets: add the two marginal rates, then subtract the 12 percent overlap once."
-  s3_zh: "这次促销应按 58% 的订单编列预算：先加总两个边缘比例，再把 12% 的重叠部分扣除一次。"
-  s3_zh_hk: "今次促銷應該按 58% 嘅訂單編列預算：先加埋兩個邊緣比例，再將 12% 嘅重疊部分扣減一次。"
+  q1_en: "OR rule? → Add margins, subtract the overlap"
+  q1_zh: "“或”法则？→ 边缘相加，再减去重叠"
+  q1_zh_hk: "「或」法則？→ 邊緣相加，再減去重疊"
+  q2_en: "Protect the budget? → No phantom double-count"
+  q2_zh: "如何守住预算？→ 别把交集算两次"
+  q2_zh_hk: "點樣守住預算？→ 唔好將交集計兩次"
+  s1_en: "When groups overlap, add the margins, then subtract the joint once."
+  s1_zh: "两组有重叠时，先加边缘，再把联合交集减一次。"
+  s1_zh_hk: "兩組有重疊嗰陣，先加邊緣，再將聯合交集減一次。"
+  s2_en: "Forecast who buys each item — and how many buy both."
+  s2_zh: "既要知道谁买各品类，也要知道多少人两样都买。"
+  s2_zh_hk: "既要知邊個買各品類，亦要知幾多人兩樣都買。"
+  s3_en: "Budget 58 percent of tickets: 0.40 plus 0.30 minus the 0.12 overlap."
+  s3_zh: "预算按 58% 客单：0.40 加 0.30，再减 0.12 重叠。"
+  s3_zh_hk: "預算按 58% 客單：0.40 加 0.30，再減 0.12 重疊。"

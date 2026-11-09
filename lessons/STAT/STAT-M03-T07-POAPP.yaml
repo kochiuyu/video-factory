@@ -1,19 +1,45 @@
 id: STAT-M03-T07-POAPP
-course: statistics
 course_en: "Discrete & Continuous Probability Distributions"
 course_zh: "离散与连续概率分布"
 course_zh_hk: "離散與連續概率分佈"
-audience: "first-year business students"
-audience_en: "first-year business students"
-audience_zh: "商学院一年级学生"
-audience_zh_hk: "商學院一年級學生"
-duration_target_s: 168
+duration_target_s: 166
 title_en: "Catching rare quality hazards"
 title_zh: "捕捉罕见质量隐患：泊松近似与极限法则"
 title_zh_hk: "捕捉罕見質量隱患：泊松近似與極限定則"
-objective_en: "Explain the Poisson approximation to the Binomial distribution for large n and small p, verify the operational rule of thumb (n >= 100, p <= 0.05, and lambda = np <= 10), and evaluate espresso machine pressure seal blowout risks."
-objective_zh: "阐释大样本 n 与微小概率 p 条件下二项分布向泊松分布的收敛近似，验证常用运营判据（n >= 100，p <= 0.05 且 lambda = np <= 10），并将其应用于商用咖啡机密封垫圈爆裂风险评估。"
-objective_zh_hk: "闡釋大樣本 n 同微小概率 p 條件下二項分佈向泊松分佈嘅收斂近似，驗證常用營運判據（n >= 100，p <= 0.05 兼且 lambda = np <= 10），並將其應用喺商用咖啡機密封膠圈爆裂風險評估。"
+youtube:
+  description_en: |
+    Catching rare quality hazards
+    
+    Shop C models 2,000 espresso pulls in a week, with a gasket-failure probability of 0.001 per pull. Management wants the probability of three or more failures. The exact Binomial is available — can a Poisson approximation simplify the work?
+    
+    A common classroom screen is large n, small p, and λ=np kept modest (here λ=2). Under those conditions Poisson(λ=2) approximates the rare-event count and makes P(X at least 3) faster to evaluate — still compare with the exact Binomial when the decision is high stakes.
+    
+    Use Poisson to model rare defects at scale after you check the assumptions. Large n and tiny p is the setting where the approximation earns its keep.
+    
+    Discrete & Continuous Probability Distributions - Module 3 - Short 7 (POAPP)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    捕捉罕见质量隐患：泊松近似与极限法则
+    
+    C店按一周 2000 次浓缩萃取建模，每次密封圈失效概率 0.001。你要一周出现 3 次及以上失效的概率。精确二项能算，但泊松近似能不能更省事？
+    
+    课堂常用筛查：n 够大、p 够小，且 λ=np 不太大（这里 λ=2）。此时 Poisson(λ=2) 可近似罕见计数，更快评估「至少 3 次」——高风险决策仍应对照精确二项。
+    
+    大样本微概率，果断启用泊松近似——先核对假设。这正是近似真正省力的场景。
+    
+    离散与连续概率分布 - 模块3 - 短片7（POAPP）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    捕捉罕見質量隱患：泊松近似與極限定則
+    
+    C舖按一星期 2000 次濃縮萃取建模，每次密封圈失效概率 0.001。你要一星期出現 3 次或以上失效嘅概率。精確二項計得，但泊松近似可唔可以更省事？
+    
+    課堂常用篩查：n 夠大、p 夠細，兼且 λ=np 唔太大（呢度 λ=2）。呢陣 Poisson(λ=2) 可以近似罕見計數，更快評估「至少 3 次」——高風險決策都應對照精確二項。
+    
+    大樣本微概率，果斷啟用泊松近似——先核對假設。呢個正正係近似真正慳力嘅場景。
+    
+    離散與連續概率分佈 - 模組3 - 短片7（POAPP）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: "Poisson approximation"
   zh: "泊松近似"
@@ -91,9 +117,9 @@ beats:
   title_en: "When the factorial breaks the spreadsheet"
   title_zh: "两千次冲煮的微小隐患，如何秒级推演？"
   title_zh_hk: "兩千次沖煮嘅微小隱患，點樣秒級推演？"
-  en: "An Airport store models 2,000 espresso pulls in a week, with a gasket-failure probability of 0.001 per pull. Management wants the probability of three or more failures. The exact Binomial model is available, but can a Poisson distribution provide a simpler approximation, and what assumptions must be checked first?"
-  zh: "机场店以一周 2,000 次浓缩咖啡萃取建立模型，假设每次密封圈失效的概率为 0.001。管理层需要计算一周发生 3 次及以上失效的概率。精确二项模型可以使用，但泊松分布能否提供更简便的近似？使用前应检查哪些假设？"
-  zh_hk: "機場舖用一星期 2,000 次濃縮咖啡萃取建立模型，假設每次密封圈失效嘅概率係 0.001。管理層需要計一星期發生 3 次或以上失效嘅概率。精確二項模型可以使用，但泊松分佈可唔可以提供更簡便嘅近似？使用之前要檢查邊啲假設？"
+  en: "Shop C models 2,000 espresso pulls in a week, with a gasket-failure probability of 0.001 per pull. Management wants the probability of three or more failures. The exact Binomial model is available, but can a Poisson distribution provide a simpler approximation, and what assumptions must be checked first?"
+  zh: "C店按一周 2000 次浓缩萃取建模，每次密封圈失效概率 0.001。你要一周出现 3 次及以上失效的概率。精确二项能算，但泊松近似能不能更省事？用之前要核对哪些假设？"
+  zh_hk: "C舖按一星期 2000 次濃縮萃取建模，每次密封圈失效概率 0.001。你要一星期出現 3 次或以上失效嘅概率。精確二項計得，但泊松近似可唔可以更省事？用之前要核對邊啲假設？"
 - id: define
   visual: definition_card
   seconds: 34
@@ -109,8 +135,8 @@ beats:
   formula_zh_hk: "當 n 極大兼且 p 極微嗰陣，二項分佈 Binomial(n, p) 極限收斂於泊松分佈 Poisson(lambda = np)"
   formula_tex: "\\lim_{n \\to \\infty, p \\to 0} \\binom{n}{k} p^k (1-p)^{n-k} = \\frac{\\lambda^k e^{-\\lambda}}{k!}, \\quad \\lambda = np"
   s1_en: "The Poisson limit applies when independent Bernoulli trials have n increasing, p decreasing, and the product np approaching a finite value lambda. For large n and small p, Poisson(lambda=np) may approximate the Binomial count."
-  s1_zh: "泊松极限定理要求独立伯努利试验满足 n 增大、p 减小，而且乘积 np 趋近有限值 lambda。当 n 较大、p 较小时，Poisson(lambda=np) 可以近似二项计数。"
-  s1_zh_hk: "泊松極限定理要求獨立伯努利試驗滿足 n 增大、p 減小，而且乘積 np 趨近有限值 lambda。當 n 較大、p 較細，Poisson(lambda=np) 可以近似二項計數。"
+  s1_zh: "当 n 很大、p 很小，二项计数可以用 λ=np 的泊松来近似——省事，但不是免检通行证。"
+  s1_zh_hk: "當 n 好大、p 好細，二項計數可以用 λ=np 嘅泊松嚟近似——慳事，但唔係免檢通行證。"
   s2_en: "The approximation replaces Binomial(n,p) with Poisson(lambda=np). It can simplify hand calculation, although modern software can also evaluate the exact Binomial probability without directly expanding enormous factorials."
   s2_zh: "该近似用 Poisson(lambda=np) 代替 Binomial(n,p)，可简化手算；现代软件也能在不直接展开巨大阶乘的情况下计算精确二项概率。"
   s2_zh_hk: "呢個近似用 Poisson(lambda=np) 代替 Binomial(n,p)，可以簡化手算；現代軟件亦可以唔直接展開巨大階乘而計到精確二項概率。"
@@ -158,9 +184,9 @@ beats:
   step3_en: "Poisson odds: P(0) = 0.135, P(1) = 0.271, P(2) = 0.271, P(>=3) = 0.323"
   step3_zh: "精准预警：零次13.5%，一次27.1%，两次27.1%，三次及以上32.3%"
   step3_zh_hk: "精準預警：零次13.5%，一次27.1%，兩次27.1%，三次及以上32.3%"
-  s1_en: "For this Airport illustration, assume 2,000 independent pulls in a week and a constant gasket-failure probability of 0.001 per pull."
-  s1_zh: "在这个机场店示例中，假设一周有 2,000 次相互独立的萃取，每次密封圈失效概率固定为 0.001。"
-  s1_zh_hk: "喺呢個機場舖示例入面，假設一星期有 2,000 次互相獨立嘅萃取，每次密封圈失效概率固定係 0.001。"
+  s1_en: "For this Shop C illustration, assume 2,000 independent pulls in a week and a constant gasket-failure probability of 0.001 per pull."
+  s1_zh: "在这个C店示例中，假设一周有 2,000 次相互独立的萃取，每次密封圈失效概率固定为 0.001。"
+  s1_zh_hk: "喺呢個C舖示例入面，假設一星期有 2,000 次互相獨立嘅萃取，每次密封圈失效概率固定係 0.001。"
   s2_en: "The example passes the stated screening convention: n is 2,000, p is 0.001, and lambda=np equals 2. The Poisson approximation therefore merits consideration, subject to the independence and constant-p assumptions."
   s2_zh: "本例通过所述经验筛选：n=2,000、p=0.001，而且 lambda=np=2。因此可考虑泊松近似，但仍须满足独立性与固定 p 假设。"
   s2_zh_hk: "本例通過所述經驗篩選：n=2,000、p=0.001，而且 lambda=np=2。所以可以考慮泊松近似，但仍然要符合獨立性同固定 p 假設。"
@@ -169,7 +195,7 @@ beats:
   s3_zh_hk: "喺 Poisson(2) 之下，模型畀出零次失效 13.5%、一次 27.1%、兩次 27.1%。用補集得到三次或以上大約 32.3%；維修行動仍然要結合成本、安全同服務資料。"
 - id: takeaway
   visual: takeaway
-  seconds: 32
+  seconds: 30
   kicker: "Decision Rule"
   kicker_en: "Decision Rule"
   kicker_zh: "商业法则"
@@ -177,18 +203,18 @@ beats:
   title_en: "Use Poisson to model rare defects at scale"
   title_zh: "大样本微概率，果断启用泊松近似"
   title_zh_hk: "大樣本微概率，果斷啟用泊松近似"
-  q1_en: "Why is the Poisson approximation invaluable in big-data operations?"
-  q1_zh: "为什么在大数据与高频交易时代泊松近似价值连城？"
-  q1_zh_hk: "點解喺大數據同高頻交易時代泊松近似價值連城？"
-  q2_en: "When should the Poisson approximation be checked against the exact Binomial probability?"
-  q2_zh: "何时应将泊松近似与精确二项概率进行比较？"
-  q2_zh_hk: "幾時應該將泊松近似同精確二項概率比較？"
-  s1_en: "Use the Poisson approximation for a Binomial count only when n is large, p is small, trials are independent, and p is constant. Treat numerical cutoffs as conventions rather than universal guarantees."
-  s1_zh: "只有当 n 较大、p 较小、各次试验独立且 p 保持不变时，才使用泊松近似处理二项计数。数值阈值应视为经验准则，而不是普遍保证。"
-  s1_zh_hk: "只有當 n 較大、p 較細、各次試驗獨立兼且 p 保持不變，先使用泊松近似處理二項計數。數值門檻應該視為經驗準則，唔係普遍保證。"
-  s2_en: "For decisions sensitive to approximation error, compare the Poisson result with the exact Binomial probability or use an error bound before acting."
-  s2_zh: "如果决策对近似误差敏感，应在行动前把泊松结果与精确二项概率比较，或使用误差界限。"
-  s2_zh_hk: "如果決策對近似誤差敏感，應該喺行動之前將泊松結果同精確二項概率比較，或者使用誤差界限。"
-  s3_en: "For n=2,000 and p=0.001, lambda=2 and the Poisson approximation gives P(X>=3) about 32.3%. Use that result only with the model assumptions stated and with an accuracy check appropriate to the decision."
-  s3_zh: "当 n=2,000、p=0.001 时，lambda=2，泊松近似给出 P(X≥3) 约为 32.3%。使用结果时必须保留模型假设，并进行与决策重要性相适应的精度检查。"
-  s3_zh_hk: "當 n=2,000、p=0.001，lambda=2，泊松近似畀出 P(X≥3) 大約 32.3%。使用結果嗰陣必須保留模型假設，並進行同決策重要性相稱嘅精度檢查。"
+  q1_en: "When Poisson≈Binomial? → Large n, small p, independent, constant p"
+  q1_zh: "何时泊松近似二项？→ n 大、p 小、独立、p 恒定"
+  q1_zh_hk: "幾時泊松近似二項？→ n 大、p 細、獨立、p 恆定"
+  q2_en: "Sensitive decision? → Cross-check exact Binomial or bound the error"
+  q2_zh: "决策很敏感？→ 对照精确二项，或给出误差界"
+  q2_zh_hk: "決策好敏感？→ 對照精確二項，或者畀誤差界"
+  s1_en: "Treat n-large / p-small cutoffs as rules of thumb, not guarantees."
+  s1_zh: "把“n 大、p 小”当成经验门槛，不是万能保证。"
+  s1_zh_hk: "將「n 大、p 細」當成經驗門檻，唔係萬能保證。"
+  s2_en: "If the decision hangs on approximation error, compare with the exact Binomial before you act."
+  s2_zh: "如果对近似误差很敏感，行动前先和精确二项对照。"
+  s2_zh_hk: "如果對近似誤差好敏感，行動前先同精確二項對照。"
+  s3_en: "n=2000, p=0.001 → λ=2, P(X≥3)≈32.3% under Poisson — only with the stated assumptions."
+  s3_zh: "n=2000、p=0.001 → λ=2，泊松下 P(X≥3)约 32.3%——前提是假设成立。"
+  s3_zh_hk: "n=2000、p=0.001 → λ=2，泊松下 P(X≥3)約 32.3%——前提係假設成立。"

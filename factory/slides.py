@@ -61,7 +61,7 @@ STAGEABLE = {
 }
 MIN_STAGE_BEAT = 5.0
 MIN_SLICE = 1.2
-LAYOUT_VERSION = "2026-10-18-quad-ruler-v1"
+LAYOUT_VERSION = "2026-11-04-reveal-steps-type-v1"
 
 
 def lesson_stamp(lesson, theme, code, second, stage_cards) -> str:
@@ -73,6 +73,7 @@ def lesson_stamp(lesson, theme, code, second, stage_cards) -> str:
         "second": second,
         "stage": bool(stage_cards),
         "theme": theme_id,
+        "flags": layout_flags(theme),
         "beats": digest_obj(lesson.get("beats") or []),
     }
     return digest_obj(payload)
@@ -89,7 +90,18 @@ def write_stamp(folder: Path, stamp: str) -> None:
 
 
 def beat_stamp(beat: dict, code: str, second, theme, stage) -> str:
-    return digest_obj({"v": LAYOUT_VERSION, "beat": beat, "code": code, "second": second, "stage": stage})
+    return digest_obj({"v": LAYOUT_VERSION, "beat": beat, "code": code, "second": second, "stage": stage, "flags": layout_flags(theme)})
+
+
+def layout_flags(theme=None) -> dict:
+    """Env / theme switches that change pixels, so slide caches never mix them."""
+    t = theme if isinstance(theme, dict) else {}
+    return {
+        "legacy_reveal": os.environ.get("VF_LEGACY_REVEAL", "").strip().lower() in {"1", "true", "yes", "on"},
+        "typography": typography_level(theme),
+        "title_font": str(t.get("title_font") or ""),
+        "body_font": str(t.get("body_font") or ""),
+    }
 
 
 def list_slide_pngs(folder: Path) -> list[Path]:
@@ -361,6 +373,22 @@ def field2(obj: dict, stem: str, code: str, second: str | None = None) -> str:
 _CJK_NO_START = set("，。、．·？！；：…—～％‰°℃」』）】》〉’”" + ",.;:!?)]}%\"'")
 _CJK_NO_END = set("「『（【《〈“‘([{")
 
+_CJK_COMPOUNDS = frozenset({
+    "门店", "門店", "店面",
+    "平均数", "平均數", "方差", "标准差", "標準差",
+    "偏度", "峰度", "合计", "合計", "天数", "日數",
+    # M01 topic names + frequent speech compounds (caption atomicity)
+    "中位数", "中位數", "众数", "眾數",
+    "极差", "全距", "离散", "離散",
+    "百分位", "百分位数", "百分位數", "分位数", "分位數",
+    "四分位", "四分位距", "四分位数", "四分位數",
+    "协方差", "協方差", "相关系数", "相關係數",
+    "异常值", "異常值", "离群值", "離群值",
+    "变异系数", "變異係數", "超额峰度", "超額峰度",
+    "杯盖", "杯蓋", "高峰", "开方", "開方",
+    "平方根", "方杯", "正态", "正態",
+})
+
 
 def _glue_char(ch: str) -> bool:
     """Characters that belong to one unbreakable Latin / number token:
@@ -401,6 +429,20 @@ def _cjk_tokens(text: str) -> list[str]:
             if any(c.isdigit() for c in text[i:j]) and j < n and is_cjk(text[j]):
                 j += 1
             raw.append(text[i:j]); i = j
+        elif is_cjk(ch):
+            matched = None
+            # Longest-first so 相关系数 / 百分位数 beat shorter prefixes.
+            for length in (5, 4, 3, 2):
+                piece = text[i : i + length]
+                if piece in _CJK_COMPOUNDS:
+                    matched = piece
+                    break
+            if matched:
+                raw.append(matched)
+                i += len(matched)
+            else:
+                raw.append(ch)
+                i += 1
         else:
             raw.append(ch); i += 1
     tokens: list[str] = []
@@ -560,7 +602,15 @@ def _center(draw, box, text, font, fill, bold: bool = True):
     primary, secondary = _split_pair(text)
     if not secondary:
         size = int(getattr(font, "size", SCALE["claim"]) or SCALE["claim"])
-        lines = wrap(draw, primary, font, max_w, bold=bold) or [sanitize(primary or "")]
+        body = sanitize(primary or "")
+        # Pure numbers / short equations stay on one line: shrink before wrap
+        # so "3,600" or "48 x 48 = 2,304" never splits mid-number in a narrow cell.
+        if body and (_equation_line(body) or (any(c.isdigit() for c in body) and not any(is_cjk(c) for c in body) and body.count(" ") <= 4)):
+            while size > 16 and mixed_length(draw, body, size, bold) > max_w:
+                size -= 1
+            lines = [body]
+        else:
+            lines = wrap(draw, body, font_for(body, size, bold), max_w, bold=bold) or [body]
         line_h = int(size * 1.18)
         total = line_h * len(lines)
         ty = y0 + max(0, (box_h - total) / 2)
@@ -703,6 +753,37 @@ def _panel(draw, box, fill, theme, accent: bool = True) -> None:
 
 def _show(stage, need: int) -> bool:
     return stage is None or stage == 0 or stage >= need
+
+
+def _legacy_reveal() -> bool:
+    """VF_LEGACY_REVEAL=1 restores the old two_column / takeaway / example reveal
+    (left at stage 2, right at stage 3), only to reproduce already-published stills."""
+    return os.environ.get("VF_LEGACY_REVEAL", "").strip().lower() in {"1", "true", "yes", "on"}
+
+
+def _pair_reveal(stage) -> tuple[bool, bool, bool, int]:
+    """(first_on, second_on, verdict_on, active) for a two-panel staged card.
+
+    Speech chunk i is shown on still i, so the first panel is on from stage 1,
+    the second from stage 2 and the VS / verdict from stage 3. A panel that is
+    not yet active is drawn dimmed instead of blank. active is 1 or 2 for the
+    panel to outline, 0 for none."""
+    if stage in (None, 0):
+        return True, True, True, 0
+    st = int(stage)
+    if _legacy_reveal():
+        return st >= 2, st >= 3, st >= 3, 0
+    return True, st >= 2, st >= 3, st if st in (1, 2) else 0
+
+
+def _dim_ink(fill, ink, t: float = 0.36):
+    """Text colour for a panel that is not active yet: readable but quiet."""
+    return _blend(fill, ink, t)
+
+
+def _active_outline(draw, box, theme, radius=24, width=6) -> None:
+    x0, y0, x1, y1 = box
+    draw.rounded_rectangle([x0 - width, y0 - width, x1 + width, y1 + width], radius=radius + width, outline=theme["gold"], width=width)
 
 
 def render_title_card(draw, beat, lesson, code, theme, second=None) -> None:
@@ -888,6 +969,12 @@ def render_definition(draw, beat, code, y, theme, stage=None, second=None) -> No
     if _show(stage, 1) and body and not painted:
         lines = _formula_lines(body)
         sub = _formula_lines(other) if (second and other) else []
+        # Shared trailing arithmetic (e.g. "1,825 / 5 = 365") once on primary;
+        # secondary keeps the word-formula only, in the smaller gold face.
+        if lines and sub:
+            while sub and (sub[-1].strip() == lines[-1].strip() or same_math(sub[-1], lines[-1])):
+                sub = sub[:-1]
+                break
         if len(lines) >= 2 or sub:
             _paint_formula_lines(draw, box, lines, theme["bg"], sub_lines=sub, sub_fill=theme["gold"])
         else:
@@ -896,6 +983,90 @@ def render_definition(draw, beat, code, y, theme, stage=None, second=None) -> No
     if reveal and g_lay:
         draw.line([(160, inner_bottom), (W - 160, inner_bottom)], fill=theme["gold"], width=2)
         _paint_block(draw, (120, inner_bottom + 8, W - 120, box_y + box_h - 16), g_lay, theme["gold"], theme["bg"])
+
+
+TITLE_CAP_SINGLE = 84  # CJK title cap in draw_title; Latin titles may go to SCALE["title"]
+BODY_TO_TITLE = 0.65
+
+
+def typography_level(theme) -> int:
+    """1 = original (bold body, body as large as the title). 2 = hierarchy:
+    regular-weight body capped at ~0.65x the title. Theme key `typography`,
+    overridable with VF_TYPOGRAPHY. Default 1 so old lessons re-render unchanged."""
+    raw = os.environ.get("VF_TYPOGRAPHY", "").strip()
+    if not raw and isinstance(theme, dict):
+        raw = str(theme.get("typography") or "").strip()
+    try:
+        return max(1, int(float(raw))) if raw else 1
+    except ValueError:
+        return 1
+
+
+def _body_cap(theme, cap: int, dual: bool) -> int:
+    if typography_level(theme) < 2:
+        return cap
+    title = DUAL["title"][0] if dual else TITLE_CAP_SINGLE
+    return min(int(cap), int(round(title * BODY_TO_TITLE)))
+
+
+def _body_bold(theme) -> bool:
+    return typography_level(theme) < 2
+
+
+FONT_SAMPLE = "统计样本平均数概率數據機會點歸類AaBbXyZz0123456789%=.,"
+
+
+def font_covers(path: str, sample: str = FONT_SAMPLE) -> list[str]:
+    """Characters of `sample` the font at `path` cannot paint (empty = OK)."""
+    from glyphs import paints
+
+    if not path or not Path(path).is_file():
+        return list(sample)
+    return [ch for ch in sample if not ch.isspace() and not paints(path, ch)]
+
+
+def _theme_font_path(raw: str) -> str:
+    p = Path(str(raw)).expanduser()
+    if p.is_file():
+        return str(p)
+    root = Path(__file__).resolve().parents[1]
+    for base in (root / "fonts", root / "themes", root):
+        if (base / raw).is_file():
+            return str(base / raw)
+    return ""
+
+
+def apply_theme_fonts(theme) -> list[str]:
+    """Optional theme keys: title_font replaces the bold face (titles), body_font
+    the regular face (body under typography 2, second-language lines, captions).
+    A font is used only when it paints both CJK and Latin samples; otherwise the
+    current faces stay and a warning is returned."""
+    global FONT_LATIN, FONT_LATIN_B, FONT_CJK, FONT_CJK_B
+    notes: list[str] = []
+    if not isinstance(theme, dict):
+        return notes
+    changed = False
+    for key, envs in (("title_font", ("VF_FONT_CJK_BOLD", "VF_FONT_LATIN_BOLD")), ("body_font", ("VF_FONT_CJK", "VF_FONT_LATIN"))):
+        raw = str(theme.get(key) or "").strip()
+        if not raw:
+            continue
+        path = _theme_font_path(raw)
+        missing = font_covers(path)
+        if missing:
+            notes.append(f"theme {key} {raw!r} ignored: cannot paint {''.join(missing[:12])!r}")
+            continue
+        for env in envs:
+            os.environ[env] = path
+        changed = True
+        notes.append(f"theme {key}: {path}")
+    if changed:
+        import glyphs
+
+        for fn in (glyphs.font_path_for_char, glyphs.char_ok):
+            fn.cache_clear()
+        _LATIN_K.clear()
+        FONT_LATIN, FONT_LATIN_B, FONT_CJK, FONT_CJK_B = latin_regular(), latin_bold(), cjk_regular(), cjk_bold()
+    return notes
 
 
 def _is_cjk_text(text: str) -> bool:
@@ -958,15 +1129,15 @@ def _paint_block(draw, box, lay, fill, sub_fill=None, align="center", valign="ce
         ty += lay["s_lh"]
 
 
-def _shared_layouts(draw, texts, max_w, max_h, cap, floor, sub_ratio, max_lines, sub_max_lines=2):
+def _shared_layouts(draw, texts, max_w, max_h, cap, floor, sub_ratio, max_lines, sub_max_lines=2, bold=True):
     """Fit every text, then lay all of them out at the smallest fitted size so
     sibling panels share one type size."""
-    lays = [_block_layout(draw, t, max_w, max_h, cap, floor, sub_ratio, max_lines, sub_max_lines) if t else None for t in texts]
+    lays = [_block_layout(draw, t, max_w, max_h, cap, floor, sub_ratio, max_lines, sub_max_lines, bold) if t else None for t in texts]
     sizes = [l["size"] for l in lays if l]
     if not sizes:
         return lays, 0
     common = min(sizes)
-    lays = [_block_layout(draw, t, max_w, max_h, common, floor, sub_ratio, max_lines, sub_max_lines) if t else None for t in texts]
+    lays = [_block_layout(draw, t, max_w, max_h, common, floor, sub_ratio, max_lines, sub_max_lines, bold) if t else None for t in texts]
     return lays, max(l["h"] for l in lays if l)
 
 
@@ -987,22 +1158,32 @@ def render_two_column(draw, beat, code, y, theme, stage=None, second=None) -> No
     inner_w = (mid - 40 - 64) - 2 * pad_x
     dual = bool(second)
     cap, floor = (72, 28) if dual else (84, 32)
-    lays, block = _shared_layouts(draw, [left_full, right_full], inner_w, int((avail - 72) * 0.72), cap, floor, 0.62, 3)
+    cap = _body_cap(theme, cap, dual)
+    lays, block = _shared_layouts(draw, [left_full, right_full], inner_w, int((avail - 72) * 0.72), cap, floor, 0.62, 3, bold=_body_bold(theme))
     panel_h = _tight_height(block, avail, 380, 0.56)
     top = box_y + int((avail - panel_h) * 0.4)
     bot = top + panel_h
+    left_on, right_on, vs_on, active = _pair_reveal(stage)
+    legacy = _legacy_reveal()
+    if active == 1 and lays[1]:
+        _active_outline(draw, (64, top, mid - 40, bot), theme)
+    elif active == 2:
+        _active_outline(draw, (mid + 40, top, W - 64, bot), theme)
     draw.rounded_rectangle([64, top, mid - 40, bot], radius=24, fill=theme["navy"])
     draw.rounded_rectangle([mid + 40, top, W - 64, bot], radius=24, fill=theme["emerald"])
-    if _show(stage, 3):
+    if vs_on or (not legacy and right_on):
         cy = top + panel_h // 2
         draw.ellipse([mid - 44, cy - 44, mid + 44, cy + 44], fill=theme["gold"])
         vf = _font(FONT_LATIN_B, 28)
         tw = draw.textlength("VS", font=vf)
         draw.text((mid - tw / 2, cy - 16), "VS", font=vf, fill=theme["navy"])
-    if lays[0] and _show(stage, 2):
+    if lays[0] and left_on:
         _paint_block(draw, (64 + pad_x, top, mid - 40 - pad_x, bot), lays[0], theme["bg"], theme["gold"])
-    if lays[1] and _show(stage, 3):
+    if lays[1] and right_on:
         _paint_block(draw, (mid + 40 + pad_x, top, W - 64 - pad_x, bot), lays[1], theme["white"], theme["bg"])
+    elif lays[1] and not legacy:
+        quiet = _dim_ink(theme["emerald"], theme["white"])
+        _paint_block(draw, (mid + 40 + pad_x, top, W - 64 - pad_x, bot), lays[1], quiet, quiet)
 
 
 def render_takeaway(draw, beat, code, y, theme, stage=None, second=None) -> None:
@@ -1017,7 +1198,8 @@ def render_takeaway(draw, beat, code, y, theme, stage=None, second=None) -> None
     text_l, text_r = 212, W - 104
     dual = bool(second)
     cap, floor = (60, 28) if dual else (68, 32)
-    lays, block = _shared_layouts(draw, questions, text_r - text_l, full - 40, cap, floor, 0.66, 2)
+    cap = _body_cap(theme, cap, dual)
+    lays, block = _shared_layouts(draw, questions, text_r - text_l, full - 40, cap, floor, 0.66, 2, bold=_body_bold(theme))
     hbox = _tight_height(block, full, 200, 0.6)
     total = hbox * k + gap * (k - 1)
     start = box_y + int((avail - total) * 0.4)
@@ -1030,8 +1212,13 @@ def render_takeaway(draw, beat, code, y, theme, stage=None, second=None) -> None
         nf = _font(FONT_LATIN_B, 36)
         tw = draw.textlength(str(i + 1), font=nf)
         draw.text((144 - tw / 2, cy - 22), str(i + 1), font=nf, fill=theme["navy"])
-        if lays[i] and _show(stage, 2 if i == 0 else 3):
+        first_on, second_on, _verdict, _active = _pair_reveal(stage)
+        on = first_on if i == 0 else second_on
+        if lays[i] and on:
             _paint_block(draw, (text_l, top, text_r, top + hbox), lays[i], theme["white"], theme["gold"] if i % 2 == 0 else theme["bg"])
+        elif lays[i] and not _legacy_reveal():
+            quiet = _dim_ink(fills[i % 2], theme["white"])
+            _paint_block(draw, (text_l, top, text_r, top + hbox), lays[i], quiet, quiet)
 
 
 def localized_tex(beat, code, second=None):
@@ -1064,11 +1251,16 @@ def _pair_tag(primary, second, other) -> str:
     return primary
 
 
-def _paint_example_card(draw, box, fill, tag, lay, theme, show_body):
+def _paint_example_card(draw, box, fill, tag, lay, theme, show_body, dim_hidden=False):
     x0, y0, x1, y1 = box
     _panel(draw, box, fill, theme)
     _tag(draw, x0 + 44, y0 + 20, tag, theme)
-    if not show_body or not lay:
+    if not lay:
+        return
+    if not show_body:
+        if dim_hidden:
+            quiet = _dim_ink(fill, theme["bg"])
+            _paint_block(draw, (x0 + 44, y0 + 62, x1 - 40, y1 - 22), lay, quiet, quiet, align="left")
         return
     _paint_block(draw, (x0 + 44, y0 + 62, x1 - 40, y1 - 22), lay, theme["bg"], theme["gold"], align="left")
 
@@ -1086,13 +1278,16 @@ def render_example(draw, beat, code, y, theme, stage=None, second=None) -> None:
     inner_w = W - 64 - 40 - (64 + 44)
     dual = bool(second)
     cap, floor = (56, 26) if dual else (64, 28)
-    lays, block = _shared_layouts(draw, [setup, result], inner_w, half - 62 - 26, cap, floor, 0.64, 3)
+    cap = _body_cap(theme, cap, dual)
+    lays, block = _shared_layouts(draw, [setup, result], inner_w, half - 62 - 26, cap, floor, 0.64, 3, bold=_body_bold(theme))
     card_h = _tight_height(block, half, 210, 0.62, 62)
     total = 2 * card_h + gap
     start = box_y + int((avail - total) * 0.4)
-    _paint_example_card(draw, (64, start, W - 64, start + card_h), theme["navy"], _pair_tag(lab_s, second, other_s), lays[0], theme, _show(stage, 2))
+    setup_on, result_on, _verdict, _active = _pair_reveal(stage)
+    dim = not _legacy_reveal()
+    _paint_example_card(draw, (64, start, W - 64, start + card_h), theme["navy"], _pair_tag(lab_s, second, other_s), lays[0], theme, setup_on, dim)
     top = start + card_h + gap
-    _paint_example_card(draw, (64, top, W - 64, top + card_h), theme["emerald"], _pair_tag(lab_r, second, other_r), lays[1], theme, _show(stage, 3))
+    _paint_example_card(draw, (64, top, W - 64, top + card_h), theme["emerald"], _pair_tag(lab_r, second, other_r), lays[1], theme, result_on, dim)
 
 
 def render_three_column(draw, beat, code, y, theme, stage=None, second=None) -> None:
@@ -1106,7 +1301,8 @@ def render_three_column(draw, beat, code, y, theme, stage=None, second=None) -> 
     inner_w = width - 64
     dual = bool(second)
     cap, floor = (56, 26) if dual else (64, 28)
-    lays, block = _shared_layouts(draw, cols, inner_w, avail - 100 - 40, cap, floor, 0.66, 5)
+    cap = _body_cap(theme, cap, dual)
+    lays, block = _shared_layouts(draw, cols, inner_w, avail - 100 - 40, cap, floor, 0.66, 5, bold=_body_bold(theme))
     panel_h = _tight_height(block, avail, 400, 0.62, 100)
     top = box_y + int((avail - panel_h) * 0.4)
     fills = (theme["navy"], theme["ink"], theme["emerald"])
@@ -1223,6 +1419,22 @@ def render_module_close(draw, beat, lesson, code, theme, second=None) -> None:
             draw_mixed(draw, (80, yy + int(nsz * _line_factor(main)) + 8), sub_head + sub, ssz, theme["muted"], False)
 
 
+STEP_NUM_RE = re.compile(r"^\s*\d{1,2}\s*[.、)）．](?!\d)\s*")
+_EQ_MARKS = set("=≤≥<>÷×√∑∫≈≠±$\\^_")
+
+
+def strip_step_number(text: str) -> str:
+    """Drop a typed '1. ' / '2、' / '3) ' prefix from each language line, since the
+    row badge already shows the number. '0.80 × 5' is left alone."""
+    if not text:
+        return text
+    return "\n".join(STEP_NUM_RE.sub("", ln, count=1) if STEP_NUM_RE.match(ln) and STEP_NUM_RE.sub("", ln, count=1).strip() else ln for ln in str(text).split("\n"))
+
+
+def _looks_equation(text: str) -> bool:
+    return any(ch in _EQ_MARKS for ch in (text or ""))
+
+
 def render_steps(draw, beat, code, y, theme, stage=None, second=None) -> None:
     items = []
     for i in range(1, 7):
@@ -1249,6 +1461,10 @@ def render_steps(draw, beat, code, y, theme, stage=None, second=None) -> None:
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    # Each row has a number badge: a typed "1." in the text would repeat it.
+    items = [(strip_step_number(text), strip_step_number(ex) if ex else ex) for text, ex in items]
+    # Rows of equations stay centred; rows of sentences read from the left.
+    centre_rows = as_rows and all(_looks_equation(_split_pair(t)[0]) for t, _e in items if t)
     gap = 12
     row_h = (box_h - 28 - gap * (len(items) - 1)) // len(items)
     bd = max(22, min(30, row_h // 4))
@@ -1263,6 +1479,8 @@ def render_steps(draw, beat, code, y, theme, stage=None, second=None) -> None:
     else:
         base = int(budget / (1.08 + (0.62 * 1.1 if any_ex else 0)))
     base = max(24, min(60 if not any_second else 56, base)) if not as_rows else max(24, min(80 if not any_second else 70, base))
+    base = max(24, min(base, _body_cap(theme, base, any_second)))
+    body_bold = _body_bold(theme)
     for i, (text, ex) in enumerate(items):
         y0 = box_y + 14 + i * (row_h + gap)
         show = _show(stage, i + 1)
@@ -1278,7 +1496,7 @@ def render_steps(draw, beat, code, y, theme, stage=None, second=None) -> None:
             ex_primary, ex_secondary = _split_pair(ex or "")
             second_ink = theme["gold"] if fill != theme["gold"] else theme["white"]
             p_sz = base
-            while p_sz > 24 and mixed_length(draw, primary, p_sz, True) > max_w:
+            while p_sz > 24 and mixed_length(draw, primary, p_sz, body_bold) > max_w:
                 p_sz -= 2
             s_sz = max(20, int(base * 0.72))
             while secondary and s_sz > 18 and mixed_length(draw, secondary, s_sz, False) > max_w:
@@ -1292,11 +1510,11 @@ def render_steps(draw, beat, code, y, theme, stage=None, second=None) -> None:
                 block += 6 + int(e_sz * 1.1)
             ty = y0 + max(6, (row_h - block) / 2)
             tx = text_x
-            if as_rows:
+            if centre_rows:
                 # short rows (an equation each): centre the block in the row
-                bw_ = max(mixed_length(draw, primary, p_sz, True), mixed_length(draw, secondary, s_sz, False) if secondary else 0)
+                bw_ = max(mixed_length(draw, primary, p_sz, body_bold), mixed_length(draw, secondary, s_sz, False) if secondary else 0)
                 tx = max(text_x, (text_x + max_w + text_x) / 2 - bw_ / 2 - (text_x - 100) / 2)
-            draw_mixed(draw, (tx, ty), primary, p_sz, ink, True)
+            draw_mixed(draw, (tx, ty), primary, p_sz, ink, body_bold)
             ty += p_lh
             if secondary:
                 ty += 4

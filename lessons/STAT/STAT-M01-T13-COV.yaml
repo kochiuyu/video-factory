@@ -1,21 +1,40 @@
 id: STAT-M01-T13-COV
-course: statistics
 course_en: Business Statistics
 course_zh: 商务统计
 course_zh_hk: 商務統計
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 492
+duration_target_s: 469
 title_en: What is covariance?
 title_zh: 什么是协方差？
 title_zh_hk: 咩係協方差？
-objective_en: Define covariance as the average of paired deviation products divided by n,
-  read its sign as the direction of linear co-movement, show that its size depends on measurement
-  units, and avoid treating covariance as strength or causation.
-objective_zh: 把协方差定义为成对离差乘积之和除以n，用符号解释线性共同变动的方向，说明数值大小取决于计量单位，并避免把协方差当作关系强度或因果关系。
-objective_zh_hk: 將協方差定義為成對偏差乘積之和除以n，用符號解釋線性共同變動嘅方向，說明數值大細取決於計量單位，並避免將協方差當成關係強度或者因果關係。
+youtube:
+  description_en: |
+    What is covariance?
+    
+    Five shops: rents 10,000, 12,000, 13,000, 16,000, 19,000 (average 14,000) and cups 300, 330, 360, 400, 460 (average 370). For each shop, (rent - 14,000) x (cups - 370). All five products are positive; sum 880,000; share by 5: covariance = 176,000 dollar-cups. Positive means when rent is above average, cups tend to be too.
+    
+    Rewrite rent in cents and the number becomes 17,600,000 - same shops, different unit. Read the sign as direction of linear co-movement. Do not read raw size as strength, and do not treat covariance as proof that rent causes sales.
+    
+    Business Statistics - Module 1 - Short 13 (covariance)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    什么是协方差？
+    
+    五家店：租金10,000、12,000、13,000、16,000、19,000（平均14,000），杯数300、330、360、400、460（平均370）。每家算（租金-14,000）x（杯数-370）。五个乘积都为正；合计880,000；除以5：协方差=176,000美元-杯。为正表示租金偏高时，杯数也往往偏高。
+    
+    改写成美分，数字变成17,600,000 - 店没变，单位变了。把符号读成线性同向/反向。不要把绝对大小当成强度，也不要把协方差当成租金导致销量的证明。
+    
+    商务统计 - 模块1 - 短片13（协方差）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    咩係協方差？
+    
+    五間店：租金10,000、12,000、13,000、16,000、19,000（平均14,000），杯數300、330、360、400、460（平均370）。每間計（租金-14,000）x（杯數-370）。五個乘積都為正；合計880,000；除以5：協方差=176,000美元-杯。為正表示租金偏高時，杯數亦往往偏高。
+    
+    改寫成美分，數字變成17,600,000 - 店冇變，單位變咗。將符號讀成線性同向/反向。唔好將絕對大小當成強度，亦唔好將協方差當成租金導致銷量嘅證明。
+    
+    商務統計 - 模組1 - 短片13（協方差）
+    覺得有用嘅話，訂閱下一集。
+
 glossary:
 - en: covariance
   zh: 协方差
@@ -78,7 +97,7 @@ quiz:
     even though the underlying relationship is unchanged. Raw magnitude therefore cannot be
     interpreted as standardized strength. Covariance is not bounded by −1 and +1, and it is not
     limited to percentages.
-  explanation_zh: 把变量的单位从元改为分，会令协方差扩大100倍，但基础关系没有改变。因此，原始数值大小不能被解释为标准化的关系强度。协方差不受−1到+1限制，也不只适用于百分比。
+  explanation_zh: 把变量的单位从元改为分，会令协方差扩大100倍，但基础关系没有改变。所以，原始数值大小不能当成标准化的关系强度。协方差不受−1到+1限制，也不只适用于百分比。
   explanation_zh_hk: 將變量嘅單位由元改為分，會令協方差擴大100倍，但基礎關係冇改變。所以，原始數值大細唔可以被解釋為標準化嘅關係強度。協方差唔受−1到+1限制，亦唔淨係適用於百分比。
 beats:
 - id: hook
@@ -326,7 +345,7 @@ beats:
   s3_zh_hk: 所以用協方差讀成對檔案嘅方向，到此為止，唔好聲稱強弱或者因果。經理應該帶走咩？
 - id: answer
   visual: takeaway
-  seconds: 51
+  seconds: 28
   kicker: The Answer
   kicker_en: The Answer
   kicker_zh: 回答
@@ -334,21 +353,27 @@ beats:
   title_en: Direction yes. Strength later.
   title_zh: 方向可以判断，强弱往后
   title_zh_hk: 方向可以判斷，強弱往後
-  q1_en: Do they move together?
-  q1_zh: 它们一起动吗？
-  q1_zh_hk: 佢哋一齊郁嗎？
-  q2_en: What must you still not claim?
-  q2_zh: 你仍然不能声称什么？
-  q2_zh_hk: 你仍然唔可以聲稱咩？
-  s1_en: 'Do rent and cups move together at these five shops? Yes in direction: the covariance
-    is positive 176,000 dollar-cups.'
-  s1_zh: 这五家店的租金和杯数是一起动的吗？方向上是：协方差是正的176,000元·杯。
-  s1_zh_hk: 呢五間店嘅租金同杯數係一齊郁嗎？方向上係：協方差係正嘅176,000蚊·杯。
-  s2_en: That number alone does not say how strong the link is, and it does not say rent causes
-    sales. For strength you need a later tool that strips out the units.
-  s2_zh: 单靠这个数，说不出关系有多强，也说不出租金导致销量。要谈强弱，后面还需要一个去掉单位的工具。
-  s2_zh_hk: 單靠呢個數，講唔出關係有幾強，亦講唔出租金導致銷量。要傾強弱，後面仲需要一個去掉單位嘅工具。
-  s3_en: 'The operating rule: read the sign for co-movement, state the units, do not treat
-    the raw size as strength, and do not treat covariance as cause.'
-  s3_zh: 经营规则：用符号看是否同向变动，写明单位，不要把原始大小当成强弱，也不要把协方差当成因果。
-  s3_zh_hk: 營運規則：用符號睇係咪同向變動，寫明單位，唔好將原始大細當成強弱，亦唔好將協方差當成因果。
+  q1_en: 'Do they move together? → Yes — covariance +176,000 dollar-cups'
+  q1_zh: 它们一起动吗？→ 是——协方差正176,000元·杯
+  q1_zh_hk: 佢哋一齊郁嗎？→ 係——協方差正176,000蚊·杯
+  q2_en: 'What must you still not claim? → Strength or cause'
+  q2_zh: 你仍然不能声称什么？→ 强弱或因果
+  q2_zh_hk: 你仍然唔可以聲稱咩？→ 強弱或者因果
+  s1_en: >-
+    Do rent and cups move together? Yes in direction — covariance is positive 176,000 dollar-cups.
+  s1_zh: >-
+    租金和杯数一起动吗？方向上是——协方差是正的176,000元·杯。
+  s1_zh_hk: >-
+    租金同杯數一齊郁嗎？方向上係——協方差係正嘅176,000蚊·杯。
+  s2_en: >-
+    That size alone is not strength, and it is not cause.
+  s2_zh: >-
+    单看大小不是强弱，也不是因果。
+  s2_zh_hk: >-
+    淨睇大細唔係強弱，亦唔係因果。
+  s3_en: >-
+    Read the sign for co-movement. Stop before strength or cause. That is the answer.
+  s3_zh: >-
+    用符号看是否同向变动。强弱和因果先别谈。这就是答案。
+  s3_zh_hk: >-
+    用符號睇係咪同向變動。強弱同因果先唔好傾。呢個就係答案。

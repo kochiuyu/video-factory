@@ -65,6 +65,7 @@ from mux import (  # noqa: E402
     make_beat_clip,
     pages_for_stages,
     probe_duration,
+    caption_orphans,
     stage_scripts,
     stamp_caption,
     write_srt,
@@ -79,6 +80,7 @@ from cache import digest_obj, file_fingerprint, stamp_ok, write_mark  # noqa: E4
 from preview import render_caption_previews  # noqa: E402
 from pdfexport import export_preview_pdfs  # noqa: E402
 from slides import (  # noqa: E402
+    apply_theme_fonts,
     lesson_stamp,
     list_slide_pngs,
     render_lesson_slides,
@@ -90,7 +92,7 @@ from slides import (  # noqa: E402
     write_stage_slides,
 )
 from theme import load_theme  # noqa: E402
-from youtube import write_youtube_sidecars, youtube_warnings  # noqa: E402
+from youtube import load_series_links, write_youtube_sidecars, youtube_warnings  # noqa: E402
 from tts import load_word_times, synthesize_lesson  # noqa: E402
 from validate import load_lesson, validate  # noqa: E402
 
@@ -266,6 +268,49 @@ def concat_audio(parts: list[Path], out_path: Path) -> Path:
     return atomic_replace(tmp, out_path)
 
 
+def _env_float(name: str) -> float | None:
+    raw = os.environ.get(name, "").strip()
+    if not raw:
+        return None
+    try:
+        return float(raw)
+    except ValueError:
+        return None
+
+
+def pad_cap() -> float | None:
+    """VF_PAD_CAP=1.0 caps the silence added after each beat in a language
+    to about that many seconds. Unset = old behaviour (pad to the longest
+    language, so every cell has the same beat lengths)."""
+    cap = _env_float("VF_PAD_CAP")
+    return None if cap is None or cap < 0 else cap
+
+
+def capped_durations(raw: dict[str, list[float]], shared: list[float], cap: float | None) -> dict[str, list[float]]:
+    if cap is None:
+        return {lang: list(shared) for lang in raw}
+    return {lang: [min(d, r + cap) for r, d in zip(vals, shared)] for lang, vals in raw.items()}
+
+
+def hold_limits() -> tuple[float, float, bool]:
+    warn = _env_float("VF_HOLD_WARN") or 20.0
+    fail = _env_float("VF_HOLD_FAIL") or 30.0
+    strict = os.environ.get("VF_STRICT_HOLD", "").strip().lower() in {"1", "true", "yes", "on"}
+    return warn, fail, strict
+
+
+def still_holds(plan: list[int], still_idx: list[int], holds: list[float]) -> list[tuple[str, float]]:
+    """(stage label, seconds on screen) per still, from the caption page holds."""
+    totals: dict[int, float] = {}
+    for k, h in zip(still_idx, holds):
+        totals[k] = totals.get(k, 0.0) + float(h)
+    out = []
+    for k in sorted(totals):
+        label = "base" if plan == [0] else f"s{plan[min(k, len(plan) - 1)]}"
+        out.append((label, totals[k]))
+    return out
+
+
 def estimate_seconds(beat: dict) -> float:
     if beat.get("seconds"):
         return float(beat["seconds"])
@@ -400,6 +445,52 @@ def write_cell_covers(lesson_path: Path, lesson: dict, cells: dict, cell_slides:
         print("cover:", dest)
 
 
+def check_holds_and_orphans(lesson, cells, lang_durations, durations, pages_fn) -> list[str]:
+    """C4b: warn when one still stays on screen > VF_HOLD_WARN (20 s); with
+    VF_STRICT_HOLD=1 (or --strict-hold) fail above VF_HOLD_FAIL (30 s).
+    Also warn about caption sentences that would end on a 1-2 word card."""
+    warn, fail, strict = hold_limits()
+    seen: set = set()
+    msgs: list[str] = []
+    fatal: list[str] = []
+    for name, (audio_lang, sub_lang, _slide) in cells.items():
+        for beat, dur in zip(lesson["beats"], lang_durations.get(audio_lang, durations)):
+            _pages, holds, plan, still_idx, _how = pages_fn(beat, dur, sub_lang, audio_lang, quiet=True)
+            if plan != [0] and len(set(still_idx)) != len(plan):
+                key = ("count", audio_lang, sub_lang, beat["id"])
+                if key not in seen:
+                    seen.add(key)
+                    msgs.append(f"stills: {lesson['id']} {beat['id']} ({audio_lang}/{sub_lang}): {len(plan)} stages but captions reach {len(set(still_idx))} stills")
+            for label, secs in still_holds(plan, still_idx, holds):
+                key = (audio_lang, beat["id"], label)
+                if secs <= warn or key in seen:
+                    continue
+                seen.add(key)
+                line = (
+                    f"hold: {lesson['id']} beat {beat['id']} stage {label} ({audio_lang} voice) "
+                    f"stays {secs:.1f}s on one still (> {warn:.0f}s); split that stage's script "
+                    f"into two chunks or add a stage so the slide changes sooner"
+                )
+                msgs.append(line)
+                if secs > fail:
+                    fatal.append(line)
+    for code in sorted({sub for _a, sub, _s in cells.values()}):
+        n = 0
+        for beat in lesson["beats"]:
+            bad = caption_orphans(beat_text(beat, code))
+            n += len(bad)
+            for row in bad[:1]:
+                msgs.append(f"orphan: {lesson['id']} {beat['id']} ({code}) last caption card is short: {row}")
+        if n:
+            msgs.append(f"orphan: {lesson['id']} ({code}) {n} sentence(s) end on a 1-2 word card")
+    for m in msgs:
+        print("warn:", m)
+    if strict and fatal:
+        print(f"FAIL (VF_STRICT_HOLD): {len(fatal)} still(s) over {fail:.0f}s")
+        raise SystemExit(1)
+    return msgs
+
+
 def build(
     lesson_path: Path,
     out_root: Path,
@@ -444,12 +535,15 @@ def build(
     print("tracks:", ", ".join(langs) or "(none)")
     print("cells:", ", ".join(cells) or "(none)")
     print("titles:", "match cell language" if match_titles else f"shared {label_lang}")
-    for warning in youtube_warnings(lesson, cells):
+    series_links = load_series_links(lesson_path, str(lesson.get("id") or ""))
+    for warning in youtube_warnings(lesson, cells, series_links):
         print("warn:", warning)
-    for path in write_youtube_sidecars(lesson, cells, out_dir):
+    for path in write_youtube_sidecars(lesson, cells, out_dir, series_links):
         print("youtube:", path)
     clock = StepClock()
     theme = load_theme(theme_name)
+    for note in apply_theme_fonts(theme):
+        print("theme:", note)
     cell_slides: dict[str, tuple[str, str | None]] = {}
     for name, (voice, cap, slide) in cells.items():
         cell_slides[name] = bilingual_pair(voice, cap, slide)
@@ -551,14 +645,19 @@ def build(
         synthesize_lesson(lesson, audio_root, overwrite=force_tts, langs=langs)
     clock.lap("speech")
     tracks = {lang: collect_audio(lesson, audio_root, lang) for lang in langs}
+    lang_durations: dict[str, list[float]] = {}
     if all(tracks.values()):
-        durations = []
-        for i in range(len(lesson["beats"])):
-            durations.append(max(probe_duration(tracks[lang][i]) for lang in langs))
+        raw_len = {lang: [probe_duration(p) for p in tracks[lang]] for lang in langs}
+        durations = [max(raw_len[lang][i] for lang in langs) for i in range(len(lesson["beats"]))]
+        cap = pad_cap()
+        lang_durations = capped_durations(raw_len, durations, cap)
+        if cap is not None:
+            saved = {lang: sum(durations) - sum(v) for lang, v in lang_durations.items()}
+            print("pad-cap:", cap, "s;", ", ".join(f"{k} -{v:.1f}s" for k, v in saved.items()))
         pad_dir = out_dir / "audio" / "padded"
         padded: dict[str, list[Path]] = {lang: [] for lang in langs}
         for lang in langs:
-            for beat, src, dur in zip(lesson["beats"], tracks[lang], durations):
+            for beat, src, dur in zip(lesson["beats"], tracks[lang], lang_durations[lang]):
                 padded[lang].append(pad_audio(src, dur, pad_dir / lang / f"{beat['id']}.mp3"))
             concat_audio(padded[lang], out_dir / "audio" / f"{lang}.mp3")
         tracks = padded
@@ -588,6 +687,7 @@ def build(
         dur: float,
         sub_lang: str,
         spoken_lang: str | None = None,
+        quiet: bool = False,
     ) -> tuple[list[str], list[float], list[int], list[int], str]:
         # Captions are sub_lang. Word times come from the spoken MP3 so a
         # bilingual cell follows that cell's voice. A mismatch falls back.
@@ -604,14 +704,14 @@ def build(
             pages, holds, still_idx, how = pages_for_stages(
                 text, dur, len(plan), chunks=chunks, words=words
             )
-        if words and how != CAP_TIME_WORDS:
+        if words and how != CAP_TIME_WORDS and not quiet:
             print(f"caption timing: {spoken}/{beat['id']} word match failed; speech-weight")
         return pages, holds, plan, still_idx, how
 
     def cues(spoken_lang: str, caption_lang: str) -> list[tuple[float, float, str]]:
         t = 0.0
         out = []
-        for beat, d in zip(lesson["beats"], durations):
+        for beat, d in zip(lesson["beats"], lang_durations.get(spoken_lang, durations)):
             pages, holds, _plan, _idx, _how = beat_pages_and_holds(beat, d, caption_lang, spoken_lang)
             for page, hold in zip(pages, holds):
                 out.append((t, t + max(hold - 0.02, 0.35), page))
@@ -632,6 +732,7 @@ def build(
         workers,
     )
     if all(tracks.values()):
+        check_holds_and_orphans(lesson, cells, lang_durations, durations, beat_pages_and_holds)
         srt_dir = out_dir / "srt"
         srt_dir.mkdir(parents=True, exist_ok=True)
         n_beats = len(lesson["beats"])
@@ -646,7 +747,8 @@ def build(
             nocap_clips: list[Path] = []
             parts = tracks[audio_lang]
             pending: list[tuple] = []
-            for i, (beat, dur, audio) in enumerate(zip(lesson["beats"], durations, parts), start=1):
+            cell_durs = lang_durations.get(audio_lang, durations)
+            for i, (beat, dur, audio) in enumerate(zip(lesson["beats"], cell_durs, parts), start=1):
                 pages, holds, plan, still_idx, cap_time = beat_pages_and_holds(
                     beat, dur, sub_lang, audio_lang
                 )
@@ -796,7 +898,21 @@ def main() -> None:
         default="",
         help="Write CUHK-VF-<ECON|ACC|GBA>.zip from existing out/ files and exit.",
     )
+    p.add_argument(
+        "--strict-hold",
+        action="store_true",
+        help="Fail when one still holds longer than VF_HOLD_FAIL (30 s). Same as VF_STRICT_HOLD=1.",
+    )
+    p.add_argument(
+        "--pad-cap",
+        default="",
+        help="Cap silence added after each beat per language, in seconds (e.g. 1.0). Same as VF_PAD_CAP.",
+    )
     args = p.parse_args()
+    if args.strict_hold:
+        os.environ["VF_STRICT_HOLD"] = "1"
+    if args.pad_cap:
+        os.environ["VF_PAD_CAP"] = args.pad_cap
     args.out = resolve_out_root(args.out)
     print("output root:", args.out)
     moved = migrate_out_layout(args.out)

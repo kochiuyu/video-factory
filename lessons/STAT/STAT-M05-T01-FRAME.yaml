@@ -7,8 +7,8 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
-title_en: 'Framing a Hypothesis Test: Null, Alternative, and Evidence'
+duration_target_s: 294
+title_en: Framing a Hypothesis Test
 title_zh: 构建假设检验：原假设、备择假设与证据
 title_zh_hk: 構建假設檢驗：原假設、備擇假設同證據
 objective_en: Formulate null and alternative hypotheses for a business mean, standardize the gap between a sample estimate
@@ -16,6 +16,37 @@ objective_en: Formulate null and alternative hypotheses for a business mean, sta
   evidence from employee-level conclusions.
 objective_zh: 为业务均值规范设定原假设与备择假设，把样本估计与原假设基准之间的差距标准化，解释为什么不显著结果应表述为“不拒绝”而非“接受”H0，并区分统计证据与针对员工个人的结论。
 objective_zh_hk: 為業務均值規範設定原假設同備擇假設，將樣本估計同原假設基準之間嘅差距標準化，解釋點解唔顯著結果應該表述為「唔拒絕」而唔係「接受」H0，並區分統計證據同針對員工個人嘅結論。
+youtube:
+  description_en: |
+    Framing a Hypothesis Test
+
+    Suppose Shop A checks the cash drawer on 36 shifts, and on average the drawer comes up HK$1.80 short per shift. Call that a real process problem when it is just noise, and the team wastes time. Shrug it off when it is real, and money keeps leaking. How big must a gap be before we act? That tool is a hypothesis test.
+
+    The null hypothesis (H0) is the benchmark we hold until the data push hard against it, here mu equals 0. The alternative (H1) is the competing claim, here mu is not equal to 0. Not equal means a drawer that runs short or runs over both count. Fix the benchmark and the direction before you look at the result.
+
+    In an assumed example, sigma is HK$9, so the standard error is 9 / √36 = HK$1.50. Then Z = (−1.80 − 0) / 1.50 = −1.20, and the two-sided p-value is about 0.230. At alpha = 0.05 we fail to reject H0. Gaps like this turn up about one time in four from noise alone.
+
+    Rule: report reject or fail to reject, never accept. Fail to reject is not proof that H0 is true, and a rejection is about the process, not a verdict on any one cashier.
+  description_zh: |
+    构建假设检验：原假设、备择假设与证据
+
+    假设A店抽查了 36 个班次的收银钱箱，平均每个班次短款 HK$1.80。把日常小波动当成流程出了问题，团队就白忙一场；问题是真的却不当回事，钱就会一直漏掉。差距要多大才值得出手？回答这个问题的工具，就叫假设检验（hypothesis test）。
+
+    原假设（null hypothesis，H0）是我们先守住的基准，直到数据强烈反对它，这里是 mu 等于 0。备择假设（alternative hypothesis，H1）是对立的主张，这里是 mu 不等于 0。不等于的意思是，长期短款或者长期多出来都算。基准和方向，要在看结果之前就定好。
+
+    在一个假设的例子里，标准差 sigma 是 HK$9，标准误是 9 / √36 = HK$1.50。于是 Z = (−1.80 − 0) / 1.50 = −1.20，双侧 p 值大约 0.230。在 alpha = 0.05 下，不拒绝原假设。这么大的差距，光靠随机波动大约每四次就会出现一次。
+
+    规则：只报告“拒绝”或“不拒绝”，永远不说“接受”。不拒绝不等于证明 H0 为真；就算拒绝了，也只是对流程的判断，不是对哪一位收银员的判决。
+  description_zh_hk: |
+    構建假設檢驗：原假設、備擇假設同證據
+
+    假設A店抽查咗 36 個班次嘅收銀錢箱，平均每個班次短款 HK$1.80。將日常細波動當成流程出咗問題，團隊就白做一場；問題係真嘅又唔當一回事，錢就會一直漏走。差距要幾大先值得出手？答呢條問題嘅工具，就叫假設檢驗（hypothesis test）。
+
+    原假設（null hypothesis，H0）係我哋先守住嘅基準，直到數據強烈反對佢，呢度係 mu 等於 0。備擇假設（alternative hypothesis，H1）係對立嘅主張，呢度係 mu 唔等於 0。唔等於即係話，長期短款或者長期多出嚟都計。基準同方向，要喺睇結果之前就定好。
+
+    喺一個假設嘅例子入面，標準差 sigma 係 HK$9，標準誤係 9 / √36 = HK$1.50。於是 Z = (−1.80 − 0) / 1.50 = −1.20，雙側 p 值大約 0.230。喺 alpha = 0.05 之下，唔拒絕原假設。咁大嘅差距，淨係靠隨機波動大約每四次就會出現一次。
+
+    規則：只報告「拒絕」或者「唔拒絕」，永遠唔講「接受」。唔拒絕唔等於證明 H0 為真；就算拒絕咗，都只係對流程嘅判斷，唔係對邊一位收銀員嘅判決。
 glossary:
 - en: null hypothesis (H0)
   zh: 原假设/零假设 (H0)
@@ -37,182 +68,245 @@ quiz:
 - id: Q1
   type: multiple_choice
   question_en: Why should a nonsignificant result be reported as fail to reject H0 rather than accept H0?
-  question_zh: 在商业假设检验中，当样本证据未达到显著水平时，为什么决策准则在严密表述上必须判定为“不拒绝原假设”，而绝不能声称“接受原假设”？
-  question_zh_hk: 喺商業假設檢驗入面，當樣本證據未達到顯著水平嗰陣，點解決策準則喺嚴密表述上必須判定為「唔拒絕原假設」，而絕唔可以聲稱「接受原假設」？
+  question_zh: 检验结果不显著时，为什么要说“不拒绝原假设”，而不能说“接受原假设”？
+  question_zh_hk: 檢驗結果唔顯著嗰陣，點解要講「唔拒絕原假設」，而唔可以講「接受原假設」？
   options_en:
-  - 'A: Because insufficient evidence against H0 does not prove H0 true; limited power, noise, or a small effect may also
-    explain the result.'
-  - 'B: Because statistical software licenses forbid using the word ''accept'' in commercial audit reports.'
-  - 'C: Because the sample size must reach infinity before any hypothesis can be accepted.'
-  - 'D: Because ''accepting H0'' would legally require the firm to refund customer transactions.'
+  - 'A: Weak evidence against H0 does not prove H0; noise or a small sample can hide a real gap.'
+  - 'B: Because a p-value above 0.05 means H0 has a 95% chance of being true.'
+  - 'C: Because H0 can only be accepted once the sample has more than 30 observations.'
+  - 'D: Because a nonsignificant result proves the alternative H1 is false.'
   options_zh:
-  - 'A: 恰如法庭裁决“证据不足、罪名不成立”，“不拒绝 H0”仅代表现有证据尚不足以推翻原状，绝不代表原假设在事实上已被确凿证明为真。'
-  - 'B: 因为商业统计软件的用户协议明文禁止在审计报告中使用“接受”字眼。'
-  - 'C: 因为任何假设若要获得“接受”判定，其实际抽样量在数学上必须达到无穷大。'
-  - 'D: 因为一旦在公函中写明“接受 H0”，企业在法律上将被强制向顾客全额退还流水差额。'
+  - 'A: 反对 H0 的证据不够，不等于证明 H0 为真；噪声大或样本小都可能掩盖真实差距。'
+  - 'B: 因为 p 值大于 0.05，就表示 H0 有 95% 的机会为真。'
+  - 'C: 因为样本超过 30 个观测值之后，才可以接受 H0。'
+  - 'D: 因为不显著的结果证明了备择假设 H1 是错的。'
   options_zh_hk:
-  - 'A: 恰如法庭裁決「證據不足、罪名不成立」，「唔拒絕 H0」淨係代表現有證據仲未足以推翻原狀，絕唔代表原假設喺事實上已經被確鑿證明為真。'
-  - 'B: 因為商業統計軟件嘅用戶協議明文禁止喺審計報告入面使用「接受」字眼。'
-  - 'C: 因為任何假設若要獲得「接受」判定，其實際抽樣量喺數學上必須達到無窮大。'
-  - 'D: 因為一旦喺公函入面寫明「接受 H0」，企業喺法律上將會被強制向顧客全額退還流水差額。'
+  - 'A: 反對 H0 嘅證據唔夠，唔等於證明 H0 為真；雜音大或者樣本細都可能遮住真實差距。'
+  - 'B: 因為 p 值大過 0.05，就表示 H0 有 95% 機會為真。'
+  - 'C: 因為樣本超過 30 個觀測值之後，先可以接受 H0。'
+  - 'D: 因為唔顯著嘅結果證明咗備擇假設 H1 係錯嘅。'
   answer: A
-  explanation_en: A nonsignificant result means the observed evidence did not cross the selected rejection threshold. It does
-    not establish that the null is true.
-  explanation_zh: 原假设 H0 享有无罪推定的保护。缺乏推翻它的证据绝不等于证实了它的纯洁性；它仅仅说明原告未能完成举证责任。统计学绝不妄下“接受 H0”的轻率断言。
-  explanation_zh_hk: 原假設 H0 享有無罪推定嘅保護。缺乏推翻佢嘅證據絕唔等於證實咗佢嘅純潔性；佢淨係說明原告未能完成舉證責任。統計學絕唔妄下「接受 H0」嘅輕率斷言。
+  explanation_en: A nonsignificant result means the evidence did not cross the chosen rejection threshold. Like a not-guilty
+    verdict, it says the burden of proof was not met; it does not establish that the null is true.
+  explanation_zh: 不显著只表示证据没有越过事先定好的拒绝门槛。就像法庭判“证据不足”，只是举证责任没有完成，并不证明原假设就是真的。
+  explanation_zh_hk: 唔顯著淨係表示證據未越過事先定好嘅拒絕門檻。好似法庭判「證據不足」，只係舉證責任未完成，並唔證明原假設就係真嘅。
 - id: Q2
   type: multiple_choice
-  question_en: 'Assume H0: mu = 0 versus H1: mu != 0, x-bar = -1.80, and a known standard error of 1.50. What is the test
-    statistic?'
-  question_zh: 湾仔店收银台合规运营下日均钱箱长短款期望为 $0.00，抽样标准误 SE = $1.50。在 36 个班次的审计中，实测班次现金平均出现 -$1.80 短款。其假设设定与标准化检验统计量 Z 分别是多少？
-  question_zh_hk: 灣仔舖收銀台合規營運下日均錢箱長短款期望為 $0.00，抽樣標準誤 SE = $1.50。喺 36 個班次嘅審計入面，實測班次現金平均出現 -$1.80 短款。其假設設定與標準化檢驗統計量 Z 分別係幾多？
+  question_en: 'Suppose Shop A checks 36 shifts. The benchmark mean cash gap is HK$0, the sample mean is -HK$1.80, and the
+    known standard error is HK$1.50. What are the two-sided hypotheses and the test statistic Z?'
+  question_zh: 假设A店抽查 36 个班次。现金差额的基准均值是 HK$0，样本均值是 -HK$1.80，已知标准误是 HK$1.50。双侧假设和检验统计量 Z 分别是什么？
+  question_zh_hk: 假設A店抽查 36 個班次。現金差額嘅基準均值係 HK$0，樣本均值係 -HK$1.80，已知標準誤係 HK$1.50。雙側假設同檢驗統計量 Z 分別係乜嘢？
   options_en:
-  - 'A: H0: mu = 0 vs H1: mu != 0; Z_calc = (-1.80 - 0) / 1.50 = -1.20'
-  - 'B: H0: mu = -1.80 vs H1: mu = 0; Z_calc = -1.80 / 36 = -0.05'
-  - 'C: H0: mu > 0 vs H1: mu < 0; Z_calc = 1.50 / -1.80 = -0.83'
-  - 'D: H0: mu != 0 vs H1: mu = 0; Z_calc = (-1.80 * 1.50) = -2.70'
+  - 'A: H0: μ = 0 vs H1: μ ≠ 0; Z_calc = (-1.80 - 0) / 1.50 = -1.20'
+  - 'B: H0: μ = -1.80 vs H1: μ = 0; Z_calc = -1.80 / 36 = -0.05'
+  - 'C: H0: μ > 0 vs H1: μ < 0; Z_calc = 1.50 / -1.80 = -0.83'
+  - 'D: H0: μ ≠ 0 vs H1: μ = 0; Z_calc = (-1.80 * 1.50) = -2.70'
   options_zh:
-  - 'A: H0: mu = 0 对决 H1: mu != 0；计算得 Z_calc = (-1.80 - 0) / 1.50 = -1.20'
-  - 'B: H0: mu = -1.80 对决 H1: mu = 0；计算得 Z_calc = -1.80 / 36 = -0.05'
-  - 'C: H0: mu > 0 对决 H1: mu < 0；计算得 Z_calc = 1.50 / -1.80 = -0.83'
-  - 'D: H0: mu != 0 对决 H1: mu = 0；计算得 Z_calc = (-1.80 × 1.50) = -2.70'
+  - 'A: H0: μ = 0 对 H1: μ ≠ 0；Z_calc = (-1.80 - 0) / 1.50 = -1.20'
+  - 'B: H0: μ = -1.80 对 H1: μ = 0；Z_calc = -1.80 / 36 = -0.05'
+  - 'C: H0: μ > 0 对 H1: μ < 0；Z_calc = 1.50 / -1.80 = -0.83'
+  - 'D: H0: μ ≠ 0 对 H1: μ = 0；Z_calc = (-1.80 × 1.50) = -2.70'
   options_zh_hk:
-  - 'A: H0: mu = 0 對決 H1: mu != 0；計算得 Z_calc = (-1.80 - 0) / 1.50 = -1.20'
-  - 'B: H0: mu = -1.80 對決 H1: mu = 0；計算得 Z_calc = -1.80 / 36 = -0.05'
-  - 'C: H0: mu > 0 對決 H1: mu < 0；計算得 Z_calc = 1.50 / -1.80 = -0.83'
-  - 'D: H0: mu != 0 對決 H1: mu = 0；計算得 Z_calc = (-1.80 × 1.50) = -2.70'
+  - 'A: H0: μ = 0 對 H1: μ ≠ 0；Z_calc = (-1.80 - 0) / 1.50 = -1.20'
+  - 'B: H0: μ = -1.80 對 H1: μ = 0；Z_calc = -1.80 / 36 = -0.05'
+  - 'C: H0: μ > 0 對 H1: μ < 0；Z_calc = 1.50 / -1.80 = -0.83'
+  - 'D: H0: μ ≠ 0 對 H1: μ = 0；Z_calc = (-1.80 × 1.50) = -2.70'
   answer: A
-  explanation_en: 'Standardize the gap between the estimate and null value: Z = (-1.80 - 0) / 1.50 = -1.20. A full decision
-    also requires a significance level or p-value.'
-  explanation_zh: '原假设锁定基准合规状态：H0: mu = $0。备择假设检验是否存在系统性长短款：H1: mu != $0。检验统计量标准化样本差距：Z = (-1.80 - 0) / 1.50 = -1.20。'
-  explanation_zh_hk: '原假設鎖定基準合規狀態：H0: mu = $0。備擇假設檢驗係咪存在系統性長短款：H1: mu != $0。檢驗統計量標準化樣本差距：Z = (-1.80 - 0) / 1.50 = -1.20。'
+  explanation_en: 'The null sits on the benchmark, H0: mu = 0, and a two-sided alternative is H1: mu != 0. Standardize the
+    gap: Z = (-1.80 - 0) / 1.50 = -1.20. A full decision also needs a significance level or a p-value.'
+  explanation_zh: '原假设放在基准上：H0: mu = 0；双侧备择假设是 H1: mu != 0。把差距标准化：Z = (-1.80 - 0) / 1.50 = -1.20。要做最终决策，还需要显著性水平或 p 值。'
+  explanation_zh_hk: '原假設放喺基準上：H0: mu = 0；雙側備擇假設係 H1: mu != 0。將差距標準化：Z = (-1.80 - 0) / 1.50 = -1.20。要做最終決定，仲需要顯著性水平或者 p 值。'
 beats:
 - id: hook
   visual: title_card
-  seconds: 28
-  kicker_en: The Cash Register Audit
-  kicker_zh: 收银台长短款迷案
-  kicker_zh_hk: 收銀台長短款迷案
-  title_en: Is the observed cash gap larger than routine sampling variation?
-  title_zh: 观测现金差额是否超出常规抽样波动？
-  title_zh_hk: 觀測現金差額係咪超出常規抽樣波動？
-  en: Metro Coffee reviews cash-balance discrepancies across an assumed sample of 36 shifts. The sample mean is minus HK$1.80
-    per shift, while the compliant-process benchmark is zero. A nonzero sample mean does not by itself establish a persistent
-    process problem. Management needs hypotheses, a standardized statistic, and a preselected decision rule before drawing
-    an operational conclusion.
-  zh: 都市咖啡审视一个假设的 36 个班次现金长短款样本。样本均值为每班次负 HK$1.80，合规流程基准为零。非零样本均值本身并不能证明存在持续流程问题。管理层必须先设定假设、标准化统计量与预先选定的决策规则，再形成经营结论。
-  zh_hk: 都市咖啡審視一個假設嘅 36 個班次現金長短款樣本。樣本均值係每班次負 HK$1.80，合規流程基準係零。非零樣本均值本身唔可以證明存在持續流程問題。管理層必須先設定假設、標準化統計量同預先選定嘅決策規則，再形成營運結論。
+  seconds: 42
+  kicker_en: The cash-drawer question
+  kicker_zh: 收银差额的判断
+  kicker_zh_hk: 收銀差額嘅判斷
+  title_en: What is a hypothesis test?
+  title_zh: 什么是假设检验？
+  title_zh_hk: 乜嘢係假設檢驗？
+  en: >-
+    Suppose Shop A checks the cash drawer on 36 shifts, and on average the drawer comes up HK$1.80 short per shift. If the
+    manager calls that a real process problem when it is just everyday noise, the team wastes time fixing nothing. If she
+    shrugs it off when it is real, money keeps leaking. So how big does a gap have to be before we act? The tool that
+    answers this is a hypothesis test.
+  zh: >-
+    假设A店抽查了 36 个班次的收银钱箱，平均每个班次短款 HK$1.80。如果店长把日常的小波动当成流程出了问题，团队就白忙一场；如果问题是真的，她却不当回事，钱就会一直漏掉。那差距要多大，才值得出手？回答这个问题的工具，就叫假设检验。
+  zh_hk: >-
+    假設A店抽查咗 36 個班次嘅收銀錢箱，平均每個班次短款 HK$1.80。如果店長將日常嘅細波動當成流程出咗問題，團隊就白做一場；如果問題係真嘅，佢又唔當一回事，錢就會一直漏走。咁差距要幾大，先值得出手？答呢條問題嘅工具，就叫假設檢驗。
 - id: define
   visual: definition_card
-  seconds: 34
-  kicker_en: What It Is
+  seconds: 46
+  kicker_en: What it is
   kicker_zh: 核心概念
   kicker_zh_hk: 核心概念
-  title_en: State the benchmark and the competing claim
-  title_zh: 明确基准与竞争性主张
-  title_zh_hk: 明確基準同競爭性主張
-  formula: 'H0: mu = mu_0 versus H1: mu != mu_0'
-  formula_zh: 'H0: mu = mu_0 对 H1: mu != mu_0'
-  formula_zh_hk: 'H0: mu = mu_0 對 H1: mu != mu_0'
-  formula_tex: 'H_0: \mu = \mu_0 \quad \text{vs.} \quad H_1: \mu \ne \mu_0'
-  s1_en: The null hypothesis specifies the benchmark value evaluated by the test. In this example, H0 states that the population
-    mean cash discrepancy equals zero. The null is a statistical reference statement, not a declaration that every shift is
-    error-free.
-  s1_zh: 原假设指定检验所评估的基准值。在本例中，H0 表示总体平均现金差额为零。原假设是统计参照陈述，并不表示每个班次都毫无误差。
-  s1_zh_hk: 原假設指定檢驗所評估嘅基準值。喺本例入面，H0 表示總體平均現金差額係零。原假設係統計參照陳述，唔表示每個班次都完全冇誤差。
-  s2_en: 'The alternative states which departures count as evidence against the benchmark. A two-sided alternative, H1: mu
-    is not equal to zero, detects persistent positive or negative discrepancies. The direction and benchmark should be chosen
-    before inspecting the test outcome.'
-  s2_zh: '备择假设说明哪些偏离会被视为反对基准的证据。双侧备择 H1: mu 不等于零，会检测持续的正向或负向差额。检验方向与基准应在查看检验结果前确定。'
-  s2_zh_hk: '備擇假設說明邊啲偏離會被視為反對基準嘅證據。雙側備擇 H1: mu 唔等於零，會檢測持續嘅正向或者負向差額。檢驗方向同基準應該喺查看檢驗結果之前確定。'
+  title_en: Benchmark vs competing claim
+  title_zh: 基准与竞争主张
+  title_zh_hk: 基準同競爭主張
+  formula: 'H0: μ = μ0 vs H1: μ ≠ μ0'
+  formula_zh: 'H0: μ = μ0 对 H1: μ ≠ μ0'
+  formula_zh_hk: 'H0: μ = μ0 對 H1: μ ≠ μ0'
+  formula_tex: 'H_0:\ \mu = \mu_0 \qquad H_1:\ \mu \ne \mu_0'
+  s1_en: >-
+    Start with the benchmark. Mu is the true average cash gap per shift; mu-zero is what a clean process should give, here
+    zero. The null hypothesis, H0, says mu equals that benchmark. It is a reference point, not a promise of perfect shifts.
+  s1_zh: >-
+    先定基准。mu 是每个班次真正的平均现金差额，mu 零是流程正常时应有的数值，这里就是零。原假设（H0）说的是：mu 就等于这个基准。它是流程的参照点，不是说每个班次都分毫不差。
+  s1_zh_hk: >-
+    先定基準。mu 係每個班次真正嘅平均現金差額，mu 零係流程正常嗰陣應該有嘅數，呢度就係零。原假設（H0）講嘅係：mu 就等於呢個基準。佢係流程嘅參照點，唔係話每個班次都分毫不差。
+  s2_en: >-
+    The alternative hypothesis, H1, is the competing claim: mu is not equal to zero. Not equal means a drawer that runs
+    short or runs over both count. Pick the benchmark and this direction before you look at the result, not after.
+  s2_zh: >-
+    备择假设（H1）是对立的主张：mu 不等于零。不等于的意思是，长期短款或者长期多出来，都算数。基准和这个方向，要在看结果之前就定好，不能看完再改。
+  s2_zh_hk: >-
+    備擇假設（H1）係對立嘅主張：mu 唔等於零。唔等於即係話，長期短款或者長期多出嚟，都計數。基準同呢個方向，要喺睇結果之前就定好，唔可以睇完先改。
+- id: name_h0h1
+  visual: title_card
+  seconds: 16
+  kicker_en: The names
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Null and alternative
+  title_zh: 原假设与备择假设
+  title_zh_hk: 原假設同備擇假設
+  en: >-
+    Say the two names once more. The null hypothesis is the benchmark we hold until the data push hard against it. The
+    alternative hypothesis is the claim the data would have to support.
+  zh: >-
+    再念一次这两个名字。原假设，是我们先守住的基准，直到数据强烈反对它；备择假设，是数据要撑得起才能成立的主张。
+  zh_hk: >-
+    再唸一次呢兩個名。原假設，係我哋先守住嘅基準，直到數據強烈反對佢；備擇假設，係數據要撐得起先成立嘅主張。
 - id: mechanics
   visual: two_column
-  seconds: 34
-  kicker_en: The Burden of Proof
-  kicker_zh: 举证机制
-  kicker_zh_hk: 舉證機制
-  title_en: Fail to reject is not proof that H0 is true
-  title_zh: 不拒绝并不证明 H0 为真
-  title_zh_hk: 唔拒絕並唔證明 H0 為真
-  left_en: 'Reject H0: evidence is sufficiently inconsistent with the benchmark'
-  left_zh: 拒绝 H0：证据与基准充分不相容
-  left_zh_hk: 拒絕 H0：證據同基準充分唔相容
-  right_en: 'Fail to reject H0: evidence is insufficient to rule out the benchmark'
-  right_zh: 不拒绝 H0：证据不足以排除基准
-  right_zh_hk: 唔拒絕 H0：證據不足以排除基準
-  s1_en: 'A test has two formal decisions: reject H0 or fail to reject H0. Rejection means the observed statistic is sufficiently
-    unusual under the null model according to the chosen significance rule. It does not automatically establish causation
-    or identify who or what produced the pattern.'
-  s1_zh: 检验有两种正式决策：拒绝 H0，或不拒绝 H0。拒绝表示按照选定的显著性规则，观测统计量在原假设模型下足够异常；它并不会自动证明因果，也不会识别由谁或什么因素产生该形态。
-  s1_zh_hk: 檢驗有兩種正式決策：拒絕 H0，或者唔拒絕 H0。拒絕表示按照選定嘅顯著性規則，觀測統計量喺原假設模型之下足夠異常；佢並唔會自動證明因果，亦唔會識別由邊個或者咩因素產生嗰個形態。
-  s2_en: Failing to reject means the sample does not provide sufficient evidence against the benchmark at the chosen level.
-    It does not prove H0, because a weak result may reflect a small effect, high noise, limited sample size, or an unsuitable
-    design.
-  s2_zh: 不拒绝表示在选定水平下，样本没有提供足够证据反对基准。它并不证明 H0，因为较弱结果可能来自效应较小、噪声较高、样本有限或研究设计不合适。
-  s2_zh_hk: 唔拒絕表示喺選定水平之下，樣本冇提供足夠證據反對基準。佢並唔證明 H0，因為較弱結果可能來自效應較細、雜音較高、樣本有限或者研究設計唔合適。
-  s3_en: The wording matters in operational reports. Say that evidence was insufficient to reject the benchmark, then report
-    the estimate, standard error, test statistic, significance level, and uncertainty. Do not convert a process-level test
-    into an assessment of individual employee conduct.
-  s3_zh: 经营报告中的措辞很重要。应说明证据不足以拒绝基准，并报告估计值、标准误、检验统计量、显著性水平与不确定性。不要把流程层面的检验转化为对个别员工行为的评价。
-  s3_zh_hk: 營運報告入面嘅措辭好重要。應該說明證據不足以拒絕基準，並報告估計值、標準誤、檢驗統計量、顯著性水平同不確定性。唔好將流程層面嘅檢驗轉化成對個別員工行為嘅評價。
+  seconds: 50
+  kicker_en: The burden of proof
+  kicker_zh: 举证责任
+  kicker_zh_hk: 舉證責任
+  title_en: Fail to reject is not proof
+  title_zh: 不拒绝不等于证明
+  title_zh_hk: 唔拒絕唔等於證明
+  left_en: 'Reject: data clash with it'
+  left_zh: 拒绝：数据与基准冲突
+  left_zh_hk: 拒絕：數據同基準衝突
+  right_en: 'Fail to reject: not enough'
+  right_zh: 不拒绝：证据不足
+  right_zh_hk: 唔拒絕：證據不足
+  s1_en: >-
+    Think of a courtroom. The null is presumed innocent, and the data carry the burden of proof. A test ends in one of two
+    ways. Reject the null means the data clash with the benchmark strongly enough under the rule we chose.
+  s1_zh: >-
+    想像一个法庭。原假设先被当作无罪，举证责任在数据身上。检验只有两种结局。拒绝原假设，表示按照我们事先定的规则，数据和基准冲突得够厉害。
+  s1_zh_hk: >-
+    想像一個法庭。原假設先被當作無罪，舉證責任喺數據身上。檢驗只有兩種結局。拒絕原假設，即係按照我哋事先定嘅規則，數據同基準衝突得夠厲害。
+  s2_en: >-
+    Fail to reject means the case was not made. Not guilty is not the same as proven innocent. A weak result can come from
+    a small effect, a noisy process, or too few shifts, so it never proves the null is true.
+  s2_zh: >-
+    不拒绝原假设，表示案子没有立起来。判无罪，不等于证明清白。结果弱，可能是效应小、流程噪声大，或者班次太少，所以它从来不能证明原假设为真。
+  s2_zh_hk: >-
+    唔拒絕原假設，即係案件未立得住。判無罪，唔等於證明清白。結果弱，可能係效應細、流程雜音大，或者班次太少，所以佢永遠唔可以證明原假設為真。
+  s3_en: >-
+    And even a rejection does not name a cause or a person. This test is about the drawer process across shifts. It is
+    not a verdict on any one cashier.
+  s3_zh: >-
+    就算拒绝了，也说明不了原因，更点不出是谁。这个检验看的是各个班次的收银流程，不是对哪一位收银员的判决。
+  s3_zh_hk: >-
+    就算拒絕咗，都講唔到原因，更加點唔出係邊個。呢個檢驗睇嘅係各個班次嘅收銀流程，唔係對邊一位收銀員嘅判決。
 - id: ledger
   visual: steps
-  seconds: 38
-  kicker_en: The Ledger
-  kicker_zh: 账目台审
-  kicker_zh_hk: 賬目台審
-  title_en: Standardize the assumed cash-discrepancy signal
-  title_zh: 标准化假设的现金差额信号
-  title_zh_hk: 標準化假設嘅現金差額訊號
-  step1_en: 'Set H0: mu = HK$0 versus H1: mu != HK$0'
-  step1_zh: '设定 H0: mu = HK$0 对 H1: mu != HK$0'
-  step1_zh_hk: '設定 H0: mu = HK$0 對 H1: mu != HK$0'
-  step2_en: Assume n = 36, x-bar = -HK$1.80, and known sigma = HK$9.00; SE = 9 / sqrt(36) = HK$1.50
-  step2_zh: 假设 n = 36，x-bar = -HK$1.80，且已知 sigma = HK$9.00；SE = 9 / √36 = HK$1.50
-  step2_zh_hk: 假設 n = 36，x-bar = -HK$1.80，而且已知 sigma = HK$9.00；SE = 9 / √36 = HK$1.50
-  step3_en: Z = (-1.80 - 0) / 1.50 = -1.20; two-sided p ≈ 0.230; fail to reject H0 at alpha = 0.05
-  step3_zh: Z = (-1.80 - 0) / 1.50 = -1.20；双侧 p ≈ 0.230；在 alpha = 0.05 时不拒绝 H0
-  step3_zh_hk: Z = (-1.80 - 0) / 1.50 = -1.20；雙側 p ≈ 0.230；喺 alpha = 0.05 嗰陣唔拒絕 H0
-  s1_en: For illustration, assume 36 independent shifts have a mean discrepancy of minus HK$1.80 and the population standard
-    deviation is known to be HK$9.00. These are teaching assumptions, not verified audit records. The hypotheses compare a
-    zero population mean with a nonzero population mean.
-  s1_zh: 作为示例，假设 36 个独立班次的平均差额为负 HK$1.80，且总体标准差已知为 HK$9.00。这些数字是教学假设，并非已核实的审计记录。检验比较总体均值为零与总体均值非零。
-  s1_zh_hk: 作為例子，假設 36 個獨立班次嘅平均差額係負 HK$1.80，而且總體標準差已知係 HK$9.00。呢啲數字係教學假設，唔係已核實嘅審計記錄。檢驗比較總體均值係零同總體均值非零。
-  s2_en: The standard error is nine divided by the square root of 36, equal to HK$1.50. Standardizing the sample gap gives
-    Z = -1.20. The statistic says the sample mean lies 1.20 standard errors below the null benchmark.
-  s2_zh: 标准误为 9 除以根号 36，等于 HK$1.50。把样本差距标准化后得到 Z = -1.20，表示样本均值位于原假设基准下方 1.20 个标准误。
-  s2_zh_hk: 標準誤係 9 除以根號 36，等於 HK$1.50。將樣本差距標準化之後得到 Z = -1.20，表示樣本均值位於原假設基準下方 1.20 個標準誤。
-  s3_en: For a two-sided normal test, |Z| = 1.20 gives p approximately 0.230. Because 0.230 exceeds 0.05, fail to reject H0.
-    The result means this assumed sample is not sufficiently inconsistent with a zero mean; it does not prove perfect reconciliation
-    or justify conclusions about specific employees.
-  s3_zh: 在双侧正态检验中，|Z| = 1.20 对应 p 约为 0.230。由于 0.230 大于 0.05，因此不拒绝 H0。该结果表示这个假设样本与零均值并未充分不相容；它不能证明账目完全一致，也不能支持针对具体员工的结论。
-  s3_zh_hk: 喺雙側正態檢驗入面，|Z| = 1.20 對應 p 約係 0.230。由於 0.230 大過 0.05，所以唔拒絕 H0。呢個結果表示呢個假設樣本同零均值並未充分唔相容；佢唔可以證明賬目完全一致，亦唔可以支持針對具體員工嘅結論。
+  layout: rows
+  seconds: 90
+  kicker_en: A worked example
+  kicker_zh: 算一次看看
+  kicker_zh_hk: 計一次睇吓
+  title_en: 'Shop A: is HK$1.80 a real gap?'
+  title_zh: A店：1.80 元是真差距吗？
+  title_zh_hk: A店：1.80 蚊係真差距咩？
+  step1_en: 'H0: μ = 0 vs H1: μ ≠ 0'
+  step1_zh: 'H0: μ = 0 对 H1: μ ≠ 0'
+  step1_zh_hk: 'H0: μ = 0 對 H1: μ ≠ 0'
+  step2_en: 'SE = 9 / √36 = HK$1.50'
+  step2_zh: '标准误 = 9 / √36 = HK$1.50'
+  step2_zh_hk: '標準誤 = 9 / √36 = HK$1.50'
+  step3_en: 'Z = (−1.80 − 0) / 1.50 = −1.20'
+  step3_zh: 'Z = (−1.80 − 0) / 1.50 = −1.20'
+  step3_zh_hk: 'Z = (−1.80 − 0) / 1.50 = −1.20'
+  step4_en: 'Two-sided p ≈ 0.230'
+  step4_zh: '双侧 p ≈ 0.230'
+  step4_zh_hk: '雙側 p ≈ 0.230'
+  step5_en: 'Fail to reject H0 at α = 0.05'
+  step5_zh: 'α = 0.05：不拒绝原假设'
+  step5_zh_hk: 'α = 0.05：唔拒絕原假設'
+  s1_en: >-
+    These are made-up teaching numbers. Write the hypotheses first: the true average gap mu is zero, against mu is not
+    zero.
+  s1_zh: >-
+    下面是教学用的假设数字。先写假设：真正的平均差额 mu 等于零，对上 mu 不等于零。
+  s1_zh_hk: >-
+    以下係教學用嘅假設數字。先寫假設：真正嘅平均差額 mu 等於零，對上 mu 唔等於零。
+  s2_en: >-
+    Suppose the shift-to-shift spread, sigma, is known to be HK$9. The standard error, how much an average of 36 shifts
+    usually wobbles, is 9 divided by the square root of 36, which is 6. That gives HK$1.50.
+  s2_zh: >-
+    假设班次之间的波动，也就是标准差 sigma，已知是 HK$9。标准误（SE），就是 36 个班次的平均数通常会晃多少：9 除以根号 36，根号 36 是 6，得到 HK$1.50。
+  s2_zh_hk: >-
+    假設班次之間嘅波動，即係標準差 sigma，已知係 HK$9。標準誤（SE），即係 36 個班次嘅平均數通常會晃幾多：9 除以根號 36，根號 36 係 6，得到 HK$1.50。
+  s3_en: >-
+    Now measure the gap in those wobble units. The sample mean, minus 1.80, minus the benchmark zero, divided by 1.50,
+    gives Z equals minus 1.20. The sample sits 1.2 standard errors below the benchmark.
+  s3_zh: >-
+    再用这个“晃动单位”去量差距。样本均值（x-bar）负 1.80，减去基准零，再除以 1.50，得到检验统计量 Z 等于负 1.20。也就是说，样本落在基准下方 1.2 个标准误。
+  s3_zh_hk: >-
+    再用呢個「晃動單位」去量差距。樣本均值（x-bar）負 1.80，減去基準零，再除以 1.50，得到檢驗統計量 Z 等於負 1.20。即係話，樣本落喺基準下面 1.2 個標準誤。
+  s4_en: >-
+    How surprising is that if the null is true? The p-value is the chance of a gap at least this far out, on either side,
+    when mu really is zero. For Z of 1.2 either way, the Normal table gives about 0.230.
+  s4_zh: >-
+    如果原假设成立，这有多意外？p 值（p-value），就是在 mu 真的等于零时，两边任何一边出现至少这么远差距的机会。Z 在正负 1.2 以外，查正态表大约是 0.230。
+  s4_zh_hk: >-
+    如果原假設成立，呢個有幾意外？p 值（p-value），即係喺 mu 真係等於零嗰陣，兩邊任何一邊出現至少咁遠差距嘅機會。Z 喺正負 1.2 以外，查正態表大約係 0.230。
+  s5_en: >-
+    Our cut-off, the significance level alpha, was set at 0.05 before we looked. A p-value of 0.230 is above 0.05, so we
+    fail to reject the null. Gaps like this turn up about one time in four from noise alone.
+  s5_zh: >-
+    我们事先把门槛，也就是显著性水平 alpha，定在 0.05。p 值 0.230 高于 0.05，所以不拒绝原假设。这么大的差距，光靠随机波动，大约每四次就会出现一次。
+  s5_zh_hk: >-
+    我哋事先將門檻，即係顯著性水平 alpha，定喺 0.05。p 值 0.230 高過 0.05，所以唔拒絕原假設。咁大嘅差距，淨係靠隨機波動，大約每四次就會出現一次。
 - id: takeaway
   visual: takeaway
-  seconds: 34
-  kicker_en: Decision Rule
-  kicker_zh: 商业法度
-  kicker_zh_hk: 商業法度
-  title_en: Frame first, calculate second, conclude narrowly
-  title_zh: 先构建假设，再计算，最后谨慎下结论
-  title_zh_hk: 先構建假設，再計算，最後審慎落結論
-  q1_en: Why is fail to reject H0 different from proving H0 true?
-  q1_zh: 为什么“不拒绝 H0”不同于证明 H0 为真？
-  q1_zh_hk: 點解「唔拒絕 H0」唔同於證明 H0 為真？
-  q2_en: What must be specified before a hypothesis-test result is interpreted?
-  q2_zh: 解释假设检验结果前必须明确哪些要素？
-  q2_zh_hk: 解讀假設檢驗結果之前必須明確邊啲要素？
-  s1_en: Define the population parameter, null benchmark, alternative direction, sampling design, test statistic, and significance
-    level before interpreting the evidence. Post-hoc changes to the benchmark or direction can distort the intended error
-    control.
-  s1_zh: 解释证据前，应明确总体参数、原假设基准、备择方向、抽样设计、检验统计量与显著性水平。事后修改基准或方向会破坏原定错误控制。
-  s1_zh_hk: 解讀證據之前，應該明確總體參數、原假設基準、備擇方向、抽樣設計、檢驗統計量同顯著性水平。事後修改基準或者方向會破壞原定錯誤控制。
-  s2_en: Report reject or fail to reject, never treat a nonsignificant result as proof of no effect. Pair the decision with
-    the estimated effect, uncertainty, assumptions, data-quality checks, and the practical consequences of each possible error.
-  s2_zh: 应报告“拒绝”或“不拒绝”，不要把不显著结果视为无效应的证明。决策应同时配合效应估计、不确定性、假设、数据质量检查，以及两类可能错误的实际后果。
-  s2_zh_hk: 應該報告「拒絕」或者「唔拒絕」，唔好將唔顯著結果視為冇效應嘅證明。決策應該同時配合效應估計、不確定性、假設、數據質素檢查，以及兩類可能錯誤嘅實際後果。
-  s3_en: 'For the assumed cash-discrepancy example, Z = -1.20 and p ≈ 0.230, so the 5% two-sided test fails to reject a zero
-    mean. The operational conclusion should remain at the process level: this sample does not provide strong evidence of a
-    persistent average discrepancy.'
-  s3_zh: 在假设现金差额示例中，Z = -1.20，p ≈ 0.230，因此 5% 双侧检验不拒绝零均值。经营结论应保持在流程层面：该样本没有提供平均差额持续存在的强证据。
-  s3_zh_hk: 喺假設現金差額例子入面，Z = -1.20，p ≈ 0.230，所以 5% 雙側檢驗唔拒絕零均值。營運結論應該保持喺流程層面：呢個樣本冇提供平均差額持續存在嘅強證據。
+  seconds: 50
+  kicker_en: Decision rule
+  kicker_zh: 决策规则
+  kicker_zh_hk: 決策規則
+  title_en: Frame first, conclude narrowly
+  title_zh: 先设假设，再谨慎下结论
+  title_zh_hk: 先設假設，再審慎落結論
+  q1_en: Why is fail to reject not proof of H0?
+  q1_zh: 为什么不拒绝不等于证明 H0？
+  q1_zh_hk: 點解唔拒絕唔等於證明 H0？
+  q2_en: What must be fixed before testing?
+  q2_zh: 检验前必须先定好什么？
+  q2_zh_hk: 檢驗前必須先定好乜嘢？
+  s1_en: >-
+    Fix the plan before you look: what mu measures, the benchmark, the direction of the alternative, how the shifts were
+    sampled, and the cut-off alpha. Moving any of them after seeing the data quietly breaks the test.
+  s1_zh: >-
+    看数据之前先把计划定好：mu 量的是什么、基准是多少、备择假设朝哪个方向、班次怎么抽、门槛 alpha 定多少。看完数据再改任何一项，这个检验就悄悄失效了。
+  s1_zh_hk: >-
+    睇數據之前先將計劃定好：mu 量緊乜、基準係幾多、備擇假設向邊個方向、班次點樣抽、門檻 alpha 定幾多。睇完數據先改任何一樣，呢個檢驗就靜靜雞失效。
+  s2_en: >-
+    Then report reject or fail to reject, never accept. Put the estimate, the standard error, Z and the p-value beside the
+    decision, and state the assumptions, such as independent shifts and a known sigma.
+  s2_zh: >-
+    然后只报告“拒绝”或“不拒绝”，永远不说“接受”。决策旁边要写上估计值、标准误、Z 和 p 值，也要讲清楚前提，比如班次彼此独立、sigma 已知。
+  s2_zh_hk: >-
+    跟住只報告「拒絕」或者「唔拒絕」，永遠唔講「接受」。決定旁邊要寫埋估計值、標準誤、Z 同 p 值，亦要講清楚前提，例如班次之間獨立、sigma 已知。
+  s3_en: >-
+    So, is Shop A's HK$1.80 shortfall bigger than everyday noise? With Z of minus 1.20 and p about 0.230, not shown. We fail
+    to reject a zero average gap: a statement about the process, not proof of a perfect drawer or a verdict on a cashier.
+  s3_zh: >-
+    所以，A店每班次短款 HK$1.80，是不是超出了日常波动？Z 等于负 1.20，p 大约 0.230，证据不够。我们不拒绝平均差额为零。这是对流程的判断，不证明钱箱完全没问题，也不是对哪位收银员的评价。
+  s3_zh_hk: >-
+    所以，A店每班次短款 HK$1.80，係咪超出咗日常波動？Z 等於負 1.20，p 大約 0.230，證據唔夠。我哋唔拒絕平均差額係零。呢個係對流程嘅判斷，唔證明錢箱完全冇問題，亦唔係對邊位收銀員嘅評價。

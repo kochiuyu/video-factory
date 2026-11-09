@@ -1,19 +1,40 @@
 id: STAT-M01-T10-OUTLIER
-course: statistics
 course_en: Business Statistics
 course_zh: 商务统计
 course_zh_hk: 商務統計
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 636
+duration_target_s: 574
 title_en: What is an outlier?
 title_zh: 什么是异常值？
 title_zh_hk: 咩係異常值？
-objective_en: Define an outlier as a value unusually far from the rest, compute the 1.5 × IQR fences from nearest-rank quartiles, and decide what to do with a flagged value by checking the record before correcting it, keeping it, or reporting it separately.
-objective_zh: 把异常值定义为离其他值异常遥远的值；用最接近秩法的四分位数算出1.5倍IQR围栏；并在改正、保留或单独报告之前，先查记录，再决定怎样处理被标记的值。
-objective_zh_hk: 將異常值定義為離其他值異常遙遠嘅值；用最接近秩法嘅四分位數計出1.5倍IQR圍欄；並喺改正、保留或者單獨報告之前，先查記錄，再決定點樣處理被標記嘅值。
+youtube:
+  description_en: |
+    What is an outlier?
+    
+    Five street shops: 360, 420, 280, 390, 310. Add Shop F at 4,200 - ten times Shop B's 420. Delete a real busy site and you understock; keep a typing slip and the average jumps from about 352 to about 993.
+    
+    Fence rule: IQR of the five is 80. 1.5 x 80 = 120. Lower fence 310 - 120 = 190; upper 390 + 120 = 510. 4,200 sits 3,690 above the upper fence, so it is flagged. With six shops the fence moves but 4,200 is still flagged. A flag means check the story - typing slip, one-off Monday, or a different kind of shop - not automatic delete.
+    
+    Business Statistics - Module 1 - Short 10 (outlier)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    什么是异常值？
+    
+    五家街边店：360、420、280、390、310。加上F店4,200 - 是B店420的十倍。删掉真忙的店会备货不足；留下打字多一个0，平均数大约从352跳到993。
+    
+    篱笆规则：五家的IQR是80。1.5 x 80 = 120。下篱笆310 - 120 = 190；上篱笆390 + 120 = 510。4,200高出上篱笆3,690，被标出。六家时篱笆会动，但4,200仍被标出。标出是请你查故事 - 打字错误、异常星期一、或另一类店 - 不是自动删除。
+    
+    商务统计 - 模块1 - 短片10（异常值）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    咩係異常值？
+    
+    五間街邊店：360、420、280、390、310。加上F店4,200 - 係B店420嘅十倍。刪走真忙嘅店會備貨不足；留低打字多一個0，平均數大約由352跳到993。
+    
+    籬笆規則：五間嘅IQR係80。1.5 x 80 = 120。下籬笆310 - 120 = 190；上籬笆390 + 120 = 510。4,200高過上籬笆3,690，被標出。六間時籬笆會郁，但4,200仍然被標出。標出係請你查故事 - 打字錯誤、異常星期一、或者另一類店 - 唔係自動刪除。
+    
+    商務統計 - 模組1 - 短片10（異常值）
+    覺得有用嘅話，訂閱下一集。
+
 glossary:
 - en: outlier
   zh: 异常值
@@ -241,8 +262,8 @@ beats:
 
     上圍欄 = Q3 + 1.5 × IQR'
   gloss_en: 'Outside a fence: flag it, then check'
-  gloss_zh: 落在围栏外：先标记，再核查
-  gloss_zh_hk: 落喺圍欄外：先標記，再核查
+  gloss_zh: 围栏外 → 先标记，再核查
+  gloss_zh_hk: 圍欄外 → 先標記，再核查
   s1_en: Here it is in symbols. Q1 and Q3 are the quarter marks, and the IQR is Q3 minus Q1, the width of the box. The lower fence is Q1 minus one and a half IQRs. The upper fence is Q3 plus one and a half IQRs. Anything outside is flagged.
   s1_zh: 用符号写出来：Q1和Q3是两个四分之一的标记，四分位距是Q3减Q1，也就是箱子的宽度。下围栏是Q1减1.5个四分位距，上围栏是Q3加1.5个四分位距。落在外面的，就被标记出来。
   s1_zh_hk: 用符號寫出嚟：Q1同Q3係兩個四分之一嘅標記，四分位距係Q3減Q1，即係個盒嘅闊度。下圍欄係Q1減1.5個四分位距，上圍欄係Q3加1.5個四分位距。落喺外面嘅，就會被標記出嚟。
@@ -333,7 +354,7 @@ beats:
   s3_zh_hk: 如果個數係真嘅，就保留。唔好淨係因為被標記就刪走一個值。可以將F店單獨列一行，或者同時畀出有佢同冇佢嘅結果：五間店嘅平均數係352杯，計埋F店大約係993杯。噉樣，五間店同F店就各自有自己嘅計劃。咁呢個規則話到你知啲乜，又話唔到你知啲乜？
 - id: limit
   visual: two_column
-  seconds: 68
+  seconds: 52
   kicker: The Limit
   kicker_en: The Limit
   kicker_zh: 限度
@@ -350,15 +371,15 @@ beats:
   s1_en: So what does the rule tell you, and what does it not?
   s1_zh: 那这个规则到底能告诉你什么，又不能告诉你什么？
   s1_zh_hk: 咁呢個規則究竟話到你知啲乜，又話唔到你知啲乜？
-  s2_en: 'It tells you which values sit unusually far from the rest, the same way every time, so two managers looking at the same file flag the same shops. And because it is built on the quartiles, one far shop barely moves its own fences: the upper fence moved from 510 to 585, not to thousands.'
-  s2_zh: 它能告诉你哪些值离其他值异常地远，而且每次用同一种方法，所以两个经理看同一份数据，会标记出同样的店。又因为它建立在四分位数上，一家很远的店几乎挪不动自己的围栏：上围栏从510移到585，而不是移到几千。
-  s2_zh_hk: 佢話到你知邊啲值離其他值異常咁遠，而且每次都用同一個方法，所以兩個經理睇同一份數據，會標記出同樣嘅店。又因為佢建基於四分位數，一間好遠嘅店差唔多郁唔到自己嘅圍欄：上圍欄由510移到585，唔係移到幾千。
-  s3_en: 'It does not tell you why, or what to do. That takes the record and the business context. It also depends on the method: the 1.5 is a convention, and another textbook or software rule can place the quartiles a little differently and shift the fences. With five or six shops, the fences rest on very few values. And a mistake inside the fences is never flagged: if 390 had been typed as 360, no fence would catch it.'
-  s3_zh: 它不能告诉你原因，也不能告诉你该怎么做，这些要靠记录和业务背景。它也取决于方法：1.5是惯例，换一本教材或一个软件，四分位数的位置可能有一点不同，围栏也会跟着移。只有五六家店，围栏只建立在很少的数上。还有，落在围栏里面的错误永远不会被标记：如果390被打成了360，没有一道围栏抓得到。
-  s3_zh_hk: 佢話唔到你知原因，亦話唔到你知應該點做，呢啲要靠記錄同業務背景。佢亦取決於方法：1.5係慣例，換一本教科書或者一個軟件，四分位數嘅位置可能有少少唔同，圍欄都會跟住移。得五六間店，圍欄只係建基於好少數。仲有，落喺圍欄入面嘅錯誤永遠唔會被標記：如果390被打成360，冇一道圍欄捉得到。
+  s2_en: 'It tells you which values sit unusually far from the rest, the same way every time. Built on the quartiles, one far shop barely moves its own fences: the upper fence moved from 510 to 585, not to thousands.'
+  s2_zh: 它能告诉你哪些值离其他值异常地远，而且每次用同一种方法。又因为它建立在四分位数上，一家很远的店几乎挪不动自己的围栏：上围栏从510移到585，而不是移到几千。
+  s2_zh_hk: 佢話到你知邊啲值離其他值異常咁遠，而且每次都用同一個方法。又因為佢建基於四分位數，一間好遠嘅店差唔多郁唔到自己嘅圍欄：上圍欄由510移到585，唔係移到幾千。
+  s3_en: 'It does not tell you why, or what to do — that takes the record. The 1.5 is a convention, and another rule can shift the fences. With five or six shops, the fences rest on very few values. And a mistake inside the fences is never flagged: if 390 had been typed as 360, no fence would catch it.'
+  s3_zh: 它不能告诉你原因，也不能告诉你该怎么做——这些要靠记录。1.5是惯例，换一套规则，围栏也会跟着移。只有五六家店，围栏只建立在很少的数上。还有，落在围栏里面的错误永远不会被标记：如果390被打成了360，没有一道围栏抓得到。
+  s3_zh_hk: 佢話唔到你知原因，亦話唔到你知應該點做——呢啲要靠記錄。1.5係慣例，換一套規則，圍欄都會跟住移。得五六間店，圍欄只係建基於好少數。仲有，落喺圍欄入面嘅錯誤永遠唔會被標記：如果390被打成360，冇一道圍欄捉得到。
 - id: answer
   visual: takeaway
-  seconds: 76
+  seconds: 30
   kicker: The Answer
   kicker_en: The Answer
   kicker_zh: 答案
@@ -366,18 +387,18 @@ beats:
   title_en: Far? Flag it, then check.
   title_zh: 很远？先标记，再核查
   title_zh_hk: 好遠？先標記，再核查
-  q1_en: What makes a value an outlier?
-  q1_zh: 什么样的值算异常值？
-  q1_zh_hk: 點樣嘅值先算異常值？
-  q2_en: What do you do after the flag?
-  q2_zh: 被标记之后要做什么？
-  q2_zh_hk: 被標記之後要做咩？
-  s1_en: Back to head office and Shop F's 4,200. Delete it, and a site that really was busy runs short. Keep a typing slip, and the average jumps from 352 cups to about 993.
-  s1_zh: 回到总部和F店的4,200杯。删掉它，一家真的很忙的店就会缺货；留着一个打错的数，平均数就会从352杯跳到大约993杯。
-  s1_zh_hk: 返去總部同F店嘅4,200杯。刪咗佢，一間真係好忙嘅店就會唔夠貨；留低一個打錯嘅數，平均數就會由352杯跳到大約993杯。
-  s2_en: What makes a value an outlier? It sits unusually far from the rest, and the 1.5 times IQR rule makes that precise. From the five ordinary shops, Q1 is 310, Q3 is 390, and the IQR is 80. The fences sit at 190 and 510. Shop F's 4,200 is outside, and it is still outside, past 585, when Shop F is counted in.
-  s2_zh: 什么样的值算异常值？离其他值异常遥远的值，而1.5倍IQR规则把“多远”说清楚。用五家普通的店，Q1是310，Q3是390，四分位距是80，围栏在190和510。F店的4,200落在外面；把F店也算进去，它还是在585外面。
-  s2_zh_hk: 點樣嘅值先算異常值？離其他值異常遙遠嘅值，而1.5倍IQR規則將「幾遠」講清楚。用五間普通嘅店，Q1係310，Q3係390，四分位距係80，圍欄喺190同510。F店嘅4,200落喺外面；將F店都計埋，佢都仲喺585外面。
-  s3_en: What do you do after the flag? Check the record first. Correct an error and write down the change. Keep a real value, and report it on its own, or with and without it. Never delete a value only because it is flagged. These are numbers we supposed for one Monday, and the fences depend on the quartile method you report with them. The fence finds the value to check. The record decides what it means.
-  s3_zh: 被标记之后要做什么？先查记录。是错误，就改正，并写下改动；是真的，就保留，单独报告，或者同时给出有它和没有它的结果。绝不要只因为被标记就删掉一个值。这些都是我们为一个星期一假设的数字，而围栏也取决于你同时报告的四分位数方法。围栏找出要查的值，记录才决定它代表什么。
-  s3_zh_hk: 被標記之後要做咩？先查記錄。係錯誤，就改正，並寫低改動；係真嘅，就保留，單獨報告，或者同時畀出有佢同冇佢嘅結果。千祈唔好淨係因為被標記就刪走一個值。呢啲都係我哋為一個星期一假設嘅數字，而圍欄亦取決於你同時報告嘅四分位數方法。圍欄搵出要查嘅值，記錄先決定佢代表乜。
+  q1_en: 'What makes a value an outlier? → Outside the 1.5×IQR fences'
+  q1_zh: 什么样的值算异常值？→ 落在1.5倍IQR围栏之外
+  q1_zh_hk: 點樣嘅值先算異常值？→ 落喺1.5倍IQR圍欄之外
+  q2_en: 'After the flag? → Check the record — correct, keep, or report apart'
+  q2_zh: 被标记之后？→ 先查记录——改正、保留，或分开报告
+  q2_zh_hk: 被標記之後？→ 先查記錄——改正、保留，或者分開報告
+  s1_en: 'Back to Shop F at 4,200. Outside the fences at 190 and 510 — that is an outlier.'
+  s1_zh: 回到F店的4,200杯。落在190和510的围栏之外——这就是异常值。
+  s1_zh_hk: 返到F店嘅4,200杯。落喺190同510嘅圍欄之外——呢個就係異常值。
+  s2_en: A flag is not a delete. Check the record first.
+  s2_zh: 标记不是删除。先查记录。
+  s2_zh_hk: 標記唔係刪除。先查記錄。
+  s3_en: Correct an error, or keep a real value and report it apart. That is the answer.
+  s3_zh: 是错误就改正；是真的就保留，并分开报告。这就是答案。
+  s3_zh_hk: 係錯誤就改正；係真嘅就保留，並分開報告。呢個就係答案。

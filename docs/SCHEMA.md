@@ -31,7 +31,7 @@ For topic-based standalone micro-lessons:
 3. **Pacing**: Speech should provide thorough, natural spoken exposition for beginners. Keep on-slide text clean and concise, and let the voiceover do the teaching.
 4. **Define before use**: Say the idea in plain language, then name it. A viewer who has not seen the other shorts in the mini-course must still follow this one. If the short uses the average, say that the average is the total divided by the number of days.
 5. **No forward reference**: Do not mention a correction, a measure, or a symbol that belongs to a later short. Dividing by n−1 belongs to estimation. Range and IQR belong to their own shorts. Do not name them here.
-6. **Name the symbols**: A `formula_tex` line may use Greek letters. The speech on that beat must say what each symbol is. Mu is the average. Each x is one day. n is the number of days. Sigma squared is the variance. Do not leave a symbol unexplained.
+6. **Name the symbols**: A `formula_tex` line may use Greek letters. The speech on that beat must say what each symbol is. Mu is the average. Each x is one day. n is the number of days. Sigma squared is the variance. Do not leave a symbol unexplained. Never put ASCII `x-bar` or a Unicode combining overbar (x̄) in plain on-screen text — use `\\bar{x}` / `\\bar{X}` in `formula_tex`. For zh / zh_hk, introduce the Chinese name in speech with a one-time English/symbol gloss; keep the symbol itself on the formula/ledger. Prefer **学生 t 分布** (not 学生氏) and Chinese tech names (误差容限, 标准误, 自由度, …) with English abbreviations only as first-time glosses.
 7. **Own setting, neutral names**: Each short opens on its own business question. Never use Mong Kok, Wan Chai, Airport, or any other real place or branch name: use Shop A, Shop B, Shop C and days (A店 on a Chinese card, never 甲店). Do not require the shared Monday file. Do not repeat the same setting across shorts just to keep a ledger.
 8. **Cost before the tool**: The hook asks the business question, not the statistical one. Open on the cost of being wrong (which shop wastes, which shop runs out). The measure is the tool that answers it. Do not open on "which side is long" and only later say why anyone cares.
 9. **Spoken joins**: Each card opens by picking up the last sentence of the previous card. Inside a card, each stage picks up the last idea. Do not restart. The close returns to the hook's question by name.
@@ -69,7 +69,18 @@ These visuals paint progressive stills. Write one spoken chunk per still:
 
 ## Optional fields
 
-Lesson: `course`, `course_en`, `course_zh`, `course_zh_hk`, `audience`, `audience_en`, `audience_zh`, `audience_zh_hk`, `objective_en`, `objective_zh`, `objective_zh_hk`, `youtube`, `glossary`, `quiz`.
+Lesson-level optional keys (none of these are required by `validate.py`):
+
+| Field | Used by | Notes |
+|--------|---------|--------|
+| `course_en`, `course_zh`, `course_zh_hk` | Covers (`cover.course_lines`), console, Excel Lesson sheet | **Keep.** Covers read these (fallback: "Business Statistics" / Chinese defaults). |
+| bare `course` (e.g. `course: statistics`) | Console/Excel fallback only (`course_en` or `course`) | **Deprecated for authoring.** Not used by covers, slides, YouTube, validate, or build. Do not add on new shorts; leave existing until a cleanup PR. Course packs use the lesson id prefix via `bundle.course_of`, not this field. |
+| `audience`, `audience_en`, `audience_zh`, `audience_zh_hk` | Console inspect/edit and Excel Lesson sheet only | **Deprecated for authoring.** Not on slides, covers, YouTube, validate, or build. Same policy as `objective_*`. |
+| `objective_en`, `objective_zh`, `objective_zh_hk` | Console and Excel Lesson sheet only | **Deprecated for authoring.** Do not require on new shorts. Prefer `youtube.description_*` for upload copy and the spoken objective beat for teaching. Validate/build still accept the fields if present; console still shows them. A later cleanup may delete them from YAML. |
+| `youtube` | Build writes per-cell `.youtube.txt` paste files; validate length | Optional until you upload. See **YouTube upload text**. |
+| `glossary` | Console, Excel Glossary sheet, authoring locks | Keep for term consistency. `lock: true` must not be paraphrased. Not painted on slides/covers and not uploaded to YouTube. |
+| `quiz` | Quiz export / pack | Keep when the short has review items. |
+**Not a lesson field:** bare `duration_target` (without `_s`) is unused and must not be added. Timing uses required `duration_target_s` only (validate compares it to the sum of beat `seconds`).
 
 Beat: `kicker` (or `kicker_en` / `kicker_zh` / `kicker_zh_hk`), `title_en`, `title_zh`, `title_zh_hk`, `formula`, `gloss_*`, `left_*`, `right_*`, `setup_*`, `result_*`, `q1_*`, `q2_*`, `col1_*`, `col2_*`, `col3_*`, `step1_*`, `step2_*`, `step3_*`, `s1_*` … `s5_*`, `number`, `unit_*`, `caption_*`, `seconds`. Common English kickers (Concept, Definition, Example, Takeaway, …) are translated when labels are Chinese.
 
@@ -82,7 +93,7 @@ On-slide fields by visual:
 | `two_column` | `left_*`, `right_*` |
 | `formula` | `formula` or `formula_tex`, optional `gloss_*` |
 
-`formula_tex` is matplotlib mathtext (LaTeX math subset), e.g. `"A = L + E"` or `"\\frac{Q_d}{P}"`. Optional `formula_tex_zh` / `formula_tex_zh_hk`. Only `formula_tex*` is sent to the math renderer. A plain `formula` / `formula_en` / `formula_zh` line is always painted as text. Do not put a spoken sentence in `formula_tex`. An underscore in `S_i` inside `formula_en` is ordinary text, not LaTeX.
+`formula_tex` is matplotlib mathtext (LaTeX math subset), e.g. `"A = L + E"` or `"\\frac{Q_d}{P}"`. Optional `formula_tex_zh` / `formula_tex_zh_hk`. Only `formula_tex*` is sent to the math renderer. A plain `formula` / `formula_en` / `formula_zh` line is the ASCII fallback and is painted as text when TeX fails. Do not put a spoken sentence in `formula_tex`. An underscore in `S_i` inside `formula_en` is ordinary text, not LaTeX. **Two equations on one card:** put both in a single `formula_tex` joined by `\\qquad`; keep plain `formula` as one line (no `;` / newline split). If plain `formula` has two or more equation lines, the renderer clears `formula_tex` and paints ASCII. Matplotlib mathtext does not support `\\begin{aligned}` / `\\begin{array}` — those fail silently and fall back to ASCII. Prefer `\\frac`, `\\left`/`\\right`, `\\bar{X}`, `\\widehat{p}`, `\\qquad`. `steps` cards do not paint TeX.
 | `example` | `setup_*` and `result_*` (falls back to `left_*` / `right_*`) |
 | `takeaway` | `q1_*` and `q2_*` **required** in EN / 简 / 繁. Check and `validate.py` fail if either is missing. There is no default incentive pair. |
 | `module_open` | Unit title plus `item1_*` … `item4_*` agenda. Used on `{MODULE}-IN` hook. A beat `kicker_*` replaces the default OPEN stamp. |
@@ -243,7 +254,7 @@ Glossary item: `en`, `zh`, `zh_hk` (optional), `lock` (boolean). If `lock: true`
 
 ## YouTube upload text
 
-Optional. v1 writes a paste file only. There is no YouTube API upload, no JSON sidecar, and no copy from `objective_*`.
+Optional. v1 writes a paste file only. There is no YouTube API upload, no JSON sidecar, and no copy from `objective_*` (objectives are deprecated authoring metadata; upload copy lives only here).
 
 ```yaml
 youtube:
@@ -265,23 +276,23 @@ Line 1 is the YouTube title. A blank line follows. The description body is the r
 
 The factory builds the title from the short base title plus a language tag. The description follows the **speech** language, so `en+zh` uses `description_en`.
 
-YouTube Studio rejects ASCII `<` and `>` in the title and the description. On write, `normalize_description` and `sidecar_text` replace each one with the fullwidth form (`＜`, `＞`), so `1.25 -> 2` is pasted as `1.25 -＞ 2`. The swap is one character for one character. It runs after trim and does not change the length check. Lesson YAML stays as written. Authors should prefer wording that avoids ASCII angle brackets: “to”, the arrow `→`, or the fullwidth forms. Speech and on-screen text are unchanged; this rule is only for the paste title and description.
-
 | Cell | Title |
 |------|--------|
 | `en` | `title_en` + ` (English)` |
 | `zh` | `title_zh` + ` (普通话)` |
 | `hk` | `title_zh_hk` + ` (粵語)` |
-| `en+zh` | `title_en` + ` (Speech: English · Slides: 简体)` |
-| `en+hk` | `title_en` + ` (Speech: English · Slides: 繁體)` |
-| `zh+en` | `title_zh` + `（旁白：普通话 · 画面：English）` |
+| `en+zh` | `title_en` + ` (English narration · bilingual slides 中英)` |
+| `en+hk` | `title_en` + ` (English narration · bilingual slides 中英)` |
+| `zh+en` | `title_zh` + `（普通话讲解 · 中英双语画面）` |
 | `zh+hk` | `title_zh` + `（旁白：普通话 · 画面：繁體）` |
-| `hk+en` | `title_zh_hk` + `（旁白：粵語 · 畫面：English）` |
+| `hk+en` | `title_zh_hk` + `（粵語講解 · 中英雙語畫面）` |
 | `hk+zh` | `title_zh_hk` + `（旁白：粵語 · 畫面：简体）` |
+
+One function, `langs.language_label(voice, second, kind)`, gives this wording to the title tag, the cover chip (bilingual covers read `语言 / 語言 / LANGUAGE` + the same phrase), and suggested playlist names (`langs.playlist_name("STAT M01", "zh", "en")` → `STAT M01 · 普通话讲解 · 中英双语画面`; printed only, nothing is renamed on YouTube). Set `VF_LEGACY_LANG_TAG=1` to get the old `Speech: … · Slides: …` / `旁白：… · 画面：…` tags back, e.g. to match titles already published.
 
 English tags use a leading space and halfwidth parentheses. Chinese tags sit against the title and use fullwidth parentheses. Putonghua tags stay in 简体 (`画面`). Cantonese tags stay in 繁體 (`畫面`). The dot is `·`.
 
-Limits, counted after trimming and bracket replacement on the description, and on the full YouTube title including the tag:
+Limits, counted after trimming the description and on the full YouTube title including the tag:
 
 - A description must be strictly less than 2500 characters. 2500 or more is an error.
 - A mono YouTube title over 100 characters is an error when the base title itself is still within 100.
@@ -289,6 +300,56 @@ Limits, counted after trimming and bracket replacement on the description, and o
 - A mixed-cell title over 100 is a warning. The speech/slides tag is longer, and some existing English titles plus that tag already pass 100. The sidecar is still written. Shorten the base title before upload.
 
 `validate.py` prints title warnings and still exits 0. A description error exits 1.
+
+### Series numbering and links
+
+For ids shaped `<COURSE>-M<mm>-T<tt>-…` (e.g. `STAT-M01-T09-CV`) the factory adds, for new builds:
+
+- **Title prefix** in the speech language in front of the title above (`youtube.series_prefix`, one function; course words in `youtube.COURSE_WORDS`): English speech `STAT 1.09 · `, Putonghua `统计 1.09 · `, Cantonese `統計 1.09 · `. Mixed cells follow the speech. An unknown course uses its code. The cover chip stays `1.09 · LESSON-ID`. Odd ids get no prefix. If only the prefix pushes a mono title over 100, it is a warning, not an error.
+- **Description first line** in the speech language, then a blank line, then the body:
+  - `Series: STAT M01 · Descriptive measures for a coffee chain · English · Lesson 09/15`
+  - The module title comes from `minicourses/<COURSE>-M<mm>.yaml` (`title_en` / `title_zh` / `title_zh_hk` by speech; `VF_MINICOURSES=dir` overrides). It is left out when the file or title is missing.
+  - `系列：STAT M01 · 咖啡连锁的描述性指标 · 普通话 · 第 09/15 课` / `系列：STAT M01 · 咖啡連鎖嘅描述性指標 · 粵語 · 第 09/15 課`
+  - mixed cells use the same `language_label` phrase as the title tag.
+  The total comes from `youtube.series.total`, the links file, or the count of `<COURSE>-M<mm>-T*.yaml` in the lesson folder; otherwise it is omitted (`Lesson 09`).
+- **Previous / Next / Playlist lines** (`上一课/下一课/播放列表`, `上一課/下一課/播放清單`), same mix only, and only when the URL is known. No empty placeholders.
+- **Cover**: the top-right id reads `1.09 · STAT-M01-T09-CV` (same corner and size).
+
+Links, either in the lesson:
+
+```yaml
+youtube:
+  series:
+    total: 15
+    prev_url_zh+en: https://youtu.be/XXXX
+    next_url_zh+en: https://youtu.be/YYYY
+    playlist_url_zh+en: https://www.youtube.com/playlist?list=PL...
+```
+
+or in `series_links.json` beside the lessons (or `VF_SERIES_LINKS=path`), generated from an upload results TSV:
+
+```
+python factory/series_links.py rollout.tsv --module STAT-M03 --lessons-dir lessons/STAT \
+    --playlist zh=PL... --playlist hk+en=PL... -o lessons/STAT/series_links.json
+```
+
+Lesson fields win over the file. The built description (header + links + body) over 2300 characters is a warning; 2500 stays the hard limit on the body. `VF_LEGACY_YT_SERIES=1` turns off the prefix, header, links and cover number.
+
+## Layout QA warnings (build and validate)
+
+All of these are warnings; none fails a lesson unless a strict switch is set.
+
+| Check | Where | Rule | Fix |
+|-------|-------|------|-----|
+| Max hold | `build.py` (real audio) | One stage still on screen > 20 s (`VF_HOLD_WARN`). With `VF_STRICT_HOLD=1` or `--strict-hold`, > 30 s (`VF_HOLD_FAIL`) fails the build, naming lesson, beat and stage. | Split that stage's `s<n>_*` script into two chunks / add a stage. |
+| Hold estimate | `validate.py` | An `s<n>_*` line reads > 20 s at ~2.3 EN words/s or ~4.2 CJK chars/s. | Same. |
+| Still count | `build.py` | Captions reach fewer stills than the stage plan. | Give every stage its own `s<n>_*` text. |
+| Caption orphans | `build.py` | A sentence would end on a 1–2 word (EN) or ≤3 character (CJK) caption card. The wrapper now balances cards, so this should read 0. | Shorten or rephrase the sentence. |
+| Blank panels | renderer | Reveal beats (`two_column`, `takeaway`, `example`) no longer show an empty panel: the panel that is not spoken yet is drawn dimmed, the spoken one gets a gold outline. `VF_LEGACY_REVEAL=1` restores the old reveal. | — |
+| Numbered step text | `validate.py` | `step<n>_*` starts with `1.` / `2、` / `3)`; the row badge already numbers it (the renderer strips the prefix). | Drop the typed number. |
+| Numbers in two_column | `validate.py` | Both `left_*` and `right_*` contain digits. | Prefer `rank_line`, `freq_bars` or `ratio_bars`. |
+
+Steps rows (`layout: rows`) are left-aligned unless every row is an equation (contains `=`, `÷`, `×`, `≤`, … or TeX markup), which stay centred.
 
 ## Quiz schema
 
@@ -479,6 +540,12 @@ A bilingual cell (`en+zh`, `en+hk`, `zh+en`, `hk+en`) stacks both languages on o
 | `module_open` `item*_*` | 30 | 14 |
 
 Math lines print once: when the two languages of a field differ only by a unit word (at most 8 letters or CJK characters, same digits and operators, an `=` present), the bilingual card shows the primary line only. Write "1,400 / 4 = 350 cups" / "1,400 / 4 = 350 杯", not two different sentences. A multi-line field (a `definition_card` formula) prints once when every line is identical or the same equation up to a unit word (`CV = σ / μ × 100%` + `A: 30 / 300 × 100% = 10%` / `A店：…`).
+
+Bilingual hierarchy: speech-language labels are primary (larger); the secondary language is smaller. On a `definition_card` / `formula`, show the numeric calc once (primary keeps words + calc; secondary is word-formula only when the arithmetic would otherwise duplicate).
+
+Do not mid-wrap numbers or short equations in `table_grid`, `three_column`, or dense steps (`7200`, `48×48=2304`). Prefer `layout: rows`, denser footers, or a break before the figure.
+
+CJK speech captions keep common compounds as one token (`门店`, `标准差`); wrap prefers punctuation. Authors should not rely on a mid-compound frame split.
 
 ## IDs
 

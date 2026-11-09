@@ -27,15 +27,19 @@ Use this checklist after authoring or revising a lesson and before delivery. Val
 - [ ] No invalid escapes such as `\>`, `\<`, or `\=` occur.
 - [ ] Comparison operators in ordinary text are unescaped.
 - [ ] `formula_tex` contains only renderer-compatible math, not lecture prose.
+- [ ] Multi-equation define/formula cards use one `formula_tex` with `\\qquad` (not `aligned`/`array`); plain `formula` is a single line so TeX is not cleared.
+- [ ] No ASCII `x-bar` / `X-bar` and no Unicode combining overbar (x̄) on plain slide cells; bars/hats/stars use `formula_tex` (`\\bar{X}`, `\\widehat{p}`, `Z^{*}`, `t^{*}`).
+- [ ] Chinese (zh / zh_hk) lessons name tech terms in Chinese on slides and speech (误差容限, 标准误, 自由度, 学生 t, …); English abbreviations only as a first-time gloss.
 - [ ] Saved file reopens and parses successfully.
 
 ## 4. Lesson-level completeness
 - [ ] Required lesson fields are present.
-- [ ] Titles and objective are synchronized across English, 简体, and 繁體.
+- [ ] Titles are synchronized across English, 简体, and 繁體. `objective_*`, bare `course:`, and `audience` / `audience_*` are optional/deprecated — do not require them; if present, leave or drop later, but do not invent them for QA. Keep `course_en` / `course_zh` / `course_zh_hk` when covers matter. Timing field is `duration_target_s` only (no bare `duration_target`).
 - [ ] `title_*` is the short cover title only. It does not already contain `(English)`, `(普通话)`, `(粵語)`, or a speech/slides tag.
-- [ ] If `youtube:` is present, it has only `description_en`, `description_zh`, and `description_zh_hk`. Each description is strictly less than 2500 characters. It was not copied from `objective_*`.
-- [ ] YouTube titles and descriptions avoid ASCII `<` and `>`. Studio rejects those characters. Prefer “to”, `→`, or fullwidth `＜` / `＞`. The factory replaces any remaining ASCII `<` and `>` with the fullwidth forms when it writes the paste file. Speech and on-screen comparison operators stay as written.
+- [ ] If `youtube:` is present, it has only `description_en`, `description_zh`, and `description_zh_hk`. Each description is strictly less than 2500 characters (spaces and line breaks count). Do not paste an old `objective_*` into it.
 - [ ] A mono YouTube title (base title plus the language tag) is within 100 characters. A mixed-cell title over 100 is a warning to shorten before upload, not a reason to invent a second title field.
+- [ ] The sidecar title starts with the series prefix in the speech language (`STAT 1.09 · ` / `统计 1.09 · ` / `統計 1.09 · `) and the description starts with the `Series:` / `系列：` line with the module title, the right lesson number and total. Previous / next / playlist lines appear only for URLs that exist and point to the same language mix. Re-run with an updated `series_links.json` after each upload day so the previous lesson's "Next" link can be pasted in.
+- [ ] Built description (header + links + body) stays under ~2300 characters (warning); no ASCII `<` or `>`.
 - [ ] `duration_target_s` equals the sum of beat `seconds`. A short module is often 60–240. A standalone teaching short may run longer when the beginner explanation is split.
 - [ ] Glossary items contain required language fields.
 - [ ] Every `lock: true` glossary string is preserved exactly.
@@ -147,6 +151,9 @@ Then confirm:
 - [ ] 繁體 is natural Hong Kong lecture Cantonese, not mechanical conversion.
 - [ ] On-screen labels are short in all languages and inside the SCHEMA bilingual budgets (no `WARN` lines from `validate.py`, or each one checked on a zh+en / hk+en render).
 - [ ] Math lines differ across languages only by a unit word, so the bilingual card prints the equation once.
+- [ ] Bilingual definition/formula: speech-language line larger (primary); secondary smaller; the same numeric calc appears once.
+- [ ] No mid-number or mid-equation wrap in grids/columns/steps (prefer denser rows or a break before the figure).
+- [ ] CJK caption compounds (`门店`, `标准差`) do not split across caption frames (spot-check caption preview).
 - [ ] Meaning, numbers, assumptions, and qualifications are synchronized across languages.
 - [ ] No language field is missing or accidentally joined to another line.
 - [ ] Chinese punctuation is used on Chinese lines.
@@ -179,3 +186,10 @@ For each multiple-choice question:
 - [ ] Search for “next lesson”, “next chapter”, or equivalent teasers.
 - [ ] Search for unsupported words such as “audit”, “ledger”, “contract”, “guarantee”, and “must”, then verify each occurrence.
 - [ ] Confirm the requested deliverables are present and nothing extra is embedded in the YAML.
+
+## 15. Layout QA (warnings from validate.py / build.py)
+- [ ] **Numbers → chart.** If both sides of a `two_column` carry numbers, use a chart. Examples: “Shop A 300 cups / Shop B 3,000 cups, SD 30 vs 150” → `ratio_bars` (`means: 300;3000`, `sds: 30;150`); “Small 40, Medium 280, Large 100 orders” → `freq_bars` (`counts: 40;280;100`); “five shops 280…420 cups, which is the middle?” → `rank_line`. Keep `two_column` for words vs words.
+- [ ] **Max hold.** No stage still stays > 20 s (build prints `warn: hold: …`; `VF_STRICT_HOLD=1` fails > 30 s). Split the long `s<n>_*` line.
+- [ ] **Caption orphans.** Build prints `warn: orphan: …` when a sentence ends on a 1–2 word / ≤3 character card. Target 0.
+- [ ] **Blank panels.** Reveal slides never show an empty panel; the next panel is dimmed until it is spoken.
+- [ ] **Numbered step text.** No `1.` / `2、` at the start of `step<n>_*` (the badge numbers rows).

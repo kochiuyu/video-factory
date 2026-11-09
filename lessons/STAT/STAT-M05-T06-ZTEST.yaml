@@ -7,15 +7,46 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
-title_en: 'The One-Sample Z-Test: Auditing a Mean with Known Process Variation'
-title_zh: 单样本 Z 检验：在已知流程波动下审计均值
-title_zh_hk: 單樣本 Z 檢驗：喺已知流程波動之下審計均值
+duration_target_s: 340
+title_en: 'The One-Sample Z-Test: Known σ'
+title_zh: 单样本 Z 检验：σ 已知时检验均值
+title_zh_hk: 單樣本 Z 檢驗：σ 已知時檢驗均值
 objective_en: Formulate and execute a two-sided one-sample Z-test for a population mean when the population standard deviation
   is genuinely known, calculate the standard error, Z statistic, critical-value decision, and p-value, and separate evidence
   about the process mean from equipment diagnosis, compliance, and financial conclusions.
 objective_zh: 在总体标准差确实已知时，构建并执行双侧单样本 Z 均值检验，计算标准误、Z 统计量、临界值决策与 p 值，并区分关于流程均值的统计证据与设备诊断、合规及财务结论。
 objective_zh_hk: 喺總體標準差確實已知嗰陣，構建並執行雙側單樣本 Z 均值檢驗，計算標準誤、Z 統計量、臨界值決策同 p 值，並區分關於流程均值嘅統計證據同設備診斷、合規及財務結論。
+youtube:
+  description_en: |
+    The One-Sample Z-Test: Known σ
+
+    Suppose Shop A fills coffee-bean bags with a target of 250 grams each. Too light, and customers are short-changed. Too heavy, and the shop gives beans away on every bag. A check of 64 bags averages 251.25 grams. Is that a real shift, or just sample wobble?
+
+    A one-sample Z-test checks one group's mean against a fixed target when the population standard deviation sigma is known. The test statistic is Z = (mean − mu0) / (sigma / √n). Both directions matter here, so the test is two-sided.
+
+    In an assumed example, SE = 4.0 / √64 = 0.50 g, so Z = 1.25 / 0.50 = 2.50. That clears the 1.96 cutoff, and the two-sided p-value is about 0.0124. At alpha = 0.05 we reject H0: mu = 250.0. The average runs heavy.
+
+    Rule: this is evidence about the process mean under a known sigma, not a diagnosis of the filler, a compliance finding, or a financial conclusion.
+  description_zh: |
+    单样本 Z 检验：σ 已知时检验均值
+
+    假设A店给咖啡豆装袋，每袋目标 250 克。装少了，顾客吃亏；装多了，店里每袋都在白送豆子。抽查 64 袋，平均 251.25 克。这是真的偏了，还是样本正常的晃动？
+
+    单样本 Z 检验（one-sample Z-test）在总体标准差 sigma 已知时，拿一组数据的均值去和一个固定目标比。检验统计量是 Z = (均值 − mu0) / (sigma / √n)。这里两个方向都重要，所以用双侧检验。
+
+    在一个假设的例子里，标准误 = 4.0 / √64 = 0.50 克，于是 Z = 1.25 / 0.50 = 2.50，越过 1.96，双侧 p 值大约 0.0124。在 alpha = 0.05 下拒绝 H0: mu = 250.0，平均偏重。
+
+    规则：这是在 sigma 已知前提之下关于流程均值的证据，不是灌装机诊断、合规结论，也不是财务判断。
+  description_zh_hk: |
+    單樣本 Z 檢驗：σ 已知時檢驗均值
+
+    假設A店幫咖啡豆入袋，每袋目標 250 克。入少咗，顧客蝕底；入多咗，間舖每袋都喺度白送豆。抽查 64 袋，平均 251.25 克。係真係偏咗，定係樣本正常嘅晃動？
+
+    單樣本 Z 檢驗（one-sample Z-test）喺總體標準差 sigma 已知嗰陣，攞一組數據嘅均值去同一個固定目標比。檢驗統計量係 Z = (均值 − mu0) / (sigma / √n)。呢度兩個方向都重要，所以用雙側檢驗。
+
+    喺一個假設嘅例子入面，標準誤 = 4.0 / √64 = 0.50 克，於是 Z = 1.25 / 0.50 = 2.50，越過 1.96，雙側 p 值大約 0.0124。喺 alpha = 0.05 之下拒絕 H0: mu = 250.0，平均偏重。
+
+    規則：呢個係喺 sigma 已知前提之下關於流程均值嘅證據，唔係灌裝機診斷、合規結論，亦唔係財務判斷。
 glossary:
 - en: one-sample Z-test
   zh: 单样本 Z 检验
@@ -36,185 +67,246 @@ glossary:
 quiz:
 - id: Q1
   type: multiple_choice
-  question_en: When is a one-sample Z-test for a population mean appropriate?
-  question_zh: 在工业生产与商业质检中，审计师在满足何种特定营运前提时，方可在数理上合法调遣单样本 Z 检验而非学生氏 t 检验？
-  question_zh_hk: 喺工業生產與商業質檢入面，審計師喺滿足邊種特定營運前提嗰陣，先至可以喺數理上合法調遣單樣本 Z 檢驗而唔係學生氏 t 檢驗？
+  question_en: When is a one-sample Z-test for a population mean the right tool?
+  question_zh: 检验一个总体均值时，什么情况下该用单样本 Z 检验？
+  question_zh_hk: 檢驗一個總體均值嗰陣，乜嘢情況下應該用單樣本 Z 檢驗？
   options_en:
-  - 'A: When the population standard deviation sigma is genuinely known and the sampling-distribution assumptions are justified.'
-  - 'B: Whenever the audited retail product contains dry whole roasted beans instead of liquid milk.'
-  - 'C: Only when the sample mean x-bar lands perfectly on the target nominal weight.'
-  - 'D: When the store operations manager gives verbal consent to bypass degrees of freedom.'
+  - 'A: When the population standard deviation σ is genuinely known from a reliable source, and the sample mean is close to normal.'
+  - 'B: Whenever the sample is large, because a large n turns the sample standard deviation s into a known σ.'
+  - 'C: Only when the sample mean lands exactly on the target μ0.'
+  - 'D: Whenever σ is unknown, by plugging in the s from this same sample and still calling it Z.'
   options_zh:
-  - 'A: 当设备具有确凿历史工程校准数据使得总体标准差 sigma 已知，或者样本量充分大足以触发中心极限定理时。'
-  - 'B: 只要受检的零售商品是干燥烘焙咖啡原豆而非液体奶制品时。'
-  - 'C: 唯有当实测样本均值 x-bar 严丝合缝精确等于预设名义目标重量时。'
-  - 'D: 当门店营运经理口头签署许可免除自由度核算要求时。'
+  - 'A: 总体标准差 σ 确实有可靠来源、是已知的，而且样本均值接近正态分布时。'
+  - 'B: 只要样本够大就行，因为 n 大了，样本标准差 s 就变成已知的 σ。'
+  - 'C: 只有样本均值刚好等于目标 μ0 时。'
+  - 'D: σ 未知时，直接用这次样本算出的 s 代进去，照样叫 Z。'
   options_zh_hk:
-  - 'A: 當設備具有確鑿歷史工程校準數據令到總體標準差 sigma 已知，抑或樣本量充分大足以觸發中心極限定理嗰陣。'
-  - 'B: 只要受檢嘅零售商品係乾燥烘焙咖啡原豆而唔係液體奶製品嗰陣。'
-  - 'C: 淨係得當實測樣本均值 x-bar 嚴絲合縫精確等於預設名義目標重量嗰陣。'
-  - 'D: 當門市營運經理口頭簽署許可免除自由度核算要求嗰陣。'
+  - 'A: 總體標準差 σ 確實有可靠來源、係已知嘅，而且樣本均值接近正態分佈嗰陣。'
+  - 'B: 只要樣本夠大就得，因為 n 大咗，樣本標準差 s 就變成已知嘅 σ。'
+  - 'C: 淨係喺樣本均值啱啱等於目標 μ0 嗰陣。'
+  - 'D: σ 未知嗰陣，直接用今次樣本計出嘅 s 代入去，照樣叫 Z。'
   answer: A
-  explanation_en: The defining condition is known sigma. A large sample can support a normal approximation for the mean, but
-    it does not turn an estimated standard deviation into a known population value.
-  explanation_zh: Z 检验严格要求总体方差已知（或样本量极大触发 CLT）。若方差未知且在有限样本中必须依赖样本标准差 s 估算，则必须强制调用戈塞 t 检验。
-  explanation_zh_hk: Z 檢驗嚴格要求總體方差已知（抑或樣本量極大觸發 CLT）。若果方差未知兼且喺有限樣本入面必須依賴樣本標準差 s 估算，噉就必須強制調用戈塞 t 檢驗。
+  explanation_en: The defining condition is a known σ. A large sample can make the sample mean close to normal, but it does
+    not turn an estimate s into a known σ. When σ is estimated from the sample, use the Student t approach in the next lesson,
+    the t-test. C confuses the test with its result, and D hides the extra uncertainty from estimating σ.
+  explanation_zh: 关键条件是 σ 已知。样本大可以让样本均值接近正态，但不会把估计出来的 s 变成已知的 σ。σ 要靠样本估计时，就该用学生 t 检验。C 把检验和结果混在一起；D 忽略了估计 σ 带来的额外不确定。
+  explanation_zh_hk: 關鍵條件係 σ 已知。樣本大可以令樣本均值接近正態，但唔會將估計出嚟嘅 s 變成已知嘅 σ。σ 要靠樣本估計嗰陣，就應該用學生 t 檢驗。C 將檢驗同結果撈埋一齊；D 忽略咗估計 σ 帶嚟嘅額外不確定。
 - id: Q2
   type: multiple_choice
-  question_en: 'Assume H0: mu = 250.0 g versus H1: mu != 250.0 g, known sigma = 4.0 g, n = 64, and x-bar = 251.25 g. What
-    are Z and the decision at alpha = 0.05?'
-  question_zh: 都市咖啡审计零售咖啡豆分装净重（标称目标 mu_0 = 250.0g，已知设备工程方差对应 sigma = 4.0g）。随机抽查 n = 64 包，算得样本均值 x-bar = 251.25g。在 alpha =
-    0.05 双尾基准下，Z_calc 与运营裁决分别是什么？
-  question_zh_hk: 都市咖啡審計零售咖啡豆分裝淨重（標稱目標 mu_0 = 250.0g，已知設備工程方差對應 sigma = 4.0g）。隨機抽查 n = 64 包，計得樣本均值 x-bar = 251.25g。喺 alpha
-    = 0.05 雙尾基準下，Z_calc 與營運裁決分別係幾多？
+  question_en: 'H0: μ = 250.0 g vs H1: μ ≠ 250.0 g, known σ = 4.0 g, n = 64, sample mean 251.25 g. What are Z and the decision
+    at α = 0.05?'
+  question_zh: 'H0: μ = 250.0 克 对 H1: μ ≠ 250.0 克，已知 σ = 4.0 克，n = 64，样本均值 251.25 克。在 α = 0.05 下，Z 和结论是什么？'
+  question_zh_hk: 'H0: μ = 250.0 克 對 H1: μ ≠ 250.0 克，已知 σ = 4.0 克，n = 64，樣本均值 251.25 克。喺 α = 0.05 之下，Z 同結論係乜嘢？'
   options_en:
-  - 'A: SE = 0.50 g; Z = 2.50; two-sided p ≈ 0.0124; reject H0 because |Z| > 1.96.'
-  - 'B: SE = 4.0 / 64 = 0.0625g; Z_calc = +20.0. Fail to reject H0.'
-  - 'C: Z_calc = (251.25 - 250.0) / 4.0 = +0.3125. Retain H0 as compliant.'
-  - 'D: Z_calc = +1.25g; line calibration is legally compliant without testing.'
+  - 'A: SE = 4.0 / √64 = 0.50 g; Z = 1.25 / 0.50 = 2.50; p ≈ 0.0124; reject H0.'
+  - 'B: SE = 4.0 / 64 = 0.0625 g; Z = 1.25 / 0.0625 = 20.0; reject H0.'
+  - 'C: Z = 1.25 / 4.0 = 0.3125; fail to reject H0.'
+  - 'D: Z = 2.50, but the bags are heavier, not lighter, so a two-sided test does not reject.'
   options_zh:
-  - 'A: SE = 4.0 / 根号(64) = 0.50g；Z_calc = (251.25 - 250.0) / 0.50 = +2.50。因 |Z| >= 1.96（p = 0.0124），拒绝 H0：产线存在系统性超量分装损耗。'
-  - 'B: SE = 4.0 / 64 = 0.0625g；Z_calc = +20.0。判定不拒绝 H0。'
-  - 'C: Z_calc = (251.25 - 250.0) / 4.0 = +0.3125。判定保留 H0，产线完全达标。'
-  - 'D: Z_calc = +1.25g；分装偏差微弱，无需通过统计检验即可豁免合规。'
+  - 'A: SE = 4.0 / √64 = 0.50 克；Z = 1.25 / 0.50 = 2.50；p ≈ 0.0124；拒绝 H0。'
+  - 'B: SE = 4.0 / 64 = 0.0625 克；Z = 1.25 / 0.0625 = 20.0；拒绝 H0。'
+  - 'C: Z = 1.25 / 4.0 = 0.3125；不拒绝 H0。'
+  - 'D: Z = 2.50，但袋子是偏重不是偏轻，所以双侧检验不拒绝。'
   options_zh_hk:
-  - 'A: SE = 4.0 / 根號(64) = 0.50g；Z_calc = (251.25 - 250.0) / 0.50 = +2.50。因 |Z| >= 1.96（p = 0.0124），拒絕 H0：產線存在系統性超量分裝損耗。'
-  - 'B: SE = 4.0 / 64 = 0.0625g；Z_calc = +20.0。判定唔拒絕 H0。'
-  - 'C: Z_calc = (251.25 - 250.0) / 4.0 = +0.3125。判定保留 H0，產線完全達標。'
-  - 'D: Z_calc = +1.25g；分裝偏差微弱，唔需要透過統計檢驗即可豁免合規。'
+  - 'A: SE = 4.0 / √64 = 0.50 克；Z = 1.25 / 0.50 = 2.50；p ≈ 0.0124；拒絕 H0。'
+  - 'B: SE = 4.0 / 64 = 0.0625 克；Z = 1.25 / 0.0625 = 20.0；拒絕 H0。'
+  - 'C: Z = 1.25 / 4.0 = 0.3125；唔拒絕 H0。'
+  - 'D: Z = 2.50，不過啲袋係偏重唔係偏輕，所以雙側檢驗唔拒絕。'
   answer: A
-  explanation_en: SE = 4 / sqrt(64) = 0.50. Thus Z = 1.25 / 0.50 = 2.50. Both the critical-value rule and the two-sided p-value
-    lead to rejection at alpha = 0.05.
-  explanation_zh: 标准误 SE = 4.0 / 8 = 0.50g。标准化得 Z = 1.25 / 0.50 = +2.50。在 alpha = 0.05 双尾检验中，临界值为 ±1.96。因 +2.50 显著超越 +1.96，断然推翻原假设：超量分装正在持续侵蚀毛利。
-  explanation_zh_hk: 標準誤 SE = 4.0 / 8 = 0.50g。標準化得 Z = 1.25 / 0.50 = +2.50。喺 alpha = 0.05 雙尾檢驗入面，臨界值為 ±1.96。因 +2.50 顯著超越 +1.96，斷然推翻原假設：超量分裝正喺度持續侵蝕毛利。
+  explanation_en: SE = 4 / √64 = 4 / 8 = 0.50 g, so Z = 1.25 / 0.50 = 2.50. Since |Z| ≥ 1.96 and p ≈ 0.0124 ≤ 0.05, reject
+    H0. B forgets the square root, C divides by σ instead of the standard error, and D forgets that a two-sided test counts
+    both directions.
+  explanation_zh: SE = 4 / √64 = 4 / 8 = 0.50 克，所以 Z = 1.25 / 0.50 = 2.50。|Z| ≥ 1.96，p ≈ 0.0124 ≤ 0.05，拒绝 H0。B 忘了开根号；C 除的是 σ 而不是标准误；D 忘了双侧检验两个方向都算。
+  explanation_zh_hk: SE = 4 / √64 = 4 / 8 = 0.50 克，所以 Z = 1.25 / 0.50 = 2.50。|Z| ≥ 1.96，p ≈ 0.0124 ≤ 0.05，拒絕 H0。B 唔記得開方；C 除嘅係 σ 而唔係標準誤；D 唔記得雙側檢驗兩個方向都計。
 beats:
 - id: hook
   visual: title_card
-  seconds: 28
-  kicker_en: The Retail Bagging Audit
-  kicker_zh: 精品豆分装线暗耗
-  kicker_zh_hk: 精品豆分裝線暗耗
-  title_en: Is the packaging mean distinguishable from its target?
-  title_zh: 包装平均净重能否与目标值区分？
-  title_zh_hk: 包裝平均淨重可唔可以同目標值區分？
-  en: Metro Coffee is evaluating an assumed automated packaging process with a target population mean of 250.0 grams. In a
-    teaching audit of 64 independent bags, the sample mean is 251.25 grams, and the population standard deviation is treated
-    as known at 4.0 grams. A one-sample Z-test standardizes the sample gap to assess whether it is difficult to reconcile
-    with the target-mean model.
-  zh: 都市咖啡正在评估一项假设的自动包装流程，其目标总体均值为 250.0 克。在一个包含 64 包独立观测的教学审计中，样本均值为 251.25 克，总体标准差视为已知的 4.0 克。单样本 Z 检验把样本差距标准化，以评估它是否难以与目标均值模型相容。
-  zh_hk: 都市咖啡正評估一項假設嘅自動包裝流程，目標總體均值係 250.0 克。喺一個包括 64 包獨立觀測嘅教學審計入面，樣本均值係 251.25 克，總體標準差視為已知嘅 4.0 克。單樣本 Z 檢驗將樣本差距標準化，以評估佢係咪難以同目標均值模型相容。
+  seconds: 40
+  kicker_en: The bag that weighs a little too much
+  kicker_zh: 每袋多一点点
+  kicker_zh_hk: 每袋多少少
+  title_en: Are the bags really off target?
+  title_zh: 豆袋真的偏离目标了吗？
+  title_zh_hk: 啲豆袋真係偏離目標咗？
+  en: >-
+    Suppose Shop A fills coffee-bean bags with a target of 250 grams each. Too light, and customers are short-changed. Too
+    heavy, and the shop gives beans away on every bag. A check of 64 bags averages 251.25 grams. Is that a real shift, or
+    just the normal wobble of a sample? These are made-up teaching numbers.
+  zh: >-
+    假设A店给咖啡豆装袋，每袋目标 250 克。装少了，顾客吃亏；装多了，店里每袋都在白送豆子。抽查 64 袋，平均 251.25 克。这是真的偏了，还是样本正常的晃动？下面都是教学用的假设数字。
+  zh_hk: >-
+    假設A店幫咖啡豆入袋，每袋目標 250 克。入少咗，顧客蝕底；入多咗，間舖每袋都喺度白送豆。抽查 64 袋，平均 251.25 克。係真係偏咗，定係樣本正常嘅晃動？以下都係教學用嘅假設數字。
 - id: define
   visual: definition_card
-  seconds: 34
-  kicker_en: What It Is
+  seconds: 56
+  kicker_en: What it is
   kicker_zh: 核心概念
   kicker_zh_hk: 核心概念
-  title_en: Use Z when sigma is known and the sampling model is justified
-  title_zh: sigma 已知且抽样模型合理时使用 Z
-  title_zh_hk: sigma 已知而且抽樣模型合理嗰陣使用 Z
-  formula: 'H0: mu = mu_0 versus H1: mu != mu_0; Z = (x-bar - mu_0) / (sigma / sqrt(n))'
-  formula_zh: 'H0: mu = mu_0 对 H1: mu != mu_0；Z = (x-bar - mu_0) / (sigma / √n)'
-  formula_zh_hk: 'H0: mu = mu_0 對 H1: mu != mu_0；Z = (x-bar - mu_0) / (sigma / √n)'
-  formula_tex: Z=\frac{\bar X-\mu_0}{\sigma/\sqrt n}
-  s1_en: The one-sample Z procedure uses the population standard deviation sigma rather than an estimate from the current
-    sample. Knowing sigma is the defining condition. A large sample may justify an approximate normal sampling distribution
-    for the mean, but it does not make an unknown sigma known.
-  s1_zh: 单样本 Z 方法使用总体标准差 sigma，而不是由当前样本得到的估计值。sigma 已知是其定义性条件。大样本可能支持样本均值的近似正态分布，但不会把未知 sigma 变成已知。
-  s1_zh_hk: 單樣本 Z 方法使用總體標準差 sigma，而唔係由目前樣本得到嘅估計值。sigma 已知係佢嘅定義性條件。大樣本可能支持樣本均值嘅近似正態分佈，但唔會將未知 sigma 變成已知。
-  s2_en: The Z statistic measures the number of known standard errors separating the sample mean from the tested population
-    mean. A two-sided alternative is appropriate when departures above and below the benchmark both matter and that direction
-    has been specified before reviewing the result.
-  s2_zh: Z 统计量衡量样本均值与被检验总体均值相距多少个已知标准误。当高于和低于基准的偏离都重要，并且该方向在查看结果前已经设定时，应使用双侧备择。
-  s2_zh_hk: Z 統計量量度樣本均值同被檢驗總體均值相距幾多個已知標準誤。當高過同低過基準嘅偏離都重要，而且呢個方向喺查看結果之前已經設定嗰陣，應該使用雙側備擇。
+  title_en: Use Z when σ is known
+  title_zh: σ 已知时用 Z
+  title_zh_hk: σ 已知嗰陣用 Z
+  formula: 'Z = (mean − μ0) / (σ / √n)'
+  formula_zh: 'Z = (样本均值 − μ0) / (σ / √n)'
+  formula_zh_hk: 'Z = (樣本均值 − μ0) / (σ / √n)'
+  formula_tex: 'H_0:\ \mu = \mu_0 \qquad H_1:\ \mu \ne \mu_0 \qquad Z = \frac{\bar{X} - \mu_0}{\sigma/\sqrt{n}}'
+  s1_en: >-
+    The null hypothesis H0 says the true average fill is still the target, mu zero. The alternative H1 says it has moved,
+    up or down. Both directions matter here, so the test is two-sided, and we choose that before looking at the data.
+  s1_zh: >-
+    原假设 H0 说，真实的平均装量还是目标 mu 零；备择假设 H1 说它变了，偏高或偏低都算。两个方向都要紧，所以是双侧检验，而且要在看数据之前就定好。
+  s1_zh_hk: >-
+    原假設 H0 話，真實嘅平均裝量仲係目標 mu 零；備擇假設 H1 話佢變咗，偏高定偏低都算。兩個方向都要緊，所以係雙側檢驗，而且要喺睇數據之前就定好。
+  s2_en: >-
+    Z is the gap between the sample mean, x-bar, and the target, divided by the standard error, sigma over root n. The
+    key condition is a genuinely known sigma, say from long machine records. A big sample does not make it known.
+  s2_zh: >-
+    Z 就是把样本均值（x-bar）和目标的差距，除以标准误，也就是 sigma 除以根号 n。关键条件是：总体标准差 sigma 真的已知，比如来自机器长期的记录。样本再大，也不会让未知的 sigma 变成已知。
+  s2_zh_hk: >-
+    Z 即係將樣本均值（x-bar）同目標嘅差距，除以標準誤，即係 sigma 除以根號 n。關鍵條件係：總體標準差 sigma 真係已知，例如嚟自部機長期嘅記錄。樣本幾大都好，都唔會令未知嘅 sigma 變成已知。
+- id: name_ztest
+  visual: title_card
+  seconds: 16
+  kicker_en: The name
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: One-sample Z-test
+  title_zh: 单样本 Z 检验
+  title_zh_hk: 單樣本 Z 檢驗
+  en: >-
+    Say the name once more. A one-sample Z-test checks one group's mean against a fixed target, using a known sigma.
+  zh: >-
+    再念一次这个名字。单样本 Z 检验（one-sample Z-test），就是用已知的 sigma，拿一组数据的均值去和一个固定目标比。
+  zh_hk: >-
+    再唸一次呢個名。單樣本 Z 檢驗（one-sample Z-test），即係用已知嘅 sigma，攞一組數據嘅均值同一個固定目標比。
 - id: mechanics
   visual: two_column
-  seconds: 34
-  kicker_en: The Two-Sided Guardrails
-  kicker_zh: 双向护栏
-  kicker_zh_hk: 雙向護欄
-  title_en: Critical values and p-values should give the same decision
-  title_zh: 临界值与 p 值应给出一致决策
-  title_zh_hk: 臨界值同 p 值應該畀出一致決策
-  left_en: 'Critical-value rule at alpha = 0.05: reject when |Z| >= 1.96'
-  left_zh: alpha = 0.05 的临界值规则：|Z| >= 1.96 时拒绝
-  left_zh_hk: alpha = 0.05 嘅臨界值規則：|Z| >= 1.96 嗰陣拒絕
-  right_en: 'p-value rule: reject when two-sided p <= 0.05'
-  right_zh: p 值规则：双侧 p <= 0.05 时拒绝
-  right_zh_hk: p 值規則：雙側 p <= 0.05 嗰陣拒絕
-  s1_en: For a two-sided standard-normal test at alpha 0.05, the critical values are approximately minus and plus 1.96. A
-    statistic beyond either boundary leads to rejection under the stated rule. The sign indicates direction, while the absolute
-    magnitude drives the two-sided decision.
-  s1_zh: 对于 alpha = 0.05 的双侧标准正态检验，临界值约为 -1.96 与 +1.96。按照既定规则，统计量越过任一边界都会导致拒绝。符号表示方向，绝对值决定双侧结论。
-  s1_zh_hk: 對於 alpha = 0.05 嘅雙側標準正態檢驗，臨界值約係 -1.96 同 +1.96。按照既定規則，統計量越過任何一個邊界都會導致拒絕。符號表示方向，絕對值決定雙側結論。
-  s2_en: The matching two-sided p-value measures the probability, under H0, of a Z statistic at least as extreme in absolute
-    value. When the same assumptions and alpha are used, the critical-value and p-value approaches are equivalent decision
-    methods.
-  s2_zh: 对应的双侧 p 值衡量：在 H0 下，出现绝对值至少同样极端 Z 统计量的概率。当使用相同假设与 alpha 时，临界值法和 p 值法是等价的决策方法。
-  s2_zh_hk: 對應嘅雙側 p 值量度：喺 H0 之下，出現絕對值至少同樣極端 Z 統計量嘅概率。當使用相同假設同 alpha 嗰陣，臨界值法同 p 值法係等價嘅決策方法。
-  s3_en: Rejecting the target mean is a statistical statement about the process mean under the model. It does not prove a
-    mechanical fault, establish legal noncompliance, quantify financial loss, or automatically require a shutdown. Those claims
-    need separate verified evidence and operating rules.
-  s3_zh: 拒绝目标均值是在既定模型下关于流程均值的统计陈述。它不能证明机械故障、认定法律不合规、量化财务损失，也不会自动要求停机。这些结论需要独立的已核实证据与经营规则。
-  s3_zh_hk: 拒絕目標均值係喺既定模型之下關於流程均值嘅統計陳述。佢唔可以證明機械故障、認定法律唔合規、量化財務損失，亦唔會自動要求停機。呢啲結論需要獨立嘅已核實證據同營運規則。
+  seconds: 62
+  kicker_en: Two ways to decide
+  kicker_zh: 两种判法
+  kicker_zh_hk: 兩種判法
+  title_en: Critical value and p-value agree
+  title_zh: 临界值和 p 值结论一致
+  title_zh_hk: 臨界值同 p 值結論一致
+  left_en: 'Cutoff: Z past ±1.96'
+  left_zh: 临界值：Z 越过 ±1.96
+  left_zh_hk: 臨界值：Z 越過 ±1.96
+  right_en: 'p-value: p ≤ α'
+  right_zh: p 值：p ≤ α
+  right_zh_hk: p 值：p ≤ α
+  s1_en: >-
+    At a significance level alpha of 0.05, two-sided, the critical values are minus and plus 1.96. If Z lands beyond either
+    one, it falls in the rejection region, and we reject H0. The sign only tells us the direction.
+  s1_zh: >-
+    显著性水平 alpha 取 0.05、双侧时，临界值是负 1.96 和正 1.96。Z 只要越过其中一边，就落进拒绝域，我们就拒绝 H0。正负号只告诉我们方向。
+  s1_zh_hk: >-
+    顯著性水平 alpha 取 0.05、雙側嗰陣，臨界值係負 1.96 同正 1.96。Z 只要越過其中一邊，就跌入拒絕域，我哋就拒絕 H0。正負號淨係話畀我哋知方向。
+  s2_en: >-
+    The p-value asks the same question another way: if H0 were true, how often would a Z at least this far from zero, on
+    either side, show up? With the same alpha, the two rules always give the same answer.
+  s2_zh: >-
+    p 值是换个方式问同一个问题：如果 H0 成立，离零至少这么远的 Z，不管哪一边，会多常出现？alpha 一样的话，两种规则的结论永远一致。
+  s2_zh_hk: >-
+    p 值係換個方式問同一個問題：如果 H0 成立，離零至少咁遠嘅 Z，唔理邊一邊，會幾常出現？alpha 一樣嘅話，兩種規則嘅結論永遠一致。
+  s3_en: >-
+    Rejecting H0 is a statement about the average fill. It does not prove the machine is broken, or say how much money is
+    lost. Those need their own checks. And not rejecting does not prove the target is met.
+  s3_zh: >-
+    拒绝 H0，说的只是平均装量。它不能证明机器坏了，也说不出亏了多少钱，那些要另外查。反过来，不拒绝 H0 也不等于证明达标了。
+  s3_zh_hk: >-
+    拒絕 H0，講嘅只係平均裝量。佢證明唔到部機壞咗，亦講唔出蝕咗幾多錢，嗰啲要另外查。倒轉嚟講，唔拒絕 H0 亦唔等於證明達標。
 - id: ledger
   visual: steps
-  seconds: 38
-  kicker_en: The Ledger
-  kicker_zh: 台账实裁
-  kicker_zh_hk: 台賬實裁
-  title_en: Execute the assumed packaging-mean test
-  title_zh: 执行假设包装均值检验
-  title_zh_hk: 執行假設包裝均值檢驗
-  step1_en: 'Set H0: mu = 250.0 g versus H1: mu != 250.0 g; assume known sigma = 4.0 g and n = 64'
-  step1_zh: '设定 H0: mu = 250.0 g 对 H1: mu != 250.0 g；假设已知 sigma = 4.0 g，n = 64'
-  step1_zh_hk: '設定 H0: mu = 250.0 g 對 H1: mu != 250.0 g；假設已知 sigma = 4.0 g，n = 64'
-  step2_en: With x-bar = 251.25 g, SE = 4.0 / sqrt(64) = 0.50 g; Z = (251.25 - 250.0) / 0.50 = 2.50
-  step2_zh: x-bar = 251.25 g；SE = 4.0 / √64 = 0.50 g；Z = (251.25 - 250.0) / 0.50 = 2.50
-  step2_zh_hk: x-bar = 251.25 g；SE = 4.0 / √64 = 0.50 g；Z = (251.25 - 250.0) / 0.50 = 2.50
-  step3_en: '|Z| = 2.50 > 1.96 and two-sided p ≈ 0.0124; reject H0 at alpha = 0.05'
-  step3_zh: '|Z| = 2.50 > 1.96，双侧 p ≈ 0.0124；在 alpha = 0.05 时拒绝 H0'
-  step3_zh_hk: '|Z| = 2.50 > 1.96，雙側 p ≈ 0.0124；喺 alpha = 0.05 嗰陣拒絕 H0'
-  s1_en: For illustration, assume 64 independent bags have a sample mean of 251.25 grams, the tested mean is 250.0 grams,
-    and the population standard deviation is genuinely known to be 4.0 grams. These are teaching assumptions, not verified
-    production, regulatory, cost, or equipment records.
-  s1_zh: 作为示例，假设 64 包独立观测的样本均值为 251.25 克，被检验均值为 250.0 克，总体标准差确实已知为 4.0 克。这些数字是教学假设，并非已核实的生产、监管、成本或设备记录。
-  s1_zh_hk: 作為例子，假設 64 包獨立觀測嘅樣本均值係 251.25 克，被檢驗均值係 250.0 克，總體標準差確實已知係 4.0 克。呢啲數字係教學假設，唔係已核實嘅生產、監管、成本或者設備記錄。
-  s2_en: The standard error is four divided by the square root of 64, equal to 0.50 grams. The sample mean is 1.25 grams above
-    the benchmark, so dividing by 0.50 gives Z equal to positive 2.50.
-  s2_zh: 标准误为 4 除以根号 64，等于 0.50 克。样本均值高于基准 1.25 克，因此除以 0.50 后得到 Z = +2.50。
-  s2_zh_hk: 標準誤係 4 除以根號 64，等於 0.50 克。樣本均值高過基準 1.25 克，所以除以 0.50 之後得到 Z = +2.50。
-  s3_en: Because 2.50 exceeds 1.96, reject H0 at the 5% level; the matching two-sided p-value is approximately 0.0124. The
-    evidence indicates that the population mean differs from 250.0 grams under the assumptions, with the observed direction
-    above target. Diagnose the cause and choose any operational response separately.
-  s3_zh: 由于 2.50 超过 1.96，在 5% 水平拒绝 H0；对应双侧 p 值约为 0.0124。在既定假设下，证据表示总体均值不同于 250.0 克，观测方向高于目标。原因诊断与任何经营响应应独立处理。
-  s3_zh_hk: 由於 2.50 超過 1.96，喺 5% 水平拒絕 H0；對應雙側 p 值約係 0.0124。喺既定假設之下，證據表示總體均值唔同於 250.0 克，觀測方向高過目標。原因診斷同任何營運響應應該獨立處理。
+  layout: rows
+  seconds: 100
+  kicker_en: A worked example
+  kicker_zh: 算一次看看
+  kicker_zh_hk: 計一次睇吓
+  title_en: 'Shop A: 64 bags'
+  title_zh: A店：64 袋豆
+  title_zh_hk: A店：64 袋豆
+  step1_en: 'H0: μ = 250.0 vs H1: μ ≠ 250.0'
+  step1_zh: 'H0: μ = 250.0 对 H1: μ ≠ 250.0'
+  step1_zh_hk: 'H0: μ = 250.0 對 H1: μ ≠ 250.0'
+  step2_en: 'SE = 4.0 / √64 = 0.50 g'
+  step2_zh: 'SE = 4.0 / √64 = 0.50 克'
+  step2_zh_hk: 'SE = 4.0 / √64 = 0.50 克'
+  step3_en: 'Z = 1.25 / 0.50 = 2.50'
+  step3_zh: 'Z = 1.25 / 0.50 = 2.50'
+  step3_zh_hk: 'Z = 1.25 / 0.50 = 2.50'
+  step4_en: '|Z| = 2.50 ≥ 1.96; p ≈ 0.0124'
+  step4_zh: '|Z| = 2.50 ≥ 1.96；p ≈ 0.0124'
+  step4_zh_hk: '|Z| = 2.50 ≥ 1.96；p ≈ 0.0124'
+  step5_en: 'Reject H0 at α = 0.05'
+  step5_zh: '在 α = 0.05 下拒绝 H0'
+  step5_zh_hk: '喺 α = 0.05 之下拒絕 H0'
+  s1_en: >-
+    Start with the hypotheses. H0 says the true average is 250 grams. H1 says it is not, in either direction. The machine
+    records give a known sigma of 4 grams, and we weigh 64 independent bags.
+  s1_zh: >-
+    先写假设。H0：真实平均是 250 克；H1：不是 250 克，偏哪边都算。机器记录给出已知的 sigma 是 4 克，我们称了 64 袋独立的豆子。
+  s1_zh_hk: >-
+    先寫假設。H0：真實平均係 250 克；H1：唔係 250 克，偏邊邊都算。部機嘅記錄畀出已知嘅 sigma 係 4 克，我哋磅咗 64 袋獨立嘅豆。
+  s2_en: >-
+    Next, the standard error, how much an average of 64 bags usually wobbles. The square root of 64 is 8, and 4 divided by
+    8 is 0.50 grams.
+  s2_zh: >-
+    接着算标准误，也就是 64 袋的平均通常会晃多少。根号 64 是 8，4 除以 8，等于 0.50 克。
+  s2_zh_hk: >-
+    跟住計標準誤，即係 64 袋嘅平均通常會晃幾多。根號 64 係 8，4 除 8，等於 0.50 克。
+  s3_en: >-
+    Now measure the gap in that unit. The sample mean, 251.25, minus the target 250, is 1.25 grams. Divided by 0.50, Z is
+    2.50. The sample sits two and a half standard errors above the target.
+  s3_zh: >-
+    再用这个单位去量差距。样本均值 251.25 减去目标 250，差 1.25 克，除以 0.50，Z 等于 2.50。样本落在目标上方两个半标准误。
+  s3_zh_hk: >-
+    再用呢個單位去量差距。樣本均值 251.25 減目標 250，差 1.25 克，除 0.50，Z 等於 2.50。樣本落喺目標上面兩個半標準誤。
+  s4_en: >-
+    Compare. 2.50 is past the critical value 1.96, and the two-sided p-value is about 0.0124, below 0.05. Both rules say
+    the same thing.
+  s4_zh: >-
+    比一比。2.50 越过了临界值 1.96，双侧 p 值大约 0.0124，比 0.05 小。两种规则说的是同一件事。
+  s4_zh_hk: >-
+    比一比。2.50 越過咗臨界值 1.96，雙側 p 值大約 0.0124，細過 0.05。兩種規則講緊同一件事。
+  s5_en: >-
+    So we reject H0 at the 5 percent level. The evidence says the average fill has moved, and the bags run heavy. Why,
+    and what to do about it, is a separate question.
+  s5_zh: >-
+    所以，在 5% 的水平下拒绝 H0。证据显示平均装量偏了，而且是偏重。至于为什么、要怎么处理，是另一个问题。
+  s5_zh_hk: >-
+    所以，喺 5% 嘅水平之下拒絕 H0。證據顯示平均裝量偏咗，而且係偏重。至於點解、要點處理，係另一個問題。
 - id: takeaway
   visual: takeaway
-  seconds: 34
-  kicker_en: Decision Rule
-  kicker_zh: 商业法度
-  kicker_zh_hk: 商業法度
-  title_en: Use Z only with a defensible known sigma
-  title_zh: 只有在 sigma 已知且有依据时才使用 Z
-  title_zh_hk: 只有喺 sigma 已知而且有依據嗰陣先使用 Z
-  q1_en: What is the key condition that distinguishes a one-sample Z-test from a t-test?
-  q1_zh: 区分单样本 Z 检验与 t 检验的关键条件是什么？
-  q1_zh_hk: 區分單樣本 Z 檢驗同 t 檢驗嘅關鍵條件係咩？
-  q2_en: What should management do after a statistically significant packaging result?
-  q2_zh: 包装检验得到统计显著结果后，管理层还应做什么？
-  q2_zh_hk: 包裝檢驗得到統計顯著結果之後，管理層仲應該做咩？
-  s1_en: Use a one-sample Z-test when sigma is genuinely known and the sampling distribution assumptions are justified. If
-    sigma is estimated from the current sample, use an inference method that accounts for that estimation uncertainty rather
-    than treating the estimate as known.
-  s1_zh: 当 sigma 确实已知且抽样分布假设合理时，使用单样本 Z 检验。如果 sigma 由当前样本估计，应采用能够反映该估计不确定性的方法，而不是把估计值当成已知。
-  s1_zh_hk: 當 sigma 確實已知而且抽樣分佈假設合理嗰陣，使用單樣本 Z 檢驗。如果 sigma 由目前樣本估計，應該採用能夠反映嗰個估計不確定性嘅方法，而唔係將估計值當成已知。
-  s2_en: After rejection, report the mean difference, standard error, confidence interval, Z statistic, p-value, assumptions,
-    and sampling design. Then verify measurement calibration, inspect individual weights and process stability, and compare
-    the effect with documented specifications and costs.
-  s2_zh: 拒绝后，应报告均值差、标准误、置信区间、Z 统计量、p 值、假设与抽样设计。随后核实测量校准，检查单包重量与流程稳定性，并把效应与有文件依据的规格和成本比较。
-  s2_zh_hk: 拒絕之後，應該報告均值差、標準誤、置信區間、Z 統計量、p 值、假設同抽樣設計。之後核實量度校準，檢查單包重量同流程穩定性，並將效應同有文件依據嘅規格同成本比較。
-  s3_en: 'For the assumed packaging sample, Z equals 2.50 and the two-sided p-value is approximately 0.0124, so the 5% test
-    rejects the 250.0-gram mean. The operational conclusion should remain narrow: the sample provides evidence of a shifted
-    process mean, not proof of its cause or business impact.'
-  s3_zh: 在假设包装样本中，Z = 2.50，双侧 p 值约为 0.0124，因此 5% 检验拒绝 250.0 克总体均值。经营结论应保持谨慎：样本提供流程均值发生偏移的证据，而不是对原因或商业影响的证明。
-  s3_zh_hk: 喺假設包裝樣本入面，Z = 2.50，雙側 p 值約係 0.0124，所以 5% 檢驗拒絕 250.0 克總體均值。營運結論應該保持審慎：樣本提供流程均值發生偏移嘅證據，而唔係對原因或者商業影響嘅證明。
+  seconds: 66
+  kicker_en: Decision rule
+  kicker_zh: 决策规则
+  kicker_zh_hk: 決策規則
+  title_en: Use Z only with a known σ
+  title_zh: σ 已知才用 Z
+  title_zh_hk: σ 已知先用 Z
+  q1_en: What makes a Z-test different from a t-test?
+  q1_zh: Z 检验和 t 检验差在哪里？
+  q1_zh_hk: Z 檢驗同 t 檢驗差喺邊？
+  q2_en: What should the shop do after rejecting H0?
+  q2_zh: 拒绝 H0 之后，店里还要做什么？
+  q2_zh_hk: 拒絕 H0 之後，間舖仲要做乜嘢？
+  s1_en: >-
+    Use a Z-test when sigma is genuinely known. If sigma has to be estimated from the same sample, that adds extra
+    uncertainty, and the Student t-test in the next lesson handles it.
+  s1_zh: >-
+    sigma 真的已知，才用 Z 检验。如果 sigma 要从同一个样本估出来，就多了一层不确定，要改用下一课的学生 t 检验。
+  s1_zh_hk: >-
+    sigma 真係已知，先用 Z 檢驗。如果 sigma 要由同一個樣本估出嚟，就多咗一層不確定，要改用下一課嘅學生 t 檢驗。
+  s2_en: >-
+    After rejecting, report the gap, the standard error, Z, and the p-value. Then check the scale is calibrated, look at
+    single bags and how steady the line is, and compare the size of the gap with its cost.
+  s2_zh: >-
+    拒绝之后，要报告差距、标准误、Z 和 p 值。然后检查秤准不准，看看单袋重量和产线稳不稳定，再把差距的大小和它的成本比一比。
+  s2_zh_hk: >-
+    拒絕之後，要報告差距、標準誤、Z 同 p 值。之後檢查個磅準唔準，睇吓單袋重量同條線穩唔穩定，再將差距嘅大細同佢嘅成本比一比。
+  s3_en: >-
+    So, are Shop A's bags off target? With Z equal to 2.50 and p about 0.0124, yes, the average runs heavy. That is
+    evidence of a shift, not proof of its cause.
+  s3_zh: >-
+    所以，A店的豆袋偏离目标了吗？Z 等于 2.50，p 大约 0.0124，是的，平均偏重了。这是偏移的证据，不是原因的证明。
+  s3_zh_hk: >-
+    所以，A店啲豆袋偏離目標咗未？Z 等於 2.50，p 大約 0.0124，係，平均偏重咗。呢個係偏移嘅證據，唔係原因嘅證明。

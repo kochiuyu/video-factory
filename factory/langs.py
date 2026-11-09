@@ -248,3 +248,63 @@ def field_native(obj: dict, stem: str, code: str) -> str:
     if code == "zh":
         return _as_text(obj.get(f"{stem}_zh_cn") or obj.get(f"{stem}_zh") or bare).strip()
     return _as_text(obj.get(f"{stem}_en") or bare).strip()
+
+
+# --- Language labels (YouTube title tag, cover chip, playlist names) ------
+
+def _legacy_lang_tag() -> bool:
+    import os
+
+    return os.environ.get("VF_LEGACY_LANG_TAG", "").strip().lower() in {"1", "true", "yes", "on"}
+
+
+_SPEECH_NAME = {"en": "English", "zh": "普通话", "zh_hk": "粵語"}
+_SCRIPT_NAME = {"en": "English", "zh": "简体", "zh_hk": "繁體"}
+
+
+def language_label(voice: str, second: str | None = None, kind: str = "tag") -> str:
+    """One wording for a cell's language, used everywhere it is shown.
+
+    kind="tag"      text inside the title brackets
+    kind="title"    the bracketed suffix to append to a base title
+    kind="chip"     the cover chip line
+    kind="playlist" a suggested playlist suffix (not applied to YouTube)
+
+    zh+en -> 普通话讲解 · 中英双语画面;  hk+en -> 粵語講解 · 中英雙語畫面;
+    en+zh / en+hk -> English narration · bilingual slides 中英.
+    Mono cells keep English / 普通话 / 粵語. Two Chinese scripts (zh+hk) keep
+    the speech / picture form. VF_LEGACY_LANG_TAG=1 restores the old tags.
+    """
+    v = "zh" if voice in {"zh", "zh_cn"} else ("zh_hk" if voice in {"hk", "zh_hk"} else "en")
+    s = None if not second else ("zh" if second in {"zh", "zh_cn"} else ("zh_hk" if second in {"hk", "zh_hk"} else "en"))
+    if s == v:
+        s = None
+    cjk = v != "en"
+    if not s:
+        text = _SPEECH_NAME[v]
+    elif _legacy_lang_tag() or (cjk and s != "en"):
+        if v == "en":
+            text = f"Speech: English · Slides: {_SCRIPT_NAME[s]}"
+        else:
+            picture = "画面" if v == "zh" else "畫面"
+            text = f"旁白：{_SPEECH_NAME[v]} · {picture}：{_SCRIPT_NAME[s]}"
+    elif v == "zh":
+        text = "普通话讲解 · 中英双语画面"
+    elif v == "zh_hk":
+        text = "粵語講解 · 中英雙語畫面"
+    else:
+        text = "English narration · bilingual slides 中英"
+    if kind == "tag" or kind == "chip":
+        return text
+    if kind == "playlist":
+        return text if not s else text.replace("旁白：", "").replace("Speech: ", "")
+    # title suffix: mono and English tags use halfwidth brackets after a space
+    if not s or v == "en":
+        return f" ({text})"
+    return f"（{text}）"
+
+
+def playlist_name(course: str, voice: str, second: str | None = None) -> str:
+    """Suggested playlist title for a course + cell, e.g.
+    'STAT M01 · 普通话讲解 · 中英双语画面'. Printed only; nothing is renamed."""
+    return f"{course.strip()} · {language_label(voice, second, 'playlist')}"

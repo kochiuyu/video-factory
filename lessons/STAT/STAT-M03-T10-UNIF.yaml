@@ -1,19 +1,45 @@
 id: STAT-M03-T10-UNIF
-course: statistics
 course_en: "Discrete & Continuous Probability Distributions"
 course_zh: "离散与连续概率分布"
 course_zh_hk: "離散與連續概率分佈"
-audience: "first-year business students"
-audience_en: "first-year business students"
-audience_zh: "商学院一年级学生"
-audience_zh_hk: "商學院一年級學生"
-duration_target_s: 168
+duration_target_s: 166
 title_en: "Equal uncertainty in supply windows"
 title_zh: "原料入场的时间盲盒：连续均匀分布"
 title_zh_hk: "原料入場嘅時間盲盒：連續均勻分佈"
-objective_en: "Define the continuous Uniform distribution U(a, b), calculate its flat density f(x) = 1/(b-a), derive its mean (a+b)/2 and variance (b-a)^2/12, and evaluate fresh milk delivery lead times against morning store opening deadlocks."
-objective_zh: "定义连续型均匀分布 U(a, b)，推导其恒定平直密度高度 f(x) = 1/(b-a)、期望值 (a+b)/2 与方差 (b-a)^2/12，并将其应用于鲜牛奶清晨冷链到货与门店开闸营业的压哨风险评估。"
-objective_zh_hk: "定義連續型均勻分佈 U(a, b)，推導其恆定平直密度高度 f(x) = 1/(b-a)、期望值 (a+b)/2 同方差 (b-a)^2/12，並將其應用喺鮮牛奶清晨冷鏈到貨與門市開舖營業嘅壓哨風險評估。"
+youtube:
+  description_en: |
+    Equal uncertainty in supply windows
+    
+    Shop B hears milk will arrive between 5:00 and 5:30 AM. If no minute inside that window is favored, how does a continuous Uniform quantify expected arrival, spread, and the chance of landing after a chosen cutoff?
+    
+    On minutes after 5:00, X ~ Uniform(0, 30) has mean 15 minutes (5:15 AM) and sd ≈ 8.66 minutes. An illustrative cutoff at 5:24 AM gives P(X after 24)=6/30=0.20.
+    
+    A delivery window alone does not prove equal likelihood — defend the flat-density assumption. Inside that Uniform story, halving width cuts modeled variance by about 75%.
+    
+    Discrete & Continuous Probability Distributions - Module 3 - Short 10 (UNIF)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    原料入场的时间盲盒：连续均匀分布
+    
+    B店听说鲜奶会在早上 5:00 到 5:30 送到。如果窗口里每一分钟都一样可能，连续均匀分布怎么量化期望到达、波动，以及晚过某条线的概率？
+    
+    以 5:00 后的分钟计，X ~ Uniform(0, 30) 的期望是 15 分钟（5:15），标准差约 8.66 分钟。示例截止 5:24 时，P(X 晚于 24)=6/30=0.20。
+    
+    交货窗口本身不能证明等可能——要为平坦密度辩护。在该均匀设定下，窗口减半可使模型方差约降 75%。
+    
+    离散与连续概率分布 - 模块3 - 短片10（UNIF）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    原料入場嘅時間盲盒：連續均勻分佈
+    
+    B舖聽講鮮奶會喺朝早 5:00 到 5:30 送到。如果窗口入面每一分鐘都一樣可能，連續均勻分佈點樣量化期望到達、波動，以及遲過某條線嘅概率？
+    
+    以 5:00 之後嘅分鐘計，X ~ Uniform(0, 30) 嘅期望係 15 分鐘（5:15），標準差約 8.66 分鐘。示例截止 5:24 嗰陣，P(X 遲過 24)=6/30=0.20。
+    
+    交貨窗口本身唔可以證明等可能——要為平坦密度辯護。喺呢個均勻設定之下，窗口減半可以令模型方差約降 75%。
+    
+    離散與連續概率分佈 - 模組3 - 短片10（UNIF）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: "Uniform distribution"
   zh: "均匀分布"
@@ -91,9 +117,9 @@ beats:
   title_en: "When the supplier gives you a 30-minute window"
   title_zh: "供货商只给半小时窗口，门店如何备战？"
   title_zh_hk: "供貨商淨係畀半個鐘窗口，門市點樣備戰？"
-  en: "A Mong Kok store is told that a milk delivery will arrive between 5:00 and 5:30 AM. If the analysis assumes no time within that window is favored over any other, how can a continuous Uniform distribution quantify the expected arrival time, variability, and probability of arriving after a chosen threshold?"
-  zh: "旺角店获知鲜奶将在早上 5:00 至 5:30 之间送达。如果分析假设窗口内没有任何时刻比其他时刻更可能，连续均匀分布如何量化期望到达时间、波动程度，以及超过指定阈值才到达的概率？"
-  zh_hk: "旺角舖收到資料，鮮奶會喺朝早 5:00 至 5:30 之間送到。如果分析假設窗口入面冇任何時刻比其他時刻更可能，連續均勻分佈點樣量化期望到達時間、波動程度，以及超過指定門檻先到達嘅概率？"
+  en: "Shop B hears milk will arrive between 5:00 and 5:30 AM. If no minute inside that window is favored, how does a continuous Uniform quantify expected arrival, spread, and the chance of landing after a chosen cutoff?"
+  zh: "B 店听说鲜奶会在早上 5:00 到 5:30 送到。如果窗口里每一分钟都一样可能，连续均匀分布怎么量化期望到达、波动，以及晚过某条线的概率？"
+  zh_hk: "B 舖聽講鮮奶會喺朝早 5:00 到 5:30 送到。如果窗口入面每一分鐘都一樣可能，連續均勻分佈點樣量化期望到達、波動，以及遲過某條線嘅概率？"
 - id: define
   visual: definition_card
   seconds: 34
@@ -109,8 +135,8 @@ beats:
   formula_zh_hk: "喺區間 [a, b] 內密度高度恆定 f(x) = 1 / (b - a)；其餘區間嚴格為零"
   formula_tex: "X \\sim U(a, b), \\quad f(x) = \\frac{1}{b-a}, \\quad a \\le x \\le b"
   s1_en: "A continuous Uniform model on [a,b] assigns constant density across the interval. Consequently, any two subintervals of equal length have equal probability; individual points still have probability zero."
-  s1_zh: "区间 [a,b] 上的连续均匀模型具有恒定密度。因此，任意两个等长子区间具有相同概率，而单个点的概率仍为零。"
-  s1_zh_hk: "區間 [a,b] 上嘅連續均勻模型具有固定密度。所以，任何兩個等長子區間都有相同概率，而單個點嘅概率仍然係零。"
+  s1_zh: "连续均匀分布说：在有界区间 [a,b] 上，密度是一条平的；等长子区间概率一样。"
+  s1_zh_hk: "連續均勻分佈話：喺有界區間 [a,b] 上面，密度係一條平嘅；等長子區間概率一樣。"
   s2_en: "Its probability density function f(x) is a perfect horizontal rectangle of width b minus a and constant height one over b minus a, ensuring the total area equals exactly 1.0."
   s2_zh: "其概率密度函数 f(x) 在几何上呈现为一个规整的水平矩形：底边宽度为 b 减 a，恒定高度严格等于底宽的倒数，确保其下方的总面积严丝合缝等于 1.0。"
   s2_zh_hk: "其概率密度函數 f(x) 喺幾何上呈現為一個規整嘅水平矩形：底邊寬度為 b 減 a，恆定高度嚴格等於底寬嘅倒數，確保其下方嘅總面積嚴絲合縫等於 1.0。"
@@ -146,9 +172,9 @@ beats:
   kicker_en: "The Ledger"
   kicker_zh: "账目实推"
   kicker_zh_hk: "賬目實推"
-  title_en: "Modeling Mong Kok dairy arrival"
-  title_zh: "旺角店清晨鲜奶到货模型"
-  title_zh_hk: "旺角舖清晨鮮奶到貨模型"
+  title_en: "Modeling Shop B dairy arrival"
+  title_zh: "B店清晨鲜奶到货模型"
+  title_zh_hk: "B舖清晨鮮奶到貨模型"
   step1_en: "Window: 5:00 to 5:30 AM -> a = 0, b = 30 min; f(x) = 1/30"
   step1_zh: "到达窗口：5:00 至 5:30 -> a = 0，b = 30分钟；恒定密度 f(x) = 1/30"
   step1_zh_hk: "到達窗口：5:00 至 5:30 -> a = 0，b = 30分鐘；恆定密度 f(x) = 1/30"
@@ -158,9 +184,9 @@ beats:
   step3_en: "Late risk: P(X > 24) = (30 - 24) * (1/30) = 6/30 = 20% stockout risk"
   step3_zh: "开店告急：P(X > 24) = (30 - 24) × (1/30) = 20% 概率延误导致空转"
   step3_zh_hk: "開舖告急：P(X > 24) = (30 - 24) × (1/30) = 20% 概率延誤搞到空轉"
-  s1_en: "For this Mong Kok illustration, assume delivery time is uniformly distributed between 5:00 and 5:30 AM. Measured in minutes after 5:00, X is Uniform(0,30) with density 1/30 per minute."
-  s1_zh: "在这个旺角店示例中，假设配送时间在 5:00 至 5:30 之间均匀分布。以 5:00 后的分钟数计，X 服从 Uniform(0,30)，每分钟密度为 1/30。"
-  s1_zh_hk: "喺呢個旺角舖示例入面，假設配送時間喺 5:00 至 5:30 之間均勻分佈。以 5:00 之後嘅分鐘數計，X 服從 Uniform(0,30)，每分鐘密度係 1/30。"
+  s1_en: "For this Shop B illustration, assume delivery time is uniformly distributed between 5:00 and 5:30 AM. Measured in minutes after 5:00, X is Uniform(0,30) with density 1/30 per minute."
+  s1_zh: "在这个B店示例中，假设配送时间在 5:00 至 5:30 之间均匀分布。以 5:00 后的分钟数计，X 服从 Uniform(0,30)，每分钟密度为 1/30。"
+  s1_zh_hk: "喺呢個B舖示例入面，假設配送時間喺 5:00 至 5:30 之間均勻分佈。以 5:00 之後嘅分鐘數計，X 服從 Uniform(0,30)，每分鐘密度係 1/30。"
   s2_en: "Step two computes the center and dispersion: the expected arrival is 5:15 AM, the variance is 900 divided by 12, or 75 square minutes, and the standard deviation is about 8.66 minutes."
   s2_zh: "第二步计算中心与离散程度：期望到达时刻为 5:15，方差为 900/12，即 75 平方分钟，标准差约为 8.66 分钟。"
   s2_zh_hk: "第二步計算中心同離散程度：期望到達時間係 5:15，方差係 900/12，即係 75 平方分鐘，標準差大約係 8.66 分鐘。"
@@ -169,7 +195,7 @@ beats:
   s3_zh_hk: "第三步使用 5:24 呢個示例門檻。門檻之後嘅區間長度係 6 分鐘，所以 P(X>24)=6/30=0.20。呢個係超過門檻先到達嘅模型概率，本身並唔預測缺貨發生頻率。"
 - id: takeaway
   visual: takeaway
-  seconds: 32
+  seconds: 30
   kicker: "Decision Rule"
   kicker_en: "Decision Rule"
   kicker_zh: "商业法则"
@@ -177,18 +203,18 @@ beats:
   title_en: "Contractual boundaries dictate operational variance"
   title_zh: "合同边界收窄一分，营运方差骤降四成"
   title_zh_hk: "合約邊界收窄一分，營運方差驟降四成"
-  q1_en: "When should executives assume a Uniform distribution?"
-  q1_zh: "企业管理者应在何种业务情境下果断采用均匀分布？"
-  q1_zh_hk: "企業管理者應喺邊種業務情境下果斷採用均勻分佈？"
-  q2_en: "How does negotiating narrower supply windows improve reliability?"
-  q2_zh: "通过商务谈判压缩供货窗口，如何根本性提升系统可靠度？"
-  q2_zh_hk: "透過商務談判壓縮供貨窗口，點樣根本性提升系統可靠度？"
-  s1_en: "Use a Uniform model only when constant density across the bounded window is a defensible assumption. A stated delivery window alone does not prove that all equal-length subintervals are equally likely."
-  s1_zh: "只有当有限窗口内的恒定密度假设有理据时，才使用均匀模型。仅知道配送窗口，并不能证明所有等长子区间具有相同概率。"
-  s1_zh_hk: "只有當有限窗口入面嘅固定密度假設有理據，先使用均勻模型。淨係知道配送窗口，並唔可以證明所有等長子區間有相同概率。"
-  s2_en: "Within the same Uniform model, halving the window width reduces the modeled variance to one quarter, a 75% reduction. Whether reliability improves in practice depends on whether the new window is credible and met."
-  s2_zh: "在同一均匀模型内，若窗口宽度减半，模型方差降至四分之一，即减少 75%。实际可靠性是否改善，仍取决于新窗口是否可信并得到遵守。"
-  s2_zh_hk: "喺同一均勻模型入面，如果窗口寬度減半，模型方差會降到四分之一，即係減少 75%。實際可靠性係咪改善，仍然取決於新窗口係咪可信同得到遵守。"
-  s3_en: "For the Uniform(0,30) illustration, the expected arrival is 5:15 AM, the standard deviation is about 8.66 minutes, and P(X>24)=0.20. Use these results only if equal density across the window is a defensible assumption."
-  s3_zh: "对于 Uniform(0,30) 示例，期望到达时刻为 5:15，标准差约为 8.66 分钟，且 P(X>24)=0.20。只有当窗口内等密度假设有理据时，才应使用这些结果。"
-  s3_zh_hk: "對 Uniform(0,30) 示例嚟講，期望到達時間係 5:15，標準差大約係 8.66 分鐘，而 P(X>24)=0.20。只有當窗口入面等密度假設有理據，先應該使用呢啲結果。"
+  q1_en: "Use Uniform when? → Flat density on a bounded window is defensible"
+  q1_zh: "何时用均匀？→ 有界窗口上密度近似平坦说得通"
+  q1_zh_hk: "幾時用均勻？→ 有界窗口上密度近似平坦講得通"
+  q2_en: "Narrower window? → Same Uniform: half width → variance ÷4"
+  q2_zh: "窗口收窄？→ 同一均匀模型：宽度减半，方差变四分之一"
+  q2_zh_hk: "窗口收窄？→ 同一均勻模型：闊度減半，方差變四分一"
+  s1_en: "A delivery window alone does not prove equal-length subintervals are equally likely — defend the flat-density assumption."
+  s1_zh: "光有配送窗口，不能证明等长子区间等可能——平坦密度假设要站得住。"
+  s1_zh_hk: "光有配送窗口，唔可以證明等長子區間等可能——平坦密度假設要站得住。"
+  s2_en: "Halving width cuts modeled variance by 75% inside that Uniform story; real reliability still depends on supplier behavior."
+  s2_zh: "在该均匀设定下，宽度减半会让模型方差降 75%；现实可靠度仍看供应商行为。"
+  s2_zh_hk: "喺呢個均勻設定下，闊度減半會令模型方差降 75%；現實可靠度仍然睇供應商行為。"
+  s3_en: "Uniform(0,30): mean 5:15, sd≈8.66 min, P(X>24)=0.20 — only if equal likelihood holds."
+  s3_zh: "Uniform(0,30)：期望约 5:15，标准差约 8.66 分，P(X>24)=0.20——前提是等可能成立。"
+  s3_zh_hk: "Uniform(0,30)：期望約 5:15，標準差約 8.66 分，P(X>24)=0.20——前提係等可能成立。"

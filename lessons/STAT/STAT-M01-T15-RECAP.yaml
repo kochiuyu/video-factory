@@ -1,19 +1,40 @@
 id: STAT-M01-T15-RECAP
-course: statistics
 course_en: Business Statistics
 course_zh: 商务统计
 course_zh_hk: 商務統計
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 500
+duration_target_s: 482
 title_en: What is a decision dashboard?
 title_zh: 什么是决策仪表盘？
 title_zh_hk: 咩係決策儀表板？
-objective_en: Close the module by turning the four descriptive dials into one decision dashboard — pick complementary measures for center, spread, shape, and association, state each limitation, and never manage by a single statistic.
-objective_zh: 用四个描述性刻度收束本模块，组成一张决策仪表盘：为中心、离散、形态与关联挑选互补指标，写明各自局限，绝不只凭单一统计量管理。
-objective_zh_hk: 用四個描述性刻度收束本模組，組成一張決策儀表板：為中心、離散、形態同關聯揀互補指標，寫明各自局限，絕唔好只憑單一統計量管理。
+youtube:
+  description_en: |
+    What is a decision dashboard?
+    
+    One Monday file: Shop A 310, Shop B 420, Shop C 4,200. The average is pulled by C; the middle shop is 420; end to end is 3,890 cups. Each answers a different question. A decision dashboard is the four dials from the opening short on one board: center, spread, shape, and association.
+    
+    Pair the dial the decision asks with a matching measure (in this module variance/SD divide by n). Shape uses skewness, kurtosis, and outlier fences as review flags - not automatic proof of error. Association needs a second column (rent beside cups): covariance 176,000 dollar-cups and r about +1.00 still do not prove cause. Name the dial, the shops, period, and unit, then write the limitation before you act.
+    
+    Business Statistics - Module 1 - Short 15 (recap)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    什么是决策仪表盘？
+    
+    一份星期一文件：A店310、B店420、C店4,200。平均数被C拉高；中间店是420；两端差3,890杯。每个数回答不同问题。决策仪表盘就是开篇四个刻度做成一块板：中心、离散、形态、关联。
+    
+    决策问哪个刻度，就配相应度量（本模块方差/标准差除以n）。形态用偏度、峰度和异常篱笆做复查标记 - 不是自动证明录入错误。关联需要第二列（租金配杯数）：协方差176,000美元-杯、r约+1.00仍不能证明因果。行动前先点名刻度、店铺、时期和单位，并写上限度。
+    
+    商务统计 - 模块1 - 短片15（回顾）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    咩係決策儀表板？
+    
+    一份星期一檔案：A店310、B店420、C店4,200。平均數被C拉高；中間店係420；兩端差3,890杯。每個數答唔同問題。決策儀表板就係開篇四個刻度做成一塊板：中心、離散、形態、關聯。
+    
+    決策問邊個刻度，就配相應度量（本模組方差/標準差除以n）。形態用偏度、峰度同異常籬笆做複查標記 - 唔係自動證明錄入錯誤。關聯需要第二欄（租金配杯數）：協方差176,000美元-杯、r約+1.00仍然唔能證明因果。行動前先點名刻度、店鋪、時期同單位，並寫上限度。
+    
+    商務統計 - 模組1 - 短片15（回顧）
+    覺得有用嘅話，訂閱下一集。
+
 glossary:
 - en: decision dashboard
   zh: 决策仪表盘
@@ -482,7 +503,7 @@ beats:
     第四，喺數字隔離寫上局限。咁儀表板先服務決策，而唔係一句口號。
 - id: answer
   visual: takeaway
-  seconds: 48
+  seconds: 30
   kicker: The Rule
   kicker_en: The Rule
   kicker_zh: 规则
@@ -490,27 +511,27 @@ beats:
   title_en: Never manage by one number
   title_zh: 不要只凭一个数
   title_zh_hk: 唔好只憑一個數
-  q1_en: How should managers build the dashboard?
-  q1_zh: 管理者应如何构建仪表盘？
-  q1_zh_hk: 管理者應該點樣構建儀表板？
-  q2_en: What does descriptive statistics support?
-  q2_zh: 描述性统计支持什么？
-  q2_zh_hk: 描述性統計支持咩？
+  q1_en: 'How should managers build the dashboard? → Pair complementary dials; never one number'
+  q1_zh: 管理者应如何构建仪表盘？→ 配对互补刻度；不要只凭一个数
+  q1_zh_hk: 管理者應該點樣構建儀表板？→ 配對互補刻度；唔好只憑一個數
+  q2_en: 'What does descriptive statistics support? → Summaries and flags — not judgment or cause'
+  q2_zh: 描述性统计支持什么？→ 摘要和提醒——不是判断或因果
+  q2_zh_hk: 描述性統計支持咩？→ 摘要同提醒——唔係判斷或者因果
   s1_en: >-
-    Begin with the decision question. Pair center or position with spread, then inspect shape, outliers, and relationships when they matter.
+    Begin with the decision. Pair center with spread; check shape, outliers, and links when they matter.
   s1_zh: >-
-    从决策问题出发。把中心或位置与离散配对，需要时再检查形态、异常值与变量关系。
+    从决策出发。把中心和离散配对；需要时再看形态、异常值和关联。
   s1_zh_hk: >-
-    由決策問題出發。將中心或者位置同離散配對，需要嗰陣再檢查形態、異常值同變量關係。
+    由決策出發。將中心同離散配對；需要嗰陣再睇形態、異常值同關聯。
   s2_en: >-
-    Descriptive statistics summarizes the observed file and flags patterns worth checking. It does not replace judgment, prove causation, or remove uncertainty.
+    Descriptive statistics summarizes the file and flags patterns. It does not prove cause.
   s2_zh: >-
-    描述性统计概括已经看到的文件，并标出值得复查的模式。它不能取代判断、证明因果或消除不确定。
+    描述性统计概括文件，并标出值得复查的模式。它不能证明因果。
   s2_zh_hk: >-
-    描述性統計概括已經睇到嘅檔案，並標出值得複查嘅模式。佢唔可以取代判斷、證明因果或者消除唔確定。
+    描述性統計概括檔案，並標出值得複查嘅模式。佢唔可以證明因果。
   s3_en: >-
-    The operating rule: select complementary measures, state the comparison group and each limitation, investigate unusual results, and connect every statistic to a named dial before you decide.
+    Never manage by one number. Name the dial before you decide. That is the answer.
   s3_zh: >-
-    操作规则：选择互补指标，写明比较总体与各自局限，调查异常结果，并在决策前把每个统计量对应到已点名的刻度。
+    不要只凭一个数。决策前先点名刻度。这就是答案。
   s3_zh_hk: >-
-    操作規則：揀互補指標，寫明比較總體同各自局限，調查異常結果，並喺決策之前將每個統計量對應到已點名嘅刻度。
+    唔好只憑一個數。決策前先點名刻度。呢個就係答案。

@@ -1,19 +1,52 @@
 id: STAT-M01-T03-MEDIAN
-course: statistics
 course_en: Business Statistics
 course_zh: 商务统计
 course_zh_hk: 商務統計
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 630
+duration_target_s: 596
 title_en: What is the median?
 title_zh: 什么是中位数？
 title_zh_hk: 咩係中位數？
-objective_en: Decide which number to give a typical day when one rush day pulls the average up, and find the middle of the ordered days for five days and for four.
-objective_zh: 当一个高峰日把平均数拉高时，判断普通的一天应该报哪个数，并分别找出五天和四天排好之后的正中间。
-objective_zh_hk: 當一個高峰日將平均數拉高時，判斷普通嘅一日應該報邊個數，並分別搵出五日同四日排好之後嘅正中間。
+youtube:
+  description_en: |
+    What is the median?
+    
+    Shop A has five Monday-to-Friday style days: 80, 100, 120, 140, and one rush at 460. The average is 900 / 5 = 180 cups. Set 180 as the typical-day target and four ordinary days (80 to 140) all miss it. Only the rush clears it.
+    
+    The median answers a different question: what does a typical day sell? Sort low to high and read the middle. With five days the middle place is the third: 120 cups. That sits among the quiet days. Grow the rush from 460 to 4,000 and the average jumps, but the median stays 120 - it uses place in the queue, not how far the rush sticks out.
+    
+    Shop B has four days: 100, 200, 300, 800. No single middle place, so share the two middles: (200 + 300) / 2 = 250. Odd count: read one middle. Even count: average the two middle values.
+    
+    The median is robust to a rush day, and it works for ranked answers (poor, fair, good, very good, excellent) where you cannot add the words. It still hides the total and the rush - keep the raw days in view when planning stock.
+    
+    Business Statistics - Module 1 - Short 3 (median)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    什么是中位数？
+    
+    A店有五天杯数：80、100、120、140，以及一天高峰460。平均数是 900 / 5 = 180杯。把180当成典型日目标，四天普通日（80到140）全部达不到，只有高峰日过线。
+    
+    中位数回答另一个问题：典型的一天卖多少？从小到大排好，读中间那个。五天时中间是第三位：120杯，落在安静的几天里。把高峰从460改成4,000，平均数会飙升，中位数仍是120 - 它看的是队列里的位置，不是高峰拉多远。
+    
+    B店有四天：100、200、300、800。没有单独的正中间，就平分两个中间值：(200 + 300) / 2 = 250。奇数个：读一个中间；偶数个：把两个中间值平均。
+    
+    中位数对高峰日稳健，也适用于只能排序的答案（差、一般、好、很好、优秀），那些词加不起来。它仍会藏起总数和高峰 - 备货时还要看着原始天数。
+    
+    商务统计 - 模块1 - 短片3（中位数）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    咩係中位數？
+    
+    A店有五日杯數：80、100、120、140，同一日高峰460。平均數係 900 / 5 = 180杯。將180當成典型日目標，四日普通日（80到140）全部唔達標，得高峰日過線。
+    
+    中位數答另一條問題：典型嘅一日賣幾多？由細到大排好，讀中間嗰個。五日時中間係第三位：120杯，落喺安靜嗰幾日入面。將高峰由460改成4,000，平均數會飆升，中位數仍然係120 - 佢睇嘅係隊列入面嘅位置，唔係高峰拉幾遠。
+    
+    B店有四日：100、200、300、800。冇單獨正中間，就平分兩個中間值：(200 + 300) / 2 = 250。奇數個：讀一個中間；偶數個：將兩個中間值平均。
+    
+    中位數對高峰日穩健，亦適用於淨係可以排序嘅答案（差、一般、好、很好、優秀），嗰啲詞加唔起嚟。佢仍然會藏起總數同高峰 - 備貨時仲要睇住原始日數。
+    
+    商務統計 - 模組1 - 短片3（中位數）
+    覺得有用嘅話，訂閱下一集。
+
 glossary:
 - en: median
   zh: 中位数
@@ -241,11 +274,11 @@ beats:
   title_zh: 高峰变大，正中间不变
   title_zh_hk: 高峰變大，正中間唔變
   left_en: 'Rush 460: middle 120'
-  left_zh: 高峰 460：正中间 120
-  left_zh_hk: 高峰 460：正中間 120
+  left_zh: 高峰460 → 中间120
+  left_zh_hk: 高峰460 → 中間120
   right_en: 'Rush 4,000: still 120'
-  right_zh: 高峰 4,000：仍是 120
-  right_zh_hk: 高峰 4,000：仍然係 120
+  right_zh: 高峰4,000 → 仍120
+  right_zh_hk: 高峰4,000 → 仍120
   s1_en: Here is the key difference. The average uses the cups themselves, so a bigger rush adds more cups and drags the share up. The median uses only the place in the queue.
   s1_zh: 关键的分别在这里。平均数用的是杯数本身，高峰越大，加进去的杯数越多，平均份额就被拖上去。中位数只看排序里的位置。
   s1_zh_hk: 關鍵嘅分別喺呢度。平均數用嘅係杯數本身，高峰越大，加入去嘅杯數越多，平均份額就俾佢拖高。中位數只睇排序入面嘅位置。
@@ -282,6 +315,7 @@ beats:
   s3_zh_hk: 呢個時候，中間有兩個位置：第二個同第三個，200同300。佢哋下面一日，上面一日。咁兩個正中間點算？
 - id: share
   visual: steps
+  layout: rows
   seconds: 46
   kicker: Two Middles
   kicker_en: Two Middles
@@ -433,7 +467,7 @@ beats:
   s3_zh_hk: 但係佢收埋咗總數同高峰。佢唔話你知呢五日一共賣咗幾多杯，亦唔話你知高峰日係咪問題。兩隊好唔同嘅數字，都可以有同一個正中間。而且120唔係要每日都賣120杯。原本嗰啲日子，仲係要擺喺眼前。
 - id: answer
   visual: takeaway
-  seconds: 64
+  seconds: 30
   kicker: The Answer
   kicker_en: The Answer
   kicker_zh: 回答问题
@@ -441,18 +475,27 @@ beats:
   title_en: Give the typical day the middle.
   title_zh: 普通的一天，看正中间
   title_zh_hk: 普通嘅一日，睇正中間
-  q1_en: What does a typical day sell?
-  q1_zh: 普通的一天通常卖多少？
-  q1_zh_hk: 普通嘅一日通常賣幾多？
-  q2_en: When do you still need the average?
-  q2_zh: 什么时候还要用平均数？
-  q2_zh_hk: 咩時候仲要用平均數？
-  s1_en: 'Back to head office''s question: what does a typical day sell? At Shop A, the median is 120 cups, the middle of five days. The average, 180, sits above four of those days because one rush pulled it up.'
-  s1_zh: 回到总部的问题：普通的一天卖多少？A店的中位数是120杯，就是五天的正中间。平均数180，因为一个高峰把它拉高了，高过其中四天。
-  s1_zh_hk: 返到總部嘅問題：普通嘅一日賣幾多？A店嘅中位數係120杯，即係五日嘅正中間。平均數180，因為一個高峰將佢拉高咗，高過其中四日。
-  s2_en: 'So what does a typical day sell? Sort the days and read the middle. With an even count, like Shop B''s four days, share the two middles: 200 and 300 give 250. When one rush day would pull the average above the ordinary days, give the median.'
-  s2_zh: 那普通的一天卖多少？把这些天排好，读出正中间。天数是偶数，比如B店四天，就把两个正中间平均分：200和300，得250。一个高峰日会把平均数拉到普通日子上面时，就报中位数。
-  s2_zh_hk: 咁普通嘅一日賣幾多？將啲日排好，讀出正中間。日數係雙數，好似B店四日，就將兩個正中間平均分：200同300，得出250。一個高峰日會將平均數拉到普通日子上面嗰陣，就報中位數。
-  s3_en: So when do you still need the average? When the question is about the total shared equally, for example planning the cups for all five days together. Neither number is always right; the question decides. These numbers describe only the days we supposed. Before you set any target, still look at the rush day itself.
-  s3_zh: 那什么时候还要用平均数？问题问的是总数平均分下来，比如一起规划五天总共要准备的杯数，就用平均数。哪个数都不是永远对的，看问题决定。这些数只描述我们假设的这几天。真要定目标之前，还是要看看那个高峰日本身。
-  s3_zh_hk: 咁咩時候仲要用平均數？問題問嘅係總數平分落嚟，好似一齊計五日總共要準備幾多杯，就用平均數。邊個數都唔係永遠啱，睇問題決定。呢啲數只係描述我哋假設嘅呢幾日。真係要定目標之前，仲要睇吓個高峰日本身。
+  q1_en: 'What does a typical day sell? → Median: 120 cups'
+  q1_zh: 普通的一天通常卖多少？→ 中位数：120杯
+  q1_zh_hk: 普通嘅一日通常賣幾多？→ 中位數：120杯
+  q2_en: 'When do you still need the average? → When sharing the total equally'
+  q2_zh: 什么时候还要用平均数？→ 问的是总数平均分时
+  q2_zh_hk: 咩時候仲要用平均數？→ 問嘅係總數平分嗰陣
+  s1_en: >-
+    Back to head office: what does a typical day sell? At Shop A, the median is 120 cups — the middle of five days.
+  s1_zh: >-
+    回到总部的问题：普通的一天卖多少？A店的中位数是120杯——五天的正中间。
+  s1_zh_hk: >-
+    返到總部嘅問題：普通嘅一日賣幾多？A店嘅中位數係120杯——五日嘅正中間。
+  s2_en: >-
+    With an even count, share the two middles: Shop B's 200 and 300 give 250.
+  s2_zh: >-
+    天数是偶数，就把两个正中间平均分：B店的200和300，得250。
+  s2_zh_hk: >-
+    日數係雙數，就將兩個正中間平均分：B店嘅200同300，得出250。
+  s3_en: >-
+    Need the total shared equally? Use the average. The question decides. That is the answer.
+  s3_zh: >-
+    问的是总数平均分？用平均数。看问题决定。这就是答案。
+  s3_zh_hk: >-
+    問嘅係總數平分？用平均數。睇問題決定。呢個就係答案。

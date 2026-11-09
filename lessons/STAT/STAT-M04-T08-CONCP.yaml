@@ -7,15 +7,58 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
-title_en: The interval estimation concept
-title_zh: 单点之困：区间估计与连续测度悖论
-title_zh_hk: 單點之困：區間估計與連續測度悖論
+duration_target_s: 302
+title_en: What is an interval estimate?
+title_zh: 区间估计是什么？
+title_zh_hk: 區間估計係乜？
 objective_en: Explain why continuous point estimates fail with probability 1 under continuous time measurement, formulate
   interval estimation as point estimate plus-or-minus margin of error, examine the trade-off between precision and confidence,
   and bracket morning barista drink preparation times at Wan Chai.
 objective_zh: 阐明在连续时间测度下点估计量单点命中概率为零的数学本质，建立“点估计值 ± 误差容限”的区间估计框架，权衡估计精度（区间宽度）与把握度（置信水平）的制约关系，并对湾仔店早市饮品出杯制作工时进行合规区间框定。
 objective_zh_hk: 闡明喺連續時間測度下點估計量單點命中概率為零嘅數學本質，建立「點估計值 ± 誤差容限」嘅區間估計框架，權衡估計精度（區間闊度）同把握度（置信水平）嘅制約關係，並對灣仔舖早市飲品出杯製作工時進行合規區間框定。
+youtube:
+  description_en: |
+    What is an interval estimate?
+
+    Suppose Shop A’s morning manager reports that average drink prep time is exactly 42.4 seconds. Staffing and service targets built on one fragile number can miss the true mean by sampling luck alone. Headquarters asks for a bracket, not a single second.
+
+    A point estimate is your best single guess from the sample — often the sample mean x-bar. An interval estimate wraps a margin of error (MOE) around that point: Interval = point estimate ± MOE.
+
+    For about ninety-five percent coverage under a Normal sampling model, a common rule of thumb is MOE about two standard errors: MOE ≈ 2 × SE, where SE = σ / √n. Exact critical multipliers are a later short; this one stays with the concept.
+
+    Worked numbers (made-up): n = 64 drinks, x-bar = 42.4 s, σ = 8.0 s. Then √64 = 8, so SE = 8 / 8 = 1.0 s. MOE ≈ 2 × 1.0 = 2.0 s. The interval is [40.4, 44.4] seconds.
+
+    Narrower brackets look sharper but miss the truth more often unless you pay for a larger sample. Wider brackets feel safer but guide staffing less. Sizing MOE is a business choice about precision versus confidence.
+
+    Rule: report the bracket, not the bare point. About two SEs is a workable first margin when you need a ~95% feel without naming a tabled critical value yet.
+  description_zh: |
+    区间估计是什么？
+
+    假设A店早市店长汇报：平均出杯制作时间正好是 42.4 秒。用一个脆弱的单点去排班、定服务目标，单靠抽样运气就可能偏离真均值。总部要的是一段区间，不是某一个秒数。
+
+    点估计是样本给出的最优单一猜想——常常是样本均值 x-bar。区间估计在这个点两边加上误差容限（MOE）：区间 = 点估计 ± 误差容限。
+
+    在正态抽样模型下，若要大约百分之九十五的覆盖，常用经验规矩是误差容限大约等于两个标准误：误差容限 ≈ 2 × SE，其中 SE = σ / √n。精确的临界乘数留给后面的短课；本课先把概念讲清。
+
+    假设数字：n = 64 杯，x-bar = 42.4 秒，σ = 8.0 秒。√64 = 8，所以 SE = 8 / 8 = 1.0 秒。误差容限 ≈ 2 × 1.0 = 2.0 秒。区间是 [40.4, 44.4] 秒。
+
+    区间更窄看起来更锋利，但除非加大样本，更容易漏掉真值。区间更宽更稳妥，但对排班指导更弱。误差容限的大小，是精度与把握度之间的经营取舍。
+
+    规则：报告区间，而不是裸点。大约两个标准误，是还没引入表值临界乘数之前，对约百分之九十五手感的可用第一层容限。
+  description_zh_hk: |
+    區間估計係乜？
+
+    假設A店朝市店長匯報：平均出杯製作時間啱啱好係 42.4 秒。用一個脆弱嘅單點去排班、定服務目標，單靠抽樣運氣就可能偏離真均值。總部要嘅係一段區間，唔係某一個秒數。
+
+    點估計係樣本畀出嘅最優單一猜想——好多時係樣本均值 x-bar。區間估計喺呢個點兩邊加上誤差容限（MOE）：區間 = 點估計 ± 誤差容限。
+
+    喺正態抽樣模型下，若要大約百分之九十五嘅覆蓋，常用經驗規矩係誤差容限大約等於兩個標準誤：誤差容限 ≈ 2 × SE，其中 SE = σ / √n。精確嘅臨界乘數留俾後面短課；呢課先將概念講清。
+
+    假設數字：n = 64 杯，x-bar = 42.4 秒，σ = 8.0 秒。√64 = 8，所以 SE = 8 / 8 = 1.0 秒。誤差容限 ≈ 2 × 1.0 = 2.0 秒。區間係 [40.4, 44.4] 秒。
+
+    區間更窄睇落更鋒利，但除非加大樣本，更容易漏咗真值。區間更闊更穩妥，但對排班指導更弱。誤差容限嘅大細，係精度同把握度之間嘅經營取捨。
+
+    規則：報告區間，而唔係裸點。大約兩個標準誤，係仲未引入表值臨界乘數之前，對約百分之九十五手感嘅可用第一層容限。
 glossary:
 - en: point estimate
   zh: 点估计
@@ -36,185 +79,280 @@ glossary:
 quiz:
 - id: Q1
   type: multiple_choice
-  question_en: Why is a store manager's claim that 'the true average drink preparation time is exactly 42.4000 seconds' guaranteed
-    to be technically false under classical continuous probability?
-  question_zh: 在经典连续概率论中，为什么门店经理声称“早高峰真实平均出杯制作时间恰好等于 42.4000 秒”在数学上必然为假？
-  question_zh_hk: 喺經典連續概率論入面，點解門市經理聲稱「朝高峰真實平均出杯製作時間啱啱好等於 42.4000 秒」喺數學上必然為假？
+  question_en: Why should a manager report an interval estimate for average drink prep time, not only a bare point estimate?
+  question_zh: 为什么经理报告平均出杯制作时间时，应当给出区间估计，而不是只报一个裸点估计？
+  question_zh_hk: 點解經理報告平均出杯製作時間嗰陣，應當畀出區間估計，而唔係淨係報一個裸點估計？
   options_en:
-  - 'A: For any continuous random variable, the probability of hitting any single exact infinitesimal point is precisely zero:
-    P(X = c) = 0.'
-  - 'B: Because commercial timers are legally banned from recording tenths of a second.'
-  - 'C: Because barista preparation times can only take integer values.'
-  - 'D: Because point estimates are only mathematically valid for revenue, never for time.'
+  - 'A: A point is one guess; an interval adds a margin of error that shows sampling uncertainty.'
+  - 'B: Point estimates are valid only when the sample size is at least 30.'
+  - 'C: Intervals are allowed for revenue only, never for preparation time.'
+  - 'D: The sample mean always equals the true mean exactly, so a point is enough.'
   options_zh:
-  - 'A: 对于任何连续型随机变量，命中任何特定无理数/无穷小数单点的理论概率在测度论上精确为零：P(X = c) = 0。'
-  - 'B: 因为商业工时计时器在计量法规上严禁记录小数秒数。'
-  - 'C: 因为咖啡师的制作工时在物理上只能是跳跃的整数秒。'
-  - 'D: 因为点估计仅在财务营收指标中合法，绝不可应用于工时测算。'
+  - 'A: 点估计只是一次猜想；区间加上误差容限，把抽样不确定性标出来。'
+  - 'B: 只有样本量至少为 30 时，点估计才合法。'
+  - 'C: 区间估计只许用于营收，绝不可用于制作时间。'
+  - 'D: 样本均值总是恰好等于真均值，所以单点就够。'
   options_zh_hk:
-  - 'A: 對於任何連續型隨機變量，命中任何特定無窮小數單點嘅理論概率喺測度論上精確為零：P(X = c) = 0。'
-  - 'B: 因為商業工時計時器喺計量法規上嚴禁記錄小數秒數。'
-  - 'C: 因為咖啡師嘅製作工時喺物理上只能夠係跳躍嘅整數秒。'
-  - 'D: 因為點估計淨係喺財務營收指標入面合法，絕唔可以應用喺工時測算。'
+  - 'A: 點估計只係一次猜想；區間加上誤差容限，將抽樣不確定性標出嚟。'
+  - 'B: 淨係樣本量至少為 30 嗰陣，點估計先合法。'
+  - 'C: 區間估計淨係准用喺營收，絕唔可以用喺製作時間。'
+  - 'D: 樣本均值成日啱啱好等於真均值，所以單點就夠。'
   answer: A
-  explanation_en: Continuous distributions assign probability to intervals (areas under the curve), not individual points.
-    The integral over a single point dx is zero, meaning point estimates are almost surely wrong. Management needs an interval.
-  explanation_zh: 连续型变量的概率定义在区间面积之上，单点处的微元积分恒为零，即单点命中的理论概率几近于无。管理层必须用有宽度的区间代替脆弱的单点。
-  explanation_zh_hk: 連續型變量嘅概率定義喺區間面積之上，單點處嘅微元積分恆為零，即係話單點命中嘅理論概率微乎其微。管理層必須用有闊度嘅區間代替脆弱嘅單點。
+  explanation_en: 'An interval keeps the point estimate and wraps a margin of error around it, so readers see how far sampling noise can swing the guess. B turns a rule of thumb into a law; C invents a topic ban; D pretends sampling error is zero.'
+  explanation_zh: '区间保留点估计，并在两边加上误差容限，让读者看到抽样噪声能把猜想晃多远。B 把经验规矩当成定律；C 虚构了主题禁令；D 假装没有抽样误差。'
+  explanation_zh_hk: '區間保留點估計，並喺兩邊加上誤差容限，等讀者睇到抽樣雜音可以將猜想晃幾遠。B 將經驗規矩當成定律；C 虛構咗主題禁令；D 假裝冇抽樣誤差。'
 - id: Q2
   type: multiple_choice
-  question_en: An operations audit of n = 64 peak-hour drinks at Wan Chai finds a sample mean preparation time of x-bar =
-    42.4 seconds with standard error SE = 1.0 second. If leadership insists on an operational margin of error of +/- 1.96
-    seconds, what is the resulting interval estimate?
-  question_zh: 湾仔店早市抽检 n = 64 杯饮品，样本平均制作工时为 x-bar = 42.4 秒，标准误 SE = 1.0 秒。若管理层要求按 ± 1.96 秒的误差容限构建区间估计，得出的工时受控区间是多少？
-  question_zh_hk: 灣仔舖早市抽檢 n = 64 杯飲品，樣本平均製作工時為 x-bar = 42.4 秒，標準誤 SE = 1.0 秒。若果管理層要求按 ± 1.96 秒嘅誤差容限構建區間估計，得出嘅工時受控區間係幾多？
+  question_en: 'Suppose Shop B times n = 36 peak drinks. The sample mean is x-bar = 50.0 s and σ = 12.0 s. Using MOE ≈ 2 × SE, what are SE and the interval?'
+  question_zh: 假设B店抽测 n = 36 杯高峰饮品，样本均值 x-bar = 50.0 秒，σ = 12.0 秒。按 误差容限 ≈ 2 × SE，标准误与区间分别是多少？
+  question_zh_hk: 假設B店抽測 n = 36 杯高峰飲品，樣本均值 x-bar = 50.0 秒，σ = 12.0 秒。按 誤差容限 ≈ 2 × SE，標準誤同區間分別係幾多？
   options_en:
-  - 'A: [42.4 - 1.96, 42.4 + 1.96] = [40.44 seconds, 44.36 seconds]'
-  - 'B: [42.4 - 1.00, 42.4 + 1.00] = [41.40 seconds, 43.40 seconds]'
-  - 'C: [0.00 seconds, 84.80 seconds]'
-  - 'D: [42.4 / 1.96, 42.4 * 1.96] = [21.63 seconds, 83.10 seconds]'
+  - 'A: SE = 12 / √36 = 2.0 s; interval [46.0 s, 54.0 s]'
+  - 'B: SE = 2.0 s; interval [48.0 s, 52.0 s]'
+  - 'C: SE = 12 / 36 ≈ 0.33 s; interval [49.3 s, 50.7 s]'
+  - 'D: SE = √(12 / 36) ≈ 0.58 s; interval [48.8 s, 51.2 s]'
   options_zh:
-  - 'A: [42.4 - 1.96, 42.4 + 1.96] = [40.44 秒, 44.36 秒]'
-  - 'B: [42.4 - 1.00, 42.4 + 1.00] = [41.40 秒, 43.40 秒]'
-  - 'C: [0.00 秒, 84.80 秒]'
-  - 'D: [42.4 / 1.96, 42.4 * 1.96] = [21.63 秒, 83.10 秒]'
+  - 'A: SE = 12 / √36 = 2.0 秒；区间 [46.0 秒, 54.0 秒]'
+  - 'B: SE = 2.0 秒；区间 [48.0 秒, 52.0 秒]'
+  - 'C: SE = 12 / 36 ≈ 0.33 秒；区间 [49.3 秒, 50.7 秒]'
+  - 'D: SE = √(12 / 36) ≈ 0.58 秒；区间 [48.8 秒, 51.2 秒]'
   options_zh_hk:
-  - 'A: [42.4 - 1.96, 42.4 + 1.96] = [40.44 秒, 44.36 秒]'
-  - 'B: [42.4 - 1.00, 42.4 + 1.00] = [41.40 秒, 43.40 秒]'
-  - 'C: [0.00 秒, 84.80 秒]'
-  - 'D: [42.4 / 1.96, 42.4 * 1.96] = [21.63 秒, 83.10 秒]'
+  - 'A: SE = 12 / √36 = 2.0 秒；區間 [46.0 秒, 54.0 秒]'
+  - 'B: SE = 2.0 秒；區間 [48.0 秒, 52.0 秒]'
+  - 'C: SE = 12 / 36 ≈ 0.33 秒；區間 [49.3 秒, 50.7 秒]'
+  - 'D: SE = √(12 / 36) ≈ 0.58 秒；區間 [48.8 秒, 51.2 秒]'
   answer: A
-  explanation_en: An interval estimate equals Point Estimate +/- Margin of Error. Here, 42.4 - 1.96 = 40.44s and 42.4 + 1.96
-    = 44.36s. The interval [40.44, 44.36] encapsulates our operational uncertainty.
-  explanation_zh: 区间估计的结构为“点估计值 ± 误差容限”。此处下界为 42.4 - 1.96 = 40.44 秒，上界为 42.4 + 1.96 = 44.36 秒。区间 [40.44, 44.36] 完整包裹了抽样估算的不确定性。
-  explanation_zh_hk: 區間估計嘅結構為「點估計值 ± 誤差容限」。呢度下界為 42.4 - 1.96 = 40.44 秒，上界為 42.4 + 1.96 = 44.36 秒。區間 [40.44, 44.36] 完整包裹咗抽樣估算嘅不確定性。
+  explanation_en: '√36 = 6, so SE = 12 / 6 = 2.0 s. MOE ≈ 2 × 2.0 = 4.0 s, so 50.0 ± 4.0 gives [46.0, 54.0]. B uses ± one SE only; C divides by n instead of √n; D puts σ/n under a square root.'
+  explanation_zh: '√36 = 6，所以 SE = 12 / 6 = 2.0 秒。误差容限 ≈ 2 × 2.0 = 4.0 秒，于是 50.0 ± 4.0 得到 [46.0, 54.0]。B 只用了 ± 一个 SE；C 用 n 而不是 √n 去除；D 把 σ/n 放进了根号。'
+  explanation_zh_hk: '√36 = 6，所以 SE = 12 / 6 = 2.0 秒。誤差容限 ≈ 2 × 2.0 = 4.0 秒，於是 50.0 ± 4.0 得到 [46.0, 54.0]。B 淨係用咗 ± 一個 SE；C 用 n 而唔係 √n 去除；D 將 σ/n 放入咗根號。'
 beats:
 - id: hook
   visual: title_card
-  seconds: 30
-  kicker: The Exact Second Illusion
-  kicker_en: The Exact Second Illusion
-  kicker_zh: 绝对秒数的幻象
-  kicker_zh_hk: 絕對秒數嘅幻象
-  title_en: Why single-point operational targets fail an audit
-  title_zh: 四十二点四秒出杯：单一数值为何通不过严密审计？
-  title_zh_hk: 四十二點四秒出杯：單一數值點解過唔到嚴密審計？
-  en: 'During the 8:00 AM rush at Wan Chai, the store manager proudly reports to headquarters: Our baristas have mastered
-    espresso workflow; true average drink preparation time is exactly forty-two point four seconds. The Chief Operating Officer
-    reviews the memo and pushes it back immediately: Claiming an exact single point is mathematically indefensible! In continuous
-    operational time, the probability of hitting any precise decimal is literally zero. Why are point estimates doomed to
-    fail, and how do executive leaders build honest performance intervals?'
-  zh: 早晨八点湾仔店早高峰，店长在向总部提交的周报中信誓旦旦：咖啡师已彻底跑通出餐流线，全店早市真实平均制作工时恰好是四十二点四秒。首席运营官翻阅报告后当场驳回：在审计层面上声称命中某个确凿单点，在数学上根本站不住脚！在连续时间流中，命中任何特定小数点的概率在理论上精确为零。为什么孤立的点估计注定破产？卓越的管理者又该如何搭建诚实可靠的区间护栏？
-  zh_hk: 朝早八點灣仔舖朝高峰，店長喺向總部遞交嘅週報入面拍晒心口：咖啡師已經徹底搞掂出餐流程，全舖早市真實平均製作工時啱啱好係四十二點四秒。首席營運官睇完報告即刻打沉：喺審計層面上聲稱命中某個確鑿單點，喺數學上根本企唔穩陣腳！喺連續時間流入面，命中任何特定小數點嘅概率喺理論上精確為零。點解孤立嘅點估計注定破產？卓越嘅管理者又應該點樣搭建誠實可靠嘅區間護欄？
+  seconds: 34
+  kicker: A fragile single second
+  kicker_en: A fragile single second
+  kicker_zh: 脆弱的单点秒数
+  kicker_zh_hk: 脆弱嘅單點秒數
+  title_en: What is an interval estimate?
+  title_zh: 区间估计是什么？
+  title_zh_hk: 區間估計係乜？
+  en: >-
+    Suppose Shop A’s morning manager reports that average drink prep time is
+    exactly forty-two point four seconds. Staffing and service targets built on
+    that one number can miss the true mean by sampling luck alone. Headquarters
+    pushes back: give us a bracket, not a single second. How do you turn a fragile
+    point into an honest interval estimate?
+  zh: >-
+    假设A店早市店长汇报：平均出杯制作时间正好是四十二点四秒。用这一个数字去排班、定服务目标，单靠抽样运气就可能偏离真均值。总部退回：给我们一段区间，不要某一个秒数。怎样把脆弱的单点，变成诚实的区间估计？
+  zh_hk: >-
+    假設A店朝市店長匯報：平均出杯製作時間啱啱好係四十二點四秒。用呢一個數字去排班、定服務目標，單靠抽樣運氣就可能偏離真均值。總部打沉：畀我哋一段區間，唔好某一個秒數。點樣將脆弱嘅單點，變成誠實嘅區間估計？
 - id: define
   visual: definition_card
-  seconds: 34
-  kicker: What It Is
-  kicker_en: What It Is
-  kicker_zh: 核心概念
-  kicker_zh_hk: 核心概念
-  title_en: The interval estimate architecture
-  title_zh: 区间估计的双元架构
-  title_zh_hk: 區間估計嘅雙元架構
-  formula: Interval = Point Estimate +/- Margin of Error; MOE = Critical Value * SE
-  formula_zh: 区间估计 = 点估计值 ± 误差容限 (MOE)；误差容限 = 临界系数 × 抽样标准误
-  formula_zh_hk: 區間估計 = 點估計值 ± 誤差容限 (MOE)；誤差容限 = 臨界系數 × 抽樣標準誤
-  formula_tex: \text{Interval} = \bar{X} \pm \text{MOE} = \bar{X} \pm \left( Z^* \cdot \frac{\sigma}{\sqrt{n}} \right)
-  s1_en: A point estimate gives our best single-number guess, such as sample mean x-bar. But in continuous reality, the probability
-    of sample mean landing dead on the true parameter mu is mathematically zero.
-  s1_zh: 点估计给出了我们基于样本计算出的最优单一猜想值，比如样本均值 x-bar。但在连续分布的世界里，样本均值恰好分毫不差命中总体真值 mu 的概率在测度论上严格为零。
-  s1_zh_hk: 點估計畀出咗我哋基於樣本計算出嚟嘅最優單一猜想值，好似樣本均值 x-bar。但喺連續分佈嘅世界入面，樣本均值啱啱好分毫不差命中總體真值 mu 嘅概率喺測度論上嚴格為零。
-  s2_en: An interval estimate surrounds that point estimate with a protective margin of error. It transforms a fragile, pinpoint
-    target into an operational bracket backed by probabilistic certainty.
-  s2_zh: 区间估计则在单点估计周围筑起一道坚实的“误差容限”安全带。它将一个极度脆弱的单点指标，升级为具备概率确定性背书的营运弹性区间。
-  s2_zh_hk: 區間估計就喺單點估計周圍築起一道堅實嘅「誤差容限」安全帶。佢將一個極度脆弱嘅單點指標，升級為具備概率確定性背書嘅營運彈性區間。
-- id: mechanics
+  seconds: 42
+  kicker: What it is
+  kicker_en: What it is
+  kicker_zh: 它是什么
+  kicker_zh_hk: 佢係乜
+  title_en: Point plus a margin
+  title_zh: 点估计加上一段容限
+  title_zh_hk: 點估計加上一段容限
+  formula: 'Interval = point estimate ± MOE'
+  formula_zh: 区间估计 = 点估计 ± 误差容限（MOE）
+  formula_zh_hk: 區間估計 = 點估計 ± 誤差容限（MOE）
+  s1_en: >-
+    A point estimate is your best single guess from the sample — often the sample
+    mean, x-bar. It is useful, but it is still one draw. Another random sample
+    of the same size would usually land somewhere else.
+  s1_zh: >-
+    点估计是样本给出的最优单一猜想——常常是样本均值 x-bar。它有用，但仍然只是一次抽取。同样大小的另一次随机样本，通常会落在别处。
+  s1_zh_hk: >-
+    點估計係樣本畀出嘅最優單一猜想——好多時係樣本均值 x-bar。佢有用，但仍然只係一次抽取。同樣大細嘅另一次隨機樣本，通常會落喺第度。
+  s2_en: >-
+    An interval estimate keeps that point and wraps a margin of error around it.
+    The architecture is simple: interval equals the point estimate plus or minus
+    the margin of error — written MOE.
+  s2_zh: >-
+    区间估计保留这个点，并在两边加上误差容限（MOE）。结构很简单：区间等于点估计加减误差容限。
+  s2_zh_hk: >-
+    區間估計保留呢個點，並喺兩邊加上誤差容限（MOE）。結構好簡單：區間等於點估計加減誤差容限。
+- id: moe
+  visual: steps
+  layout: rows
+  seconds: 48
+  kicker: A first margin
+  kicker_en: A first margin
+  kicker_zh: 第一层容限
+  kicker_zh_hk: 第一層容限
+  title_en: About two standard errors
+  title_zh: 大约两个标准误
+  title_zh_hk: 大約兩個標準誤
+  step1_en: 'SE = σ / √n'
+  step1_zh: 'SE = σ / √n'
+  step1_zh_hk: 'SE = σ / √n'
+  step2_en: 'MOE ≈ 2 × SE'
+  step2_zh: '误差容限 ≈ 2 × SE'
+  step2_zh_hk: '誤差容限 ≈ 2 × SE'
+  step3_en: 'Interval = x̄ ± MOE'
+  step3_zh: '区间 = x̄ ± 误差容限'
+  step3_zh_hk: '區間 = x̄ ± 誤差容限'
+  s1_en: >-
+    The standard error SE is how much the sample mean wobbles from sample to
+    sample: sigma over the square root of n. You already met that scale.
+  s1_zh: >-
+    标准误 SE 衡量样本均值在样本与样本之间晃多少：sigma 除以根号 n。你已经见过这个尺度。
+  s1_zh_hk: >-
+    標準誤 SE 衡量樣本均值喺樣本同樣本之間晃幾多：sigma 除以根號 n。你已經見過呢個尺度。
+  s2_en: >-
+    For about ninety-five percent coverage under a Normal sampling model, a common
+    rule of thumb sets the margin at about two standard errors: MOE about two
+    times SE. Exact tabled multipliers wait for a later short.
+  s2_zh: >-
+    在正态抽样模型下，若要大约百分之九十五的覆盖，常用经验规矩把误差容限定在大约两个标准误：误差容限约等于 2 倍 SE。精确的表值乘数留给后面的短课。
+  s2_zh_hk: >-
+    喺正態抽樣模型下，若要大約百分之九十五嘅覆蓋，常用經驗規矩將誤差容限定喺大約兩個標準誤：誤差容限約等於 2 倍 SE。精確嘅表值乘數留俾後面短課。
+  s3_en: >-
+    Put the pieces together: start at x-bar, step left and right by the MOE, and
+    you have the interval. That is the concept — a point wearing a safety belt.
+  s3_zh: >-
+    合在一起：从 x-bar 出发，向左、向右各走一段误差容限，就得到区间。这就是概念——给单点系上安全带。
+  s3_zh_hk: >-
+    合埋一齊：由 x-bar 出發，向左、向右各行一段誤差容限，就得到區間。呢個就係概念——畀單點繫上安全帶。
+- id: tradeoff
   visual: two_column
-  seconds: 36
-  kicker: The Executive Dilemma
-  kicker_en: The Executive Dilemma
-  kicker_zh: 管理博弈
-  kicker_zh_hk: 管理博弈
-  title_en: The precision versus confidence trade-off
-  title_zh: 精度与置信度的终极权衡
-  title_zh_hk: 精度與置信度嘅終極權衡
-  left_en: 'Narrow Bracket: Ultra-precise, but high risk of missing truth'
-  left_zh: 窄区间：精度极高、颗粒度细，但漏网脱靶风险急剧飙升
-  left_zh_hk: 窄區間：精度極高、顆粒度細，但漏網脫靶風險急劇飆升
-  right_en: 'Wide Bracket: High confidence, but vague managerial utility'
-  right_zh: 宽区间：把握度高、极度安全，但流于宽泛丧失决策指导价值
-  right_zh_hk: 寬區間：把握度高、極度安全，但流於寬泛喪失決策指導價值
-  s1_en: 'Every operational interval faces an inescapable tension: you cannot simultaneously increase precision and increase
-    confidence without paying for a larger sample.'
-  s1_zh: 任何营运区间都面临着不可调和的底层张力：在不追加抽查样本量的前提下，你绝不可能在收窄区间精度的同时，还凭空提高捕捉真值的把握度。
-  s1_zh_hk: 任何營運區間都面臨住不可調和嘅底層張力：喺唔追加抽查樣本量嘅前提下，你絕唔可能喺收窄區間精度嘅同時，仲憑空提高捕捉真值嘅把握度。
-  s2_en: If marketing boasts that barista speed is between forty-two point one and forty-two point seven seconds, precision
-    is razor-sharp—but random noise will frequently kick truth outside the bracket.
-  s2_zh: 若向外界宣称咖啡师制作耗时在四十二点一到四十二点七秒之间，精度固然无可挑剔，但日常的随机杂音会极其频繁地将真实水平甩出这个窄缝。
-  s2_zh_hk: 若果向外界宣稱咖啡師製作耗時喺四十二點一到四十二點七秒之間，精度固然無可挑剔，但日常嘅隨機雜音會極其頻繁噉將真實水平甩出呢個窄縫。
-  s3_en: Conversely, promising speed between ten and ninety seconds provides one hundred percent certainty, but tells executives
-    nothing about staffing or queue management. Sizing the margin of error is a conscious business choice.
-  s3_zh: 反之，若承诺出餐在十秒到九十秒之间，把握度虽达百分之百，却对排班和防拥堵毫无指导意义。划定误差容限的大小，本质上是管理层的战略取舍。
-  s3_zh_hk: 反之，若果承諾出餐喺十秒到九十秒之間，把握度雖達百分之百，但對排班同防擁堵毫無指導意義。劃定誤差容限嘅大細，本質上係管理層嘅戰略取捨。
+  seconds: 48
+  kicker: The business choice
+  kicker_en: The business choice
+  kicker_zh: 经营取舍
+  kicker_zh_hk: 經營取捨
+  title_en: Precision versus confidence
+  title_zh: 精度与把握度
+  title_zh_hk: 精度同把握度
+  left_en: 'Narrow: sharp, misses more'
+  left_zh: 窄：锋利，更易漏真值
+  left_zh_hk: 窄：鋒利，更易漏真值
+  right_en: 'Wide: safer, weaker guide'
+  right_zh: 宽：更稳，指导更弱
+  right_zh_hk: 闊：更穩，指導更弱
+  s1_en: >-
+    Every operational interval faces the same tension. Without a larger sample,
+    you cannot tighten the bracket and raise confidence at the same time.
+  s1_zh: >-
+    任何营运区间都面对同一张力。不加大样本，你不可能一边收窄区间，一边又提高把握度。
+  s1_zh_hk: >-
+    任何營運區間都面對同一張力。唔加大樣本，你唔可能一邊收窄區間，一邊又提高把握度。
+  s2_en: >-
+    A razor-thin band around forty-two point four seconds looks precise. Random
+    sampling noise will kick the truth outside that band often.
+  s2_zh: >-
+    围着四十二点四秒的一条极窄带子，看起来很精确。抽样噪声会常常把真值踢出那条带。
+  s2_zh_hk: >-
+    圍住四十二點四秒嘅一條極窄帶子，睇落好精確。抽樣雜音會成日將真值踢出嗰條帶。
+  s3_en: >-
+    A band from ten to ninety seconds feels certain, yet it barely helps schedule
+    baristas. Sizing the margin of error is a conscious business choice about
+    precision versus confidence.
+  s3_zh: >-
+    从十秒到九十秒的带子把握度很高，但对排班几乎没有帮助。划定误差容限的大小，是精度与把握度之间的经营取舍。
+  s3_zh_hk: >-
+    由十秒到九十秒嘅帶子把握度好高，但對排班幾乎冇幫助。劃定誤差容限嘅大細，係精度同把握度之間嘅經營取捨。
 - id: ledger
   visual: steps
-  seconds: 36
-  kicker: The Ledger
-  kicker_en: The Ledger
-  kicker_zh: 账目精算
-  kicker_zh_hk: 賬目精算
-  title_en: Auditing Wan Chai barista prep speed
-  title_zh: 湾仔店早高峰出杯工时区间实测
-  title_zh_hk: 灣仔舖朝高峰出杯工時區間實測
-  step1_en: 'Point baseline: Audit n = 64 drinks -> x-bar = 42.4s, sigma = 8.0s -> SE = 1.0s'
-  step1_zh: 抽检基准：抽查 n = 64 杯 -> 样本均值 42.4 秒，标准差 8.0 秒 -> 标准误 1.0 秒
-  step1_zh_hk: 抽檢基準：抽查 n = 64 杯 -> 樣本均值 42.4 秒，標準差 8.0 秒 -> 標準誤 1.0 秒
-  step2_en: 'Set tolerance: Apply 95% critical value Z* = 1.96 -> MOE = 1.96 * 1.0 = 1.96s'
-  step2_zh: 设定容限：匹配 95% 置信标尺 Z* = 1.96 -> 误差容限 MOE = 1.96 × 1.0 = 1.96 秒
-  step2_zh_hk: 設定容限：匹配 95% 置信標尺 Z* = 1.96 -> 誤差容限 MOE = 1.96 × 1.0 = 1.96 秒
-  step3_en: 'Bracket bounds: 42.4 +/- 1.96s -> Certified interval: [40.44s, 44.36s]'
-  step3_zh: 生成区间：42.4 ± 1.96 秒 -> 认证受控区间：[40.44 秒, 44.36 秒]
-  step3_zh_hk: 生成區間：42.4 ± 1.96 秒 -> 認證受控區間：[40.44 秒, 44.36 秒]
-  s1_en: Review the operations audit ledger at Wan Chai. Across sixty-four stopwatch-timed morning espresso drinks, the sample
-    mean preparation time lands at forty-two point four seconds, with individual standard deviation sigma of eight point zero
-    seconds.
-  s1_zh: 查阅湾仔店早高峰秒表核查台账。在六十四杯受检意式浓缩中，样本平均制作工时为四十二点四秒，单杯波动标准差 sigma 为八点零秒。
-  s1_zh_hk: 查閱灣仔舖朝高峰秒錶核查台賬。喺六十四杯受檢意式濃縮入面，樣本平均製作工時為四十二點四秒，單杯波動標準差 sigma 為八點零秒。
-  s2_en: Dividing eight seconds by the square root of sixty-four reveals a clean standard error of exactly one point zero
-    second. To deliver ninety-five percent operational coverage, we match this standard error to a normal critical multiplier
-    of one point nine six, producing a margin of error of one point nine six seconds.
-  s2_zh: 将八秒除以根号六十四，精准得出整整一秒的标准误。为达成百分之九十五的可靠覆盖，我们调用一点九六的正态临界乘数，求得误差容限为一点九六秒。
-  s2_zh_hk: 將八秒除以根號六十四，精準得出整整一秒嘅標準誤。為咗達成百分之九十五嘅可靠覆蓋，我哋調用一點九六嘅正態臨界乘數，求得誤差容限為一點九六秒。
-  s3_en: 'Forty-two point four minus one point nine six gives forty point four four; adding it yields forty-four point three
-    six. Instead of a reckless single number, leadership now possesses a rigorously certified service benchmark: forty point
-    four to forty-four point four seconds.'
-  s3_zh: 四十二点四减一点九六得四十点四四，加上则为四十四点三六。相比于轻率的单一数字，管理层如今掌握了经受得住审计考验的坚挺标准：制作工时稳居四十点四至四十四点四秒区间。
-  s3_zh_hk: 四十二點四減一點九六得四十點四四，加上就係四十四點三六。比起輕率嘅單一數字，管理層而家掌握咗經受得住審計考驗嘅硬淨標準：製作工時穩居四十點四至四十四點四秒區間。
+  layout: rows
+  seconds: 74
+  kicker: A worked example
+  kicker_en: A worked example
+  kicker_zh: 算一次看看
+  kicker_zh_hk: 計一次睇吓
+  title_en: 'Shop A: sixty-four timed drinks'
+  title_zh: A店：六十四杯计时
+  title_zh_hk: A店：六十四杯計時
+  step1_en: 'n=64 · x̄=42.4 · σ=8'
+  step1_zh: 'n=64 · x̄=42.4 · σ=8'
+  step1_zh_hk: 'n=64 · x̄=42.4 · σ=8'
+  step2_en: '√64 = 8'
+  step2_zh: '√64 = 8'
+  step2_zh_hk: '√64 = 8'
+  step3_en: 'SE = 8 / 8 = 1.0 s'
+  step3_zh: 'SE = 8 / 8 = 1.0 秒'
+  step3_zh_hk: 'SE = 8 / 8 = 1.0 秒'
+  step4_en: 'MOE ≈ 2 × 1.0 = 2.0 s'
+  step4_zh: '误差容限 ≈ 2 × 1.0 = 2.0 秒'
+  step4_zh_hk: '誤差容限 ≈ 2 × 1.0 = 2.0 秒'
+  step5_en: '[40.4 s, 44.4 s]'
+  step5_zh: '[40.4 秒, 44.4 秒]'
+  step5_zh_hk: '[40.4 秒, 44.4 秒]'
+  s1_en: >-
+    Use made-up Shop A numbers. Sixty-four morning drinks are timed. The sample
+    mean is forty-two point four seconds, and sigma is eight point zero seconds.
+  s1_zh: >-
+    用一组假设的A店数字。六十四杯早市饮品被计时。样本均值是四十二点四秒，sigma 是八点零秒。
+  s1_zh_hk: >-
+    用一組假設嘅A店數字。六十四杯朝市飲品被計時。樣本均值係四十二點四秒，sigma 係八點零秒。
+  s2_en: >-
+    First open the square root. Sixty-four is eight times eight, so the square
+    root of sixty-four is exactly eight.
+  s2_zh: >-
+    先开根号。六十四是八乘八，所以根号六十四正好是八。
+  s2_zh_hk: >-
+    先開方。六十四係八乘八，所以根號六十四啱啱好係八。
+  s3_en: >-
+    Standard error is eight divided by eight: exactly one point zero second.
+    That is how far the sample mean typically wobbles.
+  s3_zh: >-
+    标准误是八除以八：正好一点零秒。这就是样本均值通常晃多远。
+  s3_zh_hk: >-
+    標準誤係八除以八：啱啱好一點零秒。呢個就係樣本均值通常晃幾遠。
+  s4_en: >-
+    Apply the about-two-SE rule of thumb. Two times one point zero is two point
+    zero seconds — that is the margin of error for this first bracket.
+  s4_zh: >-
+    套用大约两个标准误的经验规矩。二乘一点零是两点零秒——这就是这层第一区间的误差容限。
+  s4_zh_hk: >-
+    套用大約兩個標準誤嘅經驗規矩。二乘一點零係兩點零秒——呢個就係呢層第一區間嘅誤差容限。
+  s5_en: >-
+    Forty-two point four minus two is forty point four; plus two is forty-four
+    point four. Instead of a reckless single second, leadership now has the
+    bracket forty point four to forty-four point four seconds.
+  s5_zh: >-
+    四十二点四减二是四十点四；加二是四十四点四。相比轻率的单一秒数，管理层现在有了四十点四到四十四点四秒的区间。
+  s5_zh_hk: >-
+    四十二點四減二係四十點四；加二係四十四點四。比起輕率嘅單一秒數，管理層而家有咗四十點四到四十四點四秒嘅區間。
 - id: takeaway
   visual: takeaway
-  seconds: 32
-  kicker: Decision Rule
-  kicker_en: Decision Rule
-  kicker_zh: 商业法度
-  kicker_zh_hk: 商業法度
-  title_en: Never present a point estimate without its operational bracket
-  title_zh: 单点有穷尽，区间见真章：用误差容限守卫管理威信
-  title_zh_hk: 單點有窮盡，區間見真章：用誤差容限守衛管理威信
-  q1_en: Why should executives immediately reject audit memos reporting single unqualified point estimates?
-  q1_zh: 为什么高管在审阅汇报时，应当坚决退回任何缺乏区间范围的裸点估计报告？
-  q1_zh_hk: 點解高管喺審閱匯報嗰陣，應當堅決打沉任何缺乏區間範圍嘅單點估計報告？
-  q2_en: What specific critical values govern ninety, ninety-five, and ninety-nine percent intervals?
-  q2_zh: 百分之九十、九十五与九十九的常规置信区间，分别由哪些经典 Z 临界值统帅？
-  q2_zh_hk: 百分之九十、九十五同九十九嘅常規置信區間，分別由邊啲經典 Z 臨界值統領？
-  s1_en: Never accept a point estimate at face value; in continuous operations, exact point claims carry zero probabilistic
-    credibility, while intervals protect managerial reputation.
-  s1_zh: 切勿孤立采信单点估计；在连续商业运营中，断言精确命中单一数字毫无概率可信度，唯有区间估计才能捍卫决策的科学性与容错空间。
-  s1_zh_hk: 切勿孤立採信單點估計；喺連續商業營運入面，斷言精確命中單一數字毫無概率可信度，淨係得區間估計先可以捍衛決策嘅科學性同容錯空間。
-  s2_en: 'Calibrate the precision-confidence trade-off deliberately: invest in larger audit samples when business risk requires
-    both a narrow interval and high statistical certainty.'
-  s2_zh: 清醒拿捏精度与置信度的战略平衡：唯有当商业风险同时要求极窄区间与极高可靠度时，才值得斥资扩大抽样规模，绝不在低价值业务上浪费公帑。
-  s2_zh_hk: 清醒拿捏精度與置信度嘅戰略平衡：淨係得當商業風險同時要求極窄區間與極高可靠度嗰陣，先值得斥資擴大抽樣規模，絕唔喺低價值業務上浪費公帑。
-  s3_en: The operating rule is to report the bracket, not the single second. Sixty-four drinks at 42.4 seconds with a standard
-    error of 1.0 give [40.44, 44.36] at the 1.96 multiplier.
-  s3_zh: 操作规则是报告区间，而不是报告那一个秒数。64 杯均值为 42.4 秒、标准误 1.0 秒，乘 1.96 得到 [40.44, 44.36]。
-  s3_zh_hk: 操作規則係報告區間，而唔係報告嗰一個秒數。64 杯均值為 42.4 秒、標準誤 1.0 秒，乘 1.96 得到 [40.44, 44.36]。
+  seconds: 56
+  kicker: The rule
+  kicker_en: The rule
+  kicker_zh: 规则
+  kicker_zh_hk: 規則
+  title_en: Report the bracket
+  title_zh: 报告区间，不要裸点
+  title_zh_hk: 報告區間，唔好裸點
+  q1_en: 'Interval = point ± MOE'
+  q1_zh: '区间 = 点估计 ± 误差容限'
+  q1_zh_hk: '區間 = 點估計 ± 誤差容限'
+  q2_en: '~2×SE → [40.4, 44.4]'
+  q2_zh: '~2×SE → [40.4, 44.4]'
+  q2_zh_hk: '~2×SE → [40.4, 44.4]'
+  s1_en: >-
+    Back to Shop A. The single second forty-two point four was the fragile claim.
+    With SE one point zero and about two SEs of margin, the honest bracket is
+    forty point four to forty-four point four seconds.
+  s1_zh: >-
+    回到A店。四十二点四那一个秒数，是脆弱的宣称。标准误一点零、大约两个标准误的容限之后，诚实的区间是四十点四到四十四点四秒。
+  s1_zh_hk: >-
+    返到A店。四十二點四嗰一個秒數，係脆弱嘅宣稱。標準誤一點零、大約兩個標準誤嘅容限之後，誠實嘅區間係四十點四到四十四點四秒。
+  s2_en: >-
+    The operating rule is interval equals point estimate plus or minus MOE. For
+    a first ~ninety-five percent feel, take MOE about two times SE — and remember
+    that narrower and safer cannot both rise without a larger sample.
+  s2_zh: >-
+    操作规则是：区间等于点估计加减误差容限。若要大约百分之九十五的第一层手感，取误差容限约为 2 倍 SE——并记住，更窄与更稳妥不能在不加大样本时同时上升。
+  s2_zh_hk: >-
+    操作規則係：區間等於點估計加減誤差容限。若要大約百分之九十五嘅第一層手感，取誤差容限約為 2 倍 SE——並記住，更窄同更穩妥唔可以喺唔加大樣本嗰陣同時上升。
+  s3_en: >-
+    So answer headquarters with the bracket, not the bare point. That is what an
+    interval estimate is for.
+  s3_zh: >-
+    所以回答总部时给区间，而不是裸点。这就是区间估计的用处。
+  s3_zh_hk: >-
+    所以回答總部嗰陣畀區間，而唔係裸點。呢個就係區間估計嘅用處。

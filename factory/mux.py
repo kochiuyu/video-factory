@@ -121,10 +121,16 @@ def _caption_font(text: str, size: int):
         return ImageFont.load_default()
 
 
-def _wrap_caption_line(text: str, font, max_w: float) -> list[str]:
+def _greedy_caption_line(text: str, font, max_w: float) -> list[str]:
+    """Legacy greedy pixel fill (VF_CAPTION_GREEDY=1). Kept to reproduce old builds.
+
+    CJK uses slide tokens (compounds like 门店 stay atomic). On overflow, step
+    back to the last punctuation/space in the back half of the line so a word
+    is not split across caption frames when a nearby break exists.
+    """
     from PIL import Image, ImageDraw
 
-    from slides import _cjk_tokens
+    from slides import _BREAK_AFTER, _cjk_tokens
 
     body = (text or "").replace("\n", " ").strip()
     if not body:
@@ -132,16 +138,25 @@ def _wrap_caption_line(text: str, font, max_w: float) -> list[str]:
     draw = ImageDraw.Draw(Image.new("RGB", (8, 8)))
     lines: list[str] = []
     if any("\u4e00" <= ch <= "\u9fff" for ch in body):
-        buf = ""
+        cur: list[str] = []
         for tok in _cjk_tokens(body):
-            trial = buf + tok
-            if buf and draw.textlength(trial, font=font) > max_w:
-                lines.append(buf)
-                buf = tok
+            trial = "".join(cur + [tok])
+            if cur and draw.textlength(trial, font=font) > max_w:
+                cut = len(cur)
+                floor = max(1, int(len(cur) * 0.55))
+                for k in range(len(cur) - 1, floor - 1, -1):
+                    if cur[k - 1][-1:] in _BREAK_AFTER or cur[k - 1][-1:].isspace():
+                        cut = k
+                        break
+                lines.append("".join(cur[:cut]))
+                cur = cur[cut:] + [tok]
+                while len(cur) > 1 and draw.textlength("".join(cur), font=font) > max_w:
+                    lines.append("".join(cur[:-1]))
+                    cur = cur[-1:]
             else:
-                buf = trial
-        if buf:
-            lines.append(buf)
+                cur.append(tok)
+        if cur:
+            lines.append("".join(cur))
     else:
         buf = ""
         for word in body.split():
@@ -154,6 +169,211 @@ def _wrap_caption_line(text: str, font, max_w: float) -> list[str]:
         if buf:
             lines.append(buf)
     return lines or [body]
+
+
+# Balanced caption breaking ------------------------------------------------
+# A sentence that does not fit one card is cut into the fewest cards that fit,
+# then the cut points are chosen to even out the card widths, prefer a break
+# after Chinese / English clause punctuation and at word boundaries (jieba when
+# importable), and never leave a short last card (an "orphan").
+
+CAP_MIN_CJK = 4  # a card should carry at least this many CJK letters
+CAP_MIN_WORDS = 3  # ... or this many English words
+_CAP_CLAUSE = set("，、；：,;:—")
+_CAP_STOP = set("。？！?!.…")
+_CAP_WEAK_END = {
+    "a", "an", "the", "of", "to", "in", "on", "at", "for", "and", "or", "but", "with", "by",
+    "is", "are", "was", "be", "as", "that", "its", "your", "their", "his", "her", "our", "from",
+}
+_JIEBA = None
+
+
+def _jieba():
+    """jieba.cut when installed (optional dependency), else None."""
+    global _JIEBA
+    if _JIEBA is None:
+        if os.environ.get("VF_NO_JIEBA", "").strip() in {"1", "true", "yes"}:
+            _JIEBA = False
+        else:
+            try:
+                import logging
+
+                import jieba  # type: ignore
+
+                jieba.setLogLevel(logging.ERROR)
+                _JIEBA = jieba
+            except Exception:  # noqa: BLE001
+                _JIEBA = False
+    return _JIEBA or None
+
+
+def _word_ends(text: str) -> set[int] | None:
+    seg = _jieba()
+    if not seg:
+        return None
+    ends, pos = set(), 0
+    try:
+        for word in seg.cut(text, HMM=True):
+            pos += len(word)
+            ends.add(pos)
+    except Exception:  # noqa: BLE001
+        return None
+    return ends if pos == len(text) else None
+
+
+def _cjk_letters(text: str) -> int:
+    return sum(1 for ch in (text or "") if ch.isalnum())
+
+
+def _caption_units(body: str) -> tuple[list[str], bool]:
+    """Unbreakable pieces of one sentence. Joining them gives the sentence back."""
+    from slides import _cjk_tokens
+
+    if any("\u4e00" <= ch <= "\u9fff" for ch in body):
+        toks = _cjk_tokens(body)
+        if "".join(toks) != body:
+            return list(body), True
+        ends = _word_ends(body)
+        if not ends:
+            return toks, True
+        units: list[str] = []
+        buf, pos = "", 0
+        for tok in toks:
+            buf += tok
+            pos += len(tok)
+            tail = tok.rstrip()
+            if pos in ends or (tail and tail[-1] in _CAP_CLAUSE | _CAP_STOP) or tok != tail:
+                units.append(buf)
+                buf = ""
+        if buf:
+            units.append(buf)
+        return units, True
+    words = body.split()
+    return [w + " " for w in words[:-1]] + words[-1:], False
+
+
+def _card_short(piece: str, cjk: bool) -> bool:
+    if cjk:
+        return _cjk_letters(piece) < CAP_MIN_CJK
+    return len(piece.split()) < CAP_MIN_WORDS
+
+
+def balanced_cards(units: list[str], width, max_w: float, cjk: bool, max_cards: int = 0) -> list[str]:
+    """Cut `units` into the fewest pieces with width(piece) <= max_w, choosing the
+    cut points by dynamic programming: even widths, clause-punctuation breaks,
+    no weak English line ends, no short (orphan) cards. `width` maps str -> float."""
+    m = len(units)
+    if m == 0:
+        return []
+    whole = "".join(units).strip()
+    if m == 1 or width(whole) <= max_w:
+        return [whole]
+    pre = [""]
+    for u in units:
+        pre.append(pre[-1] + u)
+
+    def piece(i: int, j: int) -> str:
+        return pre[j][len(pre[i]):].strip()
+
+    wcache: dict[tuple[int, int], float] = {}
+
+    def w(i: int, j: int) -> float:
+        key = (i, j)
+        if key not in wcache:
+            wcache[key] = width(piece(i, j))
+        return wcache[key]
+
+    # fewest cards that can fit (greedy count is optimal for the minimum)
+    k, i = 0, 0
+    while i < m:
+        j = i + 1
+        while j < m and w(i, j + 1) <= max_w:
+            j += 1
+        k += 1
+        i = j
+    if max_cards and k > max_cards:
+        k = max_cards
+    INF = float("inf")
+
+    def cost(i: int, j: int, last: bool) -> float:
+        span = w(i, j)
+        if span > max_w and j - i > 1:
+            return INF
+        c = (1.0 - min(span, max_w) / max_w) ** 2
+        text = piece(i, j)
+        if _card_short(text, cjk):
+            c += 6.0 if last else 3.0
+        if not last:
+            tail = text.rstrip()[-1:] if text.rstrip() else ""
+            if tail in _CAP_CLAUSE:
+                c -= 0.12
+            elif cjk:
+                c += 0.06
+            elif text.split() and text.split()[-1].lower().strip(",.;:") in _CAP_WEAK_END:
+                c += 0.10
+        return c
+
+    best = [[INF] * (m + 1) for _ in range(k + 1)]
+    back = [[-1] * (m + 1) for _ in range(k + 1)]
+    best[0][0] = 0.0
+    for p in range(1, k + 1):
+        for j in range(p, m + 1):
+            for i in range(p - 1, j):
+                if best[p - 1][i] == INF:
+                    continue
+                c = cost(i, j, p == k)
+                if c == INF:
+                    continue
+                total = best[p - 1][i] + c
+                if total < best[p][j]:
+                    best[p][j] = total
+                    back[p][j] = i
+    if best[k][m] == INF:
+        return [whole]
+    cuts, j = [], m
+    for p in range(k, 0, -1):
+        i = back[p][j]
+        cuts.append((i, j))
+        j = i
+    return [piece(i, j) for i, j in reversed(cuts) if piece(i, j)]
+
+
+def _wrap_caption_line(text: str, font, max_w: float) -> list[str]:
+    """One sentence -> single-line caption cards (balanced; VF_CAPTION_GREEDY=1 for legacy)."""
+    from PIL import Image, ImageDraw
+
+    if os.environ.get("VF_CAPTION_GREEDY", "").strip() in {"1", "true", "yes"}:
+        return _greedy_caption_line(text, font, max_w)
+    body = (text or "").replace("\n", " ").strip()
+    if not body:
+        return [" "]
+    draw = ImageDraw.Draw(Image.new("RGB", (8, 8)))
+    units, cjk = _caption_units(body)
+    out = balanced_cards(units, lambda s: draw.textlength(s, font=font), max_w, cjk)
+    if any(draw.textlength(p, font=font) > max_w for p in out if len(p) > 1) and len(out) > 0:
+        # a unit wider than a card (very long word): fall back to the legacy fill
+        return _greedy_caption_line(text, font, max_w)
+    return out or [body]
+
+
+def caption_orphans(text: str) -> list[str]:
+    """Sentences whose last caption card is short (<=2 EN words / <=3 CJK letters)."""
+    size = int(os.environ.get("VF_CAPTION_SIZE", CAPTION_SIZE_DEFAULT) or CAPTION_SIZE_DEFAULT)
+    body = (text or "").replace("\n", " ").strip()
+    if not body:
+        return []
+    font = _caption_font(body, max(24, min(72, size)))
+    max_w = CAPTION_PILL_MAX - 2 * CAPTION_PAD_X
+    bad = []
+    for sent in _sentences(body):
+        bits = [b for b in _wrap_caption_line(sent, font, max_w) if b.strip()]
+        if len(bits) < 2:
+            continue
+        last = bits[-1]
+        short = _cjk_letters(last) <= 3 if _is_cjk(last) else len(last.split()) <= 2
+        if short:
+            bad.append(" | ".join(bits))
+    return bad
 
 
 def caption_pages(text: str) -> list[str]:
@@ -198,8 +418,9 @@ def _sentences(text: str) -> list[str]:
     body = (text or "").replace("\n", " ").strip()
     if not body:
         return [""]
-    parts = re.split(r"(?<=[。？！.?!])\s*", body)
-    return [p.strip() for p in parts if p.strip()] or [body]
+    # A full stop between digits is a decimal point (0.10, 3.5), not a sentence end.
+    parts = re.split(r"(?<=[。？！?!])\s*|(?<=\.)(?!\d)\s*", body)
+    return [p.strip() for p in parts if p and p.strip()] or [body]
 
 
 def _halve(text: str) -> list[str]:
@@ -218,6 +439,31 @@ def _halve(text: str) -> list[str]:
         sp = body.rfind(" ", 0, cut)
         if sp >= 4:
             cut = sp
+    else:
+        # Prefer a nearby punctuation break; never cut inside digits or a kept compound.
+        from slides import _CJK_COMPOUNDS
+
+        best = None
+        lo, hi = max(1, cut - 8), min(len(body) - 1, cut + 8)
+        for i in range(lo, hi + 1):
+            if body[i - 1] in "，、；; ":
+                dist = abs(i - cut)
+                if best is None or dist < best[0]:
+                    best = (dist, i)
+        if best:
+            cut = best[1]
+        # Nudge out of a digit run or a known compound straddling the cut.
+        for _ in range(4):
+            if cut < len(body) and body[cut - 1 : cut + 1] in _CJK_COMPOUNDS:
+                cut += 1
+                continue
+            if cut < len(body) and body[cut].isdigit() and body[cut - 1].isdigit():
+                cut += 1
+                continue
+            if cut > 1 and body[cut - 1].isdigit() and cut < len(body) and (body[cut].isdigit() or body[cut] in ",."):
+                cut += 1
+                continue
+            break
     left, right = body[:cut].strip(), body[cut:].strip()
     return [p for p in (left, right) if p] or [body]
 
@@ -298,6 +544,25 @@ def split_beat_cues(
 
 
 def _break_caption(text: str, width: int = 22) -> str:
+    """SRT line breaks for one card: the same balanced breaker as the burned-in
+    cards (clause punctuation, word boundaries, no short last line), sized by
+    character count (CJK `width`, English 42). Legacy hard cut: VF_CAPTION_GREEDY=1."""
+    text = text.strip()
+    if os.environ.get("VF_CAPTION_GREEDY", "").strip() in {"1", "true", "yes"}:
+        return _break_caption_legacy(text, width)
+    if not text:
+        return text
+    units, cjk = _caption_units(text)
+    limit = width if cjk else 42
+
+    def count(s: str) -> float:
+        return float(len(s))
+
+    lines = balanced_cards(units, count, limit, cjk, max_cards=3)
+    return "\n".join(lines[:3]) if lines else text
+
+
+def _break_caption_legacy(text: str, width: int = 22) -> str:
     text = text.strip()
     if any("\u4e00" <= ch <= "\u9fff" for ch in text):
         lines = []
@@ -678,8 +943,10 @@ def _split_sentences(text: str) -> list[str]:
         return []
     parts: list[str] = []
     buf = []
-    for ch in raw:
+    for i, ch in enumerate(raw):
         buf.append(ch)
+        if ch == "." and 0 < i < len(raw) - 1 and raw[i - 1].isdigit() and raw[i + 1].isdigit():
+            continue  # decimal point (0.10), not a sentence end
         if ch in ".!?。！？":
             bit = "".join(buf).strip()
             if bit:

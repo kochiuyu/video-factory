@@ -17,6 +17,7 @@ You author **one YAML file per short**. That file is the whole lesson:
 - the spoken script in each language
 - which on-screen visual to paint (table, number line, bars, formula, …)
 - titles, labels, and a short quiz
+- optional `youtube.description_*` for upload paste files (not `objective_*`, bare `course:`, or `audience` / `audience_*` — those are deprecated authoring metadata; keep `course_*` for covers and `duration_target_s` for timing)
 
 You do **not** scrub a timeline, place clips, or record in a video suite. If a claim is not in the YAML, it will not appear in the video.
 
@@ -162,7 +163,7 @@ Do not invent topics, story numbers, or new quiz answers. If a suppose file must
 
 ## YouTube paste file
 
-A build writes one text file beside each requested cell MP4: `out/lessons/<ID>/cells/<ID>_<cell>.youtube.txt`. Line 1 is the short lesson title plus a language tag (`(English)`, `(普通话)`, `(粵語)`, or a speech/slides tag on a mixed cell). The optional `youtube:` descriptions follow. Each description must be strictly less than 2500 characters. ASCII `<` and `>` in the title or description are written as fullwidth `＜` and `＞`, because YouTube Studio rejects the ASCII brackets. Nothing is uploaded. See `docs/SCHEMA.md`.
+A build writes one text file beside each requested cell MP4: `out/lessons/<ID>/cells/<ID>_<cell>.youtube.txt`. Line 1 is the short lesson title plus a language tag (`(English)`, `(普通话)`, `(粵語)`, or a speech/slides tag on a mixed cell). The optional `youtube:` descriptions follow. Each description must be strictly less than 2500 characters. Nothing is uploaded. See `docs/SCHEMA.md`.
 
 ## Out of scope
 

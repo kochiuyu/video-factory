@@ -1,19 +1,45 @@
 id: STAT-M02-T01-INTRO
-course: statistics
 course_en: Business Probability Foundations
 course_zh: 商务概率基础
 course_zh_hk: 商務概率基礎
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 154
+duration_target_s: 148
 title_en: "Seeing tomorrow through probability"
 title_zh: "用概率透视明天的商业不确定性"
 title_zh_hk: "用概率透視聽日嘅商業不確定性"
-objective_en: "Introduce probability as the forward-looking language of business risk, distinguish historical descriptive receipts from probabilistic forecasts, and establish the four core pillars of managerial decision-making under uncertainty."
-objective_zh: "将概率介绍为衡量企业未来风险的前瞻性语言，区分历史描述性账目与前瞻性概率预测，并确立不确定性下商业决策的四大核心支柱。"
-objective_zh_hk: "將概率介紹為衡量企業未來風險嘅前瞻性語言，區分歷史描述性賬目與前瞻性概率預測，並確立不確定性之下商業決策嘅四大核心支柱。"
+youtube:
+  description_en: |
+    Seeing tomorrow through probability
+
+    Descriptive dials can say Shop A averaged 420 cups, with a network standard deviation of 78. Those numbers summarize what already sold. They cannot change tomorrow. When a storm, a supply halt, or a viral crowd hits, how do you price that risk before it arrives?
+
+    Business probability answers with four pillars: define the universe of possible outcomes, update odds when context changes (conditioning), diagnose true faults behind alerts (inversion), and price bets with expected monetary value.
+
+    Descriptive statistics looks in the rearview mirror. Probability looks through the windshield: it maps uncertainty onto a zero-to-one scale so managers can commit resources before the future unfolds. A bad outcome does not prove a bad decision — judge the odds you chose, not one roll alone.
+
+    Business Probability Foundations - Module 2 - Short 1 (intro)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    用概率透视明天的商业不确定性
+
+    描述性指标可以说：A店平均卖出420杯，全网标准差是78杯。这些数字总结的是已经卖掉的杯子。它们改变不了明天。暴雨、断货或突然爆客来袭时，你怎么在危机到来前给风险定价？
+
+    商务概率用四大支柱作答：界定所有可能结果的全集、场景一变就更新胜率（条件）、从警报倒推真实故障（逆转）、用期望货币价值给赌注定价。
+
+    描述统计看后视镜。概率望向前挡风玻璃：把不确定性标在零到一的尺上，让管理者在未来展开前就能调配资源。一次不利结果不等于决策错了——评判你选的胜率，不要只看这一次掷骰。
+
+    商务概率基础 - 模块2 - 短片1（导论）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    用概率透視聽日嘅商業不確定性
+
+    描述性指標可以話：A店平均賣出420杯，全網標準差係78杯。呢啲數字總結嘅係已經賣咗嘅杯數。佢哋改變唔到聽日。暴雨、斷貨或者突然爆客來襲嗰陣，你點樣喺危機到嚟之前為風險定價？
+
+    商務概率用四大支柱作答：界定所有可能結果嘅全集、場景一變就更新勝率（條件）、由警報倒推真實故障（逆轉）、用期望貨幣價值為賭注定價。
+
+    描述統計睇後視鏡。概率望向前擋風玻璃：將不確定性標喺零到一嘅尺上面，等管理者喺未來展開之前就可以調配資源。一次不利結果唔等於決策錯咗——評判你揀嘅勝率，唔好淨係睇呢一次擲骰。
+
+    商務概率基礎 - 模組2 - 短片1（導論）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: "probability"
   zh: "概率"
@@ -88,12 +114,12 @@ beats:
   kicker_en: "The Forward Challenge"
   kicker_zh: "前瞻挑战"
   kicker_zh_hk: "前瞻挑戰"
-  title_en: "Looking past the cash register"
-  title_zh: "穿透收银机，望向未知的明天"
-  title_zh_hk: "穿透收銀機，望向未知嘅聽日"
-  en: "Our descriptive statistics course gave us the dials to summarize historical sales: Wan Chai averaged 420 cups, and the network standard deviation was 78 cups. But past receipts cannot change tomorrow. When tomorrow brings sudden storms, supply halts, or viral crowds, how do executives price the risks before they arrive?"
-  zh: "描述性统计课程赋予了我们总结历史销量的仪表盘：湾仔店日均 420 杯，全网标准差为 78 杯。但昨天的账本无法改变明天的事实。当明天可能突然遭遇暴雨、供应链断裂或突发客流时，管理者该如何在危机降临前精准衡量未来的风险？"
-  zh_hk: "描述性統計課程畀咗我哋總結歷史銷量嘅儀表板：灣仔舖日均 420 杯，全網標準差為 78 杯。但尋日嘅賬本冇辦法改變聽日嘅事實。當聽日可能突然遭遇暴雨、供應鏈斷裂或者突發客流嗰陣，管理者應該點樣喺危機降臨之前精準衡量未來嘅風險？"
+  title_en: "What is business probability?"
+  title_zh: "什么是商务概率？"
+  title_zh_hk: "咩係商務概率？"
+  en: "Suppose Shop A averages 420 cups, and the network standard deviation is 78 cups. Those dials summarize what already sold. They cannot change tomorrow. When a storm, a supply halt, or a viral crowd hits, how do you price that risk before it arrives?"
+  zh: "假设A店平均卖420杯，全网标准差是78杯。这些数字说的是已经卖掉的杯子，管不了明天。暴雨来了、断货了、或者突然爆客，你怎么在风险到之前给它定个价？"
+  zh_hk: "假設A店平均賣420杯，全網標準差係78杯。呢啲數字講嘅係已經賣咗嘅杯數，管唔到聽日。暴雨嚟、斷貨、或者突然爆客，你點樣喺風險到之前幫佢定個價？"
 - id: roadmap
   visual: module_open
   seconds: 44
@@ -112,9 +138,9 @@ beats:
   item4_en: "Valuation: Pricing bets with Expected Monetary Value"
   item4_zh: "定价：运用期望收益为保单与投资商业定价"
   item4_zh_hk: "定價：運用期望收益為保單同投資商業定價"
-  en: "Navigating uncertainty requires four essential pillars. First, define the operational universe of all possible outcomes. Second, master conditioning to update probabilities as new data arrives. Third, use Bayesian inversion to diagnose real failures behind automated alarms. And fourth, weight financial stakes using expected value to make rational business bets."
-  zh: "驾驭商业不确定性需要四大支柱。第一，穷尽界定包含所有可能结果的业务全集。第二，掌握条件概率，随着新数据流入实时调整预判。第三，运用贝叶斯逆转，穿透自动化警报精准诊断底层真实故障。第四，运用期望值加权财务损益，做出理性的商业下注。"
-  zh_hk: "駕馭商業不確定性需要四大支柱。第一，窮盡界定包含所有可能結果嘅業務全集。第二，掌握條件概率，隨住新數據流入實時調整預判。第三，運用貝葉斯逆轉，穿透自動化警報精準診斷底層真實故障。第四，運用期望值加權財務損益，做出理性嘅商業下注。"
+  en: "Navigating uncertainty needs four pillars. First, define the operational universe of all possible outcomes. Second, update probabilities as new context arrives. Third, invert alerts to diagnose real faults behind the alarm. Fourth, weight the money at stake with expected value before you bet."
+  zh: "要应对不确定，靠四根柱子。第一，把所有可能结果先圈成一套业务全集。第二，情况一变，就更新预判。第三，从警报倒推，找出背后的真故障。第四，用期望值给钱加权，再决定下不下这个注。"
+  zh_hk: "要應付唔確定，靠四條柱。第一，將所有可能結果先圈成一套業務全集。第二，情況一變，就更新預判。第三，由警報倒推，搵出背後嘅真故障。第四，用期望值幫錢加權，再決定下唔下呢注。"
 - id: foundation
   visual: two_column
   seconds: 44
@@ -131,37 +157,37 @@ beats:
   right_en: "Probability: Quantifying what could happen"
   right_zh: "概率模型：科学量化未来可能"
   right_zh_hk: "概率模型：科學量化未來可能"
-  s1_en: "Descriptive statistics looks in the rearview mirror. It counts completed transactions and calculates historical variance to evaluate past execution."
-  s1_zh: "描述性统计看的是后视镜。它盘点已经完成的交易明细，计算历史方差，用来复盘过去的执行成效。"
-  s1_zh_hk: "描述性統計睇嘅係後視鏡。佢盤點已經完成嘅交易明細，計算歷史方差，用嚟複盤過去嘅執行成效。"
-  s2_en: "Probability looks through the front windshield. It maps uncertainty onto a rigorous zero-to-one scale so executives can commit resources before the future unfolds."
-  s2_zh: "概率论望向的是前挡风玻璃。它将商业不确定性严格标定在零到一的数轴上，让高管在未来真正展开前就能胸有成竹地调配资源。"
-  s2_zh_hk: "概率論望向嘅係前擋風玻璃。佢將商業不確定性嚴格標定喺零到一嘅數軸上，令高管喺未來真正展開之前就可以胸有成竹噉調配資源。"
-  s3_en: "Over the next twelve lessons, our coffee chain ledger moves from recording daily receipts to forecasting customer conversion, equipment reliability, and warranty payoffs."
-  s3_zh: "在接下来的十二节微课中，我们的咖啡账本将从记录每日收据，全面转向预测顾客转化率、设备可靠度以及维保对赌方案。"
-  s3_zh_hk: "喺跟住落嚟嘅十二節微課入面，我哋嘅咖啡賬本將會由記錄每日收據，全面轉向預測顧客轉化率、設備可靠度以及維保對賭方案。"
+  s1_en: "Descriptive statistics looks in the rearview mirror. It counts completed transactions and historical variance to review past execution."
+  s1_zh: "描述性统计像在看后视镜。它数已经完成的交易，算历史方差，用来复盘过去做得怎样。"
+  s1_zh_hk: "描述性統計好似睇緊後視鏡。佢數已經完成嘅交易，計歷史方差，用嚟複盤過去做得點。"
+  s2_en: "Probability looks through the front windshield. It maps uncertainty onto a zero-to-one scale so you can commit resources before the future unfolds."
+  s2_zh: "概率像在看前方挡风玻璃。它把不确定标在零到一的尺上，让你在未来真正到来前，就能先把资源配好。"
+  s2_zh_hk: "概率好似睇緊前方擋風玻璃。佢將唔確定標喺零到一嘅尺上面，等你喺未來真正到之前，就可以先將資源配好。"
+  s3_en: "So the manager's job shifts from summarizing yesterday's cups to pricing what could happen before the bet is placed."
+  s3_zh: "所以经理的工作，从总结昨天的杯数，变成在下注前，给可能发生的事定个价。"
+  s3_zh_hk: "所以經理嘅工作，由總結尋日嘅杯數，變成喺下注之前，幫可能發生嘅事定個價。"
 - id: takeaway
   visual: takeaway
-  seconds: 36
+  seconds: 30
   kicker: "The Forward Rule"
   kicker_en: "The Forward Rule"
   kicker_zh: "前瞻法则"
   kicker_zh_hk: "前瞻法則"
-  title_en: "Manage by process, not pure outcome"
-  title_zh: "掌控科学决策过程，超越单一结果成败"
-  title_zh_hk: "掌控科學決策過程，超越單一結果成敗"
-  q1_en: "Why must business leaders learn probability?"
-  q1_zh: "为什么商业领袖必须系统学习概率？"
-  q1_zh_hk: "點解商業領袖必須系統學習概率？"
-  q2_en: "How does probability protect executive judgment?"
-  q2_zh: "概率论如何守护管理层的决策质量？"
-  q2_zh_hk: "概率論點樣守護管理層嘅決策質量？"
-  s1_en: "Probability provides the formal mathematical discipline required to make optimal bets in an unpredictable world."
-  s1_zh: "概率论为我们在充满变数的世界中做出最优商业博弈，提供了不可或缺的数学底层法则。"
-  s1_zh_hk: "概率論為我哋喺充滿變數嘅世界入面做出最優商業博弈，提供咗不可或缺嘅數學底層法則。"
-  s2_en: "A bad outcome does not mean the decision was wrong; a good decision maximizes odds before the roll of the dice."
-  s2_zh: "偶发的不利结果并不意味着最初的决策存在错误；真正卓越的决策是在掷骰子之前将胜率优化至最高。"
-  s2_zh_hk: "偶發嘅不利結果並唔意味住最初嘅決策存在錯誤；真正卓越嘅決策係喺擲骰仔之前將勝率優化到最高。"
-  s3_en: "Every probabilistic model starts by defining every possible outcome that could ever occur. Let us begin with the sample space."
-  s3_zh: "任何严谨的概率模型，都始于穷尽界定一切可能发生的潜在结果。让我们从样本空间正式启航。"
-  s3_zh_hk: "任何嚴謹嘅概率模型，都始於窮盡界定一切可能發生嘅潛在結果。等我哋由樣本空間正式啟航。"
+  title_en: "Manage by process, not outcome"
+  title_zh: "按过程管理，不看单次结果"
+  title_zh_hk: "按過程管理，唔睇單次結果"
+  q1_en: "Why learn probability? → Price risk up front"
+  q1_zh: "为什么学概率？→ 先给风险定价"
+  q1_zh_hk: "點解學概率？→ 先為風險定價"
+  q2_en: "Protect judgment? → Judge odds, not one roll"
+  q2_zh: "如何守护判断？→ 评胜率，不评一次掷骰"
+  q2_zh_hk: "點樣守護判斷？→ 評勝率，唔評一次擲骰"
+  s1_en: "Leaders learn probability to price tomorrow's risk before storms, halts, or crowds arrive."
+  s1_zh: "学概率，是为了在暴雨、断货或爆客到来前，给明天的风险定价。"
+  s1_zh_hk: "學概率，係為咗喺暴雨、斷貨或者爆客到之前，幫聽日嘅風險定價。"
+  s2_en: "A bad roll does not prove a bad bet. Judge the odds you chose."
+  s2_zh: "一次掷骰不利，不证明注下错了。要评的是你当时选的胜率。"
+  s2_zh_hk: "一次擲骰唔好彩，唔證明注下錯咗。要評嘅係你當時揀嘅勝率。"
+  s3_en: "Manage by the process that stacked those odds — not by one outcome alone."
+  s3_zh: "按堆出胜率的决策过程来管，不要只盯这一次结果。"
+  s3_zh_hk: "按堆出勝率嘅決策過程嚟管，唔好淨係盯呢一次結果。"

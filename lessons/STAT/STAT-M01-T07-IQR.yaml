@@ -1,19 +1,40 @@
 id: STAT-M01-T07-IQR
-course: statistics
 course_en: Business Statistics
 course_zh: 商务统计
 course_zh_hk: 商務統計
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 506
+duration_target_s: 458
 title_en: What is the interquartile range?
 title_zh: 什么是四分位距？
 title_zh_hk: 咩係四分位距？
-objective_en: Find the width of the middle of an ordered line of shops by locating Q1 and Q3 with the nearest-rank method (place = 0.25 or 0.75 times the count, rounded up), define the interquartile range as Q3 minus Q1, and see why one far value stretches the ends far more than the box, while the IQR still depends on the group, period and method.
-objective_zh: 用最接近秩法（位置 = 0.25 或 0.75 乘以个数，向上取整）找出Q1和Q3，量出排好的一排店中间有多宽；把四分位距定义为Q3减Q1，并看到一家很远的店为什么把两头拉得远比箱子多，而四分位距仍然取决于比较哪组店、哪段时间和用什么方法。
-objective_zh_hk: 用最接近秩法（位置 = 0.25 或 0.75 乘個數，向上取整）搵出Q1同Q3，量出排好嘅一排店中間有幾闊；將四分位距定義為Q3減Q1，並睇到一間好遠嘅店點解將兩頭拉得遠過個盒好多，而四分位距仍然取決於比較邊組店、邊段時間同用咩方法。
+youtube:
+  description_en: |
+    What is the interquartile range?
+    
+    Head office wants a normal milk band for street shops, not a band set by the strangest day. Five shops: 360, 420, 280, 390, 310. End to end is 420 - 280 = 140 cups. Sort: 280, 310, 360, 390, 420. Q1 (25th) at place 0.25 x 5 = 1.25 -> 2 is 310. Q3 (75th) at 0.75 x 5 = 3.75 -> 4 is 390. IQR = 390 - 310 = 80 cups - the width of the middle box.
+    
+    Add Shop F at 4,200 and the ends stretch to 3,920, while the IQR only moves to about 110. The IQR is robust to a far shop but not immune, and it does not plan for the far day itself. Report group, period, and nearest-rank method.
+    
+    Business Statistics - Module 1 - Short 7 (IQR)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    什么是四分位距？
+    
+    总部要给街边店定一个正常牛奶带宽，不要被最怪的一天带跑。五家店：360、420、280、390、310。两端差420 - 280 = 140杯。排序：280、310、360、390、420。Q1（第25）在0.25 x 5 = 1.25 -> 2，是310。Q3（第75）在0.75 x 5 = 3.75 -> 4，是390。IQR = 390 - 310 = 80杯，就是中间盒子的宽度。
+    
+    加上F店4,200杯，两端拉到3,920，IQR大约只到110。IQR对远店稳健但不是免疫，也不能单独给远店做计划。要写明店铺组、时期和最近秩方法。
+    
+    商务统计 - 模块1 - 短片7（四分位距）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    咩係四分位距？
+    
+    總部要畀街邊店定一個正常牛奶帶寬，唔好畀最怪嗰一日帶跑。五間店：360、420、280、390、310。兩端差420 - 280 = 140杯。排序：280、310、360、390、420。Q1（第25）喺0.25 x 5 = 1.25 -> 2，係310。Q3（第75）喺0.75 x 5 = 3.75 -> 4，係390。IQR = 390 - 310 = 80杯，就係中間盒子嘅闊度。
+    
+    加上F店4,200杯，兩端拉到3,920，IQR大約只到110。IQR對遠店穩健但唔係免疫，亦唔能單獨畀遠店做計劃。要寫明店鋪組、時期同最近秩方法。
+    
+    商務統計 - 模組1 - 短片7（四分位距）
+    覺得有用嘅話，訂閱下一集。
+
 glossary:
 - en: interquartile range
   zh: 四分位距
@@ -265,9 +286,9 @@ beats:
   formula_en: IQR = Q3 − Q1
   formula_zh: 四分位距 = Q3 − Q1
   formula_zh_hk: 四分位距 = Q3 − Q1
-  gloss_en: Q1 is the 25th percentile, Q3 the 75th
-  gloss_zh: Q1 是第25百分位数，Q3 是第75百分位数
-  gloss_zh_hk: Q1 係第25百分位數，Q3 係第75百分位數
+  gloss_en: Q1 = 25th pct; Q3 = 75th
+  gloss_zh: Q1 = 第25百分位数；Q3 = 第75
+  gloss_zh_hk: Q1 = 第25百分位數；Q3 = 第75
   s1_en: >-
     Here it is in symbols. Put the values in order. Q1 is the value a quarter of the way up, and Q3 is the value three quarters of the way up.
     The IQR is Q3 minus Q1. With the nearest-rank method, the place is the fraction times the number of values, rounded up.
@@ -312,7 +333,7 @@ beats:
   s3_zh_hk: 個盒而家由310到420，所以四分位距係110杯，多咗30。再睇兩頭：最高減最低本來係140杯，而家係4,200減280，等於3,920，闊咗二十八倍。一間好遠嘅店，將條線一直拉長到盡頭，但係差唔多冇郁到個盒。咁係咪即係話，四分位距乜都唔怕？
 - id: limit
   visual: two_column
-  seconds: 60
+  seconds: 50
   kicker: The Limit
   kicker_en: The Limit
   kicker_zh: 限度
@@ -342,7 +363,7 @@ beats:
   s3_zh_hk: 佢話唔到你知兩頭嘅事。F店照樣賣咗4,200杯，照樣要另外安排。四分位距自己都變咗，所以穩健唔等於完全唔受影響。佢亦唔係保證每間店都只係差80杯。而且佢取決於比較邊組店、邊段時間、用咩方法；換一本教科書或者一個軟件，四分位數嘅位置可能會有少少唔同。至於牛奶實際訂幾多，仲要計埋倒咗嘅成本同賣晒嘅成本。
 - id: answer
   visual: takeaway
-  seconds: 68
+  seconds: 30
   kicker: The Answer
   kicker_en: The Answer
   kicker_zh: 答案
@@ -350,23 +371,27 @@ beats:
   title_en: Normal day? Check the IQR.
   title_zh: 平常多宽？看四分位距
   title_zh_hk: 平時幾闊？睇四分位距
-  q1_en: What does the IQR measure?
-  q1_zh: 四分位距量的是什么？
-  q1_zh_hk: 四分位距量緊咩？
-  q2_en: What must you report with it?
-  q2_zh: 报告时要同时说明什么？
-  q2_zh_hk: 報告嗰陣要同時講明咩？
+  q1_en: 'What does the IQR measure? → Middle width: Q3 − Q1 = 80 cups'
+  q1_zh: 四分位距量的是什么？→ 中间宽度：Q3减Q1等于80杯
+  q1_zh_hk: 四分位距量緊咩？→ 中間闊度：Q3減Q1等於80杯
+  q2_en: 'What must you report with it? → Group, period, and method'
+  q2_zh: 报告时要同时说明什么？→ 哪组店、哪段时间、什么方法
+  q2_zh_hk: 報告嗰陣要同時講明咩？→ 邊組店、邊段時間、咩方法
   s1_en: >-
-    Back to head office and the milk. It wanted a normal band without letting one strange day set it. End to end, the five shops spread over 140 cups, and one far shop could stretch that to 3,920.
-  s1_zh: 回到总部和牛奶。总部想要一个正常区间，又不想让一个奇怪的日子来定它。从一头到另一头，五家店相差140杯；多一家很远的店，就能拉到3,920杯。
-  s1_zh_hk: 返去總部同牛奶。總部想要一個正常範圍，又唔想畀一日古怪嘅生意嚟定佢。由一頭到另一頭，五間店相差140杯；多一間好遠嘅店，就可以拉到3,920杯。
+    Back to the milk order. End to end spreads 140 cups; one far shop could stretch that to thousands.
+  s1_zh: >-
+    回到牛奶订单。从一头到另一头相差140杯；一家很远的店能拉到几千。
+  s1_zh_hk: >-
+    返到牛奶訂單。由一頭到另一頭相差140杯；一間好遠嘅店可以拉到幾千。
   s2_en: >-
-    What does the IQR measure? The width of the middle of the ordered line, Q3 minus Q1. To find it, sort the values, take 0.25 and 0.75 of the count, round each place up, read Q1 and Q3, and subtract.
-    For this Monday, 390 minus 310 is 80 cups.
-  s2_zh: 四分位距量的是什么？排好的这条线中间的宽度，也就是Q3减Q1。找的方法是：把数排好，用0.25和0.75分别乘以个数，位置有小数就向上取整，读出Q1和Q3，再相减。这个星期一，390减310，等于80杯。
-  s2_zh_hk: 四分位距量緊咩？排好嗰條線中間嘅闊度，即係Q3減Q1。搵嘅方法係：將啲數排好，用0.25同0.75分別乘個數，位置有小數就向上取整，讀出Q1同Q3，再相減。呢個星期一，390減310，等於80杯。
+    The IQR is the middle width — Q3 minus Q1. This Monday: 390 minus 310 is 80 cups.
+  s2_zh: >-
+    四分位距是中间的宽度——Q3减Q1。这个星期一：390减310，等于80杯。
+  s2_zh_hk: >-
+    四分位距係中間嘅闊度——Q3減Q1。呢個星期一：390減310，等於80杯。
   s3_en: >-
-    What must you report with it? The group of shops, the period, and the method, here the nearest-rank method. Add Shop F and the IQR becomes 110 cups, while the ends stretch to 3,920.
-    These are numbers we supposed for one Monday. The IQR tells you how wide a normal day's middle is, not what happened on the far days, and not how much milk to order on its own.
-  s3_zh: 报告时要同时说明什么？比较的是哪组店、哪段时间、用什么方法，这里是最接近秩法。加上F店，四分位距变成110杯，两头却拉到3,920杯。这些都是我们为一个星期一假设的数字。四分位距告诉你平常日子的中间有多宽，不告诉你两头那几天发生了什么，也不能单靠它决定订多少牛奶。
-  s3_zh_hk: 報告嗰陣要同時講明咩？比較嘅係邊組店、邊段時間、用咩方法，呢度係最接近秩法。加埋F店，四分位距變成110杯，兩頭就拉到3,920杯。呢啲都係我哋為一個星期一假設嘅數字。四分位距話你知平時嘅中間有幾闊，唔話你知兩頭嗰幾日發生咗乜，亦唔可以淨靠佢決定訂幾多牛奶。
+    Report the group, period, and method. The IQR is the normal band — not the far days. That is the answer.
+  s3_zh: >-
+    写明哪组店、哪段时间、什么方法。四分位距是平常区间——不是两头。这就是答案。
+  s3_zh_hk: >-
+    寫明邊組店、邊段時間、咩方法。四分位距係平時範圍——唔係兩頭。呢個就係答案。

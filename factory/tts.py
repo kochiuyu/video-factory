@@ -40,6 +40,7 @@ from paths import replace_file
 
 TTS_TRIES = max(1, int(os.environ.get("VF_TTS_TRIES", "4")))
 TTS_WAIT = float(os.environ.get("VF_TTS_WAIT", "2"))
+TTS_CALL_TIMEOUT = float(os.environ.get("VF_TTS_TIMEOUT", "75"))
 
 GOOGLE_TTS_URL = "https://texttospeech.googleapis.com/v1/text:synthesize"
 GOOGLE_VOICES = {
@@ -437,7 +438,7 @@ def synthesize(text: str, language: str, dest: Path) -> Path:
         tmp = _tmp_mp3(dest, attempt)
         try:
             _drop_tmp(tmp)
-            asyncio.run(_save(text, voice, tmp, language))
+            asyncio.run(asyncio.wait_for(_save(text, voice, tmp, language), TTS_CALL_TIMEOUT))
             if not tmp.exists() or tmp.stat().st_size < 256:
                 raise RuntimeError(f"TTS produced no audio: {dest}")
             return _commit_audio(tmp, dest)
@@ -498,7 +499,7 @@ async def _save_with_retries(text: str, lang: str, dest: Path) -> Path:
         tmp = _tmp_mp3(dest, attempt)
         try:
             _drop_tmp(tmp)
-            await _save(text, voice, tmp, lang)
+            await asyncio.wait_for(_save(text, voice, tmp, lang), TTS_CALL_TIMEOUT)
             if not tmp.exists() or tmp.stat().st_size < 256:
                 raise RuntimeError(f"TTS produced no audio: {dest}")
             if os.name == "nt":

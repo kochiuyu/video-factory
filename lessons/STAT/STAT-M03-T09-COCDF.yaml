@@ -1,19 +1,45 @@
 id: STAT-M03-T09-COCDF
-course: statistics
 course_en: "Discrete & Continuous Probability Distributions"
 course_zh: "离散与连续概率分布"
 course_zh_hk: "離散與連續概率分佈"
-audience: "first-year business students"
-audience_en: "first-year business students"
-audience_zh: "商学院一年级学生"
-audience_zh_hk: "商學院一年級學生"
-duration_target_s: 168
+duration_target_s: 166
 title_en: "Setting service level guarantees"
 title_zh: "划定履约底线：连续累积分布与分位数"
 title_zh_hk: "劃定履約底線：連續累積分佈與分位數"
-objective_en: "Define the continuous Cumulative Distribution Function F(x) as the running integral of probability density, apply the inverse CDF to determine operational percentiles and quantiles, and engineer customer wait-time SLA cutoffs for mobile pickup."
-objective_zh: "将连续累积分布函数 F(x) 定义为概率密度的连续积分，运用逆累积函数求解运营分位数与百分位数，并为手机移动点单自提精准设定顾客等待时长的 SLA 考核线。"
-objective_zh_hk: "將連續累積分佈函數 F(x) 定義為概率密度嘅連續積分，運用逆累積函數求解營運分位數與百分位數，並為手機點單自提精準設定顧客等待時長嘅 SLA 考核線。"
+youtube:
+  description_en: |
+    Setting service level guarantees
+    
+    Mobile pickup wants a prep-time cutoff that covers 95% of orders. The average does not answer that — it does not mark the upper-tail cutoff. How do the continuous CDF and quantiles turn a target probability into a time threshold?
+    
+    Read F(t) as the probability that prep time stays at most t. Invert the CDF — take the quantile — to find the time that matches a target coverage such as 95%. That is how a service promise becomes a number on the app.
+    
+    Price service agreements using percentiles, not averages. The continuous CDF turns a coverage goal into an operational cutoff.
+    
+    Discrete & Continuous Probability Distributions - Module 3 - Short 9 (COCDF)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    划定履约底线：连续累积分布与分位数
+    
+    手机自提想选一个能盖住 95% 订单的制作时间门槛。平均值答不了——它标不出上尾截止点。
+    
+    把 F(t) 读成制作时间至多为 t 的概率。再对 CDF 求逆——取分位数——就能把 95% 这类目标覆盖率换成时间阈值。服务承诺这才变成 App 上的数字。
+    
+    以分位数锚定服务承诺，以逆累积锁定战略安全。连续 CDF 把覆盖目标换成运营截止线。
+    
+    离散与连续概率分布 - 模块3 - 短片9（COCDF）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    劃定履約底線：連續累積分佈與分位數
+    
+    手機自提想揀一個可以蓋住 95% 訂單嘅製作時間門檻。平均值答唔到——佢標唔出上尾截止點。
+    
+    將 F(t) 讀成製作時間至多係 t 嘅概率。再對 CDF 求逆——取分位數——就可以將 95% 呢類目標覆蓋率換成時間門檻。服務承諾先變成 App 上面嘅數字。
+    
+    以分位數錨定服務承諾，以逆累積鎖定戰略安全。連續 CDF 將覆蓋目標換成營運截止線。
+    
+    離散與連續概率分佈 - 模組3 - 短片9（COCDF）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: "continuous CDF"
   zh: "连续累积分布函数"
@@ -91,9 +117,9 @@ beats:
   title_en: "What wait time should the app guarantee?"
   title_zh: "手机点单页面该向顾客承诺几分钟取餐？"
   title_zh_hk: "手機點單頁面應向顧客承諾幾分鐘攞餐？"
-  en: "A mobile-pickup team wants to choose a preparation-time threshold that covers 95% of orders. An average time does not answer that question because it does not identify the upper-tail cutoff. How can the continuous CDF and its quantile convert a target probability into a time threshold?"
-  zh: "手机自提团队希望选择一个能够覆盖 95% 订单的制作时间阈值。平均时间不能回答这个问题，因为它并不识别上尾截止点。连续 CDF 与分位数如何把目标概率转换为时间阈值？"
-  zh_hk: "手機自提團隊希望選擇一個可以覆蓋 95% 訂單嘅製作時間門檻。平均時間答唔到呢個問題，因為佢並唔識別上尾截止點。連續 CDF 同分位數點樣將目標概率轉換成時間門檻？"
+  en: "Mobile pickup wants a prep-time cutoff that covers 95% of orders. The average does not answer that — it does not mark the upper-tail cutoff. How do the continuous CDF and quantiles turn a target probability into a time threshold?"
+  zh: "手机自提想选一个能盖住 95% 订单的制作时间门槛。平均值答不了——它标不出上尾截止点。连续 CDF 和分位数怎么把目标概率换成时间阈值？"
+  zh_hk: "手機自提想揀一個可以蓋住 95% 訂單嘅製作時間門檻。平均值答唔到——佢標唔出上尾截止點。連續 CDF 同分位數點樣將目標概率換成時間門檻？"
 - id: define
   visual: definition_card
   seconds: 34
@@ -109,8 +135,8 @@ beats:
   formula_zh_hk: "F(x) = 概率密度由負無窮至 x 嘅積分；分位數 x_p = inf{x: F(x) >= p}"
   formula_tex: "F(x) = \\int_{-\\infty}^{x} f(t)\\,dt, \\quad x_p = F^{-1}(p)"
   s1_en: "The continuous Cumulative Distribution Function, F of x, represents the total accumulated probability from the far left of the distribution up to threshold x."
-  s1_zh: "连续累积分布函数 F(x) 代表了从概率密度分布的最左侧负无穷出发、一路向右连续累加至指定阈值 x 的整体总概率。"
-  s1_zh_hk: "連續累積分佈函數 F(x) 代表咗由概率密度分佈嘅最左側負無窮出發、一路向右連續累加至指定閾值 x 嘅整體總概率。"
+  s1_zh: "连续 CDF 同样是 F(x)=P(X≤x)。要找覆盖率对应的时间点，就反查分位数。"
+  s1_zh_hk: "連續 CDF 同樣係 F(x)=P(X≤x)。要搵覆蓋率對應嘅時間點，就反查分位數。"
   s2_en: "For an absolutely continuous model, the CDF is continuous and non-decreasing. The p-quantile is the smallest x for which F(x) is at least p; when F is strictly increasing, this agrees with the ordinary inverse CDF."
   s2_zh: "对于绝对连续模型，CDF 连续且单调非减。第 p 分位数是使 F(x) 至少达到 p 的最小 x；当 F 严格递增时，它与普通逆 CDF 一致。"
   s2_zh_hk: "對絕對連續模型嚟講，CDF 連續兼單調非減。第 p 分位數係令 F(x) 至少去到 p 嘅最細 x；當 F 嚴格遞增，佢同普通逆 CDF 一致。"
@@ -146,9 +172,9 @@ beats:
   kicker_en: "The Ledger"
   kicker_zh: "账目精算"
   kicker_zh_hk: "賬目精算"
-  title_en: "Setting the Wan Chai mobile pickup SLA"
-  title_zh: "测算湾仔店手机点单自提服务线"
-  title_zh_hk: "測算灣仔舖手機點單自提服務線"
+  title_en: "Setting the Shop A mobile pickup SLA"
+  title_zh: "测算A店手机点单自提服务线"
+  title_zh_hk: "測算A舖手機點單自提服務線"
   step1_en: "Model assumption: Uniform between 2 and 8 minutes"
   step1_zh: "模型假设：制作时间在 2 到 8 分钟均匀分布；f(x) = 1/6"
   step1_zh_hk: "模型假設：製作時間喺 2 到 8 分鐘均勻分佈；f(x) = 1/6"
@@ -158,9 +184,9 @@ beats:
   step3_en: "Invert for 95%: (x - 2) / 6 = 0.95 -> x = 2 + 5.7 = 7.7 minutes"
   step3_zh: "逆解 95% 目标：(x - 2) / 6 = 0.95，解得 x = 7.7 分钟（462秒）"
   step3_zh_hk: "逆解 95% 目標：(x - 2) / 6 = 0.95，解得 x = 7.7 分鐘（462秒）"
-  s1_en: "For this Wan Chai illustration, assume preparation time is uniformly distributed between two and eight minutes, giving density one over six on that interval."
-  s1_zh: "在这个湾仔店示例中，假设制作时间在 2 到 8 分钟之间均匀分布，因此区间内密度为 1/6。"
-  s1_zh_hk: "喺呢個灣仔舖示例入面，假設製作時間喺 2 到 8 分鐘之間均勻分佈，所以區間內密度係 1/6。"
+  s1_en: "For this Shop A illustration, assume preparation time is uniformly distributed between two and eight minutes, giving density one over six on that interval."
+  s1_zh: "在这个A店示例中，假设制作时间在 2 到 8 分钟之间均匀分布，因此区间内密度为 1/6。"
+  s1_zh_hk: "喺呢個A舖示例入面，假設製作時間喺 2 到 8 分鐘之間均勻分佈，所以區間內密度係 1/6。"
   s2_en: "Integrate from the minimum baseline of two minutes: our continuous CDF is F of x equals x minus two divided by six."
   s2_zh: "从两分钟的最短基准时间开始积分：该场景下的连续累积分布函数 F(x) 恰好等于 x 减去二、再除以六。"
   s2_zh_hk: "由兩分鐘嘅最短基準時間開始積分：該場景下嘅連續累積分佈函數 F(x) 啱啱好等於 x 減去二、再除以六。"
@@ -169,7 +195,7 @@ beats:
   s3_zh_hk: "要求第 95 百分位數嗰陣，令 F(x)=0.95，解得 x=7.7 分鐘。呢個係模型畀出嘅覆蓋截止點；任何對外承諾仲要考慮模型擬合、測量、產能同業務成本。"
 - id: takeaway
   visual: takeaway
-  seconds: 32
+  seconds: 30
   kicker: "Decision Rule"
   kicker_en: "Decision Rule"
   kicker_zh: "商业法则"
@@ -177,18 +203,18 @@ beats:
   title_en: "Price service agreements using percentiles"
   title_zh: "以分位数锚定服务承诺，以逆累积锁定战略安全"
   title_zh_hk: "以分位數錨定服務承諾，以逆累積鎖定戰略安全"
-  q1_en: "Why should marketing never announce an average wait time as a customer promise?"
-  q1_zh: "为什么市场部门绝不能将平均等待时长作为向顾客承诺的 SLA？"
-  q1_zh_hk: "點解市場部門絕唔可以將平均等待時長作為向顧客承諾嘅 SLA？"
-  q2_en: "How does the continuous CDF govern supply-chain logistics?"
-  q2_zh: "连续累积分布函数如何赋能供应链的到货期管控？"
-  q2_zh_hk: "連續累積分佈函數點樣賦能供應鏈嘅到貨期管控？"
-  s1_en: "Do not use the mean as a percentile without checking the distribution. In a continuous distribution symmetric about its mean, 50% lies above the mean, but that does not imply 50% customer dissatisfaction."
-  s1_zh: "不要在未检查分布时把均值当作百分位数。对以均值为对称中心的连续分布，50% 位于均值之上，但这并不代表 50% 顾客不满意。"
-  s1_zh_hk: "未檢查分佈之前，唔好將均值當成百分位數。對以均值做對稱中心嘅連續分佈，50% 位於均值之上，但呢個唔代表 50% 顧客唔滿意。"
-  s2_en: "Choose a target probability from business requirements, use the CDF quantile to obtain the corresponding cutoff, and validate the model before using that cutoff in a service agreement."
-  s2_zh: "先根据业务要求选择目标概率，再用 CDF 分位数求出对应截止点，并在把该阈值写入服务协议前验证模型。"
-  s2_zh_hk: "先按業務要求選擇目標概率，再用 CDF 分位數求出對應截止點，並喺將呢個門檻寫入服務協議之前驗證模型。"
-  s3_en: "For the uniform two-to-eight-minute model, the 90th percentile is 7.4 minutes and the 95th percentile is 7.7 minutes. A percentile is a model-based coverage cutoff, not a service promise by itself."
-  s3_zh: "在 2 至 8 分钟的均匀模型下，第 90 百分位数为 7.4 分钟，第 95 百分位数为 7.7 分钟。分位数是模型给出的覆盖截止点，本身并不等于服务承诺。"
-  s3_zh_hk: "喺 2 至 8 分鐘嘅均勻模型之下，第 90 百分位數係 7.4 分鐘，第 95 百分位數係 7.7 分鐘。分位數係模型畀出嘅覆蓋截止點，本身唔等於服務承諾。"
+  q1_en: "Promise the mean wait? → No — half the mass can sit above the mean"
+  q1_zh: "把平均等待当承诺？→ 不行——均值上面往往还有一半"
+  q1_zh_hk: "將平均等待當承諾？→ 唔得——均值上面往往仲有一半"
+  q2_en: "Need a coverage cutoff? → Invert the CDF (quantile)"
+  q2_zh: "要覆盖率截止点？→ 反查 CDF（分位数）"
+  q2_zh_hk: "要覆蓋率截止點？→ 反查 CDF（分位數）"
+  s1_en: "Do not treat the mean as a percentile until you know the shape. Symmetry about the mean is not a satisfaction claim."
+  s1_zh: "没看清分布形状前，别把均值当成分位数。关于均值对称，也不等于顾客满意。"
+  s1_zh_hk: "未睇清分佈形狀之前，唔好將均值當成分位數。關於均值對稱，亦唔等於顧客滿意。"
+  s2_en: "Pick the target probability from the business, read the quantile, then validate the model before you publish the promise."
+  s2_zh: "目标概率来自业务，读出分位数，对外承诺前先验证模型。"
+  s2_zh_hk: "目標概率嚟自業務，讀出分位數，對外承諾前先驗證模型。"
+  s3_en: "Uniform 2–8 min: 90th≈7.4 min, 95th≈7.7 min — model-based cutoffs, not slogans."
+  s3_zh: "均匀 2–8 分钟：90 分位约 7.4 分，95 分位约 7.7 分——是模型截止点，不是口号。"
+  s3_zh_hk: "均勻 2–8 分鐘：90 分位約 7.4 分，95 分位約 7.7 分——係模型截止點，唔係口號。"

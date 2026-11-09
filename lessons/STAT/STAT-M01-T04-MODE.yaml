@@ -1,19 +1,52 @@
 id: STAT-M01-T04-MODE
-course: statistics
 course_en: Business Statistics
 course_zh: 商务统计
 course_zh_hk: 商務統計
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 604
+duration_target_s: 582
 title_en: What is the mode?
 title_zh: 什么是众数？
 title_zh_hk: 咩係眾數？
-objective_en: Decide which lid to run largest when the sizes are labels you cannot average, count which size customers choose most, and see a tie and a Monday with no mode.
-objective_zh: 当杯型是不能相加的标签时，判断该把哪一种杯盖安排最大的批次，清点顾客最常选的规格，并看到并列和没有众数的周一。
-objective_zh_hk: 當杯型係唔可以加埋嘅標籤時，判斷該將邊一種杯蓋安排最大嘅批次，清點顧客最常揀嘅規格，並睇到並列同冇眾數嘅星期一。
+youtube:
+  description_en: |
+    What is the mode?
+    
+    The factory asks which lid should get the largest run before Monday. You sell Small, Medium, and Large. Monday's orders: Small 40, Medium 280, Large 100. These are labels, not cups you can add - there is no average lid and no middle lid the plant can make.
+    
+    Count how often each size appears. Medium's bar is tallest at 280, above Small at 40 and Large at 100. That most common value (or category) is the mode. Run Medium largest. Still stock Small and Large: together they still have 140 orders, and 280 is not a full lid order by itself.
+    
+    Drawbacks: a second Monday with Small 40, Medium 150, Large 150 is bimodal - two modes share the top. Three orders of one each (1, 1, 1) means no mode. When every day differs - say 52, 64, 100, 136, 148 - group the days: Under 100 has two days, 100 to 150 has three. No day sold over 150, so that empty band stays off the chart. The modal class is 100 to 150.
+    
+    Use the mode when labels cannot be added and you need the most common choice.
+    
+    Business Statistics - Module 1 - Short 4 (mode)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    什么是众数？
+    
+    工厂要问：星期一前哪一种杯盖该开最大一批？你卖小杯、中杯、大杯。星期一订单：小杯40、中杯280、大杯100。这些是标签，加不起来 - 没有工厂能做的“平均杯盖”，也没有正中间的杯盖。
+    
+    数每种规格出现几次。中杯柱最高，280，高于小杯40和大杯100。出现次数最多的值（或类别）就是众数。中杯开最大一批。小杯和大杯仍要备：两边合计还有140单，而且280本身不是完整的杯盖订单。
+    
+    注意：另一个星期一若是小杯40、中杯150、大杯150，就是双峰 - 两个众数并列最高。各一单（1、1、1）则没有众数。若每天都不同 - 例如52、64、100、136、148 - 就分组：100以下两天，100到150三天。没有一天超过150，空的那一组不画在图上。众数组是100到150。
+    
+    标签加不起来、又要最常见选择时，用众数。
+    
+    商务统计 - 模块1 - 短片4（众数）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    咩係眾數？
+    
+    工廠要問：星期一前邊一種杯蓋應該開最大一批？你賣細杯、中杯、大杯。星期一訂單：細杯40、中杯280、大杯100。呢啲係標籤，加唔起嚟 - 冇工廠可以整嘅「平均杯蓋」，亦冇正中間嘅杯蓋。
+    
+    數每種規格出現幾次。中杯柱最高，280，高過細杯40同大杯100。出現次數最多嘅值（或者類別）就係眾數。中杯開最大一批。細杯同大杯都要備：兩邊合計仲有140單，而且280本身唔係完整嘅杯蓋訂單。
+    
+    注意：另一個星期一如果係細杯40、中杯150、大杯150，就係雙峰 - 兩個眾數並列最高。各一單（1、1、1）就冇眾數。如果每日都唔同 - 例如52、64、100、136、148 - 就分組：100以下兩日，100到150三日。冇一日超過150，空嗰一組唔畫喺圖上。眾數組係100到150。
+    
+    標籤加唔起嚟、又要最常見選擇時，用眾數。
+    
+    商務統計 - 模組1 - 短片4（眾數）
+    覺得有用嘅話，訂閱下一集。
+
 glossary:
 - en: mode
   zh: 众数
@@ -213,9 +246,9 @@ beats:
   left_en: 'Equal run: Small piles up'
   left_zh: '平均分配：小杯盖堆着'
   left_zh_hk: '平均分配：細杯蓋堆住'
-  right_en: Medium has 280 orders
-  right_zh: 中杯有 280 笔
-  right_zh_hk: 中杯有 280 筆
+  right_en: 'Medium: 280 orders'
+  right_zh: 中杯：280 笔
+  right_zh_hk: 中杯：280 筆
   s1_en: >-
     So which lid do you run largest? Suppose you split the run equally across the three sizes. Small has only 40 orders. Those lids pile up.
   s1_zh: >-
@@ -501,7 +534,7 @@ beats:
     但眾數唔係只做中杯蓋嘅指令。細杯同大杯仲有140筆。嗰啲顧客都要蓋。兩種唔同嘅組合，亦可能有同一個眾數。而且280唔係啱啱做280個中杯蓋嘅指令。佢入面冇安全庫存。所以仲要睇住成張表。
 - id: answer
   visual: takeaway
-  seconds: 52
+  seconds: 30
   kicker: The Answer
   kicker_en: The Answer
   kicker_zh: 回答问题
@@ -509,27 +542,27 @@ beats:
   title_en: Run Medium largest. Stock rest.
   title_zh: 中杯最大。其余也备。
   title_zh_hk: 中杯最大。其餘都備。
-  q1_en: Which lid should get the largest run?
-  q1_zh: 哪一种杯盖该安排最大的批次？
-  q1_zh_hk: 邊一種杯蓋該安排最大嘅批次？
-  q2_en: What else is needed before you set the run?
-  q2_zh: 定批次之前，还需要什么？
-  q2_zh_hk: 定批次之前，仲需要咩？
+  q1_en: 'Which lid gets the largest run? → Medium — the mode, 280 times'
+  q1_zh: 哪一种杯盖该安排最大的批次？→ 中杯——众数，出现280次
+  q1_zh_hk: 邊一種杯蓋該安排最大嘅批次？→ 中杯——眾數，出現280次
+  q2_en: 'What else before you set the run? → Still stock Small and Large'
+  q2_zh: 定批次之前，还需要什么？→ 小杯和大杯也要备
+  q2_zh_hk: 定批次之前，仲需要咩？→ 細杯同大杯都要備
   s1_en: >-
-    Back to the question. Medium. It appears 280 times, more than Small at 40 and Large at 100. Medium is the mode, so it gets the largest run.
+    Back to the question. Medium appears 280 times — more than Small or Large. That is the mode, so it gets the largest run.
   s1_zh: >-
-    回到问题。中杯。它出现了280次，多于小杯的40和大杯的100。中杯是众数，所以它安排最大的批次。
+    回到问题。中杯出现了280次，多于小杯和大杯。中杯是众数，所以安排最大的批次。
   s1_zh_hk: >-
-    返到問題。中杯。佢出現咗280次，多過細杯嘅40同大杯嘅100。中杯係眾數，所以佢安排最大嘅批次。
+    返到問題。中杯出現咗280次，多過細杯同大杯。中杯係眾數，所以安排最大嘅批次。
   s2_en: >-
-    A tie means two modes, and both get a large run. No repeat means no mode, and the count does not pick. Use the mode when the labels cannot be added, and you need the most common choice.
+    A tie means two modes; no repeat means no mode.
   s2_zh: >-
-    并列就是两个众数，两个都安排大的批次。没有重复就没有众数，清点选不出。标签不能相加，而你要最常见的选择时，用众数。
+    并列就是两个众数；没有重复就没有众数。
   s2_zh_hk: >-
-    並列就係兩個眾數，兩個都安排大嘅批次。冇重複就冇眾數，清點揀唔出。標籤唔可以加埋，而你要最常見嘅選擇時，用眾數。
+    並列就係兩個眾數；冇重複就冇眾數。
   s3_en: >-
-    Before you set the run, still look at Small and Large. These numbers describe only the Monday we supposed. The mode says which size appears most. It does not write the full order by itself.
+    Run Medium largest, but still stock the rest. That is the answer.
   s3_zh: >-
-    定批次之前，还是要看小杯和大杯。这些数只描述我们假设的这个周一。众数说的是哪一种出现得最多。它不能单独写下整张订单。
+    中杯安排最大，其余也要备。这就是答案。
   s3_zh_hk: >-
-    定批次之前，仲係要睇細杯同大杯。呢啲數只係描述我哋假設嘅呢個星期一。眾數講嘅係邊一種出現得最多。佢唔可以單獨寫低成張訂單。
+    中杯安排最大，其餘都要備。呢個就係答案。

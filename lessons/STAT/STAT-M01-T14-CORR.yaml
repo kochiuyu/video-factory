@@ -1,19 +1,40 @@
 id: STAT-M01-T14-CORR
-course: statistics
 course_en: Business Statistics
 course_zh: 商务统计
 course_zh_hk: 商務統計
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 552
+duration_target_s: 524
 title_en: What is correlation?
 title_zh: 什么是相关系数？
 title_zh_hk: 咩係相關系數？
-objective_en: Define Pearson correlation as covariance divided by the product of the two standard deviations (with ÷ n), read r on a unit-free −1 to +1 scale, use the five-shop rent and cups file, and treat a strong r as a starting point for investigation rather than proof of causation.
-objective_zh: 把皮尔逊相关系数定义为协方差除以两个标准差之积（除以n），在−1到+1的无单位尺度上读r，使用五家店租金与杯数的例子，并把强相关视为调查的起点，而不是因果关系的证明。
-objective_zh_hk: 將皮爾遜相關系數定義為協方差除以兩個標準差之積（除以n），喺−1到+1嘅無單位尺度上讀r，使用五間店租金同杯數嘅例子，並將強相關視為調查嘅起點，而唔係因果關係嘅證明。
+youtube:
+  description_en: |
+    What is correlation?
+    
+    Same five shops as the covariance short: rents 10k-19k and cups 300-460. Covariance is 176,000 dollar-cups. Divide by (rent SD x cups SD): about 3,162 x 55.9 ≈ 176,750. Correlation r ≈ 176,000 / 176,750 ≈ +0.996, about +1.00.
+    
+    r sits on a unit-free scale from -1 to +1. Near +1 is a strong positive linear pattern; near -1 the opposite. Switch rent to cents and r stays about +1.00. Strong together-movement is still not proof that raising rent raises cups.
+    
+    Business Statistics - Module 1 - Short 14 (correlation)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    什么是相关系数？
+    
+    与协方差短片相同的五家店：租金1万到1.9万，杯数300到460。协方差是176,000美元-杯。除以（租金标准差 x 杯数标准差）：约3,162 x 55.9 ≈ 176,750。相关系数 r ≈ 176,000 / 176,750 ≈ +0.996，约+1.00。
+    
+    r 在无单位的 -1 到 +1 尺上。靠近+1是强正线性形态；靠近-1则相反。租金改成美分，r仍约+1.00。一起动得强，仍不是“提高租金就能提高销量”的证明。
+    
+    商务统计 - 模块1 - 短片14（相关系数）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    咩係相關系數？
+    
+    同協方差短片相同嘅五間店：租金1萬到1.9萬，杯數300到460。協方差係176,000美元-杯。除以（租金標準差 x 杯數標準差）：約3,162 x 55.9 ≈ 176,750。相關系數 r ≈ 176,000 / 176,750 ≈ +0.996，約+1.00。
+    
+    r 喺無單位嘅 -1 到 +1 尺上面。靠近+1係強正線性形態；靠近-1則相反。租金改成美分，r仍然約+1.00。一齊郁得強，仍然唔係「提高租金就能提高銷量」嘅證明。
+    
+    商務統計 - 模組1 - 短片14（相關系數）
+    覺得有用嘅話，訂閱下一集。
+
 glossary:
 - en: correlation
   zh: 相关系数
@@ -388,7 +409,7 @@ beats:
   s3_zh_hk: 咁樣喺數據入面租金同杯數會一齊郁，即使租金本身並唔導致杯數。聲稱因果之前，要檢查散點圖、業務故事同更強嘅研究設計。
 - id: answer
   visual: takeaway
-  seconds: 58
+  seconds: 30
   kicker: The Answer
   kicker_en: The Answer
   kicker_zh: 回答
@@ -396,20 +417,27 @@ beats:
   title_en: Strength yes. Cause later.
   title_zh: 强弱可以谈，因果往后
   title_zh_hk: 強弱可以傾，因果往後
-  q1_en: How strong is the linear link?
-  q1_zh: 线性联系有多强？
-  q1_zh_hk: 線性聯繫有幾強？
-  q2_en: What must you still not claim?
-  q2_zh: 你仍然不能声称什么？
-  q2_zh_hk: 你仍然唔可以聲稱咩？
-  s1_en: 'For these five shops, r is about +1.00: a very strong positive linear pattern on a unit-free
-    scale from −1 to +1.'
-  s1_zh: 对这五家店，r约为+1.00：在−1到+1的无单位尺度上，这是非常强的正向线性模式。
-  s1_zh_hk: 對呢五間店，r約為+1.00：喺−1到+1嘅無單位尺度上，呢個係非常強嘅正向線性模式。
-  s2_en: That strength reading survives a change from dollars to cents. Covariance alone did not.
-  s2_zh: 这个强弱读数在从元换成分之后仍然成立。单靠协方差做不到。
-  s2_zh_hk: 呢個強弱讀數喺由蚊換成仙之後仍然成立。單靠協方差做唔到。
-  s3_en: 'The operating rule: use r for direction and linear strength, inspect the scatterplot, and do
-    not treat correlation as proof of cause.'
-  s3_zh: 经营规则：用r看方向和线性强弱，检查散点图，不要把相关当成因果的证明。
-  s3_zh_hk: 營運規則：用r睇方向同線性強弱，檢查散點圖，唔好將相關當成因果嘅證明。
+  q1_en: 'How strong is the linear link? → r ≈ +1.00 — very strong positive'
+  q1_zh: 线性联系有多强？→ r约+1.00——非常强的正向
+  q1_zh_hk: 線性聯繫有幾強？→ r約+1.00——非常強嘅正向
+  q2_en: 'What must you still not claim? → Cause'
+  q2_zh: 你仍然不能声称什么？→ 因果
+  q2_zh_hk: 你仍然唔可以聲稱咩？→ 因果
+  s1_en: >-
+    For these five shops, r is about +1.00 — a very strong positive linear pattern from −1 to +1.
+  s1_zh: >-
+    对这五家店，r约为+1.00——在−1到+1上，非常强的正向线性模式。
+  s1_zh_hk: >-
+    對呢五間店，r約為+1.00——喺−1到+1上，非常強嘅正向線性模式。
+  s2_en: >-
+    That strength reading survives dollars to cents. Covariance alone did not.
+  s2_zh: >-
+    这个强弱读数从元换成分之后仍然成立。单靠协方差做不到。
+  s2_zh_hk: >-
+    呢個強弱讀數由蚊換成仙之後仍然成立。單靠協方差做唔到。
+  s3_en: >-
+    Use r for direction and linear strength. Do not treat it as cause. That is the answer.
+  s3_zh: >-
+    用r看方向和线性强弱。不要当成因果。这就是答案。
+  s3_zh_hk: >-
+    用r睇方向同線性強弱。唔好當成因果。呢個就係答案。

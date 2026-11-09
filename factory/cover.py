@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 from pathlib import Path
 
 import yaml
@@ -88,6 +89,31 @@ def draw_mixed(draw, xy, text, size, fill):
     flush()
 
 
+def mixed_textlength(draw, text: str, size: int) -> float:
+    """Width of text using the same face-per-run rules as draw_mixed."""
+    total = 0.0
+    run, cjk = "", None
+
+    def flush():
+        nonlocal total, run, cjk
+        if not run:
+            return
+        face = font(size, cjk=bool(cjk))
+        total += draw.textlength(run, font=face)
+        run = ""
+
+    for ch in text:
+        this = is_cjk(ch)
+        if cjk is None:
+            cjk = this
+        if this != cjk:
+            flush()
+            cjk = this
+        run += ch
+    flush()
+    return total
+
+
 def wrap(draw: ImageDraw.ImageDraw, text: str, face: ImageFont.FreeTypeFont, width: int) -> list[str]:
     words = text.split()
     if has_cjk(text) and len(words) == 1:
@@ -115,6 +141,10 @@ def wrap(draw: ImageDraw.ImageDraw, text: str, face: ImageFont.FreeTypeFont, wid
     if cur:
         lines.append(cur)
     return lines or [text]
+
+
+def _legacy_lang_tag() -> bool:
+    return os.environ.get("VF_LEGACY_LANG_TAG", "").strip().lower() in {"1", "true", "yes", "on"}
 
 
 def _langs(slide: str) -> list[str]:
@@ -179,8 +209,14 @@ def paint(lesson: dict, slide: str, speech: str) -> Image.Image:
     size = 36 if len(lines) > 1 else 44
     y0 = 36
     for i, line in enumerate(lines):
-        draw.text((80, y0 + i * (size + 8)), line, font=font(size, cjk=has_cjk(line)), fill=GOLD)
+        draw_mixed(draw, (80, y0 + i * (size + 8)), line, size, GOLD)
     short = lesson.get("id", "")
+    from youtube import legacy_series, series_number
+
+    number = "" if legacy_series() else series_number(short)
+    if number:
+        # Same corner, same size: "1.09 · STAT-M01-T09-CV". Layout unchanged.
+        short = f"{number} · {short}"
     short_w = draw.textlength(short, font=font(32))
     draw.text((W - 80 - short_w, 48), short, font=font(32), fill=GOLD)
 
@@ -192,28 +228,38 @@ def paint(lesson: dict, slide: str, speech: str) -> Image.Image:
     y = max(160, (H - block_h) // 2 - 40)
     for bi, rows in enumerate(blocks):
         for line, size in rows:
-            face = font(size, cjk=has_cjk(line))
-            width = draw.textlength(line, font=face)
-            draw.text(((W - width) / 2, y), line, font=face, fill=WHITE)
+            width = mixed_textlength(draw, line, size)
+            draw_mixed(draw, ((W - width) / 2, y), line, size, WHITE)
             y += size + gap
         if mixed and bi == 0:
             rule_w = 1280
             draw.rectangle(((W - rule_w) / 2, y + 2, (W + rule_w) / 2, y + 8), fill=GOLD)
             y += rule_gap
     speech_kind, speech_name = SPEECH.get(speech, ("SPEECH", speech))
+    parts = _langs(slide)
+    if len(parts) == 2 and not _legacy_lang_tag():
+        from langs import language_label
+
+        label = language_label(parts[0], parts[1], "chip")
+        if label and "：" not in label and not label.startswith("Speech:"):
+            # Bilingual cells: the chip names narration and slides in one phrase.
+            speech_kind = {"en": "LANGUAGE", "zh": "语言", "zh_cn": "语言"}.get(parts[0], "語言")
+            speech_name = label
     chip_w, chip_h = 720, 96
+    need = mixed_textlength(draw, speech_kind, 28) + 28 + mixed_textlength(draw, speech_name, 40) + 120
+    chip_w = int(min(1500, max(chip_w, need)))
     x = (W - chip_w) / 2
     chip_y = y + 32
     draw.rounded_rectangle((x, chip_y, x + chip_w, chip_y + chip_h), radius=14, fill=CREAM)
-    kind_w = draw.textlength(speech_kind, font=font(28, cjk=has_cjk(speech_kind)))
+    kind_w = mixed_textlength(draw, speech_kind, 28)
     name_size = 46
-    while name_size > 30 and draw.textlength(speech_name, font=font(name_size, cjk=has_cjk(speech_name))) > chip_w - kind_w - 120:
+    while name_size > 30 and mixed_textlength(draw, speech_name, name_size) > chip_w - kind_w - 120:
         name_size -= 2
-    name_w = draw.textlength(speech_name, font=font(name_size, cjk=has_cjk(speech_name)))
+    name_w = mixed_textlength(draw, speech_name, name_size)
     row_w = kind_w + 28 + name_w
     left = x + (chip_w - row_w) / 2
-    draw.text((left, chip_y + 28), speech_kind, font=font(28, cjk=has_cjk(speech_kind)), fill=GOLD)
-    draw.text((left + kind_w + 28, chip_y + 22), speech_name, font=font(name_size, cjk=has_cjk(speech_name)), fill=INK)
+    draw_mixed(draw, (left, chip_y + 28), speech_kind, 28, GOLD)
+    draw_mixed(draw, (left + kind_w + 28, chip_y + 22), speech_name, name_size, INK)
     return img
 
 

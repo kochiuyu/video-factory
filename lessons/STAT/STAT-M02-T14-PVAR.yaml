@@ -1,19 +1,39 @@
 id: STAT-M02-T14-PVAR
-course: statistics
 course_en: Business Probability Foundations
 course_zh: 商务概率基础
 course_zh_hk: 商務概率基礎
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
+duration_target_s: 166
 title_en: "Pricing the volatility"
 title_zh: "给波动定价：随机变量的方差与标准差"
 title_zh_hk: "幫波動定價：隨機變量嘅方差與標準差"
-objective_en: "Define the variance and standard deviation of a discrete random variable, contrast expected payoffs with downside financial volatility, and explain why risk tolerance dictates whether small versus large businesses buy insurance."
-objective_zh: "把离散随机变量的方差与标准差定义为偏离期望值平方的概率加权平均数，对比期望收益与下行财务波动，并解释为什么风险承受力决定了小微店与大型连锁截然不同的投保决策。"
-objective_zh_hk: "將離散隨機變量嘅方差同標準差定義為偏離期望值平方嘅概率加權平均數，對比期望收益同下行財務波動，並解釋點解風險承受力決定咗小微舖同大型連鎖截然唔同嘅投保決策。"
+youtube:
+  description_en: |
+    Pricing the volatility
+
+    Expected value prices the center. Variance and standard deviation price the spread. Small firms can die on a bad draw even when the average looks fine.
+
+    For one machine, self-insurance expects 500 dollars with a standard deviation near 2,179 dollars. Compare both figures with the certain 600-dollar premium and what the warranty actually covers before you choose.
+
+    Business Probability Foundations - Module 2 - Short 14 (probability variance)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    给波动定价
+
+    期望值给中心定价；方差与标准差给离散定价。小微企业即使平均看起来不错，一次坏结果也可能致命。
+
+    单台机器自担期望 500 美元，标准差约 2,179 美元。决策前，把这两个数与确定的 600 美元保费、以及保修真实覆盖对照。
+
+    商务概率基础 - 模块2 - 短片14（概率方差）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    為波動定價
+
+    期望值為中心定價；方差同標準差為離散定價。小微企業即使平均睇落唔錯，一次壞結果都可能致命。
+
+    單台機器自擔期望 500 美元，標準差約 2,179 美元。決策之前，將呢兩個數同確定嘅 600 美元保費、以及保修真實覆蓋對照。
+
+    商務概率基礎 - 模組2 - 短片14（概率方差）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: "variance of a random variable"
   zh: "随机变量方差"
@@ -92,8 +112,8 @@ beats:
   title_zh: "你能在抵达平均值前挺过风暴吗？"
   title_zh_hk: "你可唔可以喺抵達平均值前挺過風暴？"
   en: "Self-insuring an espresso machine has an expected repair cost of five hundred dollars, compared with a certain six-hundred-dollar warranty premium. But the uninsured outcome is either zero or ten thousand dollars. How should a manager measure that financial volatility before choosing between the two options?"
-  zh: "一台意式咖啡机自担风险的期望维修成本为 500 元，而延保保费确定为 600 元。但自担风险的实际维修支出要么为 0 元，要么为 10,000 元。管理者在二者之间作选择前，应如何衡量这种财务波动？"
-  zh_hk: "一部意式咖啡機自擔風險嘅期望維修成本係 500 蚊，而延保保費確定係 600 蚊。但自擔風險嘅實際維修支出要麼係 0 蚊，要麼係 10,000 蚊。管理者喺兩者之間作選擇之前，應該點樣衡量呢種財務波動？"
+  zh: "一台意式咖啡机自担风险的期望维修成本是 500 元，延保保费确定是 600 元。可自担时，实际支出要么是 0，要么是 10,000。在两者之间作选择前，该怎么衡量这种财务波动？"
+  zh_hk: "一部意式咖啡機自擔風險嘅期望維修成本係 500 蚊，延保保費確定係 600 蚊。但自擔嗰陣，實際支出要麼係 0，要麼係 10,000。喺兩者之間作選擇之前，應該點樣衡量呢種財務波動？"
 - id: define
   visual: definition_card
   seconds: 34
@@ -109,11 +129,11 @@ beats:
   formula_zh_hk: "Var(X) = 偏差平方加權求和 = ∑ [ (財務值 - 期望均值)^2 × 發生概率 ]"
   formula_tex: "\\sigma^2 = \\text{Var}(X) = \\sum (x_i - E[X])^2 P(X = x_i), \\quad \\sigma = \\sqrt{\\text{Var}(X)}"
   s1_en: "Just as descriptive statistics squared deviations from the sample mean, probability theory squares deviations from the expected value and weights them by their probability."
-  s1_zh: "正如描述性统计将偏离样本均值的距离平方一样，概率论将每种可能情景偏离期望均值的差距取平方，并乘以对应的发生概率进行加权。"
-  s1_zh_hk: "正如描述性統計將偏離樣本均值嘅距離平方一樣，概率論將每種可能情景偏離期望均值嘅差距取平方，並乘以對應嘅發生概率進行加權。"
+  s1_zh: "就像描述性统计把偏离样本均值的距离拿去平方，概率论把每种情景偏离期望的差距平方，再乘上对应概率加权。"
+  s1_zh_hk: "好似描述性統計將偏離樣本均值嘅距離攞去平方，概率論將每種情景偏離期望嘅差距平方，再乘上對應概率加權。"
   s2_en: "Variance measures volatility in squared dollars. Taking its square root restores original currency, giving the standard deviation: a scale measure of how dispersed possible dollar outcomes are around the expected value."
-  s2_zh: "方差度量的是以“元平方”为单位的纯粹波动。开平方根后恢复为原始货币单位，得出标准差：它是衡量各种可能财务结果围绕期望值分散程度的尺度。"
-  s2_zh_hk: "方差度量嘅係以「蚊平方」為單位嘅純粹波動。開平方根之後恢復為原始貨幣單位，得出標準差：佢係衡量各種可能財務結果圍繞期望值分散程度嘅尺度。"
+  s2_zh: "方差量的是以「元平方」为单位的波动。开平方根后回到原来的货币单位，得到标准差：看各种可能金额围着期望散开有多远。"
+  s2_zh_hk: "方差量嘅係以「蚊平方」為單位嘅波動。開平方根之後返到原來嘅貨幣單位，得到標準差：睇各種可能金額圍住期望散開有幾遠。"
 - id: contrast
   visual: two_column
   seconds: 36
@@ -131,14 +151,14 @@ beats:
   right_zh: "自担风险：期望成本 500 元，标准差高达 2,179 元"
   right_zh_hk: "自擔風險：期望成本 500 蚊，標準差高達 2,179 蚊"
   s1_en: "Look at the profound trade-off between the two strategies. In this simplified repair-cost model, the warranty premium is a certain six hundred dollars, so the modeled cost variance and standard deviation are zero."
-  s1_zh: "审视两种策略之间深刻的本质权衡。在这个简化维修成本模型中，延保保费确定为 600 元，因此模型中的成本方差和标准差为 0。"
-  s1_zh_hk: "審視兩種策略之間深刻嘅本質權衡。喺呢個簡化維修成本模型入面，延保保費確定係 600 蚊，所以模型入面嘅成本方差同標準差係 0。"
+  s1_zh: "看两种策略的取舍。在这个简化维修成本模型里，延保保费确定是 600 元，所以模型里的成本方差和标准差都是 0。"
+  s1_zh_hk: "睇兩種策略嘅取捨。喺呢個簡化維修成本模型入面，延保保費確定係 600 蚊，所以模型入面嘅成本方差同標準差都係 0。"
   s2_en: "Self-insuring delivers a better expected cost of five hundred dollars, but it carries a standard deviation of two thousand one hundred and seventy-nine dollars."
-  s2_zh: "自担风险虽然能把期望成本压低到五百元，却背负着2,179 元的标准差。"
-  s2_zh_hk: "自擔風險雖然可以將期望成本壓低到五百蚊，卻背負住2,179 蚊嘅標準差。"
+  s2_zh: "自担能把期望成本压到五百元，却背着大约 2,179 元的标准差。"
+  s2_zh_hk: "自擔可以將期望成本壓到五百蚊，卻背住大約 2,179 蚊嘅標準差。"
   s3_en: "You are not merely deciding whether to save one hundred dollars; you are deciding whether paying an extra hundred dollars is worth reducing the modeled repair-cost volatility."
-  s3_zh: "管理层面临的绝不仅仅是能否省下一百元的选择，而是在权衡：多花这一百元溢价，是否值得降低模型中的维修成本波动。"
-  s3_zh_hk: "管理層面臨嘅絕唔單止係能唔能夠慳返一百蚊嘅選擇，而係喺度權衡：使多呢一百蚊溢價，係咪值得降低模型入面嘅維修成本波動。"
+  s3_zh: "你不是只在决定能不能省一百元，而是在权衡：多付这一百元，值不值得把模型里的维修成本波动降下来。"
+  s3_zh_hk: "你唔係淨係喺度決定可唔可以慳一百蚊，而係喺度權衡：使多呢一百蚊，值唔值得將模型入面嘅維修成本波動降低。"
 - id: ledger
   visual: steps
   seconds: 36
@@ -149,27 +169,27 @@ beats:
   title_en: "Calculating the machine volatility"
   title_zh: "测算单台咖啡机的下行波动方差"
   title_zh_hk: "測算單部咖啡機嘅下行波動方差"
-  step1_en: "Breakdown gap: ($10,000 - $500)^2 * 0.05 = 4,512,500"
-  step1_zh: "故障情景：(10,000 - 500)^2 × 0.05 = 4,512,500"
-  step1_zh_hk: "故障情景：(10,000 - 500)^2 × 0.05 = 4,512,500"
-  step2_en: "Healthy gap: ($0 - $500)^2 * 0.95 = 237,500"
-  step2_zh: "正常情景：(0 - 500)^2 × 0.95 = 237,500"
-  step2_zh_hk: "正常情景：(0 - 500)^2 × 0.95 = 237,500"
-  step3_en: "Sum: Var = 4,750,000; SD = sqrt(Var) = $2,179"
-  step3_zh: "加总得方差：4,750,000；标准差开根号 = 2,179 元"
-  step3_zh_hk: "加總得方差：4,750,000；標準差開根號 = 2,179 蚊"
+  step1_en: "Breakdown term: 4,512,500"
+  step1_zh: "故障项: 4,512,500"
+  step1_zh_hk: "故障項: 4,512,500"
+  step2_en: "Healthy term: 237,500"
+  step2_zh: "正常项: 237,500"
+  step2_zh_hk: "正常項: 237,500"
+  step3_en: "Var 4.75M; SD = $2,179"
+  step3_zh: "方差 4.75M; SD=$2,179"
+  step3_zh_hk: "方差 4.75M; SD=$2,179"
   s1_en: "Let us compute the volatility step by step. Step one: in the five-percent breakdown scenario, ten thousand dollars minus the five hundred dollar mean is nine thousand five hundred. Squaring that and weighting by zero point zero five gives four million five hundred and twelve thousand five hundred."
-  s1_zh: "让我们步步推演方差。第一步：在 5% 的故障情景下，一万元支出减去五百元均值差额为九千五百元。平方后乘以概率 0.05，得出四百五十一万二千五百。"
-  s1_zh_hk: "等我哋步步推演方差。第一步：喺 5% 嘅故障情景下，一萬蚊支出減去五百蚊均值差額為九千五百蚊。平方後乘以概率 0.05，得出四百五十一萬二千五百。"
+  s1_zh: "一步步算波动。第一步：在 5% 故障情景下，一万元减五百元均值，差额九千五百。平方后再乘概率 0.05，得到四百五十一万二千五百。"
+  s1_zh_hk: "一步步計波動。第一步：喺 5% 故障情景下，一萬蚊減五百蚊均值，差額九千五百。平方後再乘概率 0.05，得到四百五十一萬二千五百。"
   s2_en: "Step two: in the ninety-five-percent healthy scenario, zero minus five hundred squared is two hundred and fifty thousand. Weighting by zero point nine five gives two hundred and thirty-seven thousand five hundred."
-  s2_zh: "第二步：在 95% 的正常情景下，零支出减去五百元差额为负五百。平方后乘以概率 0.95，得出二十三万七千五百。"
-  s2_zh_hk: "第二步：喺 95% 嘅正常情景下，零支出減去五百蚊差額為負五百。平方後乘以概率 0.95，得出二十三萬七千五百。"
+  s2_zh: "第二步：在 95% 正常情景下，零减五百，差额负五百。平方后再乘 0.95，得到二十三万七千五百。"
+  s2_zh_hk: "第二步：喺 95% 正常情景下，零減五百，差額負五百。平方後再乘 0.95，得到二十三萬七千五百。"
   s3_en: "Step three: sum the components to get a variance of four million seven hundred and fifty thousand dollars squared. Take the square root: your financial standard deviation is two thousand one hundred and seventy-nine dollars."
-  s3_zh: "第三步：两项加总，得出四百七十五万的元平方方差。开平方根：真实的财务标准差高达 2,179 元。"
-  s3_zh_hk: "第三步：兩項加總，得出四百七十五萬嘅蚊平方方差。開平方根：真實嘅財務標準差高達 2,179 蚊。"
+  s3_zh: "第三步：两项加总，方差是四百七十五万元平方。开平方根：财务标准差大约 2,179 元。"
+  s3_zh_hk: "第三步：兩項加總，方差係四百七十五萬蚊平方。開平方根：財務標準差大約 2,179 蚊。"
 - id: takeaway
   visual: takeaway
-  seconds: 32
+  seconds: 30
   kicker: "Decision Rule"
   kicker_en: "Decision Rule"
   kicker_zh: "商业法则"
@@ -177,18 +197,18 @@ beats:
   title_en: "Expected value sets price, variance tests survival"
   title_zh: "期望值决定价格底线，方差考验生存韧性"
   title_zh_hk: "期望值決定價格底線，方差考驗生存韌性"
-  q1_en: "Why is expected value alone insufficient for small businesses?"
-  q1_zh: "为什么单凭期望值无法支撑小微企业的生存决策？"
-  q1_zh_hk: "點解單憑期望值冇辦法支撐小微企業嘅生存決策？"
-  q2_en: "How should executives balance risk and return?"
-  q2_zh: "高管团队应如何在期望收益与波动风险之间取得平衡？"
-  q2_zh_hk: "高管團隊應點樣喺期望收益同波動風險之間取得平衡？"
-  s1_en: "For risky decisions, compare expected value with dispersion and the organization’s capacity to absorb adverse outcomes; variance alone does not describe the size of the worst possible loss."
-  s1_zh: "评估风险决策时，应同时比较期望值、离散程度及组织承受不利结果的能力；方差本身并不说明最坏损失有多大。"
-  s1_zh_hk: "評估風險決策嗰陣，應該一齊比較期望值、離散程度同組織承受不利結果嘅能力；方差本身並唔說明最壞損失有幾大。"
-  s2_en: "Organizations with greater risk-bearing capacity may prefer self-insurance, while others may pay a premium to transfer risk; the choice depends on liquidity, diversification, contract coverage, and risk tolerance."
-  s2_zh: "风险承受能力较强的组织可能倾向自担风险，其他组织则可能支付保费来转移风险；选择取决于流动性、分散程度、合同保障和风险承受力。"
-  s2_zh_hk: "風險承受能力較強嘅組織可能傾向自擔風險，其他組織就可能支付保費嚟轉移風險；選擇取決於流動性、分散程度、合約保障同風險承受力。"
-  s3_en: "For this machine, self-insurance has an expected cost of 500 dollars and a standard deviation of about 2,179 dollars. Compare both figures with the certain 600-dollar premium and the warranty’s actual coverage before deciding."
-  s3_zh: "对这台机器，自担风险的期望成本为 500 元，标准差约为 2,179 元。决策前，应把两项指标与确定的 600 元保费及延保的实际保障范围一并比较。"
-  s3_zh_hk: "對呢部機器，自擔風險嘅期望成本係 500 蚊，標準差大約係 2,179 蚊。決策之前，應該將兩項指標同確定嘅 600 蚊保費以及延保嘅實際保障範圍一齊比較。"
+  q1_en: "EMV alone for small firms? → Dispersion can kill before the average"
+  q1_zh: "小微只看期望？→ 波动可能先于均值致命"
+  q1_zh_hk: "小微淨睇期望？→ 波動可能早過均值致命"
+  q2_en: "Balance risk/return? → Pair expected cost with SD and capacity"
+  q2_zh: "如何平衡？→ 期望成本配标准差与承受力"
+  q2_zh_hk: "點樣平衡？→ 期望成本配標準差同承受力"
+  s1_en: "Pair expected value with dispersion and the firm's capacity to absorb a bad draw."
+  s1_zh: "把期望值、离散度，以及企业扛住坏结果的能力放在一起看。"
+  s1_zh_hk: "將期望值、離散度，以及企業扛住壞結果嘅能力放埋一齊睇。"
+  s2_en: "Higher risk capacity may self-insure; others pay to transfer risk."
+  s2_zh: "承受力强的可以自担；其他企业付费转移风险。"
+  s2_zh_hk: "承受力強嘅可以自擔；其他企業付費轉移風險。"
+  s3_en: "Self-insure: expected 500 dollars, SD about 2,179 — compare with the 600-dollar premium."
+  s3_zh: "自担：期望 500 元，标准差约 2,179——对照 600 元保费。"
+  s3_zh_hk: "自擔：期望 500 蚊，標準差約 2,179——對照 600 蚊保費。"

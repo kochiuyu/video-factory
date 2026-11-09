@@ -9,21 +9,42 @@
 #   cubes    — no-lean bridge (skip if T11 was just watched)
 # Suggested split: CORE now; add squares/cubes when teaching kurtosis alone.
 id: STAT-M01-T12-KURT
-course: statistics
 course_en: Business Statistics
 course_zh: 商务统计
 course_zh_hk: 商務統計
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 804
+duration_target_s: 754
 title_en: What is kurtosis?
 title_zh: 什么是峰度？
 title_zh_hk: 咩係峰度？
-objective_en: Compare two shops that match on the average, the variance and the skewness, use the fourth powers of the distances, measured against the spread, to see which shop has heavier tails, and explain why that number alone cannot set the reserve.
-objective_zh: 比较两家平均数、方差和偏度都相同的门店，用距离的四次方（和分散相比）看出哪家尾部更重，并说明这个数本身不能定储备。
-objective_zh_hk: 比較兩間平均數、方差同偏度都相同嘅門店，用距離嘅四次方（同分散相比）睇出邊間尾部更重，並說明呢個數本身唔可以定儲備。
+youtube:
+  description_en: |
+    What is kurtosis?
+    
+    Two shops average 100 with the same variance and zero skewness, but different tails. Shop A: 52, 64, 100, 136, 148 - moderate misses of 36-48 on four days. Shop B: 40, 100, 100, 100, 160 - spot on three days, then off by 60 twice. A steady buffer covers A more often; B fails on the rare far days.
+    
+    Kurtosis weighs the fourth power of the gaps - higher means heavier tails. A is about 1.3; B is 2.5. Myth: peakedness - read tails, not how pointy the middle looks. A Normal benchmark is 3; excess kurtosis is kurtosis minus 3. It does not say how many reserve cups to hold by itself.
+    
+    Business Statistics - Module 1 - Short 12 (kurtosis)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    什么是峰度？
+    
+    两家店平均都是100，方差相同、偏度为零，但尾巴不同。A店：52、64、100、136、148 - 四天偏差约36-48。B店：40、100、100、100、160 - 三天正好，两天各偏60。稳定缓冲更能覆盖A；B会在少见的远天上失手。
+    
+    峰度看差距的四次方 - 越高尾巴越重。A约1.3；B是2.5。误区：尖峰 - 要读尾巴，不是中间有多尖。正态基准是3；超额峰度=峰度-3。它本身不告诉你备多少杯。
+    
+    商务统计 - 模块1 - 短片12（峰度）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    咩係峰度？
+    
+    兩間店平均都係100，方差相同、偏度為零，但尾巴唔同。A店：52、64、100、136、148 - 四日偏差約36-48。B店：40、100、100、100、160 - 三日啱啱好，兩日各偏60。穩定緩衝更能覆蓋A；B會喺少見嘅遠日失手。
+    
+    峰度睇差距嘅四次方 - 越高尾巴越重。A約1.3；B係2.5。誤區：尖峰 - 要讀尾巴，唔係中間有幾尖。正態基準係3；超額峰度=峰度-3。佢本身唔話你知備幾多杯。
+    
+    商務統計 - 模組1 - 短片12（峰度）
+    覺得有用嘅話，訂閱下一集。
+
 glossary:
 - en: kurtosis
   zh: 峰度
@@ -190,9 +211,7 @@ beats:
   title_en: First, the equal share
   title_zh: 先算平均份额
   title_zh_hk: 先計平均份額
-  formula: 'Average = total / number of days
-
-    500 / 5 = 100'
+  formula: 'Average = total / number of days'
   formula_zh: '平均数 = 合计 / 天数
 
     500 / 5 = 100'
@@ -264,9 +283,9 @@ beats:
   name_b_en: Shop B
   name_b_zh: B店
   name_b_zh_hk: B店
-  footer_en: 'Each shop: 7,200 / 5 = 1,440'
-  footer_zh: 两家店：7,200 / 5 = 1,440
-  footer_zh_hk: 兩間店：7,200 / 5 = 1,440
+  footer_en: 'Each shop: 7,200 ÷ 5 = 1,440'
+  footer_zh: 两家店：7,200 ÷ 5 = 1,440
+  footer_zh_hk: 兩間店：7,200 ÷ 5 = 1,440
   s1_en: Multiply each deviation by itself. A minus times a minus is a plus, so nothing cancels. Every result is positive.
   s1_zh: 把每个偏差乘以自己。负乘负得正，所以不会抵消。每个结果都是正的。
   s1_zh_hk: 將每個偏差乘自己。負乘負得正，所以唔會抵銷。每個結果都係正數。
@@ -352,15 +371,15 @@ beats:
   title_en: One far day, against the spread
   title_zh: 一个远的日子，和分散比
   title_zh_hk: 一個遠嘅日子，同分散比
-  step1_en: 60 × 60 = 3,600
-  step1_zh: 60 × 60 = 3,600
-  step1_zh_hk: 60 × 60 = 3,600
-  step2_en: 3,600 / 1,440 = 2.5
-  step2_zh: 3,600 / 1,440 = 2.5
-  step2_zh_hk: 3,600 / 1,440 = 2.5
-  step3_en: 2.5 × 2.5 = 6.25
-  step3_zh: 2.5 × 2.5 = 6.25
-  step3_zh_hk: 2.5 × 2.5 = 6.25
+  step1_en: 60×60 = 3,600
+  step1_zh: 60×60 = 3,600
+  step1_zh_hk: 60×60 = 3,600
+  step2_en: 3,600÷1,440 = 2.5
+  step2_zh: 3,600÷1,440 = 2.5
+  step2_zh_hk: 3,600÷1,440 = 2.5
+  step3_en: 2.5×2.5 = 6.25
+  step3_zh: 2.5×2.5 = 6.25
+  step3_zh_hk: 2.5×2.5 = 6.25
   s1_en: Take Shop B's far day at 160. It sits 60 cups from the average, and 60 times 60 is 3,600 square cups.
   s1_zh: 看B店160那天。它离平均数60杯，60乘60是3,600平方杯。
   s1_zh_hk: 睇B店160嗰日。佢離平均數60杯，60乘60係3,600平方杯。
@@ -477,7 +496,7 @@ beats:
   s3_zh_hk: 我哋兩間店都低過3。得五日，同一條平滑曲線比，講唔到幾多嘢。呢度有用嘅係兩間店互相比：B店比A店高，因為有嗰兩個遠嘅日子。咁呢個數可以話經理知啲咩，又唔可以話佢知啲咩？
 - id: limit
   visual: two_column
-  seconds: 64
+  seconds: 52
   kicker: The Limit
   kicker_en: The Limit
   kicker_zh: 限度
@@ -502,7 +521,7 @@ beats:
   s3_zh_hk: 而且得五日，一個特別嘅日子就可以令佢變好多。兩組唔同嘅日子，甚至可能計出同一個數。所以要一直睇住嗰五日。咁究竟邊間店需要另一份儲備？
 - id: answer
   visual: takeaway
-  seconds: 70
+  seconds: 32
   kicker: The Answer
   kicker_en: The Answer
   kicker_zh: 回答问题
@@ -510,18 +529,27 @@ beats:
   title_en: Same facts. Different reserves.
   title_zh: 事实相同，储备不同
   title_zh_hk: 事實相同，儲備唔同
-  q1_en: Which shop needs a different reserve?
-  q1_zh: 哪家店需要另一份储备？
-  q1_zh_hk: 邊間店需要另一份儲備？
-  q2_en: What else before setting the reserve?
-  q2_zh: 定储备之前，还要看什么？
-  q2_zh_hk: 定儲備之前，仲要睇咩？
-  s1_en: Back to the reserve. Same average, same variance, same zero skewness, but not the same tails. Shop A is about 1.3. Its misses are moderate, 36 or 48 cups, and they come on four of the five days. A steady daily buffer can cover most of them.
-  s1_zh: 回到储备。平均数一样，方差一样，偏度都是零，可是尾部不一样。A店大约1.3。它差得不多，36或48杯，五天里有四天会差。每天固定的缓冲，可以盖住大部分。
-  s1_zh_hk: 返到儲備。平均數一樣，方差一樣，偏度都係零，但係尾部唔一樣。A店大約1.3。佢差得唔多，36或者48杯，五日入面有四日會差。每日固定嘅緩衝，可以蓋住大部分。
-  s2_en: Shop B is 2.5, heavier tails. It is spot on for three days, then off by 60 on two. Those rare far days are where its reserve fails. So Shop B is the one that needs a different reserve, planned for the far days, not the ordinary ones.
-  s2_zh: B店是2.5，尾部更重。三天刚刚好，然后有两天差60杯。储备撑不住的，就是这些少见的远日子。所以需要另一份储备的是B店，要按远的日子来计划，不是按普通日子。
-  s2_zh_hk: B店係2.5，尾部重啲。三日啱啱好，跟住有兩日差60杯。儲備撐唔住嘅，就係呢啲少見嘅遠日子。所以需要另一份儲備嘅係B店，要按遠嘅日子嚟計劃，唔係按普通日子。
-  s3_en: Before you set it, check the cost of wasted cups, the cost of running out, how soon the shop can restock, and whether these five days will happen again. These numbers describe only the five days we supposed. The average, the variance, the skewness and the kurtosis each answer one question. None of them writes the reserve by itself.
-  s3_zh: 定储备之前，还要看倒掉杯子的成本、卖完的成本、多久能补货，以及这五天会不会再发生。这些数只描述我们假设的五天。平均数、方差、偏度、峰度，各自回答一个问题，哪一个都不能单独写出储备。
-  s3_zh_hk: 定儲備之前，仲要睇倒走杯嘅成本、賣晒嘅成本、幾耐可以補貨，同埋呢五日會唔會再發生。呢啲數只係描述我哋假設嘅五日。平均數、方差、偏度、峰度，各自答一個問題，邊一個都唔可以單獨寫出儲備。
+  q1_en: 'Which shop needs a different reserve? → Shop B — heavier tails (2.5 vs 1.3)'
+  q1_zh: 哪家店需要另一份储备？→ B店——尾部更重（2.5对1.3）
+  q1_zh_hk: 邊間店需要另一份儲備？→ B店——尾部重啲（2.5對1.3）
+  q2_en: 'What else before setting reserve? → Waste, stockouts, restock, repeat days'
+  q2_zh: 定储备之前，还要看什么？→ 浪费、断货、补货、会不会再出现
+  q2_zh_hk: 定儲備之前，仲要睇咩？→ 浪費、斷貨、補貨、會唔會再出現
+  s1_en: >-
+    Same average, variance, and zero skew — different tails. Shop A is about 1.3: moderate misses on most days.
+  s1_zh: >-
+    平均数、方差、零偏度都一样——尾部不同。A店大约1.3：多数天差得不多。
+  s1_zh_hk: >-
+    平均數、方差、零偏度都一樣——尾部唔同。A店大約1.3：多數日差得唔多。
+  s2_en: >-
+    Shop B is 2.5: spot on three days, then off by 60 on two. B needs a reserve for the far days.
+  s2_zh: >-
+    B店是2.5：三天刚刚好，两天差60。B需要为远日子准备另一份储备。
+  s2_zh_hk: >-
+    B店係2.5：三日啱啱好，兩日差60。B需要為遠日子準備另一份儲備。
+  s3_en: >-
+    Check waste, stockouts, restock time, and whether these days repeat. That is the answer.
+  s3_zh: >-
+    再看浪费、断货、补货时间，以及这几天会不会再出现。这就是答案。
+  s3_zh_hk: >-
+    再睇浪費、斷貨、補貨時間，同埋呢幾日會唔會再出現。呢個就係答案。

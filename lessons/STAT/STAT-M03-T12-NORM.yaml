@@ -1,19 +1,45 @@
 id: STAT-M03-T12-NORM
-course: statistics
 course_en: "Discrete & Continuous Probability Distributions"
 course_zh: "离散与连续概率分布"
 course_zh_hk: "離散與連續概率分佈"
-audience: "first-year business students"
-audience_en: "first-year business students"
-audience_zh: "商学院一年级学生"
-audience_zh_hk: "商學院一年級學生"
-duration_target_s: 168
+duration_target_s: 166
 title_en: "The grand operational baseline"
 title_zh: "统御大盘的基准钟形线：正态分布"
 title_zh_hk: "統領大盤嘅基準鐘形線：正態分佈"
-objective_en: "Define the Gaussian Normal distribution N(mu, sigma^2), explain its perfect bell-shaped symmetry around the mean, identify the geometric inflection points at mu +/- sigma, and model network-wide aggregate daily coffee bean consumption."
-objective_zh: "定义高斯正态分布 N(mu, sigma^2)，解析围绕均值展开的完美钟形对称性，识别拐点几何特征 mu +/- sigma，并对全网五十家门店的每日咖啡生豆总消耗量进行科学建模。"
-objective_zh_hk: "定義高斯正態分佈 N(mu, sigma^2)，解析圍繞均值展開嘅完美鐘形對稱性，識別拐點幾何特徵 mu +/- sigma，並對全網五十間門市嘅每日咖啡生豆總消耗量進行科學建模。"
+youtube:
+  description_en: |
+    The grand operational baseline
+    
+    A coffee chain models total daily bean usage across its stores. Individual orders vary, and aggregation may produce a smoother distribution, but a bell curve is not automatic. What defines a Normal model, and what evidence is needed before using it for aggregate demand?
+    
+    In an illustration with mean 80 kg and sd 12 kg, inflection points sit at 68 kg and 92 kg. Symmetry gives P(X above 80)=0.50; 116 kg is z=3, an extreme upper tail of about 0.00135 under the Normal model.
+    
+    Defend Normality with data and process story, not aggregation slogans. Aggregate micro variance can unleash a usable bell curve — only after the fit check.
+    
+    Discrete & Continuous Probability Distributions - Module 3 - Short 12 (NORM)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    统御大盘的基准钟形线：正态分布
+    
+    咖啡连锁要为各店每日咖啡豆总用量建模。单笔订单有高有低，加总后曲线可能更平滑，但钟形不会自动长出来。
+    
+    示例均值 80 千克、标准差 12 千克时，拐点在 68 与 92 千克。对称性给出 P(X 高于 80)=0.50；116 千克对应 z=3，正态上尾约 0.00135。
+    
+    用样本与过程故事为正态辩护，别靠「加总就会钟形」的口号。汇聚微观杂音可以启用正态大盘——前提是拟合检查过关。
+    
+    离散与连续概率分布 - 模块3 - 短片12（NORM）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    統領大盤嘅基準鐘形線：正態分佈
+    
+    咖啡連鎖要為各舖每日咖啡豆總用量建模。單筆訂單有高有低，加總之後曲線可能更平滑，但鐘形唔會自動長出嚟。
+    
+    示例均值 80 公斤、標準差 12 公斤嗰陣，拐點喺 68 同 92 公斤。對稱性畀出 P(X 高過 80)=0.50；116 公斤對應 z=3，正態上尾約 0.00135。
+    
+    用樣本同過程故事為正態辯護，唔好靠「加總就會鐘形」嘅口號。匯聚微觀雜音可以啟用正態大盤——前提係擬合檢查過關。
+    
+    離散與連續概率分佈 - 模組3 - 短片12（NORM）
+    覺得有用嘅話，訂閱下一集。
 glossary:
 - en: "Normal distribution"
   zh: "正态分布/高斯分布"
@@ -92,8 +118,8 @@ beats:
   title_zh: "数万张杂乱小票，何以汇聚成完美钟形？"
   title_zh_hk: "數萬張雜亂單據，點解匯聚成完美鐘形？"
   en: "A coffee chain models total daily bean usage across its stores. Individual orders vary, and aggregation may produce a smoother distribution, but a bell curve is not automatic. What defines a Normal model, and what evidence is needed before using it for aggregate demand?"
-  zh: "一家咖啡连锁为各门店每日咖啡豆总用量建模。单笔订单各有差异，聚合后分布可能更平滑，但钟形曲线并不会自动出现。正态模型由什么定义？在用于总量需求前又需要哪些证据？"
-  zh_hk: "一間咖啡連鎖為各門市每日咖啡豆總用量建模。單筆訂單各有差異，聚合之後分佈可能更平滑，但鐘形曲線唔會自動出現。正態模型由咩定義？用於總量需求之前又需要邊啲證據？"
+  zh: "咖啡连锁要为各店每日咖啡豆总用量建模。单笔订单有高有低，加总后曲线可能更平滑，但钟形不会自动长出来。正态由什么定义？拿去估总量需求前，要先看哪些证据？"
+  zh_hk: "咖啡連鎖要為各舖每日咖啡豆總用量建模。單筆訂單有高有低，加總之後曲線可能更平滑，但鐘形唔會自動長出嚟。正態由咩定義？攞去估總量需求之前，要先睇邊啲證據？"
 - id: define
   visual: definition_card
   seconds: 34
@@ -109,8 +135,8 @@ beats:
   formula_zh_hk: "f(x) = [1 / (sigma × 根號(2*pi))] × e^[ - (x - mu)^2 / (2*sigma^2) ]"
   formula_tex: "f(x) = \\frac{1}{\\sigma \\sqrt{2\\pi}} \\exp\\left( -\\frac{(x - \\mu)^2}{2\\sigma^2} \\right), \\quad -\\infty < x < \\infty"
   s1_en: "A Normal distribution is determined by its mean mu and positive standard deviation sigma, or equivalently by variance sigma squared. Its density is symmetric about mu and integrates to one."
-  s1_zh: "正态分布由均值 mu 与正标准差 sigma 决定，也可用方差 sigma 平方表示。其密度围绕 mu 对称，曲线下总面积为 1。"
-  s1_zh_hk: "正態分佈由均值 mu 同正標準差 sigma 決定，亦可以用方差 sigma 平方表示。佢嘅密度圍繞 mu 對稱，曲線下總面積係 1。"
+  s1_zh: "正态由均值 μ 和方差 σ² 定形：钟形、对称，中间高、两尾薄。"
+  s1_zh_hk: "正態由均值 μ 同方差 σ² 定形：鐘形、對稱，中間高、兩尾薄。"
   s2_en: "Its density formula balances the mathematical constants pi and e. The squared distance in the exponent pulls probabilities smoothly downward as values move away from mu, creating its unmistakable bell profile."
   s2_zh: "其密度函数精妙平衡了圆周率 pi 与自然常数 e。指数项中与均值的离差平方，确保了数值越远离核心中心 mu、概率密度便越平滑迅猛地向下衰减，雕刻出标志性的钟形轮廓。"
   s2_zh_hk: "其密度函數精妙平衡咗圓周率 pi 同自然常數 e。指數項入面與均值嘅偏差平方，確保咗數值越遠離核心中心 mu、概率密度就越平滑迅猛噉向下衰減，雕刻出標誌性嘅鐘形輪廓。"
@@ -169,7 +195,7 @@ beats:
   s3_zh_hk: "第三步利用對稱性得到 P(X>80)=0.50。將 116 公斤標準化得到 z=3，所以喺正態模型之下，上尾概率大約係 0.00135。"
 - id: takeaway
   visual: takeaway
-  seconds: 32
+  seconds: 30
   kicker: "Decision Rule"
   kicker_en: "Decision Rule"
   kicker_zh: "商业法则"
@@ -177,18 +203,18 @@ beats:
   title_en: "Aggregate micro variance to unleash the bell curve"
   title_zh: "汇聚微观杂音，启用正态大盘统御全局"
   title_zh_hk: "匯聚微觀雜音，啟用正態大盤統領全局"
-  q1_en: "When is a Normal model a defensible forecasting baseline?"
-  q1_zh: "何时可以把正态模型作为有理据的预测基准？"
-  q1_zh_hk: "幾時可以將正態模型作為有理據嘅預測基準？"
-  q2_en: "What must be checked before a Normal model is used for aggregate demand?"
-  q2_zh: "将正态模型用于总量需求前，必须检查什么？"
-  q2_zh_hk: "將正態模型用於總量需求之前，必須檢查咩？"
-  s1_en: "Do not assume Normality solely because a metric is aggregated. Examine the data and the dependence, tail behavior, and contribution sizes; a Normal approximation is more defensible when no small set of components dominates and dependence is limited."
-  s1_zh: "不要仅因指标经过聚合就假设正态性。应检查数据以及相关性、尾部行为和各组成项的贡献；当少数组成项不会主导总量且依赖程度有限时，正态近似才更有理据。"
-  s1_zh_hk: "唔好淨係因為指標經過聚合就假設正態性。應該檢查數據以及相關性、尾部行為同各組成項嘅貢獻；當少數幾項唔會主導總量而依賴程度有限，正態近似先更有理據。"
-  s2_en: "Within a validated Normal model, mu describes the center and sigma describes dispersion. Changes in sigma do not by themselves prove that a process is gaining or losing control."
-  s2_zh: "在经过验证的正态模型中，mu 描述中心，sigma 描述离散程度。sigma 的变化本身不能证明流程正在恢复控制或失去控制。"
-  s2_zh_hk: "喺經過驗證嘅正態模型入面，mu 描述中心，sigma 描述離散程度。sigma 嘅變化本身唔可以證明流程正在恢復控制或者失去控制。"
-  s3_en: "For the N(80,144) model, the inflection points are 68 and 92 kilograms, P(X>80)=0.50, and P(X>116) is about 0.00135. Use these results only after checking whether a Normal model fits the aggregate-demand data."
-  s3_zh: "对于 N(80,144) 模型，拐点为 68 与 92 公斤，P(X>80)=0.50，P(X>116) 约为 0.00135。只有检查正态模型是否适合总量需求数据后，才应使用这些结果。"
-  s3_zh_hk: "對 N(80,144) 模型嚟講，拐點係 68 同 92 公斤，P(X>80)=0.50，P(X>116) 大約係 0.00135。只有檢查正態模型係咪適合總量需求數據之後，先應該使用呢啲結果。"
+  q1_en: "Normal just because aggregated? → No — check data, tails, dependence"
+  q1_zh: "一聚合就正态？→ 不行——先看数据、尾部、相关性"
+  q1_zh_hk: "一聚合就正態？→ 唔得——先睇數據、尾部、相關性"
+  q2_en: "Inside a fitted Normal? → μ centers, σ spreads — σ alone ≠ “better process”"
+  q2_zh: "拟合正态之后？→ μ 定中心，σ 定离散——σ 变小不等于过程变好"
+  q2_zh_hk: "擬合正態之後？→ μ 定中心，σ 定離散——σ 變細唔等於過程變好"
+  s1_en: "Defend Normality with the sample and process story, not with aggregation slogans."
+  s1_zh: "正态要靠样本和过程故事来站台，不能靠“加总了就行”的口号。"
+  s1_zh_hk: "正態要靠樣本同過程故事嚟企硬，唔可以靠「加總咗就得」嘅口號。"
+  s2_en: "A Normal approximation is more defensible when no small set of terms dominates and dependence is limited."
+  s2_zh: "当少数几项不主导总量、依赖又有限时，正态近似才更有理据。"
+  s2_zh_hk: "當少數幾項唔主導總量、依賴又有限，正態近似先更有理據。"
+  s3_en: "N(80,144): inflections 68 & 92 kg; P(X>80)=0.50; P(X>116)≈0.00135 — after the fit check."
+  s3_zh: "N(80,144)：拐点 68 与 92 公斤；P(X>80)=0.50；P(X>116)约 0.00135——先完成拟合检查。"
+  s3_zh_hk: "N(80,144)：拐點 68 同 92 公斤；P(X>80)=0.50；P(X>116)約 0.00135——先完成擬合檢查。"

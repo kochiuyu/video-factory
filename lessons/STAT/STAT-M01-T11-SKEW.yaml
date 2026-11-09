@@ -10,21 +10,42 @@
 #   limit    — manager caution (pair with answer on a full watch)
 # Suggested split: CORE now; add squares/defn/limit on a return pass.
 id: STAT-M01-T11-SKEW
-course: statistics
 course_en: Business Statistics
 course_zh: 商务统计
 course_zh_hk: 商務統計
-audience: first-year business students
-audience_en: first-year business students
-audience_zh: 商学院一年级学生
-audience_zh_hk: 商學院一年級學生
-duration_target_s: 884
+duration_target_s: 838
 title_en: What is skewness?
 title_zh: 什么是偏度？
 title_zh_hk: 咩係偏度？
-objective_en: Decide whether two shops that match on the average and the variance can prepare the same 100 cups, and use the cubes of the deviations to see which side is long.
-objective_zh: 判断两家平均数和方差都相同的门店能不能都备100杯，并用偏差的立方看出哪一侧被拉长。
-objective_zh_hk: 判斷兩間平均數同方差都相同嘅門店可唔可以都備100杯，並用偏差嘅立方睇出邊一邊被拉長。
+youtube:
+  description_en: |
+    What is skewness?
+    
+    Two shops both total 500 cups over five days, average 100. Shop A: 70, 80, 90, 100, 160 - three days below 100, one rush at 160. Shop B is the mirror: 40, 100, 110, 120, 130. Prep 100 at A wastes on three days; at B you run short on three. Same average and same variance (1,000) cannot tell them apart.
+    
+    Skewness uses cubed gaps so the sign survives. A's sum of cubes is +180,000; standardized skewness about +1.1 (right / long high side). B is about -1.1. It names which side is long - not better/worse, and not how many cups to prep by itself.
+    
+    Business Statistics - Module 1 - Short 11 (skewness)
+    If this helped, subscribe for the next short.
+  description_zh: |
+    什么是偏度？
+    
+    两家店五天合计都是500杯，平均100。A店：70、80、90、100、160 - 三天低于100，一天高峰160。B店是镜像：40、100、110、120、130。按100备货，A店三天浪费，B店三天短缺。相同平均、相同方差（1,000）分不开它们。
+    
+    偏度用三次方差距，符号能留下来。A的立方和是+180,000；标准化偏度约+1.1（右偏 / 高端更长）。B约-1.1。它指出哪一侧更长 - 不是更好/更差，也不能单独决定备多少杯。
+    
+    商务统计 - 模块1 - 短片11（偏度）
+    觉得有用的话，订阅下一集。
+  description_zh_hk: |
+    咩係偏度？
+    
+    兩間店五日合計都係500杯，平均100。A店：70、80、90、100、160 - 三日低過100，一日高峰160。B店係鏡像：40、100、110、120、130。按100備貨，A店三日浪費，B店三日短缺。相同平均、相同方差（1,000）分唔開佢哋。
+    
+    偏度用三次方差距，符號留得住。A嘅立方和係+180,000；標準化偏度約+1.1（右偏 / 高端更長）。B約-1.1。佢指出邊一側更長 - 唔係更好/更差，亦唔能單獨決定備幾多杯。
+    
+    商務統計 - 模組1 - 短片11（偏度）
+    覺得有用嘅話，訂閱下一集。
+
 glossary:
 - en: skewness
   zh: 偏度
@@ -195,9 +216,7 @@ beats:
   title_en: First, the equal share
   title_zh: 先算平均份额
   title_zh_hk: 先計平均份額
-  formula: 'Average = total / number of days
-
-    500 / 5 = 100'
+  formula: 'Average = total / number of days'
   formula_zh: '平均数 = 合计 / 天数
 
     500 / 5 = 100'
@@ -521,7 +540,7 @@ beats:
   s2_zh_hk: 同方差一樣，我哋除以n，即係日數。A店得到大約正1.1，B店大約負1.1。咁呢個數話到你知啲乜，又話唔到你知啲乜？
 - id: limit
   visual: two_column
-  seconds: 64
+  seconds: 52
   kicker: The Limit
   kicker_en: The Limit
   kicker_zh: 限度
@@ -546,7 +565,7 @@ beats:
   s3_zh_hk: 佢講唔到一間店好啲定差啲，負號唔係扣分。佢入面已經冇杯，所以1.1唔係叫你備101杯嘅指令。一個好遠嘅日子就可以造成佢，而得五日，一個特別嘅日子就可以令佢變好多。兩組唔同嘅日子，甚至可能計出同一個數。所以要一直睇住嗰五日。咁究竟邊間浪費，邊間唔夠？
 - id: answer
   visual: takeaway
-  seconds: 66
+  seconds: 32
   kicker: The Answer
   kicker_en: The Answer
   kicker_zh: 回答问题
@@ -554,18 +573,27 @@ beats:
   title_en: Same average. Different plans.
   title_zh: 平均相同，计划不同
   title_zh_hk: 平均相同，計劃唔同
-  q1_en: Which shop wastes, which runs out?
-  q1_zh: 哪家浪费，哪家不够？
-  q1_zh_hk: 邊間浪費，邊間唔夠？
-  q2_en: What else before choosing a prep amount?
-  q2_zh: 定备货量之前，还要看什么？
-  q2_zh_hk: 定備貨量之前，仲要睇咩？
-  s1_en: 'Back to tonight''s prep sheet. Same average, same variance, but not the same shape. Shop A is about plus 1.1, right skew: three days below 100 and one rush at 160. Preparing 100 there wastes cups on three of the five days.'
-  s1_zh: 回到今晚的备货单。平均相同，方差相同，形状却不同。A店大约是正1.1，右偏：三天低于100，一天是160的高峰。在那里备100杯，五天里有三天会浪费。
-  s1_zh_hk: 返到今晚嘅備貨單。平均相同，方差相同，形狀就唔同。A店大約係正1.1，右偏：三日低過100，一日係160嘅高峰。喺嗰度備100杯，五日入面有三日會浪費。
-  s2_en: 'Shop B is about minus 1.1, left skew: three days above 100 and one quiet day at 40. Preparing 100 there runs out on three of the five days. The sign shows the long side. The days themselves show which outcome came up more often.'
-  s2_zh: B店大约是负1.1，左偏：三天高于100，一天是40的低谷。在那里备100杯，五天里有三天会不够。正负号指出被拉长的一侧，日子本身才说明哪种结果出现得更多。
-  s2_zh_hk: B店大約係負1.1，左偏：三日高過100，一日係40嘅低谷。喺嗰度備100杯，五日入面有三日會唔夠。正負號指出被拉長嘅一邊，啲日子本身先講到邊種結果出現得多啲。
-  s3_en: Before you set the plan, check the cost of a wasted cup, the cost of running out, and whether these five days will happen again. These numbers describe only the five days we supposed. The average, the variance and the skewness each answer one question. None of them writes the prep sheet by itself.
-  s3_zh: 定计划之前，还要看倒掉一杯的成本、卖完的成本，以及这五天会不会再出现。这些数只描述我们假设的五天。平均数、方差、偏度，各自回答一个问题，哪一个都不能单独写出备货单。
-  s3_zh_hk: 定計劃之前，仲要睇倒走一杯嘅成本、賣晒嘅成本，同埋呢五日會唔會再出現。呢啲數只係描述我哋假設嘅五日。平均數、方差、偏度，各自答一個問題，邊一個都唔可以單獨寫出備貨單。
+  q1_en: 'Which wastes, which runs out? → A wastes (right); B runs out (left)'
+  q1_zh: 哪家浪费，哪家不够？→ A浪费（右偏）；B不够（左偏）
+  q1_zh_hk: 邊間浪費，邊間唔夠？→ A浪費（右偏）；B唔夠（左偏）
+  q2_en: 'What else before prep? → Waste cost, stockouts, and whether days repeat'
+  q2_zh: 定备货之前，还要看什么？→ 浪费成本、断货，以及这几天会不会再出现
+  q2_zh_hk: 定備貨之前，仲要睇咩？→ 浪費成本、斷貨，同埋呢幾日會唔會再出現
+  s1_en: >-
+    Same average, same variance — different shape. Shop A is about +1.1, right skew: prep 100 wastes on three days.
+  s1_zh: >-
+    平均相同，方差相同——形状不同。A店大约正1.1，右偏：备100杯，三天会浪费。
+  s1_zh_hk: >-
+    平均相同，方差相同——形狀唔同。A店大約正1.1，右偏：備100杯，三日會浪費。
+  s2_en: >-
+    Shop B is about −1.1, left skew: prep 100 runs out on three days.
+  s2_zh: >-
+    B店大约负1.1，左偏：备100杯，三天会不够。
+  s2_zh_hk: >-
+    B店大約負1.1，左偏：備100杯，三日會唔夠。
+  s3_en: >-
+    Check waste cost, stockout cost, and whether these days repeat. That is the answer.
+  s3_zh: >-
+    再看浪费成本、断货成本，以及这几天会不会再出现。这就是答案。
+  s3_zh_hk: >-
+    再睇浪費成本、斷貨成本，同埋呢幾日會唔會再出現。呢個就係答案。

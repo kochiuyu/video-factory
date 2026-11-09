@@ -7,8 +7,8 @@ audience: first-year business students
 audience_en: first-year business students
 audience_zh: 商学院一年级学生
 audience_zh_hk: 商學院一年級學生
-duration_target_s: 168
-title_en: 'Type I and Type II Errors: Balancing False Alarms and Missed Defects'
+duration_target_s: 344
+title_en: Type I and Type II Errors
 title_zh: 第一类与第二类错误：权衡误报与漏报
 title_zh_hk: 第一類同第二類錯誤：權衡誤報同漏報
 objective_en: Define Type I and Type II errors using truth-by-decision outcomes, distinguish significance level, beta, and
@@ -16,6 +16,37 @@ objective_en: Define Type I and Type II errors using truth-by-decision outcomes,
   for an assumed grinder-quality audit without inventing costs or prescribing action.
 objective_zh: 利用“真实状态 × 检验决策”结果定义第一类与第二类错误，区分显著性水平、beta 与功效，解释样本量和效应大小固定时 alpha 与 beta 的条件性权衡，并比较假设磨豆机质量巡检中的检验方案，同时避免虚构成本或直接规定行动。
 objective_zh_hk: 利用「真實狀態 × 檢驗決策」結果定義第一類同第二類錯誤，區分顯著性水平、beta 同功效，解釋樣本量同效應大小固定嗰陣 alpha 同 beta 嘅條件性權衡，並比較假設磨豆機品質巡檢入面嘅檢驗方案，同時避免虛構成本或者直接規定行動。
+youtube:
+  description_en: |
+    Type I and Type II Errors
+
+    Suppose Shop A plans a quality check on its coffee grinder. Flag a grinder that is still fine, and the shop stops work for nothing. Miss a grinder that has really drifted, and worn-out coffee keeps going to customers. No test can remove both risks. Which mistakes can a test make, and how do we balance them?
+
+    A Type I error is a false alarm: H0 is true, but the test rejects it. Its long-run chance under H0 is alpha. A Type II error is a miss: H1 is true at a specific shift, but the test fails to reject. Its chance is beta, and power is 1 − beta. Alpha is computed assuming H0; beta is computed at one concrete shift.
+
+    In an assumed example, tightening alpha from 0.05 to 0.01 moves the two-sided Z cutoffs from ±1.960 to ±2.576. False alarms fall from 5% to 1%, but with the same sample and shift, beta rises: more drifted grinders slip through.
+
+    Rule: fix alpha, the shift worth catching, target power, and real costs before the data. Report both risks. Neither is ever zero.
+  description_zh: |
+    第一类与第二类错误：权衡误报与漏报
+
+    假设A店打算给磨豆机做一次质量检查。机器其实还好，却被判成有问题，店里就白白停工；机器真的已经走样，却没被发现，磨坏的咖啡就继续卖给客人。没有哪个检验能把两种风险都消掉。检验会犯哪几种错？又该怎么平衡？
+
+    第一类错误（Type I error）是误报：原假设为真，却被拒绝，长期机会是 alpha。第二类错误（Type II error）是漏报：在某个具体偏移下备择为真，却没有拒绝，机会是 beta；功效是 1 − beta。alpha 假定 H0 成立来算；beta 要在某一个具体偏移下算。
+
+    在一个假设的例子里，把 alpha 从 0.05 收到 0.01，双侧 Z 临界值从 ±1.960 移到 ±2.576。误报从 5% 降到 1%，但样本量与偏移不变时，beta 会上升：更多已经走样的磨豆机会被漏掉。
+
+    规则：看数据之前先定好 alpha、值得抓的偏移、目标功效和真实成本。两类风险都要报告，谁都不可能是零。
+  description_zh_hk: |
+    第一類同第二類錯誤：權衡誤報同漏報
+
+    假設A店打算幫磨豆機做一次品質檢查。部機其實冇事，但係俾人判咗有問題，間舖就白白停工；部機真係已經走樣，又冇人發現，磨壞咗嘅咖啡就繼續賣俾客。冇一個檢驗可以將兩種風險都清走。檢驗會犯邊幾種錯？又應該點樣平衡？
+
+    第一類錯誤（Type I error）係誤報：原假設為真，但係被拒絕，長遠機會係 alpha。第二類錯誤（Type II error）係漏報：喺某個具體偏移之下備擇為真，但係冇拒絕，機會係 beta；功效係 1 − beta。alpha 假定 H0 成立嚟計；beta 要喺某一個具體偏移之下計。
+
+    喺一個假設嘅例子入面，將 alpha 由 0.05 收到 0.01，雙側 Z 臨界值由 ±1.960 移到 ±2.576。誤報由 5% 降到 1%，但樣本量同偏移唔變嗰陣，beta 會上升：更多已經走樣嘅磨豆機會被漏咗。
+
+    規則：睇數據之前先定好 alpha、值得捉嘅偏移、目標功效同真實成本。兩類風險都要報告，邊個都唔可能係零。
 glossary:
 - en: Type I error (alpha)
   zh: 第一类错误/假阳性 (alpha)
@@ -37,183 +68,245 @@ quiz:
 - id: Q1
   type: multiple_choice
   question_en: Which statement correctly distinguishes Type I and Type II errors?
-  question_zh: 在门店品质巡检中，第一类错误（alpha）与第二类错误（beta）在实际运营维度的核心区别是什么？
-  question_zh_hk: 喺門市品質巡檢入面，第一類錯誤（alpha）與第二類錯誤（beta）喺實際營運維度嘅核心區別係咩？
+  question_zh: 下列哪一句正确区分了第一类错误和第二类错误？
+  question_zh_hk: 下列邊一句正確分清咗第一類錯誤同第二類錯誤？
   options_en:
-  - 'A: Type I rejects a true H0; Type II fails to reject H0 at a specified alternative where H0 is false.'
-  - 'B: Type I error applies only to morning shifts, while Type II error applies only to evening closing.'
-  - 'C: Type I error occurs when alpha equals zero; Type II error occurs when beta equals one.'
-  - 'D: Type I error means standard deviation is negative; Type II error means variance is infinite.'
+  - 'A: Type I rejects a true H0; Type II fails to reject H0 when a specified alternative is true.'
+  - 'B: Type I fails to reject a false H0; Type II rejects a true H0.'
+  - 'C: Type I has probability 1 − α; Type II has probability equal to the power.'
+  - 'D: Type II error is the probability that H0 is true after the test fails to reject it.'
   options_zh:
-  - 'A: 第一类错误属于假阳性误报（将完全正常的合格流程误判为故障而停机）；第二类错误属于假阴性漏报（流程已实质性损坏却未能察觉而放行）。'
-  - 'B: 第一类错误仅适用于早高峰排班，而第二类错误则专门用于晚间打烊盘点。'
-  - 'C: 第一类错误发生在显著性水平 alpha 等于零时；第二类错误发生在 beta 等于一的极端状态下。'
-  - 'D: 第一类错误代表样本标准差取负值；第二类错误代表总体方差发散至无穷大。'
+  - 'A: 第一类错误是拒绝了真的 H0（误报）；第二类错误是在指定备择为真时没有拒绝 H0（漏报）。'
+  - 'B: 第一类错误是没有拒绝假的 H0；第二类错误是拒绝了真的 H0。'
+  - 'C: 第一类错误的概率是 1 − α；第二类错误的概率等于功效。'
+  - 'D: 第二类错误是检验不拒绝 H0 之后，H0 为真的概率。'
   options_zh_hk:
-  - 'A: 第一類錯誤屬於假陽性誤報（將完全正常嘅合格流程誤判為故障而停機）；第二類錯誤屬於假陰性漏報（流程已實質性損壞卻未能察覺而放行）。'
-  - 'B: 第一類錯誤淨係適用於朝高峰排班，而第二類錯誤就專門用於晚間打烊盤點。'
-  - 'C: 第一類錯誤發生喺顯著性水平 alpha 等於零嗰陣；第二類錯誤發生喺 beta 等於一嘅極端狀態下。'
-  - 'D: 第一類錯誤代表樣本標準差攞負值；第二類錯誤代表總體方差發散至無窮大。'
+  - 'A: 第一類錯誤係拒絕咗真嘅 H0（誤報）；第二類錯誤係喺指定備擇為真嗰陣冇拒絕 H0（漏報）。'
+  - 'B: 第一類錯誤係冇拒絕假嘅 H0；第二類錯誤係拒絕咗真嘅 H0。'
+  - 'C: 第一類錯誤嘅概率係 1 − α；第二類錯誤嘅概率等於功效。'
+  - 'D: 第二類錯誤係檢驗唔拒絕 H0 之後，H0 為真嘅概率。'
   answer: A
-  explanation_en: Type I error is defined under H0 and has probability alpha for the stated test. Type II error is defined
-    at a specified alternative and has probability beta; power is 1 - beta.
-  explanation_zh: 第一类错误（误拒真的 H0）是虚惊误报，打乱正常生产流程（生产方风险）。第二类错误（漏检假的 H0）是故障漏网，导致瑕疵品流出损害顾客体验（消费方风险）。
-  explanation_zh_hk: 第一類錯誤（誤拒真嘅 H0）係虛驚誤報，打亂正常生產流程（生產方風險）。第二類錯誤（漏檢假嘅 H0）係故障漏網，搞到瑕疵品流出損害顧客體驗（消費方風險）。
+  explanation_en: Type I error is defined under H0 and has probability α for the stated test. Type II error is defined at
+    a specified alternative and has probability β; power is 1 − β. B swaps the two, C mixes up α with 1 − α and β with power,
+    and D flips the condition.
+  explanation_zh: 第一类错误在 H0 为真时定义，概率是 α（误报，生产方风险）。第二类错误在指定备择为真时定义，概率是 β（漏报，消费方风险）；功效是 1 − β。B 把两者调换了，C 把 α 和 1 − α、β 和功效搞混了，D 把条件颠倒了。
+  explanation_zh_hk: 第一類錯誤喺 H0 為真嗰陣定義，概率係 α（誤報，生產方風險）。第二類錯誤喺指定備擇為真嗰陣定義，概率係 β（漏報，消費方風險）；功效係 1 − β。B 將兩樣調轉咗，C 將 α 同 1 − α、β 同功效撈亂咗，D 將條件顛倒咗。
 - id: Q2
   type: multiple_choice
   question_en: For the same two-sided Z test, with sample size, variability, and alternative effect fixed, what happens when
-    alpha is reduced from 0.05 to 0.01?
-  question_zh: 若都市咖啡管理层要求在不追加任何抽检样本量（保持固定样本量 n）的前提下，强行将误报率 alpha 从 0.05 压降至 0.001，必然会引发何种无法逃避的后果？
-  question_zh_hk: 若果都市咖啡管理層要求喺唔追加任何抽檢樣本量（保持固定樣本量 n）嘅前提下，強行將誤報率 alpha 由 0.05 壓降至 0.001，必然會引發咩冇得逃避嘅後果？
+    α is reduced from 0.05 to 0.01?
+  question_zh: 同一个双侧 Z 检验，样本量、波动和备择效应都固定。把 α 从 0.05 降到 0.01，会发生什么？
+  question_zh_hk: 同一個雙側 Z 檢驗，樣本量、波動同備擇效應都固定。將 α 由 0.05 降到 0.01，會發生乜嘢？
   options_en:
-  - 'A: Critical values move from approximately +/-1.960 to +/-2.576; Type I risk decreases and beta increases for the specified
-    alternative.'
-  - 'B: Both alpha and beta fall simultaneously to zero.'
-  - 'C: Sample standard error automatically shrinks by 95%.'
-  - 'D: The Central Limit Theorem ceases to function.'
+  - 'A: Critical values move from about ±1.960 to ±2.576; Type I risk falls and β rises for the specified alternative.'
+  - 'B: Critical values move from about ±1.960 to ±2.576; both Type I risk and β fall, because the test is stricter.'
+  - 'C: Critical values move inward from ±1.960 to ±1.645; Type I risk falls.'
+  - 'D: Type I risk falls and β stays the same, because β depends only on the sample size.'
   options_zh:
-  - 'A: 临界分割线被大幅向外推开，导致漏报率 beta 剧烈飙升，大量未察觉的劣质出品和故障设备将悄然流向市场。'
-  - 'B: alpha 与 beta 将在数学底层同步自发归零。'
-  - 'C: 样本抽样标准误将自动收窄 95%。'
-  - 'D: 中心极限定理在此运算中将被迫终止生效。'
+  - 'A: 临界值从约 ±1.960 移到 ±2.576；第一类错误风险下降，指定备择下的 β 上升。'
+  - 'B: 临界值从约 ±1.960 移到 ±2.576；因为检验更严格，第一类错误风险和 β 都下降。'
+  - 'C: 临界值从 ±1.960 往内移到 ±1.645；第一类错误风险下降。'
+  - 'D: 第一类错误风险下降，β 不变，因为 β 只取决于样本量。'
   options_zh_hk:
-  - 'A: 臨界分割線被大幅向外推開，搞到漏報率 beta 劇烈飆升，大量未察覺嘅劣質出品同故障設備將悄然流向市場。'
-  - 'B: alpha 與 beta 將喺數學底層同步自發歸零。'
-  - 'C: 樣本抽樣標準誤將自動收窄 95%。'
-  - 'D: 中心極限定理喺呢個運算入面將被迫終止生效。'
+  - 'A: 臨界值由大約 ±1.960 移到 ±2.576；第一類錯誤風險下降，指定備擇之下嘅 β 上升。'
+  - 'B: 臨界值由大約 ±1.960 移到 ±2.576；因為檢驗更嚴格，第一類錯誤風險同 β 都下降。'
+  - 'C: 臨界值由 ±1.960 向內移到 ±1.645；第一類錯誤風險下降。'
+  - 'D: 第一類錯誤風險下降，β 唔變，因為 β 淨係取決於樣本量。'
   answer: A
-  explanation_en: With the other design inputs fixed, a smaller alpha moves the rejection boundaries farther into the tails.
-    That decreases the Type I error rate and increases the Type II error rate for the specified alternative.
-  explanation_zh: 在固定样本量下，alpha 与 beta 处于严密的此消彼长关系之中。极端压缩 alpha 会迫使临界红线向外后撤，使得保留域急剧扩容，从而必然抬高漏网概率 beta。
-  explanation_zh_hk: 喺固定樣本量下，alpha 與 beta 處於嚴密嘅此消彼長關係之中。極端壓縮 alpha 會迫使臨界紅線向外後撤，等保留域急劇擴容，從而必然抬高漏網概率 beta。
+  explanation_en: With the other design inputs fixed, a smaller α pushes the cutoffs farther out, to about ±2.576. More results
+    land in the do-not-reject region, so the Type I rate falls and β rises for the specified alternative. B misses the trade-off,
+    C moves the cutoffs the wrong way, and D forgets that β also depends on α and the effect size.
+  explanation_zh: 其他设计输入固定时，α 变小会把临界值推得更远，到约 ±2.576。更多结果落在不拒绝域，所以第一类错误率下降，指定备择下的 β 上升。B 忽略了此消彼长，C 把临界值移错了方向，D 忘了 β 也取决于 α 和效应大小。
+  explanation_zh_hk: 其他設計輸入固定嗰陣，α 細咗會將臨界值推得更遠，去到大約 ±2.576。更多結果落喺唔拒絕域，所以第一類錯誤率下降，指定備擇之下嘅 β 上升。B 冇理此消彼長，C 將臨界值移錯咗方向，D 唔記得 β 亦取決於 α 同效應大小。
 beats:
 - id: hook
   visual: title_card
-  seconds: 28
-  kicker_en: The Grinder Dilemma
-  kicker_zh: 磨豆机大修的抉择
-  kicker_zh_hk: 磨豆機大修嘅抉擇
-  title_en: Every testing rule can make two different mistakes
-  title_zh: 每项检验规则都可能犯两种不同错误
-  title_zh_hk: 每項檢驗規則都可能犯兩種唔同錯誤
-  en: Metro Coffee is designing an assumed quality audit for grinder burr wear. If the test flags a grinder whose process
-    mean still meets the benchmark, operations may be interrupted unnecessarily. If the test fails to flag a grinder whose
-    process mean has meaningfully shifted, defective output may continue. Statistical testing cannot remove both risks completely,
-    so the design must make them explicit before data are reviewed.
-  zh: 都市咖啡正在为磨豆机刀盘磨损设计一项假设质量巡检。如果检验把流程均值仍符合基准的磨豆机标记为异常，经营可能被不必要地中断；如果检验未标记流程均值已经发生实质偏移的磨豆机，缺陷出品可能继续流出。统计检验无法彻底消除两种风险，因此应在查看数据前把两者明确化。
-  zh_hk: 都市咖啡正為磨豆機刀盤磨損設計一項假設品質巡檢。如果檢驗將流程均值仍然符合基準嘅磨豆機標記成異常，營運可能被不必要噉中斷；如果檢驗冇標記流程均值已經發生實質偏移嘅磨豆機，缺陷出品可能繼續流出。統計檢驗冇辦法徹底消除兩種風險，所以應該喺查看數據之前將兩者明確化。
+  seconds: 40
+  kicker_en: The grinder dilemma
+  kicker_zh: 磨豆机的两难
+  kicker_zh_hk: 磨豆機嘅兩難
+  title_en: What are Type I and II errors?
+  title_zh: 什么是第一类和第二类错误？
+  title_zh_hk: 乜嘢係第一類同第二類錯誤？
+  en: >-
+    Suppose Shop A plans a quality check on its coffee grinder. Flag a grinder that is still fine, and the shop stops work
+    for nothing. Miss a grinder that has really drifted, and worn-out coffee keeps going to customers. No test can remove
+    both risks. So which mistakes can a test make, and how do we balance them? They are called Type I and Type II errors.
+  zh: >-
+    假设A店打算给磨豆机做一次质量检查。机器其实还好，却被判成有问题，店里就白白停工；机器真的已经走样，却没被发现，磨坏的咖啡就继续卖给客人。没有哪个检验能把两种风险都消掉。那检验会犯哪几种错？又该怎么平衡？它们叫第一类错误和第二类错误。
+  zh_hk: >-
+    假設A店打算幫磨豆機做一次品質檢查。部機其實冇事，但係俾人判咗有問題，間舖就白白停工；部機真係已經走樣，但係冇人發現，磨壞咗嘅咖啡就繼續賣俾客。冇一個檢驗可以將兩種風險都清走。咁檢驗會犯邊幾種錯？又應該點樣平衡？佢哋叫第一類錯誤同第二類錯誤。
 - id: define
   visual: definition_card
-  seconds: 34
-  kicker_en: What It Is
+  seconds: 56
+  kicker_en: What it is
   kicker_zh: 核心概念
   kicker_zh_hk: 核心概念
-  title_en: Cross the true state with the test decision
-  title_zh: 把真实状态与检验决策交叉
+  title_en: Truth crossed with decision
+  title_zh: 把真实状态和检验决策交叉
   title_zh_hk: 將真實狀態同檢驗決策交叉
-  formula: 'Type I: reject a true H0; Type II: fail to reject a false H0; Power = 1 - beta'
-  formula_zh: 第一类错误：拒绝真实 H0；第二类错误：不拒绝错误 H0；功效 = 1 - beta
-  formula_zh_hk: 第一類錯誤：拒絕真實 H0；第二類錯誤：唔拒絕錯誤 H0；功效 = 1 - beta
-  formula_tex: \alpha=P(\text{reject }H_0\mid H_0),\quad \beta=P(\text{fail to reject }H_0\mid H_1),\quad \text{power}=1-\beta
-  s1_en: A Type I error occurs when H0 is true but the test rejects it. The significance level alpha sets the long-run Type
-    I error rate for a correctly specified and implemented test under the null assumptions. It is a design property, not the
-    probability that a particular rejection is wrong.
-  s1_zh: 当 H0 为真但检验拒绝它时，发生第一类错误。对于在原假设条件下正确设定并实施的检验，显著性水平 alpha 设定长期第一类错误率。它是设计属性，并不是某一次拒绝结论出错的概率。
-  s1_zh_hk: 當 H0 為真但檢驗拒絕佢嗰陣，發生第一類錯誤。對於喺原假設條件之下正確設定並實施嘅檢驗，顯著性水平 alpha 設定長期第一類錯誤率。佢係設計屬性，唔係某一次拒絕結論出錯嘅概率。
-  s2_en: A Type II error occurs when a specific alternative is true but the test fails to reject H0. Beta depends on the alternative
-    effect size, variability, sample size, test direction, and alpha. Power equals one minus beta and is the probability of
-    rejecting H0 at that specified alternative.
-  s2_zh: 当某个具体备择状态为真但检验不拒绝 H0 时，发生第二类错误。beta 取决于备择效应大小、波动、样本量、检验方向与 alpha。功效等于 1 - beta，是在该指定备择状态下拒绝 H0 的概率。
-  s2_zh_hk: 當某個具體備擇狀態為真但檢驗唔拒絕 H0 嗰陣，發生第二類錯誤。beta 取決於備擇效應大小、波動、樣本量、檢驗方向同 alpha。功效等於 1 - beta，係喺嗰個指定備擇狀態之下拒絕 H0 嘅概率。
+  formula: 'α: false alarm; β: miss; power = 1 − β'
+  formula_zh: 'α = P(拒绝 H0｜H0 为真)；β = P(不拒绝 H0｜H1 为真)；功效 = 1 − β'
+  formula_zh_hk: 'α = P(拒絕 H0｜H0 為真)；β = P(唔拒絕 H0｜H1 為真)；功效 = 1 − β'
+  formula_tex: '\alpha = P(\mathrm{reject}\ H_0 \mid H_0) \qquad \beta = P(\mathrm{not\ reject}\ H_0 \mid H_1) \qquad \mathrm{power} = 1-\beta'
+  s1_en: >-
+    A Type I error is a false alarm: the null hypothesis H0 is true, but the test rejects it. The significance level alpha
+    sets how often that happens in the long run when H0 holds. It describes the rule, not one rejection.
+  s1_zh: >-
+    第一类错误（Type I error）就是误报：原假设（H0）其实是对的，检验却把它拒绝了。显著性水平（alpha）定的，就是 H0 成立时，长期来看这种事多常发生。它说的是规则，不是某一次拒绝。
+  s1_zh_hk: >-
+    第一類錯誤（Type I error）即係誤報：原假設（H0）其實係啱嘅，檢驗卻將佢拒絕咗。顯著性水平（alpha）定嘅，就係 H0 成立嗰陣，長遠嚟講呢種事有幾常見。佢講嘅係規則，唔係某一次拒絕。
+  s2_en: >-
+    A Type II error is a miss: a specific shift is real, but the test does not reject H0. Its chance, beta, depends on the
+    shift size, noise, sample size, and alpha. Power, one minus beta, is the chance of catching that shift.
+  s2_zh: >-
+    第二类错误（Type II error）就是漏报：某个具体的备择情况是真的，检验却没有拒绝 H0。它的机会叫 beta，取决于偏移有多大、噪声、样本量和 alpha。功效（power）等于 1 减 beta，就是抓到这个偏移的机会。
+  s2_zh_hk: >-
+    第二類錯誤（Type II error）即係漏報：某個具體嘅備擇情況係真嘅，檢驗卻冇拒絕 H0。佢嘅機會叫 beta，取決於偏移有幾大、雜音、樣本量同 alpha。功效（power）等於 1 減 beta，即係捉到呢個偏移嘅機會。
+- id: name_errors
+  visual: title_card
+  seconds: 18
+  kicker_en: The names
+  kicker_zh: 名字
+  kicker_zh_hk: 名
+  title_en: Type I error · Type II error
+  title_zh: 第一类错误 · 第二类错误
+  title_zh_hk: 第一類錯誤 · 第二類錯誤
+  en: >-
+    Say the names once more. A Type I error is the false alarm, with chance alpha. A Type II error is the miss, with chance
+    beta.
+  zh: >-
+    再念一次这两个名字。第一类错误，是误报，机会是 alpha；第二类错误，是漏报，机会是 beta。
+  zh_hk: >-
+    再唸一次呢兩個名。第一類錯誤，係誤報，機會係 alpha；第二類錯誤，係漏報，機會係 beta。
 - id: mechanics
   visual: two_column
-  seconds: 34
-  kicker_en: The Inescapable Seesaw
-  kicker_zh: 跷跷板博弈
-  kicker_zh_hk: 蹺蹺板博弈
-  title_en: The alpha-beta trade-off is conditional, not universal
-  title_zh: alpha-beta 权衡有条件，并非普遍定律
-  title_zh_hk: alpha-beta 權衡有條件，並非普遍定律
-  left_en: 'Lower alpha, fixed n and effect: wider nonrejection region, higher beta'
-  left_zh: 降低 alpha，固定 n 与效应：不拒绝域扩大，beta 上升
-  left_zh_hk: 降低 alpha，固定 n 同效應：唔拒絕域擴大，beta 上升
-  right_en: 'More information: larger n can reduce beta at the same alpha'
-  right_zh: 增加信息：较大 n 可在相同 alpha 下降低 beta
-  right_zh_hk: 增加資訊：較大 n 可以喺相同 alpha 之下降低 beta
-  s1_en: When the sample size, variability, alternative effect, test direction, and model are held fixed, lowering alpha moves
-    the rejection boundary farther into the tails. This reduces false-positive risk but raises beta for that specified alternative
-    because more outcomes remain inside the nonrejection region.
-  s1_zh: 当样本量、波动、备择效应、检验方向与模型保持不变时，降低 alpha 会把拒绝边界推向更远的尾部。这样会降低假阳性风险，但会提高该指定备择状态下的 beta，因为更多结果会留在不拒绝域。
-  s1_zh_hk: 當樣本量、波動、備擇效應、檢驗方向同模型保持不變嗰陣，降低 alpha 會將拒絕邊界推向更遠嘅尾部。噉樣會降低假陽性風險，但會提高嗰個指定備擇狀態之下嘅 beta，因為更多結果會留喺唔拒絕域。
-  s2_en: 'Increasing sample size reduces the standard error and can improve power while leaving alpha at its chosen level.
-    It is an important way to reduce beta, but it is not the only possible design change: better measurement, lower noise,
-    a more efficient design, or a justified directional test may also matter.'
-  s2_zh: 增加样本量会降低标准误，并可在保持 alpha 不变时提高功效。这是降低 beta 的重要方法，但不是唯一设计变化；更好的测量、更低噪声、更高效的设计，或有依据的方向性检验也可能发挥作用。
-  s2_zh_hk: 增加樣本量會降低標準誤，並可以喺保持 alpha 不變嗰陣提高功效。呢個係降低 beta 嘅重要方法，但唔係唯一設計變化；更好嘅量度、更低雜音、更高效嘅設計，或者有依據嘅方向性檢驗亦可能發揮作用。
-  s3_en: Neither error is automatically more serious. The design should reflect the parameter, minimum meaningful effect,
-    data-collection process, safety implications, customer consequences, and verified financial costs. Those inputs must be
-    documented rather than invented after the result is known.
-  s3_zh: 没有哪一类错误必然更严重。设计应反映参数、最小有意义效应、数据收集流程、安全影响、顾客后果与已核实财务成本。这些输入应形成文件，而不是在结果已知后临时杜撰。
-  s3_zh_hk: 冇邊一類錯誤必然更嚴重。設計應該反映參數、最小有意義效應、數據收集流程、安全影響、顧客後果同已核實財務成本。呢啲輸入應該形成文件，而唔係喺結果已知之後臨時杜撰。
+  seconds: 64
+  kicker_en: The seesaw
+  kicker_zh: 跷跷板
+  kicker_zh_hk: 蹺蹺板
+  title_en: The trade-off has conditions
+  title_zh: 此消彼长，是有条件的
+  title_zh_hk: 此消彼長，係有條件嘅
+  left_en: 'Lower alpha: beta rises'
+  left_zh: 降低 alpha，n 和偏移不变：beta 上升
+  left_zh_hk: 降低 alpha，n 同偏移唔變：beta 上升
+  right_en: 'Bigger n: beta falls'
+  right_zh: 更多信息，alpha 不变：beta 下降
+  right_zh_hk: 更多資訊，alpha 唔變：beta 下降
+  s1_en: >-
+    Picture a seesaw. Keep the sample size, the noise, and the shift fixed, then lower alpha. The cutoffs move farther into
+    the tails, so fewer false alarms. But more results now land in the do-not-reject zone, so beta rises.
+  s1_zh: >-
+    想象一个跷跷板。样本量、噪声和偏移都不变，只把 alpha 调低。临界值往尾部更外面推，误报就少了；可是更多结果落进不拒绝的区域，beta 就升上去。
+  s1_zh_hk: >-
+    想像一個蹺蹺板。樣本量、雜音同偏移都唔變，淨係將 alpha 調低。臨界值向尾部再推出啲，誤報就少咗；但係更多結果跌入唔拒絕嘅範圍，beta 就升上去。
+  s2_en: >-
+    The seesaw only holds when nothing else changes. A larger sample shrinks the standard error, so the same alpha can come
+    with a smaller beta. Better measurement, less noise, or a smarter design can help too.
+  s2_zh: >-
+    这个跷跷板，只在其他条件都不变时才成立。样本量加大，标准误就变小，同样的 alpha 也能换来更小的 beta。测量更准、噪声更小、设计更聪明，也都有帮助。
+  s2_zh_hk: >-
+    呢個蹺蹺板，淨係喺其他條件都唔變嗰陣先成立。樣本量加大，標準誤就變細，同一個 alpha 都可以換到更細嘅 beta。量度更準、雜音更細、設計更聰明，都會幫到手。
+  s3_en: >-
+    Neither error is automatically worse. Which one hurts more depends on safety, customers, and real costs, and those
+    should be written down before the data come in, not made up after the result is known.
+  s3_zh: >-
+    没有哪一种错误天生更严重。哪种伤害更大，要看安全、顾客和真实成本；这些都应该在数据进来之前写清楚，而不是结果出来以后再编。
+  s3_zh_hk: >-
+    冇邊一種錯誤天生更嚴重。邊種傷害更大，要睇安全、顧客同真實成本；呢啲都應該喺數據入嚟之前寫清楚，而唔係結果出咗之後先作。
 - id: ledger
   visual: steps
-  seconds: 38
-  kicker_en: The Ledger
-  kicker_zh: 风险精算
-  kicker_zh_hk: 風險精算
-  title_en: Compare two cutoffs for a planned grinder test
-  title_zh: 比较磨豆机规划检验的两种临界点
-  title_zh_hk: 比較磨豆機規劃檢驗嘅兩種臨界點
-  step1_en: 'Assume a two-sided Z test of H0: mu = mu_0 with fixed n, sigma, and meaningful alternative mu_1'
-  step1_zh: '假设双侧 Z 检验 H0: mu = mu_0，并固定 n、sigma 与有意义备择 mu_1'
-  step1_zh_hk: '假設雙側 Z 檢驗 H0: mu = mu_0，並固定 n、sigma 同有意義備擇 mu_1'
-  step2_en: At alpha = 0.05, critical values are +/-1.960; at alpha = 0.01, critical values are +/-2.576
-  step2_zh: alpha = 0.05 时临界值为 ±1.960；alpha = 0.01 时临界值为 ±2.576
-  step2_zh_hk: alpha = 0.05 嗰陣臨界值係 ±1.960；alpha = 0.01 嗰陣臨界值係 ±2.576
-  step3_en: With other inputs fixed, alpha = 0.01 lowers Type I risk but raises beta for mu_1; quantify both before choosing
-  step3_zh: 其他输入固定时，alpha = 0.01 降低第一类错误风险，但提高 mu_1 下的 beta；选择前应量化两者
-  step3_zh_hk: 其他輸入固定嗰陣，alpha = 0.01 降低第一類錯誤風險，但提高 mu_1 之下嘅 beta；選擇之前應該量化兩者
-  s1_en: For illustration, assume a two-sided standard-normal test for a grinder-quality mean, with sample size, variability,
-    and a specified meaningful shift held fixed. These are planning assumptions, not verified grinder records, fleet counts,
-    recall costs, or customer-loss estimates.
-  s1_zh: 作为示例，假设对磨豆机质量均值进行双侧标准正态检验，并保持样本量、波动与指定的有意义偏移不变。这些是规划假设，并非已核实的磨豆机记录、设备数量、召回成本或顾客流失估计。
-  s1_zh_hk: 作為例子，假設對磨豆機品質均值進行雙側標準正態檢驗，並保持樣本量、波動同指定嘅有意義偏移不變。呢啲係規劃假設，唔係已核實嘅磨豆機記錄、設備數量、召回成本或者顧客流失估計。
-  s2_en: At alpha equal to 0.05, the two-sided critical values are approximately plus or minus 1.960. Reducing alpha to 0.01
-    moves them to approximately plus or minus 2.576. The second rule requires a more extreme statistic before rejecting H0.
-  s2_zh: 当 alpha = 0.05 时，双侧临界值约为 ±1.960；把 alpha 降至 0.01 后，临界值移至约 ±2.576。第二项规则要求检验统计量更极端，才拒绝 H0。
-  s2_zh_hk: 當 alpha = 0.05 嗰陣，雙側臨界值約係 ±1.960；將 alpha 降至 0.01 之後，臨界值移至約 ±2.576。第二項規則要求檢驗統計量更加極端，先拒絕 H0。
-  s3_en: Under the fixed planning assumptions, the 1% rule reduces the long-run Type I error rate but increases beta for the
-    specified shift. The appropriate choice cannot be determined from the critical values alone. It requires the minimum effect
-    worth detecting, desired power, and verified consequences of false alarms and missed defects.
-  s3_zh: 在固定规划假设下，1% 规则降低长期第一类错误率，但提高指定偏移下的 beta。仅凭临界值无法决定适当选择；还需要明确值得检测的最小效应、目标功效，以及误报与漏报的已核实后果。
-  s3_zh_hk: 喺固定規劃假設之下，1% 規則降低長期第一類錯誤率，但提高指定偏移之下嘅 beta。單憑臨界值冇辦法決定適當選擇；仲需要明確值得檢測嘅最小效應、目標功效，以及誤報同漏報嘅已核實後果。
+  layout: rows
+  seconds: 100
+  kicker_en: A worked example
+  kicker_zh: 算一次看看
+  kicker_zh_hk: 計一次睇吓
+  title_en: 'Shop A: two cutoffs, one test'
+  title_zh: A店：一个检验，两种临界值
+  title_zh_hk: A店：一個檢驗，兩種臨界值
+  step1_en: 'H0: μ = μ0 vs H1: μ ≠ μ0'
+  step1_zh: 'H0: μ = μ0 对 H1: μ ≠ μ0'
+  step1_zh_hk: 'H0: μ = μ0 對 H1: μ ≠ μ0'
+  step2_en: 'α = 0.05: reject |Z| ≥ 1.960'
+  step2_zh: 'α = 0.05：|Z| ≥ 1.960 就拒绝'
+  step2_zh_hk: 'α = 0.05：|Z| ≥ 1.960 就拒絕'
+  step3_en: 'α = 0.01: reject |Z| ≥ 2.576'
+  step3_zh: 'α = 0.01：|Z| ≥ 2.576 就拒绝'
+  step3_zh_hk: 'α = 0.01：|Z| ≥ 2.576 就拒絕'
+  step4_en: 'False alarms: 5% → 1%'
+  step4_zh: '误报率：5% → 1%'
+  step4_zh_hk: '誤報率：5% → 1%'
+  step5_en: 'Same n and shift: β rises'
+  step5_zh: 'n 和偏移不变：β 上升'
+  step5_zh_hk: 'n 同偏移唔變：β 上升'
+  s1_en: >-
+    These are planning assumptions, not grinder records. Shop A runs a two-sided Z test: the grinder mean mu equals the
+    benchmark mu zero, against mu not equal to mu zero, with sample size, noise sigma, and the shift fixed.
+  s1_zh: >-
+    下面是规划用的假设，不是磨豆机的真实记录。A店做双侧 Z 检验：磨豆机的真实均值 mu 等于基准 mu 零，对上 mu 不等于 mu 零。样本量、噪声 sigma 和要紧的偏移都固定。
+  s1_zh_hk: >-
+    以下係規劃假設，唔係真實記錄。A店做雙側 Z 檢驗：磨豆機均值 mu 等於基準 mu 零，對上 mu 唔等於 mu 零；樣本量、雜音 sigma 同偏移都固定。
+  s2_en: >-
+    Rule one uses alpha equal to 0.05. The two-sided critical values are about plus or minus 1.960: reject H0 when Z is that
+    far from zero.
+  s2_zh: >-
+    第一条规则用 alpha 等于 0.05。双侧临界值大约是正负 1.960，所以 Z 离零至少 1.960，就拒绝原假设。
+  s2_zh_hk: >-
+    第一條規則用 alpha 等於 0.05。雙側臨界值大約係正負 1.960，所以 Z 離零至少 1.960，就拒絕原假設。
+  s3_en: >-
+    Rule two uses alpha equal to 0.01. The critical values move out to about plus or minus 2.576. The statistic must be
+    more extreme before we reject.
+  s3_zh: >-
+    第二条规则用 alpha 等于 0.01。临界值往外移到大约正负 2.576，检验统计量要更极端，才拒绝原假设。
+  s3_zh_hk: >-
+    第二條規則用 alpha 等於 0.01。臨界值向外移到大約正負 2.576，檢驗統計量要更極端，先拒絕原假設。
+  s4_en: >-
+    What did we buy? When the grinder is really fine, the long-run false-alarm rate drops from 5 percent to 1 percent.
+  s4_zh: >-
+    这样换来了什么？如果磨豆机其实没问题，长期误报率从 5% 降到 1%。
+  s4_zh_hk: >-
+    噉樣換到啲乜？如果部磨豆機其實冇問題，長遠誤報率由 5% 跌到 1%。
+  s5_en: >-
+    What did we pay? With the same sample and shift, more drifted grinders slip through, so beta rises. Cutoffs alone cannot
+    pick the rule; you also need the shift worth catching, the target power, and each mistake's real cost.
+  s5_zh: >-
+    付出了什么？样本和偏移都不变，更多已经走样的磨豆机会溜过去，所以 beta 上升。光看临界值选不出规则；还要知道值得抓的偏移、想要的功效，以及两种错误的真实代价。
+  s5_zh_hk: >-
+    又要俾啲乜？樣本同偏移都唔變，更多已經走樣嘅磨豆機會走甩，所以 beta 上升。淨係睇臨界值揀唔到規則；仲要知道值得捉嘅偏移、想要嘅功效，同埋兩種錯誤嘅真實代價。
 - id: takeaway
   visual: takeaway
-  seconds: 34
-  kicker_en: Decision Rule
-  kicker_zh: 商业法度
-  kicker_zh_hk: 商業法度
-  title_en: Design around both errors and the effect that matters
-  title_zh: 围绕两类错误与重要效应进行设计
-  title_zh_hk: 圍繞兩類錯誤同重要效應進行設計
-  q1_en: Why can beta not be stated without specifying an alternative effect?
-  q1_zh: 为什么不指定备择效应就不能给出 beta？
-  q1_zh_hk: 點解唔指定備擇效應就唔可以畀出 beta？
-  q2_en: Which design changes can improve power without simply raising alpha?
-  q2_zh: 哪些设计变化可以在不只是提高 alpha 的情况下改善功效？
-  q2_zh_hk: 邊啲設計變化可以喺唔只係提高 alpha 嘅情況之下改善功效？
-  s1_en: Alpha is defined under H0, whereas beta is defined at a particular false-null state. A small shift is harder to detect
-    than a large shift, so beta and power must be reported together with the alternative effect, sample size, variability,
-    and testing rule.
-  s1_zh: alpha 在 H0 下定义，而 beta 在某个具体的错误原假设状态下定义。小偏移比大偏移更难检测，因此报告 beta 与功效时，必须同时说明备择效应、样本量、波动与检验规则。
-  s1_zh_hk: alpha 喺 H0 之下定義，而 beta 喺某個具體嘅錯誤原假設狀態之下定義。細偏移比大偏移更加難檢測，所以報告 beta 同功效嗰陣，必須同時說明備擇效應、樣本量、波動同檢驗規則。
-  s2_en: Power can improve through a larger effective sample, lower measurement noise, a more efficient paired or blocked
-    design, a justified one-sided alternative, or a genuinely larger effect. Each change has assumptions and operational costs
-    that should be reviewed before adoption.
-  s2_zh: 提高有效样本量、降低测量噪声、采用更高效的配对或区组设计、使用有依据的单侧备择，或存在更大的真实效应，都可改善功效。每项变化都有相关假设与经营成本，应在采用前审查。
-  s2_zh_hk: 提高有效樣本量、降低量度雜音、採用更高效嘅配對或者區組設計、使用有依據嘅單側備擇，或者存在更大嘅真實效應，都可以改善功效。每項變化都有相關假設同營運成本，應該喺採用之前審查。
-  s3_en: The operational rule is to specify alpha, the minimum meaningful effect, target power, and verified error costs before
-    data collection. Then report the resulting Type I and Type II risks transparently rather than promising that either can
-    be eliminated.
-  s3_zh: 操作规则是：在收集数据前明确 alpha、最小有意义效应、目标功效与已核实错误成本；随后透明报告所得第一类与第二类错误风险，而不要承诺能够消除其中任何一种。
-  s3_zh_hk: 操作規則係：喺收集數據之前明確 alpha、最小有意義效應、目標功效同已核實錯誤成本；之後透明報告所得第一類同第二類錯誤風險，而唔好承諾可以消除其中任何一種。
+  seconds: 66
+  kicker_en: Decision rule
+  kicker_zh: 决策规则
+  kicker_zh_hk: 決策規則
+  title_en: Plan for both errors
+  title_zh: 两类错误都要计划
+  title_zh_hk: 兩類錯誤都要計劃
+  q1_en: Why does beta need a stated shift?
+  q1_zh: 为什么不指定备择效应，就说不出 beta？
+  q1_zh_hk: 點解唔指定備擇效應，就講唔出 beta？
+  q2_en: How to raise power without raising alpha?
+  q2_zh: 哪些设计改变能提高功效，又不用调高 alpha？
+  q2_zh_hk: 邊啲設計改變可以提高功效，又唔使調高 alpha？
+  s1_en: >-
+    Alpha is worked out assuming H0 is true. Beta is worked out at one particular shift. A small shift is harder to catch
+    than a big one, so always report beta and power together with the shift, sample size, noise, and rule.
+  s1_zh: >-
+    alpha 是假定原假设成立来算的；beta 是在某一个具体偏移下算的。小偏移比大偏移难抓，所以报告 beta 和功效时，一定要连同偏移、样本量、噪声和规则一起说。
+  s1_zh_hk: >-
+    alpha 係假定原假設成立嚟計嘅；beta 係喺某一個具體偏移之下計嘅。細偏移比大偏移難捉，所以報告 beta 同功效嗰陣，一定要連埋偏移、樣本量、雜音同規則一齊講。
+  s2_en: >-
+    Power can go up with a larger sample, less measurement noise, a paired or blocked design, a justified one-sided test,
+    or a bigger real effect. Each change has assumptions and costs to check first.
+  s2_zh: >-
+    功效可以靠这些提高：更大的样本、更小的测量噪声、配对或分组的设计、有依据的单侧检验，或者真实效应本来就更大。每一种改变都有自己的假设和成本，要先查清楚。
+  s2_zh_hk: >-
+    功效可以靠呢啲提高：更大樣本、更細量度雜音、配對或者分組設計、有依據嘅單側檢驗，或者真實效應本身更大。每種改變都有假設同成本，要先查清楚。
+  s3_en: >-
+    So which mistakes can Shop A's grinder test make? A false alarm, the Type I error, and a miss, the Type II error. Fix
+    alpha, the shift, target power, and real costs before the data, then report both risks. Neither is ever zero.
+  s3_zh: >-
+    所以，A店的磨豆机检验会犯哪些错？误报，就是第一类错误；漏报，就是第二类错误。收数据前，先定好 alpha、偏移、目标功效和真实成本，再把两种风险都报出来；哪一种都不会是零。
+  s3_zh_hk: >-
+    所以，A店嘅磨豆機檢驗會犯邊啲錯？誤報，即係第一類錯誤；漏報，即係第二類錯誤。收數據之前，先定好 alpha、偏移、目標功效同真實成本，再將兩種風險都報出嚟；邊種都唔會係零。

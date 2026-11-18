@@ -286,7 +286,7 @@ class OutRoot(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp).resolve()
-            (root / "last_build.log").write_text("hello-log\n", encoding="utf-8")
+            (root / "last_build.log").write_bytes(b"hello-log\n")
             with patch.dict(os.environ, {"VF_OUT": tmp}):
                 server = ThreadingHTTPServer(("127.0.0.1", 0), app.Handler)
                 thread = threading.Thread(target=server.serve_forever, daemon=True)

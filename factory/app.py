@@ -482,7 +482,10 @@ def lesson_inspect(filename: str) -> dict:
         need(prompt, f"quiz {qid}", "prompt", required=True)
         if any(answer.values()):
             need(answer, f"quiz {qid}", "answer")
-        quiz_rows.append({"id": qid, "type": qraw.get("type") or "", "prompt": prompt, "answer": answer})
+        quiz_rows.append({"id": qid, "type": fields["type"], "prompt": prompt, "answer": answer,
+                          "correct": fields["answer"],
+                          "options": {lang: fields[f"options_{lang}"] for lang in QUIZ_LANGS},
+                          "explanation": {lang: fields[f"explanation_{lang}"] for lang in QUIZ_LANGS}})
     return {
         "ok": True,
         "file": path.name,
@@ -630,11 +633,22 @@ def save_light_edits(filename: str, payload: dict) -> dict:
                 "id": str(row.get("id") or f"Q{i}").strip() or f"Q{i}",
                 "original_id": row.get("original_id"),
                 "type": row.get("type"),
+                **({"correct": row["correct"]} if "correct" in row else {}),
                 **{f"{stem}_{lang}": value
-                   for stem in ("prompt", "answer")
+                   for stem in ("prompt", "answer", "options", "explanation")
                    for lang, value in (row.get(stem) or {}).items() if lang in QUIZ_LANGS},
             })
         lesson["quiz"] = merge_quiz_rows(lesson.get("quiz") or [], quiz_rows)
+        for question in lesson["quiz"]:
+            if question.get("type") != "multiple_choice":
+                continue
+            fields = quiz_fields(question)
+            if question.get("answer") not in ("A", "B", "C", "D"):
+                return {"ok": False, "error": "Choose the correct answer A–D for " + question["id"]}
+            for lang in QUIZ_LANGS:
+                choices = fields[f"options_{lang}"]
+                if not isinstance(choices, list) or len(choices) != 4 or not all(str(c).strip() for c in choices):
+                    return {"ok": False, "error": f"Enter four choices for {question['id']} ({lang})."}
     if payload.get("glossary") is not None:
         gloss_out = []
         for row in payload.get("glossary") or []:
@@ -2159,6 +2173,19 @@ HTML = """<!DOCTYPE html>
     .sidebar { position:static; max-height:none; }
     .opt-grid, .fields, .checks { grid-template-columns:1fr; }
   }
+     .author-bar {position:sticky;top:0;z-index:8;background:#fffdf8;padding:14px;border-bottom:1px solid #ddd;}
+ .editor-layout {display:grid;grid-template-columns:180px minmax(0,1fr);gap:20px;margin-top:16px;}
+ .editor-nav {position:sticky;top:85px;align-self:start;max-height:75vh;overflow:auto;}
+ .editor-nav button {display:block;text-align:left;width:100%;margin:6px 0;}
+ .editor-nav button.active {background:#e8dfc7;}
+ #beat-list {min-width:0;}
+ #author [data-beat] {scroll-margin-top:100px;}
+ #author textarea {min-height:85px;line-height:1.6;resize:vertical;font-size:15px;}
+ #author .edit-grid.named {grid-template-columns:110px repeat(3,minmax(0,1fr));}
+ #author [hidden] {display:none!important;}
+ body.editing-wide [data-panel="author"] {position:fixed;inset:0;z-index:50;background:#f7f4ee;overflow:auto;padding:20px;}
+ @media(max-width:1000px) {.editor-layout{grid-template-columns:1fr}.editor-nav{position:static;max-height:180px}#author .edit-grid.named{grid-template-columns:repeat(3,minmax(0,1fr))}#author .edit-name{grid-column:1/-1}}
+ @media(max-width:650px) {#author .edit-grid,#author .edit-grid.named{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -3255,7 +3282,7 @@ function beatCard(b, extraCols, labels, open) {
     <div class="beat-tools">
       <label class="field">Id <input data-beat-id type="text" value="${esc(b.id)}"></label>
       <label class="field">Card <select data-visual>${opts}</select></label>
-      <label class="field">Seconds <input data-seconds type="number" min="4" max="40" step="1" value="${esc(String(b.seconds||''))}"></label>
+      <label class="field">Seconds <input data-seconds type="number" min="4" step="1" value="${esc(String(b.seconds||''))}"></label>
       <button type="button" data-up>Up</button>
       <button type="button" data-down>Down</button>
       <button type="button" data-del>Remove</button>
@@ -3265,6 +3292,78 @@ function beatCard(b, extraCols, labels, open) {
     ${fields.map(c => trioBlock(c, 'bf-'+b.id+'-'+c, b[c]||{}, /^s\\d$/.test(c) ? 3 : 2, /^s\\d$/.test(c))).join('')}
   </details>`;
 }
+
+let authorDirty = false;
+window.addEventListener('beforeunload', event => {
+  if (authorDirty) { event.preventDefault(); event.returnValue = ''; }
+});
+function editorButton(label, action) {
+  const button = document.createElement('button');
+  button.type = 'button'; button.textContent = label; button.onclick = action;
+  return button;
+}
+function setupEditor(data) {
+  const box = document.getElementById('author');
+  authorDirty = false;
+  box.oninput = box.onchange = () => {
+    authorDirty = true;
+    document.getElementById('editstatus').textContent = 'Unsaved changes';
+  };
+  box.querySelector('.author-bar').prepend(editorButton('Expand workspace', event => {
+    document.body.classList.toggle('editing-wide');
+    event.currentTarget.textContent = document.body.classList.contains('editing-wide') ? 'Normal workspace' : 'Expand workspace';
+  }));
+  const list = document.getElementById('beat-list');
+  const layout = document.createElement('div'); layout.className = 'editor-layout';
+  const nav = document.createElement('aside'); nav.className = 'editor-nav';
+  nav.setAttribute('aria-label','Scene navigation');
+  list.before(layout); layout.append(nav,list);
+  const rebuild = () => {
+    nav.replaceChildren();
+    const title = document.createElement('h3'); title.textContent = 'Scenes'; nav.append(title);
+    const cards = Array.from(list.querySelectorAll('[data-beat]'));
+    cards.forEach((card,index) => {
+      const button = editorButton((index+1)+'. '+card.querySelector('[data-beat-id]').value, () => {
+        cards.forEach(other => other.open = other === card);
+        nav.querySelectorAll('button').forEach(b => b.classList.toggle('active',b===button));
+        card.scrollIntoView({behavior:'smooth',block:'start'});
+      }); nav.append(button);
+    });
+    nav.append(editorButton('Open all scenes',()=>cards.forEach(card=>card.open=true)));
+    nav.append(editorButton('Questions',()=>document.getElementById('quiz-list').scrollIntoView({behavior:'smooth'})));
+  };
+  new MutationObserver(rebuild).observe(list,{childList:true});
+  list.addEventListener('change',rebuild); rebuild();
+  const names = {en:'English',zh:'Putonghua · 简体',zh_hk:'Cantonese · 繁體'};
+  box.querySelectorAll('textarea[data-lang]').forEach(area => {
+    if(area.parentElement.firstChild.nodeType === Node.TEXT_NODE) area.parentElement.firstChild.textContent = names[area.dataset.lang];
+  });
+  (data.quiz||[]).forEach(q => {
+    const card = Array.from(box.querySelectorAll('[data-quiz]')).find(c=>c.dataset.quiz===q.id);
+    if (!card || q.type !== 'multiple_choice') return;
+    card.querySelectorAll('[data-trio]').forEach(el => {
+      if (el.dataset.trio.startsWith('qa-')) el.closest('.edit-row').hidden = true;
+    });
+    for (const stem of ['options','explanation']) {
+      const grid = document.createElement('div'); grid.className = 'edit-grid';
+      for (const lang of ['en','zh','zh_hk']) {
+        const label = document.createElement('label'); label.className='field';
+        label.textContent = names[lang]+' '+(stem==='options'?'choices — four lines':'explanation');
+        const area = document.createElement('textarea'); area.rows = stem==='options'?4:3;
+        area.dataset[stem]=lang;
+        const value = (q[stem]||{})[lang];
+        area.value = stem==='options' ? (value||[]).join('\\n') : value||'';
+        label.append(area); grid.append(label);
+      }
+      card.append(grid);
+    }
+    const label = document.createElement('label'); label.className='field'; label.textContent='Correct choice';
+    const key = document.createElement('select'); key.dataset.correct='';
+    ['', 'A','B','C','D'].forEach(v=>key.add(new Option(v||'Select',v)));
+    key.value=q.correct||''; label.append(key); card.append(label);
+  });
+}
+
 function showAuthor(file, data, extraCols, labels) {
   const box = document.getElementById('author');
   if (!box) return;
@@ -3272,7 +3371,7 @@ function showAuthor(file, data, extraCols, labels) {
     box.innerHTML = '<div class="empty">Pick a short on the left.</div>';
     return;
   }
-  if (data.kind === 'module') {
+  if (data.kind === 'module' || data.kind === 'minicourse') {
     box.innerHTML = `<p class="hint">A module only names children. Open a short to edit speech.</p>
       <div>${(data.children||[]).map(c => `<button type="button" class="child-link" data-open="${esc(c.file || (c.id+'.yaml'))}">${esc(c.id || c.file)} · ${esc((c.title && c.title.en) || c.title || '')}</button>`).join('')}</div>`;
     box.querySelectorAll('[data-open]').forEach(btn => btn.onclick = () => selectLesson(btn.dataset.open));
@@ -3381,6 +3480,7 @@ function showAuthor(file, data, extraCols, labels) {
     if (ev.target.closest('[data-up]') && card.previousElementSibling) list.insertBefore(card, card.previousElementSibling);
     if (ev.target.closest('[data-down]') && card.nextElementSibling) list.insertBefore(card.nextElementSibling, card);
   };
+  setupEditor(data);
 }
 async function saveLightEdits(file, extraCols) {
   extraCols = extraCols || [];
@@ -3408,7 +3508,13 @@ async function saveLightEdits(file, extraCols) {
   const quiz = Array.from(document.querySelectorAll('#quiz-list [data-quiz]')).map(card => {
     const oldId = card.dataset.quiz;
     const id = ((card.querySelector('[data-qid]')||{}).value || oldId).trim() || oldId;
-    return {id, original_id: oldId, prompt: readTrio('qp-'+oldId, card), answer: readTrio('qa-'+oldId, card)};
+    const row = {id, original_id: oldId, prompt: readTrio('qp-'+oldId, card), answer: readTrio('qa-'+oldId, card)};
+    if (card.querySelector('[data-correct]')) {
+      row.correct = card.querySelector('[data-correct]').value;
+      row.options = Object.fromEntries(Array.from(card.querySelectorAll('[data-options]')).map(a=>[a.dataset.options,a.value.split(/\\r?\\n/).map(s=>s.trim()).filter(Boolean)]));
+      row.explanation = Object.fromEntries(Array.from(card.querySelectorAll('[data-explanation]')).map(a=>[a.dataset.explanation,a.value]));
+    }
+    return row;
   });
   const glossary = Array.from(document.querySelectorAll('#gloss-list [data-gloss]')).map(card => {
     const i = card.dataset.gloss;
@@ -3436,7 +3542,8 @@ async function saveLightEdits(file, extraCols) {
     return;
   }
   if (status) status.textContent = 'Saved. Backup: ' + (data.backup||'') + (data.valid===false ? ' · checker still has notes.' : '');
-  showInspect(file);
+  authorDirty = false;
+  await showInspect(file);
   refresh();
 }
 async function restoreEdits(file) {
@@ -3641,6 +3748,8 @@ function renderModuleNav(row, file) {
 }
 function selectLesson(file) {
   if (!file) return;
+  if (authorDirty && !confirm("Discard unsaved edits?")) return;
+  authorDirty = false;
   selected = file;
   const row = lessonRows.find(r => r.file === file || r.id === file);
   setWorkspace(row, file);

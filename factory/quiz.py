@@ -82,6 +82,13 @@ def merge_quiz_rows(existing: list[dict], rows: list[dict]) -> list[dict]:
                     key = (f"answer_zh_cn" if lang == "zh" and f"answer_{lang}" not in original
                            and "answer_zh_cn" in original else field)
                 item[key] = row[field]
+        for stem in ("options", "explanation"):
+            for lang in QUIZ_LANGS:
+                key = f"{stem}_{lang}"
+                if key in row:
+                    item[key] = row[key]
+        if "correct" in row:
+            item["answer"] = row["correct"]
         result.append(item)
     return result
 

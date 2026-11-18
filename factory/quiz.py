@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import csv
 import html
+import json
 from pathlib import Path
 
 from catalog import lesson_path
@@ -27,6 +28,64 @@ def _pick(obj: dict, stem: str, lang: str) -> str:
     return ""
 
 
+QUIZ_LANGS = ("en", "zh", "zh_hk")
+
+
+def _prompt_keys(lang: str) -> tuple[str, ...]:
+    aliases = ("zh", "zh_cn") if lang == "zh" else (lang,)
+    return tuple(key for code in aliases for key in (f"question_{code}", code, f"prompt_{code}"))
+
+
+def quiz_fields(raw: dict) -> dict:
+    """Read the current quiz format and legacy short-answer field names."""
+    fields = {"type": raw.get("type") or "comprehension", "answer": raw.get("answer") or ""}
+    for lang in QUIZ_LANGS:
+        fields[f"prompt_{lang}"] = next((raw[key] for key in _prompt_keys(lang) if raw.get(key)), "")
+        for stem, default in (("answer", ""), ("explanation", ""), ("options", [])):
+            value = raw.get(f"{stem}_{lang}")
+            if value is None and lang == "zh":
+                value = raw.get(f"{stem}_zh_cn")
+            fields[f"{stem}_{lang}"] = default if value is None else value
+    return fields
+
+
+def merge_quiz_rows(existing: list[dict], rows: list[dict]) -> list[dict]:
+    """Apply only editable fields. Retain choices, keys, explanations and extensions."""
+    by_id = {str(item.get("id") or f"Q{i}"): item
+             for i, item in enumerate(existing, 1) if isinstance(item, dict)}
+    result = []
+    for row in rows:
+        qid = row["id"]
+        original = by_id.get(row.get("original_id") or qid, {})
+        item = dict(original)
+        if not original or str(original.get("id") or row.get("original_id") or qid) != qid:
+            item["id"] = qid
+        fields = quiz_fields(original)
+        if row.get("type") and row["type"] != fields["type"]:
+            item["type"] = row["type"]
+        elif not original:
+            item["type"] = fields["type"]
+        for lang in QUIZ_LANGS:
+            for stem in ("prompt", "answer"):
+                field = f"{stem}_{lang}"
+                if field not in row or row[field] == fields[field]:
+                    continue
+                if stem == "prompt":
+                    keys = _prompt_keys(lang)
+                    key = next((key for key in keys if original.get(key)),
+                               f"question_{lang}" if fields["type"] == "multiple_choice" else lang)
+                    if not row[field]:
+                        for alias in keys:
+                            item.pop(alias, None)
+                        continue
+                else:
+                    key = (f"answer_zh_cn" if lang == "zh" and f"answer_{lang}" not in original
+                           and "answer_zh_cn" in original else field)
+                item[key] = row[field]
+        result.append(item)
+    return result
+
+
 def _norm(text: str) -> str:
     return " ".join((text or "").lower().split())
 
@@ -39,17 +98,7 @@ def collect_items(lesson: dict, source_id: str | None = None) -> list[dict]:
         if not isinstance(raw, dict):
             continue
         qid = str(raw.get("id") or f"Q{len(items)+1}")
-        row = {
-            "id": qid,
-            "source": src,
-            "type": raw.get("type") or "comprehension",
-            "prompt_en": (raw.get("en") or raw.get("prompt_en") or "").strip(),
-            "prompt_zh": (raw.get("zh") or raw.get("prompt_zh") or "").strip(),
-            "prompt_zh_hk": (raw.get("zh_hk") or raw.get("prompt_zh_hk") or "").strip(),
-            "answer_en": (raw.get("answer_en") or "").strip(),
-            "answer_zh": (raw.get("answer_zh") or "").strip(),
-            "answer_zh_hk": (raw.get("answer_zh_hk") or "").strip(),
-        }
+        row = {"id": qid, "source": src, **quiz_fields(raw)}
         key = _norm(row["prompt_en"] or row["prompt_zh"])
         if key and key not in seen:
             seen.add(key)
@@ -125,6 +174,9 @@ def write_quiz_files(
         "answer_en",
         "answer_zh",
         "answer_zh_hk",
+        *(f"options_{lang}" for lang in QUIZ_LANGS),
+        "answer",
+        *(f"explanation_{lang}" for lang in QUIZ_LANGS),
     ]
     with csv_path.open("w", encoding="utf-8-sig", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=fields)
@@ -142,6 +194,10 @@ def write_quiz_files(
                     "answer_en": item.get("answer_en") or "",
                     "answer_zh": item.get("answer_zh") or "",
                     "answer_zh_hk": item.get("answer_zh_hk") or "",
+                    **{f"options_{lang}": json.dumps(item[f"options_{lang}"], ensure_ascii=False)
+                       for lang in QUIZ_LANGS if item.get(f"options_{lang}")},
+                    "answer": item.get("answer") or "",
+                    **{f"explanation_{lang}": item.get(f"explanation_{lang}") or "" for lang in QUIZ_LANGS},
                 }
             )
     written.append(csv_path)
@@ -186,17 +242,24 @@ def _html_page(lesson_id: str, title: dict, items: list[dict], answers: bool) ->
             text = item.get(f"prompt_{lang}") or ""
             if text:
                 prompts.append(f'<p class="q"><span class="lang">{label}</span> {html.escape(text)}</p>')
+            options = item.get(f"options_{lang}") or []
+            if options:
+                choices = "".join(f"<li>{html.escape(str(option))}</li>" for option in options)
+                prompts.append(f'<ul class="options">{choices}</ul>')
         ans = ""
         if answers:
             lines = []
+            if item.get("answer"):
+                lines.append(f'<p class="a"><strong>{html.escape(str(item["answer"]))}</strong></p>')
             for lang, label in (("en", "EN"), ("zh", "简"), ("zh_hk", "繁")):
                 text = item.get(f"answer_{lang}") or ""
+                text = text or item.get(f"explanation_{lang}") or ""
                 if text:
                     lines.append(f'<p class="a"><span class="lang">{label}</span> {html.escape(text)}</p>')
             if not lines:
                 lines.append('<p class="a muted">No keyed answer — mark from the spoken takeaway.</p>')
             ans = '<div class="key">' + "".join(lines) + "</div>"
-        else:
+        elif not any(item.get(f"options_{lang}") for lang in QUIZ_LANGS):
             ans = '<div class="lines"><i></i><i></i><i></i></div>'
         blocks.append(
             f'<article class="item"><header><strong>{i}.</strong> '

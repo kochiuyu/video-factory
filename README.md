@@ -106,6 +106,10 @@ Useful flags (see `python factory/build.py -h`):
 | `--theme <name>` | Palette from `themes/<name>.yaml` |
 | `--out <dir>` | Lesson output root. Wins over `$VF_OUT`. Unset, the default is `<Downloads>/video-factory-out` |
 
+Video builds with TTS prepare every narration track so separate cuts use the same beat timing. With `--no-tts`, valid MP3s are required for the requested cuts. All complete local tracks participate in timing, so provide all tracks to align separately rendered cuts.
+
+To move older flat outputs to the current layout, run `python factory/build.py --migrate-output`. The command checks known lesson and module IDs for rendered artifacts and skips existing destinations.
+
 For a three-language lesson, default cells are `en`, `zh`, and `hk`. Files land under `out/<ID>/cells/`.
 
 Day-to-day operator steps: [docs/SOP.md](docs/SOP.md). Faculty one-pager: [docs/SOP-faculty.html](docs/SOP-faculty.html).

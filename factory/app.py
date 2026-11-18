@@ -51,7 +51,7 @@ import time
 import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import parse_qs, unquote, urlparse
+from urllib.parse import parse_qs, quote, unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 FACTORY = Path(__file__).resolve().parent
@@ -74,8 +74,8 @@ def _rel_to_root(path: Path | str) -> str:
 from langs import beat_text, bilingual_pair, cells_for, is_tri, script_langs, selected_cells  # noqa: E402
 from build import write_cell_covers  # noqa: E402
 from modules import load_module, module_errors  # noqa: E402
-from catalog import existing_out_dir as lesson_out_dir, media_href, migrate_out_layout, out_dir as new_out_dir, out_root  # noqa: E402
-from quiz import export_lesson_quiz, export_module_quiz  # noqa: E402
+from catalog import existing_out_dir as lesson_out_dir, media_href, out_dir as new_out_dir, out_root  # noqa: E402
+from quiz import export_lesson_quiz, export_module_quiz, merge_quiz_rows, quiz_fields, QUIZ_LANGS  # noqa: E402
 from pdfexport import export_preview_pdfs  # noqa: E402
 from bundle import COURSES, course_of, write_course_zip, write_ra_zip, write_sop  # noqa: E402
 from glyphs import scan_lesson  # noqa: E402
@@ -162,24 +162,6 @@ def _cell_urls(lid: str) -> list[str]:
     for child in _member_ids(lid):
         if child != lid:
             urls.extend(_cell_urls(child))
-    return urls
-
-
-def _all_cell_urls() -> list[str]:
-    urls: list[str] = []
-    root = out_root()
-    if not root.is_dir():
-        return urls
-    for kind in ("lessons", "modules"):
-        base = root / kind
-        if not base.is_dir():
-            continue
-        for folder in sorted(base.iterdir()):
-            cells = folder / "cells"
-            if not cells.is_dir():
-                continue
-            for mp4 in sorted(cells.glob("*.mp4")):
-                urls.append(media_href(folder.name, "cells", mp4.name))
     return urls
 
 
@@ -494,16 +476,9 @@ def lesson_inspect(filename: str) -> dict:
         if not isinstance(qraw, dict):
             continue
         qid = str(qraw.get("id") or f"Q{qi}")
-        prompt = {
-            "en": (qraw.get("en") or qraw.get("prompt_en") or "").strip(),
-            "zh": (qraw.get("zh") or qraw.get("prompt_zh") or "").strip(),
-            "zh_hk": (qraw.get("zh_hk") or qraw.get("prompt_zh_hk") or "").strip(),
-        }
-        answer = {
-            "en": (qraw.get("answer_en") or "").strip(),
-            "zh": (qraw.get("answer_zh") or "").strip(),
-            "zh_hk": (qraw.get("answer_zh_hk") or "").strip(),
-        }
+        fields = quiz_fields(qraw)
+        prompt = {lang: fields[f"prompt_{lang}"] for lang in QUIZ_LANGS}
+        answer = {lang: fields[f"answer_{lang}"] for lang in QUIZ_LANGS}
         need(prompt, f"quiz {qid}", "prompt", required=True)
         if any(answer.values()):
             need(answer, f"quiz {qid}", "answer")
@@ -647,24 +622,19 @@ def save_light_edits(filename: str, payload: dict) -> dict:
     if rebuilt:
         lesson["beats"] = rebuilt
     if payload.get("quiz") is not None:
-        quiz_out = []
-        for i, row in enumerate(payload.get("quiz") or [], start=1):
+        quiz_rows = []
+        for i, row in enumerate(payload["quiz"], start=1):
             if not isinstance(row, dict):
                 continue
-            qid = str(row.get("id") or f"Q{i}").strip() or f"Q{i}"
-            prompt = row.get("prompt") or {}
-            answer = row.get("answer") or {}
-            quiz_out.append({
-                "id": qid,
-                "type": row.get("type") or "comprehension",
-                "en": prompt.get("en") or "",
-                "zh": prompt.get("zh") or "",
-                "zh_hk": prompt.get("zh_hk") or "",
-                "answer_en": answer.get("en") or "",
-                "answer_zh": answer.get("zh") or "",
-                "answer_zh_hk": answer.get("zh_hk") or "",
+            quiz_rows.append({
+                "id": str(row.get("id") or f"Q{i}").strip() or f"Q{i}",
+                "original_id": row.get("original_id"),
+                "type": row.get("type"),
+                **{f"{stem}_{lang}": value
+                   for stem in ("prompt", "answer")
+                   for lang, value in (row.get(stem) or {}).items() if lang in QUIZ_LANGS},
             })
-        lesson["quiz"] = quiz_out
+        lesson["quiz"] = merge_quiz_rows(lesson.get("quiz") or [], quiz_rows)
     if payload.get("glossary") is not None:
         gloss_out = []
         for row in payload.get("glossary") or []:
@@ -904,7 +874,7 @@ def make_covers(filename: str, wanted: list[str] | None = None) -> dict:
         "zh+en", "zh", "zh+hk",
         "hk+en", "hk+zh", "hk",
     ]
-    cells = selected_cells(lesson, grid)
+    cells = selected_cells(lesson, grid, allow_unavailable=True)
     cell_slides = {name: bilingual_pair(voice, cap, slide) for name, (voice, cap, slide) in cells.items()}
     out_dir = lesson_out_dir(lesson.get("id") or path.stem)
     cover_dir = out_dir / "covers"
@@ -917,7 +887,6 @@ def make_covers(filename: str, wanted: list[str] | None = None) -> dict:
 
 
 def lesson_outputs(filename: str) -> dict:
-    migrate_out_layout()
     path = resolve_yaml(filename)
     if path is None:
         return {"ok": False, "slides": [], "previews": [], "covers": [], "quiz": [], "cells": [], "pack": []}
@@ -1425,13 +1394,22 @@ def run_build(
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,
+            encoding="utf-8",
+            errors="replace",
             bufsize=1,
             env=env,
         )
         chunks: list[str] = []
         assert proc.stdout is not None
+        videos = []
+        output_root = out_root().resolve()
         for raw in proc.stdout:
             chunks.append(raw)
+            if raw.startswith("build-video: "):
+                relative = Path(json.loads(raw.removeprefix("build-video: ")))
+                published = (output_root / relative).resolve()
+                if published.is_relative_to(output_root) and published.is_file():
+                    videos.append("/media/" + quote(published.relative_to(output_root).as_posix()))
             parsed = _friendly_step(raw)
             elapsed_s = time.time() - started
             low = raw.strip().lower()
@@ -1461,35 +1439,24 @@ def run_build(
         latest.parent.mkdir(parents=True, exist_ok=True)
         lesson_log.parent.mkdir(parents=True, exist_ok=True)
         stamp = f"\n===== console {lesson_name} =====\n"
-        latest.write_text(
-            (latest.read_text(encoding="utf-8") if latest.exists() else "") + stamp + log,
-            encoding="utf-8",
-        )
+        with latest.open("a", encoding="utf-8") as handle:
+            handle.write(stamp + log)
         if not lesson_log.exists():
             lesson_log.write_text(stamp + log, encoding="utf-8")
-        if all_lessons:
-            cell_urls = _all_cell_urls()
-            slides, previews = [], []
-        elif path.parent.name == "minicourses":
-            cell_urls, slides, previews = [], [], []
-            for child in lesson.get("lessons") or []:
-                found = sorted((lesson_out_dir(child) / "cells").glob("*.mp4")) if (lesson_out_dir(child) / "cells").exists() else []
-                cell_urls += [media_href(child, "cells", item.name) for item in found]
-                slides += _slide_urls(child)
-                previews += _preview_urls(child)
+        cell_urls = list(dict.fromkeys(videos))
+        slides, previews = [], []
+        if not all_lessons:
+            ids = (lesson.get("lessons") or []) if path.parent.name == "minicourses" else [lid]
+            for child in ids:
+                slides.extend(_slide_urls(child))
+                previews.extend(_preview_urls(child))
+        if caption_preview:
+            has_output = all_lessons or bool(previews)
+        elif slides_only:
+            has_output = all_lessons or bool(slides)
         else:
-            found = sorted((lesson_out_dir(lid) / "cells").glob("*.mp4")) if (lesson_out_dir(lid) / "cells").exists() else []
-            packed = sorted((lesson_out_dir(lid) / "pack").glob("*.mp4")) if (lesson_out_dir(lid) / "pack").exists() else []
-            cell_urls = [media_href(lid, "cells", item.name) for item in found]
-            cell_urls += [media_href(lid, "pack", item.name) for item in packed]
-            slides = _slide_urls(lid)
-            previews = _preview_urls(lid)
-        ok = proc.returncode == 0 and (
-            all_lessons
-            or (caption_preview and len(previews) > 0)
-            or (slides_only and len(slides) > 0)
-            or (not caption_preview and not slides_only and len(cell_urls) >= 1)
-        )
+            has_output = bool(cell_urls)
+        ok = proc.returncode == 0 and has_output
         invalidate_list_cache()
         elapsed_s = time.time() - started
         elapsed = _fmt_elapsed(elapsed_s)
@@ -1530,7 +1497,7 @@ def run_build(
                 pct=int(_job.get("pct") or 0),
                 elapsed=_fmt_elapsed(elapsed_s),
                 elapsed_s=elapsed_s,
-                cells=_all_cell_urls() if all_lessons else list(_job.get("cells") or []),
+                cells=[],
             )
 
 
@@ -3392,7 +3359,7 @@ async function saveLightEdits(file, extraCols) {
   const quiz = Array.from(document.querySelectorAll('#quiz-list [data-quiz]')).map(card => {
     const oldId = card.dataset.quiz;
     const id = ((card.querySelector('[data-qid]')||{}).value || oldId).trim() || oldId;
-    return {id, prompt: readTrio('qp-'+oldId, card), answer: readTrio('qa-'+oldId, card)};
+    return {id, original_id: oldId, prompt: readTrio('qp-'+oldId, card), answer: readTrio('qa-'+oldId, card)};
   });
   const glossary = Array.from(document.querySelectorAll('#gloss-list [data-gloss]')).map(card => {
     const i = card.dataset.gloss;
@@ -4288,8 +4255,6 @@ def main() -> None:
     root = out_root()
     LESSONS.mkdir(exist_ok=True)
     root.mkdir(parents=True, exist_ok=True)
-    for row in migrate_out_layout(root):
-        print("out-migrate:", row)
     server = ThreadingHTTPServer((HOST, PORT), Handler)
     url = f"http://{HOST}:{PORT}"
     print(f"Video factory console: {url}")

@@ -15,6 +15,7 @@ import unittest
 from http.server import ThreadingHTTPServer
 from pathlib import Path
 from unittest.mock import MagicMock, patch
+from urllib.error import URLError
 from urllib.request import urlopen
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -122,7 +123,12 @@ class OutRoot(unittest.TestCase):
             with tempfile.TemporaryDirectory() as tmp:
                 home = Path(tmp) / "home"
                 home.mkdir()
-                (home / "Downloads").symlink_to(ROOT, target_is_directory=True)
+                try:
+                    (home / "Downloads").symlink_to(ROOT, target_is_directory=True)
+                except OSError as exc:
+                    if getattr(exc, "winerror", None) == 1314:
+                        self.skipTest("Windows account cannot create directory symlinks")
+                    raise
                 with _without_vf_out(), patch("catalog.Path.home", return_value=home):
                     self.assertEqual(out_root(), OUT)
                 self.assertFalse((ROOT / DOWNLOADS_OUT_NAME).exists())
@@ -133,18 +139,26 @@ class OutRoot(unittest.TestCase):
                 with self.assertRaises(SystemExit):
                     out_root(bad)
 
-    def test_migrate_stays_inside_vf_out(self) -> None:
+    def test_migrate_moves_only_verified_legacy_outputs(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             base = Path(tmp)
-            legacy = base / "ZZ-MOVE"
-            legacy.mkdir()
-            (legacy / "note.txt").write_text("hi", encoding="utf-8")
+            legacy = base / "ACC-M01"
+            (legacy / "cells").mkdir(parents=True)
+            (legacy / "cells" / "ACC-M01_en.mp4").touch()
+            unrelated = base / "Photos"
+            (unrelated / "slides" / "en").mkdir(parents=True)
+            (unrelated / "slides" / "en" / "01.png").touch()
+            known_without_artifacts = base / "STAT-M01-T02-MEAN"
+            known_without_artifacts.mkdir()
+            (known_without_artifacts / "notes.txt").touch()
             with patch.dict(os.environ, {"VF_OUT": tmp}):
                 rows = migrate_out_layout()
-            self.assertTrue((base / "lessons" / "ZZ-MOVE" / "note.txt").is_file())
+                self.assertEqual(migrate_out_layout(), [])
+            self.assertTrue((base / "modules" / "ACC-M01" / "cells" / "ACC-M01_en.mp4").is_file())
             self.assertFalse(legacy.exists())
-            self.assertFalse((ROOT / "out" / "lessons" / "ZZ-MOVE").exists())
-            self.assertTrue(any("ZZ-MOVE" in row for row in rows))
+            self.assertTrue(unrelated.is_dir())
+            self.assertTrue(known_without_artifacts.is_dir())
+            self.assertEqual(len(rows), 1)
 
     def test_sidecars_and_stamps_follow_the_root(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -190,6 +204,7 @@ class OutRoot(unittest.TestCase):
                 env={**os.environ, "VF_OUT": tmp, "PYTHONUTF8": "1"},
                 capture_output=True,
                 text=True,
+                encoding="utf-8",
             )
             self.assertNotEqual(proc.returncode, 0)
             self.assertIn(f"output root: {Path(tmp).resolve()}", proc.stdout)
@@ -202,6 +217,7 @@ class OutRoot(unittest.TestCase):
                 cwd=str(ROOT),
                 capture_output=True,
                 text=True,
+                encoding="utf-8",
             )
             self.assertEqual(proc.returncode, 0, proc.stderr)
             self.assertIn("VF_OUT", proc.stdout)
@@ -217,6 +233,7 @@ class OutRoot(unittest.TestCase):
                 env=_env_with_home(home),
                 capture_output=True,
                 text=True,
+                encoding="utf-8",
             )
             self.assertNotEqual(proc.returncode, 0, proc.stderr)
             self.assertIn(f"output root: {expected}", proc.stdout, proc.stderr)
@@ -240,6 +257,7 @@ class OutRoot(unittest.TestCase):
                 env=_env_with_home(home),
                 capture_output=True,
                 text=True,
+                encoding="utf-8",
             )
             self.assertNotEqual(proc.returncode, 0, proc.stderr)
             self.assertIn(f"output root: {cli_root.resolve()}", proc.stdout, proc.stderr)
@@ -287,6 +305,10 @@ class OutRoot(unittest.TestCase):
                     denied.read()
                     self.assertEqual(denied.status, 403)
                     conn.close()
+                except URLError as exc:
+                    if getattr(exc.reason, "winerror", None) == 10013:
+                        self.skipTest("Windows environment blocks loopback HTTP")
+                    raise
                 finally:
                     server.shutdown()
                     server.server_close()

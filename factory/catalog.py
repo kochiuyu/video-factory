@@ -230,44 +230,42 @@ def media_href(lid: str, *parts: str, module: bool | None = None, root: Path | N
     return f"/media/{rel}/{extra}" if extra else f"/media/{rel}"
 
 
-def _merge_move(src: Path, dest: Path) -> int:
-    dest.mkdir(parents=True, exist_ok=True)
-    moved = 0
-    for item in list(src.iterdir()):
-        target = dest / item.name
-        if item.is_dir():
-            moved += _merge_move(item, target)
-            if item.exists() and not any(item.iterdir()):
-                item.rmdir()
-            continue
-        if not target.exists():
-            item.rename(target)
-            moved += 1
-    return moved
+def _legacy_artifacts(folder: Path) -> bool:
+    for name, pattern in (
+        ("cells", f"{folder.name}_*.mp4"),
+        ("slides", "*/*.png"),
+        ("preview", "*/*.png"),
+    ):
+        subdir = folder / name
+        if subdir.resolve() == subdir and any(
+            path.is_file() and path.is_relative_to(folder) and path.resolve() == path
+            for path in subdir.glob(pattern)
+        ):
+            return True
+    return False
 
 
 def migrate_out_layout(root: Path | None = None) -> list[str]:
-    """Move <root>/<id> into <root>/lessons/<id> or <root>/modules/<id> once."""
-    moved: list[str] = []
+    """Move verified flat outputs into the current layout on explicit request."""
     base = _ensure_safe_out_root(Path(root) if root is not None else out_root())
     if not base.is_dir():
-        return moved
-    (base / "lessons").mkdir(parents=True, exist_ok=True)
-    (base / "modules").mkdir(parents=True, exist_ok=True)
-    for child in list(base.iterdir()):
-        if not child.is_dir() or child.name in OUT_RESERVED or child.name.startswith("."):
+        return []
+    messages = []
+    for child in sorted(base.iterdir()):
+        if child.name in OUT_RESERVED or child.name.startswith("."):
             continue
-        dest = out_dir(child.name, root=base)
-        if dest.resolve() == child.resolve():
+        if not child.is_dir() or child.resolve() != child:
+            continue
+        is_module = is_module_id(child.name)
+        if not is_module and lesson_path(child.name) is None:
+            continue
+        if not _legacy_artifacts(child):
+            continue
+        dest = out_dir(child.name, module=is_module, root=base)
+        if dest.resolve() != dest or dest.exists():
+            messages.append(f"Skipped {child.name}: destination already exists or redirects")
             continue
         dest.parent.mkdir(parents=True, exist_ok=True)
-        if dest.exists():
-            n = _merge_move(child, dest)
-            if child.exists() and not any(child.iterdir()):
-                child.rmdir()
-            if n:
-                moved.append(f"{child.name} ⇉ {dest.relative_to(base).as_posix()} ({n} files)")
-            continue
         child.rename(dest)
-        moved.append(f"{child.name} → {dest.relative_to(base).as_posix()}")
-    return moved
+        messages.append(f"{child.name} → {dest.relative_to(base).as_posix()}")
+    return messages

@@ -9,7 +9,7 @@ from pathlib import Path
 import yaml
 
 from glyphs import scan_lesson
-from langs import beat_text, stage_lines
+from langs import beat_text, has_hk_speech, stage_lines
 from youtube import load_series_links, youtube_errors, youtube_warnings
 
 
@@ -314,7 +314,6 @@ def validate(lesson: dict, glyphs: bool = True) -> list[str]:
             errors.append(f"Beat {beat.get('id', i)} has unknown visual {beat.get('visual')!r}.")
         en = beat_text(beat, "en")
         zh = beat_text(beat, "zh")
-        hk = beat_text(beat, "zh_hk")
         if not en:
             errors.append(f"Beat {beat.get('id', i)} missing English speech (en or s1_en).")
         if not zh:
@@ -377,7 +376,8 @@ def validate(lesson: dict, glyphs: bool = True) -> list[str]:
         for msg in steps_stage_problems(beat):
             errors.append(f"Beat {bid} {msg}")
         total += float(beat.get("seconds") or 0)
-    if any(beat_text(b, "zh_hk") for b in beats) and any(not beat_text(b, "zh_hk") for b in beats):
+    hk_beats = [has_hk_speech(beat) for beat in beats]
+    if any(hk_beats) and not all(hk_beats):
         errors.append("Some beats have zh_hk and others do not; fill every beat.")
     target = float(lesson.get("duration_target_s") or 0)
     if target and total and abs(total - target) > 20:

@@ -19,6 +19,7 @@ from langs import field, field_native, label_code
 from paths import cjk_bold, cjk_regular, latin_bold, latin_regular
 from cache import digest_obj, stamp_ok, write_mark
 from theme import load_theme
+from mux import caption_safe_top
 
 W, H = 1920, 1080
 CONTENT_BOTTOM = H - 156
@@ -76,6 +77,8 @@ def lesson_stamp(lesson, theme, code, second, stage_cards) -> str:
         "flags": layout_flags(theme),
         "beats": digest_obj(lesson.get("beats") or []),
     }
+    if lesson.get("slide_style") == "focus":
+        payload["slide_style"] = "focus"
     return digest_obj(payload)
 
 
@@ -740,8 +743,23 @@ def _tag(draw, x, y, text, theme) -> None:
     draw.text((x, y), text, font=font_for(text, SCALE["tag"], bold=True), fill=theme["gold"])
 
 
-def _fill_h(top: int, floor: int = 280) -> int:
-    return max(floor, CONTENT_BOTTOM - top)
+def _content_bottom(theme: dict) -> int:
+    return caption_safe_top(H) - 16 if theme.get("focus_layout") else CONTENT_BOTTOM
+
+
+def _fill_h(top: int, floor: int = 280, *, theme: dict) -> int:
+    return max(floor, _content_bottom(theme) - top)
+
+
+def draw_focus_title(draw, title: str, theme: dict) -> int:
+    """Keep the heading and accent above the teaching area."""
+    left, top, right = 64, 48, W - 64
+    layout = _block_layout(draw, title, right - left, 148, 68, 38, 0.62, 2, 1)
+    bottom = top + 144
+    if layout:
+        _paint_block(draw, (left, top, right, bottom), layout, theme["navy"], theme["muted"], align="left")
+    draw.line((left, bottom + 8, right, bottom + 8), fill=theme["wash2"], width=3)
+    return bottom + 22
 
 
 def _panel(draw, box, fill, theme, accent: bool = True) -> None:
@@ -925,7 +943,7 @@ def render_definition(draw, beat, code, y, theme, stage=None, second=None) -> No
     if gloss_other == gloss or (gloss_other and same_math(gloss, gloss_other)):
         gloss_other = ""
     box_y = y + 12
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "DEFINITION", "zh": "定义", "zh_hk": "定義"}.get(code, "DEFINITION")
     if second:
@@ -1152,7 +1170,7 @@ def render_two_column(draw, beat, code, y, theme, stage=None, second=None) -> No
     left_full = field2(beat, "left", code, second)
     right_full = field2(beat, "right", code, second)
     box_y = y + 8
-    avail = max(360, CONTENT_BOTTOM - box_y)
+    avail = max(360, _content_bottom(theme) - box_y)
     mid = W // 2
     pad_x = 56
     inner_w = (mid - 40 - 64) - 2 * pad_x
@@ -1186,13 +1204,42 @@ def render_two_column(draw, beat, code, y, theme, stage=None, second=None) -> No
         _paint_block(draw, (mid + 40 + pad_x, top, W - 64 - pad_x, bot), lays[1], quiet, quiet)
 
 
+def render_focus_takeaway(draw, beat, code, y, theme, stage, second) -> None:
+    decision = field2(beat, "decision", code, second)
+    question = field2(beat, "q2", code, second)
+    answer = field2(beat, "check_answer", code, second)
+    left, right = 64, W - 64
+    top, bottom = y + 20, _content_bottom(theme)
+    middle = top + (bottom - top) // 2
+    draw.rounded_rectangle((left, top, right, middle - 14), radius=24, fill=theme["navy"])
+    _paint_block(
+        draw, (left + 52, top + 20, right - 52, middle - 32),
+        _block_layout(draw, decision, right - left - 104, middle - top - 52, 58, 30, 0.68, 2, 2),
+        theme["white"], theme["gold"], align="left",
+    )
+    if not _show(stage, 2):
+        return
+    draw.rounded_rectangle((left, middle + 12, right, bottom), radius=24, fill=theme["wash"])
+    midpoint = (middle + bottom) // 2
+    for text, start, end, size in (
+        (question, middle + 20, midpoint, 46),
+        (answer if _show(stage, 3) else "", midpoint, bottom - 6, 44),
+    ):
+        if text:
+            layout = _block_layout(draw, text, right - left - 104, end - start - 8, size, 26, 0.7, 2, 1)
+            _paint_block(draw, (left + 52, start, right - 52, end), layout, theme["navy"], theme["ink"], align="left")
+
+
 def render_takeaway(draw, beat, code, y, theme, stage=None, second=None) -> None:
+    if theme.get("focus_layout") and field(beat, "decision", code) and field(beat, "check_answer", code):
+        render_focus_takeaway(draw, beat, code, y, theme, stage, second)
+        return
     q1 = field2(beat, "q1", code, second)
     q2 = field2(beat, "q2", code, second)
     questions = [q for q in (q1, q2) if q]
     box_y = y + 8
     gap = 22
-    avail = max(200, CONTENT_BOTTOM - box_y)
+    avail = max(200, _content_bottom(theme) - box_y)
     k = max(1, len(questions))
     full = (avail - gap * (k - 1)) // k
     text_l, text_r = 212, W - 104
@@ -1273,7 +1320,7 @@ def render_example(draw, beat, code, y, theme, stage=None, second=None) -> None:
     other_s, other_r = tags.get(second or "", ("", ""))
     box_y = y + 8
     gap = 20
-    avail = max(380, CONTENT_BOTTOM - box_y)
+    avail = max(380, _content_bottom(theme) - box_y)
     half = max(176, (avail - gap) // 2)
     inner_w = W - 64 - 40 - (64 + 44)
     dual = bool(second)
@@ -1295,7 +1342,7 @@ def render_three_column(draw, beat, code, y, theme, stage=None, second=None) -> 
     if not any(cols):
         cols = [field2(beat, "left", code, second), field2(beat, "mid", code, second), field2(beat, "right", code, second)]
     box_y = y + 8
-    avail = max(360, CONTENT_BOTTOM - box_y)
+    avail = max(360, _content_bottom(theme) - box_y)
     gap = 28
     width = (W - 128 - 2 * gap) // 3
     inner_w = width - 64
@@ -1322,7 +1369,7 @@ def render_big_number(draw, beat, code, y, theme, stage=None, second=None) -> No
     unit = field2(beat, "unit", code, second)
     cap = field2(beat, "caption", code, second) or field2(beat, "gloss", code, second)
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "KEY NUMBER", "zh": "关键数字", "zh_hk": "關鍵數字"}.get(code, "KEY NUMBER")
     _tag(draw, 108, box_y + 28, tag, theme)
@@ -1371,7 +1418,7 @@ def render_module_open(draw, beat, lesson, code, theme, second=None) -> None:
     top = _big_title_block(draw, primary, secondary, theme, 160)
     items = _agenda_items(beat, code, second)
     dual = any(_split_pair(it)[1] for it in items)
-    room = CONTENT_BOTTOM - (top + 16)
+    room = _content_bottom(theme) - (top + 16)
     per = room // max(1, len(items))
     main_sz = max(28, min(40, int(per * (0.42 if dual else 0.62))))
     sub_sz = max(22, int(main_sz * 0.72))
@@ -1435,6 +1482,33 @@ def _looks_equation(text: str) -> bool:
     return any(ch in _EQ_MARKS for ch in (text or ""))
 
 
+def render_calculation(draw, items, y, theme, stage) -> None:
+    """Reserve each row so equations stay put as the explanation unfolds."""
+    left, right = 64, W - 64
+    top = y + 18
+    gap = 12
+    space = _content_bottom(theme) - top - gap * (len(items) - 1)
+    weights = (1, 1, 1.5, 1)
+    for i, ((text, _), weight) in enumerate(zip(items, weights)):
+        row_h = int(space * weight / sum(weights))
+        box = (left, top, right, top + row_h)
+        if not _show(stage, i + 1):
+            draw.rounded_rectangle(box, radius=20, outline=theme["wash2"], width=3)
+        else:
+            result = i == 2
+            fill = theme["navy"] if result else theme["wash"]
+            ink = theme["white"] if result else theme["navy"]
+            draw.rounded_rectangle(box, radius=20, fill=fill)
+            if result:
+                draw.rounded_rectangle((left + 12, top + 16, left + 20, top + row_h - 16),
+                                       radius=4, fill=theme["gold"])
+            layout = _block_layout(draw, text, right - left - 96, row_h - 16,
+                                   70 if result else 52, 26, 0.67, 2, 1)
+            _paint_block(draw, (left + 48, top, right - 48, top + row_h), layout,
+                         ink, theme["gold"] if result else theme["ink"])
+        top += row_h + gap
+
+
 def render_steps(draw, beat, code, y, theme, stage=None, second=None) -> None:
     items = []
     for i in range(1, 7):
@@ -1442,11 +1516,15 @@ def render_steps(draw, beat, code, y, theme, stage=None, second=None) -> None:
         ex = field2(beat, f"ex{i}", code, second)
         if text:
             items.append((text, ex))
-    as_rows = str(beat.get("layout") or "").strip().lower() in ("rows", "stack")
+    layout = str(beat.get("layout") or "").strip().lower()
+    if layout == "calculation" and len(items) == 4:
+        render_calculation(draw, items, y, theme, stage)
+        return
+    as_rows = layout in ("rows", "stack")
     if len(items) <= 3 and not as_rows:
         steps = [text for text, _ex in items] + [""] * (3 - len(items))
         box_y = y + 8
-        box_h = _fill_h(box_y, 360)
+        box_h = _fill_h(box_y, 360, theme=theme)
         gap = 28
         width = (W - 128 - 2 * gap) // 3
         fills = (theme["navy"], theme.get("panel") or theme["navy"], theme["emerald"])
@@ -1459,7 +1537,7 @@ def render_steps(draw, beat, code, y, theme, stage=None, second=None) -> None:
                 _center(draw, (x0 + 28, box_y + 36, x0 + width - 20, box_y + box_h - 24), text, fonts[i], theme["white"])
         return
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     # Each row has a number badge: a typed "1." in the text would repeat it.
     items = [(strip_step_number(text), strip_step_number(ex) if ex else ex) for text, ex in items]
@@ -1588,7 +1666,7 @@ def _matrix_highlight(beat: dict, stage) -> str:
 
 def render_payoff_matrix(draw, beat, code, y, theme, stage=None, second=None) -> None:
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "PAYOFFS", "zh": "报酬", "zh_hk": "報酬"}.get(code, "PAYOFFS")
     if second:
@@ -1690,7 +1768,7 @@ def render_table_grid(draw, beat, code, y, theme, stage=None, second=None) -> No
     """2x2 or 2x3 labeled grid. Stages: labels, cells, highlight+footer."""
     rows, cols = _grid_dims(beat)
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "TABLE", "zh": "对照表", "zh_hk": "對照表"}.get(code, "TABLE")
     if second:
@@ -1798,12 +1876,13 @@ def render_series(draw, beat, code, y, theme, stage=None, second=None) -> None:
         cols = 5
     cols = max(2, min(cols, 6))
     rows = _series_rows(beat, code, second, cols)
-    reveal = str(beat.get("reveal") or "").strip().lower() == "cells"
+    reveal_mode = str(beat.get("reveal") or "").strip().lower()
+    reveal = reveal_mode in {"cells", "row_cells"}
     shown = cols
     if reveal and stage not in (None, 0):
         shown = min(cols, max(1, int(stage)))
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = _series_tag(beat, code, second)
     if tag:
@@ -1848,7 +1927,13 @@ def render_series(draw, beat, code, y, theme, stage=None, second=None) -> None:
     for i in range(rows):
         lab = row_labels[i]
         y0 = grid_top + head_h + i * (ch + gutter)
-        if lab:
+        if reveal:
+            visible_row = i == 0 or _show(stage, cols + 2)
+        elif reveal_mode == "first_row":
+            visible_row = i == 0 or _show(stage, 3)
+        else:
+            visible_row = _show(stage, i + 2)
+        if lab and (visible_row or not theme.get("focus_layout")):
             ll = _block_layout(draw, lab, label_w - 40, ch - 12, 36, 20, 0.72, 2)
             _paint_block(draw, (84, y0, 64 + label_w - 12, y0 + ch), ll, theme["bg"], theme["gold"])
         for j in range(cols):
@@ -1861,9 +1946,13 @@ def render_series(draw, beat, code, y, theme, stage=None, second=None) -> None:
                 else:
                     show_val = int(stage) > cols + 1
             else:
-                show_val = stage in (None, 0) or _show(stage, i + 2)
-            _paint_cell(draw, (x0, y0, x0 + cw, y0 + ch), val, theme, show=show_val)
-    foot_on = stage in (None, 0) or (reveal and stage not in (None, 0) and int(stage) > cols + 1) or (not reveal and _show(stage, 3))
+                show_val = visible_row
+            box = (x0, y0, x0 + cw, y0 + ch)
+            if theme.get("focus_layout") and not show_val:
+                draw.rounded_rectangle(box, radius=16, fill=_blend(theme["navy"], theme["white"], 0.10))
+            else:
+                _paint_cell(draw, box, val, theme, show=show_val)
+    foot_on = _show(stage, cols + 2) if reveal else _show(stage, 2 if reveal_mode == "first_row" else 3)
     if footer and foot_on:
         fl = _block_layout(draw, footer, W - 240, box_y + box_h - 12 - grid_bottom - 8, 38, 20, 0.66, 1, 1)
         _paint_block(draw, (100, grid_bottom + 8, W - 100, box_y + box_h - 12), fl, theme["gold"], theme["bg"])
@@ -1937,7 +2026,7 @@ def render_schematic_chart(draw, beat, code, y, theme, stage=None, second=None) 
     """Named schematic only. No live data. Stages: axes, marks, annotation."""
     kind = _chart_kind(beat)
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {
         "histogram": {"en": "HISTOGRAM", "zh": "直方图", "zh_hk": "直方圖"},
@@ -2282,7 +2371,7 @@ def _dag_layout(n: int, ax0, ay1, ax1, ay0) -> list[tuple[int, int]]:
 def render_dag(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """Nodes, then edges, then one highlighted path plus a role tag."""
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "DAG", "zh": "因果图", "zh_hk": "因果圖"}.get(code, "DAG")
     _tag(draw, 108, box_y + 16, tag, theme)
@@ -2376,7 +2465,7 @@ def _mini_table(draw, beat, code, second, box, prefix, title_stem, rows, cols, s
 def render_pair(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """Two small tables. Stage 1 fills the left, stage 2 the right, stage 3 the mark."""
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "PAIR", "zh": "对照", "zh_hk": "對照"}.get(code, "PAIR")
     if second:
@@ -2459,7 +2548,7 @@ def _mini_hist(draw, box, heights, theme, mark_last=True):
 def render_pair_chart(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """Two schematic histograms. Stage 1 draws the left, stage 2 the right, stage 3 the notes."""
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "TWO WIDTHS", "zh": "两种组距", "zh_hk": "兩種組距"}.get(code, "TWO WIDTHS")
     if second:
@@ -2514,7 +2603,7 @@ def _pair_cloud(draw, box, points, fit, theme, show_line):
 def render_pair_slope(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """Two Mondays, two clouds, two green lines. Stage 1 left, stage 2 right, stage 3 the tilt."""
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "TWO MONDAYS", "zh": "两个周一", "zh_hk": "兩個周一"}.get(code, "TWO MONDAYS")
     if second:
@@ -2573,7 +2662,7 @@ def _one_box(draw, cx, scale, theme, lo, q1, med, q3, hi, flag=None):
 def render_pair_box(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """Two boxplots on one cup scale. Stage 1 left, stage 2 right, stage 3 the far shop."""
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "SAME SCALE", "zh": "同一尺度", "zh_hk": "同一尺度"}.get(code, "SAME SCALE")
     if second:
@@ -2639,7 +2728,7 @@ def render_pair_box(draw, beat, code, y, theme, stage=None, second=None) -> None
 def render_coin(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """Two faces. Stage 1 chosen, stage 2 drawn, stage 3 the note."""
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "COIN", "zh": "硬币", "zh_hk": "硬幣"}.get(code, "COIN")
     if second:
@@ -2670,7 +2759,7 @@ def render_coin(draw, beat, code, y, theme, stage=None, second=None) -> None:
 def render_mix(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """One gap, two unnamed stories. Stage 1 the gap, stage 2 the split, stage 3 the note. No shares."""
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "MIXED", "zh": "混着", "zh_hk": "混住"}.get(code, "MIXED")
     if second:
@@ -2701,7 +2790,7 @@ def render_mix(draw, beat, code, y, theme, stage=None, second=None) -> None:
 def render_shrink(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """A step pulled toward zero. Stage 1 the copy, stage 2 the pull, stage 3 the note."""
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "PULL", "zh": "拉", "zh_hk": "拉"}.get(code, "PULL")
     if second:
@@ -2737,7 +2826,7 @@ def render_shrink(draw, beat, code, y, theme, stage=None, second=None) -> None:
 def render_turns(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """A row of Mondays. One is grey, in turn. Stage 1 the row, stage 2 the grey day, stage 3 the note."""
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "TURNS", "zh": "轮流", "zh_hk": "輪流"}.get(code, "TURNS")
     if second:
@@ -3051,7 +3140,7 @@ def render_rank_line(draw, beat, code, y, theme, stage=None, second=None) -> Non
     The layout reserves the bracket and footer rows from stage 1, so nothing jumps.
     """
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "RANK", "zh": "排序", "zh_hk": "排序"}.get(code, "RANK")
     if second:
@@ -3197,7 +3286,7 @@ def render_rank_line(draw, beat, code, y, theme, stage=None, second=None) -> Non
 def render_redraw(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """Two redraws. Stage 1 left handful, stage 2 right, stage 3 the repeated row."""
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "REDRAW", "zh": "重抽", "zh_hk": "重抽"}.get(code, "REDRAW")
     if second:
@@ -3383,7 +3472,7 @@ def freq_bars_problems(beat: dict) -> list[str]:
 def render_freq_bars(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """Frequency bars for mode. Stage 1 labels, stage 2 bars+counts, stage 3 gold tallest + footer."""
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "COUNT", "zh": "清点", "zh_hk": "清點"}.get(code, "COUNT")
     if second:
@@ -3636,7 +3725,7 @@ def _minus_sign(text: str) -> str:
 def render_balance_line(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """Seesaw / mean balance line. Stage 1 values, stage 2 mean fulcrum, stage 3 left=right pulls + footer."""
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "BALANCE", "zh": "平衡", "zh_hk": "平衡"}.get(code, "BALANCE")
     if second:
@@ -3950,7 +4039,7 @@ def render_box_line(draw, beat, code, y, theme, stage=None, second=None) -> None
     `median` draws a line inside the box. The layout is pinned from stage 1.
     """
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     fences = box_fences(beat)
     if fences == "bad":
@@ -4290,7 +4379,7 @@ def render_dev_bars(draw, beat, code, y, theme, stage=None, second=None) -> None
     the variance ratio (power 2, = 1), skewness (3) or kurtosis (4).
     """
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     p = dev_power(beat)
     if p not in (1, 2, 3, 4):
@@ -4564,7 +4653,7 @@ def render_ratio_bars(draw, beat, code, y, theme, stage=None, second=None) -> No
     baseline and the full height are pinned on every stage.
     """
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     st = 3 if stage in (None, 0) else max(1, min(3, int(stage)))
     tag = field2(beat, f"tag{st}", code, second) or field2(beat, "tag", code, second)
@@ -4790,7 +4879,7 @@ def render_quad_ruler(draw, beat, code, y, theme, stage=None, second=None) -> No
     Stage 3: gold pin at `r` + footer. Layout is pinned from stage 1.
     """
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     st = 3 if stage in (None, 0) else max(1, min(3, int(stage)))
     tag = field2(beat, f"tag{st}", code, second) or field2(beat, "tag", code, second)
@@ -4915,7 +5004,7 @@ def render_quad_scatter(draw, beat, code, y, theme, stage=None, second=None) -> 
     if mode in ("ruler", "scale", "r_scale"):
         return render_quad_ruler(draw, beat, code, y, theme, stage=stage, second=second)
     box_y = y + 8
-    box_h = _fill_h(box_y, 360)
+    box_h = _fill_h(box_y, 360, theme=theme)
     _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
     st = 3 if stage in (None, 0) else max(1, min(3, int(stage)))
     tag = field2(beat, f"tag{st}", code, second) or field2(beat, "tag", code, second)
@@ -5106,13 +5195,14 @@ RENDERERS = {
 def stage_count(beat: dict) -> int:
     if beat.get("stage") is False:
         return 1
-    if beat.get("visual") == "series" and str(beat.get("reveal") or "").strip().lower() == "cells":
+    reveal = str(beat.get("reveal") or "").strip().lower()
+    if beat.get("visual") == "series" and reveal in {"cells", "row_cells"}:
         try:
             cols = int(beat.get("cols") or 4)
         except (TypeError, ValueError):
             cols = 4
         cols = max(2, min(cols, 6))
-        return cols + 2
+        return cols + 2 if reveal == "cells" else cols
     if beat.get("visual") == "steps":
         n = 0
         for i in range(1, 7):
@@ -5173,6 +5263,9 @@ def _slide_workers() -> int:
 
 def render_beat(beat, lesson, index, n, lang_labels="en", theme=None, stage=None, second_lang=None):
     theme = theme or load_theme(None)
+    focus = lesson.get("slide_style") == "focus"
+    if focus:
+        theme = {**theme, "focus_layout": True, "blobs": False, "corner": False}
     img, draw = new_canvas(theme)
     visual = beat.get("visual", "definition_card")
     code = label_code(lang_labels)
@@ -5180,7 +5273,8 @@ def render_beat(beat, lesson, index, n, lang_labels="en", theme=None, stage=None
     if second == code:
         second = None
     foot = field_native(lesson, "title", code) or field(lesson, "title", code) or lesson.get("id") or ""
-    draw_footer(draw, foot, index, n, theme)
+    if not focus:
+        draw_footer(draw, foot, index, n, theme)
     if visual == "title_card":
         render_title_card(draw, beat, lesson, code, theme, second=second)
         return img
@@ -5195,9 +5289,10 @@ def render_beat(beat, lesson, index, n, lang_labels="en", theme=None, stage=None
         other_k = resolve_kicker(beat, second)
         if other_k and other_k != kicker:
             kicker = f"{kicker}  {other_k}" if kicker else other_k
-    draw_kicker(draw, kicker, theme)
+    if not focus:
+        draw_kicker(draw, kicker, theme)
     title = field2(beat, "title", code, second) or field2(lesson, "title", code, second)
-    y = draw_title(draw, title, theme)
+    y = draw_focus_title(draw, title, theme) if focus else draw_title(draw, title, theme)
     renderer = RENDERERS.get(visual)
     if renderer and renderer is not render_title_card:
         renderer(draw, beat, code, y, theme, stage=None if not stage else stage, second=second)

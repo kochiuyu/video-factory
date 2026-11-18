@@ -70,11 +70,12 @@ from mux import (  # noqa: E402
     write_srt,
 )
 from paths import fonts_dir  # noqa: E402
-from modules import build_minicourse, build_module, is_minicourse, is_module  # noqa: E402
-from catalog import migrate_out_layout, out_dir as lesson_out_dir, out_root as resolve_out_root  # noqa: E402
+from modules import build_minicourse, build_module, is_minicourse, is_module, load_module  # noqa: E402
+from catalog import lesson_path, migrate_out_layout, out_dir as lesson_out_dir, out_root as resolve_out_root  # noqa: E402
 from pack import pack_videos, parse_speeds, write_experiment_pack  # noqa: E402
 from quiz import export_lesson_quiz  # noqa: E402
-from cover import write_cover  # noqa: E402
+from cover import font as cover_font, write_cover  # noqa: E402
+from build_report import BuildReport  # noqa: E402
 from cache import digest_obj, file_fingerprint, stamp_ok, write_mark  # noqa: E402
 from preview import render_caption_previews  # noqa: E402
 from pdfexport import export_preview_pdfs  # noqa: E402
@@ -92,7 +93,7 @@ from slides import (  # noqa: E402
 )
 from theme import load_theme  # noqa: E402
 from youtube import load_series_links, write_youtube_sidecars, youtube_warnings  # noqa: E402
-from tts import load_word_times, synthesize_lesson  # noqa: E402
+from tts import google_api_key, load_word_times, synthesize_lesson, tts_backend, tts_pitch, tts_rate, tts_volume, voice_for  # noqa: E402
 from validate import load_lesson, validate  # noqa: E402
 
 FONTSDIR = fonts_dir()
@@ -342,7 +343,8 @@ def fmt_duration(seconds: float) -> str:
 
 
 class StepClock:
-    def __init__(self) -> None:
+    def __init__(self, report: BuildReport | None = None) -> None:
+        self.report = report
         self.t0 = time.perf_counter()
         self.mark = self.t0
         self.rows: list[tuple[str, float]] = []
@@ -352,6 +354,8 @@ class StepClock:
         dt = now - self.mark
         self.mark = now
         self.rows.append((name, dt))
+        if self.report:
+            self.report.phase(name, dt)
         print(f"timing: {name} {fmt_duration(dt)}")
         return dt
 
@@ -488,6 +492,99 @@ def check_holds_and_orphans(lesson, cells, lang_durations, durations, pages_fn) 
     return msgs
 
 
+def prepare_short(
+    source: Path, root: Path, *, label_lang: str, tts: bool,
+    slides_only: bool, caption_preview: bool, wanted_cells: list[str] | None,
+    match_titles: bool, theme_name: str | None, report: BuildReport | None,
+):
+    """Validate the selected inputs before painting, encoding or calling TTS."""
+    started = time.perf_counter()
+    lesson = load_lesson(source)
+    out_dir = lesson_out_dir(lesson.get("id", source.stem), root=root)
+    errors = validate(lesson)
+    fatal = [error for error in errors if not error.startswith("Beat seconds")]
+    if fatal:
+        raise ValueError("Invalid lesson:\n - " + "\n - ".join(fatal))
+    for note in errors:
+        print("note:", note)
+        if report:
+            report.warn(note)
+
+    cells = selected_cells(lesson, wanted_cells)
+    if not match_titles:
+        shared = label_code(label_lang)
+        cells = {
+            name: (voice, captions, shared if name in {"en", "zh", "hk"} else slides)
+            for name, (voice, captions, slides) in cells.items()
+        }
+    if report:
+        report.item["lesson_id"] = lesson.get("id", source.stem)
+        report.cuts(cells)
+    theme = load_theme(theme_name)
+    if report:
+        report.item["theme"] = theme["id"]
+    for label, cjk in (("Latin bold", False), ("CJK", True)):
+        try:
+            cover_font(32, cjk=cjk)
+        except OSError as exc:
+            raise RuntimeError(
+                f"Cannot load the {label} cover font. Restore the bundled fonts/ files and run diagnose.py."
+            ) from exc
+    tracks = {}
+    if not (slides_only or caption_preview):
+        require_ffmpeg()
+        if tts:
+            backend = tts_backend()
+            if backend == "google":
+                google_api_key()
+            if report:
+                report.item["narration"] = {
+                    "backend": backend,
+                    "rate": tts_rate(), "pitch": tts_pitch(), "volume": tts_volume(),
+                    "voices": {lang: voice_for(lang) for lang in script_langs(lesson)},
+                }
+        else:
+            required = list(dict.fromkeys(voice for voice, _, _ in cells.values()))
+            tracks = load_audio_tracks(lesson, out_dir / "audio", required)
+            if report:
+                report.item["narration"] = {"backend": "local", "tracks": list(tracks)}
+    if report:
+        report.phase("preflight", time.perf_counter() - started)
+    return lesson, out_dir, cells, theme, tracks
+
+
+def preflight(source: Path, root: Path, *, report: BuildReport, **options) -> list[Path]:
+    is_collection = is_minicourse(source) or is_module(source)
+    if is_collection:
+        collection = load_module(source)
+        ids = collection.get("lessons")
+        if not isinstance(ids, list) or len(ids) < 2 or not all(isinstance(lid, str) for lid in ids):
+            raise ValueError("A collection needs at least two lesson IDs.")
+        if len(set(ids)) != len(ids):
+            raise ValueError("Collection contains duplicate lesson IDs.")
+        failed = []
+        for lid in ids:
+            child = lesson_path(lid)
+            if child is None:
+                failed.append(f"{lid}: lesson file missing")
+                continue
+            try:
+                report.run(child, check_short, root, **options)
+            except Exception as exc:
+                failed.append(f"{lid}: {exc}")
+        if failed:
+            raise ValueError("Collection preflight failed:\n - " + "\n - ".join(failed))
+    else:
+        check_short(source, root, report=report, **options)
+    print("preflight: passed", source.name)
+    return []
+
+
+def check_short(source: Path, root: Path, *, report: BuildReport, **options) -> None:
+    keys = ("label_lang", "tts", "slides_only", "caption_preview", "wanted_cells", "match_titles", "theme_name")
+    prepare_short(source, root, report=report, **{key: options[key] for key in keys})
+
+
 def build(
     lesson_path: Path,
     out_root: Path,
@@ -505,33 +602,16 @@ def build(
     pack_speeds: list[float] | None = None,
     pack_nocap: bool = False,
     write_pdfs: bool = True,
+    report: BuildReport | None = None,
 ) -> list[Path]:
-    lesson = load_lesson(lesson_path)
-    out_dir = lesson_out_dir(lesson.get("id", lesson_path.stem), root=out_root)
-    errors = validate(lesson)
-    fatal = [e for e in errors if not e.startswith("Beat seconds")]
-    if fatal:
-        print("INVALID lesson:")
-        for e in fatal:
-            print(" -", e)
-        raise ValueError(f"Invalid lesson {lesson_path.name}")
-    for e in errors:
-        print("note:", e)
-
-    cells = selected_cells(lesson, wanted_cells)
+    lesson, out_dir, cells, theme, tracks = prepare_short(
+        lesson_path, out_root, label_lang=label_lang, tts=tts, slides_only=slides_only,
+        caption_preview=caption_preview, wanted_cells=wanted_cells, match_titles=match_titles,
+        theme_name=theme_name, report=report,
+    )
     langs = list(dict.fromkeys(voice for voice, _, _ in cells.values()))
     audio_root = out_dir / "audio"
     _attach_log(out_dir, lesson.get("id", lesson_path.stem), out_root)
-    if not (slides_only or caption_preview or tts):
-        require_ffmpeg()
-        tracks = load_audio_tracks(lesson, audio_root, langs)
-    if not match_titles:
-        shared = label_code(label_lang)
-        matched = {"en", "zh", "hk", "zhcn", "zhhk", "en-en", "zh-zh"}
-        cells = {
-            name: (voice, cap, slide if name not in matched else shared)
-            for name, (voice, cap, slide) in cells.items()
-        }
     export_lesson_quiz(lesson, out_dir)
     print("tracks:", ", ".join(langs) or "(none)")
     print("cells:", ", ".join(cells) or "(none)")
@@ -539,10 +619,11 @@ def build(
     series_links = load_series_links(lesson_path, str(lesson.get("id") or ""))
     for warning in youtube_warnings(lesson, cells, series_links):
         print("warn:", warning)
+        if report:
+            report.warn(warning)
     for path in write_youtube_sidecars(lesson, cells, out_dir, series_links):
         print("youtube:", path)
-    clock = StepClock()
-    theme = load_theme(theme_name)
+    clock = StepClock(report)
     for note in apply_theme_fonts(theme):
         print("theme:", note)
     cell_slides: dict[str, tuple[str, str | None]] = {}
@@ -618,6 +699,9 @@ def build(
             raise RuntimeError(f"caption-preview failed: {exc}") from exc
         if not previews:
             raise RuntimeError("caption-preview failed: no frames written")
+        if report:
+            for preview in previews:
+                report.artifact(preview, "caption_preview")
         print(f"caption-preview: wrote {len(previews)} stamped frames; skipped TTS and mux")
         clock.lap("caption preview")
         if write_pdfs:
@@ -628,6 +712,12 @@ def build(
         clock.total()
         return []
     if slides_only:
+        if not any(slide_sets.values()):
+            raise RuntimeError("No slides were rendered.")
+        if report:
+            for images in slide_sets.values():
+                for image in images:
+                    report.artifact(image, "slide")
         print(f"slides-only: wrote {sum(len(v) for v in slide_sets.values())} PNG files; skipped TTS and mux")
         if write_pdfs:
             _write_preview_pdfs(lesson["id"], out_root, ("slides",))
@@ -637,7 +727,6 @@ def build(
         clock.total()
         return []
     if tts:
-        require_ffmpeg()
         audio_langs = script_langs(lesson)
         print("tts: preparing narration for the shared clock")
         synthesize_lesson(lesson, audio_root, overwrite=force_tts, langs=audio_langs)
@@ -724,7 +813,10 @@ def build(
         workers,
     )
     videos = []
-    check_holds_and_orphans(lesson, cells, lang_durations, durations, beat_pages_and_holds)
+    warnings = check_holds_and_orphans(lesson, cells, lang_durations, durations, beat_pages_and_holds)
+    if report:
+        for warning in warnings:
+            report.warn(warning)
     srt_dir = out_dir / "srt"
     srt_dir.mkdir(parents=True, exist_ok=True)
     n_beats = len(lesson["beats"])
@@ -789,29 +881,41 @@ def build(
         print(f"concat: {name} ({len(clips)} beats)")
         print(f"progress: concat {cell_i}/{n_cells} {name}")
         join_key = digest_obj({"clips": [file_fingerprint(p) for p in clips]})
-        if stamp_ok(dest, join_key):
+        reused = stamp_ok(dest, join_key)
+        if reused:
             print(f"concat: reuse {dest.name}")
         else:
             concat_clips(clips, dest)
             write_mark(dest, join_key)
         write_srt(cues(audio_lang, sub_lang), srt_dir / f"{name}.srt")
-        print("cell:", dest, f"({probe_duration(dest):.1f}s)")
+        duration = probe_duration(dest)
+        print("cell:", dest, f"({duration:.1f}s)")
+        if report:
+            report.video(name, dest, duration, reused)
         videos.append(dest)
         if experiment_pack and pack_nocap and nocap_clips:
             off = out_dir / "cells" / f"{lesson['id']}_{name}_nocap.mp4"
             print(f"concat: {name}_nocap ({len(nocap_clips)} beats)")
             off_key = digest_obj({"clips": [file_fingerprint(p) for p in nocap_clips], "cap": "off"})
-            if stamp_ok(off, off_key):
+            reused = stamp_ok(off, off_key)
+            if reused:
                 print(f"concat: reuse {off.name}")
             else:
                 concat_clips(nocap_clips, off)
                 write_mark(off, off_key)
-            print("cell:", off, f"({probe_duration(off):.1f}s)")
+            duration = probe_duration(off)
+            print("cell:", off, f"({duration:.1f}s)")
+            if report:
+                report.video(f"{name}_nocap", off, duration, reused)
             videos.append(off)
         clock.lap(f"video {name}")
     if experiment_pack:
         csv_path = write_experiment_pack(out_dir, lesson["id"], cells, pack_speeds, sources=videos)
-        videos.extend(pack_videos(csv_path))
+        packed = pack_videos(csv_path)
+        if report:
+            for path in packed:
+                report.video(path.stem, path, probe_duration(path))
+        videos.extend(packed)
         print("experiment-pack:", csv_path)
         clock.lap("experiment pack")
     write_cell_covers(lesson_path, lesson, cells, cell_slides, out_dir)
@@ -838,6 +942,7 @@ def main() -> None:
     p.add_argument("--labels", choices=("en", "zh"), default="en")
     p.add_argument("--no-tts", action="store_true", help="Do not call TTS; require existing MP3s.")
     p.add_argument("--force-tts", action="store_true", help="Regenerate all beat audio.")
+    p.add_argument("--preflight", action="store_true", help="Check inputs without rendering or contacting a speech provider.")
     p.add_argument("--slides-only", action="store_true", help="Paint PNGs and stop.")
     p.add_argument(
         "--caption-preview",
@@ -954,17 +1059,28 @@ def main() -> None:
     else:
         p.error("Pass a lesson YAML or use --all")
 
+    mode = ("preflight" if args.preflight else "caption_preview" if args.caption_preview
+            else "slides" if args.slides_only else "video")
+    report = BuildReport(args.out, mode, {**opts, "pad_cap": pad_cap()})
     failures = []
     for path in paths:
         if args.all:
             print(f"\n######## {path.name} ########")
         try:
-            runner = build_minicourse if is_minicourse(path) else build_module if is_module(path) else build
-            for video in runner(path, args.out, **opts):
-                print("build-video:", json.dumps(video.relative_to(args.out).as_posix()), flush=True)
+            if args.preflight:
+                runner = preflight
+            elif is_minicourse(path):
+                runner = build_minicourse
+            elif is_module(path):
+                runner = build_module
+            else:
+                runner = build
+            report.run(path, runner, args.out, **opts)
         except Exception as exc:  # noqa: BLE001
             print(f"FAILED {path.name}: {exc}", flush=True)
             failures.append(path.name)
+    report_path = report.write(failures)
+    print("build-report:", json.dumps(report_path.relative_to(args.out).as_posix()), flush=True)
     if failures:
         raise SystemExit(f"{len(failures)} lesson build(s) failed: {', '.join(failures)}")
     if args.all:

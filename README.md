@@ -98,6 +98,7 @@ Useful flags (see `python factory/build.py -h`):
 |------|---------|
 | `--cells en,zh,hk` | Which language cuts to produce. Also accepts bilingual slide cells such as `en+zh`, `zh+en` |
 | `--match-titles` | Paint slide titles in that cell's language (EN / 简体 / 繁體) |
+| `--preflight` | Check inputs and save a report without rendering or contacting TTS. Combine with `--no-tts` to check local narration. |
 | `--slides-only` | PNG stills only — no speech or mux |
 | `--caption-preview` | Stills + caption bars; no speech or mux |
 | `--force-tts` | Regenerate all beat audio |

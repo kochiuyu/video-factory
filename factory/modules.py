@@ -7,6 +7,7 @@ from pathlib import Path
 
 import yaml
 
+from build_report import BuildReport
 from ff import probe_duration
 from mux import concat_clips
 from pack import parse_speeds, write_experiment_pack
@@ -101,6 +102,7 @@ def build_minicourse(
     pack_nocap: bool = False,
     slides_only: bool = False,
     caption_preview: bool = False,
+    report: BuildReport | None = None,
 ) -> list[Path]:
     """Paint each short. Do not concatenate, and do not apply the six-lesson module cap."""
     from build import build
@@ -145,7 +147,9 @@ def build_minicourse(
     for lid in ids:
         print(f"\n######## {lid} ########")
         try:
-            videos.extend(build(lesson_path(lid), out_root, **child_kw))
+            child = lesson_path(lid)
+            rendered = report.run(child, build, out_root, **child_kw) if report else build(child, out_root, **child_kw)
+            videos.extend(rendered)
         except Exception as exc:
             print(f"FAILED {lid}: {exc}")
             failures.append(lid)
@@ -231,6 +235,7 @@ def build_module(
     pack_nocap: bool = False,
     slides_only: bool = False,
     caption_preview: bool = False,
+    report: BuildReport | None = None,
 ) -> list[Path]:
     from build import StepClock, build
 
@@ -265,7 +270,7 @@ def build_module(
         write_pdfs=False,
     )
     n = len(members)
-    clock = StepClock()
+    clock = StepClock(report)
     member_videos = {}
     for i, lid in enumerate(members, start=1):
         print(f"progress: module {i}/{n} build {lid}")
@@ -273,7 +278,7 @@ def build_module(
         child = lesson_path(lid)
         if child is None:
             raise FileNotFoundError(f"Lesson not found: {lid}.yaml")
-        verified = build(child, out_root, **child_kw)
+        verified = report.run(child, build, out_root, **child_kw) if report else build(child, out_root, **child_kw)
         member_videos[lid] = {path.stem.removeprefix(f"{lid}_"): path for path in verified}
         clock.lap(lid)
     if slides_only or caption_preview:
@@ -316,7 +321,10 @@ def build_module(
         print(f"module concat: {dest.name} ({len(clips)} lessons)")
         concat_clips(clips, dest)
         _concat_srts(srt_parts, srt_dir / f"{name}.srt")
-        print("cell:", dest, f"({probe_duration(dest):.1f}s)")
+        duration = probe_duration(dest)
+        print("cell:", dest, f"({duration:.1f}s)")
+        if report:
+            report.video(name, dest, duration)
         videos.append(dest)
     if experiment_pack:
         from langs import selected_cells
@@ -327,7 +335,11 @@ def build_module(
         csv_path = write_experiment_pack(
             out_dir, mid, cells, pack_speeds or parse_speeds(None), sources=videos,
         )
-        videos.extend(pack_videos(csv_path))
+        packed = pack_videos(csv_path)
+        if report:
+            for path in packed:
+                report.video(path.stem, path, probe_duration(path))
+        videos.extend(packed)
         print("experiment-pack:", csv_path)
     clock.lap("join")
     print(f"module: done {mid}")

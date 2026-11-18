@@ -67,6 +67,28 @@ class QuizRoundTrip(unittest.TestCase):
             self.assertNotIn(question["explanation_en"], sheet)
             self.assertIn(question["explanation_en"], key.read_text(encoding="utf-8"))
 
+    def test_author_edits_multiple_choice_and_refuses_incomplete_choices(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            source = Path(tmp) / MEAN.name
+            shutil.copyfile(MEAN, source)
+            with patch.object(app, "resolve_yaml", return_value=source), patch.dict(os.environ, {"VF_OUT": tmp}):
+                inspected = app.lesson_inspect(source.name)
+                q = inspected["quiz"][0]
+                q["correct"] = "B"
+                q["options"]["en"][1] = "B: Revised choice."
+                q["explanation"]["en"] = "A revised explanation."
+                result = app.save_light_edits(source.name, {"quiz": [q]})
+                self.assertTrue(result["ok"], result)
+                saved = load_lesson(source)["quiz"][0]
+                self.assertEqual(saved["answer"], "B")
+                self.assertEqual(saved["options_en"][1], "B: Revised choice.")
+                self.assertEqual(saved["explanation_en"], "A revised explanation.")
+                before = source.read_bytes()
+                q["options"]["zh"] = ["One choice"]
+                result = app.save_light_edits(source.name, {"quiz": [q]})
+                self.assertFalse(result["ok"])
+                self.assertEqual(before, source.read_bytes())
+
     def test_rename_preserves_unexposed_fields(self):
         original = load_lesson(MEAN)["quiz"][0]
         rows = [{"id": "Q-new", "original_id": original["id"], "prompt_en": "Revised question"}]

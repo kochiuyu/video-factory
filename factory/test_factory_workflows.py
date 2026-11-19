@@ -13,6 +13,7 @@ from unittest.mock import MagicMock, patch
 
 import app
 import build
+from build_report import BuildReport
 import catalog
 import ff
 import langs
@@ -74,6 +75,29 @@ class QuizRoundTrip(unittest.TestCase):
 
 
 class BuildResults(unittest.TestCase):
+    def test_report_preserves_completed_cut_after_failure(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp).resolve()
+            first = root / "verified.mp4"
+            first.touch()
+            report = BuildReport(root, "video", {})
+
+            def fail_after_first(_source, *, report):
+                report.cuts({"en": ("en", "en", "en"), "zh": ("zh", "zh", "zh")})
+                report.video("en", first, 42.0, reused=True)
+                raise ValueError("Putonghua render interrupted")
+
+            with self.assertRaisesRegex(ValueError, "interrupted"):
+                report.run(MEAN, fail_after_first)
+            path = report.write([MEAN.name])
+            data = json.loads(path.read_text(encoding="utf-8"))
+            item, = data["items"]
+            self.assertEqual(item["cuts"]["en"]["status"], "reused")
+            self.assertEqual(item["cuts"]["zh"]["status"], "failed")
+            self.assertEqual(len(item["source_sha256"]), 64)
+            _, summary = app.read_build_report(path.relative_to(root).as_posix(), root)
+            self.assertEqual((summary["verified"], summary["failed"]), (1, 1))
+
     def test_batch_continues_after_invalid_lesson(self):
         paths = [Path("bad.yaml"), Path("good.yaml")]
         with (
@@ -142,16 +166,22 @@ class BuildResults(unittest.TestCase):
             env = {**os.environ, "PYTHONUTF8": "1", "VF_PAD_CAP": "", "VF_CLIP_JOBS": "1",
                    "VF_BEAT_FADE": "0"}
 
-            def render(cells):
+            def render(cells, *extra):
                 return subprocess.run(
-                    cmd + ["--cells", cells], env=env, capture_output=True,
+                    cmd + ["--cells", cells, *extra], env=env, capture_output=True,
                     encoding="utf-8", timeout=120,
                 )
 
             legacy = output / "ACC-M01" / "cells" / "ACC-M01_en.mp4"
             legacy.parent.mkdir(parents=True)
             legacy.touch()
-            missing = render("en")
+            missing = render("en", "--preflight")
+            self.assertFalse((output / "lessons").exists())
+            report_lines = [line for line in missing.stdout.splitlines() if line.startswith("build-report: ")]
+            report_path = output / json.loads(report_lines[0].removeprefix("build-report: "))
+            report = json.loads(report_path.read_text(encoding="utf-8"))
+            self.assertEqual(report["mode"], "preflight")
+            self.assertEqual(report["items"][0]["cuts"]["en"]["status"], "failed")
             self.assertNotEqual(missing.returncode, 0)
             self.assertIn("en/opening.mp3", missing.stdout)
             self.assertNotIn("build-video:", missing.stdout)
@@ -162,11 +192,19 @@ class BuildResults(unittest.TestCase):
                 mp3.parent.mkdir(parents=True)
                 ff.check_call(["-y", "-f", "lavfi", "-i",
                                f"sine=frequency=440:duration={length}", "-c:a", "libmp3lame", str(mp3)])
+            ready = render("zh", "--preflight")
+            self.assertEqual(ready.returncode, 0, ready.stdout + ready.stderr)
+            self.assertFalse((output / "lessons" / lesson["id"] / "cells").exists())
             for requested in ("en", "en,zh,hk"):
                 proc = render(requested)
                 self.assertEqual(proc.returncode, 0, proc.stdout + proc.stderr)
                 outputs = [output / json.loads(line.removeprefix("build-video: "))
                            for line in proc.stdout.splitlines() if line.startswith("build-video: ")]
                 self.assertEqual(len(outputs), len(requested.split(",")))
+                line, = (line for line in proc.stdout.splitlines() if line.startswith("build-report: "))
+                path = output / json.loads(line.removeprefix("build-report: "))
+                report = json.loads(path.read_text(encoding="utf-8"))
+                self.assertEqual(report["status"], "complete")
+                self.assertEqual(set(report["items"][0]["cuts"]), set(requested.split(",")))
                 for path in outputs:
                     self.assertAlmostEqual(ff.probe_duration(path), 1.5, delta=0.15)

@@ -1,65 +1,32 @@
-# Standard operating procedure
+# VideoFactory operator guide
 
-Faculty teaching from a finished pack should print [SOP-faculty.html](SOP-faculty.html) (one A4 page). This file is the operator cycle after the console already runs. If the console is not up yet, stop and follow
-[SETUP.md](SETUP.md).
+Start the console with `python factory/app.py`. Follow [SETUP.md](SETUP.md) for the environment, FFmpeg, fonts, and speech provider. Faculty using a finished pack can print [SOP-faculty.html](SOP-faculty.html).
 
-## Roles
+## Produce one lesson
 
-| Role | Owns | Does not own |
-|------|------|----------------|
-| Faculty | Glossary lock, conceptual sign-off, course zip | ffmpeg, file mux |
-| Drafter (RA or any LLM using `AUTHORING_PROMPT.md`) | YAML draft, quiz stems | Final terms. Delivery uses `QA_CHECKLIST.md`. |
-| Operator | Validate, TTS, `build.py`, duration check | Changing the claim |
-| Reviewer | Watch one matched video end-to-end; spot-check the other two languages | Rewriting the lesson |
+1. **Choose the lesson and the cuts.** The standard matched cuts are English (`en`), Putonghua (`zh`), and Cantonese (`hk`) where the lesson has those tracks. A cut such as `en+zh` uses English narration and captions with bilingual slides. Select **Use existing narration audio** to use vendor MP3s.
+2. **Run preflight.** Check the lesson, available cuts, fonts, FFmpeg, and any required local audio. Follow the lesson, language, and beat named in the report. For Google TTS, preflight checks local credentials. The build itself tests service availability.
+3. **Preview slides and captions.** Review the business question, worked example, graphic reveals, units, glossary, and caption wrapping. Use [the lesson checklist](QA_CHECKLIST.md) for the language, evidence, and assessment review.
+4. **Build the selected videos.** TTS prepares the narration tracks for a shared beat timeline. Use **Regenerate narration** when deliberately replacing existing TTS clips. Supply all complete local narration tracks if separately rendered vendor-audio cuts must align.
+5. **Review the build report.** Open it in the console or find it in the output root under `reports/`. Each run has its own JSON file with the selected settings, source checksum, elapsed time by phase, warnings, and verified artifacts. Review the outputs marked **built** or **reused**. If a later cut fails, the completed cuts are still listed. Fix the reported problem before rebuilding the failed work.
 
-One person may hold two roles. Faculty and reviewer should not be the same person as the drafter for the first ten topics.
+## Verify the teaching outputs
 
-## Workstation
+- Play each cut you intend to publish. Confirm the language, readability, narration, captions, and final takeaway.
+- Check that matched cuts share beat timing. A configured pad cap can intentionally shorten some cuts.
+- Export and check the student quiz and answer key together. Each question should test the claim or decision taught in the lesson.
+- Use the actual paths in the report. Standard lesson videos live under `lessons/<ID>/cells/` inside the output root. Preserve the stable lesson ID when moving reviewed files into the experiment library.
 
-Required (see [SETUP.md](SETUP.md) for the exact clicks):
+## Run from the command line
 
-- Python 3.10+
-- Activated `.venv` with `requirements.txt`
-- Bundled files in `fonts/`
-- ffmpeg on PATH, or `imageio-ffmpeg`
-- This repository
+```sh
+python factory/validate.py lessons/STAT/STAT-M01-T02-MEAN.yaml
+python factory/build.py lessons/STAT/STAT-M01-T02-MEAN.yaml --preflight
+python factory/build.py lessons/STAT/STAT-M01-T02-MEAN.yaml --caption-preview
+python factory/build.py lessons/STAT/STAT-M01-T02-MEAN.yaml --cells en,zh,hk
+```
 
-Optional:
+Add `--no-tts` to preflight and to the build for vendor audio. Put MP3s under `lessons/<ID>/audio/<track>/<beat-id>.mp3` inside the output root. The tracks are `en`, `zh_cn`, and `zh_hk` for three-language lessons. Older two-language lessons use `zh` for Putonghua. The default output root is `Downloads/video-factory-out`. Use `--out` or `VF_OUT` to override it.
 
-- Alternative TTS MP3s dropped into the output root under `<ID>/audio/{en,zh}/` if you pass `--no-tts`
-- `VF_OUT` or `--out` only when the output root should not be `<Downloads>/video-factory-out` (lesson YAML stays here). See [SETUP.md](SETUP.md).
+For batch or collection work, inspect the report per lesson before distributing files. Reviewers verify the teaching and language outputs, and operators verify the build and artifact records.
 
-## Cycle for one topic (target: one working day after the template is familiar)
-
-1. Faculty commissions a topic in the console (or from `docs/AUTHORING_PROMPT.md`). Do not start from `briefs/` — that folder is leftover.
-2. Drafter writes `lessons/<AREA>/<ID>.yaml` from `docs/AUTHORING_PROMPT.md`. Check must be clean, and `docs/QA_CHECKLIST.md` must pass, before Build.
-3. Faculty locks glossary pairs and the example.
-4. Run one production command:
-
-   `python3 factory/build.py lessons/<ID>.yaml`
-
-   This validates implicitly via the builder, paints slides, synthesizes missing narration, pads both languages to one clock, and writes four cells. Use `--force-tts` only if the spoken text changed. Use `--no-tts` only if audio will be supplied by another vendor.
-5. Reviewer (human audit) plays `en-en` and `zh-zh` in full, then spot-checks captions on the mixed cells.
-6. If any cell duration differs from the silent master by more than 0.3 s, stop and re-pad. The factory pads to `max(en, zh)` per beat; do not edit the picture to fit one language.
-7. Copy the four files into the experiment library. Do not rename cells after fielding.
-
-## QA gate (all must pass)
-
-Lesson YAML also passes `docs/QA_CHECKLIST.md` before delivery: standalone hook and takeaway, evidence labels, model assumptions, and the multiple-choice quiz shape.
-
-- [ ] Glossary locked strings appear verbatim in both scripts.
-- [ ] No extra English sentence on the ZH-labelled picture, and the reverse.
-- [ ] Captions stay inside the safe area; Chinese lines wrap.
-- [ ] `python3 factory/validate.py lessons/<ID>.yaml` reports no missing-glyph errors. Run `python3 factory/diagnose.py` after a font change.
-- [ ] Four cells share the same duration.
-- [ ] Quiz items test spoken claims, not off-screen trivia.
-- [ ] File names match `out/<ID>/cells/<ID>_{en-en,en-zh,zh-en,zh-zh}.mp4`.
-
-## What other people must not copy from the original chat
-
-- Sandbox paths such as `/home/workdir/...`
-- The assumption that Grok Voice is the only legal TTS
-- Informal wording that is not in the YAML
-- A new visual invented in a single conversation
-
-If the template must change, change `factory/slides.py`, `docs/SCHEMA.md`, and one pilot lesson in the same review.

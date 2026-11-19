@@ -17,7 +17,7 @@ MINICOURSES = ROOT / "minicourses"
 OUT = ROOT / "out"
 OUT_LESSONS = OUT / "lessons"
 OUT_MODULES = OUT / "modules"
-OUT_RESERVED = {"lessons", "modules", "_packs", "_mathtex"}
+OUT_RESERVED = {"lessons", "modules", "reports", "_packs", "_mathtex"}
 HIDDEN_DIRS = {"_inbox", "_attic", "_drafts"}
 # Per-user default: ~/Downloads/video-factory-out (Windows: %USERPROFILE%\Downloads\...).
 DOWNLOADS_OUT_NAME = "video-factory-out"

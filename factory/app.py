@@ -1305,6 +1305,25 @@ def _friendly_step(line: str) -> tuple[str, str, int] | None:
     return None
 
 
+def read_build_report(relative: str, root: Path) -> tuple[str, dict]:
+    path = (root / relative).resolve()
+    if not path.is_relative_to(root / "reports") or path.suffix != ".json":
+        raise ValueError("Build report path must be within the reports folder.")
+    data = json.loads(path.read_text(encoding="utf-8"))
+    items = data["items"]
+    return "/media/" + quote(path.relative_to(root).as_posix()), {
+        "mode": data["mode"],
+        "verified": sum(a["kind"] == "video" for item in items for a in item["artifacts"]),
+        "failed": sum(item["status"] == "failed" for item in items),
+        "warnings": sum(len(item["warnings"]) for item in items),
+        "problems": [f"{item['source']}: {item['error']}" for item in items if item.get("error")][:8],
+        "cuts": [
+            f"{item.get('lesson_id') or item['source']} / {name}: {cut['status']}"
+            for item in items for name, cut in item["cuts"].items()
+        ][:30],
+    }
+
+
 def run_build(
     filename: str,
     force_tts: bool,
@@ -1313,6 +1332,7 @@ def run_build(
     caption_preview: bool = False,
     options: dict | None = None,
     all_lessons: bool = False,
+    preflight: bool = False,
 ) -> None:
     opts = options or {}
     path = resolve_yaml(filename) if filename else None
@@ -1326,7 +1346,11 @@ def run_build(
     else:
         cmd.append(str(path))
     cmd += ["--labels", labels]
-    if force_tts and not slides_only and not caption_preview:
+    if preflight:
+        cmd.append("--preflight")
+    if opts.get("local_audio"):
+        cmd.append("--no-tts")
+    if force_tts and not slides_only and not caption_preview and not opts.get("local_audio"):
         cmd.append("--force-tts")
     if slides_only:
         cmd.append("--slides-only")
@@ -1382,6 +1406,8 @@ def run_build(
             elapsed_s=0,
             timing="",
             timing_total="",
+            report_url="",
+            report_summary={},
         )
     started = time.time()
     lesson = None
@@ -1402,6 +1428,8 @@ def run_build(
         chunks: list[str] = []
         assert proc.stdout is not None
         videos = []
+        report_url = ""
+        report_summary = {}
         output_root = out_root().resolve()
         for raw in proc.stdout:
             chunks.append(raw)
@@ -1410,6 +1438,9 @@ def run_build(
                 published = (output_root / relative).resolve()
                 if published.is_relative_to(output_root) and published.is_file():
                     videos.append("/media/" + quote(published.relative_to(output_root).as_posix()))
+            if raw.startswith("build-report: "):
+                relative = json.loads(raw.removeprefix("build-report: "))
+                report_url, report_summary = read_build_report(relative, output_root)
             parsed = _friendly_step(raw)
             elapsed_s = time.time() - started
             low = raw.strip().lower()
@@ -1431,7 +1462,12 @@ def run_build(
             lid = "batch"
             lesson_name = "--all"
         else:
-            lesson = load_lesson(path)
+            try:
+                lesson = load_lesson(path)
+            except Exception:
+                if proc.returncode == 0:
+                    raise
+                lesson = {}
             lid = lesson.get("id") or path.stem
             lesson_name = path.name
         lesson_log = lesson_out_dir(lid) / "build.log" if lid != "batch" else out_root() / "last_build.log"
@@ -1445,12 +1481,14 @@ def run_build(
             lesson_log.write_text(stamp + log, encoding="utf-8")
         cell_urls = list(dict.fromkeys(videos))
         slides, previews = [], []
-        if not all_lessons:
+        if not all_lessons and not preflight:
             ids = (lesson.get("lessons") or []) if path.parent.name == "minicourses" else [lid]
             for child in ids:
                 slides.extend(_slide_urls(child))
                 previews.extend(_preview_urls(child))
-        if caption_preview:
+        if preflight:
+            has_output = bool(report_url)
+        elif caption_preview:
             has_output = all_lessons or bool(previews)
         elif slides_only:
             has_output = all_lessons or bool(slides)
@@ -1462,7 +1500,9 @@ def run_build(
         elapsed = _fmt_elapsed(elapsed_s)
         timing_total = elapsed
         report = _timing_report(log, lesson_name)
-        done_step = f"Done in {elapsed}" if ok else "Build failed"
+        done_step = ("Preflight passed" if ok else "Preflight failed") if preflight else (
+            f"Done in {elapsed}" if ok else "Build failed"
+        )
         done_detail = "Open Timing for a per-short, per-version split." if (ok and report) else (
             log.strip().splitlines()[-1] if log.strip() else "See the log"
         )
@@ -1477,6 +1517,8 @@ def run_build(
                 elapsed_s=elapsed_s,
                 timing=report,
                 timing_total=timing_total,
+                report_url=report_url,
+                report_summary=report_summary,
                 lesson=lesson_name,
                 cells=cell_urls,
                 slides=slides,
@@ -2175,6 +2217,11 @@ HTML = """<!DOCTYPE html>
       </div>
       <div class="progress-bar"><i id="progbar"></i></div>
       <p class="progress-detail" id="prognow">Choose a lesson, then make slides or build the videos.</p>
+      <details class="progress-timing" id="buildreport" hidden>
+        <summary id="reportsummary">Build report</summary>
+        <p><a id="reportlink" target="_blank" rel="noopener">Open detailed report (JSON)</a></p>
+        <pre id="reportdetail"></pre>
+      </details>
       <details class="progress-timing" id="progtiming" hidden>
         <summary>Timing by short and version</summary>
         <pre id="progdetail"></pre>
@@ -2188,12 +2235,14 @@ HTML = """<!DOCTYPE html>
         <ol>
           <li>Pick a lesson on the left.</li>
           <li>Leave the three matched boxes ticked (the diagonal).</li>
-          <li>An RA opens <em>Author</em> to fix wording. Check is the audit. Then click <em>Build this lesson</em>.</li>
+          <li>Run preflight, preview the lesson, and build the selected videos.</li>
         </ol>
       </div>
       <div class="actions primary">
+        <button id="preflight" type="button">Run preflight</button>
         <button id="build">Build this lesson</button>
       </div>
+      <label><input type="checkbox" id="local_audio"> Use existing narration audio</label>
       <div class="actions more">
         <button id="slidesonly" type="button" title="Paint slides only. No speech, no video.">Preview slides only</button>
         <button id="captionpreview" type="button" title="Stamp caption chips on slides. No speech, no video.">Preview captions</button>
@@ -2635,7 +2684,7 @@ function setBusy(on, label) {
   document.body.classList.toggle('busy', !!on);
   const dock = document.querySelector('.dock');
   if (dock) dock.classList.toggle('busy', !!on);
-  const ids = ['build','slidesonly','captionpreview','makecovers','clearcache','exportquiz'];
+  const ids = ['build','preflight','slidesonly','captionpreview','makecovers','clearcache','exportquiz'];
   ids.forEach(id => { const el = document.getElementById(id); if (el) el.disabled = !!on; });
   const btn = document.getElementById('build');
   if (on) {
@@ -3713,12 +3762,13 @@ function selectedCells() {
     .filter(el => !el.disabled)
     .map(el => el.dataset.cell);
 }
-async function startJob(slidesOnly, captionPreview) {
+async function startJob(slidesOnly, captionPreview, preflight = false) {
   if (!selected) { alert('Pick a short or a module first.'); return; }
   const cells = selectedCells();
   if (!cells.length) { alert('Tick a matched video, or tick both Speech and Slides under Mix languages.'); return; }
   if (cells.length > 12 && !confirm('This will build '+cells.length+' videos. Continue?')) return;
-  const runningMsg = captionPreview ? 'Stamping captions…' : (slidesOnly ? 'Painting slides…' : 'Building…');
+  document.getElementById('buildreport').hidden = true;
+  const runningMsg = preflight ? 'Checking inputs.' : captionPreview ? 'Stamping captions…' : (slidesOnly ? 'Painting slides…' : 'Building…');
   document.getElementById('log').textContent = runningMsg;
   setBusy(true, runningMsg);
   setJob('run', runningMsg.replace('…',''));
@@ -3728,7 +3778,7 @@ async function startJob(slidesOnly, captionPreview) {
   if (captionPreview) showTab('captions');
   else if (slidesOnly) showTab('slides');
   try {
-  await fetch('/api/build', {
+  const response = await fetch('/api/build', {
     method:'POST',
     headers:{'Content-Type':'application/json'},
     body: JSON.stringify({
@@ -3737,8 +3787,10 @@ async function startJob(slidesOnly, captionPreview) {
       labels: document.getElementById('labels').value,
       slides_only: slidesOnly,
       caption_preview: captionPreview,
+      preflight,
       all: false,
       options: {
+        local_audio: document.getElementById("local_audio").checked,
         voice_en: document.getElementById('voice_en').value,
         voice_zh_cn: document.getElementById('voice_zh_cn').value,
         voice_zh_hk: document.getElementById('voice_zh_hk').value,
@@ -3763,6 +3815,7 @@ async function startJob(slidesOnly, captionPreview) {
       }
     })
   });
+  if (!response.ok) throw new Error((await response.json()).error || 'Could not start the job.');
   } catch (err) {
     setBusy(false);
     setJob('err', 'Error');
@@ -3786,6 +3839,16 @@ async function startJob(slidesOnly, captionPreview) {
     clearInterval(poll);
     setBusy(false);
     setJob(j.status === 'ok' ? 'ok' : 'err', j.status === 'ok' ? 'Complete' : 'Error');
+    if (j.report_url) {
+      const summary = j.report_summary;
+      document.getElementById('buildreport').hidden = false;
+      document.getElementById('reportlink').href = j.report_url;
+      const label = summary.mode === 'preflight' ? 'Preflight report' : 'Build report';
+      document.getElementById('reportsummary').textContent =
+        label + ' | ' + summary.verified + ' verified videos | ' + summary.failed + ' failed | ' + summary.warnings + ' warnings';
+      document.getElementById('reportdetail').textContent = [...summary.problems, ...summary.cuts].join('\\n');
+    }
+    if (preflight) return;
     showCells(j.cells || []);
     showSlides(j.slides || []);
     showPreviews(j.previews || []);
@@ -3800,6 +3863,7 @@ async function startJob(slidesOnly, captionPreview) {
     if (selected) loadOutputs(selected);
   }, 1000);
 }
+document.getElementById('preflight').onclick = () => startJob(false, false, true);
 document.getElementById('build').onclick = () => startJob(false, false);
 document.getElementById('slidesonly').onclick = () => startJob(true, false);
 document.getElementById('captionpreview').onclick = () => startJob(false, true);
@@ -4107,6 +4171,7 @@ class Handler(BaseHTTPRequestHandler):
                     bool(body.get("caption_preview")),
                     body.get("options") or {},
                     bool(body.get("all")),
+                    bool(body.get("preflight")),
                 ),
                 daemon=True,
             )

@@ -1,0 +1,72 @@
+{
+  "source_lesson": "lessons/STAT/STAT-M01-T02-MEAN.yaml",
+  "source_bytes_unchanged": true,
+  "mixes": [
+    "zh",
+    "hk+en",
+    "zh+en",
+    "en+zh"
+  ],
+  "caption_safe_top": 815,
+  "phone_width": 390,
+  "columns": [
+    "baseline default layout",
+    "focus layout"
+  ],
+  "sheets": [
+    {
+      "file": "compare-zh.png",
+      "mix": "zh",
+      "kind": "baseline-vs-focus"
+    },
+    {
+      "file": "shop-partition-zh.png",
+      "mix": "zh",
+      "kind": "s1-partition-only"
+    },
+    {
+      "file": "compare-hk-en.png",
+      "mix": "hk+en",
+      "kind": "baseline-vs-focus"
+    },
+    {
+      "file": "shop-partition-hk-en.png",
+      "mix": "hk+en",
+      "kind": "s1-partition-only"
+    },
+    {
+      "file": "compare-zh-en.png",
+      "mix": "zh+en",
+      "kind": "baseline-vs-focus"
+    },
+    {
+      "file": "shop-partition-zh-en.png",
+      "mix": "zh+en",
+      "kind": "s1-partition-only"
+    },
+    {
+      "file": "compare-en-zh.png",
+      "mix": "en+zh",
+      "kind": "baseline-vs-focus"
+    },
+    {
+      "file": "shop-partition-en-zh.png",
+      "mix": "en+zh",
+      "kind": "s1-partition-only"
+    },
+    {
+      "file": "tex-equation-en.png",
+      "mix": "en",
+      "kind": "production-tex-card"
+    }
+  ],
+  "limitations": [
+    "Still caption previews only. No audio and no TTS.",
+    "Focus preview keeps the original speech, numbers, quiz, and beat order.",
+    "The arithmetic card opts into layout: calculation. The third row is the 350 result.",
+    "Per-shop sheets partition data s1 only. They do not include s2 or s3.",
+    "row_cells is not claimed to be production-aligned with the three-stage data beat.",
+    "The busiest/quietest explanation stays on the original hook.",
+    "No new stock-planning claim was added."
+  ]
+}

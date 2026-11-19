@@ -20,6 +20,7 @@ from openpyxl.styles import Alignment, Font, PatternFill, Protection
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
 
+from quiz import merge_quiz_rows, quiz_fields, QUIZ_LANGS
 from validate import load_lesson, validate
 
 LANGS = ("en", "zh", "zh_hk")
@@ -226,11 +227,14 @@ def _write_glossary(wb: Workbook, lesson: dict) -> None:
 
 def _write_quiz(wb: Workbook, lesson: dict) -> None:
     ws = wb.create_sheet("Quiz")
-    headers = ["id", "type", "en", "zh", "zh_hk", "answer_en", "answer_zh", "answer_zh_hk"]
+    headers = ["id", "type", "en", "zh", "zh_hk", "answer_en", "answer_zh", "answer_zh_hk", "original_id"]
     for c, name in enumerate(headers, start=1):
         ws.cell(1, c, name)
     for r, row in enumerate(lesson.get("quiz") or [], start=2):
-        values = [row.get("id"), row.get("type"), row.get("en"), row.get("zh"), row.get("zh_hk"), row.get("answer_en"), row.get("answer_zh"), row.get("answer_zh_hk")]
+        fields = quiz_fields(row)
+        values = [row.get("id") or f"Q{r - 1}", fields["type"]]
+        values.extend(fields[f"{stem}_{lang}"] for stem in ("prompt", "answer") for lang in QUIZ_LANGS)
+        values.append(values[0])
         for c, value in enumerate(values, start=1):
             cell = ws.cell(r, c, "" if value is None else value)
             cell.font = Font(name="Arial", size=11)
@@ -239,6 +243,7 @@ def _write_quiz(wb: Workbook, lesson: dict) -> None:
             cell.number_format = "@"
         ws.row_dimensions[r].height = 48
     _style_header(ws, len(headers))
+    ws.column_dimensions["I"].hidden = True
     for c, width in enumerate([12, 16, 42, 42, 42, 42, 42, 42], start=1):
         ws.column_dimensions[get_column_letter(c)].width = width
 
@@ -334,20 +339,27 @@ def merge_lesson(lesson: dict, book: Path) -> tuple[dict, list[str]]:
     if "Quiz" in wb.sheetnames:
         rows = _rows(wb["Quiz"])
         if rows:
-            lesson["quiz"] = [
-                {
-                    "id": _text(r.get("id")) or f"Q{i}",
-                    "type": _text(r.get("type")) or "comprehension",
-                    "en": _text(r.get("en")),
-                    "zh": _text(r.get("zh")),
-                    "zh_hk": _text(r.get("zh_hk")),
-                    "answer_en": _text(r.get("answer_en")),
-                    "answer_zh": _text(r.get("answer_zh")),
-                    "answer_zh_hk": _text(r.get("answer_zh_hk")),
-                }
-                for i, r in enumerate(rows, start=1)
-                if _text(r.get("en"))
-            ]
+            quiz_rows = []
+            existing = lesson.get("quiz") or []
+            original_ids = {str(item.get("id") or f"Q{i}")
+                            for i, item in enumerate(existing, 1) if isinstance(item, dict)}
+            for i, row in enumerate(rows, 1):
+                qid = _text(row.get("id")) or f"Q{i}"
+                original_id = _text(row.get("original_id")) or qid
+                if original_id not in original_ids and not any(_text(row.get(lang)) for lang in QUIZ_LANGS):
+                    continue
+                # Older workbooks left multiple-choice prompt/answer cells blank.
+                legacy_mc = _text(row.get("type")) == "multiple_choice"
+                quiz_rows.append({
+                    "id": qid,
+                    "original_id": original_id,
+                    "type": _text(row.get("type")),
+                    **{f"{stem}_{lang}": _text(row[key])
+                       for stem in ("prompt", "answer") for lang in QUIZ_LANGS
+                       if (key := lang if stem == "prompt" else f"answer_{lang}") in row
+                       and (_text(row[key]) or not legacy_mc)},
+                })
+            lesson["quiz"] = merge_quiz_rows(existing, quiz_rows)
     return lesson, notes
 
 

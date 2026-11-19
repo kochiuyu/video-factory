@@ -13,7 +13,7 @@ from catalog import (
     is_module_id,
     iter_lesson_paths,
     lesson_path,
-    out_dir as lesson_out_dir,
+    existing_out_dir as lesson_out_dir,
     out_root as default_out_root,
 )
 

@@ -101,7 +101,7 @@ def build_minicourse(
     pack_nocap: bool = False,
     slides_only: bool = False,
     caption_preview: bool = False,
-) -> None:
+) -> list[Path]:
     """Paint each short. Do not concatenate, and do not apply the six-lesson module cap."""
     from build import build
 
@@ -123,7 +123,7 @@ def build_minicourse(
         print("INVALID mini-course:")
         for e in errors:
             print(" -", e)
-        raise SystemExit(1)
+        raise ValueError(f"Invalid collection {course_path.name}")
     print(f"mini-course: {course['id']} <- {len(ids)} shorts, not joined")
     child_kw = dict(
         label_lang=label_lang,
@@ -140,10 +140,19 @@ def build_minicourse(
         pack_speeds=pack_speeds,
         pack_nocap=pack_nocap,
     )
+    videos = []
+    failures = []
     for lid in ids:
         print(f"\n######## {lid} ########")
-        build(lesson_path(lid), out_root, **child_kw)
+        try:
+            videos.extend(build(lesson_path(lid), out_root, **child_kw))
+        except Exception as exc:
+            print(f"FAILED {lid}: {exc}")
+            failures.append(lid)
+    if failures:
+        raise RuntimeError(f"Mini-course members failed: {', '.join(failures)}")
     print(f"mini-course: finished {len(ids)} shorts; no concat")
+    return videos
 
 
 def list_modules() -> list[Path]:
@@ -222,7 +231,7 @@ def build_module(
     pack_nocap: bool = False,
     slides_only: bool = False,
     caption_preview: bool = False,
-) -> None:
+) -> list[Path]:
     from build import StepClock, build
 
     mod = load_module(module_path)
@@ -232,7 +241,7 @@ def build_module(
         print("INVALID module:")
         for e in fatal:
             print(" -", e)
-        raise SystemExit(1)
+        raise ValueError(f"Invalid module {module_path.name}")
     for e in errors:
         print("note:", e)
     mid = mod["id"]
@@ -257,13 +266,15 @@ def build_module(
     )
     n = len(members)
     clock = StepClock()
+    member_videos = {}
     for i, lid in enumerate(members, start=1):
         print(f"progress: module {i}/{n} build {lid}")
         print(f"######## {lid} (module part {i}/{n}) ########")
         child = lesson_path(lid)
         if child is None:
             raise FileNotFoundError(f"Lesson not found: {lid}.yaml")
-        build(child, out_root, **child_kw)
+        verified = build(child, out_root, **child_kw)
+        member_videos[lid] = {path.stem.removeprefix(f"{lid}_"): path for path in verified}
         clock.lap(lid)
     if slides_only or caption_preview:
         n_png = 0
@@ -284,115 +295,41 @@ def build_module(
         except Exception as exc:  # noqa: BLE001
             print(f"pdf skip: {exc}")
         clock.total()
-        return
+        return []
     out_dir = lesson_out_dir(mid, module=True, root=out_root)
     cell_dir = out_dir / "cells"
     cell_dir.mkdir(parents=True, exist_ok=True)
     srt_dir = out_dir / "srt"
     srt_dir.mkdir(parents=True, exist_ok=True)
-    cell_alias = {
-        "en": ("en", "en-en"),
-        "zh": ("zh", "zhcn", "zh-zh"),
-        "hk": ("hk", "zhhk", "zh_hk"),
-        "en+zh": ("en+zh", "en-en-zh"),
-        "en+hk": ("en+hk", "en-en-hk"),
-        "zh+en": ("zh+en", "zh-zh-en"),
-        "zh+hk": ("zh+hk", "zh-zh-hk"),
-        "hk+en": ("hk+en", "hk-hk-en"),
-        "hk+zh": ("hk+zh", "hk-hk-zh"),
-    }
-
-    def _clip(lid: str, name: str):
-        folder = lesson_out_dir(lid, module=False, root=out_root) / "cells"
-        for cand in cell_alias.get(name, (name,)):
-            hit = folder / f"{lid}_{cand}.mp4"
-            if hit.is_file():
-                return hit
-        return None
-
-    names: set[str] = set()
-    for lid in members:
-        folder = lesson_out_dir(lid, module=False, root=out_root) / "cells"
-        if not folder.is_dir():
-            continue
-        for mp4 in folder.glob("*.mp4"):
-            raw = mp4.stem
-            prefix = f"{lid}_"
-            suf = raw[len(prefix) :] if raw.startswith(prefix) else raw
-            if suf.endswith("_nocap"):
-                continue
-            names.add(suf)
-            if suf in {"en", "en-en"}:
-                names.add("en")
-            if suf in {"zh", "zhcn", "zh-zh"}:
-                names.add("zh")
-            if suf in {"hk", "zhhk", "zh_hk"}:
-                names.add("hk")
-    print("module child versions:", ", ".join(sorted(names)) or "(none)")
-    if wanted_cells:
-        file_name = {
-            "en": "en",
-            "en-en": "en",
-            "zh": "zh",
-            "zh_cn": "zh",
-            "zhcn": "zh",
-            "zh-zh": "zh",
-            "hk": "hk",
-            "zh_hk": "hk",
-            "zhhk": "hk",
-            "en+zh": "en+zh",
-            "en-en-zh": "en+zh",
-            "en+hk": "en+hk",
-            "en-en-hk": "en+hk",
-            "zh+en": "zh+en",
-            "zh-zh-en": "zh+en",
-            "zh+hk": "zh+hk",
-            "zh-zh-hk": "zh+hk",
-            "hk+en": "hk+en",
-            "hk-hk-en": "hk+en",
-            "hk+zh": "hk+zh",
-            "hk-hk-zh": "hk+zh",
-        }
-        wanted = {file_name.get(w, w) for w in wanted_cells}
-        names = {file_name.get(n, n) for n in names if file_name.get(n, n) in wanted}
-        for w in sorted(wanted):
-            if w not in names:
-                print(f"module missing {w}: no child wrote that video — join will skip it")
+    names = set.intersection(*(set(rows) for rows in member_videos.values()))
     if not names:
-        raise SystemExit(f"No child videos found for module {mid}.")
+        raise RuntimeError(f"No video cuts are available across every lesson in {mid}.")
+    videos = []
     for name in sorted(names):
-        clips: list[Path] = []
-        srt_parts: list[tuple[Path, float]] = []
-        missing = []
-        for lid in members:
-            clip = _clip(lid, name)
-            if clip is None:
-                missing.append(f"{lid}_{name}.mp4")
-                continue
-            clips.append(clip)
-            dur = probe_duration(clip)
-            base = name.removesuffix("_nocap")
-            srt_parts.append((lesson_out_dir(lid, module=False, root=out_root) / "srt" / f"{base}.srt", dur))
-        if missing:
-            print(f"module skip {name}: missing {', '.join(missing)}")
-            continue
+        clips = [member_videos[lid][name] for lid in members]
+        srt_parts = [
+            (clip.parent.parent / "srt" / f"{name}.srt", probe_duration(clip))
+            for clip in clips
+        ]
         dest = cell_dir / f"{mid}_{name}.mp4"
         print(f"progress: module-join {name}")
         print(f"module concat: {dest.name} ({len(clips)} lessons)")
         concat_clips(clips, dest)
-        if not name.endswith("_nocap"):
-            _concat_srts(srt_parts, srt_dir / f"{name}.srt")
+        _concat_srts(srt_parts, srt_dir / f"{name}.srt")
         print("cell:", dest, f"({probe_duration(dest):.1f}s)")
+        videos.append(dest)
     if experiment_pack:
         from langs import selected_cells
+        from pack import pack_videos
 
-        first_path = lesson_path(members[0])
-        if first_path is None:
-            return
-        first = load_lesson(first_path)
+        first = load_lesson(lesson_path(members[0]))
         cells = selected_cells(first, wanted_cells)
-        csv_path = write_experiment_pack(out_dir, mid, cells, pack_speeds or parse_speeds(None))
+        csv_path = write_experiment_pack(
+            out_dir, mid, cells, pack_speeds or parse_speeds(None), sources=videos,
+        )
+        videos.extend(pack_videos(csv_path))
         print("experiment-pack:", csv_path)
     clock.lap("join")
     print(f"module: done {mid}")
     clock.total()
+    return videos

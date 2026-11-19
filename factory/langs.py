@@ -36,9 +36,15 @@ def beat_text(beat: dict, lang: str) -> str:
     return (beat.get(lang) or "").strip()
 
 
+def has_hk_speech(beat: dict) -> bool:
+    return any(str(beat.get(key) or "").strip() for key in (
+        "zh_hk", *(f"{prefix}{i}_zh_hk" for prefix in ("s", "stage") for i in range(1, 9)),
+    ))
+
+
 def script_langs(lesson: dict) -> list[str]:
     beats = lesson.get("beats") or []
-    if any(beat_text(b, "zh_hk") for b in beats):
+    if any(has_hk_speech(beat) for beat in beats):
         return ["en", "zh_cn", "zh_hk"]
     return ["en", "zh"]
 
@@ -131,6 +137,12 @@ def parse_cell(token: str) -> tuple[str, str, str] | None:
     The part after + is the second slide language.
     """
     raw = (token or "").strip().lower().replace("/", "+")
+    raw = {
+        "en-en": "en", "zh-zh": "zh", "zh-hk": "hk",
+        "en-en-zh": "en+zh", "en-en-hk": "en+hk",
+        "zh-zh-en": "zh+en", "zh-zh-hk": "zh+hk",
+        "hk-hk-en": "hk+en", "hk-hk-zh": "hk+zh",
+    }.get(raw, raw)
     if not raw:
         return None
     if "+" in raw:
@@ -177,35 +189,29 @@ def parse_wanted(raw) -> list[str] | None:
     return out or None
 
 
-def selected_cells(lesson: dict, wanted: list[str] | None) -> dict[str, tuple[str, str, str]]:
+def selected_cells(
+    lesson: dict,
+    wanted: list[str] | None,
+    *,
+    allow_unavailable: bool = False,
+) -> dict[str, tuple[str, str, str]]:
     cells = cells_for(lesson)
     if not wanted:
         return cells
-    out: dict[str, tuple[str, str, str]] = {}
+    available = {voice for voice, _, _ in cells.values()}
+    out = {}
     for token in wanted:
         parsed = parse_cell(token)
-        if parsed:
-            voice, _cap, slide = parsed
-            second = None if slide_folder(slide) == slide_folder(voice) else slide
-            out[cell_name(voice, second)] = parsed
-            continue
-        key = TRACK_ALIASES.get(token, token)
-        for name, triple in cells.items():
-            if name == token or triple[0] == key:
-                out[name] = triple
-    return out or cells
-
-
-def selected_langs(lesson: dict, wanted: list[str] | None) -> list[str]:
-    have = script_langs(lesson)
-    cells = selected_cells(lesson, wanted)
-    voices: list[str] = []
-    for voice, _cap, _slide in cells.values():
-        if voice == "zh_cn" and "zh_cn" not in have and "zh" in have:
-            voice = "zh"
-        if voice in have and voice not in voices:
-            voices.append(voice)
-    return voices or have
+        if not parsed:
+            raise ValueError(f"Unknown cut {token!r}. Use en, zh, hk, or a bilingual cut such as zh+en.")
+        voice, caption, slide = parsed
+        if voice == caption == "zh_cn" and "zh" in available:
+            voice = caption = "zh"
+        if voice not in available and not allow_unavailable:
+            raise ValueError(f"Cut {token!r} requires a narration track this lesson does not have.")
+        second = None if slide_folder(slide) == slide_folder(voice) else slide
+        out[cell_name(voice, second)] = (voice, caption, slide)
+    return out
 
 
 def label_code(lang: str) -> str:

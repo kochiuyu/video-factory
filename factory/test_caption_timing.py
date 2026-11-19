@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import json
 import os
-import subprocess
 import sys
 import tempfile
 import unittest
@@ -14,6 +13,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from cache import digest_obj, write_mark
+from ff import check_call
 from mux import (
     CAP_TIME_WEIGHT,
     CAP_TIME_WORDS,
@@ -306,9 +306,8 @@ class SpeechAndClipCache(unittest.TestCase):
         os.environ["VF_TTS"] = "edge"
         with tempfile.TemporaryDirectory() as td:
             dest = Path(td) / "beat.mp3"
-            subprocess.check_call(
+            check_call(
                 [
-                    "ffmpeg",
                     "-y",
                     "-f",
                     "lavfi",
@@ -320,8 +319,6 @@ class SpeechAndClipCache(unittest.TestCase):
                     "9",
                     str(dest),
                 ],
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL,
             )
             key = digest_obj(_speech_payload("Hello", "en"))
             write_mark(dest, key)

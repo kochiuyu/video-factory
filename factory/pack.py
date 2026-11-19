@@ -144,6 +144,8 @@ def write_experiment_pack(
     lesson_id: str,
     cells: dict[str, tuple[str, str, str]],
     speeds: list[float] | None = None,
+    *,
+    sources: list[Path] | None = None,
 ) -> Path:
     """Copy each built cell at each speed into out/<id>/pack/ plus treatments.csv."""
     speeds = [s for s in (speeds or list(DEFAULT_SPEEDS)) if 0.5 <= s <= 2.0]
@@ -151,7 +153,7 @@ def write_experiment_pack(
     pack_dir.mkdir(parents=True, exist_ok=True)
     cell_dir = out_dir / "cells"
     srt_dir = out_dir / "srt"
-    sources = sorted(cell_dir.glob("*.mp4")) if cell_dir.is_dir() else []
+    sources = sorted(cell_dir.glob("*.mp4")) if sources is None else sources
     rows: list[dict] = []
     total = max(1, len(sources) * max(1, len(speeds)))
     done = 0
@@ -212,3 +214,8 @@ def write_experiment_pack(
         writer.writerows(rows)
     print(f"pack: wrote {len(rows)} treatments -> {csv_path}")
     return csv_path
+
+
+def pack_videos(csv_path: Path) -> list[Path]:
+    with csv_path.open(encoding="utf-8", newline="") as handle:
+        return [csv_path.parent / row["file"] for row in csv.DictReader(handle)]

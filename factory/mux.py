@@ -653,6 +653,18 @@ def mux_cell(
     return atomic_replace(tmp, out_path)
 
 
+CAPTION_MAX_SIZE = 56
+CAPTION_MAX_LINES = 3
+CAPTION_BOTTOM_PAD = 28
+CAPTION_VERTICAL_PAD = 12
+
+
+def caption_safe_top(frame_height: int) -> int:
+    """Upper edge of the largest supported caption card."""
+    lines = CAPTION_MAX_LINES * int(CAPTION_MAX_SIZE * 1.28)
+    return frame_height - CAPTION_BOTTOM_PAD - 2 * CAPTION_VERTICAL_PAD - lines
+
+
 def _caption_card(text: str, dest: Path) -> Path:
     """Full-frame transparent overlay with a compact caption chip at the bottom."""
     from PIL import Image, ImageDraw, ImageFont
@@ -662,15 +674,15 @@ def _caption_card(text: str, dest: Path) -> Path:
     import os
 
     size = int(os.environ.get("VF_CAPTION_SIZE", CAPTION_SIZE_DEFAULT) or CAPTION_SIZE_DEFAULT)
-    size = max(24, min(56, size))
+    size = max(24, min(CAPTION_MAX_SIZE, size))
     align = (os.environ.get("VF_CAPTION_ALIGN", "center") or "center").lower()
     max_lines = int(os.environ.get("VF_CAPTION_LINES", CAPTION_LINES_DEFAULT) or CAPTION_LINES_DEFAULT)
-    max_lines = max(1, min(3, max_lines))
+    max_lines = max(1, min(CAPTION_MAX_LINES, max_lines))
     opacity = int(os.environ.get("VF_CAPTION_OPACITY", "72") or 72)
     opacity = max(30, min(90, opacity))
     line_h = max(30, int(size * 1.28))
     frame_w, frame_h = 1920, 1080
-    pad_x, pad_y = CAPTION_PAD_X, 12
+    pad_x, pad_y = CAPTION_PAD_X, CAPTION_VERTICAL_PAD
     max_pill_w = CAPTION_PILL_MAX
     max_w = max_pill_w - 2 * pad_x
     from slides import draw_mixed, mixed_length
@@ -690,7 +702,7 @@ def _caption_card(text: str, dest: Path) -> Path:
     img = Image.new("RGBA", (frame_w, frame_h), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
     x0 = (frame_w - pill_w) // 2
-    y0 = frame_h - pill_h - 28
+    y0 = frame_h - pill_h - CAPTION_BOTTOM_PAD
     alpha = int(round(255 * opacity / 100))
     draw.rounded_rectangle([x0, y0, x0 + pill_w, y0 + pill_h], radius=18, fill=(16, 15, 10, alpha))
     y = y0 + pad_y

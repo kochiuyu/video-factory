@@ -45,6 +45,14 @@ For topic-based standalone micro-lessons:
 17. **Cover order**: Mixed covers follow the slide. The speech language (first part of the slide key) is on top. The second language sits below. `en+zh` and `zh+en` do not both paint English first.
 18. **Quiz transfer**: Q1 may check the short's own file. Q2 should use a new small file. The three languages must ask the same question and offer the same four options. Series number cells are plain `c11`–`c26`.
 
+## Focus slide layout
+
+Set `slide_style: focus` at the lesson level to use compact headings and a reserved caption area. The renderer sizes the content area against the largest supported caption card. The Mean lesson demonstrates the layout in three single-language cuts and a bilingual cut.
+
+- A one-row `series` with `reveal: row_cells` reveals one value per cell. Supply one spoken stage per cell. With `reveal: first_row`, the first row is visible in stage 1, the total in stage 2, and the comparison row in stage 3.
+- On a four-stage `steps` card, `layout: calculation` emphasizes the third step through the final check. Use the first two stages for inputs and the operation, the third for the result, and the fourth for the check.
+- On a focus `takeaway` card, supply localized `decision` and `check_answer` text. Stage 1 shows the decision, stage 2 adds `q2` as a question, and stage 3 reveals the answer. Keep the normal quiz fields in the YAML for quiz exports.
+
 ## Stage speech
 
 These visuals paint progressive stills. Write one spoken chunk per still:

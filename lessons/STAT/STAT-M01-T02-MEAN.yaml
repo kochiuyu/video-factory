@@ -2,7 +2,8 @@ id: STAT-M01-T02-MEAN
 course_en: Business Statistics
 course_zh: 商务统计
 course_zh_hk: 商務統計
-duration_target_s: 410
+duration_target_s: 371
+slide_style: focus
 title_en: What is the mean?
 title_zh: 什么是平均数？
 title_zh_hk: 咩係平均數？
@@ -102,22 +103,51 @@ quiz:
   explanation_zh_hk: 200加300加700等於1,200。除以3，平均數係400。200同700嘅正中間係450。中間嘅觀測係300。呢兩個都唔係平均數。
 beats:
 - id: hook
-  visual: title_card
-  seconds: 44
-  kicker: The Question
-  kicker_en: The Question
-  kicker_zh: 业务问题
-  kicker_zh_hk: 業務問題
-  title_en: What is the mean?
-  title_zh: 什么是平均数？
-  title_zh_hk: 咩係平均數？
-  en: Imagine you manage four coffee shops. On Monday, each one sold a different number of cups. Head office asks you for one number that shows how the group is doing. Which figure do you send? Pick the busiest shop, and the group looks stronger than it really is; set next week's target from it, and the target is too high. Pick the quietest shop, and the group looks weaker; the target ends up too low. So what single number fairly stands for all four shops? The number that answers that is called the mean. What is the mean?
-  zh: 假设你管着四家咖啡店。星期一，每家卖出的杯数都不一样。总部只要一个数，想看看整体卖得怎么样。你报哪个数？要是报最忙的那家，整体看起来比实际好，拿它来定下周的目标，目标就定高了。要是报最清闲的那家，整体又显得更差，目标就定低了。那到底哪个数，才能公平地代表这四家店？回答这个问题的数，叫作平均数。什么是平均数？
-  zh_hk: 假設你管緊四間咖啡店。星期一，每間賣出嘅杯數都唔同。總部淨係要一個數，想睇吓整體賣成點。你報邊個數？如果報最忙嗰間，整體睇落好過實際，攞佢嚟定下個禮拜嘅目標，目標就定高咗。如果報最清閒嗰間，整體又睇落差啲，目標就定低咗。咁到底邊個數，先可以公平噉代表呢四間店？答到呢個問題嘅數，就叫做平均數。咩係平均數？
+  visual: series
+  reveal: row_cells
+  cols: 4
+  seconds: 29
+  title_en: One number for head office?
+  title_zh: 总部该用哪个数概括销售？
+  title_zh_hk: 總部應該用邊個數概括銷量？
+  row1_en: Cups sold
+  row1_zh: 卖出杯数
+  row1_zh_hk: 賣出杯數
+  col1_en: Shop A
+  col1_zh: A店
+  col1_zh_hk: A店
+  col2_en: Shop B
+  col2_zh: B店
+  col2_zh_hk: B店
+  col3_en: Shop C
+  col3_zh: C店
+  col3_zh_hk: C店
+  col4_en: Shop D
+  col4_zh: D店
+  col4_zh_hk: D店
+  c11: '250'
+  c12: '300'
+  c13: '350'
+  c14: '500'
+  tag_en: Monday sales
+  tag_zh: 周一销售
+  tag_zh_hk: 星期一銷量
+  s1_en: Shop A sold 250 cups on Monday. Imagine you manage this shop and three others. Head office wants one number to summarize sales.
+  s1_zh: A店周一卖了250杯。假设你管着这家店和另外三家店。总部想用一个数概括销量。
+  s1_zh_hk: A店星期一賣咗250杯。假設你管緊呢間店同另外三間店。總部想用一個數概括銷量。
+  s2_en: Shop B sold 300 cups.
+  s2_zh: B店卖了300杯。
+  s2_zh_hk: B店賣咗300杯。
+  s3_en: Shop C sold 350 cups.
+  s3_zh: C店卖了350杯。
+  s3_zh_hk: C店賣咗350杯。
+  s4_en: Shop D sold 500 cups. What one number should head office use for the four shops?
+  s4_zh: D店卖了500杯。总部该用哪个数概括这四家店的销量？
+  s4_zh_hk: D店賣咗500杯。總部應該用邊個數概括四間店嘅銷量？
 - id: data
   visual: series
-  reveal: cells
-  seconds: 62
+  reveal: first_row
+  seconds: 50
   cols: 4
   kicker: The File
   kicker_en: The File
@@ -155,9 +185,9 @@ beats:
   footer_en: Total = 1,400
   footer_zh: 合计 = 1,400
   footer_zh_hk: 合計 = 1,400
-  s1_en: Suppose these are Monday's cups. Shop A sold 250. Shop B sold 300. Shop C sold 350. And Shop D sold 500. Four shops, four different numbers. Which one should the manager send to head office?
-  s1_zh: 假设这是星期一的杯数。A店卖了250杯，B店卖了300杯，C店卖了350杯，D店卖了500杯。四家店，四个不同的数。经理要报哪一个给总部呢？
-  s1_zh_hk: 假設呢啲係星期一嘅杯數。A店賣咗250杯，B店賣咗300杯，C店賣咗350杯，D店賣咗500杯。四間店，四個唔同嘅數。經理要報邊一個畀總部呢？
+  s1_en: The four shops sold different amounts. What happens if we use the busiest or the quietest shop as the target for all four?
+  s1_zh: 四家店的销量各不相同。要是用最忙或最清闲那家店的销量给四家店定目标，会怎样？
+  s1_zh_hk: 四間店嘅銷量各有唔同。如果用最忙或者最清閒嗰間嘅銷量幫四間店定目標，會點？
   s2_en: Try copying one shop. If every shop were treated like Shop D, at 500, that is a plan for 2,000 cups. But the four shops sold only 1,400 together. Copy Shop A instead, at 250, and the plan is 1,000, which is 400 short. Either end gets the real total wrong.
   s2_zh: 先试试照抄一家店。要是每家都当成D店，按500杯算，就是2,000杯的计划。可四家店加起来只卖了1,400杯。换成照抄A店，按250杯算，计划只有1,000杯，少了400杯。不管抄哪一端，总数都对不上。
   s2_zh_hk: 先試吓照抄一間店。如果每間都當係D店，按500杯計，就係2,000杯嘅計劃。但係四間店加埋先賣咗1,400杯。轉做照抄A店，按250杯計，計劃得1,000杯，少咗400杯。抄邊一端都好，總數都對唔上。
@@ -169,7 +199,8 @@ beats:
   tag_zh_hk: 星期一杯數
 - id: arithmetic
   visual: steps
-  seconds: 70
+  layout: calculation
+  seconds: 56
   kicker: The Sum
   kicker_en: The Sum
   kicker_zh: 相加
@@ -183,9 +214,9 @@ beats:
   step2_en: Share among 4 shops
   step2_zh: 平分给 4 家店
   step2_zh_hk: 平分畀 4 間店
-  step3_en: 1,400 / 4 = 350 cups
-  step3_zh: 1,400 / 4 = 350 杯
-  step3_zh_hk: 1,400 / 4 = 350 杯
+  step3_en: 1,400 ÷ 4 = 350 cups per shop
+  step3_zh: 1,400 ÷ 4 = 每家店 350 杯
+  step3_zh_hk: 1,400 ÷ 4 = 每間店 350 杯
   step4_en: 4 × 350 = 1,400 cups
   step4_zh: 4 × 350 = 1,400 杯
   step4_zh_hk: 4 × 350 = 1,400 杯
@@ -198,9 +229,9 @@ beats:
   s3_en: 1,400 divided by 4 is 350 cups. That equal share is the mean, which most people call the average. It is what each shop would have sold if the total had been spread evenly.
   s3_zh: 1,400除以4，等于350杯。这个平均份额就是平均数。意思是，如果把总数平均摊开，每家店就会卖这么多。
   s3_zh_hk: 1,400除以4，等於350杯。呢個平均份額就係平均數。意思係，如果將總數平均攤開，每間店就會賣咁多。
-  s4_en: 'Check it. Four times 350 is 1,400, so the total is kept. Now a common trap: is 350 halfway between the smallest and the largest? Halfway between 250 and 500 is 375, not 350. The mean is not the midpoint of the two ends; it uses every shop.'
-  s4_zh: 验算一下。4乘350还是1,400，总数保住了。再看一个常见的陷阱：350是最小值和最大值的正中间吗？250和500的中点是375，不是350。平均数不是两端的中点，它用上了每一家店。
-  s4_zh_hk: 驗算吓。4乘350都係1,400，總數保住咗。再睇一個常見嘅陷阱：350係唔係最小值同最大值嘅正中間？250同500嘅中點係375，唔係350。平均數唔係兩端嘅中點，佢用晒每一間店。
+  s4_en: Check your answer. Four times 350 is 1,400 cups. The equal shares add back to the original total.
+  s4_zh: 验算一下。4乘350还是1,400杯。把平分后的份额加起来，就回到了原来的总数。
+  s4_zh_hk: 驗算吓。4乘350都係1,400杯。將平分之後嘅份額加埋，就返到原本嘅總數。
 - id: name_mean
   visual: title_card
   seconds: 20
@@ -309,7 +340,7 @@ beats:
 
 - id: answer
   visual: takeaway
-  seconds: 26
+  seconds: 28
   kicker: The Answer
   kicker_en: The Answer
   kicker_zh: 回答问题
@@ -320,15 +351,21 @@ beats:
   q1_en: 'One number for the four shops? → 350 cups'
   q1_zh: 四家店用一个数？→ 350杯
   q1_zh_hk: 四間店用一個數？→ 350杯
-  q2_en: 'Midway between 250 and 500? → No, 375'
-  q2_zh: 是250和500的正中间吗？→ 不是，是375
-  q2_zh_hk: 係唔係250同500嘅正中間？→ 唔係，係375
-  s1_en: 'Back to head office: what one number fairly stands for the four shops? The mean — 350 cups.'
-  s1_zh: 回到总部的问题：哪一个数能公平地代表这四家店？平均数——350杯。
-  s1_zh_hk: 返到總部嘅問題：邊一個數可以公平噉代表呢四間店？平均數——350杯。
-  s2_en: Midway between 250 and 500? No. That midpoint is 375.
-  s2_zh: 是250和500的正中间吗？不是。那个中点是375。
-  s2_zh_hk: 係唔係250同500嘅正中間？唔係。嗰個中點係375。
-  s3_en: Send 350 for the group. That is the answer.
-  s3_zh: 给整体报350。这就是答案。
-  s3_zh_hk: 畀整體報350。呢個就係答案。
+  decision_en: Report 350 cups for the group. Use each shop's own sales to plan its stock.
+  decision_zh: 给整体报350杯。按各店自己的销量备货。
+  decision_zh_hk: 畀整體報350杯。按各間店自己嘅銷量入貨。
+  q2_en: Is 350 halfway between 250 and 500?
+  q2_zh: 350是250和500的中点吗？
+  q2_zh_hk: 350係250同500嘅中點咩？
+  check_answer_en: No. The midpoint is 375. The mean uses all four shops.
+  check_answer_zh: 不是。中点是375。平均数用上了四家店的销量。
+  check_answer_zh_hk: 唔係。中點係375。平均數用晒四間店嘅銷量。
+  s1_en: Tell head office 350 cups to summarize the four shops. When you plan stock for each shop, use that shop's own sales.
+  s1_zh: 给总部报350杯，概括四家店的销量。给各店备货时，就用各店自己的销量。
+  s1_zh_hk: 畀總部報350杯，概括四間店嘅銷量。幫各間店入貨嗰陣，就用返嗰間店自己嘅銷量。
+  s2_en: Quick check. Is 350 halfway between 250 and 500?
+  s2_zh: 快速检查一下。350是250和500的中点吗？
+  s2_zh_hk: 快問快答。350係250同500嘅中點咩？
+  s3_en: No. The midpoint is 375. The mean uses all four shops, including the two in between.
+  s3_zh: 不是。中点是375。平均数用上了四家店的销量，也包括中间的两家。
+  s3_zh_hk: 唔係。中點係375。平均數用晒四間店嘅銷量，連中間嗰兩間都計埋。

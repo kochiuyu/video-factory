@@ -30,7 +30,9 @@ def _beat(lesson, beat_id):
 
 class ProductionLessonsStayPut(unittest.TestCase):
     def test_mean_yaml_matches_main(self):
-        self.assertEqual(sha256(MEAN.read_bytes()).hexdigest(), MEAN_SHA256)
+        # Git for Windows checks the file out with CRLF. Compare the LF form.
+        text = MEAN.read_bytes().replace(b"\r\n", b"\n")
+        self.assertEqual(sha256(text).hexdigest(), MEAN_SHA256)
 
     def test_no_production_lesson_opts_into_focus(self):
         opted = []

@@ -22,7 +22,7 @@ beats:
 - id: define
   visual: whatis_definition
   seconds: 24
-  sentence_en: 'An industry name for electric vertical take-off and landing craft.'
+  sentence_en: "An industry name for electric vertical\u00a0take-off and landing craft."
   sentence_zh: '电动垂直起降飞行器的行业叫法。'
   sentence_zh_hk: '電動垂直起降飛行器嘅行業叫法。'
   en: 'eVTOL means electric vertical take-off and landing craft — aircraft that take off and land roughly straight up and down, usually with electric power. It is an industry name for a type of aircraft, not a Hong Kong licence, and not a law written just for eVTOL.'
@@ -43,7 +43,7 @@ beats:
 - id: rule
   visual: whatis_takeaway
   seconds: 18
-  rule_en: 'If a craft is heavier than the SUA weight limit, or is designed to carry passengers, do not assume it is regulated as a small unmanned aircraft.'
+  rule_en: "If a craft is heavier than the SUA weight\u00a0limit, or is designed to carry passengers, do not assume it is regulated as a small unmanned aircraft."
   rule_zh: '比 SUA 重量限制更重，或为载人而设计的飞行器，不要假定按小型无人飞机规管。'
   rule_zh_hk: '比 SUA 重量限制更重，或為載人而設計嘅飛行器，唔好假定按小型無人飛機規管。'
   en: 'If a craft is heavier than the SUA weight limit, or is designed to carry passengers, do not assume it is regulated as a small unmanned aircraft.'

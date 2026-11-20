@@ -110,6 +110,26 @@ class WhatisValidation(unittest.TestCase):
         old_emerald = sum(1 for px in old_img.get_flattened_data() if px == theme["emerald"])
         self.assertGreater(old_emerald, 1000)
 
+    def test_whatis_nbsp_keeps_a_phrase_and_plain_latin_still_uses_wrap(self):
+        from PIL import Image, ImageDraw
+        from slides import _whatis_wrap, font_for, wrap
+
+        image = Image.new("RGB", (400, 80), "white")
+        draw = ImageDraw.Draw(image)
+        plain = "An unmanned aircraft not more than 150 kg, under Cap. 448G."
+        self.assertEqual(
+            _whatis_wrap(draw, plain, 72, 1728, True),
+            wrap(draw, plain, font_for(plain, 72, True), 1728, True),
+        )
+        glued = "An unmanned aircraft not more than 150\u00a0kg, under Cap. 448G."
+        lines = _whatis_wrap(draw, glued, 72, 1728, True)
+        self.assertEqual(lines[-1], "150 kg, under Cap. 448G.")
+        self.assertTrue(all("\u00a0" not in line for line in lines))
+        phrase = "Start with the craft’s weight and what\u00a0it\u00a0is\u00a0doing, then check which legal\u00a0category it falls into."
+        kept = _whatis_wrap(draw, phrase, 72, 1728, True)
+        self.assertTrue(any("what it is doing" in line for line in kept))
+        self.assertFalse(any(line.endswith("what it") for line in kept))
+
     def test_whatis_fullwidth_punctuation_does_not_keep_a_whole_em(self):
         from PIL import Image, ImageDraw
         from slides import _whatis_length, mixed_length

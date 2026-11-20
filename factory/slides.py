@@ -5390,6 +5390,43 @@ def _draw_whatis_text(draw, xy, text: str, size: int, fill, bold: bool = False) 
             x += mixed_length(draw, piece, size, bold)
 
 
+def _whatis_latin_units(text: str) -> list[str]:
+    """Words for a What-is line. A no-break space keeps a phrase in one unit.
+
+    The unit is painted with an ordinary space. Other visuals never call this.
+    """
+    units: list[str] = []
+    buf: list[str] = []
+    for ch in text:
+        if ch == "\u00a0":
+            buf.append(" ")
+        elif ch.isspace():
+            if buf:
+                units.append("".join(buf))
+                buf = []
+        else:
+            buf.append(ch)
+    if buf:
+        units.append("".join(buf))
+    return units
+
+
+def _whatis_wrap_latin(draw, text: str, size: int, max_w: int, bold: bool) -> list[str]:
+    words = _whatis_latin_units(text)
+    lines: list[str] = []
+    cur = ""
+    for word in words:
+        trial = word if not cur else cur + " " + word
+        if cur and mixed_length(draw, trial, size, bold) > max_w:
+            lines.append(cur)
+            cur = word
+        else:
+            cur = trial
+    if cur:
+        lines.append(cur)
+    return lines or [text]
+
+
 def _whatis_wrap(draw, text: str, size: int, max_w: int, bold: bool) -> list[str]:
     text = sanitize(text or "")
     if not text:
@@ -5400,6 +5437,10 @@ def _whatis_wrap(draw, text: str, size: int, max_w: int, bold: bool) -> list[str
             lines.extend(_whatis_wrap(draw, part, size, max_w, bold) or ([part] if part else []))
         return lines
     if not any(is_cjk(ch) for ch in text):
+        # No-break spaces are opt-in. Plain text still uses the shared wrapper,
+        # so existing cards keep their line breaks.
+        if "\u00a0" in text:
+            return _whatis_wrap_latin(draw, text, size, max_w, bold) or [text]
         return wrap(draw, text, font_for(text, size, bold), max_w, bold) or [text]
     tokens = _cjk_tokens(text)
     lines: list[str] = []

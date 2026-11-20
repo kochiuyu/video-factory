@@ -106,6 +106,27 @@ CAPTION_SIZE_DEFAULT = "42"
 CAPTION_LINES_DEFAULT = "1"
 CAPTION_PILL_MAX = 1180
 CAPTION_PAD_X = 28
+CAPTION_SIZE_MIN = 24
+CAPTION_SIZE_MAX = 56
+CAPTION_LINES_MAX = 3
+CAPTION_BOTTOM_PAD = 28
+CAPTION_VERTICAL_PAD = 12
+
+
+def caption_safe_top(
+    frame_height: int,
+    *,
+    size: int = CAPTION_SIZE_MAX,
+    lines: int = CAPTION_LINES_MAX,
+) -> int:
+    """Top edge of a caption chip with this size and line count.
+
+    The default arguments are the largest chip `_caption_card` can draw.
+    A shorter chip starts lower, so content kept above this line stays clear.
+    """
+    line_h = max(30, int(size * 1.28))
+    pill_h = 2 * CAPTION_VERTICAL_PAD + line_h * max(1, int(lines))
+    return int(frame_height) - CAPTION_BOTTOM_PAD - pill_h
 
 
 def _caption_font(text: str, size: int):
@@ -662,15 +683,15 @@ def _caption_card(text: str, dest: Path) -> Path:
     import os
 
     size = int(os.environ.get("VF_CAPTION_SIZE", CAPTION_SIZE_DEFAULT) or CAPTION_SIZE_DEFAULT)
-    size = max(24, min(56, size))
+    size = max(CAPTION_SIZE_MIN, min(CAPTION_SIZE_MAX, size))
     align = (os.environ.get("VF_CAPTION_ALIGN", "center") or "center").lower()
     max_lines = int(os.environ.get("VF_CAPTION_LINES", CAPTION_LINES_DEFAULT) or CAPTION_LINES_DEFAULT)
-    max_lines = max(1, min(3, max_lines))
+    max_lines = max(1, min(CAPTION_LINES_MAX, max_lines))
     opacity = int(os.environ.get("VF_CAPTION_OPACITY", "72") or 72)
     opacity = max(30, min(90, opacity))
     line_h = max(30, int(size * 1.28))
     frame_w, frame_h = 1920, 1080
-    pad_x, pad_y = CAPTION_PAD_X, 12
+    pad_x, pad_y = CAPTION_PAD_X, CAPTION_VERTICAL_PAD
     max_pill_w = CAPTION_PILL_MAX
     max_w = max_pill_w - 2 * pad_x
     from slides import draw_mixed, mixed_length
@@ -690,7 +711,7 @@ def _caption_card(text: str, dest: Path) -> Path:
     img = Image.new("RGBA", (frame_w, frame_h), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
     x0 = (frame_w - pill_w) // 2
-    y0 = frame_h - pill_h - 28
+    y0 = frame_h - pill_h - CAPTION_BOTTOM_PAD
     alpha = int(round(255 * opacity / 100))
     draw.rounded_rectangle([x0, y0, x0 + pill_w, y0 + pill_h], radius=18, fill=(16, 15, 10, alpha))
     y = y0 + pad_y
@@ -964,6 +985,11 @@ def stage_scripts(beat: dict, lang: str, n: int) -> list[str]:
     A series card with reveal: cells has one stage per cell, then the
     later speech. Every sentence of the first chunk stays in the captions.
     Extra sentences land on the last cell, so the voice and the bar match.
+
+    reveal: row_cells does not use that splitter. The author supplies one
+    spoken stage per cell. Automatic sentence breaks put the opening
+    sentence on the first shop and the last shops share the remainder,
+    which is not a per-shop alignment.
     """
     from langs import beat_text, stage_lines
 

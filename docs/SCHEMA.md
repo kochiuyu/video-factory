@@ -45,6 +45,20 @@ For topic-based standalone micro-lessons:
 17. **Cover order**: Mixed covers follow the slide. The speech language (first part of the slide key) is on top. The second language sits below. `en+zh` and `zh+en` do not both paint English first.
 18. **Quiz transfer**: Q1 may check the short's own file. Q2 should use a new small file. The three languages must ask the same question and offer the same four options. Series number cells are plain `c11`–`c26`.
 
+## Focus slide layout (opt-in)
+
+`slide_style: focus` is opt-in. A lesson uses the focus layout only when that field is `focus`. Lessons that omit it stay on the default layout. `STAT-M01-T02-MEAN` and the rest of M01–M05 omit it. A later module, including STAT-M06, may set it for production.
+
+When it is `focus`, headings are compact, the decorative corner and the bottom footer are omitted, and the teaching area stops 16 px above the largest caption chip (56 px type, three lines).
+
+Optional beat fields, also off by default:
+
+- `steps` with `layout: calculation` and exactly four steps reserves four rows and paints the third row, the result, as the strong panel. Any other step count keeps the normal steps card.
+- `series` with `reveal: row_cells` shows one row-1 cell per spoken stage. Supply one stage per cell. The factory does not split a paragraph into shops: an automatic split puts the opening sentence on the first shop. This mode has no footer stage.
+- `series` with `reveal: first_row` shows row 1 at stage 1, the footer at stage 2, and row 2 at stage 3. Use it only when the speech matches that order. `reveal: cells` is unchanged.
+
+These switches do not change numbers or narration. A per-shop preview that cuts an existing sentence must be a lossless partition, checked by joining the slices back to the original line. Do not add a new teaching claim, such as planning each shop's stock from one Monday, in order to fill a new card.
+
 ## Stage speech
 
 These visuals paint progressive stills. Write one spoken chunk per still:
@@ -80,6 +94,7 @@ Lesson-level optional keys (none of these are required by `validate.py`):
 | `youtube` | Build writes per-cell `.youtube.txt` paste files; validate length | Optional until you upload. See **YouTube upload text**. |
 | `glossary` | Console, Excel Glossary sheet, authoring locks | Keep for term consistency. `lock: true` must not be paraphrased. Not painted on slides/covers and not uploaded to YouTube. |
 | `quiz` | Quiz export / pack | Keep when the short has review items. |
+| `slide_style` | Slides | Optional. `focus` uses compact headings and keeps the teaching area above the caption chip. Omit the field for the default layout. Any other value is not a focus layout. |
 **Not a lesson field:** bare `duration_target` (without `_s`) is unused and must not be added. Timing uses required `duration_target_s` only (validate compares it to the sum of beat `seconds`).
 
 Beat: `kicker` (or `kicker_en` / `kicker_zh` / `kicker_zh_hk`), `title_en`, `title_zh`, `title_zh_hk`, `formula`, `gloss_*`, `left_*`, `right_*`, `setup_*`, `result_*`, `q1_*`, `q2_*`, `col1_*`, `col2_*`, `col3_*`, `step1_*`, `step2_*`, `step3_*`, `s1_*` … `s5_*`, `number`, `unit_*`, `caption_*`, `seconds`. Common English kickers (Concept, Definition, Example, Takeaway, …) are translated when labels are Chinese.

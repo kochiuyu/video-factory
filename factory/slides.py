@@ -10,6 +10,7 @@ import os
 import re
 import unicodedata
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from contextvars import ContextVar
 from pathlib import Path
 
 from PIL import Image, ImageColor, ImageDraw, ImageFont
@@ -18,10 +19,14 @@ from glyphs import font_path_for_char, is_cjk, paints, sanitize
 from langs import field, field_native, label_code
 from paths import cjk_bold, cjk_regular, latin_bold, latin_regular
 from cache import digest_obj, stamp_ok, write_mark
+from mux import caption_safe_top
 from theme import load_theme
 
 W, H = 1920, 1080
 CONTENT_BOTTOM = H - 156
+# Set only while painting a lesson with slide_style: focus. Default renders
+# never set it, so content still ends at CONTENT_BOTTOM.
+_FOCUS: ContextVar[bool] = ContextVar("vf_focus_layout", default=False)
 
 SCALE = {
     "kicker": 28, "footer": 22, "title": 96, "hook": 160, "subtitle": 44,
@@ -76,6 +81,9 @@ def lesson_stamp(lesson, theme, code, second, stage_cards) -> str:
         "flags": layout_flags(theme),
         "beats": digest_obj(lesson.get("beats") or []),
     }
+    style = str(lesson.get("slide_style") or "").strip().lower()
+    if style:
+        payload["slide_style"] = style
     return digest_obj(payload)
 
 
@@ -96,12 +104,15 @@ def beat_stamp(beat: dict, code: str, second, theme, stage) -> str:
 def layout_flags(theme=None) -> dict:
     """Env / theme switches that change pixels, so slide caches never mix them."""
     t = theme if isinstance(theme, dict) else {}
-    return {
+    flags = {
         "legacy_reveal": os.environ.get("VF_LEGACY_REVEAL", "").strip().lower() in {"1", "true", "yes", "on"},
         "typography": typography_level(theme),
         "title_font": str(t.get("title_font") or ""),
         "body_font": str(t.get("body_font") or ""),
     }
+    if t.get("focus_layout"):
+        flags["focus_layout"] = True
+    return flags
 
 
 def list_slide_pngs(folder: Path) -> list[Path]:
@@ -740,8 +751,37 @@ def _tag(draw, x, y, text, theme) -> None:
     draw.text((x, y), text, font=font_for(text, SCALE["tag"], bold=True), fill=theme["gold"])
 
 
+def _content_bottom() -> int:
+    """Lower edge of the teaching area. Focus keeps a gap above the caption chip."""
+    if _FOCUS.get():
+        return caption_safe_top(H) - 16
+    return CONTENT_BOTTOM
+
+
 def _fill_h(top: int, floor: int = 280) -> int:
-    return max(floor, CONTENT_BOTTOM - top)
+    room = _content_bottom() - top
+    if _FOCUS.get():
+        # The old floor can push a panel through the caption. Focus never does.
+        return max(0, room)
+    return max(floor, room)
+
+
+def _title_card_top(block: int) -> int:
+    if _FOCUS.get():
+        limit = caption_safe_top(H) - 36
+        return max(72, (limit - block) // 2)
+    return max(160, (H - block) // 2 - 20)
+
+
+def draw_focus_title(draw, title: str, theme: dict) -> int:
+    """Compact heading. The accent stays above the teaching area."""
+    left, top, right = 64, 48, W - 64
+    layout = _block_layout(draw, title, right - left, 148, 68, 38, 0.62, 2, 1)
+    bottom = top + 144
+    if layout:
+        _paint_block(draw, (left, top, right, bottom), layout, theme["navy"], theme["muted"], align="left")
+    draw.line((left, bottom + 8, right, bottom + 8), fill=theme["wash2"], width=3)
+    return bottom + 22
 
 
 def _panel(draw, box, fill, theme, accent: bool = True) -> None:
@@ -820,7 +860,7 @@ def render_title_card(draw, beat, lesson, code, theme, second=None) -> None:
         block += int(main * max(1.08, _line_factor(primary) - 0.08)) * len(p_lines) + 16
         block += int(sub * 1.06) * len(s_lines)
         block += 36  # gold bar
-        top = max(160, (H - block) // 2 - 20)
+        top = _title_card_top(block)
         if kicker_label:
             tw = mixed_length(draw, kicker_label, ksize, True)
             draw_mixed(draw, ((W - tw) / 2, top), kicker_label, ksize, theme["muted"], True)
@@ -843,7 +883,7 @@ def render_title_card(draw, beat, lesson, code, theme, second=None) -> None:
             block += 56
         block += int(size * 1.08) * len(lines)
         block += 36  # gold bar
-        top = max(160, (H - block) // 2 - 20)
+        top = _title_card_top(block)
         if kicker_label:
             tw = mixed_length(draw, kicker_label, ksize, True)
             draw_mixed(draw, ((W - tw) / 2, top), kicker_label, ksize, theme["muted"], True)
@@ -1152,7 +1192,7 @@ def render_two_column(draw, beat, code, y, theme, stage=None, second=None) -> No
     left_full = field2(beat, "left", code, second)
     right_full = field2(beat, "right", code, second)
     box_y = y + 8
-    avail = max(360, CONTENT_BOTTOM - box_y)
+    avail = max(360, _content_bottom() - box_y)
     mid = W // 2
     pad_x = 56
     inner_w = (mid - 40 - 64) - 2 * pad_x
@@ -1192,7 +1232,7 @@ def render_takeaway(draw, beat, code, y, theme, stage=None, second=None) -> None
     questions = [q for q in (q1, q2) if q]
     box_y = y + 8
     gap = 22
-    avail = max(200, CONTENT_BOTTOM - box_y)
+    avail = max(200, _content_bottom() - box_y)
     k = max(1, len(questions))
     full = (avail - gap * (k - 1)) // k
     text_l, text_r = 212, W - 104
@@ -1273,7 +1313,7 @@ def render_example(draw, beat, code, y, theme, stage=None, second=None) -> None:
     other_s, other_r = tags.get(second or "", ("", ""))
     box_y = y + 8
     gap = 20
-    avail = max(380, CONTENT_BOTTOM - box_y)
+    avail = max(380, _content_bottom() - box_y)
     half = max(176, (avail - gap) // 2)
     inner_w = W - 64 - 40 - (64 + 44)
     dual = bool(second)
@@ -1295,7 +1335,7 @@ def render_three_column(draw, beat, code, y, theme, stage=None, second=None) -> 
     if not any(cols):
         cols = [field2(beat, "left", code, second), field2(beat, "mid", code, second), field2(beat, "right", code, second)]
     box_y = y + 8
-    avail = max(360, CONTENT_BOTTOM - box_y)
+    avail = max(360, _content_bottom() - box_y)
     gap = 28
     width = (W - 128 - 2 * gap) // 3
     inner_w = width - 64
@@ -1371,7 +1411,7 @@ def render_module_open(draw, beat, lesson, code, theme, second=None) -> None:
     top = _big_title_block(draw, primary, secondary, theme, 160)
     items = _agenda_items(beat, code, second)
     dual = any(_split_pair(it)[1] for it in items)
-    room = CONTENT_BOTTOM - (top + 16)
+    room = _content_bottom() - (top + 16)
     per = room // max(1, len(items))
     main_sz = max(28, min(40, int(per * (0.42 if dual else 0.62))))
     sub_sz = max(22, int(main_sz * 0.72))
@@ -1435,6 +1475,52 @@ def _looks_equation(text: str) -> bool:
     return any(ch in _EQ_MARKS for ch in (text or ""))
 
 
+def render_calculation(draw, items, y, theme, stage) -> None:
+    """Four reserved rows. The third row is the result and stays visually stronger.
+
+    Row heights sum to the content area, including leftover pixels on the result,
+    so a later row cannot cross the caption line.
+    """
+    left, right = 96, W - 96
+    top = y + 12
+    gap = 14
+    weights = (1.0, 1.0, 1.55, 1.0)
+    room = _content_bottom() - top
+    space = room - gap * (len(items) - 1)
+    if space < 48 * len(items):
+        gap = 8
+        space = max(48 * len(items), room - gap * (len(items) - 1))
+    total_w = sum(weights)
+    heights = [int(space * weight / total_w) for weight in weights]
+    heights[2] += space - sum(heights)
+    for i, ((text, _), row_h) in enumerate(zip(items, heights)):
+        box = (left, top, right, top + row_h)
+        result = i == 2
+        if not _show(stage, i + 1):
+            draw.rounded_rectangle(box, radius=18, outline=theme["wash2"], width=3)
+        else:
+            fill = theme["navy"] if result else theme["wash"]
+            ink = theme["white"] if result else theme["navy"]
+            draw.rounded_rectangle(box, radius=18, fill=fill)
+            if result:
+                draw.rounded_rectangle(
+                    (left + 14, top + 14, left + 24, top + row_h - 14),
+                    radius=4,
+                    fill=theme["gold"],
+                )
+            shown = strip_step_number(text)
+            layout = _block_layout(
+                draw, shown, right - left - 88, max(36, row_h - 20),
+                64 if result else 46, 24, 0.68, 2, 1,
+            )
+            if layout:
+                _paint_block(
+                    draw, (left + 40, top + 6, right - 28, top + row_h - 6),
+                    layout, ink, theme["gold"] if result else theme["ink"],
+                )
+        top += row_h + gap
+
+
 def render_steps(draw, beat, code, y, theme, stage=None, second=None) -> None:
     items = []
     for i in range(1, 7):
@@ -1442,7 +1528,11 @@ def render_steps(draw, beat, code, y, theme, stage=None, second=None) -> None:
         ex = field2(beat, f"ex{i}", code, second)
         if text:
             items.append((text, ex))
-    as_rows = str(beat.get("layout") or "").strip().lower() in ("rows", "stack")
+    layout_name = str(beat.get("layout") or "").strip().lower()
+    if layout_name == "calculation" and len(items) == 4:
+        render_calculation(draw, items, y, theme, stage)
+        return
+    as_rows = layout_name in ("rows", "stack")
     if len(items) <= 3 and not as_rows:
         steps = [text for text, _ex in items] + [""] * (3 - len(items))
         box_y = y + 8
@@ -1798,9 +1888,12 @@ def render_series(draw, beat, code, y, theme, stage=None, second=None) -> None:
         cols = 5
     cols = max(2, min(cols, 6))
     rows = _series_rows(beat, code, second, cols)
-    reveal = str(beat.get("reveal") or "").strip().lower() == "cells"
+    reveal_mode = str(beat.get("reveal") or "").strip().lower()
+    reveal = reveal_mode == "cells"
+    row_cells = reveal_mode == "row_cells"
+    first_row = reveal_mode == "first_row"
     shown = cols
-    if reveal and stage not in (None, 0):
+    if (reveal or row_cells) and stage not in (None, 0):
         shown = min(cols, max(1, int(stage)))
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
@@ -1855,15 +1948,28 @@ def render_series(draw, beat, code, y, theme, stage=None, second=None) -> None:
             x0 = grid_left + j * (cw + gutter)
             key = f"c{i + 1}{j + 1}"
             val = str(field2(beat, key, code, second) or beat.get(key) or "").strip()
-            if reveal and stage not in (None, 0):
+            if row_cells:
+                show_val = i == 0 and (stage in (None, 0) or j < shown)
+            elif first_row and stage not in (None, 0):
+                show_val = i == 0 or _show(stage, 3)
+            elif reveal and stage not in (None, 0):
                 if i == 0:
                     show_val = j < shown or int(stage) > cols
                 else:
                     show_val = int(stage) > cols + 1
             else:
                 show_val = stage in (None, 0) or _show(stage, i + 2)
-            _paint_cell(draw, (x0, y0, x0 + cw, y0 + ch), val, theme, show=show_val)
-    foot_on = stage in (None, 0) or (reveal and stage not in (None, 0) and int(stage) > cols + 1) or (not reveal and _show(stage, 3))
+            box = (x0, y0, x0 + cw, y0 + ch)
+            if not show_val and (row_cells or first_row or _FOCUS.get()):
+                _dim_series_cell(draw, box, theme)
+            else:
+                _paint_cell(draw, box, val, theme, show=show_val)
+    if row_cells:
+        foot_on = False
+    elif first_row:
+        foot_on = stage in (None, 0) or _show(stage, 2)
+    else:
+        foot_on = stage in (None, 0) or (reveal and stage not in (None, 0) and int(stage) > cols + 1) or (not reveal and _show(stage, 3))
     if footer and foot_on:
         fl = _block_layout(draw, footer, W - 240, box_y + box_h - 12 - grid_bottom - 8, 38, 20, 0.66, 1, 1)
         _paint_block(draw, (100, grid_bottom + 8, W - 100, box_y + box_h - 12), fl, theme["gold"], theme["bg"])
@@ -1882,6 +1988,13 @@ def _cell_fmt(beat: dict, key: str) -> str:
         if name.strip().lower() == key:
             return kind.strip().lower()
     return ""
+
+
+def _dim_series_cell(draw, box, theme) -> None:
+    """Placeholder for a value that this stage has not spoken yet."""
+    x0, y0, x1, y1 = box
+    fill = _blend(theme["navy"], theme.get("white") or (247, 244, 238), 0.12)
+    draw.rounded_rectangle([x0, y0, x1, y1], radius=16, fill=fill)
 
 
 def _paint_cell(draw, box, val, theme, lit=False, fmt="", show=True):
@@ -5106,13 +5219,16 @@ RENDERERS = {
 def stage_count(beat: dict) -> int:
     if beat.get("stage") is False:
         return 1
-    if beat.get("visual") == "series" and str(beat.get("reveal") or "").strip().lower() == "cells":
+    reveal = str(beat.get("reveal") or "").strip().lower()
+    if beat.get("visual") == "series" and reveal in {"cells", "row_cells"}:
         try:
             cols = int(beat.get("cols") or 4)
         except (TypeError, ValueError):
             cols = 4
         cols = max(2, min(cols, 6))
-        return cols + 2
+        # row_cells is one spoken stage per row-1 cell. It has no footer stage.
+        # cells keeps the extra stages for the later speech.
+        return cols if reveal == "row_cells" else cols + 2
     if beat.get("visual") == "steps":
         n = 0
         for i in range(1, 7):
@@ -5173,37 +5289,46 @@ def _slide_workers() -> int:
 
 def render_beat(beat, lesson, index, n, lang_labels="en", theme=None, stage=None, second_lang=None):
     theme = theme or load_theme(None)
-    img, draw = new_canvas(theme)
-    visual = beat.get("visual", "definition_card")
-    code = label_code(lang_labels)
-    second = label_code(second_lang) if second_lang else None
-    if second == code:
-        second = None
-    foot = field_native(lesson, "title", code) or field(lesson, "title", code) or lesson.get("id") or ""
-    draw_footer(draw, foot, index, n, theme)
-    if visual == "title_card":
-        render_title_card(draw, beat, lesson, code, theme, second=second)
+    focus = str(lesson.get("slide_style") or "").strip().lower() == "focus"
+    token = _FOCUS.set(focus)
+    try:
+        if focus:
+            theme = {**theme, "focus_layout": True, "blobs": False, "corner": False}
+        img, draw = new_canvas(theme)
+        visual = beat.get("visual", "definition_card")
+        code = label_code(lang_labels)
+        second = label_code(second_lang) if second_lang else None
+        if second == code:
+            second = None
+        foot = field_native(lesson, "title", code) or field(lesson, "title", code) or lesson.get("id") or ""
+        if not focus:
+            draw_footer(draw, foot, index, n, theme)
+        if visual == "title_card":
+            render_title_card(draw, beat, lesson, code, theme, second=second)
+            return img
+        if visual == "module_open":
+            render_module_open(draw, beat, lesson, code, theme, second=second)
+            return img
+        if visual == "module_close":
+            render_module_close(draw, beat, lesson, code, theme, second=second)
+            return img
+        kicker = resolve_kicker(beat, code)
+        if second:
+            other_k = resolve_kicker(beat, second)
+            if other_k and other_k != kicker:
+                kicker = f"{kicker}  {other_k}" if kicker else other_k
+        if not focus:
+            draw_kicker(draw, kicker, theme)
+        title = field2(beat, "title", code, second) or field2(lesson, "title", code, second)
+        y = draw_focus_title(draw, title, theme) if focus else draw_title(draw, title, theme)
+        renderer = RENDERERS.get(visual)
+        if renderer and renderer is not render_title_card:
+            renderer(draw, beat, code, y, theme, stage=None if not stage else stage, second=second)
+        elif beat.get("formula"):
+            render_formula(draw, beat, code, y, theme, stage=None if not stage else stage, second=second)
         return img
-    if visual == "module_open":
-        render_module_open(draw, beat, lesson, code, theme, second=second)
-        return img
-    if visual == "module_close":
-        render_module_close(draw, beat, lesson, code, theme, second=second)
-        return img
-    kicker = resolve_kicker(beat, code)
-    if second:
-        other_k = resolve_kicker(beat, second)
-        if other_k and other_k != kicker:
-            kicker = f"{kicker}  {other_k}" if kicker else other_k
-    draw_kicker(draw, kicker, theme)
-    title = field2(beat, "title", code, second) or field2(lesson, "title", code, second)
-    y = draw_title(draw, title, theme)
-    renderer = RENDERERS.get(visual)
-    if renderer and renderer is not render_title_card:
-        renderer(draw, beat, code, y, theme, stage=None if not stage else stage, second=second)
-    elif beat.get("formula"):
-        render_formula(draw, beat, code, y, theme, stage=None if not stage else stage, second=second)
-    return img
+    finally:
+        _FOCUS.reset(token)
 
 
 def _paint_one(args):

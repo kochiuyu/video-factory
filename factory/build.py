@@ -286,6 +286,28 @@ def pad_cap() -> float | None:
     return None if cap is None or cap < 0 else cap
 
 
+# What-is lessons time each language on its own speech. This breath is the
+# only silence after a line. It is not applied to STAT or other courses.
+OWN_BREATH_S = 0.4
+
+
+def owns_speech_clock(lesson: dict) -> bool:
+    """Per-language timing for a What-is lesson. Other lessons stay on the
+    shared clock. `clock: own` opts a lesson in; `clock: shared` opts out."""
+    flag = str(lesson.get("clock") or "").strip().lower()
+    if flag == "shared":
+        return False
+    if flag == "own":
+        return True
+    visuals = [str(beat.get("visual") or "") for beat in (lesson.get("beats") or [])]
+    return bool(visuals) and all(visual.startswith("whatis_") for visual in visuals)
+
+
+def speech_breath_durations(raw: dict[str, list[float]], breath: float = OWN_BREATH_S) -> dict[str, list[float]]:
+    """Each language keeps its own speech length, plus one short breath."""
+    return {lang: [float(d) + breath for d in vals] for lang, vals in raw.items()}
+
+
 def capped_durations(raw: dict[str, list[float]], shared: list[float], cap: float | None) -> dict[str, list[float]]:
     if cap is None:
         return {lang: list(shared) for lang in raw}
@@ -735,10 +757,21 @@ def build(
     raw_len = {lang: [probe_duration(path) for path in parts] for lang, parts in tracks.items()}
     durations = [max(values) for values in zip(*raw_len.values())]
     cap = pad_cap()
-    lang_durations = capped_durations(raw_len, durations, cap)
-    if cap is not None:
-        saved = {lang: sum(durations) - sum(lang_durations[lang]) for lang in langs}
-        print("pad-cap:", cap, "s;", ", ".join(f"{k} -{v:.1f}s" for k, v in saved.items()))
+    if owns_speech_clock(lesson):
+        lang_durations = speech_breath_durations(raw_len)
+        durations = [max(values) for values in zip(*lang_durations.values())]
+        print(f"clock: own speech + {OWN_BREATH_S:.1f}s breath (no shared pad)")
+        for lang, raws in raw_len.items():
+            held = ", ".join(
+                f"{beat['id']} {raw:.1f}+{OWN_BREATH_S:.1f}s"
+                for beat, raw in zip(lesson["beats"], raws)
+            )
+            print(f"clock: {lang} {held}")
+    else:
+        lang_durations = capped_durations(raw_len, durations, cap)
+        if cap is not None:
+            saved = {lang: sum(durations) - sum(lang_durations[lang]) for lang in langs}
+            print("pad-cap:", cap, "s;", ", ".join(f"{k} -{v:.1f}s" for k, v in saved.items()))
     padded = {}
     for lang in langs:
         pad_dir = audio_root / "padded" / lang

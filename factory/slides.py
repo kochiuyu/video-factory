@@ -84,6 +84,16 @@ def lesson_stamp(lesson, theme, code, second, stage_cards) -> str:
     style = str(lesson.get("slide_style") or "").strip().lower()
     if style:
         payload["slide_style"] = style
+    # Lesson-level source is not part of the beat digest. Only a lesson that
+    # sets one changes the stamp, so existing caches stay valid.
+    source_keys = ("source", "source_en", "source_zh", "source_zh_cn", "source_zh_hk")
+    source_payload = {
+        key: str(lesson.get(key)).strip()
+        for key in source_keys
+        if str(lesson.get(key) or "").strip()
+    }
+    if source_payload:
+        payload["source"] = source_payload
     return digest_obj(payload)
 
 
@@ -5180,6 +5190,393 @@ def render_quad_scatter(draw, beat, code, y, theme, stage=None, second=None) -> 
         _paint_block(draw, (100, box_y + box_h - foot + 8, W - 100, box_y + box_h - 16), fl, gold, theme["bg"])
 
 
+WHATIS_VISUALS = {
+    "whatis_title",
+    "whatis_definition",
+    "whatis_example",
+    "whatis_contrast",
+    "whatis_takeaway",
+}
+
+_WHATIS_ROLE = {
+    "whatis_definition": {"en": "DEFINITION", "zh": "定义", "zh_hk": "定義"},
+    "whatis_example": {"en": "EXAMPLE", "zh": "例子", "zh_hk": "例子"},
+    "whatis_takeaway": {"en": "TAKEAWAY", "zh": "要点", "zh_hk": "要點"},
+}
+
+_WHATIS_CONTRAST = {
+    "en": ("What it is", "What it is not"),
+    "zh": ("它是什么", "它不是什么"),
+    "zh_hk": ("佢係咩", "佢唔係咩"),
+}
+
+
+def _whatis_role(beat, visual, code, second) -> str:
+    """Small role label. A beat kicker replaces the default. Title has none."""
+    custom = resolve_kicker(beat, code)
+    other = resolve_kicker(beat, second) if second else ""
+    if custom or other:
+        if custom and custom.isascii():
+            custom = custom.upper()
+        if other and other.isascii():
+            other = other.upper()
+        if other and other != custom:
+            return f"{custom}\n{other}" if custom else other
+        return custom or other
+    table = _WHATIS_ROLE.get(visual) or {}
+    primary = table.get(code) or table.get("en") or ""
+    if not second:
+        return primary
+    extra = table.get(second) or ""
+    if extra and extra != primary:
+        return f"{primary}\n{extra}" if primary else extra
+    return primary
+
+
+def _whatis_source(beat, lesson, code, second) -> str:
+    return field2(beat, "source", code, second) or field2(lesson, "source", code, second)
+
+
+def _whatis_footer_text(beat, lesson, code, second) -> str:
+    """Mixed cards keep the primary source line. Both languages together do not fit."""
+    if second:
+        return field_native(beat, "source", code) or field_native(lesson, "source", code)
+    return _whatis_source(beat, lesson, code, second)
+
+
+def _draw_whatis_footer(draw, beat, lesson, code, theme, second, index, n) -> None:
+    if _FOCUS.get():
+        return
+    draw_footer(draw, _whatis_footer_text(beat, lesson, code, second), index, n, theme)
+
+
+def _contrast_head(code, second, which: int) -> str:
+    primary = (_WHATIS_CONTRAST.get(code) or _WHATIS_CONTRAST["en"])[which]
+    if not second:
+        return primary
+    extra = (_WHATIS_CONTRAST.get(second) or _WHATIS_CONTRAST["en"])[which]
+    if extra and extra != primary:
+        return f"{primary}\n{extra}"
+    return primary
+
+
+def _whatis_clear_field(draw, theme) -> None:
+    """Cream inside the navy rails. Body cards drop the blobs and the gold corner."""
+    draw.rectangle([18, 0, W - 18, H], fill=theme["bg"])
+
+
+def _whatis_split(text: str) -> tuple[str, str]:
+    primary, secondary = _split_pair(sanitize(text or ""))
+    return primary, secondary
+
+
+def _fit_whatis_lines(draw, text: str, max_w: int, cap: int, floor: int, max_lines: int, bold: bool):
+    """Largest size at or under cap. Does not shrink to reserve a second language."""
+    if not text:
+        return cap, []
+    size = int(cap)
+    floor = min(int(floor), size)
+    while size >= floor:
+        lines = _whatis_wrap(draw, text, size, max_w, bold) or [text]
+        widest = max((_whatis_length(draw, ln, size, bold) for ln in lines), default=0)
+        if len(lines) <= max_lines and widest <= max_w:
+            return size, lines
+        size -= 2
+    lines = _whatis_wrap(draw, text, floor, max_w, bold) or [text]
+    return floor, lines
+
+
+def _whatis_punct(ch: str) -> bool:
+    """Full-width punctuation. The bundled CJK face leaves a hole inside the em."""
+    if not ch or len(ch) != 1:
+        return False
+    code = ord(ch)
+    if not (0x3000 <= code <= 0x303F or 0xFF00 <= code <= 0xFF60):
+        return False
+    return unicodedata.category(ch).startswith("P")
+
+
+_PUNCT_FRAC: dict[str, tuple[float, float]] = {}
+
+
+def _punct_frac(ch: str) -> tuple[float, float]:
+    """Ink left and right edges as a fraction of the em, for the face that paints it."""
+    hit = _PUNCT_FRAC.get(ch)
+    if hit is not None:
+        return hit
+    size = 200
+    font = font_for_char(ch, size, True)
+    img = Image.new("L", (size + 24, size + 48), 255)
+    ImageDraw.Draw(img).text((8, 8), ch, font=font, fill=0)
+    px = img.load()
+    cols = [x for x in range(size + 24) if any(px[x, y] < 180 for y in range(size + 48))]
+    frac = (0.0, 1.0) if not cols else ((cols[0] - 8) / size, (cols[-1] - 8) / size)
+    _PUNCT_FRAC[ch] = frac
+    return frac
+
+
+def _whatis_pieces(text: str) -> list[tuple[str, bool]]:
+    out: list[tuple[str, bool]] = []
+    buf: list[str] = []
+
+    def flush() -> None:
+        if buf:
+            out.append(("".join(buf), False))
+            buf.clear()
+
+    raw = sanitize(text or "")
+    hang_dash = any(is_cjk(ch) for ch in raw)
+    i = 0
+    while i < len(raw):
+        ch = raw[i]
+        if hang_dash and ch in "—–":
+            flush()
+            j = i + 1
+            while j < len(raw) and raw[j] in "—–":
+                j += 1
+            out.append((raw[i:j], True))
+            i = j
+            continue
+        if _whatis_punct(ch):
+            flush()
+            out.append((ch, True))
+        else:
+            buf.append(ch)
+        i += 1
+    flush()
+    return out
+
+
+def _punct_shift_advance(ch: str, size: int) -> tuple[float, float]:
+    """Pull the ink toward the preceding character and do not keep the empty em."""
+    left, right = _punct_frac(ch[0])
+    # Leave a visible gap. 0.08em jammed the comma into the neighbouring character.
+    pad = 0.16 * size
+    ink = max(0.22 * size, (right - left) * size)
+    shift = max(0.0, left * size - pad)
+    if len(ch) > 1:
+        # A double dash is one rule, not two marks with a gap between them.
+        advance = -shift + ink * len(ch) + pad
+    else:
+        advance = pad + ink + pad
+    return shift, advance
+
+
+def _whatis_length(draw, text: str, size: int, bold: bool) -> float:
+    width = 0.0
+    for piece, punct in _whatis_pieces(text):
+        if punct:
+            _, advance = _punct_shift_advance(piece, size)
+            width += advance
+        else:
+            width += mixed_length(draw, piece, size, bold)
+    return width
+
+
+def _draw_whatis_text(draw, xy, text: str, size: int, fill, bold: bool = False) -> None:
+    x, y = xy
+    for piece, punct in _whatis_pieces(text):
+        if punct:
+            shift, advance = _punct_shift_advance(piece, size)
+            if len(piece) > 1:
+                ink = (advance + shift - 0.16 * size) / len(piece)
+                for i, ch in enumerate(piece):
+                    draw_mixed(draw, (x - shift + i * ink, y), ch, size, fill, bold)
+            else:
+                draw_mixed(draw, (x - shift, y), piece, size, fill, bold)
+            x += advance
+        else:
+            draw_mixed(draw, (x, y), piece, size, fill, bold)
+            x += mixed_length(draw, piece, size, bold)
+
+
+def _whatis_wrap(draw, text: str, size: int, max_w: int, bold: bool) -> list[str]:
+    text = sanitize(text or "")
+    if not text:
+        return []
+    if "\n" in text:
+        lines: list[str] = []
+        for part in text.split("\n"):
+            lines.extend(_whatis_wrap(draw, part, size, max_w, bold) or ([part] if part else []))
+        return lines
+    if not any(is_cjk(ch) for ch in text):
+        return wrap(draw, text, font_for(text, size, bold), max_w, bold) or [text]
+    tokens = _cjk_tokens(text)
+    lines: list[str] = []
+    cur: list[str] = []
+    for tok in tokens:
+        trial = "".join(cur + [tok])
+        if cur and _whatis_length(draw, trial.rstrip(), size, bold) > max_w:
+            cut = len(cur)
+            floor = max(1, int(len(cur) * 0.55))
+            for k in range(len(cur) - 1, floor - 1, -1):
+                if cur[k - 1][-1:] in _BREAK_AFTER or cur[k - 1][-1:].isspace():
+                    cut = k
+                    break
+            lines.append("".join(cur[:cut]).strip())
+            cur = cur[cut:] + [tok]
+            while len(cur) > 1 and _whatis_length(draw, "".join(cur).rstrip(), size, bold) > max_w:
+                lines.append("".join(cur[:-1]).strip())
+                cur = cur[-1:]
+        else:
+            cur.append(tok)
+    if cur:
+        lines.append("".join(cur).strip())
+    return [ln for ln in lines if ln]
+
+
+def _paint_whatis_lines(draw, lines, x, y, size, fill, bold) -> int:
+    for ln in lines:
+        _draw_whatis_text(draw, (x, y), ln, size, fill, bold)
+        y += int(size * max(1.12, _line_factor(ln)))
+    return y
+
+
+def _paint_whatis_label(draw, label: str, theme, x: int, y: int) -> int:
+    primary, secondary = _whatis_split(label)
+    if not primary and not secondary:
+        return y
+    if primary:
+        _draw_whatis_text(draw, (x, y), primary, 30, theme["gold"], True)
+        y += int(30 * _line_factor(primary))
+    if secondary:
+        _draw_whatis_text(draw, (x, y), secondary, 24, theme["gold"], False)
+        y += int(24 * _line_factor(secondary))
+    y += 10
+    draw.rectangle([x, y, x + 84, y + 6], fill=theme["gold"])
+    return y + 28
+
+
+def _paint_whatis_prose(draw, text: str, x, y, max_w, theme, cap, floor, max_lines, bold=True) -> int:
+    """Navy prose. A second language, when present, sits under the primary at a smaller size."""
+    primary, secondary = _whatis_split(text)
+    size, lines = _fit_whatis_lines(draw, primary, max_w, cap, floor, max_lines, bold)
+    y = _paint_whatis_lines(draw, lines, x, y, size, theme["navy"], bold)
+    if secondary:
+        y += max(16, int(size * 0.28))
+        sub = max(32, int(size * 0.62))
+        sub_size, sub_lines = _fit_whatis_lines(draw, secondary, max_w, sub, 28, max_lines + 1, False)
+        y = _paint_whatis_lines(draw, sub_lines, x, y, sub_size, theme["navy"], False)
+    return y
+
+
+def _render_whatis_statement(draw, theme, role: str, text: str, cap: int, floor: int, max_lines: int) -> None:
+    _whatis_clear_field(draw, theme)
+    x = 96
+    max_w = W - 192
+    y = _paint_whatis_label(draw, role, theme, x, 80)
+    _paint_whatis_prose(draw, text, x, y + 8, max_w, theme, cap, floor, max_lines, bold=True)
+
+
+def _render_whatis_contrast(draw, beat, code, theme, second) -> None:
+    """What it is, then What it is not. Same navy type on cream. No VS badge."""
+    _whatis_clear_field(draw, theme)
+    x = 96
+    max_w = W - 192
+    cap, floor = 58, 48
+    y = 56
+    for which, stem in ((0, "what"), (1, "not")):
+        y = _paint_whatis_label(draw, _contrast_head(code, second, which), theme, x, y)
+        y = _paint_whatis_prose(
+            draw, field2(beat, stem, code, second), x, y + 4, max_w, theme, cap, floor, 4, bold=True,
+        )
+        y += 28
+
+
+def _render_whatis_example(draw, beat, code, theme, second) -> None:
+    """Large example sentence. The classroom stamp is a short line, not a filled bar."""
+    _whatis_clear_field(draw, theme)
+    x = 96
+    max_w = W - 192
+    role = _whatis_role(beat, "whatis_example", code, second)
+    y = _paint_whatis_label(draw, role, theme, x, 80)
+    _paint_whatis_prose(
+        draw, field2(beat, "body", code, second), x, y + 8, max_w, theme, 68, 56, 4, bold=True,
+    )
+    stamp = field2(beat, "stamp", code, second)
+    if not stamp:
+        return
+    primary, secondary = _whatis_split(stamp)
+    size, lines = _fit_whatis_lines(draw, primary, max_w, 36, 28, 2, False)
+    block = int(size * 1.2) * max(1, len(lines))
+    if secondary:
+        block += int(size * 0.7) * 2
+    y = _content_bottom() - 28 - block
+    draw.rectangle([x, y - 18, x + 84, y - 12], fill=theme["gold"])
+    _paint_whatis_prose(draw, stamp, x, y, max_w, theme, 36, 28, 2, bold=False)
+
+
+def _gold_rule_bottom(draw, theme) -> int:
+    img = getattr(draw, "_vf_img", None)
+    if img is None:
+        return 640
+    gold = theme["gold"]
+    px = img.load()
+    last = 0
+    x = W // 2
+    for y in range(160, H - 140):
+        if px[x, y] == gold:
+            last = y
+    return last or 640
+
+
+def _paint_centered_whatis(draw, text: str, theme, y: int, size: int) -> int:
+    lh = int(size * max(1.12, _line_factor(text)))
+    for ln in _whatis_wrap(draw, text, size, W - 240, True) or [text]:
+        tw = _whatis_length(draw, ln, size, True)
+        _draw_whatis_text(draw, ((W - tw) / 2, y), ln, size, theme["navy"], True)
+        y += lh
+    return y
+
+
+def _render_whatis_title(draw, beat, lesson, code, theme, second) -> None:
+    """Title card. English stays on the shared card. Chinese sits under it in navy."""
+    title = field_native(beat, "title", code) or field_native(lesson, "title", code) or ""
+    if not second and not any(_whatis_punct(ch) for ch in title):
+        render_title_card(draw, beat, lesson, code, theme, second=None)
+        return
+    if second and code == "en":
+        render_title_card(draw, beat, lesson, code, theme, second=None)
+        other = field_native(beat, "title", second) or field_native(lesson, "title", second)
+        if other:
+            _paint_centered_whatis(draw, other, theme, _gold_rule_bottom(draw, theme) + 36, 64)
+        return
+    max_w = W - 200
+    size, lines = _fit_whatis_lines(draw, title, max_w, SCALE["hook"], 88, 3, True)
+    top = _title_card_top(int(size * 1.08) * max(1, len(lines)) + 36)
+    for ln in lines:
+        tw = _whatis_length(draw, ln, size, True)
+        _draw_whatis_text(draw, ((W - tw) / 2, top), ln, size, theme["navy"], True)
+        top += int(size * 1.08)
+    draw.rectangle([(W - 140) / 2, top + 18, (W + 140) / 2, top + 26], fill=theme["gold"])
+    if not second:
+        return
+    other = field_native(beat, "title", second) or field_native(lesson, "title", second)
+    if other:
+        _paint_centered_whatis(draw, other, theme, top + 26 + 36, 64)
+
+
+def render_whatis(draw, beat, lesson, visual, code, theme, second, index, n) -> None:
+    """Opt-in What-is cards. Existing visuals never enter this function."""
+    if visual == "whatis_title":
+        _render_whatis_title(draw, beat, lesson, code, theme, second)
+    elif visual == "whatis_definition":
+        _render_whatis_statement(
+            draw, theme, _whatis_role(beat, visual, code, second),
+            field2(beat, "sentence", code, second), 72, 60, 5,
+        )
+    elif visual == "whatis_example":
+        _render_whatis_example(draw, beat, code, theme, second)
+    elif visual == "whatis_contrast":
+        _render_whatis_contrast(draw, beat, code, theme, second)
+    elif visual == "whatis_takeaway":
+        _render_whatis_statement(
+            draw, theme, _whatis_role(beat, visual, code, second),
+            field2(beat, "rule", code, second), 72, 56, 4,
+        )
+    _draw_whatis_footer(draw, beat, lesson, code, theme, second, index, n)
+
+
 RENDERERS = {
     "title_card": render_title_card,
     "definition_card": render_definition,
@@ -5300,6 +5697,9 @@ def render_beat(beat, lesson, index, n, lang_labels="en", theme=None, stage=None
         second = label_code(second_lang) if second_lang else None
         if second == code:
             second = None
+        if visual in WHATIS_VISUALS:
+            render_whatis(draw, beat, lesson, visual, code, theme, second, index, n)
+            return img
         foot = field_native(lesson, "title", code) or field(lesson, "title", code) or lesson.get("id") or ""
         if not focus:
             draw_footer(draw, foot, index, n, theme)

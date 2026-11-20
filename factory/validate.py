@@ -63,6 +63,12 @@ REQUIRED_STEMS = {
     "pair_chart": ("left", "right"),
     "pair_box": ("left", "right"),
     "pair_slope": ("left", "right"),
+    # What-is cards are opt-in. Old visuals keep the stems above.
+    "whatis_title": ("title",),
+    "whatis_definition": ("sentence",),
+    "whatis_example": ("body", "stamp"),
+    "whatis_contrast": ("what", "not"),
+    "whatis_takeaway": ("rule",),
 }
 
 
@@ -99,6 +105,11 @@ ALLOWED_VISUALS = {
     "coin",
     "schematic_chart",
     "dag",
+    "whatis_title",
+    "whatis_definition",
+    "whatis_example",
+    "whatis_contrast",
+    "whatis_takeaway",
 }
 
 
@@ -157,6 +168,13 @@ TEXT_BUDGETS = {
     "col": (40, 18),
     "claim": (45, 20),
     "next": (45, 20),
+    # What-is prose is one sentence, not a formula chip. Warnings only.
+    "sentence": (240, 120),
+    "body": (220, 110),
+    "stamp": (140, 70),
+    "what": (180, 90),
+    "not": (360, 180),
+    "rule": (260, 130),
 }
 
 _LANG_SFX = (("_en", 0), ("_zh", 1), ("_zh_hk", 1))
@@ -211,6 +229,14 @@ def text_length_warnings(lesson: dict) -> list[str]:
             check("q1", "q1"); check("q2", "q2")
         if vis == "example":
             check("setup", "setup"); check("result", "result")
+        if vis == "whatis_definition":
+            check("sentence", "sentence")
+        if vis == "whatis_example":
+            check("body", "body"); check("stamp", "stamp")
+        if vis == "whatis_contrast":
+            check("what", "what"); check("not", "not")
+        if vis == "whatis_takeaway":
+            check("rule", "rule")
         if vis == "module_open":
             for k in range(1, 6):
                 check(f"item{k}", "item")

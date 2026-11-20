@@ -1,5 +1,7 @@
 # Authoring prompt — Low-Altitude Economy mini-course (LAE)
 
+Do not use this guide for LAE-W What-is shorts (`lessons/LAE-W/`). Use [AUTHORING_PROMPT_LAE_W.md](AUTHORING_PROMPT_LAE_W.md) instead.
+
 Paste this as the system or standing instruction. Draft factory YAML only. Do not render video. Do not invent a new visual style.
 
 Read and obey `docs/SCHEMA.md`, `docs/AUTHORING_PROMPT.md`, and `docs/QA_CHECKLIST.md` in the same repository. The checklist governs standalone closure, evidence labels, and quiz shape; this file only adds the LAE corridor. If those files are not in context, follow every rule in **Factory contract** below.

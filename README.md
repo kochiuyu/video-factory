@@ -123,7 +123,8 @@ Day-to-day operator steps: [docs/SOP.md](docs/SOP.md). Faculty one-pager: [docs/
 | [docs/AUTHORING_PROMPT.md](docs/AUTHORING_PROMPT.md) | Drafting a **new** lesson (paste as standing instructions) |
 | [docs/REVISE_PROMPT.md](docs/REVISE_PROMPT.md) | Rewriting an **existing** YAML — especially elevating 简 / 繁 and matching speech to visuals |
 | [docs/QA_CHECKLIST.md](docs/QA_CHECKLIST.md) | Delivery gate after authoring or revision |
-| [docs/AUTHORING_PROMPT_LAE.md](docs/AUTHORING_PROMPT_LAE.md) | Parallel track: Low-Altitude Economy (`LAE`) on the same factory contract |
+| [docs/AUTHORING_PROMPT_LAE.md](docs/AUTHORING_PROMPT_LAE.md) | First-year **LAE-M** mini-course (`lessons/LAE/`, `LAE-M*`) on the same factory contract. Not the DOTE5891 LAE-W What-is series |
+| [docs/AUTHORING_PROMPT_LAE_W.md](docs/AUTHORING_PROMPT_LAE_W.md) | Standing standard for the DOTE5891 one-concept What-is series (`lessons/LAE-W/`). Distinct from the first-year LAE-M mini-course in [docs/AUTHORING_PROMPT_LAE.md](docs/AUTHORING_PROMPT_LAE.md) |
 | [docs/M01_BEGINNER_REVIEW.md](docs/M01_BEGINNER_REVIEW.md) | What the M01 beginner pass fixed; conventions below |
 | [docs/SETUP.md](docs/SETUP.md) | Install and first console run |
 | [docs/THEMES.md](docs/THEMES.md) | Slide palettes |

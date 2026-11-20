@@ -1,0 +1,51 @@
+id: LAE-W-T03-DRONE
+course_en: DOTE5891 Low-Altitude Economy
+course_zh: DOTE5891 低空经济
+course_zh_hk: DOTE5891 低空經濟
+duration_target_s: 70
+title_en: What is a drone?
+title_zh: 什么是 drone？
+title_zh_hk: 咩係 drone？
+source_en: Primer, FAQ, and glossary, lae-companion
+source_zh: 入门、常见问题与词汇表，lae-companion
+source_zh_hk: 入門、常見問題同詞彙表，lae-companion
+beats:
+- id: hook
+  visual: whatis_title
+  seconds: 14
+  title_en: What is a drone?
+  title_zh: 什么是 drone？
+  title_zh_hk: 咩係 drone？
+  en: 'When people talk about the low-altitude economy, they often say “drone.” That everyday word is useful, but it is not a legal category.'
+  zh: '一提到低空经济，大家常常会说「drone」。这个日常说法很方便，但它并不是一个法律类别。'
+  zh_hk: '一講到低空經濟，好多人都會講「drone」。呢個日常講法好方便，但佢唔係一個法律類別。'
+- id: define
+  visual: whatis_definition
+  seconds: 22
+  sentence_en: 'An everyday name for a small unmanned aircraft, not a Cap. 448G legal synonym.'
+  sentence_zh: '小型无人飞行器的日常叫法，不是《第448G章》的法定同义词。'
+  sentence_zh_hk: '小型無人飛行器嘅日常叫法，唔係《第448G章》嘅法定同義詞。'
+  en: 'In ordinary speech, a drone is a small unmanned aircraft — a craft flown without a person on board. In Hong Kong, “drone” is a speech label. It is not a legal synonym in the city’s main small-unmanned-aircraft law, Cap. 448G.'
+  zh: '在日常用语里，drone 指的是小型无人飞行器，也就是机上没有人驾驶的飞行器。在香港，「drone」只是口语里的叫法，并不是本港主要小型无人机法例《第448G章》里的法定同义词。'
+  zh_hk: '喺日常用語入面，drone 係指小型無人飛行器，即係機上冇人駕駛嘅飛行器。喺香港，「drone」只係口語上嘅叫法，唔係本港主要小型無人機法例《第448G章》入面嘅法定同義詞。'
+- id: contrast
+  visual: whatis_contrast
+  seconds: 18
+  what_en: 'Everyday speech label.'
+  what_zh: '日常用语中的叫法。'
+  what_zh_hk: '日常用語入面嘅叫法。'
+  not_en: 'A legal synonym for SUA.'
+  not_zh: '《第448G章》里 SUA 的法定同义词。'
+  not_zh_hk: '《第448G章》入面 SUA 嘅法定同義詞。'
+  en: '“Drone” is an everyday name for a light unmanned craft. It is not the legal name used in Cap. 448G. That statute’s main label is small unmanned aircraft, or SUA.'
+  zh: '「Drone」是对轻型无人飞行器的日常叫法，不是《第448G章》使用的法定名称。那条法例的主要用语是小型无人飞机，也就是 SUA。'
+  zh_hk: '「Drone」係對輕型無人飛行器嘅日常叫法，唔係《第448G章》用嘅法定名稱。嗰條法例嘅主要用語係小型無人飛機，即係 SUA。'
+- id: rule
+  visual: whatis_takeaway
+  seconds: 16
+  rule_en: 'Do not treat “drone” as the legal name in Cap. 448G.'
+  rule_zh: '不要把「drone」当成《第448G章》的法定名称。'
+  rule_zh_hk: '唔好將「drone」當成《第448G章》嘅法定名稱。'
+  en: 'If you treat “drone” as if it were the legal name, you have mixed everyday speech with the statute. They are not the same thing.'
+  zh: '如果把「drone」当成法定名称来用，就是把日常用语和法律条文混在一起了。它们不是同一回事。'
+  zh_hk: '如果你將「drone」當成法定名稱嚟用，就係將日常用語同法律條文撈亂咗。佢哋唔係同一件事。'

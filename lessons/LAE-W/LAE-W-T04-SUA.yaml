@@ -1,0 +1,51 @@
+id: LAE-W-T04-SUA
+course_en: DOTE5891 Low-Altitude Economy
+course_zh: DOTE5891 低空经济
+course_zh_hk: DOTE5891 低空經濟
+duration_target_s: 84
+title_en: What is an SUA?
+title_zh: 什么是 SUA？
+title_zh_hk: 咩係 SUA？
+source_en: Primer, FAQ, and glossary, lae-companion
+source_zh: 入门、常见问题与词汇表，lae-companion
+source_zh_hk: 入門、常見問題同詞彙表，lae-companion
+beats:
+- id: hook
+  visual: whatis_title
+  seconds: 16
+  title_en: What is an SUA?
+  title_zh: 什么是 SUA？
+  title_zh_hk: 咩係 SUA？
+  en: 'Hong Kong law does not use “drone” as its main label for light unmanned craft. It uses a legal name: small unmanned aircraft, or SUA.'
+  zh: '香港法例并没有用「drone」作为轻型无人飞行器的主要名称。它用的是一个法定名称：小型无人飞机，也就是 SUA。'
+  zh_hk: '香港法例並冇用「drone」做輕型無人飛行器嘅主要名稱。佢用嘅係一個法定名稱：小型無人飛機，即係 SUA。'
+- id: define
+  visual: whatis_definition
+  seconds: 22
+  sentence_en: 'An unmanned aircraft not more than 150 kg, under Cap. 448G.'
+  sentence_zh: "《第448G章》所规管、\n重量不超过150公斤的无人飞机。"
+  sentence_zh_hk: "《第448G章》所規管、\n重量不超過150公斤嘅無人飛機。"
+  en: 'An SUA is an unmanned aircraft not more than 150 kilograms, regulated under Cap. 448G. That Order is Hong Kong’s main legal label for these light unmanned craft, and it has weight classes that carry different requirements.'
+  zh: 'SUA 是指重量不超过150公斤、受《第448G章》规管的无人飞机。《小型无人机令》是香港对这些轻型无人飞行器的主要法律用语，并且按重量分级，不同级别有不同的要求。'
+  zh_hk: 'SUA 係指重量不超過150公斤、受《第448G章》規管嘅無人飛機。《小型無人機令》係香港對呢啲輕型無人飛行器嘅主要法律用語，而且按重量分級，唔同級別有唔同要求。'
+- id: contrast
+  visual: whatis_contrast
+  seconds: 28
+  what_en: 'Hong Kong’s main legal label for light unmanned craft.'
+  what_zh: '香港对轻型无人飞行器的主要法律用语。'
+  what_zh_hk: '香港對輕型無人飛行器嘅主要法律用語。'
+  not_en: 'An everyday synonym for “drone,” or a name that covers craft above that ceiling.'
+  not_zh: '「drone」的日常同义词，或自动覆盖超过该上限的飞行器。'
+  not_zh_hk: '「drone」嘅日常同義詞，或自動覆蓋超過該上限嘅飛行器。'
+  en: 'A small camera drone and a heavier cargo SUA can both fall under this Order, but they do not face the same rules. SUA is a legal category with a weight ceiling. It is not a casual synonym for every “drone,” and it does not automatically cover heavier or passenger craft above 150 kilograms.'
+  zh: '一架小型航拍无人机和一架较重的货运 SUA，都可以落在《小型无人机令》的范围内，但面对的规则并不一样。SUA 是一个有重量上限的法律类别。它不是所有「drone」的随口同义词，也不会自动覆盖超过150公斤的较重飞行器或载人飞行器。'
+  zh_hk: '一架小型航拍無人機同埋一架較重嘅貨運 SUA，都可以落喺《小型無人機令》嘅範圍入面，但面對嘅規則並唔一樣。SUA 係一個有重量上限嘅法律類別。佢唔係所有「drone」嘅隨便同義詞，亦唔會自動覆蓋超過150公斤嘅較重飛行器或者載人飛行器。'
+- id: rule
+  visual: whatis_takeaway
+  seconds: 18
+  rule_en: 'Start with the craft’s weight and the operation, then check the legal category.'
+  rule_zh: '先看重量和运行，再核对法律类别。'
+  rule_zh_hk: '先睇重量同運作，再核對法律類別。'
+  en: 'Start with the craft’s weight and the operation, then check the legal category. Do not assume that every unmanned aircraft is an SUA, or that every SUA follows the same rules.'
+  zh: '先看飞行器的重量和这次运行，再核对法律类别。不要假定每一架无人飞行器都是 SUA，也不要假定每架 SUA 都适用同一套规则。'
+  zh_hk: '先睇飛行器嘅重量同呢次運作，再核對法律類別。唔好假定每一架無人飛行器都係 SUA，亦唔好假定每架 SUA 都適用同一套規則。'

@@ -71,7 +71,7 @@ A lesson uses these cards only by setting the beat `visual` to a `whatis_*` name
 | `whatis_contrast` | `what_*`, `not_*` | What it is, then What it is not, same navy type on the cream field. No VS badge and no second panel colour. |
 | `whatis_takeaway` | `rule_*` | One rule in large navy type. Not two numbered review questions. |
 
-An optional beat `kicker_*` replaces the small role label (Definition, Example, Takeaway). Contrast headings stay What it is / What it is not (它是什么 / 它不是什么, 佢係咩 / 佢唔係咩). `validate.py` does not require `whatis_*` fields on any other visual, and does not require `source_*`.
+An optional beat `kicker_*` replaces the small role label (Definition, Example, Takeaway). Contrast headings stay What it is / What it is not (它是什么 / 它不是什么, 佢係咩 / 佢唔係咩). A bilingual cell (`en+zh`, `en+hk`) keeps the English line at that size and paints the matching Chinese underneath it. `validate.py` does not require `whatis_*` fields on any other visual, and does not require `source_*`.
 
 ## Stage speech
 

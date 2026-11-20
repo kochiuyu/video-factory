@@ -110,6 +110,16 @@ class WhatisValidation(unittest.TestCase):
         old_emerald = sum(1 for px in old_img.get_flattened_data() if px == theme["emerald"])
         self.assertGreater(old_emerald, 1000)
 
+    def test_whatis_fullwidth_punctuation_does_not_keep_a_whole_em(self):
+        from PIL import Image, ImageDraw
+        from slides import _whatis_length, mixed_length
+
+        image = Image.new("RGB", (400, 80), "white")
+        draw = ImageDraw.Draw(image)
+        tight = _whatis_length(draw, "动，连", 72, True)
+        full = mixed_length(draw, "动，连", 72, True)
+        self.assertLess(tight, full * 0.85)
+
 
 if __name__ == "__main__":
     unittest.main()

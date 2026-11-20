@@ -73,6 +73,8 @@ A lesson uses these cards only by setting the beat `visual` to a `whatis_*` name
 
 An optional beat `kicker_*` replaces the small role label (Definition, Example, Takeaway). Contrast headings stay What it is / What it is not (它是什么 / 它不是什么, 佢係咩 / 佢唔係咩). A bilingual cell (`en+zh`, `en+hk`) keeps the English line at that size and paints the matching Chinese underneath it. `validate.py` does not require `whatis_*` fields on any other visual, and does not require `source_*`.
 
+A lesson whose beats are all `whatis_*` times each language on its own speech, then holds the card for a 0.4 s breath. It does not pad a shorter language up to the longest one, and it does not hold the card for the YAML `seconds` after the line has finished. Mixed cells follow the English speech. Set `clock: shared` to keep the ordinary shared clock, or `clock: own` to opt any other lesson in. STAT and LAE-M lessons stay on the shared clock.
+
 ## Stage speech
 
 These visuals paint progressive stills. Write one spoken chunk per still:

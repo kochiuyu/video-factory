@@ -17,8 +17,8 @@ beats:
   title_zh: 什么是一千米这一层？
   title_zh_hk: 咩係一千米呢一層？
   en: 'In Hong Kong policy language, the low-altitude economy is often described as using airspace generally below about 1,000 metres.'
-  zh: 在香港的政策用语里，低空经济常常被描述为使用大体上大约一千米以下的空域。
-  zh_hk: 喺香港嘅政策用語入面，低空經濟好多時被描述為使用大致上大約一千米以下嘅空域。
+  zh: '在香港的政策用语里，低空经济常常被说成是使用大约一千米以下的空域。'
+  zh_hk: '喺香港嘅政策用語入面，低空經濟好多時會被講成係使用大約一千米以下嘅空域。'
 - id: define
   visual: whatis_definition
   seconds: 18
@@ -26,8 +26,8 @@ beats:
   sentence_zh: 香港对 LAE 领域的政策工作描述——大体在约1,000米以下。它不是《第448G章》的飞行高度限制。
   sentence_zh_hk: 香港對 LAE 範疇嘅政策工作描述——一般係大約1,000米以下。佢唔係《第448G章》嘅飛行高度限制。
   en: 'That 1,000-metre figure is a policy working description — a way officials and analysts talk about the field. It is not a flying-height limit in Hong Kong’s main small-unmanned-aircraft law, Cap. 448G.'
-  zh: 这一千米的数字是政策上的工作描述，是官员和分析人员谈论这个领域时的说法。它不是香港主要小型无人机法例《第448G章》里的飞行高度限制。
-  zh_hk: 呢個一千米嘅數字係政策上嘅工作描述，係官員同分析人員講呢個範疇嗰陣用嘅講法。佢唔係香港主要小型無人機法例《第448G章》入面嘅飛行高度限制。
+  zh: '这一千米的数字，是政策上的工作描述，是官员和分析人员讨论这个领域时的说法。它并不是香港主要小型无人机法例《第448G章》里的飞行高度限制。'
+  zh_hk: '呢個一千米嘅數字，係政策上嘅工作描述，係官員同分析人員討論呢個範疇嗰陣用嘅講法。佢唔係香港主要小型無人機法例《第448G章》入面嘅飛行高度限制。'
 - id: contrast
   visual: whatis_contrast
   seconds: 38
@@ -38,8 +38,8 @@ beats:
   not_zh: 《第448G章》的飞行高度限制。普通高度带：A1类，离地100英尺，约30米；A2类，离地300英尺，约91米。更高的飞行需要民航处许可。
   not_zh_hk: 《第448G章》嘅飛行高度限制。普通高度帶：A1類，離地100英尺，約30米；A2類，離地300英尺，約91米。飛得更高要民航處許可。
   en: 'Cap. 448G sets ordinary operating height bands much lower: Category A1 at 100 feet above ground level, about 30 metres; and Category A2 at 300 feet above ground level, about 91 metres. Higher flight needs permission from the Civil Aviation Department. So there are two different rulers in the same sky. The 1,000-metre band frames the economic field. The 100-foot and 300-foot bands are legal operating limits for ordinary small unmanned aircraft.'
-  zh: 《第448G章》把普通运行高度带定得低得多：A1类为离地100英尺，约30米；A2类为离地300英尺，约91米。飞得更高，需要民航处许可。所以同一片天空里有两把不同的尺子。一千米这一层框定的是经济领域。100英尺和300英尺这两档，是普通小型无人机的法定运行限制。
-  zh_hk: 《第448G章》將普通運作嘅高度帶定得低好多：A1類係離地100英尺，約30米；A2類係離地300英尺，約91米。飛得更高就要民航處許可。所以同一片天空入面有兩把唔同嘅尺。一千米呢一層框住嘅係經濟範疇。100英尺同300英尺呢兩檔，係普通小型無人機嘅法定運作限制。
+  zh: '《第448G章》规定的普通运行高度要低得多：A1类是离地100英尺，大约30米；A2类是离地300英尺，大约91米。飞得再高，就需要民航处许可。所以同一片天空里，其实有两把不同的尺子。一千米这一层，框的是经济领域；100英尺和300英尺这两档，才是普通小型无人机的法定运行限制。'
+  zh_hk: '《第448G章》訂明嘅普通運作高度低好多：A1類係離地100英尺，大約30米；A2類係離地300英尺，大約91米。飛得再高，就要有民航處許可。所以同一片天空入面，其實有兩把唔同嘅尺。一千米呢一層，框住嘅係經濟範疇；100英尺同300英尺呢兩檔，先至係普通小型無人機嘅法定運作限制。'
 - id: rule
   visual: whatis_takeaway
   seconds: 22
@@ -47,5 +47,5 @@ beats:
   rule_zh: 同一片天空，两把尺子。不要把「LAE在1,000米以下」当成可以把小型无人机飞到1,000米的许可。
   rule_zh_hk: 同一片天空，兩把尺。唔好將「LAE喺1,000米以下」當成可以將小型無人機飛到1,000米嘅許可。
   en: 'If you treat “LAE below 1,000 metres” as permission to fly a small unmanned aircraft to 1,000 metres, you have mixed those two layers. They are not the same thing.'
-  zh: 如果把「低空经济在一千米以下」当成可以把小型无人机飞到一千米的许可，那就是把这两层混在一起了。它们不是同一件事。
-  zh_hk: 如果你將「低空經濟喺一千米以下」當成可以將小型無人機飛到一千米嘅許可，你就將呢兩層撈亂咗。佢哋唔係同一件事。
+  zh: '如果把「低空经济在一千米以下」当成可以把小型无人机飞到一千米的许可，就是把这两层搞混了。它们不是同一回事。'
+  zh_hk: '如果你將「低空經濟喺一千米以下」當成可以將小型無人機飛到一千米嘅許可，就係將呢兩層撈亂咗。佢哋唔係同一件事。'

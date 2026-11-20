@@ -121,5 +121,33 @@ class WhatisValidation(unittest.TestCase):
         self.assertLess(tight, full * 0.85)
 
 
+class WhatisClock(unittest.TestCase):
+    def test_whatis_times_each_language_and_stat_stays_shared(self):
+        from build import capped_durations, owns_speech_clock, speech_breath_durations
+
+        whatis = _lesson([{
+            "id": "hook", "visual": "whatis_title", "seconds": 12,
+            "title_en": "What is LAE?", "en": "Narrow.", "zh": "窄。", "zh_hk": "窄。",
+        }])
+        stat = _lesson([{
+            "id": "open", "visual": "title_card", "seconds": 12,
+            "title_en": "Intro", "en": "Hello.", "zh": "你好。", "zh_hk": "你好。",
+        }])
+        self.assertTrue(owns_speech_clock(whatis))
+        self.assertFalse(owns_speech_clock(stat))
+        self.assertFalse(owns_speech_clock({**whatis, "clock": "shared"}))
+        self.assertTrue(owns_speech_clock({**stat, "clock": "own"}))
+
+        raw = {"en": [6.6, 29.9], "zh_hk": [7.1, 32.9]}
+        own = speech_breath_durations(raw, 0.4)
+        self.assertAlmostEqual(own["en"][0], 7.0)
+        self.assertAlmostEqual(own["en"][1], 30.3)
+        self.assertAlmostEqual(own["zh_hk"][1], 33.3)
+        self.assertLess(own["en"][1], own["zh_hk"][1])
+        shared = capped_durations(raw, [7.1, 32.9], None)
+        self.assertEqual(shared["en"], [7.1, 32.9])
+        self.assertEqual(shared["zh_hk"], [7.1, 32.9])
+
+
 if __name__ == "__main__":
     unittest.main()

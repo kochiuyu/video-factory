@@ -2,7 +2,7 @@ id: LAE-W-T05-EVTOL
 course_en: DOTE5891 Low-Altitude Economy
 course_zh: DOTE5891 低空经济
 course_zh_hk: DOTE5891 低空經濟
-duration_target_s: 84
+duration_target_s: 88
 title_en: What is an eVTOL?
 title_zh: 什么是 eVTOL？
 title_zh_hk: 咩係 eVTOL？
@@ -16,36 +16,36 @@ beats:
   title_en: What is an eVTOL?
   title_zh: 什么是 eVTOL？
   title_zh_hk: 咩係 eVTOL？
-  en: 'You will also hear the word eVTOL. That label sounds official, but in Hong Kong it is not the name of a statute.'
-  zh: '你还会听到 eVTOL 这个词。它听起来很正式，但在香港，它并不是某部法例的名称。'
-  zh_hk: '你仲會聽到 eVTOL 呢個詞。佢聽落好正式，但喺香港，佢唔係某條法例嘅名稱。'
+  en: 'You will also hear the word eVTOL. That label sounds official, but in Hong Kong it is not the name of a law.'
+  zh: '你还会听到 eVTOL 这个词。它听起来很正式，但在香港，它并不是一部法律的名称。'
+  zh_hk: '你仲會聽到 eVTOL 呢個詞。佢聽落好正式，但喺香港，佢唔係一條法律嘅名稱。'
 - id: define
   visual: whatis_definition
   seconds: 24
-  sentence_en: 'An industry label for electric vertical take-off and landing craft.'
-  sentence_zh: '电动垂直起降飞行器的行业称谓。'
-  sentence_zh_hk: '電動垂直起降飛行器嘅行業稱謂。'
-  en: 'eVTOL means electric vertical take-off and landing craft — aircraft that take off and land roughly straight up and down, usually with electric power. It is an industry label for a vehicle concept, not a Hong Kong licence, and not a dedicated law.'
-  zh: 'eVTOL 指的是电动垂直起降飞行器，也就是大致沿垂直方向起飞和降落、通常使用电力驱动的飞行器。这是对一种载具概念的行业称谓，不是香港的牌照，也不是一部专门法例。'
-  zh_hk: 'eVTOL 係指電動垂直起降飛行器，即係大致沿垂直方向起飛同降落、通常用電力驅動嘅飛行器。呢個係對一種載具概念嘅行業稱謂，唔係香港嘅牌照，亦唔係一部專門法例。'
+  sentence_en: 'An industry name for electric vertical take-off and landing craft.'
+  sentence_zh: '电动垂直起降飞行器的行业叫法。'
+  sentence_zh_hk: '電動垂直起降飛行器嘅行業叫法。'
+  en: 'eVTOL means electric vertical take-off and landing craft — aircraft that take off and land roughly straight up and down, usually with electric power. It is an industry name for a type of aircraft, not a Hong Kong licence, and not a law written just for eVTOL.'
+  zh: 'eVTOL 指的是电动垂直起降飞行器，也就是大致沿垂直方向起飞和降落、通常使用电力驱动的飞行器。这是对一类飞行器的行业叫法，不是香港的牌照，也不是专门为 eVTOL 而写的法律。'
+  zh_hk: 'eVTOL 係指電動垂直起降飛行器，即係大致沿垂直方向起飛同降落、通常用電力驅動嘅飛行器。呢個係對一類飛行器嘅行業叫法，唔係香港嘅牌照，亦唔係專門為 eVTOL 而寫嘅法律。'
 - id: contrast
   visual: whatis_contrast
-  seconds: 30
-  what_en: 'A vehicle-concept label.'
-  what_zh: '一种载具概念的称谓。'
-  what_zh_hk: '一種載具概念嘅稱謂。'
-  not_en: 'A dedicated Hong Kong statute, or automatic coverage under Cap. 448G.'
-  not_zh: '香港的专门法例，或自动纳入《第448G章》。'
-  not_zh_hk: '香港嘅專門法例，或自動納入《第448G章》。'
-  en: 'eVTOL is an industry name for electric VTOL craft. It is not a dedicated Hong Kong statute, and it does not automatically place a heavier or passenger craft inside Cap. 448G’s SUA categories. Hong Kong has no dedicated eVTOL law yet. Those heavier or passenger concepts are treated as unconventional aircraft while the rules are still being developed.'
-  zh: 'eVTOL 是电动垂直起降飞行器的行业叫法。它不是香港的专门法例，也不会自动把较重或载人的飞行器归入《第448G章》的 SUA 类别。香港目前还没有专门的 eVTOL 法例。这些较重或载人的概念，在规则仍在制定时，是按非传统飞行器来处理的。'
-  zh_hk: 'eVTOL 係電動垂直起降飛行器嘅行業叫法。佢唔係香港嘅專門法例，亦唔會自動將較重或者載人嘅飛行器歸入《第448G章》嘅 SUA 類別。香港而家仲未有專門嘅 eVTOL 法例。呢啲較重或者載人嘅概念，喺規則仲喺度制定嗰陣，係按非傳統飛行器嚟處理。'
+  seconds: 32
+  what_en: 'An industry name for a type of aircraft.'
+  what_zh: '对一类飞行器的行业叫法。'
+  what_zh_hk: '對一類飛行器嘅行業叫法。'
+  not_en: 'A Hong Kong law written just for eVTOL, or automatic coverage under Cap. 448G.'
+  not_zh: '专门为 eVTOL 而写的香港法律，或自动纳入《第448G章》。'
+  not_zh_hk: '專門為 eVTOL 而寫嘅香港法律，或自動納入《第448G章》。'
+  en: 'eVTOL is an industry name for electric VTOL craft. It is not a Hong Kong law written just for eVTOL, and it does not automatically place a heavier or passenger craft inside Cap. 448G’s SUA categories. Hong Kong has no eVTOL law of its own yet. Those heavier or passenger designs are treated as unconventional aircraft — a special class — while the rules are still being written.'
+  zh: 'eVTOL 是电动垂直起降飞行器的行业叫法。它不是专门为 eVTOL 而写的香港法律，也不会自动把较重或载人的飞行器归入《第448G章》的 SUA 类别。香港目前还没有自己的 eVTOL 法例。这些较重或载人的设计，在规则仍在制定时，是按非传统飞行器——一个特殊类别——来处理的。'
+  zh_hk: 'eVTOL 係電動垂直起降飛行器嘅行業叫法。佢唔係專門為 eVTOL 而寫嘅香港法律，亦唔會自動將較重或者載人嘅飛行器歸入《第448G章》嘅 SUA 類別。香港而家仲未有自己嘅 eVTOL 法例。呢啲較重或者載人嘅設計，喺規則仲喺度制定嗰陣，係按非傳統飛行器——一個特殊類別——嚟處理。'
 - id: rule
   visual: whatis_takeaway
-  seconds: 16
-  rule_en: 'If a craft is heavier than the SUA ceiling, or is designed to carry passengers, do not assume it is regulated as a small unmanned aircraft.'
-  rule_zh: '比 SUA 上限更重，或为载人而设计的飞行器，不要假定按小型无人飞机规管。'
-  rule_zh_hk: '比 SUA 上限更重，或為載人而設計嘅飛行器，唔好假定按小型無人飛機規管。'
-  en: 'If a craft is heavier than the SUA ceiling, or is designed to carry passengers, do not assume it is regulated as a small unmanned aircraft.'
-  zh: '如果飞行器比 SUA 的重量上限更重，或者是为载人而设计的，就不要假定它会按小型无人飞机来规管。'
-  zh_hk: '如果飛行器比 SUA 嘅重量上限更重，或者係為載人而設計，就唔好假定佢會按小型無人飛機嚟規管。'
+  seconds: 18
+  rule_en: 'If a craft is heavier than the SUA weight limit, or is designed to carry passengers, do not assume it is regulated as a small unmanned aircraft.'
+  rule_zh: '比 SUA 重量限制更重，或为载人而设计的飞行器，不要假定按小型无人飞机规管。'
+  rule_zh_hk: '比 SUA 重量限制更重，或為載人而設計嘅飛行器，唔好假定按小型無人飛機規管。'
+  en: 'If a craft is heavier than the SUA weight limit, or is designed to carry passengers, do not assume it is regulated as a small unmanned aircraft.'
+  zh: '如果飞行器比 SUA 的重量限制更重，或者是为载人而设计的，就不要假定它会按小型无人飞机来规管。'
+  zh_hk: '如果飛行器比 SUA 嘅重量限制更重，或者係為載人而設計，就唔好假定佢會按小型無人飛機嚟規管。'

@@ -1,0 +1,51 @@
+id: LAE-W-T01-LAE
+course_en: DOTE5891 Low-Altitude Economy
+course_zh: DOTE5891 低空经济
+course_zh_hk: DOTE5891 低空經濟
+duration_target_s: 98
+title_en: What is LAE?
+title_zh: 什么是低空经济？
+title_zh_hk: 咩係低空經濟？
+source_en: Primer and Week 1, lae-companion
+source_zh: 入门与第1周，lae-companion
+source_zh_hk: 入門同第1週，lae-companion
+beats:
+- id: hook
+  visual: whatis_title
+  seconds: 12
+  title_en: What is LAE?
+  title_zh: 什么是低空经济？
+  title_zh_hk: 咩係低空經濟？
+  en: 'When people hear “low-altitude economy,” they often picture an aircraft. That is too narrow.'
+  zh: 人们一听到「低空经济」，往往只想到一架飞行器。这样看太窄了。
+  zh_hk: 人一聽到「低空經濟」，往往淨係諗起一架飛行器。咁樣睇太窄。
+- id: define
+  visual: whatis_definition
+  seconds: 18
+  sentence_en: Economic activity that uses low-altitude airspace, together with the aircraft, sites, digital systems, operators, customers, and supporting services needed to deliver a mission.
+  sentence_zh: 使用低空空域的经济活动，连同完成一项任务所需的飞行器、场地、数字系统、运营者、客户和支持服务。
+  sentence_zh_hk: 用低空空域嘅經濟活動，連同完成一項任務所需嘅飛行器、場地、數碼系統、營運者、客戶同支援服務。
+  en: 'The low-altitude economy, or LAE, is economic activity that uses low-altitude airspace, together with the aircraft, physical sites, digital systems, operators, customers, and supporting services needed to deliver a mission.'
+  zh: 低空经济，也就是 LAE，是使用低空空域的经济活动，连同完成一项任务所需要的飞行器、实地场地、数字系统、运营者、客户和支持服务。
+  zh_hk: 低空經濟，亦即係 LAE，係使用低空空域嘅經濟活動，連同完成一項任務所需要嘅飛行器、實地場地、數碼系統、營運者、客戶同支援服務。
+- id: example
+  visual: whatis_example
+  seconds: 40
+  body_en: A medical sample needs to reach a hospital quickly. The customer pays for a reliable delivery, not for the aircraft.
+  body_zh: 一份医学样本需要尽快送到医院。客户付钱买的是一次可靠的送达，不是飞行器。
+  body_zh_hk: 一份醫學樣本要盡快送到醫院。客戶畀錢買嘅係一次可靠嘅送達，唔係架飛行器。
+  stamp_en: Classroom example — not a claim that the route operates today.
+  stamp_zh: 课堂例子——并非声称这条航线今日已经在运营。
+  stamp_zh_hk: 課堂例子——唔係話呢條航線今日已經喺度營運。
+  en: 'Picture one completed mission, not a vehicle on a poster. Imagine a medical sample that needs to reach a hospital quickly. In a possible low-altitude service, a customer requests the delivery, an operator arranges the flight, an aircraft carries the sample, and take-off sites and traffic coordination make the journey possible. The customer pays for a reliable delivery, not for the aircraft itself. This is an example to explain the idea, not a claim that the route operates today.'
+  zh: 请想象一次已经完成的任务，而不是海报上的一架飞行器。设想一份医学样本需要尽快送到医院。在一种可能的低空服务里，客户提出配送请求，运营者安排飞行，飞行器运送样本，起飞场地和交通协调使这段行程成为可能。客户付钱买的是一次可靠的送达，不是飞行器本身。这是用来说明这个概念的例子，并不是在声称这条航线今天已经在运营。
+  zh_hk: 請想像一次已經完成嘅任務，而唔係海報上面一架飛行器。設想一份醫學樣本要盡快送到醫院。喺一種可能嘅低空服務入面，客戶提出配送要求，營運者安排飛行，飛行器運送樣本，起飛場地同交通協調令呢段行程做得到。客戶畀錢買嘅係一次可靠嘅送達，唔係架飛行器本身。呢個例子係用嚟解釋個概念，並唔係話呢條航線今日已經喺度營運。
+- id: rule
+  visual: whatis_takeaway
+  seconds: 28
+  rule_en: LAE is the whole chain, not only the vehicle.
+  rule_zh: 低空经济是整条链条，不只是飞行器。
+  rule_zh_hk: 低空經濟係成條鏈，唔單止係架飛行器。
+  en: 'Someone needs an outcome. An operator flies or manages the aircraft. The craft needs a place to take off and land. Someone coordinates traffic. A customer or mission sponsor pays for the result. Other firms support the work — finance, insurance, training, and software. That whole chain is what this course means by LAE.'
+  zh: 有人需要一个结果。运营者驾驶或管理飞行器。飞行器需要起飞和降落的地方。有人协调交通。客户或任务出资方为结果付钱。其他企业支撑这项工作——金融、保险、培训和软件。整条链条，就是这门课所说的低空经济。
+  zh_hk: 有人需要一個結果。營運者負責飛或者管理架飛行器。架飛行器需要一個地方起飛同降落。有人協調交通。客戶或者任務出資方為個結果畀錢。其他公司支撐呢項工作——金融、保險、培訓同軟件。成條鏈，就係呢門課所講嘅低空經濟。

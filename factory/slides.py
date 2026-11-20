@@ -84,6 +84,16 @@ def lesson_stamp(lesson, theme, code, second, stage_cards) -> str:
     style = str(lesson.get("slide_style") or "").strip().lower()
     if style:
         payload["slide_style"] = style
+    # Lesson-level source is not part of the beat digest. Only a lesson that
+    # sets one changes the stamp, so existing caches stay valid.
+    source_keys = ("source", "source_en", "source_zh", "source_zh_cn", "source_zh_hk")
+    source_payload = {
+        key: str(lesson.get(key)).strip()
+        for key in source_keys
+        if str(lesson.get(key) or "").strip()
+    }
+    if source_payload:
+        payload["source"] = source_payload
     return digest_obj(payload)
 
 
@@ -5180,6 +5190,184 @@ def render_quad_scatter(draw, beat, code, y, theme, stage=None, second=None) -> 
         _paint_block(draw, (100, box_y + box_h - foot + 8, W - 100, box_y + box_h - 16), fl, gold, theme["bg"])
 
 
+WHATIS_VISUALS = {
+    "whatis_title",
+    "whatis_definition",
+    "whatis_example",
+    "whatis_contrast",
+    "whatis_takeaway",
+}
+
+_WHATIS_ROLE = {
+    "whatis_definition": {"en": "DEFINITION", "zh": "定义", "zh_hk": "定義"},
+    "whatis_example": {"en": "EXAMPLE", "zh": "例子", "zh_hk": "例子"},
+    "whatis_takeaway": {"en": "TAKEAWAY", "zh": "要点", "zh_hk": "要點"},
+}
+
+_WHATIS_CONTRAST = {
+    "en": ("What it is", "What it is not"),
+    "zh": ("它是什么", "它不是什么"),
+    "zh_hk": ("佢係咩", "佢唔係咩"),
+}
+
+
+def _whatis_role(beat, visual, code, second) -> str:
+    """Small role label. A beat kicker replaces the default. Title has none."""
+    custom = resolve_kicker(beat, code)
+    other = resolve_kicker(beat, second) if second else ""
+    if custom or other:
+        if custom and custom.isascii():
+            custom = custom.upper()
+        if other and other.isascii():
+            other = other.upper()
+        if other and other != custom:
+            return f"{custom}\n{other}" if custom else other
+        return custom or other
+    table = _WHATIS_ROLE.get(visual) or {}
+    primary = table.get(code) or table.get("en") or ""
+    if not second:
+        return primary
+    extra = table.get(second) or ""
+    if extra and extra != primary:
+        return f"{primary}\n{extra}" if primary else extra
+    return primary
+
+
+def _whatis_source(beat, lesson, code, second) -> str:
+    return field2(beat, "source", code, second) or field2(lesson, "source", code, second)
+
+
+def _draw_whatis_footer(draw, beat, lesson, code, theme, second, index, n) -> None:
+    if _FOCUS.get():
+        return
+    draw_footer(draw, _whatis_source(beat, lesson, code, second), index, n, theme)
+
+
+def _contrast_head(code, second, which: int) -> str:
+    primary = (_WHATIS_CONTRAST.get(code) or _WHATIS_CONTRAST["en"])[which]
+    if not second:
+        return primary
+    extra = (_WHATIS_CONTRAST.get(second) or _WHATIS_CONTRAST["en"])[which]
+    if extra and extra != primary:
+        return f"{primary}\n{extra}"
+    return primary
+
+
+def _paint_role_panel(draw, box, fill, role, body, theme, ink, sub_ink, cap=46, bold=False, valign="center", max_lines=8) -> None:
+    """One navy-or-emerald panel: a gold role label, then prose. Not a formula."""
+    x0, y0, x1, y1 = box
+    _panel(draw, box, fill, theme)
+    role_h = 0
+    if role:
+        role_lay = _block_layout(draw, role, max(40, x1 - x0 - 108), 88, 28, 16, 0.72, 2, 2, True)
+        if role_lay:
+            _paint_block(
+                draw, (x0 + 48, y0 + 24, x1 - 40, y0 + 24 + role_lay["h"]),
+                role_lay, theme["gold"], theme["gold"], align="left", valign="top",
+            )
+            role_h = role_lay["h"] + 16
+            bar_y = y0 + 24 + role_lay["h"] + 8
+            draw.rectangle([x0 + 48, bar_y, x0 + 48 + 96, bar_y + 6], fill=theme["gold"])
+            role_h += 18
+    inner = (x0 + 56, y0 + 28 + role_h, x1 - 48, y1 - 32)
+    max_w = max(40, inner[2] - inner[0])
+    max_h = max(40, inner[3] - inner[1])
+    if not body:
+        return
+    lay = _block_layout(draw, body, max_w, max_h, cap, 18, 0.64, max_lines, max(2, max_lines // 2), bold)
+    if lay:
+        _paint_block(draw, inner, lay, ink, sub_ink, align="left", valign=valign)
+
+
+def _render_whatis_contrast(draw, beat, code, theme, second) -> None:
+    """Two panels, What it is / What it is not. No VS badge."""
+    what = field2(beat, "what", code, second)
+    not_it = field2(beat, "not", code, second)
+    top = 64
+    bottom = _content_bottom() - 12
+    # Wide enough that "30 m" and "91 m" stay on one line at the body size.
+    margin, gap = 48, 28
+    mid = W // 2
+    boxes = ((margin, top, mid - gap // 2, bottom), (mid + gap // 2, top, W - margin, bottom))
+    fills = (theme["navy"], theme["emerald"])
+    inks = (theme["bg"], theme["white"])
+    subs = (theme["gold"], theme["bg"])
+    bodies = (what, not_it)
+    heads = [_contrast_head(code, second, i) for i in (0, 1)]
+    head_band = 118 if second else 86
+    inner_w = max(40, boxes[0][2] - boxes[0][0] - 68)
+    body_h = max(80, (bottom - top) - head_band - 48)
+    lays, _block = _shared_layouts(draw, list(bodies), inner_w, body_h, 36, 20, 0.64, 4, 3, bold=False)
+    for i, box in enumerate(boxes):
+        x0, y0, x1, y1 = box
+        _panel(draw, box, fills[i], theme)
+        head_lay = _block_layout(draw, heads[i], max(40, x1 - x0 - 108), 88, 30, 16, 0.7, 2, 2, True)
+        used = 24
+        if head_lay:
+            _paint_block(
+                draw, (x0 + 36, y0 + 24, x1 - 32, y0 + 24 + head_lay["h"]),
+                head_lay, theme["gold"], theme["gold"], align="left", valign="top",
+            )
+            bar_y = y0 + 24 + head_lay["h"] + 8
+            draw.rectangle([x0 + 40, bar_y, x0 + 40 + 96, bar_y + 6], fill=theme["gold"])
+            used = 24 + head_lay["h"] + 28
+        if lays[i]:
+            _paint_block(
+                draw, (x0 + 36, y0 + used, x1 - 32, y1 - 28),
+                lays[i], inks[i], subs[i], align="left", valign="top",
+            )
+
+
+def _render_whatis_example(draw, beat, code, theme, second) -> None:
+    """One example panel plus the required classroom stamp. Not a setup/result pair."""
+    body = field2(beat, "body", code, second)
+    stamp = field2(beat, "stamp", code, second)
+    role = _whatis_role(beat, "whatis_example", code, second)
+    top = 64
+    bottom = _content_bottom() - 12
+    stamp_w = W - 64 - 120
+    stamp_lay = _block_layout(draw, stamp, stamp_w, 140, 30, 18, 0.66, 3, 2, True) if stamp else None
+    stamp_h = 124 if stamp_lay is None else max(112, min(168, stamp_lay["h"] + 48))
+    panel_bottom = bottom - stamp_h - 18
+    _paint_role_panel(
+        draw, (64, top, W - 64, panel_bottom), theme["navy"], role, body, theme,
+        theme["bg"], theme["gold"], cap=42, bold=False, valign="center", max_lines=6,
+    )
+    sy0 = bottom - stamp_h
+    draw.rounded_rectangle([64, sy0, W - 64, bottom], radius=22, fill=theme["gold"])
+    draw.rectangle([64, sy0 + 16, 78, bottom - 16], fill=theme["navy"])
+    if stamp_lay:
+        _paint_block(
+            draw, (104, sy0 + 12, W - 96, bottom - 12),
+            stamp_lay, theme["navy"], theme["ink"], align="left", valign="center",
+        )
+
+
+def render_whatis(draw, beat, lesson, visual, code, theme, second, index, n) -> None:
+    """Opt-in What-is cards. Existing visuals never enter this function."""
+    if visual == "whatis_title":
+        render_title_card(draw, beat, lesson, code, theme, second=second)
+    elif visual == "whatis_definition":
+        role = _whatis_role(beat, visual, code, second)
+        sentence = field2(beat, "sentence", code, second)
+        _paint_role_panel(
+            draw, (64, 64, W - 64, _content_bottom() - 12), theme["navy"], role, sentence, theme,
+            theme["bg"], theme["gold"], cap=44, bold=False, valign="center", max_lines=7,
+        )
+    elif visual == "whatis_example":
+        _render_whatis_example(draw, beat, code, theme, second)
+    elif visual == "whatis_contrast":
+        _render_whatis_contrast(draw, beat, code, theme, second)
+    elif visual == "whatis_takeaway":
+        role = _whatis_role(beat, visual, code, second)
+        rule = field2(beat, "rule", code, second)
+        _paint_role_panel(
+            draw, (64, 64, W - 64, _content_bottom() - 12), theme["navy"], role, rule, theme,
+            theme["bg"], theme["gold"], cap=48, bold=True, valign="center", max_lines=6,
+        )
+    _draw_whatis_footer(draw, beat, lesson, code, theme, second, index, n)
+
+
 RENDERERS = {
     "title_card": render_title_card,
     "definition_card": render_definition,
@@ -5300,6 +5488,9 @@ def render_beat(beat, lesson, index, n, lang_labels="en", theme=None, stage=None
         second = label_code(second_lang) if second_lang else None
         if second == code:
             second = None
+        if visual in WHATIS_VISUALS:
+            render_whatis(draw, beat, lesson, visual, code, theme, second, index, n)
+            return img
         foot = field_native(lesson, "title", code) or field(lesson, "title", code) or lesson.get("id") or ""
         if not focus:
             draw_footer(draw, foot, index, n, theme)

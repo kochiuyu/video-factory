@@ -16,7 +16,7 @@ A lesson is one YAML file under `lessons/<AREA>/`. The renderer looks up the fil
 | Field | Type | Rule |
 |--------|------|------|
 | `id` | string | Unique within the lesson. Used as the audio filename. |
-| `visual` | enum | `title_card`, `definition_card`, `two_column`, `formula`, `takeaway`, `example`, `three_column`, `big_number`, `steps`, `module_open`, `module_close`, `payoff_matrix`, `table_grid`, `series`, `rank_line`, `freq_bars`, `balance_line`, `box_line`, `dev_bars`, `ratio_bars`, `quad_scatter`, `schematic_chart`, `dag`, `pair`, `pair_chart`, `pair_box`, `pair_slope`, `redraw`, `turns`, `shrink`, `mix`, `coin`. |
+| `visual` | enum | `title_card`, `definition_card`, `two_column`, `formula`, `takeaway`, `example`, `three_column`, `big_number`, `steps`, `module_open`, `module_close`, `payoff_matrix`, `table_grid`, `series`, `rank_line`, `freq_bars`, `balance_line`, `box_line`, `dev_bars`, `ratio_bars`, `quad_scatter`, `schematic_chart`, `dag`, `pair`, `pair_chart`, `pair_box`, `pair_slope`, `redraw`, `turns`, `shrink`, `mix`, `coin`, `whatis_title`, `whatis_definition`, `whatis_example`, `whatis_contrast`, `whatis_takeaway`. The five `whatis_*` names are opt-in. See **What-is layout**. |
 | speech | trio | **One source only.** Unstaged card: `en` / `zh` / `zh_hk`. Staged card: `s1_en` `s1_zh` `s1_zh_hk` … Do not keep both. |
 
 Voice and captions join the stage lines in order. `validate.py` accepts either shape. Whole-card `en` on a staged beat is ignored when `s1_en` exists.
@@ -59,6 +59,20 @@ Optional beat fields, also off by default:
 
 These switches do not change numbers or narration. A per-shop preview that cuts an existing sentence must be a lossless partition, checked by joining the slices back to the original line. Do not add a new teaching claim, such as planning each shop's stock from one Monday, in order to fill a new card.
 
+## What-is layout (opt-in)
+
+A lesson uses these cards only by setting the beat `visual` to a `whatis_*` name. `title_card`, `definition_card`, `example`, `takeaway`, `two_column`, and the STAT chart layouts are unchanged. One still per beat. Speech is `en` / `zh` / `zh_hk`, not `s1_*`.
+
+| visual | On-screen fields | What it draws |
+|--------|------------------|---------------|
+| `whatis_title` | `title_*` | The question, centred, with the source line in the footer when `source_*` is set. |
+| `whatis_definition` | `sentence_*` | One sentence on a single panel. Prose, not a formula box. |
+| `whatis_example` | `body_*`, `stamp_*` | One example panel. `stamp_*` is required (a classroom example, not an operating claim). |
+| `whatis_contrast` | `what_*`, `not_*` | A pair: What it is / What it is not. No VS badge. |
+| `whatis_takeaway` | `rule_*` | One rule. Not two numbered review questions. |
+
+An optional beat `kicker_*` replaces the small role label (Definition, Example, Takeaway). Contrast headings stay What it is / What it is not (它是什么 / 它不是什么, 佢係咩 / 佢唔係咩). `validate.py` does not require `whatis_*` fields on any other visual, and does not require `source_*`.
+
 ## Stage speech
 
 These visuals paint progressive stills. Write one spoken chunk per still:
@@ -78,6 +92,7 @@ These visuals paint progressive stills. Write one spoken chunk per still:
 | `quad_scatter` | 3 | `s1_*` … `s3_*`. Stage 1 places the points on the axes. Stage 2 draws the mean cross-hairs and the + / − quadrant signs. Stage 3 golds the `mark` points, writes each paired product, and shows the footer. The plot box is pinned from stage 1. (`mode: ruler`: ruler → clouds → pin at `r`). |
 | `table_grid`, `schematic_chart`, `dag`, `pair`, `pair_chart`, `pair_box`, `pair_slope`, `redraw`, `turns`, `shrink`, `mix`, `coin` | 3 | `s1_*` … `s3_*` |
 | `title_card`, `big_number`, `module_open`, `module_close` | 1 | `en` / `zh` / `zh_hk` only |
+| `whatis_title`, `whatis_definition`, `whatis_example`, `whatis_contrast`, `whatis_takeaway` | 1 | `en` / `zh` / `zh_hk` only. One still per beat. Do not use `s1_*`. |
 
 `s1` is on screen with `_s1.png`, `s2` with `_s2.png`, and so on. Do not put factory talk in the speech (“watch the gold bar”, “this card”, “in the left box”).
 
@@ -95,6 +110,7 @@ Lesson-level optional keys (none of these are required by `validate.py`):
 | `glossary` | Console, Excel Glossary sheet, authoring locks | Keep for term consistency. `lock: true` must not be paraphrased. Not painted on slides/covers and not uploaded to YouTube. |
 | `quiz` | Quiz export / pack | Keep when the short has review items. |
 | `slide_style` | Slides | Optional. `focus` uses compact headings and keeps the teaching area above the caption chip. Omit the field for the default layout. Any other value is not a focus layout. |
+| `source`, `source_en`, `source_zh`, `source_zh_hk` | What-is footer | Optional. A citation line (companion page, and issuers such as LegCo CB(3)933/2024). Drawn on `whatis_*` slides only. A beat-level `source_*` overrides the lesson line. Lessons that omit it keep the usual title footer. |
 **Not a lesson field:** bare `duration_target` (without `_s`) is unused and must not be added. Timing uses required `duration_target_s` only (validate compares it to the sum of beat `seconds`).
 
 Beat: `kicker` (or `kicker_en` / `kicker_zh` / `kicker_zh_hk`), `title_en`, `title_zh`, `title_zh_hk`, `formula`, `gloss_*`, `left_*`, `right_*`, `setup_*`, `result_*`, `q1_*`, `q2_*`, `col1_*`, `col2_*`, `col3_*`, `step1_*`, `step2_*`, `step3_*`, `s1_*` … `s5_*`, `number`, `unit_*`, `caption_*`, `seconds`. Common English kickers (Concept, Definition, Example, Takeaway, …) are translated when labels are Chinese.

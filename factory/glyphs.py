@@ -43,6 +43,13 @@ ON_SCREEN_STEMS = (
     "v4",
     "v5",
     "v6",
+    "sentence",
+    "body",
+    "stamp",
+    "what",
+    "not",
+    "rule",
+    "source",
 )
 
 ON_SCREEN_PLAIN = ("formula", "number", "kicker", "c11", "c12", "c21", "c22")
@@ -195,10 +202,10 @@ def missing_chars(text: str) -> list[str]:
 
 def on_screen_strings(lesson: dict) -> list[tuple[str, str]]:
     rows: list[tuple[str, str]] = []
-    for stem in ("title_en", "title_zh", "title_zh_hk"):
-        val = (lesson.get(stem) or "").strip()
-        if val:
-            rows.append((f"lesson.{stem}", val))
+    for stem in ("title_en", "title_zh", "title_zh_hk", "source", "source_en", "source_zh", "source_zh_hk"):
+        val = lesson.get(stem)
+        if isinstance(val, str) and val.strip():
+            rows.append((f"lesson.{stem}", val.strip()))
     for i, beat in enumerate(lesson.get("beats") or [], start=1):
         bid = beat.get("id") or i
         for key in ON_SCREEN_PLAIN:

@@ -1,7 +1,9 @@
-"""Opt-in focus layout. Production lessons stay on the default renderer."""
+"""Opt-in focus layout. Lessons use it only when they set slide_style: focus."""
 
 from hashlib import sha256
 from pathlib import Path
+import copy
+import re
 import unittest
 from unittest.mock import patch
 
@@ -11,7 +13,7 @@ import focus_preview
 from mux import _caption_card, caption_safe_top
 from slides import H, W, render_beat, stage_count
 from theme import load_theme
-from validate import load_lesson
+from validate import load_lesson, validate
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,6 +21,7 @@ MEAN = ROOT / "lessons" / "STAT" / "STAT-M01-T02-MEAN.yaml"
 # Byte identity of the production Mean lesson on main 55af61b. CI checks out
 # only the pull-request merge commit, so this does not ask git for origin/main.
 MEAN_SHA256 = "55e7d014230d1687de559f34b60707f1aee16a44757758ec103b32b45abad121"
+DEFAULT_LAYOUT = re.compile(r"STAT-M0[1-5]-")
 
 
 def _beat(lesson, beat_id):
@@ -34,13 +37,40 @@ class ProductionLessonsStayPut(unittest.TestCase):
         text = MEAN.read_bytes().replace(b"\r\n", b"\n")
         self.assertEqual(sha256(text).hexdigest(), MEAN_SHA256)
 
-    def test_no_production_lesson_opts_into_focus(self):
+    def test_m01_through_m05_stay_on_the_default_layout(self):
         opted = []
         for path in (ROOT / "lessons").rglob("*.yaml"):
-            text = path.read_text(encoding="utf-8")
-            if "slide_style:" in text:
-                opted.append(path.relative_to(ROOT).as_posix())
+            if not DEFAULT_LAYOUT.search(path.name):
+                continue
+            style = load_lesson(path).get("slide_style")
+            if style is not None:
+                opted.append(f"{path.name} sets slide_style={style!r}")
         self.assertEqual(opted, [])
+
+    def test_focus_opt_in_is_the_only_accepted_value(self):
+        bad = []
+        for path in (ROOT / "lessons").rglob("*.yaml"):
+            style = load_lesson(path).get("slide_style")
+            if style is None:
+                continue
+            if str(style).strip().lower() != "focus":
+                bad.append(f"{path.name} sets slide_style={style!r}")
+        self.assertEqual(bad, [])
+
+    def test_m06_focus_opt_in_validates_and_stays_above_the_caption(self):
+        paths = sorted((ROOT / "lessons" / "STAT").glob("STAT-M06-*.yaml"))
+        self.assertEqual(len(paths), 15)
+        for path in paths:
+            lesson = load_lesson(path)
+            plain = validate(lesson, glyphs=False)
+            opted = copy.deepcopy(lesson)
+            opted["slide_style"] = "focus"
+            self.assertEqual(validate(opted, glyphs=False), plain, path.name)
+        sample = load_lesson(paths[0])
+        sample["slide_style"] = "focus"
+        beat = sample["beats"][0]
+        image = render_beat(beat, sample, 1, len(sample["beats"]), "en", load_theme(None))
+        self.assertFalse(focus_preview.content_below(image, caption_safe_top(H)))
 
     def test_focus_copy_keeps_speech_numbers_and_order(self):
         original = load_lesson(MEAN)

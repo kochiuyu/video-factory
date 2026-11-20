@@ -47,9 +47,9 @@ For topic-based standalone micro-lessons:
 
 ## Focus slide layout (opt-in)
 
-`slide_style: focus` is off unless a lesson sets it. Production lessons, including `STAT-M01-T02-MEAN`, omit it, so their slides stay on the default layout.
+`slide_style: focus` is opt-in. A lesson uses the focus layout only when that field is `focus`. Lessons that omit it stay on the default layout. `STAT-M01-T02-MEAN` and the rest of M01–M05 omit it. A later module, including STAT-M06, may set it for production.
 
-When it is set, headings are compact, the decorative corner and the bottom footer are omitted, and the teaching area stops 16 px above the largest caption chip (56 px type, three lines). A lesson that does not set `slide_style` is unchanged.
+When it is `focus`, headings are compact, the decorative corner and the bottom footer are omitted, and the teaching area stops 16 px above the largest caption chip (56 px type, three lines).
 
 Optional beat fields, also off by default:
 
@@ -94,6 +94,7 @@ Lesson-level optional keys (none of these are required by `validate.py`):
 | `youtube` | Build writes per-cell `.youtube.txt` paste files; validate length | Optional until you upload. See **YouTube upload text**. |
 | `glossary` | Console, Excel Glossary sheet, authoring locks | Keep for term consistency. `lock: true` must not be paraphrased. Not painted on slides/covers and not uploaded to YouTube. |
 | `quiz` | Quiz export / pack | Keep when the short has review items. |
+| `slide_style` | Slides | Optional. `focus` uses compact headings and keeps the teaching area above the caption chip. Omit the field for the default layout. Any other value is not a focus layout. |
 **Not a lesson field:** bare `duration_target` (without `_s`) is unused and must not be added. Timing uses required `duration_target_s` only (validate compares it to the sum of beat `seconds`).
 
 Beat: `kicker` (or `kicker_en` / `kicker_zh` / `kicker_zh_hk`), `title_en`, `title_zh`, `title_zh_hk`, `formula`, `gloss_*`, `left_*`, `right_*`, `setup_*`, `result_*`, `q1_*`, `q2_*`, `col1_*`, `col2_*`, `col3_*`, `step1_*`, `step2_*`, `step3_*`, `s1_*` … `s5_*`, `number`, `unit_*`, `caption_*`, `seconds`. Common English kickers (Concept, Definition, Example, Takeaway, …) are translated when labels are Chinese.

@@ -83,6 +83,33 @@ class WhatisValidation(unittest.TestCase):
         self.assertEqual(stage_count({"visual": "definition_card"}), 2)
         self.assertEqual(stage_count({"visual": "two_column"}), 3)
 
+    def test_whatis_body_is_cream_and_old_two_column_keeps_emerald(self):
+        from theme import load_theme
+        from slides import render_beat
+        from validate import load_lesson
+
+        theme = load_theme("cuhk-navy")
+        lesson = _lesson([{
+            "id": "define",
+            "visual": "whatis_definition",
+            "seconds": 12,
+            "sentence_en": "Economic activity that uses low-altitude airspace.",
+            "en": "A definition.",
+            "zh": "一个定义。",
+            "zh_hk": "一個定義。",
+        }])
+        img = render_beat(lesson["beats"][0], lesson, 1, 1, "en", theme)
+        self.assertEqual(img.getpixel((960, 860)), theme["bg"])
+        self.assertEqual(img.getpixel((960, 200)), theme["navy"])
+        emerald = sum(1 for px in img.get_flattened_data() if px == theme["emerald"])
+        self.assertEqual(emerald, 0)
+
+        old = load_lesson("lessons/LAE/LAE-M01-LY.yaml")
+        compare = next(beat for beat in old["beats"] if beat.get("visual") == "two_column")
+        old_img = render_beat(compare, old, 1, len(old["beats"]), "en", theme)
+        old_emerald = sum(1 for px in old_img.get_flattened_data() if px == theme["emerald"])
+        self.assertGreater(old_emerald, 1000)
+
 
 if __name__ == "__main__":
     unittest.main()

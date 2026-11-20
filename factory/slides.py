@@ -5253,94 +5253,111 @@ def _contrast_head(code, second, which: int) -> str:
     return primary
 
 
-def _paint_role_panel(draw, box, fill, role, body, theme, ink, sub_ink, cap=46, bold=False, valign="center", max_lines=8) -> None:
-    """One navy-or-emerald panel: a gold role label, then prose. Not a formula."""
-    x0, y0, x1, y1 = box
-    _panel(draw, box, fill, theme)
-    role_h = 0
-    if role:
-        role_lay = _block_layout(draw, role, max(40, x1 - x0 - 108), 88, 28, 16, 0.72, 2, 2, True)
-        if role_lay:
-            _paint_block(
-                draw, (x0 + 48, y0 + 24, x1 - 40, y0 + 24 + role_lay["h"]),
-                role_lay, theme["gold"], theme["gold"], align="left", valign="top",
-            )
-            role_h = role_lay["h"] + 16
-            bar_y = y0 + 24 + role_lay["h"] + 8
-            draw.rectangle([x0 + 48, bar_y, x0 + 48 + 96, bar_y + 6], fill=theme["gold"])
-            role_h += 18
-    inner = (x0 + 56, y0 + 28 + role_h, x1 - 48, y1 - 32)
-    max_w = max(40, inner[2] - inner[0])
-    max_h = max(40, inner[3] - inner[1])
-    if not body:
-        return
-    lay = _block_layout(draw, body, max_w, max_h, cap, 18, 0.64, max_lines, max(2, max_lines // 2), bold)
-    if lay:
-        _paint_block(draw, inner, lay, ink, sub_ink, align="left", valign=valign)
+def _whatis_clear_field(draw, theme) -> None:
+    """Cream inside the navy rails. Body cards drop the blobs and the gold corner."""
+    draw.rectangle([18, 0, W - 18, H], fill=theme["bg"])
+
+
+def _whatis_split(text: str) -> tuple[str, str]:
+    primary, secondary = _split_pair(sanitize(text or ""))
+    return primary, secondary
+
+
+def _fit_whatis_lines(draw, text: str, max_w: int, cap: int, floor: int, max_lines: int, bold: bool):
+    """Largest size at or under cap. Does not shrink to reserve a second language."""
+    if not text:
+        return cap, []
+    size = int(cap)
+    floor = min(int(floor), size)
+    while size >= floor:
+        lines = wrap(draw, text, font_for(text, size, bold), max_w, bold) or [text]
+        widest = max((mixed_length(draw, ln, size, bold) for ln in lines), default=0)
+        if len(lines) <= max_lines and widest <= max_w:
+            return size, lines
+        size -= 2
+    lines = wrap(draw, text, font_for(text, floor, bold), max_w, bold) or [text]
+    return floor, lines
+
+
+def _paint_whatis_lines(draw, lines, x, y, size, fill, bold) -> int:
+    for ln in lines:
+        draw_mixed(draw, (x, y), ln, size, fill, bold)
+        y += int(size * max(1.12, _line_factor(ln)))
+    return y
+
+
+def _paint_whatis_label(draw, label: str, theme, x: int, y: int) -> int:
+    primary, secondary = _whatis_split(label)
+    if not primary and not secondary:
+        return y
+    if primary:
+        draw_mixed(draw, (x, y), primary, 30, theme["gold"], True)
+        y += int(30 * _line_factor(primary))
+    if secondary:
+        draw_mixed(draw, (x, y), secondary, 24, theme["gold"], False)
+        y += int(24 * _line_factor(secondary))
+    y += 10
+    draw.rectangle([x, y, x + 84, y + 6], fill=theme["gold"])
+    return y + 28
+
+
+def _paint_whatis_prose(draw, text: str, x, y, max_w, theme, cap, floor, max_lines, bold=True) -> int:
+    """Navy prose. A second language, when present, sits under the primary at a smaller size."""
+    primary, secondary = _whatis_split(text)
+    size, lines = _fit_whatis_lines(draw, primary, max_w, cap, floor, max_lines, bold)
+    y = _paint_whatis_lines(draw, lines, x, y, size, theme["navy"], bold)
+    if secondary:
+        y += max(16, int(size * 0.28))
+        sub = max(32, int(size * 0.62))
+        sub_size, sub_lines = _fit_whatis_lines(draw, secondary, max_w, sub, 28, max_lines + 1, False)
+        y = _paint_whatis_lines(draw, sub_lines, x, y, sub_size, theme["navy"], False)
+    return y
+
+
+def _render_whatis_statement(draw, theme, role: str, text: str, cap: int, floor: int, max_lines: int) -> None:
+    _whatis_clear_field(draw, theme)
+    x = 96
+    max_w = W - 192
+    y = _paint_whatis_label(draw, role, theme, x, 80)
+    _paint_whatis_prose(draw, text, x, y + 8, max_w, theme, cap, floor, max_lines, bold=True)
 
 
 def _render_whatis_contrast(draw, beat, code, theme, second) -> None:
-    """Two panels, What it is / What it is not. No VS badge."""
-    what = field2(beat, "what", code, second)
-    not_it = field2(beat, "not", code, second)
-    top = 64
-    bottom = _content_bottom() - 12
-    # Wide enough that "30 m" and "91 m" stay on one line at the body size.
-    margin, gap = 48, 28
-    mid = W // 2
-    boxes = ((margin, top, mid - gap // 2, bottom), (mid + gap // 2, top, W - margin, bottom))
-    fills = (theme["navy"], theme["emerald"])
-    inks = (theme["bg"], theme["white"])
-    subs = (theme["gold"], theme["bg"])
-    bodies = (what, not_it)
-    heads = [_contrast_head(code, second, i) for i in (0, 1)]
-    head_band = 118 if second else 86
-    inner_w = max(40, boxes[0][2] - boxes[0][0] - 68)
-    body_h = max(80, (bottom - top) - head_band - 48)
-    lays, _block = _shared_layouts(draw, list(bodies), inner_w, body_h, 36, 20, 0.64, 4, 3, bold=False)
-    for i, box in enumerate(boxes):
-        x0, y0, x1, y1 = box
-        _panel(draw, box, fills[i], theme)
-        head_lay = _block_layout(draw, heads[i], max(40, x1 - x0 - 108), 88, 30, 16, 0.7, 2, 2, True)
-        used = 24
-        if head_lay:
-            _paint_block(
-                draw, (x0 + 36, y0 + 24, x1 - 32, y0 + 24 + head_lay["h"]),
-                head_lay, theme["gold"], theme["gold"], align="left", valign="top",
-            )
-            bar_y = y0 + 24 + head_lay["h"] + 8
-            draw.rectangle([x0 + 40, bar_y, x0 + 40 + 96, bar_y + 6], fill=theme["gold"])
-            used = 24 + head_lay["h"] + 28
-        if lays[i]:
-            _paint_block(
-                draw, (x0 + 36, y0 + used, x1 - 32, y1 - 28),
-                lays[i], inks[i], subs[i], align="left", valign="top",
-            )
+    """What it is, then What it is not. Same navy type on cream. No VS badge."""
+    _whatis_clear_field(draw, theme)
+    x = 96
+    max_w = W - 192
+    cap, floor = 58, 48
+    y = 56
+    for which, stem in ((0, "what"), (1, "not")):
+        y = _paint_whatis_label(draw, _contrast_head(code, second, which), theme, x, y)
+        y = _paint_whatis_prose(
+            draw, field2(beat, stem, code, second), x, y + 4, max_w, theme, cap, floor, 4, bold=True,
+        )
+        y += 28
 
 
 def _render_whatis_example(draw, beat, code, theme, second) -> None:
-    """One example panel plus the required classroom stamp. Not a setup/result pair."""
-    body = field2(beat, "body", code, second)
-    stamp = field2(beat, "stamp", code, second)
+    """Large example sentence. The classroom stamp is a short line, not a filled bar."""
+    _whatis_clear_field(draw, theme)
+    x = 96
+    max_w = W - 192
     role = _whatis_role(beat, "whatis_example", code, second)
-    top = 64
-    bottom = _content_bottom() - 12
-    stamp_w = W - 64 - 120
-    stamp_lay = _block_layout(draw, stamp, stamp_w, 140, 30, 18, 0.66, 3, 2, True) if stamp else None
-    stamp_h = 124 if stamp_lay is None else max(112, min(168, stamp_lay["h"] + 48))
-    panel_bottom = bottom - stamp_h - 18
-    _paint_role_panel(
-        draw, (64, top, W - 64, panel_bottom), theme["navy"], role, body, theme,
-        theme["bg"], theme["gold"], cap=42, bold=False, valign="center", max_lines=6,
+    y = _paint_whatis_label(draw, role, theme, x, 80)
+    _paint_whatis_prose(
+        draw, field2(beat, "body", code, second), x, y + 8, max_w, theme, 68, 56, 4, bold=True,
     )
-    sy0 = bottom - stamp_h
-    draw.rounded_rectangle([64, sy0, W - 64, bottom], radius=22, fill=theme["gold"])
-    draw.rectangle([64, sy0 + 16, 78, bottom - 16], fill=theme["navy"])
-    if stamp_lay:
-        _paint_block(
-            draw, (104, sy0 + 12, W - 96, bottom - 12),
-            stamp_lay, theme["navy"], theme["ink"], align="left", valign="center",
-        )
+    stamp = field2(beat, "stamp", code, second)
+    if not stamp:
+        return
+    primary, secondary = _whatis_split(stamp)
+    size, lines = _fit_whatis_lines(draw, primary, max_w, 36, 28, 2, False)
+    block = int(size * 1.2) * max(1, len(lines))
+    if secondary:
+        block += int(size * 0.7) * 2
+    y = _content_bottom() - 28 - block
+    draw.rectangle([x, y - 18, x + 84, y - 12], fill=theme["gold"])
+    _paint_whatis_prose(draw, stamp, x, y, max_w, theme, 36, 28, 2, bold=False)
 
 
 def render_whatis(draw, beat, lesson, visual, code, theme, second, index, n) -> None:
@@ -5348,22 +5365,18 @@ def render_whatis(draw, beat, lesson, visual, code, theme, second, index, n) -> 
     if visual == "whatis_title":
         render_title_card(draw, beat, lesson, code, theme, second=second)
     elif visual == "whatis_definition":
-        role = _whatis_role(beat, visual, code, second)
-        sentence = field2(beat, "sentence", code, second)
-        _paint_role_panel(
-            draw, (64, 64, W - 64, _content_bottom() - 12), theme["navy"], role, sentence, theme,
-            theme["bg"], theme["gold"], cap=44, bold=False, valign="center", max_lines=7,
+        _render_whatis_statement(
+            draw, theme, _whatis_role(beat, visual, code, second),
+            field2(beat, "sentence", code, second), 72, 60, 5,
         )
     elif visual == "whatis_example":
         _render_whatis_example(draw, beat, code, theme, second)
     elif visual == "whatis_contrast":
         _render_whatis_contrast(draw, beat, code, theme, second)
     elif visual == "whatis_takeaway":
-        role = _whatis_role(beat, visual, code, second)
-        rule = field2(beat, "rule", code, second)
-        _paint_role_panel(
-            draw, (64, 64, W - 64, _content_bottom() - 12), theme["navy"], role, rule, theme,
-            theme["bg"], theme["gold"], cap=48, bold=True, valign="center", max_lines=6,
+        _render_whatis_statement(
+            draw, theme, _whatis_role(beat, visual, code, second),
+            field2(beat, "rule", code, second), 72, 56, 4,
         )
     _draw_whatis_footer(draw, beat, lesson, code, theme, second, index, n)
 

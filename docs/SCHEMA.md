@@ -66,10 +66,10 @@ A lesson uses these cards only by setting the beat `visual` to a `whatis_*` name
 | visual | On-screen fields | What it draws |
 |--------|------------------|---------------|
 | `whatis_title` | `title_*` | The question, centred, with the source line in the footer when `source_*` is set. |
-| `whatis_definition` | `sentence_*` | One sentence on a single panel. Prose, not a formula box. |
-| `whatis_example` | `body_*`, `stamp_*` | One example panel. `stamp_*` is required (a classroom example, not an operating claim). |
-| `whatis_contrast` | `what_*`, `not_*` | A pair: What it is / What it is not. No VS badge. |
-| `whatis_takeaway` | `rule_*` | One rule. Not two numbered review questions. |
+| `whatis_definition` | `sentence_*` | One sentence in large navy type on the cream field. A small gold label. Not a formula box. |
+| `whatis_example` | `body_*`, `stamp_*` | Large navy example text. `stamp_*` is required (a classroom example, not an operating claim) and sits as a short line, not a filled bar. |
+| `whatis_contrast` | `what_*`, `not_*` | What it is, then What it is not, same navy type on the cream field. No VS badge and no second panel colour. |
+| `whatis_takeaway` | `rule_*` | One rule in large navy type. Not two numbered review questions. |
 
 An optional beat `kicker_*` replaces the small role label (Definition, Example, Takeaway). Contrast headings stay What it is / What it is not (它是什么 / 它不是什么, 佢係咩 / 佢唔係咩). `validate.py` does not require `whatis_*` fields on any other visual, and does not require `source_*`.
 

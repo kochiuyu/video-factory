@@ -246,7 +246,7 @@ def _cjk_letters(text: str) -> int:
     return sum(1 for ch in (text or "") if ch.isalnum())
 
 
-def _caption_units(body: str) -> tuple[list[str], bool]:
+def _caption_units(body: str, keep_units: bool = False) -> tuple[list[str], bool]:
     """Unbreakable pieces of one sentence. Joining them gives the sentence back."""
     from slides import _cjk_tokens
 
@@ -270,6 +270,20 @@ def _caption_units(body: str) -> tuple[list[str], bool]:
             units.append(buf)
         return units, True
     words = body.split()
+    if keep_units:
+        # "Cap. 448G" is one caption unit. The period is an abbreviation.
+        glued: list[str] = []
+        i = 0
+        while i < len(words):
+            word = words[i]
+            nxt = words[i + 1] if i + 1 < len(words) else ""
+            if word == "Cap." and nxt[:1].isdigit():
+                glued.append(word + " " + nxt)
+                i += 2
+            else:
+                glued.append(word)
+                i += 1
+        words = glued
     return [w + " " for w in words[:-1]] + words[-1:], False
 
 
@@ -359,7 +373,7 @@ def balanced_cards(units: list[str], width, max_w: float, cjk: bool, max_cards: 
     return [piece(i, j) for i, j in reversed(cuts) if piece(i, j)]
 
 
-def _wrap_caption_line(text: str, font, max_w: float) -> list[str]:
+def _wrap_caption_line(text: str, font, max_w: float, keep_units: bool = False) -> list[str]:
     """One sentence -> single-line caption cards (balanced; VF_CAPTION_GREEDY=1 for legacy)."""
     from PIL import Image, ImageDraw
 
@@ -369,7 +383,7 @@ def _wrap_caption_line(text: str, font, max_w: float) -> list[str]:
     if not body:
         return [" "]
     draw = ImageDraw.Draw(Image.new("RGB", (8, 8)))
-    units, cjk = _caption_units(body)
+    units, cjk = _caption_units(body, keep_units)
     out = balanced_cards(units, lambda s: draw.textlength(s, font=font), max_w, cjk)
     if any(draw.textlength(p, font=font) > max_w for p in out if len(p) > 1) and len(out) > 0:
         # a unit wider than a card (very long word): fall back to the legacy fill
@@ -397,7 +411,7 @@ def caption_orphans(text: str) -> list[str]:
     return bad
 
 
-def caption_pages(text: str) -> list[str]:
+def caption_pages(text: str, keep_units: bool = False) -> list[str]:
     """Sentence-first cards. Default one line; extra wrap pieces become new cards."""
     size = int(os.environ.get("VF_CAPTION_SIZE", CAPTION_SIZE_DEFAULT) or CAPTION_SIZE_DEFAULT)
     size = max(24, min(72, size))
@@ -409,8 +423,8 @@ def caption_pages(text: str) -> list[str]:
     font = _caption_font(body, size)
     max_w = CAPTION_PILL_MAX - 2 * CAPTION_PAD_X
     pages: list[str] = []
-    for sent in _sentences(body):
-        bits = _wrap_caption_line(sent, font, max_w)
+    for sent in _sentences(body, keep_units):
+        bits = _wrap_caption_line(sent, font, max_w, keep_units)
         if max_lines <= 1:
             pages.extend(bits)
         else:
@@ -433,15 +447,28 @@ def _is_cjk(text: str) -> bool:
     return any("\u4e00" <= ch <= "\u9fff" for ch in text)
 
 
-def _sentences(text: str) -> list[str]:
+def _sentences(text: str, keep_units: bool = False) -> list[str]:
     import re
 
     body = (text or "").replace("\n", " ").strip()
     if not body:
         return [""]
+    # Opt-in for What-is speech. Other lessons keep the old breaks.
+    # A period glued to a closing quote is not a sentence end ("drone.").
+    # "Cap." before a chapter number is an abbreviation, not a sentence end.
+    if keep_units:
+        body = re.sub(r"\.(?=[\"'”’])", "\uE000", body)
+        body = re.sub(r"\bCap\.\s+(?=\d)", "Cap\uE001", body)
     # A full stop between digits is a decimal point (0.10, 3.5), not a sentence end.
     parts = re.split(r"(?<=[。？！?!])\s*|(?<=\.)(?!\d)\s*", body)
-    return [p.strip() for p in parts if p and p.strip()] or [body]
+    out = []
+    for part in parts:
+        piece = part.strip()
+        if keep_units:
+            piece = piece.replace("\uE001", ". ").replace("\uE000", ".")
+        if piece:
+            out.append(piece)
+    return out or [body]
 
 
 def _halve(text: str) -> list[str]:
@@ -1032,6 +1059,7 @@ def pages_for_stages(
     n_stages: int = 1,
     chunks: list[str] | None = None,
     words: list[dict] | None = None,
+    keep_units: bool = False,
 ) -> tuple[list[str], list[float], list[int], str]:
     """Caption cards follow the spoken line across the whole beat.
 
@@ -1045,7 +1073,7 @@ def pages_for_stages(
     pages: list[str] = []
     stills: list[int] = []
     for i, chunk in enumerate(chunks):
-        bits = caption_pages(chunk)
+        bits = caption_pages(chunk, keep_units)
         pages.extend(bits)
         stills.extend([i] * len(bits))
     src = _caption_letters(text or "".join(chunks))

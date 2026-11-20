@@ -3,6 +3,7 @@ course_en: DOTE5891 Low-Altitude Economy
 course_zh: DOTE5891 低空经济
 course_zh_hk: DOTE5891 低空經濟
 duration_target_s: 88
+caption_keep: true
 title_en: What is an eVTOL?
 title_zh: 什么是 eVTOL？
 title_zh_hk: 咩係 eVTOL？
@@ -37,9 +38,15 @@ beats:
   not_en: 'A Hong Kong law written just for eVTOL, or automatic coverage under Cap. 448G.'
   not_zh: '专门为 eVTOL 而写的香港法律，或自动纳入《第448G章》。'
   not_zh_hk: '專門為 eVTOL 而寫嘅香港法律，或自動納入《第448G章》。'
-  en: 'eVTOL is an industry name for electric VTOL craft. It is not a Hong Kong law written just for eVTOL, and it does not automatically place a heavier or passenger craft inside Cap. 448G’s SUA categories. Hong Kong has no eVTOL law of its own yet. Those heavier or passenger designs are treated as unconventional aircraft — a special class — while the rules are still being written.'
-  zh: 'eVTOL 是电动垂直起降飞行器的行业叫法。它不是专门为 eVTOL 而写的香港法律，也不会自动把较重或载人的飞行器归入《第448G章》的 SUA 类别。香港目前还没有自己的 eVTOL 法例。这些较重或载人的设计，在规则仍在制定时，是按非传统飞行器——一个特殊类别——来处理的。'
-  zh_hk: 'eVTOL 係電動垂直起降飛行器嘅行業叫法。佢唔係專門為 eVTOL 而寫嘅香港法律，亦唔會自動將較重或者載人嘅飛行器歸入《第448G章》嘅 SUA 類別。香港而家仲未有自己嘅 eVTOL 法例。呢啲較重或者載人嘅設計，喺規則仲喺度制定嗰陣，係按非傳統飛行器——一個特殊類別——嚟處理。'
+  s1_en: 'eVTOL is an industry name for electric VTOL craft.'
+  s1_zh: 'eVTOL 是电动垂直起降飞行器的行业叫法。'
+  s1_zh_hk: 'eVTOL 係電動垂直起降飛行器嘅行業叫法。'
+  s2_en: 'It is not a Hong Kong law written just for eVTOL, and it does not automatically place a heavier or passenger craft inside Cap. 448G’s SUA categories.'
+  s2_zh: '它不是专门为 eVTOL 而写的香港法律，也不会自动把较重或载人的飞行器归入《第448G章》的 SUA 类别。'
+  s2_zh_hk: '佢唔係專門為 eVTOL 而寫嘅香港法律，亦唔會自動將較重或者載人嘅飛行器歸入《第448G章》嘅 SUA 類別。'
+  s3_en: 'Hong Kong has no eVTOL law of its own yet. Those heavier or passenger designs are treated as unconventional aircraft — a special class — while the rules are still being written.'
+  s3_zh: '香港目前还没有自己的 eVTOL 法例。这些较重或载人的设计，在规则仍在制定时，是按非传统飞行器——一个特殊类别——来处理的。'
+  s3_zh_hk: '香港而家仲未有自己嘅 eVTOL 法例。呢啲較重或者載人嘅設計，喺規則仲喺度制定嗰陣，係按非傳統飛行器——一個特殊類別——嚟處理。'
 - id: rule
   visual: whatis_takeaway
   seconds: 18

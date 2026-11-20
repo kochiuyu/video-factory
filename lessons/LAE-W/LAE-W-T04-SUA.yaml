@@ -3,6 +3,7 @@ course_en: DOTE5891 Low-Altitude Economy
 course_zh: DOTE5891 低空经济
 course_zh_hk: DOTE5891 低空經濟
 duration_target_s: 86
+caption_keep: true
 title_en: What is an SUA?
 title_zh: 什么是 SUA？
 title_zh_hk: 咩係 SUA？
@@ -37,9 +38,12 @@ beats:
   not_en: 'An everyday name for every “drone,” or a name that covers craft above that weight limit.'
   not_zh: '每一个「drone」的日常叫法，或自动覆盖超过该重量限制的飞行器。'
   not_zh_hk: '每一個「drone」嘅日常叫法，或自動覆蓋超過該重量限制嘅飛行器。'
-  en: 'A small camera drone and a heavier cargo SUA can both fall under this Order, but they do not face the same rules. SUA is a legal category with a weight limit. It is not just another word for every “drone,” and it does not automatically cover heavier or passenger craft above 150 kilograms.'
-  zh: '一架小型航拍无人机和一架较重的货运 SUA，都可以落在《小型无人机令》的范围内，但面对的规则并不一样。SUA 是一个有重量限制的法律类别。它不是所有「drone」的另一个叫法，也不会自动覆盖超过150公斤的较重飞行器或载人飞行器。'
-  zh_hk: '一架小型航拍無人機同埋一架較重嘅貨運 SUA，都可以落喺《小型無人機令》嘅範圍入面，但面對嘅規則並唔一樣。SUA 係一個有重量限制嘅法律類別。佢唔係所有「drone」嘅另一個叫法，亦唔會自動覆蓋超過150公斤嘅較重飛行器或者載人飛行器。'
+  s1_en: 'A small camera drone and a heavier cargo SUA can both fall under this Order, but they do not face the same rules. SUA is a legal category with a weight limit.'
+  s1_zh: '一架小型航拍无人机和一架较重的货运 SUA，都可以落在《小型无人机令》的范围内，但面对的规则并不一样。SUA 是一个有重量限制的法律类别。'
+  s1_zh_hk: '一架小型航拍無人機同埋一架較重嘅貨運 SUA，都可以落喺《小型無人機令》嘅範圍入面，但面對嘅規則並唔一樣。SUA 係一個有重量限制嘅法律類別。'
+  s2_en: 'It is not just another word for every “drone,” and it does not automatically cover heavier or passenger craft above 150 kilograms.'
+  s2_zh: '它不是所有「drone」的另一个叫法，也不会自动覆盖超过150公斤的较重飞行器或载人飞行器。'
+  s2_zh_hk: '佢唔係所有「drone」嘅另一個叫法，亦唔會自動覆蓋超過150公斤嘅較重飛行器或者載人飛行器。'
 - id: rule
   visual: whatis_takeaway
   seconds: 20

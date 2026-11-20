@@ -809,14 +809,15 @@ def build(
         words = load_word_times(audio_root / spoken / f"{beat['id']}.mp3")
         plan = stage_plan(beat, dur) if stage_cards else [0]
         text = beat_text(beat, sub_lang)
+        keep_units = bool(lesson.get("caption_keep"))
         if plan == [0]:
-            pages = caption_pages(text)
+            pages = caption_pages(text, keep_units)
             holds, how = holds_for_pages(dur, pages, words)
             still_idx = [0] * max(1, len(pages))
         else:
             chunks = stage_scripts(beat, sub_lang, len(plan))
             pages, holds, still_idx, how = pages_for_stages(
-                text, dur, len(plan), chunks=chunks, words=words
+                text, dur, len(plan), chunks=chunks, words=words, keep_units=keep_units
             )
         if words and how != CAP_TIME_WORDS and not quiet:
             print(f"caption timing: {spoken}/{beat['id']} word match failed; speech-weight")

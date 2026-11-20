@@ -27,10 +27,36 @@ def stage_lines(beat: dict, lang: str, n: int = 8) -> list[str]:
     return lines
 
 
+def _join_staged(parts: list[str], whatis: bool) -> str:
+    """Join stage lines into the spoken line.
+
+    What-is Chinese stages meet at a full stop with no extra space, so the
+    joined speech matches the approved line. Other lessons keep a space.
+    """
+    if not whatis:
+        return " ".join(parts)
+    out = parts[0]
+    for nxt in parts[1:]:
+        if not nxt:
+            continue
+        prev = out[-1:]
+        first = nxt[:1]
+        if prev.isspace() or first.isspace():
+            out += nxt
+        elif prev in ".!?" and first.isascii():
+            out += " " + nxt
+        elif prev.isascii() and first.isascii():
+            out += " " + nxt
+        else:
+            out += nxt
+    return out
+
+
 def beat_text(beat: dict, lang: str) -> str:
     staged = [p for p in stage_lines(beat, lang) if p]
     if staged:
-        return " ".join(staged)
+        whatis = str(beat.get("visual") or "").startswith("whatis_")
+        return _join_staged(staged, whatis)
     if lang == "zh_cn":
         return (beat.get("zh_cn") or beat.get("zh") or "").strip()
     return (beat.get(lang) or "").strip()

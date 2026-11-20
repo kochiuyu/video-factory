@@ -40,6 +40,25 @@ def _word(text: str, start: float, end: float) -> dict:
 
 
 class WordHoldMapping(unittest.TestCase):
+    def test_keep_units_holds_cap_448g_and_a_closing_quote(self) -> None:
+        from mux import caption_pages
+
+        quote = 'When people talk about the low-altitude economy, they often say “drone.” That everyday word is useful, but it is not a name in the law.'
+        kept = caption_pages(quote, keep_units=True)
+        self.assertFalse(any(page.lstrip().startswith("”") or page.lstrip().startswith('"') for page in kept))
+        self.assertTrue(any("“drone.”" in page for page in kept))
+        plain = caption_pages(quote, keep_units=False)
+        self.assertTrue(any(page.lstrip().startswith("”") for page in plain))
+
+        cap = "It is not the legal name used in Cap. 448G. That law’s main name is small unmanned aircraft, or SUA."
+        cards = caption_pages(cap, keep_units=True)
+        self.assertTrue(any("Cap. 448G" in page for page in cards))
+        self.assertFalse(any(page.rstrip().endswith("Cap.") for page in cards))
+        self.assertFalse(any(page.lstrip().startswith("448G") for page in cards))
+        # A sentence that ends, then a number, still breaks for other lessons.
+        older = caption_pages("End. 2 times 2 is 4.")
+        self.assertTrue(older[0].rstrip().endswith("End."))
+
     def test_english_pages_follow_word_starts_and_pad_the_last_card(self) -> None:
         pages = ["The mean", "is the total"]
         words = [

@@ -5509,14 +5509,24 @@ def _render_whatis_statement(draw, theme, role: str, text: str, cap: int, floor:
     _paint_whatis_prose(draw, text, x, y + 8, max_w, theme, cap, floor, max_lines, bold=True)
 
 
-def _render_whatis_contrast(draw, beat, code, theme, second) -> None:
-    """What it is, then What it is not. Same navy type on cream. No VS badge."""
+def _render_whatis_contrast(draw, beat, code, theme, second, stage=None) -> None:
+    """What it is, then What it is not. Same navy type on cream. No VS badge.
+
+    An authored stage sequence reveals that pair. The finished card (no stage)
+    still paints both lines, so an unstaged lesson does not change.
+    """
     _whatis_clear_field(draw, theme)
     x = 96
     max_w = W - 192
     cap, floor = 58, 48
+    show_what, show_not = _whatis_contrast_visible(beat, stage)
     y = 56
-    for which, stem in ((0, "what"), (1, "not")):
+    blocks = []
+    if show_what:
+        blocks.append((0, "what"))
+    if show_not:
+        blocks.append((1, "not"))
+    for which, stem in blocks:
         y = _paint_whatis_label(draw, _contrast_head(code, second, which), theme, x, y)
         y = _paint_whatis_prose(
             draw, field2(beat, stem, code, second), x, y + 4, max_w, theme, cap, floor, 4, bold=True,
@@ -5597,7 +5607,7 @@ def _render_whatis_title(draw, beat, lesson, code, theme, second) -> None:
         _paint_centered_whatis(draw, other, theme, top + 26 + 36, 64)
 
 
-def render_whatis(draw, beat, lesson, visual, code, theme, second, index, n) -> None:
+def render_whatis(draw, beat, lesson, visual, code, theme, second, index, n, stage=None) -> None:
     """Opt-in What-is cards. Existing visuals never enter this function."""
     if visual == "whatis_title":
         _render_whatis_title(draw, beat, lesson, code, theme, second)
@@ -5609,7 +5619,7 @@ def render_whatis(draw, beat, lesson, visual, code, theme, second, index, n) -> 
     elif visual == "whatis_example":
         _render_whatis_example(draw, beat, code, theme, second)
     elif visual == "whatis_contrast":
-        _render_whatis_contrast(draw, beat, code, theme, second)
+        _render_whatis_contrast(draw, beat, code, theme, second, stage)
     elif visual == "whatis_takeaway":
         _render_whatis_statement(
             draw, theme, _whatis_role(beat, visual, code, second),
@@ -5654,9 +5664,38 @@ RENDERERS = {
 }
 
 
+def _whatis_contrast_stages(beat: dict) -> int:
+    """How many authored contrast stages. Zero means the single finished card."""
+    if beat.get("visual") != "whatis_contrast":
+        return 0
+    n = 0
+    for i in range(1, 9):
+        if any(str(beat.get(f"s{i}{sfx}") or "").strip() for sfx in ("_en", "_zh", "_zh_hk", "_zh_cn", "")):
+            n = i
+    return n if n >= 2 else 0
+
+
+def _whatis_contrast_visible(beat: dict, stage) -> tuple[bool, bool]:
+    """(show what, show not). An unstaged card shows the finished pair."""
+    n = _whatis_contrast_stages(beat)
+    if stage in (None, 0) or n < 2:
+        return True, True
+    st = int(stage)
+    if n == 2:
+        return True, st >= 2
+    if st <= 1:
+        return True, False
+    if st == 2:
+        return True, True
+    return False, True
+
+
 def stage_count(beat: dict) -> int:
     if beat.get("stage") is False:
         return 1
+    contrast = _whatis_contrast_stages(beat)
+    if contrast:
+        return contrast
     reveal = str(beat.get("reveal") or "").strip().lower()
     if beat.get("visual") == "series" and reveal in {"cells", "row_cells"}:
         try:
@@ -5739,7 +5778,7 @@ def render_beat(beat, lesson, index, n, lang_labels="en", theme=None, stage=None
         if second == code:
             second = None
         if visual in WHATIS_VISUALS:
-            render_whatis(draw, beat, lesson, visual, code, theme, second, index, n)
+            render_whatis(draw, beat, lesson, visual, code, theme, second, index, n, stage)
             return img
         foot = field_native(lesson, "title", code) or field(lesson, "title", code) or lesson.get("id") or ""
         if not focus:

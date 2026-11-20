@@ -141,6 +141,53 @@ class WhatisValidation(unittest.TestCase):
         self.assertLess(tight, full * 0.85)
 
 
+class WhatisContrastStages(unittest.TestCase):
+    def test_unstaged_contrast_stays_one_card_and_staged_speech_rejoins(self):
+        from langs import beat_text
+        from slides import _whatis_contrast_visible, stage_count
+
+        plain = {
+            "id": "contrast", "visual": "whatis_contrast",
+            "what_en": "An everyday name.", "not_en": "The legal name.",
+            "en": "One line.", "zh": "一句。", "zh_hk": "一句。",
+        }
+        self.assertEqual(stage_count(plain), 1)
+        self.assertEqual(_whatis_contrast_visible(plain, None), (True, True))
+
+        two = {
+            "id": "contrast", "visual": "whatis_contrast",
+            "s1_en": "SUA is a legal category with a weight limit.",
+            "s2_en": "It is not just another word.",
+            "s1_zh": "SUA 是一个有重量限制的法律类别。",
+            "s2_zh": "它不是所有「drone」的另一个叫法。",
+        }
+        self.assertEqual(stage_count(two), 2)
+        self.assertEqual(_whatis_contrast_visible(two, 1), (True, False))
+        self.assertEqual(_whatis_contrast_visible(two, 2), (True, True))
+        self.assertEqual(
+            beat_text(two, "en"),
+            "SUA is a legal category with a weight limit. It is not just another word.",
+        )
+        self.assertEqual(
+            beat_text(two, "zh"),
+            "SUA 是一个有重量限制的法律类别。它不是所有「drone」的另一个叫法。",
+        )
+        stat = {"id": "open", "visual": "title_card", "s1_zh": "甲。", "s2_zh": "乙。"}
+        self.assertEqual(beat_text(stat, "zh"), "甲。 乙。")
+
+    def test_three_contrast_stages_focus_the_not_line_last(self):
+        from slides import _whatis_contrast_visible, stage_count
+
+        beat = {
+            "visual": "whatis_contrast",
+            "s1_en": "A.", "s2_en": "B.", "s3_en": "C.",
+        }
+        self.assertEqual(stage_count(beat), 3)
+        self.assertEqual(_whatis_contrast_visible(beat, 1), (True, False))
+        self.assertEqual(_whatis_contrast_visible(beat, 2), (True, True))
+        self.assertEqual(_whatis_contrast_visible(beat, 3), (False, True))
+
+
 class WhatisClock(unittest.TestCase):
     def test_whatis_times_each_language_and_stat_stays_shared(self):
         from build import capped_durations, owns_speech_clock, speech_breath_durations

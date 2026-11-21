@@ -1,0 +1,54 @@
+id: LAE-W-T11-UAM
+course_en: DOTE5891 Low-Altitude Economy
+course_zh: DOTE5891 低空经济
+course_zh_hk: DOTE5891 低空經濟
+duration_target_s: 72
+title_en: What is UAM?
+title_zh: 什么是 UAM？
+title_zh_hk: 咩係 UAM？
+source_en: Glossary, primer, and Week 1, lae-companion
+source_zh: 词汇表、入门与第1周，lae-companion
+source_zh_hk: 詞彙表、入門同第1週，lae-companion
+beats:
+- id: hook
+  visual: whatis_title
+  seconds: 12
+  title_en: What is UAM?
+  title_zh: 什么是 UAM？
+  title_zh_hk: 咩係 UAM？
+  en: 'People sometimes use “UAM” as if it meant the whole low-altitude economy. That is too wide.'
+  zh: '有人有时会把「UAM」说得像整个低空经济。这样说太宽了。'
+  zh_hk: '有人有時會將「UAM」講到好似成個低空經濟咁。咁講太寬喇。'
+- id: define
+  visual: whatis_definition
+  seconds: 20
+  sentence_en: 'Short-distance movement of people or cargo inside a dense city; one part of LAE.'
+  sentence_zh: '在密集城市内部的短途人员或货物运输；低空经济的一部分。'
+  sentence_zh_hk: '喺密集城市內部嘅短途人員或貨物運輸；低空經濟嘅一部分。'
+  en: 'Urban air mobility, or UAM, is the short-distance movement of people or cargo inside a dense city. In this course it is one part of LAE, not another name for the whole low-altitude economy.'
+  zh: '城市空中交通，也就是 UAM，是指在密集城市内部的短途人员或货物运输。在本课程里，它是低空经济的一部分，而不是整个低空经济的另一个名称。'
+  zh_hk: '城市空中交通，即係 UAM，係指喺密集城市內部嘅短途人員或貨物運輸。喺本課程裏，佢係低空經濟嘅一部分，而唔係成個低空經濟嘅另一個名稱。'
+- id: contrast
+  visual: whatis_contrast
+  seconds: 24
+  what_en: 'The in-city part of LAE.'
+  what_zh: '低空经济中的市内部分。'
+  what_zh_hk: '低空經濟中嘅市內部分。'
+  not_en: 'Another name for all of LAE, or the broader industry talk that links cities or corridors.'
+  not_zh: '整个低空经济的另一个名称，或把城市、走廊连起来的更宽的行业说法。'
+  not_zh_hk: '成個低空經濟嘅另一個名稱，或把城市、走廊連起嚟嘅更寬嘅行業講法。'
+  s1_en: 'UAM is movement of people or cargo inside a city. It is not every low-altitude activity, and it is not the broader industry talk that links cities, suburbs, or corridors.'
+  s1_zh: 'UAM 是城市内部的人员或货物运输。它不是所有低空活动，也不是把城市、郊区或走廊连起来的更宽的行业说法。'
+  s1_zh_hk: 'UAM 係城市內部嘅人員或貨物運輸。佢唔係所有低空活動，亦唔係把城市、郊區或走廊連起嚟嘅更寬嘅行業講法。'
+  s2_en: 'A cargo SUA trial can be LAE without being passenger UAM. This is an example to explain the idea, not a claim that a named trial operates today.'
+  s2_zh: '一次货运 SUA 试验可以属于低空经济，但不等于客运 UAM。这只是用来说明这个概念的例子，并不是声称某个具名试验今天正在运营。'
+  s2_zh_hk: '一次貨運 SUA 試驗可以屬於低空經濟，但唔等於客運 UAM。呢個只係用嚟說明呢個概念嘅例子，並唔係聲稱某個具名試驗而家正在營運。'
+- id: rule
+  visual: whatis_takeaway
+  seconds: 16
+  rule_en: 'Keep UAM for short trips inside a city. Do not treat every LAE activity as UAM.'
+  rule_zh: '把 UAM 留给城市内部的短途运输。不要把每一项低空经济活动都当成 UAM。'
+  rule_zh_hk: '將 UAM 留俾城市內部嘅短途運輸。唔好將每一項低空經濟活動都當成 UAM。'
+  en: 'Keep UAM for short trips inside a city. Do not treat every LAE activity as UAM.'
+  zh: '把 UAM 留给城市内部的短途运输。不要把每一项低空经济活动都当成 UAM。'
+  zh_hk: '將 UAM 留俾城市內部嘅短途運輸。唔好將每一項低空經濟活動都當成 UAM。'

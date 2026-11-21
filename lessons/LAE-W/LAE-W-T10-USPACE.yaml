@@ -1,0 +1,51 @@
+id: LAE-W-T10-USPACE
+course_en: DOTE5891 Low-Altitude Economy
+course_zh: DOTE5891 低空经济
+course_zh_hk: DOTE5891 低空經濟
+duration_target_s: 68
+title_en: What is U-space?
+title_zh: 什么是 U-space？
+title_zh_hk: 咩係 U-space？
+source_en: Glossary, primer, and Week 8, lae-companion
+source_zh: 词汇表、入门与第8周，lae-companion
+source_zh_hk: 詞彙表、入門同第8週，lae-companion
+beats:
+- id: hook
+  visual: whatis_title
+  seconds: 14
+  title_en: What is U-space?
+  title_zh: 什么是 U-space？
+  title_zh_hk: 咩係 U-space？
+  en: 'You will also see the word U-space in readings. That label can sound like a local rulebook. It is not.'
+  zh: '在阅读材料里，你也会看到 U-space 这个词。这个标签听起来像本地的规则手册。其实并不是。'
+  zh_hk: '喺閱讀材料裏，你亦會見到 U-space 呢個詞。呢個標籤聽落好似本地嘅規則手冊。其實並唔係。'
+- id: define
+  visual: whatis_definition
+  seconds: 20
+  sentence_en: 'An EU and industry way of managing unmanned traffic in set areas of airspace.'
+  sentence_zh: '欧盟和行业在指定空域范围内管理无人驾驶航空器交通的做法。'
+  sentence_zh_hk: '歐盟同行業喺指定空域範圍內管理無人駕駛航空器交通嘅做法。'
+  en: 'U-space is an EU and industry way of managing unmanned traffic in set areas of airspace. In this course it is useful for comparison when readings discuss digital traffic services and the roles around them.'
+  zh: 'U-space 是欧盟和行业在指定空域范围内管理无人驾驶航空器交通的做法。在本课程里，当阅读材料谈到数字交通服务及其相关角色时，可以用它来作比较。'
+  zh_hk: 'U-space 係歐盟同行業喺指定空域範圍內管理無人駕駛航空器交通嘅做法。喺本課程裏，當閱讀材料講到數字交通服務同相關角色嘅時候，可以用佢嚟作比較。'
+- id: contrast
+  visual: whatis_contrast
+  seconds: 16
+  what_en: 'A term used for comparison, about digital traffic services and roles.'
+  what_zh: '用来作比较的术语，指数字交通服务和相关角色。'
+  what_zh_hk: '用嚟作比較嘅術語，指數字交通服務同相關角色。'
+  not_en: 'Hong Kong law, or a set of rules you follow in Hong Kong.'
+  not_zh: '香港法律，或一套你在香港必须遵守的规则。'
+  not_zh_hk: '香港法律，或一套你喺香港必須遵守嘅規則。'
+  en: 'U-space is an EU and industry way of managing unmanned traffic. It is not Hong Kong law, and it is not a set of rules you follow in Hong Kong.'
+  zh: 'U-space 是欧盟和行业管理无人驾驶航空器交通的做法。它不是香港法律，也不是一套你在香港要遵守的规则。'
+  zh_hk: 'U-space 係歐盟同行業管理無人駕駛航空器交通嘅做法。佢唔係香港法律，亦唔係一套你喺香港要遵守嘅規則。'
+- id: rule
+  visual: whatis_takeaway
+  seconds: 18
+  rule_en: 'If a reading describes U-space services or roles, do not treat them as the rules you must follow in Hong Kong. They are for comparison only, not a Hong Kong law.'
+  rule_zh: '如果阅读材料描述了 U-space 的服务或角色，不要把它们当成你在香港必须遵守的规则。它们只是用来作比较，并不是香港的法律。'
+  rule_zh_hk: '如果閱讀材料描述咗 U-space 嘅服務或角色，唔好將佢哋當成你喺香港必須遵守嘅規則。佢哋淨係用嚟作比較，並唔係香港嘅法律。'
+  en: 'If a reading describes U-space services or roles, do not treat them as the rules you must follow in Hong Kong. They are for comparison only, not a Hong Kong law.'
+  zh: '如果阅读材料描述了 U-space 的服务或角色，不要把它们当成你在香港必须遵守的规则。它们只是用来作比较，并不是香港的法律。'
+  zh_hk: '如果閱讀材料描述咗 U-space 嘅服務或角色，唔好將佢哋當成你喺香港必須遵守嘅規則。佢哋淨係用嚟作比較，並唔係香港嘅法律。'

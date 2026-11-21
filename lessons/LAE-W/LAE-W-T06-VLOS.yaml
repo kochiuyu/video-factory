@@ -1,0 +1,51 @@
+id: LAE-W-T06-VLOS
+course_en: DOTE5891 Low-Altitude Economy
+course_zh: DOTE5891 低空经济
+course_zh_hk: DOTE5891 低空經濟
+duration_target_s: 72
+title_en: What is VLOS?
+title_zh: 什么是 VLOS？
+title_zh_hk: 咩係 VLOS？
+source_en: Primer, FAQ, and glossary, lae-companion
+source_zh: 入门、常见问题与词汇表，lae-companion
+source_zh_hk: 入門、常見問題同詞彙表，lae-companion
+beats:
+- id: hook
+  visual: whatis_title
+  seconds: 14
+  title_en: What is VLOS?
+  title_zh: 什么是 VLOS？
+  title_zh_hk: 咩係 VLOS？
+  en: 'When people watch an aircraft on a screen, they often assume the flight is VLOS. That is too loose.'
+  zh: '人们如果只在屏幕上看到飞行器，常常会以为这次飞行就是 VLOS。这样说太宽松了。'
+  zh_hk: '啲人如果淨係喺屏幕上面見到飛行器，好多時會以為呢次飛行就係 VLOS。咁講太寬鬆喇。'
+- id: define
+  visual: whatis_definition
+  seconds: 24
+  sentence_en: 'The remote pilot, or observers when required, can see the aircraft with their own eyes during the flight.'
+  sentence_zh: '遥控驾驶员，或在规则有要求时的视像观察员，在飞行中用自己的眼睛看到飞行器。'
+  sentence_zh_hk: '遙控駕駛員，或喺規則有要求時嘅視像觀察員，喺飛行中用自己嘅眼睛見到飛行器。'
+  en: 'Visual line of sight, or VLOS, means the remote pilot — or extra observers, when the rules require them — can see the aircraft with their own eyes during the flight. The point is that a person keeps watching where the aircraft is and what is around it, so problems can be noticed.'
+  zh: '视线内操作，也就是 VLOS，是指遥控驾驶员——或者在规则有此要求时，额外的视像观察员——在飞行过程中用自己的眼睛看到飞行器。重点是，要有人持续看着飞行器在哪里、周围有什么，这样才能发现问题。'
+  zh_hk: '視線內操作，即係 VLOS，係指遙控駕駛員——或者喺規則有呢個要求嘅時候，額外嘅視像觀察員——喺飛行過程中用自己嘅眼睛見到飛行器。重點係，要有人持續睇住飛行器喺邊、周圍有啲咩，先至發現到問題。'
+- id: contrast
+  visual: whatis_contrast
+  seconds: 16
+  what_en: 'Seeing the aircraft with your own eyes.'
+  what_zh: '用自己的眼睛看到飞行器。'
+  what_zh_hk: '用自己嘅眼睛見到飛行器。'
+  not_en: 'Watching only a camera feed or a tracking icon.'
+  not_zh: '只看摄像画面或屏幕上的跟踪图标。'
+  not_zh_hk: '淨係睇攝像畫面或屏幕上嘅跟蹤圖標。'
+  en: 'VLOS means seeing the aircraft with your own eyes. Watching only a camera feed or a tracking icon on a screen is not VLOS.'
+  zh: 'VLOS 是指用自己的眼睛看到飞行器。只看摄像画面，或只看屏幕上的跟踪图标，都不是 VLOS。'
+  zh_hk: 'VLOS 係指用自己嘅眼睛見到飛行器。淨係睇攝像畫面，或者淨係睇屏幕上嘅跟蹤圖標，都唔係 VLOS。'
+- id: rule
+  visual: whatis_takeaway
+  seconds: 18
+  rule_en: 'If you can see the aircraft only on a screen, that is not VLOS. Being able to see it is not, by itself, a free pass.'
+  rule_zh: '只能在屏幕上看到飞行器，就不是 VLOS。单单能够看见它，本身并不是一张通行证。'
+  rule_zh_hk: '淨係可以喺屏幕上面見到飛行器，就唔係 VLOS。單係能夠見到佢，本身並唔係一張通行證。'
+  en: 'If you can see the aircraft only on a screen, that is not VLOS. A VLOS flight can still need permission from the Civil Aviation Department — being able to see the aircraft is not, by itself, a free pass.'
+  zh: '如果你只能在屏幕上看到飞行器，那就不是 VLOS。视线内飞行仍然可能需要民航处的许可——单单能够看见飞行器，本身并不是一张通行证。'
+  zh_hk: '如果你淨係可以喺屏幕上面見到飛行器，咁就唔係 VLOS。視線內飛行仍然可能需要民航處嘅許可——單係能夠見到飛行器，本身並唔係一張通行證。'

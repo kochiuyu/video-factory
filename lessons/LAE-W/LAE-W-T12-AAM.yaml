@@ -1,0 +1,54 @@
+id: LAE-W-T12-AAM
+course_en: DOTE5891 Low-Altitude Economy
+course_zh: DOTE5891 低空经济
+course_zh_hk: DOTE5891 低空經濟
+duration_target_s: 74
+title_en: What is AAM?
+title_zh: 什么是 AAM？
+title_zh_hk: 咩係 AAM？
+source_en: Glossary, primer, and Week 1, lae-companion
+source_zh: 词汇表、入门与第1周，lae-companion
+source_zh_hk: 詞彙表、入門同第1週，lae-companion
+beats:
+- id: hook
+  visual: whatis_title
+  seconds: 12
+  title_en: What is AAM?
+  title_zh: 什么是 AAM？
+  title_zh_hk: 咩係 AAM？
+  en: 'Readings also use the label AAM. It sounds official, but it is not Hong Kong law.'
+  zh: '阅读材料里也会用到 AAM 这个标签。它听起来像官方用语，但并不是香港的法律。'
+  zh_hk: '閱讀材料裏亦會用到 AAM 呢個標籤。佢聽落好似官方用語，但並唔係香港嘅法律。'
+- id: define
+  visual: whatis_definition
+  seconds: 22
+  sentence_en: 'A broad industry name for new aircraft ideas that may link cities, suburbs, or corridors.'
+  sentence_zh: '对可能连接城市、郊区或走廊的 新飞行器构想的宽泛行业叫法。'
+  sentence_zh_hk: '對可能連接城市、郊區或走廊嘅 新飛行器構想嘅寬泛行業叫法。'
+  en: 'Advanced air mobility, or AAM, is a broad industry name for new aircraft ideas that may link cities, suburbs, or corridors. This course uses AAM for comparison only, alongside Hong Kong-first LAE and city UAM.'
+  zh: '先进空中交通，也就是 AAM，是对可能连接城市、郊区或走廊的新飞行器构想的宽泛行业叫法。本课程只把 AAM 用来作比较，与以香港为主的低空经济、以及市内的 UAM 并列使用。'
+  zh_hk: '先進空中交通，即係 AAM，係對可能連接城市、郊區或走廊嘅新飛行器構想嘅寬泛行業叫法。本課程只把 AAM 用嚟作比較，同以香港為主嘅低空經濟、以及市內嘅 UAM 並列使用。'
+- id: contrast
+  visual: whatis_contrast
+  seconds: 24
+  what_en: 'An industry name used for comparison, alongside Hong Kong-first LAE and city UAM.'
+  what_zh: '用来作比较的行业叫法，与以香港为主的低空经济和市内 UAM 并列。'
+  what_zh_hk: '用嚟作比較嘅行業叫法，同以香港為主嘅低空經濟同市內 UAM 並列。'
+  not_en: 'Hong Kong law, or another name for LAE or UAM.'
+  not_zh: '香港法律，或低空经济、UAM 的另一个名称。'
+  not_zh_hk: '香港法律，或低空經濟、UAM 嘅另一個名稱。'
+  s1_en: 'AAM is broader industry talk. It is not Hong Kong law, and it is not another name for LAE or for in-city UAM.'
+  s1_zh: 'AAM 是更宽的行业说法。它不是香港法律，也不是低空经济或市内 UAM 的另一个名称。'
+  s1_zh_hk: 'AAM 係更寬嘅行業講法。佢唔係香港法律，亦唔係低空經濟或市內 UAM 嘅另一個名稱。'
+  s2_en: 'In this course, the terms fit together like this: LAE is the umbrella; UAM is the in-city part; AAM is the wider industry name we use for comparison.'
+  s2_zh: '在本课程里，这些术语是这样对应的：低空经济是总称；UAM 是市内的那一部分；AAM 是我们用来作比较的更宽的行业叫法。'
+  s2_zh_hk: '喺本課程裏，呢啲術語係噉對應嘅：低空經濟係總稱；UAM 係市內嗰一部分；AAM 係我哋用嚟作比較嘅更寬嘅行業叫法。'
+- id: rule
+  visual: whatis_takeaway
+  seconds: 16
+  rule_en: 'If you treat AAM language as Hong Kong law, or as just another name for LAE, you have mixed those layers.'
+  rule_zh: '如果把 AAM 的说法当成香港法律，或只当成低空经济的另一个名称，就是把这些层次混在一起了。'
+  rule_zh_hk: '如果將 AAM 嘅講法當成香港法律，或只當成低空經濟嘅另一個名稱，就係將呢啲層次撈亂咗。'
+  en: 'If you treat AAM language as Hong Kong law, or as just another name for LAE, you have mixed those layers.'
+  zh: '如果把 AAM 的说法当成香港法律，或只当成低空经济的另一个名称，就是把这些层次混在一起了。'
+  zh_hk: '如果將 AAM 嘅講法當成香港法律，或只當成低空經濟嘅另一個名稱，就係將呢啲層次撈亂咗。'

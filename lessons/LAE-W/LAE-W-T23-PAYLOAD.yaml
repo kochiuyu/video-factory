@@ -1,0 +1,58 @@
+id: 'LAE-W-T23-PAYLOAD'
+course_en: 'DOTE5891 Low-Altitude Economy'
+course_zh: 'DOTE5891 低空经济'
+course_zh_hk: 'DOTE5891 低空經濟'
+duration_target_s: 89
+caption_keep: true
+title_en: 'What is a payload?'
+title_zh: '什么是载荷？'
+title_zh_hk: '咩係載荷？'
+source_en: 'Packet-backed glossary drafts, lae-companion'
+source_zh: '依据证据包的词汇表草稿，lae-companion'
+source_zh_hk: '依據證據包嘅詞彙表草稿，lae-companion'
+beats:
+- id: hook
+  visual: 'whatis_title'
+  seconds: 12
+  title_en: 'What is a payload?'
+  title_zh: '什么是载荷？'
+  title_zh_hk: '咩係載荷？'
+  en: '“Payload,” “empty weight,” and “maximum take-off weight” get used as if they were the same mass. They are not.'
+  zh: '「Payload」、「empty weight」和「maximum take-off weight」，常常被当成同一种质量来用。它们并不是。'
+  zh_hk: '「Payload」、「empty weight」同「maximum take-off weight」，好多時被當成同一種質量嚟用。佢哋並唔係。'
+- id: define
+  visual: 'whatis_definition'
+  seconds: 20
+  sentence_en: 'The mass or cargo carried for the mission — not empty weight, and not maximum take-off weight. There is no official empty-weight definition in the sources for this course.'
+  sentence_zh: '为执行任务而携带的质量或货物——不是 empty weight，也不是最大起飞重量。本课程所用资料里，没有 empty weight 的官方定义。'
+  sentence_zh_hk: '為執行任務而攜帶嘅質量或貨物——唔係 empty weight，亦唔係最大起飛重量。本課程所用資料裏，冇 empty weight 嘅官方定義。'
+  en: 'Payload is the mass or cargo carried for the mission. It is not empty weight, and it is not maximum take-off weight, or MTOW — the maximum certified take-off weight. There is no official definition of empty weight in the sources for this course.'
+  zh: '载荷是为执行任务而携带的质量或货物。它不是 empty weight，也不是最大起飞重量，也就是 MTOW——经核定的最大起飞重量。本课程所用资料里，没有 empty weight 的官方定义。'
+  zh_hk: '載荷係為執行任務而攜帶嘅質量或貨物。佢唔係 empty weight，亦唔係最大起飛重量，即係 MTOW——經核定嘅最大起飛重量。本課程所用資料裏，冇 empty weight 嘅官方定義。'
+- id: contrast
+  visual: 'whatis_contrast'
+  seconds: 40
+  what_en: 'The mission mass or cargo. Legal aircraft weight is different: it counts everything installed, carried, or attached.'
+  what_zh: '任务所需的质量或货物。法律上的飞行器重量不同：它计入所有已安装、携带或附上的物品。'
+  what_zh_hk: '任務所需嘅質量或貨物。法律上嘅飛行器重量唔同：佢計入所有已安裝、攜帶或附上嘅物品。'
+  not_en: 'Empty weight; MTOW; or the 150 kg small-unmanned-aircraft ceiling, which is not a payload-capacity limit.'
+  not_zh: '不是 empty weight，不是 MTOW，也不是150公斤的小型无人飞机上限——那并不是载荷容量限制。'
+  not_zh_hk: '唔係 empty weight，唔係 MTOW，亦唔係150公斤嘅小型無人飛機上限——嗰個並唔係載荷容量限制。'
+  s1_en: 'Hong Kong’s Cap. 448G does not use the word “payload.” The category rules, and the 150 kilogram ceiling for being a small unmanned aircraft, use a defined “weight.” That weight counts everything installed in, carried by, or attached to the aircraft.'
+  s1_zh: '香港的 Cap. 448G 并没有使用「payload」这个词。类别规则，以及作为小型无人飞机的150公斤上限，用的是一个已界定的「weight」。这个重量计入安装在飞行器上、由它携带、或附在它上面的一切。'
+  s1_zh_hk: '香港嘅 Cap. 448G 並冇使用「payload」呢個詞。類別規則，以及作為小型無人飛機嘅150公斤上限，用嘅係一個已界定嘅「weight」。呢個重量計入安裝喺飛行器上、由佢攜帶、或附喺佢上面嘅一切。'
+  s2_en: 'Official safety-requirements guidance gives examples of that counted mass: any battery, fuel, or payload, such as cameras, guards, or lights.'
+  s2_zh: '官方安全要求指引为这种计入的质量给了例子：任何电池、燃料或载荷，例如相机、防护装置或灯具。'
+  s2_zh_hk: '官方安全要求指引為呢種計入嘅質量畀咗例子：任何電池、燃料或載荷，例如相機、防護裝置或燈具。'
+  s3_en: 'That 150 kilogram figure is the aircraft-weight ceiling, not a limit on how much payload the aircraft can carry. First-sandbox BVLOS material restates the same ceiling, including payload.'
+  s3_zh: '这个150公斤的数字，是飞行器重量的上限，不是飞行器可以携带多少载荷的限制。第一期沙盒的 BVLOS 材料重述了同一上限，并且包括载荷。'
+  s3_zh_hk: '呢個150公斤嘅數字，係飛行器重量嘅上限，唔係飛行器可以攜帶幾多載荷嘅限制。第一期沙盒嘅 BVLOS 材料重述咗同一上限，並且包括載荷。'
+- id: rule
+  visual: 'whatis_takeaway'
+  seconds: 22
+  rule_en: 'Say “payload” only when you mean the mission mass or cargo. Do not treat 150 kg as a payload-capacity figure.'
+  rule_zh: '只有在指任务所需的质量或货物时，才说「payload」。不要把150公斤当成载荷容量数字。'
+  rule_zh_hk: '只有喺指任務所需嘅質量或貨物時，先講「payload」。唔好將150公斤當成載荷容量數字。'
+  en: 'Say “payload” only when you mean the mass or cargo carried for the mission. Do not treat 150 kilograms as a payload-capacity figure, and do not treat legal aircraft weight as if it were payload alone. Mission economics and the category rules both depend on which mass you mean.'
+  zh: '只有在指为执行任务而携带的质量或货物时，才说「payload」。不要把150公斤当成载荷容量数字，也不要把法律上的飞行器重量当成只是载荷。任务的经济账和类别规则，都取决于你指的是哪一种质量。'
+  zh_hk: '只有喺指為執行任務而攜帶嘅質量或貨物時，先講「payload」。唔好將150公斤當成載荷容量數字，亦唔好將法律上嘅飛行器重量當成只係載荷。任務嘅經濟帳同類別規則，都取決於你指嘅係邊一種質量。'

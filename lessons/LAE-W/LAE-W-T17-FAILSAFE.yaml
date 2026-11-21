@@ -1,0 +1,57 @@
+id: 'LAE-W-T17-FAILSAFE'
+course_en: 'DOTE5891 Low-Altitude Economy'
+course_zh: 'DOTE5891 低空经济'
+course_zh_hk: 'DOTE5891 低空經濟'
+duration_target_s: 83
+title_en: 'What is a fail-safe mechanism?'
+title_zh: '什么是失效安全机制？'
+title_zh_hk: '咩係失效安全機制？'
+source_en: 'Packet-backed glossary drafts, lae-companion'
+source_zh: '依据证据包的词汇表草稿，lae-companion'
+source_zh_hk: '依據證據包嘅詞彙表草稿，lae-companion'
+beats:
+- id: hook
+  visual: 'whatis_title'
+  seconds: 12
+  title_en: 'What is a fail-safe mechanism?'
+  title_zh: '什么是失效安全机制？'
+  title_zh_hk: '咩係失效安全機制？'
+  en: 'The words “fail-safe” can sound as if nothing can go wrong, or as if risk has fallen to zero. That goes too far.'
+  zh: '「fail-safe」这几个词听起来，好像什么都不会出错，又好像风险已经降到零。这样说过头了。'
+  zh_hk: '「fail-safe」呢幾個詞聽落，好似咩都唔會出錯，又好似風險已經降到零。咁講過頭喇。'
+- id: define
+  visual: 'whatis_definition'
+  seconds: 18
+  sentence_en: 'A design or procedure that puts the small unmanned aircraft into a safer state after a failure.'
+  sentence_zh: '在发生故障后，使小型无人飞机进入更安全状态的设计或程序。'
+  sentence_zh_hk: '喺發生故障之後，使小型無人飛機進入更安全狀態嘅設計或程序。'
+  en: 'A fail-safe mechanism is a design or a procedure that puts the small unmanned aircraft into a safer state after a failure. The aim is a safer state after something has already gone wrong — not a claim of zero risk.'
+  zh: '失效安全机制是一种设计或程序，在发生故障后，使小型无人飞机进入更安全的状态。目的是在已经出错之后进入更安全的状态，而不是声称风险为零。'
+  zh_hk: '失效安全機制係一種設計或程序，喺發生故障之後，使小型無人飛機進入更安全嘅狀態。目的係喺已經出錯之後進入更安全嘅狀態，而唔係聲稱風險為零。'
+- id: contrast
+  visual: 'whatis_contrast'
+  seconds: 30
+  what_en: 'A design or procedure that puts the aircraft into a safer state after a failure.'
+  what_zh: '在发生故障后，使飞行器进入更安全状态的设计或程序。'
+  what_zh_hk: '喺發生故障之後，使飛行器進入更安全狀態嘅設計或程序。'
+  not_en: 'A promise of zero risk, return-to-home, or flight termination as a whole. In first-sandbox operations-manual guidance, fail-safe shall include a flight-termination function.'
+  not_zh: '不是零风险的保证，不是自动返航，也不是飞行终止的全部。在第一期沙盒运行手册指引里，失效安全必须包括飞行终止功能。'
+  not_zh_hk: '唔係零風險嘅保證，唔係自動返航，亦唔係飛行終止嘅全部。喺第一期沙盒運行手冊指引裏，失效安全必須包括飛行終止功能。'
+  s1_en: 'It is not automatically the same as return-to-home, and it is not the same as flight termination as a whole.'
+  s1_zh: '它并不自动等同于自动返航，也不等同于飞行终止的全部。'
+  s1_zh_hk: '佢並唔自動等同於自動返航，亦唔等同於飛行終止嘅全部。'
+  s2_en: 'In first-sandbox operations-manual guidance, a fail-safe mechanism shall include a flight-termination function that can stop the operation in an emergency. That still does not make fail-safe the same as flight termination.'
+  s2_zh: '在第一期沙盒的运行手册指引里，失效安全机制必须包括一项飞行终止功能，以便在紧急情况下停止这次作业。这仍然不能使失效安全等同于飞行终止。'
+  s2_zh_hk: '喺第一期沙盒嘅運行手冊指引裏，失效安全機制必須包括一項飛行終止功能，以便喺緊急情況下停止呢次作業。呢個仍然唔能使失效安全等同於飛行終止。'
+  s3_en: 'In Sandbox X material, loss of the command-and-control link is only an example emergency.'
+  s3_zh: '在 Sandbox X 材料里，指挥控制链路中断只是紧急情况的一个例子。'
+  s3_zh_hk: '喺 Sandbox X 材料裏，指揮控制鏈路中斷只係緊急情況嘅一個例子。'
+- id: rule
+  visual: 'whatis_takeaway'
+  seconds: 26
+  rule_en: 'A fail-safe mechanism aims at a safer state after a failure. It does not mean zero risk, and it is not another name for return-to-home or flight termination.'
+  rule_zh: '失效安全机制的目标，是在故障后进入更安全的状态。它并不表示风险为零，也不是自动返航或飞行终止的另一个名称。'
+  rule_zh_hk: '失效安全機制嘅目標，係喺故障後進入更安全嘅狀態。佢並唔表示風險為零，亦唔係自動返航或飛行終止嘅另一個名稱。'
+  en: 'Remember a fail-safe mechanism as a path to a safer state after a failure, not as zero risk, and not as another name for return-to-home or flight termination. In first-sandbox material, the operator and the remote pilot are told to determine a suitable response and a fail-safe mechanism for emergencies. That is not a rule for every flight.'
+  zh: '请把失效安全机制记作故障后通往更安全状态的路径，而不是零风险，也不是自动返航或飞行终止的另一个名称。在第一期沙盒材料里，运营人和遥控驾驶员须为紧急情况确定合适的应对和失效安全机制。这并不是适用于每次飞行的规则。'
+  zh_hk: '請把失效安全機制記作故障後通往更安全狀態嘅路徑，而唔係零風險，亦唔係自動返航或飛行終止嘅另一個名稱。喺第一期沙盒材料裏，營運人同遙控駕駛員須為緊急情況確定合適嘅應對同失效安全機制。呢個並唔係適用於每次飛行嘅規則。'

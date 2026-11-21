@@ -1,0 +1,54 @@
+id: LAE-W-T07-BVLOS
+course_en: DOTE5891 Low-Altitude Economy
+course_zh: DOTE5891 低空经济
+course_zh_hk: DOTE5891 低空經濟
+duration_target_s: 78
+title_en: What is BVLOS?
+title_zh: 什么是 BVLOS？
+title_zh_hk: 咩係 BVLOS？
+source_en: Primer, FAQ, and glossary, lae-companion
+source_zh: 入门、常见问题与词汇表，lae-companion
+source_zh_hk: 入門、常見問題同詞彙表，lae-companion
+beats:
+- id: hook
+  visual: whatis_title
+  seconds: 14
+  title_en: What is BVLOS?
+  title_zh: 什么是 BVLOS？
+  title_zh_hk: 咩係 BVLOS？
+  en: 'If a flight goes beyond the pilot’s view, people sometimes treat it as VLOS with a longer range. That mixes the two.'
+  zh: '如果一次飞行超出了遥控驾驶员的视线，有人有时会把它当成飞得更远的 VLOS。这就把两者混在一起了。'
+  zh_hk: '如果一次飛行超出咗遙控駕駛員嘅視線，有人有時會當佢係飛得更遠嘅 VLOS。咁就將兩者撈亂咗。'
+- id: define
+  visual: whatis_definition
+  seconds: 22
+  sentence_en: 'A flight made without the required continuous view of the aircraft with your own eyes.'
+  sentence_zh: '未按要求用自己的眼睛持续看到飞行器的飞行。'
+  sentence_zh_hk: '未按要求用自己嘅眼睛持續見到飛行器嘅飛行。'
+  en: 'Beyond visual line of sight, or BVLOS, is a flight where the remote pilot does not keep a continuous view of the aircraft with their own eyes. A camera feed or a map position does not turn a BVLOS flight into VLOS.'
+  zh: '超视距操作，也就是 BVLOS，是指遥控驾驶员不能用自己的眼睛持续看到飞行器的飞行。摄像画面或地图上的位置，并不能把一次 BVLOS 飞行变成 VLOS。'
+  zh_hk: '超視距操作，即係 BVLOS，係指遙控駕駛員唔能夠用自己嘅眼睛持續見到飛行器嘅飛行。攝像畫面或者地圖上嘅位置，並唔能夠將一次 BVLOS 飛行變成 VLOS。'
+- id: contrast
+  visual: whatis_contrast
+  seconds: 24
+  what_en: 'A flight without that view of the aircraft with your own eyes.'
+  what_zh: '没有用自己的眼睛看到飞行器的飞行。'
+  what_zh_hk: '冇用自己嘅眼睛見到飛行器嘅飛行。'
+  not_en: 'A longer-range VLOS flight, or VLOS because you have a camera or map.'
+  not_zh: '飞得更远的 VLOS，或因为有摄像或地图就当成 VLOS。'
+  not_zh_hk: '飛得更遠嘅 VLOS，或因為有攝像或地圖就當成 VLOS。'
+  s1_en: 'BVLOS is not just VLOS flown farther away.'
+  s1_zh: 'BVLOS 并不只是飞得更远的 VLOS。'
+  s1_zh_hk: 'BVLOS 並唔只係飛得更遠嘅 VLOS。'
+  s2_en: 'The operator has to deal with risk in the air and on the ground, communications, keeping the aircraft in a safe area, monitoring, and backup plans.'
+  s2_zh: '运营方还要处理空中和地面的风险、通信、让飞行器留在安全范围内、监控，以及备用方案。'
+  s2_zh_hk: '營運方仲要處理空中同地面嘅風險、通信、等飛行器留喺安全範圍入面、監察，以及備用方案。'
+- id: rule
+  visual: whatis_takeaway
+  seconds: 18
+  rule_en: 'Do not treat a screen or a map as if it made the flight VLOS, and do not treat BVLOS as merely flying farther.'
+  rule_zh: '不要把屏幕或地图当成已经使这次飞行变成了 VLOS，也不要把 BVLOS 仅仅当成飞得更远。'
+  rule_zh_hk: '唔好將屏幕或者地圖當成已經令呢次飛行變成 VLOS，亦唔好將 BVLOS 純粹當成飛得更遠。'
+  en: 'Do not treat a screen or a map as if it made the flight VLOS, and do not treat BVLOS as merely flying farther. It needs a different safety plan.'
+  zh: '不要把屏幕或地图当成已经使这次飞行变成了 VLOS，也不要把 BVLOS 仅仅当成飞得更远。它需要另一套安全方案。'
+  zh_hk: '唔好將屏幕或者地圖當成已經令呢次飛行變成 VLOS，亦唔好將 BVLOS 純粹當成飛得更遠。佢需要另一套安全方案。'

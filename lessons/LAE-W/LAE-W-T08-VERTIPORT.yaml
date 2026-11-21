@@ -1,0 +1,57 @@
+id: LAE-W-T08-VERTIPORT
+course_en: DOTE5891 Low-Altitude Economy
+course_zh: DOTE5891 低空经济
+course_zh_hk: DOTE5891 低空經濟
+duration_target_s: 92
+title_en: What is a vertiport?
+title_zh: 什么是 vertiport？
+title_zh_hk: 咩係 vertiport？
+source_en: Glossary, primer, FAQ, and Week 5, lae-companion
+source_zh: 词汇表、入门、常见问题与第5周，lae-companion
+source_zh_hk: 詞彙表、入門、常見問題同第5週，lae-companion
+beats:
+- id: hook
+  visual: whatis_title
+  seconds: 12
+  title_en: What is a vertiport?
+  title_zh: 什么是 vertiport？
+  title_zh_hk: 咩係 vertiport？
+  en: 'The word “vertiport” sounds like a name in the law. In Hong Kong, it is not.'
+  zh: '「vertiport」这个词听起来像法律里的名称。在香港，它并不是。'
+  zh_hk: '「vertiport」呢個詞聽落好似法律入面嘅名稱。喺香港，佢並唔係。'
+- id: define
+  visual: whatis_definition
+  seconds: 22
+  sentence_en: 'An industry word for a take-off and landing site for advanced craft, plus the related work on the ground.'
+  sentence_zh: '对先进飞行器起降场地，以及相关地面作业的行业叫法。'
+  sentence_zh_hk: '對先進飛行器起降場地，以及相關地面作業嘅行業叫法。'
+  en: 'A vertiport is an industry word for a take-off and landing site for advanced craft, together with the related work on the ground. In this course it is a name we use in class, not an official Hong Kong category.'
+  zh: 'Vertiport，也就是起降场，是对先进飞行器起降场地、以及相关地面作业的行业叫法。在本课程里，它只是课堂使用的名称，不是香港的官方类别。'
+  zh_hk: 'Vertiport，即係起降場，係對先進飛行器起降場地、以及相關地面作業嘅行業叫法。喺本課程裏，佢只係課堂使用嘅名稱，唔係香港嘅官方類別。'
+- id: contrast
+  visual: whatis_contrast
+  seconds: 36
+  what_en: 'A name we use in class for the site and the work on the ground.'
+  what_zh: '课堂里用来指场地和地面作业的名称。'
+  what_zh_hk: '課堂裏用來指場地同地面作業嘅名稱。'
+  not_en: 'A Hong Kong law written just for vertiports, or only a painted landing pad.'
+  not_zh: '专门为起降场而写的香港法律，或只是一个画出来的降落坪。'
+  not_zh_hk: '專門為起降場而寫嘅香港法律，或只係一個畫出嚟嘅降落坪。'
+  s1_en: 'The site may need more than a painted landing pad: ways for people or cargo to get in and out, charging, space to turn the aircraft around, maintenance, safety procedures, and digital coordination.'
+  s1_zh: '场地需要的可能不只是一个画出来的降落坪：还要有人或货物进出的通道、充电、给飞行器周转的空间、维修、安全程序，以及数字协调。'
+  s1_zh_hk: '場地需要嘅可能唔只係一個畫出嚟嘅降落坪：仲要有人或貨物進出嘅通道、充電、俾飛行器周轉嘅空間、維修、安全程序，以及數字協調。'
+  s2_en: 'How much the site can really handle depends on the slowest bottleneck, not only the number of pads.'
+  s2_zh: '场地真正能处理多少，取决于最慢的那个瓶颈，而不只是画了多少个坪。'
+  s2_zh_hk: '場地真正能處理幾多，取決於最慢嗰個瓶頸，而唔只係畫咗幾多個坪。'
+  s3_en: 'Hong Kong has no law written just for vertiports yet.'
+  s3_zh: '香港目前还没有专门为起降场而写的法例。'
+  s3_zh_hk: '香港而家仲未有專門為起降場而寫嘅法例。'
+- id: rule
+  visual: whatis_takeaway
+  seconds: 22
+  rule_en: 'Do not treat “vertiport” as an official Hong Kong category, and do not judge a site only by how many landing spots are painted on the ground.'
+  rule_zh: "不要把 vertiport 当成香港的官方类别，\n也不要只凭地面画了多少个降落点来判断一个场地。"
+  rule_zh_hk: "唔好將 vertiport 當成香港嘅官方類別，\n亦唔好淨係憑地面畫咗幾多個降落點嚟判斷一個場地。"
+  en: 'Do not treat “vertiport” as an official Hong Kong category, and do not judge a site only by how many landing spots are painted on the ground. The cost of the site, how many jobs it can handle, and the available time slots can become a limit before the aircraft do.'
+  zh: '不要把 vertiport 当成香港的官方类别，也不要只凭地面画了多少个降落点来判断一个场地。场地成本、能处理多少任务、以及可用的时段，都可能先于飞行器本身成为限制。'
+  zh_hk: '唔好將 vertiport 當成香港嘅官方類別，亦唔好淨係憑地面畫咗幾多個降落點嚟判斷一個場地。場地成本、能處理幾多任務、以及可用嘅時段，都可能先於飛行器本身成為限制。'

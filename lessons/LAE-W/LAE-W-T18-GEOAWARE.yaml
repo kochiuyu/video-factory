@@ -1,0 +1,58 @@
+id: 'LAE-W-T18-GEOAWARE'
+course_en: 'DOTE5891 Low-Altitude Economy'
+course_zh: 'DOTE5891 低空经济'
+course_zh_hk: 'DOTE5891 低空經濟'
+duration_target_s: 79
+caption_keep: true
+title_en: 'What is geo-awareness?'
+title_zh: '什么是适飞空域辨识？'
+title_zh_hk: '咩係適飛空域辨識？'
+source_en: 'Packet-backed glossary drafts, lae-companion'
+source_zh: '依据证据包的词汇表草稿，lae-companion'
+source_zh_hk: '依據證據包嘅詞彙表草稿，lae-companion'
+beats:
+- id: hook
+  visual: 'whatis_title'
+  seconds: 12
+  title_en: 'What is geo-awareness?'
+  title_zh: '什么是适飞空域辨识？'
+  title_zh_hk: '咩係適飛空域辨識？'
+  en: 'Geo-awareness, a geo-fence, and containment get used as if they were the same idea. They are not.'
+  zh: '适飞空域辨识、电子围栏和 containment，常常被当成同一回事来用。它们并不是。'
+  zh_hk: '適飛空域辨識、電子圍欄同 containment，好多時被當成同一回事嚟用。佢哋並唔係。'
+- id: define
+  visual: 'whatis_definition'
+  seconds: 20
+  sentence_en: 'A safety-system function that supports awareness of geographical limits.'
+  sentence_zh: '用以支援对地理限制保持察觉的安全系统功能。'
+  sentence_zh_hk: '用嚟支援對地理限制保持察覺嘅安全系統功能。'
+  en: 'Geo-awareness is a safety-system function on a small unmanned aircraft that supports awareness of geographical limits. It helps with noticing those limits. It is not the boundary itself, and it is not the whole job of keeping the aircraft inside an area.'
+  zh: '适飞空域辨识是小型无人飞机上的一项安全系统功能，用来支援对地理限制保持察觉。它有助于注意到这些限制。它不是界限本身，也不是让飞行器留在某一区域内的全部工作。'
+  zh_hk: '適飛空域辨識係小型無人飛機上嘅一項安全系統功能，用嚟支援對地理限制保持察覺。佢有助於注意到呢啲限制。佢唔係界限本身，亦唔係等飛行器留喺某一區域內嘅全部工作。'
+- id: contrast
+  visual: 'whatis_contrast'
+  seconds: 30
+  what_en: 'A function that helps with noticing geographical limits. Cap. 448G s.13 lists four functions; CAD maps some to geo-awareness and some to the flight log.'
+  what_zh: '有助于注意到地理限制的功能。Cap. 448G 第13条列出四项功能；民航处把其中一些对应到适飞空域辨识，另一些对应到飞行记录。'
+  what_zh_hk: '有助於注意到地理限制嘅功能。Cap. 448G 第13條列出四項功能；民航處把其中一啲對應到適飛空域辨識，另一啲對應到飛行記錄。'
+  not_en: 'A geo-fence, containment as a whole, or simply a satellite-navigation signal.'
+  not_zh: '不是电子围栏，不是 containment 的全部，也不只是卫星导航信号。'
+  not_zh_hk: '唔係電子圍欄，唔係 containment 嘅全部，亦唔只係衛星導航信號。'
+  s1_en: 'It is not a geo-fence, and it is not containment. It is also not simply a satellite-navigation signal, even though satellite positioning is used for it.'
+  s1_zh: '它不是电子围栏，也不是 containment。即使卫星定位会用于这项功能，它也不只是卫星导航信号。'
+  s1_zh_hk: '佢唔係電子圍欄，亦唔係 containment。即使衛星定位會用於呢項功能，佢亦唔只係衛星導航信號。'
+  s2_en: 'Cap. 448G section 13 does not use the words “geo-awareness” or “flight log.” It lists four safety-system functions.'
+  s2_zh: 'Cap. 448G 第13条并没有使用「geo-awareness」或「flight log」这些词语。它列出了四项安全系统功能。'
+  s2_zh_hk: 'Cap. 448G 第13條並冇使用「geo-awareness」或「flight log」呢啲詞語。佢列出咗四項安全系統功能。'
+  s3_en: 'CAD’s safety-requirements guidance maps the real-time location and restriction-alert functions to geo-awareness, and maps the recording functions to the flight log.'
+  s3_zh: '民航处的安全要求指引，把实时位置和限制警示功能对应到适飞空域辨识，并把记录功能对应到飞行记录。'
+  s3_zh_hk: '民航處嘅安全要求指引，把實時位置同限制警示功能對應到適飛空域辨識，並把記錄功能對應到飛行記錄。'
+- id: rule
+  visual: 'whatis_takeaway'
+  seconds: 24
+  rule_en: 'The section 11 duty is not universal. Do not say that every small unmanned aircraft must have geo-awareness. It is not the fence, and it is not containment.'
+  rule_zh: '第11条的责任并非普遍适用。不要说每一架小型无人飞机都必须具有适飞空域辨识。它不是围栏，也不是 containment。'
+  rule_zh_hk: '第11條嘅責任並唔係普遍適用。唔好話每一架小型無人飛機都必須具有適飛空域辨識。佢唔係圍欄，亦唔係 containment。'
+  en: 'The safety-system duty in section 11 is not universal. It does not apply to a flight wholly inside an enclosed area, or to a category A1 aircraft on a flight that meets the conditions in section 10. First-sandbox BVLOS material restates the same functions. Do not say that every small unmanned aircraft must have geo-awareness.'
+  zh: '第11条下的安全系统责任并非普遍适用。它不适用于完全在围封区域内的飞行，也不适用于在符合第10条条件的飞行中的 A1 类飞行器。第一期沙盒的 BVLOS 材料重述了这些功能。不要说每一架小型无人飞机都必须具有适飞空域辨识。'
+  zh_hk: '第11條下嘅安全系統責任並唔係普遍適用。佢唔適用於完全喺圍封區域內嘅飛行，亦唔適用於喺符合第10條條件嘅飛行中嘅 A1 類飛行器。第一期沙盒嘅 BVLOS 材料重述咗呢啲功能。唔好話每一架小型無人飛機都必須具有適飛空域辨識。'

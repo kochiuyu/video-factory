@@ -1,0 +1,54 @@
+id: 'LAE-W-T14-OBSERVER'
+course_en: 'DOTE5891 Low-Altitude Economy'
+course_zh: 'DOTE5891 低空经济'
+course_zh_hk: 'DOTE5891 低空經濟'
+duration_target_s: 70
+title_en: 'What is a visual observer?'
+title_zh: '什么是视像观察员？'
+title_zh_hk: '咩係視像觀察員？'
+source_en: 'Packet-backed glossary drafts, lae-companion'
+source_zh: '依据证据包的词汇表草稿，lae-companion'
+source_zh_hk: '依據證據包嘅詞彙表草稿，lae-companion'
+beats:
+- id: hook
+  visual: 'whatis_title'
+  seconds: 12
+  title_en: 'What is a visual observer?'
+  title_zh: '什么是视像观察员？'
+  title_zh_hk: '咩係視像觀察員？'
+  en: 'People sometimes think a visual observer is anyone who can see the aircraft on a screen. That is too loose.'
+  zh: '有人有时会以为，只要能在屏幕上看到飞行器，就是视像观察员。这样说太宽松了。'
+  zh_hk: '有人有時會以為，只要能喺屏幕上面見到飛行器，就係視像觀察員。咁講太寬鬆喇。'
+- id: define
+  visual: 'whatis_definition'
+  seconds: 30
+  sentence_en: 'A person at the same place as the remote pilot, who watches the aircraft with their own eyes and communicates to help avoid collisions.'
+  sentence_zh: '与遥控驾驶员在同一地点、用自己的眼睛注视飞行器，并沟通以协助避免碰撞的人。'
+  sentence_zh_hk: '同遙控駕駛員喺同一地點、用自己嘅眼睛注視飛行器，並溝通以協助避免碰撞嘅人。'
+  en: 'A visual observer is a person at the same place as the remote pilot, who keeps unaided watch on the small unmanned aircraft — with their own eyes, not only through a camera, apart from corrective lenses or sunglasses — and communicates to help avoid collisions. In first-sandbox advisory material, that person is chosen by the remote pilot, has good eyesight, and can communicate in time.'
+  zh: '视像观察员是与遥控驾驶员在同一地点的人，对小型无人飞机保持目视观察——用自己的眼睛看，而不是只通过摄像，矫正眼镜或太阳镜除外——并沟通以协助避免碰撞。在第一期监管沙盒的咨询材料里，这个人由遥控驾驶员选定，视力良好，并能及时沟通。'
+  zh_hk: '視像觀察員係同遙控駕駛員喺同一地點嘅人，對小型無人飛機保持目視觀察——用自己嘅眼睛睇，而唔係淨係靠攝像，矯視眼鏡或太陽眼鏡除外——並溝通以協助避免碰撞。喺第一期監管沙盒嘅諮詢材料裏，呢個人由遙控駕駛員選定，視力良好，並能及時溝通。'
+- id: contrast
+  visual: 'whatis_contrast'
+  seconds: 18
+  what_en: 'At the same place, watching with their own eyes, and communicating to help avoid collisions.'
+  what_zh: '在同一地点，用自己的眼睛注视，并沟通以协助避免碰撞。'
+  what_zh_hk: '喺同一地點，用自己嘅眼睛注視，並溝通以協助避免碰撞。'
+  not_en: 'Watching only a camera feed, or watching from somewhere else.'
+  not_zh: '只看摄像画面，或在别的地方观看。'
+  not_zh_hk: '淨係睇攝像畫面，或喺第二度觀看。'
+  s1_en: 'A visual observer is at the same place as the remote pilot, watching with their own eyes and communicating to help avoid a collision.'
+  s1_zh: '视像观察员与遥控驾驶员在同一地点，用自己的眼睛注视，并沟通以协助避免碰撞。'
+  s1_zh_hk: '視像觀察員同遙控駕駛員喺同一地點，用自己嘅眼睛注視，並溝通以協助避免碰撞。'
+  s2_en: 'Watching only a camera feed, or watching from somewhere else, is not what this term means.'
+  s2_zh: '只看摄像画面，或在别的地方观看，都不是这个术语的意思。'
+  s2_zh_hk: '淨係睇攝像畫面，或喺第二度觀看，都唔係呢個術語嘅意思。'
+- id: rule
+  visual: 'whatis_takeaway'
+  seconds: 16
+  rule_en: 'A visual observer is not a screen-watcher, and not a person at a different site. This role does not replace the remote pilot, and not every flight needs one.'
+  rule_zh: '视像观察员不是只盯着屏幕的人，也不是在另一地点的人。这个角色不能替代遥控驾驶员，而且并非每次飞行都需要。'
+  rule_zh_hk: '視像觀察員唔係淨係盯住屏幕嘅人，亦唔係喺另一地點嘅人。呢個角色唔能夠替代遙控駕駛員，而且並唔係每次飛行都需要。'
+  en: 'Do not treat a screen-watcher, or a person at a different site, as a visual observer. This role does not replace the remote pilot, and not every flight needs one.'
+  zh: '不要把只盯着屏幕的人，或在另一地点的人，当成视像观察员。这个角色不能替代遥控驾驶员，而且并非每次飞行都需要。'
+  zh_hk: '唔好將淨係盯住屏幕嘅人，或喺另一地點嘅人，當成視像觀察員。呢個角色唔能夠替代遙控駕駛員，而且並唔係每次飛行都需要。'

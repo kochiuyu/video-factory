@@ -1,0 +1,57 @@
+id: LAE-W-T09-UTM
+course_en: DOTE5891 Low-Altitude Economy
+course_zh: DOTE5891 低空经济
+course_zh_hk: DOTE5891 低空經濟
+duration_target_s: 92
+title_en: What is UTM?
+title_zh: 什么是 UTM？
+title_zh_hk: 咩係 UTM？
+source_en: Glossary, primer, and Week 8, lae-companion
+source_zh: 词汇表、入门与第8周，lae-companion
+source_zh_hk: 詞彙表、入門同第8週，lae-companion
+beats:
+- id: hook
+  visual: whatis_title
+  seconds: 12
+  title_en: What is UTM?
+  title_zh: 什么是 UTM？
+  title_zh_hk: 咩係 UTM？
+  en: 'When people hear “UTM,” they often picture a tracking map or a single app. That is too narrow.'
+  zh: '人们一听到「UTM」，往往就会想到一张跟踪地图，或一个应用程序。这样理解太窄了。'
+  zh_hk: '啲人一聽到「UTM」，好多時會諗起一張跟蹤地圖，或者一個應用程式。咁理解太窄喇。'
+- id: define
+  visual: whatis_definition
+  seconds: 30
+  sentence_en: 'Digital tools, procedures, and shared information for managing unmanned aircraft traffic.'
+  sentence_zh: '用于管理无人驾驶航空器交通的数字工具、程序和共享信息。'
+  sentence_zh_hk: '用嚟管理無人駕駛航空器交通嘅數字工具、程序同共享資訊。'
+  en: 'UTM means unmanned aircraft system traffic management. It is a set of digital tools, procedures, and shared information that helps operators plan flights, share what they plan to fly, spot conflicts, and watch changing conditions in the airspace. It works alongside ordinary air traffic services. In this course, we use the term for comparison only. It is not a Hong Kong law.'
+  zh: 'UTM 的意思是无人驾驶航空器系统交通管理。它是一套数字工具、程序和共享信息，用来帮助运营方规划飞行、分享计划航线、发现冲突，并留意空域里不断变化的情况。它与日常的空中交通服务一起运作。在本课程里，我们只用这个词来作比较。它不是香港的法律。'
+  zh_hk: 'UTM 即係無人駕駛航空器系統交通管理。佢係一套數字工具、程序同共享資訊，用嚟幫營運方規劃飛行、分享計劃航線、發現衝突，同埋留意空域裏不斷變化嘅情況。佢同日常嘅空中交通服務一齊運作。喺本課程裏，我哋淨係用呢個詞嚟作比較。佢唔係香港嘅法律。'
+- id: contrast
+  visual: whatis_contrast
+  seconds: 32
+  what_en: 'A term used for comparison, about digital traffic coordination.'
+  what_zh: '用来作比较的术语，指数字交通协调。'
+  what_zh_hk: '用嚟作比較嘅術語，指數字交通協調。'
+  not_en: 'Simply a tracking map or a single app, or a claim that city-wide UTM already exists in Hong Kong.'
+  not_zh: '只是一张跟踪地图或一个应用程序，或声称香港已有覆盖全市的 UTM。'
+  not_zh_hk: '淨係一張跟蹤地圖或者一個應用程式，或聲稱香港已有覆蓋全市嘅 UTM。'
+  s1_en: 'UTM is not simply a tracking map or a single app.'
+  s1_zh: 'UTM 并不只是一张跟踪地图，或一个应用程序。'
+  s1_zh_hk: 'UTM 並唔只係一張跟蹤地圖，或者一個應用程式。'
+  s2_en: 'In a busy corridor, sharing flight plans and limits can mean less coordination by hand, but the data still have to be good, the systems still have to work together, and the operator is still responsible.'
+  s2_zh: '在繁忙的走廊里，分享飞行计划和限制，可以减少人手协调，但数据仍然必须可靠，系统仍然必须能够互相配合，而且运营方仍然要负责。'
+  s2_zh_hk: '喺繁忙嘅走廊裏，分享飛行計劃同限制，可以減少人手協調，但數據仍然必須可靠，系統仍然必須能夠互相配合，而且營運方仍然要負責。'
+  s3_en: 'Hong Kong’s Smart Low-altitude Traffic Management System is planned — the Policy Address talks about rolling it out step by step from 2028 — not a claim that a city-wide UTM system already exists.'
+  s3_zh: '香港的智能低空交通管理系统仍在规划之中——施政报告提到会从 2028 年起逐步推出——这并不是说，覆盖全市的 UTM 系统已经存在。'
+  s3_zh_hk: '香港嘅智能低空交通管理系統仲喺規劃之中——施政報告提到會由 2028 年起逐步推出——呢個並唔係話，覆蓋全市嘅 UTM 系統已經存在。'
+- id: rule
+  visual: whatis_takeaway
+  seconds: 18
+  rule_en: 'Do not treat a map or an app as if it were UTM, and do not treat Hong Kong’s planned traffic-management system as a law that already runs across the city.'
+  rule_zh: '不要把一张地图或一个应用程序当成就是 UTM，也不要把香港计划中的交通管理系统，当成已经在全市施行的法律。'
+  rule_zh_hk: '唔好將一張地圖或者一個應用程式當成就係 UTM，亦唔好將香港計劃中嘅交通管理系統，當成已經喺全市施行嘅法律。'
+  en: 'Do not treat a map or an app as if it were UTM, and do not treat Hong Kong’s planned traffic-management system as a law that already runs across the city.'
+  zh: '不要把一张地图或一个应用程序当成就是 UTM，也不要把香港计划中的交通管理系统，当成已经在全市施行的法律。'
+  zh_hk: '唔好將一張地圖或者一個應用程式當成就係 UTM，亦唔好將香港計劃中嘅交通管理系統，當成已經喺全市施行嘅法律。'

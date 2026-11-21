@@ -1,0 +1,58 @@
+id: 'LAE-W-T13-PILOT'
+course_en: 'DOTE5891 Low-Altitude Economy'
+course_zh: 'DOTE5891 低空经济'
+course_zh_hk: 'DOTE5891 低空經濟'
+duration_target_s: 65
+caption_keep: true
+title_en: 'What is a remote pilot?'
+title_zh: '什么是遥控驾驶员？'
+title_zh_hk: '咩係遙控駕駛員？'
+source_en: 'Packet-backed glossary drafts, lae-companion'
+source_zh: '依据证据包的词汇表草稿，lae-companion'
+source_zh_hk: '依據證據包嘅詞彙表草稿，lae-companion'
+beats:
+- id: hook
+  visual: 'whatis_title'
+  seconds: 12
+  title_en: 'What is a remote pilot?'
+  title_zh: '什么是遥控驾驶员？'
+  title_zh_hk: '咩係遙控駕駛員？'
+  en: 'When people hear “remote pilot,” they often think of the company that runs the flight. That mixes two roles.'
+  zh: '人们一听到「遥控驾驶员」，常常会想到负责这次飞行的公司。这就把两个角色混在一起了。'
+  zh_hk: '啲人一聽到「遙控駕駛員」，好多時會諗起負責呢次飛行嘅公司。咁就將兩個角色撈亂咗。'
+- id: define
+  visual: 'whatis_definition'
+  seconds: 20
+  sentence_en: 'The person who operates the small unmanned aircraft for the flight, under Cap. 448G — by handling the controls, or by watching the course and staying able to step in.'
+  sentence_zh: '根据 Cap. 448G，在该次飞行中操控小型无人飞机的人——亲自操作控制装置，或在自动飞行时注视航线并保持介入能力。'
+  sentence_zh_hk: '根據 Cap. 448G，喺該次飛行中操控小型無人飛機嘅人——親自操作控制裝置，或喺自動飛行時注視航線並保持介入能力。'
+  en: 'Under Hong Kong’s Cap. 448G, a remote pilot is the person who operates the small unmanned aircraft for the flight. That person either handles the flight controls, or, when the aircraft flies automatically, watches its course and stays able to step in and change it.'
+  zh: '根据香港的 Cap. 448G，遥控驾驶员是在该次飞行中操控小型无人飞机的人。这个人要么亲自操作飞行控制装置，要么在飞行器自动飞行时，注视它的航线，并保持能够介入并改变航线。'
+  zh_hk: '根據香港嘅 Cap. 448G，遙控駕駛員係喺該次飛行中操控小型無人飛機嘅人。呢個人可以係親自操作飛行控制裝置，或者，當飛行器自動飛行嘅時候，注視佢嘅航線，並保持能夠介入同改變航線。'
+- id: contrast
+  visual: 'whatis_contrast'
+  seconds: 24
+  what_en: 'The person who operates the aircraft for the flight — an individual, not a company.'
+  what_zh: '在该次飞行中操控飞行器的人——是个人，不是公司。'
+  what_zh_hk: '喺該次飛行中操控飛行器嘅人——係個人，唔係公司。'
+  not_en: 'The operator, or the responsible person. Distinct roles need not mean three different people.'
+  not_zh: '不是运营人，也不是负责人。角色不同，不等于必须由三个人分别担任。'
+  not_zh_hk: '唔係營運人，亦唔係負責人。角色唔同，唔等於必須由三個人分別擔任。'
+  s1_en: 'The remote pilot is that person — an individual, not a company.'
+  s1_zh: '遥控驾驶员就是那个人——是个人，不是公司。'
+  s1_zh_hk: '遙控駕駛員就係嗰個人——係個人，唔係公司。'
+  s2_en: 'The role is distinct from the operator, who may be a person or an organisation, and from the responsible person, who has duties such as registration and labelling.'
+  s2_zh: '这个角色有别于运营人，运营人可以是个人或机构；也有别于负责人，负责人承担登记和标示等职责。'
+  s2_zh_hk: '呢個角色有別於營運人，營運人可以係個人或機構；亦有別於負責人，負責人承擔登記同標示等職責。'
+  s3_en: 'Distinct roles do not mean three different people must hold them.'
+  s3_zh: '角色不同，并不意味着必须由三个不同的人分别担任。'
+  s3_zh_hk: '角色唔同，並唔等於必須由三個唔同嘅人分別擔任。'
+- id: rule
+  visual: 'whatis_takeaway'
+  seconds: 16
+  rule_en: 'The remote pilot operates the aircraft for the flight, even when it flies automatically. Keep that role distinct from the operator and the responsible person.'
+  rule_zh: '遥控驾驶员在该次飞行中操控飞行器，即使飞行是自动的。要把这个角色与运营人、负责人区分开来。'
+  rule_zh_hk: '遙控駕駛員喺該次飛行中操控飛行器，即使飛行係自動嘅。要將呢個角色同營運人、負責人區分開嚟。'
+  en: 'Remember the remote pilot as the person actually operating the aircraft for the flight, even when it flies automatically. Keep that role distinct from the operator and the responsible person.'
+  zh: '请记住，遥控驾驶员是在该次飞行中实际操控飞行器的人，即使飞行是自动的。要把这个角色与运营人和负责人区分开来。'
+  zh_hk: '記住，遙控駕駛員係喺該次飛行中實際操控飛行器嘅人，即使飛行係自動嘅。要將呢個角色同營運人同負責人區分開嚟。'

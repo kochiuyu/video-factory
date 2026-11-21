@@ -1,0 +1,58 @@
+id: 'LAE-W-T20-REMOTEID'
+course_en: 'DOTE5891 Low-Altitude Economy'
+course_zh: 'DOTE5891 低空经济'
+course_zh_hk: 'DOTE5891 低空經濟'
+duration_target_s: 86
+caption_keep: true
+title_en: 'What is Remote ID?'
+title_zh: '什么是 Remote ID？'
+title_zh_hk: '咩係 Remote ID？'
+source_en: 'Packet-backed glossary drafts, lae-companion'
+source_zh: '依据证据包的词汇表草稿，lae-companion'
+source_zh_hk: '依據證據包嘅詞彙表草稿，lae-companion'
+beats:
+- id: hook
+  visual: 'whatis_title'
+  seconds: 14
+  title_en: 'What is Remote ID?'
+  title_zh: '什么是 Remote ID？'
+  title_zh_hk: '咩係 Remote ID？'
+  en: 'Remote ID shares a name with a United States rule, and it can sound like a general Hong Kong requirement for every small unmanned aircraft. That is too quick.'
+  zh: 'Remote ID 与一项美国规则同名，听起来又像是对每一架小型无人飞机都适用的香港普遍要求。这样判断太快了。'
+  zh_hk: 'Remote ID 同一項美國規則同名，聽落又好似對每一架小型無人飛機都適用嘅香港普遍要求。咁判斷太快喇。'
+- id: define
+  visual: 'whatis_definition'
+  seconds: 28
+  sentence_en: 'A Sandbox X operator duty: continuous broadcast of remote identification, with information such as identification and geographic position.'
+  sentence_zh: 'Sandbox X 下运营人的一项责任：持续广播遥控识别，信息例如识别资料和地理位置。'
+  sentence_zh_hk: 'Sandbox X 下營運人嘅一項責任：持續廣播遙控識別，資訊例如識別資料同地理位置。'
+  en: 'In this course, Remote ID is an operator duty in CAD AC-017, for cross-boundary operations in Sandbox X. The operator is to ensure a continuous broadcast of remote identification of the small unmanned aircraft in flight, with information such as its identification and geographic position, so that aircraft in the air can be identified. The words “such as” are in the circular.'
+  zh: '在本课程里，Remote ID 是民航处 AC-017 中、适用于 Sandbox X 跨境作业的一项运营人责任。运营人须确保在飞行中持续广播小型无人飞机的遥控识别，信息例如其识别资料和地理位置，以便空中的飞行器能够被识别。通告里用了「such as」这几个字。'
+  zh_hk: '喺本課程裏，Remote ID 係民航處 AC-017 中、適用於 Sandbox X 跨境作業嘅一項營運人責任。營運人須確保喺飛行中持續廣播小型無人飛機嘅遙控識別，資訊例如其識別資料同地理位置，以便空中嘅飛行器能夠被識別。通告裏用咗「such as」呢幾個字。'
+- id: contrast
+  visual: 'whatis_contrast'
+  seconds: 26
+  what_en: 'An AC-017 §8.2 operator duty for Sandbox X cross-boundary operations.'
+  what_zh: 'AC-017 第8.2段下、适用于 Sandbox X 跨境作业的运营人责任。'
+  what_zh_hk: 'AC-017 第8.2段下、適用於 Sandbox X 跨境作業嘅營運人責任。'
+  not_en: 'The United States Remote ID rule, a general Hong Kong mandate, Cap. 448G, or detect-and-avoid.'
+  not_zh: '不是美国的 Remote ID 规则，不是香港的普遍强制要求，不是 Cap. 448G，也不是探测与避障。'
+  not_zh_hk: '唔係美國嘅 Remote ID 規則，唔係香港嘅普遍強制要求，唔係 Cap. 448G，亦唔係探測與避障。'
+  s1_en: 'This is not Cap. 448G, and it is not a general Hong Kong rule that every flight must broadcast Remote ID.'
+  s1_zh: '这不是 Cap. 448G，也不是规定每一次飞行都必须广播 Remote ID 的香港普遍规则。'
+  s1_zh_hk: '呢個唔係 Cap. 448G，亦唔係規定每一次飛行都必須廣播 Remote ID 嘅香港普遍規則。'
+  s2_en: 'It is not the United States Remote ID rule.'
+  s2_zh: '它也不是美国的 Remote ID 规则。'
+  s2_zh_hk: '佢亦唔係美國嘅 Remote ID 規則。'
+  s3_en: 'It is also not the same as a separate Sandbox X paragraph about electronic detection of the aircraft and nearby air traffic, and it is not detect-and-avoid.'
+  s3_zh: '它也不同于 Sandbox X 另一段落中关于以电子方式探测该飞行器及附近空中交通的规定，更不是探测与避障。'
+  s3_zh_hk: '佢亦唔同於 Sandbox X 另一段落中關於以電子方式探測該飛行器及附近空中交通嘅規定，更唔係探測與避障。'
+- id: rule
+  visual: 'whatis_takeaway'
+  seconds: 20
+  rule_en: 'Remote ID in this course is a Sandbox X duty, not the US rule, and not a rule for every Hong Kong flight.'
+  rule_zh: '在本课程里，Remote ID 是 Sandbox X 下的一项责任，不是美国规则，也不是适用于香港每一次飞行的规则。'
+  rule_zh_hk: '喺本課程裏，Remote ID 係 Sandbox X 下嘅一項責任，唔係美國規則，亦唔係適用於香港每一次飛行嘅規則。'
+  en: 'Remember Remote ID, in this course, as a Sandbox X operator duty: a continuous broadcast of identification and position, described with “such as.” Do not confuse it with the US rule, and do not treat that advisory circular as a mandate for every drone everywhere.'
+  zh: '在本课程里，请把 Remote ID 记作 Sandbox X 下运营人的一项责任：持续广播识别资料和位置，并且用了「such as」来表述。不要把它和美国规则混为一谈，也不要把该咨询通告当成对所有地方每一架无人机的强制要求。'
+  zh_hk: '喺本課程裏，請把 Remote ID 記作 Sandbox X 下營運人嘅一項責任：持續廣播識別資料同位置，並且用咗「such as」嚟表述。唔好將佢同美國規則撈亂，亦唔好將該諮詢通告當成對所有地方每一架無人機嘅強制要求。'

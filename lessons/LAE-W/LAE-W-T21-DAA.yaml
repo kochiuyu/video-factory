@@ -1,0 +1,57 @@
+id: 'LAE-W-T21-DAA'
+course_en: 'DOTE5891 Low-Altitude Economy'
+course_zh: 'DOTE5891 低空经济'
+course_zh_hk: 'DOTE5891 低空經濟'
+duration_target_s: 81
+title_en: 'What is detect-and-avoid?'
+title_zh: '什么是探测与避障？'
+title_zh_hk: '咩係探測與避障？'
+source_en: 'Packet-backed glossary drafts, lae-companion'
+source_zh: '依据证据包的词汇表草稿，lae-companion'
+source_zh_hk: '依據證據包嘅詞彙表草稿，lae-companion'
+beats:
+- id: hook
+  visual: 'whatis_title'
+  seconds: 12
+  title_en: 'What is detect-and-avoid?'
+  title_zh: '什么是探测与避障？'
+  title_zh_hk: '咩係探測與避障？'
+  en: '“Detect-and-avoid” can sound like a product name, or like a promise that the aircraft will always stay clear of trouble. That goes too far.'
+  zh: '「Detect-and-avoid」听起来像一个产品名称，又像在保证飞行器一定能避开麻烦。这样说过头了。'
+  zh_hk: '「Detect-and-avoid」聽落好似一個產品名稱，又好似保證飛行器一定能避開麻煩。咁講過頭喇。'
+- id: define
+  visual: 'whatis_definition'
+  seconds: 16
+  sentence_en: 'The capability to see, sense, or detect conflicting traffic or other hazards, and take appropriate action.'
+  sentence_zh: '看见、感应或探测到冲突交通或其他危害，并采取适当行动的能力。'
+  sentence_zh_hk: '看見、感應或探測到衝突交通或其他危害，並採取適當行動嘅能力。'
+  en: 'Detect-and-avoid is the capability to see, sense, or detect conflicting traffic or other hazards, and then take appropriate action. In this course it is a capability, not a product brand, and not a person.'
+  zh: '探测与避障是看见、感应或探测到冲突交通或其他危害，然后采取适当行动的能力。在本课程里，它是一种能力，不是产品品牌，也不是某一个人。'
+  zh_hk: '探測與避障係看見、感應或探測到衝突交通或其他危害，然後採取適當行動嘅能力。喺本課程裏，佢係一種能力，唔係產品品牌，亦唔係某一個人。'
+- id: contrast
+  visual: 'whatis_contrast'
+  seconds: 36
+  what_en: 'A capability, from first-sandbox BVLOS material, with a Sandbox X cross-reference only if BVLOS is involved.'
+  what_zh: '来自第一期沙盒 BVLOS 材料的一种能力；仅在涉及 BVLOS 时，才有 Sandbox X 的交叉参照。'
+  what_zh_hk: '來自第一期沙盒 BVLOS 材料嘅一種能力；只喺涉及 BVLOS 時，先有 Sandbox X 嘅交叉參照。'
+  not_en: 'A product brand, a person, or a claim that collisions cannot happen.'
+  not_zh: '不是产品品牌，不是某一个人，也不是碰撞不可能发生的声称。'
+  not_zh_hk: '唔係產品品牌，唔係某一個人，亦唔係碰撞不可能發生嘅聲稱。'
+  s1_en: 'A visual observer is a crew role. This term is not that role, and it is not a claim that collisions cannot happen. The wording comes from first-sandbox BVLOS advisory material.'
+  s1_zh: '视像观察员是一个机组角色。本术语不是那个角色，也不是碰撞不可能发生的声称。有关表述来自第一期监管沙盒的 BVLOS 咨询材料。'
+  s1_zh_hk: '視像觀察員係一個機組角色。本術語唔係嗰個角色，亦唔係碰撞不可能發生嘅聲稱。有關表述來自第一期監管沙盒嘅 BVLOS 諮詢材料。'
+  s2_en: 'If a proposed Sandbox X cross-boundary operation involves flying beyond visual line of sight, or BVLOS, that Sandbox X circular says the first-sandbox material shall also be observed, including “the detect and avoid system adopted.” '
+  s2_zh: '如果拟议的 Sandbox X 跨境作业涉及超视距飞行，也就是 BVLOS，该 Sandbox X 通告规定，第一期沙盒材料亦须予遵守，包括「the detect and avoid system adopted」。'
+  s2_zh_hk: '如果擬議嘅 Sandbox X 跨境作業涉及超視距飛行，即係 BVLOS，該 Sandbox X 通告規定，第一期沙盒材料亦須予遵守，包括「the detect and avoid system adopted」。'
+  s3_en: 'That is a programme cross-reference, not a product, a method, or a rule for every flight.'
+  s3_zh: '这是一项计划上的交叉参照，不是一个产品、一种方法，也不是适用于每次飞行的规则。'
+  s3_zh_hk: '呢個係一項計劃上嘅交叉參照，唔係一個產品、一種方法，亦唔係適用於每次飛行嘅規則。'
+- id: rule
+  visual: 'whatis_takeaway'
+  seconds: 20
+  rule_en: 'Detect-and-avoid is a capability, not a brand, and not a rule for every flight. The Sandbox X cross-reference applies only when BVLOS is involved.'
+  rule_zh: '探测与避障是一种能力，不是品牌，也不是适用于每次飞行的规则。Sandbox X 的交叉参照，仅在涉及 BVLOS 时适用。'
+  rule_zh_hk: '探測與避障係一種能力，唔係品牌，亦唔係適用於每次飛行嘅規則。Sandbox X 嘅交叉參照，只喺涉及 BVLOS 時適用。'
+  en: 'Remember detect-and-avoid as a capability — detecting a conflict or hazard and taking appropriate action. It is not a brand, and not a promise that collisions cannot happen. The Sandbox X cross-reference applies only when BVLOS is involved in those cross-boundary operations.'
+  zh: '请把探测与避障记作一种能力——探测到冲突或危害，并采取适当行动。它不是品牌，也不是碰撞不可能发生的保证。Sandbox X 的交叉参照，仅在这些跨境作业涉及 BVLOS 时适用。'
+  zh_hk: '請把探測與避障記作一種能力——探測到衝突或危害，並採取適當行動。佢唔係品牌，亦唔係碰撞不可能發生嘅保證。Sandbox X 嘅交叉參照，只喺呢啲跨境作業涉及 BVLOS 時適用。'

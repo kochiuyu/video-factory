@@ -1,0 +1,57 @@
+id: 'LAE-W-T24-CONTAIN'
+course_en: 'DOTE5891 Low-Altitude Economy'
+course_zh: 'DOTE5891 低空经济'
+course_zh_hk: 'DOTE5891 低空經濟'
+duration_target_s: 80
+title_en: 'What is containment?'
+title_zh: '什么是 containment？'
+title_zh_hk: '咩係 containment？'
+source_en: 'Packet-backed glossary drafts, lae-companion'
+source_zh: '依据证据包的词汇表草稿，lae-companion'
+source_zh_hk: '依據證據包嘅詞彙表草稿，lae-companion'
+beats:
+- id: hook
+  visual: 'whatis_title'
+  seconds: 12
+  title_en: 'What is containment?'
+  title_zh: '什么是 containment？'
+  title_zh_hk: '咩係 containment？'
+  en: 'A geo-fence, or a return-to-home setting, can sound like enough to keep a flight inside its area. That is too narrow.'
+  zh: '电子围栏，或自动返航设置，听起来好像已经足以把飞行留在范围内。这样理解太窄了。'
+  zh_hk: '電子圍欄，或自動返航設定，聽落好似已經足以把飛行留喺範圍內。咁理解太窄喇。'
+- id: define
+  visual: 'whatis_definition'
+  seconds: 24
+  sentence_en: 'Keeping the aircraft entirely inside the pre-defined sandbox operating area or routes, by technology and by procedures, or by both — the overall task, not a single device.'
+  sentence_zh: '以技术、程序，或两者并用，把飞行器完全留在预先设定的沙盒作业区域或航线内——是整体任务，不是单一装置。'
+  sentence_zh_hk: '以技術、程序，或兩者並用，把飛行器完全留喺預先設定嘅沙盒作業區域或航線內——係整體任務，唔係單一裝置。'
+  en: 'Containment means keeping the small unmanned aircraft entirely inside the pre-defined sandbox operating area or routes, by technology and by procedures, or by both. In first-sandbox BVLOS material, that wording restates keeping the aircraft inside by technologies or operational limitation. It is the overall job of keeping the aircraft inside, not a single device.'
+  zh: 'Containment 是指以技术、程序，或两者并用，把小型无人飞机完全留在预先设定的沙盒作业区域或航线内。在第一期监管沙盒的 BVLOS 材料里，这一表述重述了以技术或作业限制把飞行器留在范围内。它是把飞行器留在范围内的整体工作，不是单一装置。'
+  zh_hk: 'Containment 係指以技術、程序，或兩者並用，把小型無人飛機完全留喺預先設定嘅沙盒作業區域或航線內。喺第一期監管沙盒嘅 BVLOS 材料裏，呢一表述重述咗以技術或作業限制把飛行器留喺範圍內。佢係把飛行器留喺範圍內嘅整體工作，唔係單一裝置。'
+- id: contrast
+  visual: 'whatis_contrast'
+  seconds: 22
+  what_en: 'The overall task of keeping the aircraft entirely inside the pre-defined sandbox area or routes.'
+  what_zh: '把飞行器完全留在预先设定的沙盒区域或航线内的整体任务。'
+  what_zh_hk: '把飛行器完全留喺預先設定嘅沙盒區域或航線內嘅整體任務。'
+  not_en: 'Only a geo-fence, only geo-awareness, only return-to-home, or an enclosed area.'
+  not_zh: '不只是电子围栏，不只是适飞空域辨识，不只是自动返航，也不是围封区域。'
+  not_zh_hk: '唔只係電子圍欄，唔只係適飛空域辨識，唔只係自動返航，亦唔係圍封區域。'
+  s1_en: 'Containment is not only a geo-fence, which is one example means of keeping the aircraft inside.'
+  s1_zh: 'Containment 不只是电子围栏，电子围栏只是把飞行器留在范围内的一个例子。'
+  s1_zh_hk: 'Containment 唔只係電子圍欄，電子圍欄只係把飛行器留喺範圍內嘅一個例子。'
+  s2_en: 'It is not geo-awareness, which supports awareness of limits. It is not an enclosed area.'
+  s2_zh: '它不是适飞空域辨识，适飞空域辨识是用来支援对限制保持察觉。它也不是围封区域。'
+  s2_zh_hk: '佢唔係適飛空域辨識，適飛空域辨識係用嚟支援對限制保持察覺。佢亦唔係圍封區域。'
+  s3_en: 'And it is not only return-to-home; incorrect return-to-home settings can themselves be a containment hazard.'
+  s3_zh: '它也不只是自动返航；不正确的自动返航设置，本身可以成为 containment 隐患。'
+  s3_zh_hk: '佢亦唔只係自動返航；不正確嘅自動返航設定，本身可以成為 containment 隱患。'
+- id: rule
+  visual: 'whatis_takeaway'
+  seconds: 26
+  rule_en: 'Containment is the overall task of keeping the aircraft inside. A fence, an awareness function, or a return-to-home setting is not, by itself, containment. The glossary wording is about sandbox areas or routes.'
+  rule_zh: 'Containment 是把飞行器留在范围内的整体任务。围栏、察觉功能或自动返航设置，本身都不是 containment。词汇表的表述针对的是沙盒区域或航线。'
+  rule_zh_hk: 'Containment 係把飛行器留喺範圍內嘅整體任務。圍欄、察覺功能或自動返航設定，本身都唔係 containment。詞彙表嘅表述針對嘅係沙盒區域或航線。'
+  en: 'Remember containment as keeping the aircraft entirely inside the pre-defined sandbox area or routes. Do not treat a geo-fence, geo-awareness, or return-to-home as if any one of them were containment itself. For BVLOS in that first-sandbox material, the operator must address containment among other issues. This wording is about sandbox areas or routes, not a claim about every flight everywhere.'
+  zh: '请把 containment 记作把飞行器完全留在预先设定的沙盒区域或航线内。不要把电子围栏、适飞空域辨识或自动返航，当成其中任何一项就是 containment 本身。在该第一期沙盒材料里，就 BVLOS 而言，运营人必须在其他事项之外处理 containment。这段表述针对的是沙盒区域或航线，并不是对所有地方每一次飞行的主张。'
+  zh_hk: '請把 containment 記作把飛行器完全留喺預先設定嘅沙盒區域或航線內。唔好將電子圍欄、適飛空域辨識或自動返航，當成其中任何一項就係 containment 本身。喺該第一期沙盒材料裏，就 BVLOS 而言，營運人必須喺其他事項之外處理 containment。呢段表述針對嘅係沙盒區域或航線，並唔係對所有地方每一次飛行嘅主張。'

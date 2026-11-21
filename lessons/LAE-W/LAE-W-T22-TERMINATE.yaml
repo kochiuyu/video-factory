@@ -1,0 +1,54 @@
+id: 'LAE-W-T22-TERMINATE'
+course_en: 'DOTE5891 Low-Altitude Economy'
+course_zh: 'DOTE5891 低空经济'
+course_zh_hk: 'DOTE5891 低空經濟'
+duration_target_s: 78
+title_en: 'What is flight termination?'
+title_zh: '什么是飞行终止？'
+title_zh_hk: '咩係飛行終止？'
+source_en: 'Packet-backed glossary drafts, lae-companion'
+source_zh: '依据证据包的词汇表草稿，lae-companion'
+source_zh_hk: '依據證據包嘅詞彙表草稿，lae-companion'
+beats:
+- id: hook
+  visual: 'whatis_title'
+  seconds: 12
+  title_en: 'What is flight termination?'
+  title_zh: '什么是飞行终止？'
+  title_zh_hk: '咩係飛行終止？'
+  en: 'When something goes wrong in flight, people may assume the aircraft should return home. That is not always the same as ending the flight.'
+  zh: '飞行中出了问题，人们有时会以为飞行器应该返回返航点。这并不总是等同于结束这次飞行。'
+  zh_hk: '飛行中出咗問題，啲人有時會以為飛行器應該返回返航點。呢個並唔總係等同於結束呢次飛行。'
+- id: define
+  visual: 'whatis_definition'
+  seconds: 20
+  sentence_en: 'A system, procedure, or function that allows the remote pilot to end the flight as soon as practicable in an emergency.'
+  sentence_zh: '使遥控驾驶员能够在紧急情况下尽快结束飞行的系统、程序或功能。'
+  sentence_zh_hk: '使遙控駕駛員能夠喺緊急情況下盡快結束飛行嘅系統、程序或功能。'
+  en: 'Flight termination is a system, procedure, or function that allows the remote pilot to end the flight as soon as practicable in an emergency. The point is to end the flight, not to continue it, and not to send the aircraft home.'
+  zh: '飞行终止是一种系统、程序或功能，使遥控驾驶员能够在紧急情况下尽快结束飞行。重点是结束这次飞行，而不是继续飞，也不是把飞行器送回返航点。'
+  zh_hk: '飛行終止係一種系統、程序或功能，使遙控駕駛員能夠喺緊急情況下盡快結束飛行。重點係結束呢次飛行，而唔係繼續飛，亦唔係把飛行器送返返航點。'
+- id: contrast
+  visual: 'whatis_contrast'
+  seconds: 24
+  what_en: 'One part of a broader emergency-recovery capability, in first-sandbox BVLOS material.'
+  what_zh: '在第一期沙盒 BVLOS 材料里，是更广泛的紧急回收能力的一部分。'
+  what_zh_hk: '喺第一期沙盒 BVLOS 材料裏，係更廣泛嘅緊急回收能力嘅一部分。'
+  not_en: 'Return-to-home, or fail-safe as a whole. First-sandbox operations-manual guidance says fail-safe shall include a flight-termination function.'
+  not_zh: '不是自动返航，也不是失效安全的全部。第一期沙盒运行手册指引规定，失效安全必须包括飞行终止功能。'
+  not_zh_hk: '唔係自動返航，亦唔係失效安全嘅全部。第一期沙盒運行手冊指引規定，失效安全必須包括飛行終止功能。'
+  s1_en: 'In first-sandbox BVLOS material, that function is one part of a broader emergency-recovery capability.'
+  s1_zh: '在第一期监管沙盒的 BVLOS 材料里，这项功能是更广泛的紧急回收能力的一部分。'
+  s1_zh_hk: '喺第一期監管沙盒嘅 BVLOS 材料裏，呢項功能係更廣泛嘅緊急回收能力嘅一部分。'
+  s2_en: 'It is not return-to-home. It is also not fail-safe as a whole, though first-sandbox operations-manual guidance says a fail-safe mechanism shall include a flight-termination function. This course glossary does not give a method for how the flight is ended.'
+  s2_zh: '它不是自动返航。它也不是失效安全的全部，尽管第一期沙盒运行手册指引规定，失效安全机制必须包括飞行终止功能。本课程词汇表并没有给出结束飞行的方法。'
+  s2_zh_hk: '佢唔係自動返航。佢亦唔係失效安全嘅全部，儘管第一期沙盒運行手冊指引規定，失效安全機制必須包括飛行終止功能。本課程詞彙表並冇畀出結束飛行嘅方法。'
+- id: rule
+  visual: 'whatis_takeaway'
+  seconds: 26
+  rule_en: 'Flight termination ends the flight in an emergency. It is not return-to-home, and this short does not teach a method.'
+  rule_zh: '飞行终止是在紧急情况下结束飞行。它不是自动返航，本短片也不讲授方法。'
+  rule_zh_hk: '飛行終止係喺緊急情況下結束飛行。佢唔係自動返航，本短片亦唔講授方法。'
+  en: 'Do not treat flight termination as the same as return-to-home, or as the whole of fail-safe, and do not fill in a method the glossary does not give. In this course, the term comes from CAD sandbox advisory material. This short is not a hands-on procedure, and it is not a claim about every flight everywhere.'
+  zh: '不要把飞行终止当成等同于自动返航，或当成失效安全的全部，也不要补上词汇表没有给出的方法。在本课程里，这个术语来自民航处沙盒咨询材料。本短片不是操作程序，也不是对所有地方每一次飞行的主张。'
+  zh_hk: '唔好將飛行終止當成等同於自動返航，或當成失效安全嘅全部，亦唔好補上詞彙表冇畀出嘅方法。喺本課程裏，呢個術語來自民航處沙盒諮詢材料。本短片唔係操作程序，亦唔係對所有地方每一次飛行嘅主張。'

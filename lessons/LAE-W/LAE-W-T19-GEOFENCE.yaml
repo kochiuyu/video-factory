@@ -1,0 +1,57 @@
+id: 'LAE-W-T19-GEOFENCE'
+course_en: 'DOTE5891 Low-Altitude Economy'
+course_zh: 'DOTE5891 低空经济'
+course_zh_hk: 'DOTE5891 低空經濟'
+duration_target_s: 77
+title_en: 'What is a geo-fence?'
+title_zh: '什么是电子围栏？'
+title_zh_hk: '咩係電子圍欄？'
+source_en: 'Packet-backed glossary drafts, lae-companion'
+source_zh: '依据证据包的词汇表草稿，lae-companion'
+source_zh_hk: '依據證據包嘅詞彙表草稿，lae-companion'
+beats:
+- id: hook
+  visual: 'whatis_title'
+  seconds: 12
+  title_en: 'What is a geo-fence?'
+  title_zh: '什么是电子围栏？'
+  title_zh_hk: '咩係電子圍欄？'
+  en: 'A geo-fence can sound like a line on a map, or like another name for geo-awareness. That mixes the ideas.'
+  zh: '电子围栏听起来像地图上的一条线，又像适飞空域辨识的另一个名称。这就把这些概念混在一起了。'
+  zh_hk: '電子圍欄聽落好似地圖上嘅一條線，又好似適飛空域辨識嘅另一個名稱。咁就將呢啲概念撈亂咗。'
+- id: define
+  visual: 'whatis_definition'
+  seconds: 18
+  sentence_en: 'An electronic or procedural boundary that keeps the aircraft inside a pre-defined sandbox operating area or route.'
+  sentence_zh: '把飞行器留在预先设定的沙盒作业区域或航线内的电子或程序界限。'
+  sentence_zh_hk: '把飛行器留喺預先設定嘅沙盒作業區域或航線內嘅電子或程序界限。'
+  en: 'A geo-fence is an electronic or procedural boundary that keeps the small unmanned aircraft inside a pre-defined sandbox operating area or flight route. The fence can be electronic or procedural — not only a line drawn on a screen.'
+  zh: '电子围栏是一种电子或程序上的界限，用来把小型无人飞机留在预先设定的沙盒作业区域或飞行航线内。围栏可以是电子的，也可以是程序上的——不只是屏幕上画出来的一条线。'
+  zh_hk: '電子圍欄係一種電子或程序上嘅界限，用嚟把小型無人飛機留喺預先設定嘅沙盒作業區域或飛行航線內。圍欄可以係電子嘅，亦可以係程序上嘅——唔只係屏幕上畫出嚟嘅一條線。'
+- id: contrast
+  visual: 'whatis_contrast'
+  seconds: 36
+  what_en: 'An electronic or procedural boundary. In first-sandbox material, one example means of keeping the aircraft inside. In Sandbox X, a flight plan is to include at least a geo-fencing boundary.'
+  what_zh: '一种电子或程序界限。在第一期沙盒材料里，是把飞行器留在范围内的一个例子。在 Sandbox X，飞行计划须至少包括一条电子围栏边界。'
+  what_zh_hk: '一種電子或程序界限。喺第一期沙盒材料裏，係把飛行器留喺範圍內嘅一個例子。喺 Sandbox X，飛行計劃須至少包括一條電子圍欄邊界。'
+  not_en: 'Geo-awareness, containment as a whole, an enclosed area, or a general Hong Kong rule.'
+  not_zh: '不是适飞空域辨识，不是 containment 的全部，不是围封区域，也不是一条普遍适用于香港的规则。'
+  not_zh_hk: '唔係適飛空域辨識，唔係 containment 嘅全部，唔係圍封區域，亦唔係一條普遍適用於香港嘅規則。'
+  s1_en: 'In first-sandbox BVLOS material, a geo-fence is only one example of how the aircraft may be kept inside — “such as,” alongside waypoint operation.'
+  s1_zh: '在第一期监管沙盒的 BVLOS 材料里，电子围栏只是把飞行器留在范围内的一个例子——「such as」，与航点作业并列。'
+  s1_zh_hk: '喺第一期監管沙盒嘅 BVLOS 材料裏，電子圍欄只係把飛行器留喺範圍內嘅一個例子——「such as」，同航點作業並列。'
+  s2_en: 'In Sandbox X material, a flight plan is to include at least a geo-fencing boundary. Neither sentence is a general Hong Kong rule.'
+  s2_zh: '在 Sandbox X 材料里，飞行计划须至少包括一条电子围栏边界。这两句话都不是普遍适用于香港的规则。'
+  s2_zh_hk: '喺 Sandbox X 材料裏，飛行計劃須至少包括一條電子圍欄邊界。呢兩句都唔係普遍適用於香港嘅規則。'
+  s3_en: 'A geo-fence is not geo-awareness, not containment as a whole, and not an enclosed area — a physically enclosed space used when classifying where the aircraft may fly with lower risk to people outside.'
+  s3_zh: '电子围栏不是适飞空域辨识，不是 containment 的全部，也不是围封区域——围封区域是有形围封的空间，用来划分飞行器可在何处对区域外的人以较低风险飞行。'
+  s3_zh_hk: '電子圍欄唔係適飛空域辨識，唔係 containment 嘅全部，亦唔係圍封區域——圍封區域係有形圍封嘅空間，用嚟劃分飛行器可喺何處對區域外嘅人以較低風險飛行。'
+- id: rule
+  visual: 'whatis_takeaway'
+  seconds: 16
+  rule_en: 'A geo-fence is a boundary, not awareness of limits, and not the whole of containment. The glossary wording is about sandbox areas or routes.'
+  rule_zh: '电子围栏是界限，不是对限制的察觉，也不是 containment 的全部。词汇表的表述针对的是沙盒区域或航线。'
+  rule_zh_hk: '電子圍欄係界限，唔係對限制嘅察覺，亦唔係 containment 嘅全部。詞彙表嘅表述針對嘅係沙盒區域或航線。'
+  en: 'Remember a geo-fence as a boundary, not as awareness of limits, and not as the whole of containment. This glossary wording is about sandbox areas or routes, not a claim about every flight everywhere.'
+  zh: '请把电子围栏记作一条界限，而不是对限制的察觉，也不是 containment 的全部。这段词汇表表述针对的是沙盒区域或航线，并不是对所有地方每一次飞行的主张。'
+  zh_hk: '請把電子圍欄記作一條界限，而唔係對限制嘅察覺，亦唔係 containment 嘅全部。呢段詞彙表表述針對嘅係沙盒區域或航線，並唔係對所有地方每一次飛行嘅主張。'

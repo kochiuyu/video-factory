@@ -1,0 +1,58 @@
+id: 'LAE-W-T15-C2'
+course_en: 'DOTE5891 Low-Altitude Economy'
+course_zh: 'DOTE5891 低空经济'
+course_zh_hk: 'DOTE5891 低空經濟'
+duration_target_s: 87
+caption_keep: true
+title_en: 'What is a C2 link?'
+title_zh: '什么是 C2 link？'
+title_zh_hk: '咩係 C2 link？'
+source_en: 'Packet-backed glossary drafts, lae-companion'
+source_zh: '依据证据包的词汇表草稿，lae-companion'
+source_zh_hk: '依據證據包嘅詞彙表草稿，lae-companion'
+beats:
+- id: hook
+  visual: 'whatis_title'
+  seconds: 14
+  title_en: 'What is a C2 link?'
+  title_zh: '什么是 C2 link？'
+  title_zh_hk: '咩係 C2 link？'
+  en: 'The letters C2 get used loosely, as if they named a radio type, a licence, or every signal to or from the aircraft. In this course, the term is narrower.'
+  zh: 'C2 这几个字母常常被用得很宽松，好像是在指一种无线电类型、一张牌照，或飞向、飞离飞行器的每一种信号。在本课程里，这个术语的含义更窄。'
+  zh_hk: 'C2 呢幾個字母好多時用得太寬鬆，好似係指一種無線電類型、一張牌照，或飛向、飛離飛行器嘅每一種信號。喺本課程裏，呢個術語嘅含義更窄。'
+- id: define
+  visual: 'whatis_definition'
+  seconds: 16
+  sentence_en: 'The command-and-control communications link between the remote pilot or ground systems and the small unmanned aircraft. (Course wording; not a Cap. 448G definition.)'
+  sentence_zh: '遥控驾驶员或地面系统与小型无人飞机之间的指挥控制通信链路，即指挥和与控制数据链路。（课程用语；不是 Cap. 448G 的定义。）'
+  sentence_zh_hk: '遙控駕駛員或地面系統同小型無人飛機之間嘅指揮控制通信鏈路，即指揮和與控制數據鏈路。（課程用語；唔係 Cap. 448G 嘅定義。）'
+  en: 'A C2 link is the command-and-control communications link between the remote pilot — or the ground systems — and the small unmanned aircraft. That one-line picture is course wording. Cap. 448G does not define the term.'
+  zh: 'C2 link，也就是指挥和与控制数据链路，是遥控驾驶员——或地面系统——与小型无人飞机之间的指挥控制通信链路。这一句话是课程用语。Cap. 448G 并没有定义这个术语。'
+  zh_hk: 'C2 link，即係指揮和與控制數據鏈路，係遙控駕駛員——或地面系統——同小型無人飛機之間嘅指揮控制通信鏈路。呢一句係課程用語。Cap. 448G 並冇定義呢個術語。'
+- id: contrast
+  visual: 'whatis_contrast'
+  seconds: 38
+  what_en: 'That communications link. Sandbox circulars talk about coverage and integrity for it — not a radio type or a licence.'
+  what_zh: '就是这条通信链路。沙盒通告谈的是它的覆盖和完整性——不是无线电类型，也不是牌照。'
+  what_zh_hk: '就係呢條通信鏈路。沙盒通告講嘅係佢嘅覆蓋同完整性——唔係無線電類型，亦唔係牌照。'
+  not_en: 'The remote pilot, return-to-home, a radio type, or a licence.'
+  not_zh: '不是遥控驾驶员，不是自动返航，不是无线电类型，也不是牌照。'
+  not_zh_hk: '唔係遙控駕駛員，唔係自動返航，唔係無線電類型，亦唔係牌照。'
+  s1_en: 'The C2 link is that communications link — not the remote pilot, and not return-to-home.'
+  s1_zh: 'C2 link 就是这条通信链路——不是遥控驾驶员，也不是自动返航。'
+  s1_zh_hk: 'C2 link 就係呢條通信鏈路——唔係遙控駕駛員，亦唔係自動返航。'
+  s2_en: 'In first-sandbox BVLOS material, and in Sandbox X cross-boundary material, the operator is told to ensure that the mobile-radio and satellite-navigation signals for the command-and-control link have adequate strength, coverage, and integrity throughout the intended area or route.'
+  s2_zh: '在第一期监管沙盒的 BVLOS 材料，以及 Sandbox X 跨境材料里，运营人须确保指挥控制链路所用的流动无线电和卫星导航信号，在预定区域或航线上都有足够的强度、覆盖和完整性。'
+  s2_zh_hk: '喺第一期監管沙盒嘅 BVLOS 材料，以及 Sandbox X 跨境材料裏，營運人須確保指揮控制鏈路所用嘅流動無線電同衛星導航信號，喺預定區域或航線上都有足夠嘅強度、覆蓋同完整性。'
+  s3_en: 'The first-sandbox wording also includes emergency landing sites. Sandbox X uses “Command and Control Link” and does not use the letters C2. None of this specifies a radio type or a licence.'
+  s3_zh: '第一期沙盒的表述还包括紧急降落点。Sandbox X 使用「Command and Control Link」，并不使用 C2 这几个字母。这些都没有指定无线电类型或牌照。'
+  s3_zh_hk: '第一期沙盒嘅表述仲包括緊急降落點。Sandbox X 使用「Command and Control Link」，並唔使用 C2 呢幾個字母。呢啲都冇指定無線電類型或牌照。'
+- id: rule
+  visual: 'whatis_takeaway'
+  seconds: 20
+  rule_en: 'C2 is the command-and-control link with the aircraft. A lost link does not automatically mean return-to-home.'
+  rule_zh: 'C2 是与飞行器之间的指挥控制链路。链路中断并不自动意味着自动返航。'
+  rule_zh_hk: 'C2 係同飛行器之間嘅指揮控制鏈路。鏈路中斷並唔自動等於自動返航。'
+  en: 'Remember C2 as the command-and-control communications link with the aircraft. Do not treat a radio type, a licence, the person flying, or return-to-home as if it were the C2 link itself. A lost link is only an example circumstance for return-to-home, not an automatic result.'
+  zh: '请把 C2 记作与飞行器之间的指挥控制通信链路。不要把无线电类型、牌照、操控的人，或自动返航，当成就是 C2 link 本身。链路中断只是自动返航的一个举例情形，并不是必然结果。'
+  zh_hk: '請把 C2 記作同飛行器之間嘅指揮控制通信鏈路。唔好將無線電類型、牌照、操控嘅人，或自動返航，當成就係 C2 link 本身。鏈路中斷只係自動返航嘅一個舉例情形，並唔係必然結果。'

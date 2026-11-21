@@ -1,0 +1,54 @@
+id: 'LAE-W-T16-RTH'
+course_en: 'DOTE5891 Low-Altitude Economy'
+course_zh: 'DOTE5891 低空经济'
+course_zh_hk: 'DOTE5891 低空經濟'
+duration_target_s: 78
+title_en: 'What is return-to-home?'
+title_zh: '什么是自动返航？'
+title_zh_hk: '咩係自動返航？'
+source_en: 'Packet-backed glossary drafts, lae-companion'
+source_zh: '依据证据包的词汇表草稿，lae-companion'
+source_zh_hk: '依據證據包嘅詞彙表草稿，lae-companion'
+beats:
+- id: hook
+  visual: 'whatis_title'
+  seconds: 12
+  title_en: 'What is return-to-home?'
+  title_zh: '什么是自动返航？'
+  title_zh_hk: '咩係自動返航？'
+  en: 'If the aircraft comes back by itself, people may assume the flight is automatically safe. That is too quick.'
+  zh: '如果飞行器自己飞回来，人们有时会以为这次飞行就已经自动变得安全。这样判断太快了。'
+  zh_hk: '如果飛行器自己飛返嚟，啲人有時會以為呢次飛行已經自動變得安全。咁判斷太快喇。'
+- id: define
+  visual: 'whatis_definition'
+  seconds: 30
+  sentence_en: 'A pre-programmed recovery behaviour that sends the aircraft to a home or safe site. A lost C2 link is only an example — “for instance.”'
+  sentence_zh: '预先设定的回收行为，把飞行器送回返航点或安全地点。C2 链路中断只是举例——「for instance」。'
+  sentence_zh_hk: '預先設定嘅回收行為，把飛行器送返返航點或安全地點。C2 鏈路中斷只係舉例——「for instance」。'
+  en: 'Return-to-home is a pre-programmed recovery behaviour that sends the small unmanned aircraft to a home point or a safe site. In first-sandbox BVLOS material, returning home after the C2 link is lost is given only as an example — “for instance.” That is not a rule that return-to-home always follows a lost link, and it is not a promise that the flight has been made safe.'
+  zh: '自动返航是一种预先设定的回收行为，把小型无人飞机送回返航点或安全地点。在第一期监管沙盒的 BVLOS 材料里，C2 链路中断后返回返航点，只是作为例子给出——「for instance」。这并不是一条规则，说链路一中断就必定自动返航，也不是保证这次飞行已经变得安全。'
+  zh_hk: '自動返航係一種預先設定嘅回收行為，把小型無人飛機送返返航點或安全地點。喺第一期監管沙盒嘅 BVLOS 材料裏，C2 鏈路中斷後返回返航點，只係作為例子畀出——「for instance」。呢個並唔係一條規則，話鏈路一中斷就必定自動返航，亦唔係保證呢次飛行已經變得安全。'
+- id: contrast
+  visual: 'whatis_contrast'
+  seconds: 22
+  what_en: 'A pre-programmed recovery to a home or safe site.'
+  what_zh: '预先设定、返回返航点或安全地点的回收行为。'
+  what_zh_hk: '預先設定、返回返航點或安全地點嘅回收行為。'
+  not_en: 'A promise that the flight is safe, flight termination, or fail-safe as a whole.'
+  not_zh: '不是飞行已经安全的保证，不是飞行终止，也不是失效安全机制的全部。'
+  not_zh_hk: '唔係飛行已經安全嘅保證，唔係飛行終止，亦唔係失效安全機制嘅全部。'
+  s1_en: 'Return-to-home is a pre-programmed recovery to a home or safe site.'
+  s1_zh: '自动返航是预先设定、返回返航点或安全地点的回收行为。'
+  s1_zh_hk: '自動返航係預先設定、返回返航點或安全地點嘅回收行為。'
+  s2_en: 'It is not flight termination, which ends the flight as soon as practicable in an emergency. It is also not fail-safe as a whole. The course glossary warns that incorrect return-to-home settings are a containment hazard.'
+  s2_zh: '它不是飞行终止，飞行终止是在紧急情况下尽快结束飞行。它也不是失效安全机制的全部。课程词汇表提醒，不正确的自动返航设置，本身会成为 containment 隐患。'
+  s2_zh_hk: '佢唔係飛行終止，飛行終止係喺緊急情況下盡快結束飛行。佢亦唔係失效安全機制嘅全部。課程詞彙表提醒，不正確嘅自動返航設定，本身會成為 containment 隱患。'
+- id: rule
+  visual: 'whatis_takeaway'
+  seconds: 20
+  rule_en: 'Return-to-home does not always follow a lost C2 link, and it does not make the flight safe. Wrong settings can themselves be a containment hazard.'
+  rule_zh: '自动返航并不总是在 C2 链路中断后出现，也不能使飞行变得安全。错误的设置本身可以成为 containment 隐患。'
+  rule_zh_hk: '自動返航並唔總係喺 C2 鏈路中斷後出現，亦唔能使飛行變得安全。錯誤嘅設定本身可以成為 containment 隱患。'
+  en: 'Do not treat return-to-home as a guarantee of safety, and do not assume it always starts when the C2 link is lost. Sending the aircraft home is not the same as ending the flight, and the wrong settings can themselves become a containment problem.'
+  zh: '不要把自动返航当成安全的保证，也不要假定 C2 链路一中断它就一定会启动。把飞行器送回返航点，并不等于结束这次飞行；错误的设置本身也可能变成 containment 问题。'
+  zh_hk: '唔好將自動返航當成安全嘅保證，亦唔好假定 C2 鏈路一中斷佢就一定會啟動。把飛行器送返返航點，並唔等於結束呢次飛行；錯誤嘅設定本身亦可能變成 containment 問題。'

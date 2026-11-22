@@ -67,7 +67,14 @@ The chrome stays the standard slide: theme background, blobs and corner, navy si
 
 After the kicker, the beat title is a compact navy line on the cream field with a short gold underline. There is no full-width navy title band. The art is fitted with contain: one uniform scale, centered, not cropped and not stretched. A rounded frame hugs the image. Space beside it stays the theme background.
 
-`image` is required. It is a `.jpg`, `.jpeg`, or `.png` path inside the repo. The factory looks beside the lesson YAML first, then from the repo root. A `..` segment, a URL, and an absolute path outside the repo are rejected. The beat title stem (`title_en` / `title_zh` / `title_zh_hk`) is required. `kicker_*` is optional. `caption_*` or `footer_*` is an optional single muted line under the image when it still fits above the content bottom. `caption_*` wins when both are set.
+`image` is required. It is a `.jpg`, `.jpeg`, or `.png` path inside the repo. The factory looks beside the lesson YAML first, then from the repo root. A `..` segment, a URL, and an absolute path outside the repo are rejected. Commit the image with the YAML. The build reads that file. It does not download a URL. Record the picture's source and sha256 in the authoring or revision note (`docs/AUTHORING_PROMPT.md`, `docs/REVISE_PROMPT.md`). The beat title stem (`title_en` / `title_zh` / `title_zh_hk`) is required. `kicker_*` is optional. `caption_*` or `footer_*` is an optional single muted line under the image when it still fits above the content bottom. `caption_*` wins when both are set.
+
+ACC-01 keeps the scene beside the lesson. `image: art/tarts-scene.jpg` resolves to `lessons/ACC/art/tarts-scene.jpg`.
+
+```
+lessons/ACC/ACC-01.yaml
+lessons/ACC/art/tarts-scene.jpg
+```
 
 ```yaml
 # still_image shape. Do not paste this in as a short.
@@ -611,6 +618,8 @@ Teaching shorts use `MODULE-TOPIC`:
 | `TOPIC` | **2–4 letters**, unique inside that module | `DE` data is not evidence, `SET` dataset, `OC` opportunity cost |
 
 A short is `STAT-M01-DE`. Bookends stay `STAT-M01-IN` and `STAT-M01-OUT`. The old `01` variant slot is not used. A later retake of the same short can add `-02`, but the tree does not ship one. The factory only requires that `id` equals the filename and never collides.
+
+A published micro-case may keep its approved id. `ACC-01` is `lessons/ACC/ACC-01.yaml`, one case video. It is not a topic inside `ACC-M01` or `ACC-M02`, and those module lessons stay as they are.
 
 Two topic codes were lengthened so they would not collide with a bookend: auditor independence is `AUD-M01-IND`, the innovation cluster is `GBA-M02-INN`.
 

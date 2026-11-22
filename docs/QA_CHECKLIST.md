@@ -52,7 +52,7 @@ Use this checklist after authoring or revising a lesson and before delivery. Val
 - [ ] On-screen text is concise; spoken explanation remains in speech fields.
 
 ### Unstaged beats
-For `title_card`, `big_number`, `module_open`, and `module_close`:
+For `title_card`, `big_number`, `module_open`, `module_close`, and `still_image`:
 - [ ] Exactly one `en`, `zh`, and `zh_hk` speech trio is present.
 - [ ] No staged speech keys are present.
 
@@ -193,3 +193,19 @@ For each multiple-choice question:
 - [ ] **Caption orphans.** Build prints `warn: orphan: …` when a sentence ends on a 1–2 word / ≤3 character card. Target 0.
 - [ ] **Blank panels.** Reveal slides never show an empty panel; the next panel is dimmed until it is spoken.
 - [ ] **Numbered step text.** No `1.` / `2、` at the start of `step<n>_*` (the badge numbers rows).
+
+## 16. Still image, case video, timing, and handoff
+
+Skip the image lines when the lesson has no `still_image`. Skip the accounting lines when the lesson is not an accounting case. Statistics rules in the sections above stay in force for statistics shorts.
+
+- [ ] A `still_image` uses a relative `.jpg`, `.jpeg`, or `.png` path. The file is committed with the YAML. The resolver finds it beside the YAML first, then from the repo root. No URL, no `..`, no path outside the repo, no machine-local absolute path.
+- [ ] The scene is the official art for that case. Source and sha256 are recorded. The picture is contain-fitted: whole, uncropped, not stretched. ACC-01 is `image: art/tarts-scene.jpg` beside `lessons/ACC/ACC-01.yaml` (`lessons/ACC/art/tarts-scene.jpg`, sha256 `c2ac52d82cefd3c816ef0de3901fa2d1acafa8cdd52d20335beefc5382902856`).
+- [ ] One case fills one landscape 16:9 video. Opening choice, pause and vote, new fact or reveal, then revised choice and debrief. The pause stays ahead of the answer.
+- [ ] Facts match the case page, including the instructor note and sources. Known wording gaps are recorded. ACC-01 keeps "offers to take" and the check beat's "yesterday" as published. The case page says "offers to buy" and "already incurred".
+- [ ] English is the fact baseline. Mandarin and Cantonese narration are natural speech. Subject terms match across speech and every cell, title, prompt, and footer. On-screen Chinese is the short label. Spoken Chinese is the lecture line.
+- [ ] Accounting cases use sunk cost / 沉没成本 / 沉沒成本, incremental cost of selling / 出售的增量成本, opportunity cost / 机会成本 / 機會成本, indifference offer / 无差异出价 / 無差異出價. In ACC-01 the opportunity cost is the HK$84 next-best use. The HK$12 figure is the shortfall of selling at HK$72. Indifference stays distinct from break-even / 保本 / 打平.
+- [ ] `clock` is omitted or `own`, unless this lesson explicitly opts into `clock: shared`. Each language keeps its own speech timing.
+- [ ] Titles, descriptions, and covers are language-matched and accurate. A classroom case carries the classroom-assumptions disclaimer. No invented video id or visibility.
+- [ ] The committed YAML and assets are the reproducible source. A rendered MP4 is a separate upload. The education catalog is a later deployment, after approved YouTube URLs and upload evidence go to Education-Video-Web. The case website stays unedited from this repository.
+- [ ] Authoring or revising this lesson publishes nothing and changes no factory behavior. Validation is done, and approval still stands before build, merge, or handoff.
+- [ ] `ACC-M01` and `ACC-M02` lessons are untouched when the task is ACC-01.

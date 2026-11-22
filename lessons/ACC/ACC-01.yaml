@@ -1,0 +1,246 @@
+id: ACC-01
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+duration_target_s: 240
+title_en: The last tray of egg tarts
+title_zh: 最后一盘蛋挞
+title_zh_hk: 最後一盤蛋撻
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-01
+  kicker_en: ACC-01
+  kicker_zh: ACC-01
+  kicker_zh_hk: ACC-01
+  title_en: The last tray of egg tarts
+  title_zh: 最后一盘蛋挞
+  title_zh_hk: 最後一盤蛋撻
+  image: art/tarts-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: You run a Hong Kong bakery. Twelve egg tarts sit on the counter as you turn the sign to Closed. The café next door offers to take the whole tray. You have no other buyer or use for it tonight.
+  zh: 你在香港开一家面包店。你把“打烊”的牌子翻过去的时候，柜台上还放着十二个蛋挞。隔壁咖啡店要把整盘都拿走。今晚没有别的买家，这盘挞也没有别的用处。
+  zh_hk: 你喺香港開住一間麵包店。你將「打烊」個牌翻轉嗰陣，櫃面上仲擺住十二個蛋撻。隔籬間咖啡店想將成盤都拿走。今晚冇第二個買家，呢盤撻都冇第二樣用途。
+
+- id: ledger
+  visual: table_grid
+  seconds: 28
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 资料
+  kicker_zh_hk: 資料
+  title_en: Closing figures, HK$ per tart
+  title_zh: 打烊资料，港元/个
+  title_zh_hk: 打烊資料，港元/個
+  row1_en: "1"
+  row1_zh: "1"
+  row1_zh_hk: "1"
+  row2_en: "2"
+  row2_zh: "2"
+  row2_zh_hk: "2"
+  row3_en: "3"
+  row3_zh: "3"
+  row3_zh_hk: "3"
+  col1_en: Item
+  col1_zh: 项目
+  col1_zh_hk: 項目
+  col2_en: HK$ per tart
+  col2_zh: 港元/个
+  col2_zh_hk: 港元/個
+  c11_en: Baking cost already incurred
+  c11_zh: 已发生的烘焙成本
+  c11_zh_hk: 已發生的烘焙成本
+  c12: "8"
+  c21_en: Café offer
+  c21_zh: 咖啡店出价
+  c21_zh_hk: 咖啡店出價
+  c22: "6"
+  c31_en: Incremental cost of selling
+  c31_zh: 出售的增量成本
+  c31_zh_hk: 出售的增量成本
+  c32: "0"
+  footer_en: Twelve tarts on the tray
+  footer_zh: 盘上一共十二个蛋挞
+  footer_zh_hk: 盤上共有十二個蛋撻
+  s1_en: Here are tonight's closing figures, in Hong Kong dollars per tart.
+  s1_zh: 先看今晚打烊的资料，单位是每个蛋挞多少港元。
+  s1_zh_hk: 先睇今晚打烊嘅資料，單位係每個蛋撻幾多港元。
+  s2_en: The baking cost of eight dollars per tart has already been incurred. The café offers six dollars per tart. The incremental cost of selling the tray is zero.
+  s2_zh: 每个挞的烘焙成本已经发生，是八港元。咖啡店每个出价六港元。卖掉整盘，出售的增量成本是零。
+  s2_zh_hk: 每個撻嘅烘焙成本已經發生，係八港元。咖啡店出價每個六港元。賣走成盤，出售嘅增量成本係零。
+  s3_en: There are twelve tarts on the tray.
+  s3_zh: 盘上一共十二个蛋挞。
+  s3_zh_hk: 盤上面一共有十二個蛋撻。
+
+- id: pause1
+  visual: title_card
+  seconds: 18
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Would you sell all twelve?
+  title_zh: 这十二个，你卖不卖？
+  title_zh_hk: 呢十二個，你賣唔賣？
+  en: Would you sell all twelve? Show the difference tonight's choice makes to cash. Pause here, vote, and compare your reasons.
+  zh: 这十二个，你卖不卖？算清楚今晚这个选择，会让现金差多少。先停一停，投个票，再比较各自的理由。
+  zh_hk: 呢十二個，你賣唔賣？計清楚今晚呢個選擇，會令現金差幾多。喺度停一停，投個票，再比較大家嘅理由。
+
+- id: debrief1
+  visual: table_grid
+  seconds: 38
+  rows: 2
+  cols: 2
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Tonight's cash
+  title_zh: 今晚的现金
+  title_zh_hk: 今晚的現金
+  row1_en: Baking cost already incurred
+  row1_zh: 已发生的烘焙成本
+  row1_zh_hk: 已發生的烘焙成本
+  row2_en: Cash inflow tonight
+  row2_zh: 今晚现金流入
+  row2_zh_hk: 今晚現金流入
+  col1_en: Discard
+  col1_zh: 丢弃
+  col1_zh_hk: 丟棄
+  col2_en: Sell
+  col2_zh: 卖掉
+  col2_zh_hk: 賣掉
+  c11: "96"
+  c12: "96"
+  c21: "0"
+  c22: "72"
+  highlight_s2: row1
+  highlight_s3: row2
+  footer_en: Selling brings in HK$72 more cash
+  footer_zh: 卖掉比丢弃多流入 72 港元现金
+  footer_zh_hk: 賣掉比丟棄多流入 72 港元現金
+  s1_en: Sell in round one.
+  s1_zh: 第一轮，卖掉。
+  s1_zh_hk: 第一輪，賣掉。
+  s2_en: "Under both choices, the ninety-six dollar baking cost has already been incurred: that is twelve tarts times eight dollars. That cost is a sunk cost."
+  s2_zh: 两个方案下，九十六港元的烘焙成本都已经发生了：十二个挞乘以八港元。这笔成本是沉没成本。
+  s2_zh_hk: 兩個方案之下，九十六港元嘅烘焙成本都已經發生咗：十二個撻乘以八港元。呢筆成本係沉沒成本。
+  s3_en: "Selling brings in seventy-two dollars more cash than discarding: twelve times the six-dollar offer, and the incremental cost of selling is zero."
+  s3_zh: 卖掉比丢弃多流入七十二港元现金：十二乘以六港元的出价，而且出售的增量成本是零。
+  s3_zh_hk: 賣掉比丟棄多流入七十二港元現金：十二乘以六港元嘅出價，而且出售嘅增量成本係零。
+
+- id: reveal
+  visual: title_card
+  seconds: 22
+  kicker: New fact
+  kicker_en: New fact
+  kicker_zh: 新事实
+  kicker_zh_hk: 新事實
+  title_en: One fact changes
+  title_zh: 一个事实变了
+  title_zh_hk: 一個事實變了
+  en: Your pastry chef checks tomorrow's orders. Keeping the tray for bread pudding would give a cost saving of seven dollars per tart in other ingredients, after extra preparation costs. Demand for pudding is already confirmed.
+  zh: 糕点师傅看了明天的订单。如果把这盘留下来做面包布丁，扣掉额外的准备成本以后，每个挞能节省七港元的其他材料成本。布丁的需求已经确定了。
+  zh_hk: 糕點師傅睇過聽日嘅訂單。如果留低呢盤嚟做麵包布甸，扣走額外準備成本之後，每個撻可以慳到七港元嘅其他材料成本。布甸嘅需求已經確定咗。
+
+- id: pause2
+  visual: title_card
+  seconds: 18
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Does the café get the tray now?
+  title_zh: 现在还会卖给咖啡店吗？
+  title_zh_hk: 而家仲會唔會賣俾咖啡店？
+  en: Does the café get the tray now? What offer would leave you indifferent? Pause here and vote again.
+  zh: 现在还会把这盘卖给咖啡店吗？怎样的出价会让你无差异？先停一停，再投一次票。
+  zh_hk: 而家仲會唔會將呢盤賣俾咖啡店？咩出價會令你無差異？喺度停一停，再投多一次票。
+
+- id: debrief2
+  visual: table_grid
+  seconds: 44
+  rows: 2
+  cols: 2
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Compare the uses
+  title_zh: 比较两种用途
+  title_zh_hk: 比較兩種用途
+  row1_en: Café offer
+  row1_zh: 咖啡店出价
+  row1_zh_hk: 咖啡店出價
+  row2_en: Pudding cost saving
+  row2_zh: 可节省成本
+  row2_zh_hk: 可節省成本
+  col1_en: Per tart
+  col1_zh: 每个
+  col1_zh_hk: 每個
+  col2_en: Whole tray
+  col2_zh: 整盘
+  col2_zh_hk: 成盤
+  c11: "6"
+  c12: "72"
+  c21: "7"
+  c22: "84"
+  highlight_s2: row2
+  highlight_s3: c21
+  footer_en: "Indifference offer: HK$7 per tart"
+  footer_zh: 无差异出价：每挞 7 港元
+  footer_zh_hk: 無差異出價：每撻 7 港元
+  s1_en: "Keeping the tray now saves eighty-four dollars of cost: twelve tarts times seven dollars."
+  s1_zh: 现在把这盘留下来，能节省八十四港元的成本：十二个挞乘以七港元。
+  s1_zh_hk: 而家留低呢盤，可以慳到八十四港元嘅成本：十二個撻乘以七港元。
+  s2_en: That cost saving is the opportunity cost of selling. Selling for seventy-two dollars would leave you twelve dollars worse off.
+  s2_zh: 这笔可节省的成本，就是出售的机会成本。如果按七十二港元卖掉，你会少得十二港元。
+  s2_zh_hk: 呢筆可節省嘅成本，就係出售嘅機會成本。如果按七十二港元賣掉，你會少得十二港元。
+  s3_en: The offer that leaves you indifferent is seven dollars per tart.
+  s3_zh: 让你无差异的出价，是每个挞七港元。
+  s3_zh_hk: 令你無差異嘅出價，係每個撻七港元。
+
+- id: check
+  visual: title_card
+  seconds: 24
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 追问
+  kicker_zh_hk: 追問
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: If you chose eight dollars as the indifference offer, what changes in cash when yesterday's baking cost is included in both alternatives? If you chose seven, how would an uncertain pudding order change the cost saving?
+  zh: 如果你把无差异出价定成八港元，那么把昨天已发生的烘焙成本计入两个方案时，现金会有什么变化？如果你选的是七港元，万一布丁的订单还不确定，可节省的成本又会怎么变？
+  zh_hk: 如果你將無差異出價定成八港元，咁將昨日已發生嘅烘焙成本記入兩個方案嗰陣，現金會有咩變化？如果你揀嘅係七港元，萬一布甸訂單仲未確定，可節省嘅成本又會點變？
+
+- id: takeaway
+  visual: takeaway
+  seconds: 26
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Tonight's choice
+  title_zh: 今晚的选择
+  title_zh_hk: 今晚的選擇
+  q1_en: The difference in cash from here
+  q1_zh: 从现在起的现金差额
+  q1_zh_hk: 從現在起的現金差額
+  q2_en: Sunk cost; compare the next-best use
+  q2_zh: 烘焙成本已是沉没成本；比较次佳用途
+  q2_zh_hk: 烘焙成本已是沉沒成本；比較次佳用途
+  s1_en: Tonight's choice is the difference it makes to cash from here. Look only at relevant cash flows.
+  s1_zh: 今晚要做的选择，就是从现在起，现金会差多少。只看相关的现金流量。
+  s1_zh_hk: 今晚要做嘅選擇，就係由而家計起，現金會差幾多。只睇相關嘅現金流量。
+  s2_en: The baking cost has already been incurred, whether you sell or keep the tray. It is a sunk cost.
+  s2_zh: 烘焙成本已经发生，不管你是卖掉还是留下这盘。这是沉没成本。
+  s2_zh_hk: 烘焙成本已經發生，無論你賣走定留低呢盤。呢筆係沉沒成本。
+  s3_en: "Compare the café's offer with the next-best use you actually have: that is the opportunity cost."
+  s3_zh: 要把咖啡店的出价，跟你实际拥有的次佳用途比一比，也就是机会成本。
+  s3_zh_hk: 要把咖啡店嘅出價，同你實際擁有嘅次佳用途比一比，即係機會成本。

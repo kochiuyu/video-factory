@@ -69,6 +69,8 @@ REQUIRED_STEMS = {
     "whatis_example": ("body", "stamp"),
     "whatis_contrast": ("what", "not"),
     "whatis_takeaway": ("rule",),
+    # Official still art. Title is the stem; image is checked separately.
+    "still_image": ("title",),
 }
 
 
@@ -110,6 +112,7 @@ ALLOWED_VISUALS = {
     "whatis_example",
     "whatis_contrast",
     "whatis_takeaway",
+    "still_image",
 }
 
 
@@ -322,7 +325,7 @@ def load_lesson(path: Path) -> dict:
     return data
 
 
-def validate(lesson: dict, glyphs: bool = True) -> list[str]:
+def validate(lesson: dict, glyphs: bool = True, source: Path | str | None = None) -> list[str]:
     errors: list[str] = []
     for key in ("id", "title_en", "title_zh", "beats"):
         if key not in lesson:
@@ -332,6 +335,8 @@ def validate(lesson: dict, glyphs: bool = True) -> list[str]:
     if not beats:
         errors.append("No beats.")
         return errors
+    still_yaml = None
+    still_checked = False
     total = 0.0
     for i, beat in enumerate(beats, start=1):
         if "id" not in beat:
@@ -401,6 +406,14 @@ def validate(lesson: dict, glyphs: bool = True) -> list[str]:
                 errors.append(f"Beat {bid} {vis} missing {', '.join(missing)}.")
         for msg in steps_stage_problems(beat):
             errors.append(f"Beat {bid} {msg}")
+        if vis == "still_image":
+            if not still_checked:
+                from slides import lesson_yaml, still_image_problems
+
+                still_yaml = lesson_yaml(lesson, source)
+                still_checked = True
+            for msg in still_image_problems(beat, still_yaml):
+                errors.append(f"Beat {bid} {msg}")
         total += float(beat.get("seconds") or 0)
     hk_beats = [has_hk_speech(beat) for beat in beats]
     if any(hk_beats) and not all(hk_beats):
@@ -419,7 +432,7 @@ def main() -> int:
         return 2
     path = Path(sys.argv[1])
     lesson = load_lesson(path)
-    errors = validate(lesson)
+    errors = validate(lesson, source=path)
     warns = text_length_warnings(lesson)
     warns.extend(youtube_warnings(lesson, None, load_series_links(path, str(lesson.get("id") or ""))))
     warns.extend(qa_warnings(lesson))

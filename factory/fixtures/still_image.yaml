@@ -1,0 +1,20 @@
+# Fixture only. Not a lesson. The picture is resolved beside this file.
+id: STILL-IMAGE-FIXTURE
+title_en: The last tray of egg tarts
+title_zh: 最后一盘蛋挞
+title_zh_hk: 最後一盤蛋撻
+duration_target_s: 12
+beats:
+- id: tray
+  visual: still_image
+  seconds: 12
+  kicker_en: ACC-01
+  kicker_zh: ACC-01
+  kicker_zh_hk: ACC-01
+  title_en: The last tray of egg tarts
+  title_zh: 最后一盘蛋挞
+  title_zh_hk: 最後一盤蛋撻
+  image: still_image.png
+  en: The last tray is still on the counter.
+  zh: 最后一盘还在柜上。
+  zh_hk: 最後一盤仲喺櫃上。

@@ -1,0 +1,241 @@
+id: ACC-02
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+duration_target_s: 220
+title_en: Close the loss-making branch?
+title_zh: 亏损的门店，要不要关？
+title_zh_hk: 虧損的分店，應該結業嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-02
+  kicker_en: ACC-02
+  kicker_zh: ACC-02
+  kicker_zh_hk: ACC-02
+  title_en: Close the loss-making branch?
+  title_zh: 亏损的门店，要不要关？
+  title_zh_hk: 虧損的分店，應該結業嗎？
+  image: art/branch-loss-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In July 2025, Tsui Wah reported closing two Hong Kong restaurants and opening four after a network review. That is background only. You manage a fictional stationery-and-printing chain in Hong Kong. After a change in how head-office costs are shared, East Branch's next-quarter forecast now shows a HK$30,000 loss. Sales and branch-level costs have not changed. The chief executive asks whether to close East at the end of this quarter.
+  zh: >-
+    2025年7月，翠华的年报写到，集团检视香港门店布局以后，关了两家餐厅，又开了四家。这只是背景。你管理的是一家虚构的香港连锁文印店。总部改了成本分摊方法以后，东区门店下季度的预测变成亏损3万港元。销售额和门店自己的成本并没有变。总经理问你：本季度末，要不要关掉东区门店？
+  zh_hk: >-
+    2025年7月，翠華年報提到，集團檢視香港店舖網絡之後，關咗兩間餐廳，又開咗四間。呢個只係背景。你而家管理嘅，係一間虛構嘅香港連鎖文具印務店。總部改咗成本分攤方法之後，東區分店下季嘅預測變成虧損3萬港元。分店銷售同埋自身成本都無變。行政總裁問你：本季末，應唔應該將東區分店結業？
+
+- id: ledger
+  visual: table_grid
+  seconds: 28
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Same next-quarter forecast, HK$
+  title_zh: 经营没变，分摊方法变了
+  title_zh_hk: 經營不變，分攤方法變了
+  row1_en: Sales
+  row1_zh: 销售额
+  row1_zh_hk: 銷售額
+  row2_en: Branch operating costs
+  row2_zh: 门店运营 成本
+  row2_zh_hk: 分店營運 成本
+  row3_en: Branch rent
+  row3_zh: 门店租金
+  row3_zh_hk: 分店租金
+  row4_en: Allocated head-office costs
+  row4_zh: 分摊的总部成本
+  row4_zh_hk: 分攤的總部成本
+  col1_en: Old rule
+  col1_zh: 原方法
+  col1_zh_hk: 舊方法
+  col2_en: New rule
+  col2_zh: 新方法
+  col2_zh_hk: 新方法
+  c11: '600,000'
+  c12: '600,000'
+  c21: '450,000'
+  c22: '450,000'
+  c31: '100,000'
+  c32: '100,000'
+  c41: '40,000'
+  c42: '80,000'
+  footer_en: 'Reported result 10,000 / −30,000'
+  footer_zh: '门店报告业绩 10,000 / −30,000'
+  footer_zh_hk: '分店呈報業績 10,000 / −30,000'
+  s1_en: Here is the same next-quarter forecast, under two allocation rules, in Hong Kong dollars.
+  s1_zh: 这是同一份下季度预测，按两种分摊方法列出，单位是港元。
+  s1_zh_hk: 呢張係同一份下季預測，用兩種分攤方法列出，單位係港元。
+  s2_en: Sales stay at HK$600,000. Branch operating costs stay at HK$450,000, and rent stays at HK$100,000.
+  s2_zh: 销售额仍然是60万港元。门店运营成本仍然是45万港元，租金仍然是10万港元。
+  s2_zh_hk: 銷售額依然係60萬港元。分店營運成本依然係45萬港元，租金依然係10萬港元。
+  s3_en: Allocated head-office costs rise from HK$40,000 to HK$80,000. The reported result falls from a HK$10,000 profit to a HK$30,000 loss. The table does not yet tell you which payments would stop if East closes.
+  s3_zh: 分摊的总部成本从4万加到8万港元。于是门店报告的业绩，就从盈利1万港元，变成亏损3万港元。光看这张表，还不能判断：关掉东区门店以后，哪些钱真的不用付了。
+  s3_zh_hk: 分攤嘅總部成本由4萬加到8萬港元。於是分店呈報嘅業績，就由盈利1萬港元，變成虧損3萬港元。單係睇呢張表，你仲未知道：東區分店結業之後，邊啲錢真係唔使付。
+
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Close East or keep it?
+  title_zh: 东区门店，下季度关还是留？
+  title_zh_hk: 東區分店，結業定留？
+  en: Close East, or keep it for next quarter? Give a provisional recommendation, and name the cost information you still need before acting. Pause here, vote, and compare your reasons.
+  zh: 东区门店下季度是关掉，还是继续开？请先给一个初步建议，再说你行动前还要核实哪些成本信息。先在这里停一下，投个票，再跟旁边的同学比较理由。
+  zh_hk: 東區分店下季繼續開，定係結業？你先畀個初步建議，再講清楚仲要查邊啲成本資料。喺度停一停，投個票，再同隔籬比較你嘅理由。
+
+- id: reveal
+  visual: title_card
+  seconds: 28
+  kicker: New fact
+  kicker_en: New fact
+  kicker_zh: 新事实
+  kicker_zh_hk: 新事實
+  title_en: One fact changes
+  title_zh: 补充信息
+  title_zh_hk: 補充資料
+  en: >-
+    The finance team confirms that total head-office expenditure will remain HK$200,000 next quarter, whether East stays open or closes. East's HK$80,000 allocation would simply be reassigned to the remaining branches. This is future expenditure still to be paid, not a sunk cost. If East closes now, the HK$450,000 of branch operating costs and the HK$100,000 rent will be avoided next quarter. The lease expires this quarter and can end without penalty. There are no other closure costs, no sales transferred to another branch, no other effects on the chain, and no feasible alternative use generating income next quarter. Those simplifying assumptions are given for this fictional decision.
+  zh: >-
+    财务部门确认，东区门店开不开，下季度总部支出都还是20万港元。原先分给东区的8万港元，只会改由其他门店承担。这笔钱下季度才要付，不是沉没成本。如果现在关店，下季度就可以省下门店运营成本45万港元，还有租金10万港元。租约本季度到期，终止不用付违约金。题设还包括：没有其他关店成本，销售不会转到别的门店，连锁店不受其他影响，下季度也没有能带来收入的可行替代用途。这些都是这个虚构案例给定的假设。
+  zh_hk: >-
+    財務部確認，無論東區分店開定關，總部下季開支依然係20萬港元。原先分到東區嘅8萬港元，只會改由其他分店承擔。呢筆錢下季先要付，並非沉沒成本。若東區分店而家結業，下季就可以省回全部營運成本45萬港元，同埋10萬港元租金。租約本季屆滿，終止唔使付罰款。題設仲包括：冇其他結業成本，冇銷售轉去其他分店，連鎖店唔受其他影響，下季亦冇能帶來收入嘅可行替代用途。呢啲都係呢個虛構案例已經寫明嘅假設。
+
+- id: pause2
+  visual: title_card
+  seconds: 18
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: What changes for the company?
+  title_zh: 整个公司的业绩有什么变化？
+  title_zh_hk: 全公司究竟有甚麼改變？
+  en: Does closing East improve the whole company's next-quarter result? Calculate the change. Then say whether East's manager became a worse performer merely because the allocation changed. Pause here and vote again.
+  zh: 关掉东区门店，能不能让公司下季度的整体业绩变好？请先算一算差额。接着再判断：只是分摊方法改了，能不能说店长的表现就变差了？先在这里停一下，再投一次票。
+  zh_hk: 關咗東區分店，全公司下季業績會唔會好啲？你計一計差額。跟住再講：純粹因為分攤方法改咗，分店經理嘅表現係咪就變差？喺度停一停，再投一次票。
+
+- id: debrief_calc
+  visual: table_grid
+  seconds: 36
+  rows: 4
+  cols: 2
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Keep versus close, next quarter
+  title_zh: 保留还是关店，下季度
+  title_zh_hk: 保留還是結業，下季
+  row1_en: Sales
+  row1_zh: 销售额
+  row1_zh_hk: 銷售額
+  row2_en: Avoidable branch costs
+  row2_zh: 可避免的门店成本
+  row2_zh_hk: 可避免的 分店成本
+  row3_en: Contribution toward common costs
+  row3_zh: 对共同成本的贡献
+  row3_zh_hk: 對共同成本的貢獻
+  row4_en: Head-office expenditure
+  row4_zh: 总部支出
+  row4_zh_hk: 總部開支
+  col1_en: Keep East
+  col1_zh: 保留东区
+  col1_zh_hk: 保留東區
+  col2_en: Close East
+  col2_zh: 关掉东区
+  col2_zh_hk: 東區結業
+  c11: '600,000'
+  c12: '0'
+  c21: '550,000'
+  c22: '0'
+  c31: '50,000'
+  c32: '0'
+  c41: '200,000'
+  c42: '200,000'
+  highlight_s2: row3
+  highlight_s3: row4
+  footer_en: Closing is HK$50,000 worse
+  footer_zh: 关店会让公司少 5万港元
+  footer_zh_hk: 結業會令公司差 5萬港元
+  s1_en: Compare the whole company with and without East.
+  s1_zh: 我们比一比，全公司保留和关掉东区门店，分别会怎么样。
+  s1_zh_hk: 我哋比較一下，全公司保留同結業東區分店，分別會點。
+  s2_en: >-
+    Keeping East brings HK$600,000 of sales, and HK$550,000 of avoidable branch costs that disappear if it closes. East therefore adds HK$50,000 toward common costs. Closing saves HK$550,000 but loses HK$600,000, so the company's result is HK$50,000 worse next quarter.
+  s2_zh: >-
+    保留它，能带来60万港元销售额，也会发生关店就能省掉的55万港元可避免的门店成本。所以它对共同成本的贡献是5万港元。关店能省下55万，却要失去60万的销售额，公司下季度业绩反而少5万港元。
+  s2_zh_hk: >-
+    保留佢，可以帶來60萬港元銷售額，又要支付55萬港元可避免嘅分店成本，結業後就可以免掉。即係對共同成本嘅貢獻有5萬港元。結業雖然省55萬，卻失去60萬銷售額，全公司下季業績反而差5萬港元。
+  s3_en: The unchanged HK$200,000 head-office total is present in both alternatives, and it cancels in the comparison.
+  s3_zh: 两个方案都有20万港元的总部支出，比差额的时候，这笔钱互相抵消。
+  s3_zh_hk: 兩個方案都一樣有20萬港元總部開支，比較嘅時候可以互相抵銷。
+
+- id: debrief_why
+  visual: title_card
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: A charge moved, not a cost saved
+  title_zh: 成本换了门店承担，却一分没省
+  title_zh_hk: 改分攤不等於省開支
+  en: >-
+    Moving a charge is not removing an expense. The new allocation lowers East's reported result by HK$40,000, from a HK$10,000 profit to a HK$30,000 loss, without changing the forecast of its activity or the group's head-office bill. If East closes, the remaining branches receive larger charges. Treating that reassignment as a cash saving would confuse the reporting system with the operating decision. The allocation change alone is not evidence of weaker managerial performance.
+  zh: >-
+    换个门店来承担，不等于省了钱。分摊方法一换，东区门店报告的业绩就少4万港元，从盈利1万变成亏损3万。但门店运营预测没变，集团的总部支出也没变。关店以后，其他门店反而要分摊更多。把这种账面上的转移，当成现金节省，就把成本报告和经营决策搞混了。仅仅分摊方法变了，也不能说明店长的工作变差了。
+  zh_hk: >-
+    改由別人入帳，唔等於省咗開支。換咗分攤方法，東區分店嘅呈報業績少咗4萬港元，由盈利1萬變成虧損3萬。但分店營運預測無變，集團總部開支亦無變。東區若結業，其他分店只會多分一啲成本。將帳面上嘅轉移當成現金節省，就混淆咗成本呈報同實際經營決定。單係分攤方法改變，唔能夠證明經理表現退步。
+
+- id: check
+  visual: title_card
+  seconds: 24
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检查
+  kicker_zh_hk: 檢查
+  title_en: What would change the answer?
+  title_zh: 什么情况会改变答案？
+  title_zh_hk: 甚麼情況會改變答案？
+  en: >-
+    Under these next-quarter assumptions, keep East rather than close it. That does not prove East should operate forever. A feasible alternative use, different demand, genuinely avoidable central resources, or further costs could change a later decision. Do not assume a cost is avoidable just because it is labelled direct, or unavoidable just because it is labelled fixed. If you thought closing saved HK$80,000, who pays the head-office bill afterward?
+  zh: >-
+    按照题里给的下季度假定，应该保留东区门店，而不是关掉它。但这并不说明，它永远都该开下去。万一有了可行的替代用途、需求变了、部分总部资源确实能省掉，或者出现额外支出，以后的决定可能就不一样。不要一看到「直接成本」就认定它是可避免成本，也不要一看到「固定成本」就认定省不了。如果你刚才觉得关店能省下8万港元，那以后总部的账单，又由谁来付？
+  zh_hk: >-
+    按題設嘅下季假設，東區分店應該繼續經營，而唔係結業。但呢個唔代表佢永遠都應該開落去。若有可行嘅替代用途、需求有變、部分總部資源確實可以省掉，或者另有開支，日後嘅決定可能不同。別以為「直接成本」一定可避免，亦別以為「固定成本」一定不可避免。如果你以為結業可以省起8萬港元，咁之後又係邊個嚟付總部嘅帳單？
+
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Two reporting questions
+  title_zh: 两个不同的业绩问题
+  title_zh_hk: 兩個不同的業績問題
+  q1_en: Which revenues and costs actually change
+  q1_zh: 哪些收入和成本真的会变
+  q1_zh_hk: 哪些收入同成本真係會變
+  q2_en: What the manager controls, not reassigned charges
+  q2_zh: 店长能控制的，不是重新分摊的支出
+  q2_zh_hk: 經理能控制的，不是重新分攤的費用
+  s1_en: For this closure decision, ask which revenues and costs actually change.
+  s1_zh: 决定要不要关店，要看哪些收入和成本真的会变。
+  s1_zh_hk: 要決定是否結業，應該看哪些收入同成本真係會變。
+  s2_en: For assessing the manager, distinguish what the manager controls from charges reassigned by head office.
+  s2_zh: 评价店长时，要把店长能控制的事项，和总部重新分摊的支出区分开。
+  s2_zh_hk: 評核經理嘅時候，要區分佢可以控制嘅項目，與總部重新分攤嘅費用。
+  s3_en: Tsui Wah's report is a real example of network changes, not evidence that any real closure arose from an allocation error. The figures in this case are fictional classroom assumptions.
+  s3_zh: 翠华的年报，是门店布局调整的真实例子，并不能说明某次真实关店，是因为分摊出了错。这个案例里的数字，都是虚构的课堂假设。
+  s3_zh_hk: 翠華嘅年報，係真實嘅店舖網絡調整例子，亦唔能夠證明某次真實結業，係因為分攤出錯。呢個案例入面嘅數字，都係虛構嘅課堂假設。

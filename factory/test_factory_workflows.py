@@ -144,8 +144,11 @@ class BuildResults(unittest.TestCase):
             langs.selected_cells(lesson, ["hk"])
 
     def test_local_tracks_share_one_clock_across_separate_renders(self):
+        # Shared alignment is opt-in. This fixture keeps that clock so
+        # separate renders still pad to the longest language.
         lesson = {
             "id": "STAT-M01-T01-SMOKE",
+            "clock": "shared",
             "title_en": "Example",
             "title_zh": "\u793a\u4f8b",
             "title_zh_hk": "\u793a\u4f8b",

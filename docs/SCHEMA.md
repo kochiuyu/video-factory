@@ -91,7 +91,7 @@ A lesson uses these cards only by setting the beat `visual` to a `whatis_*` name
 
 An optional beat `kicker_*` replaces the small role label (Definition, Example, Takeaway). Contrast headings stay What it is / What it is not (它是什么 / 它不是什么, 佢係咩 / 佢唔係咩). A bilingual cell (`en+zh`, `en+hk`) keeps the English line at that size and paints the matching Chinese underneath it. `validate.py` does not require `whatis_*` fields on any other visual, and does not require `source_*`.
 
-A lesson whose beats are all `whatis_*` times each language on its own speech, then holds the card for a 0.4 s breath. It does not pad a shorter language up to the longest one, and it does not hold the card for the YAML `seconds` after the line has finished. Mixed cells follow the English speech. Set `clock: shared` to keep the ordinary shared clock, or `clock: own` to opt any other lesson in. STAT and LAE-M lessons stay on the shared clock.
+Every lesson times each language on its own speech, then holds the card for a 0.4 s breath. It does not pad a shorter language up to the longest one, and it does not hold the card for the YAML `seconds` after the line has finished. Mixed cells follow the English speech. `clock: shared` opts into the old shared clock (pad each beat to the longest language; `VF_PAD_CAP` / `--pad-cap` can cap that pad). `clock: own` is an explicit alias for the default. A `whatis_*` lesson uses this same default and can still opt out with `clock: shared`.
 
 ## Stage speech
 
@@ -131,6 +131,7 @@ Lesson-level optional keys (none of these are required by `validate.py`):
 | `glossary` | Console, Excel Glossary sheet, authoring locks | Keep for term consistency. `lock: true` must not be paraphrased. Not painted on slides/covers and not uploaded to YouTube. |
 | `quiz` | Quiz export / pack | Keep when the short has review items. |
 | `slide_style` | Slides | Optional. `focus` uses compact headings and keeps the teaching area above the caption chip. Omit the field for the default layout. Any other value is not a focus layout. |
+| `clock` | Build timing | Optional. Omit it, or set `own`, for the default: each language's beat is that language's speech plus a 0.4 s breath. `shared` pads each beat to the longest language. `validate.py` accepts only `own` or `shared`. |
 | `source`, `source_en`, `source_zh`, `source_zh_hk` | What-is footer | Optional. A citation line (companion page, and issuers such as LegCo CB(3)933/2024). Drawn on `whatis_*` slides only. A beat-level `source_*` overrides the lesson line. Lessons that omit it keep the usual title footer. |
 **Not a lesson field:** bare `duration_target` (without `_s`) is unused and must not be added. Timing uses required `duration_target_s` only (validate compares it to the sum of beat `seconds`).
 

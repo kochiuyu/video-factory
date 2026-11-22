@@ -189,7 +189,7 @@ class WhatisContrastStages(unittest.TestCase):
 
 
 class WhatisClock(unittest.TestCase):
-    def test_whatis_times_each_language_and_stat_stays_shared(self):
+    def test_default_clock_is_per_language_and_shared_is_opt_in(self):
         from build import capped_durations, owns_speech_clock, speech_breath_durations
 
         whatis = _lesson([{
@@ -200,10 +200,17 @@ class WhatisClock(unittest.TestCase):
             "id": "open", "visual": "title_card", "seconds": 12,
             "title_en": "Intro", "en": "Hello.", "zh": "你好。", "zh_hk": "你好。",
         }])
+        mixed = _lesson([
+            stat["beats"][0],
+            whatis["beats"][0],
+        ])
+        self.assertTrue(owns_speech_clock(stat))
         self.assertTrue(owns_speech_clock(whatis))
-        self.assertFalse(owns_speech_clock(stat))
-        self.assertFalse(owns_speech_clock({**whatis, "clock": "shared"}))
+        self.assertTrue(owns_speech_clock(mixed))
+        self.assertFalse(owns_speech_clock({**stat, "clock": "shared"}))
         self.assertTrue(owns_speech_clock({**stat, "clock": "own"}))
+        self.assertFalse(owns_speech_clock({**whatis, "clock": "shared"}))
+        self.assertTrue(owns_speech_clock({**whatis, "clock": "own"}))
 
         raw = {"en": [6.6, 29.9], "zh_hk": [7.1, 32.9]}
         own = speech_breath_durations(raw, 0.4)
@@ -214,6 +221,18 @@ class WhatisClock(unittest.TestCase):
         shared = capped_durations(raw, [7.1, 32.9], None)
         self.assertEqual(shared["en"], [7.1, 32.9])
         self.assertEqual(shared["zh_hk"], [7.1, 32.9])
+
+    def test_clock_field_accepts_only_own_or_shared(self):
+        lesson = _lesson([{
+            "id": "hook", "visual": "whatis_title", "seconds": 12,
+            "title_en": "What is LAE?", "en": "Narrow.", "zh": "窄。", "zh_hk": "窄。",
+        }])
+        self.assertEqual(validate(lesson, glyphs=False), [])
+        self.assertEqual(validate({**lesson, "clock": "own"}, glyphs=False), [])
+        self.assertEqual(validate({**lesson, "clock": "shared"}, glyphs=False), [])
+        self.assertEqual(validate({**lesson, "clock": "OWN"}, glyphs=False), [])
+        errors = validate({**lesson, "clock": "together"}, glyphs=False)
+        self.assertEqual(errors, ["clock must be own or shared, not 'together'."])
 
 
 if __name__ == "__main__":

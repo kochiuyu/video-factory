@@ -72,12 +72,12 @@ Do not use STAT cards (quiz pair, formula box, charts, staged `s1`/`s2` reveals)
 
 ## Timing
 
-A lesson whose beats are all `whatis_*` times **each language on its own speech**, then holds the card for a **0.4 s** breath. It does not pad a shorter language up to the longest one, and it does not keep the card up for leftover YAML `seconds` after the line has finished.
+Every lesson times **each language on its own speech**, then holds the card for a **0.4 s** breath. It does not pad a shorter language up to the longest one, and it does not keep the card up for leftover YAML `seconds` after the line has finished. A What-is lesson uses that same default.
 
 - Mixed cells follow the English speech.
 - YAML `seconds` and `duration_target_s` are planning budgets, not hold times. After a build, they may be updated to match speech plus breath if validation needs it.
 - Do not cut or split a line only to avoid the factory’s “card longer than 20 s” warning when the sentence itself is that long. Fix a multi-second freeze after the voice stops; do not confuse that freeze with a long spoken example.
-- STAT and LAE-M stay on the shared clock. Do not change their timing or pixels. Set `clock: shared` only if a lesson must keep that older behaviour; `clock: own` opts another lesson into per-language timing.
+- `clock: shared` opts into the old shared clock (pad each beat to the longest language). `clock: own` is an explicit alias for the default. STAT and LAE-M use this same default the next time they are built. Do not change their pixels.
 
 ## Factory contract
 

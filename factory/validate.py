@@ -330,6 +330,10 @@ def validate(lesson: dict, glyphs: bool = True, source: Path | str | None = None
     for key in ("id", "title_en", "title_zh", "beats"):
         if key not in lesson:
             errors.append(f"Missing field: {key}")
+    if "clock" in lesson and lesson.get("clock") is not None:
+        flag = str(lesson.get("clock")).strip().lower()
+        if flag not in {"own", "shared"}:
+            errors.append(f"clock must be own or shared, not {lesson.get('clock')!r}.")
     beats = lesson.get("beats") or []
     errors.extend(youtube_errors(lesson))
     if not beats:

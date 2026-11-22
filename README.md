@@ -29,7 +29,7 @@ When you build a lesson, the tools under `factory/` run a fixed pipeline:
 
 1. **Paint slides** — render PNG stills from the YAML visual fields
 2. **Synthesize speech** — text-to-speech for each language (or reuse MP3s you supply)
-3. **Align timing** — pad the shorter languages so every language shares one clock per section
+3. **Time each language** — each beat runs that language's speech plus a 0.4 s breath. `clock: shared` on a lesson pads shorter languages so every language shares one clock per section.
 4. **Burn captions and mux** — combine slides + audio into language **cells** (finished MP4s, one primary language each; bilingual slide variants such as English voice with Chinese labels are optional)
 
 A browser console (`python factory/app.py` → `http://127.0.0.1:8765`) can preview slides and kick off the same builds.
@@ -107,7 +107,7 @@ Useful flags (see `python factory/build.py -h`):
 | `--theme <name>` | Palette from `themes/<name>.yaml` |
 | `--out <dir>` | Lesson output root. Wins over `$VF_OUT`. Unset, the default is `<Downloads>/video-factory-out` |
 
-Video builds with TTS prepare every narration track so separate cuts use the same beat timing. With `--no-tts`, valid MP3s are required for the requested cuts. All complete local tracks participate in timing, so provide all tracks to align separately rendered cuts.
+By default each language keeps its own beat length (speech plus a 0.4 s breath). A lesson with `clock: shared` pads separate cuts onto one clock: TTS prepares every narration track, and with `--no-tts` every complete local track participates, so provide all tracks when those cuts must align. With `--no-tts`, valid MP3s are required for the requested cuts.
 
 To move older flat outputs to the current layout, run `python factory/build.py --migrate-output`. The command checks known lesson and module IDs for rendered artifacts and skips existing destinations.
 
@@ -163,7 +163,7 @@ Do not invent topics, story numbers, or new quiz answers. If a suppose file must
 ## Design that must stay fixed
 
 1. Schema first — if it is not in the YAML, it is not in the video.
-2. One clock per section — pad audio to `max(English, 简, 繁)` per section, then join clips.
+2. Per-language timing by default — each beat is that language's speech plus a 0.4 s breath, then the clips are joined. `clock: shared` keeps one clock per section by padding to `max(English, 简, 繁)`.
 3. Speech synthesis lives inside `build.py` (Edge neural voices by default); `--no-tts` accepts vendor MP3s on the same paths.
 4. Template / renderer changes are code reviews, not chat improvisation.
 

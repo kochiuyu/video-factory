@@ -2,7 +2,8 @@
 """Assemble a lesson into a silent master and, if audio exists, four language cells.
 
 Once the YAML is valid, this script is the entire production job:
-slides, TTS (if audio is missing), shared clock, four cells.
+slides, TTS (if audio is missing), a per-language beat clock
+(`clock: shared` opts into one shared clock), four cells.
 """
 
 from __future__ import annotations
@@ -279,28 +280,29 @@ def _env_float(name: str) -> float | None:
 
 
 def pad_cap() -> float | None:
-    """VF_PAD_CAP=1.0 caps the silence added after each beat in a language
-    to about that many seconds. Unset = old behaviour (pad to the longest
-    language, so every cell has the same beat lengths)."""
+    """Silence cap for `clock: shared` only. VF_PAD_CAP=1.0 limits the pad
+    after each beat to about that many seconds. Unset = pad fully to the
+    longest language, so every cell has the same beat lengths. The default
+    per-language clock ignores this."""
     cap = _env_float("VF_PAD_CAP")
     return None if cap is None or cap < 0 else cap
 
 
-# What-is lessons time each language on its own speech. This breath is the
-# only silence after a line. It is not applied to STAT or other courses.
+# Default clock: each language keeps its own speech, then this breath.
+# It is the only silence after a line. `clock: shared` does not add it;
+# that path pads toward the longest language (see pad_cap).
 OWN_BREATH_S = 0.4
 
 
 def owns_speech_clock(lesson: dict) -> bool:
-    """Per-language timing for a What-is lesson. Other lessons stay on the
-    shared clock. `clock: own` opts a lesson in; `clock: shared` opts out."""
+    """Per-language timing is the default for every lesson.
+
+    Each language's beat is that language's speech plus OWN_BREATH_S.
+    `clock: own` is an explicit alias. `clock: shared` opts into the
+    shared clock, which pads each beat toward the longest language.
+    """
     flag = str(lesson.get("clock") or "").strip().lower()
-    if flag == "shared":
-        return False
-    if flag == "own":
-        return True
-    visuals = [str(beat.get("visual") or "") for beat in (lesson.get("beats") or [])]
-    return bool(visuals) and all(visual.startswith("whatis_") for visual in visuals)
+    return flag != "shared"
 
 
 def speech_breath_durations(raw: dict[str, list[float]], breath: float = OWN_BREATH_S) -> dict[str, list[float]]:
@@ -437,7 +439,12 @@ def _write_preview_pdfs(lid: str, out_root: Path, kinds: tuple[str, ...]) -> Non
 
 
 def load_audio_tracks(lesson: dict, audio_root: Path, required: list[str]) -> dict[str, list[Path]]:
-    """Include each complete narration track in the shared timeline."""
+    """Load every complete narration track.
+
+    Required tracks must be readable. Other complete tracks are included so
+    `clock: shared` can pad across languages. The default clock times each
+    loaded language on its own speech.
+    """
     tracks = {}
     missing = []
     for lang in script_langs(lesson):
@@ -750,7 +757,7 @@ def build(
         return []
     if tts:
         audio_langs = script_langs(lesson)
-        print("tts: preparing narration for the shared clock")
+        print("tts: preparing narration")
         synthesize_lesson(lesson, audio_root, overwrite=force_tts, langs=audio_langs)
         tracks = load_audio_tracks(lesson, audio_root, audio_langs)
     clock.lap("speech")

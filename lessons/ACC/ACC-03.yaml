@@ -1,0 +1,282 @@
+id: ACC-03
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+duration_target_s: 214
+title_en: Target reached. Returns still coming?
+title_zh: 销售达标了？退货期还没结束
+title_zh_hk: 銷售達標了？退貨期還未完
+beats:
+- id: hook
+  visual: still_image
+  seconds: 20
+  kicker: ACC-03
+  kicker_en: ACC-03
+  kicker_zh: ACC-03
+  kicker_zh_hk: ACC-03
+  title_en: Target reached. Returns still coming?
+  title_zh: 销售达标了？退货期还没结束
+  title_zh_hk: 銷售達標了？退貨期還未完
+  image: art/returns-target-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Would you certify a team bonus while customers can still return their purchases? This is a fictional Hong Kong homewares shop. One thousand organizers have been delivered, and the return window is still open. Finance has to review the evidence. Gross sales alone do not qualify.
+  zh: >-
+    顾客还可以退货，团队奖金现在就能确认吗？这是一家虚构的香港家品网店。一千件收纳用品已经交付，退货期还没结束。财务要独立复核证据。只看销售总额，不能确认奖金。
+  zh_hk: >-
+    顧客仲可以退貨，團隊獎金而家就確認得未？呢間係虛構嘅香港網上家品店。一千件收納用品已經交付，退貨期仲未完。財務要獨立覆核證據。只睇銷售總額，唔可以確認獎金。
+
+- id: ledger
+  visual: table_grid
+  seconds: 30
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: First dashboard, HK$
+  title_zh: 首张看板，港元
+  title_zh_hk: 首張看板，港元
+  row1_en: Gross delivered sales
+  row1_zh: 销售总额
+  row1_zh_hk: 銷售總額
+  row2_en: Initial expected refunds
+  row2_zh: 预计退款
+  row2_zh_hk: 預計退款
+  row3_en: Provisional net sales
+  row3_zh: 销售净额
+  row3_zh_hk: 銷售淨額
+  row4_en: Bonus threshold
+  row4_zh: 奖金门槛
+  row4_zh_hk: 獎金門檻
+  col1_en: Basis
+  col1_zh: 依据
+  col1_zh_hk: 依據
+  col2_en: HK$
+  col2_zh: 港元
+  col2_zh_hk: 港元
+  c11: '1,000 × 200'
+  c12: '200,000'
+  c21_en: 5% of gross sales
+  c21_zh: 总额的 5%
+  c21_zh_hk: 總額的 5%
+  c22: '10,000'
+  c31: '200,000 − 10,000'
+  c32: '190,000'
+  c41_en: After refunds
+  c41_zh: 扣除退款后
+  c41_zh_hk: 扣除退款後
+  c42: '185,000'
+  highlight_s3: row4
+  footer_en: No refund processed yet
+  footer_zh: 尚未办理退款
+  footer_zh_hk: 尚未辦理退款
+  s1_en: Here is that first review, in Hong Kong dollars. No refund has been processed yet.
+  s1_zh: 这是第一次复核的数字，单位是港元。这时候还没有办理任何退款。
+  s1_zh_hk: 呢張係第一次覆核嘅數字，單位係港元。呢個時候仲未辦理任何退款。
+  s2_en: >-
+    One thousand organizers at two hundred dollars are two hundred thousand of gross delivered sales. The team first uses a five-percent return rate, so expected refunds are ten thousand. Provisional net sales are one hundred and ninety thousand.
+  s2_zh: >-
+    一千件，每件二百港元，已交付销售总额是二十万。团队最初按百分之五估计预计退款，就是一万。暂定销售净额是十九万。
+  s2_zh_hk: >-
+    一千件，每件二百港元，已交付銷售總額係二十萬。團隊最初按百分之五估計預計退款，即係一萬。暫定銷售淨額係十九萬。
+  s3_en: >-
+    The agreed bonus rule needs at least one hundred and eighty-five thousand after actual and expected refunds. The rule was set before the campaign and will not be changed now. One hundred and ninety thousand is still an estimate.
+  s3_zh: >-
+    事先定好的奖金门槛，是扣除实际退款和预计退款之后，至少十八万五千港元。规则在促销前就定了，现在不改。十九万仍然只是估计。
+  s3_zh_hk: >-
+    事先定好嘅獎金門檻，係扣除實際退款同預計退款之後，至少十八萬五千港元。規則喺促銷前就定咗，而家唔改。十九萬仍然只係估計。
+
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Certify, or keep it provisional?
+  title_zh: 现在确认，还是先算暂定？
+  title_zh_hk: 而家確認，定係先當暫定？
+  en: >-
+    The estimate sits above the threshold. Does that settle the bonus? Say what returns evidence finance still has to check. Pause here and vote.
+  zh: >-
+    暂定销售净额高于奖金门槛。奖金就定下来了吗？请说明财务还要核对哪些退货证据。在这里暂停，投个票。
+  zh_hk: >-
+    暫定銷售淨額高過獎金門檻。獎金係咪就定案？講下財務仲要核對邊啲退貨證據。喺度暫停，投個票。
+
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 30
+  kicker: New fact
+  kicker_en: New fact
+  kicker_zh: 新事实
+  kicker_zh_hk: 新事實
+  title_en: Eighty more, not eighty total
+  title_zh: 额外八十，不是总共八十
+  title_zh_hk: 額外八十，不是總共八十
+  step1_en: 'Actual refunds: 40 = HK$8,000'
+  step1_zh: 实际退款：40 件＝HK$8,000
+  step1_zh_hk: 實際退款：40 件＝HK$8,000
+  step2_en: 'Further expected: 80 × HK$200'
+  step2_zh: 预计退款：额外 80 件 × HK$200
+  step2_zh_hk: 預計退款：額外 80 件 × HK$200
+  step3_en: Old 5% estimate is replaced
+  step3_zh: 原 5% 估计被新证据取代
+  step3_zh_hk: 原 5% 估計被新證據取代
+  s1_en: At the certification review, forty refunds have actually been processed. That is eight thousand dollars.
+  s1_zh: 正式复核时，四十件已经办妥退款。实际退款是八千港元。
+  s1_zh_hk: 正式覆核嗰陣，四十件已經辦妥退款。實際退款係八千港元。
+  s2_en: >-
+    Finance reviews comparable completed return windows for the same product and promotion. The evidence supports eighty additional expected returns. Eighty more, not eighty in total, and those returns have not happened yet.
+  s2_zh: >-
+    财务核对了同一产品、同类促销里已经走完退货期的可比批次。证据支持预计再退八十件。是额外八十件，不是总共八十件，而且这八十件还没发生。
+  s2_zh_hk: >-
+    財務核對咗同一產品、同類促銷入面，已經行完退貨期嘅可比批次。證據支持預計再退八十件。係額外八十件，唔係總共八十件，而且呢八十件仲未發生。
+  s3_en: >-
+    The price, the return policy and the one-hundred-and-eighty-five-thousand threshold stay the same. The old five-percent estimate is no longer the best evidence. The new estimate replaces it.
+  s3_zh: >-
+    售价、退货政策和十八万五千的奖金门槛都不变。原先百分之五的预计退款，已经不是目前最好的证据。新的估计取代它，不是在它上面再加一笔。
+  s3_zh_hk: >-
+    售價、退貨政策同十八萬五千嘅獎金門檻都唔變。原先百分之五嘅預計退款，已經唔係目前最好嘅證據。新估計取代佢，唔係喺上面再加一筆。
+
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Rebuild net sales first
+  title_zh: 先重算销售净额
+  title_zh_hk: 先重算銷售淨額
+  en: >-
+    Rebuild sales after refunds before you decide the bonus. Should the original ten thousand come off again? Pause and calculate.
+  zh: >-
+    先重算扣除退款后的销售净额，再决定奖金。原先那一万预计退款，还要再扣一次吗？请暂停，自己算一遍。
+  zh_hk: >-
+    先重算扣除退款後嘅銷售淨額，再決定獎金。原先嗰一萬預計退款，仲要再扣一次嗎？暫停，自己計一次。
+
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 32
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Replace the old estimate
+  title_zh: 新估计取代旧估计
+  title_zh_hk: 新估計取代舊估計
+  step1_en: '8,000 + 16,000 = 24,000'
+  step1_zh: '8,000＋16,000＝24,000'
+  step1_zh_hk: '8,000＋16,000＝24,000'
+  step2_en: '200,000 − 24,000 = 176,000'
+  step2_zh: '200,000 − 24,000＝176,000'
+  step2_zh_hk: '200,000 − 24,000＝176,000'
+  step3_en: '185,000 − 176,000 = 9,000'
+  step3_zh: '185,000 − 176,000＝9,000'
+  step3_zh_hk: '185,000 − 176,000＝9,000'
+  s1_en: >-
+    Eighty additional returns at two hundred dollars are sixteen thousand of further expected refunds. Add the eight thousand already processed. Actual and expected refunds together are twenty-four thousand.
+  s1_zh: >-
+    额外八十件，每件二百港元，预计退款是一万六千。加上已经发生的实际退款八千，合计两万四千。
+  s1_zh_hk: >-
+    額外八十件，每件二百港元，預計退款係一萬六千。加埋已經發生嘅實際退款八千，合共兩萬四千。
+  s2_en: Take twenty-four thousand off the two hundred thousand of gross delivered sales. Revised net sales are one hundred and seventy-six thousand.
+  s2_zh: 用已交付销售总额二十万，减去这两万四千。修订后的销售净额是十七万六千港元。
+  s2_zh_hk: 用已交付銷售總額二十萬，減走呢兩萬四千。修訂後嘅銷售淨額係十七萬六千港元。
+  s3_en: >-
+    The threshold is still one hundred and eighty-five thousand, so the result is nine thousand short. Do not deduct the original ten thousand as well. That would count the old estimate twice.
+  s3_zh: >-
+    奖金门槛仍是十八万五千，所以还差九千。不要把原先的一万预计退款再扣一次，否则旧估计就被算了两遍。
+  s3_zh_hk: >-
+    獎金門檻仍然係十八萬五千，所以仲差九千。唔好將原先嘅一萬預計退款再扣一次，否則舊估計就計咗兩次。
+
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: What this result is not
+  title_zh: 这个结果不能说明什么
+  title_zh_hk: 呢個結果唔能夠說明咩
+  step1_en: Bonus not certified now
+  step1_zh: 目前不能确认奖金
+  step1_zh_hk: 目前唔可以確認獎金
+  step2_en: Net sales are not profit or cash
+  step2_zh: 销售净额不是利润或现金
+  step2_zh_hk: 銷售淨額唔係利潤或現金
+  step3_en: A new estimate is not dishonesty
+  step3_zh: 估计改变不是不诚实
+  step3_zh_hk: 估計改變唔係不誠實
+  s1_en: On the reviewed evidence, bonus certification is not supported now.
+  s1_zh: 按复核后的证据，现在不能确认奖金资格。
+  s1_zh_hk: 按覆核後嘅證據，而家唔可以確認獎金資格。
+  s2_en: >-
+    This test is net sales. It is not profit, and it is not cash the team can spend. Returned goods may still have value, and the case gives no costs.
+  s2_zh: >-
+    这里考核的是销售净额。它不是利润，也不是团队可以动用的现金。退回的商品可能还有价值，题目也没有给成本。
+  s2_zh_hk: >-
+    呢度考核嘅係銷售淨額。佢唔係利潤，亦唔係團隊可以動用嘅現金。退回嘅貨品可能仲有價值，題目亦冇畀成本。
+  s3_en: >-
+    Changing the estimate does not by itself show that someone acted dishonestly. Do not move the threshold, and do not block a valid return, just to reach a preferred result.
+  s3_zh: >-
+    预计退款变了，本身不能证明有人不诚实。不要为了得到想要的结果去改奖金门槛，也不要拦住符合政策的退货。
+  s3_zh_hk: >-
+    預計退款變咗，本身唔能夠證明有人唔誠實。唔好為咗得到想要嘅結果去改獎金門檻，亦唔好攔住符合政策嘅退貨。
+
+- id: check
+  visual: title_card
+  seconds: 22
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 追问
+  kicker_zh_hk: 追問
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If you also deduct the original ten thousand, which refunds have you counted twice? If you call the twenty-four thousand lost profit, what recoverable value of returned goods is still missing from the case?
+  zh: >-
+    如果把原先的一万预计退款再扣一次，哪些退款被算了两遍？如果把两万四千港元当成利润损失，退回商品还有多少可收回价值？题目并没有给出。
+  zh_hk: >-
+    如果將原先一萬預計退款再扣一次，邊啲退款計咗兩次？如果將兩萬四千港元當成利潤損失，退回貨品仲有幾多可收回價值？題目並冇提供。
+
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Certify the agreed measure
+  title_zh: 按既定口径确认
+  title_zh_hk: 按既定口徑確認
+  q1_en: Four figures, on separate lines
+  q1_zh: 四个数字分开列示
+  q1_zh_hk: 四個數字分開列示
+  q2_en: Best evidence, not the headline
+  q2_zh: 看最佳证据，不看标题
+  q2_zh_hk: 睇最佳證據，唔睇標題
+  s1_en: >-
+    Tell the team that gross delivered sales were two hundred thousand, and that refund-adjusted net sales are provisionally one hundred and seventy-six thousand.
+  s1_zh: >-
+    可以这样向团队说明：已交付销售总额是二十万，扣除退款后的暂定销售净额是十七万六千港元。
+  s1_zh_hk: >-
+    可以咁同團隊講：已交付銷售總額係二十萬，扣除退款後嘅暫定銷售淨額係十七萬六千港元。
+  s2_en: >-
+    Keep gross sales, actual refunds, further expected refunds and provisional net sales on separate lines. Record the evidence, the reviewer and the next update.
+  s2_zh: >-
+    销售总额、实际退款、额外的预计退款和暂定销售净额要分开列。记下证据、复核人，以及退货期结束时的下次更新。
+  s2_zh_hk: >-
+    銷售總額、實際退款、額外嘅預計退款同暫定銷售淨額要分開列。記低證據、覆核人，以及退貨期結束時嘅下次更新。
+  s3_en: Certify the bonus only on the agreed measure and the best evidence, not on the most attractive headline.
+  s3_zh: 确认奖金，只看事先定好的销售净额和目前最好的证据，不看哪个标题最好看。
+  s3_zh_hk: 確認獎金，只睇事先定好嘅銷售淨額同目前最好嘅證據，唔睇邊個標題最好睇。

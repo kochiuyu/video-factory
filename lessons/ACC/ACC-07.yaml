@@ -1,0 +1,225 @@
+id: ACC-07
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+duration_target_s: 192
+title_en: One machine invoice. One asset cost?
+title_zh: 一张机器发票，全部都计入设备成本吗？
+title_zh_hk: 一張機器發票，就是一項設備成本？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 20
+  kicker: ACC-07
+  kicker_en: ACC-07
+  kicker_zh: ACC-07
+  kicker_zh_hk: ACC-07
+  title_en: One machine invoice. One asset cost?
+  title_zh: 一张机器发票，全部都计入设备成本吗？
+  title_zh_hk: 一張機器發票，就是一項設備成本？
+  image: art/machine-cost-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    One invoice, one accounting category? A fictional printing studio paid one hundred and fifty thousand Hong Kong dollars for a package called new machine and getting started. The machine will be used for several years. No external report has been issued, and the breakdown has not been read.
+  zh: >-
+    一张发票，就只能归入一个会计类别吗？这家虚构的印刷工作室付了十五万港元，买下「新机器及启用配套」。机器可以使用多年。对外报告还没出具，分项明细也还没看。
+  zh_hk: >-
+    一張發票，就只能歸入一個會計類別嗎？呢間虛構嘅印刷工作室付咗十五萬港元，買低「新機器及啟用配套」。機器可以用好多年。對外報告仲未出具，分項明細亦仲未睇。
+
+- id: term
+  visual: definition_card
+  seconds: 18
+  kicker: Rule
+  kicker_en: Rule
+  kicker_zh: 规则
+  kicker_zh_hk: 規則
+  title_en: Capitalise means record an asset
+  title_zh: 资本化是记成资产
+  title_zh_hk: 資本化係記成資產
+  formula_en: Capitalise = record as an asset
+  formula_zh: 资本化＝记作资产
+  formula_zh_hk: 資本化＝記作資產
+  gloss_en: It does not mean raising money
+  gloss_zh: 不是筹措资金
+  gloss_zh_hk: 唔係籌集資金
+  s1_en: To capitalise a cost is to record it as an asset. It does not mean the studio raised funds.
+  s1_zh: 资本化，是把成本记作资产。它不是筹措资金。
+  s1_zh_hk: 資本化，係將成本記作資產。佢唔係籌集資金。
+  s2_en: >-
+    A cost that brings the machine to its intended use can join the asset, when benefits are probable and the cost is reliable. A service already received, which creates no such asset, is an expense.
+  s2_zh: >-
+    让机器达到预定可使用状态的合格成本，在利益很可能流入、成本也能可靠计量时，可以计入资产。已经接受、但没有形成这项资产的服务，确认为费用。
+  s2_zh_hk: >-
+    令機器達到預定用途嘅合資格成本，喺利益很可能流入、成本亦能夠可靠計量時，可以計入資產。已經接受、但冇形成呢項資產嘅服務，確認為開支。
+
+- id: pause1
+  visual: title_card
+  seconds: 14
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: All equipment, or all expense?
+  title_zh: 全部设备，还是全部费用？
+  title_zh_hk: 全部設備，定係全部開支？
+  en: The owner wants all one hundred and fifty thousand recorded as equipment. A colleague wants it all expensed now. Which provisional position do you take before reading the lines? Pause and vote.
+  zh: 老板想把十五万全部记作设备。同事想全部立刻列为费用。还没看分项之前，你的暂定判断是哪一边？在这里暂停，投个票。
+  zh_hk: 老闆想將十五萬全部記作設備。同事想全部即刻列為開支。仲未睇分項之前，你嘅暫定判斷係邊一邊？喺度暫停，投個票。
+
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 32
+  kicker: New fact
+  kicker_en: New fact
+  kicker_zh: 新事实
+  kicker_zh_hk: 新事實
+  title_en: Four lines on one invoice
+  title_zh: 一张发票，四行明细
+  title_zh_hk: 一張發票，四行明細
+  step1_en: 'Machine HK$120,000'
+  step1_zh: 机器 HK$120,000
+  step1_zh_hk: 機器 HK$120,000
+  step2_en: 'Delivery HK$8,000'
+  step2_zh: 送货 HK$8,000
+  step2_zh_hk: 送貨 HK$8,000
+  step3_en: 'Install and test HK$12,000'
+  step3_zh: 必要安装测试 HK$12,000
+  step3_zh_hk: 必要安裝測試 HK$12,000
+  step4_en: 'Completed training HK$10,000'
+  step4_zh: 已完成操作员培训 HK$10,000
+  step4_zh_hk: 已完成操作員培訓 HK$10,000
+  s1_en: The invoice separates the machine at one hundred and twenty thousand.
+  s1_zh: 发票把机器单独列为十二万。
+  s1_zh_hk: 發票將機器單獨列為十二萬。
+  s2_en: Delivery is eight thousand.
+  s2_zh: 送货是八千。
+  s2_zh_hk: 送貨係八千。
+  s3_en: Necessary installation and testing are twelve thousand. That work was needed to bring the machine to the condition for its intended use. The machine is now ready, and the test is done.
+  s3_zh: 必要的安装和测试是一万二。这项工作是为了让机器达到预定可使用状态。机器现在已经就绪，测试也做完了。
+  s3_zh_hk: 必要嘅安裝同測試係一萬二。呢項工作係為咗令機器達到預定用途。機器而家已經就緒，測試亦做完咗。
+  s4_en: >-
+    Completed operator training is ten thousand, priced on its own. It only teaches staff to use a machine that is already ready. It does not install, modify or test it, and it creates no separate software or licence.
+  s4_zh: >-
+    已完成的操作员培训是一万，单独标价。它只教员工使用已经就绪的机器，不承担安装、改装或测试，也不形成单独的软件或许可。
+  s4_zh_hk: >-
+    已完成嘅操作員培訓係一萬，單獨標價。佢只教員工使用已經就緒嘅機器，唔承擔安裝、改裝或測試，亦唔形成單獨嘅軟件或許可。
+
+- id: pause2
+  visual: title_card
+  seconds: 14
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: How much is the asset?
+  title_zh: 设备成本是多少？
+  title_zh_hk: 設備成本係幾多？
+  en: How much is equipment cost, and how much is training expense this period? Does "useful later" by itself decide the asset? Pause and calculate.
+  zh: 多少计入设备成本，多少列为已完成培训的费用？「以后有用」本身，能不能决定确认为资产？请暂停，自己分一遍。
+  zh_hk: 幾多計入設備成本，幾多列為已完成培訓嘅開支？「以後有用」本身，可唔可以決定確認為資產？暫停，自己分一次。
+
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Classify what was acquired
+  title_zh: 按取得的内容分类
+  title_zh_hk: 按取得嘅內容分類
+  step1_en: '120,000 + 8,000 + 12,000 = 140,000'
+  step1_zh: '120,000＋8,000＋12,000＝140,000'
+  step1_zh_hk: '120,000＋8,000＋12,000＝140,000'
+  step2_en: 'Training expense HK$10,000'
+  step2_zh: 已完成培训费用 HK$10,000
+  step2_zh_hk: 已完成培訓開支 HK$10,000
+  step3_en: 'Cash paid HK$150,000'
+  step3_zh: 现金实付 HK$150,000
+  step3_zh_hk: 現金實付 HK$150,000
+  s1_en: The machine, the delivery, and the necessary installation and testing are the equipment cost. One hundred and twenty plus eight plus twelve is one hundred and forty thousand.
+  s1_zh: 机器、送货，以及必要的安装和测试，计入设备成本。十二万加八千加一万二，是十四万。
+  s1_zh_hk: 機器、送貨，以及必要嘅安裝同測試，計入設備成本。十二萬加八千加一萬二，係十四萬。
+  s2_en: The completed training is an expense of ten thousand. Future usefulness alone does not make it an asset. The staff may still have learned something valuable.
+  s2_zh: 已完成的培训列为费用一万。单凭以后有用，并不能把它确认为资产。员工仍然可能学到有价值的东西。
+  s2_zh_hk: 已完成嘅培訓列為開支一萬。單憑以後有用，並唔能夠將佢確認為資產。員工仍然可能學到有價值嘅嘢。
+  s3_en: Cash paid is still one hundred and fifty thousand. Changing the label does not save cash.
+  s3_zh: 实付现金仍是十五万。改了会计分类，并不会省下现金。
+  s3_zh_hk: 實付現金仍然係十五萬。改咗會計分類，並唔會省低現金。
+
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: The label is not the cash
+  title_zh: 分类变了，现金没变
+  title_zh_hk: 分類變咗，現金冇變
+  step1_en: Useful training can still be expensed
+  step1_zh: 有用的培训仍可列为费用
+  step1_zh_hk: 有用嘅培訓仍可列為開支
+  step2_en: Equipment cost is later depreciated
+  step2_zh: 设备成本以后通过折旧分配
+  step2_zh_hk: 設備成本以後透過折舊分配
+  step3_en: No cash is saved by the label
+  step3_zh: 改分类不节省现金
+  step3_zh_hk: 改分類唔節省現金
+  s1_en: Expensing the training does not say the course was a waste, and it is not a reason to cut training.
+  s1_zh: 把培训列为费用，不是说这门课没有用，也不是建议削减培训。
+  s1_zh_hk: 將培訓列為開支，唔係話呢個課程冇用，亦唔係建議削減培訓。
+  s2_en: The one hundred and forty thousand is the cost of an asset that will serve for several years. That cost is allocated later through depreciation. This case stops at the initial classification.
+  s2_zh: 十四万是一项可用多年的设备的成本。这项成本以后通过折旧分配。本题停在最初的分类，不往下算某一种折旧年限。
+  s2_zh_hk: 十四萬係一項可用多年嘅設備嘅成本。呢項成本以後透過折舊分配。呢題停喺最初嘅分類，唔再往下計某一種折舊年期。
+  s3_en: All one hundred and fifty thousand has been paid either way. There is no separate tax, financing or dismantling charge. The invoice heading does not decide the asset.
+  s3_zh: 无论怎样分类，十五万都已经付出。题目没有另计的税项、融资或拆卸成本。发票标题不能决定哪一部分是资产。
+  s3_zh_hk: 無論點樣分類，十五萬都已經付出。題目冇另計嘅稅項、融資或拆卸成本。發票標題唔能夠決定邊一部分係資產。
+
+- id: check
+  visual: title_card
+  seconds: 20
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 追问
+  kicker_zh_hk: 追問
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If the ten thousand had installed or tested the machine, instead of only teaching staff, which line would move into the asset? If you capitalised all one hundred and fifty thousand because training is useful later, which expense would disappear while the cash stayed the same?
+  zh: >-
+    如果这一万是用来安装或测试机器，而不只是教员工，哪一行应该改计入资产？如果因为培训以后有用，就把十五万全部资本化，哪一项费用会消失，而现金却一点没少付？
+  zh_hk: >-
+    如果呢一萬係用來安裝或測試機器，而唔只係教員工，邊一行應該改計入資產？如果因為培訓以後有用，就將十五萬全部資本化，邊一項開支會消失，而現金卻一點都冇少付？
+
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Read the lines, not the heading
+  title_zh: 看明细，不看发票标题
+  title_zh_hk: 睇明細，唔睇發票標題
+  q1_en: Equipment cost HK$140,000
+  q1_zh: 设备成本十四万
+  q1_zh_hk: 設備成本十四萬
+  q2_en: Training expense HK$10,000
+  q2_zh: 已完成培训费用一万
+  q2_zh_hk: 已完成培訓開支一萬
+  s1_en: Record one hundred and forty thousand as equipment. That is the machine, delivery, and necessary installation and testing.
+  s1_zh: 设备成本记十四万。里面是机器、送货，以及必要的安装和测试。
+  s1_zh_hk: 設備成本記十四萬。入面係機器、送貨，以及必要嘅安裝同測試。
+  s2_en: Record ten thousand as the expense of training that is already complete.
+  s2_zh: 已完成的培训费用记一万。
+  s2_zh_hk: 已完成嘅培訓開支記一萬。
+  s3_en: Keep the itemised invoice, the delivery and testing evidence, and the course description. Classify what was acquired, not the words at the top of the bill.
+  s3_zh: 留下分项发票、送货和测试的证据，以及课程说明。按取得的内容分类，不按发票标题分类。
+  s3_zh_hk: 留低分項發票、送貨同測試嘅證據，以及課程說明。按取得嘅內容分類，唔按發票標題分類。

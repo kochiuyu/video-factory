@@ -1,0 +1,261 @@
+id: ACC-09
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+duration_target_s: 212
+title_en: Two balances. One payment.
+title_zh: 两个余额，一笔付款
+title_zh_hk: 兩個結餘，一筆付款
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-09
+  kicker_en: ACC-09
+  kicker_zh: ACC-09
+  kicker_zh_hk: ACC-09
+  title_en: Two balances. One payment.
+  title_zh: 两个余额，一笔付款
+  title_zh_hk: 兩個結餘，一筆付款
+  image: art/two-balances-one-payment-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Would you release an approved forty-thousand-dollar equipment payment when two records disagree? Fictional Harbour Repair has already checked the supplier and the invoice. Paying today secures next-day dispatch. Waiting means the next opportunity. No real transfer is made in this case.
+  zh: >-
+    两份记录对不上，已批准的四万港元设备款，现在能放行吗？虚构的海港维修已经核对供应商和发票。今天付款，可以按约定次日发货。再等，就要等到下一次机会。本题不执行真实转账。
+  zh_hk: >-
+    兩份紀錄對唔上，已批准嘅四萬港元設備款，而家可唔可以放行？虛構嘅海港維修已經核對供應商同發票。今日付款，可以按約定翌日付運。再等，就要等到下一次機會。呢題唔執行真實轉帳。
+
+- id: ledger
+  visual: table_grid
+  seconds: 28
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Same cutoff, two balances
+  title_zh: 同一截止，两个余额
+  title_zh_hk: 同一截止，兩個結餘
+  row1_en: Balance at cutoff
+  row1_zh: 截止余额
+  row1_zh_hk: 截止結餘
+  row2_en: After this payment
+  row2_zh: 扣除这笔付款
+  row2_zh_hk: 扣除呢筆付款
+  row3_en: Reserve required
+  row3_zh: 留存资金
+  row3_zh_hk: 須留備用金
+  col1_en: Cash book
+  col1_zh: 银行存款日记账
+  col1_zh_hk: 現金簿
+  col2_en: Bank statement
+  col2_zh: 银行对账单
+  col2_zh_hk: 銀行結單
+  c11: '58,000'
+  c12: '70,000'
+  c21: '18,000'
+  c22: '30,000'
+  c31: '25,000'
+  c32: '25,000'
+  highlight_s3: row2
+  footer_en: Neither balance is verified yet
+  footer_zh: 两份余额都还没核对
+  footer_zh_hk: 兩份結餘都仲未核對
+  s1_en: >-
+    The cash book is the business's own record of the bank account, not cash in a drawer. The statement shows what the bank has posted. Neither figure is yet free to spend.
+  s1_zh: >-
+    银行存款日记账是企业自己记的银行账户，不是抽屉里的现金。银行对账单是银行已经入账的交易。两份都还不是可以自由动用的金额。
+  s1_zh_hk: >-
+    現金簿係企業自己記嘅銀行帳戶，唔係櫃桶入面嘅現金。銀行結單係銀行已經入帳嘅交易。兩份都仲未係可以自由動用嘅金額。
+  s2_en: At the same cutoff the book shows fifty-eight thousand and the statement seventy thousand. After the new forty thousand, the apparent remainders are eighteen thousand and thirty thousand.
+  s2_zh: 同一截止时间，日记账是五万八千，对账单是七万。减去新的四万付款，表面剩下的是一万八和三万。
+  s2_zh_hk: 同一截止時間，現金簿係五萬八千，結單係七萬。減走新嘅四萬付款，表面剩低嘅係一萬八同三萬。
+  s3_en: >-
+    The workshop's own rule requires twenty-five thousand left after this payment and payments already issued. One apparent remainder misses that reserve. The other seems to clear it. Neither figure is a reason to release the payment yet.
+  s3_zh: >-
+    工场自己的规则要求，扣掉这笔新付款和已经签发的付款之后，至少留存两万五千。一个表面余额不够，另一个好像够。两份都还不能作为放行的依据。
+  s3_zh_hk: >-
+    工場自己嘅規則要求，扣走呢筆新付款同已經簽發嘅付款之後，至少留備用金二萬五千。一個表面結餘唔夠，另一個好似夠。兩份都仲未可以作為放行嘅依據。
+
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Hold the payment, or release it?
+  title_zh: 先暂缓，还是放行？
+  title_zh_hk: 先暫緩，定係放行？
+  en: >-
+    Do you provisionally hold the payment, or release it? The purchase and the supplier are already approved. What has to be explained before any release? Pause and vote.
+  zh: >-
+    你是暂时扣住这笔付款，还是放行？采购和供应商已经批准。放行之前，差额必须解释到什么程度？在这里暂停，投个票。
+  zh_hk: >-
+    你係暫時扣住呢筆付款，定係放行？採購同供應商已經批准。放行之前，差額必須解釋到咩程度？喺度暫停，投個票。
+
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 32
+  kicker: New fact
+  kicker_en: New fact
+  kicker_zh: 新事实
+  kicker_zh_hk: 新事實
+  title_en: Three differences, each once
+  title_zh: 三笔差异，各记一次
+  title_zh_hk: 三筆差異，各記一次
+  step1_en: 'Receipt 9,000 missing in book'
+  step1_zh: 回款 9,000：日记账未记
+  step1_zh_hk: 來款 9,000：現金簿未記
+  step2_en: 'Charge 1,000 missing in book'
+  step2_zh: 费用 1,000：日记账未记
+  step2_zh_hk: 費用 1,000：現金簿未記
+  step3_en: 'e-Cheque 4,000 already in book'
+  step3_zh: 电子支票 4,000：日记账已扣
+  step3_zh_hk: 電子支票 4,000：現金簿已扣
+  step4_en: Reviewer explains the gap
+  step4_zh: 复核人确认全部差额
+  step4_zh_hk: 覆核人確認全部差額
+  s1_en: >-
+    A nine-thousand-dollar customer receipt has settled. It is unrestricted and can be used. It collects a receivable the business had already recorded. It is not new sales revenue. The bank has recorded it. The cash book has not.
+  s1_zh: >-
+    一笔九千港元的客户回款已经结算，没有使用限制，可以动用。它收回的是已经入账的应收款项，不是新的销售收入。银行记了，银行存款日记账还没记。
+  s1_zh_hk: >-
+    一筆九千港元嘅客戶來款已經結算，冇使用限制，可以動用。佢收回嘅係已經入帳嘅應收款項，唔係新嘅銷售收入。銀行記咗，現金簿仲未記。
+  s2_en: The bank has also deducted a confirmed charge of one thousand. The cash book has not recorded that charge. It is not offered as a typical bank tariff.
+  s2_zh: 银行还扣了一笔已经确认的费用，一千港元。日记账还没记。这不是拿来当作常见银行收费的例子。
+  s2_zh_hk: 銀行亦扣咗一筆已經確認嘅費用，一千港元。現金簿仲未記。呢個唔係攞嚟當作常見銀行收費嘅例子。
+  s3_en: >-
+    A valid e-Cheque of four thousand is already in the cash book. The supplier has not presented it, so the statement has not deducted it. The cheque is still payable.
+  s3_zh: >-
+    一张四千港元的有效电子支票，日记账已经正确记作付款。供应商还没提示，对账单还没扣。支票仍然要付。
+  s3_zh_hk: >-
+    一張四千港元嘅有效電子支票，現金簿已經正確記作付款。供應商仲未存票，結單仲未扣。支票仍然要付。
+  s4_en: >-
+    An independent authorised reviewer confirms that these three items explain the whole difference, and confirms the existing approvals. Both records use the same cutoff.
+  s4_zh: >-
+    独立的授权复核人确认，这三笔解释了全部差额，也确认了原有审批。两份记录是同一个截止时间。
+  s4_zh_hk: >-
+    獨立嘅授權覆核人確認，呢三筆解釋咗全部差額，亦確認咗原有審批。兩份紀錄係同一個截止時間。
+
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Can the reserve still be met?
+  title_zh: 留存还够不够？
+  title_zh_hk: 備用金仲夠唔夠？
+  en: Correct the cash book. Reconcile the bank side. Do not record any item twice. After the forty thousand, does twenty-five thousand remain? Pause and calculate.
+  zh: 更正银行存款日记账，再核对银行一方。任何一笔都不要记两次。付出四万之后，还留得住两万五千吗？请暂停，自己算一遍。
+  zh_hk: 更正現金簿，再核對銀行一方。任何一筆都唔好記兩次。付出四萬之後，仲留唔留得住二萬五千？暫停，自己計一次。
+
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 32
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Both sides meet at 66,000
+  title_zh: 银行对账之后
+  title_zh_hk: 銀行對帳之後
+  step1_en: 'Book: 58,000 + 9,000 − 1,000 = 66,000'
+  step1_zh: 日记账：58,000＋9,000−1,000＝66,000
+  step1_zh_hk: 現金簿：58,000＋9,000−1,000＝66,000
+  step2_en: 'Bank: 70,000 − 4,000 = 66,000'
+  step2_zh: 银行一方：70,000 − 4,000＝66,000
+  step2_zh_hk: 銀行一方：70,000 − 4,000＝66,000
+  step3_en: '66,000 − 40,000 = 26,000'
+  step3_zh: '66,000 − 40,000＝26,000'
+  step3_zh_hk: '66,000 − 40,000＝26,000'
+  s1_en: The cash book adds the nine-thousand receipt and subtracts the one-thousand charge. Fifty-eight plus nine minus one is sixty-six thousand. The four-thousand cheque is already in that book. Do not deduct it again.
+  s1_zh: 日记账补记九千回款，再补记一千费用。五万八加九千减一千，是六万六。四千的电子支票已经在日记账里，不能再扣一次。
+  s1_zh_hk: 現金簿補記九千來款，再補記一千費用。五萬八加九千減一千，係六萬六。四千嘅電子支票已經喺現金簿入面，唔可以再扣一次。
+  s2_en: The statement already includes the receipt and the charge. It still has to come down by the four-thousand cheque that is not yet presented. Seventy thousand minus four thousand is also sixty-six thousand. Do not add the nine thousand to the statement again.
+  s2_zh: 对账单已经包含回款和费用。还要把尚未提示的四千支票减掉。七万减四千，也是六万六。不要在对账单上再加一次九千。
+  s2_zh_hk: 結單已經包含來款同費用。仲要將尚未存票嘅四千支票減走。七萬減四千，都係六萬六。唔好喺結單上再加一次九千。
+  s3_en: Sixty-six thousand minus the new forty-thousand payment is twenty-six thousand. That is one thousand above the twenty-five-thousand reserve. The reconciliation explains a difference. It does not create money.
+  s3_zh: 六万六减去新的四万付款，是二万六。比两万五千的留存资金多一千。银行对账解释的是差额，不会凭空造出资金。
+  s3_zh_hk: 六萬六減走新嘅四萬付款，係二萬六。比二萬五千嘅備用金要求多一千。銀行對帳解釋嘅係差額，唔會憑空造出資金。
+
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Release only after the test
+  title_zh: 测试通过才放行
+  title_zh_hk: 測試通過先放行
+  step1_en: Hold while a difference is unexplained
+  step1_zh: 差额未解释，先暂缓
+  step1_zh_hk: 差額未解釋，先暫緩
+  step2_en: 'Verified remainder HK$26,000'
+  step2_zh: 核实后余款 HK$26,000
+  step2_zh_hk: 核實後餘款 HK$26,000
+  step3_en: The reserve is a house rule, not law
+  step3_zh: 留存资金是规则，不是法律
+  step3_zh_hk: 備用金係題設規則，唔係法律
+  s1_en: While the difference is unexplained, hold the payment. Release only after the reconciliation, the approvals and the reserve test have been verified.
+  s1_zh: 差额还没解释清楚，就先暂缓。核对、审批和留存测试都通过之后，才放行。
+  s1_zh_hk: 差額仲未解釋清楚，就先暫緩。核對、審批同備用金測試都通過之後，先放行。
+  s2_en: On these facts the verified remainder is twenty-six thousand. There is no further movement, hold, restriction, overdraft or foreign-currency item in the case.
+  s2_zh: 按这些事实，核实后的余款是二万六千。题目没有其他后续收支、冻结、限制、透支或外币项目。
+  s2_zh_hk: 按呢啲事實，核實後嘅餘款係二萬六千。題目冇其他後續收支、凍結、限制、透支或外幣項目。
+  s3_en: The twenty-five thousand is the workshop's supplied rule for this short horizon. It is not a legal minimum, and passing it is not a guarantee that the business can meet every later debt.
+  s3_zh: 两万五千是工场为这个短决策期给定的留存规则。它不是法定最低额。通过测试，也不保证企业以后每笔债务都付得起。
+  s3_zh_hk: 二萬五千係工場為呢個短決策期给定嘅備用金規則。佢唔係法定最低額。通過測試，亦唔保證企業以後每筆債務都付得起。
+
+- id: check
+  visual: title_card
+  seconds: 20
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 追问
+  kicker_zh_hk: 追問
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If you deduct the four-thousand cheque again from the corrected cash book, which payment is counted twice? If you call the nine-thousand receipt new revenue, which sale did the customer not make today?
+  zh: >-
+    如果在更正后的日记账上再扣一次四千的电子支票，哪一笔付款被算了两遍？如果把九千回款叫作新的销售收入，客户今天并没有发生的是哪一笔销售？
+  zh_hk: >-
+    如果喺更正後嘅現金簿上再扣一次四千嘅電子支票，邊一筆付款計咗兩次？如果將九千來款叫作新嘅銷售收入，客戶今日並冇發生嘅係邊一筆銷售？
+
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Explain the difference, then pay
+  title_zh: 先解释差额，再付款
+  title_zh_hk: 先解釋差額，再付款
+  q1_en: Both records meet at HK$66,000
+  q1_zh: 两份记录都落到六万六
+  q1_zh_hk: 兩份紀錄都落到六萬六
+  q2_en: Remainder HK$26,000 clears the reserve
+  q2_zh: 余款二万六，高于留存
+  q2_zh_hk: 餘款二萬六，高過備用金
+  s1_en: Do not release the payment while the two balances are still unexplained. After the three items are placed once each, both records meet at sixty-six thousand.
+  s1_zh: 两个余额还没解释清楚，不要放行。三笔差异各放回正确的一边、而且只放一次之后，两份记录都是六万六。
+  s1_zh_hk: 兩個結餘仲未解釋清楚，唔好放行。三筆差異各放返正確嘅一邊、而且只放一次之後，兩份紀錄都係六萬六。
+  s2_en: The new payment then leaves twenty-six thousand, one thousand above the supplied reserve, with the approvals already verified.
+  s2_zh: 再减去新的四万，余款是二万六，比给定的留存多一千，而且审批已经核实。
+  s2_zh_hk: 再減走新嘅四萬，餘款係二萬六，比给定嘅備用金多一千，而且審批已經核實。
+  s3_en: That is enough to release this fictional payment on the case's own rule. It is not a solvency guarantee, and no real transfer is made.
+  s3_zh: 按本题自己的规则，这笔虚构付款可以放行。这不是偿债能力的保证，也不会真的把钱转出去。
+  s3_zh_hk: 按呢題自己嘅規則，呢筆虛構付款可以放行。呢個唔係償債能力嘅保證，亦唔會真係將錢轉出去。

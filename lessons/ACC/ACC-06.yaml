@@ -1,0 +1,245 @@
+id: ACC-06
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+duration_target_s: 202
+title_en: Paid today. Earned today?
+title_zh: 今天收到钱，就能确认收入吗？
+title_zh_hk: 今日收款，就算今日賺取收入？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 20
+  kicker: ACC-06
+  kicker_en: ACC-06
+  kicker_zh: ACC-06
+  kicker_zh_hk: ACC-06
+  title_en: Paid today. Earned today?
+  title_zh: 今天收到钱，就能确认收入吗？
+  title_zh_hk: 今日收款，就算今日賺取收入？
+  image: art/paid-earned-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A launch brought cash into a fictional Hong Kong pottery studio. Can the owner call all of it this month's revenue? Each prepaid package promises four distinct, identical sessions, and each session has the same standalone price. The bank receipts are reconciled. Attendance has not been checked.
+  zh: >-
+    一家虚构的香港陶艺工作室推出预付课程包，现金已经进来了。老板能把全部收款列作本月收入吗？每包含四节可区分、内容相同的课，每节单独售价也一样。银行收款核对过了，出席记录还没有核对。
+  zh_hk: >-
+    一間虛構嘅香港陶藝工作室推出預付套票，現金已經入咗嚟。老闆可唔可以將全部收款列作本月收入？每套有四節獨立、內容相同嘅課，每節單獨售價都一樣。銀行收款核對過，出席紀錄仲未核對。
+
+- id: ledger
+  visual: table_grid
+  seconds: 24
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Cash in, sessions unchecked
+  title_zh: 钱已收，课还没核对
+  title_zh_hk: 錢已收，課仲未核對
+  row1_en: Customers
+  row1_zh: 顾客
+  row1_zh_hk: 顧客
+  row2_en: Price per package
+  row2_zh: 每包售价
+  row2_zh_hk: 每套售價
+  row3_en: Sessions in one package
+  row3_zh: 每包课节
+  row3_zh_hk: 每套課節
+  col1_en: Package
+  col1_zh: 课程包
+  col1_zh_hk: 套票
+  col2_en: Amount
+  col2_zh: 数量或金额
+  col2_zh_hk: 數量或金額
+  c11_en: Paid in full
+  c11_zh: 已付全款
+  c11_zh_hk: 已付全數
+  c12: '100'
+  c21_en: HK$ each
+  c21_zh: 港元每个
+  c21_zh_hk: 港元每套
+  c22: '1,200'
+  c31_en: Distinct and identical
+  c31_zh: 可区分且相同
+  c31_zh_hk: 獨立而且相同
+  c32: '4'
+  footer_en: '100 × 1,200 = 120,000 collected'
+  footer_zh: '100 × 1,200＝已收 120,000'
+  footer_zh_hk: '100 × 1,200＝已收 120,000'
+  s1_en: Here is what the studio has sold. This is cash and packages, not yet a revenue figure.
+  s1_zh: 这是工作室卖出的课程包。现在看到的是收款和包数，还不是收入。
+  s1_zh_hk: 呢張係工作室賣出嘅套票。而家見到嘅係收款同套數，仲未係收入。
+  s2_en: One hundred customers each paid one thousand two hundred dollars. The cash collected is one hundred and twenty thousand.
+  s2_zh: 一百名顾客，每人付一千二百港元。收到的现金是十二万。
+  s2_zh_hk: 一百位顧客，每人付一千二百港元。收到嘅現金係十二萬。
+  s3_en: Each package is four distinct, identical sessions. One hundred packages are four hundred customer-sessions purchased. No opening balance, refund, expiry or other promise is in this case.
+  s3_zh: 每包是四节可区分、内容相同的课。一百包就是已经购买的四百人次课。本题没有期初余额、退款、到期或其他承诺。
+  s3_zh_hk: 每套係四節獨立、內容相同嘅課。一百套就係已經購買嘅四百個顧客課節。呢題冇期初結餘、退款、到期或者其他承諾。
+
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Approve the revenue headline?
+  title_zh: 现在批准收入标题吗？
+  title_zh_hk: 而家批准收入標題嗎？
+  en: >-
+    Would you approve a headline that calls one hundred and twenty thousand this month's revenue? A bank receipt shows cash collected. An attendance record shows a session delivered. Pause and say which evidence you still need.
+  zh: >-
+    你会批准「本月收入十二万」这个标题吗？银行收款证明的是现金已经收到。出席记录证明的是课已经上了。请暂停，说明你还缺哪一种证据。
+  zh_hk: >-
+    你會唔會批准「本月收入十二萬」呢個標題？銀行收款證明嘅係現金已經收到。出席紀錄證明嘅係課已經上咗。暫停，講下你仲欠邊一種證據。
+
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: New fact
+  kicker_en: New fact
+  kicker_zh: 新事实
+  kicker_zh_hk: 新事實
+  title_en: Count customer-sessions
+  title_zh: 按人次课来数
+  title_zh_hk: 按顧客課節來數
+  step1_en: 'Purchased: 400 customer-sessions'
+  step1_zh: 已购 400 人次课
+  step1_zh_hk: 已購 400 個顧客課節
+  step2_en: 'Completed: 100'
+  step2_zh: 已完成 100 人次课
+  step2_zh_hk: 已完成 100 個顧客課節
+  step3_en: 'Not started: 300 still owed'
+  step3_zh: 未开始 300 人次课，仍须提供
+  step3_zh_hk: 未開始 300 個，仍須提供
+  s1_en: Attendance is now checked. Customers purchased four hundred customer-sessions. One customer-session means one customer taking one session, not a whole class.
+  s1_zh: 出席记录现在核对过了。顾客一共购买了四百人次课。一人次课是一名顾客上一节课，不是整班的课时。
+  s1_zh_hk: 出席紀錄而家核對過。顧客一共購買咗四百個顧客課節。一個顧客課節係一位顧客上一節課，唔係成班嘅課時。
+  s2_en: One hundred customer-sessions are complete. None is only partly finished.
+  s2_zh: 已经完成一百人次课。没有只上了一部分的课。
+  s2_zh_hk: 已經完成一百個顧客課節。冇只上咗一部分嘅課。
+  s3_en: Three hundred have not started. The studio still owes those sessions. The cash collected is still one hundred and twenty thousand.
+  s3_zh: 还有三百人次课没有开始，工作室仍然要提供。收到的现金仍是十二万。
+  s3_zh_hk: 仲有三百個顧客課節未開始，工作室仍然要提供。收到嘅現金仍然係十二萬。
+
+- id: pause2
+  visual: title_card
+  seconds: 14
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Split cash, revenue, obligation
+  title_zh: 分开现金、收入、责任
+  title_zh_hk: 分開現金、收入、責任
+  en: How much is cash collected, how much is earned revenue, and how much is the remaining service obligation? Price one customer-session first. Pause and calculate.
+  zh: 现金收款、已赚取收入、尚待履行的服务责任，各是多少？先给每人次课定价，再计算。请暂停，自己算一遍。
+  zh_hk: 現金收款、已賺取收入、尚待履行嘅服務責任，各係幾多？先為每個顧客課節定價，再計算。暫停，自己計一次。
+
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 32
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Allocate each session
+  title_zh: 先分到每一节课
+  title_zh_hk: 先分到每一節課
+  step1_en: '1,200 / 4 = 300 each'
+  step1_zh: '1,200 / 4＝每人次课 300'
+  step1_zh_hk: '1,200 / 4＝每個顧客課節 300'
+  step2_en: 'Earned: 100 × 300 = 30,000'
+  step2_zh: 已赚取收入：100 × 300＝30,000
+  step2_zh_hk: 已賺取收入：100 × 300＝30,000
+  step3_en: 'Liability: 300 × 300 = 90,000'
+  step3_zh: 合同负债：300 × 300＝90,000
+  step3_zh_hk: 合約負債：300 × 300＝90,000
+  s1_en: The sessions are distinct and priced the same, so the package is split equally. One thousand two hundred divided by four is three hundred dollars for each customer-session.
+  s1_zh: 这些课可以区分，单独售价也相同，所以课程包平均分配。一千二百除以四，每人次课是三百港元。
+  s1_zh_hk: 呢啲課可以區分，單獨售價都相同，所以套票平均分配。一千二百除以四，每個顧客課節係三百港元。
+  s2_en: One hundred completed sessions, at three hundred dollars, are thirty thousand of earned revenue.
+  s2_zh: 已完成的一百人次课，每节三百港元，已赚取收入是三万。
+  s2_zh_hk: 已完成嘅一百個顧客課節，每節三百港元，已賺取收入係三萬。
+  s3_en: Three hundred sessions not yet delivered, at three hundred dollars, are ninety thousand. That remaining obligation is a contract liability. Thirty thousand plus ninety thousand is the one hundred and twenty thousand collected.
+  s3_zh: 尚未提供的三百人次课，每节三百港元，是九万。这项尚待履行的服务责任是合同负债。三万加九万，等于实收的十二万。
+  s3_zh_hk: 尚未提供嘅三百個顧客課節，每節三百港元，係九萬。呢項尚待履行嘅服務責任係合約負債。三萬加九萬，等於實收嘅十二萬。
+
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Three different measures
+  title_zh: 三个数字不是一回事
+  title_zh_hk: 三個數字唔係同一回事
+  step1_en: Cash collected stays HK$120,000
+  step1_zh: 现金收款仍是 HK$120,000
+  step1_zh_hk: 現金收款仍然係 HK$120,000
+  step2_en: Revenue HK$30,000 is not profit
+  step2_zh: 收入 HK$30,000 不是利润
+  step2_zh_hk: 收入 HK$30,000 唔係利潤
+  step3_en: HK$90,000 is service still owed
+  step3_zh: 合同负债 HK$90,000 是待提供的课
+  step3_zh_hk: 合約負債 HK$90,000 係待提供嘅課
+  s1_en: The bank balance of this story is unchanged by the classification. Cash collected remains one hundred and twenty thousand.
+  s1_zh: 分类不会改变这个案例里已经收到的钱。现金收款仍是十二万。
+  s1_zh_hk: 分類唔會改變呢個案例入面已經收到嘅錢。現金收款仍然係十二萬。
+  s2_en: Thirty thousand is revenue earned from sessions delivered. It is not profit. The case gives no tutor fees, materials, rent or other costs.
+  s2_zh: 三万是已经上课所赚取的收入。它不是利润。题目没有导师费、材料、租金或其他成本。
+  s2_zh_hk: 三萬係已經上咗課所賺取嘅收入。佢唔係利潤。題目冇導師費、材料、租金或者其他成本。
+  s3_en: The ninety-thousand contract liability is sessions the studio still has to provide. It is not automatically a cash refund, and it is not an estimate of what delivery will cost.
+  s3_zh: 九万的合同负债，是工作室还要上的课。它不是自动到期的退款，也不是履约成本的估计。
+  s3_zh_hk: 九萬嘅合約負債，係工作室仲要上嘅課。佢唔係自動到期嘅退款，亦唔係履約成本嘅估計。
+
+- id: check
+  visual: title_card
+  seconds: 20
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 追问
+  kicker_zh_hk: 追問
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If you treated the ninety thousand as cash the studio must hand back today, what refund does this case not contain? If one session were only partly complete, which count of one hundred would you no longer be able to use?
+  zh: >-
+    如果把九万合同负债当成今天必须退回的现金，题目里的哪一项退款其实并不存在？如果有一节课只完成了一部分，已完成的一百人次课这个数，还能直接用吗？
+  zh_hk: >-
+    如果將九萬合約負債當成今日必須退回嘅現金，題目入面邊一項退款其實並不存在？如果有一節課只完成咗一部分，已完成嘅一百個顧客課節呢個數，仲可以直接用嗎？
+
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Report delivery with the cash
+  title_zh: 收款和交付一起报告
+  title_zh_hk: 收款同交付一齊報告
+  q1_en: Collected 120,000; earned 30,000
+  q1_zh: 收款十二万，已赚取三万
+  q1_zh_hk: 收款十二萬，已賺取三萬
+  q2_en: 300 customer-sessions still owed
+  q2_zh: 尚有三百人次课待提供
+  q2_zh_hk: 尚有三百個顧客課節待提供
+  s1_en: The launch did bring in one hundred and twenty thousand of cash. That fact stays. It is not the revenue headline.
+  s1_zh: 这次推出确实收到了十二万现金。这件事是真的。它不是收入标题。
+  s1_zh_hk: 今次推出的確收到咗十二萬現金。呢件事係真嘅。佢唔係收入標題。
+  s2_en: Earned revenue is thirty thousand. Three hundred customer-sessions remain to be delivered.
+  s2_zh: 已赚取收入是三万。还有三百人次课要提供。
+  s2_zh_hk: 已賺取收入係三萬。仲有三百個顧客課節要提供。
+  s3_en: Reserve staff time and capacity for the sessions still owed. Report demand and delivery together. Do not treat every dollar collected as a promise already kept.
+  s3_zh: 为还没上的课预留人手和容量。需求和交付要一起报告。不要把收到的每一元都当成已经履行的承诺。
+  s3_zh_hk: 為仲未上嘅課預留人手同容量。需求同交付要一齊報告。唔好將收到嘅每一元都當成已經履行嘅承諾。

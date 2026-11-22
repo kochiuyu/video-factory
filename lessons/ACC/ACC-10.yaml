@@ -1,0 +1,315 @@
+id: ACC-10
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+duration_target_s: 252
+title_en: Through our till. All our revenue?
+title_zh: 钱都从我们这里收，都是我们的收入吗？
+title_zh_hk: 經我們收款，全數都是我們的收入？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-10
+  kicker_en: ACC-10
+  kicker_zh: ACC-10
+  kicker_zh_hk: ACC-10
+  title_en: Through our till. All our revenue?
+  title_zh: 钱都从我们这里收，都是我们的收入吗？
+  title_zh_hk: 經我們收款，全數都是我們的收入？
+  image: art/through-our-till-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Two draft reports show the same profit. Can both revenue figures be right? Fictional HarbourPrints helped customers order prints from an independent maker. Every print this month has been delivered and accepted. The desk still has to finish the arranging work it actually promised.
+  zh: >-
+    两份草稿的利润一样。两种收入列法就都可以吗？虚构的 HarbourPrints 帮顾客向独立制作商订购印刷品。本月的画都已经交付并被接收。柜台仍要完成它真正承诺的代办工作。
+  zh_hk: >-
+    兩份草稿嘅利潤一樣。兩種收入列法就都可以嗎？虛構嘅 HarbourPrints 幫顧客向獨立製作者訂購印刷品。本月嘅畫都已經交付並被接收。銷售處仍要完成佢真正承諾嘅代辦工作。
+
+- id: ledger
+  visual: table_grid
+  seconds: 30
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two drafts, one profit
+  title_zh: 两份草稿，利润相同
+  title_zh_hk: 兩份草稿，利潤相同
+  row1_en: Customer receipts
+  row1_zh: 向顾客收款
+  row1_zh_hk: 向顧客收款
+  row2_en: Maker payable
+  row2_zh: 应付制作商
+  row2_zh_hk: 應付製作者
+  row3_en: Desk share
+  row3_zh: 柜台份额
+  row3_zh_hk: 銷售處份額
+  row4_en: Own expenses
+  row4_zh: 自身费用
+  row4_zh_hk: 自身開支
+  col1_en: Basis
+  col1_zh: 依据
+  col1_zh_hk: 依據
+  col2_en: HK$
+  col2_zh: 港元
+  col2_zh_hk: 港元
+  c11: '100 × 400'
+  c12: '40,000'
+  c21: '100 × 320'
+  c22: '32,000'
+  c31: '100 × 80'
+  c32: '8,000'
+  c41_en: Incurred
+  c41_zh: 已经发生
+  c41_zh_hk: 已經發生
+  c42: '3,000'
+  highlight_s3: row4
+  footer_en: 'A and B both give profit of 5,000'
+  footer_zh: A 与 B 的利润都是 5,000
+  footer_zh_hk: A 與 B 的利潤都是 5,000
+  s1_en: One hundred prints at four hundred dollars have all been collected. Customer receipts are forty thousand.
+  s1_zh: 一百幅，每幅四百港元，款项已经收齐。向顾客的收款是四万。
+  s1_zh_hk: 一百幅，每幅四百港元，款項已經收齊。向顧客嘅收款係四萬。
+  s2_en: Thirty-two thousand is still payable to the maker. Eight thousand is the desk's share, one hundred completed orders at eighty dollars each.
+  s2_zh: 三万二千仍应付给制作商。八千是柜台的份额，一百张已完成的订单，每张八十港元。
+  s2_zh_hk: 三萬二千仍應付俾製作者。八千係銷售處嘅份額，一百張已完成嘅訂單，每張八十港元。
+  s3_en: >-
+    Own expenses are three thousand. They have been incurred, but the case does not say they have been paid, and it gives no closing bank balance. Both drafts reach a profit of five thousand. Neither draft is approved.
+  s3_zh: >-
+    自身费用是三千，已经发生，但题目没说付了没有，也没有期末银行存款。两份草稿的利润都是五千，而且都还没批准。
+  s3_zh_hk: >-
+    自身開支係三千，已經發生，但題目冇講付咗未，亦冇期末銀行存款。兩份草稿嘅利潤都係五千，而且都仲未批准。
+
+- id: drafts
+  visual: steps
+  layout: rows
+  seconds: 22
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Same profit, two revenue lines
+  title_zh: 利润相同，收入不同
+  title_zh_hk: 利潤相同，收入不同
+  step1_en: 'A: 40,000 − 32,000 − 3,000 = 5,000'
+  step1_zh: 'A：40,000−32,000−3,000＝5,000'
+  step1_zh_hk: 'A：40,000−32,000−3,000＝5,000'
+  step2_en: 'B: 8,000 − 3,000 = 5,000'
+  step2_zh: 'B：8,000−3,000＝5,000'
+  step2_zh_hk: 'B：8,000−3,000＝5,000'
+  step3_en: Neither draft is approved
+  step3_zh: 两份草稿都未批准
+  step3_zh_hk: 兩份草稿都未批准
+  s1_en: Draft A starts from forty thousand of receipts, subtracts the thirty-two thousand maker amount, then the three thousand of own expenses. Profit is five thousand.
+  s1_zh: 草稿 A 从四万收款出发，减去应付制作商的三万二千，再减自身费用三千。利润是五千。
+  s1_zh_hk: 草稿 A 由四萬收款出發，減走應付製作者嘅三萬二千，再減自身開支三千。利潤係五千。
+  s2_en: Draft B starts from the eight-thousand desk share and subtracts the same three thousand. Profit is also five thousand.
+  s2_zh: 草稿 B 从八千柜台份额出发，减去同样的三千。利润也是五千。
+  s2_zh_hk: 草稿 B 由八千銷售處份額出發，減走同樣嘅三千。利潤都係五千。
+  s3_en: Equal profit does not mean both revenue figures are acceptable. Neither draft is approved.
+  s3_zh: 利润相同，不等于两种收入列法都可以。两份草稿都还没批准。
+  s3_zh_hk: 利潤相同，唔等於兩種收入列法都可以。兩份草稿都仲未批准。
+
+- id: term
+  visual: definition_card
+  seconds: 18
+  kicker: Rule
+  kicker_en: Rule
+  kicker_zh: 规则
+  kicker_zh_hk: 規則
+  title_en: Principal or agent
+  title_zh: 主要责任人还是代理人
+  title_zh_hk: 主事人定係代理人
+  formula_en: Control before transfer, or arrange only
+  formula_zh: 转让前控制，或只是代办
+  formula_zh_hk: 交付前控制，或只是代辦
+  gloss_en: Collecting cash is not control
+  gloss_zh: 代收款不是控制
+  gloss_zh_hk: 代收款唔係控制
+  s1_en: >-
+    A principal controls the promised product before it passes to the customer, and reports the sale gross. An agent only arranges another provider's product, and reports the fee it earns.
+  s1_zh: >-
+    主要责任人在把承诺的商品交给顾客之前控制该商品，销售收入按总额列报。代理人只是代办其他供应方的商品，列报的是自己赚到的代办费收入。
+  s1_zh_hk: >-
+    主事人喺將承諾嘅商品交俾顧客之前控制該商品，銷售收入按總額呈報。代理人只是代辦其他供應方嘅商品，呈報嘅係自己賺到嘅代辦費收入。
+  s2_en: Control is the ability to direct the use of the product and obtain the benefits. It is not the same thing as collecting the customer's money.
+  s2_zh: 控制，是能够主导商品的使用并取得利益。它不等于替别人把钱收进来。
+  s2_zh_hk: 控制，係能夠主導商品嘅使用並取得利益。佢唔等於替人哋將錢收埋。
+
+- id: pause1
+  visual: title_card
+  seconds: 14
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Gross sale, or arranging fee?
+  title_zh: 总额，还是代办费？
+  title_zh_hk: 總額，定係代辦費？
+  en: Is your provisional draft the gross sale, or the arranging fee? What fact about the desk's promise and control would change that? Pause and vote. Do not approve either draft yet.
+  zh: 你的暂定草稿是总额，还是代办费收入？柜台的承诺和控制，哪一项事实会改变这个判断？在这里暂停，投个票。两份都先不要批准。
+  zh_hk: 你嘅暫定草稿係總額，定係代辦費收入？銷售處嘅承諾同控制，邊一項事實會改變呢個判斷？喺度暫停，投個票。兩份都先唔好批准。
+
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 32
+  kicker: New fact
+  kicker_en: New fact
+  kicker_zh: 新事实
+  kicker_zh_hk: 新事實
+  title_en: The maker keeps control
+  title_zh: 交付前控制在制作商
+  title_zh_hk: 交付前控制喺製作者
+  step1_en: 'Maker: price, delivery, remedy'
+  step1_zh: 制作商定价、交付并补救
+  step1_zh_hk: 製作者定價、交付並補救
+  step2_en: Desk cannot redirect or swap
+  step2_zh: 柜台不能调用或更换
+  step2_zh_hk: 銷售處不能調用或更換
+  step3_en: No inventory risk at the desk
+  step3_zh: 柜台不承担存货风险
+  step3_zh_hk: 銷售處不承擔存貨風險
+  step4_en: 'Only promise: arrange, HK$80'
+  step4_zh: 只承诺代办，每单 HK$80
+  step4_zh_hk: 只承諾代辦，每單 HK$80
+  s1_en: >-
+    The orders, the desk's terms and the actual practice agree. The maker accepts each order, sets the four-hundred-dollar price, delivers, and remedies any problem. The maker keeps control until the print reaches the customer.
+  s1_zh: >-
+    已接受的订单、柜台条款和实际做法是一致的。制作商接受每一张订单，定下四百港元的价格，负责交付，也负责补救。在印刷品交给顾客之前，控制权留在制作商。
+  s1_zh_hk: >-
+    已接受嘅訂單、銷售處條款同實際做法係一致嘅。製作者接受每一張訂單，定低四百港元嘅價格，負責交付，亦負責補救。喺印刷品交到顧客之前，控制權留喺製作者。
+  s2_en: The desk cannot redirect the prints, use them itself, or replace the promised maker. It also cannot require the maker to fulfil on the desk's behalf.
+  s2_zh: 柜台不能把这些印刷品调去别处，不能自己使用，也不能更换已经承诺的制作商。它也不能要求制作商以柜台的名义来履行。
+  s2_zh_hk: 銷售處唔可以將呢啲印刷品調去第二處，唔可以自己使用，亦唔可以更換已經承諾嘅製作者。佢亦唔可以要求製作者以銷售處嘅名義嚟履行。
+  s3_en: The desk never commits to buy the stock, and it bears no inventory risk before or after delivery.
+  s3_zh: 柜台从没有承诺买下这批货，交付前后都不承担存货风险。
+  s3_zh_hk: 銷售處從來冇承諾買低呢批貨，交付前後都不承擔存貨風險。
+  s4_en: Its only promise is to arrange the order and collect the money, for a fixed eighty-dollar fee on each completed order. All one hundred arranging services are complete. There is no other promise hiding in the arrangement.
+  s4_zh: 它唯一的承诺是代办订单并收款，每完成一单收取固定的八十港元。一百项代办都已经完成。安排里没有另一项隐藏的承诺。
+  s4_zh_hk: 佢唯一嘅承諾係代辦訂單並收款，每完成一單收取固定嘅八十港元。一百項代辦都已經完成。安排入面冇另一項隱藏嘅承諾。
+
+- id: pause2
+  visual: title_card
+  seconds: 14
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Which draft do you finalise?
+  title_zh: 现在定哪一份？
+  title_zh_hk: 而家定邊一份？
+  en: Which draft do the facts support? Reconcile the forty thousand to the fee and the payable. Why does profit not fall by another thirty-two thousand? Pause and calculate.
+  zh: 这些事实支持哪一份草稿？把四万收款核对到代办费收入和应付款。为什么利润不会再少三万二千？请暂停，自己算一遍。
+  zh_hk: 呢啲事實支持邊一份草稿？將四萬收款核對到代辦費收入同應付款。點解利潤唔會再少三萬二千？暫停，自己計一次。
+
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 32
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Fee revenue, not the till
+  title_zh: 列代办费收入
+  title_zh_hk: 列代辦費收入
+  step1_en: 'Fee revenue: 100 × 80 = 8,000'
+  step1_zh: 代办费收入：100 × 80＝8,000
+  step1_zh_hk: 代辦費收入：100 × 80＝8,000
+  step2_en: '32,000 + 8,000 = 40,000 receipts'
+  step2_zh: '32,000＋8,000＝收款 40,000'
+  step2_zh_hk: '32,000＋8,000＝收款 40,000'
+  step3_en: 'Profit: 8,000 − 3,000 = 5,000'
+  step3_zh: 利润：8,000 − 3,000＝5,000
+  step3_zh_hk: 利潤：8,000 − 3,000＝5,000
+  s1_en: The supported presentation is the arranging fee. One hundred completed orders at eighty dollars are eight thousand of fee revenue.
+  s1_zh: 事实支持的是代办费这一种列法。一百张已完成的订单，每张八十港元，代办费收入是八千。
+  s1_zh_hk: 事實支持嘅係代辦費呢一種列法。一百張已完成嘅訂單，每張八十港元，代辦費收入係八千。
+  s2_en: The thirty-two thousand payable to the maker plus the eight-thousand fee equals the forty thousand collected. Under this arrangement the maker's amount is not the desk's merchandise expense.
+  s2_zh: 应付制作商的三万二千，加上八千代办费收入，等于收来的四万。在这个安排里，制作商的那一笔不是柜台的商品成本。
+  s2_zh_hk: 應付製作者嘅三萬二千，加上八千代辦費收入，等於收嚟嘅四萬。喺呢個安排入面，製作者嘅嗰一筆唔係銷售處嘅商品開支。
+  s3_en: >-
+    Profit is eight thousand minus three thousand, five thousand. The gross draft matches only by also removing thirty-two thousand from revenue. Take that amount out of both lines. Do not subtract it from profit again.
+  s3_zh: >-
+    利润是八千代办费收入减三千，等于五千。总额草稿要同时减掉收入和商品成本里的三万二千，才会得到同一个五千。不要把三万二千再从利润里减一次。
+  s3_zh_hk: >-
+    利潤係八千代辦費收入減三千，等於五千。總額草稿要同時減走收入同商品開支入面嘅三萬二千，先會得到同一個五千。唔好將三萬二千再由利潤入面減一次。
+
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Same profit, different revenue
+  title_zh: 利润相同，收入不同
+  title_zh_hk: 利潤相同，收入唔同
+  step1_en: Equal profit is not equal revenue
+  step1_zh: 利润相同不等于收入正确
+  step1_zh_hk: 利潤相同唔等於收入正確
+  step2_en: HK$40,000 handled is not revenue
+  step2_zh: 经手四万不是收入或现金
+  step2_zh_hk: 經手四萬唔係收入或現金
+  step3_en: Not every intermediary is an agent
+  step3_zh: 不是每个中间人都是代理人
+  step3_zh_hk: 唔係每個中間人都係代理人
+  s1_en: The two drafts can show the same profit and still not be equally acceptable. The facts pick the fee, not a preferred headline.
+  s1_zh: 两份草稿可以利润相同，但并不都正确。事实选定的是代办费收入，不是哪一个标题更好看。
+  s1_zh_hk: 兩份草稿可以利潤相同，但並唔都正確。事實選定嘅係代辦費收入，唔係邊一個標題更好睇。
+  s2_en: A dashboard may lead with the fee or with the activity, if the forty thousand, the eight thousand and the thirty-two thousand are reconciled immediately. Forty thousand passing through the till is not revenue and not cash the desk keeps.
+  s2_zh: 看板上可以先写代办费，也可以先写业务量，但四万、八千和三万二千要马上核对清楚。经手的四万不是收入，也不是柜台留下的现金。
+  s2_zh_hk: 儀表板可以先寫代辦費，亦可以先寫業務量，但四萬、八千同三萬二千要即刻核對清楚。經手嘅四萬唔係收入，亦唔係銷售處留低嘅現金。
+  s3_en: This does not make every intermediary an agent. A business can control a product and still ask another supplier to deliver it. Do not decide by counting indicators, or by the word commission.
+  s3_zh: 这不表示每一个中间人都是代理人。企业可以自己控制商品，同时请另一家供应商交付。不能靠数指标，也不能只看「佣金」这两个字。
+  s3_zh_hk: 呢個唔表示每一個中間人都係代理人。企業可以自己控制商品，同時請另一家供應商交付。唔可以靠數指標，亦唔可以只睇「佣金」呢兩個字。
+
+- id: check
+  visual: title_card
+  seconds: 20
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 追问
+  kicker_zh_hk: 追問
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If the desk could redirect the prints or had to remedy a failed delivery itself, which control fact would you reopen? If you also subtract thirty-two thousand from the five-thousand fee profit, what have you removed twice?
+  zh: >-
+    如果柜台可以自行调用这些印刷品，或者交货出了问题要由柜台自己补救，哪一项控制事实要重看？如果在五千的代办费利润上再减一次三万二千，哪一笔被减了两次？
+  zh_hk: >-
+    如果銷售處可以自行調用呢啲印刷品，或者交貨出咗問題要由銷售處自己補救，邊一項控制事實要重睇？如果喺五千嘅代辦費利潤上再減一次三萬二千，邊一筆被減咗兩次？
+
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Follow the promise and control
+  title_zh: 看承诺，也看控制
+  title_zh_hk: 睇承諾，亦睇控制
+  q1_en: Fee revenue HK$8,000, payable HK$32,000
+  q1_zh: 代办费收入八千，应付三万二
+  q1_zh_hk: 代辦費收入八千，應付三萬二
+  q2_en: Case profit stays HK$5,000
+  q2_zh: 案例利润仍是五千
+  q2_zh_hk: 案例利潤仍然係五千
+  s1_en: Report revenue from the promise and from who controls the product before delivery. Do not report it from the route the cash happened to take.
+  s1_zh: 收入看的是承诺，以及交付前谁控制商品。不要看钱碰巧经过了谁的手。
+  s1_zh_hk: 收入睇嘅係承諾，以及交付前邊個控制商品。唔好睇錢碰巧經過咗邊個嘅手。
+  s2_en: Here, fee revenue is eight thousand, the amount payable to the maker is thirty-two thousand, and case profit is five thousand.
+  s2_zh: 在本题里，代办费收入是八千，应付制作商是三万二千，案例利润是五千。
+  s2_zh_hk: 喺呢題入面，代辦費收入係八千，應付製作者係三萬二千，案例利潤係五千。
+  s3_en: Keep the customer's problem visible. Fee accounting does not make the desk's arranging duty disappear, and it is not a conclusion about legal liability.
+  s3_zh: 顾客的问题仍然要看得见。按代办费记账，不等于代办责任消失，也不是对法律责任的结论。
+  s3_zh_hk: 顧客嘅問題仍然要睇得見。按代辦費記帳，唔等於代辦責任消失，亦唔係對法律責任嘅結論。

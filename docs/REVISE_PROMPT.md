@@ -76,7 +76,7 @@ Whenever a YAML script is provided, return:
 
 ## Speech structure — one source
 
-- Unstaged beats (`title_card`, `big_number`, `module_open`, `module_close`): speech only in `en` / `zh` / `zh_hk`.
+- Unstaged beats (`title_card`, `big_number`, `module_open`, `module_close`, `still_image`): speech only in `en` / `zh` / `zh_hk`. A `still_image` beat is one still. See **Still image**.
 - Staged beats (`definition_card`, `formula`, `two_column`, `example`, `takeaway`, `three_column`, `steps`, `payoff_matrix`, `table_grid`, `series`, `rank_line`, `freq_bars`, `balance_line`, `box_line`, `dev_bars`, `ratio_bars`, `quad_scatter`, `schematic_chart`, `dag`, `pair`, `pair_chart`, `pair_box`, `pair_slope`, `redraw`, `turns`, `shrink`, `mix`, `coin`): speech only in `s1_*` / `s2_*` and further stages. Delete leftover whole-card `en` / `zh` / `zh_hk` on those beats.
 - `s1` matches `_s1` (first column, first step, definition line). `s2` matches `_s2`. Same for `s3`.
 
@@ -127,6 +127,12 @@ When a slide compares numbers, draw them; do not write them in two text panels.
 - Append `(English)`, `(普通话)`, `(粵語)`, or a speech/slides tag to `title_*`. Those tags are added when the paste file is written.
 - Invent a `youtube:` description, or copy `objective_*` into one. Keep a `youtube:` block that is already there, unless the user asks to change it. Descriptions must be strictly less than 2500 characters.
 - Invent `objective_*`, bare `course:`, or `audience` / `audience_*` on a revise pass. Those fields are deprecated. Leave existing ones alone unless the user asks to remove them. Do not invent bare `duration_target`; keep `duration_target_s`.
+- Point `image` at a URL, a `..` segment, a path outside the repo, or a machine-local absolute path.
+- Set `clock: shared` unless the user asks for one shared clock. Each language already keeps its own speech timing.
+- Rename an indifference offer to break-even, 保本, or 打平.
+- Rebuild a published case YAML so it matches later wording on the case page. Keep the committed source and note the discrepancy.
+- Carry the accounting glossary below into statistics or another discipline.
+- Treat a commit of YAML as a YouTube upload or a catalog deployment.
 
 Paste the YAML under this prompt.
 
@@ -190,6 +196,82 @@ Do not use statistical scores or rankings to evaluate identifiable employees or 
 
 ## Hook-to-takeaway closure test
 Internally summarize the hook question in one sentence. Confirm that the final stage answers it, includes the key result, states assumptions or limitations, and gives a complete operational rule without previewing another lesson. Do not export the internal summary.
+
+## Still image
+
+When a beat is `still_image`, keep one official scene. Field rules are in `docs/SCHEMA.md` → **Still image**. The factory opens the committed file. A build does not download a picture.
+
+The `image` value is a relative `.jpg`, `.jpeg`, or `.png` path. The resolver tries it beside the YAML first, then from the repo root. A URL, a `..` segment, and any path outside the repo fail validation. Drop a machine-local absolute path if one has crept in.
+
+The picture is contain-fitted on the 1920×1080 slide: one uniform scale, centered, not cropped and not stretched. Confirm the committed file is the official scene, and record its source and sha256 in the revision memo.
+
+ACC-01 layout, path relative to the YAML directory:
+
+```
+lessons/ACC/ACC-01.yaml
+lessons/ACC/art/tarts-scene.jpg
+```
+
+```yaml
+image: art/tarts-scene.jpg
+```
+
+Speech on that beat stays unstaged `en` / `zh` / `zh_hk`.
+
+## Classroom case (one decision case)
+
+Use this when the lesson is one case video, such as an ACC micro-case. Statistics standalone rules stay in force for statistics shorts. The accounting terms here stay inside accounting cases.
+
+* One case fills one landscape 16:9 video (1920×1080).
+* Keep the arc in order: opening choice, pause and vote, new fact or reveal, revised choice and debrief. The pause stays ahead of the debrief that answers it.
+* Check facts against the case page, including the instructor note and the listed sources. English on that page is the fact baseline. Mandarin and Cantonese stay natural spoken lectures, each written from that baseline.
+* Recheck subject terms in the speech and in every slide cell, title, prompt, and footer. On-screen Chinese is the short written label. Spoken narration may use lecture particles. Both must name the same term.
+
+Accounting labels:
+
+| English | 简体 on screen | 繁體 on screen |
+|---|---|---|
+| sunk cost | 沉没成本 | 沉沒成本 |
+| incremental cost of selling | 出售的增量成本 | 出售的增量成本 |
+| opportunity cost | 机会成本 | 機會成本 |
+| indifference offer | 无差异出价 | 無差異出價 |
+
+In ACC-01 the next-best use is the HK$84 opportunity cost (twelve tarts times HK$7). The HK$12 figure is how much worse a HK$72 sale is against that use. The indifference offer is HK$7 per tart. Reserve break-even, 保本, and 打平 for a true break-even point.
+
+`lessons/ACC/ACC-01.yaml` is the approved published source. Keep those bytes unless faculty asks for a new version. Scene sha256 `c2ac52d82cefd3c816ef0de3901fa2d1acafa8cdd52d20335beefc5382902856` (`lessons/ACC/art/tarts-scene.jpg`).
+
+* Scene: https://kochiuyu.github.io/micro-cases/tarts-scene.jpg
+* English case: https://kochiuyu.github.io/micro-cases/tarts.html (instructor note and sources on that page)
+* Parallels: https://kochiuyu.github.io/micro-cases/zh-cn/tarts.html and https://kochiuyu.github.io/micro-cases/zh-hk/tarts.html
+* Published cuts: English https://youtu.be/F1WY_3jXYQw , Mandarin https://youtu.be/uetO9tibCEA , Cantonese https://youtu.be/EFakphvV2qE
+
+The YAML says the café "offers to take" the tray. The case page says "offers to buy". The check beat says "yesterday's baking cost". The case page says the cost is "already incurred". Record that. Leave the YAML, the case site, and the YouTube videos as they are. `course_*` remains the published "Micro Cases" in all three languages. The file has no `youtube.description_*` block; do not invent one. `ACC-01` is not an `ACC-M01` or `ACC-M02` topic. Leave those lessons alone.
+
+## Timing
+
+Each language keeps its own speech timing unless this lesson already says `clock: shared`, or the user asks for one shared clock. The default beat is that language's speech plus a 0.4 s breath. `clock: own` is an explicit alias for that default. Omit `clock` when the lesson is already on the default. A revision of one lesson does not change factory timing for any other lesson.
+
+## Revision recheck
+
+Before delivery, recheck the saved file and, when a build exists, the pictures and the cuts:
+
+1. Facts against the case page, instructor note, and sources. Arithmetic on every card, including HK$8, HK$6, HK$0, HK$96, HK$72, HK$7, HK$84, and the HK$12 shortfall in ACC-01.
+2. Terminology in speech and in every cell, title, prompt, and footer, using the accounting labels above when the lesson is an accounting case.
+3. Display fit and wrapping in each language, including bilingual cells. The scene image is contain-fitted and uncropped.
+4. Image path and source: relative path, file committed with the YAML, sha256 matching the committed bytes and the recorded note, no URL and no `..`.
+5. Pause and reveal order: the vote comes before the debrief that answers it, and the new fact lands before the revised choice.
+6. Video review of each language cut when a build exists: narration, captions, on-screen terms, and the classroom-assumptions line.
+7. Source and asset versions match. The committed YAML and image are the version under review. A rendered MP4 is a build product. A website catalog entry is a later deployment.
+
+Commit the reproducible YAML and assets before handoff, so the approved version can be traced.
+
+## Titles, covers, and handoff
+
+Titles, descriptions, and covers match the language of that cut and stay accurate to the committed lesson. A classroom case keeps the classroom-assumptions disclaimer in the description, and on a custom cover when one is used for upload. The factory cover is painted from `title_*` at 1920×1080. A custom cover is an upload asset. It is not a lesson field.
+
+Hand approved YouTube URLs and the upload evidence to Education-Video-Web. Use only ids and visibility that were actually approved. Leave the case website unedited from this repository.
+
+A revision does not publish a video and does not change factory behavior. Validate, then stop for approval before a build, a merge, or a handoff. The committed source, the rendered MP4 upload, and the catalog deployment stay three separate steps.
 
 ## Mandatory validation before delivery
 

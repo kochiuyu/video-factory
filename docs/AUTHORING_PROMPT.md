@@ -61,12 +61,13 @@ On-screen phrases stay short. Spoken paragraphs stay in speech fields, never on 
 
 ## Speech fields — one source only
 
-* `title_card`, `big_number`, `module_open`, `module_close`: `en`, `zh`, `zh_hk`.
+* `title_card`, `big_number`, `module_open`, `module_close`, `still_image`: `en`, `zh`, `zh_hk`.
 * Staged visuals: `s1_en` `s1_zh` `s1_zh_hk`, then `s2_*`, then `s3_*` as needed.
 * Do not also keep a whole-card `en` / `zh` / `zh_hk` on a staged beat. Voice joins the stage lines.
 
 Stages by visual:
 
+* still_image → 1 (unstaged `en` / `zh` / `zh_hk` only; see **Still image**)
 * definition_card, formula → 2
 * two_column, example, takeaway, three_column, steps → 3
 * payoff_matrix → up to 5
@@ -151,6 +152,75 @@ Pick a card that already exists:
 2. **Comparison operators**: In ordinary text, write `>`, `<`, `>=`, and `<=` without backslashes. Never emit invalid YAML escapes such as `\>`, `\<`, or `\=`. Reserve LaTeX-style escaping for `formula_tex`.
 3. **Never Output Citation Markers**: Do not output raw markdown reference tags or bracketed citation markers inside YAML lesson files.
 
+## Still image (opt-in)
+
+Use `still_image` for one official scene that already exists as a file. Field rules are in `docs/SCHEMA.md` → **Still image**. The factory opens the committed file. A build does not download a picture.
+
+Commit the `.jpg`, `.jpeg`, or `.png` in the same change as the lesson YAML. Write a relative path. The resolver tries that path beside the YAML first, then from the repo root. A URL, a `..` segment, and any path that lands outside the repo are rejected. Leave machine-local absolute paths out of the YAML.
+
+The picture is contain-fitted on the 1920×1080 slide: one uniform scale, centered, not cropped and not stretched. Official case scene art stays whole.
+
+Record the asset's source and sha256 in the note that travels with the lesson. Invent neither an exhibit, nor a scene, nor a fact to fill the card.
+
+ACC-01 is the worked layout. The image path is relative to the YAML directory:
+
+```
+lessons/ACC/ACC-01.yaml
+lessons/ACC/art/tarts-scene.jpg
+```
+
+```yaml
+image: art/tarts-scene.jpg
+```
+
+Speech on that beat stays unstaged `en` / `zh` / `zh_hk`.
+
+## Classroom case videos
+
+These rules apply when the short is one decision case, such as an ACC micro-case. They sit beside the statistics standalone rules. Shop A, the descriptive divisor, and the statistics glossary stay as they are. The accounting terms below stay inside accounting cases.
+
+* One case fills one landscape 16:9 classroom video. The slide is 1920×1080.
+* The arc is an opening choice, a pause for a vote, a new fact or reveal, then a revised choice and debrief. The pause comes before the answer that debriefs it.
+* Facts come from the case page, including the instructor note and the listed sources. English on that page is the fact baseline. Mandarin and Cantonese narration are natural speech in each language, written from that baseline.
+* Review professional subject terms in the spoken lines and in every on-screen cell, title, prompt, and footer. Written on-screen Chinese is the short label. Spoken narration is the lecture line. Particles and sentence shape may differ. The term must be the same one.
+* Say that the scene is a classroom illustration. ACC-01 puts that line on the opening caption: "Classroom assumptions, not a news report" / "课堂假设，不是新闻报道" / "課堂假設，不是新聞報道".
+
+Accounting terms for these cases:
+
+| English | 简体 on screen | 繁體 on screen |
+|---|---|---|
+| sunk cost | 沉没成本 | 沉沒成本 |
+| incremental cost of selling | 出售的增量成本 | 出售的增量成本 |
+| opportunity cost | 机会成本 | 機會成本 |
+| indifference offer | 无差异出价 | 無差異出價 |
+
+In ACC-01 the next-best use is the HK$84 opportunity cost (twelve tarts times HK$7). Selling at HK$72 leaves the owner HK$12 worse off against that use. The HK$12 gap is that shortfall. The opportunity cost is the HK$84 next-best use. The offer that leaves the owner indifferent is HK$7 per tart: the indifference offer. Use break-even, 保本, and 打平 for a true break-even point.
+
+### ACC-01 source note
+
+`lessons/ACC/ACC-01.yaml` is the approved published source. Keep those bytes unless faculty asks for a new version. The scene file `lessons/ACC/art/tarts-scene.jpg` is sha256 `c2ac52d82cefd3c816ef0de3901fa2d1acafa8cdd52d20335beefc5382902856`.
+
+* Scene: https://kochiuyu.github.io/micro-cases/tarts-scene.jpg
+* English case, with the instructor note and sources: https://kochiuyu.github.io/micro-cases/tarts.html
+* Parallels: https://kochiuyu.github.io/micro-cases/zh-cn/tarts.html and https://kochiuyu.github.io/micro-cases/zh-hk/tarts.html
+* Published cuts: English https://youtu.be/F1WY_3jXYQw , Mandarin https://youtu.be/uetO9tibCEA , Cantonese https://youtu.be/EFakphvV2qE
+
+The published YAML says the café "offers to take" the tray. The case page says the café "offers to buy" it. The check beat says "yesterday's baking cost". The case page says that cost is "already incurred". Those differences stay in the committed YAML. Record them. Leave the case site and the YouTube videos unedited from this repository. `course_*` is the published English label "Micro Cases" in all three languages, and the file has no `youtube.description_*` block. Leave both until faculty asks for a change.
+
+`ACC-01` is this case. It is separate from `ACC-M01` and `ACC-M02`. Leave those lessons alone.
+
+## Timing
+
+Each language keeps its own speech timing unless that lesson sets `clock: shared`. The default beat is that language's speech plus a 0.4 s breath. `clock: own` is an explicit alias for that default. A shared clock is an explicit opt-in on that one lesson. Omit `clock` on a new short. Authoring a lesson leaves the factory clock as it is for every other lesson.
+
+## Source, render, and catalog
+
+Commit the YAML and its still-image files before handoff, so the approved version can be traced. That commit is the reproducible source.
+
+A rendered MP4 is a build product under the output root. It stays out of `lessons/`. Uploading it is a later step, after review. Adding the short to the education-video website is a further step: hand the approved YouTube URLs and the upload evidence to Education-Video-Web. Use only URLs and visibility that were actually approved. Leave the case website unedited from this repository.
+
+Writing a lesson does not publish a video, and it does not change factory behavior. The review gate stays: validate the saved YAML, then stop for approval before a build, a merge, or a handoff.
+
 ## YouTube title and description
 
 `title_en`, `title_zh`, and `title_zh_hk` are the short base title. The cover uses them as written. The factory appends the language tag when it writes the YouTube paste file. Do not put `(English)`, `(普通话)`, or `(粵語)` in the YAML title.
@@ -174,6 +244,10 @@ youtube:
 
 Each description must be strictly less than 2500 characters. A mixed cell uses the speech language: `en+zh` pastes `description_en`. The factory writes `out/lessons/<ID>/cells/<ID>_<cell>.youtube.txt` (title, blank line, description). It does not upload to YouTube.
 
+Titles, descriptions, and covers match the language of that cut and stay accurate to the committed lesson. A classroom case carries the classroom-assumptions disclaimer in the description, and on a custom cover when one is prepared for upload. The factory cover is painted from `title_*` at 1920×1080, with that cell's language chip. A custom cover is an upload asset for that language. It is not a lesson field, and it does not replace the committed YAML or scene file.
+
+Nothing in this prompt uploads a video, sets a visibility, or edits the education catalog. After the review gate, approved URLs and upload evidence go to Education-Video-Web.
+
 Write the title and the description without ASCII `<` or `>`. YouTube Studio rejects those characters. Prefer “to”, the arrow `→`, or fullwidth `＜` / `＞`. If the YAML still has ASCII brackets, the factory replaces them with the fullwidth forms when it writes the paste file (`1.25 -> 2` becomes `1.25 -＞ 2`). This applies only to the paste title and description. Comparison operators in speech and on-screen text stay unescaped ASCII.
 
 ## Beginner standalone rules
@@ -190,7 +264,7 @@ Write the title and the description without ASCII `<` or `>`. YouTube Studio rej
 * One learning objective. One worked example. Quiz items in EN / 简 / 繁.
 * One claim per beat. `duration_target_s` must equal the sum of `seconds`. A short module is often 60–240 seconds. A standalone teaching short may run longer when the beginner explanation needs it.
 * On-screen text stays inside the bilingual budgets in SCHEMA "Bilingual on-screen budgets" (`validate.py` warns past them). Math lines differ across languages only by a unit word, so a bilingual card prints the equation once.
-* Use only these visuals: title_card, definition_card, two_column, formula, takeaway, example, three_column, big_number, steps, module_open, module_close, payoff_matrix, table_grid, series, rank_line, freq_bars, balance_line, box_line, dev_bars, ratio_bars, schematic_chart, dag, pair, pair_chart, pair_box, pair_slope, redraw, turns, shrink, mix, coin. Use `series` for two rows across up to six days. Use `rank_line` for one ordered line of 3–6 values (median middle, or range ends + span bracket). Use `freq_bars` for two to six category counts (mode / frequency). Use `balance_line` for the mean as a seesaw balance point. Use `box_line` for one box from Q1 to Q3 on a number line (IQR). Use `dev_bars` for signed distances from the mean and their squares (power 2), cubes or fourth powers. Use `ratio_bars` for the coefficient of variation (each SD as a slice of its own average).
+* Use only these visuals: title_card, definition_card, two_column, formula, takeaway, example, three_column, big_number, steps, module_open, module_close, payoff_matrix, table_grid, series, rank_line, freq_bars, balance_line, box_line, dev_bars, ratio_bars, schematic_chart, dag, pair, pair_chart, pair_box, pair_slope, redraw, turns, shrink, mix, coin, still_image. `still_image` is opt-in for one official scene (see **Still image**). Use `series` for two rows across up to six days. Use `rank_line` for one ordered line of 3–6 values (median middle, or range ends + span bracket). Use `freq_bars` for two to six category counts (mode / frequency). Use `balance_line` for the mean as a seesaw balance point. Use `box_line` for one box from Q1 to Q3 on a number line (IQR). Use `dev_bars` for signed distances from the mean and their squares (power 2), cubes or fourth powers. Use `ratio_bars` for the coefficient of variation (each SD as a slice of its own average).
 * Match speech to the visual. A series that names each day uses `reveal: cells`. A walk of distances from the mean uses `dev_bars` (values as dots → signed bars → far bars + footer); squares use `dev_bars` with `power: 2` (products row → squares → sum footer). A short spoken arithmetic list uses `steps`. A median walk uses `rank_line` (written → ordered → middle). A range walk uses `rank_line` with `mark: ends` and `span: ends` (written → ordered → gold ends + bracket max − min). A mode or frequency walk uses `freq_bars` (labels → bars+counts → tallest/none + footer). A mean balance walk uses `balance_line` (values → mean fulcrum → left=right pulls + footer). An IQR walk uses `box_line` (values → Q1 and Q3 → box + whiskers + span). An outlier screen uses `box_line` with `fences` (box → fences → values outside gold); put the fence arithmetic on a `steps` card with `layout: rows` first. A CV walk uses `ratio_bars` (raw SDs → each against its own average → shares + footer). Do not talk through an empty card.
 * Name cards: after the number is known, a `title_card` fills the screen with the main word (Median, Mode, Variance, …). Unstaged `title_card` speech uses `en` / `zh` / `zh_hk` only — never `s1_*` on a name card.
 * Quote any speech or on-screen line that contains a colon. An unquoted `shops: add` is a YAML mapping and will fail to parse.

@@ -16,7 +16,7 @@ A lesson is one YAML file under `lessons/<AREA>/`. The renderer looks up the fil
 | Field | Type | Rule |
 |--------|------|------|
 | `id` | string | Unique within the lesson. Used as the audio filename. |
-| `visual` | enum | `title_card`, `definition_card`, `two_column`, `formula`, `takeaway`, `example`, `three_column`, `big_number`, `steps`, `module_open`, `module_close`, `payoff_matrix`, `table_grid`, `series`, `rank_line`, `freq_bars`, `balance_line`, `box_line`, `dev_bars`, `ratio_bars`, `quad_scatter`, `schematic_chart`, `dag`, `pair`, `pair_chart`, `pair_box`, `pair_slope`, `redraw`, `turns`, `shrink`, `mix`, `coin`, `whatis_title`, `whatis_definition`, `whatis_example`, `whatis_contrast`, `whatis_takeaway`. The five `whatis_*` names are opt-in. See **What-is layout**. |
+| `visual` | enum | `title_card`, `definition_card`, `two_column`, `formula`, `takeaway`, `example`, `three_column`, `big_number`, `steps`, `module_open`, `module_close`, `payoff_matrix`, `table_grid`, `series`, `rank_line`, `freq_bars`, `balance_line`, `box_line`, `dev_bars`, `ratio_bars`, `quad_scatter`, `schematic_chart`, `dag`, `pair`, `pair_chart`, `pair_box`, `pair_slope`, `redraw`, `turns`, `shrink`, `mix`, `coin`, `still_image`, `whatis_title`, `whatis_definition`, `whatis_example`, `whatis_contrast`, `whatis_takeaway`. `still_image` and the five `whatis_*` names are opt-in. See **Still image** and **What-is layout**. |
 | speech | trio | **One source only.** Unstaged card: `en` / `zh` / `zh_hk`. Staged card: `s1_en` `s1_zh` `s1_zh_hk` … Do not keep both. |
 
 Voice and captions join the stage lines in order. `validate.py` accepts either shape. Whole-card `en` on a staged beat is ignored when `s1_en` exists.
@@ -59,6 +59,24 @@ Optional beat fields, also off by default:
 
 These switches do not change numbers or narration. A per-shop preview that cuts an existing sentence must be a lossless partition, checked by joining the slices back to the original line. Do not add a new teaching claim, such as planning each shop's stock from one Monday, in order to fill a new card.
 
+## Still image (opt-in)
+
+A beat uses this card only when `visual` is `still_image`. Other visuals are unchanged. One still. Speech is unstaged `en` / `zh` / `zh_hk`. Do not use `s1_*`.
+
+The chrome stays the standard slide: theme background, blobs and corner, navy side bars, the kicker chip, and the lesson-title footer with beat dots. The picture and its caption end at the usual content bottom. A lesson with `slide_style: focus` keeps the focus chrome: no blobs, no corner, no footer, and the teaching area stays above the caption chip.
+
+After the kicker, the beat title is a compact navy line on the cream field with a short gold underline. There is no full-width navy title band. The art is fitted with contain: one uniform scale, centered, not cropped and not stretched. A rounded frame hugs the image. Space beside it stays the theme background.
+
+`image` is required. It is a `.jpg`, `.jpeg`, or `.png` path inside the repo. The factory looks beside the lesson YAML first, then from the repo root. A `..` segment, a URL, and an absolute path outside the repo are rejected. The beat title stem (`title_en` / `title_zh` / `title_zh_hk`) is required. `kicker_*` is optional. `caption_*` or `footer_*` is an optional single muted line under the image when it still fits above the content bottom. `caption_*` wins when both are set.
+
+```yaml
+# still_image shape. Do not paste this in as a short.
+visual: still_image
+image: art/tarts-scene.jpg
+kicker_en: ACC-01
+title_en: The last tray of egg tarts
+```
+
 ## What-is layout (opt-in)
 
 A lesson uses these cards only by setting the beat `visual` to a `whatis_*` name. `title_card`, `definition_card`, `example`, `takeaway`, `two_column`, and the STAT chart layouts are unchanged. One still per beat. Speech is `en` / `zh` / `zh_hk`, not `s1_*`.
@@ -94,6 +112,7 @@ These visuals paint progressive stills. Write one spoken chunk per still:
 | `quad_scatter` | 3 | `s1_*` … `s3_*`. Stage 1 places the points on the axes. Stage 2 draws the mean cross-hairs and the + / − quadrant signs. Stage 3 golds the `mark` points, writes each paired product, and shows the footer. The plot box is pinned from stage 1. (`mode: ruler`: ruler → clouds → pin at `r`). |
 | `table_grid`, `schematic_chart`, `dag`, `pair`, `pair_chart`, `pair_box`, `pair_slope`, `redraw`, `turns`, `shrink`, `mix`, `coin` | 3 | `s1_*` … `s3_*` |
 | `title_card`, `big_number`, `module_open`, `module_close` | 1 | `en` / `zh` / `zh_hk` only |
+| `still_image` | 1 | `en` / `zh` / `zh_hk` only. One still. Do not use `s1_*`. |
 | `whatis_title`, `whatis_definition`, `whatis_example`, `whatis_contrast`, `whatis_takeaway` | 1 | `en` / `zh` / `zh_hk` only. One still per beat. Do not use `s1_*`. |
 
 `s1` is on screen with `_s1.png`, `s2` with `_s2.png`, and so on. Do not put factory talk in the speech (“watch the gold bar”, “this card”, “in the left box”).
@@ -122,6 +141,7 @@ On-slide fields by visual:
 | visual | On-screen fields |
 |--------|------------------|
 | `title_card` | Centered title and kicker |
+| `still_image` | `image` (repo-local `.jpg` / `.jpeg` / `.png`, beside the lesson YAML, then the repo root), `title_*`, optional `kicker_*`, optional `caption_*` or `footer_*` as one muted line under the picture. Compact navy title and a short gold underline on the cream field. No navy title band. Unstaged `en` / `zh` / `zh_hk`. |
 | `definition_card` | `formula` or `formula_tex`, optional `gloss_*` |
 | `two_column` | `left_*`, `right_*` |
 | `formula` | `formula` or `formula_tex`, optional `gloss_*` |
@@ -155,7 +175,7 @@ On-slide fields by visual:
 | `coin` | Two faces. `left_*` is the chosen face, `right_*` is the drawn face. Optional `footer_*`. Stages: chosen, drawn, the note. |
 | `dag` | Nodes `n1_id` + `n1_*` … `n5_*` (or `nodes`). Edges `e1: X->T` … or `edges:` list. `highlight: X->Y`. Optional `role_*`. Stages: nodes, edges, highlight+role. |
 
-`validate.py` fails the section when the required stems above are empty. It also fails a `steps` beat whose speech stages do not match its rows (4–5 rows need one stage per row; 3 columns take at most 3). A `rank_line` with fewer than 3 or more than 6 values fails, as does a `mark`, `span` or `break` outside the line, or chip labels whose count differs from the values. Value lists that differ in length across languages fail. A `freq_bars` with fewer than 2 or more than 6 bars, or without `counts`, fails. A `balance_line` with fewer than 3 or more than 6 values, non-numeric values, or without `mean`, fails. A `box_line` with fewer than 3 or more than 8 values, non-numeric values, a non-numeric `q1`/`q3`/`median`, Q1 above Q3, quartiles outside the values, or a `break` that is not `last` (with the far value above Q3), fails, as do `fences` that are not `on` or two numbers, fences inside the box, or `fences` with `break: last` whose far value is not above the upper fence. A `dev_bars` with fewer than 3 or more than 6 values, non-numeric values, no `mean`, a `values_b` of a different length, a `power` outside 1–4, a `mark` outside the bars, or labels whose count differs from the values, fails. A `ratio_bars` with fewer than 2 or more than 4 means, non-numeric means or sds, a mean at or below zero, an sd above its mean, a `mark` outside the bars, or labels whose count differs from the means, fails. A `quad_scatter` with fewer than 3 or more than 8 points, non-numeric `xs`/`ys`, mismatched lengths, a bad `mark`, or labels whose count differs from the points, fails.
+`validate.py` fails the section when the required stems above are empty. A `still_image` beat also fails when `image` is missing, is a URL, leaves the repo (`..` or an absolute path outside it), is not a `.jpg`, `.jpeg`, or `.png` file, or when the beat uses staged `s1_*` speech. It also fails a `steps` beat whose speech stages do not match its rows (4–5 rows need one stage per row; 3 columns take at most 3). A `rank_line` with fewer than 3 or more than 6 values fails, as does a `mark`, `span` or `break` outside the line, or chip labels whose count differs from the values. Value lists that differ in length across languages fail. A `freq_bars` with fewer than 2 or more than 6 bars, or without `counts`, fails. A `balance_line` with fewer than 3 or more than 6 values, non-numeric values, or without `mean`, fails. A `box_line` with fewer than 3 or more than 8 values, non-numeric values, a non-numeric `q1`/`q3`/`median`, Q1 above Q3, quartiles outside the values, or a `break` that is not `last` (with the far value above Q3), fails, as do `fences` that are not `on` or two numbers, fences inside the box, or `fences` with `break: last` whose far value is not above the upper fence. A `dev_bars` with fewer than 3 or more than 6 values, non-numeric values, no `mean`, a `values_b` of a different length, a `power` outside 1–4, a `mark` outside the bars, or labels whose count differs from the values, fails. A `ratio_bars` with fewer than 2 or more than 4 means, non-numeric means or sds, a mean at or below zero, an sd above its mean, a `mark` outside the bars, or labels whose count differs from the means, fails. A `quad_scatter` with fewer than 3 or more than 8 points, non-numeric `xs`/`ys`, mismatched lengths, a bad `mark`, or labels whose count differs from the points, fails.
 
 Shape only, not a lesson. Odd count, one middle. Even count, the two middles:
 

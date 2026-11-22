@@ -64,9 +64,12 @@ STAGEABLE = {
     "takeaway": 3, "three_column": 3, "steps": 3, "payoff_matrix": 5,
     "table_grid": 3, "series": 3, "rank_line": 3, "freq_bars": 3, "balance_line": 3, "box_line": 3, "dev_bars": 3, "ratio_bars": 3, "quad_scatter": 3, "schematic_chart": 3, "dag": 3, "pair": 3, "pair_chart": 3, "pair_box": 3, "pair_slope": 3, "redraw": 3, "turns": 3, "shrink": 3, "mix": 3, "coin": 3,
 }
+# still_image is one unstaged still. It stays out of STAGEABLE on purpose.
 MIN_STAGE_BEAT = 5.0
 MIN_SLICE = 1.2
 LAYOUT_VERSION = "2026-11-04-reveal-steps-type-v1"
+_STILL_SUFFIXES = {".jpg", ".jpeg", ".png"}
+_STAGED_SPEECH = re.compile(r"^(?:s|stage)[1-9](?:_|$)")
 
 
 def lesson_stamp(lesson, theme, code, second, stage_cards) -> str:
@@ -109,6 +112,142 @@ def write_stamp(folder: Path, stamp: str) -> None:
 
 def beat_stamp(beat: dict, code: str, second, theme, stage) -> str:
     return digest_obj({"v": LAYOUT_VERSION, "beat": beat, "code": code, "second": second, "stage": stage, "flags": layout_flags(theme)})
+
+
+def _repo_root() -> Path:
+    return Path(__file__).resolve().parents[1]
+
+
+def _inside_repo(path: Path, root: Path) -> bool:
+    try:
+        path.resolve().relative_to(root.resolve())
+    except (ValueError, OSError):
+        return False
+    return True
+
+
+def lesson_yaml(lesson, source=None) -> Path | None:
+    """Lesson file used to resolve a still_image path.
+
+    `source` is the YAML a caller already has. `_yaml` is an in-memory hint
+    only — it is not a lesson field and is never written back. Otherwise the
+    id is looked up under lessons/.
+    """
+    if source:
+        path = Path(source)
+        if path.is_file():
+            return path.resolve()
+    if isinstance(lesson, dict):
+        raw = lesson.get("_yaml")
+        if raw:
+            path = Path(str(raw))
+            if path.is_file():
+                return path.resolve()
+        lid = str(lesson.get("id") or "").strip()
+        if lid:
+            from catalog import lesson_path
+
+            found = lesson_path(lid)
+            if found is not None and found.is_file():
+                return found.resolve()
+    return None
+
+
+def _still_url(text: str) -> bool:
+    raw = text.strip().lower()
+    return "://" in raw or raw.startswith("//")
+
+
+def _still_parent_ref(text: str) -> bool:
+    return any(part == ".." for part in Path(text).parts)
+
+
+def resolve_still_image(raw, yaml_path: Path | None = None, root: Path | None = None) -> tuple[Path | None, str]:
+    """Resolve `image` inside the repo.
+
+    A relative path is tried beside the lesson YAML, then from the repo root.
+    `..`, URLs, and anything that lands outside the repo are rejected.
+    """
+    root = (root or _repo_root()).resolve()
+    if not isinstance(raw, str):
+        return None, "still_image image must be a repo-local path."
+    text = raw.strip()
+    if not text:
+        return None, "still_image missing image."
+    if any(ch in text for ch in "\n\r\t\x00"):
+        return None, "still_image image must be a repo-local path."
+    if _still_url(text):
+        return None, "still_image image must be a repo-local path, not a URL."
+    if _still_parent_ref(text):
+        return None, "still_image image must stay inside the repo."
+    suffix = Path(text).suffix.lower()
+    if suffix not in _STILL_SUFFIXES:
+        return None, "still_image image must be a .jpg, .jpeg, or .png file."
+
+    candidate = Path(text)
+    if candidate.is_absolute():
+        try:
+            resolved = candidate.resolve()
+        except OSError:
+            return None, "still_image image must be a repo-local path."
+        if not _inside_repo(resolved, root):
+            return None, "still_image image must stay inside the repo."
+        if not resolved.is_file():
+            return None, "still_image image file was not found."
+        return resolved, ""
+
+    bases: list[Path] = []
+    if yaml_path is not None:
+        yaml = Path(yaml_path)
+        bases.append(yaml if yaml.is_dir() else yaml.resolve().parent)
+    bases.append(root)
+    saw_outside = False
+    saw_inside = False
+    for base in bases:
+        try:
+            resolved = (base / candidate).resolve()
+        except OSError:
+            return None, "still_image image must be a repo-local path."
+        if not _inside_repo(resolved, root):
+            saw_outside = True
+            continue
+        saw_inside = True
+        if resolved.is_file():
+            return resolved, ""
+    if saw_outside and not saw_inside:
+        return None, "still_image image must stay inside the repo."
+    return None, "still_image image file was not found."
+
+
+def still_image_problems(beat: dict, yaml_path: Path | None = None) -> list[str]:
+    """Authoring errors for one still_image beat. Empty when the beat is another visual."""
+    if beat.get("visual") != "still_image":
+        return []
+    problems: list[str] = []
+    if any(
+        isinstance(key, str) and _STAGED_SPEECH.match(key) and str(val or "").strip()
+        for key, val in beat.items()
+    ):
+        problems.append("still_image uses unstaged speech (en / zh / zh_hk), not s1_*.")
+    if "image" not in beat or beat.get("image") is None or (isinstance(beat.get("image"), str) and not str(beat.get("image")).strip()):
+        problems.append("still_image missing image.")
+        return problems
+    _path, err = resolve_still_image(beat.get("image"), yaml_path)
+    if err:
+        problems.append(err)
+    return problems
+
+
+def _contain_size(src_w: int, src_h: int, box_w: int, box_h: int) -> tuple[int, int]:
+    """One scale that fits the whole picture in the box. Nothing is cropped or stretched."""
+    src_w = max(1, int(src_w))
+    src_h = max(1, int(src_h))
+    box_w = max(1, int(box_w))
+    box_h = max(1, int(box_h))
+    scale = min(box_w / src_w, box_h / src_h)
+    dst_w = max(1, min(box_w, int(src_w * scale + 1e-6)))
+    dst_h = max(1, min(box_h, int(src_h * scale + 1e-6)))
+    return dst_w, dst_h
 
 
 def layout_flags(theme=None) -> dict:
@@ -5628,6 +5767,150 @@ def render_whatis(draw, beat, lesson, visual, code, theme, second, index, n, sta
     _draw_whatis_footer(draw, beat, lesson, code, theme, second, index, n)
 
 
+def _open_still(path: Path, bg: tuple) -> Image.Image:
+    from PIL import ImageOps
+
+    with Image.open(path) as raw:
+        try:
+            art = ImageOps.exif_transpose(raw)
+        except Exception:
+            art = raw.copy()
+        art.load()
+    art = art.convert("RGBA")
+    plate = Image.new("RGBA", art.size, (int(bg[0]), int(bg[1]), int(bg[2]), 255))
+    return Image.alpha_composite(plate, art).convert("RGB")
+
+
+def _still_title_top(beat, code, second) -> int:
+    """Title sits under the kicker chip. Focus has no chip, so the title starts higher."""
+    if _FOCUS.get():
+        return 48
+    kicker = resolve_kicker(beat, code)
+    if second:
+        other = resolve_kicker(beat, second)
+        if other and other != kicker:
+            kicker = f"{kicker}  {other}" if kicker else other
+    return 112 if kicker else 64
+
+
+def _paint_compact_title(draw, title: str, theme: dict, top: int) -> int:
+    """Navy title on the cream field, then a short gold underline.
+
+    Returns the y where the picture may start. No full-width band.
+    """
+    left = 64
+    max_w = W - 160
+    primary, secondary = _split_pair(title)
+    if not primary and not secondary:
+        return top
+    y = top
+    if primary:
+        cap = 50 if any(is_cjk(ch) for ch in primary) else 56
+        font = fit_font(draw, primary, cap, max_w, bold=True, min_size=32, max_lines=2)
+        size = int(getattr(font, "size", cap) or cap)
+        lines = (wrap(draw, primary, font, max_w, True) or [sanitize(primary)])[:2]
+        line_h = int(size * _line_factor(primary))
+        for ln in lines:
+            draw_mixed(draw, (left, y), ln, size, theme["navy"], bold=True)
+            y += line_h
+    if secondary:
+        y += 6
+        cap = 30 if any(is_cjk(ch) for ch in secondary) else 34
+        font = fit_font(draw, secondary, cap, max_w, bold=False, min_size=22, max_lines=2)
+        size = int(getattr(font, "size", cap) or cap)
+        lines = (wrap(draw, secondary, font, max_w, False) or [sanitize(secondary)])[:2]
+        line_h = int(size * _line_factor(secondary))
+        for ln in lines:
+            draw_mixed(draw, (left, y), ln, size, theme["navy"], bold=False)
+            y += line_h
+    y += 12
+    draw.rectangle([left, y, left + 168, y + 6], fill=theme["gold"])
+    return y + 6 + 18
+
+
+def _paint_muted_line(draw, text: str, x: int, y: int, max_w: int, theme: dict) -> None:
+    size = 28
+    label = re.sub(r"\s*\n\s*", "   ", sanitize(text or "")).strip()
+    if not label or max_w < 40:
+        return
+    while size >= 18 and mixed_length(draw, label, size, False) > max_w:
+        size -= 1
+    if mixed_length(draw, label, size, False) > max_w:
+        while label and mixed_length(draw, label + "…", size, False) > max_w:
+            label = label[:-1]
+        label = (label.rstrip() + "…") if label else ""
+    if label:
+        draw_mixed(draw, (x, y), label, size, theme["muted"], bold=False)
+
+
+def _still_note(beat, code, second) -> str:
+    """One muted line. caption_* wins; footer_* is the fallback."""
+    caption = field2(beat, "caption", code, second)
+    if caption:
+        return caption
+    return field2(beat, "footer", code, second)
+
+
+def _paste_contained(base: Image.Image, draw, art: Image.Image, box, theme: dict):
+    """Contain-fit art in box (x, y, w, h). The rounded frame hugs the picture."""
+    x0, y0, box_w, box_h = box
+    if box_w < 8 or box_h < 8 or art.width < 1 or art.height < 1:
+        return None
+    dst_w, dst_h = _contain_size(art.width, art.height, box_w, box_h)
+    x = int(x0 + (box_w - dst_w) // 2)
+    y = int(y0 + (box_h - dst_h) // 2)
+    resample = getattr(getattr(Image, "Resampling", Image), "LANCZOS")
+    frame = art.resize((dst_w, dst_h), resample).convert("RGBA")
+    radius = min(22, max(4, min(dst_w, dst_h) // 10))
+    mask = Image.new("L", (dst_w, dst_h), 0)
+    ImageDraw.Draw(mask).rounded_rectangle([0, 0, dst_w - 1, dst_h - 1], radius=radius, fill=255)
+    base.paste(frame, (x, y), mask)
+    draw.rounded_rectangle(
+        [x, y, x + dst_w - 1, y + dst_h - 1],
+        radius=radius,
+        outline=theme["navy"],
+        width=4,
+    )
+    return x, y, dst_w, dst_h
+
+
+def render_still_image(draw, beat, code, y, theme, stage=None, second=None, lesson=None) -> None:
+    """Official still art. Compact navy title on cream, then the picture.
+
+    There is no navy title band, so the art stays large. The picture uses one
+    scale, stays centered, and is not cropped or stretched. `stage` is ignored.
+    """
+    del stage, y
+    holder = lesson or {}
+    title = field2(beat, "title", code, second) or field2(holder, "title", code, second)
+    top = _paint_compact_title(draw, title, theme, _still_title_top(beat, code, second))
+    note = _still_note(beat, code, second)
+    # Half the frame stroke stays inside the teaching area.
+    bottom = _content_bottom() - 2
+    reserve = 46 if note else 0
+    if reserve and bottom - top - reserve < 160:
+        reserve = 0
+        note = ""
+    left, right = 64, W - 64
+    box_h = bottom - reserve - top
+    path, err = resolve_still_image(beat.get("image"), lesson_yaml(holder))
+    if path is None:
+        raise ValueError(err or "still_image image file was not found.")
+    try:
+        art = _open_still(path, theme["bg"])
+    except OSError as exc:
+        raise ValueError(f"still_image image could not be read ({path.name}).") from exc
+    base = getattr(draw, "_vf_img", None)
+    placed = None
+    if base is not None and box_h >= 8:
+        placed = _paste_contained(base, draw, art, (left, top, right - left, box_h), theme)
+    if note and placed is not None:
+        frame_x, frame_y, _frame_w, frame_h = placed
+        cap_y = frame_y + frame_h + 12
+        if cap_y + 32 <= _content_bottom():
+            _paint_muted_line(draw, note, frame_x, cap_y, max(40, right - frame_x), theme)
+
+
 RENDERERS = {
     "title_card": render_title_card,
     "definition_card": render_definition,
@@ -5661,6 +5944,7 @@ RENDERERS = {
     "coin": render_coin,
     "schematic_chart": render_schematic_chart,
     "dag": render_dag,
+    "still_image": render_still_image,
 }
 
 
@@ -5799,6 +6083,17 @@ def render_beat(beat, lesson, index, n, lang_labels="en", theme=None, stage=None
                 kicker = f"{kicker}  {other_k}" if kicker else other_k
         if not focus:
             draw_kicker(draw, kicker, theme)
+        if visual == "still_image":
+            # Compact title on the cream field. The navy title band would shrink the art.
+            renderer = RENDERERS.get(visual)
+            if renderer:
+                renderer(
+                    draw, beat, code, 0, theme,
+                    stage=None if not stage else stage,
+                    second=second,
+                    lesson=lesson,
+                )
+            return img
         title = field2(beat, "title", code, second) or field2(lesson, "title", code, second)
         y = draw_focus_title(draw, title, theme) if focus else draw_title(draw, title, theme)
         renderer = RENDERERS.get(visual)

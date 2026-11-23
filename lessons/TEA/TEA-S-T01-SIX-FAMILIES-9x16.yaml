@@ -127,13 +127,13 @@ beats:
   image: art/six-families.png
   title_en: |
     Six families
-    Not six steps on one scale.
+    They are not six steps from green tea to black tea.
   title_zh: |
     六类并列的路线
-    不是一条从绿到黑的刻度。
+    不是从绿茶到红茶的六个步骤。
   title_zh_hk: |
     六類並列的路線
-    不是一條從綠到黑的刻度。
-  en: These are six families, not six steps on one scale.
-  zh: 所以这是六类并列的路线，不是一条从绿到黑的刻度。
-  zh_hk: 所以呢六類係並列嘅路線，唔係一條由綠到黑嘅刻度。
+    不是從綠茶到紅茶的六個步驟。
+  en: These are six families, not six steps from green tea to black tea.
+  zh: 所以这是六类并列的路线，不是从绿茶到红茶的六个步骤。
+  zh_hk: 所以呢六類係並列嘅路線，唔係由綠茶走到紅茶嘅六個步驟。

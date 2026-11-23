@@ -1,0 +1,60 @@
+# Vertical Shorts preview sample. Not a production landscape lesson.
+# Not catalog-ready. Do not treat this file as a 16:9 lesson.
+# On-screen lines and speech are the locked wording. Pictures have no text.
+# Official cards are contain-fit. Seconds are slides-only preview holds.
+id: TEA-S-T08-DECAF-NOT-FREE-9x16
+format: "9:16"
+clock: own
+title_en: Decaf is not caffeine-free
+title_zh: 低因茶不是无咖啡因
+title_zh_hk: 低因茶不是無咖啡因
+duration_target_s: 60
+beats:
+- id: hook
+  visual: still_image
+  seconds: 8
+  image: art/t08-hook.png
+  title_en: |
+    Decaf tea
+    Is it caffeine-free?
+  title_zh: |
+    低因茶
+    是无咖啡因吗？
+  title_zh_hk: |
+    低因茶
+    是無咖啡因嗎？
+  en: Is decaf tea caffeine-free?
+  zh: 低因茶，是无咖啡因吗？
+  zh_hk: 低因茶，係咪無咖啡因？
+- id: claim
+  visual: still_image
+  seconds: 8
+  image: art/t08-claim.png
+  title_en: |
+    Reduced caffeine
+    Not the same claim.
+  title_zh: |
+    减少咖啡因
+    和无咖啡因不是同一句。
+  title_zh_hk: |
+    減少咖啡因
+    和無咖啡因不是同一句。
+  en: Decaf tea has reduced caffeine. It does not mean caffeine-free.
+  zh: 低因茶经过处理，咖啡因减少了。这和无咖啡因不是同一句。
+  zh_hk: 低因茶經過處理，咖啡因減少咗。呢句同無咖啡因唔係同一句。
+- id: takeaway
+  visual: still_image
+  seconds: 8
+  image: art/t08-takeaway.png
+  title_en: |
+    Decaf tea
+    It is not caffeine-free.
+  title_zh: |
+    低因茶
+    不是无咖啡因。
+  title_zh_hk: |
+    低因茶
+    不是無咖啡因。
+  en: Decaf tea is not caffeine-free. Read the label.
+  zh: 低因茶不是无咖啡因。要看标签。外观上看不出来。
+  zh_hk: 低因茶唔係無咖啡因。要睇標籤。外觀睇唔出。

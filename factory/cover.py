@@ -189,7 +189,94 @@ def _title_blocks(draw, raw: str) -> list[list[tuple[str, int]]]:
     return blocks or [[(raw, 120)]]
 
 
-def paint(lesson: dict, slide: str, speech: str) -> Image.Image:
+def _paint_portrait(lesson: dict, slide: str, speech: str) -> Image.Image:
+    """Phone cover. The title stacks on a narrow measure and does not grow to fill 1920 px."""
+    width, height = 1080, 1920
+    img = Image.new("RGB", (width, height), NAVY)
+    draw = ImageDraw.Draw(img)
+    draw.rectangle((0, 0, 14, height), fill=GOLD)
+
+    def course_lines(slide_key: str) -> list[str]:
+        lines = []
+        for code in _langs(slide_key):
+            if code in {"zh", "zh_cn"}:
+                lines.append(lesson.get("course_zh") or "商务统计")
+            elif code in {"hk", "zh_hk"}:
+                lines.append(lesson.get("course_zh_hk") or "商務統計")
+            else:
+                lines.append((lesson.get("course_en") or "Business Statistics").upper())
+        return lines or [(lesson.get("course_en") or "Business Statistics").upper()]
+
+    lines = course_lines(slide)
+    size = 28 if len(lines) > 1 else 32
+    y0 = 200
+    for i, line in enumerate(lines):
+        draw_mixed(draw, (80, y0 + i * (size + 8)), line, size, GOLD)
+    short = lesson.get("id", "")
+    from youtube import legacy_series, series_number
+
+    number = "" if legacy_series() else series_number(short)
+    if number:
+        short = f"{number} · {short}"
+    short_w = draw.textlength(short, font=font(26))
+    draw.text((width - 80 - short_w, 208), short, font=font(26), fill=GOLD)
+
+    raw = title_for(lesson, slide)
+    blocks: list[list[tuple[str, int]]] = []
+    for block in [ln for ln in raw.split("\n") if ln.strip()] or [raw]:
+        start = 64 if has_cjk(block) else 68
+        chosen = None
+        for step in range(start, 31, -2):
+            face = font(step, cjk=has_cjk(block))
+            wrapped = wrap(draw, block, face, 840)
+            if len(wrapped) <= 5:
+                chosen = [(line, step) for line in wrapped]
+                break
+        if chosen is None:
+            face = font(32, cjk=has_cjk(block))
+            chosen = [(line, 32) for line in wrap(draw, block, face, 840)[:6]]
+        blocks.append(chosen)
+    gap = 12
+    y = 460
+    for bi, rows in enumerate(blocks):
+        for line, step in rows:
+            text_w = mixed_textlength(draw, line, step)
+            draw_mixed(draw, ((width - text_w) / 2, y), line, step, WHITE)
+            y += step + gap
+        if len(blocks) > 1 and bi == 0:
+            rule_w = 280
+            draw.rectangle(((width - rule_w) / 2, y + 4, (width + rule_w) / 2, y + 10), fill=GOLD)
+            y += 28
+    speech_kind, speech_name = SPEECH.get(speech, ("SPEECH", speech))
+    parts = _langs(slide)
+    if len(parts) == 2 and not _legacy_lang_tag():
+        from langs import language_label
+
+        label = language_label(parts[0], parts[1], "chip")
+        if label and "：" not in label and not label.startswith("Speech:"):
+            speech_kind = {"en": "LANGUAGE", "zh": "语言", "zh_cn": "语言"}.get(parts[0], "語言")
+            speech_name = label
+    chip_w, chip_h = 640, 88
+    need = mixed_textlength(draw, speech_kind, 24) + 24 + mixed_textlength(draw, speech_name, 34) + 80
+    chip_w = int(min(920, max(chip_w, need)))
+    x = (width - chip_w) / 2
+    chip_y = min(y + 48, height - 200 - chip_h - 24)
+    draw.rounded_rectangle((x, chip_y, x + chip_w, chip_y + chip_h), radius=14, fill=CREAM)
+    kind_w = mixed_textlength(draw, speech_kind, 24)
+    name_size = 36
+    while name_size > 24 and mixed_textlength(draw, speech_name, name_size) > chip_w - kind_w - 96:
+        name_size -= 2
+    name_w = mixed_textlength(draw, speech_name, name_size)
+    row_w = kind_w + 24 + name_w
+    left = x + (chip_w - row_w) / 2
+    draw_mixed(draw, (left, chip_y + 28), speech_kind, 24, GOLD)
+    draw_mixed(draw, (left + kind_w + 24, chip_y + 22), speech_name, name_size, INK)
+    return img
+
+
+def paint(lesson: dict, slide: str, speech: str, frame_format: str | None = None) -> Image.Image:
+    if str(frame_format or lesson.get("format") or "").strip() == "9:16":
+        return _paint_portrait(lesson, slide, speech)
     img = Image.new("RGB", (W, H), NAVY)
     draw = ImageDraw.Draw(img)
     draw.rectangle((0, 0, 22, H), fill=GOLD)
@@ -263,10 +350,10 @@ def paint(lesson: dict, slide: str, speech: str) -> Image.Image:
     return img
 
 
-def write_cover(lesson_path: Path, slide: str, speech: str, dest: Path) -> Path:
+def write_cover(lesson_path: Path, slide: str, speech: str, dest: Path, frame_format: str | None = None) -> Path:
     lesson = yaml.safe_load(lesson_path.read_text(encoding="utf-8"))
     dest.parent.mkdir(parents=True, exist_ok=True)
-    paint(lesson, slide, speech).save(dest, "PNG")
+    paint(lesson, slide, speech, frame_format).save(dest, "PNG")
     return dest
 
 

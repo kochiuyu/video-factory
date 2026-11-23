@@ -334,6 +334,10 @@ def validate(lesson: dict, glyphs: bool = True, source: Path | str | None = None
         flag = str(lesson.get("clock")).strip().lower()
         if flag not in {"own", "shared"}:
             errors.append(f"clock must be own or shared, not {lesson.get('clock')!r}.")
+    if "format" in lesson and lesson.get("format") is not None:
+        frame = str(lesson.get("format")).strip()
+        if frame not in {"16:9", "9:16"}:
+            errors.append(f"format must be 16:9 or 9:16, not {lesson.get('format')!r}.")
     beats = lesson.get("beats") or []
     errors.extend(youtube_errors(lesson))
     if not beats:

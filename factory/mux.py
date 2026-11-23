@@ -18,14 +18,15 @@ def write_concat(slides: list[Path], durations: list[float], concat_path: Path) 
     concat_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def beat_progress_graph(durations: list[float]) -> str:
+def beat_progress_graph(durations: list[float], width: int = 1920) -> str:
     """Gold rail plus a fill that wipes left to right over each beat."""
     total = max(sum(max(float(d), 0.05) for d in durations), 0.05)
     n = max(1, len(durations))
+    bar = int(width)
     parts = [
         f"[0:v]fps={clip_fps()},format=yuv420p[base]",
-        f"color=c=0xC4A35A@0.28:s=1920x8:d={total:.3f},format=rgba[rail]",
-        f"color=c=0xC4A35A:s=1920x8:d={total:.3f},format=rgba[gold]",
+        f"color=c=0xC4A35A@0.28:s={bar}x8:d={total:.3f},format=rgba[rail]",
+        f"color=c=0xC4A35A:s={bar}x8:d={total:.3f},format=rgba[gold]",
     ]
     if n == 1:
         parts.append("[gold]copy[g0]")
@@ -39,7 +40,7 @@ def beat_progress_graph(durations: list[float]) -> str:
         t1 = t0 + span
         nxt = "vout" if i == n - 1 else f"v{i + 1}"
         parts.append(
-            f"[v{i}][g{i}]overlay=x='-1920+1920*(t-{t0:.3f})/{span:.3f}':y=0:"
+            f"[v{i}][g{i}]overlay=x='-{bar}+{bar}*(t-{t0:.3f})/{span:.3f}':y=0:"
             f"enable='between(t,{t0:.3f},{t1:.3f})'[{nxt}]"
         )
         t0 = t1
@@ -61,7 +62,8 @@ def make_silent_master(
     cmd = ["-y", "-f", "concat", "-safe", "0", "-i", str(concat_path)]
     bar_times = beat_durations or durations
     if progress_bar and bar_times:
-        cmd += ["-filter_complex", beat_progress_graph(bar_times), "-map", "[vout2]"]
+        frame_w, _frame_h = _slide_frame(slides[0] if slides else None)
+        cmd += ["-filter_complex", beat_progress_graph(bar_times, frame_w), "-map", "[vout2]"]
     else:
         cmd += ["-vf", f"fps={clip_fps()},format=yuv420p"]
     cmd += [
@@ -111,6 +113,40 @@ CAPTION_SIZE_MAX = 56
 CAPTION_LINES_MAX = 3
 CAPTION_BOTTOM_PAD = 28
 CAPTION_VERTICAL_PAD = 12
+PORTRAIT_PILL_MAX = 920
+PORTRAIT_CAPTION_PAD = 200
+
+
+def _slide_frame(path) -> tuple[int, int]:
+    """Frame of a rendered slide. Anything other than 1080×1920 stays 1920×1080."""
+    if path is None:
+        return 1920, 1080
+    try:
+        from PIL import Image
+
+        with Image.open(path) as im:
+            if im.size == (1080, 1920):
+                return 1080, 1920
+    except OSError:
+        pass
+    return 1920, 1080
+
+
+def _caption_metrics(frame: tuple[int, int] | None = None) -> tuple[int, int, int, int]:
+    """(width, height, pill max, bottom pad). Landscape numbers stay the defaults."""
+    if frame == (1080, 1920):
+        return 1080, 1920, PORTRAIT_PILL_MAX, PORTRAIT_CAPTION_PAD
+    return 1920, 1080, CAPTION_PILL_MAX, CAPTION_BOTTOM_PAD
+
+
+def _caption_inner_width() -> int:
+    """Wrap width for caption cards. Phone builds use the narrower pill."""
+    try:
+        from slides import portrait
+    except Exception:
+        portrait = lambda: False  # noqa: E731
+    pill = PORTRAIT_PILL_MAX if portrait() else CAPTION_PILL_MAX
+    return pill - 2 * CAPTION_PAD_X
 
 
 def caption_safe_top(
@@ -118,15 +154,17 @@ def caption_safe_top(
     *,
     size: int = CAPTION_SIZE_MAX,
     lines: int = CAPTION_LINES_MAX,
+    bottom_pad: int | None = None,
 ) -> int:
     """Top edge of a caption chip with this size and line count.
 
     The default arguments are the largest chip `_caption_card` can draw.
     A shorter chip starts lower, so content kept above this line stays clear.
     """
+    pad = CAPTION_BOTTOM_PAD if bottom_pad is None else int(bottom_pad)
     line_h = max(30, int(size * 1.28))
     pill_h = 2 * CAPTION_VERTICAL_PAD + line_h * max(1, int(lines))
-    return int(frame_height) - CAPTION_BOTTOM_PAD - pill_h
+    return int(frame_height) - pad - pill_h
 
 
 def _caption_font(text: str, size: int):
@@ -398,7 +436,7 @@ def caption_orphans(text: str) -> list[str]:
     if not body:
         return []
     font = _caption_font(body, max(24, min(72, size)))
-    max_w = CAPTION_PILL_MAX - 2 * CAPTION_PAD_X
+    max_w = _caption_inner_width()
     bad = []
     for sent in _sentences(body):
         bits = [b for b in _wrap_caption_line(sent, font, max_w) if b.strip()]
@@ -421,7 +459,7 @@ def caption_pages(text: str, keep_units: bool = False) -> list[str]:
     if not body:
         return [" "]
     font = _caption_font(body, size)
-    max_w = CAPTION_PILL_MAX - 2 * CAPTION_PAD_X
+    max_w = _caption_inner_width()
     pages: list[str] = []
     for sent in _sentences(body, keep_units):
         bits = _wrap_caption_line(sent, font, max_w, keep_units)
@@ -701,7 +739,7 @@ def mux_cell(
     return atomic_replace(tmp, out_path)
 
 
-def _caption_card(text: str, dest: Path) -> Path:
+def _caption_card(text: str, dest: Path, frame: tuple[int, int] | None = None) -> Path:
     """Full-frame transparent overlay with a compact caption chip at the bottom."""
     from PIL import Image, ImageDraw, ImageFont
 
@@ -717,9 +755,8 @@ def _caption_card(text: str, dest: Path) -> Path:
     opacity = int(os.environ.get("VF_CAPTION_OPACITY", "72") or 72)
     opacity = max(30, min(90, opacity))
     line_h = max(30, int(size * 1.28))
-    frame_w, frame_h = 1920, 1080
+    frame_w, frame_h, max_pill_w, bottom_pad = _caption_metrics(frame)
     pad_x, pad_y = CAPTION_PAD_X, CAPTION_VERTICAL_PAD
-    max_pill_w = CAPTION_PILL_MAX
     max_w = max_pill_w - 2 * pad_x
     from slides import draw_mixed, mixed_length
 
@@ -738,7 +775,7 @@ def _caption_card(text: str, dest: Path) -> Path:
     img = Image.new("RGBA", (frame_w, frame_h), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
     x0 = (frame_w - pill_w) // 2
-    y0 = frame_h - pill_h - CAPTION_BOTTOM_PAD
+    y0 = frame_h - pill_h - bottom_pad
     alpha = int(round(255 * opacity / 100))
     draw.rounded_rectangle([x0, y0, x0 + pill_w, y0 + pill_h], radius=18, fill=(16, 15, 10, alpha))
     y = y0 + pad_y
@@ -826,25 +863,30 @@ def stamp_caption(slide: Path, text: str, dest: Path) -> Path:
 
     from cache import digest_obj, file_fingerprint, stamp_ok, write_mark
 
-    key = digest_obj(
-        {
-            "slide": file_fingerprint(slide),
-            "text": text,
-            "size": os.environ.get("VF_CAPTION_SIZE", CAPTION_SIZE_DEFAULT),
-            "align": os.environ.get("VF_CAPTION_ALIGN", "center"),
-            "lines": os.environ.get("VF_CAPTION_LINES", CAPTION_LINES_DEFAULT),
-            "pill": CAPTION_PILL_MAX,
-            "opacity": os.environ.get("VF_CAPTION_OPACITY", "72"),
-            "bar": os.environ.get("VF_CAPTION_BAR", ""),
-            "v": "2026-09-19-mixed-caption",
-        }
-    )
+    base = Image.open(slide).convert("RGBA")
+    frame = base.size
+    payload = {
+        "slide": file_fingerprint(slide),
+        "text": text,
+        "size": os.environ.get("VF_CAPTION_SIZE", CAPTION_SIZE_DEFAULT),
+        "align": os.environ.get("VF_CAPTION_ALIGN", "center"),
+        "lines": os.environ.get("VF_CAPTION_LINES", CAPTION_LINES_DEFAULT),
+        "pill": CAPTION_PILL_MAX,
+        "opacity": os.environ.get("VF_CAPTION_OPACITY", "72"),
+        "bar": os.environ.get("VF_CAPTION_BAR", ""),
+        "v": "2026-09-19-mixed-caption",
+    }
+    if frame != (1920, 1080):
+        _w, _h, pill, pad = _caption_metrics(frame)
+        payload["frame"] = f"{frame[0]}x{frame[1]}"
+        payload["pill_w"] = pill
+        payload["bottom"] = pad
+    key = digest_obj(payload)
     if stamp_ok(dest, key):
         return dest
 
     overlay_path = dest.with_name(dest.stem + "_bar.png")
-    bar = _caption_card(text, overlay_path)
-    base = Image.open(slide).convert("RGBA")
+    bar = _caption_card(text, overlay_path, frame)
     overlay = Image.open(bar).convert("RGBA")
     if overlay.size != base.size:
         overlay = overlay.resize(base.size)
@@ -1098,7 +1140,7 @@ def _env_seconds(name: str, default: float, cap: float) -> float:
     return max(0.0, min(cap, val))
 
 
-def _still_chain(n: int, durations: list[float], fade: float) -> tuple[str, str]:
+def _still_chain(n: int, durations: list[float], fade: float, width: int = 1920, height: int = 1080) -> tuple[str, str]:
     """Join caption cards inside a beat.
 
     xfade drops later inputs once a beat has more than a couple of pages.
@@ -1107,7 +1149,7 @@ def _still_chain(n: int, durations: list[float], fade: float) -> tuple[str, str]
     """
     prepared = []
     for i in range(n):
-        prepared.append(f"[{i}:v]fps={clip_fps()},scale=1920:1080,format=yuv420p,setsar=1[s{i}]")
+        prepared.append(f"[{i}:v]fps={clip_fps()},scale={int(width)}:{int(height)},format=yuv420p,setsar=1[s{i}]")
     if n == 1:
         return ";".join(prepared), "s0"
     if fade > 0 and n == 2:
@@ -1165,20 +1207,21 @@ def make_beat_clip(
         )
         vout = "vout3"
     fps = clip_fps()
+    frame_w, frame_h = _slide_frame(slides[0])
     if progress_bar:
         graph = (
-            f"[0:v]fps={fps},scale=1920:1080,format=yuv420p,setsar=1[base];"
-            f"color=c=0xC4A35A@0.28:s=1920x8:d={total:.3f},format=rgba[rail];"
-            f"color=c=0xC4A35A:s=1920x8:d={total:.3f},format=rgba[gold];"
+            f"[0:v]fps={fps},scale={frame_w}:{frame_h},format=yuv420p,setsar=1[base];"
+            f"color=c=0xC4A35A@0.28:s={frame_w}x8:d={total:.3f},format=rgba[rail];"
+            f"color=c=0xC4A35A:s={frame_w}x8:d={total:.3f},format=rgba[gold];"
             f"[base][rail]overlay=0:0[v0];"
-            f"[v0][gold]overlay=x='-1920+1920*t/{total:.3f}':y=0[vout2]"
+            f"[v0][gold]overlay=x='-{frame_w}+{frame_w}*t/{total:.3f}':y=0[vout2]"
             f"{extra}"
         )
         cmd += ["-filter_complex", graph, "-map", f"[{vout}]", "-map", "1:a:0"]
     elif extra:
         cmd += [
             "-filter_complex",
-            f"[0:v]fps={fps},scale=1920:1080,format=yuv420p,setsar=1[vout2]{extra}",
+            f"[0:v]fps={fps},scale={frame_w}:{frame_h},format=yuv420p,setsar=1[vout2]{extra}",
             "-map",
             f"[{vout}]",
             "-map",
@@ -1187,7 +1230,7 @@ def make_beat_clip(
     else:
         cmd += [
             "-vf",
-            f"fps={fps},scale=1920:1080,format=yuv420p",
+            f"fps={fps},scale={frame_w}:{frame_h},format=yuv420p",
             "-map",
             "0:v:0",
             "-map",

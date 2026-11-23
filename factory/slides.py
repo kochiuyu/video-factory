@@ -10,6 +10,7 @@ import os
 import re
 import unicodedata
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from contextlib import contextmanager
 from contextvars import ContextVar
 from pathlib import Path
 
@@ -24,9 +25,43 @@ from theme import load_theme
 
 W, H = 1920, 1080
 CONTENT_BOTTOM = H - 156
+# Phone / Shorts frame. Landscape keeps the module constants above; this size
+# is selected with a context var and never written back into W or H.
+PORTRAIT_W, PORTRAIT_H = 1080, 1920
+PHONE_SAFE_L, PHONE_SAFE_R, PHONE_SAFE_TOP = 80, 1000, 160
+PHONE_CAPTION_PAD = 200
+CANVAS_STAMP = "1080x1920"
 # Set only while painting a lesson with slide_style: focus. Default renders
 # never set it, so content still ends at CONTENT_BOTTOM.
 _FOCUS: ContextVar[bool] = ContextVar("vf_focus_layout", default=False)
+# None means the landscape constants. A 9:16 render sets (1080, 1920).
+_CANVAS: ContextVar[tuple[int, int] | None] = ContextVar("vf_canvas", default=None)
+
+
+def portrait() -> bool:
+    size = _CANVAS.get()
+    return bool(size and size[1] > size[0])
+
+
+def fw() -> int:
+    size = _CANVAS.get()
+    return int(size[0]) if size else W
+
+
+def fh() -> int:
+    size = _CANVAS.get()
+    return int(size[1]) if size else H
+
+
+@contextmanager
+def canvas_scope(fmt: str | None):
+    """Select the frame for this build. Landscape leaves the context unset."""
+    size = (PORTRAIT_W, PORTRAIT_H) if str(fmt or "").strip() == "9:16" else None
+    token = _CANVAS.set(size)
+    try:
+        yield
+    finally:
+        _CANVAS.reset(token)
 
 SCALE = {
     "kicker": 28, "footer": 22, "title": 96, "hook": 160, "subtitle": 44,
@@ -87,6 +122,10 @@ def lesson_stamp(lesson, theme, code, second, stage_cards) -> str:
     style = str(lesson.get("slide_style") or "").strip().lower()
     if style:
         payload["slide_style"] = style
+    # Canvas size joins the stamp the same way slide_style does, and only for
+    # a 9:16 build. Landscape stamps omit the key, so old caches stay valid.
+    if str(lesson.get("format") or "").strip() == "9:16":
+        payload["canvas"] = CANVAS_STAMP
     # Lesson-level source is not part of the beat digest. Only a lesson that
     # sets one changes the stamp, so existing caches stay valid.
     source_keys = ("source", "source_en", "source_zh", "source_zh_cn", "source_zh_hk")
@@ -111,7 +150,10 @@ def write_stamp(folder: Path, stamp: str) -> None:
 
 
 def beat_stamp(beat: dict, code: str, second, theme, stage) -> str:
-    return digest_obj({"v": LAYOUT_VERSION, "beat": beat, "code": code, "second": second, "stage": stage, "flags": layout_flags(theme)})
+    payload = {"v": LAYOUT_VERSION, "beat": beat, "code": code, "second": second, "stage": stage, "flags": layout_flags(theme)}
+    if portrait():
+        payload["canvas"] = CANVAS_STAMP
+    return digest_obj(payload)
 
 
 def _repo_root() -> Path:
@@ -727,15 +769,23 @@ def fit_font(draw, text, size, max_w, bold=True, min_size=28, max_lines=3, max_h
 
 
 def new_canvas(theme: dict):
-    img = Image.new("RGB", (W, H), theme["bg"])
+    img = Image.new("RGB", (fw(), fh()), theme["bg"])
     draw = ImageDraw.Draw(img)
-    if theme.get("blobs"):
-        draw.ellipse([-80, 720, 420, 1220], fill=theme["wash"])
-        draw.ellipse([1480, -180, 2100, 460], fill=theme["wash2"])
-    if theme.get("corner"):
-        draw.polygon([(W - 220, 0), (W, 0), (W, 220)], fill=theme["gold"])
-    draw.rectangle([0, 0, 18, H], fill=theme["navy"])
-    draw.rectangle([W - 18, 0, W, H], fill=theme["navy"])
+    if portrait():
+        # Washes sit in the top and lower chrome, not across the teaching column.
+        if theme.get("blobs"):
+            draw.ellipse([-180, -200, 340, 280], fill=theme["wash"])
+            draw.ellipse([760, 1620, 1280, 2140], fill=theme["wash2"])
+        if theme.get("corner"):
+            draw.polygon([(fw() - 150, 0), (fw(), 0), (fw(), 120)], fill=theme["gold"])
+    else:
+        if theme.get("blobs"):
+            draw.ellipse([-80, 720, 420, 1220], fill=theme["wash"])
+            draw.ellipse([1480, -180, 2100, 460], fill=theme["wash2"])
+        if theme.get("corner"):
+            draw.polygon([(fw() - 220, 0), (fw(), 0), (fw(), 220)], fill=theme["gold"])
+    draw.rectangle([0, 0, 18, fh()], fill=theme["navy"])
+    draw.rectangle([fw() - 18, 0, fw(), fh()], fill=theme["navy"])
     draw._vf_img = img
     return img, draw
 
@@ -811,22 +861,57 @@ def draw_kicker(draw, kicker: str, theme: dict) -> None:
     label = kicker.upper() if kicker.isascii() else kicker
     size = 22 if len(label) > 18 else SCALE["kicker"]
     tw = mixed_length(draw, label, size, bold=True)
-    left, top, h = 64, 40, 56
+    if portrait():
+        left, top, h = PHONE_SAFE_L, PHONE_SAFE_TOP, 48
+        right_limit = PHONE_SAFE_R
+    else:
+        left, top, h = 64, 40, 56
+        right_limit = fw() - 80
     dot, gap, pad_l, pad_r = 18, 12, 16, 22
     text_x = left + pad_l + dot + gap
-    right = min(W - 80, text_x + tw + pad_r)
+    right = min(right_limit, text_x + tw + pad_r)
     draw.rounded_rectangle([left, top, right, top + h], radius=h // 2, fill=theme["navy"])
     cy = top + h / 2
     draw.ellipse([left + pad_l, cy - dot / 2, left + pad_l + dot, cy + dot / 2], fill=theme["gold"])
     draw_mixed(draw, (text_x, top + 14), label, size, theme["bg"], bold=True)
 
 
+def _draw_footer_phone(draw, title: str, index: int, n: int, theme: dict) -> None:
+    """Lesson title and beat dots just above the caption chip, inside the safe width."""
+    label = sanitize(title or "")
+    gap, r = 14, 6
+    total = n * (2 * r) + max(0, n - 1) * gap
+    dots_left = PHONE_SAFE_R - 8 - total
+    y_dots = _caption_top() - 28
+    max_w = max(120, dots_left - PHONE_SAFE_L - 12)
+    size = 20
+    while size >= 14 and mixed_length(draw, label, size, False) > max_w:
+        size -= 1
+    if mixed_length(draw, label, size, False) > max_w:
+        while label and mixed_length(draw, label + "…", size, False) > max_w:
+            label = label[:-1]
+        label = (label + "…") if label else ""
+    if label:
+        draw_mixed(draw, (PHONE_SAFE_L, y_dots - 6), label, size, theme["muted"], bold=False)
+    x = dots_left
+    for i in range(1, n + 1):
+        box = [x, y_dots - r, x + 2 * r, y_dots + r]
+        if i == index:
+            draw.ellipse(box, fill=theme["gold"])
+        else:
+            draw.ellipse(box, outline=theme["muted"], width=2)
+        x += 2 * r + gap
+
+
 def draw_footer(draw, title: str, index: int, n: int, theme: dict) -> None:
+    if portrait():
+        _draw_footer_phone(draw, title, index, n, theme)
+        return
     label = sanitize(title or "")
     gap, r = 18, 8
     total = n * (2 * r) + max(0, n - 1) * gap
-    dots_left = W - 64 - total
-    y_dots = H - 118
+    dots_left = fw() - 64 - total
+    y_dots = fh() - 118
     max_w = max(200, dots_left - 80)
     size = SCALE["footer"]
     while size >= 16 and mixed_length(draw, label, size, False) > max_w:
@@ -836,7 +921,7 @@ def draw_footer(draw, title: str, index: int, n: int, theme: dict) -> None:
             label = label[:-1]
         label = (label + "…") if label else ""
     if label:
-        draw_mixed(draw, (64, H - 128), label, size, theme["muted"], bold=False)
+        draw_mixed(draw, (64, fh() - 128), label, size, theme["muted"], bold=False)
     x = dots_left
     for i in range(1, n + 1):
         box = [x, y_dots - r, x + 2 * r, y_dots + r]
@@ -852,8 +937,58 @@ def _line_factor(text: str) -> float:
     return 1.28 if any(is_cjk(ch) for ch in (text or "")) else 1.08
 
 
+def _draw_title_phone(draw, title: str, theme: dict, y: int) -> int:
+    """Inset navy heading. Two lines may stack; type does not grow with the frame."""
+    if y == 112:
+        y = PHONE_SAFE_TOP + 64
+    left, right = PHONE_SAFE_L, PHONE_SAFE_R
+    max_w = right - left - 36
+    primary, secondary = _split_pair(title)
+    if not secondary:
+        cap = 48 if any(is_cjk(ch) for ch in primary) else 52
+        f = fit_font(draw, primary, cap, max_w, bold=True, min_size=28, max_lines=2)
+        size = int(getattr(f, "size", cap) or cap)
+        lines = (wrap(draw, primary, f, max_w, bold=True) or [sanitize(primary)])[:2]
+        line_h = int(size * _line_factor(primary))
+        band_h = 20 + line_h * len(lines) + 18
+        sub_lines, sub_size = [], 0
+    else:
+        main_cap, sub_cap = 44, 26
+        pf = fit_font(draw, primary, main_cap, max_w, bold=True, min_size=26, max_lines=2)
+        size = int(getattr(pf, "size", main_cap) or main_cap)
+        lines = (wrap(draw, primary, pf, max_w, bold=True) or [sanitize(primary)])[:2]
+        sf = fit_font(draw, secondary, sub_cap, max_w, bold=False, min_size=18, max_lines=2)
+        sub_size = int(getattr(sf, "size", sub_cap) or sub_cap)
+        sub_lines = (wrap(draw, secondary, sf, max_w, bold=False) or [sanitize(secondary)])[:2]
+        line_h = int(size * _line_factor(primary))
+        sub_h = int(sub_size * _line_factor(secondary))
+        band_h = 16 + line_h * len(lines) + 6 + sub_h * len(sub_lines) + 16
+    draw.rounded_rectangle([left, y, right, y + band_h], radius=18, fill=theme["navy"])
+    draw.rectangle([left, y + 16, left + 8, y + band_h - 16], fill=theme["gold"])
+    text_x = left + 28
+    if secondary:
+        block = line_h * len(lines) + 6 + int(sub_size * _line_factor(secondary)) * len(sub_lines)
+        yy = y + max(12, (band_h - block) // 2)
+        for ln in lines:
+            draw_mixed(draw, (text_x, yy), ln, size, theme["bg"], bold=True)
+            yy += line_h
+        yy += 6
+        for ln in sub_lines:
+            draw_mixed(draw, (text_x, yy), ln, sub_size, theme["gold"], bold=False)
+            yy += int(sub_size * _line_factor(secondary))
+    else:
+        block = line_h * max(1, len(lines))
+        yy = y + max(10, (band_h - block) // 2)
+        for ln in lines:
+            draw_mixed(draw, (text_x, yy), ln, size, theme["bg"], bold=True)
+            yy += line_h
+    return y + band_h + 18
+
+
 def draw_title(draw, title: str, theme: dict, y: int = 112) -> int:
-    max_w = W - 200
+    if portrait():
+        return _draw_title_phone(draw, title, theme, y)
+    max_w = fw() - 200
     primary, secondary = _split_pair(title)
     bar_gap = 22
     if not secondary:
@@ -877,7 +1012,7 @@ def draw_title(draw, title: str, theme: dict, y: int = 112) -> int:
         line_h = int(main * _line_factor(primary))
         sub_h = int(sub_size * _line_factor(secondary))
         band_h = max(168, 20 + line_h + 8 + sub_h + bar_gap)
-    draw.rectangle([0, y, W, y + band_h], fill=theme["navy"])
+    draw.rectangle([0, y, fw(), y + band_h], fill=theme["navy"])
     draw.rectangle([0, y, 14, y + band_h], fill=theme["gold"])
     draw.rectangle([64, y + band_h - 14, 280, y + band_h - 8], fill=theme["gold"])
     if secondary:
@@ -900,31 +1035,57 @@ def _tag(draw, x, y, text, theme) -> None:
     draw.text((x, y), text, font=font_for(text, SCALE["tag"], bold=True), fill=theme["gold"])
 
 
+def _caption_top() -> int:
+    """Top of the largest caption chip for the current frame."""
+    if portrait():
+        return caption_safe_top(fh(), bottom_pad=PHONE_CAPTION_PAD)
+    return caption_safe_top(fh())
+
+
 def _content_bottom() -> int:
     """Lower edge of the teaching area. Focus keeps a gap above the caption chip."""
+    if portrait():
+        # Phone teaching stops above the caption chip. The chip itself sits on
+        # a 200 px pad. A footer band, when the focus chrome is off, sits
+        # between the teaching area and that chip.
+        gap = 16 if _FOCUS.get() else 68
+        return _caption_top() - gap
     if _FOCUS.get():
-        return caption_safe_top(H) - 16
+        return caption_safe_top(fh()) - 16
     return CONTENT_BOTTOM
 
 
 def _fill_h(top: int, floor: int = 280) -> int:
     room = _content_bottom() - top
-    if _FOCUS.get():
-        # The old floor can push a panel through the caption. Focus never does.
+    if _FOCUS.get() or portrait():
+        # The old floor can push a panel through the caption. Focus and the
+        # phone frame never do.
         return max(0, room)
     return max(floor, room)
 
 
 def _title_card_top(block: int) -> int:
     if _FOCUS.get():
-        limit = caption_safe_top(H) - 36
+        limit = caption_safe_top(fh()) - 36
         return max(72, (limit - block) // 2)
-    return max(160, (H - block) // 2 - 20)
+    return max(160, (fh() - block) // 2 - 20)
+
+
+def _draw_focus_title_phone(draw, title: str, theme: dict) -> int:
+    left, top, right = PHONE_SAFE_L, PHONE_SAFE_TOP, PHONE_SAFE_R
+    layout = _block_layout(draw, title, right - left, 140, 46, 28, 0.62, 3, 2)
+    bottom = top + 132
+    if layout:
+        _paint_block(draw, (left, top, right, bottom), layout, theme["navy"], theme["muted"], align="left")
+    draw.line((left, bottom + 8, right, bottom + 8), fill=theme["wash2"], width=3)
+    return bottom + 20
 
 
 def draw_focus_title(draw, title: str, theme: dict) -> int:
     """Compact heading. The accent stays above the teaching area."""
-    left, top, right = 64, 48, W - 64
+    if portrait():
+        return _draw_focus_title_phone(draw, title, theme)
+    left, top, right = 64, 48, fw() - 64
     layout = _block_layout(draw, title, right - left, 148, 68, 38, 0.62, 2, 1)
     bottom = top + 144
     if layout:
@@ -975,10 +1136,71 @@ def _active_outline(draw, box, theme, radius=24, width=6) -> None:
     draw.rounded_rectangle([x0 - width, y0 - width, x1 + width, y1 + width], radius=radius + width, outline=theme["gold"], width=width)
 
 
-def render_title_card(draw, beat, lesson, code, theme, second=None) -> None:
+def _render_title_phone(draw, beat, lesson, code, theme, second=None) -> None:
+    """Stack a title on the phone width. Extra height stays empty; type does not grow."""
     title = field2(beat, "title", code, second) or field2(lesson, "title", code, second)
     primary, secondary = _split_pair(title)
-    max_w = W - 200
+    left, right = PHONE_SAFE_L, PHONE_SAFE_R
+    max_w = right - left
+    kicker = resolve_kicker(beat, code)
+    if second:
+        other = resolve_kicker(beat, second)
+        if other and other != kicker:
+            kicker = f"{kicker}  {other}" if kicker else other
+    kicker_label = ""
+    ksize = 0
+    if kicker:
+        kicker_label = kicker.upper() if kicker.isascii() else kicker
+        ksize = 22 if len(kicker_label) > 16 else 26
+    if secondary:
+        pf = fit_font(draw, primary, 64, max_w, True, 36, 4)
+        main = int(getattr(pf, "size", 64) or 64)
+        p_lines = (wrap(draw, primary, pf, max_w, True) or [primary])[:4]
+        sf = fit_font(draw, secondary, 32, max_w, False, 22, 3)
+        sub = int(getattr(sf, "size", 32) or 32)
+        s_lines = (wrap(draw, secondary, sf, max_w, False) or [secondary])[:3]
+    else:
+        pf = fit_font(draw, primary, 68, max_w, True, 36, 5)
+        main = int(getattr(pf, "size", 68) or 68)
+        p_lines = (wrap(draw, primary, pf, max_w, True) or [primary])[:5]
+        sub = 0
+        s_lines = []
+    block = 0
+    if kicker_label:
+        block += 44
+    block += int(main * 1.16) * max(1, len(p_lines))
+    if s_lines:
+        block += 12 + int(sub * 1.12) * len(s_lines)
+    block += 28
+    top = PHONE_SAFE_TOP + 24
+    limit = _content_bottom() - 12
+    if top + block > limit:
+        top = max(PHONE_SAFE_TOP, limit - block)
+    if kicker_label:
+        tw = mixed_length(draw, kicker_label, ksize, True)
+        draw_mixed(draw, (left + max(0, (max_w - tw) / 2), top), kicker_label, ksize, theme["muted"], True)
+        top += 44
+    for ln in p_lines:
+        tw = mixed_length(draw, ln, main, True)
+        draw_mixed(draw, (left + max(0, (max_w - tw) / 2), top), ln, main, theme["navy"], True)
+        top += int(main * 1.16)
+    if s_lines:
+        top += 12
+        for ln in s_lines:
+            tw = mixed_length(draw, ln, sub, False)
+            draw_mixed(draw, (left + max(0, (max_w - tw) / 2), top), ln, sub, theme["muted"], False)
+            top += int(sub * 1.12)
+    bar_w = 120
+    draw.rectangle([(left + right - bar_w) / 2, top + 16, (left + right + bar_w) / 2, top + 22], fill=theme["gold"])
+
+
+def render_title_card(draw, beat, lesson, code, theme, second=None) -> None:
+    if portrait():
+        _render_title_phone(draw, beat, lesson, code, theme, second)
+        return
+    title = field2(beat, "title", code, second) or field2(lesson, "title", code, second)
+    primary, secondary = _split_pair(title)
+    max_w = fw() - 200
     kicker = resolve_kicker(beat, code)
     if second:
         other = resolve_kicker(beat, second)
@@ -1012,16 +1234,16 @@ def render_title_card(draw, beat, lesson, code, theme, second=None) -> None:
         top = _title_card_top(block)
         if kicker_label:
             tw = mixed_length(draw, kicker_label, ksize, True)
-            draw_mixed(draw, ((W - tw) / 2, top), kicker_label, ksize, theme["muted"], True)
+            draw_mixed(draw, ((fw() - tw) / 2, top), kicker_label, ksize, theme["muted"], True)
             top += 56
         for ln in p_lines:
             tw = mixed_length(draw, ln, main, True)
-            draw_mixed(draw, ((W - tw) / 2, top), ln, main, theme["navy"], True)
+            draw_mixed(draw, ((fw() - tw) / 2, top), ln, main, theme["navy"], True)
             top += int(main * max(1.08, _line_factor(ln) - 0.08))
         top += 16
         for ln in s_lines:
             tw = mixed_length(draw, ln, sub, False)
-            draw_mixed(draw, ((W - tw) / 2, top), ln, sub, theme["muted"], False)
+            draw_mixed(draw, ((fw() - tw) / 2, top), ln, sub, theme["muted"], False)
             top += int(sub * 1.06)
     else:
         font = fit_font(draw, primary, SCALE["hook"], max_w, True, 88, 3)
@@ -1035,13 +1257,13 @@ def render_title_card(draw, beat, lesson, code, theme, second=None) -> None:
         top = _title_card_top(block)
         if kicker_label:
             tw = mixed_length(draw, kicker_label, ksize, True)
-            draw_mixed(draw, ((W - tw) / 2, top), kicker_label, ksize, theme["muted"], True)
+            draw_mixed(draw, ((fw() - tw) / 2, top), kicker_label, ksize, theme["muted"], True)
             top += 56
         for ln in lines:
             tw = mixed_length(draw, ln, size, True)
-            draw_mixed(draw, ((W - tw) / 2, top), ln, size, theme["navy"], True)
+            draw_mixed(draw, ((fw() - tw) / 2, top), ln, size, theme["navy"], True)
             top += int(size * 1.08)
-    draw.rectangle([(W - 140) / 2, top + 18, (W + 140) / 2, top + 26], fill=theme["gold"])
+    draw.rectangle([(fw() - 140) / 2, top + 18, (fw() + 140) / 2, top + 26], fill=theme["gold"])
 
 
 
@@ -1115,7 +1337,7 @@ def render_definition(draw, beat, code, y, theme, stage=None, second=None) -> No
         gloss_other = ""
     box_y = y + 12
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "DEFINITION", "zh": "定义", "zh_hk": "定義"}.get(code, "DEFINITION")
     if second:
         ot = {"en": "DEFINITION", "zh": "定义", "zh_hk": "定義"}.get(second)
@@ -1124,7 +1346,7 @@ def render_definition(draw, beat, code, y, theme, stage=None, second=None) -> No
     _tag(draw, 108, box_y + 28, tag, theme)
     reveal = bool(gloss) and (second or _show(stage, 2))
     gtxt = (gloss if not (second and gloss_other) else gloss + "\n" + gloss_other) if gloss else ""
-    g_lay = _block_layout(draw, gtxt, W - 240, 150, 40 if gloss_other else 44, 24, 0.7, 2) if gtxt else None
+    g_lay = _block_layout(draw, gtxt, fw() - 240, 150, 40 if gloss_other else 44, 24, 0.7, 2) if gtxt else None
     gloss_band = (g_lay["h"] + 48) if (reveal and g_lay) else 28
     inner_bottom = box_y + box_h - gloss_band
     tex, tex2 = localized_tex(beat, code, second)
@@ -1141,7 +1363,7 @@ def render_definition(draw, beat, code, y, theme, stage=None, second=None) -> No
     # Judge that on the primary body only: a bilingual pair is not two equations.
     if len(_formula_lines(body)) >= 2:
         tex, tex2 = "", ""
-    box = (100, box_y + 70, W - 100, inner_bottom)
+    box = (100, box_y + 70, fw() - 100, inner_bottom)
     if _show(stage, 1) and (tex or tex2):
         try:
             from mathtex import paste_math
@@ -1167,11 +1389,11 @@ def render_definition(draw, beat, code, y, theme, stage=None, second=None) -> No
         if len(lines) >= 2 or sub:
             _paint_formula_lines(draw, box, lines, theme["bg"], sub_lines=sub, sub_fill=theme["gold"])
         else:
-            ff = fit_font(draw, body, 84, W - 220, True, 36, 4, max(80, inner_bottom - box_y - 80))
+            ff = fit_font(draw, body, 84, fw() - 220, True, 36, 4, max(80, inner_bottom - box_y - 80))
             _center(draw, box, body, ff, theme["bg"])
     if reveal and g_lay:
-        draw.line([(160, inner_bottom), (W - 160, inner_bottom)], fill=theme["gold"], width=2)
-        _paint_block(draw, (120, inner_bottom + 8, W - 120, box_y + box_h - 16), g_lay, theme["gold"], theme["bg"])
+        draw.line([(160, inner_bottom), (fw() - 160, inner_bottom)], fill=theme["gold"], width=2)
+        _paint_block(draw, (120, inner_bottom + 8, fw() - 120, box_y + box_h - 16), g_lay, theme["gold"], theme["bg"])
 
 
 TITLE_CAP_SINGLE = 84  # CJK title cap in draw_title; Latin titles may go to SCALE["title"]
@@ -1342,7 +1564,7 @@ def render_two_column(draw, beat, code, y, theme, stage=None, second=None) -> No
     right_full = field2(beat, "right", code, second)
     box_y = y + 8
     avail = max(360, _content_bottom() - box_y)
-    mid = W // 2
+    mid = fw() // 2
     pad_x = 56
     inner_w = (mid - 40 - 64) - 2 * pad_x
     dual = bool(second)
@@ -1357,9 +1579,9 @@ def render_two_column(draw, beat, code, y, theme, stage=None, second=None) -> No
     if active == 1 and lays[1]:
         _active_outline(draw, (64, top, mid - 40, bot), theme)
     elif active == 2:
-        _active_outline(draw, (mid + 40, top, W - 64, bot), theme)
+        _active_outline(draw, (mid + 40, top, fw() - 64, bot), theme)
     draw.rounded_rectangle([64, top, mid - 40, bot], radius=24, fill=theme["navy"])
-    draw.rounded_rectangle([mid + 40, top, W - 64, bot], radius=24, fill=theme["emerald"])
+    draw.rounded_rectangle([mid + 40, top, fw() - 64, bot], radius=24, fill=theme["emerald"])
     if vs_on or (not legacy and right_on):
         cy = top + panel_h // 2
         draw.ellipse([mid - 44, cy - 44, mid + 44, cy + 44], fill=theme["gold"])
@@ -1369,10 +1591,10 @@ def render_two_column(draw, beat, code, y, theme, stage=None, second=None) -> No
     if lays[0] and left_on:
         _paint_block(draw, (64 + pad_x, top, mid - 40 - pad_x, bot), lays[0], theme["bg"], theme["gold"])
     if lays[1] and right_on:
-        _paint_block(draw, (mid + 40 + pad_x, top, W - 64 - pad_x, bot), lays[1], theme["white"], theme["bg"])
+        _paint_block(draw, (mid + 40 + pad_x, top, fw() - 64 - pad_x, bot), lays[1], theme["white"], theme["bg"])
     elif lays[1] and not legacy:
         quiet = _dim_ink(theme["emerald"], theme["white"])
-        _paint_block(draw, (mid + 40 + pad_x, top, W - 64 - pad_x, bot), lays[1], quiet, quiet)
+        _paint_block(draw, (mid + 40 + pad_x, top, fw() - 64 - pad_x, bot), lays[1], quiet, quiet)
 
 
 def render_takeaway(draw, beat, code, y, theme, stage=None, second=None) -> None:
@@ -1384,7 +1606,7 @@ def render_takeaway(draw, beat, code, y, theme, stage=None, second=None) -> None
     avail = max(200, _content_bottom() - box_y)
     k = max(1, len(questions))
     full = (avail - gap * (k - 1)) // k
-    text_l, text_r = 212, W - 104
+    text_l, text_r = 212, fw() - 104
     dual = bool(second)
     cap, floor = (60, 28) if dual else (68, 32)
     cap = _body_cap(theme, cap, dual)
@@ -1395,7 +1617,7 @@ def render_takeaway(draw, beat, code, y, theme, stage=None, second=None) -> None
     fills = (theme["navy"], theme["emerald"])
     for i, q in enumerate(questions):
         top = start + i * (hbox + gap)
-        draw.rounded_rectangle([64, top, W - 64, top + hbox], radius=22, fill=fills[i % 2])
+        draw.rounded_rectangle([64, top, fw() - 64, top + hbox], radius=22, fill=fills[i % 2])
         cy = top + hbox // 2
         draw.ellipse([100, cy - 44, 188, cy + 44], fill=theme["gold"])
         nf = _font(FONT_LATIN_B, 36)
@@ -1464,7 +1686,7 @@ def render_example(draw, beat, code, y, theme, stage=None, second=None) -> None:
     gap = 20
     avail = max(380, _content_bottom() - box_y)
     half = max(176, (avail - gap) // 2)
-    inner_w = W - 64 - 40 - (64 + 44)
+    inner_w = fw() - 64 - 40 - (64 + 44)
     dual = bool(second)
     cap, floor = (56, 26) if dual else (64, 28)
     cap = _body_cap(theme, cap, dual)
@@ -1474,9 +1696,9 @@ def render_example(draw, beat, code, y, theme, stage=None, second=None) -> None:
     start = box_y + int((avail - total) * 0.4)
     setup_on, result_on, _verdict, _active = _pair_reveal(stage)
     dim = not _legacy_reveal()
-    _paint_example_card(draw, (64, start, W - 64, start + card_h), theme["navy"], _pair_tag(lab_s, second, other_s), lays[0], theme, setup_on, dim)
+    _paint_example_card(draw, (64, start, fw() - 64, start + card_h), theme["navy"], _pair_tag(lab_s, second, other_s), lays[0], theme, setup_on, dim)
     top = start + card_h + gap
-    _paint_example_card(draw, (64, top, W - 64, top + card_h), theme["emerald"], _pair_tag(lab_r, second, other_r), lays[1], theme, result_on, dim)
+    _paint_example_card(draw, (64, top, fw() - 64, top + card_h), theme["emerald"], _pair_tag(lab_r, second, other_r), lays[1], theme, result_on, dim)
 
 
 def render_three_column(draw, beat, code, y, theme, stage=None, second=None) -> None:
@@ -1486,7 +1708,7 @@ def render_three_column(draw, beat, code, y, theme, stage=None, second=None) -> 
     box_y = y + 8
     avail = max(360, _content_bottom() - box_y)
     gap = 28
-    width = (W - 128 - 2 * gap) // 3
+    width = (fw() - 128 - 2 * gap) // 3
     inner_w = width - 64
     dual = bool(second)
     cap, floor = (56, 26) if dual else (64, 28)
@@ -1512,17 +1734,17 @@ def render_big_number(draw, beat, code, y, theme, stage=None, second=None) -> No
     cap = field2(beat, "caption", code, second) or field2(beat, "gloss", code, second)
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "KEY NUMBER", "zh": "关键数字", "zh_hk": "關鍵數字"}.get(code, "KEY NUMBER")
     _tag(draw, 108, box_y + 28, tag, theme)
-    nf = fit_font(draw, number or "", SCALE["number"], W - 240, True, 64, 1)
-    _center(draw, (100, box_y + 80, W - 100, box_y + box_h - 160), number or "", nf, theme["bg"])
+    nf = fit_font(draw, number or "", SCALE["number"], fw() - 240, True, 64, 1)
+    _center(draw, (100, box_y + 80, fw() - 100, box_y + box_h - 160), number or "", nf, theme["bg"])
     if unit:
-        uf = fit_font(draw, unit, SCALE["unit"], W - 240, True, 28, 1)
-        _center(draw, (100, box_y + box_h - 150, W - 100, box_y + box_h - 90), unit, uf, theme["gold"])
+        uf = fit_font(draw, unit, SCALE["unit"], fw() - 240, True, 28, 1)
+        _center(draw, (100, box_y + box_h - 150, fw() - 100, box_y + box_h - 90), unit, uf, theme["gold"])
     if cap:
-        cf = fit_font(draw, cap, SCALE["caption"], W - 240, False, 24, 2)
-        _center(draw, (100, box_y + box_h - 88, W - 100, box_y + box_h - 24), cap, cf, theme["white"], bold=False)
+        cf = fit_font(draw, cap, SCALE["caption"], fw() - 240, False, 24, 2)
+        _center(draw, (100, box_y + box_h - 88, fw() - 100, box_y + box_h - 24), cap, cf, theme["white"], bold=False)
 
 
 def _agenda_items(beat, code, second=None) -> list[str]:
@@ -1536,15 +1758,15 @@ def _agenda_items(beat, code, second=None) -> list[str]:
 
 def _big_title_block(draw, primary, secondary, theme, top: int) -> int:
     """Left-aligned unit title with its second language below. Returns the next y."""
-    font = fit_font(draw, primary, 92, W - 200, True, 56, 2)
+    font = fit_font(draw, primary, 92, fw() - 200, True, 56, 2)
     size = int(getattr(font, "size", 92) or 92)
     line_h = int(size * _line_factor(primary))
-    for ln in wrap(draw, primary, font, W - 200, True) or [primary]:
+    for ln in wrap(draw, primary, font, fw() - 200, True) or [primary]:
         draw_mixed(draw, (80, top), ln, size, theme["navy"], True)
         top += line_h
     if secondary:
         sub = secondary.split("\n", 1)[0]
-        sf = fit_font(draw, sub, 40, W - 200, False, 26, 1)
+        sf = fit_font(draw, sub, 40, fw() - 200, False, 26, 1)
         ssz = int(getattr(sf, "size", 40) or 40)
         top += 10
         draw_mixed(draw, (80, top), sub, ssz, theme["muted"], False)
@@ -1586,9 +1808,9 @@ def render_module_close(draw, beat, lesson, code, theme, second=None) -> None:
     primary, secondary = _split_pair(title)
     top = _big_title_block(draw, primary, secondary, theme, 160)
     if claim:
-        _panel(draw, (64, top + 30, W - 64, top + 230), theme["navy"], theme)
-        cf = fit_font(draw, claim, 52, W - 180, True, 32, 3)
-        _center(draw, (100, top + 50, W - 100, top + 210), claim, cf, theme["white"])
+        _panel(draw, (64, top + 30, fw() - 64, top + 230), theme["navy"], theme)
+        cf = fit_font(draw, claim, 52, fw() - 180, True, 32, 3)
+        _center(draw, (100, top + 50, fw() - 100, top + 210), claim, cf, theme["white"])
         top += 250
     if nxt:
         label = field2(beat, "next_label", code, second) or {"en": "NEXT", "zh": "下一讲", "zh_hk": "下一講"}.get(code, "NEXT")
@@ -1598,12 +1820,12 @@ def render_module_close(draw, beat, lesson, code, theme, second=None) -> None:
         def _lab(t):
             return "" if not t else (f"{t}：" if any(is_cjk(c) for c in t) else f"{t}: ")
         head = _lab(lab_main)
-        nf = fit_font(draw, head + main, 32, W - 180, False, 22, 1)
+        nf = fit_font(draw, head + main, 32, fw() - 180, False, 22, 1)
         nsz = int(getattr(nf, "size", 32) or 32)
         draw_mixed(draw, (80, yy), head + main, nsz, theme["muted"], False)
         if sub:
             sub_head = _lab(lab_sub)
-            sf = fit_font(draw, sub_head + sub, 26, W - 180, False, 20, 1)
+            sf = fit_font(draw, sub_head + sub, 26, fw() - 180, False, 20, 1)
             ssz = int(getattr(sf, "size", 26) or 26)
             draw_mixed(draw, (80, yy + int(nsz * _line_factor(main)) + 8), sub_head + sub, ssz, theme["muted"], False)
 
@@ -1630,7 +1852,7 @@ def render_calculation(draw, items, y, theme, stage) -> None:
     Row heights sum to the content area, including leftover pixels on the result,
     so a later row cannot cross the caption line.
     """
-    left, right = 96, W - 96
+    left, right = 96, fw() - 96
     top = y + 12
     gap = 14
     weights = (1.0, 1.0, 1.55, 1.0)
@@ -1687,7 +1909,7 @@ def render_steps(draw, beat, code, y, theme, stage=None, second=None) -> None:
         box_y = y + 8
         box_h = _fill_h(box_y, 360)
         gap = 28
-        width = (W - 128 - 2 * gap) // 3
+        width = (fw() - 128 - 2 * gap) // 3
         fills = (theme["navy"], theme.get("panel") or theme["navy"], theme["emerald"])
         fonts = [fit_font(draw, t, SCALE["claim"], width - 48, True, 28, 5, box_h - 60) if t else None for t in steps]
         for i, text in enumerate(steps):
@@ -1699,7 +1921,7 @@ def render_steps(draw, beat, code, y, theme, stage=None, second=None) -> None:
         return
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     # Each row has a number badge: a typed "1." in the text would repeat it.
     items = [(strip_step_number(text), strip_step_number(ex) if ex else ex) for text, ex in items]
     # Rows of equations stay centred; rows of sentences read from the left.
@@ -1708,7 +1930,7 @@ def render_steps(draw, beat, code, y, theme, stage=None, second=None) -> None:
     row_h = (box_h - 28 - gap * (len(items) - 1)) // len(items)
     bd = max(22, min(30, row_h // 4))
     text_x = 100 + 2 * bd + 28
-    max_w = W - 88 - text_x - 28
+    max_w = fw() - 88 - text_x - 28
     any_second = any(_split_pair(t)[1] for t, _e in items)
     any_ex = any(e for _t, e in items)
     # Size the text to the row, not a fixed 28 px: about 48/34 px on a five-row bilingual stack.
@@ -1725,7 +1947,7 @@ def render_steps(draw, beat, code, y, theme, stage=None, second=None) -> None:
         show = _show(stage, i + 1)
         fill = theme["gold"] if show and stage not in (None, 0) and int(stage) == i + 1 else theme.get("panel") or theme["navy"]
         ink = theme["navy"] if fill == theme["gold"] else theme["white"]
-        draw.rounded_rectangle([88, y0, W - 88, y0 + row_h], radius=16, fill=fill)
+        draw.rounded_rectangle([88, y0, fw() - 88, y0 + row_h], radius=16, fill=fill)
         badge = str(i + 1)
         draw.ellipse([100, y0 + row_h / 2 - bd, 100 + 2 * bd, y0 + row_h / 2 + bd], fill=theme["gold"] if fill != theme["gold"] else theme["navy"])
         bf = fit_font(draw, badge, int(bd * 1.25), int(bd * 1.6), True, 20, 1)
@@ -1828,7 +2050,7 @@ def _matrix_highlight(beat: dict, stage) -> str:
 def render_payoff_matrix(draw, beat, code, y, theme, stage=None, second=None) -> None:
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "PAYOFFS", "zh": "报酬", "zh_hk": "報酬"}.get(code, "PAYOFFS")
     if second:
         other = {"en": "PAYOFFS", "zh": "报酬", "zh_hk": "報酬"}.get(second)
@@ -1849,7 +2071,7 @@ def render_payoff_matrix(draw, beat, code, y, theme, stage=None, second=None) ->
     gutter, label_w = 18, 200
     grid_top = box_y + 118
     grid_left = 64 + label_w
-    grid_w = W - 64 - 36 - grid_left
+    grid_w = fw() - 64 - 36 - grid_left
     grid_h = box_y + box_h - 24 - grid_top
     cw = (grid_w - gutter) // 2
     ch = (grid_h - gutter) // 2
@@ -1930,25 +2152,35 @@ def render_table_grid(draw, beat, code, y, theme, stage=None, second=None) -> No
     rows, cols = _grid_dims(beat)
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    if portrait():
+        # Narrower columns on the 1080 frame. The panel stays inside x 80–1000.
+        panel_l, panel_r = PHONE_SAFE_L, PHONE_SAFE_R
+        label_w = 124 if rows >= 4 else 148
+        head_cap = 20 if rows < 4 else 18
+        col_floor = 72
+    else:
+        panel_l, panel_r = 64, fw() - 64
+        label_w = 180 if rows >= 4 else 210
+        head_cap = 28 if rows < 4 else 24
+        col_floor = 120
+    _panel(draw, (panel_l, box_y, panel_r, box_y + box_h), theme["navy"], theme)
     tag = {"en": "TABLE", "zh": "对照表", "zh_hk": "對照表"}.get(code, "TABLE")
     if second:
         other = {"en": "TABLE", "zh": "对照表", "zh_hk": "對照表"}.get(second)
         if other and other != tag:
             tag = f"{tag}  {other}"
-    _tag(draw, 108, box_y + 18, tag, theme)
+    _tag(draw, 108 if not portrait() else panel_l + 28, box_y + 18, tag, theme)
     footer = field2(beat, "footer", code, second) or field2(beat, "note", code, second)
     stamp = field2(beat, "stamp", code, second)
     highlight = _matrix_highlight(beat, stage)
-    label_w = 180 if rows >= 4 else 210
     head_h = 36 if rows >= 4 else 46
-    grid_top = box_y + 64
-    grid_left = 64 + label_w
-    grid_right = W - 88
+    grid_top = box_y + (52 if portrait() else 64)
+    grid_left = panel_l + label_w
+    grid_right = panel_r - 24
     foot = _grid_foot(beat, code, second, rows, cols)
     grid_bottom = box_y + box_h - foot
     gutter = 10 if rows >= 4 else 14
-    cw = max(120, (grid_right - grid_left - gutter * (cols - 1)) // cols)
+    cw = max(col_floor, (grid_right - grid_left - gutter * (cols - 1)) // cols)
     heads = [field2(beat, f"col{j + 1}", code, second) or "" for j in range(cols)]
     if any(_split_pair(h)[1] for h in heads):
         head_h = 76 if rows < 4 else 64
@@ -1962,14 +2194,14 @@ def render_table_grid(draw, beat, code, y, theme, stage=None, second=None) -> No
     for j, lab in enumerate(heads):
         x0 = grid_left + j * (cw + gutter)
         if lab:
-            hl = _block_layout(draw, lab, cw - 8, head_h - 8, 28 if rows < 4 else 24, 16, 0.78, 1, 1)
+            hl = _block_layout(draw, lab, cw - 8, head_h - 8, head_cap, 16, 0.78, 1, 1)
             _paint_block(draw, (x0, grid_top + 4, x0 + cw, grid_top + head_h - 4), hl, theme["gold"], theme["bg"], valign="top")
     for i in range(rows):
         lab = field2(beat, f"row{i + 1}", code, second) or ""
         y0 = grid_top + head_h + i * (ch + gutter)
         if lab:
-            lf = fit_font(draw, lab, 26, label_w - 40, True, 18, 2, ch - 16)
-            _center(draw, (80, y0, 64 + label_w - 16, y0 + ch), lab, lf, theme["bg"])
+            lf = fit_font(draw, lab, 22 if portrait() else 26, label_w - 28, True, 16 if portrait() else 18, 2, ch - 16)
+            _center(draw, (panel_l + 16, y0, panel_l + label_w - 16, y0 + ch), lab, lf, theme["bg"])
         for j in range(cols):
             x0 = grid_left + j * (cw + gutter)
             key = f"c{i + 1}{j + 1}"
@@ -1990,12 +2222,12 @@ def render_table_grid(draw, beat, code, y, theme, stage=None, second=None) -> No
     band_top = grid_bottom + 8
     band_bottom = box_y + box_h - 12
     if stamp and (stage in (None, 0) or _show(stage, 3)):
-        sf = fit_font(draw, stamp, 26, W - 220, True, 18, 1)
-        _center(draw, (100, band_top, W - 100, band_top + 32), stamp, sf, theme["gold"])
+        sf = fit_font(draw, stamp, 26, panel_r - panel_l - 80, True, 18, 1)
+        _center(draw, (panel_l + 36, band_top, panel_r - 36, band_top + 32), stamp, sf, theme["gold"])
         band_top += 34
     if caption and (stage in (None, 0) or _show(stage, 1)):
-        ff = fit_font(draw, caption, 28, W - 220, True, 20, 2)
-        _center(draw, (100, band_top, W - 100, band_bottom), caption, ff, theme["gold"])
+        ff = fit_font(draw, caption, 28, panel_r - panel_l - 80, True, 20, 2)
+        _center(draw, (panel_l + 36, band_top, panel_r - 36, band_bottom), caption, ff, theme["gold"])
 
 
 
@@ -2046,7 +2278,7 @@ def render_series(draw, beat, code, y, theme, stage=None, second=None) -> None:
         shown = min(cols, max(1, int(stage)))
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = _series_tag(beat, code, second)
     if tag:
         _tag(draw, 108, box_y + 18, tag, theme)
@@ -2063,11 +2295,23 @@ def render_series(draw, beat, code, y, theme, stage=None, second=None) -> None:
     head_h = 86 if dual_head else 52
     grid_top = box_y + 66
     grid_left = 64 + label_w
-    grid_right = W - 88
+    grid_right = fw() - 88
     foot = (112 if "\n" in (footer or "") else 84) if footer else 36
     grid_bottom = box_y + box_h - foot
     gutter = 12
     cw = max(110, (grid_right - grid_left - gutter * (cols - 1)) // cols)
+    if portrait():
+        # Six day-columns do not keep the landscape minimum width on a 1080 frame.
+        limit = PHONE_SAFE_R - 12
+        floor = 48
+        guard = 0
+        while cw * cols + gutter * (cols - 1) > limit - grid_left and label_w > 96 and guard < 8:
+            label_w -= 16
+            grid_left = 80 + label_w
+            cw = max(floor, (limit - grid_left - gutter * (cols - 1)) // cols)
+            guard += 1
+        if grid_left + cols * cw + gutter * (cols - 1) > limit:
+            cw = max(36, (limit - grid_left - gutter * (cols - 1)) // cols)
     avail = grid_bottom - grid_top - head_h - gutter
     ch = max(72, avail // 2 - gutter // 2)
     if rows == 1:
@@ -2120,8 +2364,8 @@ def render_series(draw, beat, code, y, theme, stage=None, second=None) -> None:
     else:
         foot_on = stage in (None, 0) or (reveal and stage not in (None, 0) and int(stage) > cols + 1) or (not reveal and _show(stage, 3))
     if footer and foot_on:
-        fl = _block_layout(draw, footer, W - 240, box_y + box_h - 12 - grid_bottom - 8, 38, 20, 0.66, 1, 1)
-        _paint_block(draw, (100, grid_bottom + 8, W - 100, box_y + box_h - 12), fl, theme["gold"], theme["bg"])
+        fl = _block_layout(draw, footer, fw() - 240, box_y + box_h - 12 - grid_bottom - 8, 38, 20, 0.66, 1, 1)
+        _paint_block(draw, (100, grid_bottom + 8, fw() - 100, box_y + box_h - 12), fl, theme["gold"], theme["bg"])
 
 
 def _cell_fmt(beat: dict, key: str) -> str:
@@ -2164,7 +2408,10 @@ def _paint_cell(draw, box, val, theme, lit=False, fmt="", show=True):
         ink = theme["muted"]
     if fmt == "quiet" and not lit:
         ink = theme["muted"]
-    vf = fit_font(draw, val, 48, (x1 - x0) - 28, fmt != "quiet", 22, 2, (y1 - y0) - 24)
+    # Phone cells start smaller. Landscape still starts at 48 and floors at 22.
+    cap = 32 if portrait() else 48
+    floor = 16 if portrait() else 22
+    vf = fit_font(draw, val, cap, (x1 - x0) - 28, fmt != "quiet", floor, 2, (y1 - y0) - 24)
     _center(draw, (x0 + 10, y0 + 8, x1 - 10, y1 - 8), val, vf, ink)
 
 
@@ -2200,7 +2447,7 @@ def render_schematic_chart(draw, beat, code, y, theme, stage=None, second=None) 
     kind = _chart_kind(beat)
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {
         "histogram": {"en": "HISTOGRAM", "zh": "直方图", "zh_hk": "直方圖"},
         "scatter": {"en": "SCATTER", "zh": "散点", "zh_hk": "散點"},
@@ -2213,7 +2460,7 @@ def render_schematic_chart(draw, beat, code, y, theme, stage=None, second=None) 
     xlab = field2(beat, "x", code, second) or field2(beat, "xlab", code, second)
     ylab = field2(beat, "y", code, second) or field2(beat, "ylab", code, second)
     note = field2(beat, "note", code, second) or field2(beat, "mark", code, second)
-    ax0, ay1, ax1, ay0 = _axes(draw, (88, box_y + 56, W - 88, box_y + box_h - 18), theme, xlab if _show(stage, 1) else "", ylab if _show(stage, 1) else "")
+    ax0, ay1, ax1, ay0 = _axes(draw, (88, box_y + 56, fw() - 88, box_y + box_h - 18), theme, xlab if _show(stage, 1) else "", ylab if _show(stage, 1) else "")
     aw, ah = ax1 - ax0, ay0 - ay1
     gold, em, bg = theme["gold"], theme["emerald"], theme["bg"]
     if kind == "histogram" and _show(stage, 2):
@@ -2545,7 +2792,7 @@ def render_dag(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """Nodes, then edges, then one highlighted path plus a role tag."""
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "DAG", "zh": "因果图", "zh_hk": "因果圖"}.get(code, "DAG")
     _tag(draw, 108, box_y + 16, tag, theme)
     nodes = _dag_nodes(beat, code, second)
@@ -2553,7 +2800,7 @@ def render_dag(draw, beat, code, y, theme, stage=None, second=None) -> None:
     role = field2(beat, "role", code, second)
     hi_raw = str(beat.get("highlight") or beat.get("highlight_edge") or "").replace("→", "->")
     hi = tuple(p.strip() for p in hi_raw.split("->", 1)) if "->" in hi_raw else ()
-    ax0, ay1, ax1, ay0 = 120, box_y + 70, W - 120, box_y + box_h - 70
+    ax0, ay1, ax1, ay0 = 120, box_y + 70, fw() - 120, box_y + box_h - 70
     pts = _dag_layout(len(nodes), ax0, ay1, ax1, ay0)
     pos = {nodes[i][0]: pts[i] for i in range(len(nodes))}
     # also index by label
@@ -2592,8 +2839,8 @@ def render_dag(draw, beat, code, y, theme, stage=None, second=None) -> None:
             lf = fit_font(draw, lab, 26, 2 * r - 12, True, 16, 2, 2 * r - 16)
             _center(draw, (cx - r + 6, cy - r + 8, cx + r - 6, cy + r - 8), lab, lf, theme["navy"])
     if role and _show(stage, 3):
-        rf = fit_font(draw, role, 28, W - 220, True, 20, 1)
-        _center(draw, (100, box_y + box_h - 62, W - 100, box_y + box_h - 16), role, rf, theme["gold"])
+        rf = fit_font(draw, role, 28, fw() - 220, True, 20, 1)
+        _center(draw, (100, box_y + box_h - 62, fw() - 100, box_y + box_h - 16), role, rf, theme["gold"])
 
 
 def _mini_table(draw, beat, code, second, box, prefix, title_stem, rows, cols, stage, show_from, highlight, theme):
@@ -2635,25 +2882,37 @@ def _mini_table(draw, beat, code, second, box, prefix, title_stem, rows, cols, s
             _paint_cell(draw, (cx, ry, cx + cw, ry + ch), val, theme, lit=lit, fmt=_cell_fmt(beat, key), show=show)
 
 
+def _pair_boxes(box_y, box_h, footer: str):
+    """Side by side on a landscape frame. Stacked on a phone so each table keeps a readable width."""
+    gap = 18
+    inner_top = box_y + 52
+    inner_bottom = box_y + box_h - (52 if footer else 16)
+    if portrait():
+        mid = inner_top + (inner_bottom - inner_top) // 2
+        left_box = (PHONE_SAFE_L + 16, inner_top, PHONE_SAFE_R - 16, mid - gap // 2)
+        right_box = (PHONE_SAFE_L + 16, mid + gap // 2, PHONE_SAFE_R - 16, inner_bottom)
+        return left_box, right_box
+    mid = 64 + (fw() - 128 - gap) // 2
+    left_box = (84, inner_top, mid, inner_bottom)
+    right_box = (mid + gap, inner_top, fw() - 84, inner_bottom)
+    return left_box, right_box
+
+
 def render_pair(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """Two small tables. Stage 1 fills the left, stage 2 the right, stage 3 the mark."""
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    panel_l, panel_r = (PHONE_SAFE_L, PHONE_SAFE_R) if portrait() else (64, fw() - 64)
+    _panel(draw, (panel_l, box_y, panel_r, box_y + box_h), theme["navy"], theme)
     tag = {"en": "PAIR", "zh": "对照", "zh_hk": "對照"}.get(code, "PAIR")
     if second:
         other = {"en": "PAIR", "zh": "对照", "zh_hk": "對照"}.get(second)
         if other and other != tag:
             tag = f"{tag}  {other}"
-    _tag(draw, 108, box_y + 16, tag, theme)
+    _tag(draw, 108 if not portrait() else panel_l + 28, box_y + 16, tag, theme)
     footer = field2(beat, "footer", code, second) or field2(beat, "note", code, second)
     highlight = str(_matrix_highlight(beat, stage) or "").strip().lower()
-    gap = 18
-    inner_top = box_y + 52
-    inner_bottom = box_y + box_h - (52 if footer else 16)
-    mid = 64 + (W - 128 - gap) // 2
-    left_box = (84, inner_top, mid, inner_bottom)
-    right_box = (mid + gap, inner_top, W - 84, inner_bottom)
+    left_box, right_box = _pair_boxes(box_y, box_h, footer)
     def dims(prefix, default_rows):
         try:
             rows = int(beat.get(f"{prefix}rows") or default_rows)
@@ -2669,8 +2928,8 @@ def render_pair(draw, beat, code, y, theme, stage=None, second=None) -> None:
     _mini_table(draw, beat, code, second, left_box, "l", "left", lrows, lcols, stage, 1, highlight, theme)
     _mini_table(draw, beat, code, second, right_box, "r", "right", rrows, rcols, stage, 2, highlight, theme)
     if footer and _show(stage, 3):
-        ff = fit_font(draw, footer, 26, W - 220, True, 18, 1)
-        _center(draw, (100, box_y + box_h - 46, W - 100, box_y + box_h - 12), footer, ff, theme["gold"])
+        ff = fit_font(draw, footer, 26, panel_r - panel_l - 80, True, 18, 1)
+        _center(draw, (panel_l + 36, box_y + box_h - 46, panel_r - 36, box_y + box_h - 12), footer, ff, theme["gold"])
 
 
 def _num_list(beat, key, default):
@@ -2722,7 +2981,7 @@ def render_pair_chart(draw, beat, code, y, theme, stage=None, second=None) -> No
     """Two schematic histograms. Stage 1 draws the left, stage 2 the right, stage 3 the notes."""
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "TWO WIDTHS", "zh": "两种组距", "zh_hk": "兩種組距"}.get(code, "TWO WIDTHS")
     if second:
         other = {"en": "TWO WIDTHS", "zh": "两种组距", "zh_hk": "兩種組距"}.get(second)
@@ -2733,10 +2992,10 @@ def render_pair_chart(draw, beat, code, y, theme, stage=None, second=None) -> No
     gap = 28
     inner_top = box_y + 58
     inner_bottom = box_y + box_h - (58 if footer else 20)
-    mid = 64 + (W - 128 - gap) // 2
+    mid = 64 + (fw() - 128 - gap) // 2
     left_bars = _num_list(beat, "left_bars", (0.22, 0.58, 0.30, 0.74, 0.36, 0.62, 0.24, 0.18, 0.42))
     right_bars = _num_list(beat, "right_bars", (0.34, 0.82, 0.48, 0.16))
-    panels = ((88, mid, "left", left_bars), (mid + gap, W - 88, "right", right_bars))
+    panels = ((88, mid, "left", left_bars), (mid + gap, fw() - 88, "right", right_bars))
     for x0, x1, stem, heights in panels:
         title = field2(beat, stem, code, second) or ""
         show = stage in (None, 0) or int(stage) >= (1 if stem == "left" else 2)
@@ -2750,8 +3009,8 @@ def render_pair_chart(draw, beat, code, y, theme, stage=None, second=None) -> No
             cf = fit_font(draw, cap, 22, x1 - x0 - 8, False, 16, 1)
             draw_mixed(draw, (x0, inner_bottom - 24), cap, int(getattr(cf, "size", 20) or 20), theme["gold"], False)
     if footer and _show(stage, 3):
-        ff = fit_font(draw, footer, 26, W - 220, True, 18, 1)
-        _center(draw, (100, box_y + box_h - 48, W - 100, box_y + box_h - 12), footer, ff, theme["gold"])
+        ff = fit_font(draw, footer, 26, fw() - 220, True, 18, 1)
+        _center(draw, (100, box_y + box_h - 48, fw() - 100, box_y + box_h - 12), footer, ff, theme["gold"])
 
 
 def _pair_cloud(draw, box, points, fit, theme, show_line):
@@ -2777,7 +3036,7 @@ def render_pair_slope(draw, beat, code, y, theme, stage=None, second=None) -> No
     """Two Mondays, two clouds, two green lines. Stage 1 left, stage 2 right, stage 3 the tilt."""
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "TWO MONDAYS", "zh": "两个周一", "zh_hk": "兩個周一"}.get(code, "TWO MONDAYS")
     if second:
         other = {"en": "TWO MONDAYS", "zh": "两个周一", "zh_hk": "兩個周一"}.get(second)
@@ -2788,7 +3047,7 @@ def render_pair_slope(draw, beat, code, y, theme, stage=None, second=None) -> No
     gap = 28
     inner_top = box_y + 58
     inner_bottom = box_y + box_h - (58 if footer else 20)
-    mid = 64 + (W - 128 - gap) // 2
+    mid = 64 + (fw() - 128 - gap) // 2
 
     def pairs(key):
         out = []
@@ -2804,7 +3063,7 @@ def render_pair_slope(draw, beat, code, y, theme, stage=None, second=None) -> No
 
     panels = (
         (88, mid, "left", pairs("left_points"), pairs("left_fit")),
-        (mid + gap, W - 88, "right", pairs("right_points"), pairs("right_fit")),
+        (mid + gap, fw() - 88, "right", pairs("right_points"), pairs("right_fit")),
     )
     for x0, x1, stem, points, fit in panels:
         title = field2(beat, stem, code, second) or ""
@@ -2814,8 +3073,8 @@ def render_pair_slope(draw, beat, code, y, theme, stage=None, second=None) -> No
         if show and points:
             _pair_cloud(draw, (x0, inner_top + 40, x1, inner_bottom - 8), points, fit, theme, _show(stage, 3) or stage in (None, 0))
     if footer and _show(stage, 3):
-        ff = fit_font(draw, footer, 26, W - 220, True, 18, 1)
-        _center(draw, (100, box_y + box_h - 48, W - 100, box_y + box_h - 12), footer, ff, theme["gold"])
+        ff = fit_font(draw, footer, 26, fw() - 220, True, 18, 1)
+        _center(draw, (100, box_y + box_h - 48, fw() - 100, box_y + box_h - 12), footer, ff, theme["gold"])
 
 
 def _one_box(draw, cx, scale, theme, lo, q1, med, q3, hi, flag=None):
@@ -2836,7 +3095,7 @@ def render_pair_box(draw, beat, code, y, theme, stage=None, second=None) -> None
     """Two boxplots on one cup scale. Stage 1 left, stage 2 right, stage 3 the far shop."""
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "SAME SCALE", "zh": "同一尺度", "zh_hk": "同一尺度"}.get(code, "SAME SCALE")
     if second:
         other = {"en": "SAME SCALE", "zh": "同一尺度", "zh_hk": "同一尺度"}.get(second)
@@ -2873,36 +3132,38 @@ def render_pair_box(draw, beat, code, y, theme, stage=None, second=None) -> None
     show_right = stage in (None, 0) or int(stage) >= 2
     left_flag = _num(beat, "left_flag", None)
     right_flag = _num(beat, "right_flag", None)
+    # Landscape pins the shops at 620 and 1180. A phone frame places both inside x 80–1000.
+    left_x, right_x = (340, 740) if portrait() else (620, 1180)
     if show_left:
         _one_box(
-            draw, 620, scale, theme,
+            draw, left_x, scale, theme,
             _num(beat, "left_lo", 280), _num(beat, "left_q1", 360), _num(beat, "left_med", 390),
             _num(beat, "left_q3", 420), _num(beat, "left_hi", 500),
             left_flag if _show(stage, 3) else None,
         )
         name = left.split("\n", 1)[0]
         tw = mixed_length(draw, name, 24, True)
-        draw_mixed(draw, (620 - tw / 2, bottom + 8), name, 24, theme["gold"], True)
+        draw_mixed(draw, (left_x - tw / 2, bottom + 8), name, 24, theme["gold"], True)
     if show_right:
         _one_box(
-            draw, 1180, scale, theme,
+            draw, right_x, scale, theme,
             _num(beat, "right_lo", 250), _num(beat, "right_q1", 280), _num(beat, "right_med", 310),
             _num(beat, "right_q3", 340), _num(beat, "right_hi", 360),
             right_flag if _show(stage, 3) else None,
         )
         name = right.split("\n", 1)[0]
         tw = mixed_length(draw, name, 24, True)
-        draw_mixed(draw, (1180 - tw / 2, bottom + 8), name, 24, theme["gold"], True)
+        draw_mixed(draw, (right_x - tw / 2, bottom + 8), name, 24, theme["gold"], True)
     if footer and _show(stage, 3):
-        ff = fit_font(draw, footer, 24, W - 280, True, 18, 2)
-        _center(draw, (140, box_y + box_h - foot_band - 4, W - 140, box_y + box_h - 10), footer, ff, theme["gold"])
+        ff = fit_font(draw, footer, 24, fw() - 280, True, 18, 2)
+        _center(draw, (140, box_y + box_h - foot_band - 4, fw() - 140, box_y + box_h - 10), footer, ff, theme["gold"])
 
 
 def render_coin(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """Two faces. Stage 1 chosen, stage 2 drawn, stage 3 the note."""
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "COIN", "zh": "硬币", "zh_hk": "硬幣"}.get(code, "COIN")
     if second:
         other = {"en": "COIN", "zh": "硬币", "zh_hk": "硬幣"}.get(second)
@@ -2916,7 +3177,7 @@ def render_coin(draw, beat, code, y, theme, stage=None, second=None) -> None:
     )
     gap = 80
     d = 280
-    x = (W - (d * 2 + gap)) // 2
+    x = (fw() - (d * 2 + gap)) // 2
     cy = box_y + box_h // 2 - 16
     for label, show_from, ink in faces:
         if stage in (None, 0) or int(stage) >= show_from:
@@ -2925,15 +3186,15 @@ def render_coin(draw, beat, code, y, theme, stage=None, second=None) -> None:
             _center(draw, box, label, fit_font(draw, label, 40, d - 48, True, 22, 2), ink)
         x += d + gap
     if footer and _show(stage, 3):
-        ff = fit_font(draw, footer, 26, W - 220, True, 18, 1)
-        _center(draw, (100, box_y + box_h - 48, W - 100, box_y + box_h - 12), footer, ff, theme["gold"])
+        ff = fit_font(draw, footer, 26, fw() - 220, True, 18, 1)
+        _center(draw, (100, box_y + box_h - 48, fw() - 100, box_y + box_h - 12), footer, ff, theme["gold"])
 
 
 def render_mix(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """One gap, two unnamed stories. Stage 1 the gap, stage 2 the split, stage 3 the note. No shares."""
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "MIXED", "zh": "混着", "zh_hk": "混住"}.get(code, "MIXED")
     if second:
         other = {"en": "MIXED", "zh": "混着", "zh_hk": "混住"}.get(second)
@@ -2943,7 +3204,7 @@ def render_mix(draw, beat, code, y, theme, stage=None, second=None) -> None:
     footer = field2(beat, "footer", code, second) or field2(beat, "note", code, second)
     left = field2(beat, "left", code, second) or "Rent"
     right = field2(beat, "right", code, second) or "Already"
-    ax0, ax1 = 280, W - 280
+    ax0, ax1 = 280, fw() - 280
     cy = box_y + 150
     draw.rounded_rectangle([ax0, cy - 28, ax1, cy + 28], radius=12, fill=theme["gold"])
     gap = field2(beat, "gap", code, second) or "420 − 310"
@@ -2956,15 +3217,15 @@ def render_mix(draw, beat, code, y, theme, stage=None, second=None) -> None:
         _center(draw, (ax0, cy + 130, mid - 16, cy + 186), left, fit_font(draw, left, 28, mid - ax0 - 40, True, 18, 1), theme["emerald"])
         _center(draw, (mid + 16, cy + 130, ax1, cy + 186), right, fit_font(draw, right, 28, ax1 - mid - 40, True, 18, 1), theme["bg"])
     if footer and _show(stage, 3):
-        ff = fit_font(draw, footer, 26, W - 220, True, 18, 1)
-        _center(draw, (100, box_y + box_h - 48, W - 100, box_y + box_h - 12), footer, ff, theme["gold"])
+        ff = fit_font(draw, footer, 26, fw() - 220, True, 18, 1)
+        _center(draw, (100, box_y + box_h - 48, fw() - 100, box_y + box_h - 12), footer, ff, theme["gold"])
 
 
 def render_shrink(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """A step pulled toward zero. Stage 1 the copy, stage 2 the pull, stage 3 the note."""
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "PULL", "zh": "拉", "zh_hk": "拉"}.get(code, "PULL")
     if second:
         other = {"en": "PULL", "zh": "拉", "zh_hk": "拉"}.get(second)
@@ -2974,7 +3235,7 @@ def render_shrink(draw, beat, code, y, theme, stage=None, second=None) -> None:
     footer = field2(beat, "footer", code, second) or field2(beat, "note", code, second)
     full = _num(beat, "full", 80)
     pulled = _num(beat, "pulled", 25)
-    ax0, ax1 = 220, W - 180
+    ax0, ax1 = 220, fw() - 180
     cy = box_y + box_h // 2 - 8
     span = full or 1
     def end(v):
@@ -2992,15 +3253,15 @@ def render_shrink(draw, beat, code, y, theme, stage=None, second=None) -> None:
         draw.rectangle([ax0, cy - 14, end(pulled), cy + 14], fill=theme["emerald"])
         draw_mixed(draw, (end(pulled) + 12, cy + 20), str(beat.get("pulled") or int(pulled)), 22, theme["emerald"], True)
     if footer and _show(stage, 3):
-        ff = fit_font(draw, footer, 26, W - 220, True, 18, 1)
-        _center(draw, (100, box_y + box_h - 48, W - 100, box_y + box_h - 12), footer, ff, theme["gold"])
+        ff = fit_font(draw, footer, 26, fw() - 220, True, 18, 1)
+        _center(draw, (100, box_y + box_h - 48, fw() - 100, box_y + box_h - 12), footer, ff, theme["gold"])
 
 
 def render_turns(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """A row of Mondays. One is grey, in turn. Stage 1 the row, stage 2 the grey day, stage 3 the note."""
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "TURNS", "zh": "轮流", "zh_hk": "輪流"}.get(code, "TURNS")
     if second:
         other = {"en": "TURNS", "zh": "轮流", "zh_hk": "輪流"}.get(second)
@@ -3013,9 +3274,9 @@ def render_turns(draw, beat, code, y, theme, stage=None, second=None) -> None:
     n = max(1, min(len(days), 5))
     days = days[:n]
     gap = 28
-    chip_w = min(280, (W - 220 - gap * (n - 1)) // n)
+    chip_w = min(280, (fw() - 220 - gap * (n - 1)) // n)
     row_w = n * chip_w + (n - 1) * gap
-    x = (W - row_w) // 2
+    x = (fw() - row_w) // 2
     cy = box_y + box_h // 2 - 10
     white = theme.get("white") or (247, 244, 238)
     for i, day in enumerate(days):
@@ -3029,8 +3290,8 @@ def render_turns(draw, beat, code, y, theme, stage=None, second=None) -> None:
         _center(draw, box, day, fit_font(draw, day, 36, chip_w - 24, True, 20, 1), ink)
         x += chip_w + gap
     if footer and _show(stage, 3):
-        ff = fit_font(draw, footer, 26, W - 220, True, 18, 1)
-        _center(draw, (100, box_y + box_h - 48, W - 100, box_y + box_h - 12), footer, ff, theme["gold"])
+        ff = fit_font(draw, footer, 26, fw() - 220, True, 18, 1)
+        _center(draw, (100, box_y + box_h - 48, fw() - 100, box_y + box_h - 12), footer, ff, theme["gold"])
 
 
 _RANK_SORTED = {"sorted", "sort", "asc", "ascending"}
@@ -3314,7 +3575,7 @@ def render_rank_line(draw, beat, code, y, theme, stage=None, second=None) -> Non
     """
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "RANK", "zh": "排序", "zh_hk": "排序"}.get(code, "RANK")
     if second:
         other = {"en": "RANK", "zh": "排序", "zh_hk": "排序"}.get(second)
@@ -3360,12 +3621,12 @@ def render_rank_line(draw, beat, code, y, theme, stage=None, second=None) -> Non
         gap = 18 if n >= 5 else 28
         brk = rank_break(beat, n)
         extra = 96 if brk is not None else 0
-        max_w = W - 192
+        max_w = fw() - 192
         chip_w = max(96, (max_w - gap * (n - 1) - extra) // n)
         chip_w = min(chip_w, 320)
         use_break = brk is not None and show_ordered
         row_w = n * chip_w + (n - 1) * gap + (extra if use_break else 0)
-        x0 = (W - row_w) // 2
+        x0 = (fw() - row_w) // 2
         y_line = chip_top + chip_h + 16
         lefts = []
         xx = x0
@@ -3452,15 +3713,15 @@ def render_rank_line(draw, beat, code, y, theme, stage=None, second=None) -> Non
                 sl = _block_layout(draw, span_text, max(360, int(bx1 - bx0) - 20), th, 48, 22, 0.66, 1, 1)
                 _paint_block(draw, (bx0, by + tick + 12, bx1, by + tick + 12 + th), sl, theme["gold"], theme["bg"])
     if footer and _show(stage, 3):
-        fl = _block_layout(draw, footer, W - 240, foot - 24, 36, 20, 0.72, 1, 1)
-        _paint_block(draw, (100, box_y + box_h - foot + 8, W - 100, box_y + box_h - 16), fl, theme["gold"], theme["bg"])
+        fl = _block_layout(draw, footer, fw() - 240, foot - 24, 36, 20, 0.72, 1, 1)
+        _paint_block(draw, (100, box_y + box_h - foot + 8, fw() - 100, box_y + box_h - 16), fl, theme["gold"], theme["bg"])
 
 
 def render_redraw(draw, beat, code, y, theme, stage=None, second=None) -> None:
     """Two redraws. Stage 1 left handful, stage 2 right, stage 3 the repeated row."""
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "REDRAW", "zh": "重抽", "zh_hk": "重抽"}.get(code, "REDRAW")
     if second:
         other = {"en": "REDRAW", "zh": "重抽", "zh_hk": "重抽"}.get(second)
@@ -3471,8 +3732,8 @@ def render_redraw(draw, beat, code, y, theme, stage=None, second=None) -> None:
     gap = 28
     inner_top = box_y + 58
     inner_bottom = box_y + box_h - (58 if footer else 20)
-    mid = 64 + (W - 128 - gap) // 2
-    panels = ((88, mid, "l", 1), (mid + gap, W - 88, "r", 2))
+    mid = 64 + (fw() - 128 - gap) // 2
+    panels = ((88, mid, "l", 1), (mid + gap, fw() - 88, "r", 2))
     white = theme.get("white") or (247, 244, 238)
     for x0, x1, stem, show_from in panels:
         title = field2(beat, "left" if stem == "l" else "right", code, second) or ""
@@ -3496,8 +3757,8 @@ def render_redraw(draw, beat, code, y, theme, stage=None, second=None) -> None:
             lf = fit_font(draw, lab, 28, x1 - x0 - 36, True, 18, 1)
             _center(draw, (x0 + 12, ry, x1 - 20, ry + ch), lab, lf, ink)
     if footer and _show(stage, 3):
-        ff = fit_font(draw, footer, 26, W - 220, True, 18, 1)
-        _center(draw, (100, box_y + box_h - 46, W - 100, box_y + box_h - 12), footer, ff, theme["gold"])
+        ff = fit_font(draw, footer, 26, fw() - 220, True, 18, 1)
+        _center(draw, (100, box_y + box_h - 46, fw() - 100, box_y + box_h - 12), footer, ff, theme["gold"])
 
 
 
@@ -3646,7 +3907,7 @@ def render_freq_bars(draw, beat, code, y, theme, stage=None, second=None) -> Non
     """Frequency bars for mode. Stage 1 labels, stage 2 bars+counts, stage 3 gold tallest + footer."""
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "COUNT", "zh": "清点", "zh_hk": "清點"}.get(code, "COUNT")
     if second:
         other = {"en": "COUNT", "zh": "清点", "zh_hk": "清點"}.get(second)
@@ -3676,11 +3937,11 @@ def render_freq_bars(draw, beat, code, y, theme, stage=None, second=None) -> Non
         max_c = 1.0
     chart_h = max(40, axis_y - top - count_band)
     gap = 28 if n <= 3 else 18
-    max_w = W - 220
+    max_w = fw() - 220
     bar_w = max(72, (max_w - gap * (n - 1)) // n)
     bar_w = min(bar_w, 380 if n <= 3 else 320)
     row_w = n * bar_w + (n - 1) * gap
-    x0 = (W - row_w) // 2
+    x0 = (fw() - row_w) // 2
     # baseline
     draw.line([(x0 - 12, axis_y), (x0 + row_w + 12, axis_y)], fill=theme["bg"], width=4)
     white = theme.get("white") or (247, 244, 238)
@@ -3707,8 +3968,8 @@ def render_freq_bars(draw, beat, code, y, theme, stage=None, second=None) -> Non
             draw.rounded_rectangle([x + 8, axis_y - 10, x + bar_w - 8, axis_y - 2], radius=6, fill=ink)
         x += bar_w + gap
     if footer and _show(stage, 3):
-        fl = _block_layout(draw, footer, W - 240, foot - 24, 36, 20, 0.72, 1, 1)
-        _paint_block(draw, (100, box_y + box_h - foot + 8, W - 100, box_y + box_h - 16), fl, theme["gold"], theme["bg"])
+        fl = _block_layout(draw, footer, fw() - 240, foot - 24, 36, 20, 0.72, 1, 1)
+        _paint_block(draw, (100, box_y + box_h - foot + 8, fw() - 100, box_y + box_h - 16), fl, theme["gold"], theme["bg"])
 
 
 
@@ -3899,7 +4160,7 @@ def render_balance_line(draw, beat, code, y, theme, stage=None, second=None) -> 
     """Seesaw / mean balance line. Stage 1 values, stage 2 mean fulcrum, stage 3 left=right pulls + footer."""
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     tag = {"en": "BALANCE", "zh": "平衡", "zh_hk": "平衡"}.get(code, "BALANCE")
     if second:
         other = {"en": "BALANCE", "zh": "平衡", "zh_hk": "平衡"}.get(second)
@@ -3930,7 +4191,7 @@ def render_balance_line(draw, beat, code, y, theme, stage=None, second=None) -> 
     pad = span * 0.12
     lo_s, hi_s = lo - pad, hi + pad
     span_s = hi_s - lo_s if hi_s > lo_s else 1.0
-    x_left, x_right = 130, W - 130
+    x_left, x_right = 130, fw() - 130
 
     def x_at(val: float) -> int:
         return int(x_left + (val - lo_s) / span_s * (x_right - x_left))
@@ -3992,7 +4253,7 @@ def render_balance_line(draw, beat, code, y, theme, stage=None, second=None) -> 
             t = "0" if d == 0 else (f"+{_fmt_pull(d)}" if d > 0 else f"\u2212{_fmt_pull(-d)}")
             return mixed_length(draw, t, 34, True) / 2 + 18
         others = [x_at(v) for v in nums if abs(v - mean) > 1e-9]
-        r_lim = min([x - _dev_half(v) for v, x in zip([v for v in nums if abs(v - mean) > 1e-9], others) if x > mx] + [W - 100])
+        r_lim = min([x - _dev_half(v) for v, x in zip([v for v in nums if abs(v - mean) > 1e-9], others) if x > mx] + [fw() - 100])
         l_lim = max([x + _dev_half(v) for v, x in zip([v for v in nums if abs(v - mean) > 1e-9], others) if x < mx] + [100])
         r_room = int(r_lim - (mx + 38))
         l_room = int((mx - 38) - l_lim)
@@ -4060,9 +4321,9 @@ def render_balance_line(draw, beat, code, y, theme, stage=None, second=None) -> 
         panel_h = 100
         py = box_y + box_h - foot - panel_h - 10
         gap = 36
-        mid = W // 2
+        mid = fw() // 2
         left_box = (100, py, mid - gap // 2, py + panel_h)
-        right_box = (mid + gap // 2, py, W - 100, py + panel_h)
+        right_box = (mid + gap // 2, py, fw() - 100, py + panel_h)
         draw.rounded_rectangle(left_box, radius=16, fill=theme["gold"])
         draw.rounded_rectangle(right_box, radius=16, fill=theme["gold"])
         lw = left_box[2] - left_box[0] - 32
@@ -4075,8 +4336,8 @@ def render_balance_line(draw, beat, code, y, theme, stage=None, second=None) -> 
         _center(draw, (mid - 20, py, mid + 20, py + panel_h), eq, ef, theme["bg"])
 
     if footer and _show(stage, 3):
-        fl = _block_layout(draw, footer, W - 240, foot - 24, 36, 20, 0.72, 1, 1)
-        _paint_block(draw, (100, box_y + box_h - foot + 8, W - 100, box_y + box_h - 16), fl, theme["gold"], theme["bg"])
+        fl = _block_layout(draw, footer, fw() - 240, foot - 24, 36, 20, 0.72, 1, 1)
+        _paint_block(draw, (100, box_y + box_h - foot + 8, fw() - 100, box_y + box_h - 16), fl, theme["gold"], theme["bg"])
 
 
 # ---------------------------------------------------------------- box_line
@@ -4213,7 +4474,7 @@ def render_box_line(draw, beat, code, y, theme, stage=None, second=None) -> None
     """
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     fences = box_fences(beat)
     if fences == "bad":
         fences = None
@@ -4248,7 +4509,7 @@ def render_box_line(draw, beat, code, y, theme, stage=None, second=None) -> None
     use_break = str(beat.get("break") or "").strip().lower() in ("last", "top", "high") and len(s_nums) >= 3
     white = theme.get("white") or "#FFFFFF"
     # ---- horizontal scale
-    x_left, x_right = 190, W - 190
+    x_left, x_right = 190, fw() - 190
     main = s_nums[:-1] if use_break else s_nums
     lo, hi = min(main), max(main)
     if fences:
@@ -4396,12 +4657,12 @@ def render_box_line(draw, beat, code, y, theme, stage=None, second=None) -> None
         mid = (bx0 + bx1) / 2
         draw.line([(mid, by + tick), (mid, by + tick + 8)], fill=white, width=4)
         tw = max(520, int(bx1 - bx0) + 120)
-        tx0 = max(100, min(W - 100 - tw, mid - tw / 2))
+        tx0 = max(100, min(fw() - 100 - tw, mid - tw / 2))
         sl = _block_layout(draw, span_text, tw, span_band, 46, 22, 0.66, 1, 1)
         _paint_block(draw, (tx0, by + tick + 10, tx0 + tw, by + tick + 10 + span_band), sl, gold, theme["bg"])
     if footer and lit3:
-        fl = _block_layout(draw, footer, W - 240, foot - 24, 36, 20, 0.72, 1, 1)
-        _paint_block(draw, (100, box_y + box_h - foot + 8, W - 100, box_y + box_h - 16), fl, gold, theme["bg"])
+        fl = _block_layout(draw, footer, fw() - 240, foot - 24, 36, 20, 0.72, 1, 1)
+        _paint_block(draw, (100, box_y + box_h - foot + 8, fw() - 100, box_y + box_h - 16), fl, gold, theme["bg"])
 
 
 # ---------------------------------------------------------------- dev_bars
@@ -4553,7 +4814,7 @@ def render_dev_bars(draw, beat, code, y, theme, stage=None, second=None) -> None
     """
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     p = dev_power(beat)
     if p not in (1, 2, 3, 4):
         p = 1
@@ -4595,7 +4856,7 @@ def render_dev_bars(draw, beat, code, y, theme, stage=None, second=None) -> None
             return f"{a}  {b}" if b else a
         items = [(_leg("name_a", "A"), white), (_leg("name_b", "B"), b_fill)]
         lf = font_for("A店 Shop A", 28, bold=True)
-        x = W - 104
+        x = fw() - 104
         for txt, col in reversed(items):
             tw = mixed_length(draw, txt, 28, bold=True)
             x -= tw
@@ -4651,7 +4912,7 @@ def render_dev_bars(draw, beat, code, y, theme, stage=None, second=None) -> None
     s_f = _scale(pos_f, neg_f)
     # ---- horizontal plan
     gut = 200  # mean label gutter on the left
-    x_left, x_right = 100 + gut, W - 110
+    x_left, x_right = 100 + gut, fw() - 110
     slot = (x_right - x_left) / n
     if db:
         bw = int(max(44, min(120, slot * 0.34)))
@@ -4736,8 +4997,8 @@ def render_dev_bars(draw, beat, code, y, theme, stage=None, second=None) -> None
                 sf = fit_font(draw, sub, 30, int(slot - 16), True, 16, 1)
                 _center(draw, (cx - slot / 2 + 8, ly + label_band, cx + slot / 2 - 8, ly + label_band + sub_band), sub, sf, muted)
     if footer and _show(stage, 3):
-        fl = _block_layout(draw, footer, W - 240, foot - 24, 36, 20, 0.72, 1, 1)
-        _paint_block(draw, (100, box_y + box_h - foot + 8, W - 100, box_y + box_h - 16), fl, gold, theme["bg"])
+        fl = _block_layout(draw, footer, fw() - 240, foot - 24, 36, 20, 0.72, 1, 1)
+        _paint_block(draw, (100, box_y + box_h - foot + 8, fw() - 100, box_y + box_h - 16), fl, gold, theme["bg"])
 
 
 # ---------------------------------------------------------------- ratio_bars
@@ -4827,7 +5088,7 @@ def render_ratio_bars(draw, beat, code, y, theme, stage=None, second=None) -> No
     """
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     st = 3 if stage in (None, 0) else max(1, min(3, int(stage)))
     tag = field2(beat, f"tag{st}", code, second) or field2(beat, "tag", code, second)
     if tag:
@@ -4866,12 +5127,12 @@ def render_ratio_bars(draw, beat, code, y, theme, stage=None, second=None) -> No
     base = box_y + box_h - foot - label_band - 14
     full = max(140, base - top - val_band)
     # ---- horizontal plan: bar on the left of each slot, notes on its right
-    slot = (W - 200) / n
+    slot = (fw() - 200) / n
     bw = int(max(120, min(300, slot * 0.34)))
     xs = [100 + slot * i + max(40, slot * 0.16) for i in range(n)]
     note_w = int(slot - (xs[0] - 100) - bw - 48)
     max_sd = max(sds) or 1.0
-    draw.line([(96, base), (W - 96, base)], fill=muted, width=3)
+    draw.line([(96, base), (fw() - 96, base)], fill=muted, width=3)
     big = 76 if n <= 2 else 60
     for i in range(n):
         x0 = xs[i]
@@ -4909,8 +5170,8 @@ def render_ratio_bars(draw, beat, code, y, theme, stage=None, second=None) -> No
             ll = _block_layout(draw, labels[i], int(slot * 0.9), label_band - 6, 36, 18, 0.7, 1, 1)
             _paint_block(draw, (cx - slot * 0.45, base + 10, cx + slot * 0.45, base + 10 + label_band), ll, theme["bg"], gold, valign="top")
     if footer and _show(stage, 3):
-        fl = _block_layout(draw, footer, W - 240, foot - 24, 36, 20, 0.72, 1, 1)
-        _paint_block(draw, (100, box_y + box_h - foot + 8, W - 100, box_y + box_h - 16), fl, gold, theme["bg"])
+        fl = _block_layout(draw, footer, fw() - 240, foot - 24, 36, 20, 0.72, 1, 1)
+        _paint_block(draw, (100, box_y + box_h - foot + 8, fw() - 100, box_y + box_h - 16), fl, gold, theme["bg"])
 
 
 # ---------------------------------------------------------------- quad_scatter
@@ -5053,7 +5314,7 @@ def render_quad_ruler(draw, beat, code, y, theme, stage=None, second=None) -> No
     """
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     st = 3 if stage in (None, 0) else max(1, min(3, int(stage)))
     tag = field2(beat, f"tag{st}", code, second) or field2(beat, "tag", code, second)
     if tag:
@@ -5076,7 +5337,7 @@ def render_quad_ruler(draw, beat, code, y, theme, stage=None, second=None) -> No
     foot = (104 if "\n" in (footer or "") else 80) if footer else 20
     # pinned geometry
     rail_y = box_y + box_h - foot - 56
-    rail_l, rail_r = 140, W - 140
+    rail_l, rail_r = 140, fw() - 140
     cloud_top = box_y + 78
     cloud_bot = rail_y - 28
     cloud_h = max(110, cloud_bot - cloud_top)
@@ -5158,8 +5419,8 @@ def render_quad_ruler(draw, beat, code, y, theme, stage=None, second=None) -> No
         _center(draw, (xx - 60, rail_y - 66, xx + 60, rail_y - 32), lab, lf, gold)
 
     if footer and _show(stage, 3):
-        fl = _block_layout(draw, footer, W - 240, foot - 24, 36, 20, 0.72, 1, 1)
-        _paint_block(draw, (100, box_y + box_h - foot + 8, W - 100, box_y + box_h - 16), fl, gold, theme["bg"])
+        fl = _block_layout(draw, footer, fw() - 240, foot - 24, 36, 20, 0.72, 1, 1)
+        _paint_block(draw, (100, box_y + box_h - foot + 8, fw() - 100, box_y + box_h - 16), fl, gold, theme["bg"])
 
 
 
@@ -5178,7 +5439,7 @@ def render_quad_scatter(draw, beat, code, y, theme, stage=None, second=None) -> 
         return render_quad_ruler(draw, beat, code, y, theme, stage=stage, second=second)
     box_y = y + 8
     box_h = _fill_h(box_y, 360)
-    _panel(draw, (64, box_y, W - 64, box_y + box_h), theme["navy"], theme)
+    _panel(draw, (64, box_y, fw() - 64, box_y + box_h), theme["navy"], theme)
     st = 3 if stage in (None, 0) else max(1, min(3, int(stage)))
     tag = field2(beat, f"tag{st}", code, second) or field2(beat, "tag", code, second)
     if tag:
@@ -5218,7 +5479,7 @@ def render_quad_scatter(draw, beat, code, y, theme, stage=None, second=None) -> 
     axis_band = 44 if x_axis else 20
     left_pad = 118 if y_axis else 72
     plot_l = 64 + left_pad
-    plot_r = W - 96
+    plot_r = fw() - 96
     plot_t = box_y + 70
     plot_b = box_y + box_h - foot - axis_band - 8
     # scale: pad 8% beyond data (and means)
@@ -5325,8 +5586,8 @@ def render_quad_scatter(draw, beat, code, y, theme, stage=None, second=None) -> 
                 tx0 = plot_l + 4
             _center(draw, (tx0, ty0, tx0 + 110, ty1), pt, pf, gold if hot else white)
     if footer and _show(stage, 3):
-        fl = _block_layout(draw, footer, W - 240, foot - 24, 36, 20, 0.72, 1, 1)
-        _paint_block(draw, (100, box_y + box_h - foot + 8, W - 100, box_y + box_h - 16), fl, gold, theme["bg"])
+        fl = _block_layout(draw, footer, fw() - 240, foot - 24, 36, 20, 0.72, 1, 1)
+        _paint_block(draw, (100, box_y + box_h - foot + 8, fw() - 100, box_y + box_h - 16), fl, gold, theme["bg"])
 
 
 WHATIS_VISUALS = {
@@ -5401,7 +5662,7 @@ def _contrast_head(code, second, which: int) -> str:
 
 def _whatis_clear_field(draw, theme) -> None:
     """Cream inside the navy rails. Body cards drop the blobs and the gold corner."""
-    draw.rectangle([18, 0, W - 18, H], fill=theme["bg"])
+    draw.rectangle([18, 0, fw() - 18, fh()], fill=theme["bg"])
 
 
 def _whatis_split(text: str) -> tuple[str, str]:
@@ -5643,7 +5904,7 @@ def _paint_whatis_prose(draw, text: str, x, y, max_w, theme, cap, floor, max_lin
 def _render_whatis_statement(draw, theme, role: str, text: str, cap: int, floor: int, max_lines: int) -> None:
     _whatis_clear_field(draw, theme)
     x = 96
-    max_w = W - 192
+    max_w = fw() - 192
     y = _paint_whatis_label(draw, role, theme, x, 80)
     _paint_whatis_prose(draw, text, x, y + 8, max_w, theme, cap, floor, max_lines, bold=True)
 
@@ -5656,7 +5917,7 @@ def _render_whatis_contrast(draw, beat, code, theme, second, stage=None) -> None
     """
     _whatis_clear_field(draw, theme)
     x = 96
-    max_w = W - 192
+    max_w = fw() - 192
     cap, floor = 58, 48
     show_what, show_not = _whatis_contrast_visible(beat, stage)
     y = 56
@@ -5677,7 +5938,7 @@ def _render_whatis_example(draw, beat, code, theme, second) -> None:
     """Large example sentence. The classroom stamp is a short line, not a filled bar."""
     _whatis_clear_field(draw, theme)
     x = 96
-    max_w = W - 192
+    max_w = fw() - 192
     role = _whatis_role(beat, "whatis_example", code, second)
     y = _paint_whatis_label(draw, role, theme, x, 80)
     _paint_whatis_prose(
@@ -5703,8 +5964,8 @@ def _gold_rule_bottom(draw, theme) -> int:
     gold = theme["gold"]
     px = img.load()
     last = 0
-    x = W // 2
-    for y in range(160, H - 140):
+    x = fw() // 2
+    for y in range(160, fh() - 140):
         if px[x, y] == gold:
             last = y
     return last or 640
@@ -5712,9 +5973,12 @@ def _gold_rule_bottom(draw, theme) -> int:
 
 def _paint_centered_whatis(draw, text: str, theme, y: int, size: int) -> int:
     lh = int(size * max(1.12, _line_factor(text)))
-    for ln in _whatis_wrap(draw, text, size, W - 240, True) or [text]:
+    measure = (PHONE_SAFE_R - PHONE_SAFE_L) if portrait() else (fw() - 240)
+    origin = PHONE_SAFE_L if portrait() else 0
+    span = (PHONE_SAFE_R - PHONE_SAFE_L) if portrait() else fw()
+    for ln in _whatis_wrap(draw, text, size, measure, True) or [text]:
         tw = _whatis_length(draw, ln, size, True)
-        _draw_whatis_text(draw, ((W - tw) / 2, y), ln, size, theme["navy"], True)
+        _draw_whatis_text(draw, (origin + (span - tw) / 2, y), ln, size, theme["navy"], True)
         y += lh
     return y
 
@@ -5729,16 +5993,25 @@ def _render_whatis_title(draw, beat, lesson, code, theme, second) -> None:
         render_title_card(draw, beat, lesson, code, theme, second=None)
         other = field_native(beat, "title", second) or field_native(lesson, "title", second)
         if other:
-            _paint_centered_whatis(draw, other, theme, _gold_rule_bottom(draw, theme) + 36, 64)
+            _paint_centered_whatis(draw, other, theme, _gold_rule_bottom(draw, theme) + 36, 36 if portrait() else 64)
         return
-    max_w = W - 200
-    size, lines = _fit_whatis_lines(draw, title, max_w, SCALE["hook"], 88, 3, True)
-    top = _title_card_top(int(size * 1.08) * max(1, len(lines)) + 36)
+    if portrait():
+        max_w = PHONE_SAFE_R - PHONE_SAFE_L
+        size, lines = _fit_whatis_lines(draw, title, max_w, 68, 36, 5, True)
+        top = PHONE_SAFE_TOP + 36
+        origin, span = PHONE_SAFE_L, max_w
+    else:
+        max_w = fw() - 200
+        size, lines = _fit_whatis_lines(draw, title, max_w, SCALE["hook"], 88, 3, True)
+        top = _title_card_top(int(size * 1.08) * max(1, len(lines)) + 36)
+        origin, span = 0, fw()
     for ln in lines:
         tw = _whatis_length(draw, ln, size, True)
-        _draw_whatis_text(draw, ((W - tw) / 2, top), ln, size, theme["navy"], True)
+        _draw_whatis_text(draw, (origin + (span - tw) / 2, top), ln, size, theme["navy"], True)
         top += int(size * 1.08)
-    draw.rectangle([(W - 140) / 2, top + 18, (W + 140) / 2, top + 26], fill=theme["gold"])
+    bar_w = 120 if portrait() else 140
+    mid = origin + span / 2
+    draw.rectangle([mid - bar_w / 2, top + 18, mid + bar_w / 2, top + 26], fill=theme["gold"])
     if not second:
         return
     other = field_native(beat, "title", second) or field_native(lesson, "title", second)
@@ -5784,12 +6057,14 @@ def _open_still(path: Path, bg: tuple) -> Image.Image:
 def _still_title_top(beat, code, second) -> int:
     """Title sits under the kicker chip. Focus has no chip, so the title starts higher."""
     if _FOCUS.get():
-        return 48
+        return PHONE_SAFE_TOP if portrait() else 48
     kicker = resolve_kicker(beat, code)
     if second:
         other = resolve_kicker(beat, second)
         if other and other != kicker:
             kicker = f"{kicker}  {other}" if kicker else other
+    if portrait():
+        return (PHONE_SAFE_TOP + 64) if kicker else PHONE_SAFE_TOP
     return 112 if kicker else 64
 
 
@@ -5798,27 +6073,35 @@ def _paint_compact_title(draw, title: str, theme: dict, top: int) -> int:
 
     Returns the y where the picture may start. No full-width band.
     """
-    left = 64
-    max_w = W - 160
+    if portrait():
+        left = PHONE_SAFE_L
+        max_w = PHONE_SAFE_R - PHONE_SAFE_L
+        line_cap = 3
+        min_size = 24
+    else:
+        left = 64
+        max_w = fw() - 160
+        line_cap = 2
+        min_size = 32
     primary, secondary = _split_pair(title)
     if not primary and not secondary:
         return top
     y = top
     if primary:
-        cap = 50 if any(is_cjk(ch) for ch in primary) else 56
-        font = fit_font(draw, primary, cap, max_w, bold=True, min_size=32, max_lines=2)
+        cap = 44 if portrait() else (50 if any(is_cjk(ch) for ch in primary) else 56)
+        font = fit_font(draw, primary, cap, max_w, bold=True, min_size=min_size, max_lines=line_cap)
         size = int(getattr(font, "size", cap) or cap)
-        lines = (wrap(draw, primary, font, max_w, True) or [sanitize(primary)])[:2]
+        lines = (wrap(draw, primary, font, max_w, True) or [sanitize(primary)])[:line_cap]
         line_h = int(size * _line_factor(primary))
         for ln in lines:
             draw_mixed(draw, (left, y), ln, size, theme["navy"], bold=True)
             y += line_h
     if secondary:
         y += 6
-        cap = 30 if any(is_cjk(ch) for ch in secondary) else 34
-        font = fit_font(draw, secondary, cap, max_w, bold=False, min_size=22, max_lines=2)
+        cap = 26 if portrait() else (30 if any(is_cjk(ch) for ch in secondary) else 34)
+        font = fit_font(draw, secondary, cap, max_w, bold=False, min_size=18 if portrait() else 22, max_lines=line_cap)
         size = int(getattr(font, "size", cap) or cap)
-        lines = (wrap(draw, secondary, font, max_w, False) or [sanitize(secondary)])[:2]
+        lines = (wrap(draw, secondary, font, max_w, False) or [sanitize(secondary)])[:line_cap]
         line_h = int(size * _line_factor(secondary))
         for ln in lines:
             draw_mixed(draw, (left, y), ln, size, theme["navy"], bold=False)
@@ -5891,7 +6174,7 @@ def render_still_image(draw, beat, code, y, theme, stage=None, second=None, less
     if reserve and bottom - top - reserve < 160:
         reserve = 0
         note = ""
-    left, right = 64, W - 64
+    left, right = (PHONE_SAFE_L, PHONE_SAFE_R) if portrait() else (64, fw() - 64)
     box_h = bottom - reserve - top
     path, err = resolve_still_image(beat.get("image"), lesson_yaml(holder))
     if path is None:
@@ -6051,7 +6334,9 @@ def _slide_workers() -> int:
 def render_beat(beat, lesson, index, n, lang_labels="en", theme=None, stage=None, second_lang=None):
     theme = theme or load_theme(None)
     focus = str(lesson.get("slide_style") or "").strip().lower() == "focus"
+    phone = str(lesson.get("format") or "").strip() == "9:16"
     token = _FOCUS.set(focus)
+    canvas_token = _CANVAS.set((PORTRAIT_W, PORTRAIT_H) if phone else None)
     try:
         if focus:
             theme = {**theme, "focus_layout": True, "blobs": False, "corner": False}
@@ -6104,6 +6389,7 @@ def render_beat(beat, lesson, index, n, lang_labels="en", theme=None, stage=None
         return img
     finally:
         _FOCUS.reset(token)
+        _CANVAS.reset(canvas_token)
 
 
 def _paint_one(args):

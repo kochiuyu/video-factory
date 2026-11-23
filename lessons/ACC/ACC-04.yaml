@@ -1,0 +1,275 @@
+id: ACC-04
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+duration_target_s: 222
+title_en: The stock is all there. Is it worth the same?
+title_zh: 货一件不少，价值就没变吗？
+title_zh_hk: 貨全在，還值原本的金額嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 20
+  kicker: ACC-04
+  kicker_en: ACC-04
+  kicker_zh: ACC-04
+  kicker_zh_hk: ACC-04
+  title_en: The stock is all there. Is it worth the same?
+  title_zh: 货一件不少，价值就没变吗？
+  title_zh_hk: 貨全在，還值原本的金額嗎？
+  image: art/count-and-value-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Would you record an eight-thousand-dollar stock loss from one shelf count? You keep the books at a fictional Hong Kong accessories wholesaler. The report is due, but you can still check where the pouches are, who owns them, and their condition.
+  zh: >-
+    只凭一张货架盘点，就确认八千港元的存货损失吗？你在一家虚构的香港配饰批发商记账。内部月报今天要交，不过你还有时间核对地点、所有权和货品状况。
+  zh_hk: >-
+    只憑一張貨架盤點，就確認八千港元嘅存貨損失嗎？你喺一間虛構嘅香港配飾批發商記帳。內部月報今日要交，不過你仲有時間核對地點、所有權同貨品狀況。
+
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Shelf count against the books
+  title_zh: 货架数量对不上账
+  title_zh_hk: 貨架數量對唔上帳
+  row1_en: Ledger quantity
+  row1_zh: 账簿数量
+  row1_zh_hk: 帳簿數量
+  row2_en: Cost per pouch
+  row2_zh: 每个成本
+  row2_zh_hk: 每個成本
+  row3_en: Ordinary shelves
+  row3_zh: 普通货架
+  row3_zh_hk: 一般貨架
+  col1_en: Record
+  col1_zh: 记录
+  col1_zh_hk: 紀錄
+  col2_en: Amount
+  col2_zh: 金额或数量
+  col2_zh_hk: 金額或數量
+  c11_en: Company-wide
+  c11_zh: 全公司
+  c11_zh_hk: 全公司
+  c12: '1,000'
+  c21_en: HK$ per pouch
+  c21_zh: 港元每个
+  c21_zh_hk: 港元每個
+  c22: '80'
+  c31_en: Counted so far
+  c31_zh: 目前点到
+  c31_zh_hk: 目前點到
+  c32: '900'
+  highlight_s3: row3
+  footer_en: '1,000 × 80 = 80,000 still unchecked'
+  footer_zh: '1,000 × 80＝80,000，差异尚未核对'
+  footer_zh_hk: '1,000 × 80＝80,000，差異尚未核對'
+  s1_en: The books and the ordinary shelves do not yet say the same thing.
+  s1_zh: 账簿和普通货架，现在还对不上。
+  s1_zh_hk: 帳簿同一般貨架，而家仲對唔上。
+  s2_en: The ledger records one thousand fabric pouches, at a cost of eighty Hong Kong dollars each. That carrying amount is eighty thousand.
+  s2_zh: 账簿记着一千个布袋，每个成本八十港元。账面金额是八万。
+  s2_zh_hk: 帳簿記住一千個布袋，每個成本八十港元。帳面金額係八萬。
+  s3_en: Ordinary shelves hold nine hundred. One hundred pouches are not on those shelves yet. Do not turn that gap into a loss before you know where they are.
+  s3_zh: 普通货架只有九百个。还有一百个不在这些货架上。在查清位置之前，不要把这个差额记成损失。
+  s3_zh_hk: 一般貨架得九百個。仲有一百個唔喺呢啲貨架上。未查清位置之前，唔好將呢個差額記成損失。
+
+- id: term
+  visual: definition_card
+  seconds: 16
+  kicker: Rule
+  kicker_en: Rule
+  kicker_zh: 规则
+  kicker_zh_hk: 規則
+  title_en: Cost and net realisable value
+  title_zh: 成本和可变现净值
+  title_zh_hk: 成本同可變現淨值
+  formula_en: Lower of cost and NRV
+  formula_zh: 成本与可变现净值孰低
+  formula_zh_hk: 成本與可變現淨值孰低
+  gloss_en: 'NRV = selling price − necessary costs'
+  gloss_zh: 可变现净值＝预计售价−必要成本
+  gloss_zh_hk: 可變現淨值＝估計售價−必要成本
+  s1_en: Inventory is carried at the lower of cost and net realisable value. A missing unit and a unit worth less are different problems.
+  s1_zh: 存货按成本和可变现净值孰低计量。货少了，和货还在但价值下降了，是两件不同的事。
+  s1_zh_hk: 存貨按成本同可變現淨值兩者中嘅較低者計量。貨少咗，同貨仲喺度但價值跌咗，係兩件唔同嘅事。
+  s2_en: Net realisable value is the estimated selling price minus the necessary completion and selling costs. Those necessary costs are not limited to incremental costs.
+  s2_zh: 可变现净值是预计售价减去必要的完工和销售成本。这些必要成本，不限于增量成本。
+  s2_zh_hk: 可變現淨值係估計售價減去必要嘅完工同銷售成本。呢啲必要成本，唔限於增量成本。
+
+- id: pause1
+  visual: title_card
+  seconds: 14
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Book the shortage now?
+  title_zh: 现在就记盘亏吗？
+  title_zh_hk: 而家就記短缺嗎？
+  en: Record an eight-thousand-dollar shortage now, leave the gap unresolved, or reconcile first? Pause here and vote.
+  zh: 现在就确认八千港元盘亏，先注明未查清，还是先把地点和所有权核对完？在这里暂停，投个票。
+  zh_hk: 而家就確認八千港元短缺，先註明未查清，定係先將地點同所有權核對完？喺度暫停，投個票。
+
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 32
+  kicker: New fact
+  kicker_en: New fact
+  kicker_zh: 新事实
+  kicker_zh_hk: 新事實
+  title_en: The hundred are still ours
+  title_zh: 那一百个仍是公司的
+  title_zh_hk: 嗰一百個仍係公司嘅
+  step1_en: '900 + 60 + 40 = 1,000'
+  step1_zh: '900＋60＋40＝1,000'
+  step1_zh_hk: '900＋60＋40＝1,000'
+  step2_en: 60 in transit, still owned
+  step2_zh: 在途 60 件，仍属公司
+  step2_zh_hk: 在途 60 件，仍屬公司
+  step3_en: 40 damaged, no safety defect
+  step3_zh: 40 件有瑕疵，无安全缺陷
+  step3_zh_hk: 40 件有損，冇安全缺陷
+  step4_en: 'Price 40; necessary costs 10'
+  step4_zh: 售价 40，必要成本 10
+  step4_zh_hk: 售價 40，必要成本 10
+  s1_en: The count is nine hundred on the ordinary shelves, sixty moving between the company's own locations, and forty in the inspection cupboard. That is one thousand. Nothing is missing.
+  s1_zh: 普通货架九百，公司自己仓库之间在途六十，检验柜四十。加起来是一千。一件都没少。
+  s1_zh_hk: 一般貨架九百，公司自己倉庫之間在途六十，檢查櫃四十。加埋係一千。一件都冇少。
+  s2_en: The sixty in transit are still company-owned at the cutoff. A transfer between our own locations is not a sale. Do not count those pouches twice.
+  s2_zh: 截止时，这六十个在途布袋仍是公司的。本公司地点之间的调拨不是销售。这六十个不要算两次。
+  s2_zh_hk: 截止時，呢六十個在途布袋仍然係公司嘅。本公司地點之間嘅調撥唔係銷售。呢六十個唔好計兩次。
+  s3_en: The forty were counted separately because of cosmetic damage. There is no safety defect. They can be sold honestly as seconds, and they are not also sitting in the nine hundred.
+  s3_zh: 这四十个因为外观瑕疵，单独放在检验柜，没有安全缺陷。可以如实当作次品卖，而且没有重复计入那九百个。
+  s3_zh_hk: 呢四十個因為外觀有損，單獨放喺檢查櫃，冇安全缺陷。可以如實當次貨賣，而且冇重複計入嗰九百個。
+  s4_en: >-
+    The reviewed selling price for each damaged pouch is forty dollars. Necessary completion and selling costs are ten dollars in total. The nine hundred and sixty undamaged pouches can still recover at least their cost.
+  s4_zh: >-
+    每个有瑕疵布袋，复核后的预计售价是四十港元。必要的完工和销售成本合计十港元。九百六十个完好布袋，可收回价值不低于成本。
+  s4_zh_hk: >-
+    每個有損布袋，覆核後嘅估計售價係四十港元。必要嘅完工同銷售成本合共十港元。九百六十個無損布袋，可收回價值唔低於成本。
+
+- id: pause2
+  visual: title_card
+  seconds: 14
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Keep the eighty thousand?
+  title_zh: 还能维持八万吗？
+  title_zh_hk: 仲可以維持八萬嗎？
+  en: Nothing is missing. Can the books stay at eighty thousand? Work out the damaged net realisable value, then the revised carrying amount. Pause and calculate.
+  zh: 数量没有遗失。账面还能维持八万吗？先算有瑕疵货品的可变现净值，再算修订后的存货金额。请暂停，自己算一遍。
+  zh_hk: 數量冇遺失。帳面仲可以維持八萬嗎？先計有損貨品嘅可變現淨值，再計修訂後嘅存貨金額。暫停，自己計一次。
+
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 32
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Value the damaged pouches
+  title_zh: 给有瑕疵的货计价
+  title_zh_hk: 為有損嘅貨計價
+  step1_en: 'NRV: 40 − 10 = 30'
+  step1_zh: 可变现净值：40−10＝30
+  step1_zh_hk: 可變現淨值：40−10＝30
+  step2_en: 'Write-down: 40 × (80 − 30) = 2,000'
+  step2_zh: 存货跌价：40×(80−30)＝2,000
+  step2_zh_hk: 存貨撇減：40×(80−30)＝2,000
+  step3_en: '960 × 80 + 40 × 30 = 78,000'
+  step3_zh: '960×80＋40×30＝78,000'
+  step3_zh_hk: '960×80＋40×30＝78,000'
+  s1_en: Net realisable value of each damaged pouch is forty dollars minus ten dollars of necessary costs. That is thirty dollars, which is below the eighty-dollar cost.
+  s1_zh: 每个有瑕疵布袋的可变现净值，是四十减十港元必要成本，等于三十。这低于八十港元的成本。
+  s1_zh_hk: 每個有損布袋嘅可變現淨值，係四十減十港元必要成本，等於三十。呢個低過八十港元嘅成本。
+  s2_en: The write-down is forty pouches times the fifty-dollar gap. That is two thousand. It is an inventory write-down, not an eight-thousand-dollar shortage.
+  s2_zh: 存货跌价是四十个乘以五十港元的差额，等于两千。这是存货跌价，不是八千港元的盘亏。
+  s2_zh_hk: 存貨撇減係四十個乘以五十港元嘅差額，等於兩千。呢個係存貨撇減，唔係八千港元嘅短缺。
+  s3_en: Nine hundred and sixty undamaged pouches stay at eighty dollars. Forty damaged pouches are carried at thirty. The revised carrying amount is seventy-eight thousand.
+  s3_zh: 九百六十个完好布袋仍按八十港元。四十个有瑕疵的按三十港元。修订后的账面金额是七万八千。
+  s3_zh_hk: 九百六十個無損布袋仍然按八十港元。四十個有損嘅按三十港元。修訂後嘅帳面金額係七萬八千。
+
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: One adjustment, not two
+  title_zh: 只保留一项扣减
+  title_zh_hk: 只保留一項扣減
+  step1_en: No HK$8,000 shortage
+  step1_zh: 不支持八千港元盘亏
+  step1_zh_hk: 不支持八千港元短缺
+  step2_en: HK$2,000 write-down supported
+  step2_zh: 支持两千港元存货跌价
+  step2_zh_hk: 支持兩千港元存貨撇減
+  step3_en: No cash leaves today
+  step3_zh: 今天没有付出现金
+  step3_zh_hk: 今日冇付出現金
+  s1_en: The reconciled count does not support an eight-thousand-dollar shortage. If that shortage was booked earlier, correct it once the facts are known.
+  s1_zh: 核对之后，不支持八千港元的盘亏。如果先前暂记了盘亏，查清事实后要先更正。
+  s1_zh_hk: 核對之後，不支持八千港元嘅短缺。如果早前暫記咗短缺，查清事實之後要先更正。
+  s2_en: The supported adjustment is the two-thousand-dollar write-down. Do not keep both deductions. The same pouches would be removed twice.
+  s2_zh: 有证据支持的是两千港元存货跌价。两项扣减不能同时保留，否则同一批货会被减两次。
+  s2_zh_hk: 有證據支持嘅係兩千港元存貨撇減。兩項扣減唔可以同時保留，否則同一批貨會被減兩次。
+  s3_en: A write-down changes the carrying amount. It is not a cash payment today.
+  s3_zh: 存货跌价改变的是账面金额。它不是今天付出去的现金。
+  s3_zh_hk: 存貨撇減改變嘅係帳面金額。佢唔係今日付出去嘅現金。
+
+- id: check
+  visual: title_card
+  seconds: 22
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 追问
+  kicker_zh_hk: 追問
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If you valued the damaged pouches at forty dollars and ignored the ten dollars of necessary costs, what net realisable value would you overstate? If the sixty in transit belonged to a customer, which quantity would no longer be ours?
+  zh: >-
+    如果给有瑕疵的布袋按四十港元计价，漏掉十港元必要成本，可变现净值会被高估多少？如果在途的六十个其实属于客户，哪一部分数量就不再是公司的？
+  zh_hk: >-
+    如果有損布袋按四十港元計價，漏咗十港元必要成本，可變現淨值會被高估幾多？如果在途嘅六十個其實屬於客戶，邊一部分數量就唔再係公司嘅？
+
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Count first, then value
+  title_zh: 先核数量，再核价值
+  title_zh_hk: 先核數量，再核價值
+  q1_en: Ownership from the count and records
+  q1_zh: 用盘点和调拨确认所有权
+  q1_zh_hk: 用盤點同調撥確認所有權
+  q2_en: Carrying amount HK$78,000
+  q2_zh: 修订账面金额七万八千
+  q2_zh_hk: 修訂帳面金額七萬八千
+  s1_en: Use the physical count and the dated transfer records to see which units the company still owns, including stock in transit between its own locations.
+  s1_zh: 用实物盘点和带日期的调拨记录，确认截止时哪些货仍属公司，包括本公司地点之间的在途货。
+  s1_zh_hk: 用實物盤點同有日期嘅調撥紀錄，確認截止時邊啲貨仍然屬公司，包括本公司地點之間嘅在途貨。
+  s2_en: Then use condition, expected selling price and necessary completion and selling costs. A complete count does not prove every unit is still worth its cost.
+  s2_zh: 然后再看货况、预计售价和必要的完工及销售成本。数量点齐了，不等于每件仍值原来的成本。
+  s2_zh_hk: 然後再睇貨況、估計售價同必要嘅完工及銷售成本。數量點齊咗，唔等於每件仲值原來嘅成本。
+  s3_en: On these facts the revised carrying amount is seventy-eight thousand. Record the estimates, and review them when better evidence arrives.
+  s3_zh: 按这些事实，修订后的账面金额是七万八千港元。把估计记录下来，有更好的证据时再复核。
+  s3_zh_hk: 按呢啲事實，修訂後嘅帳面金額係七萬八千港元。將估計記錄低，有更好嘅證據時再覆核。

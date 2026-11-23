@@ -1,0 +1,248 @@
+id: ACC-05
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+duration_target_s: 206
+title_en: Over budget. Out of control?
+title_zh: 支出超预算，就说明成本失控吗？
+title_zh_hk: 成本超支，是否已經失控？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 20
+  kicker: ACC-05
+  kicker_en: ACC-05
+  kicker_zh: ACC-05
+  kicker_zh_hk: ACC-05
+  title_en: Over budget. Out of control?
+  title_zh: 支出超预算，就说明成本失控吗？
+  title_zh_hk: 成本超支，是否已經失控？
+  image: art/over-budget-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Would you tighten next month's ingredient cap because this month went over plan? This fictional Hong Kong kitchen makes one kind of lunch box. Only ingredients are in view. Labour, rent and packaging are outside this decision.
+  zh: >-
+    食材开支比原预算高，就要收紧下月的上限吗？这是一家虚构的香港午餐厨房，只做一种盒饭。本题只看食材，不包括人工、租金和包装。
+  zh_hk: >-
+    食材開支比原預算高，就要收緊下月嘅上限嗎？呢間係虛構嘅香港午餐廚房，只做一種盒飯。呢題只睇食材，不包括人工、租金同包裝。
+
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Original plan against actual
+  title_zh: 原计划对照实际耗用
+  title_zh_hk: 原計劃對照實際耗用
+  row1_en: Planned boxes
+  row1_zh: 计划盒数
+  row1_zh_hk: 計劃盒數
+  row2_en: Ingredient standard
+  row2_zh: 食材标准
+  row2_zh_hk: 食材標準
+  row3_en: Ingredients consumed
+  row3_zh: 食材耗用成本
+  row3_zh_hk: 食材耗用成本
+  col1_en: Plan
+  col1_zh: 原计划
+  col1_zh_hk: 原計劃
+  col2_en: This month
+  col2_zh: 本月
+  col2_zh_hk: 本月
+  c11: '1,000'
+  c12_en: Not yet
+  c12_zh: 尚未公布
+  c12_zh_hk: 尚未公布
+  c21: '20'
+  c22: '20'
+  c31: '20,000'
+  c32: '23,000'
+  highlight_s3: c32
+  footer_en: '23,000 is consumption, not purchases'
+  footer_zh: 二万三千是耗用，不是采购
+  footer_zh_hk: 二萬三千是耗用，不是採購
+  s1_en: Start with the original ingredient plan. The actual number of boxes is still hidden.
+  s1_zh: 先看原来的食材计划。实际做了多少盒，先不公布。
+  s1_zh_hk: 先睇原來嘅食材計劃。實際做咗幾多盒，先唔公布。
+  s2_en: The kitchen planned one thousand identical boxes, at twenty dollars of ingredients each. The original ingredient budget is twenty thousand.
+  s2_zh: 厨房原计划做一千盒同样的盒饭，每盒食材标准二十港元。原预算的食材耗用成本是两万。
+  s2_zh_hk: 廚房原計劃做一千盒同樣嘅盒飯，每盒食材標準二十港元。原預算嘅食材耗用成本係兩萬。
+  s3_en: Ingredients actually consumed cost twenty-three thousand. That is three thousand above the original plan. This figure is consumption, not what the kitchen purchased.
+  s3_zh: 实际食材耗用是两万三千，比原计划高三千。这个数字是耗用，不是采购金额。
+  s3_zh_hk: 實際食材耗用係二萬三千，比原計劃高三千。呢個數字係耗用，唔係採購金額。
+
+- id: pause1
+  visual: title_card
+  seconds: 14
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Tighten, accept, or check?
+  title_zh: 收紧、接受，还是先查？
+  title_zh_hk: 收緊、接受，定係先查？
+  en: Would you tighten the cap now, accept the overspend, or investigate first? What amount of work did twenty-three thousand dollars support? Pause and vote.
+  zh: 你是立刻收紧上限，接受这笔超支，还是先调查？两万三千港元的食材耗用，对应多少盒饭？在这里暂停，投个票。
+  zh_hk: 你係即刻收緊上限，接受呢筆超支，定係先調查？二萬三千港元嘅食材耗用，對應幾多盒飯？喺度暫停，投個票。
+
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: New fact
+  kicker_en: New fact
+  kicker_zh: 新事实
+  kicker_zh_hk: 新事實
+  title_en: The kitchen made more boxes
+  title_zh: 厨房多做了盒饭
+  title_zh_hk: 廚房多做咗盒飯
+  step1_en: 'Made and sold: 1,200 boxes'
+  step1_zh: 制作并售出 1,200 盒
+  step1_zh_hk: 製作並售出 1,200 盒
+  step2_en: Extra orders were approved
+  step2_zh: 追加订单已经批准
+  step2_zh_hk: 追加訂單已經批准
+  step3_en: Same recipe and quality
+  step3_zh: 配方、份量和质量不变
+  step3_zh_hk: 食譜、份量同質素不變
+  step4_en: Standard stays HK$20 per box
+  step4_zh: 标准仍是每盒 HK$20
+  step4_zh_hk: 標準仍然係每盒 HK$20
+  s1_en: The kitchen made and sold one thousand two hundred boxes, not one thousand.
+  s1_zh: 厨房实际制作并售出一千二百盒，不是一千盒。
+  s1_zh_hk: 廚房實際製作並售出一千二百盒，唔係一千盒。
+  s2_en: The extra orders were approved. Output changed because the kitchen was asked to do more.
+  s2_zh: 多出来的订单已经批准。产量变了，是因为厨房被要求多做。
+  s2_zh_hk: 多出嚟嘅訂單已經批准。產量變咗，係因為廚房被要求多做。
+  s3_en: The recipe, the portion and the required quality are unchanged. Do not treat a cost difference as a reason to lower food quality or safety.
+  s3_zh: 配方、份量和质量要求都没有变。不要因为成本差异，就降低食品质量或安全要求。
+  s3_zh_hk: 食譜、份量同質素要求都冇變。唔好因為成本差異，就降低食物質素或安全要求。
+  s4_en: The ingredient standard is still twenty dollars a box, and it is valid across this range of output. The cause of any remaining difference is not yet known.
+  s4_zh: 食材标准仍是每盒二十港元，在这个产量范围内仍然适用。多出来或少掉的部分，原因还没有拆开。
+  s4_zh_hk: 食材標準仍然係每盒二十港元，喺呢個產量範圍內仍然適用。多咗或者少咗嘅部分，原因仲未拆開。
+
+- id: pause2
+  visual: title_card
+  seconds: 14
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: What does 1,200 boxes allow?
+  title_zh: 一千二百盒允许多少？
+  title_zh_hk: 一千二百盒容許幾多？
+  en: At one thousand two hundred boxes, what ingredient cost does the original rule allow? Is twenty-three thousand above or below that benchmark? Pause and calculate.
+  zh: 按原来的每盒标准，一千二百盒的食材耗用成本应该是多少？实际的两万三千，高于还是低于这个基准？请暂停，自己算一遍。
+  zh_hk: 按原來嘅每盒標準，一千二百盒嘅食材耗用成本應該係幾多？實際嘅二萬三千，高過定低過呢個基準？暫停，自己計一次。
+
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 34
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Flexible-budget benchmark
+  title_zh: 弹性预算的基准
+  title_zh_hk: 彈性預算嘅基準
+  step1_en: '1,200 × 20 = 24,000'
+  step1_zh: '1,200 × 20＝24,000'
+  step1_zh_hk: '1,200 × 20＝24,000'
+  step2_en: '24,000 − 23,000 = 1,000 favourable'
+  step2_zh: '24,000 − 23,000＝1,000 有利差异'
+  step2_zh_hk: '24,000 − 23,000＝1,000 有利差異'
+  step3_en: '200 × 20 − 1,000 = 3,000 over plan'
+  step3_zh: '200 × 20 − 1,000＝比原计划多 3,000'
+  step3_zh_hk: '200 × 20 − 1,000＝比原計劃多 3,000'
+  s1_en: A flexible budget asks what the original standard allows at the output actually made. Twelve hundred times twenty dollars is twenty-four thousand.
+  s1_zh: 弹性预算问的是：按原来的单位标准，做到实际产量时，食材耗用成本应是多少。一千二百乘以二十，是两万四千。
+  s1_zh_hk: 彈性預算問嘅係：按原來嘅單位標準，做到實際產量時，食材耗用成本應係幾多。一千二百乘以二十，係二萬四千。
+  s2_en: Actual consumption is twenty-three thousand. Against the flexible benchmark, that is one thousand favourable.
+  s2_zh: 实际食材耗用是两万三千。对照弹性预算的基准，这是一千港元的有利差异。
+  s2_zh_hk: 實際食材耗用係二萬三千。對照彈性預算嘅基準，呢個係一千港元嘅有利差異。
+  s3_en: >-
+    The extra two hundred boxes, at twenty dollars, are four thousand of output effect. Take off the one thousand favourable difference and the cost is still three thousand above the original twenty-thousand plan. Both statements can be true.
+  s3_zh: >-
+    多做的二百盒，按二十港元，产量影响是四千。减去一千的有利差异，食材耗用仍比原来的两万计划高三千。两句话可以同时成立。
+  s3_zh_hk: >-
+    多做嘅二百盒，按二十港元，產量影響係四千。減走一千嘅有利差異，食材耗用仍然比原來嘅兩萬計劃高三千。兩句說話可以同時成立。
+
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Favourable is not a verdict
+  title_zh: 有利差异不是定论
+  title_zh_hk: 有利差異唔係定論
+  step1_en: Favourable 1,000 is not proof
+  step1_zh: 有利一千，尚未证明更有效率
+  step1_zh_hk: 有利一千，尚未證明更有效率
+  step2_en: Price, usage and waste are still mixed
+  step2_zh: 价格、用量和浪费尚未分开
+  step2_zh_hk: 價格、用量同浪費尚未分開
+  step3_en: No profit figure is in the case
+  step3_zh: 题目没有整体利润
+  step3_zh_hk: 題目冇整體利潤
+  s1_en: One thousand favourable does not prove the kitchen became more efficient. It only says consumption beat this ingredient benchmark.
+  s1_zh: 一千港元的有利差异，不能证明厨房变得更有效率。它只说明食材耗用低于这个基准。
+  s1_zh_hk: 一千港元嘅有利差異，唔能夠證明廚房變得更有效率。佢只說明食材耗用低過呢個基準。
+  s2_en: The total does not separate price, usage and waste. Those still have to be investigated, and the standard itself has to be checked.
+  s2_zh: 这个总数分不开价格、用量和浪费。这三项仍要查，食材标准本身也要核对。
+  s2_zh_hk: 呢個總數分唔開價格、用量同浪費。呢三項仍要查，食材標準本身亦要核對。
+  s3_en: There is no selling price, labour, rent or other cost here, so do not infer that profit is higher. Keep the recipe, portion, quality and safety as given.
+  s3_zh: 题目没有售价、人工、租金和其他成本，所以不能推断整体利润更高。配方、份量、质量和安全要求保持不变。
+  s3_zh_hk: 題目冇售價、人工、租金同其他成本，所以唔可以推論整體利潤更高。食譜、份量、質素同安全要求保持不變。
+
+- id: check
+  visual: title_card
+  seconds: 22
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 追问
+  kicker_zh_hk: 追問
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If you flexed the fixed rent by the same box count, what cost would you pretend can change with output? Flexing this ingredient comparison does not give permission to spend, and it does not by itself tighten or loosen the cap.
+  zh: >-
+    如果把固定租金也按盒数同样调整，你把哪一项其实不随产量变动的成本，当成了可以跟着变？调整食材的比较基准，本身不是开支授权，也不会自动收紧或放宽上限。
+  zh_hk: >-
+    如果將固定租金都按盒數同樣調整，你將邊一項其實唔隨產量變動嘅成本，當成咗可以跟着變？調整食材嘅比較基準，本身唔係開支授權，亦唔會自動收緊或放寬上限。
+
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Compare the approved output
+  title_zh: 先按已批准的产量比较
+  title_zh_hk: 先按已批准嘅產量比較
+  q1_en: Above plan, below the flexed benchmark
+  q1_zh: 高于原计划，低于弹性基准
+  q1_zh_hk: 高過原計劃，低過彈性基準
+  q2_en: Do not auto-flex fixed costs
+  q2_zh: 固定成本不自动调整
+  q2_zh_hk: 固定成本唔自動調整
+  s1_en: Do not set next month's cap from the static three-thousand comparison alone. First compare ingredients at the approved output.
+  s1_zh: 不要只凭比原预算高出的三千，就给下月定一个武断的上限。先按已经批准的产量，比较食材耗用。
+  s1_zh_hk: 唔好只憑比原預算高出嘅三千，就為下月定一個武斷嘅上限。先按已經批准嘅產量，比較食材耗用。
+  s2_en: Consumption is above the original twenty thousand and one thousand below the twenty-four-thousand flexible benchmark. That is the whole comparison this case supports.
+  s2_zh: 食材耗用高于原来的两万，又比两万四千的弹性预算基准低一千。本题能支持的比较，就是这些。
+  s2_zh_hk: 食材耗用高過原來嘅兩萬，又比二萬四千嘅彈性預算基準低一千。呢題能夠支持嘅比較，就係呢啲。
+  s3_en: Moving the benchmark is not authority to spend more. A fixed cost such as rent does not automatically flex with the box count.
+  s3_zh: 调整比较基准，不等于批准多花钱。租金这类固定成本，不会自动随盒数调整。
+  s3_zh_hk: 調整比較基準，唔等於批准多花錢。租金呢類固定成本，唔會自動隨盒數調整。

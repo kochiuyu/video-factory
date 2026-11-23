@@ -1,0 +1,274 @@
+id: ACC-08
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+duration_target_s: 216
+title_en: A quiet year. Less machine used?
+title_zh: 首年业务淡，机器的消耗就一定更少吗？
+title_zh_hk: 淡季少開工，機器就耗用得少嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-08
+  kicker_en: ACC-08
+  kicker_zh: ACC-08
+  kicker_zh_hk: ACC-08
+  title_en: A quiet year. Less machine used?
+  title_zh: 首年业务淡，机器的消耗就一定更少吗？
+  title_zh_hk: 淡季少開工，機器就耗用得少嗎？
+  image: art/machine-hours-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A quiet first year used fewer machine hours. Should depreciation be lower? This fictional embroidery workshop has agreed the machine's initial cost. The machine was paid for and ready on day one. This is its first full-year report, and no earlier report is being revised.
+  zh: >-
+    首年生意淡，机器开得少，折旧就一定更少吗？这家虚构刺绣作坊已经确定机器的初始成本。机器已付款，年初第一天就达到预定可使用状态。这是首份完整年度报告，没有更早的报告需要修订。
+  zh_hk: >-
+    首年生意淡，機器開得少，折舊就一定更少嗎？呢間虛構刺繡工場已經確定機器嘅初始成本。機器已付款，年初第一日就達到預定用途。呢份係首個完整年度報告，冇更早嘅報告需要修訂。
+
+- id: ledger
+  visual: table_grid
+  seconds: 28
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two patterns, one machine
+  title_zh: 同一台机器，两种模式
+  title_zh_hk: 同一部機器，兩種模式
+  row1_en: Initial cost
+  row1_zh: 初始成本
+  row1_zh_hk: 初始成本
+  row2_en: Residual value
+  row2_zh: 净残值
+  row2_zh_hk: 剩餘價值
+  row3_en: First pattern
+  row3_zh: 直线法
+  row3_zh_hk: 每年平均
+  row4_en: Second pattern
+  row4_zh: 有效机时
+  row4_zh_hk: 有效機時
+  col1_en: Basis
+  col1_zh: 依据
+  col1_zh_hk: 依據
+  col2_en: Amount
+  col2_zh: 金额或数量
+  col2_zh_hk: 金額或數量
+  c11_en: Agreed
+  c11_zh: 已经确定
+  c11_zh_hk: 已經確定
+  c12: '96,000'
+  c21_en: End-of-use estimate
+  c21_zh: 使用期末估计
+  c21_zh_hk: 使用期末估計
+  c22: '6,000'
+  c31_en: Six equal years
+  c31_zh: 六年平均
+  c31_zh_hk: 六年平均
+  c32_en: '6 years'
+  c32_zh: 6 年
+  c32_zh_hk: 6 年
+  c41_en: This year, checked
+  c41_zh: 本年已核对
+  c41_zh_hk: 本年已核對
+  c42_en: '1,800 of 18,000'
+  c42_zh: 1,800 / 共 18,000
+  c42_zh_hk: 1,800 / 共 18,000
+  footer_en: Hours are not revenue
+  footer_zh: 机时不是收入
+  footer_zh_hk: 機時唔係收入
+  s1_en: Both proposals start from the same machine. The question is the pattern of consumption, not a new purchase price.
+  s1_zh: 两个建议面对的是同一台机器。问题是消耗的模式，不是重新谈买入价。
+  s1_zh_hk: 兩個建議面對嘅係同一部機器。問題係耗用嘅模式，唔係重新講買入價。
+  s2_en: >-
+    Initial cost is ninety-six thousand. Residual value is six thousand, the estimated net disposal proceeds at today's prices if the machine were already in its expected end-of-use condition.
+  s2_zh: >-
+    初始成本是九万六千。净残值是六千，也就是按当前价格估计，机器如果已经处在预期使用期末的状态，处置可得的净额。
+  s2_zh_hk: >-
+    初始成本係九萬六千。剩餘價值係六千，即係按現時價格估計，機器如果已經處喺預期使用期末嘅狀態，處置可得嘅淨額。
+  s3_en: >-
+    The manager proposes six equal yearly charges. The supervisor proposes eighteen thousand lifetime productive hours. The checked counter shows one thousand eight hundred productive hours this year. Those hours are not power-on time, staff time or sales revenue.
+  s3_zh: >-
+    经理建议按六年直线法，每年平均计提。主管建议按总共一万八千个有效生产机时。核对过的计时器显示，本年有效生产机时是一千八百。这不是通电时间，不是员工工时，也不是销售收入。
+  s3_zh_hk: >-
+    經理建議按六年、每年平均計提。主管建議按總共一萬八千個有效生產機時。核對過嘅計時器顯示，本年有效生產機時係一千八百。呢個唔係通電時間，唔係僱員工時，亦唔係銷售收入。
+
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Equal years, or hours?
+  title_zh: 直线法，还是机时法？
+  title_zh_hk: 每年平均，定係機時法？
+  en: Would you provisionally use equal yearly charges, or productive hours? Calculate each first-year charge, and name the evidence that would change your choice. Pause and vote.
+  zh: 你暂时会选直线法，还是有效生产机时？先算两种首年折旧，再说什么证据会让你改选。在这里暂停，投个票。
+  zh_hk: 你暫時會揀每年平均，定係有效生產機時？先計兩種首年折舊，再講咩證據會令你改揀。喺度暫停，投個票。
+
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 30
+  kicker: New fact
+  kicker_en: New fact
+  kicker_zh: 新事实
+  kicker_zh_hk: 新事實
+  title_en: Not the counter alone
+  title_zh: 要看评估，不只看计时器
+  title_zh_hk: 要睇評估，唔只睇計時器
+  step1_en: 'Productive hours: 18,000'
+  step1_zh: 有效生产机时：18,000
+  step1_zh_hk: 有效生產機時：18,000
+  step2_en: Idle loss is not material
+  step2_zh: 闲置损耗并不重大
+  step2_zh_hk: 閒置損耗並不重大
+  step3_en: '16,200 hours over 5 years'
+  step3_zh: 余下 16,200 机时，未来 5 年用完
+  step3_zh_hk: 餘下 16,200 機時，未來 5 年用完
+  step4_en: Residual stays HK$6,000
+  step4_zh: 净残值仍是 HK$6,000
+  step4_zh_hk: 剩餘價值仍然係 HK$6,000
+  s1_en: >-
+    Before the report is final, an independent technical assessment looks at this machine, its maintenance, its intended work and the counter. It supports about eighteen thousand productive hours as the best available picture of consumption.
+  s1_zh: >-
+    报告定稿前，一项独立技术评估检查了这台机器、维护安排、预定用途和计时器。评估支持，大约一万八千个有效生产机时，是目前最能反映消耗的估计。
+  s1_zh_hk: >-
+    報告定稿前，一項獨立技術評估檢查咗呢部機器、保養安排、預定用途同計時器。評估支持，大約一萬八千個有效生產機時，係目前最能夠反映耗用嘅估計。
+  s2_en: For this estimate, idle deterioration is not material. No time limit is expected to retire the machine before those hours are used. The quiet first year is the planned ramp-up.
+  s2_zh: 就这项估计而言，闲置损耗并不重大。预计也不会在机时用完之前，因为时间限制而退出使用。首年清淡，是按计划逐步增加工作。
+  s2_zh_hk: 就呢項估計而言，閒置損耗並不重大。預計亦唔會喺機時用完之前，因為時間限制而退出使用。首年清淡，係按計劃逐步增加工作。
+  s3_en: The updated schedule supports using the remaining sixteen thousand two hundred hours over the next five years.
+  s3_zh: 更新后的排产支持在未来五年用完余下的一万六千二百个机时。
+  s3_zh_hk: 更新後嘅排產支持喺未來五年用完餘下嘅一萬六千二百個機時。
+  s4_en: Residual value stays six thousand. A reliable counter measures activity. By itself it does not prove how the machine wears when it is idle, or whether it will be obsolete early. That is what the assessment adds.
+  s4_zh: 净残值仍是六千。可靠的计时器能量度活动。单凭它，不能判断机器闲置时会否损耗，也不能判断会否提前淘汰。评估补上的就是这一点。
+  s4_zh_hk: 剩餘價值仍然係六千。可靠嘅計時器能量度活動。單憑佢，唔能夠判斷機器閒置時會否損耗，亦唔能夠判斷會否提前淘汰。評估補上嘅就係呢一點。
+
+- id: pause2
+  visual: title_card
+  seconds: 14
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决定
+  kicker_zh_hk: 決定
+  title_en: Which pattern is supported?
+  title_zh: 证据支持哪一种？
+  title_zh_hk: 證據支持邊一種？
+  en: Which pattern does the new evidence support? Give the depreciation charge and the carrying amount. Is the counter alone enough? Pause and calculate.
+  zh: 新的证据支持直线法，还是有效生产机时？请给出折旧和账面价值。只有计时器，够不够？请暂停，自己算一遍。
+  zh_hk: 新嘅證據支持每年平均，定係有效生產機時？請畀出折舊同帳面值。只有計時器，夠唔夠？暫停，自己計一次。
+
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 36
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Same depreciable amount
+  title_zh: 应计折旧额相同
+  title_zh_hk: 可折舊金額相同
+  step1_en: '96,000 − 6,000 = 90,000'
+  step1_zh: '96,000 − 6,000＝90,000'
+  step1_zh_hk: '96,000 − 6,000＝90,000'
+  step2_en: 'Yearly: 90,000 / 6 = 15,000'
+  step2_zh: 直线法：90,000 / 6＝15,000
+  step2_zh_hk: 每年平均：90,000 / 6＝15,000
+  step3_en: 'Per hour: 90,000 / 18,000 = 5'
+  step3_zh: 每机时：90,000 / 18,000＝5
+  step3_zh_hk: 每機時：90,000 / 18,000＝5
+  step4_en: 'This year: 1,800 × 5 = 9,000'
+  step4_zh: 本年：1,800 × 5＝9,000
+  step4_zh_hk: 本年：1,800 × 5＝9,000
+  s1_en: Depreciable amount is cost minus residual value. Ninety-six thousand minus six thousand is ninety thousand. Both patterns allocate that same amount.
+  s1_zh: 应计折旧额是成本减净残值。九万六千减六千，是九万。两种模式分配的都是这九万。
+  s1_zh_hk: 可折舊金額係成本減剩餘價值。九萬六千減六千，係九萬。兩種模式分配嘅都係呢九萬。
+  s2_en: Straight-line depreciation divides by six. The first-year charge is fifteen thousand.
+  s2_zh: 直线法除以六。首年折旧是一万五千。
+  s2_zh_hk: 每年平均除以六。首年折舊係一萬五千。
+  s3_en: Productive hours divide the same ninety thousand by eighteen thousand. That is five dollars an hour.
+  s3_zh: 有效生产机时把同样的九万除以一万八千。每机时是五港元。
+  s3_zh_hk: 有效生產機時將同樣嘅九萬除以一萬八千。每機時係五港元。
+  s4_en: This year used one thousand eight hundred hours. One thousand eight hundred times five is nine thousand of depreciation.
+  s4_zh: 本年用了一千八百个有效生产机时。一千八百乘以五，折旧是九千。
+  s4_zh_hk: 本年用咗一千八百個有效生產機時。一千八百乘以五，折舊係九千。
+
+- id: carrying
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Carrying amount after the charge
+  title_zh: 计提之后的账面价值
+  title_zh_hk: 計提之後嘅帳面值
+  step1_en: 'Yearly: 96,000 − 15,000 = 81,000'
+  step1_zh: 直线法：96,000−15,000＝81,000
+  step1_zh_hk: 每年平均：96,000−15,000＝81,000
+  step2_en: 'Hours: 96,000 − 9,000 = 87,000'
+  step2_zh: 机时法：96,000−9,000＝87,000
+  step2_zh_hk: 機時法：96,000−9,000＝87,000
+  step3_en: '16,200 × 5 + 6,000 = 87,000'
+  step3_zh: '16,200 × 5＋6,000＝87,000'
+  step3_zh_hk: '16,200 × 5＋6,000＝87,000'
+  s1_en: After a fifteen-thousand straight-line charge, carrying amount is ninety-six thousand minus fifteen thousand, eighty-one thousand.
+  s1_zh: 直线法计提一万五千之后，账面价值是九万六千减一万五千，等于八万一千。
+  s1_zh_hk: 每年平均計提一萬五千之後，帳面值係九萬六千減一萬五千，等於八萬一千。
+  s2_en: After the nine-thousand hour charge, carrying amount is eighty-seven thousand. The evidence supports this pattern for the first report.
+  s2_zh: 按有效生产机时计提九千之后，账面价值是八万七千。首份报告的证据支持这种模式。
+  s2_zh_hk: 按有效生產機時計提九千之後，帳面值係八萬七千。首份報告嘅證據支持呢種模式。
+  s3_en: The remaining sixteen thousand two hundred hours, at five dollars, plus the six-thousand residual, also come to eighty-seven thousand. The lower charge is not cash saved, and it is not a rise in market value.
+  s3_zh: 余下的一万六千二百机时，每小时五港元，加上六千净残值，同样是八万七千。少提的六千不是省下的现金，也不是市价上升。
+  s3_zh_hk: 餘下嘅一萬六千二百機時，每小時五港元，加上六千剩餘價值，同樣係八萬七千。少提嘅六千唔係省低嘅現金，亦唔係市價上升。
+
+- id: check
+  visual: title_card
+  seconds: 20
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 追问
+  kicker_zh_hk: 追問
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If idle deterioration were material, or a time limit would retire the machine first, which pattern would you have to reopen? If a later year used more hours, why would the hour method not stay the cheaper one?
+  zh: >-
+    如果闲置损耗变得重大，或者时间限制会让机器更早退出，哪一种模式要重新考虑？如果以后某一年的有效生产机时更多，为什么机时法不会一直是费用更低的那一种？
+  zh_hk: >-
+    如果閒置損耗變得重大，或者時間限制會令機器更早退出，邊一種模式要重新考慮？如果以後某一年嘅有效生產機時更多，點解機時法唔會一直係開支更低嘅那一種？
+
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Follow the consumption evidence
+  title_zh: 按消耗的证据选择
+  title_zh_hk: 按耗用嘅證據選擇
+  q1_en: 'Hours: charge 9,000; carrying 87,000'
+  q1_zh: 机时法：折旧九千，账面八万七
+  q1_zh_hk: 機時法：折舊九千，帳面八萬七
+  q2_en: Review the pattern when evidence changes
+  q2_zh: 证据变了就复核模式
+  q2_zh_hk: 證據變咗就覆核模式
+  s1_en: For this first report, use productive hours. Depreciation is nine thousand and the carrying amount is eighty-seven thousand.
+  s1_zh: 这份首年报告采用有效生产机时。折旧是九千，账面价值是八万七千。
+  s1_zh_hk: 呢份首年報告採用有效生產機時。折舊係九千，帳面值係八萬七千。
+  s2_en: The counter measures the hours. The assessment is what supports the consumption pattern. Do not choose the method because the expense looks smaller.
+  s2_zh: 计时器量度的是机时。支持消耗模式的是技术评估。不要因为费用数字更好看就选这种方法。
+  s2_zh_hk: 計時器量度嘅係機時。支持耗用模式嘅係技術評估。唔好因為開支數字更好睇就揀呢種方法。
+  s3_en: When life, residual value or the pattern of use changes, review the estimate. Productive hours are not revenue, and depreciation here does not go into inventory.
+  s3_zh: 使用寿命、净残值或消耗模式变了，就要复核估计。有效生产机时不是收入。本题的服务已经交付，折旧不计入存货。
+  s3_zh_hk: 可使用年期、剩餘價值或耗用模式變咗，就要覆核估計。有效生產機時唔係收入。呢題嘅服務已經交付，折舊唔計入存貨。

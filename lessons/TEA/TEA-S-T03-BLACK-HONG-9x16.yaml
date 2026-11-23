@@ -1,0 +1,92 @@
+# Vertical Shorts preview sample. Not a production landscape lesson.
+# Not catalog-ready. Do not treat this file as a 16:9 lesson.
+# On-screen lines and speech are the locked wording. Pictures have no text.
+# Official cards are contain-fit. Seconds are slides-only preview holds.
+id: TEA-S-T03-BLACK-HONG-9x16
+format: "9:16"
+clock: own
+title_en: Black tea is 紅茶
+title_zh: 红茶不是黑茶
+title_zh_hk: 紅茶不是黑茶
+duration_target_s: 60
+beats:
+- id: hook
+  visual: still_image
+  seconds: 12
+  image: art/t03-hook.png
+  title_en: |
+    Is black tea 黑茶?
+    In Chinese, it is not called 黑茶.
+  title_zh: |
+    红茶是黑茶吗？
+    英文里的 black tea，中文不叫黑茶。
+  title_zh_hk: |
+    紅茶是黑茶嗎？
+    英文裏的 black tea，中文不叫黑茶。
+  en: Is black tea 黑茶? In Chinese, the tea you know as black tea is not called 黑茶.
+  zh: 红茶是黑茶吗？英文里的 black tea，中文并不叫黑茶。
+  zh_hk: 紅茶係黑茶嗎？英文嘅 black tea，中文唔叫黑茶。
+- id: cup
+  visual: still_image
+  seconds: 10
+  image: art/t03-cup.png
+  title_en: |
+    Look at the cup
+    Amber to deep red-brown.
+  title_zh: |
+    看看这杯茶
+    茶汤是琥珀到深红棕色的。
+  title_zh_hk: |
+    看看這杯茶
+    茶湯是琥珀到深紅棕色的。
+  en: Look at the cup. The liquor is often a deep red-brown.
+  zh: 看看这杯茶。茶汤常常是琥珀到深红棕色的。
+  zh_hk: 睇吓呢杯茶。茶湯好多時係琥珀到深紅棕色。
+- id: name
+  visual: still_image
+  seconds: 10
+  image: art/t03-name.png
+  title_en: |
+    This is 紅茶
+    That is the Chinese name for black tea.
+  title_zh: |
+    这就是红茶
+    英文 black tea，中文叫红茶。
+  title_zh_hk: |
+    這就是紅茶
+    英文 black tea，中文叫紅茶。
+  en: In Chinese, this tea is called 紅茶.
+  zh: 这种茶，中文叫红茶。
+  zh_hk: 呢種茶，中文叫紅茶。
+- id: cake
+  visual: still_image
+  seconds: 10
+  image: art/t03-cake.png
+  title_en: |
+    This is 黑茶
+    Dark tea, such as Pu-erh, is a different family.
+  title_zh: |
+    这才是黑茶
+    普洱这类黑茶，是另一类茶。
+  title_zh_hk: |
+    這才是黑茶
+    普洱這類黑茶，是另一類茶。
+  en: This is 黑茶. Dark tea, such as Pu-erh, is a different family.
+  zh: 这才是黑茶。普洱这类黑茶，是另一类茶。
+  zh_hk: 呢個先至係黑茶。普洱呢類黑茶，係另一類茶。
+- id: takeaway
+  visual: still_image
+  seconds: 10
+  image: art/t03-takeaway.png
+  title_en: |
+    Black tea is 紅茶
+    Dark tea is 黑茶.
+  title_zh: |
+    英文 black tea 是红茶
+    Dark tea 是黑茶。
+  title_zh_hk: |
+    英文 black tea 是紅茶
+    Dark tea 是黑茶。
+  en: Black tea is 紅茶. 黑茶 is dark tea, not a translation of black tea.
+  zh: 英文 black tea 是红茶。黑茶是 dark tea，不是把 black 直接译成黑。
+  zh_hk: 英文 black tea 係紅茶。黑茶係 dark tea，唔係將 black 直接譯成黑。

@@ -135,7 +135,10 @@ def _slide_frame(path) -> tuple[int, int]:
 def _caption_metrics(frame: tuple[int, int] | None = None) -> tuple[int, int, int, int]:
     """(width, height, pill max, bottom pad). Landscape numbers stay the defaults."""
     if frame == (1080, 1920):
-        return 1080, 1920, PORTRAIT_PILL_MAX, PORTRAIT_CAPTION_PAD
+        # Same strip the slide painter reserves. Landscape keeps CAPTION_BOTTOM_PAD.
+        from slides import PHONE_CAPTION_PAD
+
+        return 1080, 1920, PORTRAIT_PILL_MAX, PHONE_CAPTION_PAD
     return 1920, 1080, CAPTION_PILL_MAX, CAPTION_BOTTOM_PAD
 
 

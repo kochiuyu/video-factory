@@ -260,7 +260,7 @@ def _paint_portrait(lesson: dict, slide: str, speech: str) -> Image.Image:
     need = mixed_textlength(draw, speech_kind, 24) + 24 + mixed_textlength(draw, speech_name, 34) + 80
     chip_w = int(min(920, max(chip_w, need)))
     x = (width - chip_w) / 2
-    chip_y = min(y + 48, height - 200 - chip_h - 24)
+    chip_y = min(y + 48, height - 80 - chip_h - 24)
     draw.rounded_rectangle((x, chip_y, x + chip_w, chip_y + chip_h), radius=14, fill=CREAM)
     kind_w = mixed_textlength(draw, speech_kind, 24)
     name_size = 36

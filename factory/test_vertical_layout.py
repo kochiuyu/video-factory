@@ -13,7 +13,9 @@ from PIL import Image
 from mux import caption_pages, caption_safe_top, stamp_caption
 from slides import (
     LAYOUT_VERSION,
+    PHONE_CAPTION_LINES,
     PHONE_CAPTION_PAD,
+    PHONE_CAPTION_SIZE,
     PHONE_SAFE_L,
     PHONE_SAFE_R,
     PHONE_SAFE_TOP,
@@ -106,10 +108,16 @@ class VerticalLayout(unittest.TestCase):
         self.assertEqual(title.size, (1080, 1920))
         self.assertEqual(table.size, (1080, 1920))
         self.assertEqual(still.size, (1080, 1920))
-        # The largest chip. Teaching content, including the footer, stops above it.
-        limit = caption_safe_top(1920, bottom_pad=PHONE_CAPTION_PAD)
-        self.assertGreater(limit, 1400)
-        self.assertLess(limit, 1700)
+        # The phone caption strip. Teaching content, including the footer, stops above it.
+        limit = caption_safe_top(
+            1920,
+            size=PHONE_CAPTION_SIZE,
+            lines=PHONE_CAPTION_LINES,
+            bottom_pad=PHONE_CAPTION_PAD,
+        )
+        self.assertLess(PHONE_CAPTION_PAD, 100)
+        self.assertGreater(limit, 1600)
+        self.assertLess(limit, 1760)
         for name, image in (("title", title), ("table", table), ("still", still)):
             bad = _offenders(image, theme, limit)
             self.assertEqual(bad, [], name)
@@ -143,6 +151,97 @@ class VerticalLayout(unittest.TestCase):
         px = still.load()
         self.assertNotIn(px[left - 12, (top + bottom) // 2], {RED, BLUE})
 
+    def _phone_limit(self):
+        return caption_safe_top(
+            1920,
+            size=PHONE_CAPTION_SIZE,
+            lines=PHONE_CAPTION_LINES,
+            bottom_pad=PHONE_CAPTION_PAD,
+        )
+
+    def _phone(self, beat):
+        lesson = {
+            "id": "PHONE-COLUMN",
+            "format": "9:16",
+            "title_en": "Column",
+            "title_zh": "栏",
+            "beats": [beat],
+        }
+        image, theme = _paint(lesson, 0)
+        self.assertEqual(image.size, (1080, 1920))
+        self.assertEqual(_offenders(image, theme, self._phone_limit()), [])
+        return image, theme
+
+    def test_long_row_labels_stack_and_short_definitions_fit(self):
+        table, theme = self._phone({
+            "id": "stack",
+            "visual": "table_grid",
+            "title_en": "Keep versus close",
+            "rows": 2,
+            "cols": 2,
+            "row1_en": "Avoidable branch costs",
+            "row2_en": "Head-office expenditure",
+            "col1_en": "Keep",
+            "col2_en": "Close",
+            "c11_en": "550,000",
+            "c12_en": "0",
+            "c21_en": "200,000",
+            "c22_en": "200,000",
+        })
+        white = theme.get("white") or (255, 255, 255)
+        px = table.load()
+        cell_left = min(
+            x for y in range(PHONE_SAFE_TOP, self._phone_limit())
+            for x in range(PHONE_SAFE_L, PHONE_SAFE_R)
+            if px[x, y] == white
+        )
+        self.assertLess(cell_left, 140)
+        cell_rows = _rows_with(table, white, PHONE_SAFE_TOP, self._phone_limit())
+        self.assertGreater(max(cell_rows) - min(cell_rows), 500)
+
+        panel, theme = self._phone({
+            "id": "define",
+            "visual": "definition_card",
+            "title_en": "How to read",
+            "formula_en": "A is the row.",
+        })
+        dense = []
+        px = panel.load()
+        for y in range(PHONE_SAFE_TOP, self._phone_limit()):
+            hits = sum(1 for x in range(PHONE_SAFE_L, PHONE_SAFE_R) if px[x, y] == theme["navy"])
+            if hits > 400:
+                dense.append(y)
+        self.assertTrue(dense)
+        self.assertLess(max(dense) - min(dense), 700)
+        self.assertLess(max(dense), self._phone_limit() - 250)
+
+    def test_takeaways_fill_the_column_and_contrast_stays_inside_the_safe_top(self):
+        cards, theme = self._phone({
+            "id": "points",
+            "visual": "takeaway",
+            "title_en": "Tonight's choice",
+            "q1_en": "The difference in cash from here",
+            "q2_en": "Sunk cost; compare the next-best use",
+        })
+        emerald = _rows_with(cards, theme["emerald"], PHONE_SAFE_TOP, self._phone_limit())
+        self.assertTrue(emerald)
+        self.assertGreater(max(emerald), self._phone_limit() - 90)
+        self.assertGreater(max(emerald) - min(emerald), 400)
+
+        contrast, theme = self._phone({
+            "id": "sides",
+            "visual": "whatis_contrast",
+            "what_en": "An everyday name.",
+            "not_en": "The legal name for SUA.",
+        })
+        px = contrast.load()
+        for y in range(PHONE_SAFE_TOP):
+            for x in range(PHONE_SAFE_L, 900):
+                self.assertNotEqual(px[x, y], theme["gold"], (x, y))
+        navy = _rows_with(contrast, theme["navy"], PHONE_SAFE_TOP, self._phone_limit())
+        self.assertGreaterEqual(min(navy), PHONE_SAFE_TOP - 2)
+        self.assertGreater(max(navy) - min(navy), 800)
+
     def test_pair_stacks_and_series_columns_fit(self):
         theme = load_theme("cuhk-navy")
         pair = {
@@ -173,7 +272,15 @@ class VerticalLayout(unittest.TestCase):
         rows = _rows_with(image, white, 200, 1700)
         gaps = [b - a for a, b in zip(rows, rows[1:]) if b - a > 12]
         self.assertTrue(gaps, "a stacked pair should leave a gap between the two tables")
-        self.assertLess(max(rows), caption_safe_top(1920, bottom_pad=PHONE_CAPTION_PAD))
+        self.assertLess(
+            max(rows),
+            caption_safe_top(
+                1920,
+                size=PHONE_CAPTION_SIZE,
+                lines=PHONE_CAPTION_LINES,
+                bottom_pad=PHONE_CAPTION_PAD,
+            ),
+        )
 
         shops = {
             "id": "BOX-PHONE",

@@ -131,7 +131,7 @@ def lesson_stamp(lesson, theme, code, second, stage_cards) -> str:
         payload["canvas"] = CANVAS_STAMP
         # Phone spacing is not in LAYOUT_VERSION. A 9:16 cache from the first
         # pass must rebuild. Landscape stamps still omit both keys.
-        payload["phone"] = "tight-column"
+        payload["phone"] = "card-center"
     # Lesson-level source is not part of the beat digest. Only a lesson that
     # sets one changes the stamp, so existing caches stay valid.
     source_keys = ("source", "source_en", "source_zh", "source_zh_cn", "source_zh_hk")
@@ -1146,59 +1146,38 @@ def _active_outline(draw, box, theme, radius=24, width=6) -> None:
 
 
 def _render_title_phone(draw, beat, lesson, code, theme, second=None) -> None:
-    """Stack a title on the phone width. Extra height stays empty; type does not grow."""
+    """Eyebrow plus title, optically centered in the teaching area. Type stays large."""
+    beat_id = str(beat.get("id") or "")
     title = field2(beat, "title", code, second) or field2(lesson, "title", code, second)
     primary, secondary = _split_pair(title)
     left, right = PHONE_SAFE_L, PHONE_SAFE_R
     max_w = right - left
+    main = _phone_measure(draw, primary, max_w, "title", beat=beat_id, lang=code)
+    sub = None
+    if secondary:
+        sub = _phone_measure(draw, secondary, max_w, "definition", beat=beat_id, lang=second or code)
     kicker = resolve_kicker(beat, code)
     if second:
         other = resolve_kicker(beat, second)
         if other and other != kicker:
             kicker = f"{kicker}  {other}" if kicker else other
-    kicker_label = ""
-    ksize = 0
+    eye = None
     if kicker:
-        kicker_label = kicker.upper() if kicker.isascii() else kicker
-        ksize = 22 if len(kicker_label) > 16 else 26
-    if secondary:
-        pf = fit_font(draw, primary, 64, max_w, True, 36, 4)
-        main = int(getattr(pf, "size", 64) or 64)
-        p_lines = (wrap(draw, primary, pf, max_w, True) or [primary])[:4]
-        sf = fit_font(draw, secondary, 32, max_w, False, 22, 3)
-        sub = int(getattr(sf, "size", 32) or 32)
-        s_lines = (wrap(draw, secondary, sf, max_w, False) or [secondary])[:3]
-    else:
-        pf = fit_font(draw, primary, 68, max_w, True, 36, 5)
-        main = int(getattr(pf, "size", 68) or 68)
-        p_lines = (wrap(draw, primary, pf, max_w, True) or [primary])[:5]
-        sub = 0
-        s_lines = []
-    block = 0
-    if kicker_label:
-        block += 44
-    block += int(main * 1.16) * max(1, len(p_lines))
-    if s_lines:
-        block += 12 + int(sub * 1.12) * len(s_lines)
-    block += 28
-    top = PHONE_SAFE_TOP + 24
-    limit = _content_bottom() - 12
-    if top + block > limit:
-        top = max(PHONE_SAFE_TOP, limit - block)
-    if kicker_label:
-        tw = mixed_length(draw, kicker_label, ksize, True)
-        draw_mixed(draw, (left + max(0, (max_w - tw) / 2), top), kicker_label, ksize, theme["muted"], True)
-        top += 44
-    for ln in p_lines:
-        tw = mixed_length(draw, ln, main, True)
-        draw_mixed(draw, (left + max(0, (max_w - tw) / 2), top), ln, main, theme["navy"], True)
-        top += int(main * 1.16)
-    if s_lines:
-        top += 12
-        for ln in s_lines:
-            tw = mixed_length(draw, ln, sub, False)
-            draw_mixed(draw, (left + max(0, (max_w - tw) / 2), top), ln, sub, theme["muted"], False)
-            top += int(sub * 1.12)
+        label = kicker.upper() if kicker.isascii() else kicker
+        eye = _phone_measure(draw, label, max_w, "eyebrow", beat=beat_id, lang=code)
+    block = main["h"] + 28
+    if eye:
+        block += eye["h"] + 18
+    if sub:
+        block += 14 + sub["h"]
+    top = _phone_place(PHONE_SAFE_TOP, _content_bottom(), block, beat=beat_id, lang=code, role="title")
+    if eye:
+        top = _paint_phone_lines(draw, eye, left, top, max_w, theme["muted"])
+        top += 18
+    top = _paint_phone_lines(draw, main, left, top, max_w, theme["navy"])
+    if sub:
+        top += 14
+        top = _paint_phone_lines(draw, sub, left, top, max_w, theme["muted"])
     bar_w = 120
     draw.rectangle([(left + right - bar_w) / 2, top + 16, (left + right + bar_w) / 2, top + 22], fill=theme["gold"])
 
@@ -1335,6 +1314,121 @@ def _paint_formula_lines(draw, box, lines: list[str], fill, sub_lines=None, sub_
             ty += int(ssz * 1.25)
 
 
+class PhoneFitError(ValueError):
+    """A 9:16 card cannot show the authored string at that role's floor size.
+
+    The factory does not shorten the line, drop a fact, or invent a translation.
+    """
+
+
+# First size tried, smallest legal size, and the line cap. Verified against the
+# bundled Latin and CJK faces at 1080 px. CJK uses a taller lead in _phone_lead.
+PHONE_ROLES = {
+    "title": (96, 64, 3),
+    "eyebrow": (32, 24, 2),
+    "definition": (64, 40, 5),
+    "statement": (64, 40, 3),
+    "takeaway": (60, 40, 4),
+    "numeral": (72, 48, 2),
+    "row_label": (36, 24, 2),
+    "col_label": (32, 24, 2),
+    "matrix_num": (80, 48, 1),
+    "matrix_label": (32, 24, 2),
+}
+# A centered group may sit this far from the teaching-area midpoint.
+PHONE_CENTER_TOLERANCE = 0.05
+
+
+def _phone_lead(text: str, size: int) -> int:
+    """Line step. CJK fills the em, so it needs more lead than Latin."""
+    if _is_cjk_text(text):
+        return max(size + 10, int(round(size * 1.40)))
+    return max(size + 8, int(round(size * 1.20)))
+
+
+def _phone_fail(beat: str, lang: str, role: str, size: int, lines: int, width: int, text: str, why: str) -> None:
+    snippet = sanitize(text or "").strip().replace("\n", " ")
+    if len(snippet) > 80:
+        snippet = snippet[:77] + "..."
+    raise PhoneFitError(
+        f"phone fit failed: beat={beat or '?'} lang={lang or '?'} role={role} "
+        f"size={int(size)} lines={int(lines)} width={int(width)} "
+        f"text={snippet!r} {why}"
+    )
+
+
+def _phone_wrap_at(draw, text: str, size: int, max_w: int, bold: bool = True) -> list[str]:
+    text = sanitize(text or "").strip()
+    if not text:
+        return []
+    return wrap(draw, text, font_for(text, size, bold), max_w, bold) or [text]
+
+
+def _phone_measure(draw, text: str, max_w: int, role: str, *, beat: str = "", lang: str = "") -> dict:
+    """Largest size at or under the role target that stays inside the line cap.
+
+    Fails at the floor instead of clipping, ellipsizing, or rewriting the string.
+    """
+    target, floor, max_lines = PHONE_ROLES[role]
+    raw = sanitize(text or "").strip()
+    if not raw:
+        _phone_fail(beat, lang, role, floor, max_lines, max_w, raw, "missing locale text")
+    size = int(target)
+    while size >= int(floor):
+        lines = _phone_wrap_at(draw, raw, size, max_w, True)
+        widest = max((mixed_length(draw, ln, size, True) for ln in lines), default=0)
+        if lines and len(lines) <= max_lines and widest <= max_w + 0.5:
+            lead = _phone_lead(raw, size)
+            return {
+                "size": size, "lines": lines, "lh": lead, "h": lead * len(lines),
+                "w": widest, "role": role, "text": raw,
+            }
+        size -= 2
+    _phone_fail(
+        beat, lang, role, floor, max_lines, max_w, raw,
+        "does not fit at the floor",
+    )
+
+
+def _phone_measure_at(draw, text: str, max_w: int, size: int, role: str, *, beat: str = "", lang: str = "") -> dict:
+    """Lock sibling cards to one size. The size is never under the role floor."""
+    _target, floor, max_lines = PHONE_ROLES[role]
+    raw = sanitize(text or "").strip()
+    size = int(size)
+    if size < int(floor):
+        _phone_fail(beat, lang, role, floor, max_lines, max_w, raw, "shared size is under the floor")
+    lines = _phone_wrap_at(draw, raw, size, max_w, True)
+    widest = max((mixed_length(draw, ln, size, True) for ln in lines), default=0)
+    if not lines or len(lines) > max_lines or widest > max_w + 0.5:
+        _phone_fail(beat, lang, role, size, max_lines, max_w, raw, "does not fit at the shared size")
+    lead = _phone_lead(raw, size)
+    return {"size": size, "lines": lines, "lh": lead, "h": lead * len(lines), "w": widest, "role": role, "text": raw}
+
+
+def _phone_shared(draw, texts: list[str], max_w: int, role: str, *, beat: str = "", lang: str = "") -> list[dict]:
+    lays = [_phone_measure(draw, text, max_w, role, beat=beat, lang=lang) for text in texts]
+    size = min(lay["size"] for lay in lays)
+    if all(lay["size"] == size for lay in lays):
+        return lays
+    return [_phone_measure_at(draw, text, max_w, size, role, beat=beat, lang=lang) for text in texts]
+
+
+def _phone_place(span_top: int, span_bottom: int, block_h: int, *, beat: str = "", lang: str = "", role: str = "group") -> int:
+    room = int(span_bottom) - int(span_top)
+    if block_h > room:
+        _phone_fail(beat, lang, role, 0, 0, room, "", f"block {block_h}px exceeds the teaching height {room}px")
+    return int(span_top) + (room - int(block_h)) // 2
+
+
+def _paint_phone_lines(draw, lay: dict, x: int, y: int, width: int, fill, *, align: str = "center") -> int:
+    for ln in lay["lines"]:
+        tw = mixed_length(draw, ln, lay["size"], True)
+        tx = x if align == "left" else x + max(0, (width - tw) / 2)
+        draw_mixed(draw, (tx, y), ln, lay["size"], fill, True)
+        y += lay["lh"]
+    return y
+
+
 def _phone_body_box(y: int) -> tuple[int, int, int]:
     """(top, bottom, width) of the phone teaching column under a section title."""
     top = y + 8
@@ -1343,104 +1437,107 @@ def _phone_body_box(y: int) -> tuple[int, int, int]:
 
 
 def _render_definition_phone(draw, beat, code, y, theme, stage=None, second=None) -> None:
-    """A navy panel that fits the sentence. Leftover height stays cream."""
+    """A navy panel that hugs the sentence, then the panel is centered."""
+    beat_id = str(beat.get("id") or "")
     body = field_native(beat, "formula", code) or beat.get("formula") or field_native(beat, "title", code) or ""
     gloss = field_native(beat, "gloss", code) or ""
     other = field_native(beat, "formula", second) if second else ""
     if other == body or (other and same_math(body, other)):
         other = ""
     text = body if not (second and other) else body + "\n" + other
+    primary, secondary = _split_pair(text)
     reveal = bool(gloss) and (second or _show(stage, 2))
     top, limit, width = _phone_body_box(y)
-    inner_w = width - 72
-    lay = _block_layout(draw, text or " ", inner_w, 520, 46, 28, 0.7, 6)
-    g_lay = _block_layout(draw, gloss, inner_w, 160, 28, 18, 0.7, 3) if reveal and gloss else None
-    gloss_h = (g_lay["h"] + 36) if g_lay else 0
-    box_h = min(limit - top, 64 + lay["h"] + gloss_h + 36)
-    box_h = max(box_h, 120)
-    panel = (PHONE_SAFE_L, top, PHONE_SAFE_R, top + box_h)
+    inner_w = width - 80
+    lay = _phone_measure(draw, primary, inner_w, "definition", beat=beat_id, lang=code)
+    sub = None
+    if secondary:
+        sub = _phone_measure(draw, secondary, inner_w, "row_label", beat=beat_id, lang=second or code)
+    g_lay = _phone_measure(draw, gloss, inner_w, "row_label", beat=beat_id, lang=code) if reveal and gloss else None
+    box_h = 28 + 36 + lay["h"] + 28
+    if sub:
+        box_h += 12 + sub["h"]
+    if g_lay:
+        box_h += 20 + g_lay["h"]
+    origin = _phone_place(top, limit, box_h, beat=beat_id, lang=code, role="definition")
+    panel = (PHONE_SAFE_L, origin, PHONE_SAFE_R, origin + box_h)
     _panel(draw, panel, theme["navy"], theme)
     tag = {"en": "DEFINITION", "zh": "定义", "zh_hk": "定義"}.get(code, "DEFINITION")
-    _tag(draw, PHONE_SAFE_L + 28, top + 18, tag, theme)
-    if _show(stage, 1) and text.strip():
-        _paint_block(
-            draw, (PHONE_SAFE_L + 36, top + 58, PHONE_SAFE_R - 36, top + 58 + lay["h"] + 8),
-            lay, theme["bg"], theme["gold"], align="left", valign="top",
-        )
+    _tag(draw, PHONE_SAFE_L + 28, origin + 18, tag, theme)
+    text_top = origin + 28 + 36
+    if _show(stage, 1):
+        text_top = _paint_phone_lines(draw, lay, PHONE_SAFE_L + 40, text_top, inner_w, theme["bg"])
+        if sub:
+            text_top += 12
+            text_top = _paint_phone_lines(draw, sub, PHONE_SAFE_L + 40, text_top, inner_w, theme["gold"])
     if g_lay:
-        rule = top + box_h - gloss_h
+        rule = origin + box_h - g_lay["h"] - 24
         draw.line([(PHONE_SAFE_L + 36, rule), (PHONE_SAFE_R - 36, rule)], fill=theme["gold"], width=2)
-        _paint_block(
-            draw, (PHONE_SAFE_L + 36, rule + 12, PHONE_SAFE_R - 36, top + box_h - 16),
-            g_lay, theme["gold"], theme["bg"], align="left", valign="top",
-        )
+        _paint_phone_lines(draw, g_lay, PHONE_SAFE_L + 40, rule + 12, inner_w, theme["gold"])
 
 
 def _render_takeaway_phone(draw, beat, code, y, theme, stage=None, second=None) -> None:
-    """Two tall stacked cards. They share the column instead of floating as thin bars."""
+    """Stacked statements. Each panel hugs its text. The stack is one centered group."""
+    beat_id = str(beat.get("id") or "")
     questions = [q for q in (field2(beat, "q1", code, second), field2(beat, "q2", code, second)) if q]
     if not questions:
-        return
+        _phone_fail(beat_id, code, "takeaway", 40, 4, 0, "", "missing locale text")
     top, limit, _width = _phone_body_box(y)
+    text_w = PHONE_SAFE_R - PHONE_SAFE_L - 160
+    lays = _phone_shared(draw, questions, text_w, "takeaway", beat=beat_id, lang=code)
     gap = 28
-    k = len(questions)
-    hbox = max(160, (limit - top - gap * (k - 1)) // k)
+    pad_y = 36
+    heights = [lay["h"] + pad_y * 2 for lay in lays]
+    block = sum(heights) + gap * (len(lays) - 1)
+    origin = _phone_place(top, limit, block, beat=beat_id, lang=code, role="takeaway")
     fills = (theme["navy"], theme["emerald"])
-    text_l = PHONE_SAFE_L + 128
-    lays, _block = _shared_layouts(
-        draw, questions, PHONE_SAFE_R - text_l - 28, hbox - 48, 42, 26, 0.66, 4, bold=_body_bold(theme),
-    )
+    inks = (theme["bg"], theme["white"])
     first_on, second_on, _verdict, _active = _pair_reveal(stage)
-    for i, _q in enumerate(questions):
-        card_top = top + i * (hbox + gap)
-        draw.rounded_rectangle(
-            [PHONE_SAFE_L, card_top, PHONE_SAFE_R, card_top + hbox], radius=24, fill=fills[i % 2],
-        )
-        cy = card_top + hbox // 2
-        draw.ellipse([PHONE_SAFE_L + 36, cy - 36, PHONE_SAFE_L + 108, cy + 36], fill=theme["gold"])
-        nf = _font(FONT_LATIN_B, 32)
+    cursor = origin
+    for i, lay in enumerate(lays):
+        hbox = heights[i]
+        fill = fills[i % 2]
+        draw.rounded_rectangle([PHONE_SAFE_L, cursor, PHONE_SAFE_R, cursor + hbox], radius=24, fill=fill)
+        cy = cursor + hbox // 2
+        draw.ellipse([PHONE_SAFE_L + 28, cy - 28, PHONE_SAFE_L + 84, cy + 28], fill=theme["gold"])
+        nf = _font(FONT_LATIN_B, 28)
         tw = draw.textlength(str(i + 1), font=nf)
-        draw.text((PHONE_SAFE_L + 72 - tw / 2, cy - 18), str(i + 1), font=nf, fill=theme["navy"])
+        draw.text((PHONE_SAFE_L + 56 - tw / 2, cy - 16), str(i + 1), font=nf, fill=theme["navy"])
         on = first_on if i == 0 else second_on
-        box = (text_l, card_top + 24, PHONE_SAFE_R - 28, card_top + hbox - 24)
-        if lays[i] and on:
-            ink = theme["white"]
-            sub = theme["gold"] if i % 2 == 0 else theme["bg"]
-            _paint_block(draw, box, lays[i], ink, sub)
-        elif lays[i] and not _legacy_reveal():
-            quiet = _dim_ink(fills[i % 2], theme["white"])
-            _paint_block(draw, box, lays[i], quiet, quiet)
+        ink = inks[i % 2] if on else _dim_ink(fill, theme["white"])
+        if on or not _legacy_reveal():
+            _paint_phone_lines(draw, lay, PHONE_SAFE_L + 108, cursor + pad_y, text_w, ink)
+        cursor += hbox + gap
 
 
 def _render_two_column_phone(draw, beat, code, y, theme, stage=None, second=None) -> None:
-    """One column: the two sides stack and each takes about half the teaching height."""
-    left_full = field2(beat, "left", code, second)
-    right_full = field2(beat, "right", code, second)
+    """Two full-width statements. Panels hug the text and the pair is centered."""
+    beat_id = str(beat.get("id") or "")
+    sides = [field2(beat, "left", code, second), field2(beat, "right", code, second)]
     top, limit, _width = _phone_body_box(y)
-    gap = 56
-    hbox = max(180, (limit - top - gap) // 2)
-    inner_w = PHONE_SAFE_R - PHONE_SAFE_L - 64
-    lays, _block = _shared_layouts(
-        draw, [left_full, right_full], inner_w, hbox - 36, 40, 24, 0.62, 4, bold=_body_bold(theme),
-    )
+    inner_w = PHONE_SAFE_R - PHONE_SAFE_L - 72
+    lays = _phone_shared(draw, sides, inner_w, "statement", beat=beat_id, lang=code)
+    gap = 64
+    pad_y = 32
+    heights = [lay["h"] + pad_y * 2 for lay in lays]
+    block = sum(heights) + gap
+    origin = _phone_place(top, limit, block, beat=beat_id, lang=code, role="statement")
     left_on, right_on, vs_on, _active = _pair_reveal(stage)
     legacy = _legacy_reveal()
     cards = (
-        (PHONE_SAFE_L, top, PHONE_SAFE_R, top + hbox, theme["navy"], lays[0], left_on, theme["bg"], theme["gold"]),
-        (PHONE_SAFE_L, top + hbox + gap, PHONE_SAFE_R, top + 2 * hbox + gap, theme["emerald"], lays[1], right_on, theme["white"], theme["bg"]),
+        (origin, heights[0], theme["navy"], lays[0], left_on, theme["bg"]),
+        (origin + heights[0] + gap, heights[1], theme["emerald"], lays[1], right_on, theme["white"]),
     )
-    for x0, y0, x1, y1, fill, lay, on, ink, sub in cards:
-        draw.rounded_rectangle([x0, y0, x1, y1], radius=24, fill=fill)
-        if lay and on:
-            _paint_block(draw, (x0 + 32, y0 + 18, x1 - 32, y1 - 18), lay, ink, sub)
-        elif lay and not legacy:
-            quiet = _dim_ink(fill, theme["white"])
-            _paint_block(draw, (x0 + 32, y0 + 18, x1 - 32, y1 - 18), lay, quiet, quiet)
+    for y0, hbox, fill, lay, on, ink in cards:
+        draw.rounded_rectangle([PHONE_SAFE_L, y0, PHONE_SAFE_R, y0 + hbox], radius=24, fill=fill)
+        paint = ink if on else _dim_ink(fill, theme["white"])
+        if on or not legacy:
+            _paint_phone_lines(draw, lay, PHONE_SAFE_L + 36, y0 + pad_y, inner_w, paint)
     if vs_on or (not legacy and right_on):
-        cy = top + hbox + gap // 2
+        cy = origin + heights[0] + gap // 2
         mid = (PHONE_SAFE_L + PHONE_SAFE_R) // 2
-        draw.ellipse([mid - 32, cy - 32, mid + 32, cy + 32], fill=theme["gold"])
-        vf = _font(FONT_LATIN_B, 22)
+        draw.ellipse([mid - 26, cy - 26, mid + 26, cy + 26], fill=theme["gold"])
+        vf = _font(FONT_LATIN_B, 20)
         tw = draw.textlength("VS", font=vf)
         draw.text((mid - tw / 2, cy - 12), "VS", font=vf, fill=theme["navy"])
 
@@ -2186,63 +2283,67 @@ def _matrix_highlight(beat: dict, stage) -> str:
 
 
 def _render_payoff_phone(draw, beat, code, y, theme, stage=None, second=None) -> None:
-    """The matrix fills the column. Row labels stay short, so the cells can be tall."""
-    box_y = y + 8
-    box_h = _fill_h(box_y, 280)
+    """A 2×2 payoff group. Numerals dominate. The panel hugs the grid and is centered."""
+    beat_id = str(beat.get("id") or "")
     panel_l, panel_r = PHONE_SAFE_L, PHONE_SAFE_R
-    _panel(draw, (panel_l, box_y, panel_r, box_y + box_h), theme["navy"], theme)
-    tag = {"en": "PAYOFFS", "zh": "报酬", "zh_hk": "報酬"}.get(code, "PAYOFFS")
-    _tag(draw, panel_l + 24, box_y + 16, tag, theme)
-    row_p = field2(beat, "row_player", code, second) or "Row"
-    col_p = field2(beat, "col_player", code, second) or "Col"
-    r1 = field2(beat, "row1", code, second) or "High"
-    r2 = field2(beat, "row2", code, second) or "Low"
-    c1 = field2(beat, "col1", code, second) or "High"
-    c2 = field2(beat, "col2", code, second) or "Low"
-    cells = [
-        [field2(beat, "c11", code, second), field2(beat, "c12", code, second)],
-        [field2(beat, "c21", code, second), field2(beat, "c22", code, second)],
-    ]
-    highlight = _matrix_highlight(beat, stage)
-    gutter, label_w = 14, 120
-    # Tag, player names, then column labels. Each band is its own row so
-    # "PAYOFFS" does not sit on "Cart A", and "Cart B" does not sit on "High".
-    player_y = box_y + 58
-    col_label_y = box_y + 104
-    grid_top = box_y + 142
+    gutter, label_w = 16, 148
     grid_left = panel_l + label_w
-    grid_right = panel_r - 18
-    grid_h = box_y + box_h - 20 - grid_top
+    grid_right = panel_r - 28
     cw = (grid_right - grid_left - gutter) // 2
-    ch = (grid_h - gutter) // 2
-    tw = mixed_length(draw, col_p, 22, True)
-    draw_mixed(draw, (grid_left + (grid_right - grid_left - tw) / 2, player_y), col_p, 22, theme["gold"], True)
-    if row_p:
-        tw = mixed_length(draw, row_p, 18, True)
-        draw_mixed(draw, (panel_l + 12 + max(0, (label_w - 20 - tw) / 2), player_y + 2), row_p, 18, theme["gold"], True)
-    for j, lab in enumerate((c1, c2)):
+    names = [
+        field2(beat, "row1", code, second),
+        field2(beat, "row2", code, second),
+        field2(beat, "col1", code, second),
+        field2(beat, "col2", code, second),
+    ]
+    values = [
+        field2(beat, "c11", code, second), field2(beat, "c12", code, second),
+        field2(beat, "c21", code, second), field2(beat, "c22", code, second),
+    ]
+    name_lays = _phone_shared(draw, names, label_w - 24, "matrix_label", beat=beat_id, lang=code)
+    num_lays = _phone_shared(draw, values, cw - 36, "matrix_num", beat=beat_id, lang=code)
+    players = []
+    for stem, box_w in (("row_player", label_w - 16), ("col_player", cw * 2)):
+        text = field2(beat, stem, code, second)
+        players.append(
+            _phone_measure(draw, text, box_w, "matrix_label", beat=beat_id, lang=code) if text else None
+        )
+    ch = num_lays[0]["h"] + 48
+    col_band = max(lay["h"] for lay in name_lays) + 12
+    player_band = max((lay["h"] for lay in players if lay), default=0)
+    player_band = player_band + 16 if player_band else 8
+    block = 44 + player_band + col_band + ch * 2 + gutter + 24
+    origin = _phone_place(y + 8, _content_bottom(), block, beat=beat_id, lang=code, role="matrix_num")
+    _panel(draw, (panel_l, origin, panel_r, origin + block), theme["navy"], theme)
+    tag = {"en": "PAYOFFS", "zh": "报酬", "zh_hk": "報酬"}.get(code, "PAYOFFS")
+    _tag(draw, panel_l + 24, origin + 14, tag, theme)
+    grid_top = origin + 44 + player_band + col_band
+    if players[0]:
+        _paint_phone_lines(draw, players[0], panel_l + 12, origin + 46, label_w - 16, theme["gold"])
+    if players[1]:
+        _paint_phone_lines(draw, players[1], grid_left, origin + 46, grid_right - grid_left, theme["gold"])
+    for j, lay in enumerate(name_lays[2:]):
         x0 = grid_left + j * (cw + gutter)
-        tw = mixed_length(draw, lab, 24, True)
-        draw_mixed(draw, (x0 + (cw - tw) / 2, col_label_y), lab, 24, theme["bg"], True)
-    for i, lab in enumerate((r1, r2)):
-        y0 = grid_top + i * (ch + gutter)
-        tw = mixed_length(draw, lab, 22, True)
-        draw_mixed(draw, (panel_l + 12 + max(0, (label_w - 20 - tw) / 2), y0 + ch / 2 - 14), lab, 22, theme["bg"], True)
+        _paint_phone_lines(draw, lay, x0, grid_top - col_band + 4, cw, theme["bg"])
     white = theme.get("white") or (247, 244, 238)
+    highlight = _matrix_highlight(beat, stage)
     for i in range(2):
+        y0 = grid_top + i * (ch + gutter)
+        _paint_phone_lines(draw, name_lays[i], panel_l + 12, y0 + (ch - name_lays[i]["h"]) / 2, label_w - 20, theme["bg"])
         for j in range(2):
             x0 = grid_left + j * (cw + gutter)
-            y0 = grid_top + i * (ch + gutter)
             key = f"c{i + 1}{j + 1}"
             fill = theme["gold"] if highlight == key else white
             draw.rounded_rectangle([x0, y0, x0 + cw, y0 + ch], radius=18, fill=fill)
-            show = stage in (None, 0) or stage > 2 and not (stage == 3 and not (i == 0 and j == 0))
-            if stage not in (None, 0) and stage <= 2:
-                show = False
-            val = cells[i][j] or ""
-            if show and val:
-                vf = fit_font(draw, val, 48, cw - 28, True, 26, 2, ch - 28)
-                _center(draw, (x0 + 12, y0 + 10, x0 + cw - 12, y0 + ch - 10), val, vf, theme["navy"])
+            show = True
+            if stage not in (None, 0):
+                if stage <= 2:
+                    show = False
+                elif stage == 3:
+                    show = i == 0 and j == 0
+            if show:
+                lay = num_lays[i * 2 + j]
+                _paint_phone_lines(draw, lay, x0 + 12, y0 + (ch - lay["h"]) / 2, cw - 24, theme["navy"])
 
 
 def render_payoff_matrix(draw, beat, code, y, theme, stage=None, second=None) -> None:
@@ -2348,14 +2449,6 @@ def _grid_foot(beat, code, second, rows: int, cols: int) -> int:
     return foot
 
 
-def _phone_row_label_wide(draw, label: str) -> bool:
-    """A row name that will not fit a side column without a cramped wrap."""
-    primary = sanitize(label or "").split("\n", 1)[0].strip()
-    if not primary:
-        return False
-    return mixed_length(draw, primary, 22, True) > 190
-
-
 def _phone_table_show(beat, stage, col: int) -> bool:
     reveal = str(beat.get("reveal") or "").strip().lower()
     show_val = _show(stage, 2)
@@ -2365,109 +2458,81 @@ def _phone_table_show(beat, stage, col: int) -> bool:
 
 
 def _render_table_phone(draw, beat, code, y, theme, stage=None, second=None) -> None:
-    """Fill the column. Long row names become headings; short ones stay beside tall cells."""
+    """Full-width row headings and paired values. Cells hug the numerals. The group is centered."""
+    beat_id = str(beat.get("id") or "")
     rows, cols = _grid_dims(beat)
-    box_y = y + 8
-    box_h = _fill_h(box_y, 280)
     panel_l, panel_r = PHONE_SAFE_L, PHONE_SAFE_R
-    _panel(draw, (panel_l, box_y, panel_r, box_y + box_h), theme["navy"], theme)
-    tag = {"en": "TABLE", "zh": "对照表", "zh_hk": "對照表"}.get(code, "TABLE")
-    if second:
-        other = {"en": "TABLE", "zh": "对照表", "zh_hk": "對照表"}.get(second)
-        if other and other != tag:
-            tag = f"{tag}  {other}"
-    _tag(draw, panel_l + 24, box_y + 14, tag, theme)
+    gutter = 14
+    inner_w = panel_r - panel_l - 36
+    cw = (inner_w - gutter * (cols - 1)) // max(cols, 1)
     labels = [field2(beat, f"row{i + 1}", code, second) or "" for i in range(rows)]
     heads = [field2(beat, f"col{j + 1}", code, second) or "" for j in range(cols)]
+    values = []
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            key = f"c{i + 1}{j + 1}"
+            row.append(str(field2(beat, key, code, second) or beat.get(key) or "").strip())
+        values.append(row)
+    row_lays = [
+        _phone_measure(draw, lab, inner_w, "row_label", beat=beat_id, lang=code) if lab.strip() else None
+        for lab in labels
+    ]
+    head_lays = [
+        _phone_measure(draw, lab, cw - 16, "col_label", beat=beat_id, lang=code) if lab.strip() else None
+        for lab in heads
+    ]
+    flat = [val for row in values for val in row if val]
+    if not flat:
+        _phone_fail(beat_id, code, "numeral", 48, 2, cw, "", "missing locale text")
+    num_lays = _phone_shared(draw, flat, cw - 28, "numeral", beat=beat_id, lang=code)
+    cell_h = num_lays[0]["h"] + 36
+    head_h = (max(lay["h"] for lay in head_lays if lay) + 10) if any(head_lays) else 0
     footer = field2(beat, "footer", code, second) or field2(beat, "note", code, second)
-    stamp = field2(beat, "stamp", code, second)
-    highlight = _matrix_highlight(beat, stage)
-    foot = _grid_foot(beat, code, second, rows, cols)
-    inner_top = box_y + 48
-    inner_bot = box_y + box_h - max(foot, 24)
-    gutter = 12
-    stack = any(_phone_row_label_wide(draw, lab) for lab in labels)
-
-    def paint_value(box, i, j):
-        key = f"c{i + 1}{j + 1}"
-        val = str(field2(beat, key, code, second) or beat.get(key) or "").strip()
-        lit = bool(highlight) and _cell_lit(highlight, key, i + 1, j + 1)
-        _paint_cell(
-            draw, box, val, theme,
-            lit=lit, fmt=_cell_fmt(beat, key), show=_phone_table_show(beat, stage, j),
-        )
-
-    if stack:
-        inner_w = panel_r - panel_l - 32
-        headings = [
-            _block_layout(draw, lab, inner_w, 70, 24, 18, 0.72, 2, 1) if lab else None
-            for lab in labels
-        ]
-        head_h = 32
-        heading_h = [(lay["h"] + 10) if lay else 0 for lay in headings]
-        fixed = head_h + sum(heading_h) + gutter * max(0, rows - 1)
-        ch = max(52, (inner_bot - inner_top - fixed) // max(rows, 1))
-        cw = max(48, (inner_w - gutter * (cols - 1)) // max(cols, 1))
-        y_cursor = inner_top
-        x_cells = panel_l + 16
-        for j, lab in enumerate(heads):
-            if not lab:
-                continue
-            hl = _block_layout(draw, lab, cw - 8, head_h, 20, 15, 0.75, 1, 1)
-            x0 = x_cells + j * (cw + gutter)
-            _paint_block(draw, (x0, y_cursor, x0 + cw, y_cursor + head_h), hl, theme["gold"], theme["bg"], valign="top")
-        y_cursor += head_h
-        for i in range(rows):
-            if headings[i]:
-                _paint_block(
-                    draw,
-                    (panel_l + 16, y_cursor, panel_r - 16, y_cursor + heading_h[i]),
-                    headings[i], theme["bg"], theme["gold"], align="left", valign="top",
-                )
-                y_cursor += heading_h[i]
-            for j in range(cols):
-                x0 = x_cells + j * (cw + gutter)
-                paint_value((x0, y_cursor, x0 + cw, y_cursor + ch), i, j)
-            y_cursor += ch + gutter
-    else:
-        need = 0
-        for lab in labels:
-            primary = sanitize(lab or "").split("\n", 1)[0]
-            need = max(need, mixed_length(draw, primary, 22, True) if primary else 0)
-        label_w = int(min(160, max(64, need + 32)))
-        grid_left = panel_l + label_w
-        grid_right = panel_r - 16
-        head_h = 40
-        avail = inner_bot - inner_top - head_h - gutter * max(0, rows - 1)
-        ch = max(72, avail // max(rows, 1))
-        cw = max(56, (grid_right - grid_left - gutter * (cols - 1)) // max(cols, 1))
-        for j, lab in enumerate(heads):
-            if not lab:
-                continue
-            x0 = grid_left + j * (cw + gutter)
-            hl = _block_layout(draw, lab, cw - 8, head_h - 6, 22, 16, 0.78, 1, 1)
-            _paint_block(draw, (x0, inner_top, x0 + cw, inner_top + head_h), hl, theme["gold"], theme["bg"], valign="top")
-        for i in range(rows):
-            y0 = inner_top + head_h + i * (ch + gutter)
-            lab = labels[i]
-            if lab:
-                lf = fit_font(draw, lab, 22, label_w - 20, True, 16, 2, ch - 12)
-                _center(draw, (panel_l + 8, y0, panel_l + label_w - 8, y0 + ch), lab, lf, theme["bg"])
-            for j in range(cols):
-                x0 = grid_left + j * (cw + gutter)
-                paint_value((x0, y0, x0 + cw, y0 + ch), i, j)
-    caption = footer
     if stage not in (None, 0):
-        caption = field2(beat, f"caption_s{int(stage)}", code, second) or field2(beat, f"footer_s{int(stage)}", code, second) or footer
-    band_top = inner_bot + 6
-    band_bottom = box_y + box_h - 10
-    if stamp and (stage in (None, 0) or _show(stage, 3)):
-        sf = fit_font(draw, stamp, 24, panel_r - panel_l - 48, True, 16, 1)
-        _center(draw, (panel_l + 20, band_top, panel_r - 20, band_top + 28), stamp, sf, theme["gold"])
-        band_top += 30
-    if caption and (stage in (None, 0) or _show(stage, 1)):
-        ff = fit_font(draw, caption, 24, panel_r - panel_l - 48, True, 16, 2)
-        _center(draw, (panel_l + 20, band_top, panel_r - 20, band_bottom), caption, ff, theme["gold"])
+        footer = field2(beat, f"caption_s{int(stage)}", code, second) or field2(beat, f"footer_s{int(stage)}", code, second) or footer
+    foot_lay = _phone_measure(draw, footer, inner_w, "row_label", beat=beat_id, lang=code) if footer else None
+    block = 42 + head_h
+    for i in range(rows):
+        if row_lays[i]:
+            block += row_lays[i]["h"] + 8
+        block += cell_h + (12 if i < rows - 1 else 0)
+    if foot_lay:
+        block += 16 + foot_lay["h"]
+    block += 18
+    origin = _phone_place(y + 8, _content_bottom(), block, beat=beat_id, lang=code, role="numeral")
+    _panel(draw, (panel_l, origin, panel_r, origin + block), theme["navy"], theme)
+    tag = {"en": "TABLE", "zh": "对照表", "zh_hk": "對照表"}.get(code, "TABLE")
+    _tag(draw, panel_l + 22, origin + 12, tag, theme)
+    cursor = origin + 42
+    if head_h:
+        for j, lay in enumerate(head_lays):
+            if not lay:
+                continue
+            x0 = panel_l + 18 + j * (cw + gutter)
+            _paint_phone_lines(draw, lay, x0, cursor, cw, theme["gold"])
+        cursor += head_h
+    highlight = _matrix_highlight(beat, stage)
+    white = theme.get("white") or (247, 244, 238)
+    seen = 0
+    for i in range(rows):
+        if row_lays[i]:
+            _paint_phone_lines(draw, row_lays[i], panel_l + 18, cursor, inner_w, theme["bg"], align="left")
+            cursor += row_lays[i]["h"] + 8
+        for j in range(cols):
+            x0 = panel_l + 18 + j * (cw + gutter)
+            key = f"c{i + 1}{j + 1}"
+            lit = bool(highlight) and _cell_lit(highlight, key, i + 1, j + 1)
+            draw.rounded_rectangle([x0, cursor, x0 + cw, cursor + cell_h], radius=16, fill=theme["gold"] if lit else white)
+            if values[i][j] and _phone_table_show(beat, stage, j):
+                lay = num_lays[seen]
+                _paint_phone_lines(draw, lay, x0 + 8, cursor + (cell_h - lay["h"]) / 2, cw - 16, theme["navy"])
+            if values[i][j]:
+                seen += 1
+        cursor += cell_h + (12 if i < rows - 1 else 0)
+    if foot_lay and (stage in (None, 0) or _show(stage, 1)):
+        _paint_phone_lines(draw, foot_lay, panel_l + 18, cursor + 12, inner_w, theme["gold"])
+    return
 
 
 def render_table_grid(draw, beat, code, y, theme, stage=None, second=None) -> None:
@@ -6227,13 +6292,23 @@ def _paint_whatis_prose(draw, text: str, x, y, max_w, theme, cap, floor, max_lin
     return y
 
 
-def _render_whatis_statement(draw, theme, role: str, text: str, cap: int, floor: int, max_lines: int) -> None:
+def _render_whatis_statement(draw, theme, role: str, text: str, cap: int, floor: int, max_lines: int, *, beat: str = "", lang: str = "") -> None:
     _whatis_clear_field(draw, theme)
     if portrait():
-        x = PHONE_SAFE_L
+        phone_role = "definition" if max_lines >= 5 else "takeaway"
         max_w = PHONE_SAFE_R - PHONE_SAFE_L
-        y = _paint_whatis_label(draw, role, theme, x, PHONE_SAFE_TOP)
-        _paint_whatis_prose(draw, text, x, y + 8, max_w, theme, min(cap, 52), min(floor, 32), max_lines, bold=True)
+        primary, secondary = _whatis_split(text)
+        lay = _phone_measure(draw, primary, max_w, phone_role, beat=beat, lang=lang)
+        sub = None
+        if secondary:
+            sub = _phone_measure(draw, secondary, max_w, "row_label", beat=beat, lang=lang)
+        label_h = 28 + 22
+        block = label_h + 8 + lay["h"] + (12 + sub["h"] if sub else 0)
+        top = _phone_place(PHONE_SAFE_TOP, _content_bottom(), block, beat=beat, lang=lang, role=phone_role)
+        y = _paint_whatis_label(draw, role, theme, PHONE_SAFE_L, top)
+        y = _paint_phone_lines(draw, lay, PHONE_SAFE_L, y + 8, max_w, theme["navy"], align="left")
+        if sub:
+            _paint_phone_lines(draw, sub, PHONE_SAFE_L, y + 12, max_w, theme["navy"], align="left")
         return
     x = 96
     max_w = fw() - 192
@@ -6242,8 +6317,9 @@ def _render_whatis_statement(draw, theme, role: str, text: str, cap: int, floor:
 
 
 def _render_whatis_contrast_phone(draw, beat, code, theme, second, stage=None) -> None:
-    """Two large stacked blocks. Labels start inside the top safe area."""
+    """Two stacked panels that hug each statement. The pair is centered."""
     _whatis_clear_field(draw, theme)
+    beat_id = str(beat.get("id") or "")
     show_what, show_not = _whatis_contrast_visible(beat, stage)
     blocks = []
     if show_what:
@@ -6252,23 +6328,38 @@ def _render_whatis_contrast_phone(draw, beat, code, theme, second, stage=None) -
         blocks.append((1, "not"))
     if not blocks:
         return
-    top = PHONE_SAFE_TOP
-    limit = _content_bottom()
-    gap = 24
-    height = max(180, (limit - top - gap * (len(blocks) - 1)) // len(blocks))
-    max_w = PHONE_SAFE_R - PHONE_SAFE_L - 56
-    for i, (which, stem) in enumerate(blocks):
-        y0 = top + i * (height + gap)
-        y1 = y0 + height
-        draw.rounded_rectangle([PHONE_SAFE_L, y0, PHONE_SAFE_R, y1], radius=22, fill=theme["navy"])
-        y = _paint_whatis_label(draw, _contrast_head(code, second, which), theme, PHONE_SAFE_L + 28, y0 + 22)
+    max_w = PHONE_SAFE_R - PHONE_SAFE_L - 64
+    prepared = []
+    for which, stem in blocks:
         prose = field2(beat, stem, code, second)
         primary, secondary = _whatis_split(prose)
-        size, lines = _fit_whatis_lines(draw, primary, max_w, 48, 28, 4, True)
-        y = _paint_whatis_lines(draw, lines, PHONE_SAFE_L + 28, y + 8, size, theme["bg"], True)
-        if secondary:
-            sub_size, sub_lines = _fit_whatis_lines(draw, secondary, max_w, max(24, int(size * 0.62)), 20, 4, False)
-            _paint_whatis_lines(draw, sub_lines, PHONE_SAFE_L + 28, y + 12, sub_size, theme["gold"], False)
+        lay = _phone_measure(draw, primary, max_w, "statement", beat=beat_id, lang=code)
+        sub = _phone_measure(draw, secondary, max_w, "row_label", beat=beat_id, lang=code) if secondary else None
+        label_h = 28 + 22
+        height = 22 + label_h + 8 + lay["h"] + (12 + sub["h"] if sub else 0) + 22
+        prepared.append((which, lay, sub, height))
+    shared = min(item[1]["size"] for item in prepared)
+    if any(item[1]["size"] != shared for item in prepared):
+        prepared = []
+        for which, stem in blocks:
+            prose = field2(beat, stem, code, second)
+            primary, secondary = _whatis_split(prose)
+            lay = _phone_measure_at(draw, primary, max_w, shared, "statement", beat=beat_id, lang=code)
+            sub = _phone_measure(draw, secondary, max_w, "row_label", beat=beat_id, lang=code) if secondary else None
+            label_h = 28 + 22
+            height = 22 + label_h + 8 + lay["h"] + (12 + sub["h"] if sub else 0) + 22
+            prepared.append((which, lay, sub, height))
+    gap = 28
+    block_h = sum(item[3] for item in prepared) + gap * (len(prepared) - 1)
+    origin = _phone_place(PHONE_SAFE_TOP, _content_bottom(), block_h, beat=beat_id, lang=code, role="statement")
+    cursor = origin
+    for which, lay, sub, height in prepared:
+        draw.rounded_rectangle([PHONE_SAFE_L, cursor, PHONE_SAFE_R, cursor + height], radius=22, fill=theme["navy"])
+        y = _paint_whatis_label(draw, _contrast_head(code, second, which), theme, PHONE_SAFE_L + 28, cursor + 18)
+        y = _paint_phone_lines(draw, lay, PHONE_SAFE_L + 28, y + 8, max_w, theme["bg"], align="left")
+        if sub:
+            _paint_phone_lines(draw, sub, PHONE_SAFE_L + 28, y + 12, max_w, theme["gold"], align="left")
+        cursor += height + gap
 
 
 def _render_whatis_contrast(draw, beat, code, theme, second, stage=None) -> None:
@@ -6362,9 +6453,14 @@ def _render_whatis_title(draw, beat, lesson, code, theme, second) -> None:
         return
     if portrait():
         max_w = PHONE_SAFE_R - PHONE_SAFE_L
-        size, lines = _fit_whatis_lines(draw, title, max_w, 68, 36, 5, True)
-        top = PHONE_SAFE_TOP + 36
-        origin, span = PHONE_SAFE_L, max_w
+        lay = _phone_measure(draw, title, max_w, "title", beat=str(beat.get("id") or ""), lang=code)
+        block = lay["h"] + 36
+        top = _phone_place(PHONE_SAFE_TOP, _content_bottom(), block, beat=str(beat.get("id") or ""), lang=code, role="title")
+        top = _paint_phone_lines(draw, lay, PHONE_SAFE_L, top, max_w, theme["navy"])
+        bar_w = 120
+        mid = PHONE_SAFE_L + max_w / 2
+        draw.rectangle([mid - bar_w / 2, top + 18, mid + bar_w / 2, top + 26], fill=theme["gold"])
+        return
     else:
         max_w = fw() - 200
         size, lines = _fit_whatis_lines(draw, title, max_w, SCALE["hook"], 88, 3, True)
@@ -6392,6 +6488,7 @@ def render_whatis(draw, beat, lesson, visual, code, theme, second, index, n, sta
         _render_whatis_statement(
             draw, theme, _whatis_role(beat, visual, code, second),
             field2(beat, "sentence", code, second), 72, 60, 5,
+            beat=str(beat.get("id") or ""), lang=code,
         )
     elif visual == "whatis_example":
         _render_whatis_example(draw, beat, code, theme, second)
@@ -6401,6 +6498,7 @@ def render_whatis(draw, beat, lesson, visual, code, theme, second, index, n, sta
         _render_whatis_statement(
             draw, theme, _whatis_role(beat, visual, code, second),
             field2(beat, "rule", code, second), 72, 56, 4,
+            beat=str(beat.get("id") or ""), lang=code,
         )
     _draw_whatis_footer(draw, beat, lesson, code, theme, second, index, n)
 
@@ -6551,14 +6649,18 @@ def render_still_image(draw, beat, code, y, theme, stage=None, second=None, less
     base = getattr(draw, "_vf_img", None)
     placed = None
     if portrait() and base is not None:
-        # Wide art stays letterboxed, but the title and the teaching line sit
-        # against the picture instead of centering it in a tall empty box.
+        # Contain-fit. A portrait source fills the column. The picture and its
+        # line are one group, centered under the title.
         note_h = 46 if note else 0
-        avail_h = max(8, _content_bottom() - top - note_h - 12)
+        span_top = top + 8
+        span_bot = _content_bottom()
+        avail_h = max(8, span_bot - span_top - (note_h + 12 if note else 0))
         col_w = right - left
         dst_w, dst_h = _contain_size(art.width, art.height, col_w, avail_h)
+        group_h = dst_h + ((12 + note_h) if note else 0)
+        origin_y = span_top + max(0, (span_bot - span_top - group_h) // 2)
         origin_x = left + max(0, (col_w - dst_w) // 2)
-        placed = _paste_contained(base, draw, art, (origin_x, top + 6, dst_w, dst_h), theme)
+        placed = _paste_contained(base, draw, art, (origin_x, origin_y, dst_w, dst_h), theme)
     elif base is not None and box_h >= 8:
         placed = _paste_contained(base, draw, art, (left, top, right - left, box_h), theme)
     if note and placed is not None:

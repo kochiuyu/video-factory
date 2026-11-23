@@ -2,6 +2,7 @@
 
 import copy
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -16,6 +17,11 @@ from slides import (
     PHONE_CAPTION_LINES,
     PHONE_CAPTION_PAD,
     PHONE_CAPTION_SIZE,
+    PHONE_CENTER_TOLERANCE,
+    PHONE_ROLES,
+    PhoneFitError,
+    _phone_measure,
+    new_canvas,
     PHONE_SAFE_L,
     PHONE_SAFE_R,
     PHONE_SAFE_TOP,
@@ -30,6 +36,7 @@ from validate import load_lesson, validate
 ROOT = Path(__file__).resolve().parents[1]
 FACTORY = Path(__file__).resolve().parent
 FIXTURE = FACTORY / "fixtures" / "vertical_smoke.yaml"
+CARDS = FACTORY / "fixtures" / "vertical_cards.yaml"
 IMAGE = FACTORY / "fixtures" / "still_image.png"
 RED = (220, 30, 40)
 BLUE = (30, 90, 200)
@@ -60,6 +67,28 @@ def _offenders(image, theme, y_limit):
                 if len(bad) >= 8:
                     return bad
     return bad
+
+
+def _dense_runs(image, color, need=400):
+    """Vertical runs where a card fill, not a glyph, covers the safe width."""
+    px = image.load()
+    rows = []
+    for y in range(PHONE_SAFE_TOP, image.height - 40):
+        hits = sum(1 for x in range(PHONE_SAFE_L, PHONE_SAFE_R) if px[x, y] == color)
+        if hits > need:
+            rows.append(y)
+    if not rows:
+        return []
+    runs = []
+    start = prev = rows[0]
+    for y in rows[1:]:
+        if y == prev + 1:
+            prev = y
+        else:
+            runs.append((start, prev))
+            start = prev = y
+    runs.append((start, prev))
+    return runs
 
 
 def _rows_with(image, color, y0, y1):
@@ -122,11 +151,13 @@ class VerticalLayout(unittest.TestCase):
             bad = _offenders(image, theme, limit)
             self.assertEqual(bad, [], name)
 
-        # Title type stacks near the top. It does not grow to fill 1920 px of height.
-        navy_rows = _rows_with(title, theme["navy"], PHONE_SAFE_TOP, 900)
+        # The eyebrow and title are one group, centered in the teaching area.
+        navy_rows = _rows_with(title, theme["navy"], PHONE_SAFE_TOP, limit)
         self.assertTrue(navy_rows, "title should paint navy type")
-        self.assertLess(max(navy_rows), 900)
         self.assertGreater(len(navy_rows), 40)
+        teach_top, teach_bot = PHONE_SAFE_TOP, limit - 56
+        center = (min(navy_rows) + max(navy_rows)) / 2
+        self.assertLess(abs(center - (teach_top + teach_bot) / 2), 0.06 * (teach_bot - teach_top))
 
         white = theme.get("white") or (255, 255, 255)
         cell_rows = _rows_with(table, white, PHONE_SAFE_TOP, limit)
@@ -197,7 +228,9 @@ class VerticalLayout(unittest.TestCase):
         )
         self.assertLess(cell_left, 140)
         cell_rows = _rows_with(table, white, PHONE_SAFE_TOP, self._phone_limit())
-        self.assertGreater(max(cell_rows) - min(cell_rows), 500)
+        # Cells hug the numerals. They are readable and not stretched down the column.
+        self.assertGreater(max(cell_rows) - min(cell_rows), 80)
+        self.assertLess(max(cell_rows) - min(cell_rows), 420)
 
         panel, theme = self._phone({
             "id": "define",
@@ -205,17 +238,13 @@ class VerticalLayout(unittest.TestCase):
             "title_en": "How to read",
             "formula_en": "A is the row.",
         })
-        dense = []
-        px = panel.load()
-        for y in range(PHONE_SAFE_TOP, self._phone_limit()):
-            hits = sum(1 for x in range(PHONE_SAFE_L, PHONE_SAFE_R) if px[x, y] == theme["navy"])
-            if hits > 400:
-                dense.append(y)
-        self.assertTrue(dense)
-        self.assertLess(max(dense) - min(dense), 700)
-        self.assertLess(max(dense), self._phone_limit() - 250)
+        dense = _dense_runs(panel, theme["navy"])
+        self.assertGreaterEqual(len(dense), 2)
+        body = dense[-1]
+        self.assertLess(body[1] - body[0], 420)
+        self.assertLess(body[1], self._phone_limit() - 80)
 
-    def test_takeaways_fill_the_column_and_contrast_stays_inside_the_safe_top(self):
+    def test_takeaways_and_contrast_hug_text_and_stay_centered(self):
         cards, theme = self._phone({
             "id": "points",
             "visual": "takeaway",
@@ -225,8 +254,8 @@ class VerticalLayout(unittest.TestCase):
         })
         emerald = _rows_with(cards, theme["emerald"], PHONE_SAFE_TOP, self._phone_limit())
         self.assertTrue(emerald)
-        self.assertGreater(max(emerald), self._phone_limit() - 90)
-        self.assertGreater(max(emerald) - min(emerald), 400)
+        self.assertLess(max(emerald) - min(emerald), 420)
+        self.assertGreater(max(emerald) - min(emerald), 70)
 
         contrast, theme = self._phone({
             "id": "sides",
@@ -240,7 +269,126 @@ class VerticalLayout(unittest.TestCase):
                 self.assertNotEqual(px[x, y], theme["gold"], (x, y))
         navy = _rows_with(contrast, theme["navy"], PHONE_SAFE_TOP, self._phone_limit())
         self.assertGreaterEqual(min(navy), PHONE_SAFE_TOP - 2)
-        self.assertGreater(max(navy) - min(navy), 800)
+        runs = _dense_runs(contrast, theme["navy"])
+        self.assertGreaterEqual(len(runs), 2)
+        for run in runs:
+            self.assertLess(run[1] - run[0], 520)
+        teach_top, teach_bot = PHONE_SAFE_TOP, self._phone_limit() - 56
+        center = (min(navy) + max(navy)) / 2
+        self.assertLess(abs(center - (teach_top + teach_bot) / 2), 0.06 * (teach_bot - teach_top))
+
+    def test_phone_fit_names_the_beat_and_does_not_clip(self):
+        long = "word " * 80
+        with self.assertRaises(PhoneFitError) as caught:
+            self._phone({
+                "id": "too-long",
+                "visual": "title_card",
+                "title_en": long,
+            })
+        message = str(caught.exception)
+        self.assertIn("beat=too-long", message)
+        self.assertIn("lang=en", message)
+        self.assertIn("role=title", message)
+        self.assertIn("size=64", message)
+        self.assertNotIn("…", message)
+
+        with self.assertRaises(PhoneFitError) as missing:
+            render_beat(
+                {"id": "gap", "visual": "title_card"},
+                {"id": "GAP", "format": "9:16", "beats": [{}]},
+                1, 1, "zh", load_theme("cuhk-navy"),
+            )
+        self.assertIn("lang=zh", str(missing.exception))
+        self.assertIn("missing locale text", str(missing.exception))
+
+    def test_landscape_pixels_and_stamp_stay_on_the_baseline(self):
+        lesson = load_lesson(FIXTURE)
+        lesson.pop("format", None)
+        image, theme = _paint(lesson, 0)
+        self.assertEqual(image.size, (1920, 1080))
+        self.assertEqual(LAYOUT_VERSION, "2026-11-04-reveal-steps-type-v1")
+        px = image.load()
+        self.assertEqual(px[10, 100], theme["navy"])
+        self.assertEqual(px[960, 806], theme["gold"])
+        title_ink = [y for y in range(280, 820) if px[960, y] == theme["navy"]]
+        self.assertGreater(len(title_ink), 40)
+        self.assertGreater(min(title_ink), 300)
+        self.assertLess(max(title_ink), 800)
+        forced = copy.deepcopy(lesson)
+        forced["format"] = "16:9"
+        self.assertEqual(
+            lesson_stamp(lesson, theme, "en", None, True),
+            lesson_stamp(forced, theme, "en", None, True),
+        )
+        self.assertLessEqual(PHONE_CENTER_TOLERANCE, 0.06)
+
+    def test_card_fixture_measures_every_language_and_clears_the_caption(self):
+        lesson = load_lesson(CARDS)
+        lesson["_yaml"] = str(CARDS)
+        self.assertEqual(validate(lesson, glyphs=False, source=CARDS), [])
+        self.assertEqual(lesson["id"], "VERTICAL-CARDS")
+        theme = load_theme("cuhk-navy")
+        with canvas_scope("9:16"):
+            _img, draw = new_canvas(theme)
+            title = _phone_measure(draw, "Which row is first?", 920, "title", beat="ask", lang="en")
+            self.assertGreaterEqual(title["size"], 88)
+            self.assertGreaterEqual(title["size"], PHONE_ROLES["title"][1])
+            zh = _phone_measure(draw, "哪一行是第一行", 920, "title", beat="ask", lang="zh")
+            self.assertGreaterEqual(zh["size"], PHONE_ROLES["title"][1])
+            self.assertGreaterEqual(zh["lh"], int(zh["size"] * 1.35))
+            number = _phone_measure(draw, "550,000", 400, "numeral", beat="ledger", lang="en")
+            self.assertGreaterEqual(number["size"], PHONE_ROLES["numeral"][1])
+            label = _phone_measure(draw, "Avoidable sample cost", 860, "row_label", beat="ledger", lang="en")
+            self.assertGreaterEqual(label["size"], PHONE_ROLES["row_label"][1])
+            self.assertLessEqual(len(label["lines"]), 2)
+        for code in ("en", "zh", "zh_hk"):
+            for index, beat in enumerate(lesson["beats"]):
+                image = render_beat(beat, lesson, index + 1, len(lesson["beats"]), code, theme)
+                self.assertEqual(image.size, (1080, 1920), beat["id"])
+                self.assertEqual(_offenders(image, theme, self._phone_limit()), [], (code, beat["id"]))
+        still = render_beat(lesson["beats"][-1], lesson, 11, 11, "en", theme)
+        blue = _bbox(still, lambda pixel: pixel == (40, 90, 160))
+        gold = _bbox(still, lambda pixel: pixel == (196, 150, 60))
+        self.assertIsNotNone(blue)
+        self.assertIsNotNone(gold)
+        self.assertLess(blue[3], gold[1])
+        width = blue[2] - blue[0] + 1
+        height = gold[3] - blue[1] + 1
+        self.assertGreater(height, width)
+        self.assertAlmostEqual(width / height, 400 / 700, delta=0.08)
+
+        bare = render_beat(lesson["beats"][0], lesson, 1, 11, "en", theme)
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp) / "ask.png"
+            dest = Path(tmp) / "ask-cap.png"
+            bare.save(src)
+            # The phone reserve allows three caption lines. Stamp that card, not a shrunk one-liner.
+            old_lines = os.environ.get("VF_CAPTION_LINES")
+            os.environ["VF_CAPTION_LINES"] = "3"
+            try:
+                with canvas_scope("9:16"):
+                    page = caption_pages(lesson["beats"][0]["en"])[0]
+            finally:
+                if old_lines is None:
+                    os.environ.pop("VF_CAPTION_LINES", None)
+                else:
+                    os.environ["VF_CAPTION_LINES"] = old_lines
+            self.assertEqual(page.count("\n"), 2)
+            stamp_caption(src, page, dest)
+            with Image.open(dest) as stamped:
+                stamped = stamped.convert("RGB")
+                self.assertEqual(stamped.size, (1080, 1920))
+                base_px = bare.load()
+                px = stamped.load()
+                top = stamped.height
+                bottom = -1
+                for y in range(stamped.height):
+                    if any(px[x, y] != base_px[x, y] for x in range(stamped.width)):
+                        top = min(top, y)
+                        bottom = max(bottom, y)
+        self.assertGreater(bottom, 0)
+        self.assertAlmostEqual(bottom, 1920 - PHONE_CAPTION_PAD, delta=8)
+        self.assertGreater(top, self._phone_limit() - 8)
 
     def test_pair_stacks_and_series_columns_fit(self):
         theme = load_theme("cuhk-navy")

@@ -49,9 +49,34 @@ For topic-based standalone micro-lessons:
 
 `format` is optional. Omit it, or set `16:9`, and the short stays 1920×1080. `format: "9:16"` (quoted, so YAML does not read it as a time) selects the phone layout. `python factory/build.py … --format 9:16` does the same, and `--format 16:9` forces landscape even when the YAML says `9:16`. `validate.py` accepts only those two values.
 
-The phone canvas is 1080×1920, one column: a compact header, a graphic that takes most of the height, and a modest caption strip. It is a different layout, not a scaled 16:9 slide. Teaching content sits in about x 80–1000, from y 160 down to that strip. Title cards stack and wrap near the top. Type stays at a phone size and does not grow to fill the extra height. A table with long row names turns those names into full-width headings and puts the figures side by side underneath. Short row names stay beside taller cells. A `pair` of tables stacks vertically. A short definition panel fits its sentence. Takeaway points stack through the column. `still_image` still contain-fits: the whole picture is visible, letterboxed when it is wide, with the title and a short line tight against it. Captions keep the 42 px default and the three-line cap, on a pill about 920 px wide. Mux, including the gold progress bar, uses 1080×1920.
+When the phone cards should differ from the 16:9 short, author a second YAML. Do not ask the factory to reflow one file into both frames. Suggested names, with no new metadata field and no migration of existing lessons:
 
-Slides, cells, covers, captions, clips, and the preview land under `out/lessons/<ID>/9x16/`. Speech MP3s stay in the lesson `audio/` folder and are reused. `LAYOUT_VERSION` does not change. The slide stamp records the canvas only for a 9:16 build, the same way `slide_style` is recorded only when it is set, so landscape caches stay valid.
+```
+lessons/<course>/<ID>-9x16.yaml
+id: <ID>-9x16
+format: "9:16"
+```
+
+The separate id writes slides, captions, and `audio/` under `out/lessons/<ID>-9x16/`. A vertical script therefore does not reuse the landscape lesson's speech, captions, or audio. The renderer paints the strings in that file. It does not shorten them, drop a fact, invent a translation, or split narration to fit. If a string cannot fit at the role's floor size, the build raises `PhoneFitError` and names the beat, language, role, size, line cap, and width. `--format 9:16` on a landscape YAML is only a renderer check.
+
+The phone canvas is 1080×1920. Teaching content sits in about x 80–1000, from y 160 down to a caption strip (42 px type, up to 3 lines, 56 px from the bottom edge). The section header stays at the top. The card group is centered in the remaining teaching area, within 5% of that midpoint. Panels hug the measured text plus modest padding. Type does not shrink to fill a panel, and a panel does not stretch to fill the frame.
+
+| Role | Target px | Floor px | Lines |
+|------|-----------|----------|-------|
+| Title / question | 96 | 64 | 3 |
+| Eyebrow | 32 | 24 | 2 |
+| Definition | 64 | 40 | 5 |
+| Contrast or comparison statement | 64 | 40 | 3 |
+| Takeaway statement | 60 | 40 | 4 |
+| Table numeral | 72 | 48 | 2 |
+| Table row label | 36 | 24 | 2 |
+| Table column label | 32 | 24 | 2 |
+| Matrix numeral | 80 | 48 | 1 |
+| Matrix strategy label | 32 | 24 | 2 |
+
+CJK line step is 1.40 times the size. Latin line step is 1.20 times the size. A long row name is a full-width heading, with the figures side by side under it. A payoff matrix stays 2×2, numerals larger than the strategy labels. `still_image` contain-fits. A vertical file should point at its own portrait art. The picture is not cropped or stretched. Chart visuals (`freq_bars`, `rank_line`, `box_line`, `dev_bars`, `ratio_bars`, `quad_scatter`, and the other plot cards) are not restyled for the phone in this pass. A vertical YAML should not use them until a later pass.
+
+Slides, cells, covers, captions, clips, and the preview land under `out/lessons/<ID>/9x16/`. Speech MP3s stay in that lesson's `audio/` folder. `LAYOUT_VERSION` does not change. The slide stamp records the canvas only for a 9:16 build, the same way `slide_style` is recorded only when it is set, so landscape caches stay valid.
 
 ## Focus slide layout (opt-in)
 
@@ -146,7 +171,7 @@ Lesson-level optional keys (none of these are required by `validate.py`):
 | `glossary` | Console, Excel Glossary sheet, authoring locks | Keep for term consistency. `lock: true` must not be paraphrased. Not painted on slides/covers and not uploaded to YouTube. |
 | `quiz` | Quiz export / pack | Keep when the short has review items. |
 | `slide_style` | Slides | Optional. `focus` uses compact headings and keeps the teaching area above the caption chip. Omit the field for the default layout. Any other value is not a focus layout. |
-| `format` | Slides, covers, mux | Optional. Omit it, or set `16:9`, for the 1920×1080 landscape frame. `9:16` paints a phone layout (1080×1920) for Shorts. Quote it: `format: "9:16"`. `validate.py` accepts only `16:9` or `9:16`. `--format` on the build command overrides this field. |
+| `format` | Slides, covers, mux | Optional. Omit it, or set `16:9`, for the 1920×1080 landscape frame. `9:16` paints a phone layout (1080×1920). Quote it: `format: "9:16"`. When the phone short should differ, use a separate file and id (`<ID>-9x16`), not one YAML for both frames. `validate.py` accepts only `16:9` or `9:16`. `--format` on the build command overrides this field. |
 | `clock` | Build timing | Optional. Omit it, or set `own`, for the default: each language's beat is that language's speech plus a 0.4 s breath. `shared` pads each beat to the longest language. `validate.py` accepts only `own` or `shared`. |
 | `source`, `source_en`, `source_zh`, `source_zh_hk` | What-is footer | Optional. A citation line (companion page, and issuers such as LegCo CB(3)933/2024). Drawn on `whatis_*` slides only. A beat-level `source_*` overrides the lesson line. Lessons that omit it keep the usual title footer. |
 **Not a lesson field:** bare `duration_target` (without `_s`) is unused and must not be added. Timing uses required `duration_target_s` only (validate compares it to the sum of beat `seconds`).

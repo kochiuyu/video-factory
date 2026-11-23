@@ -1,0 +1,274 @@
+# Technical fixture only. Not a production lesson and not a teaching claim.
+# A vertical short is its own file and its own id, so its speech is not the
+# landscape lesson's audio. Quote format: a bare 9:16 is a YAML 1.1 time.
+id: VERTICAL-CARDS
+format: "9:16"
+title_en: Phone card fixture
+title_zh: 竖屏卡片试排
+title_zh_hk: 直屏卡片試排
+duration_target_s: 66
+beats:
+- id: ask
+  visual: title_card
+  seconds: 6
+  kicker_en: Question
+  kicker_zh: 问题
+  kicker_zh_hk: 問題
+  title_en: Which row is first?
+  title_zh: 哪一行是第一行
+  title_zh_hk: 邊一行係第一行
+  en: Which row is first, and is this caption long enough to wrap across three lines on the phone pill.
+  zh: 哪一行是第一行，而这行字幕足够长，会在手机字幕条里排成三行。
+  zh_hk: 邊一行係第一行，而呢行字幕夠長，會喺手機字幕條入面排成三行。
+- id: ask_long
+  visual: title_card
+  seconds: 6
+  kicker_en: Question
+  kicker_zh: 问题
+  kicker_zh_hk: 問題
+  title_en: A question that needs two lines
+  title_zh: 一个需要两行的问题
+  title_zh_hk: 一個需要兩行嘅問題
+  en: A longer question still stays inside three lines at the title floor.
+  zh: 较长的问题在标题下限内仍然不超过三行。
+  zh_hk: 較長嘅問題喺標題下限內仍然唔超過三行。
+- id: define
+  visual: definition_card
+  seconds: 6
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Short definition
+  title_zh: 短定义
+  title_zh_hk: 短定義
+  formula_en: A row is one line of cells.
+  formula_zh: 一行是一排格子。
+  formula_zh_hk: 一行係一排格。
+  en: A row is one line of cells. The panel hugs that sentence.
+  zh: 一行是一排格子。面板贴着这句话。
+  zh_hk: 一行係一排格。面板貼住呢句。
+  s1_en: A row is one line of cells.
+  s1_zh: 一行是一排格子。
+  s1_zh_hk: 一行係一排格。
+  s2_en: The panel hugs that sentence.
+  s2_zh: 面板贴着这句话。
+  s2_zh_hk: 面板貼住呢句。
+- id: define_long
+  visual: definition_card
+  seconds: 6
+  kicker_en: Definition
+  kicker_zh: 定义
+  kicker_zh_hk: 定義
+  title_en: Longer definition
+  title_zh: 较长定义
+  title_zh_hk: 較長定義
+  formula_en: A longer definition names the row, the column, and the cell where they meet.
+  formula_zh: 较长的定义写明行、列，以及它们相交的那一格。
+  formula_zh_hk: 較長嘅定義寫明行、列，同埋佢哋相交嘅嗰一格。
+  en: A longer definition names the row, the column, and the cell where they meet.
+  zh: 较长的定义写明行、列，以及它们相交的那一格。
+  zh_hk: 較長嘅定義寫明行、列，同埋佢哋相交嘅嗰一格。
+  s1_en: A longer definition names the row and the column.
+  s1_zh: 较长的定义写明行和列。
+  s1_zh_hk: 較長嘅定義寫明行同列。
+  s2_en: It also names the cell where they meet.
+  s2_zh: 它也写明它们相交的那一格。
+  s2_zh_hk: 佢亦寫明佢哋相交嘅嗰一格。
+- id: compare
+  visual: two_column
+  seconds: 6
+  kicker_en: Compare
+  kicker_zh: 比较
+  kicker_zh_hk: 比較
+  title_en: Two stacked statements
+  title_zh: 上下两句
+  title_zh_hk: 上下兩句
+  left_en: The outer edge is one statement.
+  left_zh: 外缘是一句。
+  left_zh_hk: 外緣係一句。
+  right_en: The inner cell is the other.
+  right_zh: 内部格子是另一句。
+  right_zh_hk: 內部格係另一句。
+  en: Two statements stack. Neither one is a narrow side column.
+  zh: 两句上下排列。没有一句挤在窄列里。
+  zh_hk: 兩句上下排。冇一句挤喺窄列入面。
+  s1_en: The outer edge is one statement.
+  s1_zh: 外缘是一句。
+  s1_zh_hk: 外緣係一句。
+  s2_en: The inner cell is the other.
+  s2_zh: 内部格子是另一句。
+  s2_zh_hk: 內部格係另一句。
+  s3_en: They stack on the phone.
+  s3_zh: 它们在手机上上下排列。
+  s3_zh_hk: 佢哋喺手機上上下排。
+- id: contrast
+  visual: whatis_contrast
+  seconds: 6
+  what_en: It is a label.
+  what_zh: 它是一个标签。
+  what_zh_hk: 佢係一個標籤。
+  not_en: It is not a count.
+  not_zh: 它不是一个计数。
+  not_zh_hk: 佢唔係一個計數。
+  en: One line says what it is. The next line says what it is not.
+  zh: 一句写它是什么。下一句写它不是什么。
+  zh_hk: 一句寫佢係咩。下一句寫佢唔係咩。
+- id: rule
+  visual: whatis_takeaway
+  seconds: 6
+  rule_en: Read the cell, then the heading.
+  rule_zh: 先读格子，再读标题。
+  rule_zh_hk: 先讀格，再讀標題。
+  en: One statement, centered, with no empty color slab behind it.
+  zh: 一句居中，后面没有一块空的色板。
+  zh_hk: 一句居中，後面冇一塊空嘅色板。
+- id: points
+  visual: takeaway
+  seconds: 6
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Two statements
+  title_zh: 两句要点
+  title_zh_hk: 兩句要點
+  q1_en: The first statement stays large.
+  q1_zh: 第一句保持大字。
+  q1_zh_hk: 第一句保持大字。
+  q2_en: The second statement sits under it.
+  q2_zh: 第二句排在下面。
+  q2_zh_hk: 第二句排喺下面。
+  en: Two takeaway lines stack as one group. Each panel hugs its sentence.
+  zh: 两句要点作为一组上下排列。每个面板贴着自己的句子。
+  zh_hk: 兩句要點作為一組上下排。每個面板貼住自己嘅句子。
+  s1_en: The first statement stays large.
+  s1_zh: 第一句保持大字。
+  s1_zh_hk: 第一句保持大字。
+  s2_en: The second statement sits under it.
+  s2_zh: 第二句排在下面。
+  s2_zh_hk: 第二句排喺下面。
+  s3_en: The pair is centered.
+  s3_zh: 这一对居中。
+  s3_zh_hk: 呢一對居中。
+- id: ledger
+  visual: table_grid
+  seconds: 6
+  rows: 2
+  cols: 2
+  kicker_en: Table
+  kicker_zh: 表
+  kicker_zh_hk: 表
+  title_en: Sample keep and close
+  title_zh: 样例保留与关闭
+  title_zh_hk: 樣例保留同關閉
+  row1_en: Avoidable sample cost
+  row1_zh: 可避免的样例成本
+  row1_zh_hk: 可避免嘅樣例成本
+  row2_en: Shared office figure
+  row2_zh: 共用的办公室数字
+  row2_zh_hk: 共用嘅辦公室數字
+  col1_en: Keep
+  col1_zh: 保留
+  col1_zh_hk: 保留
+  col2_en: Close
+  col2_zh: 关闭
+  col2_zh_hk: 關閉
+  c11_en: "550,000"
+  c12_en: "0"
+  c21_en: "200,000"
+  c22_en: "200,000"
+  c11_zh: "550,000"
+  c12_zh: "0"
+  c21_zh: "200,000"
+  c22_zh: "200,000"
+  c11_zh_hk: "550,000"
+  c12_zh_hk: "0"
+  c21_zh_hk: "200,000"
+  c22_zh_hk: "200,000"
+  footer_en: Sample figures only.
+  footer_zh: 仅为样例数字。
+  footer_zh_hk: 只係樣例數字。
+  en: Long row names sit above the pair of figures. The numbers stay large.
+  zh: 较长的行名写在一对数字上面。数字保持大。
+  zh_hk: 較長嘅行名寫喺一對數字上面。數字保持大。
+  s1_en: The row names come first.
+  s1_zh: 行名先出现。
+  s1_zh_hk: 行名先出現。
+  s2_en: Then the two figures.
+  s2_zh: 然后是两个数字。
+  s2_zh_hk: 然後係兩個數字。
+  s3_en: Sample figures only.
+  s3_zh: 仅为样例数字。
+  s3_zh_hk: 只係樣例數字。
+- id: matrix
+  visual: payoff_matrix
+  seconds: 6
+  kicker_en: Matrix
+  kicker_zh: 矩阵
+  kicker_zh_hk: 矩陣
+  title_en: Sample payoffs
+  title_zh: 样例报酬
+  title_zh_hk: 樣例報酬
+  row_player_en: Side A
+  row_player_zh: 甲方
+  row_player_zh_hk: 甲方
+  col_player_en: Side B
+  col_player_zh: 乙方
+  col_player_zh_hk: 乙方
+  row1_en: High
+  row1_zh: 高
+  row1_zh_hk: 高
+  row2_en: Low
+  row2_zh: 低
+  row2_zh_hk: 低
+  col1_en: High
+  col1_zh: 高
+  col1_zh_hk: 高
+  col2_en: Low
+  col2_zh: 低
+  col2_zh_hk: 低
+  c11_en: "(3, 3)"
+  c12_en: "(0, 5)"
+  c21_en: "(5, 0)"
+  c22_en: "(1, 1)"
+  c11_zh: "(3, 3)"
+  c12_zh: "(0, 5)"
+  c21_zh: "(5, 0)"
+  c22_zh: "(1, 1)"
+  c11_zh_hk: "(3, 3)"
+  c12_zh_hk: "(0, 5)"
+  c21_zh_hk: "(5, 0)"
+  c22_zh_hk: "(1, 1)"
+  en: The four payoffs stay in a two by two grid. The numerals are the large type.
+  zh: 四个报酬留在两行两列里。数字是大字。
+  zh_hk: 四個報酬留喺兩行兩列入面。數字係大字。
+  s1_en: Side A and side B.
+  s1_zh: 甲方和乙方。
+  s1_zh_hk: 甲方同乙方。
+  s2_en: High and low.
+  s2_zh: 高和低。
+  s2_zh_hk: 高同低。
+  s3_en: The first payoff.
+  s3_zh: 第一个报酬。
+  s3_zh_hk: 第一個報酬。
+  s4_en: The other three payoffs.
+  s4_zh: 另外三个报酬。
+  s4_zh_hk: 另外三個報酬。
+  s5_en: The numerals stay large.
+  s5_zh: 数字保持大。
+  s5_zh_hk: 數字保持大。
+- id: still
+  visual: still_image
+  seconds: 6
+  kicker_en: Picture
+  kicker_zh: 图片
+  kicker_zh_hk: 圖片
+  title_en: A portrait test picture
+  title_zh: 一张竖向测试图
+  title_zh_hk: 一張直向測試圖
+  image: factory/fixtures/portrait_test.png
+  caption_en: Test only. Not a lesson illustration.
+  caption_zh: 仅测试。不是课文插图。
+  caption_zh_hk: 只係測試。唔係課文插圖。
+  en: The test picture is portrait and contain-fit. Nothing is cropped.
+  zh: 测试图是竖向的，并且完整装进画面。没有裁切。
+  zh_hk: 測試圖係直向嘅，而且完整裝入畫面。冇裁切。

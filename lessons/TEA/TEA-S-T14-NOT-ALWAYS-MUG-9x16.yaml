@@ -1,0 +1,76 @@
+# Vertical Shorts preview sample. Not a production landscape lesson.
+# Not catalog-ready. Do not treat this file as a 16:9 lesson.
+# On-screen lines and speech are the locked wording. Pictures have no text.
+# Official cards are contain-fit. Seconds are slides-only preview holds.
+# Song 末茶 is not grocery matcha. The soup card has no invented pot.
+id: TEA-S-T14-NOT-ALWAYS-MUG-9x16
+format: "9:16"
+clock: own
+title_en: Tea was not always a mug
+title_zh: 茶不只有泡在杯里
+title_zh_hk: 茶不只有泡在杯裏
+duration_target_s: 60
+beats:
+- id: hook
+  visual: still_image
+  seconds: 8
+  image: art/t14-hook.png
+  title_en: |
+    Not always a mug
+    Was tea always steeped?
+  title_zh: |
+    不只是泡茶
+    茶一向泡在杯里吗？
+  title_zh_hk: |
+    不只是泡茶
+    茶一向泡在杯裏嗎？
+  en: Was tea always a steeped mug?
+  zh: 茶一向都是叶子泡在杯子里吗？
+  zh_hk: 茶一向都係葉子泡在杯裏嗎？
+- id: earlier
+  visual: definition_card
+  seconds: 8
+  formula_en: |
+    A bitter soup
+    Cake tea was boiled.
+  formula_zh: |
+    苦汤，饼茶
+    更早的两种做法。
+  formula_zh_hk: |
+    苦湯，餅茶
+    更早的兩種做法。
+  en: Early tea was often a bitter soup. Later, cake tea was roasted, ground, and boiled.
+  zh: 更早的茶，常常是一碗苦汤。后来的饼茶要烤、磨，再煮。
+  zh_hk: 更早嘅茶，好多時係一碗苦湯。後來嘅餅茶要烤、磨，再煮。
+- id: powder
+  visual: still_image
+  seconds: 8
+  image: art/t14-powder.png
+  title_en: |
+    Whisked powder
+    Not grocery matcha.
+  title_zh: |
+    末茶
+    不是今天的抹茶。
+  title_zh_hk: |
+    末茶
+    不是今日的抹茶。
+  en: Powdered tea was whisked in a bowl. That was the Song period. That is not today's grocery matcha.
+  zh: 宋朝的末茶，是在碗里点茶、把粉末搅开。那不是今天货架上的抹茶。
+  zh_hk: 宋朝嘅末茶，係喺碗入面點茶，將粉末攪開。嗰個唔係今日貨架上嘅抹茶。
+- id: takeaway
+  visual: still_image
+  seconds: 8
+  image: art/t14-takeaway.png
+  title_en: |
+    One later form
+    It came later.
+  title_zh: |
+    后来的一种
+    泡在杯里。
+  title_zh_hk: |
+    後來的一種
+    泡在杯裏。
+  en: The steeped mug came later. Tea has taken more than one form.
+  zh: 泡在杯子里，是后来的一种做法。茶有过不止一种样子。
+  zh_hk: 泡在杯裏，係後來嘅一種做法。茶有過不止一種樣。

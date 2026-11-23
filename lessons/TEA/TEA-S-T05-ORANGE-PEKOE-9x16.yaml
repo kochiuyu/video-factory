@@ -15,8 +15,8 @@ beats:
   seconds: 12
   image: art/t05-hook.png
   title_en: |
-    Better tea?
-    Not a quality ranking.
+    Orange Pekoe
+    Does it mean better tea?
   title_zh: |
     橙白毫更好吗？
     它不是在说谁更好。
@@ -48,8 +48,9 @@ beats:
   seconds: 12
   image: art/t05-takeaway.png
   title_en: |
-    A size word.
-    Larger is not automatically better.
+    Orange Pekoe
+    Leaf size,
+    not a quality ranking.
   title_zh: |
     橙白毫，大小等级词。
     叶子更大，不一定更好。

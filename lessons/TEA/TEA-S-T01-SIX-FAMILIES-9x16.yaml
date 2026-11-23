@@ -122,8 +122,9 @@ beats:
   zh: 这一支会发酵、会陈化。熟普洱是清楚的例子。
   zh_hk: 這一支會發酵、會陳化。熟普洱是清楚的例子。
 - id: close
-  visual: title_card
+  visual: still_image
   seconds: 6
+  image: art/six-families.png
   title_en: |
     Six families
     Not six steps on one scale.

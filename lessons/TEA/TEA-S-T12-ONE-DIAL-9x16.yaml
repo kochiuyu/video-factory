@@ -1,0 +1,60 @@
+# Vertical Shorts preview sample. Not a production landscape lesson.
+# Not catalog-ready. Do not treat this file as a 16:9 lesson.
+# On-screen lines and speech are the locked wording. Pictures have no text.
+# Official cards are contain-fit. Seconds are slides-only preview holds.
+id: TEA-S-T12-ONE-DIAL-9x16
+format: "9:16"
+clock: own
+title_en: Change one dial
+title_zh: 一次只拧一颗
+title_zh_hk: 一次只扭一顆
+duration_target_s: 60
+beats:
+- id: hook
+  visual: still_image
+  seconds: 8
+  image: art/t12-hook.png
+  title_en: |
+    Too harsh?
+    Change one dial.
+  title_zh: |
+    太呛了吗？
+    一次只拧一颗。
+  title_zh_hk: |
+    太刺喉嗎？
+    一次只扭一顆。
+  en: If the cup tastes harsh, change one dial.
+  zh: 如果这杯太呛，一次只拧一颗。
+  zh_hk: 如果呢杯太刺喉，一次只扭一顆。
+- id: dial
+  visual: still_image
+  seconds: 8
+  image: art/t12-dial.png
+  title_en: |
+    One dial
+    A shorter steep first.
+  title_zh: |
+    一次只改一项
+    先缩短浸泡时间。
+  title_zh_hk: |
+    一次只改一項
+    先縮短浸泡時間。
+  en: Try a shorter steep first. If it is still harsh, try cooler water next. Especially for green tea.
+  zh: 先缩短浸泡时间。如果还是呛，下一杯试更低的水温。尤其是绿茶。
+  zh_hk: 先縮短浸泡時間。如果仲係刺喉，下一杯試低啲嘅水溫。尤其是綠茶。
+- id: takeaway
+  visual: still_image
+  seconds: 8
+  image: art/t12-takeaway.png
+  title_en: |
+    One dial
+    Then taste again.
+  title_zh: |
+    一次只改一项
+    再尝下一杯。
+  title_zh_hk: |
+    一次只改一項
+    再試下一杯。
+  en: Change one thing. Then taste the next cup.
+  zh: 一次只改一项，再尝下一杯。
+  zh_hk: 一次只改一項，再試下一杯。

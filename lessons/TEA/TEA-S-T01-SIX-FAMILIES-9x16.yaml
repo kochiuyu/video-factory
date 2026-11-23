@@ -126,14 +126,14 @@ beats:
   seconds: 6
   image: art/six-families.png
   title_en: |
-    Six families
-    They are not six steps from green tea to black tea.
+    One plant, six families
+    Not six steps from green to black.
   title_zh: |
-    六类并列的路线
+    同一种茶树，六类茶
     不是从绿茶到红茶的六个步骤。
   title_zh_hk: |
-    六類並列的路線
+    同一種茶樹，六類茶
     不是從綠茶到紅茶的六個步驟。
-  en: These are six families, not six steps from green tea to black tea.
-  zh: 所以这是六类并列的路线，不是从绿茶到红茶的六个步骤。
-  zh_hk: 所以呢六類係並列嘅路線，唔係由綠茶走到紅茶嘅六個步驟。
+  en: One plant, six families — not six steps from green tea to black tea.
+  zh: 同一种茶树，六类茶。不是从绿茶到红茶的六个步骤。
+  zh_hk: 同一種茶樹，六類茶。唔係由綠茶走到紅茶嘅六個步驟。

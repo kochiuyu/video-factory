@@ -74,7 +74,7 @@ The phone canvas is 1080×1920. Teaching content sits in about x 80–1000, from
 | Matrix numeral | 80 | 48 | 1 |
 | Matrix strategy label | 32 | 24 | 2 |
 
-CJK line step is 1.40 times the size. Latin line step is 1.20 times the size. A long row name is a full-width heading, with the figures side by side under it. A payoff matrix stays 2×2, numerals larger than the strategy labels. `still_image` contain-fits. A vertical file should point at its own portrait art. The picture is not cropped or stretched. Chart visuals (`freq_bars`, `rank_line`, `box_line`, `dev_bars`, `ratio_bars`, `quad_scatter`, and the other plot cards) are not restyled for the phone in this pass. A vertical YAML should not use them until a later pass.
+CJK line step is 1.40 times the size. Latin line step is 1.20 times the size. A long row name is a full-width heading, with the figures side by side under it. A payoff matrix stays 2×2, numerals larger than the strategy labels. On a 9:16 `still_image`, the title starts at 128 px and does not go under 96 px, wrapping onto at most 3 lines. A second title line uses the definition role (64 px, floor 40). A short 9:16 title card also starts at 128 px and may step down to the title floor of 64. Landscape still titles stay the compact size (about 56 px Latin, 50 px CJK, two lines). The picture contain-fits in the space under that title and is not cropped or stretched. A vertical file should point at its own portrait art. Chart visuals (`freq_bars`, `rank_line`, `box_line`, `dev_bars`, `ratio_bars`, `quad_scatter`, and the other plot cards) are not restyled for the phone in this pass. A vertical YAML should not use them until a later pass.
 
 Slides, cells, covers, captions, clips, and the preview land under `out/lessons/<ID>/9x16/`. Speech MP3s stay in that lesson's `audio/` folder. `LAYOUT_VERSION` does not change. The slide stamp records the canvas only for a 9:16 build, the same way `slide_style` is recorded only when it is set, so landscape caches stay valid.
 
@@ -183,7 +183,7 @@ On-slide fields by visual:
 | visual | On-screen fields |
 |--------|------------------|
 | `title_card` | Centered title and kicker |
-| `still_image` | `image` (repo-local `.jpg` / `.jpeg` / `.png`, beside the lesson YAML, then the repo root), `title_*`, optional `kicker_*`, optional `caption_*` or `footer_*` as one muted line under the picture. Compact navy title and a short gold underline on the cream field. No navy title band. Unstaged `en` / `zh` / `zh_hk`. |
+| `still_image` | `image` (repo-local `.jpg` / `.jpeg` / `.png`, beside the lesson YAML, then the repo root), `title_*`, optional `kicker_*`, optional `caption_*` or `footer_*` as one muted line under the picture. Navy title and a short gold underline on the cream field. No navy title band. On 9:16 the title starts at 128 px (floor 96) and a second line uses the definition size. Landscape keeps the compact title. Unstaged `en` / `zh` / `zh_hk`. |
 | `definition_card` | `formula` or `formula_tex`, optional `gloss_*` |
 | `two_column` | `left_*`, `right_*` |
 | `formula` | `formula` or `formula_tex`, optional `gloss_*` |

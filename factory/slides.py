@@ -131,7 +131,7 @@ def lesson_stamp(lesson, theme, code, second, stage_cards) -> str:
         payload["canvas"] = CANVAS_STAMP
         # Phone spacing is not in LAYOUT_VERSION. A 9:16 cache from the first
         # pass must rebuild. Landscape stamps still omit both keys.
-        payload["phone"] = "card-center"
+        payload["phone"] = "still-large"
     # Lesson-level source is not part of the beat digest. Only a lesson that
     # sets one changes the stamp, so existing caches stay valid.
     source_keys = ("source", "source_en", "source_zh", "source_zh_cn", "source_zh_hk")
@@ -1152,7 +1152,8 @@ def _render_title_phone(draw, beat, lesson, code, theme, second=None) -> None:
     primary, secondary = _split_pair(title)
     left, right = PHONE_SAFE_L, PHONE_SAFE_R
     max_w = right - left
-    main = _phone_measure(draw, primary, max_w, "title", beat=beat_id, lang=code)
+    # Short titles take 128. Longer ones wrap, then step down to the title floor.
+    main = _phone_measure(draw, primary, max_w, "title", beat=beat_id, lang=code, target=128)
     sub = None
     if secondary:
         sub = _phone_measure(draw, secondary, max_w, "definition", beat=beat_id, lang=second or code)
@@ -1364,12 +1365,20 @@ def _phone_wrap_at(draw, text: str, size: int, max_w: int, bold: bool = True) ->
     return wrap(draw, text, font_for(text, size, bold), max_w, bold) or [text]
 
 
-def _phone_measure(draw, text: str, max_w: int, role: str, *, beat: str = "", lang: str = "") -> dict:
+def _phone_measure(
+    draw, text: str, max_w: int, role: str, *,
+    beat: str = "", lang: str = "",
+    target: int | None = None, floor: int | None = None, max_lines: int | None = None,
+) -> dict:
     """Largest size at or under the role target that stays inside the line cap.
 
     Fails at the floor instead of clipping, ellipsizing, or rewriting the string.
+    Optional target, floor, and max_lines override the role for one call.
     """
-    target, floor, max_lines = PHONE_ROLES[role]
+    role_target, role_floor, role_lines = PHONE_ROLES[role]
+    target = int(role_target if target is None else target)
+    floor = int(role_floor if floor is None else floor)
+    max_lines = int(role_lines if max_lines is None else max_lines)
     raw = sanitize(text or "").strip()
     if not raw:
         _phone_fail(beat, lang, role, floor, max_lines, max_w, raw, "missing locale text")
@@ -6531,27 +6540,50 @@ def _still_title_top(beat, code, second) -> int:
     return 112 if kicker else 64
 
 
-def _paint_compact_title(draw, title: str, theme: dict, top: int) -> int:
-    """Navy title on the cream field, then a short gold underline.
+def _paint_phone_still_title(draw, title: str, theme: dict, top: int, *, beat: str = "", lang: str = "") -> int:
+    """Large phone still title. Short labels use 128. Nothing goes under 96.
 
-    Returns the y where the picture may start. No full-width band.
+    The body, when the title field has a second line, uses the definition role.
     """
-    if portrait():
-        left = PHONE_SAFE_L
-        max_w = PHONE_SAFE_R - PHONE_SAFE_L
-        line_cap = 3
-        min_size = 24
-    else:
-        left = 64
-        max_w = fw() - 160
-        line_cap = 2
-        min_size = 32
+    left = PHONE_SAFE_L
+    max_w = PHONE_SAFE_R - PHONE_SAFE_L
     primary, secondary = _split_pair(title)
     if not primary and not secondary:
         return top
     y = top
     if primary:
-        cap = 44 if portrait() else (50 if any(is_cjk(ch) for ch in primary) else 56)
+        lay = _phone_measure(
+            draw, primary, max_w, "title", beat=beat, lang=lang,
+            target=128, floor=96, max_lines=3,
+        )
+        y = _paint_phone_lines(draw, lay, left, y, max_w, theme["navy"], align="left")
+    if secondary:
+        y += 18
+        lay = _phone_measure(draw, secondary, max_w, "definition", beat=beat, lang=lang)
+        y = _paint_phone_lines(draw, lay, left, y, max_w, theme["navy"], align="left")
+    y += 16
+    draw.rectangle([left, y, left + 220, y + 8], fill=theme["gold"])
+    return y + 8 + 20
+
+
+def _paint_compact_title(draw, title: str, theme: dict, top: int, *, beat: str = "", lang: str = "") -> int:
+    """Navy title on the cream field, then a short gold underline.
+
+    Returns the y where the picture may start. No full-width band.
+    The 9:16 path uses the large still title. Landscape sizes stay here.
+    """
+    if portrait():
+        return _paint_phone_still_title(draw, title, theme, top, beat=beat, lang=lang)
+    left = 64
+    max_w = fw() - 160
+    line_cap = 2
+    min_size = 32
+    primary, secondary = _split_pair(title)
+    if not primary and not secondary:
+        return top
+    y = top
+    if primary:
+        cap = 50 if any(is_cjk(ch) for ch in primary) else 56
         font = fit_font(draw, primary, cap, max_w, bold=True, min_size=min_size, max_lines=line_cap)
         size = int(getattr(font, "size", cap) or cap)
         lines = (wrap(draw, primary, font, max_w, True) or [sanitize(primary)])[:line_cap]
@@ -6561,8 +6593,8 @@ def _paint_compact_title(draw, title: str, theme: dict, top: int) -> int:
             y += line_h
     if secondary:
         y += 6
-        cap = 26 if portrait() else (30 if any(is_cjk(ch) for ch in secondary) else 34)
-        font = fit_font(draw, secondary, cap, max_w, bold=False, min_size=18 if portrait() else 22, max_lines=line_cap)
+        cap = 30 if any(is_cjk(ch) for ch in secondary) else 34
+        font = fit_font(draw, secondary, cap, max_w, bold=False, min_size=22, max_lines=line_cap)
         size = int(getattr(font, "size", cap) or cap)
         lines = (wrap(draw, secondary, font, max_w, False) or [sanitize(secondary)])[:line_cap]
         line_h = int(size * _line_factor(secondary))
@@ -6597,8 +6629,12 @@ def _still_note(beat, code, second) -> str:
     return field2(beat, "footer", code, second)
 
 
-def _paste_contained(base: Image.Image, draw, art: Image.Image, box, theme: dict):
-    """Contain-fit art in box (x, y, w, h). The rounded frame hugs the picture."""
+def _paste_contained(base: Image.Image, draw, art: Image.Image, box, theme: dict, *, rounded: bool = True):
+    """Contain-fit art in box (x, y, w, h). The frame hugs the picture.
+
+    Landscape stills keep the rounded mask. A phone still pastes the whole
+    bitmap so a portrait card is not cropped at the corners.
+    """
     x0, y0, box_w, box_h = box
     if box_w < 8 or box_h < 8 or art.width < 1 or art.height < 1:
         return None
@@ -6607,6 +6643,10 @@ def _paste_contained(base: Image.Image, draw, art: Image.Image, box, theme: dict
     y = int(y0 + (box_h - dst_h) // 2)
     resample = getattr(getattr(Image, "Resampling", Image), "LANCZOS")
     frame = art.resize((dst_w, dst_h), resample).convert("RGBA")
+    if not rounded:
+        base.paste(frame, (x, y), frame)
+        draw.rectangle([x - 2, y - 2, x + dst_w + 1, y + dst_h + 1], outline=theme["navy"], width=4)
+        return x, y, dst_w, dst_h
     radius = min(22, max(4, min(dst_w, dst_h) // 10))
     mask = Image.new("L", (dst_w, dst_h), 0)
     ImageDraw.Draw(mask).rounded_rectangle([0, 0, dst_w - 1, dst_h - 1], radius=radius, fill=255)
@@ -6629,7 +6669,10 @@ def render_still_image(draw, beat, code, y, theme, stage=None, second=None, less
     del stage, y
     holder = lesson or {}
     title = field2(beat, "title", code, second) or field2(holder, "title", code, second)
-    top = _paint_compact_title(draw, title, theme, _still_title_top(beat, code, second))
+    top = _paint_compact_title(
+        draw, title, theme, _still_title_top(beat, code, second),
+        beat=str(beat.get("id") or ""), lang=code,
+    )
     note = _still_note(beat, code, second)
     # Half the frame stroke stays inside the teaching area.
     bottom = _content_bottom() - 2
@@ -6660,7 +6703,7 @@ def render_still_image(draw, beat, code, y, theme, stage=None, second=None, less
         group_h = dst_h + ((12 + note_h) if note else 0)
         origin_y = span_top + max(0, (span_bot - span_top - group_h) // 2)
         origin_x = left + max(0, (col_w - dst_w) // 2)
-        placed = _paste_contained(base, draw, art, (origin_x, origin_y, dst_w, dst_h), theme)
+        placed = _paste_contained(base, draw, art, (origin_x, origin_y, dst_w, dst_h), theme, rounded=False)
     elif base is not None and box_h >= 8:
         placed = _paste_contained(base, draw, art, (left, top, right - left, box_h), theme)
     if note and placed is not None:

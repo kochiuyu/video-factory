@@ -1,0 +1,60 @@
+# Vertical Shorts preview sample. Not a production landscape lesson.
+# Not catalog-ready. Do not treat this file as a 16:9 lesson.
+# On-screen lines and speech are the locked wording. Pictures have no text.
+# Official cards are contain-fit. Seconds are slides-only preview holds.
+id: TEA-S-T10-COLD-BREW-CAFFEINE-9x16
+format: "9:16"
+clock: own
+title_en: Cold water is not caffeine-free
+title_zh: 冷水不是无咖啡因
+title_zh_hk: 凍水不是無咖啡因
+duration_target_s: 60
+beats:
+- id: hook
+  visual: still_image
+  seconds: 8
+  image: art/t10-hook.png
+  title_en: |
+    Cold water
+    Does it remove caffeine?
+  title_zh: |
+    冷水
+    会去掉咖啡因吗？
+  title_zh_hk: |
+    凍水
+    會去掉咖啡因嗎？
+  en: Does cold water make tea caffeine-free?
+  zh: 用冷水泡茶，茶就会没有咖啡因吗？
+  zh_hk: 用凍水泡茶，茶就會冇咖啡因嗎？
+- id: brew
+  visual: still_image
+  seconds: 8
+  image: art/t10-brew.png
+  title_en: |
+    Cold brew
+    It still extracts caffeine.
+  title_zh: |
+    冷泡
+    咖啡因还是会出来。
+  title_zh_hk: |
+    冷泡
+    咖啡因仍然會出來。
+  en: Cold brewing still extracts caffeine. Cold slows extraction. It does not remove caffeine.
+  zh: 冷泡还是会泡出咖啡因。冷水只是让抽出变慢。它不会把咖啡因去掉。
+  zh_hk: 冷泡都仲會泡出咖啡因。凍水只係令抽出慢咗。佢唔會將咖啡因去掉。
+- id: takeaway
+  visual: still_image
+  seconds: 8
+  image: art/t10-takeaway.png
+  title_en: |
+    Cold water
+    Not a caffeine-free claim.
+  title_zh: |
+    冷水
+    不是无咖啡因。
+  title_zh_hk: |
+    凍水
+    不是無咖啡因。
+  en: Cold does not make tea caffeine-free. Cold is a method, not decaffeination.
+  zh: 冷水不会让茶变成无咖啡因。冷说的是泡法，不是去咖啡因。
+  zh_hk: 凍水唔會令茶變成無咖啡因。凍講嘅係泡法，唔係去咖啡因。

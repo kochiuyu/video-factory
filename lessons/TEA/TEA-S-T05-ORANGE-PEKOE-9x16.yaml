@@ -15,8 +15,8 @@ beats:
   seconds: 12
   image: art/t05-hook.png
   title_en: |
-    Is Orange Pekoe better?
-    It is not a quality ranking.
+    Better tea?
+    Not a quality ranking.
   title_zh: |
     橙白毫更好吗？
     它不是在说谁更好。
@@ -31,8 +31,9 @@ beats:
   seconds: 12
   image: art/t05-sizes.png
   title_en: |
-    It is a size word
-    Whole leaf, or broken pieces.
+    A size word
+    Whole leaf,
+    or broken pieces.
   title_zh: |
     它是大小等级词
     是全叶，或是碎叶。
@@ -47,13 +48,13 @@ beats:
   seconds: 12
   image: art/t05-takeaway.png
   title_en: |
-    Orange Pekoe is a size word.
+    A size word.
     Larger is not automatically better.
   title_zh: |
-    橙白毫是大小等级词。
+    橙白毫，大小等级词。
     叶子更大，不一定更好。
   title_zh_hk: |
-    橙白毫是大小等級詞。
+    橙白毫，大小等級詞。
     葉子更大，不一定更好。
   en: Orange Pekoe is a size word. Larger is not automatically better.
   zh: 橙白毫是大小等级词。叶子更大，不一定更好。

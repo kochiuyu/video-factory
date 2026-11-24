@@ -1,0 +1,74 @@
+# Vertical Shorts preview sample. Not a production landscape lesson.
+# Not catalog-ready. Do not treat this file as a 16:9 lesson.
+# On-screen lines and speech follow the approved history brief.
+# Official cards are contain-fit. Seconds are slides-only preview holds.
+id: TEA-S-H04-FORTUNE-MYTH-9x16
+format: "9:16"
+clock: own
+title_en: Not an invention
+title_zh: 不是福琼发明的
+title_zh_hk: 不是福鈞發明的
+duration_target_s: 60
+beats:
+- id: hook
+  visual: title_card
+  seconds: 8
+  title_en: |
+    Did Fortune bring tea to India?
+    A tidy story says he did, in 1848.
+  title_zh: |
+    是福琼把茶带到印度的吗？
+    有一个很干脆的说法，说他在 1848 年做到了。
+  title_zh_hk: |
+    是福鈞把茶帶到印度的嗎？
+    有一個很乾脆的說法，說他在 1848 年做到了。
+  en: Did Robert Fortune bring tea to India? A tidy story says he first brought it there in 1848.
+  zh: 是福琼把茶带到印度的吗？有人会说，他在 1848 年，第一次把茶带到了印度。
+  zh_hk: 係唔係福鈞把茶帶到印度嘅呢？有人會講，佢喺 1848 年，第一次把茶帶到咗印度。
+- id: tidy
+  visual: title_card
+  seconds: 8
+  title_en: |
+    Too tidy
+    That sentence is too tidy. The official story refuses this: Fortune first brought tea to India in 1848.
+  title_zh: |
+    这句话太干脆了
+    要纠正的，正是“福琼在 1848 年第一次把茶带到印度”。
+  title_zh_hk: |
+    這句話太乾脆了
+    要更正的，正是「福鈞在 1848 年第一次把茶帶到印度」。
+  en: People sometimes tell that tidy origin myth. The timeline is richer than that sentence, and more interesting.
+  zh: 坊间常有这样一个干脆的起源故事。真实的时间线，比这一句丰富，也更值得看。
+  zh_hk: 坊間成日有呢樣乾脆嘅起源故事。真實嘅時間線，比呢一句豐富，亦都更值得睇。
+- id: known
+  visual: still_image
+  seconds: 8
+  image: art/h04-known.png
+  title_en: |
+    Assam tea was already known
+    Local communities already knew, made, and drank it. Fortune later carried Chinese plants and know-how onto an industry already underway.
+  title_zh: |
+    阿萨姆的茶更早被人认识
+    当地社群早已认识、制作，也喝当地的茶。福琼带去的，是中国的茶苗和制茶技术。
+  title_zh_hk: |
+    阿薩姆的茶更早被人認識
+    當地社群早已認識、製作，也喝當地的茶。福鈞帶去的，是中國的茶苗和製茶技術。
+  en: Before Fortune’s 1848 mission, communities in Assam already knew, made, and drank local tea. His missions carried Chinese plants and know-how onto an industry that was already underway.
+  zh: 在福琼 1848 年的任务之前，阿萨姆当地的社群，早已认识、制作，也喝当地的茶。他带去的，是中国的茶苗和制茶技术，叠在一个早已起步的茶业上面。
+  zh_hk: 喺福鈞 1848 年嘅任務之前，阿薩姆當地嘅社群，早已認識、製作，亦都飲當地嘅茶。佢帶去嘅，係中國嘅茶苗同製茶技術，疊喺一個早已起步嘅茶業上面。
+- id: takeaway
+  visual: still_image
+  seconds: 8
+  image: art/h04-takeaway.png
+  title_en: |
+    Fortune did not invent Indian tea
+    Assam tea was already known and grown. His gift was Chinese plants and know-how.
+  title_zh: |
+    印度茶不是福琼发明的
+    阿萨姆的茶更早就被认识、被种植。他带去的，是中国的茶苗和手艺。
+  title_zh_hk: |
+    印度茶不是福鈞發明的
+    阿薩姆的茶更早就被認識、被種植。他帶去的，是中國的茶苗和手藝。
+  en: Fortune did not invent Indian tea. Assam tea was already known and grown; his missions carried Chinese plants and know-how onto an industry already underway.
+  zh: 印度的茶，并不是福琼发明出来的。阿萨姆的茶更早就被人认识、种植；他带去的，是中国的茶苗和制茶技术。
+  zh_hk: 印度嘅茶，並唔係福鈞發明出嚟嘅。阿薩姆嘅茶更早就被人認識、種植；佢帶去嘅，係中國嘅茶苗同製茶技術。

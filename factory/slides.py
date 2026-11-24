@@ -595,6 +595,18 @@ _CJK_COMPOUNDS = frozenset({
     "变异系数", "變異係數", "超额峰度", "超額峰度",
     "杯盖", "杯蓋", "高峰", "开方", "開方",
     "平方根", "方杯", "正态", "正態",
+    # Tea history Shorts: names and phrases that must not break mid-word.
+    "作息表", "作息", "保持清醒", "保持", "清醒", "长坐", "長坐",
+    "禅寺", "禪寺", "禅苑", "禪苑", "清规", "清規", "茶礼", "茶禮",
+    "品鉴笔记", "品茶筆記", "品鉴", "品茶", "笔记", "筆記",
+    "眼皮", "达摩", "達摩", "茶树", "茶樹", "传说", "傳說",
+    "福琼", "福鈞", "阿萨姆", "阿薩姆", "种植园", "種植園",
+    "白银", "白銀", "鸦片", "鴉片", "行商", "那些",
+    "茶包", "便宜", "坐法", "剧本", "劇本", "茶席", "柜台", "櫃位",
+    "茶艺", "茶藝", "茶桌", "待客",
+    "印度", "代价", "代價", "解释", "解釋",
+    "景德传灯录", "景德傳燈錄", "传灯录", "傳燈錄",
+    "神话式解释", "神話式解釋",
 })
 
 
@@ -714,7 +726,9 @@ def wrap(draw, text: str, font, max_w: int, bold: bool = False) -> list[str]:
     size = int(getattr(font, "size", 32) or 32)
     if any(is_cjk(ch) for ch in text):
         return _wrap_tokens(draw, _cjk_tokens(text), size, max_w, bold) or [text]
-    words = text.split()
+    # Ordinary spaces break. A no-break space keeps a name on one line
+    # (Chanyuan Qinggui, tea bag) without changing the words.
+    words = [w for w in text.split(" ") if w]
     lines, cur = [], ""
     for word in words:
         trial = word if not cur else cur + " " + word

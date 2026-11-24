@@ -221,7 +221,7 @@ def _greedy_caption_line(text: str, font, max_w: float) -> list[str]:
             lines.append("".join(cur))
     else:
         buf = ""
-        for word in body.split():
+        for word in [w for w in body.split(" ") if w]:
             trial = (buf + " " + word).strip()
             if buf and draw.textlength(trial, font=font) > max_w:
                 lines.append(buf)
@@ -310,7 +310,8 @@ def _caption_units(body: str, keep_units: bool = False) -> tuple[list[str], bool
         if buf:
             units.append(buf)
         return units, True
-    words = body.split()
+    # Ordinary spaces break. A no-break space keeps a multi-word name intact.
+    words = [w for w in body.split(" ") if w]
     if keep_units:
         # "Cap. 448G" is one caption unit. The period is an abbreviation.
         glued: list[str] = []

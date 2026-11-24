@@ -606,6 +606,7 @@ _CJK_COMPOUNDS = frozenset({
     "茶艺", "茶藝", "茶桌", "待客",
     "印度", "代价", "代價", "解释", "解釋",
     "景德传灯录", "景德傳燈錄", "传灯录", "傳燈錄",
+    "记载", "記載",
     "神话式解释", "神話式解釋",
 })
 
@@ -6555,9 +6556,12 @@ def _still_title_top(beat, code, second) -> int:
 
 
 def _paint_phone_still_title(draw, title: str, theme: dict, top: int, *, beat: str = "", lang: str = "") -> int:
-    """Large phone still title. Short labels use 128. Nothing goes under 96.
+    """Large phone still title. Short labels use 128.
 
-    The body, when the title field has a second line, uses the definition role.
+    The floor is the title role's floor. A line that already fits at 96 or
+    above keeps that size. The floor only lets a locked line through when
+    three lines at 96 would raise PhoneFitError. The body, when the title
+    field has a second line, uses the definition role.
     """
     left = PHONE_SAFE_L
     max_w = PHONE_SAFE_R - PHONE_SAFE_L
@@ -6568,7 +6572,7 @@ def _paint_phone_still_title(draw, title: str, theme: dict, top: int, *, beat: s
     if primary:
         lay = _phone_measure(
             draw, primary, max_w, "title", beat=beat, lang=lang,
-            target=128, floor=96, max_lines=3,
+            target=128, floor=PHONE_ROLES["title"][1], max_lines=3,
         )
         y = _paint_phone_lines(draw, lay, left, y, max_w, theme["navy"], align="left")
     if secondary:

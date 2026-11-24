@@ -11,8 +11,9 @@ title_zh_hk: 茶與作息
 duration_target_s: 60
 beats:
 - id: hook
-  visual: title_card
+  visual: still_image
   seconds: 8
+  image: art/h02-1.png
   title_en: |
     Why did monasteries drink tea?
     It was not a café tasting note.
@@ -28,7 +29,7 @@ beats:
 - id: practice
   visual: still_image
   seconds: 8
-  image: art/h02-practice.png
+  image: art/h02-2.png
   title_en: |
     To stay awake for long practice
     In Tang and Song monasteries, tea was a way to stay awake through long, shared sits.
@@ -44,7 +45,7 @@ beats:
 - id: timetable
   visual: still_image
   seconds: 8
-  image: art/h02-timetable.png
+  image: art/h02-3.png
   title_en: |
     Tea entered the timetable
     By 1103, the Chanyuan Qinggui had written communal tea into a shared schedule.
@@ -60,7 +61,7 @@ beats:
 - id: takeaway
   visual: still_image
   seconds: 8
-  image: art/h02-takeaway.png
+  image: art/h02-4.png
   title_en: |
     A timetable problem, not a tasting note
     The job was long, shared practice, not café flavor.

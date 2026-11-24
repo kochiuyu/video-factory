@@ -11,8 +11,9 @@ title_zh_hk: 便宜茶包的過去
 duration_target_s: 60
 beats:
 - id: hook
-  visual: title_card
+  visual: still_image
   seconds: 8
+  image: art/h05-1.png
   title_en: |
     Why is a supermarket tea bag so cheap?
     The price is easy to overlook.
@@ -28,7 +29,7 @@ beats:
 - id: past
   visual: still_image
   seconds: 8
-  image: art/h05-past.png
+  image: art/h05-2.png
   title_en: |
     That cheapness has a past
     The question is who controlled the leaf, and what that control cost.
@@ -44,7 +45,7 @@ beats:
 - id: exchange
   visual: still_image
   seconds: 8
-  image: art/h05-exchange.png
+  image: art/h05-3.png
   title_en: |
     Silver east, opium west
     Then war, and then colonial plantations. Canton was not an open marketplace.
@@ -58,8 +59,9 @@ beats:
   zh: 大致的路是：白银向东，鸦片西来，然后是战争，再然后是殖民地的种植园。广州的贸易由特许的行商经手，并不是一个随便进出的市场。
   zh_hk: 大致嘅路係：白銀向東，鴉片西來，然後係戰爭，再然後係殖民地嘅種植園。廣州嘅貿易由特許行商經手，並唔係一個隨便進出嘅市場。
 - id: takeaway
-  visual: title_card
+  visual: still_image
   seconds: 8
+  image: art/h05-4.png
   title_en: |
     A cheap bag, an expensive past
     That does not mean tea alone caused those wars.

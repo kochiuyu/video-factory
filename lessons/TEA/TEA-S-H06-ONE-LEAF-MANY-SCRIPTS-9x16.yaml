@@ -11,8 +11,9 @@ title_zh_hk: 同一片葉，多種劇本
 duration_target_s: 60
 beats:
 - id: hook
-  visual: title_card
+  visual: still_image
   seconds: 8
+  image: art/h06-1.png
   title_en: |
     Is there only one right way to sit down with tea?
     The same leaf can be staged in more than one script.
@@ -28,7 +29,7 @@ beats:
 - id: chaoshan
   visual: still_image
   seconds: 8
-  image: art/h06-chaoshan.png
+  image: art/h06-2.png
   title_en: |
     An everyday Chaoshan table
     Small pots, repeated pours, and conversation. This is hospitality, not a national ceremony.
@@ -44,7 +45,7 @@ beats:
 - id: scripts
   visual: still_image
   seconds: 8
-  image: art/h06-scripts.png
+  image: art/h06-3.png
   title_en: |
     A tea-art gathering, or a café counter
     Taiwan tea art can make the setting part of the occasion. A Hong Kong café counter is a working routine. Similar small pots do not make the occasions the same.
@@ -58,8 +59,9 @@ beats:
   zh: 台湾的茶艺聚会，会把动作、器具和安排过的茶席，也算进场面。香港茶餐厅的柜台，则是一套日常的服务节奏。壶看起来像，场合也不一定相同。
   zh_hk: 台灣嘅茶藝聚會，會把動作、器具同安排過嘅茶席，都算進場面。香港茶餐廳嘅櫃位，則係一套日常嘅服務節奏。壺睇落相似，場合都未必相同。
 - id: takeaway
-  visual: title_card
+  visual: still_image
   seconds: 8
+  image: art/h06-4.png
   title_en: |
     One leaf, many scripts
     These are examples, not rules for whole cultures. Not all Taiwan tea drinking is tea art.

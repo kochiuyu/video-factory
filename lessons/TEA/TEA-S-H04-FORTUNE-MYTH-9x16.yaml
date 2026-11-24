@@ -11,8 +11,9 @@ title_zh_hk: 不是福鈞發明的
 duration_target_s: 60
 beats:
 - id: hook
-  visual: title_card
+  visual: still_image
   seconds: 8
+  image: art/h04-1.png
   title_en: |
     Did Fortune bring tea to India?
     A tidy story says he did, in 1848.
@@ -26,8 +27,9 @@ beats:
   zh: 是福琼把茶带到印度的吗？有人会说，他在 1848 年，第一次把茶带到了印度。
   zh_hk: 係唔係福鈞把茶帶到印度嘅呢？有人會講，佢喺 1848 年，第一次把茶帶到咗印度。
 - id: tidy
-  visual: title_card
+  visual: still_image
   seconds: 8
+  image: art/h04-2.png
   title_en: |
     Too tidy
     That sentence is too tidy. The official story refuses this: Fortune first brought tea to India in 1848.
@@ -43,7 +45,7 @@ beats:
 - id: known
   visual: still_image
   seconds: 8
-  image: art/h04-known.png
+  image: art/h04-3.png
   title_en: |
     Assam tea was already known
     Local communities already knew, made, and drank it. Fortune later carried Chinese plants and know-how onto an industry already underway.
@@ -59,7 +61,7 @@ beats:
 - id: takeaway
   visual: still_image
   seconds: 8
-  image: art/h04-takeaway.png
+  image: art/h04-4.png
   title_en: |
     Fortune did not invent Indian tea
     Assam tea was already known and grown. His gift was Chinese plants and know-how.

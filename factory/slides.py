@@ -65,6 +65,7 @@ STAGEABLE = {
     "table_grid": 3, "series": 3, "rank_line": 3, "freq_bars": 3, "balance_line": 3, "box_line": 3, "dev_bars": 3, "ratio_bars": 3, "quad_scatter": 3, "schematic_chart": 3, "dag": 3, "pair": 3, "pair_chart": 3, "pair_box": 3, "pair_slope": 3, "redraw": 3, "turns": 3, "shrink": 3, "mix": 3, "coin": 3,
 }
 # still_image is one unstaged still. It stays out of STAGEABLE on purpose.
+# animated is a Manim scene. It stays out of STAGEABLE so the slide painter does not stage it.
 MIN_STAGE_BEAT = 5.0
 MIN_SLICE = 1.2
 LAYOUT_VERSION = "2026-11-04-reveal-steps-type-v1"
@@ -6126,6 +6127,8 @@ def render_lesson_slides(lesson, dest: Path, label_lang="en", theme=None, second
     jobs = []
     paths = []
     for i, beat in enumerate(beats, start=1):
+        if str(beat.get("visual") or "") == "animated":
+            continue
         path = dest / f"{i:02d}_{beat.get('id') or i}.png"
         paths.append(path)
         jobs.append((beat, lesson, i, n, label_lang, theme, path, None, second_lang))
@@ -6158,6 +6161,8 @@ def write_stage_slides(lesson, dest: Path, code: str, durations, theme=None, for
     holds_all = []
     jobs = []
     for i, beat in enumerate(beats, start=1):
+        if str(beat.get("visual") or "") == "animated":
+            continue
         dur = float(durations[i - 1]) if i - 1 < len(durations) else float(beat.get("seconds") or 20)
         plan = stage_plan(beat, dur, force=force)
         holds = slice_durations(dur, plan)

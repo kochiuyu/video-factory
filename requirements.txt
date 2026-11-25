@@ -6,3 +6,5 @@ matplotlib>=3.8.0
 openpyxl>=3.1.0
 # optional: better Chinese caption breaks (factory/mux.py falls back without it)
 # jieba>=0.42
+# optional animated scenes (visual: animated). Not required for slide lessons.
+# python -m pip install -r requirements-manim.txt

@@ -16,7 +16,7 @@ A lesson is one YAML file under `lessons/<AREA>/`. The renderer looks up the fil
 | Field | Type | Rule |
 |--------|------|------|
 | `id` | string | Unique within the lesson. Used as the audio filename. |
-| `visual` | enum | `title_card`, `definition_card`, `two_column`, `formula`, `takeaway`, `example`, `three_column`, `big_number`, `steps`, `module_open`, `module_close`, `payoff_matrix`, `table_grid`, `series`, `rank_line`, `freq_bars`, `balance_line`, `box_line`, `dev_bars`, `ratio_bars`, `quad_scatter`, `schematic_chart`, `dag`, `pair`, `pair_chart`, `pair_box`, `pair_slope`, `redraw`, `turns`, `shrink`, `mix`, `coin`, `still_image`, `whatis_title`, `whatis_definition`, `whatis_example`, `whatis_contrast`, `whatis_takeaway`. `still_image` and the five `whatis_*` names are opt-in. See **Still image** and **What-is layout**. |
+| `visual` | enum | `title_card`, `definition_card`, `two_column`, `formula`, `takeaway`, `example`, `three_column`, `big_number`, `steps`, `module_open`, `module_close`, `payoff_matrix`, `table_grid`, `series`, `rank_line`, `freq_bars`, `balance_line`, `box_line`, `dev_bars`, `ratio_bars`, `quad_scatter`, `schematic_chart`, `dag`, `pair`, `pair_chart`, `pair_box`, `pair_slope`, `redraw`, `turns`, `shrink`, `mix`, `coin`, `still_image`, `whatis_title`, `whatis_definition`, `whatis_example`, `whatis_contrast`, `whatis_takeaway`, `animated`. `still_image`, the five `whatis_*` names, and `animated` are opt-in. See **Still image**, **What-is layout**, and **Animated scene**. |
 | speech | trio | **One source only.** Unstaged card: `en` / `zh` / `zh_hk`. Staged card: `s1_en` `s1_zh` `s1_zh_hk` … Do not keep both. |
 
 Voice and captions join the stage lines in order. `validate.py` accepts either shape. Whole-card `en` on a staged beat is ignored when `s1_en` exists.
@@ -121,8 +121,15 @@ These visuals paint progressive stills. Write one spoken chunk per still:
 | `title_card`, `big_number`, `module_open`, `module_close` | 1 | `en` / `zh` / `zh_hk` only |
 | `still_image` | 1 | `en` / `zh` / `zh_hk` only. One still. Do not use `s1_*`. |
 | `whatis_title`, `whatis_definition`, `whatis_example`, `whatis_contrast`, `whatis_takeaway` | 1 | `en` / `zh` / `zh_hk` only. One still per beat. Do not use `s1_*`. |
+| `animated` | 3 | `s1_*` … `s3_*`, one line per motion. Not a slide. See **Animated scene**. |
 
-`s1` is on screen with `_s1.png`, `s2` with `_s2.png`, and so on. Do not put factory talk in the speech (“watch the gold bar”, “this card”, “in the left box”).
+`s1` is on screen with `_s1.png`, `s2` with `_s2.png`, and so on. An `animated` beat has no stage PNG: `s1`, `s2`, and `s3` are the three motions, and the caption cards use those same holds. Do not put factory talk in the speech (“watch the gold bar”, “this card”, “in the left box”).
+
+## Animated scene (opt-in)
+
+`visual: animated` renders a moving scene with Manim instead of a slide still. Manim is optional (`requirements-manim.txt`). A lesson with no animated beat builds exactly as before, including on a machine where Manim is not installed. Asking for an animated scene without Manim stops with an error that names that file.
+
+Authoring, the two demo scenes, caption timing, and the cache live in [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md). The demo file is `examples/demo-ten-and-ones.yaml`. It is outside `lessons/`, so `build --all` does not pick it up.
 
 ## Optional fields
 

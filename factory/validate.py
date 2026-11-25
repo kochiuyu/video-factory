@@ -113,6 +113,7 @@ ALLOWED_VISUALS = {
     "whatis_contrast",
     "whatis_takeaway",
     "still_image",
+    "animated",
 }
 
 
@@ -403,6 +404,11 @@ def validate(lesson: dict, glyphs: bool = True, source: Path | str | None = None
             from slides import quad_scatter_problems
 
             for msg in quad_scatter_problems(beat):
+                errors.append(f"Beat {bid} {msg}")
+        elif vis == "animated":
+            from anim import scene_problems
+
+            for msg in scene_problems(beat):
                 errors.append(f"Beat {bid} {msg}")
         else:
             missing = [s for s in REQUIRED_STEMS.get(vis, ()) if not _stem(beat, s)]

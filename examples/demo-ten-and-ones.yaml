@@ -1,0 +1,40 @@
+# Demo only. Not a production lesson.
+# Lives outside lessons/ so `build --all` does not pick it up.
+# MathQuiz P1 "A ten and some ones": 13 = 10 + 3, then make ten with 9 + 8.
+# https://kochiuyu.github.io/mathquiz/
+id: DEMO-P1-TEN-ONES
+title_en: A ten and some ones
+title_zh: 一个十和一些一
+title_zh_hk: 一個十和一些一
+duration_target_s: 30
+clock: own
+beats:
+- id: thirteen
+  visual: animated
+  scene: ten_and_ones
+  count: 13
+  seconds: 14
+  s1_en: "Thirteen counters. They fill a frame of ten."
+  s1_zh: "十三个圆片。它们填满一个十格框。"
+  s1_zh_hk: "十三個圓片。佢哋填滿一個十格框。"
+  s2_en: "The full frame stays together. That is one ten, and three ones are left."
+  s2_zh: "满框留在一起，就是一个十，还剩三个一。"
+  s2_zh_hk: "滿框留喺一齊，就係一個十，仲剩三個一。"
+  s3_en: "Thirteen equals ten plus three."
+  s3_zh: "十三等于十加三。"
+  s3_zh_hk: "十三等於十加三。"
+- id: make-ten
+  visual: animated
+  scene: make_ten
+  a: 9
+  b: 8
+  seconds: 16
+  s1_en: "Nine green counters fill the frame except one space. Eight gold counters wait beside it."
+  s1_zh: "九个绿色圆片放进十格框，还空一格。八个金色圆片等在旁边。"
+  s1_zh_hk: "九個綠色圓片放進十格框，仲空一格。八個金色圓片等喺旁邊。"
+  s2_en: "Move one gold counter into the empty space. Nine plus one equals ten."
+  s2_zh: "把一个金色圆片移进空格。九加一等于十。"
+  s2_zh_hk: "將一個金色圓片移入空格。九加一等於十。"
+  s3_en: "Seven gold counters are left. Ten plus seven equals seventeen."
+  s3_zh: "还剩七个金色圆片。十加七等于十七。"
+  s3_zh_hk: "仲剩七個金色圓片。十加七等於十七。"

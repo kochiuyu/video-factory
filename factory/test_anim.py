@@ -638,6 +638,200 @@ class AnimatedRenderTest(unittest.TestCase):
                 xs.append(self._gold_x(shot))
             self.assertTrue(all(xs[i] < xs[i + 1] - 4 for i in range(3)), xs)
 
+    def test_ten_recap_stays_inside_and_apart_in_both_aspects(self):
+        """The four-line ten recap keeps every picture and its sentence in the safe box.
+
+        Frames on a line share one size. The sentence does not touch the pictures.
+        Checked for English, 简体, and Cantonese at 16:9 and 9:16, including the
+        frame where the ten is highlighted and the ones are still being counted.
+        """
+        import math
+        import subprocess
+        import tempfile
+
+        from PIL import Image
+
+        from anim import render_animated_clip
+        from mux import caption_safe_top
+
+        beat = {
+            "id": "takeaway",
+            "visual": "animated",
+            "scene": "lesson_takeaway",
+            "motif": "ten_frame",
+            "title_en": "Find the ten first",
+            "s1_en": "One full frame is one ten.",
+            "s2_en": "Ten and three more make thirteen.",
+            "s3_en": "Two full frames make twenty.",
+            "s4_en": "Find the ten first. Then count the rest.",
+            "title_zh": "先找十",
+            "s1_zh": "一个满框，就是一个十。",
+            "s2_zh": "十再多三个，就是十三。",
+            "s3_zh": "两个满框，就是二十。",
+            "s4_zh": "先找十，再数剩下的。",
+            "title_zh_hk": "先搵十",
+            "s1_zh_hk": "一個滿框，就係一個十。",
+            "s2_zh_hk": "十再多三個，就係十三。",
+            "s3_zh_hk": "兩個滿框，就係二十。",
+            "s4_zh_hk": "先搵十，再數剩低嘅。",
+        }
+        holds = [0.4, 0.4, 0.4, 0.9]
+        words = [
+            {"text": "Find", "start": 1.28},
+            {"text": "the", "start": 1.38},
+            {"text": "ten", "start": 1.48},
+            {"text": "first", "start": 1.58},
+            {"text": "Then", "start": 1.78},
+            {"text": "count", "start": 1.92},
+            {"text": "the", "start": 2.02},
+            {"text": "rest", "start": 2.08},
+        ]
+
+        def safe_box(w, h):
+            fw = 8.0 * w / h
+            fh = 8.0
+            safe_px = caption_safe_top(h)
+            bot_lim = fh / 2 - (safe_px / float(h)) * fh + 0.12
+            top_lim = fh / 2 - 0.28
+
+            def pix_y(manim_y):
+                return (fh / 2 - manim_y) / fh * h
+
+            return (
+                math.ceil(0.4 / fw * w),
+                math.floor(pix_y(top_lim)),
+                math.floor((fw - 0.4) / fw * w),
+                math.ceil(pix_y(bot_lim)),
+            )
+
+        def ink_at(px, x, y):
+            r, g, b = px[x, y]
+            return not (r > 232 and g > 226 and b > 216)
+
+        def green_at(px, x, y):
+            r, g, b = px[x, y]
+            return g > 90 and g > r + 25 and g > b + 15
+
+        with tempfile.TemporaryDirectory(prefix="vf-recap-") as tmp:
+            root = Path(tmp)
+            audio = root / "silent.wav"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                 "-t", "3", "-c:a", "pcm_s16le", str(audio)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            for lang, frame in (
+                ("en", (1280, 720)),
+                ("zh", (1280, 720)),
+                ("zh_hk", (1280, 720)),
+                ("en", (720, 1280)),
+                ("zh", (720, 1280)),
+                ("zh_hk", (720, 1280)),
+            ):
+                dest = root / f"{lang}-{frame[0]}x{frame[1]}.mp4"
+                render_animated_clip(
+                    beat, {"format": "9:16" if frame[1] > frame[0] else "16:9"},
+                    label_lang_code=lang, holds=holds, still_idx=[0, 1, 2, 3],
+                    pages=["a", "b", "c", "d"], audio=audio, dest=dest,
+                    cache_dir=root / "cache", captions=False, progress_bar=False,
+                    frame=frame, fps=10, words=words,
+                )
+                folder = root / f"frames-{lang}-{frame[0]}x{frame[1]}"
+                folder.mkdir()
+                subprocess.check_call(
+                    ["ffmpeg", "-y", "-i", str(dest), str(folder / "f%03d.png")],
+                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                )
+                frames = sorted(folder.glob("f*.png"))
+                self.assertGreaterEqual(len(frames), 8, dest.name)
+                left, top, right, bottom = safe_box(*frame)
+                portrait = frame[1] > frame[0]
+                for path in frames:
+                    img = Image.open(path).convert("RGB")
+                    px = img.load()
+                    outside = 0
+                    for y in range(img.height):
+                        for x in range(img.width):
+                            if not ink_at(px, x, y):
+                                continue
+                            if x < left - 2 or x > right + 2 or y < top - 2 or y > bottom + 2:
+                                outside += 1
+                    self.assertEqual(outside, 0, f"{dest.name} {path.name} outside {outside}")
+                self._recap_end_is_aligned(frames[-1], portrait, frame[1])
+
+    def _recap_end_is_aligned(self, path, portrait: bool, frame_h: int):
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        px = img.load()
+        w, h = img.size
+
+        def ink(x, y):
+            r, g, b = px[x, y]
+            return not (r > 232 and g > 226 and b > 216)
+
+        def green(x, y):
+            r, g, b = px[x, y]
+            return g > 90 and g > r + 25 and g > b + 15
+
+        green_rows = [y for y in range(h) if sum(1 for x in range(0, w, 2) if green(x, y)) > 2]
+        bands = []
+        start = prev = None
+        for y in green_rows:
+            if start is None:
+                start = prev = y
+            elif y - prev > 2:
+                bands.append((start, prev))
+                start = prev = y
+            else:
+                prev = y
+        if start is not None:
+            bands.append((start, prev))
+        green_heights = []
+        text_heights = []
+        for top, bot in bands:
+            if bot - top < 6:
+                continue
+            green_heights.append(bot - top + 1)
+            gxs = [x for y in range(top, bot + 1) for x in range(w) if green(x, y)]
+            if not gxs:
+                continue
+            cols = [sum(1 for y in range(max(0, top - 4), min(h, bot + 5)) if ink(x, y)) for x in range(w)]
+            gap = best = 0
+            for n in cols[max(gxs) : min(w, max(gxs) + 140)]:
+                if n == 0:
+                    gap += 1
+                    best = max(best, gap)
+                else:
+                    gap = 0
+            if not portrait:
+                self.assertGreaterEqual(best, 4, f"{path.name} gutter {best}")
+            else:
+                below = bot + 3
+                separated = below < h and not any(green(x, below) for x in range(0, w, 2))
+                self.assertTrue(separated, f"{path.name} frame touches the next row")
+        ink_rows = [y for y in range(h) if sum(1 for x in range(0, w, 2) if ink(x, y)) > 3]
+        self.assertGreaterEqual(len(green_heights), 3, path.name)
+        start = prev = None
+        for y in ink_rows:
+            if start is None:
+                start = prev = y
+            elif y - prev > 2:
+                if prev - start >= 4 and not any(a <= start <= b for a, b in bands):
+                    text_heights.append(prev - start + 1)
+                start = prev = y
+            else:
+                prev = y
+        if start is not None and prev - start >= 4 and not any(a <= start <= b for a, b in bands):
+            text_heights.append(prev - start + 1)
+        base = sorted(green_heights)[len(green_heights) // 2]
+        for height in green_heights:
+            near = abs(height - base) <= max(3, int(base * 0.22))
+            stacked = abs(height - 2 * base) <= max(4, int(base * 0.28))
+            self.assertTrue(near or stacked, f"{path.name} frame heights {green_heights}")
+        self.assertTrue(text_heights, path.name)
+        self.assertGreaterEqual(max(text_heights), int(frame_h * 0.024), text_heights)
+
     def _gold_x(self, path):
         from PIL import Image
 

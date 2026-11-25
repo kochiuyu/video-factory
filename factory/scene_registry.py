@@ -446,6 +446,10 @@ class LessonTakeaway(SceneKind):
         params = {"motif": _motif(beat)}
         if self.step_count(beat) != self.steps:
             params["lines"] = self.step_count(beat)
+        # One frame size on every line. 9:16 puts the sentence under the
+        # pictures and stacks the two frames when side by side would be too wide.
+        if _motif(beat) == "ten_frame" and self.step_count(beat) == 4:
+            params["arrangement"] = "aligned"
         count = _as_int(beat.get("count"))
         if count is not None:
             params["count"] = count

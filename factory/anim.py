@@ -1180,59 +1180,158 @@ def _scene_types() -> dict:
                 self.wait(rest)
 
         def _ten_recap(self, title, lines, latin: str, cjk: str) -> None:
-            """Four ideas: one ten, thirteen, twenty, then the ten before the ones."""
+            """Four ideas, one frame size: one ten, thirteen, twenty, then the ones."""
             dim = "#D5D0C6"
+            portrait = float(config.frame_width) < float(config.frame_height)
+            left_lim, right_lim, bot_lim, top_lim = _safe_limits()
+            # Spare room for strokes and the gold ring, which sit outside the
+            # mobject box settle measures.
+            max_w = (right_lim - left_lim) - 0.40
+            max_h = (top_lim - bot_lim) - 0.32
+            text_size = 32 if portrait else 40
+            digit_size = 32 if portrait else 38
+            # Largest first. 9:16 stacks the two frames when a side-by-side pair
+            # cannot keep this text size inside the safe box.
+            if portrait:
+                plans = [(0.44, True), (0.40, True), (0.36, False), (0.32, False), (0.28, False)]
+            else:
+                plans = [(0.58, False), (0.52, False), (0.46, False), (0.40, False)]
 
-            def filled(scale: float):
-                frame = ten_cells()
-                frame.scale(scale)
-                cell = frame[0]
-                radius = min(float(cell.width), float(cell.height)) * 0.32
-                dots = VGroup(*[counter(GREEN, radius) for _ in range(10)])
-                for dot, box in zip(dots, frame):
-                    dot.move_to(box)
-                return frame, dots
+            def wrap_words(text: str, size: int, width: float):
+                raw = (text or "").strip() or " "
+                cjk_text = any("\u4e00" <= ch <= "\u9fff" for ch in raw)
+                sentences: list[str] = []
+                buf = ""
+                for ch in raw:
+                    buf += ch
+                    if ch in ".!?。！？" and len(buf.strip()) > 3:
+                        sentences.append(buf.strip())
+                        buf = ""
+                if buf.strip():
+                    sentences.append(buf.strip())
+                packed: list[str] = []
+                for sentence in sentences or [raw]:
+                    tokens = list(sentence) if cjk_text else sentence.split(" ")
+                    cur = ""
+                    for tok in tokens:
+                        if not tok:
+                            continue
+                        trial = tok if not cur else (cur + tok if cjk_text else cur + " " + tok)
+                        if float(styled(trial, latin, cjk, size).width) <= width or not cur:
+                            cur = trial
+                        else:
+                            packed.append(cur)
+                            cur = tok
+                    if cur:
+                        packed.append(cur)
+                group = VGroup(*[styled(line, latin, cjk, size) for line in (packed or [raw])])
+                group.arrange(DOWN, buff=0.05, aligned_edge=LEFT)
+                if float(group.width) > width > 0:
+                    group.scale(width / float(group.width))
+                return group
 
-            def aside(frame, n: int, color: str):
-                cell = frame[0]
-                radius = min(float(cell.width), float(cell.height)) * 0.32
-                dots = VGroup(*[counter(color, radius) for _ in range(n)])
-                dots.arrange(RIGHT, buff=radius * 0.45)
-                dots.next_to(frame, RIGHT, buff=0.12)
-                return dots
+            def assemble(scale: float, stack_frames: bool):
+                def filled():
+                    frame = ten_cells()
+                    frame.scale(scale)
+                    cell = frame[0]
+                    radius = min(float(cell.width), float(cell.height)) * 0.30
+                    dots = VGroup(*[counter(GREEN, radius) for _ in range(10)])
+                    for dot, box in zip(dots, frame):
+                        dot.move_to(box)
+                    return frame, dots
 
-            frame0, dots0 = filled(0.30)
-            row0 = VGroup(VGroup(frame0, dots0), _wrapped(str(lines[0]), latin, cjk, 26)).arrange(RIGHT, buff=0.22)
+                def beside(frame, color: str):
+                    cell = frame[0]
+                    radius = min(float(cell.width), float(cell.height)) * 0.30
+                    dots = VGroup(*[counter(color, radius) for _ in range(3)])
+                    dots.arrange(RIGHT, buff=max(0.04, radius * 0.55))
+                    dots.next_to(frame, RIGHT, buff=0.16)
+                    return dots
 
-            frame1, dots1 = filled(0.28)
-            ones1 = aside(frame1, 3, GREEN)
-            thirteen = Text("13", font=latin, font_size=28, color=NAVY)
-            thirteen.next_to(ones1, RIGHT, buff=0.1)
-            row1 = VGroup(VGroup(frame1, dots1, ones1, thirteen), _wrapped(str(lines[1]), latin, cjk, 26)).arrange(RIGHT, buff=0.22)
+                def number(label: str, anchor, center_y: float):
+                    num = Text(str(label), font=latin, font_size=digit_size, color=NAVY)
+                    num.next_to(anchor, RIGHT, buff=0.12)
+                    num.set_y(center_y)
+                    return num
 
-            frame_a, dots_a = filled(0.24)
-            frame_b, dots_b = filled(0.24)
-            pair = VGroup(VGroup(frame_a, dots_a), VGroup(frame_b, dots_b)).arrange(RIGHT, buff=0.12)
-            twenty = Text("20", font=latin, font_size=28, color=NAVY)
-            twenty.next_to(pair, RIGHT, buff=0.1)
-            row2 = VGroup(VGroup(pair, twenty), _wrapped(str(lines[2]), latin, cjk, 26)).arrange(RIGHT, buff=0.22)
+                frame0, dots0 = filled()
+                cue0 = VGroup(frame0, dots0)
+                frame1, dots1 = filled()
+                ones1 = beside(frame1, GREEN)
+                cue1 = VGroup(frame1, dots1, ones1, number("13", ones1, float(frame1.get_y())))
+                frame_a, dots_a = filled()
+                frame_b, dots_b = filled()
+                pair = VGroup(VGroup(frame_a, dots_a), VGroup(frame_b, dots_b))
+                if stack_frames:
+                    pair.arrange(DOWN, buff=0.10, aligned_edge=LEFT)
+                else:
+                    pair.arrange(RIGHT, buff=0.14)
+                cue2 = VGroup(pair, number("20", pair, float(pair.get_y())))
+                frame3, dots3 = filled()
+                ones3 = beside(frame3, dim)
+                cue3 = VGroup(frame3, dots3, ones3)
+                cues = (cue0, cue1, cue2, cue3)
+                if portrait:
+                    words = [wrap_words(str(line), text_size, max_w) for line in lines[:4]]
+                    rows = []
+                    for cue, word in zip(cues, words):
+                        word.next_to(cue, DOWN, buff=0.10, aligned_edge=LEFT)
+                        rows.append(VGroup(cue, word))
+                    stack = VGroup(*rows).arrange(DOWN, buff=0.14, aligned_edge=LEFT)
+                else:
+                    cue_w = max(float(cue.width) for cue in cues)
+                    words = [wrap_words(str(line), text_size, max(1.6, max_w - cue_w - 0.32)) for line in lines[:4]]
+                    rows = []
+                    for cue, word in zip(cues, words):
+                        word.next_to(cue, RIGHT, buff=0.42 + (cue_w - float(cue.width)))
+                        rows.append(VGroup(cue, word))
+                    stack = VGroup(*rows).arrange(DOWN, buff=0.16, aligned_edge=LEFT)
+                heading = title.copy()
+                if float(heading.width) > max_w > 0:
+                    heading.scale(max_w / float(heading.width))
+                heading.next_to(stack, UP, buff=0.20)
+                board = VGroup(heading, stack)
+                return {
+                    "board": board,
+                    "heading": heading,
+                    "rows": rows,
+                    "words": words,
+                    "frame3": frame3,
+                    "dots3": dots3,
+                    "ones3": ones3,
+                    "fits": float(board.width) <= max_w + 0.02 and float(board.height) <= max_h + 0.02,
+                }
 
-            frame3, dots3 = filled(0.28)
-            ones3 = aside(frame3, 3, dim)
-            words3 = _wrapped(str(lines[3]), latin, cjk, 26)
-            row3 = VGroup(VGroup(frame3, dots3, ones3), words3).arrange(RIGHT, buff=0.22)
-
-            stack = VGroup(row0, row1, row2, row3).arrange(DOWN, buff=0.22, aligned_edge=LEFT)
-            title.next_to(stack, UP, buff=0.28)
-            board = VGroup(title, stack)
-            board.move_to(UP * 0.05)
+            chosen = None
+            for scale, stack_frames in plans:
+                built = assemble(scale, stack_frames)
+                chosen = built
+                if built["fits"]:
+                    break
+            board = chosen["board"]
+            rows = chosen["rows"]
+            words = chosen["words"]
+            frame3 = chosen["frame3"]
+            dots3 = chosen["dots3"]
+            ones3 = chosen["ones3"]
+            heading = chosen["heading"]
+            board.move_to(UP * 0)
             settle(board)
-            ring = SurroundingRectangle(frame3, color=GOLD, buff=0.05, stroke_width=5)
-            ring.set_z_index(3)
+            # settle sizes to the mobject box, which does not include strokes.
+            if float(board.height) > 0.4:
+                board.scale(max(0.90, (float(board.height) - 0.22) / float(board.height)))
+                board.move_to(UP * 0)
+                if float(board.get_bottom()[1]) < bot_lim + 0.06:
+                    board.shift(UP * (bot_lim + 0.06 - float(board.get_bottom()[1])))
+                if float(board.get_top()[1]) > top_lim - 0.04:
+                    board.shift(DOWN * (float(board.get_top()[1]) - (top_lim - 0.04)))
+            ring = SurroundingRectangle(frame3, color=GOLD, buff=0.06, stroke_width=4)
+            ring.set_z_index(5)
 
-            self.spend(0, FadeIn(title), FadeIn(row0))
-            self.spend(1, FadeIn(row1))
-            self.spend(2, FadeIn(row2))
+            self.spend(0, FadeIn(heading), FadeIn(rows[0]))
+            self.spend(1, FadeIn(rows[1]))
+            self.spend(2, FadeIn(rows[2]))
             lights = [lambda dot=dot: dot.animate.set_fill(GREEN, opacity=1) for dot in ones3]
             counted = self.marks_for(3)
             total = float((self.vf_durations or [0, 0, 0, 0])[3] or 0)
@@ -1240,7 +1339,9 @@ def _scene_types() -> dict:
                 start = total * 0.42
                 span = total * 0.5
                 counted = [start + span * (i + 0.5) / 3 for i in range(3)]
-            intro = AnimationGroup(FadeIn(words3), FadeIn(frame3), FadeIn(dots3), FadeIn(ones3), FadeIn(ring))
+            intro = AnimationGroup(
+                FadeIn(words[3]), FadeIn(frame3), FadeIn(dots3), FadeIn(ones3), FadeIn(ring),
+            )
             self.spend_marked(3, lights, counted, intro=intro)
 
     def _wrapped(text: str, latin: str, cjk: str, size: int):

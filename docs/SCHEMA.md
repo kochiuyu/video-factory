@@ -121,7 +121,7 @@ These visuals paint progressive stills. Write one spoken chunk per still:
 | `title_card`, `big_number`, `module_open`, `module_close` | 1 | `en` / `zh` / `zh_hk` only |
 | `still_image` | 1 | `en` / `zh` / `zh_hk` only. One still. Do not use `s1_*`. |
 | `whatis_title`, `whatis_definition`, `whatis_example`, `whatis_contrast`, `whatis_takeaway` | 1 | `en` / `zh` / `zh_hk` only. One still per beat. Do not use `s1_*`. |
-| `animated` | one per motion | `s1_*` … one line per step (`one_ten` has four; `lesson_hook` has one; `lesson_takeaway` has three, or four when `s4` is written; the other scenes have three). Not a slide. See **Animated scene**. |
+| `animated` | one per motion | `s1_*` … one line per step (`one_ten` has four; `lesson_hook` has one; `lesson_takeaway` has three, or four when `s4` is written; `ordinal_row` and the other scenes have three). Not a slide. See **Animated scene**. |
 
 `s1` is on screen with `_s1.png`, `s2` with `_s2.png`, and so on. An `animated` beat has no stage PNG: `s1`, `s2`, and `s3` are the three motions, and the caption cards use those same holds. Do not put factory talk in the speech (“watch the gold bar”, “this card”, “in the left box”).
 
@@ -130,6 +130,8 @@ These visuals paint progressive stills. Write one spoken chunk per still:
 `visual: animated` renders a moving scene with Manim instead of a slide still. It is a per-beat choice: a hook, a definition, a middle step, or a takeaway may be animated, and the beats around it may stay slides. Manim is optional (`requirements-manim.txt`). A lesson with no animated beat builds exactly as before, including on a machine where Manim is not installed. Asking for an animated scene without Manim stops with an error that names that file.
 
 Authoring, the scenes, caption timing, and the cache live in [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md). The demo file is `examples/demo-ten-and-ones.yaml`. It is outside `lessons/`, so `build --all` does not pick it up.
+
+`ordinal_row` fields are `n` (1–20 tokens), `mark` (the marked token, 1-based from the left), `direction` (`left` or `right`), and `mode` (`ordinal` or `total`). A `lesson_hook` or `lesson_takeaway` with `motif: ordinal` may set the same `n` and `mark`. Omit them and the picture is six tokens with the third one marked.
 
 ## Optional fields
 

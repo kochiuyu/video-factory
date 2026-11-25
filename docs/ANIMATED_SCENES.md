@@ -33,16 +33,17 @@ Any beat may set `visual: animated`. A hook, a definition, a middle step, or a t
 
 `scene` names a registered scene. The registry is `factory/scene_registry.py`. Each scene has a step count, a parameter check, and a per-language label table. `title_card` and `takeaway` are slide visuals, not registry scenes. A beat uses one or the other.
 
-The scenes are `one_ten`, `ten_and_ones`, `make_ten`, `count_objects`, `number_track`, `lesson_hook`, and `lesson_takeaway`.
+The scenes are `one_ten`, `ten_and_ones`, `make_ten`, `count_objects`, `number_track`, `ordinal_row`, `lesson_hook`, and `lesson_takeaway`.
 
 - `one_ten` takes `count` from 10 to 20 and four spoken lines. Ten counters start as single ones, gather into one frame, and the frame is labelled "one ten". The ones that do not fit then sit beside it, the child is asked how many, and the last line answers. The demo uses 13, so the answer is three.
 - `ten_and_ones` takes `count` from 10 to 20. The demo uses 13: ten counters fill the frame, three sit beside it, and the sentence is `13 = 10 + 3`. `count: 20` fills two frames and the sentence is `20 = 10 + 10`. In a 9:16 frame the two frames stack; in 16:9 they stay side by side. One frame is unchanged.
 - `make_ten` takes `a` (1–9) and `b`. `b` must be large enough to fill the empty cells and `a + b` must stay within 20. The demo uses 9 and 8. One of the eight moves into the empty cell: `9 + 1 = 10`, then `10 + 7 = 17`.
 - `count_objects` takes `mode` and `count`. `mode: count` lights counters one by one and writes the number on each (touch each once). `count` is 1 to 20. `mode: rearrange` moves that same set into a circle and keeps the total. `mode: zero` needs `count: 0`: an empty tray, then 0. Three spoken lines.
 - `number_track` takes `low`, `high`, `start`, and `end`. The track runs from `low` to `high`. Use `0` and `20` for the classroom track. In 16:9 that track is one row, so a hop across 10 is a sideways move. In 9:16 it snakes onto the next row only when a cell would be too small to read, and the next number sits beside the one before it. The marker lands on each spoken number, including the number it starts on: "Nine. Ten. Eleven. Twelve." lands on 9, then 10, then 11, then 12. Word starts come from the TTS sidecar. Without them the hops share the step evenly. A hop that passes 10 is marked "cross ten". `0 <= low < high <= 30`, the track is at most 20 steps long, and `start` and `end` sit on the track and differ. Three spoken lines.
+- `ordinal_row` takes `n`, `mark`, `direction`, and `mode`. `n` is 1 to 20 tokens. `mark` is the marked token, counted from the left, so the star stays put when the question names the other end. `direction` is `left` or `right`. `mode: ordinal` pops `1st`, `2nd`, `3rd` (第一、第二、第三) one by one up to that token, and the highlight box moves with each spoken place. `mode: total` counts every token and shows how many. The count lands on the spoken words from the TTS sidecar; without them the steps share the line evenly. In 9:16 a long row snakes the same way a number track does. A later place lesson can reuse the scene by changing `n`, `mark`, and `direction`. Three spoken lines.
 - `count_objects` in `mode: count` lights each counter as that number is spoken, using the same word starts. `ten_and_ones` moves one counter into place per spoken number on its first line when the sidecar has one word per counter (the 1-to-13 count). A line that is not a count, such as two full frames, keeps one shared motion.
-- `lesson_hook` takes `motif` (`counters`, `ten_frame`, or `track`) and one spoken line (`s1`). The grade tag and the `title_*` fade in, then the motif. The grade tag is `P1` in English and `小一` in Chinese, drawn large enough that the two characters stay separate.
-- `lesson_takeaway` takes the same `motif` and three spoken lines, or four when `s4` is written. Each line fades in, in order, with its own cue. The words on screen are the spoken lines. Every takeaway, including a three-line one, is the same grid: the frame minus 8% on each side, a heading band, and the caption band, split into one equal cell per line. The gap between pictures is a quarter of the row. In 16:9 the picture column is 40% of that width and the sentence column is 60%, with at least 40px at 1080p between the picture (labels included) and the sentence. The body face is one size for every row and every language, at least 44px at 1080p and 52px on a 1920-tall 9:16 frame. A line that is wider than its column breaks at a sentence or a word, and Chinese breaks only at punctuation. In 9:16 each wrapped line is centred, and the rows are centred in the band between the heading and the caption. The heading is the same size in every language. A circle of counters keeps its total clearly to the right of the dots. A counters recap with `count` lights that many counters on the first line, one per spoken number, then shows the total, moves the counters into a circle beside that same total, and ends on an empty tray with 0. A ten-frame recap shows one full frame, a frame plus three ones with 13, two full frames with 20, then highlights the ten and counts the three ones.
+- `lesson_hook` takes `motif` (`counters`, `ten_frame`, `track`, or `ordinal`) and one spoken line (`s1`). The grade tag and the `title_*` fade in, then the motif. The grade tag is `P1` in English and `小一` in Chinese, drawn large enough that the two characters stay separate. An ordinal hook may set `n` and `mark` (six tokens, the third one marked, when they are omitted).
+- `lesson_takeaway` takes the same `motif` and three spoken lines, or four when `s4` is written. Each line fades in, in order, with its own cue. The words on screen are the spoken lines. Every takeaway, including a three-line one, is the same grid: the frame minus 8% on each side, a heading band, and the caption band, split into one equal cell per line. The gap between pictures is a quarter of the row. In 16:9 the picture column is 40% of that width and the sentence column is 60%, with at least 40px at 1080p between the picture (labels included) and the sentence. The body face is one size for every row and every language, at least 44px at 1080p and 52px on a 1920-tall 9:16 frame. A line that is wider than its column breaks at a sentence or a word, and Chinese breaks only at punctuation. In 9:16 each wrapped line is centred, and the rows are centred in the band between the heading and the caption. The heading is the same size in every language. A circle of counters keeps its total clearly to the right of the dots. A counters recap with `count` lights that many counters on the first line, one per spoken number, then shows the total, moves the counters into a circle beside that same total, and ends on an empty tray with 0. A ten-frame recap shows one full frame, a frame plus three ones with 13, two full frames with 20, then highlights the ten and counts the three ones. An ordinal recap with `n` and `mark` shows the total, the place from the left, the place from the right, and the same row with the total still beside the marked token.
 
 Counters stay inside the safe margin for the whole motion, including the group they start in. That group is a grid with a gap, not a pile. In 9:16 the "one ten" label sits between the frame and the ones outside it.
 
@@ -119,6 +120,24 @@ Number sentences are plain text, not LaTeX, so a TeX install is not required.
   s3_en: "Yes. We land on nine."
   s3_zh: "可以。我们数到九。"
   s3_zh_hk: "可以。我哋數到九。"
+
+- id: from-left
+  visual: animated
+  scene: ordinal_row
+  mode: ordinal
+  direction: left
+  n: 6
+  mark: 3
+  seconds: 14
+  s1_en: "Start at the left."
+  s1_zh: "现在从左边数。"
+  s1_zh_hk: "而家由左邊數。"
+  s2_en: "First. Second. Third."
+  s2_zh: "第一，第二，第三。"
+  s2_zh_hk: "第一，第二，第三。"
+  s3_en: "The star is third. Third is its place."
+  s3_zh: "星星是第三。第三是它的位置。"
+  s3_zh_hk: "星星係第三。第三就係佢嘅位置。"
 ```
 
 ## Timing
@@ -145,7 +164,7 @@ python factory/build.py examples/demo-ten-and-ones.yaml --cells en,zh,hk --match
 
 `--slides-only` and `--caption-preview` paint slide stills. A lesson that is only animated scenes has none, and those flags say so. A full build writes the video.
 
-The P1 lessons `lessons/P1/P1-NUM-01.yaml`, `P1-NUM-02.yaml`, and `P1-NUM-03.yaml` use these scenes. `build --all` does render them.
+The P1 lessons `lessons/P1/P1-NUM-01.yaml`, `P1-NUM-02.yaml`, `P1-NUM-03.yaml`, and `P1-NUM-04.yaml` use these scenes. `build --all` does render them.
 
 ```bash
 python factory/build.py lessons/P1/P1-NUM-02.yaml --cells en,zh,hk --match-titles --out /path/to/out

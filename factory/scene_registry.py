@@ -52,6 +52,56 @@ def _as_int(value):
     return None
 
 
+def en_ordinal(n: int) -> str:
+    """1st, 2nd, 3rd, 4th, including the teens."""
+    n = int(n)
+    if 10 <= (n % 100) <= 20:
+        suffix = "th"
+    else:
+        suffix = {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+    return f"{n}{suffix}"
+
+
+def zh_cardinal(n: int) -> str:
+    """一 … 二十. Used inside 第一, 第二, and the spoken count labels."""
+    n = int(n)
+    digits = "零一二三四五六七八九"
+    if n < 10:
+        return digits[n]
+    if n == 10:
+        return "十"
+    if n < 20:
+        return "十" + digits[n - 10]
+    if n == 20:
+        return "二十"
+    return str(n)
+
+
+def zh_ordinal(n: int) -> str:
+    return "第" + zh_cardinal(n)
+
+
+def ordinal_word(lang: str, n: int) -> str:
+    if label_lang(lang) == "en":
+        return en_ordinal(n)
+    return zh_ordinal(n)
+
+
+def ordinal_visits(n: int, mark: int, direction: str, mode: str) -> list[int]:
+    """0-based token indexes in the order they are counted.
+
+    ``mark`` is 1-based from the left, so the same token stays put when the
+    count starts at the other end. ``mode`` ``total`` visits every token.
+    ``ordinal`` stops on the marked token.
+    """
+    order = list(range(int(n)))
+    if str(direction) == "right":
+        order.reverse()
+    if str(mode) == "total":
+        return order
+    return order[: order.index(int(mark) - 1) + 1]
+
+
 def crosses_ten(start: int, end: int) -> bool:
     """True when a hop from start to end passes the 10 boundary."""
     lo, hi = (start, end) if start <= end else (end, start)
@@ -83,6 +133,10 @@ def _copy(lang: str) -> dict[str, str]:
             "cross_ten": "Cross ten",
             "start_at": "Start at {n}",
             "grade": "P1",
+            "place_title": "Which place?",
+            "how_many_title": "How many?",
+            "from_left": "From the left",
+            "from_right": "From the right",
         },
         "zh": {
             "ten_title": "一个十和一些一",
@@ -106,6 +160,10 @@ def _copy(lang: str) -> dict[str, str]:
             "cross_ten": "跨过十",
             "start_at": "从{n}开始",
             "grade": "小一",
+            "place_title": "第几个？",
+            "how_many_title": "有多少个？",
+            "from_left": "从左边",
+            "from_right": "从右边",
         },
         "zh_hk": {
             "ten_title": "一個十和一些一",
@@ -129,6 +187,10 @@ def _copy(lang: str) -> dict[str, str]:
             "cross_ten": "跨過十",
             "start_at": "由{n}開始",
             "grade": "小一",
+            "place_title": "第幾個？",
+            "how_many_title": "有幾多個？",
+            "from_left": "由左邊",
+            "from_right": "由右邊",
         },
     }
     return table[label_lang(lang)]
@@ -363,11 +425,103 @@ class NumberTrack(SceneKind):
         }
 
 
-_MOTIFS = {"counters", "ten_frame", "track"}
+class OrdinalRow(SceneKind):
+    """A row of tokens. One is marked. Count a place, or count how many.
+
+    ``n`` is how many tokens (1–20). ``mark`` is the marked token, 1-based
+    from the left, so it stays put when the count starts at the other end.
+    ``direction`` is ``left`` or ``right``. ``mode`` ``ordinal`` pops place
+    labels up to that token. ``mode`` ``total`` counts every token and shows
+    how many. A later lesson can reuse the same scene with a different row.
+    """
+
+    name = "ordinal_row"
+    steps = 3
+
+    def problems(self, beat: dict) -> list[str]:
+        n = _as_int(beat.get("n"))
+        mark = _as_int(beat.get("mark"))
+        direction = str(beat.get("direction") or "").strip()
+        mode = str(beat.get("mode") or "").strip()
+        problems = []
+        if n is None or not 1 <= n <= 20:
+            problems.append("ordinal_row n must be an integer from 1 to 20.")
+        if direction not in {"left", "right"}:
+            problems.append(f"ordinal_row direction must be left or right, not {direction!r}.")
+        if mode not in {"ordinal", "total"}:
+            problems.append(f"ordinal_row mode must be ordinal or total, not {mode!r}.")
+        if n is not None and 1 <= n <= 20:
+            if mark is None or not 1 <= mark <= n:
+                problems.append(f"ordinal_row mark must be an integer from 1 to {n}.")
+        elif mark is None:
+            problems.append("ordinal_row needs an integer mark.")
+        return problems
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        copy = _copy(lang)
+        n = int(beat.get("n"))
+        mark = int(beat.get("mark"))
+        direction = str(beat.get("direction") or "").strip()
+        mode = str(beat.get("mode") or "").strip()
+        places = len(ordinal_visits(n, mark, direction, mode))
+        if mode == "total":
+            words = [zh_cardinal(i) if label_lang(lang) != "en" else str(i) for i in range(1, places + 1)]
+            title = copy["how_many_title"]
+            note = copy["how_many"]
+            answer = zh_cardinal(n) if label_lang(lang) != "en" else str(n)
+        else:
+            words = [ordinal_word(lang, i) for i in range(1, places + 1)]
+            title = copy["place_title"]
+            note = copy["from_left"] if direction == "left" else copy["from_right"]
+            answer = words[-1] if words else ""
+        return {
+            "title": title,
+            "note": note,
+            "answer": answer,
+            "ordinals": words,
+            "mode": mode,
+            "direction": direction,
+            "n": n,
+            "mark": mark,
+        }
+
+    def parameters(self, beat: dict) -> dict:
+        return {
+            "n": int(beat.get("n")),
+            "mark": int(beat.get("mark")),
+            "direction": str(beat.get("direction") or "").strip(),
+            "mode": str(beat.get("mode") or "").strip(),
+        }
+
+
+_MOTIFS = {"counters", "ten_frame", "track", "ordinal"}
 
 
 def _motif(beat: dict) -> str:
     return str((beat or {}).get("motif") or "").strip()
+
+
+def _ordinal_pair(beat: dict) -> tuple[int, int]:
+    """Token count and 1-based mark. A missing pair defaults to six tokens, mark 3."""
+    n = _as_int((beat or {}).get("n"))
+    mark = _as_int((beat or {}).get("mark"))
+    if n is None and mark is None:
+        return 6, 3
+    if n is None or mark is None or not 1 <= n <= 20 or not 1 <= mark <= n:
+        return n or 0, mark or 0
+    return n, mark
+
+
+def _ordinal_pair_problems(beat: dict, required: bool = False) -> list[str]:
+    n = _as_int((beat or {}).get("n"))
+    mark = _as_int((beat or {}).get("mark"))
+    if n is None and mark is None and not required:
+        return []
+    if n is None or not 1 <= n <= 20:
+        return ["ordinal n must be an integer from 1 to 20."]
+    if mark is None or not 1 <= mark <= n:
+        return [f"ordinal mark must be an integer from 1 to {n}."]
+    return []
 
 
 def _beat_line(beat: dict, lang: str, index: int) -> str:
@@ -386,7 +540,8 @@ def _title_line(beat: dict, lang: str) -> str:
 class LessonHook(SceneKind):
     """Title and the lesson's objects arrive with the opening question.
 
-    One spoken line. ``motif`` is ``counters``, ``ten_frame``, or ``track``.
+    One spoken line. ``motif`` is ``counters``, ``ten_frame``, ``track``, or ``ordinal``.
+    An ordinal hook may set ``n`` and ``mark`` (defaults: 6 tokens, mark 3).
     """
 
     name = "lesson_hook"
@@ -394,21 +549,33 @@ class LessonHook(SceneKind):
 
     def problems(self, beat: dict) -> list[str]:
         if _motif(beat) not in _MOTIFS:
-            return [f"lesson_hook motif must be counters, ten_frame, or track, not {_motif(beat)!r}."]
+            return [f"lesson_hook motif must be counters, ten_frame, track, or ordinal, not {_motif(beat)!r}."]
         if not _title_line(beat, "en"):
             return ["lesson_hook needs title_en (and title_zh / title_zh_hk)."]
+        if _motif(beat) == "ordinal":
+            return _ordinal_pair_problems(beat, required=False)
         return []
 
     def labels(self, beat: dict, lang: str) -> dict:
         copy = _copy(lang)
-        return {
+        out = {
             "grade": copy["grade"],
             "title": _title_line(beat, lang),
             "motif": _motif(beat),
         }
+        if _motif(beat) == "ordinal":
+            n, mark = _ordinal_pair(beat)
+            out["n"] = n
+            out["mark"] = mark
+        return out
 
     def parameters(self, beat: dict) -> dict:
-        return {"motif": _motif(beat), "title": _title_line(beat, "en")}
+        params = {"motif": _motif(beat), "title": _title_line(beat, "en")}
+        if _motif(beat) == "ordinal":
+            n, mark = _ordinal_pair(beat)
+            params["n"] = n
+            params["mark"] = mark
+        return params
 
 
 class LessonTakeaway(SceneKind):
@@ -429,18 +596,28 @@ class LessonTakeaway(SceneKind):
 
     def problems(self, beat: dict) -> list[str]:
         if _motif(beat) not in _MOTIFS:
-            return [f"lesson_takeaway motif must be counters, ten_frame, or track, not {_motif(beat)!r}."]
+            return [f"lesson_takeaway motif must be counters, ten_frame, track, or ordinal, not {_motif(beat)!r}."]
+        if _motif(beat) == "ordinal":
+            return _ordinal_pair_problems(beat, required=False)
         return []
 
     def labels(self, beat: dict, lang: str) -> dict:
         copy = _copy(lang)
         n = self.step_count(beat)
-        return {
+        out = {
             "title": _title_line(beat, lang) or copy["grade"],
             "lines": [_beat_line(beat, lang, i) for i in range(1, n + 1)],
             "motif": _motif(beat),
             "count": _as_int(beat.get("count")) or 0,
         }
+        if _motif(beat) == "ordinal":
+            count, mark = _ordinal_pair(beat)
+            out["n"] = count
+            out["mark"] = mark
+            out["left"] = ordinal_word(lang, mark)
+            out["right"] = ordinal_word(lang, count - mark + 1)
+            out["total"] = str(count) if label_lang(lang) == "en" else zh_cardinal(count)
+        return out
 
     def parameters(self, beat: dict) -> dict:
         params = {"motif": _motif(beat)}
@@ -452,6 +629,10 @@ class LessonTakeaway(SceneKind):
         count = _as_int(beat.get("count"))
         if count is not None:
             params["count"] = count
+        if _motif(beat) == "ordinal":
+            count_n, mark = _ordinal_pair(beat)
+            params["n"] = count_n
+            params["mark"] = mark
         return params
 
 
@@ -502,6 +683,16 @@ def count_event(beat: dict) -> tuple[int, int] | None:
         if count is None or count < 1:
             return None
         return 0, count
+    if scene == "ordinal_row":
+        n = _as_int(beat.get("n"))
+        mark = _as_int(beat.get("mark"))
+        direction = str(beat.get("direction") or "").strip()
+        mode = str(beat.get("mode") or "").strip()
+        if n is None or mark is None or direction not in {"left", "right"} or mode not in {"ordinal", "total"}:
+            return None
+        if not 1 <= n <= 20 or not 1 <= mark <= n:
+            return None
+        return 1, len(ordinal_visits(n, mark, direction, mode))
     if scene == "lesson_takeaway":
         # A ten-frame recap counts the three ones on its last line
         # ("Find the ten first. Then count the rest.").
@@ -570,6 +761,7 @@ register(TenAndOnes())
 register(MakeTen())
 register(CountObjects())
 register(NumberTrack())
+register(OrdinalRow())
 register(LessonHook())
 register(LessonTakeaway())
 

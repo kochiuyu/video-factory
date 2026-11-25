@@ -20,7 +20,18 @@ from anim import (
     scene_problems,
     step_durations,
 )
-from scene_registry import REGISTRY, count_event, count_marks, crosses_ten, schedule_marks, step_count, track_columns
+from scene_registry import (
+    REGISTRY,
+    count_event,
+    count_marks,
+    crosses_ten,
+    labels_for,
+    ordinal_visits,
+    scene_problems,
+    schedule_marks,
+    step_count,
+    track_columns,
+)
 from mux import CAP_TIME_WORDS
 from slides import LAYOUT_VERSION, STAGEABLE, lesson_stamp, stage_plan
 from theme import load_theme
@@ -685,6 +696,93 @@ class AnimatedRenderTest(unittest.TestCase):
                 xs.append(self._gold_x(shot))
             self.assertTrue(all(xs[i] < xs[i + 1] - 4 for i in range(3)), xs)
 
+    def test_ordinal_box_moves_with_the_spoken_place(self):
+        import subprocess
+        import tempfile
+
+        from anim import render_animated_clip
+
+        beat = {
+            "id": "from-left",
+            "visual": "animated",
+            "scene": "ordinal_row",
+            "mode": "ordinal",
+            "direction": "left",
+            "n": 6,
+            "mark": 3,
+            "s1_en": "Start at the left.",
+            "s2_en": "First. Second. Third.",
+            "s3_en": "The star is third.",
+            "s1_zh": "从左边数。",
+            "s2_zh": "第一，第二，第三。",
+            "s3_zh": "星星是第三。",
+        }
+        words = [
+            {"text": "Start", "start": 0.1, "end": 0.4},
+            {"text": "First", "start": 1.15, "end": 1.5},
+            {"text": "Second", "start": 1.85, "end": 2.2},
+            {"text": "Third", "start": 2.55, "end": 2.9},
+            {"text": "The", "start": 3.4, "end": 3.6},
+        ]
+        with tempfile.TemporaryDirectory(prefix="vf-ord-") as tmp:
+            root = Path(tmp)
+            audio = root / "silent.wav"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                 "-t", "5", "-c:a", "pcm_s16le", str(audio)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            dest = root / "ord.mp4"
+            render_animated_clip(
+                beat, {}, label_lang_code="en",
+                holds=[0.8, 2.4, 1.0], still_idx=[0, 1, 2],
+                pages=["Start at the left.", "First. Second. Third.", "The star is third."],
+                audio=audio, dest=dest, cache_dir=root / "cache",
+                captions=False, progress_bar=False, frame=(640, 360), fps=10,
+                words=words,
+            )
+            silent = next((root / "cache" / "en").glob("from-left-*.mp4"))
+            xs = []
+            for n, t in enumerate((1.2, 1.9, 2.6)):
+                shot = root / f"ord-{n}.png"
+                subprocess.check_call(
+                    ["ffmpeg", "-y", "-i", str(silent), "-vf", f"select=eq(n\\,{int(t * 10)})",
+                     "-frames:v", "1", str(shot)],
+                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                )
+                xs.append(self._gold_x(shot))
+            self.assertTrue(all(xs[i] < xs[i + 1] - 2 for i in range(2)), xs)
+            back = dict(beat, id="from-right", direction="right")
+            back["s2_en"] = "First. Second. Third. Fourth."
+            back_words = [
+                {"text": "Now", "start": 0.1, "end": 0.3},
+                {"text": "First", "start": 1.1, "end": 1.3},
+                {"text": "Second", "start": 1.6, "end": 1.8},
+                {"text": "Third", "start": 2.1, "end": 2.3},
+                {"text": "Fourth", "start": 2.6, "end": 2.8},
+                {"text": "Same", "start": 3.4, "end": 3.6},
+            ]
+            dest2 = root / "back.mp4"
+            render_animated_clip(
+                back, {}, label_lang_code="en",
+                holds=[0.8, 2.6, 1.0], still_idx=[0, 1, 2],
+                pages=["Now.", "First. Second. Third. Fourth.", "Fourth."],
+                audio=audio, dest=dest2, cache_dir=root / "cache",
+                captions=False, progress_bar=False, frame=(640, 360), fps=10,
+                words=back_words,
+            )
+            silent2 = next((root / "cache" / "en").glob("from-right-*.mp4"))
+            back_xs = []
+            for n, t in enumerate((1.15, 1.65, 2.15, 2.65)):
+                shot = root / f"back-{n}.png"
+                subprocess.check_call(
+                    ["ffmpeg", "-y", "-i", str(silent2), "-vf", f"select=eq(n\\,{int(t * 10)})",
+                     "-frames:v", "1", str(shot)],
+                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                )
+                back_xs.append(self._gold_x(shot))
+            self.assertTrue(all(back_xs[i] > back_xs[i + 1] + 2 for i in range(3)), back_xs)
+
     def test_takeaway_grid_fills_cells_in_both_aspects(self):
         """Each takeaway row stays in its cell, pictures stay apart, and the type meets the floor.
 
@@ -759,7 +857,30 @@ class AnimatedRenderTest(unittest.TestCase):
             "s2_zh_hk": "倒轉數，就係每次少一個。",
             "s3_zh_hk": "倒轉數，都可以跨過十。",
         }
-        cards = (("ten", beat, 4), ("count", counted, 4), ("track", track, 3))
+        ordinal = {
+            "id": "takeaway",
+            "visual": "animated",
+            "scene": "lesson_takeaway",
+            "motif": "ordinal",
+            "n": 6,
+            "mark": 3,
+            "title_en": "Which end?",
+            "s1_en": "How many stays six.",
+            "s2_en": "From the left, the star is third.",
+            "s3_en": "From the right, the same star is fourth.",
+            "s4_en": "Which place depends on the end you start from.",
+            "title_zh": "从哪头数？",
+            "s1_zh": "有多少个，还是六个。",
+            "s2_zh": "从左边数，星星是第三。",
+            "s3_zh": "从右边数，同一颗星星是第四。",
+            "s4_zh": "第几个，要看从哪一头数。",
+            "title_zh_hk": "由邊頭數？",
+            "s1_zh_hk": "有幾多個，都係六個。",
+            "s2_zh_hk": "由左邊數，星星係第三。",
+            "s3_zh_hk": "由右邊數，同一粒星星係第四。",
+            "s4_zh_hk": "第幾個，要睇由邊一頭數。",
+        }
+        cards = (("ten", beat, 4), ("count", counted, 4), ("track", track, 3), ("ordinal", ordinal, 4))
 
         def pix_y(grid, manim_y):
             return (grid["fh"] / 2 - manim_y) / grid["fh"] * grid["ph"]
@@ -1010,7 +1131,7 @@ class SceneRegistryTest(unittest.TestCase):
             list(REGISTRY),
             [
                 "one_ten", "ten_and_ones", "make_ten", "count_objects", "number_track",
-                "lesson_hook", "lesson_takeaway",
+                "ordinal_row", "lesson_hook", "lesson_takeaway",
             ],
         )
         self.assertEqual(REGISTRY["one_ten"].steps, 4)
@@ -1104,6 +1225,7 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-NUM-01": ["lesson_hook", "count_objects", "count_objects", "count_objects", "lesson_takeaway"],
             "P1-NUM-02": ["lesson_hook", "one_ten", "ten_and_ones", "ten_and_ones", "lesson_takeaway"],
             "P1-NUM-03": ["lesson_hook", "number_track", "number_track", "number_track", "lesson_takeaway"],
+            "P1-NUM-04": ["lesson_hook", "ordinal_row", "ordinal_row", "ordinal_row", "lesson_takeaway"],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -1171,6 +1293,68 @@ class SceneRegistryTest(unittest.TestCase):
         still3 = next(beat for beat in three["beats"] if beat["id"] == "takeaway")
         self.assertEqual(step_count(still3), 3)
         self.assertEqual(still3["s1_en"], "Count on means one more each time.")
+        four = load_lesson(P1 / "P1-NUM-04.yaml")
+        places = [beat for beat in four["beats"] if beat.get("scene") == "ordinal_row"]
+        self.assertEqual(
+            [(b["mode"], b["direction"], b["n"], b["mark"]) for b in places],
+            [("total", "left", 6, 3), ("ordinal", "left", 6, 3), ("ordinal", "right", 6, 3)],
+        )
+        self.assertEqual(count_event(places[1]), (1, 3))
+        self.assertEqual(count_event(places[2]), (1, 4))
+        recap = next(beat for beat in four["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap), 4)
+        self.assertEqual(labels_for(recap, "en")["left"], "3rd")
+        self.assertEqual(labels_for(recap, "zh_hk")["right"], "第四")
+        self.assertEqual(labels_for(recap, "zh")["total"], "六")
+
+    def test_ordinal_row_counts_a_place_or_a_total(self):
+        left = {
+            "visual": "animated",
+            "scene": "ordinal_row",
+            "mode": "ordinal",
+            "direction": "left",
+            "n": 6,
+            "mark": 3,
+            "s1_en": "Start at the left.",
+            "s2_en": "First. Second. Third.",
+            "s3_en": "The star is third.",
+            "s1_zh": "从左边数。",
+            "s2_zh": "第一，第二，第三。",
+            "s3_zh": "星星是第三。",
+            "s1_zh_hk": "由左邊數。",
+            "s2_zh_hk": "第一，第二，第三。",
+            "s3_zh_hk": "星星係第三。",
+        }
+        self.assertEqual(scene_problems(left), [])
+        self.assertEqual(ordinal_visits(6, 3, "left", "ordinal"), [0, 1, 2])
+        self.assertEqual(ordinal_visits(6, 3, "right", "ordinal"), [5, 4, 3, 2])
+        self.assertEqual(ordinal_visits(6, 3, "left", "total"), [0, 1, 2, 3, 4, 5])
+        self.assertEqual(count_event(left), (1, 3))
+        right = dict(left, direction="right")
+        self.assertEqual(count_event(right), (1, 4))
+        self.assertEqual(count_event(dict(left, mode="total")), (1, 6))
+        self.assertEqual(labels_for(left, "en")["ordinals"], ["1st", "2nd", "3rd"])
+        self.assertEqual(labels_for(left, "zh")["ordinals"], ["第一", "第二", "第三"])
+        self.assertEqual(labels_for(left, "zh")["title"], "第几个？")
+        self.assertEqual(labels_for(right, "zh_hk")["ordinals"], ["第一", "第二", "第三", "第四"])
+        self.assertEqual(labels_for(right, "zh_hk")["answer"], "第四")
+        self.assertEqual(labels_for(right, "zh_hk")["note"], "由右邊")
+        self.assertEqual(labels_for(right, "en")["answer"], "4th")
+        self.assertNotEqual(labels_for(left, "zh")["title"], labels_for(left, "zh_hk")["title"])
+        self.assertTrue(scene_problems(dict(left, n=0)))
+        self.assertTrue(scene_problems(dict(left, mark=7)))
+        self.assertTrue(scene_problems(dict(left, direction="up")))
+        self.assertTrue(scene_problems(dict(left, mode="place")))
+        words = [
+            {"text": "Start", "start": 0.1},
+            {"text": "First", "start": 1.2},
+            {"text": "Second", "start": 1.8},
+            {"text": "Third", "start": 2.4},
+            {"text": "The", "start": 3.2},
+        ]
+        scheduled = schedule_marks(left, [1.0, 2.0, 1.2], words)
+        self.assertEqual(len(scheduled[1]), 3)
+        self.assertAlmostEqual(scheduled[1][0], 0.2, places=2)
 
     def test_track_stays_one_row_in_landscape_and_snakes_in_portrait(self):
         self.assertEqual(track_columns(21, 1920, 1080), 21)

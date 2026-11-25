@@ -18,6 +18,7 @@ from scene_registry import (
     labels_for,
     scene_problems,
     scene_spec,
+    ordinal_visits,
     schedule_marks,
     step_count,
     track_columns,
@@ -491,6 +492,9 @@ def _make_scene(spec: dict, durs: list[float], marks: list | None = None):
     scene.vf_a = int(spec.get("a") or 9)
     scene.vf_b = int(spec.get("b") or 8)
     scene.vf_mode = str(spec.get("mode") or "")
+    scene.vf_n = spec.get("n")
+    scene.vf_mark = spec.get("mark")
+    scene.vf_direction = str(spec.get("direction") or "")
     scene.vf_low = spec.get("low")
     scene.vf_high = spec.get("high")
     scene.vf_start = spec.get("start")
@@ -514,6 +518,7 @@ def _scene_types() -> dict:
         LaggedStart,
         RoundedRectangle,
         Scene,
+        Star,
         SurroundingRectangle,
         Text,
         VGroup,
@@ -534,6 +539,74 @@ def _scene_types() -> dict:
         dot = Circle(radius=radius, stroke_color=NAVY, stroke_width=2.5, fill_color=color, fill_opacity=1)
         dot.set_z_index(2)
         return dot
+
+    def _token_row(n: int, mark: int, cell: float = 0.46):
+        """Left-to-right tokens. The marked one holds a star. Returns the row group and the token list."""
+        tokens = []
+        for i in range(max(1, int(n))):
+            box = RoundedRectangle(
+                width=cell, height=cell, corner_radius=max(0.06, cell * 0.16),
+                stroke_color=NAVY, stroke_width=2.5, fill_color=WHITE, fill_opacity=1,
+            )
+            if i + 1 == int(mark):
+                star = Star(
+                    n=5,
+                    outer_radius=cell * 0.36,
+                    inner_radius=cell * 0.15,
+                    color=GOLD,
+                    fill_opacity=1,
+                    stroke_color=NAVY,
+                    stroke_width=1.5,
+                )
+                star.move_to(box)
+                star.set_z_index(4)
+                piece = VGroup(box, star)
+            else:
+                dot = counter(GREEN, cell * 0.24)
+                dot.move_to(box)
+                piece = VGroup(box, dot)
+            piece.set_z_index(3)
+            tokens.append(piece)
+        cols = n if n <= 6 else (6 if n <= 12 else 5)
+        if n <= cols:
+            row = VGroup(*tokens)
+            row.arrange(RIGHT, buff=max(0.06, cell * 0.16))
+            return row, tokens
+        lines = VGroup()
+        for start in range(0, n, cols):
+            line = VGroup(*tokens[start:start + cols])
+            line.arrange(RIGHT, buff=max(0.06, cell * 0.16))
+            lines.add(line)
+        lines.arrange(DOWN, buff=max(0.12, cell * 0.28))
+        return lines, tokens
+
+    def _ordinal_cue(n: int, mark: int, kind: str, latin: str, cjk: str, word: str = "", total: str = ""):
+        """A takeaway or hook picture of the same row. ``kind`` is hook, total, left, right, or both."""
+        board, tokens = _token_row(n, mark, 0.42)
+        dim = "#D5D0C6"
+        if kind in {"left", "right"}:
+            visits = set(ordinal_visits(n, mark, kind, "ordinal"))
+            for i, piece in enumerate(tokens):
+                if i in visits or i + 1 == mark:
+                    continue
+                inner = piece[1]
+                if hasattr(inner, "set_fill"):
+                    inner.set_fill(dim, opacity=1)
+        extras = [board]
+        if kind in {"left", "right", "both"}:
+            ring = SurroundingRectangle(tokens[mark - 1], color=GOLD, buff=0.05, stroke_width=5)
+            ring.set_z_index(5)
+            extras.append(ring)
+        group = VGroup(*extras)
+        if word and kind in {"left", "right"}:
+            tag = styled(word, latin, cjk, 28)
+            tag.next_to(tokens[mark - 1], UP, buff=0.08)
+            group.add(tag)
+        if total and kind in {"total", "both"}:
+            num = Text(str(total), font=latin, font_size=42, color=NAVY)
+            num.next_to(board, RIGHT, buff=0.2)
+            group.add(num)
+        return group
 
     def ten_cells():
         cells = VGroup()
@@ -1151,6 +1224,142 @@ def _scene_types() -> dict:
                 shown.append(FadeIn(cross))
             self.spend(2, *shown)
 
+    class OrdinalRow(_Board):
+        """Tokens in a row. Place labels, or a how-many count, land on the spoken words."""
+
+        def construct(self):
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            n = int(self.vf_n if self.vf_n is not None else labels.get("n") or 6)
+            mark = int(self.vf_mark if self.vf_mark is not None else labels.get("mark") or 1)
+            direction = str(self.vf_direction or labels.get("direction") or "left")
+            mode = str(self.vf_mode or labels.get("mode") or "ordinal")
+            n = max(1, min(20, n))
+            mark = max(1, min(n, mark))
+            visits = ordinal_visits(n, mark, direction, mode)
+            words = [str(item) for item in (labels.get("ordinals") or [])]
+            if len(words) < len(visits):
+                words = words + [str(i + 1) for i in range(len(words), len(visits))]
+            words = words[: len(visits)]
+            pw = int(getattr(config, "pixel_width", 0) or 1920)
+            ph = int(getattr(config, "pixel_height", 0) or 1080)
+            cols = track_columns(n, pw, ph, min_cell=0.46)
+            gap = 0.08
+            usable = float(config.frame_width) - 1.2
+            cell = min(0.78, max(0.36, (usable - gap * (cols - 1)) / max(cols, 1)))
+            row_gap = cell * 0.72
+            slots: dict[int, tuple[int, int]] = {}
+            row_i, col_i, step_dir = 0, 0, 1
+            for i in range(n):
+                slots[i] = (row_i, col_i)
+                if i == n - 1:
+                    break
+                nxt = col_i + step_dir
+                if nxt < 0 or nxt >= cols:
+                    row_i += 1
+                    step_dir *= -1
+                else:
+                    col_i = nxt
+            tokens = VGroup()
+            grid = VGroup()
+            centers = {}
+            for i, (r, c) in slots.items():
+                x = (c - (cols - 1) / 2) * (cell + gap)
+                y = -r * (cell + row_gap)
+                box = RoundedRectangle(
+                    width=cell * 0.92,
+                    height=cell * 0.92,
+                    corner_radius=cell * 0.14,
+                    stroke_color=NAVY,
+                    stroke_width=3,
+                    fill_color=WHITE,
+                    fill_opacity=1,
+                )
+                box.move_to([x, y, 0])
+                if i + 1 == mark:
+                    star = Star(
+                        n=5,
+                        outer_radius=cell * 0.32,
+                        inner_radius=cell * 0.13,
+                        color=GOLD,
+                        fill_opacity=1,
+                        stroke_color=NAVY,
+                        stroke_width=1.5,
+                    )
+                    star.move_to(box)
+                    star.set_z_index(4)
+                    piece = VGroup(box, star)
+                else:
+                    dot = counter(GREEN, cell * 0.22)
+                    dot.move_to(box)
+                    piece = VGroup(box, dot)
+                piece.set_z_index(3)
+                tokens.add(piece)
+                grid.add(box)
+                centers[i] = box.get_center().copy()
+            shift = grid.get_center()
+            tokens.shift(-shift)
+            for i in centers:
+                centers[i] = centers[i] - shift
+            tags = VGroup()
+            pitch = cell + gap
+            for word, index in zip(words, visits):
+                tag = styled(word, latin, cjk, 28)
+                # Stay inside the gap between tokens, including a two-character 第一.
+                limit = pitch * 0.72
+                if float(tag.width) > limit:
+                    tag.scale(limit / float(tag.width))
+                if float(tag.height) > cell * 0.36:
+                    tag.scale(cell * 0.36 / float(tag.height))
+                tag.next_to(tokens[index], UP, buff=0.1)
+                tag.set_opacity(0)
+                tag.set_z_index(6)
+                tags.add(tag)
+            marker = RoundedRectangle(
+                width=cell * 1.02,
+                height=cell * 1.02,
+                corner_radius=cell * 0.16,
+                stroke_color=GOLD,
+                stroke_width=7,
+                fill_color=GOLD,
+                fill_opacity=0.28,
+            )
+            marker.set_z_index(1)
+            marker.set_opacity(0)
+            marker.move_to(centers[visits[0]])
+            title = styled(labels.get("title") or "", latin, cjk, 40)
+            answer = styled(str(labels.get("answer") or ""), latin, cjk, 54)
+            note = styled(labels.get("note") or "", latin, cjk, 32)
+            foot = VGroup(answer, note).arrange(RIGHT, buff=0.28)
+            title.next_to(VGroup(tokens, tags), UP, buff=0.28)
+            foot.next_to(tokens, DOWN, buff=0.28)
+            board = VGroup(title, tokens, tags, marker, foot)
+            settle(board)
+            # settle moves the group. Read centres after that, then park the box.
+            centres = [tokens[i].get_center().copy() for i in visits]
+            marker.move_to(centres[0])
+            self.add(tags)
+            self.spend(0, FadeIn(title), FadeIn(tokens))
+            hops = []
+            for i, dest in enumerate(centres):
+                tag = tags[i]
+                if i == 0:
+                    hops.append(lambda dest=dest, tag=tag: AnimationGroup(
+                        marker.animate.move_to(dest).set_opacity(1),
+                        tag.animate.set_opacity(1),
+                    ))
+                else:
+                    hops.append(lambda dest=dest, tag=tag: AnimationGroup(
+                        marker.animate.move_to(dest),
+                        tag.animate.set_opacity(1),
+                    ))
+            counted = self.marks_for(1)
+            if counted and len(counted) == len(hops):
+                self.spend_marked(1, hops, counted)
+            else:
+                self.spend_each(1, hops)
+            self.spend(2, FadeIn(answer), FadeIn(note))
+
     class LessonHook(_Board):
         """The title arrives, then the lesson's objects, with the opening question."""
 
@@ -1166,7 +1375,7 @@ def _scene_types() -> dict:
             else:
                 kicker = Text(grade or " ", font=latin, font_size=40, color="#5C6B7A")
             title = styled(labels.get("title") or "", latin, cjk, 54)
-            cue = self._hook_cue(motif, latin, cjk)
+            cue = self._hook_cue(motif, latin, cjk, labels)
             title.next_to(kicker, DOWN, buff=0.28)
             cue.next_to(title, DOWN, buff=0.4)
             settle(VGroup(kicker, title, cue))
@@ -1191,7 +1400,12 @@ def _scene_types() -> dict:
             if rest > frame / 2:
                 self.wait(rest)
 
-        def _hook_cue(self, motif: str, latin: str, cjk: str):
+        def _hook_cue(self, motif: str, latin: str, cjk: str, labels: dict | None = None):
+            if motif == "ordinal":
+                info = labels or {}
+                n = max(1, int(info.get("n") or 6))
+                mark = max(1, min(n, int(info.get("mark") or 3)))
+                return _ordinal_cue(n, mark, "hook", latin, cjk)
             if motif == "ten_frame":
                 frame = ten_cells()
                 frame.scale(0.85)
@@ -1219,6 +1433,9 @@ def _scene_types() -> dict:
                 return
             if len(lines) >= 4 and motif == "ten_frame":
                 self._ten_recap(title, lines, latin, cjk)
+                return
+            if motif == "ordinal":
+                self._ordinal_recap(title, lines, latin, cjk)
                 return
             cues = [_takeaway_cue(motif, i, latin) for i in range(len(lines))]
             rows = self._layout_takeaway(title, cues, [str(line) for line in lines], latin, cjk)
@@ -1561,6 +1778,28 @@ def _scene_types() -> dict:
             )
             self.spend_marked(3, lights, counted, intro=intro)
 
+        def _ordinal_recap(self, title, lines, latin: str, cjk: str) -> None:
+            """How many, the place from the left, the place from the right, then both."""
+            info = self.vf_labels
+            n = max(1, int(info.get("n") or 6))
+            mark = max(1, min(n, int(info.get("mark") or 3)))
+            left = str(info.get("left") or "")
+            right = str(info.get("right") or "")
+            total = str(info.get("total") or n)
+            cues = [
+                _ordinal_cue(n, mark, "total", latin, cjk, total=total),
+                _ordinal_cue(n, mark, "left", latin, cjk, word=left),
+                _ordinal_cue(n, mark, "right", latin, cjk, word=right),
+                _ordinal_cue(n, mark, "both", latin, cjk, total=total),
+            ]
+            shown = [str(line) for line in list(lines)[:4]]
+            while len(shown) < 4:
+                shown.append(" ")
+            rows = self._layout_takeaway(title, cues[: len(lines)], shown[: len(lines)], latin, cjk)
+            self.spend(0, FadeIn(title), FadeIn(rows[0]))
+            for index in range(1, len(rows)):
+                self.spend(index, FadeIn(rows[index]))
+
     def _wrapped(text: str, latin: str, cjk: str, size: int):
         raw = (text or "").strip() or " "
         parts: list[str] = []
@@ -1635,6 +1874,7 @@ def _scene_types() -> dict:
         "make_ten": MakeTen,
         "count_objects": CountObjects,
         "number_track": NumberTrack,
+        "ordinal_row": OrdinalRow,
         "lesson_hook": LessonHook,
         "lesson_takeaway": LessonTakeaway,
     }

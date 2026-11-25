@@ -4,17 +4,18 @@
 # hook and takeaway stay on slide cards; the definition and the two
 # number sentences are Manim.
 # MathQuiz P1 "A ten and some ones": 13 = 10 + 3, then make ten with 9 + 8.
+# Speech is for age 6: one short idea per line.
 # https://kochiuyu.github.io/mathquiz/
 id: DEMO-P1-TEN-ONES
 title_en: A ten and some ones
 title_zh: 一个十和一些一
 title_zh_hk: 一個十和一些一
-duration_target_s: 72
+duration_target_s: 76
 clock: own
 beats:
 - id: hook
   visual: title_card
-  seconds: 10
+  seconds: 8
   kicker: P1
   kicker_en: P1
   kicker_zh: 小一
@@ -22,78 +23,78 @@ beats:
   title_en: A ten and some ones
   title_zh: 一个十和一些一
   title_zh_hk: 一個十和一些一
-  en: Thirteen is more than ten. How do we read it?
-  zh: 十三比十多。我们怎样读？
-  zh_hk: 十三多過十。我哋點樣讀？
+  en: What is thirteen?
+  zh: 十三是什么？
+  zh_hk: 十三係咩呀？
 
 - id: define
   visual: animated
   scene: one_ten
   count: 13
-  seconds: 16
-  s1_en: "Ten single counters. The frame has two rows of five spaces."
-  s1_zh: "十个圆片，还是一个一个的。每行五格，共两行。"
-  s1_zh_hk: "十個圓片，仲係一個一個嘅。每行五格，共兩行。"
-  s2_en: "They gather into the frame. A full frame is one ten."
-  s2_zh: "它们走进框里。满框就是一个十。"
-  s2_zh_hk: "佢哋走入框入面。滿框就係一個十。"
-  s3_en: "Three ones do not fit. They sit beside the frame."
-  s3_zh: "三个一放不下，留在旁边。"
-  s3_zh_hk: "三個一放唔落，留喺旁邊。"
+  seconds: 14
+  s1_en: Here are ten counters.
+  s1_zh: 这里有十个圆片。
+  s1_zh_hk: 呢度有十個圓片。
+  s2_en: This is one ten.
+  s2_zh: 这就是一个十。
+  s2_zh_hk: 呢個就係一個十。
+  s3_en: How many are outside?
+  s3_zh: 外面有几个？
+  s3_zh_hk: 出面有幾多個？
 
 - id: thirteen
   visual: animated
   scene: ten_and_ones
   count: 13
-  seconds: 14
-  s1_en: "Thirteen counters. They fill a frame of ten."
-  s1_zh: "十三个圆片。它们填满一个十格框。"
-  s1_zh_hk: "十三個圓片。佢哋填滿一個十格框。"
-  s2_en: "The full frame stays together. That is one ten, and three ones are left."
-  s2_zh: "满框留在一起，就是一个十，还剩三个一。"
-  s2_zh_hk: "滿框留喺一齊，就係一個十，仲剩三個一。"
-  s3_en: "Thirteen equals ten plus three."
-  s3_zh: "十三等于十加三。"
-  s3_zh_hk: "十三等於十加三。"
+  seconds: 22
+  s1_en: Count with me. One, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen.
+  s1_zh: 我们一起数。一、二、三、四、五、六、七、八、九、十、十一、十二、十三。
+  s1_zh_hk: 我哋一齊數。一、二、三、四、五、六、七、八、九、十、十一、十二、十三。
+  s2_en: Ten and three.
+  s2_zh: 十和三。
+  s2_zh_hk: 十同三。
+  s3_en: Ten plus three is thirteen.
+  s3_zh: 十加三就是十三。
+  s3_zh_hk: 十加三就係十三。
 
 - id: make-ten
   visual: animated
   scene: make_ten
   a: 9
   b: 8
-  seconds: 16
-  s1_en: "Nine green counters fill the frame except one space. Eight gold counters wait beside it."
-  s1_zh: "九个绿色圆片放进十格框，还空一格。八个金色圆片等在旁边。"
-  s1_zh_hk: "九個綠色圓片放入十格框，仲空一格。八個金色圓片等喺旁邊。"
-  s2_en: "Move one gold counter into the empty space. Nine plus one equals ten."
-  s2_zh: "把一个金色圆片移进空格。九加一等于十。"
-  s2_zh_hk: "將一個金色圓片移入空格。九加一等於十。"
-  s3_en: "Seven gold counters are left. Ten plus seven equals seventeen."
-  s3_zh: "还剩七个金色圆片。十加七等于十七。"
-  s3_zh_hk: "仲剩七個金色圓片。十加七等於十七。"
+  seconds: 18
+  s1_en: Nine are in the box. Eight are waiting.
+  s1_zh: 九个在框里。八个在等。
+  s1_zh_hk: 九個放入框。八個等緊。
+  s2_en: One goes in the space. How many are left?
+  s2_zh: 一个放进空格。还剩几个？
+  s2_zh_hk: 一個放入空格。仲剩幾多個？
+  s3_en: Seven. Ten plus seven is seventeen.
+  s3_zh: 七个。十加七就是十七。
+  s3_zh_hk: 七個。十加七就係十七。
 
 - id: takeaway
   visual: takeaway
-  seconds: 16
-  kicker: Remember
-  kicker_en: Remember
-  kicker_zh: 记住
-  kicker_zh_hk: 記住
-  title_en: Read the ten, then the ones
-  title_zh: 先读一个十，再读一
-  title_zh_hk: 先讀一個十，再讀一
+  seconds: 14
+  kicker: Again
+  kicker_en: Again
+  kicker_zh: 再说
+  kicker_zh_hk: 再講
+  title_en: Ten first
+  title_zh: 先说十
+  title_zh_hk: 先講十
   q1_en: 13 = 10 + 3
   q1_zh: 13 = 10 + 3
   q1_zh_hk: 13 = 10 + 3
   q2_en: 10 + 7 = 17
   q2_zh: 10 + 7 = 17
   q2_zh_hk: 10 + 7 = 17
-  s1_en: A full frame and three ones make thirteen.
-  s1_zh: 一个满框加三个圆片，就是十三。
-  s1_zh_hk: 一個滿框加三個圓片，就係十三。
-  s2_en: Nine and eight make a ten, and seven more make seventeen.
-  s2_zh: 九加八先凑成十，再加七就是十七。
-  s2_zh_hk: 九加八先湊成十，再加七就係十七。
-  s3_en: Read the ten first. Then read the ones that are left.
-  s3_zh: 先读一个十，再读剩下的一。
-  s3_zh_hk: 先讀一個十，再讀剩低嘅一。
+  s1_en: Ten and three is thirteen.
+  s1_zh: 十和三，就是十三。
+  s1_zh_hk: 十同三，就係十三。
+  s2_en: Ten and seven is seventeen.
+  s2_zh: 十和七，就是十七。
+  s2_zh_hk: 十同七，就係十七。
+  s3_en: First the ten, then what is left.
+  s3_zh: 先说十，再说剩下的。
+  s3_zh_hk: 先講十，再講剩低嘅。

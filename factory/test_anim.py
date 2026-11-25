@@ -894,6 +894,164 @@ class AnimatedRenderTest(unittest.TestCase):
             self.assertLessEqual(max(lefts) - min(lefts), 4, lefts)
             self.assertLessEqual(max(heights) - min(heights), 8, heights)
 
+    def test_ordinal_labels_keep_a_gap(self):
+        """Adjacent place labels stay at least 12px apart, in every language and aspect."""
+        import subprocess
+        import tempfile
+
+        from anim import render_animated_clip
+
+        speech = {
+            "en": ("Start at the left.", "First. Second. Third.", "The star is third.",
+                   "First. Second. Third. Fourth."),
+            "zh": ("从左边数。", "第一，第二，第三。", "星星是第三。", "第一，第二，第三，第四。"),
+            "zh_hk": ("由左邊數。", "第一，第二，第三。", "星星係第三。", "第一，第二，第三，第四。"),
+        }
+        frames = ((1280, 720), (720, 1280))
+        with tempfile.TemporaryDirectory(prefix="vf-ord-gap-") as tmp:
+            root = Path(tmp)
+            audio = root / "silent.wav"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                 "-t", "4", "-c:a", "pcm_s16le", str(audio)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            for lang, lines in speech.items():
+                for direction, spoken in (("left", lines[1]), ("right", lines[3])):
+                    beat = {
+                        "id": f"from-{direction}",
+                        "visual": "animated",
+                        "scene": "ordinal_row",
+                        "mode": "ordinal",
+                        "direction": direction,
+                        "n": 6,
+                        "mark": 3,
+                        "s1_en": lines[0], "s2_en": spoken, "s3_en": lines[2],
+                        "s1_zh": lines[0], "s2_zh": spoken, "s3_zh": lines[2],
+                        "s1_zh_hk": lines[0], "s2_zh_hk": spoken, "s3_zh_hk": lines[2],
+                    }
+                    for frame in frames:
+                        dest = root / f"{lang}-{direction}-{frame[0]}.mp4"
+                        render_animated_clip(
+                            beat, {"format": "9:16" if frame[1] > frame[0] else "16:9"},
+                            label_lang_code=lang,
+                            holds=[0.4, 1.6, 0.6], still_idx=[0, 1, 2],
+                            pages=["a", "b", "c"],
+                            audio=audio, dest=dest, cache_dir=root / "cache",
+                            captions=False, progress_bar=False, frame=frame, fps=8,
+                        )
+                        silent = max((root / "cache" / lang).glob(f"from-{direction}-*.mp4"), key=lambda p: p.stat().st_mtime)
+                        shot = root / f"{lang}-{direction}-{frame[0]}.png"
+                        duration = float(subprocess.check_output(
+                            ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                             "-of", "csv=p=0", str(silent)],
+                            text=True,
+                        ))
+                        last = max(0, int(duration * 8) - 1)
+                        subprocess.check_call(
+                            ["ffmpeg", "-y", "-i", str(silent),
+                             "-vf", f"select=eq(n\\,{last})", "-frames:v", "1", str(shot)],
+                            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                        )
+                        gaps = self._ordinal_label_gaps(shot)
+                        portrait = frame[1] > frame[0]
+                        need = 12.0 * frame[0] / (1080.0 if portrait else 1920.0)
+                        self.assertGreaterEqual(len(gaps), 2, f"{shot.name} {gaps}")
+                        self.assertTrue(
+                            all(gap + 0.5 >= need for gap in gaps),
+                            f"{shot.name} gaps {gaps} need {need:.1f}",
+                        )
+
+    def _ordinal_label_gaps(self, path) -> list[float]:
+        """Pixel gaps between adjacent place labels sitting above the token row."""
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+
+        def white_runs(y, min_w):
+            runs = []
+            x = 0
+            while x < w:
+                r, g, b = px[x, y]
+                if r > 245 and g > 245 and b > 245:
+                    x1 = x
+                    while x1 + 1 < w and px[x1 + 1, y][0] > 245 and px[x1 + 1, y][1] > 245 and px[x1 + 1, y][2] > 245:
+                        x1 += 1
+                    if x1 - x >= min_w:
+                        runs.append((x, x1))
+                    x = x1 + 1
+                else:
+                    x += 1
+            return runs
+
+        candidates = []
+        for y in range(int(h * 0.12), int(h * 0.8)):
+            runs = white_runs(y, max(8, w // 90))
+            # Six tokens. A dot can split one box into two runs, so ignore those rows.
+            if not 4 <= len(runs) <= 8:
+                continue
+            widths = [b - a for a, b in runs]
+            centres_y = [(a + b) / 2.0 for a, b in runs]
+            pitches = [centres_y[i + 1] - centres_y[i] for i in range(len(centres_y) - 1)]
+            if min(pitches) <= 0 or max(pitches) / min(pitches) > 1.2:
+                continue
+            if max(widths) / max(1, min(widths)) > 1.35:
+                continue
+            if min(widths) < min(pitches) * 0.45:
+                continue
+            below = white_runs(min(h - 1, y + 3), max(8, w // 90))
+            if not 4 <= len(below) <= 8:
+                continue
+            candidates.append((min(widths), y, runs))
+        self.assertTrue(candidates, path.name)
+        widest = max(item[0] for item in candidates)
+        # The top edge of the tokens: wide runs, and the highest such row.
+        _width, box_top, boxes = min(
+            (item for item in candidates if item[0] >= widest * 0.9),
+            key=lambda item: item[1],
+        )
+        centres = [(a + b) / 2.0 for a, b in boxes]
+        pitch = centres[1] - centres[0]
+
+        def dark(x, y):
+            r, g, b = px[x, y]
+            return r < 80 and g < 90 and b < 120 and max(r, g, b) > 12
+
+        rows = []
+        for y in range(box_top - 8, max(0, box_top - int(pitch * 1.6)), -1):
+            if any(dark(x, y) for x in range(0, w, 2)):
+                rows.append(y)
+        self.assertTrue(rows, path.name)
+        # The place labels are the first tall dark band above the tokens. The
+        # box stroke is only a few pixels, and the title sits higher.
+        bands = []
+        start = prev = rows[0]
+        for y in rows[1:]:
+            if prev - y > 6:
+                bands.append((min(start, prev), max(start, prev)))
+                start = y
+            prev = y
+        bands.append((min(start, prev), max(start, prev)))
+        tall = [band for band in bands if band[1] - band[0] >= 8]
+        self.assertTrue(tall, bands)
+        label_lo, label_hi = tall[0]
+        spans = []
+        for centre in centres:
+            xs = [
+                x for y in range(label_lo, label_hi + 1)
+                for x in range(max(0, int(centre - pitch * 0.49)), min(w, int(centre + pitch * 0.49)))
+                if dark(x, y)
+            ]
+            spans.append((min(xs), max(xs)) if xs else None)
+        gaps = []
+        for i in range(len(spans) - 1):
+            if spans[i] is None or spans[i + 1] is None:
+                continue
+            gaps.append(spans[i + 1][0] - spans[i][1])
+        return gaps
+
     def _label_band_height(self, path) -> int:
         """Height of the dark text band that sits above the token row."""
         from PIL import Image

@@ -255,7 +255,7 @@ def cache_key(
             "marks": marks or [],
             # Bump when a scene's motion changes but the spec does not, so a
             # cached silent clip cannot keep an old hop.
-            "motion": 3,
+            "motion": 4,
             "lang": label_lang(lang),
             "frame": [int(frame[0]), int(frame[1])],
             "manim": str(manim_version),
@@ -595,7 +595,7 @@ def _scene_types() -> dict:
         lines.arrange(DOWN, buff=max(0.12, cell * 0.28))
         return lines, tokens
 
-    def _ordinal_cue(n: int, mark: int, kind: str, latin: str, cjk: str, word: str = "", total: str = ""):
+    def _ordinal_cue(n: int, mark: int, kind: str, latin: str, cjk: str, word: str = "", total: str = "", label_frac: float = 0.85):
         """A takeaway or hook picture of the same row. ``kind`` is hook, total, left, right, or both."""
         token_cell = 0.42
         board, tokens = _token_row(n, mark, token_cell)
@@ -617,7 +617,7 @@ def _scene_types() -> dict:
         if word and kind in {"left", "right"}:
             tag = styled(word, latin, cjk, 36)
             # Nearly as tall as a token, then centred on the marked one.
-            target = token_cell * 0.85
+            target = token_cell * label_frac
             if float(tag.height) > 0 and target > 0:
                 tag.scale(target / float(tag.height))
             if float(tag.width) > token_cell * 1.35:
@@ -1281,14 +1281,42 @@ def _scene_types() -> dict:
                 probe = styled(word, latin, cjk, 48)
                 widest = max(widest, float(probe.width) * label_scale)
             left_lim, right_lim, bot_lim, top_lim = _safe_limits()
-            max_w = (right_lim - left_lim) * 0.96
-            # About twice the old 0.78 cap. 9:16 clamps this to the safe width.
-            gap = max(0.14, widest * 0.1)
-            cell = min(1.56, (max_w - gap * (max(cols, 1) - 1)) / max(cols, 1))
-            if cell + gap < widest * 1.06:
-                gap = max(0.1, widest * 1.06 - cell)
-                cell = min(cell, (max_w - gap * (max(cols, 1) - 1)) / max(cols, 1))
-            cell = max(0.46, cell)
+            portrait = ph > pw
+            if portrait:
+                # Labels set the width. A row of six uses the safe width, and
+                # the centre spacing is at least the label plus 16px. A uniform
+                # shrink holds the 44px floor.
+                unit = ph / float(config.frame_height or 8.0)
+                min_gap = 16.0 / unit
+                floor_h = (44.0 * (ph / 1920.0)) / unit
+                max_w = (right_lim - left_lim) * 0.98
+                fit_w = (max_w - max(cols - 1, 0) * min_gap) / max(cols, 1)
+                if widest > fit_w > 0:
+                    shrink = fit_w / widest
+                    if label_h > 0 and label_h * shrink < floor_h:
+                        shrink = floor_h / label_h
+                    label_scale *= shrink
+                    widest *= shrink
+                if cols > 1:
+                    fill_pitch = (max_w - widest) / (cols - 1)
+                else:
+                    fill_pitch = widest + min_gap
+                pitch = max(fill_pitch, widest + min_gap)
+                if (cols - 1) * pitch + widest > max_w and cols > 1:
+                    slack = (max_w - cols * widest) / (cols - 1)
+                    pitch = widest + max(slack, 12.0 / unit)
+                box = min(pitch * 0.62, max(0.12, pitch - min_gap))
+                cell = max(0.2, box / 0.92)
+                gap = max(0.02, pitch - cell)
+            else:
+                max_w = (right_lim - left_lim) * 0.96
+                # About twice the old 0.78 cap. 9:16 clamps this to the safe width.
+                gap = max(0.14, widest * 0.1)
+                cell = min(1.56, (max_w - gap * (max(cols, 1) - 1)) / max(cols, 1))
+                if cell + gap < widest * 1.06:
+                    gap = max(0.1, widest * 1.06 - cell)
+                    cell = min(cell, (max_w - gap * (max(cols, 1) - 1)) / max(cols, 1))
+                cell = max(0.46, cell)
             # The next row's label has to clear the token above it.
             row_gap = label_h + 0.28
             slots: dict[int, tuple[int, int]] = {}
@@ -1349,8 +1377,8 @@ def _scene_types() -> dict:
             for word, index in zip(words, visits):
                 tag = styled(word, latin, cjk, 48)
                 tag.scale(label_scale)
-                # A two-character 第一 stays centred on its token and clear of the next label.
-                if float(tag.width) > pitch * 0.96:
+                # Landscape only. Portrait already reserved 16px between labels.
+                if ph <= pw and float(tag.width) > pitch * 0.96:
                     tag.scale(pitch * 0.96 / float(tag.width))
                 tag.next_to(tokens[index], UP, buff=0.12)
                 tag.set_opacity(0)
@@ -1372,6 +1400,13 @@ def _scene_types() -> dict:
             answer = styled(str(labels.get("answer") or ""), latin, cjk, 54)
             note = styled(labels.get("note") or "", latin, cjk, 32)
             foot = VGroup(answer, note).arrange(RIGHT, buff=0.28)
+            if ph > pw:
+                # A wide answer must not shrink the row, or the label gap collapses.
+                limit = max(float(tokens.width), 0.2)
+                if float(title.width) > limit:
+                    title.scale(limit / float(title.width))
+                if float(foot.width) > limit:
+                    foot.scale(limit / float(foot.width))
             title.next_to(VGroup(tokens, tags), UP, buff=0.28)
             foot.next_to(tokens, DOWN, buff=0.28)
             board = VGroup(title, tokens, tags, marker, foot)
@@ -1417,19 +1452,42 @@ def _scene_types() -> dict:
                 kicker = Text(grade or " ", font=latin, font_size=40, color="#5C6B7A")
             title = styled(labels.get("title") or "", latin, cjk, 54)
             cue = self._hook_cue(motif, latin, cjk, labels)
-            if motif == "ordinal":
-                # Twice the old token row. A wide title is what the frame scales to,
-                # so the row stays at 2× under that same scale. A short title keeps
-                # the row inside the title width.
-                cue.scale(2)
-                left_lim, right_lim, _, _ = _safe_limits()
-                cap = (right_lim - left_lim) * 0.98
-                limit = max(float(title.width), float(kicker.width), cap)
-                if float(cue.width) > limit:
-                    cue.scale(limit / float(cue.width))
-            title.next_to(kicker, DOWN, buff=0.28)
-            cue.next_to(title, DOWN, buff=0.4)
-            settle(VGroup(kicker, title, cue))
+            portrait = int(getattr(config, "pixel_height", 0) or 0) > int(getattr(config, "pixel_width", 0) or 0)
+            if motif == "ordinal" and portrait:
+                # Title and tokens each fill the safe width. A long English
+                # title must not shrink the row.
+                left_lim, right_lim, bot_lim, top_lim = _safe_limits()
+                cap = (right_lim - left_lim) * 0.96
+                title.next_to(kicker, DOWN, buff=0.22)
+                word_w = max(float(title.width), float(kicker.width), 0.01)
+                fitted = cap / word_w
+                kicker.scale(fitted)
+                title.scale(fitted)
+                title.next_to(kicker, DOWN, buff=0.22)
+                if float(cue.width) > 0:
+                    cue.scale(cap / float(cue.width))
+                cue.next_to(title, DOWN, buff=0.28)
+                group = VGroup(kicker, title, cue)
+                max_h = top_lim - bot_lim
+                if float(group.height) > max_h > 0:
+                    group.scale(max_h / float(group.height))
+                group.move_to(UP * 0)
+                if float(group.get_bottom()[1]) < bot_lim:
+                    group.shift(UP * (bot_lim - float(group.get_bottom()[1])))
+            else:
+                if motif == "ordinal":
+                    # Twice the old token row. A wide title is what the frame scales to,
+                    # so the row stays at 2× under that same scale. A short title keeps
+                    # the row inside the title width.
+                    cue.scale(2)
+                    left_lim, right_lim, _, _ = _safe_limits()
+                    cap = (right_lim - left_lim) * 0.98
+                    limit = max(float(title.width), float(kicker.width), cap)
+                    if float(cue.width) > limit:
+                        cue.scale(limit / float(cue.width))
+                title.next_to(kicker, DOWN, buff=0.28)
+                cue.next_to(title, DOWN, buff=0.4)
+                settle(VGroup(kicker, title, cue))
             total = float((self.vf_durations or [2.0])[0] or 0)
             fps = max(float(config.frame_rate or 15), 1.0)
             frame = 1.0 / fps
@@ -1837,11 +1895,14 @@ def _scene_types() -> dict:
             left = str(info.get("left") or "")
             right = str(info.get("right") or "")
             total = str(info.get("total") or n)
+            portrait = int(getattr(config, "pixel_height", 0) or 0) > int(getattr(config, "pixel_width", 0) or 0)
+            # A short place label keeps an 80%-wide portrait row inside the picture band.
+            label_frac = 0.38 if portrait else 0.85
             cues = [
-                _ordinal_cue(n, mark, "total", latin, cjk, total=total),
-                _ordinal_cue(n, mark, "left", latin, cjk, word=left),
-                _ordinal_cue(n, mark, "right", latin, cjk, word=right),
-                _ordinal_cue(n, mark, "both", latin, cjk, total=total),
+                _ordinal_cue(n, mark, "total", latin, cjk, total=total, label_frac=label_frac),
+                _ordinal_cue(n, mark, "left", latin, cjk, word=left, label_frac=label_frac),
+                _ordinal_cue(n, mark, "right", latin, cjk, word=right, label_frac=label_frac),
+                _ordinal_cue(n, mark, "both", latin, cjk, total=total, label_frac=label_frac),
             ]
             # One token size and one left edge. The place label sits in the
             # shared height, so label-plus-row is centred as one picture.
@@ -1865,10 +1926,58 @@ def _scene_types() -> dict:
             shown = [str(line) for line in list(lines)[:4]]
             while len(shown) < 4:
                 shown.append(" ")
-            rows = self._layout_takeaway(title, cues[: len(lines)], shown[: len(lines)], latin, cjk)
+            if portrait:
+                rows = self._layout_ordinal_portrait(
+                    title, cues[: len(lines)], boards[: len(lines)], shown[: len(lines)], latin, cjk,
+                )
+            else:
+                rows = self._layout_takeaway(title, cues[: len(lines)], shown[: len(lines)], latin, cjk)
             self.spend(0, FadeIn(title), FadeIn(rows[0]))
             for index in range(1, len(rows)):
                 self.spend(index, FadeIn(rows[index]))
+
+        def _layout_ordinal_portrait(self, heading, cues, boards, lines, latin: str, cjk: str) -> list:
+            """Portrait ordinal rows share one size, about 80% of the safe width."""
+            pw = int(getattr(config, "pixel_width", 0) or 0) or 1080
+            ph = int(getattr(config, "pixel_height", 0) or 0) or 1920
+            grid = takeaway_grid(pw, ph, len(lines))
+            self._place_heading(heading, grid)
+            font = self._body_font(latin, grid)
+            words = [
+                self._line_group(text, latin, cjk, font, float(grid["text_w"]) * 0.96, True)
+                for text in lines
+            ]
+            zone = float(grid["cell_h"]) * (1.0 - TAKEAWAY_PORTRAIT_VISUAL) * 0.92
+            tallest = max((float(word.height) for word in words), default=0.0)
+            if tallest > zone > 0:
+                shrink = zone / tallest
+                for word in words:
+                    word.scale(shrink)
+            safe_w = float(grid["right"] - grid["left"])
+            board_w = max((float(board.width) for board in boards), default=1.0) or 1.0
+            scale = (0.80 * safe_w) / board_w
+            for cue in cues:
+                cue.scale(scale)
+            # Stay in the top half of the cell so the sentence underneath still fits.
+            vis_h = float(grid["cell_h"]) * 0.50
+            tall = max((float(cue.height) for cue in cues), default=0.0)
+            if tall > vis_h > 0:
+                fit = vis_h / tall
+                for cue in cues:
+                    cue.scale(fit)
+            rows = []
+            for cue, word, cell in zip(cues, words, grid["cells"]):
+                zone_top = float(cell["top"])
+                half = zone_top - float(grid["cell_h"]) * 0.50
+                cx = (float(grid["left"]) + float(grid["right"])) / 2.0
+                cue.move_to([cx, (zone_top + half) / 2.0, 0])
+                if float(cue.get_top()[1]) > zone_top:
+                    cue.shift(DOWN * (float(cue.get_top()[1]) - zone_top))
+                text_top = min(half, float(cue.get_bottom()[1]) - 0.04)
+                text_bot = float(cell["bottom"])
+                word.move_to([cx, (text_top + text_bot) / 2.0, 0])
+                rows.append(VGroup(cue, word))
+            return rows
 
     def _wrapped(text: str, latin: str, cjk: str, size: int):
         raw = (text or "").strip() or " "

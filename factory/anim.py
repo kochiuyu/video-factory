@@ -255,7 +255,7 @@ def cache_key(
             "marks": marks or [],
             # Bump when a scene's motion changes but the spec does not, so a
             # cached silent clip cannot keep an old hop.
-            "motion": 2,
+            "motion": 3,
             "lang": label_lang(lang),
             "frame": [int(frame[0]), int(frame[1])],
             "manim": str(manim_version),
@@ -516,6 +516,7 @@ def _scene_types() -> dict:
         FadeIn,
         FadeOut,
         LaggedStart,
+        Rectangle,
         RoundedRectangle,
         Scene,
         Star,
@@ -524,6 +525,20 @@ def _scene_types() -> dict:
         VGroup,
         config,
     )
+
+    def _ordinal_label_height() -> float:
+        """Place and count labels, in Manim units.
+
+        48px at 1080p and 56px on a 1920-tall 9:16 frame, which is past the
+        44px and 52px floors. A short 一 stays a character at that size.
+        """
+        pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
+        ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+        portrait = ph > pw
+        ref = 1920.0 if portrait else 1080.0
+        base = 56.0 if portrait else 48.0
+        unit = ph / float(config.frame_height or 8.0)
+        return (base * (ph / ref)) / unit
 
     def font_for(text: str, latin: str, cjk: str) -> str:
         if any("\u4e00" <= ch <= "\u9fff" for ch in text or ""):
@@ -582,7 +597,8 @@ def _scene_types() -> dict:
 
     def _ordinal_cue(n: int, mark: int, kind: str, latin: str, cjk: str, word: str = "", total: str = ""):
         """A takeaway or hook picture of the same row. ``kind`` is hook, total, left, right, or both."""
-        board, tokens = _token_row(n, mark, 0.42)
+        token_cell = 0.42
+        board, tokens = _token_row(n, mark, token_cell)
         dim = "#D5D0C6"
         if kind in {"left", "right"}:
             visits = set(ordinal_visits(n, mark, kind, "ordinal"))
@@ -599,12 +615,21 @@ def _scene_types() -> dict:
             extras.append(ring)
         group = VGroup(*extras)
         if word and kind in {"left", "right"}:
-            tag = styled(word, latin, cjk, 28)
-            tag.next_to(tokens[mark - 1], UP, buff=0.08)
+            tag = styled(word, latin, cjk, 36)
+            # Nearly as tall as a token, then centred on the marked one.
+            target = token_cell * 0.85
+            if float(tag.height) > 0 and target > 0:
+                tag.scale(target / float(tag.height))
+            if float(tag.width) > token_cell * 1.35:
+                tag.scale(token_cell * 1.35 / float(tag.width))
+            tag.next_to(tokens[mark - 1], UP, buff=0.06)
             group.add(tag)
         if total and kind in {"total", "both"}:
-            num = Text(str(total), font=latin, font_size=42, color=NAVY)
-            num.next_to(board, RIGHT, buff=0.2)
+            num = Text(str(total), font=latin, font_size=48, color=NAVY)
+            target = float(board.height) * 0.92
+            if float(num.height) > target > 0:
+                num.scale(target / float(num.height))
+            num.next_to(board, RIGHT, buff=0.16)
             group.add(num)
         return group
 
@@ -1243,11 +1268,29 @@ def _scene_types() -> dict:
             words = words[: len(visits)]
             pw = int(getattr(config, "pixel_width", 0) or 1920)
             ph = int(getattr(config, "pixel_height", 0) or 1080)
+            # 0.46 keeps six tokens on one row in 9:16. A higher floor would snake them.
             cols = track_columns(n, pw, ph, min_cell=0.46)
-            gap = 0.08
-            usable = float(config.frame_width) - 1.2
-            cell = min(0.78, max(0.36, (usable - gap * (cols - 1)) / max(cols, 1)))
-            row_gap = cell * 0.72
+            label_h = _ordinal_label_height()
+            # Scale from a full character, not each glyph's ink. 一 is a flat stroke;
+            # matching its ink height turns it into a bar and shrinks the row.
+            cjk_labels = any("\u4e00" <= ch <= "\u9fff" for word in words for ch in word)
+            ref = styled("三" if cjk_labels else "8", latin, cjk, 48)
+            label_scale = (label_h / float(ref.height)) if float(ref.height) else 1.0
+            widest = label_h
+            for word in words:
+                probe = styled(word, latin, cjk, 48)
+                widest = max(widest, float(probe.width) * label_scale)
+            left_lim, right_lim, bot_lim, top_lim = _safe_limits()
+            max_w = (right_lim - left_lim) * 0.96
+            # About twice the old 0.78 cap. 9:16 clamps this to the safe width.
+            gap = max(0.14, widest * 0.1)
+            cell = min(1.56, (max_w - gap * (max(cols, 1) - 1)) / max(cols, 1))
+            if cell + gap < widest * 1.06:
+                gap = max(0.1, widest * 1.06 - cell)
+                cell = min(cell, (max_w - gap * (max(cols, 1) - 1)) / max(cols, 1))
+            cell = max(0.46, cell)
+            # The next row's label has to clear the token above it.
+            row_gap = label_h + 0.28
             slots: dict[int, tuple[int, int]] = {}
             row_i, col_i, step_dir = 0, 0, 1
             for i in range(n):
@@ -1304,14 +1347,12 @@ def _scene_types() -> dict:
             tags = VGroup()
             pitch = cell + gap
             for word, index in zip(words, visits):
-                tag = styled(word, latin, cjk, 28)
-                # Stay inside the gap between tokens, including a two-character 第一.
-                limit = pitch * 0.72
-                if float(tag.width) > limit:
-                    tag.scale(limit / float(tag.width))
-                if float(tag.height) > cell * 0.36:
-                    tag.scale(cell * 0.36 / float(tag.height))
-                tag.next_to(tokens[index], UP, buff=0.1)
+                tag = styled(word, latin, cjk, 48)
+                tag.scale(label_scale)
+                # A two-character 第一 stays centred on its token and clear of the next label.
+                if float(tag.width) > pitch * 0.96:
+                    tag.scale(pitch * 0.96 / float(tag.width))
+                tag.next_to(tokens[index], UP, buff=0.12)
                 tag.set_opacity(0)
                 tag.set_z_index(6)
                 tags.add(tag)
@@ -1376,6 +1417,16 @@ def _scene_types() -> dict:
                 kicker = Text(grade or " ", font=latin, font_size=40, color="#5C6B7A")
             title = styled(labels.get("title") or "", latin, cjk, 54)
             cue = self._hook_cue(motif, latin, cjk, labels)
+            if motif == "ordinal":
+                # Twice the old token row. A wide title is what the frame scales to,
+                # so the row stays at 2× under that same scale. A short title keeps
+                # the row inside the title width.
+                cue.scale(2)
+                left_lim, right_lim, _, _ = _safe_limits()
+                cap = (right_lim - left_lim) * 0.98
+                limit = max(float(title.width), float(kicker.width), cap)
+                if float(cue.width) > limit:
+                    cue.scale(limit / float(cue.width))
             title.next_to(kicker, DOWN, buff=0.28)
             cue.next_to(title, DOWN, buff=0.4)
             settle(VGroup(kicker, title, cue))
@@ -1792,6 +1843,25 @@ def _scene_types() -> dict:
                 _ordinal_cue(n, mark, "right", latin, cjk, word=right),
                 _ordinal_cue(n, mark, "both", latin, cjk, total=total),
             ]
+            # One token size and one left edge. The place label sits in the
+            # shared height, so label-plus-row is centred as one picture.
+            boards = [cue[0] for cue in cues]
+            for cue, board in zip(cues, boards):
+                cue.shift(LEFT * float(board.get_left()[0]))
+                cue.shift(DOWN * float(board.get_center()[1]))
+            pad_left = min(float(cue.get_left()[0]) for cue in cues)
+            pad_right = max(float(cue.get_right()[0]) for cue in cues)
+            pad_top = max(float(cue.get_top()[1]) for cue in cues)
+            pad_bottom = min(float(cue.get_bottom()[1]) for cue in cues)
+            for cue in cues:
+                pad = Rectangle(
+                    width=max(0.01, pad_right - pad_left),
+                    height=max(0.01, pad_top - pad_bottom),
+                    stroke_opacity=0,
+                    fill_opacity=0,
+                )
+                pad.move_to([(pad_left + pad_right) / 2.0, (pad_top + pad_bottom) / 2.0, 0])
+                cue.add(pad)
             shown = [str(line) for line in list(lines)[:4]]
             while len(shown) < 4:
                 shown.append(" ")

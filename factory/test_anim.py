@@ -783,6 +783,213 @@ class AnimatedRenderTest(unittest.TestCase):
                 back_xs.append(self._gold_x(shot))
             self.assertTrue(all(back_xs[i] > back_xs[i + 1] + 2 for i in range(3)), back_xs)
 
+    def test_ordinal_labels_and_hook_read_at_phone_size(self):
+        """Count labels clear the pixel floor, the hook row is about twice as tall, and takeaway rows share a left edge."""
+        import subprocess
+        import tempfile
+
+        from PIL import Image
+
+        from anim import render_animated_clip
+
+        how = {
+            "id": "how-many",
+            "visual": "animated",
+            "scene": "ordinal_row",
+            "mode": "total",
+            "direction": "left",
+            "n": 6,
+            "mark": 3,
+            "s1_zh": "六个图案排成一行。",
+            "s2_zh": "一，二，三，四，五，六。",
+            "s3_zh": "六个。",
+        }
+        hook = {
+            "id": "hook",
+            "visual": "animated",
+            "scene": "lesson_hook",
+            "motif": "ordinal",
+            "n": 6,
+            "mark": 3,
+            "title_en": "Which place? How many?",
+            "s1_en": "Which place is the star?",
+        }
+        takeaway = {
+            "id": "takeaway",
+            "visual": "animated",
+            "scene": "lesson_takeaway",
+            "motif": "ordinal",
+            "n": 6,
+            "mark": 3,
+            "title_zh": "从哪头数？",
+            "s1_en": "How many stays six.",
+            "s2_en": "From the left, the star is third.",
+            "s3_en": "From the right, the same star is fourth.",
+            "s4_en": "Which place depends on the end you start from.",
+            "s1_zh": "有多少个，还是六个。",
+            "s2_zh": "从左边数，星星是第三。",
+            "s3_zh": "从右边数，同一颗星星是第四。",
+            "s4_zh": "第几个，要看从哪一头数。",
+        }
+        with tempfile.TemporaryDirectory(prefix="vf-ord-size-") as tmp:
+            root = Path(tmp)
+            audio = root / "silent.wav"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                 "-t", "4", "-c:a", "pcm_s16le", str(audio)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            render_animated_clip(
+                how, {"format": "16:9"}, label_lang_code="zh",
+                holds=[0.4, 1.6, 0.5], still_idx=[0, 1, 2],
+                pages=["六个。", "一，二，三，四，五，六。", "六个。"],
+                audio=audio, dest=root / "how.mp4", cache_dir=root / "cache",
+                captions=False, progress_bar=False, frame=(1280, 720), fps=8,
+            )
+            how_png = root / "how.png"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-i", str(next((root / "cache" / "zh").glob("how-many-*.mp4"))),
+                 "-vf", "select=eq(n\\,14)", "-frames:v", "1", str(how_png)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            # 48px at 1080p, scaled to 720. The old cap sat near 25px.
+            self.assertGreaterEqual(self._label_band_height(how_png), 48 * 720 / 1080 * 0.9)
+
+            render_animated_clip(
+                hook, {"format": "16:9"}, label_lang_code="en",
+                holds=[1.2], still_idx=[0], pages=["Which place is the star?"],
+                audio=audio, dest=root / "hook.mp4", cache_dir=root / "cache",
+                captions=False, progress_bar=False, frame=(1280, 720), fps=8,
+            )
+            hook_png = root / "hook.png"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-i", str(next((root / "cache" / "en").glob("hook-*.mp4"))),
+                 "-vf", "select=eq(n\\,8)", "-frames:v", "1", str(hook_png)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            # The old hook row was about 40px tall at 1280x720. Twice that is 80.
+            self.assertGreaterEqual(self._token_box_height(hook_png), 70)
+
+            render_animated_clip(
+                takeaway, {"format": "16:9"}, label_lang_code="zh",
+                holds=[0.3, 0.3, 0.3, 0.5], still_idx=[0, 1, 2, 3],
+                pages=["a", "b", "c", "d"],
+                audio=audio, dest=root / "take.mp4", cache_dir=root / "cache",
+                captions=False, progress_bar=False, frame=(1280, 720), fps=8,
+            )
+            take_png = root / "take.png"
+            duration = float(subprocess.check_output(
+                ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                 "-of", "csv=p=0", str(root / "take.mp4")],
+                text=True,
+            ))
+            last = max(0, int(duration * 8) - 1)
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-i", str(root / "take.mp4"),
+                 "-vf", f"select=eq(n\\,{last})", "-frames:v", "1", str(take_png)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            lefts, heights = self._token_row_edges(take_png)
+            self.assertEqual(len(lefts), 4, lefts)
+            self.assertLessEqual(max(lefts) - min(lefts), 4, lefts)
+            self.assertLessEqual(max(heights) - min(heights), 8, heights)
+
+    def _label_band_height(self, path) -> int:
+        """Height of the dark text band that sits above the token row."""
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+        rows = []
+        for y in range(int(h * 0.2), int(h * 0.75)):
+            dark = 0
+            for x in range(w):
+                r, g, b = px[x, y]
+                if r < 70 and g < 80 and b < 110 and max(r, g, b) > 15:
+                    dark += 1
+            if dark > 12:
+                rows.append(y)
+        self.assertTrue(rows, path.name)
+        # Split into bands and take the one just above the boxes (not the title).
+        bands = []
+        start = prev = rows[0]
+        for y in rows[1:]:
+            if y - prev > 4:
+                bands.append((start, prev))
+                start = y
+            prev = y
+        bands.append((start, prev))
+        tall = [b for b in bands if b[1] - b[0] >= 8]
+        self.assertGreaterEqual(len(tall), 1, bands)
+        # The labels are the band closest above the token boxes, so the lower one
+        # when a title is also in range. A lone count line is the only band.
+        label = tall[-1] if len(tall) > 1 else tall[0]
+        return label[1] - label[0] + 1
+
+    def _token_box_height(self, path) -> int:
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+        rows = []
+        for y in range(h):
+            boxes = 0
+            for x in range(w):
+                r, g, b = px[x, y]
+                if r > 245 and g > 245 and b > 245:
+                    boxes += 1
+            if boxes > 30:
+                rows.append(y)
+        self.assertTrue(rows, path.name)
+        start = prev = rows[0]
+        best = (rows[0], rows[0])
+        for y in rows[1:]:
+            if y - prev > 3:
+                if prev - start > best[1] - best[0]:
+                    best = (start, prev)
+                start = y
+            prev = y
+        if prev - start > best[1] - best[0]:
+            best = (start, prev)
+        return best[1] - best[0] + 1
+
+    def _token_row_edges(self, path):
+        """Left edge and height of each token row, from the white boxes."""
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+        bands = []
+        y = 0
+        while y < h:
+            xs = [
+                x for x in range(w)
+                if px[x, y][0] > 245 and px[x, y][1] > 245 and px[x, y][2] > 245
+            ]
+            if len(xs) > 20:
+                y1 = y
+                acc = list(xs)
+                while y1 + 1 < h:
+                    nxt = [
+                        x for x in range(w)
+                        if px[x, y1 + 1][0] > 245 and px[x, y1 + 1][1] > 245 and px[x, y1 + 1][2] > 245
+                    ]
+                    if len(nxt) < 20:
+                        break
+                    y1 += 1
+                    acc.extend(nxt)
+                if y1 - y > 8:
+                    bands.append((min(acc), y1 - y + 1))
+                y = y1 + 1
+            else:
+                y += 1
+        lefts = [left for left, _ in bands]
+        heights = [height for _, height in bands]
+        return lefts, heights
+
     def test_takeaway_grid_fills_cells_in_both_aspects(self):
         """Each takeaway row stays in its cell, pictures stay apart, and the type meets the floor.
 

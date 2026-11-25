@@ -1,0 +1,98 @@
+# P1-NUM-01. Mirrors MathQuiz path first / lesson count, "Count carefully".
+# Guided steps use 5 counters, then the same 5 after they move, then an empty tray (0).
+# https://github.com/kochiuyu/mathquiz learn-data.js (lessons count).
+# Speech is for age 6: one short idea per sentence. Questions are answered on screen.
+id: P1-NUM-01
+title_en: Count carefully
+title_zh: 逐一数清楚
+title_zh_hk: 逐一數清楚
+duration_target_s: 58
+clock: own
+beats:
+- id: hook
+  visual: title_card
+  seconds: 8
+  kicker: P1
+  kicker_en: P1
+  kicker_zh: 小一
+  kicker_zh_hk: 小一
+  title_en: Count carefully
+  title_zh: 逐一数清楚
+  title_zh_hk: 逐一數清楚
+  en: How many counters are there?
+  zh: 这些圆片有几个？
+  zh_hk: 呢啲圓片有幾多個呀？
+
+- id: count
+  visual: animated
+  scene: count_objects
+  mode: count
+  count: 5
+  seconds: 14
+  s1_en: Point to each counter once.
+  s1_zh: 每个圆片，只点一次。
+  s1_zh_hk: 每個圓片，只指一次。
+  s2_en: One. Two. Three. Four. Five.
+  s2_zh: 一，二，三，四，五。
+  s2_zh_hk: 一，二，三，四，五。
+  s3_en: Five. The last number tells how many.
+  s3_zh: 五个。最后说的这个数，就是有多少个。
+  s3_zh_hk: 五個。最後講嘅呢個數，就係有幾多個。
+
+- id: move
+  visual: animated
+  scene: count_objects
+  mode: rearrange
+  count: 5
+  seconds: 12
+  s1_en: Five counters sit in a line.
+  s1_zh: 五个圆片排成一行。
+  s1_zh_hk: 五個圓片排成一行。
+  s2_en: Now they make a circle.
+  s2_zh: 现在围成一个圈。
+  s2_zh_hk: 而家圍成一個圈。
+  s3_en: Still five. Moving them does not change how many.
+  s3_zh: 还是五个。换了位置，个数没有变。
+  s3_zh_hk: 仲係五個。搬咗位，個數冇變。
+
+- id: zero
+  visual: animated
+  scene: count_objects
+  mode: zero
+  count: 0
+  seconds: 12
+  s1_en: This tray is empty.
+  s1_zh: 这个盘子是空的。
+  s1_zh_hk: 呢個盤係空嘅。
+  s2_en: How many counters are there?
+  s2_zh: 有几个圆片？
+  s2_zh_hk: 有幾多個圓片呀？
+  s3_en: Zero. Nothing to count. We write 0.
+  s3_zh: 零个。没有可以数的。我们写0。
+  s3_zh_hk: 零個。冇嘢可以數。我哋寫0。
+
+- id: takeaway
+  visual: takeaway
+  seconds: 12
+  kicker: Again
+  kicker_en: Again
+  kicker_zh: 再说
+  kicker_zh_hk: 再講
+  title_en: Say it again
+  title_zh: 再说一次
+  title_zh_hk: 再講一次
+  q1_en: Point once. One number each.
+  q1_zh: 点一次，说一个数。
+  q1_zh_hk: 指一次，講一個數。
+  q2_en: The last number is how many.
+  q2_zh: 最后的数就是多少。
+  q2_zh_hk: 最後嘅數就係幾多。
+  s1_en: Point to each counter once. Say one number.
+  s1_zh: 每个圆片点一次，说一个数。
+  s1_zh_hk: 每個圓片指一次，講一個數。
+  s2_en: The last number tells how many. Move them, and it stays the same.
+  s2_zh: 最后的数就是有多少。搬一搬，还是那么多。
+  s2_zh_hk: 最後嘅數就係有幾多。搬嚟搬去，都係咁多。
+  s3_en: An empty tray is zero.
+  s3_zh: 空盘子，就是零个圆片。
+  s3_zh_hk: 個盤空空哋，就係零個圓片。

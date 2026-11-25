@@ -13,10 +13,7 @@ import tempfile
 from pathlib import Path
 
 from cache import digest_obj, file_fingerprint
-
-# Three authored motions per scene. Each one is one s1 / s2 / s3 narration line.
-STEP_COUNTS = {"one_ten": 4, "ten_and_ones": 3, "make_ten": 3}
-SCENES = tuple(STEP_COUNTS)
+from scene_registry import label_lang, labels_for, scene_problems, scene_spec, step_count
 
 CREAM = "#F7F4EE"
 NAVY = "#0B1F3A"
@@ -29,16 +26,6 @@ _FONTS: tuple[str, str] | None = None
 
 class ManimNotInstalled(RuntimeError):
     """Raised only when a lesson actually asks for an animated scene."""
-
-
-def label_lang(lang: str) -> str:
-    """Slide-label language: en, zh (简体), or zh_hk (繁體)."""
-    key = str(lang or "en").strip().lower().replace("-", "_")
-    if key in {"zh_hk", "hk", "yue", "zh_yue"}:
-        return "zh_hk"
-    if key in {"zh", "zh_cn", "zhcn", "zh_hans", "cmn"}:
-        return "zh"
-    return "en"
 
 
 def frame_size(lesson: dict | None) -> tuple[int, int]:
@@ -60,11 +47,6 @@ def anim_cache_dir(out_dir: Path, lesson: dict | None) -> Path:
     if frame_size(lesson) == (1080, 1920):
         return root / "9x16" / "anim"
     return root / "anim"
-
-
-def step_count(beat: dict) -> int:
-    scene = str((beat or {}).get("scene") or "").strip()
-    return STEP_COUNTS.get(scene, 3)
 
 
 def step_durations(holds: list[float], still_idx: list[int], n: int) -> list[float]:
@@ -94,89 +76,6 @@ def step_durations(holds: list[float], still_idx: list[int], n: int) -> list[flo
     return totals
 
 
-def _copy(lang: str) -> dict[str, str]:
-    table = {
-        "en": {
-            "ten_title": "A ten and some ones",
-            "one_ten": "one ten",
-            "two_tens": "two tens",
-            "ones": "{n} ones",
-            "make_title": "Make ten",
-            "full_frame": "A full frame is one ten",
-        },
-        "zh": {
-            "ten_title": "一个十和一些一",
-            "one_ten": "一个十",
-            "two_tens": "两个十",
-            "ones": "{n}个一",
-            "make_title": "凑成十",
-            "full_frame": "满框就是一个十",
-        },
-        "zh_hk": {
-            "ten_title": "一個十和一些一",
-            "one_ten": "一個十",
-            "two_tens": "兩個十",
-            "ones": "{n}個一",
-            "make_title": "湊成十",
-            "full_frame": "滿框就係一個十",
-        },
-    }
-    return table[label_lang(lang)]
-
-
-def labels_for(beat: dict, lang: str) -> dict:
-    """On-screen strings for one language. Digits stay in the equation."""
-    copy = _copy(lang)
-    scene = str(beat.get("scene") or "").strip()
-    if scene == "make_ten":
-        a = int(beat.get("a"))
-        b = int(beat.get("b"))
-        move = 10 - a
-        rest = b - move
-        return {
-            "title": copy["make_title"],
-            "equation1": [str(a), "+", str(move), "=", "10"],
-            "equation2": ["10", "+", str(rest), "=", str(a + b)],
-        }
-    if scene == "one_ten":
-        count = int(beat.get("count"))
-        ones = 0 if count >= 20 else max(0, count - 10)
-        return {
-            "title": copy["full_frame"],
-            "one_ten": copy["one_ten"],
-            "ones": copy["ones"].format(n=ones) if ones else "",
-        }
-    count = int(beat.get("count"))
-    ones = 0 if count >= 20 else max(0, count - 10)
-    if count >= 20:
-        equation = ["20", "=", "10", "+", "10"]
-        ten_label = copy["two_tens"]
-    elif ones == 0:
-        equation = ["10", "=", "10", "+", "0"]
-        ten_label = copy["one_ten"]
-    else:
-        equation = [str(count), "=", "10", "+", str(ones)]
-        ten_label = copy["one_ten"]
-    return {
-        "title": copy["ten_title"],
-        "one_ten": ten_label,
-        "ones": copy["ones"].format(n=ones) if ones else "",
-        "equation": equation,
-    }
-
-
-def scene_spec(beat: dict, lang: str) -> dict:
-    scene = str(beat.get("scene") or "").strip()
-    spec: dict = {"scene": scene, "lang": label_lang(lang)}
-    if scene in {"one_ten", "ten_and_ones"}:
-        spec["count"] = int(beat.get("count"))
-    elif scene == "make_ten":
-        spec["a"] = int(beat.get("a"))
-        spec["b"] = int(beat.get("b"))
-    spec["labels"] = labels_for(beat, lang) if scene in SCENES else {}
-    return spec
-
-
 def cache_key(spec: dict, durations: list[float], lang: str, frame: tuple[int, int], manim_version: str) -> str:
     return digest_obj(
         {
@@ -187,52 +86,6 @@ def cache_key(spec: dict, durations: list[float], lang: str, frame: tuple[int, i
             "manim": str(manim_version),
         }
     )
-
-
-def _filled(beat: dict, suffix: str, n: int) -> list[str]:
-    missing = []
-    for i in range(1, n + 1):
-        key = f"s{i}_{suffix}"
-        if not str(beat.get(key) or "").strip():
-            missing.append(key)
-    return missing
-
-
-def scene_problems(beat: dict) -> list[str]:
-    """Schema errors for one animated beat. Does not import Manim."""
-    if str(beat.get("visual") or "") != "animated":
-        return []
-    problems: list[str] = []
-    scene = str(beat.get("scene") or "").strip()
-    if scene not in STEP_COUNTS:
-        problems.append(f"animated scene must be one_ten, ten_and_ones, or make_ten, not {scene!r}.")
-        return problems
-    n = STEP_COUNTS[scene]
-    for suffix, name in (("en", "English"), ("zh", "简体")):
-        missing = _filled(beat, suffix, n)
-        if missing:
-            problems.append(f"animated {scene} needs {name} lines {', '.join(missing)} (one per step).")
-    hk_keys = [k for k in beat if "zh_hk" in str(k) and str(beat.get(k) or "").strip()]
-    if hk_keys:
-        missing = _filled(beat, "zh_hk", n)
-        if missing:
-            problems.append(f"animated {scene} needs Cantonese lines {', '.join(missing)} (one per step).")
-    if scene in {"one_ten", "ten_and_ones"}:
-        try:
-            count = int(beat.get("count"))
-        except (TypeError, ValueError):
-            count = None
-        if count is None or not 10 <= count <= 20:
-            problems.append(f"{scene} count must be an integer from 10 to 20.")
-    else:
-        try:
-            a = int(beat.get("a"))
-            b = int(beat.get("b"))
-        except (TypeError, ValueError):
-            a = b = None
-        if a is None or b is None or not (1 <= a <= 9 and 1 <= b <= 12 and (10 - a) <= b and a + b <= 20):
-            problems.append("make_ten needs a from 1 to 9 and enough b to fill the ten without passing 20.")
-    return problems
 
 
 def pages_for_animated(beat, text, dur, sub_lang, words, keep_units):
@@ -454,9 +307,15 @@ def _make_scene(spec: dict, durs: list[float]):
     scene.vf_durations = list(durs)
     scene.vf_labels = spec.get("labels") or {}
     scene.vf_fonts = (latin_family(), cjk_family(str(spec.get("lang") or "en")))
-    scene.vf_count = int(spec.get("count") or 13)
+    raw_count = spec.get("count", None)
+    scene.vf_count = int(raw_count) if raw_count is not None else 13
     scene.vf_a = int(spec.get("a") or 9)
     scene.vf_b = int(spec.get("b") or 8)
+    scene.vf_mode = str(spec.get("mode") or "")
+    scene.vf_low = spec.get("low")
+    scene.vf_high = spec.get("high")
+    scene.vf_start = spec.get("start")
+    scene.vf_end = spec.get("end")
     return scene
 
 
@@ -469,6 +328,7 @@ def _scene_types() -> dict:
         LEFT,
         RIGHT,
         UP,
+        AnimationGroup,
         Create,
         FadeIn,
         FadeOut,
@@ -489,10 +349,10 @@ def _scene_types() -> dict:
     def styled(text: str, latin: str, cjk: str, size: int):
         return Text(text or " ", font=font_for(text, latin, cjk), font_size=size, color=NAVY)
 
-    def counter(color: str):
+    def counter(color: str, radius: float = 0.28):
         from manim import Circle
 
-        dot = Circle(radius=0.28, stroke_color=NAVY, stroke_width=2.5, fill_color=color, fill_opacity=1)
+        dot = Circle(radius=radius, stroke_color=NAVY, stroke_width=2.5, fill_color=color, fill_opacity=1)
         dot.set_z_index(2)
         return dot
 
@@ -583,6 +443,28 @@ def _scene_types() -> dict:
             if rest > frame / 2:
                 self.wait(rest)
 
+        def spend_each(self, index: int, moves: list) -> None:
+            """Play motions one by one inside this step. The step still lasts its full hold."""
+            total = 0.0
+            durs = getattr(self, "vf_durations", []) or []
+            if 0 <= index < len(durs):
+                total = float(durs[index])
+            fps = max(float(config.frame_rate or 15), 1.0)
+            frame = 1.0 / fps
+            if total <= frame / 2 or not moves:
+                self.spend(index)
+                return
+            move = min(total * 0.82, total)
+            each = move / len(moves)
+            if each < frame:
+                self.spend(index, LaggedStart(*moves, lag_ratio=0.85))
+                return
+            for item in moves:
+                self.play(item, run_time=each)
+            rest = total - each * len(moves)
+            if rest > frame / 2:
+                self.wait(rest)
+
     class TenAndOnes(_Board):
         def construct(self):
             count = max(10, min(20, int(self.vf_count)))
@@ -590,14 +472,20 @@ def _scene_types() -> dict:
             latin, cjk = self.vf_fonts
             frames_n = 2 if count >= 20 else 1
             ones_n = 0 if count >= 20 else count - 10
-            frames = VGroup(*[ten_cells() for _ in range(frames_n)]).arrange(RIGHT, buff=0.4)
+            # Two full frames stay side by side in 16:9. In 9:16 they stack so
+            # both tens stay readable. One frame is unchanged.
+            portrait = config.frame_width < config.frame_height
+            frames = VGroup(*[ten_cells() for _ in range(frames_n)])
+            if frames_n == 2 and portrait:
+                frames.arrange(DOWN, buff=0.4)
+            else:
+                frames.arrange(RIGHT, buff=0.4)
             cells = [cell for frame in frames for cell in frame]
             dots = VGroup(*[counter(GREEN) for _ in range(count)])
             for i, dot in enumerate(dots):
                 if i < len(cells):
                     dot.move_to(cells[i].get_center())
             extras = [dots[i] for i in range(len(cells), len(dots))]
-            portrait = config.frame_width < config.frame_height
             gap = 0.72
             if extras:
                 span = (len(extras) - 1) * gap
@@ -762,7 +650,224 @@ def _scene_types() -> dict:
             self.spend(1, LaggedStart(*into, lag_ratio=0.15), FadeIn(eq1), Create(ring))
             self.spend(2, FadeOut(eq1), FadeIn(eq2))
 
-    _scene_types._cache = {"one_ten": OneTen, "ten_and_ones": TenAndOnes, "make_ten": MakeTen}
+    class CountObjects(_Board):
+        """Light each counter once, move them, or show an empty tray as 0."""
+
+        def construct(self):
+            import math
+
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            mode = str(self.vf_mode or labels.get("mode") or "count")
+            count = max(0, int(self.vf_count))
+            title = styled(labels.get("title") or "", latin, cjk, 40)
+            question = styled(labels.get("question") or "", latin, cjk, 36)
+            note = styled(labels.get("note") or "", latin, cjk, 34)
+            answer = Text(str(labels.get("answer") or "0"), font=latin, font_size=78, color=NAVY)
+            if mode == "rearrange":
+                footer = VGroup(answer, note).arrange(RIGHT, buff=0.28)
+            else:
+                footer = VGroup(question, answer, note).arrange(RIGHT, buff=0.28)
+
+            if mode == "zero" or count == 0:
+                tray = RoundedRectangle(
+                    width=5.4,
+                    height=2.3,
+                    corner_radius=0.18,
+                    stroke_color=NAVY,
+                    stroke_width=4,
+                    fill_color=WHITE,
+                    fill_opacity=1,
+                )
+                title.next_to(tray, UP, buff=0.32)
+                footer.next_to(tray, DOWN, buff=0.32)
+                settle(VGroup(title, tray, footer))
+                self.spend(0, FadeIn(title), FadeIn(tray))
+                self.spend(1, FadeIn(question))
+                self.spend(2, FadeIn(answer), FadeIn(note))
+                return
+
+            radius = 0.34 if count >= 10 else 0.30
+            dx = dy = radius * 2 + 0.24
+            cols = min(5, count)
+            rows_n = math.ceil(count / cols)
+            starts = []
+            for i in range(count):
+                row, col = divmod(i, cols)
+                row_n = cols if row < rows_n - 1 else count - row * cols
+                starts.append((
+                    (col - (row_n - 1) / 2) * dx,
+                    ((rows_n - 1) / 2 - row) * dy,
+                ))
+            cx = sum(p[0] for p in starts) / count
+            cy = sum(p[1] for p in starts) / count
+            ring = min(dx * max(cols - 1, 1) / 2, 0.48 + 0.16 * count)
+            ends = []
+            for i in range(count):
+                ang = math.pi / 2 - i * 2 * math.pi / count
+                ends.append((cx + ring * math.cos(ang), cy + ring * math.sin(ang)))
+            xs = [p[0] for p in starts] + ([p[0] for p in ends] if mode == "rearrange" else [])
+            ys = [p[1] for p in starts] + ([p[1] for p in ends] if mode == "rearrange" else [])
+            tray = RoundedRectangle(
+                width=max(xs) - min(xs) + radius * 2 + 0.9,
+                height=max(ys) - min(ys) + radius * 2 + 0.85,
+                corner_radius=0.18,
+                stroke_color=NAVY,
+                stroke_width=4,
+                fill_color=WHITE,
+                fill_opacity=1,
+            )
+            tray.move_to([(min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2, 0])
+            dim = "#D5D0C6"
+            fill = GREEN if mode == "rearrange" else dim
+            from manim import Dot
+
+            pieces = []
+            numbers = []
+            anchors_end = VGroup()
+            for i in range(count):
+                dot = counter(fill, radius)
+                num = Text(str(i + 1), font=latin, font_size=28, color=WHITE)
+                if num.width > radius * 1.35:
+                    num.scale(radius * 1.35 / num.width)
+                num.set_z_index(4)
+                if mode != "rearrange":
+                    num.set_opacity(0)
+                dot.move_to([starts[i][0], starts[i][1], 0])
+                num.move_to(dot)
+                pieces.append(dot)
+                numbers.append(num)
+                pin = Dot([ends[i][0], ends[i][1], 0], radius=0.01, fill_opacity=0, stroke_opacity=0)
+                anchors_end.add(pin)
+            group = VGroup(tray, *pieces, *numbers, anchors_end)
+            title.next_to(group, UP, buff=0.28)
+            footer.next_to(group, DOWN, buff=0.28)
+            settle(VGroup(title, group, footer))
+            targets = [pin.get_center().copy() for pin in anchors_end]
+            if mode == "rearrange":
+                self.spend(0, FadeIn(title), FadeIn(tray), FadeIn(VGroup(*pieces)), FadeIn(VGroup(*numbers)))
+            else:
+                for num in numbers:
+                    self.add(num)
+                self.spend(0, FadeIn(title), FadeIn(tray), FadeIn(VGroup(*pieces)))
+            if mode == "rearrange":
+                moves = []
+                for dot, num, target in zip(pieces, numbers, targets):
+                    moves.append(AnimationGroup(dot.animate.move_to(target), num.animate.move_to(target)))
+                self.spend_each(1, moves)
+                self.spend(2, FadeIn(answer), FadeIn(note))
+            else:
+                lights = []
+                for dot, num in zip(pieces, numbers):
+                    lights.append(AnimationGroup(
+                        dot.animate.set_fill(GREEN, opacity=1),
+                        num.animate.set_opacity(1),
+                    ))
+                self.spend_each(1, lights)
+                self.spend(2, FadeIn(question), FadeIn(answer), FadeIn(note))
+
+    class NumberTrack(_Board):
+        """A 0–20 track (range is configurable) and a marker that hops on or back."""
+
+        def construct(self):
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            low = int(self.vf_low if self.vf_low is not None else 0)
+            high = int(self.vf_high if self.vf_high is not None else 20)
+            start = int(self.vf_start if self.vf_start is not None else low)
+            end = int(self.vf_end if self.vf_end is not None else high)
+            low, high = min(low, high), max(low, high)
+            start = min(high, max(low, start))
+            end = min(high, max(low, end))
+            values = list(range(low, high + 1))
+            portrait = config.frame_width < config.frame_height
+            crosses = min(start, end) < 10 < max(start, end)
+            if (not portrait) and any(v < 10 for v in values) and any(v > 10 for v in values) and 10 in values:
+                rows = [[v for v in values if v <= 10], [v for v in values if v > 10]]
+            else:
+                cols = 7 if portrait and len(values) > 12 else 6 if portrait and len(values) > 7 else (
+                    len(values) if len(values) <= 11 else (len(values) + 1) // 2
+                )
+                cols = max(1, cols)
+                rows = [values[i:i + cols] for i in range(0, len(values), cols)]
+            longest = max(len(row) for row in rows)
+            usable = float(config.frame_width) - 1.15
+            gap = 0.07
+            cell = min(0.82, max(0.36, (usable - gap * (longest - 1)) / longest))
+            row_gap = cell * 0.28
+            cells = {}
+            numerals = VGroup()
+            grid = VGroup()
+            for r, row in enumerate(rows):
+                for c, value in enumerate(row):
+                    x = (c - (len(row) - 1) / 2) * (cell + gap)
+                    y = -r * (cell + row_gap)
+                    box = RoundedRectangle(
+                        width=cell,
+                        height=cell * 0.86,
+                        corner_radius=0.08,
+                        stroke_color=NAVY,
+                        stroke_width=4 if value == 10 else 2.5,
+                        fill_color=WHITE,
+                        fill_opacity=1,
+                    )
+                    box.move_to([x, y, 0])
+                    num = Text(str(value), font=latin, font_size=36, color=NAVY)
+                    if num.height > cell * 0.52:
+                        num.scale(cell * 0.52 / num.height)
+                    if num.width > cell * 0.78:
+                        num.scale(cell * 0.78 / num.width)
+                    num.move_to(box)
+                    num.set_z_index(4)
+                    cells[value] = box
+                    numerals.add(num)
+                    grid.add(box)
+            shift = grid.get_center()
+            grid.shift(-shift)
+            numerals.shift(-shift)
+            marker = RoundedRectangle(
+                width=cell * 0.92,
+                height=cell * 0.76,
+                corner_radius=0.1,
+                stroke_color=GOLD,
+                stroke_width=7,
+                fill_color=GOLD,
+                fill_opacity=0.42,
+            )
+            marker.set_z_index(1)
+            marker.move_to(cells[start])
+            title = styled(labels.get("title") or "", latin, cjk, 40)
+            start_line = styled(labels.get("start_at") or "", latin, cjk, 32)
+            step = styled(labels.get("step") or "", latin, cjk, 34)
+            answer = Text(str(labels.get("answer") or end), font=latin, font_size=72, color=NAVY)
+            cross_text = labels.get("cross") or ""
+            cross = styled(cross_text, latin, cjk, 34) if cross_text else None
+            foot_items = [answer, step]
+            if cross is not None and crosses:
+                foot_items.append(cross)
+            foot = VGroup(*foot_items).arrange(RIGHT, buff=0.26)
+            title.next_to(grid, UP, buff=0.28)
+            start_line.next_to(grid, DOWN, buff=0.24)
+            foot.next_to(start_line, DOWN, buff=0.2)
+            board = VGroup(title, grid, numerals, marker, start_line, foot)
+            settle(board)
+            step_by = 1 if end >= start else -1
+            path = list(range(start + step_by, end + step_by, step_by)) if start != end else []
+            hops = [marker.animate.move_to(cells[n].get_center()) for n in path if n in cells]
+            self.spend(0, FadeIn(title), FadeIn(grid), FadeIn(numerals), FadeIn(marker), FadeIn(start_line))
+            self.spend_each(1, hops)
+            shown = [FadeIn(answer), FadeIn(step)]
+            if cross is not None and crosses:
+                shown.append(FadeIn(cross))
+            self.spend(2, *shown)
+
+    _scene_types._cache = {
+        "one_ten": OneTen,
+        "ten_and_ones": TenAndOnes,
+        "make_ten": MakeTen,
+        "count_objects": CountObjects,
+        "number_track": NumberTrack,
+    }
     return _scene_types._cache
 
 

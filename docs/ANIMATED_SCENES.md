@@ -31,15 +31,90 @@ Any beat may set `visual: animated`. A hook, a definition, a middle step, or a t
   s3_zh_hk: "十三等於十加三。"
 ```
 
-`scene` is `one_ten`, `ten_and_ones`, or `make_ten`.
+`scene` names a registered scene. The registry is `factory/scene_registry.py`. Each scene has a step count, a parameter check, and a per-language label table. `title_card` and `takeaway` are slide visuals, not registry scenes. A beat uses one or the other.
+
+The scenes are `one_ten`, `ten_and_ones`, `make_ten`, `count_objects`, and `number_track`.
 
 - `one_ten` takes `count` from 10 to 20 and four spoken lines. Ten counters start as single ones, gather into one frame, and the frame is labelled "one ten". The ones that do not fit then sit beside it, the child is asked how many, and the last line answers. The demo uses 13, so the answer is three.
-- `ten_and_ones` takes `count` from 10 to 20. The demo uses 13: ten counters fill the frame, three sit beside it, and the sentence is `13 = 10 + 3`.
+- `ten_and_ones` takes `count` from 10 to 20. The demo uses 13: ten counters fill the frame, three sit beside it, and the sentence is `13 = 10 + 3`. `count: 20` fills two frames and the sentence is `20 = 10 + 10`. In a 9:16 frame the two frames stack; in 16:9 they stay side by side. One frame is unchanged.
 - `make_ten` takes `a` (1–9) and `b`. `b` must be large enough to fill the empty cells and `a + b` must stay within 20. The demo uses 9 and 8. One of the eight moves into the empty cell: `9 + 1 = 10`, then `10 + 7 = 17`.
+- `count_objects` takes `mode` and `count`. `mode: count` lights counters one by one and writes the number on each (touch each once). `count` is 1 to 20. `mode: rearrange` moves that same set into a circle and keeps the total. `mode: zero` needs `count: 0`: an empty tray, then 0. Three spoken lines.
+- `number_track` takes `low`, `high`, `start`, and `end`. The track runs from `low` to `high`. Use `0` and `20` for the classroom track. The marker starts on `start` and hops one number at a time to `end`, forwards or back. A hop that passes 10 is marked "cross ten". `0 <= low < high <= 30`, the track is at most 20 steps long, and `start` and `end` sit on the track and differ. Three spoken lines.
 
-Speech is the factory's staged lines, one line per motion: `s1`, `s2`, and `s3` in English and 简体. `one_ten` also has `s4`, the short answer. If any `zh_hk` field is set, every Cantonese line for that scene is required, so a Cantonese voice is not handed Mandarin. Write the Cantonese the way it is spoken (`係`, `喺`, `仲`). On-screen labels come from the per-language table in `factory/anim.py`: 简体 for `zh` (`凑成十`), 繁體 for `zh_hk` (`湊成十`).
+To add a scene: subclass `SceneKind` in `factory/scene_registry.py`, `register` it, draw it under the same name in `factory/anim.py`, and add its YAML here.
+
+Speech is the factory's staged lines, one line per motion: `s1`, `s2`, and `s3` in English and 简体. `one_ten` also has `s4`, the short answer. If any `zh_hk` field is set, every Cantonese line for that scene is required, so a Cantonese voice is not handed Mandarin. Write the Cantonese the way it is spoken (`係`, `喺`, `仲`). On-screen labels come from the per-language table in `factory/scene_registry.py`: 简体 for `zh` (`凑成十`), 繁體 for `zh_hk` (`湊成十`).
 
 Number sentences are plain text, not LaTeX, so a TeX install is not required.
+
+`count_objects` and `number_track`, and two full frames:
+
+```yaml
+- id: count
+  visual: animated
+  scene: count_objects
+  mode: count
+  count: 5
+  seconds: 14
+  s1_en: "Point to each counter once."
+  s1_zh: "每个圆片，只点一次。"
+  s1_zh_hk: "每個圓片，只指一次。"
+  s2_en: "One. Two. Three. Four. Five."
+  s2_zh: "一，二，三，四，五。"
+  s2_zh_hk: "一，二，三，四，五。"
+  s3_en: "Five. The last number tells how many."
+  s3_zh: "五个。最后说的这个数，就是有多少个。"
+  s3_zh_hk: "五個。最後講嘅呢個數，就係有幾多個。"
+
+- id: empty
+  visual: animated
+  scene: count_objects
+  mode: zero
+  count: 0
+  seconds: 12
+  s1_en: "This tray is empty."
+  s1_zh: "这个盘子是空的。"
+  s1_zh_hk: "呢個盤係空嘅。"
+  s2_en: "How many counters are there?"
+  s2_zh: "有几个圆片？"
+  s2_zh_hk: "有幾多個圓片呀？"
+  s3_en: "Zero. Nothing to count. We write 0."
+  s3_zh: "零个。没有可以数的。我们写0。"
+  s3_zh_hk: "零個。冇嘢可以數。我哋寫0。"
+
+- id: twenty
+  visual: animated
+  scene: ten_and_ones
+  count: 20
+  seconds: 12
+  s1_en: "Two full frames. Each frame is one ten."
+  s1_zh: "两个满框。每个框是一个十。"
+  s1_zh_hk: "兩個滿框。每個框係一個十。"
+  s2_en: "How many counters now?"
+  s2_zh: "现在一共有多少个？"
+  s2_zh_hk: "而家一共有幾多個呀？"
+  s3_en: "Twenty. Ten plus ten is twenty."
+  s3_zh: "二十。十加十就是二十。"
+  s3_zh_hk: "二十。十加十就係二十。"
+
+- id: across-ten
+  visual: animated
+  scene: number_track
+  low: 0
+  high: 20
+  start: 12
+  end: 9
+  seconds: 12
+  s1_en: "Can we count back across ten?"
+  s1_zh: "往回数，能跨过十吗？"
+  s1_zh_hk: "倒轉數，可唔可以跨過十呀？"
+  s2_en: "Twelve. Eleven. Ten. Nine."
+  s2_zh: "十二，十一，十，九。"
+  s2_zh_hk: "十二，十一，十，九。"
+  s3_en: "Yes. We land on nine."
+  s3_zh: "可以。我们数到九。"
+  s3_zh_hk: "可以。我哋數到九。"
+```
 
 ## Timing
 
@@ -64,6 +139,12 @@ python factory/build.py examples/demo-ten-and-ones.yaml --cells en,zh,hk --match
 ```
 
 `--slides-only` and `--caption-preview` paint slide stills. A lesson that is only animated scenes has none, and those flags say so. A full build writes the video.
+
+The P1 lessons `lessons/P1/P1-NUM-01.yaml`, `P1-NUM-02.yaml`, and `P1-NUM-03.yaml` use these scenes. `build --all` does render them.
+
+```bash
+python factory/build.py lessons/P1/P1-NUM-02.yaml --cells en,zh,hk --match-titles --out /path/to/out
+```
 
 ## Limits
 

@@ -20,6 +20,7 @@ from anim import (
     scene_problems,
     step_durations,
 )
+from scene_registry import REGISTRY, crosses_ten
 from mux import CAP_TIME_WORDS
 from slides import LAYOUT_VERSION, STAGEABLE, lesson_stamp, stage_plan
 from theme import load_theme
@@ -338,6 +339,73 @@ class AnimatedRenderTest(unittest.TestCase):
                 (define, "zh_hk", ["十個圓片。", "滿框就係一個十。", "出面有幾多個？", "三個。"]),
                 (THIRTEEN, "zh_hk", ["十三個圓片。", "一個十。", "十加三。"]),
                 (MAKE, "en", ["Nine and eight.", "Nine plus one equals ten.", "Ten plus seven equals seventeen."]),
+                (
+                    {
+                        "id": "count",
+                        "visual": "animated",
+                        "scene": "count_objects",
+                        "mode": "count",
+                        "count": 5,
+                        "s1_en": "Point once.",
+                        "s2_en": "One two three four five.",
+                        "s3_en": "Five.",
+                        "s1_zh": "点一次。",
+                        "s2_zh": "一二三四五。",
+                        "s3_zh": "五个。",
+                        "s1_zh_hk": "指一次。",
+                        "s2_zh_hk": "一二三四五。",
+                        "s3_zh_hk": "五個。",
+                    },
+                    "zh_hk",
+                    ["指一次。", "一二三四五。", "五個。"],
+                ),
+                (
+                    {
+                        "id": "empty",
+                        "visual": "animated",
+                        "scene": "count_objects",
+                        "mode": "zero",
+                        "count": 0,
+                        "s1_en": "Empty.",
+                        "s2_en": "How many?",
+                        "s3_en": "Zero.",
+                        "s1_zh": "空的。",
+                        "s2_zh": "几个？",
+                        "s3_zh": "零。",
+                        "s1_zh_hk": "空嘅。",
+                        "s2_zh_hk": "幾多個？",
+                        "s3_zh_hk": "零。",
+                    },
+                    "en",
+                    ["Empty.", "How many?", "Zero."],
+                ),
+                (
+                    {
+                        "id": "track",
+                        "visual": "animated",
+                        "scene": "number_track",
+                        "low": 0,
+                        "high": 20,
+                        "start": 12,
+                        "end": 9,
+                        "s1_en": "Start at twelve.",
+                        "s2_en": "Eleven ten nine.",
+                        "s3_en": "Nine.",
+                        "s1_zh": "由十二。",
+                        "s2_zh": "十一十。",
+                        "s3_zh": "九。",
+                        "s1_zh_hk": "由十二。",
+                        "s2_zh_hk": "十一十。",
+                        "s3_zh_hk": "九。",
+                    },
+                    "zh_hk",
+                    ["由十二。", "十一十。", "九。"],
+                ),
+                (
+                    dict(THIRTEEN, id="twenty", count=20),
+                    "en",
+                    ["Two frames.", "Two tens.", "Twenty."],
+                ),
             )
             for beat, lang, pages in jobs:
                 n = len(pages)
@@ -402,6 +470,204 @@ class AnimatedRenderTest(unittest.TestCase):
                 colors = Image.open(shot).convert("RGB").getcolors(maxcolors=200000)
                 self.assertNotEqual(colors, [(shot.stat().st_size, (247, 244, 238))])
                 self.assertTrue(colors is None or len(colors) > 1)
+                if beat.get("scene") in {"count_objects", "number_track"}:
+                    img = Image.open(shot).convert("RGB")
+                    cream = (247, 244, 238)
+
+                    def near(px):
+                        return all(abs(px[i] - cream[i]) <= 10 for i in range(3))
+
+                    width, height = img.size
+                    top = [img.getpixel((x, 1)) for x in range(0, width, 4)]
+                    side = [img.getpixel((1, y)) for y in range(0, int(height * 0.7), 4)]
+                    self.assertGreater(sum(map(near, top)) / len(top), 0.85, beat["id"])
+                    self.assertGreater(sum(map(near, side)) / len(side), 0.85, beat["id"])
+            tall = {
+                "id": "track-tall",
+                "visual": "animated",
+                "scene": "number_track",
+                "low": 0,
+                "high": 20,
+                "start": 9,
+                "end": 12,
+                "s1_en": "Start at nine.",
+                "s2_en": "Ten eleven twelve.",
+                "s3_en": "Twelve.",
+                "s1_zh": "从九开始。",
+                "s2_zh": "十十一十二。",
+                "s3_zh": "十二。",
+                "s1_zh_hk": "由九開始。",
+                "s2_zh_hk": "十十一十二。",
+                "s3_zh_hk": "十二。",
+            }
+            tall_pages = ["由九開始。", "十十一十二。", "十二。"]
+            tall_dest = root / "track-tall.mp4"
+            render_animated_clip(
+                tall,
+                {"format": "9:16"},
+                label_lang_code="zh_hk",
+                holds=[0.4, 0.4, 0.4],
+                still_idx=[0, 1, 2],
+                pages=tall_pages,
+                audio=audio,
+                dest=tall_dest,
+                cache_dir=cache,
+                captions=True,
+                progress_bar=False,
+                frame=(360, 640),
+                fps=10,
+            )
+            tall_probe = subprocess.run(
+                [
+                    "ffprobe", "-v", "error", "-select_streams", "v:0",
+                    "-show_entries", "stream=width,height", "-of", "csv=p=0", str(tall_dest),
+                ],
+                capture_output=True, text=True, check=False,
+            )
+            self.assertEqual(tall_probe.stdout.strip(), "360,640", tall_probe.stderr)
+
+
+P1 = ROOT / "lessons" / "P1"
+# Simplified forms whose traditional counterparts differ. Shared glyphs are omitted.
+LEAK = set(
+    "凑个两还满这们边进绿圆东国学时间说话语对发经过门问为会后云块体从来里"
+    "数点几盘顺转开现样长头关动电车无万么着贝风鱼鸟页观"
+)
+
+
+def _beat_lines(lesson, suffix: str) -> str:
+    parts = []
+    for beat in lesson["beats"]:
+        for key, value in beat.items():
+            if str(key).endswith(suffix) and isinstance(value, str):
+                parts.append(value)
+    return "".join(parts)
+
+
+class SceneRegistryTest(unittest.TestCase):
+    def test_registry_order_and_step_counts(self):
+        self.assertEqual(
+            list(REGISTRY),
+            ["one_ten", "ten_and_ones", "make_ten", "count_objects", "number_track"],
+        )
+        self.assertEqual(REGISTRY["one_ten"].steps, 4)
+        self.assertEqual(REGISTRY["count_objects"].steps, 3)
+        self.assertEqual(REGISTRY["number_track"].steps, 3)
+        self.assertEqual(scene_problems({"visual": "title_card", "scene": "nope"}), [])
+
+    def test_twenty_is_two_full_frames(self):
+        beat = dict(THIRTEEN, count=20)
+        labels = labels_for(beat, "zh_hk")
+        self.assertEqual(labels["equation"], ["20", "=", "10", "+", "10"])
+        self.assertEqual(labels["one_ten"], "兩個十")
+        self.assertEqual(labels_for(beat, "zh")["one_ten"], "两个十")
+        self.assertEqual(scene_problems(beat), [])
+
+    def test_count_objects_validation_and_timing(self):
+        good = {
+            "visual": "animated",
+            "scene": "count_objects",
+            "mode": "count",
+            "count": 5,
+            "s1_en": "Point once.",
+            "s2_en": "One. Two. Three. Four. Five.",
+            "s3_en": "Five.",
+            "s1_zh": "点一次。",
+            "s2_zh": "一。",
+            "s3_zh": "五个。",
+            "s1_zh_hk": "指一次。",
+            "s2_zh_hk": "一。",
+            "s3_zh_hk": "五個。",
+        }
+        self.assertEqual(scene_problems(good), [])
+        self.assertEqual(labels_for(good, "en")["answer"], "5")
+        self.assertEqual(labels_for(good, "zh_hk")["note"], "最後嘅數")
+        self.assertIn("mode", scene_problems(dict(good, mode="scatter"))[0])
+        self.assertTrue(scene_problems(dict(good, mode="zero", count=5)))
+        empty = dict(good, mode="zero", count=0)
+        self.assertEqual(scene_problems(empty), [])
+        self.assertEqual(labels_for(empty, "zh_hk")["answer"], "0")
+        self.assertEqual(labels_for(empty, "zh_hk")["title"], "空盤")
+        _pages, holds, _plan, still_idx, _how = pages_for_animated(
+            good, "Point once. One. Two. Three. Four. Five. Five.", 6.0, "en", None, False
+        )
+        durs = step_durations(holds, still_idx, 3)
+        self.assertEqual(len(durs), 3)
+        self.assertAlmostEqual(sum(durs), 6.0, places=6)
+
+    def test_number_track_validation_crossing_and_timing(self):
+        beat = {
+            "visual": "animated",
+            "scene": "number_track",
+            "low": 0,
+            "high": 20,
+            "start": 12,
+            "end": 9,
+            "s1_en": "Can we cross ten?",
+            "s2_en": "Twelve. Eleven. Ten. Nine.",
+            "s3_en": "Yes. Nine.",
+            "s1_zh": "能跨过十吗？",
+            "s2_zh": "十二。",
+            "s3_zh": "可以。",
+            "s1_zh_hk": "可唔可以跨過十呀？",
+            "s2_zh_hk": "十二。",
+            "s3_zh_hk": "可以。",
+        }
+        self.assertEqual(scene_problems(beat), [])
+        self.assertTrue(crosses_ten(12, 9))
+        self.assertTrue(crosses_ten(9, 12))
+        self.assertFalse(crosses_ten(20, 17))
+        labels = labels_for(beat, "zh_hk")
+        self.assertEqual(labels["title"], "倒轉數")
+        self.assertEqual(labels["cross"], "跨過十")
+        self.assertEqual(labels["answer"], "9")
+        onward = dict(beat, start=9, end=12)
+        self.assertEqual(labels_for(onward, "en")["title"], "Count on")
+        self.assertEqual(labels_for(onward, "zh")["step"], "多一个")
+        self.assertFalse(labels_for(dict(beat, start=20, end=17), "en")["cross"])
+        self.assertTrue(any("different" in msg for msg in scene_problems(dict(beat, end=12))))
+        self.assertTrue(scene_problems(dict(beat, start=21)))
+        self.assertTrue(scene_problems(dict(beat, high=80)))
+        _pages, holds, _plan, still_idx, _how = pages_for_animated(
+            beat, "Can we cross ten? Twelve. Eleven. Ten. Nine. Yes. Nine.", 7.5, "en", None, False
+        )
+        durs = step_durations(holds, still_idx, 3)
+        self.assertEqual(len(durs), 3)
+        self.assertAlmostEqual(sum(durs), 7.5, places=6)
+        self.assertTrue(all(d > 0 for d in durs))
+
+    def test_p1_lessons_validate_and_keep_traditional_labels(self):
+        expected = {
+            "P1-NUM-01": ["title_card", "count_objects", "count_objects", "count_objects", "takeaway"],
+            "P1-NUM-02": ["title_card", "one_ten", "ten_and_ones", "ten_and_ones", "takeaway"],
+            "P1-NUM-03": ["title_card", "number_track", "number_track", "number_track", "takeaway"],
+        }
+        for name, visuals in expected.items():
+            path = P1 / f"{name}.yaml"
+            lesson = load_lesson(path)
+            self.assertEqual(validate(lesson, source=path), [], name)
+            got = []
+            for beat in lesson["beats"]:
+                got.append(beat["scene"] if beat.get("visual") == "animated" else beat.get("visual"))
+            self.assertEqual(got, visuals, name)
+            trad_yaml = _beat_lines(lesson, "_zh_hk") + _beat_lines(lesson, "zh_hk")
+            # title_zh_hk is caught by endswith zh_hk; speech keys end with _zh_hk.
+            found = sorted({ch for ch in trad_yaml if ch in LEAK})
+            self.assertEqual(found, [], f"{name} yaml {trad_yaml}")
+            for beat in lesson["beats"]:
+                if beat.get("visual") != "animated":
+                    continue
+                traditional = _label_text(labels_for(beat, "zh_hk"))
+                leaked = sorted({ch for ch in traditional if ch in LEAK})
+                self.assertEqual(leaked, [], traditional)
+                self.assertNotEqual(traditional, _label_text(labels_for(beat, "zh")))
+        two = load_lesson(P1 / "P1-NUM-02.yaml")
+        twenty = next(beat for beat in two["beats"] if beat["id"] == "twenty")
+        self.assertEqual(twenty["count"], 20)
+        self.assertNotIn("make_ten", [beat.get("scene") for beat in two["beats"]])
+        track = load_lesson(P1 / "P1-NUM-03.yaml")
+        hops = [beat for beat in track["beats"] if beat.get("scene") == "number_track"]
+        self.assertEqual([(b["start"], b["end"]) for b in hops], [(9, 12), (20, 17), (12, 9)])
 
 
 if __name__ == "__main__":

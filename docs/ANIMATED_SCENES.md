@@ -12,6 +12,8 @@ On Debian or Ubuntu, a source build of the Cairo binding also needs `pkg-config`
 
 ## Authoring
 
+Any beat may set `visual: animated`. A hook, a definition, a middle step, or a takeaway can be a moving scene, and the beats around it can stay on the slide cards they already use. The factory does not assign a role to slides or to Manim. `visual: animated` is a choice on that beat alone.
+
 ```yaml
 - id: thirteen
   visual: animated
@@ -29,8 +31,9 @@ On Debian or Ubuntu, a source build of the Cairo binding also needs `pkg-config`
   s3_zh_hk: "十三等於十加三。"
 ```
 
-`scene` is `ten_and_ones` or `make_ten`.
+`scene` is `one_ten`, `ten_and_ones`, or `make_ten`.
 
+- `one_ten` takes `count` from 10 to 20. Ten counters start as single ones, gather into one frame, and the frame is labelled "one ten". The ones that do not fit then sit beside it. The demo uses 13, so three ones sit beside the frame.
 - `ten_and_ones` takes `count` from 10 to 20. The demo uses 13: ten counters fill the frame, three sit beside it, and the sentence is `13 = 10 + 3`.
 - `make_ten` takes `a` (1–9) and `b`. `b` must be large enough to fill the empty cells and `a + b` must stay within 20. The demo uses 9 and 8. One of the eight moves into the empty cell: `9 + 1 = 10`, then `10 + 7 = 17`.
 
@@ -54,7 +57,7 @@ The silent movie is cached under `anim/` (`9x16/anim/` for a 9:16 lesson). The k
 
 ## Demo
 
-`examples/demo-ten-and-ones.yaml` is the P1 demo. It sits outside `lessons/`, so `build --all` does not render it. The hook, the definition, and the takeaway are ordinary slide cards (`title_card`, `definition_card`, `takeaway`). Manim runs only on the two middle beats, where the counters move: thirteen as `13 = 10 + 3`, then make ten with `9 + 8`.
+`examples/demo-ten-and-ones.yaml` is the P1 demo. It sits outside `lessons/`, so `build --all` does not render it. The hook is a `title_card` and the takeaway is a `takeaway` card. The definition is `one_ten`, then `ten_and_ones` shows `13 = 10 + 3` and `make_ten` shows `9 + 8`. That mix is one example of choosing a slide or an animated scene per beat. It is not a required order.
 
 ```bash
 python factory/build.py examples/demo-ten-and-ones.yaml --cells en,zh,hk --match-titles --out /path/to/out

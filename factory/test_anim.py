@@ -102,19 +102,25 @@ class AnimatedSchemaTest(unittest.TestCase):
         self.assertEqual(validate(lesson, source=DEMO), [])
         self.assertEqual(
             [beat["visual"] for beat in lesson["beats"]],
-            ["title_card", "definition_card", "animated", "animated", "takeaway"],
+            ["title_card", "animated", "animated", "animated", "takeaway"],
         )
         by_id = {beat["id"]: beat for beat in lesson["beats"]}
+        self.assertEqual(by_id["hook"]["visual"], "title_card")
+        self.assertEqual(by_id["takeaway"]["visual"], "takeaway")
+        self.assertEqual(by_id["define"]["scene"], "one_ten")
+        self.assertEqual(by_id["define"]["count"], 13)
+        self.assertEqual(labels_for(by_id["define"], "en")["one_ten"], "one ten")
+        self.assertEqual(labels_for(by_id["define"], "zh_hk")["ones"], "3個一")
+        self.assertEqual(labels_for(by_id["define"], "zh")["title"], "满框就是一个十")
         self.assertEqual(by_id["thirteen"]["count"], 13)
         self.assertEqual((by_id["make-ten"]["a"], by_id["make-ten"]["b"]), (9, 8))
-        self.assertEqual(by_id["define"]["formula_zh_hk"], "一個十＝滿框")
         self.assertIn("q1_en", by_id["takeaway"])
         self.assertIn("q2_zh_hk", by_id["takeaway"])
 
     def test_zh_hk_demo_labels_have_no_simplified_only_characters(self):
         lesson = load_lesson(DEMO)
         animated = [beat for beat in lesson["beats"] if beat.get("visual") == "animated"]
-        self.assertEqual(len(animated), 2)
+        self.assertEqual(len(animated), 3)
         for beat in animated:
             traditional = _label_text(labels_for(beat, "zh_hk"))
             simplified = _label_text(labels_for(beat, "zh"))
@@ -309,7 +315,23 @@ class AnimatedRenderTest(unittest.TestCase):
             holds = durs
             still_idx = [0, 1, 2]
             cache = root / "anim"
+            define = {
+                "id": "define",
+                "visual": "animated",
+                "scene": "one_ten",
+                "count": 13,
+                "s1_en": "Ten single counters.",
+                "s2_en": "A full frame is one ten.",
+                "s3_en": "Three ones sit beside it.",
+                "s1_zh": "十个圆片。",
+                "s2_zh": "满框就是一个十。",
+                "s3_zh": "三个一留在旁边。",
+                "s1_zh_hk": "十個圓片。",
+                "s2_zh_hk": "滿框就係一個十。",
+                "s3_zh_hk": "三個一留喺旁邊。",
+            }
             jobs = (
+                (define, "zh_hk", ["十個圓片。", "滿框就係一個十。", "三個一留喺旁邊。"]),
                 (THIRTEEN, "zh_hk", ["十三個圓片。", "一個十。", "十加三。"]),
                 (MAKE, "en", ["Nine and eight.", "Nine plus one equals ten.", "Ten plus seven equals seventeen."]),
             )

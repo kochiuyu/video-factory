@@ -1,7 +1,8 @@
 # Demo only. Not a production lesson.
 # Lives outside lessons/ so `build --all` does not pick it up.
-# Slide cards for the hook, the definition, and the takeaway.
-# Manim only for the two beats where counters move.
+# Any beat may be a slide or an animated scene. This file mixes both:
+# hook and takeaway stay on slide cards; the definition and the two
+# number sentences are Manim.
 # MathQuiz P1 "A ten and some ones": 13 = 10 + 3, then make ten with 9 + 8.
 # https://kochiuyu.github.io/mathquiz/
 id: DEMO-P1-TEN-ONES
@@ -26,27 +27,19 @@ beats:
   zh_hk: 十三多過十。我哋點樣讀？
 
 - id: define
-  visual: definition_card
+  visual: animated
+  scene: one_ten
+  count: 13
   seconds: 16
-  kicker: Ten-frame
-  kicker_en: Ten-frame
-  kicker_zh: 十格框
-  kicker_zh_hk: 十格框
-  title_en: A full frame is one ten
-  title_zh: 满框就是一个十
-  title_zh_hk: 滿框就係一個十
-  formula_en: one ten = a full frame
-  formula_zh: 一个十＝满框
-  formula_zh_hk: 一個十＝滿框
-  gloss_en: two rows of five spaces
-  gloss_zh: 每行五格，共两行
-  gloss_zh_hk: 每行五格，共兩行
-  s1_en: A full frame holds ten counters. That is one ten.
-  s1_zh: 填满的框有十个圆片。那就是一个十。
-  s1_zh_hk: 填滿嘅框有十個圓片。咁就係一個十。
-  s2_en: There are two rows of five spaces. Ones that do not fit sit beside the frame.
-  s2_zh: 每行五格，共两行。放不下的一，留在旁边。
-  s2_zh_hk: 每行五格，共兩行。放唔落嘅一，留喺旁邊。
+  s1_en: "Ten single counters. The frame has two rows of five spaces."
+  s1_zh: "十个圆片，还是一个一个的。每行五格，共两行。"
+  s1_zh_hk: "十個圓片，仲係一個一個嘅。每行五格，共兩行。"
+  s2_en: "They gather into the frame. A full frame is one ten."
+  s2_zh: "它们走进框里。满框就是一个十。"
+  s2_zh_hk: "佢哋走入框入面。滿框就係一個十。"
+  s3_en: "Three ones do not fit. They sit beside the frame."
+  s3_zh: "三个一放不下，留在旁边。"
+  s3_zh_hk: "三個一放唔落，留喺旁邊。"
 
 - id: thirteen
   visual: animated

@@ -15,7 +15,7 @@ from pathlib import Path
 from cache import digest_obj, file_fingerprint
 
 # Three authored motions per scene. Each one is one s1 / s2 / s3 narration line.
-STEP_COUNTS = {"ten_and_ones": 3, "make_ten": 3}
+STEP_COUNTS = {"one_ten": 3, "ten_and_ones": 3, "make_ten": 3}
 SCENES = tuple(STEP_COUNTS)
 
 CREAM = "#F7F4EE"
@@ -102,6 +102,7 @@ def _copy(lang: str) -> dict[str, str]:
             "two_tens": "two tens",
             "ones": "{n} ones",
             "make_title": "Make ten",
+            "full_frame": "A full frame is one ten",
         },
         "zh": {
             "ten_title": "一个十和一些一",
@@ -109,6 +110,7 @@ def _copy(lang: str) -> dict[str, str]:
             "two_tens": "两个十",
             "ones": "{n}个一",
             "make_title": "凑成十",
+            "full_frame": "满框就是一个十",
         },
         "zh_hk": {
             "ten_title": "一個十和一些一",
@@ -116,6 +118,7 @@ def _copy(lang: str) -> dict[str, str]:
             "two_tens": "兩個十",
             "ones": "{n}個一",
             "make_title": "湊成十",
+            "full_frame": "滿框就係一個十",
         },
     }
     return table[label_lang(lang)]
@@ -134,6 +137,14 @@ def labels_for(beat: dict, lang: str) -> dict:
             "title": copy["make_title"],
             "equation1": [str(a), "+", str(move), "=", "10"],
             "equation2": ["10", "+", str(rest), "=", str(a + b)],
+        }
+    if scene == "one_ten":
+        count = int(beat.get("count"))
+        ones = 0 if count >= 20 else max(0, count - 10)
+        return {
+            "title": copy["full_frame"],
+            "one_ten": copy["one_ten"],
+            "ones": copy["ones"].format(n=ones) if ones else "",
         }
     count = int(beat.get("count"))
     ones = 0 if count >= 20 else max(0, count - 10)
@@ -157,7 +168,7 @@ def labels_for(beat: dict, lang: str) -> dict:
 def scene_spec(beat: dict, lang: str) -> dict:
     scene = str(beat.get("scene") or "").strip()
     spec: dict = {"scene": scene, "lang": label_lang(lang)}
-    if scene == "ten_and_ones":
+    if scene in {"one_ten", "ten_and_ones"}:
         spec["count"] = int(beat.get("count"))
     elif scene == "make_ten":
         spec["a"] = int(beat.get("a"))
@@ -194,7 +205,7 @@ def scene_problems(beat: dict) -> list[str]:
     problems: list[str] = []
     scene = str(beat.get("scene") or "").strip()
     if scene not in STEP_COUNTS:
-        problems.append(f"animated scene must be ten_and_ones or make_ten, not {scene!r}.")
+        problems.append(f"animated scene must be one_ten, ten_and_ones, or make_ten, not {scene!r}.")
         return problems
     n = STEP_COUNTS[scene]
     for suffix, name in (("en", "English"), ("zh", "简体")):
@@ -206,13 +217,13 @@ def scene_problems(beat: dict) -> list[str]:
         missing = _filled(beat, "zh_hk", n)
         if missing:
             problems.append(f"animated {scene} needs Cantonese lines {', '.join(missing)} (one per step).")
-    if scene == "ten_and_ones":
+    if scene in {"one_ten", "ten_and_ones"}:
         try:
             count = int(beat.get("count"))
         except (TypeError, ValueError):
             count = None
         if count is None or not 10 <= count <= 20:
-            problems.append("ten_and_ones count must be an integer from 10 to 20.")
+            problems.append(f"{scene} count must be an integer from 10 to 20.")
     else:
         try:
             a = int(beat.get("a"))
@@ -438,7 +449,7 @@ def _render_silent(beat, spec, durs, frame, fps, dest: Path) -> None:
 def _make_scene(spec: dict, durs: list[float]):
     classes = _scene_types()
     scene_name = spec.get("scene")
-    cls = classes["make_ten"] if scene_name == "make_ten" else classes["ten_and_ones"]
+    cls = classes[scene_name]
     scene = cls()
     scene.vf_durations = list(durs)
     scene.vf_labels = spec.get("labels") or {}
@@ -505,6 +516,68 @@ def _scene_types() -> dict:
         parts = VGroup(*[Text(tok, font=latin, font_size=size, color=NAVY) for tok in tokens])
         parts.arrange(RIGHT, buff=0.22)
         return parts
+
+    def _fit_visible(mobs, points) -> None:
+        """Keep a start pose on screen, and move recorded targets with it.
+
+        A new VGroup would reparent the counters, so the bounds are measured
+        from the mobjects themselves.
+        """
+        if not mobs:
+            return
+        margin = 0.3
+        left_lim = -config.frame_width / 2 + margin
+        right_lim = config.frame_width / 2 - margin
+        top_lim = config.frame_height / 2 - config.frame_height * 0.04
+        bot_lim = -config.frame_height / 2 + config.frame_height * 0.17
+
+        def edges():
+            return (
+                min(float(m.get_left()[0]) for m in mobs),
+                max(float(m.get_right()[0]) for m in mobs),
+                min(float(m.get_bottom()[1]) for m in mobs),
+                max(float(m.get_top()[1]) for m in mobs),
+            )
+
+        left, right, bottom, top = edges()
+        width = right - left
+        height = top - bottom
+        max_w = right_lim - left_lim
+        max_h = top_lim - bot_lim
+        factor = 1.0
+        if width > max_w and width > 0:
+            factor = min(factor, max_w / width)
+        if height > max_h and height > 0:
+            factor = min(factor, max_h / height)
+        if factor < 0.999:
+            center_x = (left + right) / 2
+            center_y = (bottom + top) / 2
+            about = mobs[0].get_center().copy()
+            about[0] = center_x
+            about[1] = center_y
+            about[2] = 0.0
+            for mob in mobs:
+                mob.scale(factor, about_point=about)
+            for point in points:
+                point[0] = center_x + (float(point[0]) - center_x) * factor
+                point[1] = center_y + (float(point[1]) - center_y) * factor
+            left, right, bottom, top = edges()
+        dx = 0.0
+        dy = 0.0
+        if left < left_lim:
+            dx = left_lim - left
+        elif right > right_lim:
+            dx = right_lim - right
+        if bottom < bot_lim:
+            dy = bot_lim - bottom
+        elif top > top_lim:
+            dy = top_lim - top
+        if dx or dy:
+            for mob in mobs:
+                mob.shift(RIGHT * dx + UP * dy)
+            for point in points:
+                point[0] += dx
+                point[1] += dy
 
     def settle(group):
         max_w = config.frame_width * 0.9
@@ -605,6 +678,88 @@ def _scene_types() -> dict:
             self.spend(1, *step2)
             self.spend(2, LaggedStart(*[FadeIn(piece) for piece in eq], lag_ratio=0.18))
 
+    class OneTen(_Board):
+        """Ten loose counters gather into one frame, then ones sit beside it."""
+
+        def construct(self):
+            count = max(10, min(20, int(self.vf_count)))
+            ones_n = 0 if count >= 20 else count - 10
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            cells = ten_cells()
+            ten_dots = VGroup(*[counter(GREEN) for _ in range(10)])
+            extra_dots = VGroup(*[counter(GREEN) for _ in range(ones_n)])
+            for dot, cell in zip(ten_dots, cells):
+                dot.move_to(cell.get_center())
+            portrait = config.frame_width < config.frame_height
+            gap = 0.72
+            extras = list(extra_dots)
+            if extras:
+                span = (len(extras) - 1) * gap
+                if portrait:
+                    origin = cells.get_bottom() + DOWN * 0.75
+                    for i, dot in enumerate(extras):
+                        dot.move_to(origin + RIGHT * (i * gap - span / 2))
+                else:
+                    origin = cells.get_right() + RIGHT * 0.75
+                    for i, dot in enumerate(extras):
+                        dot.move_to(origin + DOWN * (i * gap - span / 2))
+            title = styled(labels.get("title") or "", latin, cjk, 40)
+            ten_label = styled(labels.get("one_ten") or "", latin, cjk, 34)
+            ten_label.next_to(cells, DOWN, buff=0.22)
+            ones_label = styled(labels.get("ones") or " ", latin, cjk, 34) if ones_n else None
+            if ones_label is not None and extras:
+                lowest = min(extras, key=lambda dot: float(dot.get_center()[1]))
+                ones_label.next_to(lowest, DOWN, buff=0.36)
+            title.next_to(cells, UP, buff=0.35)
+            board = VGroup(title, cells, ten_dots, ten_label)
+            if ones_n:
+                board.add(extra_dots)
+            if ones_label is not None:
+                board.add(ones_label)
+            settle(board)
+            ten_targets = [dot.get_center().copy() for dot in ten_dots]
+            extra_targets = [dot.get_center().copy() for dot in extra_dots]
+            col_gap = 0.86
+            row_gap = 0.86
+            cols = 5
+            radius = 0.30
+            pile_at = cells.get_left() + LEFT * ((cols - 1) * col_gap + radius + 0.55)
+            for i, dot in enumerate(ten_dots):
+                col = i % cols
+                row = i // cols
+                dot.move_to(pile_at + RIGHT * col * col_gap + DOWN * (row - 0.5) * row_gap)
+            left = min(float(ten_dots.get_left()[0]), float(cells.get_left()[0]))
+            right = max(float(cells.get_right()[0]), float(extra_dots.get_right()[0]) if ones_n else float(cells.get_right()[0]))
+            top = max(float(ten_dots.get_top()[1]), float(cells.get_top()[1]))
+            title.move_to([ (left + right) / 2, top + 0.32 + float(title.height) / 2, 0 ])
+            points = ten_targets + extra_targets
+            shown = [title, cells, ten_dots, ten_label]
+            if ones_n:
+                shown.append(extra_dots)
+            if ones_label is not None:
+                shown.append(ones_label)
+            _fit_visible(shown, points)
+            self.spend(
+                0,
+                FadeIn(title),
+                FadeIn(cells),
+                LaggedStart(*[FadeIn(dot) for dot in ten_dots], lag_ratio=0.05),
+            )
+            moves = [dot.animate.move_to(target) for dot, target in zip(ten_dots, ten_targets)]
+            ring = SurroundingRectangle(cells, color=GOLD, buff=0.12, stroke_width=6)
+            self.spend(1, LaggedStart(*moves, lag_ratio=0.08), FadeIn(ten_label), Create(ring))
+            if ones_n and ones_label is not None:
+                for dot, target in zip(extra_dots, extra_targets):
+                    dot.move_to(target)
+                self.spend(
+                    2,
+                    LaggedStart(*[FadeIn(dot) for dot in extra_dots], lag_ratio=0.12),
+                    FadeIn(ones_label),
+                )
+            else:
+                self.spend(2)
+
     class MakeTen(_Board):
         def construct(self):
             a = max(1, min(9, int(self.vf_a)))
@@ -651,7 +806,7 @@ def _scene_types() -> dict:
             self.spend(1, LaggedStart(*into, lag_ratio=0.15), FadeIn(eq1), Create(ring))
             self.spend(2, FadeOut(eq1), FadeIn(eq2))
 
-    _scene_types._cache = {"ten_and_ones": TenAndOnes, "make_ten": MakeTen}
+    _scene_types._cache = {"one_ten": OneTen, "ten_and_ones": TenAndOnes, "make_ten": MakeTen}
     return _scene_types._cache
 
 

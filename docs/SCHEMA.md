@@ -127,9 +127,9 @@ These visuals paint progressive stills. Write one spoken chunk per still:
 
 ## Animated scene (opt-in)
 
-`visual: animated` renders a moving scene with Manim instead of a slide still. Manim is optional (`requirements-manim.txt`). A lesson with no animated beat builds exactly as before, including on a machine where Manim is not installed. Asking for an animated scene without Manim stops with an error that names that file.
+`visual: animated` renders a moving scene with Manim instead of a slide still. It is a per-beat choice: a hook, a definition, a middle step, or a takeaway may be animated, and the beats around it may stay slides. Manim is optional (`requirements-manim.txt`). A lesson with no animated beat builds exactly as before, including on a machine where Manim is not installed. Asking for an animated scene without Manim stops with an error that names that file.
 
-Authoring, the two demo scenes, caption timing, and the cache live in [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md). The demo file is `examples/demo-ten-and-ones.yaml`. It is outside `lessons/`, so `build --all` does not pick it up.
+Authoring, the scenes, caption timing, and the cache live in [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md). The demo file is `examples/demo-ten-and-ones.yaml`. It is outside `lessons/`, so `build --all` does not pick it up.
 
 ## Optional fields
 

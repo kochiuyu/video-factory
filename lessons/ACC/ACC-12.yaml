@@ -1,0 +1,237 @@
+id: ACC-12
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+duration_target_s: 206
+title_en: The best margin. Per what?
+title_zh: 哪种订单贡献更高？先看按什么算
+title_zh_hk: 哪張單貢獻最大？先問按甚麼計
+beats:
+- id: hook
+  visual: still_image
+  seconds: 24
+  kicker: ACC-12
+  kicker_en: ACC-12
+  kicker_zh: ACC-12
+  kicker_zh_hk: ACC-12
+  title_en: The best margin. Per what?
+  title_zh: 哪种订单贡献更高？先看按什么算
+  title_zh_hk: 哪張單貢獻最大？先問按甚麼計
+  image: art/margin-per-minute-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A folder order contributes 90 dollars, a booklet 40. Should the shop always prefer A? This is a fictional Hong Kong print-finishing shop with 180 skilled finishing minutes left tomorrow.
+  zh: >-
+    一单文件夹的边际贡献是九十港元，薄册是四十。就该优先做A吗？这是虚构的香港印后工场，明天还剩一百八十个熟练精整分钟。
+  zh_hk: >-
+    一單文件夾嘅邊際貢獻係九十港元，薄冊係四十。就應該優先做A嗎？呢個係虛構嘅香港印後工場，聽日仲剩一百八十個熟練精整分鐘。
+
+- id: ledger
+  visual: table_grid
+  seconds: 24
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: New requests, HK$
+  title_zh: 新增订单，港元
+  title_zh_hk: 新增訂單，港元
+  row1_en: A, folder batch
+  row1_zh: A，演示文件夹
+  row1_zh_hk: A，簡報文件夾
+  row2_en: B, booklet batch
+  row2_zh: B，普通薄册
+  row2_zh_hk: B，普通薄冊
+  col1_en: Contribution
+  col1_zh: 边际贡献
+  col1_zh_hk: 邊際貢獻
+  col2_en: Maximum orders
+  col2_zh: 新增上限
+  col2_zh_hk: 新增上限
+  c11: '90'
+  c12: '6'
+  c21: '40'
+  c22: '12'
+  footer_en: '180 minutes. Rent unchanged.'
+  footer_zh: 精整180分钟。租金不变。
+  footer_zh_hk: 精整180分鐘。租金不變。
+  s1_en: Customers will buy up to six presentation-folder orders, A, and twelve simple-booklet orders, B, if the shop accepts them today. A contributes 90 per completed order; B contributes 40.
+  s1_zh: 客户确认，若今天接下，演示文件夹A最多六单，普通薄册B最多十二单。每完成一单，A的边际贡献是九十，B是四十。
+  s1_zh_hk: 客戶確認，若今日接下，簡報文件夾A最多六單，普通薄冊B最多十二單。每完成一單，A嘅邊際貢獻係九十，B係四十。
+  s2_en: Contribution here means sales less costs that vary with the accepted order, before unchanged rent and scheduled staff pay. Finishing time is the only scarce production resource for these extra requests.
+  s2_zh: 这里的边际贡献，是售价减去随接单而变的成本，还没有扣不变的租金和已排班工资。对这些新增订单，精整时间是唯一稀缺的生产资源。
+  s2_zh_hk: 呢度嘅邊際貢獻，係售價減去隨接單而變嘅成本，仲未扣不變嘅租金同已排班薪酬。對呢啲新增訂單，精整時間係唯一稀缺嘅生產資源。
+  s3_en: The shop may accept any whole number within each limit. No new order has been accepted yet. The owner prefers A because each order contributes more. The supervisor wants the time sheet first.
+  s3_zh: 在上限以内，可以接任意整数单。现在还没有接下新单。老板倾向A，因为每单边际贡献更高。主管想先看工时表。
+  s3_zh_hk: 喺上限以內，可以接任意整數單。而家仲未接下新單。老闆傾向A，因為每單邊際貢獻更高。主管想先睇工時表。
+
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Prioritise A, or B?
+  title_zh: 先做A，还是先做B？
+  title_zh_hk: 先做A，定係先做B？
+  en: >-
+    Which order type would you provisionally prioritise, A or B? Why might contribution per order not settle the choice, and what comparison is still missing? Pause and vote. The checked time sheet arrives before any acceptance.
+  zh: >-
+    你会暂定优先做A还是B？为什么每单边际贡献未必能定案，还缺哪一项比较？请暂停，投个票。核对过的工时表会在接单前送到。
+  zh_hk: >-
+    你會暫定優先做A定B？點解每單邊際貢獻未必能定案，仲欠邊一項比較？暫停，投個票。核對過嘅工時表會喺接單前送到。
+
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Minutes, then an extra block
+  title_zh: 先有工时，再有加购时段
+  title_zh_hk: 先有工時，再有加購時段
+  step1_en: A uses 30 minutes; B uses 10
+  step1_zh: A用30分钟，B用10分钟
+  step1_zh_hk: A用30分鐘，B用10分鐘
+  step2_en: First find the 180-minute mix
+  step2_zh: 先求180分钟的组合
+  step2_zh_hk: 先求180分鐘嘅組合
+  step3_en: Optional 60 minutes for 100
+  step3_zh: 可选60分钟，加价100
+  step3_zh_hk: 可選60分鐘，加價100
+  s1_en: The checked time sheet shows A uses 30 finishing minutes per order and B uses 10. Those times already include the relevant preparation, handling and quality checks.
+  s1_zh: 核对过的工时表显示，A每单要用三十个精整分钟，B要用十个。这些时间已包括相关准备、搬运和质检。
+  s1_zh_hk: 核對過嘅工時表顯示，A每單要用三十個精整分鐘，B要用十個。呢啲時間已經包括相關準備、搬運同質檢。
+  s2_en: First work out the best mix within the original 180 minutes. Then, before any order is accepted, a colleague offers one optional 60-minute productive block for an all-in 100 dollars.
+  s2_zh: 先按原来的一百八十分钟求出最佳组合。在尚未接单之前，一位合资格同事再提供一个可选的六十分钟有效精整时段，全部加价一共一百港元。
+  s2_zh_hk: 先按原來嘅一百八十分鐘求出最佳組合。喺尚未接單之前，一位合資格同事再提供一個可選嘅六十分鐘有效精整時段，全部加價一共一百港元。
+  s3_en: The block includes all extra employer and operating costs. It cannot be split or resold. If bought, capacity becomes 240 minutes, and the 100 is deducted from the mix's contribution. Demand caps stay six A and twelve B.
+  s3_zh: 这时段已包括全部额外的雇主和运营成本，不能拆开或转售。如果买下，总产能变成二百四十分钟，这一百要单独从组合的边际贡献里扣除。需求上限仍是A六单、B十二单。
+  s3_zh_hk: 呢時段已經包括全部額外嘅僱主同營運成本，唔可以拆開或者轉售。如果買落，總產能變成二百四十分鐘，呢一百要單獨由組合嘅邊際貢獻扣走。需求上限仍然係A六單、B十二單。
+
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which mix, and the extra hour?
+  title_zh: 怎样组合？要不要加购？
+  title_zh_hk: 點樣組合？要唔要加購？
+  en: >-
+    What mix would you accept with 180 minutes? Would you then buy the extra 60-minute block for 100, and what revised mix and net improvement justify that? Pause and calculate.
+  zh: >-
+    一百八十分钟你会接下怎样的组合？然后会不会用一百港元加购这六十分钟？新的组合和净增加额怎样支持你的决定？请暂停，先算一遍。
+  zh_hk: >-
+    一百八十分鐘你會接下點樣嘅組合？然後會唔會用一百港元加購呢六十分鐘？新嘅組合同淨增加額點樣支持你嘅決定？暫停，先計一次。
+
+- id: mix180
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Put the scarce minute first
+  title_zh: 先看稀缺的每一分钟
+  title_zh_hk: 先睇稀缺嘅每一分鐘
+  step1_en: 'A: 90 ÷ 30 = 3 per minute'
+  step1_zh: A：90 ÷ 30 = 每分钟3
+  step1_zh_hk: A：90 ÷ 30 = 每分鐘3
+  step2_en: 'B: 40 ÷ 10 = 4 per minute'
+  step2_zh: B：40 ÷ 10 = 每分钟4
+  step2_zh_hk: B：40 ÷ 10 = 每分鐘4
+  step3_en: '12 B + 2 A = 660'
+  step3_zh: 12单B加2单A，共660
+  step3_zh_hk: 12單B加2單A，共660
+  s1_en: A contributes 90 divided by 30, which is 3 per finishing minute. B contributes 40 divided by 10, which is 4 per minute. A has the higher contribution per order, but B earns more from the scarce resource.
+  s1_zh: A是九十除以三十，每精整分钟是三。B是四十除以十，每分钟是四。A的每单边际贡献更高，但B能从稀缺资源里挣得更多。
+  s1_zh_hk: A係九十除以三十，每精整分鐘係三。B係四十除以十，每分鐘係四。A嘅每單邊際貢獻更高，但B可以從稀缺資源度賺得更多。
+  s2_en: In the 30 minutes used by one A, three B orders would contribute 120 rather than 90, while those B orders remain saleable. Do not rank by percentages, or by charging unchanged rent.
+  s2_zh: 做一单A的三十分钟里，三单B可以带来一百二十而不是九十，而且这些B单仍卖得出去。不要比贡献百分比，也不要把不变的租金摊进去再排名。
+  s2_zh_hk: 做一單A嘅三十分鐘入面，三單B可以帶嚟一百二十而唔係九十，而且呢啲B單仍然賣得出去。唔好比較貢獻百分比，亦唔好將不變嘅租金攤入去再排名。
+  s3_en: 'Accept twelve B first: 120 minutes and 480. Sixty minutes remain for two A, another 180. The 180-minute mix is twelve B plus two A, contributing 660. Six A alone would use the shift and contribute only 540. Eighteen B cannot be sold.'
+  s3_zh: 先接十二单B：一百二十分钟，得四百八十。剩下六十分钟可接两单A，再得一百八十，合计六百六十。只做六单A会用尽工时，却只有五百四十。十八单B没有那么多客户。
+  s3_zh_hk: 先接十二單B：一百二十分鐘，得四百八十。剩下六十分鐘可接兩單A，再得一百八十，合計六百六十。只做六單A會用盡工時，但只有五百四十。十八單B冇咁多客戶。
+
+- id: block240
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: The extra hour has a bound
+  title_zh: 加购一小时，价值有上限
+  title_zh_hk: 加購一小時，價值有上限
+  step1_en: '240 min: 12 B + 4 A = 840'
+  step1_zh: 240分钟：12B加4A，共840
+  step1_zh_hk: 240分鐘：12B加4A，共840
+  step2_en: 'After the 100 charge: 740'
+  step2_zh: 扣除100后为740
+  step2_zh_hk: 扣除100後係740
+  step3_en: 'Improvement 80; max charge 180'
+  step3_zh: 多80；加价上限180
+  step3_zh_hk: 多80；加價上限180
+  s1_en: With 240 minutes, B is still capped at twelve orders and 480. The remaining 120 minutes allow four A, another 360. Contribution is 840 before the block charge, and 740 after the 100.
+  s1_zh: 总产能二百四十分钟时，B仍最多十二单，边际贡献四百八十。剩下一百二十分钟可接四单A，再得三百六十。未扣加购费是八百四十，扣一百后是七百四十。
+  s1_zh_hk: 總產能二百四十分鐘時，B仍然最多十二單，邊際貢獻四百八十。剩下一百二十分鐘可接四單A，再得三百六十。未扣加購費係八百四十，扣一百後係七百四十。
+  s2_en: Against 660 without the block, the improvement is 80. On the stated financial criterion, buy the block and accept twelve B plus four A. No promise has been made yet, so this revision breaks no commitment.
+  s2_zh: 比起不加购的六百六十，多了八十。按题目给出的财务标准，应加购并接十二单B和四单A。现在还没有承诺接单，这样调整并不违约。
+  s2_zh_hk: 比起不加購嘅六百六十，多咗八十。按題目畀出嘅財務標準，應加購並接十二單B同四單A。而家仲未承諾接單，咁樣調整並唔違約。
+  s3_en: The extra hour supports two more A orders, adding 180 before its charge. It does not add 240, because B demand is already filled. 180 is the indifference charge for this exact block.
+  s3_zh: 多出的一小时可以再接两单A，扣费前多一百八十。不会多出二百四十，因为B的需求已经接满。这一时段的无差异加价就是一百八十。
+  s3_zh_hk: 多出嘅一小時可以再接兩單A，扣費前多一百八十。唔會多出二百四十，因為B嘅需求已經接滿。呢一時段嘅無差異加價就係一百八十。
+
+- id: check
+  visual: title_card
+  seconds: 20
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    After B demand is filled, why is the next hour used on lower-ranked A? At 300 total minutes these requests are full, so further time adds nothing here. If another scarce resource appeared, would you still buy a block priced at 100?
+  zh: >-
+    B的需求接满以后，为什么多出的一小时要用来做排名较低的A？如果又出现另一种稀缺资源，或者订单批量变了，一百元的加购还该买吗？七百四十仍是未扣不变固定成本的金额，不是公司整体利润。
+  zh_hk: >-
+    B嘅需求接滿之後，點解多出嘅一小時要用嚟做排名較低嘅A？如果再出現另一種稀缺資源，或者訂單批量變咗，一百元嘅加購仲該唔該買？七百四十仍然係未扣不變固定成本嘅金額，唔係公司整體溢利。
+
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Rank the scarce minute
+  title_zh: 要按稀缺分钟来排序
+  title_zh_hk: 要按稀缺分鐘嚟排序
+  q1_en: '180 min: 12 B + 2 A = 660'
+  q1_zh: 180分钟：12B加2A，共660
+  q1_zh_hk: 180分鐘：12B加2A，共660
+  q2_en: 'Buy the block: net 740'
+  q2_zh: 加购后净额740
+  q2_zh_hk: 加購後淨額740
+  s1_en: Contribution per order is not the same as contribution per scarce minute. Fill the better use first, then put leftover time into the next feasible order.
+  s1_zh: 每单边际贡献，不等于每单位稀缺资源的边际贡献。先把更好的用途接满，再用剩余时间做下一档可行的订单。
+  s1_zh_hk: 每單邊際貢獻，唔等於每單位稀缺資源嘅邊際貢獻。先將更好嘅用途接滿，再用剩餘時間做下一檔可行嘅訂單。
+  s2_en: With 180 minutes, accept twelve B and two A for 660. Buying the 60-minute block for 100 supports four A as well, and raises the comparable amount to 740.
+  s2_zh: 一百八十分钟时，接十二单B和两单A，边际贡献六百六十。用一百加购六十分钟后，可再多两单A，扣费后可比金额是七百四十。
+  s2_zh_hk: 一百八十分鐘時，接十二單B同兩單A，邊際貢獻六百六十。用一百加購六十分鐘後，可以再多兩單A，扣費後可比金額係七百四十。
+  s3_en: The shop, the requests and the figures are classroom assumptions, not a staffing or pricing recommendation for a real business.
+  s3_zh: 工场、订单和数字都是课堂假设，不是对真实企业的排班或定价建议。
+  s3_zh_hk: 工場、訂單同數字都係課堂假設，唔係對真實企業嘅排班或者定價建議。

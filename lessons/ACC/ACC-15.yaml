@@ -1,0 +1,319 @@
+id: ACC-15
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A profit. Where did the cash go?
+title_zh: 账上有利润，现金去了哪里？
+title_zh_hk: 有利潤，現金去了哪裏？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-15
+  kicker_en: ACC-15
+  kicker_zh: ACC-15
+  kicker_zh_hk: ACC-15
+  title_en: A profit. Where did the cash go?
+  title_zh: 账上有利润，现金去了哪里？
+  title_zh_hk: 有利潤，現金去了哪裏？
+  image: art/profit-not-cash-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    The month made a profit of 30,000, yet the bank balance fell by 35,000. Should the owner cut next
+    month's expenses first? This is a fictional Hong Kong packaging studio. All figures in the case are
+    in thousands of Hong Kong dollars.
+  zh: 这个月利润是三万，银行存款却少了三万五。业主该先削减下月费用吗？这是虚构的香港包装工作室。本题金额一律以千港元列示。
+  zh_hk: 呢個月溢利係三萬，銀行現金卻少咗三萬五。業主該唔該先削減下月開支？呢個係虛構嘅香港包裝工作室。呢題金額一律以千港元列示。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Completed month, HK$000
+  title_zh: 已结算月份，千港元
+  title_zh_hk: 已結算月份，千港元
+  row1_en: Revenue
+  row1_zh: 营业收入
+  row1_zh_hk: 收入
+  row2_en: Costs and depreciation
+  row2_zh: 成本、费用与折旧
+  row2_zh_hk: 成本、開支與折舊
+  row3_en: Profit
+  row3_zh: 利润
+  row3_zh_hk: 利潤
+  row4_en: Bank cash, open / close
+  row4_zh: 银行存款，期初／期末
+  row4_zh_hk: 銀行現金，期初／期末
+  col1_en: Amount
+  col1_zh: 金额
+  col1_zh_hk: 金額
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11: '150'
+  c12_en: Earned
+  c12_zh: 已实现
+  c12_zh_hk: 已賺取
+  c21: (80)+(30)+(10)
+  c22_en: Includes dep. 10
+  c22_zh: 含折旧10
+  c22_zh_hk: 含折舊10
+  c31: '30'
+  c32_en: Reported profit
+  c32_zh: 账面利润
+  c32_zh_hk: 賬面溢利
+  c41: 100 / 65
+  c42_en: Cash fell 35
+  c42_zh: 现金减少35
+  c42_zh_hk: 現金減少35
+  footer_en: No collections on this dashboard.
+  footer_zh: 仪表板没有收款和采购明细。
+  footer_zh_hk: 儀表板冇收款同採購明細。
+  s1_en: >-
+    Revenue is 150, cost of goods sold 80, other operating expenses 30, and depreciation 10. Reported
+    profit is 30. Opening unrestricted bank cash was 100, and closing cash is 65.
+  s1_zh: 营业收入一百五十，销售成本八十，其他经营费用三十，折旧十。账面利润三十。期初不受限制的银行存款是一百，期末是六十五。
+  s1_zh_hk: 收入一百五十，銷售成本八十，其他經營開支三十，折舊十。賬面溢利三十。期初不受限制嘅銀行現金係一百，期末係六十五。
+  s2_en: >-
+    The first dashboard does not show cash collected, purchases paid, stock movements, unpaid invoices,
+    or capital purchases. The cash balance still covers currently due obligations, so there is time for
+    a review. No waste, fraud, or error has yet been found.
+  s2_zh: >-
+    第一份仪表板没有列出客户回款、已付采购、存货变动、未付账款或资本开支。现金余额仍够支付目前到期义务，所以来得及先核对。目前还没有发现浪费、舞弊或错账。
+  s2_zh_hk: >-
+    第一份儀表板冇列出客戶回款、已付採購、存貨變動、未付賬款或資本開支。現金餘額仍然夠支付目前到期義務，所以嚟得切先核對。目前仲未發現浪費、舞弊或錯賬。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Cut costs, or reconcile first?
+  title_zh: 先砍费用，还是先核对？
+  title_zh_hk: 先砍開支，定係先核對？
+  en: >-
+    Would you first impose a blanket operating-expense cut, or request a profit-to-cash reconciliation
+    before targeting action? What can this dashboard tell you, and what can it not tell you, about the
+    35,000 cash decline? Pause and vote.
+  zh: >-
+    你会先全面削减下月经营费用，还是先要一份利润到现金的核对，再决定行动？现有仪表板对这三万五的现金减少，能说明什么，又不能说明什么？请暂停，投个票。
+  zh_hk: >-
+    你會先全面削減下月經營開支，定係先要一份溢利到現金嘅核對，再決定行動？現有儀表板對呢三萬五嘅現金減少，能夠說明咩，又唔能夠說明咩？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The missing movements
+  title_zh: 先前缺少的变动
+  title_zh_hk: 先前缺少嘅變動
+  step1_en: Receivables 20 to 55; stock 40 to 65
+  step1_zh: 应收 20→55，存货 40→65
+  step1_zh_hk: 應收 20→55，存貨 40→65
+  step2_en: Payables 15 to 20; expenses all paid
+  step2_zh: 应付 15→20；费用已全部支付
+  step2_zh_hk: 應付 15→20；開支已全部支付
+  step3_en: Machine paid 20, not yet in use
+  step3_zh: 新机器付款20，尚未投入使用
+  step3_zh_hk: 新機器付款20，尚未投入使用
+  s1_en: >-
+    Trade receivables increased from 20 to 55, inventories from 40 to 65, and trade payables for stock
+    from 15 to 20. Other operating expenses of 30 were all paid this month. Depreciation of 10 is a non-cash
+    expense on existing equipment.
+  s1_zh: >-
+    应收款项由二十增至五十五，存货由四十增至六十五，存货采购应付款由十五增至二十。其他经营费用三十已在本月全部付现。折旧十是现有设备的非现金费用。
+  s1_zh_hk: >-
+    應收款項由二十增至五十五，存貨由四十增至六十五，存貨採購應付款由十五增至二十。其他經營開支三十已喺呢個月全部付現。折舊十係現有設備嘅非現金開支。
+  s2_en: >-
+    Separately, a new machine cost 20 and was paid in full. It is not part of cost of sales or the 30
+    of other expenses, and it was not yet available for use, so no depreciation on it is included this
+    month. There are no other cash movements in this exercise.
+  s2_zh: 另外，新机器花费二十并已全额付清。它不属于销售成本，也不在那三十的其他费用里。月末尚未投入使用，所以本题不含它的折旧。本练习没有其他现金流。
+  s2_zh_hk: 另外，新機器花費二十並已全額付清。佢唔屬於銷售成本，亦不喺嗰三十嘅其他開支入面。月末尚未投入使用，所以呢題唔含佢嘅折舊。本練習冇其他現金流。
+  s3_en: >-
+    Closing receivables of 55 include 50 within terms and 5 overdue. Closing stock of 65 includes 50 allocated
+    to orders and 15 not yet allocated. These are closing balances, not extra cash outflows to add again.
+  s3_zh: >-
+    期末应收五十五里，五十仍在账期内，五已经逾期。期末存货六十五里，五十已分配给既定订单，十五尚未分配。这些是期末余额，不要再当成一笔新的现金流出。
+  s3_zh_hk: >-
+    期末應收五十五入面，五十仍然喺賬期內，五已經逾期。期末存貨六十五入面，五十已分配俾既定訂單，十五尚未分配。呢啲係期末餘額，唔好再當成一筆新嘅現金流出。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Reconcile profit to the bank
+  title_zh: 怎样把利润核对到存款？
+  title_zh_hk: 點樣將溢利核對到存款？
+  en: >-
+    Reconcile profit to operating cash flow and then to the closing bank balance. Which cash-management
+    action would you prioritise next, and why would neither adding back depreciation nor cancelling future
+    expenses undo this month's cash movements? Pause and calculate.
+  zh: >-
+    请把利润核对到经营现金流，再核对到期末银行存款。下一步应优先跟进哪一项现金管理？为什么加回折旧，或者取消未来开支，都无法撤销本月已经发生的现金变动？请暂停，先算一遍。
+  zh_hk: >-
+    請將溢利核對到經營現金流，再核對到期末銀行現金。下一步應優先跟進邊一項現金管理？點解加回折舊，或者取消未來開支，都無法撤銷呢個月已經發生嘅現金變動？暫停，先計一次。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 32
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Operating flow is minus 15
+  title_zh: 经营现金流是负15
+  title_zh_hk: 經營現金流係負15
+  step1_en: 30 + 10 − 35 − 25 + 5 = −15
+  step1_zh: 30加10减35减25加5＝−15
+  step1_zh_hk: 30加10減35減25加5＝−15
+  step2_en: Receipts 115 − paid 100 − 30 = −15
+  step2_zh: 收款115减付款100减30＝−15
+  step2_zh_hk: 收款115減付款100減30＝−15
+  step3_en: Then investing 20 explains the 35
+  step3_zh: 再加投资流出20，对上35
+  step3_zh_hk: 再加投資流出20，對上35
+  s1_en: >-
+    Start with profit 30. Add back non-cash depreciation 10. Subtract the receivables increase of 35 and
+    the inventory increase of 25. Add the payables increase of 5. Operating cash flow is 30 plus 10 minus
+    35 minus 25 plus 5, which is minus 15.
+  s1_zh: >-
+    从利润三十出发，加回非现金折旧十，再减去应收增加的三十五和存货增加的二十五，加上应付增加的五。经营现金流是三十加十减三十五减二十五加五，等于负十五。
+  s1_zh_hk: >-
+    由溢利三十出發，加回非現金折舊十，再減去應收增加嘅三十五同存貨增加嘅二十五，加上應付增加嘅五。經營現金流係三十加十減三十五減二十五加五，等於負十五。
+  s2_en: >-
+    Cross-check next with actual receipts and payments, so the same minus 15 can be seen from both directions.
+  s2_zh: 接下来再用实际收款和付款交叉核对，确认同样是负十五。
+  s2_zh_hk: 接下來再用實際收款同付款交叉核對，確認同樣係負十五。
+  s3_en: >-
+    The machine payment of 20 is an investing outflow, not another deduction inside operating cash flow.
+    Operating minus 15 plus investing minus 20 equals the cash change of minus 35. Opening cash 100 minus
+    35 is closing cash 65. Do not subtract the machine twice.
+  s3_zh: >-
+    机器付款二十是投资流出，不要在计算经营现金流时再扣一次。经营负十五加投资负二十，等于现金减少三十五。期初一百减三十五，就是期末六十五。不要把机器减两次。
+  s3_zh_hk: >-
+    機器付款二十係投資流出，唔好喺計算經營現金流時再扣一次。經營負十五加投資負二十，等於現金減少三十五。期初一百減三十五，就係期末六十五。唔好將機器減兩次。
+- id: direct
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Receipts and payments agree
+  title_zh: 收付核对结果相同
+  title_zh_hk: 收付核對結果相同
+  step1_en: Receipts 150+20−55=115
+  step1_zh: 收款 150+20−55=115
+  step1_zh_hk: 收款 150+20−55=115
+  step2_en: Supplier payments 100
+  step2_zh: 付给供应商 100
+  step2_zh_hk: 付給供應商 100
+  step3_en: 115 − 100 − 30 = −15
+  step3_zh: 115减100减30＝−15
+  step3_zh_hk: 115減100減30＝−15
+  s1_en: >-
+    Customer receipts are revenue 150 plus opening receivables 20 minus closing 55, which is 115. Inventory
+    purchases are cost of sales 80 plus closing stock 65 minus opening 40, which is 105.
+  s1_zh: >-
+    客户收款是营业收入一百五十，加期初应收二十，减期末五十五，等于一百一十五。存货采购是销售成本八十，加期末存货六十五，减期初四十，等于一百零五。
+  s1_zh_hk: 客戶收款係收入一百五十，加期初應收二十，減期末五十五，等於一百一十五。存貨採購係銷售成本八十，加期末存貨六十五，減期初四十，等於一百零五。
+  s2_en: >-
+    Cash paid to stock suppliers is purchases 105 plus opening payables 15 minus closing 20, which is
+    100. Receipts 115 minus supplier payments 100 minus the paid expenses 30 again give an operating outflow
+    of 15.
+  s2_zh: 付给存货供应商的现金是采购一百零五，加期初应付十五，减期末二十，等于一百。收款一百一十五减付款一百，再减已付费用三十，经营流出同样是十五。
+  s2_zh_hk: 付給存貨供應商嘅現金係採購一百零五，加期初應付十五，減期末二十，等於一百。收款一百一十五減付款一百，再減已付開支三十，經營流出同樣係十五。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 22
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Target the mechanism
+  title_zh: 要对准具体机制
+  title_zh_hk: 要對準具體機制
+  step1_en: Follow up the overdue 5 first
+  step1_zh: 先跟进逾期的5
+  step1_zh_hk: 先跟進逾期嘅5
+  step2_en: Do not call all 55 overdue
+  step2_zh: 不能把55全部当成逾期
+  step2_zh_hk: 唔可以將55全部當成逾期
+  step3_en: Profit does not make cash fictitious
+  step3_zh: 有利润，现金短缺仍是真的
+  step3_zh_hk: 有溢利，現金短缺仍然係真
+  s1_en: >-
+    First assign follow-up on the overdue 5, verify collection dates for the 50 still within terms, and
+    review whether the 15 of unallocated stock should change the next purchasing plan. Do not assume all
+    15 can be turned into cash immediately.
+  s1_zh: 先安排跟进逾期的五，核对其余五十的预计收款日，并检视尚未分配的十五存货要不要调整下一步采购。不要假定这十五都能马上变成现金。
+  s1_zh_hk: 先安排跟進逾期嘅五，核對其餘五十嘅預計收款日，並檢視尚未分配嘅十五存貨要唔要調整下一步採購。唔好假定呢十五都能夠即刻變成現金。
+  s2_en: >-
+    Adding back depreciation does not create a receipt, and cancelling future expenses cannot reverse
+    completed purchases. A profitable month can still absorb cash. Nor does profit justify ignoring a
+    negative operating flow.
+  s2_zh: 加回折旧不会变出一笔收款，取消未来开支也不能撤销已经完成的采购。盈利的月份同样可能占用现金。有利润，并不等于可以忽略负的经营现金流。
+  s2_zh_hk: 加回折舊唔會變出一筆收款，取消未來開支亦唔能夠撤銷已經完成嘅採購。有盈利嘅月份同樣可能佔用現金。有溢利，並唔等於可以忽略負嘅經營現金流。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If you treat closing balances as if they were the movements, or put the machine inside operating cash
+    flow, where does the bridge break? The bank decline alone does not prove that the paid expenses of
+    30 were waste.
+  zh: 如果把期末余额当成变动额，或者把机器付款放进经营现金流，核对会在哪里断开？仅仅因为银行存款下降，并不能证明已经支付的三十费用就是浪费。
+  zh_hk: 如果將期末餘額當成變動額，或者將機器付款放入經營現金流，核對會喺邊度斷開？僅僅因為銀行現金下降，並唔能夠證明已經支付嘅三十開支就係浪費。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Profit is not cash
+  title_zh: 利润不等于现金
+  title_zh_hk: 溢利唔等於現金
+  q1_en: Operating cash flow −15; cash −35
+  q1_zh: 经营现金流−15，现金−35
+  q1_zh_hk: 經營現金流−15，現金−35
+  q2_en: Machine 20 is investing, not expense
+  q2_zh: 机器20是投资，不是本期费用
+  q2_zh_hk: 機器20係投資，唔係本期開支
+  s1_en: >-
+    Reconcile profit to operating cash flow, then to the bank. Here the operating outflow is 15, the machine
+    is an investing outflow of 20, and cash falls by 35.
+  s1_zh: 先把利润核对到经营现金流，再核对到银行存款。本题经营流出是十五，机器是投资流出二十，现金减少三十五。
+  s1_zh_hk: 先將溢利核對到經營現金流，再核對到銀行現金。呢題經營流出係十五，機器係投資流出二十，現金減少三十五。
+  s2_en: >-
+    Target the overdue receivable and the unallocated stock, not a blanket expense cut. Adding back depreciation
+    does not create cash.
+  s2_zh: 要对准逾期应收和尚未分配的存货，而不是先全面砍费用。加回折旧变不出现金。
+  s2_zh_hk: 要對準逾期應收同尚未分配嘅存貨，而唔係先全面砍開支。加回折舊變唔出現金。
+  s3_en: >-
+    The studio and the figures, all in thousands of Hong Kong dollars, are classroom assumptions, not
+    a report about a real company.
+  s3_zh: 工作室和这些以千港元列示的数字都是课堂假设，不是关于某家真实企业的报道。
+  s3_zh_hk: 工作室同呢啲以千港元列示嘅數字都係課堂假設，唔係關於某間真實企業嘅報道。
+duration_target_s: 222

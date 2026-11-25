@@ -1,0 +1,295 @@
+id: ACC-13
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Cheaper material. A dearer batch?
+title_zh: 材料单价降了，整批成本反而更高？
+title_zh_hk: 材料買平了，這批貨反而更貴？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-13
+  kicker_en: ACC-13
+  kicker_zh: ACC-13
+  kicker_zh_hk: ACC-13
+  title_en: Cheaper material. A dearer batch?
+  title_zh: 材料单价降了，整批成本反而更高？
+  title_zh_hk: 材料買平了，這批貨反而更貴？
+  image: art/cheaper-material-dearer-batch-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Clay is one dollar cheaper a kilogram. Did this batch of mugs cost less? This is a fictional Hong
+    Kong ceramics studio. Five hundred acceptable mugs are already finished. No repeat order has been
+    placed.
+  zh: 陶泥每公斤便宜了一港元。这一批合格杯子就更便宜了吗？这是虚构的香港陶艺工作室。五百只合格马克杯已经做完。续订还没有下单。
+  zh_hk: 陶泥每公斤平咗一港元。呢一批合格陶杯就真係更平嗎？呢個係虛構嘅香港陶藝工作室。五百隻合格陶杯已經做完。續訂仲未落單。
+- id: ledger
+  visual: table_grid
+  seconds: 24
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Known at first review
+  title_zh: 首次审查已知信息
+  title_zh_hk: 首次檢視已知資料
+  row1_en: Acceptable mugs
+  row1_zh: 合格马克杯
+  row1_zh_hk: 合格陶杯
+  row2_en: Standard clay each
+  row2_zh: 每只标准用量
+  row2_zh_hk: 每隻標準用量
+  row3_en: Standard price
+  row3_zh: 标准单价
+  row3_zh_hk: 標準單價
+  row4_en: Price paid
+  row4_zh: 实际采购单价
+  row4_zh_hk: 實付單價
+  col1_en: Amount
+  col1_zh: 数值
+  col1_zh_hk: 數值
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11: '500'
+  c12_en: Completed
+  c12_zh: 已完成
+  c12_zh_hk: 已完成
+  c21: 1 kg
+  c22_en: Incl. normal waste
+  c22_zh: 含正常损耗
+  c22_zh_hk: 含正常損耗
+  c31: HK$10/kg
+  c32_en: Attainable standard
+  c32_zh: 可达到的标准
+  c32_zh_hk: 可達到的標準
+  c41: HK$9/kg
+  c42_en: Approved alternative
+  c42_zh: 获批替代陶泥
+  c42_zh_hk: 獲批替代陶泥
+  footer_en: Consumption not yet shown.
+  footer_zh: 尚未列出实际耗用量。
+  footer_zh_hk: 尚未列出實際耗用量。
+  s1_en: >-
+    The studio completed 500 acceptable mugs of one unchanged design. The current attainable clay standard
+    allows 1 kilogram per acceptable mug, including normal waste, at 10 dollars a kilogram.
+  s1_zh: 工作室完成了五百只同一设计的合格马克杯。现行可达到的陶泥标准是，每只合格杯含正常损耗一共一公斤，标准单价每公斤十港元。
+  s1_zh_hk: 工作室完成咗五百隻同一設計嘅合格陶杯。現行可達到嘅陶泥標準係，每隻合格杯連正常損耗一共一公斤，標準單價每公斤十港元。
+  s2_en: >-
+    The purchaser tried an approved alternative clay at 9 dollars a kilogram, with the same delivery and
+    payment terms. The first report highlights the 10 percent lower price. It has not yet shown how much
+    clay the batch consumed.
+  s2_zh: 采购试购了获批的替代陶泥，每公斤九港元，交付和付款条件不变。首份报告强调单价下降了百分之十，还没有列出本批实际用了多少陶泥。
+  s2_zh_hk: 採購試購咗獲批嘅替代陶泥，每公斤九港元，交付同付款條件不變。首份報告強調單價跌咗百分之十，仲未列出呢批實際用咗幾多陶泥。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: A lower price, or a saving?
+  title_zh: 只是单价低了，还是整批更省？
+  title_zh_hk: 只係單價低咗，定係整批更慳？
+  en: >-
+    What would you tell the purchaser now: a lower unit price, or a demonstrated saving on this batch?
+    What comparison can you defend, and what record is still missing before supporting a repeat order?
+    Pause and vote.
+  zh: 你现在会怎样向采购说明：只是单价更低，还是已经证明本批材料成本更省？你能守住哪一种比较？支持续订之前，还缺哪一份记录？请暂停，投个票。
+  zh_hk: 你而家會點向採購說明：只係單價更低，定係已經證明呢批材料成本更慳？你守得住邊一種比較？支持續訂之前，仲欠邊一份紀錄？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: 600 kg were consumed
+  title_zh: 实际耗用了600公斤
+  title_zh_hk: 實際耗用咗600公斤
+  step1_en: 600 kg bought and used
+  step1_zh: 购入并耗用600公斤
+  step1_zh_hk: 購入並耗用600公斤
+  step2_en: Firmer clay; changed recovery
+  step2_zh: 陶泥更硬；回收方法也变了
+  step2_zh_hk: 陶泥更硬；回收方法都變咗
+  step3_en: Share of the extra 100 kg unknown
+  step3_zh: 多耗100公斤，责任未分清
+  step3_zh_hk: 多耗100公斤，責任未分清
+  s1_en: >-
+    The checked record shows 600 kilograms bought and consumed at 9 dollars a kilogram to complete those
+    same 500 acceptable mugs. There was no opening clay, closing inventory or recoverable scrap in this
+    batch.
+  s1_zh: 核对记录显示，完成这五百只合格杯，购入并耗用了六百公斤，按每公斤九港元计价。本批没有期初陶泥、期末存货或可回收废料。
+  s1_zh_hk: 核對紀錄顯示，完成呢五百隻合格杯，購入並耗用咗六百公斤，按每公斤九港元計價。呢批冇期初陶泥、期末存货或可回收廢料。
+  s2_en: >-
+    Two changes were documented. The alternative clay was firmer, though within the agreed specification,
+    and needed different preparation. Separately, some trimmings dried before they could be reused. The
+    records do not say how much of the extra 100 kilograms each change caused.
+  s2_zh: >-
+    记录里有两项变化。替代陶泥更硬，虽仍符合约定规格，但需要不同的准备方法。另外，边角泥料的存放改了，有些在回用前已经干了。记录不能说明多耗的一百公斤里，各占多少。
+  s2_zh_hk: >-
+    紀錄入面有兩項變化。替代陶泥更硬，雖然仍符合約定規格，但需要唔同嘅準備方法。另外，邊角泥料嘅存放改咗，有啲喺回用前已經乾咗。紀錄唔能夠說明多耗嘅一百公斤入面，各佔幾多。
+  s3_en: >-
+    For a repeat batch, both clays remain available on the same terms. The owner can return to the original,
+    or run a controlled, approved trial with the previous handling restored. Neither route guarantees
+    the old usage rate.
+  s3_zh: >-
+    再做一批时，原陶泥和替代陶泥都还能按原来条件买到。可以改回原陶泥，也可以在恢复原先处理方法后，做一次获批的受控试验。两种做法都不能保证回到原来的用量。
+  s3_zh_hk: >-
+    再做一批時，原陶泥同替代陶泥都仲可以按原來條件買到。可以改回原陶泥，亦可以喺恢復原先處理方法之後，做一次獲批嘅受控試驗。兩種做法都不能保證回到原來嘅用量。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Price and usage differences?
+  title_zh: 怎样拆成价格差异和用量差异？
+  title_zh_hk: 點樣拆成價格差異同用量差異？
+  en: >-
+    Reconcile the batch's clay cost into a price difference and a usage difference. Would you return to
+    the original clay or condition another trial on better evidence? What do the figures establish, and
+    what do they not establish about responsibility? Pause and calculate.
+  zh: >-
+    请把本批陶泥成本拆成价格差异和用量差异。你会改回原陶泥，还是要有更好证据才再试？这些数字能证明什么，又不能用来认定谁的责任？请暂停，先算一遍。
+  zh_hk: >-
+    請將呢批陶泥成本拆成價格差異同用量差異。你會改回原陶泥，定係要有更好證據先再試？呢啲數字能夠證明咩，又唔能夠用來認定邊個嘅責任？暫停，先計一次。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 32
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Build one cost bridge
+  title_zh: 用三个金额对接差异
+  title_zh_hk: 用三個金額對接差異
+  step1_en: Allowance 500 × 10 = 5,000
+  step1_zh: 标准用量成本：5,000
+  step1_zh_hk: 標準用量成本：5,000
+  step2_en: 600 kg at 10 would be 6,000
+  step2_zh: 600公斤按标准价：6,000
+  step2_zh_hk: 600公斤按標準價：6,000
+  step3_en: >-
+    Actual 5,400: 1,000 − 600
+  step3_zh: 实际5,400：1,000减600
+  step3_zh_hk: 實際5,400：1,000減600
+  s1_en: >-
+    The allowance for the 500 acceptable mugs is 500 kilograms at 10 dollars, which is 5,000. The actual
+    600 kilograms at the standard price would cost 6,000. Paying 9 for those 600 kilograms costs 5,400.
+  s1_zh: 五百只合格杯的标准用量成本是五百公斤乘以十港元，等于五千。实际耗用的六百公斤若按标准单价计，是六千。这六百公斤按九港元计，则是五千四百。
+  s1_zh_hk: 五百隻合格杯嘅標準用量成本係五百公斤乘以十港元，等於五千。實際耗用嘅六百公斤若按標準單價計，係六千。呢六百公斤按九港元計，就係五千四百。
+  s2_en: >-
+    The extra 100 kilograms add 1,000 at the standard price: an adverse usage variance. The 1 dollar reduction
+    on all 600 kilograms saves 600: a favourable price variance. So 5,000 plus 1,000 minus 600 equals
+    5,400, or 400 adverse overall.
+  s2_zh: >-
+    多耗的一百公斤按标准单价增加一千，这是不利用量差异。六百公斤每公斤便宜一港元，节省六百，这是有利价格差异。所以五千加一千减六百等于五千四百，总差异不利四百。
+  s2_zh_hk: >-
+    多耗嘅一百公斤按標準單價增加一千，呢個係不利用量差異。六百公斤每公斤平一港元，慳到六百，呢個係有利價格差異。所以五千加一千減六百等於五千四百，總差異不利四百。
+  s3_en: >-
+    Keep acceptable output constant. Do not calculate the price effect on only 500 kilograms and then
+    price the extra usage at 10. That would omit the discount on the extra 100 kilograms.
+  s3_zh: 分解时要保持合格产量不变。不能只用五百公斤去算价格影响，再把多耗的部分按十港元来计。那样会漏掉多耗一百公斤同样享受的价差。
+  s3_zh_hk: 分解時要保持合格產量不變。唔可以只用五百公斤去算價格影響，再將多耗嘅部分按十港元嚟計。咁樣會漏咗多耗一百公斤同樣享受嘅價差。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: A split is not a blame split
+  title_zh: 算出差异，不是判定责任
+  title_zh_hk: 算得出差異，唔等於定責任
+  step1_en: Both facts belong in the report
+  step1_zh: 两件事都要写进报告
+  step1_zh_hk: 兩件事都要寫入報告
+  step2_en: Leads, not a measured allocation
+  step2_zh: 只是调查线索，不是定量归责
+  step2_zh_hk: 只係調查線索，唔係定量歸責
+  step3_en: A cheaper kilogram is not a cheaper mug
+  step3_zh: 公斤更便宜，杯子未必更便宜
+  step3_zh_hk: 公斤更平，陶杯唔一定更平
+  s1_en: >-
+    The purchaser obtained a lower unit price, but this batch did not beat its clay-cost allowance. Both
+    statements belong in the report. Neither the 600 nor the 1,000 assigns causal responsibility to a
+    person.
+  s1_zh: 采购拿到了更低的单价，但本批并没有优于陶泥成本限额。两句话都要写进报告。六百和一千都不能用来把因果关系归到某一个人。
+  s1_zh_hk: 採購拿到咗更低嘅單價，但呢批並冇優於陶泥成本限額。兩句話都要寫入報告。六百同一千都不能用來將因果關係歸到某一個人。
+  s2_en: >-
+    Firmer clay and changed recovery practice are leads for investigation, not a measured split of the
+    extra 100 kilograms. Review preparation, handling, waste and the standard together. Do not call the
+    supplier dishonest or the operators careless from these totals.
+  s2_zh: >-
+    陶泥更硬、回收方法改变，只是调查线索，不是把多耗的一百公斤定量拆开。要连同准备、处理和标准一起复核。不能只凭这些总额就说供应商不诚实，或者操作人员不小心。
+  s2_zh_hk: >-
+    陶泥更硬、回收方法改變，只係調查線索，唔係將多耗嘅一百公斤定量拆開。要連同準備、處理同標準一齊覆核。唔可以只憑呢啲總額就話供應商唔誠實，或者操作人員唔小心。
+  s3_en: >-
+    Clay cost per acceptable mug is 10.80 against a 10 dollar allowance. That is not total production
+    cost, selling price or profit. Returning to the original reduces uncertainty; a controlled trial keeps
+    the lower-price opportunity open, with a recorded method.
+  s3_zh: >-
+    每只合格杯的陶泥成本是十点八港元，对比限额十港元。这还不是全部生产成本，更不是售价或利润。改回原陶泥可以减少不确定性；受控试验则保留低价机会，但要有成文方法。
+  s3_zh_hk: >-
+    每隻合格杯嘅陶泥成本係十點八港元，對比限額十港元。呢個仲唔係全部生產成本，更加唔係售價或溢利。改回原陶泥可以減少不確定性；受控試驗就保留低價機會，但要有成文方法。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If the next trial restores the old handling and still uses 600 kilograms, what does that do to the
+    firmer-clay lead? A cheaper kilogram is not automatically a cheaper mug. Output here did not change,
+    so do not flex the allowance as if more units were made.
+  zh: >-
+    如果下一次受控试验恢复了原来的处理方法，却仍用掉六百公斤，这对“陶泥更硬”这条线索意味着什么？公斤更便宜，并不自动等于每只杯子更便宜。本题产量没有变，不能按增产去调整限额。
+  zh_hk: >-
+    如果下一次受控試驗恢復咗原來嘅處理方法，卻仍然用咗六百公斤，呢個對「陶泥更硬」呢條線索意味着咩？公斤更平，並唔自動等於每隻陶杯更平。呢題產量冇變，唔可以當增產去調整限額。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Hold output constant
+  title_zh: 先把合格产量固定再分解
+  title_zh_hk: 先將合格產量固定再分解
+  q1_en: Favourable price 600; adverse usage 1,000
+  q1_zh: 有利价格差异600，不利用量差异1,000
+  q1_zh_hk: 有利價格差異600，不利用量差異1,000
+  q2_en: Overall 400 adverse, not a blame split
+  q2_zh: 总差异不利400，不是责任认定
+  q2_zh_hk: 總差異不利400，唔係責任認定
+  s1_en: >-
+    Keep acceptable output constant, then split a lower price from extra usage. Here the favourable price
+    variance is 600 and the adverse usage variance is 1,000, so the batch is 400 adverse overall.
+  s1_zh: 先固定合格产量，再把更低单价和多耗用量分开。本题有利价格差异是六百，不利用量差异是一千，整批总差异不利四百。
+  s1_zh_hk: 先固定合格產量，再將更低單價同多耗用量分開。呢題有利價格差異係六百，不利用量差異係一千，整批總差異不利四百。
+  s2_en: >-
+    An arithmetic split is not a blame split. Use the bridge to design the next comparison, not to name
+    a guilty party.
+  s2_zh: 算出差异，不等于判定责任。要用这组数字去设计下一次比较，而不是点名问责。
+  s2_zh_hk: 算得出差異，唔等於判定責任。要用呢組數字去設計下一次比較，而唔係點名問責。
+  s3_en: >-
+    The studio, the batch and the figures are classroom assumptions, not a supplier verdict about a real
+    company.
+  s3_zh: 工作室、批次和数字都是课堂假设，不是对某家真实供应商的结论。
+  s3_zh_hk: 工作室、批次同數字都係課堂假設，唔係對某間真實供應商嘅結論。
+duration_target_s: 198

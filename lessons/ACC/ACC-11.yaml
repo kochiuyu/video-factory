@@ -1,0 +1,247 @@
+id: ACC-11
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+duration_target_s: 214
+title_en: Same units. Same overhead?
+title_zh: 件数一样，间接成本也一样吗？
+title_zh_hk: 數量相同，間接成本也一樣？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 24
+  kicker: ACC-11
+  kicker_en: ACC-11
+  kicker_zh: ACC-11
+  kicker_zh_hk: ACC-11
+  title_en: Same units. Same overhead?
+  title_zh: 件数一样，间接成本也一样吗？
+  title_zh_hk: 數量相同，間接成本也一樣？
+  image: art/same-units-different-setups-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Two customers each want 1,200 badges. Should they carry the same setup-support cost? This is a fictional Hong Kong badge workshop. You are choosing cost evidence for repeat quotations, not approving a sale.
+  zh: >-
+    两位客户各要一千二百枚徽章。准备支持成本就该一样吗？这是虚构的香港徽章工场。你要为翻单报价选择成本依据，不是批准一笔成交。
+  zh_hk: >-
+    兩位客戶各要一千二百枚襟章。準備支援成本就應該一樣嗎？呢個係虛構嘅香港襟章工場。你而家揀嘅係翻單報價嘅成本依據，唔係批准一筆成交。
+
+- id: ledger
+  visual: table_grid
+  seconds: 30
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: First summary, HK$
+  title_zh: 初步汇总，港元
+  title_zh_hk: 初步摘要，港元
+  row1_en: Badges
+  row1_zh: 徽章数量
+  row1_zh_hk: 襟章數量
+  row2_en: Direct production
+  row2_zh: 直接生产成本
+  row2_zh_hk: 直接生產成本
+  row3_en: Unit-rule support
+  row3_zh: 按件数分摊支持
+  row3_zh_hk: 按件數分攤支援
+  row4_en: Assigned cost
+  row4_zh: 本表分配成本
+  row4_zh_hk: 本表分攤成本
+  col1_en: Repeated emblem
+  col1_zh: 单一图案
+  col1_zh_hk: 單一圖案
+  col2_en: Artwork collection
+  col2_zh: 多款设计
+  col2_zh_hk: 多款設計
+  c11: '1,200'
+  c12: '1,200'
+  c21: '12,000'
+  c22: '12,000'
+  c31: '7,000'
+  c32: '7,000'
+  c41: '19,000'
+  c42: '19,000'
+  footer_en: 'Pool 14,000; 10 hours each'
+  footer_zh: 成本库一万四千，各十小时
+  footer_zh_hk: 成本庫一萬四千，各十小時
+  s1_en: Each order asks for 1,200 badges. Direct production cost, excluding setup support, is 12,000 either way. Running time, also excluding setup, is ten hours each.
+  s1_zh: 两单都要一千二百枚徽章。不含准备支持的直接生产成本都是一万二千。不含准备的加工时间也各是十小时。
+  s1_zh_hk: 兩單都要一千二百枚襟章。唔計準備支援嘅直接生產成本都係一萬二千。唔計準備嘅生產時間亦各係十小時。
+  s2_en: The first summary splits the 14,000 setup-support pool equally, because the quantities match. Each order is assigned 7,000, and 19,000 in this exhibit.
+  s2_zh: 初步汇总按件数把一万四千的准备支持成本库对半分。每单分到七千，本表分配成本都是一万九千。
+  s2_zh_hk: 初步摘要按件數將一萬四千嘅準備支援成本庫對半分。每單分到七千，本表分攤成本都係一萬九千。
+  s3_en: The pool covers only the technicians and checking used to prepare these runs. Other business costs and required profit sit outside, so assigned cost is not a complete selling price.
+  s3_zh: 这个成本库只覆盖准备和核准这两次生产所用的技师和检查。其他业务成本和必要利润不在本表，所以分配成本不是完整售价建议。
+  s3_zh_hk: 呢個成本庫只覆蓋準備同核准呢兩次生產所用嘅技師同檢查。其他業務成本同必要利潤唔喺呢張表，所以分攤成本唔係完整售價建議。
+
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Equal support, or setup work?
+  title_zh: 按件数分摊，还是按准备作业？
+  title_zh_hk: 按件數分攤，定係按準備作業？
+  en: >-
+    Which costing basis would you provisionally adopt for repeat quotations: equal support cost per badge, or support cost based on each order's setup work? Name the record that would validate your choice. Pause and vote. No quote has been sent.
+  zh: >-
+    翻单报价你会暂用哪一种依据：按每枚徽章均摊支持成本，还是按各单的准备作业来计？要有哪一份记录才能站得住？请暂停，投个票。报价还没有发出。
+  zh_hk: >-
+    翻單報價你會暫用邊一種依據：按每枚襟章均攤支援成本，定係按各單嘅準備作業嚟計？要有邊一份紀錄先至站得住？暫停，投個票。報價仲未發出。
+
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A checked setup plan
+  title_zh: 核对过的准备计划
+  title_zh_hk: 核對過的準備計劃
+  step1_en: Repeated emblem, 2 setups
+  step1_zh: 单一图案，2次准备
+  step1_zh_hk: 單一圖案，2次準備
+  step2_en: Artwork collection, 12 setups
+  step2_zh: 多款设计，12次准备
+  step2_zh_hk: 多款設計，12次準備
+  step3_en: All 14 setups use equal resources
+  step3_zh: 14次准备耗用相同资源
+  step3_zh_hk: 14次準備耗用相同資源
+  s1_en: A checked setup plan shows two setups for the repeated emblem and twelve for the artwork collection. Each setup includes loading, adjustment and required approval checks.
+  s1_zh: 一份核对过的准备计划显示，单一图案要两次准备，多款设计要十二次。每次准备都包括装稿、调整和必要的核准检查。
+  s1_zh_hk: 一份核對過嘅準備計劃顯示，單一圖案要兩次準備，多款設計要十二次。每次準備都包括裝稿、調整同必要嘅核准檢查。
+  s2_en: For this exercise, every setup uses the same technician time and checking resources. There is no idle setup capacity. All 14 required setups are in the pool.
+  s2_zh: 本题假定每次准备所用的技师时间和检查资源相同。没有闲置的准备产能。成本库已包括全部十四次必要准备。
+  s2_zh_hk: 呢題假定每次準備所用嘅技師時間同檢查資源相同。冇閒置嘅準備產能。成本庫已經包括全部十四次必要準備。
+  s3_en: The 14,000 pool, volumes and production costs are unchanged. These are the customers' specified orders. Combining or dropping artwork versions has not been agreed. Required checks stay mandatory.
+  s3_zh: 一万四千的成本库、数量和生产成本都没有变。这是客户已经指定的订单。合并或减少设计款式还没有谈妥。必要检查仍须完成。
+  s3_zh_hk: 一萬四千嘅成本庫、數量同生產成本都冇變。呢啲係客戶已經指定嘅訂單。合併或者減少設計款式仲未談妥。必要檢查仍然要做。
+
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: How much support now?
+  title_zh: 现在各分多少支持成本？
+  title_zh_hk: 而家各分幾多支援成本？
+  en: >-
+    How much setup-support cost would you assign to each order now? Would you keep equal quotations, look at a setup charge, or offer a differently specified order? Pause and calculate. Cost evidence informs the commercial choice; it does not settle it.
+  zh: >-
+    现在你会给每单分配多少准备支持成本？是维持统一报价、考虑另收准备费，还是提出改规格后再谈？请暂停，先算一遍。成本证据能帮助商业选择，但不能替你拍板。
+  zh_hk: >-
+    而家你會俾每單分配幾多準備支援成本？係維持統一報價、考慮另收準備費，定係提出改規格再傾？暫停，先計一次。成本證據可以幫商業選擇，但唔能夠替你拍板。
+
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 32
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Count the work, then reconcile
+  title_zh: 先算作业量，再核对总额
+  title_zh_hk: 先計作業量，再核對總額
+  step1_en: 'Unit rule: 14,000 ÷ 2,400 badges'
+  step1_zh: 按件数：一万四千 ÷ 2,400枚
+  step1_zh_hk: 按件數：一萬四千 ÷ 2,400枚
+  step2_en: 'Activity rate: 14,000 ÷ 14 = 1,000'
+  step2_zh: 作业率：一万四千 ÷ 14 = 1,000
+  step2_zh_hk: 作業率：一萬四千 ÷ 14 = 1,000
+  step3_en: 'Support 2,000 vs 12,000; total 38,000'
+  step3_zh: 支持二千对一万二；总额三万八
+  step3_zh_hk: 支援二千對一萬二；總額三萬八
+  s1_en: The unit rule divides 14,000 across 2,400 badges, which is 7,000 per order. Keep those exact order totals. Do not multiply a rounded unit rate.
+  s1_zh: 按件数把一万四千分到二千四百枚徽章，每单仍是七千。请用准确的订单总额，不要用四舍五入后的单位费率再乘回去。
+  s1_zh_hk: 按件數將一萬四千分到二千四百枚襟章，每單仍然係七千。要用準確嘅訂單總額，唔好用四捨五入之後嘅單位費率再乘返去。
+  s2_en: The activity rate is 14,000 divided by 14, or 1,000 per setup. Two setups assign 2,000 to the repeated emblem. Twelve assign 12,000 to the artwork collection.
+  s2_zh: 作业率是一万四千除以十四，每次准备一千。两次准备分给单一图案二千。十二次分给多款设计一万二千。
+  s2_zh_hk: 作業率係一萬四千除以十四，每次準備一千。兩次準備分俾單一圖案二千。十二次分俾多款設計一萬二千。
+  s3_en: Under setup costing, assigned cost is 14,000 for the emblem and 24,000 for the collection. Both methods still total 38,000. The unit method only shifts 5,000 from one order to the other. Changing the report saves no cash.
+  s3_zh: 按准备作业计，单一图案的分配成本是一万四千，多款设计是二万四千。两种方法总额都是三万八千。按件数不过是把五千从一单转到另一单。改报表本身省不下现金。
+  s3_zh_hk: 按準備作業計，單一圖案嘅分攤成本係一萬四千，多款設計係二萬四千。兩種方法總額都係三萬八千。按件數不過係將五千由一單轉到另一單。改報表本身慳唔到現金。
+
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Not a price instruction
+  title_zh: 成本算得更准，不是定价指令
+  title_zh_hk: 成本計得更準，唔等於定價指令
+  step1_en: A driver needs a checked reason
+  step1_zh: 成本动因要有核对依据
+  step1_zh_hk: 成本動因要有核對依據
+  step2_en: A setup charge may be worth studying
+  step2_zh: 另收准备费可以研究
+  step2_zh_hk: 另收準備費可以研究
+  step3_en: Assigned cost is not a floor price
+  step3_zh: 分配成本不是最低售价
+  step3_zh_hk: 分攤成本唔係最低售價
+  s1_en: Setup count is defensible here because the checked record shows equal resources per setup. If durations varied, technician time might be better. Do not use setup count to spread every expense.
+  s1_zh: 这里用准备次数说得通，是因为核对记录显示每次准备耗用相同资源。如果时间长短不同，也许该用技师工时。不能因为这个作业适用，就把所有开支都按准备次数来分。
+  s1_zh_hk: 呢度用準備次數講得通，係因為核對紀錄顯示每次準備耗用相同資源。如果時間長短唔同，或者應該用技師工時。唔可以因為呢項作業適用，就將所有開支都按準備次數嚟分。
+  s2_en: A separate setup charge or a different quotation is worth investigating. Neither customer's willingness to pay is supplied. Keeping one price can still be a deliberate commercial choice, if management sees the different support work.
+  s2_zh: 另收准备费或差异化报价值得研究。但题目没有给出任何一位客户愿意付多少。如果管理层清楚两单的支持工作不同，维持统一价格仍可以是有意识的商业选择。
+  s2_zh_hk: 另收準備費或者差異化報價值得研究。但題目冇畀出任何一位客戶願意付幾多。如果管理層清楚兩單嘅支援工作唔同，維持統一價格仍然可以係有意識嘅商業選擇。
+  s3_en: A differently specified order needs the customer's agreement. Fewer setups might free staff time, not cut next month's payroll. An assigned cost is not automatically an avoidable payment, a minimum price, or proof an order should be rejected.
+  s3_zh: 改规格要先得到客户同意。减少准备也许能腾出人员时间，却不一定减少下月工资支出。分配成本不自动等于可避免的付款，也不是最低可接受价格，更不能单凭它拒绝接单。
+  s3_zh_hk: 改規格要先得到客戶同意。減少準備或者可以騰出人手時間，但不一定減少下月薪酬開支。分攤成本唔等於可避免嘅付款，亦唔係最低可接受價格，更唔可以單憑佢拒絕接單。
+
+- id: check
+  visual: title_card
+  seconds: 20
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If one setup used twice the checking time, would setup count still be the right driver? If you reject the artwork order only because its assigned cost is 24,000, what customer evidence is missing? Both methods must still add to 38,000.
+  zh: >-
+    如果某一次准备的检查时间是其他次的两倍，准备次数还适合做成本动因吗？如果只因为多款设计的分配成本是二万四千就拒单，还缺哪一项客户证据？两种方法的总额仍须核对为三万八千。
+  zh_hk: >-
+    如果某一次準備嘅檢查時間係其他次嘅兩倍，準備次數仲適唔適合做成本動因？如果只因為多款設計嘅分攤成本係二萬四千就拒單，仲欠邊一項客戶證據？兩種方法嘅總額仍然要核對到三萬八千。
+
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Equal units are not equal work
+  title_zh: 件数相同，不等于作业量相同
+  title_zh_hk: 件數相同，唔等於作業量相同
+  q1_en: 'Support: 2,000 versus 12,000'
+  q1_zh: 支持成本二千对一万二千
+  q1_zh_hk: 支援成本二千對一萬二千
+  q2_en: Both methods still total 38,000
+  q2_zh: 两种方法总额都是三万八千
+  q2_zh_hk: 兩種方法總額都係三萬八千
+  s1_en: Equal quantities do not mean equal resource use. Activity-based costing can improve a repeat-quotation discussion when the records measure the work.
+  s1_zh: 数量相同，不等于资源耗用相同。只要记录能够衡量作业量，作业成本法就可以改善翻单报价的讨论。
+  s1_zh_hk: 數量相同，唔等於資源耗用相同。只要紀錄能夠衡量作業量，作業成本法就可以改善翻單報價嘅討論。
+  s2_en: Here the emblem carries 2,000 of setup support and the collection 12,000. The two methods still assign 38,000 in total. Better cost evidence is not a price instruction.
+  s2_zh: 本题里，单一图案承担二千准备支持成本，多款设计承担一万二千。两种方法总额仍是三万八千。成本证据更准，不等于给出了定价指令。
+  s2_zh_hk: 呢題入面，單一圖案承擔二千準備支援成本，多款設計承擔一萬二千。兩種方法總額仍然係三萬八千。成本證據更準，唔等於有咗定價指令。
+  s3_en: The workshop, the orders and the figures are classroom assumptions, not a report about a real company. Official scene art is an illustration for teaching.
+  s3_zh: 工场、订单和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 工場、訂單同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。

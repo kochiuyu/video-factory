@@ -1,0 +1,294 @@
+id: ACC-19
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A lower return. A better investment?
+title_zh: 回报率下降，这项投资反而值得做？
+title_zh_hk: 回報率跌了，投資反而更值得做？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-19
+  kicker_en: ACC-19
+  kicker_zh: ACC-19
+  kicker_zh_hk: ACC-19
+  title_en: A lower return. A better investment?
+  title_zh: 回报率下降，这项投资反而值得做？
+  title_zh_hk: 回報率跌了，投資反而更值得做？
+  image: art/lower-return-better-investment-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A safe upgrade would add 60,000 of profit on 400,000 of investment. The division already earns 20
+    percent. Should you recommend the upgrade, or protect the existing percentage? This is a fictional
+    Hong Kong workshop group.
+  zh: >-
+    一项符合安全要求的升级，会在四十万投资上增加六万利润。部门现有投资报酬率已经是百分之二十。你是建议升级，还是保住现有的比率？这是虚构的香港工场集团。
+  zh_hk: >-
+    一項符合安全要求嘅升級，會喺四十萬投資上增加六萬溢利。部門現有投資回報率已經係百分之二十。你係建議升級，定係保住現有嘅比率？呢個係虛構嘅香港工場集團。
+- id: ledger
+  visual: table_grid
+  seconds: 24
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Annual plan, Hong Kong dollars
+  title_zh: 年度计划，港元
+  title_zh_hk: 年度計劃，港元
+  row1_en: Agreed investment base
+  row1_zh: 约定投资基数
+  row1_zh_hk: 協定投資基數
+  row2_en: Controllable operating profit
+  row2_zh: 可控营业利润
+  row2_zh_hk: 可控經營溢利
+  row3_en: Capital-charge rate
+  row3_zh: 资本成本率
+  row3_zh_hk: 資本成本率
+  col1_en: Existing
+  col1_zh: 现有业务
+  col1_zh_hk: 原有業務
+  col2_en: Upgrade increment
+  col2_zh: 升级增量
+  col2_zh_hk: 升級增量
+  c11: 1,000,000
+  c12: 400,000
+  c21: 200,000
+  c22: 60,000
+  c31: 10%
+  c32: 10%
+  footer_en: Profit already includes depreciation.
+  footer_zh: 营业利润已扣除折旧。
+  footer_zh_hk: 經營溢利已扣除折舊。
+  s1_en: >-
+    Next year's existing operation has an agreed investment base of 1,000,000 and forecast controllable
+    operating profit of 200,000. A safe, optional upgrade adds 400,000 to that base and 60,000 to annual
+    profit. It does not replace any required safety expenditure.
+  s1_zh: >-
+    下一年度现有业务的约定投资基数是一百万，预计可控营业利润二十万。这项可选且符合安全要求的升级，会使投资基数增加四十万，年度利润增加六万。它不替代必要的安全支出。
+  s1_zh_hk: >-
+    下一年原有業務嘅協定投資基數係一百萬，預計可控經營溢利二十萬。呢項可選而且符合安全要求嘅升級，會使投資基數增加四十萬，年度溢利增加六萬。佢並不取代必要嘅安全開支。
+  s2_en: >-
+    ROI here means annual controllable operating profit divided by the agreed investment base. Operating
+    profit already includes depreciation and incremental operating costs, but excludes the capital charge.
+    The company uses a 10 percent annual capital-charge rate for this division.
+  s2_zh: >-
+    本题把投资报酬率，也就是ROI，定义为年度可控营业利润除以约定投资基数。营业利润已扣除折旧和全部增量经营成本，但尚未扣资本成本。公司对本部门采用百分之十的年资本成本率。
+  s2_zh_hk: >-
+    本題將投資回報率，也就是ROI，定義為年度可控經營溢利除以協定投資基數。經營溢利已扣除折舊同全部增量經營成本，但尚未扣資本成本。公司對本部門採用百分之十嘅年資本成本率。
+  s3_en: >-
+    The group has already found a positive net present value after tax, timing, support and compensation
+    costs. Treat that conclusion as supplied. Cash and capacity are sufficient. The manager worries that
+    a lower reported ROI will make the division look worse.
+  s3_zh: >-
+    集团已另对全生命周期现金流量作出评估，把税收、时点、支持和薪酬成本全部计入后，净现值仍为正。这是题设结论。资金和产能充足。经理担心报告的投资报酬率下降，会使部门显得表现更差。
+  s3_zh_hk: >-
+    集團已另行評估全期現金流量，計入稅項、時點、支援及薪酬成本後，淨現值仍然為正。呢個係題目給定嘅結論。資金同產能充足。經理擔心呈報嘅投資回報率下降，會令部門表現看起來較差。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Accept the upgrade, or protect ROI?
+  title_zh: 建议升级，还是保住报酬率？
+  title_zh_hk: 建議升級，定係保住回報率？
+  en: >-
+    Would you recommend accepting the upgrade, or protecting the division's existing percentage return?
+    Calculate the existing ROI, the upgrade's standalone ROI and the combined ROI, and say whose objective
+    your recommendation serves. Pause and calculate.
+  zh: >-
+    你会建议做设备升级，还是优先保住部门现有的报酬率？请计算现有业务、升级项目单独以及合并后的部门投资报酬率，并说明你的建议在服务谁的目标。请暂停，先算一遍。
+  zh_hk: >-
+    你會建議做設備升級，定係優先保住部門現有嘅回報率？請計算原有業務、升級項目單獨以及合計後嘅部門投資回報率，並說明你嘅建議符合邊個目標。暫停，先計一次。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Residual income, and a 20% bonus rule
+  title_zh: 剩余收益，以及 20% 奖金门槛
+  title_zh_hk: 剩餘收益，以及 20% 獎金門檻
+  step1_en: Residual income rises 20,000
+  step1_zh: 剩余收益增加 20,000
+  step1_zh_hk: 剩餘收益增加 20,000
+  step2_en: Bonus only if ROI is at least 20%
+  step2_zh: 只有 ROI 达到 20% 才发奖金
+  step2_zh_hk: 只有 ROI 達到 20% 先有獎金
+  step3_en: The existing agreement is honoured
+  step3_zh: 必须兑现现有协议
+  step3_zh_hk: 必須兌現現有協議
+  s1_en: >-
+    Residual income equals controllable operating profit minus 10 percent of the agreed investment base.
+    The existing division earns 100,000 above its capital charge. With the upgrade it earns 120,000. That
+    20,000 increase is annual accounting residual income, not the supplied full-life net present value.
+  s1_zh: >-
+    剩余收益等于可控营业利润，减去约定投资基数的百分之十。现有业务扣除资本成本后是十万，加入升级后是十二万。多出来的两万是年度会计剩余收益，不是给定的全生命周期净现值。
+  s1_zh_hk: >-
+    剩餘收益等於可控經營溢利，減去協定投資基數嘅百分之十。原有業務扣除資本成本後係十萬，加入升級後係十二萬。多出嚟嘅兩萬係年度會計剩餘收益，唔係題目給定嘅全期淨現值。
+  s2_en: >-
+    The manager's signed agreement awards a performance payment only if division ROI is at least 20 percent.
+    Accepting the upgrade would miss that threshold; declining would meet it on the forecast. All contractual
+    pay must be honoured. The group cannot retroactively alter the threshold or cancel an earned payment.
+  s2_zh: >-
+    按经理已签署的协议，只有部门投资报酬率达到百分之二十才支付绩效奖金。按预测，做升级会低于门槛，不做则达到门槛。必须兑现合同薪酬。集团不可追溯更改门槛，也不可取消已达到发放条件的奖金。
+  s2_zh_hk: >-
+    按經理已簽訂嘅協議，只有部門投資回報率達到百分之二十先有績效獎金。以預測計，升級會低於門檻，不升級則達標。必須兌現合約薪酬。集團不可追溯更改門檻，亦不可取消已賺取嘅款項。
+  s3_en: >-
+    The board can approve the investment independently, and later discuss a mutually agreed incentive
+    design before a future period starts. No bonus waiver or new contract has been agreed in this case.
+  s3_zh: 董事会可独立批准投资，并在今后的考核期开始前协商双方同意的激励方案。本案并未同意放弃奖金，也未签订新合同。
+  s3_zh_hk: 董事會可獨立審批投資，並在日後考核期開始前討論雙方同意嘅激勵方案。本題並未同意放棄獎金，亦未簽訂新合約。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep ROI, or add residual income?
+  title_zh: 继续用报酬率，还是加入剩余收益？
+  title_zh_hk: 繼續用回報率，定係加入剩餘收益？
+  en: >-
+    Would you retain percentage ROI as the main future investment incentive, or propose a residual-income
+    measure alongside operating safeguards? Recommend the project, and explain how to resolve the incentive
+    conflict without rewriting the existing employment agreement. Pause and decide.
+  zh: >-
+    今后应继续以投资报酬率作为主要投资激励，还是在保障运营要求的同时加入剩余收益指标？请就该项目提出建议，并解释如何不改写现有劳动协议而解决激励冲突。请暂停，先做判断。
+  zh_hk: >-
+    日後應繼續以投資回報率作為主要投資激勵，定係在保障營運要求嘅同時加入剩餘收益指標？請就呢個項目提出建議，並解釋如何不改寫現有僱傭協議而解決激勵衝突。暫停，先做判斷。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Separate project return from division return
+  title_zh: 区分项目回报与部门回报
+  title_zh_hk: 項目回報與部門回報要分開
+  step1_en: Existing ROI is 20%
+  step1_zh: 现有业务 ROI 为 20%
+  step1_zh_hk: 原有業務 ROI 為 20%
+  step2_en: Upgrade ROI is 15%
+  step2_zh: 升级项目 ROI 为 15%
+  step2_zh_hk: 升級項目 ROI 為 15%
+  step3_en: Combined ROI is about 18.57%
+  step3_zh: 合并后约为 18.57%
+  step3_zh_hk: 合計後約為 18.57%
+  s1_en: >-
+    The existing operation earns 200,000 divided by 1,000,000, which is 20 percent. The upgrade earns
+    60,000 divided by 400,000, which is 15 percent. Together, 260,000 divided by 1,400,000 is about 18.57
+    percent.
+  s1_zh: >-
+    现有业务是二十万除以一百万，等于百分之二十。按指定口径，升级项目是六万除以四十万，等于百分之十五。合并后是二十六万除以一百四十万，约为百分之十八点五七。
+  s1_zh_hk: >-
+    原有業務係二十萬除以一百萬，等於百分之二十。按指定口徑，升級項目係六萬除以四十萬，等於百分之十五。合計後係二十六萬除以一百四十萬，約為百分之十八點五七。
+  s2_en: >-
+    A 15 percent increment pulls down a 20 percent average, even though it exceeds the company's 10 percent
+    charge. Rejecting the upgrade preserves the ratio, not the additional profit.
+  s2_zh: 百分之十五的增量回报超过百分之十的资本成本率，却低于原来的百分之二十，所以会拉低部门比率。拒绝能保住比率，却拿不到额外利润。
+  s2_zh_hk: 百分之十五嘅增量回報超過百分之十嘅資本成本率，卻低於原來嘅百分之二十，所以會拉低部門比率。拒絕能夠保住比率，卻拿唔到額外溢利。
+  s3_en: >-
+    Without the upgrade, residual income is 200,000 minus 10 percent of 1,000,000, which is 100,000. With
+    it, 260,000 minus 10 percent of 1,400,000 is 120,000. The increment is 60,000 minus 40,000, or 20,000.
+  s3_zh: >-
+    不升级的剩余收益，是二十万减去一百万的百分之十，等于十万。升级后是二十六万减去一百四十万的百分之十，等于十二万。增加额是六万减四万，等于两万。
+  s3_zh_hk: >-
+    不升級嘅剩餘收益，係二十萬減去一百萬嘅百分之十，等於十萬。升級後係二十六萬減去一百四十萬嘅百分之十，等於十二萬。增加額係六萬減四萬，等於兩萬。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 20
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Repair incentives without rewriting the past
+  title_zh: 改进未来激励，不追溯改合同
+  title_zh_hk: 調整日後激勵，不追改舊協議
+  step1_en: Recommend the upgrade
+  step1_zh: 建议进行升级
+  step1_zh_hk: 建議進行升級
+  step2_en: Honour the existing agreement
+  step2_zh: 履行现有协议
+  step2_zh_hk: 履行現有協議
+  step3_en: Redesign later, by mutual agreement
+  step3_zh: 以后再双方商定新方案
+  step3_zh_hk: 以後再雙方商定新方案
+  s1_en: >-
+    Recommend the upgrade on the stipulated company evidence. The manager faces a genuine private incentive
+    to refuse; disagreement does not establish dishonesty. Honour the existing agreement, and separate
+    the board's investment authority from future, mutually agreed performance design.
+  s1_zh: >-
+    按题设公司评估，应建议升级。同时要承认，经理有现实的个人动机拒绝；意见分歧不等于不诚信。履行现有协议，并把董事会的投资权，与未来双方商定的绩效方案分开。
+  s1_zh_hk: >-
+    按題目給定嘅公司評估，應建議升級。同時要承認，經理有現實嘅個人動機拒絕；意見分歧唔等於不誠實。履行現有協議，並把董事會嘅投資權，同未來雙方商定嘅績效方案分開。
+  s2_en: >-
+    Residual income can reward an above-charge increment, while ROI still describes scale-adjusted performance.
+    Neither measure licenses unsafe output or ignoring customers. A single-year positive residual income
+    does not itself prove positive net present value.
+  s2_zh: >-
+    剩余收益可以奖励超过资本成本的增量，投资报酬率仍可反映按投资规模衡量的绩效。不能为了任何一项指标牺牲安全或忽视客户。某一年剩余收益为正，并不能单独证明净现值为正。
+  s2_zh_hk: >-
+    剩餘收益可以獎勵超過資本成本嘅增量，投資回報率仍然可以反映按投資規模衡量嘅績效。唔能夠為咗任何一項指標犧牲安全或忽視客戶。某一年剩餘收益為正，並唔能夠單獨證明淨現值為正。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If you reject the upgrade only to keep reported ROI at 20 percent, whose objective has been placed
+    first? If you cancel the bonus after approving the project, what authority have you ignored? Distinguish
+    the company recommendation, the manager's incentive, and contractual authority.
+  zh: >-
+    如果只为把报告的投资报酬率留在百分之二十而拒绝升级，你把谁的目标放在了前面？如果批准项目后又取消奖金，你忽略了哪一项权限？请区分公司建议、经理动机和合同权限。
+  zh_hk: >-
+    如果只為把呈報嘅投資回報率留喺百分之二十而拒絕升級，你把邊個目標放喺前面？如果批准項目之後又取消獎金，你忽略咗邊一項權限？請區分公司建議、經理動機同合約權限。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: A lower ratio can still add value
+  title_zh: 比率下降，仍可能增加价值
+  title_zh_hk: 比率下降，仍可能增加價值
+  q1_en: >-
+    ROI: 20%, 15%, about 18.57%
+  q1_zh: 报酬率：20%、15%、约18.57%
+  q1_zh_hk: 回報率：20%、15%、約18.57%
+  q2_en: Residual income rises by 20,000
+  q2_zh: 剩余收益增加 20,000
+  q2_zh_hk: 剩餘收益增加 20,000
+  s1_en: >-
+    Recommend the upgrade. It earns 15 percent, above the 10 percent charge, and raises residual income
+    by 20,000, even though combined ROI falls to about 18.57 percent.
+  s1_zh: 建议进行升级。它的投资报酬率是百分之十五，高于百分之十的资本成本率，剩余收益增加两万，即使合并后的报酬率降到约百分之十八点五七。
+  s1_zh_hk: 建議進行升級。佢嘅投資回報率係百分之十五，高於百分之十嘅資本成本率，剩餘收益增加兩萬，即使合計後嘅回報率降至約百分之十八點五七。
+  s2_en: >-
+    Honour the existing 20 percent bonus agreement. The board can still approve the investment, and later
+    agree a residual-income measure for a future period.
+  s2_zh: 履行现有百分之二十奖金协议。董事会仍可批准这项投资，并在以后的考核期再商定剩余收益指标。
+  s2_zh_hk: 履行現有百分之二十獎金協議。董事會仍然可以批准呢項投資，並在以後嘅考核期再商定剩餘收益指標。
+  s3_en: >-
+    The workshop, the measures and the agreement are classroom assumptions, not an employment ruling or
+    a live investment appraisal.
+  s3_zh: 工场、这些指标和这份协议都是课堂假设，不是劳动裁决，也不是真实的投资评估。
+  s3_zh_hk: 工場、呢啲指標同呢份協議都係課堂假設，唔係僱傭裁決，亦唔係真實嘅投資評估。
+duration_target_s: 186

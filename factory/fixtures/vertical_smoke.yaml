@@ -1,0 +1,79 @@
+# Fixture only. Not a production lesson.
+# format must be quoted: a bare 9:16 is a YAML 1.1 sexagesimal.
+id: VERTICAL-SMOKE
+format: "9:16"
+title_en: Phone layout smoke
+title_zh: 竖屏试排
+title_zh_hk: 直屏試排
+duration_target_s: 24
+beats:
+- id: open
+  visual: title_card
+  seconds: 8
+  kicker_en: Shorts
+  kicker_zh: 短片
+  kicker_zh_hk: 短片
+  title_en: A phone title that has to wrap onto more than one line
+  title_zh: 竖屏标题要在较窄的宽度上换行
+  title_zh_hk: 直屏標題要喺較窄嘅寬度上換行
+  en: A phone title wraps instead of growing to fill the tall frame.
+  zh: 竖屏标题换行，而不是把字放大去填满高度。
+  zh_hk: 直屏標題換行，而唔係把字放大去填滿高度。
+- id: grid
+  visual: table_grid
+  seconds: 8
+  rows: 2
+  cols: 2
+  kicker_en: Table
+  kicker_zh: 表
+  kicker_zh_hk: 表
+  title_en: Two by two on a narrow frame
+  title_zh: 窄画面上的两行两列
+  title_zh_hk: 窄畫面上的兩行兩列
+  row1_en: North
+  row1_zh: 北
+  row1_zh_hk: 北
+  row2_en: South
+  row2_zh: 南
+  row2_zh_hk: 南
+  col1_en: Left
+  col1_zh: 左
+  col1_zh_hk: 左
+  col2_en: Right
+  col2_zh: 右
+  col2_zh_hk: 右
+  c11_en: A
+  c11_zh: 甲
+  c11_zh_hk: 甲
+  c12_en: B
+  c12_zh: 乙
+  c12_zh_hk: 乙
+  c21_en: C
+  c21_zh: 丙
+  c21_zh_hk: 丙
+  c22_en: D
+  c22_zh: 丁
+  c22_zh_hk: 丁
+  s1_en: The labels sit in a column that fits the phone.
+  s1_zh: 行名收在适合手机的列宽里。
+  s1_zh_hk: 行名收在適合手機嘅列寬裏。
+  s2_en: The cells use the width that is left.
+  s2_zh: 格子用剩下的宽度。
+  s2_zh_hk: 格子用剩下嘅寬度。
+  s3_en: Nothing runs off the right edge.
+  s3_zh: 内容不超出右边缘。
+  s3_zh_hk: 內容唔超出右邊緣。
+- id: still
+  visual: still_image
+  seconds: 8
+  kicker_en: Picture
+  kicker_zh: 图片
+  kicker_zh_hk: 圖片
+  title_en: The whole picture stays visible
+  title_zh: 整张图都看得见
+  title_zh_hk: 成張圖都睇得到
+  image: factory/fixtures/still_image.png
+  caption_en: A longer caption line that has to sit in the narrower phone pill above the player chrome
+  en: A longer caption line that has to sit in the narrower phone pill above the player chrome.
+  zh: 更长的一行字幕要放在更窄的手机字幕条里，留在播放器按钮上方。
+  zh_hk: 更長嘅一行字幕要放喺更窄嘅手機字幕條裏，留喺播放器按鈕上方。

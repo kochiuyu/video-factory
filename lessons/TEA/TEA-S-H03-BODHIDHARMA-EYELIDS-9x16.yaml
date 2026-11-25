@@ -1,0 +1,76 @@
+# Vertical Shorts preview sample. Not a production landscape lesson.
+# Not catalog-ready. Do not treat this file as a 16:9 lesson.
+# On-screen lines and speech follow the approved history brief.
+# Official cards are contain-fit. Seconds are slides-only preview holds.
+id: TEA-S-H03-BODHIDHARMA-EYELIDS-9x16
+format: "9:16"
+clock: own
+title_en: A legend, not a record
+title_zh: 传说不是记载
+title_zh_hk: 傳說不是記載
+duration_target_s: 60
+beats:
+- id: hook
+  visual: still_image
+  seconds: 8
+  image: art/h03-1.png
+  title_en: |
+    Did tea bushes grow from Bodhidharma’s eyelids?
+    The story is told often. What kind of story is it?
+  title_zh: |
+    茶树是从达摩的眼皮长出来的吗？
+    这个故事常常有人讲。它到底是哪一种故事？
+  title_zh_hk: |
+    茶樹是從達摩的眼皮長出來的嗎？
+    這個故事常常有人講。它到底是哪一種故事？
+  en: Did tea bushes grow from Bodhidharma’s eyelids? The story is told often. What kind of story is it?
+  zh: 茶树是从达摩的眼皮长出来的吗？这个故事常常有人讲。它到底是哪一种故事？
+  zh_hk: 茶樹係咪由達摩嘅眼皮長出嚟嘅呢？呢個故事好常有人講。佢到底係邊一種故事？
+- id: folklore
+  visual: still_image
+  seconds: 8
+  image: art/h03-2.png
+  title_en: |
+    A popular legend
+    People say Bodhidharma’s eyelids grew into tea bushes. That is folklore, not early Chan history.
+  title_zh: |
+    这是流行的传说
+    据说达摩的眼皮落到地上，长成了茶树。这不是早期禅宗的历史。
+  title_zh_hk: |
+    這是流行的傳說
+    據說達摩的眼皮落到地上，長成了茶樹。這不是早期禪宗的歷史。
+  en: People say that Bodhidharma’s eyelids grew into tea bushes. That story is popular folklore, not early Chan history.
+  zh: 据说达摩的眼皮落到地上，长成了茶树。这是流行的传说，不是早期禅宗的历史。
+  zh_hk: 據說達摩嘅眼皮落到地上，長成咗茶樹。呢個係流行嘅傳說，唔係早期禪宗嘅歷史。
+- id: later
+  visual: still_image
+  seconds: 8
+  image: art/h03-3.png
+  title_en: |
+    Not in early Chan records
+    The story is absent from early collections such as the Jingde chuandeng lu (1004). It appears later as a mythic explanation.
+  title_zh: |
+    早期禅宗典籍里没有
+    例如1004年的《景德传灯录》，就没有这条记载。它是很久以后才出现的神话式解释。
+  title_zh_hk: |
+    早期禪宗典籍裏沒有
+    例如1004年的《景德傳燈錄》，就沒有這條記載。它是很久以後才出現的神話式解釋。
+  en: The story is absent from early Chan collections, such as the Jingde chuandeng lu of 1004. It appears later as a mythic explanation.
+  zh: 这个故事在早期的禅宗典籍里并不存在。例如 1004 年的《景德传灯录》，就没有这条记载。它是很久以后，才作为神话式的解释出现的。
+  zh_hk: 呢個故事喺早期嘅禪宗典籍裏面並唔存在。例如 1004 年嘅《景德傳燈錄》，就冇呢條記載。佢係好耐以後，先作為神話式嘅解釋出現嘅。
+- id: takeaway
+  visual: still_image
+  seconds: 8
+  image: art/h03-4.png
+  title_en: |
+    Keep the legend as a legend
+    It is not the origin of tea, and not early Chan history.
+  title_zh: |
+    把传说当传说看就好
+    它不是茶的起源，也不是早期禅宗的历史。
+  title_zh_hk: |
+    把傳說當傳說看就好
+    它不是茶的起源，也不是早期禪宗的歷史。
+  en: Keep the legend as a legend. It is not the origin of tea, and it is not early Chan history.
+  zh: 把传说当传说看就好。它不是茶的起源，也不是早期禅宗的历史。
+  zh_hk: 傳說就當傳說睇就得。佢唔係茶嘅起源，亦都唔係早期禪宗嘅歷史。

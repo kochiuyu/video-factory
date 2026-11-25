@@ -34,8 +34,8 @@ def _stamp_caption_frame(slide: Path, page: str, bar_path: Path, dest: Path) -> 
     try:
         if not slide.is_file():
             raise FileNotFoundError(slide)
-        bar = _caption_card(page, bar_path)
         base = Image.open(slide).convert("RGBA")
+        bar = _caption_card(page, bar_path, base.size)
         overlay = Image.open(bar).convert("RGBA")
         if overlay.size != base.size:
             overlay = overlay.resize(base.size)

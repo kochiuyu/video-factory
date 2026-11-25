@@ -1,0 +1,76 @@
+# Vertical Shorts preview sample. Not a production landscape lesson.
+# Not catalog-ready. Do not treat this file as a 16:9 lesson.
+# On-screen lines and speech follow the approved history brief.
+# Official cards are contain-fit. Seconds are slides-only preview holds.
+id: TEA-S-H06-ONE-LEAF-MANY-SCRIPTS-9x16
+format: "9:16"
+clock: own
+title_en: One leaf, many scripts
+title_zh: 同一片叶，多种剧本
+title_zh_hk: 同一片葉，多種劇本
+duration_target_s: 60
+beats:
+- id: hook
+  visual: still_image
+  seconds: 8
+  image: art/h06-1.png
+  title_en: |
+    Is there only one right way to sit down with tea?
+    The same leaf can be staged in more than one script.
+  title_zh: |
+    喝茶，是不是只有一种正确的坐法？
+    同一片叶子，可以有多种剧本。
+  title_zh_hk: |
+    喝茶，是不是只有一種正確的坐法？
+    同一片葉子，可以有多種劇本。
+  en: Is there only one right way to sit down with tea? The same leaf can be staged in more than one script.
+  zh: 喝茶，是不是只有一种正确的坐法？同一片叶子，可以有多种剧本。
+  zh_hk: 飲茶，係咪只有一種正確嘅坐法？同一片葉，可以有多種劇本。
+- id: chaoshan
+  visual: still_image
+  seconds: 8
+  image: art/h06-2.png
+  title_en: |
+    An everyday Chaoshan table
+    Small pots, repeated pours, and conversation. This is hospitality, not a national ceremony.
+  title_zh: |
+    潮汕的日常茶桌
+    小壶、一泡又一泡，还有交谈。这是日常待客，不是全国茶礼。
+  title_zh_hk: |
+    潮汕的日常茶桌
+    小壺、一泡又一泡，還有交談。這是日常待客，不是全國茶禮。
+  en: At an everyday Chaoshan table, people gather around a small pot, pour again and again, and keep talking. That portrait is everyday hospitality, not a fixed national ceremony.
+  zh: 在潮汕的日常茶桌上，人们围着小壶坐下，茶泡了一轮又一轮，话题也继续。这是日常待客，不是一套固定的全国茶礼。
+  zh_hk: 喺潮汕嘅日常茶桌上，人哋圍住小壺坐下，茶泡咗一輪又一輪，話題都繼續。呢個係日常待客，唔係一套固定嘅全國茶禮。
+- id: scripts
+  visual: still_image
+  seconds: 8
+  image: art/h06-3.png
+  title_en: |
+    A tea-art gathering, or a café counter
+    Taiwan tea art can make the setting part of the occasion. A Hong Kong café counter is a working routine. Similar small pots do not make the occasions the same.
+  title_zh: |
+    也可以是茶艺，或是茶餐厅柜台
+    台湾茶艺会把茶席也算进场面。香港茶餐厅的柜台，则是一套日常服务节奏。壶相似，场合也不一定相同。
+  title_zh_hk: |
+    也可以是茶藝，或是茶餐廳櫃位
+    台灣茶藝會把茶席也算進場面。香港茶餐廳的櫃位，則是一套日常服務節奏。壺相似，場合也不一定相同。
+  en: A Taiwan tea-art gathering can make gesture, utensils, and a designed tea setting part of the occasion. A Hong Kong café counter is a working routine. Similar small pots do not make Chaoshan and Taiwan the same occasion.
+  zh: 台湾的茶艺聚会，会把动作、器具和安排过的茶席，也算进场面。香港茶餐厅的柜台，则是一套日常的服务节奏。壶看起来像，场合也不一定相同。
+  zh_hk: 台灣嘅茶藝聚會，會把動作、器具同安排過嘅茶席，都算進場面。香港茶餐廳嘅櫃位，則係一套日常嘅服務節奏。壺睇落相似，場合都未必相同。
+- id: takeaway
+  visual: still_image
+  seconds: 8
+  image: art/h06-4.png
+  title_en: |
+    One leaf, many scripts
+    These are examples, not rules for whole cultures. Not all Taiwan tea drinking is tea art.
+  title_zh: |
+    同一片叶，多种剧本
+    这些是具体例子，不是整个文化的统一规则。台湾也不是处处都在做茶艺。
+  title_zh_hk: |
+    同一片葉，多種劇本
+    這些是具體例子，不是整個文化的統一規則。台灣也不是處處都在做茶藝。
+  en: The same leaf is staged in different settings, as examples, not as rules for whole cultures. And not all Taiwan tea drinking is tea art.
+  zh: 同一片叶子，可以有多种剧本。这些都是具体的例子，不是整个文化的统一规则。台湾也不是处处都在做茶艺。
+  zh_hk: 同一片葉，可以有多種劇本。呢啲都係具體例子，唔係成個文化嘅統一規則。台灣亦都唔係處處都喺度做茶藝。

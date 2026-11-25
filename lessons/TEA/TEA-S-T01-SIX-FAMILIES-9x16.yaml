@@ -1,0 +1,139 @@
+# Vertical Shorts preview sample. Not a production landscape lesson.
+# Not catalog-ready. Do not treat this file as a 16:9 lesson.
+# On-screen lines are the locked lay wording. Speech repeats the body line.
+# Official cards are contain-fit. The close beat has no picture.
+id: TEA-S-T01-SIX-FAMILIES-9x16
+format: "9:16"
+title_en: One plant, six families
+title_zh: 同一种茶树，六类加工路线
+title_zh_hk: 同一種茶樹，六類加工路線
+duration_target_s: 60
+beats:
+- id: hook
+  visual: still_image
+  seconds: 12
+  image: art/plant.png
+  title_en: |
+    One plant, six families
+    Green tea and black tea usually come from the same plant. The difference is how the leaves are processed.
+  title_zh: |
+    同一种茶树，六类加工路线
+    绿茶和红茶，多半来自同一种茶树。差别在采收之后怎么做，不在是不是另一种植物。
+  title_zh_hk: |
+    同一種茶樹，六類加工路線
+    綠茶和紅茶，多半來自同一種茶樹。差別在採收之後怎麼做，不在是不是另一種植物。
+  en: One plant can give us six families of tea. Green tea and black tea usually come from the same plant. The difference is how the leaves are processed.
+  zh: 同一种茶树，可以做出六类茶。绿茶和红茶，多半都来自同一种茶树。差别在采收之后怎么做，不在是不是另一种植物。
+  zh_hk: 同一種茶樹，可以做出六類茶。綠茶同紅茶，多數都係嚟自同一種茶樹。分別唔係換咗另一種植物，而係採收之後點樣加工。
+- id: green
+  visual: still_image
+  seconds: 7
+  image: art/green.png
+  title_en: |
+    Green tea
+    Heat the leaf early so it does not brown.
+  title_zh: |
+    绿茶
+    早点把叶子加热，不让它变褐。
+  title_zh_hk: |
+    綠茶
+    早點把葉子加熱，不讓它變褐。
+  en: Green tea is heated early, so the leaf does not brown.
+  zh: 绿茶呢，早点把叶子加热，就不让它变褐。
+  zh_hk: 綠茶呢，早啲將葉子加熱，就唔會變褐。
+- id: yellow
+  visual: still_image
+  seconds: 7
+  image: art/yellow.png
+  title_en: |
+    Yellow tea
+    Heated early, then kept warm and damp until it turns yellow.
+  title_zh: |
+    黄茶
+    先加热，再温热闷黄，叶子才会变黄。
+  title_zh_hk: |
+    黃茶
+    先加熱，再溫熱悶黃，葉子才會變黃。
+  en: Yellow tea is heated early too, then kept warm and damp until it turns yellow.
+  zh: 黄茶也是先加热，再温热闷黄，叶子才会变黄。
+  zh_hk: 黃茶都係先加熱，再溫熱悶黃，葉子先會變黃。
+- id: white
+  visual: still_image
+  seconds: 7
+  image: art/white.png
+  title_en: |
+    White tea
+    Wither, then dry. Not heated early like green tea.
+  title_zh: |
+    白茶
+    让叶子萎凋，再干燥。不是绿茶那种先加热的做法。
+  title_zh_hk: |
+    白茶
+    讓葉子萎凋，再乾燥。不是綠茶那種先加熱的做法。
+  en: For white tea, the leaves wither, then they are dried. They are not heated early the way green tea is.
+  zh: 白茶是让叶子萎凋，再干燥。它不是绿茶那种先加热的做法。
+  zh_hk: 白茶係等葉子萎凋，再乾燥。佢唔係綠茶嗰種先加熱嘅做法。
+- id: oolong
+  visual: still_image
+  seconds: 7
+  image: art/oolong.png
+  title_en: |
+    Oolong
+    Bruised and only partly browned. How far that goes can vary.
+  title_zh: |
+    乌龙茶
+    把叶子做青，只让它部分变褐。程度会因做法而不同。
+  title_zh_hk: |
+    烏龍茶
+    把葉子做青，只讓它部分變褐。程度會因做法而不同。
+  en: For oolong, the leaves are bruised and only partly browned. How far that goes can vary.
+  zh: 乌龙茶会把叶子做青，只让它部分变褐。这个程度，会因做法而不同。
+  zh_hk: 烏龍茶會將葉子做青，只係畀佢部分變褐。呢個程度，會因做法而唔同。
+- id: black
+  visual: still_image
+  seconds: 7
+  image: art/black.png
+  title_en: |
+    Black tea
+    Rolled or cut so the leaves can brown much more.
+  title_zh: |
+    红茶
+    揉捻或切碎以后，让叶子充分变褐。
+  title_zh_hk: |
+    紅茶
+    揉捻或切碎以後，讓葉子充分變褐。
+  en: Black tea is rolled or cut so the leaves can brown much more.
+  zh: 红茶呢，揉捻或切碎以后，让叶子充分变褐。
+  zh_hk: 紅茶呢，揉捻或者切碎之後，就等葉子充分變褐。
+- id: dark
+  visual: still_image
+  seconds: 7
+  image: art/dark.png
+  title_en: |
+    Dark tea
+    Fermented and aged. Ripe Pu-erh is one example.
+  title_zh: |
+    黑茶
+    这一支会发酵、会陈化。熟普洱是清楚的例子。
+  title_zh_hk: |
+    黑茶
+    這一支會發酵、會陳化。熟普洱是清楚的例子。
+  en: Dark tea is fermented and aged. Ripe Pu-erh is one example.
+  zh: 黑茶会发酵，也会陈化。熟普洱就是一个清楚的例子。
+  zh_hk: 黑茶會發酵，亦都會陳化。熟普洱就係一個清楚嘅例子。
+- id: close
+  visual: still_image
+  seconds: 6
+  image: art/six-families.png
+  title_en: |
+    One plant, six families
+    Not six steps from green to black.
+  title_zh: |
+    同一种茶树，六类茶
+    不是从绿茶到红茶的六个步骤。
+  title_zh_hk: |
+    同一種茶樹，六類茶
+    不是從綠茶到紅茶的六個步驟。
+  en: One plant, six families — not six steps from green tea to black tea.
+  zh: 同一种茶树，六类茶。不是从绿茶到红茶的六个步骤。
+  zh_hk: 同一種茶樹，六類茶。唔係由綠茶走到紅茶嘅六個步驟。

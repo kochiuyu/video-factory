@@ -1,0 +1,76 @@
+# Vertical Shorts preview sample. Not a production landscape lesson.
+# Not catalog-ready. Do not treat this file as a 16:9 lesson.
+# On-screen lines and speech follow the approved history brief.
+# Official cards are contain-fit. Seconds are slides-only preview holds.
+id: TEA-S-H02-STAY-AWAKE-PRACTICE-9x16
+format: "9:16"
+clock: own
+title_en: Tea and the timetable
+title_zh: 茶与作息
+title_zh_hk: 茶與作息
+duration_target_s: 60
+beats:
+- id: hook
+  visual: still_image
+  seconds: 8
+  image: art/h02-1.png
+  title_en: |
+    Why did monasteries drink tea?
+    It was not a café tasting note.
+  title_zh: |
+    寺院里为什么要喝茶？
+    那不是咖啡馆里的品鉴笔记。
+  title_zh_hk: |
+    寺院裏為什麼要喝茶？
+    那不是咖啡室裏的品茶筆記。
+  en: Why did monasteries drink tea? It was not a café tasting note.
+  zh: 寺院里为什么要喝茶？那可不是咖啡馆里的品鉴笔记。
+  zh_hk: 寺院裏點解要飲茶？呢個唔係咖啡室裏嘅品茶筆記。
+- id: practice
+  visual: still_image
+  seconds: 8
+  image: art/h02-2.png
+  title_en: |
+    To stay awake for long practice
+    In Tang and Song monasteries, tea was a way to stay awake through long, shared sits.
+  title_zh: |
+    为了在长坐里保持清醒
+    在唐宋禅寺里，茶是给大家一起长时间修行用的。
+  title_zh_hk: |
+    為了在長坐裏保持清醒
+    在唐宋禪寺裏，茶是給大家一起長時間修行用的。
+  en: In Tang and Song monasteries, tea was a way to stay awake for long, shared practice.
+  zh: 在唐宋的禅寺里，茶是为了让大家在长时间的共修里保持清醒。
+  zh_hk: 喺唐宋嘅禪寺裏面，茶係為咗等大家喺長時間一齊修行嘅時候，保持清醒。
+- id: timetable
+  visual: still_image
+  seconds: 8
+  image: art/h02-3.png
+  title_en: |
+    Tea entered the timetable
+    By 1103, the Chanyuan Qinggui had written communal tea into a shared schedule.
+  title_zh: |
+    茶被写进了作息表
+    到了 1103 年，《禅苑清规》把大众茶礼排进了共同的日程。
+  title_zh_hk: |
+    茶被寫進了作息表
+    到了 1103 年，《禪苑清規》把大眾茶禮排進了共同的日程。
+  en: Tea entered the timetable. By 1103, the Chanyuan Qinggui had written communal tea into a shared schedule.
+  zh: 茶被排进了作息表。到了 1103 年，《禅苑清规》已经把大众茶礼，写进了大家共同的日程。
+  zh_hk: 茶被排進咗作息表。到咗 1103 年，《禪苑清規》已經把大眾茶禮，寫進咗大家共同嘅日程。
+- id: takeaway
+  visual: still_image
+  seconds: 8
+  image: art/h02-4.png
+  title_en: |
+    A timetable problem, not a tasting note
+    The job was long, shared practice, not café flavor.
+  title_zh: |
+    作息上的事，不是品鉴笔记
+    要解决的，是长时间一起修行，不是咖啡馆的风味。
+  title_zh_hk: |
+    作息上的事，不是品茶筆記
+    要解決的，是長時間一起修行，不是咖啡室的風味。
+  en: In Tang and Song monasteries, tea was a timetable problem, not a café tasting note.
+  zh: 在唐宋禅寺里，茶是作息表上的事，不是咖啡馆里的品鉴笔记。
+  zh_hk: 喺唐宋禪寺裏面，茶係作息表上嘅事，唔係咖啡室裏嘅品茶筆記。

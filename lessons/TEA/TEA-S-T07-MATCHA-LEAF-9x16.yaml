@@ -1,0 +1,60 @@
+# Vertical Shorts preview sample. Not a production landscape lesson.
+# Not catalog-ready. Do not treat this file as a 16:9 lesson.
+# On-screen lines and speech are the locked wording. Pictures have no text.
+# Official cards are contain-fit. Seconds are slides-only preview holds.
+id: TEA-S-T07-MATCHA-LEAF-9x16
+format: "9:16"
+clock: own
+title_en: Matcha, drink the leaf
+title_zh: 抹茶，连叶子一起喝
+title_zh_hk: 抹茶，連葉子一起喝
+duration_target_s: 60
+beats:
+- id: hook
+  visual: still_image
+  seconds: 8
+  image: art/t07-hook.png
+  title_en: |
+    Matcha
+    Do you drink the leaf?
+  title_zh: |
+    抹茶
+    连叶子一起喝吗？
+  title_zh_hk: |
+    抹茶
+    連葉子一起喝嗎？
+  en: In matcha, do you drink the leaf?
+  zh: 喝抹茶的时候，连叶子一起喝下去吗？
+  zh_hk: 飲抹茶嘅時候，連葉子都一齊飲落去嗎？
+- id: whisk
+  visual: still_image
+  seconds: 8
+  image: art/t07-whisk.png
+  title_en: |
+    Powdered green tea
+    Whisked into the water.
+  title_zh: |
+    粉末绿茶
+    搅进水里。
+  title_zh_hk: |
+    粉末綠茶
+    攪進水裏。
+  en: Matcha is powdered green tea. You whisk it into the water. You drink the leaf.
+  zh: 抹茶是粉末绿茶。把它搅进水里。连叶子一起喝下去。
+  zh_hk: 抹茶係粉末綠茶。將佢攪入水裏面。連葉子一齊飲落去。
+- id: takeaway
+  visual: still_image
+  seconds: 8
+  image: art/t07-takeaway.png
+  title_en: |
+    Matcha
+    You drink the leaf.
+  title_zh: |
+    抹茶
+    连叶子一起喝。
+  title_zh_hk: |
+    抹茶
+    連葉子一起喝。
+  en: In matcha, you drink the leaf. The leaf is not strained out.
+  zh: 抹茶是连叶子一起喝的。叶子不会被滤走。
+  zh_hk: 飲抹茶，係連葉子一齊飲落去嘅。葉子唔會被隔走。

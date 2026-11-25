@@ -1,0 +1,108 @@
+# Vertical Shorts preview sample. Not a production landscape lesson.
+# Not catalog-ready. Do not treat this file as a 16:9 lesson.
+# On-screen lines and speech are the locked wording. Pictures have no text.
+# Official cards are contain-fit. Seconds are slides-only preview holds.
+id: TEA-S-T02-TRUE-TEA-9x16
+format: "9:16"
+clock: own
+title_en: True tea
+title_zh: 真茶
+title_zh_hk: 真茶
+duration_target_s: 60
+beats:
+- id: hook
+  visual: still_image
+  seconds: 12
+  image: art/t02-hook.png
+  title_en: |
+    Is chamomile tea?
+    Many boxes say tea. Not all of them come from the tea plant.
+  title_zh: |
+    洋甘菊是茶吗？
+    货架上很多盒子也写着“茶”，但不一定来自茶树。
+  title_zh_hk: |
+    洋甘菊是茶嗎？
+    貨架上很多盒子也寫着「茶」，但不一定來自茶樹。
+  en: Is chamomile tea? Many boxes on the shelf say tea, but not all of them come from the tea plant.
+  zh: 洋甘菊是茶吗？货架上很多盒子也写着“茶”，但不一定来自茶树。
+  zh_hk: 洋甘菊是茶嗎？貨架上好多盒子都寫住「茶」，但唔一定嚟自茶樹。
+- id: plant
+  visual: still_image
+  seconds: 10
+  image: art/t02-plant.png
+  title_en: |
+    True tea
+    It comes from the tea plant.
+  title_zh: |
+    真茶
+    真茶来自茶树。
+  title_zh_hk: |
+    真茶
+    真茶來自茶樹。
+  en: True tea is the drink that comes from the tea plant.
+  zh: 真茶是来自茶树的那一种饮料。
+  zh_hk: 真茶係嚟自茶樹嘅嗰一種飲料。
+- id: herbals
+  visual: still_image
+  seconds: 10
+  image: art/t02-herbals.png
+  title_en: |
+    Not the tea plant
+    Chamomile, peppermint, ginger, and rooibos are usually other plants.
+  title_zh: |
+    别的植物
+    洋甘菊、薄荷、姜和路易波士，通常是别的植物。
+  title_zh_hk: |
+    別的植物
+    洋甘菊、薄荷、薑和路易波士，通常是別的植物。
+  en: Chamomile, peppermint, ginger, and rooibos are usually other plants, not the tea plant.
+  zh: 洋甘菊、薄荷、姜和路易波士，通常是别的植物，不是茶树。
+  zh_hk: 洋甘菊、薄荷、薑同路易波士，通常係別的植物，唔係茶樹。
+- id: different
+  visual: still_image
+  seconds: 10
+  image: art/t02-different.png
+  title_en: |
+    They can be lovely
+    They are not the same drink as green or black tea.
+  title_zh: |
+    可以很好喝
+    但不是茶树绿茶或红茶那一杯。
+  title_zh_hk: |
+    可以很好喝
+    但不是茶樹綠茶或紅茶那一杯。
+  en: They can be lovely to drink, but they are not the same drink as green tea or black tea.
+  zh: 它们可以很好喝，但不是茶树绿茶或红茶那一杯。
+  zh_hk: 佢哋可以很好飲，但唔係茶樹綠茶或者紅茶嗰一杯。
+- id: bedtime
+  visual: still_image
+  seconds: 8
+  image: art/t02-bedtime.png
+  title_en: |
+    Bedtime “tea”
+    A cup of chamomile is a different drink.
+  title_zh: |
+    睡前那杯“茶”
+    洋甘菊是另一种饮料。
+  title_zh_hk: |
+    睡前那杯「茶」
+    洋甘菊是另一種飲料。
+  en: A cup of chamomile at bedtime is a different drink. It is not true tea.
+  zh: 睡前那杯洋甘菊，是另一种饮料，不是真茶。
+  zh_hk: 瞓前嗰杯洋甘菊，係另一種飲料，唔係真茶。
+- id: takeaway
+  visual: still_image
+  seconds: 10
+  image: art/t02-takeaway.png
+  title_en: |
+    True tea comes from the tea plant.
+    The rest are herbals.
+  title_zh: |
+    真茶来自茶树
+    其余的，叫花草茶。
+  title_zh_hk: |
+    真茶來自茶樹
+    其餘的，叫花草茶。
+  en: True tea comes from the tea plant. The rest are herbals.
+  zh: 真茶来自茶树。其余的，叫花草茶。
+  zh_hk: 真茶嚟自茶樹。其餘嘅，叫花草茶。

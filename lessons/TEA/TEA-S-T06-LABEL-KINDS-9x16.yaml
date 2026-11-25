@@ -1,0 +1,100 @@
+# Vertical Shorts preview sample. Not a production landscape lesson.
+# Not catalog-ready. Do not treat this file as a 16:9 lesson.
+# On-screen lines and speech are the locked wording. Pictures have no text.
+# Official cards are contain-fit. Seconds are slides-only preview holds.
+id: TEA-S-T06-LABEL-KINDS-9x16
+format: "9:16"
+clock: own
+title_en: Three kinds of tea words
+title_zh: 三种不同的茶词
+title_zh_hk: 三種不同的茶詞
+duration_target_s: 60
+beats:
+- id: hook
+  visual: still_image
+  seconds: 8
+  image: art/t06-hook.png
+  title_en: |
+    Same kind?
+    Assam, Earl Grey,
+    Orange Pekoe.
+  title_zh: |
+    同一类词吗？
+    阿萨姆、伯爵茶、橙白毫。
+  title_zh_hk: |
+    同一類詞嗎？
+    阿薩姆、伯爵茶、橙白毫。
+  en: Assam, Earl Grey, and Orange Pekoe. Are they the same kind of word?
+  zh: 阿萨姆、伯爵茶、橙白毫，是同一类词吗？
+  zh_hk: 阿薩姆、伯爵茶、橙白毫，係同一類詞嗎？
+- id: place
+  visual: still_image
+  seconds: 8
+  image: art/t06-place.png
+  title_en: |
+    Assam
+    A place name.
+    Northeast India.
+  title_zh: |
+    阿萨姆
+    印度东北的地名。
+  title_zh_hk: |
+    阿薩姆
+    印度東北的地名。
+  en: Assam is a place name. It means a region in northeast India, not one estate.
+  zh: 阿萨姆是产地名，指印度东北部，不是某一座茶园。
+  zh_hk: 阿薩姆係一個地名，指印度東北部，唔係某一座茶園。
+- id: bergamot
+  visual: still_image
+  seconds: 8
+  image: art/t06-bergamot.png
+  title_en: |
+    Earl Grey
+    Black tea with bergamot.
+  title_zh: |
+    伯爵茶
+    加了佛手柑香的红茶。
+  title_zh_hk: |
+    伯爵茶
+    加了佛手柑香的紅茶。
+  en: Earl Grey is usually black tea flavoured with bergamot. Bergamot is a citrus aroma, and the peel need not be in the tea.
+  zh: 伯爵茶通常是加了佛手柑香的红茶。佛手柑是一种柑橘香，茶里不一定有果皮。
+  zh_hk: 伯爵茶通常係加咗佛手柑香嘅紅茶。佛手柑係一種柑橘香，茶裏面唔一定有果皮。
+- id: size
+  visual: still_image
+  seconds: 8
+  image: art/t06-size.png
+  title_en: |
+    Orange Pekoe
+    A leaf-size word.
+  title_zh: |
+    橙白毫
+    叶子的大小词。
+  title_zh_hk: |
+    橙白毫
+    葉子的大小詞。
+  en: Orange Pekoe is a leaf-size word. It names the size of the leaf.
+  zh: 橙白毫是大小词，说的是叶子的大小。
+  zh_hk: 橙白毫係一個大小詞，講嘅係葉子嘅大小。
+- id: takeaway
+  visual: still_image
+  seconds: 8
+  image: art/t06-takeaway.png
+  title_en: |
+    Three kinds
+    Assam, a place.
+    Earl Grey, bergamot.
+    Orange Pekoe, leaf size.
+  title_zh: |
+    三种不同的词
+    阿萨姆，地名。
+    伯爵茶，佛手柑香。
+    橙白毫，大小词。
+  title_zh_hk: |
+    三種不同的詞
+    阿薩姆，地名。
+    伯爵茶，佛手柑香。
+    橙白毫，大小詞。
+  en: These are three different kinds of words. Assam names a place, Earl Grey names a bergamot flavour, and Orange Pekoe names leaf size.
+  zh: 这是三种不同的词。阿萨姆是地名，伯爵茶是佛手柑香，橙白毫是叶子的大小。
+  zh_hk: 呢三個係三種唔同嘅詞。阿薩姆係地名，伯爵茶係佛手柑香，橙白毫係葉子大小。

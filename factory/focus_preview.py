@@ -184,7 +184,7 @@ def stamp_caption(image: Image.Image, text: str) -> Image.Image:
         slide = root / "slide.png"
         bar = root / "bar.png"
         image.convert("RGB").save(slide)
-        _caption_card(text, bar)
+        _caption_card(text, bar, image.size)
         base = Image.open(slide).convert("RGBA")
         overlay = Image.open(bar).convert("RGBA")
         base.paste(overlay, (0, 0), overlay)

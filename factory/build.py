@@ -82,6 +82,7 @@ from preview import render_caption_previews  # noqa: E402
 from pdfexport import export_preview_pdfs  # noqa: E402
 from slides import (  # noqa: E402
     apply_theme_fonts,
+    canvas_scope,
     lesson_stamp,
     list_slide_pngs,
     render_lesson_slides,
@@ -459,11 +460,19 @@ def load_audio_tracks(lesson: dict, audio_root: Path, required: list[str]) -> di
     return tracks
 
 
-def write_cell_covers(lesson_path: Path, lesson: dict, cells: dict, cell_slides: dict, out_dir: Path) -> None:
-    """One 1920x1080 cover per cell: topic, slide language, speech language.
+def write_cell_covers(
+    lesson_path: Path,
+    lesson: dict,
+    cells: dict,
+    cell_slides: dict,
+    out_dir: Path,
+    frame_format: str | None = None,
+) -> None:
+    """One cover per cell: topic, slide language, speech language.
 
     Cover titles follow the cell name (en / zh / hk / en+zh / …), not the
-    shared --labels override used when painting video slides.
+    shared --labels override used when painting video slides. The default
+    cover is 1920×1080. A 9:16 build writes the phone cover instead.
     """
     cover_dir = out_dir / "covers"
     for name, (audio_lang, _sub, _slide) in cells.items():
@@ -471,7 +480,7 @@ def write_cell_covers(lesson_path: Path, lesson: dict, cells: dict, cell_slides:
         # cell_slides (those follow the shared --labels override for video slides).
         slide_key = name
         dest = cover_dir / f"{lesson['id']}_{name}.png"
-        write_cover(lesson_path, slide_key, audio_lang, dest)
+        write_cover(lesson_path, slide_key, audio_lang, dest, frame_format)
         print("cover:", dest)
 
 
@@ -525,10 +534,14 @@ def prepare_short(
     source: Path, root: Path, *, label_lang: str, tts: bool,
     slides_only: bool, caption_preview: bool, wanted_cells: list[str] | None,
     match_titles: bool, theme_name: str | None, report: BuildReport | None,
+    frame_format: str | None = None,
 ):
     """Validate the selected inputs before painting, encoding or calling TTS."""
     started = time.perf_counter()
     lesson = load_lesson(source)
+    # The CLI wins over YAML. Omitting both leaves the landscape default.
+    if frame_format in {"16:9", "9:16"}:
+        lesson["format"] = frame_format
     out_dir = lesson_out_dir(lesson.get("id", source.stem), root=root)
     errors = validate(lesson)
     fatal = [error for error in errors if not error.startswith("Beat seconds")]
@@ -610,8 +623,11 @@ def preflight(source: Path, root: Path, *, report: BuildReport, **options) -> li
 
 
 def check_short(source: Path, root: Path, *, report: BuildReport, **options) -> None:
-    keys = ("label_lang", "tts", "slides_only", "caption_preview", "wanted_cells", "match_titles", "theme_name")
-    prepare_short(source, root, report=report, **{key: options[key] for key in keys})
+    keys = (
+        "label_lang", "tts", "slides_only", "caption_preview", "wanted_cells",
+        "match_titles", "theme_name", "frame_format",
+    )
+    prepare_short(source, root, report=report, **{key: options[key] for key in keys if key in options})
 
 
 def build(
@@ -632,14 +648,19 @@ def build(
     pack_nocap: bool = False,
     write_pdfs: bool = True,
     report: BuildReport | None = None,
+    frame_format: str | None = None,
 ) -> list[Path]:
     lesson, out_dir, cells, theme, tracks = prepare_short(
         lesson_path, out_root, label_lang=label_lang, tts=tts, slides_only=slides_only,
         caption_preview=caption_preview, wanted_cells=wanted_cells, match_titles=match_titles,
-        theme_name=theme_name, report=report,
+        theme_name=theme_name, report=report, frame_format=frame_format,
     )
     langs = list(dict.fromkeys(voice for voice, _, _ in cells.values()))
     audio_root = out_dir / "audio"
+    fmt = "9:16" if str(lesson.get("format") or "").strip() == "9:16" else "16:9"
+    media = out_dir / "9x16" if fmt == "9:16" else out_dir
+    if fmt == "9:16":
+        print("format: 9:16 (phone) ->", media)
     _attach_log(out_dir, lesson.get("id", lesson_path.stem), out_root)
     export_lesson_quiz(lesson, out_dir)
     print("tracks:", ", ".join(langs) or "(none)")
@@ -668,7 +689,7 @@ def build(
     slide_sets: dict[tuple[str, str | None], list[Path]] = {}
     preview_holds = [float(beat.get("seconds") or 12) for beat in lesson["beats"]]
     keep_folders = {code if not second else f"{code}+{second}" for code, second in codes}
-    slides_root = out_dir / "slides"
+    slides_root = media / "slides"
     if slides_root.is_dir():
         for child in slides_root.iterdir():
             if child.is_dir() and child.name not in keep_folders:
@@ -677,7 +698,7 @@ def build(
     print(f"progress: slides 0/{max(1, len(codes))} start")
     for slide_i, (code, second) in enumerate(codes, start=1):
         folder = code if not second else f"{code}+{second}"
-        slide_dir = out_dir / "slides" / folder
+        slide_dir = media / "slides" / folder
         stamp = lesson_stamp(lesson, theme, code, second, stage_cards)
         fold_t0 = time.perf_counter()
         if stamp_matches(slide_dir, stamp):
@@ -723,7 +744,8 @@ def build(
         accepted = set(inspect.signature(render_caption_previews).parameters)
         preview_kw = {k: v for k, v in preview_kw.items() if k in accepted}
         try:
-            previews = render_caption_previews(lesson, slides, out_dir, **preview_kw)
+            with canvas_scope(fmt):
+                previews = render_caption_previews(lesson, slides, media, **preview_kw)
         except Exception as exc:  # noqa: BLE001
             raise RuntimeError(f"caption-preview failed: {exc}") from exc
         if not previews:
@@ -733,10 +755,10 @@ def build(
                 report.artifact(preview, "caption_preview")
         print(f"caption-preview: wrote {len(previews)} stamped frames; skipped TTS and mux")
         clock.lap("caption preview")
-        if write_pdfs:
+        if write_pdfs and fmt != "9:16":
             _write_preview_pdfs(lesson["id"], out_root, ("captions",))
-        write_cell_covers(lesson_path, lesson, cells, cell_slides, out_dir)
-        sweep_intermediates(out_dir)
+        write_cell_covers(lesson_path, lesson, cells, cell_slides, media, fmt)
+        sweep_intermediates(media)
         clock.lap("covers")
         clock.total()
         return []
@@ -748,10 +770,10 @@ def build(
                 for image in images:
                     report.artifact(image, "slide")
         print(f"slides-only: wrote {sum(len(v) for v in slide_sets.values())} PNG files; skipped TTS and mux")
-        if write_pdfs:
+        if write_pdfs and fmt != "9:16":
             _write_preview_pdfs(lesson["id"], out_root, ("slides",))
-        write_cell_covers(lesson_path, lesson, cells, cell_slides, out_dir)
-        sweep_intermediates(out_dir)
+        write_cell_covers(lesson_path, lesson, cells, cell_slides, media, fmt)
+        sweep_intermediates(media)
         clock.lap("covers")
         clock.total()
         return []
@@ -794,13 +816,13 @@ def build(
         if stage_cards:
             write_stage_slides(
                 lesson,
-                out_dir / "slides" / folder,
+                media / "slides" / folder,
                 code,
                 durations,
                 theme=theme,
                 second_lang=second,
             )
-        print("stage stills:", out_dir / "slides" / folder)
+        print("stage stills:", media / "slides" / folder)
     clock.lap("stage stills")
 
     def beat_pages_and_holds(
@@ -818,7 +840,8 @@ def build(
         text = beat_text(beat, sub_lang)
         keep_units = bool(lesson.get("caption_keep"))
         if plan == [0]:
-            pages = caption_pages(text, keep_units)
+            with canvas_scope(fmt):
+                pages = caption_pages(text, keep_units)
             holds, how = holds_for_pages(dur, pages, words)
             still_idx = [0] * max(1, len(pages))
         else:
@@ -858,16 +881,16 @@ def build(
     if report:
         for warning in warnings:
             report.warn(warning)
-    srt_dir = out_dir / "srt"
+    srt_dir = media / "srt"
     srt_dir.mkdir(parents=True, exist_ok=True)
     n_beats = len(lesson["beats"])
     n_cells = max(1, len(cells))
     for cell_i, (name, (audio_lang, sub_lang, slide_lang)) in enumerate(cells.items(), start=1):
         code, second = cell_slides.get(name, (slide_lang, None))
         folder = code if not second else f"{code}+{second}"
-        slide_dir = out_dir / "slides" / folder
-        stamp_dir = out_dir / "captions" / name
-        clip_dir = out_dir / "clips" / name
+        slide_dir = media / "slides" / folder
+        stamp_dir = media / "captions" / name
+        clip_dir = media / "clips" / name
         clips: list[Path] = []
         nocap_clips: list[Path] = []
         parts = tracks[audio_lang]
@@ -887,7 +910,7 @@ def build(
                 dest = stamp_dir / f"{i:02d}_{beat['id']}_{j:02d}.png"
                 stamp_caption(still, page, dest)
                 stamped.append(dest)
-                _publish_caption_preview(dest, still, out_dir / "preview" / folder, j, len(pages))
+                _publish_caption_preview(dest, still, media / "preview" / folder, j, len(pages))
             clip = clip_dir / f"{i:02d}_{beat['id']}.mp4"
             clip_key = _clip_key(stamped, holds, audio, progress_bar, cap="on", cap_time=cap_time)
             clips.append(clip)
@@ -918,7 +941,7 @@ def build(
         if pending:
             print(f"progress: clip {cell_i}/{n_cells} 0/{n_beats} {name} encode {len(pending)}")
             _encode_clips(pending, workers, cell_i, n_cells, n_beats)
-        dest = out_dir / "cells" / f"{lesson['id']}_{name}.mp4"
+        dest = media / "cells" / f"{lesson['id']}_{name}.mp4"
         print(f"concat: {name} ({len(clips)} beats)")
         print(f"progress: concat {cell_i}/{n_cells} {name}")
         join_key = digest_obj({"clips": [file_fingerprint(p) for p in clips]})
@@ -935,7 +958,7 @@ def build(
             report.video(name, dest, duration, reused)
         videos.append(dest)
         if experiment_pack and pack_nocap and nocap_clips:
-            off = out_dir / "cells" / f"{lesson['id']}_{name}_nocap.mp4"
+            off = media / "cells" / f"{lesson['id']}_{name}_nocap.mp4"
             print(f"concat: {name}_nocap ({len(nocap_clips)} beats)")
             off_key = digest_obj({"clips": [file_fingerprint(p) for p in nocap_clips], "cap": "off"})
             reused = stamp_ok(off, off_key)
@@ -951,7 +974,7 @@ def build(
             videos.append(off)
         clock.lap(f"video {name}")
     if experiment_pack:
-        csv_path = write_experiment_pack(out_dir, lesson["id"], cells, pack_speeds, sources=videos)
+        csv_path = write_experiment_pack(media, lesson["id"], cells, pack_speeds, sources=videos)
         packed = pack_videos(csv_path)
         if report:
             for path in packed:
@@ -959,8 +982,8 @@ def build(
         videos.extend(packed)
         print("experiment-pack:", csv_path)
         clock.lap("experiment pack")
-    write_cell_covers(lesson_path, lesson, cells, cell_slides, out_dir)
-    sweep_intermediates(out_dir, videos=True)
+    write_cell_covers(lesson_path, lesson, cells, cell_slides, media, fmt)
+    sweep_intermediates(media, videos=True)
     clock.lap("covers")
     clock.total()
     return videos
@@ -981,6 +1004,13 @@ def main() -> None:
         help="Move verified legacy output folders into lessons/ or modules/ and exit.",
     )
     p.add_argument("--labels", choices=("en", "zh"), default="en")
+    p.add_argument(
+        "--format",
+        dest="frame_format",
+        choices=("16:9", "9:16"),
+        default=None,
+        help="Slide frame. Overrides the lesson YAML format. Omit to use YAML, or 16:9 when that field is absent.",
+    )
     p.add_argument("--no-tts", action="store_true", help="Do not call TTS; require existing MP3s.")
     p.add_argument("--force-tts", action="store_true", help="Regenerate all beat audio.")
     p.add_argument("--preflight", action="store_true", help="Check inputs without rendering or contacting a speech provider.")
@@ -1088,6 +1118,7 @@ def main() -> None:
         experiment_pack=experiment_pack,
         pack_speeds=pack_speeds,
         pack_nocap=pack_nocap,
+        frame_format=args.frame_format,
     )
     if args.all:
         from catalog import LESSONS, iter_lesson_paths

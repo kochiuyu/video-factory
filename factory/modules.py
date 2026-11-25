@@ -103,6 +103,7 @@ def build_minicourse(
     slides_only: bool = False,
     caption_preview: bool = False,
     report: BuildReport | None = None,
+    frame_format: str | None = None,
 ) -> list[Path]:
     """Paint each short. Do not concatenate, and do not apply the six-lesson module cap."""
     from build import build
@@ -141,6 +142,7 @@ def build_minicourse(
         experiment_pack=experiment_pack,
         pack_speeds=pack_speeds,
         pack_nocap=pack_nocap,
+        frame_format=frame_format,
     )
     videos = []
     failures = []
@@ -236,6 +238,7 @@ def build_module(
     slides_only: bool = False,
     caption_preview: bool = False,
     report: BuildReport | None = None,
+    frame_format: str | None = None,
 ) -> list[Path]:
     from build import StepClock, build
 
@@ -268,6 +271,7 @@ def build_module(
         pack_speeds=None,
         pack_nocap=False,
         write_pdfs=False,
+        frame_format=frame_format,
     )
     n = len(members)
     clock = StepClock(report)
@@ -285,26 +289,31 @@ def build_module(
         n_png = 0
         kind = "preview" if caption_preview else "slides"
         for lid in members:
-            folder = lesson_out_dir(lid, module=False, root=out_root) / kind
+            folder = lesson_out_dir(lid, module=False, root=out_root)
+            if frame_format == "9:16":
+                folder = folder / "9x16"
+            folder = folder / kind
             if folder.is_dir():
                 n_png += sum(1 for _ in folder.rglob("*.png"))
         print(f"module: {n_png} {kind} PNG across {len(members)} shorts; skip module mux")
         print(f"{'caption-preview' if caption_preview else 'slides-only'}: wrote {n_png} PNG files; skipped TTS and mux")
-        try:
-            from pdfexport import export_preview_pdfs
+        if frame_format != "9:16":
+            try:
+                from pdfexport import export_preview_pdfs
 
-            kind = ("captions",) if caption_preview else ("slides",)
-            pdfs = export_preview_pdfs(mid, out_root, kind)
-            if pdfs:
-                print("pdf:", ", ".join(p.name for p in pdfs))
-        except Exception as exc:  # noqa: BLE001
-            print(f"pdf skip: {exc}")
+                kind = ("captions",) if caption_preview else ("slides",)
+                pdfs = export_preview_pdfs(mid, out_root, kind)
+                if pdfs:
+                    print("pdf:", ", ".join(p.name for p in pdfs))
+            except Exception as exc:  # noqa: BLE001
+                print(f"pdf skip: {exc}")
         clock.total()
         return []
     out_dir = lesson_out_dir(mid, module=True, root=out_root)
-    cell_dir = out_dir / "cells"
+    media = out_dir / "9x16" if frame_format == "9:16" else out_dir
+    cell_dir = media / "cells"
     cell_dir.mkdir(parents=True, exist_ok=True)
-    srt_dir = out_dir / "srt"
+    srt_dir = media / "srt"
     srt_dir.mkdir(parents=True, exist_ok=True)
     names = set.intersection(*(set(rows) for rows in member_videos.values()))
     if not names:
@@ -333,7 +342,7 @@ def build_module(
         first = load_lesson(lesson_path(members[0]))
         cells = selected_cells(first, wanted_cells)
         csv_path = write_experiment_pack(
-            out_dir, mid, cells, pack_speeds or parse_speeds(None), sources=videos,
+            media, mid, cells, pack_speeds or parse_speeds(None), sources=videos,
         )
         packed = pack_videos(csv_path)
         if report:

@@ -1,0 +1,60 @@
+# Vertical Shorts preview sample. Not a production landscape lesson.
+# Not catalog-ready. Do not treat this file as a 16:9 lesson.
+# On-screen lines and speech are the locked wording. Pictures have no text.
+# Official cards are contain-fit. Seconds are slides-only preview holds.
+id: TEA-S-T04-HOUJI-GREEN-9x16
+format: "9:16"
+clock: own
+title_en: Brown does not make it black tea
+title_zh: 褐色不等于红茶
+title_zh_hk: 褐色不等於紅茶
+duration_target_s: 60
+beats:
+- id: hook
+  visual: still_image
+  seconds: 12
+  image: art/t04-hook.png
+  title_en: |
+    Is Houjicha black tea?
+    The leaves look brown.
+  title_zh: |
+    焙茶是红茶吗？
+    叶子看起来是褐色的。
+  title_zh_hk: |
+    焙茶是紅茶嗎？
+    葉子看起來是褐色的。
+  en: Is Houjicha black tea? The leaves look brown.
+  zh: 焙茶是红茶吗？叶子看起来是褐色的。
+  zh_hk: 焙茶係紅茶嗎？葉子睇落去係褐色嘅。
+- id: path
+  visual: still_image
+  seconds: 12
+  image: art/t04-path.png
+  title_en: |
+    Still a green tea
+    The green path, just roasted.
+  title_zh: |
+    它还是绿茶
+    绿这条路线，只是焙过火。
+  title_zh_hk: |
+    它還是綠茶
+    綠這條路線，只是焙過火。
+  en: Houjicha is a roasted Japanese green. It is still a green-path tea, just roasted.
+  zh: 焙茶是焙过的日本绿茶。它还是绿路线上的茶，只是焙过火。
+  zh_hk: 焙茶係焙過嘅日本綠茶。佢仲係綠路線上嘅茶，只係焙過火。
+- id: takeaway
+  visual: still_image
+  seconds: 12
+  image: art/t04-takeaway.png
+  title_en: |
+    Brown does not make it black tea.
+    Houjicha is a roasted green tea.
+  title_zh: |
+    褐色不等于红茶。
+    焙茶是焙过的绿茶。
+  title_zh_hk: |
+    褐色不等於紅茶。
+    焙茶是焙過的綠茶。
+  en: Brown does not make it black tea. Houjicha is a roasted green tea.
+  zh: 褐色不等于红茶。焙茶是焙过的绿茶。
+  zh_hk: 褐色唔等於紅茶。焙茶係焙過嘅綠茶。

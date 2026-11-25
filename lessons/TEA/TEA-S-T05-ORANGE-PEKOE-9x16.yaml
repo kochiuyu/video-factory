@@ -1,0 +1,62 @@
+# Vertical Shorts preview sample. Not a production landscape lesson.
+# Not catalog-ready. Do not treat this file as a 16:9 lesson.
+# On-screen lines and speech are the locked wording. Pictures have no text.
+# Official cards are contain-fit. Seconds are slides-only preview holds.
+id: TEA-S-T05-ORANGE-PEKOE-9x16
+format: "9:16"
+clock: own
+title_en: Orange Pekoe is a size word
+title_zh: 橙白毫是大小等级词
+title_zh_hk: 橙白毫是大小等級詞
+duration_target_s: 60
+beats:
+- id: hook
+  visual: still_image
+  seconds: 12
+  image: art/t05-hook.png
+  title_en: |
+    Orange Pekoe
+    Does it mean better tea?
+  title_zh: |
+    橙白毫更好吗？
+    它不是在说谁更好。
+  title_zh_hk: |
+    橙白毫更好嗎？
+    它不是在說誰更好。
+  en: Is Orange Pekoe better tea? It is not a quality ranking.
+  zh: 橙白毫更好吗？它不是在说谁更好。
+  zh_hk: 橙白毫更好嗎？佢唔係講邊個更好。
+- id: sizes
+  visual: still_image
+  seconds: 12
+  image: art/t05-sizes.png
+  title_en: |
+    A size word
+    Whole leaf,
+    or broken pieces.
+  title_zh: |
+    它是大小等级词
+    是全叶，或是碎叶。
+  title_zh_hk: |
+    它是大小等級詞
+    是全葉，或是碎葉。
+  en: Orange Pekoe is a whole-leaf size word. Broken Orange Pekoe is just smaller pieces.
+  zh: 橙白毫是全叶大小的等级词。碎橙白毫只是更碎的叶子。
+  zh_hk: 橙白毫係全葉大小嘅等級詞。碎橙白毫只係更碎嘅葉子。
+- id: takeaway
+  visual: still_image
+  seconds: 12
+  image: art/t05-takeaway.png
+  title_en: |
+    Orange Pekoe
+    Leaf size,
+    not a quality ranking.
+  title_zh: |
+    橙白毫，大小等级词。
+    叶子更大，不一定更好。
+  title_zh_hk: |
+    橙白毫，大小等級詞。
+    葉子更大，不一定更好。
+  en: Orange Pekoe is a size word. Larger is not automatically better.
+  zh: 橙白毫是大小等级词。叶子更大，不一定更好。
+  zh_hk: 橙白毫係大小等級詞。葉子更大，唔一定更好。

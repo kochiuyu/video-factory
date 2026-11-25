@@ -10,18 +10,16 @@ duration_target_s: 53
 clock: own
 beats:
 - id: hook
-  visual: title_card
+  visual: animated
+  scene: lesson_hook
+  motif: track
   seconds: 7
-  kicker: P1
-  kicker_en: P1
-  kicker_zh: 小一
-  kicker_zh_hk: 小一
   title_en: Count on and count back
   title_zh: 接着数，倒着数
   title_zh_hk: 順住數，倒轉數
-  en: What comes after nine?
-  zh: 九后面是几？
-  zh_hk: 九後面係幾多呀？
+  s1_en: What comes after nine?
+  s1_zh: 九后面是几？
+  s1_zh_hk: 九後面係幾多呀？
 
 - id: count-on
   visual: animated
@@ -78,7 +76,9 @@ beats:
   s3_zh_hk: 可以。我哋數到九。
 
 - id: takeaway
-  visual: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: track
   seconds: 10
   kicker: Again
   kicker_en: Again

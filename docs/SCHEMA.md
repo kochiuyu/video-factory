@@ -121,7 +121,7 @@ These visuals paint progressive stills. Write one spoken chunk per still:
 | `title_card`, `big_number`, `module_open`, `module_close` | 1 | `en` / `zh` / `zh_hk` only |
 | `still_image` | 1 | `en` / `zh` / `zh_hk` only. One still. Do not use `s1_*`. |
 | `whatis_title`, `whatis_definition`, `whatis_example`, `whatis_contrast`, `whatis_takeaway` | 1 | `en` / `zh` / `zh_hk` only. One still per beat. Do not use `s1_*`. |
-| `animated` | one per motion | `s1_*` … one line per step (`one_ten` has four; the other scenes have three). Not a slide. See **Animated scene**. |
+| `animated` | one per motion | `s1_*` … one line per step (`one_ten` has four; `lesson_hook` has one; the other scenes have three). Not a slide. See **Animated scene**. |
 
 `s1` is on screen with `_s1.png`, `s2` with `_s2.png`, and so on. An `animated` beat has no stage PNG: `s1`, `s2`, and `s3` are the three motions, and the caption cards use those same holds. Do not put factory talk in the speech (“watch the gold bar”, “this card”, “in the left box”).
 

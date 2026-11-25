@@ -898,11 +898,12 @@ def build(
             if str(beat.get("visual") or "") == "animated":
                 from anim import anim_cache_dir, animated_clip_key, render_animated_clip
 
+                spoken_words = load_word_times(audio) or []
                 cache = anim_cache_dir(out_dir, lesson)
                 clip = clip_dir / f"{i:02d}_{beat['id']}.mp4"
                 clip_key = animated_clip_key(
                     beat, lesson, code, holds, still_idx, pages, audio,
-                    captions=True, progress_bar=progress_bar,
+                    captions=True, progress_bar=progress_bar, words=spoken_words,
                 )
                 clips.append(clip)
                 if stamp_ok(clip, clip_key):
@@ -912,14 +913,14 @@ def build(
                     render_animated_clip(
                         beat, lesson, label_lang_code=code, holds=holds, still_idx=still_idx,
                         pages=pages, audio=audio, dest=clip, cache_dir=cache,
-                        captions=True, progress_bar=progress_bar,
+                        captions=True, progress_bar=progress_bar, words=spoken_words,
                     )
                     write_mark(clip, clip_key)
                 if experiment_pack and pack_nocap:
                     raw_clip = clip_dir / f"{i:02d}_{beat['id']}_nocap.mp4"
                     raw_key = animated_clip_key(
                         beat, lesson, code, holds, still_idx, pages, audio,
-                        captions=False, progress_bar=progress_bar,
+                        captions=False, progress_bar=progress_bar, words=spoken_words,
                     )
                     nocap_clips.append(raw_clip)
                     if stamp_ok(raw_clip, raw_key):
@@ -928,7 +929,7 @@ def build(
                         render_animated_clip(
                             beat, lesson, label_lang_code=code, holds=holds, still_idx=still_idx,
                             pages=pages, audio=audio, dest=raw_clip, cache_dir=cache,
-                            captions=False, progress_bar=progress_bar,
+                            captions=False, progress_bar=progress_bar, words=spoken_words,
                         )
                         write_mark(raw_clip, raw_key)
                 continue

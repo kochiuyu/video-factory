@@ -13,7 +13,15 @@ import tempfile
 from pathlib import Path
 
 from cache import digest_obj, file_fingerprint
-from scene_registry import label_lang, labels_for, scene_problems, scene_spec, step_count
+from scene_registry import (
+    label_lang,
+    labels_for,
+    scene_problems,
+    scene_spec,
+    schedule_marks,
+    step_count,
+    track_columns,
+)
 
 CREAM = "#F7F4EE"
 NAVY = "#0B1F3A"
@@ -76,11 +84,19 @@ def step_durations(holds: list[float], still_idx: list[int], n: int) -> list[flo
     return totals
 
 
-def cache_key(spec: dict, durations: list[float], lang: str, frame: tuple[int, int], manim_version: str) -> str:
+def cache_key(
+    spec: dict,
+    durations: list[float],
+    lang: str,
+    frame: tuple[int, int],
+    manim_version: str,
+    marks: list | None = None,
+) -> str:
     return digest_obj(
         {
             "spec": spec,
             "durations": [round(float(d), 3) for d in durations],
+            "marks": marks or [],
             "lang": label_lang(lang),
             "frame": [int(frame[0]), int(frame[1])],
             "manim": str(manim_version),
@@ -183,14 +199,16 @@ def animated_clip_key(
     progress_bar: bool,
     frame: tuple[int, int] | None = None,
     fps: int | None = None,
+    words: list | None = None,
 ) -> str:
     from mux import clip_fps
 
     frame = frame or frame_size(lesson)
     durs = step_durations(holds, still_idx, step_count(beat))
+    marks = schedule_marks(beat, durs, words)
     return digest_obj(
         {
-            "silent": cache_key(scene_spec(beat, label), durs, label, frame, _manim_version()),
+            "silent": cache_key(scene_spec(beat, label), durs, label, frame, _manim_version(), marks),
             "pages": list(pages),
             "holds": [round(float(h), 3) for h in holds],
             "audio": file_fingerprint(Path(audio)),
@@ -217,6 +235,7 @@ def render_animated_clip(
     progress_bar: bool = True,
     frame: tuple[int, int] | None = None,
     fps: int | None = None,
+    words: list | None = None,
 ) -> Path:
     """Render one language's moving scene and mux that language's audio onto it.
 
@@ -232,8 +251,9 @@ def render_animated_clip(
     fps = int(fps if fps is not None else clip_fps())
     n = step_count(beat)
     durs = step_durations(holds, still_idx, n)
+    marks = schedule_marks(beat, durs, words)
     spec = scene_spec(beat, label_lang_code)
-    key = cache_key(spec, durs, label_lang_code, frame, _manim_version())
+    key = cache_key(spec, durs, label_lang_code, frame, _manim_version(), marks)
     silent = _silent_path(cache_dir, label_lang_code, str(beat.get("id") or "beat"), key)
     if not silent.is_file() or silent.stat().st_size < 256:
         silent.parent.mkdir(parents=True, exist_ok=True)
@@ -242,7 +262,7 @@ def render_animated_clip(
             f"{frame[0]}x{frame[1]} steps {', '.join(f'{d:.2f}s' for d in durs)}",
             flush=True,
         )
-        _render_silent(beat, spec, durs, frame, fps, silent)
+        _render_silent(beat, spec, durs, marks, frame, fps, silent)
         silent.with_suffix(".json").write_text(
             json.dumps(
                 {"steps": durs, "frame": list(frame), "scene": spec.get("scene"), "lang": spec.get("lang")},
@@ -258,7 +278,7 @@ def render_animated_clip(
     return dest
 
 
-def _render_silent(beat, spec, durs, frame, fps, dest: Path) -> None:
+def _render_silent(beat, spec, durs, marks, frame, fps, dest: Path) -> None:
     import logging
 
     from manim import tempconfig
@@ -287,7 +307,7 @@ def _render_silent(beat, spec, durs, frame, fps, dest: Path) -> None:
                 "progress_bar": "none",
             }
         ):
-            scene = _make_scene(spec, durs)
+            scene = _make_scene(spec, durs, marks)
             scene.render(preview=False)
             movie = Path(scene.renderer.file_writer.movie_file_path)
         if not movie.is_file():
@@ -299,12 +319,13 @@ def _render_silent(beat, spec, durs, frame, fps, dest: Path) -> None:
         shutil.copy2(movie, dest)
 
 
-def _make_scene(spec: dict, durs: list[float]):
+def _make_scene(spec: dict, durs: list[float], marks: list | None = None):
     classes = _scene_types()
     scene_name = spec.get("scene")
     cls = classes[scene_name]
     scene = cls()
     scene.vf_durations = list(durs)
+    scene.vf_marks = [list(row) for row in (marks or [])]
     scene.vf_labels = spec.get("labels") or {}
     scene.vf_fonts = (latin_family(), cjk_family(str(spec.get("lang") or "en")))
     raw_count = spec.get("count", None)
@@ -465,6 +486,48 @@ def _scene_types() -> dict:
             if rest > frame / 2:
                 self.wait(rest)
 
+        def marks_for(self, index: int) -> list:
+            rows = getattr(self, "vf_marks", None) or []
+            if 0 <= index < len(rows):
+                return list(rows[index])
+            return []
+
+        def spend_marked(self, index: int, anims: list, marks: list, intro=None) -> None:
+            """Land each motion as its count word is spoken. The step still lasts its full hold."""
+            total = 0.0
+            durs = getattr(self, "vf_durations", []) or []
+            if 0 <= index < len(durs):
+                total = float(durs[index])
+            fps = max(float(config.frame_rate or 15), 1.0)
+            frame = 1.0 / fps
+            if not marks or len(marks) != len(anims) or total <= frame / 2:
+                if intro is not None and anims:
+                    self.spend(index, intro, LaggedStart(*anims, lag_ratio=0.12))
+                else:
+                    self.spend_each(index, anims)
+                return
+            t = 0.0
+            if intro is not None:
+                intro_t = min(0.45, max(frame, total * 0.18), total)
+                self.play(intro, run_time=intro_t)
+                t = intro_t
+            for i, anim in enumerate(anims):
+                land = min(total, max(0.0, float(marks[i])))
+                nxt = float(marks[i + 1]) if i + 1 < len(marks) else total
+                gap = max(frame, nxt - land)
+                hop = min(0.34, max(frame, gap * 0.5))
+                start = min(total, max(t, land - hop))
+                if start - t > frame / 2:
+                    self.wait(start - t)
+                    t = start
+                run = min(hop, max(0.0, total - t))
+                if run <= frame / 2:
+                    break
+                self.play(anim, run_time=run)
+                t += run
+            if total - t > frame / 2:
+                self.wait(total - t)
+
     class TenAndOnes(_Board):
         def construct(self):
             count = max(10, min(20, int(self.vf_count)))
@@ -487,41 +550,65 @@ def _scene_types() -> dict:
                     dot.move_to(cells[i].get_center())
             extras = [dots[i] for i in range(len(cells), len(dots))]
             gap = 0.72
-            if extras:
-                span = (len(extras) - 1) * gap
-                if portrait:
-                    origin = frames.get_bottom() + DOWN * 0.75
-                    for i, dot in enumerate(extras):
-                        dot.move_to(origin + RIGHT * (i * gap - span / 2))
-                else:
-                    origin = frames.get_right() + RIGHT * 0.75
-                    for i, dot in enumerate(extras):
-                        dot.move_to(origin + DOWN * (i * gap - span / 2))
             title = styled(labels.get("title") or "", latin, cjk, 40)
             ten_label = styled(labels.get("one_ten") or "", latin, cjk, 34)
-            ten_label.next_to(frames, DOWN, buff=0.22)
             ones_label = styled(labels.get("ones") or " ", latin, cjk, 34) if ones_n else None
-            if ones_label is not None and extras:
-                lowest = min(extras, key=lambda dot: float(dot.get_center()[1]))
-                ones_label.next_to(lowest, DOWN, buff=0.36)
+            if extras and portrait:
+                ten_label.next_to(frames, DOWN, buff=0.16)
+                span = (len(extras) - 1) * gap
+                y = float(ten_label.get_bottom()[1]) - 0.36 - 0.28
+                x0 = float(frames.get_center()[0])
+                for i, dot in enumerate(extras):
+                    dot.move_to([x0 + i * gap - span / 2, y, 0])
+                if ones_label is not None:
+                    ones_label.next_to(VGroup(*extras), DOWN, buff=0.2)
+            elif extras:
+                origin = frames.get_right() + RIGHT * 0.75
+                span = (len(extras) - 1) * gap
+                for i, dot in enumerate(extras):
+                    dot.move_to(origin + DOWN * (i * gap - span / 2))
+                ten_label.next_to(frames, DOWN, buff=0.22)
+                if ones_label is not None:
+                    lowest = min(extras, key=lambda dot: float(dot.get_center()[1]))
+                    ones_label.next_to(lowest, DOWN, buff=0.36)
+            else:
+                ten_label.next_to(frames, DOWN, buff=0.22)
             eq = equation(list(labels.get("equation") or [str(count)]), latin)
             anchor = VGroup(ten_label, ones_label) if ones_label is not None else ten_label
             eq.next_to(anchor, DOWN, buff=0.32)
             span = [frames, *extras] if extras else [frames]
             title.move_to([_span_x(*span), float(frames.get_top()[1]) + 0.35 + float(title.height) / 2, 0])
-            board = VGroup(title, frames, dots, ten_label, eq)
+            from manim import Circle
+
+            # Invisible discs the size of a counter, so the starting group
+            # cannot overlap and settle() keeps every disc inside the frame.
+            anchors = VGroup(*[
+                Circle(radius=0.28, stroke_opacity=0, fill_opacity=0) for _ in range(count)
+            ])
+            cols = 4 if count >= 8 else max(1, count)
+            anchors.arrange_in_grid(rows=(count + cols - 1) // cols, cols=cols, buff=0.2)
+            if portrait:
+                anchors.next_to(frames, UP, buff=0.32)
+                title.next_to(anchors, UP, buff=0.22)
+            else:
+                anchors.next_to(frames, LEFT, buff=0.4)
+                span = [anchors, frames, *extras] if extras else [anchors, frames]
+                top = max(float(m.get_top()[1]) for m in span)
+                title.move_to([_span_x(*span), top + 0.28 + float(title.height) / 2, 0])
+            board = VGroup(title, frames, dots, anchors, ten_label, eq)
             if ones_label is not None:
                 board.add(ones_label)
             settle(board)
             targets = [dot.get_center().copy() for dot in dots]
-            left = frames.get_left() + LEFT * 1.3
-            for i, dot in enumerate(dots):
-                col = i % 4
-                row = i // 4
-                dot.move_to(left + RIGHT * col * 0.34 + DOWN * row * 0.36)
+            for dot, pin in zip(dots, anchors):
+                dot.move_to(pin.get_center())
             self.add(frames, dots)
             moves = [dot.animate.move_to(target) for dot, target in zip(dots, targets)]
-            self.spend(0, FadeIn(title), LaggedStart(*moves, lag_ratio=0.08))
+            counted = self.marks_for(0)
+            if counted and len(counted) == len(moves):
+                self.spend_marked(0, moves, counted, intro=FadeIn(title))
+            else:
+                self.spend(0, FadeIn(title), LaggedStart(*moves, lag_ratio=0.08))
             ring = SurroundingRectangle(frames, color=GOLD, buff=0.12, stroke_width=6)
             step2 = [FadeIn(ten_label), Create(ring)]
             if ones_label is not None:
@@ -545,26 +632,44 @@ def _scene_types() -> dict:
             portrait = config.frame_width < config.frame_height
             gap = 0.72
             extras = list(extra_dots)
-            if extras:
-                span = (len(extras) - 1) * gap
-                if portrait:
-                    origin = cells.get_bottom() + DOWN * 0.75
-                    for i, dot in enumerate(extras):
-                        dot.move_to(origin + RIGHT * (i * gap - span / 2))
-                else:
-                    origin = cells.get_right() + RIGHT * 0.75
-                    for i, dot in enumerate(extras):
-                        dot.move_to(origin + DOWN * (i * gap - span / 2))
             title = styled(labels.get("title") or "", latin, cjk, 40)
             ten_label = styled(labels.get("one_ten") or "", latin, cjk, 34)
-            ten_label.next_to(cells, DOWN, buff=0.22)
             ones_label = styled(labels.get("ones") or " ", latin, cjk, 34) if ones_n else None
-            if ones_label is not None and extras:
-                lowest = min(extras, key=lambda dot: float(dot.get_center()[1]))
-                ones_label.next_to(lowest, DOWN, buff=0.36)
-            span = [cells, *extras] if extras else [cells]
-            title.move_to([_span_x(*span), float(cells.get_top()[1]) + 0.35 + float(title.height) / 2, 0])
-            board = VGroup(title, cells, ten_dots, ten_label)
+            if extras and portrait:
+                # The label sits between the frame and the ones, with a gap
+                # taller than the counters, so it cannot cover them.
+                ten_label.next_to(cells, DOWN, buff=0.16)
+                span = (len(extras) - 1) * gap
+                y = float(ten_label.get_bottom()[1]) - 0.36 - 0.28
+                x0 = float(cells.get_center()[0])
+                for i, dot in enumerate(extras):
+                    dot.move_to([x0 + i * gap - span / 2, y, 0])
+                if ones_label is not None:
+                    ones_label.next_to(VGroup(*extras), DOWN, buff=0.2)
+            elif extras:
+                origin = cells.get_right() + RIGHT * 0.75
+                span = (len(extras) - 1) * gap
+                for i, dot in enumerate(extras):
+                    dot.move_to(origin + DOWN * (i * gap - span / 2))
+                ten_label.next_to(cells, DOWN, buff=0.22)
+                if ones_label is not None:
+                    ones_label.next_to(min(extras, key=lambda dot: float(dot.get_center()[1])), DOWN, buff=0.36)
+            else:
+                ten_label.next_to(cells, DOWN, buff=0.22)
+            from manim import Circle
+
+            anchors = VGroup(*[
+                Circle(radius=0.28, stroke_opacity=0, fill_opacity=0) for _ in range(10)
+            ])
+            anchors.arrange_in_grid(rows=5, cols=2, buff=0.16)
+            if portrait:
+                anchors.next_to(cells, UP, buff=0.28)
+                title.next_to(anchors, UP, buff=0.2)
+            else:
+                anchors.next_to(cells, LEFT, buff=0.36)
+                span_mobs = [anchors, cells, *extras] if extras else [anchors, cells]
+                title.move_to([_span_x(*span_mobs), float(cells.get_top()[1]) + 0.35 + float(title.height) / 2, 0])
+            board = VGroup(title, cells, ten_dots, anchors, ten_label)
             if ones_n:
                 board.add(extra_dots)
             if ones_label is not None:
@@ -572,16 +677,8 @@ def _scene_types() -> dict:
             settle(board)
             ten_targets = [dot.get_center().copy() for dot in ten_dots]
             extra_targets = [dot.get_center().copy() for dot in extra_dots]
-            # A short stack in the left margin. The frame stays where settle put it.
-            col_gap = 0.64
-            row_gap = 0.36
-            radius = 0.28
-            right_col_x = float(cells.get_left()[0]) - 0.5 - radius
-            mid_y = float(cells.get_center()[1])
-            for i, dot in enumerate(ten_dots):
-                col = i % 2
-                row = i // 2
-                dot.move_to([right_col_x - (1 - col) * col_gap, mid_y + (2 - row) * row_gap, 0])
+            for dot, pin in zip(ten_dots, anchors):
+                dot.move_to(pin.get_center())
             self.spend(
                 0,
                 FadeIn(title),
@@ -763,7 +860,11 @@ def _scene_types() -> dict:
                         dot.animate.set_fill(GREEN, opacity=1),
                         num.animate.set_opacity(1),
                     ))
-                self.spend_each(1, lights)
+                counted = self.marks_for(1)
+                if counted and len(counted) == len(lights):
+                    self.spend_marked(1, lights, counted)
+                else:
+                    self.spend_each(1, lights)
                 self.spend(2, FadeIn(question), FadeIn(answer), FadeIn(note))
 
     class NumberTrack(_Board):
@@ -780,48 +881,55 @@ def _scene_types() -> dict:
             start = min(high, max(low, start))
             end = min(high, max(low, end))
             values = list(range(low, high + 1))
-            portrait = config.frame_width < config.frame_height
             crosses = min(start, end) < 10 < max(start, end)
-            if (not portrait) and any(v < 10 for v in values) and any(v > 10 for v in values) and 10 in values:
-                rows = [[v for v in values if v <= 10], [v for v in values if v > 10]]
-            else:
-                cols = 7 if portrait and len(values) > 12 else 6 if portrait and len(values) > 7 else (
-                    len(values) if len(values) <= 11 else (len(values) + 1) // 2
-                )
-                cols = max(1, cols)
-                rows = [values[i:i + cols] for i in range(0, len(values), cols)]
-            longest = max(len(row) for row in rows)
+            # One row whenever the cells stay readable, so a hop across 10 is
+            # a sideways move. A narrow frame snakes: the next number sits
+            # beside the previous one, including the turn onto the next row.
+            pw = int(getattr(config, "pixel_width", 0) or 1920)
+            ph = int(getattr(config, "pixel_height", 0) or 1080)
+            cols = track_columns(len(values), pw, ph)
+            gap = 0.08
             usable = float(config.frame_width) - 1.15
-            gap = 0.07
-            cell = min(0.82, max(0.36, (usable - gap * (longest - 1)) / longest))
-            row_gap = cell * 0.28
+            cell = min(0.82, max(0.34, (usable - gap * (cols - 1)) / cols))
+            row_gap = cell * 0.34
+            slots: dict[int, tuple[int, int]] = {}
+            row_i, col_i, direction = 0, 0, 1
+            for i, value in enumerate(values):
+                slots[value] = (row_i, col_i)
+                if i == len(values) - 1:
+                    break
+                nxt = col_i + direction
+                if nxt < 0 or nxt >= cols:
+                    row_i += 1
+                    direction *= -1
+                else:
+                    col_i = nxt
             cells = {}
             numerals = VGroup()
             grid = VGroup()
-            for r, row in enumerate(rows):
-                for c, value in enumerate(row):
-                    x = (c - (len(row) - 1) / 2) * (cell + gap)
-                    y = -r * (cell + row_gap)
-                    box = RoundedRectangle(
-                        width=cell,
-                        height=cell * 0.86,
-                        corner_radius=0.08,
-                        stroke_color=NAVY,
-                        stroke_width=4 if value == 10 else 2.5,
-                        fill_color=WHITE,
-                        fill_opacity=1,
-                    )
-                    box.move_to([x, y, 0])
-                    num = Text(str(value), font=latin, font_size=36, color=NAVY)
-                    if num.height > cell * 0.52:
-                        num.scale(cell * 0.52 / num.height)
-                    if num.width > cell * 0.78:
-                        num.scale(cell * 0.78 / num.width)
-                    num.move_to(box)
-                    num.set_z_index(4)
-                    cells[value] = box
-                    numerals.add(num)
-                    grid.add(box)
+            for value, (r, c) in slots.items():
+                x = (c - (cols - 1) / 2) * (cell + gap)
+                y = -r * (cell + row_gap)
+                box = RoundedRectangle(
+                    width=cell,
+                    height=cell * 0.86,
+                    corner_radius=0.08,
+                    stroke_color=NAVY,
+                    stroke_width=4 if value == 10 else 2.5,
+                    fill_color=WHITE,
+                    fill_opacity=1,
+                )
+                box.move_to([x, y, 0])
+                num = Text(str(value), font=latin, font_size=36, color=NAVY)
+                if num.height > cell * 0.52:
+                    num.scale(cell * 0.52 / num.height)
+                if num.width > cell * 0.78:
+                    num.scale(cell * 0.78 / num.width)
+                num.move_to(box)
+                num.set_z_index(4)
+                cells[value] = box
+                numerals.add(num)
+                grid.add(box)
             shift = grid.get_center()
             grid.shift(-shift)
             numerals.shift(-shift)
@@ -852,14 +960,169 @@ def _scene_types() -> dict:
             board = VGroup(title, grid, numerals, marker, start_line, foot)
             settle(board)
             step_by = 1 if end >= start else -1
-            path = list(range(start + step_by, end + step_by, step_by)) if start != end else []
-            hops = [marker.animate.move_to(cells[n].get_center()) for n in path if n in cells]
-            self.spend(0, FadeIn(title), FadeIn(grid), FadeIn(numerals), FadeIn(marker), FadeIn(start_line))
-            self.spend_each(1, hops)
+            visits = list(range(start, end + step_by, step_by)) if start != end else [start]
+            counted = self.marks_for(1)
+            if counted and len(counted) == len(visits):
+                marker.set_opacity(0)
+                marker.move_to(cells[start].get_center())
+                hops = [marker.animate.set_opacity(1)]
+                hops += [marker.animate.move_to(cells[n].get_center()) for n in visits[1:] if n in cells]
+                self.spend(0, FadeIn(title), FadeIn(grid), FadeIn(numerals), FadeIn(start_line))
+                self.spend_marked(1, hops, counted)
+            else:
+                path = visits[1:]
+                hops = [marker.animate.move_to(cells[n].get_center()) for n in path if n in cells]
+                self.spend(0, FadeIn(title), FadeIn(grid), FadeIn(numerals), FadeIn(marker), FadeIn(start_line))
+                self.spend_each(1, hops)
             shown = [FadeIn(answer), FadeIn(step)]
             if cross is not None and crosses:
                 shown.append(FadeIn(cross))
             self.spend(2, *shown)
+
+    class LessonHook(_Board):
+        """The title arrives, then the lesson's objects, with the opening question."""
+
+        def construct(self):
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            motif = str(labels.get("motif") or "counters")
+            grade = str(labels.get("grade") or "")
+            if len(grade) <= 3 and any(ord(ch) > 127 for ch in grade):
+                kicker = VGroup(*[
+                    Text(ch, font=cjk, font_size=52, color="#5C6B7A") for ch in grade
+                ]).arrange(RIGHT, buff=0.2)
+            else:
+                kicker = Text(grade or " ", font=latin, font_size=40, color="#5C6B7A")
+            title = styled(labels.get("title") or "", latin, cjk, 54)
+            cue = self._hook_cue(motif, latin, cjk)
+            title.next_to(kicker, DOWN, buff=0.28)
+            cue.next_to(title, DOWN, buff=0.4)
+            settle(VGroup(kicker, title, cue))
+            total = float((self.vf_durations or [2.0])[0] or 0)
+            fps = max(float(config.frame_rate or 15), 1.0)
+            frame = 1.0 / fps
+            if total <= frame:
+                self.add(kicker, title, cue)
+                return
+            a = max(frame, total * 0.22)
+            b = max(frame, total * 0.24)
+            c = max(frame, total * 0.36)
+            used = a + b + c
+            if used > total:
+                scale = total / used
+                a, b, c = a * scale, b * scale, c * scale
+            self.play(FadeIn(kicker), run_time=a)
+            self.play(FadeIn(title), run_time=b)
+            bits = list(cue) if len(cue) > 1 else [cue]
+            self.play(LaggedStart(*[FadeIn(bit) for bit in bits], lag_ratio=0.18), run_time=c)
+            rest = total - (a + b + c)
+            if rest > frame / 2:
+                self.wait(rest)
+
+        def _hook_cue(self, motif: str, latin: str, cjk: str):
+            if motif == "ten_frame":
+                frame = ten_cells()
+                frame.scale(0.85)
+                dots = VGroup(*[counter(GREEN, 0.22) for _ in range(10)])
+                for dot, cell in zip(dots, frame):
+                    dot.move_to(cell)
+                return VGroup(frame, dots)
+            if motif == "track":
+                return _mini_track(range(8, 13), 12, latin)
+            dots = VGroup(*[counter(GREEN, 0.26) for _ in range(5)])
+            dots.arrange(RIGHT, buff=0.18)
+            return dots
+
+    class LessonTakeaway(_Board):
+        """Each spoken line fades in beside a small cue. Earlier lines stay."""
+
+        def construct(self):
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            motif = str(labels.get("motif") or "counters")
+            title = styled(labels.get("title") or "", latin, cjk, 40)
+            rows = []
+            for i, line in enumerate(labels.get("lines") or ["", "", ""]):
+                cue = _takeaway_cue(motif, i, latin)
+                words = _wrapped(str(line or " "), latin, cjk, 30)
+                row = VGroup(cue, words).arrange(RIGHT, buff=0.28)
+                rows.append(row)
+            stack = VGroup(*rows).arrange(DOWN, buff=0.32, aligned_edge=LEFT)
+            title.next_to(stack, UP, buff=0.36)
+            board = VGroup(title, stack)
+            board.move_to(UP * 0.1)
+            settle(board)
+            self.spend(0, FadeIn(title), FadeIn(rows[0]))
+            self.spend(1, FadeIn(rows[1]))
+            self.spend(2, FadeIn(rows[2]))
+
+    def _wrapped(text: str, latin: str, cjk: str, size: int):
+        raw = (text or "").strip() or " "
+        parts: list[str] = []
+        buf = ""
+        limit = 18 if any("\u4e00" <= ch <= "\u9fff" for ch in raw) else 32
+        for ch in raw:
+            buf += ch
+            if ch in ".!?。！？" and len(buf.strip()) > 6:
+                parts.append(buf.strip())
+                buf = ""
+            elif ch == " " and len(buf) >= limit:
+                parts.append(buf.strip())
+                buf = ""
+        if buf.strip():
+            parts.append(buf.strip())
+        lines = VGroup(*[styled(part, latin, cjk, size) for part in (parts or [raw])])
+        lines.arrange(DOWN, buff=0.06, aligned_edge=LEFT)
+        return lines
+
+    def _mini_track(values, marked, latin: str):
+        cells = VGroup()
+        nums = VGroup()
+        for value in values:
+            box = RoundedRectangle(
+                width=0.46, height=0.4, corner_radius=0.06,
+                stroke_color=NAVY, stroke_width=2.5, fill_color=WHITE, fill_opacity=1,
+            )
+            num = Text(str(value), font=latin, font_size=18, color=NAVY)
+            num.move_to(box)
+            cells.add(box)
+            nums.add(num)
+        cells.arrange(RIGHT, buff=0.05)
+        for num, box in zip(nums, cells):
+            num.move_to(box)
+        marker = RoundedRectangle(
+            width=0.42, height=0.34, corner_radius=0.05,
+            stroke_color=GOLD, stroke_width=4, fill_color=GOLD, fill_opacity=0.4,
+        )
+        marker.set_z_index(1)
+        marker.move_to(cells[list(values).index(marked)])
+        return VGroup(cells, nums, marker)
+
+    def _takeaway_cue(motif: str, index: int, latin: str):
+        if motif == "ten_frame":
+            if index == 1:
+                frames = VGroup(ten_cells(), ten_cells()).arrange(RIGHT, buff=0.12)
+                frames.scale(0.28)
+                return frames
+            frame = ten_cells()
+            frame.scale(0.32)
+            return frame
+        if motif == "track":
+            if index == 0:
+                return _mini_track(range(9, 13), 12, latin)
+            if index == 1:
+                return _mini_track(range(17, 21), 17, latin)
+            return _mini_track([12, 11, 10, 9], 9, latin)
+        if index == 2:
+            tray = RoundedRectangle(
+                width=1.3, height=0.7, corner_radius=0.1,
+                stroke_color=NAVY, stroke_width=3, fill_color=WHITE, fill_opacity=1,
+            )
+            return tray
+        n = 5 if index == 1 else 3
+        dots = VGroup(*[counter(GREEN, 0.12) for _ in range(n)])
+        dots.arrange(RIGHT, buff=0.08)
+        return dots
 
     _scene_types._cache = {
         "one_ten": OneTen,
@@ -867,6 +1130,8 @@ def _scene_types() -> dict:
         "make_ten": MakeTen,
         "count_objects": CountObjects,
         "number_track": NumberTrack,
+        "lesson_hook": LessonHook,
+        "lesson_takeaway": LessonTakeaway,
     }
     return _scene_types._cache
 

@@ -20,7 +20,7 @@ from anim import (
     scene_problems,
     step_durations,
 )
-from scene_registry import REGISTRY, crosses_ten
+from scene_registry import REGISTRY, count_marks, crosses_ten, schedule_marks, track_columns
 from mux import CAP_TIME_WORDS
 from slides import LAYOUT_VERSION, STAGEABLE, lesson_stamp, stage_plan
 from theme import load_theme
@@ -525,6 +525,54 @@ class AnimatedRenderTest(unittest.TestCase):
                 capture_output=True, text=True, check=False,
             )
             self.assertEqual(tall_probe.stdout.strip(), "360,640", tall_probe.stderr)
+            self._frames_inside(root / "define-zh_hk.mp4")
+            self._frames_inside(root / "thirteen-zh_hk.mp4")
+            for beat, frame_px, name, pages in (
+                (define, (360, 640), "define-tall", ["Ten.", "One ten.", "Outside?", "Three."]),
+                (THIRTEEN, (360, 640), "thirteen-tall", ["Count.", "Ten.", "Thirteen."]),
+            ):
+                dest = root / f"{name}.mp4"
+                holds = [1.2 / len(pages)] * len(pages)
+                render_animated_clip(
+                    beat, {"format": "9:16"}, label_lang_code="en",
+                    holds=holds, still_idx=list(range(len(pages))), pages=pages,
+                    audio=audio, dest=dest, cache_dir=cache, captions=False,
+                    progress_bar=False, frame=frame_px, fps=10,
+                )
+                probe = subprocess.run(
+                    ["ffprobe", "-v", "error", "-select_streams", "v:0",
+                     "-show_entries", "stream=width,height", "-of", "csv=p=0", str(dest)],
+                    capture_output=True, text=True, check=False,
+                )
+                self.assertEqual(probe.stdout.strip(), f"{frame_px[0]},{frame_px[1]}", probe.stderr)
+                self._frames_inside(dest)
+
+    def _frames_inside(self, video, frac=0.025):
+        """Every decoded frame keeps the outer margin cream. Counters must not enter it."""
+        from PIL import Image
+
+        from ff import check_call
+
+        folder = Path(str(video) + "-frames")
+        folder.mkdir(exist_ok=True)
+        check_call(["-y", "-i", str(video), str(folder / "f%03d.png")], timeout=60)
+        cream = (247, 244, 238)
+        frames = sorted(folder.glob("f*.png"))
+        self.assertGreaterEqual(len(frames), 4, video.name)
+
+        def near(px):
+            return all(abs(px[i] - cream[i]) <= 14 for i in range(3))
+
+        for path in frames:
+            img = Image.open(path).convert("RGB")
+            w, h = img.size
+            mx = max(2, int(round(w * frac)))
+            my = max(2, int(round(h * frac)))
+            samples = [img.getpixel((x, y)) for y in range(my) for x in range(0, w, 3)]
+            samples += [img.getpixel((x, y)) for x in range(mx) for y in range(0, h, 5)]
+            samples += [img.getpixel((w - 1 - x, y)) for x in range(mx) for y in range(0, h, 5)]
+            ratio = sum(map(near, samples)) / len(samples)
+            self.assertGreater(ratio, 0.90, f"{video.name} {path.name} margin {ratio:.2f}")
 
 
 P1 = ROOT / "lessons" / "P1"
@@ -548,7 +596,10 @@ class SceneRegistryTest(unittest.TestCase):
     def test_registry_order_and_step_counts(self):
         self.assertEqual(
             list(REGISTRY),
-            ["one_ten", "ten_and_ones", "make_ten", "count_objects", "number_track"],
+            [
+                "one_ten", "ten_and_ones", "make_ten", "count_objects", "number_track",
+                "lesson_hook", "lesson_takeaway",
+            ],
         )
         self.assertEqual(REGISTRY["one_ten"].steps, 4)
         self.assertEqual(REGISTRY["count_objects"].steps, 3)
@@ -638,9 +689,9 @@ class SceneRegistryTest(unittest.TestCase):
 
     def test_p1_lessons_validate_and_keep_traditional_labels(self):
         expected = {
-            "P1-NUM-01": ["title_card", "count_objects", "count_objects", "count_objects", "takeaway"],
-            "P1-NUM-02": ["title_card", "one_ten", "ten_and_ones", "ten_and_ones", "takeaway"],
-            "P1-NUM-03": ["title_card", "number_track", "number_track", "number_track", "takeaway"],
+            "P1-NUM-01": ["lesson_hook", "count_objects", "count_objects", "count_objects", "lesson_takeaway"],
+            "P1-NUM-02": ["lesson_hook", "one_ten", "ten_and_ones", "ten_and_ones", "lesson_takeaway"],
+            "P1-NUM-03": ["lesson_hook", "number_track", "number_track", "number_track", "lesson_takeaway"],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -668,6 +719,77 @@ class SceneRegistryTest(unittest.TestCase):
         track = load_lesson(P1 / "P1-NUM-03.yaml")
         hops = [beat for beat in track["beats"] if beat.get("scene") == "number_track"]
         self.assertEqual([(b["start"], b["end"]) for b in hops], [(9, 12), (20, 17), (12, 9)])
+
+    def test_track_stays_one_row_in_landscape_and_snakes_in_portrait(self):
+        self.assertEqual(track_columns(21, 1920, 1080), 21)
+        self.assertLess(track_columns(21, 1080, 1920), 21)
+        self.assertGreaterEqual(track_columns(21, 1080, 1920), 4)
+
+    def test_count_marks_follow_the_spoken_numbers(self):
+        words = [
+            {"text": "Start", "start": 0.05},
+            {"text": "nine", "start": 0.62},
+            {"text": "one", "start": 3.01},
+            {"text": "Nine", "start": 4.237},
+            {"text": "Ten", "start": 5.612},
+            {"text": "Eleven", "start": 7.0},
+            {"text": "Twelve", "start": 8.588},
+            {"text": "Twelve", "start": 10.062},
+        ]
+        marks = count_marks(words, 4.24, 5.82, 4)
+        self.assertIsNotNone(marks)
+        self.assertAlmostEqual(marks[0], 0.0, places=2)
+        self.assertAlmostEqual(marks[1], 5.612 - 4.24, places=2)
+        self.assertAlmostEqual(marks[2], 7.0 - 4.24, places=2)
+        self.assertAlmostEqual(marks[3], 8.588 - 4.24, places=2)
+        beat = {
+            "visual": "animated",
+            "scene": "number_track",
+            "low": 0,
+            "high": 20,
+            "start": 9,
+            "end": 12,
+        }
+        scheduled = schedule_marks(beat, [4.24, 5.82, 4.31], words)
+        self.assertEqual(scheduled[0], [])
+        self.assertEqual(len(scheduled[1]), 4)
+        # Not enough words for a 1..13 count: leave the step evenly spaced.
+        few = count_marks(words, 0.0, 4.0, 13)
+        self.assertIsNone(few)
+
+    def test_xiao_yi_kicker_is_two_separated_marks(self):
+        from PIL import Image, ImageDraw
+
+        from slides import _paint_title_kicker
+
+        image = Image.new("RGB", (1920, 200), (247, 244, 238))
+        _paint_title_kicker(ImageDraw.Draw(image), "小一", 32, 30, (92, 107, 122))
+        pix = image.load()
+        cols = []
+        for x in range(image.width):
+            ink = any(pix[x, y][0] < 180 for y in range(image.height))
+            cols.append(ink)
+        runs = []
+        on = False
+        for x, ink in enumerate(cols):
+            if ink and not on:
+                start = x
+                on = True
+            elif on and not ink:
+                runs.append((start, x - 1))
+                on = False
+        if on:
+            runs.append((start, len(cols) - 1))
+        # 小's own strokes leave a narrow hole. Merge those, and keep the gap before 一.
+        merged = [runs[0]]
+        for start, end in runs[1:]:
+            if start - merged[-1][1] <= 10:
+                merged[-1] = (merged[-1][0], end)
+            else:
+                merged.append((start, end))
+        self.assertEqual(len(merged), 2, runs)
+        gap = merged[1][0] - merged[0][1] - 1
+        self.assertGreaterEqual(gap, 12, merged)
 
 
 if __name__ == "__main__":

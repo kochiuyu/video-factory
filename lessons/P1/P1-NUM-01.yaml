@@ -10,18 +10,16 @@ duration_target_s: 58
 clock: own
 beats:
 - id: hook
-  visual: title_card
+  visual: animated
+  scene: lesson_hook
+  motif: counters
   seconds: 8
-  kicker: P1
-  kicker_en: P1
-  kicker_zh: 小一
-  kicker_zh_hk: 小一
   title_en: Count carefully
   title_zh: 逐一数清楚
   title_zh_hk: 逐一數清楚
-  en: How many counters are there?
-  zh: 这些圆片有几个？
-  zh_hk: 呢啲圓片有幾多個呀？
+  s1_en: How many counters are there?
+  s1_zh: 这些圆片有几个？
+  s1_zh_hk: 呢啲圓片有幾多個呀？
 
 - id: count
   visual: animated
@@ -72,7 +70,9 @@ beats:
   s3_zh_hk: 零個。冇嘢可以數。我哋寫0。
 
 - id: takeaway
-  visual: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: counters
   seconds: 12
   kicker: Again
   kicker_en: Again

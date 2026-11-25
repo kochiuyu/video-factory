@@ -976,6 +976,28 @@ def _active_outline(draw, box, theme, radius=24, width=6) -> None:
     draw.rounded_rectangle([x0 - width, y0 - width, x1 + width, y1 + width], radius=radius + width, outline=theme["gold"], width=width)
 
 
+def _paint_title_kicker(draw, label: str, size: int, top: float, fill) -> None:
+    """Small tag above a title.
+
+    ``小一`` at the shared 32px size reads as a left arrow: the horizontal
+    stroke of 一 continues the midline of 小. Those two marks are drawn
+    larger and apart. Every other kicker stays on the shared path.
+    """
+    if label == "小一":
+        size = 54
+        gap = 18
+        fonts = [font_for_char(ch, size, True) for ch in label]
+        widths = [draw.textlength(ch, font=font) for ch, font in zip(label, fonts)]
+        total = sum(widths) + gap * (len(label) - 1)
+        x = (W - total) / 2
+        for ch, font, tw in zip(label, fonts, widths):
+            draw.text((x, top), ch, font=font, fill=fill)
+            x += tw + gap
+        return
+    tw = mixed_length(draw, label, size, True)
+    draw_mixed(draw, ((W - tw) / 2, top), label, size, fill, True)
+
+
 def render_title_card(draw, beat, lesson, code, theme, second=None) -> None:
     title = field2(beat, "title", code, second) or field2(lesson, "title", code, second)
     primary, secondary = _split_pair(title)
@@ -1005,16 +1027,16 @@ def render_title_card(draw, beat, lesson, code, theme, second=None) -> None:
         sub = int(getattr(sf, "size", 40) or 40)
         s_lines = wrap(draw, secondary, sf, max_w, False) or [secondary]
         block = 0
+        kicker_gap = 78 if kicker_label == "小一" else 56
         if kicker_label:
-            block += 56
+            block += kicker_gap
         block += int(main * max(1.08, _line_factor(primary) - 0.08)) * len(p_lines) + 16
         block += int(sub * 1.06) * len(s_lines)
         block += 36  # gold bar
         top = _title_card_top(block)
         if kicker_label:
-            tw = mixed_length(draw, kicker_label, ksize, True)
-            draw_mixed(draw, ((W - tw) / 2, top), kicker_label, ksize, theme["muted"], True)
-            top += 56
+            _paint_title_kicker(draw, kicker_label, ksize, top, theme["muted"])
+            top += kicker_gap
         for ln in p_lines:
             tw = mixed_length(draw, ln, main, True)
             draw_mixed(draw, ((W - tw) / 2, top), ln, main, theme["navy"], True)
@@ -1029,15 +1051,15 @@ def render_title_card(draw, beat, lesson, code, theme, second=None) -> None:
         size = int(getattr(font, "size", SCALE["hook"]) or SCALE["hook"])
         lines = wrap(draw, primary, font, max_w, True) or [primary]
         block = 0
+        kicker_gap = 78 if kicker_label == "小一" else 56
         if kicker_label:
-            block += 56
+            block += kicker_gap
         block += int(size * 1.08) * len(lines)
         block += 36  # gold bar
         top = _title_card_top(block)
         if kicker_label:
-            tw = mixed_length(draw, kicker_label, ksize, True)
-            draw_mixed(draw, ((W - tw) / 2, top), kicker_label, ksize, theme["muted"], True)
-            top += 56
+            _paint_title_kicker(draw, kicker_label, ksize, top, theme["muted"])
+            top += kicker_gap
         for ln in lines:
             tw = mixed_length(draw, ln, size, True)
             draw_mixed(draw, ((W - tw) / 2, top), ln, size, theme["navy"], True)

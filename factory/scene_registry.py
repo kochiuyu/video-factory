@@ -82,6 +82,7 @@ def _copy(lang: str) -> dict[str, str]:
             "one_less": "One less",
             "cross_ten": "Cross ten",
             "start_at": "Start at {n}",
+            "grade": "P1",
         },
         "zh": {
             "ten_title": "一个十和一些一",
@@ -104,6 +105,7 @@ def _copy(lang: str) -> dict[str, str]:
             "one_less": "少一个",
             "cross_ten": "跨过十",
             "start_at": "从{n}开始",
+            "grade": "小一",
         },
         "zh_hk": {
             "ten_title": "一個十和一些一",
@@ -126,6 +128,7 @@ def _copy(lang: str) -> dict[str, str]:
             "one_less": "少一個",
             "cross_ten": "跨過十",
             "start_at": "由{n}開始",
+            "grade": "小一",
         },
     }
     return table[label_lang(lang)]
@@ -360,11 +363,187 @@ class NumberTrack(SceneKind):
         }
 
 
+_MOTIFS = {"counters", "ten_frame", "track"}
+
+
+def _motif(beat: dict) -> str:
+    return str((beat or {}).get("motif") or "").strip()
+
+
+def _beat_line(beat: dict, lang: str, index: int) -> str:
+    """Spoken line s1/s2/s3 for this language. The on-screen takeaway uses the same words."""
+    code = label_lang(lang)
+    suffix = {"en": "en", "zh": "zh", "zh_hk": "zh_hk"}[code]
+    return str(beat.get(f"s{index}_{suffix}") or "").strip()
+
+
+def _title_line(beat: dict, lang: str) -> str:
+    code = label_lang(lang)
+    suffix = {"en": "en", "zh": "zh", "zh_hk": "zh_hk"}[code]
+    return str(beat.get(f"title_{suffix}") or beat.get("title_en") or "").strip()
+
+
+class LessonHook(SceneKind):
+    """Title and the lesson's objects arrive with the opening question.
+
+    One spoken line. ``motif`` is ``counters``, ``ten_frame``, or ``track``.
+    """
+
+    name = "lesson_hook"
+    steps = 1
+
+    def problems(self, beat: dict) -> list[str]:
+        if _motif(beat) not in _MOTIFS:
+            return [f"lesson_hook motif must be counters, ten_frame, or track, not {_motif(beat)!r}."]
+        if not _title_line(beat, "en"):
+            return ["lesson_hook needs title_en (and title_zh / title_zh_hk)."]
+        return []
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        copy = _copy(lang)
+        return {
+            "grade": copy["grade"],
+            "title": _title_line(beat, lang),
+            "motif": _motif(beat),
+        }
+
+    def parameters(self, beat: dict) -> dict:
+        return {"motif": _motif(beat), "title": _title_line(beat, "en")}
+
+
+class LessonTakeaway(SceneKind):
+    """Each spoken line appears with a small cue: counters, a ten-frame, or a track.
+
+    Three spoken lines. The words on screen are those same lines.
+    """
+
+    name = "lesson_takeaway"
+    steps = 3
+
+    def problems(self, beat: dict) -> list[str]:
+        if _motif(beat) not in _MOTIFS:
+            return [f"lesson_takeaway motif must be counters, ten_frame, or track, not {_motif(beat)!r}."]
+        return []
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        copy = _copy(lang)
+        return {
+            "title": _title_line(beat, lang) or copy["grade"],
+            "lines": [_beat_line(beat, lang, i) for i in (1, 2, 3)],
+            "motif": _motif(beat),
+        }
+
+    def parameters(self, beat: dict) -> dict:
+        return {"motif": _motif(beat)}
+
+
+def track_columns(count: int, pixel_width: int, pixel_height: int, min_cell: float = 0.42) -> int:
+    """Numbers on one row of the track.
+
+    A 0–20 track fits on one row at 16:9, so a hop across 10 stays a sideways
+    move. 9:16 wraps only when a cell would be smaller than ``min_cell``.
+    """
+    count = max(1, int(count))
+    pw = max(1, int(pixel_width))
+    ph = max(1, int(pixel_height))
+    usable = 8.0 * (pw / ph) - 1.15
+    gap = 0.08
+
+    def cell(cols: int) -> float:
+        return (usable - gap * (max(cols, 1) - 1)) / max(cols, 1)
+
+    if cell(count) >= min_cell:
+        return count
+    cols = count
+    while cols > 1 and cell(cols) < min_cell:
+        cols -= 1
+    return max(1, cols)
+
+
+def count_event(beat: dict) -> tuple[int, int] | None:
+    """(step index, how many count landings) for a beat that counts aloud.
+
+    The landing count includes the number the marker is already on, so
+    "Nine. Ten. Eleven. Twelve." is four landings. ``ten_and_ones`` counts
+    during its first line. A beat whose speech is not a count returns None
+    from :func:`count_marks` and keeps an even motion.
+    """
+    scene = str((beat or {}).get("scene") or "").strip()
+    if scene == "number_track":
+        start, end = _as_int(beat.get("start")), _as_int(beat.get("end"))
+        if start is None or end is None or start == end:
+            return None
+        return 1, abs(end - start) + 1
+    if scene == "count_objects" and str(beat.get("mode") or "").strip() == "count":
+        count = _as_int(beat.get("count"))
+        if count is None or count < 1:
+            return None
+        return 1, count
+    if scene == "ten_and_ones":
+        count = _as_int(beat.get("count"))
+        if count is None or count < 1:
+            return None
+        return 0, count
+    return None
+
+
+def count_marks(words, step_start: float, step_dur: float, n: int) -> list[float] | None:
+    """Offsets inside one step for ``n`` count landings, from TTS word starts.
+
+    A count line is often a short lead-in and then one word per number, so the
+    last ``n`` words that begin inside the step are the count. Returns None
+    when the sidecar does not have that many words; the scene then spaces the
+    motions evenly across the step. Audio is never trimmed.
+    """
+    n = int(n)
+    if n <= 0 or step_dur <= 0 or not words:
+        return None
+    begin = float(step_start)
+    end = begin + float(step_dur)
+    inside: list[float] = []
+    for word in words:
+        if not isinstance(word, dict):
+            continue
+        try:
+            start = float(word.get("start"))
+        except (TypeError, ValueError):
+            continue
+        if begin - 0.08 <= start < end - 0.04:
+            inside.append(start)
+    if len(inside) < n:
+        return None
+    chosen = inside[-n:]
+    offsets = [max(0.0, start - begin) for start in chosen]
+    if any(offsets[i] > offsets[i + 1] + 1e-6 for i in range(len(offsets) - 1)):
+        return None
+    if offsets[-1] >= float(step_dur):
+        return None
+    return offsets
+
+
+def schedule_marks(beat: dict, durations: list[float], words) -> list[list[float]]:
+    """Per-step landing offsets. An empty list means even spacing for that step."""
+    n_steps = step_count(beat)
+    marks: list[list[float]] = [[] for _ in range(n_steps)]
+    event = count_event(beat)
+    if not event or not durations:
+        return marks
+    index, n = event
+    if not 0 <= index < len(durations):
+        return marks
+    found = count_marks(words, sum(float(d) for d in durations[:index]), float(durations[index]), n)
+    if found:
+        marks[index] = [round(float(x), 3) for x in found]
+    return marks
+
+
 register(OneTen())
 register(TenAndOnes())
 register(MakeTen())
 register(CountObjects())
 register(NumberTrack())
+register(LessonHook())
+register(LessonTakeaway())
 
 SCENES = tuple(REGISTRY)
 STEP_COUNTS = {name: kind.steps for name, kind in REGISTRY.items()}

@@ -31,7 +31,7 @@ beats:
   seconds: 16
   s1_en: "Nine green counters fill the frame except one space. Eight gold counters wait beside it."
   s1_zh: "九个绿色圆片放进十格框，还空一格。八个金色圆片等在旁边。"
-  s1_zh_hk: "九個綠色圓片放進十格框，仲空一格。八個金色圓片等喺旁邊。"
+  s1_zh_hk: "九個綠色圓片放入十格框，仲空一格。八個金色圓片等喺旁邊。"
   s2_en: "Move one gold counter into the empty space. Nine plus one equals ten."
   s2_zh: "把一个金色圆片移进空格。九加一等于十。"
   s2_zh_hk: "將一個金色圓片移入空格。九加一等於十。"

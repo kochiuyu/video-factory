@@ -66,6 +66,28 @@ MAKE = {
 }
 
 
+# Simplified forms whose traditional counterparts differ. Shared characters
+# such as 十 and 一 are not in this set.
+SIMPLIFIED_ONLY = set("凑个两还满这们边进绿圆东国学时间说话语对发经过门问为会后云块体只从来里")
+
+
+def _label_text(labels) -> str:
+    parts: list[str] = []
+
+    def walk(value) -> None:
+        if isinstance(value, str):
+            parts.append(value)
+        elif isinstance(value, (list, tuple)):
+            for item in value:
+                walk(item)
+        elif isinstance(value, dict):
+            for item in value.values():
+                walk(item)
+
+    walk(labels)
+    return "".join(parts)
+
+
 class AnimatedSchemaTest(unittest.TestCase):
     def test_demo_numbers_and_valid_lesson(self):
         self.assertEqual(labels_for(THIRTEEN, "en")["equation"], ["13", "=", "10", "+", "3"])
@@ -80,6 +102,21 @@ class AnimatedSchemaTest(unittest.TestCase):
         self.assertEqual(validate(lesson, source=DEMO), [])
         self.assertEqual(lesson["beats"][0]["count"], 13)
         self.assertEqual((lesson["beats"][1]["a"], lesson["beats"][1]["b"]), (9, 8))
+
+    def test_zh_hk_demo_labels_have_no_simplified_only_characters(self):
+        lesson = load_lesson(DEMO)
+        for beat in lesson["beats"]:
+            traditional = _label_text(labels_for(beat, "zh_hk"))
+            simplified = _label_text(labels_for(beat, "zh"))
+            found = sorted({ch for ch in traditional if ch in SIMPLIFIED_ONLY})
+            self.assertEqual(found, [], traditional)
+            self.assertNotEqual(traditional, simplified)
+            self.assertTrue(simplified)
+        make = lesson["beats"][1]
+        self.assertEqual(labels_for(make, "zh_hk")["title"], "湊成十")
+        self.assertEqual(labels_for(make, "zh")["title"], "凑成十")
+        self.assertIn("放入", make["s1_zh_hk"])
+        self.assertNotIn("放進", make["s1_zh_hk"])
 
     def test_rejects_bad_scene_and_missing_cantonese(self):
         bad = dict(THIRTEEN, scene="graph")

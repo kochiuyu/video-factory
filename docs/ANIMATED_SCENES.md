@@ -34,7 +34,7 @@ On Debian or Ubuntu, a source build of the Cairo binding also needs `pkg-config`
 - `ten_and_ones` takes `count` from 10 to 20. The demo uses 13: ten counters fill the frame, three sit beside it, and the sentence is `13 = 10 + 3`.
 - `make_ten` takes `a` (1–9) and `b`. `b` must be large enough to fill the empty cells and `a + b` must stay within 20. The demo uses 9 and 8. One of the eight moves into the empty cell: `9 + 1 = 10`, then `10 + 7 = 17`.
 
-Speech is the factory's staged lines, one line per motion: `s1`, `s2`, and `s3` in English and 简体. If any `zh_hk` field is set, all three Cantonese lines are required, so a Cantonese voice is not handed Mandarin. Write the Cantonese the way it is spoken (`係`, `喺`, `仲`). On-screen labels use written Chinese: 简体 for `zh`, 繁體 for `zh_hk`.
+Speech is the factory's staged lines, one line per motion: `s1`, `s2`, and `s3` in English and 简体. If any `zh_hk` field is set, all three Cantonese lines are required, so a Cantonese voice is not handed Mandarin. Write the Cantonese the way it is spoken (`係`, `喺`, `仲`, `放入`). On-screen labels come from the per-language table in `factory/anim.py`: 简体 for `zh` (`凑成十`), 繁體 for `zh_hk` (`湊成十`).
 
 Number sentences are plain text, not LaTeX, so a TeX install is not required.
 

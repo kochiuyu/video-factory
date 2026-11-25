@@ -15,7 +15,7 @@ from pathlib import Path
 from cache import digest_obj, file_fingerprint
 
 # Three authored motions per scene. Each one is one s1 / s2 / s3 narration line.
-STEP_COUNTS = {"one_ten": 3, "ten_and_ones": 3, "make_ten": 3}
+STEP_COUNTS = {"one_ten": 4, "ten_and_ones": 3, "make_ten": 3}
 SCENES = tuple(STEP_COUNTS)
 
 CREAM = "#F7F4EE"
@@ -517,85 +517,47 @@ def _scene_types() -> dict:
         parts.arrange(RIGHT, buff=0.22)
         return parts
 
-    def _fit_visible(mobs, points) -> None:
-        """Keep a start pose on screen, and move recorded targets with it.
+    def _safe_limits():
+        """Caption-safe box in Manim units, matching the slide chip.
 
-        A new VGroup would reparent the counters, so the bounds are measured
-        from the mobjects themselves.
+        The bottom is the top of the largest caption the mux can draw, plus a
+        small gap. The picture is centred in the frame and only lifted if it
+        would cross that line.
         """
-        if not mobs:
-            return
-        margin = 0.3
-        left_lim = -config.frame_width / 2 + margin
-        right_lim = config.frame_width / 2 - margin
-        top_lim = config.frame_height / 2 - config.frame_height * 0.04
-        bot_lim = -config.frame_height / 2 + config.frame_height * 0.17
+        from mux import caption_safe_top
 
-        def edges():
-            return (
-                min(float(m.get_left()[0]) for m in mobs),
-                max(float(m.get_right()[0]) for m in mobs),
-                min(float(m.get_bottom()[1]) for m in mobs),
-                max(float(m.get_top()[1]) for m in mobs),
-            )
+        fh = float(config.frame_height)
+        fw = float(config.frame_width)
+        ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+        safe_px = caption_safe_top(ph)
+        bottom = fh / 2 - (safe_px / float(ph)) * fh + 0.12
+        top = fh / 2 - 0.28
+        side = 0.4
+        return -fw / 2 + side, fw / 2 - side, bottom, top
 
-        left, right, bottom, top = edges()
-        width = right - left
-        height = top - bottom
-        max_w = right_lim - left_lim
-        max_h = top_lim - bot_lim
-        factor = 1.0
-        if width > max_w and width > 0:
-            factor = min(factor, max_w / width)
-        if height > max_h and height > 0:
-            factor = min(factor, max_h / height)
-        if factor < 0.999:
-            center_x = (left + right) / 2
-            center_y = (bottom + top) / 2
-            about = mobs[0].get_center().copy()
-            about[0] = center_x
-            about[1] = center_y
-            about[2] = 0.0
-            for mob in mobs:
-                mob.scale(factor, about_point=about)
-            for point in points:
-                point[0] = center_x + (float(point[0]) - center_x) * factor
-                point[1] = center_y + (float(point[1]) - center_y) * factor
-            left, right, bottom, top = edges()
-        dx = 0.0
-        dy = 0.0
-        if left < left_lim:
-            dx = left_lim - left
-        elif right > right_lim:
-            dx = right_lim - right
-        if bottom < bot_lim:
-            dy = bot_lim - bottom
-        elif top > top_lim:
-            dy = top_lim - top
-        if dx or dy:
-            for mob in mobs:
-                mob.shift(RIGHT * dx + UP * dy)
-            for point in points:
-                point[0] += dx
-                point[1] += dy
+    def _span_x(*mobs) -> float:
+        left = min(float(m.get_left()[0]) for m in mobs)
+        right = max(float(m.get_right()[0]) for m in mobs)
+        return (left + right) / 2
 
     def settle(group):
-        max_w = config.frame_width * 0.9
-        max_h = config.frame_height * 0.76
+        left_lim, right_lim, bot_lim, top_lim = _safe_limits()
+        max_w = right_lim - left_lim
+        max_h = top_lim - bot_lim
         if group.width > max_w and group.width > 0:
             group.scale(max_w / group.width)
         if group.height > max_h and group.height > 0:
             group.scale(max_h / group.height)
-        group.move_to(UP * config.frame_height * 0.05)
-        bottom_limit = -config.frame_height / 2 + config.frame_height * 0.17
-        top_limit = config.frame_height / 2 - config.frame_height * 0.04
-        if group.get_top()[1] > top_limit:
-            group.shift(DOWN * (group.get_top()[1] - top_limit))
-        if group.get_bottom()[1] < bottom_limit:
-            group.shift(UP * (bottom_limit - group.get_bottom()[1]))
-        if group.get_top()[1] > top_limit and group.height > 0:
-            group.scale(0.9)
-            group.shift(UP * (bottom_limit - group.get_bottom()[1]))
+        # Same centre as a slide title: the middle of the frame, not the
+        # upper band. Lift only when the caption chip would cover the bottom.
+        group.move_to(UP * 0)
+        if group.get_bottom()[1] < bot_lim:
+            group.shift(UP * (bot_lim - float(group.get_bottom()[1])))
+        if group.get_top()[1] > top_lim:
+            group.shift(DOWN * (float(group.get_top()[1]) - top_lim))
+        if group.get_bottom()[1] < bot_lim and group.height > 0:
+            group.scale(0.92)
+            group.shift(UP * (bot_lim - float(group.get_bottom()[1])))
 
     class _Board(Scene):
         def spend(self, index: int, *anims) -> None:
@@ -657,7 +619,8 @@ def _scene_types() -> dict:
             eq = equation(list(labels.get("equation") or [str(count)]), latin)
             anchor = VGroup(ten_label, ones_label) if ones_label is not None else ten_label
             eq.next_to(anchor, DOWN, buff=0.32)
-            title.next_to(frames, UP, buff=0.35)
+            span = [frames, *extras] if extras else [frames]
+            title.move_to([_span_x(*span), float(frames.get_top()[1]) + 0.35 + float(title.height) / 2, 0])
             board = VGroup(title, frames, dots, ten_label, eq)
             if ones_label is not None:
                 board.add(ones_label)
@@ -711,7 +674,8 @@ def _scene_types() -> dict:
             if ones_label is not None and extras:
                 lowest = min(extras, key=lambda dot: float(dot.get_center()[1]))
                 ones_label.next_to(lowest, DOWN, buff=0.36)
-            title.next_to(cells, UP, buff=0.35)
+            span = [cells, *extras] if extras else [cells]
+            title.move_to([_span_x(*span), float(cells.get_top()[1]) + 0.35 + float(title.height) / 2, 0])
             board = VGroup(title, cells, ten_dots, ten_label)
             if ones_n:
                 board.add(extra_dots)
@@ -720,26 +684,16 @@ def _scene_types() -> dict:
             settle(board)
             ten_targets = [dot.get_center().copy() for dot in ten_dots]
             extra_targets = [dot.get_center().copy() for dot in extra_dots]
-            col_gap = 0.86
-            row_gap = 0.86
-            cols = 5
-            radius = 0.30
-            pile_at = cells.get_left() + LEFT * ((cols - 1) * col_gap + radius + 0.55)
+            # A short stack in the left margin. The frame stays where settle put it.
+            col_gap = 0.64
+            row_gap = 0.36
+            radius = 0.28
+            right_col_x = float(cells.get_left()[0]) - 0.5 - radius
+            mid_y = float(cells.get_center()[1])
             for i, dot in enumerate(ten_dots):
-                col = i % cols
-                row = i // cols
-                dot.move_to(pile_at + RIGHT * col * col_gap + DOWN * (row - 0.5) * row_gap)
-            left = min(float(ten_dots.get_left()[0]), float(cells.get_left()[0]))
-            right = max(float(cells.get_right()[0]), float(extra_dots.get_right()[0]) if ones_n else float(cells.get_right()[0]))
-            top = max(float(ten_dots.get_top()[1]), float(cells.get_top()[1]))
-            title.move_to([ (left + right) / 2, top + 0.32 + float(title.height) / 2, 0 ])
-            points = ten_targets + extra_targets
-            shown = [title, cells, ten_dots, ten_label]
-            if ones_n:
-                shown.append(extra_dots)
-            if ones_label is not None:
-                shown.append(ones_label)
-            _fit_visible(shown, points)
+                col = i % 2
+                row = i // 2
+                dot.move_to([right_col_x - (1 - col) * col_gap, mid_y + (2 - row) * row_gap, 0])
             self.spend(
                 0,
                 FadeIn(title),
@@ -752,13 +706,11 @@ def _scene_types() -> dict:
             if ones_n and ones_label is not None:
                 for dot, target in zip(extra_dots, extra_targets):
                     dot.move_to(target)
-                self.spend(
-                    2,
-                    LaggedStart(*[FadeIn(dot) for dot in extra_dots], lag_ratio=0.12),
-                    FadeIn(ones_label),
-                )
+                self.spend(2, LaggedStart(*[FadeIn(dot) for dot in extra_dots], lag_ratio=0.12))
+                self.spend(3, FadeIn(ones_label))
             else:
                 self.spend(2)
+                self.spend(3)
 
     class MakeTen(_Board):
         def construct(self):
@@ -782,7 +734,11 @@ def _scene_types() -> dict:
             else:
                 golds.next_to(cells, RIGHT, buff=0.5)
             title = styled(labels.get("title") or "", latin, cjk, 40)
-            title.next_to(cells, UP, buff=0.35)
+            title.move_to([
+                _span_x(cells, golds),
+                float(cells.get_top()[1]) + 0.35 + float(title.height) / 2,
+                0,
+            ])
             eq1 = equation(list(labels.get("equation1") or []), latin)
             eq2 = equation(list(labels.get("equation2") or []), latin)
             eq1.next_to(VGroup(cells, golds), DOWN, buff=0.4)

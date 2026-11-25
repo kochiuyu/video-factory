@@ -33,17 +33,17 @@ Any beat may set `visual: animated`. A hook, a definition, a middle step, or a t
 
 `scene` is `one_ten`, `ten_and_ones`, or `make_ten`.
 
-- `one_ten` takes `count` from 10 to 20. Ten counters start as single ones, gather into one frame, and the frame is labelled "one ten". The ones that do not fit then sit beside it. The demo uses 13, so three ones sit beside the frame.
+- `one_ten` takes `count` from 10 to 20 and four spoken lines. Ten counters start as single ones, gather into one frame, and the frame is labelled "one ten". The ones that do not fit then sit beside it, the child is asked how many, and the last line answers. The demo uses 13, so the answer is three.
 - `ten_and_ones` takes `count` from 10 to 20. The demo uses 13: ten counters fill the frame, three sit beside it, and the sentence is `13 = 10 + 3`.
 - `make_ten` takes `a` (1–9) and `b`. `b` must be large enough to fill the empty cells and `a + b` must stay within 20. The demo uses 9 and 8. One of the eight moves into the empty cell: `9 + 1 = 10`, then `10 + 7 = 17`.
 
-Speech is the factory's staged lines, one line per motion: `s1`, `s2`, and `s3` in English and 简体. If any `zh_hk` field is set, all three Cantonese lines are required, so a Cantonese voice is not handed Mandarin. Write the Cantonese the way it is spoken (`係`, `喺`, `仲`, `放入`). On-screen labels come from the per-language table in `factory/anim.py`: 简体 for `zh` (`凑成十`), 繁體 for `zh_hk` (`湊成十`).
+Speech is the factory's staged lines, one line per motion: `s1`, `s2`, and `s3` in English and 简体. `one_ten` also has `s4`, the short answer. If any `zh_hk` field is set, every Cantonese line for that scene is required, so a Cantonese voice is not handed Mandarin. Write the Cantonese the way it is spoken (`係`, `喺`, `仲`). On-screen labels come from the per-language table in `factory/anim.py`: 简体 for `zh` (`凑成十`), 繁體 for `zh_hk` (`湊成十`).
 
 Number sentences are plain text, not LaTeX, so a TeX install is not required.
 
 ## Timing
 
-Each beat is still one MP3. After the voices are generated, the step lengths are the caption holds from `pages_for_stages` for those three lines. The motion plays, then holds, for that many seconds. The 0.4s breath at the end of the beat stays on the last step. A longer Cantonese line makes the counters travel more slowly and rest longer. The MP3 is not trimmed.
+Each beat is still one MP3. After the voices are generated, the step lengths are the caption holds from `pages_for_stages` for those lines. The motion plays, then holds, for that many seconds. The 0.4s breath at the end of the beat stays on the last step. A longer Cantonese line makes the counters travel more slowly and rest longer. The MP3 is not trimmed.
 
 Caption cards are drawn on top of the moving picture for those same holds. The SRT writer is unchanged. English, Mandarin, and Cantonese are separate renders, because the labels and the audio lengths both differ.
 

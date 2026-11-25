@@ -112,6 +112,10 @@ class AnimatedSchemaTest(unittest.TestCase):
         self.assertEqual(labels_for(by_id["define"], "en")["one_ten"], "one ten")
         self.assertEqual(labels_for(by_id["define"], "zh_hk")["ones"], "3個一")
         self.assertEqual(labels_for(by_id["define"], "zh")["title"], "满框就是一个十")
+        self.assertEqual(by_id["define"]["s4_en"], "Three.")
+        self.assertEqual(by_id["define"]["s4_zh"], "三个。")
+        self.assertEqual(by_id["define"]["s4_zh_hk"], "三個。")
+        self.assertEqual(by_id["takeaway"]["title_zh_hk"], "先搵十")
         self.assertEqual(by_id["thirteen"]["count"], 13)
         self.assertEqual((by_id["make-ten"]["a"], by_id["make-ten"]["b"]), (9, 8))
         self.assertIn("q1_en", by_id["takeaway"])
@@ -131,7 +135,7 @@ class AnimatedSchemaTest(unittest.TestCase):
         make = next(beat for beat in animated if beat["id"] == "make-ten")
         self.assertEqual(labels_for(make, "zh_hk")["title"], "湊成十")
         self.assertEqual(labels_for(make, "zh")["title"], "凑成十")
-        self.assertIn("放入", make["s1_zh_hk"])
+        self.assertEqual(make["s1_zh_hk"], "九個喺框入面。八個喺隔籬等緊。")
         self.assertNotIn("放進", make["s1_zh_hk"])
 
     def test_rejects_bad_scene_and_missing_cantonese(self):
@@ -311,9 +315,6 @@ class AnimatedRenderTest(unittest.TestCase):
             )
             self.assertGreater(probe_duration(audio), 1.0)
             frame = (640, 360)
-            durs = [0.35, 0.35, 0.35]
-            holds = durs
-            still_idx = [0, 1, 2]
             cache = root / "anim"
             define = {
                 "id": "define",
@@ -322,20 +323,26 @@ class AnimatedRenderTest(unittest.TestCase):
                 "count": 13,
                 "s1_en": "Ten single counters.",
                 "s2_en": "A full frame is one ten.",
-                "s3_en": "Three ones sit beside it.",
+                "s3_en": "How many are outside?",
+                "s4_en": "Three.",
                 "s1_zh": "十个圆片。",
                 "s2_zh": "满框就是一个十。",
-                "s3_zh": "三个一留在旁边。",
+                "s3_zh": "外面有几个？",
+                "s4_zh": "三个。",
                 "s1_zh_hk": "十個圓片。",
                 "s2_zh_hk": "滿框就係一個十。",
-                "s3_zh_hk": "三個一留喺旁邊。",
+                "s3_zh_hk": "出面有幾多個？",
+                "s4_zh_hk": "三個。",
             }
             jobs = (
-                (define, "zh_hk", ["十個圓片。", "滿框就係一個十。", "三個一留喺旁邊。"]),
+                (define, "zh_hk", ["十個圓片。", "滿框就係一個十。", "出面有幾多個？", "三個。"]),
                 (THIRTEEN, "zh_hk", ["十三個圓片。", "一個十。", "十加三。"]),
                 (MAKE, "en", ["Nine and eight.", "Nine plus one equals ten.", "Ten plus seven equals seventeen."]),
             )
             for beat, lang, pages in jobs:
+                n = len(pages)
+                holds = [1.2 / n] * n
+                still_idx = list(range(n))
                 dest = root / f"{beat['id']}-{lang}.mp4"
                 render_animated_clip(
                     beat,

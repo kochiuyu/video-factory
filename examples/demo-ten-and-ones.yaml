@@ -41,6 +41,9 @@ beats:
   s3_en: How many are outside?
   s3_zh: 外面有几个？
   s3_zh_hk: 出面有幾多個？
+  s4_en: Three.
+  s4_zh: 三个。
+  s4_zh_hk: 三個。
 
 - id: thirteen
   visual: animated
@@ -64,8 +67,8 @@ beats:
   b: 8
   seconds: 18
   s1_en: Nine are in the box. Eight are waiting.
-  s1_zh: 九个在框里。八个在等。
-  s1_zh_hk: 九個放入框。八個等緊。
+  s1_zh: 九个在框里。八个在旁边等。
+  s1_zh_hk: 九個喺框入面。八個喺隔籬等緊。
   s2_en: One goes in the space. How many are left?
   s2_zh: 一个放进空格。还剩几个？
   s2_zh_hk: 一個放入空格。仲剩幾多個？
@@ -80,9 +83,9 @@ beats:
   kicker_en: Again
   kicker_zh: 再说
   kicker_zh_hk: 再講
-  title_en: Ten first
-  title_zh: 先说十
-  title_zh_hk: 先講十
+  title_en: Find the ten first
+  title_zh: 先找十
+  title_zh_hk: 先搵十
   q1_en: 13 = 10 + 3
   q1_zh: 13 = 10 + 3
   q1_zh_hk: 13 = 10 + 3

@@ -1,0 +1,104 @@
+# P1-NUM-03. Mirrors MathQuiz path numberstart / lesson countsteps.
+# Guided track numbers: count on 9 to 12, count back 20 to 17, count back 12 to 9.
+# The lesson's opening count of 7 counters is the same idea as P1-NUM-01, so it is not repeated here.
+# https://github.com/kochiuyu/mathquiz learn-foundations.js (lesson countsteps).
+id: P1-NUM-03
+title_en: Count on and count back
+title_zh: 接着数，倒着数
+title_zh_hk: 順住數，倒轉數
+duration_target_s: 53
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: track
+  seconds: 7
+  title_en: Count on and count back
+  title_zh: 接着数，倒着数
+  title_zh_hk: 順住數，倒轉數
+  s1_en: What comes after nine?
+  s1_zh: 九后面是几？
+  s1_zh_hk: 九後面係幾多呀？
+
+- id: count-on
+  visual: animated
+  scene: number_track
+  low: 0
+  high: 20
+  start: 9
+  end: 12
+  seconds: 12
+  s1_en: Start at nine. Do not start again at one.
+  s1_zh: 从九开始。不用再从一开始。
+  s1_zh_hk: 由九開始。唔使再由一開始。
+  s2_en: Nine. Ten. Eleven. Twelve.
+  s2_zh: 九，十，十一，十二。
+  s2_zh_hk: 九，十，十一，十二。
+  s3_en: Twelve. Each number is one more.
+  s3_zh: 十二。每个数都多一个。
+  s3_zh_hk: 十二。每個數都多一個。
+
+- id: count-back
+  visual: animated
+  scene: number_track
+  low: 0
+  high: 20
+  start: 20
+  end: 17
+  seconds: 12
+  s1_en: Now start at twenty. Count back.
+  s1_zh: 现在从二十往回数。
+  s1_zh_hk: 而家由二十倒轉數。
+  s2_en: Twenty. Nineteen. Eighteen. Seventeen.
+  s2_zh: 二十，十九，十八，十七。
+  s2_zh_hk: 二十，十九，十八，十七。
+  s3_en: Seventeen. Each number is one less.
+  s3_zh: 十七。每个数都少一个。
+  s3_zh_hk: 十七。每個數都少一個。
+
+- id: across-ten
+  visual: animated
+  scene: number_track
+  low: 0
+  high: 20
+  start: 12
+  end: 9
+  seconds: 12
+  s1_en: Can we count back across ten?
+  s1_zh: 往回数，能跨过十吗？
+  s1_zh_hk: 倒轉數，可唔可以跨過十呀？
+  s2_en: Twelve. Eleven. Ten. Nine.
+  s2_zh: 十二，十一，十，九。
+  s2_zh_hk: 十二，十一，十，九。
+  s3_en: "Yes. We land on nine."
+  s3_zh: 可以。我们数到九。
+  s3_zh_hk: 可以。我哋數到九。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: track
+  seconds: 10
+  kicker: Again
+  kicker_en: Again
+  kicker_zh: 再说
+  kicker_zh_hk: 再講
+  title_en: One at a time
+  title_zh: 一次一个
+  title_zh_hk: 一次一個
+  q1_en: "9, 10, 11, 12"
+  q1_zh: "9、10、11、12"
+  q1_zh_hk: "9、10、11、12"
+  q2_en: "12, 11, 10, 9"
+  q2_zh: "12、11、10、9"
+  q2_zh_hk: "12、11、10、9"
+  s1_en: Count on means one more each time.
+  s1_zh: 顺着数，就是每次多一个。
+  s1_zh_hk: 順住數，就係每次多一個。
+  s2_en: Count back means one less each time.
+  s2_zh: 倒着数，就是每次少一个。
+  s2_zh_hk: 倒轉數，就係每次少一個。
+  s3_en: You can count back across ten.
+  s3_zh: 倒着数，也可以跨过十。
+  s3_zh_hk: 倒轉數，都可以跨過十。

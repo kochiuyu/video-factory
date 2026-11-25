@@ -1,0 +1,92 @@
+# P1-NUM-02. Mirrors MathQuiz path first / lesson tens, "A ten and some ones".
+# Guided numbers: a full frame is 10, 10 + 3 = 13, and 10 + 10 = 20.
+# Hook, define, and thirteen reuse examples/demo-ten-and-ones.yaml.
+# The 9 + 8 make-ten beat is not in this lesson.
+# https://github.com/kochiuyu/mathquiz learn-data.js (lessons tens).
+id: P1-NUM-02
+title_en: A ten and some ones
+title_zh: 一个十和几个一
+title_zh_hk: 一個十同幾個一
+duration_target_s: 66
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: ten_frame
+  seconds: 8
+  title_en: A ten and some ones
+  title_zh: 一个十和几个一
+  title_zh_hk: 一個十同幾個一
+  s1_en: What is thirteen?
+  s1_zh: 十三是什么？
+  s1_zh_hk: 十三係咩呀？
+
+- id: define
+  visual: animated
+  scene: one_ten
+  count: 13
+  seconds: 14
+  s1_en: Here are ten counters.
+  s1_zh: 这里有十个圆片。
+  s1_zh_hk: 呢度有十個圓片。
+  s2_en: This is one ten.
+  s2_zh: 这就是一个十。
+  s2_zh_hk: 呢個就係一個十。
+  s3_en: How many are outside?
+  s3_zh: 外面有几个？
+  s3_zh_hk: 出面有幾多個？
+  s4_en: Three.
+  s4_zh: 三个。
+  s4_zh_hk: 三個。
+
+- id: thirteen
+  visual: animated
+  scene: ten_and_ones
+  count: 13
+  seconds: 16
+  s1_en: Count with me. One, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen.
+  s1_zh: 我们一起数。一、二、三、四、五、六、七、八、九、十、十一、十二、十三。
+  s1_zh_hk: 我哋一齊數。一、二、三、四、五、六、七、八、九、十、十一、十二、十三。
+  s2_en: Ten and three.
+  s2_zh: 十和三。
+  s2_zh_hk: 十同三。
+  s3_en: Ten plus three is thirteen.
+  s3_zh: 十加三就是十三。
+  s3_zh_hk: 十加三就係十三。
+
+- id: twenty
+  visual: animated
+  scene: ten_and_ones
+  count: 20
+  seconds: 12
+  s1_en: Two full frames. Each frame is one ten.
+  s1_zh: 两个满框。每个框是一个十。
+  s1_zh_hk: 兩個滿框。每個框係一個十。
+  s2_en: How many counters now?
+  s2_zh: 现在一共有多少个？
+  s2_zh_hk: 而家一共有幾多個呀？
+  s3_en: Twenty. Ten plus ten is twenty.
+  s3_zh: 二十。十加十就是二十。
+  s3_zh_hk: 二十。十加十就係二十。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: ten_frame
+  seconds: 16
+  title_en: Find the ten first
+  title_zh: 先找十
+  title_zh_hk: 先搵十
+  s1_en: One full frame is one ten.
+  s1_zh: 一个满框，就是一个十。
+  s1_zh_hk: 一個滿框，就係一個十。
+  s2_en: Ten and three more make thirteen.
+  s2_zh: 十再多三个，就是十三。
+  s2_zh_hk: 十再多三個，就係十三。
+  s3_en: Two full frames make twenty.
+  s3_zh: 两个满框，就是二十。
+  s3_zh_hk: 兩個滿框，就係二十。
+  s4_en: Find the ten first. Then count the rest.
+  s4_zh: 先找十，再数剩下的。
+  s4_zh_hk: 先搵十，再數剩低嘅。

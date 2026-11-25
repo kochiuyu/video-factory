@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - factory/anim.py
+      - factory/scene_registry.py
       - factory/test_anim.py
       - factory/build.py
       - factory/validate.py
@@ -15,6 +16,7 @@ on:
     branches: [main]
     paths:
       - factory/anim.py
+      - factory/scene_registry.py
       - factory/test_anim.py
       - factory/build.py
       - factory/validate.py

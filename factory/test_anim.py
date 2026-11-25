@@ -227,6 +227,41 @@ class AnimatedTimingTest(unittest.TestCase):
             ["Ten", "and", "three", "more", "make", "thirteen."],
         )
 
+    def test_takeaway_grid_is_equal_cells(self):
+        from anim import (
+            TAKEAWAY_ROW_GAP,
+            TAKEAWAY_SIDE,
+            TAKEAWAY_TEXT_SHARE,
+            TAKEAWAY_VISUAL_FIT,
+            TAKEAWAY_VISUAL_SHARE,
+            takeaway_grid,
+        )
+
+        for pw, ph, n in ((1920, 1080, 4), (1920, 1080, 3), (1080, 1920, 4), (1080, 1920, 3)):
+            grid = takeaway_grid(pw, ph, n)
+            cells = grid["cells"]
+            self.assertEqual(len(cells), n)
+            heights = [cell["top"] - cell["bottom"] for cell in cells]
+            self.assertTrue(all(abs(height - heights[0]) < 1e-9 for height in heights))
+            for earlier, later in zip(cells, cells[1:]):
+                self.assertAlmostEqual(earlier["bottom"], later["top"], places=6)
+                self.assertGreater(earlier["bottom"], later["bottom"])
+            self.assertAlmostEqual(grid["left"], -grid["fw"] / 2 + TAKEAWAY_SIDE * grid["fw"], places=6)
+            self.assertAlmostEqual(grid["visual_of_cell"], min(TAKEAWAY_VISUAL_FIT, 1.0 - TAKEAWAY_ROW_GAP), places=6)
+            self.assertLessEqual(grid["visual_of_cell"], 1.0 - TAKEAWAY_ROW_GAP)
+            span = grid["rows_top"] - grid["rows_bottom"]
+            self.assertAlmostEqual(sum(heights), span, places=6)
+            self.assertGreaterEqual(span / grid["fh"], 0.75)
+            if grid["portrait"]:
+                self.assertAlmostEqual(grid["floor_px"], 52 * ph / 1920, places=4)
+                self.assertAlmostEqual(grid["vis_w"], grid["text_w"], places=6)
+            else:
+                self.assertAlmostEqual(grid["floor_px"], 44 * ph / 1080, places=4)
+                safe = grid["right"] - grid["left"]
+                self.assertAlmostEqual(grid["vis_w"], TAKEAWAY_VISUAL_SHARE * safe, places=6)
+                self.assertAlmostEqual(grid["text_w"], TAKEAWAY_TEXT_SHARE * safe, places=6)
+            self.assertGreaterEqual(grid["preferred_px"], grid["floor_px"])
+
     def test_import_does_not_load_manim(self):
         proc = subprocess.run(
             [sys.executable, "-c", "import sys; import anim; raise SystemExit(0 if 'manim' not in sys.modules else 1)"],
@@ -650,21 +685,18 @@ class AnimatedRenderTest(unittest.TestCase):
                 xs.append(self._gold_x(shot))
             self.assertTrue(all(xs[i] < xs[i + 1] - 4 for i in range(3)), xs)
 
-    def test_ten_recap_stays_inside_and_apart_in_both_aspects(self):
-        """The four-line ten recap keeps every picture and its sentence in the safe box.
+    def test_takeaway_grid_fills_cells_in_both_aspects(self):
+        """Each takeaway row stays in its cell, pictures stay apart, and the type meets the floor.
 
-        Frames on a line share one size. The sentence does not touch the pictures.
-        Checked for English, 简体, and Cantonese at 16:9 and 9:16, including the
-        frame where the ten is highlighted and the ones are still being counted.
+        Checked for the ten-frame recap, the counters recap, and the three-line
+        track recap, in English, 简体, and Cantonese, at 16:9 and 9:16.
         """
-        import math
         import subprocess
         import tempfile
 
         from PIL import Image
 
-        from anim import render_animated_clip
-        from mux import caption_safe_top
+        from anim import render_animated_clip, takeaway_grid
 
         beat = {
             "id": "takeaway",
@@ -709,48 +741,31 @@ class AnimatedRenderTest(unittest.TestCase):
             "s3_zh_hk": "搬吓佢哋，都係五個。",
             "s4_zh_hk": "乜都冇？就係零。",
         }
-        holds = [0.3, 0.3, 0.3, 0.5]
-        words = [
-            {"text": "Find", "start": 1.28},
-            {"text": "the", "start": 1.38},
-            {"text": "ten", "start": 1.48},
-            {"text": "first", "start": 1.58},
-            {"text": "Then", "start": 1.78},
-            {"text": "count", "start": 1.92},
-            {"text": "the", "start": 2.02},
-            {"text": "rest", "start": 2.08},
-        ]
+        track = {
+            "id": "takeaway",
+            "visual": "animated",
+            "scene": "lesson_takeaway",
+            "motif": "track",
+            "title_en": "One at a time",
+            "s1_en": "Count on means one more each time.",
+            "s2_en": "Count back means one less each time.",
+            "s3_en": "You can count back across ten.",
+            "title_zh": "一次一个",
+            "s1_zh": "顺着数，就是每次多一个。",
+            "s2_zh": "倒着数，就是每次少一个。",
+            "s3_zh": "倒着数，也可以跨过十。",
+            "title_zh_hk": "一次一個",
+            "s1_zh_hk": "順住數，就係每次多一個。",
+            "s2_zh_hk": "倒轉數，就係每次少一個。",
+            "s3_zh_hk": "倒轉數，都可以跨過十。",
+        }
+        cards = (("ten", beat, 4), ("count", counted, 4), ("track", track, 3))
 
-        def safe_box(w, h):
-            from mux import CAPTION_BOTTOM_PAD, CAPTION_SIZE_MAX, CAPTION_VERTICAL_PAD
+        def pix_y(grid, manim_y):
+            return (grid["fh"] / 2 - manim_y) / grid["fh"] * grid["ph"]
 
-            fw = 8.0 * w / h
-            fh = 8.0
-            line_h = max(30, int(CAPTION_SIZE_MAX * 1.28))
-            one_px = h - CAPTION_BOTTOM_PAD - (2 * CAPTION_VERTICAL_PAD + line_h)
-            three = fh / 2 - (caption_safe_top(h) / float(h)) * fh + 0.12
-            one = fh / 2 - (one_px / float(h)) * fh + 0.08
-            bot_lim = min(three, one)
-            top_lim = fh / 2 - 0.28
-
-            def pix_y(manim_y):
-                return (fh / 2 - manim_y) / fh * h
-
-            return (
-                math.ceil(0.4 / fw * w),
-                math.floor(pix_y(top_lim)),
-                math.floor((fw - 0.4) / fw * w),
-                math.ceil(pix_y(bot_lim)),
-                pix_y((top_lim + bot_lim) / 2),
-            )
-
-        def ink_at(px, x, y):
-            r, g, b = px[x, y]
-            return not (r > 232 and g > 226 and b > 216)
-
-        def green_at(px, x, y):
-            r, g, b = px[x, y]
-            return g > 90 and g > r + 25 and g > b + 15
+        def pix_x(grid, manim_x):
+            return (manim_x + grid["fw"] / 2) / grid["fw"] * grid["pw"]
 
         with tempfile.TemporaryDirectory(prefix="vf-recap-") as tmp:
             root = Path(tmp)
@@ -760,110 +775,143 @@ class AnimatedRenderTest(unittest.TestCase):
                  "-t", "3", "-c:a", "pcm_s16le", str(audio)],
                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
             )
-            for motif, card in (("ten", beat), ("count", counted)):
-              for lang, frame in (
-                ("en", (1280, 720)),
-                ("zh", (1280, 720)),
-                ("zh_hk", (1280, 720)),
-                ("en", (720, 1280)),
-                ("zh", (720, 1280)),
-                ("zh_hk", (720, 1280)),
-              ):
-                dest = root / f"{motif}-{lang}-{frame[0]}x{frame[1]}.mp4"
-                render_animated_clip(
-                    card, {"format": "9:16" if frame[1] > frame[0] else "16:9"},
-                    label_lang_code=lang, holds=holds, still_idx=[0, 1, 2, 3],
-                    pages=["a", "b", "c", "d"], audio=audio, dest=dest,
-                    cache_dir=root / "cache", captions=False, progress_bar=False,
-                    frame=frame, fps=8, words=words if motif == "ten" else None,
-                )
-                folder = root / f"frames-{motif}-{lang}-{frame[0]}x{frame[1]}"
-                folder.mkdir()
-                subprocess.check_call(
-                    ["ffmpeg", "-y", "-i", str(dest), str(folder / "f%03d.png")],
-                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                )
-                frames = sorted(folder.glob("f*.png"))
-                self.assertGreaterEqual(len(frames), 8, dest.name)
-                left, top, right, bottom, safe_mid = safe_box(*frame)
-                portrait = frame[1] > frame[0]
-                for path in frames:
-                    img = Image.open(path).convert("RGB")
-                    px = img.load()
-                    outside = 0
-                    for y in range(img.height):
-                        for x in range(img.width):
-                            if not ink_at(px, x, y):
-                                continue
-                            if x < left - 2 or x > right + 2 or y < top - 2 or y > bottom + 2:
-                                outside += 1
-                    self.assertEqual(outside, 0, f"{dest.name} {path.name} outside {outside}")
-                self._recap_block_is_centred(frames[-1], portrait, safe_mid, bottom - top)
+            for motif, card, steps in cards:
+                holds = [0.3] * (steps - 1) + [0.5]
+                for lang, frame in (
+                    ("en", (1280, 720)),
+                    ("zh", (1280, 720)),
+                    ("zh_hk", (1280, 720)),
+                    ("en", (720, 1280)),
+                    ("zh", (720, 1280)),
+                    ("zh_hk", (720, 1280)),
+                ):
+                    dest = root / f"{motif}-{lang}-{frame[0]}x{frame[1]}.mp4"
+                    render_animated_clip(
+                        card, {"format": "9:16" if frame[1] > frame[0] else "16:9"},
+                        label_lang_code=lang, holds=holds, still_idx=list(range(steps)),
+                        pages=["a"] * steps, audio=audio, dest=dest,
+                        cache_dir=root / "cache", captions=False, progress_bar=False,
+                        frame=frame, fps=8,
+                    )
+                    shot = root / f"{motif}-{lang}-{frame[0]}x{frame[1]}.png"
+                    duration = float(subprocess.check_output(
+                        ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                         "-of", "csv=p=0", str(dest)],
+                        text=True,
+                    ))
+                    last = max(0, int(duration * 8) - 1)
+                    subprocess.check_call(
+                        ["ffmpeg", "-y", "-i", str(dest), "-vf", f"select=eq(n\\,{last})",
+                         "-frames:v", "1", str(shot)],
+                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                    )
+                    self._takeaway_frame_matches_grid(shot, steps)
 
-    def _recap_block_is_centred(self, path, portrait: bool, safe_mid: float, safe_span: int):
-        """The finished card is centred in the caption band and the pictures are large."""
+    def _takeaway_frame_matches_grid(self, path, steps: int):
+        """Ink sits in its cell, pictures do not meet, and the body type meets the floor."""
         from PIL import Image
+
+        from anim import takeaway_grid
 
         img = Image.open(path).convert("RGB")
         px = img.load()
         w, h = img.size
+        grid = takeaway_grid(w, h, steps)
 
         def ink(x, y):
             r, g, b = px[x, y]
             return not (r > 232 and g > 226 and b > 216)
 
-        def green(x, y):
-            r, g, b = px[x, y]
-            return g > 90 and g > r + 25 and g > b + 15
+        def py(manim_y):
+            return (grid["fh"] / 2 - manim_y) / grid["fh"] * h
 
-        xs = [x for y in range(0, h, 2) for x in range(0, w, 2) if ink(x, y)]
-        ys = [y for y in range(h) if any(ink(x, y) for x in range(0, w, 4))]
-        self.assertTrue(xs and ys, path.name)
-        mid_y = (min(ys) + max(ys)) / 2
-        mid_x = (min(xs) + max(xs)) / 2
-        self.assertLess(abs(mid_y - safe_mid) / h, 0.09, f"{path.name} vertical centre {mid_y:.0f} vs {safe_mid:.0f}")
-        self.assertLess(abs(mid_x - w / 2) / w, 0.08, f"{path.name} horizontal centre")
-        self.assertGreaterEqual(max(ys) - min(ys), int(safe_span * 0.62), path.name)
+        def px_of(manim_x):
+            return (manim_x + grid["fw"] / 2) / grid["fw"] * w
 
-        green_rows = [y for y in range(h) if sum(1 for x in range(0, w, 2) if green(x, y)) > 2]
-        bands = []
-        start = prev = None
-        for y in green_rows:
-            if start is None:
-                start = prev = y
-            elif y - prev > 3:
-                bands.append((start, prev))
-                start = prev = y
-            else:
-                prev = y
-        if start is not None:
-            bands.append((start, prev))
-        widest = 0
-        for top, bot in bands:
-            gxs = [x for y in range(top, bot + 1, 2) for x in range(0, w, 2) if green(x, y)]
-            if not gxs or bot - top < 6:
-                continue
-            widest = max(widest, max(gxs) - min(gxs))
-        floor = 0.14 if portrait else 0.09
-        self.assertGreaterEqual(widest / w, floor, f"{path.name} visual width {widest / w:.3f}")
+        left = int(px_of(grid["left"]))
+        right = int(px_of(grid["right"]))
+        top = int(py(grid["top"]))
+        bottom = int(py(grid["rows_bottom"]))
+        outside = 0
+        ys = []
+        for y in range(h):
+            for x in range(0, w, 2):
+                if not ink(x, y):
+                    continue
+                ys.append(y)
+                if x < left - 3 or x > right + 3 or y < top - 3 or y > bottom + 3:
+                    outside += 1
+        self.assertEqual(outside, 0, f"{path.name} outside {outside}")
+        self.assertTrue(ys, path.name)
+        safe_span = bottom - top
+        self.assertGreaterEqual(max(ys) - min(ys), int(safe_span * 0.75), path.name)
 
-        if not portrait:
-            ink_rows = [y for y in range(h) if sum(1 for x in range(int(w * 0.45), w, 3) if ink(x, y)) > 2]
-            text_bands = 0
+        cell_px = []
+        for cell in grid["cells"]:
+            cell_px.append((int(py(cell["top"])), int(py(cell["bottom"]))))
+        for index, (cell_top, cell_bottom) in enumerate(cell_px):
+            if index + 1 < len(cell_px):
+                self.assertLessEqual(cell_bottom, cell_px[index + 1][0] + 1, path.name)
+            stray = 0
+            for y in range(max(0, cell_top), min(h, cell_bottom)):
+                for x in range(0, w, 3):
+                    if ink(x, y) and (x < left - 2 or x > right + 2):
+                        stray += 1
+            self.assertEqual(stray, 0, f"{path.name} row {index} outside")
+
+        # Pictures live in the visual slot. The empty band between those slots
+        # is at least a quarter of the row, so two pictures cannot touch.
+        vis_left = int(px_of(grid["vis_left"]))
+        vis_right = int(px_of(grid["vis_left"] + grid["vis_w"]))
+        cell_h = cell_px[0][1] - cell_px[0][0]
+        visual_rows = []
+        for cell_top, cell_bottom in cell_px:
+            zone_bottom = cell_bottom
+            if grid["portrait"]:
+                zone_bottom = cell_top + int(0.50 * (cell_bottom - cell_top))
+            found = [
+                y for y in range(max(0, cell_top), min(h, zone_bottom))
+                if sum(1 for x in range(max(0, vis_left), min(w, vis_right), 3) if ink(x, y)) > 1
+            ]
+            self.assertTrue(found, f"{path.name} empty visual {cell_top}-{cell_bottom}")
+            visual_rows.append((min(found), max(found)))
+        for earlier, later in zip(visual_rows, visual_rows[1:]):
+            gap = later[0] - earlier[1]
+            # The picture is fitted to 75% of the cell, so the layout gap is 25%.
+            # Strokes sit a few pixels outside that box; 22% still rejects frames that touch.
+            self.assertGreaterEqual(gap, int(cell_h * 0.22), f"{path.name} gap {gap} cell {cell_h} {visual_rows}")
+
+        floor = float(grid["floor_px"])
+        text_left = int(px_of(grid["text_left"]))
+        text_bands = []
+        if grid["portrait"]:
+            for cell_top, cell_bottom in cell_px:
+                zone = cell_top + int((1.0 - 0.55) * (cell_bottom - cell_top))
+                rows = [y for y in range(zone, cell_bottom) if sum(1 for x in range(left, right, 3) if ink(x, y)) > 2]
+                if not rows:
+                    continue
+                text_bands.append(max(rows) - min(rows) + 1)
+        else:
+            rows = [
+                y for y in range(cell_px[0][0], cell_px[-1][1])
+                if sum(1 for x in range(text_left, right, 3) if ink(x, y)) > 2
+            ]
             start = prev = None
-            for y in ink_rows:
+            for y in rows:
                 if start is None:
                     start = prev = y
                 elif y - prev > 3:
                     if prev - start >= 8:
-                        text_bands += 1
+                        text_bands.append(prev - start + 1)
                     start = prev = y
                 else:
                     prev = y
             if start is not None and prev - start >= 8:
-                text_bands += 1
-            # Heading plus four single lines. A wrap adds another band.
-            self.assertLessEqual(text_bands, 7, f"{path.name} wrapped lines {text_bands}")
+                text_bands.append(prev - start + 1)
+        self.assertTrue(text_bands, path.name)
+        for band in text_bands:
+            line_h = band / max(1, round(band / max(floor, 1)))
+            self.assertGreaterEqual(line_h, floor * 0.78, f"{path.name} font {line_h:.1f} vs {floor:.1f}")
 
     def _gold_x(self, path):
         from PIL import Image

@@ -56,6 +56,122 @@ def takeaway_pieces(text: str) -> list[str]:
         return parts or [raw]
     return [word for word in raw.split() if word]
 
+
+# Takeaway cards use one grid. The numbers are fractions of the frame, not
+# positions picked per lesson. A row gap of 25% of the row height wins over
+# the 80% visual fit, so neighbouring pictures cannot touch.
+TAKEAWAY_SIDE = 0.08
+TAKEAWAY_HEADING_BAND = 0.12
+TAKEAWAY_VISUAL_SHARE = 0.40
+TAKEAWAY_TEXT_SHARE = 0.60
+TAKEAWAY_VISUAL_FIT = 0.80
+TAKEAWAY_ROW_GAP = 0.25
+TAKEAWAY_FONT_OF_ROW = 0.42
+TAKEAWAY_MIN_PX_LANDSCAPE = 44  # at 1080p
+TAKEAWAY_MIN_PX_PORTRAIT = 52  # at 1920 tall
+TAKEAWAY_PORTRAIT_VISUAL = 0.45
+# Width budget for the shared body size. The longest spoken line in these
+# lessons. Every language uses the size this line allows, so English is not
+# a smaller face than Chinese.
+TAKEAWAY_WIDTH_PROBE = "Touch each one once. One, two, three, four, five."
+TAKEAWAY_HEADING_PROBE = "Find the ten first"
+
+
+def takeaway_caption_px(pixel_height: int) -> int:
+    """Pixels reserved under the card for a one-line caption chip.
+
+    Scaled from a 1080p chip so a shorter test frame keeps the same fraction.
+    """
+    from mux import CAPTION_BOTTOM_PAD, CAPTION_SIZE_MAX, CAPTION_VERTICAL_PAD
+
+    line_h = max(30, int(CAPTION_SIZE_MAX * 1.28))
+    chip = CAPTION_BOTTOM_PAD + 2 * CAPTION_VERTICAL_PAD + line_h + 10
+    return max(48, int(round(chip * max(1, int(pixel_height)) / 1080)))
+
+
+def takeaway_grid(pixel_width: int, pixel_height: int, n: int) -> dict:
+    """Equal row cells for a takeaway, in Manim units and reference pixels.
+
+    The safe box is the frame minus 8% on the left and right, minus a heading
+    band, minus the caption band. The rows tile the band between those two,
+    so the card fills that height. Landscape is a 40/60 column split. Portrait
+    stacks the picture over the sentence inside each cell.
+    """
+    pw = max(1, int(pixel_width))
+    ph = max(1, int(pixel_height))
+    count = max(1, int(n))
+    portrait = ph > pw
+    fw = 8.0 * pw / float(ph)
+    fh = 8.0
+    side = TAKEAWAY_SIDE * fw
+    left = -fw / 2 + side
+    right = fw / 2 - side
+    safe_w = right - left
+    top = fh / 2
+    heading_h = TAKEAWAY_HEADING_BAND * fh
+    cap_px = takeaway_caption_px(ph)
+    cap_h = cap_px / float(ph) * fh
+    bottom = -fh / 2 + cap_h
+    rows_top = top - heading_h
+    rows_h = rows_top - bottom
+    cell_h = rows_h / count
+    # Centred pictures with height <= 75% of the cell leave a 25% gap.
+    visual_of_cell = min(TAKEAWAY_VISUAL_FIT, 1.0 - TAKEAWAY_ROW_GAP)
+    if portrait:
+        vis_w = safe_w
+        text_w = safe_w
+        vis_left = left
+        text_left = left
+    else:
+        vis_w = TAKEAWAY_VISUAL_SHARE * safe_w
+        text_w = TAKEAWAY_TEXT_SHARE * safe_w
+        vis_left = left
+        text_left = right - text_w
+    cells = []
+    for i in range(count):
+        cell_top = rows_top - i * cell_h
+        cell_bottom = cell_top - cell_h
+        cells.append(
+            {
+                "left": left,
+                "right": right,
+                "top": cell_top,
+                "bottom": cell_bottom,
+                "cy": (cell_top + cell_bottom) / 2.0,
+            }
+        )
+    unit = ph / fh
+    row_px = cell_h * unit
+    ref = 1920.0 if portrait else 1080.0
+    floor_px = (TAKEAWAY_MIN_PX_PORTRAIT if portrait else TAKEAWAY_MIN_PX_LANDSCAPE) * (ph / ref)
+    preferred_px = max(floor_px, TAKEAWAY_FONT_OF_ROW * row_px)
+    return {
+        "portrait": portrait,
+        "left": left,
+        "right": right,
+        "top": top,
+        "bottom": bottom,
+        "heading_h": heading_h,
+        "rows_top": rows_top,
+        "rows_bottom": bottom,
+        "cell_h": cell_h,
+        "visual_of_cell": visual_of_cell,
+        "vis_left": vis_left,
+        "vis_w": vis_w,
+        "text_left": text_left,
+        "text_w": text_w,
+        "cells": cells,
+        "floor_px": floor_px,
+        "preferred_px": preferred_px,
+        "row_px": row_px,
+        "pw": pw,
+        "ph": ph,
+        "fw": fw,
+        "fh": fh,
+        "unit": unit,
+    }
+
+
 _FONTS: tuple[str, str] | None = None
 
 
@@ -445,23 +561,6 @@ def _scene_types() -> dict:
         top = fh / 2 - 0.28
         side = 0.4
         return -fw / 2 + side, fw / 2 - side, bottom, top
-
-    def _takeaway_limits():
-        """Safe box for a takeaway card.
-
-        These captions are a single line. The shared box reserves three lines,
-        which leaves an empty band above the chip the viewer actually sees.
-        """
-        from mux import CAPTION_BOTTOM_PAD, CAPTION_SIZE_MAX, CAPTION_VERTICAL_PAD
-
-        left, right, bot, top = _safe_limits()
-        fh = float(config.frame_height)
-        ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
-        line_h = max(30, int(CAPTION_SIZE_MAX * 1.28))
-        pill = 2 * CAPTION_VERTICAL_PAD + line_h
-        safe_px = max(1, ph - CAPTION_BOTTOM_PAD - pill)
-        one_line = fh / 2 - (safe_px / float(ph)) * fh + 0.08
-        return left, right, min(bot, one_line), top
 
     def _span_x(*mobs) -> float:
         left = min(float(m.get_left()[0]) for m in mobs)
@@ -1102,43 +1201,93 @@ def _scene_types() -> dict:
             latin, cjk = self.vf_fonts
             motif = str(labels.get("motif") or "counters")
             lines = list(labels.get("lines") or ["", "", ""])
-            title = styled(labels.get("title") or "", latin, cjk, 40)
+            title = styled(labels.get("title") or "", latin, cjk, 48)
             if len(lines) >= 4 and motif == "counters":
                 self._counted_recap(title, lines, latin, cjk)
                 return
             if len(lines) >= 4 and motif == "ten_frame":
                 self._ten_recap(title, lines, latin, cjk)
                 return
-            rows = []
-            for i, line in enumerate(lines):
-                cue = _takeaway_cue(motif, i, latin)
-                words = _wrapped(str(line or " "), latin, cjk, 30)
-                row = VGroup(cue, words).arrange(RIGHT, buff=0.28)
-                rows.append(row)
-            stack = VGroup(*rows).arrange(DOWN, buff=0.32, aligned_edge=LEFT)
-            title.next_to(stack, UP, buff=0.36)
-            board = VGroup(title, stack)
-            board.move_to(UP * 0.1)
-            settle(board)
+            cues = [_takeaway_cue(motif, i, latin) for i in range(len(lines))]
+            rows = self._layout_takeaway(title, cues, [str(line) for line in lines], latin, cjk)
             self.spend(0, FadeIn(title), FadeIn(rows[0]))
-            self.spend(1, FadeIn(rows[1]))
-            self.spend(2, FadeIn(rows[2]))
+            for index in range(1, len(rows)):
+                self.spend(index, FadeIn(rows[index]))
 
-        def _size_heading(self, heading) -> tuple[float, float, float, float]:
-            """One heading height for every language, then sit it at the top."""
-            left, right, bot, top = _takeaway_limits()
-            portrait = float(config.frame_width) < float(config.frame_height)
-            # Cap height, not the string width, so a short Chinese title matches
-            # the English one. The portrait cap is the tallest "Find the ten first"
-            # that still fits the safe width.
-            target = 0.36 if portrait else 0.62
-            if float(heading.height) > 0:
-                heading.scale(target / float(heading.height))
-            limit = (right - left) * (0.92 if portrait else 0.94)
-            if float(heading.width) > limit > 0:
-                heading.scale(limit / float(heading.width))
-            heading.move_to([(left + right) / 2, top - 0.04 - float(heading.height) / 2, 0])
-            return left, right, bot, top
+        def _body_font(self, latin: str, grid: dict) -> int:
+            """One face size for every row and every language.
+
+            The preferred size is 0.42× the row height, and never under the
+            pixel floor. If the longest lesson line would overflow the text
+            column at that size, every row uses the floor instead of a
+            per-language shrink.
+            """
+            probe = Text(TAKEAWAY_WIDTH_PROBE, font=latin, font_size=48, color=NAVY)
+            unit = float(grid["unit"])
+            floor_size = 48.0 * (float(grid["floor_px"]) / unit) / float(probe.height)
+            preferred_size = 48.0 * (float(grid["preferred_px"]) / unit) / float(probe.height)
+            column = float(grid["text_w"]) * (0.96 if grid["portrait"] else 1.0)
+            if float(probe.width) * (preferred_size / 48.0) <= column:
+                size = preferred_size
+            else:
+                size = floor_size
+            return max(12, int(round(size)))
+
+        def _place_heading(self, heading, grid: dict) -> None:
+            """Same heading size in every language: the probe title sets the scale."""
+            latin = self.vf_fonts[0]
+            ref = Text(TAKEAWAY_HEADING_PROBE, font=latin, font_size=48, color=NAVY)
+            band = float(grid["heading_h"])
+            safe_w = float(grid["right"] - grid["left"])
+            scale = (band * 0.52) / float(ref.height) if float(ref.height) else 1.0
+            if float(ref.width) * scale > safe_w * 0.92:
+                scale = (safe_w * 0.92) / float(ref.width)
+            heading.scale(scale)
+            cx = (float(grid["left"]) + float(grid["right"])) / 2.0
+            cy = float(grid["top"]) - band / 2.0
+            heading.move_to([cx, cy, 0])
+
+        def _layout_takeaway(self, heading, cues, lines, latin: str, cjk: str) -> list:
+            """Put each cue and its sentence into an equal row cell."""
+            pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
+            ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+            grid = takeaway_grid(pw, ph, len(lines))
+            self._place_heading(heading, grid)
+            font = self._body_font(latin, grid)
+            portrait = bool(grid["portrait"])
+            words = [
+                self._line_group(text, latin, cjk, font, float(grid["text_w"]) * 0.96, True)
+                for text in lines
+            ]
+            if portrait:
+                zone = float(grid["cell_h"]) * (1.0 - TAKEAWAY_PORTRAIT_VISUAL) * 0.92
+                tallest = max(float(word.height) for word in words)
+                if tallest > zone > 0:
+                    shrink = zone / tallest
+                    for word in words:
+                        word.scale(shrink)
+            rows = []
+            for cue, word, cell in zip(cues, words, grid["cells"]):
+                if portrait:
+                    vis_h = float(grid["cell_h"]) * TAKEAWAY_PORTRAIT_VISUAL * 0.88
+                    vis_w = float(grid["vis_w"]) * 0.92
+                else:
+                    vis_h = float(grid["cell_h"]) * float(grid["visual_of_cell"])
+                    vis_w = float(grid["vis_w"]) * 0.94
+                if float(cue.width) > 0 and float(cue.height) > 0:
+                    cue.scale(min(vis_w / float(cue.width), vis_h / float(cue.height)))
+                if portrait:
+                    zone_top = float(cell["top"])
+                    zone_bot = zone_top - float(grid["cell_h"]) * TAKEAWAY_PORTRAIT_VISUAL
+                    cue.move_to([(float(grid["left"]) + float(grid["right"])) / 2.0, (zone_top + zone_bot) / 2.0, 0])
+                    text_top = zone_bot
+                    text_bot = float(cell["bottom"])
+                    word.move_to([(float(grid["left"]) + float(grid["right"])) / 2.0, (text_top + text_bot) / 2.0, 0])
+                else:
+                    cue.move_to([float(grid["vis_left"]) + float(grid["vis_w"]) / 2.0, float(cell["cy"]), 0])
+                    word.move_to([float(grid["text_left"]) + float(word.width) / 2.0, float(cell["cy"]), 0])
+                rows.append(VGroup(cue, word))
+            return rows
 
         def _balanced_pieces(self, text: str, latin: str, cjk: str, size: int, width: float) -> list[str]:
             """Fewest lines that fit, with the most even split. Pieces stay whole."""
@@ -1176,10 +1325,16 @@ def _scene_types() -> dict:
             return pieces
 
         def _line_group(self, text: str, latin: str, cjk: str, size: int, width: float, portrait: bool):
-            """One line in 16:9. In 9:16, break only on spaces or Chinese punctuation."""
+            """Keep a line whole when it fits. Otherwise break on a sentence or a word.
+
+            Chinese breaks only at punctuation. English breaks at a sentence
+            first, then at a balanced word boundary. The face size is not
+            changed here, so every row stays on the shared size.
+            """
             raw = (text or "").strip() or " "
-            if not portrait:
-                return styled(raw, latin, cjk, size)
+            whole = styled(raw, latin, cjk, size)
+            if float(whole.width) <= width:
+                return whole
             # A sentence break beats a word break: "Find the ten first. Then…"
             # stays two sentences when each one fits the column.
             if not any("\u4e00" <= ch <= "\u9fff" for ch in raw):
@@ -1206,112 +1361,6 @@ def _scene_types() -> dict:
             group = VGroup(*[styled(line, latin, cjk, size) for line in chosen])
             group.arrange(DOWN, buff=0.06, aligned_edge=LEFT)
             return group
-
-        def _share_text_scale(self, words, column: float, cues, portrait: bool, safe_w: float):
-            """Shrink every sentence by the same amount so the longest one fits."""
-            if portrait:
-                limit = safe_w * 0.90
-            else:
-                vis = max(float(cue.width) for cue in cues)
-                limit = max(0.8, column - vis - 0.42)
-            widest = max(float(word.width) for word in words)
-            if widest > limit > 0:
-                shrink = limit / widest
-                for word in words:
-                    word.scale(shrink)
-            return words
-
-        def _place_recap(self, heading, cues, words) -> list:
-            """Centre four rows in the band under the heading.
-
-            16:9 is a table: cues share one column and sit in its centre, and
-            every sentence is a single line starting at the same x. 9:16 puts
-            the cue above its sentence. Row pitch fills the band.
-            """
-            left, right, bot, top = self._size_heading(heading)
-            portrait = float(config.frame_width) < float(config.frame_height)
-            band_top = float(heading.get_bottom()[1]) - 0.16
-            band_bot = bot + 0.08
-            band_h = max(0.4, band_top - band_bot)
-            mid_x = (left + right) / 2.0
-            n = len(cues)
-            if portrait:
-                gap = 0.10
-                rows = []
-                for cue, word in zip(cues, words):
-                    cue.move_to([mid_x, 0, 0])
-                    word.next_to(cue, DOWN, buff=0.08)
-                    word.set_x(mid_x)
-                    rows.append(VGroup(cue, word))
-                heights = [float(row.height) for row in rows]
-                natural = sum(heights) + gap * (n - 1)
-                if natural > band_h * 0.96 and natural > 0:
-                    factor = (band_h * 0.96) / natural
-                    for row in rows:
-                        row.scale(factor)
-                    heights = [float(row.height) for row in rows]
-                    natural = sum(heights) + gap * (n - 1)
-                extra = max(0.0, band_h * 0.86 - natural)
-                use_gap = gap + extra / max(1, n - 1)
-                block = sum(heights) + use_gap * (n - 1)
-                y = (band_top + band_bot) / 2.0 + block / 2.0
-                for row, height in zip(rows, heights):
-                    row.move_to([mid_x, y - height / 2.0, 0])
-                    y -= height + use_gap
-            else:
-                col_w = max(float(cue.width) for cue in cues)
-                gap = 0.38
-                text_w = max(float(word.width) for word in words)
-                table_w = col_w + gap + text_w
-                col_left = mid_x - table_w / 2.0
-                text_left = col_left + col_w + gap
-                content_h = max(
-                    max(float(cue.height) for cue in cues),
-                    max(float(word.height) for word in words),
-                )
-                pitch = max(content_h + 0.12, band_h * 0.88 / n)
-                if pitch * n > band_h:
-                    pitch = band_h / n
-                block = pitch * n
-                block_top = (band_top + band_bot) / 2.0 + block / 2.0
-                rows = []
-                for i, (cue, word) in enumerate(zip(cues, words)):
-                    cy = block_top - pitch * i - pitch / 2.0
-                    cue.move_to([col_left + col_w / 2.0, cy, 0])
-                    word.move_to([text_left + float(word.width) / 2.0, cy, 0])
-                    rows.append(VGroup(cue, word))
-            board = VGroup(heading, *rows)
-            pad = 0.08
-            box_w = (right - left) - 2 * pad
-            box_h = (top - bot) - 2 * pad
-            if float(board.width) > box_w > 0:
-                board.scale(box_w / float(board.width))
-            if float(board.height) > box_h > 0:
-                board.scale(box_h / float(board.height))
-            if (
-                float(board.get_left()[0]) < left + pad
-                or float(board.get_right()[0]) > right - pad
-                or float(board.get_bottom()[1]) < bot + pad
-                or float(board.get_top()[1]) > top - pad
-            ):
-                board.move_to([(left + right) / 2.0, (top + bot) / 2.0, 0])
-            return rows
-
-        def _fit_side_by_side(self, cues, longest: float, band_h: float, safe_w: float) -> tuple[float, int]:
-            """Largest shared cue scale that keeps one text line at a readable size."""
-            unit_w = max(float(cue.width) for cue in cues) or 1.0
-            unit_h = max(float(cue.height) for cue in cues) or 1.0
-            usable = safe_w * 0.93
-            row_slot = max(0.4, band_h * 0.90 / max(1, len(cues)))
-            # Floor of 24 keeps the longest English sentence on one line while
-            # the ten-frame column stays wide enough to read.
-            text_floor = longest * (24.0 / 40.0)
-            k_w = (usable - 0.42 - text_floor) / unit_w
-            k_h = (row_slot * 0.94) / unit_h
-            k = max(0.34, min(k_w, k_h, 1.35))
-            vis = unit_w * k
-            font = int(max(24, min(42, round(40.0 * (usable - 0.42 - vis) / max(longest, 0.1)))))
-            return k, font
 
         def _counted_recap(self, title, lines, latin: str, cjk: str) -> None:
             """Four ideas: light five, a big 5, move into a circle, an empty tray."""
@@ -1347,8 +1396,8 @@ def _scene_types() -> dict:
                 ang = math.pi / 2 - i * 2 * math.pi / count
                 pin.move_to([ring * math.cos(ang), ring * math.sin(ang), 0])
             movers = VGroup(*[counter(GREEN, 0.20) for _ in range(count)])
-            movers.arrange(RIGHT, buff=0.08)
-            movers.move_to(anchors.get_center())
+            for dot, pin in zip(movers, anchors):
+                dot.move_to(pin)
             still = Text("5", font=latin, font_size=42, color=NAVY)
             still.next_to(anchors, RIGHT, buff=0.18)
             cue2 = VGroup(anchors, movers, still)
@@ -1362,26 +1411,12 @@ def _scene_types() -> dict:
             cue3 = VGroup(tray, zero)
             cues = [cue0, cue1, cue2, cue3]
             line_strings = [str(line) for line in list(lines)[:4]]
-            portrait = float(config.frame_width) < float(config.frame_height)
-            left, right, _bot, _top = _takeaway_limits()
-            # Heading is not placed yet; reserve its cap so the band is honest.
-            band_h = (_top - _bot) - (0.40 if portrait else 0.62) - 0.28
-            longest = max(float(styled(text, latin, cjk, 40).width) for text in line_strings)
-            if portrait:
-                k = min(1.15, ((right - left) * 0.88) / max(float(cue.width) for cue in cues))
-                font = 30
-            else:
-                k, font = self._fit_side_by_side(cues, longest, band_h, right - left)
-            for cue in cues:
-                cue.scale(k)
-            column = (right - left) * (0.90 if portrait else 0.93)
-            words = [
-                self._line_group(text, latin, cjk, font, column, portrait)
-                for text in line_strings
-            ]
-            words = self._share_text_scale(words, column, cues, portrait, right - left)
-            rows = self._place_recap(title, cues, words)
-            targets = [pin.get_center().copy() for pin in anchors]
+            rows = self._layout_takeaway(title, cues, line_strings, latin, cjk)
+            words = [row[1] for row in rows]
+            targets = [dot.get_center().copy() for dot in movers]
+            home = anchors.get_center()
+            for dot in movers:
+                dot.move_to(home)
             self.add(numbers)
 
             lights = []
@@ -1428,7 +1463,6 @@ def _scene_types() -> dict:
             """Four ideas, one frame size: one ten, thirteen, twenty, then the ones."""
             dim = "#D5D0C6"
             line_strings = [str(line) for line in list(lines)[:4]]
-            portrait = float(config.frame_width) < float(config.frame_height)
 
             def filled():
                 frame = ten_cells()
@@ -1467,25 +1501,8 @@ def _scene_types() -> dict:
             ones3 = beside(frame3, dim)
             cue3 = VGroup(frame3, dots3, ones3)
             cues = [cue0, cue1, cue2, cue3]
-
-            left, right, bot, top = _takeaway_limits()
-            band_h = (top - bot) - (0.40 if portrait else 0.62) - 0.28
-            longest = max(float(styled(text, latin, cjk, 40).width) for text in line_strings)
-            safe_w = right - left
-            if portrait:
-                k = min(0.72, (safe_w * 0.92) / max(float(cue.width) for cue in cues))
-                font = 30
-            else:
-                k, font = self._fit_side_by_side(cues, longest, band_h, safe_w)
-            for cue in cues:
-                cue.scale(k)
-            column = safe_w * (0.90 if portrait else 0.93)
-            words = [
-                self._line_group(text, latin, cjk, font, column, portrait)
-                for text in line_strings
-            ]
-            words = self._share_text_scale(words, column, cues, portrait, safe_w)
-            rows = self._place_recap(title, cues, words)
+            rows = self._layout_takeaway(title, cues, line_strings, latin, cjk)
+            words = [row[1] for row in rows]
             ring = SurroundingRectangle(frame3, color=GOLD, buff=0.07, stroke_width=5)
             ring.set_z_index(5)
 

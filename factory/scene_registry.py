@@ -446,10 +446,9 @@ class LessonTakeaway(SceneKind):
         params = {"motif": _motif(beat)}
         if self.step_count(beat) != self.steps:
             params["lines"] = self.step_count(beat)
-        # Four-line recaps share one centred table. The value is part of the
+        # Every takeaway uses the same row grid. The value is part of the
         # cache key, so a layout change does not reuse an older silent clip.
-        if self.step_count(beat) == 4 and _motif(beat) in ("counters", "ten_frame"):
-            params["arrangement"] = "table"
+        params["arrangement"] = "grid"
         count = _as_int(beat.get("count"))
         if count is not None:
             params["count"] = count

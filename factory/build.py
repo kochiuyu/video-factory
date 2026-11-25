@@ -529,8 +529,11 @@ def prepare_short(
     """Validate the selected inputs before painting, encoding or calling TTS."""
     started = time.perf_counter()
     lesson = load_lesson(source)
+    # In-memory hint so a still beside the YAML resolves. Not a lesson field.
+    if isinstance(lesson, dict) and not lesson.get("_yaml"):
+        lesson["_yaml"] = str(Path(source).resolve())
     out_dir = lesson_out_dir(lesson.get("id", source.stem), root=root)
-    errors = validate(lesson)
+    errors = validate(lesson, source=source)
     fatal = [error for error in errors if not error.startswith("Beat seconds")]
     if fatal:
         raise ValueError("Invalid lesson:\n - " + "\n - ".join(fatal))
@@ -711,6 +714,13 @@ def build(
     jobs_path = write_narration_pack(lesson, out_dir)
     print("narration jobs:", jobs_path)
     clock.lap("slides")
+    if (slides_only or caption_preview) and not any(slide_sets.values()):
+        if lesson.get("beats") and all(str(b.get("visual") or "") == "animated" for b in lesson["beats"]):
+            raise RuntimeError(
+                "This lesson is animated scenes only. A full build (with Manim installed) writes the video. "
+                "--slides-only and --caption-preview paint slide stills, and this lesson has none."
+            )
+        raise RuntimeError("No slides were rendered.")
     if caption_preview:
         preview_kw = dict(
             langs=langs,
@@ -741,8 +751,6 @@ def build(
         clock.total()
         return []
     if slides_only:
-        if not any(slide_sets.values()):
-            raise RuntimeError("No slides were rendered.")
         if report:
             for images in slide_sets.values():
                 for image in images:
@@ -814,9 +822,18 @@ def build(
         # bilingual cell follows that cell's voice. A mismatch falls back.
         spoken = spoken_lang or sub_lang
         words = load_word_times(audio_root / spoken / f"{beat['id']}.mp3")
-        plan = stage_plan(beat, dur) if stage_cards else [0]
         text = beat_text(beat, sub_lang)
         keep_units = bool(lesson.get("caption_keep"))
+        if str(beat.get("visual") or "") == "animated":
+            from anim import pages_for_animated
+
+            pages, holds, plan, still_idx, how = pages_for_animated(
+                beat, text, dur, sub_lang, words, keep_units
+            )
+            if words and how != CAP_TIME_WORDS and not quiet:
+                print(f"caption timing: {spoken}/{beat['id']} word match failed; speech-weight")
+            return pages, holds, plan, still_idx, how
+        plan = stage_plan(beat, dur) if stage_cards else [0]
         if plan == [0]:
             pages = caption_pages(text, keep_units)
             holds, how = holds_for_pages(dur, pages, words)
@@ -878,6 +895,43 @@ def build(
                 beat, dur, sub_lang, audio_lang
             )
             print(f"captions {name}/{beat['id']}: {len(pages)} cards ({cap_time})")
+            if str(beat.get("visual") or "") == "animated":
+                from anim import anim_cache_dir, animated_clip_key, render_animated_clip
+
+                cache = anim_cache_dir(out_dir, lesson)
+                clip = clip_dir / f"{i:02d}_{beat['id']}.mp4"
+                clip_key = animated_clip_key(
+                    beat, lesson, code, holds, still_idx, pages, audio,
+                    captions=True, progress_bar=progress_bar,
+                )
+                clips.append(clip)
+                if stamp_ok(clip, clip_key):
+                    print(f"clip: reuse {clip.name}")
+                else:
+                    print(f"clip: start {clip.name} (animated)", flush=True)
+                    render_animated_clip(
+                        beat, lesson, label_lang_code=code, holds=holds, still_idx=still_idx,
+                        pages=pages, audio=audio, dest=clip, cache_dir=cache,
+                        captions=True, progress_bar=progress_bar,
+                    )
+                    write_mark(clip, clip_key)
+                if experiment_pack and pack_nocap:
+                    raw_clip = clip_dir / f"{i:02d}_{beat['id']}_nocap.mp4"
+                    raw_key = animated_clip_key(
+                        beat, lesson, code, holds, still_idx, pages, audio,
+                        captions=False, progress_bar=progress_bar,
+                    )
+                    nocap_clips.append(raw_clip)
+                    if stamp_ok(raw_clip, raw_key):
+                        print(f"clip: reuse {raw_clip.name}")
+                    else:
+                        render_animated_clip(
+                            beat, lesson, label_lang_code=code, holds=holds, still_idx=still_idx,
+                            pages=pages, audio=audio, dest=raw_clip, cache_dir=cache,
+                            captions=False, progress_bar=progress_bar,
+                        )
+                        write_mark(raw_clip, raw_key)
+                continue
             base = stills_for_beat(slide_dir, i, beat, plan)
             if not base:
                 raise RuntimeError(f"Missing slide for {name}/{beat['id']}")

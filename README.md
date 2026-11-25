@@ -120,6 +120,7 @@ Day-to-day operator steps: [docs/SOP.md](docs/SOP.md). Faculty one-pager: [docs/
 | Doc | Use it when |
 |------|-------------|
 | [docs/SCHEMA.md](docs/SCHEMA.md) | Field reference, stage counts, **visual index**, bilingual budgets, IDs |
+| [docs/ANIMATED_SCENES.md](docs/ANIMATED_SCENES.md) | Opt-in moving scenes (`visual: animated`). Manim is optional |
 | [docs/AUTHORING_PROMPT.md](docs/AUTHORING_PROMPT.md) | Drafting a **new** lesson (paste as standing instructions) |
 | [docs/REVISE_PROMPT.md](docs/REVISE_PROMPT.md) | Rewriting an **existing** YAML — especially elevating 简 / 繁 and matching speech to visuals |
 | [docs/QA_CHECKLIST.md](docs/QA_CHECKLIST.md) | Delivery gate after authoring or revision |

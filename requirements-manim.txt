@@ -1,0 +1,6 @@
+# Optional. Lessons that only use slide stills do not need this file.
+# Install with: python -m pip install -r requirements-manim.txt
+# A source build of pycairo also needs pkg-config, libcairo2-dev,
+# libpango1.0-dev, and python3-dev. Chinese labels need fonts-noto-cjk
+# (the factory bundle is the fallback).
+manim>=0.18.1,<0.20

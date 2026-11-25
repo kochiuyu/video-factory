@@ -1,0 +1,103 @@
+# Demo only. Not a production lesson.
+# Lives outside lessons/ so `build --all` does not pick it up.
+# Any beat may be a slide or an animated scene. This file mixes both:
+# hook and takeaway stay on slide cards; the definition and the two
+# number sentences are Manim.
+# MathQuiz P1 "A ten and some ones": 13 = 10 + 3, then make ten with 9 + 8.
+# Speech is for age 6: one short idea per line.
+# https://kochiuyu.github.io/mathquiz/
+id: DEMO-P1-TEN-ONES
+title_en: A ten and some ones
+title_zh: 一个十和一些一
+title_zh_hk: 一個十和一些一
+duration_target_s: 76
+clock: own
+beats:
+- id: hook
+  visual: title_card
+  seconds: 8
+  kicker: P1
+  kicker_en: P1
+  kicker_zh: 小一
+  kicker_zh_hk: 小一
+  title_en: A ten and some ones
+  title_zh: 一个十和一些一
+  title_zh_hk: 一個十和一些一
+  en: What is thirteen?
+  zh: 十三是什么？
+  zh_hk: 十三係咩呀？
+
+- id: define
+  visual: animated
+  scene: one_ten
+  count: 13
+  seconds: 14
+  s1_en: Here are ten counters.
+  s1_zh: 这里有十个圆片。
+  s1_zh_hk: 呢度有十個圓片。
+  s2_en: This is one ten.
+  s2_zh: 这就是一个十。
+  s2_zh_hk: 呢個就係一個十。
+  s3_en: How many are outside?
+  s3_zh: 外面有几个？
+  s3_zh_hk: 出面有幾多個？
+  s4_en: Three.
+  s4_zh: 三个。
+  s4_zh_hk: 三個。
+
+- id: thirteen
+  visual: animated
+  scene: ten_and_ones
+  count: 13
+  seconds: 22
+  s1_en: Count with me. One, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen.
+  s1_zh: 我们一起数。一、二、三、四、五、六、七、八、九、十、十一、十二、十三。
+  s1_zh_hk: 我哋一齊數。一、二、三、四、五、六、七、八、九、十、十一、十二、十三。
+  s2_en: Ten and three.
+  s2_zh: 十和三。
+  s2_zh_hk: 十同三。
+  s3_en: Ten plus three is thirteen.
+  s3_zh: 十加三就是十三。
+  s3_zh_hk: 十加三就係十三。
+
+- id: make-ten
+  visual: animated
+  scene: make_ten
+  a: 9
+  b: 8
+  seconds: 18
+  s1_en: Nine are in the box. Eight are waiting.
+  s1_zh: 九个在框里。八个在旁边等。
+  s1_zh_hk: 九個喺框入面。八個喺隔籬等緊。
+  s2_en: One goes in the space. How many are left?
+  s2_zh: 一个放进空格。还剩几个？
+  s2_zh_hk: 一個放入空格。仲剩幾多個？
+  s3_en: Seven. Ten plus seven is seventeen.
+  s3_zh: 七个。十加七就是十七。
+  s3_zh_hk: 七個。十加七就係十七。
+
+- id: takeaway
+  visual: takeaway
+  seconds: 14
+  kicker: Again
+  kicker_en: Again
+  kicker_zh: 再说
+  kicker_zh_hk: 再講
+  title_en: Find the ten first
+  title_zh: 先找十
+  title_zh_hk: 先搵十
+  q1_en: 13 = 10 + 3
+  q1_zh: 13 = 10 + 3
+  q1_zh_hk: 13 = 10 + 3
+  q2_en: 10 + 7 = 17
+  q2_zh: 10 + 7 = 17
+  q2_zh_hk: 10 + 7 = 17
+  s1_en: Ten and three is thirteen.
+  s1_zh: 十和三，就是十三。
+  s1_zh_hk: 十同三，就係十三。
+  s2_en: Ten and seven is seventeen.
+  s2_zh: 十和七，就是十七。
+  s2_zh_hk: 十同七，就係十七。
+  s3_en: First the ten, then what is left.
+  s3_zh: 先说十，再说剩下的。
+  s3_zh_hk: 先講十，再講剩低嘅。

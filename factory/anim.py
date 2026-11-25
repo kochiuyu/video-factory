@@ -70,6 +70,8 @@ TAKEAWAY_FONT_OF_ROW = 0.42
 TAKEAWAY_MIN_PX_LANDSCAPE = 44  # at 1080p
 TAKEAWAY_MIN_PX_PORTRAIT = 52  # at 1920 tall
 TAKEAWAY_PORTRAIT_VISUAL = 0.45
+# Gap between a landscape picture (labels included) and the text column, at 1080p.
+TAKEAWAY_COLUMN_GAP_PX = 40
 # Width budget for the shared body size. The longest spoken line in these
 # lessons. Every language uses the size this line allows, so English is not
 # a smaller face than Chinese.
@@ -77,16 +79,26 @@ TAKEAWAY_WIDTH_PROBE = "Touch each one once. One, two, three, four, five."
 TAKEAWAY_HEADING_PROBE = "Find the ten first"
 
 
-def takeaway_caption_px(pixel_height: int) -> int:
+def takeaway_caption_px(pixel_width: int, pixel_height: int) -> int:
     """Pixels reserved under the card for a one-line caption chip.
 
-    Scaled from a 1080p chip so a shorter test frame keeps the same fraction.
+    Landscape scales the 1080p chip. Portrait matches the pill that is actually
+    drawn (size 42, a 3% bottom margin), so the rows are not stranded above a
+    band the caption does not use.
     """
     from mux import CAPTION_BOTTOM_PAD, CAPTION_SIZE_MAX, CAPTION_VERTICAL_PAD
 
+    pw = max(1, int(pixel_width))
+    ph = max(1, int(pixel_height))
+    if ph > pw:
+        size = 42
+        bottom = max(36, int(ph * 0.03))
+        line_h = max(22, int(size * 1.28))
+        pill = bottom + 2 * CAPTION_VERTICAL_PAD + line_h
+        return pill + max(16, int(ph * 0.015))
     line_h = max(30, int(CAPTION_SIZE_MAX * 1.28))
     chip = CAPTION_BOTTOM_PAD + 2 * CAPTION_VERTICAL_PAD + line_h + 10
-    return max(48, int(round(chip * max(1, int(pixel_height)) / 1080)))
+    return max(48, int(round(chip * ph / 1080)))
 
 
 def takeaway_grid(pixel_width: int, pixel_height: int, n: int) -> dict:
@@ -109,7 +121,7 @@ def takeaway_grid(pixel_width: int, pixel_height: int, n: int) -> dict:
     safe_w = right - left
     top = fh / 2
     heading_h = TAKEAWAY_HEADING_BAND * fh
-    cap_px = takeaway_caption_px(ph)
+    cap_px = takeaway_caption_px(pw, ph)
     cap_h = cap_px / float(ph) * fh
     bottom = -fh / 2 + cap_h
     rows_top = top - heading_h
@@ -1256,7 +1268,7 @@ def _scene_types() -> dict:
             font = self._body_font(latin, grid)
             portrait = bool(grid["portrait"])
             words = [
-                self._line_group(text, latin, cjk, font, float(grid["text_w"]) * 0.96, True)
+                self._line_group(text, latin, cjk, font, float(grid["text_w"]) * 0.96, portrait)
                 for text in lines
             ]
             if portrait:
@@ -1273,7 +1285,9 @@ def _scene_types() -> dict:
                     vis_w = float(grid["vis_w"]) * 0.92
                 else:
                     vis_h = float(grid["cell_h"]) * float(grid["visual_of_cell"])
-                    vis_w = float(grid["vis_w"]) * 0.94
+                    # 40px at 1080p, plus a few pixels so a stroke still clears the column.
+                    gutter = (TAKEAWAY_COLUMN_GAP_PX + 6) * 8.0 / 1080.0
+                    vis_w = max(0.4, float(grid["vis_w"]) - 2.0 * gutter)
                 if float(cue.width) > 0 and float(cue.height) > 0:
                     cue.scale(min(vis_w / float(cue.width), vis_h / float(cue.height)))
                 if portrait:
@@ -1287,6 +1301,19 @@ def _scene_types() -> dict:
                     cue.move_to([float(grid["vis_left"]) + float(grid["vis_w"]) / 2.0, float(cell["cy"]), 0])
                     word.move_to([float(grid["text_left"]) + float(word.width) / 2.0, float(cell["cy"]), 0])
                 rows.append(VGroup(cue, word))
+            if portrait and rows:
+                block = VGroup(*rows)
+                mid = (float(grid["rows_top"]) + float(grid["rows_bottom"])) / 2.0
+                delta = mid - float(block.get_center()[1])
+                top = float(block.get_top()[1]) + delta
+                bot = float(block.get_bottom()[1]) + delta
+                if top > float(grid["rows_top"]):
+                    delta -= top - float(grid["rows_top"])
+                bot = float(block.get_bottom()[1]) + delta
+                if bot < float(grid["rows_bottom"]):
+                    delta += float(grid["rows_bottom"]) - bot
+                if abs(delta) > 1e-4:
+                    block.shift(UP * delta)
             return rows
 
         def _balanced_pieces(self, text: str, latin: str, cjk: str, size: int, width: float) -> list[str]:
@@ -1355,12 +1382,19 @@ def _scene_types() -> dict:
                         else:
                             lines.extend(self._balanced_pieces(sentence, latin, cjk, size, width))
                     group = VGroup(*[styled(line, latin, cjk, size) for line in lines])
-                    group.arrange(DOWN, buff=0.06, aligned_edge=LEFT)
+                    self._stack_lines(group, portrait)
                     return group
             chosen = self._balanced_pieces(raw, latin, cjk, size, width)
             group = VGroup(*[styled(line, latin, cjk, size) for line in chosen])
-            group.arrange(DOWN, buff=0.06, aligned_edge=LEFT)
+            self._stack_lines(group, portrait)
             return group
+
+        def _stack_lines(self, group, portrait: bool) -> None:
+            """Portrait centres each line. Landscape keeps a left edge."""
+            if portrait:
+                group.arrange(DOWN, buff=0.06)
+            else:
+                group.arrange(DOWN, buff=0.06, aligned_edge=LEFT)
 
         def _counted_recap(self, title, lines, latin: str, cjk: str) -> None:
             """Four ideas: light five, a big 5, move into a circle, an empty tray."""
@@ -1399,7 +1433,13 @@ def _scene_types() -> dict:
             for dot, pin in zip(movers, anchors):
                 dot.move_to(pin)
             still = Text("5", font=latin, font_size=42, color=NAVY)
-            still.next_to(anchors, RIGHT, buff=0.18)
+            # The pins are tiny. Measure the counters themselves, or the 5 lands on a dot.
+            cluster_right = max(float(dot.get_right()[0]) for dot in movers)
+            still.move_to([
+                cluster_right + 0.36 + float(still.width) / 2.0,
+                float(anchors.get_center()[1]),
+                0,
+            ])
             cue2 = VGroup(anchors, movers, still)
 
             tray = RoundedRectangle(

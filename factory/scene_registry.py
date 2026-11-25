@@ -448,7 +448,7 @@ class LessonTakeaway(SceneKind):
             params["lines"] = self.step_count(beat)
         # Every takeaway uses the same row grid. The value is part of the
         # cache key, so a layout change does not reuse an older silent clip.
-        params["arrangement"] = "grid"
+        params["arrangement"] = "grid-gap"
         count = _as_int(beat.get("count"))
         if count is not None:
             params["count"] = count

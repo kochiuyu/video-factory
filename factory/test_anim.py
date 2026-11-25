@@ -811,7 +811,7 @@ class AnimatedRenderTest(unittest.TestCase):
         """Ink sits in its cell, pictures do not meet, and the body type meets the floor."""
         from PIL import Image
 
-        from anim import takeaway_grid
+        from anim import TAKEAWAY_COLUMN_GAP_PX, takeaway_grid
 
         img = Image.open(path).convert("RGB")
         px = img.load()
@@ -880,6 +880,65 @@ class AnimatedRenderTest(unittest.TestCase):
             # The picture is fitted to 75% of the cell, so the layout gap is 25%.
             # Strokes sit a few pixels outside that box; 22% still rejects frames that touch.
             self.assertGreaterEqual(gap, int(cell_h * 0.22), f"{path.name} gap {gap} cell {cell_h} {visual_rows}")
+
+        if not grid["portrait"]:
+            # The picture, including a 13 or a 20, stays about 40px (at 1080p) clear of the text column.
+            # Measure the first ink run that begins in the picture column, so the sentence itself does not count.
+            need = TAKEAWAY_COLUMN_GAP_PX * h / 1080.0 - 2
+            text_edge = int(px_of(grid["text_left"]))
+            visual_right = left
+            for y in range(max(0, cell_px[0][0]), min(h, cell_px[-1][1]), 2):
+                seen = False
+                last = None
+                for x in range(max(0, left), min(w, text_edge + 40)):
+                    if ink(x, y):
+                        if not seen and x >= text_edge - 4:
+                            break
+                        seen = True
+                        last = x
+                    elif seen and last is not None and x > last + 6:
+                        break
+                if last is not None:
+                    visual_right = max(visual_right, last)
+            self.assertGreaterEqual(
+                text_edge - visual_right, need,
+                f"{path.name} column gap {text_edge - visual_right:.0f} vs {need:.0f}",
+            )
+        else:
+            # Wrapped lines are centred, and the row block sits in the middle of the safe band.
+            centre = w / 2.0
+            for cell_top, cell_bottom in cell_px:
+                zone = cell_top + int(0.58 * (cell_bottom - cell_top))
+                rows_y = [
+                    y for y in range(max(0, zone), min(h, cell_bottom))
+                    if sum(1 for x in range(left, right, 3) if ink(x, y)) > 2
+                ]
+                start = prev = None
+                for y in rows_y:
+                    if start is None:
+                        start = prev = y
+                    elif y - prev > 4:
+                        xs = [x for x in range(left, right) if any(ink(x, yy) for yy in range(start, prev + 1))]
+                        if xs:
+                            mid = (min(xs) + max(xs)) / 2.0
+                            self.assertLess(abs(mid - centre), w * 0.08, f"{path.name} line at {start} mid {mid:.0f}")
+                        start = prev = y
+                    else:
+                        prev = y
+                if start is not None and prev is not None:
+                    xs = [x for x in range(left, right) if any(ink(x, yy) for yy in range(start, prev + 1))]
+                    if xs:
+                        mid = (min(xs) + max(xs)) / 2.0
+                        self.assertLess(abs(mid - centre), w * 0.08, f"{path.name} line at {start} mid {mid:.0f}")
+            content = [
+                y for y in range(max(0, cell_px[0][0]), min(h, cell_px[-1][1]))
+                if sum(1 for x in range(left, right, 4) if ink(x, y)) > 2
+            ]
+            self.assertTrue(content, path.name)
+            above = content[0] - cell_px[0][0]
+            below = cell_px[-1][1] - content[-1]
+            band = cell_px[-1][1] - cell_px[0][0]
+            self.assertLess(abs(above - below), max(16, int(band * 0.12)), f"{path.name} above {above} below {below}")
 
         floor = float(grid["floor_px"])
         text_left = int(px_of(grid["text_left"]))

@@ -5,8 +5,8 @@
 # https://github.com/kochiuyu/mathquiz learn-data.js (lessons tens).
 id: P1-NUM-02
 title_en: A ten and some ones
-title_zh: 一个十和一些一
-title_zh_hk: 一個十和一些一
+title_zh: 一个十和几个一
+title_zh_hk: 一個十同幾個一
 duration_target_s: 66
 clock: own
 beats:
@@ -16,8 +16,8 @@ beats:
   motif: ten_frame
   seconds: 8
   title_en: A ten and some ones
-  title_zh: 一个十和一些一
-  title_zh_hk: 一個十和一些一
+  title_zh: 一个十和几个一
+  title_zh_hk: 一個十同幾個一
   s1_en: What is thirteen?
   s1_zh: 十三是什么？
   s1_zh_hk: 十三係咩呀？

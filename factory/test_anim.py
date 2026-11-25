@@ -574,6 +574,84 @@ class AnimatedRenderTest(unittest.TestCase):
             ratio = sum(map(near, samples)) / len(samples)
             self.assertGreater(ratio, 0.90, f"{video.name} {path.name} margin {ratio:.2f}")
 
+    def test_track_hops_land_on_each_spoken_number(self):
+        """The gold box sits on 9, then 10, then 11, then 12 as those words are spoken."""
+        import subprocess
+        import tempfile
+
+        from PIL import Image
+
+        from anim import render_animated_clip
+
+        beat = {
+            "id": "hop",
+            "visual": "animated",
+            "scene": "number_track",
+            "low": 0,
+            "high": 20,
+            "start": 9,
+            "end": 12,
+            "s1_en": "Start at nine.",
+            "s2_en": "Nine. Ten. Eleven. Twelve.",
+            "s3_en": "Twelve.",
+            "s1_zh": "从九开始。",
+            "s2_zh": "九。十。十一。十二。",
+            "s3_zh": "十二。",
+            "s1_zh_hk": "由九開始。",
+            "s2_zh_hk": "九。十。十一。十二。",
+            "s3_zh_hk": "十二。",
+        }
+        words = [
+            {"text": "Start", "start": 0.1, "end": 0.4},
+            {"text": "Nine", "start": 1.15, "end": 1.5},
+            {"text": "Ten", "start": 2.05, "end": 2.4},
+            {"text": "Eleven", "start": 2.95, "end": 3.3},
+            {"text": "Twelve", "start": 3.85, "end": 4.2},
+            {"text": "Twelve", "start": 5.1, "end": 5.4},
+        ]
+        with tempfile.TemporaryDirectory(prefix="vf-hop-") as tmp:
+            root = Path(tmp)
+            audio = root / "silent.wav"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                 "-t", "6", "-c:a", "pcm_s16le", str(audio)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            dest = root / "hop.mp4"
+            render_animated_clip(
+                beat, {}, label_lang_code="en",
+                holds=[1.0, 4.0, 1.0], still_idx=[0, 1, 2],
+                pages=["Start at nine.", "Nine. Ten. Eleven. Twelve.", "Twelve."],
+                audio=audio, dest=dest, cache_dir=root / "cache",
+                captions=False, progress_bar=False, frame=(640, 360), fps=10,
+                words=words,
+            )
+            silent = next((root / "cache" / "en").glob("hop-*.mp4"))
+            xs = []
+            for n, t in enumerate((1.35, 2.25, 3.15, 4.05)):
+                shot = root / f"hop-{n}.png"
+                subprocess.check_call(
+                    ["ffmpeg", "-y", "-i", str(silent), "-vf", f"select=eq(n\\,{int(t * 10)})",
+                     "-frames:v", "1", str(shot)],
+                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                )
+                xs.append(self._gold_x(shot))
+            self.assertTrue(all(xs[i] < xs[i + 1] - 4 for i in range(3)), xs)
+
+    def _gold_x(self, path):
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        pts = []
+        for y in range(h):
+            for x in range(w):
+                r, g, b = img.getpixel((x, y))
+                if r > 190 and r > g + 12 and g > b + 30:
+                    pts.append(x)
+        self.assertGreater(len(pts), 8, path.name)
+        return sum(pts) / len(pts)
+
 
 P1 = ROOT / "lessons" / "P1"
 # Simplified forms whose traditional counterparts differ. Shared glyphs are omitted.

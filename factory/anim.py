@@ -97,6 +97,9 @@ def cache_key(
             "spec": spec,
             "durations": [round(float(d), 3) for d in durations],
             "marks": marks or [],
+            # Bump when a scene's motion changes but the spec does not, so a
+            # cached silent clip cannot keep an old hop.
+            "motion": 2,
             "lang": label_lang(lang),
             "frame": [int(frame[0]), int(frame[1])],
             "manim": str(manim_version),
@@ -481,7 +484,8 @@ def _scene_types() -> dict:
                 self.spend(index, LaggedStart(*moves, lag_ratio=0.85))
                 return
             for item in moves:
-                self.play(item, run_time=each)
+                built = item() if callable(item) and not hasattr(item, "build") else item
+                self.play(built, run_time=each)
             rest = total - each * len(moves)
             if rest > frame / 2:
                 self.wait(rest)
@@ -523,7 +527,11 @@ def _scene_types() -> dict:
                 run = min(hop, max(0.0, total - t))
                 if run <= frame / 2:
                     break
-                self.play(anim, run_time=run)
+                # A function is called now, so .animate reads the mobject where it
+                # actually is. Building several .animate hops up front makes them
+                # share one target, and the marker jumps to the last number.
+                built = anim() if callable(anim) and not hasattr(anim, "build") else anim
+                self.play(built, run_time=run)
                 t += run
             if total - t > frame / 2:
                 self.wait(total - t)
@@ -965,13 +973,22 @@ def _scene_types() -> dict:
             if counted and len(counted) == len(visits):
                 marker.set_opacity(0)
                 marker.move_to(cells[start].get_center())
-                hops = [marker.animate.set_opacity(1)]
-                hops += [marker.animate.move_to(cells[n].get_center()) for n in visits[1:] if n in cells]
+                # Each hop is built at the moment it plays. See spend_marked.
+                hops = [lambda: marker.animate.set_opacity(1)]
+                for n in visits[1:]:
+                    if n not in cells:
+                        continue
+                    dest = cells[n].get_center().copy()
+                    hops.append(lambda dest=dest: marker.animate.move_to(dest))
                 self.spend(0, FadeIn(title), FadeIn(grid), FadeIn(numerals), FadeIn(start_line))
                 self.spend_marked(1, hops, counted)
             else:
-                path = visits[1:]
-                hops = [marker.animate.move_to(cells[n].get_center()) for n in path if n in cells]
+                hops = []
+                for n in visits[1:]:
+                    if n not in cells:
+                        continue
+                    dest = cells[n].get_center().copy()
+                    hops.append(lambda dest=dest: marker.animate.move_to(dest))
                 self.spend(0, FadeIn(title), FadeIn(grid), FadeIn(numerals), FadeIn(marker), FadeIn(start_line))
                 self.spend_each(1, hops)
             shown = [FadeIn(answer), FadeIn(step)]

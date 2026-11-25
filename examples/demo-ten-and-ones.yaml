@@ -1,14 +1,53 @@
 # Demo only. Not a production lesson.
 # Lives outside lessons/ so `build --all` does not pick it up.
+# Slide cards for the hook, the definition, and the takeaway.
+# Manim only for the two beats where counters move.
 # MathQuiz P1 "A ten and some ones": 13 = 10 + 3, then make ten with 9 + 8.
 # https://kochiuyu.github.io/mathquiz/
 id: DEMO-P1-TEN-ONES
 title_en: A ten and some ones
 title_zh: 一个十和一些一
 title_zh_hk: 一個十和一些一
-duration_target_s: 30
+duration_target_s: 72
 clock: own
 beats:
+- id: hook
+  visual: title_card
+  seconds: 10
+  kicker: P1
+  kicker_en: P1
+  kicker_zh: 小一
+  kicker_zh_hk: 小一
+  title_en: A ten and some ones
+  title_zh: 一个十和一些一
+  title_zh_hk: 一個十和一些一
+  en: Thirteen is more than ten. How do we read it?
+  zh: 十三比十多。我们怎样读？
+  zh_hk: 十三多過十。我哋點樣讀？
+
+- id: define
+  visual: definition_card
+  seconds: 16
+  kicker: Ten-frame
+  kicker_en: Ten-frame
+  kicker_zh: 十格框
+  kicker_zh_hk: 十格框
+  title_en: A full frame is one ten
+  title_zh: 满框就是一个十
+  title_zh_hk: 滿框就係一個十
+  formula_en: one ten = a full frame
+  formula_zh: 一个十＝满框
+  formula_zh_hk: 一個十＝滿框
+  gloss_en: two rows of five spaces
+  gloss_zh: 每行五格，共两行
+  gloss_zh_hk: 每行五格，共兩行
+  s1_en: A full frame holds ten counters. That is one ten.
+  s1_zh: 填满的框有十个圆片。那就是一个十。
+  s1_zh_hk: 填滿嘅框有十個圓片。咁就係一個十。
+  s2_en: There are two rows of five spaces. Ones that do not fit sit beside the frame.
+  s2_zh: 每行五格，共两行。放不下的一，留在旁边。
+  s2_zh_hk: 每行五格，共兩行。放唔落嘅一，留喺旁邊。
+
 - id: thirteen
   visual: animated
   scene: ten_and_ones
@@ -23,6 +62,7 @@ beats:
   s3_en: "Thirteen equals ten plus three."
   s3_zh: "十三等于十加三。"
   s3_zh_hk: "十三等於十加三。"
+
 - id: make-ten
   visual: animated
   scene: make_ten
@@ -38,3 +78,29 @@ beats:
   s3_en: "Seven gold counters are left. Ten plus seven equals seventeen."
   s3_zh: "还剩七个金色圆片。十加七等于十七。"
   s3_zh_hk: "仲剩七個金色圓片。十加七等於十七。"
+
+- id: takeaway
+  visual: takeaway
+  seconds: 16
+  kicker: Remember
+  kicker_en: Remember
+  kicker_zh: 记住
+  kicker_zh_hk: 記住
+  title_en: Read the ten, then the ones
+  title_zh: 先读一个十，再读一
+  title_zh_hk: 先讀一個十，再讀一
+  q1_en: 13 = 10 + 3
+  q1_zh: 13 = 10 + 3
+  q1_zh_hk: 13 = 10 + 3
+  q2_en: 10 + 7 = 17
+  q2_zh: 10 + 7 = 17
+  q2_zh_hk: 10 + 7 = 17
+  s1_en: A full frame and three ones make thirteen.
+  s1_zh: 一个满框加三个圆片，就是十三。
+  s1_zh_hk: 一個滿框加三個圓片，就係十三。
+  s2_en: Nine and eight make a ten, and seven more make seventeen.
+  s2_zh: 九加八先凑成十，再加七就是十七。
+  s2_zh_hk: 九加八先湊成十，再加七就係十七。
+  s3_en: Read the ten first. Then read the ones that are left.
+  s3_zh: 先读一个十，再读剩下的一。
+  s3_zh_hk: 先讀一個十，再讀剩低嘅一。

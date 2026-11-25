@@ -54,7 +54,7 @@ The silent movie is cached under `anim/` (`9x16/anim/` for a 9:16 lesson). The k
 
 ## Demo
 
-`examples/demo-ten-and-ones.yaml` is the P1 demo (a ten and some ones, then make ten with 9 + 8). It sits outside `lessons/`, so `build --all` does not render it.
+`examples/demo-ten-and-ones.yaml` is the P1 demo. It sits outside `lessons/`, so `build --all` does not render it. The hook, the definition, and the takeaway are ordinary slide cards (`title_card`, `definition_card`, `takeaway`). Manim runs only on the two middle beats, where the counters move: thirteen as `13 = 10 + 3`, then make ten with `9 + 8`.
 
 ```bash
 python factory/build.py examples/demo-ten-and-ones.yaml --cells en,zh,hk --match-titles --out /path/to/out

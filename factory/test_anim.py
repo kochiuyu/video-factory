@@ -100,19 +100,29 @@ class AnimatedSchemaTest(unittest.TestCase):
         self.assertEqual(scene_problems(MAKE), [])
         lesson = load_lesson(DEMO)
         self.assertEqual(validate(lesson, source=DEMO), [])
-        self.assertEqual(lesson["beats"][0]["count"], 13)
-        self.assertEqual((lesson["beats"][1]["a"], lesson["beats"][1]["b"]), (9, 8))
+        self.assertEqual(
+            [beat["visual"] for beat in lesson["beats"]],
+            ["title_card", "definition_card", "animated", "animated", "takeaway"],
+        )
+        by_id = {beat["id"]: beat for beat in lesson["beats"]}
+        self.assertEqual(by_id["thirteen"]["count"], 13)
+        self.assertEqual((by_id["make-ten"]["a"], by_id["make-ten"]["b"]), (9, 8))
+        self.assertEqual(by_id["define"]["formula_zh_hk"], "一個十＝滿框")
+        self.assertIn("q1_en", by_id["takeaway"])
+        self.assertIn("q2_zh_hk", by_id["takeaway"])
 
     def test_zh_hk_demo_labels_have_no_simplified_only_characters(self):
         lesson = load_lesson(DEMO)
-        for beat in lesson["beats"]:
+        animated = [beat for beat in lesson["beats"] if beat.get("visual") == "animated"]
+        self.assertEqual(len(animated), 2)
+        for beat in animated:
             traditional = _label_text(labels_for(beat, "zh_hk"))
             simplified = _label_text(labels_for(beat, "zh"))
             found = sorted({ch for ch in traditional if ch in SIMPLIFIED_ONLY})
             self.assertEqual(found, [], traditional)
             self.assertNotEqual(traditional, simplified)
             self.assertTrue(simplified)
-        make = lesson["beats"][1]
+        make = next(beat for beat in animated if beat["id"] == "make-ten")
         self.assertEqual(labels_for(make, "zh_hk")["title"], "湊成十")
         self.assertEqual(labels_for(make, "zh")["title"], "凑成十")
         self.assertIn("放入", make["s1_zh_hk"])

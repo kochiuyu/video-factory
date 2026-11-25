@@ -1057,9 +1057,16 @@ def _scene_types() -> dict:
             labels = self.vf_labels
             latin, cjk = self.vf_fonts
             motif = str(labels.get("motif") or "counters")
+            lines = list(labels.get("lines") or ["", "", ""])
             title = styled(labels.get("title") or "", latin, cjk, 40)
+            if len(lines) >= 4 and motif == "counters":
+                self._counted_recap(title, lines, latin, cjk)
+                return
+            if len(lines) >= 4 and motif == "ten_frame":
+                self._ten_recap(title, lines, latin, cjk)
+                return
             rows = []
-            for i, line in enumerate(labels.get("lines") or ["", "", ""]):
+            for i, line in enumerate(lines):
                 cue = _takeaway_cue(motif, i, latin)
                 words = _wrapped(str(line or " "), latin, cjk, 30)
                 row = VGroup(cue, words).arrange(RIGHT, buff=0.28)
@@ -1072,6 +1079,169 @@ def _scene_types() -> dict:
             self.spend(0, FadeIn(title), FadeIn(rows[0]))
             self.spend(1, FadeIn(rows[1]))
             self.spend(2, FadeIn(rows[2]))
+
+        def _counted_recap(self, title, lines, latin: str, cjk: str) -> None:
+            """Four ideas: light five, a big 5, move into a circle, an empty tray."""
+            import math
+
+            from manim import Circle
+
+            dim = "#D5D0C6"
+            count = max(1, int(self.vf_labels.get("count") or 5))
+            dots = VGroup(*[counter(dim, 0.13) for _ in range(count)])
+            dots.arrange(RIGHT, buff=0.08)
+            numbers = VGroup()
+            for i, dot in enumerate(dots):
+                num = Text(str(i + 1), font=latin, font_size=16, color=WHITE)
+                if num.width > dot.width * 0.7:
+                    num.scale(dot.width * 0.7 / num.width)
+                num.move_to(dot)
+                num.set_z_index(4)
+                num.set_opacity(0)
+                numbers.add(num)
+            words0 = _wrapped(str(lines[0]), latin, cjk, 28)
+            row0 = VGroup(VGroup(dots, numbers), words0).arrange(RIGHT, buff=0.28)
+
+            big = Text("5", font=latin, font_size=64, color=NAVY)
+            words1 = _wrapped(str(lines[1]), latin, cjk, 28)
+            row1 = VGroup(big, words1).arrange(RIGHT, buff=0.28)
+
+            ring = 0.46
+            anchors = VGroup(*[
+                Circle(radius=0.01, stroke_opacity=0, fill_opacity=0)
+                for _ in range(count)
+            ])
+            for i, pin in enumerate(anchors):
+                ang = math.pi / 2 - i * 2 * math.pi / count
+                pin.move_to([ring * math.cos(ang), ring * math.sin(ang), 0])
+            movers = VGroup(*[counter(GREEN, 0.12) for _ in range(count)])
+            movers.arrange(RIGHT, buff=0.07)
+            movers.move_to(anchors.get_center())
+            still = Text("5", font=latin, font_size=36, color=NAVY)
+            still.next_to(VGroup(anchors, movers), RIGHT, buff=0.16)
+            words2 = _wrapped(str(lines[2]), latin, cjk, 28)
+            row2 = VGroup(VGroup(anchors, movers, still), words2).arrange(RIGHT, buff=0.28)
+
+            tray = RoundedRectangle(
+                width=1.45, height=0.78, corner_radius=0.12,
+                stroke_color=NAVY, stroke_width=3, fill_color=WHITE, fill_opacity=1,
+            )
+            zero = Text("0", font=latin, font_size=36, color=NAVY)
+            zero.move_to(tray)
+            words3 = _wrapped(str(lines[3]), latin, cjk, 28)
+            row3 = VGroup(VGroup(tray, zero), words3).arrange(RIGHT, buff=0.28)
+
+            stack = VGroup(row0, row1, row2, row3).arrange(DOWN, buff=0.28, aligned_edge=LEFT)
+            title.next_to(stack, UP, buff=0.32)
+            board = VGroup(title, stack)
+            board.move_to(UP * 0.05)
+            settle(board)
+            targets = [pin.get_center().copy() for pin in anchors]
+            self.add(numbers)
+
+            lights = []
+            for dot, num in zip(dots, numbers):
+                lights.append(lambda dot=dot, num=num: AnimationGroup(
+                    dot.animate.set_fill(GREEN, opacity=1),
+                    num.animate.set_opacity(1),
+                ))
+            counted = self.marks_for(0)
+            total = float((self.vf_durations or [0])[0] or 0)
+            if len(counted) != count and total > 0:
+                gap = total / (count + 1)
+                counted = [gap * (i + 1) for i in range(count)]
+            intro = AnimationGroup(FadeIn(title), FadeIn(words0), FadeIn(dots))
+            self.spend_marked(0, lights, counted, intro=intro)
+            self.spend(1, FadeIn(row1))
+            self._move_into_circle(2, words2, still, movers, targets)
+            self.spend(3, FadeIn(row3))
+
+        def _move_into_circle(self, index: int, words, still, movers, targets) -> None:
+            total = 0.0
+            durs = getattr(self, "vf_durations", []) or []
+            if 0 <= index < len(durs):
+                total = float(durs[index])
+            fps = max(float(config.frame_rate or 15), 1.0)
+            frame = 1.0 / fps
+            if total <= frame:
+                self.add(words, still, movers)
+                for dot, dest in zip(movers, targets):
+                    dot.move_to(dest)
+                return
+            intro_t = min(0.6, max(frame, total * 0.28))
+            self.play(FadeIn(words), FadeIn(still), FadeIn(movers), run_time=intro_t)
+            move_t = min(1.15, max(frame, (total - intro_t) * 0.62))
+            self.play(
+                *[dot.animate.move_to(dest) for dot, dest in zip(movers, targets)],
+                run_time=move_t,
+            )
+            rest = total - intro_t - move_t
+            if rest > frame / 2:
+                self.wait(rest)
+
+        def _ten_recap(self, title, lines, latin: str, cjk: str) -> None:
+            """Four ideas: one ten, thirteen, twenty, then the ten before the ones."""
+            dim = "#D5D0C6"
+
+            def filled(scale: float):
+                frame = ten_cells()
+                frame.scale(scale)
+                cell = frame[0]
+                radius = min(float(cell.width), float(cell.height)) * 0.32
+                dots = VGroup(*[counter(GREEN, radius) for _ in range(10)])
+                for dot, box in zip(dots, frame):
+                    dot.move_to(box)
+                return frame, dots
+
+            def aside(frame, n: int, color: str):
+                cell = frame[0]
+                radius = min(float(cell.width), float(cell.height)) * 0.32
+                dots = VGroup(*[counter(color, radius) for _ in range(n)])
+                dots.arrange(RIGHT, buff=radius * 0.45)
+                dots.next_to(frame, RIGHT, buff=0.12)
+                return dots
+
+            frame0, dots0 = filled(0.30)
+            row0 = VGroup(VGroup(frame0, dots0), _wrapped(str(lines[0]), latin, cjk, 26)).arrange(RIGHT, buff=0.22)
+
+            frame1, dots1 = filled(0.28)
+            ones1 = aside(frame1, 3, GREEN)
+            thirteen = Text("13", font=latin, font_size=28, color=NAVY)
+            thirteen.next_to(ones1, RIGHT, buff=0.1)
+            row1 = VGroup(VGroup(frame1, dots1, ones1, thirteen), _wrapped(str(lines[1]), latin, cjk, 26)).arrange(RIGHT, buff=0.22)
+
+            frame_a, dots_a = filled(0.24)
+            frame_b, dots_b = filled(0.24)
+            pair = VGroup(VGroup(frame_a, dots_a), VGroup(frame_b, dots_b)).arrange(RIGHT, buff=0.12)
+            twenty = Text("20", font=latin, font_size=28, color=NAVY)
+            twenty.next_to(pair, RIGHT, buff=0.1)
+            row2 = VGroup(VGroup(pair, twenty), _wrapped(str(lines[2]), latin, cjk, 26)).arrange(RIGHT, buff=0.22)
+
+            frame3, dots3 = filled(0.28)
+            ones3 = aside(frame3, 3, dim)
+            words3 = _wrapped(str(lines[3]), latin, cjk, 26)
+            row3 = VGroup(VGroup(frame3, dots3, ones3), words3).arrange(RIGHT, buff=0.22)
+
+            stack = VGroup(row0, row1, row2, row3).arrange(DOWN, buff=0.22, aligned_edge=LEFT)
+            title.next_to(stack, UP, buff=0.28)
+            board = VGroup(title, stack)
+            board.move_to(UP * 0.05)
+            settle(board)
+            ring = SurroundingRectangle(frame3, color=GOLD, buff=0.05, stroke_width=5)
+            ring.set_z_index(3)
+
+            self.spend(0, FadeIn(title), FadeIn(row0))
+            self.spend(1, FadeIn(row1))
+            self.spend(2, FadeIn(row2))
+            lights = [lambda dot=dot: dot.animate.set_fill(GREEN, opacity=1) for dot in ones3]
+            counted = self.marks_for(3)
+            total = float((self.vf_durations or [0, 0, 0, 0])[3] or 0)
+            if len(counted) != 3 and total > 0:
+                start = total * 0.42
+                span = total * 0.5
+                counted = [start + span * (i + 0.5) / 3 for i in range(3)]
+            intro = AnimationGroup(FadeIn(words3), FadeIn(frame3), FadeIn(dots3), FadeIn(ones3), FadeIn(ring))
+            self.spend_marked(3, lights, counted, intro=intro)
 
     def _wrapped(text: str, latin: str, cjk: str, size: int):
         raw = (text or "").strip() or " "

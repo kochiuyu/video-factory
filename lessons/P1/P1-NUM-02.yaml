@@ -7,7 +7,7 @@ id: P1-NUM-02
 title_en: A ten and some ones
 title_zh: 一个十和一些一
 title_zh_hk: 一個十和一些一
-duration_target_s: 62
+duration_target_s: 66
 clock: own
 beats:
 - id: hook
@@ -74,26 +74,19 @@ beats:
   visual: animated
   scene: lesson_takeaway
   motif: ten_frame
-  seconds: 12
-  kicker: Again
-  kicker_en: Again
-  kicker_zh: 再说
-  kicker_zh_hk: 再講
+  seconds: 16
   title_en: Find the ten first
   title_zh: 先找十
   title_zh_hk: 先搵十
-  q1_en: 10 + 3 = 13
-  q1_zh: 10 + 3 = 13
-  q1_zh_hk: 10 + 3 = 13
-  q2_en: 10 + 10 = 20
-  q2_zh: 10 + 10 = 20
-  q2_zh_hk: 10 + 10 = 20
-  s1_en: Ten and three is thirteen.
-  s1_zh: 十和三，就是十三。
-  s1_zh_hk: 十同三，就係十三。
-  s2_en: Ten and ten is twenty.
-  s2_zh: 十和十，就是二十。
-  s2_zh_hk: 十同十，就係二十。
-  s3_en: First the ten, then what is left.
-  s3_zh: 先说十，再说剩下的。
-  s3_zh_hk: 先講十，再講剩低嘅。
+  s1_en: One full frame is one ten.
+  s1_zh: 一个满框，就是一个十。
+  s1_zh_hk: 一個滿框，就係一個十。
+  s2_en: Ten and three more make thirteen.
+  s2_zh: 十再多三个，就是十三。
+  s2_zh_hk: 十再多三個，就係十三。
+  s3_en: Two full frames make twenty.
+  s3_zh: 两个满框，就是二十。
+  s3_zh_hk: 兩個滿框，就係二十。
+  s4_en: Find the ten first. Then count the rest.
+  s4_zh: 先找十，再数剩下的。
+  s4_zh_hk: 先搵十，再數剩低嘅。

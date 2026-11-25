@@ -20,7 +20,7 @@ from anim import (
     scene_problems,
     step_durations,
 )
-from scene_registry import REGISTRY, count_marks, crosses_ten, schedule_marks, track_columns
+from scene_registry import REGISTRY, count_event, count_marks, crosses_ten, schedule_marks, step_count, track_columns
 from mux import CAP_TIME_WORDS
 from slides import LAYOUT_VERSION, STAGEABLE, lesson_stamp, stage_plan
 from theme import load_theme
@@ -797,6 +797,46 @@ class SceneRegistryTest(unittest.TestCase):
         track = load_lesson(P1 / "P1-NUM-03.yaml")
         hops = [beat for beat in track["beats"] if beat.get("scene") == "number_track"]
         self.assertEqual([(b["start"], b["end"]) for b in hops], [(9, 12), (20, 17), (12, 9)])
+        one = load_lesson(P1 / "P1-NUM-01.yaml")
+        recap = next(beat for beat in one["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap), 4)
+        self.assertEqual(count_event(recap), (0, 5))
+        self.assertEqual(labels_for(recap, "en")["title"], "Count carefully")
+        self.assertEqual(labels_for(recap, "zh")["title"], "逐个数清楚")
+        self.assertEqual(labels_for(recap, "zh_hk")["title"], "逐個數清楚")
+        self.assertEqual(
+            labels_for(recap, "en")["lines"],
+            [
+                "Touch each one once. One, two, three, four, five.",
+                "The last number tells how many. Five.",
+                "Move them around. Still five.",
+                "Nothing there? That is zero.",
+            ],
+        )
+        self.assertEqual(
+            labels_for(recap, "zh_hk")["lines"][0],
+            "每個只係指一次。一，二，三，四，五。",
+        )
+        kept = next(beat for beat in two["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(kept), 4)
+        self.assertEqual(count_event(kept), (3, 3))
+        self.assertEqual(kept["title_en"], "Find the ten first")
+        self.assertEqual(kept["title_zh"], "先找十")
+        self.assertEqual(kept["title_zh_hk"], "先搵十")
+        self.assertEqual(
+            labels_for(kept, "en")["lines"],
+            [
+                "One full frame is one ten.",
+                "Ten and three more make thirteen.",
+                "Two full frames make twenty.",
+                "Find the ten first. Then count the rest.",
+            ],
+        )
+        self.assertEqual(labels_for(kept, "zh_hk")["lines"][3], "先搵十，再數剩低嘅。")
+        three = load_lesson(P1 / "P1-NUM-03.yaml")
+        still3 = next(beat for beat in three["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(still3), 3)
+        self.assertEqual(still3["s1_en"], "Count on means one more each time.")
 
     def test_track_stays_one_row_in_landscape_and_snakes_in_portrait(self):
         self.assertEqual(track_columns(21, 1920, 1080), 21)

@@ -6,7 +6,7 @@ id: P1-NUM-01
 title_en: Count carefully
 title_zh: 逐一数清楚
 title_zh_hk: 逐一數清楚
-duration_target_s: 58
+duration_target_s: 64
 clock: own
 beats:
 - id: hook
@@ -73,26 +73,20 @@ beats:
   visual: animated
   scene: lesson_takeaway
   motif: counters
-  seconds: 12
-  kicker: Again
-  kicker_en: Again
-  kicker_zh: 再说
-  kicker_zh_hk: 再講
-  title_en: Say it again
-  title_zh: 再说一次
-  title_zh_hk: 再講一次
-  q1_en: Point once. One number each.
-  q1_zh: 点一次，说一个数。
-  q1_zh_hk: 指一次，講一個數。
-  q2_en: The last number is how many.
-  q2_zh: 最后的数就是多少。
-  q2_zh_hk: 最後嘅數就係幾多。
-  s1_en: Point to each counter once. Say one number.
-  s1_zh: 每个圆片点一次，说一个数。
-  s1_zh_hk: 每個圓片指一次，講一個數。
-  s2_en: The last number tells how many. Move them, and it stays the same.
-  s2_zh: 最后的数就是有多少。搬一搬，还是那么多。
-  s2_zh_hk: 最後嘅數就係有幾多。搬嚟搬去，都係咁多。
-  s3_en: An empty tray is zero.
-  s3_zh: 空盘子，就是零个圆片。
-  s3_zh_hk: 個盤空空哋，就係零個圓片。
+  count: 5
+  seconds: 18
+  title_en: Count carefully
+  title_zh: 逐个数清楚
+  title_zh_hk: 逐個數清楚
+  s1_en: Touch each one once. One, two, three, four, five.
+  s1_zh: 每个只点一次。一，二，三，四，五。
+  s1_zh_hk: 每個只係指一次。一，二，三，四，五。
+  s2_en: The last number tells how many. Five.
+  s2_zh: 最后说的数，就是有多少。五个。
+  s2_zh_hk: 最後講嘅數，就係有幾多。五個。
+  s3_en: Move them around. Still five.
+  s3_zh: 搬一搬，还是五个。
+  s3_zh_hk: 搬吓佢哋，都係五個。
+  s4_en: Nothing there? That is zero.
+  s4_zh: 什么都没有？就是零。
+  s4_zh_hk: 乜都冇？就係零。

@@ -414,11 +414,18 @@ class LessonHook(SceneKind):
 class LessonTakeaway(SceneKind):
     """Each spoken line appears with a small cue: counters, a ten-frame, or a track.
 
-    Three spoken lines. The words on screen are those same lines.
+    Three spoken lines, or four when ``s4`` is written. The words on screen are
+    those same lines. ``count`` on a four-line counters recap lights that many
+    counters during the first line.
     """
 
     name = "lesson_takeaway"
     steps = 3
+
+    def step_count(self, beat: dict) -> int:
+        if str((beat or {}).get("s4_en") or "").strip():
+            return 4
+        return self.steps
 
     def problems(self, beat: dict) -> list[str]:
         if _motif(beat) not in _MOTIFS:
@@ -427,14 +434,22 @@ class LessonTakeaway(SceneKind):
 
     def labels(self, beat: dict, lang: str) -> dict:
         copy = _copy(lang)
+        n = self.step_count(beat)
         return {
             "title": _title_line(beat, lang) or copy["grade"],
-            "lines": [_beat_line(beat, lang, i) for i in (1, 2, 3)],
+            "lines": [_beat_line(beat, lang, i) for i in range(1, n + 1)],
             "motif": _motif(beat),
+            "count": _as_int(beat.get("count")) or 0,
         }
 
     def parameters(self, beat: dict) -> dict:
-        return {"motif": _motif(beat)}
+        params = {"motif": _motif(beat)}
+        if self.step_count(beat) != self.steps:
+            params["lines"] = self.step_count(beat)
+        count = _as_int(beat.get("count"))
+        if count is not None:
+            params["count"] = count
+        return params
 
 
 def track_columns(count: int, pixel_width: int, pixel_height: int, min_cell: float = 0.42) -> int:
@@ -480,6 +495,16 @@ def count_event(beat: dict) -> tuple[int, int] | None:
             return None
         return 1, count
     if scene == "ten_and_ones":
+        count = _as_int(beat.get("count"))
+        if count is None or count < 1:
+            return None
+        return 0, count
+    if scene == "lesson_takeaway":
+        # A ten-frame recap counts the three ones on its last line
+        # ("Find the ten first. Then count the rest.").
+        if _motif(beat) == "ten_frame" and str(beat.get("s4_en") or "").strip():
+            return 3, 3
+        # A counters recap counts on its first line ("… one, two, three, four, five.").
         count = _as_int(beat.get("count"))
         if count is None or count < 1:
             return None

@@ -1,0 +1,289 @@
+id: ACC-17
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Most of the value. Enough of the evidence?
+title_zh: 账面金额查了大半，审计证据够吗？
+title_zh_hk: 查到大部分金額，證據就夠了嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-17
+  kicker_en: ACC-17
+  kicker_zh: ACC-17
+  kicker_zh_hk: ACC-17
+  title_en: Most of the value. Enough of the evidence?
+  title_zh: 账面金额查了大半，审计证据够吗？
+  title_zh_hk: 查到大部分金額，證據就夠了嗎？
+  image: art/coverage-is-not-a-population-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Plan A would test 80 percent of the recorded receivables value. Plan B would cover only 44 percent,
+    but it also looks at smaller balances. Which initial batch would you prioritise? This is a fictional
+    Hong Kong distributor, and the work is an initial evidence batch, not a finished audit.
+  zh: >-
+    方案A会测试账面应收金额的百分之八十。方案B只覆盖百分之四十四，但也会抽查小额余额。你会优先做哪一批？这是虚构的香港分销商。现在安排的是首批取证，不是已经完成的审计。
+  zh_hk: >-
+    方案A會測試賬面應收金額嘅百分之八十。方案B只覆蓋百分之四十四，但也會抽查小額餘額。你會優先做邊一批？呢個係虛構嘅香港分銷商。而家安排嘅係首批取證，唔係已經完成嘅審計。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Initial batches, same 20 units
+  title_zh: 首批方案，工作量同为20
+  title_zh_hk: 首批方案，工作量同為20
+  row1_en: >-
+    A: 20 larger only
+  row1_zh: A：只查20笔大额
+  row1_zh_hk: A：只查20筆大額
+  row2_en: >-
+    B: 10 large, 20 small
+  row2_zh: B：10笔大额，20笔小额
+  row2_zh_hk: B：10筆大額，20筆小額
+  col1_en: Effort
+  col1_zh: 工作量
+  col1_zh_hk: 工作量
+  col2_en: Value
+  col2_zh: 账面金额
+  col2_zh_hk: 賬面金額
+  col3_en: Coverage
+  col3_zh: 金额覆盖
+  col3_zh_hk: 金額覆蓋
+  c11: '20'
+  c12: 800,000
+  c13: 80%
+  c21: '20'
+  c22: 440,000
+  c23: 44%
+  footer_en: 20 large at 40,000; 100 small at 2,000.
+  footer_zh: 大额20笔各4万；小额100笔各2,000。
+  footer_zh_hk: 大額20筆各4萬；小額100筆各2,000。
+  s1_en: >-
+    The list has 20 larger balances of 40,000 each and 100 smaller balances of 2,000 each, or 1,000,000
+    in total. It has been reconciled and checked complete for this exercise. The test is whether recorded
+    year-end receivables exist.
+  s1_zh: 清单上有二十笔大额余额，每笔四万，还有一百笔小额余额，每笔两千，合计一百万。本题已核对其完整。测试目标是，账面年末应收款项是否存在。
+  s1_zh_hk: 清單上有二十筆大額餘額，每筆四萬，仲有一百筆小額餘額，每筆兩千，合計一百萬。呢題已核對其完整。測試目標係，賬面年末應收款項係咪存在。
+  s2_en: >-
+    The next work block has 20 effort units. One larger balance takes one unit, and a smaller balance
+    takes half a unit. A tests all 20 larger balances. B tests ten specified larger balances and 20 smaller
+    balances selected at random without replacement from the complete smaller list.
+  s2_zh: >-
+    下一块工作有二十个工作量单位。一笔大额占一个单位，一笔小额占半个单位。A测试全部二十笔大额。B测试指定的十笔大额，再从完整小额清单中不放回地随机抽取二十笔。
+  s2_zh_hk: >-
+    下一個工作塊有二十個工作量單位。一筆大額佔一個單位，一筆小額佔半個單位。A測試全部二十筆大額。B測試指定嘅十筆大額，再由完整小額清單中不放回地隨機抽取二十筆。
+  s3_en: >-
+    Neither count is supplied as a professionally adequate sample size. This is only the sequencing of
+    an initial batch. Further necessary work will still be resourced before an opinion.
+  s3_zh: 这两种数量都没有被当作专业上足够的样本量。这只是首批测试的先后安排。出具意见之前，仍须配置后续必要工作。
+  s3_zh_hk: 呢兩種數量都冇被當作專業上足夠嘅樣本量。呢個只係首批測試嘅先後安排。出具意見之前，仍然要配置後續必要工作。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Prioritise A, or B?
+  title_zh: 先做A，还是先做B？
+  title_zh_hk: 先做A，定係先做B？
+  en: >-
+    Which initial batch would you prioritise, A or B, and why? Calculate its value coverage, and identify
+    the balances about which its evidence would remain limited. Pause and vote.
+  zh: 你会优先做A还是B，为什么？请计算它的金额覆盖率，并指出它仍然证据有限的是哪些余额。请暂停，投个票。
+  zh_hk: 你會優先做A定B，點解？請計算佢嘅金額覆蓋率，並指出佢仍然證據有限嘅係邊啲餘額。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Two billing routes
+  title_zh: 两条开票路径
+  title_zh_hk: 兩條開票路徑
+  step1_en: >-
+    Larger balances: manual route
+  step1_zh: 大额：人工复核路径
+  step1_zh_hk: 大額：人工覆核路徑
+  step2_en: >-
+    Smaller balances: new import route
+  step2_zh: 小额：今年新增导入路径
+  step2_zh_hk: 小額：今年新增導入路徑
+  step3_en: Clean results on A would not clear B
+  step3_zh: A查无问题，不能证明小额无误
+  step3_zh_hk: A查無問題，唔能證明小額無誤
+  s1_en: >-
+    A process walkthrough shows that all larger balances came through an established, manually reviewed
+    billing route. All 100 smaller balances came through a separate automated subscription-billing import
+    introduced this year. Nothing was missing from the reconciled list.
+  s1_zh: >-
+    流程走查显示，全部大额余额都来自既有的人工复核开票路径。一百笔小额余额则来自今年新引入的自动订购导入路径。核对后的清单两边都已经包括在内，没有遗漏。
+  s1_zh_hk: >-
+    流程走查顯示，全部大額餘額都來自既有嘅人工覆核開票路徑。一百筆小額餘額就來自今年新引入嘅自動訂購導入路徑。核對後嘅清單兩邊都已經包括在內，冇遺漏。
+  s2_en: >-
+    The new route is not proven faulty, but clean results from the manual route cannot establish that
+    the import entries are valid. The manager says that if A finds no exceptions, 80 percent of the money
+    has been checked, so the whole balance can be called clean. No tests have yet produced results.
+  s2_zh: >-
+    新路径并未被证明有缺陷，但人工路径查下来没有异常，并不能证明导入项目有效。经理说，只要A没有发现异常，就查了百分之八十的金额，整个余额都可以称为无误。目前任何测试都还没有结果。
+  s2_zh_hk: >-
+    新路徑並未被證明有缺陷，但人工路徑查落冇異常，並唔能夠證明導入項目有效。經理話，只要A冇發現異常，就查咗百分之八十嘅金額，整個餘額都可以稱為無誤。目前任何測試都仲未有結果。
+  s3_en: >-
+    Both initial batches remain feasible at the same effort. The supervisor can revise the sequence and
+    authorise more testing. Do not replace the specified existence test with a general review of IT controls,
+    or infer a valuation allowance merely from the import process.
+  s3_zh: >-
+    两个首批方案按同样工作量都仍可行。主管可以调整顺序并批准追加测试。不要用一般的信息技术控制复核，代替本题指定的存在性测试，也不能只因为有导入流程就推断要提减值。
+  s3_zh_hk: >-
+    兩個首批方案按同樣工作量都仍然可行。主管可以調整順序並批准追加測試。唔好用一般嘅資訊科技控制覆核，代替呢題指定嘅存在性測試，亦唔可以只因為有導入流程就推斷要計提減值。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Revise the initial batch?
+  title_zh: 要不要调整首批方案？
+  title_zh_hk: 要唔要調整首批方案？
+  en: >-
+    Would you revise the initial batch after learning about the two billing routes? Correct the manager's
+    proposed conclusion, and specify what further design and evaluation are needed before drawing a population
+    conclusion. Pause and decide.
+  zh: 知道两条开票路径之后，你会调整首批方案吗？请纠正经理那个推论，并说明在得出总体结论之前，还需要哪些设计和评价。请暂停，先做判断。
+  zh_hk: 知道兩條開票路徑之後，你會調整首批方案嗎？請糾正經理嗰個推論，並說明喺得出總體結論之前，仲需要邊啲設計同評價。暫停，先做判斷。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Coverage is not assurance
+  title_zh: 金额覆盖不是保证程度
+  title_zh_hk: 金額覆蓋唔係保證程度
+  step1_en: A covers 800,000, or 80%
+  step1_zh: A覆盖 80 万，即 80%
+  step1_zh_hk: A覆蓋 80 萬，即 80%
+  step2_en: B covers 440,000, or 44%
+  step2_zh: B覆盖 44 万，即 44%
+  step2_zh_hk: B覆蓋 44 萬，即 44%
+  step3_en: The untested route stays untested
+  step3_zh: 未测试的路径仍然未被测试
+  step3_zh_hk: 未測試嘅路徑仍然未被測試
+  s1_en: >-
+    A covers 20 times 40,000, which is 800,000, or 80 percent of recorded value. B covers ten larger items
+    plus 20 smaller items, which is 440,000, or 44 percent. Both use 20 effort units. Coverage is not
+    a confidence level, and it is not a percentage of assurance.
+  s1_zh: >-
+    A覆盖二十乘四万，即八十万，占账面金额百分之八十。B覆盖十笔大额加二十笔小额，即四十四万，占百分之四十四。两者都用二十个工作量单位。覆盖率不是置信水平，也不是保证程度的百分比。
+  s1_zh_hk: >-
+    A覆蓋二十乘四萬，即八十萬，佔賬面金額百分之八十。B覆蓋十筆大額加二十筆小額，即四十四萬，佔百分之四十四。兩者都用二十個工作量單位。覆蓋率唔係置信水平，亦唔係保證程度嘅百分比。
+  s2_en: >-
+    If obtained, clean results on A would concern the tested larger balances for this procedure. They
+    would not establish existence of the smaller balances generated through another route. That difference
+    motivates getting suitable evidence from that population; it does not prove error or fraud.
+  s2_zh: >-
+    即便A查下来没有异常，也只关系到本次程序中已测试的那些大额余额。它不能证明另一条路径生成的小额余额存在。这个差别要求对那个总体获取适当证据，但不能证明已经出错或舞弊。
+  s2_zh_hk: >-
+    即使A查落冇異常，都只關係到今次程序中已測試嗰啲大額餘額。佢唔能夠證明另一條路徑生成嘅小額餘額存在。呢個差別要求對嗰個總體獲取適當證據，但不能證明已經出錯或舞弊。
+  s3_en: >-
+    B is a defensible initial priority after the reveal, without being a complete audit plan. Random selection
+    from the smaller list is not, by itself, enough to declare the count adequate.
+  s3_zh: 得知路径不同之后，B作为首批优先安排是站得住的，但它还不是完整的审计计划。从小额清单中随机抽取，本身不足以宣布数量已经足够。
+  s3_zh_hk: 得知路徑唔同之後，B作為首批優先安排係站得住嘅，但佢仲唔係完整嘅審計計劃。由小額清單中隨機抽取，本身唔足夠宣布數量已經足夠。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 20
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Keep the populations visible
+  title_zh: 要把两个总体分开看
+  title_zh_hk: 要將兩個總體分開睇
+  step1_en: Design, test, then evaluate
+  step1_zh: 先设计，再测试，再评价
+  step1_zh_hk: 先設計，再測試，再評價
+  step2_en: Do not combine unlike selections
+  step2_zh: 不要把不同抽法混成一个清洁率
+  step2_zh_hk: 唔好將唔同抽法混成一個清潔率
+  step3_en: No results, so no error projection
+  step3_zh: 还没有结果，不能推断错报
+  step3_zh_hk: 仲未有結果，唔能推斷錯報
+  s1_en: >-
+    The team must still justify sample design and size, perform the procedure and follow-up, investigate
+    exceptions, and evaluate sampling risk. No numerical error projection is possible, because no test
+    results are supplied.
+  s1_zh: 项目组仍须论证样本设计和规模，执行程序和后续跟进，调查异常，并评价抽样风险。本题还没有测试结果，因此不能做数量上的错报推断。
+  s1_zh_hk: 項目組仍然要論證樣本設計同規模，執行程序同後續跟進，調查異常，並評價抽樣風險。呢題仲未有測試結果，所以唔能夠做數量上嘅錯報推斷。
+  s2_en: >-
+    Evaluate the smaller-population sample in relation to that population. Do not project specifically
+    selected larger-item results onto untested larger balances, or combine unlike selections into one
+    clean-rate calculation. The initial work block cannot justify signing prematurely.
+  s2_zh: >-
+    评价小额样本时，要针对那个小额总体。不要把指定抽取的大额结果，推广到未测试的其他大额，也不要把不同抽法混成一个无误率。首批工作不能成为提前签字的理由。
+  s2_zh_hk: >-
+    評價小額樣本時，要針對嗰個小額總體。唔好將指定抽取嘅大額結果，推廣到未測試嘅其他大額，亦唔好將唔同抽法混成一個無誤率。首批工作唔能夠成為提前簽字嘅理由。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If A finds no exceptions, what exactly has been supported, and what has not? If you treat 20 random
+    smaller items as automatically enough, what design question have you skipped? This is population and
+    selection logic, not a sample-size formula or an audit opinion.
+  zh: >-
+    如果A没有发现异常，究竟支持了什么，又没有支持什么？如果把随机抽取的二十笔小额自动当成足够，你跳过了哪一项设计问题？这是总体与抽取逻辑，不是样本量公式，也不是审计意见。
+  zh_hk: >-
+    如果A冇發現異常，究竟支持咗咩，又冇支持咩？如果將隨機抽取嘅二十筆小額自動當成足夠，你跳過咗邊一項設計問題？呢個係總體同抽取邏輯，唔係樣本量公式，亦唔係審計意見。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Value coverage is not enough
+  title_zh: 查到金额多，不等于证据够
+  title_zh_hk: 查到金額多，唔等於證據夠
+  q1_en: A covers 80%; B covers 44%
+  q1_zh: A覆盖80%，B覆盖44%
+  q1_zh_hk: A覆蓋80%，B覆蓋44%
+  q2_en: Two routes need two evaluations
+  q2_zh: 两条路径要分开评价
+  q2_zh_hk: 兩條路徑要分開評價
+  s1_en: >-
+    Value coverage describes what was touched. It is not assurance. After the reveal, the smaller balances
+    come from a different billing route, so clean results on A cannot clear that population.
+  s1_zh: 金额覆盖只说明碰到了哪些项目，它不是保证程度。公布资料后，小额余额来自另一条开票路径，所以A查无问题，并不能让那个总体过关。
+  s1_zh_hk: 金額覆蓋只說明碰到咗邊啲項目，佢唔係保證程度。公布資料之後，小額餘額來自另一條開票路徑，所以A查無問題，並唔能夠讓嗰個總體過關。
+  s2_en: >-
+    B is a defensible initial priority, but random selection alone does not make the sample adequate.
+    Keep the populations visible, and do not sign on coverage percentages.
+  s2_zh: B作为首批安排是站得住的，但随机抽取本身并不能让样本变得足够。要把两个总体分开看，不要凭覆盖率签字。
+  s2_zh_hk: B作為首批安排係站得住嘅，但隨機抽取本身並唔能夠讓樣本變得足夠。要將兩個總體分開睇，唔好憑覆蓋率簽字。
+  s3_en: >-
+    The distributor, the list and the effort units are classroom assumptions, not professional advice
+    or an actual audit opinion.
+  s3_zh: 分销商、清单和工作量单位都是课堂假设，不是专业建议，也不是真实的审计意见。
+  s3_zh_hk: 分銷商、清單同工作量單位都係課堂假設，唔係專業建議，亦唔係真實嘅審計意見。
+duration_target_s: 188

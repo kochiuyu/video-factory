@@ -1,0 +1,289 @@
+id: ACC-16
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A small payment. An important correction?
+title_zh: 付款金额不大，还需要更正吗？
+title_zh_hk: 款項小，更正也不重要嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-16
+  kicker_en: ACC-16
+  kicker_zh: ACC-16
+  kicker_zh_hk: ACC-16
+  title_en: A small payment. An important correction?
+  title_zh: 付款金额不大，还需要更正吗？
+  title_zh_hk: 款項小，更正也不重要嗎？
+  image: art/small-but-in-the-note-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A 2,400 payment was booked as printing, but it paid for room hire. The surplus does not change. Should
+    the treasurer still correct the draft before it is issued? This is a fictional Hong Kong adult arts
+    club. The accounts have not been approved or circulated.
+  zh: >-
+    一笔两千四百港元的付款记在了印刷费，实际支付的却是活动室租金。结余不会因此改变。司库还要在发出前更正草案吗？这是虚构的香港成人艺术会。账目尚未批准，也尚未传阅。
+  zh_hk: >-
+    一筆二千四百港元嘅付款記咗喺印刷費，實際支付嘅卻係活動室租金。盈餘唔會因此改變。司庫仲要唔要喺發出前更正草案？呢個係虛構嘅香港成人藝術會。賬目尚未批准，亦尚未傳閱。
+- id: ledger
+  visual: table_grid
+  seconds: 24
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Draft items, HK$
+  title_zh: 草案项目，港元
+  title_zh_hk: 草擬項目，港元
+  row1_en: Total expenses
+  row1_zh: 支出总额
+  row1_zh_hk: 開支總額
+  row2_en: Surplus
+  row2_zh: 结余
+  row2_zh_hk: 盈餘
+  row3_en: Printing / room hire
+  row3_zh: 印刷费／活动室租赁费
+  row3_zh_hk: 印刷費／活動室租金
+  row4_en: Misclassified payment
+  row4_zh: 记错类别的付款
+  row4_zh_hk: 錯誤分類的付款
+  col1_en: Draft
+  col1_zh: 草案
+  col1_zh_hk: 草擬
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11: 1,200,000
+  c12_en: Unissued
+  c12_zh: 尚未发出
+  c12_zh_hk: 尚未發出
+  c21: 50,000
+  c22_en: Unchanged if moved
+  c22_zh: 重分类后不变
+  c22_zh_hk: 重分類後不變
+  c31: 20,000 / 80,000
+  c32_en: Current headings
+  c32_zh: 现行科目
+  c32_zh_hk: 現行科目
+  c41: 2,400
+  c42_en: Service received
+  c42_zh: 服务已接受
+  c42_zh_hk: 服務已接受
+  footer_en: No other unresolved differences.
+  footer_zh: 误差记录中无其他未决差异。
+  footer_zh_hk: 誤差紀錄中無其他未決差異。
+  s1_en: >-
+    Draft expenses total 1,200,000 and the annual surplus is 50,000. Members use these accounts to decide
+    next year's programme funding and to review how the committee uses club money.
+  s1_zh: 草案支出总额一百二十万，年度结余五万。会员会用这份账目决定下一年的活动经费，并检视委员会如何使用会费。
+  s1_zh_hk: 草擬開支總額一百二十萬，年度盈餘五萬。會員會用呢份賬目決定下一年嘅活動經費，並檢視委員會點樣使用會費。
+  s2_en: >-
+    The invoice shows that the 2,400 paid for event-room hire, not printing. The service was received,
+    and the amount and date are correct. There is no additional expense and no missing cash. Printing
+    is 20,000 and room hire is 80,000.
+  s2_zh: >-
+    发票显示，这两千四百付的是活动室租赁费，不是印刷。服务已经接受，金额和日期都正确。没有多记费用，也没有现金短少。印刷费目前是两万，活动室租赁费是八万。
+  s2_zh_hk: >-
+    發票顯示，呢二千四百付嘅係活動室租金，唔係印刷。服務已經接受，金額同日期都正確。冇多記開支，亦冇現金短少。印刷費而家係兩萬，活動室租金係八萬。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Correct now, or assess significance?
+  title_zh: 现在更正，还是先看重不重要？
+  title_zh_hk: 而家更正，定係先睇重唔重要？
+  en: >-
+    Would you correct and explain the item now, or first assess it with the error log before deciding
+    its reporting significance? Calculate its share of total expenses, and identify what information could
+    make that percentage an inadequate answer. Pause and vote.
+  zh: >-
+    你会现在就更正并说明，还是先连同误差记录评估后再决定其报告意义？请计算它占支出总额的比重，并指出什么信息会让这个百分比不够作为答案。请暂停，投个票。
+  zh_hk: >-
+    你會而家就更正並說明，定係先連同誤差紀錄評估之後再決定其報告意義？請計算佢佔開支總額嘅比重，並指出咩資料會讓呢個百分比唔夠作為答案。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A related-party note was incomplete
+  title_zh: 关联方附注并不完整
+  title_zh_hk: 關聯方附註並不完整
+  step1_en: The supplier is chair-controlled
+  step1_zh: 供应商由主席控制
+  step1_zh_hk: 供應商由主席控制
+  step2_en: Draft related-party total 8,000
+  step2_zh: 关联方附注草案为 8,000
+  step2_zh_hk: 關聯方附註草擬為 8,000
+  step3_en: This 2,400 was left out
+  step3_zh: 这 2,400 未被列入
+  step3_zh_hk: 呢 2,400 未被列入
+  s1_en: >-
+    The supplier is controlled by the club chair. That relationship was declared before booking, and an
+    unconnected committee member approved the service and payment. The agreed service was delivered. No
+    improper price, hidden benefit or dishonest intent has been established.
+  s1_zh: >-
+    这家活动室供应商由俱乐部主席控制。预订前已经申报关系，并由一名无利害关系的委员按采购程序批准服务和付款。约定服务已经提供。本题没有认定价格不当、隐藏利益或不诚实意图。
+  s1_zh_hk: >-
+    呢間活動室供應商由會主席控制。預訂前已經申報關係，並由一名無利害關係嘅委員按採購程序批准服務同付款。約定服務已經提供。呢題冇認定價格不當、隱藏利益或者不誠實意圖。
+  s2_en: >-
+    Under the club's supplied reporting policy, transactions with committee-controlled suppliers belong
+    in a related-party note that members review when considering continued use of such suppliers. The
+    draft total is 8,000 and excludes this payment because the extract omitted its relationship flag.
+  s2_zh: >-
+    按本题给出的报告政策，与委员控制的供应商之间的交易应列入关联方附注，会员会据此考虑是否继续使用这些供应商。草案总额是八千，因为摘录漏了关系标记，所以没有包括这笔二千四百。
+  s2_zh_hk: >-
+    按呢題畀出嘅報告政策，同委員控制嘅供應商之間嘅交易應列入關聯方附註，會員會據此考慮係咪繼續使用呢啲供應商。草擬總額係八千，因為摘錄漏咗關係標記，所以冇包括呢筆二千四百。
+  s3_en: >-
+    The policy requires a correction before issue when an error could affect members' understanding of
+    that separate information, even if total surplus is unchanged. The accounts remain unissued; no public
+    retraction or prior-year restatement is involved.
+  s3_zh: 政策规定，若一项错误可能影响会员对这份单独信息的理解，即使结余不变，也要在发出前更正。账目尚未发出，不涉及公开撤回或重述以前年度。
+  s3_zh_hk: 政策規定，若一項錯誤可能影響會員對呢份單獨資料嘅理解，即使盈餘不變，都要喺發出前更正。賬目尚未發出，唔涉及公開撤回或重述以前年度。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What should the corrected lines show?
+  title_zh: 更正后的科目和附注应是多少？
+  title_zh_hk: 更正後嘅科目同附註應係幾多？
+  en: >-
+    What should the corrected expense lines and related-party total show? Explain why you would correct
+    the draft before issue, what remains unchanged, and how to describe the correction without alleging
+    misconduct. Pause and calculate.
+  zh: 更正后的费用科目和关联方总额应是多少？为什么要在发出前更正草案？哪些项目不变？怎样说明这次更正，而又不指控不当行为？请暂停，先算一遍。
+  zh_hk: 更正後嘅開支科目同關聯方總額應係幾多？點解要喺發出前更正草案？邊啲項目不變？點樣說明呢次更正，而又唔指控不當行為？暫停，先計一次。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Reclassify once, disclose once
+  title_zh: 只重分类一次，附注不要加两次
+  title_zh_hk: 只重分類一次，附註唔好加兩次
+  step1_en: 2,400 is 0.2% of expenses
+  step1_zh: 2,400 只占支出 0.2%
+  step1_zh_hk: 2,400 只佔開支 0.2%
+  step2_en: Printing 17,600; hire 82,400
+  step2_zh: 印刷费 17,600，租金 82,400
+  step2_zh_hk: 印刷費 17,600，租金 82,400
+  step3_en: Related-party note 8,000 to 10,400
+  step3_zh: 关联方附注由 8,000 增至 10,400
+  step3_zh_hk: 關聯方附註由 8,000 增至 10,400
+  s1_en: >-
+    2,400 divided by 1,200,000 is 0.2 percent of annual expenses. That is one comparison, not a safe harbour.
+    A payment can be small beside total activity and still alter a separate account of relationships that
+    members use.
+  s1_zh: >-
+    两千四百除以一百二十万，只占年度支出的百分之零点二。这只是一种比较，不是安全港。一笔付款可以相对总额很小，却仍会改变会员用来做判断的那份关系说明。
+  s1_zh_hk: >-
+    二千四百除以一百二十萬，只佔年度開支嘅百分之零點二。呢個只係一種比較，唔係安全港。一筆付款可以相對總額很小，卻仍然會改變會員用嚟做判斷嗰份關係說明。
+  s2_en: >-
+    Printing becomes 17,600 and event-room hire 82,400. Total expenses remain 1,200,000 and surplus 50,000.
+    The related-party note increases from 8,000 to 10,400. Adding 2,400 again to total expenses would
+    double-count the payment.
+  s2_zh: >-
+    印刷费改为一万七千六百，活动室租赁费改为八万二千四百。支出总额仍是一百二十万，结余仍是五万。关联方附注由八千增至一万零四百。如果再把两千四百加进支出总额，就会重复计算。
+  s2_zh_hk: >-
+    印刷費改為一萬七千六百，活動室租金改為八萬二千四百。開支總額仍然係一百二十萬，盈餘仍然係五萬。關聯方附註由八千增至一萬零四百。如果再將二千四百加進開支總額，就會重複計算。
+  s3_en: >-
+    The additional 2,400 is 30 percent of the previously displayed 8,000. That percentage is not another
+    universal threshold. Here, members' stated use of the note and the relationship make the omission
+    important.
+  s3_zh: 多出的两千四百占原先列示八千的百分之三十。这个比例也不是普遍门槛。在本题里，会员会用这份附注，再加上这层关系，使得遗漏变得重要。
+  s3_zh_hk: 多出嘅二千四百佔原先列示八千嘅百分之三十。呢個比例亦唔係普遍門檻。喺呢題入面，會員會用呢份附註，再加上呢層關係，使得遺漏變得重要。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 20
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: A correction is not misconduct
+  title_zh: 更正不是不当行为认定
+  title_zh_hk: 更正唔係不當行為認定
+  step1_en: Correct category and complete the note
+  step1_zh: 更正科目并补全附注
+  step1_zh_hk: 更正科目並補全附註
+  step2_en: Keep an independent review
+  step2_zh: 仍要由无利害关系的人复核
+  step2_zh_hk: 仍然要由無利害關係嘅人覆核
+  step3_en: Do not allege missing money
+  step3_zh: 不要说钱失踪了
+  step3_zh_hk: 唔好話錢失踪咗
+  s1_en: >-
+    Record the category change and complete the relationship note, then have the unconnected reviewer
+    check both against the invoice and the supplier record. Purchasing approval and reporting completeness
+    answer different questions.
+  s1_zh: 记下科目更正，补全关系附注，再请无利害关系的复核人对照发票和供应商记录核对。采购审批和报告完整性，回答的是不同问题。
+  s1_zh_hk: 記下科目更正，補全關係附註，再請無利害關係嘅覆核人對照發票同供應商紀錄核對。採購審批同報告完整性，回答嘅係唔同問題。
+  s2_en: >-
+    A suitable explanation says that a draft classification and related-party extract were corrected before
+    approval. It does not say money disappeared, or that the chair acted dishonestly. An unchanged surplus
+    cannot, by itself, show that the presentation is unimportant.
+  s2_zh: 恰当的说明是：发出前更正了草案分类和关联方摘录。不要说钱失踪了，也不要说主席不诚实。结余没有变，并不能单独证明这项列报不重要。
+  s2_zh_hk: 恰當嘅說明係：發出前更正咗草擬分類同關聯方摘錄。唔好話錢失踪咗，亦唔好話主席不誠實。盈餘冇變，並唔能夠單獨證明呢項列報不重要。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If you leave the 2,400 out of the note because it is only 0.2 percent of expenses, which user of the
+    accounts have you ignored? If you also add 2,400 to total expenses, what have you counted twice?
+  zh: 如果因为只占支出百分之零点二，就不把这两千四百写入附注，你忽略了哪一类账目使用者？如果再把它加进支出总额，哪一笔被算了两次？
+  zh_hk: 如果因為只佔開支百分之零點二，就唔將呢二千四百寫入附註，你忽略咗邊一類賬目使用者？如果再將佢加進開支總額，邊一筆被計咗兩次？
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Size is not the whole test
+  title_zh: 金额小，不等于可以不更正
+  title_zh_hk: 金額細，唔等於可以不更正
+  q1_en: Printing 17,600; hire 82,400
+  q1_zh: 印刷费1.76万，租金8.24万
+  q1_zh_hk: 印刷費1.76萬，租金8.24萬
+  q2_en: Related-party note becomes 10,400
+  q2_zh: 关联方附注改为 10,400
+  q2_zh_hk: 關聯方附註改為 10,400
+  s1_en: >-
+    Start with size, but do not stop there. Here 2,400 is 0.2 percent of expenses, yet it completes a
+    related-party note that members actually use.
+  s1_zh: 可以从金额大小入手，但不能停在那里。这两千四百只占支出百分之零点二，却补全了会员实际会看的关联方附注。
+  s1_zh_hk: 可以由金額大小入手，但不能停喺嗰度。呢二千四百只佔開支百分之零點二，卻補全咗會員實際會睇嘅關聯方附註。
+  s2_en: >-
+    Reclassify once and raise the note from 8,000 to 10,400. Surplus stays 50,000. A correction is not
+    a misconduct finding.
+  s2_zh: 只重分类一次，把附注从八千提高到一万零四百。结余仍是五万。更正不是不当行为认定。
+  s2_zh_hk: 只重分類一次，將附註由八千提高到一萬零四百。盈餘仍然係五萬。更正唔係不當行為認定。
+  s3_en: >-
+    The club, the policy and the figures are classroom assumptions, not a legal materiality threshold
+    or a finding about a real committee.
+  s3_zh: 俱乐部、这项政策和这些数字都是课堂假设，不是法定重要性门槛，也不是对某个真实委员会的结论。
+  s3_zh_hk: 俱樂部、呢項政策同呢啲數字都係課堂假設，唔係法定重要性門檻，亦唔係對某個真實委員會嘅結論。
+duration_target_s: 190

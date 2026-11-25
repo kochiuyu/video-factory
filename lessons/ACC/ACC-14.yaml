@@ -1,0 +1,283 @@
+id: ACC-14
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: An invoice issued. Cash likely?
+title_zh: 发票开出了，款项能收回吗？
+title_zh_hk: 發票已開，貨款收得回嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-14
+  kicker_en: ACC-14
+  kicker_zh: ACC-14
+  kicker_zh_hk: ACC-14
+  title_en: An invoice issued. Cash likely?
+  title_zh: 发票开出了，款项能收回吗？
+  title_zh_hk: 發票已開，貨款收得回嗎？
+  image: art/an-invoice-not-a-receipt-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    The customer still owes the whole invoice, and promises to pay in three instalments. Should the studio
+    keep its 10,000 loss allowance? This is a fictional Hong Kong design studio. No cash has arrived,
+    and the invoice itself is not in dispute.
+  zh: 客户仍欠整张发票，并承诺分三期付款。工作室该维持这一万的损失准备吗？这是虚构的香港设计工作室。现在还没有收回现金，发票金额本身也没有争议。
+  zh_hk: 客戶仍然欠整張發票，並承諾分三期付款。工作室該維持呢一萬嘅虧損撥備嗎？呢個係虛構嘅香港設計工作室。而家仲未收回現金，發票金額本身亦冇爭議。
+- id: ledger
+  visual: table_grid
+  seconds: 30
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: First recovery scenarios
+  title_zh: 初次评估的回款情景
+  title_zh_hk: 初次評估的收回情景
+  row1_en: Recover 100,000
+  row1_zh: 收回 100,000
+  row1_zh_hk: 收回 100,000
+  row2_en: Recover 60,000
+  row2_zh: 收回 60,000
+  row2_zh_hk: 收回 60,000
+  row3_en: Recover 20,000
+  row3_zh: 收回 20,000
+  row3_zh_hk: 收回 20,000
+  col1_en: Probability
+  col1_zh: 概率
+  col1_zh_hk: 機率
+  col2_en: Shortfall
+  col2_zh: 现金短缺
+  col2_zh_hk: 現金短缺
+  c11: 80%
+  c12: '0'
+  c21: 15%
+  c22: 40,000
+  c31: 5%
+  c32: 80,000
+  footer_en: Invoice 100,000; allowance 10,000.
+  footer_zh: 发票总额10万，损失准备1万。
+  footer_zh_hk: 發票總額10萬，虧損撥備1萬。
+  s1_en: >-
+    An undisputed invoice of 100,000 is overdue. Revenue and the invoice amount are not in question. The
+    gross receivable is 100,000, and an existing loss allowance of 10,000 gives a net carrying amount
+    of 90,000. No cash has been collected.
+  s1_zh: 一张无争议的十万港元发票已经逾期。收入确认和发票金额都不成问题。应收款项总额是十万，已有损失准备一万，账面净额九万。迄今没有收回现金。
+  s1_zh_hk: 一張無爭議嘅十萬港元發票已經逾期。收入確認同發票金額都唔成問題。應收款項總額係十萬，已有虧損撥備一萬，應收款項淨額九萬。迄今冇收回現金。
+  s2_en: >-
+    The customer proposes 20,000 in two weeks, then 40,000, then 40,000. That is a statement of intended
+    payment, not cash or a guarantee. Finance supplies three mutually exclusive recovery scenarios as
+    the complete estimate set for this exercise.
+  s2_zh: >-
+    客户提出两周后付两万，再过两周付四万，之后再付四万。这只是付款意向，不是现金，也不是保证。财务给出了三种互斥的回款情景，本题把它作为完整、合理且可支持的估计集合。
+  s2_zh_hk: >-
+    客戶提出兩周後付兩萬，再過兩周付四萬，之後再付四萬。呢個只係付款意向，唔係現金，亦唔係保證。財務畀出咗三種互斥嘅收回情景，呢題將佢視為完整、合理而且可支持嘅估計集合。
+  s3_en: >-
+    The full-payment scenario is 80 percent likely, the 60,000 recovery is 15 percent, and the 20,000
+    recovery is 5 percent. The amounts are total eventual recovery on this invoice, not extra receipts.
+  s3_zh: 全额收回的概率是百分之八十，收回六万的概率是百分之十五，收回两万的概率是百分之五。这些金额是这张发票最终可收回的总额，不是额外进账。
+  s3_zh_hk: 全數收回嘅機率係百分之八十，收回六萬嘅機率係百分之十五，收回兩萬嘅機率係百分之五。呢啲金額係呢張發票最終可收回嘅總額，唔係額外進賬。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep or change the allowance?
+  title_zh: 维持、增加，还是转回准备？
+  title_zh_hk: 維持、增加，定係轉回撥備？
+  en: >-
+    Would you keep the 10,000 allowance, increase it, or remove it because the customer promises full
+    payment? Calculate the scenario-weighted recovery, and explain how an expected shortfall differs from
+    the amount still owed. Pause and vote.
+  zh: >-
+    你会维持这一万的损失准备、增加准备，还是因为客户承诺付清就转回准备？请计算按情景加权的预期回款，并说明预期现金短缺为什么不等于客户仍欠的金额。请暂停，投个票。
+  zh_hk: >-
+    你會維持呢一萬嘅虧損撥備、增加撥備，定係因為客戶承諾付清就轉回撥備？請計算按情景加權嘅預計收回金額，並說明預計現金短缺點解唔等於客戶仍然欠嘅金額。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The first instalment missed
+  title_zh: 第一笔约定款项没有到
+  title_zh_hk: 第一筆約定款項冇到
+  step1_en: No 20,000 has been received
+  step1_zh: 两万没有入账
+  step1_zh_hk: 兩萬冇入賬
+  step2_en: >-
+    Updated probabilities: 60, 30, 10
+  step2_zh: 更新概率：60%、30%、10%
+  step2_zh_hk: 更新機率：60%、30%、10%
+  step3_en: The invoice is still 100,000
+  step3_zh: 发票权利仍是十万
+  step3_zh_hk: 發票權利仍然係十萬
+  s1_en: >-
+    Just after the first proposed instalment date, no 20,000 payment has arrived. The customer says its
+    own expected receipt was delayed. Finance supplies a revised scenario set, supported within this fictional
+    exercise, not calculated mechanically from one missed payment.
+  s1_zh: >-
+    过了第一笔约定付款日，两万并没有到账。客户说自己预计收到的款项也推迟了。财务给出了更新后的情景，这是本题内部支持的假设，不是由一次逾期机械推出来的。
+  s1_zh_hk: >-
+    過咗第一筆約定付款日，兩萬並冇到賬。客戶話自己預計收到嘅款項都推遲咗。財務畀出咗更新後嘅情景，呢個係呢題內部支持嘅假設，唔係由一次逾期機械推出來。
+  s2_en: >-
+    The new probabilities are 60 percent for full recovery, 30 percent for 60,000, and 10 percent for
+    20,000. They replace, rather than add to, the old set. No cash has been received. The gross claim
+    is still 100,000.
+  s2_zh: 新的概率是：全额收回百分之六十，收回六万百分之三十，收回两万百分之十。这是替代原来的集合，不是叠加。期间没有收到现金。合同权利仍是十万。
+  s2_zh_hk: 新嘅機率係：全數收回百分之六十，收回六萬百分之三十，收回兩萬百分之十。呢個係代替原來嘅集合，唔係疊加。期間冇收到現金。合約權利仍然係十萬。
+  s3_en: >-
+    No debt has been forgiven, written off, or contractually modified. Finance has not concluded that
+    there is no reasonable prospect of recovering a specific part of the invoice.
+  s3_zh: 没有免除债务，没有核销，也没有变更合同。财务并没有断定，发票中的某一部分已经没有合理收回可能。
+  s3_zh_hk: 冇免除債務，冇撇銷，亦冇變更合約。財務並冇斷定，發票入面某一部分已經冇合理收回可能。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What allowance now?
+  title_zh: 现在应列多少损失准备？
+  title_zh_hk: 而家應列幾多虧損撥備？
+  en: >-
+    What allowance and net receivable should the studio report now, and what is the change from the existing
+    estimate? Why does the update neither record a cash receipt nor tell the collection team to stop?
+    Pause and calculate.
+  zh: >-
+    工作室现在应报告多少损失准备和应收款项净额？与原来的估计相比变了多少？为什么这次更新既不代表收到现金，也不等于让催收停下来？请暂停，先算一遍。
+  zh_hk: 工作室而家應列報幾多虧損撥備同應收款項淨額？同原來嘅估計相比變咗幾多？點解呢次更新既唔代表收到現金，亦唔等於叫追收停低？暫停，先計一次。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 30
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Update the estimate, not invoice
+  title_zh: 更新的是估计，不是发票
+  title_zh_hk: 更新嘅係估計，唔係發票
+  step1_en: First expected recovery 90,000
+  step1_zh: 初次预期回款 90,000
+  step1_zh_hk: 初次預計收回 90,000
+  step2_en: Updated expected recovery 80,000
+  step2_zh: 更新后预期回款 80,000
+  step2_zh_hk: 更新後預計收回 80,000
+  step3_en: Allowance rises by 10,000, not 20,000
+  step3_zh: 准备只再提 10,000，不是 20,000
+  step3_zh_hk: 撥備只再提 10,000，唔係 20,000
+  s1_en: >-
+    Initially, expected recovery is 80 percent of 100,000, plus 15 percent of 60,000, plus 5 percent of
+    20,000, which equals 90,000. The expected shortfall is 10,000, so the existing allowance is supported.
+    Using only the most likely scenario would ignore the other outcomes.
+  s1_zh: >-
+    初次预期回款是百分之八十乘十万，加百分之十五乘六万，加百分之五乘两万，等于九万。预期短缺是一万，所以现有损失准备站得住。只看最可能的情景，就会漏掉其他结果。
+  s1_zh_hk: >-
+    初次預計收回金額係百分之八十乘十萬，加百分之十五乘六萬，加百分之五乘兩萬，等於九萬。預計短缺係一萬，所以現有虧損撥備站得住。只睇最可能嘅情景，就會漏咗其他結果。
+  s2_en: >-
+    After the update, expected recovery is 60 percent of 100,000, plus 30 percent of 60,000, plus 10 percent
+    of 20,000, which equals 80,000. The allowance becomes 20,000. The required increase is 10,000, not
+    another 20,000 on top of the original allowance.
+  s2_zh: >-
+    更新后的预期回款是百分之六十乘十万，加百分之三十乘六万，加百分之十乘两万，等于八万。损失准备应为两万。需要追加的是一万，不是在原来的准备上再加两万。
+  s2_zh_hk: >-
+    更新後嘅預計收回金額係百分之六十乘十萬，加百分之三十乘六萬，加百分之十乘兩萬，等於八萬。虧損撥備應為兩萬。需要追加嘅係一萬，唔係喺原來嘅撥備之上再加兩萬。
+  s3_en: >-
+    Under this simplified model, the increase is an impairment expense, and the net receivable falls from
+    90,000 to 80,000. A promise is one input, not the estimate itself.
+  s3_zh: 在这个简化模型里，增提额确认为减值损失，账面净额由九万降到八万。客户的承诺只是一项输入，它本身不是估计结果。
+  s3_zh_hk: 喺呢個簡化模型入面，增提額確認為減值開支，應收款項淨額由九萬降至八萬。客戶嘅承諾只係一項輸入，佢本身唔係估計結果。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Four different numbers
+  title_zh: 要分清四个数字
+  title_zh_hk: 要分清四個數字
+  step1_en: Gross claim still 100,000
+  step1_zh: 债权总额仍是 100,000
+  step1_zh_hk: 債權總額仍然係 100,000
+  step2_en: Allowance 20,000; net 80,000
+  step2_zh: 损失准备 20,000，净额 80,000
+  step2_zh_hk: 虧損撥備 20,000，淨額 80,000
+  step3_en: Cash received is still zero
+  step3_zh: 实际收款仍是零
+  step3_zh_hk: 實際收款仍然係零
+  s1_en: >-
+    The gross invoice and claim remain 100,000. The loss allowance is 20,000. The net carrying amount
+    is 80,000. Cash received is still zero. The 80,000 is a weighted estimate, not a promised receipt
+    and not one of the three stipulated outcomes.
+  s1_zh: >-
+    发票和合同权利仍是十万。损失准备是两万。账面净额是八万。实际收款仍是零。这八万是加权估计，不是已经承诺的回款，也不等于三种设定情景中的任何一种。
+  s1_zh_hk: >-
+    發票同合約權利仍然係十萬。虧損撥備係兩萬。應收款項淨額係八萬。實際收款仍然係零。呢八萬係加權估計，唔係已經承諾嘅收回金額，亦唔等於三種設定情景入面任何一種。
+  s2_en: >-
+    An allowance estimates expected loss. It does not forgive the debt, and it is not the same as a write-off.
+    Collection continues. A reporting estimate does not change the customer's obligation, and it does
+    not create cash for paying bills.
+  s2_zh: 损失准备只是对预期损失的估计，不等于免除债务，也不等于核销。催收仍要继续。会计估计不会改变客户的义务，也不会给工作室变出现金来付账单。
+  s2_zh_hk: 虧損撥備只係對預計虧損嘅估計，唔等於免除債務，亦唔等於撇銷。追收仍然要繼續。會計估計唔會改變客戶嘅義務，亦唔會俾工作室變出現金嚟付賬單。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If you add another 20,000 to the original 10,000 allowance, what have you counted twice? Cross-check
+    the shortfalls: 15 percent of 40,000 plus 5 percent of 80,000 is 10,000 at first; later, 30 percent
+    of 40,000 plus 10 percent of 80,000 is 20,000.
+  zh: >-
+    如果在原来的一万损失准备上再加两万，哪一部分被算了两次？请用短缺额交叉核对：初次是百分之十五乘四万，加百分之五乘八万，等于一万；更新后是百分之三十乘四万，加百分之十乘八万，等于两万。
+  zh_hk: >-
+    如果喺原來嘅一萬虧損撥備之上再加兩萬，邊一部分被計咗兩次？請用短缺額交叉核對：初次係百分之十五乘四萬，加百分之五乘八萬，等於一萬；更新後係百分之三十乘四萬，加百分之十乘八萬，等於兩萬。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: A promise is not the estimate
+  title_zh: 承诺不是估计本身
+  title_zh_hk: 承諾唔係估計本身
+  q1_en: Allowance rises from 10,000 to 20,000
+  q1_zh: 损失准备由1万增至2万
+  q1_zh_hk: 虧損撥備由1萬增至2萬
+  q2_en: Net receivable 80,000; cash still 0
+  q2_zh: 净额8万，现金仍是0
+  q2_zh_hk: 淨額8萬，現金仍然係0
+  s1_en: >-
+    Use the scenario-weighted recovery, not only the most likely promise. After the update, expected recovery
+    is 80,000, so the allowance is 20,000 and the net receivable is 80,000.
+  s1_zh: 要用按情景加权的预期回款，而不是只看最可能的那一种承诺。更新之后，预期回款是八万，所以损失准备是两万，账面净额是八万。
+  s1_zh_hk: 要用按情景加權嘅預計收回金額，而唔係只睇最可能嗰一種承諾。更新之後，預計收回金額係八萬，所以虧損撥備係兩萬，應收款項淨額係八萬。
+  s2_en: >-
+    The invoice, the allowance, the net amount and cash are four different numbers. An allowance is not
+    forgiveness, and it is not a write-off.
+  s2_zh: 发票、损失准备、账面净额和现金是四个不同的数字。计提准备不等于免除债务，也不等于核销。
+  s2_zh_hk: 發票、虧損撥備、應收款項淨額同現金係四個唔同嘅數字。計提撥備唔等於免除債務，亦唔等於撇銷。
+  s3_en: >-
+    The studio, the invoice and the probabilities are classroom assumptions, not a report about a real
+    customer.
+  s3_zh: 工作室、发票和概率都是课堂假设，不是关于某位真实客户的报道。
+  s3_zh_hk: 工作室、發票同機率都係課堂假設，唔係關於某位真實客戶嘅報道。
+duration_target_s: 200

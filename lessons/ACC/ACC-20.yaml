@@ -1,0 +1,305 @@
+id: ACC-20
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: An internal price. Two sensible refusals?
+title_zh: 一个内部价格，双方拒绝都可能有道理？
+title_zh_hk: 同一個內部價，兩邊都可以有理由拒絕？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-20
+  kicker_en: ACC-20
+  kicker_zh: ACC-20
+  kicker_zh_hk: ACC-20
+  title_en: An internal price. Two sensible refusals?
+  title_zh: 一个内部价格，双方拒绝都可能有道理？
+  title_zh_hk: 同一個內部價，兩邊都可以有理由拒絕？
+  image: art/internal-price-two-refusals-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Assembly needs 300 components. The component unit has spare capacity, and an outside supplier will
+    sell the same parts at 70. What internal price range would both managers consider? This is a fictional
+    manufacturer, and the prices are management-accounting charges, not tax advice.
+  zh: >-
+    装配部门需要三百件零部件。零部件部门当时有闲余产能，外部合格供应商也可以七十港元供货。两位经理会在哪个内部价格区间都愿意考虑？这是虚构的制造企业。这里的价格是管理会计计价，不是税务建议。
+  zh_hk: >-
+    裝配部需要三百件零件。零件部當時有閒置產能，外部合資格供應商亦可以七十港元供貨。兩位經理會喺邊個內部價格區間都願意考慮？呢個係虛構嘅製造公司。呢度嘅價格係管理會計計價，唔係稅務建議。
+- id: ledger
+  visual: table_grid
+  seconds: 24
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Planning facts this month
+  title_zh: 本月计划数据
+  title_zh_hk: 本月規劃資料
+  row1_en: Monthly capacity
+  row1_zh: 零部件月产能
+  row1_zh_hk: 零件月產能
+  row2_en: Already committed
+  row2_zh: 已有承诺
+  row2_zh_hk: 已有承諾
+  row3_en: Assembly needs
+  row3_zh: 装配部门需求
+  row3_zh_hk: 裝配部所需
+  row4_en: Incremental internal cost
+  row4_zh: 内部生产增量成本
+  row4_zh_hk: 內部生產增量成本
+  col1_en: Amount
+  col1_zh: 数值
+  col1_zh_hk: 數值
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11: 1,000 units
+  c12_en: This month only
+  c12_zh: 仅限本月
+  c12_zh_hk: 僅限本月
+  c21: 600 units
+  c22_en: Must be honoured
+  c22_zh: 不得挤占
+  c22_zh_hk: 必須履行
+  c31: 300 units
+  c32_en: Outside price 70
+  c32_zh: 外购价 70
+  c32_zh_hk: 外購價 70
+  c41: 40 per unit
+  c42_en: Spare capacity 400
+  c42_zh: 闲余产能 400 件
+  c42_zh_hk: 閒置產能 400 件
+  footer_en: No extra internal transport or fees.
+  footer_zh: 本题不计额外内部运费。
+  footer_zh_hk: 本題不計額外內部運費。
+  s1_en: >-
+    The component unit can make 1,000 units this month. Six hundred are already committed and must be
+    honoured, so 400 units of spare capacity remain. Assembly needs 300 additional components. No other
+    productive use or external sale has yet been identified.
+  s1_zh: 零部件部门本月可生产一千件，其中六百件已有承诺，不得挤占，因此闲余产能是四百件。装配部门另需三百件。当时没有发现其他生产用途或对外销售机会。
+  s1_zh_hk: 零件部本月可生產一千件，其中六百件已有承諾，必須履行，因此閒置產能係四百件。裝配部另需三百件。當時未發現其他生產用途或對外銷售機會。
+  s2_en: >-
+    An internally supplied component costs the company 40 in additional production resources. A qualified
+    external supplier offers any required quantity up to 300 at 70, delivered and inspected. Assembly
+    will not pay more than 70, because that outside purchase is available.
+  s2_zh: >-
+    内部供应每件，公司的增量生产成本是四十港元。合格外部供应商可以七十港元供货，含交付和验收，三百件以内可按需购买。装配部门不会付得比七十更高，因为可以按这个价格外购。
+  s2_zh_hk: >-
+    內供每件，公司嘅增量生產成本係四十港元。合資格外部供應商可以七十港元供貨，已包括送貨及檢驗，三百件以內可按需要購買。裝配部唔會付得比七十更高，因為可以按呢個價格外購。
+  s3_en: >-
+    Managers are evaluated on their own unit contribution and may negotiate, or use qualified outside
+    alternatives. Units can be sourced separately, not only as an all-or-nothing package. No transfer
+    has yet been agreed.
+  s3_zh: 经理按本部门的边际贡献考核，可以协商内部转移，也可以使用合格的外部渠道。各件可以分别确定来源，不用整批捆绑。尚未达成内部转移协议。
+  s3_zh_hk: 經理按所屬部門嘅邊際貢獻考核，可以協商內部轉讓，亦可以使用合資格外部方案。可分件採購，不必全買或全不買。尚未同意任何內部轉讓。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What range would both consider?
+  title_zh: 双方愿意考虑的价格区间是？
+  title_zh_hk: 雙方願意考慮嘅價格區間係？
+  en: >-
+    What internal price range would make both unit managers willing to consider the 300-component transfer?
+    Recommend a price within that range, and explain how the group benefits compared with buying all 300
+    outside. Pause and calculate.
+  zh: >-
+    对这三百件的内部转移，两位经理在哪个价格区间都愿意考虑？请在区间内提出一个价格，并解释与三百件全数外购相比，公司能获得什么利益。请暂停，先算一遍。
+  zh_hk: 就呢三百件內部轉讓，兩位經理喺邊個價格區間都願意考慮？請在區間內提出一個價格，並說明同三百件全數外購相比，集團得到甚麼好處。暫停，先計一次。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: An external offer of 80 for 200
+  title_zh: 外部客户愿以 80 购买 200 件
+  title_zh_hk: 外部客戶願以 80 購買 200 件
+  step1_en: Up to 200 units at 80 each
+  step1_zh: 最多 200 件，每件 80
+  step1_zh_hk: 最多 200 件，每件 80
+  step2_en: >-
+    Extra packing and delivery: 5
+  step2_zh: 对外包装配送另加 5
+  step2_zh_hk: 對外包裝配送另加 5
+  step3_en: 200 spare units would remain
+  step3_zh: 还剩 200 件闲余产能
+  step3_zh_hk: 仲剩 200 件閒置產能
+  s1_en: >-
+    Before either unit commits, a new external customer offers to buy up to 200 components this month
+    at 80 each. Each external unit uses the same capacity and the same production cost of 40, plus 5 of
+    external-only packing and delivery. The offer has no minimum, and existing commitments of 600 remain
+    protected.
+  s1_zh: >-
+    两个部门均未承诺前，新外部客户提出本月以每件八十港元购买最多二百件。售给外部的零部件占用相同产能，生产成本同为四十，另有仅在对外销售时发生的包装和配送费五港元。没有最低量，已有六百件承诺仍须履行。
+  s1_zh_hk: >-
+    兩個部門均未承諾前，新外部客戶提出本月以每件八十港元購買最多二百件。售給外部嘅零件佔用相同產能，生產成本同為四十，另有只在對外銷售時發生嘅包裝同配送費五港元。沒有最低量，已有六百件承諾仍然須履行。
+  s2_en: >-
+    Accepting all 200 external units leaves 200 units of spare capacity for assembly. Assembly still needs
+    300, and can buy the remainder outside at 70. No overtime, expansion or later delivery is available
+    this month.
+  s2_zh: 承接二百件对外销售后，只剩二百件产能可供装配。装配需求仍是三百件，不足部分可按每件七十外购。本月无法加班、扩产或延迟交付。
+  s2_zh_hk: 接二百件對外銷售之後，只剩二百件產能可供裝配。裝配需求仍然係三百件，不足部分可按每件七十外購。本月無法加班、擴產或延遲交付。
+  s3_en: >-
+    External net contribution is 80 minus 40 minus 5, which is 35 per unit. Internal transfers beyond
+    the remaining 200 would displace that contribution. Managers may negotiate prices by tranche; do not
+    require a single averaged price across all 300.
+  s3_zh: >-
+    每件对外销售的净边际贡献，是八十减四十再减五，等于三十五。内部供应超过二百件，就会挤掉相应的对外销售贡献。经理可以就不同批段分别议价，不必给全部三百件一个均价。
+  s3_zh_hk: >-
+    每件對外銷售嘅淨邊際貢獻，係八十減四十再減五，等於三十五。內供超過二百件，就會擠走相應嘅對外銷售貢獻。經理可以就唔同批段分別議價，不必畀全部三百件一個平均價。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: How many should transfer, and at what prices?
+  title_zh: 应内部转移多少件，价格如何定？
+  title_zh_hk: 應內部轉讓幾多件，價格點定？
+  en: >-
+    With the new external opportunity, how many components should transfer internally, and at what acceptable
+    prices? Separate spare-capacity units from units that displace external sales, and reconcile the managers'
+    choices with the group's interest. Pause and calculate.
+  zh: >-
+    出现对外销售机会后，多少件应内部转移、价格多少可接受？请区分利用闲余产能的数量，与挤占对外销售的数量，并说明如何使经理的选择与公司整体利益一致。请暂停，先算一遍。
+  zh_hk: >-
+    出現對外銷售機會之後，幾多件應內部轉讓、價格幾多可以接受？請區分利用閒置產能嘅數量，同會取代對外銷售嘅數量，並說明如何令經理嘅選擇符合公司整體利益。暫停，先計一次。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Price constrained units differently
+  title_zh: 对挤占产能的部分另算价格
+  title_zh_hk: 佔用稀缺產能的部分要另算
+  step1_en: >-
+    First range: 40 to 70
+  step1_zh: 最初区间：40 至 70
+  step1_zh_hk: 最初區間：40 至 70
+  step2_en: After the offer, 200 still 40–70
+  step2_zh: 有外部订单后，200 件仍是 40–70
+  step2_zh_hk: 有外部訂單後，200 件仍是 40–70
+  step3_en: >-
+    Next 100: 75 versus 70, no range
+  step3_zh: 再供 100 件：75 对 70，没有交集
+  step3_zh_hk: 再供 100 件：75 對 70，沒有交集
+  s1_en: >-
+    Initially, the supplier's relevant minimum is 40, because all 300 internal units fit unused capacity.
+    Assembly will not pay more than 70. The weakly acceptable range is 40 to 70. At 55, each manager gains
+    15 per unit relative to its alternative. The group saves 300 times 30, which is 9,000.
+  s1_zh: >-
+    初始时三百件都可利用闲余产能，供应部门的最低相关价格是四十；装配部门最高只付七十。双方均可接受四十到七十。定在五十五时，两部门各比自身备选方案每件多得十五。无论利益怎样划分，公司节省三百乘三十，即九千。
+  s1_zh_hk: >-
+    初時三百件都可以用閒置產能生產，零件部嘅相關最低價係四十；裝配部最高只付七十。雙方均可接受四十到七十。定喺五十五時，兩位經理各比自己原有替代方案每件多得十五。無論利益點樣劃分，集團節省三百乘三十，即九千。
+  s2_en: >-
+    After accepting the external opportunity, the first 200 internal units still have a 40 to 70 range.
+    For the next 100, the component unit needs 40 plus 35 of foregone contribution, so 75 to be indifferent,
+    while assembly's maximum remains 70. There is no mutually beneficial per-unit range for that constrained
+    tranche.
+  s2_zh: >-
+    接下对外销售后，前二百件的内部价格仍可在四十到七十之间。其余一百件会挤占对外销售，零部件部门须得到四十成本加三十五放弃的边际贡献，达到七十五才无差异；装配部门最高仍只肯付七十。这一段没有双方都能接受的每件价格。
+  s2_zh_hk: >-
+    接下對外銷售之後，前二百件嘅內部價格仍可在四十到七十之間。其餘一百件會佔用對外銷售，零件部須得到四十成本加三十五放棄嘅貢獻，達到七十五先至無差異；裝配部最高仍然只肯付七十。呢一段沒有雙方都能接受嘅每件價格。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 22
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Reconcile the company result
+  title_zh: 核对公司整体结果
+  title_zh_hk: 核對公司整體結果
+  step1_en: Allocate 600, 200 and 200
+  step1_zh: 分配：承诺 600，外销 200，内供 200
+  step1_zh_hk: 分配：承諾 600，外銷 200，內供 200
+  step2_en: Buy 100 outside; save 6,000
+  step2_zh: 外购 100 件，节省 6,000
+  step2_zh_hk: 外購 100 件，節省 6,000
+  step3_en: Forcing 300 inside is 500 worse
+  step3_zh: 强行内供 300 件，反而少 500
+  step3_zh_hk: 強行內供 300 件，反而少 500
+  s1_en: >-
+    Use 600 units for existing commitments, 200 for the new external customer, and 200 for assembly: total
+    capacity 1,000. Buy assembly's remaining 100 outside. Relative to taking the external offer and buying
+    all 300 outside, internal sourcing of 200 saves 6,000.
+  s1_zh: >-
+    产能分配为原承诺六百件、新对外销售二百件和内部装配二百件，恰好一千件；装配剩余一百件外购。以承接全部对外销售、并将装配所需三百件全部外购为比较基准，内部供应二百件可节省六千。
+  s1_zh_hk: >-
+    產能用於原承諾六百件、新對外銷售二百件同裝配部二百件，合計一千件；裝配部尚缺嘅一百件外購。以接下全部對外銷售、而裝配嘅三百件全外購為基準，二百件改作內供可節省六千。
+  s2_en: >-
+    Forcing all 300 inside would sacrifice 100 times 35, or 3,500, of external contribution, while saving
+    9,000 on purchases: 5,500 net, which is 500 worse than the split. A blended price might make the whole
+    package acceptable, but cannot remove that lost group value.
+  s2_zh: >-
+    如果强行内部供应全部三百件，虽可省九千采购款，却会丢掉一百乘三十五，即三千五百的对外销售边际贡献，净省五千五百，比组合采购少五百。打包均价也许能让整个方案被接受，但不能挽回损失的公司价值。
+  s2_zh_hk: >-
+    如果三百件全改內供，雖然可省九千外購款，卻會犧牲一百乘三十五，即三千五百嘅對外銷售貢獻，淨省五千五百，比拆分來源少五百。混合定價或可使整包交易看似可接受，卻不能挽回所失嘅集團價值。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If you force all 300 inside at a blended price, what group value have you given up? If you refuse
+    even the first 200 after the external offer appears, what saving have you missed? Agree the best physical
+    allocation before negotiating who receives its benefit.
+  zh: >-
+    如果用打包均价强行内部供应全部三百件，你放弃了公司哪一部分价值？如果出现对外销售机会后，连前二百件也不内供，你错过了哪一笔节省？请先就实物和产能安排取得一致，再讨论利益如何分配。
+  zh_hk: >-
+    如果用混合定價強行內供全部三百件，你放棄咗集團邊一部分價值？如果出現對外銷售機會之後，連前二百件都唔內供，你錯過咗邊一筆節省？請先就實物同產能安排取得一致，再討論利益如何分配。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: One price need not fit every unit
+  title_zh: 不是每一件都适用同一个内部价
+  title_zh_hk: 唔係每一件都適用同一個內部價
+  q1_en: First range 40–70; group save 9,000
+  q1_zh: 最初区间 40–70；公司节省 9,000
+  q1_zh_hk: 最初區間 40–70；集團節省 9,000
+  q2_en: Transfer 200; buy 100; save 6,000
+  q2_zh: 内供 200，外购 100，节省 6,000
+  q2_zh_hk: 內供 200，外購 100，節省 6,000
+  s1_en: >-
+    At first, any price from 40 to 70 can work, and the group saves 9,000 versus buying all 300 outside.
+    After the external offer, transfer only 200 at 40 to 70, and buy the last 100 outside.
+  s1_zh: >-
+    最初，四十到七十的价格都可以谈，与三百件全数外购相比，公司节省九千。出现对外销售机会后，只内部转移二百件，价格仍在四十到七十，其余一百件外购。
+  s1_zh_hk: >-
+    最初，四十到七十嘅價格都可以傾，同三百件全數外購相比，集團節省九千。出現對外銷售機會之後，只內部轉讓二百件，價格仍然喺四十到七十，其餘一百件外購。
+  s2_en: >-
+    The next 100 have no mutually beneficial range, because 75 exceeds assembly's maximum of 70. Forcing
+    all 300 inside is 500 worse than the split.
+  s2_zh: 再供的一百件没有双方都能接受的价格区间，因为七十五高于装配部门的上限七十。强行内供全部三百件，比拆分来源少五百。
+  s2_zh_hk: 再供嘅一百件沒有雙方都能接受嘅價格區間，因為七十五高於裝配部嘅上限七十。強行內供全部三百件，比拆分來源少五百。
+  s3_en: >-
+    The manufacturer and these transfer prices are classroom assumptions, not tax transfer-pricing advice
+    or a live supply contract.
+  s3_zh: 这家制造企业和这些内部价格都是课堂假设，不是税务转让定价建议，也不是真实的供货合同。
+  s3_zh_hk: 呢家製造公司同呢啲內部價格都係課堂假設，唔係稅務轉讓定價建議，亦唔係真實嘅供貨合約。
+duration_target_s: 188

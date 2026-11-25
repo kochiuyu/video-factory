@@ -1,0 +1,290 @@
+id: ACC-18
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Keep the budget. Update the forecast?
+title_zh: 预算不变，要不要更新预测？
+title_zh_hk: 預算不改，預測要更新嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-18
+  kicker_en: ACC-18
+  kicker_zh: ACC-18
+  kicker_zh_hk: ACC-18
+  title_en: Keep the budget. Update the forecast?
+  title_zh: 预算不变，要不要更新预测？
+  title_zh_hk: 預算不改，預測要更新嗎？
+  image: art/one-target-two-views-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Harbour Studio's first-quarter jobs were 270, not 300. The approved annual target stays 1,200. Should
+    finance keep the original budget alone, or also keep a three-month rolling forecast? This is a fictional
+    Hong Kong business-support service.
+  zh: >-
+    Harbour Studio第一季度完成了二百七十项服务任务，不是三百项。已批准的全年目标仍是一千二百项。财务是只用原来的预算，还是另做一份三个月滚动预测？这是虚构的香港企业支持服务商。
+  zh_hk: >-
+    Harbour Studio第一季度完成咗二百七十宗服務工作，唔係三百宗。已批准嘅全年目標仍然係一千二百宗。財務係只用原來嘅預算，定係另做一份三個月滾動預測？呢個係虛構嘅香港企業支援服務公司。
+- id: ledger
+  visual: table_grid
+  seconds: 24
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: View at the end of March
+  title_zh: 三月底的计划概况
+  title_zh_hk: 三月底的規劃概況
+  row1_en: Annual original target
+  row1_zh: 年度原目标
+  row1_zh_hk: 年度原定目標
+  row2_en: January–March target
+  row2_zh: 一至三月原目标
+  row2_zh_hk: 一至三月原定目標
+  row3_en: January–March actual
+  row3_zh: 一至三月实际完成
+  row3_zh_hk: 一至三月實際完成
+  row4_en: Original April–June plan
+  row4_zh: 四至六月原计划
+  row4_zh_hk: 四至六月原定計劃
+  col1_en: Jobs
+  col1_zh: 任务量
+  col1_zh_hk: 工作宗數
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11: 1,200
+  c12_en: Unchanged baseline
+  c12_zh: 既定考核基准
+  c12_zh_hk: 已協定績效基準
+  c21: '300'
+  c22_en: 100 a month
+  c22_zh: 每月 100 项
+  c22_zh_hk: 每月 100 宗
+  c31: '270'
+  c32_en: 30 below target
+  c32_zh: 比目标少 30 项
+  c32_zh_hk: 比目標少 30 宗
+  c41: 100 each month
+  c42_en: Paid capacity
+  c42_zh: 现有有薪产能
+  c42_zh_hk: 現有有薪產能
+  footer_en: HK$1,000 cash in the job month.
+  footer_zh: 当月完成一项即收 1,000 港元。
+  footer_zh_hk: 當月完成一宗即收 1,000 港元。
+  s1_en: >-
+    The approved target is 100 completed service jobs each month, or 1,200 for the year. No one has authorised
+    changing that target, or any employee's pay or appraisal terms. Existing paid capacity safely delivers
+    100 jobs a month.
+  s1_zh: >-
+    已批准的目标是每月完成一百项服务任务，全年一千二百项。无人获准改动这个目标，也无人获准改动员工薪酬或考核条款。现有有薪人员可以安全完成每月一百项。
+  s1_zh_hk: >-
+    已批准嘅目標係每月完成一百宗服務工作，全年一千二百宗。未有人獲授權改動呢個目標，亦未有人獲授權改動員工薪酬或考核條款。現有有薪人手可以安全完成每月一百宗。
+  s2_en: >-
+    Each completed job brings in 1,000 Hong Kong dollars in the same month. Core operating cash payments
+    are 80,000 a month. Any additional job needs trained, available cover costing 200, fully inclusive.
+    Updating a rolling forecast uses two funded finance hours each month.
+  s2_zh: >-
+    每完成一项，当月即收一千港元。核心经营现金支出每月八万。每新增一项，须安排有空且受过培训的补充人员，每项全包成本二百港元。更新滚动预测，每月要用两小时已列预算的财务工时。
+  s2_zh_hk: >-
+    每完成一宗，當月即收一千港元。核心經營付款每月八萬。每宗額外工作須有合資格並可調配嘅人手，全包成本二百港元。更新滾動預測，每月要用兩小時已預留嘅財務工時。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Budget only, or a rolling forecast too?
+  title_zh: 只用原预算，还是另做滚动预测？
+  title_zh_hk: 只用原預算，定係另做滾動預測？
+  en: >-
+    Would you use the original budget alone, or also keep a separate rolling forecast beside it? Explain
+    what each number would be used to decide. Pause and vote.
+  zh: 你会只用原来的预算，还是另编一份滚动预测、与原预算并用？请说明每个数字分别服务于什么决策。请暂停，投个票。
+  zh_hk: 你會只用原來嘅預算，定係另編一份滾動預測、同原預算一齊用？請說明每個數字分別服務於甚麼決策。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A new contract for 100 jobs
+  title_zh: 新合同新增 100 项任务
+  title_zh_hk: 新合約新增 100 宗工作
+  step1_en: April 30, May 40, June 30 more
+  step1_zh: 四月多 30，五月多 40，六月多 30
+  step1_zh_hk: 四月多 30，五月多 40，六月多 30
+  step2_en: Base stays 100 a month
+  step2_zh: 每月 100 项的基本预期不变
+  step2_zh_hk: 每月 100 宗嘅基本預期不變
+  step3_en: Contingency fund is 30,000
+  step3_zh: 预备金为 30,000
+  step3_zh_hk: 應急預算為 30,000
+  s1_en: >-
+    An authorised new customer contract adds 30 jobs in April, 40 in May and 30 in June, on top of the
+    unchanged base of 100 a month. The same 1,000 receipt and 200 cover cost apply. Delivery slots, qualified
+    cover and payment timing have been checked.
+  s1_zh: >-
+    经授权的新客户合同，在每月一百项基本预期之上，四月新增三十项、五月四十项、六月三十项。每项回款仍是一千，补充人员成本仍是二百。交付时段、合格人员和付款安排均已核实。
+  s1_zh_hk: >-
+    已按授權簽妥嘅新客戶合約，喺每月一百宗基本預期之上，四月新增三十宗、五月四十宗、六月三十宗。每宗收款仍然係一千，額外人手成本仍然係二百。服務時段、合資格人手同付款時間均已核實。
+  s2_en: >-
+    July to December stay at 100 jobs a month; the temporary contract is not extended. The controller
+    can approve required cover from a funded 30,000 contingency before bookings are made. Updating a spreadsheet
+    does not itself release spending authority. No extra cover has yet been booked.
+  s2_zh: >-
+    七月到十二月仍按每月一百项预计，没有依据把临时合同延展到下半年。安排补充人员前，财务主管可从已有资金支持的三万预备金中另行批准人员支出。更新电子表格不等于授予支出权限。目前还未预订补充人手。
+  s2_zh_hk: >-
+    七月到十二月仍然按每月一百宗預計，未有證據把短期合約延至下半年。預約額外人手前，財務主管可從已有撥款嘅三萬應急預算另行批出所需開支。更新試算表唔等於批准開支。而家尚未安排額外人手。
+  s3_en: >-
+    A manager wants to replace the annual target with the latest expected year-end total. The board instead
+    wants a truthful planning view and an unchanged, clearly labelled original-target comparison.
+  s3_zh: 经理建议用最新的全年预计任务量取代原年度目标。董事会要求如实展示最新计划，同时清晰保留与原目标的对比。
+  s3_zh_hk: 經理建議用最新嘅全年預計工作量取代原年度目標。董事會要求如實展示最新計劃，同時清晰保留同原目標嘅對比。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What jobs, cash and cover?
+  title_zh: 任务、现金和人员费用应是多少？
+  title_zh_hk: 工作、現金同人手費用應係幾多？
+  en: >-
+    What job and cash figures should the April to June forecast show, how much cover approval should be
+    requested, and which original-target comparisons must remain visible? Pause and calculate.
+  zh: 四至六月应预测多少服务任务和现金流量？应该申请批准多少补充人员费用？还应保留哪些与原目标的比较？请暂停，先算一遍。
+  zh_hk: 四至六月應預測幾多服務工作同現金流量？應該申請批准幾多額外人手費用？還應保留邊啲同原目標嘅比較？暫停，先計一次。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Update the work now expected
+  title_zh: 用最新预计工作量安排资源
+  title_zh_hk: 按最新預計工作量作規劃
+  step1_en: >-
+    Jobs: 130, 140 and 130
+  step1_zh: 任务量：130、140、130
+  step1_zh_hk: 工作宗數：130、140、130
+  step2_en: >-
+    Cover cost: 6,000, 8,000, 6,000
+  step2_zh: 补充人员：6,000、8,000、6,000
+  step2_zh_hk: 額外人手：6,000、8,000、6,000
+  step3_en: >-
+    Net cash: 44,000, 52,000, 44,000
+  step3_zh: 净现金：44,000、52,000、44,000
+  step3_zh_hk: 淨現金：44,000、52,000、44,000
+  s1_en: >-
+    Forecast jobs are 130, 140 and 130, or 400 for the quarter. Expected receipts are 130,000, 140,000
+    and 130,000, because each job brings in 1,000 in the same month.
+  s1_zh: 任务量按月是一百三十、一百四十和一百三十项，四至六月共四百项。预计回款是十三万、十四万和十三万，因为每完成一项，当月即收一千。
+  s1_zh_hk: 工作宗數按月係一百三十、一百四十同一百三十宗，四至六月共四百宗。預計收款係十三萬、十四萬同十三萬，因為每完成一宗，當月即收一千。
+  s2_en: >-
+    Extra cover costs 30 times 200, then 40 times 200, then 30 times 200: 6,000, 8,000 and 6,000. Core
+    payments stay 80,000, so total payments are 86,000, 88,000 and 86,000.
+  s2_zh: 补充人员支出是三十乘二百、四十乘二百、三十乘二百，即六千、八千和六千。核心支出每月仍是八万，所以月总支出是八万六、八万八和八万六。
+  s2_zh_hk: 額外人手支出係三十乘二百、四十乘二百、三十乘二百，即六千、八千同六千。核心付款每月仍然係八萬，所以月總付款係八萬六、八萬八同八萬六。
+  s3_en: >-
+    Net cash is therefore 44,000, 52,000 and 44,000, or 140,000 for the quarter. Request 20,000 of cover
+    approval. Do not assume the 30,000 contingency is all to be spent.
+  s3_zh: 净现金流量因此是四万四、五万二和四万四，季度合计十四万。申请两万支出审批，不是把三万预备金全部花掉。
+  s3_zh_hk: 淨現金因此係四萬四、五萬二同四萬四，季度合計十四萬。申請兩萬開支審批，唔係把三萬應急預算全部花掉。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Keep the target comparison visible
+  title_zh: 保留原来的绩效基准
+  title_zh_hk: 保留原來的績效基準
+  step1_en: Year outlook 1,270 jobs
+  step1_zh: 全年最新预计 1,270 项
+  step1_zh_hk: 全年最新預計 1,270 宗
+  step2_en: Original target stays 1,200
+  step2_zh: 原目标仍是 1,200 项
+  step2_zh_hk: 原目標仍然係 1,200 宗
+  step3_en: 70 above, shortfall not erased
+  step3_zh: 高出 70 项，缺口并未抹掉
+  step3_zh_hk: 高出 70 宗，缺口並未抹掉
+  s1_en: >-
+    January to March remains 270 actual jobs against 300 targeted: 30 below. Expected full-year jobs are
+    270 plus 400 plus 600, which equals 1,270. That is 70 above the unchanged original target of 1,200.
+    It is not 1,270 actual jobs, and it is not a new agreed target.
+  s1_zh: >-
+    一季度实际二百七十项，比三百项目标少三十项。全年最新预计是已完成二百七十，加四至六月预计四百，加七至十二月预计六百，合计一千二百七十项，比未改的原目标一千二百项高出七十项。这不是已经完成的工作量，也不是新目标。
+  s1_zh_hk: >-
+    第一季實際二百七十宗，比三百宗目標少三十宗。全年最新預計係已完成二百七十，加四至六月預計四百，加七至十二月預計六百，合計一千二百七十宗，比未改嘅原目標一千二百宗高出七十宗。呢個唔係已經完成嘅工作量，亦唔係新目標。
+  s2_en: >-
+    The new contract adds 100 forecast jobs, offsetting the earlier shortfall of 30 in the expected annual
+    total, without erasing it. At month end, roll the forecast forward: record actuals, explain differences,
+    and keep dates and versions. A forecast plans capacity and cash; a target is an agreed benchmark.
+  s2_zh: >-
+    新增合同提高预测一百项，在全年预计数中弥补首季少做的三十项，但不能抹掉实际差距。月底要把预测向前滚动：记下实际结果，解释差异，并保留日期和版本。预测服务于产能和现金安排，目标体现约定的基准。
+  s2_zh_hk: >-
+    新增合約提高預測一百宗，喺全年預計數中彌補首季少做嘅三十宗，但不能抹掉實際差距。月底要把預測向前滾動：記下實際結果，解釋差異，並保留日期同版本。預測服務於產能同現金安排，目標體現已協定嘅基準。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    If you request all 30,000 because a contingency exists, what test have you skipped? If you rewrite
+    the annual target as 1,270 in the same file, what distinction have you erased? Higher forecast cash
+    does not remove the need to authorise trained cover.
+  zh: >-
+    如果因为存在预备金就申请全部三万，你跳过了哪一项测试？如果在同一份文件里把全年目标改写成一千二百七十，你抹掉了哪一层区分？预测现金增加，并不能取消对合格补充人员费用的审批。
+  zh_hk: >-
+    如果因為存在應急預算就申請全部三萬，你跳過咗邊一項測試？如果喺同一份文件入面將全年目標改寫成一千二百七十，你抹掉咗邊一層區分？預測現金增加，並唔能夠取消對合資格額外人手費用嘅審批。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: One target, two views
+  title_zh: 一个目标，两种看法
+  title_zh_hk: 一個目標，兩種睇法
+  q1_en: Jobs 130, 140, 130; net cash 44, 52, 44
+  q1_zh: 任务 130、140、130；净现金 4.4、5.2、4.4万
+  q1_zh_hk: 工作 130、140、130；淨現金 4.4、5.2、4.4萬
+  q2_en: Request 20,000; year outlook 1,270
+  q2_zh: 申请 2 万；全年预计 1,270 项
+  q2_zh_hk: 申請 2 萬；全年預計 1,270 宗
+  s1_en: >-
+    Keep a rolling forecast beside the original target. Do not rewrite 1,200 as 1,270. Request 20,000
+    of cover approval, not the whole 30,000 contingency.
+  s1_zh: 在保留原目标的同时，另做滚动预测。不要把一千二百改写成一千二百七十。申请两万补充人员支出审批，不是把三万预备金全部花掉。
+  s1_zh_hk: 喺保留原目標嘅同時，另做滾動預測。唔好把一千二百改寫成一千二百七十。申請兩萬額外人手開支審批，唔係把三萬應急預算全部花掉。
+  s2_en: >-
+    Expected jobs of 1,270 sit 70 above target. The new 100 offsets, but does not erase, the first-quarter
+    shortfall of 30. Roll the forecast forward; do not overwrite it.
+  s2_zh: 最新预计一千二百七十项，高出原目标七十项。新增的一百项可以弥补、但不能抹掉第一季度少做的三十项。要把预测向前滚动，不要覆盖以往预测。
+  s2_zh_hk: 最新預計一千二百七十宗，高出原目標七十宗。新增嘅一百宗可以彌補、但不能抹掉第一季度少做嘅三十宗。要把預測向前滾動，唔好覆蓋以往預測。
+  s3_en: >-
+    Harbour Studio and these cash rules are classroom assumptions, not a live treasury limit or a board
+    minute.
+  s3_zh: Harbour Studio和这些现金规则都是课堂假设，不是真实的资金额度，也不是董事会纪要。
+  s3_zh_hk: Harbour Studio同呢啲現金規則都係課堂假設，唔係真實嘅資金額度，亦唔係董事會紀要。
+duration_target_s: 190

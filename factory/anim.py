@@ -28,6 +28,33 @@ NAVY = "#0B1F3A"
 GREEN = "#1F8A4C"
 GOLD = "#E0A83A"
 WHITE = "#FFFFFF"
+# Chinese takeaway lines break only on these marks. The mark stays with the
+# left piece, so a word such as 剩下 or 一個 is never cut in half.
+_CLAUSE_MARKS = set("，。！？、；：")
+
+
+def takeaway_pieces(text: str) -> list[str]:
+    """Pieces a takeaway line may break between.
+
+    Chinese breaks only at punctuation. English breaks only at spaces.
+    """
+    raw = (text or "").strip()
+    if not raw:
+        return [" "]
+    if any("\u4e00" <= ch <= "\u9fff" for ch in raw):
+        parts: list[str] = []
+        buf = ""
+        for ch in raw:
+            buf += ch
+            if ch in _CLAUSE_MARKS:
+                piece = buf.strip()
+                if piece:
+                    parts.append(piece)
+                buf = ""
+        if buf.strip():
+            parts.append(buf.strip())
+        return parts or [raw]
+    return [word for word in raw.split() if word]
 
 _FONTS: tuple[str, str] | None = None
 
@@ -418,6 +445,23 @@ def _scene_types() -> dict:
         top = fh / 2 - 0.28
         side = 0.4
         return -fw / 2 + side, fw / 2 - side, bottom, top
+
+    def _takeaway_limits():
+        """Safe box for a takeaway card.
+
+        These captions are a single line. The shared box reserves three lines,
+        which leaves an empty band above the chip the viewer actually sees.
+        """
+        from mux import CAPTION_BOTTOM_PAD, CAPTION_SIZE_MAX, CAPTION_VERTICAL_PAD
+
+        left, right, bot, top = _safe_limits()
+        fh = float(config.frame_height)
+        ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+        line_h = max(30, int(CAPTION_SIZE_MAX * 1.28))
+        pill = 2 * CAPTION_VERTICAL_PAD + line_h
+        safe_px = max(1, ph - CAPTION_BOTTOM_PAD - pill)
+        one_line = fh / 2 - (safe_px / float(ph)) * fh + 0.08
+        return left, right, min(bot, one_line), top
 
     def _span_x(*mobs) -> float:
         left = min(float(m.get_left()[0]) for m in mobs)
@@ -1080,6 +1124,195 @@ def _scene_types() -> dict:
             self.spend(1, FadeIn(rows[1]))
             self.spend(2, FadeIn(rows[2]))
 
+        def _size_heading(self, heading) -> tuple[float, float, float, float]:
+            """One heading height for every language, then sit it at the top."""
+            left, right, bot, top = _takeaway_limits()
+            portrait = float(config.frame_width) < float(config.frame_height)
+            # Cap height, not the string width, so a short Chinese title matches
+            # the English one. The portrait cap is the tallest "Find the ten first"
+            # that still fits the safe width.
+            target = 0.36 if portrait else 0.62
+            if float(heading.height) > 0:
+                heading.scale(target / float(heading.height))
+            limit = (right - left) * (0.92 if portrait else 0.94)
+            if float(heading.width) > limit > 0:
+                heading.scale(limit / float(heading.width))
+            heading.move_to([(left + right) / 2, top - 0.04 - float(heading.height) / 2, 0])
+            return left, right, bot, top
+
+        def _balanced_pieces(self, text: str, latin: str, cjk: str, size: int, width: float) -> list[str]:
+            """Fewest lines that fit, with the most even split. Pieces stay whole."""
+            pieces = takeaway_pieces(text)
+            cjk_text = any("\u4e00" <= ch <= "\u9fff" for ch in text)
+            joiner = "" if cjk_text else " "
+
+            def width_of(sample: str) -> float:
+                return float(styled(sample, latin, cjk, size).width)
+
+            def join(parts: list[str]) -> str:
+                return joiner.join(parts)
+
+            if width_of(text) <= width or len(pieces) <= 1:
+                return [text]
+            for count in range(2, len(pieces) + 1):
+                fits: list[list[str]] = []
+
+                def walk(start: int, left: int, acc: list[str]) -> None:
+                    if left == 1:
+                        fits.append(acc + [join(pieces[start:])])
+                        return
+                    for cut in range(start + 1, len(pieces) - left + 2):
+                        walk(cut, left - 1, acc + [join(pieces[start:cut])])
+
+                walk(0, count, [])
+                ok = []
+                for lines in fits:
+                    widths = [width_of(line) for line in lines]
+                    if max(widths) <= width + 0.02:
+                        ok.append((max(widths) - min(widths), max(widths), lines))
+                if ok:
+                    ok.sort(key=lambda item: (item[0], item[1]))
+                    return ok[0][2]
+            return pieces
+
+        def _line_group(self, text: str, latin: str, cjk: str, size: int, width: float, portrait: bool):
+            """One line in 16:9. In 9:16, break only on spaces or Chinese punctuation."""
+            raw = (text or "").strip() or " "
+            if not portrait:
+                return styled(raw, latin, cjk, size)
+            # A sentence break beats a word break: "Find the ten first. Then…"
+            # stays two sentences when each one fits the column.
+            if not any("\u4e00" <= ch <= "\u9fff" for ch in raw):
+                sentences: list[str] = []
+                buf = ""
+                for ch in raw:
+                    buf += ch
+                    if ch in ".!?" and len(buf.strip()) > 1:
+                        sentences.append(buf.strip())
+                        buf = ""
+                if buf.strip():
+                    sentences.append(buf.strip())
+                if len(sentences) > 1 and float(styled(raw, latin, cjk, size).width) > width:
+                    lines: list[str] = []
+                    for sentence in sentences:
+                        if float(styled(sentence, latin, cjk, size).width) <= width:
+                            lines.append(sentence)
+                        else:
+                            lines.extend(self._balanced_pieces(sentence, latin, cjk, size, width))
+                    group = VGroup(*[styled(line, latin, cjk, size) for line in lines])
+                    group.arrange(DOWN, buff=0.06, aligned_edge=LEFT)
+                    return group
+            chosen = self._balanced_pieces(raw, latin, cjk, size, width)
+            group = VGroup(*[styled(line, latin, cjk, size) for line in chosen])
+            group.arrange(DOWN, buff=0.06, aligned_edge=LEFT)
+            return group
+
+        def _share_text_scale(self, words, column: float, cues, portrait: bool, safe_w: float):
+            """Shrink every sentence by the same amount so the longest one fits."""
+            if portrait:
+                limit = safe_w * 0.90
+            else:
+                vis = max(float(cue.width) for cue in cues)
+                limit = max(0.8, column - vis - 0.42)
+            widest = max(float(word.width) for word in words)
+            if widest > limit > 0:
+                shrink = limit / widest
+                for word in words:
+                    word.scale(shrink)
+            return words
+
+        def _place_recap(self, heading, cues, words) -> list:
+            """Centre four rows in the band under the heading.
+
+            16:9 is a table: cues share one column and sit in its centre, and
+            every sentence is a single line starting at the same x. 9:16 puts
+            the cue above its sentence. Row pitch fills the band.
+            """
+            left, right, bot, top = self._size_heading(heading)
+            portrait = float(config.frame_width) < float(config.frame_height)
+            band_top = float(heading.get_bottom()[1]) - 0.16
+            band_bot = bot + 0.08
+            band_h = max(0.4, band_top - band_bot)
+            mid_x = (left + right) / 2.0
+            n = len(cues)
+            if portrait:
+                gap = 0.10
+                rows = []
+                for cue, word in zip(cues, words):
+                    cue.move_to([mid_x, 0, 0])
+                    word.next_to(cue, DOWN, buff=0.08)
+                    word.set_x(mid_x)
+                    rows.append(VGroup(cue, word))
+                heights = [float(row.height) for row in rows]
+                natural = sum(heights) + gap * (n - 1)
+                if natural > band_h * 0.96 and natural > 0:
+                    factor = (band_h * 0.96) / natural
+                    for row in rows:
+                        row.scale(factor)
+                    heights = [float(row.height) for row in rows]
+                    natural = sum(heights) + gap * (n - 1)
+                extra = max(0.0, band_h * 0.86 - natural)
+                use_gap = gap + extra / max(1, n - 1)
+                block = sum(heights) + use_gap * (n - 1)
+                y = (band_top + band_bot) / 2.0 + block / 2.0
+                for row, height in zip(rows, heights):
+                    row.move_to([mid_x, y - height / 2.0, 0])
+                    y -= height + use_gap
+            else:
+                col_w = max(float(cue.width) for cue in cues)
+                gap = 0.38
+                text_w = max(float(word.width) for word in words)
+                table_w = col_w + gap + text_w
+                col_left = mid_x - table_w / 2.0
+                text_left = col_left + col_w + gap
+                content_h = max(
+                    max(float(cue.height) for cue in cues),
+                    max(float(word.height) for word in words),
+                )
+                pitch = max(content_h + 0.12, band_h * 0.88 / n)
+                if pitch * n > band_h:
+                    pitch = band_h / n
+                block = pitch * n
+                block_top = (band_top + band_bot) / 2.0 + block / 2.0
+                rows = []
+                for i, (cue, word) in enumerate(zip(cues, words)):
+                    cy = block_top - pitch * i - pitch / 2.0
+                    cue.move_to([col_left + col_w / 2.0, cy, 0])
+                    word.move_to([text_left + float(word.width) / 2.0, cy, 0])
+                    rows.append(VGroup(cue, word))
+            board = VGroup(heading, *rows)
+            pad = 0.08
+            box_w = (right - left) - 2 * pad
+            box_h = (top - bot) - 2 * pad
+            if float(board.width) > box_w > 0:
+                board.scale(box_w / float(board.width))
+            if float(board.height) > box_h > 0:
+                board.scale(box_h / float(board.height))
+            if (
+                float(board.get_left()[0]) < left + pad
+                or float(board.get_right()[0]) > right - pad
+                or float(board.get_bottom()[1]) < bot + pad
+                or float(board.get_top()[1]) > top - pad
+            ):
+                board.move_to([(left + right) / 2.0, (top + bot) / 2.0, 0])
+            return rows
+
+        def _fit_side_by_side(self, cues, longest: float, band_h: float, safe_w: float) -> tuple[float, int]:
+            """Largest shared cue scale that keeps one text line at a readable size."""
+            unit_w = max(float(cue.width) for cue in cues) or 1.0
+            unit_h = max(float(cue.height) for cue in cues) or 1.0
+            usable = safe_w * 0.93
+            row_slot = max(0.4, band_h * 0.90 / max(1, len(cues)))
+            # Floor of 24 keeps the longest English sentence on one line while
+            # the ten-frame column stays wide enough to read.
+            text_floor = longest * (24.0 / 40.0)
+            k_w = (usable - 0.42 - text_floor) / unit_w
+            k_h = (row_slot * 0.94) / unit_h
+            k = max(0.34, min(k_w, k_h, 1.35))
+            vis = unit_w * k
+            font = int(max(24, min(42, round(40.0 * (usable - 0.42 - vis) / max(longest, 0.1)))))
+            return k, font
+
         def _counted_recap(self, title, lines, latin: str, cjk: str) -> None:
             """Four ideas: light five, a big 5, move into a circle, an empty tray."""
             import math
@@ -1088,25 +1321,24 @@ def _scene_types() -> dict:
 
             dim = "#D5D0C6"
             count = max(1, int(self.vf_labels.get("count") or 5))
-            dots = VGroup(*[counter(dim, 0.13) for _ in range(count)])
-            dots.arrange(RIGHT, buff=0.08)
+            radius = 0.30
+            dots = VGroup(*[counter(dim, radius) for _ in range(count)])
+            dots.arrange(RIGHT, buff=0.14)
             numbers = VGroup()
             for i, dot in enumerate(dots):
-                num = Text(str(i + 1), font=latin, font_size=16, color=WHITE)
-                if num.width > dot.width * 0.7:
-                    num.scale(dot.width * 0.7 / num.width)
+                num = Text(str(i + 1), font=latin, font_size=28, color=WHITE)
+                if float(num.width) > float(dot.width) * 0.72:
+                    num.scale(float(dot.width) * 0.72 / float(num.width))
                 num.move_to(dot)
                 num.set_z_index(4)
                 num.set_opacity(0)
                 numbers.add(num)
-            words0 = _wrapped(str(lines[0]), latin, cjk, 28)
-            row0 = VGroup(VGroup(dots, numbers), words0).arrange(RIGHT, buff=0.28)
+            cue0 = VGroup(dots, numbers)
 
-            big = Text("5", font=latin, font_size=64, color=NAVY)
-            words1 = _wrapped(str(lines[1]), latin, cjk, 28)
-            row1 = VGroup(big, words1).arrange(RIGHT, buff=0.28)
+            big = Text("5", font=latin, font_size=78, color=NAVY)
+            cue1 = VGroup(big)
 
-            ring = 0.46
+            ring = 0.58
             anchors = VGroup(*[
                 Circle(radius=0.01, stroke_opacity=0, fill_opacity=0)
                 for _ in range(count)
@@ -1114,28 +1346,41 @@ def _scene_types() -> dict:
             for i, pin in enumerate(anchors):
                 ang = math.pi / 2 - i * 2 * math.pi / count
                 pin.move_to([ring * math.cos(ang), ring * math.sin(ang), 0])
-            movers = VGroup(*[counter(GREEN, 0.12) for _ in range(count)])
-            movers.arrange(RIGHT, buff=0.07)
+            movers = VGroup(*[counter(GREEN, 0.20) for _ in range(count)])
+            movers.arrange(RIGHT, buff=0.08)
             movers.move_to(anchors.get_center())
-            still = Text("5", font=latin, font_size=36, color=NAVY)
-            still.next_to(VGroup(anchors, movers), RIGHT, buff=0.16)
-            words2 = _wrapped(str(lines[2]), latin, cjk, 28)
-            row2 = VGroup(VGroup(anchors, movers, still), words2).arrange(RIGHT, buff=0.28)
+            still = Text("5", font=latin, font_size=42, color=NAVY)
+            still.next_to(anchors, RIGHT, buff=0.18)
+            cue2 = VGroup(anchors, movers, still)
 
             tray = RoundedRectangle(
-                width=1.45, height=0.78, corner_radius=0.12,
-                stroke_color=NAVY, stroke_width=3, fill_color=WHITE, fill_opacity=1,
+                width=2.70, height=1.15, corner_radius=0.14,
+                stroke_color=NAVY, stroke_width=4, fill_color=WHITE, fill_opacity=1,
             )
-            zero = Text("0", font=latin, font_size=36, color=NAVY)
+            zero = Text("0", font=latin, font_size=54, color=NAVY)
             zero.move_to(tray)
-            words3 = _wrapped(str(lines[3]), latin, cjk, 28)
-            row3 = VGroup(VGroup(tray, zero), words3).arrange(RIGHT, buff=0.28)
-
-            stack = VGroup(row0, row1, row2, row3).arrange(DOWN, buff=0.28, aligned_edge=LEFT)
-            title.next_to(stack, UP, buff=0.32)
-            board = VGroup(title, stack)
-            board.move_to(UP * 0.05)
-            settle(board)
+            cue3 = VGroup(tray, zero)
+            cues = [cue0, cue1, cue2, cue3]
+            line_strings = [str(line) for line in list(lines)[:4]]
+            portrait = float(config.frame_width) < float(config.frame_height)
+            left, right, _bot, _top = _takeaway_limits()
+            # Heading is not placed yet; reserve its cap so the band is honest.
+            band_h = (_top - _bot) - (0.40 if portrait else 0.62) - 0.28
+            longest = max(float(styled(text, latin, cjk, 40).width) for text in line_strings)
+            if portrait:
+                k = min(1.15, ((right - left) * 0.88) / max(float(cue.width) for cue in cues))
+                font = 30
+            else:
+                k, font = self._fit_side_by_side(cues, longest, band_h, right - left)
+            for cue in cues:
+                cue.scale(k)
+            column = (right - left) * (0.90 if portrait else 0.93)
+            words = [
+                self._line_group(text, latin, cjk, font, column, portrait)
+                for text in line_strings
+            ]
+            words = self._share_text_scale(words, column, cues, portrait, right - left)
+            rows = self._place_recap(title, cues, words)
             targets = [pin.get_center().copy() for pin in anchors]
             self.add(numbers)
 
@@ -1150,11 +1395,11 @@ def _scene_types() -> dict:
             if len(counted) != count and total > 0:
                 gap = total / (count + 1)
                 counted = [gap * (i + 1) for i in range(count)]
-            intro = AnimationGroup(FadeIn(title), FadeIn(words0), FadeIn(dots))
+            intro = AnimationGroup(FadeIn(title), FadeIn(words[0]), FadeIn(dots))
             self.spend_marked(0, lights, counted, intro=intro)
-            self.spend(1, FadeIn(row1))
-            self._move_into_circle(2, words2, still, movers, targets)
-            self.spend(3, FadeIn(row3))
+            self.spend(1, FadeIn(rows[1]))
+            self._move_into_circle(2, words[2], still, movers, targets)
+            self.spend(3, FadeIn(rows[3]))
 
         def _move_into_circle(self, index: int, words, still, movers, targets) -> None:
             total = 0.0
@@ -1182,154 +1427,69 @@ def _scene_types() -> dict:
         def _ten_recap(self, title, lines, latin: str, cjk: str) -> None:
             """Four ideas, one frame size: one ten, thirteen, twenty, then the ones."""
             dim = "#D5D0C6"
+            line_strings = [str(line) for line in list(lines)[:4]]
             portrait = float(config.frame_width) < float(config.frame_height)
-            left_lim, right_lim, bot_lim, top_lim = _safe_limits()
-            # Spare room for strokes and the gold ring, which sit outside the
-            # mobject box settle measures.
-            max_w = (right_lim - left_lim) - 0.40
-            max_h = (top_lim - bot_lim) - 0.32
-            text_size = 32 if portrait else 40
-            digit_size = 32 if portrait else 38
-            # Largest first. 9:16 stacks the two frames when a side-by-side pair
-            # cannot keep this text size inside the safe box.
+
+            def filled():
+                frame = ten_cells()
+                cell = frame[0]
+                radius = min(float(cell.width), float(cell.height)) * 0.30
+                dots = VGroup(*[counter(GREEN, radius) for _ in range(10)])
+                for dot, box in zip(dots, frame):
+                    dot.move_to(box)
+                return frame, dots
+
+            def beside(frame, color: str):
+                cell = frame[0]
+                radius = min(float(cell.width), float(cell.height)) * 0.30
+                dots = VGroup(*[counter(color, radius) for _ in range(3)])
+                dots.arrange(RIGHT, buff=max(0.06, radius * 0.55))
+                dots.next_to(frame, RIGHT, buff=0.18)
+                return dots
+
+            def number(label: str, anchor):
+                num = Text(str(label), font=latin, font_size=54, color=NAVY)
+                num.next_to(anchor, RIGHT, buff=0.14)
+                num.set_y(float(anchor.get_y()))
+                return num
+
+            frame0, dots0 = filled()
+            cue0 = VGroup(frame0, dots0)
+            frame1, dots1 = filled()
+            ones1 = beside(frame1, GREEN)
+            cue1 = VGroup(frame1, dots1, ones1, number("13", ones1))
+            frame_a, dots_a = filled()
+            frame_b, dots_b = filled()
+            pair = VGroup(VGroup(frame_a, dots_a), VGroup(frame_b, dots_b))
+            pair.arrange(RIGHT, buff=0.16)
+            cue2 = VGroup(pair, number("20", pair))
+            frame3, dots3 = filled()
+            ones3 = beside(frame3, dim)
+            cue3 = VGroup(frame3, dots3, ones3)
+            cues = [cue0, cue1, cue2, cue3]
+
+            left, right, bot, top = _takeaway_limits()
+            band_h = (top - bot) - (0.40 if portrait else 0.62) - 0.28
+            longest = max(float(styled(text, latin, cjk, 40).width) for text in line_strings)
+            safe_w = right - left
             if portrait:
-                plans = [(0.44, True), (0.40, True), (0.36, False), (0.32, False), (0.28, False)]
+                k = min(0.72, (safe_w * 0.92) / max(float(cue.width) for cue in cues))
+                font = 30
             else:
-                plans = [(0.58, False), (0.52, False), (0.46, False), (0.40, False)]
-
-            def wrap_words(text: str, size: int, width: float):
-                raw = (text or "").strip() or " "
-                cjk_text = any("\u4e00" <= ch <= "\u9fff" for ch in raw)
-                sentences: list[str] = []
-                buf = ""
-                for ch in raw:
-                    buf += ch
-                    if ch in ".!?。！？" and len(buf.strip()) > 3:
-                        sentences.append(buf.strip())
-                        buf = ""
-                if buf.strip():
-                    sentences.append(buf.strip())
-                packed: list[str] = []
-                for sentence in sentences or [raw]:
-                    tokens = list(sentence) if cjk_text else sentence.split(" ")
-                    cur = ""
-                    for tok in tokens:
-                        if not tok:
-                            continue
-                        trial = tok if not cur else (cur + tok if cjk_text else cur + " " + tok)
-                        if float(styled(trial, latin, cjk, size).width) <= width or not cur:
-                            cur = trial
-                        else:
-                            packed.append(cur)
-                            cur = tok
-                    if cur:
-                        packed.append(cur)
-                group = VGroup(*[styled(line, latin, cjk, size) for line in (packed or [raw])])
-                group.arrange(DOWN, buff=0.05, aligned_edge=LEFT)
-                if float(group.width) > width > 0:
-                    group.scale(width / float(group.width))
-                return group
-
-            def assemble(scale: float, stack_frames: bool):
-                def filled():
-                    frame = ten_cells()
-                    frame.scale(scale)
-                    cell = frame[0]
-                    radius = min(float(cell.width), float(cell.height)) * 0.30
-                    dots = VGroup(*[counter(GREEN, radius) for _ in range(10)])
-                    for dot, box in zip(dots, frame):
-                        dot.move_to(box)
-                    return frame, dots
-
-                def beside(frame, color: str):
-                    cell = frame[0]
-                    radius = min(float(cell.width), float(cell.height)) * 0.30
-                    dots = VGroup(*[counter(color, radius) for _ in range(3)])
-                    dots.arrange(RIGHT, buff=max(0.04, radius * 0.55))
-                    dots.next_to(frame, RIGHT, buff=0.16)
-                    return dots
-
-                def number(label: str, anchor, center_y: float):
-                    num = Text(str(label), font=latin, font_size=digit_size, color=NAVY)
-                    num.next_to(anchor, RIGHT, buff=0.12)
-                    num.set_y(center_y)
-                    return num
-
-                frame0, dots0 = filled()
-                cue0 = VGroup(frame0, dots0)
-                frame1, dots1 = filled()
-                ones1 = beside(frame1, GREEN)
-                cue1 = VGroup(frame1, dots1, ones1, number("13", ones1, float(frame1.get_y())))
-                frame_a, dots_a = filled()
-                frame_b, dots_b = filled()
-                pair = VGroup(VGroup(frame_a, dots_a), VGroup(frame_b, dots_b))
-                if stack_frames:
-                    pair.arrange(DOWN, buff=0.10, aligned_edge=LEFT)
-                else:
-                    pair.arrange(RIGHT, buff=0.14)
-                cue2 = VGroup(pair, number("20", pair, float(pair.get_y())))
-                frame3, dots3 = filled()
-                ones3 = beside(frame3, dim)
-                cue3 = VGroup(frame3, dots3, ones3)
-                cues = (cue0, cue1, cue2, cue3)
-                if portrait:
-                    words = [wrap_words(str(line), text_size, max_w) for line in lines[:4]]
-                    rows = []
-                    for cue, word in zip(cues, words):
-                        word.next_to(cue, DOWN, buff=0.10, aligned_edge=LEFT)
-                        rows.append(VGroup(cue, word))
-                    stack = VGroup(*rows).arrange(DOWN, buff=0.14, aligned_edge=LEFT)
-                else:
-                    cue_w = max(float(cue.width) for cue in cues)
-                    words = [wrap_words(str(line), text_size, max(1.6, max_w - cue_w - 0.32)) for line in lines[:4]]
-                    rows = []
-                    for cue, word in zip(cues, words):
-                        word.next_to(cue, RIGHT, buff=0.42 + (cue_w - float(cue.width)))
-                        rows.append(VGroup(cue, word))
-                    stack = VGroup(*rows).arrange(DOWN, buff=0.16, aligned_edge=LEFT)
-                heading = title.copy()
-                if float(heading.width) > max_w > 0:
-                    heading.scale(max_w / float(heading.width))
-                heading.next_to(stack, UP, buff=0.20)
-                board = VGroup(heading, stack)
-                return {
-                    "board": board,
-                    "heading": heading,
-                    "rows": rows,
-                    "words": words,
-                    "frame3": frame3,
-                    "dots3": dots3,
-                    "ones3": ones3,
-                    "fits": float(board.width) <= max_w + 0.02 and float(board.height) <= max_h + 0.02,
-                }
-
-            chosen = None
-            for scale, stack_frames in plans:
-                built = assemble(scale, stack_frames)
-                chosen = built
-                if built["fits"]:
-                    break
-            board = chosen["board"]
-            rows = chosen["rows"]
-            words = chosen["words"]
-            frame3 = chosen["frame3"]
-            dots3 = chosen["dots3"]
-            ones3 = chosen["ones3"]
-            heading = chosen["heading"]
-            board.move_to(UP * 0)
-            settle(board)
-            # settle sizes to the mobject box, which does not include strokes.
-            if float(board.height) > 0.4:
-                board.scale(max(0.90, (float(board.height) - 0.22) / float(board.height)))
-                board.move_to(UP * 0)
-                if float(board.get_bottom()[1]) < bot_lim + 0.06:
-                    board.shift(UP * (bot_lim + 0.06 - float(board.get_bottom()[1])))
-                if float(board.get_top()[1]) > top_lim - 0.04:
-                    board.shift(DOWN * (float(board.get_top()[1]) - (top_lim - 0.04)))
-            ring = SurroundingRectangle(frame3, color=GOLD, buff=0.06, stroke_width=4)
+                k, font = self._fit_side_by_side(cues, longest, band_h, safe_w)
+            for cue in cues:
+                cue.scale(k)
+            column = safe_w * (0.90 if portrait else 0.93)
+            words = [
+                self._line_group(text, latin, cjk, font, column, portrait)
+                for text in line_strings
+            ]
+            words = self._share_text_scale(words, column, cues, portrait, safe_w)
+            rows = self._place_recap(title, cues, words)
+            ring = SurroundingRectangle(frame3, color=GOLD, buff=0.07, stroke_width=5)
             ring.set_z_index(5)
 
-            self.spend(0, FadeIn(heading), FadeIn(rows[0]))
+            self.spend(0, FadeIn(title), FadeIn(rows[0]))
             self.spend(1, FadeIn(rows[1]))
             self.spend(2, FadeIn(rows[2]))
             lights = [lambda dot=dot: dot.animate.set_fill(GREEN, opacity=1) for dot in ones3]

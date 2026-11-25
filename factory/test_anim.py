@@ -215,6 +215,18 @@ class AnimatedTimingTest(unittest.TestCase):
         other = dict(spec, count=14)
         self.assertNotEqual(base, cache_key(other, [1, 1, 1], "en", (1920, 1080), "0.19.2"))
 
+    def test_takeaway_breaks_only_at_punctuation_or_spaces(self):
+        from anim import takeaway_pieces
+
+        self.assertEqual(takeaway_pieces("先找十，再数剩下的。"), ["先找十，", "再数剩下的。"])
+        self.assertEqual(takeaway_pieces("一個滿框，就係一個十。"), ["一個滿框，", "就係一個十。"])
+        self.assertEqual(takeaway_pieces("再数剩下的"), ["再数剩下的"])
+        self.assertEqual(takeaway_pieces("就係一個十"), ["就係一個十"])
+        self.assertEqual(
+            takeaway_pieces("Ten and three more make thirteen."),
+            ["Ten", "and", "three", "more", "make", "thirteen."],
+        )
+
     def test_import_does_not_load_manim(self):
         proc = subprocess.run(
             [sys.executable, "-c", "import sys; import anim; raise SystemExit(0 if 'manim' not in sys.modules else 1)"],
@@ -675,7 +687,29 @@ class AnimatedRenderTest(unittest.TestCase):
             "s3_zh_hk": "兩個滿框，就係二十。",
             "s4_zh_hk": "先搵十，再數剩低嘅。",
         }
-        holds = [0.4, 0.4, 0.4, 0.9]
+        counted = {
+            "id": "takeaway",
+            "visual": "animated",
+            "scene": "lesson_takeaway",
+            "motif": "counters",
+            "count": 5,
+            "title_en": "Count carefully",
+            "s1_en": "Touch each one once. One, two, three, four, five.",
+            "s2_en": "The last number tells how many. Five.",
+            "s3_en": "Move them around. Still five.",
+            "s4_en": "Nothing there? That is zero.",
+            "title_zh": "逐个数清楚",
+            "s1_zh": "每个只点一次。一，二，三，四，五。",
+            "s2_zh": "最后说的数，就是有多少。五个。",
+            "s3_zh": "搬一搬，还是五个。",
+            "s4_zh": "什么都没有？就是零。",
+            "title_zh_hk": "逐個數清楚",
+            "s1_zh_hk": "每個只係指一次。一，二，三，四，五。",
+            "s2_zh_hk": "最後講嘅數，就係有幾多。五個。",
+            "s3_zh_hk": "搬吓佢哋，都係五個。",
+            "s4_zh_hk": "乜都冇？就係零。",
+        }
+        holds = [0.3, 0.3, 0.3, 0.5]
         words = [
             {"text": "Find", "start": 1.28},
             {"text": "the", "start": 1.38},
@@ -688,10 +722,15 @@ class AnimatedRenderTest(unittest.TestCase):
         ]
 
         def safe_box(w, h):
+            from mux import CAPTION_BOTTOM_PAD, CAPTION_SIZE_MAX, CAPTION_VERTICAL_PAD
+
             fw = 8.0 * w / h
             fh = 8.0
-            safe_px = caption_safe_top(h)
-            bot_lim = fh / 2 - (safe_px / float(h)) * fh + 0.12
+            line_h = max(30, int(CAPTION_SIZE_MAX * 1.28))
+            one_px = h - CAPTION_BOTTOM_PAD - (2 * CAPTION_VERTICAL_PAD + line_h)
+            three = fh / 2 - (caption_safe_top(h) / float(h)) * fh + 0.12
+            one = fh / 2 - (one_px / float(h)) * fh + 0.08
+            bot_lim = min(three, one)
             top_lim = fh / 2 - 0.28
 
             def pix_y(manim_y):
@@ -702,6 +741,7 @@ class AnimatedRenderTest(unittest.TestCase):
                 math.floor(pix_y(top_lim)),
                 math.floor((fw - 0.4) / fw * w),
                 math.ceil(pix_y(bot_lim)),
+                pix_y((top_lim + bot_lim) / 2),
             )
 
         def ink_at(px, x, y):
@@ -720,23 +760,24 @@ class AnimatedRenderTest(unittest.TestCase):
                  "-t", "3", "-c:a", "pcm_s16le", str(audio)],
                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
             )
-            for lang, frame in (
+            for motif, card in (("ten", beat), ("count", counted)):
+              for lang, frame in (
                 ("en", (1280, 720)),
                 ("zh", (1280, 720)),
                 ("zh_hk", (1280, 720)),
                 ("en", (720, 1280)),
                 ("zh", (720, 1280)),
                 ("zh_hk", (720, 1280)),
-            ):
-                dest = root / f"{lang}-{frame[0]}x{frame[1]}.mp4"
+              ):
+                dest = root / f"{motif}-{lang}-{frame[0]}x{frame[1]}.mp4"
                 render_animated_clip(
-                    beat, {"format": "9:16" if frame[1] > frame[0] else "16:9"},
+                    card, {"format": "9:16" if frame[1] > frame[0] else "16:9"},
                     label_lang_code=lang, holds=holds, still_idx=[0, 1, 2, 3],
                     pages=["a", "b", "c", "d"], audio=audio, dest=dest,
                     cache_dir=root / "cache", captions=False, progress_bar=False,
-                    frame=frame, fps=10, words=words,
+                    frame=frame, fps=8, words=words if motif == "ten" else None,
                 )
-                folder = root / f"frames-{lang}-{frame[0]}x{frame[1]}"
+                folder = root / f"frames-{motif}-{lang}-{frame[0]}x{frame[1]}"
                 folder.mkdir()
                 subprocess.check_call(
                     ["ffmpeg", "-y", "-i", str(dest), str(folder / "f%03d.png")],
@@ -744,7 +785,7 @@ class AnimatedRenderTest(unittest.TestCase):
                 )
                 frames = sorted(folder.glob("f*.png"))
                 self.assertGreaterEqual(len(frames), 8, dest.name)
-                left, top, right, bottom = safe_box(*frame)
+                left, top, right, bottom, safe_mid = safe_box(*frame)
                 portrait = frame[1] > frame[0]
                 for path in frames:
                     img = Image.open(path).convert("RGB")
@@ -757,9 +798,10 @@ class AnimatedRenderTest(unittest.TestCase):
                             if x < left - 2 or x > right + 2 or y < top - 2 or y > bottom + 2:
                                 outside += 1
                     self.assertEqual(outside, 0, f"{dest.name} {path.name} outside {outside}")
-                self._recap_end_is_aligned(frames[-1], portrait, frame[1])
+                self._recap_block_is_centred(frames[-1], portrait, safe_mid, bottom - top)
 
-    def _recap_end_is_aligned(self, path, portrait: bool, frame_h: int):
+    def _recap_block_is_centred(self, path, portrait: bool, safe_mid: float, safe_span: int):
+        """The finished card is centred in the caption band and the pictures are large."""
         from PIL import Image
 
         img = Image.open(path).convert("RGB")
@@ -774,63 +816,54 @@ class AnimatedRenderTest(unittest.TestCase):
             r, g, b = px[x, y]
             return g > 90 and g > r + 25 and g > b + 15
 
+        xs = [x for y in range(0, h, 2) for x in range(0, w, 2) if ink(x, y)]
+        ys = [y for y in range(h) if any(ink(x, y) for x in range(0, w, 4))]
+        self.assertTrue(xs and ys, path.name)
+        mid_y = (min(ys) + max(ys)) / 2
+        mid_x = (min(xs) + max(xs)) / 2
+        self.assertLess(abs(mid_y - safe_mid) / h, 0.09, f"{path.name} vertical centre {mid_y:.0f} vs {safe_mid:.0f}")
+        self.assertLess(abs(mid_x - w / 2) / w, 0.08, f"{path.name} horizontal centre")
+        self.assertGreaterEqual(max(ys) - min(ys), int(safe_span * 0.62), path.name)
+
         green_rows = [y for y in range(h) if sum(1 for x in range(0, w, 2) if green(x, y)) > 2]
         bands = []
         start = prev = None
         for y in green_rows:
             if start is None:
                 start = prev = y
-            elif y - prev > 2:
+            elif y - prev > 3:
                 bands.append((start, prev))
                 start = prev = y
             else:
                 prev = y
         if start is not None:
             bands.append((start, prev))
-        green_heights = []
-        text_heights = []
+        widest = 0
         for top, bot in bands:
-            if bot - top < 6:
+            gxs = [x for y in range(top, bot + 1, 2) for x in range(0, w, 2) if green(x, y)]
+            if not gxs or bot - top < 6:
                 continue
-            green_heights.append(bot - top + 1)
-            gxs = [x for y in range(top, bot + 1) for x in range(w) if green(x, y)]
-            if not gxs:
-                continue
-            cols = [sum(1 for y in range(max(0, top - 4), min(h, bot + 5)) if ink(x, y)) for x in range(w)]
-            gap = best = 0
-            for n in cols[max(gxs) : min(w, max(gxs) + 140)]:
-                if n == 0:
-                    gap += 1
-                    best = max(best, gap)
+            widest = max(widest, max(gxs) - min(gxs))
+        floor = 0.14 if portrait else 0.09
+        self.assertGreaterEqual(widest / w, floor, f"{path.name} visual width {widest / w:.3f}")
+
+        if not portrait:
+            ink_rows = [y for y in range(h) if sum(1 for x in range(int(w * 0.45), w, 3) if ink(x, y)) > 2]
+            text_bands = 0
+            start = prev = None
+            for y in ink_rows:
+                if start is None:
+                    start = prev = y
+                elif y - prev > 3:
+                    if prev - start >= 8:
+                        text_bands += 1
+                    start = prev = y
                 else:
-                    gap = 0
-            if not portrait:
-                self.assertGreaterEqual(best, 4, f"{path.name} gutter {best}")
-            else:
-                below = bot + 3
-                separated = below < h and not any(green(x, below) for x in range(0, w, 2))
-                self.assertTrue(separated, f"{path.name} frame touches the next row")
-        ink_rows = [y for y in range(h) if sum(1 for x in range(0, w, 2) if ink(x, y)) > 3]
-        self.assertGreaterEqual(len(green_heights), 3, path.name)
-        start = prev = None
-        for y in ink_rows:
-            if start is None:
-                start = prev = y
-            elif y - prev > 2:
-                if prev - start >= 4 and not any(a <= start <= b for a, b in bands):
-                    text_heights.append(prev - start + 1)
-                start = prev = y
-            else:
-                prev = y
-        if start is not None and prev - start >= 4 and not any(a <= start <= b for a, b in bands):
-            text_heights.append(prev - start + 1)
-        base = sorted(green_heights)[len(green_heights) // 2]
-        for height in green_heights:
-            near = abs(height - base) <= max(3, int(base * 0.22))
-            stacked = abs(height - 2 * base) <= max(4, int(base * 0.28))
-            self.assertTrue(near or stacked, f"{path.name} frame heights {green_heights}")
-        self.assertTrue(text_heights, path.name)
-        self.assertGreaterEqual(max(text_heights), int(frame_h * 0.024), text_heights)
+                    prev = y
+            if start is not None and prev - start >= 8:
+                text_bands += 1
+            # Heading plus four single lines. A wrap adds another band.
+            self.assertLessEqual(text_bands, 7, f"{path.name} wrapped lines {text_bands}")
 
     def _gold_x(self, path):
         from PIL import Image

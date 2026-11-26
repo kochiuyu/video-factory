@@ -1,0 +1,287 @@
+id: ACC-38
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Rent paid. No obligation on the statement?
+title_zh: 租金已经付了，还要确认租赁负债吗？
+title_zh_hk: 租金已付，報表上就沒有負債？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-38
+  kicker_en: ACC-38
+  kicker_zh: ACC-38
+  kicker_zh_hk: ACC-38
+  title_en: Rent paid. No obligation on the statement?
+  title_zh: 租金已经付了，还要确认租赁负债吗？
+  title_zh_hk: 租金已付，報表上就沒有負債？
+  image: art/rent-paid-obligation-recognised-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A warehouse lease runs two non-cancellable years, with a tenant option for a third. Each year costs
+    10,000, paid at year-end. The bookkeeper wants to record only 10,000 of rent expense when the first
+    payment is made. Is that enough? You review the accounts of Harbour Store, a fictional Hong Kong tenant.
+  zh: >-
+    仓库租约有两年不可撤销期，承租人另有续租一年的权利。每年租金一万港元，年末支付。簿记员建议首次付年租时只记一万租金费用。这样够吗？你负责复核香港虚构承租人“海湾仓储”的账目。
+  zh_hk: >-
+    貨倉租約有兩年不可取消期，承租人另外有續租一年嘅權利。每年租金一萬港元，年底支付。簿記員建議第一次交年租嗰陣只記一萬租金費用。咁樣夠唔夠？你負責覆核香港虛構承租人「海灣倉儲」嘅賬目。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Lease payments, HK$
+  title_zh: 租赁付款，港元
+  title_zh_hk: 租賃付款，港元
+  row1_en: End of year 1
+  row1_zh: 第1年底
+  row1_zh_hk: 第1年底
+  row2_en: End of year 2
+  row2_zh: 第2年底
+  row2_zh_hk: 第2年底
+  row3_en: End of year 3
+  row3_zh: 第3年底
+  row3_zh_hk: 第3年底
+  col1_en: Payment
+  col1_zh: 金额
+  col1_zh_hk: 金額
+  col2_en: Contract status
+  col2_zh: 合约状态
+  col2_zh_hk: 合約狀態
+  c11: 10,000
+  c12_en: Compulsory
+  c12_zh: 必须支付
+  c12_zh_hk: 必須支付
+  c21: 10,000
+  c22_en: Compulsory
+  c22_zh: 必须支付
+  c22_zh_hk: 必須支付
+  c31: 10,000
+  c32_en: Renewal option
+  c32_zh: 承租人续租选择权
+  c32_zh_hk: 承租人續租選擇權
+  footer_en: >-
+    Incremental borrowing rate: 10%
+  footer_zh: 增量借款利率：10%
+  footer_zh_hk: 增量借款利率：10%
+  s1_en: >-
+    The controller proposes a right-of-use asset and lease liability at commencement, then depreciation
+    and interest. Neither proposal changes the contract, the cash due or ownership.
+  s1_zh: 财务主管认为应在租赁开始日确认使用权资产和租赁负债，之后计折旧和利息。两种建议都不会改变合约、应付现金或楼宇所有权。
+  s1_zh_hk: 財務主管認為應該喺租賃開始日確認使用權資產同租賃負債，之後計折舊同利息。兩個建議都唔會改變合約、應付現金或者物業業權。
+  s2_en: >-
+    The accounting term includes the two compulsory years, plus the option year if exercise is reasonably
+    certain. The first working paper provisionally excludes renewal.
+  s2_zh: 两年不可撤销期必然计入；如能合理确定会行使续租选择权，还应计入可续租的一年。首份工作底稿暂不计续租期。
+  s2_zh_hk: 兩年不可取消期一定計入；如果可以合理確定會行使續租選擇權，就要計埋續租嗰一年。第一份工作底稿暫時唔計續租期。
+  s3_en: >-
+    Use the 10 percent incremental borrowing rate. Initial liability is each included payment divided
+    by 1.10 raised to its year. Depreciate the asset evenly; interest is opening liability times 10 percent.
+  s3_zh: 使用百分之十的增量借款利率。初始负债是各笔计入的付款除以一点一的付款年度次方后相加。资产按直线法折旧；每年利息等于期初负债乘百分之十。
+  s3_zh_hk: 用百分之十嘅增量借款利率。初始負債係每筆計入嘅付款除以一點一嘅付款年度次方再加埋。資產按直線法折舊；每年利息等於期初負債乘百分之十。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Rent, or asset and liability?
+  title_zh: 只记租金，还是确认资产负债？
+  title_zh_hk: 只記租金，定確認資產負債？
+  en: >-
+    Which reporting proposal follows the supplied rule? Calculate the initial liability under the provisional
+    two-year assumption. What evidence must be completed before deciding whether the third payment belongs
+    in it? Pause and vote.
+  zh: 哪个报告建议符合案例规则？按暂定两年租期计算初始负债。决定是否把第三笔付款计入前，需要补齐哪些证据？请暂停，投个票。
+  zh_hk: 邊個報告建議符合案例規則？按暫定兩年租期計初始負債。決定第三筆付款計唔計入之前，要補齊咩證據？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Renewal is reasonably certain
+  title_zh: 可合理确定会续租
+  title_zh_hk: 可合理確定會續租
+  step1_en: Three-year customer storage commitment
+  step1_zh: 客户已承诺存储三年
+  step1_zh_hk: 客戶已承諾存放三年
+  step2_en: Relocating would be costly
+  step2_zh: 搬迁成本显著且可避免
+  step2_zh_hk: 搬遷成本重大且可避免
+  step3_en: Facts existed at commencement
+  step3_zh: 开始日时事实已存在
+  step3_zh_hk: 開始日時事實已存在
+  s1_en: >-
+    Before the opening entries are finalised, the complete file arrives: an existing three-year customer
+    storage commitment, and an assessment that relocating after year two would impose significant cost
+    and disruption.
+  s1_zh: 编完期初分录前，财务负责人拿到了完整资料：客户已经承诺存储三年，书面评估也表明第二年结束时搬迁会增加显著且可避免的成本并中断运营。
+  s1_zh_hk: 做完期初分錄之前，完整資料送到：客戶已經承諾存放三年，書面評估亦顯示第二年完咗搬遷會帶來重大而可以避免嘅成本同營運中斷。
+  s2_en: >-
+    The assessor concludes that exercising the renewal option is reasonably certain. These facts existed
+    when the warehouse became available; the first paper was simply incomplete.
+  s2_zh: 评估结论是可合理确定承租人会行使续租权。仓库可开始使用时，这些事实已经存在；第一份底稿只是资料不全。
+  s2_zh_hk: 評估結論係可以合理確定承租人會行使續租權。貨倉可以開始用嗰陣，呢啲事實已經存在；第一份底稿只係資料唔齊。
+  s3_en: >-
+    Use three payments of 10,000, the same 10 percent rate and three years of straight-line depreciation.
+    The option is still legally an option, and the landlord receives nothing extra today.
+  s3_zh: 用三笔每年一万的付款、原定百分之十利率和三年直线折旧。法律上续租权仍是选择权，业主今天也不会多收款。
+  s3_zh_hk: 用三筆每年一萬嘅付款、原定百分之十利率同三年直線折舊。法律上續租權仍然係選擇權，業主今日亦唔會多收錢。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What are the year-one numbers?
+  title_zh: 首年数字是多少？
+  title_zh_hk: 首年數字係幾多？
+  en: >-
+    Calculate the final opening liability and right-of-use asset. Then reconcile first-year cash paid,
+    interest, depreciation, total lease expense and both closing balances. Why does recognising year three
+    not buy the warehouse or add a cash payment today? Pause and vote.
+  zh: >-
+    先计算开始日的租赁负债和使用权资产，再核对首年的现金支付、利息、折旧、费用合计及两项期末余额。为什么把第三年纳入计量，不等于买下仓库，也不意味着今天要多付租金？请暂停，投个票。
+  zh_hk: >-
+    先計開始日嘅租賃負債同使用權資產，再核對首年嘅現金支付、利息、折舊、費用合計同兩項期末結餘。點解計埋第三年，唔等於買咗個貨倉，亦唔代表今日要多交租？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Recognise right and obligation
+  title_zh: 确认使用权和付款责任
+  title_zh_hk: 確認使用權和付款責任
+  step1_en: >-
+    Two years: 17,355.37
+  step1_zh: 两年：17,355.37
+  step1_zh_hk: 兩年：17,355.37
+  step2_en: >-
+    Three years: 24,868.52
+  step2_zh: 三年：24,868.52
+  step2_zh_hk: 三年：24,868.52
+  step3_en: Third payment adds 7,513.15
+  step3_zh: 第三笔增加7,513.15
+  step3_zh_hk: 第三筆增加7,513.15
+  s1_en: >-
+    Choose the controller's proposal. At commencement the tenant gets a right to use the warehouse and
+    recognises a lease liability. Neither balance means it owns the building.
+  s1_zh: 采纳财务主管的建议。租赁开始时，承租人取得使用仓库的权利，同时确认租赁负债，两者都不表示承租人拥有楼宇。
+  s1_zh_hk: 採納財務主管嘅建議。租賃開始時，承租人攞到使用貨倉嘅權利，同時確認租賃負債，兩樣都唔代表承租人擁有物業。
+  s2_en: >-
+    Under the provisional two years, the liability is 10,000 over 1.10 plus 10,000 over 1.10 squared:
+    17,355.37, below the 20,000 undiscounted because payments are in the future.
+  s2_zh: 暂按两年计，负债是一万除以一点一，加一万除以一点一的平方，即一万七千三百五十五点三七。因为日后才付，现值低于未折现的二万。
+  s2_zh_hk: 暫時按兩年計，負債係一萬除以一點一，加一萬除以一點一嘅平方，即係一萬七千三百五十五點三七。因為日後先付，現值低過未折現嘅兩萬。
+  s3_en: >-
+    With renewal reasonably certain, include year three. The liability becomes 24,868.52, and the right-of-use
+    asset is also 24,868.52. The discounted third payment adds 7,513.15.
+  s3_zh: >-
+    完整评估支持合理确定会续租，所以计入第三年。初始负债变为二万四千八百六十八点五二，使用权资产也是二万四千八百六十八点五二。第三笔付款的折现额是七千五百一十三点一五。
+  s3_zh_hk: >-
+    完整評估支持可以合理確定續租，所以計埋第三年。初始負債變成二萬四千八百六十八點五二，使用權資產都係二萬四千八百六十八點五二。第三筆付款嘅折現額係七千五百一十三點一五。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Calculate
+  kicker_en: Calculate
+  kicker_zh: 计算
+  kicker_zh_hk: 計算
+  title_en: Interest and cash are different
+  title_zh: 分清利息和现金
+  title_zh_hk: 分清利息和現金
+  step1_en: Interest 2,486.85; liability 17,355.37
+  step1_zh: 利息2,486.85；负债17,355.37
+  step1_zh_hk: 利息2,486.85；負債17,355.37
+  step2_en: Depreciation 8,289.51; asset 16,579.01
+  step2_zh: 折旧8,289.51；资产16,579.01
+  step2_zh_hk: 折舊8,289.51；資產16,579.01
+  step3_en: Expense 10,776.36 vs cash 10,000
+  step3_zh: 费用10,776.36对现金10,000
+  step3_zh_hk: 費用10,776.36對現金10,000
+  s1_en: >-
+    Year-one interest is 10 percent of 24,868.52, or 2,486.85. After the 10,000 payment, the liability
+    is 17,355.37. The payment reduces principal by 7,513.15.
+  s1_zh: >-
+    首年利息是二万四千八百六十八点五二的百分之十，即二千四百八十六点八五。付一万后，负债为一万七千三百五十五点三七，付款偿还本金七千五百一十三点一五。
+  s1_zh_hk: >-
+    首年利息係二萬四千八百六十八點五二嘅百分之十，即係二千四百八十六點八五。付咗一萬之後，負債係一萬七千三百五十五點三七，付款還咗本金七千五百一十三點一五。
+  s2_en: >-
+    Annual depreciation is 24,868.52 divided by three, or 8,289.51, leaving the asset at 16,579.01. It
+    differs from the liability because the two schedules follow different patterns.
+  s2_zh: >-
+    每年折旧是二万四千八百六十八点五二除以三，即八千二百八十九点五一，首年末资产余额一万六千五百七十九点零一。它与负债不同，因为两种摊还节奏不同。
+  s2_zh_hk: >-
+    每年折舊係二萬四千八百六十八點五二除以三，即係八千二百八十九點五一，首年底資產剩一萬六千五百七十九點零一。佢同負債唔同，因為兩種攤還節奏唔一樣。
+  s3_en: >-
+    First-year lease expense is depreciation plus interest: 10,776.36, which is 776.36 more than the 10,000
+    cash paid. Do not also charge the cash as rent; that would double count.
+  s3_zh: 首年租赁相关费用是折旧加利息，即一万零七百七十六点三六，比现金付款一万多七百七十六点三六。不要再把现金付款列作租金费用，否则会重复入账。
+  s3_zh_hk: 首年租賃相關費用係折舊加利息，即係一萬零七百七十六點三六，比現金付款一萬多七百七十六點三六。唔好再把現金付款列做租金費用，否則會重複入賬。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Check the whole commitment
+  title_zh: 核对全租期的承担
+  title_zh_hk: 核對全租期的承擔
+  en: >-
+    Across three years, payments total 30,000. Depreciation totals the 24,868.52 asset, and interest totals
+    about 5,131.48. Both balances reach zero after year three. Including renewal does not make the contract
+    compulsory; do not infer reasonable certainty from optional wording or a probability cutoff. The model
+    changes timing and presentation, not the contractual cash.
+  zh: >-
+    三年付款合计三万；折旧合计等于初始资产二万四千八百六十八点五二，利息合计约五千一百三十一点四八。第三年结束后，两项余额都是零。计入续租不使合约变成强制三年；不能单凭“可选”字眼或概率门槛推断合理确定。这个模式改变的是时点和列报，不是合约现金。
+  zh_hk: >-
+    三年付款合共三萬；折舊合計等於初始資產二萬四千八百六十八點五二，利息合計大約五千一百三十一點四八。第三年完咗之後，兩項結餘都係零。計埋續租唔會令合約變成強制三年；唔可以單憑「可選」字眼或者概率門檻推斷合理確定。呢個模式改變嘅係時間同列報，唔係合約現金。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Rent paid is not the whole story
+  title_zh: 现金租金只是一环
+  title_zh_hk: 現金租金只是一環
+  q1_en: Liability and asset 24,868.52
+  q1_zh: 负债及资产24,868.52
+  q1_zh_hk: 負債及資產24,868.52
+  q2_en: Year-one expense 10,776.36
+  q2_zh: 首年费用10,776.36
+  q2_zh_hk: 首年費用10,776.36
+  s1_en: >-
+    Under the lessee model, recognise a right-of-use asset and lease liability at commencement, then depreciation
+    and interest, not just annual rent.
+  s1_zh: 按承租人模型，开始日要确认使用权资产和租赁负债，其后计折旧和利息，而不只是记每年租金。
+  s1_zh_hk: 按承租人模式，開始日要確認使用權資產同租賃負債，之後計折舊同利息，唔係淨係記每年租金。
+  s2_en: >-
+    An option year belongs in the measurement when exercise is reasonably certain on the evidence available
+    at commencement.
+  s2_zh: 按开始日已有证据，能合理确定会行使续租权时，续租年度就应计入计量。
+  s2_zh_hk: 按開始日已有嘅證據，可以合理確定會行使續租權，續租年度就要計入計量。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 196

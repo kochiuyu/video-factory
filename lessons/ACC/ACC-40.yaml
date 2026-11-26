@@ -1,0 +1,285 @@
+id: ACC-40
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A reassuring reply. Evidence from whom?
+title_zh: 回函看似让人放心，证据究竟来自谁？
+title_zh_hk: 回覆令人安心，但證據來自誰？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-40
+  kicker_en: ACC-40
+  kicker_zh: ACC-40
+  kicker_zh_hk: ACC-40
+  title_en: A reassuring reply. Evidence from whom?
+  title_zh: 回函看似让人放心，证据究竟来自谁？
+  title_zh_hk: 回覆令人安心，但證據來自誰？
+  image: art/reassuring-reply-evidence-from-whom-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A customer owes a fictional Hong Kong distributor 100,000 at 31 December. The finance manager forwards
+    an email, apparently from the customer, saying the balance looks right, and a 60,000 receipt has arrived.
+    Can the audit team mark the whole balance confirmed? You are on that audit team.
+  zh: >-
+    香港一家虚构经销商于十二月三十一日有一名客户的应收款项十万港元。财务经理转发一封看似来自客户的邮件，称余额大致相符，另外也收到六万港元的款项。审计团队能把整笔余额标记为已确认吗？你是团队的一员。
+  zh_hk: >-
+    香港一間虛構經銷商喺十二月三十一日有一個客戶欠款十萬港元。財務經理轉發一封似係客戶寄嚟嘅電郵，話結餘大致啱，另外亦收到六萬港元款項。審計團隊可唔可以把成筆結餘標記為已確認？你係團隊嘅一員。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Customer account, HK$
+  title_zh: 客户账户，港元
+  title_zh_hk: 客戶賬戶，港元
+  row1_en: Invoice A
+  row1_zh: 发票 A
+  row1_zh_hk: 發票 A
+  row2_en: Invoice B
+  row2_zh: 发票 B
+  row2_zh_hk: 發票 B
+  row3_en: 31 Dec total
+  row3_zh: 12月31日总额
+  row3_zh_hk: 12月31日總額
+  row4_en: 15 Jan receipt
+  row4_zh: 1月15日收款
+  row4_zh_hk: 1月15日收款
+  col1_en: Amount
+  col1_zh: 金额
+  col1_zh_hk: 金額
+  col2_en: Evidence so far
+  col2_zh: 现有证据
+  col2_zh_hk: 現有證據
+  c11: 40,000
+  c12_en: Unconfirmed
+  c12_zh: 未确认
+  c12_zh_hk: 未確認
+  c21: 60,000
+  c22_en: Unconfirmed
+  c22_zh: 未确认
+  c22_zh_hk: 未確認
+  c31: 100,000
+  c32_en: Forwarded email
+  c32_zh: 转发邮件
+  c32_zh_hk: 轉發電郵
+  c41: 60,000
+  c42_en: Bank-verified
+  c42_zh: 已核对银行
+  c42_zh_hk: 已核對銀行
+  footer_en: Receipt's invoice not yet identified
+  footer_zh: 收款对应哪张发票尚未说明
+  footer_zh_hk: 收款對應哪張發票尚未說明
+  s1_en: >-
+    The balance consists only of invoice A for 40,000 and invoice B for 60,000. The team has not authenticated
+    the forwarded email's sender, authority or complete contents.
+  s1_zh: 这笔余额只包括发票 A 的四万和发票 B 的六万。审计团队还没有核实转发邮件的原发件人、其权限或内容是否完整。
+  s1_zh_hk: 呢筆結餘只包括發票 A 嘅四萬同發票 B 嘅六萬。審計團隊仲未核實轉發電郵嘅原寄件人、佢嘅權限或者內容係咪完整。
+  s2_en: >-
+    A genuine 60,000 receipt on 15 January has been checked against the bank record, but its invoice allocation
+    has not been supplied.
+  s2_zh: 一月十五日确实收到六万，并已与银行记录独立核对；但这笔收款对应哪张发票，暂未得到说明。
+  s2_zh_hk: 一月十五日確實收到六萬，亦已經同銀行記錄獨立核對；但呢筆收款對應邊張發票，暫時未有說明。
+  s3_en: >-
+    A controlled confirmation means the auditor picks the respondent, verifies contact details independently,
+    sends the request and receives the reply directly. Direct receipt improves provenance; it does not
+    make every statement correct.
+  s3_zh: 受控函证是指审计人员选定被询证者，独立验证联系方式，发出询证函并直接接收回复。直接收函更便于确认来源，但不能据此认定所有陈述正确。
+  s3_zh_hk: 受控函證係指核數師揀選回覆人、獨立核實聯絡方法、寄出函證，再直接收回覆。直接收回覆有助確認來源，但唔代表所有陳述都正確。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Mark the balance confirmed?
+  title_zh: 能标记为已确认吗？
+  title_zh_hk: 可以標記為已確認嗎？
+  en: >-
+    Can the full year-end balance be marked confirmed? Explain what the forwarded reply and verified receipt
+    establish, what remains unknown, and the next controlled evidence step. Pause and vote.
+  zh: 可否把整笔年末余额标记为已确认？说明转发回复和经核实的收款能证明什么、还欠什么，以及下一步应如何在受控渠道下取证。请暂停，投个票。
+  zh_hk: 可唔可以把成筆年底結餘標記為已確認？講清楚轉發回覆同已核實收款證明到乜嘢、仲欠乜嘢，同埋下一步點樣喺受控渠道取證。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A direct reply with an exception
+  title_zh: 直接回函提出异议
+  title_zh_hk: 直接回覆提出異議
+  step1_en: Authenticated reply from the officer
+  step1_zh: 授权财务人员直接回函
+  step1_zh_hk: 授權財務人員直接回覆
+  step2_en: Accepts B; disputes A
+  step2_zh: 认可 B；对 A 提出异议
+  step2_zh_hk: 認可 B；對 A 提出異議
+  step3_en: 60,000 allocated to B
+  step3_zh: 60,000 指定支付 B
+  step3_zh_hk: 60,000 指定支付 B
+  s1_en: >-
+    The auditor receives an authenticated written reply directly from the customer's authorised accounts
+    officer. The customer accepts invoice B but disputes invoice A, saying its goods were not received.
+  s1_zh: 审计人员直接收到客户授权财务人员发来的书面回函，并核实了真伪。客户认可发票 B，却表示没有收到 A 所列货物，因而对 A 提出异议。
+  s1_zh_hk: 核數師直接收到客戶授權財務人員嘅書面回覆，並核實咗真偽。客戶認可發票 B，但話冇收到 A 嘅貨物，所以對 A 提出異議。
+  s2_en: >-
+    The customer's remittance advice allocates the January 60,000 to B; amount, payer and bank entry match.
+  s2_zh: 客户的汇款通知明确将一月的六万用于支付 B；金额、付款人和银行流水都吻合。
+  s2_zh_hk: 客戶嘅匯款通知明確將一月嗰六萬用嚟支付 B；金額、付款人同銀行記錄都吻合。
+  s3_en: >-
+    Management says A's goods were delivered before year-end, but the delivery evidence and contract terms
+    are not yet examined. The manager argues that receiving 60 percent proves the whole account sound.
+  s3_zh: 管理层说 A 的货物已在年结前交付，但尚未检视交付证据和合约条款。经理称收回六成余额便能证明整笔账项无误。
+  s3_zh_hk: 管理層話 A 嘅貨物已經喺年結前交付，但仲未檢視交付證據同合約條款。經理話收返六成結餘就證明成筆賬冇問題。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which invoice did the cash pay?
+  title_zh: 收款支持哪一张发票？
+  title_zh_hk: 收款支持邊張發票？
+  en: >-
+    Reconcile the 100,000 balance to the direct reply and the January receipt. Which invoice does the
+    payment support, what amount remains disputed, and what work would distinguish a valid claim from
+    an accounting error? Pause and vote.
+  zh: 请把年末十万与直接回函和一月收款逐项核对。收款支持哪一张发票？争议金额还有多少？还要做什么，才能区分年末确有债权与会计差错？请暂停，投个票。
+  zh_hk: >-
+    請把年底十萬同直接回覆同一月收款逐項核對。收款支持邊張發票？仲有幾多金額有爭議？仲要做乜，先可以分清年底真係有債權定係會計錯誤？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Provenance is not agreement
+  title_zh: 来源可信不等于认可余额
+  title_zh_hk: 來源可信不等於確認賬項
+  step1_en: >-
+    Forwarded email: source unresolved
+  step1_zh: 转发邮件：来源未确定
+  step1_zh_hk: 轉發電郵：來源未確定
+  step2_en: Verify the respondent independently
+  step2_zh: 独立核实回复者
+  step2_zh_hk: 獨立核實回覆人
+  step3_en: An exception is useful evidence
+  step3_zh: 不符事项是有用证据
+  step3_zh_hk: 不符事項是有用證據
+  s1_en: >-
+    Keep the initial conclusion open. The forwarded message may be genuine, but its route leaves source,
+    authority and completeness unresolved.
+  s1_zh: 先不作结论。管理层转发的邮件可能是真的，但原始来源、权限和完整性仍未确定。
+  s1_zh_hk: 先唔好落結論。管理層轉發嘅電郵可能係真嘅，但原始來源、權限同完整性仍然未確定。
+  s2_en: >-
+    Independently verify the respondent and obtain the written response directly. Do not resend to an
+    address copied from the unverified message and call that independent.
+  s2_zh: 要独立核实回复者，并直接收取书面回复。不可把未经核实邮件中的地址照抄重寄，就当作独立核实。
+  s2_zh_hk: 要獨立核實回覆人，再直接收取書面回覆。唔可以照抄未核實電郵入面嘅地址再寄，就當作獨立核實。
+  s3_en: >-
+    The direct reply is less reassuring but more useful: its exception pinpoints what to investigate.
+    Record it with its provenance rather than replacing it with management's positive summary.
+  s3_zh: 直接回复虽然不如转发的消息乐观，却更有证据价值，因为它指出了要查的具体不符事项。应保留回复及其来源，不用管理层的正面摘要取代。
+  s3_zh_hk: 直接回覆雖然冇轉發訊息咁樂觀，但更有證據價值，因為佢指出要查嘅具體不符事項。要保留回覆同佢嘅來源，唔好用管理層嘅正面摘要取代。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Match cash to the item paid
+  title_zh: 将收款配对至相关发票
+  title_zh_hk: 將收款配對至相關發票
+  step1_en: 40,000 + 60,000 = 100,000
+  step1_zh: 40,000 + 60,000 = 100,000
+  step1_zh_hk: 40,000 + 60,000 = 100,000
+  step2_en: Receipt supports B, not A
+  step2_zh: 收款支持 B，不支持 A
+  step2_zh_hk: 收款支持 B，不支持 A
+  step3_en: 40,000 remains disputed
+  step3_zh: 40,000 仍有争议
+  step3_zh_hk: 40,000 仍有爭議
+  s1_en: >-
+    The year-end balance is 40,000 plus 60,000, or 100,000. The authenticated reply accepts B, and the
+    verified 60,000 receipt specifically pays B.
+  s1_zh: 年末余额是四万加六万，即十万。经核实的直接回函认可 B，其后核实的六万收款也指定支付 B。
+  s1_zh_hk: 年底結餘係四萬加六萬，即係十萬。已核實嘅直接回覆認可 B，之後核實嘅六萬收款亦指定支付 B。
+  s2_en: >-
+    The same receipt cannot be counted again as settling the disputed 40,000. Sixty percent has payment
+    corroboration and forty percent is disputed; those are arithmetic, not confidence levels.
+  s2_zh: 不能把同一笔收款再算成有争议的四万已清还。六成有收款佐证，四成仍有争议；这些百分比只是数字比例，不是可信程度。
+  s2_zh_hk: 唔可以把同一筆收款再當成有爭議嗰四萬已經還清。六成有收款佐證，四成仍有爭議；呢啲百分比只係數字比例，唔係可信程度。
+  s3_en: >-
+    For A, inspect the purchase order, contract terms, invoice, dispatch and carrier records and acceptance
+    correspondence. A supplier's own invoice alone cannot settle whether the year-end claim is valid.
+  s3_zh: 对 A 应检查采购订单、合同、发票、发运凭据、承运商记录及客户验收往来。仅有供应商自行开出的发票，无法确定年末债权是否成立。
+  s3_zh_hk: 對 A 要檢查採購訂單、合約條款、發票、發貨同承運商記錄，以及客戶驗收往來。淨係得供應商自己開嘅發票，確定唔到年底債權係咪成立。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Keep the conclusion within scope
+  title_zh: 结论不能超出证据范围
+  title_zh_hk: 結論不能超出證據範圍
+  en: >-
+    B has direct acknowledgement and a matched payment; A remains unresolved. Neither automatic clearance
+    nor an automatic 40,000 write-off is justified. The denial might reflect a delivery or timing difference,
+    a contract dispute or an error; do not choose a cause first. No evidence shows dishonesty, and the
+    case supports no final audit opinion.
+  zh: >-
+    目前能确认的范围有限：B 有直接回函认可，并与期后收款匹配；A 仍待核实。既不能直接结案，也不能自动核销四万。客户否认收货，可能源于交付或时间差异、合同争议，也可能是账目有误；不要预设原因。没有证据显示有人不诚实，本例也不支持最终审计意见。
+  zh_hk: >-
+    目前確認到嘅範圍有限：B 有直接回覆認可，亦同期後收款配對到；A 仍然有待核實。既唔可以直接結案，亦唔可以自動撇賬四萬。客戶否認收貨，可能係交付或時間差異、合約爭議，亦可能係賬目出錯；唔好預設原因。冇證據顯示有人唔誠實，本例亦唔支持最終審計意見。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Provenance and item, both matter
+  title_zh: 看来源，也要看对应项目
+  title_zh_hk: 睇來源，亦要睇對應項目
+  q1_en: >-
+    B: confirmed and paid, 60,000
+  q1_zh: B：已认可并收款60,000
+  q1_zh_hk: B：已認可並收款60,000
+  q2_en: >-
+    A: disputed, 40,000
+  q2_zh: A：有争议，40,000
+  q2_zh_hk: A：有爭議，40,000
+  s1_en: >-
+    A forwarded reassurance is not a controlled confirmation. Obtain the reply directly from a verified,
+    authorised respondent.
+  s1_zh: 转发的安心说法不是受控函证。应从经核实、获授权的回复者直接取得回复。
+  s1_zh_hk: 轉發嘅安心講法唔係受控函證。要由已核實、獲授權嘅回覆人直接攞回覆。
+  s2_en: >-
+    Match each receipt to the invoice it pays, and investigate the exception rather than clearing or writing
+    off the balance automatically.
+  s2_zh: 把每笔收款配对至它支付的发票，调查不符事项，不要自动结案或核销。
+  s2_zh_hk: 把每筆收款配對到佢支付嘅發票，調查不符事項，唔好自動結案或者撇賬。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 194

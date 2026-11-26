@@ -1,0 +1,280 @@
+id: ACC-32
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Rejects. Which loss belongs in stock?
+title_zh: 不合格品的成本，哪些应留在存货中？
+title_zh_hk: 不合格品的損耗，哪些應計入存貨？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-32
+  kicker_en: ACC-32
+  kicker_zh: ACC-32
+  kicker_zh_hk: ACC-32
+  title_en: Rejects. Which loss belongs in stock?
+  title_zh: 不合格品的成本，哪些应留在存货中？
+  title_zh_hk: 不合格品的損耗，哪些應計入存貨？
+  image: art/rejects-which-loss-belongs-in-stock-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    One run of 1,000 identical clips has finished: 900 are good and unsold; 100 are valueless rejects.
+    The draft report puts all 19,000 of production cost into the 900 good units. Would you sign it before
+    seeing the normal-loss allowance? You are the controller of fictional Harbour Clips, a Hong Kong stationery
+    maker.
+  zh: >-
+    一批一千个同规格文具夹已经完工：九百个合格品尚未销售，另有一百个没有残值的不合格品。草稿把一万九千港元生产成本全部分配给九百个合格品。还没看到正常损失标准，你会签字吗？你是香港文具夹生产企业“海湾文具夹”的财务负责人。
+  zh_hk: >-
+    一批一千個同規格文具夾已經做好：九百個合格品未賣，另外一百個係冇殘值嘅不合格品。草稿把一萬九千港元生產成本全部分配畀九百個合格品。未睇到正常損耗限額，你會唔會簽？你係香港文具夾生產企業「海灣文具夾」嘅財務負責人。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: The finished run
+  title_zh: 本批生产
+  title_zh_hk: 今批生產
+  row1_en: Good, unsold output
+  row1_zh: 未出售的合格品
+  row1_zh_hk: 未出售的合格品
+  row2_en: Valueless rejects
+  row2_zh: 无价值的不合格品
+  row2_zh_hk: 無價值的不合格品
+  row3_en: Units fully processed
+  row3_zh: 完成全套工序的数量
+  row3_zh_hk: 完成全套工序的數量
+  col1_en: Units
+  col1_zh: 数量
+  col1_zh_hk: 數量
+  col2_en: Process cost, HK$
+  col2_zh: 工序成本，港元
+  col2_zh_hk: 工序成本，港元
+  c11: '900'
+  c12_en: To allocate
+  c12_zh: 待分配
+  c12_zh_hk: 待分配
+  c21: '100'
+  c22_en: To allocate
+  c22_zh: 待分配
+  c22_zh_hk: 待分配
+  c31: 1,000
+  c32: 19,000
+  footer_en: No scrap, rework or unfinished units
+  footer_zh: 无废料收入、返工或在产品
+  footer_zh_hk: 沒有廢料收入、返工或在製品
+  s1_en: >-
+    All 1,000 units received the full production process before final inspection. The 19,000 is the complete
+    production cost pool, including all necessary disposal costs.
+  s1_zh: 全部一千个产品都完成整套工序后才进行最终检验。一万九千是完整的本批生产成本，已包括所有必要的处置费用。
+  s1_zh_hk: 全部一千件都做完成套工序先至做最終檢驗。一萬九千係今批完整嘅生產成本，已經包括所有必要嘅處置費用。
+  s2_en: >-
+    Classroom policy: normal loss is expected loss under usual conditions, absorbed in the process rate.
+    Abnormal loss is the excess, expensed now.
+  s2_zh: 本例政策：正常损失是正常生产条件下预计发生的损失，由工序单位成本吸收；超过标准的异常损失当期费用化。
+  s2_zh_hk: 本例規則：正常損耗係一般情況下預計會發生嘅損耗，由工序單位成本吸收；超出限額嘅異常損耗即期列支。
+  s3_en: >-
+    Divide total cost by input units minus normal-loss units, and apply that rate to good output and abnormal
+    loss. The approved allowance and inspection report have not yet arrived; do not invent a loss percentage.
+  s3_zh: 总成本除以投入量减正常损失量，所得单位成本同时用于合格品和异常损失。核准的损失标准和验收报告都还没收到，不能自行设定损失比例。
+  s3_zh_hk: 總成本除以投入量減正常損耗量，所得單位成本同時用於合格品同異常損耗。核准嘅損耗限額同檢驗報告都未收到，唔可以自己定損耗比例。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Sign now, or get the evidence?
+  title_zh: 现在签字，还是先补证据？
+  title_zh_hk: 而家簽，定先補證據？
+  en: >-
+    Approve 19,000 as finished inventory, expense all 100 rejects immediately, or obtain the missing loss
+    evidence before signing? What can the physical count alone not settle? Pause and vote.
+  zh: 你会把一万九千全数列入完工存货、把全部一百个不合格品即时列支，还是先补齐损失证据再签字？只凭实际数量不能判断什么？请暂停，投个票。
+  zh_hk: 你會把一萬九千全數計入製成品存貨、把全部一百個不合格品即時列支，定係先補齊損耗證據先簽？淨係靠實際數量判斷唔到啲乜？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: >-
+    The allowance arrives: 5%
+  title_zh: 损失标准送达：5%
+  title_zh_hk: 損耗限額送到：5%
+  step1_en: >-
+    Normal allowance: 5% of input
+  step1_zh: 正常损失标准：投入量5%
+  step1_zh_hk: 正常損耗限額：投入量5%
+  step2_en: 50 normal rejects
+  step2_zh: 50个属正常损失
+  step2_zh_hk: 50個屬正常損耗
+  step3_en: 50 from a one-off incident
+  step3_zh: 50个来自一次设备事件
+  step3_zh_hk: 50個來自一次設備事件
+  s1_en: >-
+    The approved allowance, supported by normal operating records, is 5 percent of input units.
+  s1_zh: 生产记录支持的核准正常损失标准，是投入量的百分之五。
+  s1_zh_hk: 有生產記錄支持嘅核准正常損耗限額，係投入量嘅百分之五。
+  s2_en: >-
+    Inspection confirms 50 normal rejects, and another 50 from a one-off equipment-setting incident. For
+    this exercise, those extra rejects are abnormal. All rejects were found only after the full process.
+  s2_zh: 检验表明，五十个不合格品属于正常损失；另外五十个来自一次设备参数设置事件，本例归入异常损失。全部不合格品都是完工后才检出的。
+  s2_zh_hk: 檢驗確認五十個不合格品屬正常損耗；另外五十個來自一次設備參數設定事故，本例當作異常損耗。全部不合格品都係完成全套工序之後先發現。
+  s3_en: >-
+    Do not reset the allowance to the observed 10 percent to absorb the incident. Costs, quantities and
+    the absence of scrap value are unchanged.
+  s3_zh: 不可把实际不合格率百分之十改作正常标准来吸收事故损失。成本、数量和废料无价值的设定不变。
+  s3_zh_hk: 唔可以把實際不合格率百分之十改做正常限額嚟吸收事故損耗。成本、數量同廢料冇價值嘅設定都不變。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What inventory and loss now?
+  title_zh: 存货和异常损失各是多少？
+  title_zh_hk: 存貨同異常損耗各係幾多？
+  en: >-
+    What inventory amount and abnormal-loss expense would you now sign? Show normal loss, expected output,
+    the cost rate and a reconciliation to 19,000. Pause and vote.
+  zh: 现在你会确认多少存货和异常损失费用？列出正常损失量、预期合格产量和单位成本，并与一万九千总成本核对。请暂停，投个票。
+  zh_hk: 而家你會確認幾多存貨同異常損耗費用？列出正常損耗量、預期產量同單位成本，再同一萬九千總成本核對。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Find the denominator
+  title_zh: 找出计算分母
+  title_zh_hk: 搵出計算分母
+  step1_en: Normal loss 50; expected output 950
+  step1_zh: 正常损失50；预期产量950
+  step1_zh_hk: 正常損耗50；預期產量950
+  step2_en: Abnormal loss 950 − 900 = 50
+  step2_zh: 异常损失950 − 900 = 50
+  step2_zh_hk: 異常損耗950 − 900 = 50
+  step3_en: >-
+    Rate: 19,000 ÷ 950 = HK$20
+  step3_zh: 单位成本19,000 ÷ 950 = 20
+  step3_zh_hk: 單位成本19,000 ÷ 950 = 20
+  s1_en: >-
+    A count is not a classification. It establishes 900 good units and 100 rejects, not how much loss
+    is normal.
+  s1_zh: 点算结果不是成本分类。点算只能确认九百个合格品和一百个不合格品，不能判定正常损失有多少。
+  s1_zh_hk: 點算結果唔係成本分類。點算只可以確認九百個合格品同一百個不合格品，判斷唔到正常損耗有幾多。
+  s2_en: >-
+    Normal loss is 1,000 times 5 percent, or 50 units. Expected good output is 950. Actual good output
+    is 900, so abnormal loss is 50 units.
+  s2_zh: 正常损失是一千乘百分之五，即五十个。预期合格产量是九百五十个；实际只有九百个，异常损失就是五十个。
+  s2_zh_hk: 正常損耗係一千乘百分之五，即係五十個。預期產量係九百五十個；實際得九百個，所以異常損耗係五十個。
+  s3_en: >-
+    The cost rate is 19,000 divided by 950, or 20. Expected output is a costing denominator, not a claim
+    that 950 good clips exist.
+  s3_zh: 工序单位成本是一万九千除以九百五十，即二十港元。预期产量只是成本分配的分母，不是说现场有九百五十个合格品。
+  s3_zh_hk: 工序單位成本係一萬九千除以九百五十，即係二十港元。預期產量只係成本分配嘅分母，唔係話現場有九百五十個合格品。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Calculate
+  kicker_en: Calculate
+  kicker_zh: 计算
+  kicker_zh_hk: 計算
+  title_en: Reconcile the report
+  title_zh: 核对成本与数量
+  title_zh_hk: 核對成本同數量
+  step1_en: Inventory 900 × 20 = 18,000
+  step1_zh: 存货900 × 20 = 18,000
+  step1_zh_hk: 存貨900 × 20 = 18,000
+  step2_en: Abnormal loss 50 × 20 = 1,000
+  step2_zh: 异常损失50 × 20 = 1,000
+  step2_zh_hk: 異常損耗50 × 20 = 1,000
+  step3_en: >-
+    Units: 900 + 50 + 50 = 1,000
+  step3_zh: 数量：900 + 50 + 50 = 1,000
+  step3_zh_hk: 數量：900 + 50 + 50 = 1,000
+  s1_en: >-
+    Finished inventory is 900 times 20, or 18,000. Abnormal-loss expense is 50 times 20, or 1,000. Together
+    they reconcile to 19,000.
+  s1_zh: 产成品存货是九百乘二十，即一万八千；异常损失费用是五十乘二十，即一千。两项合计一万九千。
+  s1_zh_hk: 製成品存貨係九百乘二十，即係一萬八千；異常損耗費用係五十乘二十，即係一千。兩項加埋係一萬九千。
+  s2_en: >-
+    Units reconcile separately: 900 good, 50 normal rejects and 50 abnormal rejects make 1,000. Normal
+    rejects carry no separate balance; their cost is absorbed through the expected-output rate.
+  s2_zh: >-
+    数量另行核对：九百个合格品、五十个正常不合格品和五十个异常不合格品，合计一千个。正常损失没有单独入账，但它的成本已由按预期产量计算的单位成本吸收。
+  s2_zh_hk: >-
+    數量另外核對：九百個合格品、五十個正常不合格品同五十個異常不合格品，合共一千個。正常損耗冇單獨入賬，但佢嘅成本已經由按預期產量計嘅單位成本吸收咗。
+  s3_en: >-
+    Three shortcuts fail. Dividing by 900 hides the 1,000 abnormal loss in inventory. Dividing by 1,000
+    gives 19 and does not absorb normal loss. Expensing all 100 rejects at 19 gives 1,900, treating normal
+    and abnormal loss alike.
+  s3_zh: >-
+    三条捷径都不对。除以九百，会把一千异常损失藏在存货里。除以一千得十九，没有吸收正常损失。按十九把一百个全部列支一千九百，则混淆了正常与异常损失。
+  s3_zh_hk: >-
+    三條捷徑都唔啱。除以九百，會把一千異常損耗收埋喺存貨。除以一千得十九，冇吸收正常損耗。按十九把一百個全部列支一千九百，就混淆咗正常同異常損耗。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What does the correction change?
+  title_zh: 这项更正改变了什么？
+  title_zh_hk: 呢項更正改變咗乜？
+  en: >-
+    Relative to the draft, inventory and this period's pre-tax profit each fall 1,000, all else equal.
+    This is not a cash saving or a new payment. A correct calculation does not prove the allowance or
+    the incident classification; those need supporting operational evidence. Do not infer worker misconduct
+    from an incident label.
+  zh: >-
+    其他条件不变，与草稿相比，存货与本期税前利润同时减少一千。这既不是现金节省，也不是额外付款。算术无误不代表损耗率及事故分类已有依据，仍需营运证据支持。也不能仅凭事故标签推断员工失当。
+  zh_hk: >-
+    其他條件不變，同草稿比，存貨同今期稅前利潤各減少一千。呢個唔係慳到現金，亦唔係額外付款。計啱數唔代表損耗率同事故分類有依據，仍然要營運證據支持。亦唔可以單憑事故標籤推斷員工失當。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Absorb normal, expense abnormal
+  title_zh: 正常损失吸收，异常损失列支
+  title_zh_hk: 正常損耗吸收，異常損耗列支
+  q1_en: Inventory 18,000
+  q1_zh: 存货18,000
+  q1_zh_hk: 存貨18,000
+  q2_en: Abnormal-loss expense 1,000
+  q2_zh: 异常损失费用1,000
+  q2_zh_hk: 異常損耗費用1,000
+  s1_en: >-
+    A reject count cannot classify loss. The approved allowance sets the expected-output denominator;
+    the excess is removed from inventory and expensed.
+  s1_zh: 不合格品的数量不能决定损失性质。核准的损失标准决定预期产量这个分母；超出部分要从存货剔除，列为费用。
+  s1_zh_hk: 不合格品嘅數量決定唔到損耗性質。核准嘅損耗限額決定預期產量呢個分母；超出部分要由存貨剔走，列做費用。
+  s2_en: >-
+    Reconcile costs and units separately, and keep the evidence behind the allowance and the incident
+    label.
+  s2_zh: 成本和数量要分别核对，并保留支持损失标准和事故分类的证据。
+  s2_zh_hk: 成本同數量要分開核對，並保留支持損耗限額同事故分類嘅證據。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 194

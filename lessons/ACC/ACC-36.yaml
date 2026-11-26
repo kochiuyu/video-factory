@@ -1,0 +1,285 @@
+id: ACC-36
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: After year-end. Evidence about which year?
+title_zh: 年末后的公告，究竟反映哪一年的情况？
+title_zh_hk: 年結後的新消息，說的是哪一年的事？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-36
+  kicker_en: ACC-36
+  kicker_zh: ACC-36
+  kicker_zh_hk: ACC-36
+  title_en: After year-end. Evidence about which year?
+  title_zh: 年末后的公告，究竟反映哪一年的情况？
+  title_zh_hk: 年結後的新消息，說的是哪一年的事？
+  image: art/after-year-end-which-condition-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Accounts close on 31 December and go to the board on 20 February. On 25 January, a customer owing
+    120,000 enters insolvency. Does that news change Year 1, or only need disclosure? You report for Harbour
+    Paper, a fictional Hong Kong wholesaler.
+  zh: >-
+    账目在十二月三十一日结账，二月二十日交董事会批准。一月二十五日，一名欠款十二万港元的客户进入无力偿债程序。这个消息要调整第一年金额，还是只需披露？你负责香港虚构纸品批发商“海湾纸业”的报表。
+  zh_hk: >-
+    賬目喺十二月三十一日結賬，二月二十日交董事會批准。一月二十五日，一個欠十二萬港元嘅客戶進入無力償債程序。呢個消息要調整第一年金額，定係只需要披露？你負責香港虛構紙品批發商「海灣紙業」嘅報表。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: The customer receivable, HK$
+  title_zh: 该客户应收款项，港元
+  title_zh_hk: 該客戶應收款項，港元
+  row1_en: Gross receivable
+  row1_zh: 应收款项总额
+  row1_zh_hk: 應收款項總額
+  row2_en: Existing allowance
+  row2_zh: 现有损失准备
+  row2_zh_hk: 現有虧損撥備
+  row3_en: Net carrying amount
+  row3_zh: 账面净值
+  row3_zh_hk: 賬面淨值
+  row4_en: Revised recovery
+  row4_zh: 修订后预期收回金额
+  row4_zh_hk: 修訂後預期收回金額
+  col1_en: HK$
+  col1_zh: 港元
+  col1_zh_hk: 港元
+  col2_en: Basis
+  col2_zh: 依据
+  col2_zh_hk: 依據
+  c11: 120,000
+  c12_en: Undisputed
+  c12_zh: 无争议
+  c12_zh_hk: 無爭議
+  c21: 6,000
+  c22_en: Preliminary, 31 Dec
+  c22_zh: 12月31日初步
+  c22_zh_hk: 12月31日初步
+  c31: 114,000
+  c32: 120,000 − 6,000
+  c41: 30,000
+  c42_en: History A
+  c42_zh: 情境 A
+  c42_zh_hk: 情境 A
+  footer_en: No cash collected; no write-off
+  footer_zh: 未收款，没有核销
+  footer_zh_hk: 未收款，沒有撇賬
+  s1_en: >-
+    An accepted delivery before year-end created an undisputed 120,000 receivable. The preliminary 31
+    December allowance is 6,000, leaving 114,000 net.
+  s1_zh: 年结前，客户验收货物，形成无争议的十二万应收款项。十二月三十一日初步损失准备为六千，应收款项净额十一万四千。
+  s1_zh_hk: 年結前客戶驗收貨物，形成冇爭議嘅十二萬應收款項。十二月三十一日初步虧損撥備係六千，應收款項淨額十一萬四千。
+  s2_en: >-
+    Before authorisation, adjust for later evidence about conditions that already existed at year-end.
+    Do not adjust for conditions arising only afterwards; disclose material ones instead.
+  s2_zh: 在批准报出前，如果后来取得的证据反映年末已有的情况，就调整年末金额。仅在期后新出现的情况不调整；影响重大的要披露。
+  s2_zh_hk: 喺批准刊發之前，如果後來嘅證據反映年底已經存在嘅情況，就調整年底金額。只係期後先出現嘅情況唔調整；影響重大就要披露。
+  s3_en: >-
+    History A: the administrator's records show the customer had stopped paying creditors by 15 December
+    and exhausted its funding by 28 December. Expected recovery at 31 December is 30,000.
+  s3_zh: >-
+    情境 A：管理人的可靠记录显示，客户在十二月十五日或之前已停止向多名债权人付款，到十二月二十八日资金已用尽。按十二月三十一日的状况，预期收回总额为三万。
+  s3_zh_hk: >-
+    情境 A：管理人嘅可靠記錄顯示，客戶喺十二月十五日或之前已經停止向多個債權人付款，到十二月二十八日資金已經用晒。按十二月三十一日嘅狀況，預期收回總額係三萬。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: >-
+    History A: adjust or disclose?
+  title_zh: 情境 A 要调整吗？
+  title_zh_hk: 情境 A 要調整嗎？
+  en: >-
+    Under History A, adjust the Year 1 amounts or only disclose the January announcement? Calculate the
+    required allowance, the additional expense and the net receivable. Which fact matters more than the
+    announcement date? Pause and vote.
+  zh: 情境 A 下，应调整第一年金额，还是只披露一月的公告？计算所需准备、额外费用和应收款项净额。哪一项事实比公告日期更重要？请暂停，投个票。
+  zh_hk: 情境 A 之下，應該調整第一年金額，定係只披露一月嘅公告？計出所需撥備、額外費用同應收款項淨額。邊項事實比公告日期更重要？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: >-
+    History B: a January disaster
+  title_zh: 情境 B：1月发生全新灾害
+  title_zh_hk: 情境 B：1月發生全新災害
+  step1_en: No distress at 31 December
+  step1_zh: 12月31日没有财务困难
+  step1_zh_hk: 12月31日沒有財政困難
+  step2_en: 12 January disaster causes insolvency
+  step2_zh: 1月12日灾害导致无力偿债
+  step2_zh_hk: 1月12日災害導致無力償債
+  step3_en: Recovery falls by 84,000
+  step3_zh: 收回金额减少84,000
+  step3_zh_hk: 收回金額減少84,000
+  s1_en: >-
+    Start again with an alternative history, not a correction to A. The receivable, allowance, dates and
+    25 January announcement are the same.
+  s1_zh: 从同一起点另做一遍，不是在情境 A 后面加一个事件。应收款项、损失准备、各个日期和一月二十五日的公告都不变。
+  s1_zh_hk: 由同一個起點再做一次，唔係喺情境 A 後面加多件事。應收款項、撥備、各個日期同一月二十五日嘅公告都不變。
+  s2_en: >-
+    In History B the customer had no financial distress at 31 December, and the 6,000 allowance was appropriate.
+    An unprecedented, uninsured disaster on 12 January alone causes the insolvency.
+  s2_zh: 情境 B 的客户在十二月三十一日没有财务困难，六千准备恰当。一月十二日发生未投保且前所未有的灾害，是其后无力偿债的唯一原因。
+  s2_zh_hk: 情境 B 嘅客戶喺十二月三十一日冇財政困難，六千撥備恰當。一月十二日發生一場冇保險、前所未有嘅災害，係之後無力償債嘅唯一原因。
+  s3_en: >-
+    After the disaster, expected recovery is 30,000: a reduction of 84,000 from the supported 114,000.
+    The effect is material and reasonably estimable.
+  s3_zh: 灾后预期收回总额为三万，相对先前有依据的十一万四千，估计减少八万四千。影响重大，并可合理估计。
+  s3_zh_hk: 災後預期收回總額係三萬，比之前有根據嘅十一萬四千，估計減少八萬四千。影響重大，亦可以合理估計。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: >-
+    History B: what stays in Year 1?
+  title_zh: 情境 B 保留什么？
+  title_zh_hk: 情境 B 保留甚麼？
+  en: >-
+    Under History B, what remains in Year 1's receivable and allowance, and what disclosure is needed?
+    Contrast the two histories without combining their losses. Pause and vote.
+  zh: 情境 B 下，第一年应保留多少应收款和损失准备？需要披露什么？对照两个情境作答，不要把两条时间线的损失叠加。请暂停，投个票。
+  zh_hk: 情境 B 之下，第一年應該保留幾多應收款項同撥備？要披露乜嘢？對照兩個情境作答，唔好把兩條時間線嘅損失加埋。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: History A updates the estimate
+  title_zh: 情境 A 更新年结估计
+  title_zh_hk: 情境 A 更新年結估計
+  step1_en: Allowance 120,000 − 30,000 = 90,000
+  step1_zh: 准备120,000 − 30,000 = 90,000
+  step1_zh_hk: 撥備120,000 − 30,000 = 90,000
+  step2_en: Extra Year 1 expense 84,000
+  step2_zh: 第1年额外费用84,000
+  step2_zh_hk: 第1年額外費用84,000
+  step3_en: Net receivable 30,000
+  step3_zh: 应收款项净额30,000
+  step3_zh_hk: 應收款項淨額30,000
+  s1_en: >-
+    In History A, the distress existed before 31 December. The January announcement and records are later
+    evidence about that earlier condition, and they arrive before authorisation.
+  s1_zh: 情境 A 的财务困难在十二月三十一日前已经存在。一月的公告和支持记录，是其后提供的、关于这个早已存在的状况的证据，并在报表获批准前到手。
+  s1_zh_hk: 情境 A 嘅財政困難喺十二月三十一日之前已經存在。一月嘅公告同支持記錄，係之後先有、關於呢個早已存在狀況嘅證據，而且喺報表批准前到手。
+  s2_en: >-
+    The required allowance is 120,000 minus 30,000, or 90,000. Against the existing 6,000, recognise an
+    additional 84,000 impairment expense in Year 1. Net receivables become 30,000.
+  s2_zh: 所需损失准备总额是十二万减三万，即九万。已有六千，第一年还应确认八万四千减值损失，应收款项净额变为三万。
+  s2_zh_hk: 所需撥備總額係十二萬減三萬，即係九萬。已經有六千，第一年仲要確認八萬四千減值費用，應收款項淨額變成三萬。
+  s3_en: >-
+    The 120,000 claim and zero cash received are unchanged. An allowance is not debt forgiveness, and
+    90,000 is the total allowance, not an extra expense on top of 6,000.
+  s3_zh: 十二万的合同债权和零收款都不变。计提准备不是免除债务；九万是准备总额，不是在六千之上另计的费用。
+  s3_zh_hk: 十二萬嘅合約債權同零收款都不變。計提撥備唔係豁免債務；九萬係撥備總額，唔係喺六千之上再加嘅費用。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: History B leaves Year 1 intact
+  title_zh: 情境 B 保留原估计
+  title_zh_hk: 情境 B 保留原估計
+  step1_en: Year 1 keeps 6,000 and 114,000
+  step1_zh: 第1年保留6,000及114,000
+  step1_zh_hk: 第1年保留6,000及114,000
+  step2_en: Disclose the 84,000 later reduction
+  step2_zh: 披露其后减少的84,000
+  step2_zh_hk: 披露其後減少的84,000
+  step3_en: Never add A's 84,000 to B's
+  step3_zh: 不能把两个84,000相加
+  step3_zh_hk: 不能把兩個84,000相加
+  s1_en: >-
+    History B replaces the cause, not just the wording. The 12 January disaster created the deterioration
+    after year-end, so Year 1 keeps the 6,000 allowance and 114,000 net receivable.
+  s1_zh: 情境 B 改变的是成因，不是公告的措辞。一月十二日的灾害在年结后才造成恶化，因此第一年保留六千准备和十一万四千应收款项净额。
+  s1_zh_hk: 情境 B 改變嘅係成因，唔係公告嘅字眼。一月十二日嘅災害喺年結之後先造成惡化，所以第一年保留六千撥備同十一萬四千應收款項淨額。
+  s2_en: >-
+    Non-adjusting does not mean undisclosed. Describe the disaster and the insolvency, and explain the
+    estimated 84,000 reduction in recovery. That deterioration belongs in Year 2.
+  s2_zh: 不调整不等于不披露。应说明灾害及客户随后无力偿债，并披露预期收回金额估计减少八万四千。后续恶化应在第二年计量。
+  s2_zh_hk: 唔調整唔等於唔披露。要說明災害同客戶之後無力償債，並披露預期收回金額估計減少八萬四千。後續惡化應該喺第二年計量。
+  s3_en: >-
+    A and B are mutually exclusive histories of one receivable. The condition's timing, not the headline
+    date alone, decides the Year 1 treatment.
+  s3_zh: 两条时间线相互排斥，描述的是同一笔应收款项。第一年怎样处理，要看原状况的时间，而不是只看公告日期。
+  s3_zh_hk: 兩條時間線互相排斥，講嘅係同一筆應收款項。第一年點處理，要睇原本狀況嘅時間，唔係淨係睇公告日期。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Keep the authorisation boundary
+  title_zh: 保留批准报出的时间界线
+  title_zh_hk: 保留批准刊發的時間界線
+  en: >-
+    The review window runs from the reporting date to authorisation. The 30,000 is an expected recovery,
+    not cash collected. A later bankruptcy often confirms earlier impairment, but not every announcement
+    proves it. Going concern is a separate safeguard; here the customer's insolvency does not mean Harbour
+    Paper itself cannot continue.
+  zh: >-
+    覆核期间由报告日至批准报出日。三万是预期收回金额，不是已收现金。其后破产往往印证早已存在的减值，但不是每个公告都能证明。持续经营是另一项保障；本例中，客户无力偿债不代表海湾纸业本身不能继续经营。
+  zh_hk: >-
+    覆核期間由報告日到批准刊發日。三萬係預期收回金額，唔係已經收到嘅現金。之後破產好多時印證早已存在嘅減值，但唔係每個公告都證明到。持續經營係另一項保障；本例入面，客戶無力償債唔代表海灣紙業自己唔能夠繼續經營。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Date the condition, not the news
+  title_zh: 看状况的时间，不只看公告日
+  title_zh_hk: 睇狀況的時間，唔只睇公告日
+  q1_en: >-
+    A: adjust; allowance 90,000
+  q1_zh: A：调整；准备90,000
+  q1_zh_hk: A：調整；撥備90,000
+  q2_en: >-
+    B: keep 6,000; disclose 84,000
+  q2_zh: B：保留6,000；披露84,000
+  q2_zh_hk: B：保留6,000；披露84,000
+  s1_en: >-
+    Later evidence about a year-end condition adjusts Year 1. A wholly new condition after year-end does
+    not, but a material one must be disclosed.
+  s1_zh: 反映年末已有状况的后续证据，要调整第一年。年结后全新出现的状况不调整，但影响重大的必须披露。
+  s1_zh_hk: 反映年底已有狀況嘅後續證據，要調整第一年。年結後全新出現嘅狀況唔調整，但影響重大就一定要披露。
+  s2_en: >-
+    Record who authorised the accounts and when, and keep the factual basis for the classification.
+  s2_zh: 记录由谁、何时批准报表，并保留这项分类的事实依据。
+  s2_zh_hk: 記錄由邊個、幾時批准報表，並保留呢項分類嘅事實依據。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 194

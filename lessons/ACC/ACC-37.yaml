@@ -1,0 +1,280 @@
+id: ACC-37
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Cash tax paid. Tax expense matched?
+title_zh: 缴税额和利润表中的所得税费用一样吗？
+title_zh_hk: 交了多少稅，就應列多少稅項費用？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-37
+  kicker_en: ACC-37
+  kicker_zh: ACC-37
+  kicker_zh_hk: ACC-37
+  title_en: Cash tax paid. Tax expense matched?
+  title_zh: 缴税额和利润表中的所得税费用一样吗？
+  title_zh_hk: 交了多少稅，就應列多少稅項費用？
+  image: art/cash-tax-tax-expense-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A draft report treats total tax expense as the current tax paid this year. The accountant proposes
+    current tax plus the change in the deferred-tax liability. Which report would you approve? You review
+    the year-one accounts of Harbour Parts, a fictional manufacturer, in thousands of invented currency
+    units.
+  zh: >-
+    第一年报告草稿把所得税费用总额当作本年已付的当期税款。会计师建议计入当期所得税加递延所得税负债的变动。你会采纳哪一份？你负责复核虚构制造企业“海湾零件”的第一年账目，金额按虚构货币千元表示。
+  zh_hk: >-
+    第一年報告草稿把稅項費用總額當作今年已交嘅當期稅款。會計師建議用當期稅項加遞延稅項負債嘅變動。你會採納邊一份？你負責覆核虛構製造企業「海灣零件」嘅第一年賬目，金額以虛構貨幣千元計。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Machine depreciation, CU000
+  title_zh: 机器折旧，千元
+  title_zh_hk: 機器折舊，千元
+  row1_en: Year 1
+  row1_zh: 第1年
+  row1_zh_hk: 第1年
+  row2_en: Year 2
+  row2_zh: 第2年
+  row2_zh_hk: 第2年
+  row3_en: Year 3
+  row3_zh: 第3年
+  row3_zh_hk: 第3年
+  col1_en: Accounting depreciation
+  col1_zh: 会计折旧
+  col1_zh_hk: 會計折舊
+  col2_en: Tax deduction
+  col2_zh: 税务扣减
+  col2_zh_hk: 稅務扣減
+  c11: '30'
+  c12: '60'
+  c21: '30'
+  c22: '15'
+  c31: '30'
+  c32: '15'
+  footer_en: Cost 90; tax rate 20%; profit 100
+  footer_zh: 成本90；税率20%；利润100
+  footer_zh_hk: 成本90；稅率20%；利潤100
+  s1_en: >-
+    At the start of year one the company buys and uses a machine costing 90. Accounting depreciation is
+    30 a year for three years, with no residual value.
+  s1_zh: 机器在第一年一开始购入并投入使用，成本九十。按三年直线计提会计折旧，每年三十，净残值为零。
+  s1_zh_hk: 部機喺第一年一開始買入並投入使用，成本九十。會計折舊分三年直線計，每年三十，冇剩餘價值。
+  s2_en: >-
+    Permitted tax depreciation is 60, then 15, then 15. The enacted rate is 20 percent throughout. Profit
+    before this depreciation and tax is 100 each year.
+  s2_zh: 获准税务扣减为第一年六十、第二年十五、第三年十五。已颁布税率一直是百分之二十。三年每年扣除机器折旧及所得税前的利润均为一百。
+  s2_zh_hk: 准許嘅稅務扣減係第一年六十、第二年十五、第三年十五。已頒布稅率一直係百分之二十。三年每年未扣機器折舊同稅之前嘅利潤都係一百。
+  s3_en: >-
+    Tax base is the machine's remaining deductible cost. Closing deferred-tax liability is 20 percent
+    of carrying amount minus tax base. Total tax expense is current tax plus the liability's movement.
+  s3_zh: 计税基础是尚可扣除的机器成本。期末递延所得税负债等于百分之二十乘以账面价值减计税基础。所得税费用总额等于当期所得税加上这项负债的变动。
+  s3_zh_hk: 稅基係部機仲可以扣除嘅成本。期末遞延稅項負債等於百分之二十乘賬面值減稅基。稅項費用總額等於當期稅項加呢項負債嘅變動。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which year-one report?
+  title_zh: 采纳哪一份第1年报告？
+  title_zh_hk: 採納邊份第1年報告？
+  en: >-
+    For year one, calculate accounting profit before tax, taxable profit and current tax paid. Compare
+    the closing carrying amount with remaining tax deductions. Which report would you approve, and what
+    deferred tax and total tax expense should it show? Pause and vote.
+  zh: >-
+    第一年的会计税前利润、应纳税所得额和已缴当期所得税分别是多少？把期末账面价值与剩余可扣除金额对照后，你会采纳哪份报告？递延所得税和所得税费用总额各是多少？请暂停，投个票。
+  zh_hk: >-
+    第一年嘅會計稅前利潤、應課稅利潤同已交當期稅項各係幾多？對照期末賬面值同剩餘可扣減金額之後，你會採納邊份報告？遞延稅項同稅項費用總額各係幾多？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: >-
+    Year two: add the balance?
+  title_zh: 第2年：加上期末余额？
+  title_zh_hk: 第2年：加埋期末結餘？
+  step1_en: Year two goes exactly as planned
+  step1_zh: 第2年完全按计划
+  step1_zh_hk: 第2年完全按計劃
+  step2_en: Current tax paid is higher
+  step2_zh: 已付当期税款更高
+  step2_zh_hk: 已交當期稅款更高
+  step3_en: >-
+    Manager: add the closing liability
+  step3_zh: 经理：加上期末负债
+  step3_zh_hk: 經理：加埋期末負債
+  s1_en: >-
+    Year two ends exactly as planned: profit before depreciation and tax 100, accounting depreciation
+    30, tax deduction 15, at the same 20 percent rate.
+  s1_zh: 第二年的结果与预计完全相同：折旧及税前利润一百、会计折旧三十、准予税务扣减十五，税率仍是百分之二十。
+  s1_zh_hk: 第二年嘅結果同預計完全一樣：折舊及稅前利潤一百、會計折舊三十、准許稅務扣減十五，稅率仍然係百分之二十。
+  s2_en: >-
+    The finance manager notices that current tax paid is higher than in year one, despite identical accounting
+    profit. He proposes adding the closing deferred-tax liability to current tax.
+  s2_zh: 财务经理发现第二年已付当期税款高于第一年，虽然两年的会计税前利润相同。他建议把期末递延所得税负债加在当期所得税上。
+  s2_zh_hk: 財務經理發現第二年已交嘅當期稅款高過第一年，雖然兩年會計稅前利潤一樣。佢建議把期末遞延稅項負債加落當期稅項度。
+  s3_en: >-
+    The accountant says to use the movement in the liability, including its direction. Year three also
+    runs exactly as scheduled, ending with no carrying amount and no remaining deduction.
+  s3_zh: 会计师认为应加的是负债的变动，连同其正负方向。第三年也完全按计划进行，年底账面价值和余下税务扣减都是零。
+  s3_zh_hk: 會計師認為應該加嘅係負債嘅變動，連埋佢嘅正負方向。第三年都完全按計劃進行，年底賬面值同剩低嘅稅務扣減都係零。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Balance, or movement?
+  title_zh: 加余额，还是加变动？
+  title_zh_hk: 加結餘，定加變動？
+  en: >-
+    Reconcile year two's current tax, opening and closing deferred-tax liability, and total tax expense.
+    Then check year three and the three-year totals. Why is the reversal a tax-expense credit rather than
+    a cash refund? Pause and vote.
+  zh: >-
+    核对第二年的当期所得税、期初和期末递延所得税负债及所得税费用总额，再核算第三年与三年合计。为什么转回是所得税费用的贷项，而不是现金退款？请暂停，投个票。
+  zh_hk: 核對第二年嘅當期稅項、期初同期末遞延稅項負債同稅項費用總額，再核對第三年同三年合計。點解轉回係稅項費用嘅貸項，而唔係現金退款？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: >-
+    Year one: record the movement
+  title_zh: 第1年：记录变动
+  title_zh_hk: 第1年：記錄變動
+  step1_en: Profit 70; taxable 40; current tax 8
+  step1_zh: 利润70；应税40；当期税8
+  step1_zh_hk: 利潤70；應課稅40；當期稅8
+  step2_en: >-
+    Carrying 60 vs base 30: liability 6
+  step2_zh: 账面60对计税基础30：负债6
+  step2_zh_hk: 賬面60對稅基30：負債6
+  step3_en: Tax expense 8 + 6 = 14
+  step3_zh: 所得税费用8 + 6 = 14
+  step3_zh_hk: 稅項費用8 + 6 = 14
+  s1_en: >-
+    Year-one accounting profit before tax is 100 minus 30, or 70. Taxable profit is 70 plus 30 minus 60,
+    or 40. Current tax is 40 times 20 percent, or 8, paid during the year.
+  s1_zh: 第一年会计税前利润是一百减三十，即七十；应纳税所得额是七十加三十减六十，即四十。当期所得税是四十乘百分之二十，即八，已在本年缴清。
+  s1_zh_hk: 第一年會計稅前利潤係一百減三十，即係七十；應課稅利潤係七十加三十減六十，即係四十。當期稅項係四十乘百分之二十，即係八，已經喺年內交咗。
+  s2_en: >-
+    The closing carrying amount is 60 and the tax base is 30. The temporary difference of 30 at 20 percent
+    gives a closing deferred-tax liability of 6. It is not an overdue tax bill.
+  s2_zh: 期末账面价值是六十，计税基础是三十。三十的应纳税暂时性差异乘百分之二十，期末递延所得税负债为六。它不是逾期税款。
+  s2_zh_hk: 期末賬面值係六十，稅基係三十。三十嘅暫時性差異乘百分之二十，期末遞延稅項負債係六。佢唔係逾期稅款。
+  s3_en: >-
+    The liability rises from zero to 6, so deferred-tax expense is 6. Total tax expense is 8 plus 6, or
+    14, and profit after tax is 56. Approve the accountant's report; the extra 6 is not another cash payment.
+  s3_zh: 负债从零增加至六，递延所得税费用为六。所得税费用合计八加六，即十四，税后利润五十六。应采纳会计师的方案；这六不需要额外支付现金。
+  s3_zh_hk: 負債由零升到六，遞延稅項費用係六。稅項費用合共八加六，即係十四，稅後利潤五十六。應該採納會計師嘅方案；呢個六唔使額外俾現金。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Calculate
+  kicker_en: Calculate
+  kicker_zh: 计算
+  kicker_zh_hk: 計算
+  title_en: Years two and three reverse it
+  title_zh: 第2、3年逐步转回
+  title_zh_hk: 第2、3年逐步轉回
+  step1_en: >-
+    Year 2: current 17; liability 6 → 3
+  step1_zh: 第2年：当期17；负债6 → 3
+  step1_zh_hk: 第2年：當期17；負債6 → 3
+  step2_en: Expense 17 − 3 = 14, not 20
+  step2_zh: 费用17 − 3 = 14，不是20
+  step2_zh_hk: 費用17 − 3 = 14，唔係20
+  step3_en: >-
+    Three years: tax paid 42 = expense 42
+  step3_zh: 三年：缴税42 = 费用42
+  step3_zh_hk: 三年：交稅42 = 費用42
+  s1_en: >-
+    In year two, taxable profit is 70 plus 30 minus 15, or 85, so current tax paid is 17. Carrying amount
+    30 against tax base 15 leaves a closing liability of 3.
+  s1_zh: 第二年应纳税所得额是七十加三十减十五，即八十五，实际缴纳当期所得税十七。账面价值三十对计税基础十五，期末负债为三。
+  s1_zh_hk: 第二年應課稅利潤係七十加三十減十五，即係八十五，實際交當期稅項十七。賬面值三十對稅基十五，期末負債係三。
+  s2_en: >-
+    The liability falls from 6 to 3: a deferred-tax credit of 3. Tax expense is 17 minus 3, or 14. Adding
+    the closing balance instead would give 20, confusing a balance with an expense.
+  s2_zh: 负债由六降至三，即递延所得税贷项三。所得税费用是十七减三，即十四；若错把期末余额加上去，会得到二十，把余额当成费用。
+  s2_zh_hk: 負債由六跌到三，即係遞延稅項貸項三。稅項費用係十七減三，即係十四；如果錯咗加期末結餘，就會得到二十，把結餘當成費用。
+  s3_en: >-
+    Year three repeats current tax 17, and the liability falls to zero: expense 14 again. Over three years,
+    taxes paid total 42 and tax expense totals 42; deferred movements sum to zero.
+  s3_zh: 第三年当期缴税同样十七，负债降到零，所得税费用仍是十四。三年合计，当期税款四十二，所得税费用也是四十二；递延所得税变动合计为零。
+  s3_zh_hk: 第三年當期交稅同樣十七，負債跌到零，稅項費用仍然係十四。三年合計，當期稅款四十二，稅項費用都係四十二；遞延稅項變動合計係零。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Timing is not exemption
+  title_zh: 提早扣税不等于免税
+  title_zh_hk: 提早扣稅不等於免稅
+  en: >-
+    The first year's larger deduction brings tax relief forward, and the difference later reverses. The
+    liability's reduction is recognised in tax expense; it is not a refund from the tax authority. Paying
+    the deferred balance again would double count. Permanent differences, rate changes and losses are
+    deliberately absent, and lawful accelerated depreciation is not evasion.
+  zh: >-
+    首年较大的扣除只是把税务减免提前，差异之后会转回。负债的下降抵减所得税费用，不是税务机关另行退款；再把递延余额付一遍会重复计算。永久差异、税率变动和亏损本例刻意排除；合法加速折旧本身也不构成逃税。
+  zh_hk: >-
+    首年較大嘅扣減只係把稅務寬減提早，差異之後會轉回。負債減少係抵減稅項費用，唔係稅局另外退款；再交多次遞延結餘就會重複計算。永久差異、稅率變動同虧損本例刻意排除；合法加速折舊本身亦唔構成逃稅。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Tax paid is not tax expense
+  title_zh: 缴税额不等于所得税费用
+  title_zh_hk: 交稅額唔等於稅項費用
+  q1_en: >-
+    Year 1: paid 8, expense 14
+  q1_zh: 第1年：缴税8，费用14
+  q1_zh_hk: 第1年：交稅8，費用14
+  q2_en: >-
+    Year 2: paid 17, expense 14
+  q2_zh: 第2年：缴税17，费用14
+  q2_zh_hk: 第2年：交稅17，費用14
+  s1_en: >-
+    Total tax expense is current tax plus the movement in the deferred-tax liability, with its direction,
+    not plus the closing balance.
+  s1_zh: 所得税费用总额等于当期所得税加上递延所得税负债的变动，连同正负方向，而不是加上期末余额。
+  s1_zh_hk: 稅項費用總額等於當期稅項加遞延稅項負債嘅變動，連埋正負方向，唔係加期末結餘。
+  s2_en: >-
+    Across the machine's life, taxes paid and tax expense both total 42. Only the timing differs.
+  s2_zh: 在机器使用期内，缴纳的税款和所得税费用合计都是四十二，只是时点不同。
+  s2_zh_hk: 喺部機使用期內，交嘅稅同稅項費用合計都係四十二，只係時間唔同。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 196

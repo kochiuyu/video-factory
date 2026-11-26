@@ -1,0 +1,301 @@
+id: MKT-22
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The last click. The whole contribution?
+title_zh: 最后一次点击，就代表全部贡献吗？
+title_zh_hk: 最後一次點擊，就代表全部貢獻嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-22
+  kicker_en: MKT-22
+  kicker_zh: MKT-22
+  kicker_zh_hk: MKT-22
+  title_en: The last click. The whole contribution?
+  title_zh: 最后一次点击，就代表全部贡献吗？
+  title_zh_hk: 最後一次點擊，就代表全部貢獻嗎？
+  image: art/last-click-whole-contribution-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Google's Analytics documentation describes attribution as assigning credit along a recorded customer
+    path, and separately describes conversion lift as additional conversions estimated through a controlled
+    comparison. Now you manage campaign reporting for a fictional Hong Kong online shop selling plant
+    pots.
+  zh: >-
+    Google 的分析工具文档把归因说成：沿着顾客有记录的路径分配功劳；另外又把转化提升说成：通过对照比较估算出来的额外转化。这是两种不同的衡量。现在，你负责一家虚构的香港网店的广告报表，这家店卖花盆。
+  zh_hk: >-
+    Google 嘅分析工具文件將歸因講成：沿住顧客有紀錄嘅路徑分功勞；另外又將轉換提升講成：用對照比較估計出嚟嘅額外轉換。呢個係兩種唔同嘅量度。而家，你負責一間虛構嘅香港網店嘅廣告報表，間舖賣花盆。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: 100 kept orders, recorded paths
+  title_zh: 100 张未退货订单的路径
+  title_zh_hk: 100 張未退貨訂單的路徑
+  row1_en: Discovery → Reminder
+  row1_zh: 探索 → 提醒
+  row1_zh_hk: 探索 → 提醒
+  row2_en: Search → Reminder
+  row2_zh: 搜索 → 提醒
+  row2_zh_hk: 搜尋 → 提醒
+  row3_en: Discovery → Search
+  row3_zh: 探索 → 搜索
+  row3_zh_hk: 探索 → 搜尋
+  row4_en: Search only
+  row4_zh: 仅搜索
+  row4_zh_hk: 僅搜尋
+  col1_en: Kept orders
+  col1_zh: 订单
+  col1_zh_hk: 訂單
+  col2_en: Last click
+  col2_zh: 最后点击
+  col2_zh_hk: 最後點擊
+  c11: '40'
+  c12_en: Reminder
+  c12_zh: 提醒
+  c12_zh_hk: 提醒
+  c21: '20'
+  c22_en: Reminder
+  c22_zh: 提醒
+  c22_zh_hk: 提醒
+  c31: '20'
+  c32_en: Search
+  c32_zh: 搜索
+  c32_zh_hk: 搜尋
+  c41: '20'
+  c42_en: Search
+  c42_zh: 搜索
+  c42_zh_hk: 搜尋
+  footer_en: One order = one credit; not money
+  footer_zh: 一单一点，不是钱
+  footer_zh_hk: 一單一點，不是錢
+  s1_en: >-
+    The monthly dashboard must divide exactly 100 conversion credits across three ad channels, one credit
+    for each completed, kept order. Credits are reporting units, not money, commission or measured causal
+    contributions.
+  s1_zh: >-
+    每月报表要把正好一百个转化点数，分给三个广告渠道，每张完成且没退货的订单算一点。这些点数只是报表单位，不是钱，不是佣金，也不是量出来的因果贡献。
+  s1_zh_hk: >-
+    每月報表要將啱啱好一百個轉換點數，分俾三個廣告渠道，每張完成又冇退貨嘅訂單計一點。呢啲點數只係報表單位，唔係錢，唔係佣金，亦唔係量度出嚟嘅因果貢獻。
+  s2_en: >-
+    Last touch gives all credit to the final recorded channel: simple and reproducible. Equal split divides
+    each order's credit equally among its recorded channels, recognising earlier contacts without estimating
+    their influence.
+  s2_zh: >-
+    最后接触点归因，把功劳全给最后一个有记录的渠道，简单，也容易重复。平均分配归因，把每张单的一点平分给路径上的各个渠道，看得到前面的接触，但没有估算它们的影响。
+  s2_zh_hk: >-
+    最後接觸點歸因，將功勞全部俾最後一個有紀錄嘅渠道，簡單，亦容易重複。平均分配歸因，將每張單嗰一點平分俾路徑上面嘅渠道，睇得到前面嘅接觸，但冇估計佢哋嘅影響。
+  s3_en: >-
+    Forty orders went discovery then reminder, twenty search then reminder, twenty discovery then search,
+    and twenty search only. The reminder manager sees many final clicks and proposes expanding reminders.
+  s3_zh: >-
+    四十张单是先看探索广告，再点提醒广告；二十张是搜索再提醒；二十张是探索再搜索；还有二十张只点了搜索广告。负责提醒广告的经理看到很多最后点击，就提议下个月扩大提醒广告。
+  s3_zh_hk: >-
+    四十張單係先睇探索廣告，再撳提醒廣告；二十張係搜尋再提醒；二十張係探索再搜尋；仲有二十張淨係撳過搜尋廣告。負責提醒廣告嘅經理見到好多最後點擊，就提議下個月擴大提醒廣告。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Last touch or equal split?
+  title_zh: 最后接触，还是平均分？
+  title_zh_hk: 最後接觸，還是平均分？
+  en: >-
+    Which convention would you use for this dashboard, last touch or equal split? Allocate the 100 credits
+    across the three channels, and say what your choice can and cannot show about additional sales. Pause
+    and vote.
+  zh: 这个报表你会用最后接触点，还是平均分配？请把一百个点数分给三个渠道，再说说你的选择能说明什么、不能说明什么额外销售。请暂停，投个票。
+  zh_hk: 呢個報表你會用最後接觸點，定係平均分配？請將一百個點數分俾三個渠道，再講吓你嘅選擇講得到乜、講唔到乜額外銷售。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A randomised holdout test
+  title_zh: 一个随机对照测试
+  title_zh_hk: 一個隨機對照測試
+  step1_en: >-
+    Random: 10,000 eligible · 10,000 holdout
+  step1_zh: 两万人：一万可收提醒 · 一万不收
+  step1_zh_hk: 兩萬人：一萬可收提醒 · 一萬不收
+  step2_en: >-
+    Kept orders: 1,200 (12%) vs 1,000 (10%)
+  step2_zh: 订单：1,200（12%）对 1,000（10%）
+  step2_zh_hk: 訂單：1,200（12%）對 1,000（10%）
+  step3_en: >-
+    95% interval: +1.13 to +2.87 points
+  step3_zh: 95% 区间：+1.13 至 +2.87 个百分点
+  step3_zh_hk: 95% 區間：+1.13 至 +2.87 個百分點
+  s1_en: >-
+    A separate, completed experiment covers twenty thousand eligible adults, in a different period. Before
+    any reminder was sent, ten thousand were randomly made reminder-eligible and ten thousand held out
+    with no reminder ads.
+  s1_zh: 另有一个已经完成的实验，涉及两万名合资格的成年人，时间段也不同。发提醒之前，随机把一万人设为可以接收提醒广告，另一万人不接收。
+  s1_zh_hk: 另外有個已經完成嘅實驗，涉及兩萬個合資格嘅成年人，時段亦唔同。發提醒之前，隨機將一萬人設為可以收提醒廣告，另外一萬人唔收。
+  s2_en: >-
+    All assigned adults stay in the analysis, even those who never saw or clicked a reminder. Twelve hundred
+    eligible adults made one kept order, against one thousand in the holdout: 12 percent versus 10.
+  s2_zh: >-
+    所有被分配的人都要算进分析里，包括从没看到或点过提醒广告的人。可接收组有一千二百人下了一张没退货的订单，对照组是一千人，也就是百分之十二对百分之十。
+  s2_zh_hk: >-
+    所有被分派嘅人都要計入分析，包括從來冇見過或者撳過提醒廣告嘅人。可以收嗰組有一千二百人落咗一張冇退貨嘅訂單，對照組係一千人，即係百分之十二對百分之十。
+  s3_en: >-
+    The analyst gives a rounded 95 percent interval of 1.13 to 2.87 percentage points for the difference.
+    No channel costs, margins or scale evidence are supplied.
+  s3_zh: 分析员给出的差距百分之九十五区间，约为一点一三到二点八七个百分点。资料里没有渠道成本、利润率，也没有加大投放后的效果证据。
+  s3_zh_hk: 分析員俾出嘅差距百分之九十五區間，大約係一點一三到二點八七個百分點。資料入面冇渠道成本、利潤率，亦冇加大投放之後嘅效果證據。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Revise the recommendation?
+  title_zh: 建议要怎么改？
+  title_zh_hk: 建議要點改？
+  en: >-
+    How would you revise the dashboard and the recommendation to expand reminders? Calculate the incremental
+    purchase estimate, and keep it separate from attribution credit, from uncertainty, and from the untested
+    channels. Pause and vote.
+  zh: >-
+    看了对照测试，你会怎样修改报表，以及扩大提醒广告的建议？请算出新增购买的估计值，并把它和归因点数、不确定性，以及没测试过的渠道分开。请暂停，投个票。
+  zh_hk: 睇完對照測試，你會點樣改報表，同擴大提醒廣告嘅建議？請計出新增購買嘅估計，再將佢同歸因點數、不確定性，同埋未測試過嘅渠道分開。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: One set of orders, two ledgers
+  title_zh: 同一批订单，两本账
+  title_zh_hk: 同一批訂單，兩本帳
+  step1_en: >-
+    Last touch: 0 · 40 · 60
+  step1_zh: 最后接触：探索 0 · 搜索 40 · 提醒 60
+  step1_zh_hk: 最後接觸：探索 0 · 搜尋 40 · 提醒 60
+  step2_en: >-
+    Equal split: 30 · 40 · 30
+  step2_zh: 平均分配：30 · 40 · 30
+  step2_zh_hk: 平均分配：30 · 40 · 30
+  step3_en: Paths hide the missing alternative
+  step3_zh: 路径看不到没发生的情况
+  step3_zh_hk: 路徑看不到沒發生的情況
+  s1_en: >-
+    Last touch gives the first two path rows to reminders, 40 plus 20 is 60, and the other 40 to search.
+    Discovery gets nothing.
+  s1_zh: 最后接触点把前两类路径都算给提醒广告，四十加二十，等于六十；其余四十给搜索广告。探索广告一点都没有。
+  s1_zh_hk: 最後接觸點將頭兩類路徑都計俾提醒廣告，四十加二十，等於六十；其餘四十俾搜尋廣告。探索廣告一點都冇。
+  s2_en: >-
+    Equal split gives discovery 20 plus 10, or 30. Search gets 10, 10 and 20, or 40. Reminders get 20
+    plus 10, or 30. Both ledgers still total 100.
+  s2_zh: 平均分配的话，探索广告是二十加十，三十点；搜索是十、十和二十，四十点；提醒是二十加十，三十点。两本账加起来都是一百。
+  s2_zh_hk: 平均分配嘅話，探索廣告係二十加十，三十點；搜尋係十、十同二十，四十點；提醒係二十加十，三十點。兩本帳加埋都係一百。
+  s3_en: >-
+    A shopper may already intend to buy before a reminder; another may buy only because of it. Click paths
+    cannot tell them apart, and splitting credit more evenly does not solve that.
+  s3_zh: 有的顾客在看到提醒之前已经打算买；也有人是因为提醒才买。点击路径分不出这两种人，把功劳分得更平均，也解决不了这个问题。
+  s3_zh_hk: 有啲顧客喺見到提醒之前已經打算買；亦有人係因為提醒先買。點擊路徑分唔出呢兩種人，將功勞分得平均啲，都解決唔到呢個問題。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Use everyone assigned
+  title_zh: 纳入所有被分配的人
+  title_zh_hk: 納入所有獲分派的人
+  step1_en: 12% − 10% = 2 points → +200 per 10,000
+  step1_zh: 12% − 10% = 2 个百分点 → 每万人 +200
+  step1_zh_hk: 12% − 10% = 2 個百分點 → 每萬人 +200
+  step2_en: Relative lift 2 ÷ 10 = 20%, not 2%
+  step2_zh: 相对提升 2 ÷ 10 = 20%，不是 2%
+  step2_zh_hk: 相對提升 2 ÷ 10 = 20%，不是 2%
+  step3_en: About 113 to 287 extra orders per 10,000
+  step3_zh: 每万人约多 113 至 287 张单
+  step3_zh_hk: 每萬人約多 113 至 287 張單
+  s1_en: >-
+    The estimated effect of the reminder-eligible policy is 12 minus 10, or 2 percentage points: about
+    200 additional orders per ten thousand assigned adults, against a baseline of one thousand.
+  s1_zh: 可接收提醒这个做法的估计效果，是十二减十，两个百分点。换成人数，就是每一万名被分配的人，比没有提醒的基线一千张，大约多出二百张订单。
+  s1_zh_hk: 可以收提醒呢個做法嘅估計效果，係十二減十，兩個百分點。換成人數，就係每一萬個被分派嘅人，比冇提醒嘅基線一千張，大約多咗二百張訂單。
+  s2_en: >-
+    Relative lift is 2 divided by 10, or 20 percent, not 2 percent; the denominators differ. Comparing
+    only clickers would break the randomised comparison.
+  s2_zh: 相对提升是二除以十，百分之二十，不是百分之二，因为分母不同。如果只比较点过广告的人，随机对照就不成立了。
+  s2_zh_hk: 相對提升係二除十，百分之二十，唔係百分之二，因為分母唔同。如果淨係比較撳過廣告嘅人，隨機對照就唔成立。
+  s3_en: >-
+    The interval means roughly 113 to 287 extra orders per ten thousand. We cannot name the 200 individuals,
+    and this is not a promise of exactly 200 next month.
+  s3_zh: 那个区间大约等于每一万人多一百一十三到二百八十七张单。我们说不出那二百人是谁，这也不保证下个月刚好多二百张。
+  s3_zh_hk: 嗰個區間大約等於每一萬人多一百一十三到二百八十七張單。我哋講唔出嗰二百人係邊個，亦唔保證下個月啱啱多二百張。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Two panels, no auto-expansion
+  title_zh: 分两栏，不自动加码
+  title_zh_hk: 分兩欄，不自動加碼
+  en: >-
+    Keep two panels: historical path credits, and the separate randomised test. Do not subtract 200 from
+    60 or share the 200 among channels. A positive lift is not an automatic expansion: contribution per
+    extra order, incremental costs and the response at a different spend are missing, so propose a bounded
+    next test.
+  zh: >-
+    报表分两栏：一栏是过去路径的归因点数，另一栏是独立的随机测试。不要用六十减二百，也不要把二百张分给各个渠道。有正的提升，不等于马上加码：每张新增订单的贡献、增量成本，以及投放规模改变后的反应都还不知道，所以应该提议一个有边界的下一步测试。
+  zh_hk: >-
+    報表分兩欄：一欄係以前路徑嘅歸因點數，另一欄係獨立嘅隨機測試。唔好用六十減二百，亦唔好將二百張分俾各個渠道。有正數嘅提升，唔等於即刻加碼：每張新增訂單嘅貢獻、增量成本，同投放規模改變之後嘅反應都未知，所以應該提議一個有界限嘅下一步測試。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Credit is not causation
+  title_zh: 归因不等于因果
+  title_zh_hk: 歸因不等於因果
+  q1_en: >-
+    Reminders: 60 last-touch · 30 equal split
+  q1_zh: 提醒：最后接触 60 · 平均分配 30
+  q1_zh_hk: 提醒：最後接觸 60 · 平均分配 30
+  q2_en: >-
+    Holdout: +2 points ≈ +200 per 10,000
+  q2_zh: 对照测试：+2 个百分点 ≈ 每万人 +200
+  q2_zh_hk: 對照測試：+2 個百分點 ≈ 每萬人 +200
+  s1_en: >-
+    Attribution rules divide credit for orders that happened. Only a controlled comparison estimates what
+    would have happened without the reminders.
+  s1_zh: 归因规则只是把已发生订单的功劳分一分。只有对照比较，才能估计没有提醒广告时会怎样。
+  s1_zh_hk: 歸因規則只係將已經發生嘅訂單功勞分一分。只有對照比較，先估計到冇提醒廣告會點。
+  s2_en: >-
+    The test did not vary discovery or search, so it says nothing about their separate effects.
+  s2_zh: 这个测试没有改动探索和搜索广告，所以说明不了它们各自的效果。
+  s2_zh_hk: 呢個測試冇改過探索同搜尋廣告，所以講唔到佢哋各自嘅效果。
+  s3_en: >-
+    The shop, dashboard rules and test results are original fiction, not a Google campaign. Official scene
+    art is a teaching illustration only.
+  s3_zh: 网店、报表规则和测试结果都是原创虚构的，不是 Google 的广告活动。官方场景图只是教学插图。
+  s3_zh_hk: 網店、報表規則同測試結果都係原創虛構嘅，唔係 Google 嘅廣告活動。官方場景圖只係教學插圖。
+duration_target_s: 196

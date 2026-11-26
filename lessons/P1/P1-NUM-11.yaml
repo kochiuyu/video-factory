@@ -1,0 +1,103 @@
+# P1-NUM-11. Mirrors MathQuiz path subtract / lesson takeaway,
+# "Take away and count what stays".
+# Eight take away three leaves five. Take all six away: 6 − 6 = 0.
+# Take zero away from seven: 7 − 0 = 7. The minus sign is U+2212.
+# https://github.com/kochiuyu/mathquiz learn-subtract.js (path subtract, lesson takeaway).
+# Speech is for age 6: one short idea per sentence. The heading is answered on screen.
+id: P1-NUM-11
+title_en: Count what stays
+title_zh: 数数还剩下多少
+title_zh_hk: 數吓仲剩返幾多
+duration_target_s: 58
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: parts
+  a: 5
+  b: 3
+  seconds: 8
+  title_en: Count what stays
+  title_zh: 数数还剩下多少
+  title_zh_hk: 數吓仲剩返幾多
+  s1_en: How many stay?
+  s1_zh: 还剩下多少个？
+  s1_zh_hk: 仲剩返幾多個呀？
+
+- id: three
+  visual: animated
+  scene: part_whole
+  a: 5
+  b: 3
+  leave: b
+  seconds: 12
+  s1_en: Start with eight counters. Three will go.
+  s1_zh: 开始有八个圆片。三个会拿走。
+  s1_zh_hk: 開始有八個圓片。三個會攞走。
+  s2_en: Five. Three.
+  s2_zh: 五，三。
+  s2_zh_hk: 五，三。
+  s3_en: Take three away. Five are left.
+  s3_zh: 拿走三个，剩下五个。
+  s3_zh_hk: 攞走三個，剩返五個。
+
+- id: all
+  visual: animated
+  scene: part_whole
+  a: 6
+  b: 0
+  leave: a
+  seconds: 12
+  s1_en: Now take them all. Six counters are here.
+  s1_zh: 现在全部拿走。这里有六个圆片。
+  s1_zh_hk: 而家全部攞走。呢度有六個圓片。
+  s2_en: Six. Zero.
+  s2_zh: 六，零。
+  s2_zh_hk: 六，零。
+  s3_en: Take all six away. None are left.
+  s3_zh: 拿走六个，剩下零个。
+  s3_zh_hk: 攞走六個，剩返零個。
+
+- id: none
+  visual: animated
+  scene: part_whole
+  a: 7
+  b: 0
+  leave: b
+  seconds: 12
+  s1_en: Seven counters are here. Zero on that mat.
+  s1_zh: 这里有七个圆片。那边是零。
+  s1_zh_hk: 呢度有七個圓片。嗰邊係零。
+  s2_en: Seven. Zero.
+  s2_zh: 七，零。
+  s2_zh_hk: 七，零。
+  s3_en: Take zero away. Seven are left.
+  s3_zh: 拿走零个，剩下七个。
+  s3_zh_hk: 攞走零個，剩返七個。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: parts
+  bonds:
+  - [5, -3]
+  - [0, -6]
+  - [7, 0]
+  - [5]
+  seconds: 14
+  title_en: How many stay?
+  title_zh: 还剩下多少个？
+  title_zh_hk: 仲剩返幾多個呀？
+  s1_en: Take three away. Five stay.
+  s1_zh: 拿走三个，剩下五个。
+  s1_zh_hk: 攞走三個，剩返五個。
+  s2_en: Take all six away. None stay.
+  s2_zh: 拿走六个，剩下零个。
+  s2_zh_hk: 攞走六個，剩返零個。
+  s3_en: Take zero away. Seven stay.
+  s3_zh: 拿走零个，剩下七个。
+  s3_zh_hk: 攞走零個，剩返七個。
+  s4_en: Count the five that stay.
+  s4_zh: 数一数剩下的五个。
+  s4_zh_hk: 數一數剩返嘅五個。

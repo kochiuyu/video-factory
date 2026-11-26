@@ -100,6 +100,79 @@ def _label_text(labels) -> str:
     return "".join(parts)
 
 
+def _label_row_centres(path) -> list[list[float]]:
+    """Vertical ink centre of each count label, grouped by the row it sits on.
+
+    The centre is the middle of the ink, so a thin 一 is measured the same way as 三.
+    """
+    from PIL import Image
+
+    img = Image.open(path).convert("RGB")
+    w, h = img.size
+    px = img.load()
+
+    def dark(x, y):
+        r, g, b = px[x, y]
+        return r < 90 and g < 110 and b < 130 and (r + g + b) < 280
+
+    def green(x, y):
+        r, g, b = px[x, y]
+        return g > 120 and g > r + 40 and g > b + 20
+
+    rows = []
+    y = 0
+    while y < h:
+        if sum(1 for x in range(0, w, 3) if green(x, y)) < 4:
+            y += 1
+            continue
+        y0 = y
+        while y < h and sum(1 for x in range(0, w, 3) if green(x, y)) >= 3:
+            y += 1
+        rows.append((y0, y - 1))
+        y += 1
+    centres = []
+    # The labels sit in the gap above each counter row. Stop at the previous
+    # row so its outline is not read as another numeral.
+    window = max(24, int(46 * h / 720))
+    prev_bottom = 0
+    for y0, y1 in rows:
+        band_bot = max(0, y0 - 6)
+        band_top = max(prev_bottom + 3, y0 - window)
+        prev_bottom = y1
+        if band_bot <= band_top:
+            continue
+        runs = []
+        x = 0
+        while x < w:
+            if not any(dark(x, yy) for yy in range(band_top, band_bot + 1)):
+                x += 1
+                continue
+            x0 = x
+            while x < w and any(dark(x, yy) for yy in range(band_top, band_bot + 1)):
+                x += 1
+            runs.append((x0, x - 1))
+        merged = []
+        for run in runs:
+            # One glyph can be two strokes with a gap, as in 八.
+            if merged and run[0] - merged[-1][1] <= 16:
+                merged[-1] = (merged[-1][0], run[1])
+            else:
+                merged.append(run)
+        row = []
+        for x0, x1 in merged:
+            ys = [
+                yy for yy in range(band_top, band_bot + 1)
+                for xx in range(x0, x1 + 1)
+                if dark(xx, yy)
+            ]
+            if len(ys) < 8:
+                continue
+            row.append((min(ys) + max(ys)) / 2.0)
+        if len(row) >= 2:
+            centres.append(row)
+    return centres
+
+
 class AnimatedSchemaTest(unittest.TestCase):
     def test_demo_numbers_and_valid_lesson(self):
         self.assertEqual(labels_for(THIRTEEN, "en")["equation"], ["13", "=", "10", "+", "3"])
@@ -854,6 +927,9 @@ class AnimatedRenderTest(unittest.TestCase):
             )
             # 48px at 1080p, scaled to 720. The old cap sat near 25px.
             self.assertGreaterEqual(self._label_band_height(how_png), 48 * 720 / 1080 * 0.9)
+            for row in _label_row_centres(how_png):
+                self.assertGreaterEqual(len(row), 2, how_png.name)
+                self.assertLessEqual(max(row) - min(row), 1.0, f"how-many centres {row}")
 
             render_animated_clip(
                 hook, {"format": "16:9"}, label_lang_code="en",
@@ -1989,6 +2065,13 @@ class PairCountersTest(unittest.TestCase):
                         gaps = self._pair_label_gaps(shot, n // 2)
                         self.assertTrue(gaps, shot.name)
                         self.assertGreaterEqual(min(gaps), need, f"{shot.name} {gaps}")
+                        if lang in {"zh", "zh_hk"}:
+                            for row in _label_row_centres(shot):
+                                self.assertGreaterEqual(len(row), 2, shot.name)
+                                self.assertLessEqual(
+                                    max(row) - min(row), 1.0,
+                                    f"{shot.name} centres {row}",
+                                )
                         if n == 8 and lang == "en" and frame == (1280, 720):
                             early = root / "early.png"
                             late = root / "late.png"

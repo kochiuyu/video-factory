@@ -541,6 +541,24 @@ def _scene_types() -> dict:
         unit = ph / float(config.frame_height or 8.0)
         return (base * (ph / ref)) / unit
 
+    def _count_label(word, latin, cjk, scale, *, size=48, color=None, max_width=None):
+        """One count word at the shared scale.
+
+        Callers seat it with ``_seat_count_label``. A thin 一 must not be placed
+        from its own ink height, or it leaves the line shared with 二 and 三.
+        """
+        glyph = styled(str(word), latin, cjk, size)
+        if color is not None:
+            glyph.set_color(color)
+        glyph.scale(scale)
+        if max_width is not None and float(glyph.width) > max_width > 0:
+            glyph.scale(max_width / float(glyph.width))
+        return glyph
+
+    def _seat_count_label(glyph, x: float, centre_y: float):
+        """Put the ink centre on a fixed line. The line comes from a reference glyph."""
+        glyph.move_to([x, centre_y, 0])
+
     def font_for(text: str, latin: str, cjk: str) -> str:
         if any("\u4e00" <= ch <= "\u9fff" for ch in text or ""):
             return cjk
@@ -1144,14 +1162,15 @@ def _scene_types() -> dict:
             anchors_end = VGroup()
             for i in range(count):
                 dot = counter(fill, radius)
-                num = Text(str(i + 1), font=latin, font_size=28, color=WHITE)
-                if num.width > radius * 1.35:
-                    num.scale(radius * 1.35 / num.width)
+                num = _count_label(
+                    str(i + 1), latin, cjk, 1.0,
+                    size=28, color=WHITE, max_width=radius * 1.35,
+                )
                 num.set_z_index(4)
                 if mode != "rearrange":
                     num.set_opacity(0)
                 dot.move_to([starts[i][0], starts[i][1], 0])
-                num.move_to(dot)
+                _seat_count_label(num, starts[i][0], starts[i][1])
                 pieces.append(dot)
                 numbers.append(num)
                 pin = Dot([ends[i][0], ends[i][1], 0], radius=0.01, fill_opacity=0, stroke_opacity=0)
@@ -1433,13 +1452,15 @@ def _scene_types() -> dict:
                 centers[i] = centers[i] - shift
             tags = VGroup()
             pitch = cell + gap
+            box_h = float(ref.height) * label_scale
             for word, index in zip(words, visits):
-                tag = styled(word, latin, cjk, 48)
-                tag.scale(label_scale)
                 # Landscape only. Portrait already reserved 16px between labels.
-                if ph <= pw and float(tag.width) > pitch * 0.96:
-                    tag.scale(pitch * 0.96 / float(tag.width))
-                tag.next_to(tokens[index], UP, buff=0.12)
+                cap = pitch * 0.96 if ph <= pw else None
+                tag = _count_label(word, latin, cjk, label_scale, max_width=cap)
+                token = tokens[index]
+                # The reference box, not this glyph, sets the centre line.
+                centre_y = float(token.get_top()[1]) + 0.12 + box_h / 2.0
+                _seat_count_label(tag, float(token.get_center()[0]), centre_y)
                 tag.set_opacity(0)
                 tag.set_z_index(6)
                 tags.add(tag)
@@ -1571,14 +1592,13 @@ def _scene_types() -> dict:
                 lone.move_to([lone_at[0], lone_at[1], 0])
                 dots.add(lone)
             tags = VGroup()
+            box_h = float(ref.height) * label_scale
+            label_cap = max(0.05, pitch - 16.0 / unit)
             for i in range(pairs):
                 word = words[i] if i < len(words) else str(i + 1)
-                tag = styled(word, latin, cjk, 48)
-                tag.scale(label_scale)
-                if float(tag.width) > max(0.05, pitch - 16.0 / unit):
-                    tag.scale((pitch - 16.0 / unit) / float(tag.width))
+                tag = _count_label(word, latin, cjk, label_scale, max_width=label_cap)
                 cx, cy = centres[i]
-                tag.move_to([cx, cy + dot_r + 0.08 + float(tag.height) / 2.0, 0])
+                _seat_count_label(tag, cx, cy + dot_r + 0.08 + box_h / 2.0)
                 tag.set_opacity(0)
                 tag.set_z_index(6)
                 tags.add(tag)
@@ -1992,10 +2012,11 @@ def _scene_types() -> dict:
             dots.arrange(RIGHT, buff=0.14)
             numbers = VGroup()
             for i, dot in enumerate(dots):
-                num = Text(str(i + 1), font=latin, font_size=28, color=WHITE)
-                if float(num.width) > float(dot.width) * 0.72:
-                    num.scale(float(dot.width) * 0.72 / float(num.width))
-                num.move_to(dot)
+                num = _count_label(
+                    str(i + 1), latin, cjk, 1.0,
+                    size=28, color=WHITE, max_width=float(dot.width) * 0.72,
+                )
+                _seat_count_label(num, float(dot.get_center()[0]), float(dot.get_center()[1]))
                 num.set_z_index(4)
                 num.set_opacity(0)
                 numbers.add(num)

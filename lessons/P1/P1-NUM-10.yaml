@@ -47,15 +47,15 @@ beats:
   b: 4
   also: 5
   seconds: 14
-  s1_en: Seven can be three and four. Both parts stay in view.
+  s1_en: Seven can be three and four. We can see both parts.
   s1_zh: 七可以是三和四。两部分都看得到。
   s1_zh_hk: 七可以係三同四。兩部分都睇到。
   s2_en: Five. Two.
   s2_zh: 五，二。
   s2_zh_hk: 五，二。
-  s3_en: Move some across. Now it is five and two. Seven stays seven.
-  s3_zh: 挪一挪。现在是五和二。七还是七。
-  s3_zh_hk: 搬一搬。而家係五同二。七仲係七。
+  s3_en: Move two over. Now it is five and two. Seven stays seven.
+  s3_zh: 移两个过去。现在是五和二。七还是七。
+  s3_zh_hk: 搬兩個過去。而家係五同二。七仲係七。
 
 - id: other
   visual: animated

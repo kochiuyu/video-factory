@@ -1,0 +1,101 @@
+# P1-NUM-07. Mirrors MathQuiz path partstart / lesson swapjoin, "Swap the parts".
+# Three and two make five. Swap them: two and three still make five. The sum stays five.
+# Five minus two is three, and that subtraction does not swap: 5 − 2 = 3.
+# https://github.com/kochiuyu/mathquiz learn-data.js (path partstart, lesson swapjoin
+# in learn-foundations.js).
+# Speech is for age 6: one short idea per sentence. Questions are answered on screen.
+id: P1-NUM-07
+title_en: Swap the parts
+title_zh: 交换两部分
+title_zh_hk: 交換兩部分
+duration_target_s: 66
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: parts
+  a: 3
+  b: 2
+  seconds: 8
+  title_en: Swap the parts
+  title_zh: 交换两部分
+  title_zh_hk: 交換兩部分
+  s1_en: Can we swap three and two?
+  s1_zh: 三加二，可以交换吗？
+  s1_zh_hk: 三加二，可以交換嗎？
+
+- id: join
+  visual: animated
+  scene: part_whole
+  a: 3
+  b: 2
+  seconds: 14
+  s1_en: Three counters on this mat. Two counters on that mat.
+  s1_zh: 这边有三个圆片，那边有两个圆片。
+  s1_zh_hk: 呢邊有三個圓片，嗰邊有兩個圓片。
+  s2_en: Three. Two.
+  s2_zh: 三，二。
+  s2_zh_hk: 三，二。
+  s3_en: Bring the two parts together. Three and two make five. The sum is five.
+  s3_zh: 把两部分合在一起。三加二是五。这个五叫和。
+  s3_zh_hk: 將兩部分合埋一齊。三加二係五。呢個五叫和。
+
+- id: swap
+  visual: animated
+  scene: part_whole
+  a: 2
+  b: 3
+  seconds: 14
+  s1_en: Swap the parts. Start with two, then three.
+  s1_zh: 交换两部分。先是二，再是三。
+  s1_zh_hk: 交換兩部分。先係二，再係三。
+  s2_en: Two. Three.
+  s2_zh: 二，三。
+  s2_zh_hk: 二，三。
+  s3_en: Two and three make five. Swap them, and five stays five.
+  s3_zh: 二加三是五。交换之后，五还是五。
+  s3_zh_hk: 二加三係五。交換之後，五仲係五。
+
+- id: away
+  visual: animated
+  scene: part_whole
+  a: 3
+  b: 2
+  cover: b
+  seconds: 14
+  s1_en: Taking away is different. Five is still three and two.
+  s1_zh: 拿走就不一样。五还是三加二。
+  s1_zh_hk: 拿走就唔同。五仲係三加二。
+  s2_en: Three. Two.
+  s2_zh: 三，二。
+  s2_zh_hk: 三，二。
+  s3_en: Cover the two. Five minus two is three. You cannot take five from two.
+  s3_zh: 盖住两个。五减二是三。两个不能拿走五个。
+  s3_zh_hk: 遮住兩個。五減二係三。兩個唔可以拿走五個。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: parts
+  bonds:
+  - [3, 2]
+  - [2, 3]
+  - [5]
+  - [3, 2]
+  seconds: 16
+  title_en: Five stays five?
+  title_zh: 五还是五吗？
+  title_zh_hk: 五仲係五嗎？
+  s1_en: Three and two make five.
+  s1_zh: 三加二是五。
+  s1_zh_hk: 三加二係五。
+  s2_en: Two and three make five too.
+  s2_zh: 二加三也是五。
+  s2_zh_hk: 二加三都係五。
+  s3_en: Yes. Five stays five.
+  s3_zh: 是的。五还是五。
+  s3_zh_hk: 係。五仲係五。
+  s4_en: Five minus two is three.
+  s4_zh: 五减二是三。
+  s4_zh_hk: 五減二係三。

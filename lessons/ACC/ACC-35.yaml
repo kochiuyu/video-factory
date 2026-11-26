@@ -1,0 +1,284 @@
+id: ACC-35
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: New information. Or an old mistake?
+title_zh: 是会计估计变更，还是前期差错？
+title_zh_hk: 是新資料，還是舊錯誤？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-35
+  kicker_en: ACC-35
+  kicker_zh: ACC-35
+  kicker_zh_hk: ACC-35
+  title_en: New information. Or an old mistake?
+  title_zh: 是会计估计变更，还是前期差错？
+  title_zh_hk: 是新資料，還是舊錯誤？
+  image: art/new-information-old-mistake-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A diagnostic machine has 60,000 left on the books. The manager says new information at the start of
+    Year 3 shortened its life to two more years, and wants to spread the 60,000 over Years 3 and 4 without
+    changing Year 2. Is that a new estimate, or an old mistake? You are the controller of fictional Harbour
+    Repair Tools in Hong Kong.
+  zh: >-
+    一台诊断设备的账面余额还有六万港元。经理称第三年初才有新信息，显示机器只能再用两年，建议把六万在第三、四年分摊，不改第二年。这是会计估计变更，还是前期差错？你是香港虚构企业“海湾维修工具”的财务负责人。
+  zh_hk: >-
+    一部診斷設備賬面仲有六萬港元。經理話第三年初先有新資料，顯示部機只可以再用兩年，建議把六萬喺第三、四年攤分，唔改第二年。呢個係新資料，定係舊錯誤？你係香港虛構企業「海灣維修工具」嘅財務負責人。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Diagnostic machine, HK$
+  title_zh: 诊断设备，港元
+  title_zh_hk: 診斷設備，港元
+  row1_en: Original cost
+  row1_zh: 原始成本
+  row1_zh_hk: 原始成本
+  row2_en: Year 1 depreciation
+  row2_zh: 第1年折旧
+  row2_zh_hk: 第1年折舊
+  row3_en: Year 2 depreciation
+  row3_zh: 第2年折旧
+  row3_zh_hk: 第2年折舊
+  row4_en: Opening Year 3 carrying amount
+  row4_zh: 第3年期初账面价值
+  row4_zh_hk: 第3年期初賬面值
+  col1_en: Recorded
+  col1_zh: 记录金额
+  col1_zh_hk: 記錄金額
+  col2_en: Basis
+  col2_zh: 依据
+  col2_zh_hk: 依據
+  c11: 90,000
+  c12_en: Paid, start of Year 1
+  c12_zh: 第1年初付清
+  c12_zh_hk: 第1年初付清
+  c21: 15,000
+  c22_en: Six-year life
+  c22_zh: 六年使用年期
+  c22_zh_hk: 六年使用年期
+  c31: 15,000
+  c32_en: Six-year life
+  c32_zh: 六年使用年期
+  c32_zh_hk: 六年使用年期
+  c41: 60,000
+  c42: 90,000 − 30,000
+  footer_en: Straight line, zero residual value
+  footer_zh: 直线法，零净残值
+  footer_zh_hk: 直線法，零剩餘價值
+  s1_en: >-
+    The machine cost 90,000 and was available for use at the start of Year 1. Its supported original life
+    was six years, so 15,000 was recorded in each of Years 1 and 2. Year 2 statements are already issued.
+  s1_zh: 机器成本九万，第一年初可供使用。原有证据支持六年使用年期，所以第一年和第二年各入账折旧一万五千。第二年报表已经批准报出。
+  s1_zh_hk: 部機成本九萬，第一年初已經可以用。原本有證據支持六年使用年期，所以第一年同第二年各入賬折舊一萬五千。第二年報表已經刊發。
+  s2_en: >-
+    Apply a genuine estimate change from its effective date to the current and future periods.
+  s2_zh: 如果估计确实更新，从生效日起按未来适用法计入当期及以后期间。
+  s2_zh_hk: 如果真係估計變更，就由生效日起按未來適用法計入今期同以後期間。
+  s3_en: >-
+    A material prior-period error arises from failing to use reliable information that was available,
+    and reasonably obtainable, when earlier statements were prepared. Correct it retrospectively when
+    its effects can be determined.
+  s3_zh: 反之，编制前期报表时本可合理取得、且当时已有的可靠信息未被使用，可能形成重大前期差错；其影响可确定时，应追溯重述。
+  s3_zh_hk: 相反，編製前期報表時本來可以合理取得、而且當時已經有嘅可靠資料冇用到，就可能構成重大前期錯誤；影響可以確定時，要追溯更正。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: If the manager is right?
+  title_zh: 若经理所述属实，怎么处理？
+  title_zh_hk: 如果經理講得啱，點處理？
+  en: >-
+    If the manager's account is correct, what depreciation belongs in Years 3 and 4? Would you change
+    Year 2? What dated evidence do you need before accepting the account? Pause and vote.
+  zh: 若经理所述属实，第三、四年各应计多少折旧？第二年要改吗？接受这个说法前，要索取什么有日期的证据？请暂停，投个票。
+  zh_hk: 如果經理所講屬實，第三、四年各應計幾多折舊？第二年要唔要改？接受呢個講法之前，要攞咩有日期嘅證據？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: >-
+    File check: a Year 2 report
+  title_zh: 查档发现第2年的评估
+  title_zh_hk: 查檔發現第2年的評估
+  step1_en: Assessment delivered start of Year 2
+  step1_zh: 评估在第2年初已送达
+  step1_zh_hk: 評估喺第2年初已送到
+  step2_en: Three years remaining then
+  step2_zh: 当时尚余三年
+  step2_zh_hk: 當時尚餘三年
+  step3_en: Omitted by administrative oversight
+  step3_zh: 因行政疏漏未入工作表
+  step3_zh_hk: 因行政疏忽未入工作表
+  s1_en: >-
+    A reliable maintenance assessment reached finance at the start of Year 2. It supported service only
+    to the end of Year 4: three years remaining from that date. The later assessment merely repeated it.
+  s1_zh: 查档后发现，财务部门在第二年一开始便收到可靠的维护评估，支持设备只可用到第四年末，也就是当时尚余三年。后来的评估只是重复这个结论。
+  s1_zh_hk: 查檔之後發現，財務部喺第二年一開始已經收到可靠嘅維修評估，支持部機只可以用到第四年底，即係當時仲剩三年。後來嘅評估只係重複呢個結論。
+  s2_en: >-
+    It sat in the accessible equipment file and should reasonably have been considered for Year 2, but
+    was left out of the depreciation worksheet by an administrative oversight.
+  s2_zh: 这份评估当时已存于可查阅的设备档案，编制第二年报表时理应考虑，却因行政疏漏未列入折旧工作表。
+  s2_zh_hk: 呢份評估當時已經喺查閱得到嘅設備檔案入面，編製第二年報表時理應考慮，但因為行政疏忽冇放入折舊工作表。
+  s3_en: >-
+    Year 1's 15,000 was correct. The omission is material, its effects can be calculated, and the Year
+    3 statements are the first authorised after discovery.
+  s3_zh: 第一年的一万五千折旧正确。第二年的遗漏属重大，影响可以计算；第三年报表是发现后首次获批准报出的报表。
+  s3_zh_hk: 第一年嘅一萬五千折舊係啱嘅。第二年嘅遺漏屬重大，影響計得到；第三年報表係發現之後第一份獲批准刊發嘅報表。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Estimate change or error now?
+  title_zh: 现在是估计变更还是差错？
+  title_zh_hk: 而家係估計變更定錯誤？
+  en: >-
+    Calculate corrected Year 2 depreciation, the comparative correction, the opening Year 3 carrying amount
+    and Year 3 depreciation. Why is the correction not an extra Year 3 expense, and why is Year 1 unchanged?
+    Pause and vote.
+  zh: 请重算第二年折旧、比较数据的更正额、第三年期初账面价值和当年折旧。为什么差错更正不属于第三年新增费用？第一年为什么不变？请暂停，投个票。
+  zh_hk: 請重計第二年折舊、比較數字嘅更正額、第三年期初賬面值同當年折舊。點解更正額唔係第三年嘅額外費用？第一年點解唔使改？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Rebuild the missed Year 2 update
+  title_zh: 重建第2年漏做的估计更新
+  title_zh_hk: 重建第2年漏做的估計更新
+  step1_en: >-
+    Manager's case: 30,000 a year
+  step1_zh: 经理说法：每年30,000
+  step1_zh_hk: 經理講法：每年30,000
+  step2_en: Year 2 should be 75,000 ÷ 3 = 25,000
+  step2_zh: 第2年应为75,000 ÷ 3 = 25,000
+  step2_zh_hk: 第2年應為75,000 ÷ 3 = 25,000
+  step3_en: Year 2 understated by 10,000
+  step3_zh: 第2年少计10,000
+  step3_zh_hk: 第2年少計10,000
+  s1_en: >-
+    On the manager's initial account, 60,000 over two years gives 30,000 in each of Years 3 and 4. That
+    answer is conditional on the account being true.
+  s1_zh: 按经理最初的说法，六万除以尚余两年，第三、四年每年折旧三万。这只是假设说法成立时的计算。
+  s1_zh_hk: 按經理最初嘅講法，六萬除以仲剩兩年，第三、四年每年折舊三萬。呢個只係假設講法成立時嘅計算。
+  s2_en: >-
+    At the start of Year 2, the correct carrying amount was 90,000 minus 15,000, or 75,000, with three
+    years remaining. Year 2 depreciation should have been 25,000, not 15,000.
+  s2_zh: 第二年初正确账面价值是九万减一万五千，即七万五千，尚余三年。第二年应计折旧二万五千，而不是一万五千。
+  s2_zh_hk: 第二年初正確賬面值係九萬減一萬五千，即係七萬五千，仲剩三年。第二年應計折舊二萬五千，唔係一萬五千。
+  s3_en: >-
+    Year 2 depreciation was understated by 10,000. Its closing carrying amount should have been 50,000,
+    and Year 2 profit and retained earnings were overstated by 10,000. Year 1 is not affected.
+  s3_zh: 第二年少计折旧一万，年末账面价值应为五万，第二年利润和年末留存收益均高估一万。第一年不受影响。
+  s3_zh_hk: 第二年少計折舊一萬，年底賬面值應該係五萬，第二年利潤同年底保留溢利都高估一萬。第一年唔受影響。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Calculate
+  kicker_en: Calculate
+  kicker_zh: 计算
+  kicker_zh_hk: 計算
+  title_en: Correct the right period
+  title_zh: 把更正放回所属期间
+  title_zh_hk: 把更正放返所屬期間
+  step1_en: Restate Year 2; opening Year 3 is 50,000
+  step1_zh: 重述第2年；第3年期初50,000
+  step1_zh_hk: 重列第2年；第3年期初50,000
+  step2_en: >-
+    Year 3 and Year 4: 25,000 each
+  step2_zh: 第3、4年各25,000
+  step2_zh_hk: 第3、4年各25,000
+  step3_en: 15 + 25 + 25 + 25 = 90,000
+  step3_zh: 15 + 25 + 25 + 25 = 90,000
+  step3_zh_hk: 15 + 25 + 25 + 25 = 90,000
+  s1_en: >-
+    Restate the Year 2 comparatives in the Year 3 statements. The corrected opening Year 3 carrying amount
+    is 50,000, and opening retained earnings fall by 10,000.
+  s1_zh: 第三年报表应重述第二年的比较费用和年末资产金额。第三年期初账面价值更正为五万，期初留存收益减少一万。
+  s1_zh_hk: 第三年報表要重列第二年嘅比較費用同年底資產金額。第三年期初賬面值更正為五萬，期初保留溢利減少一萬。
+  s2_en: >-
+    Do not charge the 10,000 as an extra Year 3 operating expense. It corrects prior-period comparatives
+    and carried-forward balances.
+  s2_zh: 不要把一万当作第三年新增的经营费用；它更正的是前期比较数字和结转余额。
+  s2_zh_hk: 唔好把一萬當作第三年額外嘅營運費用；佢更正嘅係前期比較數字同結轉結餘。
+  s3_en: >-
+    Year 3 starts at 50,000 with two years left, so depreciation is 25,000 in Year 3 and 25,000 in Year
+    4. The full schedule is 15,000 plus three times 25,000, or 90,000.
+  s3_zh: 第三年初为五万，尚可用两年，所以第三年折旧二万五千，第四年也是二万五千。全期折旧是一万五千加三个二万五千，即九万。
+  s3_zh_hk: 第三年初係五萬，仲可以用兩年，所以第三年折舊二萬五千，第四年都係二萬五千。全期折舊係一萬五千加三個二萬五千，即係九萬。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Explain the omission
+  title_zh: 解释遗漏，不要换个方便名称
+  title_zh_hk: 解釋遺漏，唔好換個方便名稱
+  en: >-
+    Correct Year 3 depreciation is 5,000 lower than the provisional 30,000, but that is not a reason to
+    prefer error treatment; the evidence requires it. Disclose the omission and the comparative corrections,
+    preserve the originally issued version, and keep the dated assessment and approval trail. The discovery
+    date does not turn a missed update into a new estimate.
+  zh: >-
+    第三年正确折旧比初步建议的三万少五千，但这不是选择差错更正的理由；证据才是依据。应披露遗漏的性质和比较数字的更正，保留原报出版本，并留存有日期的评估和审批记录。发现日期不会把先前漏做的更新变成第三年的新估计。
+  zh_hk: >-
+    第三年正確折舊比初步建議嘅三萬少五千，但呢個唔係揀錯誤更正嘅理由；證據先係依據。要披露遺漏嘅性質同比較數字嘅更正，保留原刊發版本，並保存有日期嘅評估同審批記錄。發現日期唔會把之前漏做嘅更新變成第三年嘅新估計。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: When was it available?
+  title_zh: 这项信息何时已经取得？
+  title_zh_hk: 呢項資料幾時已經有？
+  q1_en: >-
+    Corrected Year 2: 25,000
+  q1_zh: 更正后第2年：25,000
+  q1_zh_hk: 更正後第2年：25,000
+  q2_en: >-
+    Years 3 and 4: 25,000 each
+  q2_zh: 第3、4年：各25,000
+  q2_zh_hk: 第3、4年：各25,000
+  s1_en: >-
+    An estimate change applies forward from when genuinely new information arises. Failing to use reliable
+    information that was already available is a prior-period error.
+  s1_zh: 真正的新信息出现后，估计变更向未来适用。未使用当时已有的可靠信息，则属前期差错。
+  s1_zh_hk: 真正嘅新資料出現之後，估計變更向未來適用。冇用當時已經有嘅可靠資料，就屬前期錯誤。
+  s2_en: >-
+    Classify by the evidence and its date, not by which treatment gives the preferred current profit.
+  s2_zh: 按证据及其日期分类，不能按想要的本期利润选择处理方法。
+  s2_zh_hk: 按證據同佢嘅日期分類，唔可以按想要嘅今期利潤揀處理方法。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 194

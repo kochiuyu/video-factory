@@ -1,0 +1,270 @@
+id: ACC-31
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Half finished. How many units of work?
+title_zh: 在产品完成了多少工作量？
+title_zh_hk: 未做完的產品，應當作多少產量？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-31
+  kicker_en: ACC-31
+  kicker_zh: ACC-31
+  kicker_zh_hk: ACC-31
+  title_en: Half finished. How many units of work?
+  title_zh: 在产品完成了多少工作量？
+  title_zh_hk: 未做完的產品，應當作多少產量？
+  image: art/half-finished-units-of-work-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    One thousand identical bottles entered a production stage this month. Eight hundred are complete;
+    two hundred are unfinished. A draft report divides the 19,400 total cost equally across all 1,000
+    bottles and gives unfinished stock 3,880. Would you sign it? You are the controller of fictional Harbour
+    Skin, a small Hong Kong skincare producer.
+  zh: >-
+    本月有一千瓶同款产品投入同一道工序，八百瓶已完工转出，两百瓶尚未完工。草稿把一万九千四百港元总成本平摊到一千瓶，给期末在产品分配三千八百八十。你会签字吗？你是香港小型护肤品企业“海湾护肤”的财务负责人。
+  zh_hk: >-
+    今個月有一千樽同款產品投入同一道工序，八百樽已完工轉出，兩百樽仲未做完。草稿把一萬九千四百港元總成本平均攤到一千樽，畀期末在製品分配三千八百八十。你會唔會簽？你係香港小型護膚品企業「海灣護膚」嘅財務負責人。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Month-end stage data, HK$
+  title_zh: 月末工序数据，港元
+  title_zh_hk: 月底工序數據，港元
+  row1_en: Materials
+  row1_zh: 直接材料
+  row1_zh_hk: 直接物料
+  row2_en: Conversion
+  row2_zh: 转换成本
+  row2_zh_hk: 加工成本
+  col1_en: Cost to allocate
+  col1_zh: 待分配成本
+  col1_zh_hk: 待分配成本
+  col2_en: Unfinished stock completion
+  col2_zh: 在产品完工程度
+  col2_zh_hk: 在製品完工程度
+  c11: 10,000
+  c12: 100%
+  c21: 9,400
+  c22: 70%
+  footer_en: 800 out + 200 unfinished = 1,000
+  footer_zh: 转出800＋在产品200＝1,000瓶
+  footer_zh_hk: 轉出800＋在製品200＝1,000樽
+  s1_en: >-
+    All direct materials are added at the start. Conversion, meaning labour and production overhead, is
+    incurred evenly as the stage progresses. There is no opening work in progress, loss or spoilage.
+  s1_zh: 直接材料在投产时一次投入。人工和制造费用属于转换成本，随加工进度均匀发生。本期没有期初在产品，也没有损耗或报废。
+  s1_zh_hk: 直接物料喺投產時一次過投入。人工同製造費用屬於加工成本，隨加工進度平均發生。今期冇期初在製品，亦冇損耗或報廢。
+  s2_en: >-
+    The supervisor initially certifies the unfinished bottles as 70 percent converted. Materials cost
+    to allocate is 10,000; conversion cost is 9,400.
+  s2_zh: 生产主管初步确认在产品的加工程度为百分之七十。待分配的物料成本是一万，转换成本是九千四百。
+  s2_zh_hk: 生產主管初步確認在製品嘅加工程度係百分之七十。待分配嘅物料成本係一萬，加工成本係九千四百。
+  s3_en: >-
+    Company policy allocates each cost pool using equivalent completed work, not an equal cost per physical
+    bottle.
+  s3_zh: 按企业政策，材料和转换成本要依据各自的约当产量分配，不能按实物瓶数平均分摊。
+  s3_zh_hk: 按公司政策，物料同加工成本要按各自嘅約當產量分配，唔可以按實物樽數平均攤分。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Approve 3,880 or recalculate?
+  title_zh: 按三千八百八十确认吗？
+  title_zh_hk: 照三千八百八十確認？
+  en: >-
+    Approve 3,880 for unfinished stock, or replace it with a separate materials and conversion calculation?
+    Give the amount you would sign and one reason. Pause and vote.
+  zh: 是否应按三千八百八十确认期末在产品？如果不应，分别计算直接材料和转换成本，给出你认可的金额和一条理由。请暂停，投个票。
+  zh_hk: 應唔應該按三千八百八十確認期末在製品？如果唔應該，就分開計直接物料同加工成本，講出你認可嘅金額同一個理由。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Completion was 40%, not 70%
+  title_zh: 加工程度是40%，不是70%
+  title_zh_hk: 加工程度係40%，唔係70%
+  step1_en: Unfinished bottles only 40% converted
+  step1_zh: 在产品实际加工程度40%
+  step1_zh_hk: 在製品實際加工程度40%
+  step2_en: Materials still fully added
+  step2_zh: 直接材料仍已全部投入
+  step2_zh_hk: 直接物料仍已全部投入
+  step3_en: Counts and cost pools unchanged
+  step3_zh: 瓶数和成本总额不变
+  step3_zh_hk: 樽數同成本總額不變
+  s1_en: >-
+    A review of the same month-end stage records shows the unfinished bottles were only 40 percent converted,
+    not 70 percent. Use the corrected evidence.
+  s1_zh: 同一月末的生产记录复核后发现：这批在产品的实际加工程度是百分之四十，而不是原先估计的百分之七十。请使用更正后的证据。
+  s1_zh_hk: 覆核同一個月底嘅生產記錄後發現：呢批在製品實際加工程度係百分之四十，唔係原先估計嘅百分之七十。請用更正後嘅證據。
+  s2_en: >-
+    Their materials are still fully added. The physical counts, the 10,000 materials pool and the 9,400
+    conversion pool do not change.
+  s2_zh: 直接材料已经全部投入，瓶数不变，物料成本一万、转换成本九千四百也不变。
+  s2_zh_hk: 直接物料已經全部投入，樽數不變，物料成本一萬、加工成本九千四百亦不變。
+  s3_en: >-
+    This corrects the completion estimate for the same reporting date. It is not a later production step
+    or a cash refund.
+  s3_zh: 这里修正的是原报告日的进度估计；既没有发生后续加工，也没有收到退款。
+  s3_zh_hk: 呢度更正嘅係原報告日嘅進度估計；既冇後續加工，亦冇收到退款。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep the first value?
+  title_zh: 第一轮金额还适用吗？
+  title_zh_hk: 第一輪金額仲適用嗎？
+  en: >-
+    With conversion completion corrected to 40 percent, should unfinished stock keep its first-round value
+    or change? Recalculate the conversion rate, and both unfinished and transferred-out costs. Pause and
+    vote.
+  zh: 转换成本的完工程度更正为百分之四十后，第一轮的在产品成本还适用吗？请重算转换成本率、期末在产品成本和完工转出成本。请暂停，投个票。
+  zh_hk: 加工完工程度更正為百分之四十之後，第一輪嘅在製品成本仲適用嗎？請重計加工成本率、期末在製品成本同完工轉出成本。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Count work separately
+  title_zh: 分开计算两种工作量
+  title_zh_hk: 分開計算兩種工作量
+  step1_en: >-
+    Materials: 1,000 units at HK$10
+  step1_zh: 物料：1,000单位，每单位10
+  step1_zh_hk: 物料：1,000單位，每單位10
+  step2_en: >-
+    Conversion: 940 units at HK$10
+  step2_zh: 加工：940单位，每单位10
+  step2_zh_hk: 加工：940單位，每單位10
+  step3_en: Unfinished 3,400; out 16,000
+  step3_zh: 在产品3,400；转出16,000
+  step3_zh_hk: 在製品3,400；轉出16,000
+  s1_en: >-
+    Replace the equal-per-bottle allocation. Materials equivalent units are 800 plus 200, or 1,000, so
+    the materials rate is 10 per equivalent unit.
+  s1_zh: 不应按瓶数平摊。物料约当产量为八百加两百，即一千，每约当单位物料成本为十港元。
+  s1_zh_hk: 唔應該按樽數平均攤。物料約當產量係八百加兩百，即係一千，每個約當單位物料成本係十港元。
+  s2_en: >-
+    Conversion equivalent units are 800 plus 200 times 70 percent, or 940. The conversion rate is also
+    10.
+  s2_zh: 加工约当产量为八百加两百乘百分之七十，即九百四十，每约当单位转换成本也是十港元。
+  s2_zh_hk: 加工約當產量係八百加兩百乘百分之七十，即係九百四十，每個約當單位加工成本都係十港元。
+  s3_en: >-
+    Unfinished stock carries 2,000 of materials and 1,400 of conversion, or 3,400. Transferred-out cost
+    is 800 times 20, or 16,000. Together they reconcile to 19,400.
+  s3_zh: 期末在产品承担物料成本二千、转换成本一千四百，合计三千四百。完工转出成本是八百乘二十，即一万六千。两项合计正好是一万九千四百。
+  s3_zh_hk: 期末在製品承擔物料成本二千、加工成本一千四百，合共三千四百。完工轉出成本係八百乘二十，即係一萬六千。兩項加埋啱啱係一萬九千四百。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Calculate
+  kicker_en: Calculate
+  kicker_zh: 计算
+  kicker_zh_hk: 計算
+  title_en: Recalculate the denominator
+  title_zh: 重算分母
+  title_zh_hk: 重計分母
+  step1_en: Conversion units 880; rate 10.68
+  step1_zh: 加工约当产量880；成本率10.68
+  step1_zh_hk: 加工約當產量880；成本率10.68
+  step2_en: Unfinished 2,854.55; out 16,545.45
+  step2_zh: 在产品2,854.55；转出16,545.45
+  step2_zh_hk: 在製品2,854.55；轉出16,545.45
+  step3_en: Down 545.45, not 600
+  step3_zh: 减少545.45，不是600
+  step3_zh_hk: 減少545.45，唔係600
+  s1_en: >-
+    At 40 percent completion, conversion equivalent units become 800 plus 80, or 880. The revised conversion
+    rate is 9,400 divided by 880, about 10.68. Keep the precision until the final totals.
+  s1_zh: 按百分之四十完工程度，加工约当产量是八百加八十，即八百八十。转换成本率改为九千四百除以八百八十，约十点六八。计算总额前先保留精度。
+  s1_zh_hk: 按百分之四十完工程度，加工約當產量係八百加八十，即係八百八十。加工成本率改為九千四百除以八百八十，大約十點六八。計總額之前要保留精度。
+  s2_en: >-
+    Unfinished cost is 2,000 plus 80 times that rate: 2,854.55. Transferred-out cost is 8,000 plus 800
+    times that rate: 16,545.45. The rounded totals still sum to 19,400.
+  s2_zh: >-
+    在产品成本是二千加八十乘这个成本率，即二千八百五十四点五五。完工转出成本是八千加八百乘这个成本率，即一万六千五百四十五点四五。两项四舍五入后仍合计一万九千四百。
+  s2_zh_hk: >-
+    在製品成本係二千加八十乘成本率，即二千八百五十四點五五。轉出成本係八千加八百乘成本率，即一萬六千五百四十五點四五。四捨五入後仍然合共一萬九千四百。
+  s3_en: >-
+    Unfinished value falls by 545.45, not 600, because the conversion rate also changes. No spending disappeared;
+    a smaller amount of measured work bears the same conversion pool.
+  s3_zh: 期末在产品价值减少了五百四十五点四五，而不是六百，因为转换成本率也变了。转换成本总额并未减少，只是分摊它的约当产量变小了。
+  s3_zh_hk: 期末在製品價值減少五百四十五點四五，唔係六百，因為加工成本率都變咗。加工成本總額冇減少，只係用嚟攤分佢嘅約當產量細咗。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What can the report establish?
+  title_zh: 这份报告能证明什么？
+  title_zh_hk: 呢份報告證明到乜嘢？
+  en: >-
+    Equivalent units measure completed work for cost allocation. They are not extra physical bottles,
+    and not permission to ship unfinished products. Reconciliation checks arithmetic, not whether the
+    completion estimate is reliable. Ask what stage records or inspection evidence support that percentage.
+    This alone does not show inefficiency, misconduct or a change in cash.
+  zh: >-
+    计算约当产量，是为了用完工单位表示已投入的工作量。它不会增加实物数量，也不能作为发运半成品的依据。成本勾稽无误，只能说明算术成立。要判断进度是否可靠，还得查看工序记录和检验依据。这也不足以表明效率下降、员工不当行为或现金变化。
+  zh_hk: >-
+    計約當產量，係用完工單位表示已投入嘅工作量。佢唔會增加實物數量，亦唔可以當作付運半製品嘅依據。成本對得返數，只說明算術成立。要判斷進度可唔可靠，仲要睇工序記錄同檢驗依據。呢個亦唔足以證明效率下降、員工失當或者現金有變。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Count work, not bottles
+  title_zh: 按工作量分配，不按瓶数
+  title_zh_hk: 按工作量分配，唔按樽數
+  q1_en: >-
+    70%: unfinished 3,400
+  q1_zh: 70%：在产品3,400
+  q1_zh_hk: 70%：在製品3,400
+  q2_en: >-
+    40%: unfinished 2,854.55
+  q2_zh: 40%：在产品2,854.55
+  q2_zh_hk: 40%：在製品2,854.55
+  s1_en: >-
+    Allocate materials and conversion with their own equivalent units. A completion correction changes
+    the denominator and the rate, not the total cost to allocate.
+  s1_zh: 物料和转换成本要按各自的约当产量分配。更正完工程度会改变分母和成本率，不会改变待分配的总成本。
+  s1_zh_hk: 物料同加工成本要按各自嘅約當產量分配。更正完工程度會改變分母同成本率，唔會改變待分配嘅總成本。
+  s2_en: >-
+    Reconcile both cost pools and the physical counts, then ask what evidence supports the completion
+    percentage.
+  s2_zh: 核对两类成本和实物数量，再追问完工程度有什么证据支持。
+  s2_zh_hk: 核對兩類成本同實物數量，再追問完工程度有乜證據支持。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 196

@@ -1,0 +1,293 @@
+id: ACC-34
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A useful prototype. An asset already?
+title_zh: 原型已经能运行，能确认无形资产了吗？
+title_zh_hk: 原型已可運作，可以確認資產嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-34
+  kicker_en: ACC-34
+  kicker_zh: ACC-34
+  kicker_zh_hk: ACC-34
+  title_en: A useful prototype. An asset already?
+  title_zh: 原型已经能运行，能确认无形资产了吗？
+  title_zh_hk: 原型已可運作，可以確認資產嗎？
+  image: art/useful-prototype-recognition-date-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    By the 30 June reporting date, a design team has incurred and paid 260,000 yuan. The prototype now
+    works and customers are interested, so the project manager wants to capitalise all of it. Would you
+    accept that asset? You are the controller of Pearl Signal, a fictional Shenzhen design business.
+  zh: >-
+    截至六月三十日报告日，团队已发生并支付二十六万元人民币。项目经理因原型能运作、有客户感兴趣，主张全数资本化。你会接受这项资产吗？你是深圳虚构设计公司“珠江信号”的财务负责人。
+  zh_hk: >-
+    截至六月三十日報告日，團隊已經發生並支付二十六萬人民幣。項目經理見原型運作到、又有客戶有興趣，主張全數資本化。你會唔會接受呢項資產？你係深圳虛構設計公司「珠江信號」嘅財務負責人。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Project spending to 30 June, CNY
+  title_zh: 截至6月30日项目支出，人民币
+  title_zh_hk: 截至6月30日項目支出，人民幣
+  row1_en: Jan–Feb
+  row1_zh: 1–2月
+  row1_zh_hk: 1–2月
+  row2_en: Mar–Apr
+  row2_zh: 3–4月
+  row2_zh_hk: 3–4月
+  row3_en: 1–14 May
+  row3_zh: 5月1–14日
+  row3_zh_hk: 5月1–14日
+  row4_en: 15 May–30 Jun
+  row4_zh: 5月15日–6月30日
+  row4_zh_hk: 5月15日–6月30日
+  col1_en: Work
+  col1_zh: 工作
+  col1_zh_hk: 工作
+  col2_en: Cost
+  col2_zh: 成本
+  col2_zh_hk: 成本
+  c11_en: Research
+  c11_zh: 研究
+  c11_zh_hk: 研究
+  c12: 60,000
+  c21_en: Development
+  c21_zh: 开发
+  c21_zh_hk: 開發
+  c22: 80,000
+  c31_en: Development
+  c31_zh: 开发
+  c31_zh_hk: 開發
+  c32: 30,000
+  c41_en: Development
+  c41_zh: 开发
+  c41_zh_hk: 開發
+  c42: 90,000
+  footer_en: >-
+    Total incurred and paid: 260,000
+  footer_zh: 已发生并支付合计260,000
+  footer_zh_hk: 已發生並支付合共260,000
+  s1_en: >-
+    The asset assessed is the identifiable design and software the company controls and can license separately,
+    not the physical prototype or staff knowledge.
+  s1_zh: 要评估的是公司控制、能单独许可的可辨认设计及相关软件，而不是实物原型或员工掌握的知识。
+  s1_zh_hk: 要評估嘅係公司控制、可以單獨授權嘅可識別設計同相關軟件，唔係實物原型或者員工嘅知識。
+  s2_en: >-
+    Policy: research is expensed. Development becomes an asset only from the date all six conditions can
+    be demonstrated together, including technical feasibility. Costs properly expensed before that date
+    are not later restored.
+  s2_zh: >-
+    政策规定：研究支出计入费用；开发支出只能从六项条件首次同时有据可查之日起资本化，其中包括技术可行性。此前已按规定费用化的支出，不能事后计入资产。
+  s2_zh_hk: >-
+    政策規定：研究支出列作費用；開發支出要由六項條件首次同時有證據證明嗰日起先可以資本化，當中包括技術可行性。之前已按規定列支嘅支出，唔可以事後撥返入資產。
+  s3_en: >-
+    From 1 March, intention, ability, resources, reliable costing and probable economic benefits are all
+    documented. The open question is when technical feasibility was first demonstrated.
+  s3_zh: 自三月一日起，意图、能力、资源、可靠的成本核算和很可能产生的经济利益都有文件支持。仍待厘清的是首次证明技术可行性的日期。
+  s3_zh_hk: 由三月一日起，意圖、能力、資源、可靠嘅成本計算同很可能帶來嘅經濟利益都有文件支持。仲未釐清嘅係幾時首次證明到技術可行性。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Accept the 260,000 asset?
+  title_zh: 接受二十六万资产吗？
+  title_zh_hk: 接受二十六萬資產？
+  en: >-
+    Would you accept the proposed 260,000 asset? Separate research from development, and say what dated
+    evidence you need before deciding which development costs qualify. Pause and vote.
+  zh: 你会接受把二十六万确认为资产的建议吗？先区分研究和开发，再指出判定哪些开发成本合资格所需的、附有日期的证据。请暂停，投个票。
+  zh_hk: 你會唔會接受把二十六萬確認做資產？先分開研究同開發，再講出要決定邊啲開發成本合資格，需要咩有日期嘅證據。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Feasibility came on 15 May
+  title_zh: 技术可行性在5月15日确立
+  title_zh_hk: 技術可行性喺5月15日確立
+  step1_en: >-
+    March demo: lab conditions only
+  step1_zh: 3月示范只在实验室条件下运作
+  step1_zh_hk: 3月示範只喺實驗室條件下運作
+  step2_en: Feasibility documented 15 May
+  step2_zh: 5月15日完成可行性验证
+  step2_zh_hk: 5月15日完成可行性驗證
+  step3_en: >-
+    30 June: not yet available for use
+  step3_zh: 6月30日尚未可供使用
+  step3_zh_hk: 6月30日仍未可供使用
+  s1_en: >-
+    The March demonstration worked only under narrow laboratory conditions. Test logs showed unresolved
+    failures; the manager's 'technically ready' was optimism, not a supported conclusion.
+  s1_zh: 三月的示范只能在特定实验室条件下运作。测试记录显示仍有未解决的故障；经理所谓“技术就绪”只是乐观说法，不是有依据的结论。
+  s1_zh_hk: 三月嘅示範只係喺特定實驗室條件下行到。測試記錄顯示仲有未解決嘅故障；經理講嘅「技術就緒」只係樂觀講法，唔係有根據嘅結論。
+  s2_en: >-
+    At the start of 15 May, engineers completed and documented the feasibility work. All six conditions
+    first coincide then. The ledger shows 30,000 before that point and 90,000 after.
+  s2_zh: 到五月十五日一开始，工程团队完成了必要的技术可行性验证并留存记录。六项条件首次同时满足就在这时。账簿分开记录此前的三万和此后的九万。
+  s2_zh_hk: 到五月十五日一開始，工程團隊完成咗必要嘅技術可行性驗證並留低記錄。六項條件首次同時滿足就喺呢個時候。賬簿分開記錄之前嘅三萬同之後嘅九萬。
+  s3_en: >-
+    At 30 June, routine integration continues, so the design is not yet available for use. The manager
+    asks to transfer earlier expensed costs into the asset.
+  s3_zh: 六月三十日仍在进行例行整合，设计尚未达到预定可使用状态。经理建议把此前已列作费用的成本转列为资产。
+  s3_zh_hk: 六月三十日仲做緊例行整合，設計未達到預定可使用狀態。經理建議把之前已經列支嘅成本轉做資產。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which costs belong in the asset?
+  title_zh: 哪些成本计入资产？
+  title_zh_hk: 邊啲成本計入資產？
+  en: >-
+    What asset cost and project expense belong at 30 June? State the recognition date, say whether earlier
+    expenses can be reinstated, and distinguish technical feasibility from readiness for use. Pause and
+    vote.
+  zh: >-
+    六月三十日应确认多少资产成本和项目费用？何时开始确认？以前计入费用的支出能否改计资产？技术上能够完成与达到可使用状态有什么区别？请暂停，投个票。
+  zh_hk: >-
+    六月三十日應該確認幾多資產成本同項目費用？由幾時開始確認？之前列支嘅支出可唔可以撥返做資產？技術上做得完同已經可供使用有咩分別？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Divide the cost on 15 May
+  title_zh: 按5月15日划分成本
+  title_zh_hk: 按5月15日劃分成本
+  step1_en: >-
+    Asset: 90,000
+  step1_zh: 资产：90,000
+  step1_zh_hk: 資產：90,000
+  step2_en: >-
+    Expense: 60,000 + 110,000 = 170,000
+  step2_zh: 费用：60,000 + 110,000 = 170,000
+  step2_zh_hk: 費用：60,000 + 110,000 = 170,000
+  step3_en: 90,000 + 170,000 = 260,000
+  step3_zh: 90,000 + 170,000 = 260,000
+  step3_zh_hk: 90,000 + 170,000 = 260,000
+  s1_en: >-
+    The qualifying date is 15 May, not the March market assessment. Probable benefits and technical feasibility
+    are separate conditions; one cannot substitute for the other.
+  s1_zh: 合资格日期是五月十五日，不是三月完成市场评估时。很可能流入经济利益与技术可行性是两项不同条件，不能互相替代。
+  s1_zh_hk: 合資格日期係五月十五日，唔係三月做完市場評估嗰陣。很可能有經濟利益同技術可行性係兩項唔同條件，唔可以互相代替。
+  s2_en: >-
+    Capitalise the 90,000 incurred from 15 May to 30 June. Expense 60,000 of research, 80,000 of March
+    to April development and 30,000 of early-May development: 170,000.
+  s2_zh: 只有五月十五日至六月三十日发生的九万计入资产。研究六万、三到四月开发八万和五月上半月开发三万，共十七万计入费用。
+  s2_zh_hk: 只有五月十五日至六月三十日發生嘅九萬計入資產。研究六萬、三至四月開發八萬同五月上半月開發三萬，合共十七萬列作費用。
+  s3_en: >-
+    The 110,000 of development before 15 May is not research; it is development expensed before all conditions
+    were shown.
+  s3_zh: 五月十五日以前的十一万开发支出，不因不符确认条件而变成研究；它仍是在六项条件获证明之前已列支的开发支出。
+  s3_zh_hk: 五月十五日之前嘅十一萬開發支出，唔會因為未符合確認條件就變成研究；佢仍然係六項條件未證明之前已列支嘅開發支出。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Do not restore a successful past
+  title_zh: 日后成功不能改写已列支金额
+  title_zh_hk: 日後成功不能改寫已列支金額
+  step1_en: >-
+    1 March start: 200,000, over by 110,000
+  step1_zh: 从3月1日起：200,000，高估110,000
+  step1_zh_hk: 由3月1日起：200,000，高估110,000
+  step2_en: >-
+    All 260,000: overstated 170,000
+  step2_zh: 全数260,000：高估170,000
+  step2_zh_hk: 全數260,000：高估170,000
+  step3_en: Feasible to finish is not finished
+  step3_zh: 技术上可完成，不代表已完成
+  step3_zh_hk: 技術上做得完，唔代表已完成
+  s1_en: >-
+    Keep the 170,000 previously expensed out of the asset. Starting on 1 March would give 200,000, overstating
+    the proper 90,000 by 110,000. Capitalising all 260,000 overstates it by 170,000.
+  s1_zh: 原先列支的十七万不能转回资产。若从三月一日起资本化，资产会变成二十万，比正确的九万高估十一万；全数资本化二十六万则高估十七万。
+  s1_zh_hk: 原先列支嘅十七萬唔可以撥返做資產。如果由三月一日起資本化，資產會變成二十萬，比正確嘅九萬高估十一萬；全數資本化二十六萬就高估十七萬。
+  s2_en: >-
+    Capitalising everything would also overstate pre-tax profit by 170,000 here. Cash paid stays 260,000
+    either way; recognition does not create cash or guarantee sales.
+  s2_zh: 本例中，全数资本化还会令税前利润高估十七万。不论怎样入账，现金支出仍是二十六万；确认资产不会产生现金，也不保证日后销售。
+  s2_zh_hk: 本例入面，全數資本化仲會令稅前利潤高估十七萬。無論點樣入賬，現金支出都係二十六萬；確認資產唔會產生現金，亦唔保證日後有銷售。
+  s3_en: >-
+    Technical feasibility asks whether completion can be achieved; availability for use asks whether it
+    has been. Amortisation starts only when the design is available for use.
+  s3_zh: 技术可行性回答的是能不能把设计做完；可供使用回答的是是否已经达到预定可使用状态。设计可供使用时才开始摊销。
+  s3_zh_hk: 技術可行性答嘅係設計做唔做得完；可供使用答嘅係係咪已經達到預定可使用狀態。設計可供使用先開始攤銷。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Keep evidence, not target profit
+  title_zh: 保留证据，不是追求目标利润
+  title_zh_hk: 保留證據，唔係追求目標利潤
+  en: >-
+    Retain the technical test record, commercial assessment, completion plan, committed resources and
+    dated cost records, and document why all conditions first coincide on 15 May. Expensing early work
+    does not mean it was wasteful. Equally, expensing everything to look cautious would not apply the
+    policy correctly. No useful life is supplied; do not invent one.
+  zh: >-
+    技术测试、商业评估、完工计划、已落实的资源和有日期的成本记录都应留存，并说明为什么六项条件在五月十五日首次同时满足。早期支出列为费用，不表示这些工作浪费。同理，为显得审慎而全数列支也不符合政策。题目没有提供使用年期，不能自行设定。
+  zh_hk: >-
+    技術測試、商業評估、完工計劃、已落實嘅資源同有日期嘅成本記錄都要保留，並說明點解六項條件喺五月十五日首次同時滿足。早期支出列做費用，唔代表嗰啲工作係浪費。同樣，為咗睇落審慎而全數列支，亦唔符合政策。題目冇提供使用年期，唔好自己作一個。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Capitalise from the evidence
+  title_zh: 从证据齐备之日起资本化
+  title_zh_hk: 由證據齊備嗰日起資本化
+  q1_en: Asset 90,000 from 15 May
+  q1_zh: 5月15日起资产90,000
+  q1_zh_hk: 5月15日起資產90,000
+  q2_en: Expense 170,000 stays expensed
+  q2_zh: 费用170,000不转回
+  q2_zh_hk: 費用170,000不撥回
+  s1_en: >-
+    A working prototype and interested customers do not set the recognition date. Capitalisation starts
+    when all six conditions are first demonstrated together.
+  s1_zh: 原型能运作、客户感兴趣，都不能决定确认日期。六项条件首次同时有据可查，才开始资本化。
+  s1_zh_hk: 原型運作到、客戶有興趣，都決定唔到確認日期。六項條件首次同時有證據證明，先開始資本化。
+  s2_en: >-
+    Earlier expensed costs are not restored by later success, and a recognised asset is not yet ready
+    for use.
+  s2_zh: 日后成功不能把早前已列支的成本转回资产；已确认的资产也不等于已可使用。
+  s2_zh_hk: 日後成功唔可以把早前已列支嘅成本撥返做資產；已確認嘅資產亦唔等於已經可以用。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 196

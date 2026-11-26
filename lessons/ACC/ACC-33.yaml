@@ -1,0 +1,293 @@
+id: ACC-33
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The sales target is met. Are the costs covered?
+title_zh: 销售额达标，就一定能覆盖成本吗？
+title_zh_hk: 銷售達標，為甚麼仍未必回本？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-33
+  kicker_en: ACC-33
+  kicker_zh: ACC-33
+  kicker_zh_hk: ACC-33
+  title_en: The sales target is met. Are the costs covered?
+  title_zh: 销售额达标，就一定能覆盖成本吗？
+  title_zh_hk: 銷售達標，為甚麼仍未必回本？
+  image: art/same-revenue-different-break-even-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    The owner of a kiosk wants the monthly dashboard to show green whenever revenue reaches 100,000. Is
+    that rule reliable? You manage Paper Corner, a fictional Kowloon stationery kiosk selling only premium
+    notebooks A and basic exercise-book packs B. You are not accepting a contract or setting a price.
+  zh: >-
+    店主拟把月销售收入达到十万港元设为仪表盘亮绿灯的条件。这个信号可靠吗？你管理九龙一家虚构文具摊“纸角”，只经营两类商品：A 是高档笔记本，B 是基础练习本套装。你的任务是判断信号，不是接单或定价。
+  zh_hk: >-
+    老闆想每月收入一到十萬港元，儀表板就亮綠燈。呢個訊號可唔可靠？你管理九龍一間虛構文具檔「紙角」，只賣兩類貨品：A 係高級筆記簿，B 係基本練習簿套裝。你要判斷訊號，唔係接單或者定價。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Opening forecast, HK$
+  title_zh: 初步预测，港元
+  title_zh_hk: 初步預測，港元
+  row1_en: A notebook
+  row1_zh: A 笔记本
+  row1_zh_hk: A 筆記簿
+  row2_en: B pack
+  row2_zh: B 练习本套装
+  row2_zh_hk: B 練習簿套裝
+  row3_en: Monthly fixed costs
+  row3_zh: 每月固定成本
+  row3_zh_hk: 每月固定營運成本
+  col1_en: Price
+  col1_zh: 售价
+  col1_zh_hk: 售價
+  col2_en: Variable cost
+  col2_zh: 变动成本
+  col2_zh_hk: 變動成本
+  col3_en: Forecast revenue
+  col3_zh: 预测收入
+  col3_zh_hk: 預測收入
+  c11: '40'
+  c12: '20'
+  c13: 80,000
+  c21: '20'
+  c22: '16'
+  c23: 20,000
+  c31: —
+  c32: —
+  c33: 35,200
+  footer_en: >-
+    80:20 is a revenue mix, not units
+  footer_zh: >-
+    80:20是收入占比，不是件数
+  footer_zh_hk: >-
+    80:20是收入比例，不是件數
+  s1_en: >-
+    A sells for 40 per notebook with 20 variable cost. B sells for 20 per pack with 16 variable cost.
+    Prices and unit costs stay constant.
+  s1_zh: A 每本售四十港元，变动成本二十；B 每套售二十港元，变动成本十六。售价和单位成本保持不变。
+  s1_zh_hk: A 每本賣四十港元，變動成本二十；B 每套賣二十港元，變動成本十六。售價同單位成本維持不變。
+  s2_en: >-
+    Monthly fixed operating costs are 35,200, including paid staffing and rent. Do not allocate them to
+    products before calculating contribution.
+  s2_zh: 每月固定经营成本三万五千二百，包括有薪人手和租金。计算边际贡献前，不要把固定成本分摊到个别产品。
+  s2_zh_hk: 每月固定營運成本三萬五千二百，包括有薪人手同租金。計邊際貢獻之前，唔好把固定成本分攤到個別產品。
+  s3_en: >-
+    The opening forecast is 80,000 from A and 20,000 from B. Those are sales dollars, not units. Capacity
+    can support either mix; supply does not guarantee customers will buy.
+  s3_zh: 初步预计 A 收入八万、B 收入二万。八十比二十是收入占比，不是件数之比。产能足以应付两种组合，但供应得来不等于一定有人买。
+  s3_zh_hk: 初步預計 A 收入八萬、B 收入二萬。八十比二十係收入比例，唔係件數比例。產能應付到兩種組合，但供應得到唔等於一定有人買。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Is green at 100,000 reliable?
+  title_zh: 十万亮绿灯可靠吗？
+  title_zh_hk: 十萬亮綠燈可靠嗎？
+  en: >-
+    At the opening revenue mix, what are the weighted contribution ratio, break-even revenue and operating
+    result at 100,000? Would you make the green rule conditional on that mix? Pause and vote.
+  zh: 初始销售组合下，加权边际贡献率和盈亏平衡销售额各是多少？收入十万时会盈利还是亏损？绿灯是否应注明组合前提？请暂停，投个票。
+  zh_hk: 按初步收入比例，加權邊際貢獻率同收支平衡收入係幾多？收入十萬嘅時候，營運結果係賺定蝕？綠燈應唔應該以呢個組合做前提？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Same 100,000, new mix
+  title_zh: 同样十万，组合改变
+  title_zh_hk: 同樣十萬，組合改變
+  step1_en: A 40,000; B 60,000
+  step1_zh: A 40,000；B 60,000
+  step1_zh_hk: A 40,000；B 60,000
+  step2_en: A replacement forecast, not extra sales
+  step2_zh: 取代原预测，不是额外销售
+  step2_zh_hk: 取代原預測，唔係額外銷售
+  step3_en: School order not accepted
+  step3_zh: 学校订单尚未接受
+  step3_zh_hk: 學校訂單仲未接受
+  s1_en: >-
+    The revised forecast includes a proposed school order for B, alongside weaker separately forecast
+    demand for A. It now shows 40,000 from A and 60,000 from B, still 100,000 in total.
+  s1_zh: 学校拟购买 B，销售团队另行调低了 A 的需求预测。修订后 A、B 收入分别为四万和六万，总收入仍是十万。
+  s1_zh_hk: 學校打算買 B，銷售團隊另外調低咗 A 嘅需求預測。修訂後 A、B 收入分別係四萬同六萬，總收入仍然係十萬。
+  s2_en: >-
+    This replaces the opening forecast. The school proposal has not been shown to cause A's decline, and
+    the order is not accepted.
+  s2_zh: 这份预测取代原预测，不是在原有 A 销售上再加六万的 B 收入。没有证据显示 A 的下跌由学校提案造成，学校订单也尚未接受。
+  s2_zh_hk: 呢份預測取代原預測，唔係喺原有 A 銷售上面再加六萬 B 收入。冇證據顯示 A 下跌係學校提案造成，學校訂單亦未接受。
+  s3_en: >-
+    Prices, variable unit costs and the 35,200 fixed costs are unchanged. For the revised break-even,
+    hold the 40 to 60 revenue mix constant.
+  s3_zh: 售价、单位变动成本和三万五千二百固定成本不变。计算修订后的盈亏平衡收入时，假设四十比六十的收入比例保持不变。
+  s3_zh_hk: 售價、單位變動成本同三萬五千二百固定成本不變。計修訂後嘅收支平衡收入時，假設四十比六十嘅收入比例維持不變。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Does 100,000 still cover costs?
+  title_zh: 十万还能覆盖成本吗？
+  title_zh_hk: 十萬仲夠回本嗎？
+  en: >-
+    Does 100,000 still cover fixed operating costs at the revised mix? Calculate the new break-even revenue,
+    reconcile it to whole product quantities, and say what the dashboard must show instead. Pause and
+    vote.
+  zh: 新组合下，十万收入还能覆盖固定经营成本吗？算出新的盈亏平衡销售额，用整件销量复核，再说明仪表盘应展示什么。请暂停，投个票。
+  zh_hk: 新組合之下，十萬收入仲夠唔夠支付固定營運成本？計出新嘅收支平衡收入，用整件銷量核對，再講儀表板應該顯示乜嘢。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Weight the revenue shares
+  title_zh: 按收入占比加权
+  title_zh_hk: 按收入比例加權
+  step1_en: A 50%, B 20% of revenue
+  step1_zh: A 50%，B 20%
+  step1_zh_hk: A 50%，B 20%
+  step2_en: >-
+    Opening 44%: profit 8,800
+  step2_zh: 初步44%：利润8,800
+  step2_zh_hk: 初步44%：利潤8,800
+  step3_en: >-
+    Revised 32%: loss 3,200
+  step3_zh: 修订32%：亏损3,200
+  step3_zh_hk: 修訂32%：虧損3,200
+  s1_en: >-
+    A contributes 40 minus 20, or 20 per notebook: 50 percent of its revenue. B contributes 20 minus 16,
+    or 4 per pack: 20 percent.
+  s1_zh: A 每本的边际贡献是四十减二十，即二十，占 A 收入的百分之五十。B 每套是二十减十六，即四，占 B 收入的百分之二十。
+  s1_zh_hk: A 每本嘅邊際貢獻係四十減二十，即係二十，佔 A 收入百分之五十。B 每套係二十減十六，即係四，佔 B 收入百分之二十。
+  s2_en: >-
+    Opening weighted ratio is 80 percent times 50 plus 20 percent times 20, or 44 percent. At 100,000,
+    contribution is 44,000 and operating profit is 8,800. Break-even revenue is 35,200 divided by 44 percent,
+    or 80,000.
+  s2_zh: >-
+    初步加权比率是百分之八十乘五十，加百分之二十乘二十，即百分之四十四。收入十万时，边际贡献四万四千，经营利润八千八百。盈亏平衡收入是三万五千二百除以百分之四十四，即八万。
+  s2_zh_hk: >-
+    初步加權比率係百分之八十乘五十，加百分之二十乘二十，即百分之四十四。收入十萬，邊際貢獻四萬四千，營運利潤八千八百。收支平衡收入係三萬五千二百除以百分之四十四，即係八萬。
+  s3_en: >-
+    Revised ratio is 40 percent times 50 plus 60 percent times 20, or 32 percent. At the same 100,000,
+    contribution is 32,000: a 3,200 operating loss.
+  s3_zh: 修订后比率是百分之四十乘五十，加百分之六十乘二十，即百分之三十二。收入同样十万，边际贡献只有三万二千，经营亏损三千二百。
+  s3_zh_hk: 修訂後比率係百分之四十乘五十，加百分之六十乘二十，即係百分之三十二。收入同樣十萬，邊際貢獻得三萬二千，營運虧損三千二百。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Calculate
+  kicker_en: Calculate
+  kicker_zh: 计算
+  kicker_zh_hk: 計算
+  title_en: The new break-even point
+  title_zh: 新的盈亏平衡点
+  title_zh_hk: 新嘅收支平衡點
+  step1_en: Break-even 35,200 ÷ 32% = 110,000
+  step1_zh: 平衡点35,200 ÷ 32% = 110,000
+  step1_zh_hk: 平衡點35,200 ÷ 32% = 110,000
+  step2_en: 1,100 notebooks; 3,300 packs
+  step2_zh: 1,100本；3,300套
+  step2_zh_hk: 1,100本；3,300套
+  step3_en: >-
+    Unit mix is 25:75, not 40:60
+  step3_zh: >-
+    件数比25:75，不是40:60
+  step3_zh_hk: >-
+    件數比25:75，唔係40:60
+  s1_en: >-
+    At the revised mix, break-even revenue is 35,200 divided by 32 percent, or 110,000: 30,000 above the
+    old break-even point and 10,000 above the current forecast.
+  s1_zh: 新组合下，盈亏平衡收入是三万五千二百除以百分之三十二，即十一万，比旧平衡点高三万，比现时预测高一万。
+  s1_zh_hk: 新組合之下，收支平衡收入係三萬五千二百除以百分之三十二，即係十一萬，比舊平衡點高三萬，比現時預測高一萬。
+  s2_en: >-
+    Check with units. A revenue of 44,000 is 1,100 notebooks; B revenue of 66,000 is 3,300 packs. Contribution
+    is 22,000 plus 13,200, exactly 35,200.
+  s2_zh: 用件数复核：A 收入四万四千，即一千一百本；B 收入六万六千，即三千三百套。边际贡献二万二千加一万三千二百，刚好三万五千二百。
+  s2_zh_hk: 用件數核對：A 收入四萬四千，即係一千一百本；B 收入六萬六千，即係三千三百套。邊際貢獻二萬二千加一萬三千二百，啱啱三萬五千二百。
+  s3_en: >-
+    That unit mix is 25 to 75, not 40 to 60. Use revenue weights with contribution percentages, or unit
+    weights with unit contributions, never a mixture.
+  s3_zh: 这时件数之比是二十五比七十五，不是四十比六十。收入占比要配边际贡献率，件数占比要配单位边际贡献，不能混用。
+  s3_zh_hk: 呢個時候件數比例係二十五比七十五，唔係四十比六十。收入比例要配邊際貢獻率，件數比例要配單位邊際貢獻，唔可以混用。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Repair the dashboard rule
+  title_zh: 改进仪表盘规则
+  title_zh_hk: 改善儀表板規則
+  en: >-
+    Show forecast revenue by product, total contribution, common fixed costs and the operating result,
+    with break-even revenue labelled by its mix. The revised 100,000 forecast should not be green. B still
+    adds 4 per pack before fixed costs, so do not reject the school order blindly; the case does not show
+    that rejecting it restores A demand.
+  zh: >-
+    仪表盘应显示分产品销售预测、总边际贡献、共同固定成本和经营结果，盈亏平衡销售额旁要标注组合前提。按新预测，十万不能亮绿灯。B 每套仍带来四港元边际贡献，所以不要盲目拒绝学校订单；本例不表示拒绝它能令
+    A 的需求回升。
+  zh_hk: >-
+    儀表板應該顯示分產品銷售預測、總邊際貢獻、共同固定成本同營運結果，收支平衡收入旁邊要註明組合前提。按新預測，十萬唔應該亮綠燈。B 每套仍然帶來四港元邊際貢獻，所以唔好盲目拒絕學校訂單；本例冇顯示拒絕咗就會令
+    A 嘅需求回升。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Revenue is not contribution
+  title_zh: 销售收入不等于边际贡献
+  title_zh_hk: 銷售收入不等於邊際貢獻
+  q1_en: >-
+    80:20 mix: break-even 80,000
+  q1_zh: >-
+    80:20：平衡点80,000
+  q1_zh_hk: >-
+    80:20：平衡點80,000
+  q2_en: >-
+    40:60 mix: break-even 110,000
+  q2_zh: >-
+    40:60：平衡点110,000
+  q2_zh_hk: >-
+    40:60：平衡點110,000
+  s1_en: >-
+    The same revenue can cover fixed costs or miss them, depending on how much of it comes from the higher-contribution
+    product.
+  s1_zh: 同样的收入，能否覆盖固定成本，取决于其中有多少来自边际贡献较高的产品。
+  s1_zh_hk: 同樣嘅收入夠唔夠支付固定成本，要睇入面有幾多來自邊際貢獻較高嘅產品。
+  s2_en: >-
+    A revenue-only green light cannot protect a contribution target when the mix changes. Show the mix
+    assumption beside every break-even figure.
+  s2_zh: 只看收入的绿灯，在组合变化时保不住边际贡献目标。每个盈亏平衡数字旁都要注明组合假设。
+  s2_zh_hk: 淨係睇收入嘅綠燈，組合一變就保唔住邊際貢獻目標。每個收支平衡數字旁邊都要註明組合假設。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 198

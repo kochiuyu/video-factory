@@ -1,0 +1,282 @@
+id: MKT-16
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A new pack. New sales?
+title_zh: 推出新包装，就有新生意吗？
+title_zh_hk: 推出新包裝，就有新生意嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-16
+  kicker_en: MKT-16
+  kicker_zh: MKT-16
+  kicker_zh_hk: MKT-16
+  title_en: A new pack. New sales?
+  title_zh: 推出新包装，就有新生意吗？
+  title_zh_hk: 推出新包裝，就有新生意嗎？
+  image: art/new-pack-new-sales-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Swire Coca-Cola's 2019 sustainability report describes introducing mini cans in Hong Kong after investing
+    in a production line. That shows another pack size, not whether it displaced existing sales. Now a
+    fictional Hong Kong biscuit maker is planning one month's production, and wonders whether a smaller
+    pack would bring new business.
+  zh: >-
+    太古可口可乐在二零一九年的可持续发展报告中提到，它投资了生产线，在香港推出迷你罐。这说明它多了一种包装容量，但说明不了新包装有没有抢走原有的销售。现在，一家虚构的香港饼干制造商在规划一个月的产量，想知道推出小包装能不能带来新生意。
+  zh_hk: >-
+    太古可口可樂喺二零一九年嘅可持續發展報告提到，佢投資咗生產線，喺香港推出迷你罐。呢個說明佢多咗一種包裝容量，但講唔到新包裝有冇搶走原有嘅銷售。而家，一間虛構嘅香港餅乾廠喺度規劃一個月嘅產量，想知推出細包裝可唔可以帶來新生意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: One month, two pack sizes
+  title_zh: 一个月，两种包装
+  title_zh_hk: 一個月，兩種包裝
+  row1_en: Selling price per pack
+  row1_zh: 每包售价
+  row1_zh_hk: 每包售價
+  row2_en: Complete variable cost
+  row2_zh: 完整变动成本
+  row2_zh_hk: 完整變動成本
+  row3_en: Contribution per pack
+  row3_zh: 每包贡献额
+  row3_zh_hk: 每包貢獻額
+  row4_en: Opening sales assumption
+  row4_zh: 初步销量假设
+  row4_zh_hk: 初步銷量假設
+  col1_en: Standard
+  col1_zh: 标准装
+  col1_zh_hk: 標準裝
+  col2_en: Small
+  col2_zh: 小包装
+  col2_zh_hk: 小包裝
+  c11: HK$30
+  c12: HK$20
+  c21: HK$18
+  c22: HK$12
+  c31: HK$12
+  c32: HK$8
+  c41_en: 1,000 without launch
+  c41_zh: 不推出时 1,000 包
+  c41_zh_hk: 不推出時 1,000 包
+  c42_en: 400 proposed
+  c42_zh: 建议推出 400 包
+  c42_zh_hk: 建議推出 400 包
+  footer_en: Launch cost HK$600, avoidable
+  footer_zh: 上市成本 HK$600，可避免
+  footer_zh_hk: 上市成本 HK$600，可避免
+  s1_en: >-
+    Without a launch, the maker expects 1,000 standard-pack purchases at 30 dollars. Variable cost is
+    18 dollars, leaving 12 dollars of contribution per pack before unchanged fixed costs.
+  s1_zh: 如果不推出新品，预计卖出一千包标准装，每包三十元。变动成本十八元，所以每包贡献十二元，固定成本不变。
+  s1_zh_hk: 如果唔推出新產品，預計賣一千包標準裝，每包三十蚊。變動成本十八蚊，所以每包貢獻十二蚊，固定成本唔變。
+  s2_en: >-
+    A smaller pack would sell for 20 dollars with 12 dollars of variable cost: 8 dollars of contribution.
+    The full launch forecasts 400 small packs and needs 600 dollars of avoidable design and promotion
+    cost.
+  s2_zh: 小包装每包卖二十元，变动成本十二元，贡献八元。完整的上市方案预计卖出四百小包，另外要六百元设计和推广费用，不推出就可以省下。
+  s2_zh_hk: 細包裝每包賣二十蚊，變動成本十二蚊，貢獻八蚊。完整嘅上市方案預計賣四百細包，另外要六百蚊設計同推廣費用，唔推出就可以慳返。
+  s3_en: >-
+    The first worksheet simply adds 400 times 8, minus 600, to existing contribution. It has not checked
+    where small-pack buyers come from, or whether production fits.
+  s3_zh: 初版电子表格直接把四百乘八、再减六百，加到原有贡献上。它没有核实小包装的顾客从哪里来，也没确认产能够不够。
+  s3_zh_hk: 初版試算表直接將四百乘八、再減六百，加落原有貢獻度。佢冇核實細包裝嘅顧客由邊度嚟，亦冇確認產能夠唔夠。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Approve on the worksheet?
+  title_zh: 按初版表格批准吗？
+  title_zh_hk: 按初版表格批准嗎？
+  en: >-
+    What extra contribution does the first worksheet predict, and would you approve on that basis? What
+    customer-source and capacity evidence do you need first? Pause and vote.
+  zh: 按初版电子表格，增量贡献是多少？你会据此批准上市吗？在这之前，你需要查明哪些顾客来源和产能资料？请暂停，投个票。
+  zh_hk: 按初版試算表，增量貢獻係幾多？你會唔會照呢個批准上市？喺之前，你需要查清楚邊啲顧客來源同產能資料？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Buyer sources and capacity
+  title_zh: 顾客来源与产能
+  title_zh_hk: 顧客來源與產能
+  step1_en: 150 switch from standard · 250 new
+  step1_zh: 150 包转买 · 250 包新增
+  step1_zh_hk: 150 包轉買 · 250 包新增
+  step2_en: Only 1,150 sealing slots
+  step2_zh: 封装产能只有 1,150 个
+  step2_zh_hk: 封裝產能只有 1,150 個
+  step3_en: 400 small → only 750 standard
+  step3_zh: 400 小包 → 只剩 750 标准装
+  step3_zh_hk: 400 小包 → 只剩 750 標準裝
+  s1_en: >-
+    A revised estimate splits the 400 small packs: 150 replace a standard pack that would otherwise have
+    been bought, and 250 are genuinely additional. Standard demand falls to 850.
+  s1_zh: 修订后的估算把四百小包拆开：其中一百五十包是顾客原本会买的标准装，现在改买小包；另外两百五十包才是真正新增的。标准装需求因此降到八百五十包。
+  s1_zh_hk: 修訂後嘅估算將四百細包拆開：當中一百五十包係顧客本來會買嘅標準裝，而家改買細包；另外二百五十包先係真正新增。標準裝需求因此跌到八百五十包。
+  s2_en: >-
+    Production confirms only 1,150 pack-sealing slots this month, and each pack of either size uses one.
+  s2_zh: 生产部门确认，本月只有一千一百五十个封装时段，不管哪种包装，每包都占一个。
+  s2_zh_hk: 生產部門確認，今個月得一千一百五十個封裝時段，無論邊種包裝，每包都佔一個。
+  s3_en: >-
+    The full launch supplies all 400 small packs, leaving 750 slots for standard. The other 100 standard
+    purchases are lost that month, not delayed or turned into small-pack sales.
+  s3_zh: 完整上市方案会生产全部四百小包，剩下七百五十个时段给标准装。其余一百包标准装的生意，本月就失去了，不会延后，也不会变成小包装的销售。
+  s3_zh_hk: 完整上市方案會生產晒四百細包，剩低七百五十個時段俾標準裝。其餘一百包標準裝嘅生意，今個月就冇咗，唔會延後，亦唔會變成細包裝嘅銷售。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Launch or standard-only?
+  title_zh: 上市，还是只卖标准装？
+  title_zh_hk: 上市，還是只賣標準裝？
+  en: >-
+    Would you approve the prepared launch, or keep the standard-only plan? Reconcile small-pack contribution,
+    switching losses and capacity losses. Pause and vote.
+  zh: 你会批准这个上市方案，还是维持只卖标准装？请把小包装的贡献、顾客转买的损失和产能挤占的损失分开算清楚。请暂停，投个票。
+  zh_hk: 你會批准呢個上市方案，定係維持淨係賣標準裝？請將細包裝嘅貢獻、顧客轉買嘅損失同產能擠佔嘅損失分開計清楚。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Split switching from additions
+  title_zh: 分清转买与新增购买
+  title_zh_hk: 分清轉買與新增購買
+  step1_en: >-
+    Worksheet: 400 × 8 − 600 = +2,600
+  step1_zh: 初版：400 × 8 − 600 = +2,600
+  step1_zh_hk: 初版：400 × 8 − 600 = +2,600
+  step2_en: >-
+    Switching: −150 × 12 → 12,800 (+800)
+  step2_zh: 转买：−150 × 12 → 12,800（+800）
+  step2_zh_hk: 轉買：−150 × 12 → 12,800（+800）
+  step3_en: >-
+    Capacity: 1,250 needed, 1,150 slots
+  step3_zh: 产能：需要 1,250，只有 1,150
+  step3_zh_hk: 產能：需要 1,250，只有 1,150
+  s1_en: >-
+    The first worksheet predicts 400 times 8, minus 600: 2,600 dollars extra. Standard-only contribution
+    is 1,000 times 12: 12,000 dollars.
+  s1_zh: 初版表格预计：四百乘八，减六百，增加二千六百元。只卖标准装的贡献是一千乘十二，一万二千元。
+  s1_zh_hk: 初版表格預計：四百乘八，減六百，多二千六百蚊。淨係賣標準裝嘅貢獻係一千乘十二，一萬二千蚊。
+  s2_en: >-
+    Switching removes 150 times 12: 1,800 dollars of standard contribution. Before capacity, the range
+    gives 12,800 dollars, still 800 more. Cannibalisation shrinks the gain but does not by itself kill
+    it.
+  s2_zh: >-
+    顾客转买，让标准装少了一百五十乘十二，即一千八百元贡献。如果不考虑产能，两款合计是一万二千八百元，仍然多八百元。蚕食令得益缩小，但单凭这点还不至于不划算。
+  s2_zh_hk: >-
+    顧客轉買，令標準裝少咗一百五十乘十二，即係一千八百蚊貢獻。如果唔考慮產能，兩款合計係一萬二千八百蚊，仍然多八百蚊。蠶食令得益縮細，但單憑呢點未至於唔划算。
+  s3_en: >-
+    But demand needs 850 plus 400: 1,250 slots, 100 more than the 1,150 available. Those 100 lost standard
+    purchases are on top of the 150 that switch.
+  s3_zh: 但需求要八百五十加四百，即一千二百五十个时段，比现有的一千一百五十个多出一百个。这一百包标准装的损失，是在一百五十包转买以外再加上去的。
+  s3_zh_hk: 但需求要八百五十加四百，即係一千二百五十個時段，比現有嘅一千一百五十個多出一百個。呢一百包標準裝嘅損失，係喺一百五十包轉買以外再加上去嘅。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Reconcile the prepared launch
+  title_zh: 算清完整上市方案
+  title_zh_hk: 算清完整上市方案
+  step1_en: 750 × 12 + 400 × 8 − 600 = 11,600
+  step1_zh: 750 × 12 + 400 × 8 − 600 = 11,600
+  step1_zh_hk: 750 × 12 + 400 × 8 − 600 = 11,600
+  step2_en: +3,200 − 1,800 − 1,200 − 600 = −400
+  step2_zh: +3,200 − 1,800 − 1,200 − 600 = −400
+  step2_zh_hk: +3,200 − 1,800 − 1,200 − 600 = −400
+  step3_en: Keep standard-only this month
+  step3_zh: 本月维持只卖标准装
+  step3_zh_hk: 本月維持只賣標準裝
+  s1_en: >-
+    With capacity, the launch gives 750 times 12, plus 400 times 8, minus 600: 11,600 dollars, which is
+    400 below standard-only.
+  s1_zh: 算上产能，上市方案是七百五十乘十二，加四百乘八，减六百，一万一千六百元，比只卖标准装少四百元。
+  s1_zh_hk: 計埋產能，上市方案係七百五十乘十二，加四百乘八，減六百，一萬一千六百蚊，比淨係賣標準裝少四百蚊。
+  s2_en: >-
+    Item by item: plus 3,200 from small packs, minus 1,800 from switching, minus 1,200 from capacity displacement,
+    minus 600 launch cost. This is contribution before fixed costs, not company profit.
+  s2_zh: 逐项来看：小包装加三千二百元，转买扣一千八百元，产能挤占再扣一千二百元，最后扣上市成本六百元。这是扣除固定成本前的贡献，不是公司总利润。
+  s2_zh_hk: 逐項睇：細包裝加三千二百蚊，轉買扣一千八百蚊，產能擠佔再扣一千二百蚊，最後扣上市成本六百蚊。呢個係未扣固定成本嘅貢獻，唔係公司總利潤。
+  s3_en: >-
+    Under these figures and a contribution objective, keep standard-only this month. That is not a permanent
+    ban on smaller packs.
+  s3_zh: 按这些数字，以贡献为目标，本月应该维持只卖标准装。但这不等于永远不能推出小包装。
+  s3_zh_hk: 按呢啲數字，以貢獻做目標，今個月應該維持淨係賣標準裝。但呢個唔等於永遠唔可以推出細包裝。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Redesign is not a free fix
+  title_zh: 改方案并非零成本
+  title_zh_hk: 改方案並非零成本
+  en: >-
+    A later offer could change quantity, positioning or channel, but it needs a new costed proposal and
+    demand estimate. It cannot assume it reaches only new buyers at the same cost. Test what purchasers
+    would otherwise buy and which output is displaced. Some switching can coexist with a profitable extension.
+  zh: >-
+    日后可以改变数量、定位或渠道，但要有新的成本方案和需求估算，不能假定成本不变，就只吸引新买家。要先验证小包装的买家本来会买什么，以及新增产量会挤掉哪些产品。有一些转买，产品线延伸仍然可以赚钱。
+  zh_hk: >-
+    日後可以改變數量、定位或者渠道，但要有新嘅成本方案同需求估算，唔可以假設成本唔變，就淨係吸引到新買家。要先驗證細包裝嘅買家本來會買乜，同埋新增產量會擠走邊啲產品。有啲轉買，產品線延伸仍然可以賺錢。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: New pack ≠ new business
+  title_zh: 新包装 ≠ 新生意
+  title_zh_hk: 新包裝 ≠ 新生意
+  q1_en: >-
+    Worksheet: +2,600 · reality: −400
+  q1_zh: 初版：+2,600 · 实际：−400
+  q1_zh_hk: 初版：+2,600 · 實際：−400
+  q2_en: Switching −1,800 · capacity −1,200
+  q2_zh: 转买 −1,800 · 产能 −1,200
+  q2_zh_hk: 轉買 −1,800 · 產能 −1,200
+  s1_en: >-
+    A new label is not necessarily new business. Ask what each buyer would otherwise purchase, then check
+    what the launch displaces in production.
+  s1_zh: 新包装不一定是新生意。先问每个买家本来会买什么，再查新品在生产上挤掉了什么。
+  s1_zh_hk: 新包裝唔一定係新生意。先問每個買家本來會買乜，再查新產品喺生產上擠走咗乜。
+  s2_en: >-
+    Switching and capacity are two separate losses: count both.
+  s2_zh: 转买和产能挤占是两笔不同的损失，两笔都要算。
+  s2_zh_hk: 轉買同產能擠佔係兩筆唔同嘅損失，兩筆都要計。
+  s3_en: >-
+    The biscuit maker, costs, demand and capacity are fictional, not Swire Coca-Cola data. Official scene
+    art is a teaching illustration only.
+  s3_zh: 饼干制造商、成本、需求和产能都是虚构的，不是太古可口可乐的数据。官方场景图只是教学插图。
+  s3_zh_hk: 餅乾廠、成本、需求同產能都係虛構嘅，唔係太古可口可樂嘅數據。官方場景圖只係教學插圖。
+duration_target_s: 198

@@ -1,0 +1,293 @@
+id: MKT-17
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: They want everything. What will they trade?
+title_zh: 每样都想要，哪一样肯放弃？
+title_zh_hk: 每樣都想要，哪一樣肯放棄？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-17
+  kicker_en: MKT-17
+  kicker_zh: MKT-17
+  kicker_zh_hk: MKT-17
+  title_en: They want everything. What will they trade?
+  title_zh: 每样都想要，哪一样肯放弃？
+  title_zh_hk: 每樣都想要，哪一樣肯放棄？
+  image: art/which-improvement-would-you-give-up-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In March 2026, the Hong Kong Federation of Youth Groups' Youth IDEAS think tank released research
+    on prepared dishes, discussing taste, price and transparency. Food choices have several dimensions.
+    Now a fictional Hong Kong meal service is choosing one weekly bundle of five meals for a small, funded
+    test. Twenty prospects rated lower price, more menu choice and a narrower delivery window all as important.
+  zh: >-
+    二零二六年三月，香港青年协会青年创研库发表了预制菜研究，谈到味道、价格和信息透明度。可见选择食物要考虑好几方面。现在，一家虚构的香港送餐服务，要从几个每周五餐的套餐中选一个，做小规模试行。二十位潜在顾客分别评分时，认为减价、多些菜式、缩短送餐时段都很重要。
+  zh_hk: >-
+    二零二六年三月，香港青年協會青年創研庫發表咗預製菜研究，講到味道、價錢同資訊透明度。可見揀食物要諗好多方面。而家，一間虛構嘅香港送餐服務，要喺幾個每星期五餐嘅套餐入面揀一個，做小規模試行。二十個潛在顧客分開評分嘅時候，覺得平啲、多啲菜式、送餐時段短啲都好重要。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Three feasible weekly bundles
+  title_zh: 三个可行的每周套餐
+  title_zh_hk: 三個可行的每週套餐
+  row1_en: A
+  row1_zh: A
+  row1_zh_hk: A
+  row2_en: B
+  row2_zh: B
+  row2_zh_hk: B
+  row3_en: C
+  row3_zh: C
+  row3_zh_hk: C
+  col1_en: Price / incremental cost
+  col1_zh: 价格／增量成本
+  col1_zh_hk: 價格／增量成本
+  col2_en: Daily menu options
+  col2_zh: 每天可选菜式
+  col2_zh_hk: 每天可選菜式
+  col3_en: Delivery window
+  col3_zh: 送达时段
+  col3_zh_hk: 送達時段
+  c11: HK$200 / HK$160
+  c12: '2'
+  c13_en: 2 hours
+  c13_zh: 2 小时
+  c13_zh_hk: 2 小時
+  c21: HK$240 / HK$200
+  c22: '6'
+  c23_en: 2 hours
+  c23_zh: 2 小时
+  c23_zh_hk: 2 小時
+  c31: HK$240 / HK$200
+  c32: '2'
+  c33_en: 30 minutes
+  c33_zh: 30 分钟
+  c33_zh_hk: 30 分鐘
+  footer_en: >-
+    Each: HK$40 per order
+  footer_zh: 每款每单贡献 HK$40
+  footer_zh_hk: 每款每單貢獻 HK$40
+  s1_en: >-
+    Bundle A costs 200 dollars a week, with two daily menu options and a two-hour window. B costs 240,
+    with six options and two hours. C costs 240, with two options and a 30-minute window.
+  s1_zh: >-
+    A 方案每周二百元，每天可选两款菜式，送达时段两小时。B 方案二百四十元，可选六款，两小时。C 方案也是二百四十元，可选两款，送达时段缩短到三十分钟。
+  s1_zh_hk: >-
+    A 方案每星期二百蚊，每日揀兩款菜式，送達時段兩個鐘。B 方案二百四十蚊，揀六款，兩個鐘。C 方案都係二百四十蚊，揀兩款，送達時段縮短到三十分鐘。
+  s2_en: >-
+    Incremental costs are 160 dollars for A and 200 for B and C, so each contributes 40 dollars per order.
+    Six options plus 30 minutes at 200 dollars would cost 240: a 40-dollar loss, with no subsidy.
+  s2_zh: >-
+    A 的增量成本是一百六十元，B 和 C 都是二百元，所以每张订单都贡献四十元。如果要六款菜式加三十分钟，只收二百元，成本就是二百四十元，每单亏四十元，而且没有补贴。
+  s2_zh_hk: >-
+    A 嘅增量成本係一百六十蚊，B 同 C 都係二百蚊，所以每張訂單都貢獻四十蚊。如果要六款菜式加三十分鐘，只收二百蚊，成本就係二百四十蚊，每單蝕四十蚊，而且冇補貼。
+  s3_en: >-
+    Portions, food safety and safe working schedules are identical. A shorter window comes from extra
+    routing capacity, not from pressure to drive faster.
+  s3_zh: 三个方案的份量、食物安全和安全的工作安排都一样。送达时段较短，是因为增加了路线安排的人手，不是要司机开快车。
+  s3_zh_hk: 三個方案嘅份量、食物安全同安全嘅工作安排都一樣。送達時段短啲，係因為加咗路線安排嘅人手，唔係要司機揸快車。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which bundle to test?
+  title_zh: 先试哪一个套餐？
+  title_zh_hk: 先試哪一個套餐？
+  en: >-
+    Which feasible bundle would you take forward, and why? What trade-off must the customer accept, and
+    why do the separate importance ratings not settle the choice? Pause and vote.
+  zh: 你会先拿哪一个可行套餐去试行？为什么？顾客要接受什么取舍？为什么逐项评出来的重要程度，决定不了这个选择？请暂停，投个票。
+  zh_hk: 你會先攞邊個可行套餐去試？點解？顧客要接受乜嘢取捨？點解逐項評出嚟嘅重要程度，決定唔到呢個選擇？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Choosing among complete cards
+  title_zh: 在完整方案之间选择
+  title_zh_hk: 在完整方案之間選擇
+  step1_en: A 8 · B 6 · C 4 · none 2
+  step1_zh: A 8 人 · B 6 人 · C 4 人 · 不选 2 人
+  step1_zh_hk: A 8 人 · B 6 人 · C 4 人 · 不選 2 人
+  step2_en: Each states the trade-off accepted
+  step2_zh: 每人说明接受了什么取舍
+  step2_zh_hk: 每人說明接受了甚麼取捨
+  step3_en: No money paid; one illustrative task
+  step3_zh: 没有付款；只是一次示范
+  step3_zh_hk: 沒有付款；只是一次示範
+  s1_en: >-
+    The same 20 prospects now see all three cards together, plus an equally visible none-of-these option,
+    with positions rotated. Eight choose A, six B, four C, and two choose none.
+  s1_zh: >-
+    同一批二十人，现在同时看三张完整的方案卡，还有同样显眼的“三款都不选”，卡片位置也会轮换。结果八人选 A，六人选 B，四人选 C，两人都不选。
+  s1_zh_hk: >-
+    同一批二十人，而家同時睇三張完整嘅方案卡，仲有一樣咁顯眼嘅「三款都唔揀」，卡嘅位置亦會輪換。結果八個揀 A，六個揀 B，四個揀 C，兩個都唔揀。
+  s2_en: >-
+    A choosers accept fewer menus and a wider window to keep the lower price. B choosers accept the wider
+    window for more menus. C choosers accept fewer menus for the narrower window. The two who chose none
+    prefer their existing arrangements.
+  s2_zh: >-
+    选 A 的人，为了较低的价格，接受菜式少、时段长。选 B 的人，为了菜式多，接受时段长。选 C 的人，为了时段短，接受菜式少。两个都不选的人，宁愿维持原来的安排。
+  s2_zh_hk: >-
+    揀 A 嘅人，為咗平啲，接受菜式少、時段長。揀 B 嘅人，為咗多菜式，接受時段長。揀 C 嘅人，為咗時段短，接受菜式少。兩個都唔揀嘅，寧願維持原本嘅安排。
+  s3_en: >-
+    No money is paid and no order is placed. This is one illustrative choice task, not a fitted conjoint
+    model or a representative survey.
+  s3_zh: 没有人付款，也没有人下单。这只是一次示范性的选择练习，不是已经估计参数的联合分析模型，也不是有代表性的调查。
+  s3_zh_hk: 冇人俾錢，亦冇人落單。呢個只係一次示範性嘅選擇練習，唔係已經估算參數嘅聯合分析模型，亦唔係有代表性嘅調查。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep or change?
+  title_zh: 维持还是改选？
+  title_zh_hk: 維持還是改選？
+  en: >-
+    Would you keep your bundle or change it after these choices? State the customer trade-off you would
+    test next, and one claim these results cannot support. Pause and vote.
+  zh: 看过这些选择后，你会维持原来的套餐，还是改选？请说出下一步想验证的顾客取舍，以及这些结果不能支持的一个说法。请暂停，投个票。
+  zh_hk: 睇完呢啲選擇之後，你會維持原本嘅套餐，定係改選？請講出下一步想驗證嘅顧客取捨，同埋呢啲結果唔支持得到嘅一個講法。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: A wish list is not an offer
+  title_zh: 愿望清单不等于方案
+  title_zh_hk: 願望清單不等於方案
+  step1_en: Ratings hide price and cost
+  step1_zh: 逐项评分看不到价格和成本
+  step1_zh_hk: 逐項評分看不到價格和成本
+  step2_en: Bundles make the sacrifice explicit
+  step2_zh: 完整方案让取舍变得明确
+  step2_zh_hk: 完整方案讓取捨變得明確
+  step3_en: >-
+    All three: HK$40 contribution
+  step3_zh: 三款贡献都是 HK$40
+  step3_zh_hk: 三款貢獻都是 HK$40
+  s1_en: >-
+    Separate importance ratings let every improvement sound desirable, without its price or operating
+    consequence.
+  s1_zh: 逐项评分时，每一项改进听起来都很好，因为看不到价格，也看不到营运上的代价。
+  s1_zh_hk: 逐項評分嘅時候，每一項改進聽落都好好，因為睇唔到價錢，亦睇唔到營運上嘅代價。
+  s2_en: >-
+    Complete bundles make the sacrifice explicit. A offers a lower price; B adds variety at a higher price;
+    C adds a narrower window at that same higher price. None offers everything at the lowest price.
+  s2_zh: 完整方案就把取舍摆了出来。A 价格较低；B 价格较高，但菜式多；C 同样价格较高，但送达时段短。没有一个方案能用最低价格提供所有好处。
+  s2_zh_hk: 完整方案就將取捨擺咗出嚟。A 平啲；B 貴啲，但菜式多；C 一樣貴啲，但送達時段短。冇一個方案可以用最平嘅價錢俾晒所有好處。
+  s3_en: >-
+    Each bundle contributes 40 dollars per order, so the counts cannot justify claiming the higher-priced
+    bundle earns more.
+  s3_zh: 三个方案每张订单都贡献四十元，所以单看人数，不能说价格较高的方案赚得更多。
+  s3_zh_hk: 三個方案每張訂單都貢獻四十蚊，所以淨睇人數，唔可以話貴啲嘅方案賺得多啲。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Read choices within alternatives
+  title_zh: 连同备选方案解读选择
+  title_zh_hk: 連同備選方案解讀選擇
+  step1_en: A most chosen here, not 40% share
+  step1_zh: A 最多人选，不是 40% 市场占有率
+  step1_zh_hk: A 最多人選，不是 40% 市場佔有率
+  step2_en: HK$40 gap ≠ willingness to pay
+  step2_zh: HK$40 差价 ≠ 支付意愿
+  step2_zh_hk: HK$40 差價 ≠ 支付意願
+  step3_en: Pick a learning priority
+  step3_zh: 先决定最想验证什么
+  step3_zh_hk: 先決定最想驗證甚麼
+  s1_en: >-
+    Eight, six, four and two make 20. A is the most selected card in this invited group, not a majority
+    of all buyers or a 40 percent market-share forecast. The opt-out matters: a favourite bundle may still
+    lose to a person's existing arrangement.
+  s1_zh: >-
+    八、六、四、二，合共二十人。A 是这批受邀者最常选的一款，但不代表过半顾客支持，更不是四成市场占有率的预测。“都不选”也很重要：最喜欢的套餐，未必胜过原有安排。
+  s1_zh_hk: >-
+    八、六、四、二，合共二十人。A 係呢批受邀者最多人揀嘅一款，但唔代表過半顧客支持，更加唔係四成市場佔有率嘅預測。「都唔揀」都好重要：最鍾意嘅套餐，未必好過原本安排。
+  s2_en: >-
+    Do not divide the 40-dollar price gap by the extra menus and call it willingness to pay, or assume
+    every C chooser values the narrower window at exactly 40 dollars. One task estimates no utilities.
+  s2_zh: 不要把四十元的差价，除以多出来的菜式，就当成支付意愿；也不能认为每个选 C 的人，正好愿意为短时段多付四十元。一次练习估计不了效用。
+  s2_zh_hk: 唔好將四十蚊嘅差價，除以多出嚟嘅菜式，就當係支付意願；亦唔可以話每個揀 C 嘅人，啱啱好願意為短時段多俾四十蚊。一次練習估算唔到效用。
+  s3_en: >-
+    A suits testing an accessible price, B variety, and C delivery predictability. State which customer
+    need the funded test addresses.
+  s3_zh: 想测试亲民价格，可以选 A；想测试菜式多样，选 B；想测试准时送达，选 C。关键是说清楚这次试行要验证哪一种顾客需要。
+  s3_zh_hk: 想測試親民價錢，可以揀 A；想測試菜式多樣，揀 B；想測試準時送達，揀 C。關鍵係講清楚今次試行要驗證邊種顧客需要。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Count purchases, not selections
+  title_zh: 算购买，不算选择
+  title_zh_hk: 算購買，不算選擇
+  en: >-
+    Do not count these 18 hypothetical selections as sales. Collect actual opt-in purchases and repeat
+    use on clear terms, verify fulfilled-order costs and delivery performance, and find out why people
+    decline. Changing profiles, prices or recruitment could change the result.
+  zh: >-
+    别把这十八个假设性的选择当成销量。要在条款清楚的前提下，收集顾客自愿下单和重复使用的实际数据，核实完成订单的成本和送达表现，也要了解有人为什么不买。换了方案组合、价格或招募对象，结果都可能不同。
+  zh_hk: >-
+    唔好將呢十八個假設性嘅選擇當成銷量。要喺條款清楚嘅前提下，收集顧客自願落單同重複使用嘅實際數據，核實完成訂單嘅成本同送達表現，亦要了解有人點解唔買。換咗方案組合、價錢或者招募對象，結果都可能唔同。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Make the trade-off visible
+  title_zh: 让取舍看得见
+  title_zh_hk: 讓取捨看得見
+  q1_en: A 8 · B 6 · C 4 · none 2 = 20
+  q1_zh: A 8 · B 6 · C 4 · 不选 2 = 20
+  q1_zh_hk: A 8 · B 6 · C 4 · 不選 2 = 20
+  q2_en: >-
+    Every bundle: HK$40 per order
+  q2_zh: 每款每单贡献 HK$40
+  q2_zh_hk: 每款每單貢獻 HK$40
+  s1_en: >-
+    Customers can rate everything as important. Show complete, feasible offers to learn what they will
+    give up.
+  s1_zh: 顾客可以说每一项都重要。要拿出完整、可行的方案，才知道他们愿意放弃什么。
+  s1_zh_hk: 顧客可以話每一項都重要。要攞出完整、可行嘅方案，先知佢哋願意放棄乜嘢。
+  s2_en: >-
+    A stated choice is not a market share, a willingness-to-pay estimate or a sale.
+  s2_zh: 表达出来的选择，不是市场占有率，不是支付意愿的估计，也不是销量。
+  s2_zh_hk: 講出嚟嘅選擇，唔係市場佔有率，唔係支付意願嘅估算，亦唔係銷量。
+  s3_en: >-
+    The meal service, bundles, costs and responses are original fiction. Official scene art is a teaching
+    illustration only.
+  s3_zh: 送餐服务、套餐、成本和顾客反应都是原创虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 送餐服務、套餐、成本同顧客反應都係原創虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

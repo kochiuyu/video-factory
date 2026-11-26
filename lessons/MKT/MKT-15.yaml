@@ -1,0 +1,294 @@
+id: MKT-15
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The same benefit. A different frame?
+title_zh: 同一项好处，换个说法会怎样？
+title_zh_hk: 同一項好處，換個說法會怎樣？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-15
+  kicker_en: MKT-15
+  kicker_zh: MKT-15
+  kicker_zh_hk: MKT-15
+  title_en: The same benefit. A different frame?
+  title_zh: 同一项好处，换个说法会怎样？
+  title_zh_hk: 同一項好處，換個說法會怎樣？
+  image: art/same-benefit-different-frame-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In May 2026, Hong Kong's Consumer Council found that air-conditioner extended warranties varied widely,
+    and advised consumers to read the terms. A headline cannot replace an explanation of what customers
+    receive. Now a fictional Hong Kong maintenance company is inviting households to book a routine inspection
+    before summer, and must choose one lead headline.
+  zh: >-
+    二零二六年五月，香港消费者委员会发现，空调延长保修的安排差别很大，提醒消费者细看条款。标题再吸引，也代替不了对服务内容的说明。现在，一家虚构的香港保养公司，准备邀请家庭在入夏前预约例行检查，需要为邀请选一个主标题。
+  zh_hk: >-
+    二零二六年五月，香港消費者委員會發現，冷氣機延長保用嘅安排分別好大，提醒消費者睇清楚條款。標題幾吸引，都代替唔到對服務內容嘅說明。而家，一間虛構嘅香港保養公司，準備邀請家庭喺入夏之前預約例行檢查，要為邀請揀一個主標題。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Same offer, two headlines
+  title_zh: 同一服务，两个标题
+  title_zh_hk: 同一服務，兩個標題
+  row1_en: A · avoided inconvenience
+  row1_zh: A · 避免不便
+  row1_zh_hk: A · 避免不便
+  row2_en: B · preserved convenience
+  row2_zh: B · 维持便利
+  row2_zh_hk: B · 維持便利
+  row3_en: HK$600 annual booking plan
+  row3_zh: HK$600 年度预约计划
+  row3_zh_hk: HK$600 年度預約計劃
+  col1_en: Lead wording
+  col1_zh: 主打字句
+  col1_zh_hk: 主打字句
+  col2_en: Detail
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11_en: Don't leave booking to the last minute
+  c11_zh: 别等到最后一刻才预约
+  c11_zh_hk: 別等到最後一刻才預約
+  c12_en: Same cost, photo, terms
+  c12_zh: 成本、照片、条款相同
+  c12_zh_hk: 成本、照片、條款相同
+  c21_en: Keep booking comfortably planned
+  c21_zh: 提早安排更从容
+  c21_zh_hk: 提早安排更從容
+  c22_en: No timer, shortage or warning
+  c22_zh: 无倒数、无紧缺、无警告
+  c22_zh_hk: 無倒數、無緊缺、無警告
+  c31_en: 1 inspection + 2 reminders
+  c31_zh: 1 次检查 + 2 则提示
+  c31_zh_hk: 1 次檢查 + 2 則提示
+  c32_en: >-
+    Non-members: same check, HK$600
+  c32_zh: 非会员：同一检查 HK$600
+  c32_zh_hk: 非會員：同一檢查 HK$600
+  footer_en: No repairs, parts or guarantee
+  footer_zh: 不含维修、零件或保证
+  footer_zh_hk: 不含維修、零件或保證
+  s1_en: >-
+    Headline A says: avoid leaving routine maintenance booking to the last minute. Headline B says: keep
+    routine maintenance booking comfortably planned ahead.
+  s1_zh: 标题 A 说：例行保养，别等到最后一刻才预约。标题 B 说：例行保养，提早安排更从容。
+  s1_zh_hk: 標題 A 話：例行保養，咪等到最後一刻先預約。標題 B 話：例行保養，早啲安排更從容。
+  s2_en: >-
+    Both cost the same, with the same photo, type and equally prominent terms. Neither uses a timer, a
+    shortage claim or a warning image.
+  s2_zh: 两版的成本、照片、字体都一样，条款也同样显眼。两版都不用倒数计时，不说名额紧张，也不用警告图片。
+  s2_zh_hk: 兩版嘅成本、相片、字體都一樣，條款亦一樣咁顯眼。兩版都唔用倒數計時，唔話名額緊張，亦唔用警告圖片。
+  s3_en: >-
+    The optional 600-dollar plan gives one inspection of one eligible air conditioner plus two reminders.
+    It excludes emergency response, repairs, parts and any guarantee. Non-members can book the same inspection
+    for 600 dollars; the reminders are the only extra.
+  s3_zh: >-
+    六百元的自选计划，包括一部合资格空调的一次检查和两次提醒，不包括紧急服务、维修和零件，也不保证不出故障。非会员也可以六百元预约同一项检查，提醒是唯一的额外服务。
+  s3_zh_hk: >-
+    六百蚊嘅自選計劃，包一部合資格冷氣機嘅一次檢查同兩次提示，唔包緊急服務、維修同零件，亦唔保證唔會壞。非會員都可以六百蚊預約同一項檢查，提示係唯一嘅額外服務。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Headline A or B?
+  title_zh: 选标题 A 还是 B？
+  title_zh_hk: 選標題 A 還是 B？
+  en: >-
+    Which headline would you choose for households arranging their inspection before summer? What stays
+    identical in the offer, and what interpretation might your wording encourage? Pause and vote.
+  zh: 要邀请家庭在入夏前预约检查，你会选哪个标题？服务内容哪些完全一样？你的措辞又可能让人怎样理解？请暂停，投个票。
+  zh_hk: 要邀請家庭喺入夏前預約檢查，你會揀邊個標題？服務內容有邊啲完全一樣？你嘅用字又可能令人點樣理解？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Eight exploratory interviews
+  title_zh: 八个探索性访谈
+  title_zh_hk: 八個探索性訪談
+  step1_en: >-
+    Forgot before: A makes booking concrete
+  step1_zh: 曾忘记预约：A 较具体
+  step1_zh_hk: 曾忘記預約：A 較具體
+  step2_en: >-
+    Calendar keepers: A sounds like blame
+  step2_zh: 平时有日程：A 像在说我大意
+  step2_zh_hk: 平時有日程：A 像在說我大意
+  step3_en: All 8 can explain price and scope
+  step3_zh: 8 人都说得出价格和范围
+  step3_zh_hk: 8 人都說得出價格和範圍
+  s1_en: >-
+    Eight one-to-one interviews: four people who once forgot to book, and four who keep maintenance calendars.
+    Everyone sees both mock-ups. F1 says A reminds them of the booking task; F2 finds A useful but would
+    still compare the separate inspection.
+  s1_zh: >-
+    研究员做了八个一对一访谈：四人曾经忘记预约，四人平时有保养日程，每人都看两版。F1 说，A 提醒他有预约这件事；F2 觉得 A 有用，但还是会比较单次检查。
+  s1_zh_hk: >-
+    研究員做咗八個一對一訪談：四個曾經忘記預約，四個平時有保養日程，每人都睇兩版。F1 話，A 提醒佢有預約呢件事；F2 覺得 A 有用，但都會比較單次檢查。
+  s2_en: >-
+    C1 says A sounds as if they were careless, and B respects how they plan. C2 finds B calm, but the
+    reminders add little.
+  s2_zh: C1 说，A 好像在说他大意，B 比较尊重他本来的安排。C2 觉得 B 语气平和，但提醒对他没什么用。
+  s2_zh_hk: C1 話，A 好似話佢大意，B 比較尊重佢本身嘅安排。C2 覺得 B 語氣平和，但提示對佢冇乜用。
+  s3_en: >-
+    The other four show no clear preference. All eight correctly explain the price, optionality, one-inspection
+    scope and exclusions. These are illustrative comments, not votes.
+  s3_zh: 另外四人没有明确偏好。八个人都能正确说出价格、可自愿参加、只有一次检查以及不包括的项目。这些只是举例的意见，不是投票。
+  s3_zh_hk: 另外四個冇明確偏好。八個人都講得啱價錢、可以自願參加、只有一次檢查同埋唔包嘅項目。呢啲只係舉例嘅意見，唔係投票。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep, switch or revise?
+  title_zh: 维持、改选还是改写？
+  title_zh_hk: 維持、改選還是改寫？
+  en: >-
+    Would you keep your headline, switch, or revise it? Use the interviews without claiming a sales winner,
+    and name one comprehension measure and one voluntary behaviour measure. Pause and vote.
+  zh: 你会维持原来的标题、改选，还是改写？请参考访谈，但别声称哪版卖得更好，再提出一项理解程度指标和一项自愿行为指标。请暂停，投个票。
+  zh_hk: 你會維持原本嘅標題、改選，定係改寫？請參考訪談，但唔好話邊版賣得好啲，再提出一項理解程度指標同一項自願行為指標。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Separate offer from emphasis
+  title_zh: 区分服务内容与重点
+  title_zh_hk: 區分服務內容與重點
+  step1_en: Same price, inspection, exclusions
+  step1_zh: 价格、检查、排除项目相同
+  step1_zh_hk: 價格、檢查、排除項目相同
+  step2_en: Four comments are examples, not votes
+  step2_zh: 4 则意见是例子，不是票数
+  step2_zh_hk: 4 則意見是例子，不是票數
+  step3_en: A is not proven loss aversion
+  step3_zh: A 不等于已证实的损失框架
+  step3_zh_hk: A 不等於已證實的損失框架
+  s1_en: >-
+    The price, inspection, reminders and exclusions do not change. A puts an inconvenience to avoid in
+    front; B puts a planning benefit to keep. Neither adds a repair entitlement.
+  s1_zh: 价格、检查、提醒和不包括的项目都没变。A 强调要避免的麻烦，B 强调要保持的从容。两版都没有多给任何维修权益。
+  s1_zh_hk: 價錢、檢查、提示同唔包嘅項目都冇變。A 強調要避免嘅麻煩，B 強調要保持嘅從容。兩版都冇多俾任何維修權益。
+  s2_en: >-
+    F1 and F2 suggest A makes the task stand out. C1 and C2 suggest B feels respectful, but a pleasant
+    tone does not create a need for reminders. With four selected comments and four neutral interviews,
+    there is no majority or conversion rate.
+  s2_zh: >-
+    F1 和 F2 显示，A 能让人留意到预约这件事。C1 和 C2 显示，B 让人觉得受尊重，但语气好，不等于需要提醒。四则挑选出来的意见，加上四个没有偏好的访谈，得不出多数，也得不出转化率。
+  s2_zh_hk: >-
+    F1 同 F2 顯示，A 可以令人留意到預約呢件事。C1 同 C2 顯示，B 令人覺得受尊重，但語氣好，唔等於需要提示。四則揀出嚟嘅意見，加四個冇偏好嘅訪談，得唔出多數，亦得唔出轉化率。
+  s3_en: >-
+    In framing research, avoiding a bad outcome can itself be a gain-framed appeal. Do not label A a proven
+    loss-aversion technique just because it uses a negative word.
+  s3_zh: 在框架效应研究中，避免坏结果本身也可以算是收益框架。不要因为 A 用了负面字眼，就说它是已证实的损失规避技巧。
+  s3_zh_hk: 喺框架效應研究入面，避免壞結果本身都可以當係收益框架。唔好因為 A 用咗負面字眼，就話佢係已證實嘅損失規避技巧。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Choose for the stated audience
+  title_zh: 针对受众的初步选择
+  title_zh_hk: 針對受眾的初步選擇
+  step1_en: >-
+    Broad planners: B as a calm default
+  step1_zh: 一般预先安排的家庭：B 较平和
+  step1_zh_hk: 一般預先安排的家庭：B 較平和
+  step2_en: >-
+    A: if salience matters, no false urgency
+  step2_zh: A：要突出预约，但不制造急迫
+  step2_zh_hk: A：要突出預約，但不製造急迫
+  step3_en: A revision is a new, untested version
+  step3_zh: 改写是新版本，尚未测试
+  step3_zh_hk: 改寫是新版本，尚未測試
+  s1_en: >-
+    For an invitation aimed broadly at households planning ahead, B is a defensible calm default.
+  s1_zh: 如果邀请对象是一般会预先安排的家庭，B 是说得通的平和选择。
+  s1_zh_hk: 如果邀請對象係一般會預先安排嘅家庭，B 係講得通嘅平和選擇。
+  s2_en: >-
+    A remains defensible if making the booking task stand out is the priority, and later checks show no
+    false urgency.
+  s2_zh: 如果重点是让人留意预约这件事，而之后的检查也显示没有制造虚假的急迫感，A 也说得通。
+  s2_zh_hk: 如果重點係令人留意預約呢件事，而之後嘅檢查亦顯示冇製造虛假嘅急迫感，A 都講得通。
+  s3_en: >-
+    A revision such as 'plan your routine inspection ahead of summer' can remove implied criticism, but
+    it is a new version, not a tested winner. Keep every term equally prominent.
+  s3_zh: 也可以改写成“入夏前，提早安排例行检查”，去掉暗含的批评，但这是新版本，并不是已经测试过的胜出版本。所有条款仍要同样显眼。
+  s3_zh_hk: 亦可以改寫成「入夏前，提早安排例行檢查」，去咗暗含嘅批評，但呢個係新版本，唔係已經測試過嘅勝出版本。所有條款仍然要一樣咁顯眼。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Validate understanding first
+  title_zh: 先验证理解，再谈回应
+  title_zh_hk: 先驗證理解，再談回應
+  en: >-
+    Ask new participants, without prompting, what 600 dollars buys and whether emergency repairs are included,
+    and record specific misunderstandings. A voluntary next step could be an availability enquiry, which
+    is not a payment. And someone who understands both versions and declines, because they already keep
+    reminders, has made an informed choice, not a failure to overcome with pressure.
+  zh: >-
+    请新参加者在没有提示的情况下，说说六百元买到什么、包不包括紧急维修，并记下具体的误解。自愿的下一步行为，可以是查询可预约的时段，但查询不等于付款。还有，如果有人完全看懂两版，却因为自己已有提醒而拒绝，这是知情的选择，不是要用压力去克服的失败。
+  zh_hk: >-
+    請新參加者喺冇提示嘅情況下，講吓六百蚊買到乜、包唔包緊急維修，再記低具體嘅誤解。自願嘅下一步行為，可以係查詢有冇時段預約，但查詢唔等於俾錢。仲有，如果有人完全睇得明兩版，但因為自己已經有提示而拒絕，呢個係知情嘅選擇，唔係要用壓力去克服嘅失敗。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Same offer, different emphasis
+  title_zh: 同一服务，不同重点
+  title_zh_hk: 同一服務，不同重點
+  q1_en: >-
+    A: avoid the last-minute booking
+  q1_zh: A：别等到最后一刻
+  q1_zh_hk: A：別等到最後一刻
+  q2_en: >-
+    B: keep booking planned ahead
+  q2_zh: B：提早安排更从容
+  q2_zh_hk: B：提早安排更從容
+  s1_en: >-
+    Framing changes emphasis, not the offer. Keep the price, scope and exclusions equally visible in every
+    version.
+  s1_zh: 措辞改变的是重点，不是服务内容。每一版都要让价格、范围和不包括的项目同样显眼。
+  s1_zh_hk: 用字改變嘅係重點，唔係服務內容。每一版都要令價錢、範圍同唔包嘅項目一樣咁顯眼。
+  s2_en: >-
+    Test understanding before response, and never hide that non-members can buy the same inspection.
+  s2_zh: 先测试理解，再看回应；也不能隐瞒非会员可以用同样价格买到同一项检查。
+  s2_zh_hk: 先測試理解，再睇回應；亦唔可以隱瞞非會員可以用同一個價錢買到同一項檢查。
+  s3_en: >-
+    The company, its plan, prices and interviews are original fiction. Official scene art is a teaching
+    illustration only.
+  s3_zh: 公司、计划、价格和访谈都是原创虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 公司、計劃、價錢同訪談都係原創虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

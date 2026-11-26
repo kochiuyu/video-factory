@@ -101,7 +101,7 @@ def _label_text(labels) -> str:
     return "".join(parts)
 
 
-def _label_row_centres(path) -> list[list[float]]:
+def _label_row_centres(path, clearance: int = 6) -> list[list[float]]:
     """Vertical ink centre of each count label, grouped by the row it sits on.
 
     The centre is the middle of the ink, so a thin 一 is measured the same way as 三.
@@ -137,7 +137,7 @@ def _label_row_centres(path) -> list[list[float]]:
     window = max(24, int(46 * h / 720))
     prev_bottom = 0
     for y0, y1 in rows:
-        band_bot = max(0, y0 - 6)
+        band_bot = max(0, y0 - clearance)
         band_top = max(prev_bottom + 3, y0 - window)
         prev_bottom = y1
         if band_bot <= band_top:
@@ -1700,6 +1700,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-NUM-05": ["lesson_hook", "pair_counters", "pair_counters", "pair_counters", "lesson_takeaway"],
             "P1-NUM-06": ["lesson_hook", "part_whole", "part_whole", "part_whole", "lesson_takeaway"],
             "P1-NUM-07": ["lesson_hook", "part_whole", "part_whole", "part_whole", "lesson_takeaway"],
+            "P1-NUM-08": [
+                "lesson_hook", "part_whole", "part_whole", "part_whole", "part_whole", "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -1867,6 +1870,44 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(labels_for(recap7, "zh_hk")["lines"][3], "五減二係三。")
         self.assertEqual(labels_for(recap7, "en")["bonds"], [[3, 2], [2, 3], [5], [3, -2]])
         self.assertEqual(labels_for(recap7, "zh_hk")["lines"][2], "係。五仲係五。")
+        eight = load_lesson(P1 / "P1-NUM-08.yaml")
+        zeros = [beat for beat in eight["beats"] if beat.get("scene") == "part_whole"]
+        self.assertEqual(
+            [(b.get("a"), b.get("b"), b.get("leave")) for b in zeros],
+            [(0, 4, None), (4, 0, None), (4, 0, "b"), (4, 0, "a")],
+        )
+        self.assertEqual(count_event(zeros[0]), (1, 2))
+        self.assertEqual(labels_for(zeros[0], "en")["equation"], ["4", "=", "0", "+", "4"])
+        self.assertEqual(labels_for(zeros[1], "en")["equation"], ["4", "=", "4", "+", "0"])
+        self.assertEqual(labels_for(zeros[0], "zh")["left"], "零")
+        self.assertEqual(labels_for(zeros[0], "zh_hk")["right"], "四")
+        self.assertEqual(labels_for(zeros[2], "en")["covered_equation"], ["4", "-", "0", "=", "4"])
+        self.assertEqual(labels_for(zeros[3], "en")["covered_equation"], ["4", "-", "4", "=", "0"])
+        self.assertEqual(zeros[0]["s3_en"], "Bring them together. Zero and four make four. Together they make four.")
+        self.assertEqual(zeros[2]["s3_en"], "Take away zero. Four are left.")
+        self.assertEqual(zeros[2]["s3_zh"], "拿走零个，剩下四个。")
+        self.assertEqual(zeros[2]["s3_zh_hk"], "拿走零個，剩低四個。")
+        self.assertEqual(zeros[3]["s3_zh_hk"], "拿走四個，剩低零個。")
+        self.assertNotIn("sum", zeros[0]["s3_en"].lower())
+        self.assertNotIn("difference", zeros[3]["s3_en"].lower())
+        recap8 = next(beat for beat in eight["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap8), 4)
+        self.assertEqual(labels_for(recap8, "en")["title"], "What does zero change?")
+        self.assertEqual(labels_for(recap8, "zh")["title"], "零改变什么？")
+        self.assertEqual(labels_for(recap8, "zh_hk")["title"], "零改變咗咩？")
+        self.assertEqual(
+            labels_for(recap8, "en")["lines"],
+            [
+                "Zero and four make four.",
+                "Four and zero make four too.",
+                "Nothing. Four stays four.",
+                "Take four away, zero are left.",
+            ],
+        )
+        self.assertEqual(labels_for(recap8, "zh")["lines"][2], "没有改变。还是四。")
+        self.assertEqual(labels_for(recap8, "zh_hk")["lines"][2], "冇改變。仲係四。")
+        self.assertEqual(labels_for(recap8, "zh_hk")["lines"][3], "拿走四個，剩低零個。")
+        self.assertEqual(labels_for(recap8, "en")["bonds"], [[0, 4], [4, 0], [4], [0, -4]])
 
     def test_part_whole_bounds(self):
         good = {
@@ -1887,7 +1928,19 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(scene_problems(good), [])
         self.assertEqual(count_event(good), (1, 2))
         self.assertEqual(labels_for(good, "zh")["whole_word"], "七")
-        self.assertTrue(scene_problems(dict(good, a=0)))
+        self.assertTrue(scene_problems(dict(good, a=0, b=0)))
+        self.assertEqual(scene_problems(dict(good, a=0, b=4)), [])
+        self.assertEqual(count_event(dict(good, a=0, b=4)), (1, 2))
+        self.assertEqual(labels_for(dict(good, a=0, b=4), "en")["equation"], ["4", "=", "0", "+", "4"])
+        self.assertEqual(labels_for(dict(good, a=0, b=4), "zh")["left"], "零")
+        self.assertEqual(
+            labels_for(dict(good, a=4, b=0, leave="b"), "en")["covered_equation"],
+            ["4", "-", "0", "=", "4"],
+        )
+        self.assertEqual(
+            labels_for(dict(good, a=4, b=0, leave="a"), "en")["covered_equation"],
+            ["4", "-", "4", "=", "0"],
+        )
         self.assertTrue(scene_problems(dict(good, b=10)))
         self.assertTrue(scene_problems(dict(good, a=9, b=9, whole=19)))
         self.assertTrue(scene_problems(dict(good, also=3)))
@@ -1919,7 +1972,9 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(scene_problems(hook), [])
         self.assertEqual(labels_for(hook, "en")["a"], 3)
         self.assertEqual(labels_for(dict(hook, a=4, b=8), "zh")["b"], 8)
-        self.assertTrue(scene_problems(dict(hook, a=0, b=4)))
+        self.assertEqual(scene_problems(dict(hook, a=0, b=4)), [])
+        self.assertEqual(labels_for(dict(hook, a=0, b=4), "en")["a"], 0)
+        self.assertTrue(scene_problems(dict(hook, a=0, b=0)))
         recap = {
             "visual": "animated",
             "scene": "lesson_takeaway",
@@ -1943,8 +1998,11 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertTrue(scene_problems(dict(recap, bonds=[])))
         self.assertTrue(scene_problems(dict(recap, bonds=[[3, 4], [1], [2], [3], [4]])))
         self.assertEqual(scene_problems(dict(recap, bonds=[[7, 0]])), [])
+        self.assertEqual(scene_problems(dict(recap, bonds=[[0, 4], [4, 0], [4], [0, -4]])), [])
+        self.assertTrue(scene_problems(dict(recap, bonds=[[0, 0]])))
         self.assertEqual(scene_problems(dict(recap, bonds=[[3, -2]])), [])
         self.assertTrue(scene_problems(dict(recap, bonds=[[3, -10]])))
+        self.assertTrue(scene_problems(dict(recap, bonds=[[0, -10]])))
 
     def test_ordinal_row_counts_a_place_or_a_total(self):
         left = {
@@ -2087,6 +2145,25 @@ class SceneRegistryTest(unittest.TestCase):
         ]
         found = removal_marks(yue, 3.6, 2.4, 2, 3)
         self.assertAlmostEqual(found[0], 0.45, places=2)
+        self.assertAlmostEqual(found[1], 1.45, places=2)
+        take_none = [
+            {"text": "Take", "start": 3.7},
+            {"text": "zero", "start": 4.15},
+            {"text": "away", "start": 4.5},
+            {"text": "Four", "start": 5.05},
+        ]
+        found = removal_marks(take_none, 3.6, 2.4, 0, 4)
+        self.assertIsNotNone(found)
+        self.assertAlmostEqual(found[0], 0.55, places=2)
+        self.assertAlmostEqual(found[1], 1.45, places=2)
+        take_all = [
+            {"text": "拿走", "start": 3.7},
+            {"text": "四个", "start": 4.1},
+            {"text": "剩下", "start": 4.6},
+            {"text": "零个", "start": 5.05},
+        ]
+        found = removal_marks(take_all, 3.6, 2.4, 4, 0)
+        self.assertAlmostEqual(found[0], 0.5, places=2)
         self.assertAlmostEqual(found[1], 1.45, places=2)
 
     def test_xiao_yi_kicker_is_two_separated_marks(self):
@@ -2742,6 +2819,197 @@ class PartWholeRenderTest(unittest.TestCase):
                         used.add(j)
                         break
         self.assertGreaterEqual(pairs, count, f"{path.name} strokes {dark_runs} diam {diam:.0f}")
+
+    def test_zero_part_is_a_mat_and_taking_all_leaves_empty_circles(self):
+        """Zero is an empty mat. Taking nothing leaves the four. Taking all leaves empty circles."""
+        import shutil
+        import subprocess
+        import tempfile
+
+        from anim import render_animated_clip
+
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
+        if shutil.which("ffmpeg") is None:
+            self.skipTest("ffmpeg is optional")
+
+        def render(beat, frame, lang, holds, words=None):
+            dest = root / f"out-{frame[0]}-{lang}.mp4"
+            render_animated_clip(
+                beat, {"format": "9:16" if frame[1] > frame[0] else "16:9"},
+                label_lang_code=lang,
+                holds=holds, still_idx=list(range(len(holds))),
+                pages=[str(i) for i in range(len(holds))],
+                audio=audio, dest=dest, cache_dir=root / "cache",
+                captions=False, progress_bar=False, frame=frame, fps=8,
+                words=words,
+            )
+            silent = max((root / "cache" / lang).glob("*.mp4"), key=lambda p: p.stat().st_mtime)
+            duration = float(subprocess.check_output(
+                ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                 "-of", "csv=p=0", str(silent)],
+                text=True,
+            ))
+            return silent, max(0, int(duration * 8) - 1)
+
+        def grab(silent, n, path):
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-i", str(silent),
+                 "-vf", f"select=eq(n\\,{n})", "-frames:v", "1", str(path)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+
+        join = self._beat(0, 4, None, "")
+        join["s2_en"] = "Zero. Four."
+        join["s2_zh"] = "零，四。"
+        join["s2_zh_hk"] = "零，四。"
+        stay = self._beat(4, 0, None, "")
+        stay["leave"] = "b"
+        stay["s3_en"] = "Take away zero. Four are left."
+        gone = self._beat(4, 0, None, "")
+        gone["leave"] = "a"
+        gone["s3_en"] = "Take four away, zero are left."
+        words = [
+            {"text": "Four", "start": 0.55},
+            {"text": "Zero", "start": 0.95},
+            {"text": "Take", "start": 1.45},
+            {"text": "four", "start": 1.9},
+            {"text": "away", "start": 2.2},
+            {"text": "zero", "start": 2.7},
+            {"text": "are", "start": 3.0},
+            {"text": "left", "start": 3.3},
+        ]
+        with tempfile.TemporaryDirectory(prefix="vf-zero-") as tmp:
+            root = Path(tmp)
+            audio = root / "silent.wav"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                 "-t", "4", "-c:a", "pcm_s16le", str(audio)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            for frame in ((1280, 720), (720, 1280)):
+                silent, last = render(join, frame, "en", [0.4, 1.2, 0.6])
+                shot = root / f"join-{frame[0]}.png"
+                grab(silent, last, shot)
+                self._assert_inside(shot)
+                self._assert_gold_row(shot, 4)
+                self._assert_white_mat(shot)
+            added = self._beat(4, 0, None, "")
+            for frame in ((1280, 720), (720, 1280)):
+                silent, last = render(added, frame, "zh", [0.4, 1.2, 0.6])
+                shot = root / f"add-zh-{frame[0]}.png"
+                grab(silent, last, shot)
+                self._assert_inside(shot)
+                self._assert_counters_one_row(shot, greens=4, golds=0)
+                self._assert_white_mat(shot)
+                # The empty mat's top stroke sits in the usual label band.
+                centres = _label_row_centres(shot, clearance=18)
+                self.assertTrue(centres, shot.name)
+                for row in centres:
+                    self.assertGreaterEqual(len(row), 2, shot.name)
+                    self.assertLessEqual(max(row) - min(row), 1.0, f"{shot.name} centres {row}")
+            for frame in ((1280, 720), (720, 1280)):
+                silent, last = render(stay, frame, "en", [0.4, 0.8, 1.6])
+                shot = root / f"stay-{frame[0]}.png"
+                grab(silent, last, shot)
+                self._assert_inside(shot)
+                self._assert_counters_one_row(shot, greens=4, golds=0)
+                self._assert_white_mat(shot)
+                if frame[0] > frame[1]:
+                    self._assert_minus_matches_equals(shot)
+            for frame in ((1280, 720), (720, 1280)):
+                silent, last = render(gone, frame, "en", [0.4, 0.8, 2.4], words=words)
+                shot = root / f"all-{frame[0]}.png"
+                grab(silent, last, shot)
+                self._assert_inside(shot)
+                self._assert_no_green(shot)
+                self.assertGreaterEqual(self._ring_pairs(shot), 4, shot.name)
+
+    def _assert_gold_row(self, path, count: int):
+        def gold(rgb):
+            r, g, b = rgb
+            return r > 180 and r > g + 15 and g > 90 and b < 150
+
+        blobs, _w, _h = self._blobs(path, gold)
+        rounds = [blob for blob in blobs if blob[3] >= 8 and 0.65 <= blob[2] / max(blob[3], 1) <= 1.55]
+        self.assertGreaterEqual(len(rounds), count, path.name)
+        best = []
+        for blob in rounds:
+            # The highlight around a one-digit label is nearly square and sits
+            # above the row. Counters are the largest cluster on one line.
+            group = [
+                other for other in rounds
+                if abs(other[1] - blob[1]) <= max(8.0, blob[3] * 0.45)
+            ]
+            if len(group) > len(best):
+                best = group
+        self.assertEqual(len(best), count, path.name)
+        ys = [blob[1] for blob in best]
+        diam = max(blob[3] for blob in best)
+        self.assertLessEqual(max(ys) - min(ys), max(6.0, diam * 0.35), path.name)
+
+    def _assert_white_mat(self, path):
+        def white(rgb):
+            r, g, b = rgb
+            return r > 248 and g > 248 and b > 248
+
+        blobs, _w, _h = self._blobs(path, white)
+        mats = [blob for blob in blobs if blob[2] > 16 and blob[2] > blob[3] * 1.15]
+        self.assertGreaterEqual(len(mats), 1, path.name)
+
+    def _assert_no_green(self, path):
+        def green(rgb):
+            r, g, b = rgb
+            return g > 130 and g > r + 45 and g > b + 25
+
+        blobs, _w, _h = self._blobs(path, green)
+        self.assertEqual(blobs, [], path.name)
+
+    def _ring_pairs(self, path) -> int:
+        """How many cream-centred rings share one horizontal line."""
+        from PIL import Image
+
+        def cream(rgb):
+            r, g, b = rgb
+            return abs(r - 247) < 22 and abs(g - 244) < 22 and abs(b - 238) < 22
+
+        def navy(rgb):
+            r, g, b = rgb
+            return r < 80 and g < 100 and b < 130 and not cream(rgb)
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+        best = 0
+        for y in range(int(h * 0.30), int(h * 0.72), 2):
+            runs = []
+            x = 0
+            while x < w:
+                if not navy(px[x, y]):
+                    x += 1
+                    continue
+                x0 = x
+                while x < w and navy(px[x, y]):
+                    x += 1
+                if 2 <= x - x0 <= 18:
+                    runs.append((x0, x - 1))
+            pairs = 0
+            used = set()
+            for i, (a0, a1) in enumerate(runs):
+                if i in used:
+                    continue
+                for j in range(i + 1, min(i + 4, len(runs))):
+                    b0, b1 = runs[j]
+                    gap = b0 - a1 - 1
+                    if 6 <= gap <= 48 and cream(px[(a1 + b0) // 2, y]):
+                        pairs += 1
+                        used.add(i)
+                        used.add(j)
+                        break
+            best = max(best, pairs)
+        return best
 
     def test_parts_hook_title_fills_the_frame(self):
         """9:16 English hook title stays at the takeaway floor, on two lines, with a full-width motif."""

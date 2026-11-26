@@ -714,17 +714,35 @@ def _scene_types() -> dict:
             return min(4, count)
         return count
 
-    def _part_dots(left_n: int, right_n: int, radius: float = 0.16, gone: int = 0):
-        """Two coloured parts, or one green whole when the right part is zero.
+    def _zero_mat(radius: float):
+        """An empty mat: a place with nothing on it, not a counter taken away."""
+        from manim import RoundedRectangle
+
+        mat = RoundedRectangle(
+            width=max(0.72, float(radius) * 3.4),
+            height=max(0.48, float(radius) * 2.2),
+            corner_radius=0.08,
+            stroke_color=NAVY,
+            stroke_width=3,
+            fill_color=WHITE,
+            fill_opacity=1,
+        )
+        mat.set_z_index(1)
+        return mat
+
+    def _part_dots(left_n: int, right_n: int, radius: float = 0.16, gone: int = 0, zero_mat: bool = False):
+        """Two coloured parts, or one green whole when the right part is omitted.
 
         ``gone`` draws that many empty circles beside the left part: counters
-        that have been taken away.
+        that have been taken away. ``zero_mat`` draws an empty mat for a part
+        of 0, so zero stays visible and is not an empty circle.
         """
         left_n = max(0, int(left_n))
         right_n = max(0, int(right_n))
         gone = max(0, int(gone))
         gap = max(0.05, radius * 0.4)
         group_gap = max(0.2, radius * 1.5)
+        mat_w = max(0.72, float(radius) * 3.4)
 
         def width_of(count: int) -> float:
             if count <= 0:
@@ -749,16 +767,29 @@ def _scene_types() -> dict:
                 made.append(dot)
             return made
 
+        show_left_mat = bool(zero_mat) and left_n == 0 and right_n > 0 and not gone
+        show_right_mat = bool(zero_mat) and right_n == 0 and left_n > 0 and not gone
         right_count = gone if gone else right_n
-        lw = width_of(left_n)
-        rw = width_of(right_count)
-        total = lw + (group_gap if left_n and right_count else 0.0) + rw
-        lcx = (-total / 2 + lw / 2) if left_n else 0.0
-        rcx = (total / 2 - rw / 2) if right_count else 0.0
-        if left_n and not right_count:
+        left_present = left_n > 0 or show_left_mat
+        right_present = right_count > 0 or show_right_mat
+        lw = width_of(left_n) if left_n else (mat_w if show_left_mat else 0.0)
+        rw = width_of(right_count) if right_count else (mat_w if show_right_mat else 0.0)
+        total = lw + (group_gap if left_present and right_present else 0.0) + rw
+        lcx = (-total / 2 + lw / 2) if left_present else 0.0
+        rcx = (total / 2 - rw / 2) if right_present else 0.0
+        if left_present and not right_present:
             lcx = 0.0
-        if right_count and not left_n:
+        if right_present and not left_present:
             rcx = 0.0
+        mats = []
+        if show_left_mat:
+            mat = _zero_mat(radius)
+            mat.move_to([lcx, 0, 0])
+            mats.append(mat)
+        if show_right_mat:
+            mat = _zero_mat(radius)
+            mat.move_to([rcx, 0, 0])
+            mats.append(mat)
         if gone:
             empties = []
             cols = _part_columns(gone, False)
@@ -778,9 +809,9 @@ def _scene_types() -> dict:
                 )
                 ring.move_to([left + c * (2 * radius + gap), y, 0])
                 empties.append(ring)
-            dots = place(left_n, lcx, GREEN) + empties
+            dots = mats + place(left_n, lcx, GREEN) + empties
         else:
-            dots = place(left_n, lcx, GREEN) + place(right_n, rcx, GOLD)
+            dots = mats + place(left_n, lcx, GREEN) + place(right_n, rcx, GOLD)
         group = VGroup(*dots) if dots else VGroup(counter("#D5D0C6", radius))
         group.move_to(UP * 0)
         return group
@@ -1819,8 +1850,10 @@ def _scene_types() -> dict:
         def construct(self):
             labels = self.vf_labels
             latin, cjk = self.vf_fonts
-            a = max(1, int(labels.get("a") or 3))
-            b = max(1, int(labels.get("b") or 4))
+            raw_a = labels.get("a")
+            raw_b = labels.get("b")
+            a = 3 if raw_a is None else int(raw_a)
+            b = 4 if raw_b is None else int(raw_b)
             whole = a + b
             also = labels.get("also")
             also = int(also) if also is not None else None
@@ -1829,6 +1862,12 @@ def _scene_types() -> dict:
             departing = leave in {"a", "b"} and not cover
             if departing:
                 cover = leave
+            # Zero is an empty mat. When every counter leaves, the zero is only
+            # the amount left, so the mat stays off and empty circles remain.
+            take_all = departing and (
+                (cover == "a" and a > 0 and b == 0) or (cover == "b" and b > 0 and a == 0)
+            )
+            show_zero_mat = (a == 0 or b == 0) and not take_all
             end_left = also if also is not None else a
             end_right = whole - end_left
             pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
@@ -1873,13 +1912,13 @@ def _scene_types() -> dict:
 
             def group_width(count: int, radius: float, gap: float) -> float:
                 if count <= 0:
-                    return 0.0
+                    return max(0.72, radius * 3.4) if show_zero_mat else 0.0
                 cols = min(cols_for(count), count)
                 return cols * (2 * radius) + (cols - 1) * gap
 
             def group_height(count: int, radius: float, gap: float) -> float:
                 if count <= 0:
-                    return 0.0
+                    return max(0.48, radius * 2.2) if show_zero_mat else 0.0
                 cols = min(cols_for(count), count)
                 rows = (count + cols - 1) // cols
                 return rows * (2 * radius) + (rows - 1) * gap
@@ -1995,6 +2034,18 @@ def _scene_types() -> dict:
                 x, y = end_pos[i]
                 dot.move_to([x, y, 0])
                 dots.add(dot)
+            mats = VGroup()
+            mat_plan = []
+            if show_zero_mat and a == 0:
+                mat = _zero_mat(radius)
+                mat.move_to([end_lcx, -radius, 0])
+                mats.add(mat)
+                mat_plan.append((mat, (start_lcx, -radius)))
+            if show_zero_mat and b == 0:
+                mat = _zero_mat(radius)
+                mat.move_to([end_rcx, -radius, 0])
+                mats.add(mat)
+                mat_plan.append((mat, (start_rcx, -radius)))
 
             _seat_count_label(left_label, end_lcx, label_y)
             _seat_count_label(right_label, end_rcx, label_y)
@@ -2050,6 +2101,8 @@ def _scene_types() -> dict:
                 covered_eq.set_opacity(0)
 
             pieces = [title, whole_label, bracket, dots, left_label, right_label, marker, bond_eq]
+            if len(mats):
+                pieces.append(mats)
             if also is not None:
                 pieces.append(first_eq)
             if covered_eq is not None:
@@ -2095,6 +2148,10 @@ def _scene_types() -> dict:
             mid_centres = [mapped((p[0], p[1], 0)) for p in mid_pos]
             for i, dot in enumerate(dots):
                 dot.move_to(start_centres[i])
+            mat_ends = []
+            for mat, start_xy in mat_plan:
+                mat_ends.append(mat.get_center().copy())
+                mat.move_to(mapped((start_xy[0], start_xy[1], 0)))
             covered_dots = []
             ghosts = VGroup()
             if cover in {"a", "b"}:
@@ -2131,6 +2188,8 @@ def _scene_types() -> dict:
             # Pieces that fade in on the first line are not added twice.
             hidden = [left_label, right_label, marker]
             opening = [FadeIn(title), FadeIn(dots)]
+            if len(mats):
+                opening.append(FadeIn(mats))
             if show_bond:
                 opening.append(FadeIn(bracket))
                 opening.append(FadeIn(whole_label))
@@ -2197,6 +2256,9 @@ def _scene_types() -> dict:
                         )
                     for ghost in ghosts:
                         moves.append(ghost.animate.set_opacity(1))
+                    if not moves:
+                        # Nothing leaves. A part of zero stays an empty mat.
+                        return title.animate.set_opacity(1)
                     return AnimationGroup(*moves)
 
                 def reveal_difference():
@@ -2217,6 +2279,8 @@ def _scene_types() -> dict:
                 if also is not None or not cover:
                     for i, dot in enumerate(dots):
                         closing.append(dot.animate.move_to(end_centres[i]).set_fill(colour_for(i, end_left)))
+                    for mat, end_at in zip(mats, mat_ends):
+                        closing.append(mat.animate.move_to(end_at))
                 if not show_bond:
                     closing.extend([
                         bracket.animate.set_opacity(1),
@@ -2412,7 +2476,11 @@ def _scene_types() -> dict:
                 return _pair_static(count, 0.18, ring=bool(count % 2))
             if motif == "parts":
                 info = labels or {}
-                return _part_dots(int(info.get("a") or 3), int(info.get("b") or 4), 0.2)
+                raw_a = info.get("a")
+                raw_b = info.get("b")
+                part_a = 3 if raw_a is None else int(raw_a)
+                part_b = 4 if raw_b is None else int(raw_b)
+                return _part_dots(part_a, part_b, 0.2, zero_mat=(part_a == 0 or part_b == 0))
             if motif == "ten_frame":
                 frame = ten_cells()
                 frame.scale(0.85)
@@ -2948,12 +3016,12 @@ def _scene_types() -> dict:
             boards = []
             for bond in bonds:
                 nums = [int(n) for n in bond]
-                if len(nums) == 1 or (len(nums) == 2 and nums[1] == 0):
+                if len(nums) == 1:
                     cue = _part_dots(nums[0], 0, 0.15)
                 elif len(nums) == 2 and nums[1] < 0:
                     cue = _part_dots(nums[0], 0, 0.15, gone=-nums[1])
                 else:
-                    cue = _part_dots(nums[0], nums[1], 0.15)
+                    cue = _part_dots(nums[0], nums[1], 0.15, zero_mat=True)
                 cues.append(cue)
                 boards.append(cue)
             for cue in cues:

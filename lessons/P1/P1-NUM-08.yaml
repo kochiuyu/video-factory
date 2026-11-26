@@ -1,0 +1,118 @@
+# P1-NUM-08. Mirrors MathQuiz path partstart / lesson zeromoves, "What does zero change?".
+# Start with none: 0 + 4 = 4. Add none: 4 + 0 = 4. Take none away: 4 − 0 = 4.
+# Take all four away: 4 − 4 = 0. The minus sign is U+2212.
+# https://github.com/kochiuyu/mathquiz learn-data.js (path partstart, lesson zeromoves
+# in learn-foundations.js).
+# Speech is for age 6: one short idea per sentence. The heading is answered on screen.
+id: P1-NUM-08
+title_en: What does zero change?
+title_zh: 零改变什么？
+title_zh_hk: 零改變咗咩？
+duration_target_s: 66
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: parts
+  a: 0
+  b: 4
+  seconds: 8
+  title_en: What does zero change?
+  title_zh: 零改变什么？
+  title_zh_hk: 零改變咗咩？
+  s1_en: What does zero change?
+  s1_zh: 零改变什么？
+  s1_zh_hk: 零改變咗咩？
+
+- id: none
+  visual: animated
+  scene: part_whole
+  a: 0
+  b: 4
+  seconds: 12
+  s1_en: This mat is empty. Zero counters here. Four counters on that mat.
+  s1_zh: 这边一个也没有。零个圆片。那边有四个圆片。
+  s1_zh_hk: 呢邊一個都冇。零個圓片。嗰邊有四個圓片。
+  s2_en: Zero. Four.
+  s2_zh: 零，四。
+  s2_zh_hk: 零，四。
+  s3_en: Bring them together. Zero and four make four. Together they make four.
+  s3_zh: 合在一起。零加四是四。合起来是四。
+  s3_zh_hk: 合埋一齊。零加四係四。合埋係四。
+
+- id: add
+  visual: animated
+  scene: part_whole
+  a: 4
+  b: 0
+  seconds: 11
+  s1_en: Four counters on this mat. Add none on that mat.
+  s1_zh: 这边有四个圆片。那边没有再加。
+  s1_zh_hk: 呢邊有四個圓片。嗰邊冇再加。
+  s2_en: Four. Zero.
+  s2_zh: 四，零。
+  s2_zh_hk: 四，零。
+  s3_en: Four and zero make four. Together they make four.
+  s3_zh: 四加零是四。合起来是四。
+  s3_zh_hk: 四加零係四。合埋係四。
+
+- id: noneaway
+  visual: animated
+  scene: part_whole
+  a: 4
+  b: 0
+  leave: b
+  seconds: 12
+  s1_en: Now take away. Four counters are here. Zero on that mat.
+  s1_zh: 现在拿走。这里有四个圆片。那边是零。
+  s1_zh_hk: 而家拿走。呢度有四個圓片。嗰邊係零。
+  s2_en: Four. Zero.
+  s2_zh: 四，零。
+  s2_zh_hk: 四，零。
+  s3_en: Take away zero. Four are left.
+  s3_zh: 拿走零个，剩下四个。
+  s3_zh_hk: 拿走零個，剩低四個。
+
+- id: all
+  visual: animated
+  scene: part_whole
+  a: 4
+  b: 0
+  leave: a
+  seconds: 12
+  s1_en: Taking all is different. Four counters are here.
+  s1_zh: 全部拿走就不一样。这里有四个圆片。
+  s1_zh_hk: 全部拿走就唔同。呢度有四個圓片。
+  s2_en: Four. Zero.
+  s2_zh: 四，零。
+  s2_zh_hk: 四，零。
+  s3_en: Take four away, zero are left.
+  s3_zh: 拿走四个，剩下零个。
+  s3_zh_hk: 拿走四個，剩低零個。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: parts
+  bonds:
+  - [0, 4]
+  - [4, 0]
+  - [4]
+  - [0, -4]
+  seconds: 11
+  title_en: What does zero change?
+  title_zh: 零改变什么？
+  title_zh_hk: 零改變咗咩？
+  s1_en: Zero and four make four.
+  s1_zh: 零加四是四。
+  s1_zh_hk: 零加四係四。
+  s2_en: Four and zero make four too.
+  s2_zh: 四加零也是四。
+  s2_zh_hk: 四加零都係四。
+  s3_en: Nothing. Four stays four.
+  s3_zh: 没有改变。还是四。
+  s3_zh_hk: 冇改變。仲係四。
+  s4_en: Take four away, zero are left.
+  s4_zh: 拿走四个，剩下零个。
+  s4_zh_hk: 拿走四個，剩低零個。

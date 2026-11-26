@@ -517,6 +517,7 @@ def _scene_types() -> dict:
         FadeOut,
         LaggedStart,
         Circle,
+        Line,
         Rectangle,
         RoundedRectangle,
         Scene,
@@ -705,6 +706,56 @@ def _scene_types() -> dict:
         group.move_to(UP * 0)
         return group
 
+    def _part_columns(count: int, portrait: bool) -> int:
+        count = max(1, int(count))
+        if portrait:
+            return min(4, count)
+        return count
+
+    def _part_dots(left_n: int, right_n: int, radius: float = 0.16):
+        """Two coloured parts, or one green whole when the right part is zero."""
+        left_n = max(0, int(left_n))
+        right_n = max(0, int(right_n))
+        gap = max(0.05, radius * 0.4)
+        group_gap = max(0.2, radius * 1.5)
+
+        def width_of(count: int) -> float:
+            if count <= 0:
+                return 0.0
+            cols = _part_columns(count, False)
+            return cols * (2 * radius) + (cols - 1) * gap
+
+        def place(count: int, cx: float, color: str):
+            made = []
+            if count <= 0:
+                return made
+            cols = _part_columns(count, False)
+            row_w = width_of(count)
+            for i in range(count):
+                r, c = divmod(i, cols)
+                in_row = min(cols, count - r * cols)
+                this_w = in_row * (2 * radius) + (in_row - 1) * gap
+                left = cx - this_w / 2 + radius
+                y = -r * (2 * radius + gap)
+                dot = counter(color, radius)
+                dot.move_to([left + c * (2 * radius + gap), y, 0])
+                made.append(dot)
+            return made
+
+        lw = width_of(left_n)
+        rw = width_of(right_n)
+        total = lw + (group_gap if left_n and right_n else 0.0) + rw
+        lcx = (-total / 2 + lw / 2) if left_n else 0.0
+        rcx = (total / 2 - rw / 2) if right_n else 0.0
+        if left_n and not right_n:
+            lcx = 0.0
+        if right_n and not left_n:
+            rcx = 0.0
+        dots = place(left_n, lcx, GREEN) + place(right_n, rcx, GOLD)
+        group = VGroup(*dots) if dots else VGroup(counter("#D5D0C6", radius))
+        group.move_to(UP * 0)
+        return group
+
     def ten_cells():
         cells = VGroup()
         for _ in range(10):
@@ -835,6 +886,12 @@ def _scene_types() -> dict:
             fps = max(float(config.frame_rate or 15), 1.0)
             frame = 1.0 / fps
             if not marks or len(marks) != len(anims) or total <= frame / 2:
+                # A function has to run at play time. Building every .animate
+                # first makes one mobject share a single target.
+                if any(callable(item) and not hasattr(item, "build") for item in anims):
+                    sequence = ([intro] if intro is not None else []) + list(anims)
+                    self.spend_each(index, sequence)
+                    return
                 if intro is not None and anims:
                     self.spend(index, intro, LaggedStart(*anims, lag_ratio=0.12))
                 else:
@@ -1701,6 +1758,383 @@ def _scene_types() -> dict:
                 closing.append(ring.animate.set_stroke(opacity=1))
             self.spend(2, *closing)
 
+    class PartWhole(_Board):
+        """A whole splits into two coloured parts, then the parts join again.
+
+        ``also`` moves the counters to a second split of the same whole.
+        ``cover`` hides one part and reads the bond as a subtraction.
+        The two part labels land on the spoken words, and the highlight
+        box moves with them. Label centres share one reference glyph.
+        """
+
+        def construct(self):
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            a = max(1, int(labels.get("a") or 3))
+            b = max(1, int(labels.get("b") or 4))
+            whole = a + b
+            also = labels.get("also")
+            also = int(also) if also is not None else None
+            cover = str(labels.get("cover") or "")
+            end_left = also if also is not None else a
+            end_right = whole - end_left
+            pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
+            ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+            portrait = ph > pw
+            unit = ph / float(config.frame_height or 8.0)
+            left_lim, right_lim, bot_lim, top_lim = _safe_limits()
+            max_w = (right_lim - left_lim) * (0.92 if portrait else 0.86)
+            max_h = (top_lim - bot_lim) * 0.94
+
+            left_word = str(labels.get("also_left") if also is not None else labels.get("left") or a)
+            right_word = str(labels.get("also_right") if also is not None else labels.get("right") or b)
+            whole_word = str(labels.get("whole_word") or whole)
+            cjk_labels = any(
+                "\u4e00" <= ch <= "\u9fff"
+                for word in (left_word, right_word, whole_word)
+                for ch in word
+            )
+            label_h = _ordinal_label_height()
+            ref = styled("三" if cjk_labels else "8", latin, cjk, 48)
+            label_scale = (label_h / float(ref.height)) if float(ref.height) else 1.0
+            box_h = float(ref.height) * label_scale
+            # The centre test reads a band of about half a unit above the dots.
+            # Part labels sit inside it. The bond sits above it.
+            label_gap = 16.0 / unit
+            window = 46.0 / 720.0 * 8.0
+
+            def label_of(word: str):
+                glyph = _count_label(word, latin, cjk, label_scale)
+                glyph.set_z_index(6)
+                return glyph
+
+            left_label = label_of(left_word)
+            right_label = label_of(right_word)
+            whole_label = label_of(whole_word)
+            half_l = float(left_label.width) / 2
+            half_r = float(right_label.width) / 2
+            min_dx = half_l + half_r + label_gap
+
+            def cols_for(count: int) -> int:
+                return _part_columns(count, portrait)
+
+            def group_width(count: int, radius: float, gap: float) -> float:
+                if count <= 0:
+                    return 0.0
+                cols = min(cols_for(count), count)
+                return cols * (2 * radius) + (cols - 1) * gap
+
+            def group_height(count: int, radius: float, gap: float) -> float:
+                if count <= 0:
+                    return 0.0
+                cols = min(cols_for(count), count)
+                rows = (count + cols - 1) // cols
+                return rows * (2 * radius) + (rows - 1) * gap
+
+            def slots(count: int, radius: float, gap: float, cx: float, top: float):
+                if count <= 0:
+                    return []
+                cols = min(cols_for(count), count)
+                out = []
+                for i in range(count):
+                    r, c = divmod(i, cols)
+                    in_row = min(cols, count - r * cols)
+                    row_w = in_row * (2 * radius) + (in_row - 1) * gap
+                    left = cx - row_w / 2 + radius
+                    y = top - radius - r * (2 * radius + gap)
+                    out.append((left + c * (2 * radius + gap), y))
+                return out
+
+            def split_at(left_n: int, right_n: int, radius: float, gap: float, group_gap: float, top: float):
+                lw = group_width(left_n, radius, gap)
+                rw = group_width(right_n, radius, gap)
+                # Centres have to clear the two labels, not only the dots.
+                group_gap = max(group_gap, min_dx - lw / 2 - rw / 2)
+                total = lw + group_gap + rw
+                lcx = -total / 2 + lw / 2
+                rcx = total / 2 - rw / 2
+                left_slots = slots(left_n, radius, gap, lcx, top)
+                right_slots = slots(right_n, radius, gap, rcx, top)
+                ordered = left_slots + right_slots
+                height = max(group_height(left_n, radius, gap), group_height(right_n, radius, gap))
+                return ordered, lcx, rcx, total, height
+
+            title = styled(labels.get("title") or "", latin, cjk, 40)
+            eq_tokens = list(labels.get("also_equation") if also is not None else labels.get("equation") or [])
+            first_tokens = list(labels.get("equation") or eq_tokens)
+            bond_eq = equation(eq_tokens or ["0"], latin, 46)
+            first_eq = equation(first_tokens or ["0"], latin, 46)
+            covered_tokens = list(labels.get("covered_equation") or [])
+            covered_eq = equation(covered_tokens, latin, 46) if covered_tokens else None
+
+            # Size the dots so the open split, the labels, and the bond fit.
+            chrome = float(title.height) + box_h * 2 + float(bond_eq.height) + 1.15
+            best = None
+            for radius in (0.26, 0.22, 0.18, 0.15, 0.12, 0.10):
+                gap = max(0.05, radius * 0.42)
+                joined_gap = max(0.24, radius * 1.15)
+                apart_gap = joined_gap + (0.42 if not portrait else 0.22)
+                top = 0.0
+                start, *_rest = split_at(a, b, radius, gap, apart_gap if not cover else joined_gap, top)
+                mid, *_rest = split_at(end_left, end_right, radius, gap, apart_gap, top)
+                end, *_rest = split_at(end_left, end_right, radius, gap, joined_gap, top)
+                widths = []
+                heights = []
+                for spec in (
+                    split_at(a, b, radius, gap, apart_gap if not cover else joined_gap, top),
+                    split_at(end_left, end_right, radius, gap, apart_gap if also is not None else joined_gap, top),
+                    split_at(end_left, end_right, radius, gap, joined_gap, top),
+                ):
+                    widths.append(spec[3])
+                    heights.append(spec[4])
+                if max(widths) <= max_w and max(heights) + chrome <= max_h:
+                    best = (radius, gap, joined_gap, apart_gap, start, mid, end)
+                    break
+            if best is None:
+                radius, gap = 0.09, 0.05
+                joined_gap, apart_gap = 0.24, 0.4
+                top = 0.0
+                start = split_at(a, b, radius, gap, joined_gap if cover else apart_gap, top)[0]
+                mid = split_at(end_left, end_right, radius, gap, apart_gap, top)[0]
+                end = split_at(end_left, end_right, radius, gap, joined_gap, top)[0]
+            else:
+                radius, gap, joined_gap, apart_gap, start, mid, end = best
+
+            # Labels sit just above the dot tops. The bond clears the label window.
+            label_y = window * 0.55
+            if label_y - box_h / 2 < 0.06:
+                label_y = box_h / 2 + 0.06
+            if label_y + box_h / 2 > window - 0.04:
+                label_y = window - 0.04 - box_h / 2
+            foot_y = window + 0.08
+            apex_y = foot_y + 0.24
+            whole_y = apex_y + 0.08 + box_h / 2
+
+            start_pts, start_lcx, start_rcx, _, _ = split_at(
+                a, b, radius, gap, joined_gap if cover else apart_gap, 0.0,
+            )
+            mid_pts, mid_lcx, mid_rcx, _, _ = split_at(
+                end_left, end_right, radius, gap, apart_gap, 0.0,
+            )
+            end_pts, end_lcx, end_rcx, _, end_h = split_at(
+                end_left, end_right, radius, gap, joined_gap, 0.0,
+            )
+            # Index i is one counter. It starts in the first split and ends in the last.
+            def assign(points, left_n):
+                # points are already left-then-right for that split.
+                return list(points)
+
+            start_pos = assign(start_pts, a)
+            # Mid and end are grouped by the final split, so remap onto stable indices.
+            # Stable index: counters 0..whole-1. Start groups them as a | b.
+            # End groups them as end_left | end_right, which is a reordering of the same counters
+            # only when also moves the boundary. Counters keep their index: the first
+            # end_left counters are the new left part.
+            mid_pos = list(mid_pts)
+            end_pos = list(end_pts)
+
+            def colour_for(index: int, left_n: int) -> str:
+                return GREEN if index < left_n else GOLD
+
+            dots = VGroup()
+            for i in range(whole):
+                dot = counter(colour_for(i, a), radius)
+                x, y = end_pos[i]
+                dot.move_to([x, y, 0])
+                dots.add(dot)
+
+            _seat_count_label(left_label, end_lcx, label_y)
+            _seat_count_label(right_label, end_rcx, label_y)
+            _seat_count_label(whole_label, 0.0, whole_y)
+            # Where the labels stand while the parts are still apart.
+            show_lcx = start_lcx if also is None else mid_lcx
+            show_rcx = start_rcx if also is None else mid_rcx
+            if cover:
+                show_lcx, show_rcx = end_lcx, end_rcx
+
+            reach = max(0.32, min(1.15, abs(float(end_lcx)) * 0.55))
+            bracket = VGroup(
+                Line([-reach, foot_y, 0], [0.0, apex_y, 0], color=NAVY, stroke_width=5),
+                Line([reach, foot_y, 0], [0.0, apex_y, 0], color=NAVY, stroke_width=5),
+            )
+            bracket.set_z_index(5)
+            title.next_to(whole_label, UP, buff=0.16)
+            eq_y = -end_h - 0.16 - float(bond_eq.height) / 2
+            bond_eq.move_to([0, eq_y, 0])
+            first_eq.move_to(bond_eq)
+            if covered_eq is not None:
+                covered_eq.move_to(bond_eq)
+
+            # The cover is built after the counters are in place, so it matches them.
+            card = None
+
+            marker = RoundedRectangle(
+                width=max(float(left_label.width), float(right_label.width)) + 0.12,
+                height=box_h + 0.06,
+                corner_radius=0.08,
+                stroke_color=GOLD,
+                stroke_width=5,
+                fill_color=GOLD,
+                fill_opacity=0.16,
+            )
+            # Behind the glyphs, so a thin 一 stays readable on the gold box.
+            marker.set_z_index(5)
+            marker.move_to(left_label)
+            marker.set_opacity(0)
+
+            left_label.set_opacity(0)
+            right_label.set_opacity(0)
+            show_bond = bool(cover) or also is not None
+            if not show_bond:
+                whole_label.set_opacity(0)
+                bracket.set_opacity(0)
+                bond_eq.set_opacity(0)
+            if also is not None:
+                # Step 0 shows the first split's bond. Step 1 swaps in the second.
+                bond_eq.set_opacity(0)
+                first_eq.set_opacity(1)
+            if covered_eq is not None:
+                covered_eq.set_opacity(0)
+
+            pieces = [title, whole_label, bracket, dots, left_label, right_label, marker, bond_eq]
+            if also is not None:
+                pieces.append(first_eq)
+            if covered_eq is not None:
+                pieces.append(covered_eq)
+            # A clear pad as wide as the open split, so settle keeps that spread inside the frame.
+            open_pts = start_pos if cover else (mid_pos if also is not None else start_pos)
+            xs = [p[0] for p in open_pts + end_pos]
+            pad_w = (max(xs) - min(xs)) + radius * 2 + 0.3
+            pad = Rectangle(
+                width=max(pad_w, float(title.width) + 0.2),
+                height=max_h,
+                stroke_opacity=0,
+                fill_opacity=0,
+            )
+            pad.move_to(UP * 0)
+            board = VGroup(*pieces, pad)
+            old_center = board.get_center().copy()
+            old_width = max(float(board.width), 1e-6)
+            settle(board)
+            scale = float(board.width) / old_width
+            new_center = board.get_center()
+
+            def mapped(point):
+                import numpy as np
+
+                src = np.array([point[0], point[1], 0.0])
+                return (src - old_center) * scale + new_center
+
+            board.remove(pad)
+            end_centres = [dot.get_center().copy() for dot in dots]
+            # Labels and the bond were seated at the joined x. Read them after settle,
+            # then park the moving ones on the open split.
+            end_left_at = left_label.get_center().copy()
+            end_right_at = right_label.get_center().copy()
+            whole_at = whole_label.get_center().copy()
+            open_left = mapped((show_lcx, label_y, 0))
+            open_right = mapped((show_rcx, label_y, 0))
+            if not cover:
+                left_label.move_to([float(open_left[0]), float(end_left_at[1]), 0])
+                right_label.move_to([float(open_right[0]), float(end_right_at[1]), 0])
+            marker.move_to(left_label)
+            start_centres = [mapped((p[0], p[1], 0)) for p in start_pos]
+            mid_centres = [mapped((p[0], p[1], 0)) for p in mid_pos]
+            for i, dot in enumerate(dots):
+                dot.move_to(start_centres[i])
+            if cover in {"a", "b"}:
+                covered_dots = list(dots[:a] if cover == "a" else dots[a:])
+                covered_group = VGroup(*covered_dots)
+                card = RoundedRectangle(
+                    width=float(covered_group.width) + 0.18,
+                    height=float(covered_group.height) + 0.16,
+                    corner_radius=0.1,
+                    stroke_color=NAVY,
+                    stroke_width=3,
+                    fill_color=WHITE,
+                    fill_opacity=1,
+                )
+                card.move_to(covered_group)
+                card.set_z_index(4)
+                card.set_opacity(0)
+
+            # Hidden pieces are already on the scene so a later opacity change can find them.
+            # Pieces that fade in on the first line are not added twice.
+            hidden = [left_label, right_label, marker]
+            opening = [FadeIn(title), FadeIn(dots)]
+            if show_bond:
+                opening.append(FadeIn(bracket))
+                opening.append(FadeIn(whole_label))
+            else:
+                hidden.extend([whole_label, bracket])
+            if also is not None:
+                opening.append(FadeIn(first_eq))
+                hidden.append(bond_eq)
+            elif show_bond:
+                opening.append(FadeIn(bond_eq))
+            else:
+                hidden.append(bond_eq)
+            if covered_eq is not None:
+                hidden.append(covered_eq)
+            if card is not None:
+                hidden.append(card)
+            self.add(*hidden)
+            self.spend(0, *opening)
+
+            def hop_left():
+                return AnimationGroup(
+                    left_label.animate.set_opacity(1),
+                    marker.animate.move_to(left_label.get_center()).set_opacity(1),
+                )
+
+            def hop_right():
+                return AnimationGroup(
+                    right_label.animate.set_opacity(1),
+                    marker.animate.move_to(right_label.get_center()),
+                )
+
+            intro = None
+            if also is not None:
+                moves = []
+                for i, dot in enumerate(dots):
+                    nxt = colour_for(i, end_left)
+                    move = dot.animate.move_to(mid_centres[i])
+                    if nxt != colour_for(i, a):
+                        move = move.set_fill(nxt)
+                    moves.append(move)
+                intro = AnimationGroup(
+                    *moves,
+                    first_eq.animate.set_opacity(0),
+                    bond_eq.animate.set_opacity(1),
+                )
+            self.spend_marked(1, [hop_left, hop_right], self.marks_for(1), intro=intro)
+
+            closing = [
+                left_label.animate.move_to(end_left_at),
+                right_label.animate.move_to(end_right_at),
+            ]
+            if also is not None or not cover:
+                for i, dot in enumerate(dots):
+                    closing.append(dot.animate.move_to(end_centres[i]).set_fill(colour_for(i, end_left)))
+            if not show_bond:
+                closing.extend([
+                    bracket.animate.set_opacity(1),
+                    whole_label.animate.set_opacity(1),
+                    bond_eq.animate.set_opacity(1),
+                ])
+            if covered_eq is not None and card is not None:
+                closing.extend([
+                    card.animate.set_opacity(1),
+                    bond_eq.animate.set_opacity(0),
+                    covered_eq.animate.set_opacity(1),
+                ])
+            kept = right_label if cover == "a" else left_label
+            if cover:
+                closing.append(marker.animate.move_to(kept.get_center()))
+            else:
+                closing.append(marker.animate.move_to(whole_at))
+            self.spend(2, AnimationGroup(*closing))
+
     class LessonHook(_Board):
         """The title arrives, then the lesson's objects, with the opening question."""
 
@@ -1718,7 +2152,7 @@ def _scene_types() -> dict:
             title = styled(labels.get("title") or "", latin, cjk, 54)
             cue = self._hook_cue(motif, latin, cjk, labels)
             portrait = int(getattr(config, "pixel_height", 0) or 0) > int(getattr(config, "pixel_width", 0) or 0)
-            if portrait and motif in {"ordinal", "pairs"}:
+            if portrait and motif in {"ordinal", "pairs", "parts"}:
                 # Title and tokens each fill the safe width. A long English
                 # title must not shrink the row.
                 left_lim, right_lim, bot_lim, top_lim = _safe_limits()
@@ -1750,7 +2184,7 @@ def _scene_types() -> dict:
                     limit = max(float(title.width), float(kicker.width), cap)
                     if float(cue.width) > limit:
                         cue.scale(limit / float(cue.width))
-                elif motif == "pairs":
+                elif motif in {"pairs", "parts"}:
                     left_lim, right_lim, _, _ = _safe_limits()
                     cap = (right_lim - left_lim) * 0.78
                     if float(cue.width) > 0:
@@ -1789,6 +2223,9 @@ def _scene_types() -> dict:
                 info = labels or {}
                 count = max(0, min(20, int(info.get("n") or 8)))
                 return _pair_static(count, 0.18, ring=bool(count % 2))
+            if motif == "parts":
+                info = labels or {}
+                return _part_dots(int(info.get("a") or 3), int(info.get("b") or 4), 0.2)
             if motif == "ten_frame":
                 frame = ten_cells()
                 frame.scale(0.85)
@@ -1822,6 +2259,9 @@ def _scene_types() -> dict:
                 return
             if motif == "pairs":
                 self._pair_recap(title, lines, latin, cjk)
+                return
+            if motif == "parts":
+                self._part_recap(title, lines, latin, cjk)
                 return
             cues = [_takeaway_cue(motif, i, latin) for i in range(len(lines))]
             rows = self._layout_takeaway(title, cues, [str(line) for line in lines], latin, cjk)
@@ -2272,6 +2712,51 @@ def _scene_types() -> dict:
             for index in range(1, len(rows)):
                 self.spend(index, FadeIn(rows[index]))
 
+        def _part_recap(self, title, lines, latin: str, cjk: str) -> None:
+            """Each bond is two coloured parts, or one green whole."""
+            info = self.vf_labels
+            bonds = list(info.get("bonds") or [[3, 4], [5, 2], [7], [4, 8]])
+            cues = []
+            boards = []
+            for bond in bonds:
+                nums = [int(n) for n in bond]
+                if len(nums) == 1 or (len(nums) == 2 and nums[1] == 0):
+                    cue = _part_dots(nums[0], 0, 0.15)
+                else:
+                    cue = _part_dots(nums[0], nums[1], 0.15)
+                cues.append(cue)
+                boards.append(cue)
+            for cue in cues:
+                cue.shift(LEFT * float(cue.get_left()[0]))
+                cue.shift(DOWN * float(cue.get_center()[1]))
+            pad_left = min(float(cue.get_left()[0]) for cue in cues)
+            pad_right = max(float(cue.get_right()[0]) for cue in cues)
+            pad_top = max(float(cue.get_top()[1]) for cue in cues)
+            pad_bottom = min(float(cue.get_bottom()[1]) for cue in cues)
+            for cue in cues:
+                pad = Rectangle(
+                    width=max(0.01, pad_right - pad_left),
+                    height=max(0.01, pad_top - pad_bottom),
+                    stroke_opacity=0,
+                    fill_opacity=0,
+                )
+                pad.move_to([(pad_left + pad_right) / 2.0, (pad_top + pad_bottom) / 2.0, 0])
+                cue.add(pad)
+            shown = [str(line) for line in list(lines)]
+            while len(shown) < len(cues):
+                shown.append(" ")
+            use = min(len(shown), len(cues))
+            portrait = int(getattr(config, "pixel_height", 0) or 0) > int(getattr(config, "pixel_width", 0) or 0)
+            if portrait:
+                rows = self._layout_ordinal_portrait(
+                    title, cues[:use], boards[:use], shown[:use], latin, cjk,
+                )
+            else:
+                rows = self._layout_takeaway(title, cues[:use], shown[:use], latin, cjk, text_fit=1.0)
+            self.spend(0, FadeIn(title), FadeIn(rows[0]))
+            for index in range(1, len(rows)):
+                self.spend(index, FadeIn(rows[index]))
+
         def _layout_ordinal_portrait(self, heading, cues, boards, lines, latin: str, cjk: str) -> list:
             """Portrait ordinal rows share one size, about 80% of the safe width."""
             pw = int(getattr(config, "pixel_width", 0) or 0) or 1080
@@ -2391,6 +2876,7 @@ def _scene_types() -> dict:
         "number_track": NumberTrack,
         "ordinal_row": OrdinalRow,
         "pair_counters": PairCounters,
+        "part_whole": PartWhole,
         "lesson_hook": LessonHook,
         "lesson_takeaway": LessonTakeaway,
     }

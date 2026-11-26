@@ -78,15 +78,15 @@ beats:
   title_en: Even or odd?
   title_zh: 单数还是双数？
   title_zh_hk: 單數定雙數？
-  s1_en: Eight makes four pairs, none left.
-  s1_zh: 八个配成四对，没有剩下。
-  s1_zh_hk: 八個配成四對，冇剩低。
-  s2_en: Nine makes four pairs and one left.
-  s2_zh: 九个配成四对，剩下一个。
-  s2_zh_hk: 九個配成四對，剩低一個。
+  s1_en: Eight makes four pairs. Eight is even.
+  s1_zh: 八个配成四对，八是双数。
+  s1_zh_hk: 八個配成四對，八係雙數。
+  s2_en: Nine leaves one. Nine is odd.
+  s2_zh: 九个剩下一个，九是单数。
+  s2_zh_hk: 九個剩低一個，九係單數。
   s3_en: A pair holds two, not three.
   s3_zh: 一对只放两个，不放三个。
   s3_zh_hk: 一對只放兩個，唔放三個。
-  s4_en: Nineteen leaves one alone.
+  s4_en: Nineteen makes nine pairs, one left.
   s4_zh: 十九个配成九对，单独剩一个。
   s4_zh_hk: 十九個配成九對，單獨剩一個。

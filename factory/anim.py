@@ -1842,7 +1842,7 @@ def _scene_types() -> dict:
             cy = float(grid["top"]) - band / 2.0
             heading.move_to([cx, cy, 0])
 
-        def _layout_takeaway(self, heading, cues, lines, latin: str, cjk: str) -> list:
+        def _layout_takeaway(self, heading, cues, lines, latin: str, cjk: str, text_fit: float = 0.96) -> list:
             """Put each cue and its sentence into an equal row cell."""
             pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
             ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
@@ -1851,7 +1851,7 @@ def _scene_types() -> dict:
             font = self._body_font(latin, grid)
             portrait = bool(grid["portrait"])
             words = [
-                self._line_group(text, latin, cjk, font, float(grid["text_w"]) * 0.96, portrait)
+                self._line_group(text, latin, cjk, font, float(grid["text_w"]) * text_fit, portrait)
                 for text in lines
             ]
             if portrait:
@@ -2194,7 +2194,7 @@ def _scene_types() -> dict:
                 self.spend(index, FadeIn(rows[index]))
 
         def _pair_recap(self, title, lines, latin: str, cjk: str) -> None:
-            """Even, odd, a pair of two, and — when set — the larger count as a numeral."""
+            """Even, odd, a pair of two, and — when set — that count in two rows of pairs."""
             info = self.vf_labels
             even = int(info.get("n") or 8)
             odd = int(info.get("odd") if info.get("odd") is not None else min(20, even + 1))
@@ -2205,14 +2205,10 @@ def _scene_types() -> dict:
                 _pair_static(2, radius, ring=False),
             ]
             if info.get("also") is not None:
-                word = str(info.get("also_word") or info.get("also"))
-                mini = _pair_static(3, radius, ring=True)
-                num = styled(word, latin, cjk, 54)
-                target = float(mini.height) * 0.92
-                if float(num.height) > target > 0:
-                    num.scale(target / float(num.height))
-                num.next_to(mini, RIGHT, buff=0.14)
-                built.append(VGroup(mini, num))
+                also_n = int(info.get("also"))
+                # Same counter size as the odd row. Ten slots wrap to two rows of five,
+                # so nine pairs and the ringed leftover stay countable inside the picture column.
+                built.append(_pair_static(also_n, radius, ring=bool(also_n % 2)))
             shown = [str(line) for line in list(lines)]
             cues = []
             boards = []
@@ -2248,7 +2244,9 @@ def _scene_types() -> dict:
                     title, cues[:use], boards[:use], shown[:use], latin, cjk,
                 )
             else:
-                rows = self._layout_takeaway(title, cues[:use], shown[:use], latin, cjk)
+                # The full text column, so "Eight makes four pairs. Eight is even."
+                # stays one line at the floor size. Other motifs keep the 4% inset.
+                rows = self._layout_takeaway(title, cues[:use], shown[:use], latin, cjk, text_fit=1.0)
             self.spend(0, FadeIn(title), FadeIn(rows[0]))
             for index in range(1, len(rows)):
                 self.spend(index, FadeIn(rows[index]))

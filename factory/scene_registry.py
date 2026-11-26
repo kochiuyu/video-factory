@@ -137,6 +137,11 @@ def _copy(lang: str) -> dict[str, str]:
             "how_many_title": "How many?",
             "from_left": "From the left",
             "from_right": "From the right",
+            "pair_title": "Make pairs",
+            "none_left": "None left",
+            "one_left": "One left",
+            "even_word": "Even",
+            "odd_word": "Odd",
         },
         "zh": {
             "ten_title": "一个十和一些一",
@@ -164,6 +169,11 @@ def _copy(lang: str) -> dict[str, str]:
             "how_many_title": "有多少个？",
             "from_left": "从左边",
             "from_right": "从右边",
+            "pair_title": "两个配成一对",
+            "none_left": "没有剩下",
+            "one_left": "剩下一个",
+            "even_word": "双数",
+            "odd_word": "单数",
         },
         "zh_hk": {
             "ten_title": "一個十和一些一",
@@ -191,6 +201,11 @@ def _copy(lang: str) -> dict[str, str]:
             "how_many_title": "有幾多個？",
             "from_left": "由左邊",
             "from_right": "由右邊",
+            "pair_title": "兩個配成一對",
+            "none_left": "冇剩低",
+            "one_left": "剩低一個",
+            "even_word": "雙數",
+            "odd_word": "單數",
         },
     }
     return table[label_lang(lang)]
@@ -494,7 +509,79 @@ class OrdinalRow(SceneKind):
         }
 
 
-_MOTIFS = {"counters", "ten_frame", "track", "ordinal"}
+class PairCounters(SceneKind):
+    """Counters slide into pairs. One leftover counter is marked.
+
+    ``n`` is how many counters (0–20). ``n // 2`` pairs form on the second
+    spoken line, and ``n % 2`` stays alone. A later lesson can reuse the
+    scene with a different count.
+    """
+
+    name = "pair_counters"
+    steps = 3
+
+    def problems(self, beat: dict) -> list[str]:
+        n = _as_int(beat.get("n"))
+        if n is None or not 0 <= n <= 20:
+            return ["pair_counters n must be an integer from 0 to 20."]
+        return []
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        copy = _copy(lang)
+        n = int(beat.get("n"))
+        pairs, leftover = divmod(n, 2)
+        if label_lang(lang) == "en":
+            words = [str(i) for i in range(1, pairs + 1)]
+        else:
+            words = [zh_cardinal(i) for i in range(1, pairs + 1)]
+        even = leftover == 0
+        return {
+            "title": copy["pair_title"],
+            "note": copy["none_left"] if even else copy["one_left"],
+            "answer": copy["even_word"] if even else copy["odd_word"],
+            "pairs": words,
+            "n": n,
+            "pair_count": pairs,
+            "leftover": leftover,
+        }
+
+    def parameters(self, beat: dict) -> dict:
+        return {"n": int(beat.get("n"))}
+
+
+_MOTIFS = {"counters", "ten_frame", "track", "ordinal", "pairs"}
+
+
+def _pair_n(beat: dict, default: int = 8) -> int:
+    """Even example for a pairs hook or takeaway. Missing ``n`` is 8."""
+    n = _as_int((beat or {}).get("n"))
+    if n is None or not 0 <= n <= 20:
+        return default
+    return n
+
+
+def _pair_n_problems(beat: dict) -> list[str]:
+    if "n" not in (beat or {}):
+        return []
+    n = _as_int(beat.get("n"))
+    if n is None or not 0 <= n <= 20:
+        return ["pairs n must be an integer from 0 to 20."]
+    return []
+
+
+def _pair_also(beat: dict) -> int | None:
+    if "also" not in (beat or {}):
+        return None
+    return _as_int(beat.get("also"))
+
+
+def _pair_also_problems(beat: dict) -> list[str]:
+    if "also" not in (beat or {}):
+        return []
+    n = _as_int(beat.get("also"))
+    if n is None or not 0 <= n <= 20:
+        return ["pairs also must be an integer from 0 to 20."]
+    return []
 
 
 def _motif(beat: dict) -> str:
@@ -540,8 +627,9 @@ def _title_line(beat: dict, lang: str) -> str:
 class LessonHook(SceneKind):
     """Title and the lesson's objects arrive with the opening question.
 
-    One spoken line. ``motif`` is ``counters``, ``ten_frame``, ``track``, or ``ordinal``.
-    An ordinal hook may set ``n`` and ``mark`` (defaults: 6 tokens, mark 3).
+    One spoken line. ``motif`` is ``counters``, ``ten_frame``, ``track``,
+    ``ordinal``, or ``pairs``. An ordinal hook may set ``n`` and ``mark``
+    (defaults: 6 tokens, mark 3). A pairs hook may set ``n`` (default 8).
     """
 
     name = "lesson_hook"
@@ -549,11 +637,13 @@ class LessonHook(SceneKind):
 
     def problems(self, beat: dict) -> list[str]:
         if _motif(beat) not in _MOTIFS:
-            return [f"lesson_hook motif must be counters, ten_frame, track, or ordinal, not {_motif(beat)!r}."]
+            return [f"lesson_hook motif must be counters, ten_frame, track, ordinal, or pairs, not {_motif(beat)!r}."]
         if not _title_line(beat, "en"):
             return ["lesson_hook needs title_en (and title_zh / title_zh_hk)."]
         if _motif(beat) == "ordinal":
             return _ordinal_pair_problems(beat, required=False)
+        if _motif(beat) == "pairs":
+            return _pair_n_problems(beat)
         return []
 
     def labels(self, beat: dict, lang: str) -> dict:
@@ -567,6 +657,8 @@ class LessonHook(SceneKind):
             n, mark = _ordinal_pair(beat)
             out["n"] = n
             out["mark"] = mark
+        if _motif(beat) == "pairs":
+            out["n"] = _pair_n(beat)
         return out
 
     def parameters(self, beat: dict) -> dict:
@@ -575,6 +667,8 @@ class LessonHook(SceneKind):
             n, mark = _ordinal_pair(beat)
             params["n"] = n
             params["mark"] = mark
+        if _motif(beat) == "pairs":
+            params["n"] = _pair_n(beat)
         return params
 
 
@@ -596,9 +690,11 @@ class LessonTakeaway(SceneKind):
 
     def problems(self, beat: dict) -> list[str]:
         if _motif(beat) not in _MOTIFS:
-            return [f"lesson_takeaway motif must be counters, ten_frame, track, or ordinal, not {_motif(beat)!r}."]
+            return [f"lesson_takeaway motif must be counters, ten_frame, track, ordinal, or pairs, not {_motif(beat)!r}."]
         if _motif(beat) == "ordinal":
             return _ordinal_pair_problems(beat, required=False)
+        if _motif(beat) == "pairs":
+            return _pair_n_problems(beat) + _pair_also_problems(beat)
         return []
 
     def labels(self, beat: dict, lang: str) -> dict:
@@ -617,6 +713,18 @@ class LessonTakeaway(SceneKind):
             out["left"] = ordinal_word(lang, mark)
             out["right"] = ordinal_word(lang, count - mark + 1)
             out["total"] = str(count) if label_lang(lang) == "en" else zh_cardinal(count)
+        if _motif(beat) == "pairs":
+            even = _pair_n(beat)
+            if even % 2:
+                even = max(0, even - 1)
+            odd = min(20, even + 1)
+            out["n"] = even
+            out["odd"] = odd
+            out["examples"] = [even, odd, 2]
+            also = _pair_also(beat)
+            if also is not None and 0 <= also <= 20:
+                out["also"] = also
+                out["also_word"] = str(also) if label_lang(lang) == "en" else zh_cardinal(also)
         return out
 
     def parameters(self, beat: dict) -> dict:
@@ -633,6 +741,11 @@ class LessonTakeaway(SceneKind):
             count_n, mark = _ordinal_pair(beat)
             params["n"] = count_n
             params["mark"] = mark
+        if _motif(beat) == "pairs":
+            params["n"] = _pair_n(beat)
+            also = _pair_also(beat)
+            if also is not None:
+                params["also"] = also
         return params
 
 
@@ -693,6 +806,14 @@ def count_event(beat: dict) -> tuple[int, int] | None:
         if not 1 <= n <= 20 or not 1 <= mark <= n:
             return None
         return 1, len(ordinal_visits(n, mark, direction, mode))
+    if scene == "pair_counters":
+        n = _as_int(beat.get("n"))
+        if n is None or not 0 <= n <= 20:
+            return None
+        pairs = n // 2
+        if pairs < 1:
+            return None
+        return 1, pairs
     if scene == "lesson_takeaway":
         # A ten-frame recap counts the three ones on its last line
         # ("Find the ten first. Then count the rest.").
@@ -762,6 +883,7 @@ register(MakeTen())
 register(CountObjects())
 register(NumberTrack())
 register(OrdinalRow())
+register(PairCounters())
 register(LessonHook())
 register(LessonTakeaway())
 

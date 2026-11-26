@@ -131,7 +131,7 @@ These visuals paint progressive stills. Write one spoken chunk per still:
 
 Authoring, the scenes, caption timing, and the cache live in [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md). The demo file is `examples/demo-ten-and-ones.yaml`. It is outside `lessons/`, so `build --all` does not pick it up.
 
-`ordinal_row` fields are `n` (1–20 tokens), `mark` (the marked token, 1-based from the left), `direction` (`left` or `right`), and `mode` (`ordinal` or `total`). A `lesson_hook` or `lesson_takeaway` with `motif: ordinal` may set the same `n` and `mark`. Omit them and the picture is six tokens with the third one marked.
+`ordinal_row` fields are `n` (1–20 tokens), `mark` (the marked token, 1-based from the left), `direction` (`left` or `right`), and `mode` (`ordinal` or `total`). A `lesson_hook` or `lesson_takeaway` with `motif: ordinal` may set the same `n` and `mark`. Omit them and the picture is six tokens with the third one marked. `pair_counters` takes `n` (0–20 counters): `n // 2` pairs slide together and a leftover one is marked. A `lesson_hook` or `lesson_takeaway` with `motif: pairs` may set `n` (default 8). A pairs takeaway may also set `also` (0–20), drawn as that numeral beside a pair and a leftover.
 
 ## Optional fields
 

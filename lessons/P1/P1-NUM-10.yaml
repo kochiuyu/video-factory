@@ -1,0 +1,101 @@
+# P1-NUM-10. Mirrors MathQuiz path subtract / lesson bonds, "Two parts, one whole".
+# Three and four make seven. The same seven is also five and two.
+# Twelve is five and seven: 12 − 5 = 7. The minus sign is U+2212.
+# https://github.com/kochiuyu/mathquiz learn-subtract.js (path subtract, lesson bonds).
+# Speech is for age 6: one short idea per sentence. The heading is answered on screen.
+id: P1-NUM-10
+title_en: Two parts, one whole
+title_zh: 两部分，一个整体
+title_zh_hk: 兩部分，一個整體
+duration_target_s: 64
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: parts
+  a: 3
+  b: 4
+  seconds: 8
+  title_en: Two parts, one whole
+  title_zh: 两部分，一个整体
+  title_zh_hk: 兩部分，一個整體
+  s1_en: What two parts make seven?
+  s1_zh: 哪两部分合成七？
+  s1_zh_hk: 邊兩部分合成七呀？
+
+- id: join
+  visual: animated
+  scene: part_whole
+  a: 3
+  b: 4
+  seconds: 14
+  s1_en: Three counters on this mat. Four counters on that mat.
+  s1_zh: 这边有三个圆片。那边有四个圆片。
+  s1_zh_hk: 呢邊有三個圓片。嗰邊有四個圓片。
+  s2_en: Three. Four.
+  s2_zh: 三，四。
+  s2_zh_hk: 三，四。
+  s3_en: Put them together. Three and four make seven. Together they make seven.
+  s3_zh: 合在一起。三加四是七。合起来是七。
+  s3_zh_hk: 合埋一齊。三加四係七。合埋係七。
+
+- id: again
+  visual: animated
+  scene: part_whole
+  a: 3
+  b: 4
+  also: 5
+  seconds: 14
+  s1_en: Seven can be three and four. Both parts stay in view.
+  s1_zh: 七可以是三和四。两部分都看得到。
+  s1_zh_hk: 七可以係三同四。兩部分都睇到。
+  s2_en: Five. Two.
+  s2_zh: 五，二。
+  s2_zh_hk: 五，二。
+  s3_en: Move some across. Now it is five and two. Seven stays seven.
+  s3_zh: 挪一挪。现在是五和二。七还是七。
+  s3_zh_hk: 搬一搬。而家係五同二。七仲係七。
+
+- id: other
+  visual: animated
+  scene: part_whole
+  a: 5
+  b: 7
+  cover: a
+  seconds: 14
+  s1_en: The whole is twelve. One part is five.
+  s1_zh: 整体是十二。一部分是五。
+  s1_zh_hk: 整體係十二。一部分係五。
+  s2_en: Five. Seven.
+  s2_zh: 五，七。
+  s2_zh_hk: 五，七。
+  s3_en: Twelve minus five is seven. The other part is seven.
+  s3_zh: 十二减五是七。另一部分是七。
+  s3_zh_hk: 十二減五係七。另一部分係七。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: parts
+  bonds:
+  - [3, 4]
+  - [5, 2]
+  - [5, 7]
+  - [7, -5]
+  seconds: 14
+  title_en: Two parts, one whole
+  title_zh: 两部分，一个整体
+  title_zh_hk: 兩部分，一個整體
+  s1_en: Three and four make seven.
+  s1_zh: 三和四合成七。
+  s1_zh_hk: 三同四合成七。
+  s2_en: Five and two make seven too.
+  s2_zh: 五和二也合成七。
+  s2_zh_hk: 五同二都合成七。
+  s3_en: Five and seven make twelve.
+  s3_zh: 五和七合成十二。
+  s3_zh_hk: 五同七合成十二。
+  s4_en: Take five away. Seven are left.
+  s4_zh: 拿走五个，剩下七个。
+  s4_zh_hk: 攞走五個，剩返七個。

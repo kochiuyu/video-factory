@@ -6,7 +6,7 @@
 id: P1-NUM-09
 title_en: Put groups together
 title_zh: 把两组合起来
-title_zh_hk: 把兩組合埋
+title_zh_hk: 將兩組合埋
 duration_target_s: 60
 clock: own
 beats:
@@ -19,7 +19,7 @@ beats:
   seconds: 8
   title_en: Put groups together
   title_zh: 把两组合起来
-  title_zh_hk: 把兩組合埋
+  title_zh_hk: 將兩組合埋
   s1_en: What do three and two make?
   s1_zh: 三和二合起来是多少？
   s1_zh_hk: 三同二合埋係幾多呀？
@@ -84,7 +84,7 @@ beats:
   - [3, 2]
   - [8, 3]
   - [6, 4]
-  - [5]
+  - [6, 4]
   seconds: 14
   title_en: What do the groups make?
   title_zh: 合起来是多少？
@@ -98,6 +98,6 @@ beats:
   s3_en: Six and four make ten.
   s3_zh: 六加四是十。
   s3_zh_hk: 六加四係十。
-  s4_en: Put them together. They make five.
-  s4_zh: 合在一起，是五。
-  s4_zh_hk: 合埋一齊，係五。
+  s4_en: Six needs four more to make ten.
+  s4_zh: 六再加四个，就是十。
+  s4_zh_hk: 六再加四個，就係十。

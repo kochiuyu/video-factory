@@ -1937,12 +1937,13 @@ class SceneRegistryTest(unittest.TestCase):
                 "Three and two make five.",
                 "Eight and three make eleven.",
                 "Six and four make ten.",
-                "Put them together. They make five.",
+                "Six needs four more to make ten.",
             ],
         )
-        self.assertEqual(labels_for(recap9, "zh")["lines"][1], "八加三是十一。")
-        self.assertEqual(labels_for(recap9, "zh_hk")["lines"][3], "合埋一齊，係五。")
-        self.assertEqual(labels_for(recap9, "en")["bonds"], [[3, 2], [8, 3], [6, 4], [5]])
+        self.assertEqual(labels_for(recap9, "zh")["lines"][3], "六再加四个，就是十。")
+        self.assertEqual(labels_for(recap9, "zh_hk")["lines"][3], "六再加四個，就係十。")
+        self.assertEqual(nine["title_zh_hk"], "將兩組合埋")
+        self.assertEqual(labels_for(recap9, "en")["bonds"], [[3, 2], [8, 3], [6, 4], [6, 4]])
 
     def test_part_whole_bounds(self):
         good = {

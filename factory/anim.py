@@ -255,7 +255,7 @@ def cache_key(
             "marks": marks or [],
             # Bump when a scene's motion changes but the spec does not, so a
             # cached silent clip cannot keep an old hop.
-            "motion": 4,
+            "motion": 5,
             "lang": label_lang(lang),
             "frame": [int(frame[0]), int(frame[1])],
             "manim": str(manim_version),
@@ -1423,10 +1423,14 @@ def _scene_types() -> dict:
             answer = Text(str(labels.get("answer") or end), font=latin, font_size=72, color=NAVY)
             cross_text = labels.get("cross") or ""
             cross = styled(cross_text, latin, cjk, 34) if cross_text else None
-            foot_items = [answer, step]
+            # The result stands alone. The short labels stack under it, one
+            # line each, at the size they already use, so they do not sit
+            # beside the number.
+            notes = [step]
             if cross is not None and crosses:
-                foot_items.append(cross)
-            foot = VGroup(*foot_items).arrange(RIGHT, buff=0.26)
+                notes.append(cross)
+            note_stack = VGroup(*notes).arrange(DOWN, buff=0.08)
+            foot = VGroup(answer, note_stack).arrange(DOWN, buff=0.14)
             title.next_to(grid, UP, buff=0.28)
             start_line.next_to(grid, DOWN, buff=0.24)
             foot.next_to(start_line, DOWN, buff=0.2)

@@ -1,0 +1,292 @@
+id: MKT-10
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: More to choose. Easier to choose?
+title_zh: 选择多了，就更容易选吗？
+title_zh_hk: 選擇多了，就更容易選嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-10
+  kicker_en: MKT-10
+  kicker_zh: MKT-10
+  kicker_zh_hk: MKT-10
+  title_en: More to choose. Easier to choose?
+  title_zh: 选择多了，就更容易选吗？
+  title_zh_hk: 選擇多了，就更容易選嗎？
+  image: art/easier-to-choose-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In August 2021, Hong Kong's Consumer Council launched a revamped website with a Product Picker for
+    comparing test ratings and prices. Now a fictional Hong Kong pen retailer, InkLane, sells 18 refillable
+    models that differ in grip, nib width, weight and price. All 18 stay in stock. The owner is choosing
+    the catalogue's default entrance for next month, not which pens to remove.
+  zh: >-
+    二零二一年八月，香港消费者委员会推出新版网站，加入产品搜寻器，方便比较测试评分和价格。现在，一家虚构的香港笔具店 InkLane，有十八款可以换笔芯的笔，握感、笔尖粗细、重量和价格各不相同。十八款都会继续有货。店主要决定的是下个月目录预设显示哪个入口，而不是哪几款要下架。
+  zh_hk: >-
+    二零二一年八月，香港消費者委員會推出新版網站，加入產品搜尋器，方便比較測試評分同價錢。而家，一間虛構嘅香港筆具店 InkLane，有十八款可以換筆芯嘅筆，握感、筆嘴粗幼、重量同價錢各有唔同。十八款都會繼續有貨。店主要決定嘅係下個月目錄預設顯示邊個入口，而唔係邊幾款要落架。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two catalogue entrances
+  title_zh: 两个目录入口
+  title_zh_hk: 兩個目錄入口
+  row1_en: A · Complete catalogue
+  row1_zh: A · 完整目录
+  row1_zh_hk: A · 完整目錄
+  row2_en: B · Starting suggestions
+  row2_zh: B · 入门选购建议
+  row2_zh_hk: B · 入門選購建議
+  col1_en: First view
+  col1_zh: 首先看到的画面
+  col1_zh_hk: 首先看到的畫面
+  col2_en: Full range
+  col2_zh: 如何查看全部款式
+  col2_zh_hk: 如何查看全部款式
+  c11_en: All 18; same fields; search
+  c11_zh: 全部 18 款，栏位统一，可搜寻
+  c11_zh_hk: 全部 18 款，欄位統一，可搜尋
+  c12_en: Immediate
+  c12_zh: 一进入就看到
+  c12_zh_hk: 一進入就看到
+  c21_en: 6 suggestions; search
+  c21_zh: 6 款建议，保留搜寻
+  c21_zh_hk: 6 款建議，保留搜尋
+  c22_en: >-
+    “View all 18 pens”: one click
+  c22_zh: 「查看全部 18 款笔」：按一下
+  c22_zh_hk: 「查看全部 18 款筆」：按一下
+  footer_en: Same stock, prices, pages, checkout
+  footer_zh: 库存、价格、商品页及结账相同
+  footer_zh_hk: 庫存、價格、商品頁及結帳相同
+  s1_en: >-
+    Entrance A shows all 18 models with consistent comparison fields and visible search, so the full range
+    is there immediately.
+  s1_zh: 入口 A 一开始就列出全部十八款，比较栏位统一，搜寻功能也清楚可见，不用多按一步。
+  s1_zh_hk: 入口 A 一開始就列出全部十八款，比較欄位統一，搜尋功能亦清楚見到，唔使多撳一步。
+  s2_en: >-
+    Entrance B shows six clearly described suggestions covering contrasting preferences, plus search,
+    with a prominent View all 18 pens control one click away. B's full catalogue is identical to A's.
+  s2_zh: >-
+    入口 B 先展示六款各有特色的建议，照顾不同偏好，也保留搜寻功能；显眼位置有“查看全部十八款笔”的按钮，按一下就能打开。打开后的完整目录和 A 完全一样。
+  s2_zh_hk: >-
+    入口 B 先展示六款各有特色嘅建議，照顧唔同偏好，亦保留搜尋功能；顯眼位置有「查看全部十八款筆」嘅按鈕，撳一下就打開到。打開之後嘅完整目錄同 A 一模一樣。
+  s3_en: >-
+    Both cost the same and neither adds profiling, paid rankings or a recommendation engine. Some customers
+    know the model they want; others are still working out what suits their writing. The mix is unknown,
+    and neither entrance is known to raise sales.
+  s3_zh: >-
+    两个入口成本相同，都不加入用户画像、付费排名或推荐引擎。有些顾客已锁定某一款，有些还在摸索。两种人各占多少不知道，也没有证据显示哪个入口更能促进销售。
+  s3_zh_hk: >-
+    兩個入口成本一樣，都唔加入用戶畫像、付費排名或者推薦引擎。有啲顧客已經揀定某一款，有啲仲喺度摸索。兩種人各佔幾多唔知道，亦冇證據顯示邊個入口更能促進銷售。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Entrance A or B?
+  title_zh: 选 A 还是 B 作预设入口？
+  title_zh_hk: 選 A 還是 B 作預設入口？
+  en: >-
+    Which entrance would you choose, A or B? Name the customer task you are prioritising, and one observation
+    that would reverse your choice. Pause and vote.
+  zh: 你会选 A 还是 B 作预设入口？你优先照顾哪一种顾客任务？哪一项观察会让你改选？请暂停，投个票。
+  zh_hk: 你會揀 A 定係 B 做預設入口？你優先照顧邊一種顧客任務？邊一項觀察會令你改揀？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A prototype session
+  title_zh: 原型测试
+  title_zh_hk: 原型測試
+  step1_en: 80 volunteers; 20 per entrance per task
+  step1_zh: 80 名志愿者，每组随机分 20 人
+  step1_zh_hk: 80 名義工，每組隨機分 20 人
+  step2_en: >-
+    Undecided: A 8 of 20, B 15 of 20
+  step2_zh: 尚未决定：A 8 人，B 15 人
+  step2_zh_hk: 尚未決定：A 8 人，B 15 人
+  step3_en: >-
+    Named model: A 18 of 20, B 13 of 20
+  step3_zh: 找指定款式：A 18 人，B 13 人
+  step3_zh_hk: 找指定款式：A 18 人，B 13 人
+  s1_en: >-
+    A fictional prototype session recruits 80 adult volunteers: 40 undecided about what suits a writing
+    task, and 40 seeking a named model. Within each group, 20 are randomly assigned to each entrance,
+    and each person uses only one.
+  s1_zh: >-
+    本题虚构了一次原型测试，招募八十名成年志愿者：四十人还没确定书写任务需要哪些属性，另外四十人要找指定的款式。每组随机分二十人用 A、二十人用 B，每人只试一个入口。
+  s1_zh_hk: >-
+    本題虛構咗一次原型測試，招募八十個成年義工：四十人仲未確定書寫任務需要邊啲屬性，另外四十人要搵指定款式。每組隨機分二十人用 A、二十人用 B，每人只試一個入口。
+  s2_en: >-
+    For the undecided task, completion means choosing a candidate within 90 seconds and accurately explaining
+    two relevant attributes, scored on the same checklist. A: 8 of 20. B: 15 of 20.
+  s2_zh: 还没决定的一组，完成是指在九十秒内选出一款候选产品，并准确解释两项相关属性，用同一份核对表评分。A 组二十人中有八人完成，B 组有十五人。
+  s2_zh_hk: 未決定嗰組，完成即係喺九十秒內揀出一款候選產品，並準確解釋兩項相關屬性，用同一份核對表評分。A 組二十人入面有八人完成，B 組有十五人。
+  s3_en: >-
+    For the named-model task, completion means finding the product page within 90 seconds. A: 18 of 20.
+    B: 13 of 20. This is a convenience sample comparing two complete prototypes, with no purchases or
+    conversion estimates.
+  s3_zh: >-
+    找指定款式的一组，完成是指在九十秒内找到那款的商品页。A 组二十人中有十八人完成，B 组十三人。这是便利样本，比较的是两套完整原型，测试不涉及实际购买，也没有转化率估算。
+  s3_zh_hk: >-
+    搵指定款式嗰組，完成即係喺九十秒內搵到嗰款嘅商品頁。A 組二十人入面有十八人完成，B 組十三人。呢個係便利樣本，比較嘅係兩套完整原型，測試唔涉及實際購買，亦冇轉化率估算。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep or change your default?
+  title_zh: 维持还是更换预设入口？
+  title_zh_hk: 維持還是更換預設入口？
+  en: >-
+    Would you keep or change your default entrance? Which task gains and which loses in this session,
+    and what evidence about actual visitors would justify your decision? Pause and vote.
+  zh: 你会维持原来的选择，还是更换预设入口？这次测试里，哪项任务变容易，哪项反而变难？要有什么实际访客的资料，才足以支持你的决定？请暂停，投个票。
+  zh_hk: 你會維持原本嘅選擇，定係更換預設入口？今次測試入面，邊項任務容易咗，邊項反而難咗？要有咩實際訪客嘅資料，先足以支持你嘅決定？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Results point different ways
+  title_zh: 两种任务得出不同结果
+  title_zh_hk: 兩種任務得出不同結果
+  step1_en: >-
+    Undecided: B +7 (15 vs 8)
+  step1_zh: 尚未决定：B 多 7 人（15 对 8）
+  step1_zh_hk: 尚未決定：B 多 7 人（15 對 8）
+  step2_en: >-
+    Named model: A +5 (18 vs 13)
+  step2_zh: 找指定款式：A 多 5 人（18 对 13）
+  step2_zh_hk: 找指定款式：A 多 5 人（18 對 13）
+  step3_en: B changed display and navigation
+  step3_zh: B 同时改变展示及导览
+  step3_zh_hk: B 同時改變展示及導覽
+  s1_en: >-
+    B has seven more undecided-task completions: 15 rather than 8, with 20 people per entrance.
+  s1_zh: 每个入口各二十人。还没决定款式的一组，B 有十五人完成，A 有八人，B 多七人。
+  s1_zh_hk: 每個入口各二十人。未決定款式嗰組，B 有十五人完成，A 有八人，B 多七人。
+  s2_en: >-
+    A has five more named-model completions: 18 rather than 13.
+  s2_zh: 找指定款式的一组，A 有十八人完成，B 有十三人，A 多五人。
+  s2_zh_hk: 搵指定款式嗰組，A 有十八人完成，B 有十三人，A 多五人。
+  s3_en: >-
+    These differences describe this session, not population effects, and they do not prove six suggestions
+    are optimal. B changes both the starting display and navigation, so the test cannot isolate one mechanism.
+  s3_zh: 这些差距只反映这次测试，不能推论到整体顾客，也不能证明六款建议最理想。B 同时改变了首页展示和导览方式，所以测试分辨不出是哪一项改动起作用。
+  s3_zh_hk: >-
+    呢啲差距只係反映今次測試，唔可以推論到整體顧客，亦證明唔到六款建議最理想。B 同時改變咗首頁展示同導覽方式，所以測試分辨唔到係邊一項改動起作用。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Same stock, different start
+  title_zh: 库存一样，起步体验不同
+  title_zh_hk: 庫存一樣，起步體驗不同
+  step1_en: >-
+    B: a manageable place to start
+  step1_zh: B：从较精简的建议开始比较
+  step1_zh_hk: B：從較精簡的建議開始比較
+  step2_en: >-
+    A: the whole range immediately
+  step2_zh: A：立即浏览或搜寻全部款式
+  step2_zh_hk: A：立即瀏覽或搜尋全部款式
+  step3_en: 28 vs 26 is not the shop's answer
+  step3_zh: 28 对 26 不能判定哪个更适合
+  step3_zh_hk: 28 對 26 不能判定哪個更適合
+  s1_en: >-
+    B can give an undecided visitor a manageable place to start comparing writing attributes.
+  s1_zh: 还没想好买什么的人，可以从 B 比较精简的建议开始，比较书写属性。
+  s1_zh_hk: 仲未諗好買咩嘅人，可以由 B 比較精簡嘅建議開始，比較書寫屬性。
+  s2_en: >-
+    A lets a visitor inspect or search the whole range immediately. Those are different starting needs,
+    not permanent types of people, and all 18 pens stay available at the same prices.
+  s2_zh: 想直接浏览或搜寻全部款式的人，用 A 就能立即做到。这是不同的起步需要，不是把人永久分成两类；而且十八款笔都照样有售，价格也一样。
+  s2_zh_hk: 想直接瀏覽或者搜尋全部款式嘅人，用 A 就即刻做到。呢啲係唔同嘅起步需要，唔係將人永遠分成兩類；而且十八款筆都照樣有得賣，價錢亦一樣。
+  s3_en: >-
+    B totals 28 completions and A 26, but the task groups were deliberately equal, real proportions are
+    unknown, and the two completion measures mean different things. A failed 90-second task is not a lost
+    sale, and no revenue ranking follows.
+  s3_zh: >-
+    合计 B 有二十八人完成，A 有二十六人；但两组人数是刻意设成一样的，实际比例不知道，完成的定义也不同。九十秒内没完成，不代表流失一笔交易，也比较不出收入高低。
+  s3_zh_hk: >-
+    合計 B 有二十八人完成，A 有二十六人；但兩組人數係刻意設成一樣，實際比例唔知道，完成嘅定義亦唔同。九十秒內做唔到，唔代表流失咗一宗交易，亦比較唔到收入高低。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Choose a priority; show its cost
+  title_zh: 选定优先任务，也看代价
+  title_zh_hk: 選定優先任務，也看代價
+  en: >-
+    Choose B if helping undecided visitors is the explicit priority and actual-use evidence supports that
+    need, while watching for friction in finding specific models. Choose A if direct access matters more,
+    while checking that undecided visitors can compare confidently. Measure finding, understanding, abandonment
+    and purchases separately, with voluntary feedback and no hidden tracking.
+  zh: >-
+    如果明确要先帮还没想好款式的访客，而且实际使用数据支持这个需要，可以选 B，同时留意查找指定款式是不是变得费力。如果直接查找更重要，就选 A，但要看看还没想好的访客能不能有把握地比较。找得到、看得懂、中途放弃和最终购买要分开衡量；意见由访客自愿提供，也不要暗中追踪。
+  zh_hk: >-
+    如果明確要先幫仲未諗好款式嘅訪客，而且實際使用數據支持呢個需要，可以揀 B，同時留意搵指定款式係咪變得費力。如果直接搵嘢更重要，就揀 A，但要睇吓未諗好嘅訪客可唔可以有把握咁比較。搵唔搵到、睇唔睇得明、中途放棄同最終購買要分開量度；意見由訪客自願提供，亦唔好暗中追蹤。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Design for the starting task
+  title_zh: 按顾客的起步任务设计入口
+  title_zh_hk: 按顧客的起步任務設計入口
+  q1_en: >-
+    Undecided: A 8 · B 15 of 20
+  q1_zh: 尚未决定：A 8 · B 15（各 20 人）
+  q1_zh_hk: 尚未決定：A 8 · B 15（各 20 人）
+  q2_en: >-
+    Named model: A 18 · B 13 of 20
+  q2_zh: 找指定款式：A 18 · B 13（各 20 人）
+  q2_zh_hk: 找指定款式：A 18 · B 13（各 20 人）
+  s1_en: >-
+    More choice does not have to mean showing everything first, and fewer starting options do not mean
+    less stock. The two entrances help different customer tasks.
+  s1_zh: 让顾客有更多选择，不一定要把所有选项一开始就摆出来；起步选项少一点，也不等于库存少了。两个入口帮的是不同的顾客任务。
+  s1_zh_hk: 俾顧客有更多選擇，唔一定要將所有選項一開始就擺晒出嚟；起步選項少啲，亦唔等於庫存少咗。兩個入口幫嘅係唔同嘅顧客任務。
+  s2_en: >-
+    Name the task you prioritise, make the cost to the other task visible, and confirm the choice with
+    evidence about actual visitors, not with the summed test counts.
+  s2_zh: 说清楚你优先照顾哪项任务，也要让另一项任务的代价看得见；再用实际访客的资料来确认，而不是靠测试人数相加。
+  s2_zh_hk: 講清楚你優先照顧邊項任務，亦要令另一項任務嘅代價睇得見；再用實際訪客嘅資料嚟確認，而唔係靠測試人數加埋。
+  s3_en: >-
+    InkLane, its pens and the prototype session are invented, not results from any cited study. Official
+    scene art is a teaching illustration only.
+  s3_zh: InkLane、笔款和原型测试都是虚构的，并非任何引文的研究结果。官方场景图只是教学插图。
+  s3_zh_hk: InkLane、筆款同原型測試都係虛構嘅，唔係任何引文嘅研究結果。官方場景圖只係教學插圖。
+duration_target_s: 196

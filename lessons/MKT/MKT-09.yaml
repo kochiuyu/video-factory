@@ -1,0 +1,288 @@
+id: MKT-09
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A smaller audience. More new people?
+title_zh: 受众较少，反而能接触更多新面孔？
+title_zh_hk: 受眾較少，反而能接觸更多新面孔？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-09
+  kicker_en: MKT-09
+  kicker_zh: MKT-09
+  kicker_zh_hk: MKT-09
+  title_en: A smaller audience. More new people?
+  title_zh: 受众较少，反而能接触更多新面孔？
+  title_zh_hk: 受眾較少，反而能接觸更多新面孔？
+  image: art/more-new-people-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In July 2025, JCDecaux Transport announced a Hong Kong promotion combining MTR station displays with
+    interactive livestreaming. That is a company announcement, not evidence of reach. Now a fictional
+    Hong Kong kitchenware shop is launching a compact steaming basket. A base online video campaign is
+    booked for two weeks, projected to reach 30,000 distinct adults in its target audience. The shop has
+    a final 6,000 dollars for one more package.
+  zh: >-
+    二零二五年七月，JCDecaux Transport 宣布在香港推出推广活动，结合港铁站内展示和互动直播。这是企业公告，不是触达人数的证据。现在，一家虚构的香港厨具店准备推出小巧的蒸笼。店方已经预订了两个星期的线上视频广告，预计可以触达三万名不同的目标成年人。店里还剩最后六千元，可以再加购一个广告组合。
+  zh_hk: >-
+    二零二五年七月，JCDecaux Transport 宣布喺香港推出推廣活動，結合港鐵站內展示同互動直播。呢個係企業公告，唔係觸及人數嘅證據。而家，一間虛構嘅香港廚具店準備推出細細個嘅蒸籠。店方已經預訂咗兩個星期嘅網上影片廣告，預計觸及到三萬個唔同嘅目標成年人。店舖仲剩最後六千蚊，可以再加購一個廣告組合。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: One more fixed package
+  title_zh: 加购一个广告组合
+  title_zh_hk: 加購一個廣告組合
+  row1_en: Base campaign (booked)
+  row1_zh: 基本投放（已预订）
+  row1_zh_hk: 基本投放（已預訂）
+  row2_en: A · Lifestyle video placement
+  row2_zh: A · 生活类视频广告
+  row2_zh_hk: A · 生活類影片廣告
+  row3_en: B · Local cooking content
+  row3_zh: B · 本地烹饪内容广告
+  row3_zh_hk: B · 本地烹飪內容廣告
+  col1_en: Distinct target people on its own
+  col1_zh: 单独投放预计触达人数
+  col1_zh_hk: 單獨投放預計觸及人數
+  col2_en: All-in cost
+  col2_zh: 总费用
+  col2_zh_hk: 總費用
+  c11: 30,000
+  c12_en: Already booked
+  c12_zh: 已预订
+  c12_zh_hk: 已預訂
+  c21: 20,000
+  c22: HK$6,000
+  c31: 15,000
+  c32: HK$6,000
+  footer_en: >-
+    Goal: people the base does not reach
+  footer_zh: 目标：触达基本投放以外的人
+  footer_zh_hk: 目標：觸及基本投放以外的人
+  s1_en: >-
+    The base booking cannot change. The shop can buy exactly one more fixed package in the same window,
+    and its objective is to reach as many additional target people beyond the base as possible.
+  s1_zh: 已预订的基本投放不能改。店方只能在同一时段再加购一个不可拆分的组合，目标是尽量多触达基本投放还没覆盖的目标受众。
+  s1_zh_hk: 已預訂嘅基本投放唔可以改。店方只可以喺同一時段再加購一個唔可以拆開嘅組合，目標係盡量多觸及基本投放仲未覆蓋到嘅目標受眾。
+  s2_en: >-
+    Package A, a lifestyle video placement, projects 20,000 distinct target people on its own. Package
+    B, local cooking content, projects 15,000. Each costs 6,000 dollars, all in.
+  s2_zh: 组合 A 是生活类视频广告，单独投放预计触达两万名目标受众；组合 B 是本地烹饪内容广告，预计一万五千人。两个组合的总费用都是六千元。
+  s2_zh_hk: 組合 A 係生活類影片廣告，單獨投放預計觸及兩萬個目標受眾；組合 B 係本地烹飪內容廣告，預計一萬五千人。兩個組合嘅總費用都係六千蚊。
+  s3_en: >-
+    New people here means newly reached by this campaign, not new customers. And neither standalone number
+    says how many people would also see the base campaign.
+  s3_zh: 这里说的新面孔，是指这次活动新触达的人，不一定是新顾客。而且单看任何一个组合的人数，都不知道其中多少人也会看到基本投放的广告。
+  s3_zh_hk: 呢度講嘅新面孔，係指今次活動新觸及嘅人，唔一定係新顧客。而且單睇任何一個組合嘅人數，都唔知當中幾多人亦會睇到基本投放嘅廣告。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Book A or B?
+  title_zh: 先选 A 还是 B？
+  title_zh_hk: 先選 A 還是 B？
+  en: >-
+    Which placement would you provisionally book? Is A's larger standalone audience enough, and what information
+    could change your choice? Pause and vote.
+  zh: 你会先选哪个组合？A 单独投放时受众较多，单凭这一点够吗？什么资料可能让你改变主意？请暂停，投个票。
+  zh_hk: 你會先揀邊個組合？A 單獨投放嘅時候受眾較多，淨係憑呢點夠唔夠？咩資料可能令你改變主意？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Overlap with the base
+  title_zh: 与基本投放的受众重叠
+  title_zh_hk: 與基本投放的受眾重疊
+  step1_en: >-
+    A: 16,000 of 20,000 also see the base
+  step1_zh: A：20,000 人中 16,000 人重叠
+  step1_zh_hk: A：20,000 人中 16,000 人重疊
+  step2_en: >-
+    B: 5,000 of 15,000 also see the base
+  step2_zh: B：15,000 人中 5,000 人重叠
+  step2_zh_hk: B：15,000 人中 5,000 人重疊
+  step3_en: Base reach stays at 30,000
+  step3_zh: 基本投放仍触达 30,000 人
+  step3_zh_hk: 基本投放仍觸及 30,000 人
+  s1_en: >-
+    The planning model now supplies each package's overlap with the base campaign. Of A's 20,000 target
+    people, 16,000 are also projected to see the base.
+  s1_zh: 规划模型现在估算了各组合和基本投放的受众重叠。A 的两万名目标受众中，预计有一万六千人也会看到基本投放的广告。
+  s1_zh_hk: 規劃模型而家估算咗各個組合同基本投放嘅受眾重疊。A 嘅兩萬個目標受眾入面，預計有一萬六千人亦會睇到基本投放嘅廣告。
+  s2_en: Of B's 15,000, only 5,000 are also projected to see it.
+  s2_zh: B 的一万五千人当中，只有五千人也会看到。
+  s2_zh_hk: B 嘅一萬五千人入面，只有五千人亦會睇到。
+  s3_en: >-
+    Use these compatible estimates as exact inputs. Both cover the same two weeks and method, and neither
+    package changes the base's 30,000 reach. Real forecasts stay uncertain; this is a planning comparison,
+    not observed results.
+  s3_zh: >-
+    本题把这两组相容的估算当作确切数字。两者时段和衡量方法相同，加购哪个都不影响基本投放的三万人。实际预测仍有不确定性，这里比较的是规划方案，不是实际成效。
+  s3_zh_hk: >-
+    本題將呢兩組相容嘅估算當作確切數字。兩者時段同量度方法一樣，加購邊個都唔影響基本投放嘅三萬人。實際預測仍然有不確定性，呢度比較嘅係規劃方案，唔係實際成效。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which adds more people?
+  title_zh: 哪个多触达新受众？
+  title_zh_hk: 哪個多觸及新受眾？
+  en: >-
+    Which package now adds more distinct target people, and what is the combined campaign reach? Does
+    that result show which option creates more sales? Pause and vote.
+  zh: 现在哪个组合能多触达一些不重复的目标受众？整个活动合共触达多少人？这个结果能不能说明哪个组合带来更多销售？请暂停，投个票。
+  zh_hk: 而家邊個組合可以多觸及啲唔重複嘅目標受眾？成個活動合共觸及幾多人？呢個結果講唔講到邊個組合帶來更多銷售？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Subtract people already counted
+  title_zh: 扣除已计算的人
+  title_zh_hk: 扣除已計算的人
+  step1_en: >-
+    A: 20,000 − 16,000 = 4,000 → 34,000
+  step1_zh: A：20,000 − 16,000 = 4,000 → 34,000
+  step1_zh_hk: A：20,000 − 16,000 = 4,000 → 34,000
+  step2_en: >-
+    B: 15,000 − 5,000 = 10,000 → 40,000
+  step2_zh: B：15,000 − 5,000 = 10,000 → 40,000
+  step2_zh_hk: B：15,000 − 5,000 = 10,000 → 40,000
+  step3_en: Not 50,000 or 45,000
+  step3_zh: 不是 50,000 或 45,000
+  step3_zh_hk: 不是 50,000 或 45,000
+  s1_en: >-
+    A adds 20,000 minus 16,000, or 4,000 target people beyond the base. Combined reach is 30,000 plus
+    4,000: 34,000.
+  s1_zh: A 在基本投放以外新触达的人数是两万减一万六千，即四千人。整个活动共触达三万加四千，三万四千人。
+  s1_zh_hk: A 喺基本投放以外新觸及嘅人數係兩萬減一萬六千，即係四千人。成個活動共觸及三萬加四千，三萬四千人。
+  s2_en: >-
+    B adds 15,000 minus 5,000, or 10,000. Combined reach is 30,000 plus 10,000: 40,000.
+  s2_zh: B 新触达的人数是一万五千减五千，即一万人。整个活动共触达三万加一万，四万人。
+  s2_zh_hk: B 新觸及嘅人數係一萬五千減五千，即係一萬人。成個活動共觸及三萬加一萬，四萬人。
+  s3_en: >-
+    Adding the headline audiences directly would give 50,000 or 45,000 and count some people twice. Only
+    one package is bought, so its overlap with the base is what matters; an A-versus-B overlap is not
+    needed.
+  s3_zh: >-
+    如果直接把触达数字相加，会得出五万或四万五千，有些人被算了两次。店方只加购一个组合，所以要看的是它和基本投放的重叠，不用计算 A 和 B 之间的重叠。
+  s3_zh_hk: >-
+    如果直接將觸及數字加埋，會得出五萬或者四萬五千，有啲人計咗兩次。店方只係加購一個組合，所以要睇嘅係佢同基本投放嘅重疊，唔使計 A 同 B 之間嘅重疊。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Reach is not response
+  title_zh: 触达不等于回应
+  title_zh_hk: 觸及不等於回應
+  step1_en: >-
+    Same HK$6,000: B adds 6,000 more
+  step1_zh: 同样 HK$6,000：B 多 6,000 人
+  step1_zh_hk: 同樣 HK$6,000：B 多 6,000 人
+  step2_en: 10,000 reached ≠ 10,000 customers
+  step2_zh: 触达 10,000 人 ≠ 10,000 名新顾客
+  step2_zh_hk: 觸及 10,000 人 ≠ 10,000 名新顧客
+  step3_en: Repetition can serve other goals
+  step3_zh: 重复曝光可服务其他目标
+  step3_zh_hk: 重複曝光可服務其他目標
+  s1_en: >-
+    B reaches 5,000 fewer people on its own, yet adds 6,000 more beyond the existing campaign. At the
+    same cost, choose B for this objective under this model. It does not show that cooking content always
+    beats lifestyle video.
+  s1_zh: >-
+    B 单独投放比 A 少触达五千人，却在基本投放以外多带来六千名新受众。两者花费相同，按模型和本题的目标，应选 B。但这不代表烹饪内容永远胜过生活类视频。
+  s1_zh_hk: >-
+    B 單獨投放比 A 少觸及五千人，但喺基本投放以外多帶來六千個新受眾。兩者使費一樣，按模型同本題嘅目標，應該揀 B。但呢個唔代表烹飪內容永遠勝過生活類影片。
+  s2_en: >-
+    An exposure does not establish attention, recall or a purchase. The 10,000 newly reached people are
+    not 10,000 new customers, and this table cannot rank incremental sales.
+  s2_zh: 看到广告，不等于留意、记得或者购买。新触达的一万人不等于一万名新顾客，表中的数字也不足以比较两个组合新增的销售。
+  s2_zh_hk: 睇到廣告，唔等於留意、記得或者購買。新觸及嘅一萬人唔等於一萬個新顧客，表入面嘅數字亦唔足以比較兩個組合新增嘅銷售。
+  s3_en: >-
+    Repeated exposure can serve a different objective, such as reinforcing a message. If the objective
+    changes, you would need frequency and response evidence; A would not automatically become the better
+    choice.
+  s3_zh: 重复曝光可以服务其他目标，例如加深受众对讯息的印象。如果目标改了，就需要曝光频次和受众回应的资料，也不能直接改选 A。
+  s3_zh_hk: 重複曝光可以服務其他目標，例如加深受眾對訊息嘅印象。如果目標改咗，就需要曝光頻次同受眾回應嘅資料，亦唔可以直接改揀 A。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Keep the comparison consistent
+  title_zh: 保持比较口径一致
+  title_zh_hk: 保持比較口徑一致
+  en: >-
+    Review whole-window distinct reach and overlap with compatible definitions, and do not add each day's
+    distinct audience into a two-week total. With B's overlap fixed at 5,000, A would tie at 10,000 additional
+    people only if its overlap fell to 10,000. Optionally, A costs 1 dollar 50 per additional modelled
+    person, and B 60 cents. Neither is a cost per sale.
+  zh: >-
+    要用相容的定义，衡量整个时段的去重触达人数和受众重叠；每天的去重人数不能直接相加，当成两周的总数。如果 B 的重叠仍是五千，A 的重叠要降到一万，两者才会同样新增一万人。也可以比较成本：A 每多触达一人的模型成本是一点五元，B
+    是六毛。两者都不是每笔销售的成本。
+  zh_hk: >-
+    要用相容嘅定義，量度成個時段嘅去重觸及人數同受眾重疊；每日嘅去重人數唔可以直接加埋，當成兩星期嘅總數。如果 B 嘅重疊仍然係五千，A 嘅重疊要跌到一萬，兩者先會同樣新增一萬人。亦可以比較成本：A
+    每多觸及一個人嘅模型成本係一個半，B 係六毫。兩者都唔係每宗銷售嘅成本。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Count each person once
+  title_zh: 每人只计一次
+  title_zh_hk: 每人只計一次
+  q1_en: >-
+    A: +4,000 → 34,000
+  q1_zh: A：+4,000 → 34,000
+  q1_zh_hk: A：+4,000 → 34,000
+  q2_en: >-
+    B: +10,000 → 40,000
+  q2_zh: B：+10,000 → 40,000
+  q2_zh_hk: B：+10,000 → 40,000
+  s1_en: >-
+    A larger standalone audience is not enough. Subtract the people the base campaign already reaches,
+    then compare what each package adds.
+  s1_zh: 单独投放的受众多，并不足够。先扣除基本投放已经触达的人，再比较每个组合新增了多少。
+  s1_zh_hk: 單獨投放嘅受眾多，並唔足夠。先扣除基本投放已經觸及嘅人，再比較每個組合新增咗幾多。
+  s2_en: >-
+    Here the smaller placement better meets the objective. But reach is not response: newly reached people
+    are not new customers.
+  s2_zh: 在本题中，受众较少的组合反而更切合目标。但触达不等于回应：新触达的人不等于新顾客。
+  s2_zh_hk: 喺本題入面，受眾較少嘅組合反而更切合目標。但觸及唔等於回應：新觸及嘅人唔等於新顧客。
+  s3_en: >-
+    The kitchenware shop, its budget and the audience figures are fictional. Official scene art is a teaching
+    illustration only.
+  s3_zh: 厨具店、预算和受众数字都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 廚具店、預算同受眾數字都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 198

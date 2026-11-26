@@ -516,6 +516,7 @@ def _scene_types() -> dict:
         FadeIn,
         FadeOut,
         LaggedStart,
+        Circle,
         Rectangle,
         RoundedRectangle,
         Scene,
@@ -539,6 +540,24 @@ def _scene_types() -> dict:
         base = 56.0 if portrait else 48.0
         unit = ph / float(config.frame_height or 8.0)
         return (base * (ph / ref)) / unit
+
+    def _count_label(word, latin, cjk, scale, *, size=48, color=None, max_width=None):
+        """One count word at the shared scale.
+
+        Callers seat it with ``_seat_count_label``. A thin 一 must not be placed
+        from its own ink height, or it leaves the line shared with 二 and 三.
+        """
+        glyph = styled(str(word), latin, cjk, size)
+        if color is not None:
+            glyph.set_color(color)
+        glyph.scale(scale)
+        if max_width is not None and float(glyph.width) > max_width > 0:
+            glyph.scale(max_width / float(glyph.width))
+        return glyph
+
+    def _seat_count_label(glyph, x: float, centre_y: float):
+        """Put the ink centre on a fixed line. The line comes from a reference glyph."""
+        glyph.move_to([x, centre_y, 0])
 
     def font_for(text: str, latin: str, cjk: str) -> str:
         if any("\u4e00" <= ch <= "\u9fff" for ch in text or ""):
@@ -631,6 +650,59 @@ def _scene_types() -> dict:
                 num.scale(target / float(num.height))
             num.next_to(board, RIGHT, buff=0.16)
             group.add(num)
+        return group
+
+    def _pair_columns(slots: int, portrait: bool) -> int:
+        slots = max(1, int(slots))
+        if portrait:
+            return min(3, slots)
+        return min(5, slots)
+
+    def _pair_static(n: int, radius: float = 0.15, ring: bool = False):
+        """Paired counters for a hook or a takeaway cue.
+
+        A leftover counter sits on the same row, with a gold ring when ``ring`` is set.
+        """
+        count = max(0, int(n))
+        pairs, leftover = divmod(count, 2)
+        slots = pairs + leftover
+        if slots <= 0:
+            empty = counter("#D5D0C6", radius)
+            return VGroup(empty)
+        portrait = False
+        cols = _pair_columns(slots, portrait)
+        # A takeaway cue stays one row through nine counters (four pairs and one left).
+        if slots <= 5:
+            cols = slots
+        dot_r = radius
+        inner = max(0.04, dot_r * 0.35)
+        pitch = dot_r * 4 + inner + max(0.12, dot_r * 1.15)
+        row_pitch = dot_r * 2 + max(0.16, dot_r * 1.5)
+        rows = (slots + cols - 1) // cols
+        dots = VGroup()
+        lone = None
+        for slot in range(slots):
+            r, c = divmod(slot, cols)
+            in_row = min(cols, slots - r * cols)
+            cx = (c - (in_row - 1) / 2.0) * pitch
+            cy = ((rows - 1) / 2.0 - r) * row_pitch
+            if slot < pairs:
+                left = counter(GREEN, dot_r)
+                right = counter(GREEN, dot_r)
+                left.move_to([cx - (dot_r + inner / 2.0), cy, 0])
+                right.move_to([cx + (dot_r + inner / 2.0), cy, 0])
+                dots.add(left, right)
+            else:
+                lone = counter(GREEN, dot_r)
+                lone.move_to([cx, cy, 0])
+                dots.add(lone)
+        extras = []
+        if ring and lone is not None:
+            halo = SurroundingRectangle(lone, color=GOLD, buff=0.04, stroke_width=4)
+            halo.set_z_index(5)
+            extras.append(halo)
+        group = VGroup(dots, *extras)
+        group.move_to(UP * 0)
         return group
 
     def ten_cells():
@@ -734,7 +806,12 @@ def _scene_types() -> dict:
             move = min(total * 0.82, total)
             each = move / len(moves)
             if each < frame:
-                self.spend(index, LaggedStart(*moves, lag_ratio=0.85))
+                # A function is called now, the same way the one-by-one path does.
+                built = [
+                    item() if callable(item) and not hasattr(item, "build") else item
+                    for item in moves
+                ]
+                self.spend(index, LaggedStart(*built, lag_ratio=0.85))
                 return
             for item in moves:
                 built = item() if callable(item) and not hasattr(item, "build") else item
@@ -1085,14 +1162,15 @@ def _scene_types() -> dict:
             anchors_end = VGroup()
             for i in range(count):
                 dot = counter(fill, radius)
-                num = Text(str(i + 1), font=latin, font_size=28, color=WHITE)
-                if num.width > radius * 1.35:
-                    num.scale(radius * 1.35 / num.width)
+                num = _count_label(
+                    str(i + 1), latin, cjk, 1.0,
+                    size=28, color=WHITE, max_width=radius * 1.35,
+                )
                 num.set_z_index(4)
                 if mode != "rearrange":
                     num.set_opacity(0)
                 dot.move_to([starts[i][0], starts[i][1], 0])
-                num.move_to(dot)
+                _seat_count_label(num, starts[i][0], starts[i][1])
                 pieces.append(dot)
                 numbers.append(num)
                 pin = Dot([ends[i][0], ends[i][1], 0], radius=0.01, fill_opacity=0, stroke_opacity=0)
@@ -1374,13 +1452,15 @@ def _scene_types() -> dict:
                 centers[i] = centers[i] - shift
             tags = VGroup()
             pitch = cell + gap
+            box_h = float(ref.height) * label_scale
             for word, index in zip(words, visits):
-                tag = styled(word, latin, cjk, 48)
-                tag.scale(label_scale)
                 # Landscape only. Portrait already reserved 16px between labels.
-                if ph <= pw and float(tag.width) > pitch * 0.96:
-                    tag.scale(pitch * 0.96 / float(tag.width))
-                tag.next_to(tokens[index], UP, buff=0.12)
+                cap = pitch * 0.96 if ph <= pw else None
+                tag = _count_label(word, latin, cjk, label_scale, max_width=cap)
+                token = tokens[index]
+                # The reference box, not this glyph, sets the centre line.
+                centre_y = float(token.get_top()[1]) + 0.12 + box_h / 2.0
+                _seat_count_label(tag, float(token.get_center()[0]), centre_y)
                 tag.set_opacity(0)
                 tag.set_z_index(6)
                 tags.add(tag)
@@ -1436,6 +1516,191 @@ def _scene_types() -> dict:
                 self.spend_each(1, hops)
             self.spend(2, FadeIn(answer), FadeIn(note))
 
+    class PairCounters(_Board):
+        """Counters slide into pairs. A leftover one gets a ring. Pair labels land on the count."""
+
+        def construct(self):
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            n = int(self.vf_n if self.vf_n is not None else labels.get("n") or 0)
+            n = max(0, min(20, n))
+            pairs, leftover = divmod(n, 2)
+            words = [str(w) for w in (labels.get("pairs") or [])]
+            pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
+            ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+            portrait = ph > pw
+            unit = ph / float(config.frame_height or 8.0)
+            left_lim, right_lim, _, _ = _safe_limits()
+            # Leave a margin so the open pairs, before they slide together, stay inside the safe box.
+            max_w = (right_lim - left_lim) * (0.86 if portrait else 0.84)
+            slots = max(1, pairs + leftover)
+            cols = _pair_columns(slots, portrait)
+            pitch = max_w / cols
+            label_h = _ordinal_label_height()
+            # Scale from a full character. Matching 一's own ink height turns it into a bar.
+            cjk_labels = any("\u4e00" <= ch <= "\u9fff" for word in words for ch in word)
+            ref = styled("三" if cjk_labels else "8", latin, cjk, 48)
+            label_scale = (label_h / float(ref.height)) if float(ref.height) else 1.0
+            label_w = 0.0
+            for word in words or ["8"]:
+                probe = styled(word, latin, cjk, 48)
+                label_w = max(label_w, float(probe.width) * label_scale)
+            floor_h = (44.0 * (ph / (1920.0 if portrait else 1080.0))) / unit
+            room = pitch - (16.0 / unit)
+            if pairs and label_w > room > 0 and label_h > 0:
+                fitted = room / label_w
+                if label_h * fitted < floor_h:
+                    fitted = floor_h / label_h
+                fitted = min(1.0, fitted)
+                label_scale *= fitted
+                label_w *= fitted
+                label_h *= fitted
+            dot_r = min(0.32, max(0.10, pitch * 0.16))
+            inner = max(0.03, dot_r * 0.28)
+            pair_w = dot_r * 4 + inner
+            if pair_w > pitch * 0.78:
+                shrink = (pitch * 0.78) / pair_w
+                dot_r *= shrink
+                inner *= shrink
+                pair_w = dot_r * 4 + inner
+            row_pitch = label_h + dot_r * 2 + (0.28 if portrait else 0.34)
+            rows_n = (slots + cols - 1) // cols
+            centres = []
+            lone_at = None
+            for slot in range(slots):
+                r, c = divmod(slot, cols)
+                in_row = min(cols, slots - r * cols)
+                cx = (c - (in_row - 1) / 2.0) * pitch
+                cy = ((rows_n - 1) / 2.0 - r) * row_pitch
+                centres.append((cx, cy))
+                if slot >= pairs:
+                    lone_at = (cx, cy)
+            dots = VGroup()
+            ends = []
+            for i in range(pairs):
+                cx, cy = centres[i]
+                left = counter(GREEN, dot_r)
+                right = counter(GREEN, dot_r)
+                left.move_to([cx - (dot_r + inner / 2.0), cy, 0])
+                right.move_to([cx + (dot_r + inner / 2.0), cy, 0])
+                dots.add(left, right)
+                ends.append(left.get_center().copy())
+                ends.append(right.get_center().copy())
+            lone = None
+            if leftover and lone_at is not None:
+                lone = counter(GREEN, dot_r)
+                lone.move_to([lone_at[0], lone_at[1], 0])
+                dots.add(lone)
+            tags = VGroup()
+            box_h = float(ref.height) * label_scale
+            label_cap = max(0.05, pitch - 16.0 / unit)
+            for i in range(pairs):
+                word = words[i] if i < len(words) else str(i + 1)
+                tag = _count_label(word, latin, cjk, label_scale, max_width=label_cap)
+                cx, cy = centres[i]
+                _seat_count_label(tag, cx, cy + dot_r + 0.08 + box_h / 2.0)
+                tag.set_opacity(0)
+                tag.set_z_index(6)
+                tags.add(tag)
+            title = styled(labels.get("title") or "", latin, cjk, 42)
+            answer = styled(str(labels.get("answer") or ""), latin, cjk, 54)
+            note = styled(labels.get("note") or "", latin, cjk, 32)
+            foot = VGroup(answer, note).arrange(RIGHT, buff=0.24)
+            marker = RoundedRectangle(
+                width=pair_w + 0.16,
+                height=dot_r * 2 + 0.16,
+                corner_radius=0.08,
+                stroke_color=GOLD,
+                stroke_width=6,
+                fill_color=GOLD,
+                fill_opacity=0.18,
+            )
+            marker.set_z_index(1)
+            marker.set_opacity(0)
+            if pairs:
+                marker.move_to([centres[0][0], centres[0][1], 0])
+            ring = None
+            if lone is not None:
+                ring = Circle(
+                    radius=dot_r + 0.07,
+                    stroke_color=GOLD,
+                    stroke_width=5,
+                    fill_opacity=0,
+                )
+                ring.move_to(lone)
+                ring.set_stroke(opacity=0)
+                ring.set_z_index(5)
+            anchor = dots if len(dots) else marker
+            if portrait and len(dots):
+                limit = max(float(dots.width), 0.2)
+                if float(title.width) > limit:
+                    title.scale(limit / float(title.width))
+                if float(foot.width) > limit:
+                    foot.scale(limit / float(foot.width))
+            title.next_to(VGroup(anchor, tags) if len(tags) else anchor, UP, buff=0.26)
+            foot.next_to(anchor, DOWN, buff=0.26)
+            parts = [title, dots, tags, marker, foot]
+            if ring is not None:
+                parts.append(ring)
+            board = VGroup(*parts)
+            settle(board)
+            # settle moves the group. Read the closed-pair centres after that.
+            closed = [dot.get_center().copy() for dot in dots]
+            pair_centres = []
+            for i in range(pairs):
+                pair_centres.append((closed[2 * i] + closed[2 * i + 1]) / 2)
+                tags[i].move_to([
+                    float(pair_centres[i][0]),
+                    float(tags[i].get_center()[1]),
+                    0,
+                ])
+            if pairs:
+                marker.move_to(pair_centres[0])
+            # The open pair is what has to stay inside the safe box. Closed
+            # pairs sit inside that, so the slide inward cannot leave the margin.
+            left_lim, right_lim, _, _ = _safe_limits()
+            room = 0.2
+            if len(dots):
+                room = min(
+                    float(dots.get_left()[0]) - left_lim,
+                    right_lim - float(dots.get_right()[0]),
+                )
+            spread = min(0.28, max(0.0, (pitch - pair_w) / 2.0 - 0.04), max(0.0, room - 0.06))
+            for i in range(pairs):
+                dots[2 * i].shift(LEFT * spread)
+                dots[2 * i + 1].shift(RIGHT * spread)
+            self.add(tags)
+            if ring is not None:
+                self.add(ring)
+            self.spend(0, FadeIn(title), FadeIn(dots))
+            hops = []
+            for i in range(pairs):
+                dest_l = closed[2 * i]
+                dest_r = closed[2 * i + 1]
+                dest_m = pair_centres[i]
+                tag = tags[i]
+
+                def hop(dest_l=dest_l, dest_r=dest_r, dest_m=dest_m, tag=tag, i=i):
+                    left_dot = dots[2 * i]
+                    right_dot = dots[2 * i + 1]
+                    return AnimationGroup(
+                        left_dot.animate.move_to(dest_l),
+                        right_dot.animate.move_to(dest_r),
+                        marker.animate.move_to(dest_m).set_opacity(1),
+                        tag.animate.set_opacity(1),
+                    )
+
+                hops.append(hop)
+            counted = self.marks_for(1)
+            if hops and counted and len(counted) == len(hops):
+                self.spend_marked(1, hops, counted)
+            else:
+                self.spend_each(1, hops)
+            closing = [FadeIn(answer), FadeIn(note)]
+            if ring is not None:
+                closing.append(ring.animate.set_stroke(opacity=1))
+            self.spend(2, *closing)
+
     class LessonHook(_Board):
         """The title arrives, then the lesson's objects, with the opening question."""
 
@@ -1453,7 +1718,7 @@ def _scene_types() -> dict:
             title = styled(labels.get("title") or "", latin, cjk, 54)
             cue = self._hook_cue(motif, latin, cjk, labels)
             portrait = int(getattr(config, "pixel_height", 0) or 0) > int(getattr(config, "pixel_width", 0) or 0)
-            if motif == "ordinal" and portrait:
+            if portrait and motif in {"ordinal", "pairs"}:
                 # Title and tokens each fill the safe width. A long English
                 # title must not shrink the row.
                 left_lim, right_lim, bot_lim, top_lim = _safe_limits()
@@ -1485,6 +1750,11 @@ def _scene_types() -> dict:
                     limit = max(float(title.width), float(kicker.width), cap)
                     if float(cue.width) > limit:
                         cue.scale(limit / float(cue.width))
+                elif motif == "pairs":
+                    left_lim, right_lim, _, _ = _safe_limits()
+                    cap = (right_lim - left_lim) * 0.78
+                    if float(cue.width) > 0:
+                        cue.scale(cap / float(cue.width))
                 title.next_to(kicker, DOWN, buff=0.28)
                 cue.next_to(title, DOWN, buff=0.4)
                 settle(VGroup(kicker, title, cue))
@@ -1515,6 +1785,10 @@ def _scene_types() -> dict:
                 n = max(1, int(info.get("n") or 6))
                 mark = max(1, min(n, int(info.get("mark") or 3)))
                 return _ordinal_cue(n, mark, "hook", latin, cjk)
+            if motif == "pairs":
+                info = labels or {}
+                count = max(0, min(20, int(info.get("n") or 8)))
+                return _pair_static(count, 0.18, ring=bool(count % 2))
             if motif == "ten_frame":
                 frame = ten_cells()
                 frame.scale(0.85)
@@ -1545,6 +1819,9 @@ def _scene_types() -> dict:
                 return
             if motif == "ordinal":
                 self._ordinal_recap(title, lines, latin, cjk)
+                return
+            if motif == "pairs":
+                self._pair_recap(title, lines, latin, cjk)
                 return
             cues = [_takeaway_cue(motif, i, latin) for i in range(len(lines))]
             rows = self._layout_takeaway(title, cues, [str(line) for line in lines], latin, cjk)
@@ -1585,7 +1862,7 @@ def _scene_types() -> dict:
             cy = float(grid["top"]) - band / 2.0
             heading.move_to([cx, cy, 0])
 
-        def _layout_takeaway(self, heading, cues, lines, latin: str, cjk: str) -> list:
+        def _layout_takeaway(self, heading, cues, lines, latin: str, cjk: str, text_fit: float = 0.96) -> list:
             """Put each cue and its sentence into an equal row cell."""
             pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
             ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
@@ -1594,7 +1871,7 @@ def _scene_types() -> dict:
             font = self._body_font(latin, grid)
             portrait = bool(grid["portrait"])
             words = [
-                self._line_group(text, latin, cjk, font, float(grid["text_w"]) * 0.96, portrait)
+                self._line_group(text, latin, cjk, font, float(grid["text_w"]) * text_fit, portrait)
                 for text in lines
             ]
             if portrait:
@@ -1735,10 +2012,11 @@ def _scene_types() -> dict:
             dots.arrange(RIGHT, buff=0.14)
             numbers = VGroup()
             for i, dot in enumerate(dots):
-                num = Text(str(i + 1), font=latin, font_size=28, color=WHITE)
-                if float(num.width) > float(dot.width) * 0.72:
-                    num.scale(float(dot.width) * 0.72 / float(num.width))
-                num.move_to(dot)
+                num = _count_label(
+                    str(i + 1), latin, cjk, 1.0,
+                    size=28, color=WHITE, max_width=float(dot.width) * 0.72,
+                )
+                _seat_count_label(num, float(dot.get_center()[0]), float(dot.get_center()[1]))
                 num.set_z_index(4)
                 num.set_opacity(0)
                 numbers.add(num)
@@ -1936,6 +2214,64 @@ def _scene_types() -> dict:
             for index in range(1, len(rows)):
                 self.spend(index, FadeIn(rows[index]))
 
+        def _pair_recap(self, title, lines, latin: str, cjk: str) -> None:
+            """Even, odd, a pair of two, and — when set — that count in two rows of pairs."""
+            info = self.vf_labels
+            even = int(info.get("n") or 8)
+            odd = int(info.get("odd") if info.get("odd") is not None else min(20, even + 1))
+            radius = 0.16
+            built = [
+                _pair_static(even, radius, ring=False),
+                _pair_static(odd, radius, ring=True),
+                _pair_static(2, radius, ring=False),
+            ]
+            if info.get("also") is not None:
+                also_n = int(info.get("also"))
+                # Same counter size as the odd row. Ten slots wrap to two rows of five,
+                # so nine pairs and the ringed leftover stay countable inside the picture column.
+                built.append(_pair_static(also_n, radius, ring=bool(also_n % 2)))
+            shown = [str(line) for line in list(lines)]
+            cues = []
+            boards = []
+            for i, board in enumerate(built):
+                if i == 3:
+                    cues.append(board)
+                    boards.append(board[0])
+                else:
+                    cues.append(board)
+                    boards.append(board[0] if len(board) else board)
+            for cue, board in zip(cues, boards):
+                cue.shift(LEFT * float(board.get_left()[0]))
+                cue.shift(DOWN * float(board.get_center()[1]))
+            pad_left = min(float(cue.get_left()[0]) for cue in cues)
+            pad_right = max(float(cue.get_right()[0]) for cue in cues)
+            pad_top = max(float(cue.get_top()[1]) for cue in cues)
+            pad_bottom = min(float(cue.get_bottom()[1]) for cue in cues)
+            for cue in cues:
+                pad = Rectangle(
+                    width=max(0.01, pad_right - pad_left),
+                    height=max(0.01, pad_top - pad_bottom),
+                    stroke_opacity=0,
+                    fill_opacity=0,
+                )
+                pad.move_to([(pad_left + pad_right) / 2.0, (pad_top + pad_bottom) / 2.0, 0])
+                cue.add(pad)
+            while len(shown) < len(cues):
+                shown.append(" ")
+            use = min(len(shown), len(cues))
+            portrait = int(getattr(config, "pixel_height", 0) or 0) > int(getattr(config, "pixel_width", 0) or 0)
+            if portrait:
+                rows = self._layout_ordinal_portrait(
+                    title, cues[:use], boards[:use], shown[:use], latin, cjk,
+                )
+            else:
+                # The full text column, so "Eight makes four pairs. Eight is even."
+                # stays one line at the floor size. Other motifs keep the 4% inset.
+                rows = self._layout_takeaway(title, cues[:use], shown[:use], latin, cjk, text_fit=1.0)
+            self.spend(0, FadeIn(title), FadeIn(rows[0]))
+            for index in range(1, len(rows)):
+                self.spend(index, FadeIn(rows[index]))
+
         def _layout_ordinal_portrait(self, heading, cues, boards, lines, latin: str, cjk: str) -> list:
             """Portrait ordinal rows share one size, about 80% of the safe width."""
             pw = int(getattr(config, "pixel_width", 0) or 0) or 1080
@@ -2054,6 +2390,7 @@ def _scene_types() -> dict:
         "count_objects": CountObjects,
         "number_track": NumberTrack,
         "ordinal_row": OrdinalRow,
+        "pair_counters": PairCounters,
         "lesson_hook": LessonHook,
         "lesson_takeaway": LessonTakeaway,
     }

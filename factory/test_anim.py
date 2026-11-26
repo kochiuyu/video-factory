@@ -100,6 +100,79 @@ def _label_text(labels) -> str:
     return "".join(parts)
 
 
+def _label_row_centres(path) -> list[list[float]]:
+    """Vertical ink centre of each count label, grouped by the row it sits on.
+
+    The centre is the middle of the ink, so a thin 一 is measured the same way as 三.
+    """
+    from PIL import Image
+
+    img = Image.open(path).convert("RGB")
+    w, h = img.size
+    px = img.load()
+
+    def dark(x, y):
+        r, g, b = px[x, y]
+        return r < 90 and g < 110 and b < 130 and (r + g + b) < 280
+
+    def green(x, y):
+        r, g, b = px[x, y]
+        return g > 120 and g > r + 40 and g > b + 20
+
+    rows = []
+    y = 0
+    while y < h:
+        if sum(1 for x in range(0, w, 3) if green(x, y)) < 4:
+            y += 1
+            continue
+        y0 = y
+        while y < h and sum(1 for x in range(0, w, 3) if green(x, y)) >= 3:
+            y += 1
+        rows.append((y0, y - 1))
+        y += 1
+    centres = []
+    # The labels sit in the gap above each counter row. Stop at the previous
+    # row so its outline is not read as another numeral.
+    window = max(24, int(46 * h / 720))
+    prev_bottom = 0
+    for y0, y1 in rows:
+        band_bot = max(0, y0 - 6)
+        band_top = max(prev_bottom + 3, y0 - window)
+        prev_bottom = y1
+        if band_bot <= band_top:
+            continue
+        runs = []
+        x = 0
+        while x < w:
+            if not any(dark(x, yy) for yy in range(band_top, band_bot + 1)):
+                x += 1
+                continue
+            x0 = x
+            while x < w and any(dark(x, yy) for yy in range(band_top, band_bot + 1)):
+                x += 1
+            runs.append((x0, x - 1))
+        merged = []
+        for run in runs:
+            # One glyph can be two strokes with a gap, as in 八.
+            if merged and run[0] - merged[-1][1] <= 16:
+                merged[-1] = (merged[-1][0], run[1])
+            else:
+                merged.append(run)
+        row = []
+        for x0, x1 in merged:
+            ys = [
+                yy for yy in range(band_top, band_bot + 1)
+                for xx in range(x0, x1 + 1)
+                if dark(xx, yy)
+            ]
+            if len(ys) < 8:
+                continue
+            row.append((min(ys) + max(ys)) / 2.0)
+        if len(row) >= 2:
+            centres.append(row)
+    return centres
+
+
 class AnimatedSchemaTest(unittest.TestCase):
     def test_demo_numbers_and_valid_lesson(self):
         self.assertEqual(labels_for(THIRTEEN, "en")["equation"], ["13", "=", "10", "+", "3"])
@@ -854,6 +927,9 @@ class AnimatedRenderTest(unittest.TestCase):
             )
             # 48px at 1080p, scaled to 720. The old cap sat near 25px.
             self.assertGreaterEqual(self._label_band_height(how_png), 48 * 720 / 1080 * 0.9)
+            for row in _label_row_centres(how_png):
+                self.assertGreaterEqual(len(row), 2, how_png.name)
+                self.assertLessEqual(max(row) - min(row), 1.0, f"how-many centres {row}")
 
             render_animated_clip(
                 hook, {"format": "16:9"}, label_lang_code="en",
@@ -1245,7 +1321,36 @@ class AnimatedRenderTest(unittest.TestCase):
             "s3_zh_hk": "由右邊數，同一粒星星係第四。",
             "s4_zh_hk": "第幾個，要睇由邊一頭數。",
         }
-        cards = (("ten", beat, 4), ("count", counted, 4), ("track", track, 3), ("ordinal", ordinal, 4))
+        pairs = {
+            "id": "takeaway",
+            "visual": "animated",
+            "scene": "lesson_takeaway",
+            "motif": "pairs",
+            "n": 8,
+            "also": 19,
+            "title_en": "Even or odd?",
+            "s1_en": "Eight makes four pairs. Eight is even.",
+            "s2_en": "Nine leaves one. Nine is odd.",
+            "s3_en": "A pair holds two, not three.",
+            "s4_en": "Nineteen makes nine pairs, one left.",
+            "title_zh": "单数还是双数？",
+            "s1_zh": "八个配成四对，八是双数。",
+            "s2_zh": "九个剩下一个，九是单数。",
+            "s3_zh": "一对只放两个，不放三个。",
+            "s4_zh": "十九个配成九对，单独剩一个。",
+            "title_zh_hk": "單數定雙數？",
+            "s1_zh_hk": "八個配成四對，八係雙數。",
+            "s2_zh_hk": "九個剩低一個，九係單數。",
+            "s3_zh_hk": "一對只放兩個，唔放三個。",
+            "s4_zh_hk": "十九個配成九對，單獨剩一個。",
+        }
+        cards = (
+            ("ten", beat, 4),
+            ("count", counted, 4),
+            ("track", track, 3),
+            ("ordinal", ordinal, 4),
+            ("pairs", pairs, 4),
+        )
 
         def pix_y(grid, manim_y):
             return (grid["fh"] / 2 - manim_y) / grid["fh"] * grid["ph"]
@@ -1496,7 +1601,7 @@ class SceneRegistryTest(unittest.TestCase):
             list(REGISTRY),
             [
                 "one_ten", "ten_and_ones", "make_ten", "count_objects", "number_track",
-                "ordinal_row", "lesson_hook", "lesson_takeaway",
+                "ordinal_row", "pair_counters", "lesson_hook", "lesson_takeaway",
             ],
         )
         self.assertEqual(REGISTRY["one_ten"].steps, 4)
@@ -1591,6 +1696,7 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-NUM-02": ["lesson_hook", "one_ten", "ten_and_ones", "ten_and_ones", "lesson_takeaway"],
             "P1-NUM-03": ["lesson_hook", "number_track", "number_track", "number_track", "lesson_takeaway"],
             "P1-NUM-04": ["lesson_hook", "ordinal_row", "ordinal_row", "ordinal_row", "lesson_takeaway"],
+            "P1-NUM-05": ["lesson_hook", "pair_counters", "pair_counters", "pair_counters", "lesson_takeaway"],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -1671,6 +1777,23 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(labels_for(recap, "en")["left"], "3rd")
         self.assertEqual(labels_for(recap, "zh_hk")["right"], "第四")
         self.assertEqual(labels_for(recap, "zh")["total"], "六")
+        five = load_lesson(P1 / "P1-NUM-05.yaml")
+        paired = [beat for beat in five["beats"] if beat.get("scene") == "pair_counters"]
+        self.assertEqual([b["n"] for b in paired], [8, 9, 19])
+        self.assertEqual(count_event(paired[0]), (1, 4))
+        self.assertEqual(count_event(paired[1]), (1, 4))
+        self.assertEqual(count_event(paired[2]), (1, 9))
+        self.assertEqual(labels_for(paired[0], "en")["answer"], "Even")
+        self.assertEqual(labels_for(paired[1], "zh")["answer"], "单数")
+        self.assertEqual(labels_for(paired[1], "zh_hk")["note"], "剩低一個")
+        self.assertEqual(labels_for(paired[2], "zh_hk")["pairs"][-1], "九")
+        recap5 = next(beat for beat in five["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap5), 4)
+        self.assertEqual(labels_for(recap5, "en")["examples"], [8, 9, 2])
+        self.assertEqual(labels_for(recap5, "zh_hk")["also_word"], "十九")
+        self.assertIn("?", five["beats"][0]["s1_en"])
+        self.assertIn("even", paired[0]["s3_en"].lower())
+        self.assertIn("odd", paired[1]["s3_en"].lower())
 
     def test_ordinal_row_counts_a_place_or_a_total(self):
         left = {
@@ -1791,6 +1914,252 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(len(merged), 2, runs)
         gap = merged[1][0] - merged[0][1] - 1
         self.assertGreaterEqual(gap, 12, merged)
+
+
+class PairCountersTest(unittest.TestCase):
+    def _beat(self, n: int) -> dict:
+        return {
+            "visual": "animated",
+            "scene": "pair_counters",
+            "n": n,
+            "s1_en": "Count.",
+            "s2_en": "One.",
+            "s3_en": "Done.",
+            "s1_zh": "数。",
+            "s2_zh": "一。",
+            "s3_zh": "好。",
+            "s1_zh_hk": "數。",
+            "s2_zh_hk": "一。",
+            "s3_zh_hk": "好。",
+        }
+
+    def test_pair_counters_bounds_and_labels(self):
+        eight = self._beat(8)
+        self.assertEqual(scene_problems(eight), [])
+        self.assertEqual(scene_problems(self._beat(0)), [])
+        self.assertEqual(scene_problems(self._beat(20)), [])
+        self.assertTrue(scene_problems(self._beat(21)))
+        self.assertTrue(scene_problems(self._beat(-1)))
+        self.assertTrue(scene_problems({"visual": "animated", "scene": "pair_counters"}))
+        self.assertTrue(scene_problems(self._beat(1.5)))
+        self.assertEqual(count_event(eight), (1, 4))
+        self.assertEqual(count_event(self._beat(9)), (1, 4))
+        self.assertEqual(count_event(self._beat(19)), (1, 9))
+        self.assertIsNone(count_event(self._beat(0)))
+        self.assertIsNone(count_event(self._beat(1)))
+        self.assertEqual(labels_for(eight, "en")["pairs"], ["1", "2", "3", "4"])
+        self.assertEqual(labels_for(eight, "zh")["pairs"], ["一", "二", "三", "四"])
+        self.assertEqual(labels_for(eight, "zh_hk")["pairs"], ["一", "二", "三", "四"])
+        self.assertEqual(labels_for(eight, "en")["answer"], "Even")
+        self.assertEqual(labels_for(eight, "en")["note"], "None left")
+        self.assertEqual(labels_for(eight, "zh")["answer"], "双数")
+        self.assertEqual(labels_for(self._beat(9), "zh_hk")["answer"], "單數")
+        self.assertEqual(labels_for(self._beat(9), "zh_hk")["note"], "剩低一個")
+        self.assertEqual(labels_for(self._beat(9), "en")["leftover"], 1)
+        self.assertEqual(labels_for(self._beat(20), "en")["pair_count"], 10)
+        trad = _label_text(labels_for(self._beat(19), "zh_hk"))
+        self.assertEqual(sorted({ch for ch in trad if ch in LEAK}), [])
+        self.assertNotEqual(
+            labels_for(eight, "zh")["title"],
+            labels_for(eight, "zh_hk")["title"],
+        )
+        hook = {
+            "visual": "animated",
+            "scene": "lesson_hook",
+            "motif": "pairs",
+            "title_en": "Make pairs",
+            "s1_en": "Can every counter find a partner?",
+            "s1_zh": "每个圆片都能找到伙伴吗？",
+            "s1_zh_hk": "每個圓片都搵到伙伴嗎？",
+        }
+        self.assertEqual(scene_problems(hook), [])
+        self.assertEqual(labels_for(hook, "en")["n"], 8)
+        self.assertTrue(scene_problems(dict(hook, n=21)))
+        recap = {
+            "visual": "animated",
+            "scene": "lesson_takeaway",
+            "motif": "pairs",
+            "n": 8,
+            "also": 19,
+            "s1_en": "Eight.",
+            "s2_en": "Nine.",
+            "s3_en": "Two.",
+            "s4_en": "Nineteen.",
+            "s1_zh": "八。",
+            "s2_zh": "九。",
+            "s3_zh": "二。",
+            "s4_zh": "十九。",
+            "s1_zh_hk": "八。",
+            "s2_zh_hk": "九。",
+            "s3_zh_hk": "二。",
+            "s4_zh_hk": "十九。",
+        }
+        self.assertEqual(scene_problems(recap), [])
+        self.assertEqual(labels_for(recap, "zh")["also_word"], "十九")
+        self.assertTrue(scene_problems(dict(recap, also=21)))
+        words = [
+            {"text": "Eight", "start": 0.2},
+            {"text": "One", "start": 1.4},
+            {"text": "Two", "start": 1.9},
+            {"text": "Three", "start": 2.4},
+            {"text": "Four", "start": 2.9},
+            {"text": "Four", "start": 3.6},
+        ]
+        scheduled = schedule_marks(eight, [1.2, 2.2, 1.4], words)
+        self.assertEqual(len(scheduled[1]), 4)
+        self.assertAlmostEqual(scheduled[1][0], 0.2, places=2)
+
+    def test_pair_labels_keep_a_gap(self):
+        """Adjacent pair labels stay at least 12px apart, in every language and aspect."""
+        import shutil
+        import subprocess
+        import tempfile
+
+        from PIL import Image
+
+        from anim import render_animated_clip
+
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
+        if shutil.which("ffmpeg") is None:
+            self.skipTest("ffmpeg is optional")
+
+        frames = ((1280, 720), (720, 1280))
+        with tempfile.TemporaryDirectory(prefix="vf-pair-gap-") as tmp:
+            root = Path(tmp)
+            audio = root / "silent.wav"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                 "-t", "4", "-c:a", "pcm_s16le", str(audio)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            for n in (8, 19):
+                beat = self._beat(n)
+                for lang in ("en", "zh", "zh_hk"):
+                    for frame in frames:
+                        dest = root / f"{n}-{lang}-{frame[0]}.mp4"
+                        render_animated_clip(
+                            beat, {"format": "9:16" if frame[1] > frame[0] else "16:9"},
+                            label_lang_code=lang,
+                            holds=[0.35, 1.5, 0.45], still_idx=[0, 1, 2],
+                            pages=["a", "b", "c"],
+                            audio=audio, dest=dest, cache_dir=root / "cache",
+                            captions=False, progress_bar=False, frame=frame, fps=8,
+                        )
+                        silent = max((root / "cache" / lang).glob("*.mp4"), key=lambda p: p.stat().st_mtime)
+                        shot = root / f"{n}-{lang}-{frame[0]}.png"
+                        duration = float(subprocess.check_output(
+                            ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                             "-of", "csv=p=0", str(silent)],
+                            text=True,
+                        ))
+                        last = max(0, int(duration * 8) - 1)
+                        subprocess.check_call(
+                            ["ffmpeg", "-y", "-i", str(silent),
+                             "-vf", f"select=eq(n\\,{last})", "-frames:v", "1", str(shot)],
+                            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                        )
+                        need = 12.0 * frame[0] / (1080.0 if frame[1] > frame[0] else 1920.0)
+                        gaps = self._pair_label_gaps(shot, n // 2)
+                        self.assertTrue(gaps, shot.name)
+                        self.assertGreaterEqual(min(gaps), need, f"{shot.name} {gaps}")
+                        if lang in {"zh", "zh_hk"}:
+                            for row in _label_row_centres(shot):
+                                self.assertGreaterEqual(len(row), 2, shot.name)
+                                self.assertLessEqual(
+                                    max(row) - min(row), 1.0,
+                                    f"{shot.name} centres {row}",
+                                )
+                        if n == 8 and lang == "en" and frame == (1280, 720):
+                            early = root / "early.png"
+                            late = root / "late.png"
+                            subprocess.check_call(
+                                ["ffmpeg", "-y", "-i", str(silent),
+                                 "-vf", "select=eq(n\\,6)", "-frames:v", "1", str(early)],
+                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                            )
+                            subprocess.check_call(
+                                ["ffmpeg", "-y", "-i", str(silent),
+                                 "-vf", "select=eq(n\\,14)", "-frames:v", "1", str(late)],
+                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                            )
+                            self.assertLess(self._gold_x(early), self._gold_x(late) - 8)
+
+    def _pair_label_gaps(self, path, pairs: int) -> list[float]:
+        """Horizontal gaps between pair-count labels that share a row.
+
+        The labels sit in the band just above each row of green counters.
+        Strokes inside one glyph are merged, so the hole in a 4 is not a gap.
+        """
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+
+        def dark(x, y):
+            r, g, b = px[x, y]
+            return r < 90 and g < 110 and b < 130 and (r + g + b) < 280
+
+        def green(x, y):
+            r, g, b = px[x, y]
+            return g > 120 and g > r + 40 and g > b + 20
+
+        rows = []
+        y = 0
+        while y < h:
+            if sum(1 for x in range(0, w, 3) if green(x, y)) < 4:
+                y += 1
+                continue
+            y0 = y
+            while y < h and sum(1 for x in range(0, w, 3) if green(x, y)) >= 3:
+                y += 1
+            rows.append((y0, y - 1))
+            y += 1
+        gaps = []
+        window = max(18, int(56 * h / 720))
+        for y0, _y1 in rows:
+            band_top = max(0, y0 - window)
+            band_bot = max(0, y0 - 2)
+            if band_bot <= band_top:
+                continue
+            runs = []
+            x = 0
+            while x < w:
+                if not any(dark(x, yy) for yy in range(band_top, band_bot + 1)):
+                    x += 1
+                    continue
+                x0 = x
+                while x < w and any(dark(x, yy) for yy in range(band_top, band_bot + 1)):
+                    x += 1
+                runs.append((x0, x - 1))
+            merged = []
+            for run in runs:
+                if merged and run[0] - merged[-1][1] <= 10:
+                    merged[-1] = (merged[-1][0], run[1])
+                else:
+                    merged.append(run)
+            for (a0, a1), (b0, _b1) in zip(merged, merged[1:]):
+                gaps.append(b0 - a1 - 1)
+        self.assertGreaterEqual(len(gaps), 1, f"{path.name} rows {rows}")
+        return gaps
+
+    def _gold_x(self, path):
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        pts = []
+        px = img.load()
+        for y in range(0, h, 2):
+            for x in range(0, w, 2):
+                r, g, b = px[x, y]
+                if r > 190 and r > g + 12 and g > b + 30:
+                    pts.append(x)
+        self.assertGreater(len(pts), 8, path.name)
+        return sum(pts) / len(pts)
 
 
 if __name__ == "__main__":

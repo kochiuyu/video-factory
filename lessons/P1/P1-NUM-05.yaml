@@ -1,0 +1,92 @@
+# P1-NUM-05. Mirrors MathQuiz path numberstart / lesson pair20, "Make pairs".
+# Eight counters make four pairs, and none is left (even). Nine makes four pairs and one left (odd).
+# Nineteen makes nine pairs and one left. A pair holds two, not three.
+# https://github.com/kochiuyu/mathquiz learn-data.js (path numberstart, lesson pair20).
+# Speech is for age 6: one short idea per sentence. Questions are answered on screen.
+id: P1-NUM-05
+title_en: Make pairs
+title_zh: 两个配成一对
+title_zh_hk: 兩個配成一對
+duration_target_s: 66
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: pairs
+  n: 8
+  seconds: 8
+  title_en: Make pairs
+  title_zh: 两个配成一对
+  title_zh_hk: 兩個配成一對
+  s1_en: Can every counter find a partner?
+  s1_zh: 每个圆片都能找到伙伴吗？
+  s1_zh_hk: 每個圓片都搵到伙伴嗎？
+
+- id: eight
+  visual: animated
+  scene: pair_counters
+  n: 8
+  seconds: 14
+  s1_en: Eight counters. Put them in pairs.
+  s1_zh: 八个圆片。两个配成一对。
+  s1_zh_hk: 八個圓片。兩個配成一對。
+  s2_en: One. Two. Three. Four.
+  s2_zh: 一，二，三，四。
+  s2_zh_hk: 一，二，三，四。
+  s3_en: Four pairs. None is left alone. Eight is even.
+  s3_zh: 四对。没有单独留下的。八是双数。
+  s3_zh_hk: 四對。冇單獨留低嘅。八係雙數。
+
+- id: nine
+  visual: animated
+  scene: pair_counters
+  n: 9
+  seconds: 14
+  s1_en: Nine counters. Pair them the same way.
+  s1_zh: 九个圆片。同样两个配成一对。
+  s1_zh_hk: 九個圓片。同樣兩個配成一對。
+  s2_en: One. Two. Three. Four.
+  s2_zh: 一，二，三，四。
+  s2_zh_hk: 一，二，三，四。
+  s3_en: Four pairs, and one left alone. A pair holds two, not three. Nine is odd.
+  s3_zh: 四对，单独剩一个。一对只放两个。九是单数。
+  s3_zh_hk: 四對，單獨剩一個。一對只放兩個。九係單數。
+
+- id: nineteen
+  visual: animated
+  scene: pair_counters
+  n: 19
+  seconds: 16
+  s1_en: Nineteen counters. Pair them too.
+  s1_zh: 十九个圆片。也是两个配成一对。
+  s1_zh_hk: 十九個圓片。都係兩個配成一對。
+  s2_en: One, two, three, four, five, six, seven, eight, nine.
+  s2_zh: 一，二，三，四，五，六，七，八，九。
+  s2_zh_hk: 一，二，三，四，五，六，七，八，九。
+  s3_en: Nine pairs, and one left alone. Nineteen is odd.
+  s3_zh: 九对，单独剩一个。十九是单数。
+  s3_zh_hk: 九對，單獨剩一個。十九係單數。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: pairs
+  n: 8
+  also: 19
+  seconds: 14
+  title_en: Even or odd?
+  title_zh: 单数还是双数？
+  title_zh_hk: 單數定雙數？
+  s1_en: Eight makes four pairs. Eight is even.
+  s1_zh: 八个配成四对，八是双数。
+  s1_zh_hk: 八個配成四對，八係雙數。
+  s2_en: Nine leaves one. Nine is odd.
+  s2_zh: 九个剩下一个，九是单数。
+  s2_zh_hk: 九個剩低一個，九係單數。
+  s3_en: A pair holds two, not three.
+  s3_zh: 一对只放两个，不放三个。
+  s3_zh_hk: 一對只放兩個，唔放三個。
+  s4_en: Nineteen makes nine pairs, one left.
+  s4_zh: 十九个配成九对，单独剩一个。
+  s4_zh_hk: 十九個配成九對，單獨剩一個。

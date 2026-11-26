@@ -582,6 +582,10 @@ def _part_bond_problems(beat: dict) -> list[str]:
         if len(bond) != 2:
             return ["each parts bond is one whole or two parts."]
         a, b = bond
+        if b < 0:
+            if not 1 <= a <= 9 or not 1 <= -b <= 9 or not 1 <= a - b <= 18:
+                return ["a removed part is a negative right-hand count from -1 to -9 beside a kept part."]
+            continue
         if not 1 <= a <= 9 or not 0 <= b <= 9 or not 1 <= a + b <= 18:
             return ["parts bonds use parts from 0 to 9 whose sum is from 1 to 18."]
     return []
@@ -621,7 +625,9 @@ class PartWhole(SceneKind):
     ``a`` and ``b`` are the parts (each 1–9, sum 2–18). ``also`` is a second
     left-hand part of the same whole: the counters move, and the whole stays.
     ``cover`` is ``a`` or ``b``: that part is covered and the bond is read
-    as a subtraction. The two part labels land on the spoken words.
+    as a subtraction. ``leave`` is ``a`` or ``b``: that part moves away on
+    the last line, landing on the spoken number words, and an empty circle
+    stays where each counter was. The two part labels land on the spoken words.
     """
 
     name = "part_whole"
@@ -639,8 +645,15 @@ class PartWhole(SceneKind):
             return [f"part_whole also must be an integer from 1 to {whole - 1}, other than {a}."]
         if cover and cover not in {"a", "b"}:
             return ["part_whole cover must be a or b."]
+        leave = str(beat.get("leave") or "").strip()
+        if leave and leave not in {"a", "b"}:
+            return ["part_whole leave must be a or b."]
         if also is not None and cover:
             return ["part_whole uses either also or cover, not both."]
+        if also is not None and leave:
+            return ["part_whole uses either also or leave, not both."]
+        if cover and leave:
+            return ["part_whole uses either cover or leave, not both."]
         return []
 
     def labels(self, beat: dict, lang: str) -> dict:
@@ -665,9 +678,13 @@ class PartWhole(SceneKind):
             out["also_left"] = _part_word(lang, also)
             out["also_right"] = _part_word(lang, whole - also)
             out["also_equation"] = [str(whole), "=", str(also), "+", str(whole - also)]
-        if cover in {"a", "b"}:
-            kept = b if cover == "a" else a
-            covered = a if cover == "a" else b
+        leave = str(beat.get("leave") or "").strip()
+        if leave in {"a", "b"}:
+            out["leave"] = leave
+        if cover in {"a", "b"} or leave in {"a", "b"}:
+            which = cover if cover in {"a", "b"} else leave
+            kept = b if which == "a" else a
+            covered = a if which == "a" else b
             out["covered_equation"] = [str(whole), "-", str(covered), "=", str(kept)]
         return out
 
@@ -679,6 +696,9 @@ class PartWhole(SceneKind):
         cover = str(beat.get("cover") or "").strip()
         if cover:
             params["cover"] = cover
+        leave = str(beat.get("leave") or "").strip()
+        if leave:
+            params["leave"] = leave
         return params
 
 
@@ -1017,19 +1037,106 @@ def count_marks(words, step_start: float, step_dur: float, n: int) -> list[float
     return offsets
 
 
+_EN_NUMBER = {
+    1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
+    7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve",
+    13: "thirteen", 14: "fourteen", 15: "fifteen", 16: "sixteen",
+    17: "seventeen", 18: "eighteen",
+}
+_CJK_NUMBER = {
+    1: ("一",),
+    2: ("二", "两", "兩"),
+    3: ("三",),
+    4: ("四",),
+    5: ("五",),
+    6: ("六",),
+    7: ("七",),
+    8: ("八",),
+    9: ("九",),
+    10: ("十",),
+    11: ("十一",),
+    12: ("十二",),
+    13: ("十三",),
+    14: ("十四",),
+    15: ("十五",),
+    16: ("十六",),
+    17: ("十七",),
+    18: ("十八",),
+}
+
+
+def _spoken_number(text: str, n: int) -> bool:
+    """True when a TTS word is the number ``n`` in English or Chinese."""
+    raw = str(text or "").strip().strip(".,!?;:。？，、")
+    if not raw or n not in _EN_NUMBER:
+        return False
+    if raw.lower() == _EN_NUMBER[n] or raw == str(n):
+        return True
+    core = raw
+    for suffix in ("个", "個"):
+        if core.endswith(suffix) and len(core) > len(suffix):
+            core = core[: -len(suffix)]
+            break
+    return core in _CJK_NUMBER[n]
+
+
+def removal_marks(words, step_start: float, step_dur: float, covered: int, kept: int) -> list[float] | None:
+    """Offsets for a part leaving, then the part that stays.
+
+    The first word in the step that names ``covered`` is the departure.
+    The next word that names ``kept`` is the amount left. Returns None when
+    either word is missing, and the scene then shares the step evenly.
+    """
+    if step_dur <= 0 or not words:
+        return None
+    begin = float(step_start)
+    end = begin + float(step_dur)
+    covered_at = None
+    kept_at = None
+    for word in words:
+        if not isinstance(word, dict):
+            continue
+        try:
+            start = float(word.get("start"))
+        except (TypeError, ValueError):
+            continue
+        if not (begin - 0.08 <= start < end - 0.04):
+            continue
+        text = str(word.get("text") or "")
+        if covered_at is None and _spoken_number(text, int(covered)):
+            covered_at = start
+            continue
+        if covered_at is not None and _spoken_number(text, int(kept)):
+            kept_at = start
+            break
+    if covered_at is None or kept_at is None:
+        return None
+    offsets = [max(0.0, covered_at - begin), max(0.0, kept_at - begin)]
+    if offsets[1] < offsets[0] or offsets[-1] >= float(step_dur):
+        return None
+    return offsets
+
+
 def schedule_marks(beat: dict, durations: list[float], words) -> list[list[float]]:
     """Per-step landing offsets. An empty list means even spacing for that step."""
     n_steps = step_count(beat)
     marks: list[list[float]] = [[] for _ in range(n_steps)]
     event = count_event(beat)
-    if not event or not durations:
-        return marks
-    index, n = event
-    if not 0 <= index < len(durations):
-        return marks
-    found = count_marks(words, sum(float(d) for d in durations[:index]), float(durations[index]), n)
-    if found:
-        marks[index] = [round(float(x), 3) for x in found]
+    if event and durations:
+        index, n = event
+        if 0 <= index < len(durations):
+            found = count_marks(words, sum(float(d) for d in durations[:index]), float(durations[index]), n)
+            if found:
+                marks[index] = [round(float(x), 3) for x in found]
+    leave = str((beat or {}).get("leave") or "").strip()
+    pair = _part_pair(beat) if str((beat or {}).get("scene") or "") == "part_whole" else None
+    if leave in {"a", "b"} and pair and durations and len(durations) >= 3:
+        a, b = pair
+        covered = a if leave == "a" else b
+        kept = b if leave == "a" else a
+        found = removal_marks(words, sum(float(d) for d in durations[:2]), float(durations[2]), covered, kept)
+        if found:
+            marks[2] = [round(float(x), 3) for x in found]
     return marks
 
 

@@ -583,10 +583,10 @@ def _part_bond_problems(beat: dict) -> list[str]:
             return ["each parts bond is one whole or two parts."]
         a, b = bond
         if b < 0:
-            if not 1 <= a <= 9 or not 1 <= -b <= 9 or not 1 <= a - b <= 18:
-                return ["a removed part is a negative right-hand count from -1 to -9 beside a kept part."]
+            if not 0 <= a <= 9 or not 1 <= -b <= 9 or not 1 <= a - b <= 18:
+                return ["a removed part is a negative right-hand count from -1 to -9 beside a kept part from 0 to 9."]
             continue
-        if not 1 <= a <= 9 or not 0 <= b <= 9 or not 1 <= a + b <= 18:
+        if not 0 <= a <= 9 or not 0 <= b <= 9 or not 1 <= a + b <= 18:
             return ["parts bonds use parts from 0 to 9 whose sum is from 1 to 18."]
     return []
 
@@ -598,7 +598,7 @@ def _part_word(lang: str, n: int) -> str:
 
 
 def _part_pair(beat: dict) -> tuple[int, int] | None:
-    """The two parts. Each is 1–9 and the whole is 2–18."""
+    """The two parts. Each is 0–9, not both zero, and the whole is 1–18."""
     a = _as_int((beat or {}).get("a"))
     b = _as_int((beat or {}).get("b"))
     if a is None or b is None:
@@ -611,8 +611,8 @@ def _part_pair_problems(beat: dict) -> list[str]:
     if pair is None:
         return ["part_whole needs integers a and b."]
     a, b = pair
-    if not 1 <= a <= 9 or not 1 <= b <= 9 or not 2 <= a + b <= 18:
-        return ["part_whole a and b must be integers from 1 to 9 whose sum is from 2 to 18."]
+    if not 0 <= a <= 9 or not 0 <= b <= 9 or a + b < 1 or not 1 <= a + b <= 18:
+        return ["part_whole a and b must be integers from 0 to 9, not both 0, whose sum is from 1 to 18."]
     whole = _as_int((beat or {}).get("whole"))
     if whole is not None and whole != a + b:
         return [f"part_whole whole must equal a + b ({a + b})."]
@@ -622,7 +622,8 @@ def _part_pair_problems(beat: dict) -> list[str]:
 class PartWhole(SceneKind):
     """A whole splits into two coloured parts, then joins again.
 
-    ``a`` and ``b`` are the parts (each 1–9, sum 2–18). ``also`` is a second
+    ``a`` and ``b`` are the parts (each 0–9, not both 0, sum 1–18). A part of
+    0 is an empty mat. ``also`` is a second
     left-hand part of the same whole: the counters move, and the whole stays.
     ``cover`` is ``a`` or ``b``: that part is covered and the bond is read
     as a subtraction. ``leave`` is ``a`` or ``b``: that part moves away on
@@ -987,7 +988,7 @@ def count_event(beat: dict) -> tuple[int, int] | None:
         if pair is None:
             return None
         a, b = pair
-        if _part_pair_problems(beat) or a < 1 or b < 1:
+        if _part_pair_problems(beat) or a < 0 or b < 0:
             return None
         return 1, 2
     if scene == "lesson_takeaway":
@@ -1038,12 +1039,14 @@ def count_marks(words, step_start: float, step_dur: float, n: int) -> list[float
 
 
 _EN_NUMBER = {
+    0: "zero",
     1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
     7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve",
     13: "thirteen", 14: "fourteen", 15: "fifteen", 16: "sixteen",
     17: "seventeen", 18: "eighteen",
 }
 _CJK_NUMBER = {
+    0: ("零",),
     1: ("一",),
     2: ("二", "两", "兩"),
     3: ("三",),
@@ -1071,6 +1074,10 @@ def _spoken_number(text: str, n: int) -> bool:
     if not raw or n not in _EN_NUMBER:
         return False
     if raw.lower() == _EN_NUMBER[n] or raw == str(n):
+        return True
+    # "None are left" is zero. The counters still leave on "four" and the
+    # difference lands on this word.
+    if n == 0 and raw.lower() == "none":
         return True
     core = raw
     for suffix in ("个", "個"):

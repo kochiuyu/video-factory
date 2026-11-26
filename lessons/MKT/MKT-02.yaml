@@ -1,0 +1,291 @@
+id: MKT-02
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A thousand coupons. A better business?
+title_zh: 用了千张优惠券，生意真的多了吗？
+title_zh_hk: 用了千張優惠券，生意真的多了嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-02
+  kicker_en: MKT-02
+  kicker_zh: MKT-02
+  kicker_zh_hk: MKT-02
+  title_en: A thousand coupons. A better business?
+  title_zh: 用了千张优惠券，生意真的多了吗？
+  title_zh_hk: 用了千張優惠券，生意真的多了嗎？
+  image: art/coupon-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In December 2023, the Hong Kong Tourism Board announced 200,000 dining vouchers of 100 dollars for
+    residents. A popular offer can bring people in. Last week, 1,000 customers used your 10-dollar coupon
+    on a 60-dollar meal at your fictional Hong Kong café. Your team wants to repeat it next week, and
+    you must approve it today. But a busy counter does not, by itself, tell you how much business the
+    offer added.
+  zh: >-
+    二零二三年十二月，香港旅游发展局宣布向市民发放二十万张一百元的餐饮消费券。优惠受欢迎，店里自然热闹。上周，你经营的虚构香港咖啡店里，有一千名顾客用十元优惠券买了原价六十元的餐点。团队想下周再做一次，今天就要由你拍板。可是柜台前很忙，并不能告诉你优惠究竟带来了多少额外生意。
+  zh_hk: >-
+    二零二三年十二月，香港旅遊發展局宣布向市民派二十萬張一百蚊嘅餐飲消費券。優惠受歡迎，店入面自然好熱鬧。上星期，你經營嘅虛構香港咖啡店，有一千個顧客用十蚊優惠券買咗原價六十蚊嘅餐。團隊想下星期再做一次，今日就要你拍板。但係櫃枱前面好忙，並唔可以話俾你知優惠究竟帶來咗幾多額外生意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Last week's coupon campaign
+  title_zh: 上周的优惠券活动
+  title_zh_hk: 上星期的優惠券活動
+  row1_en: Meals bought with a coupon
+  row1_zh: 使用优惠券购买的餐点
+  row1_zh_hk: 使用優惠券購買的餐點
+  row2_en: Normal price; café-funded discount
+  row2_zh: 原价；咖啡店承担的折扣
+  row2_zh_hk: 原價；咖啡店承擔的折扣
+  row3_en: Variable cost per meal
+  row3_zh: 每份餐点的变动成本
+  row3_zh_hk: 每份餐點的變動成本
+  row4_en: Campaign running cost
+  row4_zh: 促销活动费用
+  row4_zh_hk: 促銷活動費用
+  col1_en: Value
+  col1_zh: 数值
+  col1_zh_hk: 數值
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11: 1,000
+  c12_en: One meal per coupon
+  c12_zh: 每张券只用于一份餐点
+  c12_zh_hk: 每張券只用於一份餐點
+  c21: HK$60; HK$10
+  c22_en: Café funds the discount
+  c22_zh: 折扣由咖啡店承担
+  c22_zh_hk: 折扣由咖啡店承擔
+  c31: HK$30
+  c32_en: Spare capacity
+  c32_zh: 有闲置产能
+  c32_zh_hk: 有閒置產能
+  c41: HK$2,000
+  c42_en: Fixed overheads unchanged
+  c42_zh: 固定开支不变
+  c42_zh_hk: 固定開支不變
+  footer_en: 1,000 × 20 − 2,000 = HK$18,000
+  footer_zh: 1,000 × 20 − 2,000 = HK$18,000
+  footer_zh_hk: 1,000 × 20 − 2,000 = HK$18,000
+  s1_en: >-
+    The café funds the whole 10-dollar discount. Each meal has 30 dollars of variable cost, and running
+    the campaign costs 2,000.
+  s1_zh: 这次十元折扣全部由咖啡店承担。每份餐点的变动成本是三十元，推行活动另需两千元。
+  s1_zh_hk: 今次十蚊折扣全部由咖啡店承擔。每份餐點嘅變動成本係三十蚊，推行活動另外要兩千蚊。
+  s2_en: >-
+    There is spare capacity, no extra staffing, no displaced sales and no other purchases. Each coupon
+    buys one meal.
+  s2_zh: 店里有闲置产能，不用增聘人手，也不会挤走其他销售；顾客没有加购，每张券只用于一份餐点。
+  s2_zh_hk: 店入面有閒置產能，唔使請多人，亦唔會擠走其他生意；顧客冇加購，每張券只用喺一份餐點。
+  s3_en: >-
+    The discounted meals contribute 1,000 times 60 minus 10 minus 30, which is 20,000, or 18,000 after
+    the running cost. That is not yet the gain compared with doing nothing.
+  s3_zh: 折扣餐点的边际贡献是一千乘以六十减十再减三十，即两万元；扣除活动费后剩一万八千元。但这还不是办活动相对于不办活动的变化。
+  s3_zh_hk: 折扣餐點嘅邊際貢獻係一千乘六十減十再減三十，即係兩萬蚊；扣除活動費之後剩一萬八千蚊。但呢個仲未係辦活動同唔辦活動比較嘅變化。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Repeat or hold?
+  title_zh: 照办还是暂缓？
+  title_zh_hk: 照辦還是暫緩？
+  en: >-
+    Would you repeat the same campaign next week, or hold it? What does the redemption total prove, and
+    what is still missing? Pause and vote.
+  zh: 下周照办还是暂缓？用券总数能证明什么？你还欠什么资料？请暂停，投个票。
+  zh_hk: 下星期照辦定係暫緩？用券總數證明到啲乜？你仲欠咩資料？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A small randomized pilot
+  title_zh: 小型随机试验的结果
+  title_zh_hk: 小型隨機試驗的結果
+  step1_en: 700 meals would have sold at full price
+  step1_zh: 700 份没有优惠也会按原价卖出
+  step1_zh_hk: 700 份沒有優惠也會按原價賣出
+  step2_en: Only 300 were additional purchases
+  step2_zh: 真正新增的只有 300 份
+  step2_zh_hk: 真正新增的只有 300 份
+  step3_en: >-
+    Repeat visits: possible, unmeasured
+  step3_zh: 日后再光顾：有可能，但未衡量
+  step3_zh_hk: 日後再光顧：有可能，但未量度
+  s1_en: >-
+    An analyst brings a small randomized pilot comparing similar eligible customers who did and did not
+    get the offer. Accept its estimate: 700 of the 1,000 meals would have been bought at full price anyway.
+  s1_zh: >-
+    分析员带来一项小型随机试验，把条件相近的顾客分成有优惠和没有优惠两组来比较。请接受它的估算：一千份餐点中，有七百份就算没有优惠券，也会按原价卖出。
+  s1_zh_hk: >-
+    分析員帶嚟一個小型隨機試驗，將條件相近嘅顧客分成有優惠同冇優惠兩組嚟比較。請接受佢嘅估算：一千份餐點入面，有七百份就算冇優惠券，都會照原價賣出。
+  s2_en: >-
+    Only 300 were additional purchases, and many of the 700 were regular customers. Assume the same mix
+    and costs next week.
+  s2_zh: 真正新增的只有三百份，而那七百份当中有不少是熟客。假设下周重办时，比例和成本都不变。
+  s2_zh_hk: 真正新增嘅只有三百份，嗰七百份入面有唔少係熟客。假設下星期重辦嘅時候，比例同成本都唔變。
+  s3_en: >-
+    Future full-price repeat visits are possible but unmeasured. The estimate is invented for the case,
+    not a finding about the Tourism Board programme.
+  s3_zh: 部分顾客日后可能会按原价再来，但这一点还没有衡量。这个估算是案例设定，不是对旅发局计划的研究结果。
+  s3_zh_hk: 部分顧客日後可能會用原價再嚟，但呢點仲未量度。呢個估算係個案設定，唔係對旅發局計劃嘅研究結果。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Repeat the unchanged campaign?
+  title_zh: 还会原样重办吗？
+  title_zh_hk: 還會原樣重辦嗎？
+  en: >-
+    Would you repeat the unchanged campaign now? If you expect later benefits, say what must happen to
+    justify them. Pause and vote.
+  zh: 现在还会原样重办吗？如果你预期日后会有收益，要有什么结果才值得重办？请暂停，投个票。
+  zh_hk: 而家仲會唔會原樣重辦？如果你預期日後會有收益，要有咩結果先值得重辦？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Compare two worlds
+  title_zh: 比较「办」与「不办」
+  title_zh_hk: 比較「辦」與「不辦」
+  step1_en: >-
+    With the campaign: HK$18,000
+  step1_zh: 办活动：HK$18,000
+  step1_zh_hk: 辦活動：HK$18,000
+  step2_en: >-
+    Without it: 700 × (60 − 30) = HK$21,000
+  step2_zh: 不办：700 × (60 − 30) = HK$21,000
+  step2_zh_hk: 不辦：700 × (60 − 30) = HK$21,000
+  step3_en: >-
+    Change: −HK$3,000
+  step3_zh: 贡献少了 HK$3,000
+  step3_zh_hk: 貢獻少了 HK$3,000
+  s1_en: >-
+    Count purchases caused by the offer, not purchases using it. A redeemed coupon proves a discount was
+    used, not that it changed the decision. With the campaign, contribution after its running cost is
+    18,000.
+  s1_zh: >-
+    要算的是优惠带来多少额外购买，不是有多少购买用了优惠。用券只证明顾客享用了折扣，不能证明是折扣让他决定购买。办活动，扣除活动费后的贡献是一万八千元。
+  s1_zh_hk: >-
+    要計嘅係優惠帶來幾多額外購買，唔係有幾多購買用咗優惠。用券只係證明顧客享用咗折扣，唔證明係折扣令佢決定買。辦活動，扣除活動費之後嘅貢獻係一萬八千蚊。
+  s2_en: >-
+    Without it, the 700 full-price meals contribute 700 times 60 minus 30, or 21,000.
+  s2_zh: 不办的话，那七百份原价餐点的贡献是七百乘以六十减三十，即两万一千元。
+  s2_zh_hk: 唔辦嘅話，嗰七百份原價餐點嘅貢獻係七百乘六十減三十，即係兩萬一千蚊。
+  s3_en: >-
+    So under the supplied estimate the campaign reduces contribution by 3,000. That compares the affected
+    meals, not the café's total profit.
+  s3_zh: 所以按题目的估算，办活动令贡献少了三千元。这里只比较受影响的餐点，不是咖啡店的整体盈利。
+  s3_zh_hk: 所以按題目嘅估算，辦活動令貢獻少咗三千蚊。呢度只係比較受影響嘅餐點，唔係咖啡店嘅整體盈利。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Calculate
+  kicker_en: Calculate
+  kicker_zh: 计算
+  kicker_zh_hk: 計算
+  title_en: Another way to count
+  title_zh: 另一种算法
+  title_zh_hk: 另一種算法
+  step1_en: >-
+    300 additional meals: +HK$6,000
+  step1_zh: 新增 300 份：+HK$6,000
+  step1_zh_hk: 新增 300 份：+HK$6,000
+  step2_en: >-
+    700 meals discounted anyway: −HK$7,000
+  step2_zh: 原本会卖出的 700 份：−HK$7,000
+  step2_zh_hk: 原本會賣出的 700 份：−HK$7,000
+  step3_en: Running cost −2,000; net −HK$3,000
+  step3_zh: 活动费 −2,000；净变动 −HK$3,000
+  step3_zh_hk: 活動費 −2,000；淨變動 −HK$3,000
+  s1_en: >-
+    Another way to see it: the 300 additional meals each contribute 20 dollars, which is 6,000.
+  s1_zh: 也可以这样算：新增的三百份，每份贡献二十元，共六千元。
+  s1_zh_hk: 亦可以咁計：新增嘅三百份，每份貢獻二十蚊，總共六千蚊。
+  s2_en: >-
+    Discounting 700 meals that would have happened anyway gives up 10 dollars each, or 7,000.
+  s2_zh: 原本就会卖出的七百份，每份让出十元，共七千元。
+  s2_zh_hk: 本來都會賣出嘅七百份，每份讓出十蚊，總共七千蚊。
+  s3_en: >-
+    Running the campaign costs another 2,000. Six thousand minus seven thousand minus two thousand is
+    minus 3,000.
+  s3_zh: 活动另外花两千元。六千减七千再减两千，净变动是负三千元。
+  s3_zh_hk: 活動另外使兩千蚊。六千減七千再減兩千，淨變動係負三千蚊。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: When would the offer pay?
+  title_zh: 优惠何时才划算？
+  title_zh_hk: 優惠何時才划算？
+  en: >-
+    Hold redemptions at 1,000 and let x be the additional purchases. The change is 30x minus 12,000, so
+    it breaks even at 400 additional meals, or 40 percent. At 300, covering the 3,000 shortfall needs
+    exactly 100 later full-price meals caused by the campaign, before timing or risk. Repeat visits that
+    would have happened anyway do not count.
+  zh: >-
+    把用券总数固定在一千，设 x 为新增购买量。贡献变动是三十 x 减一万二千，新增四百份，也就是百分之四十，才刚好达到盈亏平衡。如果只新增三百份，要弥补三千元缺口，活动还要额外带来刚好一百份原价餐点，这还没计时间和风险。本来就会再来的光顾不能算进去。
+  zh_hk: >-
+    將用券總數固定喺一千，設 x 做新增購買量。貢獻變動係三十 x 減一萬二千，新增四百份，即係百分之四十，先啱啱打和。如果只係新增三百份，要填補三千蚊缺口，活動仲要額外帶來啱啱一百份原價餐點，呢個仲未計時間同風險。本來都會再嚟嘅光顧唔計得。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Count what the offer caused
+  title_zh: 要算优惠带来的额外购买
+  title_zh_hk: 要計算優惠帶來的額外購買
+  q1_en: Redemptions ≠ additional purchases
+  q1_zh: 用券数 ≠ 新增购买
+  q1_zh_hk: 用券數 ≠ 新增購買
+  q2_en: >-
+    Here: −HK$3,000; break-even at 400
+  q2_zh: 本例：−HK$3,000；400 份才盈亏平衡
+  q2_zh_hk: 本例：−HK$3,000；400 份才打和
+  s1_en: >-
+    If the goal is next week's contribution, do not repeat the unchanged campaign under these assumptions.
+    A redemption total shows who used the discount, not what it changed.
+  s1_zh: 如果目标是增加下周的贡献，在这些假设下就不应该原样重办。用券总数只说明谁用了折扣，不说明折扣改变了什么。
+  s1_zh_hk: 如果目標係增加下星期嘅貢獻，喺呢啲假設之下就唔應該原樣重辦。用券總數只係講到邊個用咗折扣，講唔到折扣改變咗乜。
+  s2_en: >-
+    A better test targets a different group or time slot, keeps a comparable no-offer group, and measures
+    contribution, not redemptions alone. 'They might return' is a hypothesis to measure.
+  s2_zh: 下一轮可以试另一类顾客或时段，保留一组条件相近但没有优惠的顾客，衡量销售贡献，而不只看用券数。“他们可能再来”只是有待验证的假说。
+  s2_zh_hk: 下一輪可以試另一類顧客或者時段，保留一組條件相近但冇優惠嘅顧客，量度銷售貢獻，唔好淨係睇用券數。「佢哋可能再嚟」只係有待驗證嘅假說。
+  s3_en: >-
+    The café, its costs and the 700/300 split are classroom assumptions. They cannot evaluate the real
+    public voucher programme. Official scene art is a teaching illustration only.
+  s3_zh: 咖啡店、成本和七百比三百的分拆都是课堂假设，不能用来评价真实的公共消费券计划。官方场景图只是教学插图。
+  s3_zh_hk: 咖啡店、成本同七百比三百嘅分拆都係課堂假設，唔可以用嚟評價真實嘅公共消費券計劃。官方場景圖只係教學插圖。
+duration_target_s: 194

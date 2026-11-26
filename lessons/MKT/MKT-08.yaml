@@ -1,0 +1,346 @@
+id: MKT-08
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A fresher pack. Still easy to find?
+title_zh: 换了新包装，老顾客还找得到吗？
+title_zh_hk: 換了新包裝，老顧客還找得到嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-08
+  kicker_en: MKT-08
+  kicker_zh: MKT-08
+  kicker_zh_hk: MKT-08
+  title_en: A fresher pack. Still easy to find?
+  title_zh: 换了新包装，老顾客还找得到吗？
+  title_zh_hk: 換了新包裝，老顧客還找得到嗎？
+  image: art/familiar-pack-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In November 2025, a design studio described refreshing a UK hot-sauce range for Lee Kum Kee while
+    keeping familiar gold-plaque branding. That is the designer's account, not evidence of higher sales.
+    Now a fictional, independent Hong Kong biscuit brand is choosing the pack for its next printing batch.
+    Customers know its diagonal teal band and where its name sits, but the front is busy and the flavour
+    is hard to see.
+  zh: >-
+    二零二五年十一月，一家设计公司介绍了为李锦记英国辣酱系列更新包装的项目，保留了熟悉的金色品牌标牌。这是设计公司自己的说法，不能证明销售增加。现在，一家虚构的香港独立饼干品牌，要决定下一批印哪款包装。顾客早就认得那道斜向的蓝绿色条纹和品牌名的位置，可是包装正面资讯太多，口味说明不够显眼。
+  zh_hk: >-
+    二零二五年十一月，一間設計公司介紹咗幫李錦記英國辣醬系列更新包裝嘅項目，保留咗熟悉嘅金色品牌牌匾。呢個係設計公司自己嘅講法，證明唔到銷售增加。而家，一個虛構嘅香港獨立餅乾品牌，要決定下一批印邊款包裝。顧客早就認得嗰條斜嘅藍綠色條紋同品牌名嘅位置，但係包裝正面資訊太多，口味說明唔夠突出。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Next-batch options
+  title_zh: 下一批的包装方案
+  title_zh_hk: 下一批的包裝方案
+  row1_en: A · Keep the current pack
+  row1_zh: A · 沿用现有包装
+  row1_zh_hk: A · 沿用現有包裝
+  row2_en: B · Print the refresh
+  row2_zh: B · 印制新包装
+  row2_zh_hk: B · 印製新包裝
+  col1_en: Recognition cues
+  col1_zh: 识别线索
+  col1_zh_hk: 辨識線索
+  col2_en: Flavour information
+  col2_zh: 口味资讯
+  col2_zh_hk: 口味資訊
+  c11_en: Familiar band and name position
+  c11_zh: 保留熟悉的条纹及品牌名位置
+  c11_zh_hk: 保留熟悉的條紋及品牌名位置
+  c12_en: Busy front; flavour less prominent
+  c12_zh: 正面较繁复，口味不太显眼
+  c12_zh_hk: 正面較繁複，口味不太顯眼
+  c21_en: Band removed; name moved
+  c21_zh: 拿掉条纹，移动品牌名
+  c21_zh_hk: 拿掉條紋，移動品牌名
+  c22_en: Clearer hierarchy; more space
+  c22_zh: 主次更清楚、留白更多
+  c22_zh_hk: 主次更清楚、留白更多
+  footer_en: No customer test results yet
+  footer_zh: 目前还没有顾客测试
+  footer_zh_hk: 目前未有顧客測試
+  s1_en: >-
+    Pack A keeps the existing design: a familiar band and name position, but a busy front where the flavour
+    description is less prominent.
+  s1_zh: A 沿用旧设计：条纹和品牌名的位置都是顾客熟悉的，但正面比较繁复，口味说明不太显眼。
+  s1_zh_hk: A 沿用舊設計：條紋同品牌名嘅位置都係顧客熟悉嘅，但正面比較繁複，口味說明唔太突出。
+  s2_en: >-
+    Pack B gives the flavour more space and a clearer hierarchy, but removes the teal band and moves the
+    brand name. The owner wants both easier flavour identification and a brand existing customers can
+    still find.
+  s2_zh: 新版 B 给口味说明更多空间，主次更清楚，却拿掉了蓝绿色条纹，品牌名也换了位置。店主既想让口味更容易辨认，也希望熟客仍然找得到品牌。
+  s2_zh_hk: 新版 B 俾口味說明更多空間，主次更清楚，但拎走咗藍綠色條紋，品牌名亦移咗位。店主既想口味更容易辨認，亦希望熟客仍然搵到個品牌。
+  s3_en: >-
+    Biscuits, quantity, price, materials, print cost and availability are unchanged, and both designs
+    meet the required-information rules and the deadline. There are no customer-test results yet.
+  s3_zh: 饼干、分量、售价、材料、印刷成本和供货都不变，两款都符合必要资讯的要求，也赶得上期限。目前还没有任何顾客测试结果。
+  s3_zh_hk: 餅乾、份量、售價、材料、印刷成本同供貨都唔變，兩款都符合必要資訊嘅要求，亦趕得切期限。暫時仲未有任何顧客測試結果。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep A or print B?
+  title_zh: 保留 A，还是印 B？
+  title_zh_hk: 保留 A，還是印 B？
+  en: >-
+    Would you keep A or print B for the next batch? Which customer task matters most, and what evidence
+    would reverse your provisional choice? Pause and vote.
+  zh: 下一批你会保留 A，还是印 B？哪项顾客任务最重要？有什么证据会让你推翻暂定的选择？请暂停，投个票。
+  zh_hk: 下一批你會保留 A，定係印 B？邊項顧客任務最重要？有咩證據會令你推翻暫定嘅選擇？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Pack C and a prototype test
+  title_zh: C 款与样品测试
+  title_zh_hk: C 款與樣品測試
+  step1_en: C keeps A's cues, uses B's layout
+  step1_zh: C：A 的识别线索 + B 的口味层次
+  step1_zh_hk: C：A 的辨識線索 + B 的口味層次
+  step2_en: 120 volunteers, 40 per design, random
+  step2_zh: 120 名志愿者，随机每组 40 人
+  step2_zh_hk: 120 名志願者，隨機每組 40 人
+  step3_en: Find the brand in 10 s, then the flavour
+  step3_zh: 10 秒内找品牌，再辨认口味
+  step3_zh_hk: 10 秒內找品牌，再辨認口味
+  s1_en: >-
+    The designer offers a feasible pack C. It keeps A's teal band and brand-name position, while using
+    B's clearer flavour hierarchy. Cost, materials, required information and timing stay the same.
+  s1_zh: 设计师提出一款可行的 C：保留 A 的蓝绿色条纹和品牌名位置，同时采用 B 较清楚的口味资讯层次。成本、物料、必要资讯和时间安排都不变。
+  s1_zh_hk: 設計師提出一款可行嘅 C：保留 A 嘅藍綠色條紋同品牌名位置，同時採用 B 較清楚嘅口味資訊層次。成本、物料、必要資訊同時間安排都唔變。
+  s2_en: >-
+    A small prototype session recruits 120 adult volunteers who know the brand, and randomly assigns 40
+    to each design. Each person sees only one design, on the same mock shelf, with positions rotated evenly
+    and neutral instructions.
+  s2_zh: >-
+    一场小型样品测试招募了一百二十名熟悉品牌的成年志愿者，随机分成三组，每组四十人，各自只看一款包装。模拟货架一样，目标商品的位置均衡轮换，指示也保持中性。
+  s2_zh_hk: >-
+    一場小型樣品測試招募咗一百二十個熟悉品牌嘅成年志願者，隨機分成三組，每組四十人，各自只睇一款包裝。模擬貨架一樣，目標商品嘅位置平均輪換，指示亦保持中性。
+  s3_en: >-
+    First, each person tries to find the named brand within ten seconds. Then all 40 in each group see
+    their pack on its own and identify the flavour, including anyone who failed the shelf task.
+  s3_zh: 每人先试着在十秒内找到指定品牌。接着，每组全部四十人都单独看自己那款包装，辨认口味，包括刚才在货架上找不到品牌的人。
+  s3_zh_hk: 每人先試吓喺十秒內搵到指定品牌。跟住，每組全部四十人都單獨睇自己嗰款包裝，辨認口味，包括頭先喺貨架搵唔到品牌嘅人。
+- id: results
+  visual: table_grid
+  seconds: 24
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Correct task completion
+  title_zh: 正确完成任务
+  title_zh_hk: 正確完成任務
+  row1_en: Find the brand within 10 s
+  row1_zh: 10 秒内找到品牌
+  row1_zh_hk: 10 秒內找到品牌
+  row2_en: Identify flavour, pack alone
+  row2_zh: 单看包装时辨认口味
+  row2_zh_hk: 單看包裝時辨認口味
+  col1_en: A
+  col1_zh: A
+  col1_zh_hk: A
+  col2_en: B
+  col2_zh: B
+  col2_zh_hk: B
+  col3_en: C
+  col3_zh: C
+  col3_zh_hk: C
+  c11_en: 36 of 40
+  c11_zh: 40 人中有 36 人
+  c11_zh_hk: 40 人中有 36 人
+  c12_en: 26 of 40
+  c12_zh: 40 人中有 26 人
+  c12_zh_hk: 40 人中有 26 人
+  c13_en: 35 of 40
+  c13_zh: 40 人中有 35 人
+  c13_zh_hk: 40 人中有 35 人
+  c21_en: 22 of 40
+  c21_zh: 40 人中有 22 人
+  c21_zh_hk: 40 人中有 22 人
+  c22_en: 34 of 40
+  c22_zh: 40 人中有 34 人
+  c22_zh_hk: 40 人中有 34 人
+  c23_en: 32 of 40
+  c23_zh: 40 人中有 32 人
+  c23_zh_hk: 40 人中有 32 人
+  footer_en: No purchases; not population rates
+  footer_zh: 没有实际购买；并非整体成功率
+  footer_zh_hk: 沒有實際購買；並非整體成功率
+  s1_en: >-
+    Finding the brand within ten seconds: 36 of 40 for A, 26 for B, and 35 for C.
+  s1_zh: 十秒内找到品牌：A 组四十人中有三十六人，B 组二十六人，C 组三十五人。
+  s1_zh_hk: 十秒內搵到品牌：A 組四十人入面有三十六人，B 組二十六人，C 組三十五人。
+  s2_en: >-
+    Identifying the flavour with the pack shown alone: 22 of 40 for A, 34 for B, and 32 for C.
+  s2_zh: 单看包装辨认口味：A 组二十二人，B 组三十四人，C 组三十二人。
+  s2_zh_hk: 單睇包裝辨認口味：A 組二十二人，B 組三十四人，C 組三十二人。
+  s3_en: >-
+    Nobody bought anything. These fictional counts describe one small session, not population rates or
+    sales forecasts.
+  s3_zh: 没有人实际购买。这些虚构人数只描述一次小型测试，不是整体顾客的成功率，也不能用来预测销售。
+  s3_zh_hk: 冇人真係買嘢。呢啲虛構人數只係描述一次小型測試，唔係整體顧客嘅成功率，亦唔可以用嚟預測銷售。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which pack now?
+  title_zh: 现在选哪一款？
+  title_zh_hk: 現在選哪一款？
+  en: >-
+    Which pack would you choose now for the next batch? Explain what C preserves and improves, and name
+    one sign from actual shops that would make you reconsider. Pause and vote.
+  zh: 现在你会为下一批选哪一款？说明 C 保留和改善了什么，再指出一个在真实店铺里观察到、会让你改判的迹象。请暂停，投个票。
+  zh_hk: 而家你會幫下一批揀邊一款？講明 C 保留同改善咗啲乜，再指出一個喺真實店舖觀察到、會令你改判嘅跡象。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Separate the two customer jobs
+  title_zh: 分清顾客要做的两件事
+  title_zh_hk: 分清顧客要做的兩件事
+  step1_en: Find a known brand ≠ read the flavour
+  step1_zh: 找到品牌 ≠ 看出口味
+  step1_zh_hk: 找到品牌 ≠ 看出口味
+  step2_en: >-
+    C vs A: +10 flavour, −1 brand find
+  step2_zh: C 对 A：口味多 10 人，品牌少 1 人
+  step2_zh_hk: C 對 A：口味多 10 人，品牌少 1 人
+  step3_en: >-
+    C vs B: +9 brand finds, −2 flavour
+  step3_zh: C 对 B：品牌多 9 人，口味少 2 人
+  step3_zh_hk: C 對 B：品牌多 9 人，口味少 2 人
+  s1_en: >-
+    Finding a known brand among alternatives is a different task from identifying the flavour on a pack
+    in your hand. A redesign can ease the second while disrupting the first: A has more brand finds than
+    B, and B has more correct flavours.
+  s1_zh: >-
+    在一排商品里找到熟悉的品牌，和拿着包装看出是什么口味，是两项不同的任务。新设计可以让第二项更容易，却让第一项更难：A 组找到品牌的人比 B 组多，B 组答对口味的人则比较多。
+  s1_zh_hk: >-
+    喺一排商品入面搵到熟悉嘅品牌，同揸住包裝睇出係咩口味，係兩項唔同嘅任務。新設計可以令第二項容易啲，但令第一項難咗：A 組搵到品牌嘅人多過 B 組，B 組答啱口味嘅人就比較多。
+  s2_en: >-
+    C combines familiar recognition cues with clearer information. Compared with A, it has ten more correct
+    flavour answers and one fewer brand find.
+  s2_zh: C 保留了熟悉的识别线索，口味资讯也比较清楚。跟 A 组比，C 组多十人答对口味，少一人找到品牌。
+  s2_zh_hk: C 保留咗熟悉嘅辨識線索，口味資訊亦比較清楚。同 A 組比，C 組多十個人答啱口味，少一個人搵到品牌。
+  s3_en: >-
+    Compared with B, it has nine more brand finds and two fewer correct flavour answers. So C is a reasonable
+    recommendation for the two-part objective, though it is not highest on both tasks.
+  s3_zh: 跟 B 组比，C 组多九人找到品牌，少两人答对口味。所以兼顾店主的两个目标，C 是合理的选择，虽然它不是两项都录得最高人数。
+  s3_zh_hk: 同 B 組比，C 組多九個人搵到品牌，少兩個人答啱口味。所以要兼顧店主兩個目標，C 係合理嘅選擇，雖然佢唔係兩項都錄得最高人數。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Not a sales forecast
+  title_zh: 任务结果不是销售预测
+  title_zh_hk: 任務結果不是銷售預測
+  step1_en: >-
+    36 vs 35, 34 vs 32: small gaps
+  step1_zh: 36 对 35、34 对 32：差距很小
+  step1_zh_hk: 36 對 35、34 對 32：差距很小
+  step2_en: Same 40 people per row; not 80
+  step2_zh: 两行同一批 40 人，不能加成 80
+  step2_zh_hk: 兩行同一批 40 人，不能加成 80
+  step3_en: The band's effect is not isolated
+  step3_zh: 未能分开条纹的影响
+  step3_zh_hk: 未能分開條紋的影響
+  s1_en: >-
+    Gaps such as 35 against 36, or 32 against 34, are small. They are not established population differences
+    just because the counts differ. Keeping A is still defensible if recognition risk comes first.
+  s1_zh: 三十五对三十六、三十二对三十四，差距都很小，不能只凭人数不同，就认定整体顾客也有差别。如果最重视品牌识别的风险，保留 A 仍然说得通。
+  s1_zh_hk: 三十五對三十六、三十二對三十四，差距都好細，唔可以淨係因為人數唔同，就認定整體顧客都有分別。如果最重視品牌辨識嘅風險，保留 A 仍然講得通。
+  s2_en: >-
+    Both rows use the same 40 people per design, so do not add them as if there were 80, or call a missed
+    find a lost sale. The volunteers already know the brand, the shelf is artificial and nobody spends
+    money.
+  s2_zh: 每款的两行数据来自同一批四十人，不能加成八十人；找不到品牌，也不等于少了一笔销售。志愿者本来就熟悉品牌，货架是模拟的，也没有人花钱。
+  s2_zh_hk: 每款嘅兩行數據嚟自同一批四十人，唔可以加埋當八十人；搵唔到品牌，亦唔等於少咗一宗生意。志願者本身已經熟悉品牌，貨架係模擬嘅，亦冇人使錢。
+  s3_en: >-
+    The session also cannot separate the teal band's effect from the name position and other layout changes.
+    It supports a design decision to test in use, not a guarantee of sales.
+  s3_zh: 这场测试也分不开蓝绿色条纹的影响，和品牌名位置及其他版面改动的影响。它可以作为选定设计、再在实际环境测试的依据，但不保证销售增加。
+  s3_zh_hk: 呢場測試亦分唔開藍綠色條紋嘅影響，同品牌名位置同其他版面改動嘅影響。佢可以作為揀定設計、再喺實際環境測試嘅依據，但唔保證銷售增加。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Carry the choice into shops
+  title_zh: 在实际店铺继续观察
+  title_zh_hk: 在實際店舖繼續觀察
+  en: >-
+    For the next batch, keep both goals visible: can customers find the brand, and can they identify the
+    flavour they want? Watch for requests for help, wrong-flavour confusion and differences across real
+    shop displays. Keep the old mockup for comparison, and read purchases alongside price, promotion,
+    stock and display changes.
+  zh: >-
+    下一批要继续盯住两个目标：顾客能不能找到品牌，又能不能认出想买的口味。记录顾客求助、拿错口味的情况，以及不同实体店货架陈列下的表现。保留旧包装样稿作比较，并把实际购买和售价、促销、存货及陈列的改动一起检视。
+  zh_hk: >-
+    下一批要繼續留意兩個目標：顧客搵唔搵到品牌，又認唔認得出想買嘅口味。記錄顧客求助、拎錯口味嘅情況，同埋唔同實體店貨架陳列下嘅表現。保留舊包裝樣稿嚟比較，並將實際購買同售價、推廣、存貨同陳列嘅改動一齊檢視。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Familiar cues, clearer flavour
+  title_zh: 保留识别线索，口味更清楚
+  title_zh_hk: 保留辨識線索，口味更清楚
+  q1_en: >-
+    Find: A 36 · B 26 · C 35 of 40
+  q1_zh: 找到品牌：A 36 · B 26 · C 35
+  q1_zh_hk: 找到品牌：A 36 · B 26 · C 35
+  q2_en: >-
+    Flavour: A 22 · B 34 · C 32 of 40
+  q2_zh: 辨认口味：A 22 · B 34 · C 32
+  q2_zh_hk: 辨認口味：A 22 · B 34 · C 32
+  s1_en: >-
+    A refresh can make one customer job easier and another harder. Judge a pack on both: finding the brand
+    and identifying the flavour.
+  s1_zh: 改版可能让顾客的一件事变容易，另一件事变难。评估包装要两样都看：找不找得到品牌，认不认得出口味。
+  s1_zh_hk: 改版可能令顧客一樣嘢容易咗，另一樣嘢難咗。評估包裝要兩樣都睇：搵唔搵到品牌，認唔認得出口味。
+  s2_en: >-
+    Pack C is a constructive compromise, not a perfect winner. Print it as a choice to test in shops,
+    not as proof of sales growth.
+  s2_zh: C 是可行的折衷，并不是样样领先。可以把它当作要在店铺里继续测试的选择，而不是销售会增加的证据。
+  s2_zh_hk: C 係可行嘅折衷，唔係樣樣領先。可以將佢當作要喺店舖繼續測試嘅選擇，而唔係銷售會增加嘅證據。
+  s3_en: >-
+    The biscuit brand, the designs and the test are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 饼干品牌、包装设计和测试都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 餅乾品牌、包裝設計同測試都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 222

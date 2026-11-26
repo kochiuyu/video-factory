@@ -1,0 +1,283 @@
+id: MKT-05
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A slow seller. An important basket?
+title_zh: 卖得慢的商品，可能是整篮购物的关键吗？
+title_zh_hk: 賣得慢的商品，可能是整籃購物的關鍵嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-05
+  kicker_en: MKT-05
+  kicker_zh: MKT-05
+  kicker_zh_hk: MKT-05
+  title_en: A slow seller. An important basket?
+  title_zh: 卖得慢的商品，可能是整篮购物的关键吗？
+  title_zh_hk: 賣得慢的商品，可能是整籃購物的關鍵嗎？
+  image: art/small-basket-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In March 2026, DFI Retail Group said it had trimmed slow-selling products in its IKEA operations.
+    What should occupy limited shelf space? In a fictional Hong Kong art-supplies shop, one display slot
+    is committed to a new product trial, so one existing line must go: specialist drawing-pen refills,
+    or one notebook colour. The owner wants to remove the refills because they sell less.
+  zh: >-
+    二零二六年三月，DFI 零售集团表示，旗下 IKEA 业务精简了卖得较慢的商品。有限的货架应该留给什么商品？在一家虚构的香港美术用品店，一个陈列位已经预留给新货试卖，所以现有商品要撤走一款：专用绘图笔笔芯，或者某种颜色的笔记本。店主想撤走笔芯，因为它卖得比较少。
+  zh_hk: >-
+    二零二六年三月，DFI 零售集團表示，旗下 IKEA 業務精簡咗賣得比較慢嘅商品。有限嘅貨架應該留俾咩商品？喺一間虛構嘅香港美術用品店，一個陳列位已經預留咗俾新貨試賣，所以現有商品要撤走一款：專用繪圖筆嘅筆替，或者某一種顏色嘅筆記簿。店主想撤走筆替，因為佢賣得比較少。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Invented last-month results
+  title_zh: 上月业绩 · 虚构数据
+  title_zh_hk: 上月業績 · 虛構數據
+  row1_en: Refill packs
+  row1_zh: 笔芯包
+  row1_zh_hk: 筆替包
+  row2_en: One notebook colour
+  row2_zh: 某种颜色的笔记本
+  row2_zh_hk: 某種顏色的筆記簿
+  col1_en: Units sold
+  col1_zh: 销量
+  col1_zh_hk: 銷量
+  col2_en: Per unit
+  col2_zh: 每件贡献
+  col2_zh_hk: 每件貢獻
+  col3_en: Own-item contribution
+  col3_zh: 该款商品的贡献
+  col3_zh_hk: 該款商品的貢獻
+  c11: '20'
+  c12: HK$5
+  c13: HK$100
+  c21: '60'
+  c22: HK$5
+  c23: HK$300
+  footer_en: Past own-item amounts, not forecasts
+  footer_zh: 只是过往贡献，并非预测
+  footer_zh_hk: 只是過往貢獻，並非預測
+  s1_en: >-
+    Both lines take the same display space, were in stock all month, and have comparable handling costs.
+    The refills sold 20 packs at 5 dollars of contribution each: 100 dollars.
+  s1_zh: 两款商品占用的空间一样，整个月都有货，处理成本也相近。笔芯卖了二十包，每包贡献五元，共一百元。
+  s1_zh_hk: 兩款商品佔用嘅空間一樣，成個月都有貨，處理成本亦相若。筆替賣咗二十包，每包貢獻五蚊，總共一百蚊。
+  s2_en: >-
+    The notebook colour sold 60 at the same 5 dollars each: 300 dollars. Contribution means selling price
+    less the costs that vary with each unit sold.
+  s2_zh: 那款颜色的笔记本卖了六十本，每本同样贡献五元，共三百元。贡献是指售价减去随销量变动的成本。
+  s2_zh_hk: 嗰款顏色嘅筆記簿賣咗六十本，每本一樣貢獻五蚊，總共三百蚊。貢獻即係售價減去隨銷量變動嘅成本。
+  s3_en: >-
+    These are past own-item amounts, not forecasts of total shop profit, and not the effect of removing
+    a line.
+  s3_zh: 这些只是各款商品过往的贡献，既不是全店盈利的预测，也不是下架影响的估算。
+  s3_zh_hk: 呢啲只係各款商品過往嘅貢獻，唔係全店盈利嘅預測，亦唔係撤貨影響嘅估算。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Refills or the notebook colour?
+  title_zh: 撤笔芯，还是撤笔记本？
+  title_zh_hk: 撤筆替，還是撤筆記簿？
+  en: >-
+    Which line would you remove for the trial: the refills or the notebook colour? What could make the
+    lower own-item contribution misleading? Pause and vote.
+  zh: 你会撤走笔芯，还是撤走那款颜色的笔记本？为什么单看一款商品的贡献高低，可能会选错？请暂停，投个票。
+  zh_hk: 你會撤走筆替，定係撤走嗰款顏色嘅筆記簿？點解淨係睇一款商品嘅貢獻高低，可能會揀錯？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Last month's receipts
+  title_zh: 查阅上月收据
+  title_zh_hk: 查閱上月收據
+  step1_en: >-
+    16 of 20 refill buys: other supplies too
+  step1_zh: 20 笔中 16 笔也买了其他绘图用品
+  step1_zh_hk: 20 宗中 16 宗也買了其他繪圖用品
+  step2_en: No compatible substitute refills
+  step2_zh: 店内没有其他相容笔芯
+  step2_zh_hk: 店內沒有其他相容筆替
+  step3_en: Several notebook colours remain
+  step3_zh: 笔记本仍有数款颜色可选
+  step3_zh_hk: 筆記簿仍有數款顏色可選
+  s1_en: >-
+    Last month's receipts show that 16 of the 20 refill purchases also included other drawing supplies.
+    Each of the 20 contained one pack.
+  s1_zh: 查了上月的收据，二十笔买笔芯的交易里，有十六笔同时买了其他绘图用品；每笔都只买一包笔芯。
+  s1_zh_hk: 查咗上個月嘅收據，二十宗買筆替嘅交易入面，有十六宗同時買咗其他繪圖用品；每宗都只係買一包筆替。
+  s2_en: >-
+    The shop has no compatible substitute for these refills. Prices, contribution per unit and the one-slot
+    limit are unchanged.
+  s2_zh: 店里没有其他相容的笔芯可以替代。价格、每件贡献和只有一个陈列位的限制都不变。
+  s2_zh_hk: 店入面冇其他相容嘅筆替可以代替。價錢、每件貢獻同只有一個陳列位嘅限制都唔變。
+  s3_en: >-
+    Several other notebook colours will remain. These are observed purchases, not an experiment: nobody
+    knows whether refill shoppers would abandon the basket, buy the rest anyway, or get refills elsewhere
+    and still return.
+  s3_zh: >-
+    笔记本还有好几种颜色可以选。这些只是实际购买记录，不是实验：顾客买不到笔芯，会放弃整篮商品、照买其他用品，还是去别处买笔芯但仍然来光顾，目前都不知道。
+  s3_zh_hk: >-
+    筆記簿仲有幾款顏色可以揀。呢啲只係實際購買紀錄，唔係實驗：顧客買唔到筆替，會放棄成籃貨品、照買其他用品，定係去第二度買筆替但仍然會嚟幫襯，暫時都唔知道。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Change which line goes?
+  title_zh: 会改撤另一款吗？
+  title_zh_hk: 會改撤另一款嗎？
+  en: >-
+    Would you change which line to remove? Name the customer behaviour you need to test, rather than assuming
+    all linked purchases will disappear or switch. Pause and vote.
+  zh: 你会改撤另一款商品吗？说出需要验证的顾客行为，不要假定所有搭配购买都会消失，或者都会转买别的。请暂停，投个票。
+  zh_hk: 你會唔會改撤另一款商品？講出需要驗證嘅顧客行為，唔好假定所有搭配購買都會消失，或者都會轉買第二樣。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Substitution or basket loss?
+  title_zh: 替代购买，还是购物篮流失？
+  title_zh_hk: 替代購買，還是購物籃流失？
+  step1_en: >-
+    HK$200 gap: past, not deletion loss
+  step1_zh: HK$200 差额：过往数字，非下架损失
+  step1_zh_hk: HK$200 差額：過往數字，非撤貨損失
+  step2_en: >-
+    Substitution: buy a remaining product
+  step2_zh: 替代购买：转买仍有售的商品
+  step2_zh_hk: 替代購買：轉買仍有售的商品
+  step3_en: >-
+    Basket effect: other items, or the trip
+  step3_zh: 购物篮效应：影响其他货品或光顾
+  step3_zh_hk: 購物籃效應：影響其他貨品或光顧
+  s1_en: >-
+    The 200-dollar difference is historical own-item contribution, not the loss caused by a deletion.
+    A refill may help complete a drawing-supply trip, while another notebook colour may be an acceptable
+    replacement.
+  s1_zh: >-
+    两百元的差额只是上月两款商品本身的贡献差距，不是下架造成的损失。顾客可能正因为买得到笔芯，才顺道把绘图用品买齐；也可能很乐意改选另一种颜色的笔记本。
+  s1_zh_hk: >-
+    兩百蚊嘅差額只係上個月兩款商品本身嘅貢獻差距，唔係撤貨造成嘅損失。顧客可能正正因為買到筆替，先順便將繪圖用品買齊；亦可能好樂意改揀另一種顏色嘅筆記簿。
+  s2_en: >-
+    Substitution means some customers buy a remaining product instead. It can recover some sales, depending
+    on what customers accept and the replacement's contribution.
+  s2_zh: 替代购买，是指有些顾客会转买店里仍有的商品。这可以挽回部分销售，但要看顾客接不接受替代品，以及替代品有多少贡献。
+  s2_zh_hk: 替代購買，即係有啲顧客會轉買店入面仲有嘅商品。咁可以挽回部分銷售，但要睇顧客接唔接受替代品，同埋替代品有幾多貢獻。
+  s3_en: >-
+    A basket effect means an unavailable item changes purchases of other items, or whether people shop
+    here at all. The 16 linked receipts flag a question; they do not prove 16 whole baskets are lost.
+  s3_zh: >-
+    购物篮效应，是指买不到一款商品，可能改变顾客买其他货品，甚至令他不来本店。那十六张收据只提出一个待查的问题，不能证明会流失十六个完整的购物篮。
+  s3_zh_hk: >-
+    購物籃效應，即係買唔到一款商品，可能改變顧客買其他貨品，甚至令佢唔再嚟呢間店。嗰十六張收據只係提出一個待查嘅問題，證明唔到會流失十六個完整嘅購物籃。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: No numerical winner yet
+  title_zh: 还算不出哪个方案胜出
+  title_zh_hk: 還算不出哪個方案勝出
+  step1_en: Do not assume 100% basket loss
+  step1_zh: 不能当成 100% 流失
+  step1_zh_hk: 不能當成 100% 流失
+  step2_en: Compare shop-wide contribution
+  step2_zh: 比较全店贡献
+  step2_zh_hk: 比較全店貢獻
+  step3_en: Provisional choice; reversal rule
+  step3_zh: 先作暂定选择，订明改判准则
+  step3_zh_hk: 先作暫定選擇，訂明改判準則
+  s1_en: >-
+    Do not multiply all associated purchases by an assumed 100 percent loss rate. The case supplies neither
+    causal loss rates nor the other items' contribution.
+  s1_zh: 不能把所有关联购买都当成百分之百流失。题目既没有提供下架造成的流失比率，也没有同篮其他商品的贡献。
+  s1_zh_hk: 唔可以將所有關聯購買都當成百分之一百流失。題目冇提供撤貨造成嘅流失比率，亦冇同籃其他商品嘅貢獻。
+  s2_en: >-
+    Compare the shop-wide contribution under each range, including the same new-product trial. Do not
+    choose by unit volume alone, or protect every slow seller forever.
+  s2_zh: 要比较两种商品组合对全店贡献的影响，两个方案都要计入同一个新货试卖。不要只按销量取舍，也不要认为每款滞销品都应该永远保留。
+  s2_zh_hk: 要比較兩種商品組合對全店貢獻嘅影響，兩個方案都要計埋同一個新貨試賣。唔好淨係按銷量取捨，亦唔好以為每款滯銷品都應該永遠保留。
+  s3_en: >-
+    Make a provisional choice and say what would reverse it. Record requests for the removed product,
+    accepted substitutes, unfilled needs and changes in total basket contribution, and watch whether customers
+    return.
+  s3_zh: >-
+    先作暂定选择，并说明什么结果会令你改变主意。记录顾客对下架商品的查询、接受了哪些替代品、哪些需求没有满足，以及整篮购物贡献的变化，也要观察顾客会不会再来。
+  s3_zh_hk: >-
+    先作暫定選擇，講明咩結果會令你改變主意。記錄顧客對已撤貨商品嘅查詢、接受咗邊啲替代品、邊啲需要冇滿足到，同埋成籃購物貢獻嘅變化，亦要睇顧客會唔會再嚟。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Either choice can be defensible
+  title_zh: 两种选择都可能合理
+  title_zh_hk: 兩種選擇都可能合理
+  en: >-
+    Removing refills is defensible if customers keep the rest of their purchases and the new range performs
+    better. Removing the notebook colour is defensible if substitution is acceptable and refills support
+    valuable shopping trips. Compare similar trading periods, because a before-and-after change alone
+    can reflect seasonality or other events.
+  zh: >-
+    如果笔芯下架后，顾客照样买其余商品，而新的商品组合表现较好，撤走笔芯就有理据。如果顾客接受其他颜色的笔记本，而笔芯能带来有价值的购物行程，撤走那款颜色也合理。要比较相近的营业时段，因为只看前后变化，排除不了季节和其他事件的影响。
+  zh_hk: >-
+    如果筆替撤貨之後，顧客照樣買其餘商品，而新嘅商品組合表現較好，撤走筆替就有理據。如果顧客接受其他顏色嘅筆記簿，而筆替帶到有價值嘅購物行程，撤走嗰款顏色都合理。要比較相若嘅營業時段，因為淨係睇前後變化，排除唔到季節同其他事件嘅影響。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Count the shopping mission
+  title_zh: 从整趟购物的目的出发
+  title_zh_hk: 從整趟購物的目的出發
+  q1_en: >-
+    Own-item: HK$100 vs HK$300
+  q1_zh: 商品本身贡献：HK$100 对 HK$300
+  q1_zh_hk: 商品本身貢獻：HK$100 對 HK$300
+  q2_en: >-
+    16 linked receipts: a question, not a loss
+  q2_zh: 16 笔搭配购买：待查，并非损失
+  q2_zh_hk: 16 宗搭配購買：待查，並非損失
+  s1_en: >-
+    Own-item contribution shows what a line earned last month, not what changes when it disappears.
+  s1_zh: 只看商品本身的贡献，可以知道它上月赚了多少，却看不到下架后会有什么变化。
+  s1_zh_hk: 淨係睇商品本身嘅貢獻，可以知道佢上個月賺咗幾多，但睇唔到撤貨之後會有咩變化。
+  s2_en: >-
+    Decide provisionally, test for substitution and basket loss, and judge the result by shop-wide contribution.
+  s2_zh: 先作暂定选择，测试替代购买和购物篮流失，再用全店贡献来评判结果。
+  s2_zh_hk: 先作暫定選擇，測試替代購買同購物籃流失，再用全店貢獻嚟評判結果。
+  s3_en: >-
+    The shop, the products and the figures are fictional and separate from DFI. Official scene art is
+    a teaching illustration only.
+  s3_zh: 店铺、商品和数字都是虚构的，与 DFI 无关。官方场景图只是教学插图。
+  s3_zh_hk: 店舖、商品同數字都係虛構嘅，同 DFI 無關。官方場景圖只係教學插圖。
+duration_target_s: 198

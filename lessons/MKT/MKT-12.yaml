@@ -1,0 +1,286 @@
+id: MKT-12
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Many visits. Where does the journey break?
+title_zh: 浏览人数不少，顾客在哪一步停下来？
+title_zh_hk: 瀏覽人數不少，顧客在哪一步停下來？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-12
+  kicker_en: MKT-12
+  kicker_zh: MKT-12
+  kicker_zh_hk: MKT-12
+  title_en: Many visits. Where does the journey break?
+  title_zh: 浏览人数不少，顾客在哪一步停下来？
+  title_zh_hk: 瀏覽人數不少，顧客在哪一步停下來？
+  image: art/where-journey-breaks-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In January 2026, Hong Kong's Census and Statistics Department reported that over 60 percent of people
+    aged 15 and over used mobile payments for shopping in 2024. That says nothing about one shop's checkout.
+    Paper Path, a fictional online seller of paper-craft kits, has 12,000 dollars for one improvement
+    this month.
+  zh: >-
+    二零二六年一月，香港政府统计处指出，二零二四年有超过六成十五岁及以上的人用移动支付购物。不过，这说明不了某一家店的结账表现。Paper Path 是一家虚构的网店，卖成人纸艺材料套装。这个月，它有一万二千元，只能做一项主要改进。
+  zh_hk: >-
+    二零二六年一月，香港政府統計處指出，二零二四年有超過六成十五歲或以上嘅人用流動支付購物。不過，呢個講唔到某一間店嘅結帳表現。Paper Path 係一間虛構嘅網店，賣成人紙藝材料套裝。呢個月，佢有一萬二千蚊，只可以做一項主要改進。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: 1,000 product viewers, in order
+  title_zh: 1,000 名商品浏览者，按次序
+  title_zh_hk: 1,000 名商品瀏覽者，按次序
+  row1_en: Viewed a product
+  row1_zh: 浏览商品
+  row1_zh_hk: 瀏覽商品
+  row2_en: Added a kit to cart
+  row2_zh: 加入购物车
+  row2_zh_hk: 加入購物車
+  row3_en: Began checkout → payment step
+  row3_zh: 开始结账 → 看到付款步骤
+  row3_zh_hk: 開始結帳 → 看到付款步驟
+  row4_en: Completed a paid order
+  row4_zh: 完成付款订单
+  row4_zh_hk: 完成付款訂單
+  col1_en: People reaching it
+  col1_zh: 到达人数
+  col1_zh_hk: 到達人數
+  col2_en: Rate from previous step
+  col2_zh: 较上一步比率
+  col2_zh_hk: 較上一步比率
+  c11: 1,000
+  c12: —
+  c21: '300'
+  c22: 30%
+  c31: 200 → 160
+  c32: 66.7% → 80%
+  c41: '80'
+  c42: 50%
+  footer_en: >-
+    A: tutorial ads · B: payment step
+  footer_zh: A 广告 · B 付款步骤改版
+  footer_zh_hk: A 廣告 · B 付款步驟改版
+  s1_en: >-
+    Option A buys paid placements beside relevant craft tutorials. Option B redesigns the explanation
+    and layout of the mobile payment handoff. Each costs 12,000 dollars, neither promises an uplift, and
+    only one can be funded.
+  s1_zh: >-
+    方案 A 是付费在相关纸艺教学内容旁边投放广告。方案 B 是重新设计移动端支付转接步骤的说明和版面。两个方案都要一万二千元，供应商都没承诺能提升转化，而且只能选一个。
+  s1_zh_hk: >-
+    方案 A 係俾錢喺相關紙藝教學內容旁邊放廣告。方案 B 係重新設計流動裝置支付轉接步驟嘅說明同版面。兩個方案都要一萬二千蚊，供應商都冇承諾可以提升轉化，而且只可以揀一個。
+  s2_en: >-
+    Follow 1,000 distinct product viewers over four weeks. 300 add a kit to the cart, 200 begin checkout,
+    160 see the payment step, and 80 complete a paid order.
+  s2_zh: 我们追踪四个星期内一千名不同的商品浏览者。三百人把套装加入购物车，两百人开始结账，一百六十人看到付款步骤，最后八十人完成付款订单。
+  s2_zh_hk: 我哋追蹤四個星期入面一千個唔同嘅商品瀏覽者。三百人將套裝加入購物車，二百人開始結帳，一百六十人睇到付款步驟，最後八十人完成付款訂單。
+  s3_en: >-
+    Each count is people, not clicks. Seeing the payment step does not mean payment details were entered,
+    and not everyone who stops has hit a defect.
+  s3_zh: 每一步算的是人数，不是点击次数。看到付款步骤，不等于已经填了支付信息；中途停下来的人，也不一定是流程出了问题。
+  s3_zh_hk: 每一步計嘅係人數，唔係撳咗幾多次。睇到付款步驟，唔等於已經填咗支付資料；中途停低嘅人，亦唔一定係流程出咗問題。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Fund A or B first?
+  title_zh: 先投资 A 还是 B？
+  title_zh_hk: 先投資 A 還是 B？
+  en: >-
+    Would you fund A's placements or B's payment-step redesign first? Use one stage's count or rate, and
+    say what that number cannot tell you about the return. Pause and vote.
+  zh: 你会先投资 A 的广告，还是 B 的付款步骤改版？请用某一步的人数或转化率作依据，再说说这个数字判断不了哪方面的回报。请暂停，投个票。
+  zh_hk: 你會先投資 A 嘅廣告，定係 B 嘅付款步驟改版？請用某一步嘅人數或者轉化率做依據，再講吓呢個數字判斷唔到邊方面嘅回報。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Split the 160 payment viewers
+  title_zh: 拆开 160 名看到付款步骤的人
+  title_zh_hk: 拆開 160 名看到付款步驟的人
+  step1_en: >-
+    Mobile: 20 of 80 completed = 25%
+  step1_zh: 移动设备：80 人中 20 人 = 25%
+  step1_zh_hk: 流動裝置：80 人中 20 人 = 25%
+  step2_en: >-
+    Desktop: 60 of 80 completed = 75%
+  step2_zh: 桌面端：80 人中 60 人 = 75%
+  step2_zh_hk: 桌面電腦：80 人中 60 人 = 75%
+  step3_en: 4 of 6 new mobile users pause
+  step3_zh: 6 名新手机用户中 4 人停顿
+  step3_zh_hk: 6 名新流動用戶中 4 人停頓
+  s1_en: >-
+    The same 160 people are now split by device. On mobile, 80 people see the payment step and 20 complete
+    an order: 25 percent.
+  s1_zh: 同一批一百六十人，现在按设备拆开。用移动设备的有八十人看到付款步骤，二十人完成订单，即百分之二十五。
+  s1_zh_hk: 同一批一百六十人，而家按裝置拆開。用流動裝置嘅有八十人睇到付款步驟，二十人完成訂單，即係百分之二十五。
+  s2_en: >-
+    On desktop, 60 of 80 complete: 75 percent.
+  s2_zh: 用桌面端的八十人中，有六十人完成，即百分之七十五。
+  s2_zh_hk: 用桌面電腦嘅八十人入面，有六十人完成，即係百分之七十五。
+  s3_en: >-
+    In a small usability check, four of six first-time mobile users paused at a neutral Continue button,
+    unsure whether the next screen belonged to the shop or the payment provider. Nobody was charged unexpectedly,
+    and these six are a separate convenience sample.
+  s3_zh: >-
+    小型可用性测试里，六名首次购买的手机用户中，有四人在“继续”按钮前停了下来，不确定下一页属于店家还是支付服务商。没有人被意外扣款；这六人是另找的便利样本。
+  s3_zh_hk: >-
+    小型可用性測試入面，六個首次購買嘅手機用戶，有四個喺「繼續」掣前面停咗落嚟，唔肯定下一頁屬於店舖定支付服務商。冇人被意外扣錢；呢六個係另外搵嘅便利樣本。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep or change?
+  title_zh: 维持还是改选？
+  title_zh_hk: 維持還是改選？
+  en: >-
+    Keep or change your allocation? Name the segment and step you would address, its conversion rate,
+    one outcome measure and one safeguard. Pause and vote.
+  zh: 你会维持原来的分配，还是改选？请指出想改善的顾客组别和步骤、这一组的转化率，再提出一项成效指标和一项保障指标。请暂停，投个票。
+  zh_hk: 你會維持原本嘅分配，定係改選？請指出想改善嘅顧客組別同步驟、呢組嘅轉化率，再提出一項成效指標同一項保障指標。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Denominator first, then segment
+  title_zh: 先选分母，再分组
+  title_zh_hk: 先選分母，再分組
+  step1_en: Overall 80 ÷ 1,000 = 8%
+  step1_zh: 整体 80 ÷ 1,000 = 8%
+  step1_zh_hk: 整體 80 ÷ 1,000 = 8%
+  step2_en: Payment to order 80 ÷ 160 = 50%
+  step2_zh: 付款步骤到订单 80 ÷ 160 = 50%
+  step2_zh_hk: 付款步驟到訂單 80 ÷ 160 = 50%
+  step3_en: >-
+    First-time: 20% mobile vs 60% desktop
+  step3_zh: 首次购买：手机 20%，桌面端 60%
+  step3_zh_hk: 首次購買：流動 20%，桌面 60%
+  s1_en: >-
+    Overall purchase conversion is 80 out of 1,000, or 8 percent. The biggest raw loss is the 700 viewers
+    who never add to cart, but that is not automatically the most fixable stage.
+  s1_zh: 整体购买转化率是一千人中的八十人，即百分之八。流失最多的是浏览后没有加入购物车的七百人，但这不一定是最容易改善的一步。
+  s1_zh_hk: 整體購買轉化率係一千人入面嘅八十人，即係百分之八。流失最多嘅係瀏覽之後冇加入購物車嘅七百人，但呢個唔一定係最容易改善嘅一步。
+  s2_en: >-
+    Among people who reach payment, 80 of 160 complete: 50 percent. These rates answer different questions,
+    and neither offer has enough evidence to calculate a financial winner.
+  s2_zh: 到了付款步骤的人里，一百六十人中有八十人完成，即百分之五十。不同的比率回答不同的问题；两个方案都没有足够证据，算不出哪个财务回报更高。
+  s2_zh_hk: 去到付款步驟嘅人入面，一百六十人有八十人完成，即係百分之五十。唔同嘅比率答緊唔同嘅問題；兩個方案都冇足夠證據，計唔到邊個財務回報較高。
+  s3_en: >-
+    Segment first. First-time buyers complete 12 of 60 on mobile, 20 percent, versus 12 of 20 on desktop,
+    60 percent. Returning buyers: 40 versus 80. Devices were not randomly assigned.
+  s3_zh: >-
+    所以要先分组。首次购买的人，用手机是六十人中十二人完成，百分之二十；用电脑是二十人中十二人，百分之六十。回购的是四成对八成。不过设备不是随机分配的。
+  s3_zh_hk: >-
+    所以要先分組。首次購買嘅人，用手機係六十人入面十二個完成，百分之二十；用電腦係二十人入面十二個，百分之六十。回購嘅係四成對八成。不過用邊種裝置唔係隨機分配。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Target the problem, not uplift
+  title_zh: 针对问题，别承诺提升
+  title_zh_hk: 針對問題，別承諾提升
+  step1_en: B fits a mobile handoff doubt
+  step1_zh: B 处理手机支付转接的疑虑
+  step1_zh_hk: B 處理流動支付轉接的疑慮
+  step2_en: >-
+    6 people: a mechanism, not a size
+  step2_zh: 6 人：提示成因，不是规模
+  step2_zh_hk: 6 人：提示成因，不是規模
+  step3_en: A must face the payment concern
+  step3_zh: 选 A 也要正视付款问题
+  step3_zh_hk: 選 A 也要正視付款問題
+  s1_en: >-
+    B is now well supported: it addresses an observed uncertainty on mobile, right before purchase.
+  s1_zh: 现在的资料有力支持 B：它处理的是顾客快要付款时，在手机上遇到的具体疑虑。
+  s1_zh_hk: 而家嘅資料有力支持 B：佢處理嘅係顧客就快俾錢嗰陣，喺手機上面遇到嘅具體疑慮。
+  s2_en: >-
+    But the six-person check suggests a mechanism, not how common it is or how many sales can be recovered.
+    Not all 60 first-time mobile non-completers were confused.
+  s2_zh: >-
+    不过，六个人的测试只提示了可能的原因，说明不了问题有多普遍，也说明不了能挽回多少订单。用手机、首次购买却没完成的六十人里，未必个个都是因为看不懂。
+  s2_zh_hk: >-
+    不過，六個人嘅測試只係提示咗可能嘅原因，講唔到問題有幾普遍，亦講唔到可以挽回幾多張訂單。用手機、首次購買但冇完成嘅嗰六十人入面，未必個個都係因為睇唔明。
+  s3_en: >-
+    A is still a real way to reach relevant customers. But choosing it means acknowledging the payment-stage
+    concern, not assuming new visitors will convert at today's 8 percent.
+  s3_zh: A 仍然能吸引相关的潜在顾客。但选 A 就要正视付款步骤的问题，不能假设新访客会照现在百分之八的比率下单。
+  s3_zh_hk: A 仍然可以吸引相關嘅潛在顧客。但揀 A 就要正視付款步驟嘅問題，唔可以假設新訪客會照而家百分之八嘅比率落單。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Measure without changing meaning
+  title_zh: 衡量进展，口径一致
+  title_zh_hk: 量度進展，口徑一致
+  en: >-
+    For B, track confirmed purchases divided by mobile payment-step viewers, first-time and returning
+    separately, under the same follow-up rule. Also watch total orders, refunds, payment errors and unexpected-charge
+    complaints; a button click alone is not success. For A, track qualified visits, completed purchases,
+    acquisition cost and contribution, and compare like cohorts.
+  zh: >-
+    如果选 B，就用确认的购买次数，除以在手机上看到付款步骤的人数，首次购买和回购分开看，跟进规则保持一致。同时留意订单总数、退款、付款错误和意外扣款的投诉；光是按了按钮不算成功。如果选 A，就看有效访问、完成的购买、获客成本和利润贡献，并且用可比的顾客群来比较。
+  zh_hk: >-
+    如果揀 B，就用確認咗嘅購買次數，除以喺手機睇到付款步驟嘅人數，首次購買同回購分開睇，跟進規則要一致。同時留意訂單總數、退款、付款錯誤同意外扣錢嘅投訴；淨係撳咗個掣唔算成功。如果揀 A，就睇有效瀏覽、完成嘅購買、獲客成本同利潤貢獻，仲要用可比嘅顧客群嚟比較。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Find where the journey breaks
+  title_zh: 找出顾客在哪一步停下
+  title_zh_hk: 找出顧客在哪一步停下
+  q1_en: >-
+    Payment step: 80 of 160 = 50%
+  q1_zh: 付款步骤：160 人中 80 人 = 50%
+  q1_zh_hk: 付款步驟：160 人中 80 人 = 50%
+  q2_en: >-
+    First-time: mobile 20% · desktop 60%
+  q2_zh: 首次购买：手机 20% · 桌面端 60%
+  q2_zh_hk: 首次購買：流動 20% · 桌面 60%
+  s1_en: >-
+    Choose the denominator that matches the question, then segment before you diagnose.
+  s1_zh: 先选对配合问题的分母，再分组，然后才下诊断。
+  s1_zh_hk: 先揀啱配合問題嘅分母，再分組，之後先至下診斷。
+  s2_en: >-
+    An observed gap locates a plausible problem; it is not the guaranteed uplift of a fix.
+  s2_zh: 观察到的差距，只能指出一个可能的问题，不等于改版保证带来的提升。
+  s2_zh_hk: 觀察到嘅差距，只可以指出一個可能嘅問題，唔等於改版保證帶嚟嘅提升。
+  s3_en: >-
+    Paper Path, its journey counts and the usability check are fictional. Official scene art is a teaching
+    illustration only.
+  s3_zh: Paper Path、各步骤人数和可用性测试都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: Paper Path、各步驟人數同可用性測試都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 198

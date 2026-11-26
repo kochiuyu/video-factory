@@ -32,6 +32,7 @@ from scene_registry import (
     schedule_marks,
     step_count,
     track_columns,
+    track_slots,
 )
 from mux import CAP_TIME_WORDS
 from slides import LAYOUT_VERSION, STAGEABLE, lesson_stamp, stage_plan
@@ -1703,6 +1704,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-NUM-08": [
                 "lesson_hook", "part_whole", "part_whole", "part_whole", "part_whole", "lesson_takeaway",
             ],
+            "P1-NUM-09": [
+                "lesson_hook", "part_whole", "number_track", "number_track", "lesson_takeaway",
+            ],
             "P1-NUM-11": [
                 "lesson_hook", "part_whole", "part_whole", "part_whole", "lesson_takeaway",
             ],
@@ -1947,6 +1951,38 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(labels_for(recap, "zh_hk")["lines"][0], "攞走三個，剩返五個。")
         self.assertEqual(labels_for(recap, "zh_hk")["lines"][3], "數一數剩返嘅五個。")
         self.assertEqual(labels_for(recap, "en")["bonds"], [[5, -3], [0, -6], [7, 0], [5]])
+        nine = load_lesson(P1 / "P1-NUM-09.yaml")
+        joined = [beat for beat in nine["beats"] if beat.get("scene") == "part_whole"]
+        hops = [beat for beat in nine["beats"] if beat.get("scene") == "number_track"]
+        self.assertEqual([(b.get("a"), b.get("b")) for b in joined], [(3, 2)])
+        self.assertEqual([(b["start"], b["end"]) for b in hops], [(8, 11), (6, 10)])
+        self.assertEqual(count_event(hops[0]), (1, 4))
+        self.assertEqual(count_event(hops[1]), (1, 5))
+        self.assertEqual(labels_for(joined[0], "en")["equation"], ["5", "=", "3", "+", "2"])
+        self.assertEqual(joined[0]["s3_en"], "Put them together. Three and two make five. Together they make five.")
+        self.assertEqual(hops[0]["s2_en"], "Eight. Nine. Ten. Eleven.")
+        self.assertEqual(hops[0]["s3_zh"], "八加三是十一。合起来是十一。")
+        self.assertEqual(hops[1]["s3_zh_hk"], "再加四個。六加四係十。合埋係十。")
+        self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in nine["beats"]).lower())
+        self.assertNotIn("嗎", _beat_lines(nine, "zh_hk"))
+        recap9 = next(beat for beat in nine["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap9), 4)
+        self.assertEqual(labels_for(recap9, "en")["title"], "What do the groups make?")
+        self.assertEqual(labels_for(recap9, "zh")["title"], "合起来是多少？")
+        self.assertEqual(labels_for(recap9, "zh_hk")["title"], "合埋係幾多呀？")
+        self.assertEqual(
+            labels_for(recap9, "en")["lines"],
+            [
+                "Three and two make five.",
+                "Eight and three make eleven.",
+                "Six and four make ten.",
+                "Six needs four more to make ten.",
+            ],
+        )
+        self.assertEqual(labels_for(recap9, "zh")["lines"][3], "六再加四个，就是十。")
+        self.assertEqual(labels_for(recap9, "zh_hk")["lines"][3], "六再加四個，就係十。")
+        self.assertEqual(nine["title_zh_hk"], "將兩組合埋")
+        self.assertEqual(labels_for(recap9, "en")["bonds"], [[3, 2], [8, 3], [6, 4], [6, 4]])
 
     def test_part_whole_bounds(self):
         good = {
@@ -2092,10 +2128,23 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(len(scheduled[1]), 3)
         self.assertAlmostEqual(scheduled[1][0], 0.2, places=2)
 
-    def test_track_stays_one_row_in_landscape_and_snakes_in_portrait(self):
+    def test_track_stays_one_row_in_landscape_and_reads_left_to_right_in_portrait(self):
+        values = list(range(21))
         self.assertEqual(track_columns(21, 1920, 1080), 21)
-        self.assertLess(track_columns(21, 1080, 1920), 21)
-        self.assertGreaterEqual(track_columns(21, 1080, 1920), 4)
+        land = track_slots(values, 21, left_to_right=False)
+        self.assertEqual([land[n] for n in values], [(0, n) for n in values])
+        cols = track_columns(21, 1080, 1920)
+        self.assertEqual(cols, 6)
+        rows = {}
+        for n, (row, col) in track_slots(values, cols, left_to_right=True).items():
+            rows.setdefault(row, []).append((col, n))
+        laid = [[n for _col, n in sorted(rows[row])] for row in sorted(rows)]
+        self.assertEqual(laid, [
+            [0, 1, 2, 3, 4, 5],
+            [6, 7, 8, 9, 10, 11],
+            [12, 13, 14, 15, 16, 17],
+            [18, 19, 20],
+        ])
 
     def test_count_marks_follow_the_spoken_numbers(self):
         words = [

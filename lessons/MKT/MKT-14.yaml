@@ -1,0 +1,301 @@
+id: MKT-14
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The same price. Two comparisons.
+title_zh: 同一个售价，两种比法
+title_zh_hk: 同一個售價，兩種比法
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-14
+  kicker_en: MKT-14
+  kicker_zh: MKT-14
+  kicker_zh_hk: MKT-14
+  title_en: The same price. Two comparisons.
+  title_zh: 同一个售价，两种比法
+  title_zh_hk: 同一個售價，兩種比法
+  image: art/same-price-two-comparisons-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In September 2026, Hong Kong's Consumer Council said promotions and pack sizes do not always reveal
+    the best value, and encouraged shoppers to check historical and unit prices. Now a fictional Hong
+    Kong homewares shop sells its Everyday kettle for 300 dollars in a planned promotion. It wants to
+    be known for dependable essentials at a sensible price.
+  zh: >-
+    二零二六年九月，香港消费者委员会指出，促销方式和包装大小不一定能显示哪样最划算，提醒大家留意过往价格和单位价格。现在，一家虚构的香港家居用品店，在计划好的促销中，以三百元出售 Everyday 电热水壶。店家想以可靠、价钱合理的日用品建立口碑。
+  zh_hk: >-
+    二零二六年九月，香港消費者委員會指出，推廣方式同包裝大細唔一定顯示到邊樣最抵，提醒大家留意過往價錢同單位價錢。而家，一間虛構嘅香港家品店，喺計劃好嘅推廣入面，用三百蚊賣 Everyday 電熱水煲。店舖想用可靠、價錢合理嘅日用品建立口碑。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two verified kettles
+  title_zh: 两款已核实的水壶
+  title_zh_hk: 兩款已核實的水壺
+  row1_en: Current price
+  row1_zh: 现价
+  row1_zh_hk: 現價
+  row2_en: Capacity / auto shut-off
+  row2_zh: 容量／自动关机
+  row2_zh_hk: 容量／自動關機
+  row3_en: Functions
+  row3_zh: 功能
+  row3_zh_hk: 功能
+  row4_en: Commercial warranty
+  row4_zh: 商业保修
+  row4_zh_hk: 商業保用
+  col1_en: Everyday
+  col1_zh: Everyday
+  col1_zh_hk: Everyday
+  col2_en: Premium
+  col2_zh: Premium
+  col2_zh_hk: Premium
+  c11: HK$300
+  c12: HK$500
+  c21_en: 1.5 L / yes
+  c21_zh: 1.5 升／有
+  c21_zh_hk: 1.5 公升／有
+  c22_en: 1.5 L / yes
+  c22_zh: 1.5 升／有
+  c22_zh_hk: 1.5 公升／有
+  c31_en: Boil only
+  c31_zh: 只可烧水
+  c31_zh_hk: 只可煲水
+  c32_en: Boil, temperatures, keep-warm
+  c32_zh: 烧水、温度选择、保温
+  c32_zh_hk: 煲水、溫度選擇、保溫
+  c41_en: 1 year
+  c41_zh: 1 年
+  c41_zh_hk: 1 年
+  c42_en: 3 years
+  c42_zh: 3 年
+  c42_zh_hk: 3 年
+  footer_en: No lifespan evidence for either
+  footer_zh: 两款都没有寿命比较证据
+  footer_zh_hk: 兩款都沒有壽命比較證據
+  s1_en: >-
+    Message A says: now 300 dollars, our usual selling price 400, save 100. Transaction records prove
+    400 is the genuine usual price for this exact model, not an inflated reference.
+  s1_zh: >-
+    广告 A 写的是：现售三百元，本店平日售价四百元，现省一百元。交易记录证明，四百元确实是这款水壶在合理期间内的平日售价，不是临时抬高的参考价。
+  s1_zh_hk: 廣告 A 寫嘅係：現售三百蚊，本店平日售價四百蚊，即慳一百蚊。交易記錄證明，四百蚊確實係呢款水煲喺合理期間嘅平日售價，唔係臨時抬高嘅參考價。
+  s2_en: >-
+    Message B says: choose the features you need, Everyday 300 dollars, Premium 500. Premium is a different
+    kettle the shop genuinely sells at that price.
+  s2_zh: >-
+    广告 B 写的是：按需要选功能，Everyday 三百元，Premium 五百元。Premium 是店里确实在卖的另一款水壶，现价就是五百元。
+  s2_zh_hk: >-
+    廣告 B 寫嘅係：按需要揀功能，Everyday 三百蚊，Premium 五百蚊。Premium 係店舖真係有賣嘅另一款水煲，現價就係五百蚊。
+  s3_en: >-
+    Both hold 1.5 litres and shut off automatically. Everyday only boils, with a one-year commercial warranty;
+    Premium adds temperatures and keep-warm, with three years. There is no evidence on which lasts longer.
+  s3_zh: >-
+    两款都是一点五升，都会自动关机。Everyday 只能烧水，商业保修一年；Premium 多了温度选择和保温，保修三年。至于哪款更耐用，没有证据。
+  s3_zh_hk: >-
+    兩款都係一點五公升，都會自動關機。Everyday 只可以煲水，商業保用一年；Premium 多咗溫度選擇同保溫，保用三年。至於邊款耐用啲，冇證據。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Lead with A or B?
+  title_zh: 主打 A 还是 B？
+  title_zh_hk: 主打 A 還是 B？
+  en: >-
+    Would you lead with A's genuine saving or B's bounded comparison with Premium? What value do you want
+    the customer to notice, with the kettle and 300-dollar price unchanged? Pause and vote.
+  zh: >-
+    你会主打 A 的真实优惠，还是 B 和 Premium 的有限比较？在水壶和三百元售价都不变的情况下，你想让顾客注意到什么价值？请暂停，投个票。
+  zh_hk: 你會主打 A 嘅真實優惠，定係 B 同 Premium 嘅有限比較？喺水煲同三百蚊售價都唔變嘅情況下，你想顧客留意到乜嘢價值？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Four exploratory interviews
+  title_zh: 四个探索性访谈
+  title_zh_hk: 四個探索性訪談
+  step1_en: >-
+    A: 'The HK$100 saving gets my attention'
+  step1_zh: A：省 HK$100 会吸引我留意
+  step1_zh_hk: A：慳 HK$100 會吸引我留意
+  step2_en: >-
+    B: 'Will the cheaper one last as long?'
+  step2_zh: B：便宜那款会不会一样耐用？
+  step2_zh_hk: B：便宜那款會不會一樣耐用？
+  step3_en: No lifespan study exists
+  step3_zh: 没有寿命比较研究
+  step3_zh_hk: 沒有壽命比較研究
+  s1_en: >-
+    Four shoppers see both layouts, in no controlled order. About A, one says the 100-dollar saving gets
+    their attention; another wants to know whether that price will come round again.
+  s1_zh: 店家找了四名顾客做探索性访谈，每人都看两版广告，先后次序没有控制。说到 A，有人说省一百元会吸引他留意，也有人想知道以后还会不会有这个价。
+  s1_zh_hk: 店舖搵咗四個顧客做探索性訪談，每人都睇兩版廣告，先後次序冇控制。講到 A，有人話慳一百蚊會吸引佢留意，亦有人想知以後仲會唔會有呢個價。
+  s2_en: >-
+    About B, one says they only boil water, so may not need the extra settings. Another wonders whether
+    the cheaper kettle will last as long.
+  s2_zh: 说到 B，有人说自己只是烧水，未必用得上额外设定；另一人则想知道，便宜的那款会不会一样耐用。
+  s2_zh_hk: 講到 B，有人話自己淨係煲水，未必用得着額外設定；另一個就想知，平嗰款會唔會一樣耐用。
+  s3_en: >-
+    The product team has no failure-rate or service-life study, so it cannot answer that question. The
+    shop may improve the wording, but cannot invent equal quality or hide Premium's features.
+  s3_zh: 产品团队没有故障率或使用寿命的研究，回答不了这个问题。店家可以改善用词，但不能声称品质相同，也不能隐藏 Premium 的附加功能。
+  s3_zh_hk: 產品團隊冇故障率或者使用壽命嘅研究，答唔到呢個問題。店舖可以改善用詞，但唔可以話品質一樣，亦唔可以收埋 Premium 嘅附加功能。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep or change?
+  title_zh: 维持还是改选？
+  title_zh_hk: 維持還是改選？
+  en: >-
+    Keep or change your comparison? Propose one truthful headline or clarification, and say which customer
+    need it serves, without treating four interviews as proof of sales or durability. Pause and vote.
+  zh: >-
+    你会维持原来的比较方式，还是改选？请提出一句真实的标题或补充说明，并说说它回应哪种顾客需要；别把四个访谈当成销量或耐用程度的证据。请暂停，投个票。
+  zh_hk: >-
+    你會維持原本嘅比較方式，定係改選？請提出一句真實嘅標題或者補充說明，講吓佢回應邊種顧客需要；唔好將四個訪談當成銷量或者耐用程度嘅證據。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Name the reference first
+  title_zh: 先讲清楚与什么相比
+  title_zh_hk: 先講清楚與甚麼相比
+  step1_en: >-
+    A: 400 − 300 = HK$100, or 25%
+  step1_zh: A：400 − 300 = HK$100，即 25%
+  step1_zh_hk: A：400 − 300 = HK$100，即 25%
+  step2_en: >-
+    B: Premium costs HK$200 more
+  step2_zh: B：Premium 贵 HK$200
+  step2_zh_hk: B：Premium 貴 HK$200
+  step3_en: A price gap is not a discount
+  step3_zh: 差价不等于折扣
+  step3_zh_hk: 差價不等於折扣
+  s1_en: >-
+    A compares the same model with its own genuine usual price: 400 minus 300 is a 100-dollar saving,
+    or 25 percent of 400.
+  s1_zh: A 是拿同一款水壶和它真实的平日售价比：四百减三百，省一百元，也就是四百元的百分之二十五。
+  s1_zh_hk: A 係將同一款水煲同佢真實嘅平日售價比：四百減三百，慳一百蚊，即係四百蚊嘅百分之二十五。
+  s2_en: >-
+    B compares two different models: at current prices, Premium costs 200 dollars more.
+  s2_zh: B 比较的是两款不同的水壶：按现价，Premium 贵二百元。
+  s2_zh_hk: B 比較嘅係兩款唔同嘅水煲：按現價，Premium 貴二百蚊。
+  s3_en: >-
+    That 200-dollar gap is not a discount on Everyday. A larger number does not make the two claims interchangeable.
+  s3_zh: 这二百元差价不是 Everyday 的折扣。数字更大，不代表两种说法可以互换。
+  s3_zh_hk: 呢二百蚊差價唔係 Everyday 嘅折扣。數字大啲，唔代表兩種講法可以互換。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: A deal or a product trade-off
+  title_zh: 限期优惠还是功能取舍
+  title_zh_hk: 限期優惠還是功能取捨
+  step1_en: >-
+    A: a bargain for boil-only buyers
+  step1_zh: A：给只需烧水的人一个优惠
+  step1_zh_hk: A：給只需煲水的人一個優惠
+  step2_en: >-
+    B: compare features you need
+  step2_zh: B：比较自己需要的功能
+  step2_zh_hk: B：比較自己需要的功能
+  step3_en: Never say 'same quality for less'
+  step3_zh: 不能说“同等品质，价钱更低”
+  step3_zh_hk: 不能說「同等品質，價錢更低」
+  s1_en: >-
+    A makes the temporary bargain stand out for people who already want an ordinary kettle, but it may
+    also make them wait for the next deal. A revision: boil-only Everyday, 300 dollars, 100 below our
+    genuine usual 400.
+  s1_zh: >-
+    A 让已经想买普通水壶的人注意到这个限期优惠，但也可能让他们等下一次优惠。可以改成：只需烧水？Everyday 三百元，比本店实际平日售价四百元便宜一百元。
+  s1_zh_hk: >-
+    A 令本身想買普通水煲嘅人留意到呢個限期優惠，但亦可能令佢哋等下一次優惠。可以改成：淨係煲水？Everyday 三百蚊，比本店實際平日售價四百蚊平一百蚊。
+  s2_en: >-
+    B helps customers weigh the features they need against a dearer option. A revision: boil only, or
+    choose temperature settings? Keep the one-year versus three-year warranties prominent.
+  s2_zh: B 让顾客拿自己需要的功能，和较贵的选择比一比。可以改成：只烧水，还是想选温度？一年对三年的保修差异要保持显眼。
+  s2_zh_hk: B 令顧客將自己需要嘅功能，同貴啲嘅選擇比一比。可以改成：淨係煲水，定係想揀溫度？一年對三年嘅保用分別要保持顯眼。
+  s3_en: >-
+    Shared basic functions cannot establish equal durability. If asked about lifespan, say comparative
+    evidence is unavailable.
+  s3_zh: 基本功能相同，不能证明一样耐用。如果顾客问寿命，就坦白说没有比较证据。
+  s3_zh_hk: 基本功能一樣，證明唔到一樣耐用。如果顧客問壽命，就坦白講冇比較證據。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Choose the audience, then test
+  title_zh: 先定对象，再查理解
+  title_zh_hk: 先定對象，再查理解
+  en: >-
+    Prefer A to make a genuine offer clear for customers who want basic functions. Prefer B to help buyers
+    judge whether the extra settings and warranty suit them. Neither is shown to maximise sales. Next,
+    ask customers what is being compared, which differences they recall, and what durability they infer;
+    to measure purchases, use a controlled design with the same product and price.
+  zh: >-
+    如果重点是让只需要基本功能的顾客看懂真实优惠，可以选 A；如果想帮顾客判断额外的温度设定和保修是否适合自己，可以选 B。没有证据显示哪个销量最高。下一步，可以问顾客：他们认为在比较什么、记得哪些差异、有没有自己推断耐用程度。如果要衡量购买，就要用对照设计，产品和价格都保持不变。
+  zh_hk: >-
+    如果重點係令淨係需要基本功能嘅顧客睇得明真實優惠，可以揀 A；如果想幫顧客判斷額外嘅溫度設定同保用啱唔啱自己，可以揀 B。冇證據顯示邊個銷量最高。下一步，可以問顧客：佢哋覺得喺比較乜、記得邊啲分別、有冇自己推斷耐用程度。如果要量度購買，就要用對照設計，產品同價錢都保持唔變。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Name what you compare against
+  title_zh: 先讲清楚与什么相比
+  title_zh_hk: 先講清楚與甚麼相比
+  q1_en: >-
+    A: HK$100 below its usual HK$400
+  q1_zh: A：比平日 HK$400 便宜 HK$100
+  q1_zh_hk: A：比平日 HK$400 便宜 HK$100
+  q2_en: >-
+    B: HK$200 gap, not a discount
+  q2_zh: B：差价 HK$200，不是折扣
+  q2_zh_hk: B：差價 HK$200，不是折扣
+  s1_en: >-
+    The same 300-dollar price can be framed as a genuine saving or as a feature trade-off. Name the reference
+    before you calculate.
+  s1_zh: 同一个三百元售价，可以说成真实的优惠，也可以说成功能上的取舍。计算之前，先讲清楚和什么比较。
+  s1_zh_hk: 同一個三百蚊售價，可以講成真實嘅優惠，亦可以講成功能上嘅取捨。計之前，先講清楚同乜嘢比較。
+  s2_en: >-
+    Neither frame replaces evidence: there is no proof of equal durability or of higher sales.
+  s2_zh: 无论用哪种说法，都不能代替证据：没有证据显示一样耐用，也没有证据显示卖得更好。
+  s2_zh_hk: 無論用邊種講法，都代替唔到證據：冇證據顯示一樣耐用，亦冇證據顯示賣得好啲。
+  s3_en: >-
+    The shop, the kettles, the prices and the interview comments are fictional. Official scene art is
+    a teaching illustration only.
+  s3_zh: 店铺、水壶、价格和访谈意见都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 店舖、水煲、價錢同訪談意見都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 198

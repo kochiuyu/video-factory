@@ -1075,6 +1075,10 @@ def _spoken_number(text: str, n: int) -> bool:
         return False
     if raw.lower() == _EN_NUMBER[n] or raw == str(n):
         return True
+    # "None are left" is zero. The counters still leave on "four" and the
+    # difference lands on this word.
+    if n == 0 and raw.lower() == "none":
+        return True
     core = raw
     for suffix in ("个", "個"):
         if core.endswith(suffix) and len(core) > len(suffix):

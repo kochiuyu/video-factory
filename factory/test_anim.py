@@ -1886,8 +1886,9 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(zeros[0]["s3_en"], "Bring them together. Zero and four make four. Together they make four.")
         self.assertEqual(zeros[2]["s3_en"], "Take away zero. Four are left.")
         self.assertEqual(zeros[2]["s3_zh"], "拿走零个，剩下四个。")
-        self.assertEqual(zeros[2]["s3_zh_hk"], "拿走零個，剩低四個。")
-        self.assertEqual(zeros[3]["s3_zh_hk"], "拿走四個，剩低零個。")
+        self.assertEqual(zeros[2]["s3_zh_hk"], "攞走零個，剩返四個。")
+        self.assertEqual(zeros[3]["s3_en"], "Take all four away. None are left.")
+        self.assertEqual(zeros[3]["s3_zh_hk"], "攞走四個，剩返零個。")
         self.assertNotIn("sum", zeros[0]["s3_en"].lower())
         self.assertNotIn("difference", zeros[3]["s3_en"].lower())
         recap8 = next(beat for beat in eight["beats"] if beat["id"] == "takeaway")
@@ -1900,13 +1901,13 @@ class SceneRegistryTest(unittest.TestCase):
             [
                 "Zero and four make four.",
                 "Four and zero make four too.",
-                "Nothing. Four stays four.",
-                "Take four away, zero are left.",
+                "Take zero away. Nothing changes.",
+                "Take all four away. None are left.",
             ],
         )
-        self.assertEqual(labels_for(recap8, "zh")["lines"][2], "没有改变。还是四。")
-        self.assertEqual(labels_for(recap8, "zh_hk")["lines"][2], "冇改變。仲係四。")
-        self.assertEqual(labels_for(recap8, "zh_hk")["lines"][3], "拿走四個，剩低零個。")
+        self.assertEqual(labels_for(recap8, "zh")["lines"][2], "拿走零个，没有改变。")
+        self.assertEqual(labels_for(recap8, "zh_hk")["lines"][2], "攞走零個，冇改變。")
+        self.assertEqual(labels_for(recap8, "zh_hk")["lines"][3], "攞走四個，剩返零個。")
         self.assertEqual(labels_for(recap8, "en")["bonds"], [[0, 4], [4, 0], [4], [0, -4]])
 
     def test_part_whole_bounds(self):
@@ -2164,6 +2165,18 @@ class SceneRegistryTest(unittest.TestCase):
         ]
         found = removal_marks(take_all, 3.6, 2.4, 4, 0)
         self.assertAlmostEqual(found[0], 0.5, places=2)
+        self.assertAlmostEqual(found[1], 1.45, places=2)
+        none_left = [
+            {"text": "Take", "start": 3.7},
+            {"text": "all", "start": 3.95},
+            {"text": "four", "start": 4.2},
+            {"text": "away", "start": 4.5},
+            {"text": "None", "start": 5.05},
+            {"text": "are", "start": 5.3},
+            {"text": "left", "start": 5.55},
+        ]
+        found = removal_marks(none_left, 3.6, 2.4, 4, 0)
+        self.assertAlmostEqual(found[0], 0.6, places=2)
         self.assertAlmostEqual(found[1], 1.45, places=2)
 
     def test_xiao_yi_kicker_is_two_separated_marks(self):

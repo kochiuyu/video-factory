@@ -66,13 +66,13 @@ beats:
   seconds: 12
   s1_en: Now take away. Four counters are here. Zero on that mat.
   s1_zh: 现在拿走。这里有四个圆片。那边是零。
-  s1_zh_hk: 而家拿走。呢度有四個圓片。嗰邊係零。
+  s1_zh_hk: 而家攞走。呢度有四個圓片。嗰邊係零。
   s2_en: Four. Zero.
   s2_zh: 四，零。
   s2_zh_hk: 四，零。
   s3_en: Take away zero. Four are left.
   s3_zh: 拿走零个，剩下四个。
-  s3_zh_hk: 拿走零個，剩低四個。
+  s3_zh_hk: 攞走零個，剩返四個。
 
 - id: all
   visual: animated
@@ -83,13 +83,13 @@ beats:
   seconds: 12
   s1_en: Taking all is different. Four counters are here.
   s1_zh: 全部拿走就不一样。这里有四个圆片。
-  s1_zh_hk: 全部拿走就唔同。呢度有四個圓片。
+  s1_zh_hk: 全部攞走就唔同。呢度有四個圓片。
   s2_en: Four. Zero.
   s2_zh: 四，零。
   s2_zh_hk: 四，零。
-  s3_en: Take four away, zero are left.
+  s3_en: Take all four away. None are left.
   s3_zh: 拿走四个，剩下零个。
-  s3_zh_hk: 拿走四個，剩低零個。
+  s3_zh_hk: 攞走四個，剩返零個。
 
 - id: takeaway
   visual: animated
@@ -110,9 +110,9 @@ beats:
   s2_en: Four and zero make four too.
   s2_zh: 四加零也是四。
   s2_zh_hk: 四加零都係四。
-  s3_en: Nothing. Four stays four.
-  s3_zh: 没有改变。还是四。
-  s3_zh_hk: 冇改變。仲係四。
-  s4_en: Take four away, zero are left.
+  s3_en: Take zero away. Nothing changes.
+  s3_zh: 拿走零个，没有改变。
+  s3_zh_hk: 攞走零個，冇改變。
+  s4_en: Take all four away. None are left.
   s4_zh: 拿走四个，剩下零个。
-  s4_zh_hk: 拿走四個，剩低零個。
+  s4_zh_hk: 攞走四個，剩返零個。

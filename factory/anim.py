@@ -22,6 +22,7 @@ from scene_registry import (
     schedule_marks,
     step_count,
     track_columns,
+    track_slots,
 )
 
 CREAM = "#F7F4EE"
@@ -255,7 +256,7 @@ def cache_key(
             "marks": marks or [],
             # Bump when a scene's motion changes but the spec does not, so a
             # cached silent clip cannot keep an old hop.
-            "motion": 5,
+            "motion": 6,
             "lang": label_lang(lang),
             "frame": [int(frame[0]), int(frame[1])],
             "manim": str(manim_version),
@@ -1356,8 +1357,9 @@ def _scene_types() -> dict:
             values = list(range(low, high + 1))
             crosses = min(start, end) < 10 < max(start, end)
             # One row whenever the cells stay readable, so a hop across 10 is
-            # a sideways move. A narrow frame snakes: the next number sits
-            # beside the previous one, including the turn onto the next row.
+            # a sideways move. A narrow frame wraps. Portrait rows read left
+            # to right, and the next row starts at the left. Landscape keeps
+            # the snake; a 16:9 track is one row, so it never turns.
             pw = int(getattr(config, "pixel_width", 0) or 1920)
             ph = int(getattr(config, "pixel_height", 0) or 1080)
             cols = track_columns(len(values), pw, ph)
@@ -1365,18 +1367,22 @@ def _scene_types() -> dict:
             usable = float(config.frame_width) - 1.15
             cell = min(0.82, max(0.34, (usable - gap * (cols - 1)) / cols))
             row_gap = cell * 0.34
-            slots: dict[int, tuple[int, int]] = {}
-            row_i, col_i, direction = 0, 0, 1
-            for i, value in enumerate(values):
-                slots[value] = (row_i, col_i)
-                if i == len(values) - 1:
-                    break
-                nxt = col_i + direction
-                if nxt < 0 or nxt >= cols:
-                    row_i += 1
-                    direction *= -1
-                else:
-                    col_i = nxt
+            portrait = ph > pw
+            if portrait:
+                slots = track_slots(values, cols, left_to_right=True)
+            else:
+                slots = {}
+                row_i, col_i, direction = 0, 0, 1
+                for i, value in enumerate(values):
+                    slots[value] = (row_i, col_i)
+                    if i == len(values) - 1:
+                        break
+                    nxt = col_i + direction
+                    if nxt < 0 or nxt >= cols:
+                        row_i += 1
+                        direction *= -1
+                    else:
+                        col_i = nxt
             cells = {}
             numerals = VGroup()
             grid = VGroup()

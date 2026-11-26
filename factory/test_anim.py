@@ -32,6 +32,7 @@ from scene_registry import (
     schedule_marks,
     step_count,
     track_columns,
+    track_slots,
 )
 from mux import CAP_TIME_WORDS
 from slides import LAYOUT_VERSION, STAGEABLE, lesson_stamp, stage_plan
@@ -2089,10 +2090,23 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(len(scheduled[1]), 3)
         self.assertAlmostEqual(scheduled[1][0], 0.2, places=2)
 
-    def test_track_stays_one_row_in_landscape_and_snakes_in_portrait(self):
+    def test_track_stays_one_row_in_landscape_and_reads_left_to_right_in_portrait(self):
+        values = list(range(21))
         self.assertEqual(track_columns(21, 1920, 1080), 21)
-        self.assertLess(track_columns(21, 1080, 1920), 21)
-        self.assertGreaterEqual(track_columns(21, 1080, 1920), 4)
+        land = track_slots(values, 21, left_to_right=False)
+        self.assertEqual([land[n] for n in values], [(0, n) for n in values])
+        cols = track_columns(21, 1080, 1920)
+        self.assertEqual(cols, 6)
+        rows = {}
+        for n, (row, col) in track_slots(values, cols, left_to_right=True).items():
+            rows.setdefault(row, []).append((col, n))
+        laid = [[n for _col, n in sorted(rows[row])] for row in sorted(rows)]
+        self.assertEqual(laid, [
+            [0, 1, 2, 3, 4, 5],
+            [6, 7, 8, 9, 10, 11],
+            [12, 13, 14, 15, 16, 17],
+            [18, 19, 20],
+        ])
 
     def test_count_marks_follow_the_spoken_numbers(self):
         words = [

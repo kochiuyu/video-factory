@@ -142,6 +142,7 @@ def _copy(lang: str) -> dict[str, str]:
             "one_left": "One left",
             "even_word": "Even",
             "odd_word": "Odd",
+            "part_title": "Two parts",
         },
         "zh": {
             "ten_title": "一个十和一些一",
@@ -174,6 +175,7 @@ def _copy(lang: str) -> dict[str, str]:
             "one_left": "剩下一个",
             "even_word": "双数",
             "odd_word": "单数",
+            "part_title": "两部分",
         },
         "zh_hk": {
             "ten_title": "一個十和一些一",
@@ -206,6 +208,7 @@ def _copy(lang: str) -> dict[str, str]:
             "one_left": "剩低一個",
             "even_word": "雙數",
             "odd_word": "單數",
+            "part_title": "兩部分",
         },
     }
     return table[label_lang(lang)]
@@ -549,7 +552,137 @@ class PairCounters(SceneKind):
         return {"n": int(beat.get("n"))}
 
 
-_MOTIFS = {"counters", "ten_frame", "track", "ordinal", "pairs"}
+def _part_bonds(beat: dict) -> list[list[int]] | None:
+    """Takeaway cues. Each bond is ``[left, right]`` or ``[whole]``."""
+    raw = (beat or {}).get("bonds")
+    if not isinstance(raw, list) or not raw:
+        return None
+    bonds: list[list[int]] = []
+    for item in raw:
+        if not isinstance(item, (list, tuple)) or not item:
+            return None
+        nums = [_as_int(n) for n in item]
+        if any(n is None for n in nums):
+            return None
+        bonds.append([int(n) for n in nums])
+    return bonds
+
+
+def _part_bond_problems(beat: dict) -> list[str]:
+    bonds = _part_bonds(beat)
+    if bonds is None:
+        return ["parts takeaway needs bonds, a list of [left, right] or [whole]."]
+    if not 1 <= len(bonds) <= 4:
+        return ["parts takeaway bonds must be 1 to 4 cues."]
+    for bond in bonds:
+        if len(bond) == 1:
+            if not 1 <= bond[0] <= 18:
+                return ["a parts whole must be an integer from 1 to 18."]
+            continue
+        if len(bond) != 2:
+            return ["each parts bond is one whole or two parts."]
+        a, b = bond
+        if not 1 <= a <= 9 or not 0 <= b <= 9 or not 1 <= a + b <= 18:
+            return ["parts bonds use parts from 0 to 9 whose sum is from 1 to 18."]
+    return []
+
+
+def _part_word(lang: str, n: int) -> str:
+    if label_lang(lang) == "en":
+        return str(int(n))
+    return zh_cardinal(n)
+
+
+def _part_pair(beat: dict) -> tuple[int, int] | None:
+    """The two parts. Each is 1–9 and the whole is 2–18."""
+    a = _as_int((beat or {}).get("a"))
+    b = _as_int((beat or {}).get("b"))
+    if a is None or b is None:
+        return None
+    return a, b
+
+
+def _part_pair_problems(beat: dict) -> list[str]:
+    pair = _part_pair(beat)
+    if pair is None:
+        return ["part_whole needs integers a and b."]
+    a, b = pair
+    if not 1 <= a <= 9 or not 1 <= b <= 9 or not 2 <= a + b <= 18:
+        return ["part_whole a and b must be integers from 1 to 9 whose sum is from 2 to 18."]
+    whole = _as_int((beat or {}).get("whole"))
+    if whole is not None and whole != a + b:
+        return [f"part_whole whole must equal a + b ({a + b})."]
+    return []
+
+
+class PartWhole(SceneKind):
+    """A whole splits into two coloured parts, then joins again.
+
+    ``a`` and ``b`` are the parts (each 1–9, sum 2–18). ``also`` is a second
+    left-hand part of the same whole: the counters move, and the whole stays.
+    ``cover`` is ``a`` or ``b``: that part is covered and the bond is read
+    as a subtraction. The two part labels land on the spoken words.
+    """
+
+    name = "part_whole"
+    steps = 3
+
+    def problems(self, beat: dict) -> list[str]:
+        found = _part_pair_problems(beat)
+        if found:
+            return found
+        a, b = _part_pair(beat)
+        whole = a + b
+        also = _as_int(beat.get("also")) if "also" in beat else None
+        cover = str(beat.get("cover") or "").strip()
+        if "also" in beat and (also is None or not 1 <= also <= whole - 1 or also == a):
+            return [f"part_whole also must be an integer from 1 to {whole - 1}, other than {a}."]
+        if cover and cover not in {"a", "b"}:
+            return ["part_whole cover must be a or b."]
+        if also is not None and cover:
+            return ["part_whole uses either also or cover, not both."]
+        return []
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        copy = _copy(lang)
+        a, b = _part_pair(beat)
+        whole = a + b
+        also = _as_int(beat.get("also")) if "also" in beat else None
+        cover = str(beat.get("cover") or "").strip()
+        out = {
+            "title": copy["part_title"],
+            "a": a,
+            "b": b,
+            "whole": whole,
+            "left": _part_word(lang, a),
+            "right": _part_word(lang, b),
+            "whole_word": _part_word(lang, whole),
+            "equation": [str(whole), "=", str(a), "+", str(b)],
+            "cover": cover,
+        }
+        if also is not None:
+            out["also"] = also
+            out["also_left"] = _part_word(lang, also)
+            out["also_right"] = _part_word(lang, whole - also)
+            out["also_equation"] = [str(whole), "=", str(also), "+", str(whole - also)]
+        if cover in {"a", "b"}:
+            kept = b if cover == "a" else a
+            covered = a if cover == "a" else b
+            out["covered_equation"] = [str(whole), "-", str(covered), "=", str(kept)]
+        return out
+
+    def parameters(self, beat: dict) -> dict:
+        a, b = _part_pair(beat)
+        params: dict = {"a": a, "b": b}
+        if "also" in beat:
+            params["also"] = _as_int(beat.get("also"))
+        cover = str(beat.get("cover") or "").strip()
+        if cover:
+            params["cover"] = cover
+        return params
+
+
+_MOTIFS = {"counters", "ten_frame", "track", "ordinal", "pairs", "parts"}
 
 
 def _pair_n(beat: dict, default: int = 8) -> int:
@@ -628,8 +761,9 @@ class LessonHook(SceneKind):
     """Title and the lesson's objects arrive with the opening question.
 
     One spoken line. ``motif`` is ``counters``, ``ten_frame``, ``track``,
-    ``ordinal``, or ``pairs``. An ordinal hook may set ``n`` and ``mark``
-    (defaults: 6 tokens, mark 3). A pairs hook may set ``n`` (default 8).
+    ``ordinal``, ``pairs``, or ``parts``. An ordinal hook may set ``n`` and
+    ``mark`` (defaults: 6 tokens, mark 3). A pairs hook may set ``n`` (default
+    8). A parts hook may set ``a`` and ``b`` (defaults: 3 and 4).
     """
 
     name = "lesson_hook"
@@ -637,13 +771,15 @@ class LessonHook(SceneKind):
 
     def problems(self, beat: dict) -> list[str]:
         if _motif(beat) not in _MOTIFS:
-            return [f"lesson_hook motif must be counters, ten_frame, track, ordinal, or pairs, not {_motif(beat)!r}."]
+            return [f"lesson_hook motif must be counters, ten_frame, track, ordinal, pairs, or parts, not {_motif(beat)!r}."]
         if not _title_line(beat, "en"):
             return ["lesson_hook needs title_en (and title_zh / title_zh_hk)."]
         if _motif(beat) == "ordinal":
             return _ordinal_pair_problems(beat, required=False)
         if _motif(beat) == "pairs":
             return _pair_n_problems(beat)
+        if _motif(beat) == "parts" and ("a" in beat or "b" in beat):
+            return _part_pair_problems(beat)
         return []
 
     def labels(self, beat: dict, lang: str) -> dict:
@@ -659,6 +795,9 @@ class LessonHook(SceneKind):
             out["mark"] = mark
         if _motif(beat) == "pairs":
             out["n"] = _pair_n(beat)
+        if _motif(beat) == "parts":
+            pair = _part_pair(beat) or (3, 4)
+            out["a"], out["b"] = pair
         return out
 
     def parameters(self, beat: dict) -> dict:
@@ -669,6 +808,9 @@ class LessonHook(SceneKind):
             params["mark"] = mark
         if _motif(beat) == "pairs":
             params["n"] = _pair_n(beat)
+        if _motif(beat) == "parts":
+            pair = _part_pair(beat) or (3, 4)
+            params["a"], params["b"] = pair
         return params
 
 
@@ -690,11 +832,13 @@ class LessonTakeaway(SceneKind):
 
     def problems(self, beat: dict) -> list[str]:
         if _motif(beat) not in _MOTIFS:
-            return [f"lesson_takeaway motif must be counters, ten_frame, track, ordinal, or pairs, not {_motif(beat)!r}."]
+            return [f"lesson_takeaway motif must be counters, ten_frame, track, ordinal, pairs, or parts, not {_motif(beat)!r}."]
         if _motif(beat) == "ordinal":
             return _ordinal_pair_problems(beat, required=False)
         if _motif(beat) == "pairs":
             return _pair_n_problems(beat) + _pair_also_problems(beat)
+        if _motif(beat) == "parts":
+            return _part_bond_problems(beat)
         return []
 
     def labels(self, beat: dict, lang: str) -> dict:
@@ -725,6 +869,8 @@ class LessonTakeaway(SceneKind):
             if also is not None and 0 <= also <= 20:
                 out["also"] = also
                 out["also_word"] = str(also) if label_lang(lang) == "en" else zh_cardinal(also)
+        if _motif(beat) == "parts":
+            out["bonds"] = _part_bonds(beat) or []
         return out
 
     def parameters(self, beat: dict) -> dict:
@@ -746,6 +892,8 @@ class LessonTakeaway(SceneKind):
             also = _pair_also(beat)
             if also is not None:
                 params["also"] = also
+        if _motif(beat) == "parts":
+            params["bonds"] = _part_bonds(beat) or []
         return params
 
 
@@ -814,6 +962,14 @@ def count_event(beat: dict) -> tuple[int, int] | None:
         if pairs < 1:
             return None
         return 1, pairs
+    if scene == "part_whole":
+        pair = _part_pair(beat)
+        if pair is None:
+            return None
+        a, b = pair
+        if _part_pair_problems(beat) or a < 1 or b < 1:
+            return None
+        return 1, 2
     if scene == "lesson_takeaway":
         # A ten-frame recap counts the three ones on its last line
         # ("Find the ten first. Then count the rest.").
@@ -884,6 +1040,7 @@ register(CountObjects())
 register(NumberTrack())
 register(OrdinalRow())
 register(PairCounters())
+register(PartWhole())
 register(LessonHook())
 register(LessonTakeaway())
 

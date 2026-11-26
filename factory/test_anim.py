@@ -1601,7 +1601,7 @@ class SceneRegistryTest(unittest.TestCase):
             list(REGISTRY),
             [
                 "one_ten", "ten_and_ones", "make_ten", "count_objects", "number_track",
-                "ordinal_row", "pair_counters", "lesson_hook", "lesson_takeaway",
+                "ordinal_row", "pair_counters", "part_whole", "lesson_hook", "lesson_takeaway",
             ],
         )
         self.assertEqual(REGISTRY["one_ten"].steps, 4)
@@ -1697,6 +1697,7 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-NUM-03": ["lesson_hook", "number_track", "number_track", "number_track", "lesson_takeaway"],
             "P1-NUM-04": ["lesson_hook", "ordinal_row", "ordinal_row", "ordinal_row", "lesson_takeaway"],
             "P1-NUM-05": ["lesson_hook", "pair_counters", "pair_counters", "pair_counters", "lesson_takeaway"],
+            "P1-NUM-06": ["lesson_hook", "part_whole", "part_whole", "part_whole", "lesson_takeaway"],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -1794,6 +1795,111 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertIn("?", five["beats"][0]["s1_en"])
         self.assertIn("even", paired[0]["s3_en"].lower())
         self.assertIn("odd", paired[1]["s3_en"].lower())
+        six = load_lesson(P1 / "P1-NUM-06.yaml")
+        parts = [beat for beat in six["beats"] if beat.get("scene") == "part_whole"]
+        self.assertEqual(
+            [(b.get("a"), b.get("b"), b.get("also"), b.get("cover")) for b in parts],
+            [(3, 4, None, None), (3, 4, 5, None), (4, 8, None, "b")],
+        )
+        self.assertEqual(count_event(parts[0]), (1, 2))
+        self.assertEqual(count_event(parts[1]), (1, 2))
+        self.assertEqual(labels_for(parts[0], "zh")["left"], "三")
+        self.assertEqual(labels_for(parts[0], "zh")["right"], "四")
+        self.assertEqual(labels_for(parts[0], "en")["equation"], ["7", "=", "3", "+", "4"])
+        self.assertEqual(labels_for(parts[1], "zh_hk")["also_left"], "五")
+        self.assertEqual(labels_for(parts[1], "zh_hk")["also_right"], "二")
+        self.assertEqual(labels_for(parts[1], "en")["also_equation"], ["7", "=", "5", "+", "2"])
+        self.assertEqual(labels_for(parts[2], "en")["covered_equation"], ["12", "-", "8", "=", "4"])
+        self.assertEqual(labels_for(parts[0], "zh")["title"], "两部分")
+        self.assertEqual(labels_for(parts[0], "zh_hk")["title"], "兩部分")
+        recap6 = next(beat for beat in six["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap6), 4)
+        self.assertEqual(
+            labels_for(recap6, "en")["lines"],
+            [
+                "Three and four make seven.",
+                "Five and two make seven too.",
+                "Seven stays seven.",
+                "Four and eight make twelve.",
+            ],
+        )
+        self.assertEqual(labels_for(recap6, "zh")["lines"][0], "三和四合成七。")
+        self.assertEqual(labels_for(recap6, "zh_hk")["lines"][3], "四同八合成十二。")
+        self.assertEqual(labels_for(recap6, "en")["title"], "Two parts make a whole")
+        self.assertEqual(labels_for(recap6, "zh")["title"], "两部分合成一个整体")
+        self.assertEqual(labels_for(recap6, "zh_hk")["title"], "兩部分合埋做一個")
+        self.assertEqual(labels_for(recap6, "en")["bonds"], [[3, 4], [5, 2], [7], [4, 8]])
+        self.assertIn("seven", parts[0]["s3_en"].lower())
+        self.assertIn("four", parts[2]["s3_en"].lower())
+
+    def test_part_whole_bounds(self):
+        good = {
+            "visual": "animated",
+            "scene": "part_whole",
+            "a": 3,
+            "b": 4,
+            "s1_en": "Mats.",
+            "s2_en": "Three. Four.",
+            "s3_en": "Seven.",
+            "s1_zh": "圆片。",
+            "s2_zh": "三，四。",
+            "s3_zh": "七。",
+            "s1_zh_hk": "圓片。",
+            "s2_zh_hk": "三，四。",
+            "s3_zh_hk": "七。",
+        }
+        self.assertEqual(scene_problems(good), [])
+        self.assertEqual(count_event(good), (1, 2))
+        self.assertEqual(labels_for(good, "zh")["whole_word"], "七")
+        self.assertTrue(scene_problems(dict(good, a=0)))
+        self.assertTrue(scene_problems(dict(good, b=10)))
+        self.assertTrue(scene_problems(dict(good, a=9, b=9, whole=19)))
+        self.assertTrue(scene_problems(dict(good, also=3)))
+        self.assertTrue(scene_problems(dict(good, also=5, cover="b")))
+        self.assertTrue(scene_problems(dict(good, cover="c")))
+        moved = dict(good, also=5)
+        self.assertEqual(scene_problems(moved), [])
+        self.assertEqual(labels_for(moved, "zh")["also_equation"], ["7", "=", "5", "+", "2"])
+        covered = dict(good, a=4, b=8, cover="a")
+        self.assertEqual(labels_for(covered, "en")["covered_equation"], ["12", "-", "4", "=", "8"])
+        hook = {
+            "visual": "animated",
+            "scene": "lesson_hook",
+            "motif": "parts",
+            "title_en": "Make parts before adding",
+            "title_zh": "先分开，再加",
+            "title_zh_hk": "先分開，再加",
+            "s1_en": "What parts make seven?",
+            "s1_zh": "七可以分成哪两部分？",
+            "s1_zh_hk": "七可以分成邊兩部分？",
+        }
+        self.assertEqual(scene_problems(hook), [])
+        self.assertEqual(labels_for(hook, "en")["a"], 3)
+        self.assertEqual(labels_for(dict(hook, a=4, b=8), "zh")["b"], 8)
+        self.assertTrue(scene_problems(dict(hook, a=0, b=4)))
+        recap = {
+            "visual": "animated",
+            "scene": "lesson_takeaway",
+            "motif": "parts",
+            "bonds": [[3, 4], [5, 2], [7], [4, 8]],
+            "s1_en": "Three and four make seven.",
+            "s2_en": "Five and two make seven too.",
+            "s3_en": "Seven stays seven.",
+            "s4_en": "Four and eight make twelve.",
+            "s1_zh": "三和四合成七。",
+            "s2_zh": "五和二也合成七。",
+            "s3_zh": "七还是七。",
+            "s4_zh": "四和八合成十二。",
+            "s1_zh_hk": "三同四合成七。",
+            "s2_zh_hk": "五同二都合成七。",
+            "s3_zh_hk": "七仲係七。",
+            "s4_zh_hk": "四同八合成十二。",
+        }
+        self.assertEqual(scene_problems(recap), [])
+        self.assertEqual(step_count(recap), 4)
+        self.assertTrue(scene_problems(dict(recap, bonds=[])))
+        self.assertTrue(scene_problems(dict(recap, bonds=[[3, 4], [1], [2], [3], [4]])))
+        self.assertEqual(scene_problems(dict(recap, bonds=[[7, 0]])), [])
 
     def test_ordinal_row_counts_a_place_or_a_total(self):
         left = {
@@ -2160,6 +2266,437 @@ class PairCountersTest(unittest.TestCase):
                     pts.append(x)
         self.assertGreater(len(pts), 8, path.name)
         return sum(pts) / len(pts)
+
+
+class PartWholeRenderTest(unittest.TestCase):
+    """Part labels stay inside the frame, clear of each other, and on one centre line."""
+
+    def test_part_labels_align_and_stay_inside(self):
+        import shutil
+        import subprocess
+        import tempfile
+
+        from anim import render_animated_clip
+
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
+        if shutil.which("ffmpeg") is None:
+            self.skipTest("ffmpeg is optional")
+
+        frames = ((1280, 720), (720, 1280))
+        cases = []
+        for lang in ("en", "zh", "zh_hk"):
+            for frame in frames:
+                cases.append((1, 2, None, "", lang, frame))
+        for frame in frames:
+            cases.append((4, 8, None, "", "en", frame))
+        cases.append((3, 4, 5, "", "en", (1280, 720)))
+        cases.append((3, 4, 5, "", "en", (720, 1280)))
+        cases.append((4, 8, None, "b", "zh", (1280, 720)))
+        with tempfile.TemporaryDirectory(prefix="vf-part-") as tmp:
+            root = Path(tmp)
+            audio = root / "silent.wav"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                 "-t", "4", "-c:a", "pcm_s16le", str(audio)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            for a, b, also, cover, lang, frame in cases:
+                beat = self._beat(a, b, also, cover)
+                dest = root / f"{a}-{b}-{also}-{cover}-{lang}-{frame[0]}.mp4"
+                render_animated_clip(
+                    beat, {"format": "9:16" if frame[1] > frame[0] else "16:9"},
+                    label_lang_code=lang,
+                    holds=[0.4, 1.6, 0.5], still_idx=[0, 1, 2],
+                    pages=["a", "b", "c"],
+                    audio=audio, dest=dest, cache_dir=root / "cache",
+                    captions=False, progress_bar=False, frame=frame, fps=8,
+                )
+                silent = max((root / "cache" / lang).glob("*.mp4"), key=lambda p: p.stat().st_mtime)
+                shot = root / f"{a}-{b}-{cover}-{lang}-{frame[0]}.png"
+                duration = float(subprocess.check_output(
+                    ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                     "-of", "csv=p=0", str(silent)],
+                    text=True,
+                ))
+                last = max(0, int(duration * 8) - 1)
+                subprocess.check_call(
+                    ["ffmpeg", "-y", "-i", str(silent),
+                     "-vf", f"select=eq(n\\,{last})", "-frames:v", "1", str(shot)],
+                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                )
+                self._assert_inside(shot)
+                if not cover:
+                    need = 12.0 * frame[0] / (1080.0 if frame[1] > frame[0] else 1920.0)
+                    gaps = self._label_gaps(shot)
+                    self.assertTrue(gaps, shot.name)
+                    self.assertGreaterEqual(min(gaps), need, f"{shot.name} {gaps}")
+                if lang in {"zh", "zh_hk"} and not cover:
+                    centres = _label_row_centres(shot)
+                    self.assertTrue(centres, shot.name)
+                    for row in centres:
+                        self.assertGreaterEqual(len(row), 2, shot.name)
+                        self.assertLessEqual(max(row) - min(row), 1.0, f"{shot.name} centres {row}")
+                if also is not None:
+                    self._assert_counters_one_row(shot, greens=also, golds=a + b - also)
+                if cover:
+                    self._assert_minus_matches_equals(shot)
+                if a == 1 and lang == "en" and frame == (1280, 720):
+                    early = root / "early.png"
+                    late = root / "late.png"
+                    subprocess.check_call(
+                        ["ffmpeg", "-y", "-i", str(silent),
+                         "-vf", "select=eq(n\\,8)", "-frames:v", "1", str(early)],
+                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                    )
+                    subprocess.check_call(
+                        ["ffmpeg", "-y", "-i", str(silent),
+                         "-vf", "select=eq(n\\,14)", "-frames:v", "1", str(late)],
+                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                    )
+                    self.assertLess(self._highlight_x(early), self._highlight_x(late) - 8)
+
+    def _beat(self, a, b, also, cover):
+        beat = {
+            "visual": "animated",
+            "scene": "part_whole",
+            "a": a,
+            "b": b,
+            "s1_en": "Two mats.",
+            "s2_en": "One. Two.",
+            "s3_en": "Together.",
+            "s1_zh": "两个圆片。",
+            "s2_zh": "一，二。",
+            "s3_zh": "合在一起。",
+            "s1_zh_hk": "兩個圓片。",
+            "s2_zh_hk": "一，二。",
+            "s3_zh_hk": "合埋一齊。",
+        }
+        if also is not None:
+            beat["also"] = also
+        if cover:
+            beat["cover"] = cover
+        return beat
+
+    def _assert_inside(self, path):
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+        inset = 2
+
+        def cream(x, y):
+            r, g, b = px[x, y]
+            return abs(r - 247) < 18 and abs(g - 244) < 18 and abs(b - 238) < 18
+
+        for x, y in (
+            *[(x, y) for x in range(w) for y in range(inset)],
+            *[(x, y) for x in range(w) for y in range(h - inset, h)],
+            *[(x, y) for y in range(h) for x in range(inset)],
+            *[(x, y) for y in range(h) for x in range(w - inset, w)],
+        ):
+            self.assertTrue(cream(x, y), f"{path.name} ink at {x},{y}")
+
+    def _label_gaps(self, path):
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+
+        def dark(x, y):
+            r, g, b = px[x, y]
+            return r < 90 and g < 110 and b < 130 and (r + g + b) < 280
+
+        def green(x, y):
+            r, g, b = px[x, y]
+            return g > 120 and g > r + 40 and g > b + 20
+
+        y = 0
+        y0 = None
+        while y < h:
+            if sum(1 for x in range(0, w, 3) if green(x, y)) >= 4:
+                y0 = y
+                break
+            y += 1
+        self.assertIsNotNone(y0, path.name)
+        window = max(24, int(46 * h / 720))
+        band_bot = max(0, y0 - 6)
+        band_top = max(0, y0 - window)
+        runs = []
+        x = 0
+        while x < w:
+            if not any(dark(x, yy) for yy in range(band_top, band_bot + 1)):
+                x += 1
+                continue
+            x0 = x
+            while x < w and any(dark(x, yy) for yy in range(band_top, band_bot + 1)):
+                x += 1
+            runs.append((x0, x - 1))
+        merged = []
+        for run in runs:
+            if merged and run[0] - merged[-1][1] <= 16:
+                merged[-1] = (merged[-1][0], run[1])
+            else:
+                merged.append(run)
+        return [b0 - a1 - 1 for (a0, a1), (b0, _b1) in zip(merged, merged[1:])]
+
+    def _highlight_x(self, path):
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+
+        def green(x, y):
+            r, g, b = px[x, y]
+            return g > 120 and g > r + 40 and g > b + 20
+
+        y = 0
+        y0 = None
+        while y < h:
+            if sum(1 for x in range(0, w, 3) if green(x, y)) >= 4:
+                y0 = y
+                break
+            y += 1
+        window = max(24, int(46 * h / 720))
+        band_bot = max(0, y0 - 6)
+        band_top = max(0, y0 - window)
+        pts = []
+        for yy in range(band_top, band_bot + 1):
+            for x in range(w):
+                r, g, b = px[x, yy]
+                if r > 190 and r > g + 12 and g > b + 30:
+                    pts.append(x)
+        self.assertGreater(len(pts), 8, path.name)
+        return sum(pts) / len(pts)
+
+    def test_parts_hook_title_fills_the_frame(self):
+        """9:16 English hook title stays at the takeaway floor, on two lines, with a full-width motif."""
+        import shutil
+        import subprocess
+        import tempfile
+
+        from anim import render_animated_clip
+
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
+        if shutil.which("ffmpeg") is None:
+            self.skipTest("ffmpeg is optional")
+        beat = {
+            "visual": "animated",
+            "scene": "lesson_hook",
+            "motif": "parts",
+            "a": 3,
+            "b": 4,
+            "title_en": "Make parts before adding",
+            "title_zh": "先分开，再加",
+            "title_zh_hk": "先分開，再加",
+            "s1_en": "What parts make seven?",
+            "s1_zh": "七可以分成哪两部分？",
+            "s1_zh_hk": "七可以分成邊兩部分？",
+        }
+        with tempfile.TemporaryDirectory(prefix="vf-hook-") as tmp:
+            root = Path(tmp)
+            audio = root / "silent.wav"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                 "-t", "2", "-c:a", "pcm_s16le", str(audio)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            for frame in ((1280, 720), (720, 1280)):
+                dest = root / f"hook-{frame[0]}.mp4"
+                render_animated_clip(
+                    beat, {"format": "9:16" if frame[1] > frame[0] else "16:9"},
+                    label_lang_code="en",
+                    holds=[1.2], still_idx=[0], pages=["a"],
+                    audio=audio, dest=dest, cache_dir=root / "cache",
+                    captions=False, progress_bar=False, frame=frame, fps=8,
+                )
+                silent = max((root / "cache" / "en").glob("*.mp4"), key=lambda p: p.stat().st_mtime)
+                shot = root / f"hook-{frame[0]}.png"
+                last = max(0, int(float(subprocess.check_output(
+                    ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                     "-of", "csv=p=0", str(silent)],
+                    text=True,
+                )) * 8) - 1)
+                subprocess.check_call(
+                    ["ffmpeg", "-y", "-i", str(silent),
+                     "-vf", f"select=eq(n\\,{last})", "-frames:v", "1", str(shot)],
+                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                )
+                self._assert_hook(shot, frame)
+
+    def _blobs(self, path, pred):
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+        seen = set()
+        blobs = []
+        step = 2
+        for y in range(0, h, step):
+            for x in range(0, w, step):
+                if (x, y) in seen or not pred(px[x, y]):
+                    continue
+                stack = [(x, y)]
+                xs, ys = [], []
+                while stack:
+                    cx, cy = stack.pop()
+                    if cx < 0 or cy < 0 or cx >= w or cy >= h or (cx, cy) in seen:
+                        continue
+                    if not pred(px[cx, cy]):
+                        continue
+                    seen.add((cx, cy))
+                    xs.append(cx)
+                    ys.append(cy)
+                    stack.extend(((cx + step, cy), (cx - step, cy), (cx, cy + step), (cx, cy - step)))
+                if len(xs) < 18:
+                    continue
+                blobs.append(
+                    (sum(xs) / len(xs), sum(ys) / len(ys), max(xs) - min(xs), max(ys) - min(ys))
+                )
+        return blobs, w, h
+
+    def _assert_counters_one_row(self, path, greens: int, golds: int):
+        def green(rgb):
+            r, g, b = rgb
+            return g > 130 and g > r + 45 and g > b + 25
+
+        def gold(rgb):
+            r, g, b = rgb
+            return r > 180 and r > g + 15 and g > 90 and b < 150
+
+        gblobs, _w, _h = self._blobs(path, green)
+        yblobs, _w, _h = self._blobs(path, gold)
+        self.assertEqual(len(gblobs), greens, f"{path.name} green {[(round(b[0]), round(b[1])) for b in gblobs]}")
+        ys = [blob[1] for blob in gblobs]
+        diam = max(blob[3] for blob in gblobs)
+        self.assertLessEqual(max(ys) - min(ys), max(6.0, diam * 0.35), path.name)
+        mean_y = sum(ys) / len(ys)
+        near = [blob for blob in yblobs if abs(blob[1] - mean_y) <= diam * 1.4]
+        self.assertEqual(len(near), golds, f"{path.name} gold {[(round(b[0]), round(b[1])) for b in yblobs]}")
+        gold_y = [blob[1] for blob in near]
+        self.assertLessEqual(max(gold_y) - min(gold_y), max(6.0, diam * 0.35), path.name)
+        self.assertLessEqual(abs(sum(gold_y) / len(gold_y) - mean_y), max(6.0, diam * 0.35), path.name)
+
+    def _assert_minus_matches_equals(self, path):
+        """The minus is a short horizontal bar as wide as each bar of '='."""
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+
+        def navy(x, y):
+            r, g, b = px[x, y]
+            return r < 80 and g < 100 and b < 140 and (r + g + b) < 260
+
+        seen = set()
+        widths = []
+        for y in range(h):
+            for x in range(w):
+                if (x, y) in seen or not navy(x, y):
+                    continue
+                stack = [(x, y)]
+                xs, ys = [], []
+                while stack:
+                    cx, cy = stack.pop()
+                    if cx < 0 or cy < 0 or cx >= w or cy >= h or (cx, cy) in seen or not navy(cx, cy):
+                        continue
+                    seen.add((cx, cy))
+                    xs.append(cx)
+                    ys.append(cy)
+                    stack.extend(((cx + 1, cy), (cx - 1, cy), (cx, cy + 1), (cx, cy - 1)))
+                bw = max(xs) - min(xs) + 1
+                bh = max(ys) - min(ys) + 1
+                # Operator bars only. The cover card and the bracket are much wider.
+                if bh <= max(6, int(0.012 * h)) and 0.02 * w <= bw <= 0.08 * w:
+                    widths.append(bw)
+        self.assertGreaterEqual(len(widths), 3, f"{path.name} operator bars {widths}")
+        self.assertGreaterEqual(min(widths), 0.8 * max(widths), f"{path.name} bar widths {widths}")
+
+    def _assert_hook(self, path, frame):
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+        portrait = frame[1] > frame[0]
+        floor = (52.0 if portrait else 44.0) * (h / (1920.0 if portrait else 1080.0))
+
+        def text_ink(x, y):
+            r, g, b = px[x, y]
+            if not (r < 80 and g < 100 and b < 140 and (r + g + b) < 260):
+                return False
+            for dy in (-4, 0, 4):
+                for dx in (-4, 0, 4):
+                    xx, yy = x + dx, y + dy
+                    if xx < 0 or yy < 0 or xx >= w or yy >= h:
+                        continue
+                    rr, gg, bb = px[xx, yy]
+                    if gg > 120 and gg > rr + 40:
+                        return False
+                    if rr > 180 and rr > gg + 15 and bb < 150:
+                        return False
+            return True
+
+        bands = []
+        y = 0
+        while y < int(h * 0.72):
+            xs = [x for x in range(0, w, 2) if text_ink(x, y)]
+            if len(xs) >= 8:
+                y0 = y
+                left, right = min(xs), max(xs)
+                while y < int(h * 0.72):
+                    xs = [x for x in range(0, w, 2) if text_ink(x, y)]
+                    if len(xs) < 8:
+                        break
+                    left = min(left, min(xs))
+                    right = max(right, max(xs))
+                    y += 1
+                bands.append((y0, y - 1, left, right))
+            else:
+                y += 1
+        # Drop a hairline gap inside one glyph.
+        merged = []
+        for band in bands:
+            if merged and band[0] - merged[-1][1] <= 3:
+                prev = merged[-1]
+                merged[-1] = (prev[0], band[1], min(prev[2], band[2]), max(prev[3], band[3]))
+            else:
+                merged.append(band)
+        self.assertGreaterEqual(len(merged), 2, f"{path.name} bands {merged}")
+        title_bands = sorted(merged, key=lambda band: band[3] - band[2], reverse=True)
+        if portrait:
+            title_bands = title_bands[:2]
+            self.assertGreaterEqual(len(merged), 3, f"{path.name} expected a tag and two title lines {merged}")
+        else:
+            title_bands = title_bands[:1]
+        for band in title_bands:
+            self.assertGreaterEqual(band[1] - band[0] + 1, floor - 2, f"{path.name} title {band} floor {floor:.1f}")
+        if portrait and len(title_bands) == 2:
+            mid_a = (title_bands[0][2] + title_bands[0][3]) / 2
+            mid_b = (title_bands[1][2] + title_bands[1][3]) / 2
+            self.assertLessEqual(abs(mid_a - mid_b), 8, path.name)
+            tag = min(merged, key=lambda band: band[0])
+            title_h = min(band[1] - band[0] + 1 for band in title_bands)
+            self.assertGreaterEqual(tag[1] - tag[0] + 1, title_h * 0.7, f"{path.name} tag {tag}")
+        def coloured(x, y):
+            r, g, b = px[x, y]
+            green = g > 130 and g > r + 45 and g > b + 25
+            gold = r > 180 and r > g + 15 and g > 90 and b < 150 and y > h * 0.2
+            return green or gold
+        xs = [x for y in range(0, h, 2) for x in range(0, w, 2) if coloured(x, y)]
+        self.assertGreater(len(xs), 20, path.name)
+        span = max(xs) - min(xs)
+        self.assertGreaterEqual(span, int(w * (0.74 if portrait else 0.82)), f"{path.name} motif span {span} of {w}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,102 @@
+# P1-NUM-06. Mirrors MathQuiz path partstart / lesson split18, "Make parts before adding".
+# Three and four make seven. The same seven is also five and two. Four and eight make twelve,
+# and covering the eight leaves four: 12 − 8 = 4.
+# https://github.com/kochiuyu/mathquiz learn-data.js (path partstart, lesson split18
+# in learn-foundations.js).
+# Speech is for age 6: one short idea per sentence. Questions are answered on screen.
+id: P1-NUM-06
+title_en: Make parts before adding
+title_zh: 先分开，再加
+title_zh_hk: 先分開，再加
+duration_target_s: 66
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: parts
+  a: 3
+  b: 4
+  seconds: 8
+  title_en: Make parts before adding
+  title_zh: 先分开，再加
+  title_zh_hk: 先分開，再加
+  s1_en: What parts make seven?
+  s1_zh: 七可以分成哪两部分？
+  s1_zh_hk: 七可以分成邊兩部分？
+
+- id: join
+  visual: animated
+  scene: part_whole
+  a: 3
+  b: 4
+  seconds: 14
+  s1_en: Three counters on this mat. Four counters on that mat.
+  s1_zh: 这边有三个圆片，那边有四个圆片。
+  s1_zh_hk: 呢邊有三個圓片，嗰邊有四個圓片。
+  s2_en: Three. Four.
+  s2_zh: 三，四。
+  s2_zh_hk: 三，四。
+  s3_en: Bring the two parts together. Three and four make seven. The whole is seven.
+  s3_zh: 把两部分合在一起。三和四是七。整体是七。
+  s3_zh_hk: 將兩部分合埋一齊。三同四係七。整體係七。
+
+- id: again
+  visual: animated
+  scene: part_whole
+  a: 3
+  b: 4
+  also: 5
+  seconds: 14
+  s1_en: Seven can be three and four. Both parts stay in view.
+  s1_zh: 七可以是三和四。两部分都看得到。
+  s1_zh_hk: 七可以係三同四。兩部分都睇到。
+  s2_en: Five. Two.
+  s2_zh: 五，二。
+  s2_zh_hk: 五，二。
+  s3_en: Move some across. Now it is five and two. Seven stays seven.
+  s3_zh: 挪一挪。现在是五和二。七还是七。
+  s3_zh_hk: 搬一搬。而家係五同二。七仲係七。
+
+- id: cover
+  visual: animated
+  scene: part_whole
+  a: 4
+  b: 8
+  cover: b
+  seconds: 14
+  s1_en: Four and eight make twelve. Say the parts, then the whole.
+  s1_zh: 四和八合成十二。先说部分，再说整体。
+  s1_zh_hk: 四同八合成十二。先講部分，再講整體。
+  s2_en: Four. Eight.
+  s2_zh: 四，八。
+  s2_zh_hk: 四，八。
+  s3_en: Cover the eight. Twelve minus eight is four. The four is still there.
+  s3_zh: 盖住八个。十二减八是四。四个还在。
+  s3_zh_hk: 遮住八個。十二減八係四。四個仲喺度。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: parts
+  bonds:
+  - [3, 4]
+  - [5, 2]
+  - [7]
+  - [4, 8]
+  seconds: 16
+  title_en: Two parts make a whole
+  title_zh: 两部分合成一个整体
+  title_zh_hk: 兩部分合埋做一個
+  s1_en: Three and four make seven.
+  s1_zh: 三和四合成七。
+  s1_zh_hk: 三同四合成七。
+  s2_en: Five and two make seven too.
+  s2_zh: 五和二也合成七。
+  s2_zh_hk: 五同二都合成七。
+  s3_en: Seven stays seven.
+  s3_zh: 七还是七。
+  s3_zh_hk: 七仲係七。
+  s4_en: Four and eight make twelve.
+  s4_zh: 四和八合成十二。
+  s4_zh_hk: 四同八合成十二。

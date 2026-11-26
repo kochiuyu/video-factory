@@ -1945,14 +1945,16 @@ class SceneRegistryTest(unittest.TestCase):
             labels_for(recap, "en")["lines"],
             [
                 "Take two away. Three stay.",
-                "Put two with three. They make five.",
+                "Put two back with three. They make five.",
                 "Take six away. Four stay.",
-                "Put four with five. They make nine.",
+                "Put six back with four. They make ten.",
             ],
         )
-        self.assertEqual(labels_for(recap, "zh")["lines"][1], "二和三放一起，是五。")
-        self.assertEqual(labels_for(recap, "zh_hk")["lines"][3], "四同五放一齊，係九。")
-        self.assertEqual(labels_for(recap, "en")["bonds"], [[3, -2], [3, 2], [4, -6], [5, 4]])
+        self.assertEqual(labels_for(recap, "zh")["lines"][1], "把两个放回三个旁边，是五。")
+        self.assertEqual(labels_for(recap, "zh")["lines"][3], "把六个放回四个旁边，是十。")
+        self.assertEqual(labels_for(recap, "zh_hk")["lines"][1], "將兩個放返三個旁邊，係五。")
+        self.assertEqual(labels_for(recap, "zh_hk")["lines"][3], "將六個放返四個旁邊，係十。")
+        self.assertEqual(labels_for(recap, "en")["bonds"], [[3, -2], [3, 2], [4, -6], [4, 6]])
 
     def test_part_whole_bounds(self):
         good = {

@@ -135,7 +135,7 @@ beats:
   - [3, -2]
   - [3, 2]
   - [4, -6]
-  - [5, 4]
+  - [4, 6]
   seconds: 14
   title_en: Can we put the parts back?
   title_zh: 两部分可以放回去吗？
@@ -143,12 +143,12 @@ beats:
   s1_en: Take two away. Three stay.
   s1_zh: 拿走两个，剩下三个。
   s1_zh_hk: 攞走兩個，剩返三個。
-  s2_en: Put two with three. They make five.
-  s2_zh: 二和三放一起，是五。
-  s2_zh_hk: 二同三放一齊，係五。
+  s2_en: Put two back with three. They make five.
+  s2_zh: 把两个放回三个旁边，是五。
+  s2_zh_hk: 將兩個放返三個旁邊，係五。
   s3_en: Take six away. Four stay.
   s3_zh: 拿走六个，剩下四个。
   s3_zh_hk: 攞走六個，剩返四個。
-  s4_en: Put four with five. They make nine.
-  s4_zh: 四和五放一起，是九。
-  s4_zh_hk: 四同五放一齊，係九。
+  s4_en: Put six back with four. They make ten.
+  s4_zh: 把六个放回四个旁边，是十。
+  s4_zh_hk: 將六個放返四個旁邊，係十。

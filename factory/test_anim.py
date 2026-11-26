@@ -1935,12 +1935,20 @@ class PairCountersTest(unittest.TestCase):
 
     def test_pair_labels_keep_a_gap(self):
         """Adjacent pair labels stay at least 12px apart, in every language and aspect."""
+        import shutil
         import subprocess
         import tempfile
 
         from PIL import Image
 
         from anim import render_animated_clip
+
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
+        if shutil.which("ffmpeg") is None:
+            self.skipTest("ffmpeg is optional")
 
         frames = ((1280, 720), (720, 1280))
         with tempfile.TemporaryDirectory(prefix="vf-pair-gap-") as tmp:

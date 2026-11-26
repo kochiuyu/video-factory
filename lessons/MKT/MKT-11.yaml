@@ -1,0 +1,301 @@
+id: MKT-11
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A promise of expertise. What can buyers see?
+title_zh: 声称够专业，顾客看得到什么？
+title_zh_hk: 聲稱夠專業，顧客看得到甚麼？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-11
+  kicker_en: MKT-11
+  kicker_zh: MKT-11
+  kicker_zh_hk: MKT-11
+  title_en: A promise of expertise. What can buyers see?
+  title_zh: 声称够专业，顾客看得到什么？
+  title_zh_hk: 聲稱夠專業，顧客看得到甚麼？
+  image: art/see-the-advice-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In February 2024, Hong Kong's Consumer Council said home-renovation customers find offers hard to
+    understand and compare. Now you run Plainview Advice, a fictional Hong Kong home-repair assessment
+    consultancy. A paid visit records visible, non-urgent problems and explains next steps in plain language.
+    You have 12,000 dollars for one main promotional asset, shown for four weeks.
+  zh: >-
+    二零二四年二月，香港消费者委员会指出，家居装修服务的报价，消费者不容易看懂，也很难比较。现在，你经营一家虚构的香港家居维修评估公司，叫 Plainview Advice。顾客付费请你上门，你记录肉眼看得到、不用紧急处理的问题，再用浅白的话说明下一步。你有一万二千元，可以制作一项主打宣传素材，展示四个星期。
+  zh_hk: >-
+    二零二四年二月，香港消費者委員會指出，家居裝修服務嘅報價，消費者唔容易睇得明，亦好難比較。而家，你經營一間虛構嘅香港家居維修評估公司，叫 Plainview Advice。顧客俾錢請你上門，你記錄肉眼睇到、唔使急住處理嘅問題，再用淺白嘅說話講清楚下一步。你有一萬二千蚊，可以製作一項主打宣傳素材，展示四個星期。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Same budget, two lead assets
+  title_zh: 同一预算，两款主打素材
+  title_zh_hk: 同一預算，兩款主打素材
+  row1_en: Main asset
+  row1_zh: 主打素材
+  row1_zh_hk: 主打素材
+  row2_en: Strength
+  row2_zh: 优点
+  row2_zh_hk: 優點
+  row3_en: Limit
+  row3_zh: 限制
+  row3_zh_hk: 限制
+  col1_en: A · Meet the team
+  col1_zh: A · 认识顾问团队
+  col1_zh_hk: A · 認識顧問團隊
+  col2_en: B · See the process
+  col2_zh: B · 看顾问如何评估
+  col2_zh_hk: B · 看顧問如何評估
+  c11_en: >-
+    Film: staff, verified experience
+  c11_zh: 短片：职员及已核实资历
+  c11_zh_hk: 短片：職員及已核實資歷
+  c12_en: >-
+    Sample sheet: observation → next step
+  c12_zh: 范例：由观察到下一步
+  c12_zh_hk: 範例：由觀察到下一步
+  c21_en: Approachable, quick introduction
+  c21_zh: 团队亲切，一看就明白
+  c21_zh_hk: 團隊親切，一看就明白
+  c22_en: Concrete preview of the output
+  c22_zh: 具体预览顾客收到的内容
+  c22_zh_hk: 具體預覽顧客收到的內容
+  c31_en: Doesn't show how advice is explained
+  c31_zh: 没有示范如何解释建议
+  c31_zh_hk: 沒有示範如何解釋建議
+  c32_en: Takes attention; one example only
+  c32_zh: 较费时理解；只是一个示例
+  c32_zh_hk: 較費時理解；只是一個示例
+  footer_en: Each HK$12,000; same disclosures
+  footer_zh: 各 HK$12,000，披露相同
+  footer_zh_hk: 各 HK$12,000，披露相同
+  s1_en: >-
+    Most new enquiries come from first-time users. Option A is a short film introducing the staff, their
+    verified experience and their careful approach. Option B is an original sample observation sheet that
+    walks from what was seen to possible causes and the next action.
+  s1_zh: >-
+    大多数新查询来自第一次用这类服务的人。方案 A 是一段短片，介绍职员、已核实的经验和他们审慎的做法。方案 B 是一份原创的观察记录范例，从看到的现象，一路讲到可能的成因和下一步。
+  s1_zh_hk: >-
+    大部分新查詢嚟自第一次用呢類服務嘅人。方案 A 係一段短片，介紹職員、已核實嘅經驗同佢哋審慎嘅做法。方案 B 係一份原創嘅觀察記錄範例，由睇到嘅現象講到可能成因同下一步。
+  s2_en: >-
+    A is approachable and quick to watch. B gives a concrete preview of what the customer will actually
+    receive, and the reasoning behind it.
+  s2_zh: A 的好处是团队亲切，一看就明白。B 能具体预览顾客实际会拿到什么，以及背后的推理。
+  s2_zh_hk: A 嘅好處係團隊親切，一睇就明。B 可以具體預覽顧客實際會收到乜嘢，同埋背後嘅推理。
+  s3_en: >-
+    But A does not show how a recommendation is explained, and B takes more attention, and one example
+    cannot represent every home. Each costs 12,000 dollars, and both keep the same scope, fee, exclusions
+    and verified credentials before booking.
+  s3_zh: >-
+    不过，A 没有示范怎样解释一项建议；B 要花多点时间看，而且一个例子代表不了所有物业。两个方案都是一万二千元，预约前披露的服务范围、收费、不包括的项目和已核实的资历都一样。
+  s3_zh_hk: >-
+    不過，A 冇示範點樣解釋一項建議；B 要花多啲時間睇，而且一個例子代表唔到所有物業。兩個方案都係一萬二千蚊，預約之前披露嘅服務範圍、收費、唔包嘅項目同已核實嘅資歷都一樣。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Commission A or B?
+  title_zh: 委托制作 A 还是 B？
+  title_zh_hk: 委託製作 A 還是 B？
+  en: >-
+    Which lead asset would you commission? Name the doubt it settles for a first-time customer, and one
+    important doubt it leaves open. Pause and vote.
+  zh: 你会委托制作 A 还是 B？它能消除首次使用服务的顾客哪一个疑虑？又有哪一个重要问题还没回答？请暂停，投个票。
+  zh_hk: 你會委託製作 A 定 B？佢可以解答第一次用服務嘅顧客邊個疑慮？又有邊個重要問題仲未答到？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Eight exploratory interviews
+  title_zh: 八个探索性访谈
+  title_zh_hk: 八個探索性訪談
+  step1_en: >-
+    6 of 8: jargon without reasons
+  step1_zh: 8 人中 6 人：怕看不懂建议
+  step1_zh_hk: 8 人中 6 人：怕看不懂建議
+  step2_en: >-
+    2 of 8: who will enter my home?
+  step2_zh: 另外 2 人：谁会上门？
+  step2_zh_hk: 另外 2 人：誰會上門？
+  step3_en: >-
+    B: seen · may mean · can't tell · next
+  step3_zh: B：观察 · 解释 · 未能确定 · 下一步
+  step3_zh_hk: B：觀察 · 解釋 · 未能確定 · 下一步
+  s1_en: >-
+    Eight adults who recently enquired were interviewed, without seeing either asset. Six independently
+    worried they would get technical terms without understanding why a recommendation follows, or what
+    further work is needed.
+  s1_zh: >-
+    访问员找了八位最近查询过服务的成年人做访谈，没给他们看任何素材。其中六人各自提到类似的担心：怕收到一堆专业术语，却不明白为什么有这项建议，也不知道之后还要做什么。
+  s1_zh_hk: >-
+    訪問員搵咗八個最近查詢過服務嘅成年人做訪談，冇俾佢哋睇任何素材。其中六個各自提到類似嘅擔心：怕收到一堆專業術語，但唔明點解有呢項建議，亦唔知之後仲要做乜。
+  s2_en: >-
+    The other two mainly wanted to know who would come into their home. These are qualitative clues, not
+    a representative survey.
+  s2_zh: 另外两人主要想知道谁会到家里来。这些只是质性线索，不是有代表性的调查。
+  s2_zh_hk: 另外兩個主要想知道邊個會嚟佢屋企。呢啲只係質性線索，唔係有代表性嘅調查。
+  s3_en: >-
+    The checked B sample separates what was observed, what it may mean, what this visit cannot establish,
+    and what happens next. It does not diagnose the viewer's home or promise a definite cause.
+  s3_zh: >-
+    经过核查的 B 范例分清了四件事：观察到什么、可能是什么意思、这次上门确定不了什么，以及下一步做什么。它不会替观众的家找出问题成因，也不保证一定能查明原因。
+  s3_zh_hk: >-
+    經過核查嘅 B 範例分清咗四樣嘢：觀察到乜、可能係咩意思、今次上門確定唔到乜，同埋下一步做乜。佢唔會幫觀眾屋企搵出問題成因，亦唔保證一定查到原因。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep or change?
+  title_zh: 维持还是改选？
+  title_zh_hk: 維持還是改選？
+  en: >-
+    Keep or change your choice? Explain how the interviews affect your priority, without treating six
+    of eight as a sales forecast. Pause and vote.
+  zh: 你会维持原来的选择，还是改选？说说访谈怎样影响你的优先考虑，但别把八人中有六人当成销售预测。请暂停，投个票。
+  zh_hk: 你會維持原本嘅選擇，定係改選？講吓訪談點樣影響你嘅優先考慮，但唔好將八個入面有六個當成銷售預測。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Make the service imaginable
+  title_zh: 让顾客想象付费后得到什么
+  title_zh_hk: 讓顧客想像付費後得到甚麼
+  step1_en: Show the output buyers will receive
+  step1_zh: 展示顾客实际会收到什么
+  step1_zh_hk: 展示顧客實際會收到甚麼
+  step2_en: 6 of 8 is a clue, not a forecast
+  step2_zh: 8 人中 6 人：线索，不是预测
+  step2_zh_hk: 8 人中 6 人：線索，不是預測
+  step3_en: A stays defensible for familiarity
+  step3_zh: A 仍有助认识上门的人
+  step3_zh_hk: A 仍有助認識上門的人
+  s1_en: >-
+    A service is hard to judge before buying, but its output can be made visible. B lets buyers see how
+    observations, uncertainty and next steps are explained. It must match what real customers actually
+    receive.
+  s1_zh: 服务在购买前很难判断好坏，但可以把成果展示出来。B 让顾客看到观察、不确定性和下一步是怎样说明的。不过，范例必须和顾客实际收到的服务一致。
+  s1_zh_hk: 服務喺買之前好難判斷好壞，但可以將成果展示出嚟。B 俾顧客睇到觀察、不確定性同下一步係點樣講清楚。不過，範例一定要同顧客實際收到嘅服務一致。
+  s2_en: >-
+    The worry about explanations lines up with B's preview. That is a reason to prioritise B, not proof
+    it sells more. No one was assigned to compare the two campaigns, and no revenue forecast is given.
+  s2_zh: >-
+    受访者担心看不懂建议，正好是 B 回应的问题。所以有理由优先考虑 B，但不能证明它卖得更好。访谈没有安排任何人比较两个方案，题目也没给收入预测。
+  s2_zh_hk: >-
+    受訪者擔心睇唔明建議，啱啱係 B 回應嘅問題。所以有理由優先考慮 B，但證明唔到佢賣得更好。訪談冇安排任何人比較兩個方案，題目亦冇俾收入預測。
+  s3_en: >-
+    A still helps buyers know who will visit. Choosing A is defensible if that is the priority, but the
+    concern about understanding advice should not simply be ignored.
+  s3_zh: A 仍然能让顾客认识上门的人。如果经理最看重这一点，选 A 也说得过去，但不能忽略顾客看不懂建议的担心。
+  s3_zh_hk: A 仍然可以俾顧客認識上門嘅人。如果經理最睇重呢點，揀 A 都講得通，但唔可以忽略顧客睇唔明建議嘅擔心。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Evidence is not decoration
+  title_zh: 佐证不只是装饰
+  title_zh_hk: 佐證不只是裝飾
+  step1_en: Answer the buyer's real uncertainty
+  step1_zh: 回应顾客真正的疑虑
+  step1_zh_hk: 回應顧客真正的疑慮
+  step2_en: >-
+    Value: observed vs possible vs limits
+  step2_zh: 价值：分清观察、解释和限制
+  step2_zh_hk: 價值：分清觀察、解釋和限制
+  step3_en: A sample is not a guarantee
+  step3_zh: 范例不是保证
+  step3_zh_hk: 範例不是保證
+  s1_en: >-
+    A smart office or an elaborate tool may look professional without answering what the buyer needs to
+    know. A technically impressive report can also confuse a beginner.
+  s1_zh: 气派的办公室、精密的工具，看起来很专业，却未必回答了顾客最想知道的事。一份很专业的报告，新手也可能看不懂。
+  s1_zh_hk: 好有氣派嘅辦公室、好精密嘅工具，睇落好專業，但未必答到顧客最想知嘅嘢。一份好專業嘅報告，新手都可能睇唔明。
+  s2_en: >-
+    B's value is the distinction between observation, interpretation, limits and next action, not how
+    complex the report looks. A's value is approachable people; the credentials stay available under both.
+  s2_zh: B 的价值在于分清观察、解释、限制和下一步，而不是报告看起来有多复杂。A 的价值是人员亲切；至于资历，两个方案都会披露。
+  s2_zh_hk: B 嘅價值在於分清觀察、解釋、限制同下一步，唔係報告睇落有幾複雜。A 嘅價值係人員親切；至於資歷，兩個方案都會披露。
+  s3_en: >-
+    The same fee, service and disclosures apply either way. A sample is neither a guarantee nor an accreditation,
+    and it cannot quietly turn a limited assessment into a structural survey or a repair.
+  s3_zh: 无论选哪个，收费、服务和披露都一样。范例既不是保证，也不是认证，不能悄悄把有限的评估说成楼宇结构勘察或维修工程。
+  s3_zh_hk: 無論揀邊個，收費、服務同披露都一樣。範例唔係保證，亦唔係認證，唔可以靜靜雞將有限嘅評估講成樓宇結構勘察或者維修工程。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Check understanding and delivery
+  title_zh: 查证理解与实际交付
+  title_zh_hk: 查證理解與實際交付
+  en: >-
+    After viewing an asset, ask a prospective customer to explain the paid deliverable, name an exclusion,
+    and tell a possible cause from a confirmed one, using neutral questions. After real visits, check
+    whether the explanation matched what the campaign led customers to expect. More enquiries alone would
+    not show they understood.
+  zh: >-
+    看完素材后，请潜在顾客说说付费能得到什么、举出一项不包括的服务，再分辨可能的成因和已确定的成因，问题要中立。真正上门后，也要查一查实际的说明，是否符合宣传让顾客形成的期望。单看查询多了，并不代表顾客真的明白。
+  zh_hk: >-
+    睇完素材之後，請潛在顧客講吓俾錢會得到乜、講出一項唔包嘅服務，再分辨可能嘅成因同已確定嘅成因，問題要中立。真正上門之後，亦要查吓實際嘅講解，係咪符合宣傳令顧客有嘅期望。淨係查詢多咗，唔代表顧客真係明白。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Show what buyers will receive
+  title_zh: 让顾客看到会收到什么
+  title_zh_hk: 讓顧客看到會收到甚麼
+  q1_en: >-
+    B: previews the explanation
+  q1_zh: B：预览如何解释
+  q1_zh_hk: B：預覽如何解釋
+  q2_en: >-
+    A: introduces who visits
+  q2_zh: A：介绍谁会上门
+  q2_zh_hk: A：介紹誰會上門
+  s1_en: >-
+    When a service is hard to judge in advance, make its output visible, and match the evidence to the
+    buyer's actual uncertainty.
+  s1_zh: 服务难以事先判断时，就把成果展示出来，而且佐证要对准顾客真正的疑虑。
+  s1_zh_hk: 服務難以事先判斷嘅時候，就將成果展示出嚟，而且佐證要對準顧客真正嘅疑慮。
+  s2_en: >-
+    Here the interviews favour B, but six of eight is a clue, not a conversion forecast.
+  s2_zh: 在本题中，访谈结果有利于 B，但八人中有六人只是线索，不是转化预测。
+  s2_zh_hk: 喺本題入面，訪談結果有利於 B，但八個入面有六個只係線索，唔係轉化預測。
+  s3_en: >-
+    Plainview Advice, its assets, budget and interview findings are fictional. Official scene art is a
+    teaching illustration only.
+  s3_zh: Plainview Advice、宣传素材、预算和访谈结果都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: Plainview Advice、宣傳素材、預算同訪談結果都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 194

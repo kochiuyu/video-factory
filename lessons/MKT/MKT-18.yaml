@@ -1,0 +1,284 @@
+id: MKT-18
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: More reminders. More relationships?
+title_zh: 多寄几封电子邮件，关系就会更好吗？
+title_zh_hk: 多寄幾封電郵，關係就會更好嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-18
+  kicker_en: MKT-18
+  kicker_zh: MKT-18
+  kicker_zh_hk: MKT-18
+  title_en: More reminders. More relationships?
+  title_zh: 多寄几封电子邮件，关系就会更好吗？
+  title_zh_hk: 多寄幾封電郵，關係就會更好嗎？
+  image: art/permission-is-not-a-message-quota-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In April 2023, Hong Kong's Privacy Commissioner revised its Guidance on Direct Marketing, covering
+    consent, permitted use of data and people's ability to stop marketing. It sets no universal email
+    frequency. Now a fictional Hong Kong homeware shop emails one product update a week to members who
+    validly consented, and must set next month's policy.
+  zh: >-
+    二零二三年四月，香港个人资料隐私专员公署修订了《直接促销指引》，内容包括同意、资料的准许用途，以及怎样停止接收促销信息。指引没有规定一个人人适用的邮件频率。现在，一家虚构的香港家居用品店，每周给已经有效同意的会员发一封产品邮件，要定下个月的沟通政策。
+  zh_hk: >-
+    二零二三年四月，香港個人資料私隱專員公署修訂咗《直接促銷指引》，內容包括同意、資料嘅准許用途，同埋點樣停止接收促銷訊息。指引冇規定一個人人適用嘅電郵頻率。而家，一間虛構嘅香港家品店，每星期向已經有效同意嘅會員寄一封產品電郵，要定落下個月嘅溝通政策。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two communication policies
+  title_zh: 两个沟通政策
+  title_zh_hk: 兩個溝通政策
+  row1_en: A · weekly default
+  row1_zh: A · 预设每周一封
+  row1_zh_hk: A · 預設每週一封
+  row2_en: B · visible cadence choice
+  row2_zh: B · 清楚列出频率选项
+  row2_zh_hk: B · 清楚列出頻率選項
+  col1_en: Benefit sought
+  col1_zh: 希望取得的好处
+  col1_zh_hk: 希望取得的好處
+  col2_en: Trade-off
+  col2_zh: 要接受的取舍
+  col2_zh_hk: 要接受的取捨
+  c11_en: Timely product news; familiar
+  c11_zh: 及早得知产品消息；做法熟悉
+  c11_zh_hk: 及早得知產品消息；做法熟悉
+  c12_en: Repeated contact may feel irrelevant
+  c12_zh: 反复联络或令人觉得无关
+  c12_zh_hk: 反覆聯絡或令人覺得無關
+  c21_en: Members choose their rhythm
+  c21_zh: 会员自选联络频率
+  c21_zh_hk: 會員自選聯絡頻率
+  c22_en: Digest can miss items; refresh delayed
+  c22_zh: 月报或赶不上；首页更新延后
+  c22_zh_hk: 月報或趕不上；首頁更新延後
+  footer_en: Opt-out stays immediate
+  footer_zh: 退订仍即时生效
+  footer_zh_hk: 退訂仍即時生效
+  s1_en: >-
+    Policy A keeps the familiar weekly email and still honours every individual request for less contact
+    or none. It brings new items to attention sooner, but repeated contact may feel irrelevant.
+  s1_zh: 方案 A 维持熟悉的每周一封，同时照样尊重每一个减少联络或停止联络的要求。它能让会员更早知道新货，但反复联络，也可能让人觉得与自己无关。
+  s1_zh_hk: >-
+    方案 A 維持熟悉嘅每星期一封，同時照樣尊重每一個減少聯絡或者停止聯絡嘅要求。佢可以令會員早啲知道新貨，但反覆聯絡，亦可能令人覺得同自己無關。
+  s2_en: >-
+    Policy B adds a simple choice: weekly, a monthly digest, or no marketing. No reply leaves the weekly
+    default; it is not new consent. But a digest can arrive after an item sells out, and it delays a homepage
+    refresh.
+  s2_zh: >-
+    方案 B 加一个简单选项：每周一封、每月一封汇总，或者不收促销邮件。会员不回应，就维持原来的每周一封，但这不算新的同意。不过，月报送到时货品可能已经卖完，而且首页更新要延后。
+  s2_zh_hk: >-
+    方案 B 加一個簡單選項：每星期一封、每月一封匯總，或者唔收促銷電郵。唔回應就維持每星期一封，但唔算新嘅同意。不過月報寄到時貨品可能賣晒，首頁更新亦要延後。
+  s3_en: >-
+    Both fit the same budget, opting out stays immediate, and neither is promised to increase sales.
+  s3_zh: 两个方案都在同一预算内，退订都即时生效，也都不保证能增加销售。
+  s3_zh_hk: 兩個方案都喺同一預算之內，退訂都即時生效，亦都唔保證可以增加銷售。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Policy A or B?
+  title_zh: 选方案 A 还是 B？
+  title_zh_hk: 選方案 A 還是 B？
+  en: >-
+    Which communication policy would you choose, and what would you measure besides how many emails you
+    send? Pause and vote.
+  zh: 你会选哪个沟通政策？除了发了多少封邮件，你还会衡量什么？请暂停，投个票。
+  zh_hk: 你會揀邊個溝通政策？除咗寄咗幾多封電郵，你仲會量度乜嘢？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Four weeks of aggregate logs
+  title_zh: 过去四周的汇总记录
+  title_zh_hk: 過去四週的匯總記錄
+  step1_en: >-
+    Clicked: replenish 60 · gifts 20
+  step1_zh: 曾点击：补充家用品 60 · 买礼物 20
+  step1_zh_hk: 曾點擊：補充家用品 60 · 買禮物 20
+  step2_en: >-
+    Opted out: replenish 2 · gifts 12
+  step2_zh: 退订：补充家用品 2 · 买礼物 12
+  step2_zh_hk: 退訂：補充家用品 2 · 買禮物 12
+  step3_en: >-
+    Next month: 98 + 88 still subscribed
+  step3_zh: 下月仍订阅：98 + 88
+  step3_zh_hk: 下月仍訂閱：98 + 88
+  s1_en: >-
+    Members had said their main interest: 100 mostly replenish household supplies, and 100 mostly buy
+    occasional gifts. Each received four emails. In the replenishment group, 60 clicked a product at least
+    once; in the gift group, 20 did.
+  s1_zh: >-
+    会员之前说过主要用途：一百人多是补充家居用品，一百人主要偶尔买礼物。每人收到四封邮件。补充家用品的一组，有六十人至少点击过一次产品；买礼物的一组，有二十人。
+  s1_zh_hk: >-
+    會員之前自己講過主要購物用途：一百人多數係補充家居用品，一百人主要係間中買禮物。每人都收到四封電郵。補充家用品嗰組，有六十人至少撳過一次產品；買禮物嗰組，有二十人。
+  s2_en: >-
+    After the fourth email, 2 replenishment members and 12 gift members opted out, and were suppressed
+    immediately. Clicks and opt-outs may overlap, and the groups were not randomly assigned.
+  s2_zh: 第四封送达后，补充家用品组有两人退订，买礼物组有十二人退订，店家立即停止向他们发送。点击和退订的人可能重叠，两组也不是随机分配的。
+  s2_zh_hk: 第四封寄到之後，補充家用品組有兩個退訂，買禮物組有十二個退訂，店舖即刻停止向佢哋發送。撳過同退訂嘅人可能重疊，兩組亦唔係隨機分配。
+  s3_en: >-
+    Next month starts with 98 and 88 members still subscribed. Under B, people pick their own cadence;
+    nobody has tried the digest yet.
+  s3_zh: 下个月仍有九十八人和八十八人订阅。如果选 B，频率由会员自己选；目前还没有人试过月报。
+  s3_zh_hk: 下個月仲有九十八人同八十八人訂閱。如果揀 B，頻率由會員自己揀；暫時仲未有人試過月報。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep or change?
+  title_zh: 维持还是改选？
+  title_zh_hk: 維持還是改選？
+  en: >-
+    Would you keep or change your policy after these logs? Explain the remaining audience, the limits
+    of the evidence, and how you would judge next month without overriding anyone's choice. Pause and
+    vote.
+  zh: 看过记录后，你会维持还是改变政策？请说说还剩多少受众、证据有什么局限，以及在不违背任何人选择的前提下，怎样评估下个月的结果。请暂停，投个票。
+  zh_hk: 睇完記錄之後，你會維持定係改變政策？請講吓仲剩幾多受眾、證據有乜局限，同埋喺唔違背任何人選擇嘅前提下，點樣評估下個月嘅結果。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Deliveries are not relationships
+  title_zh: 送达不等于建立关系
+  title_zh_hk: 送達不等於建立關係
+  step1_en: 800 emails, but 200 people
+  step1_zh: 800 封邮件，只有 200 人
+  step1_zh_hk: 800 封電郵，只有 200 人
+  step2_en: 80 clicked = 40%; opt-outs 2% vs 12%
+  step2_zh: 80 人点击 = 40%；退订 2% 对 12%
+  step2_zh_hk: 80 人點擊 = 40%；退訂 2% 對 12%
+  step3_en: 186 remain; 744 sends only if no change
+  step3_zh: 剩 186 人；没变动才是 744 封
+  step3_zh_hk: 剩 186 人；沒變動才是 744 封
+  s1_en: The log shows 800 delivered emails, but only 200 people received them.
+  s1_zh: 记录显示送达了八百封邮件，但收件人只有两百位。
+  s1_zh_hk: 記錄顯示寄到咗八百封電郵，但收件人得二百個。
+  s2_en: >-
+    80 different members clicked a product, 40 percent of the starting audience; 120 never did. Group
+    click shares were 60 and 20 percent, and opt-outs were 2 and 12 percent of each group.
+  s2_zh: >-
+    全月有八十位不同的会员点击过产品，占期初人数的百分之四十；另外一百二十人从没点击。两组的点击比例分别是百分之六十和二十，退订率分别是百分之二和十二。
+  s2_zh_hk: >-
+    成個月有八十個唔同嘅會員撳過產品，佔期初人數百分之四十；另外一百二十人從來冇撳過。兩組嘅點擊比例分別係百分之六十同二十，退訂率分別係百分之二同十二。
+  s3_en: >-
+    The remaining audience is 98 plus 88: 186, not 200. Four emails each would be 744 sends only if nobody
+    changed preferences or opted out next month.
+  s3_zh: 还在订阅的是九十八加八十八，一百八十六人，不是两百人。每人寄四封，要在下个月没有人改变偏好或退订的前提下，才会是七百四十四封。
+  s3_zh_hk: 仲訂緊嘅係九十八加八十八，一百八十六人，唔係二百人。每人寄四封，要下個月冇人改變偏好或者退訂，先會係七百四十四封。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: A reason to offer choice
+  title_zh: 有理由让顾客选择
+  title_zh_hk: 有理由讓顧客選擇
+  step1_en: >-
+    B: members set their own cadence
+  step1_zh: B：会员自己定频率
+  step1_zh_hk: B：會員自己定頻率
+  step2_en: Logs don't prove B keeps all 186
+  step2_zh: 记录不能证明 B 留住 186 人
+  step2_zh_hk: 記錄不能證明 B 留住 186 人
+  step3_en: >-
+    A: timely news, accept the burden
+  step3_zh: A：消息及时，但要承担负担
+  step3_zh_hk: A：消息及時，但要承擔負擔
+  s1_en: >-
+    B is defensible because the groups show different engagement and opt-out patterns, and members can
+    choose their own rhythm instead of being assigned one from a shopping label.
+  s1_zh: B 有它的理据：两组的互动和退订情况不同，而 B 让会员自己选频率，不是按购物类别替他们决定。
+  s1_zh_hk: B 有佢嘅理據：兩組嘅互動同退訂情況唔同，而 B 俾會員自己揀頻率，唔係按購物類別幫佢哋決定。
+  s2_en: >-
+    But this descriptive evidence does not show that B will retain all 186 people, or recover lost sales.
+    It also says nothing about the cause of opting out.
+  s2_zh: 不过，这些描述性的记录，不能证明 B 会留住全部一百八十六人，也不能证明能补回流失的销售，更说明不了退订的原因。
+  s2_zh_hk: 不過，呢啲描述性嘅記錄，證明唔到 B 會留住晒一百八十六人，亦證明唔到可以補返流失嘅銷售，更加講唔到退訂嘅原因。
+  s3_en: >-
+    A stays defensible if timely product news matters and the manager accepts the observed contact burden
+    while honouring individual limits. B's delayed refresh and missed updates are real trade-offs too.
+  s3_zh: >-
+    如果及早通知新货很重要，而经理愿意承担目前看到的联络负担，同时遵守个别会员的限额，A 也说得通。B 延后首页更新、可能错过限时消息，这些也是实际的取舍。
+  s3_zh_hk: >-
+    如果及早通知新貨好重要，而經理願意承擔而家睇到嘅聯絡負擔，同時遵守個別會員嘅限額，A 都講得通。B 延後首頁更新、可能錯過限時消息，呢啲亦係實際嘅取捨。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Track honest denominators
+  title_zh: 用合适的分母衡量
+  title_zh_hk: 用合適的分母量度
+  en: >-
+    Count active authorised subscribers, delivered messages, unique product clickers, frequency choices
+    and opt-outs separately, and report by starting cohort as well as current recipients. A higher click
+    rate after disengaged people leave is not necessarily improvement. Stop sending when permission ends,
+    and never contact opted-out people to ask why.
+  zh: >-
+    要分开统计：有效订阅人数、送达邮件、点击产品的不同会员、频率选择和退订人数，并且既按期初的会员群，也按目前的收件人来报告。不活跃的人走了以后，点击率变高，不一定是进步。同意一旦结束，就要停止发送，也不能再联络退订的人去问原因。
+  zh_hk: >-
+    要分開統計：有效訂閱人數、寄到嘅電郵、撳過產品嘅唔同會員、頻率選擇同退訂人數，而且要按期初嘅會員群，亦要按而家嘅收件人嚟報告。唔活躍嘅人走咗之後，點擊率高咗，唔一定係進步。同意一結束，就要停止發送，亦唔可以再聯絡退訂嘅人問原因。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Permission is not a quota
+  title_zh: 同意不等于发送配额
+  title_zh_hk: 同意不等於發送配額
+  q1_en: 800 emails · 200 people · 80 clicked
+  q1_zh: 800 封 · 200 人 · 80 人点击
+  q1_zh_hk: 800 封 · 200 人 · 80 人點擊
+  q2_en: Opt-outs 2% vs 12% · 186 remain
+  q2_zh: 退订 2% 对 12% · 剩 186 人
+  q2_zh_hk: 退訂 2% 對 12% · 剩 186 人
+  s1_en: >-
+    More emails delivered do not mean more relationships. Count people, not sends, and let members choose
+    their own cadence.
+  s1_zh: 邮件送达得多，不代表关系更好。要数的是人，不是发送次数，也可以让会员自己选择频率。
+  s1_zh_hk: 電郵寄得多，唔代表關係更好。要數嘅係人，唔係發送次數，亦可以俾會員自己揀頻率。
+  s2_en: >-
+    Descriptive logs cannot tell you why people left, or what a new cadence will cause.
+  s2_zh: 描述性的记录，说明不了会员为什么离开，也预测不了新频率会带来什么结果。
+  s2_zh_hk: 描述性嘅記錄，講唔到會員點解離開，亦預測唔到新頻率會帶嚟乜嘢結果。
+  s3_en: >-
+    The shop, its policies and activity logs are invented. Official scene art is a teaching illustration
+    only.
+  s3_zh: 店铺、政策和活动记录都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 店舖、政策同活動記錄都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

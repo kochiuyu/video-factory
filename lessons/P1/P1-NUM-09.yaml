@@ -1,0 +1,103 @@
+# P1-NUM-09. Mirrors MathQuiz path first / lesson add, "Put groups together".
+# Three and two make five. Start at eight and add three: 8 + 3 = 11.
+# Start at six and add four: 6 + 4 = 10.
+# https://github.com/kochiuyu/mathquiz learn-data.js (path first, lesson add).
+# Speech is for age 6: one short idea per sentence. The heading is answered on screen.
+id: P1-NUM-09
+title_en: Put groups together
+title_zh: 把两组合起来
+title_zh_hk: 將兩組合埋
+duration_target_s: 60
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: parts
+  a: 3
+  b: 2
+  seconds: 8
+  title_en: Put groups together
+  title_zh: 把两组合起来
+  title_zh_hk: 將兩組合埋
+  s1_en: What do three and two make?
+  s1_zh: 三和二合起来是多少？
+  s1_zh_hk: 三同二合埋係幾多呀？
+
+- id: join
+  visual: animated
+  scene: part_whole
+  a: 3
+  b: 2
+  seconds: 12
+  s1_en: Three counters on this mat. Two counters on that mat.
+  s1_zh: 这边有三个圆片。那边有两个圆片。
+  s1_zh_hk: 呢邊有三個圓片。嗰邊有兩個圓片。
+  s2_en: Three. Two.
+  s2_zh: 三，二。
+  s2_zh_hk: 三，二。
+  s3_en: Put them together. Three and two make five. Together they make five.
+  s3_zh: 合在一起。三加二是五。合起来是五。
+  s3_zh_hk: 合埋一齊。三加二係五。合埋係五。
+
+- id: eight
+  visual: animated
+  scene: number_track
+  low: 0
+  high: 20
+  start: 8
+  end: 11
+  seconds: 12
+  s1_en: Start at eight. Add three more.
+  s1_zh: 从八开始。再加三个。
+  s1_zh_hk: 由八開始。再加三個。
+  s2_en: Eight. Nine. Ten. Eleven.
+  s2_zh: 八，九，十，十一。
+  s2_zh_hk: 八，九，十，十一。
+  s3_en: Eight and three make eleven. Together they make eleven.
+  s3_zh: 八加三是十一。合起来是十一。
+  s3_zh_hk: 八加三係十一。合埋係十一。
+
+- id: ten
+  visual: animated
+  scene: number_track
+  low: 0
+  high: 20
+  start: 6
+  end: 10
+  seconds: 14
+  s1_en: We have six. We want ten.
+  s1_zh: 已经有六个。想要十个。
+  s1_zh_hk: 而家有六個。想要十個。
+  s2_en: Six. Seven. Eight. Nine. Ten.
+  s2_zh: 六，七，八，九，十。
+  s2_zh_hk: 六，七，八，九，十。
+  s3_en: Four more. Six and four make ten. Together they make ten.
+  s3_zh: 再加四个。六加四是十。合起来是十。
+  s3_zh_hk: 再加四個。六加四係十。合埋係十。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: parts
+  bonds:
+  - [3, 2]
+  - [8, 3]
+  - [6, 4]
+  - [6, 4]
+  seconds: 14
+  title_en: What do the groups make?
+  title_zh: 合起来是多少？
+  title_zh_hk: 合埋係幾多呀？
+  s1_en: Three and two make five.
+  s1_zh: 三加二是五。
+  s1_zh_hk: 三加二係五。
+  s2_en: Eight and three make eleven.
+  s2_zh: 八加三是十一。
+  s2_zh_hk: 八加三係十一。
+  s3_en: Six and four make ten.
+  s3_zh: 六加四是十。
+  s3_zh_hk: 六加四係十。
+  s4_en: Six needs four more to make ten.
+  s4_zh: 六再加四个，就是十。
+  s4_zh_hk: 六再加四個，就係十。

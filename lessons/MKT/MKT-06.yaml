@@ -1,0 +1,299 @@
+id: MKT-06
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: More contacts. More customers?
+title_zh: 联络名单更长，客户就会更多吗？
+title_zh_hk: 聯絡名單更長，客戶就會更多嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-06
+  kicker_en: MKT-06
+  kicker_zh: MKT-06
+  kicker_zh_hk: MKT-06
+  title_en: More contacts. More customers?
+  title_zh: 联络名单更长，客户就会更多吗？
+  title_zh_hk: 聯絡名單更長，客戶就會更多嗎？
+  image: art/qualified-contacts-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In September 2026, the Hong Kong Trade Development Council reported more than 17,000 trade buyers
+    at the Hong Kong Watch and Clock Fair, with online business matching continuing after the fair. Attendance
+    creates opportunities, but which conversations fit? A fictional Hong Kong presentation-box supplier
+    returns from a trade exhibition with 160 business contacts. Its sales team can prepare only 36 tailored
+    proposals next week.
+  zh: >-
+    二零二六年九月，香港贸易发展局表示，香港钟表展吸引了超过一万七千名业内买家，展会结束后，线上商贸配对还在继续。展会带来接触机会，但哪些洽谈真正合适？一家虚构的香港礼盒供应商刚参加完商贸展，带回一百六十个企业联络。可是销售团队下周只能拟定三十六份量身定制的建议书。
+  zh_hk: >-
+    二零二六年九月，香港貿易發展局表示，香港鐘錶展吸引咗超過一萬七千個業內買家，展會完咗之後，網上商貿配對仲繼續。展會帶來接觸機會，但係邊啲洽談先真正合適？一間虛構嘅香港禮盒供應商啱啱參加完商貿展，帶返一百六十個企業聯絡。不過銷售團隊下星期只可以擬備三十六份度身訂造嘅建議書。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: After the exhibition
+  title_zh: 展会之后
+  title_zh_hk: 展會之後
+  row1_en: Broad promotional activity
+  row1_zh: 广泛宣传活动
+  row1_zh_hk: 廣泛宣傳活動
+  row2_en: Packaging demonstrations
+  row2_zh: 包装示范
+  row2_zh_hk: 包裝示範
+  row3_en: Tailored proposals next week
+  row3_zh: 下周可拟定的建议书
+  row3_zh_hk: 下星期可擬備的建議書
+  col1_en: Distinct contacts
+  col1_zh: 不重复的企业联络数
+  col1_zh_hk: 不重複的企業聯絡數
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11: '120'
+  c12_en: No overlap
+  c12_zh: 并无重复
+  c12_zh_hk: 並無重複
+  c21: '40'
+  c22_en: All agreed to follow-up
+  c22_zh: 均同意接受跟进
+  c22_zh_hk: 均同意接受跟進
+  c31: '36'
+  c32_en: Same staff time each
+  c32_zh: 每份工时相同
+  c32_zh_hk: 每份工時相同
+  footer_en: Fit, capacity, buying in 3 months
+  footer_zh: 能制作、产能足、三个月内采购
+  footer_zh_hk: 能製作、產能足、三個月內採購
+  s1_en: >-
+    Broad promotional activity generated 120 business contacts; packaging demonstrations generated 40.
+    All 160 are distinct businesses, with no overlap, and all agreed to business follow-up.
+  s1_zh: 面向广泛客群的宣传活动带来一百二十个企业联络，包装示范带来四十个。这一百六十家企业互不重复，而且都同意接受业务跟进。
+  s1_zh_hk: 面向廣泛客群嘅宣傳活動帶來一百二十個企業聯絡，包裝示範帶來四十個。呢一百六十間企業冇重複，而且全部同意接受業務跟進。
+  s2_en: >-
+    The team can prepare only 36 tailored proposals, each taking the same staff time. The marketing manager
+    says the larger list brought three times as many contacts, so it should get most slots.
+  s2_zh: 团队只能拟定三十六份量身定制的建议书，每份所需工时相同。营销经理主张把大部分名额给较长的名单，因为它带来的联络是另一份的三倍。
+  s2_zh_hk: 團隊只可以擬備三十六份度身訂造嘅建議書，每份所需工時一樣。營銷經理主張將大部分名額俾較長嗰份名單，因為佢帶來嘅聯絡係另一份嘅三倍。
+  s3_en: >-
+    The goal is near-term purchasing discussions, not awareness. A useful prospect needs packaging the
+    supplier can make, an order size within capacity, and a buying timetable within three months. Contact
+    counts alone do not show who meets that test.
+  s3_zh: >-
+    目的是促成短期采购洽谈，不是提高知名度。合适的潜在客户，要有供应商做得到的包装需求、产能应付得来的订单量，并在三个月内采购。单看联络数量，看不出谁符合。
+  s3_zh_hk: >-
+    目的係促成短期採購洽談，唔係提高知名度。合適嘅潛在客戶，要有供應商做得到嘅包裝需求、產能應付到嘅訂單量，仲要喺三個月內採購。淨係睇聯絡數量，睇唔出邊個符合。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Most slots to the big list?
+  title_zh: 名额多分给长名单？
+  title_zh_hk: 名額多分給長名單？
+  en: >-
+    Would you give most proposal slots to the 120-contact list? What would you find out before assigning
+    the team's limited time? Pause and vote.
+  zh: 你会把大部分名额分给有一百二十家企业的名单吗？分配团队有限的工时之前，你想先弄清什么？请暂停，投个票。
+  zh_hk: 你會唔會將大部分名額分俾有一百二十間企業嗰份名單？分配團隊有限嘅工時之前，你想先搞清楚啲乜？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The same screening for all
+  title_zh: 两份名单同样筛选
+  title_zh_hk: 兩份名單同樣篩選
+  step1_en: >-
+    Promotional: 12 of 120 meet all three
+  step1_zh: 宣传名单：120 家中 12 家符合
+  step1_zh_hk: 宣傳名單：120 家中 12 家符合
+  step2_en: >-
+    Demonstration: 24 of 40 meet all three
+  step2_zh: 示范名单：40 家中 24 家符合
+  step2_zh_hk: 示範名單：40 家中 24 家符合
+  step3_en: 36 interested; none has ordered
+  step3_zh: 36 家有兴趣，尚无一家下单
+  step3_zh_hk: 36 家有興趣，尚無一家下單
+  s1_en: >-
+    The team screens every business on both lists with the same three criteria and time window. Twelve
+    of the 120 promotional contacts meet all three.
+  s1_zh: 团队用同样的三项准则和时间范围，对两份名单上的每家企业做初步筛选。宣传带来的一百二十家里，有十二家三项都符合。
+  s1_zh_hk: 團隊用同樣嘅三項準則同時間範圍，將兩份名單上每間企業都做初步篩選。宣傳帶來嘅一百二十間入面，有十二間三項都符合。
+  s2_en: Twenty-four of the 40 demonstration contacts meet all three.
+  s2_zh: 示范带来的四十家里，有二十四家全部符合。
+  s2_zh_hk: 示範帶來嘅四十間入面，有二十四間全部符合。
+  s3_en: >-
+    These 36 have confirmed interest in a tailored proposal, but none has ordered. The rest need a different
+    specification or order size, or buy later. No campaign costs, margins or sales outcomes are supplied.
+  s3_zh: >-
+    这三十六家都确认有兴趣收到建议书，但还没有一家下单。其余企业要么规格或订单量不同，要么较迟才采购。题目没有提供活动成本、利润率或最终销售结果。
+  s3_zh_hk: >-
+    呢三十六間都確認有興趣收建議書，但仲未有一間落單。其餘企業唔係規格或者訂單量唔同，就係較遲先採購。題目冇提供活動成本、利潤率或者最終銷售結果。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Allocate the 36 slots
+  title_zh: 怎样分配 36 个名额？
+  title_zh_hk: 怎樣分配 36 個名額？
+  en: >-
+    How should you allocate the 36 proposal slots now? What can you say about the two lists, and what
+    would still be unsupported about sales or marketing effectiveness? Pause and vote.
+  zh: 现在应该怎样分配三十六个建议书名额？两份名单可以比较出什么？关于销售或营销成效，哪些说法仍然缺乏证据？请暂停，投个票。
+  zh_hk: 而家應該點樣分配三十六個建議書名額？兩份名單比較到啲乜？關於銷售或者營銷成效，有邊啲講法仍然缺乏證據？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Qualify prospects, not lists
+  title_zh: 先筛选潜在客户
+  title_zh_hk: 先篩選潛在客戶
+  step1_en: >-
+    Promotional: 12 ÷ 120 = 10%
+  step1_zh: 宣传名单：12 ÷ 120 = 10%
+  step1_zh_hk: 宣傳名單：12 ÷ 120 = 10%
+  step2_en: >-
+    Demonstration: 24 ÷ 40 = 60%
+  step2_zh: 示范名单：24 ÷ 40 = 60%
+  step2_zh_hk: 示範名單：24 ÷ 40 = 60%
+  step3_en: >-
+    Proposals: 12 + 24 = 36
+  step3_zh: 建议书：宣传组 12 份 + 示范组 24 份
+  step3_zh_hk: 建議書：宣傳組 12 份 + 示範組 24 份
+  s1_en: >-
+    The screening share for the promotional list is 12 divided by 120, or 10 percent.
+  s1_zh: 宣传名单的筛选合格率是十二除以一百二十，即百分之十。
+  s1_zh_hk: 宣傳名單嘅篩選合格率係十二除一百二十，即係百分之十。
+  s2_en: >-
+    For the demonstration list it is 24 divided by 40, or 60 percent. These are shares meeting this supplier's
+    criteria, not sales conversion rates. The smaller list holds twice as many suitable prospects, but
+    the larger list still holds 12 worthwhile ones.
+  s2_zh: >-
+    示范名单是二十四除以四十，即百分之六十。这些是符合供应商要求的比例，不是销售转化率。较短的名单里，合适的潜在客户是较长名单的两倍；但较长名单上的十二家也值得跟进。
+  s2_zh_hk: >-
+    示範名單係二十四除四十，即係百分之六十。呢啲係符合供應商要求嘅比例，唔係銷售轉化率。較短嗰份名單，合適嘅潛在客戶係較長名單嘅兩倍；但較長名單上嘅十二間都值得跟進。
+  s3_en: >-
+    With equal effort and exactly 36 suitable, interested prospects, prepare 12 proposals for the promotional
+    group and 24 for the demonstration group. That uses every slot without letting a contact's source
+    decide its individual value.
+  s3_zh: >-
+    每份建议书工时相同，又正好有三十六家合适而且有兴趣的企业，所以宣传组拟定十二份，示范组二十四份。这样用尽全部名额，也不会让联络来源决定每家企业的价值。
+  s3_zh_hk: >-
+    每份建議書工時一樣，又啱啱有三十六間合適而且有興趣嘅企業，所以宣傳組擬備十二份，示範組二十四份。咁就用晒全部名額，亦唔會由聯絡來源決定每間企業嘅價值。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: A lead is not yet a customer
+  title_zh: 潜在客户尚未成为客户
+  title_zh_hk: 潛在客戶尚未成為客戶
+  step1_en: Contact → qualified prospect → customer
+  step1_zh: 联络 → 合适的潜在客户 → 客户
+  step1_zh_hk: 聯絡 → 合適的潛在客戶 → 客戶
+  step2_en: 60% screening ≠ 60% chance of a sale
+  step2_zh: 筛选合格率 60% ≠ 成交机会 60%
+  step2_zh_hk: 篩選合格率 60% ≠ 成交機會 60%
+  step3_en: >-
+    Later buyers: record timing, follow up
+  step3_zh: 采购较迟：记下时间，稍后跟进
+  step3_zh_hk: 採購較遲：記下時間，稍後跟進
+  s1_en: >-
+    A contact is an opening conversation. A qualified prospect meets a defined test for the next sales
+    step. A customer has actually bought. Do not report 160 contacts, or 36 suitable prospects, as new
+    customers.
+  s1_zh: >-
+    建立联络只是开始洽谈；合适的潜在客户，是符合下一销售阶段准则的企业；真正买了，才是客户。不要把一百六十个联络，甚至三十六家合适企业，都当成新客户。
+  s1_zh_hk: >-
+    建立聯絡只係開始洽談；合適嘅潛在客戶，係符合下一個銷售階段準則嘅企業；真正買咗，先係客戶。唔好將一百六十個聯絡，甚至三十六間合適企業，都當成新客戶。
+  s2_en: >-
+    A tailored proposal may still be declined, delayed or lost to another supplier, so track responses,
+    orders and contribution. A 60 percent screening share does not mean a 60 percent chance of winning
+    sales.
+  s2_zh: 收到建议书后，对方仍可能拒绝、延后，或者改向别家供应商采购，所以要追踪回复、订单和贡献。筛选合格率百分之六十，不等于成交机会有百分之六十。
+  s2_zh_hk: >-
+    收到建議書之後，對方仍然可能拒絕、延遲，或者改向第二間供應商採購，所以要追蹤回覆、訂單同貢獻。篩選合格率百分之六十，唔等於成交機會有百分之六十。
+  s3_en: >-
+    A business with a later timetable may still be a good future match. Where follow-up is welcome, record
+    its timing for a later conversation. A request outside the supplier's capabilities deserves a clear,
+    courteous reply, not an irrelevant proposal.
+  s3_zh: >-
+    采购时间较迟的企业，日后仍可能合适。如果对方欢迎跟进，可以记下时间，稍后再联络。超出供应商能力的要求，应该清楚而有礼地回复，而不是发一份不相干的建议书。
+  s3_zh_hk: >-
+    採購時間較遲嘅企業，日後仍然可能合適。如果對方歡迎跟進，可以記低時間，遲啲再聯絡。超出供應商能力嘅要求，應該清楚有禮咁回覆，而唔係發一份唔相干嘅建議書。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Did demonstrations cause it?
+  title_zh: 是示范活动造成的吗？
+  title_zh_hk: 是示範活動造成的嗎？
+  en: >-
+    Visitors chose their own activities, so the difference does not prove demonstrations caused better
+    prospects. Nor does it prove broad promotion was wasteful: awareness and future relationships can
+    be separate objectives. Review activity costs and later outcomes before reallocating the next exhibition's
+    budget.
+  zh: >-
+    参加哪项活动，是到访者自己选的，所以两份名单的差距不能证明示范活动带来了更合适的商机，也不能证明广泛宣传浪费资源。提高知名度和建立长期关系，可以是另外的目标。下次分配展会预算之前，先检视活动成本和之后的结果。
+  zh_hk: >-
+    參加邊項活動，係到訪者自己揀嘅，所以兩份名單嘅差距證明唔到示範活動帶來更合適嘅商機，亦證明唔到廣泛宣傳浪費資源。提高知名度同建立長期關係，可以係另外嘅目標。下次分配展會預算之前，先檢視活動成本同之後嘅結果。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Follow all 36 suitable prospects
+  title_zh: 跟进全部 36 家合适企业
+  title_zh_hk: 跟進全部 36 家合適企業
+  q1_en: >-
+    Screening: 10% versus 60%
+  q1_zh: 筛选合格率：10% 对 60%
+  q1_zh_hk: 篩選合格率：10% 對 60%
+  q2_en: >-
+    Proposals: 12 + 24 = 36
+  q2_zh: 建议书：12 + 24 = 36
+  q2_zh_hk: 建議書：12 + 24 = 36
+  s1_en: >-
+    Qualify the prospect, not the size of the list. The best revision is not to ignore the big list, but
+    to follow all 36 suitable prospects across both lists.
+  s1_zh: 要筛选的是潜在客户，不是名单长短。最好的修订不是不理较长的名单，而是跟进两份名单上全部三十六家合适企业。
+  s1_zh_hk: 要篩選嘅係潛在客戶，唔係名單長短。最好嘅修訂唔係唔理較長嗰份名單，而係跟進兩份名單上全部三十六間合適企業。
+  s2_en: >-
+    Keep contacts, qualified prospects and customers separate, and judge marketing returns by later orders
+    and contribution, not by contact counts.
+  s2_zh: 联络、合适的潜在客户和客户要分开看；评估营销回报，要看之后的订单和贡献，而不是联络数量。
+  s2_zh_hk: 聯絡、合適嘅潛在客戶同客戶要分開睇；評估營銷回報，要睇之後嘅訂單同貢獻，而唔係聯絡數量。
+  s3_en: >-
+    The supplier, its contact lists and the screening results are fictional, not an assessment of exhibitors
+    at the reported fair. Official scene art is a teaching illustration only.
+  s3_zh: 供应商、联络名单和筛选结果都是虚构的，并非评估新闻所述展会的参展商。官方场景图只是教学插图。
+  s3_zh_hk: 供應商、聯絡名單同篩選結果都係虛構嘅，並唔係評估新聞所講展會嘅參展商。官方場景圖只係教學插圖。
+duration_target_s: 198

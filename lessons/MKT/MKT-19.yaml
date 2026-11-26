@@ -1,0 +1,284 @@
+id: MKT-19
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: One name for two promises?
+title_zh: 一个名字，能承载两种承诺吗？
+title_zh_hk: 一個名字，能承載兩種承諾嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-19
+  kicker_en: MKT-19
+  kicker_zh: MKT-19
+  kicker_zh_hk: MKT-19
+  title_en: One name for two promises?
+  title_zh: 一个名字，能承载两种承诺吗？
+  title_zh_hk: 一個名字，能承載兩種承諾嗎？
+  image: art/one-name-two-promises-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Ryohin Keikaku's archived 2018 announcement describes MUJI HOTEL in Shenzhen and Beijing, meant to
+    express the MUJI philosophy. That is the company's stated approach, not evidence that brand extensions
+    raise sales. Now Everyday Table, a fictional Hong Kong kitchenware shop known for useful everyday
+    products, plans a premium kitchen-organisation service.
+  zh: >-
+    良品计划在二零一八年修订的公告中，介绍了深圳和北京的 MUJI HOTEL，说酒店体验是要体现无印良品的理念。这是公司自己的说法，不能证明品牌延伸会带来更多销售。现在，Everyday Table
+    是一家虚构的香港厨具店，以实用的日常用品出名，打算推出一项高端的厨房收纳规划服务。
+  zh_hk: >-
+    良品計畫喺二零一八年修訂嘅公告入面，介紹咗深圳同北京嘅 MUJI HOTEL，話酒店體驗係要體現無印良品嘅理念。呢個係公司自己嘅講法，證明唔到品牌延伸會帶嚟更多銷售。而家，Everyday Table
+    係一間虛構嘅香港廚具店，以實用嘅日常用品出名，打算推出一項高端嘅廚房收納規劃服務。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two identity routes
+  title_zh: 两个品牌命名方案
+  title_zh_hk: 兩個品牌命名方案
+  row1_en: A
+  row1_zh: A
+  row1_zh_hk: A
+  row2_en: B
+  row2_zh: B
+  row2_zh_hk: B
+  col1_en: Name
+  col1_zh: 名称
+  col1_zh_hk: 名稱
+  col2_en: Main emphasis
+  col2_zh: 突出重点
+  col2_zh_hk: 突出重點
+  c11: Everyday Table Planning
+  c12_en: Parent name leads
+  c12_zh: 以原有母品牌为主
+  c12_zh_hk: 以原有母品牌為主
+  c21: Roomwise, by Everyday Table
+  c22_en: Own name; clear endorsement
+  c22_zh: 突出服务名称，清楚背书
+  c22_zh_hk: 突出服務名稱，清楚背書
+  footer_en: HK$1,500 · 2 weeks · same budget
+  footer_zh: HK$1,500 · 两周交付
+  footer_zh_hk: HK$1,500 · 兩週交付
+  s1_en: >-
+    The service is one consultation and a tailored written storage plan within two weeks, for 1,500 dollars
+    all in. It excludes products, fitting, electrical work and installation.
+  s1_zh: 服务内容是一次咨询，再在两周内交付一份量身定制的书面收纳方案，全包一千五百元，不包括货品、装配、电工和安装。
+  s1_zh_hk: 服務內容係一次諮詢，再喺兩個星期內交一份度身訂造嘅書面收納方案，全包一千五百蚊，唔包貨品、裝配、電力工程同安裝。
+  s2_en: >-
+    Route A is called Everyday Table Planning, with the parent name dominant. Route B is called Roomwise,
+    by Everyday Table: a distinct service name leads, with a clear parent endorsement.
+  s2_zh: >-
+    方案 A 叫 Everyday Table Planning，突出母品牌。方案 B 叫 Roomwise, by Everyday Table，以独立的服务名称为主，同时清楚显示母品牌背书。
+  s2_zh_hk: >-
+    方案 A 叫 Everyday Table Planning，突出母品牌。方案 B 叫 Roomwise, by Everyday Table，以獨立嘅服務名稱為主，同時清楚顯示母品牌背書。
+  s3_en: >-
+    Both state the same company, scope, fee, timing and terms, and both cost the same 20,000-dollar launch
+    budget. The aim is an understandable specialist offer that benefits from the parent's reputation without
+    being confused with a shop purchase.
+  s3_zh: >-
+    两个方案列明的公司、服务范围、收费、交付时间和条款都一样，推出预算也都是两万元。目标是让顾客看懂这是专门服务，借助母品牌的声誉，又不会误以为跟平常到店买东西一样。
+  s3_zh_hk: >-
+    兩個方案列明嘅公司、服務範圍、收費、交付時間同條款都一樣，推出預算亦都係兩萬蚊。目標係令顧客睇得明呢個係專門服務，借助母品牌嘅聲譽，又唔會誤會同平時去店舖買嘢一樣。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Parent name or own name?
+  title_zh: 母品牌为主，还是独立名称？
+  title_zh_hk: 母品牌為主，還是獨立名稱？
+  en: >-
+    Would you launch with the parent name leading, or a distinct name with clear endorsement? Which associations
+    do you want to carry over, and which expectations may need to change? Pause and vote.
+  zh: 你会用母品牌为主的名称推出，还是用独立名称，再清楚标示母品牌背书？你希望延续哪些品牌联想？又有哪些期望可能需要改变？请暂停，投个票。
+  zh_hk: 你會用母品牌為主嘅名稱推出，定係用獨立名稱，再清楚標示母品牌背書？你想延續邊啲品牌聯想？又有邊啲期望可能要改？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: 24 exploratory interviews
+  title_zh: 24 位顾客的探索性访谈
+  title_zh_hk: 24 位顧客的探索性訪談
+  step1_en: >-
+    Before: reliable 18 · cheap 16 · now 14
+  step1_zh: 先提到：可靠 18 · 平价 16 · 即买 14
+  step1_zh_hk: 先提到：可靠 18 · 平價 16 · 即買 14
+  step2_en: >-
+    After both: A 10 · B 8 · no preference 6
+  step2_zh: 看两版后：A 10 · B 8 · 无偏好 6
+  step2_zh_hk: 看兩版後：A 10 · B 8 · 無偏好 6
+  step3_en: All 24 repeat fee, timing and owner
+  step3_zh: 24 人都说得出收费、时间和所属公司
+  step3_zh_hk: 24 人都說得出收費、時間和所屬公司
+  s1_en: >-
+    Twenty-four customers who know the shop join exploratory interviews. Before seeing either name, 18
+    mention reliability, 16 affordable everyday prices, and 14 being able to buy immediately. These mentions
+    overlap, so they cannot be added up.
+  s1_zh: >-
+    二十四位熟悉这家店的顾客自愿参加探索性访谈。还没看名称前，有十八人提到可靠，十六人提到日常价格实惠，十四人提到可以马上买到。这些说法会重叠，不能加起来。
+  s1_zh_hk: >-
+    二十四個熟悉呢間店嘅顧客自願參加探索性訪談。未睇名稱之前，有十八個提到可靠，十六個提到日常價錢抵，十四個提到即刻買得到。呢啲講法會重疊，唔可以加埋一齊。
+  s2_en: >-
+    After seeing both presentations, ten say A best connects the service to trusted practical knowledge.
+    Eight prefer B because it marks a different kind of purchase. Six have no strong preference.
+  s2_zh: 看过两版介绍后，十人认为 A 最能把服务和可信的实用知识联系起来；八人偏好 B，因为它表明这是另一类消费；六人没有明显偏好。
+  s2_zh_hk: 睇完兩版介紹之後，十個認為 A 最能夠將服務同可信嘅實用知識連埋一齊；八個鍾意 B，因為佢表明呢個係另一類消費；六個冇明顯偏好。
+  s3_en: >-
+    Some say the parent-led name first makes them think of a cheap, immediate shop purchase, though they
+    understand once they read. All 24 correctly repeat the fee, timing and ownership.
+  s3_zh: >-
+    有些人说，以母品牌为主的名称，起初让他们想到便宜、即买即走的店内购物，不过读完条款后就明白了。二十四人全部都能正确说出收费、交付时间和公司归属。
+  s3_zh_hk: 有啲人話，以母品牌為主嘅名稱，起初令佢哋諗到平、即買即走嘅店舖購物，不過讀完條款之後就明白。二十四個人全部都講得啱收費、交付時間同公司歸屬。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which route now?
+  title_zh: 现在选哪个方案？
+  title_zh_hk: 現在選哪個方案？
+  en: >-
+    Which identity route would you choose now? Explain how it can borrow trust without promising the shop's
+    price or speed, and what evidence you still need before claiming commercial success. Pause and vote.
+  zh: 看过访谈后，你会选哪个方案？请说明它怎样借用信任，又不让人以为价格和速度跟门店一样，以及在声称商业成功前，还需要什么证据。请暂停，投个票。
+  zh_hk: >-
+    睇完訪談之後，你會揀邊個方案？請講吓佢點樣借用信任，又唔會令人以為價錢同速度同門市一樣，同埋喺聲稱商業成功之前，仲需要乜嘢證據。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Trust brings other associations
+  title_zh: 信任会连同其他联想转移
+  title_zh_hk: 信任會連同其他聯想轉移
+  step1_en: >-
+    Carries: reliability, practical know-how
+  step1_zh: 带过去：可靠、实用知识
+  step1_zh_hk: 帶過去：可靠、實用知識
+  step2_en: >-
+    Also: low price, instant purchase
+  step2_zh: 也带过去：平价、即买
+  step2_zh_hk: 也帶過去：平價、即買
+  step3_en: A name can't replace the description
+  step3_zh: 名声代替不了服务说明
+  step3_zh_hk: 名聲代替不了服務說明
+  s1_en: >-
+    The parent name can carry reassuring associations about practical knowledge and reliability.
+  s1_zh: 母品牌可以带来令人安心的联想，例如实用知识和可靠。
+  s1_zh_hk: 母品牌可以帶嚟令人安心嘅聯想，例如實用知識同可靠。
+  s2_en: >-
+    It can also suggest a price level and purchase speed that do not fit a tailored service. Those associations
+    help the normal shop; the question is whether they help explain this different offer.
+  s2_zh: >-
+    但它也可能让人联想到某种价格水平和购买速度，而这跟量身定制的服务并不相符。这些联想对平常的门店有帮助，问题是它们能不能帮助说明这项不同的服务。
+  s2_zh_hk: 但佢亦可能令人聯想到某個價錢水平同購買速度，而呢啲同度身訂造嘅服務唔夾。呢啲聯想對平時嘅門市有幫助，問題係佢哋幫唔幫到解釋呢項唔同嘅服務。
+  s3_en: >-
+    A respected name is not a substitute for describing what customers actually receive.
+  s3_zh: 名声再好，也不能代替清楚说明顾客实际会得到什么。
+  s3_zh_hk: 名聲幾好，都代替唔到清楚講明顧客實際會得到乜嘢。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Two legitimate choices
+  title_zh: 两种品牌架构都有道理
+  title_zh_hk: 兩種品牌架構都有道理
+  step1_en: >-
+    A: familiar trust, explicit terms
+  step1_zh: A：熟悉的信任，加清楚条款
+  step1_zh_hk: A：熟悉的信任，加清楚條款
+  step2_en: >-
+    B: room for its own associations
+  step2_zh: B：让服务建立自己的联想
+  step2_zh_hk: B：讓服務建立自己的聯想
+  step3_en: 10 vs 8 of 24 is not a forecast
+  step3_zh: 24 人中 10 对 8，不是预测
+  step3_zh_hk: 24 人中 10 對 8，不是預測
+  s1_en: >-
+    A makes the relationship immediate, and can use a precise descriptor, visible fee and timing to separate
+    the service from shelf products.
+  s1_zh: A 让顾客一看就知道和母品牌的关系，同时可以用清楚的服务说明、显眼的收费和交付时间，把服务和货架上的商品区分开来。
+  s1_zh_hk: A 令顧客一睇就知同母品牌嘅關係，同時可以用清楚嘅服務說明、顯眼嘅收費同交付時間，將服務同貨架上嘅貨品分開。
+  s2_en: >-
+    B gives the service room to build its own associations while keeping a clear endorsement. It does
+    not make ownership disappear, or automatically protect the parent from service problems.
+  s2_zh: B 让服务有空间建立自己的联想，同时保留清楚的母品牌背书。但它不会让公司归属消失，也不会自动保护母品牌免受服务问题的影响。
+  s2_zh_hk: B 俾服務有空間建立自己嘅聯想，同時保留清楚嘅母品牌背書。但佢唔會令公司歸屬消失，亦唔會自動保護母品牌唔受服務問題影響。
+  s3_en: >-
+    Ten, eight and six of 24 is not a market-share forecast, nor a significant two-person advantage. Either
+    route is defensible if its communication addresses the specific expectation risk.
+  s3_zh: 二十四人中十、八、六的分布，不是市场占有率预测，两人的差距也不算显著优势。只要沟通内容能处理具体的期望风险，两个方案都说得通。
+  s3_zh_hk: 二十四人入面十、八、六嘅分布，唔係市場佔有率預測，兩個人嘅差距亦唔算顯著優勢。只要溝通內容處理到具體嘅期望風險，兩個方案都講得通。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Test before claiming success
+  title_zh: 先验证，再谈成功
+  title_zh_hk: 先驗證，再談成功
+  en: >-
+    Choose a provisional hypothesis: B emphasises clearer separation; A emphasises familiar trust with
+    explicit service terms. Then test comprehension and qualified enquiries, followed by paid uptake and
+    delivery satisfaction, without treating interview preference as demand.
+  zh: >-
+    先选定一个暂定的假设：选 B，重点是区分得更清楚；选 A，重点是借用熟悉的信任，再把服务条款讲明白。然后先测试顾客是否看懂、有多少合资格的查询，再看实际付费购买和交付后的满意度，不能把访谈中的偏好当成需求。
+  zh_hk: >-
+    先揀定一個暫定嘅假設：揀 B，重點係分得更清楚；揀 A，重點係借用熟悉嘅信任，再將服務條款講清楚。之後先測試顧客睇唔睇得明、有幾多合資格嘅查詢，再睇實際俾錢購買同交付之後嘅滿意度，唔可以將訪談入面嘅偏好當成需求。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Borrow trust, state the promise
+  title_zh: 借用信任，讲明承诺
+  title_zh_hk: 借用信任，講明承諾
+  q1_en: >-
+    A: parent name leads
+  q1_zh: A：以母品牌为主
+  q1_zh_hk: A：以母品牌為主
+  q2_en: >-
+    B: own name, clear endorsement
+  q2_zh: B：独立名称，清楚背书
+  q2_zh_hk: B：獨立名稱，清楚背書
+  s1_en: >-
+    A familiar name carries trust, but it can also carry price and speed expectations that a tailored
+    service does not meet.
+  s1_zh: 熟悉的名字能带来信任，也可能带来价格和速度上的期望，而量身定制的服务未必做得到。
+  s1_zh_hk: 熟悉嘅名可以帶嚟信任，亦可能帶嚟價錢同速度上嘅期望，而度身訂造嘅服務未必做得到。
+  s2_en: >-
+    Either route works only if the fee, timing and scope are explained clearly.
+  s2_zh: 无论选哪个方案，都要把收费、交付时间和服务范围讲清楚。
+  s2_zh_hk: 無論揀邊個方案，都要將收費、交付時間同服務範圍講清楚。
+  s3_en: >-
+    Everyday Table, Roomwise and the interviews are entirely fictional and unrelated to MUJI. Official
+    scene art is a teaching illustration only.
+  s3_zh: Everyday Table、Roomwise 和访谈都是虚构的，与无印良品无关。官方场景图只是教学插图。
+  s3_zh_hk: Everyday Table、Roomwise 同訪談都係虛構嘅，同無印良品無關。官方場景圖只係教學插圖。
+duration_target_s: 196

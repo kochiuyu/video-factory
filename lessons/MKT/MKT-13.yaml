@@ -1,0 +1,296 @@
+id: MKT-13
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Our biggest customer. Our most valuable relationship?
+title_zh: 销售额最高的客户，就最有长远价值吗？
+title_zh_hk: 銷售額最高的客戶，就最有長遠價值嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-13
+  kicker_en: MKT-13
+  kicker_zh: MKT-13
+  kicker_zh_hk: MKT-13
+  title_en: Our biggest customer. Our most valuable relationship?
+  title_zh: 销售额最高的客户，就最有长远价值吗？
+  title_zh_hk: 銷售額最高的客戶，就最有長遠價值嗎？
+  image: art/valuable-relationship-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In March 2026, Hong Kong-listed Vobile reported growth in subscription-service revenue. Subscriptions
+    make ongoing relationships visible, but revenue alone does not value each one. Now a fictional Hong
+    Kong stationery subscription supplier has 4,000 dollars for one account-planning-call pilot, in one
+    of two groups of 20 business accounts.
+  zh: >-
+    二零二六年三月，香港上市公司 Vobile 公布，订阅服务收入有所增长。订阅让持续的客户关系看得见，但单看收入，并不能算出每段关系值多少。现在，一家虚构的香港文具订阅供应商有四千元，可以试行一项客户规划电话会议，但只能在两组各二十个企业客户中选一组。
+  zh_hk: >-
+    二零二六年三月，香港上市公司 Vobile 公布，訂閱服務收入有增長。訂閱令持續嘅客戶關係睇得見，但淨係睇收入，計唔到每段關係值幾多。而家，一間虛構嘅香港文具訂閱供應商有四千蚊，可以試行一項客戶規劃電話會議，但只可以喺兩組、每組二十個企業客戶之中揀一組。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two groups of 20 accounts
+  title_zh: 两组各 20 个客户
+  title_zh_hk: 兩組各 20 個客戶
+  row1_en: Existing accounts
+  row1_zh: 现有客户数
+  row1_zh_hk: 現有客戶數
+  row2_en: Sales per active year
+  row2_zh: 每户每年销售额
+  row2_zh_hk: 每戶每年銷售額
+  row3_en: First coming year
+  row3_zh: 未来第一年
+  row3_zh_hk: 未來第一年
+  row4_en: Pilot cost in this group
+  row4_zh: 在该组试行的成本
+  row4_zh_hk: 在該組試行的成本
+  col1_en: Custom packs
+  col1_zh: 定制套装
+  col1_zh_hk: 訂製組合
+  col2_en: Standard packs
+  col2_zh: 标准套装
+  col2_zh_hk: 標準組合
+  c11: '20'
+  c12: '20'
+  c21: HK$6,000
+  c22: HK$3,600
+  c31_en: Already renewed
+  c31_zh: 已续订
+  c31_zh_hk: 已續訂
+  c32_en: Already renewed
+  c32_zh: 已续订
+  c32_zh_hk: 已續訂
+  c41: HK$4,000
+  c42: HK$4,000
+  footer_en: 10 offered a call · 10 compare
+  footer_zh: 10 户试行 · 10 户对照
+  footer_zh_hk: 10 戶試行 · 10 戶對照
+  s1_en: >-
+    Custom-pack accounts buy 6,000 dollars each per active year; standard-pack accounts buy 3,600. Both
+    groups have already renewed for the coming year, and existing service stays the same for everyone.
+  s1_zh: 定制套装客户每户每年买六千元，标准套装客户每户买三千六百元。两组都已经续订了未来第一年，大家现有的服务也都不变。
+  s1_zh_hk: 訂製組合客戶每戶每年買六千蚊，標準組合客戶每戶買三千六百蚊。兩組都已經續訂咗未來第一年，大家現有嘅服務亦都唔變。
+  s2_en: >-
+    The pilot costs 4,000 dollars in either group. Within the chosen group, ten accounts are randomly
+    offered an extra voluntary planning call, and ten keep normal service for comparison.
+  s2_zh: 不管选哪一组，试行成本都是四千元。在选中的一组里，随机邀请十户自愿参加额外的规划电话，另外十户维持正常服务，用来对照。
+  s2_zh_hk: 無論揀邊組，試行成本都係四千蚊。喺揀中嗰組入面，隨機邀請十戶自願參加額外嘅規劃電話，另外十戶維持正常服務，用嚟做對照。
+  s3_en: >-
+    Nobody has promised the call raises renewal. The choice is where to learn first, not whom to abandon.
+  s3_zh: 没有人保证这个电话能提高续订率。要决定的是先在哪一组了解效果，不是放弃哪一组。
+  s3_zh_hk: 冇人保證呢個電話可以提高續訂率。要決定嘅係先喺邊組了解效果，唔係放棄邊組。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which group first?
+  title_zh: 先在哪一组试行？
+  title_zh_hk: 先在哪一組試行？
+  en: >-
+    Which group would you provisionally choose? Why might annual sales guide a first impression, yet fail
+    to show relationship value or the return from extra service? Pause and vote.
+  zh: 你会先选哪一组？为什么每年销售额可以给你第一印象，却说明不了客户关系的价值，也说明不了额外服务的回报？请暂停，投个票。
+  zh_hk: 你會暫時揀邊組？點解每年銷售額可以俾你第一印象，但講唔到客戶關係嘅價值，亦講唔到額外服務嘅回報？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Costs and renewal forecasts
+  title_zh: 成本与续订预测
+  title_zh_hk: 成本與續訂預測
+  step1_en: >-
+    Custom: product 3,600 + service 1,500
+  step1_zh: 定制：商品 3,600 + 服务 1,500
+  step1_zh_hk: 訂製：商品 3,600 + 服務 1,500
+  step2_en: >-
+    Standard: product 1,800 + service 800
+  step2_zh: 标准：商品 1,800 + 服务 800
+  step2_zh_hk: 標準：商品 1,800 + 服務 800
+  step3_en: >-
+    Renewal: custom 50% · standard 80%
+  step3_zh: 续订率：定制 50% · 标准 80%
+  step3_zh_hk: 續訂率：訂製 50% · 標準 80%
+  s1_en: >-
+    Finance and service now supply baseline forecasts without the new call. Per active year, a custom-pack
+    account costs 3,600 dollars in product and fulfilment, plus 1,500 in account service.
+  s1_zh: 财务和客服团队提供了没有新电话时的基准预测。定制套装客户每个在订年度，商品及履约成本是三千六百元，客户服务成本另加一千五百元。
+  s1_zh_hk: 財務同客服團隊提供咗冇新電話時嘅基準預測。訂製組合客戶每個在訂年度，商品及履約成本係三千六百蚊，客戶服務成本另加一千五百蚊。
+  s2_en: >-
+    A standard-pack account costs 1,800 in product and fulfilment, plus 800 in service.
+  s2_zh: 标准套装客户是商品及履约成本一千八百元，加上服务成本八百元。
+  s2_zh_hk: 標準組合客戶就係商品及履約成本一千八百蚊，加服務成本八百蚊。
+  s3_en: >-
+    Forecast renewal each year is 50 percent for custom packs and 80 percent for standard packs. Use only
+    the next three years, with no discounting and no overhead. As a sensitivity, also try standard-pack
+    renewal at 30 percent.
+  s3_zh: >-
+    预测每年的续订概率，定制套装是百分之五十，标准套装是百分之八十。只计未来三年，不折现，也不计共同间接费用。另外做个敏感度分析：把标准套装的续订率改成百分之三十。
+  s3_zh_hk: >-
+    預測每年嘅續訂概率，訂製組合係百分之五十，標準組合係百分之八十。只計未來三年，唔折現，亦唔計共同間接費用。另外做個敏感度分析：將標準組合嘅續訂率改做百分之三十。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which group now?
+  title_zh: 现在先选哪一组？
+  title_zh_hk: 現在先選哪一組？
+  en: >-
+    Which group would you test first now? Compare three-year expected contribution after serving costs,
+    check the 30 percent scenario, and name the evidence needed before saying the pilot pays for itself.
+    Pause and vote.
+  zh: >-
+    现在你会先在哪一组试行？请比较扣除服务成本后的三年预期贡献，检查百分之三十的情境，再说说要证明试行能收回成本，还需要什么证据。请暂停，投个票。
+  zh_hk: 而家你會先喺邊組試行？請比較扣除服務成本之後嘅三年預期貢獻，檢查百分之三十嘅情境，再講吓要證明試行收得返成本，仲需要乜嘢證據。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Net of costs, over three years
+  title_zh: 扣除成本，追踪三年
+  title_zh_hk: 扣除成本，追蹤三年
+  step1_en: >-
+    Custom: 900 a year × 1.75 = 1,575
+  step1_zh: 定制：每年 900 × 1.75 = 1,575
+  step1_zh_hk: 訂製：每年 900 × 1.75 = 1,575
+  step2_en: >-
+    Standard: 1,000 a year × 2.44 = 2,440
+  step2_zh: 标准：每年 1,000 × 2.44 = 2,440
+  step2_zh_hk: 標準：每年 1,000 × 2.44 = 2,440
+  step3_en: >-
+    20 accounts: 31,500 vs 48,800
+  step3_zh: 20 户：31,500 对 48,800
+  step3_zh_hk: 20 戶：31,500 對 48,800
+  s1_en: >-
+    Per active year, custom packs contribute 6,000 minus 3,600 minus 1,500: 900 dollars. Their chance
+    of being active in years one, two and three is 1, 0.5 and 0.25, so each starting account is expected
+    to contribute 900 times 1.75: 1,575 dollars.
+  s1_zh: >-
+    定制套装每个在订年度贡献六千减三千六百再减一千五百，九百元。三年在订概率是一、零点五、零点二五，所以每户预期贡献九百乘一点七五，一千五百七十五元。
+  s1_zh_hk: >-
+    訂製組合每個在訂年度貢獻六千減三千六百再減一千五百，九百蚊。三年在訂概率係一、零點五、零點二五，所以每戶預期貢獻九百乘一點七五，一千五百七十五蚊。
+  s2_en: >-
+    Standard packs contribute 3,600 minus 1,800 minus 800: 1,000 dollars a year. With 1, 0.8 and 0.64,
+    that is 1,000 times 2.44: 2,440 dollars each.
+  s2_zh: 标准套装每年贡献三千六百减一千八百再减八百，即一千元。概率是一、零点八和零点六四，所以是一千乘二点四四，每户二千四百四十元。
+  s2_zh_hk: 標準組合每年貢獻三千六百減一千八百再減八百，即係一千蚊。概率係一、零點八同零點六四，所以係一千乘二點四四，每戶二千四百四十蚊。
+  s3_en: >-
+    For 20 accounts, custom packs give 31,500 dollars and standard packs 48,800. Higher sales do not make
+    up for the higher cost of serving. This is three-year contribution, not lifetime value or company
+    profit.
+  s3_zh: >-
+    二十户合计，定制套装是三万一千五百元，标准套装是四万八千八百元。销售额较高，却抵不过较高的服务成本。这是三年的贡献，不是客户终身价值，也不是公司利润。
+  s3_zh_hk: >-
+    二十戶合計，訂製組合係三萬一千五百蚊，標準組合係四萬八千八百蚊。銷售額較高，但抵唔過較高嘅服務成本。呢個係三年嘅貢獻，唔係客戶終身價值，亦唔係公司利潤。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Relationship value ≠ pilot gain
+  title_zh: 关系价值 ≠ 试行回报
+  title_zh_hk: 關係價值 ≠ 試行回報
+  step1_en: >-
+    At 30%: 1,000 × 1.39 × 20 = 27,800
+  step1_zh: 30% 时：1,000 × 1.39 × 20 = 27,800
+  step1_zh_hk: 30% 時：1,000 × 1.39 × 20 = 27,800
+  step2_en: Baseline value is not a pilot gain
+  step2_zh: 基准贡献不是试行收益
+  step2_zh_hk: 基準貢獻不是試行收益
+  step3_en: Compare with the 10-account control
+  step3_zh: 与 10 户对照组比较
+  step3_zh_hk: 與 10 戶對照組比較
+  s1_en: >-
+    If standard-pack renewal were 30 percent, each account gives 1,000 times 1.39: 1,390 dollars, or 27,800
+    for 20. That is below 31,500, so the ranking reverses.
+  s1_zh: 如果标准套装的续订率只有百分之三十，每户就是一千乘一点三九，一千三百九十元，二十户共二万七千八百元。这低于三万一千五百元，排序就倒过来了。
+  s1_zh_hk: 如果標準組合嘅續訂率得百分之三十，每戶就係一千乘一點三九，一千三百九十蚊，二十戶共二萬七千八百蚊。呢個低過三萬一千五百蚊，排序就倒轉咗。
+  s2_en: >-
+    Under the main forecast, standard packs are a reasonable first pilot. Custom packs can also be defended,
+    to test whether calls help a less durable group. Either way, 48,800 and 31,500 are expected under
+    normal service; subtracting 4,000 does not give a campaign return.
+  s2_zh: >-
+    按主要预测，先试标准套装是合理的；选定制套装也说得通，可测试电话能否留住流失较快的一组。但这两个总数都是正常服务下的预期贡献，减去四千元也算不出试行回报。
+  s2_zh_hk: >-
+    按主要預測，先試標準組合係合理嘅；揀訂製組合都講得通，可以測試電話留唔留得住流失得快嘅一組。但呢兩個總數都係正常服務下嘅預期貢獻，減咗四千蚊都計唔到試行回報。
+  s3_en: >-
+    Instead, compare incremental contribution and service cost against the ten normal-service accounts,
+    then subtract the pilot cost. Ten accounts per arm gives limited precision.
+  s3_zh: 正确做法是：拿试行组和十户正常服务的对照组比较新增的贡献和服务成本，再扣除试行成本。每组只有十户，估算精度有限。
+  s3_zh_hk: 正確做法係：將試行組同十戶正常服務嘅對照組比較新增嘅貢獻同服務成本，再扣除試行成本。每組得十戶，估算精度有限。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Learn, don't label customers
+  title_zh: 用来学习，不是给客户贴标签
+  title_zh_hk: 用來學習，不是給客戶貼標籤
+  en: >-
+    Use the result to refine forecasts and service design, not to deny existing commitments or label people
+    by financial worth. A full lifetime valuation would also need a longer justified horizon, time value
+    of money, and any other relevant cash flows.
+  zh: >-
+    试行结果应该用来改进预测和服务设计，而不是拒绝已承诺的服务，或者按财务价值给客户贴标签。如果要算完整的客户终身价值，还要有合理的更长期限、考虑货币时间价值，以及其他相关的现金流。
+  zh_hk: >-
+    試行結果應該用嚟改善預測同服務設計，而唔係拒絕已承諾嘅服務，或者按財務價值同客戶貼標籤。如果要計完整嘅客戶終身價值，仲要有合理嘅更長期限、考慮貨幣時間價值，同埋其他相關嘅現金流。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Value after costs and renewal
+  title_zh: 扣成本、看续订，再谈价值
+  title_zh_hk: 扣成本、看續訂，再談價值
+  q1_en: >-
+    Custom: 1,575 each · 31,500 for 20
+  q1_zh: 定制：每户 1,575 · 20 户 31,500
+  q1_zh_hk: 訂製：每戶 1,575 · 20 戶 31,500
+  q2_en: >-
+    Standard: 2,440 each · 48,800 for 20
+  q2_zh: 标准：每户 2,440 · 20 户 48,800
+  q2_zh_hk: 標準：每戶 2,440 · 20 戶 48,800
+  s1_en: >-
+    The biggest buyer is not automatically the most valuable relationship. Subtract the cost of serving,
+    then follow the same accounts through renewal.
+  s1_zh: 买得最多的客户，不一定是最有价值的关系。先扣除服务成本，再追踪同一批客户的续订情况。
+  s1_zh_hk: 買得最多嘅客戶，唔一定係最有價值嘅關係。先扣除服務成本，再追蹤同一批客戶嘅續訂情況。
+  s2_en: >-
+    And a valuable relationship is not a proven campaign return: compare against the control group.
+  s2_zh: 关系有价值，也不代表试行一定有回报；要和对照组比较。
+  s2_zh_hk: 關係有價值，亦唔代表試行一定有回報；要同對照組比較。
+  s3_en: >-
+    The supplier, its customer groups and forecasts are invented and unrelated to Vobile. Official scene
+    art is a teaching illustration only.
+  s3_zh: 供应商、客户组别和预测都是虚构的，与 Vobile 无关。官方场景图只是教学插图。
+  s3_zh_hk: 供應商、客戶組別同預測都係虛構嘅，同 Vobile 無關。官方場景圖只係教學插圖。
+duration_target_s: 200

@@ -1,0 +1,282 @@
+id: MKT-03
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: They remember the character. Do they remember us?
+title_zh: 角色记得住，品牌又记得住吗？
+title_zh_hk: 角色記得住，品牌又記得住嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-03
+  kicker_en: MKT-03
+  kicker_zh: MKT-03
+  kicker_zh_hk: MKT-03
+  title_en: They remember the character. Do they remember us?
+  title_zh: 角色记得住，品牌又记得住吗？
+  title_zh_hk: 角色記得住，品牌又記得住嗎？
+  image: art/character-collaboration-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 23 March 2025, Chow Tai Fook launched a Chiikawa jewellery collection in Hong Kong and Macau, and
+    trade reports said the first batch sold out quickly. A fast launch shows attention, not automatically
+    brand understanding. Now you manage a fictional heritage stationery shop known for refillable notebooks.
+    A collaboration sleeve with an invented owl character sold out its first 100 notebooks in one weekend.
+  zh: >-
+    二零二五年三月二十三日，周大福在香港和澳门推出 Chiikawa 珠宝系列，有业界报道指首批产品很快售罄。卖得快说明有人关注，却不等于顾客更了解品牌。现在，你经营一家虚构的香港老字号文具店，以可更换内页的笔记本闻名。印有虚构猫头鹰角色封套的联名款，首批一百本一个周末就卖完了。
+  zh_hk: >-
+    二零二五年三月二十三號，周大福喺香港同澳門推出 Chiikawa 珠寶系列，有業界報道話首批產品好快賣晒。賣得快代表有人留意，但唔等於顧客更加了解個品牌。而家，你經營一間虛構嘅香港老字號文具舖，出名做可以換內頁嘅筆記簿。印住虛構貓頭鷹角色封套嘅聯乘款，首批一百本一個週末就賣晒。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: The display decision
+  title_zh: 陈列空间怎样分配？
+  title_zh_hk: 陳列空間怎樣分配？
+  row1_en: Collaboration display space
+  row1_zh: 联名款陈列空间
+  row1_zh_hk: 聯乘款陳列空間
+  row2_en: Core notebooks and refills
+  row2_zh: 常设笔记本及替换内页
+  row2_zh_hk: 常設筆記簿及替換內頁
+  row3_en: Total display space
+  row3_zh: 总陈列空间
+  row3_zh_hk: 總陳列空間
+  row4_en: Notebook design and quality
+  row4_zh: 笔记本的设计与品质
+  row4_zh_hk: 筆記簿的設計與品質
+  col1_en: Current
+  col1_zh: 现况
+  col1_zh_hk: 現況
+  col2_en: Proposed
+  col2_zh: 建议
+  col2_zh_hk: 建議
+  c11: 20%
+  c12: 70%
+  c21: 80%
+  c22: 30%
+  c31: 100%
+  c32: 100%
+  c41_en: Same refillable notebook
+  c41_zh: 同一款可换内页的笔记本
+  c41_zh_hk: 同一款可換內頁的筆記簿
+  c42_en: Unchanged
+  c42_zh: 不变
+  c42_zh_hk: 不變
+  footer_en: Repeat buying not yet measured
+  footer_zh: 会否再买仍未量度
+  footer_zh_hk: 會否再買仍未量度
+  s1_en: >-
+    Your objective is to introduce new notebook users to the shop's craftsmanship and refill system, while
+    earning sales.
+  s1_zh: 你的目标是在带动销售的同时，让初次使用这款笔记本的顾客认识店铺的工艺，以及怎样更换内页。
+  s1_zh_hk: 你嘅目標係喺帶動銷售嘅同時，等第一次用呢款筆記簿嘅顧客認識間舖嘅工藝，同埋點樣換內頁。
+  s2_en: >-
+    The merchandising team proposes raising the collaboration from 20 to 70 percent of next quarter's
+    display. Space is fixed, so core notebooks and refills fall from 80 to 30 percent.
+  s2_zh: 商品陈列团队建议，下季把联名款的陈列空间从百分之二十增加到百分之七十。总空间不变，常设笔记本和替换内页就会从百分之八十减到百分之三十。
+  s2_zh_hk: 商品陳列團隊建議，下季將聯乘款嘅陳列空間由百分之二十加到百分之七十。總空間唔變，常設筆記簿同替換內頁就會由百分之八十減到百分之三十。
+  s3_en: >-
+    Prices and quality do not change, and the partner permits either approach. Launch sell-through is
+    known, but later use, repeat purchases, margins and displaced core sales are not yet measured.
+  s3_zh: 价格和品质不变，合作方两种做法都同意。首批卖了多少已经知道，但顾客怎样使用、会不会再买、利润率，以及分薄了多少常设系列的销售，都还没有衡量。
+  s3_zh_hk: 價錢同品質唔變，合作方兩種做法都接受。首批賣咗幾多已經知道，但顧客點樣用、會唔會再買、利潤率，同埋分薄咗幾多常設系列嘅銷售，都仲未量度。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: 70%, 20%, or another balance?
+  title_zh: 70%、20%，还是另作分配？
+  title_zh_hk: 70%、20%，還是另作分配？
+  en: >-
+    Would you give the collaboration 70 percent of the display, keep it at 20, or choose another balance?
+    Beyond a launch sellout, what would count as success for the shop's objective? Pause and vote.
+  zh: 你会把百分之七十的陈列空间给联名款、维持百分之二十，还是另作分配？按店铺的目标，除了首批售罄，还有什么才算成功？请暂停，投个票。
+  zh_hk: 你會將百分之七十嘅陳列空間俾聯乘款、維持百分之二十，定係另作分配？按間舖訂落嘅目標，除咗首批賣晒，仲有咩先算成功？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Twenty buyers follow up
+  title_zh: 20 名首批买家跟进访问
+  title_zh_hk: 20 名首批買家跟進訪問
+  step1_en: 18 can name the character
+  step1_zh: 18 人说得出角色的名字
+  step1_zh_hk: 18 人說得出角色的名字
+  step2_en: 4 can name the shop
+  step2_zh: 4 人记得文具店的名称
+  step2_zh_hk: 4 人記得文具店的名稱
+  step3_en: 3 can explain the refill system
+  step3_zh: 3 人能解释怎样更换内页
+  step3_zh_hk: 3 人能解釋怎樣更換內頁
+  s1_en: >-
+    Twenty launch buyers volunteer for a short follow-up interview. Without prompts, 18 can name the character.
+  s1_zh: 二十名首批买家自愿参加简短的跟进访问。在没有提示的情况下，十八人说得出角色的名字。
+  s1_zh_hk: 二十個首批買家自願參加簡短嘅跟進訪問。喺冇提示嘅情況下，十八個人講得出角色個名。
+  s2_en: >-
+    Only four can name the stationery shop. The answers overlap; they are not separate groups.
+  s2_zh: 只有四人记得文具店的名称。同一个人可以答中好几项，这些并不是互不重叠的几组人。
+  s2_zh_hk: 只有四個人記得文具舖個名。同一個人可以答中幾項，呢啲唔係互不重疊嘅幾組人。
+  s3_en: >-
+    Three can explain the refill system, and several say the sleeve was their main reason for buying.
+    It is a small volunteer group: diagnostic, not representative, and no one has been tracked long enough
+    to show repeat buying.
+  s3_zh: >-
+    三人能解释怎样更换内页，有几位说封套是他们购买的主要原因。这是一小组自愿受访者，有助找出问题，却不能代表所有买家，跟进时间也不足以看出有没有人再买。
+  s3_zh_hk: >-
+    三個人識解釋點樣換內頁，有幾位話封套係佢哋買嘅主要原因。呢個係一小組自願受訪者，幫到手搵出問題，但代表唔到所有買家，跟進時間亦唔夠長，睇唔到有冇人再買。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Expand, redesign, or stop?
+  title_zh: 扩大、重新设计，还是结束？
+  title_zh_hk: 擴大、重新設計，還是結束？
+  en: >-
+    Would you expand the character-first display unchanged, redesign it, or stop the collaboration? How
+    does your choice connect new attention to the shop's own product, and what evidence would make you
+    reconsider? Pause and vote.
+  zh: >-
+    你会照原来以角色为主的方式扩大陈列、重新设计陈列，还是结束联名合作？你的选择怎样把新吸引来的目光引向店铺自己的产品？哪些证据会令你重新考虑？请暂停，投个票。
+  zh_hk: >-
+    你會照原本以角色為主嘅方式擴大陳列、重新設計陳列，定係結束聯乘？你嘅選擇點樣將新吸引到嘅目光帶去間舖自己嘅產品？有咩證據會令你重新考慮？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Attention to whose brand?
+  title_zh: 顾客留意到的是谁的品牌？
+  title_zh_hk: 顧客留意到的是誰的品牌？
+  step1_en: Sales and attention are real outcomes
+  step1_zh: 卖出产品、吸引目光都是实在成果
+  step1_zh_hk: 賣出產品、吸引目光都是實在成果
+  step2_en: Partner recall ≠ maker recall
+  step2_zh: 认得合作角色 ≠ 记得制作者
+  step2_zh_hk: 認得合作角色 ≠ 記得製作者
+  step3_en: Collector demand may still be valuable
+  step3_zh: 收藏需求本身也可能有商业价值
+  step3_zh_hk: 收藏需求本身也可能有商業價值
+  s1_en: >-
+    The collaboration sold products and attracted attention. Those are genuine outcomes.
+  s1_zh: 联名合作卖出了产品，也吸引了目光，这些都是实在的成果。
+  s1_zh_hk: 聯乘賣出咗產品，亦吸引到目光，呢啲都係實在嘅成果。
+  s2_en: >-
+    But the objective also needs customers to connect the character with this shop and its refillable
+    notebook. Remembering the partner is not remembering the maker, or understanding the benefit.
+  s2_zh: 但店铺的目标还包括让顾客把角色和这家店、这款可换内页的笔记本联系起来。认得合作角色，不等于记得制作者，也不等于了解产品有什么好处。
+  s2_zh_hk: 但間舖嘅目標仲包括等顧客將角色同呢間舖、呢款可以換內頁嘅筆記簿連埋一齊。認得合作角色，唔等於記得製作者，亦唔等於了解產品有咩好處。
+  s3_en: >-
+    Collector demand may be commercially valuable in its own right. If selling collectibles becomes the
+    main goal, say so, and judge margins and displaced sales rather than launch excitement.
+  s3_zh: 收藏需求本身也可能有商业价值。如果管理层改为以卖收藏品为主要目标，就应该说清楚，并评估利润率和被分薄的原有销售，而不是把推出时的热潮当证据。
+  s3_zh_hk: >-
+    收藏需求本身都可能有商業價值。如果管理層改為以賣收藏品做主要目標，就應該講清楚，並且評估利潤率同被分薄嘅原有銷售，唔好將推出時嘅熱潮當做證據。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Redesign
+  kicker_en: Redesign
+  kicker_zh: 重新设计
+  kicker_zh_hk: 重新設計
+  title_en: Build a bridge to the product
+  title_zh: 从角色带到产品本身
+  title_zh_hk: 從角色帶到產品本身
+  step1_en: Make the shop's identity visible
+  step1_zh: 突出店铺自身的特色
+  step1_zh_hk: 突出店舖自身的特色
+  step2_en: Show the binding and refill mechanism
+  step2_zh: 示范装订工艺及更换内页
+  step2_zh_hk: 示範裝訂工藝及更換內頁
+  step3_en: Link the owl to writing or journaling
+  step3_zh: 用猫头鹰插画带出书写用途
+  step3_zh_hk: 用貓頭鷹插畫帶出書寫用途
+  s1_en: >-
+    A defensible response keeps a bounded collaboration but redesigns the presentation, starting by making
+    the shop's own identity visible.
+  s1_zh: 一个有理据的做法，是保留一定规模的联名合作，但重新设计陈列，首先要突出店铺自身的特色。
+  s1_zh_hk: 一個有理據嘅做法，係保留一定規模嘅聯乘，但重新設計陳列，首先要突出間舖自己嘅特色。
+  s2_en: >-
+    Show the binding and the refill mechanism, and keep core notebooks and refills easy to find.
+  s2_zh: 示范装订工艺和更换内页的方法，常设笔记本和替换内页也要容易找到。
+  s2_zh_hk: 示範裝訂工藝同換內頁嘅方法，常設筆記簿同替換內頁都要容易搵到。
+  s3_en: >-
+    Connect the owl's artwork to writing or keeping a journal. This is a hypothesis to test, not a guaranteed
+    fix, and in practice the scope of authorized use must be checked.
+  s3_zh: 再用猫头鹰插画带出书写或写日志的用途。这只是有待验证的想法，不保证奏效；现实中还要先查清授权用途的范围。
+  s3_zh_hk: 再用貓頭鷹插畫帶出書寫或者寫日誌嘅用途。呢個只係有待驗證嘅想法，唔保證有效；現實中仲要先查清楚授權用途嘅範圍。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Measure the intended result
+  title_zh: 衡量原本想达到的成效
+  title_zh_hk: 量度原本想達到的成效
+  en: >-
+    Test the revised display against the current one in comparable periods or locations. Track sales,
+    contribution after relevant costs, unprompted shop recall, understanding of refills and observed use
+    separately, then measure actual repeat purchases with consent. Decide in advance what evidence would
+    support 70, 20 or another share. And do not add the interview counts together.
+  zh: >-
+    在条件相若的时段或地点，比较新陈列和现行陈列。分别记录销量、扣除相关成本后的贡献、无提示下能否想起店名、对更换内页的理解，以及实际使用情况；之后在取得同意的前提下，衡量实际回购。先订明什么证据支持百分之七十、二十或其他比例。还有，不要把访问中的几个人数加起来。
+  zh_hk: >-
+    喺條件相若嘅時段或者地點，比較新陳列同現行陳列。分開記錄銷量、扣除相關成本之後嘅貢獻、冇提示之下記唔記得店名、對換內頁嘅理解，同埋實際使用情況；之後喺取得同意嘅前提下，量度實際回購。事先講明咩證據支持百分之七十、二十或者其他比例。仲有，唔好將訪問入面幾個人數加埋一齊。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: From attention to understanding
+  title_zh: 把目光引向自家产品
+  title_zh_hk: 把目光引向自家產品
+  q1_en: Sellout ≠ shop recall or understanding
+  q1_zh: 售罄 ≠ 记得店名或了解产品
+  q1_zh_hk: 售罄 ≠ 記得店名或了解產品
+  q2_en: >-
+    18 · 4 · 3: overlapping, not additive
+  q2_zh: 18 · 4 · 3：可重叠，不可相加
+  q2_zh_hk: 18 · 4 · 3：可重疊，不可相加
+  s1_en: >-
+    A collaboration that sells out has earned attention. Whether it served this shop's objective depends
+    on whether buyers connect the character to the maker and the refill system.
+  s1_zh: 联名款卖光，说明赢得了关注；但是否达到店铺的目标，要看买家能不能把角色和制作者、和更换内页的方式联系起来。
+  s1_zh_hk: 聯乘款賣晒，代表贏到關注；但係有冇達到間舖嘅目標，要睇買家識唔識將角色同製作者、同換內頁嘅方式連埋一齊。
+  s2_en: >-
+    Keep a bounded collaboration, redesign it to show the product, and test it against the current display
+    before moving space to 70 percent.
+  s2_zh: 可以保留一定规模的联名合作，重新设计陈列来展示产品，先跟现行陈列比较测试，再决定要不要把空间增加到百分之七十。
+  s2_zh_hk: 可以保留一定規模嘅聯乘，重新設計陳列嚟展示產品，先同現行陳列比較測試，再決定要唔要將空間加到百分之七十。
+  s3_en: >-
+    The stationery shop, the owl character and the interview results are fictional. No claim is made that
+    the real collaboration damaged any company's identity. Official scene art is a teaching illustration
+    only.
+  s3_zh: 文具店、猫头鹰角色和访问结果都是虚构的，并不指称真实的联名合作损害了任何企业的品牌形象。官方场景图只是教学插图。
+  s3_zh_hk: 文具舖、貓頭鷹角色同訪問結果都係虛構嘅，並唔指稱真實嘅聯乘損害咗任何企業嘅品牌形象。官方場景圖只係教學插圖。
+duration_target_s: 198

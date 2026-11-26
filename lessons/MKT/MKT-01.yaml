@@ -1,0 +1,291 @@
+id: MKT-01
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Would you share a ten-trip ferry pass?
+title_zh: 十程渡轮票，你会跟别人合用吗？
+title_zh_hk: 十程渡輪票，你會跟別人合用嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-01
+  kicker_en: MKT-01
+  kicker_zh: MKT-01
+  kicker_zh_hk: MKT-01
+  title_en: Would you share a ten-trip ferry pass?
+  title_zh: 十程渡轮票，你会跟别人合用吗？
+  title_zh_hk: 十程渡輪票，你會跟別人合用嗎？
+  image: art/ferry-pass-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In March 2026, during Hong Kong's outlying-island ferry fare review, the Transport Department said
+    multi-ride tickets and monthly passes would rise less than single fares. Why give frequent travellers
+    a different price per trip? You set fares for a fictional harbour crossing. A single costs 12 Hong
+    Kong dollars, and you are considering a ten-trip pass, valid for one week.
+  zh: >-
+    二零二六年三月，离岛渡轮检讨票价时，运输署表示，多程票和月票的加幅会低于单程票。为什么常客每程可以付得少一点？现在由你为一条虚构的过海渡轮航线定价。单程票十二港元，你正考虑推出一周有效的十程票。
+  zh_hk: >-
+    二零二六年三月，離島渡輪檢討票價嘅時候，運輸署話多程票同月票嘅加幅會低過單程票。點解常客每程可以俾少啲？而家由你幫一條虛構嘅過海渡輪航線定價。單程票十二蚊，你考慮緊推出一星期有效嘅十程票。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: One week of crossings
+  title_zh: 一周的乘船需求
+  title_zh_hk: 一星期的乘搭需求
+  row1_en: One commuter
+  row1_zh: 1 名通勤乘客
+  row1_zh_hk: 1 名通勤乘客
+  row2_en: Ten occasional riders
+  row2_zh: 10 名偶尔乘坐的乘客
+  row2_zh_hk: 10 名偶爾乘搭的乘客
+  row3_en: Single fare
+  row3_zh: 单程票
+  row3_zh_hk: 單程票
+  row4_en: Possible pass prices
+  row4_zh: 十程票备选价格
+  row4_zh_hk: 十程票備選價格
+  col1_en: Trips or price
+  col1_zh: 乘坐次数或票价
+  col1_zh_hk: 乘搭次數或票價
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11_en: 10 crossings
+  c11_zh: 乘坐 10 程
+  c11_zh_hk: 乘搭 10 程
+  c12_en: Can buy singles
+  c12_zh: 可照买单程票
+  c12_zh_hk: 可照買單程票
+  c21_en: 1 crossing each
+  c21_zh: 每人乘坐 1 程
+  c21_zh_hk: 每人乘搭 1 程
+  c22_en: Same trips either way
+  c22_zh: 乘坐次数不变
+  c22_zh_hk: 乘搭次數不變
+  c31: HK$12
+  c32_en: Per crossing
+  c32_zh: 每程
+  c32_zh_hk: 每程
+  c41_en: HK$90 or HK$110
+  c41_zh: HK$90 或 HK$110
+  c41_zh_hk: HK$90 或 HK$110
+  c42_en: One passenger at first
+  c42_zh: 起初限一人使用
+  c42_zh_hk: 起初限一人使用
+  footer_en: Trips stay the same either way
+  footer_zh: 无论怎样定价，乘坐次数都不变
+  footer_zh_hk: 無論怎樣定價，乘搭次數都不變
+  s1_en: >-
+    One commuter crosses ten times a week. Ten occasional riders cross once each.
+  s1_zh: 一名通勤乘客每周坐十程；另外十名偶尔乘坐的乘客，每人只坐一程。
+  s1_zh_hk: 一個通勤乘客每星期搭十程；另外十個偶爾乘搭嘅乘客，每人淨係搭一程。
+  s2_en: >-
+    A single costs 12 dollars. The pass would cost either 90 or 110 dollars, and at first only one passenger
+    may use it.
+  s2_zh: 单程票十二元。十程票打算定价九十元或者一百一十元，起初限一人使用。
+  s2_zh_hk: 單程票十二蚊。十程票打算定價九十蚊或者一百一十蚊，起初限一人使用。
+  s3_en: >-
+    Travellers take the same trips whatever the price, and anyone can still buy singles.
+  s3_zh: 不管票价怎么定，大家坐船的次数都不变，而且随时可以照买单程票。
+  s3_zh_hk: 無論票價點定，大家搭船嘅次數都唔變，而且隨時可以照買單程票。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which pass price?
+  title_zh: 十程票定价多少？
+  title_zh_hk: 十程票定價多少？
+  en: >-
+    Which pass price earns more while still giving the commuter a discount? And what will the occasional
+    riders buy? Pause and vote.
+  zh: 哪个十程票价既能给通勤乘客折扣，又能带来较多收入？偶尔乘坐的乘客又会买哪种票？请暂停，投个票。
+  zh_hk: 邊個十程票價既可以俾通勤乘客折扣，又可以帶來較多收入？偶爾乘搭嘅乘客又會買邊種票？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 22
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: >-
+    One fact changes: sharing
+  title_zh: 条件有变：可以合用
+  title_zh_hk: 條件有變：可以合用
+  step1_en: The pass can be shared at no cost
+  step1_zh: 十程票可免费合用
+  step1_zh_hk: 十程票可免費合用
+  step2_en: Ten riders split one pass
+  step2_zh: 10 名乘客一起出发，合买一张
+  step2_zh_hk: 10 名乘客一起出發，合買一張
+  step3_en: Trip demand stays fixed
+  step3_zh: 乘坐需求维持不变
+  step3_zh_hk: 乘搭需求維持不變
+  s1_en: >-
+    One rule changes. The pass can now be shared, and sharing costs nothing.
+  s1_zh: 有一个条件变了：十程票现在可以合用，而且合用不用另外付钱。
+  s1_zh_hk: 有一個條件變咗：十程票而家可以合用，而且合用唔使另外俾錢。
+  s2_en: >-
+    The ten occasional riders travel together, so they can buy one pass and split the price equally.
+  s2_zh: 十名偶尔乘坐的乘客一起出发，可以合买一张十程票，平分票价。
+  s2_zh_hk: 十個偶爾乘搭嘅乘客一齊出發，可以夾錢買一張十程票，平分票價。
+  s3_en: >-
+    Nobody takes more or fewer trips than before. Only the tickets people buy can change.
+  s3_zh: 乘坐需求维持不变，没有人多坐或少坐，变的只是大家买哪种票。
+  s3_zh_hk: 乘搭需求維持不變，冇人多搭或者少搭，變嘅只係大家買邊種票。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: How much revenue disappears?
+  title_zh: 每周会少收多少？
+  title_zh_hk: 每週會少收多少？
+  en: >-
+    At your chosen price, how much weekly revenue disappears? Would you keep sharing, limit it, or withdraw
+    the pass? Pause and vote.
+  zh: 按你选的票价，每周会少收多少？你会维持合用安排、加设限制，还是停售十程票？请暂停，投个票。
+  zh_hk: 按你揀嘅票價，每星期會少收幾多？你會維持合用安排、加設限制，定係停售十程票？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: >-
+    Personal pass: the choices
+  title_zh: 限一人使用：比较不同选择
+  title_zh_hk: 限一人使用：比較不同選擇
+  step1_en: >-
+    HK$110: 110 + 10 × 12 = HK$230
+  step1_zh: 定价 HK$110：110 + 10 × 12 = HK$230
+  step1_zh_hk: 定價 HK$110：110 + 10 × 12 = HK$230
+  step2_en: >-
+    HK$90: 90 + 10 × 12 = HK$210
+  step2_zh: 定价 HK$90：90 + 10 × 12 = HK$210
+  step2_zh_hk: 定價 HK$90：90 + 10 × 12 = HK$210
+  step3_en: >-
+    Singles only: 20 × 12 = HK$240
+  step3_zh: 只售单程票：20 × 12 = HK$240
+  step3_zh_hk: 只售單程票：20 × 12 = HK$240
+  s1_en: >-
+    With a personal pass at 110 dollars, the commuter pays 110 instead of 120 for ten singles, so buys
+    the pass. Each occasional rider buys a 12-dollar single. Revenue: 110 plus 120, or 230.
+  s1_zh: 定价一百一十元、限一人使用时，通勤乘客付一百一十元，比十张单程票的一百二十元便宜，会买十程票；其他乘客各买一张单程票。收入是二百三十元。
+  s1_zh_hk: 定價一百一十蚊、限一人使用，通勤乘客俾一百一十蚊，平過十張單程票嘅一百二十蚊，會買十程票；其他乘客各買一張單程票。收入係二百三十蚊。
+  s2_en: >-
+    At 90 dollars the commuter still buys the pass and the riders still buy singles, so revenue is only
+    210. Both prices give the commuter a discount, but 110 earns more.
+  s2_zh: 定价九十元，通勤乘客照样买十程票，其他乘客照样买单程票，收入只有二百一十元。两个价钱都给了通勤乘客折扣，但一百一十元收入较多。
+  s2_zh_hk: 定價九十蚊，通勤乘客照樣買十程票，其他乘客照樣買單程票，收入得二百一十蚊。兩個價錢都俾咗通勤乘客折扣，但係一百一十蚊收入較多。
+  s3_en: >-
+    Selling singles alone would bring in 20 crossings times 12, or 240. Because trips are fixed, the discount
+    itself costs revenue.
+  s3_zh: 如果只卖单程票，二十程乘以十二元，收入是二百四十元。乘坐次数固定不变，所以折扣本身就会令收入减少。
+  s3_zh_hk: 如果淨係賣單程票，二十程乘十二蚊，收入係二百四十蚊。乘搭次數固定，所以折扣本身就會令收入減少。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: >-
+    Shared pass: the sorting breaks
+  title_zh: 可以合用：筛选作用消失
+  title_zh_hk: 可以合用：篩選作用消失
+  step1_en: >-
+    Shared at HK$110: 110 + 110 = HK$220
+  step1_zh: 合用，定价 HK$110：110 + 110 = HK$220
+  step1_zh_hk: 合用，定價 HK$110：110 + 110 = HK$220
+  step2_en: >-
+    Shared at HK$90: 90 + 90 = HK$180
+  step2_zh: 合用，定价 HK$90：90 + 90 = HK$180
+  step2_zh_hk: 合用，定價 HK$90：90 + 90 = HK$180
+  step3_en: Restrictions keep the groups apart
+  step3_zh: 要靠使用限制区分乘客
+  step3_zh_hk: 要靠使用限制區分乘客
+  s1_en: >-
+    With sharing at 110 dollars, the ten riders split one pass at 11 dollars each, cheaper than a single.
+    Both groups buy passes, and revenue falls to 220: ten dollars a week less.
+  s1_zh: 可以合用、定价一百一十元时，十名乘客合买一张，每人只付十一元，比单程票便宜。两组乘客都买十程票，收入降到二百二十元，每周少收十元。
+  s1_zh_hk: 可以合用、定價一百一十蚊嘅時候，十個乘客夾錢買一張，每人只係俾十一蚊，平過單程票。兩組乘客都買十程票，收入跌到二百二十蚊，每星期少收十蚊。
+  s2_en: >-
+    If you had chosen 90 dollars, sharing costs each rider 9 dollars. Revenue falls to 180, and 30 dollars
+    a week disappears.
+  s2_zh: 如果你选了九十元，合用后每人只付九元，收入跌到一百八十元，每周少收三十元。
+  s2_zh_hk: 如果你揀咗九十蚊，合用之後每人只係俾九蚊，收入跌到一百八十蚊，每星期少收三十蚊。
+  s3_en: >-
+    A pass menu sorts customers only while its restrictions keep their buying patterns apart. Once pooling
+    is free, the discount reaches everyone.
+  s3_zh: 票价方案要靠使用限制，维持不同乘客的购票选择，才有筛选作用。一旦可以免费合用，折扣就落到所有人身上。
+  s3_zh_hk: 票價方案要靠使用限制，維持唔同乘客嘅購票選擇，先有篩選作用。一旦可以免費合用，折扣就落到所有人身上。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Discount, limit or withdraw?
+  title_zh: 维持、限制还是停售？
+  title_zh_hk: 維持、限制還是停售？
+  en: >-
+    If you favour the discount, how many additional journeys would it need to justify it? If you favour
+    identity checks to stop sharing, what would enforcement cost? Weigh those answers against the lost
+    revenue before you keep, limit or withdraw the pass.
+  zh: >-
+    如果你支持给折扣，要增加多少乘坐人次才值得？如果你支持核实身份、禁止合用，执行成本又要多少？先把这些答案和少收的收入放在一起比较，再决定维持、限制还是停售十程票。
+  zh_hk: >-
+    如果你支持俾折扣，要多咗幾多乘搭人次先值得？如果你支持核實身分、禁止合用，執行成本又要幾多？將呢啲答案同少收嘅收入擺埋一齊比較，再決定維持、限制定係停售十程票。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Keep the pass personal
+  title_zh: 限一人使用才有筛选作用
+  title_zh_hk: 限一人使用才有篩選作用
+  q1_en: >-
+    Personal pass: HK$110 earns HK$230
+  q1_zh: 限一人使用：HK$110 收 HK$230
+  q1_zh_hk: 限一人使用：HK$110 收 HK$230
+  q2_en: >-
+    Shared pass: HK$220; singles only HK$240
+  q2_zh: 可合用：HK$220；只售单程票 HK$240
+  q2_zh_hk: 可合用：HK$220；只售單程票 HK$240
+  s1_en: >-
+    With a personal pass, 110 dollars earns 230 and still gives the commuter a discount. Occasional riders
+    keep buying singles.
+  s1_zh: 十程票限一人使用时，定价一百一十元收入二百三十元，通勤乘客也有折扣；偶尔乘坐的乘客继续买单程票。
+  s1_zh_hk: 十程票限一人使用嘅時候，定價一百一十蚊收入二百三十蚊，通勤乘客都有折扣；偶爾乘搭嘅乘客繼續買單程票。
+  s2_en: >-
+    Free sharing lets occasional riders pool, and revenue falls to 220, below the 240 from singles alone.
+    The price menu works only while its restrictions hold.
+  s2_zh: 一旦可以免费合用，偶尔乘坐的乘客就会合买，收入降到二百二十元，比只卖单程票的二百四十元还少。票价方案要有使用限制才行得通。
+  s2_zh_hk: 一旦可以免費合用，偶爾乘搭嘅乘客就會夾錢買，收入跌到二百二十蚊，仲少過淨係賣單程票嘅二百四十蚊。票價方案要有使用限制先行得通。
+  s3_en: >-
+    The route, the riders and the fares are classroom assumptions. No real ferry operator's fare or sharing
+    rule is assumed. Official scene art is a teaching illustration only.
+  s3_zh: 航线、乘客和票价都是课堂假设，不代表任何真实渡轮公司的票价或合用规则。官方场景图只是教学插图。
+  s3_zh_hk: 航線、乘客同票價都係課堂假設，唔代表任何真實渡輪公司嘅票價或者合用規則。官方場景圖只係教學插圖。
+duration_target_s: 196

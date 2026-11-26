@@ -1,0 +1,293 @@
+id: ACC-45
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Profit rose. Did each share earn more?
+title_zh: 利润增加了，每股收益也提高了吗？
+title_zh_hk: 溢利增加，每股盈利也有上升嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-45
+  kicker_en: ACC-45
+  kicker_zh: ACC-45
+  kicker_zh_hk: ACC-45
+  title_en: Profit rose. Did each share earn more?
+  title_zh: 利润增加了，每股收益也提高了吗？
+  title_zh_hk: 溢利增加，每股盈利也有上升嗎？
+  image: art/profit-rose-did-each-share-earn-more-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Profit attributable to ordinary holders rose from 58 to 60 million Hong Kong dollars. The communications
+    draft says earnings per share rose too. Is that supported? You review the annual results of a fictional
+    Hong Kong-listed equipment distributor.
+  zh: >-
+    归属于普通股股东的利润从五千八百万港元增加到六千万港元。对外披露草稿说，每股收益也提高了。数据支持这个说法吗？你负责复核一家虚构的香港上市设备经销商的年度业绩。
+  zh_hk: 普通股股東應佔溢利由五千八百萬港元升到六千萬港元。對外稿件話每股盈利都有上升。有冇數據支持？你負責覆核一間虛構香港上市設備分銷商嘅全年業績。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: This year's inputs
+  title_zh: 本年数据
+  title_zh_hk: 本年數據
+  row1_en: Profit to ordinary holders
+  row1_zh: 归属于普通股股东的利润
+  row1_zh_hk: 普通股股東應佔溢利
+  row2_en: Shares, first half
+  row2_zh: 上半年普通股
+  row2_zh_hk: 上半年普通股
+  row3_en: Shares, second half
+  row3_zh: 下半年普通股
+  row3_zh_hk: 下半年普通股
+  row4_en: Convertible note, if converted
+  row4_zh: 可转换票据假定转股
+  row4_zh_hk: 可換股票據假設換股
+  col1_en: This year
+  col1_zh: 本年
+  col1_zh_hk: 本年
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11_en: HK$60m
+  c11_zh: 60百万港元
+  c11_zh_hk: 60百萬港元
+  c12_en: Last year HK$58m
+  c12_zh: 上年58百万港元
+  c12_zh_hk: 上年58百萬港元
+  c21_en: 100m
+  c21_zh: 100百万股
+  c21_zh_hk: 100百萬股
+  c22_en: >-
+    Last year: 100m all year
+  c22_zh: 上年全年100百万股
+  c22_zh_hk: 上年全年100百萬股
+  c31_en: 140m
+  c31_zh: 140百万股
+  c31_zh_hk: 140百萬股
+  c32_en: 40m issued 1 July
+  c32_zh: 7月1日增发40百万股
+  c32_zh_hk: 7月1日發行40百萬股
+  c41_en: +10m
+  c41_zh: +10百万股
+  c41_zh_hk: +10百萬股
+  c42_en: Saves HK$3m after-tax interest
+  c42_zh: 节省税后利息3百万港元
+  c42_zh_hk: 節省除稅後利息3百萬港元
+  footer_en: Halves treated as equal length
+  footer_zh: 上下半年视为等长
+  footer_zh_hk: 上下半年視為等長
+  s1_en: >-
+    Last year 100 million ordinary shares were outstanding throughout. This year began with 100 million,
+    and 40 million new shares were issued on 1 July. Treat the two halves as equally long.
+  s1_zh: 上年全年发行在外的普通股是一亿股。本年年初也是一亿股，七月一日增发四千万股。上下半年当作一样长。
+  s1_zh_hk: 上年全年都有一億股普通股喺外流通。本年年初都係一億股，七月一日新發行四千萬股。上下半年當佢一樣長。
+  s2_en: >-
+    A convertible note was outstanding all year but not converted. Converting at the start would add 10
+    million shares and avoid 3 million of after-tax interest.
+  s2_zh: 一项可转换票据全年存续，但没有实际转股。如果假定年初转股，会增加一千万股，同时节省三百万港元税后利息。
+  s2_zh_hk: 有一項可換股票據全年流通，但實際冇換股。假設年初換股，會多一千萬股，同時慳返三百萬港元除稅後利息。
+  s3_en: >-
+    All profit is from continuing operations. There were no buybacks, bonus issues or preference shares,
+    and no potential ordinary shares last year.
+  s3_zh: 全部利润来自持续经营业务。没有股份回购、送股或优先股，上年也没有潜在普通股。
+  s3_zh_hk: 全部溢利都來自持續經營業務。冇股份回購、紅股或者優先股，上年亦冇潛在普通股。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Did basic EPS rise?
+  title_zh: 基本每股收益上升了吗？
+  title_zh_hk: 每股基本盈利有上升嗎？
+  en: >-
+    What basic and diluted earnings per share should the distributor report? Is the claim that basic earnings
+    per share rose supported? Pause and vote.
+  zh: 经销商应该列报多少基本每股收益和稀释每股收益？“基本每股收益上升”这个说法站得住吗？请暂停，投个票。
+  zh_hk: 分銷商應該列報幾多每股基本盈利同每股攤薄盈利？「每股基本盈利上升」呢個講法有冇數據支持？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 22
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: >-
+    Review: more note interest
+  title_zh: 工作底稿复核改变了利息
+  title_zh_hk: 覆核工作表後利息改變
+  step1_en: >-
+    Note interest: HK$6m, not 3m
+  step1_zh: 票据利息：6百万，而非3百万
+  step1_zh_hk: 票據利息：6百萬，而非3百萬
+  step2_en: Same total profit and shares
+  step2_zh: 利润总额和股数不变
+  step2_zh_hk: 溢利總額及股數不變
+  step3_en: Same conversion terms
+  step3_zh: 转股条款不变
+  step3_zh_hk: 換股條款不變
+  s1_en: >-
+    Before the results are final, an independent worksheet review finds that 6 million of the after-tax
+    interest already recorded relates to the convertible, not 3 million. Some interest had been attributed
+    to another loan.
+  s1_zh: 业绩定稿前，独立复核工作底稿发现：已经入账的税后利息里，属于可转换票据的是六百万港元，不是三百万。有部分利息原先错归到另一笔贷款。
+  s1_zh_hk: 業績定稿之前，獨立覆核工作表發現：已經入賬嘅除稅後利息入面，屬於可換股票據嘅係六百萬港元，唔係三百萬。有部分利息之前歸咗落另一筆貸款度。
+  s2_en: Total recognised profit and the actual shares do not change.
+  s2_zh: 已确认的利润总额和实际股数都没有变化。
+  s2_zh_hk: 已確認嘅溢利總額同實際股數都冇變。
+  s3_en: The note's conversion terms stay the same as well.
+  s3_zh: 票据的转股条款也保持不变。
+  s3_zh_hk: 票據嘅換股條款亦都唔變。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Still include the conversion?
+  title_zh: 仍应纳入假定转股吗？
+  title_zh_hk: 仍應納入假設換股嗎？
+  en: >-
+    Should assumed conversion still be included in diluted earnings per share? How much after-tax interest
+    saving would make conversion exactly neutral? Pause and vote.
+  zh: 计算稀释每股收益时，还应该纳入假定转股吗？税后利息节省多少，转股才刚好不影响每股收益？请暂停，投个票。
+  zh_hk: 計每股攤薄盈利時，仲應唔應該納入假設換股？要慳幾多除稅後利息，換股先啱啱好唔影響每股盈利？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Weight the shares, then dilute
+  title_zh: 先加权股数，再算稀释
+  title_zh_hk: 先加權股數，再計攤薄
+  step1_en: 100 × ½ + 140 × ½ = 120m shares
+  step1_zh: 100 × ½ + 140 × ½ = 120百万股
+  step1_zh_hk: 100 × ½ + 140 × ½ = 120百萬股
+  step2_en: Basic 60 ÷ 120 = HK$0.50 (was 0.58)
+  step2_zh: 基本60 ÷ 120 = 0.50（上年0.58）
+  step2_zh_hk: 基本60 ÷ 120 = 0.50（上年0.58）
+  step3_en: Diluted 63 ÷ 130 ≈ HK$0.4846
+  step3_zh: 稀释63 ÷ 130 ≈ 0.4846
+  step3_zh_hk: 攤薄63 ÷ 130 ≈ 0.4846
+  s1_en: >-
+    Basic earnings per share uses the time-weighted shares: 100 million times one half plus 140 million
+    times one half, or 120 million. The year-end 140 million alone is not the annual denominator.
+  s1_zh: 基本每股收益要用时间加权的股数：一亿乘二分之一，加一亿四千万乘二分之一，等于一亿二千万股。不能直接拿期末的一亿四千万股当全年分母。
+  s1_zh_hk: 每股基本盈利要用按時間加權嘅股數：一億乘二分之一，加一億四千萬乘二分之一，即係一億二千萬股。唔可以直接用年結嗰一億四千萬股做全年分母。
+  s2_en: >-
+    Basic earnings per share is 60 million divided by 120 million, or 50 cents, down from 58 cents. Profit
+    rose while basic earnings per share fell, so the draft claim is not supported.
+  s2_zh: 基本每股收益是六千万除以一亿二千万，即零点五港元，比上年的零点五八港元低。利润增加了，基本每股收益却下降，所以草稿的说法站不住。
+  s2_zh_hk: 每股基本盈利係六千萬除一億二千萬，即係零點五港元，低過上年嘅零點五八港元。溢利升咗，每股基本盈利反而跌咗，所以稿件嘅講法冇數據支持。
+  s3_en: >-
+    With assumed conversion, earnings would be 63 million over 130 million shares, about 0.4846, below
+    0.50. So include the note: diluted earnings per share is about 0.4846. It is not what noteholders
+    actually earned or received.
+  s3_zh: >-
+    假定转股后，分子是六千三百万，分母是一亿三千万股，约零点四八四六，低于零点五，所以要纳入票据，稀释每股收益约零点四八四六。这不是票据持有人实际获得的收益或分配。
+  s3_zh_hk: >-
+    假設換股之後，盈利係六千三百萬，分母係一億三千萬股，大約零點四八四六，低過零點五，所以要計入票據，每股攤薄盈利大約零點四八四六。呢個唔係票據持有人實際賺到或者收到嘅數。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Test before including the note
+  title_zh: 先检验，再决定是否纳入
+  title_zh_hk: 先測試，再決定是否計入
+  step1_en: >-
+    66 ÷ 130 ≈ 0.5077: anti-dilutive
+  step1_zh: 66 ÷ 130 ≈ 0.5077：反稀释
+  step1_zh_hk: 66 ÷ 130 ≈ 0.5077：反攤薄
+  step2_en: Diluted = basic = HK$0.50
+  step2_zh: 稀释 = 基本 = 0.50
+  step2_zh_hk: 攤薄 = 基本 = 0.50
+  step3_en: (60 + x) ÷ 130 = 0.50 → x = 5
+  step3_zh: (60 + x) ÷ 130 = 0.50 → x = 5
+  step3_zh_hk: (60 + x) ÷ 130 = 0.50 → x = 5
+  s1_en: >-
+    With the corrected 6 million saving, the hypothetical result is 66 million over 130 million, about
+    0.5077. Including the note would raise earnings per share, so it is anti-dilutive and excluded.
+  s1_zh: 节省额改为六百万后，假定转股的结果是六千六百万除以一亿三千万，约零点五零七七。纳入票据反而提高每股收益，属于反稀释，应予排除。
+  s1_zh_hk: 利息節省額改為六百萬之後，假設換股嘅結果係六千六百萬除一億三千萬，大約零點五零七七。計入票據反而令每股盈利上升，屬於反攤薄，要剔除。
+  s2_en: >-
+    With no other instrument, diluted earnings per share equals basic, 50 cents.
+  s2_zh: 没有其他工具，稀释每股收益就等于基本每股收益，零点五港元。
+  s2_zh_hk: 冇其他工具，每股攤薄盈利就等於每股基本盈利，零點五港元。
+  s3_en: >-
+    Let x be the after-tax interest avoided, in millions. 60 plus x, divided by 130, equals 0.50 when
+    x is 5. Conversion reduces earnings per share only when x is below 5. Reattributing interest did not
+    change actual profit.
+  s3_zh: >-
+    设 x 为节省的税后利息，单位百万港元。六十加 x 再除以一百三十，等于零点五时，x 是五。只有 x 低于五，假定转股才会降低每股收益。重新归属利息并没有改变实际利润。
+  s3_zh_hk: >-
+    設 x 係慳返嘅除稅後利息，單位係百萬港元。六十加 x 再除一百三十，等於零點五嘅時候，x 係五。只有 x 低過五，假設換股先會降低每股盈利。重新歸類利息，冇改變實際溢利。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Both figures, one rule
+  title_zh: 两个数字，同一套口径
+  title_zh_hk: 兩個數字，同一套規則
+  en: >-
+    Report both basic and diluted earnings per share, and apply the time-weighting rule consistently.
+    A higher profit does not guarantee a higher earnings per share when the share count grows. The exercise
+    uses one convertible and one continuing business, and is not valuation or accounting advice.
+  zh: >-
+    基本每股收益和稀释每股收益都要列报，时间加权的口径要前后一致。股数增加时，利润增加不代表每股收益一定提高。本练习只设一项可转换工具和一项持续经营业务，不构成估值或会计建议。
+  zh_hk: >-
+    每股基本盈利同每股攤薄盈利都要列報，按時間加權嘅規則要前後一致。股數增加嘅時候，溢利上升唔代表每股盈利一定上升。本練習只涉及一項可換股工具同一項持續經營業務，唔構成估值或會計意見。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Weight shares; test dilution
+  title_zh: 股数要加权，稀释要检验
+  title_zh_hk: 股數要加權，攤薄要測試
+  q1_en: Basic HK$0.50, down from 0.58
+  q1_zh: 基本0.50，低于上年0.58
+  q1_zh_hk: 基本0.50，低於上年0.58
+  q2_en: >-
+    Corrected note: anti-dilutive, excluded
+  q2_zh: 更正后票据：反稀释，排除
+  q2_zh_hk: 修正後票據：反攤薄，剔除
+  s1_en: >-
+    Basic earnings per share divides profit by the weighted shares actually outstanding, not the year-end
+    count.
+  s1_zh: 基本每股收益用利润除以实际发行在外股数的加权平均数，而不是期末股数。
+  s1_zh_hk: 每股基本盈利係用溢利除實際喺外流通股份嘅加權平均數，唔係年結股數。
+  s2_en: >-
+    A potential share is included in diluted earnings per share only if it reduces it. Test the numerator
+    and denominator together.
+  s2_zh: 潜在普通股只有在会降低每股收益时，才纳入稀释每股收益。分子和分母要一起检验。
+  s2_zh_hk: 潛在普通股只係會降低每股盈利嘅時候，先計入每股攤薄盈利。分子同分母要一齊測試。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 194

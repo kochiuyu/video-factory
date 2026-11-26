@@ -1,0 +1,288 @@
+id: ACC-44
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: >-
+  The subsidiary earned a profit. Why did its net assets rise less in HKD?
+title_zh: 子公司赚了钱，为什么折成港元后净资产增幅较小？
+title_zh_hk: 附屬公司有溢利，為何換算成港元後淨資產升得較少？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-44
+  kicker_en: ACC-44
+  kicker_zh: ACC-44
+  kicker_zh_hk: ACC-44
+  title_en: >-
+    The subsidiary earned a profit. Why did its net assets rise less in HKD?
+  title_zh: 子公司赚了钱，为什么折成港元后净资产增幅较小？
+  title_zh_hk: 附屬公司有溢利，為何換算成港元後淨資產升得較少？
+  image: art/the-subsidiary-earned-where-did-equity-go-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A Singapore subsidiary earns a profit, and its local net assets rise. Yet in Hong Kong dollars, its
+    net assets rise by less than its translated profit. A manager wants to put the shortfall through group
+    operating profit. You prepare the Hong Kong parent's consolidated accounts.
+  zh: >-
+    新加坡子公司赚了钱，当地货币的净资产也增加了。可是折成港元后，净资产的增幅却小于折算后的利润。有经理想把这个差额计入集团经营利润。你负责编制香港母公司的合并财务报表。
+  zh_hk: >-
+    新加坡附屬公司賺到錢，當地貨幣嘅淨資產都增加咗。但係換算成港元之後，淨資產升幅竟然少過換算後嘅溢利。有經理想將差額計入集團經營溢利。你負責編製香港母公司嘅綜合財務報表。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Fictional rates, subsidiary
+  title_zh: 假设汇率与子公司数据
+  title_zh_hk: 假設匯率與附屬公司數據
+  row1_en: Previous year-end rate
+  row1_zh: 上年期末汇率
+  row1_zh_hk: 上年年結匯率
+  row2_en: Transaction-date rate
+  row2_zh: 交易日汇率
+  row2_zh_hk: 交易日匯率
+  row3_en: Current year-end rate
+  row3_zh: 本年期末汇率
+  row3_zh_hk: 本年年結匯率
+  row4_en: Net assets, SGD m
+  row4_zh: 净资产，百万新加坡元
+  row4_zh_hk: 淨資產，百萬新加坡元
+  col1_en: Figure
+  col1_zh: 数值
+  col1_zh_hk: 數值
+  col2_en: Applies to
+  col2_zh: 适用于
+  col2_zh_hk: 適用於
+  c11: '5.80'
+  c12_en: Opening net assets
+  c12_zh: 期初净资产
+  c12_zh_hk: 期初淨資產
+  c21: '5.60'
+  c22_en: Income and expenses
+  c22_zh: 收入和费用
+  c22_zh_hk: 收入及開支
+  c31: '5.20'
+  c32_en: Closing net assets
+  c32_zh: 期末净资产
+  c32_zh_hk: 期末淨資產
+  c41: 1.0 → 1.2
+  c42_en: Profit SGD0.2m
+  c42_zh: 利润0.2百万新加坡元
+  c42_zh_hk: 溢利0.2百萬新加坡元
+  footer_en: HKD for SGD1; fictional rates
+  footer_zh: 1新加坡元折合港元；虚构汇率
+  footer_zh_hk: 每1新加坡元兌港元；虛構匯率
+  s1_en: >-
+    The parent owns 100 percent of the subsidiary. The subsidiary's functional currency is the Singapore
+    dollar; the parent's functional currency and the group's presentation currency are the Hong Kong dollar.
+  s1_zh: 母公司持有子公司百分之百股权。子公司的记账本位币是新加坡元；母公司的记账本位币和集团的列报货币都是港元。
+  s1_zh_hk: 母公司持有附屬公司百分之百股權。附屬公司嘅功能貨幣係新加坡元；母公司嘅功能貨幣同集團嘅列報貨幣都係港元。
+  s2_en: >-
+    Net assets start at 1.0 million Singapore dollars, profit is 0.2 million, and they end at 1.2 million.
+    No dividends, capital changes, goodwill or other adjustments are involved.
+  s2_zh: 子公司期初净资产一百万新加坡元，本年利润二十万，期末一百二十万。不涉及股利、资本变动、商誉或其他调整。
+  s2_zh_hk: 附屬公司期初淨資產一百萬新加坡元，本年溢利二十萬，年結一百二十萬。唔涉及股息、資本變動、商譽或者其他調整。
+  s3_en: >-
+    Rates are Hong Kong dollars for one Singapore dollar: 5.80 at the previous year-end, 5.60 on the date
+    of the income and expense transactions, and 5.20 at this year-end.
+  s3_zh: 汇率都是一新加坡元折合多少港元：上年期末五点八零，收入和费用交易日五点六零，本年期末五点二零。
+  s3_zh_hk: 匯率都係每一新加坡元兌幾多港元：上年年結五點八零，收入同開支嘅交易日五點六零，本年年結五點二零。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Where does the residual go?
+  title_zh: 差额应列报在哪里？
+  title_zh_hk: 差額應在哪裏列報？
+  en: >-
+    What Hong Kong dollar profit, and what opening and closing net assets, come from the subsidiary? What
+    is the residual, and where should it be reported? Pause and vote.
+  zh: 子公司的利润、期初和期末净资产各折合多少港元？剩下的差额是多少，应该列在哪里？请暂停，投个票。
+  zh_hk: 附屬公司嘅溢利、期初同期末淨資產，各自折合幾多港元？剩低嘅差額係幾多，應該喺邊度列報？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 22
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Now a payable in the parent
+  title_zh: 现在看母公司的一笔应付款
+  title_zh_hk: 現在看母公司的一筆應付款項
+  step1_en: SGD100,000 service invoice at 5.60
+  step1_zh: 按5.60入账100,000新加坡元发票
+  step1_zh_hk: 按5.60入賬100,000新加坡元發票
+  step2_en: Still unpaid at 5.20
+  step2_zh: 期末5.20时仍未支付
+  step2_zh_hk: 年結5.20時仍未支付
+  step3_en: No hedge; no tax effect
+  step3_zh: 无套期；无所得税影响
+  step3_zh_hk: 沒有對沖；沒有稅項影響
+  s1_en: >-
+    Now add a transaction in the Hong Kong parent, not the subsidiary. When the rate was 5.60, the parent
+    received an outside vendor's services and recorded a 100,000 Singapore dollar invoice.
+  s1_zh: 再加一笔发生在香港母公司、而不是子公司的交易。汇率五点六零那天，母公司接受外部供应商的服务，按十万新加坡元的发票入账。
+  s1_zh_hk: 再加一宗發生喺香港母公司、唔係附屬公司嘅交易。匯率五點六零嗰日，母公司收到外部供應商嘅服務，按十萬新加坡元嘅發票入賬。
+  s2_en: The full amount is still payable at year-end, when the rate is 5.20.
+  s2_zh: 到期末汇率五点二零时，发票金额仍然全数未付。
+  s2_zh_hk: 到年結匯率五點二零嗰陣，發票金額仍然全數未付。
+  s3_en: There is no hedge and no tax effect.
+  s3_zh: 这里不涉及套期，也没有所得税影响。
+  s3_zh_hk: 呢度唔涉及對沖，亦冇稅項影響。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Net it with the subsidiary?
+  title_zh: 能与子公司差额抵销吗？
+  title_zh_hk: 可與附屬公司差額抵銷嗎？
+  en: >-
+    Calculate the parent's initial and year-end payable, and say where the exchange difference belongs.
+    Should it be netted into the subsidiary translation line? Pause and vote.
+  zh: 算出母公司应付款的初始金额和期末金额，并说明汇兑差额应该计入哪里。它能不能和子公司的折算差额抵销列示？请暂停，投个票。
+  zh_hk: 計出母公司應付款項最初同年結嘅金額，再講匯兌差額應該喺邊度列報。可唔可以同附屬公司嘅換算差額以淨額列示？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Translate activity and position
+  title_zh: 分别折算经营成果和财务状况
+  title_zh_hk: 分別換算業績及財務狀況
+  step1_en: Profit 0.2 × 5.60 = HK$1.12m
+  step1_zh: 利润0.2 × 5.60 = 1.12百万港元
+  step1_zh_hk: 溢利0.2 × 5.60 = 1.12百萬港元
+  step2_en: >-
+    Net assets 5.80 → 6.24: up only 0.44
+  step2_zh: 净资产5.80 → 6.24：只增0.44
+  step2_zh_hk: 淨資產5.80 → 6.24：只增0.44
+  step3_en: 5.80 + 1.12 − 0.68 = 6.24
+  step3_zh: 5.80 + 1.12 − 0.68 = 6.24
+  step3_zh_hk: 5.80 + 1.12 − 0.68 = 6.24
+  s1_en: >-
+    Translate the subsidiary's income and expenses at their transaction-date rate: 0.2 million times 5.60
+    gives 1.12 million Hong Kong dollars of profit.
+  s1_zh: 子公司的收入和费用按交易日汇率折算：二十万乘五点六零，利润是一百一十二万港元。
+  s1_zh_hk: 附屬公司嘅收入同開支按交易日匯率換算：二十萬乘五點六零，溢利係一百一十二萬港元。
+  s2_en: >-
+    Opening net assets are 1.0 million times 5.80, or 5.80 million. Closing net assets are 1.2 million
+    times 5.20, or 6.24 million. The increase in Hong Kong dollars is 0.44 million, not 1.12 million.
+  s2_zh: >-
+    期初净资产是一百万乘五点八零，等于五百八十万；期末是一百二十万乘五点二零，等于六百二十四万。以港元计，净资产只增加四十四万，不是一百一十二万。
+  s2_zh_hk: >-
+    期初淨資產係一百萬乘五點八零，即係五百八十萬；期末係一百二十萬乘五點二零，即係六百二十四萬。以港元計，淨資產只係增加四十四萬，唔係一百一十二萬。
+  s3_en: >-
+    The bridge is 5.80 plus 1.12 minus 0.68, giving 6.24. The 0.68 million translation loss goes to other
+    comprehensive income and the exchange reserve in equity. It does not reduce group operating profit,
+    and it is not a cash loss.
+  s3_zh: >-
+    勾稽关系是五点八零加一点一二减零点六八，等于六点二四。六十八万的折算损失计入其他综合收益，累计在权益中的外币报表折算储备，不冲减集团经营利润，也不是现金损失。
+  s3_zh_hk: >-
+    調節係五點八零加一點一二減零點六八，等於六點二四。六十八萬嘅換算虧損計入其他全面收益，累計喺權益入面嘅匯兌儲備，唔會減少集團經營溢利，亦唔係現金損失。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Two sources; a separate payable
+  title_zh: 差额的两个来源与应付款
+  title_zh_hk: 差額的兩個來源與應付款項
+  step1_en: −0.60 + −0.08 = −0.68
+  step1_zh: −0.60 + −0.08 = −0.68
+  step1_zh_hk: −0.60 + −0.08 = −0.68
+  step2_en: >-
+    Payable 560,000 → 520,000: gain 40,000
+  step2_zh: 应付款560,000 → 520,000：收益40,000
+  step2_zh_hk: 應付款項560,000 → 520,000：收益40,000
+  step3_en: Gain to profit; loss to OCI; no netting
+  step3_zh: 收益入损益；损失入OCI；不抵销
+  step3_zh_hk: 收益入損益；虧損入OCI；不抵銷
+  s1_en: >-
+    Re-expressing opening net assets at the new closing rate contributes 1.0 million times 5.20 minus
+    5.80, or minus 0.60 million. Moving the year's profit from 5.60 to 5.20 contributes minus 0.08 million.
+  s1_zh: 把期初净资产改按新的期末汇率表示，差额是一百万乘五点二零减五点八零，即负六十万。把本年利润从五点六零改按五点二零，差额是负八万。
+  s1_zh_hk: 將期初淨資產改用新嘅年結匯率表示，差額係一百萬乘五點二零減五點八零，即係負六十萬。將本年溢利由五點六零改用五點二零，差額係負八萬。
+  s2_en: >-
+    The parent, whose functional currency is the Hong Kong dollar, first records a 560,000 service expense
+    and payable. Remeasured at 5.20, the payable is 520,000, giving a 40,000 exchange gain in profit or
+    loss.
+  s2_zh: 母公司的记账本位币是港元，初始确认服务费用和应付款各五十六万。按五点二零重新计量这笔货币性应付款，期末是五十二万，四万汇兑收益计入当期损益。
+  s2_zh_hk: 母公司嘅功能貨幣係港元，最初記錄服務開支同應付款項各五十六萬。用五點二零重新計量呢項貨幣性應付款項，就係五十二萬，四萬匯兌收益計入損益。
+  s3_en: >-
+    No cash has been paid yet. Keep this gain separate from the subsidiary's 680,000 loss in other comprehensive
+    income; do not net the two.
+  s3_zh: 此时还没有付款。这笔收益要和子公司计入其他综合收益的六十八万折算损失分开，不能抵销。
+  s3_zh_hk: 而家仲未付款。呢筆收益要同附屬公司計入其他全面收益嘅六十八萬換算虧損分開，唔可以抵銷。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: State the rate units first
+  title_zh: 先写清汇率单位
+  title_zh_hk: 先講清楚匯率單位
+  en: >-
+    State the rate units before multiplying: here, Hong Kong dollars for one Singapore dollar. Closing
+    net assets still rose compared with opening; translation is the negative component. Real groups may
+    face other rules for hedges, qualifying net investments and non-controlling interests; none is modelled
+    here.
+  zh: >-
+    相乘之前，先写清汇率单位：这里是一新加坡元折合多少港元。期末净资产仍然比期初高，外币折算只是其中的负向影响。实际集团在套期、符合条件的净投资和少数股东权益方面，可能适用其他规则，本例都不涉及。
+  zh_hk: >-
+    相乘之前，先講清楚匯率單位：呢度係每一新加坡元兌幾多港元。期末淨資產仍然高過期初，換算只係其中嘅負項。真實集團喺對沖、合資格淨投資同非控股權益方面，可能要按其他規則處理，本案一概唔涉及。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Translation is not profit
+  title_zh: 外币折算差额不是经营利润
+  title_zh_hk: 換算差額不是經營溢利
+  q1_en: >-
+    Subsidiary: −0.68m to OCI
+  q1_zh: 子公司：−0.68百万计入其他综合收益
+  q1_zh_hk: 附屬公司：−0.68百萬計入其他全面收益
+  q2_en: >-
+    Parent payable: +40,000 to profit
+  q2_zh: 母公司应付款：+40,000计入损益
+  q2_zh_hk: 母公司應付款項：+40,000計入損益
+  s1_en: >-
+    Translating a foreign operation creates a difference in other comprehensive income, not in operating
+    profit and not in cash.
+  s1_zh: 折算境外经营产生的差额计入其他综合收益，不进入经营利润，也不是现金。
+  s1_zh_hk: 換算境外業務產生嘅差額計入其他全面收益，唔入經營溢利，亦唔係現金。
+  s2_en: >-
+    A foreign-currency payable in the parent's own books is remeasured through profit or loss, and stays
+    separate from translation.
+  s2_zh: 母公司账上的外币应付款按期末汇率重新计量，差额计入损益，并和折算差额分开列示。
+  s2_zh_hk: 母公司賬上嘅外幣應付款項按年結匯率重新計量，差額計入損益，同換算差額分開列示。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 196

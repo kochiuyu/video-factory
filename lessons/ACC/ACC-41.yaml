@@ -1,0 +1,298 @@
+id: ACC-41
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Adjusted profit. Can readers get back to the accounts?
+title_zh: 调整后利润，如何与财务报表对上？
+title_zh_hk: 調整後溢利，能對回財務報表嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-41
+  kicker_en: ACC-41
+  kicker_zh: ACC-41
+  kicker_zh_hk: ACC-41
+  title_en: Adjusted profit. Can readers get back to the accounts?
+  title_zh: 调整后利润，如何与财务报表对上？
+  title_zh_hk: 調整後溢利，能對回財務報表嗎？
+  image: art/adjusted-profit-back-to-accounts-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    The accounts show 30 million Hong Kong dollars of operating profit. The draft investor slides call
+    38 million 'underlying operating profit'. Would you clear that for publication? You are Ivy, preparing
+    the slides for a fictional Hong Kong-listed parcel group in its first full year under HKFRS 18.
+  zh: >-
+    财务报表上的经营利润是三千万港元，投资者演示稿却写着三千八百万港元的“基础经营利润”。你会批准公开发布吗？你是 Ivy，正为一家虚构的香港上市快递集团准备演示材料。今年是集团首个全年采用 HKFRS
+    18 的年度。
+  zh_hk: >-
+    財務報表列示嘅經營溢利係三千萬港元，投資者簡報初稿就寫住三千八百萬港元嘅「基礎經營溢利」。你會唔會批准公開刊出？你係 Ivy，幫一間虛構嘅香港上市包裹配送集團準備簡報，今年係集團首個全年採用 HKFRS
+    18 嘅年度。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: This year, HK$m
+  title_zh: 本年度，百万港元
+  title_zh_hk: 本年度，百萬港元
+  row1_en: HKFRS operating profit
+  row1_zh: 按HKFRS列报的经营利润
+  row1_zh_hk: 按HKFRS列示的經營溢利
+  row2_en: Parent depot restructuring
+  row2_zh: 母公司配送站重组支出
+  row2_zh_hk: 母公司配送站重組支出
+  row3_en: Subsidiary depot restructuring
+  row3_zh: 子公司配送站重组支出
+  row3_zh_hk: 附屬公司配送站重組支出
+  row4_en: Draft 'underlying' profit
+  row4_zh: 草稿“基础经营利润”
+  row4_zh_hk: 初稿「基礎經營溢利」
+  col1_en: HK$m
+  col1_zh: 百万港元
+  col1_zh_hk: 百萬港元
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11: '30'
+  c12_en: In the accounts
+  c12_zh: 财务报表数字
+  c12_zh_hk: 財務報表數字
+  c21: '2'
+  c22_en: No tax benefit
+  c22_zh: 无所得税利益
+  c22_zh_hk: 沒有所得稅利益
+  c31: '6'
+  c32_en: Deductible at 20%
+  c32_zh: 按20%税前扣除
+  c32_zh_hk: 按20%可扣稅
+  c41: '38'
+  c42_en: Public slides
+  c42_zh: 公开演示稿
+  c42_zh_hk: 公開簡報
+  footer_en: Outsiders own 20% of the subsidiary
+  footer_zh: 外部股东持有子公司20%
+  footer_zh_hk: 外部股東持有附屬公司20%
+  s1_en: >-
+    Management uses the adjusted subtotal to track depot operations before a defined group of restructuring
+    costs. It covers the whole group, it is not a subtotal specified by HKFRS, and the slides will be
+    posted publicly.
+  s1_zh: 管理层想借这个小计，看看不计特定重组成本时配送站经营得怎么样。它覆盖整个集团，不是准则规定的小计，而且演示稿会公开发布。
+  s1_zh_hk: 管理層用呢個小計，睇吓未計指定重組成本之前，配送站嘅營運表現點樣。佢涵蓋成個集團，唔係準則指定嘅小計，而且簡報會公開俾投資者睇。
+  s2_en: >-
+    The parent's 2 million restructuring expense brings no income tax benefit. The subsidiary's 6 million
+    is deductible at a hypothetical 20 percent rate. Assume no deferred tax effects.
+  s2_zh: 母公司的两百万重组支出不产生所得税利益。子公司的六百万可以在税前扣除，假定税率是百分之二十，不考虑递延所得税。
+  s2_zh_hk: 母公司嗰兩百萬重組支出冇所得稅利益。附屬公司嗰六百萬可以扣稅，假設稅率係百分之二十，唔考慮遞延稅項。
+  s3_en: >-
+    Outside shareholders own 20 percent of the subsidiary and share in its after-tax result. All figures
+    and tax assumptions are fictional.
+  s3_zh: 外部股东持有子公司百分之二十的股权，按比例分享它的税后损益。所有数字和税务假设都是虚构的。
+  s3_zh_hk: 外部股東持有附屬公司百分之二十股權，按比例分享佢嘅除稅後業績。所有數字同稅務假設都係虛構嘅。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Clear the 38m as drafted?
+  title_zh: 按原稿公布38百万？
+  title_zh_hk: 按原稿刊出38百萬？
+  en: >-
+    Would you clear the 38 million for the public slides as drafted? If the group keeps the measure, what
+    reconciliation, and what separate tax and outside-shareholder effects, belong in the note? Pause and
+    vote.
+  zh: 你会按原稿批准公布三千八百万这个数字吗？如果集团要保留这个指标，附注里应该怎样调节，又要分别披露哪些所得税和外部股东的影响？请暂停，投个票。
+  zh_hk: 你會唔會照原稿批准刊出三千八百萬？如果集團保留呢個計量，附註要點樣調節，又要分開披露邊啲稅項同外部股東嘅影響？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: >-
+    2026: the same costs again
+  title_zh: 2026年：同类成本再次出现
+  title_zh_hk: 2026年：同類成本再次出現
+  step1_en: >-
+    2026: 34m; costs 0.5m + 1.5m
+  step1_zh: 2026年：34百万；成本0.5 + 1.5
+  step1_zh_hk: 2026年：34百萬；成本0.5 + 1.5
+  step2_en: Same tax and ownership; data complete
+  step2_zh: 税务和持股不变；数据完整
+  step2_zh_hk: 稅務及持股不變；資料齊全
+  step3_en: >-
+    Proposal: call them 'one-off'
+  step3_zh: 建议称为“一次性成本”
+  step3_zh_hk: 建議稱為「一次性成本」
+  s1_en: >-
+    Ivy finds the 2026 records. On the same HKFRS 18 basis, group operating profit was 34 million. It
+    included comparable depot restructuring costs: 0.5 million at the parent and 1.5 million at the same
+    subsidiary.
+  s1_zh: Ivy 调出二零二六年的记录。按同一口径，集团经营利润是三千四百万，里面包括同类的配送站重组成本：母公司五十万，同一家子公司一百五十万。
+  s1_zh_hk: Ivy 搵到二零二六年嘅紀錄。按同一個基準，集團經營溢利係三千四百萬，入面包括同類嘅配送站重組成本：母公司五十萬，同一間附屬公司一百五十萬。
+  s2_en: >-
+    The tax treatment and ownership shares were identical, and the comparative data are complete and can
+    be checked.
+  s2_zh: 税务处理和持股比例都一样，可比数据完整，也可以核实。
+  s2_zh_hk: 稅務處理同持股比例都一樣，比較資料齊全，亦都可以核實。
+  s3_en: >-
+    The communications lead proposes calling the exclusions 'one-off costs' and publishing just the percentage
+    increase in adjusted profit.
+  s3_zh: 负责对外沟通的主管建议，把剔除的费用叫作“一次性成本”，而且只公布调整后利润的增幅。
+  s3_zh_hk: 企業傳訊主管建議，將剔除咗嘅開支叫做「一次性成本」，淨係公布調整後溢利嘅升幅。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Both years, one basis?
+  title_zh: 两年用同一口径？
+  title_zh_hk: 兩年用同一基準？
+  en: >-
+    Using the same calculation for both years, how did reported and adjusted operating profit move? What
+    would you tell the communications lead to publish, rename or drop? Pause and vote.
+  zh: 两年用同一种算法，列报的经营利润和调整后经营利润各自怎么变？你会建议沟通主管公布什么、改什么名称、删掉什么？请暂停，投个票。
+  zh_hk: 兩年用同一個計法，已呈報經營溢利同調整後經營溢利各自點變？你會建議傳訊主管公布乜、改乜名、刪走乜？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: A management-defined measure
+  title_zh: 这是管理层界定的业绩指标
+  title_zh_hk: 這是管理層界定的績效計量
+  step1_en: >-
+    Not cleared: it is an MPM
+  step1_zh: 不批准：属于MPM
+  step1_zh_hk: 不批准：屬於MPM
+  step2_en: Keep 30; bridge 30 + 2 + 6 = 38
+  step2_zh: 仍列30；调节30 + 2 + 6 = 38
+  step2_zh_hk: 仍列30；調節30 + 2 + 6 = 38
+  step3_en: >-
+    Subsidiary item: tax +1.20; NCI +0.96
+  step3_zh: 子公司项目：税+1.20；少数股东+0.96
+  step3_zh_hk: 附屬公司項目：稅+1.20；非控股+0.96
+  s1_en: >-
+    Do not clear the draft as written. The slides use a subtotal that no standard specifies to show management's
+    view of group performance. That makes it a management-defined performance measure, or MPM.
+  s1_zh: 不应按原稿批准。演示稿用一个准则没有规定的小计，来表达管理层眼中的集团业绩，所以它属于管理层界定的业绩指标，也就是 MPM。
+  s1_zh_hk: 唔應該照原稿批准。簡報用一個準則冇指定嘅小計，表達管理層點睇集團表現，所以佢屬於管理層界定的績效計量，即係 MPM。
+  s2_en: >-
+    Keep 30 million as HKFRS operating profit. The separate bridge is 30 plus 2 plus 6, which is 38 million,
+    before tax.
+  s2_zh: 按准则列报的经营利润仍然是三千万。另外单独列示税前调节：三十加二加六，等于三千八百万。
+  s2_zh_hk: 按準則列示嘅經營溢利仍然係三千萬。另外單獨列出除稅前調節：三十加二加六，等於三千八百萬。
+  s3_en: >-
+    The parent's 2 million has no tax or outside-shareholder effect. Adding back the subsidiary's deductible
+    6 million raises hypothetical tax expense by 1.20 million and the non-controlling interests' share
+    by 0.96 million.
+  s3_zh: >-
+    母公司那两百万对所得税和外部股东都没有影响。子公司那六百万原本可以税前扣除，加回后，假设的所得税费用增加一百二十万，少数股东份额增加九十六万。
+  s3_zh_hk: >-
+    母公司嗰兩百萬對稅項同外部股東都冇影響。附屬公司嗰六百萬本來可以扣稅，加回之後，假設所得稅開支增加一百二十萬，非控股權益所佔份額增加九十六萬。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Compare both years on one basis
+  title_zh: 两年用同一口径比较
+  title_zh_hk: 兩年按同一基準比較
+  step1_en: 2026 bridge 34 + 0.5 + 1.5 = 36
+  step1_zh: 2026年：34 + 0.5 + 1.5 = 36
+  step1_zh_hk: 2026年：34 + 0.5 + 1.5 = 36
+  step2_en: Reported −11.8%; adjusted +5.6%
+  step2_zh: 列报约−11.8%；调整后约+5.6%
+  step2_zh_hk: 已呈報約−11.8%；調整後約+5.6%
+  step3_en: Drop 'one-off'; show both trends
+  step3_zh: 删去“一次性”；两项趋势都列
+  step3_zh_hk: 刪去「一次性」；兩項走勢都列
+  s1_en: >-
+    In 2026 the bridge is 34 plus 0.5 plus 1.5, or 36 million. The subsidiary item adds 0.30 million of
+    tax expense and 0.24 million to the outside shareholders' share.
+  s1_zh: 二零二六年的调节是三十四加零点五加一点五，等于三千六百万。子公司项目使所得税费用增加三十万，少数股东份额增加二十四万。
+  s1_zh_hk: 二零二六年嘅調節係三十四加零點五加一點五，等於三千六百萬。附屬公司項目令所得稅開支增加三十萬，非控股權益所佔份額增加二十四萬。
+  s2_en: >-
+    Reported operating profit fell from 34 to 30 million, about 11.8 percent; adjusted profit rose from
+    36 to 38 million, about 5.6 percent. The excluded expenses rose from 2 to 8 million.
+  s2_zh: >-
+    列报的经营利润从三千四百万降到三千万，约降百分之十一点八；调整后的从三千六百万升到三千八百万，约升百分之五点六。原因是剔除的费用从两百万增加到八百万。
+  s2_zh_hk: >-
+    已呈報經營溢利由三千四百萬跌到三千萬，跌咗大約百分之十一點八；調整後就由三千六百萬升到三千八百萬，升咗大約百分之五點六。原因係剔除咗嘅開支由兩百萬加到八百萬。
+  s3_en: >-
+    Reject 'one-off': these costs occurred in both years. If the measure is useful, call it 'operating
+    profit before depot restructuring costs', explain what qualifies and why it helps, and show both trends.
+  s3_zh: >-
+    “一次性”这个说法要否决，因为这些成本两年都发生了。如果指标确实有用，可以改称“扣除配送站重组成本前的经营利润”，说明哪些支出算在里面、指标有什么用，并同时列出两项趋势。
+  s3_zh_hk: >-
+    「一次性」呢個講法要否決，因為兩年都有呢啲成本。如果呢個計量真係有用，可以改稱「未計配送站重組成本的經營溢利」，講清楚邊啲支出計入、有乜用，同時展示兩項走勢。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: One MPM note, both trends
+  title_zh: 一项MPM附注，两项趋势
+  title_zh_hk: 一項MPM附註，兩項走勢
+  en: >-
+    Show tax and non-controlling interest effects beside each adjustment, not as deductions from the 38.
+    Put the measure in the single MPM note: its calculation, the reconciliation to operating profit, the
+    tax method, per-item tax and non-controlling interest effects, and comparable prior-year figures.
+    Say it reflects management's view and that similarly named measures elsewhere may not be comparable.
+    An add-back does not remove an expense from the financial statements.
+  zh: >-
+    所得税和少数股东权益的影响要列在每个调整项目旁边，不能从三千八百万里扣。把指标放进集中披露 MPM 的那项附注：写明计算方法、与经营利润的调节、所得税影响的算法、逐项的所得税和少数股东权益影响，以及上年可比数字。还要说明它代表管理层的观点，其他公司名称相近的指标不一定可比。加回不等于把费用从财务报表里删掉。
+  zh_hk: >-
+    稅項同非控股權益嘅影響要列喺每個調整項目隔籬，唔可以喺三千八百萬入面扣。將計量放入同一項 MPM 附註：列明計算方法、同經營溢利嘅調節、稅項影響嘅計法、逐項所得稅同非控股權益影響，仲有上年度比較資料。亦要講明佢反映管理層觀點，其他企業名稱相近嘅計量未必可以比較。加回唔等於將開支喺財務報表刪走。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Reconcile it, name it honestly
+  title_zh: 能对回报表，名称要如实
+  title_zh_hk: 要對得回報表，名稱要如實
+  q1_en: Bridge 30 + 2 + 6 = 38
+  q1_zh: 调节30 + 2 + 6 = 38
+  q1_zh_hk: 調節30 + 2 + 6 = 38
+  q2_en: Reported −11.8%; adjusted +5.6%
+  q2_zh: 列报−11.8%；调整后+5.6%
+  q2_zh_hk: 已呈報−11.8%；調整後+5.6%
+  s1_en: >-
+    An adjusted profit figure must lead readers back to the accounts, with its tax and outside-shareholder
+    effects shown item by item.
+  s1_zh: 调整后利润必须能让读者对回财务报表，所得税和外部股东的影响要逐项列明。
+  s1_zh_hk: 調整後溢利一定要令讀者對得返財務報表，稅項同外部股東嘅影響要逐項列明。
+  s2_en: >-
+    Recurring costs are not automatically barred from an adjustment, but the label must not suggest they
+    will never happen again. This is not reporting or tax advice.
+  s2_zh: 反复发生的成本不是一概不能调整，但名称不能暗示它们不会再发生。本案不构成财务报告或税务建议。
+  s2_zh_hk: 反覆出現嘅成本唔係一律唔可以調整，但名稱唔可以暗示佢哋唔會再出現。本案唔構成財務報告或稅務意見。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 198

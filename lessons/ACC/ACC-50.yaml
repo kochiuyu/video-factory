@@ -1,0 +1,281 @@
+id: ACC-50
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: When the lease loses a floor
+title_zh: 租赁少了一层楼
+title_zh_hk: 租賃少了一層樓
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-50
+  kicker_en: ACC-50
+  kicker_zh: ACC-50
+  kicker_zh_hk: ACC-50
+  title_en: When the lease loses a floor
+  title_zh: 租赁少了一层楼
+  title_zh_hk: 租賃少了一層樓
+  image: art/when-the-lease-loses-a-room-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A Hong Kong training studio leases two equal floors under one contract. On 1 July, staff move upstairs
+    and one floor sits empty. The controller wants to book a partial lease termination and a gain. Nothing
+    has been agreed with the lessor. Would you approve the journal?
+  zh: >-
+    香港一家培训工作室用一份合同租了两个条件相同的楼层。七月一日，员工搬到楼上，一层楼空了出来。财务主管想按部分终止租赁入账，并确认一笔利得。可是出租人还没有同意任何变更。你会批准这笔分录吗？
+  zh_hk: >-
+    香港一間培訓工作室用同一份合約租咗兩層條件一樣嘅樓。七月一日，員工搬咗去樓上，一層空咗出嚟。財務主管想當部分終止租賃入賬，再確認一筆收益。但係出租人乜都未同意。你會唔會批准呢筆分錄？
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Balances and proposed journal
+  title_zh: 余额与拟作分录
+  title_zh_hk: 結餘與擬作分錄
+  row1_en: Lease liability
+  row1_zh: 租赁负债
+  row1_zh_hk: 租賃負債
+  row2_en: Right-of-use asset
+  row2_zh: 使用权资产
+  row2_zh_hk: 使用權資產
+  row3_en: Proposed reductions
+  row3_zh: 拟减少金额
+  row3_zh_hk: 擬減少金額
+  row4_en: Proposed gain
+  row4_zh: 拟入账利得
+  row4_zh_hk: 擬入賬收益
+  col1_en: HK$
+  col1_zh: 港元
+  col1_zh_hk: 港元
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11: 840,000
+  c12_en: Before any agreement
+  c12_zh: 签协议前
+  c12_zh_hk: 訂立協議前
+  c21: 760,000
+  c22_en: Before any agreement
+  c22_zh: 签协议前
+  c22_zh_hk: 訂立協議前
+  c31: 420,000 / 380,000
+  c32_en: Liability / asset
+  c32_zh: 负债／资产
+  c32_zh_hk: 負債／資產
+  c41: 40,000
+  c42_en: On vacancy
+  c42_zh: 因腾空楼层
+  c42_zh_hk: 因樓層空置
+  footer_en: One floor is 50% of the lease scope
+  footer_zh: 一层占租赁范围的50%
+  footer_zh_hk: 一層佔租賃範圍的50%
+  s1_en: >-
+    Staff move upstairs on 1 July, but the tenant still controls both floors. Payments, term and rights
+    are unchanged, and the lessor has agreed nothing. There is no early exit option and no separate impairment.
+  s1_zh: 员工七月一日搬到楼上，但承租人仍然控制两层楼。付款、租期和权利都没变，出租人也没有同意任何变更。合同没有提前退出选择权，也不存在单独的减值。
+  s1_zh_hk: 員工七月一日搬咗去樓上，但承租人依然控制兩層。租金、租期同權利都冇變，出租人亦冇同意任何改動。合約冇提前解約選擇權，亦冇獨立嘅減值。
+  s2_en: >-
+    After normal accounting to that date, the lease liability is 840,000 and the right-of-use asset is
+    760,000. The two floors confer equal rights, so one floor is 50 percent of the scope.
+  s2_zh: 做完截至当天的常规会计处理后，租赁负债是八十四万，使用权资产是七十六万。两层楼的权利相同，所以一层占租赁范围的百分之五十。
+  s2_zh_hk: 做完截至嗰日嘅一般會計處理之後，租賃負債係八十四萬，使用權資產係七十六萬。兩層樓權利相等，所以一層佔租賃範圍百分之五十。
+  s3_en: >-
+    The controller proposes reducing the asset by 380,000 and the liability by 420,000, and recognising
+    a 40,000 gain.
+  s3_zh: 财务主管拟减少使用权资产三十八万、减少租赁负债四十二万，并确认四万利得。
+  s3_zh_hk: 財務主管提議減少使用權資產三十八萬、減少租賃負債四十二萬，再確認四萬收益。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Approve the vacancy journal?
+  title_zh: 批准腾空楼层的分录吗？
+  title_zh_hk: 批准空置樓層的分錄嗎？
+  en: >-
+    Approve or reject the vacancy journal? What contractual evidence would change the decision, and what
+    balances should stay in the ledger now? Pause and vote.
+  zh: 你会批准还是驳回这笔因腾空楼层而作的分录？什么合同证据会改变判断？账上现在应该保留什么余额？请暂停，投个票。
+  zh_hk: 你會批准定否決呢筆因樓層空置而作嘅分錄？邊項合約證據會改變決定？而家賬上應該保留乜嘢結餘？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 22
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A signed amendment
+  title_zh: 签署补充协议
+  title_zh_hk: 簽署修訂協議
+  step1_en: One floor returned permanently
+  step1_zh: 永久交还一层
+  step1_zh_hk: 永久交還一層
+  step2_en: >-
+    Retained floor: 210,000 × 2 years
+  step2_zh: 保留楼层：210,000 × 2年
+  step2_zh_hk: 保留樓層：210,000 × 2年
+  step3_en: Revised discount rate 5%
+  step3_zh: 变更后折现率5%
+  step3_zh_hk: 修訂後折現率5%
+  s1_en: >-
+    Both parties now sign an immediately effective amendment that gives one floor back permanently, without
+    penalty.
+  s1_zh: 双方现在签署一份立即生效的补充协议，永久交还其中一层，不用支付违约金。
+  s1_zh_hk: 雙方而家簽署一份即時生效嘅修訂協議，永久交還一層，唔使俾罰款。
+  s2_en: >-
+    The retained floor's binding new payments are 210,000 at the end of each of the next two years.
+  s2_zh: 保留的楼层按有约束力的新约定，未来两年每年年末支付二十一万。
+  s2_zh_hk: 保留嗰層按具約束力嘅新條款，未來兩年每年年結支付二十一萬。
+  s3_en: >-
+    The revised annual discount rate is 5 percent. There are no other payments, incentives or separate
+    services.
+  s3_zh: 变更后的年折现率是百分之五。没有其他付款、租赁激励或单独服务。
+  s3_zh_hk: 修訂後嘅年折現率係百分之五。冇其他付款、優惠或者獨立服務。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: One gain, or two?
+  title_zh: 一笔利得还是两笔？
+  title_zh_hk: 一筆收益還是兩筆？
+  en: >-
+    At the effective date, calculate the partial-termination gain and both final balances. Why does remeasuring
+    the retained floor not create a second gain? Pause and vote.
+  zh: 在变更生效日，算出部分终止租赁的利得和两个最终余额。为什么对保留楼层重新计量，不会再产生第二笔利得？请暂停，投个票。
+  zh_hk: 喺協議生效日，計出部分終止租賃嘅收益同兩項最終結餘。點解重新計量保留嗰層，唔會再產生第二筆收益？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Not yet surrendered; then half
+  title_zh: 尚未交还；之后终止一半
+  title_zh_hk: 未交還；之後終止一半
+  step1_en: >-
+    Vacancy: keep 840,000 and 760,000
+  step1_zh: 腾空时：保留840,000和760,000
+  step1_zh_hk: 空置時：保留840,000及760,000
+  step2_en: −420,000 / −380,000; gain 40,000
+  step2_zh: 补充协议：−420,000／−380,000；利得40,000
+  step2_zh_hk: 修訂協議：−420,000／−380,000；收益40,000
+  step3_en: >-
+    Left: 420,000 and 380,000
+  step3_zh: 剩余：420,000和380,000
+  step3_zh_hk: 剩餘：420,000及380,000
+  s1_en: >-
+    Reject the vacancy journal. Without changed enforceable rights, keep the 840,000 liability and 760,000
+    asset and continue normal accounting. Obtain the signed amendment and confirm its effective date first.
+  s1_zh: 驳回腾空楼层的分录。可执行的权利没有改变，就保留八十四万的租赁负债和七十六万的使用权资产，继续常规处理。先取得签好的补充协议，核实生效日。
+  s1_zh_hk: 否決空置分錄。可執行嘅權利冇改變，就保留八十四萬租賃負債同七十六萬使用權資產，繼續一般處理。先要攞到已簽署嘅修訂協議，核實生效日。
+  s2_en: >-
+    At the amendment date, reduce the liability by 420,000 and the right-of-use asset by 380,000. The
+    difference is a 40,000 gain.
+  s2_zh: 在补充协议生效日，租赁负债减少四十二万，使用权资产减少三十八万，差额四万确认为利得。
+  s2_zh_hk: 喺修訂協議生效日，租賃負債減少四十二萬，使用權資產減少三十八萬，差額四萬確認為收益。
+  s3_en: Before remeasurement, the remaining balances are 420,000 and 380,000.
+  s3_zh: 重新计量之前，负债和资产余额分别是四十二万和三十八万。
+  s3_zh_hk: 重新計量之前，負債同資產結餘分別係四十二萬同三十八萬。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Reprice only the surviving right
+  title_zh: 只对保留的权利重新计量
+  title_zh_hk: 只重新計量保留的使用權
+  step1_en: 210,000/1.05 + 210,000/1.05² ≈ 390,476
+  step1_zh: 210,000/1.05 + 210,000/1.05² ≈ 390,476
+  step1_zh_hk: 210,000/1.05 + 210,000/1.05² ≈ 390,476
+  step2_en: >-
+    Both −29,524: asset ≈ 350,476
+  step2_zh: 两项各−29,524：资产≈350,476
+  step2_zh_hk: 兩項各−29,524：資產≈350,476
+  step3_en: Gain only on the surrendered half
+  step3_zh: 利得只来自交还的一半
+  step3_zh_hk: 收益只來自交還的一半
+  s1_en: >-
+    Discount the two payments: 210,000 over 1.05, plus 210,000 over 1.05 squared, is about 390,476.
+  s1_zh: 把两笔付款折现：二十一万除以一点零五，加二十一万除以一点零五的平方，大约是三十九万零四百七十六。
+  s1_zh_hk: 將兩筆付款折現：二十一萬除一點零五，加二十一萬除一點零五嘅平方，大約係三十九萬零四百七十六。
+  s2_en: >-
+    The remaining liability falls by about 29,524, matched by the same reduction in the right-of-use asset.
+    The final asset is about 350,476, and the final liability about 390,476.
+  s2_zh: 剩余的租赁负债减少约二万九千五百二十四，使用权资产等额冲减。最终资产约三十五万零四百七十六，负债约三十九万零四百七十六。
+  s2_zh_hk: 剩餘租賃負債減少大約二萬九千五百二十四，使用權資產同額調減。最終資產大約三十五萬零四百七十六，負債大約三十九萬零四百七十六。
+  s3_en: >-
+    The 40,000 gain belongs only to the surrendered portion. Remeasuring the retained floor adjusts the
+    asset, not profit.
+  s3_zh: 四万利得只来自交还的部分。对保留楼层重新计量，调整的是资产，不是利润。
+  s3_zh_hk: 四萬收益只屬於交還嘅部分。重新計量保留嗰層，調整嘅係資產，唔係溢利。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Why two steps matter
+  title_zh: 为什么要分两步
+  title_zh_hk: 為甚麼要分兩步
+  en: >-
+    A one-step model that booked the whole liability decrease against the existing asset would leave 310,476
+    in the asset and miss the 40,000 gain. And if there were no reduction in scope, the termination entry
+    would not follow at all. Empty space alone is not a surrendered right.
+  zh: >-
+    如果用一步法，把负债减少额全部冲减原有资产，资产会剩三十一万零四百七十六，还会漏记四万的终止租赁利得。而如果租赁范围并没有缩小，根本不能作终止租赁分录。楼层空着，不等于交还了权利。
+  zh_hk: >-
+    如果用一步法，將負債減幅全數沖減原有資產，資產會剩三十一萬零四百七十六，仲會漏計四萬終止租賃收益。如果租賃範圍根本冇縮減，就唔應該作終止租賃分錄。樓層空置，唔等於交還咗權利。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Rights change, then the lease
+  title_zh: 权利变了，租赁才变
+  title_zh_hk: 權利改變，租賃才改變
+  q1_en: >-
+    Vacancy: no entry; 840,000 / 760,000
+  q1_zh: 腾空：不作分录；840,000／760,000
+  q1_zh_hk: 空置：不作分錄；840,000／760,000
+  q2_en: >-
+    Amendment: gain 40,000; asset ≈ 350,476
+  q2_zh: 补充协议：利得40,000；资产≈350,476
+  q2_zh_hk: 修訂協議：收益40,000；資產≈350,476
+  s1_en: >-
+    A decrease in lease scope is recognised only when enforceable rights change, not when space is simply
+    left empty.
+  s1_zh: 只有可执行的权利改变了，才能确认租赁范围缩小；单纯空着不用，不算。
+  s1_zh_hk: 只有可執行嘅權利改變咗，先可以確認租賃範圍縮減；淨係空置唔用，唔計。
+  s2_en: >-
+    Remove the surrendered part first, recognising any gain, then remeasure the retained part against
+    the right-of-use asset.
+  s2_zh: 先终止确认交还的部分并确认利得，再对保留部分重新计量，调整使用权资产。
+  s2_zh_hk: 先剔除交還嘅部分並確認收益，再重新計量保留部分，調整使用權資產。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 194

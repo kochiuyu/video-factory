@@ -1,0 +1,289 @@
+id: ACC-48
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The branches agree. Do the records?
+title_zh: 各站做法一致，记录就一定一致吗？
+title_zh_hk: 各站的做法一致，賬目也對得上嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-48
+  kicker_en: ACC-48
+  kicker_zh: ACC-48
+  kicker_zh_hk: ACC-48
+  title_en: The branches agree. Do the records?
+  title_zh: 各站做法一致，记录就一定一致吗？
+  title_zh_hk: 各站的做法一致，賬目也對得上嗎？
+  image: art/the-branches-agree-but-do-the-records-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Three depots sell replacement kits, and all three post year-end sales early under the same rule. Revenue
+    counts only when the customer receives the kit. You are the group auditor of a fictional Hong Kong
+    appliance repair group. The conclusion on the group is yours.
+  zh: >-
+    三个配送站都卖替换套件，而且都按同一规则在年末提前入账。按本案设定，客户收到套件才能确认收入。你是一家虚构的香港家电维修集团的集团审计师，集团审计的结论由你负责。
+  zh_hk: >-
+    三個配送站都賣替換套件，而且都按同一套規則喺年結提前入賬。本案以顧客實際收到套件為收入確認時點。你係一間虛構香港家電維修集團嘅集團核數師，集團審計嘅結論由你負責。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Cutoff evidence today, HK$000
+  title_zh: 目前的截止证据，千港元
+  title_zh_hk: 現有的截止證據，千港元
+  row1_en: East
+  row1_zh: 东站
+  row1_zh_hk: 東站
+  row2_en: West
+  row2_zh: 西站
+  row2_zh_hk: 西站
+  row3_en: South
+  row3_zh: 南站
+  row3_zh_hk: 南站
+  row4_en: Group materiality
+  row4_zh: 集团重要性
+  row4_zh_hk: 集團重要性
+  col1_en: HK$000
+  col1_zh: 千港元
+  col1_zh_hk: 千港元
+  col2_en: Evidence
+  col2_zh: 证据
+  col2_zh_hk: 證據
+  c11: '140'
+  c12_en: Received after year end
+  c12_zh: 年末后收货
+  c12_zh_hk: 年結後收貨
+  c21: '130'
+  c22_en: Received after year end
+  c22_zh: 年末后收货
+  c22_zh_hk: 年結後收貨
+  c31: 0–180
+  c32_en: No receipt evidence
+  c32_zh: 没有收货证据
+  c32_zh_hk: 欠缺收貨證據
+  c41: 600 / 400
+  c42_en: Overall / performance
+  c42_zh: 整体／实际执行
+  c42_zh_hk: 整體／實際執行
+  footer_en: Possible same-way overstatements
+  footer_zh: 同向的潜在高估
+  footer_zh_hk: 同向的可能高估
+  s1_en: >-
+    East and West have confirmed that customers received kits after year end: 140,000 and 130,000. At
+    South, year-end dispatches lack receipt evidence, so 0 to 180,000 may be overstated.
+  s1_zh: 东站和西站已确认客户在年末后才收货，分别是十四万和十三万。南站的年末发货没有收货证据，可能高估零到十八万。
+  s1_zh_hk: 東站同西站已確認顧客喺年結後先收貨，分別係十四萬同十三萬。南站年結發貨欠缺收貨證據，可能高估零至十八萬。
+  s2_en: >-
+    An internal workbook cannot establish the customer's receipt date. These are separate, same-direction
+    possible overstatements in one population, not alternative estimates.
+  s2_zh: 内部工作表证明不了客户的收货日期。这些是同一总体中互不重合、方向相同的潜在高估，不是几种替代估计。
+  s2_zh_hk: 內部試算表證明唔到顧客幾時收貨。呢啲係同一總體入面唔同項目、同一方向嘅可能高估，唔係互相替代嘅估計。
+  s3_en: >-
+    Overall group materiality is 600,000. Group performance materiality is 400,000, used in planning to
+    allow for undetected and uncorrected errors.
+  s3_zh: 集团整体重要性是六十万，集团实际执行的重要性是四十万。后者在计划时使用，用来给未发现和未更正的错报留出余量。
+  s3_zh_hk: 集團整體重要性係六十萬，集團實際執行的重要性係四十萬。後者喺規劃時用，預留未被發現同未更正錯報嘅空間。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What range, and what tests?
+  title_zh: 区间多少？测试什么？
+  title_zh_hk: 範圍多少？測試甚麼？
+  en: >-
+    Compute the lower and upper group cutoff exposure. What would you test at South, and centrally, before
+    accepting the current group audit coverage? Pause and vote.
+  zh: 算出集团收入截止错报的下限和上限。在认可目前的集团审计覆盖范围之前，你会在南站和集团层面分别测试什么？请暂停，投个票。
+  zh_hk: 計出集團收入截止錯報嘅下限同上限。認定而家嘅集團審計範圍足夠之前，你會喺南站同集團層面各自測試乜嘢？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: >-
+    New evidence: South and centre
+  title_zh: 南站和集团层面的新证据
+  title_zh_hk: 南站與集團層面的新證據
+  step1_en: >-
+    South: dated acknowledgements
+  step1_zh: 南站：注明日期的签收记录
+  step1_zh_hk: 南站：附日期的收貨確認
+  step2_en: 160,000 late; 20,000 on time
+  step2_zh: 160,000年末后；20,000按期
+  step2_zh_hk: 160,000年結後；20,000準時
+  step3_en: >-
+    Inter-depot sales: 90,000
+  step3_zh: 站点之间销售：90,000
+  step3_zh_hk: 站與站之間銷售：90,000
+  s1_en: >-
+    A component auditor retrieves dated customer acknowledgements for all South dispatches at issue.
+  s1_zh: 组成部分审计师取得了南站全部涉事发货的客户签收记录，都注明了日期。
+  s1_zh_hk: 組成部分核數師為南站所有涉事出貨，取得附日期嘅顧客收貨確認。
+  s2_en: >-
+    Subject to the group auditor reviewing that work, 160,000 was received after year end and 20,000 on
+    time.
+  s2_zh: 待集团审计师复核这项工作后，可以确认其中十六万的货物在年末后收到，二万按期收到。
+  s2_zh_hk: 待集團核數師覆核呢項工作：其中十六萬嘅貨物喺年結後送達，二萬準時送達。
+  s3_en: >-
+    The central team also finds 90,000 of inter-depot kit sales still in group revenue: a separate population
+    with no overlap.
+  s3_zh: 集团审计团队还发现，站点之间九万的套件销售仍然留在集团收入里。这是另一个不重合的总体。
+  s3_zh_hk: 集團審計團隊另外發現，九萬站與站之間嘅套件銷售仲計喺集團收入入面。呢個係另一個唔重疊嘅總體。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: How much, and what next?
+  title_zh: 高估多少？下一步做什么？
+  title_zh_hk: 高估多少？下一步做甚麼？
+  en: >-
+    How much identified overstatement affects consolidated revenue? Which corrections and follow-up work
+    would you request before clearing the group audit? Pause and vote.
+  zh: 已识别的合并收入高估有多少？集团审计结束前，你会要求做哪些更正和后续工作？请暂停，投个票。
+  zh_hk: 已識別嘅綜合收入高估係幾多？集團審計結案之前，你會要求做邊啲更正同跟進工作？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Do not average shared errors
+  title_zh: 不能把共同错报平均掉
+  title_zh_hk: 共同出錯，不能用平均數掩蓋
+  step1_en: 270,000 known; up to 450,000 > 400,000
+  step1_zh: 已知270,000；最高450,000 > 400,000
+  step1_zh_hk: 已知270,000；最多450,000 > 400,000
+  step2_en: >-
+    South: direct receipt evidence
+  step2_zh: 南站：直接收货证据
+  step2_zh_hk: 南站：直接收貨證據
+  step3_en: >-
+    Centre: trace journals, test process
+  step3_zh: 集团：追查分录，测试流程
+  step3_zh_hk: 集團：追查分錄，測試流程
+  s1_en: >-
+    In the first scenario, exposure is 270,000 known and up to 450,000 in total. The upper end exceeds
+    planning performance materiality.
+  s1_zh: 第一种情境下，已知高估二十七万，合计最高可能四十五万。上限超过计划时用的实际执行的重要性。
+  s1_zh_hk: 第一個情境已知高估二十七萬，合計最多可以去到四十五萬。上限超出規劃採用嘅實際執行的重要性。
+  s2_en: >-
+    At South, request direct receipt evidence, or independently corroborated alternatives, around year
+    end. Review the component work's scope, sample or complete population, dates, exceptions and conclusions.
+  s2_zh: 在南站，要求提供年末前后的直接收货证据，或者经独立佐证的替代证据。复核组成部分工作的范围、样本或完整总体、日期、例外事项和结论。
+  s2_zh_hk: 喺南站，要求取得年結前後嘅直接收貨證據，或者經獨立印證嘅替代證據。覆核組成部分工作嘅範圍、樣本或完整總體、日期、例外事項同結論。
+  s3_en: >-
+    Centrally, trace local journals into the group ledger and test the booking rule and consolidation.
+    Look across all components for the same risk. If access stays limited, escalate the gap; do not decide
+    the opinion from the range alone.
+  s3_zh: >-
+    在集团层面，把各站分录追查到集团总账，测试入账规则和合并流程，并在所有组成部分检查同一风险。如果取证仍受限，要上报证据缺口，不能只凭金额区间决定意见。
+  s3_zh_hk: >-
+    喺集團層面，將各站分錄追查到集團總賬，測試入賬規則同綜合入賬，並喺所有組成部分檢查同一風險。如果取證仍然受限，要向上反映證據缺口，唔可以單憑金額範圍決定意見。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: >-
+    Identified: 520,000
+  title_zh: 已识别高估：520,000
+  title_zh_hk: 已識別高估：520,000
+  step1_en: 430,000 + 90,000 = 520,000
+  step1_zh: 430,000 + 90,000 = 520,000
+  step1_zh_hk: 430,000 + 90,000 = 520,000
+  step2_en: Correct it; assess other balances
+  step2_zh: 更正；另评估其他余额
+  step2_zh_hk: 更正；另評估其他結餘
+  step3_en: Below 600,000; above 400,000
+  step3_zh: 低于600,000；高于400,000
+  step3_zh_hk: 低於600,000；高於400,000
+  s1_en: >-
+    The cutoff error is 140 plus 130 plus 160, or 430,000. Add the separate 90,000 group revenue elimination
+    for 520,000 of consolidated revenue overstatement.
+  s1_zh: 截止错报是十四万加十三万加十六万，合计四十三万。加上单独的九万应抵销未抵销收入，合并收入共高估五十二万。
+  s1_zh_hk: 截止錯報係十四萬加十三萬加十六萬，合計四十三萬。再加獨立嘅九萬應抵銷未抵銷收入，綜合收入合共高估五十二萬。
+  s2_en: >-
+    Request corrections and verify they reach group reporting. Assess receivables, inventory, cost of
+    sales and tax separately; do not assume a 520,000 profit effect.
+  s2_zh: 要求更正，并核实已经反映到集团报表。应收款项、存货、销售成本和税费要另外评估，不能认定利润也高估了五十二万。
+  s2_zh_hk: 要求更正，並核實集團報告已經反映。應收款項、存貨、銷售成本同稅項要另行評估，唔可以假設溢利都高估咗五十二萬。
+  s3_en: >-
+    520,000 is below overall materiality yet above performance materiality. Neither comparison is an automatic
+    clearance rule.
+  s3_zh: 五十二万低于整体重要性，却高于实际执行的重要性。两种比较都不是自动结案的标准。
+  s3_zh_hk: 五十二萬低過整體重要性，但高過實際執行的重要性。兩個比較都唔係自動結案嘅準則。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: The group auditor concludes
+  title_zh: 结论由集团审计师负责
+  title_zh_hk: 結論由集團核數師負責
+  en: >-
+    Review the remaining population and all other misstatements, evaluate qualitative significance, corroborate
+    the adjustments, and document whether group evidence is sufficient. Component performance materiality,
+    when needed, is set separately by the group auditor; it is not group materiality divided across the
+    three depots.
+  zh: >-
+    复核剩余总体和所有其他错报，评价定性影响，验证调整，并记录集团审计证据是否充分。组成部分实际执行的重要性在需要时由集团审计师另行确定，不是把集团重要性分摊给三个站点。
+  zh_hk: >-
+    覆核餘下總體同其他所有錯報，評估質性上嘅重要性，印證調整，並記錄集團審計證據是否充足。組成部分實際執行的重要性有需要時由集團核數師另行釐定，唔係將集團重要性分落三個站。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Same rule, shared risk
+  title_zh: 同一规则，共同风险
+  title_zh_hk: 同一規則，共同風險
+  q1_en: >-
+    First view: 270,000 to 450,000
+  q1_zh: 第一种情境：270,000至450,000
+  q1_zh_hk: 第一個情境：270,000至450,000
+  q2_en: >-
+    Identified: 430,000 + 90,000 = 520,000
+  q2_zh: 已识别：430,000 + 90,000 = 520,000
+  q2_zh_hk: 已識別：430,000 + 90,000 = 520,000
+  s1_en: >-
+    When components share one posting rule, add their errors and test the central process; do not average
+    them away.
+  s1_zh: 各组成部分用同一入账规则时，要把错报加总，并测试集团流程，不能平均掉。
+  s1_zh_hk: 各組成部分用同一套入賬規則，就要將錯報加埋，並測試集團流程，唔可以平均咗佢。
+  s2_en: >-
+    Materiality levels guide planning and evaluation, but they do not decide the opinion on their own.
+  s2_zh: 重要性水平用于计划和评价，但不能单独决定审计意见。
+  s2_zh_hk: 重要性水平用嚟規劃同評估，但唔可以單獨決定審計意見。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 198

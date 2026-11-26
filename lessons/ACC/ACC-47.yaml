@@ -1,0 +1,287 @@
+id: ACC-47
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Which business needs its own line?
+title_zh: 哪些业务需要单独列报？
+title_zh_hk: 哪些業務須單獨披露？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-47
+  kicker_en: ACC-47
+  kicker_zh: ACC-47
+  kicker_zh_hk: ACC-47
+  title_en: Which business needs its own line?
+  title_zh: 哪些业务需要单独列报？
+  title_zh_hk: 哪些業務須單獨披露？
+  image: art/which-business-needs-its-own-line-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Marketing calls all five businesses 'Integrated Marine'. But the decision maker reviews each one separately,
+    so all five are operating segments. Which of them need their own line in the segment note? You test
+    the thresholds for a fictional Hong Kong marine-services group.
+  zh: >-
+    市场部门把五项业务统称为“综合海事服务”。可是决策者分别审阅每项业务的成果，所以五项都是经营分部。分部附注里，哪些必须单独列报？请为一家虚构的香港海事服务集团测试门槛。
+  zh_hk: >-
+    市場推廣部將五項業務統稱「綜合海事服務」。但係決策人逐項審閱佢哋嘅業績，所以五項都係經營分部。分部附註入面，邊啲要單獨披露？請為一間虛構香港海事服務集團測試門檻。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Five units, HK$m
+  title_zh: 五项业务，百万港元
+  title_zh_hk: 五項業務，百萬港元
+  row1_en: A · Port services
+  row1_zh: A · 港口服务
+  row1_zh_hk: A · 港口服務
+  row2_en: B · Vessel supply
+  row2_zh: B · 船舶供应
+  row2_zh_hk: B · 船舶補給
+  row3_en: C · Spare parts
+  row3_zh: C · 备件
+  row3_zh_hk: C · 零件
+  row4_en: D Inspection · E Training
+  row4_zh: D 检验 · E 培训
+  row4_zh_hk: D 檢查 · E 培訓
+  col1_en: >-
+    Revenue: external + internal
+  col1_zh: 收入：对外 + 内部
+  col1_zh_hk: 收入：外部 + 內部
+  col2_en: Profit / (loss)
+  col2_zh: 利润／（亏损）
+  col2_zh_hk: 溢利／（虧損）
+  col3_en: Assets
+  col3_zh: 资产
+  col3_zh_hk: 資產
+  c11: 42 + 30
+  c12: '24'
+  c13: '55'
+  c21: 19 + 10
+  c22: −4
+  c23: '20'
+  c31: 9 + 0
+  c32: '2'
+  c33: '9'
+  c41: 8 · 7
+  c42: 1 · 1
+  c43: 8 · 8
+  footer_en: C, D and E have no internal sales
+  footer_zh: C、D、E没有内部销售
+  footer_zh_hk: C、D、E沒有內部銷售
+  s1_en: >-
+    A segment qualifies if it reaches 10 percent of combined segment revenue including internal sales,
+    of combined segment assets, or of the larger of total profits and absolute total losses.
+  s1_zh: >-
+    分部只要达到以下任一项的百分之十就算达标：全部分部收入合计，包括内部销售；全部分部资产合计；或者盈利分部利润合计和亏损分部亏损绝对值两者中较大的那个。
+  s1_zh_hk: >-
+    分部只要達到以下任何一項嘅百分之十就達標：分部收入合計，包括內部銷售；分部資產合計；或者溢利分部溢利合計同虧損分部虧損絕對值，兩者之中較高嗰個。
+  s2_en: >-
+    Then the separately reported segments must cover at least 75 percent of consolidated external revenue.
+    If not, management adds the largest remaining external contributor first.
+  s2_zh: 然后看单独列报的分部，能不能覆盖合并对外收入的至少百分之七十五。不够的话，管理层先加入剩下分部中对外收入最多的那个。
+  s2_zh_hk: 然後睇單獨披露嘅分部，係咪覆蓋到綜合外部收入最少百分之七十五。唔夠嘅話，管理層先加入餘下分部之中外部收入最高嗰個。
+  s3_en: >-
+    This is the group's first year in scope, with no prior-year reportable segments, and their economics
+    differ, so no aggregation is justified.
+  s3_zh: 这是集团第一年适用分部报告要求，上年没有报告分部。五项业务的经济特征不同，没有归并的依据。
+  s3_zh_hk: 呢個係集團第一年受呢項規定規管，上年冇須報告分部。五項業務嘅經濟特徵唔同，冇理據合併。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which units get a line?
+  title_zh: 哪些业务要单独列报？
+  title_zh_hk: 哪些業務要單獨披露？
+  en: >-
+    Which units must be separate on this draft? Calculate the three thresholds, then check the external-revenue
+    coverage. Pause and vote.
+  zh: 按这份草稿，哪些业务必须单独列报？先算出三项门槛，再检查对外收入覆盖率。请暂停，投个票。
+  zh_hk: 按呢份草稿，邊啲業務一定要單獨披露？先計三項門檻，再檢查外部收入覆蓋率。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 22
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Corrected inspection report
+  title_zh: 更正后的检验业务报告
+  title_zh_hk: 修正後的檢查業務報告
+  step1_en: >-
+    D: HK$5m loss, not 1m profit
+  step1_zh: D：亏损5百万，而非盈利1百万
+  step1_zh_hk: D：虧損5百萬，而非溢利1百萬
+  step2_en: Nothing else changes
+  step2_zh: 其他数字不变
+  step2_zh_hk: 其他數字不變
+  step3_en: Same year, two drafts
+  step3_zh: 同一年度的两份草稿
+  step3_zh_hk: 同一年度的兩份草稿
+  s1_en: >-
+    The decision maker's corrected inspection report shows a 5 million loss instead of a 1 million profit.
+  s1_zh: 决策者拿到更正后的检验业务报告：原先盈利一百万港元，现在改为亏损五百万。
+  s1_zh_hk: 決策人手上嘅檢查業務報告修正咗：原本溢利一百萬港元，而家變成虧損五百萬。
+  s2_en: No other figures or business characteristics change.
+  s2_zh: 其他数字和业务特征都不变。
+  s2_zh_hk: 其他數字同業務特徵都唔變。
+  s3_en: >-
+    These are two drafts for the same year; no earlier disclosure is being withdrawn.
+  s3_zh: 这是同一年的两份草稿，不涉及撤回以前的披露。
+  s3_zh_hk: 呢個係同一年度嘅兩份草稿，冇撤回任何以往披露。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Does a loss change the lines?
+  title_zh: 亏损会改变列报吗？
+  title_zh_hk: 虧損會改變披露嗎？
+  en: >-
+    Does the correction change which segments get separate lines? Compute the revised profit-or-loss threshold
+    and coverage, and show where the remaining external sales sit. Pause and vote.
+  zh: 这个更正会改变单独列报的分部吗？算出更新后的损益门槛和覆盖率，再说明剩下的对外销售收入放在哪里。请暂停，投个票。
+  zh_hk: 呢個修正會唔會改變單獨披露嘅分部？重算損益門檻同覆蓋率，再講清楚餘下嘅外部銷售點樣披露。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: >-
+    First draft: A, B, then C
+  title_zh: 第一稿：A、B，再加C
+  title_zh_hk: 第一稿：A、B，再加C
+  step1_en: >-
+    Cutoffs: revenue 12.5; assets 10; 2.8
+  step1_zh: 门槛：收入12.5；资产10；业绩2.8
+  step1_zh_hk: 門檻：收入12.5；資產10；業績2.8
+  step2_en: A + B = 61/85 = 71.8%
+  step2_zh: A + B = 61/85 = 71.8%
+  step2_zh_hk: A + B = 61/85 = 71.8%
+  step3_en: >-
+    Add C: 70/85 = 82.4%
+  step3_zh: 加C：70/85 = 82.4%
+  step3_zh_hk: 加C：70/85 = 82.4%
+  s1_en: >-
+    Combined segment revenue is 85 plus 40, or 125 million, so the revenue cutoff is 12.5. Assets total
+    100, so that cutoff is 10. Profits total 28 against 4 of losses, so the result cutoff is 2.8. Only
+    A and B pass.
+  s1_zh: >-
+    分部收入合计是八十五加四十，即一亿二千五百万，门槛一千二百五十万。资产合计一亿，门槛一千万。盈利合计二千八百万，亏损四百万，取较大值，门槛二百八十万。只有 A 和 B 达标。
+  s1_zh_hk: >-
+    分部收入合計係八十五加四十，即係一億二千五百萬，門檻一千二百五十萬。資產合計一億，門檻一千萬。溢利合計二千八百萬，虧損四百萬，取較高者，門檻二百八十萬。只有 A 同 B 達標。
+  s2_en: >-
+    A and B cover 61 of 85 million of external revenue, or 71.8 percent: below 75.
+  s2_zh: 对外收入一共八千五百万，A 和 B 占六千一百万，即百分之七十一点八，不到百分之七十五。
+  s2_zh_hk: 外部收入一共八千五百萬，A 同 B 佔六千一百萬，即係百分之七十一點八，未夠百分之七十五。
+  s3_en: >-
+    Adding C, the largest remaining external contributor, brings coverage to 70 of 85, or 82.4 percent.
+    D and E go to 'all other segments', with 15 million of external sales.
+  s3_zh: 加入剩下分部中对外收入最多的 C，覆盖率升到八十五分之七十，即百分之八十二点四。D 和 E 列入“所有其他分部”，对外销售合计一千五百万。
+  s3_zh_hk: >-
+    加入餘下分部之中外部收入最高嘅 C，覆蓋率升到八十五分之七十，即係百分之八十二點四。D 同 E 歸入「所有其他分部」，外部銷售合計一千五百萬。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: >-
+    After the correction: A, B and D
+  title_zh: 更正后：A、B和D
+  title_zh_hk: 修正後：A、B和D
+  step1_en: Profits 27; losses 9 → cutoff 2.7
+  step1_zh: 盈利27；亏损9 → 门槛2.7
+  step1_zh_hk: 溢利27；虧損9 → 門檻2.7
+  step2_en: A + B + D = 81.2%; C, E other 16
+  step2_zh: A + B + D = 81.2%；C、E其他16
+  step2_zh_hk: A + B + D = 81.2%；C、E其他16
+  step3_en: >-
+    Eliminate 40: 125 → 85
+  step3_zh: 抵销内部40：125 → 85
+  step3_zh_hk: 抵銷內部40：125 → 85
+  s1_en: >-
+    Profitable units now earn 27 million; loss-making units have 9 million of losses. The cutoff is 2.7,
+    so D qualifies on its 5 million loss.
+  s1_zh: 现在盈利分部合计赚二千七百万，亏损分部亏损合计九百万。门槛是二百七十万，D 凭五百万亏损达标。
+  s1_zh_hk: 而家溢利分部合計賺二千七百萬，虧損分部虧損合計九百萬。門檻係二百七十萬，所以 D 憑五百萬虧損達標。
+  s2_en: >-
+    A, B and D reach 69 of 85, or 81.2 percent, without C. C and E sit in 'all other segments', with 16
+    million of external sales.
+  s2_zh: 不加 C，A、B、D 已经覆盖八十五分之六十九，即百分之八十一点二。C 和 E 列入“所有其他分部”，对外销售合计一千六百万。
+  s2_zh_hk: 唔使加 C，A、B、D 已經覆蓋八十五分之六十九，即係百分之八十一點二。C 同 E 歸入「所有其他分部」，外部銷售合計一千六百萬。
+  s3_en: >-
+    In both drafts, eliminate 40 million of internal sales from the 125 million to reach 85 million of
+    consolidated external revenue. 'All other segments' is described separately from that elimination.
+  s3_zh: 两份草稿都要从一亿二千五百万里抵销四千万内部销售，得到八千五百万合并对外收入。“所有其他分部”要和抵销项目分开说明。
+  s3_zh_hk: 兩份草稿都要喺一億二千五百萬入面抵銷四千萬內部銷售，得出八千五百萬綜合外部收入。「所有其他分部」要同抵銷項目分開說明。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Use the right denominator
+  title_zh: 每项测试用对分母
+  title_zh_hk: 每項測試用對分母
+  en: >-
+    Each gate has its own denominator. The 75 percent test uses external revenue, not net segment profit
+    or total revenue. A loss can itself trigger disclosure. In a real report, required prior-year presentation
+    or a decision to show a small segment voluntarily could change the result.
+  zh: >-
+    每项测试都有自己的分母。百分之七十五的测试用对外收入，不是分部净利润，也不是收入总额。亏损本身也可能触发单独列报。实际报告中，上年的列报要求，或者自愿单列较小分部的决定，都可能改变结果。
+  zh_hk: >-
+    每項測試都有自己嘅分母。百分之七十五嘅測試用外部收入，唔係分部淨溢利，亦唔係總收入。虧損本身都可以觸發單獨披露。實際報告入面，上年嘅列報要求，或者自願單獨披露較細分部嘅決定，都可能改變結果。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Three 10% gates, then 75%
+  title_zh: 三项10%门槛，再看75%
+  title_zh_hk: 三項10%門檻，再看75%
+  q1_en: >-
+    Draft 1: A, B, C; others 15
+  q1_zh: 第一稿：A、B、C；其他15
+  q1_zh_hk: 第一稿：A、B、C；其他15
+  q2_en: >-
+    Corrected: A, B, D; others 16
+  q2_zh: 更正后：A、B、D；其他16
+  q2_zh_hk: 修正後：A、B、D；其他16
+  s1_en: >-
+    Test revenue, assets and the larger of profits or absolute losses at 10 percent, then check that separate
+    segments cover 75 percent of external revenue.
+  s1_zh: 先用百分之十测试收入、资产，以及利润和亏损绝对值中较大者，再检查单独列报的分部是否覆盖百分之七十五的对外收入。
+  s1_zh_hk: 先用百分之十測試收入、資產，同埋溢利同虧損絕對值之中較高者，再檢查單獨披露嘅分部係咪覆蓋百分之七十五外部收入。
+  s2_en: >-
+    A segment's loss can earn it a separate line, and change which other segments are needed.
+  s2_zh: 分部亏损也可能让它必须单独列报，并改变还需要纳入哪些其他分部。
+  s2_zh_hk: 分部虧損都可以令佢要單獨披露，亦會改變仲需要加入邊啲其他分部。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 196

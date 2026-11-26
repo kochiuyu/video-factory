@@ -1,0 +1,289 @@
+id: ACC-46
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: An 18% holding. Does it belong on the associate line?
+title_zh: 持股 18%，应列作对联营企业的投资吗？
+title_zh_hk: 持股 18%，應列為聯營公司投資嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-46
+  kicker_en: ACC-46
+  kicker_zh: ACC-46
+  kicker_zh_hk: ACC-46
+  title_en: An 18% holding. Does it belong on the associate line?
+  title_zh: 持股 18%，应列作对联营企业的投资吗？
+  title_zh_hk: 持股 18%，應列為聯營公司投資嗎？
+  image: art/a-board-seat-not-a-vote-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A Hong Kong-listed control-systems group pays 1.8 million Hong Kong dollars for 18 percent of a fictional
+    Foshan assembly company. Below 20 percent, is it just an ordinary investment, or an associate? You
+    review it in the investor's consolidated accounts.
+  zh: >-
+    一家香港上市控制系统集团花一百八十万港元，买入一家虚构佛山装配企业百分之十八的股权。持股不到百分之二十，它只是普通投资，还是联营企业？请在投资方的合并财务报表里作出判断。
+  zh_hk: >-
+    一間香港上市控制系統集團用一百八十萬港元，買入一間虛構佛山裝配企業百分之十八嘅股權。持股唔夠百分之二十，佢只係一般投資，定係聯營公司？請喺投資方嘅綜合財務報表層面判斷。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: First-round inputs
+  title_zh: 第一轮会计数据
+  title_zh_hk: 第一輪會計資料
+  row1_en: Investment cost, 1 January
+  row1_zh: 1月1日投资成本
+  row1_zh_hk: 1月1日投資成本
+  row2_en: Investee after-tax profit
+  row2_zh: 被投资方本年税后利润
+  row2_zh_hk: 被投資方本年除稅後溢利
+  row3_en: Investee year-end dividend
+  row3_zh: 被投资方年末现金股利
+  row3_zh_hk: 被投資方年結現金股息
+  row4_en: Investor's rights
+  row4_zh: 投资方的权利
+  row4_zh_hk: 投資方的權利
+  col1_en: HK$
+  col1_zh: 港元
+  col1_zh_hk: 港元
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11: 1,800,000
+  c12_en: 18% of equity and votes
+  c12_zh: 18%股权及表决权
+  c12_zh_hk: 18%股權及表決權
+  c21: 600,000
+  c22_en: Whole year
+  c22_zh: 全年
+  c22_zh_hk: 全年
+  c31: 200,000
+  c32_en: Paid pro rata
+  c32_zh: 按比例支付
+  c32_zh_hk: 按比例支付
+  c41_en: 1 seat
+  c41_zh: 1席
+  c41_zh_hk: 1席
+  c42_en: Voting director
+  c42_zh: 有表决权的董事
+  c42_zh_hk: 有表決權的董事
+  footer_en: Another holder has control
+  footer_zh: 另一名股东控制被投资方
+  footer_zh_hk: 另一名股東控制被投資方
+  s1_en: >-
+    On 1 January the group pays 1.8 million for 18 percent of both the ordinary equity and the votes.
+    It can appoint a voting director who takes a real part in the budget, operating plan and distribution
+    policy.
+  s1_zh: >-
+    一月一日，集团付一百八十万，取得百分之十八的普通股权和百分之十八的表决权。它可以委派一名有表决权的董事，实质参与年度预算、经营计划和分配政策。
+  s1_zh_hk: 一月一日，集團俾一百八十萬，取得百分之十八普通股股權同百分之十八表決權。佢可以委任一名有表決權嘅董事，實質參與年度預算、營運計劃同分派政策。
+  s2_en: >-
+    An unrelated shareholder controls the investee. The investor cannot direct policy on its own, and
+    nothing requires its joint consent.
+  s2_zh: 被投资方由一名非关联股东控制。投资方不能单独主导政策，也没有任何安排必须取得它的共同同意。
+  s2_zh_hk: 被投資方由一名無關連股東控制。投資方唔可以自己決定政策，亦冇任何安排規定要佢共同同意。
+  s3_en: >-
+    The investee earns 600,000 after tax and pays a 200,000 year-end cash dividend, pro rata. Ignore tax,
+    impairment and fair-value adjustments.
+  s3_zh: 被投资方全年税后利润六十万，年末按比例派发二十万现金股利。不考虑税费、减值和公允价值调整。
+  s3_zh_hk: 被投資方全年除稅後溢利六十萬，年結按比例派二十萬現金股息。唔考慮稅項、減值同公平值調整。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Associate at 18%?
+  title_zh: 18%算联营企业吗？
+  title_zh_hk: 18%算聯營公司嗎？
+  en: >-
+    Would you classify the 18 percent holding as an associate? What profit, cash dividend received and
+    closing investment balance should the investor report? Pause and vote.
+  zh: 你会把这百分之十八的持股列为联营企业投资吗？投资方应该列报多少应占利润、收到多少现金股利、期末投资余额是多少？请暂停，投个票。
+  zh_hk: 你會唔會將呢百分之十八持股列為聯營公司投資？投資方應該列報幾多應佔溢利、收到幾多現金股息、期末投資結餘係幾多？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 22
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: >-
+    Revised file: bought on 1 July
+  title_zh: 更正：7月1日才取得
+  title_zh_hk: 修訂：7月1日才收購
+  step1_en: >-
+    Before purchase: 250,000
+  step1_zh: 取得前利润：250,000
+  step1_zh_hk: 收購前溢利：250,000
+  step2_en: >-
+    After purchase: 350,000
+  step2_zh: 取得后利润：350,000
+  step2_zh_hk: 收購後溢利：350,000
+  step3_en: Dividend 200,000 paid after July
+  step3_zh: 200,000股利在7月后支付
+  step3_zh_hk: 200,000股息在7月後支付
+  s1_en: >-
+    In a revised file, the same purchase and rights actually began on 1 July, not 1 January. The investee
+    still earned 600,000 for the whole year, 250,000 of it before the acquisition.
+  s1_zh: 更正后的文件显示，同一笔投资和相关权利其实从七月一日才开始，不是一月一日。被投资方全年利润仍然是六十万，其中二十五万在取得投资之前。
+  s1_zh_hk: 修訂資料顯示，同一宗收購同實質權利，其實由七月一日先生效，唔係一月一日。被投資方全年溢利仍然係六十萬，其中二十五萬喺收購之前賺到。
+  s2_en: >-
+    The other 350,000 was earned after the acquisition, according to the reviewed split.
+  s2_zh: 按复核后的分期金额，其余三十五万是在取得投资之后实现的。
+  s2_zh_hk: 按覆核後嘅分期金額，其餘三十五萬係收購之後先賺到。
+  s3_en: >-
+    The 200,000 dividend was declared and paid after the July purchase, shared pro rata by all ordinary
+    shareholders, including this investor.
+  s3_zh: 那二十万股利全部在七月取得投资后宣告并支付，包括投资方在内的普通股股东按比例分配。
+  s3_zh_hk: 嗰二十萬股息全數喺七月收購之後宣派同支付，包括投資方在內嘅普通股股東按比例分配。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Is halving the profit enough?
+  title_zh: 全年利润除以二就行吗？
+  title_zh_hk: 全年溢利對半分可以嗎？
+  en: >-
+    Using the revised acquisition date, what profit, dividend and closing balance belong in the group
+    accounts? Is it enough simply to halve the annual profit? Pause and vote.
+  zh: 按更正后的取得日，集团报表应列报多少应占利润、股利和期末余额？直接把全年利润除以二可以吗？请暂停，投个票。
+  zh_hk: 按修訂嘅收購日，集團報表應該列報幾多溢利、股息同期末結餘？將全年溢利直接對半分得唔得？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Influence is the policy right
+  title_zh: 重大影响取决于政策参与权
+  title_zh_hk: 重大影響取決於參與政策
+  step1_en: Presumption below 20% is rebutted
+  step1_zh: 低于20%的推定被推翻
+  step1_zh_hk: 低於20%的推定被推翻
+  step2_en: Share of profit 18% × 600,000 = 108,000
+  step2_zh: 应占利润18% × 600,000 = 108,000
+  step2_zh_hk: 應佔溢利18% × 600,000 = 108,000
+  step3_en: Dividend 36,000 reduces the investment
+  step3_zh: 股利36,000冲减投资余额
+  step3_zh_hk: 股息36,000扣減投資結餘
+  s1_en: >-
+    Below 20 percent of votes there is a presumption against significant influence, not a ban. The voting
+    board seat and real participation in budget, operating and distribution policy rebut it. There is
+    no control or joint control, so use the equity method.
+  s1_zh: >-
+    表决权低于百分之二十，只是推定没有重大影响，不是禁止。有表决权的董事席位，加上实质参与预算、经营和分配政策，就能推翻这个推定。没有控制或共同控制，所以用权益法。
+  s1_zh_hk: >-
+    表決權低過百分之二十，只係推定冇重大影響，唔係禁止。有表決權嘅董事席位，加埋實質參與預算、營運同分派政策，足以推翻呢個推定。既冇控制，亦冇共同控制，所以用權益法。
+  s2_en: >-
+    Include 18 percent of 600,000, or 108,000, in profit or loss. The dividend brings cash of 18 percent
+    of 200,000, or 36,000.
+  s2_zh: 按百分之十八乘六十万，确认投资收益十万八千，计入损益。收到的股利是百分之十八乘二十万，即三万六千。
+  s2_zh_hk: 按百分之十八乘六十萬，確認十萬八千計入損益。股息帶嚟嘅現金係百分之十八乘二十萬，即係三萬六千。
+  s3_en: >-
+    Under the equity method that dividend reduces the investment balance; it is not a second line of income.
+    The closing balance is 1,800,000 plus 108,000 minus 36,000, or 1,872,000.
+  s3_zh: 在权益法下，这笔股利冲减投资账面价值，不能再确认一次收益。期末余额是一百八十万加十万八千减三万六千，等于一百八十七万二千。
+  s3_zh_hk: 按權益法，呢筆股息要扣減投資結餘，唔可以再列一筆收益。期末結餘係一百八十萬加十萬八千減三萬六千，即係一百八十七萬二千。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Start when influence begins
+  title_zh: 从取得重大影响之日算起
+  title_zh_hk: 從取得重大影響之日起計
+  step1_en: 18% × 350,000 = 63,000
+  step1_zh: 18% × 350,000 = 63,000
+  step1_zh_hk: 18% × 350,000 = 63,000
+  step2_en: Cash 36,000; closing 1,827,000
+  step2_zh: 现金36,000；期末余额1,827,000
+  step2_zh_hk: 現金36,000；期末結餘1,827,000
+  step3_en: No share of pre-influence profit
+  step3_zh: 不确认影响开始前的利润份额
+  step3_zh_hk: 不確認影響力開始前的溢利份額
+  s1_en: >-
+    For the July acquisition, use the documented post-acquisition profit of 350,000, not half of 600,000.
+    The equity-method profit is 18 percent of 350,000, or 63,000.
+  s1_zh: 如果七月才取得投资，要用有记录支持的取得后利润三十五万，不是全年六十万的一半。权益法投资收益是百分之十八乘三十五万，即六万三千。
+  s1_zh_hk: 如果七月先收購，就要用有資料佐證嘅收購後溢利三十五萬，唔係全年六十萬嘅一半。按權益法確認嘅溢利係百分之十八乘三十五萬，即係六萬三千。
+  s2_en: >-
+    Cash received is still 36,000, and the closing balance is 1,827,000. Share of profit and the investment
+    balance need not move by the same amount.
+  s2_zh: 收到的股利仍然是三万六千，期末余额是一百八十二万七千。应占利润和投资账面价值的变动不一定相等。
+  s2_zh_hk: 收到嘅現金仍然係三萬六千，期末結餘係一百八十二萬七千。應佔溢利同投資賬面值嘅變動唔一定相同。
+  s3_en: >-
+    Recognising a share of the profit earned before influence began would overstate the investor's current-year
+    result.
+  s3_zh: 如果把取得投资前的利润份额也计进去，就会高估投资方本年的业绩。
+  s3_zh_hk: 如果將收購前溢利嘅份額都計埋，就會高估投資方本年嘅業績。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: A title alone is not influence
+  title_zh: 单凭董事头衔不足以判断
+  title_zh_hk: 單憑董事職銜不足以判斷
+  en: >-
+    The director's title alone should not settle the influence test. If the investor had only an observer
+    seat and no policy participation, what evidence would you need? No alternative measurement is assumed,
+    and this is the investor's consolidated accounts, not its separate accounts.
+  zh: >-
+    单凭董事头衔不能判断是否有重大影响。如果投资方只有观察员席位，也不参与政策决定，还需要什么证据？本案不假设其他计量方法，讨论的是投资方的合并财务报表，不是单独财务报表。
+  zh_hk: >-
+    單憑董事職銜唔可以判定有冇重大影響。如果投資方只得觀察員席位，又唔參與制定政策，仲要搵乜嘢證據？本案唔設其他計量方法，講嘅係投資方嘅綜合財務報表，唔係獨立財務報表。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Policy rights, then equity
+  title_zh: 看政策参与权，再用权益法
+  title_zh_hk: 看參與政策，再用權益法
+  q1_en: >-
+    January: 108,000 profit; 1,872,000
+  q1_zh: 1月取得：收益108,000；余额1,872,000
+  q1_zh_hk: 1月收購：溢利108,000；結餘1,872,000
+  q2_en: >-
+    July: 63,000 profit; 1,827,000
+  q2_zh: 7月取得：收益63,000；余额1,827,000
+  q2_zh_hk: 7月收購：溢利63,000；結餘1,827,000
+  s1_en: >-
+    A holding below 20 percent can still be an associate when the investor participates in policy decisions.
+    A dividend reduces the investment; it is not extra income.
+  s1_zh: 持股低于百分之二十，如果能参与政策决策，仍然可能是联营企业。股利冲减投资余额，不是额外收益。
+  s1_zh_hk: 持股低過百分之二十，如果參與到政策決定，仍然可以係聯營公司。股息扣減投資結餘，唔係額外收益。
+  s2_en: >-
+    Equity accounting starts when significant influence begins, using profit earned after that date.
+  s2_zh: 权益法从取得重大影响之日开始，只计这之后实现的利润。
+  s2_zh_hk: 權益法由取得重大影響嗰日開始，只計之後賺到嘅溢利。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 194

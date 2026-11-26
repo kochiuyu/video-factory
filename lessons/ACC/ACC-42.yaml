@@ -1,0 +1,299 @@
+id: ACC-42
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The lender granted more time. When did the right change?
+title_zh: 贷款方给了宽限期，延期偿还权何时发生变化？
+title_zh_hk: 貸款人給了寬限期。延期還款權何時改變？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-42
+  kicker_en: ACC-42
+  kicker_zh: ACC-42
+  kicker_zh_hk: ACC-42
+  title_en: The lender granted more time. When did the right change?
+  title_zh: 贷款方给了宽限期，延期偿还权何时发生变化？
+  title_zh_hk: 貸款人給了寬限期。延期還款權何時改變？
+  image: art/when-did-the-lender-grant-time-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Two equipment loans are not due until 2029, so the draft balance sheet calls both non-current. But
+    one lender could already demand its money at year-end. You are Mei, the controller of a fictional
+    Hong Kong packaging supplier, reviewing the loans before the accounts are authorised on 20 February
+    2026.
+  zh: >-
+    两笔设备贷款要到二零二九年才到期，所以资产负债表草稿把它们都列为非流动。可是，其中一家贷款方在年末已经有权要求还款。你是 Mei，一家虚构的香港包装用品供应商的财务主管，要在二零二六年二月二十日报表获准报出前复核这两笔贷款。
+  zh_hk: >-
+    兩筆設備貸款要到二零二九年先到期，所以草擬嘅資產負債表將佢哋都列為非流動。但係，其中一個貸款人喺年結時已經有權要求還款。你係 Mei，一間虛構香港包裝用品供應商嘅財務主管，要喺二零二六年二月二十日報表獲批准之前覆核呢兩筆貸款。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: At 31 December 2025, HK$m
+  title_zh: 2025年12月31日，百万港元
+  title_zh_hk: 2025年12月31日，百萬港元
+  row1_en: Loan A
+  row1_zh: 贷款 A
+  row1_zh_hk: 貸款 A
+  row2_en: Loan B
+  row2_zh: 贷款 B
+  row2_zh_hk: 貸款 B
+  row3_en: Current assets
+  row3_zh: 流动资产
+  row3_zh_hk: 流動資產
+  row4_en: Other current liabilities
+  row4_zh: 其他流动负债
+  row4_zh_hk: 其他流動負債
+  col1_en: HK$m
+  col1_zh: 百万港元
+  col1_zh_hk: 百萬港元
+  col2_en: Test date / note
+  col2_zh: 考核日／说明
+  col2_zh_hk: 遵約日／說明
+  c11: '18'
+  c12_en: 30 Nov 2025
+  c12_zh: 2025年11月30日
+  c12_zh_hk: 2025年11月30日
+  c21: '12'
+  c22_en: 30 Jun 2026
+  c22_zh: 2026年6月30日
+  c22_zh_hk: 2026年6月30日
+  c31: '28'
+  c32_en: Before the two loans
+  c32_zh: 未计两笔贷款
+  c32_zh_hk: 未計兩筆貸款
+  c41: '10'
+  c42_en: Before the two loans
+  c42_zh: 未计两笔贷款
+  c42_zh_hk: 未計兩筆貸款
+  footer_en: Interest cover ≥ 3.0; both due 2029
+  footer_zh: 利息保障倍数不低于3.0；均于2029年到期
+  footer_zh_hk: 利息保障倍數最少3.0；均於2029年到期
+  s1_en: >-
+    Both lenders require interest cover of at least 3.0. Each can demand its principal immediately if
+    its own covenant is breached, and the loans do not trigger each other.
+  s1_zh: 两家贷款方都要求利息保障倍数不低于三点零。哪笔贷款违反自己的契约条款，那家贷款方就可以要求立即偿还本金，两笔贷款互不触发。
+  s1_zh_hk: 兩個貸款人都要求利息保障倍數最少三點零。邊筆貸款違反自己嘅契約條款，嗰個貸款人就可以要求即時還本金，兩筆貸款唔會互相觸發。
+  s2_en: >-
+    A's test date was 30 November. Its lender checks only in January, but the evidence confirms A's ratio
+    was 2.9, so the lender could demand repayment from that date.
+  s2_zh: A 的考核日是十一月三十日。贷款方到一月才检查，但证据确认 A 当时的倍数只有二点九，所以从那天起贷款方已经有权要求还款。
+  s2_zh_hk: A 嘅遵約日係十一月三十日。貸款人一月先核查，但證據證實 A 當時嘅倍數得二點九，所以由嗰日起貸款人已經有權要求還款。
+  s3_en: >-
+    B is first tested on June 2026 figures; on year-end figures it would also be 2.9. On 20 January, A's
+    lender signs a binding grace period to 31 March 2027.
+  s3_zh: >-
+    B 第一次考核用二零二六年六月的数据；如果用年末数据试算，也是二点九。一月二十日，A 的贷款方签署了有约束力的宽限期，到二零二七年三月三十一日为止。
+  s3_zh_hk: >-
+    B 第一次測試用二零二六年六月嘅數據；如果用年結數字試算，都係二點九。一月二十日，A 嘅貸款人簽咗具約束力嘅寬限安排，直至二零二七年三月三十一日。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Where does each loan go?
+  title_zh: 两笔贷款怎样分类？
+  title_zh_hk: 兩筆貸款點樣分類？
+  en: >-
+    Where should Mei put each loan at 31 December? What is the current ratio, and what should readers
+    learn from the notes? Pause and vote.
+  zh: 截至十二月三十一日，Mei 应该怎样列报这两笔贷款？流动比率是多少？附注要让读者知道什么？请暂停，投个票。
+  zh_hk: 截至十二月三十一日，Mei 應該點樣分類呢兩筆貸款？流動比率係幾多？附註要俾讀者知道乜嘢？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 22
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: >-
+    Replay: a December letter
+  title_zh: 替代情境：12月的函件
+  title_zh_hk: 另一情境：12月的函件
+  step1_en: Grace binding on 29 Dec 2025
+  step1_zh: 宽限于2025年12月29日生效
+  step1_zh_hk: 寬限安排於2025年12月29日生效
+  step2_en: Still ends 31 March 2027
+  step2_zh: 仍于2027年3月31日结束
+  step2_zh_hk: 仍於2027年3月31日屆滿
+  step3_en: A still failed November
+  step3_zh: A 仍未通过11月考核
+  step3_zh_hk: A 仍未通過11月測試
+  s1_en: >-
+    Replay the decision. In this alternative history, A's signed grace period was binding on 29 December
+    2025, not first granted in January.
+  s1_zh: 现在换一个情境：A 的宽限安排不是一月才批下来，而是二零二五年十二月二十九日已经签署并生效。
+  s1_zh_hk: 而家換個情境：A 嘅寬限安排唔係一月先批出，而係二零二五年十二月二十九日已經簽署、具約束力。
+  s2_en: Its scope and the 31 March 2027 end date are unchanged.
+  s2_zh: 适用范围不变，仍然在二零二七年三月三十一日结束。
+  s2_zh_hk: 寬限範圍不變，仍然喺二零二七年三月三十一日屆滿。
+  s3_en: >-
+    A still failed the November test, and the figures, B's agreement and the authorisation date stay the
+    same.
+  s3_zh: A 仍然没通过十一月的考核；数字、B 的合同和批准报出日也都不变。
+  s3_zh_hk: A 依然冇通過十一月測試；數字、B 嘅合約同批准日期都不變。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Does the letter change A?
+  title_zh: 这封函件会改变 A 吗？
+  title_zh_hk: 這封函件會改變 A 嗎？
+  en: >-
+    Would A's classification and the current ratio change under the December letter? What warning about
+    B should remain even if both loans are non-current? Pause and vote.
+  zh: 有了这封十二月的函件，A 的分类和流动比率会变吗？就算两笔贷款都列为非流动，关于 B 还需要保留什么风险提示？请暂停，投个票。
+  zh_hk: 有咗呢封十二月嘅函件，A 嘅分類同流動比率會唔會變？就算兩筆貸款都屬非流動，關於 B 仲要保留乜嘢風險提示？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: A lost its right before year-end
+  title_zh: A 的延期偿还权在年末前已丧失
+  title_zh_hk: A 的延期還款權在年結前已喪失
+  step1_en: >-
+    A: current, HK$18m
+  step1_zh: A：流动负债18百万
+  step1_zh_hk: A：流動負債18百萬
+  step2_en: >-
+    B: non-current, HK$12m
+  step2_zh: B：非流动负债12百万
+  step2_zh_hk: B：非流動負債12百萬
+  step3_en: Ratio 28 ÷ (10 + 18) = 1.0
+  step3_zh: 比率28 ÷ (10 + 18) = 1.0
+  step3_zh_hk: 比率28 ÷ (10 + 18) = 1.0
+  s1_en: >-
+    A is current. Missing the November condition let its lender demand payment at 31 December. January's
+    check confirms an earlier breach; it does not move the compliance date. The January grace period changes
+    the contract only from January.
+  s1_zh: >-
+    A 应列为流动负债。十一月没达标，十二月三十一日贷款方已经有权要求还款。一月的检查只是证实先前的违约，不会把考核日往后推。一月签的宽限安排从一月起才改变合同。
+  s1_zh_hk: >-
+    A 應該列為流動負債。十一月未達標，十二月三十一日貸款人已經可以催還。一月嘅核查只係證實較早嘅違約，唔會改變遵約日。一月簽嘅寬限安排由一月起先改變合約。
+  s2_en: >-
+    B is non-current. It need not comply until June, using June figures. A December ratio below 3.0 warns
+    of possible difficulty, but it is not a breach.
+  s2_zh: B 列为非流动负债。它要到六月才须达标，而且用六月的数据。十二月试算低于三点零，只是提示将来可能有困难，并不构成违约。
+  s2_zh_hk: B 屬非流動負債。佢要到六月先須要遵約，而且用六月嘅數據。十二月試算低過三點零，只係提示將來可能有困難，唔算違約。
+  s3_en: >-
+    The draft ratio is 28 divided by 10, or 2.8. Moving A's 18 million into current liabilities gives
+    28 divided by 28, or 1.0. Classification changes presentation, not the cash or principal owed.
+  s3_zh: >-
+    原稿的流动比率是二十八除以十，等于二点八。把 A 的一千八百万转入流动负债后，变成二十八除以二十八，等于一点零。分类改变的是列报，不是现金或尚欠的本金。
+  s3_zh_hk: >-
+    初稿嘅流動比率係二十八除十，即係二點八。將 A 嘅一千八百萬轉入流動負債之後，就變成二十八除二十八，即係一點零。分類改變嘅係列報，唔係現金或者未還嘅本金。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Tell readers both risks
+  title_zh: 两类风险都要披露
+  title_zh_hk: 兩種風險都要交代
+  step1_en: >-
+    A: disclose the January grace period
+  step1_zh: A：披露1月的宽限期
+  step1_zh_hk: A：披露1月的寬限安排
+  step2_en: >-
+    B: 3.0 test in June; 2.9 on Dec figures
+  step2_zh: B：6月考核3.0；12月试算2.9
+  step2_zh_hk: B：6月測試3.0；12月試算2.9
+  step3_en: >-
+    December letter: both non-current, 2.8
+  step3_zh: 12月函件：均为非流动，2.8
+  step3_zh_hk: 12月函件：均屬非流動，2.8
+  s1_en: >-
+    For A, explain the November breach and the 18 million current principal. Disclose the January grace
+    period as a material non-adjusting event: its duration and its effect on the lender's right to demand
+    repayment.
+  s1_zh: >-
+    对于 A，要说明十一月的违约，以及列为流动负债的一千八百万本金。一月的宽限期作为重大的非调整事项披露，说明期限，以及它对贷款方要求还款的权利有什么影响。
+  s1_zh_hk: >-
+    就 A 而言，要講明十一月嘅違約，同埋列為流動負債嘅一千八百萬本金。一月嘅寬限安排要當作重大非調整事項披露，列明期限，同佢點樣影響貸款人催還嘅權利。
+  s2_en: >-
+    For B, disclose the 12 million, the 3.0 covenant, the June date and the 2.9 calculated on December
+    figures. That is evidence of risk, not the actual June result.
+  s2_zh: 对于 B，要披露一千二百万的账面价值、三点零的要求、六月的考核日期，以及按十二月数据试算的二点九。这个倍数是风险提示，不是六月的实际结果。
+  s2_zh_hk: 就 B 而言，要披露一千二百萬嘅賬面值、三點零嘅契約要求、六月嘅遵約日，同埋用十二月數據計出嚟嘅二點九。呢個倍數係風險跡象，唔係六月嘅實績。
+  s3_en: >-
+    With the December letter, A had a right to defer at 31 December, for more than twelve months. Both
+    loans are non-current and the ratio is 2.8. But B's note stays: a higher ratio does not remove the
+    June risk.
+  s3_zh: >-
+    如果是十二月的函件，A 在年末已经有权延期偿还超过十二个月，两笔贷款都列为非流动，比率是二点八。但 B 的附注照样保留：比率高了，六月的风险并不会消失。
+  s3_zh_hk: >-
+    如果係十二月嘅函件，A 喺年結已經有權延期還款超過十二個月，兩筆貸款都屬非流動，比率係二點八。不過 B 嘅附註照樣保留：比率高咗，六月嘅風險都唔會消失。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Date the right, not the evidence
+  title_zh: 看权利何时存在，不看证据
+  title_zh_hk: 睇權利幾時存在，唔睇證據
+  en: >-
+    Point to the date the right existed, not to when the team got the evidence. The December letter is
+    not a subsequent event. A grace period agreed before year-end but ending within the next twelve months
+    would not, on these facts, give a right to defer for at least twelve months. No waiver request, refinancing
+    or payment occurs here.
+  zh: >-
+    要指出权利在哪一天已经存在，而不是团队什么时候拿到证据。十二月的函件不是报告期后事项。按本案条件，即使宽限在年末前已经取得，如果宽限期在之后十二个月内结束，也不能据此认定有权延迟偿还至少十二个月。本练习不涉及申请豁免、再融资或还款。
+  zh_hk: >-
+    要指出權利喺邊日已經存在，唔係團隊幾時攞到證據。十二月嘅函件唔屬於報告期後事項。按本案事實，就算寬限期喺年結前已經協定，但如果喺之後十二個月內屆滿，都唔能夠據此取得延遲結算至少十二個月嘅權利。本練習唔涉及申請豁免、再融資或者還款。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: The right at year-end decides
+  title_zh: 以年末时的权利为准
+  title_zh_hk: 以年結日的權利為準
+  q1_en: >-
+    Jan letter: A current; ratio 1.0
+  q1_zh: 1月函件：A流动；比率1.0
+  q1_zh_hk: 1月函件：A流動；比率1.0
+  q2_en: >-
+    Dec letter: A non-current; 2.8
+  q2_zh: 12月函件：A非流动；2.8
+  q2_zh_hk: 12月函件：A非流動；2.8
+  s1_en: >-
+    A loan is current if, at the reporting date, the borrower has no right to defer settlement for at
+    least twelve months. Later relief is disclosed, not backdated.
+  s1_zh: 如果在报告日，借款方没有权利把偿还推迟至少十二个月，这笔贷款就是流动负债。之后才取得的宽限要披露，不能倒签回去。
+  s1_zh_hk: 如果喺報告日，借款人冇權將還款延遲至少十二個月，呢筆貸款就係流動負債。之後先攞到嘅寬限要披露，唔可以追溯返去。
+  s2_en: >-
+    A covenant tested later still needs a risk note, even when today's classification is non-current.
+  s2_zh: 以后才考核的契约条款，即使目前列为非流动，仍然需要风险附注。
+  s2_zh_hk: 日後先測試嘅契約條款，就算而家列為非流動，都仍然需要風險附註。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 196

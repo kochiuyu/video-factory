@@ -714,10 +714,15 @@ def _scene_types() -> dict:
             return min(4, count)
         return count
 
-    def _part_dots(left_n: int, right_n: int, radius: float = 0.16):
-        """Two coloured parts, or one green whole when the right part is zero."""
+    def _part_dots(left_n: int, right_n: int, radius: float = 0.16, gone: int = 0):
+        """Two coloured parts, or one green whole when the right part is zero.
+
+        ``gone`` draws that many empty circles beside the left part: counters
+        that have been taken away.
+        """
         left_n = max(0, int(left_n))
         right_n = max(0, int(right_n))
+        gone = max(0, int(gone))
         gap = max(0.05, radius * 0.4)
         group_gap = max(0.2, radius * 1.5)
 
@@ -744,16 +749,38 @@ def _scene_types() -> dict:
                 made.append(dot)
             return made
 
+        right_count = gone if gone else right_n
         lw = width_of(left_n)
-        rw = width_of(right_n)
-        total = lw + (group_gap if left_n and right_n else 0.0) + rw
+        rw = width_of(right_count)
+        total = lw + (group_gap if left_n and right_count else 0.0) + rw
         lcx = (-total / 2 + lw / 2) if left_n else 0.0
-        rcx = (total / 2 - rw / 2) if right_n else 0.0
-        if left_n and not right_n:
+        rcx = (total / 2 - rw / 2) if right_count else 0.0
+        if left_n and not right_count:
             lcx = 0.0
-        if right_n and not left_n:
+        if right_count and not left_n:
             rcx = 0.0
-        dots = place(left_n, lcx, GREEN) + place(right_n, rcx, GOLD)
+        if gone:
+            empties = []
+            cols = _part_columns(gone, False)
+            row_w = width_of(gone)
+            for i in range(gone):
+                r, c = divmod(i, cols)
+                in_row = min(cols, gone - r * cols)
+                this_w = in_row * (2 * radius) + (in_row - 1) * gap
+                left = rcx - this_w / 2 + radius
+                y = -r * (2 * radius + gap)
+                ring = Circle(
+                    radius=radius,
+                    stroke_color=NAVY,
+                    stroke_width=2.5,
+                    fill_color=CREAM,
+                    fill_opacity=1,
+                )
+                ring.move_to([left + c * (2 * radius + gap), y, 0])
+                empties.append(ring)
+            dots = place(left_n, lcx, GREEN) + empties
+        else:
+            dots = place(left_n, lcx, GREEN) + place(right_n, rcx, GOLD)
         group = VGroup(*dots) if dots else VGroup(counter("#D5D0C6", radius))
         group.move_to(UP * 0)
         return group
@@ -1782,6 +1809,9 @@ def _scene_types() -> dict:
 
         ``also`` moves the counters to a second split of the same whole.
         ``cover`` hides one part and reads the bond as a subtraction.
+        ``leave`` moves that part away: the counters go on the spoken
+        number for the part that leaves, and the difference lands on the
+        spoken number that stays. An empty circle remains in each spot.
         The two part labels land on the spoken words, and the highlight
         box moves with them. Label centres share one reference glyph.
         """
@@ -1795,6 +1825,10 @@ def _scene_types() -> dict:
             also = labels.get("also")
             also = int(also) if also is not None else None
             cover = str(labels.get("cover") or "")
+            leave = str(labels.get("leave") or "")
+            departing = leave in {"a", "b"} and not cover
+            if departing:
+                cover = leave
             end_left = also if also is not None else a
             end_right = whole - end_left
             pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
@@ -2061,8 +2095,24 @@ def _scene_types() -> dict:
             mid_centres = [mapped((p[0], p[1], 0)) for p in mid_pos]
             for i, dot in enumerate(dots):
                 dot.move_to(start_centres[i])
+            covered_dots = []
+            ghosts = VGroup()
             if cover in {"a", "b"}:
                 covered_dots = list(dots[:a] if cover == "a" else dots[a:])
+            if departing and covered_dots:
+                for dot in covered_dots:
+                    ghost = Circle(
+                        radius=max(0.04, float(dot.width) / 2.0),
+                        stroke_color=NAVY,
+                        stroke_width=2.5,
+                        fill_color=CREAM,
+                        fill_opacity=1,
+                    )
+                    ghost.move_to(dot.get_center())
+                    ghost.set_z_index(1)
+                    ghost.set_opacity(0)
+                    ghosts.add(ghost)
+            elif cover in {"a", "b"} and covered_dots:
                 covered_group = VGroup(*covered_dots)
                 card = RoundedRectangle(
                     width=float(covered_group.width) + 0.18,
@@ -2097,6 +2147,8 @@ def _scene_types() -> dict:
                 hidden.append(covered_eq)
             if card is not None:
                 hidden.append(card)
+            if len(ghosts):
+                hidden.extend(list(ghosts))
             self.add(*hidden)
             self.spend(0, *opening)
 
@@ -2128,31 +2180,60 @@ def _scene_types() -> dict:
                 )
             self.spend_marked(1, [hop_left, hop_right], self.marks_for(1), intro=intro)
 
-            closing = [
-                left_label.animate.move_to(end_left_at),
-                right_label.animate.move_to(end_right_at),
-            ]
-            if also is not None or not cover:
-                for i, dot in enumerate(dots):
-                    closing.append(dot.animate.move_to(end_centres[i]).set_fill(colour_for(i, end_left)))
-            if not show_bond:
-                closing.extend([
-                    bracket.animate.set_opacity(1),
-                    whole_label.animate.set_opacity(1),
-                    bond_eq.animate.set_opacity(1),
-                ])
-            if covered_eq is not None and card is not None:
-                closing.extend([
-                    card.animate.set_opacity(1),
-                    bond_eq.animate.set_opacity(0),
-                    covered_eq.animate.set_opacity(1),
-                ])
             kept = right_label if cover == "a" else left_label
-            if cover:
-                closing.append(marker.animate.move_to(kept.get_center()))
+            if departing:
+                outward = LEFT if cover == "a" else RIGHT
+
+                def leave_hop():
+                    moves = []
+                    for dot in covered_dots:
+                        dest = (
+                            dot.get_center()
+                            + UP * float(dot.height) * 0.85
+                            + outward * float(dot.width) * 0.45
+                        )
+                        moves.append(
+                            dot.animate.move_to(dest).set_fill(opacity=0).set_stroke(opacity=0)
+                        )
+                    for ghost in ghosts:
+                        moves.append(ghost.animate.set_opacity(1))
+                    return AnimationGroup(*moves)
+
+                def reveal_difference():
+                    shown = [marker.animate.move_to(kept.get_center())]
+                    if covered_eq is not None:
+                        shown.extend([
+                            bond_eq.animate.set_opacity(0),
+                            covered_eq.animate.set_opacity(1),
+                        ])
+                    return AnimationGroup(*shown)
+
+                self.spend_marked(2, [leave_hop, reveal_difference], self.marks_for(2))
             else:
-                closing.append(marker.animate.move_to(whole_at))
-            self.spend(2, AnimationGroup(*closing))
+                closing = [
+                    left_label.animate.move_to(end_left_at),
+                    right_label.animate.move_to(end_right_at),
+                ]
+                if also is not None or not cover:
+                    for i, dot in enumerate(dots):
+                        closing.append(dot.animate.move_to(end_centres[i]).set_fill(colour_for(i, end_left)))
+                if not show_bond:
+                    closing.extend([
+                        bracket.animate.set_opacity(1),
+                        whole_label.animate.set_opacity(1),
+                        bond_eq.animate.set_opacity(1),
+                    ])
+                if covered_eq is not None and card is not None:
+                    closing.extend([
+                        card.animate.set_opacity(1),
+                        bond_eq.animate.set_opacity(0),
+                        covered_eq.animate.set_opacity(1),
+                    ])
+                if cover:
+                    closing.append(marker.animate.move_to(kept.get_center()))
+                else:
+                    closing.append(marker.animate.move_to(whole_at))
+                self.spend(2, AnimationGroup(*closing))
 
     class LessonHook(_Board):
         """The title arrives, then the lesson's objects, with the opening question."""
@@ -2869,6 +2950,8 @@ def _scene_types() -> dict:
                 nums = [int(n) for n in bond]
                 if len(nums) == 1 or (len(nums) == 2 and nums[1] == 0):
                     cue = _part_dots(nums[0], 0, 0.15)
+                elif len(nums) == 2 and nums[1] < 0:
+                    cue = _part_dots(nums[0], 0, 0.15, gone=-nums[1])
                 else:
                     cue = _part_dots(nums[0], nums[1], 0.15)
                 cues.append(cue)

@@ -28,6 +28,7 @@ from scene_registry import (
     labels_for,
     ordinal_visits,
     scene_problems,
+    removal_marks,
     schedule_marks,
     step_count,
     track_columns,
@@ -1835,7 +1836,7 @@ class SceneRegistryTest(unittest.TestCase):
         seven = load_lesson(P1 / "P1-NUM-07.yaml")
         swapped = [beat for beat in seven["beats"] if beat.get("scene") == "part_whole"]
         self.assertEqual(
-            [(b.get("a"), b.get("b"), b.get("cover")) for b in swapped],
+            [(b.get("a"), b.get("b"), b.get("leave")) for b in swapped],
             [(3, 2, None), (2, 3, None), (3, 2, "b")],
         )
         self.assertEqual(count_event(swapped[0]), (1, 2))
@@ -1844,11 +1845,15 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(labels_for(swapped[1], "zh")["left"], "二")
         self.assertEqual(labels_for(swapped[1], "zh_hk")["right"], "三")
         self.assertEqual(labels_for(swapped[2], "en")["covered_equation"], ["5", "-", "2", "=", "3"])
+        self.assertEqual(swapped[0]["s3_en"], "Bring the two parts together. Three and two make five. Together they make five.")
+        self.assertEqual(swapped[2]["s3_en"], "Take two away, three are left.")
+        self.assertEqual(swapped[2]["s3_zh"], "拿走两个，剩下三个。")
+        self.assertEqual(swapped[2]["s3_zh_hk"], "拿走兩個，剩低三個。")
         recap7 = next(beat for beat in seven["beats"] if beat["id"] == "takeaway")
         self.assertEqual(step_count(recap7), 4)
         self.assertEqual(labels_for(recap7, "en")["title"], "Five stays five?")
         self.assertEqual(labels_for(recap7, "zh")["title"], "五还是五吗？")
-        self.assertEqual(labels_for(recap7, "zh_hk")["title"], "五仲係五嗎？")
+        self.assertEqual(labels_for(recap7, "zh_hk")["title"], "五係咪仲係五？")
         self.assertEqual(
             labels_for(recap7, "en")["lines"],
             [
@@ -1860,7 +1865,8 @@ class SceneRegistryTest(unittest.TestCase):
         )
         self.assertEqual(labels_for(recap7, "zh")["lines"][2], "是的。五还是五。")
         self.assertEqual(labels_for(recap7, "zh_hk")["lines"][3], "五減二係三。")
-        self.assertEqual(labels_for(recap7, "en")["bonds"], [[3, 2], [2, 3], [5], [3, 2]])
+        self.assertEqual(labels_for(recap7, "en")["bonds"], [[3, 2], [2, 3], [5], [3, -2]])
+        self.assertEqual(labels_for(recap7, "zh_hk")["lines"][2], "係。五仲係五。")
 
     def test_part_whole_bounds(self):
         good = {
@@ -1887,6 +1893,13 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertTrue(scene_problems(dict(good, also=3)))
         self.assertTrue(scene_problems(dict(good, also=5, cover="b")))
         self.assertTrue(scene_problems(dict(good, cover="c")))
+        self.assertTrue(scene_problems(dict(good, leave="c")))
+        self.assertTrue(scene_problems(dict(good, leave="b", cover="b")))
+        self.assertEqual(scene_problems(dict(good, a=3, b=2, leave="b")), [])
+        self.assertEqual(
+            labels_for(dict(good, a=3, b=2, leave="b"), "en")["covered_equation"],
+            ["5", "-", "2", "=", "3"],
+        )
         moved = dict(good, also=5)
         self.assertEqual(scene_problems(moved), [])
         self.assertEqual(labels_for(moved, "zh")["also_equation"], ["7", "=", "5", "+", "2"])
@@ -1930,6 +1943,8 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertTrue(scene_problems(dict(recap, bonds=[])))
         self.assertTrue(scene_problems(dict(recap, bonds=[[3, 4], [1], [2], [3], [4]])))
         self.assertEqual(scene_problems(dict(recap, bonds=[[7, 0]])), [])
+        self.assertEqual(scene_problems(dict(recap, bonds=[[3, -2]])), [])
+        self.assertTrue(scene_problems(dict(recap, bonds=[[3, -10]])))
 
     def test_ordinal_row_counts_a_place_or_a_total(self):
         left = {
@@ -2016,6 +2031,63 @@ class SceneRegistryTest(unittest.TestCase):
         # Not enough words for a 1..13 count: leave the step evenly spaced.
         few = count_marks(words, 0.0, 4.0, 13)
         self.assertIsNone(few)
+
+    def test_leaving_part_lands_on_the_spoken_numbers(self):
+        words = [
+            {"text": "Three", "start": 2.3},
+            {"text": "Two", "start": 3.0},
+            {"text": "Take", "start": 3.8},
+            {"text": "two", "start": 4.2},
+            {"text": "away", "start": 4.6},
+            {"text": "three", "start": 5.1},
+            {"text": "are", "start": 5.4},
+            {"text": "left", "start": 5.7},
+        ]
+        beat = {
+            "visual": "animated",
+            "scene": "part_whole",
+            "a": 3,
+            "b": 2,
+            "leave": "b",
+            "s1_en": "Five is three and two.",
+            "s2_en": "Three. Two.",
+            "s3_en": "Take two away, three are left.",
+            "s1_zh": "五是三加二。",
+            "s2_zh": "三，二。",
+            "s3_zh": "拿走两个，剩下三个。",
+            "s1_zh_hk": "五係三加二。",
+            "s2_zh_hk": "三，二。",
+            "s3_zh_hk": "拿走兩個，剩低三個。",
+        }
+        durs = [2.0, 1.6, 2.4]
+        scheduled = schedule_marks(beat, durs, words)
+        self.assertEqual(len(scheduled[1]), 2)
+        self.assertAlmostEqual(scheduled[1][1], 3.0 - 2.0, places=2)
+        self.assertEqual(len(scheduled[2]), 2)
+        self.assertAlmostEqual(scheduled[2][0], 4.2 - 3.6, places=2)
+        self.assertAlmostEqual(scheduled[2][1], 5.1 - 3.6, places=2)
+        zh = [
+            {"text": "拿走", "start": 3.7},
+            {"text": "两个", "start": 4.1},
+            {"text": "剩下", "start": 4.6},
+            {"text": "三个", "start": 5.0},
+        ]
+        found = removal_marks(zh, 3.6, 2.4, 2, 3)
+        self.assertIsNotNone(found)
+        self.assertAlmostEqual(found[0], 0.5, places=2)
+        self.assertAlmostEqual(found[1], 1.4, places=2)
+        yue = [
+            {"text": "拿走", "start": 3.7},
+            {"text": "兩", "start": 4.05},
+            {"text": "個", "start": 4.3},
+            {"text": "剩", "start": 4.6},
+            {"text": "低", "start": 4.8},
+            {"text": "三", "start": 5.05},
+            {"text": "個", "start": 5.3},
+        ]
+        found = removal_marks(yue, 3.6, 2.4, 2, 3)
+        self.assertAlmostEqual(found[0], 0.45, places=2)
+        self.assertAlmostEqual(found[1], 1.45, places=2)
 
     def test_xiao_yi_kicker_is_two_separated_marks(self):
         from PIL import Image, ImageDraw
@@ -2504,6 +2576,173 @@ class PartWholeRenderTest(unittest.TestCase):
         self.assertGreater(len(pts), 8, path.name)
         return sum(pts) / len(pts)
 
+    def test_leaving_counters_follow_the_words_and_leave_empty_circles(self):
+        import shutil
+        import subprocess
+        import tempfile
+
+        from anim import render_animated_clip
+
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
+        if shutil.which("ffmpeg") is None:
+            self.skipTest("ffmpeg is optional")
+        beat = self._beat(3, 2, None, "")
+        beat["leave"] = "b"
+        beat["s2_en"] = "Three. Two."
+        beat["s3_en"] = "Take two away, three are left."
+        words = [
+            {"text": "Three", "start": 0.55},
+            {"text": "Two", "start": 0.9},
+            {"text": "Take", "start": 1.4},
+            {"text": "two", "start": 1.9},
+            {"text": "away", "start": 2.2},
+            {"text": "three", "start": 2.7},
+            {"text": "are", "start": 3.0},
+            {"text": "left", "start": 3.3},
+        ]
+        holds = [0.4, 0.8, 2.4]
+        with tempfile.TemporaryDirectory(prefix="vf-leave-") as tmp:
+            root = Path(tmp)
+            audio = root / "silent.wav"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                 "-t", "4", "-c:a", "pcm_s16le", str(audio)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            for frame in ((1280, 720), (720, 1280)):
+                dest = root / f"leave-{frame[0]}.mp4"
+                render_animated_clip(
+                    beat, {"format": "9:16" if frame[1] > frame[0] else "16:9"},
+                    label_lang_code="en",
+                    holds=holds, still_idx=[0, 1, 2], pages=["a", "b", "c"],
+                    audio=audio, dest=dest, cache_dir=root / "cache",
+                    captions=False, progress_bar=False, frame=frame, fps=8,
+                    words=words,
+                )
+                silent = max((root / "cache" / "en").glob("*.mp4"), key=lambda p: p.stat().st_mtime)
+                early = root / f"early-{frame[0]}.png"
+                shot = root / f"leave-{frame[0]}.png"
+                duration = float(subprocess.check_output(
+                    ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                     "-of", "csv=p=0", str(silent)],
+                    text=True,
+                ))
+                last = max(0, int(duration * 8) - 1)
+                for n, path in ((10, early), (last, shot)):
+                    subprocess.check_call(
+                        ["ffmpeg", "-y", "-i", str(silent),
+                         "-vf", f"select=eq(n\\,{n})", "-frames:v", "1", str(path)],
+                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                    )
+                self._assert_inside(early)
+                self._assert_inside(shot)
+                self._assert_counters_one_row(early, greens=3, golds=2)
+                self._assert_counters_one_row(shot, greens=3, golds=0)
+                if frame[0] > frame[1]:
+                    self._assert_minus_matches_equals(shot)
+                self._assert_empty_circles(shot, 2)
+
+        recap = {
+            "visual": "animated",
+            "scene": "lesson_takeaway",
+            "motif": "parts",
+            "bonds": [[3, -2]],
+            "title_en": "Five stays five?",
+            "s1_en": "Five minus two is three.",
+            "s2_en": "Three stay.",
+            "s3_en": "Two are gone.",
+            "s1_zh": "五减二是三。",
+            "s2_zh": "剩下三个。",
+            "s3_zh": "拿走两个。",
+            "s1_zh_hk": "五減二係三。",
+            "s2_zh_hk": "剩低三個。",
+            "s3_zh_hk": "拿走兩個。",
+        }
+        with tempfile.TemporaryDirectory(prefix="vf-gone-") as tmp:
+            root = Path(tmp)
+            audio = root / "silent.wav"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                 "-t", "2", "-c:a", "pcm_s16le", str(audio)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            for frame in ((1280, 720), (720, 1280)):
+                dest = root / f"gone-{frame[0]}.mp4"
+                render_animated_clip(
+                    recap, {"format": "9:16" if frame[1] > frame[0] else "16:9"},
+                    label_lang_code="en",
+                    holds=[0.4, 0.4, 0.5], still_idx=[0, 1, 2], pages=["a", "b", "c"],
+                    audio=audio, dest=dest, cache_dir=root / "cache",
+                    captions=False, progress_bar=False, frame=frame, fps=8,
+                )
+                silent = max((root / "cache" / "en").glob("*.mp4"), key=lambda p: p.stat().st_mtime)
+                shot = root / f"gone-{frame[0]}.png"
+                last = max(0, int(float(subprocess.check_output(
+                    ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                     "-of", "csv=p=0", str(silent)],
+                    text=True,
+                )) * 8) - 1)
+                subprocess.check_call(
+                    ["ffmpeg", "-y", "-i", str(silent),
+                     "-vf", f"select=eq(n\\,{last})", "-frames:v", "1", str(shot)],
+                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                )
+                self._assert_inside(shot)
+                self._assert_counters_one_row(shot, greens=3, golds=0)
+                self._assert_empty_circles(shot, 2)
+
+    def _assert_empty_circles(self, path, count: int):
+        """Empty circles sit on the green row: a cream centre between two strokes."""
+        from PIL import Image
+
+        def green(rgb):
+            r, g, b = rgb
+            return g > 130 and g > r + 45 and g > b + 25
+
+        def cream(rgb):
+            r, g, b = rgb
+            return abs(r - 247) < 22 and abs(g - 244) < 22 and abs(b - 238) < 22
+
+        gblobs, w, h = self._blobs(path, green)
+        self.assertEqual(len(gblobs), 3, path.name)
+        diam = max(blob[3] for blob in gblobs)
+        mean_y = int(sum(blob[1] for blob in gblobs) / len(gblobs))
+        right = max(blob[0] + blob[2] / 2 for blob in gblobs)
+        img = Image.open(path).convert("RGB")
+        px = img.load()
+        dark_runs = []
+        x = int(right + diam * 0.25)
+        limit = min(w, int(right + diam * (count + 2) * 1.8))
+        while x < limit:
+            if cream(px[x, mean_y]) or green(px[x, mean_y]):
+                x += 1
+                continue
+            x0 = x
+            while x < limit and not cream(px[x, mean_y]) and not green(px[x, mean_y]):
+                x += 1
+            if x - x0 > diam * 0.45:
+                break
+            dark_runs.append((x0, x - 1))
+        pairs = 0
+        used = set()
+        for i, (a0, a1) in enumerate(dark_runs):
+            if i in used:
+                continue
+            for j in range(i + 1, len(dark_runs)):
+                b0, b1 = dark_runs[j]
+                gap = b0 - a1 - 1
+                if diam * 0.35 <= gap <= diam * 1.35:
+                    mid = (a1 + b0) // 2
+                    if cream(px[mid, mean_y]):
+                        pairs += 1
+                        used.add(i)
+                        used.add(j)
+                        break
+        self.assertGreaterEqual(pairs, count, f"{path.name} strokes {dark_runs} diam {diam:.0f}")
+
     def test_parts_hook_title_fills_the_frame(self):
         """9:16 English hook title stays at the takeaway floor, on two lines, with a full-width motif."""
         import shutil
@@ -2610,8 +2849,13 @@ class PartWholeRenderTest(unittest.TestCase):
         diam = max(blob[3] for blob in gblobs)
         self.assertLessEqual(max(ys) - min(ys), max(6.0, diam * 0.35), path.name)
         mean_y = sum(ys) / len(ys)
-        near = [blob for blob in yblobs if abs(blob[1] - mean_y) <= diam * 1.4]
+        near = [
+            blob for blob in yblobs
+            if abs(blob[1] - mean_y) <= max(8.0, diam * 0.45) and blob[3] >= diam * 0.55
+        ]
         self.assertEqual(len(near), golds, f"{path.name} gold {[(round(b[0]), round(b[1])) for b in yblobs]}")
+        if golds == 0:
+            return
         gold_y = [blob[1] for blob in near]
         self.assertLessEqual(max(gold_y) - min(gold_y), max(6.0, diam * 0.35), path.name)
         self.assertLessEqual(abs(sum(gold_y) / len(gold_y) - mean_y), max(6.0, diam * 0.35), path.name)

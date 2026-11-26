@@ -708,7 +708,9 @@ def _scene_types() -> dict:
 
     def _part_columns(count: int, portrait: bool) -> int:
         count = max(1, int(count))
-        if portrait:
+        # Five beside two (7 = 5 + 2) stays on one row in both aspects.
+        # A longer part, such as eight, may wrap in portrait.
+        if portrait and count > 5:
             return min(4, count)
         return count
 
@@ -773,7 +775,24 @@ def _scene_types() -> dict:
         return cells
 
     def equation(tokens: list[str], latin: str, size: int = 56):
-        parts = VGroup(*[Text(tok, font=latin, font_size=size, color=NAVY) for tok in tokens])
+        """Digits and operators on one line. A hyphen token is drawn as a minus.
+
+        U+2212 is the same width as ``=`` and ``+`` in DejaVu, and the same
+        stroke weight as one bar of ``=``. The short hyphen is not.
+        """
+        minus = {"-", "−", "–"}
+        glyphs = []
+        for tok in tokens:
+            shown = "−" if tok in minus else tok
+            glyphs.append(Text(shown, font=latin, font_size=size, color=NAVY))
+        equals = next((glyph for tok, glyph in zip(tokens, glyphs) if tok == "="), None)
+        plus = next((glyph for tok, glyph in zip(tokens, glyphs) if tok == "+"), None)
+        target = equals or plus
+        if target is not None and float(target.width) > 0:
+            for tok, glyph in zip(tokens, glyphs):
+                if tok in minus and float(glyph.width) > 0:
+                    glyph.scale_to_fit_width(float(target.width))
+        parts = VGroup(*glyphs)
         parts.arrange(RIGHT, buff=0.22)
         return parts
 
@@ -2152,7 +2171,11 @@ def _scene_types() -> dict:
             title = styled(labels.get("title") or "", latin, cjk, 54)
             cue = self._hook_cue(motif, latin, cjk, labels)
             portrait = int(getattr(config, "pixel_height", 0) or 0) > int(getattr(config, "pixel_width", 0) or 0)
-            if portrait and motif in {"ordinal", "pairs", "parts"}:
+            if portrait and motif == "parts":
+                # A long English title wraps onto two centred lines at the
+                # takeaway floor, and the grade tag is not shrunk with it.
+                kicker, title, cue = self._layout_parts_hook(kicker, title, cue, grade, latin, cjk)
+            elif portrait and motif in {"ordinal", "pairs"}:
                 # Title and tokens each fill the safe width. A long English
                 # title must not shrink the row.
                 left_lim, right_lim, bot_lim, top_lim = _safe_limits()
@@ -2184,9 +2207,15 @@ def _scene_types() -> dict:
                     limit = max(float(title.width), float(kicker.width), cap)
                     if float(cue.width) > limit:
                         cue.scale(limit / float(cue.width))
-                elif motif in {"pairs", "parts"}:
+                elif motif == "pairs":
                     left_lim, right_lim, _, _ = _safe_limits()
                     cap = (right_lim - left_lim) * 0.78
+                    if float(cue.width) > 0:
+                        cue.scale(cap / float(cue.width))
+                elif motif == "parts":
+                    # Same safe-width fill as the 9:16 parts hook.
+                    left_lim, right_lim, _, _ = _safe_limits()
+                    cap = (right_lim - left_lim) * 0.96
                     if float(cue.width) > 0:
                         cue.scale(cap / float(cue.width))
                 title.next_to(kicker, DOWN, buff=0.28)
@@ -2212,6 +2241,83 @@ def _scene_types() -> dict:
             rest = total - (a + b + c)
             if rest > frame / 2:
                 self.wait(rest)
+
+        def _layout_parts_hook(self, kicker, title, cue, grade: str, latin: str, cjk: str):
+            """Portrait parts hook. Title stays at least the takeaway floor.
+
+            One line is used when it can fill the safe width and still clear
+            1.5× the floor (52px at 1920 tall). A longer title wraps onto two
+            centred lines, then the longer line fills the width. The grade tag
+            keeps the size of 小一, and the counters fill the safe width.
+            """
+            left_lim, right_lim, bot_lim, top_lim = _safe_limits()
+            cap = (right_lim - left_lim) * 0.96
+            ph = int(getattr(config, "pixel_height", 0) or 0) or 1920
+            unit = ph / float(config.frame_height or 8.0)
+            floor_h = (52.0 * (ph / 1920.0)) / unit
+            if not any(ord(ch) > 127 for ch in (grade or "")):
+                ref = Text("小", font=cjk, font_size=52, color="#5C6B7A")
+                if float(kicker.height) > 0 and float(ref.height) > 0:
+                    kicker.scale(float(ref.height) / float(kicker.height))
+            title = self._parts_hook_title(str(self.vf_labels.get("title") or ""), latin, cjk, cap, floor_h)
+            if float(cue.width) > 0:
+                cue.scale(cap / float(cue.width))
+            title.next_to(kicker, DOWN, buff=0.2)
+            cue.next_to(title, DOWN, buff=0.26)
+            group = VGroup(kicker, title, cue)
+            max_h = top_lim - bot_lim
+            if float(group.height) > max_h > 0 and float(cue.height) > 0.5:
+                overflow = float(group.height) - max_h
+                spare = float(cue.height) - 0.45
+                if spare > 0.05:
+                    keep = max(0.45, float(cue.height) - min(overflow, spare))
+                    cue.scale(keep / float(cue.height))
+                    title.next_to(kicker, DOWN, buff=0.2)
+                    cue.next_to(title, DOWN, buff=0.26)
+                    group = VGroup(kicker, title, cue)
+            if float(group.height) > max_h > 0:
+                group.scale(max_h / float(group.height))
+            group.move_to(UP * 0)
+            if float(group.get_bottom()[1]) < bot_lim:
+                group.shift(UP * (bot_lim - float(group.get_bottom()[1])))
+            if float(group.get_top()[1]) > top_lim:
+                group.shift(DOWN * (float(group.get_top()[1]) - top_lim))
+            return kicker, title, cue
+
+        def _parts_hook_title(self, text: str, latin: str, cjk: str, cap: float, floor_h: float):
+            raw = (text or "").strip() or " "
+            one = styled(raw, latin, cjk, 54)
+            if float(one.width) <= 0:
+                return one
+            fill = cap / float(one.width)
+            words = raw.split()
+            # Two centred lines when one full-width line would sit near the floor.
+            if len(words) >= 2 and float(one.height) * fill < floor_h * 1.5:
+                best = None
+                for cut in range(1, len(words)):
+                    left = styled(" ".join(words[:cut]), latin, cjk, 54)
+                    right = styled(" ".join(words[cut:]), latin, cjk, 54)
+                    wider = max(float(left.width), float(right.width))
+                    if best is None or wider < best[0]:
+                        best = (wider, left, right)
+                _wider, left, right = best
+                block = VGroup(left, right).arrange(DOWN, buff=0.1)
+                line_h = max(float(left.height), float(right.height), 0.01)
+                wider = max(float(left.width), float(right.width), 0.01)
+                scale = cap / wider
+                if line_h * scale < floor_h:
+                    scale = floor_h / line_h
+                block.scale(scale)
+                if float(block.width) > cap > 0:
+                    block.scale(cap / float(block.width))
+                return block
+            scale = fill
+            if float(one.height) * scale < floor_h:
+                scale = floor_h / float(one.height)
+            one.scale(scale)
+            if float(one.width) > cap > 0:
+                one.scale(cap / float(one.width))
+            return one
 
         def _hook_cue(self, motif: str, latin: str, cjk: str, labels: dict | None = None):
             if motif == "ordinal":
@@ -2712,8 +2818,49 @@ def _scene_types() -> dict:
             for index in range(1, len(rows)):
                 self.spend(index, FadeIn(rows[index]))
 
+        def _heading_that_fits(self, heading, latin: str, cjk: str, n: int):
+            """Keep a parts heading inside the safe width at the shared size.
+
+            English wraps onto two centred lines when one line would cross the
+            margin. A heading with no break shrinks only enough to fit.
+            """
+            pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
+            ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+            grid = takeaway_grid(pw, ph, max(1, int(n)))
+            ref = Text(TAKEAWAY_HEADING_PROBE, font=latin, font_size=48, color=NAVY)
+            band = float(grid["heading_h"])
+            safe_w = float(grid["right"] - grid["left"])
+            scale = (band * 0.52) / float(ref.height) if float(ref.height) else 1.0
+            if float(ref.width) * scale > safe_w * 0.92:
+                scale = (safe_w * 0.92) / float(ref.width)
+            limit = safe_w * 0.96
+            text = str(self.vf_labels.get("title") or "")
+            words = text.split()
+
+            def too_wide(mob) -> bool:
+                return float(mob.width) * scale > limit
+
+            if len(words) >= 2 and too_wide(heading):
+                best = None
+                for cut in range(1, len(words)):
+                    left = styled(" ".join(words[:cut]), latin, cjk, 48)
+                    right = styled(" ".join(words[cut:]), latin, cjk, 48)
+                    wider = max(float(left.width), float(right.width))
+                    if best is None or wider < best[0]:
+                        best = (wider, left, right)
+                block = VGroup(best[1], best[2]).arrange(DOWN, buff=0.06)
+                if not too_wide(block) and float(block.height) * scale <= band * 0.92:
+                    return block
+                heading = block
+            if too_wide(heading) and float(heading.width) > 0:
+                heading.scale(limit / (float(heading.width) * scale))
+            if float(heading.height) * scale > band * 0.92 > 0:
+                heading.scale((band * 0.92) / (float(heading.height) * scale))
+            return heading
+
         def _part_recap(self, title, lines, latin: str, cjk: str) -> None:
             """Each bond is two coloured parts, or one green whole."""
+            title = self._heading_that_fits(title, latin, cjk, len(lines))
             info = self.vf_labels
             bonds = list(info.get("bonds") or [[3, 4], [5, 2], [7], [4, 8]])
             cues = []

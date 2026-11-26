@@ -85,9 +85,9 @@ beats:
   - [7]
   - [4, 8]
   seconds: 16
-  title_en: Parts of seven?
-  title_zh: 七的两部分？
-  title_zh_hk: 七嘅兩部分？
+  title_en: Two parts make a whole
+  title_zh: 两部分合成一个整体
+  title_zh_hk: 兩部分合埋做一個
   s1_en: Three and four make seven.
   s1_zh: 三和四合成七。
   s1_zh_hk: 三同四合成七。

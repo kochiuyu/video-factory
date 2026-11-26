@@ -1825,9 +1825,9 @@ class SceneRegistryTest(unittest.TestCase):
         )
         self.assertEqual(labels_for(recap6, "zh")["lines"][0], "三和四合成七。")
         self.assertEqual(labels_for(recap6, "zh_hk")["lines"][3], "四同八合成十二。")
-        self.assertEqual(labels_for(recap6, "en")["title"], "Parts of seven?")
-        self.assertEqual(labels_for(recap6, "zh")["title"], "七的两部分？")
-        self.assertEqual(labels_for(recap6, "zh_hk")["title"], "七嘅兩部分？")
+        self.assertEqual(labels_for(recap6, "en")["title"], "Two parts make a whole")
+        self.assertEqual(labels_for(recap6, "zh")["title"], "两部分合成一个整体")
+        self.assertEqual(labels_for(recap6, "zh_hk")["title"], "兩部分合埋做一個")
         self.assertEqual(labels_for(recap6, "en")["bonds"], [[3, 4], [5, 2], [7], [4, 8]])
         self.assertIn("seven", parts[0]["s3_en"].lower())
         self.assertIn("four", parts[2]["s3_en"].lower())
@@ -2293,6 +2293,7 @@ class PartWholeRenderTest(unittest.TestCase):
         for frame in frames:
             cases.append((4, 8, None, "", "en", frame))
         cases.append((3, 4, 5, "", "en", (1280, 720)))
+        cases.append((3, 4, 5, "", "en", (720, 1280)))
         cases.append((4, 8, None, "b", "zh", (1280, 720)))
         with tempfile.TemporaryDirectory(prefix="vf-part-") as tmp:
             root = Path(tmp)
@@ -2338,6 +2339,10 @@ class PartWholeRenderTest(unittest.TestCase):
                     for row in centres:
                         self.assertGreaterEqual(len(row), 2, shot.name)
                         self.assertLessEqual(max(row) - min(row), 1.0, f"{shot.name} centres {row}")
+                if also is not None:
+                    self._assert_counters_one_row(shot, greens=also, golds=a + b - also)
+                if cover:
+                    self._assert_minus_matches_equals(shot)
                 if a == 1 and lang == "en" and frame == (1280, 720):
                     early = root / "early.png"
                     late = root / "late.png"
@@ -2468,6 +2473,230 @@ class PartWholeRenderTest(unittest.TestCase):
                     pts.append(x)
         self.assertGreater(len(pts), 8, path.name)
         return sum(pts) / len(pts)
+
+    def test_parts_hook_title_fills_the_frame(self):
+        """9:16 English hook title stays at the takeaway floor, on two lines, with a full-width motif."""
+        import shutil
+        import subprocess
+        import tempfile
+
+        from anim import render_animated_clip
+
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
+        if shutil.which("ffmpeg") is None:
+            self.skipTest("ffmpeg is optional")
+        beat = {
+            "visual": "animated",
+            "scene": "lesson_hook",
+            "motif": "parts",
+            "a": 3,
+            "b": 4,
+            "title_en": "Make parts before adding",
+            "title_zh": "先分开，再加",
+            "title_zh_hk": "先分開，再加",
+            "s1_en": "What parts make seven?",
+            "s1_zh": "七可以分成哪两部分？",
+            "s1_zh_hk": "七可以分成邊兩部分？",
+        }
+        with tempfile.TemporaryDirectory(prefix="vf-hook-") as tmp:
+            root = Path(tmp)
+            audio = root / "silent.wav"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                 "-t", "2", "-c:a", "pcm_s16le", str(audio)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            for frame in ((1280, 720), (720, 1280)):
+                dest = root / f"hook-{frame[0]}.mp4"
+                render_animated_clip(
+                    beat, {"format": "9:16" if frame[1] > frame[0] else "16:9"},
+                    label_lang_code="en",
+                    holds=[1.2], still_idx=[0], pages=["a"],
+                    audio=audio, dest=dest, cache_dir=root / "cache",
+                    captions=False, progress_bar=False, frame=frame, fps=8,
+                )
+                silent = max((root / "cache" / "en").glob("*.mp4"), key=lambda p: p.stat().st_mtime)
+                shot = root / f"hook-{frame[0]}.png"
+                last = max(0, int(float(subprocess.check_output(
+                    ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                     "-of", "csv=p=0", str(silent)],
+                    text=True,
+                )) * 8) - 1)
+                subprocess.check_call(
+                    ["ffmpeg", "-y", "-i", str(silent),
+                     "-vf", f"select=eq(n\\,{last})", "-frames:v", "1", str(shot)],
+                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                )
+                self._assert_hook(shot, frame)
+
+    def _blobs(self, path, pred):
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+        seen = set()
+        blobs = []
+        step = 2
+        for y in range(0, h, step):
+            for x in range(0, w, step):
+                if (x, y) in seen or not pred(px[x, y]):
+                    continue
+                stack = [(x, y)]
+                xs, ys = [], []
+                while stack:
+                    cx, cy = stack.pop()
+                    if cx < 0 or cy < 0 or cx >= w or cy >= h or (cx, cy) in seen:
+                        continue
+                    if not pred(px[cx, cy]):
+                        continue
+                    seen.add((cx, cy))
+                    xs.append(cx)
+                    ys.append(cy)
+                    stack.extend(((cx + step, cy), (cx - step, cy), (cx, cy + step), (cx, cy - step)))
+                if len(xs) < 18:
+                    continue
+                blobs.append(
+                    (sum(xs) / len(xs), sum(ys) / len(ys), max(xs) - min(xs), max(ys) - min(ys))
+                )
+        return blobs, w, h
+
+    def _assert_counters_one_row(self, path, greens: int, golds: int):
+        def green(rgb):
+            r, g, b = rgb
+            return g > 130 and g > r + 45 and g > b + 25
+
+        def gold(rgb):
+            r, g, b = rgb
+            return r > 180 and r > g + 15 and g > 90 and b < 150
+
+        gblobs, _w, _h = self._blobs(path, green)
+        yblobs, _w, _h = self._blobs(path, gold)
+        self.assertEqual(len(gblobs), greens, f"{path.name} green {[(round(b[0]), round(b[1])) for b in gblobs]}")
+        ys = [blob[1] for blob in gblobs]
+        diam = max(blob[3] for blob in gblobs)
+        self.assertLessEqual(max(ys) - min(ys), max(6.0, diam * 0.35), path.name)
+        mean_y = sum(ys) / len(ys)
+        near = [blob for blob in yblobs if abs(blob[1] - mean_y) <= diam * 1.4]
+        self.assertEqual(len(near), golds, f"{path.name} gold {[(round(b[0]), round(b[1])) for b in yblobs]}")
+        gold_y = [blob[1] for blob in near]
+        self.assertLessEqual(max(gold_y) - min(gold_y), max(6.0, diam * 0.35), path.name)
+        self.assertLessEqual(abs(sum(gold_y) / len(gold_y) - mean_y), max(6.0, diam * 0.35), path.name)
+
+    def _assert_minus_matches_equals(self, path):
+        """The minus is a short horizontal bar as wide as each bar of '='."""
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+
+        def navy(x, y):
+            r, g, b = px[x, y]
+            return r < 80 and g < 100 and b < 140 and (r + g + b) < 260
+
+        seen = set()
+        widths = []
+        for y in range(h):
+            for x in range(w):
+                if (x, y) in seen or not navy(x, y):
+                    continue
+                stack = [(x, y)]
+                xs, ys = [], []
+                while stack:
+                    cx, cy = stack.pop()
+                    if cx < 0 or cy < 0 or cx >= w or cy >= h or (cx, cy) in seen or not navy(cx, cy):
+                        continue
+                    seen.add((cx, cy))
+                    xs.append(cx)
+                    ys.append(cy)
+                    stack.extend(((cx + 1, cy), (cx - 1, cy), (cx, cy + 1), (cx, cy - 1)))
+                bw = max(xs) - min(xs) + 1
+                bh = max(ys) - min(ys) + 1
+                # Operator bars only. The cover card and the bracket are much wider.
+                if bh <= max(6, int(0.012 * h)) and 0.02 * w <= bw <= 0.08 * w:
+                    widths.append(bw)
+        self.assertGreaterEqual(len(widths), 3, f"{path.name} operator bars {widths}")
+        self.assertGreaterEqual(min(widths), 0.8 * max(widths), f"{path.name} bar widths {widths}")
+
+    def _assert_hook(self, path, frame):
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+        portrait = frame[1] > frame[0]
+        floor = (52.0 if portrait else 44.0) * (h / (1920.0 if portrait else 1080.0))
+
+        def text_ink(x, y):
+            r, g, b = px[x, y]
+            if not (r < 80 and g < 100 and b < 140 and (r + g + b) < 260):
+                return False
+            for dy in (-4, 0, 4):
+                for dx in (-4, 0, 4):
+                    xx, yy = x + dx, y + dy
+                    if xx < 0 or yy < 0 or xx >= w or yy >= h:
+                        continue
+                    rr, gg, bb = px[xx, yy]
+                    if gg > 120 and gg > rr + 40:
+                        return False
+                    if rr > 180 and rr > gg + 15 and bb < 150:
+                        return False
+            return True
+
+        bands = []
+        y = 0
+        while y < int(h * 0.72):
+            xs = [x for x in range(0, w, 2) if text_ink(x, y)]
+            if len(xs) >= 8:
+                y0 = y
+                left, right = min(xs), max(xs)
+                while y < int(h * 0.72):
+                    xs = [x for x in range(0, w, 2) if text_ink(x, y)]
+                    if len(xs) < 8:
+                        break
+                    left = min(left, min(xs))
+                    right = max(right, max(xs))
+                    y += 1
+                bands.append((y0, y - 1, left, right))
+            else:
+                y += 1
+        # Drop a hairline gap inside one glyph.
+        merged = []
+        for band in bands:
+            if merged and band[0] - merged[-1][1] <= 3:
+                prev = merged[-1]
+                merged[-1] = (prev[0], band[1], min(prev[2], band[2]), max(prev[3], band[3]))
+            else:
+                merged.append(band)
+        self.assertGreaterEqual(len(merged), 2, f"{path.name} bands {merged}")
+        title_bands = sorted(merged, key=lambda band: band[3] - band[2], reverse=True)
+        if portrait:
+            title_bands = title_bands[:2]
+            self.assertGreaterEqual(len(merged), 3, f"{path.name} expected a tag and two title lines {merged}")
+        else:
+            title_bands = title_bands[:1]
+        for band in title_bands:
+            self.assertGreaterEqual(band[1] - band[0] + 1, floor - 2, f"{path.name} title {band} floor {floor:.1f}")
+        if portrait and len(title_bands) == 2:
+            mid_a = (title_bands[0][2] + title_bands[0][3]) / 2
+            mid_b = (title_bands[1][2] + title_bands[1][3]) / 2
+            self.assertLessEqual(abs(mid_a - mid_b), 8, path.name)
+            tag = min(merged, key=lambda band: band[0])
+            title_h = min(band[1] - band[0] + 1 for band in title_bands)
+            self.assertGreaterEqual(tag[1] - tag[0] + 1, title_h * 0.7, f"{path.name} tag {tag}")
+        def coloured(x, y):
+            r, g, b = px[x, y]
+            green = g > 130 and g > r + 45 and g > b + 25
+            gold = r > 180 and r > g + 15 and g > 90 and b < 150 and y > h * 0.2
+            return green or gold
+        xs = [x for y in range(0, h, 2) for x in range(0, w, 2) if coloured(x, y)]
+        self.assertGreater(len(xs), 20, path.name)
+        span = max(xs) - min(xs)
+        self.assertGreaterEqual(span, int(w * (0.74 if portrait else 0.82)), f"{path.name} motif span {span} of {w}")
 
 
 if __name__ == "__main__":

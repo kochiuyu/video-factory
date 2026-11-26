@@ -1,0 +1,276 @@
+id: ACC-26
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A group sale. A group profit?
+title_zh: 内部销售已经完成，集团实现利润了吗？
+title_zh_hk: 集團內有銷售，集團就有毛利嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-26
+  kicker_en: ACC-26
+  kicker_zh: ACC-26
+  kicker_zh_hk: ACC-26
+  title_en: A group sale. A group profit?
+  title_zh: 内部销售已经完成，集团实现利润了吗？
+  title_zh_hk: 集團內有銷售，集團就有毛利嗎？
+  image: art/a-group-sale-a-group-profit-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Supply Co sold 1,000 kits to Shop Co for 100 each, after buying them for 80 each. No kits have yet
+    left the group. What inventory and batch gross profit should the group report? You prepare a consolidation
+    worksheet for a fictional Hong Kong group. The parent wholly owns both companies.
+  zh: >-
+    供应公司以每套八十港元购入一千套配件，再以每套一百全部卖给商店公司。这批货还没有离开集团。集团应列示多少存货和该批毛利？你为一家虚构的香港集团编制合并抵销工作底稿。母公司全程全资拥有这两家公司。
+  zh_hk: >-
+    供應公司以每套八十港元購入一千套配件，再以每套一百全部賣畀商店公司。呢批貨仲未離開集團。集團應列示多少存貨同該批毛利？你為一間虛構嘅香港集團編製合併抵銷工作底稿。母公司全程全資擁有呢兩間公司。
+- id: ledger
+  visual: table_grid
+  seconds: 24
+  rows: 4
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: First snapshot, this batch, HK$
+  title_zh: 第一个时点，本批次，港元
+  title_zh_hk: 第一個時點，本批次，港元
+  row1_en: Revenue
+  row1_zh: 收入
+  row1_zh_hk: 收入
+  row2_en: Cost of sales
+  row2_zh: 销售成本
+  row2_zh_hk: 銷貨成本
+  row3_en: Gross profit
+  row3_zh: 毛利
+  row3_zh_hk: 毛利
+  row4_en: Closing inventory
+  row4_zh: 期末存货
+  row4_zh_hk: 期末存貨
+  col1_en: Supply Co
+  col1_zh: 供应公司
+  col1_zh_hk: 供應公司
+  col2_en: Shop Co
+  col2_zh: 商店公司
+  col2_zh_hk: 商店公司
+  c11: 100,000
+  c12: '0'
+  c21: 80,000
+  c22: '0'
+  c31: 20,000
+  c32: '0'
+  c41: '0'
+  c42: 100,000
+  footer_en: No kits have left the group yet.
+  footer_zh: 这批货尚未离开集团。
+  footer_zh_hk: 呢批貨尚未離開集團。
+  s1_en: >-
+    Supply bought 1,000 identical kits from an outside supplier for 80 each, then completed a valid sale
+    of the entire batch to Shop for 100 each. Delivery and acceptance are complete.
+  s1_zh: 供应公司从外部供应商以每套八十港元购入一千套相同配件，再以每套一百把整批有效出售给商店公司。交货和验收均已完成。
+  s1_zh_hk: 供應公司從外部供應商以每套八十港元購入一千套相同配件，再以每套一百把整批有效出售畀商店公司。交貨同驗收均已完成。
+  s2_en: >-
+    At the first snapshot, Shop still holds all 1,000 kits. Supply reports revenue 100,000, cost of sales
+    80,000 and gross profit 20,000. Shop reports closing inventory of 100,000 and no sale.
+  s2_zh: 在第一个时点，商店公司仍持有全部一千套。供应公司列示收入十万、销售成本八万、毛利二万。商店公司列示期末存货十万，尚未对外销售。
+  s2_zh_hk: 喺第一個時點，商店公司仍持有全部一千套。供應公司列示收入十萬、銷貨成本八萬、毛利二萬。商店公司列示期末存貨十萬，尚未對外銷售。
+  s3_en: >-
+    Your job is not to change the agreed transfer price, reverse the legal sale or move stock. Show group
+    inventory and batch gross profit, plus the adjustment from the entity totals.
+  s3_zh: 你的工作不是去改已经约定的转让价格，也不是去撤销合法销售或搬动存货。请列出集团存货和该批毛利，并说明如何从两家公司的合计数调节过来。
+  s3_zh_hk: 你嘅工作唔係去改已經約定嘅轉讓價格，亦唔係去撤銷合法銷售或搬動存貨。請列出集團存貨同該批毛利，並說明點樣從兩間公司嘅合計數調節過嚟。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What should the group report?
+  title_zh: 集团应列示哪些数字？
+  title_zh_hk: 集團應列示邊啲數字？
+  en: >-
+    At the first snapshot, what inventory and gross profit should the group report for this batch, and
+    how would you bridge from the two companies’ totals? Pause and vote. No kits have yet been sold outside
+    the group.
+  zh: 在第一个时点，集团应就这批货列示多少存货和毛利？如何从两家公司的合计数调节过来？请暂停，投个票。这批货还没有对外出售。
+  zh_hk: 喺第一個時點，集團應就呢批貨列示多少存貨同毛利？點樣從兩間公司嘅合計數調節過嚟？暫停，投個票。呢批貨仲未對外出售。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Shop sells 600 kits outside
+  title_zh: 商店对外售出六百套
+  title_zh_hk: 商店對外售出六百套
+  step1_en: 600 sold at 150 each
+  step1_zh: 六百套按每套一百五十外销
+  step1_zh_hk: 六百套按每套一百五十外銷
+  step2_en: 400 kits remain in Shop
+  step2_zh: 商店仍余四百套
+  step2_zh_hk: 商店仍餘四百套
+  step3_en: Shop inventory now 40,000
+  step3_zh: 商店存货现为四万
+  step3_zh_hk: 商店存貨現為四萬
+  s1_en: >-
+    Later in the same period, Shop has sold and delivered 600 kits to unrelated customers for 150 each.
+    All revenue-recognition conditions for those sales are met. The other 400 kits remain in Shop.
+  s1_zh: 同一期间稍后，商店公司已按每套一百五十港元，向无关客户出售并交付六百套，收入确认条件均已满足。其余四百套仍留在商店公司。
+  s1_zh_hk: 同一期間稍後，商店公司已按每套一百五十港元，向無關客戶出售並交付六百套，收入確認條件均已滿足。其餘四百套仍留喺商店公司。
+  s2_en: >-
+    Shop now reports external revenue of 90,000, cost of sales of 60,000, gross profit of 30,000 and closing
+    inventory of 40,000. These are updated cumulative figures for the same batch, not amounts to add to
+    the first snapshot.
+  s2_zh: 商店公司现列示对外收入九万、销售成本六万、毛利三万、期末存货四万。这些是同一批次的累计更新数，不是要加在第一个时点之上的新数。
+  s2_zh_hk: 商店公司現列示對外收入九萬、銷貨成本六萬、毛利三萬、期末存貨四萬。呢啲係同一批次嘅累計更新數，唔係要加喺第一個時點之上嘅新數。
+  s3_en: >-
+    Supply’s completed internal sale and its 20,000 entity gross profit are unchanged. One colleague wants
+    to eliminate the original 20,000 again in full; another says the external sale means no profit adjustment
+    is needed.
+  s3_zh: 供应公司已完成的内部销售及其单体毛利二万没有变。有同事建议仍全额抵销原来的二万内部利润；也有人认为，既然已经对外销售，就不必再调整利润。
+  s3_zh_hk: 供應公司已完成嘅內部銷售及其單體毛利二萬冇變。有同事建議仍全額抵銷原來嘅二萬內部利潤；亦有人認為，既然已經對外銷售，就唔使再調整利潤。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: How much profit still to remove?
+  title_zh: 还须抵销多少内部利润？
+  title_zh_hk: 仲須抵銷多少內部利潤？
+  en: >-
+    At the second snapshot, how much internal profit still needs elimination, and what group revenue,
+    cost of sales, gross profit and inventory would you report? Pause and vote.
+  zh: 在第二个时点，仍有多少内部利润需要抵销？集团应列示多少收入、销售成本、毛利和存货？请暂停，投个票。
+  zh_hk: 喺第二個時點，仲有多少內部利潤需要抵銷？集團應列示多少收入、銷貨成本、毛利同存貨？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: No outside sale at first
+  title_zh: 起初还没有对外销售
+  title_zh_hk: 起初仲未有對外銷售
+  step1_en: Group inventory 80,000
+  step1_zh: 集团存货八万
+  step1_zh_hk: 集團存貨八萬
+  step2_en: Group revenue and profit nil
+  step2_zh: 集团收入和毛利为零
+  step2_zh_hk: 集團收入同毛利為零
+  step3_en: Remove the 20,000 in stock
+  step3_zh: 抵销存货中的二万利润
+  step3_zh_hk: 抵銷存貨入面嘅二萬利潤
+  s1_en: >-
+    At the first snapshot the group still holds all 1,000 kits at its outside acquisition cost: 1,000
+    times 80, which is 80,000. It has no external revenue or cost of sales, and no batch gross profit.
+  s1_zh: 在第一个时点，集团仍按对外购入成本持有全部一千套：一千乘以八十，即八万。集团还没有对外收入或销售成本，该批毛利为零。
+  s1_zh_hk: 喺第一個時點，集團仍按對外購入成本持有全部一千套：一千乘以八十，即八萬。集團仲未有對外收入或銷貨成本，該批毛利為零。
+  s2_en: >-
+    The 100,000 internal sale is removed from group revenue and cost of sales. The 20,000 profit embedded
+    in stock is removed from inventory and added to cost of sales. Together these give revenue nil, cost
+    of sales nil and gross profit nil.
+  s2_zh: 要从集团收入和销售成本中抵销十万内部销售，并把存货中包含的二万利润从存货转出、加入销售成本。合起来，收入、销售成本和毛利都是零。
+  s2_zh_hk: 要從集團收入同銷貨成本入面抵銷十萬內部銷售，並把存貨入面包含嘅二萬利潤從存貨轉出、加入銷貨成本。合起嚟，收入、銷貨成本同毛利都係零。
+  s3_en: >-
+    Consolidation entries are worksheet adjustments. They do not deny that the companies traded, and they
+    do not automatically cancel a valid invoice or undo the entity ledgers.
+  s3_zh: 合并抵销是工作底稿上的调整，并不是否认两家公司做过交易，也不会自动取消有效发票，或改写单体账簿。
+  s3_zh_hk: 合併抵銷係工作底稿上嘅調整，並唔係否認兩間公司做過交易，亦唔會自動取消有效發票，或改寫單體賬簿。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Eliminate only what remains
+  title_zh: 只抵销尚未售出的部分
+  title_zh_hk: 只抵銷尚未售出嘅部分
+  step1_en: Unrealised profit 8,000
+  step1_zh: 未实现利润八千
+  step1_zh_hk: 未實現利潤八千
+  step2_en: Group inventory 32,000
+  step2_zh: 集团存货三万二千
+  step2_zh_hk: 集團存貨三萬二千
+  step3_en: Group gross profit 42,000
+  step3_zh: 集团毛利四万二千
+  step3_zh_hk: 集團毛利四萬二千
+  s1_en: >-
+    The internal uplift is 100 minus 80, or 20 per kit. Only 400 kits remain, so unrealised profit is
+    400 times 20, or 8,000. Group closing inventory is 40,000 minus 8,000, which is 32,000.
+  s1_zh: 内部加价是一百减八十，即每套二十港元。只剩四百套，未实现利润是四百乘以二十，即八千。集团期末存货是四万减八千，即三万二千。
+  s1_zh_hk: 內部加價係一百減八十，即每套二十港元。只剩四百套，未實現利潤係四百乘以二十，即八千。集團期末存貨係四萬減八千，即三萬二千。
+  s2_en: >-
+    The 600 kits sold outside carry group cost of 600 times 80, or 48,000. External revenue is 90,000,
+    so group gross profit is 42,000.
+  s2_zh: 对外售出的六百套，按集团成本每套八十计算，销售成本是四万八千。对外收入九万，因此集团毛利是四万二千。
+  s2_zh_hk: 對外售出嘅六百套，按集團成本每套八十計算，銷貨成本係四萬八千。對外收入九萬，因此集團毛利係四萬二千。
+  s3_en: >-
+    Combined revenue is 190,000 and cost of sales 140,000. Remove the full internal sale of 100,000 from
+    both, then add 8,000 to cost of sales. Combined gross profit of 50,000 less 8,000 equals 42,000.
+  s3_zh: 两家合计收入十九万、销售成本十四万。先全额抵销十万内部销售，再在销售成本中加入八千未实现利润。合计毛利五万减去八千，等于四万二千。
+  s3_zh_hk: 兩間合計收入十九萬、銷貨成本十四萬。先全額抵銷十萬內部銷售，再喺銷貨成本加入八千未實現利潤。合計毛利五萬減八千，等於四萬二千。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    The correct elimination depends on how much of this batch remains, not on whether any external sale
+    occurred. Collecting an internal invoice does not create an external group sale. Income tax is ignored
+    in this gross-profit exercise; real consolidated accounts can require deferred-tax adjustments.
+  zh: >-
+    正确的抵销取决于这批货还剩多少，而不是有没有做过任何对外销售。收回内部账款，并不等于集团已对外销售。本题计算毛利时不考虑所得税；实际合并报表可能需要调整递延所得税。
+  zh_hk: >-
+    正確嘅抵銷取決於呢批貨仲剩多少，而唔係有冇做過任何對外銷售。收回內部賬款，並唔等於集團已對外銷售。呢題計算毛利時唔考慮所得稅；實際合併報表可能需要調整遞延所得稅。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Only unsold profit is unrealised
+  title_zh: 未售出的利润才未实现
+  title_zh_hk: 未售出嘅利潤先至未實現
+  q1_en: >-
+    First snapshot: group profit nil
+  q1_zh: 第一时点：集团毛利为零
+  q1_zh_hk: 第一時點：集團毛利為零
+  q2_en: Then eliminate remaining 8,000
+  q2_zh: 随后只抵销剩余的八千
+  q2_zh_hk: 其後只抵銷剩餘嘅八千
+  s1_en: >-
+    From the group’s point of view, a completed internal sale is not an outside sale. While all kits remain
+    inside the group, inventory is held at the 80,000 outside cost and batch gross profit is nil.
+  s1_zh: 站在集团角度看，已经完成的内部销售还不是对外销售。只要这批货全部留在集团，存货就按对外购入成本八万计量，该批毛利为零。
+  s1_zh_hk: 站喺集團角度睇，已經完成嘅內部銷售仲唔係對外銷售。只要呢批貨全部留喺集團，存貨就按對外購入成本八萬計量，該批毛利為零。
+  s2_en: >-
+    After 600 kits are sold outside, only the 8,000 unrealised profit on the remaining 400 kits is eliminated.
+    Full internal revenue elimination and partial remaining-profit elimination are different steps.
+  s2_zh: 对外售出六百套之后，只需抵销余下四百套中的八千未实现利润。全额抵销内部收入，与只抵销剩余内部利润，是两个不同步骤。
+  s2_zh_hk: 對外售出六百套之後，只需抵銷餘下四百套入面嘅八千未實現利潤。全額抵銷內部收入，同只抵銷剩餘內部利潤，係兩個唔同步驟。
+  s3_en: >-
+    The firm, the offers and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、报价和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、報價同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 194

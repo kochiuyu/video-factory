@@ -1,0 +1,283 @@
+id: ACC-23
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: On the truck. In whose year-end stock?
+title_zh: 货在途中，年末算谁的存货？
+title_zh_hk: 貨在車上，算誰的年末存貨？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-23
+  kicker_en: ACC-23
+  kicker_zh: ACC-23
+  kicker_zh_hk: ACC-23
+  title_en: On the truck. In whose year-end stock?
+  title_zh: 货在途中，年末算谁的存货？
+  title_zh_hk: 貨在車上，算誰的年末存貨？
+  image: art/on-the-truck-in-whose-stock-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A verified midnight warehouse count shows 60,000 of company-controlled goods, but lots A to D are
+    not in that count. Would you approve a dispatch-based draft, approve only the count, or keep the close
+    provisional? You are controller of a fictional Hong Kong stationery wholesaler, closing on 31 December.
+  zh: >-
+    核实过的午夜仓库盘点显示，企业控制的存货是六万港元，但甲到丁四批货都不在盘点里。你会批准按发运编制的草案、只按盘点入账，还是把年结暂作未定？你是一家虚构的香港文具批发商的财务主管，年结日是十二月三十一日。
+  zh_hk: >-
+    核實過嘅午夜倉庫盤點顯示，企業控制嘅存貨係六萬港元，但甲到丁四批貨都唔喺盤點入面。你會批准按付運編製嘅草案、只按盤點入賬，定係把年結暫作未定？你係一間虛構香港文具批發商嘅財務主管，年結日係十二月三十一日。
+- id: ledger
+  visual: table_grid
+  seconds: 30
+  rows: 4
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Lots not in the count, HK$
+  title_zh: 未计入盘点的各批，港元
+  title_zh_hk: 未計入盤點嘅各批，港元
+  row1_en: A, inbound, arrives 2 Jan
+  row1_zh: 甲，购入在途，1月2日到达
+  row1_zh_hk: 甲，購入在途，1月2日到達
+  row2_en: B, outbound, arrives 2 Jan
+  row2_zh: 乙，售出在途，1月2日到达
+  row2_zh_hk: 乙，售出在途，1月2日到達
+  row3_en: C, collected 31 Dec
+  row3_zh: 丙，客户承运人31日提货
+  row3_zh_hk: 丙，客戶承運人31日提貨
+  row4_en: D, trial at customer
+  row4_zh: 丁，试用，在客户处
+  row4_zh_hk: 丁，試用，喺客戶度
+  col1_en: Cost
+  col1_zh: 成本
+  col1_zh_hk: 成本
+  col2_en: Proposed sale
+  col2_zh: 拟确认销售收入
+  col2_zh_hk: 擬確認銷售收入
+  c11: 12,000
+  c12: —
+  c21: 10,000
+  c22: 18,000
+  c31: 7,000
+  c32: 12,000
+  c41: 6,000
+  c42: 9,000
+  footer_en: The 60,000 count excludes A to D.
+  footer_zh: 仓库盘点六万，不含甲至丁。
+  footer_zh_hk: 倉庫盤點六萬，唔包括甲至丁。
+  s1_en: >-
+    Apart from lots A to D, reviewed current-year revenue is 200,000 and cost of sales is 120,000. The
+    draft uses the 60,000 count, treats all three outbound lots as sales, and omits A’s purchase because
+    it has not arrived.
+  s1_zh: 除甲到丁以外，已复核的本年收入是二十万，销售成本十二万。草案按六万盘点入账，把三批出库都当成销售，又因为甲还没运到，漏记了甲的购货和应付款。
+  s1_zh_hk: 除甲到丁以外，已覆核嘅本年收入係二十萬，銷貨成本十二萬。草案按六萬盤點入賬，把三批出庫都當成銷售，又因為甲仲未運到，漏記咗甲嘅購貨同應付款。
+  s2_en: >-
+    That draft shows revenue of 239,000 and cost of sales of 143,000. Only movement records are currently
+    available. Contract and acceptance evidence can be checked tomorrow, before approval.
+  s2_zh: 这份草案列示收入二十三万九千，销售成本十四万三千。目前只有货物移动记录。合同和验收证据明天、也就是批准前可以核对。
+  s2_zh_hk: 呢份草案列示收入二十三萬九千，銷貨成本十四萬三千。目前只有貨物移動紀錄。合約同驗收證據明天、亦即批准前可以核對。
+  s3_en: >-
+    The business recognises a sale when the customer obtains control, and includes goods it controls in
+    inventory even when held elsewhere. An invoice, dispatch or arrival alone does not settle control.
+  s3_zh: 企业在客户取得控制权时确认销售，并且把本企业控制的货物计入存货，即使货物不在本仓库。单凭发票、发运或到货，判断不了控制权。
+  s3_zh_hk: 企業喺客戶取得控制權時確認銷售，並且把本企業控制嘅貨物計入存貨，即使貨物唔喺本倉庫。單憑發票、付運或者到貨，判斷唔到控制權。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Approve, or keep it provisional?
+  title_zh: 批准草案，还是暂作未定？
+  title_zh_hk: 批准草案，定係暫作未定？
+  en: >-
+    Would you approve the dispatch-based draft, approve only the physical count as the inventory balance,
+    or keep the close provisional? Identify the evidence needed for each shipment. Pause and vote.
+  zh: 你会批准按发运编制的草案、只把盘点金额作为存货余额，还是把年结暂作未定？请指出每批货还需要什么证据。请暂停，投个票。
+  zh_hk: 你會批准按付運編製嘅草案、只把盤點金額作為存貨餘額，定係把年結暫作未定？指出每批貨仲需要咩證據。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Verified control at midnight
+  title_zh: 核实午夜时的控制权
+  title_zh_hk: 核實午夜時嘅控制權
+  step1_en: >-
+    A: control passed on 30 Dec
+  step1_zh: 甲：30日已取得控制权
+  step1_zh_hk: 甲：30日已取得控制權
+  step2_en: >-
+    B: control passes on 2 Jan
+  step2_zh: 乙：控制权1月2日才转移
+  step2_zh_hk: 乙：控制權1月2日先轉移
+  step3_en: C sold; D rejected 31 Dec
+  step3_zh: 丙已售出；丁已于31日拒收
+  step3_zh_hk: 丙已售出；丁已於31日拒收
+  s1_en: >-
+    For lot A, the contract and carrier receipt show that control passed to the wholesaler when the supplier
+    handed the identified goods to the carrier on 30 December. The purchase is unpaid, so the payable
+    also arises then.
+  s1_zh: 甲批：合同和承运人收据表明，供应商在十二月三十日把已识别货物交给承运人时，控制权已转给本批发商。货款未付，应付款也在当时确认。
+  s1_zh_hk: 甲批：合約同承運人收據表明，供應商喺十二月三十日把已識別貨物交給承運人時，控制權已轉畀本批發商。貨款未付，應付款亦喺當時確認。
+  s2_en: >-
+    For lot B, control passed to the customer only on arrival on 2 January. The wholesaler retained control
+    throughout the journey. For lot C, control passed on carrier collection on 31 December, and no remaining
+    promise exists.
+  s2_zh: 乙批：控制权要到一月二日货物到达时才转给客户，在途期间仍由本企业控制。丙批：十二月三十一日客户承运人提货时控制权已转移，没有剩余承诺。
+  s2_zh_hk: 乙批：控制權要到一月二日貨物到達時先轉畀客戶，在途期間仍由本企業控制。丙批：十二月三十一日客戶承運人提貨時控制權已轉移，冇剩餘承諾。
+  s3_en: >-
+    Lot D was a genuine trial. A dated customer message confirms rejection on 31 December, before any
+    acceptance. Control never left the wholesaler; the goods remain undamaged and recoverable at cost.
+  s3_zh: 丁批是真正的试用。客户在十二月三十一日、尚未验收前发来注明日期的拒收信息。控制权从未离开本企业；货物无损，可按成本收回。
+  s3_zh_hk: 丁批係真正嘅試用。客戶喺十二月三十一日、尚未驗收前發嚟註明日期嘅拒收信息。控制權從未離開本企業；貨物無損，可按成本收回。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What should year-end show?
+  title_zh: 年结报告应列哪些数字？
+  title_zh_hk: 年結報告應列邊啲數字？
+  en: >-
+    Using the verified control terms, what inventory, revenue and cost of sales should the year-end report
+    show? Explain each shipment and the difference from the draft. Pause and vote.
+  zh: 根据已核实的控制权条件，年末报告应列示多少存货、收入和销售成本？请说明每一批货，以及与草案的差异。请暂停，投个票。
+  zh_hk: 根據已核實嘅控制權條件，年末報告應列示多少存貨、收入同銷貨成本？說明每一批貨，以及同草案嘅差異。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Classify each lot first
+  title_zh: 先给每批货分类
+  title_zh_hk: 先畀每批貨分類
+  step1_en: A in transit, cost 12,000
+  step1_zh: 甲在途存货一万二千
+  step1_zh_hk: 甲在途存貨一萬二千
+  step2_en: B still ours, cost 10,000
+  step2_zh: 乙仍是本企业存货一万
+  step2_zh_hk: 乙仍係本企業存貨一萬
+  step3_en: C sold; D back at cost 6,000
+  step3_zh: 丙已出售；丁按成本六千收回
+  step3_zh_hk: 丙已出售；丁按成本六千收回
+  s1_en: >-
+    Keep the close provisional until this evidence is obtained. The warehouse count is reliable for its
+    location, but it does not establish the complete inventory balance.
+  s1_zh: 在取得这些证据前，年结应暂作未定。仓库盘点就其地点而言是可靠的，但不能划完整条存货界线。
+  s1_zh_hk: 喺取得呢啲證據前，年結應暫作未定。倉庫盤點就佢地點而言係可靠嘅，但唔能劃完整條存貨界線。
+  s2_en: >-
+    A is our purchase in transit, not our revenue: inventory 12,000, and a 12,000 payable. B is our stock
+    travelling to a customer: inventory 10,000, and no sale yet. C is a completed sale: revenue 12,000
+    and cost of sales 7,000, with no inventory.
+  s2_zh: >-
+    甲是购入在途，不是销售收入：存货和应付款各一万二千。乙仍是本企业存货一万，还不能确认销售。丙是已完成销售：收入一万二千、销售成本七千，不再计入存货。
+  s2_zh_hk: >-
+    甲係購入在途，唔係銷售收入：存貨同應付款各一萬二千。乙仍係本企業存貨一萬，仲未能確認銷售。丙係已完成銷售：收入一萬二千、銷貨成本七千，唔再計入存貨。
+  s3_en: >-
+    D is our stock returning from a trial that never became a sale: inventory 6,000, and no revenue. That
+    treatment follows the stipulated substantive acceptance condition; it is not a general rule that every
+    return reverses prior revenue.
+  s3_zh: 丁是试用后退回、从未成为销售的存货：存货六千，不确认收入。这样处理是因为约定了实质性验收条件，并不能推广为凡退货都要冲回先前收入。
+  s3_zh_hk: 丁係試用後退回、從未成為銷售嘅存貨：存貨六千，唔確認收入。咁樣處理係因為約定咗實質性驗收條件，並唔能推廣為凡退貨都要沖回先前收入。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Build the year-end bridge
+  title_zh: 编制年结调节
+  title_zh_hk: 編製年結調節
+  step1_en: Inventory 88,000
+  step1_zh: 存货八万八千
+  step1_zh_hk: 存貨八萬八千
+  step2_en: Revenue 212,000
+  step2_zh: 收入二十一万二千
+  step2_zh_hk: 收入二十一萬二千
+  step3_en: Gross profit 85,000
+  step3_zh: 毛利八万五千
+  step3_zh_hk: 毛利八萬五千
+  s1_en: >-
+    Inventory is 60,000 plus 12,000 plus 10,000 plus 6,000, which is 88,000. A’s unpaid purchase also
+    adds a 12,000 payable, with no immediate expense or cash payment.
+  s1_zh: 存货是六万加一万二千加一万再加六千，等于八万八千。甲的未付购货同时增加应付款一万二千，但不会立即产生费用或现金支付。
+  s1_zh_hk: 存貨係六萬加一萬二千加一萬再加六千，等於八萬八千。甲嘅未付購貨同時增加應付款一萬二千，但唔會即時產生費用或現金支付。
+  s2_en: >-
+    Revenue is 200,000 plus C’s 12,000, or 212,000. Cost of sales is 120,000 plus 7,000, or 127,000. Gross
+    profit is 85,000. Other expenses are not supplied, so this is not net profit.
+  s2_zh: 收入是二十万加丙的一万二千，即二十一万二千。销售成本是十二万加七千，即十二万七千。毛利是八万五千。题目没有给出其他费用，所以这不是净利润。
+  s2_zh_hk: 收入係二十萬加丙嘅一萬二千，即二十一萬二千。銷貨成本係十二萬加七千，即十二萬七千。毛利係八萬五千。題目冇畀其他費用，所以呢個唔係淨溢利。
+  s3_en: >-
+    Against the draft, remove B and D revenue of 27,000, reverse their 16,000 cost of sales into inventory,
+    and add A’s 12,000 in-transit purchase and payable. Inventory rises 28,000 and gross profit falls
+    to 85,000. Do not add C back just because it is still travelling.
+  s3_zh: >-
+    相对草案，要冲回乙和丁的收入二万七千，把销售成本一万六千转回存货，再补记甲的在途购货和应付款一万二千。存货增加二万八千，毛利减到八万五千。不要因为丙仍在途中就加回存货。
+  s3_zh_hk: >-
+    相對草案，要沖回乙同丁嘅收入二萬七千，把銷貨成本一萬六千轉回存貨，再補記甲嘅在途購貨同應付款一萬二千。存貨增加二萬八千，毛利減到八萬五千。唔好因為丙仍在途中就加回存貨。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    Real conclusions require the complete arrangement and facts. Possession, title, payment rights, risks
+    and acceptance may point in different directions. Here D’s trial acceptance condition is expressly
+    substantive. The case supplies resolved control points, not a universal reading of delivery terms.
+  zh: >-
+    实务中必须看完整安排和事实。占有、所有权、收款权、风险和验收可能指向不同结论。本题丁的试用验收是明示的实质性条件。案例给出的是已经厘清的控制时点，不是对所有交货条款的统一解释。
+  zh_hk: >-
+    實務中必須睇完整安排同事實。佔有、所有權、收款權、風險同驗收可能指向唔同結論。呢題丁嘅試用驗收係明示嘅實質性條件。案例畀出嘅係已經釐清嘅控制時點，唔係對所有交貨條款嘅統一解釋。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Control, not a shipping slogan
+  title_zh: 看控制权，不看发运字眼
+  title_zh_hk: 睇控制權，唔睇付運字眼
+  q1_en: Inventory 88,000, not 60,000
+  q1_zh: 存货八万八千，不是六万
+  q1_zh_hk: 存貨八萬八千，唔係六萬
+  q2_en: Only lot C is a 31 December sale
+  q2_zh: 只有丙是十二月三十一日的销售
+  q2_zh_hk: 只有丙係十二月三十一日嘅銷售
+  s1_en: >-
+    A count is reliable for its stated location, but it is not the whole reporting boundary. Include goods
+    the wholesaler controls even when they are on a truck or at a customer on trial.
+  s1_zh: 盘点就其地点而言可靠，但不能划完整条报告界线。只要货物仍由本企业控制，即使在途或在客户处试用，也要计入存货。
+  s1_zh_hk: 盤點就其地點而言可靠，但唔能劃完整條報告界線。只要貨物仍由本企業控制，即使在途或者喺客戶處試用，都要計入存貨。
+  s2_en: >-
+    Do not expense A merely because a payable is recorded, and do not treat dispatch as a sale. Reconcile
+    the 60,000 warehouse count to controlled goods elsewhere, rather than rewriting the count.
+  s2_zh: 不能因为记录了应付款就把甲计入费用，也不能把发运当成销售。应当把六万的仓库盘点与在别处控制的货物调节起来，而不是改写盘点本身。
+  s2_zh_hk: 唔能因為記錄咗應付款就把甲計入費用，亦唔能把付運當成銷售。應當把六萬嘅倉庫盤點同喺別處控制嘅貨物調節起嚟，而唔係改寫盤點本身。
+  s3_en: >-
+    The firm, the offers and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、报价和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、報價同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 206

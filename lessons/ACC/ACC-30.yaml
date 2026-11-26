@@ -1,0 +1,294 @@
+id: ACC-30
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A healthier ratio. A healthier business?
+title_zh: 流动比率提高，公司的财务就更健康吗？
+title_zh_hk: 流動比率較高，公司的財務就更穩健？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-30
+  kicker_en: ACC-30
+  kicker_zh: ACC-30
+  kicker_zh_hk: ACC-30
+  title_en: A healthier ratio. A healthier business?
+  title_zh: 流动比率提高，公司的财务就更健康吗？
+  title_zh_hk: 流動比率較高，公司的財務就更穩健？
+  image: art/ratio-rises-cash-falls-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Harbour can pay a 20,000 supplier bill on 30 December or 2 January, at the same amount. A colleague
+    wants the earlier date to make the year-end current ratio healthier. Does the ratio alone justify
+    bringing payment forward? You are a group controller reviewing a fictional Hong Kong subsidiary.
+  zh: >-
+    Harbour 可以在十二月三十日或一月二日支付已经入账的二万港元供应商款项，金额相同。有同事主张提前到十二月三十日，好让年末流动比率看起来更健康。单凭比率，是否就应提前付款？你是虚构香港集团的财务主管，正在复核这家子公司。
+  zh_hk: >-
+    Harbour 可以喺十二月三十日或一月二日支付已經入賬嘅二萬港元供應商款項，金額相同。有同事主張提前到十二月三十日，好讓年末流動比率睇起嚟更健康。單憑比率，係咪就應提前付款？你係虛構香港集團嘅財務主管，正在覆核呢間附屬公司。
+- id: ledger
+  visual: table_grid
+  seconds: 24
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Harbour before payment, HK$
+  title_zh: Harbour 付款前，港元
+  title_zh_hk: Harbour 付款前，港元
+  row1_en: Current assets
+  row1_zh: 流动资产
+  row1_zh_hk: 流動資產
+  row2_en: Included unrestricted cash
+  row2_zh: 其中不受限现金
+  row2_zh_hk: 其中不受限現金
+  row3_en: Current liabilities
+  row3_zh: 流动负债
+  row3_zh_hk: 流動負債
+  row4_en: Permitted payment, either date
+  row4_zh: 两个日期均可支付
+  row4_zh_hk: 兩個日期均可支付
+  col1_en: 31 December if paid 2 January
+  col1_zh: 若1月2日支付的年末数
+  col1_zh_hk: 若1月2日支付嘅年末數
+  c11: 150,000
+  c21: 50,000
+  c31: 100,000
+  c41: 20,000
+  footer_en: Neither date is overdue.
+  footer_zh: 两个日期都没有逾期。
+  footer_zh_hk: 兩個日期都沒有逾期。
+  s1_en: >-
+    The 20,000 payable is already recognised within current liabilities. The written contract expressly
+    permits settlement on either 30 December or 2 January at the same amount. The established treasury
+    schedule is 2 January.
+  s1_zh: 这笔二万港元应付款已经计入流动负债。书面合同明确允许在十二月三十日或一月二日支付同一金额。既定的资金安排是一月二日付款。
+  s1_zh_hk: 呢筆二萬港元應付款已經計入流動負債。書面合約明確允許喺十二月三十日或一月二日支付同一金額。既定嘅資金安排係一月二日付款。
+  s2_en: >-
+    If payment remains on 2 January, projected 31 December balances are current assets 150,000, including
+    unrestricted cash 50,000, and current liabilities 100,000. Paying 20,000 reduces cash and the recognised
+    payable by exactly that amount; it is not a new expense.
+  s2_zh: >-
+    若仍在一月二日支付，预计十二月三十一日的流动资产是十五万，其中不受限现金五万，流动负债十万。支付二万会等额减少现金和已确认应付款，不会产生新的费用。
+  s2_zh_hk: >-
+    若仍喺一月二日支付，預計十二月三十一日嘅流動資產係十五萬，其中不受限現金五萬，流動負債十萬。支付二萬會等額減少現金同已確認應付款，唔會產生新嘅費用。
+  s3_en: >-
+    The current ratio is current assets divided by current liabilities. Net working capital is current
+    assets minus current liabilities. There is no covenant, bonus or legal threshold tied to the ratio.
+    Do not execute a payment in this exercise.
+  s3_zh: 流动比率是流动资产除以流动负债。营运资金净额是流动资产减去流动负债。没有与该比率挂钩的契诺、奖金或法定门槛。本题不要实际付款。
+  s3_zh_hk: 流動比率係流動資產除以流動負債。營運資金淨額係流動資產減流動負債。沒有與該比率掛鈎嘅契諾、獎金或法定門檻。呢題唔好實際付款。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Does the ratio justify it?
+  title_zh: 单凭比率就应提前付款吗？
+  title_zh_hk: 單憑比率就應提前付款嗎？
+  en: >-
+    How do Harbour’s 31 December current ratio, cash and net working capital differ between the two dates,
+    and does the ratio alone justify bringing payment forward? Pause and vote. Either date is permitted
+    and meets the cash forecast.
+  zh: >-
+    Harbour 在十二月三十一日的流动比率、现金和营运资金净额，在两个日期下有何不同？单凭比率，是否就应提前付款？请暂停，投个票。两个日期都允许，也都能满足现金预测。
+  zh_hk: >-
+    Harbour 喺十二月三十一日嘅流動比率、現金同營運資金淨額，喺兩個日期下有何不同？單憑比率，係咪就應提前付款？暫停，投個票。兩個日期都允許，亦都能滿足現金預測。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Cove has a tighter position
+  title_zh: Cove 的流动性更紧
+  title_zh_hk: Cove 嘅流動性更緊
+  step1_en: Cove assets 80,000; cash 30,000
+  step1_zh: Cove 流动资产八万，现金三万
+  step1_zh_hk: Cove 流動資產八萬，現金三萬
+  step2_en: Cove liabilities 100,000
+  step2_zh: Cove 流动负债十万
+  step2_zh_hk: Cove 流動負債十萬
+  step3_en: Same 20,000 payment, same terms
+  step3_zh: 同样支付二万，条件相同
+  step3_zh_hk: 同樣支付二萬，條件相同
+  s1_en: >-
+    The controller checks a second subsidiary, Cove, under the same payment terms. Its projected 31 December
+    balances before a separate 20,000 supplier payment are current assets 80,000, including unrestricted
+    cash 30,000, and current liabilities 100,000.
+  s1_zh: >-
+    财务主管按相同付款条件复核另一家子公司 Cove。在另行支付二万港元供应商款项前，其预计十二月三十一日流动资产是八万，其中不受限现金三万，流动负债十万。
+  s1_zh_hk: >-
+    財務主管按相同付款條件覆核另一間附屬公司 Cove。喺另行支付二萬港元供應商款項前，其預計十二月三十一日流動資產係八萬，其中不受限現金三萬，流動負債十萬。
+  s2_en: >-
+    Cove’s established payment date is also 2 January; either permitted date meets its cash forecast and
+    operating minimum. No balances are transferred between subsidiaries.
+  s2_zh: Cove 既定的付款日同样是一月二日；两个允许的日期都能满足其现金预测和营运最低现金。两家子公司之间不会划转余额。
+  s2_zh_hk: Cove 既定嘅付款日同樣係一月二日；兩個允許嘅日期都能滿足其現金預測同營運最低現金。兩間附屬公司之間唔會劃轉餘額。
+  s3_en: >-
+    The board now asks whether reducing current liabilities necessarily improves the current ratio, and
+    whether the ratio’s direction establishes a gain or loss in economic health. Report both entities
+    without netting or withholding the less flattering result.
+  s3_zh: >-
+    董事会现在问：减少流动负债是否必然提高流动比率，以及比率升降是否就能证明经济状况变好或变差。两家都要列报，不能互相抵销，也不能隐瞒较差的那一组。
+  s3_zh_hk: >-
+    董事局而家問：減少流動負債係咪必然提高流動比率，以及比率升跌係咪就能證明經濟狀況變好或變差。兩間都要列報，唔可以互相抵銷，亦唔可以隱瞞較差嗰一組。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Why do the ratios move apart?
+  title_zh: 为什么两个比率方向相反？
+  title_zh_hk: 點解兩個比率方向相反？
+  en: >-
+    Why does the same payment move the two subsidiaries’ current ratios in opposite directions, and what
+    should the controller say about economic health and payment scheduling? Pause and vote.
+  zh: 为什么同一笔付款会让两家子公司的流动比率朝相反方向变动？财务主管应如何说明经济状况和付款安排？请暂停，投个票。
+  zh_hk: 點解同一筆付款會令兩間附屬公司嘅流動比率朝相反方向變動？財務主管應點樣說明經濟狀況同付款安排？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Harbour’s two snapshots
+  title_zh: Harbour 的两种年末数字
+  title_zh_hk: Harbour 嘅兩種年末數字
+  step1_en: >-
+    If paid 2 January: ratio 1.50
+  step1_zh: 一月二日支付：比率 1.50
+  step1_zh_hk: 一月二日支付：比率 1.50
+  step2_en: >-
+    If paid 30 December: 1.625
+  step2_zh: 十二月三十日支付：1.625
+  step2_zh_hk: 十二月三十日支付：1.625
+  step3_en: Net working capital stays 50,000
+  step3_zh: 营运资金净额仍是五万
+  step3_zh_hk: 營運資金淨額仍係五萬
+  s1_en: >-
+    If payment stays on 2 January, the 31 December current ratio is 150,000 over 100,000, or 1.50; cash
+    is 50,000 and net working capital is 50,000.
+  s1_zh: 若仍在一月二日支付，十二月三十一日的流动比率是十五万除以十万，即 1.50；现金五万，营运资金净额也是五万。
+  s1_zh_hk: 若仍喺一月二日支付，十二月三十一日嘅流動比率係十五萬除以十萬，即 1.50；現金五萬，營運資金淨額亦係五萬。
+  s2_en: >-
+    If paid on 30 December, current assets become 130,000 and current liabilities 80,000: the ratio is
+    1.625. Cash falls to 30,000. Net working capital remains 130,000 minus 80,000, or 50,000.
+  s2_zh: 若在十二月三十日支付，流动资产变为十三万，流动负债八万，比率是 1.625。现金降到三万。营运资金净额仍是十三万减八万，即五万。
+  s2_zh_hk: 若喺十二月三十日支付，流動資產變為十三萬，流動負債八萬，比率係 1.625。現金降到三萬。營運資金淨額仍係十三萬減八萬，即五萬。
+  s3_en: >-
+    The larger ratio does not create cash or profit. With all other benefits and costs held equal, the
+    ratio alone is not a reason to abandon the established 2 January schedule.
+  s3_zh: 比率升高，并不会创造现金或利润。在其他利弊都明确保持不变时，单凭比率并不足以放弃既定的一月二日安排。
+  s3_zh_hk: 比率升高，並唔會創造現金或利潤。喺其他利弊都明確保持不變時，單憑比率並唔足以放棄既定嘅一月二日安排。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: The same payment can lower it
+  title_zh: 同一付款也可以拉低比率
+  title_zh_hk: 同一付款亦可以拉低比率
+  step1_en: Cove stays 0.80, or falls to 0.75
+  step1_zh: Cove 维持 0.80，或降至 0.75
+  step1_zh_hk: Cove 維持 0.80，或降至 0.75
+  step2_en: Cove working capital stays minus 20,000
+  step2_zh: Cove 营运资金净额仍为负二万
+  step2_zh_hk: Cove 營運資金淨額仍為負二萬
+  step3_en: The ratio moves away from one
+  step3_zh: 比率会离 1 更远
+  step3_zh_hk: 比率會離 1 更遠
+  s1_en: >-
+    If paid on 2 January, Cove’s year-end ratio is 80,000 over 100,000, or 0.80; cash is 30,000 and net
+    working capital is negative 20,000. If paid on 30 December, the ratio becomes 0.75, cash 10,000, and
+    net working capital is still negative 20,000.
+  s1_zh: >-
+    若在一月二日支付，Cove 的年末比率是八万除以十万，即 0.80；现金三万，营运资金净额为负二万。若在十二月三十日支付，比率变为 0.75，现金一万，营运资金净额仍为负二万。
+  s1_zh_hk: >-
+    若喺一月二日支付，Cove 嘅年末比率係八萬除以十萬，即 0.80；現金三萬，營運資金淨額為負二萬。若喺十二月三十日支付，比率變為 0.75，現金一萬，營運資金淨額仍為負二萬。
+  s2_en: >-
+    Subtracting the same positive payment from numerator and denominator moves a ratio away from one,
+    provided the remaining denominator is positive. If current assets exceed current liabilities, the
+    ratio rises; if assets are smaller, it falls. The absolute difference is unchanged.
+  s2_zh: >-
+    从分子和分母同时减去同一笔正数付款，只要剩余分母仍为正，比率就会离开 1。流动资产大于流动负债时，比率上升；资产较小时，比率下降。两者的差额绝对值不变。
+  s2_zh_hk: >-
+    從分子同分母同時減去同一筆正數付款，只要剩餘分母仍為正，比率就會離開 1。流動資產大於流動負債時，比率上升；資產較小時，比率下降。兩者嘅差額絕對值不變。
+  s3_en: >-
+    Both entities have less cash and less debt to suppliers after payment. Neither earns profit or improves
+    its net working-capital amount from the settlement itself. Retain the established schedule unless
+    there is a genuine commercial or cash-management reason to change it.
+  s3_zh: >-
+    付款后，两家都是现金减少、对供应商的债务也减少。结算本身既不会带来利润，也不会改善营运资金净额。除非有真正的商务或现金管理理由，否则应维持既定安排。
+  s3_zh_hk: >-
+    付款後，兩間都係現金減少、對供應商嘅債務亦減少。結算本身既唔會帶來利潤，亦唔會改善營運資金淨額。除非有真正嘅商務或現金管理理由，否則應維持既定安排。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    A January payment also reduces cash and the payable then; it does not extinguish the obligation at
+    December year-end. Do not reclassify the liability as non-current merely because payment is in January.
+    Present both original and payment-adjusted snapshots together. A ratio below one deserves contextual
+    examination, not an automatic conclusion of insolvency.
+  zh: >-
+    一月付款同样会在当时减少现金和应付款，但不会在十二月年结时消灭这笔债务。不能只因为在一月付款，就把负债重分类为非流动。要把原余额和调整后余额一并列示。比率低于 1，需要结合背景考察，不能自动等同于无力偿债。
+  zh_hk: >-
+    一月付款同樣會喺當時減少現金同應付款，但唔會喺十二月年結時消滅呢筆債務。唔能只因為喺一月付款，就把負債重分類為非流動。要把原餘額同調整後餘額一併列示。比率低於 1，需要結合背景考察，唔能自動等同於無力償債。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: A ratio is not a cash gain
+  title_zh: 比率升高不等于更有现金
+  title_zh_hk: 比率升高唔等於更有現金
+  q1_en: >-
+    Harbour: 1.50 or 1.625; NWC 50,000
+  q1_zh: Harbour：1.50 或 1.625，净额五万
+  q1_zh_hk: Harbour：1.50 或 1.625，淨額五萬
+  q2_en: >-
+    Cove: 0.80 or 0.75; NWC minus 20,000
+  q2_zh: Cove：0.80 或 0.75，净额负二万
+  q2_zh_hk: Cove：0.80 或 0.75，淨額負二萬
+  s1_en: >-
+    Paying an already recognised payable reduces cash and current liabilities by the same amount. Net
+    working capital does not change. The current ratio can rise or fall, depending on whether assets already
+    exceed liabilities.
+  s1_zh: 支付一笔已经确认的应付款，会等额减少现金和流动负债。营运资金净额不变。流动比率可能上升也可能下降，取决于流动资产是否已经大于流动负债。
+  s1_zh_hk: 支付一筆已經確認嘅應付款，會等額減少現金同流動負債。營運資金淨額不變。流動比率可能上升亦可能下降，取決於流動資產係咪已經大於流動負債。
+  s2_en: >-
+    Do not change an established payment date merely to make a year-end ratio look healthier. Report both
+    subsidiaries, and let the cash plan and commercial terms, not a cosmetic ratio target, decide the
+    date.
+  s2_zh: 不要只为了让年末比率看起来更健康，就改变既定付款日。两家子公司都要列报；决定日期的应是现金安排和商务条件，而不是化妆式的比率目标。
+  s2_zh_hk: 唔好只為咗讓年末比率睇起嚟更健康，就改變既定付款日。兩間附屬公司都要列報；決定日期嘅應係現金安排同商務條件，而唔係化妝式嘅比率目標。
+  s3_en: >-
+    The firm, the offers and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、报价和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、報價同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 192

@@ -20,7 +20,18 @@ from anim import (
     scene_problems,
     step_durations,
 )
-from scene_registry import REGISTRY, count_event, count_marks, crosses_ten, schedule_marks, step_count, track_columns
+from scene_registry import (
+    REGISTRY,
+    count_event,
+    count_marks,
+    crosses_ten,
+    labels_for,
+    ordinal_visits,
+    scene_problems,
+    schedule_marks,
+    step_count,
+    track_columns,
+)
 from mux import CAP_TIME_WORDS
 from slides import LAYOUT_VERSION, STAGEABLE, lesson_stamp, stage_plan
 from theme import load_theme
@@ -685,6 +696,458 @@ class AnimatedRenderTest(unittest.TestCase):
                 xs.append(self._gold_x(shot))
             self.assertTrue(all(xs[i] < xs[i + 1] - 4 for i in range(3)), xs)
 
+    def test_ordinal_box_moves_with_the_spoken_place(self):
+        import subprocess
+        import tempfile
+
+        from anim import render_animated_clip
+
+        beat = {
+            "id": "from-left",
+            "visual": "animated",
+            "scene": "ordinal_row",
+            "mode": "ordinal",
+            "direction": "left",
+            "n": 6,
+            "mark": 3,
+            "s1_en": "Start at the left.",
+            "s2_en": "First. Second. Third.",
+            "s3_en": "The star is third.",
+            "s1_zh": "从左边数。",
+            "s2_zh": "第一，第二，第三。",
+            "s3_zh": "星星是第三。",
+        }
+        words = [
+            {"text": "Start", "start": 0.1, "end": 0.4},
+            {"text": "First", "start": 1.15, "end": 1.5},
+            {"text": "Second", "start": 1.85, "end": 2.2},
+            {"text": "Third", "start": 2.55, "end": 2.9},
+            {"text": "The", "start": 3.4, "end": 3.6},
+        ]
+        with tempfile.TemporaryDirectory(prefix="vf-ord-") as tmp:
+            root = Path(tmp)
+            audio = root / "silent.wav"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                 "-t", "5", "-c:a", "pcm_s16le", str(audio)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            dest = root / "ord.mp4"
+            render_animated_clip(
+                beat, {}, label_lang_code="en",
+                holds=[0.8, 2.4, 1.0], still_idx=[0, 1, 2],
+                pages=["Start at the left.", "First. Second. Third.", "The star is third."],
+                audio=audio, dest=dest, cache_dir=root / "cache",
+                captions=False, progress_bar=False, frame=(640, 360), fps=10,
+                words=words,
+            )
+            silent = next((root / "cache" / "en").glob("from-left-*.mp4"))
+            xs = []
+            for n, t in enumerate((1.2, 1.9, 2.6)):
+                shot = root / f"ord-{n}.png"
+                subprocess.check_call(
+                    ["ffmpeg", "-y", "-i", str(silent), "-vf", f"select=eq(n\\,{int(t * 10)})",
+                     "-frames:v", "1", str(shot)],
+                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                )
+                xs.append(self._gold_x(shot))
+            self.assertTrue(all(xs[i] < xs[i + 1] - 2 for i in range(2)), xs)
+            back = dict(beat, id="from-right", direction="right")
+            back["s2_en"] = "First. Second. Third. Fourth."
+            back_words = [
+                {"text": "Now", "start": 0.1, "end": 0.3},
+                {"text": "First", "start": 1.1, "end": 1.3},
+                {"text": "Second", "start": 1.6, "end": 1.8},
+                {"text": "Third", "start": 2.1, "end": 2.3},
+                {"text": "Fourth", "start": 2.6, "end": 2.8},
+                {"text": "Same", "start": 3.4, "end": 3.6},
+            ]
+            dest2 = root / "back.mp4"
+            render_animated_clip(
+                back, {}, label_lang_code="en",
+                holds=[0.8, 2.6, 1.0], still_idx=[0, 1, 2],
+                pages=["Now.", "First. Second. Third. Fourth.", "Fourth."],
+                audio=audio, dest=dest2, cache_dir=root / "cache",
+                captions=False, progress_bar=False, frame=(640, 360), fps=10,
+                words=back_words,
+            )
+            silent2 = next((root / "cache" / "en").glob("from-right-*.mp4"))
+            back_xs = []
+            for n, t in enumerate((1.15, 1.65, 2.15, 2.65)):
+                shot = root / f"back-{n}.png"
+                subprocess.check_call(
+                    ["ffmpeg", "-y", "-i", str(silent2), "-vf", f"select=eq(n\\,{int(t * 10)})",
+                     "-frames:v", "1", str(shot)],
+                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                )
+                back_xs.append(self._gold_x(shot))
+            self.assertTrue(all(back_xs[i] > back_xs[i + 1] + 2 for i in range(3)), back_xs)
+
+    def test_ordinal_labels_and_hook_read_at_phone_size(self):
+        """Count labels clear the pixel floor, the hook row is about twice as tall, and takeaway rows share a left edge."""
+        import subprocess
+        import tempfile
+
+        from PIL import Image
+
+        from anim import render_animated_clip
+
+        how = {
+            "id": "how-many",
+            "visual": "animated",
+            "scene": "ordinal_row",
+            "mode": "total",
+            "direction": "left",
+            "n": 6,
+            "mark": 3,
+            "s1_zh": "六个图案排成一行。",
+            "s2_zh": "一，二，三，四，五，六。",
+            "s3_zh": "六个。",
+        }
+        hook = {
+            "id": "hook",
+            "visual": "animated",
+            "scene": "lesson_hook",
+            "motif": "ordinal",
+            "n": 6,
+            "mark": 3,
+            "title_en": "Which place? How many?",
+            "s1_en": "Which place is the star?",
+        }
+        takeaway = {
+            "id": "takeaway",
+            "visual": "animated",
+            "scene": "lesson_takeaway",
+            "motif": "ordinal",
+            "n": 6,
+            "mark": 3,
+            "title_zh": "从哪头数？",
+            "s1_en": "How many stays six.",
+            "s2_en": "From the left, the star is third.",
+            "s3_en": "From the right, the same star is fourth.",
+            "s4_en": "Which place depends on the end you start from.",
+            "s1_zh": "有多少个，还是六个。",
+            "s2_zh": "从左边数，星星是第三。",
+            "s3_zh": "从右边数，同一颗星星是第四。",
+            "s4_zh": "第几个，要看从哪一头数。",
+        }
+        with tempfile.TemporaryDirectory(prefix="vf-ord-size-") as tmp:
+            root = Path(tmp)
+            audio = root / "silent.wav"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                 "-t", "4", "-c:a", "pcm_s16le", str(audio)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            render_animated_clip(
+                how, {"format": "16:9"}, label_lang_code="zh",
+                holds=[0.4, 1.6, 0.5], still_idx=[0, 1, 2],
+                pages=["六个。", "一，二，三，四，五，六。", "六个。"],
+                audio=audio, dest=root / "how.mp4", cache_dir=root / "cache",
+                captions=False, progress_bar=False, frame=(1280, 720), fps=8,
+            )
+            how_png = root / "how.png"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-i", str(next((root / "cache" / "zh").glob("how-many-*.mp4"))),
+                 "-vf", "select=eq(n\\,14)", "-frames:v", "1", str(how_png)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            # 48px at 1080p, scaled to 720. The old cap sat near 25px.
+            self.assertGreaterEqual(self._label_band_height(how_png), 48 * 720 / 1080 * 0.9)
+
+            render_animated_clip(
+                hook, {"format": "16:9"}, label_lang_code="en",
+                holds=[1.2], still_idx=[0], pages=["Which place is the star?"],
+                audio=audio, dest=root / "hook.mp4", cache_dir=root / "cache",
+                captions=False, progress_bar=False, frame=(1280, 720), fps=8,
+            )
+            hook_png = root / "hook.png"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-i", str(next((root / "cache" / "en").glob("hook-*.mp4"))),
+                 "-vf", "select=eq(n\\,8)", "-frames:v", "1", str(hook_png)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            # The old hook row was about 40px tall at 1280x720. Twice that is 80.
+            self.assertGreaterEqual(self._token_box_height(hook_png), 70)
+
+            render_animated_clip(
+                takeaway, {"format": "16:9"}, label_lang_code="zh",
+                holds=[0.3, 0.3, 0.3, 0.5], still_idx=[0, 1, 2, 3],
+                pages=["a", "b", "c", "d"],
+                audio=audio, dest=root / "take.mp4", cache_dir=root / "cache",
+                captions=False, progress_bar=False, frame=(1280, 720), fps=8,
+            )
+            take_png = root / "take.png"
+            duration = float(subprocess.check_output(
+                ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                 "-of", "csv=p=0", str(root / "take.mp4")],
+                text=True,
+            ))
+            last = max(0, int(duration * 8) - 1)
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-i", str(root / "take.mp4"),
+                 "-vf", f"select=eq(n\\,{last})", "-frames:v", "1", str(take_png)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            lefts, heights = self._token_row_edges(take_png)
+            self.assertEqual(len(lefts), 4, lefts)
+            self.assertLessEqual(max(lefts) - min(lefts), 4, lefts)
+            self.assertLessEqual(max(heights) - min(heights), 8, heights)
+
+    def test_ordinal_labels_keep_a_gap(self):
+        """Adjacent place labels stay at least 12px apart, in every language and aspect."""
+        import subprocess
+        import tempfile
+
+        from anim import render_animated_clip
+
+        speech = {
+            "en": ("Start at the left.", "First. Second. Third.", "The star is third.",
+                   "First. Second. Third. Fourth."),
+            "zh": ("从左边数。", "第一，第二，第三。", "星星是第三。", "第一，第二，第三，第四。"),
+            "zh_hk": ("由左邊數。", "第一，第二，第三。", "星星係第三。", "第一，第二，第三，第四。"),
+        }
+        frames = ((1280, 720), (720, 1280))
+        with tempfile.TemporaryDirectory(prefix="vf-ord-gap-") as tmp:
+            root = Path(tmp)
+            audio = root / "silent.wav"
+            subprocess.check_call(
+                ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                 "-t", "4", "-c:a", "pcm_s16le", str(audio)],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+            for lang, lines in speech.items():
+                for direction, spoken in (("left", lines[1]), ("right", lines[3])):
+                    beat = {
+                        "id": f"from-{direction}",
+                        "visual": "animated",
+                        "scene": "ordinal_row",
+                        "mode": "ordinal",
+                        "direction": direction,
+                        "n": 6,
+                        "mark": 3,
+                        "s1_en": lines[0], "s2_en": spoken, "s3_en": lines[2],
+                        "s1_zh": lines[0], "s2_zh": spoken, "s3_zh": lines[2],
+                        "s1_zh_hk": lines[0], "s2_zh_hk": spoken, "s3_zh_hk": lines[2],
+                    }
+                    for frame in frames:
+                        dest = root / f"{lang}-{direction}-{frame[0]}.mp4"
+                        render_animated_clip(
+                            beat, {"format": "9:16" if frame[1] > frame[0] else "16:9"},
+                            label_lang_code=lang,
+                            holds=[0.4, 1.6, 0.6], still_idx=[0, 1, 2],
+                            pages=["a", "b", "c"],
+                            audio=audio, dest=dest, cache_dir=root / "cache",
+                            captions=False, progress_bar=False, frame=frame, fps=8,
+                        )
+                        silent = max((root / "cache" / lang).glob(f"from-{direction}-*.mp4"), key=lambda p: p.stat().st_mtime)
+                        shot = root / f"{lang}-{direction}-{frame[0]}.png"
+                        duration = float(subprocess.check_output(
+                            ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                             "-of", "csv=p=0", str(silent)],
+                            text=True,
+                        ))
+                        last = max(0, int(duration * 8) - 1)
+                        subprocess.check_call(
+                            ["ffmpeg", "-y", "-i", str(silent),
+                             "-vf", f"select=eq(n\\,{last})", "-frames:v", "1", str(shot)],
+                            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                        )
+                        gaps = self._ordinal_label_gaps(shot)
+                        portrait = frame[1] > frame[0]
+                        need = 12.0 * frame[0] / (1080.0 if portrait else 1920.0)
+                        self.assertGreaterEqual(len(gaps), 2, f"{shot.name} {gaps}")
+                        self.assertTrue(
+                            all(gap + 0.5 >= need for gap in gaps),
+                            f"{shot.name} gaps {gaps} need {need:.1f}",
+                        )
+
+    def _ordinal_label_gaps(self, path) -> list[float]:
+        """Pixel gaps between adjacent place labels sitting above the token row."""
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+
+        def white_runs(y, min_w):
+            runs = []
+            x = 0
+            while x < w:
+                r, g, b = px[x, y]
+                if r > 245 and g > 245 and b > 245:
+                    x1 = x
+                    while x1 + 1 < w and px[x1 + 1, y][0] > 245 and px[x1 + 1, y][1] > 245 and px[x1 + 1, y][2] > 245:
+                        x1 += 1
+                    if x1 - x >= min_w:
+                        runs.append((x, x1))
+                    x = x1 + 1
+                else:
+                    x += 1
+            return runs
+
+        candidates = []
+        for y in range(int(h * 0.12), int(h * 0.8)):
+            runs = white_runs(y, max(8, w // 90))
+            # Six tokens. A dot can split one box into two runs, so ignore those rows.
+            if not 4 <= len(runs) <= 8:
+                continue
+            widths = [b - a for a, b in runs]
+            centres_y = [(a + b) / 2.0 for a, b in runs]
+            pitches = [centres_y[i + 1] - centres_y[i] for i in range(len(centres_y) - 1)]
+            if min(pitches) <= 0 or max(pitches) / min(pitches) > 1.2:
+                continue
+            if max(widths) / max(1, min(widths)) > 1.35:
+                continue
+            if min(widths) < min(pitches) * 0.45:
+                continue
+            below = white_runs(min(h - 1, y + 3), max(8, w // 90))
+            if not 4 <= len(below) <= 8:
+                continue
+            candidates.append((min(widths), y, runs))
+        self.assertTrue(candidates, path.name)
+        widest = max(item[0] for item in candidates)
+        # The top edge of the tokens: wide runs, and the highest such row.
+        _width, box_top, boxes = min(
+            (item for item in candidates if item[0] >= widest * 0.9),
+            key=lambda item: item[1],
+        )
+        centres = [(a + b) / 2.0 for a, b in boxes]
+        pitch = centres[1] - centres[0]
+
+        def dark(x, y):
+            r, g, b = px[x, y]
+            return r < 80 and g < 90 and b < 120 and max(r, g, b) > 12
+
+        rows = []
+        for y in range(box_top - 8, max(0, box_top - int(pitch * 1.6)), -1):
+            if any(dark(x, y) for x in range(0, w, 2)):
+                rows.append(y)
+        self.assertTrue(rows, path.name)
+        # The place labels are the first tall dark band above the tokens. The
+        # box stroke is only a few pixels, and the title sits higher.
+        bands = []
+        start = prev = rows[0]
+        for y in rows[1:]:
+            if prev - y > 6:
+                bands.append((min(start, prev), max(start, prev)))
+                start = y
+            prev = y
+        bands.append((min(start, prev), max(start, prev)))
+        tall = [band for band in bands if band[1] - band[0] >= 8]
+        self.assertTrue(tall, bands)
+        label_lo, label_hi = tall[0]
+        spans = []
+        for centre in centres:
+            xs = [
+                x for y in range(label_lo, label_hi + 1)
+                for x in range(max(0, int(centre - pitch * 0.49)), min(w, int(centre + pitch * 0.49)))
+                if dark(x, y)
+            ]
+            spans.append((min(xs), max(xs)) if xs else None)
+        gaps = []
+        for i in range(len(spans) - 1):
+            if spans[i] is None or spans[i + 1] is None:
+                continue
+            gaps.append(spans[i + 1][0] - spans[i][1])
+        return gaps
+
+    def _label_band_height(self, path) -> int:
+        """Height of the dark text band that sits above the token row."""
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+        rows = []
+        for y in range(int(h * 0.2), int(h * 0.75)):
+            dark = 0
+            for x in range(w):
+                r, g, b = px[x, y]
+                if r < 70 and g < 80 and b < 110 and max(r, g, b) > 15:
+                    dark += 1
+            if dark > 12:
+                rows.append(y)
+        self.assertTrue(rows, path.name)
+        # Split into bands and take the one just above the boxes (not the title).
+        bands = []
+        start = prev = rows[0]
+        for y in rows[1:]:
+            if y - prev > 4:
+                bands.append((start, prev))
+                start = y
+            prev = y
+        bands.append((start, prev))
+        tall = [b for b in bands if b[1] - b[0] >= 8]
+        self.assertGreaterEqual(len(tall), 1, bands)
+        # The labels are the band closest above the token boxes, so the lower one
+        # when a title is also in range. A lone count line is the only band.
+        label = tall[-1] if len(tall) > 1 else tall[0]
+        return label[1] - label[0] + 1
+
+    def _token_box_height(self, path) -> int:
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+        rows = []
+        for y in range(h):
+            boxes = 0
+            for x in range(w):
+                r, g, b = px[x, y]
+                if r > 245 and g > 245 and b > 245:
+                    boxes += 1
+            if boxes > 30:
+                rows.append(y)
+        self.assertTrue(rows, path.name)
+        start = prev = rows[0]
+        best = (rows[0], rows[0])
+        for y in rows[1:]:
+            if y - prev > 3:
+                if prev - start > best[1] - best[0]:
+                    best = (start, prev)
+                start = y
+            prev = y
+        if prev - start > best[1] - best[0]:
+            best = (start, prev)
+        return best[1] - best[0] + 1
+
+    def _token_row_edges(self, path):
+        """Left edge and height of each token row, from the white boxes."""
+        from PIL import Image
+
+        img = Image.open(path).convert("RGB")
+        w, h = img.size
+        px = img.load()
+        bands = []
+        y = 0
+        while y < h:
+            xs = [
+                x for x in range(w)
+                if px[x, y][0] > 245 and px[x, y][1] > 245 and px[x, y][2] > 245
+            ]
+            if len(xs) > 20:
+                y1 = y
+                acc = list(xs)
+                while y1 + 1 < h:
+                    nxt = [
+                        x for x in range(w)
+                        if px[x, y1 + 1][0] > 245 and px[x, y1 + 1][1] > 245 and px[x, y1 + 1][2] > 245
+                    ]
+                    if len(nxt) < 20:
+                        break
+                    y1 += 1
+                    acc.extend(nxt)
+                if y1 - y > 8:
+                    bands.append((min(acc), y1 - y + 1))
+                y = y1 + 1
+            else:
+                y += 1
+        lefts = [left for left, _ in bands]
+        heights = [height for _, height in bands]
+        return lefts, heights
+
     def test_takeaway_grid_fills_cells_in_both_aspects(self):
         """Each takeaway row stays in its cell, pictures stay apart, and the type meets the floor.
 
@@ -759,7 +1222,30 @@ class AnimatedRenderTest(unittest.TestCase):
             "s2_zh_hk": "倒轉數，就係每次少一個。",
             "s3_zh_hk": "倒轉數，都可以跨過十。",
         }
-        cards = (("ten", beat, 4), ("count", counted, 4), ("track", track, 3))
+        ordinal = {
+            "id": "takeaway",
+            "visual": "animated",
+            "scene": "lesson_takeaway",
+            "motif": "ordinal",
+            "n": 6,
+            "mark": 3,
+            "title_en": "Which end?",
+            "s1_en": "How many stays six.",
+            "s2_en": "From the left, the star is third.",
+            "s3_en": "From the right, the same star is fourth.",
+            "s4_en": "Which place depends on the end you start from.",
+            "title_zh": "从哪头数？",
+            "s1_zh": "有多少个，还是六个。",
+            "s2_zh": "从左边数，星星是第三。",
+            "s3_zh": "从右边数，同一颗星星是第四。",
+            "s4_zh": "第几个，要看从哪一头数。",
+            "title_zh_hk": "由邊頭數？",
+            "s1_zh_hk": "有幾多個，都係六個。",
+            "s2_zh_hk": "由左邊數，星星係第三。",
+            "s3_zh_hk": "由右邊數，同一粒星星係第四。",
+            "s4_zh_hk": "第幾個，要睇由邊一頭數。",
+        }
+        cards = (("ten", beat, 4), ("count", counted, 4), ("track", track, 3), ("ordinal", ordinal, 4))
 
         def pix_y(grid, manim_y):
             return (grid["fh"] / 2 - manim_y) / grid["fh"] * grid["ph"]
@@ -1010,7 +1496,7 @@ class SceneRegistryTest(unittest.TestCase):
             list(REGISTRY),
             [
                 "one_ten", "ten_and_ones", "make_ten", "count_objects", "number_track",
-                "lesson_hook", "lesson_takeaway",
+                "ordinal_row", "lesson_hook", "lesson_takeaway",
             ],
         )
         self.assertEqual(REGISTRY["one_ten"].steps, 4)
@@ -1104,6 +1590,7 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-NUM-01": ["lesson_hook", "count_objects", "count_objects", "count_objects", "lesson_takeaway"],
             "P1-NUM-02": ["lesson_hook", "one_ten", "ten_and_ones", "ten_and_ones", "lesson_takeaway"],
             "P1-NUM-03": ["lesson_hook", "number_track", "number_track", "number_track", "lesson_takeaway"],
+            "P1-NUM-04": ["lesson_hook", "ordinal_row", "ordinal_row", "ordinal_row", "lesson_takeaway"],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -1171,6 +1658,68 @@ class SceneRegistryTest(unittest.TestCase):
         still3 = next(beat for beat in three["beats"] if beat["id"] == "takeaway")
         self.assertEqual(step_count(still3), 3)
         self.assertEqual(still3["s1_en"], "Count on means one more each time.")
+        four = load_lesson(P1 / "P1-NUM-04.yaml")
+        places = [beat for beat in four["beats"] if beat.get("scene") == "ordinal_row"]
+        self.assertEqual(
+            [(b["mode"], b["direction"], b["n"], b["mark"]) for b in places],
+            [("total", "left", 6, 3), ("ordinal", "left", 6, 3), ("ordinal", "right", 6, 3)],
+        )
+        self.assertEqual(count_event(places[1]), (1, 3))
+        self.assertEqual(count_event(places[2]), (1, 4))
+        recap = next(beat for beat in four["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap), 4)
+        self.assertEqual(labels_for(recap, "en")["left"], "3rd")
+        self.assertEqual(labels_for(recap, "zh_hk")["right"], "第四")
+        self.assertEqual(labels_for(recap, "zh")["total"], "六")
+
+    def test_ordinal_row_counts_a_place_or_a_total(self):
+        left = {
+            "visual": "animated",
+            "scene": "ordinal_row",
+            "mode": "ordinal",
+            "direction": "left",
+            "n": 6,
+            "mark": 3,
+            "s1_en": "Start at the left.",
+            "s2_en": "First. Second. Third.",
+            "s3_en": "The star is third.",
+            "s1_zh": "从左边数。",
+            "s2_zh": "第一，第二，第三。",
+            "s3_zh": "星星是第三。",
+            "s1_zh_hk": "由左邊數。",
+            "s2_zh_hk": "第一，第二，第三。",
+            "s3_zh_hk": "星星係第三。",
+        }
+        self.assertEqual(scene_problems(left), [])
+        self.assertEqual(ordinal_visits(6, 3, "left", "ordinal"), [0, 1, 2])
+        self.assertEqual(ordinal_visits(6, 3, "right", "ordinal"), [5, 4, 3, 2])
+        self.assertEqual(ordinal_visits(6, 3, "left", "total"), [0, 1, 2, 3, 4, 5])
+        self.assertEqual(count_event(left), (1, 3))
+        right = dict(left, direction="right")
+        self.assertEqual(count_event(right), (1, 4))
+        self.assertEqual(count_event(dict(left, mode="total")), (1, 6))
+        self.assertEqual(labels_for(left, "en")["ordinals"], ["1st", "2nd", "3rd"])
+        self.assertEqual(labels_for(left, "zh")["ordinals"], ["第一", "第二", "第三"])
+        self.assertEqual(labels_for(left, "zh")["title"], "第几个？")
+        self.assertEqual(labels_for(right, "zh_hk")["ordinals"], ["第一", "第二", "第三", "第四"])
+        self.assertEqual(labels_for(right, "zh_hk")["answer"], "第四")
+        self.assertEqual(labels_for(right, "zh_hk")["note"], "由右邊")
+        self.assertEqual(labels_for(right, "en")["answer"], "4th")
+        self.assertNotEqual(labels_for(left, "zh")["title"], labels_for(left, "zh_hk")["title"])
+        self.assertTrue(scene_problems(dict(left, n=0)))
+        self.assertTrue(scene_problems(dict(left, mark=7)))
+        self.assertTrue(scene_problems(dict(left, direction="up")))
+        self.assertTrue(scene_problems(dict(left, mode="place")))
+        words = [
+            {"text": "Start", "start": 0.1},
+            {"text": "First", "start": 1.2},
+            {"text": "Second", "start": 1.8},
+            {"text": "Third", "start": 2.4},
+            {"text": "The", "start": 3.2},
+        ]
+        scheduled = schedule_marks(left, [1.0, 2.0, 1.2], words)
+        self.assertEqual(len(scheduled[1]), 3)
+        self.assertAlmostEqual(scheduled[1][0], 0.2, places=2)
 
     def test_track_stays_one_row_in_landscape_and_snakes_in_portrait(self):
         self.assertEqual(track_columns(21, 1920, 1080), 21)

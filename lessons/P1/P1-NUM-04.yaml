@@ -1,0 +1,101 @@
+# P1-NUM-04. Mirrors MathQuiz path numberstart / lesson order20, "Which place? How many?".
+# Six tokens in a row. The star is 3rd from the left and 4th from the right. How many stays 6.
+# https://github.com/kochiuyu/mathquiz learn-data.js (path numberstart, lesson order20).
+# Speech is for age 6: one short idea per sentence. Questions are answered on screen.
+id: P1-NUM-04
+title_en: Which place? How many?
+title_zh: 第几个？有多少个？
+title_zh_hk: 第幾個？有幾多個？
+duration_target_s: 66
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: ordinal
+  n: 6
+  mark: 3
+  seconds: 8
+  title_en: Which place? How many?
+  title_zh: 第几个？有多少个？
+  title_zh_hk: 第幾個？有幾多個？
+  s1_en: Which place is the star? How many tokens are there?
+  s1_zh: 星星是第几个？一共有多少个？
+  s1_zh_hk: 星星係第幾個呀？一共有幾多個呀？
+
+- id: how-many
+  visual: animated
+  scene: ordinal_row
+  mode: total
+  direction: left
+  n: 6
+  mark: 3
+  seconds: 14
+  s1_en: Six tokens sit in a row. The star is one of them.
+  s1_zh: 六个图案排成一行。星星也是其中一个。
+  s1_zh_hk: 六個圖案排成一行。星星都係其中一個。
+  s2_en: One. Two. Three. Four. Five. Six.
+  s2_zh: 一，二，三，四，五，六。
+  s2_zh_hk: 一，二，三，四，五，六。
+  s3_en: Six. That answers how many.
+  s3_zh: 六个。这就是有多少个。
+  s3_zh_hk: 六個。呢個就係有幾多個。
+
+- id: from-left
+  visual: animated
+  scene: ordinal_row
+  mode: ordinal
+  direction: left
+  n: 6
+  mark: 3
+  seconds: 14
+  s1_en: Start at the left.
+  s1_zh: 现在从左边数。
+  s1_zh_hk: 而家由左邊數。
+  s2_en: First. Second. Third.
+  s2_zh: 第一，第二，第三。
+  s2_zh_hk: 第一，第二，第三。
+  s3_en: The star is third. Third is its place.
+  s3_zh: 星星是第三。第三是它的位置。
+  s3_zh_hk: 星星係第三。第三就係佢嘅位置。
+
+- id: from-right
+  visual: animated
+  scene: ordinal_row
+  mode: ordinal
+  direction: right
+  n: 6
+  mark: 3
+  seconds: 14
+  s1_en: Now start at the right. Nothing has moved.
+  s1_zh: 现在从右边数。图案没有动。
+  s1_zh_hk: 而家由右邊數。圖案冇郁過。
+  s2_en: First. Second. Third. Fourth.
+  s2_zh: 第一，第二，第三，第四。
+  s2_zh_hk: 第一，第二，第三，第四。
+  s3_en: The same star is fourth.
+  s3_zh: 还是这颗星星，是第四。
+  s3_zh_hk: 仲係呢粒星星，係第四。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: ordinal
+  n: 6
+  mark: 3
+  seconds: 16
+  title_en: Which end?
+  title_zh: 从哪头数？
+  title_zh_hk: 由邊頭數？
+  s1_en: How many stays six.
+  s1_zh: 有多少个，还是六个。
+  s1_zh_hk: 有幾多個，都係六個。
+  s2_en: From the left, the star is third.
+  s2_zh: 从左边数，星星是第三。
+  s2_zh_hk: 由左邊數，星星係第三。
+  s3_en: From the right, the same star is fourth.
+  s3_zh: 从右边数，同一颗星星是第四。
+  s3_zh_hk: 由右邊數，同一粒星星係第四。
+  s4_en: Which place depends on the end you start from.
+  s4_zh: 第几个，要看从哪一头数。
+  s4_zh_hk: 第幾個，要睇由邊一頭數。

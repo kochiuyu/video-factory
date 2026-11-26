@@ -18,6 +18,7 @@ from scene_registry import (
     labels_for,
     scene_problems,
     scene_spec,
+    ordinal_visits,
     schedule_marks,
     step_count,
     track_columns,
@@ -254,7 +255,7 @@ def cache_key(
             "marks": marks or [],
             # Bump when a scene's motion changes but the spec does not, so a
             # cached silent clip cannot keep an old hop.
-            "motion": 2,
+            "motion": 4,
             "lang": label_lang(lang),
             "frame": [int(frame[0]), int(frame[1])],
             "manim": str(manim_version),
@@ -491,6 +492,9 @@ def _make_scene(spec: dict, durs: list[float], marks: list | None = None):
     scene.vf_a = int(spec.get("a") or 9)
     scene.vf_b = int(spec.get("b") or 8)
     scene.vf_mode = str(spec.get("mode") or "")
+    scene.vf_n = spec.get("n")
+    scene.vf_mark = spec.get("mark")
+    scene.vf_direction = str(spec.get("direction") or "")
     scene.vf_low = spec.get("low")
     scene.vf_high = spec.get("high")
     scene.vf_start = spec.get("start")
@@ -512,13 +516,29 @@ def _scene_types() -> dict:
         FadeIn,
         FadeOut,
         LaggedStart,
+        Rectangle,
         RoundedRectangle,
         Scene,
+        Star,
         SurroundingRectangle,
         Text,
         VGroup,
         config,
     )
+
+    def _ordinal_label_height() -> float:
+        """Place and count labels, in Manim units.
+
+        48px at 1080p and 56px on a 1920-tall 9:16 frame, which is past the
+        44px and 52px floors. A short 一 stays a character at that size.
+        """
+        pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
+        ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+        portrait = ph > pw
+        ref = 1920.0 if portrait else 1080.0
+        base = 56.0 if portrait else 48.0
+        unit = ph / float(config.frame_height or 8.0)
+        return (base * (ph / ref)) / unit
 
     def font_for(text: str, latin: str, cjk: str) -> str:
         if any("\u4e00" <= ch <= "\u9fff" for ch in text or ""):
@@ -534,6 +554,84 @@ def _scene_types() -> dict:
         dot = Circle(radius=radius, stroke_color=NAVY, stroke_width=2.5, fill_color=color, fill_opacity=1)
         dot.set_z_index(2)
         return dot
+
+    def _token_row(n: int, mark: int, cell: float = 0.46):
+        """Left-to-right tokens. The marked one holds a star. Returns the row group and the token list."""
+        tokens = []
+        for i in range(max(1, int(n))):
+            box = RoundedRectangle(
+                width=cell, height=cell, corner_radius=max(0.06, cell * 0.16),
+                stroke_color=NAVY, stroke_width=2.5, fill_color=WHITE, fill_opacity=1,
+            )
+            if i + 1 == int(mark):
+                star = Star(
+                    n=5,
+                    outer_radius=cell * 0.36,
+                    inner_radius=cell * 0.15,
+                    color=GOLD,
+                    fill_opacity=1,
+                    stroke_color=NAVY,
+                    stroke_width=1.5,
+                )
+                star.move_to(box)
+                star.set_z_index(4)
+                piece = VGroup(box, star)
+            else:
+                dot = counter(GREEN, cell * 0.24)
+                dot.move_to(box)
+                piece = VGroup(box, dot)
+            piece.set_z_index(3)
+            tokens.append(piece)
+        cols = n if n <= 6 else (6 if n <= 12 else 5)
+        if n <= cols:
+            row = VGroup(*tokens)
+            row.arrange(RIGHT, buff=max(0.06, cell * 0.16))
+            return row, tokens
+        lines = VGroup()
+        for start in range(0, n, cols):
+            line = VGroup(*tokens[start:start + cols])
+            line.arrange(RIGHT, buff=max(0.06, cell * 0.16))
+            lines.add(line)
+        lines.arrange(DOWN, buff=max(0.12, cell * 0.28))
+        return lines, tokens
+
+    def _ordinal_cue(n: int, mark: int, kind: str, latin: str, cjk: str, word: str = "", total: str = "", label_frac: float = 0.85):
+        """A takeaway or hook picture of the same row. ``kind`` is hook, total, left, right, or both."""
+        token_cell = 0.42
+        board, tokens = _token_row(n, mark, token_cell)
+        dim = "#D5D0C6"
+        if kind in {"left", "right"}:
+            visits = set(ordinal_visits(n, mark, kind, "ordinal"))
+            for i, piece in enumerate(tokens):
+                if i in visits or i + 1 == mark:
+                    continue
+                inner = piece[1]
+                if hasattr(inner, "set_fill"):
+                    inner.set_fill(dim, opacity=1)
+        extras = [board]
+        if kind in {"left", "right", "both"}:
+            ring = SurroundingRectangle(tokens[mark - 1], color=GOLD, buff=0.05, stroke_width=5)
+            ring.set_z_index(5)
+            extras.append(ring)
+        group = VGroup(*extras)
+        if word and kind in {"left", "right"}:
+            tag = styled(word, latin, cjk, 36)
+            # Nearly as tall as a token, then centred on the marked one.
+            target = token_cell * label_frac
+            if float(tag.height) > 0 and target > 0:
+                tag.scale(target / float(tag.height))
+            if float(tag.width) > token_cell * 1.35:
+                tag.scale(token_cell * 1.35 / float(tag.width))
+            tag.next_to(tokens[mark - 1], UP, buff=0.06)
+            group.add(tag)
+        if total and kind in {"total", "both"}:
+            num = Text(str(total), font=latin, font_size=48, color=NAVY)
+            target = float(board.height) * 0.92
+            if float(num.height) > target > 0:
+                num.scale(target / float(num.height))
+            num.next_to(board, RIGHT, buff=0.16)
+            group.add(num)
+        return group
 
     def ten_cells():
         cells = VGroup()
@@ -1151,6 +1249,193 @@ def _scene_types() -> dict:
                 shown.append(FadeIn(cross))
             self.spend(2, *shown)
 
+    class OrdinalRow(_Board):
+        """Tokens in a row. Place labels, or a how-many count, land on the spoken words."""
+
+        def construct(self):
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            n = int(self.vf_n if self.vf_n is not None else labels.get("n") or 6)
+            mark = int(self.vf_mark if self.vf_mark is not None else labels.get("mark") or 1)
+            direction = str(self.vf_direction or labels.get("direction") or "left")
+            mode = str(self.vf_mode or labels.get("mode") or "ordinal")
+            n = max(1, min(20, n))
+            mark = max(1, min(n, mark))
+            visits = ordinal_visits(n, mark, direction, mode)
+            words = [str(item) for item in (labels.get("ordinals") or [])]
+            if len(words) < len(visits):
+                words = words + [str(i + 1) for i in range(len(words), len(visits))]
+            words = words[: len(visits)]
+            pw = int(getattr(config, "pixel_width", 0) or 1920)
+            ph = int(getattr(config, "pixel_height", 0) or 1080)
+            # 0.46 keeps six tokens on one row in 9:16. A higher floor would snake them.
+            cols = track_columns(n, pw, ph, min_cell=0.46)
+            label_h = _ordinal_label_height()
+            # Scale from a full character, not each glyph's ink. 一 is a flat stroke;
+            # matching its ink height turns it into a bar and shrinks the row.
+            cjk_labels = any("\u4e00" <= ch <= "\u9fff" for word in words for ch in word)
+            ref = styled("三" if cjk_labels else "8", latin, cjk, 48)
+            label_scale = (label_h / float(ref.height)) if float(ref.height) else 1.0
+            widest = label_h
+            for word in words:
+                probe = styled(word, latin, cjk, 48)
+                widest = max(widest, float(probe.width) * label_scale)
+            left_lim, right_lim, bot_lim, top_lim = _safe_limits()
+            portrait = ph > pw
+            if portrait:
+                # Labels set the width. A row of six uses the safe width, and
+                # the centre spacing is at least the label plus 16px. A uniform
+                # shrink holds the 44px floor.
+                unit = ph / float(config.frame_height or 8.0)
+                min_gap = 16.0 / unit
+                floor_h = (44.0 * (ph / 1920.0)) / unit
+                max_w = (right_lim - left_lim) * 0.98
+                fit_w = (max_w - max(cols - 1, 0) * min_gap) / max(cols, 1)
+                if widest > fit_w > 0:
+                    shrink = fit_w / widest
+                    if label_h > 0 and label_h * shrink < floor_h:
+                        shrink = floor_h / label_h
+                    label_scale *= shrink
+                    widest *= shrink
+                if cols > 1:
+                    fill_pitch = (max_w - widest) / (cols - 1)
+                else:
+                    fill_pitch = widest + min_gap
+                pitch = max(fill_pitch, widest + min_gap)
+                if (cols - 1) * pitch + widest > max_w and cols > 1:
+                    slack = (max_w - cols * widest) / (cols - 1)
+                    pitch = widest + max(slack, 12.0 / unit)
+                box = min(pitch * 0.62, max(0.12, pitch - min_gap))
+                cell = max(0.2, box / 0.92)
+                gap = max(0.02, pitch - cell)
+            else:
+                max_w = (right_lim - left_lim) * 0.96
+                # About twice the old 0.78 cap. 9:16 clamps this to the safe width.
+                gap = max(0.14, widest * 0.1)
+                cell = min(1.56, (max_w - gap * (max(cols, 1) - 1)) / max(cols, 1))
+                if cell + gap < widest * 1.06:
+                    gap = max(0.1, widest * 1.06 - cell)
+                    cell = min(cell, (max_w - gap * (max(cols, 1) - 1)) / max(cols, 1))
+                cell = max(0.46, cell)
+            # The next row's label has to clear the token above it.
+            row_gap = label_h + 0.28
+            slots: dict[int, tuple[int, int]] = {}
+            row_i, col_i, step_dir = 0, 0, 1
+            for i in range(n):
+                slots[i] = (row_i, col_i)
+                if i == n - 1:
+                    break
+                nxt = col_i + step_dir
+                if nxt < 0 or nxt >= cols:
+                    row_i += 1
+                    step_dir *= -1
+                else:
+                    col_i = nxt
+            tokens = VGroup()
+            grid = VGroup()
+            centers = {}
+            for i, (r, c) in slots.items():
+                x = (c - (cols - 1) / 2) * (cell + gap)
+                y = -r * (cell + row_gap)
+                box = RoundedRectangle(
+                    width=cell * 0.92,
+                    height=cell * 0.92,
+                    corner_radius=cell * 0.14,
+                    stroke_color=NAVY,
+                    stroke_width=3,
+                    fill_color=WHITE,
+                    fill_opacity=1,
+                )
+                box.move_to([x, y, 0])
+                if i + 1 == mark:
+                    star = Star(
+                        n=5,
+                        outer_radius=cell * 0.32,
+                        inner_radius=cell * 0.13,
+                        color=GOLD,
+                        fill_opacity=1,
+                        stroke_color=NAVY,
+                        stroke_width=1.5,
+                    )
+                    star.move_to(box)
+                    star.set_z_index(4)
+                    piece = VGroup(box, star)
+                else:
+                    dot = counter(GREEN, cell * 0.22)
+                    dot.move_to(box)
+                    piece = VGroup(box, dot)
+                piece.set_z_index(3)
+                tokens.add(piece)
+                grid.add(box)
+                centers[i] = box.get_center().copy()
+            shift = grid.get_center()
+            tokens.shift(-shift)
+            for i in centers:
+                centers[i] = centers[i] - shift
+            tags = VGroup()
+            pitch = cell + gap
+            for word, index in zip(words, visits):
+                tag = styled(word, latin, cjk, 48)
+                tag.scale(label_scale)
+                # Landscape only. Portrait already reserved 16px between labels.
+                if ph <= pw and float(tag.width) > pitch * 0.96:
+                    tag.scale(pitch * 0.96 / float(tag.width))
+                tag.next_to(tokens[index], UP, buff=0.12)
+                tag.set_opacity(0)
+                tag.set_z_index(6)
+                tags.add(tag)
+            marker = RoundedRectangle(
+                width=cell * 1.02,
+                height=cell * 1.02,
+                corner_radius=cell * 0.16,
+                stroke_color=GOLD,
+                stroke_width=7,
+                fill_color=GOLD,
+                fill_opacity=0.28,
+            )
+            marker.set_z_index(1)
+            marker.set_opacity(0)
+            marker.move_to(centers[visits[0]])
+            title = styled(labels.get("title") or "", latin, cjk, 40)
+            answer = styled(str(labels.get("answer") or ""), latin, cjk, 54)
+            note = styled(labels.get("note") or "", latin, cjk, 32)
+            foot = VGroup(answer, note).arrange(RIGHT, buff=0.28)
+            if ph > pw:
+                # A wide answer must not shrink the row, or the label gap collapses.
+                limit = max(float(tokens.width), 0.2)
+                if float(title.width) > limit:
+                    title.scale(limit / float(title.width))
+                if float(foot.width) > limit:
+                    foot.scale(limit / float(foot.width))
+            title.next_to(VGroup(tokens, tags), UP, buff=0.28)
+            foot.next_to(tokens, DOWN, buff=0.28)
+            board = VGroup(title, tokens, tags, marker, foot)
+            settle(board)
+            # settle moves the group. Read centres after that, then park the box.
+            centres = [tokens[i].get_center().copy() for i in visits]
+            marker.move_to(centres[0])
+            self.add(tags)
+            self.spend(0, FadeIn(title), FadeIn(tokens))
+            hops = []
+            for i, dest in enumerate(centres):
+                tag = tags[i]
+                if i == 0:
+                    hops.append(lambda dest=dest, tag=tag: AnimationGroup(
+                        marker.animate.move_to(dest).set_opacity(1),
+                        tag.animate.set_opacity(1),
+                    ))
+                else:
+                    hops.append(lambda dest=dest, tag=tag: AnimationGroup(
+                        marker.animate.move_to(dest),
+                        tag.animate.set_opacity(1),
+                    ))
+            counted = self.marks_for(1)
+            if counted and len(counted) == len(hops):
+                self.spend_marked(1, hops, counted)
+            else:
+                self.spend_each(1, hops)
+            self.spend(2, FadeIn(answer), FadeIn(note))
+
     class LessonHook(_Board):
         """The title arrives, then the lesson's objects, with the opening question."""
 
@@ -1166,10 +1451,43 @@ def _scene_types() -> dict:
             else:
                 kicker = Text(grade or " ", font=latin, font_size=40, color="#5C6B7A")
             title = styled(labels.get("title") or "", latin, cjk, 54)
-            cue = self._hook_cue(motif, latin, cjk)
-            title.next_to(kicker, DOWN, buff=0.28)
-            cue.next_to(title, DOWN, buff=0.4)
-            settle(VGroup(kicker, title, cue))
+            cue = self._hook_cue(motif, latin, cjk, labels)
+            portrait = int(getattr(config, "pixel_height", 0) or 0) > int(getattr(config, "pixel_width", 0) or 0)
+            if motif == "ordinal" and portrait:
+                # Title and tokens each fill the safe width. A long English
+                # title must not shrink the row.
+                left_lim, right_lim, bot_lim, top_lim = _safe_limits()
+                cap = (right_lim - left_lim) * 0.96
+                title.next_to(kicker, DOWN, buff=0.22)
+                word_w = max(float(title.width), float(kicker.width), 0.01)
+                fitted = cap / word_w
+                kicker.scale(fitted)
+                title.scale(fitted)
+                title.next_to(kicker, DOWN, buff=0.22)
+                if float(cue.width) > 0:
+                    cue.scale(cap / float(cue.width))
+                cue.next_to(title, DOWN, buff=0.28)
+                group = VGroup(kicker, title, cue)
+                max_h = top_lim - bot_lim
+                if float(group.height) > max_h > 0:
+                    group.scale(max_h / float(group.height))
+                group.move_to(UP * 0)
+                if float(group.get_bottom()[1]) < bot_lim:
+                    group.shift(UP * (bot_lim - float(group.get_bottom()[1])))
+            else:
+                if motif == "ordinal":
+                    # Twice the old token row. A wide title is what the frame scales to,
+                    # so the row stays at 2× under that same scale. A short title keeps
+                    # the row inside the title width.
+                    cue.scale(2)
+                    left_lim, right_lim, _, _ = _safe_limits()
+                    cap = (right_lim - left_lim) * 0.98
+                    limit = max(float(title.width), float(kicker.width), cap)
+                    if float(cue.width) > limit:
+                        cue.scale(limit / float(cue.width))
+                title.next_to(kicker, DOWN, buff=0.28)
+                cue.next_to(title, DOWN, buff=0.4)
+                settle(VGroup(kicker, title, cue))
             total = float((self.vf_durations or [2.0])[0] or 0)
             fps = max(float(config.frame_rate or 15), 1.0)
             frame = 1.0 / fps
@@ -1191,7 +1509,12 @@ def _scene_types() -> dict:
             if rest > frame / 2:
                 self.wait(rest)
 
-        def _hook_cue(self, motif: str, latin: str, cjk: str):
+        def _hook_cue(self, motif: str, latin: str, cjk: str, labels: dict | None = None):
+            if motif == "ordinal":
+                info = labels or {}
+                n = max(1, int(info.get("n") or 6))
+                mark = max(1, min(n, int(info.get("mark") or 3)))
+                return _ordinal_cue(n, mark, "hook", latin, cjk)
             if motif == "ten_frame":
                 frame = ten_cells()
                 frame.scale(0.85)
@@ -1219,6 +1542,9 @@ def _scene_types() -> dict:
                 return
             if len(lines) >= 4 and motif == "ten_frame":
                 self._ten_recap(title, lines, latin, cjk)
+                return
+            if motif == "ordinal":
+                self._ordinal_recap(title, lines, latin, cjk)
                 return
             cues = [_takeaway_cue(motif, i, latin) for i in range(len(lines))]
             rows = self._layout_takeaway(title, cues, [str(line) for line in lines], latin, cjk)
@@ -1561,6 +1887,98 @@ def _scene_types() -> dict:
             )
             self.spend_marked(3, lights, counted, intro=intro)
 
+        def _ordinal_recap(self, title, lines, latin: str, cjk: str) -> None:
+            """How many, the place from the left, the place from the right, then both."""
+            info = self.vf_labels
+            n = max(1, int(info.get("n") or 6))
+            mark = max(1, min(n, int(info.get("mark") or 3)))
+            left = str(info.get("left") or "")
+            right = str(info.get("right") or "")
+            total = str(info.get("total") or n)
+            portrait = int(getattr(config, "pixel_height", 0) or 0) > int(getattr(config, "pixel_width", 0) or 0)
+            # A short place label keeps an 80%-wide portrait row inside the picture band.
+            label_frac = 0.38 if portrait else 0.85
+            cues = [
+                _ordinal_cue(n, mark, "total", latin, cjk, total=total, label_frac=label_frac),
+                _ordinal_cue(n, mark, "left", latin, cjk, word=left, label_frac=label_frac),
+                _ordinal_cue(n, mark, "right", latin, cjk, word=right, label_frac=label_frac),
+                _ordinal_cue(n, mark, "both", latin, cjk, total=total, label_frac=label_frac),
+            ]
+            # One token size and one left edge. The place label sits in the
+            # shared height, so label-plus-row is centred as one picture.
+            boards = [cue[0] for cue in cues]
+            for cue, board in zip(cues, boards):
+                cue.shift(LEFT * float(board.get_left()[0]))
+                cue.shift(DOWN * float(board.get_center()[1]))
+            pad_left = min(float(cue.get_left()[0]) for cue in cues)
+            pad_right = max(float(cue.get_right()[0]) for cue in cues)
+            pad_top = max(float(cue.get_top()[1]) for cue in cues)
+            pad_bottom = min(float(cue.get_bottom()[1]) for cue in cues)
+            for cue in cues:
+                pad = Rectangle(
+                    width=max(0.01, pad_right - pad_left),
+                    height=max(0.01, pad_top - pad_bottom),
+                    stroke_opacity=0,
+                    fill_opacity=0,
+                )
+                pad.move_to([(pad_left + pad_right) / 2.0, (pad_top + pad_bottom) / 2.0, 0])
+                cue.add(pad)
+            shown = [str(line) for line in list(lines)[:4]]
+            while len(shown) < 4:
+                shown.append(" ")
+            if portrait:
+                rows = self._layout_ordinal_portrait(
+                    title, cues[: len(lines)], boards[: len(lines)], shown[: len(lines)], latin, cjk,
+                )
+            else:
+                rows = self._layout_takeaway(title, cues[: len(lines)], shown[: len(lines)], latin, cjk)
+            self.spend(0, FadeIn(title), FadeIn(rows[0]))
+            for index in range(1, len(rows)):
+                self.spend(index, FadeIn(rows[index]))
+
+        def _layout_ordinal_portrait(self, heading, cues, boards, lines, latin: str, cjk: str) -> list:
+            """Portrait ordinal rows share one size, about 80% of the safe width."""
+            pw = int(getattr(config, "pixel_width", 0) or 0) or 1080
+            ph = int(getattr(config, "pixel_height", 0) or 0) or 1920
+            grid = takeaway_grid(pw, ph, len(lines))
+            self._place_heading(heading, grid)
+            font = self._body_font(latin, grid)
+            words = [
+                self._line_group(text, latin, cjk, font, float(grid["text_w"]) * 0.96, True)
+                for text in lines
+            ]
+            zone = float(grid["cell_h"]) * (1.0 - TAKEAWAY_PORTRAIT_VISUAL) * 0.92
+            tallest = max((float(word.height) for word in words), default=0.0)
+            if tallest > zone > 0:
+                shrink = zone / tallest
+                for word in words:
+                    word.scale(shrink)
+            safe_w = float(grid["right"] - grid["left"])
+            board_w = max((float(board.width) for board in boards), default=1.0) or 1.0
+            scale = (0.80 * safe_w) / board_w
+            for cue in cues:
+                cue.scale(scale)
+            # Stay in the top half of the cell so the sentence underneath still fits.
+            vis_h = float(grid["cell_h"]) * 0.50
+            tall = max((float(cue.height) for cue in cues), default=0.0)
+            if tall > vis_h > 0:
+                fit = vis_h / tall
+                for cue in cues:
+                    cue.scale(fit)
+            rows = []
+            for cue, word, cell in zip(cues, words, grid["cells"]):
+                zone_top = float(cell["top"])
+                half = zone_top - float(grid["cell_h"]) * 0.50
+                cx = (float(grid["left"]) + float(grid["right"])) / 2.0
+                cue.move_to([cx, (zone_top + half) / 2.0, 0])
+                if float(cue.get_top()[1]) > zone_top:
+                    cue.shift(DOWN * (float(cue.get_top()[1]) - zone_top))
+                text_top = min(half, float(cue.get_bottom()[1]) - 0.04)
+                text_bot = float(cell["bottom"])
+                word.move_to([cx, (text_top + text_bot) / 2.0, 0])
+                rows.append(VGroup(cue, word))
+            return rows
+
     def _wrapped(text: str, latin: str, cjk: str, size: int):
         raw = (text or "").strip() or " "
         parts: list[str] = []
@@ -1635,6 +2053,7 @@ def _scene_types() -> dict:
         "make_ten": MakeTen,
         "count_objects": CountObjects,
         "number_track": NumberTrack,
+        "ordinal_row": OrdinalRow,
         "lesson_hook": LessonHook,
         "lesson_takeaway": LessonTakeaway,
     }

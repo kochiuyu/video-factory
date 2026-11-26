@@ -1,0 +1,273 @@
+id: ACC-21
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Two products. Which cost changes?
+title_zh: 同一道工序、两种产品：决策会改变哪些成本？
+title_zh_hk: 同一工序，兩種產品：哪筆成本會改變？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-21
+  kicker_en: ACC-21
+  kicker_zh: ACC-21
+  kicker_zh_hk: ACC-21
+  title_en: Two products. Which cost changes?
+  title_zh: 同一道工序、两种产品：决策会改变哪些成本？
+  title_zh_hk: 同一工序，兩種產品：哪筆成本會改變？
+  image: art/two-products-which-cost-changes-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    After the juice is sold, 100 kilograms of peel remains. The report assigns 2,000 of a 12,000 common
+    extraction cost to the peel. Would you sell the peel fresh, or process it further? This is a fictional
+    Hong Kong citrus processor. No offer has been accepted.
+  zh: >-
+    果汁已经卖掉，还剩一百公斤果皮。报表把一万二千港元共同榨汁成本中的二千分配给果皮。你会直接出售鲜果皮，还是进一步加工？这是虚构的香港柑橘加工厂。报价还没有接受。
+  zh_hk: >-
+    果汁已經賣咗，仲剩一百公斤果皮。報表把一萬二千港元共同榨汁成本入面嘅二千分攤畀果皮。你會鮮售，定係再加工？呢個係虛構嘅香港柑橘加工廠。報價仲未接受。
+- id: ledger
+  visual: table_grid
+  seconds: 28
+  rows: 3
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Today’s peel lot, HK$
+  title_zh: 今天这批果皮，港元
+  title_zh_hk: 今天呢批果皮，港元
+  row1_en: Buyer’s payment
+  row1_zh: 买家整批付款
+  row1_zh_hk: 買家整批付款
+  row2_en: Additional processing
+  row2_zh: 额外加工支出
+  row2_zh_hk: 額外加工支出
+  row3_en: Assigned joint cost
+  row3_zh: 分配的联合成本
+  row3_zh_hk: 分攤的聯合成本
+  col1_en: Sell fresh
+  col1_zh: 直接出售鲜果皮
+  col1_zh_hk: 鮮售
+  col2_en: Process further
+  col2_zh: 进一步加工
+  col2_zh_hk: 再加工
+  c11: 1,200
+  c12: 2,600
+  c21: '0'
+  c22: '900'
+  c31: 2,000
+  c32: 2,000
+  footer_en: Common run already cost 12,000.
+  footer_zh: 共同榨汁已花去一万二千。
+  footer_zh_hk: 共同榨汁已用去一萬二千。
+  s1_en: >-
+    The 100 kilogram peel lot can be sold fresh for 1,200, or dried for 2,600 after an additional processing
+    payment of 900. Both buyers collect the whole lot.
+  s1_zh: 这一百公斤鲜果皮可以直接出售，收款一千二百港元；也可以干燥后再卖，收款二千六百，但要再付九百港元加工费。两名买家都提走整批产出。
+  s1_zh_hk: 呢一百公斤鮮果皮可以鮮售，收款一千二百港元；亦可以烘乾再賣，收款二千六百，但要再付九百港元加工費。兩個買家都會提走整批產出。
+  s2_en: >-
+    The common extraction run has already cost 12,000. The report assigns 10,000 to juice and 2,000 to
+    peel. None of that common cost can be recovered by changing the peel decision.
+  s2_zh: 共同榨汁已经花去一万二千港元。报表给果汁分配一万，给果皮分配二千。无论怎样处理果皮，都不能收回这笔已经发生的共同成本。
+  s2_zh_hk: 共同榨汁已經用去一萬二千港元。報表畀果汁分攤一萬，畀果皮分攤二千。無論點樣處理果皮，都收唔返呢筆已經發生嘅共同成本。
+  s3_en: >-
+    Juice receipts are unaffected. Capacity has no other paid use today. You must choose one whole-lot
+    offer, not a mix.
+  s3_zh: 果汁的收入不受影响。当天的加工产能没有其他可带来收入的用途。必须整批二选一，不能拆单。
+  s3_zh_hk: 果汁嘅收入唔受影響。當天嘅加工產能冇其他可帶來收入嘅用途。必須整批二揀一，唔可以拆單。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Sell fresh, or process further?
+  title_zh: 直接出售，还是再加工？
+  title_zh_hk: 鮮售，定係再加工？
+  en: >-
+    Would you sell the peel now, or process the whole lot further? Show which receipts and costs change,
+    and explain whether the allocated loss should determine your choice. Pause and vote. No offer has
+    been accepted.
+  zh: 整批果皮是直接出售，还是进一步加工？请指出哪些收支会随方案变化，并说明是否应该按分摊后的账面亏损来决策。请暂停，投个票。报价还没有接受。
+  zh_hk: 整批果皮係鮮售，定係再加工？列出邊啲收支會隨方案改變，並說明應唔應該按分攤後嘅賬面虧損嚟決策。暫停，投個票。報價仲未接受。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A new fresh-peel offer
+  title_zh: 新的鲜果皮报价
+  title_zh_hk: 新嘅鮮果皮報價
+  step1_en: Fresh offer is now 1,900
+  step1_zh: 鲜果皮新报价一千九百
+  step1_zh_hk: 鮮果皮新報價一千九百
+  step2_en: Dried output still 2,600
+  step2_zh: 干果皮仍报价二千六百
+  step2_zh_hk: 乾果皮報價仍係二千六百
+  step3_en: Additional processing still 900
+  step3_zh: 额外加工仍是九百
+  step3_zh_hk: 額外加工仍係九百
+  s1_en: >-
+    Before you accept either offer, a second qualified buyer makes a firm 1,900 offer for the entire fresh-peel
+    lot, on the same collection terms.
+  s1_zh: 在接受任何报价前，另一名合格买家愿意以一千九百港元买下整批鲜果皮，提货条件相同。
+  s1_zh_hk: 喺接受任何報價前，另一個合格買家願意以一千九百港元買走成批鮮果皮，提貨條件相同。
+  s2_en: >-
+    The original fresh offer can be declined without penalty. The dried-output buyer still offers 2,600,
+    and the additional processing cost remains 900.
+  s2_zh: 拒绝原来的鲜果皮报价没有罚金。干果皮仍报价二千六百，额外加工费用仍是九百。
+  s2_zh_hk: 拒絕原來嘅鮮售報價唔使罰。乾果皮報價仍係二千六百，額外加工費用仍係九百。
+  s3_en: >-
+    Nothing else changes. The common extraction cost is already incurred, and the juice sale remains unaffected.
+    This is new information before commitment.
+  s3_zh: 其余情况照旧。共同榨汁成本早已发生，果汁销售不受影响。这是作出承诺前的新资料。
+  s3_zh_hk: 其餘情況照舊。共同榨汁成本早已發生，果汁銷售唔受影響。呢個係作出承諾前嘅新資料。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep, or change your choice?
+  title_zh: 保持原选择，还是改？
+  title_zh_hk: 維持原選擇，定係改？
+  en: >-
+    Would you keep or change your decision after the new fresh-peel offer? Calculate the difference, and
+    the fresh-peel offer at which the two options are equally attractive. Pause and vote.
+  zh: 拿到新的鲜果皮报价后，你会保持还是改变选择？请算出两种方案的差额，再找出使两者净额相同的鲜果皮报价。请暂停，投个票。
+  zh_hk: 收到新嘅鮮果皮報價之後，你會維持定係改變選擇？計兩個方案相差幾多，再搵出使兩者淨額相同嘅鮮果皮報價。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 30
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Compare what remains
+  title_zh: 比较两个方案的净额
+  title_zh_hk: 比較兩個方案嘅淨額
+  step1_en: Fresh leaves 1,200
+  step1_zh: 鲜售净额一千二百
+  step1_zh_hk: 鮮售淨額一千二百
+  step2_en: Drying leaves 1,700
+  step2_zh: 干燥净额一千七百
+  step2_zh_hk: 烘乾淨額一千七百
+  step3_en: Processing is 500 more
+  step3_zh: 再加工多得五百
+  step3_zh_hk: 再加工多得五百
+  s1_en: >-
+    Draw a line at the split-off point. Before the line is the 12,000 common extraction cost. After the
+    line are the peel receipt and any additional processing payment.
+  s1_zh: 先以分离点划清界线。分离前的一万二千港元榨汁成本已经发生；分离后，果皮收款和额外加工支出才会随选择变化。
+  s1_zh_hk: 先喺分離點劃清界線。分離前嘅一萬二千港元榨汁成本已經發生；分離後，果皮收款同額外加工支出先會隨選擇改變。
+  s2_en: >-
+    Sell fresh, and 1,200 remains. Process further: 2,600 minus 900 leaves 1,700. Processing is initially
+    500 more for the company.
+  s2_zh: 直接出售鲜果皮，净额是一千二百。进一步加工：二千六百减去九百，净额一千七百。起初再加工让企业多得五百港元。
+  s2_zh_hk: 鮮售嘅淨額係一千二百。再加工：二千六百減九百，淨額一千七百。起初再加工令企業多得五百港元。
+  s3_en: >-
+    The 1,200 is an opportunity cost. Count it once: compare the two net amounts, or subtract it in the
+    incremental calculation, not both.
+  s3_zh: 放弃的一千二百港元是机会成本，只能扣一次：要么比较两个净额，要么在增量分析中扣除，不能两头都扣。
+  s3_zh_hk: 放棄嘅一千二百港元係機會成本，只能扣一次：要么比較兩個淨額，要么喺增量分析入面扣除，唔可以兩頭都扣。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 30
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: A loss label can mislead
+  title_zh: 账面亏损可能误导
+  title_zh_hk: 賬面虧損可能誤導
+  step1_en: Assigned drying loss 300
+  step1_zh: 干燥分摊后亏三百
+  step1_zh_hk: 烘乾分攤後虧三百
+  step2_en: Assigned fresh loss 800
+  step2_zh: 鲜售分摊后亏八百
+  step2_zh_hk: 鮮售分攤後虧八百
+  step3_en: >-
+    New offer: fresh is 200 better
+  step3_zh: 新报价下鲜售多二百
+  step3_zh_hk: 新報價下鮮售多二百
+  s1_en: >-
+    The controller is right on the report’s basis: 2,600 minus 900 minus 2,000 is a 300 assigned loss.
+    But fresh sale is 1,200 minus 2,000, an 800 assigned loss. Processing still improves the result by
+    500.
+  s1_zh: >-
+    财务主管按报表算得没有错：二千六百减九百再减二千，分摊后亏损三百。但直接出售是一千二百减二千，分摊后亏损八百。干燥仍未扭亏，却使结果改善五百。
+  s1_zh_hk: 財務主管按報表計得冇錯：二千六百減九百再減二千，分攤後虧損三百。但鮮售係一千二百減二千，分攤後虧損八百。烘乾仍未扭虧，卻令結果改善五百。
+  s2_en: >-
+    After the new 1,900 fresh offer, drying still leaves 1,700, now 200 less. The incremental test is
+    2,600 minus 900 minus 1,900, or minus 200. The recommendation changes because the alternative sale
+    improved, not because the common cost changed.
+  s2_zh: >-
+    按一千九百的新报价直接出售后，干燥方案仍净收一千七百，反而少二百。差额是二千六百减九百再减一千九百，等于负二百。使决策反转的是替代报价提高，不是联合成本改变。
+  s2_zh_hk: >-
+    按一千九百嘅新報價鮮售之後，烘乾方案仍淨收一千七百，反而少二百。差額係二千六百減九百再減一千九百，等於負二百。令決策反轉嘅係替代報價提高，唔係聯合成本改變。
+  s3_en: >-
+    The indifference offer is 2,600 minus 900, which is 1,700 for the whole fresh lot. Below that, drying
+    earns more; above it, fresh sale earns more.
+  s3_zh: 两方案净额相等的界线是二千六百减九百，也就是整批鲜果皮一千七百港元。低于此价宜干燥，高于此价宜直接出售。
+  s3_zh_hk: 兩方案淨額相等嘅界線係二千六百減九百，亦即整批鮮果皮一千七百港元。低於此價宜烘乾，高於此價宜鮮售。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    Before using this logic in a real business, confirm the sellable yield, buyer acceptance, extra payments
+    and capacity alternatives. A higher finished selling price does not by itself establish extra profit.
+    This one-lot calculation also does not show whether the whole juice operation is viable.
+  zh: 用于实务前，要核实可售产量、买家验收、额外支出和产能是否另有用途。成品售价较高，不代表利润一定较高。这一批的计算也不能证明整体榨汁业务可行。
+  zh_hk: >-
+    用於實務前，要核實可售產量、買家驗收、額外支出同產能係咪另有用途。成品售價較高，唔代表利潤一定較高。呢一批嘅計算亦都不能證明整體榨汁業務可行。
+- id: takeaway
+  visual: takeaway
+  seconds: 22
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Draw the line at split-off
+  title_zh: 在分离点划清界线
+  title_zh_hk: 喺分離點劃清界線
+  q1_en: >-
+    First: process further by 500
+  q1_zh: 起初再加工多得五百
+  q1_zh_hk: 起初再加工多得五百
+  q2_en: Then fresh sale is 200 better
+  q2_zh: 随后鲜售多得二百
+  q2_zh_hk: 其後鮮售多得二百
+  s1_en: >-
+    An allocation divides a common amount between product reports. It does not create a new payment when
+    you choose to dry this already-produced lot.
+  s1_zh: 成本分摊只是把一笔共同金额分到产品报表上，并不意味着选择干燥就要再付这笔已经发生的成本。
+  s1_zh_hk: 成本分攤只係把一筆共同金額分到產品報表度，並唔等於選擇烘乾就要再付呢筆已經發生嘅成本。
+  s2_en: >-
+    Allocation can still be needed for inventory or product reporting. That purpose is different from
+    choosing between today’s offers.
+  s2_zh: 存货和产品报告有时仍须分摊。不过，那跟选择今天的报价是两回事。
+  s2_zh_hk: 存貨同產品報告有時仍然要分攤。不過，嗰樣同選擇今日嘅報價係兩回事。
+  s3_en: >-
+    The firm, the offers and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、报价和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、報價同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 208

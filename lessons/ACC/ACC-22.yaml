@@ -1,0 +1,333 @@
+id: ACC-22
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: More production. More profit?
+title_zh: 产量提高，就真的多赚了吗？
+title_zh_hk: 多生產，就多賺了嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-22
+  kicker_en: ACC-22
+  kicker_zh: ACC-22
+  kicker_zh_hk: ACC-22
+  title_en: More production. More profit?
+  title_zh: 产量提高，就真的多赚了吗？
+  title_zh_hk: 多生產，就多賺了嗎？
+  image: art/more-production-more-profit-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Reported operating profit rose from 18,000 to 22,000, but units sold and the selling price did not
+    change. Does that support keeping a higher production pace? You are controller of a fictional Hong
+    Kong maker of one standard desk organiser.
+  zh: >-
+    呈报的营业利润从一万八千上升到二万二千，但销量和售价都没有变。这是否支持维持更高的产量？你是一家虚构的香港制造商的财务主管，公司只生产一种标准桌面收纳盒。
+  zh_hk: >-
+    呈報嘅營運溢利由一萬八千升到二萬二千，但銷量同售價都冇變。呢個係咪支持維持更高產量？你係一間虛構香港製造商嘅財務主管，公司只生產一種標準桌面收納盒。
+- id: ledger
+  visual: table_grid
+  seconds: 28
+  rows: 4
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two completed months, HK$
+  title_zh: 已结束的两个月，港元
+  title_zh_hk: 已結束嘅兩個月，港元
+  row1_en: Units sold
+  row1_zh: 销售数量
+  row1_zh_hk: 銷售數量
+  row2_en: Selling price per unit
+  row2_zh: 单位售价
+  row2_zh_hk: 單位售價
+  row3_en: Variable production cost
+  row3_zh: 单位变动生产成本
+  row3_zh_hk: 單位變動製造成本
+  row4_en: Reported operating profit
+  row4_zh: 呈报营业利润
+  row4_zh_hk: 呈報營運溢利
+  col1_en: Previous
+  col1_zh: 上月
+  col1_zh_hk: 上月
+  col2_en: Current
+  col2_zh: 本月
+  col2_zh_hk: 本月
+  c11: '800'
+  c12: '800'
+  c21: '100'
+  c22: '100'
+  c31: '40'
+  c32: '40'
+  c41: 18,000
+  c42: 22,000
+  footer_en: Fixed overhead 20,000; other 10,000.
+  footer_zh: 固定制造费用二万，其他一万。
+  footer_zh_hk: 固定間接成本二萬，其他一萬。
+  s1_en: >-
+    Both months sold 800 units at 100. Variable production cost is 40 per unit. Actual fixed production
+    overhead is 20,000, and other period costs are 10,000, in each month.
+  s1_zh: 两个月都卖出八百件，售价一百港元。单位变动生产成本是四十港元。每月实际固定制造费用二万，其他期间成本一万。
+  s1_zh_hk: 兩個月都賣出八百件，售價一百港元。單位變動製造成本係四十港元。每月實際固定生產間接成本二萬，其他期間成本一萬。
+  s2_en: >-
+    Reported operating profit rose from 18,000 to 22,000. The same absorption-based reporting policy applies
+    in both months. The production-and-stock schedule has not yet reached your desk.
+  s2_zh: 呈报营业利润从一万八千升到二万二千。两个月采用同一套完全成本法，也就是吸收成本法。产量和存货明细还没有送到你手上。
+  s2_zh_hk: 呈報營運溢利由一萬八千升到二萬二千。兩個月採用同一套吸收成本法。產量同存貨明細仲未送到你手上。
+  s3_en: >-
+    Do not invent the missing quantities or a cause for the change. Choose the most useful explanation
+    for the board, not a more favourable accounting policy.
+  s3_zh: 不要自行假定尚未送达的数量，也不要先给利润上升编一个原因。选最能说明业绩的汇报方式，而不是挑较有利的会计政策。
+  s3_zh_hk: 唔好自行假定尚未送到嘅數量，亦唔好先替溢利上升編一個原因。選最能說明業績嘅匯報方式，而唔係揀較有利嘅會計政策。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which bridge would you lead?
+  title_zh: 你会先用哪张调节表？
+  title_zh_hk: 你會先用邊張調節表？
+  en: >-
+    Which bridge would you lead with for the board: sales margin, production and inventory, or a reconciled
+    combination? Explain what the summary already establishes, and which missing schedule you need before
+    attributing the profit rise. Pause and vote.
+  zh: >-
+    给董事会汇报，你会先分析销售边际贡献，先分析产量和存货，还是把两者结合起来？请说明摘要已经能够确定什么，以及在解释利润上升前还缺哪份明细。请暂停，投个票。
+  zh_hk: >-
+    向董事局匯報，你會先講銷售邊際貢獻、先講生產同存貨，定係將兩者調節後一併呈報？說明摘要已經能夠確定啲乜，以及解釋溢利上升前仲欠邊份明細。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The stock schedule arrives
+  title_zh: 产量和存货明细送达
+  title_zh_hk: 產量同存貨明細送到
+  step1_en: >-
+    Previous: made 800, held 0
+  step1_zh: 上月生产八百，存货为零
+  step1_zh_hk: 上月生產八百，存貨為零
+  step2_en: >-
+    Current: made 1,000, held 200
+  step2_zh: 本月生产一千，存货二百
+  step2_zh_hk: 本月生產一千，存貨二百
+  step3_en: Normal capacity 1,000 units
+  step3_zh: 正常产能一千件
+  step3_zh_hk: 正常產能一千件
+  s1_en: >-
+    Opening finished goods were zero in both months. Previous production was 800, all sold. Current production
+    is 1,000, with 800 sold and 200 remaining in closing finished goods.
+  s1_zh: 两个月的期初产成品存货都是零。上月生产八百件，全部售出。本月生产一千件，售出八百，期末还剩二百件。
+  s1_zh_hk: 兩個月嘅期初製成品存貨都係零。上月生產八百件，全部售出。本月生產一千件，售出八百，期末仲剩二百件。
+  s2_en: >-
+    The approved normal-capacity basis is 1,000 units a month, so the fixed-overhead rate is 20 per unit.
+    At lower output, unallocated overhead is charged to that month; the rate is not increased.
+  s2_zh: 核定的正常产能是每月一千件，因此固定制造费用分配率是每件二十港元。产量较低时，未分摊制造费用计入当月，不得提高分配率。
+  s2_zh_hk: 核定嘅正常產能係每月一千件，所以固定生產間接成本分攤率係每件二十港元。產量較低時，未分攤間接成本計入當月，唔可以提高分攤率。
+  s3_en: >-
+    Under absorption costing, each finished unit carries 40 of variable cost plus 20 of allocated fixed
+    overhead. Under the internal variable-costing view, stock carries only 40, and the entire 20,000 fixed
+    overhead is expensed each month.
+  s3_zh: >-
+    按完全成本法，每件存货包括四十港元变动生产成本和二十港元分配的固定制造费用。按内部变动成本法，存货只计四十，二万港元固定制造费用全部计入当月。
+  s3_zh_hk: >-
+    按吸收成本法，每件存貨包括四十港元變動製造成本和二十港元已分攤固定生產間接成本。按內部變動成本法，存貨只計四十，二萬港元固定間接成本全部計入當月。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Better selling, or more stock?
+  title_zh: 销得更好，还是存货更多？
+  title_zh_hk: 賣得更好，定係存貨更多？
+  en: >-
+    What explanation would you now recommend? Reconcile both months under absorption and variable costing,
+    and decide whether the higher reported profit proves better selling performance or justifies producing
+    more. Pause and vote.
+  zh: >-
+    你现在会怎样向董事会解释？请用完全成本法和变动成本法核对两个月的结果，并判断利润上升是否证明销售更好，或能否作为提高产量的理由。请暂停，投个票。
+  zh_hk: >-
+    你而家會點向董事局解釋？請用吸收成本法同變動成本法核對兩個月嘅結果，並判斷溢利上升係咪證明銷售更好，又定唔可以作為提高產量嘅理由。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Start with units sold
+  title_zh: 先看客户买了多少
+  title_zh_hk: 先睇客戶買咗幾多
+  step1_en: Revenue 80,000 both months
+  step1_zh: 两月收入同为八万
+  step1_zh_hk: 兩月收入同係八萬
+  step2_en: Sales contribution 48,000
+  step2_zh: 销售边际贡献四万八千
+  step2_zh_hk: 銷售邊際貢獻四萬八千
+  step3_en: Variable-costing profit 18,000
+  step3_zh: 变动成本法利润一万八千
+  step3_zh_hk: 變動成本法溢利一萬八千
+  s1_en: >-
+    Both months earn 80,000 of revenue from 800 units at 100. The variable manufacturing cost of those
+    sales is 800 times 40, or 32,000. Sales contribution is therefore 48,000 in both months.
+  s1_zh: 两个月都是八百件乘以一百，收入八万港元。已售产品的变动生产成本是八百乘以四十，即三万二千。因此每月销售边际贡献同为四万八千。
+  s1_zh_hk: 兩個月都係八百件乘以一百，收入八萬港元。已售貨品嘅變動製造成本係八百乘以四十，即三萬二千。所以每月銷售邊際貢獻同係四萬八千。
+  s2_en: >-
+    Subtract fixed production overhead of 20,000 and other period costs of 10,000. The internal variable-costing
+    operating result is 18,000 in each month.
+  s2_zh: 再减固定制造费用二万和其他期间成本一万。按内部变动成本法，每月营业利润同为一万八千。
+  s2_zh_hk: 再減固定生產間接成本二萬同其他期間成本一萬。按內部變動成本法，每月營運溢利同係一萬八千。
+  s3_en: >-
+    Round one therefore supports a production-and-inventory investigation, or a combined bridge led by
+    the unchanged sales contribution. It does not support claiming that customers bought more, paid more,
+    or cost less per unit.
+  s3_zh: 第一轮因此支持去查产量和存货，或先用不变的销售边际贡献再做综合调节。不能据此声称客户买得更多、付得更高，或单位成本更低。
+  s3_zh_hk: 第一輪因此支持去查產量同存貨，或先用不變嘅銷售邊際貢獻再做綜合調節。唔可以據此聲稱客戶買得多啲、付得高啲，或者單位成本低啲。
+- id: stock
+  visual: steps
+  layout: rows
+  seconds: 30
+  kicker: Stock
+  kicker_en: Stock
+  kicker_zh: 存货
+  kicker_zh_hk: 存貨
+  title_en: Follow the unsold units
+  title_zh: 跟着未卖掉的存货走
+  title_zh_hk: 跟住未賣掉嘅存貨走
+  step1_en: Previous unused capacity 4,000
+  step1_zh: 上月未分摊四千
+  step1_zh_hk: 上月未分攤四千
+  step2_en: Current stock holds 4,000 fixed
+  step2_zh: 本月存货含固定费用四千
+  step2_zh_hk: 本月存貨含固定成本四千
+  step3_en: The whole 4,000 rise is timing
+  step3_zh: 利润多四千全是时间差
+  step3_zh_hk: 溢利多四千全係時間差
+  s1_en: >-
+    Previous production absorbs 800 times 20, or 16,000, leaving 4,000 unallocated and expensed immediately.
+    Absorption profit is 80,000 minus 48,000 cost of sales, minus 4,000, minus 10,000, which is 18,000.
+  s1_zh: >-
+    上月生产八百件，只吸收一万六千固定制造费用，剩下四千未分摊，立即计入费用。完全成本法利润是八万减销售成本四万八千，再减未分摊四千和其他成本一万，等于一万八千。
+  s1_zh_hk: >-
+    上月生產八百件，只吸收一萬六千固定間接成本，剩低四千未分攤，立即計入費用。吸收成本法溢利係八萬減銷貨成本四萬八千，再減未分攤四千同其他成本一萬，等於一萬八千。
+  s2_en: >-
+    Current production costs 60,000 in total. Closing inventory is 200 times 60, or 12,000, of which 4,000
+    is fixed overhead. Absorption profit is 22,000. Only that 4,000 fixed component explains the difference
+    between the two profit views.
+  s2_zh: >-
+    本月生产总成本六万。期末存货是二百乘以六十，即一万二千，其中四千是固定制造费用。完全成本法利润是二万二千。两种口径的差异只来自这四千，不能把一万二千都当成多赚。
+  s2_zh_hk: >-
+    本月生產總成本六萬。期末存貨係二百乘以六十，即一萬二千，其中四千係固定間接成本。吸收成本法溢利係二萬二千。兩種口徑嘅差異只嚟自呢四千，唔可以把一萬二千都當成多賺。
+  s3_en: >-
+    Current absorption profit of 22,000 equals variable-costing profit of 18,000, plus 4,000 fixed overhead
+    in closing stock, minus zero in opening stock. The entire 4,000 month-to-month reported increase is
+    this timing difference.
+  s3_zh: >-
+    本月完全成本法利润二万二千，等于变动成本法利润一万八千，加上期末存货中的四千固定制造费用，再减期初存货中的零。月与月之间多出的四千，全部由这个时间差解释。
+  s3_zh_hk: >-
+    本月吸收成本法溢利二萬二千，等於變動成本法溢利一萬八千，加上期末存貨入面嘅四千固定間接成本，再減期初存貨入面嘅零。月同月之間多出嘅四千，全部由呢個時間差解釋。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Explain, do not set a target
+  title_zh: 先解释，不急于定产量
+  title_zh_hk: 先解釋，唔好急住定產量
+  step1_en: Profit rose 4,000
+  step1_zh: 呈报利润多了四千
+  step1_zh_hk: 呈報溢利多咗四千
+  step2_en: Sales contribution unchanged
+  step2_zh: 销售边际贡献没变
+  step2_zh_hk: 銷售邊際貢獻冇變
+  step3_en: Do not produce just for the effect
+  step3_zh: 勿为账面效果而增产
+  step3_zh_hk: 唔好為账面效果而增產
+  s1_en: >-
+    Tell the board that reported profit rose 4,000 while sales contribution was unchanged, and that current
+    stock carries 4,000 of fixed production cost into a later period. This is consistent with the policy,
+    not a cash gain.
+  s1_zh: >-
+    向董事会说明：呈报利润增加四千，但销售边际贡献没有变；本月存货把四千固定制造费用带到以后期间。这与题设的报告政策一致，本身并不是现金增加，也不是效率提升。
+  s1_zh_hk: >-
+    向董事局說明：呈報溢利增加四千，但銷售邊際貢獻冇變；本月存貨把四千固定生產間接成本帶到以後期間。呢個同題設嘅報告政策一致，本身唔係現金增加，亦唔係效率提升。
+  s2_en: >-
+    Do not approve extra production merely to repeat that accounting effect. Check the delivery forecast,
+    stock age, storage and expected selling proceeds before choosing output. Useful stock for credible
+    demand can still be sensible.
+  s2_zh: 不要只为重复这种会计效果而批准增产。决定产量前，要核对应交货预测、存货库龄、仓储和预计售价。为可信需求备货仍然可以是合理的。
+  s2_zh_hk: 唔好只為重複呢種會計效果而批准增產。決定產量前，要核對交貨預測、存貨庫齡、倉儲同預計售價。為可信需求備貨仍然可以係合理嘅。
+  s3_en: >-
+    If the next month sold these 200 units and ended with no stock, the earlier 4,000 difference would
+    reverse. Across the two months, both views would then total 48,000. Timing changed, not the combined
+    result under these assumptions.
+  s3_zh: 假如下月售出这二百件并且不再留存货，先前的四千差异就会转回。两个月合计，两种口径都是四万八千。在这些假定下，改变的是时间分布，不是合计结果。
+  s3_zh_hk: >-
+    假如下月售出呢二百件並且唔再留存貨，先前嘅四千差異就會轉回。兩個月合計，兩種口徑都係四萬八千。喺呢啲假定之下，改變嘅係時間分布，唔係合計結果。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    A quieter month does not justify loading unused-capacity cost into inventory. If the 200 units needed
+    a write-down, or if demand evidence supported a planned peak, the production decision could change.
+    Keep the required reporting basis, and use the internal view as a clearly labelled supplement, not
+    a substitute.
+  zh: >-
+    产量较低，并不能把闲置产能成本打进存货。如果这二百件需要减值，或有证据支持为高峰备货，生产决策就可能改变。保留规定的财务报告基础，内部口径只能作为标明的补充，不能替代。
+  zh_hk: >-
+    產量較低，並唔能把閒置產能成本打入存貨。如果呢二百件需要減值，或有證據支持為高峰備貨，生產決策就可能改變。保留規定嘅財務報告基礎，內部口徑只能作為標明嘅補充，唔可以替代。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Unchanged sales, deferred cost
+  title_zh: 销售没变，费用后移
+  title_zh_hk: 銷售冇變，費用後移
+  q1_en: Variable-costing profit stays 18,000
+  q1_zh: 变动成本法利润仍是一万八千
+  q1_zh_hk: 變動成本法溢利仍係一萬八千
+  q2_en: Absorption profit rises by 4,000
+  q2_zh: 完全成本法利润多四千
+  q2_zh_hk: 吸收成本法溢利多四千
+  s1_en: >-
+    Start with what customers bought. Here the sales contribution is the same in both months, so the reported
+    profit rise is not evidence of better selling performance.
+  s1_zh: 先从客户实际买了多少看起。本题两个月的销售边际贡献相同，因此呈报利润上升并不能证明销售表现更好。
+  s1_zh_hk: 先由客戶實際買咗幾多睇起。呢題兩個月嘅銷售邊際貢獻相同，所以呈報溢利上升並唔能證明銷售表現更好。
+  s2_en: >-
+    Under the supplied absorption policy, current closing stock carries 4,000 of fixed production overhead
+    into a later period. That timing difference accounts for the entire 4,000 increase.
+  s2_zh: 按题设的完全成本法，本月期末存货把四千固定制造费用带到以后期间。这四千时间差，正好解释整笔利润增加。
+  s2_zh_hk: 按題設嘅吸收成本法，本月期末存貨把四千固定生產間接成本帶到以後期間。呢四千時間差，正好解釋成筆溢利增加。
+  s3_en: >-
+    The firm, the offers and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、报价和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、報價同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 230

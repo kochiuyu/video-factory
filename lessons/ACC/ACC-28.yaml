@@ -1,0 +1,291 @@
+id: ACC-28
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A market price. A design cost gap?
+title_zh: 售价区间已定，设计成本还要降多少？
+title_zh_hk: 市價定了，設計成本還差多少？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-28
+  kicker_en: ACC-28
+  kicker_zh: ACC-28
+  kicker_zh_hk: ACC-28
+  title_en: A market price. A design cost gap?
+  title_zh: 售价区间已定，设计成本还要降多少？
+  title_zh_hk: 市價定了，設計成本還差多少？
+  image: art/market-price-design-cost-gap-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A desktop storage box can sell for 95 to 100, and management requires at least 30 of contribution
+    per unit. The current design costs 78. Which redesign would you examine first, Component C or Assembly
+    A? This is a fictional Hong Kong maker. Production has not begun.
+  zh: >-
+    一款桌面收纳盒的可行净售价是九十五到一百港元，管理层要求单位边际贡献至少三十港元。现设计每件成本七十八。你会先研究零件 C，还是装配 A？这是虚构的香港制造商。生产尚未开始。
+  zh_hk: >-
+    一款桌面收納盒嘅可行淨售價係九十五到一百港元，管理層要求單位邊際貢獻至少三十港元。現設計每件成本七十八。你會先研究零件 C，定係裝配 A？呢個係虛構嘅香港製造商。生產尚未開始。
+- id: ledger
+  visual: table_grid
+  seconds: 24
+  rows: 3
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Design candidates, HK$ per unit
+  title_zh: 设计方案，每件港元
+  title_zh_hk: 設計方案，每件港元
+  row1_en: Current design
+  row1_zh: 现设计
+  row1_zh_hk: 現設計
+  row2_en: Component C
+  row2_zh: 零件 C
+  row2_zh_hk: 零件 C
+  row3_en: Assembly A
+  row3_zh: 装配 A
+  row3_zh_hk: 裝配 A
+  col1_en: Variable cost
+  col1_zh: 变动成本
+  col1_zh_hk: 變動成本
+  col2_en: Saving
+  col2_zh: 较现设计节省
+  col2_zh_hk: 較現設計節省
+  c11: '78'
+  c12: —
+  c21: '68'
+  c22: '10'
+  c31: '70'
+  c32: '8'
+  footer_en: Functional review is still pending.
+  footer_zh: 功能评审尚未完成。
+  footer_zh_hk: 功能評審尚未完成。
+  s1_en: >-
+    Any net selling price from 95 to 100 is feasible for the specified product at the same planned volume.
+    Prices outside that range are not feasible. Management requires at least 30 contribution per unit:
+    net selling price minus all variable costs.
+  s1_zh: >-
+    就这款规定产品、在同一计划销量下，九十五到一百港元的净售价都可行；区间以外则不可行。管理层要求单位边际贡献至少三十港元，也就是净售价减去全部变动成本。
+  s1_zh_hk: >-
+    就呢款規定產品、喺同一計劃銷量下，九十五到一百港元嘅淨售價都可行；區間以外則不可行。管理層要求單位邊際貢獻至少三十港元，亦即淨售價減全部變動成本。
+  s2_en: >-
+    The current design costs 78 per unit. Component C is estimated to save 10, bringing cost to 68. Assembly
+    A is estimated to save 8, bringing cost to 70. The options are alternatives, not additive. Neither
+    saving is yet a release authorisation.
+  s2_zh: >-
+    现设计每件成本七十八。零件 C估计可节省十港元，成本降至六十八。装配 A估计可节省八港元，成本降至七十。两案只能二选一，节省不能相加。任何一项节省都还不是投产批准。
+  s2_zh_hk: >-
+    現設計每件成本七十八。零件 C估計可節省十港元，成本降至六十八。裝配 A估計可節省八港元，成本降至七十。兩案只能二選一，節省唔能相加。任何一項節省都仲未係投產批准。
+  s3_en: >-
+    Fixed design and capacity costs are already separately funded and unchanged. Calculate the allowable
+    variable cost and gap across the feasible price range, then name the evidence you require before treating
+    either saving as acceptable.
+  s3_zh: 固定的设计和产能成本已另行拨款，并且不会因任一方案而改变。请计算整段价格范围的允许变动成本及缺口，再说凭什么证据才接纳节省。
+  s3_zh_hk: 固定嘅設計同產能成本已另行撥款，並且唔會因任一方案而改變。請計算整段價格範圍嘅可容許變動成本及差額，再說憑乜證據先接納節省。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which redesign first?
+  title_zh: 你会先研究哪项改进？
+  title_zh_hk: 你會先研究邊項改進？
+  en: >-
+    Which redesign would you examine first, and what allowable cost and cost gap follow from the price
+    range and required contribution? Pause and vote. Production has not begun, and no customer orders
+    have been accepted.
+  zh: >-
+    你准备优先研究哪项改进？根据可行售价区间和边际贡献目标，允许变动成本及当前设计的成本缺口是多少？请暂停，投个票。生产尚未开始，也尚未接受客户订单。
+  zh_hk: >-
+    你準備優先研究邊項改進？根據可行售價區間同邊際貢獻目標，可容許變動成本及現設計嘅成本差額係多少？暫停，投個票。生產尚未開始，亦尚未接受客戶訂單。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The functional review arrives
+  title_zh: 功能评审结果送达
+  title_zh_hk: 功能評審結果送到
+  step1_en: C removes repositionable dividers
+  step1_zh: 零件 C 改为固定隔板，失去可调隔层
+  step1_zh_hk: 零件 C 改為固定隔板，失去可調隔層
+  step2_en: A keeps every specified function
+  step2_zh: 装配 A 保留全部规定功能
+  step2_zh_hk: 裝配 A 保留全部規定功能
+  step3_en: The 8 saving is validated
+  step3_zh: 装配 A 节省八港元已获验证
+  step3_zh_hk: 裝配 A 節省八港元已獲驗證
+  s1_en: >-
+    The customer requirement identifies repositionable internal dividers as essential. The original design
+    meets it. C uses a fixed divider moulding, so it removes that essential function. The feasible price
+    range applies only to products meeting the full requirement.
+  s1_zh: >-
+    顾客要求把可重新摆放的内部隔板列为必要功能。原设计符合要求。零件 C改用固定隔板模具，因而取消了这项必要功能。可行售价区间只适用于满足全部要求的产品。
+  s1_zh_hk: >-
+    顧客要求把可重新擺放嘅內部隔板列為必要功能。原設計符合要求。零件 C改用固定隔板模具，因而取消咗呢項必要功能。可行售價區間只適用於滿足全部要求嘅產品。
+  s2_en: >-
+    A eliminates a separate alignment-and-fastening operation through an integrated guide. The review
+    confirms that it preserves repositionability, strength, safety, appearance, durability and all other
+    specified requirements.
+  s2_zh: 装配 A用一体化导轨取消了一道单独的对准和紧固作业。评审确认，它保留了可重新摆放、强度、安全、外观、耐用及所有其他规定要求。
+  s2_zh_hk: 裝配 A用一體化導軌取消咗一道單獨嘅對準同緊固作業。評審確認，佢保留咗可重新擺放、強度、安全、外觀、耐用及所有其他規定要求。
+  s3_en: >-
+    The net 8 saving on A is validated after all variable consequences, including expected warranty work.
+    Neither the contribution requirement nor the essential feature can be waived in this exercise.
+  s3_zh: 装配 A净节省八港元，已计入全部变动后果，包括预计质量保证支出，并已获验证。本题不可放宽边际贡献下限，也不可放弃这项必要功能。
+  s3_zh_hk: 裝配 A淨節省八港元，已計入全部變動後果，包括預計保用支出，並已獲驗證。呢題唔可以放寬邊際貢獻下限，亦唔可以放棄呢項必要功能。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which design and price work?
+  title_zh: 哪项设计和售价同时符合？
+  title_zh_hk: 邊項設計同售價同時符合？
+  en: >-
+    Which design and feasible price meet both the essential requirement and the contribution target, and
+    why is the largest nominal saving not the answer? Pause and vote.
+  zh: 哪项设计和哪个可行售价能同时满足必要功能与边际贡献目标？为什么名义节省最大的方案不是答案？请暂停，投个票。
+  zh_hk: 邊項設計同邊個可行售價能同時滿足必要功能同邊際貢獻目標？點解名義節省最大嘅方案唔係答案？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Work backward from price
+  title_zh: 由售价倒推
+  title_zh_hk: 由售價倒推
+  step1_en: At 95, allowable cost is 65
+  step1_zh: 售价九十五，允许成本六十五
+  step1_zh_hk: 售價九十五，可容許成本六十五
+  step2_en: At 100, allowable cost is 70
+  step2_zh: 售价一百，允许成本七十
+  step2_zh_hk: 售價一百，可容許成本七十
+  step3_en: Current gap is 13 to 8
+  step3_zh: 现设计缺口十三至八
+  step3_zh_hk: 現設計差額十三至八
+  s1_en: >-
+    At 95, allowable variable cost is 95 minus 30, or 65, and the current cost gap is 78 minus 65, or
+    13. At 100, allowable cost is 70 and the gap is 8. Across the range, the gap falls from 13 to 8.
+  s1_zh: >-
+    售价九十五时，允许变动成本是九十五减三十，即六十五，当前成本缺口是七十八减六十五，即十三。售价一百时，允许成本是七十，缺口是八。在整个区间内，缺口从十三降到八。
+  s1_zh_hk: >-
+    售價九十五時，可容許變動成本係九十五減三十，即六十五，當前成本差額係七十八減六十五，即十三。售價一百時，可容許成本係七十，差額係八。喺整個區間內，差額由十三降到八。
+  s2_en: >-
+    C is a reasonable first investigation because its larger saving could close the gap at a lower price:
+    cost 68 needs a price of at least 98 for 30 contribution. A requires 100. Choosing A first to investigate
+    process simplification is also defensible.
+  s2_zh: >-
+    先研究零件 C 是合理的，因为它节省更多，可能在较低售价下补上缺口：成本六十八至少要卖到九十八，才有三十的边际贡献。装配 A 则需要售价一百。先研究装配 A 的简化工序，也可以说得通。
+  s2_zh_hk: >-
+    先研究零件 C 係合理嘅，因為佢節省更多，可能喺較低售價下補上差額：成本六十八至少要賣到九十八，先至有三十嘅邊際貢獻。裝配 A 則需要售價一百。先研究裝配 A 嘅簡化工序，亦可以說得通。
+  s3_en: >-
+    Neither candidate can be selected on arithmetic alone before checking functions, quality and all affected
+    costs.
+  s3_zh: 在核对功能、质量和全部受影响成本之前，不能单凭算术就选定方案。
+  s3_zh_hk: 喺核對功能、質素同全部受影響成本之前，唔能單憑算術就選定方案。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: The smaller valid saving wins
+  title_zh: 较小但有效的节省才管用
+  title_zh_hk: 較小但有效嘅節省先至管用
+  step1_en: C fails the essential function
+  step1_zh: 零件 C 不符合必要功能
+  step1_zh_hk: 零件 C 唔符合必要功能
+  step2_en: Choose A at a price of 100
+  step2_zh: 选择装配 A，售价一百
+  step2_zh_hk: 選擇裝配 A，售價一百
+  step3_en: At 95, A misses the target by 5
+  step3_zh: 售价九十五时装配 A 还差五
+  step3_zh_hk: 售價九十五時裝配 A 仲差五
+  s1_en: >-
+    C fails the essential repositionable-divider requirement. Its 68 cost would give 32 contribution at
+    100, but that calculation uses a selling-price assumption that does not apply to the changed product.
+  s1_zh: 零件 C 不符合可重新摆放隔板这项必要要求。若按一百港元售价，成本六十八似乎有三十二的边际贡献，但这个售价假定并不适用于已经改动功能的产品。
+  s1_zh_hk: 零件 C 唔符合可重新擺放隔板呢項必要要求。若按一百港元售價，成本六十八似乎有三十二嘅邊際貢獻，但呢個售價假定並唔適用於已經改動功能嘅產品。
+  s2_en: >-
+    Choose A at 100: variable cost 70 leaves the required 30 contribution and preserves every specified
+    function. At 95, A leaves only 25, missing the target by 5. Within the supplied range, only 100 works
+    for A.
+  s2_zh: >-
+    应选择装配 A，售价一百：变动成本七十，刚好留下要求的三十边际贡献，并保留全部规定功能。售价九十五时，装配 A 只剩二十五，还差五港元。在题设区间内，装配 A 只有一百港元这一档可行。
+  s2_zh_hk: >-
+    應選擇裝配 A，售價一百：變動成本七十，剛好留下要求嘅三十邊際貢獻，並保留全部規定功能。售價九十五時，裝配 A 只剩二十五，仲差五港元。喺題設區間內，裝配 A 只有一百港元呢一檔可行。
+  s3_en: >-
+    The current design yields at most 22 and fails throughout. The validated assembly change removes avoidable
+    work rather than customer-valued capability. That does not by itself establish total product profit
+    or a real-world sales forecast.
+  s3_zh: >-
+    现设计最多只能得到二十二的边际贡献，在整个区间都不达标。获验证的装配改动去掉的是可避免的作业，不是顾客看重的功能。但这并不能单独证明产品整体盈利。
+  s3_zh_hk: >-
+    現設計最多只能得到二十二嘅邊際貢獻，喺整個區間都唔達標。獲驗證嘅裝配改動去掉嘅係可避免嘅作業，唔係顧客看重嘅功能。但呢個並唔能單獨證明產品整體盈利。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    A different fixed-divider offer would need new requirements and market evidence. Do not silently redefine
+    the customer or call the lost function unnecessary. Fixed costs are outside this variable-cost screen;
+    they are funded and unchanged, but they are not a full life-cycle profit test.
+  zh: >-
+    如果要改推固定隔板的另一种产品，就必须重新确定要求和市场证据。不能悄悄改写顾客，或把失去的功能说成不必要。固定成本不在这道变动成本筛选之内；它们已有拨款且不变，但也不能代替完整的生命周期盈利测试。
+  zh_hk: >-
+    如果要改推固定隔板嘅另一種產品，就必須重新確定要求同市場證據。唔能悄悄改寫顧客，或把失去嘅功能說成唔必要。固定成本唔喺呢道變動成本篩選之內；它們已有撥款且不變，但亦唔能代替完整嘅生命周期盈利測試。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Keep what the price assumes
+  title_zh: 售价假定的功能必须保留
+  title_zh_hk: 售價假定嘅功能必須保留
+  q1_en: Allowable cost 65 to 70
+  q1_zh: 允许变动成本六十五至七十
+  q1_zh_hk: 可容許變動成本六十五至七十
+  q2_en: Choose Assembly A at 100
+  q2_zh: 选择装配 A，售价一百
+  q2_zh_hk: 選擇裝配 A，售價一百
+  s1_en: >-
+    Work backward from the feasible price and the required contribution. Here the allowable variable cost
+    rises from 65 to 70, and the current design’s gap falls from 13 to 8.
+  s1_zh: 要从可行售价和边际贡献目标倒推。本题允许变动成本从六十五升到七十，现设计的成本缺口从十三降到八。
+  s1_zh_hk: 要由可行售價同邊際貢獻目標倒推。呢題可容許變動成本由六十五升到七十，現設計嘅成本差額由十三降到八。
+  s2_en: >-
+    The largest nominal saving is not the answer if it removes a function that the price range assumes.
+    Assembly A at 100 closes the valid gap and preserves the essential dividers.
+  s2_zh: 如果节省最大的方案取消了售价区间所假定的功能，它就不是答案。装配 A在售价一百时补上了有效缺口，并保留了必要的可调隔板。
+  s2_zh_hk: 如果節省最大嘅方案取消咗售價區間所假定嘅功能，佢就唔係答案。裝配 A喺售價一百時補上咗有效差額，並保留咗必要嘅可調隔板。
+  s3_en: >-
+    The firm, the offers and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、报价和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、報價同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 192

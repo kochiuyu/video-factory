@@ -1,0 +1,296 @@
+id: ACC-29
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: One package price. Three promises?
+title_zh: 一个套餐价，三项履约义务？
+title_zh_hk: 一個套裝價，三項履約責任？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-29
+  kicker_en: ACC-29
+  kicker_zh: ACC-29
+  kicker_zh_hk: ACC-29
+  title_en: One package price. Three promises?
+  title_zh: 一个套餐价，三项履约义务？
+  title_zh_hk: 一個套裝價，三項履約責任？
+  image: art/one-package-three-promises-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A supplier signs a 12,000 package for a printer, basic installation and twelve months of already-selected
+    support. All cash is collected at signing, but nothing has transferred yet. How would you allocate
+    the 12,000, and how much revenue can be recognised at signing? This is a fictional Hong Kong supplier.
+  zh: >-
+    一家供应商签订一万二千港元的套餐，包括一台标签打印机、基础安装，以及客户已在本合同中选定的十二个月支持。签约时已收齐款项，但尚未交付任何商品或服务。你怎样分摊这一万二千，签约时又能确认多少收入？这是虚构的香港供应商。
+  zh_hk: >-
+    一間供應商簽訂一萬二千港元嘅套裝，包括一部標籤打印機、基礎安裝，以及客戶已喺本合同中選定嘅十二個月支援。簽約時已收齊款項，但尚未交付任何商品或服務。你點樣分攤呢一萬二千，簽約時又可以確認多少收入？呢個係虛構嘅香港供應商。
+- id: ledger
+  visual: table_grid
+  seconds: 24
+  rows: 3
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Draft standalone prices, HK$
+  title_zh: 草案中的单独售价，港元
+  title_zh_hk: 草案中嘅單獨售價，港元
+  row1_en: Printer, on delivery
+  row1_zh: 打印机，交货时
+  row1_zh_hk: 打印機，交貨時
+  row2_en: Basic installation, when complete
+  row2_zh: 基础安装，完成时
+  row2_zh_hk: 基礎安裝，完成時
+  row3_en: Twelve-month support
+  row3_zh: 十二个月支持
+  row3_zh_hk: 十二個月支援
+  col1_en: Standalone
+  col1_zh: 单独售价
+  col1_zh_hk: 單獨售價
+  col2_en: Trigger
+  col2_zh: 确认时点
+  col2_zh_hk: 確認時點
+  c11: 10,000
+  c12_en: Control transfers
+  c12_zh: 控制权转移
+  c12_zh_hk: 控制權轉移
+  c21: 2,000
+  c22_en: Task completed
+  c22_zh: 安装完成
+  c22_zh_hk: 安裝完成
+  c31: 3,000
+  c32_en: Evenly over 12 months
+  c32_zh: 十二个月内均匀
+  c32_zh_hk: 十二個月內均勻
+  footer_en: The 12,000 package is collected now.
+  footer_zh: 套餐价一万二千，已收齐。
+  footer_zh_hk: 套裝價一萬二千，已收齊。
+  s1_en: >-
+    All three promises are distinct for this exercise. Allocate the fixed 12,000 in proportion to validated
+    standalone selling prices at contract inception. Spread the bundle discount across all three promises.
+  s1_zh: 本题假定三项承诺都可以明确区分。按合同开始时经核验的相对单独售价，分摊固定的一万二千港元。套餐折扣按比例分到全部三项。
+  s1_zh_hk: 呢題假定三項承諾都可以明確區分。按合約開始時經核實嘅相對單獨售價，分攤固定嘅一萬二千港元。套裝折扣按比例分到全部三項。
+  s2_en: >-
+    The draft standalone prices are 10,000 for equipment, 2,000 for installation and 3,000 for twelve-month
+    support. These figures still need final evidence checking.
+  s2_zh: 草案中的单独售价是设备一万、安装二千、十二个月支持三千。这些数字还需要最后核验证据。
+  s2_zh_hk: 草案中嘅單獨售價係設備一萬、安裝二千、十二個月支援三千。呢啲數字仲需要最後核實證據。
+  s3_en: >-
+    Recognise the equipment allocation when control transfers on delivery, installation when that distinct
+    task is complete, and support evenly over twelve months from its start. Neither cash collection nor
+    price allocation fulfils a promise.
+  s3_zh: >-
+    设备部分在交货、控制权转移时确认，安装在该项明确任务完成时确认，支持则在开始后的十二个月内均匀确认。收款本身或完成价格分摊，都不等于已经履行承诺。
+  s3_zh_hk: >-
+    設備部分喺交貨、控制權轉移時確認，安裝喺該項明確任務完成時確認，支援則喺開始後嘅十二個月內均勻確認。收款本身或完成價格分攤，都不等於已經履行承諾。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: How much revenue at signing?
+  title_zh: 签约时能确认多少收入？
+  title_zh_hk: 簽約時能確認多少收入？
+  en: >-
+    Using the draft standalone prices, how would you allocate 12,000, and how much revenue can be recognised
+    at signing? Pause and vote. No goods or services have transferred yet.
+  zh: 用草案中的单独售价，你怎样分摊一万二千港元，签约时又能确认多少收入？请暂停，投个票。尚未交付任何商品或服务。
+  zh_hk: 用草案中嘅單獨售價，你點樣分攤一萬二千港元，簽約時又可以確認多少收入？暫停，投個票。尚未交付任何商品或服務。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Correct the standalone inputs
+  title_zh: 更正单独售价的依据
+  title_zh_hk: 更正單獨售價嘅依據
+  step1_en: Installation standalone is 1,000
+  step1_zh: 安装的单独售价实为一千
+  step1_zh_hk: 安裝嘅單獨售價實為一千
+  step2_en: Support standalone is 4,000
+  step2_zh: 支持的单独售价实为四千
+  step2_zh_hk: 支援嘅單獨售價實為四千
+  step3_en: Total standalone still 15,000
+  step3_zh: 单独售价合计仍是一万五
+  step3_zh_hk: 單獨售價合計仍係一萬五
+  s1_en: >-
+    Before the initial allocation is finalised or any revenue is recorded, the controller finds that the
+    2,000 installation figure included an unrelated training service that this contract does not promise.
+    Verified comparable sales support 1,000 for the basic installation actually promised.
+  s1_zh: >-
+    在最终确定初始分摊、也尚未确认任何收入之前，财务主管发现，二千的安装数字包含了本合同并未承诺的无关培训。经核验的可比单独销售支持，实际承诺的基础安装单独售价是一千。
+  s1_zh_hk: >-
+    喺最終確定初始分攤、亦尚未確認任何收入之前，財務主管發現，二千嘅安裝數字包含咗本合同並未承諾嘅無關培訓。經核實嘅可比單獨銷售支持，實際承諾嘅基礎安裝單獨售價係一千。
+  s2_en: >-
+    Equipment remains 10,000. Support was entered from the wrong service tier: the purchased twelve-month
+    tier has a validated inception standalone price of 4,000, not 3,000. Total standalone prices still
+    sum to 15,000; the contract price stays 12,000.
+  s2_zh: >-
+    设备仍是一万。支持也用错了服务档次：客户购买的十二个月档，在合同开始时经核验的单独售价是四千，不是三千。单独售价合计仍是一万五千；合同价仍是一万二千。
+  s2_zh_hk: >-
+    設備仍係一萬。支援亦用錯咗服務檔次：客戶購買嘅十二個月檔，喺合約開始時經核實嘅單獨售價係四千，唔係三千。單獨售價合計仍係一萬五千；合約價仍係一萬二千。
+  s3_en: >-
+    At the later reporting snapshot, control of the printer has transferred, installation is complete
+    and exactly three of twelve support months have been provided evenly. All cash was already collected.
+  s3_zh: 在后来的报告时点，打印机的控制权已经转移，安装已经完成，十二个月支持中刚好均匀提供了三个月。全部款项先前已经收齐。
+  s3_zh_hk: 喺後來嘅報告時點，打印機嘅控制權已經轉移，安裝已經完成，十二個月支援入面剛好均勻提供咗三個月。全部款項先前已經收齊。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What is cumulative revenue now?
+  title_zh: 此刻累计收入是多少？
+  title_zh_hk: 此刻累計收入係多少？
+  en: >-
+    What corrected allocation and cumulative revenue follow at the three-month snapshot, and why does
+    the unchanged cash total not settle the revenue amount? Pause and vote.
+  zh: 按更正后的分摊，三个月这个时点的累计收入是多少？为什么已经收齐的现金总额并不能决定收入金额？请暂停，投个票。
+  zh_hk: 按更正後嘅分攤，三個月呢個時點嘅累計收入係多少？點解已經收齊嘅現金總額並唔能決定收入金額？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Allocate first, recognise later
+  title_zh: 先分摊，后确认
+  title_zh_hk: 先分攤，後確認
+  step1_en: >-
+    Draft split: 8,000, 1,600, 2,400
+  step1_zh: 草案分摊：八千、一千六、二千四
+  step1_zh_hk: 草案分攤：八千、一千六、二千四
+  step2_en: >-
+    Corrected: 8,000, 800, 3,200
+  step2_zh: 更正后：八千、八百、三千二
+  step2_zh_hk: 更正後：八千、八百、三千二
+  step3_en: Revenue at signing is zero
+  step3_zh: 签约时收入为零
+  step3_zh_hk: 簽約時收入為零
+  s1_en: >-
+    The draft standalone total is 15,000. The 12,000 price is 80 percent of that total. Allocate 8,000
+    to equipment, 1,600 to installation and 2,400 to support. At signing no promise has transferred: revenue
+    is zero and the full 12,000 received is a contract liability.
+  s1_zh: >-
+    草案单独售价合计一万五千。一万二千的合同价是其百分之八十。设备分得八千，安装一千六百，支持二千四百。签约时尚未履行任何承诺：收入为零，已收的一万二千全列合同负债。
+  s1_zh_hk: >-
+    草案單獨售價合計一萬五千。一萬二千嘅合約價係其百分之八十。設備分得八千，安裝一千六百，支援二千四百。簽約時尚未履行任何承諾：收入為零，已收嘅一萬二千全列合約負債。
+  s2_en: >-
+    Corrected standalone amounts are 10,000, 1,000 and 4,000, still totalling 15,000. Apply 80 percent
+    to obtain 8,000, 800 and 3,200. Equipment is unchanged; 800 shifts from installation to support. The
+    correction changes the distribution of a fixed price, not the amount collected.
+  s2_zh: >-
+    更正后的单独售价是一万、一千和四千，合计仍是一万五千。按百分之八十计算，分摊为八千、八百和三千二百。设备不变；八百从安装转到支持。更正的是固定价格的分配，不是收款金额。
+  s2_zh_hk: >-
+    更正後嘅單獨售價係一萬、一千同四千，合計仍係一萬五千。按百分之八十計算，分攤為八千、八百同三千二百。設備不變；八百從安裝轉到支援。更正嘅係固定價格嘅分配，唔係收款金額。
+  s3_en: >-
+    Ask what is promised, how much of the fixed consideration belongs to each promise, and when each promise
+    is fulfilled. A single invoice does not make a single obligation.
+  s3_zh: 要分开问：承诺了什么，固定对价各应分多少，以及每项承诺何时履行。一张发票，并不等于只有一项义务。
+  s3_zh_hk: 要分開問：承諾咗啲乜，固定代價各應分多少，以及每項承諾何時履行。一張發票，並唔等於只有一項義務。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Cash collected is not revenue
+  title_zh: 已收款不等于已确认收入
+  title_zh_hk: 已收款唔等於已確認收入
+  step1_en: Equipment and installation 8,800
+  step1_zh: 设备加安装共八千八
+  step1_zh_hk: 設備加安裝共八千八
+  step2_en: Three months of support 800
+  step2_zh: 三个月支持八百
+  step2_zh_hk: 三個月支援八百
+  step3_en: Revenue 9,600; liability 2,400
+  step3_zh: 累计收入九千六，负债二千四
+  step3_zh_hk: 累計收入九千六，負債二千四
+  s1_en: >-
+    At the stated snapshot, equipment revenue is 8,000 and installation revenue is 800. Three support
+    months earn 3 over 12 times 3,200, which is 800. Cumulative revenue is 9,600; the remaining nine support
+    months account for the 2,400 contract liability.
+  s1_zh: 在上述时点，设备收入八千，安装收入八百。三个月支持按十二分之三乘以三千二百，得八百。累计收入九千六百；余下九个月支持对应合同负债二千四百。
+  s1_zh_hk: 喺上述時點，設備收入八千，安裝收入八百。三個月支援按十二分之三乘以三千二百，得八百。累計收入九千六百；餘下九個月支援對應合約負債二千四百。
+  s2_en: >-
+    Revenue plus that liability reconciles to the 12,000 collected. Had the draft inputs wrongly remained,
+    cumulative revenue would have been 8,000 plus 1,600 plus 600, or 10,200, overstating this snapshot
+    by 600.
+  s2_zh: 收入加上这项负债，对得上已收的一万二千。如果错误沿用草案，累计收入会变成八千加一千六百再加六百，即一万零二百，这个时点会多计六百。
+  s2_zh_hk: 收入加上呢項負債，對得上已收嘅一萬二千。如果錯誤沿用草案，累計收入會變成八千加一千六百再加六百，即一萬零二百，呢個時點會多計六百。
+  s3_en: >-
+    The corrected allocation moves more consideration to the still-partly-unfulfilled support promise.
+    It does not defer the printer after its stipulated transfer. The unchanged cash total does not settle
+    the revenue amount.
+  s3_zh: >-
+    更正后的分摊把更多对价分到尚未完全履行的支持承诺上。这并不是在打印机已经按规定转移后再推迟确认打印机。现金总额没有变，并不能据此决定收入金额。
+  s3_zh_hk: >-
+    更正後嘅分攤把更多代價分到尚未完全履行嘅支援承諾度。呢個並唔係喺打印機已經按規定轉移後再推遲確認打印機。現金總額冇變，並唔能據此決定收入金額。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    An optional service already selected is different from an option to buy later. This exercise does
+    not teach reallocation for later standalone market-price changes, or error correction in already-issued
+    financial statements. Distinctness and recognition patterns are supplied facts here.
+  zh: >-
+    已经在合同中选定的可选服务，不同于以后才决定购买的选择权。本题不讨论单独售价日后市价变动后的再分摊，也不讨论已对外发布财务报表后的差错更正。可否区分及如何确认，在本题中是给定事实。
+  zh_hk: >-
+    已經喺合約中選定嘅可選服務，不同於以後先決定購買嘅選擇權。呢題唔討論單獨售價日後市價變動後嘅再分攤，亦唔討論已對外發布財務報表後嘅差錯更正。可否區分及如何確認，喺呢題中係給定事實。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Allocation is not recognition
+  title_zh: 分摊不等于确认
+  title_zh_hk: 分攤唔等於確認
+  q1_en: >-
+    Corrected split: 8,000, 800, 3,200
+  q1_zh: 更正后分摊：八千、八百、三千二
+  q1_zh_hk: 更正後分攤：八千、八百、三千二
+  q2_en: Three-month revenue 9,600
+  q2_zh: 三个月累计收入九千六
+  q2_zh_hk: 三個月累計收入九千六
+  s1_en: >-
+    Allocate a fixed package price in proportion to standalone selling prices, then recognise each amount
+    only when that promise is fulfilled. At signing, revenue is zero and the cash is a contract liability.
+  s1_zh: 按相对单独售价分摊固定套餐价，再在每项承诺履行时才确认相应收入。签约时收入为零，已收现金列作合同负债。
+  s1_zh_hk: 按相對單獨售價分攤固定套裝價，再喺每項承諾履行時先確認相應收入。簽約時收入為零，已收現金列作合約負債。
+  s2_en: >-
+    Correct the inputs before the initial allocation is finalised. Here 800 moves from installation to
+    support, and cumulative revenue at the three-month snapshot is 9,600, with 2,400 still a contract
+    liability.
+  s2_zh: 要在最终确定初始分摊前更正依据。本题有八百从安装转到支持；三个月时点的累计收入是九千六百，仍有二千四百列作合同负债。
+  s2_zh_hk: 要喺最終確定初始分攤前更正依據。呢題有八百從安裝轉到支援；三個月時點嘅累計收入係九千六百，仍有二千四百列作合約負債。
+  s3_en: >-
+    The firm, the offers and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、报价和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、報價同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 192

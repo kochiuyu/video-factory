@@ -1,0 +1,287 @@
+id: ACC-24
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Expected repairs. Already a liability?
+title_zh: 预计要维修，现在就应确认负债吗？
+title_zh_hk: 預計會有維修，現在已有負債嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 24
+  kicker: ACC-24
+  kicker_en: ACC-24
+  kicker_zh: ACC-24
+  kicker_zh_hk: ACC-24
+  title_en: Expected repairs. Already a liability?
+  title_zh: 预计要维修，现在就应确认负债吗？
+  title_zh_hk: 預計會有維修，現在已有負債嗎？
+  image: art/expected-repairs-already-liability-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A retailer has sold 2,000 identical desk lamps with a six-month manufacturing-defect promise. No repair
+    has occurred yet. What warranty provision would you propose, and how does it relate to 20,000 of earmarked
+    cash? This is a fictional Hong Kong retailer. The promise is included assurance, not a separately
+    sold service.
+  zh: >-
+    一家零售商已经售出二千盏相同的台灯，并承诺六个月内修理制造缺陷。目前还没有发生维修。你建议确认多少质量保证预计负债？它与预留的二万港元现金有何关系？这是虚构的香港零售商。这项承诺是随附保证，不是单独出售的维护服务。
+  zh_hk: >-
+    一間零售商已經售出二千盞相同嘅檯燈，並承諾六個月內修理製造缺陷。目前仲未發生維修。你建議確認多少保用撥備？佢同預留嘅二萬港元現金有何關係？呢個係虛構嘅香港零售商。呢項承諾係隨附保證，唔係單獨出售嘅維護服務。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Initial repair mix, 2,000 lamps
+  title_zh: 初始维修组合，二千盏灯
+  title_zh_hk: 初始維修組合，二千盞燈
+  row1_en: No repair needed
+  row1_zh: 无需维修
+  row1_zh_hk: 無需維修
+  row2_en: Minor repair only
+  row2_zh: 仅需小修
+  row2_zh_hk: 只需小修
+  row3_en: Major repair only
+  row3_zh: 仅需大修
+  row3_zh_hk: 只需大修
+  col1_en: Share
+  col1_zh: 估计比重
+  col1_zh_hk: 估計比重
+  col2_en: Cost each
+  col2_zh: 每盏受影响成本
+  col2_zh_hk: 每盞受影響成本
+  c11: 90%
+  c12: '0'
+  c21: 8%
+  c22: '120'
+  c31: 2%
+  c32: '500'
+  footer_en: Owner has earmarked cash of 20,000.
+  footer_zh: 业主另预留现金二万港元。
+  footer_zh_hk: 東主另預留現金二萬港元。
+  s1_en: >-
+    The three outcomes are mutually exclusive and exhaustive. Expected minor repairs are 8 percent, at
+    120 each. Expected major repairs are 2 percent, at 500 each. These are estimates, not completed claims.
+  s1_zh: 三种结果互斥而且已经穷尽。预计需要小修的占百分之八，每盏一百二十港元；需要大修的占百分之二，每盏五百港元。这些是估计，不是已经完成的索赔。
+  s1_zh_hk: 三種結果互斥而且已經窮盡。預計需要小修嘅佔百分之八，每盞一百二十港元；需要大修嘅佔百分之二，每盞五百港元。呢啲係估計，唔係已經完成嘅索償。
+  s2_en: >-
+    Finance confirms a present obligation from the completed sales, a probable outflow for the batch as
+    a whole, and a sufficiently reliable estimate. The policy is to record an expense and a provision
+    for the weighted remaining repair costs.
+  s2_zh: >-
+    财务部门确认：已完成的销售形成了现时义务；从整批看很可能发生现金流出；并且有足够可靠的估计。题设政策是按加权剩余维修支出确认费用和质量保证预计负债。
+  s2_zh_hk: 財務部確認：已完成嘅銷售形成咗現時義務；就整批而言很可能發生現金流出；並且有足夠可靠嘅估計。題設政策係按加權剩餘維修支出確認費用同保用撥備。
+  s3_en: >-
+    The owner has separately earmarked 20,000 of existing bank cash. That internal designation neither
+    transfers money to customers nor legally restricts the bank account. It is not an expense entry.
+  s3_zh: 业主另外从现有银行存款中预留了二万港元。这项内部指定既没有把钱转给客户，也没有在法律上限制银行账户。它不是费用分录。
+  s3_zh_hk: 東主另外從現有銀行存款入面預留咗二萬港元。呢項內部指定既冇把錢轉畀客戶，亦冇喺法律上限制銀行戶口。佢唔係費用分錄。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What provision do you propose?
+  title_zh: 你建议确认多少预计负债？
+  title_zh_hk: 你建議確認多少撥備？
+  en: >-
+    What warranty provision would you propose from the initial evidence, and how would you explain its
+    relationship to the 20,000 cash earmark? Show the weighted calculation rather than choosing only the
+    most common outcome. Pause and vote.
+  zh: 按初步资料，你建议确认多少质量保证预计负债？它与预留的二万港元有何关系？请列出加权计算，不能只采用最常见的那一种结果。请暂停，投个票。
+  zh_hk: 按初步證據，你建議確認多少保用撥備？佢同預留嘅二萬港元有何關係？請列出加權計算，唔可以只用最常見嗰一種結果。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A revised fault mix
+  title_zh: 修订后的故障组合
+  title_zh_hk: 修訂後嘅故障組合
+  step1_en: No repair now 82 percent
+  step1_zh: 无需维修现为百分之八十二
+  step1_zh_hk: 無需維修現為百分之八十二
+  step2_en: Minor repair now 14 percent
+  step2_zh: 小修现为百分之十四
+  step2_zh_hk: 小修現為百分之十四
+  step3_en: Major repair now 4 percent
+  step3_zh: 大修现为百分之四
+  step3_zh_hk: 大修現為百分之四
+  s1_en: >-
+    At a later internal measurement date, before any claims are settled or further lamps sold, a technical
+    review identifies a higher incidence of faults. The revised mix replaces the earlier mix; it is not
+    a second batch.
+  s1_zh: 在后来的内部计量日，索赔尚未结算，也没有再售出台灯。技术复核显示故障率更高。新的组合取代原来的组合，不是第二批产品，也不是额外索赔。
+  s1_zh_hk: 喺後來嘅內部計量日，索償尚未結算，亦冇再售出檯燈。技術覆核顯示故障率更高。新嘅組合取代原來嘅組合，唔係第二批產品，亦唔係額外索償。
+  s2_en: >-
+    The 2,000 units, repair costs, warranty terms and remaining coverage are unchanged. No cash repair
+    payments have occurred. The internally earmarked cash is still 20,000.
+  s2_zh: 二千盏灯、维修成本、保修条款和剩余保障范围都没有变。期间没有支付维修费。内部预留现金仍是二万港元。
+  s2_zh_hk: 二千盞燈、維修成本、保用條款同剩餘保障範圍都冇變。期間冇支付維修費。內部預留現金仍係二萬港元。
+  s3_en: >-
+    Update the existing provision to the revised weighted estimate and record only the increase as additional
+    expense. The retailer cannot cap customer remedies at the earmarked amount.
+  s3_zh: 把现有预计负债更新为修订后的加权估计，只把增加额记为追加费用。零售商不能用预留金额来限制对客户的救济。
+  s3_zh_hk: 把現有撥備更新為修訂後嘅加權估計，只把增加額記為追加費用。零售商唔能用預留金額嚟限制對客戶嘅救濟。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What adjustment is supported?
+  title_zh: 现在应做哪项调整？
+  title_zh_hk: 而家應做邊項調整？
+  en: >-
+    What provision and accounting adjustment are supported by the revised fault evidence? Reconcile liability,
+    expense and earmarked cash, and explain what the retailer must still plan to fulfil its promises.
+    Pause and vote.
+  zh: 修订后的故障证据支持确认多少预计负债、如何调整账目？请分别说明负债、费用及预留现金，并指出零售商仍须怎样准备才能履行承诺。请暂停，投个票。
+  zh_hk: 修訂後嘅故障證據支持確認多少撥備、點樣調整賬目？請分別說明負債、費用及預留現金，並指出零售商仍須點樣準備先可以履行承諾。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Estimate the whole population
+  title_zh: 估计的是整批，不是一盏灯
+  title_zh_hk: 估計嘅係整批，唔係一盞燈
+  step1_en: >-
+    Minor: 160 units, 19,200
+  step1_zh: 小修一百六十盏，一万九千二
+  step1_zh_hk: 小修一百六十盞，一萬九千二
+  step2_en: >-
+    Major: 40 units, 20,000
+  step2_zh: 大修四十盏，二万
+  step2_zh_hk: 大修四十盞，二萬
+  step3_en: Initial provision 39,200
+  step3_zh: 初始预计负债三万九千二
+  step3_zh_hk: 初始撥備三萬九千二
+  s1_en: >-
+    Initially, expected minor repairs are 2,000 times 8 percent, or 160, costing 19,200. Expected major
+    repairs are 2,000 times 2 percent, or 40, costing 20,000. The initial provision is 39,200.
+  s1_zh: >-
+    起初，预计小修是二千乘以百分之八，即一百六十盏，成本一万九千二百。预计大修是二千乘以百分之二，即四十盏，成本二万。初始质量保证预计负债是三万九千二百。
+  s1_zh_hk: >-
+    起初，預計小修係二千乘以百分之八，即一百六十盞，成本一萬九千二百。預計大修係二千乘以百分之二，即四十盞，成本二萬。初始保用撥備係三萬九千二百。
+  s2_en: >-
+    Equivalently, expected cost per sold lamp is 90 percent times zero, plus 8 percent times 120, plus
+    2 percent times 500, which is 19.60; multiply by 2,000. These counts are estimates, not a list of
+    identified customers.
+  s2_zh: >-
+    也可以先算每盏已售灯的期望成本：百分之九十乘以零，加上百分之八乘以一百二十，再加上百分之二乘以五百，等于十九点六港元；再乘以二千。这些件数是估计，不是已点名的客户名单。
+  s2_zh_hk: >-
+    亦可以先計每盞已售燈嘅期望成本：百分之九十乘以零，加上百分之八乘以一百二十，再加上百分之二乘以五百，等於十九點六港元；再乘以二千。呢啲件數係估計，唔係已點名嘅客戶名單。
+  s3_en: >-
+    No repair is the most common outcome for one lamp, but the policy measures the whole population. The
+    20,000 cash earmark is an internal funding designation, not a cost estimate. Charging every lamp the
+    major-repair cost would assume a different mix, unsupported by the evidence.
+  s3_zh: >-
+    对单盏灯来说，无需维修最常见，但题设政策衡量的是整批。预留的二万港元是内部资金安排，不是成本估计。如果每盏都按大修计，就等于采用了证据并不支持的另一种组合。
+  s3_zh_hk: >-
+    對單盞燈嚟講，無需維修最常見，但題設政策衡量嘅係整批。預留嘅二萬港元係內部資金安排，唔係成本估計。如果每盞都按大修計，就等於採用咗證據並唔支持嘅另一種組合。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Replace the mix, do not double
+  title_zh: 替换组合，不要重复叠加
+  title_zh_hk: 替換組合，唔好重複疊加
+  step1_en: Revised provision 73,600
+  step1_zh: 修订后预计负债七万三千六
+  step1_zh_hk: 修訂後撥備七萬三千六
+  step2_en: Additional expense 34,400
+  step2_zh: 追加费用三万四千四
+  step2_zh_hk: 追加費用三萬四千四
+  step3_en: Earmark still 20,000
+  step3_zh: 预留现金仍是二万
+  step3_zh_hk: 預留現金仍係二萬
+  s1_en: >-
+    Updated minor cost is 2,000 times 14 percent times 120, or 33,600. Updated major cost is 2,000 times
+    4 percent times 500, or 40,000. The revised provision is 73,600.
+  s1_zh: >-
+    更新后的小修成本是二千乘以百分之十四再乘以一百二十，即三万三千六百。大修成本是二千乘以百分之四再乘以五百，即四万。修订后的预计负债是七万三千六百。
+  s1_zh_hk: >-
+    更新後嘅小修成本係二千乘以百分之十四再乘以一百二十，即三萬三千六百。大修成本係二千乘以百分之四再乘以五百，即四萬。修訂後嘅撥備係七萬三千六百。
+  s2_en: >-
+    Additional expense and liability are 73,600 minus 39,200, or 34,400. Do not add the full revised estimate
+    to the old provision. No settlement occurred, so no utilisation deduction is needed.
+  s2_zh: 追加费用和负债是七万三千六百减三万九千二百，即三万四千四百。不要把修订后的全额再加到原预计负债上。期间没有结算，因此不必扣减已使用额。
+  s2_zh_hk: 追加費用同負債係七萬三千六百減三萬九千二百，即三萬四千四百。唔好把修訂後嘅全額再加到原撥備度。期間冇結算，因此唔使扣減已使用額。
+  s3_en: >-
+    The liability is now 73,600, and cumulative warranty expense for this batch is also 73,600. Cash paid
+    on claims remains zero. The earmark remains 20,000, which is 53,600 below the current estimate, but
+    that does not prove total available cash is insufficient.
+  s3_zh: >-
+    负债现为七万三千六百，本批累计质量保证费用也是七万三千六百。已付维修现金仍是零。预留现金仍是二万，比当前估计少五万三千六百，但这并不能证明零售商的全部可用现金不足。
+  s3_zh_hk: >-
+    負債現為七萬三千六百，本批累計保用費用亦係七萬三千六百。已付維修現金仍係零。預留現金仍係二萬，比當前估計少五萬三千六百，但呢個並唔能證明零售商嘅全部可用現金不足。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    Uncertainty does not erase a supported present obligation, and it does not justify inventing extra
+    liabilities for possible future sales. If claims had already been settled, a utilisation deduction
+    would be needed. Separate service warranties would require a different assessment.
+  zh: >-
+    存在不确定性，并不能抹掉有证据支持的现时义务，也不能为尚未发生的未来销售凭空多计负债。如果索赔已经结算，就要扣减已使用额。单独出售的维护服务需要另一套评估。
+  zh_hk: >-
+    存在不確定性，並唔能抹掉有證據支持嘅現時義務，亦唔能為尚未發生嘅未來銷售憑空多計負債。如果索償已經結算，就要扣減已使用額。單獨出售嘅維護服務需要另一套評估。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: An earmark is not the estimate
+  title_zh: 预留现金不是估计金额
+  title_zh_hk: 預留現金唔係估計金額
+  q1_en: Initial provision 39,200
+  q1_zh: 初始预计负债三万九千二
+  q1_zh_hk: 初始撥備三萬九千二
+  q2_en: Updated provision 73,600
+  q2_zh: 更新后预计负债七万三千六
+  q2_zh_hk: 更新後撥備七萬三千六
+  s1_en: >-
+    Measure the whole sold population, not the most common outcome for one lamp. The weighted estimate
+    is 39,200 at first, then 73,600 when the mix is replaced.
+  s1_zh: 估计的是整批已售产品，不是单盏灯最常见的结果。按加权计算，起初是三万九千二百，替换组合后是七万三千六百。
+  s1_zh_hk: 估計嘅係整批已售產品，唔係單盞燈最常見嘅結果。按加權計算，起初係三萬九千二百，替換組合後係七萬三千六百。
+  s2_en: >-
+    Keep the liability, the expense and the cash earmark as three separate records. Changing the accounting
+    estimate to fit a cash preference does not fulfil the promise.
+  s2_zh: 负债、费用和预留现金要分开看。不能为了迁就现金安排去改会计估计，那样并不能履行承诺。
+  s2_zh_hk: 負債、費用同預留現金要分開睇。唔能為咗遷就現金安排去改會計估計，咁樣並唔能履行承諾。
+  s3_en: >-
+    The firm, the offers and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、报价和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、報價同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 198

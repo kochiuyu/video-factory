@@ -1,0 +1,297 @@
+id: ACC-27
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The result improved. Which warning was missed?
+title_zh: 业绩好转，哪项预警被忽略了？
+title_zh_hk: 業績好轉，漏看了哪個警號？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 24
+  kicker: ACC-27
+  kicker_en: ACC-27
+  kicker_zh: ACC-27
+  kicker_zh_hk: ACC-27
+  title_en: The result improved. Which warning was missed?
+  title_zh: 业绩好转，哪项预警被忽略了？
+  title_zh_hk: 業績好轉，漏看了哪個警號？
+  image: art/result-improved-warning-missed-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Operating profit rose from 120,000 to 150,000, but avoidable repeat visits also rose. You may add
+    only one more scorecard measure: escalation count E, or kit-readiness exception rate K. Which would
+    you choose, and what sequence would you check first? This is a fictional Hong Kong office-equipment
+    repair network.
+  zh: >-
+    营业利润从十二万升到十五万，但可避免的二次上门也增加了。计分卡只能再加一项指标：服务升级工单数 E，或备件包异常率 K。你会选哪一项，又会先核对该指标背后的事件顺序？这是虚构的香港办公设备维修网络。
+  zh_hk: >-
+    營運溢利由十二萬升到十五萬，但可避免嘅再次上門亦增加咗。計分卡只能再加一項指標：客戶個案升級數 E，或零件包異常率 K。你會選邊一項，又會先核對該指標背後嘅事件順序？呢個係虛構嘅香港辦公設備維修網絡。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Monthly scorecard candidates
+  title_zh: 月度计分卡备选指标
+  title_zh_hk: 月度計分卡備選指標
+  row1_en: Operating profit, committed
+  row1_zh: 营业利润，已占用格
+  row1_zh_hk: 營運溢利，已佔用格
+  row2_en: Avoidable repeat visits
+  row2_zh: 可避免的二次上门
+  row2_zh_hk: 可避免嘅再次上門
+  row3_en: >-
+    E: service escalations
+  row3_zh: E：服务个案升级
+  row3_zh_hk: E：服務個案升級
+  row4_en: >-
+    K: kit exceptions, 500 jobs
+  row4_zh: K：五百项预约中的备件包异常
+  row4_zh_hk: K：五百項預約中嘅零件包異常
+  col1_en: Previous
+  col1_zh: 上月
+  col1_zh_hk: 上月
+  col2_en: Latest
+  col2_zh: 本月
+  col2_zh_hk: 本月
+  c11: 120,000
+  c12: 150,000
+  c21: 80 of 1,000
+  c22: 100 of 1,000
+  c31: '30'
+  c32: '50'
+  c41: 60 of 500
+  c42: 90 of 500
+  footer_en: Exactly three scorecard slots.
+  footer_zh: 计分卡固定只有三格。
+  footer_zh_hk: 計分卡固定只有三格。
+  s1_en: >-
+    Two slots are already committed: monthly operating profit, and the proportion of completed jobs requiring
+    an avoidable repeat visit. You may choose either escalation count E or kit-readiness exception rate
+    K for the third slot.
+  s1_zh: 两格已经占用：每月营业利润，以及已完成工单中需要可避免二次上门的比例。第三格只能在服务升级工单数 E 和备件包异常率 K之间选一个。
+  s1_zh_hk: 兩格已經佔用：每月營運溢利，以及已完成工單中需要可避免再次上門嘅比例。第三格只能喺客戶個案升級數 E 同零件包異常率 K之間選一個。
+  s2_en: >-
+    Profit rose from 120,000 to 150,000. Avoidable repeats rose from 80 of 1,000 completed jobs to 100
+    of 1,000. E rose from 30 to 50 cases. K rose from 60 of 500 booked jobs to 90 of 500.
+  s2_zh: >-
+    利润从十二万升到十五万。可避免的二次上门从一千件已完成工单中的八十件升到一百件。E 从三十宗升到五十宗。K 从五百个预约中的六十个升到九十个。
+  s2_zh_hk: >-
+    溢利由十二萬升到十五萬。可避免嘅再次上門由一千件已完成工單入面嘅八十件升到一百件。E 由三十宗升到五十宗。K 由五百個預約入面嘅六十個升到九十個。
+  s3_en: >-
+    A manager calls E a leading warning because it often rises before related recovery costs appear in
+    the profit report. Management has not yet examined the event sequence behind either label. The table
+    is descriptive, not an experiment.
+  s3_zh: >-
+    有经理认为 E 是领先预警，因为它常常在相关补救成本进入利润表之前就上升。管理层还没有查过这两个指标背后的事件顺序。这张表只是描述性观察，不是实验。
+  s3_zh_hk: >-
+    有經理認為 E 係領先警號，因為佢常常喺相關補救成本進入溢利表之前就上升。管理層仲未查過呢兩個指標背後嘅事件順序。呢張表只係描述性觀察，唔係實驗。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Add E, or add K?
+  title_zh: 加入 E，还是加入 K？
+  title_zh_hk: 加入 E，定係加入 K？
+  en: >-
+    Would you provisionally add E or K to the two committed scorecard measures, and what event sequence
+    would you check before calling it a leading warning of repeat visits? Pause and vote. Ordinary care
+    and safety checks continue either way.
+  zh: >-
+    你会暂时把 E 还是 K 加入已占用的两项指标？在把它称为二次上门的领先预警之前，你会核对该指标怎样的事件顺序？请暂停，投个票。无论怎么选，日常客户服务和强制安全检查都照常进行。
+  zh_hk: >-
+    你會暫時把 E 定係 K 加入已佔用嘅兩項指標？喺把它稱為再次上門嘅領先預警之前，你會核對該指標點樣嘅事件順序？暫停，投個票。無論點選，日常客戶服務同強制安全檢查都照常進行。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: What the labels actually mean
+  title_zh: 这两个标签实际指什么
+  title_zh_hk: 呢兩個標籤實際指啲乜
+  step1_en: E is opened after a failed visit
+  step1_zh: E 在首次失败上门之后才开立
+  step1_zh_hk: E 喺首次失敗上門之後先開立
+  step2_en: K is flagged 48 hours before
+  step2_zh: K 在预定上门前四十八小时记录
+  step2_zh_hk: K 喺預定上門前四十八小時記錄
+  step3_en: A coordinator can complete the kit
+  step3_zh: 协调员可在二十四小时内补齐
+  step3_zh_hk: 協調員可喺二十四小時內補齊
+  s1_en: >-
+    A route audit shows that E is opened only after a technician has already failed to finish a first
+    visit and the customer has contacted the recovery desk. The record appears immediately, but it follows
+    the failed visit.
+  s1_zh: 路线审计表明，只有在技术人员首次上门已经失败、客户已联系补救柜台之后，才会开立 E。记录会立即出现，但它发生在这次失败上门之后。
+  s1_zh_hk: 路線審計表明，只有喺技術人員首次上門已經失敗、客戶已聯絡補救櫃位之後，先會開立 E。紀錄會立即出現，但佢發生喺呢次失敗上門之後。
+  s2_en: >-
+    K is recorded 48 hours before the scheduled first visit when a verified required part is missing from
+    the allocated kit. The visit has not occurred. Recovery costs for E may be posted later.
+  s2_zh: K 是在预定首次上门前四十八小时记录的：已核对发现，分配的备件包缺少必需零件。上门尚未发生。E 所涉及的补救成本可能稍后才入账。
+  s2_zh_hk: K 係喺預定首次上門前四十八小時記錄嘅：已核對發現，分配嘅零件包缺少必需零件。上門尚未發生。E 所涉及嘅補救成本可能稍後先入賬。
+  s3_en: >-
+    A parts coordinator can reserve an available correct part from central stock and complete the kit
+    within 24 hours. Funded capacity is sufficient for the 90 currently flagged cases, without taking
+    stock promised to anyone else.
+  s3_zh: >-
+    零件协调员可以从中央库存预留一件未被占用的正确零件，并在二十四小时内配齐备件包。现有人力、库存和运输足以处理目前标记的九十宗，不必占用已承诺给他人的存货。
+  s3_zh_hk: >-
+    零件協調員可以從中央庫存預留一件未被佔用嘅正確零件，並喺二十四小時內配齊零件包。現有人力、庫存同運輸足以處理目前標記嘅九十宗，唔使佔用已承諾畀他人嘅存貨。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which measure, and what action?
+  title_zh: 选哪项指标，采取什么行动？
+  title_zh_hk: 選邊項指標，採取咩行動？
+  en: >-
+    Which third measure would you now select, what action should it trigger, and what evidence would distinguish
+    a useful causal warning from a correlated symptom? Pause and vote. The two committed measures stay.
+  zh: 你现在会选哪一项作为第三项指标，它应触发什么行动，又用什么证据区分有用的因果预警和只是相关的症状？请暂停，投个票。已占用的两项指标保持不变。
+  zh_hk: 你而家會選邊一項作為第三項指標，佢應觸發咩行動，又用咩證據區分有用嘅因果預警同只係相關嘅症狀？暫停，投個票。已佔用嘅兩項指標保持不變。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Read both movements together
+  title_zh: 改善和恶化要一起看
+  title_zh_hk: 改善同惡化要一齊睇
+  step1_en: Profit rose 30,000, or 25%
+  step1_zh: 利润增加三万，即百分之二十五
+  step1_zh_hk: 溢利增加三萬，即百分之二十五
+  step2_en: Repeats rose from 8% to 10%
+  step2_zh: 二次上门由8%升至10%
+  step2_zh_hk: 再次上門由8%升至10%
+  step3_en: K rose from 12% to 18%
+  step3_zh: K 由12%升至18%
+  step3_zh_hk: K 由12%升至18%
+  s1_en: >-
+    Operating profit rose 30,000, or 25 percent. Avoidable repeat visits rose from 8 percent to 10 percent,
+    a two-percentage-point increase. Improved profit does not cancel the service deterioration.
+  s1_zh: 营业利润增加三万港元，即百分之二十五。可避免的二次上门从百分之八升到百分之十，增加了两个百分点。利润改善，并不能抵销服务恶化。
+  s1_zh_hk: 營運溢利增加三萬港元，即百分之二十五。可避免嘅再次上門由百分之八升到百分之十，增加咗兩個百分點。溢利改善，並唔能抵銷服務惡化。
+  s2_en: >-
+    E rose by 20 cases. K rose from 12 percent to 18 percent of booked jobs. These figures concern different
+    events and cohorts, so do not divide one count by another to manufacture a causal rate.
+  s2_zh: E 增加了二十宗。K 从占预约的百分之十二升到百分之十八。这些数字涉及不同事件和不同群体，不能把一个数字除以另一个，来编造因果比率。
+  s2_zh_hk: E 增加咗二十宗。K 由佔預約嘅百分之十二升到百分之十八。呢啲數字涉及唔同事件同唔同群體，唔能把一個數字除以另一個，嚟編造因果比率。
+  s3_en: >-
+    E deserves investigation because it may identify costly customer trouble. K deserves investigation
+    because it might locate an upstream resource problem. Either provisional first choice can be defended
+    if it includes a check of the event sequence.
+  s3_zh: >-
+    E 值得调查，因为它可能标出代价很高的客户问题。K 值得调查，因为它可能找到上游的资源问题。只要同时去核对事件顺序，第一轮暂时选哪一项都可以说得通。
+  s3_zh_hk: >-
+    E 值得調查，因為佢可能標出代價很高嘅客戶問題。K 值得調查，因為佢可能搵到上游嘅資源問題。只要同時去核對事件順序，第一輪暫時選邊一項都可以說得通。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Choose K, with an action
+  title_zh: 选 K，并定下行动
+  title_zh_hk: 選 K，並定下行動
+  step1_en: E lags the failed first visit
+  step1_zh: E 滞后于首次失败上门
+  step1_zh_hk: E 滯後於首次失敗上門
+  step2_en: K is recorded before the visit
+  step2_zh: K 在上门前已经记录
+  step2_zh_hk: K 喺上門前已經記錄
+  step3_en: Trigger a 24-hour kit completion
+  step3_zh: 触发二十四小时内配齐备件包
+  step3_zh_hk: 觸發二十四小時內配齊零件包
+  s1_en: >-
+    E follows the failed first visit even though it precedes some cost recognition. It is lagging for
+    that failure, and potentially informative about later recovery cost. It is not the best third prevention
+    measure for missing-part failures.
+  s1_zh: >-
+    即使 E 会早于部分成本入账，它仍然发生在首次失败上门之后。对这次失败而言，E 是滞后指标；对随后的补救成本，它可能有用。但就防止缺件造成的二次上门来说，它不是最好的第三项指标。
+  s1_zh_hk: >-
+    即使 E 會早於部分成本入賬，佢仍然發生喺首次失敗上門之後。對呢次失敗而言，E 係滯後指標；對其後嘅補救成本，佢可能有用。但就防止欠件造成嘅再次上門嚟講，佢唔係最好嘅第三項指標。
+  s2_en: >-
+    Choose K. Each verified missing-part exception at the 48-hour check triggers the parts coordinator
+    to reserve the correct uncommitted central-stock item, complete the kit within 24 hours, and record
+    resolution.
+  s2_zh: 选择 K。在四十八小时检查中核实到缺件，就触发零件协调员从中央库存预留未被占用的正确零件，在二十四小时内配齐备件包，并记录处理结果。
+  s2_zh_hk: 選擇 K。喺四十八小時檢查中核實到缺件，就觸發零件協調員從中央庫存預留未被佔用嘅正確零件，喺二十四小時內配齊零件包，並記錄處理結果。
+  s3_en: >-
+    Track job identifiers from the pre-visit check through first-visit outcome. Timing and a plausible
+    mechanism support the hypothesis, but the monthly association alone does not establish the effect,
+    and 90 flags are not 90 prevented failures.
+  s3_zh: >-
+    要从出发前检查一直追踪到首次上门结果。时间顺序和说得通的机制支持这个假设，但单凭月份上的相关，并不能确定效果，九十个标记也不等于避免了九十次失败。
+  s3_zh_hk: >-
+    要由出發前檢查一直追蹤到首次上門結果。時間順序同說得通嘅機制支持呢個假設，但單憑月份上嘅相關，並唔能確定效果，九十個標記亦唔等於避免咗九十次失敗。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    A leading measure is leading only relative to a named outcome. Immediate reporting does not change
+    an event’s place in the causal chain. Kit completeness does not prevent all other causes of repeat
+    visits, and required safety checks remain mandatory.
+  zh: >-
+    说一项指标领先，必须先说它相对哪个结果领先。记录及时出现，并不能改变事件在因果链条中的位置。备件包齐全并不能防止其他原因造成的二次上门，必要的安全检查仍然必须做。
+  zh_hk: >-
+    講一項指標領先，必須先講佢相對邊個結果領先。紀錄及時出現，並唔能改變事件喺因果鏈條中嘅位置。零件包齊全並唔能防止其他原因造成嘅再次上門，必要嘅安全檢查仍然必須做。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Leading is relative to outcome
+  title_zh: 领先是相对某个结果而言
+  title_zh_hk: 領先係相對某個結果而言
+  q1_en: Profit up 25%; repeats up 2 points
+  q1_zh: 利润升25%，二次上门升2个百分点
+  q1_zh_hk: 溢利升25%，再次上門升2個百分點
+  q2_en: Choose K and complete the kit
+  q2_zh: 选 K，并配齐备件包
+  q2_zh_hk: 選 K，並配齊零件包
+  s1_en: >-
+    Read improvement and deterioration together. Here profit rose, but avoidable repeat visits also rose
+    from 8 percent to 10 percent. A better result does not cancel a worse mechanism.
+  s1_zh: 改善和恶化要一起看。本题利润上升，可避免的二次上门却从百分之八升到百分之十。结果变好，并不能抵销机制变差。
+  s1_zh_hk: 改善同惡化要一齊睇。呢題溢利上升，可避免嘅再次上門卻由百分之八升到百分之十。結果變好，並唔能抵銷機制變差。
+  s2_en: >-
+    E can precede a financial cost yet follow the service failure. For preventing missing-part repeats,
+    choose K and pair it with a named owner and a 24-hour kit-completion action.
+  s2_zh: E 可以早于财务成本入账，却仍滞后于服务失败。为了防止缺件造成的二次上门，应选择 K，并配上明确的责任人和二十四小时内配齐备件包的行动。
+  s2_zh_hk: E 可以早於財務成本入賬，卻仍然滯後於服務失敗。為咗防止缺件造成嘅再次上門，應選擇 K，並配上明確嘅責任人同二十四小時內配齊零件包嘅行動。
+  s3_en: >-
+    The firm, the offers and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、报价和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、報價同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 196

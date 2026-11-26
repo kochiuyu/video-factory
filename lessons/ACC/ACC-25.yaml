@@ -1,0 +1,274 @@
+id: ACC-25
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Depreciated on schedule. Still worth carrying?
+title_zh: 折旧按计划计提了，账面价值还能收回吗？
+title_zh_hk: 折舊已照表入賬，賬面值還收得回嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 24
+  kicker: ACC-25
+  kicker_en: ACC-25
+  kicker_zh: ACC-25
+  kicker_zh_hk: ACC-25
+  title_en: Depreciated on schedule. Still worth carrying?
+  title_zh: 折旧按计划计提了，账面价值还能收回吗？
+  title_zh_hk: 折舊已照表入賬，賬面值還收得回嗎？
+  image: art/depreciated-schedule-worth-carrying-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Scheduled depreciation of 24,000 has already been recorded, leaving a cutter at 120,000. Its fair
+    value less disposal costs is 80,000, and demand has fallen. Would you close with depreciation only,
+    write it down to 80,000, or complete a recoverability review first? This is a fictional Hong Kong
+    bookbinding workshop.
+  zh: >-
+    本年已按计划计提折旧二万四千，裁纸机账面价值为十二万。经复核，公允价值减去处置费用后的净额是八万，而需求已经下降。你会只按折旧结账、立即减记至八万，还是先完成可收回性复核？这是虚构的香港装订工场。
+  zh_hk: >-
+    本年已照表計提折舊二萬四千，裁紙機賬面值係十二萬。經覆核，公平值減出售成本係八萬，而需求已經下降。你會只按折舊結賬、立即減記至八萬，定係先完成可收回性覆核？呢個係虛構嘅香港裝訂工場。
+- id: ledger
+  visual: table_grid
+  seconds: 24
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Initial cutter information, HK$
+  title_zh: 裁纸机初始资料，港元
+  title_zh_hk: 裁紙機初始資料，港元
+  row1_en: Depreciation already recorded
+  row1_zh: 本年已计提折旧
+  row1_zh_hk: 本年已計提折舊
+  row2_en: Carrying amount after that charge
+  row2_zh: 计提后账面价值
+  row2_zh_hk: 計提後賬面值
+  row3_en: Fair value less disposal costs
+  row3_zh: 公允价值减处置费用
+  row3_zh_hk: 公平值減出售成本
+  col1_en: Amount
+  col1_zh: 金额
+  col1_zh_hk: 金額
+  c11: 24,000
+  c21: 120,000
+  c31: 80,000
+  footer_en: There is no decision to sell it.
+  footer_zh: 并未决定出售或弃用。
+  footer_zh_hk: 並未決定出售或棄用。
+  s1_en: >-
+    The enclosed cutter still works safely. A sustained fall in demand has reduced expected future work,
+    so the controller has identified an impairment indicator.
+  s1_zh: 这台封闭式裁纸机仍能安全运行。印刷装订需求持续下降，预期工作量减少，财务主管已发现减值迹象。
+  s1_zh_hk: 呢部封閉式裁紙機仍能安全運行。印刷裝訂需求持續下降，預期工作量減少，財務主管已發現減值跡象。
+  s2_en: >-
+    Correct scheduled depreciation of 24,000 has already been recorded, leaving a carrying amount of 120,000.
+    A reviewed estimate puts fair value less all disposal costs at 80,000. There is no decision to sell
+    or abandon it.
+  s2_zh: 本年已正确计提折旧二万四千，账面价值为十二万。经复核，公允价值减去全部处置费用后的净额估计为八万。工厂并未决定出售或弃用。
+  s2_zh_hk: 本年已正確計提折舊二萬四千，賬面值係十二萬。經覆核，公平值減去全部出售成本估計為八萬。工場並未決定出售或棄用。
+  s3_en: >-
+    At present you do not know whether the cutter generates largely independent customer cash inflows.
+    You have time to obtain the cash-inflow map and reviewed use-value estimates before finalising the
+    report.
+  s3_zh: 目前还不知道裁纸机是否带来大致独立的客户现金流入。报表未定稿，仍有时间取得现金流量图和经复核的使用价值估计。
+  s3_zh_hk: 目前仲未知裁紙機係咪帶來大致獨立嘅客戶現金流入。報表未定稿，仍有時間取得現金流量圖同經覆核嘅使用價值估計。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Review first, or record now?
+  title_zh: 先复核，还是马上入账？
+  title_zh_hk: 先覆核，定係即刻入賬？
+  en: >-
+    Would you close the report with scheduled depreciation only, write the cutter down to its sale estimate,
+    or complete a recoverability review first? Explain what each number establishes, and which assessment
+    boundary you need to verify. Pause and vote.
+  zh: >-
+    你会只按已计提折旧结账、立即把裁纸机减记至出售估计，还是先完成可收回性复核？请说明每个数字能够确定什么，以及需要核对哪一条评估界线。请暂停，投个票。
+  zh_hk: >-
+    你會只按已計提折舊結賬、立即把裁紙機減記至出售估計，定係先完成可收回性覆核？說明每個數字能夠確定啲乜，以及需要核對邊一條評估界線。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The line is the unit
+  title_zh: 评估单位是整条生产线
+  title_zh_hk: 評估單位係成條生產線
+  step1_en: Cutter 120,000; binder 60,000
+  step1_zh: 裁纸机十二万，装订机六万
+  step1_zh_hk: 裁紙機十二萬，裝訂機六萬
+  step2_en: Value in use 165,000
+  step2_zh: 使用价值十六万五千
+  step2_zh_hk: 使用價值十六萬五千
+  step3_en: Line sale estimate 150,000
+  step3_zh: 整线出售估计十五万
+  step3_zh_hk: 整線出售估計十五萬
+  s1_en: >-
+    The cutter and a binding unit jointly deliver one finished bookbinding service. Neither machine produces
+    independently saleable intermediate output. The line is the smallest group with largely independent
+    inflows.
+  s1_zh: 裁纸机和装订机共同完成一项装订服务。两部机器都没有可单独出售的中间产出。整条生产线是带来大致独立现金流入的最小资产组。
+  s1_zh_hk: 裁紙機同裝訂機共同完成一項裝訂服務。兩部機器都冇可單獨出售嘅中間產出。成條生產線係帶來大致獨立現金流入嘅最小資產組。
+  s2_en: >-
+    The cutter’s carrying amount is 120,000 and the binding unit’s is 60,000, both after current depreciation.
+    Reviewed line estimates are 165,000 value in use and 150,000 fair value less disposal costs.
+  s2_zh: 计提折旧后，裁纸机账面价值十二万，装订机六万。经复核，整条生产线的使用价值是十六万五千，公允价值减去处置费用后的净额是十五万。
+  s2_zh_hk: 計提折舊後，裁紙機賬面值十二萬，裝訂機六萬。經覆核，成條生產線嘅使用價值係十六萬五千，公平值減出售成本係十五萬。
+  s3_en: >-
+    Allocate any line impairment in proportion to carrying amounts, but not below each asset’s floor.
+    The supplied floors are 80,000 for the cutter and 40,000 for the binding unit, their fair values less
+    disposal costs. No floor is breached.
+  s3_zh: >-
+    生产线减值按账面价值比例分摊，但不得低于各资产的下限。题设下限分别是裁纸机八万、装订机四万，也就是各自的公允价值减去处置费用。按计算分摊后，两部都没有跌破下限。
+  s3_zh_hk: >-
+    生產線減值按賬面值比例分攤，但不得低於各資產嘅下限。題設下限分別係裁紙機八萬、裝訂機四萬，亦即各自嘅公平值減出售成本。按計算分攤後，兩部都冇跌破下限。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What impairment would you book?
+  title_zh: 你建议确认多少减值？
+  title_zh_hk: 你建議確認多少減值？
+  en: >-
+    What impairment adjustment would you recommend? Calculate the group comparison and the supplied allocation,
+    and explain why neither the cutter’s sale estimate nor another profitable activity settles this test.
+    Pause and vote.
+  zh: 你建议做怎样的减值调整？请计算资产组比较和题设分摊，并说明为什么裁纸机的出售估计、或其他盈利业务，都不能代替这项测试。请暂停，投个票。
+  zh_hk: 你建議做點樣嘅減值調整？請計算資產組比較同題設分攤，並說明點解裁紙機嘅出售估計、或其他盈利業務，都不能代替呢項測試。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Compare like with like
+  title_zh: 两边须用同一范围
+  title_zh_hk: 兩邊要用同一範圍
+  step1_en: Line carrying amount 180,000
+  step1_zh: 生产线账面价值十八万
+  step1_zh_hk: 生產線賬面值十八萬
+  step2_en: Recoverable amount 165,000
+  step2_zh: 可收回金额十六万五千
+  step2_zh_hk: 可收回金額十六萬五千
+  step3_en: Impairment expense 15,000
+  step3_zh: 减值费用一万五千
+  step3_zh_hk: 減值費用一萬五千
+  s1_en: >-
+    The demand evidence triggers a recoverability review. Correct depreciation does not cancel that indicator.
+    But the 80,000 disposal estimate alone does not establish the cutter’s recoverable amount when continuing-use
+    value matters.
+  s1_zh: >-
+    需求下降的证据触发了可收回性复核。正确计提折旧，并不能取消这项迹象。但在持续使用价值仍有意义时，单凭八万的出售估计，也不能确定裁纸机的可收回金额。
+  s1_zh_hk: >-
+    需求下降嘅證據觸發咗可收回性覆核。正確計提折舊，並唔能取消呢項跡象。但喺持續使用價值仍有意義時，單憑八萬嘅出售估計，亦唔能確定裁紙機嘅可收回金額。
+  s2_en: >-
+    The line’s carrying amount is 120,000 plus 60,000, or 180,000. Its recoverable amount is the higher
+    of 165,000 and 150,000, which is 165,000. The required additional expense is 15,000.
+  s2_zh: 生产线账面价值是十二万加六万，即十八万。可收回金额取十六万五千与十五万中的较高者，即十六万五千。需要追加的费用是一万五千。
+  s2_zh_hk: 生產線賬面值係十二萬加六萬，即十八萬。可收回金額取十六萬五千同十五萬之中較高者，即十六萬五千。需要追加嘅費用係一萬五千。
+  s3_en: >-
+    Do not compare the cutter alone at 120,000 with the entire line’s 165,000. Do not compare the line
+    at 180,000 with the cutter’s 80,000 disposal estimate. The asset perimeter must match on both sides.
+  s3_zh: 不能只用裁纸机的十二万去对比整条生产线的十六万五千，也不能用整线十八万去对比裁纸机八万的出售估计。两边的资产范围必须一致。
+  s3_zh_hk: 唔能只用裁紙機嘅十二萬去對比成條生產線嘅十六萬五千，亦唔能用整線十八萬去對比裁紙機八萬嘅出售估計。兩邊嘅資產範圍必須一致。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Allocate, then check the floors
+  title_zh: 按比例分摊，再核下限
+  title_zh_hk: 按比例分攤，再核下限
+  step1_en: Cutter impairment 10,000
+  step1_zh: 裁纸机减值一万
+  step1_zh_hk: 裁紙機減值一萬
+  step2_en: Binder impairment 5,000
+  step2_zh: 装订机减值五千
+  step2_zh_hk: 裝訂機減值五千
+  step3_en: Revised balances 110,000 and 55,000
+  step3_zh: 调整后十一万和五万五
+  step3_zh_hk: 調整後十一萬同五萬五
+  s1_en: >-
+    The cutter holds two-thirds of the 180,000 balance and receives 10,000 of the 15,000 impairment. The
+    binding unit receives 5,000. Revised balances are 110,000 and 55,000, both above their floors of 80,000
+    and 40,000.
+  s1_zh: 裁纸机占十八万账面价值的三分之二，承担一万五千减值中的一万；装订机承担五千。调整后余额是十一万和五万五千，都高于八万和四万的下限。
+  s1_zh_hk: 裁紙機佔十八萬賬面值嘅三分之二，承擔一萬五千減值入面嘅一萬；裝訂機承擔五千。調整後餘額係十一萬同五萬五千，都高於八萬同四萬嘅下限。
+  s2_en: >-
+    The floor check limits the allocation; it does not tell you to mark each asset down to its floor.
+    The total revised balance reconciles to 165,000. No second 40,000 cutter loss is added.
+  s2_zh: 下限只是限制分摊，并不是要把每项资产都减记到下限。调整后合计十一万加五万五千，正好对上十六万五千。不能再给裁纸机追加四万损失。
+  s2_zh_hk: 下限只係限制分攤，並唔係要把每項資產都減記到下限。調整後合計十一萬加五萬五千，正好對上十六萬五千。唔可以再畀裁紙機追加四萬損失。
+  s3_en: >-
+    The 15,000 is an additional current impairment expense, not a replacement depreciation charge or an
+    immediate cash payment. Next year’s depreciation, over five remaining years with zero residuals, is
+    22,000 for the cutter and 11,000 for the binding unit.
+  s3_zh: 这一万五千是当期追加的减值费用，不是替代折旧，也不是立即支付现金。剩余使用年限五年、残值为零，明年折旧将是裁纸机二万二千、装订机一万一千。
+  s3_zh_hk: 呢一萬五千係當期追加嘅減值費用，唔係替代折舊，亦唔係立即支付現金。剩餘使用年限五年、殘值為零，明年折舊將會係裁紙機二萬二千、裝訂機一萬一千。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What would change the answer?
+  title_zh: 什么会改变这个答案？
+  title_zh_hk: 咩會改變呢個答案？
+  en: >-
+    Do not add an unrelated profitable design-consulting activity to this line merely because it is profitable.
+    If a floor had been breached, the allocation would have to be recast. Future estimates still require
+    review; this year’s already-recorded depreciation remains in place.
+  zh: 不能因为另一项设计咨询业务有盈利，就把它并入这条生产线。如果分摊后跌破下限，就要重做分摊。以后的估计仍须复核；本年已经计提的折旧保持不变。
+  zh_hk: 唔能因為另一項設計諮詢業務有盈利，就把它併入呢條生產線。如果分攤後跌破下限，就要重做分攤。以後嘅估計仍須覆核；本年已經計提嘅折舊保持不變。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Depreciation is not the test
+  title_zh: 折旧表不是可收回性测试
+  title_zh_hk: 折舊表唔係可收回性測試
+  q1_en: Line impairment 15,000
+  q1_zh: 生产线减值一万五千
+  q1_zh_hk: 生產線減值一萬五千
+  q2_en: Cutter 10,000; binder 5,000
+  q2_zh: 裁纸机一万，装订机五千
+  q2_zh_hk: 裁紙機一萬，裝訂機五千
+  s1_en: >-
+    An impairment indicator requires a recoverability review, even when scheduled depreciation was recorded
+    correctly. Recoverable amount is the higher of value in use and fair value less disposal costs.
+  s1_zh: 出现减值迹象，即使折旧已正确计提，也要做可收回性复核。可收回金额取使用价值与公允价值减去处置费用后的净额两者中的较高者。
+  s1_zh_hk: 出現減值跡象，即使折舊已正確計提，都要做可收回性覆核。可收回金額取使用價值同公平值減出售成本兩者之中較高者。
+  s2_en: >-
+    Compare the same asset perimeter on both sides, then allocate any shortfall in proportion, subject
+    to the floors. Do not write the cutter down to 80,000 just because that sale estimate is known.
+  s2_zh: 比较时两边要用同一资产范围，再按比例分摊差额，并核对下限。不能只因为已知出售估计是八万，就把裁纸机减记到八万。
+  s2_zh_hk: 比較時兩邊要用同一資產範圍，再按比例分攤差額，並核對下限。唔能只因為已知出售估計係八萬，就把裁紙機減記到八萬。
+  s3_en: >-
+    The firm, the offers and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、报价和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、報價同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 196

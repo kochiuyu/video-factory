@@ -1,0 +1,296 @@
+id: MKT-04
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: More days to return it, or less trouble?
+title_zh: 退货期限长一点，还是手续简单一点？
+title_zh_hk: 退貨期限長一點，還是手續簡單一點？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-04
+  kicker_en: MKT-04
+  kicker_zh: MKT-04
+  kicker_zh_hk: MKT-04
+  title_en: More days to return it, or less trouble?
+  title_zh: 退货期限长一点，还是手续简单一点？
+  title_zh_hk: 退貨期限長一點，還是手續簡單一點？
+  image: art/return-friction-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In September 2025, Taobao described returns and exchanges as part of its localised shopping experience
+    for Hong Kong. That was the company's own promotional statement. Now you run a fictional Hong Kong
+    online homewares shop selling cushion covers. First-time buyers cannot see the fabric colour or feel
+    the texture before delivery. Your change-of-mind policy allows 30 days, but customers must print a
+    form, arrange postage and pay the return charge.
+  zh: >-
+    二零二五年九月，淘宝把退换货说成本地化购物体验的一环，包括香港的跨境退货。这是公司自己的宣传说法。现在，你在香港经营一家虚构的线上家居用品店，卖抱枕套。第一次光顾的顾客，收货前看不到布料颜色，也摸不到质感。店里的无理由退货期是三十天，但顾客要自己打印表格、安排邮寄，还要付退货运费。
+  zh_hk: >-
+    二零二五年九月，淘寶將退換貨講成本地化購物體驗嘅一部分，包括香港嘅跨境退貨。呢個係公司自己嘅宣傳講法。而家，你喺香港經營一間虛構嘅網上家品店，賣抱枕套。第一次幫襯嘅顧客，收貨之前睇唔到布料顏色，亦摸唔到質感。店舖嘅改變主意退貨期係三十日，但顧客要自己列印表格、安排郵寄，仲要俾退貨運費。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Fund one improvement
+  title_zh: 只可出资做一项改进
+  title_zh_hk: 只可出資做一項改進
+  row1_en: A · More time
+  row1_zh: A · 延长期限
+  row1_zh_hk: A · 延長期限
+  row2_en: B · Less effort and cost
+  row2_zh: B · 省时省力，减少支出
+  row2_zh_hk: B · 省時省力，減少支出
+  row3_en: C · Better information
+  row3_zh: C · 更清楚的商品资讯
+  row3_zh_hk: C · 更清楚的商品資訊
+  col1_en: Window
+  col1_zh: 退货期限
+  col1_zh_hk: 退貨期限
+  col2_en: What changes
+  col2_zh: 改变什么
+  col2_zh_hk: 改變甚麼
+  c11_en: 60 days
+  c11_zh: 60 天
+  c11_zh_hk: 60 天
+  c12_en: Same post; customer pays postage
+  c12_zh: 邮寄流程不变；顾客付运费
+  c12_zh_hk: 郵寄流程不變；顧客付運費
+  c21_en: 30 days
+  c21_zh: 30 天
+  c21_zh_hk: 30 天
+  c22_en: Staffed drop-off; no printing or charge
+  c22_zh: 本地退货点；无需打印或付运费
+  c22_zh_hk: 本地退貨點；毋須列印或付運費
+  c31_en: 30 days
+  c31_zh: 30 天
+  c31_zh_hk: 30 天
+  c32_en: Better photos, close-ups, descriptions
+  c32_zh: 改善照片、质感特写及描述
+  c32_zh_hk: 改善照片、質感特寫及描述
+  footer_en: Same eligibility, refund, inspection
+  footer_zh: 退货资格、退款和检查标准不变
+  footer_zh_hk: 退貨資格、退款和檢查標準不變
+  s1_en: >-
+    All three keep the same item eligibility, full refund after inspection, and inspection standards.
+    Option A doubles the window to 60 days, with the same postal process and customer-paid postage.
+  s1_zh: 三个方案的退货资格、检查后全数退款和检查标准都一样。方案 A 把期限延长到六十天，邮寄流程不变，运费仍由顾客付。
+  s1_zh_hk: 三個方案嘅退貨資格、檢查後全數退款同檢查標準都一樣。方案 A 將期限延長到六十日，郵寄流程不變，運費仍然由顧客俾。
+  s2_en: >-
+    Option B keeps 30 days but adds a staffed local drop-off, with no printing and no return-delivery
+    charge. The customer still makes a trip, and the shop pays handling and transport.
+  s2_zh: 方案 B 维持三十天，但加设有工作人员的本地退货点，顾客不用打印，也不用付退货运费。不过顾客仍然要出门一趟，处理和运输费用由店铺承担。
+  s2_zh_hk: 方案 B 維持三十日，但加設有職員嘅本地退貨點，顧客唔使列印，亦唔使俾退貨運費。不過顧客仍然要出門一趟，處理同運輸費用由店舖負責。
+  s3_en: >-
+    Option C keeps returns as they are and improves colour photos, texture close-ups and descriptions.
+    You can fund only one for the next pilot, and there is no reliable estimate yet of extra purchases
+    or return costs.
+  s3_zh: 方案 C 维持现有的退货安排，改善色彩照片、质感特写和商品描述。下一轮试点只能选一项，而新增购买量和退货总成本，目前都没有可靠估算。
+  s3_zh_hk: 方案 C 維持現行嘅退貨安排，改善色彩相片、質感特寫同商品描述。下一輪試點只可以揀一項，而新增購買量同退貨總成本，暫時都冇可靠估算。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which improvement first?
+  title_zh: 先试哪一项？
+  title_zh_hk: 先試哪一項？
+  en: >-
+    Which would you test first: more return days, an easier return process, or better product information?
+    What customer concern does your choice address? Pause and vote.
+  zh: 你会先试哪一项：延长期限、简化退货手续，还是改善商品资讯？这个选择针对的是顾客哪项顾虑？请暂停，投个票。
+  zh_hk: 你會先試邊一項：延長期限、簡化退貨手續，定係改善商品資訊？呢個選擇針對顧客邊一樣顧慮？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Two small samples
+  title_zh: 两组小样本
+  title_zh_hk: 兩組小樣本
+  step1_en: 18 of 20 returns began within 7 days
+  step1_zh: 20 笔退货中 18 笔在 7 天内申请
+  step1_zh_hk: 20 宗退貨中 18 宗在 7 天內申請
+  step2_en: >-
+    14 prospects: postage, printing or trip
+  step2_zh: 20 名准顾客中 14 人提运费、打印或出门
+  step2_zh_hk: 20 名準顧客中 14 人提運費、列印或出門
+  step3_en: 3 name the deadline; 3 other concerns
+  step3_zh: 3 人在意期限；3 人另有顾虑
+  step3_zh_hk: 3 人在意期限；3 人另有顧慮
+  s1_en: >-
+    A review of the last 20 completed change-of-mind returns finds that 18 were started within seven days
+    of delivery. Those customers could judge colour and texture quickly.
+  s1_zh: 店铺查了最近二十笔已完成的无理由退货，发现其中十八笔在收货后七天内就申请了。这些顾客很快就能判断颜色和质感合不合适。
+  s1_zh_hk: 店舖查咗最近二十宗已完成嘅改變主意退貨，發現當中十八宗喺收貨後七日內就申請。呢啲顧客好快就判斷到顏色同質感啱唔啱。
+  s2_en: >-
+    Staff also interview 20 hesitant prospective buyers who have not ordered. Asked for one main concern,
+    14 name the postage cost, the printing, or the trip needed to return an item.
+  s2_zh: 店员另外访问了二十名还在犹豫、没有下单的准顾客。问到最主要的顾虑，十四人提到运费、打印，或者要出门退货。
+  s2_zh_hk: 店員另外訪問咗二十個仲喺度猶豫、未落單嘅準顧客。問到最主要嘅顧慮，十四個人提到運費、列印，或者要出門退貨。
+  s3_en: >-
+    Three name the deadline and three name other concerns. Both are small convenience samples: completed
+    returns miss people deterred from buying or returning, and stated concerns are not purchases.
+  s3_zh: 三人在意期限，另外三人提到其他顾虑。两组都是小规模的便利样本：已完成的退货不包括却步而没买或没退的人，受访者说的顾虑也不是实际订单。
+  s3_zh_hk: >-
+    三個人在意期限，另外三個人提到其他顧慮。兩組都係小規模嘅便利樣本：已完成嘅退貨唔包括因為卻步而冇買或者冇退嘅人，受訪者講嘅顧慮亦唔係實際訂單。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Change your choice?
+  title_zh: 会改变你的选择吗？
+  title_zh_hk: 會改變你的選擇嗎？
+  en: >-
+    Does the new evidence change your choice? What would you measure before extending the policy beyond
+    the pilot? Pause and vote.
+  zh: 这些新资料会改变你的选择吗？在试点以外推行之前，你会衡量什么？请暂停，投个票。
+  zh_hk: 呢啲新資料會唔會改變你嘅選擇？喺試點以外推行之前，你會量度啲乜？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Match the promise to the concern
+  title_zh: 承诺要对准顾客的顾虑
+  title_zh_hk: 承諾要對準顧客的顧慮
+  step1_en: >-
+    A: doubles the stated window
+  step1_zh: A：名义期限加倍
+  step1_zh_hk: A：名義期限加倍
+  step2_en: >-
+    B: a reasonable first hypothesis
+  step2_zh: B：合理的优先测试假设
+  step2_zh_hk: B：合理的優先測試假設
+  step3_en: >-
+    C: less uncertainty, but no touch
+  step3_zh: C：减少不确定性，难呈现手感
+  step3_zh_hk: C：減少不確定性，難呈現手感
+  s1_en: >-
+    Option A doubles the stated window, but the evidence points more strongly to return cost and effort
+    than to a lack of days. Some customers may still need more time; small samples do not show they never
+    exist.
+  s1_zh: >-
+    方案 A 把名义期限加倍，但现有资料显示，退货运费和麻烦程度比天数不够更值得关注。当然，有些顾客可能真的需要多点时间，小样本不能证明没有这类人。
+  s1_zh_hk: 方案 A 將名義期限加倍，但現有資料顯示，退貨運費同麻煩程度比日數唔夠更值得關注。當然，有啲顧客可能真係要多啲時間，小樣本證明唔到冇呢類人。
+  s2_en: >-
+    So B is a reasonable first hypothesis to test, not a proven winner. A distant or inconvenient drop-off
+    could still be unattractive, so test whether it really shortens the journey for the customers you
+    want.
+  s2_zh: >-
+    所以 B 是合理的优先测试假设，但还没证实是最佳方案。如果退货点太远或者营业时间不方便，吸引力仍然有限，要测试它能不能真正为目标顾客缩短路程。
+  s2_zh_hk: >-
+    所以 B 係合理嘅優先測試假設，但仲未證實係最好嘅方案。如果退貨點太遠或者營業時間唔方便，吸引力仍然有限，要測試佢係咪真係幫目標顧客縮短路程。
+  s3_en: >-
+    Option C could reduce uncertainty before purchase, though photos cannot fully reproduce touch or every
+    screen's colour.
+  s3_zh: 方案 C 有望减少购买前的不确定性，但照片不能完全呈现手感，也控制不了每部屏幕的色差。
+  s3_zh_hk: 方案 C 有望減少購買前嘅不確定性，但相片唔可以完全呈現手感，亦控制唔到每部屏幕嘅色差。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Measure
+  kicker_en: Measure
+  kicker_zh: 衡量
+  kicker_zh_hk: 量度
+  title_en: Reassurance is not profit
+  title_zh: 让顾客安心，不等于提高盈利
+  title_zh_hk: 讓顧客安心，不等於提高盈利
+  step1_en: More sales, and maybe more returns
+  step1_zh: 可能多了购买，也多了退货
+  step1_zh_hk: 可能多了購買，也多了退貨
+  step2_en: Judge contribution after return costs
+  step2_zh: 看扣除退货成本后的总贡献
+  step2_zh_hk: 看扣除退貨成本後的總貢獻
+  step3_en: Let the window run; honour promises
+  step3_zh: 等退货期届满；履行承诺
+  step3_zh_hk: 等退貨期屆滿；履行承諾
+  s1_en: >-
+    Easier returns may encourage purchases, and may also create more returns, transport, inspection and
+    resale costs. A policy that sounds more generous is not automatically more profitable.
+  s1_zh: 退货方便了，可能带来更多购买，也可能增加退货，以及运输、检查和再售的成本。听起来更宽松的政策，不一定更赚钱。
+  s1_zh_hk: 退貨方便咗，可能帶來更多購買，亦可能多咗退貨，同埋運輸、檢查同再售嘅成本。聽落更寬鬆嘅政策，唔一定更賺錢。
+  s2_en: >-
+    Measure completed purchases, reasons for hesitation, return uptake, customer experience, returned-item
+    condition, and total contribution after return-related costs. Do not judge on gross sales or the lowest
+    return rate alone.
+  s2_zh: 要衡量实际购买、犹豫的原因、退货情况、顾客体验、退回商品的状态，以及扣除退货相关成本后的总贡献。不要只看销售总额，也不要只追求最低退货率。
+  s2_zh_hk: >-
+    要量度實際購買、猶豫嘅原因、退貨情況、顧客體驗、退回商品嘅狀態，同埋扣除退貨相關成本之後嘅總貢獻。唔好淨係睇銷售總額，亦唔好淨係追求最低退貨率。
+  s3_en: >-
+    Keep prices, product mix and promotion comparable, let the promised return window run before reading
+    final costs, and honour promises made to pilot customers even if future offers change.
+  s3_zh: 评估时，价格、商品组合和宣传曝光要尽量相近；等承诺的退货期满了，再解读最终成本。就算以后改变优惠，也要履行对试点顾客的承诺。
+  s3_zh_hk: 評估嘅時候，價錢、商品組合同宣傳曝光要盡量相若；等承諾嘅退貨期屆滿，先解讀最終成本。就算之後改變優惠，都要履行對試點顧客嘅承諾。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Read the samples honestly
+  title_zh: 如实解读样本
+  title_zh_hk: 如實解讀樣本
+  en: >-
+    Eighteen of twenty completed returns tells you about people who successfully used the current process,
+    not every buyer or those who gave up. Fourteen stated concerns do not mean fourteen guaranteed purchases
+    under B. And keep existing rights separate: this is a voluntary change-of-mind offer, not a remedy
+    for defective goods.
+  zh: >-
+    二十笔已完成退货中有十八笔在七天内申请，这只说明了成功用过现行程序的人，不能反映所有买家或中途放弃的人。十四人说有顾虑，也不等于采用 B 后就会多十四笔订单。还要把顾客原有的权利分开看：这是店铺自愿提供的无理由退货安排，不涉及瑕疵商品的补救。
+  zh_hk: >-
+    二十宗已完成嘅退貨入面有十八宗喺七日內申請，呢個只係講到成功用過現行程序嘅人，反映唔到所有買家或者中途放棄嘅人。十四個人話有顧慮，亦唔等於用 B 之後就會多十四張訂單。仲要將顧客原有嘅權利分開嚟睇：呢個係店舖自願提供嘅改變主意退貨安排，唔涉及瑕疵商品嘅補救。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Cut friction, not just add days
+  title_zh: 减少麻烦，而非只加天数
+  title_zh_hk: 減少麻煩，而非只加天數
+  q1_en: >-
+    Returns: 18 of 20 within 7 days
+  q1_zh: 退货：20 笔中 18 笔在 7 天内
+  q1_zh_hk: 退貨：20 宗中 18 宗在 7 天內
+  q2_en: >-
+    Prospects: 14 of 20 cite cost or effort
+  q2_zh: 准顾客：20 人中 14 人提运费或麻烦
+  q2_zh_hk: 準顧客：20 人中 14 人提運費或麻煩
+  s1_en: >-
+    A better return promise may remove friction, not simply add days. On this evidence, test the easier,
+    cheaper return process first.
+  s1_zh: 改善退货体验，有时靠的是减少麻烦，而不是增加天数。按现有资料，可以先测试更省时省力的退货安排。
+  s1_zh_hk: 改善退貨體驗，有時靠嘅係減少麻煩，而唔係增加日數。按現有資料，可以先測試更省時省力嘅退貨安排。
+  s2_en: >-
+    Judge the pilot on completed purchases and total contribution after return-related costs, not on gross
+    sales or the lowest return rate alone.
+  s2_zh: 评估试点要看实际购买和扣除退货相关成本后的总贡献，不能只看销售总额或最低退货率。
+  s2_zh_hk: 評估試點要睇實際購買同扣除退貨相關成本之後嘅總貢獻，唔可以淨係睇銷售總額或者最低退貨率。
+  s3_en: >-
+    The shop, the samples and the options are classroom assumptions. This is not legal advice about consumer
+    rights. Official scene art is a teaching illustration only.
+  s3_zh: 店铺、样本和方案都是课堂假设，本案不构成有关消费者权利的法律意见。官方场景图只是教学插图。
+  s3_zh_hk: 店舖、樣本同方案都係課堂假設，本案唔構成有關消費者權利嘅法律意見。官方場景圖只係教學插圖。
+duration_target_s: 198

@@ -1,0 +1,299 @@
+id: MKT-07
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Designed for an age group. Chosen by whom?
+title_zh: 为某个年龄层设计，谁来挑选？
+title_zh_hk: 為某個年齡層設計，誰來挑選？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-07
+  kicker_en: MKT-07
+  kicker_zh: MKT-07
+  kicker_zh_hk: MKT-07
+  title_en: Designed for an age group. Chosen by whom?
+  title_zh: 为某个年龄层设计，谁来挑选？
+  title_zh_hk: 為某個年齡層設計，誰來挑選？
+  image: art/chosen-by-whom-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 27 May 2025, Hong Kong's government announced 30 silver-economy measures. That gives a fictional
+    Hong Kong bag brand a reason to consider older consumers, but it does not prove demand for its product.
+    The brand is launching a light daybag with easy-grip zipper pulls and wide straps. An older adult
+    might choose it personally, or an adult child might buy it as a gift.
+  zh: >-
+    二零二五年五月二十七日，香港政府公布了三十项银发经济措施。这让一家虚构的香港箱包品牌有理由留意年长消费者，但不能证明这款产品有需求。品牌准备推出一款轻便的日常背包，拉链片容易握住，肩带也比较宽。年长顾客可能自己挑选，也可能由成年子女买来送礼。
+  zh_hk: >-
+    二零二五年五月二十七號，香港政府公布咗三十項銀髮經濟措施。咁令一個虛構嘅香港袋具品牌有理由留意年長消費者，但證明唔到呢款產品有需求。品牌準備推出一個輕便嘅日用袋，拉鏈頭容易揸，膊帶亦比較闊。年長顧客可能自己揀，亦可能由成年子女買嚟送禮。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two launch messages
+  title_zh: 两则上市讯息
+  title_zh_hk: 兩則上市訊息
+  row1_en: Headline
+  row1_zh: 主标题
+  row1_zh_hk: 主標題
+  row2_en: May help
+  row2_zh: 可能的作用
+  row2_zh_hk: 可能的作用
+  row3_en: Same in both
+  row3_zh: 两款相同
+  row3_zh_hk: 兩款相同
+  col1_en: Message A · Age-led
+  col1_zh: 讯息 A · 以年龄为主
+  col1_zh_hk: 訊息 A · 以年齡為主
+  col2_en: Message B · Benefit-led
+  col2_zh: 讯息 B · 以实用好处为主
+  col2_zh_hk: 訊息 B · 以實用好處為主
+  c11_en: “A daybag for 60+”
+  c11_zh: “60 岁以上人士的日常背包”
+  c11_zh_hk: 「60 歲以上人士的日用袋」
+  c12_en: “Light to carry. Easy to open.”
+  c12_zh: “轻巧好背，拉链易开。”
+  c12_zh_hk: 「輕巧好背，拉鏈易開。」
+  c21_en: Some buyers spot relevance
+  c21_zh: 有些购买者一眼看出是否适合
+  c21_zh_hk: 有些購買者一眼看出是否適合
+  c22_en: Benefits clear, no age label
+  c22_zh: 看清好处，不必用年龄界定
+  c22_zh_hk: 看清好處，不必用年齡界定
+  c31_en: Bag, price, type, photos
+  c31_zh: 袋、价格、字体、照片
+  c31_zh_hk: 袋、價格、字體、照片
+  c32_en: Placement; older people shown
+  c32_zh: 投放位置；呈现年长人士
+  c32_zh_hk: 投放位置；呈現年長人士
+  footer_en: Only the headline differs
+  footer_zh: 只有主标题不同
+  footer_zh_hk: 只有主標題不同
+  s1_en: >-
+    The owner can run one small launch-message pilot and has two equally feasible mock-ups. Message A's
+    headline names an age group: a daybag for 60 plus. Message B describes practical benefits: light to
+    carry, easy to open.
+  s1_zh: >-
+    店主可以先小规模试行一则上市讯息，手上有两款同样可行的设计稿。讯息 A 的主标题点明年龄层：六十岁以上人士的日常背包。讯息 B 直接说实用好处：轻巧好背，拉链易开。
+  s1_zh_hk: >-
+    店主可以先小規模試行一則上市訊息，手上有兩款同樣可行嘅設計稿。訊息 A 嘅主標題點明年齡層：六十歲以上人士嘅日用袋。訊息 B 直接講實用好處：輕巧好背，拉鏈易開。
+  s2_en: >-
+    A may make relevance easy for some buyers to recognise. B may make the use benefits clear without
+    defining the customer by age.
+  s2_zh: A 可能让一些购买者一眼看出产品适不适合；B 可能让人看清使用上的好处，又不用先拿年龄来界定顾客。
+  s2_zh_hk: A 可能令一啲購買者一眼睇出產品啱唔啱；B 可能令人睇清楚用起嚟嘅好處，又唔使先用年齡界定顧客。
+  s3_en: >-
+    Everything else is the same: bag, price, readable type, photographs and placement, and both naturally
+    feature older people. Neither is deliberately patronising, and neither is guaranteed to work. The
+    claims are checked, and it is not a medical product.
+  s3_zh: >-
+    其他都一样：袋子、价格、易读字体、照片和投放位置，两款都自然呈现年长人士。两款都没有刻意居高临下，也都不保证奏效。功能说法已经核实，产品也不是医疗用品。
+  s3_zh_hk: >-
+    其他全部一樣：袋、價錢、易讀字體、相片同投放位置，兩款都自然呈現年長人士。兩款都冇刻意居高臨下，亦都唔保證有效。功能講法已經核實，產品亦唔係醫療用品。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Pilot A or B first?
+  title_zh: 先测试 A 还是 B？
+  title_zh_hk: 先測試 A 還是 B？
+  en: >-
+    Which message would you pilot first, A or B? Name whose response you are trying to win, and a specific
+    response that would make you change your mind. Pause and vote.
+  zh: 你会先测试 A 还是 B？说明你希望打动谁，以及哪种具体反应会让你改变主意。请暂停，投个票。
+  zh_hk: 你會先測試 A 定係 B？講明你想打動邊個，同埋邊種具體反應會令你改變主意。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Who was reacting?
+  title_zh: 意见来自谁？
+  title_zh_hk: 意見來自誰？
+  step1_en: >-
+    Gift buyer: age cue helps spot a gift
+  step1_zh: 买礼物的人：年龄提示便于挑礼物
+  step1_zh_hk: 買禮物的人：年齡提示便於挑禮物
+  step2_en: >-
+    User: the easy zip matters; I choose
+  step2_zh: 使用者：拉链好拉，颜色自己挑
+  step2_zh_hk: 使用者：拉鏈好拉，顏色自己挑
+  step3_en: >-
+    User: show me what is different
+  step3_zh: 另一位使用者：说明有何不同
+  step3_zh_hk: 另一位使用者：說明有何不同
+  s1_en: >-
+    The owner realises the first informal reactions came mainly from adult children shopping for parents.
+    One gift buyer says the age heading helps spot a possible gift, but still needs to know whether Mum
+    wants it.
+  s1_zh: 店主发现，最初的非正式意见主要来自替父母买礼物的成年子女。有一位说，有年龄提示，一眼就知道这款包或许适合送给妈妈，不过还是得问她想不想要。
+  s1_zh_hk: 店主發現，最初嘅非正式意見主要嚟自幫父母買禮物嘅成年子女。有一位話，有年齡提示，一眼就知道呢個袋或者啱送俾媽媽，不過都要問吓佢想唔想要。
+  s2_en: >-
+    A second conversation includes intended users. One says the easy zip matters, wants to choose the
+    colour personally, and would not search for an age label.
+  s2_zh: 第二次交流请来了预期使用者。一位说，拉链好不好拉对她很重要；颜色想自己挑，也不会特地去找有年龄标示的袋子。
+  s2_zh_hk: 第二次交流請咗預期使用者。一位話，拉鏈好唔好拉對佢好重要；顏色想自己揀，亦唔會特登去搵有年齡標示嘅袋。
+  s3_en: >-
+    Another likes knowing the designer considered people of that age, but wants to see what is different
+    about the bag. These are illustrative conversations, not a representative survey, and no sales result
+    is supplied.
+  s3_zh: 另一位觉得设计时想到同龄人是好事，但想知道这款包跟别的有什么不同。这些对话只是示例，不是具代表性的调查，题目也没有提供销售结果。
+  s3_zh_hk: 另一位覺得設計時諗到同齡人係好事，但想知道呢個袋同其他有咩唔同。呢啲對話只係示例，唔係有代表性嘅調查，題目亦冇提供銷售結果。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep or change your choice?
+  title_zh: 维持还是更改选择？
+  title_zh_hk: 維持還是更改選擇？
+  en: >-
+    Keep or change your first choice? Specify one result from intended users that would justify it, rather
+    than relying only on gift buyers' reactions. Pause and vote.
+  zh: 你会维持还是更改原来的选择？说出预期使用者的哪一种反应足以支持你的选择，不要只凭买礼物的人的意见。请暂停，投个票。
+  zh_hk: 你會維持定係更改原本嘅選擇？講出預期使用者邊一種反應足以支持你嘅選擇，唔好淨係靠買禮物嘅人嘅意見。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Who buys, and who uses?
+  title_zh: 分清谁买，谁用
+  title_zh_hk: 分清誰買，誰用
+  step1_en: Buyer and user may differ
+  step1_zh: 购买者和使用者未必是同一人
+  step1_zh_hk: 購買者和使用者未必是同一人
+  step2_en: Gift buyers alone cannot settle it
+  step2_zh: 单靠送礼的人的意见不能判断
+  step2_zh_hk: 單靠送禮的人的意見不能判斷
+  step3_en: One age group, many motivations
+  step3_zh: 同一年龄层，选购理由也不同
+  step3_zh_hk: 同一年齡層，選購理由也不同
+  s1_en: >-
+    A gift buyer may welcome a quick relevance cue, while the intended user may care more about features,
+    appearance or having a choice. Sometimes they are the same person; sometimes not.
+  s1_zh: >-
+    买礼物的人或许喜欢一眼就能判断合不合适的提示；真正使用的人，却可能更在意功能、外观，或者自己有没有选择的空间。购买者和使用者有时是同一个人，有时不是。
+  s1_zh_hk: >-
+    買禮物嘅人或者鍾意一眼就判斷到啱唔啱嘅提示；真正用嘅人，就可能更在意功能、外觀，或者自己有冇揀嘅空間。購買者同使用者有時係同一個人，有時唔係。
+  s2_en: >-
+    The new evidence does not show that gift buyers are wrong. It shows that their reactions alone cannot
+    tell you whether the message resonates with intended users.
+  s2_zh: 新资料没有证明送礼的人想错了，只说明单靠他们的反应，判断不了讯息能不能打动预期使用者。
+  s2_zh_hk: 新資料冇證明送禮嘅人諗錯，只係話俾你知，單靠佢哋嘅反應，判斷唔到訊息打唔打動到預期使用者。
+  s3_en: >-
+    The two user comments point in different directions, and neither speaks for every older customer.
+    Do not infer that older people always dislike age labels, always want them, or share one level of
+    independence or need.
+  s3_zh: 两位使用者的意见方向不同，谁也代表不了所有年长顾客。不能因此推论年长人士一概反感年龄标示、一概欢迎，或者自主程度和需要都一样。
+  s3_zh_hk: 兩位使用者嘅意見方向唔同，邊個都代表唔到所有年長顧客。唔可以因此推論年長人士一律反感年齡標示、一律歡迎，或者自主程度同需要都一樣。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: A choice evidence can change
+  title_zh: 可用证据修正的决定
+  title_zh_hk: 可用證據修正的決定
+  step1_en: >-
+    A: users welcome its relevance
+  step1_zh: 选 A：使用者乐见与自己相关
+  step1_zh_hk: 選 A：使用者樂見與自己相關
+  step2_en: >-
+    B: clear benefits explain the bag
+  step2_zh: 选 B：清楚说出好处
+  step2_zh_hk: 選 B：清楚說出好處
+  step3_en: Set an observable result first
+  step3_zh: 试点前先订可观察的结果
+  step3_zh_hk: 試點前先訂可觀察的結果
+  s1_en: >-
+    Choose A if your hypothesis is that intended users recognise and welcome its relevance, not merely
+    that adult children notice it.
+  s1_zh: 如果你推测预期使用者会看出 A 跟自己相关，而且乐见这样的描述，可以选 A；不能只因为成年子女容易留意到就选它。
+  s1_zh_hk: 如果你推測預期使用者會睇出 A 同自己有關，而且樂見咁樣嘅描述，可以揀 A；唔可以淨係因為成年子女容易留意到就揀佢。
+  s2_en: >-
+    Choose B if your hypothesis is that clearly stated benefits better explain why users would consider
+    the bag. These comments establish neither hypothesis.
+  s2_zh: 如果你推测 B 清楚说出好处，更能让使用者明白为什么值得考虑，可以选 B。这几则意见还不足以证实任何一个假设。
+  s2_zh_hk: 如果你推測 B 清楚講出好處，更加令使用者明白點解值得考慮，可以揀 B。呢幾則意見仲未足以證實任何一個假設。
+  s3_en: >-
+    Before the pilot, set an observable result: whether intended users correctly explain the offer, find
+    the wording relevant and want to try the bag. If the message repeatedly confuses users, reconsider
+    it. Do not invent a success rate the case has not measured.
+  s3_zh: >-
+    试点前先订好可观察的结果：预期使用者能否准确说出产品特点、觉得文字跟自己相关、愿意试用。讯息一再让人困惑，就要重新考虑。不要自编案例没衡量过的成功率。
+  s3_zh_hk: >-
+    試點前先訂好可觀察嘅結果：預期使用者講唔講得準產品特點、覺唔覺得啲字同自己有關、想唔想試用。訊息一再令人混淆，就要重新考慮。唔好自己作個案冇量度過嘅成功率。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Keep the comparison focused
+  title_zh: 让比较只聚焦于讯息
+  title_zh_hk: 讓比較只聚焦於訊息
+  en: >-
+    Include intended users as well as gift purchasers, and keep their responses separate. Keep the product,
+    claims, price, presentation and placement comparable, and if people see both mock-ups, vary which
+    comes first. Later purchases, returns and user feedback will give stronger evidence than a few convenient
+    conversations.
+  zh: >-
+    要同时纳入预期使用者和买礼物的人，分开看两组反应。产品、功能说法、价格、呈现方式和投放位置要保持相近；如果同一个人看两款设计稿，要调换先后次序。之后的购买、退货和使用者意见，会比几次方便的访谈更有说服力。
+  zh_hk: >-
+    要同時納入預期使用者同買禮物嘅人，分開睇兩組反應。產品、功能講法、價錢、呈現方式同投放位置要保持相若；如果同一個人睇兩款設計稿，要調換先後次序。之後嘅購買、退貨同使用者意見，會比幾次方便嘅訪談更有說服力。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Win the user, not just the buyer
+  title_zh: 打动使用者，不只是购买者
+  title_zh_hk: 打動使用者，不只是購買者
+  q1_en: Buyer and user can differ
+  q1_zh: 购买者和使用者可能不同
+  q1_zh_hk: 購買者和使用者可能不同
+  q2_en: Commit to A or B; state reversal evidence
+  q2_zh: 暂选 A 或 B，订明改判证据
+  q2_zh_hk: 暫選 A 或 B，訂明改判證據
+  s1_en: >-
+    When the person buying may not be the person using, a message has to work for the user too. Gift buyers'
+    reactions alone cannot settle that.
+  s1_zh: 买的人未必是用的人，讯息也要打动使用者。单凭买礼物的人的反应，下不了结论。
+  s1_zh_hk: 買嘅人未必係用嘅人，訊息都要打動使用者。單靠買禮物嘅人嘅反應，落唔到結論。
+  s2_en: >-
+    Either mock-up is a legitimate starting point. Commit provisionally, hear from intended users, and
+    say in advance what result would change your mind.
+  s2_zh: 两款设计稿都是合理的起点。先作暂定选择，听取预期使用者的意见，并事先说明什么结果会让你改变主意。
+  s2_zh_hk: 兩款設計稿都係合理嘅起點。先作暫定選擇，聽取預期使用者嘅意見，並且事先講明咩結果會令你改變主意。
+  s3_en: >-
+    The brand, the bag, the messages and the comments are invented. No medical benefit, consumer stereotype
+    or sales forecast is implied. Official scene art is a teaching illustration only.
+  s3_zh: 品牌、背包、宣传讯息和意见都是虚构的，不暗示医疗功效、消费者刻板印象或销售预测。官方场景图只是教学插图。
+  s3_zh_hk: 品牌、袋、宣傳訊息同意見都係虛構嘅，唔暗示醫療功效、消費者刻板印象或者銷售預測。官方場景圖只係教學插圖。
+duration_target_s: 198

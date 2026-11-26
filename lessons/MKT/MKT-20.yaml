@@ -1,0 +1,291 @@
+id: MKT-20
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Points earned. Benefits understood?
+title_zh: 积了分，顾客知道怎样换奖赏吗？
+title_zh_hk: 積了分，顧客知道怎樣換獎賞嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-20
+  kicker_en: MKT-20
+  kicker_zh: MKT-20
+  kicker_zh_hk: MKT-20
+  title_en: Points earned. Benefits understood?
+  title_zh: 积了分，顾客知道怎样换奖赏吗？
+  title_zh_hk: 積了分，顧客知道怎樣換獎賞嗎？
+  image: art/points-earned-benefits-understood-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In February 2024, Hong Kong's Consumer Council discussed complaints about reward redemption and changing
+    scheme terms, calling for clearer information. Now a fictional café is choosing a new, optional, free
+    reward scheme for future members. Existing balances and rights will be honoured. Each design forecasts
+    the same 6,000 dollars in actual reward cost.
+  zh: >-
+    二零二四年二月，香港消费者委员会谈到有关奖赏兑换和计划条款变动的投诉，呼吁提供更清楚的信息。现在，一家虚构的咖啡店，要为日后新加入的顾客选一个免费、自愿参加的奖赏计划。现有会员的结余和权利都会保留。两个方案预计的实际奖赏成本都是六千元。
+  zh_hk: >-
+    二零二四年二月，香港消費者委員會講到有關獎賞換領同計劃條款改動嘅投訴，呼籲提供更清楚嘅資訊。而家，一間虛構嘅咖啡店，要為日後新加入嘅顧客揀一個免費、自願參加嘅獎賞計劃。現有會員嘅結餘同權利都會保留。兩個方案預計嘅實際獎賞成本都係六千蚊。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two ways to earn a HK$40 drink
+  title_zh: 两种方法换一杯 HK$40 饮品
+  title_zh_hk: 兩種方法換一杯 HK$40 飲品
+  row1_en: A · visit card
+  row1_zh: A · 到店集章
+  row1_zh_hk: A · 到店集印
+  row2_en: B · points
+  row2_zh: B · 消费储分
+  row2_zh_hk: B · 消費儲分
+  col1_en: Earn one standard drink
+  col1_zh: 换一杯标准饮品
+  col1_zh_hk: 換一杯標準飲品
+  col2_en: Progress validity
+  col2_zh: 累积奖赏的有效期
+  col2_zh_hk: 累積獎賞的有效期
+  c11_en: 6 qualifying visits of HK$40+
+  c11_zh: 6 次满 HK$40 的到店消费
+  c11_zh_hk: 6 次滿 HK$40 的到店消費
+  c12_en: >-
+    Card: 180 days from first stamp
+  c12_zh: 由首个印章起计 180 日
+  c12_zh_hk: 由首個印花起計 180 日
+  c21_en: 240 points; HK$1 = 1 point
+  c21_zh: 240 分；每 HK$1 赚 1 分
+  c21_zh_hk: 240 分；每 HK$1 賺 1 分
+  c22_en: >-
+    Each point: 180 days
+  c22_zh: 每笔积分有效 180 日
+  c22_zh_hk: 每筆積分有效 180 日
+  footer_en: Voucher then valid 30 days
+  footer_zh: 饮品券有效期 30 日
+  footer_zh_hk: 飲品券有效期 30 日
+  s1_en: >-
+    Under A, a visit with at least 40 dollars of eligible food or drink earns one stamp, at most one a
+    day. Six stamps earn a standard drink normally priced at 40 dollars. The card expires 180 days after
+    its first stamp.
+  s1_zh: >-
+    方案 A：每次到店买满四十元合资格的食品或饮品，就盖一个章，每天最多一个。集满六个，可以换一杯原价四十元的标准饮品。集章卡从第一个章起计，一百八十天到期。
+  s1_zh_hk: >-
+    方案 A：每次到店買滿四十蚊合資格嘅食物或者飲品，就印一個印花，每日最多一個。儲夠六個，可以換一杯原價四十蚊嘅標準飲品。印花卡由第一個印花起計，一百八十日到期。
+  s2_en: >-
+    Under B, each dollar of eligible spending earns one point, with no daily limit, and 240 points earn
+    the same drink. Each point expires 180 days after it is earned, oldest first.
+  s2_zh: 方案 B：合资格消费每一元赚一分，没有每日上限，二百四十分可以换同一款饮品。每笔积分从赚到那天起计，一百八十天到期，较早的先扣。
+  s2_zh_hk: 方案 B：合資格消費每一蚊賺一分，冇每日上限，二百四十分可以換同一款飲品。每筆積分由賺到嗰日起計，一百八十日到期，舊嘅先扣。
+  s3_en: >-
+    Either way, the drink voucher is issued at once, usable from the next visit and valid for 30 days.
+    A costs 2,000 dollars to set up, and so does B.
+  s3_zh: 无论哪个方案，达标后马上发饮品券，下次到店就能用，有效期三十天。两个方案的设置费都是二千元。
+  s3_zh_hk: 無論邊個方案，達標之後即刻發飲品券，下次到店就用得，有效期三十日。兩個方案嘅設置費都係二千蚊。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Visits or points first?
+  title_zh: 先试集章还是积分？
+  title_zh_hk: 先試集印還是積分？
+  en: >-
+    Would you pilot the visit-based reward or the spend-based points first? Which purchasing behaviour
+    do you want to recognise, and how would you make the remaining steps and expiry clear? Pause and vote.
+  zh: 你会先试行按到店次数的集章，还是按消费金额的积分？你想奖励哪一种购买行为？又会怎样让顾客看清还差多少、什么时候到期？请暂停，投个票。
+  zh_hk: 你會先試行按到店次數嘅集印花，定係按消費金額嘅積分？你想獎勵邊種購買行為？又會點樣令顧客睇清楚仲差幾多、幾時到期？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A comprehension check
+  title_zh: 理解程度测试
+  title_zh_hk: 理解程度測試
+  step1_en: >-
+    Both questions right: A 18 · B 11 of 20
+  step1_zh: 两题都对：A 18 人 · B 11 人
+  step1_zh_hk: 兩題都對：A 18 人 · B 11 人
+  step2_en: >-
+    +HK$2,000: a clear receipt panel for B
+  step2_zh: 加 HK$2,000：B 收据显示栏
+  step2_zh_hk: 加 HK$2,000：B 收據顯示欄
+  step3_en: >-
+    Repeat task: B 18 of 20
+  step3_zh: 再做一次：B 有 18 人答对
+  step3_zh_hk: 再做一次：B 有 18 人答對
+  s1_en: >-
+    Twenty consenting customers try hypothetical tasks with both draft explanations. Eighteen correctly
+    identify the next reward requirement and the expiry under A, compared with eleven under B.
+  s1_zh: 二十位同意参与的顾客，看过两份解说稿后做假设性的任务。方案 A 有十八人能同时答对下一份奖赏的门槛和到期日，方案 B 只有十一人。
+  s1_zh_hk: 二十個同意參與嘅顧客，睇完兩份解說稿之後做假設性嘅任務。方案 A 有十八個可以同時答啱下一份獎賞嘅門檻同到期日，方案 B 得十一個。
+  s2_en: >-
+    B's mistakes mostly concern the 240-point threshold, and mixing up point expiry with the 30-day voucher.
+    For another 2,000 dollars, B's receipt can show points remaining, points still needed and the earliest
+    expiry.
+  s2_zh: >-
+    B 的错误，主要是搞不清二百四十分的门槛，以及把积分到期和三十天的饮品券有效期混在一起。再加二千元，B 可以在收据上显示剩余积分、还差多少分，以及最早的到期日。
+  s2_zh_hk: >-
+    B 嘅錯誤，主要係搞唔清二百四十分嘅門檻，同埋將積分到期同三十日嘅飲品券有效期撈亂咗。再加二千蚊，B 可以喺收據上面顯示剩低幾多分、仲差幾多分，同埋最早嘅到期日。
+  s3_en: >-
+    In a repeat task, eighteen of the same twenty answer B correctly. Practice may contribute; this is
+    not a controlled estimate. Clarified B costs 4,000 to set up, against A's 2,000.
+  s3_zh: 同一批二十人再做一次 B 的任务，有十八人答对。练习本身也可能有影响，这不是受控的估计。改良后的 B 设置费合计四千元，A 是二千元。
+  s3_zh_hk: 同一批二十人再做一次 B 嘅任務，有十八個答啱。練習本身都可能有影響，呢個唔係受控嘅估算。改良之後嘅 B 設置費合共四千蚊，A 係二千蚊。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Simple A or clarified B?
+  title_zh: 简单的 A，还是改良的 B？
+  title_zh_hk: 簡單的 A，還是改良的 B？
+  en: >-
+    Would you choose the simple visit scheme, or pay for the clarified points version? Distinguish demonstrated
+    comprehension from future behaviour, and say what you would measure. Pause and vote.
+  zh: 你会选简单的集章方案，还是多付钱做改良版的积分方案？请分清已经证实的理解程度和日后的实际行为，再说说你会衡量什么。请暂停，投个票。
+  zh_hk: 你會揀簡單嘅集印花方案，定係多俾錢做改良版嘅積分方案？請分清已經證實嘅理解程度同日後嘅實際行為，再講吓你會量度乜嘢。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Recognise visits or spending?
+  title_zh: 奖励常来，还是奖励多买？
+  title_zh_hk: 獎勵常來，還是獎勵多買？
+  step1_en: >-
+    Six HK$40 visits: a drink under both
+  step1_zh: 6 次 HK$40：两案都能换
+  step1_zh_hk: 6 次 HK$40：兩案都能換
+  step2_en: >-
+    One HK$240 order: 1 stamp vs 240 points
+  step2_zh: 一次 HK$240：1 个章对 240 分
+  step2_zh_hk: 一次 HK$240：1 個印花對 240 分
+  step3_en: Same total cost ≠ same for everyone
+  step3_zh: 总成本相同 ≠ 人人得益相同
+  step3_zh_hk: 總成本相同 ≠ 人人得益相同
+  s1_en: >-
+    A recognises six qualifying days, however much is spent above the minimum. B recognises cumulative
+    spending. Six visits of 40 dollars earn the same drink under either scheme, if progress is still valid.
+  s1_zh: >-
+    A 奖励的是六个合资格的消费日，超出门槛多花多少都一样。B 奖励的是累积消费。六次各四十元的消费，只要还在有效期内，两个方案都能换到同一杯饮品。
+  s1_zh_hk: >-
+    A 獎勵嘅係六個合資格嘅消費日，超出門檻多使幾多都一樣。B 獎勵嘅係累積消費。六次各四十蚊嘅消費，只要仲喺有效期內，兩個方案都換到同一杯飲品。
+  s2_en: >-
+    But a single 240-dollar purchase gives one A stamp, yet 240 B points and a voucher for the next visit.
+  s2_zh: 但一次过消费二百四十元，在 A 只得一个章，在 B 却有二百四十分，下次到店就能用饮品券。
+  s2_zh_hk: 但一次過使二百四十蚊，喺 A 只得一個印花，喺 B 就有二百四十分，下次到店就用得飲品券。
+  s3_en: >-
+    So the schemes favour different purchase patterns. An equal forecast reward cost does not make them
+    equivalent for every customer.
+  s3_zh: 所以两个方案奖励的是不同的购买模式。预计的奖赏成本相同，不代表对每位顾客都一样。
+  s3_zh_hk: 所以兩個方案獎勵嘅係唔同嘅購買模式。預計嘅獎賞成本一樣，唔代表對每個顧客都一樣。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Comprehension is a midpoint
+  title_zh: 看得懂，只是中途成果
+  title_zh_hk: 看得懂，只是中途成果
+  step1_en: Show what remains and what expires next
+  step1_zh: 列明还差多少、什么先到期
+  step1_zh_hk: 列明還差多少、甚麼先到期
+  step2_en: 18 of 20 = 90% · 11 = 55% · +35 points
+  step2_zh: 18/20 = 90% · 11 = 55% · 差 35 个百分点
+  step2_zh_hk: 18/20 = 90% · 11 = 55% · 差 35 個百分點
+  step3_en: A cheaper; B fits varied spending
+  step3_zh: A 较省钱；B 奖励不同消费
+  step3_zh_hk: A 較省錢；B 獎勵不同消費
+  s1_en: >-
+    A has a card clock, and B has an expiry for each batch of points; both then add a separate 30-day
+    voucher clock. Show what remains, what expires next and when redemption is possible. Never fake progress
+    or count confused non-redemption as success.
+  s1_zh: >-
+    A 按整张卡计时，B 按每笔积分计，达标后还有三十天的券期。要列明还差多少、什么先到期、何时能换。不能虚增进度，也不能把误解造成的没兑换当成成功。
+  s1_zh_hk: >-
+    A 按成張卡計時，B 按每筆積分計，達標後仲有三十日券期。要列明仲差幾多、乜嘢先到期、幾時換得。唔可以虛報進度，亦唔可以將誤會造成嘅冇換當成成功。
+  s2_en: >-
+    Eighteen of twenty is 90 percent; eleven is 55. The repeat task rises by seven people, or 35 percentage
+    points. That does not show the panel caused it, that all customers understand, or that anyone will
+    buy more.
+  s2_zh: >-
+    二十人中十八人是百分之九十，十一人是百分之五十五。再做一次，答对的多了七人，即三十五个百分点。但这证明不了是收据栏的功劳、人人都懂，或者有人会多买。
+  s2_zh_hk: >-
+    二十人入面十八個係百分之九十，十一個係百分之五十五。再做一次，答啱嘅多咗七個，即係三十五個百分點。但呢個證明唔到係收據欄嘅功勞、人人都明，或者有人會多買。
+  s3_en: >-
+    A is simpler and cheaper to set up. Clarified B can still be preferable if recognising varied basket
+    spending fits the café's purpose.
+  s3_zh: A 比较简单，设置费也较低。如果咖啡店想奖励不同金额的消费，改良后的 B 仍然可以是更好的选择。
+  s3_zh_hk: A 比較簡單，設置費亦低啲。如果咖啡店想獎勵唔同金額嘅消費，改良之後嘅 B 仍然可以係更好嘅選擇。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Measure behaviour; keep rights
+  title_zh: 衡量行为，保障权益
+  title_zh_hk: 量度行為，保障權益
+  en: >-
+    During a pilot, test actual understanding, redemption, complaints, reward costs and purchasing over
+    time, without pressuring customers to spend unnecessarily. Keep existing balances and agreed terms
+    untouched, and keep the physical card and staff help available.
+  zh: >-
+    试行期间，要持续测试顾客的实际理解、兑换情况、投诉、奖赏成本和购买行为，但不能催促顾客做不必要的消费。现有会员的结余和已约定的条款都要保留，实体卡和店员协助也要继续提供。
+  zh_hk: >-
+    試行期間，要持續測試顧客嘅實際理解、換領情況、投訴、獎賞成本同購買行為，但唔可以催谷顧客做唔必要嘅消費。現有會員嘅結餘同已約定嘅條款都要保留，實體卡同店員協助亦要繼續提供。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Earned is not understood
+  title_zh: 赚到不等于看懂
+  title_zh_hk: 賺到不等於看懂
+  q1_en: >-
+    A: 18 of 20 · B: 11, then 18
+  q1_zh: A：18/20 · B：11 → 18
+  q1_zh_hk: A：18/20 · B：11 → 18
+  q2_en: >-
+    Setup: A HK$2,000 · clarified B HK$4,000
+  q2_zh: 设置费：A HK$2,000 · 改良 B HK$4,000
+  q2_zh_hk: 設置費：A HK$2,000 · 改良 B HK$4,000
+  s1_en: >-
+    A reward must be usable, not merely earned. Choose which behaviour to recognise, then make the remaining
+    steps and every expiry clock legible.
+  s1_zh: 奖赏要换得到，不只是赚得到。先决定要奖励哪一种行为，再把还差几步和每个到期时间讲清楚。
+  s1_zh_hk: 獎賞要換得到，唔只係賺得到。先決定要獎勵邊種行為，再將仲差幾多步同每個到期時間講清楚。
+  s2_en: >-
+    Comprehension is an intermediate result, not proof of more repeat purchases.
+  s2_zh: 看得懂只是中途的成果，不能证明顾客会更常回来购买。
+  s2_zh_hk: 睇得明只係中途嘅成果，證明唔到顧客會更常返嚟買嘢。
+  s3_en: >-
+    The café, both schemes, costs and comprehension tasks are fictional. Official scene art is a teaching
+    illustration only.
+  s3_zh: 咖啡店、两个奖赏方案、成本和理解测试都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 咖啡店、兩個獎賞方案、成本同理解測試都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

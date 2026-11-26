@@ -941,6 +941,33 @@ def track_columns(count: int, pixel_width: int, pixel_height: int, min_cell: flo
     return max(1, cols)
 
 
+def track_slots(values: list[int], cols: int, *, left_to_right: bool) -> dict[int, tuple[int, int]]:
+    """Map each track value to ``(row, column)``.
+
+    Portrait rows read left to right, and the next row starts at the left.
+    Landscape keeps the snake. A one-row track never turns, so 16:9 is the
+    same line of numbers either way.
+    """
+    cols = max(1, int(cols))
+    slots: dict[int, tuple[int, int]] = {}
+    if left_to_right:
+        for i, value in enumerate(values):
+            slots[int(value)] = (i // cols, i % cols)
+        return slots
+    row_i, col_i, direction = 0, 0, 1
+    for i, value in enumerate(values):
+        slots[int(value)] = (row_i, col_i)
+        if i == len(values) - 1:
+            break
+        nxt = col_i + direction
+        if nxt < 0 or nxt >= cols:
+            row_i += 1
+            direction *= -1
+        else:
+            col_i = nxt
+    return slots
+
+
 def count_event(beat: dict) -> tuple[int, int] | None:
     """(step index, how many count landings) for a beat that counts aloud.
 

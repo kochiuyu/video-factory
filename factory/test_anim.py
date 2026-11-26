@@ -1703,6 +1703,11 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-NUM-08": [
                 "lesson_hook", "part_whole", "part_whole", "part_whole", "part_whole", "lesson_takeaway",
             ],
+            "P1-NUM-12": [
+                "lesson_hook",
+                "part_whole", "part_whole", "part_whole", "part_whole", "part_whole", "part_whole",
+                "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -1909,6 +1914,45 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(labels_for(recap8, "zh_hk")["lines"][2], "攞走零個，冇改變。")
         self.assertEqual(labels_for(recap8, "zh_hk")["lines"][3], "攞走四個，剩返零個。")
         self.assertEqual(labels_for(recap8, "en")["bonds"], [[0, 4], [4, 0], [4], [0, -4]])
+        twelve = load_lesson(P1 / "P1-NUM-12.yaml")
+        parts = [beat for beat in twelve["beats"] if beat.get("scene") == "part_whole"]
+        self.assertEqual(
+            [(b.get("a"), b.get("b"), b.get("leave")) for b in parts],
+            [(3, 2, "b"), (3, 2, None), (4, 6, "b"), (4, 6, "a"), (5, 4, "b"), (5, 4, None)],
+        )
+        self.assertEqual(labels_for(parts[0], "en")["covered_equation"], ["5", "-", "2", "=", "3"])
+        self.assertEqual(labels_for(parts[1], "en")["equation"], ["5", "=", "3", "+", "2"])
+        self.assertEqual(labels_for(parts[2], "en")["covered_equation"], ["10", "-", "6", "=", "4"])
+        self.assertEqual(labels_for(parts[3], "en")["covered_equation"], ["10", "-", "4", "=", "6"])
+        self.assertEqual(labels_for(parts[4], "en")["covered_equation"], ["9", "-", "4", "=", "5"])
+        self.assertEqual(labels_for(parts[5], "en")["equation"], ["9", "=", "5", "+", "4"])
+        self.assertEqual(parts[0]["s3_en"], "Take two away. Three are left.")
+        self.assertEqual(parts[0]["s3_zh_hk"], "攞走兩個，剩返三個。")
+        self.assertEqual(parts[3]["s3_zh"], "拿走四个，剩下六个。")
+        self.assertEqual(parts[4]["s3_en"], "Take four away. Five are left.")
+        self.assertEqual(parts[5]["s3_zh_hk"], "五加四係九。合埋係九。")
+        self.assertNotIn("difference", " ".join(str(b.get("s3_en") or "") for b in twelve["beats"]).lower())
+        self.assertNotIn("cannot", " ".join(str(b.get("s1_en") or "") for b in twelve["beats"]).lower())
+        self.assertNotIn("嗎", _beat_lines(twelve, "zh_hk"))
+        self.assertNotIn("拿走", _beat_lines(twelve, "zh_hk"))
+        self.assertNotIn("剩低", _beat_lines(twelve, "zh_hk"))
+        recap = next(beat for beat in twelve["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap), 4)
+        self.assertEqual(labels_for(recap, "en")["title"], "Can we put the parts back?")
+        self.assertEqual(labels_for(recap, "zh")["title"], "两部分可以放回去吗？")
+        self.assertEqual(labels_for(recap, "zh_hk")["title"], "兩部分可唔可以放返去？")
+        self.assertEqual(
+            labels_for(recap, "en")["lines"],
+            [
+                "Take two away. Three stay.",
+                "Put two with three. They make five.",
+                "Take six away. Four stay.",
+                "Put four with five. They make nine.",
+            ],
+        )
+        self.assertEqual(labels_for(recap, "zh")["lines"][1], "二和三放一起，是五。")
+        self.assertEqual(labels_for(recap, "zh_hk")["lines"][3], "四同五放一齊，係九。")
+        self.assertEqual(labels_for(recap, "en")["bonds"], [[3, -2], [3, 2], [4, -6], [5, 4]])
 
     def test_part_whole_bounds(self):
         good = {

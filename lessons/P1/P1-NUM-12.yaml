@@ -1,0 +1,154 @@
+# P1-NUM-12. Mirrors MathQuiz path subtract / lesson partsback,
+# "Put the parts back together".
+# Five is three and two. Take two away, then put the two back: 3 + 2 = 5.
+# Ten is four and six. Take either part away and the other stays.
+# Nine take away four leaves five. Put the four back: 5 + 4 = 9.
+# The minus sign is U+2212.
+# https://github.com/kochiuyu/mathquiz learn-subtract.js (path subtract, lesson partsback).
+# Speech is for age 6: one short idea per sentence. The heading is answered on screen.
+id: P1-NUM-12
+title_en: Put the parts back
+title_zh: 把两部分放回一起
+title_zh_hk: 將兩部分放返一齊
+duration_target_s: 94
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: parts
+  a: 3
+  b: 2
+  seconds: 8
+  title_en: Put the parts back
+  title_zh: 把两部分放回一起
+  title_zh_hk: 將兩部分放返一齊
+  s1_en: Can we put the two parts back?
+  s1_zh: 两部分可以放回去吗？
+  s1_zh_hk: 兩部分可唔可以放返去？
+
+- id: apart
+  visual: animated
+  scene: part_whole
+  a: 3
+  b: 2
+  leave: b
+  seconds: 12
+  s1_en: Five is three and two. The two will go.
+  s1_zh: 五是三和二。这两个会拿走。
+  s1_zh_hk: 五係三同二。呢兩個會攞走。
+  s2_en: Three. Two.
+  s2_zh: 三，二。
+  s2_zh_hk: 三，二。
+  s3_en: Take two away. Three are left.
+  s3_zh: 拿走两个，剩下三个。
+  s3_zh_hk: 攞走兩個，剩返三個。
+
+- id: back
+  visual: animated
+  scene: part_whole
+  a: 3
+  b: 2
+  seconds: 12
+  s1_en: Put the two back with the three.
+  s1_zh: 把两个放回三个旁边。
+  s1_zh_hk: 將兩個放返三個旁邊。
+  s2_en: Three. Two.
+  s2_zh: 三，二。
+  s2_zh_hk: 三，二。
+  s3_en: Three and two make five. Together they make five.
+  s3_zh: 三加二是五。合起来是五。
+  s3_zh_hk: 三加二係五。合埋係五。
+
+- id: six
+  visual: animated
+  scene: part_whole
+  a: 4
+  b: 6
+  leave: b
+  seconds: 12
+  s1_en: Ten is four and six. The six will go.
+  s1_zh: 十是四和六。这六个会拿走。
+  s1_zh_hk: 十係四同六。呢六個會攞走。
+  s2_en: Four. Six.
+  s2_zh: 四，六。
+  s2_zh_hk: 四，六。
+  s3_en: Take six away. Four are left.
+  s3_zh: 拿走六个，剩下四个。
+  s3_zh_hk: 攞走六個，剩返四個。
+
+- id: four
+  visual: animated
+  scene: part_whole
+  a: 4
+  b: 6
+  leave: a
+  seconds: 12
+  s1_en: The same ten. Now the four will go.
+  s1_zh: 还是这十个。现在这四个会拿走。
+  s1_zh_hk: 仲係呢十個。而家呢四個會攞走。
+  s2_en: Four. Six.
+  s2_zh: 四，六。
+  s2_zh_hk: 四，六。
+  s3_en: Take four away. Six are left.
+  s3_zh: 拿走四个，剩下六个。
+  s3_zh_hk: 攞走四個，剩返六個。
+
+- id: nine
+  visual: animated
+  scene: part_whole
+  a: 5
+  b: 4
+  leave: b
+  seconds: 12
+  s1_en: Nine is five and four. The four will go.
+  s1_zh: 九是五和四。这四个会拿走。
+  s1_zh_hk: 九係五同四。呢四個會攞走。
+  s2_en: Five. Four.
+  s2_zh: 五，四。
+  s2_zh_hk: 五，四。
+  s3_en: Take four away. Five are left.
+  s3_zh: 拿走四个，剩下五个。
+  s3_zh_hk: 攞走四個，剩返五個。
+
+- id: fit
+  visual: animated
+  scene: part_whole
+  a: 5
+  b: 4
+  seconds: 12
+  s1_en: Put the four back with the five.
+  s1_zh: 把四个放回五个旁边。
+  s1_zh_hk: 將四個放返五個旁邊。
+  s2_en: Five. Four.
+  s2_zh: 五，四。
+  s2_zh_hk: 五，四。
+  s3_en: Five and four make nine. Together they make nine.
+  s3_zh: 五加四是九。合起来是九。
+  s3_zh_hk: 五加四係九。合埋係九。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: parts
+  bonds:
+  - [3, -2]
+  - [3, 2]
+  - [4, -6]
+  - [5, 4]
+  seconds: 14
+  title_en: Can we put the parts back?
+  title_zh: 两部分可以放回去吗？
+  title_zh_hk: 兩部分可唔可以放返去？
+  s1_en: Take two away. Three stay.
+  s1_zh: 拿走两个，剩下三个。
+  s1_zh_hk: 攞走兩個，剩返三個。
+  s2_en: Put two with three. They make five.
+  s2_zh: 二和三放一起，是五。
+  s2_zh_hk: 二同三放一齊，係五。
+  s3_en: Take six away. Four stay.
+  s3_zh: 拿走六个，剩下四个。
+  s3_zh_hk: 攞走六個，剩返四個。
+  s4_en: Put four with five. They make nine.
+  s4_zh: 四和五放一起，是九。
+  s4_zh_hk: 四同五放一齊，係九。

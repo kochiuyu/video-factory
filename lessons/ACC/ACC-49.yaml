@@ -1,0 +1,289 @@
+id: ACC-49
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Ready to sell, or still in use?
+title_zh: 已经可以出售，还是仍在使用？
+title_zh_hk: 已可出售，還是仍在使用？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-49
+  kicker_en: ACC-49
+  kicker_zh: ACC-49
+  kicker_zh_hk: ACC-49
+  title_en: Ready to sell, or still in use?
+  title_zh: 已经可以出售，还是仍在使用？
+  title_zh_hk: 已可出售，還是仍在使用？
+  image: art/ready-to-sell-or-still-in-use-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 1 October a Hong Kong carton-finishing business commits to sell one machine and starts marketing
+    it. The manager wants to classify it as held for sale at once and stop depreciation. But no buyer
+    can take the machine until its replacement is installed. Which position should the controller take?
+  zh: >-
+    十月一日，香港一家纸箱加工企业决定出售一台设备，并开始积极寻找买方。经理想马上把它划分为持有待售，停止计提折旧。可是在替换设备安装好之前，买方不能把它提走。财务主管应该怎样处理？
+  zh_hk: >-
+    十月一日，香港一間紙箱加工企業決定出售一部機器，開始積極搵買家。經理想即刻將佢分類為持作出售，停止計提折舊。但係替代機器未裝好之前，買家唔可以攞走佢。財務主管應該點處理？
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Known on 1 October
+  title_zh: 10月1日已知信息
+  title_zh_hk: 10月1日可用資料
+  row1_en: 30 Sep carrying amount
+  row1_zh: 9月30日账面价值
+  row1_zh_hk: 9月30日賬面值
+  row2_en: Monthly depreciation in use
+  row2_zh: 使用期间月折旧额
+  row2_zh_hk: 使用期間每月折舊
+  row3_en: 1 Oct fair value
+  row3_zh: 10月1日公允价值
+  row3_zh_hk: 10月1日公平值
+  row4_en: Direct costs to sell
+  row4_zh: 出售直接增量费用
+  row4_zh_hk: 出售的直接增量成本
+  col1_en: HK$
+  col1_zh: 港元
+  col1_zh_hk: 港元
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11: 480,000
+  c12_en: No prior impairment
+  c12_zh: 此前未减值
+  c12_zh_hk: 以往沒有減值
+  c21: 12,000
+  c22_en: While in use
+  c22_zh: 使用期间
+  c22_zh_hk: 使用期間
+  c31: 450,000
+  c32_en: Estimate
+  c32_zh: 估计值
+  c32_zh_hk: 估計
+  c41: 15,000
+  c42_en: Incremental
+  c42_zh: 增量费用
+  c42_zh_hk: 增量成本
+  footer_en: No handover before the replacement
+  footer_zh: 替换设备到位前买方不能提走
+  footer_zh_hk: 替代機器到位前買家不能取走
+  s1_en: >-
+    The business expects to close in February, at a reasonable price, with little prospect of reversing
+    the plan. But the restriction on handing over the machine is not usual or customary in such sales.
+  s1_zh: 企业预计二月完成交易，价格合理，反悔的可能性很小。不过，替换设备到位前不交付旧设备，这并不是这类出售通常或惯常的限制。
+  s1_zh_hk: 企業預計二月交割，價錢合理，撤回計劃嘅機會好細。但係未有替代機器就唔交機，呢個並唔係同類交易一般或慣常嘅限制。
+  s2_en: >-
+    The controller says it stays as plant and equipment until it is both available for immediate sale
+    on normal terms and highly probable to sell.
+  s2_zh: 财务主管认为，设备必须同时满足两个条件：能按正常条款立即出售，而且出售极可能发生。在那之前，仍应列为厂房及设备。
+  s2_zh_hk: 財務主管認為，機器要同時符合兩個條件：可以按正常條件即時出售，同埋出售極有可能發生。喺嗰之前，仍然應該列作廠房及設備。
+  s3_en: >-
+    The carrying amount at 30 September is 480,000, with 12,000 of monthly depreciation. Fair value on
+    1 October is 450,000, and direct costs to sell are 15,000.
+  s3_zh: 九月三十日的账面价值是四十八万，每月折旧一万二千。十月一日的公允价值是四十五万，出售直接费用一万五千。
+  s3_zh_hk: 九月三十日嘅賬面值係四十八萬，每月折舊一萬二千。十月一日公平值係四十五萬，出售嘅直接成本一萬五千。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Held for sale on 1 October?
+  title_zh: 10月1日划为持有待售？
+  title_zh_hk: 10月1日分類為持作出售？
+  en: >-
+    Which accounting position should the controller take on 1 October? If the machine stays unavailable
+    through November, what carrying amount and depreciation should be reported at 30 November? Pause and
+    vote.
+  zh: 十月一日，财务主管应该选择哪种处理？如果到十一月底设备仍然不能交给买方，十一月三十日的账面价值和折旧应该是多少？请暂停，投个票。
+  zh_hk: 十月一日，財務主管應該揀邊種處理？如果到十一月底機器仍然唔可以交俾買家，十一月三十日應該列報幾多賬面值同折舊？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The replacement arrives
+  title_zh: 替换设备到货
+  title_zh_hk: 替代機器送抵
+  step1_en: >-
+    1 Dec: immediate transfer allowed
+  step1_zh: 12月1日：批准立即交付
+  step1_zh_hk: 12月1日：批准即時交付
+  step2_en: >-
+    1 Dec: fair value 420,000; costs 15,000
+  step2_zh: 12月1日：公允价值420,000；费用15,000
+  step2_zh_hk: 12月1日：公平值420,000；成本15,000
+  step3_en: >-
+    31 Dec: fair value 436,000; unsold
+  step3_zh: 12月31日：公允价值436,000；未售出
+  step3_zh_hk: 12月31日：公平值436,000；未售出
+  s1_en: >-
+    The replacement arrives. On 1 December the owner authorises immediate transfer in the machine's present
+    condition on customary terms, and all the sale-probability criteria are still met.
+  s1_zh: 替换设备到货了。十二月一日，企业负责人批准按惯常条款，把设备按现状立即交付。出售“极可能发生”的各项条件仍然满足。
+  s1_zh_hk: 替代機器送到。十二月一日，企業負責人批准按慣常條件，以機器當時嘅狀況即時交付，出售「極有可能」嘅各項條件仍然符合。
+  s2_en: Fair value on 1 December is 420,000, with costs to sell still 15,000.
+  s2_zh: 当天评估的公允价值是四十二万，出售费用仍然是一万五千。
+  s2_zh_hk: 當日評估嘅公平值係四十二萬，出售成本仍然係一萬五千。
+  s3_en: >-
+    At 31 December fair value is 436,000, costs are unchanged, and the machine has not sold but still
+    meets the criteria.
+  s3_zh: 十二月三十一日，公允价值是四十三万六千，费用不变；设备还没卖出，但仍符合分类条件。
+  s3_zh_hk: 十二月三十一日，公平值係四十三萬六千，成本不變；機器仲未賣出，但仍然符合分類條件。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Measure on 1 and 31 December
+  title_zh: 12月1日和31日如何计量？
+  title_zh_hk: 12月1日及31日如何計量？
+  en: >-
+    Show the classification, depreciation, loss or gain and carrying amount on 1 and 31 December. Why
+    is selling this machine not a discontinued operation? Pause and vote.
+  zh: 分别列出十二月一日和三十一日的分类、折旧、损失或利得以及账面价值。出售这台设备为什么不属于终止经营？请暂停，投个票。
+  zh_hk: 分別列出十二月一日同三十一日嘅分類、折舊、虧損或收益同賬面值。出售呢部機器點解唔屬已終止業務？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: >-
+    Oct–Nov: still in use
+  title_zh: 10月和11月：仍在使用
+  title_zh_hk: 10月和11月：仍在使用
+  step1_en: Not available for immediate sale
+  step1_zh: 不能立即出售
+  step1_zh_hk: 不可即時出售
+  step2_en: 480,000 − 2 × 12,000 = 456,000
+  step2_zh: 480,000 − 2 × 12,000 = 456,000
+  step2_zh_hk: 480,000 − 2 × 12,000 = 456,000
+  step3_en: No October fair value test
+  step3_zh: 不做10月的公允价值测试
+  step3_zh_hk: 不做10月的公平值測試
+  s1_en: >-
+    The buyer cannot take the machine, so the October plan alone does not qualify. Both conditions must
+    hold: available for immediate sale, and highly probable.
+  s1_zh: 买方不能提走设备，单凭十月的出售计划不足以划分为持有待售。两个条件必须同时满足：能立即出售，而且极可能出售。
+  s1_zh_hk: 買家攞唔走機器，淨係靠十月嘅出售計劃唔夠分類為持作出售。兩個條件要同時符合：可以即時出售，同埋極有可能出售。
+  s2_en: >-
+    Continue depreciation: 2 times 12,000, or 24,000, leaving 456,000 at 30 November.
+  s2_zh: 继续计提折旧：二乘一万二千，即二万四千，十一月三十日的账面价值是四十五万六千。
+  s2_zh_hk: 繼續計提折舊：二乘一萬二千，即係二萬四千，十一月三十日賬面值係四十五萬六千。
+  s3_en: >-
+    Do not apply the October held-for-sale fair value test to equipment that has not met the classification
+    criteria.
+  s3_zh: 设备还没符合分类条件，就不能用十月的数字做持有待售的公允价值测试。
+  s3_zh_hk: 機器仲未符合分類條件，就唔應該用十月嘅數字做持作出售嘅公平值測試。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Classify when both hold
+  title_zh: 两个条件都满足才划分
+  title_zh_hk: 兩項條件都符合才分類
+  step1_en: >-
+    1 Dec: 405,000; loss 51,000
+  step1_zh: 12月1日：405,000；损失51,000
+  step1_zh_hk: 12月1日：405,000；虧損51,000
+  step2_en: >-
+    31 Dec: 421,000; gain 16,000
+  step2_zh: 12月31日：421,000；利得16,000
+  step2_zh_hk: 12月31日：421,000；收益16,000
+  step3_en: Not a discontinued operation
+  step3_zh: 不属于终止经营
+  step3_zh_hk: 不屬已終止業務
+  s1_en: >-
+    On 1 December, measure at the lower of 456,000 and 420,000 minus 15,000, which is 405,000. Recognise
+    a 51,000 loss and stop depreciation. No sale is recognised and no proceeds are received yet.
+  s1_zh: 十二月一日，按四十五万六千与四十二万减一万五千，即四十万五千，两者孰低计量。确认损失五万一千，停止计提折旧。还没有确认出售，也没有收到款项。
+  s1_zh_hk: >-
+    十二月一日，按四十五萬六千同四十二萬減一萬五千，即係四十萬五千，兩者之中較低者計量。確認虧損五萬一千，停止計提折舊。仲未確認出售，亦未收到款項。
+  s2_en: >-
+    At 31 December, net fair value is 436,000 minus 15,000, or 421,000. Recognise a 16,000 gain, within
+    the 51,000 loss available to reverse, and show 421,000 on a separate held-for-sale line.
+  s2_zh: >-
+    十二月三十一日，公允价值减出售费用是四十三万六千减一万五千，等于四十二万一千。确认利得一万六千，没超过可转回的五万一千损失，并在持有待售项目单独列报。
+  s2_zh_hk: >-
+    十二月三十一日，公平值減出售成本係四十三萬六千減一萬五千，即係四十二萬一千。確認收益一萬六千，冇超過可撥回嘅五萬一千虧損，並以獨立嘅持作出售項目列報。
+  s3_en: >-
+    There is no December depreciation. A single machine is not a separate major line of business or geographical
+    area, so its sale is not a discontinued operation.
+  s3_zh: 十二月不计提折旧。一台设备既不是独立的主要业务，也不代表独立的主要经营地区，所以出售它不属于终止经营。
+  s3_zh_hk: 十二月唔計折舊。一部機器唔係一條獨立嘅主要業務線，亦唔係一個獨立嘅主要經營地區，所以出售佢唔屬已終止業務。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: The reversal has a ceiling
+  title_zh: 转回有上限
+  title_zh_hk: 撥回有上限
+  en: >-
+    Why could a rise in net fair value above 456,000 not all be recognised here? The gain is limited to
+    the cumulative 51,000 loss recognised on classification. Also ask: if another company withdraws an
+    internal restriction partway through the year, the classification date is when both conditions are
+    first met.
+  zh: >-
+    为什么公允价值减出售费用即使超过四十五万六千，这里也不能确认全部增幅？因为利得只能以划分时确认的累计损失五万一千为限。另外想一想：如果另一家企业在年内某天取消内部限制，分类日就是两个条件第一次同时满足的那一天。
+  zh_hk: >-
+    點解公平值減出售成本就算超過四十五萬六千，呢度都唔可以確認全部升幅？因為收益只可以以分類時確認嘅累計虧損五萬一千為上限。另外諗吓：如果另一間公司喺年內某日撤銷內部限制，分類日就係兩個條件第一次同時符合嗰日。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Sale-ready, not just sale-minded
+  title_zh: 能立即出售，而不只是想卖
+  title_zh_hk: 要可即時出售，不只想賣
+  q1_en: >-
+    Oct–Nov: depreciate; 456,000
+  q1_zh: 10–11月：计提折旧；456,000
+  q1_zh_hk: 10–11月：計提折舊；456,000
+  q2_en: >-
+    Dec: loss 51,000, then gain 16,000
+  q2_zh: 12月：损失51,000，再利得16,000
+  q2_zh_hk: 12月：虧損51,000，再收益16,000
+  s1_en: >-
+    An asset is held for sale only when it is available for immediate sale in its present condition and
+    the sale is highly probable.
+  s1_zh: 资产只有在按现状可以立即出售，而且出售极可能发生时，才能划分为持有待售。
+  s1_zh_hk: 資產只有喺按現狀可以即時出售，而且出售極有可能發生，先可以分類為持作出售。
+  s2_en: >-
+    Until then, keep depreciating. After classification, measure at the lower of carrying amount and fair
+    value less costs to sell.
+  s2_zh: 在此之前继续计提折旧。划分之后，按账面价值与公允价值减出售费用两者孰低计量。
+  s2_zh_hk: 喺嗰之前繼續計提折舊。分類之後，按賬面值同公平值減出售成本兩者之中較低者計量。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 196

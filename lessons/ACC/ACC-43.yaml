@@ -1,0 +1,280 @@
+id: ACC-43
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The clinic paid for setup. What does it own?
+title_zh: 诊所付了配置费，取得了什么？
+title_zh_hk: 診所付了設定費，究竟取得了甚麼？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: ACC-43
+  kicker_en: ACC-43
+  kicker_zh: ACC-43
+  kicker_zh_hk: ACC-43
+  title_en: The clinic paid for setup. What does it own?
+  title_zh: 诊所付了配置费，取得了什么？
+  title_zh_hk: 診所付了設定費，究竟取得了甚麼？
+  image: art/configured-but-not-owned-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 1 January a Hong Kong clinic group pays a cloud vendor 96,000 Hong Kong dollars for a configured
+    scheduling app. The bookkeeper wants to capitalise the whole payment as software. But what does the
+    clinic actually control? Close the books on 30 June.
+  zh: >-
+    一月一日，香港一家诊所集团向云服务商付了九万六千港元，用来使用一款配置好的排程应用。记账人员想把整笔付款作为软件资本化。可是，诊所实际控制了什么？请在六月三十日结账。
+  zh_hk: >-
+    一月一日，香港一間診所集團俾咗九萬六千港元雲端供應商，用一個設定好嘅預約排程應用程式。簿記員想將成筆付款資本化做軟件。但係，診所實際上控制咗乜嘢？請喺六月三十日結賬。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Paid on 1 January, HK$
+  title_zh: 1月1日支付，港元
+  title_zh_hk: 1月1日付款，港元
+  row1_en: Application access
+  row1_zh: 应用访问服务
+  row1_zh_hk: 使用應用程式
+  row2_en: Initial configuration
+  row2_zh: 初始配置
+  row2_zh_hk: 初始設定
+  row3_en: Total cash paid
+  row3_zh: 支付现金合计
+  row3_zh_hk: 已付現金總額
+  col1_en: HK$
+  col1_zh: 港元
+  col1_zh_hk: 港元
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11: 72,000
+  c12_en: From 1 April, 12 months
+  c12_zh: 4月1日起12个月
+  c12_zh_hk: 4月1日起12個月
+  c21: 24,000
+  c22_en: Vendor sets up in March
+  c22_zh: 服务商3月配置
+  c22_zh_hk: 供應商3月設定
+  c31: 96,000
+  c32_en: One combined service
+  c32_zh: 一项组合服务
+  c32_zh_hk: 合併提供的一項服務
+  footer_en: Vendor controls the software
+  footer_zh: 服务商控制软件
+  footer_zh_hk: 供應商控制軟件
+  s1_en: >-
+    The vendor controls the underlying software and its updates. The group cannot take delivery of any
+    code or control a new resource.
+  s1_zh: 软件和更新都由服务商控制。集团拿不到任何代码，也不控制任何新的资源。
+  s1_zh_hk: 軟件同更新都由供應商控制。集團攞唔到任何程式碼，亦冇控制任何新資源。
+  s2_en: >-
+    In March the vendor configures approval rules and calendars inside its own application. The setup
+    is not separately identifiable from access, so it is one combined service, available evenly from 1
+    April for exactly twelve months.
+  s2_zh: 三月，服务商在自己的应用里配置审批规则和日历。配置和访问不能单独区分，所以是一项组合服务，从四月一日起均匀提供，正好十二个月。
+  s2_zh_hk: >-
+    三月，供應商喺自己嘅應用程式入面設定審批規則同日曆。設定唔能夠同使用服務分開識別，所以係合併提供嘅一項服務，由四月一日起均勻提供，正好十二個月。
+  s3_en: >-
+    Ignore tax, interest and any other payments. We compare expense and remaining assets, not which option
+    the clinic should buy.
+  s3_zh: 不考虑税费、利息和其他付款。我们只比较费用和剩余资产，不讨论诊所该买哪种服务。
+  s3_zh_hk: 唔考慮稅項、利息或者其他付款。我哋只比較開支同剩餘資產，唔討論診所應該買邊種服務。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Software at 30 June?
+  title_zh: 6月30日列报软件吗？
+  title_zh_hk: 6月30日列報軟件嗎？
+  en: >-
+    Should the clinic report software at 30 June? If not, what expense and what prepaid balance should
+    it report instead? Pause and vote.
+  zh: 诊所在六月三十日应该列报软件资产吗？如果不列，应该确认多少费用、保留多少预付款？请暂停，投个票。
+  zh_hk: 診所喺六月三十日應唔應該列報軟件？如果唔列，應該確認幾多開支、留低幾多預付款項？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: >-
+    Replay: a separate contractor
+  title_zh: 替代情境：独立承包方
+  title_zh_hk: 另一情境：獨立承辦商
+  step1_en: >-
+    Vendor: 72,000 for access
+  step1_zh: 服务商：访问服务72,000
+  step1_zh_hk: 供應商：使用服務72,000
+  step2_en: >-
+    Contractor: 24,000, direct contract
+  step2_zh: 承包方：直接签约24,000
+  step2_zh_hk: 承辦商：直接簽約24,000
+  step3_en: Setup received and finished in March
+  step3_zh: 配置3月完成并取得
+  step3_zh_hk: 設定3月完成並收到
+  s1_en: >-
+    Replay from 1 January. The clinic prepays 72,000 to the cloud vendor on the same access dates.
+  s1_zh: 从一月一日重新来过。诊所向云服务商预付七万二千港元，访问期间不变。
+  s1_zh_hk: 由一月一日重新嚟過。診所預付七萬二千港元俾雲端供應商，使用期唔變。
+  s2_en: >-
+    It separately prepays 24,000 to an independent contractor under a direct contract for configuration,
+    not a subcontract of the cloud vendor.
+  s2_zh: 另外，诊所跟一家独立承包方直接签订配置合同，预付二万四千港元。这不是云服务商的分包。
+  s2_zh_hk: 另外，診所同一間獨立承辦商直接簽約做設定，預付二萬四千港元。佢唔係雲端供應商嘅分判商。
+  s3_en: >-
+    The contractor completes all of its setup in March. The clinic receives that service in March, but
+    still obtains no controlled code or other asset. Access starts on 1 April.
+  s3_zh: 承包方在三月完成全部配置，诊所当月就取得服务，但仍然没有取得自己控制的代码或其他资产。访问服务照样从四月一日开始。
+  s3_zh_hk: 承辦商喺三月做完全部設定，診所當月收到服務，但仍然冇取得自己控制嘅程式碼或者其他資產。應用程式照樣由四月一日開始用。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Same cash, same expense?
+  title_zh: 现金相同，费用也相同？
+  title_zh_hk: 現金相同，開支也相同？
+  en: >-
+    How much does the clinic expense by 30 June in this version? Compare the remaining prepayments, and
+    explain why identical cash does not mean identical expense. Pause and vote.
+  zh: 在这个情境下，截至六月三十日要确认多少费用？比较剩余的预付款，并解释为什么付出的现金一样，费用却不一样。请暂停，投个票。
+  zh_hk: 喺呢個情境，截至六月三十日要確認幾多開支？比較剩低嘅預付款項，再解釋點解付嘅現金一樣，開支就唔一樣。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: >-
+    No software: a prepaid service
+  title_zh: 没有软件，只有预付服务款
+  title_zh_hk: 沒有軟件，只有服務預付款
+  step1_en: No control of the app or code
+  step1_zh: 不控制应用或代码
+  step1_zh_hk: 不控制應用程式或程式碼
+  step2_en: >-
+    Cash first: a prepayment
+  step2_zh: 先付款：属于预付服务款
+  step2_zh_hk: 先付款：屬服務預付款項
+  step3_en: 3/12 × 96,000 = 24,000; prepaid 72,000
+  step3_zh: 3/12 × 96,000 = 24,000；预付72,000
+  step3_zh_hk: 3/12 × 96,000 = 24,000；預付72,000
+  s1_en: >-
+    The clinic does not control the vendor's application or any separate intangible. An invoice line labelled
+    setup, or a long benefit horizon, does not establish control.
+  s1_zh: 诊所既不控制服务商的应用，也没有取得可以单独控制的无形资产。发票上单列配置费，或者配置能长期带来好处，都不代表诊所有控制权。
+  s1_zh_hk: 診所既唔控制供應商嘅應用程式，亦冇控制另一項無形資產。發票獨立列出設定費，或者服務長期有用，都唔足以證明控制。
+  s2_en: >-
+    Cash paid before the services are received is a prepayment for services, not capitalised software.
+  s2_zh: 收到服务之前付出的钱，先确认为预付服务款，不能作为软件资本化。
+  s2_zh_hk: 收到服務之前俾出嘅錢，先記做服務預付款項，唔係資本化軟件。
+  s3_en: >-
+    The combined service runs evenly for twelve months. April to June uses three of them, so expense 3
+    over 12 times 96,000, or 24,000, and carry 72,000 as prepaid.
+  s3_zh: 组合服务在十二个月里均匀提供。四月到六月用了三个月，所以确认费用十二分之三乘九万六千，即二万四千，剩下七万二千列为预付款。
+  s3_zh_hk: 組合服務喺十二個月入面均勻提供。四月到六月用咗三個月，所以確認開支十二分之三乘九萬六千，即係二萬四千，餘下七萬二千列做預付款項。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 28
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Contractor work arrives in March
+  title_zh: 承包方的服务3月就已取得
+  title_zh_hk: 承辦商的服務3月已收到
+  step1_en: March 24,000 + access 18,000
+  step1_zh: 3月24,000 + 访问18,000
+  step1_zh_hk: 3月24,000 + 使用18,000
+  step2_en: Expense 42,000; prepaid 54,000
+  step2_zh: 费用42,000；预付款54,000
+  step2_zh_hk: 開支42,000；預付款項54,000
+  step3_en: All 96,000 expensed by the end
+  step3_zh: 访问期结束时全部96,000列费用
+  step3_zh_hk: 使用期完結時96,000全數列開支
+  s1_en: >-
+    In the replay, recognise the 24,000 of directly contracted configuration as expense in March, when
+    it is supplied. Access adds 3 over 12 times 72,000, or 18,000, by 30 June.
+  s1_zh: 在替代情境里，直接签约的配置服务三月交付，当月确认费用二万四千。到六月三十日，访问服务再确认十二分之三乘七万二千，即一万八千。
+  s1_zh_hk: 喺另一情境，直接簽約嘅設定服務三月提供，當月確認開支二萬四千。到六月三十日，使用服務再確認十二分之三乘七萬二千，即係一萬八千。
+  s2_en: >-
+    Total expense is 42,000, and only 54,000 remains prepaid. Both versions reconcile to 96,000: 24,000
+    plus 72,000, against 42,000 plus 54,000.
+  s2_zh: 费用合计四万二千，剩下的预付款只有五万四千。两种安排都对得上九万六千：二万四千加七万二千，对比四万二千加五万四千。
+  s2_zh_hk: 開支合共四萬二千，只剩五萬四千預付款項。兩個安排都對得返九萬六千：二萬四千加七萬二千，對比四萬二千加五萬四千。
+  s3_en: >-
+    By June the replay shows 18,000 more expense and 18,000 less prepayment, not a higher lifetime price.
+    If nothing else changes, both fully expense the 96,000 by the end of access.
+  s3_zh: >-
+    到六月，替代情境多确认一万八千费用、少一万八千预付款，并不是整个服务期更贵。其他条件不变的话，访问期结束时两种安排都会把九万六千全部确认为费用。
+  s3_zh_hk: >-
+    到六月，另一情境多確認一萬八千開支、少一萬八千預付款項，唔係成個服務期貴咗。如果冇其他變動，使用期完結時兩個安排都會將九萬六千全數確認為開支。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Evidence before the rule
+  title_zh: 先找证据，再套规则
+  title_zh_hk: 先搵證據，再套規則
+  en: >-
+    Before applying the rule, ask for evidence about scope, separability and contractual rights. A supplier's
+    label is not enough. If the clinic controlled separately identifiable code, whether to recognise an
+    asset would be a different question, assessed on its own facts.
+  zh: >-
+    套用规则之前，先就服务范围、能否单独区分和合同权利找证据。供应商怎么标注并不足够。如果诊所控制了可以单独识别的代码，能不能确认资产就是另一个问题，要按事实另行评估。
+  zh_hk: >-
+    套用規則之前，先就服務範圍、可唔可以分開識別同合約權利搵證據。供應商點樣標示並唔足夠。如果診所控制可以獨立識別嘅程式碼，應唔應該確認資產就係另一個問題，要按事實另行判斷。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Control first, then timing
+  title_zh: 先看控制，再看时间
+  title_zh_hk: 先睇控制，再睇時間
+  q1_en: >-
+    Combined: expense 24,000; prepaid 72,000
+  q1_zh: 组合服务：费用24,000；预付72,000
+  q1_zh_hk: 組合服務：開支24,000；預付72,000
+  q2_en: >-
+    Contractor: expense 42,000; prepaid 54,000
+  q2_zh: 独立承包：费用42,000；预付54,000
+  q2_zh_hk: 獨立承辦：開支42,000；預付54,000
+  s1_en: >-
+    Paying for configuration does not buy an asset unless the customer controls a resource. Without control,
+    expense the service as it is received.
+  s1_zh: 支付配置费，不等于买到资产；客户要控制一项资源才行。没有控制权，就在取得服务时确认费用。
+  s1_zh_hk: 俾咗設定費，唔等於買到資產；客戶要控制一項資源先算。冇控制權，就喺收到服務時確認開支。
+  s2_en: >-
+    Who supplies the setup, and when, can change the expense pattern even when the cash is identical.
+  s2_zh: 由谁提供配置、什么时候提供，即使现金相同，也会改变费用的确认时间。
+  s2_zh_hk: 由邊個提供設定、幾時提供，就算現金一樣，都會改變開支嘅確認時間。
+  s3_en: >-
+    The firm, the records and the figures are classroom assumptions, not a report about a real company.
+    Official scene art is a teaching illustration only.
+  s3_zh: 企业、记录和数字都是课堂假设，不是关于某家真实企业的报道。官方场景图只是教学插图。
+  s3_zh_hk: 企業、記錄同數字都係課堂假設，唔係關於某間真實企業嘅報道。官方場景圖只係教學插圖。
+duration_target_s: 196

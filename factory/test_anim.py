@@ -1932,6 +1932,13 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(len(tens[2].vf_cubes), 4)
         self.assertEqual((len(tens[3].vf_rods), len(tens[3].vf_cubes)), (10, 0))
         self.assertLess(abs(tens[3].vf_rods[0].height - rod_h[0]), 1e-6)
+        ten_ys = {round(float(rod.get_center()[1]), 3) for rod in tens[3].vf_rods}
+        self.assertEqual(len(ten_ys), 2)
+        six = lay_out([("tens", 6, 4), ("tens", 5, 2), ("tens", 2, 4), ("tens", 6, 4)], 1080, 1920)
+        six_ys = {round(float(rod.get_center()[1]), 3) for rod in six[0].vf_rods}
+        self.assertEqual(len(six_ys), 1)
+        self.assertEqual(len(six[0].vf_cubes), 4)
+        self.assertTrue(all(float(cube.get_center()[1]) < min(six_ys) for cube in six[0].vf_cubes))
 
         compared = [
             ("compare", 24, 42, 42),
@@ -2146,6 +2153,9 @@ class SceneRegistryTest(unittest.TestCase):
                 "lesson_hook", "place_sum", "place_sum", "lesson_takeaway",
             ],
             "P1-NUM-23": [
+                "lesson_hook", "place_sum", "place_sum", "place_sum", "lesson_takeaway",
+            ],
+            "P1-NUM-24": [
                 "lesson_hook", "place_sum", "place_sum", "place_sum", "lesson_takeaway",
             ],
         }
@@ -2817,6 +2827,29 @@ class SceneRegistryTest(unittest.TestCase):
             [("tiles", (12, 4, 3)), ("tens", 1, 9), ("tiles", (6, 4, 10)), ("tens", 3, 0)],
         )
         self.assertNotIn("sum", recap23["s3_en"].lower())
+        twentyfour = load_lesson(P1 / "P1-NUM-24.yaml")
+        taken = [beat for beat in twentyfour["beats"] if beat.get("scene") == "place_sum"]
+        self.assertEqual(
+            [(b["op"], b["a"], b["b"]) for b in taken],
+            [("sub", 47, 23), ("sub", 58, 6), ("add", 32, 32)],
+        )
+        self.assertEqual(labels_for(taken[0], "zh_hk")["title"], "先個位，再十位")
+        self.assertNotIn("拿走", "\n".join(b.get("s1_zh_hk", "") + b.get("s2_zh_hk", "") + b.get("s3_zh_hk", "") for b in twentyfour["beats"]))
+        self.assertNotIn("剩低", twentyfour["beats"][2]["s2_zh_hk"])
+        self.assertIn("攞走", twentyfour["beats"][1]["s1_zh_hk"])
+        self.assertIn("剩返", twentyfour["beats"][1]["s2_zh_hk"])
+        recap24 = twentyfour["beats"][-1]
+        self.assertEqual(
+            labels_for(recap24, "en")["lines"][1],
+            "Take away six ones. Fifty-two.",
+        )
+        self.assertEqual(labels_for(recap24, "zh")["lines"][1], "拿走六个一。五十二。")
+        self.assertEqual(labels_for(recap24, "zh_hk")["lines"][1], "攞走六個一。五十二。")
+        self.assertEqual(
+            labels_for(recap24, "en")["cues"],
+            [("tens", 2, 4), ("tens", 5, 2), ("tiles", (32, 32)), ("tens", 6, 4)],
+        )
+        self.assertNotIn("sum", recap24["s3_en"].lower())
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

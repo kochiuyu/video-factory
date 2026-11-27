@@ -1,0 +1,106 @@
+# P1-NUM-24. Mirrors MathQuiz path calculate / lesson columnsubtract,
+# "Subtract and check".
+# 47 − 23 leaves 24. 58 − 6 keeps the five tens and leaves 52.
+# 64 − 32 is 32, and adding that 32 back lands on 64 again.
+# https://github.com/kochiuyu/mathquiz learn-calculate.js (path calculate, lesson columnsubtract).
+# Speech is for age 6: one short idea per sentence. The heading is answered on screen.
+id: P1-NUM-24
+title_en: Take away, then check
+title_zh: 拿走，再加回去
+title_zh_hk: 攞走，再加返去
+duration_target_s: 66
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: ten_frame
+  shown: true
+  seconds: 8
+  title_en: Take away, then check
+  title_zh: 拿走，再加回去
+  title_zh_hk: 攞走，再加返去
+  s1_en: We take some away. Then we add them back.
+  s1_zh: 我们拿走一些。再加回去。
+  s1_zh_hk: 我哋攞走一啲。再加返去。
+
+- id: both
+  visual: animated
+  scene: place_sum
+  op: sub
+  a: 47
+  b: 23
+  seconds: 15
+  s1_en: Forty-seven, take away twenty-three.
+  s1_zh: 四十七，拿走二十三。
+  s1_zh_hk: 四十七，攞走二十三。
+  s2_en: Seven ones, take away three. Four ones stay.
+  s2_zh: 七个一，拿走三个。剩下四个一。
+  s2_zh_hk: 七個一，攞走三個。剩返四個一。
+  s3_en: Four tens, take away two. Two tens stay. Twenty-four.
+  s3_zh: 四个十，拿走两个。剩下两个十。二十四。
+  s3_zh_hk: 四個十，攞走兩個。剩返兩個十。二十四。
+
+- id: onesonly
+  visual: animated
+  scene: place_sum
+  op: sub
+  a: 58
+  b: 6
+  seconds: 14
+  s1_en: Fifty-eight, take away six. Six is six ones.
+  s1_zh: 五十八，拿走六。六是六个一。
+  s1_zh_hk: 五十八，攞走六。六係六個一。
+  s2_en: Eight ones, take away six. Two ones stay.
+  s2_zh: 八个一，拿走六个。剩下两个一。
+  s2_zh_hk: 八個一，攞走六個。剩返兩個一。
+  s3_en: The five tens stay. Fifty-two.
+  s3_zh: 五个十还在。五十二。
+  s3_zh_hk: 五個十仲喺度。五十二。
+
+- id: check
+  visual: animated
+  scene: place_sum
+  op: add
+  a: 32
+  b: 32
+  seconds: 14
+  s1_en: Put back the thirty-two we took away.
+  s1_zh: 把拿走的三十二加回去。
+  s1_zh_hk: 把攞走嘅三十二加返去。
+  s2_en: Thirty-two and thirty-two.
+  s2_zh: 三十二和三十二。
+  s2_zh_hk: 三十二同三十二。
+  s3_en: That makes sixty-four. We are back at the start.
+  s3_zh: 是六十四。回到开始的数。
+  s3_zh_hk: 係六十四。返到開始嗰個數。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: ten_frame
+  seconds: 15
+  title_en: Take away, then check
+  title_zh: 拿走，再加回去
+  title_zh_hk: 攞走，再加返去
+  s1_en: Ones, then tens.
+  s1_zh: 先拿走个，再拿走十。二十四。
+  s1_zh_hk: 先攞走個，再攞走十。二十四。
+  s2_en: Take away six ones. Fifty-two.
+  s2_zh: 拿走六个一。五十二。
+  s2_zh_hk: 攞走六個一。五十二。
+  s3_en: Add back the thirty-two.
+  s3_zh: 把三十二加回去。
+  s3_zh_hk: 把三十二加返去。
+  s4_en: Back at sixty-four.
+  s4_zh: 回到六十四。
+  s4_zh_hk: 返到六十四。
+  cues:
+  - kind: tens
+    count: 24
+  - kind: tens
+    count: 52
+  - kind: tiles
+    values: [32, 32]
+  - kind: tens
+    count: 64

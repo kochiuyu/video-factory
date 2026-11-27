@@ -2696,6 +2696,7 @@ def _scene_types() -> dict:
 
             A rod is tall. A cube is a small square, much smaller than a rod.
             Ten rods are two rows of that same rod, not a shorter rod.
+            Six rods stay one row, with the ones under them.
             """
             rod_w, rod_h, side, buff = 0.30, 0.70, 0.28, 0.05
             rod_mobs = []
@@ -2713,7 +2714,9 @@ def _scene_types() -> dict:
             parts = []
             if rod_mobs:
                 rods_g = VGroup(*rod_mobs)
-                cols = 5 if len(rod_mobs) > 5 else len(rod_mobs)
+                # Six rods stay one row so the ones sit under them. Ten rods
+                # stay two rows of five.
+                cols = len(rod_mobs) if len(rod_mobs) <= 6 else 5
                 rods_g.arrange_in_grid(rows=(len(rod_mobs) + cols - 1) // cols, cols=cols, buff=buff)
                 parts.append(rods_g)
             if cube_mobs:
@@ -3064,6 +3067,18 @@ def _scene_types() -> dict:
             raw = (text or "").strip() or " "
             whole = styled(raw, latin, cjk, size)
             if float(whole.width) <= width:
+                return whole
+            # Two short sentences that are only slightly wider than the column
+            # stay one line. "Take away six ones. Fifty-two." is about 1% over
+            # the 9:16 column, and splitting it would put the answer on its own line.
+            if (
+                "." in raw
+                and raw.count(".") >= 2
+                and not any("\u4e00" <= ch <= "\u9fff" for ch in raw)
+                and float(whole.width) <= width * 1.04
+                and float(whole.width) > 0
+            ):
+                whole.scale(width / float(whole.width))
                 return whole
             # A sentence break beats a word break: "Find the ten first. Then…"
             # stays two sentences when each one fits the column.

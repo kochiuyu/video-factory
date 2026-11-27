@@ -78,6 +78,18 @@ beats:
   visual: animated
   scene: lesson_takeaway
   motif: track
+  cues:
+  - kind: compare
+    a: 24
+    b: 42
+  - kind: tens_mark
+    rods: 4
+  - kind: compare
+    a: 47
+    b: 43
+  - kind: compare
+    a: 100
+    b: 99
   seconds: 14
   title_en: Which is larger?
   title_zh: 哪个数比较大？

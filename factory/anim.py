@@ -2513,6 +2513,22 @@ def _scene_types() -> dict:
             motif = str(labels.get("motif") or "counters")
             lines = list(labels.get("lines") or ["", "", ""])
             title = styled(labels.get("title") or "", latin, cjk, 48)
+            pictures = labels.get("cues")
+            if pictures:
+                # Named cues replace the motif. The track motif's pictures are
+                # a fixed row (9–12, 17–20, 12–9) and must not stand in for a
+                # line that named its own picture.
+                if len(pictures) != len(lines):
+                    raise ValueError("takeaway cue fell back to the default")
+                cues = [self._line_cue(picture, latin, cjk) for picture in pictures]
+                rows = self._layout_takeaway(
+                    title, cues, [str(line) for line in lines], latin, cjk, fit_heading=True,
+                )
+                title = getattr(self, "_placed_heading", title)
+                self.spend(0, FadeIn(title), FadeIn(rows[0]))
+                for index in range(1, len(rows)):
+                    self.spend(index, FadeIn(rows[index]))
+                return
             if len(lines) >= 4 and motif == "counters":
                 self._counted_recap(title, lines, latin, cjk)
                 return
@@ -2553,7 +2569,7 @@ def _scene_types() -> dict:
                 size = floor_size
             return max(12, int(round(size)))
 
-        def _place_heading(self, heading, grid: dict) -> None:
+        def _place_heading(self, heading, grid: dict, fit: bool = False) -> None:
             """Same heading size in every language: the probe title sets the scale."""
             latin = self.vf_fonts[0]
             ref = Text(TAKEAWAY_HEADING_PROBE, font=latin, font_size=48, color=NAVY)
@@ -2563,16 +2579,174 @@ def _scene_types() -> dict:
             if float(ref.width) * scale > safe_w * 0.92:
                 scale = (safe_w * 0.92) / float(ref.width)
             heading.scale(scale)
+            # A named-cue heading longer than the probe wraps onto two lines
+            # once a single line would fall under the font floor. Headings that
+            # already fit stay on one line at the probe size.
+            if fit and float(heading.width) > safe_w * 0.92:
+                factor = (safe_w * 0.92) / float(heading.width)
+                ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+                pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
+                portrait = ph > pw
+                ref = 1920.0 if portrait else 1080.0
+                floor_px = (52.0 if portrait else 44.0) * (ph / ref)
+                unit = ph / float(grid["fh"])
+                floor_h = floor_px / unit
+                # A small extra squeeze stays one line. A long title wraps so
+                # the words stay at the font floor.
+                words = str(getattr(heading, "original_text", "") or getattr(heading, "text", "") or "")
+                if factor < 0.75 and " " in words:
+                    heading = self._wrap_heading(words, latin, safe_w * 0.92, band * 0.9, floor_h)
+                else:
+                    heading.scale(factor)
             cx = (float(grid["left"]) + float(grid["right"])) / 2.0
             cy = float(grid["top"]) - band / 2.0
             heading.move_to([cx, cy, 0])
+            self._placed_heading = heading
 
-        def _layout_takeaway(self, heading, cues, lines, latin: str, cjk: str, text_fit: float = 0.96) -> list:
+        def _wrap_heading(self, text: str, latin: str, width: float, height: float, floor_h: float):
+            words = text.split()
+            best = None
+            for cut in range(1, len(words)):
+                top = Text(" ".join(words[:cut]), font=latin, font_size=48, color=NAVY)
+                bot = Text(" ".join(words[cut:]), font=latin, font_size=48, color=NAVY)
+                wide = max(float(top.width), float(bot.width))
+                if best is None or wide < best[0]:
+                    best = (wide, top, bot)
+            group = VGroup(best[1], best[2]).arrange(DOWN, buff=0.08)
+            fit = min(width / float(group.width), height / float(group.height))
+            line_h = float(best[1].height) * fit
+            if line_h < floor_h and float(best[1].height) > 0:
+                fit = max(fit, floor_h / float(best[1].height))
+                if float(group.width) * fit > width:
+                    fit = width / float(group.width)
+            group.scale(fit)
+            return group
+
+        def _cue_rod(self, width: float, height: float):
+            return RoundedRectangle(
+                width=width, height=height,
+                corner_radius=min(0.08, height * 0.16),
+                stroke_color=NAVY, stroke_width=3,
+                fill_color=GREEN, fill_opacity=1,
+            )
+
+        def _cue_cube(self, side: float):
+            return RoundedRectangle(
+                width=side, height=side,
+                corner_radius=side * 0.18,
+                stroke_color=NAVY, stroke_width=3,
+                fill_color=GOLD, fill_opacity=1,
+            )
+
+        def _cue_bundles(self, rods: int, ones: int):
+            """Green ten-rods and gold one-cubes. Ten rods sit in two rows of five."""
+            rod_w, rod_h = (0.26, 0.46) if rods > 5 else (0.32, 0.62)
+            blocks = VGroup(*[self._cue_rod(rod_w, rod_h) for _ in range(rods)])
+            if rods:
+                cols = 5 if rods > 5 else rods
+                blocks.arrange_in_grid(rows=(rods + cols - 1) // cols, cols=cols, buff=0.08)
+            if ones:
+                side = 0.24 if ones > 6 else 0.28
+                cubes = VGroup(*[self._cue_cube(side) for _ in range(ones)])
+                cols = 5 if ones > 5 else ones
+                cubes.arrange_in_grid(rows=(ones + cols - 1) // cols, cols=cols, buff=0.06)
+                if rods:
+                    return VGroup(blocks, cubes).arrange(DOWN, buff=0.08)
+                return cubes
+            return blocks
+
+        def _line_cue(self, picture, latin: str, cjk: str):
+            """Draw one named takeaway picture. An unknown picture is an error."""
+            kind = picture[0] if picture else ""
+            if kind == "tens":
+                return self._cue_bundles(int(picture[1]), int(picture[2]))
+            if kind == "tens_mark":
+                rods = self._cue_bundles(int(picture[1]), 0)
+                ring = SurroundingRectangle(rods, color=GOLD, buff=0.08, stroke_width=6)
+                ring.set_fill(opacity=0)
+                return VGroup(rods, ring)
+            if kind == "compare":
+                return self._cue_compare(int(picture[1]), int(picture[2]), int(picture[3]), latin, cjk)
+            if kind == "tiles":
+                return self._cue_tiles(picture[1], latin)
+            if kind == "pairs":
+                return self._cue_pairs(int(picture[1]), int(picture[2]))
+            if kind == "counters":
+                return self._cue_dots(int(picture[1]))
+            raise ValueError(f"takeaway cue fell back to the default: {picture!r}")
+
+        def _cue_compare(self, left: int, right: int, larger: int, latin: str, cjk: str):
+            def card(number: int):
+                tens, ones = divmod(number, 10)
+                num = styled(str(number), latin, cjk, 64)
+                # Ones past four become a speck under the numeral. The tens
+                # stay, and the gold ring marks the larger number.
+                pic = self._cue_bundles(tens, ones if ones <= 4 else 0)
+                if float(pic.height) > float(num.height) * 0.7:
+                    pic.scale((float(num.height) * 0.7) / float(pic.height))
+                group = VGroup(num, pic).arrange(DOWN, buff=0.06)
+                if number == larger:
+                    ring = SurroundingRectangle(group, color=GOLD, buff=0.08, stroke_width=6)
+                    ring.set_fill(opacity=0)
+                    return VGroup(group, ring)
+                return group
+
+            return VGroup(card(left), card(right)).arrange(RIGHT, buff=0.18)
+
+        def _cue_tiles(self, values, latin: str):
+            tiles = VGroup()
+            for value in values:
+                num = Text(str(value), font=latin, font_size=48, color=NAVY)
+                box = RoundedRectangle(
+                    width=max(float(num.width) + 0.18, 0.7),
+                    height=float(num.height) + 0.2,
+                    corner_radius=0.08,
+                    stroke_color=NAVY, stroke_width=3,
+                    fill_color=WHITE, fill_opacity=1,
+                )
+                num.move_to(box)
+                tiles.add(VGroup(box, num))
+            tiles.arrange(RIGHT, buff=0.08)
+            return tiles
+
+        def _cue_pair_box(self):
+            dots = VGroup(counter(GREEN, 0.1), counter(GREEN, 0.1)).arrange(RIGHT, buff=0.05)
+            frame = RoundedRectangle(
+                width=float(dots.width) + 0.16,
+                height=float(dots.height) + 0.14,
+                corner_radius=0.08,
+                stroke_color=NAVY, stroke_width=3,
+                fill_color=WHITE, fill_opacity=1,
+            )
+            dots.move_to(frame)
+            return VGroup(frame, dots)
+
+        def _cue_pairs(self, boxes: int, extra: int):
+            group = VGroup(*[self._cue_pair_box() for _ in range(boxes)])
+            if boxes > 4:
+                group.arrange_in_grid(rows=2, cols=3, buff=0.1)
+            else:
+                group.arrange(RIGHT, buff=0.1)
+            if not extra:
+                return group
+            dot = counter(GOLD, 0.12)
+            ring = SurroundingRectangle(dot, color=GOLD, buff=0.06, stroke_width=4)
+            ring.set_fill(opacity=0)
+            loose = VGroup(dot, ring)
+            return VGroup(group, loose).arrange(RIGHT, buff=0.14)
+
+        def _cue_dots(self, count: int):
+            dots = VGroup(*[counter(GREEN, 0.12) for _ in range(count)])
+            cols = 6 if count > 6 else count
+            dots.arrange_in_grid(rows=(count + cols - 1) // cols, cols=cols, buff=0.08)
+            return dots
+
+        def _layout_takeaway(self, heading, cues, lines, latin: str, cjk: str, text_fit: float = 0.96, fit_heading: bool = False) -> list:
             """Put each cue and its sentence into an equal row cell."""
             pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
             ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
             grid = takeaway_grid(pw, ph, len(lines))
-            self._place_heading(heading, grid)
+            self._place_heading(heading, grid, fit=fit_heading)
             font = self._body_font(latin, grid)
             portrait = bool(grid["portrait"])
             words = [

@@ -22,6 +22,7 @@ from anim import (
 )
 from scene_registry import (
     REGISTRY,
+    DEFAULT_TRACK_CUES,
     count_event,
     count_marks,
     crosses_ten,
@@ -31,6 +32,7 @@ from scene_registry import (
     removal_marks,
     schedule_marks,
     step_count,
+    takeaway_cue_picture,
     track_columns,
     track_slots,
 )
@@ -1742,6 +1744,51 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertAlmostEqual(sum(durs), 7.5, places=6)
         self.assertTrue(all(d > 0 for d in durs))
 
+    def test_takeaway_cues_do_not_fall_back_to_the_default_track(self):
+        """A named line picture is never the track placeholder, and an unknown one is an error."""
+        self.assertEqual(DEFAULT_TRACK_CUES[0], (9, 10, 11, 12))
+        self.assertEqual(DEFAULT_TRACK_CUES[2], DEFAULT_TRACK_CUES[3])
+        pictures = [
+            takeaway_cue_picture({"kind": "tens", "count": 24}),
+            takeaway_cue_picture({"kind": "compare", "a": 24, "b": 42}),
+            takeaway_cue_picture({"kind": "tens_mark", "rods": 4}),
+            takeaway_cue_picture({"kind": "tiles", "values": [39, 40]}),
+            takeaway_cue_picture({"kind": "pairs", "n": 5, "extra": 1}),
+            takeaway_cue_picture({"kind": "counters", "n": 12}),
+        ]
+        self.assertEqual(pictures[0], ("tens", 2, 4))
+        self.assertEqual(pictures[1], ("compare", 24, 42, 42))
+        for picture in pictures:
+            self.assertIsNotNone(picture)
+            self.assertNotIn(picture, DEFAULT_TRACK_CUES)
+            if picture[0] == "tiles":
+                self.assertNotIn(picture[1], DEFAULT_TRACK_CUES)
+        self.assertIsNone(takeaway_cue_picture({"kind": "track"}))
+        self.assertIsNone(takeaway_cue_picture({"kind": "placeholder"}))
+        plain = {
+            "visual": "animated",
+            "scene": "lesson_takeaway",
+            "motif": "track",
+            "s1_en": "One.",
+            "s2_en": "Two.",
+            "s3_en": "Three.",
+            "s4_en": "Four.",
+            "s1_zh": "一。",
+            "s2_zh": "二。",
+            "s3_zh": "三。",
+            "s4_zh": "四。",
+            "s1_zh_hk": "一。",
+            "s2_zh_hk": "二。",
+            "s3_zh_hk": "三。",
+            "s4_zh_hk": "四。",
+        }
+        self.assertEqual(scene_problems(plain), [])
+        self.assertNotIn("cues", labels_for(plain, "en"))
+        bad = dict(plain, cues=[{"kind": "placeholder"}, {"kind": "tens", "count": 24}, {"kind": "tens", "count": 40}, {"kind": "tens", "count": 4}])
+        messages = scene_problems(bad)
+        self.assertTrue(any("must not fall back to the default track" in msg for msg in messages))
+        self.assertNotIn("cues", labels_for(bad, "en"))
+
     def test_p1_lessons_validate_and_keep_traditional_labels(self):
         expected = {
             "P1-NUM-01": ["lesson_hook", "count_objects", "count_objects", "count_objects", "lesson_takeaway"],
@@ -2136,9 +2183,9 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in fifteen["beats"]).lower())
         recap = next(beat for beat in fifteen["beats"] if beat["id"] == "takeaway")
         self.assertEqual(step_count(recap), 4)
-        self.assertEqual(labels_for(recap, "en")["title"], "How to order")
-        self.assertEqual(labels_for(recap, "zh")["title"], "怎样排这些数？")
-        self.assertEqual(labels_for(recap, "zh_hk")["title"], "點樣排呢啲數呀？")
+        self.assertEqual(labels_for(recap, "en")["title"], "How do we put numbers in order?")
+        self.assertEqual(labels_for(recap, "zh")["title"], "怎样排好这些数？")
+        self.assertEqual(labels_for(recap, "zh_hk")["title"], "點樣排好呢啲數？")
         self.assertEqual(
             labels_for(recap, "en")["lines"],
             [
@@ -2150,6 +2197,21 @@ class SceneRegistryTest(unittest.TestCase):
         )
         self.assertEqual(labels_for(recap, "zh")["lines"][3], "倒着数，四十一，四十，三十九，三十八。")
         self.assertEqual(labels_for(recap, "zh_hk")["lines"][3], "倒返數，四十一，四十，三十九，三十八。")
+        self.assertEqual(
+            labels_for(recap, "en")["cues"],
+            [
+                ("tiles", (24, 40, 42)),
+                ("tiles", (61, 60, 16)),
+                ("tiles", (39, 40)),
+                ("tiles", (41, 40, 39, 38)),
+            ],
+        )
+        for picture in labels_for(recap, "en")["cues"]:
+            self.assertNotIn(picture, DEFAULT_TRACK_CUES)
+            self.assertNotIn(picture[1], DEFAULT_TRACK_CUES)
+        self.assertIn("？", labels_for(recap, "zh")["title"])
+        self.assertNotIn("?", labels_for(recap, "zh")["title"])
+        self.assertNotIn("?", labels_for(recap, "zh_hk")["title"])
 
     def test_part_whole_bounds(self):
         good = {

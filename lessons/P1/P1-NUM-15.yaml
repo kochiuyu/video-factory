@@ -80,10 +80,19 @@ beats:
   visual: animated
   scene: lesson_takeaway
   motif: track
+  cues:
+  - kind: tiles
+    values: [24, 40, 42]
+  - kind: tiles
+    values: [61, 60, 16]
+  - kind: tiles
+    values: [39, 40]
+  - kind: tiles
+    values: [41, 40, 39, 38]
   seconds: 14
-  title_en: How to order
-  title_zh: 怎样排这些数？
-  title_zh_hk: 點樣排呢啲數呀？
+  title_en: How do we put numbers in order?
+  title_zh: 怎样排好这些数？
+  title_zh_hk: 點樣排好呢啲數？
   s1_en: 24, 40, 42. Smallest first.
   s1_zh: 由小到大，二十四，四十，四十二。
   s1_zh_hk: 由細到大，二十四，四十，四十二。

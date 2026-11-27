@@ -835,12 +835,108 @@ class LessonHook(SceneKind):
         return params
 
 
+# Pictures the track motif always draws. A takeaway that sets ``cues`` must
+# not land on these. Index 2 and 3 are the same row, which is why a four-line
+# track takeaway repeats 12, 11, 10, 9.
+DEFAULT_TRACK_CUES = (
+    (9, 10, 11, 12),
+    (17, 18, 19, 20),
+    (12, 11, 10, 9),
+    (12, 11, 10, 9),
+)
+
+
+def takeaway_cue_picture(spec) -> tuple | None:
+    """What one takeaway line draws. None means the cue is not a real picture.
+
+    Callers must not substitute the track placeholder when this returns None.
+    """
+    if not isinstance(spec, dict):
+        return None
+    kind = str(spec.get("kind") or "").strip()
+    if kind == "tens":
+        count = _as_int(spec.get("count"))
+        if count is None or not 0 <= count <= 100:
+            return None
+        return ("tens", count // 10, count % 10)
+    if kind == "compare":
+        left, right = _as_int(spec.get("a")), _as_int(spec.get("b"))
+        if left is None or right is None or left == right:
+            return None
+        if not 0 <= left <= 100 or not 0 <= right <= 100:
+            return None
+        return ("compare", left, right, left if left > right else right)
+    if kind == "tens_mark":
+        rods = _as_int(spec.get("rods"))
+        if rods is None:
+            rods = 4
+        if not 1 <= rods <= 10:
+            return None
+        return ("tens_mark", rods)
+    if kind == "tiles":
+        values = spec.get("values")
+        if not isinstance(values, (list, tuple)) or not 1 <= len(values) <= 6:
+            return None
+        numbers = []
+        for value in values:
+            number = _as_int(value)
+            if number is None or not 0 <= number <= 100:
+                return None
+            numbers.append(number)
+        return ("tiles", tuple(numbers))
+    if kind == "pairs":
+        boxes = _as_int(spec.get("n"))
+        extra = _as_int(spec.get("extra")) or 0
+        if boxes is None or not 1 <= boxes <= 6 or extra not in (0, 1):
+            return None
+        return ("pairs", boxes, extra)
+    if kind == "counters":
+        count = _as_int(spec.get("n"))
+        if count is None or not 1 <= count <= 12:
+            return None
+        return ("counters", count)
+    return None
+
+
+def takeaway_cue_problems(beat: dict) -> list[str]:
+    """Reject a cue list that is missing, the wrong length, or not a real picture."""
+    raw = (beat or {}).get("cues")
+    if raw is None:
+        return []
+    lines = 4 if str((beat or {}).get("s4_en") or "").strip() else 3
+    if not isinstance(raw, list) or len(raw) != lines:
+        return [f"lesson_takeaway cues must be one picture per spoken line ({lines})."]
+    problems = []
+    for index, spec in enumerate(raw, start=1):
+        if takeaway_cue_picture(spec) is None:
+            kind = spec.get("kind") if isinstance(spec, dict) else spec
+            problems.append(
+                f"lesson_takeaway cue {index} is {kind!r}, which is not a line picture. "
+                "It must not fall back to the default track."
+            )
+    return problems
+
+
+def takeaway_cue_list(beat: dict) -> list[tuple]:
+    raw = (beat or {}).get("cues")
+    if not isinstance(raw, list):
+        return []
+    pictures = []
+    for spec in raw:
+        picture = takeaway_cue_picture(spec)
+        if picture is None:
+            return []
+        pictures.append(picture)
+    return pictures
+
+
 class LessonTakeaway(SceneKind):
     """Each spoken line appears with a small cue: counters, a ten-frame, or a track.
 
     Three spoken lines, or four when ``s4`` is written. The words on screen are
     those same lines. ``count`` on a four-line counters recap lights that many
-    counters during the first line.
+    counters during the first line. ``cues`` gives each line its own picture
+    and is not drawn as the track placeholder.
     """
 
     name = "lesson_takeaway"
@@ -855,12 +951,14 @@ class LessonTakeaway(SceneKind):
         if _motif(beat) not in _MOTIFS:
             return [f"lesson_takeaway motif must be counters, ten_frame, track, ordinal, pairs, or parts, not {_motif(beat)!r}."]
         if _motif(beat) == "ordinal":
-            return _ordinal_pair_problems(beat, required=False)
-        if _motif(beat) == "pairs":
-            return _pair_n_problems(beat) + _pair_also_problems(beat)
-        if _motif(beat) == "parts":
-            return _part_bond_problems(beat)
-        return []
+            found = _ordinal_pair_problems(beat, required=False)
+        elif _motif(beat) == "pairs":
+            found = _pair_n_problems(beat) + _pair_also_problems(beat)
+        elif _motif(beat) == "parts":
+            found = _part_bond_problems(beat)
+        else:
+            found = []
+        return found + takeaway_cue_problems(beat)
 
     def labels(self, beat: dict, lang: str) -> dict:
         copy = _copy(lang)
@@ -892,6 +990,9 @@ class LessonTakeaway(SceneKind):
                 out["also_word"] = str(also) if label_lang(lang) == "en" else zh_cardinal(also)
         if _motif(beat) == "parts":
             out["bonds"] = _part_bonds(beat) or []
+        cues = takeaway_cue_list(beat)
+        if cues:
+            out["cues"] = cues
         return out
 
     def parameters(self, beat: dict) -> dict:
@@ -915,6 +1016,9 @@ class LessonTakeaway(SceneKind):
                 params["also"] = also
         if _motif(beat) == "parts":
             params["bonds"] = _part_bonds(beat) or []
+        cues = takeaway_cue_list(beat)
+        if cues:
+            params["cues"] = [list(picture) for picture in cues]
         return params
 
 

@@ -62,71 +62,97 @@ def flat_picture(kind: str, turn: float = 0):
     return group
 
 
+def _round_outline(mob):
+    """Stop a stroke at the vertex. A miter join on a sharp corner pokes past it."""
+    from manim.constants import CapStyleType, LineJointType
+
+    mob.joint_type = LineJointType.ROUND
+    mob.cap_style = CapStyleType.BUTT
+    return mob
+
+
+def _equator_half(front: bool):
+    """Front half of a ball's equator is solid. The back half is dashed."""
+    from manim import Line, VGroup
+
+    lines = []
+    steps = 18
+    start = math.pi if front else 0.0
+    for index in range(steps):
+        if not front and index % 2 == 1:
+            continue
+        theta0 = start + math.pi * index / steps
+        theta1 = start + math.pi * (index + 1) / steps
+        a = (0.95 * math.cos(theta0), 0.22 * math.sin(theta0), 0.0)
+        b = (0.95 * math.cos(theta1), 0.22 * math.sin(theta1), 0.0)
+        lines.append(_round_outline(Line(a, b, color=NAVY, stroke_width=3)))
+    return VGroup(*lines)
+
+
 def solid_picture(kind: str):
     """A simple drawing of one solid. The whole model stays in view, not one face."""
-    from manim import Circle, Ellipse, Line, Polygon, Rectangle, VGroup
+    from manim import Circle, Ellipse, Polygon, Rectangle, VGroup
 
     faces = []
     if kind == "prism":
-        front = Polygon(
+        front = _round_outline(Polygon(
             (-0.72, -0.7, 0), (0.72, -0.7, 0), (0.72, 0.55, 0), (-0.72, 0.55, 0),
             color=NAVY, stroke_width=5, fill_color=GOLD, fill_opacity=1,
-        )
-        side = Polygon(
+        ))
+        side = _round_outline(Polygon(
             (0.72, -0.7, 0), (1.15, -0.38, 0), (1.15, 0.87, 0), (0.72, 0.55, 0),
             color=NAVY, stroke_width=5, fill_color=SIDE, fill_opacity=1,
-        )
-        top = Polygon(
+        ))
+        top = _round_outline(Polygon(
             (-0.72, 0.55, 0), (0.72, 0.55, 0), (1.15, 0.87, 0), (-0.29, 0.87, 0),
             color=NAVY, stroke_width=5, fill_color=CREAM, fill_opacity=1,
-        )
+        ))
         faces = [side, top, front]
     elif kind == "cylinder":
-        body = Rectangle(
+        body = _round_outline(Rectangle(
             width=1.5, height=1.25, color=NAVY, stroke_width=5, fill_color=GOLD, fill_opacity=1,
-        )
-        top = Ellipse(
+        ))
+        top = _round_outline(Ellipse(
             width=1.5, height=0.42, color=NAVY, stroke_width=5, fill_color=CREAM, fill_opacity=1,
-        ).shift((0, 0.62, 0))
-        bottom = Ellipse(
+        ).shift((0, 0.62, 0)))
+        bottom = _round_outline(Ellipse(
             width=1.5, height=0.42, color=NAVY, stroke_width=5, fill_color=SIDE, fill_opacity=1,
-        ).shift((0, -0.62, 0))
+        ).shift((0, -0.62, 0)))
         faces = [bottom, body, top]
     elif kind == "pyramid":
-        base = Polygon(
+        base = _round_outline(Polygon(
             (-0.85, -0.55, 0), (0.85, -0.55, 0), (0.45, -0.95, 0), (-1.25, -0.95, 0),
             color=NAVY, stroke_width=5, fill_color=SIDE, fill_opacity=1,
-        )
-        left = Polygon(
+        ))
+        left = _round_outline(Polygon(
             (-0.85, -0.55, 0), (0, 0.95, 0), (-1.25, -0.95, 0),
             color=NAVY, stroke_width=5, fill_color=CREAM, fill_opacity=1,
-        )
-        right = Polygon(
+        ))
+        right = _round_outline(Polygon(
             (0.85, -0.55, 0), (0, 0.95, 0), (0.45, -0.95, 0),
             color=NAVY, stroke_width=5, fill_color=GOLD, fill_opacity=1,
-        )
-        front = Polygon(
+        ))
+        front = _round_outline(Polygon(
             (-0.85, -0.55, 0), (0.85, -0.55, 0), (0, 0.95, 0),
             color=NAVY, stroke_width=5, fill_color=GOLD, fill_opacity=0.95,
-        )
+        ))
         faces = [base, left, right, front]
     elif kind == "cone":
-        body = Polygon(
+        body = _round_outline(Polygon(
             (-0.75, -0.45, 0), (0.75, -0.45, 0), (0, 1.05, 0),
             color=NAVY, stroke_width=5, fill_color=GOLD, fill_opacity=1,
-        )
-        base = Ellipse(
+        ))
+        base = _round_outline(Ellipse(
             width=1.5, height=0.42, color=NAVY, stroke_width=5, fill_color=SIDE, fill_opacity=1,
-        ).shift((0, -0.45, 0))
+        ).shift((0, -0.45, 0)))
         faces = [body, base]
     else:
-        ball = Circle(radius=0.95, color=NAVY, stroke_width=5, fill_color=GOLD, fill_opacity=1)
-        shine = Circle(radius=0.22, color=CREAM, stroke_width=0, fill_color=CREAM, fill_opacity=0.9)
+        ball = _round_outline(Circle(
+            radius=0.95, color=NAVY, stroke_width=5, fill_color=GOLD, fill_opacity=1,
+        ))
+        shine = Circle(radius=0.22, color=CREAM, stroke_width=0, fill_color=CREAM, fill_opacity=1)
         shine.shift((-0.28, 0.32, 0))
-        equator = Ellipse(
-            width=1.7, height=0.36, color=NAVY, stroke_width=3, fill_opacity=0,
-        )
-        faces = [ball, equator, shine]
+        faces = [ball, _equator_half(False), _equator_half(True), shine]
     group = VGroup(*faces)
     group.vf_kind = kind
     group.vf_faces = faces

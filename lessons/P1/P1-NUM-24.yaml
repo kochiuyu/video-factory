@@ -83,16 +83,16 @@ beats:
   title_en: Take away, then check
   title_zh: 拿走，再加回去
   title_zh_hk: 攞走，再加返去
-  s1_en: Take away the ones, then the tens. Twenty-four.
+  s1_en: Ones, then tens.
   s1_zh: 先拿走个，再拿走十。二十四。
   s1_zh_hk: 先攞走個，再攞走十。二十四。
-  s2_en: Six is six ones. Fifty-two.
+  s2_en: Six ones. Fifty-two.
   s2_zh: 六是六个一。五十二。
   s2_zh_hk: 六係六個一。五十二。
   s3_en: Add back the thirty-two.
   s3_zh: 把三十二加回去。
   s3_zh_hk: 把三十二加返去。
-  s4_en: We are back at sixty-four.
+  s4_en: Back at sixty-four.
   s4_zh: 回到六十四。
   s4_zh_hk: 返到六十四。
   cues:

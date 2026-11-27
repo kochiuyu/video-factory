@@ -1645,8 +1645,8 @@ class PlaceSum(SceneKind):
         code = label_lang(lang)
         op = str(beat.get("op") or "add").strip()
         titles = {
-            "add": {"en": "Add the ones", "zh": "先加个位", "zh_hk": "先加個位"},
-            "sub": {"en": "Take away", "zh": "先减个位", "zh_hk": "先減個位"},
+            "add": {"en": "Ones, then tens", "zh": "先个位，再十位", "zh_hk": "先個位，再十位"},
+            "sub": {"en": "Ones, then tens", "zh": "先个位，再十位", "zh_hk": "先個位，再十位"},
         }
         table = titles.get(op, titles["add"])
         return {

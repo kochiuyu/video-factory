@@ -2715,7 +2715,7 @@ class SceneRegistryTest(unittest.TestCase):
             [(b["op"], b["a"], b["b"]) for b in taken],
             [("sub", 47, 23), ("sub", 58, 6), ("add", 32, 32)],
         )
-        self.assertEqual(labels_for(taken[0], "zh_hk")["title"], "先減個位")
+        self.assertEqual(labels_for(taken[0], "zh_hk")["title"], "先個位，再十位")
         self.assertNotIn("拿走", "\n".join(b.get("s1_zh_hk", "") + b.get("s2_zh_hk", "") + b.get("s3_zh_hk", "") for b in twentyfour["beats"]))
         self.assertNotIn("剩低", twentyfour["beats"][2]["s2_zh_hk"])
         self.assertIn("攞走", twentyfour["beats"][1]["s1_zh_hk"])

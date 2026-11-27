@@ -1,0 +1,104 @@
+# P1-NUM-20. Mirrors MathQuiz path relations / lesson parity,
+# "Odd or even?".
+# Eight is even. Nine is odd. Zero is even.
+# Three ones make twenty-three odd. Two ones make thirty-two even.
+# Twenty-three is the teaching beat. Thirty-two is the takeaway picture.
+# Zero is a number tile, because an empty ten-rod picture is not a cue.
+# https://github.com/kochiuyu/mathquiz learn-data.js (path relations, lesson parity).
+# Speech is for age 6: one short idea per sentence. The heading is answered on screen.
+id: P1-NUM-20
+title_en: Odd or even?
+title_zh: 单数还是双数？
+title_zh_hk: 單數定雙數？
+duration_target_s: 58
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: pairs
+  n: 8
+  seconds: 8
+  title_en: Odd or even?
+  title_zh: 单数还是双数？
+  title_zh_hk: 單數定雙數？
+  s1_en: Let us make pairs. Eight and nine will show us, then we look at the ones.
+  s1_zh: 我们两个配成一对。先看八个和九个，再看有几个一。
+  s1_zh_hk: 我哋兩個配成一對。先睇八個同九個，再睇有幾個一。
+
+- id: eight
+  visual: animated
+  scene: pair_counters
+  n: 8
+  seconds: 12
+  s1_en: Eight counters. Put them in pairs.
+  s1_zh: 八个圆片。两个配成一对。
+  s1_zh_hk: 八個圓片。兩個配成一對。
+  s2_en: One. Two. Three. Four.
+  s2_zh: 一，二，三，四。
+  s2_zh_hk: 一，二，三，四。
+  s3_en: Four pairs. Every counter has a partner. Eight is even.
+  s3_zh: 四对。每个圆片都有伙伴。八是双数。
+  s3_zh_hk: 四對。每個圓片都有伙伴。八係雙數。
+
+- id: nine
+  visual: animated
+  scene: pair_counters
+  n: 9
+  seconds: 12
+  s1_en: Nine counters. Pair them the same way.
+  s1_zh: 九个圆片。同样两个配成一对。
+  s1_zh_hk: 九個圓片。同樣兩個配成一對。
+  s2_en: One. Two. Three. Four.
+  s2_zh: 一，二，三，四。
+  s2_zh_hk: 一，二，三，四。
+  s3_en: Four pairs and one more. Nine is odd.
+  s3_zh: 四对再加一个。九是单数。
+  s3_zh_hk: 四對再加一個。九係單數。
+
+- id: twentythree
+  visual: animated
+  scene: number_blocks
+  mode: tens
+  count: 23
+  seconds: 12
+  s1_en: Ten, twenty.
+  s1_zh: 十，二十。
+  s1_zh_hk: 十，二十。
+  s2_en: Three ones.
+  s2_zh: 三个一。
+  s2_zh_hk: 三個一。
+  s3_en: Three is odd. Twenty-three is odd.
+  s3_zh: 三个是单数。二十三是单数。
+  s3_zh_hk: 三個係單數。二十三係單數。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: pairs
+  seconds: 14
+  title_en: Even or odd?
+  title_zh: 双数还是单数？
+  title_zh_hk: 雙數定單數呀？
+  s1_en: Four pairs. Eight is even.
+  s1_zh: 四对。八是双数。
+  s1_zh_hk: 四對。八係雙數。
+  s2_en: Four pairs and one more. Nine is odd.
+  s2_zh: 四对再加一个。九是单数。
+  s2_zh_hk: 四對再加一個。九係單數。
+  s3_en: Zero counters. Zero is even.
+  s3_zh: 零个圆片。零是双数。
+  s3_zh_hk: 零個圓片。零係雙數。
+  s4_en: Two ones. Thirty-two is even.
+  s4_zh: 两个一。三十二是双数。
+  s4_zh_hk: 兩個一。三十二係雙數。
+  cues:
+  - kind: pairs
+    n: 4
+  - kind: pairs
+    n: 4
+    extra: 1
+  - kind: tiles
+    values: [0]
+  - kind: tens
+    count: 32

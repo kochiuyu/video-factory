@@ -1921,6 +1921,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-NUM-16": [
                 "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
             ],
+            "P1-NUM-20": [
+                "lesson_hook", "pair_counters", "pair_counters", "number_blocks", "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -2353,6 +2356,42 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertIn("？", labels_for(recap, "zh")["title"])
         self.assertNotIn("?", labels_for(recap, "zh")["title"])
         self.assertNotIn("?", labels_for(recap, "zh_hk")["title"])
+        twenty = load_lesson(P1 / "P1-NUM-20.yaml")
+        pairs = [beat for beat in twenty["beats"] if beat.get("scene") == "pair_counters"]
+        self.assertEqual([b["n"] for b in pairs], [8, 9])
+        self.assertEqual(count_event(pairs[0]), (1, 4))
+        self.assertEqual(count_event(pairs[1]), (1, 4))
+        blocks = [beat for beat in twenty["beats"] if beat.get("scene") == "number_blocks"]
+        self.assertEqual(blocks[0]["count"], 23)
+        self.assertEqual(count_event(blocks[0]), (0, 2))
+        self.assertEqual(pairs[1]["s3_zh_hk"], "四對再加一個。九係單數。")
+        self.assertNotIn("嗎", _beat_lines(twenty, "zh_hk"))
+        self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in twenty["beats"]).lower())
+        recap20 = next(beat for beat in twenty["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap20), 4)
+        self.assertEqual(labels_for(recap20, "en")["title"], "Even or odd?")
+        self.assertEqual(labels_for(recap20, "zh")["title"], "双数还是单数？")
+        self.assertEqual(labels_for(recap20, "zh_hk")["title"], "雙數定單數呀？")
+        self.assertEqual(
+            labels_for(recap20, "en")["lines"],
+            [
+                "Four pairs. Eight is even.",
+                "Four pairs and one more. Nine is odd.",
+                "Zero counters. Zero is even.",
+                "Two ones. Thirty-two is even.",
+            ],
+        )
+        self.assertEqual(labels_for(recap20, "zh")["lines"][2], "零个圆片。零是双数。")
+        self.assertEqual(labels_for(recap20, "zh_hk")["lines"][2], "零個圓片。零係雙數。")
+        self.assertEqual(
+            labels_for(recap20, "en")["cues"],
+            [("pairs", 4, 0), ("pairs", 4, 1), ("tiles", (0,)), ("tens", 3, 2)],
+        )
+        for picture in labels_for(recap20, "en")["cues"]:
+            self.assertNotIn(picture, DEFAULT_TRACK_CUES)
+        self.assertIn("？", labels_for(recap20, "zh")["title"])
+        self.assertNotIn("?", labels_for(recap20, "zh")["title"])
+        self.assertNotIn("?", labels_for(recap20, "zh_hk")["title"])
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

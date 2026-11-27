@@ -1,0 +1,282 @@
+id: FIN-20
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A good year. A distributable surplus?
+title_zh: 好的一年。就有可分派盈余吗？
+title_zh_hk: 好的一年。就有可分派盈餘嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-20
+  kicker_en: FIN-20
+  kicker_zh: FIN-20
+  kicker_zh_hk: FIN-20
+  title_en: A good year. A distributable surplus?
+  title_zh: 好的一年。就有可分派盈余吗？
+  title_zh_hk: 好的一年。就有可分派盈餘嗎？
+  image: art/good-year-distributable-surplus-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 12 March 2025, Cathay's annual-results announcement discussed ordinary dividends alongside investment
+    commitments and other uses of funds. It shows several claims on corporate cash, not a model payout
+    ratio for a small business. Now you advise the owners of a fictional seasonal business.
+  zh: >-
+    2025年3月12日，国泰航空的全年业绩公告，把普通股股息、投资承诺和其他资金用途放在一起讨论。这说明公司的现金同时有好几项用途要照顾，并不是给小企业参考的派息比率。现在，你要为一家虚构季节性企业的老板出主意。
+  zh_hk: >-
+    2025年3月12號，國泰航空嘅全年業績公告，將普通股股息、投資承擔同其他資金用途擺埋一齊講。呢個說明公司嘅現金同時有好幾樣用途要顧，唔係俾細企業參考嘅派息比率。而家，你要幫一間虛構季節性企業嘅老闆出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 5
+  cols: 1
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Cash plan · HK$000
+  title_zh: 现金计划 · 千港元
+  title_zh_hk: 現金計劃 · 千港元
+  row1_en: Unrestricted cash now
+  row1_zh: 现在不受限制的现金
+  row1_zh_hk: 現在不受限制的現金
+  row2_en: Net outflow to month-3 low
+  row2_zh: 到第 3 个月低点的净流出
+  row2_zh_hk: 到第 3 個月低點的淨流出
+  row3_en: Minimum cash at every point
+  row3_zh: 每个时点最少现金
+  row3_zh_hk: 每個時點最少現金
+  row4_en: Undrawn bank line on dashboard
+  row4_zh: 仪表板上未动用的额度
+  row4_zh_hk: 儀表板上未動用的額度
+  row5_en: Proposed distribution
+  row5_zh: 拟议分配
+  row5_zh_hk: 擬議分派
+  col1_en: HK$000
+  col1_zh: 千港元
+  col1_zh_hk: 千港元
+  c11: '700'
+  c21: '500'
+  c31: '150'
+  c41: '300'
+  c51: '300'
+  footer_en: >-
+    Reported annual profit: HK$600,000
+  footer_zh: 全年报告利润：HK$600,000
+  footer_zh_hk: 全年報告利潤：HK$600,000
+  s1_en: >-
+    After a profitable year, the owners of a seasonal merchandise business are considering a discretionary
+    cash distribution. Reported profit was 600,000 dollars, and unrestricted bank cash today is 700,000.
+    The proposal is 300,000 now, but nothing has been declared or promised.
+  s1_zh: >-
+    一家季节性商品企业赚钱之后，老板考虑做一笔自主决定的现金分配。全年报告利润是六十万港元，今天不受限制的银行存款有七十万。提议是现在分三十万，但还没有宣布，也没有承诺。
+  s1_zh_hk: >-
+    一間季節性商品企業賺咗錢之後，老闆諗緊做一筆自己決定嘅現金分派。全年報告利潤係六十萬港元，今日唔受限制嘅銀行存款有七十萬。提議係而家分三十萬，但仲未宣布，亦冇承諾。
+  s2_en: >-
+    The cash plan hits its lowest point in month three, when cumulative payments exceed receipts by 500,000
+    dollars. The owners require at least 150,000 dollars of cash at every point. Later collections should
+    not be used before they arrive.
+  s2_zh: 现金计划在第三个月跌到最低点，到时累计付款会比收款多出五十万港元。老板要求每个时点都至少留住十五万港元现金。之后的收款，到账之前不能拿来用。
+  s2_zh_hk: >-
+    現金計劃喺第三個月跌到最低點，到時累計俾出去嘅錢會比收入多五十萬港元。老闆要求每個時點最少留住十五萬港元現金。之後嘅收款，未到賬之前唔可以攞嚟用。
+  s3_en: >-
+    A dashboard shows an undrawn 300,000-dollar bank line. The proposal assumes it lasts through month
+    three, and drawing 250,000 at the low point would keep the floor after paying 300,000. Advisers have
+    confirmed adequate distributable reserves.
+  s3_zh: >-
+    仪表板上显示一笔还没动用的三十万港元银行额度。方案假设它能用到第三个月；到低点时提取二十五万，就能在分配三十万之后守住现金下限。顾问已经确认可分配储备足够。
+  s3_zh_hk: >-
+    儀表板上面顯示一筆未用過嘅三十萬港元銀行額度。方案假設佢用得到第三個月；到低點提取二十五萬，就可以喺分派三十萬之後守住現金底線。顧問已經確認可分派儲備足夠。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Distribute HK$300,000 now?
+  title_zh: 现在分 30 万吗？
+  title_zh_hk: 而家分 30 萬嗎？
+  en: >-
+    Would you provisionally plan the 300,000-dollar distribution, or retain the cash through the seasonal
+    peak? State the funding assumption your choice relies on, and the liquidity check required before
+    any declaration. Pause and vote.
+  zh: >-
+    你会暂时计划分配这三十万港元，还是把现金留着，撑过季节性的资金高峰？说明你的选择靠的是哪一个融资假设，以及在宣布之前，必须做哪一项流动性核对。请暂停，投个票。
+  zh_hk: >-
+    你暫時會計劃分派呢三十萬港元，定係留住現金，捱過季節性嘅資金高峰？講吓你嘅選擇靠邊一個融資假設，同埋宣布之前一定要做邊一項流動性核對。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The bank line ends at month two
+  title_zh: 额度在第二个月底到期
+  title_zh_hk: 額度在第二個月底到期
+  step1_en: Expires end of month 2; repay then
+  step1_zh: 第 2 个月底到期，须还清
+  step1_zh_hk: 第 2 個月底到期，須還清
+  step2_en: Renewal under review, not committed
+  step2_zh: 续期审议中，未获承诺
+  step2_zh_hk: 續期審議中，未獲承諾
+  step3_en: Any smaller amount, even zero, allowed
+  step3_zh: 可改成更少，甚至不分
+  step3_zh_hk: 可改成更少，甚至不分
+  s1_en: >-
+    The bank confirms the facility expires at the end of month two, and anything drawn must be repaid
+    then. Renewal is under review, with no commitment.
+  s1_zh: 银行确认，这笔额度在第二个月月底到期，已经提取的金额到时必须还清。续期还在审议，没有承诺。
+  s1_zh_hk: 銀行確認，呢筆額度喺第二個月月尾到期，已經提取嘅錢到時一定要還清。續期仲審緊，冇承諾。
+  s2_en: >-
+    Drawing early and holding the money cannot fund the month-three peak, because it must first be repaid.
+    No other credit or owner injection is committed.
+  s2_zh: 提早提款、把钱拿在手上，也帮不了第三个月的高峰，因为那笔钱要先还回去。也没有其他已承诺的信贷或老板注资。
+  s2_zh_hk: 提早提款、揸住啲錢，都幫唔到第三個月嘅高峰，因為嗰筆錢要先還返。亦冇其他已承諾嘅信貸或者老闆注資。
+  s3_en: >-
+    The owners may now recommend any smaller affordable amount, including zero, without breaking a promise.
+    There is no supplied return that identifies one best amount.
+  s3_zh: 老板现在可以建议任何一个付得起的更小金额，包括零，这不算食言。题目没有给出投资回报，所以没有唯一最好的金额。
+  s3_zh_hk: 老闆而家可以建議任何一個俾得起嘅細啲嘅金額，包括零，咁唔算食言。題目冇畀投資回報，所以冇唯一最好嘅金額。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: A smaller payout, or none?
+  title_zh: 少分一点，还是不分？
+  title_zh_hk: 少分啲，定唔分？
+  en: >-
+    With no facility committed through the peak, would you recommend a smaller distribution now, or retain
+    all cash until collections arrive? Calculate the maximum under the cash-floor model, and explain why
+    it is a ceiling, not an obligation to pay. Pause and vote.
+  zh: >-
+    高峰期间没有承诺的额度，你会建议现在少分一点，还是把现金全部留到收款到账？按现金下限模型算出最高可分多少，并解释为什么它是上限，而不是一定要付的金额。请暂停，投个票。
+  zh_hk: >-
+    高峰期間冇承諾嘅額度，你會建議而家少分啲，定係將現金全部留到收款到賬？按現金底線模型計出最多可以分幾多，再解釋點解佢係上限，唔係一定要俾嘅數。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Profit is not the payout budget
+  title_zh: 利润不等于分配预算
+  title_zh_hk: 利潤不等於分派預算
+  step1_en: >-
+    Low point: 700 − 500 = 200
+  step1_zh: 低点：700 − 500 = 200
+  step1_zh_hk: 低點：700 − 500 = 200
+  step2_en: >-
+    Pay 300 with no finance: −100
+  step2_zh: 无融资分 300：−100
+  step2_zh_hk: 無融資分 300：−100
+  step3_en: Needs 250 on that date, not a line today
+  step3_zh: 当天需要 250，不是今天的额度
+  step3_zh_hk: 當天需要 250，不是今天的額度
+  s1_en: >-
+    The 600,000-dollar accounting profit is not an extra deposit to add to the 700,000 bank balance.
+  s1_zh: 六十万港元的会计利润，不是七十万银行存款之外的另一笔钱。
+  s1_zh_hk: 六十萬港元嘅會計利潤，唔係七十萬銀行存款以外嘅另一筆錢。
+  s2_en: >-
+    At the low point, cash before distributions and borrowing is 700,000 minus 500,000, which is 200,000.
+    A 300,000 payout would leave minus 100,000 without financing.
+  s2_zh: 到了低点，分配和借款之前的现金是七十万减五十万，即二十万。如果分三十万又没有融资，余额就变成负十万。
+  s2_zh_hk: 到咗低點，分派同借錢之前嘅現金係七十萬減五十萬，即係二十萬。如果分三十萬又冇融資，餘額就變成負十萬。
+  s3_en: >-
+    To keep the 150,000 floor, it would need 250,000 available on that date, not merely an unused line
+    shown today. The line expires before the low point, and a renewal application is not a commitment.
+  s3_zh: 要守住十五万的下限，当天就要有二十五万可用，而不只是今天仪表板上一笔没用的额度。这笔额度在低点之前就到期，申请续期也不等于已获承诺。
+  s3_zh_hk: 要守住十五萬嘅底線，嗰日就要有二十五萬用得，唔係淨係今日儀表板上一筆未用嘅額度。呢筆額度喺低點之前就到期，申請續期亦唔等於已經承諾。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: A maximum is not a target
+  title_zh: 上限不是目标
+  title_zh_hk: 上限不是目標
+  step1_en: >-
+    Ceiling: 700 − 500 − 150 = 50
+  step1_zh: 上限：700 − 500 − 150 = 50
+  step1_zh_hk: 上限：700 − 500 − 150 = 50
+  step2_en: Paying 50 uses the whole margin
+  step2_zh: 分 50 就用光全部余地
+  step2_zh_hk: 分 50 就用盡全部餘地
+  step3_en: Less, or zero, keeps flexibility
+  step3_zh: 少分或不分，保留弹性
+  step3_zh_hk: 少分或不分，保留彈性
+  s1_en: >-
+    Without peak-period finance, the model ceiling is 700,000 minus 500,000 minus 150,000, which is 50,000
+    dollars.
+  s1_zh: 高峰期间没有融资的话，模型上限是七十万减五十万，再减十五万，即五万港元。
+  s1_zh_hk: 高峰期間冇融資嘅話，模型上限係七十萬減五十萬，再減十五萬，即係五萬港元。
+  s2_en: >-
+    Paying 50,000 gives the owners some cash, but uses the entire margin above their minimum.
+  s2_zh: 分五万能让老板拿到一些现金，但会把最低要求之上的余地全部用光。
+  s2_zh_hk: 分五萬可以等老闆攞到啲現金，但會將最低要求以上嘅餘地全部用盡。
+  s3_en: >-
+    Paying less, or nothing until collections arrive, preserves extra flexibility. Do not pay first and
+    assume the bank, staff or suppliers will absorb the gap later.
+  s3_zh: 少分一点，或者等收款到账之前先不分，就能多留一些弹性。不要先把钱分出去，再指望银行、员工或供应商以后来填补缺口。
+  s3_zh_hk: 少分啲，或者等收款到賬之前先唔分，就可以多留啲彈性。唔好先將錢分出去，再指望銀行、員工或者供應商之後幫手填個窿。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Name the buffer and review date
+  title_zh: 说明缓冲和复核日期
+  title_zh_hk: 說明緩衝和覆核日期
+  en: >-
+    Explain the chosen buffer and the next review date. If renewal is eventually committed, reassess its
+    duration, conditions and repayment, rather than treating the limit as permanent cash. Actual declaration
+    still needs updated advice and the relevant checks.
+  zh: >-
+    要说明选定的缓冲金额，以及下次复核的日期。如果之后续期真的获得承诺，也要重新看期限、条件和还款安排，而不是把额度当成永久的现金。真正宣布分配之前，仍然需要最新的专业意见和相关核对。
+  zh_hk: >-
+    要講清揀咗幾多緩衝，同下次覆核嘅日期。如果之後續期真係獲得承諾，都要重新睇期限、條件同還款安排，唔好將額度當成永久嘅現金。真正宣布分派之前，仍然需要最新嘅專業意見同相關核對。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Fund the low point first
+  title_zh: 先顾低点，再谈分配
+  title_zh_hk: 先顧低點，再談分派
+  q1_en: Profit is not cash on the day
+  q1_zh: 利润不等于当天的现金
+  q1_zh_hk: 利潤不等於當天的現金
+  q2_en: Match finance to the date of need
+  q2_zh: 融资要对准用钱的日子
+  q2_zh_hk: 融資要對準用錢的日子
+  s1_en: >-
+    Neither retaining cash forever nor always paying the maximum is automatically best.
+  s1_zh: 永远不分，或者每次都分到上限，都不一定是最好的。
+  s1_zh_hk: 永遠唔分，或者次次分到上限，都唔一定係最好。
+  s2_en: >-
+    No owner entitlement or employee obligation may be cancelled to fund a payout.
+  s2_zh: 不能为了分配，取消老板已有的权利或对员工的义务。
+  s2_zh_hk: 唔可以為咗分派，取消老闆已有嘅權利或者對員工嘅責任。
+  s3_en: >-
+    The seasonal business, cash plan and bank line are fictional; this is not legal or tax advice. Official
+    scene art is a teaching illustration only.
+  s3_zh: 这家季节性企业、现金计划和银行额度都是虚构的，并非法律或税务意见。官方场景图只是教学插图。
+  s3_zh_hk: 呢間季節性企業、現金計劃同銀行額度都係虛構嘅，並非法律或稅務意見。官方場景圖只係教學插圖。
+duration_target_s: 196

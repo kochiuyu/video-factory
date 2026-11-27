@@ -2354,6 +2354,22 @@ def _scene_types() -> dict:
                 group.move_to(UP * 0)
                 if float(group.get_bottom()[1]) < bot_lim:
                     group.shift(UP * (bot_lim - float(group.get_bottom()[1])))
+            elif portrait:
+                # A one-line English title wider than the frame would shrink
+                # the picture with it. Wrap that title onto two centred lines
+                # and leave the picture at the size a short title keeps.
+                # 16:9 stays on the settle path below.
+                raw = str(labels.get("title") or "")
+                left_lim, right_lim, _, _ = _safe_limits()
+                cap = (right_lim - left_lim) * 0.96
+                if " " in raw and float(title.width) > cap:
+                    ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+                    unit = ph / float(config.frame_height)
+                    floor_h = (52.0 * (ph / 1920.0)) / unit
+                    title = self._parts_hook_title(raw, latin, cjk, cap, floor_h, force_wrap=True)
+                title.next_to(kicker, DOWN, buff=0.28)
+                cue.next_to(title, DOWN, buff=0.4)
+                settle(VGroup(kicker, title, cue))
             else:
                 if motif == "ordinal":
                     # Twice the old token row. A wide title is what the frame scales to,
@@ -2448,7 +2464,7 @@ def _scene_types() -> dict:
                 group.shift(DOWN * (float(group.get_top()[1]) - top_lim))
             return kicker, title, cue
 
-        def _parts_hook_title(self, text: str, latin: str, cjk: str, cap: float, floor_h: float):
+        def _parts_hook_title(self, text: str, latin: str, cjk: str, cap: float, floor_h: float, force_wrap: bool = False):
             raw = (text or "").strip() or " "
             one = styled(raw, latin, cjk, 54)
             if float(one.width) <= 0:
@@ -2456,7 +2472,9 @@ def _scene_types() -> dict:
             fill = cap / float(one.width)
             words = raw.split()
             # Two centred lines when one full-width line would sit near the floor.
-            if len(words) >= 2 and float(one.height) * fill < floor_h * 1.5:
+            # force_wrap is the counters / ten-frame / track case: any English
+            # title wider than the frame wraps, so the picture is not scaled down.
+            if len(words) >= 2 and (force_wrap or float(one.height) * fill < floor_h * 1.5):
                 best = None
                 for cut in range(1, len(words)):
                     left = styled(" ".join(words[:cut]), latin, cjk, 54)
@@ -2610,7 +2628,33 @@ def _scene_types() -> dict:
             cx = (float(grid["left"]) + float(grid["right"])) / 2.0
             cy = float(grid["top"]) - band / 2.0
             heading.move_to([cx, cy, 0])
+            self._clear_heading_bar(heading, grid)
             self._placed_heading = heading
+
+        def _clear_heading_bar(self, heading, grid: dict) -> None:
+            """In 9:16, keep a two-line heading under the gold progress bar.
+
+            The bar is 8px at the top of the frame. A heading that already
+            clears it, including a one-line title, stays where it is. A heading
+            that would touch the bar is lowered, and scaled only if it would
+            otherwise cover the first row.
+            """
+            ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+            pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
+            if ph <= pw:
+                return
+            inset_px = 36.0
+            unit = ph / float(grid["fh"])
+            top_limit = float(grid["top"]) - inset_px / unit
+            if float(heading.get_top()[1]) <= top_limit + 0.01:
+                return
+            floor = float(grid["rows_top"])
+            room = top_limit - floor
+            if room > 0 and float(heading.height) > room:
+                heading.scale(room / float(heading.height))
+            drop = float(heading.get_top()[1]) - top_limit
+            if drop > 0:
+                heading.shift(DOWN * drop)
 
         def _wrap_heading(self, text: str, latin: str, width: float, height: float, floor_h: float):
             words = text.split()
@@ -2652,6 +2696,7 @@ def _scene_types() -> dict:
 
             A rod is tall. A cube is a small square, much smaller than a rod.
             Ten rods are two rows of that same rod, not a shorter rod.
+            Six rods stay one row, with the ones under them.
             """
             rod_w, rod_h, side, buff = 0.30, 0.70, 0.28, 0.05
             rod_mobs = []
@@ -2669,7 +2714,9 @@ def _scene_types() -> dict:
             parts = []
             if rod_mobs:
                 rods_g = VGroup(*rod_mobs)
-                cols = 5 if len(rod_mobs) > 5 else len(rod_mobs)
+                # Six rods stay one row so the ones sit under them. Ten rods
+                # stay two rows of five.
+                cols = len(rod_mobs) if len(rod_mobs) <= 6 else 5
                 rods_g.arrange_in_grid(rows=(len(rod_mobs) + cols - 1) // cols, cols=cols, buff=buff)
                 parts.append(rods_g)
             if cube_mobs:
@@ -3020,6 +3067,18 @@ def _scene_types() -> dict:
             raw = (text or "").strip() or " "
             whole = styled(raw, latin, cjk, size)
             if float(whole.width) <= width:
+                return whole
+            # Two short sentences that are only slightly wider than the column
+            # stay one line. "Take away six ones. Fifty-two." is about 1% over
+            # the 9:16 column, and splitting it would put the answer on its own line.
+            if (
+                "." in raw
+                and raw.count(".") >= 2
+                and not any("\u4e00" <= ch <= "\u9fff" for ch in raw)
+                and float(whole.width) <= width * 1.04
+                and float(whole.width) > 0
+            ):
+                whole.scale(width / float(whole.width))
                 return whole
             # A sentence break beats a word break: "Find the ten first. Then…"
             # stays two sentences when each one fits the column.

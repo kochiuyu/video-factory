@@ -86,9 +86,9 @@ beats:
   s1_en: Ones, then tens.
   s1_zh: 先拿走个，再拿走十。二十四。
   s1_zh_hk: 先攞走個，再攞走十。二十四。
-  s2_en: Six ones. Fifty-two.
-  s2_zh: 六是六个一。五十二。
-  s2_zh_hk: 六係六個一。五十二。
+  s2_en: Take away six ones. Fifty-two.
+  s2_zh: 拿走六个一。五十二。
+  s2_zh_hk: 攞走六個一。五十二。
   s3_en: Add back the thirty-two.
   s3_zh: 把三十二加回去。
   s3_zh_hk: 把三十二加返去。

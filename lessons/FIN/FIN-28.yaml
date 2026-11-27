@@ -1,0 +1,277 @@
+id: FIN-28
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The hedge moves. Does it move with our cost?
+title_zh: 对冲在动。它会随我们的成本一起动吗？
+title_zh_hk: 對沖在動。它會隨我們的成本一起動嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-28
+  kicker_en: FIN-28
+  kicker_zh: FIN-28
+  kicker_zh_hk: FIN-28
+  title_en: The hedge moves. Does it move with our cost?
+  title_zh: 对冲在动。它会随我们的成本一起动吗？
+  title_zh_hk: 對沖在動。它會隨我們的成本一起動嗎？
+  image: art/hedge-moves-delivered-cost-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    CME explains that local cash prices can differ from a reference futures price because of freight,
+    quality and local supply. LME material also separates a base reference price from physical premiums.
+    Now you advise a fictional Hong Kong processor.
+  zh: >-
+    芝加哥商品交易所解释过：因为运费、质量和本地供应情况，本地现货价格可能和参考期货价格不同。伦敦金属交易所的资料也把基准参考价和实物溢价分开。现在，你要为香港一家虚构的加工商出主意。
+  zh_hk: >-
+    芝加哥商品交易所解釋過：因為運費、質素同本地供應情況，本地現貨價可能同參考期貨價唔同。倫敦金屬交易所嘅資料亦將基準參考價同實物溢價分開。而家，你要幫香港一間虛構嘅加工商出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two index scenarios, 1,000 kg
+  title_zh: 两个指数情景，1,000 公斤
+  title_zh_hk: 兩個指數情景，1,000 公斤
+  row1_en: Higher index
+  row1_zh: 指数较高
+  row1_zh_hk: 指數較高
+  row2_en: Lower index
+  row2_zh: 指数较低
+  row2_zh_hk: 指數較低
+  col1_en: Index I, HK$/kg
+  col1_zh: 指数 I，港元/公斤
+  col1_zh_hk: 指數 I，港元/公斤
+  col2_en: Premium P, HK$/kg
+  col2_zh: 溢价 P，港元/公斤
+  col2_zh_hk: 溢價 P，港元/公斤
+  col3_en: Unhedged cost
+  col3_zh: 不对冲成本
+  col3_zh_hk: 不對沖成本
+  c11: '120'
+  c12: '10'
+  c13: HK$130,000
+  c21: '80'
+  c22: '10'
+  c23: HK$90,000
+  footer_en: >-
+    Hedge: 1,000 × (I − 100) · fee 2,000
+  footer_zh: 对冲收付 1,000 × (I − 100) · 费用 2,000
+  footer_zh_hk: 對沖收付 1,000 × (I − 100) · 費用 2,000
+  s1_en: >-
+    The processor must buy exactly 1,000 kilograms of an industrial input in one month. The delivered
+    price per kilogram will be index I on that date plus a local premium P. The planning premium is 10
+    dollars, not fixed by contract.
+  s1_zh: >-
+    加工商一个月后必须正好买入一千公斤工业原料。供应商每公斤的到货价，等于当天的参考指数I，加上本地溢价P。计划用的溢价是每公斤十港元，但合同并没有把它定死。
+  s1_zh_hk: >-
+    加工商一個月後要啱啱好買一千公斤工業原料。供應商每公斤嘅到貨價，等於當日嘅參考指數I，加本地溢價P。計劃用嘅溢價係每公斤十港元，但合約冇鎖死佢。
+  s2_en: >-
+    The permitted hedge covers the same 1,000 kilograms and date. It pays the processor 1,000 times I
+    minus 100 dollars; a negative result means the processor pays. The all-in fee is 2,000 dollars.
+  s2_zh: 允许使用的对冲，覆盖同样的一千公斤和同一个日期。它付给加工商一千乘以I减一百港元；结果是负数，就由加工商付钱。全部费用是两千港元。
+  s2_zh_hk: 容許用嘅對沖，覆蓋同樣嘅一千公斤同同一個日子。佢俾加工商一千乘I減一百港元；結果係負數，就由加工商俾錢。全部費用係兩千港元。
+  s3_en: >-
+    Management wants to remove index-driven variation, not to beat every unhedged outcome. It also asks
+    whether the plan guarantees an all-in ceiling of 115,000 dollars. No probabilities are given.
+  s3_zh: >-
+    管理层的目标是消除由指数带来的成本波动，而不是在每一种情况下都比不对冲便宜。它还想知道，这个方案能不能保证总采购成本不超过十一万五千港元。题目没给概率。
+  s3_zh_hk: >-
+    管理層嘅目標係消除由指數帶嚟嘅成本波動，唔係每一種情況都要平過唔對沖。佢仲想知，呢個方案可唔可以保證總採購成本唔超過十一萬五千港元。題目冇俾機率。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Hedge? Is 115,000 guaranteed?
+  title_zh: 要对冲吗？115,000 有保证吗？
+  title_zh_hk: 要對沖嗎？115,000 有保證嗎？
+  en: >-
+    Would the supplied hedge serve the index-risk objective, and what are the cash costs in both scenarios?
+    Can the 115,000-dollar all-in ceiling be called guaranteed? Pause and vote.
+  zh: 这项对冲能达到控制指数风险的目标吗？两个情景下的现金成本各是多少？能不能说十一万五千港元的总成本上限有保证？请暂停，投个票。
+  zh_hk: 呢項對沖做唔做到控制指數風險嘅目標？兩個情景下嘅現金成本各係幾多？可唔可以話十一萬五千港元嘅總成本上限有保證？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A premium stress test
+  title_zh: 溢价压力测试
+  title_zh_hk: 溢價壓力測試
+  step1_en: Local premium P = HK$25 per kg
+  step1_zh: 本地溢价 P = 每公斤 HK$25
+  step1_zh_hk: 本地溢價 P = 每公斤 HK$25
+  step2_en: Hedge formula, fee and date unchanged
+  step2_zh: 对冲公式、费用和日期不变
+  step2_zh_hk: 對沖公式、費用和日期不變
+  step3_en: No fixed-premium offer or premium hedge
+  step3_zh: 没有固定溢价报价或溢价对冲
+  step3_zh_hk: 沒有固定溢價報價或溢價對沖
+  s1_en: >-
+    Before any commitment, a local handling disruption makes a 25-dollar premium per kilogram a credible
+    stress scenario, independent of the index.
+  s1_zh: 还没做任何承诺之前，本地装卸能力出了问题，每公斤二十五港元的溢价成了一个可信的压力情景，而且和指数无关。
+  s1_zh_hk: 仲未做任何承諾之前，本地裝卸能力出咗問題，每公斤二十五港元嘅溢價成為一個可信嘅壓力情景，而且同指數無關。
+  s2_en: >-
+    The supplier formula is still I plus P, and the hedge formula, quantity, fee and date do not change.
+    This is a stress test, not a forecast.
+  s2_zh: 供应商的定价公式仍是I加P；对冲公式、数量、费用和日期都不变。这是压力测试，不是预测。
+  s2_zh_hk: 供應商嘅定價公式仍然係I加P；對沖公式、數量、費用同日子都冇變。呢個係壓力測試，唔係預測。
+  s3_en: >-
+    No fixed-premium supplier offer or premium hedge is available. Management may keep the index hedge
+    as partial protection, but must report any breach of the 115,000 ceiling.
+  s3_zh: 没有固定溢价的供应商报价，也没有针对溢价的对冲。管理层可以保留指数对冲作为部分保护，但只要超出十一万五千的上限，就必须报告。
+  s3_zh_hk: 冇固定溢價嘅供應商報價，亦冇針對溢價嘅對沖。管理層可以保留指數對沖做部分保障，但只要超出十一萬五千嘅上限，就一定要報告。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Describe the remaining exposure
+  title_zh: 怎样描述剩下的风险？
+  title_zh_hk: 怎樣描述剩下的風險？
+  en: >-
+    What are the stressed cash costs with and without the hedge, and how should management describe the
+    remaining exposure and the procurement-ceiling problem? Pause and vote.
+  zh: 在压力情景下，对冲和不对冲的现金成本各是多少？管理层应该怎样描述剩下的风险，以及采购成本上限的问题？请暂停，投个票。
+  zh_hk: 喺壓力情景下，對沖同唔對沖嘅現金成本各係幾多？管理層應該點樣描述剩低嘅風險，同埋採購成本上限嘅問題？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: What the hedge offsets
+  title_zh: 对冲抵消的是什么
+  title_zh_hk: 對沖抵消的是甚麼
+  step1_en: >-
+    I = 120: 130k − 20k + 2k = 112,000
+  step1_zh: I = 120：130,000 − 20,000 + 2,000 = 112,000
+  step1_zh_hk: I = 120：130,000 − 20,000 + 2,000 = 112,000
+  step2_en: >-
+    I = 80: 90k + 20k + 2k = 112,000
+  step2_zh: I = 80：90,000 + 20,000 + 2,000 = 112,000
+  step2_zh_hk: I = 80：90,000 + 20,000 + 2,000 = 112,000
+  step3_en: Index risk gone; no ceiling guarantee
+  step3_zh: 指数风险消除，上限没保证
+  step3_zh_hk: 指數風險消除，上限沒保證
+  s1_en: >-
+    At an index of 120 and premium of 10, the purchase costs 130,000. The hedge receives 20,000, so the
+    net cost is 130,000 minus 20,000 plus the 2,000 fee: 112,000 dollars.
+  s1_zh: 指数一百二十、溢价十的时候，采购成本是十三万。对冲收到两万，所以净成本是十三万减两万，再加两千费用，即十一万二千港元。
+  s1_zh_hk: 指數一百二十、溢價十嘅時候，採購成本係十三萬。對沖收到兩萬，所以淨成本係十三萬減兩萬，再加兩千費用，即係十一萬二千港元。
+  s2_en: >-
+    At an index of 80, the purchase costs 90,000, and the hedge pays out 20,000, so the net cost is 90,000
+    plus 20,000 plus 2,000: again 112,000.
+  s2_zh: 指数八十的时候，采购成本是九万，对冲要付出两万，所以净成本是九万加两万再加两千，同样是十一万二千。
+  s2_zh_hk: 指數八十嘅時候，採購成本係九萬，對沖要俾出兩萬，所以淨成本係九萬加兩萬再加兩千，一樣係十一萬二千。
+  s3_en: >-
+    The hedge removes index-driven variation. It costs more than not hedging when the index is low, which
+    is not a failure of that objective. Both results are under 115,000, but the premium was only assumed,
+    so no ceiling guarantee follows.
+  s3_zh: >-
+    对冲消除了指数带来的波动。指数低的时候，它比不对冲更贵，但这并不代表没达到目标。两个结果都低于十一万五千，可是溢价只是假设的，所以推不出上限有保证。
+  s3_zh_hk: >-
+    對沖消除咗指數帶嚟嘅波動。指數低嘅時候，佢貴過唔對沖，但咁唔代表冇達到目標。兩個結果都低過十一萬五千，不過溢價只係假設，所以推唔出上限有保證。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: The premium moves separately
+  title_zh: 溢价单独变动
+  title_zh_hk: 溢價單獨變動
+  step1_en: >-
+    P = 25: hedged cost 127,000 in both
+  step1_zh: P = 25：对冲后两种情景都是 127,000
+  step1_zh_hk: P = 25：對沖後兩種情景都是 127,000
+  step2_en: Hedged cost = 102,000 + 1,000 × P
+  step2_zh: 对冲后成本 = 102,000 + 1,000 × P
+  step2_zh_hk: 對沖後成本 = 102,000 + 1,000 × P
+  step3_en: 12,000 over the cap · P must be ≤ 13
+  step3_zh: 超出上限 12,000 · P 须 ≤ 13
+  step3_zh_hk: 超出上限 12,000 · P 須 ≤ 13
+  s1_en: >-
+    With a premium of 25, the unhedged cost is 145,000 or 105,000. Hedged, it is 127,000 in both index
+    scenarios, which is 12,000 dollars over the 115,000 ceiling.
+  s1_zh: 溢价二十五时，不对冲的成本是十四万五千或十万五千。对冲之后，两个指数情景都是十二万七千，比十一万五千的上限多出一万二千港元。
+  s1_zh_hk: 溢價二十五嘅時候，唔對沖嘅成本係十四萬五千或者十萬五千。對沖之後，兩個指數情景都係十二萬七千，超出十一萬五千嘅上限一萬二千港元。
+  s2_en: >-
+    Substituting, hedged cost equals 102,000 plus 1,000 times P. The index cancels; the premium does not.
+    To stay within 115,000, the premium must be no more than 13 dollars per kilogram.
+  s2_zh: 代入公式，对冲后成本等于十万二千加一千乘P。指数抵消掉了，溢价却没有。要守住十一万五千，溢价每公斤不能超过十三港元。
+  s2_zh_hk: 代入公式，對沖後成本等於十萬二千加一千乘P。指數抵銷咗，溢價就冇。要守住十一萬五千，溢價每公斤唔可以超過十三港元。
+  s3_en: >-
+    This mismatch between the reference exposure and the delivered cost is basis risk. Real hedges can
+    also mismatch on date, grade, quantity and funding.
+  s3_zh: 参考价格的风险敞口和实际到货成本之间的错配，就是基差风险。真实的对冲还可能在日期、等级、数量和资金上出现错配。
+  s3_zh_hk: 參考價格嘅風險同實際到貨成本之間嘅錯配，就係基差風險。真實嘅對沖仲可能喺日期、等級、數量同資金上面錯配。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: A precise claim, not a guarantee
+  title_zh: 说法要精确，不能说成保证
+  title_zh_hk: 說法要精確，不能說成保證
+  en: >-
+    Keeping the hedge as index-only protection remains defensible: it holds the stressed cost constant
+    across both index scenarios, but cannot meet the separate all-in ceiling. Declining keeps both exposures.
+    Report the residual premium and the 12,000 shortfall, and seek a revised procurement plan.
+  zh: >-
+    把这项对冲当作只针对指数的保护而保留，仍然说得通：压力情景下，它让两个指数情景的成本保持一样，却满足不了另外那个总成本上限。不对冲，就两种风险都留着。要报告剩下的溢价风险和一万二千的缺口，并另订采购方案。
+  zh_hk: >-
+    將呢項對沖當做淨係針對指數嘅保障而保留，仍然講得通：壓力情景下，佢令兩個指數情景嘅成本保持一樣，但滿足唔到另外嗰個總成本上限。唔對沖，就兩種風險都留低。要報告剩低嘅溢價風險同一萬二千嘅缺口，再另外訂採購方案。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Hedge the index, report basis
+  title_zh: 对冲指数，报告基差
+  title_zh_hk: 對沖指數，報告基差
+  q1_en: The index cancels; the premium does not
+  q1_zh: 指数抵消了，溢价没有
+  q1_zh_hk: 指數抵銷了，溢價沒有
+  q2_en: Index protection is not an all-in ceiling
+  q2_zh: 指数保护不等于总成本上限
+  q2_zh_hk: 指數保障不等於總成本上限
+  s1_en: >-
+    Do not assume the reference price and local premium always move together, or always in opposite directions.
+  s1_zh: 不要假设参考价格和本地溢价总是同向变动，或者总是反向变动。
+  s1_zh_hk: 唔好假設參考價同本地溢價一定一齊郁，或者一定反方向郁。
+  s2_en: >-
+    This hedge payoff is for arithmetic only; it is not an instruction to trade, choose a real instrument
+    or apply hedge accounting.
+  s2_zh: 这里的对冲收益只用来练习计算，不是叫你去交易、挑选真实的金融工具，或者采用对冲会计。
+  s2_zh_hk: 呢度嘅對沖回報淨係用嚟練習計數，唔係叫你去交易、揀真實嘅金融工具，或者用對沖會計。
+  s3_en: >-
+    The processor, input, supplier and hedge are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 加工商、原料、供应商和对冲都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 加工商、原料、供應商同對沖都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

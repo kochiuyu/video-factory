@@ -1,0 +1,295 @@
+id: FIN-29
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The same ownership. The same exit proceeds?
+title_zh: 同样的持股。退出所得也一样吗？
+title_zh_hk: 同樣的持股。退出所得也一樣嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-29
+  kicker_en: FIN-29
+  kicker_zh: FIN-29
+  kicker_zh_hk: FIN-29
+  title_en: The same ownership. The same exit proceeds?
+  title_zh: 同样的持股。退出所得也一样吗？
+  title_zh_hk: 同樣的持股。退出所得也一樣嗎？
+  image: art/same-ownership-different-exit-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Public model venture terms distinguish priority payments, participation in remaining proceeds, and
+    conversion to ordinary shares. So equal headline ownership need not mean equal exit distributions.
+    Now you advise two founders of a fictional Hong Kong startup.
+  zh: >-
+    公开的风险投资范本条款，会把优先支付、参与分配剩余所得、转换成普通股这几件事分开。所以，名义上持股相同，退出时分到的钱不一定相同。现在，你要为香港一家虚构初创企业的两位创始人出主意。
+  zh_hk: >-
+    公開嘅風險投資範本條款，會將優先支付、參與分配剩餘所得、轉換做普通股呢幾樣嘢分開。所以，名義上持股一樣，退出嗰陣分到嘅錢唔一定一樣。而家，你要幫香港一間虛構初創企業嘅兩位創辦人出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two HK$2m offers, 20% each
+  title_zh: 两份 200 万港元要约，各占 20%
+  title_zh_hk: 兩份 200 萬港元要約，各佔 20%
+  row1_en: >-
+    A: non-participating
+  row1_zh: A：不参与分配
+  row1_zh_hk: A：不參與分配
+  row2_en: >-
+    B: fully participating
+  row2_zh: B：完全参与分配
+  row2_zh_hk: B：完全參與分配
+  col1_en: First payment
+  col1_zh: 优先支付
+  col1_zh_hk: 優先支付
+  col2_en: Then the remainder
+  col2_zh: 剩余部分
+  col2_zh_hk: 剩餘部分
+  c11_en: Up to HK$2m to investor
+  c11_zh: 投资者先得最多 200 万
+  c11_zh_hk: 投資者先得最多 200 萬
+  c12_en: All to founders
+  c12_zh: 全归创始人
+  c12_zh_hk: 全歸創辦人
+  c21_en: Up to HK$2m to investor
+  c21_zh: 投资者先得最多 200 万
+  c21_zh_hk: 投資者先得最多 200 萬
+  c22_en: 20% investor · 80% founders
+  c22_zh: 投资者 20% · 创始人 80%
+  c22_zh_hk: 投資者 20% · 創辦人 80%
+  footer_en: >-
+    Exits V: HK$1m, 6m, 15m
+  footer_zh: 退出 V：100 万、600 万、1500 万
+  footer_zh_hk: 退出 V：100 萬、600 萬、1500 萬
+  s1_en: >-
+    Each offer supplies 2 million dollars now and gives its investor 20 percent on an as-converted basis:
+    if all shares became ordinary, the investor would own 20 percent and the founders 80. Only one offer
+    is accepted, and all other terms are identical.
+  s1_zh: >-
+    两份要约现在都投入两百万港元，按转换后计算，投资者持股百分之二十：如果全部股份都转成普通股，投资者占百分之二十，创始人占百分之八十。只能接受一份，其他条款完全相同。
+  s1_zh_hk: >-
+    兩份要約而家都投兩百萬港元，按轉換後計，投資者持股百分之二十：如果全部股份都轉做普通股，投資者佔百分之二十，創辦人佔百分之八十。只可以接受一份，其他條款完全一樣。
+  s2_en: >-
+    At a cash exit, V is the total available to these shareholders after debts, costs and prior claims.
+    Consider V of 1, 6 and 15 million dollars, with no probabilities. The original investment is not added
+    to V again.
+  s2_zh: >-
+    现金退出时，V是还清债务、交易成本和其他优先请求之后，这些股东可以分的总额。看V为一百万、六百万和一千五百万港元三种情况，没有概率。原来的投资不再另外加到V上。
+  s2_zh_hk: >-
+    現金退出嗰陣，V係還清債務、交易成本同其他優先申索之後，呢啲股東可以分嘅總數。睇V係一百萬、六百萬同一千五百萬港元三個情況，冇機率。原本嘅投資唔會再加落V度。
+  s3_en: >-
+    While preferred, A pays its investor up to 2 million first and gives the founders all the rest. B
+    also pays up to 2 million first, then splits any remainder 20 to 80, with no cap. Investor receipts
+    can never exceed V.
+  s3_zh: >-
+    在仍是优先股的情况下，A先付给投资者最多两百万，剩下的全归创始人。B也先付最多两百万，剩余部分再按二八分，没有上限。投资者拿到的钱，永远不会超过V。
+  s3_zh_hk: >-
+    仲係優先股嘅情況下，A先俾投資者最多兩百萬，剩低嘅全部歸創辦人。B都係先俾最多兩百萬，剩餘再按二八分，冇上限。投資者攞到嘅錢，永遠唔會超過V。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Is 20% the investor's cash?
+  title_zh: 20% 就是投资者分到的现金比例吗？
+  title_zh_hk: 20% 就是投資者分到的現金比例嗎？
+  en: >-
+    While each investor remains preferred, how are 1 million, 6 million and 15 million dollars divided,
+    and does 20 percent ownership describe the investor's cash share? Pause and vote.
+  zh: 在两位投资者都还持有优先股时，一百万、六百万和一千五百万港元各怎么分？百分之二十的持股，能代表投资者分到的现金比例吗？请暂停，投个票。
+  zh_hk: 兩位投資者都仲持有優先股嘅時候，一百萬、六百萬同一千五百萬港元各點分？百分之二十嘅持股，代表唔代表到投資者分到嘅現金比例？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The conversion clause
+  title_zh: 转换条款
+  title_zh_hk: 轉換條款
+  step1_en: >-
+    A may convert: 20% of all of V
+  step1_zh: A 可转换：拿整个 V 的 20%
+  step1_zh_hk: A 可轉換：拿整個 V 的 20%
+  step2_en: Investor elects the route paying more
+  step2_zh: 投资者选拿钱更多的路径
+  step2_zh_hk: 投資者選拿錢更多的路徑
+  step3_en: Founders want at least as much cash
+  step3_zh: 创始人要每种情景都不吃亏
+  step3_zh_hk: 創辦人要每種情景都不吃虧
+  s1_en: >-
+    The full clause confirms that A's investor may instead convert just before the exit and receive 20
+    percent of the entire V, giving up the priority payment completely.
+  s1_zh: 完整条款确认：A的投资者也可以在退出前一刻转成普通股，拿整个V的百分之二十，但要完全放弃优先支付。
+  s1_zh_hk: 完整條款確認：A嘅投資者亦可以喺退出前一刻轉做普通股，攞成個V嘅百分之二十，但要完全放棄優先支付。
+  s2_en: >-
+    Each investor elects whichever route gives more cash. B may also convert, but its uncapped participating
+    route remains available. Conversion does not change V.
+  s2_zh: 投资者会选拿钱更多的那条路。B也可以转换，但它没有上限的参与分配路径仍然可用。转换不会改变V。
+  s2_zh_hk: 投資者會揀攞錢多啲嗰條路。B亦可以轉換，但佢冇上限嘅參與分配路徑仍然用得。轉換唔會改變V。
+  s3_en: >-
+    The founders want the offer that leaves them at least as much cash at every supplied exit. With no
+    probabilities, do not calculate an expected return.
+  s3_zh: 创始人想要的是：在每一个给出的退出情景下，自己拿到的现金都不少于另一份。没有概率，就不要计算期望回报。
+  s3_zh_hk: 創辦人想要嘅係：喺每一個俾出嘅退出情景，自己攞到嘅現金都唔少過另一份。冇機率，就唔好計期望回報。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which offer for the founders?
+  title_zh: 创始人选哪份要约？
+  title_zh_hk: 創辦人選哪份要約？
+  en: >-
+    When investors elect their better route, what changes at the three exits, where is A's conversion
+    threshold, and which offer better serves the founders' stated comparison? Pause and vote.
+  zh: 投资者都选对自己更有利的路径时，三个退出情景有什么变化？A的转换门槛在哪里？按创始人定下的比较标准，哪份要约更好？请暂停，投个票。
+  zh_hk: 投資者都揀對自己有利啲嘅路徑時，三個退出情景有咩變化？A嘅轉換門檻喺邊？按創辦人定落嘅比較標準，邊份要約好啲？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Staying preferred
+  title_zh: 仍然持有优先股
+  title_zh_hk: 仍然持有優先股
+  step1_en: >-
+    V = 1: investor 1, founders 0 (both)
+  step1_zh: V = 1：投资者 1，创始人 0（两份相同）
+  step1_zh_hk: V = 1：投資者 1，創辦人 0（兩份相同）
+  step2_en: >-
+    V = 6: founders A 4 · B 3.2
+  step2_zh: V = 6：创始人 A 4 · B 3.2
+  step2_zh_hk: V = 6：創辦人 A 4 · B 3.2
+  step3_en: >-
+    V = 15: founders A 13 · B 10.4
+  step3_zh: V = 15：创始人 A 13 · B 10.4
+  step3_zh_hk: V = 15：創辦人 A 13 · B 10.4
+  s1_en: >-
+    In millions of dollars: at V of 1, both offers pay the investor 1 and the founders nothing. The investor
+    recovers only half the investment, so priority is not a guarantee of full repayment.
+  s1_zh: 以百万港元计：V为一的时候，两份要约都是投资者拿一，创始人拿零。投资者只收回一半投资，可见优先权并不保证全额收回。
+  s1_zh_hk: 以百萬港元計：V係一嘅時候，兩份要約都係投資者攞一，創辦人攞零。投資者淨係收返一半投資，可見優先權唔保證全數收返。
+  s2_en: >-
+    At V of 6, A pays the investor 2 and the founders 4. B pays the investor 2 plus 20 percent of 4, or
+    2.8, leaving the founders 3.2. The investor's cash share is 33 percent under A and 47 percent under
+    B.
+  s2_zh: >-
+    V为六的时候，A付给投资者二，创始人拿四。B付给投资者二，再加四的百分之二十，共二点八，创始人剩三点二。投资者的现金比例，A约百分之三十三，B约百分之四十七。
+  s2_zh_hk: >-
+    V係六嘅時候，A俾投資者二，創辦人攞四。B俾投資者二，再加四嘅百分之二十，共二點八，創辦人剩三點二。投資者嘅現金比例，A大約百分之三十三，B大約百分之四十七。
+  s3_en: >-
+    At V of 15, A's preferred route pays the investor 2 and the founders 13. B pays 2 plus 20 percent
+    of 13, or 4.6, leaving the founders 10.4. The same 20 percent ownership does not describe the cash
+    split.
+  s3_zh: >-
+    V为十五的时候，A走优先路径，投资者拿二，创始人拿十三。B付二，再加十三的百分之二十，共四点六，创始人剩十点四。同样百分之二十的持股，并不代表现金怎么分。
+  s3_zh_hk: >-
+    V係十五嘅時候，A行優先路徑，投資者攞二，創辦人攞十三。B俾二，再加十三嘅百分之二十，共四點六，創辦人剩十點四。同樣百分之二十嘅持股，唔代表現金點分。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Electing conversion
+  title_zh: 选择转换
+  title_zh_hk: 選擇轉換
+  step1_en: >-
+    A converts above V = 10: 20% × V > 2
+  step1_zh: V 高于 10，A 转换：20% × V > 2
+  step1_zh_hk: V 高於 10，A 轉換：20% × V > 2
+  step2_en: >-
+    V = 15: A investor 3, founders 12
+  step2_zh: V = 15：A 投资者 3，创始人 12
+  step2_zh_hk: V = 15：A 投資者 3，創辦人 12
+  step3_en: >-
+    B stays preferred: +1.6m vs converting
+  step3_zh: B 保持优先：比转换多 160 万
+  step3_zh_hk: B 保持優先：比轉換多 160 萬
+  s1_en: >-
+    A compares its priority payment, up to 2 million, with 20 percent of V. Below 10 million, staying
+    preferred pays more; at 10 million both give 2; above that, conversion wins.
+  s1_zh: A拿最多两百万的优先支付，和V的百分之二十相比。V低于一千万时，保持优先更划算；刚好一千万时，两边都是两百万；再高，转换就更划算。
+  s1_zh_hk: A攞最多兩百萬嘅優先支付，同V嘅百分之二十比。V低過一千萬，保持優先就著數啲；啱啱一千萬，兩邊都係兩百萬；再高，轉換就著數啲。
+  s2_en: >-
+    At V of 15 million, A converts and receives 3 million, so the founders get 12 million, not 13. The
+    1 and 6 million outcomes do not change.
+  s2_zh: V为一千五百万时，A会转换，拿三百万，所以创始人拿一千二百万，而不是一千三百万。一百万和六百万的结果不变。
+  s2_zh_hk: V係一千五百萬嘅時候，A會轉換，攞三百萬，所以創辦人攞一千二百萬，唔係一千三百萬。一百萬同六百萬嘅結果冇變。
+  s3_en: >-
+    For B, above 2 million its preferred receipt exceeds pure conversion by 1.6 million dollars, so B
+    stays preferred. It shares the remainder, not 20 percent of the whole exit on top of 2 million.
+  s3_zh: >-
+    对B来说，V超过两百万时，走优先路径比单纯转换多拿一百六十万港元，所以B会保持优先。它分的是剩余部分，而不是在两百万之外再拿整个退出金额的百分之二十。
+  s3_zh_hk: >-
+    對B嚟講，V超過兩百萬嘅時候，行優先路徑比單純轉換多攞一百六十萬港元，所以B會保持優先。佢分嘅係剩餘部分，唔係喺兩百萬之外再攞成個退出金額嘅百分之二十。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Choose within the stated scope
+  title_zh: 在给定范围内作选择
+  title_zh_hk: 在給定範圍內作選擇
+  en: >-
+    After elections, the founders receive 0, 4 and 12 million under A, versus 0, 3.2 and 10.4 million
+    under B. A is never worse and strictly better at 6 and 15 million, so recommend A under the equal-other-terms
+    comparison. At the low exit, neither offer protects the founders.
+  zh: >-
+    按各自的选择计算，创始人在A下拿零、四百万和一千二百万，在B下拿零、三百二十万和一千零四十万。A在每个情景都不差，在六百万和一千五百万时更好，所以在其他条款相同的前提下，建议选A。退出金额低的时候，两份要约都保护不了创始人。
+  zh_hk: >-
+    按各自嘅選擇計，創辦人喺A下攞零、四百萬同一千二百萬，喺B下攞零、三百二十萬同一千零四十萬。A喺每個情景都唔差，喺六百萬同一千五百萬更好，所以喺其他條款相同嘅前提下，建議揀A。退出金額低嘅時候，兩份要約都保護唔到創辦人。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Same ownership, different cash
+  title_zh: 持股相同，现金不同
+  title_zh_hk: 持股相同，現金不同
+  q1_en: Read priority, participation and conversion
+  q1_zh: 看清优先、参与和转换
+  q1_zh_hk: 看清優先、參與和轉換
+  q2_en: 20% as-converted is not a 20% exit share
+  q2_zh: 转换后 20% 不等于退出分 20%
+  q2_zh_hk: 轉換後 20% 不等於退出分 20%
+  s1_en: >-
+    This is distribution arithmetic, not a claim that A is always the better financing; control, assistance
+    and future rounds may differ.
+  s1_zh: 这只是分配的计算，不是说A在现实中一定是更好的融资；控制权、投资者支持和以后的融资轮次都可能不同。
+  s1_zh_hk: 呢個只係分配嘅計算，唔係話A喺現實一定係好啲嘅融資；控制權、投資者支援同之後嘅融資輪次都可能唔同。
+  s2_en: >-
+    Do not add the investment to cash already defined as available at exit.
+  s2_zh: 不要把投资额再加到已经定义为退出时可分配的现金上。
+  s2_zh_hk: 唔好將投資額再加落已經定義為退出時可分配嘅現金度。
+  s3_en: >-
+    The startup, offers and exit values are fictional; this is not investment or legal advice. Official
+    scene art is a teaching illustration only.
+  s3_zh: 初创企业、要约和退出金额都是虚构的，并非投资或法律意见。官方场景图只是教学插图。
+  s3_zh_hk: 初創企業、要約同退出金額都係虛構嘅，唔係投資或者法律意見。官方場景圖只係教學插圖。
+duration_target_s: 196

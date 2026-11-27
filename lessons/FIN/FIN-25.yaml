@@ -1,0 +1,288 @@
+id: FIN-25
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Payment promised. Documents accepted?
+title_zh: 付款已承诺。单据被接受了吗？
+title_zh_hk: 付款已承諾。單據被接受了嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-25
+  kicker_en: FIN-25
+  kicker_zh: FIN-25
+  kicker_zh_hk: FIN-25
+  title_en: Payment promised. Documents accepted?
+  title_zh: 付款已承诺。单据被接受了吗？
+  title_zh_hk: 付款已承諾。單據被接受了嗎？
+  image: art/shipment-complete-documents-complying-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A documentary credit is a bank undertaking tied to a complying presentation of specified documents,
+    separate from the underlying sale. Open-account trade relies instead on the buyer's promise to pay
+    after shipment. Now you advise a fictional exporter.
+  zh: >-
+    跟单信用证是银行的付款承诺，前提是按规定提交相符的单据，它和底层的买卖合同是分开的。赊账贸易则依靠买方在装运后付款的义务。现在，你要为一家虚构的出口商出主意。
+  zh_hk: >-
+    跟單信用證係銀行嘅付款承諾，前提係按規定交齊相符嘅單據，佢同底層嘅買賣合約係分開嘅。記帳貿易就靠買方喺裝運之後付款嘅義務。而家，你要幫一間虛構嘅出口商出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two payment routes
+  title_zh: 两种收款方式
+  title_zh_hk: 兩種收款方式
+  row1_en: Open account
+  row1_zh: 赊账
+  row1_zh_hk: 記帳
+  row2_en: Documentary credit
+  row2_zh: 跟单信用证
+  row2_zh_hk: 跟單信用證
+  col1_en: All-in cost
+  col1_zh: 全部成本
+  col1_zh_hk: 全部成本
+  col2_en: Paid on
+  col2_zh: 付款日
+  col2_zh_hk: 付款日
+  col3_en: Condition
+  col3_zh: 付款条件
+  col3_zh_hk: 付款條件
+  c11: HK$1,000
+  c12_en: Day 30
+  c12_zh: 第 30 天
+  c12_zh_hk: 第 30 天
+  c13_en: Buyer's obligation
+  c13_zh: 买方的付款义务
+  c13_zh_hk: 買方的付款義務
+  c21: HK$3,000
+  c22_en: Day 30
+  c22_zh: 第 30 天
+  c22_zh_hk: 第 30 天
+  c23_en: Complying documents by day 10
+  c23_zh: 第 10 天前相符交单
+  c23_zh_hk: 第 10 天前相符交單
+  footer_en: Order HK$200,000 · established buyer
+  footer_zh: 订单 HK$200,000 · 老客户
+  footer_zh_hk: 訂單 HK$200,000 · 熟客
+  s1_en: >-
+    An exporter has a 200,000-dollar order from an established overseas buyer who has paid on time before,
+    though no default probability or guarantee is given. Both sides accept either route, and payment is
+    due on day 30 after shipment.
+  s1_zh: >-
+    一家出口商接到一位海外老客户二十万港元的订单。这位买方以往都按时付款，但题目没有给违约概率，也没有担保。双方两种方式都接受，付款日都是装运后第三十天。
+  s1_zh_hk: >-
+    一間出口商接咗一位海外熟客二十萬港元嘅訂單。呢位買方以往都準時俾錢，但題目冇俾違約機率，亦冇擔保。雙方兩種方式都接受，付款日都係裝運後第三十日。
+  s2_en: >-
+    Open account costs 1,000 dollars in financing and administration. The documentary credit costs 3,000.
+    The fictional issuing bank's irrevocable undertaking pays on day 30, only after a complying presentation
+    by day 10.
+  s2_zh: 赊账的融资和管理成本是一千港元，跟单信用证是三千港元。虚构开证行不可撤销的承诺，只有在第十天前相符交单，才会在第三十天付款。
+  s2_zh_hk: 記帳嘅融資同行政成本係一千港元，跟單信用證係三千港元。虛構開證行不可撤銷嘅承諾，要第十日之前相符交單，先會喺第三十日付款。
+  s3_en: >-
+    The required documents are the commercial invoice, packing list and transport document. The bank examines
+    documents, not whether the goods satisfy the buyer, and the sale rights stay separate.
+  s3_zh: 需要的单据是商业发票、装箱单和运输单据。银行审的是单据，不是货物能不能让买方满意；买卖合同上的权利是另外一回事。
+  s3_zh_hk: 要交嘅單據係商業發票、裝箱單同運輸單據。銀行審嘅係單據，唔係貨物啱唔啱買方心水；買賣合約上嘅權利係另一回事。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Credit or open account?
+  title_zh: 跟单信用证还是赊账？
+  title_zh_hk: 跟單信用證還是記帳？
+  en: >-
+    Would you use the documentary credit or keep open-account terms for this order? Explain what the extra
+    cost buys, which payment condition remains, and why shipment alone does not settle the choice. Pause
+    and vote.
+  zh: >-
+    这笔订单，你会用跟单信用证，还是继续赊账？请说明多出来的成本买到了什么、还剩下哪一项付款条件，以及为什么光是装运并不能决定这个选择。请暂停，投个票。
+  zh_hk: 呢張訂單，你會用跟單信用證，定係繼續記帳？講吓多咗嘅成本買到啲乜、仲有邊一項付款條件，同埋點解淨係裝咗貨決定唔到點揀。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: One discrepancy on day 8
+  title_zh: 第 8 天发现一个不符点
+  title_zh_hk: 第 8 天發現一個不符點
+  step1_en: Invoice says USD200,000, not HK$200,000
+  step1_zh: 发票写成美元 200,000，不是港元
+  step1_zh_hk: 發票寫成美元 200,000，不是港元
+  step2_en: >-
+    A: correct for HK$600, arrives day 9
+  step2_zh: A：花 HK$600 更正，第 9 天送达
+  step2_zh_hk: A：花 HK$600 更正，第 9 天送達
+  step3_en: >-
+    B: HK$200 waiver request, reply unknown
+  step3_zh: B：花 HK$200 申请豁免，结果未知
+  step3_zh_hk: B：花 HK$200 申請豁免，結果未知
+  s1_en: >-
+    Suppose the exporter chose the documentary credit and shipped as agreed. On day 8, the bank finds
+    one discrepancy: the invoice says 200,000 US dollars instead of the required 200,000 Hong Kong dollars.
+    Everything else complies.
+  s1_zh: 假设出口商选了跟单信用证，也按约定装运了。第八天，银行发现一个不符点：商业发票误写成二十万美元，而规定的是二十万港元。其他单据和条件都相符。
+  s1_zh_hk: 假設出口商揀咗跟單信用證，亦按約定裝咗貨。第八日，銀行發現一個不符點：商業發票寫錯咗做二十萬美元，規定嘅係二十萬港元。其他單據同條件都相符。
+  s2_en: >-
+    Option A spends 600 dollars on an authorised, truthful correction that is assured to reach the bank
+    on day 9.
+  s2_zh: 方案A花六百港元，按授权如实更正，保证第九天送到银行。
+  s2_zh_hk: 方案A使六百港元，按授權如實更正，保證第九日送到銀行。
+  s3_en: >-
+    Option B pays 200 dollars to request a waiver, which needs both the buyer and the issuing bank to
+    accept by day 10. Otherwise a correction arrives on day 11, too late. Unresolved, the bank undertaking
+    is not payable, though the buyer still owes payment.
+  s3_zh: >-
+    方案B付两百港元申请豁免不符点，但要买方和开证行在第十天前都接受才行。不然再更正也要第十一天才送到，已经太迟。不符点没解决，银行的承诺就不付款，不过买方仍然欠这笔货款。
+  s3_zh_hk: >-
+    方案B俾兩百港元申請豁免不符點，要買方同開證行第十日前都接受先得。唔係嘅話，更正要第十一日先到，太遲。不符點冇解決，銀行承諾就唔付款，但買方仍然欠款。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Correct it, or ask for a waiver?
+  title_zh: 更正，还是申请豁免？
+  title_zh_hk: 更正，還是申請豁免？
+  en: >-
+    Would you pay for timely correction or request a waiver? Compare the additional costs and deadline
+    consequences, and explain what happens to the bank undertaking if the discrepancy is not resolved.
+    Pause and vote.
+  zh: 你会花钱及时更正，还是申请豁免？请比较额外成本和错过期限的后果，并说明不符点没解决的话，银行的承诺会怎样。请暂停，投个票。
+  zh_hk: 你會使錢及時更正，定係申請豁免？比較吓額外成本同錯過期限嘅後果，再講吓不符點解決唔到嘅話，銀行嘅承諾會點。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Separate promises, then price
+  title_zh: 先分开两项承诺，再定价
+  title_zh_hk: 先分開兩項承諾，再定價
+  step1_en: Buyer owes under the sale
+  step1_zh: 买方的义务来自买卖
+  step1_zh_hk: 買方的義務來自買賣
+  step2_en: Bank pays only on complying documents
+  step2_zh: 银行只凭相符单据付款
+  step2_zh_hk: 銀行只憑相符單據付款
+  step3_en: Credit costs HK$2,000 more
+  step3_zh: 信用证多花 HK$2,000
+  step3_zh_hk: 信用證多花 HK$2,000
+  s1_en: The buyer's obligation comes from the sale.
+  s1_zh: 买方的付款义务来自买卖合同。
+  s1_zh_hk: 買方嘅付款義務嚟自買賣合約。
+  s2_en: >-
+    The bank's separate undertaking depends on a complying presentation. A correct, on-time shipment does
+    not cure a currency error in the invoice, and documentary compliance is not a warranty of the goods.
+  s2_zh: 银行另外的承诺，取决于相符交单。货按时、正确地装运了，也不能自动纠正发票上的币种错误；单据相符，也不代表银行为货物质量担保。
+  s2_zh_hk: 銀行另外嘅承諾，要睇有冇相符交單。貨準時、正確咁裝咗，都唔會自動改正發票上嘅貨幣錯誤；單據相符，亦唔代表銀行為貨物質素做保證。
+  s3_en: >-
+    The documentary route costs 2,000 dollars more. It buys a conditional bank undertaking, not insurance
+    against every loss. Either route is defensible, and with no default probability, an expected-value
+    ranking would invent evidence.
+  s3_zh: >-
+    跟单信用证比赊账多花两千港元，买到的是有条件的银行承诺，不是对所有损失的保险。两条路都说得通；题目没给违约概率，硬要按期望值排序，就是在编造证据。
+  s3_zh_hk: >-
+    跟單信用證比記帳多使兩千港元，買到嘅係有條件嘅銀行承諾，唔係保晒所有損失嘅保險。兩條路都講得通；題目冇俾違約機率，硬要按期望值排先後，就係作證據。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Compare the two repair routes
+  title_zh: 比较两种补救办法
+  title_zh_hk: 比較兩種補救辦法
+  step1_en: >-
+    Correction: 3,000 + 600 = 3,600, on time
+  step1_zh: 更正：3,000 + 600 = 3,600，赶得上
+  step1_zh_hk: 更正：3,000 + 600 = 3,600，趕得上
+  step2_en: >-
+    Waiver: 3,000 + 200 = 3,200, uncertain
+  step2_zh: 豁免：3,000 + 200 = 3,200，不确定
+  step2_zh_hk: 豁免：3,000 + 200 = 3,200，不確定
+  step3_en: Extra HK$400 buys timely compliance
+  step3_zh: 多付 HK$400，买到及时相符
+  step3_zh_hk: 多付 HK$400，買到及時相符
+  s1_en: >-
+    Correction adds 600 dollars, for 3,600 in total charges, and reaches the bank before the deadline.
+  s1_zh: 更正多花六百港元，总费用三千六百，而且能在期限前送到银行。
+  s1_zh_hk: 更正多使六百港元，總費用三千六百，仲可以喺期限之前送到銀行。
+  s2_en: >-
+    A waiver adds 200, for 3,200, but needs two acceptances in time. The original 3,000 is sunk for this
+    second decision.
+  s2_zh: 申请豁免多花两百，总费用三千二百，但要两方都及时接受。原来那三千港元，对这第二个决定来说已经是沉没成本。
+  s2_zh_hk: 申請豁免多使兩百，總費用三千二百，但要兩方都及時接受。原本嗰三千港元，對呢第二個決定嚟講已經係沉沒成本。
+  s3_en: >-
+    So the extra 400 dollars buys a timely correction instead of relying on an uncertain waiver. A correction
+    must state the true agreed currency through the authorised process, never alter a third-party document.
+  s3_zh: 所以多付的四百港元，买到的是及时更正，而不是去赌一个不确定的豁免。更正必须按授权流程写上真实约定的币种，绝不能改动第三方的单据。
+  s3_zh_hk: 所以多俾嘅四百港元，買到嘅係及時更正，而唔係去賭一個唔確定嘅豁免。更正一定要按授權程序寫返真實約定嘅貨幣，絕對唔可以改第三方嘅單據。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Not an automatic write-off
+  title_zh: 不符不等于全额损失
+  title_zh_hk: 不符不等於全數損失
+  en: >-
+    Recommend correction if keeping the complying presentation is worth the extra 400 dollars. A student
+    choosing the waiver must accept that the bank undertaking may become unavailable. Even then, missing
+    the deadline is not a certain 200,000-dollar loss: the buyer still owes payment, with recovery unknown.
+  zh: >-
+    如果保住相符交单值得多付四百港元，就建议更正。选择豁免的同学，必须接受银行承诺可能失效。即使这样，错过期限也不等于必然损失二十万港元：买方仍然欠款，只是能不能收回未知。
+  zh_hk: >-
+    如果保住相符交單值得多俾四百港元，就建議更正。揀豁免嘅同學，一定要接受銀行承諾可能失效。就算係咁，錯過期限都唔等於一定蝕二十萬港元：買方仍然欠款，只係收唔收得返未知。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Documents decide bank payment
+  title_zh: 银行付款看单据
+  title_zh_hk: 銀行付款看單據
+  q1_en: A bank undertaking is conditional
+  q1_zh: 银行的承诺是有条件的
+  q1_zh_hk: 銀行的承諾是有條件的
+  q2_en: Shipment alone does not make documents comply
+  q2_zh: 装运了，单据不一定相符
+  q2_zh_hk: 裝運了，單據不一定相符
+  s1_en: >-
+    Fees, financing and the ability to prepare exact documents matter alongside the commercial relationship.
+  s1_zh: 除了买卖双方的关系，费用、融资，以及能不能把单据准确备好，都很重要。
+  s1_zh_hk: 除咗買賣雙方嘅關係，費用、融資，同埋可唔可以準確咁準備好單據，都好重要。
+  s2_en: >-
+    Real cases need the actual credit, the applicable rules and bank advice; this is not a statement of
+    documentary-credit rules.
+  s2_zh: 真实个案要看实际的信用证、适用的规则和银行的意见；这里并不是对跟单信用证规则的完整说明。
+  s2_zh_hk: 真實個案要睇實際嘅信用證、適用嘅規則同銀行意見；呢度唔係跟單信用證規則嘅完整說明。
+  s3_en: >-
+    The exporter, banks, buyer and terms are fictional; this is not advice to enter a transaction. Official
+    scene art is a teaching illustration only.
+  s3_zh: 出口商、银行、买方和条款都是虚构的，并非交易建议。官方场景图只是教学插图。
+  s3_zh_hk: 出口商、銀行、買方同條款都係虛構嘅，唔係交易建議。官方場景圖只係教學插圖。
+duration_target_s: 196

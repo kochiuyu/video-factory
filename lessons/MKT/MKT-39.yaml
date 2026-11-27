@@ -1,0 +1,289 @@
+id: MKT-39
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: More stockists. More of the category market?
+title_zh: 多了零售点，就覆盖更多品类销售吗？
+title_zh_hk: 多了零售點，就覆蓋更多品類銷售嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-39
+  kicker_en: MKT-39
+  kicker_zh: MKT-39
+  kicker_zh_hk: MKT-39
+  title_en: More stockists. More of the category market?
+  title_zh: 多了零售点，就覆盖更多品类销售吗？
+  title_zh_hk: 多了零售點，就覆蓋更多品類銷售嗎？
+  image: art/more-stockists-more-category-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Retail distribution can count how many outlets carry a brand, or how much category spending those
+    outlets represent. Neither tells us what shoppers will buy. Now you plan distribution for Harbour
+    Spoon, a fictional Hong Kong sauce brand.
+  zh: >-
+    衡量零售分销，可以数有多少零售点在卖某个品牌，也可以看这些零售点占整个品类消费多少。两者都不能告诉我们顾客会买多少。现在，你为香港虚构的酱料品牌 Harbour Spoon 规划分销。
+  zh_hk: >-
+    量度零售分銷，可以數有幾多個零售點賣某個品牌，亦可以睇呢啲零售點佔成個品類消費幾多。兩樣都講唔到顧客會買幾多。而家，你為香港虛構嘅醬料品牌 Harbour Spoon 規劃分銷。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Same budget, two packages
+  title_zh: 同样预算，两个方案
+  title_zh_hk: 同樣預算，兩個方案
+  row1_en: M
+  row1_zh: M
+  row1_zh_hk: M
+  row2_en: L
+  row2_zh: L
+  row2_zh_hk: L
+  col1_en: New
+  col1_zh: 新增网点
+  col1_zh_hk: 新增網點
+  col2_en: Total
+  col2_zh: 网点总数
+  col2_zh_hk: 網點總數
+  col3_en: Cost
+  col3_zh: 增量成本
+  col3_zh_hk: 增量成本
+  c11: '30'
+  c12: '40'
+  c13: HK$60,000
+  c21: '10'
+  c22: '20'
+  c23: HK$60,000
+  footer_en: 100 outlets · 10 already stock it
+  footer_zh: 共 100 家 · 10 家已在卖
+  footer_zh_hk: 共 100 家 · 10 家已在賣
+  s1_en: >-
+    The defined market has exactly one hundred physical outlets selling this sauce category, and ten already
+    stock Harbour Spoon. The plan keeps those ten and adds package M, thirty small stockists, or package
+    L, ten larger ones.
+  s1_zh: >-
+    题目界定的市场，刚好有一百家出售这类酱料的实体零售点，其中十家已经在卖 Harbour Spoon。计划保留这十家，再选 M 方案，增加三十家较小的零售点，或者 L 方案，增加十家较大的。
+  s1_zh_hk: >-
+    題目界定嘅市場，啱啱好有一百間賣呢類醬料嘅實體零售點，當中十間已經賣緊 Harbour Spoon。計劃保留呢十間，再揀 M 方案，加三十間細啲嘅零售點，或者 L 方案，加十間大啲嘅。
+  s2_en: >-
+    The groups do not overlap, and the other fifty outlets are unavailable this quarter. Each indivisible
+    package costs 60,000 dollars, the whole incremental budget, with equal shelf support and no out-of-stocks.
+  s2_zh: 各组网点互不重叠，其余五十家这个季度无法加入。每个方案不能拆分，都要花六万元，用尽全部新增预算；货架支持相同，也不会缺货。
+  s2_zh_hk: 各組網點互不重疊，其餘五十間今季加入唔到。每個方案唔可以拆開，都要使六萬蚊，用晒成筆新增預算；貨架支援一樣，亦唔會缺貨。
+  s3_en: >-
+    The objective is to maximise access to category spending, using one consistent historical benchmark.
+    A colleague proposes M because it adds three times as many outlets. Brand sales, margins and conversion
+    in the proposed stores are unknown.
+  s3_zh: >-
+    目标是按同一个历史基准，尽量覆盖更多品类消费额。同事主张选 M，因为新增的网点是 L 的三倍。至于候选门店里的品牌销量、利润率和购买转化率，目前都不知道。
+  s3_zh_hk: >-
+    目標係按同一個歷史基準，盡量覆蓋多啲品類消費額。同事主張揀 M，因為新增嘅網點係 L 嘅三倍。至於候選店舖入面嘅品牌銷量、利潤率同購買轉化率，而家都唔知道。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: M or L provisionally?
+  title_zh: 暂选 M 还是 L？
+  title_zh_hk: 暫選 M 還是 L？
+  en: >-
+    Which package would you provisionally favour? Calculate each plan's percentage of outlets carrying
+    the sauce. What further evidence would you need to judge the category-spending objective, and what
+    would still be missing for a profit forecast? Pause and vote.
+  zh: >-
+    你初步倾向哪个方案？算一算，两个方案各有百分之几的网点会卖这款酱料。要判断是否达到品类消费的覆盖目标，还需要什么数据？要预测利润，又还缺什么？请暂停，投个票。
+  zh_hk: >-
+    你初步傾向邊個方案？計一計，兩個方案各有百分之幾嘅網點會賣呢款醬料。要判斷係咪達到品類消費嘅覆蓋目標，仲需要啲咩數據？要預測利潤，又仲欠啲咩？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Last quarter's category sales
+  title_zh: 上季品类销售额
+  title_zh_hk: 上季品類銷售額
+  step1_en: >-
+    Existing 10: HK$100,000
+  step1_zh: 现有 10 家：HK$100,000
+  step1_zh_hk: 現有 10 家：HK$100,000
+  step2_en: >-
+    M's 30: HK$150,000 · L's 10: HK$300,000
+  step2_zh: M 30 家：15 万 · L 10 家：30 万
+  step2_zh_hk: M 30 家：15 萬 · L 10 家：30 萬
+  step3_en: >-
+    Other 50: HK$450,000 · total HK$1m
+  step3_zh: 其余 50 家：45 万 · 共 100 万
+  step3_zh_hk: 其餘 50 家：45 萬 · 共 100 萬
+  s1_en: >-
+    Last quarter's complete ledger uses the same hundred outlets and one category definition. The ten
+    existing stockists generated 100,000 dollars in category sales.
+  s1_zh: 上季完整的品类销售账，用的是同样的一百家店和同一个品类定义。现有十家店的品类销售额是十万元。
+  s1_zh_hk: 上季完整嘅品類銷售賬，用嘅係同樣嗰一百間店同一個品類定義。現有十間店嘅品類銷售額係十萬蚊。
+  s2_en: >-
+    The thirty M candidates generated 150,000 dollars, and the ten L candidates 300,000. These are group
+    totals, and they include every brand in the category.
+  s2_zh: M 的三十家候选店是十五万元，L 的十家候选店是三十万元。这些是各组的总额，包括这个品类里的所有品牌。
+  s2_zh_hk: M 嗰三十間候選店係十五萬蚊，L 嗰十間候選店係三十萬蚊。呢啲係各組嘅總額，包括呢個品類入面所有品牌。
+  s3_en: >-
+    The remaining fifty generated 450,000, so the market total is one million dollars. The ledger is a
+    fixed benchmark, not a forecast, and listing the brand does not create these sales.
+  s3_zh: 其余五十家是四十五万元，所以市场总额是一百万元。这本账只是固定的基准，不是预测；品牌上架也不会因此带来这些销售额。
+  s3_zh_hk: 其餘五十間係四十五萬蚊，所以市場總額係一百萬蚊。呢本賬只係固定嘅基準，唔係預測；品牌上架亦唔會因此帶嚟呢啲銷售額。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which meets the access goal?
+  title_zh: 哪个达到覆盖目标？
+  title_zh_hk: 哪個達到覆蓋目標？
+  en: >-
+    Calculate total and incremental numeric and category-weighted distribution for M and L, including
+    the ten retained stores. Which meets the stated access objective? Write a claim separating covered
+    category spending from Harbour Spoon's future sales. Pause and vote.
+  zh: >-
+    请计算 M 和 L 的网点数分销率和品类加权分销率，分别列出总覆盖和增幅，记得算上保留的十家店。哪个方案更符合覆盖目标？再写一句话，把覆盖的品类消费和 Harbour Spoon 将来的销售区分开。请暂停，投个票。
+  zh_hk: >-
+    請計 M 同 L 嘅網點數分銷率同品類加權分銷率，分別列出總覆蓋同增幅，記得計埋保留嗰十間店。邊個方案比較符合覆蓋目標？再寫一句說話，將覆蓋嘅品類消費同 Harbour Spoon 將來嘅銷售分開。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: >-
+    Count outlets: M leads
+  title_zh: 按店数：M 领先
+  title_zh_hk: 按店數：M 領先
+  step1_en: >-
+    Existing: 10% numeric, 10% weighted
+  step1_zh: 现有：店数 10%，加权 10%
+  step1_zh_hk: 現有：店數 10%，加權 10%
+  step2_en: >-
+    M: 40 of 100 outlets = 40%
+  step2_zh: M：100 家中 40 家 = 40%
+  step2_zh_hk: M：100 家中 40 家 = 40%
+  step3_en: >-
+    L: 20 of 100 outlets = 20%
+  step3_zh: L：100 家中 20 家 = 20%
+  step3_zh_hk: L：100 家中 20 家 = 20%
+  s1_en: >-
+    The existing network has numeric distribution of ten out of a hundred, ten percent, and category-weighted
+    distribution of 100,000 out of one million, also ten percent. That equality is accidental.
+  s1_zh: 现有网点的网点数分销率，是一百家中的十家，即百分之十；品类加权分销率是十万除以一百万，也是百分之十。两者相同，只是巧合。
+  s1_zh_hk: 現有網點嘅網點數分銷率，係一百間入面十間，即係百分之十；品類加權分銷率係十萬除一百萬，都係百分之十。兩個數一樣，只係巧合。
+  s2_en: >-
+    M reaches forty outlets, so numeric distribution is forty percent, a gain of thirty percentage points
+    on the existing ten.
+  s2_zh: M 覆盖四十家，网点数分销率是百分之四十，比现有的百分之十增加三十个百分点。
+  s2_zh_hk: M 覆蓋四十間，網點數分銷率係百分之四十，比現有嘅百分之十多咗三十個百分點。
+  s3_en: >-
+    L reaches twenty, so twenty percent, a gain of ten points. M wins the store count, but this is not
+    a count of distinct shoppers: one person may visit several outlets.
+  s3_zh: L 覆盖二十家，是百分之二十，增加十个百分点。按店数比，M 胜出；但这不是不重复的顾客人数，同一个人可能会去好几家店。
+  s3_zh_hk: L 覆蓋二十間，係百分之二十，多咗十個百分點。按店數比，M 贏；但呢個唔係唔重複嘅顧客人數，同一個人可能會去幾間店。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: >-
+    Weight by category: L leads
+  title_zh: 按品类加权：L 领先
+  title_zh_hk: 按品類加權：L 領先
+  step1_en: >-
+    M: HK$250,000 = 25%, up 15 points
+  step1_zh: M：25 万 = 25%，增 15 个点
+  step1_zh_hk: M：25 萬 = 25%，增 15 個點
+  step2_en: >-
+    L: HK$400,000 = 40%, up 30 points
+  step2_zh: L：40 万 = 40%，增 30 个点
+  step2_zh_hk: L：40 萬 = 40%，增 30 個點
+  step3_en: L adds 2× M's spending, not 3×
+  step3_zh: L 新增覆盖是 M 的 2 倍
+  step3_zh_hk: L 新增覆蓋是 M 的 2 倍
+  s1_en: >-
+    M covers 100,000 plus 150,000, which is 250,000 dollars, or 25 percent of the benchmark: a gain of
+    fifteen percentage points.
+  s1_zh: M 覆盖十万加十五万，即二十五万元，占基准的百分之二十五，增加十五个百分点。
+  s1_zh_hk: M 覆蓋十萬加十五萬，即係二十五萬蚊，佔基準嘅百分之二十五，多咗十五個百分點。
+  s2_en: >-
+    L covers 100,000 plus 300,000, which is 400,000 dollars, or 40 percent: a gain of thirty points. The
+    L candidates average 30,000 dollars each, against 5,000 for M's candidates.
+  s2_zh: L 覆盖十万加三十万，即四十万元，占百分之四十，增加三十个百分点。L 的候选店平均每家三万元，M 的候选店只有五千元。
+  s2_zh_hk: L 覆蓋十萬加三十萬，即係四十萬蚊，佔百分之四十，多咗三十個百分點。L 嘅候選店平均每間三萬蚊，M 嘅候選店得五千蚊。
+  s3_en: >-
+    So choose L for the stated objective at the same cost. It adds 300,000 dollars of benchmark category
+    spending against M's 150,000: twice as much, not three times, and not money the brand earns.
+  s3_zh: >-
+    所以，在成本相同的情况下，按题目的目标应该选 L。它新增覆盖三十万元的基准品类消费，M 只有十五万元：是两倍，不是三倍，也不是品牌能赚到的钱。
+  s3_zh_hk: 所以，喺成本一樣嘅情況下，按題目嘅目標應該揀 L。佢新增覆蓋三十萬蚊嘅基準品類消費，M 得十五萬蚊：係兩倍，唔係三倍，亦唔係品牌賺到嘅錢。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Availability is not purchase
+  title_zh: 买得到不等于会购买
+  title_zh_hk: 買得到不等於會購買
+  en: >-
+    A precise claim: L would place our sauce in twenty of the hundred defined outlets, representing 40
+    percent of their previous-quarter sauce-category sales. Do not say the brand gains 40 percent market
+    share, reaches 40 percent of people, or will sell 400,000 dollars.
+  zh: >-
+    准确的说法是：L 会把我们的酱料带进这一百家店中的二十家，这二十家占上季酱料品类销售额的百分之四十。不能说品牌拿下百分之四十的市场份额、覆盖百分之四十的人，或者会卖出四十万元。
+  zh_hk: >-
+    準確嘅講法係：L 會將我哋嘅醬料帶入呢一百間店入面嘅二十間，呢二十間佔上季醬料品類銷售額嘅百分之四十。唔可以話品牌攞到百分之四十嘅市場佔有率、覆蓋百分之四十嘅人，或者會賣到四十萬蚊。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Coverage ≠ brand sales
+  title_zh: 覆盖 ≠ 品牌销售
+  title_zh_hk: 覆蓋 ≠ 品牌銷售
+  q1_en: Profit needs demand and margin evidence
+  q1_zh: 预测利润要有需求和利润率证据
+  q1_zh_hk: 預測利潤要有需求和利潤率證據
+  q2_en: Track coverage apart from sell-through
+  q2_zh: 覆盖和终端销售分开追踪
+  q2_zh_hk: 覆蓋和終端銷售分開追蹤
+  s1_en: >-
+    To rank expected profit, you need credible brand demand, margin, competition and sustained availability
+    evidence. Equal listing budgets do not make conversion or contribution identical.
+  s1_zh: 要比较预期利润，就需要可靠的品牌需求、利润率、竞争情况和持续供货的证据。上架预算相同，并不等于购买转化或贡献也相同。
+  s1_zh_hk: 要比較預期利潤，就要有可靠嘅品牌需求、利潤率、競爭情況同持續供貨嘅證據。上架預算一樣，唔等於購買轉化或者貢獻都一樣。
+  s2_en: >-
+    After launch, monitor store coverage and out-of-stocks separately from sell-through and contribution,
+    and reconsider the evidence if the objective changes.
+  s2_zh: 落实以后，要把门店覆盖和缺货情况，跟终端销售和贡献分开追踪；如果目标改变，就要重新审视证据。
+  s2_zh_hk: 落實之後，要將店舖覆蓋同缺貨情況，同終端銷售同貢獻分開追蹤；如果目標改變，就要重新檢視證據。
+  s3_en: >-
+    Harbour Spoon, its outlets, costs and category figures are fictional. Official scene art is a teaching
+    illustration only.
+  s3_zh: Harbour Spoon、网点、成本和品类数据都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: Harbour Spoon、網點、成本同品類數據都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

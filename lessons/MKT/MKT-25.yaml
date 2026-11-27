@@ -1,0 +1,293 @@
+id: MKT-25
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Advertise every week. Or be present at the moment?
+title_zh: 每周都投放广告，还是等顾客要预订时才出现？
+title_zh_hk: 每周都投放廣告，還是等顧客要預訂時才出現？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-25
+  kicker_en: MKT-25
+  kicker_zh: MKT-25
+  kicker_zh_hk: MKT-25
+  title_en: Advertise every week. Or be present at the moment?
+  title_zh: 每周都投放广告，还是等顾客要预订时才出现？
+  title_zh_hk: 每周都投放廣告，還是等顧客要預訂時才出現？
+  image: art/every-week-present-moment-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Media-scheduling research treats advertising effects as something that can persist and change over
+    time, so a large peak need not fit the moments when customers choose. Now a fictional Hong Kong event-photography
+    studio is buying a four-week campaign before its seasonal booking period.
+  zh: >-
+    媒体排期的研究认为，广告的影响会延续一段时间，也会随时间变化。所以，广告一时特别显眼，未必正好碰上顾客做选择的时候。现在，一家虚构的香港活动摄影工作室，要在预订旺季前，买一个为期四周的广告宣传。
+  zh_hk: >-
+    媒體排期嘅研究認為，廣告嘅影響會延續一段時間，亦會隨時間變。所以，廣告一時特別搶眼，未必啱啱撞正顧客揀嘅時候。而家，一間虛構嘅香港活動攝影工作室，要喺預訂旺季之前，買一個四個星期嘅廣告宣傳。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Eight blocks, two schedules
+  title_zh: 八个单位，两种排期
+  title_zh_hk: 八個單位，兩種排期
+  row1_en: Week 1
+  row1_zh: 第 1 周
+  row1_zh_hk: 第 1 周
+  row2_en: Week 2
+  row2_zh: 第 2 周
+  row2_zh_hk: 第 2 周
+  row3_en: Week 3
+  row3_zh: 第 3 周
+  row3_zh_hk: 第 3 周
+  row4_en: Week 4
+  row4_zh: 第 4 周
+  row4_zh_hk: 第 4 周
+  col1_en: Steady blocks
+  col1_zh: 均匀投放
+  col1_zh_hk: 均勻投放
+  col2_en: Bursts blocks
+  col2_zh: 集中投放
+  col2_zh_hk: 集中投放
+  c11: '2'
+  c12: '4'
+  c21: '2'
+  c22: '0'
+  c31: '2'
+  c32: '4'
+  c41: '2'
+  c42: '0'
+  footer_en: HK$1,000 a block · HK$8,000 each
+  footer_zh: 每单位 HK$1,000 · 各 HK$8,000
+  footer_zh_hk: 每單位 HK$1,000 · 各 HK$8,000
+  s1_en: >-
+    The studio has 8,000 dollars for eight identical media blocks at 1,000 dollars each. Steady buys two
+    blocks every week. Bursts buys four in week 1 and four in week 3. Price, capacity, creative and audience
+    stay fixed.
+  s1_zh: >-
+    工作室有八千元，可以买八个相同的投放单位，每个一千元。均匀投放是每周买两个；集中投放是第一周和第三周各买四个。价格、接单能力、广告创意和受众都不变。
+  s1_zh_hk: >-
+    工作室有八千蚊，可以買八個一樣嘅投放單位，每個一千蚊。均勻投放係每個星期買兩個；集中投放係第一同第三個星期各買四個。價錢、接單能力、廣告創意同受眾都唔變。
+  s2_en: >-
+    For this exercise only, a visibility index starts at zero. Each block adds 10 points in its week,
+    and half of last week's score carries over. So this week's score is half of last week's, plus 10 times
+    this week's blocks.
+  s2_zh: >-
+    只就这道题来说，有一个可见度指数，从零开始。每买一个单位，当周加十点；上周末的分数有一半会留到本周。所以本周分数，等于上周分数的一半，加上本周单位数乘以十。
+  s2_zh_hk: >-
+    只就呢條題目嚟講，可見度指數由零開始。每買一個單位，當個星期加十點；上星期尾嘅分數有一半留到今個星期。即係今星期分數，等於上星期一半，加單位數乘十。
+  s3_en: >-
+    The index is an assumed proxy, not a percentage, reach or probability of purchase. The agency suggests
+    weighting the four weeks equally, but no one has yet checked when clients actually decide.
+  s3_zh: 这个指数只是假设的传播指标，不是百分比、不是触达人数，也不是购买概率。代理商建议四周等权比较，但还没人查过顾客到底什么时候做决定。
+  s3_zh_hk: 呢個指數只係假設嘅傳播指標，唔係百分比、唔係接觸人數，亦唔係購買機會率。代理商建議四個星期同等比較，但仲未有人查過顧客究竟幾時決定。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Steady or two bursts?
+  title_zh: 均匀还是集中？
+  title_zh_hk: 均勻還是集中？
+  en: >-
+    Would you provisionally choose steady advertising or two bursts? Compare their four-week visibility
+    profiles, and say what you still need to know about when customers decide. Pause and vote.
+  zh: 你暂时会选均匀投放，还是分两次集中投放？比较一下两者四周的可见度变化，再说说你还需要知道顾客什么时候做决定。请暂停，投个票。
+  zh_hk: 你暫時會揀均勻投放，定係分兩次集中投放？比較吓兩個方案四個星期嘅可見度變化，再講吓你仲要知道顧客幾時決定。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: When 100 groups decide
+  title_zh: 100 组顾客何时决定
+  title_zh_hk: 100 組顧客何時決定
+  step1_en: >-
+    Week 1: 10 · week 2: 40
+  step1_zh: 第 1 周：10 组 · 第 2 周：40 组
+  step1_zh_hk: 第 1 周：10 組 · 第 2 周：40 組
+  step2_en: >-
+    Week 3: 10 · week 4: 40
+  step2_zh: 第 3 周：10 组 · 第 4 周：40 组
+  step2_zh_hk: 第 3 周：10 組 · 第 4 周：40 組
+  step3_en: >-
+    Goal: average score at decision time
+  step3_zh: 目标：做决定时的平均分
+  step3_zh_hk: 目標：作決定時的平均分
+  s1_en: >-
+    The planning team checks the decision calendar for 100 distinct prospective client groups. Ten will
+    consider booking at the end of week 1, and 40 at the end of week 2.
+  s1_zh: 策划团队查清了一百组互不重复的潜在顾客，各自什么时候考虑预订：第一周末有十组，第二周末有四十组。
+  s1_zh_hk: 策劃團隊查清咗一百組唔重複嘅潛在顧客，各自幾時考慮預訂：第一個星期尾有十組，第二個星期尾有四十組。
+  s2_en: >-
+    Ten more decide at the end of week 3, and 40 at the end of week 4. Each group appears once. These
+    are timing inputs, not 100 confirmed customers.
+  s2_zh: 第三周末再有十组，第四周末有四十组。每组只算一次。这些只是时间上的资料，不代表已经有一百组顾客。
+  s2_zh_hk: 第三個星期尾再有十組，第四個星期尾有四十組。每組只計一次。呢啲只係時間上嘅資料，唔代表已經有一百組顧客。
+  s3_en: >-
+    The agreed objective is now the average visibility at these windows: multiply each weekly score by
+    the groups deciding then, add, and divide by 100. There is no conversion rate, margin or causal response.
+  s3_zh: 现在大家同意的目标，是顾客做决定时的平均可见度：每周分数乘以那周做决定的组数，加起来再除以一百。题目没有提供转化率、利润率或因果效果。
+  s3_zh_hk: 而家大家同意嘅目標，係顧客作決定嗰陣嘅平均可見度：每個星期嘅分數乘嗰個星期作決定嘅組數，加埋再除一百。題目冇提供轉換率、利潤率或者因果效果。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which schedule now?
+  title_zh: 现在选哪个排期？
+  title_zh_hk: 現在選哪個排期？
+  en: >-
+    With the booking-window evidence, which schedule would you choose under the supplied model? Calculate
+    visibility at decision time, and explain why that score is neither a count of new customers nor a
+    sales forecast. Pause and vote.
+  zh: >-
+    有了顾客考虑预订的时间，按题目给的模型，你会选哪个排期？请算出做决定时的可见度，再解释为什么这个分数既不是新增顾客人数，也不是销售预测。请暂停，投个票。
+  zh_hk: >-
+    有咗顧客考慮預訂嘅時間，按題目俾嘅模型，你會揀邊個排期？請計出作決定嗰陣嘅可見度，再解釋點解呢個分數唔係新增顧客人數，亦唔係銷售預測。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Build the profiles first
+  title_zh: 先算出四周分数
+  title_zh_hk: 先算出四周分數
+  step1_en: >-
+    Steady: 20 · 30 · 35 · 37.5
+  step1_zh: 均匀：20 · 30 · 35 · 37.5
+  step1_zh_hk: 均勻：20 · 30 · 35 · 37.5
+  step2_en: >-
+    Bursts: 40 · 20 · 50 · 25
+  step2_zh: 集中：40 · 20 · 50 · 25
+  step2_zh_hk: 集中：40 · 20 · 50 · 25
+  step3_en: >-
+    Equal weights: 30.625 vs 33.75
+  step3_zh: 等权平均：30.625 对 33.75
+  step3_zh_hk: 等權平均：30.625 對 33.75
+  s1_en: >-
+    Steady scores 20, 30, 35 and 37.5. For example, week 3 is half of 30, plus 20.
+  s1_zh: 均匀投放的分数是二十、三十、三十五和三十七点五。比如第三周，就是三十的一半，再加二十。
+  s1_zh_hk: 均勻投放嘅分數係二十、三十、三十五同三十七點五。例如第三個星期，就係三十嘅一半，再加二十。
+  s2_en: >-
+    Bursts scores 40, 20, 50 and 25. Week 3 is half of 20, plus 40. Both buy eight blocks; only timing
+    and the assumed carryover differ.
+  s2_zh: 集中投放是四十、二十、五十和二十五。第三周是二十的一半，再加四十。两个方案都买八个单位，差别只在时机和假设的延续效果。
+  s2_zh_hk: 集中投放係四十、二十、五十同二十五。第三個星期係二十嘅一半，再加四十。兩個方案都買八個單位，分別只喺時機同假設嘅延續效果。
+  s3_en: >-
+    With equal weights, Steady averages 30.625 and Bursts 33.75. That favours Bursts for an equally weighted
+    calendar, but not automatically for the studio's real objective.
+  s3_zh: 如果四周等权，均匀投放平均三十点六二五，集中投放三十三点七五。等权的话是集中投放占优，但这不一定符合工作室真正的目标。
+  s3_zh_hk: 如果四個星期同等計，均勻投放平均三十點六二五，集中投放三十三點七五。同等計嘅話係集中投放佔優，但唔一定符合工作室真正嘅目標。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Weight the moments that matter
+  title_zh: 按决定时机加权
+  title_zh_hk: 按決定時機加權
+  step1_en: >-
+    Steady: (200+1,200+350+1,500)÷100 = 32.5
+  step1_zh: 均匀：(200 + 1,200 + 350 + 1,500) ÷ 100 = 32.5
+  step1_zh_hk: 均勻：(200 + 1,200 + 350 + 1,500) ÷ 100 = 32.5
+  step2_en: >-
+    Bursts: (400+800+500+1,000)÷100 = 27
+  step2_zh: 集中：(400 + 800 + 500 + 1,000) ÷ 100 = 27
+  step2_zh_hk: 集中：(400 + 800 + 500 + 1,000) ÷ 100 = 27
+  step3_en: 32.5 is not 32.5 people, % or bookings
+  step3_zh: 32.5 不是人数、百分比或预订
+  step3_zh_hk: 32.5 不是人數、百分比或預訂
+  s1_en: >-
+    Weighted by decisions, Steady is 10 times 20, plus 40 times 30, plus 10 times 35, plus 40 times 37.5,
+    all divided by 100: 32.5.
+  s1_zh: 按做决定的组数加权，均匀投放是十乘二十，加四十乘三十，加十乘三十五，加四十乘三十七点五，再除以一百，等于三十二点五。
+  s1_zh_hk: 按作決定嘅組數加權，均勻投放係十乘二十，加四十乘三十，加十乘三十五，加四十乘三十七點五，再除一百，等於三十二點五。
+  s2_en: >-
+    Bursts gives 10 times 40, plus 40 times 20, plus 10 times 50, plus 40 times 25, over 100: 27. Its
+    big peaks fall in weeks with only ten groups, so Steady leads by 5.5 points.
+  s2_zh: >-
+    集中投放是十乘四十，加四十乘二十，加十乘五十，加四十乘二十五，再除以一百，等于二十七。它的高峰正好落在只有十组的那两周，所以均匀投放领先五点五点。
+  s2_zh_hk: >-
+    集中投放係十乘四十，加四十乘二十，加十乘五十，加四十乘二十五，再除一百，等於二十七。佢嘅高峰啱啱落喺得十組嗰兩個星期，所以均勻投放領先五點五點。
+  s3_en: >-
+    A score of 32.5 is not 32.5 people, a 32.5 percent awareness rate or 32.5 bookings. With no link to
+    purchase, revenue, profit and acquisition cost cannot be calculated.
+  s3_zh: >-
+    三十二点五分，不是三十二点五人、不是百分之三十二点五的知名度，也不是三十二点五个预订。分数和购买没有关联，所以收入、利润和获客成本都算不出来。
+  s3_zh_hk: 三十二點五分，唔係三十二點五個人、唔係百分之三十二點五嘅知名度，亦唔係三十二點五個預訂。分數同購買冇關聯，所以收入、利潤同搵客成本都計唔到。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Test the assumption
+  title_zh: 验证假设，别迷信排期
+  title_zh_hk: 驗證假設，別迷信排期
+  en: >-
+    As a sensitivity check only: if all prior score carried over instead of half, Steady would score 20,
+    40, 60 and 80, Bursts 40, 40, 80 and 80. With the same weights that gives 56 against 60, reversing
+    the ranking. So the carryover assumption needs evidence, and the objective must be named before comparing
+    packages.
+  zh: >-
+    只是做个敏感度测试：如果上周的分数全部留下来，而不是一半，均匀投放会是二十、四十、六十、八十；集中投放是四十、四十、八十、八十。用同样的权重，就是五十六对六十，排名倒过来了。所以延续效果的假设需要证据，比较方案之前也要先讲清楚目标。
+  zh_hk: >-
+    只係做個敏感度測試：如果上個星期嘅分數全部留低，而唔係一半，均勻投放會係二十、四十、六十、八十；集中投放係四十、四十、八十、八十。用同樣嘅權重，就係五十六對六十，排名倒轉咗。所以延續效果嘅假設需要證據，比較方案之前亦要先講清楚目標。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Be present when they decide
+  title_zh: 在顾客做决定时出现
+  title_zh_hk: 在顧客作決定時出現
+  q1_en: >-
+    Decision-weighted: Steady 32.5 · Bursts 27
+  q1_zh: 按决定加权：均匀 32.5 · 集中 27
+  q1_zh_hk: 按決定加權：均勻 32.5 · 集中 27
+  q2_en: >-
+    Full carryover: 56 vs 60, reversed
+  q2_zh: 全数延续：56 对 60，排名倒转
+  q2_zh_hk: 全數延續：56 對 60，排名倒轉
+  s1_en: >-
+    Equal spend does not mean equal timing. Match the schedule to when customers decide, under a model
+    you have stated and can test.
+  s1_zh: 预算一样，时机不一定一样。排期要配合顾客做决定的时间，而且用的模型要讲清楚、能验证。
+  s1_zh_hk: 預算一樣，時機唔一定一樣。排期要配合顧客作決定嘅時間，而且用嘅模型要講清楚、可以驗證。
+  s2_en: >-
+    Do not silently switch between the highest peak, the equal-week average and the decision-weighted
+    score.
+  s2_zh: 不要在最高峰值、等权平均和按决定加权的分数之间悄悄换来换去。
+  s2_zh_hk: 唔好喺最高峰值、同等平均同按決定加權嘅分數之間靜靜雞換嚟換去。
+  s3_en: >-
+    The studio, its packages and the visibility model are invented for this exercise. Official scene art
+    is a teaching illustration only.
+  s3_zh: 摄影工作室、投放方案和可见度模型都是为这道题虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 攝影工作室、投放方案同可見度模型都係為呢條題目虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

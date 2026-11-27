@@ -1,0 +1,304 @@
+id: MKT-26
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A lower price. A clearer customer business case?
+title_zh: 降价后，买方就更容易判断值不值吗？
+title_zh_hk: 降價了，買方就看得出值不值嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-26
+  kicker_en: MKT-26
+  kicker_zh: MKT-26
+  kicker_zh_hk: MKT-26
+  title_en: A lower price. A clearer customer business case?
+  title_zh: 降价后，买方就更容易判断值不值吗？
+  title_zh_hk: 降價了，買方就看得出值不值嗎？
+  image: art/same-price-clearer-customer-value-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    The UK Government Efficiency Framework distinguishes a cut in spending from staff time released for
+    other work, and customer-value research asks suppliers to understand how the buyer actually uses a
+    product. Now you lead the bid team of a fictional Hong Kong document-workflow service, tendering for
+    a one-year contract with a private trade association.
+  zh: >-
+    英国政府的效率框架，把实际减少开支，和腾出人手去做别的工作分开来看；顾客价值的研究也提醒供应商，要了解买方实际怎样使用产品。现在，你带领一家虚构的香港文件流程服务商的投标团队，争取一个私人行业协会的一年期合同。
+  zh_hk: >-
+    英國政府嘅效率框架，將實際減少開支，同騰出人手做其他工作分開嚟睇；顧客價值嘅研究亦提醒供應商，要了解買方實際點樣用個產品。而家，你帶領一間虛構嘅香港文件流程服務商嘅投標團隊，爭取一個私人行業協會嘅一年合約。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Evidence before the final bid
+  title_zh: 定稿前已有的资料
+  title_zh_hk: 定稿前已有的資料
+  row1_en: Service price, all-in
+  row1_zh: 服务总费用
+  row1_zh_hk: 服務總費用
+  row2_en: Staff time released
+  row2_zh: 腾出的员工工时
+  row2_zh_hk: 騰出的員工工時
+  row3_en: Printing and courier spend
+  row3_zh: 印刷及快递开支
+  row3_zh_hk: 印刷及速遞開支
+  row4_en: Payroll or productive use
+  row4_zh: 薪酬或工时用途
+  row4_zh_hk: 薪酬或工時用途
+  col1_en: One-year amount
+  col1_zh: 全年数额
+  col1_zh_hk: 全年數額
+  col2_en: Status
+  col2_zh: 状态
+  col2_zh_hk: 狀態
+  c11: HK$60,000
+  c12_en: Fixed
+  c12_zh: 固定
+  c12_zh_hk: 固定
+  c21_en: 1,200 hours × HK$200
+  c21_zh: 1,200 小时 × HK$200
+  c21_zh_hk: 1,200 小時 × HK$200
+  c22_en: Forecast
+  c22_zh: 预计
+  c22_zh_hk: 預計
+  c31: HK$36,000
+  c32_en: Avoidable
+  c32_zh: 可免去
+  c32_zh_hk: 可免去
+  c41_en: —
+  c41_zh: —
+  c41_zh_hk: —
+  c42_en: Not yet confirmed
+  c42_zh: 尚未确认
+  c42_zh_hk: 尚未確認
+  footer_en: Same product, price and terms
+  footer_zh: 产品、价格、条款都不变
+  footer_zh_hk: 產品、價格、條款都不變
+  s1_en: >-
+    Your fixed all-in price is 60,000 dollars, including implementation, training, support and exit help.
+    The service meets every mandatory requirement, and neither presentation changes the product, price
+    or terms.
+  s1_zh: >-
+    你方的总价固定为六万元，已经包括实施、培训、技术支持，以及合同结束时的交接协助。服务符合所有强制要求；两种写法都不会改变产品、价格或合同条款。
+  s1_zh_hk: 你哋嘅總價固定係六萬蚊，已經包埋實施、培訓、支援，同合約完結時嘅交接協助。服務符合所有強制要求；兩種寫法都唔會改變產品、價錢或者合約條款。
+  s2_en: >-
+    You can submit one of two compliant summaries. Feature-led compares searchable records, routing and
+    templates with the current process. Use-case-led connects the same functions to the buyer's own workload
+    and costs.
+  s2_zh: >-
+    你只能递交两种合规摘要的其中一种。以功能为主的版本，比较可搜索记录、工作分配和模板与现有流程的分别；以顾客应用为主的版本，则把同样的功能和买方自己的工作量、成本连起来。
+  s2_zh_hk: >-
+    你只可以遞交兩種合規摘要嘅其中一種。以功能為主嘅版本，比較可搜尋紀錄、工作分派同範本同現有流程嘅分別；以顧客應用為主嘅版本，就將同樣嘅功能同買方自己嘅工作量、成本連埋。
+  s3_en: >-
+    A jointly checked sample forecasts 1,200 staff hours released, at the buyer's planning rate of 200
+    dollars an hour. A separate review confirms 36,000 dollars of printing and courier spend would disappear.
+    Payroll effects are not yet confirmed.
+  s3_zh: >-
+    双方核查的样本推算，全年可腾出一千二百个工时，买方的规划成本是每小时二百元。另一项审查确认，印刷和快递费可以省下三万六千元。薪酬会不会减少，还没确认。
+  s3_zh_hk: >-
+    雙方一齊核查嘅樣本推算，全年可以騰出一千二百個員工工時，買方用嚟規劃嘅成本係每個鐘二百蚊。另一項審查確認，印刷同速遞開支可以慳三萬六千蚊。至於薪酬會唔會減，仲未確認。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Features or the customer case?
+  title_zh: 功能为主，还是顾客应用？
+  title_zh_hk: 功能為主，還是顧客應用？
+  en: >-
+    Would you lead with the feature comparison or the quantified customer-use case? And how would you
+    label the 1,200 hours before payroll and redeployment are confirmed? Pause and vote.
+  zh: 你会以功能比较开头，还是用量化的顾客应用？在薪酬和人手调配还没确认之前，这一千二百小时又该怎样表述？请暂停，投个票。
+  zh_hk: 你會用功能比較做開頭，定係用量化嘅顧客應用？喺薪酬同人手調配未確認之前，呢一千二百個鐘又應該點樣講？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Payroll will not fall
+  title_zh: 薪酬支出不会减少
+  title_zh_hk: 薪酬支出不會減少
+  step1_en: >-
+    Staff and roster kept: payroll unchanged
+  step1_zh: 人手和排班不变：薪酬不变
+  step1_zh_hk: 人手和排班不變：薪酬不變
+  step2_en: >-
+    800 hours: record work, 0.4 h each
+  step2_zh: 800 小时：完善记录，每份 0.4 小时
+  step2_zh_hk: 800 小時：完善紀錄，每份 0.4 小時
+  step3_en: >-
+    400 hours: no identified use this year
+  step3_zh: 400 小时：本年未有用途
+  step3_zh_hk: 400 小時：本年未有用途
+  s1_en: >-
+    The buyer must keep its salaried staff and roster for the full year, with no overtime, agency or vacancy
+    cost to avoid. So the nominal 240,000 dollars, from 1,200 hours times 200, cannot be presented as
+    a cash saving.
+  s1_zh: >-
+    买方确认，全年都要保留现有的受薪人手和排班，没有加班、临时人手或空缺的开支可以省。所以，一千二百小时乘二百元得出的二十四万元，不能说成节省的现金。
+  s1_zh_hk: >-
+    買方確認，全年都要保留現有嘅受薪人手同更表，冇加班、臨時人手或者空缺嘅開支可以慳。所以，一千二百個鐘乘二百蚊得出嘅二十四萬蚊，唔可以講成慳到嘅現金。
+  s2_en: >-
+    Managers can put 800 of the hours into authorised member-record enrichment. Each record takes 0.4
+    of a staff hour, and the backlog exceeds 2,000 records.
+  s2_zh: 管理层可以把其中八百小时，集中用在已经批准的会员记录完善工作上。每份记录需要零点四个工时，积压的记录超过两千份。
+  s2_zh_hk: 管理層可以將其中八百個鐘，集中用喺已經批准嘅會員紀錄完善工作。每份紀錄要零點四個工時，積壓嘅紀錄超過二千份。
+  s3_en: >-
+    The other 400 hours are fragmented across the roster, with no productive use this year. The 36,000-dollar
+    reduction still stands, and enriched records have no agreed money value.
+  s3_zh: 其余四百小时分散在不同班次，本年度找不到有效的用途。三万六千元的外部开支节省仍然成立；完善后的记录，双方没有约定任何金钱价值。
+  s3_zh_hk: 其餘四百個鐘分散喺唔同更次，今年搵唔到有效用途。三萬六千蚊嘅外部開支節省仍然成立；完善咗嘅紀錄，雙方冇約定任何金錢價值。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What will the bid lead with?
+  title_zh: 最终摘要怎样开头？
+  title_zh_hk: 最終摘要怎樣開頭？
+  en: >-
+    What would your final lead message say about cash, usable capacity and cost? And would you keep the
+    customer-use summary, or switch to the feature-led version? Pause and vote.
+  zh: 最终摘要的开头，你会怎样讲现金、可用工时和成本？你会保留以顾客应用为主的写法，还是改用功能为主的版本？请暂停，投个票。
+  zh_hk: 最終摘要嘅開頭，你會點樣講現金、可用工時同成本？你會保留以顧客應用為主嘅寫法，定係改用功能為主嘅版本？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: A cash bridge, not a big return
+  title_zh: 现金对照，不夸大回报
+  title_zh_hk: 現金對照，不誇大回報
+  step1_en: >-
+    Cash avoided: HK$36,000 · labour: HK$0
+  step1_zh: 省下现金：HK$36,000 · 人工：HK$0
+  step1_zh_hk: 省下現金：HK$36,000 · 人工：HK$0
+  step2_en: HK$60,000 − HK$36,000 = HK$24,000 extra
+  step2_zh: HK$60,000 − HK$36,000 = 净多付 HK$24,000
+  step2_zh_hk: HK$60,000 − HK$36,000 = 淨多付 HK$24,000
+  step3_en: Not HK$240,000 + HK$36,000 in savings
+  step3_zh: 不是节省 HK$240,000 + HK$36,000
+  step3_zh_hk: 不是節省 HK$240,000 + HK$36,000
+  s1_en: >-
+    In round one, a feature comparison is easy to inspect, while a customer-use case is more relevant,
+    if the hours are labelled as capacity potentially released, not a payroll saving.
+  s1_zh: 第一轮时，功能比较容易核对；顾客应用的写法更贴近买方，前提是把那些工时写成可能腾出的人手，而不是薪酬节省。
+  s1_zh_hk: 第一輪嗰陣，功能比較容易核對；顧客應用嘅寫法更貼近買方，前提係將嗰啲工時寫成可能騰出嘅人手，而唔係薪酬節省。
+  s2_en: >-
+    Annual external cash avoided is 36,000 dollars, and labour cash saving is zero. Against the 60,000-dollar
+    fee, the buyer spends 24,000 dollars more over the year.
+  s2_zh: 全年能省下的外部现金开支是三万六千元，人工方面的现金节省是零。跟六万元的服务费相比，买方全年要多花二万四千元。
+  s2_zh_hk: 全年可以慳到嘅外部現金開支係三萬六千蚊，人工方面嘅現金節省係零。同六萬蚊嘅服務費比，買方全年要多使二萬四千蚊。
+  s3_en: >-
+    Claiming 240,000 plus 36,000 dollars as cash benefits, or 216,000 dollars as net cash savings, would
+    be wrong.
+  s3_zh: 如果说现金好处有二十四万加三万六千元，或者说净省现金二十一万六千元，都是错的。
+  s3_zh_hk: 如果話現金好處有二十四萬加三萬六千蚊，或者話淨慳現金二十一萬六千蚊，都係錯嘅。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Make the capacity concrete
+  title_zh: 把可用工时说具体
+  title_zh_hk: 把可用工時說具體
+  step1_en: 800 ÷ 0.4 = 2,000 enriched records
+  step1_zh: 800 ÷ 0.4 = 2,000 份完善记录
+  step1_zh_hk: 800 ÷ 0.4 = 2,000 份完善紀錄
+  step2_en: >-
+    Hours and records: one benefit, not two
+  step2_zh: 工时和记录是同一项效益
+  step2_zh_hk: 工時和紀錄是同一項效益
+  step3_en: >-
+    Lead: HK$36,000 saved · HK$24,000 extra
+  step3_zh: 开头：省 HK$36,000 · 净多付 HK$24,000
+  step3_zh_hk: 開頭：省 HK$36,000 · 淨多付 HK$24,000
+  s1_en: >-
+    The usable 800 hours support 800 divided by 0.4, or 2,000 enriched records. The other 400 hours have
+    no shown use this year.
+  s1_zh: 可用的八百小时，除以零点四，可以完善两千份记录。其余四百小时，本年度看不到有什么用途。
+  s1_zh_hk: 可用嘅八百個鐘，除零點四，可以完善二千份紀錄。其餘四百個鐘，今年睇唔到有乜用途。
+  s2_en: >-
+    Neither the 2,000 records nor the 800 hours should be turned into cash without an agreed mechanism,
+    and because they describe the same benefit, do not add them together.
+  s2_zh: 没有双方同意的计算方法，两千份记录和八百小时都不应换算成现金；而且它们讲的是同一项效益，不能加在一起。
+  s2_zh_hk: 冇雙方同意嘅計法，二千份紀錄同八百個鐘都唔應該換算成現金；而且佢哋講緊同一項效益，唔可以加埋一齊。
+  s3_en: >-
+    A defensible lead says: for 60,000 dollars a year, the service removes 36,000 of printing and courier
+    costs and frees capacity for 2,000 record enrichments, without cutting payroll. Net extra cash is
+    24,000.
+  s3_zh: >-
+    一个站得住的开头可以这样说：全年六万元，服务能省下三万六千元的印刷和快递费用，并腾出人手完善两千份记录，但不会减少薪酬。净多付的现金是二万四千元。
+  s3_zh_hk: 一個企得住嘅開頭可以咁講：全年六萬蚊，服務可以慳三萬六千蚊嘅印刷同速遞費，仲騰出人手完善二千份紀錄，但唔會減薪酬。淨多俾嘅現金係二萬四千蚊。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Keep the trade-off visible
+  title_zh: 取舍要讲清楚
+  title_zh_hk: 取捨要講清楚
+  en: >-
+    Also state that a further 400 released hours have no identified use this year, and that benefits depend
+    on the stated workload and redeployment plan. The use-case summary stays strong if it leads with this
+    transparent trade-off; feature-led is also defensible, as long as the same cash limits stay explicit.
+  zh: >-
+    还要写明，另外四百个腾出的工时本年度没有找到用途，而且这些效益取决于说明了的工作量和人手调配计划。只要以这个清楚的取舍开头，顾客应用的写法依然有力；以功能为主也说得通，但同样要把现金上的限制讲清楚。
+  zh_hk: >-
+    仲要寫明，另外四百個騰出嘅工時今年冇搵到用途，而且呢啲效益取決於講明咗嘅工作量同人手調配計劃。只要用呢個清楚嘅取捨做開頭，顧客應用嘅寫法依然有力；以功能為主都講得通，但一樣要將現金上嘅限制講清楚。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Time released ≠ cash released
+  title_zh: 省下工时，不等于省下现金
+  title_zh_hk: 省下工時，不等於省下現金
+  q1_en: >-
+    Cash: HK$36,000 saved · HK$24,000 net extra
+  q1_zh: 现金：省 HK$36,000 · 净多付 HK$24,000
+  q1_zh_hk: 現金：省 HK$36,000 · 淨多付 HK$24,000
+  q2_en: >-
+    Capacity: 800 hours = 2,000 records
+  q2_zh: 人手：800 小时 = 2,000 份记录
+  q2_zh_hk: 人手：800 小時 = 2,000 份紀錄
+  s1_en: >-
+    A customer business case is clearer when cash, usable capacity and cost are stated separately and
+    honestly.
+  s1_zh: 把现金、可用人手和成本分开、如实地讲，顾客的效益评估才会更清楚。
+  s1_zh_hk: 將現金、可用人手同成本分開、如實咁講，顧客嘅效益評估先會更清楚。
+  s2_en: >-
+    The evidence supports a customer decision, not a guaranteed tender win.
+  s2_zh: 这些证据是帮顾客做决定，不保证一定中标。
+  s2_zh_hk: 呢啲證據係幫顧客做決定，唔保證一定中標。
+  s3_en: >-
+    The supplier, the trade association, the tender and all figures are fictional. Official scene art
+    is a teaching illustration only.
+  s3_zh: 服务商、行业协会、招标和所有数字都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 服務商、行業協會、招標同所有數字都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

@@ -867,6 +867,13 @@ def takeaway_cue_picture(spec) -> tuple | None:
             return None
         return ("compare", left, right, left if left > right else right)
     if kind == "tens_mark":
+        left, right = _as_int(spec.get("a")), _as_int(spec.get("b"))
+        if left is not None or right is not None:
+            if left is None or right is None or left == right:
+                return None
+            if not 0 <= left <= 100 or not 0 <= right <= 100:
+                return None
+            return ("tens_mark", left, right)
         rods = _as_int(spec.get("rods"))
         if rods is None:
             rods = 4

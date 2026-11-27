@@ -1789,6 +1789,100 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertTrue(any("must not fall back to the default track" in msg for msg in messages))
         self.assertNotIn("cues", labels_for(bad, "en"))
 
+    def test_takeaway_blocks_share_a_scale_and_comparisons_stay_apart(self):
+        """Rods keep one size, a comparison's blocks match the number, and the ring clears both digits."""
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
+        from manim import Text, tempconfig
+
+        from anim import _scene_types, cjk_family, latin_family, prepare_fonts
+
+        prepare_fonts()
+        cls = _scene_types()["lesson_takeaway"]
+
+        def content_edges(card):
+            mobs = [card.vf_number, card.vf_bundles]
+            return (
+                min(mob.get_left()[0] for mob in mobs),
+                max(mob.get_right()[0] for mob in mobs),
+                min(mob.get_bottom()[1] for mob in mobs),
+                max(mob.get_top()[1] for mob in mobs),
+            )
+
+        def lay_out(pictures, w, h):
+            lines = ["Line one.", "Line two.", "Line three.", "Line four."]
+            with tempconfig({
+                "pixel_width": w,
+                "pixel_height": h,
+                "frame_width": 8.0 * w / h,
+                "frame_height": 8.0,
+                "frame_rate": 8,
+                "disable_caching": True,
+                "preview": False,
+                "write_to_movie": False,
+            }):
+                scene = cls()
+                scene.vf_fonts = (latin_family(), cjk_family("en"))
+                latin, cjk = scene.vf_fonts
+                title = Text("Tens and ones", font=latin, font_size=48)
+                cues = [scene._line_cue(picture, latin, cjk) for picture in pictures]
+                scene._layout_takeaway(title, cues, lines, latin, cjk, fit_heading=True)
+            return cues
+
+        tens = lay_out([("tens", 2, 4), ("tens", 4, 0), ("tens", 0, 4), ("tens", 10, 0)], 1920, 1080)
+        rod_h = [cue.vf_rods[0].height for cue in tens if cue.vf_rods]
+        self.assertEqual(len(rod_h), 3)
+        self.assertLess(max(rod_h) - min(rod_h), 1e-6)
+        self.assertLess(tens[2].vf_cubes[0].height, rod_h[0] * 0.45)
+        self.assertEqual((len(tens[0].vf_rods), len(tens[0].vf_cubes)), (2, 4))
+        self.assertEqual(len(tens[1].vf_rods), 4)
+        self.assertEqual(len(tens[2].vf_cubes), 4)
+        self.assertEqual((len(tens[3].vf_rods), len(tens[3].vf_cubes)), (10, 0))
+        self.assertLess(abs(tens[3].vf_rods[0].height - rod_h[0]), 1e-6)
+
+        compared = [
+            ("compare", 24, 42, 42),
+            ("tens_mark", 24, 42),
+            ("compare", 47, 43, 47),
+            ("compare", 100, 99, 100),
+        ]
+        self.assertEqual(takeaway_cue_picture({"kind": "tens_mark", "a": 24, "b": 42}), ("tens_mark", 24, 42))
+        for w, h in ((1920, 1080), (1080, 1920)):
+            cues = lay_out(compared, w, h)
+            for cue, picture in zip(cues, compared):
+                left, right = cue.vf_compare_cards
+                for card, number in ((left, picture[1]), (right, picture[2])):
+                    self.assertEqual(len(card.vf_rods) * 10 + len(card.vf_cubes), number)
+                _l0, r0, _b0, _t0 = content_edges(left)
+                l1, _r1, _b1, _t1 = content_edges(right)
+                self.assertLess(r0, l1)
+                gap_px = (l1 - r0) / 8.0 * h
+                self.assertGreaterEqual(gap_px, 40.0 * h / 1080.0 - 0.5)
+                for card in (left, right):
+                    ring = card.vf_highlight
+                    if picture[0] == "compare":
+                        if card.vf_value != picture[3]:
+                            self.assertIsNone(ring)
+                            continue
+                        self.assertIsNotNone(ring)
+                        cl, cr, cb, ct = content_edges(card)
+                        self.assertLess(ring.get_left()[0], cl)
+                        self.assertGreater(ring.get_right()[0], cr)
+                        self.assertGreater(ring.get_top()[1], ct)
+                        self.assertLess(ring.get_bottom()[1], cb)
+                    else:
+                        self.assertIsNotNone(ring)
+                        for rod in card.vf_rods:
+                            self.assertLessEqual(ring.get_left()[0], rod.get_left()[0] + 1e-6)
+                            self.assertGreaterEqual(ring.get_right()[0], rod.get_right()[0] - 1e-6)
+                            self.assertGreaterEqual(ring.get_top()[1], rod.get_top()[1] - 1e-6)
+                            self.assertLessEqual(ring.get_bottom()[1], rod.get_bottom()[1] + 1e-6)
+                        self.assertLess(ring.get_top()[1], card.vf_number.get_bottom()[1])
+                        for cube in card.vf_cubes:
+                            self.assertLessEqual(ring.get_right()[0], cube.get_left()[0] + 1e-4)
+
     def test_p1_lessons_validate_and_keep_traditional_labels(self):
         expected = {
             "P1-NUM-01": ["lesson_hook", "count_objects", "count_objects", "count_objects", "lesson_takeaway"],
@@ -1814,6 +1908,9 @@ class SceneRegistryTest(unittest.TestCase):
                 "lesson_hook",
                 "part_whole", "part_whole", "part_whole", "part_whole", "part_whole", "part_whole",
                 "lesson_takeaway",
+            ],
+            "P1-NUM-13": [
+                "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
             ],
             "P1-NUM-15": [
                 "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
@@ -2212,6 +2309,40 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertIn("？", labels_for(recap, "zh")["title"])
         self.assertNotIn("?", labels_for(recap, "zh")["title"])
         self.assertNotIn("?", labels_for(recap, "zh_hk")["title"])
+        thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
+        blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
+        self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])
+        self.assertEqual([b["count"] for b in blocks], [24, 40, 100])
+        self.assertEqual(count_event(blocks[0]), (0, 2))
+        self.assertEqual(count_event(blocks[1]), (0, 4))
+        self.assertEqual(count_event(blocks[2]), (0, 10))
+        self.assertEqual(blocks[0]["s3_en"], "Two tens and four ones make twenty-four.")
+        self.assertEqual(blocks[0]["s3_zh"], "两个十和四个一，是二十四。")
+        self.assertEqual(blocks[1]["s3_zh_hk"], "四個十係四十。我哋可以數一數。")
+        self.assertNotIn("嗎", _beat_lines(thirteen, "zh_hk"))
+        self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in thirteen["beats"]).lower())
+        recap13 = next(beat for beat in thirteen["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap13), 4)
+        self.assertEqual(labels_for(recap13, "en")["title"], "Tens and ones")
+        self.assertEqual(labels_for(recap13, "zh")["title"], "十、个和一百")
+        self.assertEqual(labels_for(recap13, "zh_hk")["title"], "十、個同一百")
+        self.assertEqual(
+            labels_for(recap13, "en")["lines"],
+            [
+                "Two tens and four ones make 24.",
+                "Four tens make forty.",
+                "Four ones make four.",
+                "Ten tens make one hundred.",
+            ],
+        )
+        self.assertEqual(labels_for(recap13, "zh")["lines"][3], "十个十是一百。")
+        self.assertEqual(labels_for(recap13, "zh_hk")["lines"][3], "十個十係一百。")
+        self.assertEqual(
+            labels_for(recap13, "en")["cues"],
+            [("tens", 2, 4), ("tens", 4, 0), ("tens", 0, 4), ("tens", 10, 0)],
+        )
+        for picture in labels_for(recap13, "en")["cues"]:
+            self.assertNotIn(picture, DEFAULT_TRACK_CUES)
 
     def test_part_whole_bounds(self):
         good = {

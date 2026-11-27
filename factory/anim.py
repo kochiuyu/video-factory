@@ -2639,34 +2639,53 @@ def _scene_types() -> dict:
             )
 
         def _cue_bundles(self, rods: int, ones: int):
-            """Green ten-rods and gold one-cubes. Ten rods sit in two rows of five."""
-            rod_w, rod_h = (0.26, 0.46) if rods > 5 else (0.32, 0.62)
-            blocks = VGroup(*[self._cue_rod(rod_w, rod_h) for _ in range(rods)])
-            if rods:
-                cols = 5 if rods > 5 else rods
-                blocks.arrange_in_grid(rows=(rods + cols - 1) // cols, cols=cols, buff=0.08)
-            if ones:
-                side = 0.24 if ones > 6 else 0.28
-                cubes = VGroup(*[self._cue_cube(side) for _ in range(ones)])
-                cols = 5 if ones > 5 else ones
-                cubes.arrange_in_grid(rows=(ones + cols - 1) // cols, cols=cols, buff=0.06)
-                if rods:
-                    return VGroup(blocks, cubes).arrange(DOWN, buff=0.08)
-                return cubes
-            return blocks
+            """Green ten-rods and gold one-cubes at one size.
+
+            A rod is tall. A cube is a small square, much smaller than a rod.
+            Ten rods are two rows of that same rod, not a shorter rod.
+            """
+            rod_w, rod_h, side, buff = 0.30, 0.70, 0.28, 0.05
+            rod_mobs = []
+            for _ in range(int(rods)):
+                rod = self._cue_rod(rod_w, rod_h)
+                rod.vf_block = "rod"
+                rod_mobs.append(rod)
+            cube_mobs = []
+            for _ in range(int(ones)):
+                cube = self._cue_cube(side)
+                cube.vf_block = "cube"
+                cube_mobs.append(cube)
+            rods_g = None
+            cubes_g = None
+            parts = []
+            if rod_mobs:
+                rods_g = VGroup(*rod_mobs)
+                cols = 5 if len(rod_mobs) > 5 else len(rod_mobs)
+                rods_g.arrange_in_grid(rows=(len(rod_mobs) + cols - 1) // cols, cols=cols, buff=buff)
+                parts.append(rods_g)
+            if cube_mobs:
+                cubes_g = VGroup(*cube_mobs)
+                cols = 5 if len(cube_mobs) > 5 else len(cube_mobs)
+                cubes_g.arrange_in_grid(rows=(len(cube_mobs) + cols - 1) // cols, cols=cols, buff=buff)
+                parts.append(cubes_g)
+            group = VGroup(*parts).arrange(DOWN, buff=buff) if len(parts) > 1 else parts[0]
+            group.vf_share = "tens"
+            group.vf_rods = rod_mobs
+            group.vf_cubes = cube_mobs
+            group.vf_rod_group = rods_g
+            return group
 
         def _line_cue(self, picture, latin: str, cjk: str):
             """Draw one named takeaway picture. An unknown picture is an error."""
             kind = picture[0] if picture else ""
             if kind == "tens":
                 return self._cue_bundles(int(picture[1]), int(picture[2]))
+            if kind == "tens_mark" and len(picture) >= 3:
+                return self._cue_pair(int(picture[1]), int(picture[2]), "tens", None, latin, cjk)
             if kind == "tens_mark":
-                rods = self._cue_bundles(int(picture[1]), 0)
-                ring = SurroundingRectangle(rods, color=GOLD, buff=0.08, stroke_width=6)
-                ring.set_fill(opacity=0)
-                return VGroup(rods, ring)
+                return self._cue_bundles(int(picture[1]), 0)
             if kind == "compare":
-                return self._cue_compare(int(picture[1]), int(picture[2]), int(picture[3]), latin, cjk)
+                return self._cue_pair(int(picture[1]), int(picture[2]), "larger", int(picture[3]), latin, cjk)
             if kind == "tiles":
                 return self._cue_tiles(picture[1], latin)
             if kind == "pairs":
@@ -2675,23 +2694,101 @@ def _scene_types() -> dict:
                 return self._cue_dots(int(picture[1]))
             raise ValueError(f"takeaway cue fell back to the default: {picture!r}")
 
-        def _cue_compare(self, left: int, right: int, larger: int, latin: str, cjk: str):
-            def card(number: int):
-                tens, ones = divmod(number, 10)
-                num = styled(str(number), latin, cjk, 64)
-                # Ones past four become a speck under the numeral. The tens
-                # stay, and the gold ring marks the larger number.
-                pic = self._cue_bundles(tens, ones if ones <= 4 else 0)
-                if float(pic.height) > float(num.height) * 0.7:
-                    pic.scale((float(num.height) * 0.7) / float(pic.height))
-                group = VGroup(num, pic).arrange(DOWN, buff=0.06)
-                if number == larger:
-                    ring = SurroundingRectangle(group, color=GOLD, buff=0.08, stroke_width=6)
-                    ring.set_fill(opacity=0)
-                    return VGroup(group, ring)
-                return group
+        def _compare_card(self, number: int, latin: str, cjk: str, mark: str, larger):
+            """One number, every ten-rod and every one-cube, at the shared unit size."""
+            tens, ones = divmod(int(number), 10)
+            bundles = self._cue_bundles(tens, ones)
+            bundles.vf_share = None
+            # Ones sit beside the rods, so a hundred still fits a takeaway row
+            # and the cubes stay large enough to count.
+            if bundles.vf_rod_group is not None and bundles.vf_cubes:
+                bundles.arrange(RIGHT, buff=0.10)
+            num = styled(str(number), latin, cjk, 42)
+            if float(bundles.height) > 0 and float(num.height) > float(bundles.height) * 0.55:
+                num.scale((float(bundles.height) * 0.55) / float(num.height))
+            body = VGroup(num, bundles).arrange(DOWN, buff=0.08)
+            body.vf_number = num
+            body.vf_bundles = bundles
+            body.vf_rods = bundles.vf_rods
+            body.vf_cubes = bundles.vf_cubes
+            body.vf_rod_group = bundles.vf_rod_group
+            body.vf_value = int(number)
+            body.vf_wants_ring = False
+            body.vf_mark_target = None
+            body.vf_highlight = None
+            if mark == "larger" and int(number) == int(larger):
+                body.vf_wants_ring = True
+                body.vf_mark_target = body
+            elif mark == "tens" and bundles.vf_rod_group is not None:
+                body.vf_wants_ring = True
+                body.vf_mark_target = bundles.vf_rod_group
+            return body
 
-            return VGroup(card(left), card(right)).arrange(RIGHT, buff=0.18)
+        def _cue_pair(self, left: int, right: int, mark: str, larger, latin: str, cjk: str):
+            pair = VGroup(
+                self._compare_card(left, latin, cjk, mark, larger),
+                self._compare_card(right, latin, cjk, mark, larger),
+            ).arrange(RIGHT, buff=0.3)
+            pair.vf_compare_cards = (pair[0], pair[1])
+            pair.vf_share = None
+            return pair
+
+        def _open_rod_ring_gap(self, card, need: float) -> None:
+            """Keep the ten-rod outline off the digits and off the one-cubes."""
+            number = card.vf_number
+            rods = card.vf_rod_group
+            if rods is None:
+                return
+            gap = float(number.get_bottom()[1] - rods.get_top()[1])
+            if gap < need:
+                number.shift(UP * (need - gap))
+            if not card.vf_cubes:
+                return
+            rod_right = float(rods.get_right()[0])
+            cube_left = min(float(cube.get_left()[0]) for cube in card.vf_cubes)
+            if cube_left - rod_right < need:
+                shift = need - (cube_left - rod_right)
+                for cube in card.vf_cubes:
+                    cube.shift(RIGHT * shift)
+
+        def _fit_compare_cards(self, group, vis_w: float, vis_h: float) -> None:
+            """Same block size on both numbers, then a gap that stays 40px at 1080p.
+
+            The gold ring is added after that scale, so its padding is in final
+            units and surrounds the number and the blocks.
+            """
+            gap = 44.0 * 8.0 / 1080.0
+            pad = 18.0 * 8.0 / 1080.0
+            air = 8.0 * 8.0 / 1080.0
+            left, right = group.vf_compare_cards
+            tens = left.vf_mark_target is left.vf_rod_group
+
+            def _opened(card) -> tuple[float, float]:
+                """Extra width and height inserted after the scale, in final units."""
+                if not tens:
+                    return 0.0, 0.0
+                extra_w = (pad + air) if card.vf_cubes else 0.0
+                return extra_w, pad + air
+
+            extra_w = _opened(left)[0] + _opened(right)[0]
+            extra_h = max(_opened(left)[1], _opened(right)[1])
+            pair_w = float(left.width) + float(right.width)
+            pair_h = max(float(left.height), float(right.height))
+            room_w = max(0.2, vis_w - gap - 2.0 * pad - extra_w)
+            room_h = max(0.2, vis_h - 2.0 * pad - extra_h)
+            scale = min(room_w / pair_w, room_h / pair_h) if pair_w > 0 and pair_h > 0 else 1.0
+            left.scale(scale)
+            right.scale(scale)
+            if tens:
+                self._open_rod_ring_gap(left, pad + air)
+                self._open_rod_ring_gap(right, pad + air)
+            right.next_to(left, RIGHT, buff=gap)
+            for card in (left, right):
+                if card.vf_wants_ring and card.vf_mark_target is not None:
+                    ring = SurroundingRectangle(card.vf_mark_target, color=GOLD, buff=pad, stroke_width=5)
+                    ring.set_fill(opacity=0)
+                    card.add(ring)
+                    card.vf_highlight = ring
 
         def _cue_tiles(self, values, latin: str):
             tiles = VGroup()
@@ -2741,6 +2838,23 @@ def _scene_types() -> dict:
             dots.arrange_in_grid(rows=(count + cols - 1) // cols, cols=cols, buff=0.08)
             return dots
 
+        def _cue_vis(self, grid: dict, portrait: bool, compared: bool):
+            """The picture box for one takeaway row.
+
+            A comparison uses more of a portrait cell so the blocks stay
+            readable. Every other cue keeps the original box.
+            """
+            if portrait:
+                portion = 0.74 if compared else TAKEAWAY_PORTRAIT_VISUAL
+                fit = 0.94 if compared else 0.88
+                vis_h = float(grid["cell_h"]) * portion * fit
+                vis_w = float(grid["vis_w"]) * 0.92
+                return vis_w, vis_h, portion
+            vis_h = float(grid["cell_h"]) * float(grid["visual_of_cell"])
+            gutter = (TAKEAWAY_COLUMN_GAP_PX + 6) * 8.0 / 1080.0
+            vis_w = max(0.4, float(grid["vis_w"]) - 2.0 * gutter)
+            return vis_w, vis_h, TAKEAWAY_PORTRAIT_VISUAL
+
         def _layout_takeaway(self, heading, cues, lines, latin: str, cjk: str, text_fit: float = 0.96, fit_heading: bool = False) -> list:
             """Put each cue and its sentence into an equal row cell."""
             pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
@@ -2755,26 +2869,51 @@ def _scene_types() -> dict:
             ]
             if portrait:
                 zone = float(grid["cell_h"]) * (1.0 - TAKEAWAY_PORTRAIT_VISUAL) * 0.92
-                tallest = max(float(word.height) for word in words)
-                if tallest > zone > 0:
-                    shrink = zone / tallest
-                    for word in words:
-                        word.scale(shrink)
+                plain = []
+                compared_words = []
+                for word, cue in zip(words, cues):
+                    if getattr(cue, "vf_compare_cards", None):
+                        compared_words.append(word)
+                    else:
+                        plain.append(word)
+                if plain:
+                    tallest = max(float(word.height) for word in plain)
+                    if tallest > zone > 0:
+                        shrink = zone / tallest
+                        for word in plain:
+                            word.scale(shrink)
+                if compared_words:
+                    _vw, _vh, portion = self._cue_vis(grid, True, True)
+                    band = float(grid["cell_h"]) * (1.0 - portion) * 0.90
+                    tallest = max(float(word.height) for word in compared_words)
+                    if tallest > band > 0:
+                        shrink = band / tallest
+                        for word in compared_words:
+                            word.scale(shrink)
             rows = []
+            # Tens rows share one scale, so a cube stays smaller than a rod and
+            # ten rods are the same rod as four rods. Other cues still fill
+            # their own cell.
+            tens_scale = None
+            if cues and all(getattr(cue, "vf_share", None) == "tens" for cue in cues):
+                fits = []
+                for cue in cues:
+                    vis_w, vis_h, _portion = self._cue_vis(grid, portrait, False)
+                    if float(cue.width) > 0 and float(cue.height) > 0:
+                        fits.append(min(vis_w / float(cue.width), vis_h / float(cue.height)))
+                tens_scale = min(fits) if fits else 1.0
             for cue, word, cell in zip(cues, words, grid["cells"]):
-                if portrait:
-                    vis_h = float(grid["cell_h"]) * TAKEAWAY_PORTRAIT_VISUAL * 0.88
-                    vis_w = float(grid["vis_w"]) * 0.92
-                else:
-                    vis_h = float(grid["cell_h"]) * float(grid["visual_of_cell"])
-                    # 40px at 1080p, plus a few pixels so a stroke still clears the column.
-                    gutter = (TAKEAWAY_COLUMN_GAP_PX + 6) * 8.0 / 1080.0
-                    vis_w = max(0.4, float(grid["vis_w"]) - 2.0 * gutter)
-                if float(cue.width) > 0 and float(cue.height) > 0:
+                compared = bool(getattr(cue, "vf_compare_cards", None))
+                vis_w, vis_h, portion = self._cue_vis(grid, portrait, compared)
+                if compared:
+                    self._fit_compare_cards(cue, vis_w, vis_h)
+                elif tens_scale is not None:
+                    cue.scale(tens_scale)
+                elif float(cue.width) > 0 and float(cue.height) > 0:
                     cue.scale(min(vis_w / float(cue.width), vis_h / float(cue.height)))
                 if portrait:
                     zone_top = float(cell["top"])
-                    zone_bot = zone_top - float(grid["cell_h"]) * TAKEAWAY_PORTRAIT_VISUAL
+                    zone_bot = zone_top - float(grid["cell_h"]) * portion
                     cue.move_to([(float(grid["left"]) + float(grid["right"])) / 2.0, (zone_top + zone_bot) / 2.0, 0])
                     text_top = zone_bot
                     text_bot = float(cell["bottom"])

@@ -1,0 +1,109 @@
+# P1-SHP-01. Mirrors MathQuiz path flat / lesson pointlines, "Points and lines".
+# A mark shows a place. A line is straight or curved. Two places have one straight line.
+# https://github.com/kochiuyu/mathquiz learn-flat.js (pointlines).
+# Speech is for age 6: one short idea per sentence.
+id: P1-SHP-01
+title_en: Points and lines
+title_zh: 点和线
+title_zh_hk: 點同線
+duration_target_s: 64
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: shapes
+  kind: line
+  seconds: 8
+  title_en: Points and lines
+  title_zh: 点和线
+  title_zh_hk: 點同線
+  s1_en: Where is the mark?
+  s1_zh: 这个记号在哪里？
+  s1_zh_hk: 呢個記號喺邊度呀？
+
+- id: marks
+  visual: animated
+  scene: shape_line
+  part: marks
+  n: 3
+  seconds: 12
+  title_en: A mark shows a place
+  title_zh: 记号表示一个位置
+  title_zh_hk: 記號表示一個位置
+  s1_en: A dot shows one place.
+  s1_zh: 一个圆点，表示一个位置。
+  s1_zh_hk: 一個圓點，表示一個位置。
+  s2_en: One. Two. Three.
+  s2_zh: 一。二。三。
+  s2_zh_hk: 一。二。三。
+  s3_en: Three places.
+  s3_zh: 三个位置。
+  s3_zh_hk: 三個位置。
+
+- id: lines
+  visual: animated
+  scene: shape_line
+  part: lines
+  seconds: 12
+  title_en: Straight or curved
+  title_zh: 直的，还是弯的
+  title_zh_hk: 直嘅，定係彎嘅
+  s1_en: This line is straight.
+  s1_zh: 这条线是直的。
+  s1_zh_hk: 呢條線係直嘅。
+  s2_en: This line bends.
+  s2_zh: 这条线是弯的。
+  s2_zh_hk: 呢條線係彎嘅。
+  s3_en: Straight, or curved.
+  s3_zh: 一条直的，一条弯的。
+  s3_zh_hk: 一條直嘅，一條彎嘅。
+
+- id: routes
+  visual: animated
+  scene: shape_line
+  part: routes
+  seconds: 12
+  title_en: Two places
+  title_zh: 两个位置
+  title_zh_hk: 兩個位置
+  s1_en: Two places.
+  s1_zh: 两个位置。
+  s1_zh_hk: 兩個位置。
+  s2_en: One straight line joins them.
+  s2_zh: 一条直线把它们连起来。
+  s2_zh_hk: 一條直線把佢哋連埋。
+  s3_en: A curve can join them too.
+  s3_zh: 一条弯线也可以连起来。
+  s3_zh_hk: 一條彎線都可以連埋。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: shapes
+  seconds: 16
+  title_en: Points and lines
+  title_zh: 点和线
+  title_zh_hk: 點同線
+  s1_en: A dot shows a place. One, two, three.
+  s1_zh: 圆点表示位置。一，二，三。
+  s1_zh_hk: 圓點表示位置。一，二，三。
+  s2_en: This line is straight.
+  s2_zh: 这条线是直的。
+  s2_zh_hk: 呢條線係直嘅。
+  s3_en: This line bends.
+  s3_zh: 这条线是弯的。
+  s3_zh_hk: 呢條線係彎嘅。
+  s4_en: One straight line joins two places.
+  s4_zh: 一条直线，连起两个位置。
+  s4_zh_hk: 一條直線，連起兩個位置。
+  cues:
+  - kind: line
+    mode: marks
+    n: 3
+  - kind: line
+    mode: straight
+  - kind: line
+    mode: curve
+  - kind: line
+    mode: routes

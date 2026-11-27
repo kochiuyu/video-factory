@@ -1610,6 +1610,7 @@ class SceneRegistryTest(unittest.TestCase):
                 "one_ten", "ten_and_ones", "make_ten", "count_objects", "number_track",
                 "ordinal_row", "pair_counters", "part_whole", "number_blocks",
                 "estimate_group", "row_match", "place_sum",
+                "shape_line", "flat_shape", "shape_join", "solid_shape",
                 "lesson_hook", "lesson_takeaway",
             ],
         )
@@ -2093,6 +2094,97 @@ class SceneRegistryTest(unittest.TestCase):
             self.assertGreaterEqual(float(tall.vf_title.height) * unit, 47)
             self.assertGreater(float(tall.vf_title.get_bottom()[1]), float(tall.vf_grid.get_top()[1]) - 0.05)
 
+    def test_shape_scenes_draw_points_flats_joins_and_solids(self):
+        """New shape scenes stay readable, and a circle has no straight sides."""
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
+        from manim import tempconfig
+
+        from anim import _make_scene, prepare_fonts
+
+        prepare_fonts()
+
+        def line_spec(part, n=3):
+            return {
+                "scene": "shape_line",
+                "lang": "en",
+                "part": part,
+                "n": n,
+                "labels": {
+                    "title": "Points and lines",
+                    "part": part,
+                    "n": n,
+                    "straight": "Straight",
+                    "curve": "Curved",
+                },
+            }
+
+        wide = {
+            "pixel_width": 1920, "pixel_height": 1080,
+            "frame_width": 8 * 16 / 9, "frame_height": 8, "frame_rate": 15,
+        }
+        with tempconfig(wide):
+            marks = _make_scene(line_spec("marks"), [0.6, 0.8, 0.6], [[], [0.1, 0.35, 0.6], []])
+            marks.render(preview=False)
+            unit = 1080 / 8
+            self.assertGreaterEqual(float(marks.vf_title.height) * unit, 47)
+            self.assertEqual(len(marks.vf_dots), 3)
+            self.assertGreaterEqual(float(marks.vf_count.get_fill_opacity()), 0.9)
+            flat = _make_scene({
+                "scene": "flat_shape",
+                "lang": "en",
+                "part": "one",
+                "kind": "triangle",
+                "labels": {"title": "Three straight sides", "part": "one", "kind": "triangle", "name": "Triangle", "turn": 20},
+            }, [0.5, 0.8, 0.5], [[], [0.1, 0.35, 0.6], []])
+            flat.render(preview=False)
+            self.assertEqual(flat.vf_sides, 3)
+            self.assertEqual(len(flat.vf_edges), 3)
+            circle = _make_scene({
+                "scene": "flat_shape",
+                "lang": "en",
+                "part": "one",
+                "kind": "circle",
+                "labels": {"title": "Round", "part": "one", "kind": "circle", "name": "Round", "turn": 0},
+            }, [0.4, 0.4, 0.4])
+            circle.render(preview=False)
+            self.assertEqual(circle.vf_sides, 0)
+            joined = _make_scene({
+                "scene": "shape_join",
+                "lang": "en",
+                "result": "quad",
+                "labels": {"title": "Put shapes together", "result": "quad"},
+            }, [0.4, 0.5, 0.5])
+            joined.render(preview=False)
+            self.assertEqual(joined.vf_sides, 4)
+            self.assertEqual(len(joined.vf_pieces), 2)
+            solid = _make_scene({
+                "scene": "solid_shape",
+                "lang": "en",
+                "part": "pair",
+                "items": ["prism", "cylinder"],
+                "labels": {
+                    "title": "A box and a can",
+                    "part": "pair",
+                    "items": ["prism", "cylinder"],
+                    "names": ["Prism", "Cylinder"],
+                    "turn": 25,
+                },
+            }, [0.4, 0.4, 0.4])
+            solid.render(preview=False)
+            self.assertEqual(solid.vf_kinds, ["prism", "cylinder"])
+            self.assertEqual(len(solid.vf_cards), 2)
+        with tempconfig({
+            "pixel_width": 1080, "pixel_height": 1920,
+            "frame_width": 8, "frame_height": 8 * 16 / 9, "frame_rate": 15,
+        }):
+            tall = _make_scene(line_spec("lines"), [0.4, 0.4, 0.4])
+            tall.render(preview=False)
+            unit = 1920 / (8 * 16 / 9)
+            self.assertGreaterEqual(float(tall.vf_title.height) * unit, 47)
+
     def test_p1_lessons_validate_and_keep_traditional_labels(self):
         expected = {
             "P1-NUM-01": ["lesson_hook", "count_objects", "count_objects", "count_objects", "lesson_takeaway"],
@@ -2157,6 +2249,9 @@ class SceneRegistryTest(unittest.TestCase):
             ],
             "P1-NUM-24": [
                 "lesson_hook", "place_sum", "place_sum", "place_sum", "lesson_takeaway",
+            ],
+            "P1-SHP-01": [
+                "lesson_hook", "shape_line", "shape_line", "shape_line", "lesson_takeaway",
             ],
         }
         for name, visuals in expected.items():
@@ -2850,6 +2945,21 @@ class SceneRegistryTest(unittest.TestCase):
             [("tens", 2, 4), ("tens", 5, 2), ("tiles", (32, 32)), ("tens", 6, 4)],
         )
         self.assertNotIn("sum", recap24["s3_en"].lower())
+        shapes = load_lesson(P1 / "P1-SHP-01.yaml")
+        lines = [beat for beat in shapes["beats"] if beat.get("scene") == "shape_line"]
+        self.assertEqual([b["part"] for b in lines], ["marks", "lines", "routes"])
+        self.assertEqual(count_event(lines[0]), (1, 3))
+        self.assertIsNone(count_event(lines[1]))
+        self.assertEqual(lines[0]["s2_en"], "One. Two. Three.")
+        self.assertEqual(lines[0]["s2_zh_hk"], "一。二。三。")
+        self.assertEqual(labels_for(lines[1], "zh_hk")["title"], "直嘅，定係彎嘅")
+        self.assertEqual(labels_for(lines[1], "zh_hk")["curve"], "彎嘅")
+        recap_s = shapes["beats"][-1]
+        self.assertEqual(
+            labels_for(recap_s, "en")["cues"],
+            [("line", "marks", 3), ("line", "straight"), ("line", "curve"), ("line", "routes")],
+        )
+        self.assertNotIn("嗎", _beat_lines(shapes, "zh_hk"))
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

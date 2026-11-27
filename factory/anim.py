@@ -2513,6 +2513,22 @@ def _scene_types() -> dict:
             motif = str(labels.get("motif") or "counters")
             lines = list(labels.get("lines") or ["", "", ""])
             title = styled(labels.get("title") or "", latin, cjk, 48)
+            pictures = labels.get("cues")
+            if pictures:
+                # Named cues replace the motif. The track motif's pictures are
+                # a fixed row (9–12, 17–20, 12–9) and must not stand in for a
+                # line that named its own picture.
+                if len(pictures) != len(lines):
+                    raise ValueError("takeaway cue fell back to the default")
+                cues = [self._line_cue(picture, latin, cjk) for picture in pictures]
+                rows = self._layout_takeaway(
+                    title, cues, [str(line) for line in lines], latin, cjk, fit_heading=True,
+                )
+                title = getattr(self, "_placed_heading", title)
+                self.spend(0, FadeIn(title), FadeIn(rows[0]))
+                for index in range(1, len(rows)):
+                    self.spend(index, FadeIn(rows[index]))
+                return
             if len(lines) >= 4 and motif == "counters":
                 self._counted_recap(title, lines, latin, cjk)
                 return
@@ -2553,7 +2569,7 @@ def _scene_types() -> dict:
                 size = floor_size
             return max(12, int(round(size)))
 
-        def _place_heading(self, heading, grid: dict) -> None:
+        def _place_heading(self, heading, grid: dict, fit: bool = False) -> None:
             """Same heading size in every language: the probe title sets the scale."""
             latin = self.vf_fonts[0]
             ref = Text(TAKEAWAY_HEADING_PROBE, font=latin, font_size=48, color=NAVY)
@@ -2563,16 +2579,288 @@ def _scene_types() -> dict:
             if float(ref.width) * scale > safe_w * 0.92:
                 scale = (safe_w * 0.92) / float(ref.width)
             heading.scale(scale)
+            # A named-cue heading longer than the probe wraps onto two lines
+            # once a single line would fall under the font floor. Headings that
+            # already fit stay on one line at the probe size.
+            if fit and float(heading.width) > safe_w * 0.92:
+                factor = (safe_w * 0.92) / float(heading.width)
+                ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+                pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
+                portrait = ph > pw
+                ref = 1920.0 if portrait else 1080.0
+                floor_px = (52.0 if portrait else 44.0) * (ph / ref)
+                unit = ph / float(grid["fh"])
+                floor_h = floor_px / unit
+                # A small extra squeeze stays one line. A long title wraps so
+                # the words stay at the font floor.
+                words = str(getattr(heading, "original_text", "") or getattr(heading, "text", "") or "")
+                if factor < 0.75 and " " in words:
+                    heading = self._wrap_heading(words, latin, safe_w * 0.92, band * 0.9, floor_h)
+                else:
+                    heading.scale(factor)
             cx = (float(grid["left"]) + float(grid["right"])) / 2.0
             cy = float(grid["top"]) - band / 2.0
             heading.move_to([cx, cy, 0])
+            self._placed_heading = heading
 
-        def _layout_takeaway(self, heading, cues, lines, latin: str, cjk: str, text_fit: float = 0.96) -> list:
+        def _wrap_heading(self, text: str, latin: str, width: float, height: float, floor_h: float):
+            words = text.split()
+            best = None
+            for cut in range(1, len(words)):
+                top = Text(" ".join(words[:cut]), font=latin, font_size=48, color=NAVY)
+                bot = Text(" ".join(words[cut:]), font=latin, font_size=48, color=NAVY)
+                wide = max(float(top.width), float(bot.width))
+                if best is None or wide < best[0]:
+                    best = (wide, top, bot)
+            group = VGroup(best[1], best[2]).arrange(DOWN, buff=0.08)
+            fit = min(width / float(group.width), height / float(group.height))
+            line_h = float(best[1].height) * fit
+            if line_h < floor_h and float(best[1].height) > 0:
+                fit = max(fit, floor_h / float(best[1].height))
+                if float(group.width) * fit > width:
+                    fit = width / float(group.width)
+            group.scale(fit)
+            return group
+
+        def _cue_rod(self, width: float, height: float):
+            return RoundedRectangle(
+                width=width, height=height,
+                corner_radius=min(0.08, height * 0.16),
+                stroke_color=NAVY, stroke_width=3,
+                fill_color=GREEN, fill_opacity=1,
+            )
+
+        def _cue_cube(self, side: float):
+            return RoundedRectangle(
+                width=side, height=side,
+                corner_radius=side * 0.18,
+                stroke_color=NAVY, stroke_width=3,
+                fill_color=GOLD, fill_opacity=1,
+            )
+
+        def _cue_bundles(self, rods: int, ones: int):
+            """Green ten-rods and gold one-cubes at one size.
+
+            A rod is tall. A cube is a small square, much smaller than a rod.
+            Ten rods are two rows of that same rod, not a shorter rod.
+            """
+            rod_w, rod_h, side, buff = 0.30, 0.70, 0.28, 0.05
+            rod_mobs = []
+            for _ in range(int(rods)):
+                rod = self._cue_rod(rod_w, rod_h)
+                rod.vf_block = "rod"
+                rod_mobs.append(rod)
+            cube_mobs = []
+            for _ in range(int(ones)):
+                cube = self._cue_cube(side)
+                cube.vf_block = "cube"
+                cube_mobs.append(cube)
+            rods_g = None
+            cubes_g = None
+            parts = []
+            if rod_mobs:
+                rods_g = VGroup(*rod_mobs)
+                cols = 5 if len(rod_mobs) > 5 else len(rod_mobs)
+                rods_g.arrange_in_grid(rows=(len(rod_mobs) + cols - 1) // cols, cols=cols, buff=buff)
+                parts.append(rods_g)
+            if cube_mobs:
+                cubes_g = VGroup(*cube_mobs)
+                cols = 5 if len(cube_mobs) > 5 else len(cube_mobs)
+                cubes_g.arrange_in_grid(rows=(len(cube_mobs) + cols - 1) // cols, cols=cols, buff=buff)
+                parts.append(cubes_g)
+            group = VGroup(*parts).arrange(DOWN, buff=buff) if len(parts) > 1 else parts[0]
+            group.vf_share = "tens"
+            group.vf_rods = rod_mobs
+            group.vf_cubes = cube_mobs
+            group.vf_rod_group = rods_g
+            return group
+
+        def _line_cue(self, picture, latin: str, cjk: str):
+            """Draw one named takeaway picture. An unknown picture is an error."""
+            kind = picture[0] if picture else ""
+            if kind == "tens":
+                return self._cue_bundles(int(picture[1]), int(picture[2]))
+            if kind == "tens_mark" and len(picture) >= 3:
+                return self._cue_pair(int(picture[1]), int(picture[2]), "tens", None, latin, cjk)
+            if kind == "tens_mark":
+                return self._cue_bundles(int(picture[1]), 0)
+            if kind == "compare":
+                return self._cue_pair(int(picture[1]), int(picture[2]), "larger", int(picture[3]), latin, cjk)
+            if kind == "tiles":
+                return self._cue_tiles(picture[1], latin)
+            if kind == "pairs":
+                return self._cue_pairs(int(picture[1]), int(picture[2]))
+            if kind == "counters":
+                return self._cue_dots(int(picture[1]))
+            raise ValueError(f"takeaway cue fell back to the default: {picture!r}")
+
+        def _compare_card(self, number: int, latin: str, cjk: str, mark: str, larger):
+            """One number, every ten-rod and every one-cube, at the shared unit size."""
+            tens, ones = divmod(int(number), 10)
+            bundles = self._cue_bundles(tens, ones)
+            bundles.vf_share = None
+            # Ones sit beside the rods, so a hundred still fits a takeaway row
+            # and the cubes stay large enough to count.
+            if bundles.vf_rod_group is not None and bundles.vf_cubes:
+                bundles.arrange(RIGHT, buff=0.10)
+            num = styled(str(number), latin, cjk, 42)
+            if float(bundles.height) > 0 and float(num.height) > float(bundles.height) * 0.55:
+                num.scale((float(bundles.height) * 0.55) / float(num.height))
+            body = VGroup(num, bundles).arrange(DOWN, buff=0.08)
+            body.vf_number = num
+            body.vf_bundles = bundles
+            body.vf_rods = bundles.vf_rods
+            body.vf_cubes = bundles.vf_cubes
+            body.vf_rod_group = bundles.vf_rod_group
+            body.vf_value = int(number)
+            body.vf_wants_ring = False
+            body.vf_mark_target = None
+            body.vf_highlight = None
+            if mark == "larger" and int(number) == int(larger):
+                body.vf_wants_ring = True
+                body.vf_mark_target = body
+            elif mark == "tens" and bundles.vf_rod_group is not None:
+                body.vf_wants_ring = True
+                body.vf_mark_target = bundles.vf_rod_group
+            return body
+
+        def _cue_pair(self, left: int, right: int, mark: str, larger, latin: str, cjk: str):
+            pair = VGroup(
+                self._compare_card(left, latin, cjk, mark, larger),
+                self._compare_card(right, latin, cjk, mark, larger),
+            ).arrange(RIGHT, buff=0.3)
+            pair.vf_compare_cards = (pair[0], pair[1])
+            pair.vf_share = None
+            return pair
+
+        def _open_rod_ring_gap(self, card, need: float) -> None:
+            """Keep the ten-rod outline off the digits and off the one-cubes."""
+            number = card.vf_number
+            rods = card.vf_rod_group
+            if rods is None:
+                return
+            gap = float(number.get_bottom()[1] - rods.get_top()[1])
+            if gap < need:
+                number.shift(UP * (need - gap))
+            if not card.vf_cubes:
+                return
+            rod_right = float(rods.get_right()[0])
+            cube_left = min(float(cube.get_left()[0]) for cube in card.vf_cubes)
+            if cube_left - rod_right < need:
+                shift = need - (cube_left - rod_right)
+                for cube in card.vf_cubes:
+                    cube.shift(RIGHT * shift)
+
+        def _fit_compare_cards(self, group, vis_w: float, vis_h: float) -> None:
+            """Same block size on both numbers, then a gap that stays 40px at 1080p.
+
+            The gold ring is added after that scale, so its padding is in final
+            units and surrounds the number and the blocks.
+            """
+            gap = 44.0 * 8.0 / 1080.0
+            pad = 18.0 * 8.0 / 1080.0
+            air = 8.0 * 8.0 / 1080.0
+            left, right = group.vf_compare_cards
+            tens = left.vf_mark_target is left.vf_rod_group
+
+            def _opened(card) -> tuple[float, float]:
+                """Extra width and height inserted after the scale, in final units."""
+                if not tens:
+                    return 0.0, 0.0
+                extra_w = (pad + air) if card.vf_cubes else 0.0
+                return extra_w, pad + air
+
+            extra_w = _opened(left)[0] + _opened(right)[0]
+            extra_h = max(_opened(left)[1], _opened(right)[1])
+            pair_w = float(left.width) + float(right.width)
+            pair_h = max(float(left.height), float(right.height))
+            room_w = max(0.2, vis_w - gap - 2.0 * pad - extra_w)
+            room_h = max(0.2, vis_h - 2.0 * pad - extra_h)
+            scale = min(room_w / pair_w, room_h / pair_h) if pair_w > 0 and pair_h > 0 else 1.0
+            left.scale(scale)
+            right.scale(scale)
+            if tens:
+                self._open_rod_ring_gap(left, pad + air)
+                self._open_rod_ring_gap(right, pad + air)
+            right.next_to(left, RIGHT, buff=gap)
+            for card in (left, right):
+                if card.vf_wants_ring and card.vf_mark_target is not None:
+                    ring = SurroundingRectangle(card.vf_mark_target, color=GOLD, buff=pad, stroke_width=5)
+                    ring.set_fill(opacity=0)
+                    card.add(ring)
+                    card.vf_highlight = ring
+
+        def _cue_tiles(self, values, latin: str):
+            tiles = VGroup()
+            for value in values:
+                num = Text(str(value), font=latin, font_size=48, color=NAVY)
+                box = RoundedRectangle(
+                    width=max(float(num.width) + 0.18, 0.7),
+                    height=float(num.height) + 0.2,
+                    corner_radius=0.08,
+                    stroke_color=NAVY, stroke_width=3,
+                    fill_color=WHITE, fill_opacity=1,
+                )
+                num.move_to(box)
+                tiles.add(VGroup(box, num))
+            tiles.arrange(RIGHT, buff=0.08)
+            return tiles
+
+        def _cue_pair_box(self):
+            dots = VGroup(counter(GREEN, 0.1), counter(GREEN, 0.1)).arrange(RIGHT, buff=0.05)
+            frame = RoundedRectangle(
+                width=float(dots.width) + 0.16,
+                height=float(dots.height) + 0.14,
+                corner_radius=0.08,
+                stroke_color=NAVY, stroke_width=3,
+                fill_color=WHITE, fill_opacity=1,
+            )
+            dots.move_to(frame)
+            return VGroup(frame, dots)
+
+        def _cue_pairs(self, boxes: int, extra: int):
+            group = VGroup(*[self._cue_pair_box() for _ in range(boxes)])
+            if boxes > 4:
+                group.arrange_in_grid(rows=2, cols=3, buff=0.1)
+            else:
+                group.arrange(RIGHT, buff=0.1)
+            if not extra:
+                return group
+            dot = counter(GOLD, 0.12)
+            ring = SurroundingRectangle(dot, color=GOLD, buff=0.06, stroke_width=4)
+            ring.set_fill(opacity=0)
+            loose = VGroup(dot, ring)
+            return VGroup(group, loose).arrange(RIGHT, buff=0.14)
+
+        def _cue_dots(self, count: int):
+            dots = VGroup(*[counter(GREEN, 0.12) for _ in range(count)])
+            cols = 6 if count > 6 else count
+            dots.arrange_in_grid(rows=(count + cols - 1) // cols, cols=cols, buff=0.08)
+            return dots
+
+        def _cue_vis(self, grid: dict, portrait: bool, compared: bool):
+            """The picture box for one takeaway row.
+
+            A comparison uses more of a portrait cell so the blocks stay
+            readable. Every other cue keeps the original box.
+            """
+            if portrait:
+                portion = 0.74 if compared else TAKEAWAY_PORTRAIT_VISUAL
+                fit = 0.94 if compared else 0.88
+                vis_h = float(grid["cell_h"]) * portion * fit
+                vis_w = float(grid["vis_w"]) * 0.92
+                return vis_w, vis_h, portion
+            vis_h = float(grid["cell_h"]) * float(grid["visual_of_cell"])
+            gutter = (TAKEAWAY_COLUMN_GAP_PX + 6) * 8.0 / 1080.0
+            vis_w = max(0.4, float(grid["vis_w"]) - 2.0 * gutter)
+            return vis_w, vis_h, TAKEAWAY_PORTRAIT_VISUAL
+
+        def _layout_takeaway(self, heading, cues, lines, latin: str, cjk: str, text_fit: float = 0.96, fit_heading: bool = False) -> list:
             """Put each cue and its sentence into an equal row cell."""
             pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
             ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
             grid = takeaway_grid(pw, ph, len(lines))
-            self._place_heading(heading, grid)
+            self._place_heading(heading, grid, fit=fit_heading)
             font = self._body_font(latin, grid)
             portrait = bool(grid["portrait"])
             words = [
@@ -2581,26 +2869,51 @@ def _scene_types() -> dict:
             ]
             if portrait:
                 zone = float(grid["cell_h"]) * (1.0 - TAKEAWAY_PORTRAIT_VISUAL) * 0.92
-                tallest = max(float(word.height) for word in words)
-                if tallest > zone > 0:
-                    shrink = zone / tallest
-                    for word in words:
-                        word.scale(shrink)
+                plain = []
+                compared_words = []
+                for word, cue in zip(words, cues):
+                    if getattr(cue, "vf_compare_cards", None):
+                        compared_words.append(word)
+                    else:
+                        plain.append(word)
+                if plain:
+                    tallest = max(float(word.height) for word in plain)
+                    if tallest > zone > 0:
+                        shrink = zone / tallest
+                        for word in plain:
+                            word.scale(shrink)
+                if compared_words:
+                    _vw, _vh, portion = self._cue_vis(grid, True, True)
+                    band = float(grid["cell_h"]) * (1.0 - portion) * 0.90
+                    tallest = max(float(word.height) for word in compared_words)
+                    if tallest > band > 0:
+                        shrink = band / tallest
+                        for word in compared_words:
+                            word.scale(shrink)
             rows = []
+            # Tens rows share one scale, so a cube stays smaller than a rod and
+            # ten rods are the same rod as four rods. Other cues still fill
+            # their own cell.
+            tens_scale = None
+            if cues and all(getattr(cue, "vf_share", None) == "tens" for cue in cues):
+                fits = []
+                for cue in cues:
+                    vis_w, vis_h, _portion = self._cue_vis(grid, portrait, False)
+                    if float(cue.width) > 0 and float(cue.height) > 0:
+                        fits.append(min(vis_w / float(cue.width), vis_h / float(cue.height)))
+                tens_scale = min(fits) if fits else 1.0
             for cue, word, cell in zip(cues, words, grid["cells"]):
-                if portrait:
-                    vis_h = float(grid["cell_h"]) * TAKEAWAY_PORTRAIT_VISUAL * 0.88
-                    vis_w = float(grid["vis_w"]) * 0.92
-                else:
-                    vis_h = float(grid["cell_h"]) * float(grid["visual_of_cell"])
-                    # 40px at 1080p, plus a few pixels so a stroke still clears the column.
-                    gutter = (TAKEAWAY_COLUMN_GAP_PX + 6) * 8.0 / 1080.0
-                    vis_w = max(0.4, float(grid["vis_w"]) - 2.0 * gutter)
-                if float(cue.width) > 0 and float(cue.height) > 0:
+                compared = bool(getattr(cue, "vf_compare_cards", None))
+                vis_w, vis_h, portion = self._cue_vis(grid, portrait, compared)
+                if compared:
+                    self._fit_compare_cards(cue, vis_w, vis_h)
+                elif tens_scale is not None:
+                    cue.scale(tens_scale)
+                elif float(cue.width) > 0 and float(cue.height) > 0:
                     cue.scale(min(vis_w / float(cue.width), vis_h / float(cue.height)))
                 if portrait:
                     zone_top = float(cell["top"])
-                    zone_bot = zone_top - float(grid["cell_h"]) * TAKEAWAY_PORTRAIT_VISUAL
+                    zone_bot = zone_top - float(grid["cell_h"]) * portion
                     cue.move_to([(float(grid["left"]) + float(grid["right"])) / 2.0, (zone_top + zone_bot) / 2.0, 0])
                     text_top = zone_bot
                     text_bot = float(cell["bottom"])
@@ -3176,6 +3489,309 @@ def _scene_types() -> dict:
         dots.arrange(RIGHT, buff=0.08)
         return dots
 
+    class NumberBlocks(_Board):
+        """Tens bundles up to 100, a comparison, an order, a short hop, or equal groups."""
+
+        def construct(self):
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            mode = str(labels.get("mode") or self.vf_mode or "tens")
+            ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+            pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
+            portrait = ph > pw
+            title = self._label(labels.get("title") or "", latin, cjk)
+            if mode == "compare":
+                self._compare(labels, latin, cjk, portrait, title)
+            elif mode == "order":
+                self._order(labels, latin, cjk, portrait, title)
+            elif mode == "hop":
+                self._hop(labels, latin, cjk, title)
+            elif mode == "groups":
+                self._groups(labels, latin, cjk, portrait, title)
+            else:
+                self._tens(labels, latin, cjk, title)
+
+        def _label(self, text, latin, cjk, scale=1.0):
+            glyph = styled(str(text) if str(text).strip() else " ", latin, cjk, 64)
+            target = _ordinal_label_height() * scale
+            if float(glyph.height) > 0:
+                glyph.scale(target / float(glyph.height))
+            return glyph
+
+        def _limits(self):
+            left, right, bot, top = _safe_limits()
+            return left, right, bot, top, right - left, top - bot
+
+        def _fit_width(self, mob, max_w):
+            if float(mob.width) > max_w > 0:
+                mob.scale(max_w / float(mob.width))
+            return mob
+
+        def _seat(self, stack):
+            left, right, bot, top, max_w, max_h = self._limits()
+            self._fit_width(stack, max_w * 0.98)
+            if float(stack.height) > max_h and float(stack.height) > 0:
+                stack.scale(max_h / float(stack.height))
+            stack.move_to([(left + right) / 2.0, (bot + top) / 2.0, 0])
+            return stack
+
+        def _rod(self, w, h):
+            return RoundedRectangle(
+                width=w,
+                height=h,
+                corner_radius=min(0.08, h * 0.12),
+                stroke_color=NAVY,
+                stroke_width=3,
+                fill_color=GREEN,
+                fill_opacity=1,
+            )
+
+        def _bundles(self, count, latin, cjk, *, rod_w, rod_h, cols):
+            tens, ones = divmod(int(count), 10)
+            rods = VGroup(*[self._rod(rod_w, rod_h) for _ in range(tens)])
+            if tens:
+                used = min(cols, tens)
+                rods.arrange_in_grid(rows=(tens + used - 1) // used, cols=used, buff=0.1)
+            if ones:
+                dots = VGroup(*[counter(GOLD, min(0.15, rod_h * 0.2)) for _ in range(ones)])
+                dots.arrange(RIGHT, buff=0.08)
+                loose = dots
+            else:
+                zero = self._label("0", latin, cjk)
+                mat = RoundedRectangle(
+                    width=max(float(zero.width) + 0.42, rod_w * 2.4),
+                    height=float(zero.height) + 0.34,
+                    corner_radius=0.1,
+                    stroke_color=NAVY,
+                    stroke_width=3,
+                    fill_color=WHITE,
+                    fill_opacity=1,
+                )
+                zero.move_to(mat)
+                loose = VGroup(mat, zero)
+            pic = VGroup(rods, loose).arrange(DOWN, buff=0.16) if tens else VGroup(loose)
+            return pic, rods, loose
+
+        def _show(self, index, *mobs):
+            chosen = [mob for mob in mobs if mob is not None]
+            if not chosen:
+                self.spend(index)
+                return
+            self.spend_each(index, [lambda chosen=chosen: AnimationGroup(*[mob.animate.set_opacity(1) for mob in chosen])])
+
+        def _tens(self, labels, latin, cjk, title):
+            count = int(labels.get("count") or 0)
+            pic, rods, loose = self._bundles(count, latin, cjk, rod_w=0.46, rod_h=1.02, cols=5)
+            number = self._label(str(count), latin, cjk, 1.4)
+            left, right, bot, top, max_w, max_h = self._limits()
+            room = max_h - float(title.height) - float(number.height) - 0.7
+            if float(pic.height) > room > 0.4:
+                pic.scale(room / float(pic.height))
+            self._fit_width(pic, max_w * 0.96)
+            stack = self._seat(VGroup(title, pic, number).arrange(DOWN, buff=0.2))
+            rod_list = list(rods)
+            for mob in (title, loose, number, *rod_list):
+                mob.set_opacity(0)
+            self.add(stack)
+            marks = self.marks_for(0)
+            if rod_list and marks and len(marks) == len(rod_list):
+                hops = [lambda rod=rod: rod.animate.set_opacity(1) for rod in rod_list]
+                self.spend_marked(0, hops, marks, intro=title.animate.set_opacity(1))
+            else:
+                self._show(0, title, *rod_list)
+            self._show(1, loose)
+            self._show(2, number)
+
+        def _card(self, count, latin, cjk):
+            pic, _rods, _loose = self._bundles(count, latin, cjk, rod_w=0.3, rod_h=0.58, cols=5)
+            num = self._label(str(count), latin, cjk, 1.25)
+            return VGroup(num, pic).arrange(DOWN, buff=0.12), num
+
+        def _compare(self, labels, latin, cjk, portrait, title):
+            a, b = int(labels.get("a") or 0), int(labels.get("b") or 0)
+            left_card, left_num = self._card(a, latin, cjk)
+            right_card, right_num = self._card(b, latin, cjk)
+            pair = VGroup(left_card, right_card)
+            pair.arrange(DOWN if portrait else RIGHT, buff=0.36 if portrait else 0.7)
+            _left, _right, _bot, _top, max_w, max_h = self._limits()
+            room = max_h - float(title.height) - 0.45
+            if float(pair.height) > room > 0.4:
+                pair.scale(room / float(pair.height))
+            self._fit_width(pair, max_w * 0.96)
+            stack = self._seat(VGroup(title, pair).arrange(DOWN, buff=0.24))
+            winner = left_num if a > b else right_num
+            ring = SurroundingRectangle(winner, color=GOLD, buff=0.12, stroke_width=7)
+            for mob in (title, left_card, right_card):
+                mob.set_opacity(0)
+            self.add(stack)
+            self._show(0, title, left_card)
+            self._show(1, right_card)
+            self.spend(2, Create(ring))
+
+        def _order(self, labels, latin, cjk, portrait, title):
+            values = [int(v) for v in (labels.get("values") or [])]
+            cards = []
+            for value in values:
+                num = self._label(str(value), latin, cjk, 1.45)
+                box = RoundedRectangle(
+                    width=float(num.width) + 0.46,
+                    height=float(num.height) + 0.38,
+                    corner_radius=0.12,
+                    stroke_color=NAVY,
+                    stroke_width=4,
+                    fill_color=WHITE,
+                    fill_opacity=1,
+                )
+                num.move_to(box)
+                cards.append(VGroup(box, num))
+            row = VGroup(*cards)
+            if portrait and len(cards) >= 4:
+                row.arrange_in_grid(rows=2, cols=2, buff=0.24)
+            else:
+                row.arrange(RIGHT, buff=0.3)
+            stack = self._seat(VGroup(title, row).arrange(DOWN, buff=0.36))
+            for mob in (title, *cards):
+                mob.set_opacity(0)
+            self.add(stack)
+            self._show(0, title, cards[0])
+            middle = cards[1:-1]
+            self._show(1, *middle)
+            self._show(2, cards[-1])
+
+        def _hop(self, labels, latin, cjk, title):
+            start = int(labels.get("start") or 0)
+            end = int(labels.get("end") or start)
+            lo, hi = min(start, end), max(start, end)
+            values = list(range(lo, hi + 1))
+            sample = self._label(str(max(values, key=lambda n: len(str(n)))), latin, cjk)
+            _left, _right, _bot, _top, max_w, _max_h = self._limits()
+            gap = 0.12
+            cell = max(float(sample.width) + 0.36, float(sample.height) + 0.32)
+            row_w = cell * len(values) + gap * (len(values) - 1)
+            if row_w > max_w * 0.96 and row_w > 0:
+                cell *= (max_w * 0.96) / row_w
+            boxes = {}
+            grid = VGroup()
+            for i, value in enumerate(values):
+                box = RoundedRectangle(
+                    width=cell,
+                    height=cell * 0.86,
+                    corner_radius=0.1,
+                    stroke_color=NAVY,
+                    stroke_width=3,
+                    fill_color=WHITE,
+                    fill_opacity=1,
+                )
+                num = self._label(str(value), latin, cjk)
+                if float(num.width) > cell * 0.82:
+                    num.scale(cell * 0.82 / float(num.width))
+                if float(num.height) > cell * 0.62:
+                    num.scale(cell * 0.62 / float(num.height))
+                num.set_z_index(12)
+                num.move_to(box)
+                card = VGroup(box, num)
+                card.move_to([(i - (len(values) - 1) / 2.0) * (cell + gap), 0, 0])
+                boxes[value] = card
+                grid.add(card)
+            marker = RoundedRectangle(
+                width=cell * 1.14,
+                height=cell * 1.02,
+                corner_radius=0.14,
+                stroke_color=GOLD,
+                stroke_width=8,
+                fill_opacity=0,
+            )
+            marker.set_z_index(4)
+            marker.set_fill(opacity=0)
+            answer = self._label(str(end), latin, cjk, 1.4)
+            body = VGroup(title, grid, answer).arrange(DOWN, buff=0.28)
+            stack = self._seat(body)
+            marker.move_to(boxes[start])
+            answer.set_opacity(0)
+            marker.set_stroke(opacity=0)
+            title.set_opacity(0)
+            self.add(stack, marker)
+            self._show(0, title, grid)
+            step_by = 1 if end >= start else -1
+            visits = list(range(start, end + step_by, step_by))
+            counted = self.marks_for(1)
+            hops = [lambda: marker.animate.set_stroke(opacity=1)]
+            for value in visits[1:]:
+                dest = boxes[value].get_center().copy()
+                hops.append(lambda dest=dest: marker.animate.move_to(dest))
+            if counted and len(counted) == len(hops):
+                self.spend_marked(1, hops, counted)
+            else:
+                self.spend_each(1, hops)
+            self._show(2, answer)
+
+        def _groups(self, labels, latin, cjk, portrait, title):
+            size = max(2, int(labels.get("a") or 2))
+            boxes_n = max(1, int(labels.get("n") or 1))
+            extra = max(0, int(labels.get("extra") or 0))
+            cols = 3 if portrait else min(6, boxes_n)
+            columns = []
+            tags = []
+            for i in range(boxes_n):
+                dots = VGroup(*[counter(GREEN, 0.13) for _ in range(size)])
+                dots.arrange(RIGHT, buff=0.07)
+                pad = RoundedRectangle(
+                    width=float(dots.width) + 0.32,
+                    height=float(dots.height) + 0.3,
+                    corner_radius=0.1,
+                    stroke_color=NAVY,
+                    stroke_width=3,
+                    fill_color=WHITE,
+                    fill_opacity=1,
+                )
+                dots.move_to(pad)
+                tag = self._label(str((i + 1) * size), latin, cjk)
+                columns.append(VGroup(VGroup(pad, dots), tag).arrange(DOWN, buff=0.1))
+                tags.append(tag)
+            used = min(cols, boxes_n)
+            row = VGroup(*columns)
+            row.arrange_in_grid(rows=(boxes_n + used - 1) // used, cols=used, buff=0.22)
+            loose = None
+            if extra:
+                loose_dots = VGroup(*[counter(GOLD, 0.18) for _ in range(extra)])
+                loose_dots.arrange(RIGHT, buff=0.16)
+                ring = SurroundingRectangle(loose_dots, color=GOLD, buff=0.1, stroke_width=5)
+                ring.set_fill(opacity=0)
+                loose = VGroup(loose_dots, ring)
+                loose.next_to(row, RIGHT if not portrait else DOWN, buff=0.28)
+            total = self._label(str(size * boxes_n + extra), latin, cjk, 1.35)
+            parts = [title, VGroup(row, loose) if loose is not None else row, total]
+            stack = self._seat(VGroup(*parts).arrange(DOWN, buff=0.24))
+            for mob in (title, total, *tags):
+                mob.set_opacity(0)
+            if loose is not None:
+                loose[0].set_opacity(0)
+                loose[1].set_fill(opacity=0)
+                loose[1].set_stroke(opacity=0)
+            self.add(stack)
+            pads = [column[0] for column in columns]
+            self._show(0, title, *pads)
+            marks = self.marks_for(1)
+            reveals = [lambda tag=tag: tag.animate.set_opacity(1) for tag in tags]
+            if marks and len(marks) == len(reveals):
+                self.spend_marked(1, reveals, marks)
+            else:
+                self.spend_each(1, reveals)
+            if loose is None:
+                self._show(2, total)
+            else:
+                dot, ring = loose[0], loose[1]
+
+                def reveal_loose(dot=dot, ring=ring, total=total):
+                    # The ring and the loose counter pop on this line. A
+                    # grouped .animate would share one target and stay hidden.
+                    dot.set_opacity(1)
+                    ring.set_fill(opacity=0)
+                    ring.set_stroke(opacity=1)
+                    return total.animate.set_opacity(1)
+
+                self.spend_each(2, [reveal_loose])
+
     _scene_types._cache = {
         "one_ten": OneTen,
         "ten_and_ones": TenAndOnes,
@@ -3185,6 +3801,7 @@ def _scene_types() -> dict:
         "ordinal_row": OrdinalRow,
         "pair_counters": PairCounters,
         "part_whole": PartWhole,
+        "number_blocks": NumberBlocks,
         "lesson_hook": LessonHook,
         "lesson_takeaway": LessonTakeaway,
     }

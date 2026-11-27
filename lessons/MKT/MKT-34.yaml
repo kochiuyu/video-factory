@@ -1,0 +1,289 @@
+id: MKT-34
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The same message. Who must agree?
+title_zh: 同一份提案，谁要点头？
+title_zh_hk: 同一份提案，誰要點頭？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-34
+  kicker_en: MKT-34
+  kicker_zh: MKT-34
+  kicker_zh_hk: MKT-34
+  title_en: The same message. Who must agree?
+  title_zh: 同一份提案，谁要点头？
+  title_zh_hk: 同一份提案，誰要點頭？
+  image: art/same-message-who-must-agree-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Organisational purchases can need agreement from people with different responsibilities: technical
+    enthusiasm, financial approval and authority to order need not sit with one person. Now you lead account
+    sales for LoopCrate, a fictional packaging supplier in Foshan.
+  zh: >-
+    企业采购往往需要职责不同的几个人都同意：认同技术方案的人，不一定有预算审批权，也不一定有权下单。现在，你带领佛山一家虚构包装供应商 LoopCrate 的客户销售团队。
+  zh_hk: >-
+    企業採購往往要職責唔同嘅幾個人都同意：認同技術方案嘅人，唔一定有預算審批權，亦唔一定有權落單。而家，你帶領佛山一間虛構包裝供應商 LoopCrate 嘅客戶銷售團隊。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: One funded half-day, two uses
+  title_zh: 半天预算，两种用法
+  title_zh_hk: 半天預算，兩種用法
+  row1_en: A
+  row1_zh: A
+  row1_zh_hk: A
+  row2_en: B
+  row2_zh: B
+  row2_zh_hk: B
+  col1_en: With
+  col1_zh: 对象
+  col1_zh_hk: 對象
+  col2_en: Activity
+  col2_zh: 安排
+  col2_zh_hk: 安排
+  c11_en: Operations
+  c11_zh: 运营部
+  c11_zh_hk: 營運部
+  c12_en: Repeat the technical demo
+  c12_zh: 再做一次技术示范
+  c12_zh_hk: 再做一次技術示範
+  c21_en: Purchasing
+  c21_zh: 采购部
+  c21_zh_hk: 採購部
+  c22_en: Map roles, evidence, approvals
+  c22_zh: 厘清职责、证据、审批
+  c22_zh_hk: 釐清職責、證據、審批
+  footer_en: >-
+    Offer unchanged: CNY60,000 upfront
+  footer_zh: 报价不变：前期 CNY60,000
+  footer_zh_hk: 報價不變：前期 CNY60,000
+  s1_en: >-
+    An electronics customer is considering returnable transport crates. Its operations manager welcomed
+    your demonstration and says the sample meets the handling specification. Purchasing and finance have
+    not reviewed the proposal, and there is no purchase order.
+  s1_zh: >-
+    一家电子产品公司正在考虑使用可循环的周转箱。对方的运营经理很喜欢你的示范，说样品符合搬运规格。但采购部和财务部还没审阅提案，你也没有收到采购订单。
+  s1_zh_hk: >-
+    一間電子產品公司考慮用可以循環再用嘅周轉箱。對方嘅營運經理好鍾意你嘅示範，話樣品符合搬運規格。但採購部同財務部仲未審閱提案，你亦未收到採購訂單。
+  s2_en: >-
+    The offer requires 60,000 yuan upfront, including crates, delivery, setup and training. The seller
+    has estimated monthly cash savings, but the customer has not yet checked them.
+  s2_zh: 报价是前期支出六万元人民币，包括周转箱、交付、安装和培训。供应商估算了每月可节省的现金，但客户还没有核实。
+  s2_zh_hk: 報價係前期支出六萬人民幣，包括周轉箱、交付、安裝同培訓。供應商估算咗每月可以慳幾多現金，但客戶仲未核實。
+  s3_en: >-
+    Purchasing has said any further meeting must go through its normal channel. Operations offers another
+    demonstration slot tomorrow, and the salesperson worries that asking about approvals will interrupt
+    momentum.
+  s3_zh: 采购部说过，之后所有跟进会议都要按正常程序安排。运营部提议明天再做一次示范；销售人员担心一问审批，就会拖慢进度。
+  s3_zh_hk: 採購部講明，之後所有跟進會議都要按正常程序安排。營運部提議聽日再做一次示範；銷售人員擔心一問審批，就會拖慢進度。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: A or B, and what is unknown?
+  title_zh: 选 A 还是 B？还有什么不清楚？
+  title_zh_hk: 選 A 還是 B？還有甚麼未清楚？
+  en: >-
+    Which next step would you choose, and what remains unknown? Distinguish technical acceptance from
+    authority to approve spending or issue an order, and name two questions to ask through purchasing.
+    Pause and vote.
+  zh: 你会怎样跟进？还有哪些信息不清楚？请区分技术验收、支出审批和下单权限，并列出两个要通过采购部问清楚的问题。请暂停，投个票。
+  zh_hk: 你會點樣跟進？仲有啲咩資料未清楚？請分清技術驗收、支出審批同落單權限，再列出兩個要經採購部問清楚嘅問題。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Three separate approvals
+  title_zh: 三道独立的审批
+  title_zh_hk: 三道獨立的審批
+  step1_en: >-
+    Operations: sign technical acceptance
+  step1_zh: 运营部：签署技术验收
+  step1_zh_hk: 營運部：簽署技術驗收
+  step2_en: >-
+    Finance: validate cash, approve budget
+  step2_zh: 财务部：核实现金流，批预算
+  step2_zh_hk: 財務部：核實現金流，批預算
+  step3_en: >-
+    Purchasing: checks, then the order
+  step3_zh: 采购部：完成审查才下单
+  step3_zh_hk: 採購部：完成審查才下單
+  s1_en: >-
+    Operations must sign technical acceptance. It confirms the sample meets the specification, but has
+    not signed the record.
+  s1_zh: 运营部需要签署技术验收。它确认样品符合规格，但还没签验收记录。
+  s1_zh_hk: 營運部要簽技術驗收。佢確認咗樣品符合規格，但未簽驗收紀錄。
+  s2_en: >-
+    Finance must validate the cash assumptions and approve the budget. Its analyst estimates 8,000 yuan
+    a month of avoided disposable packaging, less 3,000 for collection, cleaning and replacement. The
+    screen requires payback within 12 months, with a downside case at 4,000 a month.
+  s2_zh: >-
+    财务部要核实现金流并批准预算。分析员估算每月可省八千元包装费，减去三千元回收、清洁和更换费用。规则要求回收期不超过十二个月，还要按每月四千元算不利情境。
+  s2_zh_hk: >-
+    財務部要核實現金流假設同批預算。分析員估計，每月可以慳八千蚊一次性包裝費，但要減三千蚊回收、清潔同更換費。審查規則要求回本期唔超過十二個月，仲要按每月四千蚊計不利情境。
+  s3_en: >-
+    Purchasing checks supplier eligibility and terms, then issues the order only after both approvals.
+    None of the three steps substitutes for another, and none is yet complete.
+  s3_zh: 采购部审查供应商资格和商业条款，要等前两项都批准后才会下单。三道程序不能互相替代，而且目前一项都还没完成。
+  s3_zh_hk: 採購部審查供應商資格同商業條款，要等前兩項都批咗先會落單。三道程序唔可以互相代替，而家一項都未完成。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What does each function need?
+  title_zh: 各部门需要什么？
+  title_zh_hk: 各部門需要甚麼？
+  en: >-
+    Prepare a shared approval map and calculate base-case and downside payback. What should each function
+    receive next, in what order, and what must stay unclaimed? Why would three different sales messages
+    not help? Pause and vote.
+  zh: >-
+    请画一张共用的审批流程图，并算出基准和不利情境的回收期。各部门接下来应该收到什么、按什么顺序？哪些说法还不能讲？为什么三套不同的推销说法帮不了忙？请暂停，投个票。
+  zh_hk: >-
+    請畫一張共用嘅審批流程圖，再計出基準同不利情境嘅回本期。各部門跟住應該收到咩、按咩次序？邊啲講法仲未可以講？點解三套唔同嘅推銷講法幫唔到手？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Map roles before enthusiasm
+  title_zh: 先厘清权责，再看热情
+  title_zh_hk: 先釐清權責，再看熱情
+  step1_en: B fills the known information gap
+  step1_zh: B 补上已知的信息缺口
+  step1_zh_hk: B 補上已知的資料缺口
+  step2_en: One offer, evidence for each role
+  step2_zh: 同一提案，按职责给证据
+  step2_zh_hk: 同一提案，按職責給證據
+  step3_en: A meeting is not an approval
+  step3_zh: 开过会不等于已批准
+  step3_zh_hk: 開過會不等於已批准
+  s1_en: >-
+    B better addresses the known gap. Operations can give technical evidence, but cannot alone authorise
+    spending or an order. Do not infer authority from job title, responsiveness or enthusiasm.
+  s1_zh: B 更能补上已知的信息缺口。运营部可以提供技术证据，但不能单独批准支出或下单。不要凭职位、回复快慢或热情来推断谁有权限。
+  s1_zh_hk: B 比較補得到已知嘅資料缺口。營運部可以提供技術證據，但唔可以自己批支出或者落單。唔好憑職位、回覆快慢或者熱情去估邊個有權。
+  s2_en: >-
+    Use one consistent offer and assumption sheet. Operations gets the specification and acceptance form;
+    finance gets outlay, cash assumptions, payback and downside; purchasing gets supplier documents, terms
+    and approval status.
+  s2_zh: >-
+    各部门都应收到同一份报价和假设表。运营部要规格、测试记录和验收表；财务部要初始支出、现金流假设、回收期和不利情境；采购部要供应商文件、拟议条款和审批进度。
+  s2_zh_hk: >-
+    各部門都應該收到同一份報價同假設表。營運部要規格、測試紀錄同驗收表；財務部要初始支出、現金流假設、回本期同不利情境；採購部要供應商文件、擬議條款同審批進度。
+  s3_en: >-
+    Purchasing can coordinate these in parallel, but the order waits for both approvals and completed
+    checks. A meeting, a favourable comment or a circulated proposal is not an approval.
+  s3_zh: 采购部可以协调各方同时准备，但要等两项批准和采购审查全部完成，才能下单。开过会、有人说好话或者提案已经传阅，都不等于批准。
+  s3_zh_hk: 採購部可以協調各方同步準備，但要等兩項批准同採購審查全部完成，先可以落單。開過會、有人讚或者提案傳閱咗，都唔等於批准。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Calculate the financial gate
+  title_zh: 核算财务门槛
+  title_zh_hk: 核算財務門檻
+  step1_en: CNY8,000 − CNY3,000 = CNY5,000 a month
+  step1_zh: CNY8,000 − CNY3,000 = 每月 CNY5,000
+  step1_zh_hk: CNY8,000 − CNY3,000 = 每月 CNY5,000
+  step2_en: >-
+    60,000 ÷ 5,000 = 12 months: passes
+  step2_zh: 60,000 ÷ 5,000 = 12 个月：过关
+  step2_zh_hk: 60,000 ÷ 5,000 = 12 個月：過關
+  step3_en: >-
+    60,000 ÷ 4,000 = 15 months: fails
+  step3_zh: 60,000 ÷ 4,000 = 15 个月：不过关
+  step3_zh_hk: 60,000 ÷ 4,000 = 15 個月：不過關
+  s1_en: >-
+    Base-case net cash savings are 8,000 minus 3,000, or 5,000 yuan a month.
+  s1_zh: 基准情境下，每月净节省现金是八千减三千，也就是五千元。
+  s1_zh_hk: 基準情境之下，每月淨慳現金係八千減三千，即係五千蚊。
+  s2_en: >-
+    Simple payback is 60,000 divided by 5,000, or 12 months, which just meets the screen. That is conditional
+    on the estimates, and does not mean finance has validated them or approved the budget.
+  s2_zh: 简单回收期是六万除以五千，等于十二个月，刚好符合门槛。但这取决于估算是否成立，并不表示财务部已经核实或批准了预算。
+  s2_zh_hk: 簡單回本期係六萬除五千，即係十二個月，啱啱符合門檻。但呢個要睇估算成唔成立，唔代表財務部已經核實或者批咗預算。
+  s3_en: >-
+    At 4,000 a month, payback is 15 months, failing the screen. Disclose that sensitivity rather than
+    hide collection costs or promise recovery in 12 months. Simple payback is a screen, not a full valuation.
+  s3_zh: >-
+    如果每月只省四千元，回收期就是十五个月，不能过关。销售方应该如实披露这种敏感度，不能隐瞒回收成本，也不能保证十二个月回本。简单回收期只是初步审查，不是全面估值。
+  s3_zh_hk: >-
+    如果每月只係慳四千蚊，回本期就係十五個月，過唔到關。銷售方應該如實披露呢個敏感度，唔可以收埋回收成本，亦唔可以保證十二個月回本。簡單回本期只係初步審查，唔係全面估值。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Advance a coordinated decision
+  title_zh: 让各部门共同推进决策
+  title_zh_hk: 讓各部門共同推進決策
+  en: >-
+    Close the next meeting with named owners, evidence requests and an agreed review date, all through
+    purchasing. Record technical acceptance, finance approval and procurement completion separately. If
+    validated savings miss the screen, acknowledge it; never silently change the threshold, price or forecast.
+  zh: >-
+    下次会议结束时，要通过采购部确认每项职责的负责人、所需证据和商定的审阅日期。技术验收、财务批准和采购审查要分开记录。如果核实后的节省达不到门槛，就要如实承认，不能暗中更改门槛、价格或预测。
+  zh_hk: >-
+    下次開會完結嗰陣，要經採購部確認每項職責嘅負責人、需要嘅證據同傾好嘅審閱日期。技術驗收、財務批准同採購審查要分開記錄。如果核實之後慳到嘅錢過唔到門檻，就要如實承認，唔可以靜靜雞改門檻、價錢或者預測。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: One proposal, every approver
+  title_zh: 同一提案，人人审批
+  title_zh_hk: 同一提案，人人審批
+  q1_en: Measure completed evidence reviews
+  q1_zh: 看证据审阅是否完成
+  q1_zh_hk: 看證據審閱是否完成
+  q2_en: Not replies or demo counts
+  q2_zh: 不看回复次数或示范次数
+  q2_zh_hk: 不看回覆次數或示範次數
+  s1_en: >-
+    A satisfied contact is not the whole buying centre. Connecting the roles helps the customer decide
+    coherently; it does not guarantee a sale or justify exploiting internal disagreement.
+  s1_zh: 一位满意的联系人，并不等于整个采购决策小组。把各方连起来，能帮助客户作出一致的决定，但不保证成交，也不能借此利用客户内部的分歧。
+  s1_zh_hk: 一個滿意嘅聯絡人，唔等於成個採購決策小組。將各方連埋，可以幫客戶作出一致嘅決定，但唔保證成交，亦唔可以藉此利用客戶內部嘅分歧。
+  s2_en: >-
+    The customer may still decline after receiving a complete and accurate pack.
+  s2_zh: 即使资料齐全准确，客户仍然可能不买。
+  s2_zh_hk: 就算資料齊全準確，客戶仍然可能唔買。
+  s3_en: >-
+    LoopCrate, the customer, figures and approval rules are fictional. Official scene art is a teaching
+    illustration only.
+  s3_zh: LoopCrate、客户、数字和审批规则都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: LoopCrate、客戶、數字同審批規則都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

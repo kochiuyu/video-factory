@@ -1,0 +1,283 @@
+id: MKT-35
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A new product. Added sales or moved sales?
+title_zh: 推出新产品，带来新生意还是转移旧生意？
+title_zh_hk: 推出新產品，帶來新生意還是轉移舊生意？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-35
+  kicker_en: MKT-35
+  kicker_zh: MKT-35
+  kicker_zh_hk: MKT-35
+  title_en: A new product. Added sales or moved sales?
+  title_zh: 推出新产品，带来新生意还是转移旧生意？
+  title_zh_hk: 推出新產品，帶來新生意還是轉移舊生意？
+  image: art/added-sales-or-moved-sales-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Sales of a new variant may come from the brand's existing product, from competitors, or from occasions
+    that produced no category purchase before. Now you manage Harbour Crunch, a fictional Hong Kong snack
+    brand, deciding whether to launch a premium flavour.
+  zh: >-
+    新产品的销量，可能来自自家原有产品，可能来自竞争品牌，也可能来自原本不会买这类产品的场合。现在，你管理香港的虚构零食品牌 Harbour Crunch，要决定是否推出一款高端新口味。
+  zh_hk: >-
+    新產品嘅銷量，可能來自自家原有產品，可能來自競爭品牌，亦可能來自本來唔會買呢類產品嘅場合。而家，你管理香港嘅虛構零食品牌 Harbour Crunch，要決定推唔推出一款高端新口味。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Per pack, in HK dollars
+  title_zh: 每包数字（港元）
+  title_zh_hk: 每包數字（港元）
+  row1_en: Original
+  row1_zh: 原款
+  row1_zh_hk: 原款
+  row2_en: Premium
+  row2_zh: 高端装
+  row2_zh_hk: 高端裝
+  col1_en: Price
+  col1_zh: 售价
+  col1_zh_hk: 售價
+  col2_en: Variable cost
+  col2_zh: 变动成本
+  col2_zh_hk: 變動成本
+  col3_en: Contribution
+  col3_zh: 边际贡献
+  col3_zh_hk: 邊際貢獻
+  c11: '24'
+  c12: '14'
+  c13: '10'
+  c21: '34'
+  c22: '20'
+  c23: '14'
+  footer_en: Launch HK$3,200 · 1,000 / 400 packs
+  footer_zh: 上市成本 HK$3,200 · 1,000 / 400 包
+  footer_zh_hk: 上市成本 HK$3,200 · 1,000 / 400 包
+  s1_en: >-
+    Keeping only the original pack, next month is expected to sell 1,000 packs at 24 dollars, with a variable
+    cost of 14 and a contribution of 10 dollars each.
+  s1_zh: 如果只卖原款，下个月预计可以卖一千包，每包售价二十四元，变动成本十四元，每包边际贡献十元。
+  s1_zh_hk: 如果淨係賣原款，下個月預計可以賣一千包，每包賣二十四蚊，變動成本十四蚊，每包邊際貢獻十蚊。
+  s2_en: >-
+    A premium flavour is forecast to sell 400 packs at 34 dollars, with a variable cost of 20, leaving
+    14 dollars each. Its avoidable launch cost is 3,200 dollars. Premium means positioning and price,
+    not a health claim.
+  s2_zh: >-
+    高端新口味预计卖四百包，每包售价三十四元，变动成本二十元，每包贡献十四元。可以避免的上市费用是三千二百元。所谓高端只是定位和价格，不代表更健康。
+  s2_zh_hk: >-
+    高端新口味預計賣四百包，每包賣三十四蚊，變動成本二十蚊，每包貢獻十四蚊。可以避免嘅上市費用係三千二百蚊。所謂高端只係定位同價錢，唔代表健康啲。
+  s3_en: >-
+    Capacity and shelf space are sufficient, and other prices and costs stay the same. The opening worksheet
+    treats all 400 premium purchases as additional, and forecasts 2,400 dollars of extra contribution.
+  s3_zh: 产能和货架空间都足够，其他价格和成本也不变。最初的试算表把四百包高端装全部当作新增购买，预计可以多赚二千四百元边际贡献。
+  s3_zh_hk: 產能同貨架空間都夠，其他價錢同成本都唔變。最初嘅試算表將四百包高端裝全部當成新增購買，預計可以多賺二千四百蚊邊際貢獻。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Approve on HK$2,400?
+  title_zh: 凭 HK$2,400 就批准？
+  title_zh_hk: 憑 HK$2,400 就批准？
+  en: >-
+    Would you approve the launch using the 2,400-dollar figure? Which purchases would genuinely add to
+    the brand's business, and which could replace original packs? What do you need beyond the sales forecast?
+    Pause and vote.
+  zh: >-
+    你会凭二千四百元这个估算批准上市吗？哪些购买真正为品牌带来新增生意，哪些可能只是替代原款？除了新品的销量预测，你还需要知道什么？请暂停，投个票。
+  zh_hk: 你會唔會憑二千四百蚊呢個估算批准上市？邊啲購買真係幫品牌帶嚟新生意，邊啲可能只係代替原款？除咗新品嘅銷量預測，你仲要知道啲咩？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Where do 400 purchases come from?
+  title_zh: 400 包从哪里来？
+  title_zh_hk: 400 包從哪裏來？
+  step1_en: >-
+    Central: 200 own · 140 rival · 60 new
+  step1_zh: 中间：自家 200 · 对手 140 · 新增 60
+  step1_zh_hk: 中間：自家 200 · 對手 140 · 新增 60
+  step2_en: >-
+    Lower switching: 160 · 160 · 80
+  step2_zh: 自家转购较少：160 · 160 · 80
+  step2_zh_hk: 自家轉購較少：160 · 160 · 80
+  step3_en: >-
+    Higher switching: 280 · 80 · 40
+  step3_zh: 自家转购较多：280 · 80 · 40
+  step3_zh_hk: 自家轉購較多：280 · 80 · 40
+  s1_en: >-
+    An exploratory concept exercise asks adults what they would buy if the premium pack were unavailable.
+    In the central scenario, 200 premium purchases replace an original pack, 140 replace a competitor's,
+    and 60 are new occasions.
+  s1_zh: >-
+    一项探索性的概念调查问成年人：如果买不到高端装，会买什么。中间情境下，四百包里有二百包替代原款，一百四十包替代竞争品牌，六十包来自新的消费场合。
+  s1_zh_hk: >-
+    一項探索性嘅概念調查問成年人：如果買唔到高端裝，會買咩。中間情境之下，四百包入面有二百包代替原款，一百四十包代替競爭品牌，六十包來自新嘅消費場合。
+  s2_en: >-
+    The lower-switching scenario has 160 own-brand switches, 160 competitor switches and 80 new occasions.
+  s2_zh: 自家转购较少的情境是：一百六十包自家转购，一百六十包来自竞争品牌，八十包来自新场合。
+  s2_zh_hk: 自家轉購較少嘅情境係：一百六十包自家轉購，一百六十包來自競爭品牌，八十包來自新場合。
+  s3_en: >-
+    The higher-switching scenario has 280, 80 and 40. Each totals 400, with one-for-one substitution.
+    These are stated intentions, not observed switching, and no probabilities are assigned.
+  s3_zh: >-
+    自家转购较多的情境则是二百八十、八十和四十包。每个情境合计都是四百包，替代都是一包换一包。这些只是受访者说出的意向，不是观察到的行为，也没有指定概率。
+  s3_zh_hk: >-
+    自家轉購較多嘅情境就係二百八十、八十同四十包。每個情境加埋都係四百包，代替都係一包換一包。呢啲只係受訪者講嘅意向，唔係觀察到嘅行為，亦冇指定機率。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Calculate and recommend
+  title_zh: 计算后提出建议
+  title_zh_hk: 計算後提出建議
+  en: >-
+    Calculate incremental portfolio contribution in all three scenarios, and the break-even number of
+    own-brand switches, using both denominators. Recommend a decision without inventing probabilities.
+    Pause and vote.
+  zh: 请算出三个情境的产品组合增量贡献，以及自家转购的盈亏平衡数量，并用两个分母来表达。提出建议，但不要虚构概率。请暂停，投个票。
+  zh_hk: 請計出三個情境嘅產品組合增量貢獻，同埋自家轉購嘅盈虧平衡數量，再用兩個分母表達。提出建議，但唔好憑空作出機率。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Start with the whole portfolio
+  title_zh: 先看整个产品组合
+  title_zh_hk: 先看整個產品組合
+  step1_en: Increment = HK$2,400 − HK$10 × S
+  step1_zh: 增量 = HK$2,400 − HK$10 × S
+  step1_zh_hk: 增量 = HK$2,400 − HK$10 × S
+  step2_en: >-
+    Own-brand switch: +HK$4 each
+  step2_zh: 自家转购：每包净增 HK$4
+  step2_zh_hk: 自家轉購：每包淨增 HK$4
+  step3_en: >-
+    S = 200: +HK$400 · total HK$10,400
+  step3_zh: S = 200：+HK$400 · 总额 HK$10,400
+  step3_zh_hk: S = 200：+HK$400 · 總額 HK$10,400
+  s1_en: >-
+    Original-only contribution is 1,000 times 10, or 10,000 dollars. The worksheet omits original contribution
+    lost through switching. With S own-brand switches, the increment is 2,400 minus 10 times S.
+  s1_zh: 只卖原款的边际贡献是一千乘十，即一万元。试算表漏掉了因转购而失去的原款贡献。设 S 为自家转购的数量，增量贡献就是二千四百减十乘 S。
+  s1_zh_hk: 淨係賣原款嘅邊際貢獻係一千乘十，即係一萬蚊。試算表漏咗因為轉購而冇咗嘅原款貢獻。設 S 為自家轉購數量，增量貢獻就係二千四百減十乘 S。
+  s2_en: >-
+    An own-brand switch earns 14 on the premium pack but forgoes 10 on the original, adding 4 before launch
+    cost. A purchase from a competitor or a new occasion adds the full 14.
+  s2_zh: 一包自家转购，高端装赚十四元，但放弃了原款的十元，未计上市费用前净增四元。从竞争品牌转来或来自新场合的购买，则带来整整十四元。
+  s2_zh_hk: 一包自家轉購，高端裝賺十四蚊，但冇咗原款嘅十蚊，未計上市費用之前淨增四蚊。由競爭品牌轉過嚟或者來自新場合嘅購買，就帶嚟足足十四蚊。
+  s3_en: >-
+    At S equals 200, the increment is 2,400 minus 2,000, or 400 dollars, and total contribution is 10,400.
+    The premium pack can grow the portfolio even though half its volume comes from the original.
+  s3_zh: S 等于二百时，增量是二千四百减二千，即四百元，组合总贡献是一万零四百元。即使高端装一半销量来自原款，组合贡献仍然可以增加。
+  s3_zh_hk: S 等於二百嗰陣，增量係二千四百減二千，即係四百蚊，組合總貢獻係一萬零四百蚊。就算高端裝一半銷量來自原款，組合貢獻都仲可以增加。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Threshold and denominator
+  title_zh: 门槛与分母
+  title_zh_hk: 門檻與分母
+  step1_en: >-
+    S = 160: +HK$800 · S = 280: −HK$400
+  step1_zh: S = 160：+HK$800 · S = 280：−HK$400
+  step1_zh_hk: S = 160：+HK$800 · S = 280：−HK$400
+  step2_en: >-
+    Break-even: S = 240
+  step2_zh: 盈亏平衡：S = 240
+  step2_zh_hk: 盈虧平衡：S = 240
+  step3_en: 240/400 = 60% · 240/1,000 = 24%
+  step3_zh: 240/400 = 60% · 240/1,000 = 24%
+  step3_zh_hk: 240/400 = 60% · 240/1,000 = 24%
+  s1_en: >-
+    At S equals 160, the increment is 800 dollars. At 280, it is minus 400. Premium sales stay at 400
+    in every case; the variation comes from which purchases they replace.
+  s1_zh: S 等于一百六十时，增量是八百元；等于二百八十时，是负四百元。三个情境的高端装都卖四百包，差别只在于替代了哪些购买。
+  s1_zh_hk: S 等於一百六十嗰陣，增量係八百蚊；等於二百八十嗰陣，係負四百蚊。三個情境嘅高端裝都賣四百包，分別只係代替咗邊啲購買。
+  s2_en: >-
+    Break-even requires 2,400 minus 10 times S to equal zero, so S is 240. Fewer switches give a positive
+    increment, more give a negative one.
+  s2_zh: 盈亏平衡时，二千四百减十乘 S 等于零，所以 S 是二百四十。自家转购少于这个数，增量为正；多于这个数，增量为负。
+  s2_zh_hk: 盈虧平衡嗰陣，二千四百減十乘 S 等於零，所以 S 係二百四十。自家轉購少過呢個數，增量係正；多過呢個數，增量係負。
+  s3_en: >-
+    240 switches are 60 percent of premium volume, but 24 percent of original-only volume. These are different
+    ratios, not contradictory estimates, so always label the denominator when reporting cannibalisation.
+  s3_zh: >-
+    二百四十包，相当于高端装销量的百分之六十，也相当于只卖原款时销量的百分之二十四。两个比率分母不同，并不矛盾；报告产品蚕食率时，一定要说明分母。
+  s3_zh_hk: 二百四十包，等於高端裝銷量嘅百分之六十，亦等於淨賣原款時銷量嘅百分之二十四。兩個比率分母唔同，並唔矛盾；報告產品蠶食率嗰陣，一定要講明分母。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Uncertainty is part of it
+  title_zh: 建议要正视不确定性
+  title_zh_hk: 建議要正視不確定性
+  en: >-
+    The central scenario gives a small gain, while the higher-switching scenario loses 400 dollars. Without
+    probabilities, no expected value can be calculated. I would defer the full launch until switching
+    below 240 is better assessed; launching is defensible if management knowingly accepts the risk.
+  zh: >-
+    中间情境略有增加，自家转购较多的情境却亏四百元。没有情境概率，就算不出期望值。我会暂缓全面上市，先评估自家转购是否真的可能低于二百四十包；如果管理层清楚风险并愿意承担，上市也说得通。
+  zh_hk: >-
+    中間情境有少少增加，自家轉購較多嘅情境就蝕四百蚊。冇情境機率，就計唔到期望值。我會暫緩全面上市，先評估自家轉購係咪真係可能少過二百四十包；如果管理層清楚風險又願意承擔，上市都講得通。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Gross sales ≠ incremental demand
+  title_zh: 新品销量 ≠ 增量需求
+  title_zh_hk: 新品銷量 ≠ 增量需求
+  q1_en: Ask what buyers would otherwise buy
+  q1_zh: 问清顾客本来会买什么
+  q1_zh_hk: 問清顧客本來會買甚麼
+  q2_en: Track both packs against a no-launch control
+  q2_zh: 两款一起看，设未上市对照
+  q2_zh_hk: 兩款一起看，設未上市對照
+  s1_en: >-
+    Observe original and premium contribution together, against a credible no-launch comparison. A fall
+    in original sales alone can reflect season, availability or promotion.
+  s1_zh: 要同时观察原款和高端装的贡献，并设立可信的未上市对照。单看原款销量下跌，也可能是季节、供货或促销的影响。
+  s1_zh_hk: 要同時觀察原款同高端裝嘅貢獻，再設可信嘅未上市對照。淨係睇原款銷量跌，都可能係季節、供貨或者推廣嘅影響。
+  s2_en: >-
+    Any strategic benefit or smaller launch needs its own evidence and cost.
+  s2_zh: 任何策略效益或缩小规模的上市，都需要另有证据和成本估算。
+  s2_zh_hk: 任何策略效益或者縮細規模嘅上市，都要另外有證據同成本估算。
+  s3_en: >-
+    Harbour Crunch, the study and all figures are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: Harbour Crunch、调查和所有数字都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: Harbour Crunch、調查同所有數字都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

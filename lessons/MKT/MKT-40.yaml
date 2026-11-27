@@ -1,0 +1,288 @@
+id: MKT-40
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: More members. Who answers next?
+title_zh: 会员多了，下一题由谁来答？
+title_zh_hk: 會員多了，下一題由誰來答？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-40
+  kicker_en: MKT-40
+  kicker_zh: MKT-40
+  kicker_zh_hk: MKT-40
+  title_en: More members. Who answers next?
+  title_zh: 会员多了，下一题由谁来答？
+  title_zh_hk: 會員多了，下一題由誰來答？
+  image: art/members-grow-contributors-tire-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Brand-community research describes relationships among members, not only links to a seller. Participation
+    can be concentrated, and newcomers need support. Now you run the community for Paperloop, a fictional
+    Hong Kong craft-tool brand.
+  zh: >-
+    品牌社群研究不只看会员和商家的关系，也看会员之间怎样联系。参与往往集中在少数人身上，新成员也需要支持。现在，你负责香港虚构手作工具品牌 Paperloop 的社群。
+  zh_hk: >-
+    品牌社群研究唔只睇會員同商家嘅關係，亦睇會員之間點樣聯繫。參與往往集中喺少數人身上，新成員亦需要支援。而家，你負責香港虛構手作工具品牌 Paperloop 嘅社群。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: 24 extra paid staff hours
+  title_zh: 额外 24 小时有薪人手
+  title_zh_hk: 額外 24 小時有薪人手
+  row1_en: A
+  row1_zh: A
+  row1_zh_hk: A
+  row2_en: B
+  row2_zh: B
+  row2_zh_hk: B
+  col1_en: Other paid hours
+  col1_zh: 其他有薪时数
+  col1_zh_hk: 其他有薪時數
+  col2_en: Answering hours
+  col2_zh: 回答时数
+  col2_zh_hk: 回答時數
+  c11_en: 16 recruitment
+  c11_zh: 16 小时招募
+  c11_zh_hk: 16 小時招募
+  c12: '8'
+  c21_en: 4 guidance
+  c21_zh: 4 小时改善指引
+  c21_zh_hk: 4 小時改善指引
+  c22: '20'
+  footer_en: 1,000 members · A adds 200 sign-ups
+  footer_zh: 1,000 名会员 · A 多 200 人
+  footer_zh_hk: 1,000 名會員 · A 多 200 人
+  s1_en: >-
+    Paperloop runs an optional adult community for sharing paper-layout ideas, with 1,000 registered members.
+    Safety, warranty and contractual support go to separately funded staff, and ordinary moderation stays
+    fully funded.
+  s1_zh: >-
+    Paperloop 经营一个成年人自愿参加的社群，分享纸艺排版创意，共有一千名注册会员。工具安全、保修和合约规定的客户支持，由另有预算的员工处理；日常内容管理也有足够预算。
+  s1_zh_hk: >-
+    Paperloop 經營一個成年人自願參加嘅社群，分享紙藝排版創意，有一千個註冊會員。工具安全、保養同合約訂明嘅客戶支援，由另有預算嘅職員處理；日常內容管理亦有足夠預算。
+  s2_en: >-
+    Next month you have twenty-four extra paid staff hours. A uses sixteen recruiting and eight answering
+    creative threads. B uses four improving newcomer guidance and examples, and twenty answering.
+  s2_zh: 下个月，你有额外二十四小时的有薪社群人手。A 用十六小时招募会员、八小时回答创作讨论帖；B 用四小时改善新人指引和示例，二十小时回答。
+  s2_zh_hk: 下個月，你有額外二十四個鐘嘅有薪社群人手。A 用十六個鐘招募會員、八個鐘回答創作討論帖；B 用四個鐘改善新人指引同示例，二十個鐘回答。
+  s3_en: >-
+    A estimates 200 additional registrations. Last month, 120 eligible threads each got a helpful first
+    answer within seven days. The dashboard shows neither who answered nor their future availability.
+  s3_zh: >-
+    A 估计会多两百人注册。上个月，一百二十个符合条件的讨论帖，每个都在七天内得到第一个有帮助的回答。但报表既没显示是谁回答的，也没说明他们以后能投入多少时间。
+  s3_zh_hk: >-
+    A 估計會多兩百人登記。上個月，一百二十個符合條件嘅討論帖，每個都喺七日內得到第一個有幫助嘅回答。但報表冇顯示係邊個答，亦冇講佢哋之後可以投入幾多時間。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: A or B provisionally?
+  title_zh: 暂选 A 还是 B？
+  title_zh_hk: 暫選 A 還是 B？
+  en: >-
+    Would you choose A or B provisionally? Before treating 200 new registrations as community success,
+    what would you need to know about who supplies helpful answers, and what they freely want to contribute?
+    Pause and vote.
+  zh: 你会暂时选 A 还是 B？在把新增两百人当成社群的成绩之前，关于是谁在提供有用的回答、他们自愿投入多少，你还需要知道什么？请暂停，投个票。
+  zh_hk: 你會暫時揀 A 定 B？喺將新增兩百人當成社群嘅成績之前，關於係邊個提供有用嘅回答、佢哋自願投入幾多，你仲要知道啲咩？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Who answered, and who can
+  title_zh: 谁在回答，还能答多少
+  title_zh_hk: 誰在回答，還能答多少
+  step1_en: 4 members gave 96 of 120 answers
+  step1_zh: 4 人提供 120 则中的 96 则
+  step1_zh_hk: 4 人提供 120 則中的 96 則
+  step2_en: >-
+    Next month: 36 + 24 = 60 intended
+  step2_zh: 下月意向：36 + 24 = 60 则
+  step2_zh_hk: 下月意向：36 + 24 = 60 則
+  step3_en: >-
+    Threads: A 180, B 120 · 20 min each
+  step3_zh: 帖数：A 180、B 120 · 每则 20 分钟
+  step3_zh_hk: 帖數：A 180、B 120 · 每則 20 分鐘
+  s1_en: >-
+    Four members supplied 96 of last month's 120 counted answers, and sixteen others supplied 24. The
+    four say the current pace is too demanding.
+  s1_zh: 上个月计入的一百二十个回答中，有九十六个来自四位会员，另外二十四个来自十六位会员。那四位觉得现在的节奏太吃力。
+  s1_zh_hk: 上個月計入嘅一百二十個回答入面，有九十六個嚟自四位會員，另外二十四個嚟自十六位會員。嗰四位覺得而家嘅節奏太辛苦。
+  s2_en: >-
+    The four freely indicate capacity for only 36 answers next month, and the sixteen for 24: sixty in
+    total. These are intentions, not commitments or diagnoses of burnout.
+  s2_zh: 那四位自愿表示，下个月只能答三十六个，其余十六位表示能答二十四个，合计六十个。这些只是意向，不是工作承诺，也不是对职业倦怠的诊断。
+  s2_zh_hk: 嗰四位自願表示，下個月淨係答到三十六個，其餘十六位表示答到二十四個，加埋六十個。呢啲只係意向，唔係工作承諾，亦唔係對職業倦怠嘅診斷。
+  s3_en: >-
+    Each staff answer takes twenty minutes. Under A, recruitment adds sixty threads to the baseline 120,
+    giving 180; under B, use 120. Required moderation and customer service are protected either way.
+  s3_zh: >-
+    每个员工回答要花二十分钟。A 的招募估计会在一百二十个的基础上多带来六十个帖，共一百八十个；B 按一百二十个计算。无论选哪个，必要的内容管理和客户服务都有保障。
+  s3_zh_hk: >-
+    每個職員回答要用二十分鐘。A 嘅招募估計會喺一百二十個嘅基礎上多帶嚟六十個帖，總共一百八十個；B 就按一百二十個計。無論揀邊個，必要嘅內容管理同客戶服務都有保障。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Coverage, and a fallback?
+  title_zh: 覆盖多少？后备呢？
+  title_zh_hk: 覆蓋多少？後備呢？
+  en: >-
+    Compare the distinct threads A and B cover in this scenario. How concentrated was last month's contribution?
+    Recommend a plan, and a fallback that respects members' freedom, including what changes if none of
+    their intended answers appear. Pause and vote.
+  zh: >-
+    请比较在这个情境下，A 和 B 各能回答多少个不同的讨论帖。上个月的贡献有多集中？请提出一个方案，以及一个尊重会员自由的后备安排，包括会员原本打算提供的回答完全没有出现时会怎样。请暂停，投个票。
+  zh_hk: >-
+    請比較喺呢個情境下，A 同 B 各自答到幾多個唔同嘅討論帖。上個月嘅貢獻有幾集中？請提出一個方案，同埋一個尊重會員自由嘅後備安排，包括會員原本打算畀嘅回答完全冇出現會點。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Concentration, not a ranking
+  title_zh: 看集中度，不排高低
+  title_zh_hk: 看集中度，不排高低
+  step1_en: The four gave 96/120 = 80%
+  step1_zh: 四人提供 96/120 = 80%
+  step1_zh_hk: 四人提供 96/120 = 80%
+  step2_en: 4 of 20 answerers · 4 of 1,000 members
+  step2_zh: 20 名回答者中 4 人 · 千人中 4 人
+  step2_zh_hk: 20 名回答者中 4 人 · 千人中 4 人
+  step3_en: >-
+    60 intended answers: half of 120
+  step3_zh: 意向 60 则：只有上月一半
+  step3_zh_hk: 意向 60 則：只有上月一半
+  s1_en: The four supplied 96 out of 120, or 80 percent of counted answers.
+  s1_zh: 那四位提供了一百二十个中的九十六个，也就是计入回答的百分之八十。
+  s1_zh_hk: 嗰四位提供咗一百二十個入面嘅九十六個，即係計入回答嘅百分之八十。
+  s2_en: >-
+    They are only four of twenty answer contributors, and four of a thousand registered members. Those
+    denominators describe concentration, not the worth of other members; quiet readers and thoughtful
+    questions also create value.
+  s2_zh: 他们只是二十位回答者中的四位，也是一千名注册会员中的四位。这些分母说明的是集中度，不是其他会员的价值；默默阅读和用心提问，同样有价值。
+  s2_zh_hk: 佢哋只係二十位回答者入面嘅四位，亦係一千個註冊會員入面嘅四位。呢啲分母講嘅係集中度，唔係其他會員嘅價值；靜靜哋睇、用心發問，一樣有價值。
+  s3_en: >-
+    The sixty intended answers are half of last month's 120. Do not require the four to fill the gap,
+    or treat their past generosity as a service contract.
+  s3_zh: 会员打算提供的六十个回答，只有上个月一百二十个的一半。不要要求那四位补足差额，也别把他们以往的热心当成服务合约。
+  s3_zh_hk: 會員打算提供嘅六十個回答，只係上個月一百二十個嘅一半。唔好要求嗰四位補足差額，亦唔好將佢哋以往嘅熱心當成服務合約。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Turn staff hours into answers
+  title_zh: 把人手时数化成回答
+  title_zh_hk: 把人手時數化成回答
+  step1_en: >-
+    A: 24 staff answers · 84 of 180 covered
+  step1_zh: A：职员 24 则 · 180 帖覆盖 84
+  step1_zh_hk: A：職員 24 則 · 180 帖覆蓋 84
+  step2_en: >-
+    B: 60 staff answers · 120 of 120 covered
+  step2_zh: B：职员 60 则 · 120 帖全覆盖
+  step2_zh_hk: B：職員 60 則 · 120 帖全覆蓋
+  step3_en: >-
+    Choose B · if none: 156 vs 60 left
+  step3_zh: 选 B · 会员不答：剩 156 对 60
+  step3_zh_hk: 選 B · 會員不答：剩 156 對 60
+  s1_en: >-
+    A gives eight hours at three answers per hour, 24 staff answers. With sixty member answers, 84 of
+    180 threads are covered, leaving 96 unanswered within seven days: about 46.7 percent.
+  s1_zh: >-
+    A 有八小时，每小时三个回答，即二十四个员工回答。加上会员的六十个，一百八十个帖中有八十四个得到回答，九十六个七天内没人答，覆盖率约百分之四十六点七。
+  s1_zh_hk: >-
+    A 有八個鐘，每個鐘三個回答，即係二十四個職員回答。加埋會員嘅六十個，一百八十個帖入面有八十四個有回答，九十六個七日內冇人答，覆蓋率大約百分之四十六點七。
+  s2_en: >-
+    B gives twenty hours, or sixty staff answers, so with sixty member answers all 120 threads are covered.
+    B moves twelve paid hours from recruitment to answering; it creates no free staff and guarantees no
+    member output.
+  s2_zh: >-
+    B 有二十小时，即六十个员工回答；加上会员的六十个，一百二十个帖全部得到回答。B 是把十二小时有薪工时从招募转到回答，没有凭空多出人手，也不保证会员日后的贡献。
+  s2_zh_hk: >-
+    B 有二十個鐘，即係六十個職員回答；加埋會員嘅六十個，一百二十個帖全部有回答。B 係將十二個鐘有薪工時由招募轉去回答，冇憑空多咗人手，亦唔保證會員之後嘅貢獻。
+  s3_en: >-
+    Choose B: recruitment adds questions without shown answering capacity. If no member answers appear,
+    A leaves 156 threads unanswered and B leaves sixty. Then give honest waiting times, or defer recruitment.
+  s3_zh: >-
+    选 B：招募会带来更多提问，却没有证据显示有额外的回答能力。如果会员一个都没答，A 剩下一百五十六个帖没人答，B 剩下六十个。这时要如实告知等候时间，或者推迟招募。
+  s3_zh_hk: >-
+    揀 B：招募會帶嚟多啲提問，但冇證據顯示有額外嘅回答能力。如果會員一個都冇答，A 剩低一百五十六個帖冇人答，B 剩低六十個。到時要如實講清楚要等幾耐，或者押後招募。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Keep participation voluntary
+  title_zh: 参与必须自愿
+  title_zh_hk: 參與必須自願
+  en: >-
+    The guidance hours may help newcomers find suitable roles, but the calculation credits them with no
+    automatic extra answers. Recognise contributions only with permission, offer different ways to engage,
+    and never tie exclusive product benefits to an unpaid answering quota.
+  zh: >-
+    改善指引也许能帮新人找到合适的角色，但计算时不会因此自动多算回答。表扬贡献前要先得到许可，提供不同的参与方式，也绝不能把独家产品福利和无薪回答配额挂钩。
+  zh_hk: >-
+    改善指引或者幫到新人搵到啱自己嘅角色，但計算嗰陣唔會因此自動多計回答。表揚貢獻之前要先得到許可，提供唔同嘅參與方式，亦絕對唔可以將獨家產品福利同無薪回答配額掛鈎。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Members ≠ answering capacity
+  title_zh: 会员多 ≠ 回答能力多
+  title_zh_hk: 會員多 ≠ 回答能力多
+  q1_en: Track first answers and waiting times
+  q1_zh: 追踪首答和等候时间
+  q1_zh_hk: 追蹤首答和等候時間
+  q2_en: Registrations alone prove nothing
+  q2_zh: 单看注册数证明不了什么
+  q2_zh_hk: 單看登記數證明不了甚麼
+  s1_en: >-
+    Track unique helpful first responses, unanswered threads and waiting times, alongside contribution
+    concentration and voluntary feedback.
+  s1_zh: 要追踪不同讨论帖的有用首答、没人回答的帖子和等候时间，同时留意贡献集中度和会员的自愿反馈。
+  s1_zh_hk: 要追蹤唔同討論帖嘅有用首答、冇人答嘅帖同等候時間，同時留意貢獻集中度同會員嘅自願意見。
+  s2_en: >-
+    Do not infer profit, loyalty, member wellbeing or causal improvement from registrations or answer
+    counts alone.
+  s2_zh: 单凭注册人数和回答数量，推断不出利润、忠诚度、会员的身心状况，或者因果上的改善。
+  s2_zh_hk: 單憑登記人數同回答數量，推斷唔到利潤、忠誠度、會員身心狀況，或者因果上嘅改善。
+  s3_en: >-
+    Paperloop, its community and all figures are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: Paperloop、社群和所有数字都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: Paperloop、社群同所有數字都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

@@ -1,0 +1,290 @@
+id: MKT-37
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A true success story. A typical result?
+title_zh: 成功故事是真的，结果普遍吗？
+title_zh_hk: 成功故事是真的，結果普遍嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-37
+  kicker_en: MKT-37
+  kicker_zh: MKT-37
+  kicker_zh_hk: MKT-37
+  title_en: A true success story. A typical result?
+  title_zh: 成功故事是真的，结果普遍吗？
+  title_zh_hk: 成功故事是真的，結果普遍嗎？
+  image: art/true-story-typical-result-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    An authentic success story can still invite an unsupported inference about what most buyers should
+    expect. Official advertising guidance separates a testimonial's truth from the impression of the whole
+    advertisement. Now you manage a campaign for ClearSteps, a fictional Hong Kong tutoring service.
+  zh: >-
+    成功故事即使是真的，也可能让顾客对一般结果产生没有根据的期望。官方广告指引会区分推荐内容是否真实，以及整份广告给人什么印象。现在，你负责香港虚构补习机构 ClearSteps 的一项宣传。
+  zh_hk: >-
+    成功故事就算係真嘅，都可能令顧客對一般結果有冇根據嘅期望。官方廣告指引會分開見證內容係咪真確，同成份廣告畀人咩印象。而家，你負責香港虛構補習社 ClearSteps 嘅一個宣傳。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: All 100 learners, one course
+  title_zh: 同一期课程，全部 100 名学员
+  title_zh_hk: 同一期課程，全部 100 名學員
+  row1_en: Down one grade
+  row1_zh: 下降一级
+  row1_zh_hk: 下降一級
+  row2_en: No change
+  row2_zh: 无变化
+  row2_zh_hk: 無變化
+  row3_en: Up one grade
+  row3_zh: 上升一级
+  row3_zh_hk: 上升一級
+  row4_en: Up two · three · four
+  row4_zh: 上升二 · 三 · 四级
+  row4_zh_hk: 上升二 · 三 · 四級
+  col1_en: Learners
+  col1_zh: 人数
+  col1_zh_hk: 人數
+  col2_en: Share
+  col2_zh: 比例
+  col2_zh_hk: 比例
+  c11: '10'
+  c12: 10%
+  c21: '20'
+  c22: 20%
+  c31: '40'
+  c32: 40%
+  c41: 20 · 8 · 2
+  c42: 30%
+  footer_en: Observed changes, not causal effects
+  footer_zh: 是观察到的变化，不是因果
+  footer_zh_hk: 是觀察到的變化，不是因果
+  s1_en: >-
+    ClearSteps runs a twelve-week mathematics course, and the campaign targets parents. It has complete
+    start and end results for all 100 learners in its latest course, including those who stopped attending,
+    on the same five-grade scale.
+  s1_zh: >-
+    ClearSteps 开办十二周的数学课程，宣传对象是家长。最近一期全部一百名学员，都有开课和结课时的完整成绩，包括中途不再上课的人，用的是同一套五级量表。
+  s1_zh_hk: >-
+    ClearSteps 開辦十二個星期嘅數學課程，宣傳對象係家長。最近一期全部一百個學員，都有開課同完課時嘅完整成績，包括中途冇再上堂嘅人，用嘅係同一套五級量表。
+  s2_en: >-
+    Draft A leads with one learner's four-grade improvement in a vivid layout. Smaller, readable text
+    says this was exceptional, two of 100, that outcomes vary and that the records do not show what caused
+    the changes.
+  s2_zh: >-
+    草稿 A 用生动的版面，突出一名学员提高了四级的故事。下方较小但看得清的文字说明，这是罕见的结果，一百人中只有两人；又说明结果因人而异，记录也不能说明变化的原因。
+  s2_zh_hk: >-
+    草稿 A 用生動嘅版面，突出一個學員升咗四級嘅故事。下面細啲但睇得清嘅字講明，呢個係罕見結果，一百人入面得兩個；又講結果因人而異，紀錄亦講唔到變化嘅原因。
+  s3_en: >-
+    Draft B leads with the complete distribution, the course period, the all-enrollee denominator and
+    the assessment method, with the same causal warning. Each costs 8,000 dollars, and a misleading overall
+    impression blocks release.
+  s3_zh: >-
+    草稿 B 把完整的成绩分布放在首位，标明课程期间、全体报名者这个分母和评估方法，同样提醒不能推断因果。两个方案各需八千元；只要整体印象有误导，就不能发布。
+  s3_zh_hk: >-
+    草稿 B 將完整嘅成績分佈放喺最前，標明課程期間、全體報名者呢個分母同評估方法，一樣提醒唔可以推斷因果。兩個方案各要八千蚊；只要整體印象有誤導，就唔可以發佈。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Develop A or B first?
+  title_zh: 先发展 A 还是 B？
+  title_zh_hk: 先發展 A 還是 B？
+  en: >-
+    Which draft would you develop first, and what should a comprehension check establish before release?
+    Why do a true story and a readable exception statement not prove the whole advertisement is understood?
+    Pause and vote.
+  zh: 你会先发展哪一份草稿？推出前的理解测试要查明什么？为什么故事是真的、例外说明也看得清，仍然不能证明读者正确理解了整份广告？请暂停，投个票。
+  zh_hk: 你會先發展邊份草稿？推出前嘅理解測試要查清楚咩？點解故事係真、例外說明又睇得清，仍然證明唔到讀者明白成份廣告？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Forty parents, twenty per draft
+  title_zh: 40 名家长，每份草稿 20 人
+  title_zh_hk: 40 名家長，每份草稿 20 人
+  step1_en: >-
+    A: 14 of 20 say most rose four grades
+  step1_zh: A：20 人中 14 人以为多数升四级
+  step1_zh_hk: A：20 人中 14 人以為多數升四級
+  step2_en: >-
+    B: 2 of 20 give that answer
+  step2_zh: B：20 人中只有 2 人这样答
+  step2_zh_hk: B：20 人中只有 2 人這樣答
+  step3_en: Small, diagnostic, whole layouts
+  step3_zh: 小型诊断测试，比较整个版面
+  step3_zh_hk: 小型診斷測試，比較整個版面
+  s1_en: >-
+    A fictional pre-release study randomly assigns forty parents considering tutoring to see A or B on
+    the same phone layout. Asked what change most learners experienced, 14 of A's 20 viewers say most
+    improved four grades.
+  s1_zh: >-
+    一项虚构的发布前研究，把四十名正在考虑补习的家长随机分组，用同一款手机版面看 A 或 B。被问到大多数学员成绩怎样变化时，看 A 的二十人中，有十四人以为大多数提高了四级。
+  s1_zh_hk: >-
+    一項虛構嘅發佈前研究，將四十個考慮補習嘅家長隨機分組，用同一款手機版面睇 A 或者 B。問到大部分學員成績點變，睇 A 嘅二十人入面，有十四個以為大部分升咗四級。
+  s2_en: >-
+    Only 2 of B's 20 viewers give that answer. Several A viewers point to the dominant success story,
+    rather than the smaller exception statement.
+  s2_zh: 看 B 的二十人中，只有两人这样回答。追问时，A 组有几个人提到的是最抢眼的成功故事，而不是下方较小的例外说明。
+  s2_zh_hk: 睇 B 嘅二十人入面，得兩個咁答。追問落去，A 組有幾個人提到嘅係最搶眼嘅成功故事，而唔係下面細啲嘅例外說明。
+  s3_en: >-
+    No other counts are supplied. The study is small and diagnostic, compares whole layouts, and measured
+    no enrolment. The budget includes one redesign and a fresh comprehension check.
+  s3_zh: >-
+    题目没有提供其他回答的人数。这是用来找问题的小型研究，比较的是整个版面，也没有衡量报名行为。预算包括一轮重新设计，以及找新参加者再测一次理解。
+  s3_zh_hk: 題目冇畀其他答案嘅人數。呢個係用嚟搵問題嘅小型研究，比較嘅係成個版面，亦冇量度報名行為。預算包括一輪重新設計，同埋搵新參加者再測一次理解。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep, revise or reject?
+  title_zh: 保留、修订还是放弃？
+  title_zh_hk: 保留、修訂還是放棄？
+  en: >-
+    Would you keep the selected draft, revise it or reject it? Calculate the exceptional outcome's share
+    and both misunderstanding proportions, and specify a redesign and two neutral comprehension questions.
+    Pause and vote.
+  zh: 你会保留原稿、修订还是放弃？请算出例外结果所占的比例，以及两组的误解比例，再提出一项修改和两条中立的理解测试问题。请暂停，投个票。
+  zh_hk: 你會保留原稿、修訂定係放棄？請計出例外結果佔幾多，同兩組嘅誤解比例，再提出一項修改同兩條中立嘅理解測試問題。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: True example, not typical one
+  title_zh: 真实案例，不是典型结果
+  title_zh_hk: 真實案例，不是典型結果
+  step1_en: >-
+    Four grades: 2/100 = 2%
+  step1_zh: 升四级：2/100 = 2%
+  step1_zh_hk: 升四級：2/100 = 2%
+  step2_en: >-
+    Most common and median: up one grade
+  step2_zh: 最常见和中位数：升一级
+  step2_zh_hk: 最常見和中位數：升一級
+  step3_en: Don't release A unchanged
+  step3_zh: 不要原样发布 A
+  step3_zh_hk: 不要原樣發佈 A
+  s1_en: >-
+    The four-grade improvement occurred for 2 of 100, or 2 percent. Seventy learners improved at least
+    one grade, but only two improved four.
+  s1_zh: 提高四级的只有一百人中的两人，即百分之二。有七十人至少提高了一级，但只有两人提高了四级。
+  s1_zh_hk: 升四級嘅只有一百人入面兩個，即係百分之二。有七十人最少升咗一級，但得兩個升咗四級。
+  s2_en: >-
+    The most frequent category was up one grade, at 40 percent, and the median is also up one grade. Equal
+    distances between grades are not supplied, so do not turn them into an average gain.
+  s2_zh: 最常见的是提高一级，占百分之四十，中位数同样是提高一级。题目没有说明各级之间的差距是否相等，所以不能硬算平均进步。
+  s2_zh_hk: 最常見係升一級，佔百分之四十，中位數一樣係升一級。題目冇講明每級之間嘅差距係咪相等，所以唔可以硬計平均進步。
+  s3_en: >-
+    A accurately labels an exception, but its tested presentation leaves a substantial comprehension problem.
+    I would not release A unchanged; develop B's distribution-led design, and test it again.
+  s3_zh: A 如实说明这是例外，但测试显示整体设计有明显的理解问题。我不会原样发布 A，应该继续发展以整体分布为主的 B，再测一次。
+  s3_zh_hk: A 如實講明呢個係例外，但測試顯示成個設計有明顯嘅理解問題。我唔會原樣發佈 A，應該繼續發展以整體分佈為主嘅 B，再測一次。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Interpret the test narrowly
+  title_zh: 只说测试真正显示的结果
+  title_zh_hk: 只說測試真正顯示的結果
+  step1_en: >-
+    A: 14/20 = 70% · B: 2/20 = 10%
+  step1_zh: A：14/20 = 70% · B：2/20 = 10%
+  step1_zh_hk: A：14/20 = 70% · B：2/20 = 10%
+  step2_en: A 60-point gap in a small test
+  step2_zh: 小型测试中差 60 个百分点
+  step2_zh_hk: 小型測試中差 60 個百分點
+  step3_en: 18 B viewers ≠ 18 who understood all
+  step3_zh: B 组 18 人 ≠ 18 人全看懂
+  step3_zh_hk: B 組 18 人 ≠ 18 人全看懂
+  s1_en: >-
+    The misunderstanding appears in 14 of 20, or 70 percent, of A's group, and 2 of 20, or 10 percent,
+    of B's.
+  s1_zh: 这种误解在 A 组占二十人中的十四人，即百分之七十；在 B 组占二十人中的两人，即百分之十。
+  s1_zh_hk: 呢種誤解喺 A 組佔二十人入面十四個，即係百分之七十；喺 B 組佔二十人入面兩個，即係百分之十。
+  s2_en: >-
+    That is a 60-percentage-point observed difference in a small diagnostic exercise, not a market-wide
+    rate, a conversion increase or proof of statistical significance.
+  s2_zh: 观察到的差距是六十个百分点，但这只是小型诊断测试的结果，不是整个市场的比率，不是转化率提高，也不能证明统计上显著。
+  s2_zh_hk: 觀察到嘅差距係六十個百分點，但呢個只係小型診斷測試嘅結果，唔係成個市場嘅比率，唔係轉化率提高，亦證明唔到統計上顯著。
+  s3_en: >-
+    Eighteen B viewers did not give that particular answer, but that does not show all eighteen understood
+    the distribution, the denominator or the lack of causal evidence.
+  s3_zh: B 组有十八人没有给出这个答案，但不代表这十八人都看懂了分布、分母，或者明白没有因果证据。
+  s3_zh_hk: B 組有十八人冇咁答，但唔代表呢十八個人全部睇明分佈、分母，或者明白冇因果證據。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Redesign, then test meaning
+  title_zh: 重新设计，再测理解
+  title_zh_hk: 重新設計，再測理解
+  en: >-
+    Put the full distribution, all 100 learners and the twelve-week course beside the main message, and
+    state that the records describe what happened, not what the course caused. Ask fresh viewers how results
+    differed across the group, and what they can conclude about why.
+  zh: >-
+    把完整分布、全部一百名学员和十二周课程，放在主要信息旁边，并清楚说明记录描述的是发生了什么，而不是课程造成了什么。再请新一批观看者回答：学员的成绩变化有什么不同？能不能判断变化的原因？
+  zh_hk: >-
+    將完整分佈、全部一百個學員同十二個星期嘅課程，放喺主要訊息旁邊，再講清楚紀錄描述嘅係發生咗咩，而唔係課程造成咗咩。再請新一批觀眾答：學員嘅成績變化有咩唔同？可唔可以判斷變化嘅原因？
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Truth ≠ typical ≠ causal
+  title_zh: 真实 ≠ 典型 ≠ 因果
+  title_zh_hk: 真實 ≠ 典型 ≠ 因果
+  q1_en: Use all data, including decline
+  q1_zh: 用上全部数据，包括退步
+  q1_zh_hk: 用上全部數據，包括退步
+  q2_en: No '70% success' without a definition
+  q2_zh: 未定义“成功”，别说 70% 成功
+  q2_zh_hk: 未定義「成功」，別說 70% 成功
+  s1_en: >-
+    Record explanations before revealing answers, check the real mobile layout, and keep necessary limitations
+    rather than shrinking them for impact.
+  s1_zh: 先记下观看者的解释，再公布答案；要检查实际的手机版面，必要的限制说明要保留，不能为了吸睛而缩小。
+  s1_zh_hk: 先記低觀眾嘅解釋，再公佈答案；要檢查實際手機版面，必要嘅限制說明要保留，唔可以為咗搶眼而縮細。
+  s2_en: >-
+    Attention and enquiries can be judged only after truthful communication is established.
+  s2_zh: 先确保信息如实传达，才评估关注度和查询量。
+  s2_zh_hk: 先確保訊息如實傳達，先評估關注度同查詢量。
+  s3_en: >-
+    ClearSteps, the learners' outcomes and the parent interviews are fictional. Official scene art is
+    a teaching illustration only.
+  s3_zh: ClearSteps、学员成绩和家长访谈都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: ClearSteps、學員成績同家長訪談都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

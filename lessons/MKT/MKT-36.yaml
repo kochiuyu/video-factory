@@ -1,0 +1,293 @@
+id: MKT-36
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Recognised here. Understood there?
+title_zh: 香港认得的名字，曼谷也看得懂吗？
+title_zh_hk: 香港認得的名字，曼谷也看得懂嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-36
+  kicker_en: MKT-36
+  kicker_zh: MKT-36
+  kicker_zh_hk: MKT-36
+  title_en: Recognised here. Understood there?
+  title_zh: 香港认得的名字，曼谷也看得懂吗？
+  title_zh_hk: 香港認得的名字，曼谷也看得懂嗎？
+  image: art/recognised-here-understood-there-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A name can keep a brand's sound without keeping its meaning for a new audience. Now you manage a fictional
+    Hong Kong skincare brand preparing its first Bangkok retail launch of an ordinary moisturiser. Only
+    the customer-facing name is still to be decided.
+  zh: >-
+    品牌名即使保留了读音，到了新市场也不一定能传达同样的含义。现在，你管理一个虚构的香港护肤品牌，正准备首次在曼谷零售一款普通保湿霜。还没决定的，只有顾客看到的产品名称。
+  zh_hk: >-
+    品牌名就算保留咗讀音，去到新市場都唔一定傳達到同樣嘅意思。而家，你管理一個虛構嘅香港護膚品牌，準備第一次喺曼谷零售一款普通保濕霜。未決定嘅，只係顧客見到嘅產品名稱。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two naming directions
+  title_zh: 两个命名方向
+  title_zh_hk: 兩個命名方向
+  row1_en: A
+  row1_zh: A
+  row1_zh_hk: A
+  row2_en: B
+  row2_zh: B
+  row2_zh_hk: B
+  col1_en: Keeps
+  col1_zh: 保留
+  col1_zh_hk: 保留
+  col2_en: Hoped-for, unproven
+  col2_zh: 期望的优点（未证实）
+  col2_zh_hk: 期望的優點（未證實）
+  c11_en: Home-market sound
+  c11_zh: 原市场读音
+  c11_zh_hk: 原市場讀音
+  c12_en: Recognisable brand link
+  c12_zh: 联想到原品牌
+  c12_zh_hk: 聯想到原品牌
+  c21_en: Everyday-care meaning
+  c21_zh: 日常护理含义
+  c21_zh_hk: 日常護理含義
+  c22_en: Clear local association
+  c22_zh: 清晰的本地联想
+  c22_zh_hk: 清晰的本地聯想
+  footer_en: >-
+    Codes only: no real Thai words used
+  footer_zh: 只用代号，不涉及真实泰语
+  footer_zh_hk: 只用代號，不涉及真實泰語
+  s1_en: >-
+    Entry, formulation, price, distributor and shelf placement are settled, and there is no therapeutic
+    claim. A keeps the familiar home-market sound in a proposed Thai-script rendering. B is a meaning-led
+    adaptation suggesting everyday personal care, with a different sound.
+  s1_zh: >-
+    进入市场、配方、价格、分销商和上架位置都已确定，产品也不宣称任何疗效。A 打算用泰文字母保留原市场熟悉的读音；B 以含义为先，希望带出日常个人护理的联想，读音则不同。
+  s1_zh_hk: >-
+    入市、配方、價錢、分銷商同上架位置都已經定咗，產品亦唔講任何療效。A 打算用泰文字母保留原市場熟悉嘅讀音；B 以意思行先，想帶出日常個人護理嘅聯想，讀音就唔同。
+  s2_en: >-
+    A may preserve brand linkage, and B may communicate more locally, but neither advantage has been demonstrated.
+    The codes A and B replace real wording; the exercise makes no claim about what any Thai expression
+    means.
+  s2_zh: >-
+    A 也许更容易让人联想到原品牌，B 也许更能向当地顾客传达产品概念，但两个优点都没有被证实。A 和 B 只是代号，本题不涉及任何泰语词语的真实含义。
+  s2_zh_hk: >-
+    A 可能比較易令人聯想到原品牌，B 可能比較易向當地顧客傳達產品概念，但兩個優點都未證實。A 同 B 只係代號，本題唔涉及任何泰語詞語嘅真正意思。
+  s3_en: >-
+    Both test cards omit the parent identifier, and only the name changes. Linguistic screening and trademark
+    review are separate prerequisites before any real launch, and neither candidate has clearance.
+  s3_zh: 两张测试卡都不放母品牌标识，只有名称不同。真正推出之前，还必须另外做语言筛查和商标审查；两个候选名都还没有通过。
+  s3_zh_hk: 兩張測試卡都冇母品牌標識，只係名唔同。真正推出之前，仲要另外做語言篩查同商標審查；兩個候選名都未通過。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Test A or B first?
+  title_zh: 先测试 A 还是 B？
+  title_zh_hk: 先測試 A 還是 B？
+  en: >-
+    Which direction would you take into testing? Separate the tasks of saying the name, remembering it,
+    interpreting it and linking it to the parent brand. What evidence would make you reconsider? Pause
+    and vote.
+  zh: 你会先测试哪个方向？请区分顾客要做的四件事：读出名字、记住名字、理解含义，以及把它和母品牌联系起来。什么证据会让你改变看法？请暂停，投个票。
+  zh_hk: 你會先測試邊個方向？請分清顧客要做嘅四件事：讀出個名、記住個名、明白意思，同埋將佢同母品牌連埋一齊。咩證據會令你改變睇法？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: 80 shoppers, 40 per name
+  title_zh: 80 名顾客，每个名字 40 人
+  title_zh_hk: 80 名顧客，每個名字 40 人
+  step1_en: >-
+    First reading: A 14 · B 32
+  step1_zh: 首次读对：A 14 · B 32
+  step1_zh_hk: 首次讀對：A 14 · B 32
+  step2_en: >-
+    Delayed recall: A 18 · B 28
+  step2_zh: 稍后回想：A 18 · B 28
+  step2_zh_hk: 稍後回想：A 18 · B 28
+  step3_en: >-
+    Cleaner link: 2 vs 12 · parent: 34 vs 16
+  step3_zh: 清洁用品联想 2 比 12 · 母品牌 34 比 16
+  step3_zh_hk: 清潔用品聯想 2 比 12 · 母品牌 34 比 16
+  s1_en: >-
+    A fictional study randomly assigns 80 volunteer Bangkok shoppers, 40 to each name. Local coders score
+    unaided first readings, accepting natural local variants. A has 14 acceptable readings, B has 32.
+  s1_zh: >-
+    一项虚构研究把八十名曼谷自愿者随机分成两组，每个名字四十人。当地编码员评估无提示的首次读音，接受当地的自然读法。A 有十四人读对，B 有三十二人。
+  s1_zh_hk: >-
+    一項虛構研究將八十個曼谷自願者隨機分做兩組，每個名四十人。當地編碼員評估冇提示嘅第一次讀音，接受當地自然讀法。A 有十四人讀啱，B 有三十二人。
+  s2_en: >-
+    After hearing the name once and doing a two-minute unrelated task, 18 in A and 28 in B recall it.
+  s2_zh: 听过一次录音，再做两分钟无关的任务后，A 组有十八人能回想起名字，B 组有二十八人。
+  s2_zh_hk: 聽過一次錄音，再做兩分鐘無關嘅任務之後，A 組有十八人記得個名，B 組有二十八人。
+  s3_en: >-
+    Before the audio, 2 in A and 12 in B associate the name with a household-cleaning product. After seeing
+    and hearing the parent name, 34 in A and 16 in B link the candidate to it. No joint outcomes, purchases
+    or sales were measured.
+  s3_zh: >-
+    播放录音前，A 组有两人、B 组有十二人联想到家居清洁用品。看过并听过母品牌名后，A 组有三十四人、B 组有十六人正确联系到母品牌。研究没有个人层面的联合结果，也没有衡量购买或销售。
+  s3_zh_hk: >-
+    播錄音之前，A 組有兩人、B 組有十二人聯想到家居清潔用品。睇過同聽過母品牌名之後，A 組有三十四人、B 組有十六人正確連到母品牌。研究冇個人層面嘅聯合結果，亦冇量度購買或者銷售。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which direction to revise?
+  title_zh: 你会修订哪个方向？
+  title_zh_hk: 你會修訂哪個方向？
+  en: >-
+    Within one funded 12,000-dollar round, which direction would you revise? Explain the trade-off without
+    adding task counts into a popularity score, specify one change to the brief, and separate consumer
+    evidence from linguistic and legal clearance. Pause and vote.
+  zh: >-
+    只有一轮一万二千港元的预算，你会修订哪个方向？请解释其中的取舍，不要把各项人数加起来当受欢迎程度；提出一项修改要求，并区分顾客测试证据和语言、法律审查。请暂停，投个票。
+  zh_hk: >-
+    得一輪一萬二千蚊嘅預算，你會修訂邊個方向？請解釋當中嘅取捨，唔好將各項人數加埋當受歡迎程度；提出一項修改要求，再分清顧客測試證據同語言、法律審查。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Four tasks, four signals
+  title_zh: 四个任务，各有信号
+  title_zh_hk: 四個任務，各有訊號
+  step1_en: Reading 35% vs 80% · recall 45% vs 70%
+  step1_zh: 读对 35% 比 80% · 回想 45% 比 70%
+  step1_zh_hk: 讀對 35% 比 80% · 回想 45% 比 70%
+  step2_en: Cleaner 5% vs 30% · parent 85% vs 40%
+  step2_zh: 清洁联想 5% 比 30% · 母品牌 85% 比 40%
+  step2_zh_hk: 清潔聯想 5% 比 30% · 母品牌 85% 比 40%
+  step3_en: Do not add counts into one score
+  step3_zh: 不要把人数加成总分
+  step3_zh_hk: 不要把人數加成總分
+  s1_en: >-
+    A's first-reading rate is 14 over 40, or 35 percent, versus B's 80 percent. Delayed recall after one
+    audio exposure is 45 percent for A and 70 for B. Recall does not show how easily someone first reads
+    a printed name.
+  s1_zh: >-
+    A 的首次读对率是四十人中十四人，即百分之三十五，B 是百分之八十。听一次录音后的延迟回想率，A 是百分之四十五，B 是百分之七十。能回想起来，不代表第一次就能轻松读出印刷的名字。
+  s1_zh_hk: >-
+    A 嘅首次讀啱率係四十人入面十四人，即係百分之三十五，B 係百分之八十。聽一次錄音之後嘅延遲回想率，A 係百分之四十五，B 係百分之七十。記得返，唔代表第一次就讀得出印咗嘅名。
+  s2_en: >-
+    The cleaner association appears in 5 percent of A's group and 30 percent of B's. Prompted parent linkage
+    is 85 percent for A and 40 for B.
+  s2_zh: 联想到清洁用品的，A 组占百分之五，B 组占百分之三十。经提示后能联系到母品牌的，A 是百分之八十五，B 是百分之四十。
+  s2_zh_hk: 聯想到清潔用品嘅，A 組佔百分之五，B 組佔百分之三十。經提示之後連得到母品牌嘅，A 係百分之八十五，B 係百分之四十。
+  s3_en: >-
+    The same 40 people do every task, so adding successes counts people repeatedly and imposes unstated
+    weights. Random assignment strengthens this comparison, but volunteers are not representative of Bangkok.
+  s3_zh: >-
+    每个名字的所有任务都由同一组四十人完成，把各项人数相加，会重复计人，也等于擅自定了权重。随机分组提高了这次比较的可信度，但自愿者并不能代表整个曼谷。
+  s3_zh_hk: >-
+    每個名嘅所有任務都係同一組四十人做，將各項人數加埋，會重複計人，亦等於自己作咗權重。隨機分組提高咗今次比較嘅可信度，但自願者代表唔到成個曼谷。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Revise a direction, don't print
+  title_zh: 选方向改良，别急着印
+  title_zh_hk: 選方向改良，別急着印
+  step1_en: Revise A's rendering for readability
+  step1_zh: 改良 A 的写法，让人易读
+  step1_zh_hk: 改良 A 的寫法，讓人易讀
+  step2_en: B works if it fixes the cleaner link
+  step2_zh: 能解决清洁联想，B 也可行
+  step2_zh_hk: 能解決清潔聯想，B 也可行
+  step3_en: A revision is a new candidate
+  step3_zh: 修订后就是新候选名
+  step3_zh_hk: 修訂後就是新候選名
+  s1_en: >-
+    I would revise A's local rendering to improve first reading, while trying to keep its parent-brand
+    link. Not because foreign-sounding names are better, but because A has fewer unwanted associations
+    here, and brand connection is a stated goal.
+  s1_zh: >-
+    我会改良 A 在当地的写法，让人更容易第一次读出来，同时尽量保留和母品牌的联系。不是因为有外语感的名字就更好，而是 A 在这次测试中较少引起意外联想，而联系原品牌本来就是既定目标。
+  s1_zh_hk: >-
+    我會改良 A 喺當地嘅寫法，等人第一次讀都容易啲，同時盡量保留同母品牌嘅聯繫。唔係因為有外語感嘅名一定好啲，而係 A 喺今次測試比較少引起意外聯想，而連到原品牌本身就係既定目標。
+  s2_en: >-
+    Revising B is also defensible if readability and recall take priority, but the brief must investigate
+    the cleaning-product association. Do not assume a synonym fixes it.
+  s2_zh: 如果易读和回想更重要，修订 B 也有道理，但新的要求必须查明并处理清洁用品的联想，不能以为换个近义词就能解决。
+  s2_zh_hk: 如果易讀同回想更重要，修訂 B 都有道理，但新嘅要求一定要查清楚同處理清潔用品嘅聯想，唔可以以為換個近義詞就搞掂。
+  s3_en: >-
+    Either revision is a new candidate whose earlier scores no longer apply. Test it against a retained
+    reference under the same conditions, with criteria agreed in advance.
+  s3_zh: 无论修订哪个，都是新的候选名，原来的分数不能沿用。下一轮要在同样条件下，和保留作参考的名称比较，判断准则也要事先商定。
+  s3_zh_hk: 無論修訂邊個，都係新嘅候選名，原本嘅分數唔可以照用。下一輪要喺同樣條件之下，同保留做參考嘅名比較，判斷準則亦要事先傾好。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Evidence is not clearance
+  title_zh: 测试证据不等于批准
+  title_zh_hk: 測試證據不等於批准
+  en: >-
+    An unwanted association is a finding to investigate, not proof the name literally means household
+    cleaner in Thai. A dictionary check does not show how buyers will read or remember a brand. Trademark,
+    product claims and packaging compliance need their own checks.
+  zh: >-
+    意外联想值得调查，但并不证明这个名字在泰语里真的指家居清洁用品。查字典也不能说明顾客会怎样读、怎样记住品牌名。商标、产品宣称和包装合规，都需要另外审查。
+  zh_hk: 意外聯想值得調查，但唔證明個名喺泰語真係解家居清潔用品。查字典亦講唔到顧客會點讀、點記個牌子。商標、產品宣稱同包裝合規，都要另外審查。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Sound, meaning and link differ
+  title_zh: 读音、含义、联系各不相同
+  title_zh_hk: 讀音、含義、聯繫各不相同
+  q1_en: One HK$12,000 revision and test round
+  q1_zh: 一轮 HK$12,000 修订和测试
+  q1_zh_hk: 一輪 HK$12,000 修訂和測試
+  q2_en: No name is ready for printing yet
+  q2_zh: 现在没有名字可以付印
+  q2_zh_hk: 現在沒有名字可以付印
+  s1_en: >-
+    Agree decision criteria before new results, report recruitment and uncertainty honestly, and include
+    relevant language-use differences rather than treating nationality as one response.
+  s1_zh: 看到新结果之前，先商定决策准则，如实报告招募方式和不确定性；也要考虑语言使用上的差异，不要把同一国籍的人当成反应一致。
+  s1_zh_hk: 睇到新結果之前，先傾好決策準則，如實報告招募方式同不確定性；亦要考慮語言使用上嘅差異，唔好當同一國籍嘅人反應一樣。
+  s2_en: >-
+    Prototype counts do not show higher demand, better skincare or cultural superiority.
+  s2_zh: 测试人数不代表需求更高、护肤效果更好，或某种文化更优越。
+  s2_zh_hk: 測試人數唔代表需求高啲、護膚效果好啲，或者某種文化優越啲。
+  s3_en: >-
+    The brand, candidate names and test responses are fictional; no Thai meaning is claimed. Official
+    scene art is a teaching illustration only.
+  s3_zh: 品牌、候选名称和测试反应都是虚构的，不涉及任何泰语含义。官方场景图只是教学插图。
+  s3_zh_hk: 品牌、候選名稱同測試反應都係虛構嘅，唔涉及任何泰語含義。官方場景圖只係教學插圖。
+duration_target_s: 196

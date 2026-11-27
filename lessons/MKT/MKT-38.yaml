@@ -1,0 +1,286 @@
+id: MKT-38
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The customer left. Which offer deserves a return?
+title_zh: 顾客离开了，什么才值得他们回来？
+title_zh_hk: 顧客離開了，甚麼才值得他們回來？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-38
+  kicker_en: MKT-38
+  kicker_zh: MKT-38
+  kicker_zh_hk: MKT-38
+  title_en: The customer left. Which offer deserves a return?
+  title_zh: 顾客离开了，什么才值得他们回来？
+  title_zh_hk: 顧客離開了，甚麼才值得他們回來？
+  image: art/why-the-member-left-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Customer win-back research separates the reason a relationship ended from the offer used to restart
+    it: a discount and a repaired service barrier are not interchangeable. Now you manage Harbour Step,
+    a fictional Hong Kong fitness studio.
+  zh: >-
+    顾客挽回的研究，把关系中断的原因，和重新建立关系的邀请分开来看：折扣并不能代替修复服务上的障碍。现在，你管理香港一家虚构的健身房 Harbour Step。
+  zh_hk: >-
+    顧客挽回嘅研究，將關係斷咗嘅原因，同重新建立關係嘅邀請分開嚟睇：折扣代替唔到修補服務上嘅障礙。而家，你管理香港一間虛構嘅健身室 Harbour Step。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: One email each, two approaches
+  title_zh: 每人一封邮件，两种做法
+  title_zh_hk: 每人一封電郵，兩種做法
+  row1_en: D
+  row1_zh: D
+  row1_zh_hk: D
+  row2_en: M
+  row2_zh: M
+  row2_zh_hk: M
+  col1_en: Approach
+  col1_zh: 做法
+  col1_zh_hk: 做法
+  col2_en: Preparation
+  col2_zh: 准备成本
+  col2_zh_hk: 準備成本
+  c11_en: Same 20% discount for all
+  c11_zh: 所有人同一个八折优惠
+  c11_zh_hk: 所有人同一個八折優惠
+  c12: HK$1,500
+  c21_en: Remedy matched to reason
+  c21_zh: 按原因提供对应方案
+  c21_zh_hk: 按原因提供對應方案
+  c22: HK$3,000
+  footer_en: HK$600 a month · first month HK$480
+  footer_zh: 月费 HK$600 · 首月 HK$480
+  footer_zh_hk: 月費 HK$600 · 首月 HK$480
+  s1_en: >-
+    120 adults ended their monthly membership in the last four weeks, each recording one main non-medical
+    reason. Twenty have opted out of all marketing and must receive nothing; the other hundred permit
+    one studio email this month.
+  s1_zh: >-
+    过去四周，有一百二十名成年人结束了月费会籍，每人都填了一项与医疗无关的主要原因。其中二十人选择不接收任何营销信息，绝对不能联系；其余一百人同意本月接收一封健身房的邮件。
+  s1_zh_hk: >-
+    過去四個星期，有一百二十個成年人停咗月費會籍，每人都填咗一個同醫療無關嘅主要原因。當中二十人揀咗唔收任何推廣，絕對唔可以聯絡；其餘一百人同意今個月收一封健身室嘅電郵。
+  s2_en: >-
+    D sends one identical email offering 20 percent off the first returning month, 480 instead of 600
+    dollars. M sends reason-matched versions, and no email when no relevant remedy exists.
+  s2_zh: D 方案给所有人发同一封邮件，重新入会首月八折，从六百元减到四百八十元。M 方案按退会原因准备不同版本；如果没有对应的解决办法，就不发。
+  s2_zh_hk: D 方案畀所有人發同一封電郵，重新入會第一個月八折，由六百蚊減到四百八十蚊。M 方案按退會原因準備唔同版本；如果冇對應嘅解決辦法，就唔發。
+  s3_en: >-
+    Each discount costs 120 dollars per redemption, and no return rate is known. Staff have not yet reconciled
+    the reasons with permissions or the approved timetable, and no plan may claim an unapproved service
+    change.
+  s3_zh: >-
+    每兑现一次折扣，就少收一百二十元，而且回流率还不知道。职员还没把退会原因、联系许可和已批准的时间表逐项核对；任何方案都不能宣称尚未批准的服务改变。
+  s3_zh_hk: >-
+    每兌現一次折扣，就少收一百二十蚊，而且回流率仲未知。職員仲未將退會原因、聯絡許可同已批准嘅時間表逐項核對；任何方案都唔可以話有未批准嘅服務改變。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: D or M provisionally?
+  title_zh: 暂选 D 还是 M？
+  title_zh_hk: 暫選 D 還是 M？
+  en: >-
+    Which campaign would you prepare provisionally? What must you learn about why people left, and what
+    the studio can genuinely change? Separate permission to contact someone from evidence that a discount
+    solves their problem. Pause and vote.
+  zh: >-
+    你会暂时准备哪个方案？关于大家为什么离开、健身房实际能改变什么，你还需要了解什么？请区分获准联系，和有证据显示折扣能解决对方的问题。请暂停，投个票。
+  zh_hk: >-
+    你會暫時準備邊個方案？關於大家點解走、健身室實際可以改變啲咩，你仲要知道啲咩？請分清獲准聯絡，同有證據顯示折扣解決到對方嘅問題。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Three reasons, three barriers
+  title_zh: 三种原因，三种障碍
+  title_zh_hk: 三種原因，三種障礙
+  step1_en: >-
+    6 pm classes removed: 80, 12 opted out
+  step1_zh: 取消 6 时课堂：80 人，12 人退订
+  step1_zh_hk: 取消 6 時課堂：80 人，12 人退訂
+  step2_en: >-
+    Monthly price: 30, 6 opted out
+  step2_zh: 月费太高：30 人，6 人退订
+  step2_zh_hk: 月費太高：30 人，6 人退訂
+  step3_en: >-
+    Moved away: 10, 2 opted out
+  step3_zh: 搬得太远：10 人，2 人退订
+  step3_zh_hk: 搬得太遠：10 人，2 人退訂
+  s1_en: >-
+    Eighty left after the studio removed its 6 pm classes, and twelve of them opted out. Operations has
+    now approved and funded 6 pm classes on Mondays and Wednesdays from next month, with capacity for
+    all of them.
+  s1_zh: >-
+    有八十人是在健身房取消下午六点课程后退会的，其中十二人退订。运营部现在已批准并拨款，从下个月起恢复每周一和周三下午六点的课程，名额足够所有人回来。
+  s1_zh_hk: >-
+    有八十人係喺健身室取消晏晝六點嘅堂之後退會，當中十二人退訂。營運部而家已經批准兼撥款，由下個月起恢復逢星期一同星期三晏晝六點嘅堂，名額夠晒所有人返嚟。
+  s2_en: >-
+    Thirty cited the monthly price, and six opted out. The contactable price leavers say the current class
+    times work for them.
+  s2_zh: 有三十人说月费太贵，其中六人退订。可以联系的价格原因退会者表示，现有的上课时间对他们合适。
+  s2_zh_hk: 有三十人話月費太貴，當中六人退訂。可以聯絡嘅價錢原因退會者話，現有嘅上堂時間啱佢哋。
+  s3_en: >-
+    Ten moved beyond practical travelling distance, and two opted out. The studio has no online service,
+    nearby partner or planned branch to offer them, and no experimental evidence about either email.
+  s3_zh: 有十人搬到了难以往返的地方，其中两人退订。健身房没有线上课程、附近的合作方或计划中的分店可以提供，对两种邮件也没有任何实验证据。
+  s3_zh_hk: 有十人搬咗去好難來回嘅地方，當中兩人退訂。健身室冇網上課程、附近合作夥伴或者計劃中嘅分店可以提供，對兩種電郵亦冇任何實驗證據。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Design each M branch
+  title_zh: 为 M 的每组设计邮件
+  title_zh_hk: 為 M 的每組設計電郵
+  en: >-
+    Calculate the contactable group sizes, and design M's message or no-message branch for each. Why does
+    D's discount alone miss the timetable issue? What would you measure before calling M profitable? Pause
+    and vote.
+  zh: >-
+    请算出每组可以联系的人数，为 M 的每一组设计相应的邮件，或者决定不发。为什么 D 单靠折扣，仍然对不准时间上的障碍？要说 M 有利可图，之前要先衡量什么？请暂停，投个票。
+  zh_hk: >-
+    請計出每組可以聯絡嘅人數，為 M 每一組設計相應嘅電郵，或者決定唔發。點解 D 淨係靠折扣，仍然對唔準時間上嘅障礙？要話 M 有錢賺，之前要先量度啲咩？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Start with who can be contacted
+  title_zh: 先算清可以联系谁
+  title_zh_hk: 先算清可以聯絡誰
+  step1_en: 68 timetable · 24 price · 8 moved
+  step1_zh: 时间 68 · 价格 24 · 搬迁 8
+  step1_zh_hk: 時間 68 · 價格 24 · 搬遷 8
+  step2_en: >-
+    Timetable leavers: 68%, not 80%
+  step2_zh: 时间原因：占 68%，不是 80%
+  step2_zh_hk: 時間原因：佔 68%，不是 80%
+  step3_en: M sends at most 92 emails
+  step3_zh: M 最多发 92 封
+  step3_zh_hk: M 最多發 92 封
+  s1_en: >-
+    Timetable: 80 minus 12 is 68. Price: 30 minus 6 is 24. Relocation: 10 minus 2 is 8. That is one hundred
+    authorised contacts, and the twenty opt-outs stay suppressed.
+  s1_zh: 时间原因：八十减十二，是六十八人。价格原因：三十减六，是二十四人。搬迁：十减二，是八人。合计一百人获准联系，二十名退订者仍然排除在外。
+  s1_zh_hk: 時間原因：八十減十二，係六十八人。價錢原因：三十減六，係二十四人。搬遷：十減二，係八人。加埋一百人獲准聯絡，二十個退訂嘅人仍然排除在外。
+  s2_en: >-
+    Timetable leavers are 68 percent of that authorised audience, not 80. These counts describe this fictional
+    cohort, not the fitness market.
+  s2_zh: 时间原因退会者占获准联系者的百分之六十八，不是百分之八十。这些只是虚构组别的数字，不代表健身市场。
+  s2_zh_hk: 時間原因退會者佔獲准聯絡者嘅百分之六十八，唔係百分之八十。呢啲只係虛構組別嘅數字，唔代表健身市場。
+  s3_en: >-
+    M can send one relevant email to each of the 68 and the 24, ninety-two at most, and none to the eight
+    who moved. A smaller send total is not itself evidence of higher effectiveness.
+  s3_zh: M 可以给六十八人和二十四人各发一封相关的邮件，最多九十二封；搬走的八人不发。发得少，本身并不证明效果更好。
+  s3_zh_hk: M 可以畀六十八人同二十四人各發一封相關嘅電郵，最多九十二封；搬走咗嗰八個唔發。發得少，本身唔證明效果好啲。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Match the barrier or send none
+  title_zh: 对准障碍，否则不发
+  title_zh_hk: 對準障礙，否則不發
+  step1_en: >-
+    Timetable: 6 pm returns Mon and Wed
+  step1_zh: 时间：周一、周三恢复 6 时课
+  step1_zh_hk: 時間：周一、周三恢復 6 時課
+  step2_en: >-
+    Price: HK$480 first month, then HK$600
+  step2_zh: 价格：首月 HK$480，之后 HK$600
+  step2_zh_hk: 價格：首月 HK$480，之後 HK$600
+  step3_en: >-
+    Moved: no email, no invented branch
+  step3_zh: 搬迁：不发，不编造分店
+  step3_zh_hk: 搬遷：不發，不編造分店
+  s1_en: >-
+    For timetable leavers, lead with the genuine change: 6 pm classes return on Mondays and Wednesdays
+    next month. Disclose the 600-dollar price, and do not claim a discount alone creates a feasible class.
+  s1_zh: 对时间原因退会者，要突出真正的改变：下个月起，周一和周三恢复下午六点的课程。同时说明月费六百元，不要宣称单靠折扣就能有合适的课。
+  s1_zh_hk: 對時間原因退會者，要突出真正嘅改變：下個月起，星期一同星期三恢復晏晝六點嘅堂。同時講明月費六百蚊，唔好話淨係靠折扣就有啱嘅堂。
+  s2_en: >-
+    For price leavers, offer the approved 480-dollar first month, with the later 600-dollar price and
+    fresh-purchase terms clear. A temporary reduction does not establish affordability after it ends.
+  s2_zh: 对价格原因退会者，可以提供已批准的首月四百八十元，并清楚列出之后的原价六百元和需要重新购买的条款。短期减价，不代表优惠结束后仍然负担得起。
+  s2_zh_hk: 對價錢原因退會者，可以提供已批准嘅第一個月四百八十蚊，再清楚列出之後原價六百蚊同要重新購買嘅條款。短期減價，唔代表優惠完咗之後仲負擔得起。
+  s3_en: >-
+    For the relocated, no message is the appropriate branch: do not invent an online class or nearby branch.
+    Records support a reason-matched hypothesis, not permanent labels.
+  s3_zh: 对搬走的人，最合适的做法就是不发：不要凭空编造线上课程或附近分店。这些记录只能支持按原因配对的假设，不应变成永久标签。
+  s3_zh_hk: 對搬走咗嘅人，最啱嘅做法就係唔發：唔好作個網上課程或者附近分店出嚟。呢啲紀錄只係支持按原因配對嘅假設，唔應該變成永久標籤。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Compare the campaigns honestly
+  title_zh: 如实比较整个方案
+  title_zh_hk: 如實比較整個方案
+  en: >-
+    M fits the supplied reasons better, but D is cheaper and can still link to the same schedule. The
+    restored timetable is a real service change under both plans, not a benefit of segmentation. M's extra
+    1,500 dollars and any 120-dollar discounts stay visible, and no data support a profit calculation.
+  zh: >-
+    M 更贴合题目给出的退会原因，但 D 准备成本较低，也可以附上同样的时间表链接。恢复课程是两个方案共有的实际服务改善，不是分组营销带来的好处。M 多花的一千五百元和每次一百二十元的折扣都要列明，现有数据也不足以计算利润。
+  zh_hk: >-
+    M 比較貼合題目畀嘅退會原因，但 D 準備成本平啲，亦可以附上同一個時間表連結。恢復堂係兩個方案都有嘅實際服務改善，唔係分組推廣帶嚟嘅好處。M 多使嘅一千五百蚊同每次一百二十蚊嘅折扣都要列明，現有數據亦唔夠計利潤。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: A return ≠ an incremental return
+  title_zh: 有人回来 ≠ 推广令人回来
+  title_zh_hk: 有人回來 ≠ 推廣令人回來
+  q1_en: Track returns and redemptions by reason
+  q1_zh: 按原因记录回流和兑现
+  q1_zh_hk: 按原因記錄回流和兌現
+  q2_en: Never multiply 92 by an invented rate
+  q2_zh: 别用 92 乘自创转化率
+  q2_zh_hk: 別用 92 乘自創轉化率
+  s1_en: >-
+    A click is not a renewed membership, and a return after an email is not necessarily caused by it:
+    the public timetable could attract people who were never contacted.
+  s1_zh: 点击不等于续会；收到邮件后回来的人，也不一定是邮件促成的，因为公开的新时间表本身就可能吸引没被联系过的人。
+  s1_zh_hk: 撳咗連結唔等於續會；收到電郵之後返嚟嘅人，亦唔一定係電郵促成，因為公開嘅新時間表本身都可能吸引冇被聯絡過嘅人。
+  s2_en: >-
+    A future authorised test could randomise versions or a no-email comparison within reason groups.
+  s2_zh: 日后如获授权，可以在同一原因组内随机比较不同版本，或设不发邮件的对照组。
+  s2_zh_hk: 日後如果有授權，可以喺同一原因組入面隨機比較唔同版本，或者設唔發電郵嘅對照組。
+  s3_en: >-
+    Harbour Step, its records and the campaign are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: Harbour Step、记录和推广方案都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: Harbour Step、紀錄同推廣方案都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

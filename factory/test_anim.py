@@ -2716,7 +2716,7 @@ class SceneRegistryTest(unittest.TestCase):
             [(12, 4, 3), (24, 6, 4), (18, 7, 5)],
         )
         self.assertEqual(labels_for(trios[2], "en")["values"], [18, 7, 5])
-        self.assertEqual(labels_for(trios[0], "zh")["title"], "先加个位")
+        self.assertEqual(labels_for(trios[0], "zh")["title"], "先个位，再十位")
         recap23 = twentythree["beats"][-1]
         self.assertEqual(
             labels_for(recap23, "en")["cues"],

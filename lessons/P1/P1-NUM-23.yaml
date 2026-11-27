@@ -90,13 +90,13 @@ beats:
   s1_en: Add two, then the last one.
   s1_zh: 先加两个，再加上最后一个。
   s1_zh_hk: 先加兩個，再加上最後一個。
-  s2_en: Twelve, four, and three make nineteen.
+  s2_en: They make nineteen.
   s2_zh: 十二、四和三是十九。
   s2_zh_hk: 十二、四同三係十九。
-  s3_en: Six and four make ten. Thirty-four.
+  s3_en: Six and four make ten.
   s3_zh: 六和四是十。三十四。
   s3_zh_hk: 六同四係十。三十四。
-  s4_en: Eighteen, seven, and five make thirty.
+  s4_en: They make thirty.
   s4_zh: 十八、七和五是三十。
   s4_zh_hk: 十八、七同五係三十。
   cues:

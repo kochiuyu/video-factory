@@ -1,8 +1,7 @@
 # P1-NUM-18. Mirrors MathQuiz path groups / lesson estimate,
 # "Estimate, then check".
-# A group of ten is the guide. Two groups look like about twenty.
-# Counting shows twenty-three, and twenty-three is about twenty.
-# The blocks are shown in full. There is no hidden-pile scene in the library.
+# A messy pile of 23. One ten is the guide, so the guess is about twenty.
+# The same counters then slide into two tens and three ones, and we count 23.
 # https://github.com/kochiuyu/mathquiz learn-data.js (path groups, lesson estimate).
 # Speech is for age 6: one short idea per sentence. The heading is answered on screen.
 id: P1-NUM-18
@@ -24,55 +23,20 @@ beats:
   s1_zh: 这里有一组十个。我们用十来估计，然后再数一数。
   s1_zh_hk: 呢度有一組十個。我哋用十嚟估計，然後再數一數。
 
-- id: guide
+- id: estimate
   visual: animated
-  scene: number_blocks
-  mode: tens
-  count: 10
-  rods_only: true
-  seconds: 12
-  s1_en: Ten.
-  s1_zh: 十。
-  s1_zh_hk: 十。
-  s2_en: One ten.
-  s2_zh: 一个十。
-  s2_zh_hk: 一個十。
-  s3_en: This group is ten. Ten helps us guess.
-  s3_zh: 这一组是十个。我们用这十个来估计。
-  s3_zh_hk: 呢一組係十個。我哋用呢十個嚟估計。
-
-- id: guess
-  visual: animated
-  scene: number_blocks
-  mode: tens
-  count: 20
-  rods_only: true
-  seconds: 12
-  s1_en: Ten, twenty.
-  s1_zh: 十，二十。
-  s1_zh_hk: 十，二十。
-  s2_en: Two tens.
-  s2_zh: 两个十。
-  s2_zh_hk: 兩個十。
-  s3_en: Two groups of ten. Our guess is about twenty.
-  s3_zh: 两组十个。我们估计大约是二十。
-  s3_zh_hk: 兩組十個。我哋估計大約係二十。
-
-- id: check
-  visual: animated
-  scene: number_blocks
-  mode: tens
+  scene: estimate_group
   count: 23
-  seconds: 12
-  s1_en: Ten, twenty.
-  s1_zh: 十，二十。
-  s1_zh_hk: 十，二十。
-  s2_en: Three ones.
-  s2_zh: 三个一。
-  s2_zh_hk: 三個一。
-  s3_en: We count twenty-three. Twenty-three is about twenty.
-  s3_zh: 我们数到二十三。二十三大约是二十。
-  s3_zh_hk: 我哋數到二十三。二十三大約係二十。
+  seconds: 36
+  s1_en: Look at this pile.
+  s1_zh: 看一看这一堆。
+  s1_zh_hk: 睇下呢一堆。
+  s2_en: One ten. About twenty.
+  s2_zh: 一个十。大约是二十。
+  s2_zh_hk: 一個十。大約係二十。
+  s3_en: Ten, twenty, twenty-one, twenty-two, twenty-three.
+  s3_zh: 十，二十，二十一，二十二，二十三。
+  s3_zh_hk: 十，二十，二十一，二十二，二十三。
 
 - id: takeaway
   visual: animated

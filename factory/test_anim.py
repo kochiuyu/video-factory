@@ -27,6 +27,7 @@ from scene_registry import (
     count_marks,
     crosses_ten,
     labels_for,
+    messy_spots,
     ordinal_visits,
     scene_problems,
     removal_marks,
@@ -1606,6 +1607,7 @@ class SceneRegistryTest(unittest.TestCase):
             [
                 "one_ten", "ten_and_ones", "make_ten", "count_objects", "number_track",
                 "ordinal_row", "pair_counters", "part_whole", "number_blocks",
+                "estimate_group",
                 "lesson_hook", "lesson_takeaway",
             ],
         )
@@ -1789,6 +1791,42 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertTrue(any("must not fall back to the default track" in msg for msg in messages))
         self.assertNotIn("cues", labels_for(bad, "en"))
 
+    def test_estimate_group_renders_the_pile_and_keeps_the_number_large(self):
+        """The new scene runs, and 23 stays at the shared label floor."""
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
+        from manim import tempconfig
+
+        from anim import _make_scene, prepare_fonts
+
+        prepare_fonts()
+        spec = {
+            "scene": "estimate_group",
+            "lang": "en",
+            "labels": {
+                "title": "About how many?",
+                "count": 23,
+                "tens": 2,
+                "ones": 3,
+                "guess": 20,
+            },
+        }
+        with tempconfig({
+            "pixel_width": 1920,
+            "pixel_height": 1080,
+            "frame_width": 8.0 * 16 / 9,
+            "frame_height": 8.0,
+            "frame_rate": 15,
+            "disable_caching": True,
+            "preview": False,
+        }):
+            scene = _make_scene(spec, [0.35, 0.45, 0.7], [[], [], []])
+            scene.render(preview=False)
+            unit = 1080 / 8.0
+            self.assertGreaterEqual(float(scene.vf_answer.height) * unit, 47)
+
     def test_takeaway_blocks_share_a_scale_and_comparisons_stay_apart(self):
         """Rods keep one size, a comparison's blocks match the number, and the ring clears both digits."""
         try:
@@ -1922,7 +1960,7 @@ class SceneRegistryTest(unittest.TestCase):
                 "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
             ],
             "P1-NUM-18": [
-                "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
+                "lesson_hook", "estimate_group", "lesson_takeaway",
             ],
         }
         for name, visuals in expected.items():
@@ -2356,21 +2394,30 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertIn("？", labels_for(recap, "zh")["title"])
         self.assertNotIn("?", labels_for(recap, "zh")["title"])
         self.assertNotIn("?", labels_for(recap, "zh_hk")["title"])
+        rods = {"scene": "number_blocks", "mode": "tens", "count": 10, "rods_only": True}
+        self.assertTrue(labels_for(rods, "en").get("rods_only"))
+        self.assertEqual(labels_for(rods, "en")["title"], "Tens and ones")
+        self.assertFalse(labels_for({"scene": "number_blocks", "mode": "tens", "count": 23}, "en").get("rods_only"))
         eighteen = load_lesson(P1 / "P1-NUM-18.yaml")
-        blocks = [beat for beat in eighteen["beats"] if beat.get("scene") == "number_blocks"]
-        self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])
-        self.assertEqual([b["count"] for b in blocks], [10, 20, 23])
-        self.assertTrue(blocks[0].get("rods_only"))
-        self.assertTrue(blocks[1].get("rods_only"))
-        self.assertFalse(blocks[2].get("rods_only"))
-        self.assertTrue(labels_for(blocks[0], "en").get("rods_only"))
-        self.assertFalse(labels_for(blocks[2], "en").get("rods_only"))
-        self.assertEqual(labels_for(blocks[0], "en")["title"], "Tens and ones")
-        self.assertEqual(labels_for(blocks[2], "en")["title"], "Tens and ones")
-        self.assertEqual(count_event(blocks[0]), (0, 1))
-        self.assertEqual(count_event(blocks[1]), (0, 2))
-        self.assertEqual(count_event(blocks[2]), (0, 2))
-        self.assertEqual(blocks[2]["s3_zh_hk"], "我哋數到二十三。二十三大約係二十。")
+        estimate = next(beat for beat in eighteen["beats"] if beat.get("scene") == "estimate_group")
+        self.assertEqual(estimate["count"], 23)
+        self.assertEqual(labels_for(estimate, "en")["guess"], 20)
+        self.assertEqual(labels_for(estimate, "en")["title"], "About how many?")
+        self.assertEqual(labels_for(estimate, "zh")["title"], "大约有多少个？")
+        self.assertEqual(labels_for(estimate, "zh_hk")["title"], "大約有幾多個呀？")
+        self.assertEqual(count_event(estimate), (2, 5))
+        self.assertEqual(scene_problems(estimate), [])
+        self.assertTrue(scene_problems(dict(estimate, count=20)))
+        self.assertTrue(scene_problems(dict(estimate, count=10)))
+        spots = messy_spots(23, 4.0, 3.0, 0.3)
+        self.assertEqual(len(spots), 23)
+        self.assertEqual(spots, messy_spots(23, 4.0, 3.0, 0.3))
+        for i, (x, y) in enumerate(spots):
+            self.assertLessEqual(abs(x), 2.01)
+            self.assertLessEqual(abs(y), 1.51)
+            for other in spots[i + 1:]:
+                self.assertGreaterEqual((x - other[0]) ** 2 + (y - other[1]) ** 2, 0.3 ** 2 - 1e-6)
+        self.assertEqual(estimate["s3_zh_hk"], "十，二十，二十一，二十二，二十三。")
         self.assertNotIn("嗎", _beat_lines(eighteen, "zh_hk"))
         self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in eighteen["beats"]).lower())
         recap18 = next(beat for beat in eighteen["beats"] if beat["id"] == "takeaway")

@@ -16,6 +16,7 @@ from cache import digest_obj, file_fingerprint
 from scene_registry import (
     label_lang,
     labels_for,
+    messy_spots,
     scene_problems,
     scene_spec,
     ordinal_visits,
@@ -3810,6 +3811,151 @@ def _scene_types() -> dict:
 
                 self.spend_each(2, [reveal_loose])
 
+    class EstimateGroup(_Board):
+        """A messy pile, one ten as the guide, then those counters as rods and ones."""
+
+        def construct(self):
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            count = int(labels.get("count") or 23)
+            tens, ones = divmod(count, 10)
+            ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+            pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
+            portrait = ph > pw
+            left, right, bot, top = _safe_limits()
+            max_w = (right - left) * 0.94
+            max_h = (top - bot) * 0.92
+            cx = (left + right) / 2.0
+            radius = 0.12 if portrait else 0.15
+
+            def number(text):
+                glyph = styled(str(text), latin, cjk, 64)
+                target = _ordinal_label_height()
+                if float(glyph.height) > 0:
+                    glyph.scale(target / float(glyph.height))
+                return glyph
+
+            title = number(labels.get("title") or "")
+            if float(title.width) > max_w:
+                title.scale(max_w / float(title.width))
+            guide_num = number("10")
+            guess_num = number(str(tens * 10))
+            final_num = number(str(count))
+            self.vf_answer = final_num
+
+            dots = VGroup(*[counter(GREEN, radius) for _ in range(count)])
+            for dot in dots:
+                dot.set_z_index(4)
+            cell = 0.36 if portrait else 0.46
+            frame = VGroup()
+            for _ in range(10):
+                box = RoundedRectangle(
+                    width=cell, height=cell, corner_radius=0.08,
+                    stroke_color=NAVY, stroke_width=3, fill_color=WHITE, fill_opacity=1,
+                )
+                box.set_z_index(1)
+                frame.add(box)
+            frame.arrange_in_grid(rows=2, cols=5, buff=0.06)
+            rod_h = 0.92 if portrait else 1.12
+            rods = VGroup()
+            for _ in range(tens):
+                rod = RoundedRectangle(
+                    width=0.42, height=rod_h, corner_radius=0.08,
+                    stroke_color=NAVY, stroke_width=3, fill_color=GREEN, fill_opacity=1,
+                )
+                rod.set_z_index(2)
+                rods.add(rod)
+            rods.arrange(RIGHT, buff=0.14)
+            cube_r = min(0.15, rod_h * 0.16)
+            cubes = VGroup(*[counter(GOLD, cube_r) for _ in range(ones)])
+            for cube in cubes:
+                cube.set_z_index(4)
+            cubes.arrange(RIGHT, buff=0.1)
+            checked = VGroup(rods, cubes).arrange(DOWN, buff=0.18)
+            if float(checked.width) > max_w:
+                checked.scale(max_w / float(checked.width))
+
+            title.move_to([cx, top - float(title.height) / 2.0 - 0.06, 0])
+            checked.move_to([cx, (bot + top) / 2.0 + 0.15, 0])
+            final_num.next_to(checked, DOWN, buff=0.2)
+            if portrait:
+                frame.next_to(title, DOWN, buff=0.18)
+            else:
+                frame.move_to([left + float(frame.width) / 2.0 + 0.15, (bot + top) / 2.0 + 0.25, 0])
+            guide_num.next_to(frame, DOWN, buff=0.14)
+            guess_num.next_to(guide_num, RIGHT, buff=0.32)
+            if float(guess_num.get_right()[0]) > right:
+                guess_num.next_to(guide_num, DOWN, buff=0.1)
+
+            pile_w = max_w * (0.72 if portrait else 0.48)
+            pile_h = max_h * (0.46 if portrait else 0.62)
+            pile = messy_spots(count, pile_w, pile_h, radius * 2.45)
+            for dot, (x, y) in zip(dots, pile):
+                dot.move_to([cx + x, (bot + top) / 2.0 + y, 0])
+
+            rest_w = max(radius * 4, (right - float(frame.get_right()[0]) - 0.45) if not portrait else max_w * 0.8)
+            rest_h = max_h * (0.28 if portrait else 0.42)
+            rest = messy_spots(max(0, count - 10), rest_w, rest_h, radius * 2.35)
+            if portrait:
+                anchor_y = float(guide_num.get_bottom()[1]) - 0.28 - rest_h / 2.0
+                anchor_x = cx
+            else:
+                anchor_x = float(frame.get_right()[0]) + 0.35 + rest_w / 2.0
+                anchor_y = float(frame.get_center()[1])
+            rest_at = [(anchor_x + x, anchor_y + y) for x, y in rest]
+            if rest_at:
+                low = min(y for _x, y in rest_at)
+                if low < bot + radius:
+                    lift = bot + radius - low
+                    rest_at = [(x, y + lift) for x, y in rest_at]
+            top_dot = max(float(dot.get_top()[1]) for dot in dots)
+            if top_dot > float(title.get_bottom()[1]) - 0.08:
+                dots.shift(DOWN * (top_dot - float(title.get_bottom()[1]) + 0.14))
+            frame_at = [box.get_center().copy() for box in frame]
+
+            for mob in (frame, rods, cubes, guide_num, guess_num, final_num):
+                mob.set_opacity(0)
+            self.add(title, dots, frame, rods, cubes, guide_num, guess_num, final_num)
+            title.set_opacity(0)
+            self.spend(0, FadeIn(title), FadeIn(dots))
+            gather = [dots[i].animate.move_to(frame_at[i]) for i in range(min(10, count))]
+            for j, spot in enumerate(rest_at):
+                gather.append(dots[10 + j].animate.move_to([spot[0], spot[1], 0]))
+            self.spend(1, FadeIn(frame), FadeIn(guide_num), FadeIn(guess_num), AnimationGroup(*gather))
+
+            def hop_bundle(index):
+                def play(index=index):
+                    start = index * 10
+                    centre = rods[index].get_center()
+                    moves = [
+                        dots[start + k].animate.move_to(centre).set_opacity(0)
+                        for k in range(10)
+                    ]
+                    shown = [rods[index].animate.set_opacity(1)]
+                    if index == 0:
+                        shown.extend([
+                            frame.animate.set_opacity(0),
+                            guide_num.animate.set_opacity(0),
+                            guess_num.animate.set_opacity(0),
+                        ])
+                    return AnimationGroup(*moves, *shown)
+                return play
+
+            def hop_one(j):
+                def play(j=j):
+                    centre = cubes[j].get_center()
+                    shown = [
+                        dots[tens * 10 + j].animate.move_to(centre).set_opacity(0),
+                        cubes[j].animate.set_opacity(1),
+                    ]
+                    if j == ones - 1:
+                        shown.append(final_num.animate.set_opacity(1))
+                    return AnimationGroup(*shown)
+                return play
+
+            hops = [hop_bundle(i) for i in range(tens)] + [hop_one(j) for j in range(ones)]
+            self.spend_marked(2, hops, self.marks_for(2))
+
     _scene_types._cache = {
         "one_ten": OneTen,
         "ten_and_ones": TenAndOnes,
@@ -3820,6 +3966,7 @@ def _scene_types() -> dict:
         "pair_counters": PairCounters,
         "part_whole": PartWhole,
         "number_blocks": NumberBlocks,
+        "estimate_group": EstimateGroup,
         "lesson_hook": LessonHook,
         "lesson_takeaway": LessonTakeaway,
     }

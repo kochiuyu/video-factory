@@ -20,9 +20,9 @@ beats:
   title_en: Count in twos
   title_zh: 两个两个数
   title_zh_hk: 兩個兩個數
-  s1_en: How many counters are in four pairs? Let us count in twos.
-  s1_zh: 四对有多少个圆片？我们两个两个数。
-  s1_zh_hk: 四對有幾多個圓片呀？我哋兩個兩個數。
+  s1_en: How many counters are in four pairs? Let us count in twos. We will say how many.
+  s1_zh: 四对有多少个圆片？我们两个两个数。我们把个数说出来。
+  s1_zh_hk: 四對有幾多個圓片呀？我哋兩個兩個數。我哋將個數講出嚟。
 
 - id: four
   visual: animated
@@ -54,9 +54,9 @@ beats:
   s2_en: Two, four, six, eight, ten, twelve.
   s2_zh: 二，四，六，八，十，十二。
   s2_zh_hk: 二，四，六，八，十，十二。
-  s3_en: Twelve is the counters. Six is the pairs.
-  s3_zh: 十二是圆片。六是对数。
-  s3_zh_hk: 十二係圓片。六係對數。
+  s3_en: Twelve is the counters. Six is the pairs. Count the counters.
+  s3_zh: 十二是圆片。六是对数。数的是圆片。
+  s3_zh_hk: 十二係圓片。六係對數。數嘅係圓片。
 
 - id: loose
   visual: animated

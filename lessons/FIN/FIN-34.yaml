@@ -1,0 +1,281 @@
+id: FIN-34
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A guaranteed loan. Whose future cash?
+title_zh: 一笔担保贷款。未来的现金是谁的？
+title_zh_hk: 一筆擔保貸款。未來的現金是誰的？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-34
+  kicker_en: FIN-34
+  kicker_zh: FIN-34
+  kicker_zh_hk: FIN-34
+  title_en: A guaranteed loan. Whose future cash?
+  title_zh: 一笔担保贷款。未来的现金是谁的？
+  title_zh_hk: 一筆擔保貸款。未來的現金是誰的？
+  image: art/guaranteed-loan-future-cash-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A loan guarantee can require a future payment even when no cash leaves the guarantor today. Financial
+    education stresses the scope and affordability of that promise, and liquidity guidance looks at demands
+    that arrive together. Now you advise a fictional Hong Kong packaging business.
+  zh: >-
+    贷款担保即使今天不用付钱，将来也可能要求担保人付款。金融教育强调要看清这项承诺的范围，以及付不付得起；流动性指引则关注几笔付款同时到来的情况。现在，你要为香港一家虚构的包装企业出主意。
+  zh_hk: >-
+    貸款擔保就算今日唔使俾錢，將來都可能要擔保人俾錢。金融教育強調要睇清楚呢個承諾嘅範圍，同埋俾唔俾得起；流動性指引就會留意幾筆要付嘅錢同時嚟嘅情況。而家，你要幫香港一間虛構嘅包裝企業出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Initial month-3 forecast
+  title_zh: 第 3 个月的初步预测
+  title_zh_hk: 第 3 個月的初步預測
+  row1_en: Strong · no call
+  row1_zh: 销售强 · 未触发
+  row1_zh_hk: 銷售強 · 未觸發
+  row2_en: Strong · call
+  row2_zh: 销售强 · 触发
+  row2_zh_hk: 銷售強 · 觸發
+  row3_en: Weak · no call
+  row3_zh: 销售弱 · 未触发
+  row3_zh_hk: 銷售弱 · 未觸發
+  col1_en: Probability
+  col1_zh: 概率
+  col1_zh_hk: 機率
+  col2_en: Cash before call
+  col2_zh: 触发前现金
+  col2_zh_hk: 觸發前現金
+  col3_en: Call
+  col3_zh: 担保付款
+  col3_zh_hk: 擔保付款
+  c11: 50%
+  c12: 180,000
+  c13: '0'
+  c21: 25%
+  c22: 180,000
+  c23: 100,000
+  c31: 25%
+  c32: 60,000
+  c33: '0'
+  footer_en: Keep ≥ HK$40,000 after any call
+  footer_zh: 付款后须留 ≥ HK$40,000
+  footer_zh_hk: 付款後須留 ≥ HK$40,000
+  s1_en: >-
+    A supplier asks the business to guarantee a loan. Nothing is signed. The board can keep it under review,
+    option A, or decline it, option B. Your task is the liquidity screen, not contract approval.
+  s1_zh: >-
+    一家供应商请这家企业为一笔贷款做担保，目前什么都还没签。董事会可以继续研究，也就是A；也可以拒绝，也就是B。你的任务是做流动性筛选，不是批准合同。
+  s1_zh_hk: 一間供應商請呢間企業幫一筆貸款做擔保，而家乜都未簽。董事會可以繼續研究，即係A；亦可以拒絕，即係B。你嘅任務係做流動性篩選，唔係批准合約。
+  s2_en: >-
+    The loan goes to the supplier, and there is no fee. If the supplier cannot pay at the end of month
+    three, the business must pay exactly 100,000 dollars that day, all in. Otherwise it pays nothing.
+  s2_zh: 贷款是给供应商的，也没有担保费。如果供应商在第三个月月末还不了款，企业当天就要付正好十万港元，所有费用都包括在内；否则一分钱都不用付。
+  s2_zh_hk: 貸款係俾供應商嘅，亦冇擔保費。如果供應商喺第三個月月尾還唔到錢，企業當日就要俾足十萬港元，所有費用都計埋；否則一蚊都唔使俾。
+  s3_en: >-
+    Cash just before any call is 180,000 dollars with strong sales or 60,000 with weak sales. The board
+    needs at least 40,000 left in every outcome. This first forecast assumes weak sales and a call never
+    coincide.
+  s3_zh: >-
+    担保被触发之前，销售强时有十八万港元可用，销售弱时只有六万。董事会要求每一种结果都至少留下四万。这份初步预测假设，销售弱和担保被触发不会同时发生。
+  s3_zh_hk: >-
+    擔保觸發之前，銷售強嗰陣有十八萬港元可以用，銷售弱就得六萬。董事會要求每一個結果都最少留低四萬。呢份初步預測假設，銷售弱同擔保觸發唔會同時發生。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Does A pass the first screen?
+  title_zh: A 能通过初筛吗？
+  title_zh_hk: A 能通過初篩嗎？
+  en: >-
+    Calculate cash after the guarantee in each row and the expected payment. Does A pass the initial screen,
+    and would passing alone justify the guarantee? Pause and vote.
+  zh: 算出每一行担保付款之后剩下的现金，以及预期付款。A能通过初步筛选吗？光是通过筛选，就足以支持做担保吗？请暂停，投个票。
+  zh_hk: 計出每一行擔保付款之後剩低嘅現金，同預期付款。A過唔過到初步篩選？淨係過到篩選，就夠支持做擔保嗎？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The forecast is corrected
+  title_zh: 预测修正了
+  title_zh_hk: 預測修正了
+  step1_en: Same order cycle for both firms
+  step1_zh: 两家企业依赖同一订单周期
+  step1_zh_hk: 兩家企業依賴同一訂單周期
+  step2_en: >-
+    75%: strong sales, no call
+  step2_zh: 75%：销售强，未触发
+  step2_zh_hk: 75%：銷售強，未觸發
+  step3_en: >-
+    25%: weak sales and the call
+  step3_zh: 25%：销售弱，同时触发
+  step3_zh_hk: 25%：銷售弱，同時觸發
+  s1_en: >-
+    The team corrects the forecast. The business and its supplier depend on the same event-order cycle.
+  s1_zh: 团队修正了预测。这家企业和它的供应商，依赖的是同一个活动订单周期。
+  s1_zh_hk: 團隊修正咗預測。呢間企業同佢嘅供應商，靠嘅係同一個活動訂單周期。
+  s2_en: >-
+    Now there is a 75 percent chance of strong sales with no call, and a 25 percent chance of weak sales
+    with the full 100,000-dollar call.
+  s2_zh: 现在有百分之七十五的机会，销售强、担保不被触发；有百分之二十五的机会，销售弱，同时要付足十万港元。
+  s2_zh_hk: 而家有百分之七十五機會，銷售強、擔保唔觸發；有百分之二十五機會，銷售弱，同時要俾足十萬港元。
+  s3_en: >-
+    Each chance on its own is still 25 percent. What changes is that the call now arrives exactly when
+    cash is only 60,000. No bridge financing has been arranged.
+  s3_zh: 两件事各自的概率仍然是百分之二十五。变的是：担保付款现在正好在现金只有六万的时候到来。也没有安排任何过渡融资。
+  s3_zh_hk: 兩件事各自嘅機率仍然係百分之二十五。變咗嘅係：擔保付款而家啱啱喺現金得六萬嘅時候嚟。亦冇安排任何過渡融資。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Does A still pass?
+  title_zh: A 还能通过吗？
+  title_zh_hk: A 還能通過嗎？
+  en: >-
+    Compare the expected payment and expected cash with the first model, then find the shortfall in the
+    weak outcome. What maximum guarantee would keep 40,000 dollars, if a lender agreed? Pause and vote.
+  zh: 和第一个模型比较预期付款和预期现金，再算出销售弱时的缺口。如果贷款人另外同意，担保上限最多多少，才能保住四万？请暂停，投个票。
+  zh_hk: 同第一個模型比較預期付款同預期現金，再計出銷售弱嗰陣嘅缺口。如果貸款人另外同意，擔保上限最多幾多，先保得住四萬？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Same averages, different ability
+  title_zh: 平均数相同，付款能力不同
+  title_zh_hk: 平均數相同，付款能力不同
+  step1_en: Expected call 25,000 in both
+  step1_zh: 两种预测的预期付款都是 25,000
+  step1_zh_hk: 兩種預測的預期付款都是 25,000
+  step2_en: >-
+    First screen: lowest cash 60,000
+  step2_zh: 初步筛选：最少剩 60,000
+  step2_zh_hk: 初步篩選：最少剩 60,000
+  step3_en: >-
+    Revised: 60,000 − 100,000 = −40,000
+  step3_zh: 修正后：60,000 − 100,000 = −40,000
+  step3_zh_hk: 修正後：60,000 − 100,000 = −40,000
+  s1_en: >-
+    The expected payment is 25 percent of 100,000, or 25,000 dollars, in both models. But the actual payment
+    is either zero or 100,000, never 25,000.
+  s1_zh: 两个模型的预期付款都是十万的百分之二十五，也就是两万五千港元。但实际付款不是零就是十万，永远不会是两万五千。
+  s1_zh_hk: 兩個模型嘅預期付款都係十萬嘅百分之二十五，即係兩萬五千港元。但實際付款唔係零就係十萬，永遠唔會係兩萬五千。
+  s2_en: >-
+    Initially, A leaves 180,000, 80,000 or 60,000, all at least 40,000. It passes the first screen, which
+    only allows further review, not signing.
+  s2_zh: 起初，A在三种结果下分别剩下十八万、八万和六万，都不少于四万，所以通过了初步筛选。但这只代表可以继续研究，不代表可以签。
+  s2_zh_hk: 起初，A喺三個結果分別剩十八萬、八萬同六萬，全部都唔少過四萬，所以過到初步篩選。但咁只代表可以繼續研究，唔代表可以簽。
+  s3_en: >-
+    After the correction, the weak outcome gives 60,000 minus 100,000, a 40,000-dollar deficit. Expected
+    cash afterwards is still 125,000, yet A now fails the screen.
+  s3_zh: 修正之后，销售弱时是六万减十万，缺口四万港元。付款后的预期现金仍然是十二万五千，但A已经通不过筛选了。
+  s3_zh_hk: 修正之後，銷售弱嗰陣係六萬減十萬，差四萬港元。付款後嘅預期現金仍然係十二萬五千，但A已經過唔到篩選。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: A conditional ceiling
+  title_zh: 有条件的上限
+  title_zh_hk: 有條件的上限
+  step1_en: >-
+    Gap with protected cash: 80,000
+  step1_zh: 连保留现金在内缺 80,000
+  step1_zh_hk: 連保留現金在內缺 80,000
+  step2_en: >-
+    Ceiling: 60,000 − G ≥ 40,000
+  step2_zh: 上限：60,000 − G ≥ 40,000
+  step2_zh_hk: 上限：60,000 − G ≥ 40,000
+  step3_en: G at most 20,000, not offered
+  step3_zh: G 最多 20,000，并无此报价
+  step3_zh_hk: G 最多 20,000，並無此報價
+  s1_en: >-
+    Paying the call and keeping the protected 40,000 needs 140,000 dollars. With only 60,000 available,
+    the gap is 80,000. Using the protected money still would not cover the call.
+  s1_zh: 既要付担保款，又要留下受保护的四万，就需要十四万港元。现在只有六万，缺口是八万。就算动用受保护的钱，也付不清这笔担保款。
+  s1_zh_hk: 又要俾擔保款，又要留低受保護嘅四萬，就要十四萬港元。而家得六萬，差八萬。就算動用受保護嗰筆錢，都俾唔晒擔保款。
+  s2_en: >-
+    Let G be the guarantee cap. In the weak outcome, 60,000 minus G must be at least 40,000, so G can
+    be at most 20,000 dollars.
+  s2_zh: 设担保上限为G。销售弱时，六万减G至少要等于四万，所以G最多只能是两万港元。
+  s2_zh_hk: 設擔保上限係G。銷售弱嗰陣，六萬減G最少要等於四萬，所以G最多只可以係兩萬港元。
+  s3_en: >-
+    A smaller cap is only a negotiation idea. The lender has not offered it, and any new terms would need
+    a new analysis.
+  s3_zh: 更低的上限只是一个可以谈判的想法。贷款人并没有提出，任何新条款都要重新分析。
+  s3_zh_hk: 低啲嘅上限只係一個可以傾嘅諗法。貸款人冇提出過，任何新條款都要重新分析。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Decline the current proposal
+  title_zh: 拒绝当前这份提议
+  title_zh_hk: 拒絕當前這份提議
+  en: >-
+    Decline the unchanged 100,000-dollar guarantee under the revised screen. Declining leaves 180,000
+    or 60,000, both above the protected balance. The decisive question is when a call arrives relative
+    to the guarantor's own cash.
+  zh: >-
+    按修正后的筛选，应该拒绝这份不变的十万港元担保。拒绝之后，企业会剩下十八万或六万，都高于受保护的余额。关键问题是：担保付款在什么时候来，和担保人自己的现金是什么关系。
+  zh_hk: >-
+    按修正後嘅篩選，應該拒絕呢份冇變嘅十萬港元擔保。拒絕之後，企業會剩十八萬或者六萬，都高過受保護嘅餘額。關鍵問題係：擔保付款幾時嚟，同擔保人自己嘅現金有咩關係。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: A guarantee is future cash
+  title_zh: 担保是未来的现金
+  title_zh_hk: 擔保是未來的現金
+  q1_en: Test the call in the weak outcome
+  q1_zh: 在最弱的结果里测试付款
+  q1_zh_hk: 在最弱的結果裡測試付款
+  q2_en: Averages hide joint downsides
+  q2_zh: 平均数会掩盖同时发生的下行
+  q2_zh_hk: 平均數會掩蓋同時發生的下行
+  s1_en: >-
+    Paying nothing today does not mean no exposure. What matters is whether the guarantor can pay when
+    the call actually comes.
+  s1_zh: 今天不用付钱，不等于没有风险敞口。关键是担保真的被触发时，担保人付不付得起。
+  s1_zh_hk: 今日唔使俾錢，唔等於冇風險。關鍵係擔保真係觸發嗰陣，擔保人俾唔俾得起。
+  s2_en: >-
+    This is not a loan recommendation or advice on guarantee law; any real contract needs professional
+    review.
+  s2_zh: 这不是贷款建议，也不是担保法律意见；任何真实合同都需要专业人士审阅。
+  s2_zh_hk: 呢個唔係貸款建議，亦唔係擔保法律意見；任何真實合約都要專業人士睇過。
+  s3_en: >-
+    The business, guarantee terms and probabilities are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 企业、担保条款和概率都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 企業、擔保條款同機率都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

@@ -1,0 +1,282 @@
+id: FIN-39
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A reward for early repayment. After which fee?
+title_zh: 提前还款有奖励。要看哪一笔费用？
+title_zh_hk: 提早還款有獎勵。要看哪一筆費用？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-39
+  kicker_en: FIN-39
+  kicker_zh: FIN-39
+  kicker_zh_hk: FIN-39
+  title_en: A reward for early repayment. After which fee?
+  title_zh: 提前还款有奖励。要看哪一笔费用？
+  title_zh_hk: 提早還款有獎勵。要看哪一筆費用？
+  image: art/early-repayment-after-which-fee-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Repaying a loan early can avoid interest, but a settlement fee and the return given up on cash also
+    matter. Compare complete cash flows on a common date. Repaying borrowed principal settles an existing
+    obligation; it is not a saving in itself. Now you advise a fictional Hong Kong business.
+  zh: >-
+    提前还贷可以省下利息，但结清费用和现金本来能赚的回报也要算进去。要在同一个日期比较完整的现金流。归还借来的本金，是清偿已有的债务，本身并不是节省。现在，你要为香港一家虚构的企业出主意。
+  zh_hk: >-
+    提早還貸可以慳返利息，但清還費用同現金本來賺到嘅回報都要計埋。要喺同一個日子比較完整嘅現金流。還返借咗嘅本金，係清還已經有嘅債，本身唔係慳錢。而家，你要幫香港一間虛構嘅企業出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Settle now or on day 30?
+  title_zh: 今天结清，还是第 30 日？
+  title_zh_hk: 今天清還，還是第 30 日？
+  row1_en: >-
+    N: today
+  row1_zh: N：今天
+  row1_zh_hk: N：今天
+  row2_en: >-
+    W: day 30
+  row2_zh: W：第 30 日
+  row2_zh_hk: W：第 30 日
+  row3_en: Cash today
+  row3_zh: 今天现金
+  row3_zh_hk: 今天現金
+  col1_en: Payment
+  col1_zh: 付款
+  col1_zh_hk: 付款
+  col2_en: Fee
+  col2_zh: 结清费
+  col2_zh_hk: 清還費
+  c11: 100,000
+  c12: 3,000
+  c21_en: 100,000 + 1,000 interest
+  c21_zh: 100,000 + 1,000 利息
+  c21_zh_hk: 100,000 + 1,000 利息
+  c22_en: 3,000? verify
+  c22_zh: 3,000？待核实
+  c22_zh_hk: 3,000？待核實
+  c31: 104,000
+  c32_en: Earns 0.2% to day 30
+  c32_zh: 到第 30 日赚 0.2%
+  c32_zh_hk: 到第 30 日賺 0.2%
+  footer_en: Compare cash left after day 30
+  footer_zh: 比较第 30 日之后剩下的现金
+  footer_zh_hk: 比較第 30 日之後剩下的現金
+  s1_en: >-
+    The business owes 100,000 dollars on a fixed-rate loan. Interest of 1,000 is due every thirty days,
+    and the last payment has just cleared.
+  s1_zh: 这家企业有一笔固定利率贷款，还欠十万港元。每三十天要付一千利息，上一期刚刚付清。
+  s1_zh_hk: 呢間企業有一筆定息貸款，仲欠十萬港元。每三十日要俾一千利息，上一期啱啱俾清。
+  s2_en: >-
+    It can settle fully today, option N, or pay the next 1,000 of interest and settle on day 30, option
+    W. It has exactly 104,000 dollars available, and any cash kept earns 0.2 percent over thirty days.
+  s2_zh: >-
+    它可以今天就全部结清，这是N；也可以先付下一期一千利息，到第三十日才结清，这是W。现在正好有十万四千港元可用，留着的现金三十天可以赚百分之零点二。
+  s2_zh_hk: >-
+    佢可以今日就全部清還，即係N；亦可以先俾下一期一千利息，到第三十日先清還，即係W。而家啱啱有十萬四千港元可以用，留住嘅現金三十日賺到百分之零點二。
+  s3_en: >-
+    Today's settlement fee is confirmed at 3,000 dollars. The manager assumes the same fee on day 30,
+    but has not checked the dated schedule.
+  s3_zh: 今天结清的费用确定是三千港元。财务经理假设第三十日也是同样的费用，但还没核对按日期列出的收费表。
+  s3_zh_hk: 今日清還嘅費用確定係三千港元。財務經理假設第三十日都係同樣嘅費用，但未核對按日期列出嘅收費表。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Settle now or wait?
+  title_zh: 现在结清，还是等一等？
+  title_zh_hk: 現在清還，還是等一等？
+  en: >-
+    If the fee is 3,000 on either date, which choice leaves more cash right after day 30? Include the
+    return on cash left after repaying today. What detail must be verified before acting? Pause and vote.
+  zh: >-
+    如果两个日期的结清费都是三千，哪个选择在第三十日之后剩下的现金更多？今天还款后剩下的现金也有回报，要算进去。行动之前必须核对哪一项细节？请暂停，投个票。
+  zh_hk: >-
+    如果兩個日子嘅清還費都係三千，邊個選擇喺第三十日之後剩低嘅現金多啲？今日還完錢剩低嘅現金都有回報，要計埋。行動之前一定要核對邊一項細節？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The fee schedule is checked
+  title_zh: 核对了收费表
+  title_zh_hk: 核對了收費表
+  step1_en: >-
+    Day-30 fee: HK$500
+  step1_zh: 第 30 日的费用：HK$500
+  step1_zh_hk: 第 30 日的費用：HK$500
+  step2_en: >-
+    Today's fee: still HK$3,000
+  step2_zh: 今天的费用：仍是 HK$3,000
+  step2_zh_hk: 今天的費用：仍是 HK$3,000
+  step3_en: Waiting still costs HK$1,000 interest
+  step3_zh: 等待仍要付 HK$1,000 利息
+  step3_zh_hk: 等待仍要付 HK$1,000 利息
+  s1_en: >-
+    The lender's verified schedule shows a contractual fee reset. Full settlement on day 30 costs only
+    500 dollars.
+  s1_zh: 贷款人核实过的收费表显示，合同约定费用会重设。第三十日全部结清，只要五百港元。
+  s1_zh_hk: 貸款人核實過嘅收費表顯示，合約講明費用會重設。第三十日全部清還，只要五百港元。
+  s2_en: >-
+    Today's fee is still 3,000. This is a fee reset, not an interest-rate reset.
+  s2_zh: 今天结清的费用仍然是三千。这是费用重设，不是利率重设。
+  s2_zh_hk: 今日清還嘅費用仍然係三千。呢個係費用重設，唔係利率重設。
+  s3_en: >-
+    Waiting still requires the next 1,000 dollars of interest. Everything else, including the 0.2 percent
+    return, is unchanged.
+  s3_zh: 等到第三十日，仍然要付下一期一千港元利息。其他条件，包括百分之零点二的回报，都不变。
+  s3_zh_hk: 等到第三十日，仍然要俾下一期一千港元利息。其他條件，包括百分之零點二嘅回報，都冇變。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep or change the date?
+  title_zh: 维持还是改日期？
+  title_zh_hk: 維持還是改日期？
+  en: >-
+    Recalculate both day-30 balances and the advantage of waiting. Separate the fee cut, the extra loan
+    interest and the extra deposit interest. What day-30 fee would make them tie? Pause and vote.
+  zh: >-
+    重新算出两种做法在第三十日的余额，以及等待的好处。把费用减少、多付的贷款利息和多赚的存款利息分开。第三十日的费用是多少时，两者打平？请暂停，投个票。
+  zh_hk: >-
+    重新計出兩種做法喺第三十日嘅餘額，同等嘅好處。將費用減少、多俾嘅貸款利息同多賺嘅存款利息分開。第三十日嘅費用係幾多，兩樣先打和？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Carry both to day 30
+  title_zh: 把两者都推到第 30 日
+  title_zh_hk: 把兩者都推到第 30 日
+  step1_en: >-
+    N: 1,000 left → 1,002
+  step1_zh: N：剩 1,000 → 1,002
+  step1_zh_hk: N：剩 1,000 → 1,002
+  step2_en: >-
+    W at 3,000 fee: 208 left
+  step2_zh: W（费用 3,000）：剩 208
+  step2_zh_hk: W（費用 3,000）：剩 208
+  step3_en: >-
+    W at 500 fee: 2,708 left
+  step3_zh: W（费用 500）：剩 2,708
+  step3_zh_hk: W（費用 500）：剩 2,708
+  s1_en: >-
+    N pays 100,000 plus the 3,000 fee today, leaving 1,000. That earns 2 dollars, so N has 1,002 after
+    day 30. Always compare both choices on the same date.
+  s1_zh: N今天付十万本金加三千费用，剩下一千。这一千赚两港元，所以N在第三十日后有一千零二。两个选择一定要放在同一个日期比较。
+  s1_zh_hk: N今日俾十萬本金加三千費用，剩一千。呢一千賺兩蚊，所以N喺第三十日後有一千零二。兩個選擇一定要放喺同一個日子比較。
+  s2_en: >-
+    Under the first assumption, W keeps 104,000, earns 208, then pays 104,000 in total. It is left with
+    208, so N is 794 dollars ahead.
+  s2_zh: 按起初的假设，W留着十万四千，赚两百零八，然后一共付十万四千，只剩两百零八，所以N多七百九十四港元。
+  s2_zh_hk: 按起初嘅假設，W留住十萬四千，賺二百零八，之後總共俾十萬四千，淨係剩二百零八，所以N多七百九十四港元。
+  s3_en: >-
+    With the verified 500-dollar fee, W pays 101,500 and keeps 2,708. Now waiting leaves 1,706 dollars
+    more, so choose W.
+  s3_zh: 按核实后的五百港元费用，W一共付十万一千五百，剩下两千七百零八。现在等待能多留一千七百零六港元，所以应该选W。
+  s3_zh_hk: 按核實後五百港元嘅費用，W總共俾十萬一千五百，剩兩千七百零八。而家等多陣可以多留一千七百零六港元，所以應該揀W。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Reconcile and find the boundary
+  title_zh: 对账，再找临界点
+  title_zh_hk: 對賬，再找臨界點
+  step1_en: 2,500 − 1,000 + 206 = 1,706
+  step1_zh: 2,500 − 1,000 + 206 = 1,706
+  step1_zh_hk: 2,500 − 1,000 + 206 = 1,706
+  step2_en: Principal is 100,000 either way
+  step2_zh: 两种做法本金都是 100,000
+  step2_zh_hk: 兩種做法本金都是 100,000
+  step3_en: Tie when the day-30 fee is 2,206
+  step3_zh: 第 30 日费用 2,206 时打平
+  step3_zh_hk: 第 30 日費用 2,206 時打平
+  s1_en: >-
+    Waiting cuts the fee by 2,500, adds 1,000 of loan interest and earns 206 more deposit interest. That
+    gives the 1,706 advantage.
+  s1_zh: 等待让费用少了两千五，多付一千贷款利息，多赚两百零六存款利息。合起来就是一千七百零六的好处。
+  s1_zh_hk: 等嘅話費用少咗兩千五，多俾一千貸款利息，多賺二百零六存款利息。加埋就係一千七百零六嘅好處。
+  s2_en: >-
+    The principal is 100,000 in both choices. Early payment does not save 100,000, and adding a principal
+    saving would double-count it.
+  s2_zh: 两种选择的本金都是十万。提前还款并没有省下十万，再另外加一笔本金节省，就会重复计算。
+  s2_zh_hk: 兩個選擇嘅本金都係十萬。提早還款冇慳到十萬，再另外加一筆本金慳錢，就會重複計算。
+  s3_en: >-
+    Let F be the day-30 fee. Waiting leaves 3,208 minus F, which equals 1,002 when F is 2,206. Waiting
+    wins below that fee and loses above it.
+  s3_zh: 设第三十日的费用为F。等待剩下三千二百零八减F，当F是两千二百零六时，就等于一千零二。费用低于这个数，等待更好；高于它，就更差。
+  s3_zh_hk: 設第三十日嘅費用係F。等嘅話剩三千二百零八減F，F係兩千二百零六嘅時候，就等於一千零二。費用低過呢個數，等就好啲；高過佢，就差啲。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Verify dated quotes first
+  title_zh: 先核对报价日期
+  title_zh_hk: 先核對報價日期
+  en: >-
+    On the supplied comparison, choose W. That does not mean waiting always helps. Obtain dated settlement
+    quotes, and confirm principal, accrued interest, notice deadlines and fee bands. A quote for one date
+    is not valid for another.
+  zh: >-
+    按题目给的比较，应该选W。但这不代表等一等总是更好。要拿到按日期的结清报价，核对本金、应计利息、通知期限和收费档次。某一天的报价，不能直接用在另一天。
+  zh_hk: >-
+    按題目俾嘅比較，應該揀W。但咁唔代表等一等一定好啲。要攞到按日期嘅清還報價，核對本金、應計利息、通知期限同收費級別。某一日嘅報價，唔可以直接用喺另一日。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Compare full cash on one date
+  title_zh: 在同一日期比较完整现金流
+  title_zh_hk: 在同一日期比較完整現金流
+  q1_en: Count the fee, interest and lost return
+  q1_zh: 计入费用、利息和放弃的回报
+  q1_zh_hk: 計入費用、利息和放棄的回報
+  q2_en: Repaying principal is not a saving
+  q2_zh: 归还本金不是节省
+  q2_zh_hk: 歸還本金不是節省
+  s1_en: >-
+    Early repayment can be worse or better depending on the dated fee schedule, so check the contract,
+    not a slogan.
+  s1_zh: 提前还款是好是坏，要看按日期的收费安排，所以要核对合同，而不是靠一句口号。
+  s1_zh_hk: 提早還款係好係壞，要睇按日期嘅收費安排，所以要核對合約，唔係靠一句口號。
+  s2_en: >-
+    This is not a real bank quotation, a legal determination or advice to use protected reserves.
+  s2_zh: 这不是真实的银行报价，不是法律判断，也不是建议动用受保护的储备。
+  s2_zh_hk: 呢個唔係真實嘅銀行報價，唔係法律判斷，亦唔係建議動用受保護嘅儲備。
+  s3_en: >-
+    The business, loan and fees are fictional. Official scene art is a teaching illustration only.
+  s3_zh: 企业、贷款和费用都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 企業、貸款同費用都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

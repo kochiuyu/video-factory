@@ -1,0 +1,270 @@
+id: FIN-31
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A higher percentage. More value created?
+title_zh: 更高的百分比。创造的价值也更多吗？
+title_zh_hk: 更高的百分比。創造的價值也更多嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-31
+  kicker_en: FIN-31
+  kicker_zh: FIN-31
+  kicker_zh_hk: FIN-31
+  title_en: A higher percentage. More value created?
+  title_zh: 更高的百分比。创造的价值也更多吗？
+  title_zh_hk: 更高的百分比。創造的價值也更多嗎？
+  image: art/higher-percentage-more-value-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Investment-appraisal teaching separates the rate that makes a project's net present value zero from
+    the value it adds at the required return. When projects differ in scale, the two measures can rank
+    them differently. Now you advise a fictional Hong Kong exhibition workshop.
+  zh: >-
+    投资评估的教学把两件事分开：一个是让项目净现值等于零的那个比率，另一个是按要求回报率算，项目增加了多少价值。项目规模不同时，这两个尺度的排序可能不一样。现在，你要为香港一家虚构的展览工场出主意。
+  zh_hk: >-
+    投資評估嘅教學會分開兩樣嘢：一樣係令項目淨現值等於零嘅嗰個比率，另一樣係按要求回報率計，項目增加咗幾多價值。項目規模唔同嘅時候，兩把尺排出嚟嘅次序可以唔一樣。而家，你要幫香港一間虛構嘅展覽工場出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two exclusive one-year projects
+  title_zh: 两个互斥的一年期项目
+  title_zh_hk: 兩個互斥的一年期項目
+  row1_en: >-
+    S: small
+  row1_zh: S：小型
+  row1_zh_hk: S：小型
+  row2_en: >-
+    L: large
+  row2_zh: L：大型
+  row2_zh_hk: L：大型
+  row3_en: Decline both
+  row3_zh: 两个都不做
+  row3_zh_hk: 兩個都不做
+  col1_en: Payment today
+  col1_zh: 今天付款
+  col1_zh_hk: 今天付款
+  col2_en: Net receipt in one year
+  col2_zh: 一年后净收款
+  col2_zh_hk: 一年後淨收款
+  c11: HK$40,000
+  c12: HK$52,000
+  c21: HK$100,000
+  c22: HK$124,000
+  c31: HK$0
+  c32: HK$0
+  footer_en: Budget HK$100,000 · required 10%
+  footer_zh: 可用 HK$100,000 · 要求回报率 10%
+  footer_zh_hk: 可用 HK$100,000 · 要求回報率 10%
+  s1_en: >-
+    The workshop can take a small display-module project S or a large project L for the coming year, or
+    decline both. Both need its only assembly bay, and the customer accepts only one specification.
+  s1_zh: 这家工场来年可以接小型展示模块项目S，或者大型项目L，也可以两个都不做。两个项目都要用工场唯一的装配工位，客户也只接受一种规格。
+  s1_zh_hk: 呢間工場下年可以接小型展示模組項目S，或者大型項目L，亦可以兩個都唔做。兩個項目都要用工場唯一嘅裝配工位，客戶亦只接受一種規格。
+  s2_en: >-
+    S costs 40,000 dollars today and returns 52,000 a year later. L costs 100,000 and returns 124,000.
+    The receipts already include all costs, taxes and disposal proceeds.
+  s2_zh: S今天付四万港元，一年后收回五万二千。L今天付十万，一年后收回十二万四千。这些收款已经包括全部成本、税和处置所得。
+  s2_zh_hk: S今日俾四萬港元，一年後收返五萬二千。L今日俾十萬，一年後收返十二萬四千。呢啲收款已經包埋所有成本、稅同處置所得。
+  s3_en: >-
+    Management wants the most present value among feasible choices. It has 100,000 dollars available today,
+    both projects carry a 10 percent required return, and unused money simply goes back to the owner.
+  s3_zh: 管理层的目标，是在做得到的选择里增加最多的现值。今天有十万港元可用，两个项目的要求回报率都是百分之十，用不完的钱就还给业主。
+  s3_zh_hk: 管理層嘅目標，係喺做得到嘅選擇入面增加最多現值。今日有十萬港元可以用，兩個項目嘅要求回報率都係百分之十，用唔晒嘅錢就還返俾老闆。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: S, L or neither?
+  title_zh: 选 S、L，还是都不做？
+  title_zh_hk: 選 S、L，還是都不做？
+  en: >-
+    Calculate each project's internal rate of return and net present value. Which project do you choose,
+    and which measure answers the stated objective? Pause and vote.
+  zh: 算出每个项目的内部收益率和净现值。你选哪一个？哪一个尺度才回答了所述的目标？请暂停，投个票。
+  zh_hk: 計出每個項目嘅內部收益率同淨現值。你揀邊個？邊把尺先答到講明咗嘅目標？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Only HK$70,000 now
+  title_zh: 现在只有 HK$70,000
+  title_zh_hk: 現在只有 HK$70,000
+  step1_en: Owner withdraws HK$30,000
+  step1_zh: 业主抽走 HK$30,000
+  step1_zh_hk: 業主抽走 HK$30,000
+  step2_en: Not a project cost
+  step2_zh: 这不是项目成本
+  step2_zh_hk: 這不是項目成本
+  step3_en: No loan, staging or smaller L
+  step3_zh: 没有贷款、分期或缩小的 L
+  step3_zh_hk: 沒有貸款、分期或縮小的 L
+  s1_en: >-
+    Before commitment, the owner withdraws 30,000 dollars for an unrelated obligation. Only 70,000 dollars
+    is now available for this decision.
+  s1_zh: 承诺之前，业主为一项无关的义务抽走三万港元。这次决定现在只有七万港元可用。
+  s1_zh_hk: 承諾之前，老闆為一項無關嘅責任抽走三萬港元。今次決定而家得返七萬港元可以用。
+  s2_en: >-
+    The withdrawal is the same whichever project is chosen, so it is not a project cost. The cash flows,
+    their risk and the 10 percent required return are unchanged.
+  s2_zh: 不管选哪个项目，这笔提款都一样，所以它不是项目成本。项目现金流、风险和百分之十的要求回报率都没有变。
+  s2_zh_hk: 揀邊個項目，呢筆提款都一樣，所以佢唔係項目成本。項目現金流、風險同百分之十嘅要求回報率都冇變。
+  s3_en: >-
+    Before the deadline there is no loan, no extra owner money, no staged payment and no smaller version
+    of L.
+  s3_zh: 决定期限之前，没有贷款，业主也不会额外出资，不能分期付款，也没有缩小版的L。
+  s3_zh_hk: 決定期限之前，冇貸款，老闆亦唔會額外出錢，唔可以分期俾，亦冇縮細版嘅L。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which project with HK$70,000?
+  title_zh: 只有七万，选哪个？
+  title_zh_hk: 只有七萬，選哪個？
+  en: >-
+    With only 70,000 dollars available, do you choose S, L or neither? Has L's net present value changed,
+    or has the set of feasible choices changed? Pause and vote.
+  zh: 现在只有七万港元，你选S、L，还是都不做？变的是L的净现值，还是做得到的选择范围？请暂停，投个票。
+  zh_hk: 而家得七萬港元，你揀S、L，定係兩個都唔做？變咗嘅係L嘅淨現值，定係做得到嘅選擇範圍？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: More percentage, less value
+  title_zh: 百分比更高，现值更少
+  title_zh_hk: 百分比更高，現值更少
+  step1_en: >-
+    IRR: S 30% · L 24%
+  step1_zh: 内部收益率：S 30% · L 24%
+  step1_zh_hk: 內部收益率：S 30% · L 24%
+  step2_en: >-
+    NPV: S 7,272.73 · L 12,727.27
+  step2_zh: 净现值：S 7,272.73 · L 12,727.27
+  step2_zh_hk: 淨現值：S 7,272.73 · L 12,727.27
+  step3_en: >-
+    Round 1: choose L
+  step3_zh: 第一轮：选 L
+  step3_zh_hk: 第一輪：選 L
+  s1_en: >-
+    S has an internal rate of return of 52,000 divided by 40,000, minus 1, or 30 percent. L has 24 percent.
+    Both beat 10 percent, but that does not rank the value added.
+  s1_zh: S的内部收益率是五万二千除以四万，再减一，也就是百分之三十。L是百分之二十四。两个都高于百分之十，但这排不出增加价值的高低。
+  s1_zh_hk: S嘅內部收益率係五萬二千除四萬，再減一，即係百分之三十。L係百分之二十四。兩個都高過百分之十，但係咁排唔到增加價值嘅高低。
+  s2_en: >-
+    At 10 percent, S has a net present value of 7,272.73 dollars, and L has 12,727.27 dollars. Both fit
+    the opening budget.
+  s2_zh: 按百分之十折现，S的净现值是七千二百七十二点七三港元，L是一万二千七百二十七点二七港元。两个都在起初的预算之内。
+  s2_zh_hk: 按百分之十折現，S嘅淨現值係七千二百七十二點七三港元，L係一萬二千七百二十七點二七港元。兩個都喺起初嘅預算之內。
+  s3_en: >-
+    So in round one, choose L for the stated value-maximising objective. Not both: the projects are mutually
+    exclusive.
+  s3_zh: 所以第一轮，按价值最大化的目标，应该选L。不能两个都选，因为两个项目互斥。
+  s3_zh_hk: 所以第一輪，按價值最大化嘅目標，應該揀L。唔可以兩個都揀，因為兩個項目互相排斥。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Extra value, then feasibility
+  title_zh: 先看增量，再看可行性
+  title_zh_hk: 先看增量，再看可行性
+  step1_en: >-
+    L − S: 60,000 now → 72,000 = 20%
+  step1_zh: L − S：今天 60,000 → 72,000 = 20%
+  step1_zh_hk: L − S：今天 60,000 → 72,000 = 20%
+  step2_en: Incremental NPV 5,454.55
+  step2_zh: 增量净现值 5,454.55
+  step2_zh_hk: 增量淨現值 5,454.55
+  step3_en: >-
+    Round 2: S fits; L short 30,000
+  step3_zh: 第二轮：S 放得进；L 缺 30,000
+  step3_zh_hk: 第二輪：S 放得進；L 缺 30,000
+  s1_en: >-
+    Moving from S to L costs 60,000 more today and brings 72,000 more a year later. That extra commitment
+    earns 20 percent, above the 10 percent requirement.
+  s1_zh: 从S改做L，今天要多付六万，一年后多收七万二千。这笔增量投入赚百分之二十，高于百分之十的要求。
+  s1_zh_hk: 由S轉做L，今日要多俾六萬，一年後多收七萬二千。呢筆多出嚟嘅投入賺百分之二十，高過百分之十嘅要求。
+  s2_en: >-
+    Its net present value is 5,454.55 dollars, the gap between the two projects. L wins because the extra
+    commitment creates value, not because bigger is always better.
+  s2_zh: 它的净现值是五千四百五十四点五五港元，正好是两个项目净现值的差额。L胜出，是因为多出来的投入创造了价值，不是因为越大越好。
+  s2_zh_hk: 佢嘅淨現值係五千四百五十四點五五港元，啱啱係兩個項目淨現值嘅差額。L勝出，係因為多出嚟嘅投入創造咗價值，唔係因為越大越好。
+  s3_en: >-
+    In round two, choose S. It fits 70,000 and still has positive value. L's net present value is unchanged,
+    but it is 30,000 short today, so it is no longer feasible.
+  s3_zh: 第二轮应该选S。它放得进七万，净现值仍然为正。L的净现值没有变，但今天还差三万，已经做不到了。
+  s3_zh_hk: 第二輪應該揀S。佢放得入七萬，淨現值仍然係正。L嘅淨現值冇變，但今日仲差三萬，已經做唔到。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Rank value, then check funding
+  title_zh: 先排价值，再查资金
+  title_zh_hk: 先排價值，再查資金
+  en: >-
+    For mutually exclusive projects, rank by net present value, then confirm the payment can be funded
+    today. Choosing S in round two does not prove the higher percentage was the right rule. It is simply
+    the only feasible positive-value project.
+  zh: 互斥项目先按净现值排序，再确认今天付得出这笔钱。第二轮选S，并不能证明百分比高的那个排序规则是对的。它只是唯一做得到、而且净现值为正的项目。
+  zh_hk: 互斥嘅項目先按淨現值排，再確認今日俾唔俾得出呢筆錢。第二輪揀S，唔代表百分比高嗰個排序方法啱。佢只係唯一做得到、淨現值又係正嘅項目。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: A rate is not the value added
+  title_zh: 比率不等于增加的价值
+  title_zh_hk: 比率不等於增加的價值
+  q1_en: Use NPV to rank exclusive projects
+  q1_zh: 互斥项目按净现值排序
+  q1_zh_hk: 互斥項目按淨現值排序
+  q2_en: Feasibility can change the choice
+  q2_zh: 可行性会改变选择
+  q2_zh_hk: 可行性會改變選擇
+  s1_en: >-
+    A higher internal rate of return does not mean more dollars added. Funding limits decide what can
+    be done, not what a project is worth.
+  s1_zh: 内部收益率更高，不代表增加的金额更多。资金限制决定的是能不能做，而不是项目值多少。
+  s1_zh_hk: 內部收益率高啲，唔代表增加嘅金額多啲。資金限制決定嘅係做唔做得到，唔係項目值幾多。
+  s2_en: >-
+    This is not an investment recommendation or evidence about a real company.
+  s2_zh: 这不是投资建议，也不能当成任何真实公司的证据。
+  s2_zh_hk: 呢個唔係投資建議，亦唔可以當係任何真實公司嘅證據。
+  s3_en: >-
+    The workshop, projects and cash flows are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 工场、项目和现金流都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 工場、項目同現金流都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

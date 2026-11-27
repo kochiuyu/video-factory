@@ -1,0 +1,294 @@
+id: FIN-37
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: One large payment. A predictable monthly reserve?
+title_zh: 一笔大额付款。每月储备就好预测吗？
+title_zh_hk: 一筆大額付款。每月儲備就好預測嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-37
+  kicker_en: FIN-37
+  kicker_zh: FIN-37
+  kicker_zh_hk: FIN-37
+  title_en: One large payment. A predictable monthly reserve?
+  title_zh: 一笔大额付款。每月储备就好预测吗？
+  title_zh_hk: 一筆大額付款。每月儲備就好預測嗎？
+  image: art/monthly-reserve-later-start-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A replacement reserve grows through new contributions and through interest already earned. The date
+    of each contribution matters: a payment made just before the purchase has no time to grow. So a savings
+    target needs a calendar as well as an amount. Now you advise a fictional Hong Kong wholesaler.
+  zh: >-
+    更换设备的储备金，靠新存进去的钱增长，也靠已经赚到的利息增长。每一笔存款的日期都很重要：采购前一刻才存进去的钱，根本没有时间增长。所以储蓄目标除了金额，还要有时间表。现在，你要为香港一家虚构的批发商出主意。
+  zh_hk: >-
+    換設備嘅儲備金，靠新存入去嘅錢增長，亦靠已經賺到嘅利息增長。每一筆存款嘅日子都好重要：採購前一刻先存入去嘅錢，根本冇時間增長。所以儲蓄目標除咗金額，仲要有時間表。而家，你要幫香港一間虛構嘅批發商出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: A HK$120,000 machine reserve
+  title_zh: HK$120,000 的机器储备
+  title_zh_hk: HK$120,000 的機器儲備
+  row1_en: Target
+  row1_zh: 目标
+  row1_zh_hk: 目標
+  row2_en: Deposits
+  row2_zh: 存款
+  row2_zh_hk: 存款
+  row3_en: Interest
+  row3_zh: 利息
+  row3_zh_hk: 利息
+  row4_en: Cash limit
+  row4_zh: 现金上限
+  row4_zh_hk: 現金上限
+  col1_en: Amount
+  col1_zh: 金额
+  col1_zh_hk: 金額
+  col2_en: Timing
+  col2_zh: 时间
+  col2_zh_hk: 時間
+  c11: HK$120,000
+  c12_en: End of month 12
+  c12_zh: 第 12 个月末
+  c12_zh_hk: 第 12 個月末
+  c21_en: Equal amount D
+  c21_zh: 每次相等 D
+  c21_zh_hk: 每次相等 D
+  c22_en: Month-ends 1–12
+  c22_zh: 第 1–12 个月末
+  c22_zh_hk: 第 1–12 個月末
+  c31_en: 0.5% a month
+  c31_zh: 每月 0.5%
+  c31_zh_hk: 每月 0.5%
+  c32_en: On opening balance
+  c32_zh: 按月初余额
+  c32_zh_hk: 按月初餘額
+  c41_en: Up to HK$14,000
+  c41_zh: 最多 HK$14,000
+  c41_zh_hk: 最多 HK$14,000
+  c42_en: Each month-end
+  c42_zh: 每个月末
+  c42_zh_hk: 每個月末
+  footer_en: Smallest whole-dollar D, rounded up
+  footer_zh: 最小的整数 D，向上取整
+  footer_zh_hk: 最小的整數 D，向上取整
+  s1_en: >-
+    The wholesaler needs 120,000 dollars for a replacement packing machine at the end of month 12. The
+    price and date are fixed, and there is no loan or opening reserve.
+  s1_zh: 这家批发商要在第十二个月月末，拿出十二万港元更换一台包装机。价格和日期都已固定，没有贷款，也没有现成的储备。
+  s1_zh_hk: 呢間批發商要喺第十二個月月尾，拎出十二萬港元換一部包裝機。價錢同日子都已經定咗，冇貸款，亦冇現成嘅儲備。
+  s2_en: >-
+    Starting from zero, it deposits the same amount at the end of each month, months 1 to 12. Each month-end,
+    the fund earns 0.5 percent on its opening balance, and then that month's deposit is added.
+  s2_zh: 从零开始，每个月月末存入相同金额，从第一个月存到第十二个月。每到月末，储备先按月初余额赚百分之零点五的利息，然后再加上当月的存款。
+  s2_zh_hk: 由零開始，每個月月尾存入相同金額，由第一個月存到第十二個月。每到月尾，儲備先按月初餘額賺百分之零點五利息，然後再加埋當月嘅存款。
+  s3_en: >-
+    Up to 14,000 dollars is available each month-end. The goal is the smallest equal whole-dollar monthly
+    deposit that reaches 120,000 on time.
+  s3_zh: 每个月末最多有一万四千港元可用。目标是找出最小的、每月相同的整数存款额，按时存够十二万。
+  s3_zh_hk: 每個月尾最多有一萬四千港元可以用。目標係搵出最細、每月一樣嘅整數存款額，準時儲夠十二萬。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What monthly deposit works?
+  title_zh: 每月要存多少？
+  title_zh_hk: 每月要存多少？
+  en: >-
+    What equal monthly contribution funds the target with deposits at months 1 to 12? Compare it with
+    120,000 divided by 12. Which deposit earns eleven months of interest, and which earns none? Pause
+    and vote.
+  zh: >-
+    第一到第十二个月每月末存一次，每次要存多少才够目标？和十二万除以十二比较一下。哪一笔存款能赚十一个月利息，哪一笔一点利息都没有？请暂停，投个票。
+  zh_hk: 第一到第十二個月每月尾存一次，每次要存幾多先夠目標？同十二萬除十二比較吓。邊一筆存款賺到十一個月利息，邊一筆一啲利息都冇？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The first deposits slip
+  title_zh: 头几笔存款推迟了
+  title_zh_hk: 頭幾筆存款推遲了
+  step1_en: >-
+    Months 1–3: no surplus
+  step1_zh: 第 1–3 个月：没有余钱
+  step1_zh_hk: 第 1–3 個月：沒有餘錢
+  step2_en: >-
+    First deposit: end of month 4
+  step2_zh: 第一笔存款：第 4 个月末
+  step2_zh_hk: 第一筆存款：第 4 個月末
+  step3_en: Same price, same deadline
+  step3_zh: 价格和期限都不变
+  step3_zh_hk: 價格和期限都不變
+  s1_en: >-
+    Before any transfer, a cash review finds that months 1, 2 and 3 have no surplus for this reserve.
+  s1_zh: 还没开始存款，一次现金复核就发现，第一、二、三个月都没有余钱可以放进这笔储备。
+  s1_zh_hk: 未開始存錢，一次現金覆核就發現，第一、二、三個月都冇餘錢可以放入呢筆儲備。
+  s2_en: >-
+    The first possible deposit is now at the end of month 4. Months 4 to 12 still allow up to 14,000 dollars
+    each.
+  s2_zh: 现在最早的一笔存款，要到第四个月月末。第四到第十二个月，每个月仍然最多可存一万四千港元。
+  s2_zh_hk: 而家最早嘅一筆存款，要等到第四個月月尾。第四到第十二個月，每個月仍然最多可以存一萬四千港元。
+  s3_en: >-
+    The machine still costs 120,000 at the end of month 12. There is no catch-up lump sum, and the deadline
+    cannot be extended.
+  s3_zh: 机器在第十二个月月末仍然要十二万。没有一次性补存的钱，期限也不能延后。
+  s3_zh_hk: 部機喺第十二個月月尾仍然要十二萬。冇一次過補存嘅錢，期限亦唔可以延後。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Is the old deposit still enough?
+  title_zh: 原来的存款额还够吗？
+  title_zh_hk: 原來的存款額還夠嗎？
+  en: >-
+    How many deposits remain, and what revised whole-dollar contribution meets the target? If the original
+    transfer continues, what is the shortfall? Does the new plan fit the cash limit? Pause and vote.
+  zh: 还剩几笔存款？修改后的整数存款额要多少才够？如果照旧存原来的金额，会差多少？新方案在每月现金上限之内吗？请暂停，投个票。
+  zh_hk: 仲剩幾多筆存款？改咗之後嘅整數存款額要幾多先夠？如果照舊存原本嘅金額，會差幾多？新方案喺每月現金上限之內嗎？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Accumulate each payment
+  title_zh: 把每一笔存款累积起来
+  title_zh_hk: 把每一筆存款累積起來
+  step1_en: >-
+    12 deposits: factor 12.33556237
+  step1_zh: 12 笔存款：系数 12.33556237
+  step1_zh_hk: 12 筆存款：係數 12.33556237
+  step2_en: D = 9,728, rounded up
+  step2_zh: D = 9,728，向上取整
+  step2_zh_hk: D = 9,728，向上取整
+  step3_en: Not 120,000 ÷ 12 = 10,000
+  step3_zh: 不是 120,000 ÷ 12 = 10,000
+  step3_zh_hk: 不是 120,000 ÷ 12 = 10,000
+  s1_en: >-
+    Twelve deposits give an accumulation factor of 12.33556237. So 120,000 divided by that factor is 9,727.97,
+    rounded up to 9,728 dollars, which reaches about 120,000.35.
+  s1_zh: >-
+    十二笔存款的累积系数是十二点三三五五六二三七。十二万除以这个系数，是九千七百二十七点九七，向上取整就是九千七百二十八港元，最后大约有十二万点三五。
+  s1_zh_hk: >-
+    十二筆存款嘅累積係數係十二點三三五五六二三七。十二萬除呢個係數，係九千七百二十七點九七，向上取整就係九千七百二十八港元，最後大約有十二萬點三五。
+  s2_en: >-
+    The month-1 deposit earns eleven months of interest, and the month-12 deposit earns none. Don't give
+    every deposit twelve months of interest.
+  s2_zh: 第一个月存的钱，可以赚十一个月利息；第十二个月存的钱，一点利息都没有。不要让每一笔存款都赚十二个月利息。
+  s2_zh_hk: 第一個月存嘅錢，賺到十一個月利息；第十二個月存嘅錢，一啲利息都冇。唔好當每一筆存款都賺十二個月利息。
+  s3_en: >-
+    Saving 10,000 a month would also work, but dividing by twelve ignores interest. It does not find the
+    smallest transfer.
+  s3_zh: 每月存一万也够，但除以十二的做法忽略了利息，找不到最小的存款额。
+  s3_zh_hk: 每月存一萬都夠，但除十二嘅做法冇計利息，搵唔到最細嘅存款額。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Count the dates after the delay
+  title_zh: 推迟之后重新数日期
+  title_zh_hk: 推遲之後重新數日期
+  step1_en: >-
+    Months 4–12: nine deposits
+  step1_zh: 第 4–12 个月：九笔存款
+  step1_zh_hk: 第 4–12 個月：九筆存款
+  step2_en: New D = 13,069, under 14,000
+  step2_zh: 新 D = 13,069，低于 14,000
+  step2_zh_hk: 新 D = 13,069，低於 14,000
+  step3_en: Old 9,728 leaves 30,676.38 short
+  step3_zh: 照旧存 9,728 缺 30,676.38
+  step3_zh_hk: 照舊存 9,728 缺 30,676.38
+  s1_en: >-
+    Months 4 to 12 inclusive give nine deposits, not eight. Their factor is 9.182115829, so the revised
+    deposit is 13,068.88, rounded up to 13,069 dollars.
+  s1_zh: >-
+    第四到第十二个月，包括头尾，一共九笔存款，不是八笔。它们的累积系数是九点一八二一一五八二九，所以新的存款额是一万三千零六十八点八八，向上取整是一万三千零六十九港元。
+  s1_zh_hk: >-
+    第四到第十二個月，包頭包尾，一共九筆存款，唔係八筆。佢哋嘅累積係數係九點一八二一一五八二九，所以新嘅存款額係一萬三千零六十八點八八，向上取整係一萬三千零六十九港元。
+  s2_en: >-
+    That is 3,341 more each month than before, but still 931 below the 14,000 limit, so the plan fits.
+  s2_zh: 这比原来每个月多三千三百四十一，但仍比一万四千的上限少九百三十一，所以方案可行。
+  s2_zh_hk: 咁樣比原本每個月多三千三百四十一，但仍然比一萬四千嘅上限少九百三十一，所以方案行得通。
+  s3_en: >-
+    Keeping 9,728 for nine deposits gives only about 89,323.62, a shortfall of 30,676.38. That exceeds
+    three missed deposits, because those early deposits would also have earned interest.
+  s3_zh: >-
+    如果九笔都照旧存九千七百二十八，只得到大约八万九千三百二十三点六二，缺三万零六百七十六点三八。这比少存的三笔还多，因为那三笔早期存款本来也能赚利息。
+  s3_zh_hk: >-
+    如果九筆都照舊存九千七百二十八，淨係得大約八萬九千三百二十三點六二，差三萬零六百七十六點三八。呢個多過少存咗嘅三筆，因為嗰三筆早期存款本來都賺到利息。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: A later start needs a new plan
+  title_zh: 起步晚，就要重新规划
+  title_zh_hk: 起步晚，就要重新規劃
+  en: >-
+    Approve 13,069 dollars a month for months 4 to 12 in this fictional model, and check actual transfers
+    against the calendar. An unchanged standing instruction does not keep an unchanged target, and rounding
+    down is not harmless.
+  zh: >-
+    在这个虚构模型里，批准第四到第十二个月每月存一万三千零六十九港元，并按时间表核对实际存款。转账指令不变，不等于目标还能达到；向下取整也不是无伤大雅。
+  zh_hk: >-
+    喺呢個虛構模型入面，批准第四到第十二個月每月存一萬三千零六十九港元，再按時間表核對實際存款。轉賬指示唔變，唔等於目標仲達到；向下取整亦唔係無傷大雅。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Savings targets need a calendar
+  title_zh: 储蓄目标要有时间表
+  title_zh_hk: 儲蓄目標要有時間表
+  q1_en: Each deposit grows for different months
+  q1_zh: 每笔存款增长的月数不同
+  q1_zh_hk: 每筆存款增長的月數不同
+  q2_en: Recalculate after a late start
+  q2_zh: 起步晚了就要重新计算
+  q2_zh_hk: 起步晚了就要重新計算
+  s1_en: >-
+    Missed early deposits cost more than their face value, because they also lose the interest they would
+    have earned.
+  s1_zh: 错过的早期存款，损失的不只是本金，因为它们本来能赚到的利息也没有了。
+  s1_zh_hk: 錯過咗嘅早期存款，損失嘅唔止係本金，因為佢哋本來賺到嘅利息都冇埋。
+  s2_en: >-
+    The monthly rate here is a classroom assumption, not a real bank offer or investment product.
+  s2_zh: 这里的月利率是课堂假设，不是真实的银行报价，也不是投资产品。
+  s2_zh_hk: 呢度嘅月利率係課堂假設，唔係真實嘅銀行報價，亦唔係投資產品。
+  s3_en: >-
+    The wholesaler, machine, rate and amounts are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 批发商、机器、利率和金额都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 批發商、機器、利率同金額都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

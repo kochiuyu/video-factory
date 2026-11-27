@@ -1,0 +1,277 @@
+id: FIN-38
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A sales forecast. How much working capital?
+title_zh: 有了销售预测。营运资金要多少？
+title_zh_hk: 有了銷售預測。營運資金要多少？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-38
+  kicker_en: FIN-38
+  kicker_zh: FIN-38
+  kicker_zh_hk: FIN-38
+  title_en: A sales forecast. How much working capital?
+  title_zh: 有了销售预测。营运资金要多少？
+  title_zh_hk: 有了銷售預測。營運資金要多少？
+  image: art/faster-payment-more-stock-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Growth can tie up money in stock and unpaid customer invoices, even when sales have a positive margin.
+    Supplier credit offsets part of that investment. Faster collection may help, but it must be weighed
+    against inventory needs and the different money bases behind each measure. Now you advise a fictional
+    Hong Kong distributor.
+  zh: >-
+    就算销售有正的毛利，增长也可能把钱压在存货和客户未付的发票上。供应商给的赊账期，可以抵消一部分投入。收款更快也许有帮助，但要同时考虑存货需要，以及每个指标背后不同的金额基础。现在，你要为香港一家虚构的分销商出主意。
+  zh_hk: >-
+    就算銷售有正嘅毛利，增長都可能將錢壓喺存貨同客戶未俾嘅發票度。供應商俾嘅數期，可以抵銷一部分投入。收錢快啲可能有幫助，但要同時考慮存貨需要，同埋每個指標背後唔同嘅金額基礎。而家，你要幫香港一間虛構嘅分銷商出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Existing business vs new channel
+  title_zh: 现有业务和新渠道
+  title_zh_hk: 現有業務和新渠道
+  row1_en: Annual sales
+  row1_zh: 年销售额
+  row1_zh_hk: 年銷售額
+  row2_en: Inventory days
+  row2_zh: 存货天数
+  row2_zh_hk: 存貨天數
+  row3_en: Receivable days
+  row3_zh: 应收天数
+  row3_zh_hk: 應收天數
+  row4_en: Payable days
+  row4_zh: 应付天数
+  row4_zh_hk: 應付天數
+  col1_en: Existing
+  col1_zh: 现有
+  col1_zh_hk: 現有
+  col2_en: New, initially
+  col2_zh: 新渠道（起初）
+  col2_zh_hk: 新渠道（起初）
+  c11: HK$3,650,000
+  c12: HK$1,825,000
+  c21: '30'
+  c22: '30'
+  c31: '40'
+  c32: '40'
+  c41: '20'
+  c42: '20'
+  footer_en: Cost 60% · allowance HK$210,000
+  footer_zh: 成本占销售 60% · 拨款 HK$210,000
+  footer_zh_hk: 成本佔銷售 60% · 撥款 HK$210,000
+  s1_en: >-
+    The distributor sells 3,650,000 dollars a year on credit. A new channel would add 1,825,000 a year.
+    Purchases and cost of goods sold are 60 percent of sales.
+  s1_zh: 这家分销商每年赊销三百六十五万港元。新渠道每年会再增加一百八十二万五千。采购和销货成本都是销售额的百分之六十。
+  s1_zh_hk: 呢間分銷商每年記帳銷售三百六十五萬港元。新渠道每年會再加一百八十二萬五千。採購同銷貨成本都係銷售額嘅百分之六十。
+  s2_en: >-
+    Initially, both hold 30 days of inventory, collect after 40 days and pay suppliers after 20. Stock
+    is valued at cost, receivables at sales value.
+  s2_zh: 起初假设两者都持有三十天存货，四十天后收款，二十天后付款给供应商。存货按成本计算，应收账款按销售额计算。
+  s2_zh_hk: 起初假設兩樣都持有三十日存貨，四十日後收錢，二十日後俾錢供應商。存貨按成本計，應收賬款按銷售額計。
+  s3_en: >-
+    Operating working capital is inventory plus receivables minus payables. The existing need is already
+    funded, and the board has earmarked 210,000 dollars for the growth.
+  s3_zh: 营运资金，等于存货加应收账款，再减应付账款。现有业务所需的资金已经有着落，董事会另外为这次增长预留了二十一万港元。
+  s3_zh_hk: 營運資金，等於存貨加應收賬款，再減應付賬款。現有業務要嘅資金已經有着落，董事會另外為今次增長預留咗二十一萬港元。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Is HK$210,000 enough?
+  title_zh: 二十一万够吗？
+  title_zh_hk: 二十一萬夠嗎？
+  en: >-
+    Calculate the existing requirement and the additional requirement under the initial assumptions. Does
+    the 210,000-dollar allowance cover the increase? Show inventory, receivables and payables separately.
+    Pause and vote.
+  zh: 按起初的假设，算出现有业务所需的营运资金，以及新渠道增加的部分。二十一万港元的拨款够不够？请把存货、应收和应付分开列出。请暂停，投个票。
+  zh_hk: 按起初嘅假設，計出現有業務要嘅營運資金，同新渠道增加嘅部分。二十一萬港元嘅撥款夠唔夠？請將存貨、應收同應付分開列出。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The channel design changes
+  title_zh: 新渠道的安排改了
+  title_zh_hk: 新渠道的安排改了
+  step1_en: Customers pay after 10 days
+  step1_zh: 客户 10 天后付款
+  step1_zh_hk: 客戶 10 天後付款
+  step2_en: 70 inventory days, incl. safety stock
+  step2_zh: 存货 70 天，含安全库存
+  step2_zh_hk: 存貨 70 天，含安全庫存
+  step3_en: Supplier credit still 20 days
+  step3_zh: 供应商账期仍是 20 天
+  step3_zh_hk: 供應商賬期仍是 20 天
+  s1_en: >-
+    Before commitment, the proposal changes. The new channel's customers would pay after only ten days.
+  s1_zh: 承诺之前，提议改了。新渠道的客户只要十天就会付款。
+  s1_zh_hk: 承諾之前，建議改咗。新渠道嘅客戶十日就會俾錢。
+  s2_en: >-
+    But its service design needs seventy days of inventory, including safety stock. The extra stock cannot
+    be cut while keeping the same service promise.
+  s2_zh: 但它的服务设计需要七十天存货，包括安全库存。要保持同样的服务承诺，就不能削减这些额外存货。
+  s2_zh_hk: 但佢嘅服務設計要七十日存貨，包括安全庫存。要保持同樣嘅服務承諾，就唔可以減呢啲額外存貨。
+  s3_en: >-
+    Supplier credit stays at twenty days, and the sales forecast, cost ratio and existing business are
+    unchanged.
+  s3_zh: 供应商账期仍然是二十天，销售预测、成本比率和现有业务都不变。
+  s3_zh_hk: 供應商數期仍然係二十日，銷售預測、成本比率同現有業務都冇變。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: >-
+    Faster cash, more stock: net?
+  title_zh: 收款快、存货多，净效果？
+  title_zh_hk: 收款快、存貨多，淨效果？
+  en: >-
+    Does faster collection outweigh the new inventory need in money terms? Recalculate the additional
+    and total working capital, and compare the cash-conversion days. What must still be checked? Pause
+    and vote.
+  zh: 按金额计算，收款加快能不能抵过新增的存货需要？重新算出增加的和总的营运资金，再比较现金转换周期。还有什么要核对？请暂停，投个票。
+  zh_hk: 按金額計，收錢快咗抵唔抵得過多咗嘅存貨需要？重新計出增加嘅同總共嘅營運資金，再比較現金轉換週期。仲有咩要核對？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Base and first increment
+  title_zh: 现有基数和起初增量
+  title_zh_hk: 現有基數和起初增量
+  step1_en: >-
+    Existing: 180k + 400k − 120k = 460k
+  step1_zh: 现有：18 万 + 40 万 − 12 万 = 46 万
+  step1_zh_hk: 現有：18 萬 + 40 萬 − 12 萬 = 46 萬
+  step2_en: >-
+    New: 90k + 200k − 60k = 230k
+  step2_zh: 新渠道：9 万 + 20 万 − 6 万 = 23 万
+  step2_zh_hk: 新渠道：9 萬 + 20 萬 − 6 萬 = 23 萬
+  step3_en: 230k exceeds 210k by 20k
+  step3_zh: 23 万比 21 万多 2 万
+  step3_zh_hk: 23 萬比 21 萬多 2 萬
+  s1_en: >-
+    Existing sales are 10,000 dollars a day, and cost is 6,000. Inventory is 180,000, receivables 400,000
+    and payables 120,000, so the funded base is 460,000.
+  s1_zh: 现有业务每天销售一万港元，成本六千。存货十八万，应收账款四十万，应付账款十二万，已有资金覆盖的基数是四十六万。
+  s1_zh_hk: 現有業務每日銷售一萬港元，成本六千。存貨十八萬，應收賬款四十萬，應付賬款十二萬，已經有資金嘅基數係四十六萬。
+  s2_en: >-
+    The new channel adds 5,000 of sales and 3,000 of cost a day. At first it needs 90,000 of stock and
+    200,000 of receivables, less 60,000 of payables, or 230,000.
+  s2_zh: 新渠道每天增加五千销售、三千成本。起初需要九万存货、二十万应收，减去六万应付，一共二十三万。
+  s2_zh_hk: 新渠道每日加五千銷售、三千成本。起初要九萬存貨、二十萬應收，減六萬應付，總共二十三萬。
+  s3_en: >-
+    That exceeds the 210,000 allowance by 20,000. Compare the allowance with the increase only, not with
+    the whole 690,000, because the existing 460,000 is already funded.
+  s3_zh: 这比二十一万的拨款多出两万。拨款只能和增加的部分比较，不能和整个六十九万比较，因为现有的四十六万已经有资金。
+  s3_zh_hk: 呢個比二十一萬嘅撥款多出兩萬。撥款只可以同增加嘅部分比，唔可以同成個六十九萬比，因為現有嘅四十六萬已經有資金。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Rebuild the new channel
+  title_zh: 重算新渠道
+  title_zh_hk: 重算新渠道
+  step1_en: >-
+    Revised: 210k + 50k − 60k = 200k
+  step1_zh: 修改后：21 万 + 5 万 − 6 万 = 20 万
+  step1_zh_hk: 修改後：21 萬 + 5 萬 − 6 萬 = 20 萬
+  step2_en: Fits the allowance, 10k to spare
+  step2_zh: 在拨款内，余 1 万
+  step2_zh_hk: 在撥款內，餘 1 萬
+  step3_en: >-
+    Cycle: 50 days → 60 days
+  step3_zh: 现金转换周期：50 天 → 60 天
+  step3_zh_hk: 現金轉換週期：50 天 → 60 天
+  s1_en: >-
+    With seventy inventory days, stock is 3,000 times 70, or 210,000. Ten receivable days give 50,000.
+    Payables stay at 60,000. So the revised increase is 200,000.
+  s1_zh: 存货七十天，就是三千乘七十，等于二十一万。应收十天，是五万。应付仍是六万。所以修改后增加的营运资金是二十万。
+  s1_zh_hk: 存貨七十日，即係三千乘七十，等於二十一萬。應收十日，係五萬。應付仍然係六萬。所以修改後增加嘅營運資金係二十萬。
+  s2_en: >-
+    Inventory rises 120,000 but receivables fall 150,000, so the need falls 30,000. Total working capital
+    is 660,000, and the allowance has 10,000 to spare.
+  s2_zh: 存货增加十二万，应收减少十五万，所以需要的资金少了三万。营运资金总共六十六万，拨款还剩一万。
+  s2_zh_hk: 存貨多咗十二萬，應收少咗十五萬，所以要嘅資金少咗三萬。營運資金總共六十六萬，撥款仲剩一萬。
+  s3_en: >-
+    Yet the cash-conversion cycle grows from 50 to 60 days. Stock days are multiplied by daily cost, and
+    receivable days by daily sales, so cycle days alone cannot rank the money needed.
+  s3_zh: 但现金转换周期却从五十天变成六十天。存货天数乘的是每天成本，应收天数乘的是每天销售额，所以单看周期天数，排不出所需金额的高低。
+  s3_zh_hk: 但現金轉換週期就由五十日變成六十日。存貨天數乘嘅係每日成本，應收天數乘嘅係每日銷售額，所以淨係睇週期日數，排唔到要幾多錢嘅高低。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Approve a budget, not a launch
+  title_zh: 批准额度，不是批准开业
+  title_zh_hk: 批准額度，不是批准開業
+  en: >-
+    The revised 200,000-dollar estimate fits the steady-state allowance, but that supports the funding
+    envelope only. Build a dated cash budget for the pre-opening safety stock, supplier due dates and
+    customer receipts before launch.
+  zh: >-
+    修改后的二十万估计，在稳定状态的拨款之内，但这只支持资金额度的比较。开业之前，还要按日期做现金预算，算清开业前的安全库存、供应商到期日和客户收款。
+  zh_hk: >-
+    修改後嘅二十萬估計，喺穩定狀態嘅撥款之內，但咁只支持資金額度嘅比較。開業之前，仲要按日期做現金預算，計清開業前嘅安全庫存、供應商到期日同客戶收款。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Growth ties up working capital
+  title_zh: 增长会占用营运资金
+  title_zh_hk: 增長會佔用營運資金
+  q1_en: Use cost for stock, sales for receivables
+  q1_zh: 存货按成本，应收按销售
+  q1_zh_hk: 存貨按成本，應收按銷售
+  q2_en: Check the dated cash budget
+  q2_zh: 还要核对按日期的现金预算
+  q2_zh_hk: 還要核對按日期的現金預算
+  s1_en: >-
+    Faster collection does not automatically reduce the money needed. Count each component on its own
+    money base, then check timing.
+  s1_zh: 收款更快，不一定就会减少所需资金。每个组成部分都要按各自的金额基础计算，再核对时间安排。
+  s1_zh_hk: 收錢快啲，唔一定會減少要嘅資金。每個組成部分都要按自己嘅金額基礎計，再核對時間安排。
+  s2_en: >-
+    These are planning assumptions, not contracted demand or observed averages.
+  s2_zh: 这些都是规划假设，不是已签约的需求，也不是实际观察到的平均数。
+  s2_zh_hk: 呢啲都係規劃假設，唔係已簽約嘅需求，亦唔係實際觀察到嘅平均數。
+  s3_en: >-
+    The distributor, channel and amounts are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 分销商、渠道和金额都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 分銷商、渠道同金額都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

@@ -1,0 +1,262 @@
+id: FIN-35
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A cheaper forward. A more flexible protection?
+title_zh: 远期合约更便宜。保障就更灵活吗？
+title_zh_hk: 遠期合約更便宜。保障就更靈活嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-35
+  kicker_en: FIN-35
+  kicker_zh: FIN-35
+  kicker_zh_hk: FIN-35
+  title_en: A cheaper forward. A more flexible protection?
+  title_zh: 远期合约更便宜。保障就更灵活吗？
+  title_zh_hk: 遠期合約更便宜。保障就更靈活嗎？
+  image: art/cheaper-forward-flexible-protection-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A currency forward creates a commitment, while a purchased currency option gives one-sided protection
+    for a premium. Which suits a business depends on the exposure, not just the quoted rate. If a planned
+    purchase disappears, its protection may remain. Now you advise a fictional Hong Kong importer.
+  zh: >-
+    货币远期合约是一项承诺；买入的货币期权，则是付一笔期权费换来单边的保障。哪一种合适，要看风险敞口本身，不只是看报价。如果计划中的采购取消了，保障可能还在。现在，你要为香港一家虚构的进口商出主意。
+  zh_hk: >-
+    貨幣遠期合約係一個承諾；買入嘅貨幣期權，就係俾一筆期權金換一邊嘅保障。邊種啱用，要睇風險本身，唔係淨係睇報價。如果計劃好嘅採購取消咗，保障可能仲喺度。而家，你要幫香港一間虛構嘅進口商出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two ways to cover EUR10,000
+  title_zh: 两种方式覆盖 10,000 欧元
+  title_zh_hk: 兩種方式覆蓋 10,000 歐元
+  row1_en: >-
+    F: forward
+  row1_zh: F：远期合约
+  row1_zh_hk: F：遠期合約
+  row2_en: >-
+    O: euro call
+  row2_zh: O：欧元看涨期权
+  row2_zh_hk: O：歐元認購期權
+  col1_en: Pay now
+  col1_zh: 现在付
+  col1_zh_hk: 現在付
+  col2_en: Receipt at maturity
+  col2_zh: 到期收款
+  col2_zh_hk: 到期收款
+  c11: HK$0
+  c12: 10,000 × (S − 8.50)
+  c21: HK$2,000
+  c22: 10,000 × max(S − 8.50, 0)
+  footer_en: 3 months · test S = 9.00 and 8.00
+  footer_zh: 三个月 · 测试 S = 9.00 和 8.00
+  footer_zh_hk: 三個月 · 測試 S = 9.00 和 8.00
+  s1_en: >-
+    A customer may order linen that needs a 10,000-euro supplier payment in three months. If the order
+    is cancelled, the supplier releases it at no charge.
+  s1_zh: 一位客户可能订一批布草，三个月后要付供应商一万欧元。如果订单取消，供应商不收任何费用就放弃这笔采购。
+  s1_zh_hk: 有個客人可能落單買一批布草，三個月後要俾供應商一萬歐元。如果張單取消，供應商唔收任何費用就放棄呢單採購。
+  s2_en: >-
+    S is Hong Kong dollars per euro on the payment date. The forward F costs nothing now, but pays or
+    receives 10,000 times S minus 8.50, even if the order disappears.
+  s2_zh: S是付款当天每一欧元值多少港元。远期合约F现在不用付钱，但到期要按一万乘以S减八点五来收钱或付钱，就算订单没了也一样。
+  s2_zh_hk: S係付款當日一歐元值幾多港元。遠期合約F而家唔使俾錢，但到期要按一萬乘S減八點五嚟收錢或者俾錢，就算張單冇咗都一樣。
+  s3_en: >-
+    The option O costs 2,000 dollars now, nonrefundable, and only ever receives money when S is above
+    8.50. Both settle in Hong Kong dollars and supply no euros. First assume the order proceeds.
+  s3_zh: 期权O现在要付两千港元期权费，不能退；只有当S高于八点五时才会收到钱。两者都用港元现金结算，都不提供欧元。先假设订单照常进行。
+  s3_zh_hk: 期權O而家要俾兩千港元期權金，唔退；只有S高過八點五嘅時候先會收錢。兩樣都用港元現金結算，都唔會俾歐元你。先假設張單照做。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which protection is cheaper?
+  title_zh: 哪种保障更便宜？
+  title_zh_hk: 哪種保障更便宜？
+  en: >-
+    If the order proceeds, calculate the purchase, each protection receipt and the total net outlay at
+    both rates. What does each contract protect, and is one always better? Pause and vote.
+  zh: 假设订单照常进行，在两个汇率下，分别算出采购金额、两种保障的收款，以及总的净支出。每份合约保障的是什么？有没有一种永远更好？请暂停，投个票。
+  zh_hk: 假設張單照做，喺兩個匯率之下，分別計出採購金額、兩種保障嘅收款，同總淨支出。每份合約保障緊乜嘢？有冇一種永遠好啲？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The order is cancelled
+  title_zh: 订单取消了
+  title_zh_hk: 訂單取消了
+  step1_en: No euro payment; S = 8.00
+  step1_zh: 不用付欧元；S = 8.00
+  step1_zh_hk: 不用付歐元；S = 8.00
+  step2_en: Both contracts still settle
+  step2_zh: 两份合约照样结算
+  step2_zh_hk: 兩份合約照樣結算
+  step3_en: >-
+    New limits: 87,000 and 2,000
+  step3_zh: 新上限：87,000 和 2,000
+  step3_zh_hk: 新上限：87,000 和 2,000
+  s1_en: >-
+    Now suppose that at maturity the customer cancels, the supplier releases the purchase, and S is 8.00.
+    There is no euro payment at all.
+  s1_zh: 现在假设到期时客户取消订单，供应商放弃这笔采购，而S是八点零零。完全不用付欧元。
+  s1_zh_hk: 而家假設到期嗰陣客人取消張單，供應商放棄呢單採購，S係八點零零。完全唔使俾歐元。
+  s2_en: >-
+    F still settles under its formula. O's premium is already spent, and its payoff rule still applies.
+    No refund or new hedge is available.
+  s2_zh: F仍然按原来的公式结算。O的期权费已经花掉了，它的收款规则照样适用。没有退款，也不能另做新的对冲。
+  s2_zh_hk: F仍然按原本條公式結算。O嘅期權金已經使咗，佢嘅收款規則照樣適用。冇得退錢，亦唔可以另外做新嘅對沖。
+  s3_en: >-
+    For a fresh proposal, management sets two limits on total outlay: 87,000 dollars if the order proceeds,
+    and 2,000 if it is cancelled, tested at every rate.
+  s3_zh: 对一份新的同类提议，管理层定了两个总支出上限：订单照做时不超过八万七千港元，订单取消时不超过两千港元，而且任何汇率下都要成立。
+  s3_zh_hk: 對一份新嘅同類建議，管理層定咗兩個總支出上限：張單照做唔可以超過八萬七千港元，張單取消唔可以超過兩千港元，而且任何匯率都要做到。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which one meets both limits?
+  title_zh: 哪种符合两个上限？
+  title_zh_hk: 哪種符合兩個上限？
+  en: >-
+    After cancellation at 8.00, what is the net outlay under each alternative? Which satisfies both limits
+    for a fresh proposal, and why not abandon every valuable option? Pause and vote.
+  zh: 订单在八点零零取消之后，两种做法的净支出各是多少？对新的提议，哪一种同时符合两个上限？为什么不该把有价值的期权一概放弃？请暂停，投个票。
+  zh_hk: 張單喺八點零零取消之後，兩種做法嘅淨支出各係幾多？對新嘅建議，邊種同時符合兩個上限？點解唔應該將有價值嘅期權一律放棄？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: The purchase still happens
+  title_zh: 采购照常进行时
+  title_zh_hk: 採購照常進行時
+  step1_en: >-
+    S = 9.00: F 85,000 · O 87,000
+  step1_zh: S = 9.00：F 85,000 · O 87,000
+  step1_zh_hk: S = 9.00：F 85,000 · O 87,000
+  step2_en: >-
+    S = 8.00: F 85,000 · O 82,000
+  step2_zh: S = 8.00：F 85,000 · O 82,000
+  step2_zh_hk: S = 8.00：F 85,000 · O 82,000
+  step3_en: O is cheaper only below 8.30
+  step3_zh: S 低于 8.30 时 O 才更便宜
+  step3_zh_hk: S 低於 8.30 時 O 才更便宜
+  s1_en: >-
+    At 9.00, the purchase costs 90,000 dollars. Each contract receives 5,000, so F nets 85,000, and O,
+    with its premium, costs 87,000.
+  s1_zh: 汇率九点零零时，采购要九万港元。两份合约各收五千，所以F净支出八万五千；O加上期权费，是八万七千。
+  s1_zh_hk: 匯率九點零零嘅時候，採購要九萬港元。兩份合約各收五千，所以F淨支出八萬五千；O加埋期權金，係八萬七千。
+  s2_en: >-
+    At 8.00, the purchase costs 80,000. F must pay 5,000, so it is 85,000 again. O receives nothing, so
+    with the premium it costs 82,000.
+  s2_zh: 汇率八点零零时，采购要八万。F要付五千，所以又是八万五千。O收不到钱，加上期权费是八万二千。
+  s2_zh_hk: 匯率八點零零嘅時候，採購要八萬。F要俾五千，所以又係八萬五千。O收唔到錢，加埋期權金係八萬二千。
+  s3_en: >-
+    F locks in 85,000 at every rate. O caps the cost at 87,000 but shares in a lower rate. It is cheaper
+    only when S is below 8.30, so neither dominates.
+  s3_zh: F在任何汇率下都锁定八万五千。O把成本封顶在八万七千，但汇率下跌时也能受惠。只有S低于八点三零时，O才更便宜，所以两者没有绝对的优劣。
+  s3_zh_hk: F喺任何匯率都鎖定八萬五千。O將成本封頂喺八萬七千，但匯率跌嘅時候都受惠。只有S低過八點三零，O先平啲，所以兩樣冇絕對嘅高低。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: No purchase, contract remains
+  title_zh: 采购没了，合约还在
+  title_zh_hk: 採購沒了，合約還在
+  step1_en: >-
+    Cancelled at 8.00: F 5,000 · O 2,000
+  step1_zh: 8.00 取消：F 5,000 · O 2,000
+  step1_zh_hk: 8.00 取消：F 5,000 · O 2,000
+  step2_en: F fails the 2,000 cancel limit
+  step2_zh: F 不符合 2,000 的取消上限
+  step2_zh_hk: F 不符合 2,000 的取消上限
+  step3_en: O meets both limits
+  step3_zh: O 同时符合两个上限
+  step3_zh_hk: O 同時符合兩個上限
+  s1_en: >-
+    After cancellation at 8.00, F pays 5,000 dollars with no purchase to offset it. O pays nothing more,
+    so its total outlay is the 2,000 premium.
+  s1_zh: 汇率八点零零时取消订单，F要付五千港元，却没有采购可以抵消。O不用再付钱，总支出就是两千港元的期权费。
+  s1_zh_hk: 匯率八點零零嘅時候取消張單，F要俾五千港元，但冇採購可以抵銷。O唔使再俾錢，總支出就係兩千港元期權金。
+  s2_en: >-
+    F meets the 87,000 completed-order limit, but fails the cancellation limit whenever S is below 8.30.
+    At 8.00, it is 3,000 over.
+  s2_zh: F符合订单照做时八万七千的上限，但只要S低于八点三零，就超出取消时的上限。在八点零零时，超出三千。
+  s2_zh_hk: F符合張單照做時八萬七千嘅上限，但只要S低過八點三零，就超出取消時嘅上限。喺八點零零，超出三千。
+  s3_en: >-
+    O meets both limits. And if cancellation came at 9.00 instead, O would still receive 5,000, a net
+    gain of 3,000. A cash-settled option keeps its value even when the euros are no longer needed.
+  s3_zh: O同时符合两个上限。如果取消时汇率是九点零零，O照样收到五千，扣掉期权费净赚三千。现金结算的期权，就算不再需要欧元，价值也还在。
+  s3_zh_hk: O同時符合兩個上限。如果取消嗰陣匯率係九點零零，O照樣收到五千，扣咗期權金淨賺三千。現金結算嘅期權，就算唔再需要歐元，價值都仲喺度。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Match protection to exposure
+  title_zh: 让保障配合风险敞口
+  title_zh_hk: 讓保障配合風險
+  en: >-
+    Under the supplied model, O fits the fresh proposal's two limits, and F does not. That does not prove
+    lower expected cost or permission to trade. Reassess the exposure and the contract rights together.
+  zh: 按题目给的模型，O符合新提议的两个上限，F不符合。但这不能证明O的预期成本更低，也不代表可以交易。要把风险敞口和合约权利放在一起重新评估。
+  zh_hk: 按題目俾嘅模型，O符合新建議嘅兩個上限，F唔符合。但咁唔證明O嘅預期成本低啲，亦唔代表可以去交易。要將風險同合約權利放埋一齊重新評估。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Protect the exposure, not a rate
+  title_zh: 保障的是敞口，不是一个汇率
+  title_zh_hk: 保障的是風險，不是一個匯率
+  q1_en: A forward stays even without a purchase
+  q1_zh: 没有采购，远期合约仍要结算
+  q1_zh_hk: 沒有採購，遠期合約仍要結算
+  q2_en: The premium buys flexibility
+  q2_zh: 期权费买的是灵活性
+  q2_zh_hk: 期權金買的是靈活性
+  s1_en: >-
+    A no-premium forward is not unconditionally cheaper. Its cost depends on the rate and on whether the
+    purchase actually happens.
+  s1_zh: 不用付期权费的远期合约，不一定就更便宜。成本高低，要看汇率，也要看采购会不会真的发生。
+  s1_zh_hk: 唔使俾期權金嘅遠期合約，唔一定平啲。成本高低，要睇匯率，亦要睇採購會唔會真係發生。
+  s2_en: These are not market offers, forecasts or trading recommendations.
+  s2_zh: 这些不是市场报价，不是预测，也不是交易建议。
+  s2_zh_hk: 呢啲唔係市場報價，唔係預測，亦唔係交易建議。
+  s3_en: >-
+    The importer, contracts, rates and amounts are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 进口商、合约、汇率和金额都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 進口商、合約、匯率同金額都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

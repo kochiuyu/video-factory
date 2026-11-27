@@ -1,0 +1,275 @@
+id: FIN-32
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: More return on equity. More risk to equity?
+title_zh: 权益回报更高。权益的风险也更高吗？
+title_zh_hk: 權益回報更高。權益的風險也更高嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-32
+  kicker_en: FIN-32
+  kicker_zh: FIN-32
+  kicker_zh_hk: FIN-32
+  title_en: More return on equity. More risk to equity?
+  title_zh: 权益回报更高。权益的风险也更高吗？
+  title_zh_hk: 權益回報更高。權益的風險也更高嗎？
+  image: art/more-return-more-equity-risk-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Finance education separates the return a business generates from the return left for its owners after
+    financing. Borrowing changes the claims on the same operating result. It does not improve that result.
+    Now you advise a fictional Hong Kong display-hire business.
+  zh: >-
+    金融教学把两种回报分开：一种是企业本身赚到的回报，另一种是付完融资之后留给业主的回报。借钱改变的，是谁对同一份经营成果有多少请求权，并不会让经营成果变好。现在，你要为香港一家虚构的展示器材租赁公司出主意。
+  zh_hk: >-
+    金融教學會分開兩種回報：一種係企業本身賺到嘅回報，另一種係俾完融資之後留返俾老闆嘅回報。借錢改變嘅，係邊個對同一份經營成果有幾多請求權，唔會令經營成果變好。而家，你要幫香港一間虛構嘅展示器材租賃公司出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two ways to fund HK$1,000,000
+  title_zh: 为 HK$1,000,000 融资的两种方式
+  title_zh_hk: 為 HK$1,000,000 融資的兩種方式
+  row1_en: >-
+    E: all equity
+  row1_zh: E：全部权益
+  row1_zh_hk: E：全部權益
+  row2_en: >-
+    D: with debt
+  row2_zh: D：加借款
+  row2_zh_hk: D：加借款
+  col1_en: Owner equity
+  col1_zh: 业主权益
+  col1_zh_hk: 業主權益
+  col2_en: Debt at 5%
+  col2_zh: 5% 借款
+  col2_zh_hk: 5% 借款
+  col3_en: Opening profit
+  col3_zh: 起初经营利润
+  col3_zh_hk: 起初經營利潤
+  c11: HK$1,000,000
+  c12: HK$0
+  c13: HK$120,000
+  c21: HK$400,000
+  c22: HK$600,000
+  c23: HK$120,000
+  footer_en: Year-end recovery HK$1,000,000
+  footer_zh: 年末资产收回 HK$1,000,000
+  footer_zh_hk: 年末資產收回 HK$1,000,000
+  s1_en: >-
+    A one-year display-equipment project needs 1,000,000 dollars today. The owner can fund it all with
+    equity, plan E, or put in 400,000 and borrow 600,000, plan D. Operations are identical either way.
+  s1_zh: >-
+    一个为期一年的展示器材项目，今天需要一百万港元。业主可以全部用自有资金，也就是E方案；也可以自己出四十万、借六十万，也就是D方案。两种方案下，经营完全一样。
+  s1_zh_hk: >-
+    一個為期一年嘅展示器材項目，今日要一百萬港元。老闆可以全部用自己嘅錢，即係E方案；亦可以自己出四十萬、借六十萬，即係D方案。兩個方案之下，經營完全一樣。
+  s2_en: >-
+    The loan has a fixed 5 percent rate, with all principal and one year's interest due at year-end. The
+    equipment is then sold, recovering exactly 1,000,000 dollars before the debt is repaid.
+  s2_zh: 贷款是固定年利率百分之五，本金和一年利息都在年末到期。到时设备卖掉，在还债之前正好收回一百万港元。
+  s2_zh_hk: 貸款係固定年利率百分之五，本金同一年利息都喺年尾到期。到時設備賣咗，喺還債之前啱啱收返一百萬港元。
+  s3_en: >-
+    The opening scenario produces 120,000 dollars of operating profit. Compare the one-year return on
+    the owner's initial project equity. No probabilities or risk preference are given.
+  s3_zh: 起初情景的经营利润是十二万港元。请比较业主投入项目的初始权益，一年下来的回报率。题目没有给概率，也没有给风险偏好。
+  s3_zh_hk: 起初情景嘅經營利潤係十二萬港元。請比較老闆投入項目嘅初始權益，一年落嚟嘅回報率。題目冇俾機率，亦冇俾風險偏好。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Endorse D for its percentage?
+  title_zh: 因为百分比高就选 D？
+  title_zh_hk: 因為百分比高就選 D？
+  en: >-
+    Calculate each plan's cash returned to the owner and its return on initial equity. Would you endorse
+    D just because its percentage is higher, and what remains unknown? Pause and vote.
+  zh: 算出每个方案交还给业主的现金，以及初始权益的回报率。你会只因为D的百分比更高，就支持D吗？还有什么是不知道的？请暂停，投个票。
+  zh_hk: 計出每個方案交返俾老闆嘅現金，同初始權益嘅回報率。你會唔會淨係因為D嘅百分比高啲，就支持D？仲有咩係唔知道嘅？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A downturn scenario
+  title_zh: 一个下行情景
+  title_zh_hk: 一個下行情景
+  step1_en: Operating profit only HK$20,000
+  step1_zh: 经营利润只有 HK$20,000
+  step1_zh_hk: 經營利潤只有 HK$20,000
+  step2_en: Same recovery, same 5% rate
+  step2_zh: 资产收回和 5% 利率不变
+  step2_zh_hk: 資產收回和 5% 利率不變
+  step3_en: An alternative outcome, no odds
+  step3_zh: 另一种结果，没有概率
+  step3_zh_hk: 另一種結果，沒有機率
+  s1_en: >-
+    Before choosing, assess a downturn. Operating profit is only 20,000 dollars, still positive before
+    financing.
+  s1_zh: 选择之前，先评估一个下行情景。经营利润只有两万港元，付融资之前仍然是正的。
+  s1_zh_hk: 揀之前，先評估一個下行情景。經營利潤得兩萬港元，未俾融資之前仍然係正數。
+  s2_en: >-
+    Everything else is unchanged, including the 1,000,000-dollar asset recovery before debt repayment
+    and the fixed 5 percent rate.
+  s2_zh: 其他假设都不变，包括还债之前收回一百万港元的资产，以及固定的百分之五利率。
+  s2_zh_hk: 其他假設全部唔變，包括還債之前收返一百萬港元資產，同固定百分之五嘅利率。
+  s3_en: >-
+    This is an alternative outcome for the same year, not a second year. Both plans are still available,
+    and no probabilities are added.
+  s3_zh: 这是同一年的另一种可能结果，不是第二年。两个方案都还可以选，题目也没有补充概率。
+  s3_zh_hk: 呢個係同一年嘅另一個可能結果，唔係第二年。兩個方案都仲揀得，題目亦冇補充機率。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Positive profit, safe equity?
+  title_zh: 利润为正，权益就安全吗？
+  title_zh_hk: 利潤為正，權益就安全嗎？
+  en: >-
+    In the downturn, calculate both equity returns and check that D repays its debt. Does positive operating
+    profit protect the owner from an equity loss? Pause and vote.
+  zh: 在下行情景里，算出两种权益回报，并核对D能不能还清债务。经营利润为正，就能让业主避免权益亏损吗？请暂停，投个票。
+  zh_hk: 喺下行情景入面，計出兩種權益回報，再核對D還唔還得清債。經營利潤係正數，就可以令老闆避開權益虧損嗎？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: The opening percentages
+  title_zh: 起初情景的百分比
+  title_zh_hk: 起初情景的百分比
+  step1_en: >-
+    E: 1,120,000 back → 12%
+  step1_zh: E：交还 1,120,000 → 12%
+  step1_zh_hk: E：交還 1,120,000 → 12%
+  step2_en: D owes 600,000 + 30,000
+  step2_zh: D 欠 600,000 + 30,000
+  step2_zh_hk: D 欠 600,000 + 30,000
+  step3_en: >-
+    D: 490,000 back → 22.5%
+  step3_zh: D：交还 490,000 → 22.5%
+  step3_zh_hk: D：交還 490,000 → 22.5%
+  s1_en: >-
+    E returns 1,120,000 dollars: the 1,000,000 recovery plus 120,000 of profit. The gain is 120,000 on
+    1,000,000, or 12 percent.
+  s1_zh: E交还业主一百一十二万：一百万的资产收回，加上十二万利润。盈利十二万，除以一百万，就是百分之十二。
+  s1_zh_hk: E交返俾老闆一百一十二萬：一百萬資產收返，加十二萬利潤。賺十二萬，除一百萬，即係百分之十二。
+  s2_en: >-
+    D owes 5 percent of 600,000, or 30,000 dollars of interest, plus the 600,000 principal, so 630,000
+    in total.
+  s2_zh: D要付六十万的百分之五，即三万港元利息，再加六十万本金，一共六十三万。
+  s2_zh_hk: D要俾六十萬嘅百分之五，即係三萬港元利息，再加六十萬本金，總共六十三萬。
+  s3_en: >-
+    D returns 490,000 dollars. On 400,000 of equity, the gain is 90,000, or 22.5 percent. The higher percentage
+    comes with a smaller equity base and a smaller dollar gain.
+  s3_zh: D交还四十九万港元。按四十万的权益计算，盈利九万，回报率百分之二十二点五。更高的百分比，背后是更小的权益基数，以及更少的盈利金额。
+  s3_zh_hk: D交返四十九萬港元。按四十萬權益計，賺九萬，回報率百分之二十二點五。百分比高啲，背後係細啲嘅權益基數，同埋少啲嘅盈利金額。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Positive operations, equity loss
+  title_zh: 经营为正，权益亏损
+  title_zh_hk: 經營為正，權益虧損
+  step1_en: >-
+    Downturn: E +2% · D −2.5%
+  step1_zh: 下行：E +2% · D −2.5%
+  step1_zh_hk: 下行：E +2% · D −2.5%
+  step2_en: D still repays 630,000 in full
+  step2_zh: D 仍全数偿还 630,000
+  step2_zh_hk: D 仍全數償還 630,000
+  step3_en: Return falls 10 points vs 25
+  step3_zh: 回报率跌 10 对 25 个百分点
+  step3_zh_hk: 回報率跌 10 對 25 個百分點
+  s1_en: >-
+    In the downturn, total project cash is 1,020,000 dollars. E gains 20,000, or 2 percent. D pays 630,000
+    and gets back 390,000, a 10,000 loss, or minus 2.5 percent. Profit is positive but below the interest.
+  s1_zh: >-
+    下行情景里，项目现金总共一百零二万。E盈利两万，回报率百分之二。D付六十三万，拿回三十九万，亏损一万，回报率是负百分之二点五。经营利润为正，但低于利息。
+  s1_zh_hk: >-
+    下行情景入面，項目現金總共一百零二萬。E賺兩萬，回報率百分之二。D俾六十三萬，拎返三十九萬，蝕一萬，回報率係負百分之二點五。經營利潤係正，但係低過利息。
+  s2_en: >-
+    D still repays the lender in full, because 1,020,000 exceeds 630,000. The owner's loss is less equity
+    returned, not an unpaid loan or a cash call.
+  s2_zh: D仍然能全数还给贷款人，因为一百零二万大于六十三万。业主的亏损，是拿回的权益变少了，不是欠下贷款，也不用额外补钱。
+  s2_zh_hk: D仍然還得晒俾貸款人，因為一百零二萬大過六十三萬。老闆嘅虧損，係拎返嘅權益少咗，唔係欠落貸款，亦唔使額外補錢。
+  s3_en: >-
+    Operating profit falls 100,000 under either plan. But the equity return falls 10 points for E and
+    25 points for D. The same change is larger against D's smaller equity base. That is financial leverage.
+  s3_zh: 两种方案下，经营利润都少了十万。但E的权益回报率跌十个百分点，D跌二十五个百分点。同样的变化，放在D较小的权益基数上就更大。这就是财务杠杆。
+  s3_zh_hk: >-
+    兩個方案之下，經營利潤都少咗十萬。但E嘅權益回報率跌十個百分點，D跌二十五個百分點。同一個變化，放喺D細啲嘅權益基數上面就大啲。呢個就係財務槓桿。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: A conditional choice
+  title_zh: 有条件的选择
+  title_zh_hk: 有條件的選擇
+  en: >-
+    D gives the higher equity return in the opening scenario but a loss in the downturn, while E stays
+    positive in both. A recommendation needs the owner's tolerance for loss, credible probabilities and
+    the use of the outside capital.
+  zh: >-
+    起初情景里D的权益回报更高，但下行时会亏损；E在两种情景下都为正。要给建议，还需要知道业主能承受多少亏损、可信的概率，以及那笔外部资金的用途。
+  zh_hk: >-
+    起初情景入面D嘅權益回報高啲，但下行嘅時候會蝕；E喺兩個情景都係正數。要俾建議，仲要知道老闆可以承受幾多虧損、可信嘅機率，同埋嗰筆外面資金點用。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Leverage magnifies equity risk
+  title_zh: 杠杆放大权益风险
+  title_zh_hk: 槓桿放大權益風險
+  q1_en: Compare dollar gains and equity bases
+  q1_zh: 比较盈利金额和权益基数
+  q1_zh_hk: 比較盈利金額和權益基數
+  q2_en: Test a downside before borrowing
+  q2_zh: 借钱之前先测试下行情景
+  q2_zh_hk: 借錢之前先測試下行情景
+  s1_en: >-
+    Borrowing does not improve operations. It changes how a given operating result is shared, so equity
+    returns swing more in both directions.
+  s1_zh: 借钱不会让经营变好。它改变的是同一份经营成果怎样分配，所以权益回报在上下两个方向都会摆动得更大。
+  s1_zh_hk: 借錢唔會令經營變好。佢改變嘅係同一份經營成果點分，所以權益回報喺上落兩個方向都會擺得大啲。
+  s2_en: >-
+    These two illustrations show sensitivity, not expected returns or optimal borrowing.
+  s2_zh: 这两个例子显示的是敏感度，不是预期回报，也不是最佳借款水平。
+  s2_zh_hk: 呢兩個例子顯示嘅係敏感度，唔係預期回報，亦唔係最佳借款水平。
+  s3_en: >-
+    The business, project and amounts are fictional, not real loan offers. Official scene art is a teaching
+    illustration only.
+  s3_zh: 企业、项目和金额都是虚构的，不是真实的贷款报价。官方场景图只是教学插图。
+  s3_zh_hk: 企業、項目同金額都係虛構嘅，唔係真實嘅貸款報價。官方場景圖只係教學插圖。
+duration_target_s: 196

@@ -1,0 +1,283 @@
+id: FIN-33
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A business price. A price for the shares?
+title_zh: 企业的价格。股份另有价格吗？
+title_zh_hk: 企業的價格。股份另有價格嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-33
+  kicker_en: FIN-33
+  kicker_zh: FIN-33
+  kicker_zh_hk: FIN-33
+  title_en: A business price. A price for the shares?
+  title_zh: 企业的价格。股份另有价格吗？
+  title_zh_hk: 企業的價格。股份另有價格嗎？
+  image: art/business-price-share-price-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Valuation teaching separates the value of an operating business from the value of its equity, and
+    purchase agreements define which cash and debt enter the price. Check those definitions before treating
+    a bank balance as extra sale proceeds. Now you advise a fictional Hong Kong founder.
+  zh: >-
+    估值教学把经营业务的价值和股权的价值分开；收购协议则规定，哪些现金和债务会计入价格调整。把银行存款当成额外的出售所得之前，要先核对这些定义。现在，你要为香港一位虚构的创始人出主意。
+  zh_hk: >-
+    估值教學會分開經營業務嘅價值同股權嘅價值；收購協議就會講明，邊啲現金同債務計入價格調整。將銀行存款當做額外出售所得之前，要先核對呢啲定義。而家，你要幫香港一位虛構嘅創辦人出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: The sale worksheet (HK$ million)
+  title_zh: 出售工作表（百万港元）
+  title_zh_hk: 出售工作表（百萬港元）
+  row1_en: Enterprise value
+  row1_zh: 企业价值报价
+  row1_zh_hk: 企業價值報價
+  row2_en: Bank balances
+  row2_zh: 银行存款
+  row2_zh_hk: 銀行存款
+  row3_en: Debt payoff
+  row3_zh: 债务清偿额
+  row3_zh_hk: 債務清償額
+  row4_en: Founder's minimum
+  row4_zh: 创始人最低要求
+  row4_zh_hk: 創辦人最低要求
+  col1_en: Amount
+  col1_zh: 金额
+  col1_zh_hk: 金額
+  col2_en: Status
+  col2_zh: 状态
+  col2_zh_hk: 狀態
+  c11: '10.0'
+  c12_en: Proposed headline
+  c12_zh: 买方提出
+  c12_zh_hk: 買方提出
+  c21: '1.4'
+  c22_en: Eligibility unchecked
+  c22_zh: 是否合格未核对
+  c22_zh_hk: 是否合資格未核對
+  c31: '3.0'
+  c32_en: Buyer pays the lender
+  c32_zh: 买方付给贷款人
+  c32_zh_hk: 買方付給貸款人
+  c41: '8.0'
+  c42_en: Immediate cash for shares
+  c42_zh: 卖股即时现金
+  c42_zh_hk: 賣股即時現金
+  footer_en: Shares = EV + eligible cash − debt
+  footer_zh: 股价 = 企业价值 + 合格现金 − 债务
+  footer_zh_hk: 股價 = 企業價值 + 合資格現金 − 債務
+  s1_en: >-
+    The sole founder of an equipment-maintenance business has a buyer proposing 10 million dollars of
+    enterprise value for all the shares. Nothing is signed.
+  s1_zh: 一家设备维修企业的唯一创始人，收到买方的报价：按一千万港元的企业价值，买下全部股份。目前什么都还没签。
+  s1_zh_hk: 一間設備維修企業嘅唯一創辦人，收到買家報價：按一千萬港元企業價值，買晒全部股份。而家乜都未簽。
+  s2_en: >-
+    The cash for the shares equals enterprise value, plus eligible surplus cash, minus the debt payoff.
+    The worksheet shows a 3 million payoff and 1.4 million in company bank balances, provisionally all
+    treated as eligible.
+  s2_zh: >-
+    股份的价款，等于企业价值，加上合格的富余现金，再减去债务清偿额。工作表显示，债务清偿额是三百万，公司银行存款一百四十万，暂时全部当成合格现金。
+  s2_zh_hk: >-
+    股份嘅價錢，等於企業價值，加合資格嘅剩餘現金，再減債務清償額。工作表顯示，債務清償額係三百萬，公司銀行存款一百四十萬，暫時全部當係合資格現金。
+  s3_en: >-
+    The buyer pays the lender separately, and the bank balances stay in the company. The founder wants
+    at least 8 million dollars in immediate cash for the shares.
+  s3_zh: 买方另外付钱给贷款人，银行存款留在公司里。创始人要求卖股份即时拿到至少八百万港元现金。
+  s3_zh_hk: 買家另外俾錢貸款人，銀行存款留喺公司入面。創辦人要求賣股份即時收到最少八百萬港元現金。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Does it meet HK$8 million?
+  title_zh: 够不够八百万？
+  title_zh_hk: 夠不夠八百萬？
+  en: >-
+    Under the provisional cash assumption, what would the founder receive for the shares? Does it meet
+    the 8 million minimum, and which classification must be checked first? Pause and vote.
+  zh: 按暂定的现金假设，创始人卖股份能拿到多少？够不够八百万的最低要求？在依赖这个答案之前，哪一项分类必须先核对？请暂停，投个票。
+  zh_hk: 按暫定嘅現金假設，創辦人賣股份收到幾多？夠唔夠八百萬嘅最低要求？靠呢個答案之前，邊一項分類一定要先核對？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Part of the cash is restricted
+  title_zh: 部分现金受限制
+  title_zh_hk: 部分現金受限制
+  step1_en: HK$500,000 restricted deposit
+  step1_zh: HK$500,000 受限存款
+  step1_zh_hk: HK$500,000 受限存款
+  step2_en: Excluded from the cash add-back
+  step2_zh: 不计入现金加回
+  step2_zh_hk: 不計入現金加回
+  step3_en: HK$900,000 verified eligible
+  step3_zh: HK$900,000 核实合格
+  step3_zh_hk: HK$900,000 核實合資格
+  s1_en: >-
+    The closing review finds 500,000 dollars in a restricted deposit backing a premises agreement. It
+    cannot be withdrawn, distributed or used to repay debt, and it stays with the company.
+  s1_zh: 交割复核发现，有五十万港元是一笔受限存款，用来支持一份场地协议。这笔钱不能提取、不能分配，也不能用来还债，交割后留在公司里。
+  s1_zh_hk: 完成交易前嘅覆核發現，有五十萬港元係一筆受限存款，用嚟支持一份場地協議。呢筆錢唔可以提、唔可以分，亦唔可以用嚟還債，完成交易之後留喺公司。
+  s2_en: >-
+    The contract expressly excludes that deposit from the cash add-back. Its benefit is already inside
+    the unchanged 10 million headline, with no later payment to the seller.
+  s2_zh: 合同明确把这笔存款排除在现金加回之外。它的好处已经包含在不变的一千万企业价值报价里，以后也不会再付给卖方。
+  s2_zh_hk: 合約講明將呢筆存款排除喺現金加回之外。佢嘅好處已經包喺冇變嘅一千萬企業價值報價入面，之後亦唔會再俾賣方。
+  s3_en: >-
+    The remaining 900,000 dollars is verified eligible surplus cash. These are fictional bargain terms,
+    not a rule for every restricted deposit.
+  s3_zh: 其余九十万港元，核实为合格的富余现金。这些是虚构的交易条款，不是所有受限存款都适用的规则。
+  s3_zh_hk: 其餘九十萬港元，核實係合資格嘅剩餘現金。呢啲係虛構嘅交易條款，唔係所有受限存款都適用嘅規則。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Now, does it meet the minimum?
+  title_zh: 现在还够最低要求吗？
+  title_zh_hk: 現在還夠最低要求嗎？
+  en: >-
+    What does the founder now receive, and does the proposal meet the minimum? Reconcile the payments
+    without counting cash or debt twice, then find the headline needed for 8 million. Pause and vote.
+  zh: 创始人现在能拿到多少？这个报价还符合最低要求吗？核对各笔付款时，不要把现金或债务算两次，再算出要拿到八百万需要多高的报价。请暂停，投个票。
+  zh_hk: 創辦人而家收到幾多？呢個報價仲符唔符合最低要求？對數嘅時候唔好將現金或者債務計兩次，再計出要收到八百萬，報價要幾高。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Classify before adding
+  title_zh: 先分类，再加总
+  title_zh_hk: 先分類，再加總
+  step1_en: >-
+    Provisional: 10.0 + 1.4 − 3.0 = 8.4
+  step1_zh: 暂定：10.0 + 1.4 − 3.0 = 8.4
+  step1_zh_hk: 暫定：10.0 + 1.4 − 3.0 = 8.4
+  step2_en: >-
+    Reviewed: 10.0 + 0.9 − 3.0 = 7.9
+  step2_zh: 核实后：10.0 + 0.9 − 3.0 = 7.9
+  step2_zh_hk: 核實後：10.0 + 0.9 − 3.0 = 7.9
+  step3_en: Short of the minimum by 0.1
+  step3_zh: 比最低要求少 0.1
+  step3_zh_hk: 比最低要求少 0.1
+  s1_en: >-
+    The first worksheet gives 10 million, plus 1.4, minus 3, or 8.4 million for the shares. That is above
+    the minimum, but only if all the cash qualifies.
+  s1_zh: 第一版工作表算出：一千万，加一百四十万，减三百万，股份价款是八百四十万。这高于最低要求，但前提是全部现金都合格。
+  s1_zh_hk: 第一版工作表計出：一千萬，加一百四十萬，減三百萬，股份價錢係八百四十萬。呢個高過最低要求，但前提係所有現金都合資格。
+  s2_en: >-
+    After review, eligible cash is 900,000. The share price becomes 10 million, plus 0.9, minus 3, or
+    7.9 million.
+  s2_zh: 复核之后，合格现金是九十万。股份价款变成一千万，加九十万，减三百万，也就是七百九十万。
+  s2_zh_hk: 覆核之後，合資格現金係九十萬。股份價錢變成一千萬，加九十萬，減三百萬，即係七百九十萬。
+  s3_en: >-
+    That misses the 8 million minimum by 100,000 dollars. The deposit has not vanished, so do not subtract
+    500,000 again from 7.9 million.
+  s3_zh: 这比八百万的最低要求少了十万港元。那笔存款并没有消失，所以不要再从七百九十万里减一次五十万。
+  s3_zh_hk: 咁樣比八百萬嘅最低要求少十萬港元。嗰筆存款冇消失，所以唔好再喺七百九十萬入面減多一次五十萬。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Follow the two recipients
+  title_zh: 分清两个收款人
+  title_zh_hk: 分清兩個收款人
+  step1_en: Founder 7.9 + lender 3.0 = 10.9
+  step1_zh: 创始人 7.9 + 贷款人 3.0 = 10.9
+  step1_zh_hk: 創辦人 7.9 + 貸款人 3.0 = 10.9
+  step2_en: = headline 10.0 + cash 0.9
+  step2_zh: = 报价 10.0 + 现金 0.9
+  step2_zh_hk: = 報價 10.0 + 現金 0.9
+  step3_en: Needed headline H = 10.1
+  step3_zh: 所需报价 H = 10.1
+  step3_zh_hk: 所需報價 H = 10.1
+  s1_en: >-
+    The buyer pays the founder 7.9 million and the lender 3 million, so 10.9 million in total.
+  s1_zh: 买方付给创始人七百九十万，付给贷款人三百万，合计一千零九十万。
+  s1_zh_hk: 買家俾創辦人七百九十萬，俾貸款人三百萬，合共一千零九十萬。
+  s2_en: >-
+    That equals the 10 million headline plus the 900,000 of eligible cash kept in the company. The bank
+    balance is not a third payment to the founder, and the loan is not subtracted twice.
+  s2_zh: 这正好等于一千万的报价，加上留在公司里的九十万合格现金。银行存款不是付给创始人的第三笔钱，贷款也不能减两次。
+  s2_zh_hk: 呢個啱啱等於一千萬報價，加留喺公司嘅九十萬合資格現金。銀行存款唔係俾創辦人嘅第三筆錢，貸款亦唔可以減兩次。
+  s3_en: >-
+    For 8 million, H plus 0.9 minus 3 must equal 8, so H is 10.1 million. A 100,000 increase would just
+    meet the minimum, but no buyer has agreed to it.
+  s3_zh: 要拿到八百万，H加九十万减三百万必须等于八百万，所以H是一千零一十万。报价再高十万就刚好达标，但买方并没有同意。
+  s3_zh_hk: 要收到八百萬，H加九十萬減三百萬一定要等於八百萬，所以H係一千零一十萬。報價高多十萬就啱啱達標，但買家冇答應過。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Report the shortfall
+  title_zh: 如实报告差额
+  title_zh_hk: 如實報告差額
+  en: >-
+    Report that the current proposal fails the founder's minimum. Do not accept it on the old 8.4 million
+    worksheet. The founder could seek a changed proposal or decline it. Releasing the deposit is not an
+    available shortcut.
+  zh: >-
+    应该如实报告：现在的报价达不到创始人的最低要求，不能按旧的八百四十万工作表接受。创始人可以要求改报价，也可以拒绝。动用那笔受限存款，不是可行的捷径。
+  zh_hk: >-
+    應該如實報告：而家嘅報價達唔到創辦人嘅最低要求，唔可以按舊嘅八百四十萬工作表接受。創辦人可以要求改報價，亦可以拒絕。動用嗰筆受限存款，唔係可行嘅捷徑。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Business value is not share cash
+  title_zh: 企业价格不等于股份价格
+  title_zh_hk: 企業價格不等於股份價格
+  q1_en: Check which cash is eligible
+  q1_zh: 核对哪些现金合格
+  q1_zh_hk: 核對哪些現金合資格
+  q2_en: Count cash and debt only once
+  q2_zh: 现金和债务只算一次
+  q2_zh_hk: 現金和債務只算一次
+  s1_en: >-
+    The founder's receipt depends on the contract's cash and debt definitions, not on the enterprise-value
+    headline or the bank statement alone.
+  s1_zh: 创始人能拿到多少，取决于合同里现金和债务的定义，不是只看企业价值报价，也不是只看银行结单。
+  s1_zh_hk: 創辦人收到幾多，要睇合約入面現金同債務嘅定義，唔係淨係睇企業價值報價，亦唔係淨係睇銀行月結單。
+  s2_en: >-
+    This does not value the business from forecasts, confirm legal enforceability or estimate after-tax
+    wealth.
+  s2_zh: 这里不根据预测为企业估值，不确认法律上的可执行性，也不估算税后财富。
+  s2_zh_hk: 呢度唔係根據預測幫企業估值，唔確認法律上嘅執行力，亦唔估算稅後財富。
+  s3_en: >-
+    The business, buyer and amounts are fictional; no transaction is arranged. Official scene art is a
+    teaching illustration only.
+  s3_zh: 企业、买方和金额都是虚构的，并未安排任何交易。官方场景图只是教学插图。
+  s3_zh_hk: 企業、買家同金額都係虛構嘅，冇安排任何交易。官方場景圖只係教學插圖。
+duration_target_s: 196

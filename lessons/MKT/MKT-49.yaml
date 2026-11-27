@@ -1,0 +1,261 @@
+id: MKT-49
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: More tea sold. Did the tasting credit pay?
+title_zh: 茶叶卖多了，试饮费抵扣划算吗？
+title_zh_hk: 茶葉賣多了，試飲費折抵划算嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-49
+  kicker_en: MKT-49
+  kicker_zh: MKT-49
+  kicker_zh_hk: MKT-49
+  title_en: More tea sold. Did the tasting credit pay?
+  title_zh: 茶叶卖多了，试饮费抵扣划算吗？
+  title_zh_hk: 茶葉賣多了，試飲費折抵划算嗎？
+  image: art/a-tasting-flight-for-whom-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    The Hong Kong Trade Development Council described exhibitors offering visitors teas to taste at its
+    first Tea Fair. Now you run a fictional Hong Kong tea shop testing a paid tasting flight. The question
+    is whether crediting the fee earns enough extra full-pack contribution.
+  zh: >-
+    香港贸易发展局介绍首届茶展时提到，参展商让参观者试饮多款茶。现在，你经营香港一家虚构的茶叶店，正在测试收费试饮。问题不在于大家最喜欢哪款茶，而在于把试饮费抵扣到正装上，能否带来足够的额外贡献。
+  zh_hk: >-
+    香港貿易發展局介紹首屆茶展嗰陣提到，參展商畀參觀者試飲唔同嘅茶。而家，你經營香港一間虛構嘅茶葉舖，測試緊收費試飲。問題唔係大家最鍾意邊款茶，而係將試飲費折抵正裝，賺唔賺到足夠嘅額外貢獻。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: First week, 100 visitors each
+  title_zh: 第一周，各 100 人
+  title_zh_hk: 第一星期，各 100 人
+  row1_en: >-
+    F: no credit
+  row1_zh: F：不设抵扣
+  row1_zh_hk: F：不設折抵
+  row2_en: >-
+    C: HK$16 credit
+  row2_zh: C：抵扣 HK$16
+  row2_zh_hk: C：折抵 HK$16
+  col1_en: Tastings served
+  col1_zh: 试饮份数
+  col1_zh_hk: 試飲份數
+  col2_en: Full packs bought
+  col2_zh: 正装购买数
+  col2_zh_hk: 正裝購買數
+  c11: '100'
+  c12: '38'
+  c21: '100'
+  c22: '50'
+  footer_en: Pack HK$42 · tasting HK$20 (cost 14)
+  footer_zh: 正装 HK$42 · 试饮 HK$20，成本 14
+  footer_zh_hk: 正裝 HK$42 · 試飲 HK$20，成本 14
+  s1_en: >-
+    A tasting flight is three small pours. Every visitor has already chosen the same 20-dollar tasting,
+    which costs 14 dollars to serve.
+  s1_zh: 试饮套餐是三小杯茶。每位顾客都已经选了同样二十元的试饮，店铺成本是十四元。
+  s1_zh_hk: 試飲套餐係三細杯茶。每位顧客都已經揀咗同樣二十蚊嘅試飲，舖頭成本係十四蚊。
+  s2_en: >-
+    After serving it, the shop randomly assigns 100 visitors to each offer. F is the standard full-pack
+    offer; C gives a clearly disclosed 16-dollar credit, valid for one full pack that week.
+  s2_zh: 试饮之后，店铺把顾客随机分成两组，每组一百人。F 是一般的正装优惠；C 会清楚说明，可以把十六元抵扣用于当周购买一包正装。
+  s2_zh_hk: 試飲之後，舖頭將顧客隨機分做兩組，每組一百人。F 係一般嘅正裝優惠；C 會清楚講明，可以將十六蚊折抵用喺當星期買一包正裝。
+  s3_en: >-
+    Each full pack earns 42 dollars before any credit. In week one, F sells 38 full packs and C sells
+    50; every C pack that week redeems the credit, and each visitor buys at most one pack.
+  s3_zh: 每包正装在抵扣前带来四十二元贡献。第一周，F 组卖出三十八包，C 组卖出五十包；C 组当周买的每一包都用了抵扣，每位顾客最多买一包。
+  s3_zh_hk: 每包正裝喺折抵之前帶嚟四十二蚊貢獻。第一個星期，F 組賣出三十八包，C 組賣出五十包；C 組當星期買嘅每一包都用咗折抵，每位顧客最多買一包。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Extend the credit?
+  title_zh: 要延续抵扣吗？
+  title_zh_hk: 要延續折抵嗎？
+  en: >-
+    Would you extend the credit on these first-week numbers? Calculate the full-pack contribution for
+    each offer, and the minimum C sales needed to match or beat F at the same credit. Pause and vote.
+  zh: >-
+    根据第一周的数字，你会继续提供抵扣吗？算出两个方案的正装贡献，以及在同样的抵扣下，C 组最少要卖多少包，才能追平或超过 F 组。请暂停，投个票。
+  zh_hk: >-
+    根據第一個星期嘅數字，你會唔會繼續提供折抵？計出兩個方案嘅正裝貢獻，同埋喺同樣折抵之下，C 組最少要賣幾多包，先追得上或者贏到 F 組。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The second week
+  title_zh: 第二周
+  title_zh_hk: 第二個星期
+  step1_en: >-
+    Late buyers: F +8, C +3
+  step1_zh: 迟买的人：F +8，C +3
+  step1_zh_hk: 遲買的人：F +8，C +3
+  step2_en: No credit valid · HK$42 each
+  step2_zh: 抵扣已失效 · 每包 HK$42
+  step2_zh_hk: 折抵已失效 · 每包 HK$42
+  step3_en: New sales or brought forward? Unknown
+  step3_zh: 新增还是提前购买？不知道
+  step3_zh_hk: 新增還是提前購買？不知道
+  s1_en: >-
+    During the following week, eight more F visitors and three more C visitors buy their first full pack.
+  s1_zh: 接下来一周，F 组又有八位、C 组又有三位顾客第一次买正装。
+  s1_zh_hk: 跟住嗰個星期，F 組再有八位、C 組再有三位顧客第一次買正裝。
+  s2_en: >-
+    No credit is valid then, so each late pack earns 42 dollars. There are no remaining commitments.
+  s2_zh: 这时抵扣已经失效，所以每包迟买的正装都带来四十二元。之后也没有其他未完成的承诺。
+  s2_zh_hk: 嗰陣折抵已經失效，所以每包遲買嘅正裝都帶嚟四十二蚊。之後亦冇其他未完成嘅承諾。
+  s3_en: >-
+    The shop still does not know which purchases were newly created and which were brought forward. The
+    flight stays at 20 dollars, and the owner can test a lower credit later.
+  s3_zh: 店铺仍然不知道，哪些购买是新增的，哪些只是提前了。试饮依然是二十元，店主之后可以测试较低的抵扣额。
+  s3_zh_hk: 舖頭仍然唔知道，邊啲購買係新增，邊啲只係提早咗。試飲依然係二十蚊，店主之後可以測試低啲嘅折抵額。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which offer goes forward?
+  title_zh: 哪个方案继续？
+  title_zh_hk: 哪個方案繼續？
+  en: >-
+    Which offer would you carry forward now? Calculate two-week contribution including the tastings, and
+    explain what can and cannot be inferred from the extra seven packs. Pause and vote.
+  zh: 你现在会继续采用哪个方案？算出两周合计的贡献，包括试饮在内，并说明从多出的七包可以推断什么，又不能推断什么。请暂停，投个票。
+  zh_hk: 你而家會繼續用邊個方案？計出兩個星期加埋嘅貢獻，包括試飲，再講吓由多出嘅七包可以推斷啲咩，又推斷唔到啲咩。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Every credited pack costs HK$16
+  title_zh: 每包抵扣都少收 HK$16
+  title_zh_hk: 每包折抵都少收 HK$16
+  step1_en: >-
+    F week one: 38 × 42 = HK$1,596
+  step1_zh: F 第一周：38 × 42 = HK$1,596
+  step1_zh_hk: F 第一星期：38 × 42 = HK$1,596
+  step2_en: >-
+    C week one: 50 × 26 = HK$1,300
+  step2_zh: C 第一周：50 × 26 = HK$1,300
+  step2_zh_hk: C 第一星期：50 × 26 = HK$1,300
+  step3_en: C needs 62 credited sales to match
+  step3_zh: C 要卖 62 包才追得上
+  step3_zh_hk: C 要賣 62 包才追得上
+  s1_en: F earns 38 times 42, which is 1,596 dollars from packs in week one.
+  s1_zh: 第一周，F 组正装贡献是三十八乘四十二，等于一千五百九十六元。
+  s1_zh_hk: 第一個星期，F 組正裝貢獻係三十八乘四十二，即係一千五百九十六蚊。
+  s2_en: C earns 50 times 42 minus 16, which is 26, giving 1,300 dollars.
+  s2_zh: C 组是五十乘四十二减十六，即五十乘二十六，等于一千三百元。
+  s2_zh_hk: C 組係五十乘四十二減十六，即係五十乘二十六，等於一千三百蚊。
+  s3_en: >-
+    C would need 62 credited sales to at least match F: 61 times 26 is 1,586, while 62 times 26 is 1,612.
+    The identical tasting contribution cancels out.
+  s3_zh: >-
+    C 组最少要卖六十二包，才不输给 F 组：六十一乘二十六是一千五百八十六，六十二乘二十六是一千六百一十二。两组试饮的贡献相同，比较时互相抵消。
+  s3_zh_hk: >-
+    C 組最少要賣六十二包，先唔輸畀 F 組：六十一乘二十六係一千五百八十六，六十二乘二十六係一千六百一十二。兩組試飲嘅貢獻一樣，比較嗰陣互相抵銷。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Check the time window
+  title_zh: 看清时间范围
+  title_zh_hk: 看清時間範圍
+  step1_en: >-
+    Tastings: 100 × (20 − 14) = HK$600 each
+  step1_zh: 试饮：100 × (20 − 14) = 各 HK$600
+  step1_zh_hk: 試飲：100 × (20 − 14) = 各 HK$600
+  step2_en: F HK$2,532 · C HK$2,026
+  step2_zh: F HK$2,532 · C HK$2,026
+  step2_zh_hk: F HK$2,532 · C HK$2,026
+  step3_en: >-
+    Pack lead: 12 in week one, 7 overall
+  step3_zh: 正装领先：首周 12 包，两周 7 包
+  step3_zh_hk: 正裝領先：首星期 12 包，兩星期 7 包
+  s1_en: >-
+    Each arm earns 100 times 20 minus 14, which is 600 dollars, from tastings.
+  s1_zh: 每组的试饮贡献都是一百乘二十减十四，等于六百元。
+  s1_zh_hk: 每組嘅試飲貢獻都係一百乘二十減十四，即係六百蚊。
+  s2_en: >-
+    F earns 1,596 plus 336 plus 600, which is 2,532 dollars. C earns 1,300 plus 126 plus 600, which is
+    2,026, or 506 less.
+  s2_zh: >-
+    F 组合计是一千五百九十六加三百三十六再加六百，等于二千五百三十二元。C 组是一千三百加一百二十六再加六百，等于二千零二十六元，少了五百零六元。
+  s2_zh_hk: >-
+    F 組加埋係一千五百九十六加三百三十六再加六百，即係二千五百三十二蚊。C 組係一千三百加一百二十六再加六百，即係二千零二十六蚊，少咗五百零六蚊。
+  s3_en: >-
+    C's first-week advantage of twelve packs becomes seven over two weeks: 53 against 46.
+  s3_zh: C 组第一周领先十二包，两周合计只领先七包：五十三包对四十六包。
+  s3_zh_hk: C 組第一個星期領先十二包，兩個星期加埋只領先七包：五十三包對四十六包。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Keep the flight; test the credit
+  title_zh: 保留试饮，再测抵扣
+  title_zh_hk: 保留試飲，再測折抵
+  en: >-
+    Prefer F on these figures. Some of the difference may be purchase timing, but aggregate counts cannot
+    prove who would have bought without a credit, or what happens after two weeks.
+  zh: 按这些数字，应该选 F。部分差别可能只是购买时间不同，但汇总数字不能证明谁在没有抵扣时也会买，也看不出两周之后会怎样。
+  zh_hk: 按呢啲數字，應該揀 F。部分差別可能只係購買時間唔同，但匯總數字證明唔到邊個冇折抵都會買，亦睇唔到兩個星期之後會點。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: More packs ≠ more contribution
+  title_zh: 卖得多 ≠ 赚得多
+  title_zh_hk: 賣得多 ≠ 賺得多
+  q1_en: Count the credit on every pack
+  q1_zh: 每包抵扣都要计成本
+  q1_zh_hk: 每包折抵都要計成本
+  q2_en: Measure a long enough window
+  q2_zh: 衡量期要够长
+  q2_zh_hk: 量度期要夠長
+  s1_en: >-
+    For a smaller-credit test, count all visitors assigned, purchases in both periods, and contribution
+    after credit.
+  s1_zh: 如果测试较低的抵扣额，要计算所有分组的顾客、两段时间内的购买，以及扣除抵扣后的贡献。
+  s1_zh_hk: 如果測試低啲嘅折抵額，要計晒所有分組嘅顧客、兩段時間內嘅購買，同扣除折抵之後嘅貢獻。
+  s2_en: A higher conversion fraction alone is not the objective.
+  s2_zh: 单看转化率较高，并不是目标。
+  s2_zh_hk: 單係轉化率高啲，唔係目標。
+  s3_en: >-
+    The tea shop, offers and all results are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 茶叶店、优惠和所有结果都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 茶葉舖、優惠同所有結果都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

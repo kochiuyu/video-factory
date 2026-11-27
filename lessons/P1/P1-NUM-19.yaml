@@ -17,6 +17,7 @@ beats:
   motif: ordinal
   n: 8
   mark: 2
+  one_row: true
   seconds: 8
   title_en: Which position?
   title_zh: 排在第几？
@@ -32,16 +33,17 @@ beats:
   direction: left
   n: 8
   mark: 2
+  one_row: true
   seconds: 12
   s1_en: Eight tokens sit in a row. The star is one of them.
   s1_zh: 八个图案排成一行。星星也是其中一个。
   s1_zh_hk: 八個圖案排成一行。星星都係其中一個。
-  s2_en: One. Two. Three. Four. Five. Six. Seven. Eight.
+  s2_en: One, two, three, four, five, six, seven, eight.
   s2_zh: 一，二，三，四，五，六，七，八。
   s2_zh_hk: 一，二，三，四，五，六，七，八。
-  s3_en: Eight. That is how many.
-  s3_zh: 八个。这就是有多少个。
-  s3_zh_hk: 八個。呢個就係有幾多個。
+  s3_en: Eight is how many.
+  s3_zh: 八是有多少个。
+  s3_zh_hk: 八係有幾多個。
 
 - id: fromleft
   visual: animated
@@ -50,16 +52,17 @@ beats:
   direction: left
   n: 8
   mark: 2
+  one_row: true
   seconds: 12
   s1_en: Start at the left.
   s1_zh: 现在从左边数。
   s1_zh_hk: 而家由左邊數。
-  s2_en: First. Second.
+  s2_en: First, second.
   s2_zh: 第一，第二。
   s2_zh_hk: 第一，第二。
-  s3_en: The star is second. Second is its place.
-  s3_zh: 星星是第二。第二是它的位置。
-  s3_zh_hk: 星星係第二。第二就係佢嘅位置。
+  s3_en: The star is second. Second is the star's place.
+  s3_zh: 星星是第二。第二是星星的位置。
+  s3_zh_hk: 星星係第二。第二係星星嘅位置。
 
 - id: fromright
   visual: animated
@@ -68,11 +71,12 @@ beats:
   direction: right
   n: 8
   mark: 2
+  one_row: true
   seconds: 12
   s1_en: Now start at the right. The star keeps its place.
   s1_zh: 现在从右边数。星星还在原来的位置。
   s1_zh_hk: 而家由右邊數。星星仲喺原來嘅位置。
-  s2_en: First. Second. Third. Fourth. Fifth. Sixth. Seventh.
+  s2_en: First, second, third, fourth, fifth, sixth, seventh.
   s2_zh: 第一，第二，第三，第四，第五，第六，第七。
   s2_zh_hk: 第一，第二，第三，第四，第五，第六，第七。
   s3_en: From the right, the same star is seventh.
@@ -85,6 +89,7 @@ beats:
   motif: ordinal
   n: 8
   mark: 2
+  one_row: true
   seconds: 14
   title_en: Where is the star?
   title_zh: 星星在第几？
@@ -98,6 +103,6 @@ beats:
   s3_en: From the right, the same star is seventh.
   s3_zh: 从右边数，同一颗星星是第七。
   s3_zh_hk: 由右邊數，同一粒星星係第七。
-  s4_en: Eight tells how many. Second tells the place from the left.
-  s4_zh: 八个是有多少。第二是从左边数的位置。
-  s4_zh_hk: 八個係有幾多。第二係由左邊數嘅位置。
+  s4_en: Eight is how many. Second is the star's place.
+  s4_zh: 八是有多少个。第二是星星的位置。
+  s4_zh_hk: 八係有幾多個。第二係星星嘅位置。

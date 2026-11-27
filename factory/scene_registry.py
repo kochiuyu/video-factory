@@ -492,7 +492,7 @@ class OrdinalRow(SceneKind):
             title = copy["place_title"]
             note = copy["from_left"] if direction == "left" else copy["from_right"]
             answer = words[-1] if words else ""
-        return {
+        out = {
             "title": title,
             "note": note,
             "answer": answer,
@@ -502,14 +502,20 @@ class OrdinalRow(SceneKind):
             "n": n,
             "mark": mark,
         }
+        if beat.get("one_row"):
+            out["one_row"] = True
+        return out
 
     def parameters(self, beat: dict) -> dict:
-        return {
+        out = {
             "n": int(beat.get("n")),
             "mark": int(beat.get("mark")),
             "direction": str(beat.get("direction") or "").strip(),
             "mode": str(beat.get("mode") or "").strip(),
         }
+        if beat.get("one_row"):
+            out["one_row"] = True
+        return out
 
 
 class PairCounters(SceneKind):
@@ -814,6 +820,8 @@ class LessonHook(SceneKind):
             n, mark = _ordinal_pair(beat)
             out["n"] = n
             out["mark"] = mark
+            if beat.get("one_row"):
+                out["one_row"] = True
         if _motif(beat) == "pairs":
             out["n"] = _pair_n(beat)
         if _motif(beat) == "parts":
@@ -827,6 +835,8 @@ class LessonHook(SceneKind):
             n, mark = _ordinal_pair(beat)
             params["n"] = n
             params["mark"] = mark
+            if beat.get("one_row"):
+                params["one_row"] = True
         if _motif(beat) == "pairs":
             params["n"] = _pair_n(beat)
         if _motif(beat) == "parts":
@@ -983,6 +993,8 @@ class LessonTakeaway(SceneKind):
             out["left"] = ordinal_word(lang, mark)
             out["right"] = ordinal_word(lang, count - mark + 1)
             out["total"] = str(count) if label_lang(lang) == "en" else zh_cardinal(count)
+            if beat.get("one_row"):
+                out["one_row"] = True
         if _motif(beat) == "pairs":
             even = _pair_n(beat)
             if even % 2:
@@ -1016,6 +1028,8 @@ class LessonTakeaway(SceneKind):
             count_n, mark = _ordinal_pair(beat)
             params["n"] = count_n
             params["mark"] = mark
+            if beat.get("one_row"):
+                params["one_row"] = True
         if _motif(beat) == "pairs":
             params["n"] = _pair_n(beat)
             also = _pair_also(beat)
@@ -1050,6 +1064,14 @@ def track_columns(count: int, pixel_width: int, pixel_height: int, min_cell: flo
     while cols > 1 and cell(cols) < min_cell:
         cols -= 1
     return max(1, cols)
+
+
+def ordinal_columns(n: int, pixel_width: int, pixel_height: int, one_row: bool = False) -> int:
+    """Columns for an ordinal row. ``one_row`` never snakes, even in 9:16."""
+    n = max(1, int(n))
+    if one_row:
+        return n
+    return track_columns(n, pixel_width, pixel_height, min_cell=0.46)
 
 
 def track_slots(values: list[int], cols: int, *, left_to_right: bool) -> dict[int, tuple[int, int]]:

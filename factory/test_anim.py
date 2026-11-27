@@ -2713,7 +2713,7 @@ class SceneRegistryTest(unittest.TestCase):
         added = [beat for beat in twentytwo["beats"] if beat.get("scene") == "place_sum"]
         self.assertEqual([(b["a"], b["b"]) for b in added], [(23, 14), (27, 15)])
         self.assertEqual(labels_for(added[0], "en")["values"], [23, 14])
-        self.assertEqual(labels_for(added[1], "zh_hk")["title"], "先加個位")
+        self.assertEqual(labels_for(added[1], "zh_hk")["title"], "先個位，再十位")
         self.assertIn(
             "place_sum subtraction stays inside each column.",
             scene_problems({

@@ -69,13 +69,13 @@ beats:
   s1_en: Ones under ones. Tens under tens.
   s1_zh: 个位对个位。十位对十位。
   s1_zh_hk: 個位對個位。十位對十位。
-  s2_en: Three and four make seven. Thirty-seven.
+  s2_en: Three and four make seven.
   s2_zh: 三个和四个是七个。三十七。
   s2_zh_hk: 三個同四個係七個。三十七。
   s3_en: Ten ones make one new ten.
   s3_zh: 十个一换成一个新的十。
   s3_zh_hk: 十個一換成一個新嘅十。
-  s4_en: Twenty-seven and fifteen make forty-two.
+  s4_en: They make forty-two.
   s4_zh: 二十七和十五是四十二。
   s4_zh_hk: 二十七同十五係四十二。
   cues:

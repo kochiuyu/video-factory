@@ -4244,12 +4244,11 @@ def _scene_types() -> dict:
             ones_box.set_stroke(opacity=0)
             tens_box.set_stroke(opacity=0)
             self.add(group)
-            self.spend(
-                0,
-                title.animate.set_opacity(1),
-                rule.animate.set_opacity(1),
-                *[mob.animate.set_opacity(1) for mob in addend_digits + signs],
-            )
+            title.set_opacity(1)
+            rule.set_opacity(1)
+            for mob in addend_digits + signs:
+                mob.set_opacity(1)
+            self.spend(0)
             ones_anims = [
                 ones_box.animate.set_stroke(opacity=1),
                 answer_ones.animate.set_opacity(1),

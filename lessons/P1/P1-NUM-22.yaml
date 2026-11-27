@@ -66,7 +66,7 @@ beats:
   title_en: Add the ones, then the tens
   title_zh: 先加个，再加十
   title_zh_hk: 先加個，再加十
-  s1_en: Ones under ones. Tens under tens.
+  s1_en: Ones under ones.
   s1_zh: 个位对个位。十位对十位。
   s1_zh_hk: 個位對個位。十位對十位。
   s2_en: Three and four make seven.

@@ -4171,7 +4171,7 @@ def _scene_types() -> dict:
                 ones_total = ones_total % 10
                 tens_total = sum(v // 10 for v in values) + carry
             col = step * 1.85
-            row = step * 1.55
+            row = step * 1.95
             ones_x = col * 0.5
             tens_x = -col * 0.5
             sign_x = tens_x - col * 0.95
@@ -4212,10 +4212,10 @@ def _scene_types() -> dict:
             answer_ones = glyph(str(ones_total))
             answer_tens.move_to([tens_x, y, 0])
             answer_ones.move_to([ones_x, y, 0])
-            ones_box = SurroundingRectangle(VGroup(*ones_digits), color=GOLD, buff=0.1, stroke_width=6)
+            ones_box = SurroundingRectangle(VGroup(*ones_digits), color=GOLD, buff=step * 0.06, stroke_width=6)
             ones_box.set_fill(opacity=0)
             tens_targets = tens_digits or ones_digits
-            tens_box = SurroundingRectangle(VGroup(*tens_targets), color=GOLD, buff=0.1, stroke_width=6)
+            tens_box = SurroundingRectangle(VGroup(*tens_targets), color=GOLD, buff=step * 0.06, stroke_width=6)
             tens_box.set_fill(opacity=0)
             bits = [rule, *addend_digits, *signs, answer_tens, answer_ones, ones_box, tens_box]
             if carry_mob is not None:

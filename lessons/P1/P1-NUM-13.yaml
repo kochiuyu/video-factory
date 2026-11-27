@@ -51,9 +51,9 @@ beats:
   s2_en: The ones are zero.
   s2_zh: 个是零。
   s2_zh_hk: 個係零。
-  s3_en: That is forty, not four.
-  s3_zh: 这是四十，不是四。
-  s3_zh_hk: 呢個係四十，唔係四。
+  s3_en: Four tens make forty.
+  s3_zh: 四个十是四十。
+  s3_zh_hk: 四個十係四十。
 
 - id: hundred
   visual: animated
@@ -75,6 +75,15 @@ beats:
   visual: animated
   scene: lesson_takeaway
   motif: track
+  cues:
+  - kind: tens
+    count: 24
+  - kind: tens
+    count: 40
+  - kind: tens
+    count: 4
+  - kind: tens
+    count: 100
   seconds: 14
   title_en: Tens and ones
   title_zh: 十、个和一百
@@ -85,9 +94,9 @@ beats:
   s2_en: Four tens make forty.
   s2_zh: 四个十是四十。
   s2_zh_hk: 四個十係四十。
-  s3_en: Four ones make four, not forty.
-  s3_zh: 四个一是四，不是四十。
-  s3_zh_hk: 四個一係四，唔係四十。
+  s3_en: Four ones make four.
+  s3_zh: 四个一是四。
+  s3_zh_hk: 四個一係四。
   s4_en: Ten tens make one hundred.
   s4_zh: 十个十是一百。
   s4_zh_hk: 十個十係一百。

@@ -2135,7 +2135,7 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in fourteen["beats"]).lower())
         recap = next(beat for beat in fourteen["beats"] if beat["id"] == "takeaway")
         self.assertEqual(step_count(recap), 4)
-        self.assertEqual(labels_for(recap, "en")["title"], "Which number is larger?")
+        self.assertEqual(labels_for(recap, "en")["title"], "Which is larger?")
         self.assertEqual(labels_for(recap, "zh")["title"], "哪个数比较大？")
         self.assertEqual(labels_for(recap, "zh_hk")["title"], "邊個數大啲呀？")
         self.assertEqual(

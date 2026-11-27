@@ -1,0 +1,283 @@
+id: MKT-23
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Better taste. Or a different expectation?
+title_zh: 是真的更好喝，还是期望不同？
+title_zh_hk: 是真的更好喝，還是期望不同？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-23
+  kicker_en: MKT-23
+  kicker_zh: MKT-23
+  kicker_zh_hk: MKT-23
+  title_en: Better taste. Or a different expectation?
+  title_zh: 是真的更好喝，还是期望不同？
+  title_zh_hk: 是真的更好喝，還是期望不同？
+  image: art/better-taste-different-expectation-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Published experiments have asked whether information given before tasting can change reported preference:
+    Lee, Frederick and Ariely with beer, and Plassmann and colleagues with wine prices. Now you lead positioning
+    for a fictional Hong Kong maker of a non-alcoholic sparkling drink, A, against a competing drink,
+    B.
+  zh: >-
+    已发表的实验研究过，品尝前知道的信息，会不会改变人们说出来的偏好：Lee、Frederick 和 Ariely 用的是啤酒，Plassmann 等人研究的是葡萄酒的价格。现在，你负责一家虚构的香港饮品商的市场定位，A
+    是自家的无酒精气泡饮品，B 是同类的竞争产品。
+  zh_hk: >-
+    已經發表嘅實驗研究過，試飲之前知道嘅資料，會唔會改變人哋講出嚟嘅偏好：Lee、Frederick 同 Ariely 用嘅係啤酒，Plassmann 等人研究嘅係葡萄酒價錢。而家，你負責一間虛構嘅香港飲品商嘅市場定位，A
+    係自家嘅無酒精有氣飲品，B 係同類嘅競爭產品。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two tasting sessions
+  title_zh: 两场试饮
+  title_zh_hk: 兩場試飲
+  row1_en: Codes only, 60 people
+  row1_zh: 只显示编码，60 人
+  row1_zh_hk: 只顯示編碼，60 人
+  row2_en: Brands shown, 60 people
+  row2_zh: 显示品牌，60 人
+  row2_zh_hk: 顯示品牌，60 人
+  col1_en: Prefer A
+  col1_zh: 较喜欢 A
+  col1_zh_hk: 較喜歡 A
+  col2_en: Prefer B
+  col2_zh: 较喜欢 B
+  col2_zh_hk: 較喜歡 B
+  c11: '36'
+  c12: '24'
+  c21: '24'
+  c22: '36'
+  footer_en: Same recipes in both sessions
+  footer_zh: 两场配方都没改
+  footer_zh_hk: 兩場配方都沒改
+  s1_en: >-
+    Neither recipe changed between two small sessions. In each, 60 people tasted both drinks and picked
+    the one they preferred. The first session hid brands behind codes; the second showed the actual brands.
+  s1_zh: 两场小型试饮之间，两款配方都没有改。每场有六十人两款都试，选出自己比较喜欢的一款。第一场用编码遮住品牌，第二场显示真实品牌。
+  s1_zh_hk: 兩場小型試飲之間，兩款配方都冇改過。每場有六十人兩款都試，揀出自己較鍾意嗰款。第一場用編碼遮住品牌，第二場就顯示真實品牌。
+  s2_en: >-
+    With codes, 36 preferred A and 24 B. With brands shown, it was 24 for A and 36 for B. The summaries
+    do not yet say how people were recruited or how samples were served.
+  s2_zh: >-
+    只看编码时，三十六人较喜欢 A，二十四人较喜欢 B。显示品牌后，变成 A 二十四人、B 三十六人。摘要还没说明参加者怎么招募，样本又是怎么提供的。
+  s2_zh_hk: >-
+    淨係睇編碼嗰陣，三十六人較鍾意 A，二十四人較鍾意 B。顯示品牌之後，變成 A 二十四人、B 三十六人。摘要仲未講參加者點樣招募，樣本又係點樣提供。
+  s3_en: >-
+    Someone suggests that A's brand is holding back a better-tasting product. You are choosing a provisional
+    brief: a taste-discovery sampling route, or a factual product-story route, or deferring for one more
+    test.
+  s3_zh: >-
+    有人推测 A 本来更好喝，只是现在的品牌拖累了它。你要定的是初步的宣传方向：邀请顾客亲身试饮，或者如实讲产品的风味和成分，也可以再测试一次才决定。
+  s3_zh_hk: >-
+    有人估 A 本身好飲啲，只係而家個品牌拖累咗佢。你要定嘅係初步宣傳方向：邀請顧客親身試飲，或者如實講產品嘅風味同成分，又或者再測試多一次先決定。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which direction for now?
+  title_zh: 暂定哪个方向？
+  title_zh_hk: 暫定哪個方向？
+  en: >-
+    Which provisional positioning would you take from these two summaries? And what would you check before
+    claiming either better taste or a causal brand effect? Pause and vote.
+  zh: 根据这两份摘要，你会暂定哪个定位方向？在说味道更好，或者说品牌有因果影响之前，你要先查清楚什么？请暂停，投个票。
+  zh_hk: 根據呢兩份摘要，你會暫定邊個定位方向？喺講味道好啲，或者講品牌有因果影響之前，你要先查清楚啲乜？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The sessions were not alike
+  title_zh: 两场条件并不一样
+  title_zh_hk: 兩場條件並不一樣
+  step1_en: >-
+    Codes: users · 8°C · order balanced
+  step1_zh: 盲测：同类用户 · 8°C · 次序均衡
+  step1_zh_hk: 盲測：同類用家 · 8°C · 次序均衡
+  step2_en: >-
+    Brands: B fan list · 22°C · all A first
+  step2_zh: 品牌场：B 的粉丝名单 · 22°C · 都先试 A
+  step2_zh_hk: 品牌場：B 的忠實顧客 · 22°C · 都先試 A
+  step3_en: >-
+    Next: 120 codes-only, or 60 + 60 random
+  step3_zh: 下次：120 人盲测，或随机 60 + 60
+  step3_zh_hk: 下次：120 人盲測，或隨機 60 + 60
+  s1_en: >-
+    The blind group were adult category users at a neutral venue. Both drinks were served at 8 degrees
+    in identical cups, with half tasting A first and half B first.
+  s1_zh: 盲测组是有喝同类饮品习惯的成年人，地点中立。两款都在八度、用一样的杯子提供，一半人先试 A，一半先试 B。
+  s1_zh_hk: 盲測組係有飲開同類飲品嘅成年人，地點中立。兩款都係八度、用一樣嘅杯提供，一半人先試 A，一半先試 B。
+  s2_en: >-
+    The branded group were different adults recruited from B's fan mailing list, at a separate event.
+    Both drinks were served at 22 degrees, and everyone tasted A first. So recruitment, temperature, venue
+    and order all changed with brand visibility.
+  s2_zh: >-
+    品牌组是另一批成年人，在另一场活动上，从 B 的忠实顾客邮件名单招来。两款都在二十二度提供，而且人人先试 A。所以，品牌显示变了的同时，招募、温度、场地和次序也都变了。
+  s2_zh_hk: >-
+    品牌組係另一批成年人，喺另一場活動，由 B 嘅忠實顧客電郵名單招返嚟。兩款都係二十二度提供，而且個個都先試 A。所以顯示品牌嘅同時，招募、溫度、場地同次序都變咗。
+  s3_en: >-
+    One more session is funded, with 120 new adult category users from the same pool. Either run a larger
+    codes-only comparison, or randomly assign 60 to codes and 60 to truthful brand cards, with everything
+    else identical.
+  s3_zh: >-
+    现在有资源再办一场，从同一个来源找一百二十位新的成年同类用户。可以做规模更大的盲测；也可以随机分六十人只看编码、六十人看真实品牌卡，其他条件全部一样。
+  s3_zh_hk: >-
+    而家有資源再搞多一場，由同一個來源搵一百二十個新嘅成年同類用家。可以做規模大啲嘅盲測；亦可以隨機分六十人淨係睇編碼、六十人睇真實品牌卡，其他條件全部一樣。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What claim, and which test?
+  title_zh: 能说什么？测哪一项？
+  title_zh_hk: 能說甚麼？測哪一項？
+  en: >-
+    Which claim can the team support now, and which next test would you fund to investigate the apparent
+    reversal? Say what changes, what stays constant, and what the result still would not prove. Pause
+    and vote.
+  zh: 团队现在能支持什么说法？你会拨款做哪一项测试，去了解这个表面上的逆转？请说明什么要改、什么不变，以及结果还证明不了什么。请暂停，投个票。
+  zh_hk: 團隊而家可以支持乜嘢講法？你會撥款做邊項測試，去了解呢個表面上嘅逆轉？請講清楚乜嘢要改、乜嘢唔變，同埋結果仲證明唔到乜。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Read the counts first
+  title_zh: 先看清楚人数
+  title_zh_hk: 先看清楚人數
+  step1_en: >-
+    A: 36/60 = 60% · 24/60 = 40%
+  step1_zh: A：36/60 = 60% · 24/60 = 40%
+  step1_zh_hk: A：36/60 = 60% · 24/60 = 40%
+  step2_en: 20 points apart, not 12 people switching
+  step2_zh: 差 20 个百分点，不是 12 人改主意
+  step2_zh_hk: 差 20 個百分點，不是 12 人改主意
+  step3_en: Many causes are tangled together
+  step3_zh: 多个原因混在一起
+  step3_zh_hk: 多個原因混在一起
+  s1_en: >-
+    A was chosen by 36 of 60, or 60 percent, with codes, and 24 of 60, or 40 percent, with brands. That
+    is a 20-percentage-point difference between sessions.
+  s1_zh: A 在盲测中有六十人里三十六人选，即百分之六十；显示品牌后是二十四人，即百分之四十。两场相差二十个百分点。
+  s1_zh_hk: A 喺盲測有六十人入面三十六人揀，即係百分之六十；顯示品牌之後係二十四人，即係百分之四十。兩場相差二十個百分點。
+  s2_en: >-
+    It is not twelve people changing their minds, because the groups are different people. Pooling gives
+    60 of 120, or 50 percent, but mixes different settings.
+  s2_zh: 这不是十二个人改变主意，因为两场是不同的人。合起来是一百二十人里六十人，百分之五十，但这样会把不同的条件混在一起。
+  s2_zh_hk: 呢個唔係十二個人改變主意，因為兩場係唔同嘅人。加埋係一百二十人入面六十人，百分之五十，但咁樣會將唔同條件撈埋一齊。
+  s3_en: >-
+    Existing preference for B, serving temperature, order, brand information and chance could all contribute;
+    these summaries cannot separate them. A stronger blind result also does not prove an objectively better
+    recipe.
+  s3_zh: 原本就偏爱 B、饮用温度、试饮次序、品牌信息和随机误差，都可能有影响，这两份摘要分不开它们。盲测结果较好，也证明不了配方客观上更好。
+  s3_zh_hk: 本身偏愛 B、飲品溫度、試飲次序、品牌資料同隨機誤差，都可能有影響，呢兩份摘要分唔開佢哋。盲測結果好啲，亦證明唔到配方客觀上更好。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Match the test to the question
+  title_zh: 比较要对准问题
+  title_zh_hk: 比較要對準問題
+  step1_en: Fund the random 60 + 60 comparison
+  step1_zh: 拨款做随机 60 + 60 比较
+  step1_zh_hk: 撥款做隨機 60 + 60 比較
+  step2_en: Same batch, temperature, venue, wording
+  step2_zh: 批次、温度、场地、指示都一样
+  step2_zh_hk: 批次、溫度、場地、指示都一樣
+  step3_en: >-
+    Still not: whose name, mechanism, sales
+  step3_zh: 仍说不了：哪个名字、机制、销量
+  step3_zh_hk: 仍說不了：哪個名字、機制、銷量
+  s1_en: >-
+    For the brand-visibility question, fund the parallel random-assignment plan. A larger codes-only test
+    suits a recipe question, but cannot estimate a name effect by itself.
+  s1_zh: 要回答显示品牌有没有影响，就该拨款做平行的随机分配方案。规模更大的盲测适合问配方，但单靠它估计不了名字的影响。
+  s1_zh_hk: 要答顯示品牌有冇影響，就應該撥款做平行嘅隨機分派方案。規模大啲嘅盲測適合問配方，但單靠佢估計唔到名字嘅影響。
+  s2_en: >-
+    Keep batches, temperature, volume, venue, cups and neutral instructions identical, and balance serving
+    order within each group. Prespecify the outcome and record any missing answers.
+  s2_zh: 批次、温度、分量、场地、杯子和中立的指示都保持一样，每组内部的试饮次序也要均衡。事先定好主要结果，缺答也要如实记录。
+  s2_zh_hk: 批次、溫度、份量、場地、杯同中立嘅指示都保持一樣，每組入面嘅試飲次序都要均衡。事先定好主要結果，冇答嘅都要如實記低。
+  s3_en: >-
+    Even then, it will not isolate A's name from B's, the psychological mechanism or chemical taste, and
+    it says nothing about future sales or willingness to pay.
+  s3_zh: 即使这样，它也分不开是 A 的名字还是 B 的名字起作用，看不出心理机制或化学上的味道，也说明不了日后的销量或愿意付多少钱。
+  s3_zh_hk: 就算係咁，佢都分唔開係 A 個名定 B 個名起作用，睇唔到心理機制或者化學上嘅味道，亦講唔到將來嘅銷量或者願意俾幾多錢。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Keep the message within evidence
+  title_zh: 宣传不超出证据
+  title_zh_hk: 宣傳不超出證據
+  en: >-
+    Report exactly what happened in each session, with its recruitment and serving limits. Do not publish
+    'customers prefer A', 'better taste proved' or 'our label costs 20 points'. A sampling invitation
+    or a factual flavour story both remain defensible, and deferring comparison for the next test is reasonable.
+  zh: >-
+    内部报告要如实写出每场的结果，以及招募和试饮条件的局限。不要对外说顾客更喜欢 A、已证明更好喝，或者我们的品牌令评分少了二十分。邀请顾客试饮，或者如实介绍风味和成分，都还说得通；先等下一次测试再做比较定位，也很合理。
+  zh_hk: >-
+    內部報告要如實寫出每場嘅結果，同埋招募同試飲條件嘅局限。唔好對外講顧客較鍾意 A、證明咗好飲啲，或者我哋個牌子令評分少咗二十分。邀請顧客試飲，或者如實介紹風味同成分，都仲講得通；等下一次測試先做比較定位，亦都好合理。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: A reversal is not a mechanism
+  title_zh: 逆转不等于机制
+  title_zh_hk: 逆轉不等於機制
+  q1_en: >-
+    A: 60% with codes · 40% with brands
+  q1_zh: A：盲测 60% · 显示品牌 40%
+  q1_zh_hk: A：盲測 60% · 顯示品牌 40%
+  q2_en: >-
+    Next: random 60 codes vs 60 brand cards
+  q2_zh: 下一步：随机 60 盲测对 60 品牌卡
+  q2_zh_hk: 下一步：隨機 60 盲測對 60 品牌卡
+  s1_en: >-
+    When the people, temperature and order change along with the brand, the summaries cannot say which
+    one mattered.
+  s1_zh: 参加者、温度和次序跟着品牌一起变了，摘要就说不出到底是哪一个起作用。
+  s1_zh_hk: 參加者、溫度同次序跟住品牌一齊變咗，摘要就講唔到究竟係邊樣起作用。
+  s2_en: >-
+    A preference result is not a health or nutrition claim, and 120 people is a pilot, not a power calculation.
+  s2_zh: 偏好结果不是健康或营养声称；一百二十人只是先导试验的规模，不是按统计功效算出来的。
+  s2_zh_hk: 偏好結果唔係健康或者營養聲稱；一百二十人只係先導試驗嘅規模，唔係按統計檢定力計出嚟。
+  s3_en: >-
+    The drinks, people, sessions and figures are invented; no health or nutrition claim is made. Official
+    scene art is a teaching illustration only.
+  s3_zh: 饮品、参加者、场次和数字都是虚构的，不作任何健康或营养声称。官方场景图只是教学插图。
+  s3_zh_hk: 飲品、參加者、場次同數字都係虛構嘅，唔作任何健康或者營養聲稱。官方場景圖只係教學插圖。
+duration_target_s: 196

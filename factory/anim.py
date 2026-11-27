@@ -3913,15 +3913,23 @@ def _scene_types() -> dict:
                 dots.shift(DOWN * (top_dot - float(title.get_bottom()[1]) + 0.14))
             frame_at = [box.get_center().copy() for box in frame]
 
-            for mob in (frame, rods, cubes, guide_num, guess_num, final_num):
+            # FadeIn keeps a mobject that is already at opacity 0 invisible.
+            # set_opacity(1) is the target that actually draws it.
+            for mob in (title, dots, frame, rods, cubes, guide_num, guess_num, final_num):
                 mob.set_opacity(0)
             self.add(title, dots, frame, rods, cubes, guide_num, guess_num, final_num)
-            title.set_opacity(0)
-            self.spend(0, FadeIn(title), FadeIn(dots))
+            self.vf_title = title
+            self.spend(0, title.animate.set_opacity(1), dots.animate.set_opacity(1))
             gather = [dots[i].animate.move_to(frame_at[i]) for i in range(min(10, count))]
             for j, spot in enumerate(rest_at):
                 gather.append(dots[10 + j].animate.move_to([spot[0], spot[1], 0]))
-            self.spend(1, FadeIn(frame), FadeIn(guide_num), FadeIn(guess_num), AnimationGroup(*gather))
+            self.spend(
+                1,
+                frame.animate.set_opacity(1),
+                guide_num.animate.set_opacity(1),
+                guess_num.animate.set_opacity(1),
+                AnimationGroup(*gather),
+            )
 
             def hop_bundle(index):
                 def play(index=index):

@@ -1826,6 +1826,7 @@ class SceneRegistryTest(unittest.TestCase):
             scene.render(preview=False)
             unit = 1080 / 8.0
             self.assertGreaterEqual(float(scene.vf_answer.height) * unit, 47)
+            self.assertGreaterEqual(float(scene.vf_title.get_fill_opacity()), 0.9)
 
     def test_takeaway_blocks_share_a_scale_and_comparisons_stay_apart(self):
         """Rods keep one size, a comparison's blocks match the number, and the ring clears both digits."""

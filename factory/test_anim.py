@@ -1918,6 +1918,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-NUM-15": [
                 "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
             ],
+            "P1-NUM-16": [
+                "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -2309,6 +2312,44 @@ class SceneRegistryTest(unittest.TestCase):
         for picture in labels_for(recap, "en")["cues"]:
             self.assertNotIn(picture, DEFAULT_TRACK_CUES)
             self.assertNotIn(picture[1], DEFAULT_TRACK_CUES)
+        self.assertIn("？", labels_for(recap, "zh")["title"])
+        self.assertNotIn("?", labels_for(recap, "zh")["title"])
+        self.assertNotIn("?", labels_for(recap, "zh_hk")["title"])
+        sixteen = load_lesson(P1 / "P1-NUM-16.yaml")
+        blocks = [beat for beat in sixteen["beats"] if beat.get("scene") == "number_blocks"]
+        self.assertEqual([b["mode"] for b in blocks], ["groups", "groups", "groups"])
+        self.assertEqual([(b["a"], b["n"], b.get("b")) for b in blocks], [(2, 4, None), (2, 6, None), (2, 5, 1)])
+        self.assertEqual(count_event(blocks[0]), (1, 4))
+        self.assertEqual(count_event(blocks[1]), (1, 6))
+        self.assertEqual(count_event(blocks[2]), (1, 5))
+        self.assertEqual(blocks[0]["s3_zh_hk"], "四對係八個。")
+        self.assertEqual(blocks[2]["s3_en"], "One more makes eleven. One is left over.")
+        self.assertEqual(blocks[2]["s3_zh"], "再加一个是十一。多了一个。")
+        self.assertEqual(blocks[2]["s3_zh_hk"], "再加一個係十一。多咗一個。")
+        self.assertNotIn("嗎", _beat_lines(sixteen, "zh_hk"))
+        self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in sixteen["beats"]).lower())
+        recap = next(beat for beat in sixteen["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap), 4)
+        self.assertEqual(labels_for(recap, "en")["title"], "How many counters?")
+        self.assertEqual(labels_for(recap, "zh")["title"], "有多少个圆片？")
+        self.assertEqual(labels_for(recap, "zh_hk")["title"], "有幾多個圓片呀？")
+        self.assertEqual(
+            labels_for(recap, "en")["lines"],
+            [
+                "Four pairs make eight.",
+                "Six pairs make twelve.",
+                "There are twelve counters.",
+                "Five pairs and one more is eleven.",
+            ],
+        )
+        self.assertEqual(labels_for(recap, "zh")["lines"][2], "一共有十二个圆片。")
+        self.assertEqual(labels_for(recap, "zh_hk")["lines"][2], "一共有十二個圓片。")
+        self.assertEqual(
+            labels_for(recap, "en")["cues"],
+            [("pairs", 4, 0), ("pairs", 6, 0), ("counters", 12), ("pairs", 5, 1)],
+        )
+        for picture in labels_for(recap, "en")["cues"]:
+            self.assertNotIn(picture, DEFAULT_TRACK_CUES)
         self.assertIn("？", labels_for(recap, "zh")["title"])
         self.assertNotIn("?", labels_for(recap, "zh")["title"])
         self.assertNotIn("?", labels_for(recap, "zh_hk")["title"])

@@ -2382,6 +2382,8 @@ class SceneRegistryTest(unittest.TestCase):
                 "Look at the ones. Two ones make a pair. Thirty-two is even.",
             ],
         )
+        self.assertEqual(labels_for(recap20, "zh")["lines"][3], "看一看个位上的数。两个一配成一对。三十二是双数。")
+        self.assertEqual(labels_for(recap20, "zh_hk")["lines"][3], "睇下個位上嘅數。兩個一配成一對。三十二係雙數。")
         self.assertEqual(labels_for(recap20, "zh")["lines"][2], "零个圆片。零是双数。")
         self.assertEqual(labels_for(recap20, "zh_hk")["lines"][2], "零個圓片。零係雙數。")
         self.assertEqual(

@@ -1,0 +1,278 @@
+id: FIN-24
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A lower premium. How much risk stays here?
+title_zh: 保费更低。留下多少风险？
+title_zh_hk: 保費更低。留下多少風險？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-24
+  kicker_en: FIN-24
+  kicker_zh: FIN-24
+  kicker_zh_hk: FIN-24
+  title_en: A lower premium. How much risk stays here?
+  title_zh: 保费更低。留下多少风险？
+  title_zh_hk: 保費更低。留下多少風險？
+  image: art/lower-premium-repeated-deductible-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Hong Kong insurance-education guidance separates the part of a covered loss the policyholder keeps
+    from the insurer's benefit limit. Commercial wording may apply a deductible to each occurrence. Now
+    you manage a fictional Hong Kong display-material workshop.
+  zh: >-
+    香港的保险教育资料，会把投保人自己承担的那部分受保损失，和保险人的赔付限额分开。商业保单的条款，可能对每一次事故分别扣除免赔额。现在，你管理香港一家虚构的展示材料工场。
+  zh_hk: >-
+    香港嘅保險教育資料，會將投保人自己承擔嗰部分受保損失，同保險人嘅賠付限額分開。商業保單嘅條款，可能每一次事故都分開扣自負額。而家，你管理香港一間虛構嘅展示材料工場。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two property-cover quotes
+  title_zh: 两份财产保险报价
+  title_zh_hk: 兩份財產保險報價
+  row1_en: A
+  row1_zh: A
+  row1_zh_hk: A
+  row2_en: B
+  row2_zh: B
+  row2_zh_hk: B
+  col1_en: Annual premium
+  col1_zh: 全年保费
+  col1_zh_hk: 全年保費
+  col2_en: Deductible per incident
+  col2_zh: 每次事故免赔额
+  col2_zh_hk: 每次事故自負額
+  col3_en: Payout limit per incident
+  col3_zh: 每次事故赔付上限
+  col3_zh_hk: 每次事故賠付上限
+  c11: HK$9,000
+  c12: HK$2,000
+  c13: HK$30,000
+  c21: HK$4,000
+  c22: HK$6,000
+  c23: HK$50,000
+  footer_en: >-
+    Prior year: HK$24,000, not itemised
+  footer_zh: 上年合计 HK$24,000，尚未分项
+  footer_zh_hk: 上年合計 HK$24,000，尚未分項
+  s1_en: >-
+    The workshop is choosing next year's optional stock-and-equipment cover. Both fictional quotes cover
+    the same events and property, with identical insurer reliability and service.
+  s1_zh: 工场正在为明年可选的存货与设备保险做选择。两份虚构报价保障的事故和财产完全相同，保险人的可靠程度和服务也一样。
+  s1_zh_hk: 工場揀緊明年可選嘅存貨同設備保險。兩份虛構報價保障嘅事故同財產完全一樣，保險人有幾可靠、服務點樣都一樣。
+  s2_en: >-
+    For each separate incident, subtract the deductible, never below zero, and the insurer pays the result
+    up to its per-incident limit. The workshop keeps the rest. There is no annual cap on deductibles.
+  s2_zh: 每一次事故，先从损失里减去免赔额，最少是零，保险人按结果赔付，但不超过每次事故的上限，其余由工场自己承担。免赔额没有全年上限。
+  s2_zh_hk: 每一次事故，先由損失減自負額，最少係零，保險人按結果賠，但唔超過每次事故嘅上限，其餘由工場自己承擔。自負額冇全年上限。
+  s3_en: >-
+    Compare premium plus retained loss in three scenarios: no loss, one 24,000-dollar incident, and one
+    60,000-dollar incident. No probabilities are given. Last year's 24,000-dollar total has not been checked
+    incident by incident.
+  s3_zh: >-
+    比较三个情景下的保费加自留损失：没有损失、一次两万四千港元的事故、一次六万港元的事故。题目没给概率。上一年合计两万四千港元的损失，还没有逐次核对。
+  s3_zh_hk: >-
+    比較三個情景下嘅保費加自留損失：冇損失、一次兩萬四千港元嘅事故、一次六萬港元嘅事故。題目冇俾機率。上一年合共兩萬四千港元嘅損失，仲未逐次核對。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Recommend A or B?
+  title_zh: 推荐 A 还是 B？
+  title_zh_hk: 推薦 A 還是 B？
+  en: >-
+    Which quote would you provisionally recommend, A or B? Compare premium plus retained loss in the supplied
+    scenarios, and state the uncertainty your recommendation depends on. Pause and vote.
+  zh: 你会暂时推荐哪一份报价，A还是B？请在给出的情景里比较保费加自留损失，并说明你的建议取决于哪一项不确定因素。请暂停，投个票。
+  zh_hk: 你暫時會推薦邊份報價，A定B？喺題目俾嘅情景入面比較保費加自留損失，再講吓你嘅建議取決於邊一項不確定因素。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The incident log arrives
+  title_zh: 事故记录到了
+  title_zh_hk: 事故記錄到了
+  step1_en: Four separate incidents, HK$6,000 each
+  step1_zh: 四次独立事故，每次 HK$6,000
+  step1_zh_hk: 四次獨立事故，每次 HK$6,000
+  step2_en: The deductible applies four times
+  step2_zh: 免赔额要扣四次
+  step2_zh_hk: 自負額要扣四次
+  step3_en: No frequency forecast for next year
+  step3_zh: 没有明年的发生频率预测
+  step3_zh_hk: 沒有明年的發生頻率預測
+  s1_en: >-
+    The prior-year log arrives. Its 24,000-dollar total came from four unrelated covered incidents on
+    separate dates, each costing 6,000 dollars.
+  s1_zh: 上一年的事故记录到了。那两万四千港元的合计，来自四次互不相关、日期不同的受保事故，每次六千港元。
+  s1_zh_hk: 上一年嘅事故記錄到咗。嗰兩萬四千港元嘅合計，嚟自四次互不相關、日子唔同嘅受保事故，每次六千港元。
+  s2_en: >-
+    Both insurers confirm that the deductible would apply four times, not once to the annual total. Use
+    the log to back-test both quotes on the same losses.
+  s2_zh: 两家保险人都确认，免赔额要扣四次，而不是对全年合计只扣一次。请用这份记录，拿同样的损失回测两份报价。
+  s2_zh_hk: 兩間保險人都確認，自負額要扣四次，唔係對全年合計淨係扣一次。用呢份記錄，攞同樣嘅損失回測兩份報價。
+  s3_en: >-
+    This informs next year's choice; it does not change insurance retrospectively. The record gives no
+    reliable frequency forecast, so one large loss, several small ones or none all remain possible.
+  s3_zh: 这是为明年的选择提供信息，不能倒回去改保险。这份记录也不能可靠地预测发生频率：一次大损失、几次小损失，或者完全没有损失，都还有可能。
+  s3_zh_hk: 呢個係為明年嘅選擇提供資料，唔可以倒返轉頭改保險。呢份記錄亦唔可以可靠咁預測發生頻率：一次大損失、幾次細損失，或者完全冇損失，都仲有可能。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Does the log change your choice?
+  title_zh: 记录会改变选择吗？
+  title_zh_hk: 記錄會改變選擇嗎？
+  en: >-
+    Would the incident-level record change your recommendation? Recalculate both quotes for the four losses,
+    explain why the annual total was not enough, and state what you still need before choosing. Pause
+    and vote.
+  zh: 看了逐次事故的记录，你的建议会改变吗？请按四次损失重算两份报价，说明为什么只看全年合计不够，以及做决定前你还需要什么。请暂停，投个票。
+  zh_hk: 睇完逐次事故嘅記錄，你嘅建議會唔會變？按四次損失重新計兩份報價，講吓點解淨係睇全年合計唔夠，同埋揀之前你仲需要啲乜。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Three opening scenarios
+  title_zh: 三个起始情景
+  title_zh_hk: 三個起始情景
+  step1_en: >-
+    No loss: A 9,000 · B 4,000
+  step1_zh: 无损失：A 9,000 · B 4,000
+  step1_zh_hk: 無損失：A 9,000 · B 4,000
+  step2_en: >-
+    One 24,000 loss: A 11,000 · B 10,000
+  step2_zh: 一次 24,000：A 11,000 · B 10,000
+  step2_zh_hk: 一次 24,000：A 11,000 · B 10,000
+  step3_en: >-
+    One 60,000 loss: A 39,000 · B 14,000
+  step3_zh: 一次 60,000：A 39,000 · B 14,000
+  step3_zh_hk: 一次 60,000：A 39,000 · B 14,000
+  s1_en: >-
+    For each incident, the insurer pays the loss minus the deductible, capped at the limit; the workshop
+    keeps the rest. With no loss, annual cost is 9,000 for A and 4,000 for B.
+  s1_zh: 每次事故，保险人赔付损失减免赔额，但不超过上限，其余由工场承担。没有损失时，全年成本A是九千，B是四千。
+  s1_zh_hk: 每次事故，保險人賠損失減自負額，但唔超過上限，其餘由工場承擔。冇損失嘅話，全年成本A係九千，B係四千。
+  s2_en: >-
+    For one 24,000 loss, A keeps 2,000, for a total of 11,000. B keeps 6,000, for 10,000, so B is 1,000
+    cheaper.
+  s2_zh: 一次两万四千的损失，A自留两千，总成本一万一千；B自留六千，总成本一万，B便宜一千。
+  s2_zh_hk: 一次兩萬四千嘅損失，A自留兩千，總成本一萬一千；B自留六千，總成本一萬，B平一千。
+  s3_en: >-
+    For one 60,000 loss, A's payout stops at 30,000, so it keeps 30,000 and costs 39,000. B pays its 50,000
+    limit, keeps 10,000, and costs 14,000. Retention can exceed the deductible when the limit binds.
+  s3_zh: >-
+    一次六万的损失，A最多赔三万，自留三万，总成本三万九千。B赔到五万的上限，自留一万，总成本一万四千。上限一旦起作用，自留部分就可能超过免赔额。
+  s3_zh_hk: 一次六萬嘅損失，A最多賠三萬，自留三萬，總成本三萬九千。B賠到五萬嘅上限，自留一萬，總成本一萬四千。上限一起作用，自留部分就可能多過自負額。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: The same total, four deductibles
+  title_zh: 同样的合计，四次免赔额
+  title_zh_hk: 同樣的合計，四次自負額
+  step1_en: >-
+    A: keeps 4 × 2,000 = 8,000 → 17,000
+  step1_zh: A：自留 4 × 2,000 = 8,000 → 17,000
+  step1_zh_hk: A：自留 4 × 2,000 = 8,000 → 17,000
+  step2_en: >-
+    B: keeps all 24,000 → 28,000
+  step2_zh: B：全部 24,000 自留 → 28,000
+  step2_zh_hk: B：全部 24,000 自留 → 28,000
+  step3_en: A is 11,000 cheaper in this replay
+  step3_zh: 按这次回测，A 便宜 11,000
+  step3_zh_hk: 按這次回測，A 便宜 11,000
+  s1_en: >-
+    For each 6,000 incident, A pays 4,000 and the workshop keeps 2,000. Four incidents mean 8,000 retained,
+    plus the 9,000 premium, for 17,000 in total.
+  s1_zh: 每次六千的事故，A赔四千，工场自留两千。四次就是自留八千，加上九千保费，总成本一万七千。
+  s1_zh_hk: 每次六千嘅事故，A賠四千，工場自留兩千。四次就係自留八千，加九千保費，總成本一萬七千。
+  s2_en: >-
+    B pays nothing, because each loss equals its deductible. The workshop keeps all 24,000, plus the 4,000
+    premium, for 28,000.
+  s2_zh: B一分不赔，因为每次损失刚好等于免赔额。工场自留全部两万四千，加上四千保费，总成本两万八千。
+  s2_zh_hk: B一蚊都唔賠，因為每次損失啱啱等於自負額。工場自留晒兩萬四千，加四千保費，總成本兩萬八千。
+  s3_en: >-
+    A is 11,000 cheaper in this replay. Applying B's deductible once to the annual total would wrongly
+    give 10,000. The number and size of incidents decide how much stays with the firm.
+  s3_zh: 在这次回测里，A便宜一万一千。如果把B的免赔额只对全年合计扣一次，就会错算成一万。事故的次数和大小，决定了多少风险留在公司身上。
+  s3_zh_hk: 喺今次回測入面，A平一萬一千。如果將B嘅自負額淨係對全年合計扣一次，就會錯計成一萬。事故嘅次數同大細，決定幾多風險留喺公司身上。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Argue without made-up odds
+  title_zh: 不靠编造概率来论证
+  title_zh_hk: 不靠編造機率來論證
+  en: >-
+    A can be defended if repeated medium-sized incidents worry you more than its higher premium and lower
+    limit. B can be defended if the saving and better protection against one large loss matter more, and
+    the firm accepts repeated deductibles. Neither wins every scenario, and no expected cost can be calculated
+    without probabilities.
+  zh: >-
+    如果你更担心反复出现的中等事故，多于A较高的保费和较低的上限，选A说得通。如果更看重省下的保费和对单次大损失的保障，又接受免赔额会反复扣，选B也说得通。没有哪一份在每个情景都更好；没有概率，也算不出期望成本。
+  zh_hk: >-
+    如果你擔心一次又一次嘅中型事故，多過A較高嘅保費同較低嘅上限，揀A講得通。如果你更睇重慳到嘅保費同對單次大損失嘅保障，又接受自負額會重複扣，揀B都講得通。冇一份喺每個情景都贏；冇機率，亦計唔到期望成本。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: A deductible is no annual cap
+  title_zh: 免赔额不是全年上限
+  title_zh_hk: 自負額不是全年上限
+  q1_en: Apply the contract to each incident
+  q1_zh: 把合同用到每一次事故
+  q1_zh_hk: 把合約用到每一次事故
+  q2_en: An annual total can hide repeated deductibles
+  q2_zh: 全年合计可能藏着多次免赔额
+  q2_zh_hk: 全年合計可能藏着多次自負額
+  s1_en: >-
+    Before signing, seek a longer incident history, plausible loss sizes and frequencies, and the firm's
+    tolerance for retained losses. Confirm the actual wording with a qualified adviser.
+  s1_zh: 签约之前，要找更长的事故记录、合理的损失大小和频率，并弄清公司能承受多少自留损失。实际条款要请合资格的顾问确认。
+  s1_zh_hk: 簽約之前，要搵更長嘅事故記錄、合理嘅損失大細同頻率，仲要弄清楚公司頂得順幾多自留損失。實際條款要請合資格嘅顧問確認。
+  s2_en: >-
+    The largest scenario is not a worst-case bound. Do not weaken prevention, or combine unrelated incidents
+    into one claim.
+  s2_zh: 最大的那个情景不是最坏情况的上限。不要放松预防措施，也不要把不相关的事故并成一次索赔。
+  s2_zh_hk: 最大嗰個情景唔係最壞情況嘅上限。唔好放鬆預防措施，亦唔好將唔相關嘅事故併埋做一次索償。
+  s3_en: >-
+    The workshop, quotes and losses are fictional; this is not advice on any actual policy. Official scene
+    art is a teaching illustration only.
+  s3_zh: 工场、报价和损失都是虚构的，并非针对任何真实保单的建议。官方场景图只是教学插图。
+  s3_zh_hk: 工場、報價同損失都係虛構嘅，唔係針對任何真實保單嘅建議。官方場景圖只係教學插圖。
+duration_target_s: 196

@@ -1,0 +1,301 @@
+id: FIN-26
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Cash flows continue. How much is the ending worth?
+title_zh: 现金流还在继续。结尾值多少？
+title_zh_hk: 現金流還在繼續。結尾值多少？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-26
+  kicker_en: FIN-26
+  kicker_zh: FIN-26
+  kicker_zh_hk: FIN-26
+  title_en: Cash flows continue. How much is the ending worth?
+  title_zh: 现金流还在继续。结尾值多少？
+  title_zh_hk: 現金流還在繼續。結尾值多少？
+  image: art/cash-flows-continue-ending-worth-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 29 April 2026, HKICPA published teaching guidance explaining that a terminal value represents cash
+    flows beyond an explicit forecast, and must be discounted from its own date. The assumed cash flow
+    must also be sustainable. Now you review a fictional workshop project.
+  zh: >-
+    2026年4月29日，香港会计师公会发布教学指引，说明终值代表明确预测期之后的现金流，而且必须从它自己的日期折现，假设的现金流也必须可持续。现在，你要复核一个虚构的工场项目。
+  zh_hk: >-
+    2026年4月29號，香港會計師公會發表教學指引，講明終值代表明確預測期之後嘅現金流，而且一定要由佢自己嘅日期折現，假設嘅現金流亦一定要持續得到。而家，你要覆核一個虛構嘅工場項目。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Inputs at a 10% discount rate
+  title_zh: 折现率 10% 的输入
+  title_zh_hk: 折現率 10% 的輸入
+  row1_en: Initial outlay
+  row1_zh: 初始投入
+  row1_zh_hk: 初始投入
+  row2_en: Years 1–3
+  row2_zh: 第 1–3 年
+  row2_zh_hk: 第 1–3 年
+  row3_en: Continue
+  row3_zh: 延续
+  row3_zh_hk: 延續
+  row4_en: Exit
+  row4_zh: 退出
+  row4_zh_hk: 退出
+  col1_en: Amount
+  col1_zh: 金额
+  col1_zh_hk: 金額
+  col2_en: Timing
+  col2_zh: 时间
+  col2_zh_hk: 時間
+  c11: 900,000
+  c12_en: Today
+  c12_zh: 今天
+  c12_zh_hk: 今天
+  c21_en: 100,000 each
+  c21_zh: 每年 100,000
+  c21_zh_hk: 每年 100,000
+  c22_en: Each year-end
+  c22_zh: 每年年末
+  c22_zh_hk: 每年年末
+  c31_en: 120,000 a year
+  c31_zh: 每年 120,000
+  c31_zh_hk: 每年 120,000
+  c32_en: From year 4, forever
+  c32_zh: 第 4 年起，永续
+  c32_zh_hk: 第 4 年起，永續
+  c41_en: 800,000 net sale
+  c41_zh: 净售价 800,000
+  c41_zh_hk: 淨售價 800,000
+  c42_en: End of year 3
+  c42_zh: 第 3 年年末
+  c42_zh_hk: 第 3 年年末
+  footer_en: >-
+    PV of years 1–3: 248,685
+  footer_zh: 第 1–3 年现值：248,685
+  footer_zh_hk: 第 1–3 年現值：248,685
+  s1_en: >-
+    The project costs 900,000 dollars today and produces net free cash flow of 100,000 at each of the
+    next three year-ends, after all costs, taxes and required investment. Both appraisals use a 10 percent
+    discount rate and zero growth.
+  s1_zh: >-
+    项目今天投入九十万港元，接下来三年每年年末产生十万港元的净自由现金流，已经扣除全部成本、税和必要投资。两份评估都用百分之十的折现率，增长率为零。
+  s1_zh_hk: >-
+    項目今日投入九十萬港元，之後三年每年年尾產生十萬港元嘅淨自由現金流，已經扣晒所有成本、稅同必要投資。兩份評估都用百分之十嘅折現率，增長率係零。
+  s2_en: >-
+    Continue values the operation after year 3 as a flat stream starting at the end of year 4. Its analyst
+    labels 120,000 a year as free cash flow, but the cost schedule has not been reconciled.
+  s2_zh: “延续”把第三年之后的经营，估成从第四年年末开始的一笔平稳现金流。分析师把每年十二万港元标为自由现金流，但成本表还没有核对。
+  s2_zh_hk: 「延續」將第三年之後嘅業務，估成由第四年年尾開始嘅一筆平穩現金流。分析師將每年十二萬港元當係自由現金流，但成本表仲未核對。
+  s3_en: >-
+    Exit uses a secured option to sell the whole operation at the end of year 3 for a net 800,000 dollars.
+    Selling passes all later receipts and obligations to the buyer, so do not add a perpetuity to it.
+  s3_zh: >-
+    “退出”用的是一项有保障的选择权：在第三年年末把整个业务卖掉，净得八十万港元。卖掉之后，以后的收款和义务都归买方，所以不能再加上一笔永续价值。
+  s3_zh_hk: >-
+    「退出」用嘅係一個有保障嘅選擇權：喺第三年年尾將成盤生意賣走，淨收八十萬港元。賣咗之後，以後嘅收款同義務都歸買方，所以唔可以再加一筆永續價值。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Continue or Exit?
+  title_zh: 延续还是退出？
+  title_zh_hk: 延續還是退出？
+  en: >-
+    Which appraisal presently supports the higher project value, and which post-year-3 assumption would
+    you require the team to substantiate before approving it? Pause and vote.
+  zh: 按现在的数字，哪一份评估得出的项目价值更高？批准之前，你会要求团队证明第三年之后的哪一项假设？请暂停，投个票。
+  zh_hk: 按而家嘅數，邊份評估得出嘅項目價值高啲？批准之前，你會要團隊證明第三年之後邊一項假設？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The cost schedule is reconciled
+  title_zh: 成本表核对完了
+  title_zh_hk: 成本表核對完了
+  step1_en: >-
+    Missed: HK$50,000 a year to sustain it
+  step1_zh: 漏了：每年 HK$50,000 维持性支出
+  step1_zh_hk: 漏了：每年 HK$50,000 維持性支出
+  step2_en: From year 4, flat, forever
+  step2_zh: 从第 4 年起，金额不变，永续
+  step2_zh_hk: 從第 4 年起，金額不變，永續
+  step3_en: >-
+    Rule: approve only if NPV is positive
+  step3_zh: 规则：净现值为正才批准
+  step3_zh_hk: 規則：淨現值為正才批准
+  s1_en: >-
+    The reconciled engineering schedule finds that Continue omitted 50,000 dollars of sustaining expenditure
+    every year from year 4 onward.
+  s1_zh: 核对后的工程成本表发现，“延续”漏掉了从第四年起每年五万港元的维持性支出。
+  s1_zh_hk: 核對過嘅工程成本表發現，「延續」漏咗由第四年起每年五萬港元嘅維持性支出。
+  s2_en: >-
+    This is real recurring cash spending needed to keep capacity and receipts, not depreciation or optional
+    expansion. The first payment falls at the end of year 4, and it stays flat.
+  s2_zh: 这是维持产能和收款所必需的、真实的经常性现金支出，不是折旧，也不是可选的扩张。第一笔在第四年年末支付，金额一直不变。
+  s2_zh_hk: 呢個係要維持產能同收款嘅真實經常性現金支出，唔係折舊，亦唔係可做可唔做嘅擴張。第一筆喺第四年年尾俾，金額一直唔變。
+  s3_en: >-
+    Exit's 800,000 is unchanged, and the buyer bears later spending. The business accepts only projects
+    with a positive net present value, and can decline today without penalty.
+  s3_zh: “退出”的八十万不变，以后的支出由买方承担。公司只接受净现值为正的项目，今天放弃也不会受罚。
+  s3_zh_hk: 「退出」嘅八十萬冇變，以後嘅支出由買方承擔。公司只接受淨現值係正數嘅項目，今日放棄亦唔會罰。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Approve the HK$900,000 project?
+  title_zh: 批准这个 HK$900,000 项目吗？
+  title_zh_hk: 批准這個 HK$900,000 項目嗎？
+  en: >-
+    After correcting the sustaining expenditure, which terminal route has the higher value, and should
+    the business approve this 900,000-dollar project under its stated rule? Pause and vote.
+  zh: 更正维持性支出之后，哪一条终局路径价值更高？按公司定下的规则，应不应该批准这个九十万港元的项目？请暂停，投个票。
+  zh_hk: 更正維持性支出之後，邊條終局路徑價值高啲？按公司定落嘅規則，應唔應該批准呢個九十萬港元嘅項目？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Put the ending at the right date
+  title_zh: 把结尾放在正确的日期
+  title_zh_hk: 把結尾放在正確的日期
+  step1_en: >-
+    Year-3 TV: 120,000 ÷ 0.10 = 1,200,000
+  step1_zh: 延续：120,000 ÷ 0.10 = 1,200,000（第 3 年）
+  step1_zh_hk: 延續：120,000 ÷ 0.10 = 1,200,000（第 3 年）
+  step2_en: >-
+    Continue NPV: +250,263
+  step2_zh: 延续净现值：+250,263
+  step2_zh_hk: 延續淨現值：+250,263
+  step3_en: >-
+    Exit NPV: −50,263
+  step3_zh: 退出净现值：−50,263
+  step3_zh_hk: 退出淨現值：−50,263
+  s1_en: >-
+    For the flat stream, terminal value at the end of year 3 is the year-4 cash flow divided by 10 percent:
+    120,000 divided by 0.1, or 1.2 million dollars.
+  s1_zh: 对平稳的现金流，第三年年末的终值，等于第四年的现金流除以百分之十：十二万除以零点一，即一百二十万港元。
+  s1_zh_hk: 對平穩嘅現金流，第三年年尾嘅終值，等於第四年嘅現金流除百分之十：十二萬除零點一，即係一百二十萬港元。
+  s2_en: >-
+    Discounted three years, that is about 901,578 today. Add the 248,685 from years 1 to 3 and subtract
+    the 900,000 outlay: Continue's initial NPV is about 250,263 dollars.
+  s2_zh: >-
+    再折现三年，今天约值九十万一千五百七十八。加上第一到第三年的二十四万八千六百八十五，减去九十万投入，“延续”起初的净现值约二十五万零二百六十三港元。
+  s2_zh_hk: >-
+    再折現三年，今日大約值九十萬一千五百七十八。加第一至第三年嘅二十四萬八千六百八十五，減九十萬投入，「延續」起初嘅淨現值大約二十五萬零二百六十三港元。
+  s3_en: >-
+    Exit's 800,000 is worth about 601,052 today, so its NPV is minus 50,263. Exit is an alternative, not
+    an extra: never add it to continuation value.
+  s3_zh: “退出”的八十万，今天约值六十万一千零五十二，所以净现值是负五万零二百六十三。“退出”是另一个选择，不是额外的资产，不能加到延续价值上。
+  s3_zh_hk: 「退出」嘅八十萬，今日大約值六十萬一千零五十二，所以淨現值係負五萬零二百六十三。「退出」係另一個選擇，唔係額外嘅資產，唔可以加落延續價值度。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Fix the sustainable cash flow
+  title_zh: 更正可持续的现金流
+  title_zh_hk: 更正可持續的現金流
+  step1_en: 120,000 − 50,000 = 70,000 a year
+  step1_zh: 120,000 − 50,000 = 每年 70,000
+  step1_zh_hk: 120,000 − 50,000 = 每年 70,000
+  step2_en: >-
+    Continue NPV: −125,394
+  step2_zh: 延续净现值：−125,394
+  step2_zh_hk: 延續淨現值：−125,394
+  step3_en: Exit is better by 75,131, still negative
+  step3_zh: 退出高 75,131，但仍为负
+  step3_zh_hk: 退出高 75,131，但仍為負
+  s1_en: Continuation cash falls to 120,000 minus 50,000, or 70,000 a year.
+  s1_zh: 延续的年度现金流降到十二万减五万，即每年七万。
+  s1_zh_hk: 延續嘅年度現金流跌到十二萬減五萬，即係每年七萬。
+  s2_en: >-
+    Terminal value becomes 700,000 at year 3, about 525,920 today. Continue's NPV is now about minus 125,394.
+    The missing expense cut present value by about 375,657 dollars.
+  s2_zh: >-
+    终值变成第三年的七十万，今天约值五十二万五千九百二十。“延续”的净现值现在约为负十二万五千三百九十四。漏掉的支出，让现值少了约三十七万五千六百五十七港元。
+  s2_zh_hk: >-
+    終值變成第三年嘅七十萬，今日大約值五十二萬五千九百二十。「延續」嘅淨現值而家大約係負十二萬五千三百九十四。漏咗嘅支出，令現值少咗大約三十七萬五千六百五十七港元。
+  s3_en: >-
+    Exit is now worth about 75,131 more than Continue, but both NPVs are negative. Under the positive-NPV
+    rule, decline the project. A less costly ending does not make it a good project.
+  s3_zh: >-
+    现在“退出”比“延续”多值约七万五千一百三十一，但两者的净现值都是负的。按净现值为正的规则，应该放弃这个项目。结尾亏得少一点，不等于项目值得做。
+  s3_zh_hk: >-
+    而家「退出」比「延續」多值大約七萬五千一百三十一，但兩者嘅淨現值都係負數。按淨現值要正數嘅規則，應該放棄呢個項目。結尾蝕少啲，唔等於項目值得做。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Better route, bad project
+  title_zh: 更好的路径，也可能是坏项目
+  title_zh_hk: 更好的路徑，也可能是壞項目
+  en: >-
+    The break-even outlay using the better route is about 849,737 dollars; a positive NPV would need a
+    lower outlay, all else unchanged. Before approval, the Continue team had to prove its post-forecast
+    cash was really available after sustaining the operation.
+  zh: >-
+    按较好的路径，打平的初始投入约为八十四万九千七百三十七港元；其他不变的话，投入要更低，净现值才会为正。批准之前，“延续”团队本来就要证明：预测期之后的现金，在扣除维持经营的支出后真的拿得到。
+  zh_hk: >-
+    按較好嘅路徑，打和嘅初始投入大約係八十四萬九千七百三十七港元；其他唔變嘅話，投入要再低啲，淨現值先會係正數。批准之前，「延續」團隊本來就要證明：預測期之後嘅現金，扣咗維持業務嘅支出之後真係攞得到。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: The ending must be sustainable
+  title_zh: 结尾的现金流要可持续
+  title_zh_hk: 結尾的現金流要可持續
+  q1_en: Discount terminal value from its own date
+  q1_zh: 终值要从它自己的日期折现
+  q1_zh_hk: 終值要從它自己的日期折現
+  q2_en: Sustaining spending belongs in the stream
+  q2_zh: 维持性支出要计入现金流
+  q2_zh_hk: 維持性支出要計入現金流
+  s1_en: >-
+    A terminal value is compact arithmetic, but its cash flow must be genuinely available after the spending
+    that keeps the business running.
+  s1_zh: 终值的算法很简单，但它用的现金流，必须是扣除维持业务运转的支出之后，真正拿得到的钱。
+  s1_zh_hk: 終值條數好簡單，但佢用嘅現金流，一定要係扣咗維持業務運作嘅支出之後，真係攞得到嘅錢。
+  s2_en: >-
+    The discount rate, tax basis and growth assumption were supplied, not estimated from markets; this
+    is not an investment recommendation.
+  s2_zh: 折现率、税务基础和增长假设都是给定的，不是从市场估算出来的；这也不是投资建议。
+  s2_zh_hk: 折現率、稅務基礎同增長假設都係俾定嘅，唔係由市場估出嚟；呢個亦唔係投資建議。
+  s3_en: >-
+    The workshop, project and exit offer are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 工场、项目和退出报价都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 工場、項目同退出報價都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

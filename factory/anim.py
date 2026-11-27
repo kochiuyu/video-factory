@@ -4201,6 +4201,115 @@ def _scene_types() -> dict:
             hops = [hop_ten, hop_twenty] + [hop_one(j) for j in range(ones)]
             self.spend_marked(0, hops, self.marks_for(0))
 
+    class RowMatch(_Board):
+        """Two rows, matched one to one, then the unmatched counters."""
+
+        def construct(self):
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            part = str(labels.get("part") or "rows")
+            a = int(labels.get("a") or 0)
+            b = int(labels.get("b") or 0)
+            left, right, bot_lim, top_lim = _safe_limits()
+            radius = _ordinal_label_height() * 0.5
+            gap = radius * 1.45
+
+            def glyph(text, scale=1.0):
+                mob = styled(str(text), latin, cjk, 64)
+                target = _ordinal_label_height() * scale
+                if float(mob.height) > 0:
+                    mob.scale(target / float(mob.height))
+                return mob
+
+            def make_row(n, color):
+                dots = VGroup(*[counter(color, radius) for _ in range(n)])
+                if n > 1:
+                    dots.arrange(RIGHT, buff=gap)
+                return dots
+
+            top = make_row(a, GREEN)
+            bottom = make_row(b, GOLD)
+            if a and b:
+                bottom.next_to(top, DOWN, buff=radius * 2.4)
+                bottom.align_to(top, LEFT)
+            lines = VGroup()
+            for i in range(min(a, b)):
+                line = Line(
+                    top[i].get_center(), bottom[i].get_center(),
+                    color=GOLD, stroke_width=6,
+                )
+                lines.add(line)
+            longer = top if a >= b else bottom
+            rings = VGroup()
+            for i in range(min(a, b), max(a, b)):
+                ring = Circle(radius=radius * 1.18, color=GOLD, stroke_width=6)
+                ring.set_fill(opacity=0)
+                ring.move_to(longer[i].get_center())
+                rings.add(ring)
+            rows = VGroup(top, bottom)
+            answer = glyph(str(abs(a - b)), 1.45)
+            anchor = rows if len(rows) else answer
+            answer.next_to(anchor, DOWN, buff=0.32)
+            title = glyph(str(labels.get("title") or " "), 1.05)
+            picture = VGroup(rows, lines, rings, answer)
+            title.next_to(picture, UP, buff=0.28)
+            group = VGroup(title, picture)
+            max_w = (right - left) * 0.96
+            max_h = (top_lim - bot_lim) * 0.96
+            if float(group.width) > max_w > 0:
+                group.scale(max_w / float(group.width))
+            if float(group.height) > max_h > 0:
+                group.scale(max_h / float(group.height))
+            group.move_to([(left + right) / 2.0, (bot_lim + top_lim) / 2.0, 0])
+            self.vf_title = title
+            self.vf_top = top
+            self.vf_bottom = bottom
+            self.vf_lines = lines
+            self.vf_rings = rings
+            self.vf_answer = answer
+            show_rings = part in {"gap", "hold"} and len(rings)
+            show_number = part in {"hold", "equal"} or (part == "gap" and abs(a - b) == 0)
+            title.set_opacity(0)
+            for dot in list(top) + list(bottom):
+                dot.set_opacity(0)
+            for line in lines:
+                line.set_stroke(opacity=0)
+            for ring in rings:
+                ring.set_stroke(opacity=0)
+            answer.set_opacity(0)
+            self.add(group)
+            if part == "rows":
+                title.set_opacity(1)
+                for dot in list(top) + list(bottom):
+                    dot.set_opacity(1)
+                self.spend(0)
+                return
+            for dot in list(top) + list(bottom):
+                dot.set_opacity(1)
+            title.set_opacity(1)
+            if part == "match":
+                self.spend(0, *[line.animate.set_stroke(opacity=1) for line in lines])
+                return
+            for line in lines:
+                line.set_stroke(opacity=1)
+            if part == "gap" and len(rings):
+                def reveal(i):
+                    def play(i=i):
+                        shown = [rings[i].animate.set_stroke(opacity=1)]
+                        if i == len(rings) - 1:
+                            shown.append(answer.animate.set_opacity(1))
+                        return AnimationGroup(*shown)
+                    return play
+                self.spend_marked(0, [reveal(i) for i in range(len(rings))], self.marks_for(0))
+                return
+            if show_rings:
+                for ring in rings:
+                    ring.set_stroke(opacity=1)
+            if part in {"hold", "equal"} or show_number:
+                answer.set_opacity(1)
+            self.spend(0)
+
+
     class PlaceSum(_Board):
         """Ones under ones, then tens. Two or three numbers, no borrowing."""
 
@@ -4328,6 +4437,7 @@ def _scene_types() -> dict:
                 answer_tens.animate.set_opacity(1),
             )
 
+
     _scene_types._cache = {
         "one_ten": OneTen,
         "ten_and_ones": TenAndOnes,
@@ -4339,11 +4449,13 @@ def _scene_types() -> dict:
         "part_whole": PartWhole,
         "number_blocks": NumberBlocks,
         "estimate_group": EstimateGroup,
+        "row_match": RowMatch,
         "place_sum": PlaceSum,
         "lesson_hook": LessonHook,
         "lesson_takeaway": LessonTakeaway,
     }
     return _scene_types._cache
+
 
 
 def _write_caption_overlay(text: str, dest: Path, frame: tuple[int, int]) -> Path:

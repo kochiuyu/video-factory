@@ -19,9 +19,9 @@ beats:
   title_en: Put the numbers in order
   title_zh: 把这些数排好
   title_zh_hk: 將呢啲數排好
-  s1_en: What comes after 39?
-  s1_zh: 三十九后面是多少？
-  s1_zh_hk: 三十九後面係幾多呀？
+  s1_en: What comes after 39? We will count on.
+  s1_zh: 三十九后面是多少？我们接着数。
+  s1_zh_hk: 三十九後面係幾多呀？我哋跟住數。
 
 - id: up
   visual: animated
@@ -31,12 +31,12 @@ beats:
   b: 40
   n: 42
   seconds: 12
-  s1_en: 24 is the smallest.
-  s1_zh: 二十四最小。
-  s1_zh_hk: 二十四最細。
-  s2_en: Then 40.
-  s2_zh: 然后是四十。
-  s2_zh_hk: 然後係四十。
+  s1_en: 24 is the smallest. It comes first.
+  s1_zh: 二十四最小。它排在最前面。
+  s1_zh_hk: 二十四最細。佢排喺最前面。
+  s2_en: Then 40. Forty comes next.
+  s2_zh: 然后是四十。四十排在中间。
+  s2_zh_hk: 然後係四十。四十排喺中間。
   s3_en: Then 42. Smallest to largest.
   s3_zh: 然后是四十二。由小到大。
   s3_zh_hk: 然後係四十二。由細到大。
@@ -49,12 +49,12 @@ beats:
   b: 60
   n: 16
   seconds: 12
-  s1_en: 61 is the largest.
-  s1_zh: 六十一最大。
-  s1_zh_hk: 六十一最大。
-  s2_en: Then 60.
-  s2_zh: 然后是六十。
-  s2_zh_hk: 然後係六十。
+  s1_en: 61 is the largest. It comes first this time.
+  s1_zh: 六十一最大。这次它排在最前面。
+  s1_zh_hk: 六十一最大。今次佢排喺最前面。
+  s2_en: Then 60. Sixty comes next.
+  s2_zh: 然后是六十。六十排在中间。
+  s2_zh_hk: 然後係六十。六十排喺中間。
   s3_en: Then 16. Largest to smallest.
   s3_zh: 然后是十六。由大到小。
   s3_zh_hk: 然後係十六。由大到細。
@@ -66,9 +66,9 @@ beats:
   start: 38
   end: 41
   seconds: 12
-  s1_en: Start at 38.
-  s1_zh: 从三十八开始。
-  s1_zh_hk: 由三十八開始。
+  s1_en: Start at 38. We count on to 41.
+  s1_zh: 从三十八开始。我们数到四十一。
+  s1_zh_hk: 由三十八開始。我哋數到四十一。
   s2_en: 38. 39. 40. 41.
   s2_zh: 三十八，三十九，四十，四十一。
   s2_zh_hk: 三十八，三十九，四十，四十一。

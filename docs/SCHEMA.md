@@ -131,6 +131,8 @@ These visuals paint progressive stills. Write one spoken chunk per still:
 
 Authoring, the scenes, caption timing, and the cache live in [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md). The demo file is `examples/demo-ten-and-ones.yaml`. It is outside `lessons/`, so `build --all` does not pick it up.
 
+`number_blocks` fields depend on `mode`. `tens` uses `count` (0–100). `compare` uses `a` and `b` (0–100, different). `order` uses `a` and `b`, plus optional `n` and `mark` (2–4 values, 0–100, drawn left to right). `hop` uses `start` and `end` (0–100, different, at most five apart). `groups` uses `a` (2–5), `n` (1–6), and optional `b` (loose counters, fewer than `a`), with the total at most 20. Three spoken lines. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
+
 `ordinal_row` fields are `n` (1–20 tokens), `mark` (the marked token, 1-based from the left), `direction` (`left` or `right`), and `mode` (`ordinal` or `total`). A `lesson_hook` or `lesson_takeaway` with `motif: ordinal` may set the same `n` and `mark`. Omit them and the picture is six tokens with the third one marked. `pair_counters` takes `n` (0–20 counters): `n // 2` pairs slide together and a leftover one is marked. A `lesson_hook` or `lesson_takeaway` with `motif: pairs` may set `n` (default 8). A pairs takeaway may also set `also` (0–20), drawn as rows of five pairs at the same counter size, with a leftover ringed. `part_whole` takes `a` and `b` (each 1–9, sum 2–18). Optional `also` is another left-hand part of the same whole. Optional `cover` is `a` or `b`. A `lesson_hook` with `motif: parts` may set `a` and `b` (default 3 and 4). A parts takeaway sets `bonds`: 1 to 4 cues, each `[left, right]` or `[whole]`.
 
 ## Optional fields

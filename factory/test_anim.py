@@ -1603,13 +1603,63 @@ class SceneRegistryTest(unittest.TestCase):
             list(REGISTRY),
             [
                 "one_ten", "ten_and_ones", "make_ten", "count_objects", "number_track",
-                "ordinal_row", "pair_counters", "part_whole", "lesson_hook", "lesson_takeaway",
+                "ordinal_row", "pair_counters", "part_whole", "number_blocks",
+                "lesson_hook", "lesson_takeaway",
             ],
         )
         self.assertEqual(REGISTRY["one_ten"].steps, 4)
         self.assertEqual(REGISTRY["count_objects"].steps, 3)
         self.assertEqual(REGISTRY["number_track"].steps, 3)
         self.assertEqual(scene_problems({"visual": "title_card", "scene": "nope"}), [])
+
+    def test_number_blocks_bounds(self):
+        def beat(**extra):
+            row = {
+                "visual": "animated",
+                "scene": "number_blocks",
+                "s1_en": "Tens.",
+                "s2_en": "Ones.",
+                "s3_en": "The number.",
+                "s1_zh": "十。",
+                "s2_zh": "个。",
+                "s3_zh": "这个数。",
+                "s1_zh_hk": "十。",
+                "s2_zh_hk": "個。",
+                "s3_zh_hk": "呢個數。",
+            }
+            row.update(extra)
+            return row
+
+        tens = beat(mode="tens", count=24)
+        self.assertEqual(scene_problems(tens), [])
+        self.assertEqual(count_event(tens), (0, 2))
+        self.assertEqual(count_event(beat(mode="tens", count=40)), (0, 4))
+        self.assertEqual(count_event(beat(mode="tens", count=100)), (0, 10))
+        self.assertEqual(labels_for(tens, "zh")["title"], "十和个")
+        self.assertEqual(labels_for(tens, "zh_hk")["title"], "十同個")
+        self.assertTrue(scene_problems(beat(mode="tens", count=101)))
+        compared = beat(mode="compare", a=24, b=42)
+        self.assertEqual(scene_problems(compared), [])
+        self.assertIsNone(count_event(compared))
+        self.assertTrue(scene_problems(beat(mode="compare", a=24, b=24)))
+        ordered = beat(mode="order", a=24, b=40, n=42)
+        self.assertEqual(scene_problems(ordered), [])
+        self.assertEqual(labels_for(ordered, "en")["values"], [24, 40, 42])
+        self.assertTrue(scene_problems(beat(mode="order", a=24)))
+        hop = beat(mode="hop", start=38, end=41)
+        self.assertEqual(scene_problems(hop), [])
+        self.assertEqual(count_event(hop), (1, 4))
+        self.assertEqual(count_event(beat(mode="hop", start=41, end=38)), (1, 4))
+        self.assertTrue(scene_problems(beat(mode="hop", start=38, end=50)))
+        groups = beat(mode="groups", a=2, n=4)
+        self.assertEqual(scene_problems(groups), [])
+        self.assertEqual(count_event(groups), (1, 4))
+        self.assertEqual(labels_for(groups, "en")["extra"], 0)
+        loose = beat(mode="groups", a=2, n=5, b=1)
+        self.assertEqual(scene_problems(loose), [])
+        self.assertEqual(labels_for(loose, "zh_hk")["title"], "一組一組數")
+        self.assertTrue(scene_problems(beat(mode="groups", a=2, n=6, b=2)))
+        self.assertTrue(scene_problems(beat(mode="nope")))
 
     def test_twenty_is_two_full_frames(self):
         beat = dict(THIRTEEN, count=20)
@@ -1717,6 +1767,9 @@ class SceneRegistryTest(unittest.TestCase):
                 "lesson_hook",
                 "part_whole", "part_whole", "part_whole", "part_whole", "part_whole", "part_whole",
                 "lesson_takeaway",
+            ],
+            "P1-NUM-13": [
+                "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
             ],
         }
         for name, visuals in expected.items():
@@ -2070,6 +2123,34 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(labels_for(recap9, "zh_hk")["lines"][3], "六再加四個，就係十。")
         self.assertEqual(nine["title_zh_hk"], "將兩組合埋")
         self.assertEqual(labels_for(recap9, "en")["bonds"], [[3, 2], [8, 3], [6, 4], [6, 4]])
+        thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
+        blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
+        self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])
+        self.assertEqual([b["count"] for b in blocks], [24, 40, 100])
+        self.assertEqual(count_event(blocks[0]), (0, 2))
+        self.assertEqual(count_event(blocks[1]), (0, 4))
+        self.assertEqual(count_event(blocks[2]), (0, 10))
+        self.assertEqual(blocks[0]["s3_en"], "Two tens and four ones make twenty-four.")
+        self.assertEqual(blocks[0]["s3_zh"], "两个十和四个一，是二十四。")
+        self.assertEqual(blocks[1]["s3_zh_hk"], "呢個係四十，唔係四。")
+        self.assertNotIn("嗎", _beat_lines(thirteen, "zh_hk"))
+        self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in thirteen["beats"]).lower())
+        recap13 = next(beat for beat in thirteen["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap13), 4)
+        self.assertEqual(labels_for(recap13, "en")["title"], "Tens, ones, and one hundred")
+        self.assertEqual(labels_for(recap13, "zh")["title"], "十、个和一百")
+        self.assertEqual(labels_for(recap13, "zh_hk")["title"], "十、個同一百")
+        self.assertEqual(
+            labels_for(recap13, "en")["lines"],
+            [
+                "Two tens and four ones make 24.",
+                "Four tens make forty.",
+                "Four ones make four, not forty.",
+                "Ten tens make one hundred.",
+            ],
+        )
+        self.assertEqual(labels_for(recap13, "zh")["lines"][3], "十个十是一百。")
+        self.assertEqual(labels_for(recap13, "zh_hk")["lines"][3], "十個十係一百。")
 
     def test_part_whole_bounds(self):
         good = {

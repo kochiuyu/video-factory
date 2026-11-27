@@ -1,0 +1,106 @@
+# P1-NUM-18. Mirrors MathQuiz path groups / lesson estimate,
+# "Estimate, then check".
+# Five beats. A messy pile of 23, then ten of those counters move into a
+# ten-frame, then the guess is about twenty, then we count into two tens
+# and three ones, then we say the guess was close.
+# https://github.com/kochiuyu/mathquiz learn-data.js (path groups, lesson estimate).
+# Speech is for age 6: one short idea per sentence. The heading is answered on screen.
+id: P1-NUM-18
+title_en: Estimate, then check
+title_zh: 先估计，再核对
+title_zh_hk: 先估計，再核對
+duration_target_s: 58
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: ten_frame
+  seconds: 8
+  title_en: Estimate, then check
+  title_zh: 先估计，再核对
+  title_zh_hk: 先估計，再核對
+  shown: true
+  s1_en: Here is a group of ten. We will guess with ten, then we will count.
+  s1_zh: 这里有一组十个。我们用十来估计，然后再数一数。
+  s1_zh_hk: 呢度有一組十個。我哋用十嚟估計，然後再數一數。
+
+- id: pile
+  visual: animated
+  scene: estimate_group
+  part: pile
+  count: 23
+  seconds: 6
+  s1_en: Look at this pile. About how many?
+  s1_zh: 看一看这一堆。大约有多少个？
+  s1_zh_hk: 睇下呢一堆。大約有幾多個呀？
+
+- id: ten
+  visual: animated
+  scene: estimate_group
+  part: ten
+  count: 23
+  seconds: 6
+  s1_en: This is one ten.
+  s1_zh: 这是一个十。
+  s1_zh_hk: 呢個係一個十。
+
+- id: guess
+  visual: animated
+  scene: estimate_group
+  part: guess
+  count: 23
+  seconds: 7
+  s1_en: The pile looks like about two tens. About twenty.
+  s1_zh: 这一堆大约是两个十。大约是二十。
+  s1_zh_hk: 呢一堆大約係兩個十。大約係二十。
+
+- id: count
+  visual: animated
+  scene: estimate_group
+  part: count
+  count: 23
+  seconds: 10
+  s1_en: Ten. Twenty. Twenty-one. Twenty-two. Twenty-three.
+  s1_zh: 十。二十。二十一。二十二。二十三。
+  s1_zh_hk: 十。二十。二十一。二十二。二十三。
+
+- id: close
+  visual: animated
+  scene: estimate_group
+  part: close
+  count: 23
+  seconds: 7
+  s1_en: We guessed twenty. We found twenty-three. Close!
+  s1_zh: 我们估计是二十。数出来是二十三。差不多！
+  s1_zh_hk: 我哋估計係二十。數出嚟係二十三。差不多！
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: ten_frame
+  seconds: 14
+  title_en: About how many?
+  title_zh: 大约有多少个？
+  title_zh_hk: 大約有幾多個呀？
+  s1_en: A group of ten helps us guess.
+  s1_zh: 一组十个，帮我们估计。
+  s1_zh_hk: 一組十個，幫我哋估計。
+  s2_en: Two groups of ten. About twenty.
+  s2_zh: 两组十个，大约是二十。
+  s2_zh_hk: 兩組十個，大約係二十。
+  s3_en: We count and find twenty-three.
+  s3_zh: 数一数，是二十三。
+  s3_zh_hk: 數一數，係二十三。
+  s4_en: Twenty-three is about twenty.
+  s4_zh: 二十三大约是二十。
+  s4_zh_hk: 二十三大約係二十。
+  cues:
+  - kind: tens
+    count: 10
+  - kind: tens
+    count: 20
+  - kind: tens
+    count: 23
+  - kind: tiles
+    values: [20, 23]

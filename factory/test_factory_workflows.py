@@ -211,3 +211,21 @@ class BuildResults(unittest.TestCase):
                 self.assertEqual(set(report["items"][0]["cuts"]), set(requested.split(",")))
                 for path in outputs:
                     self.assertAlmostEqual(ff.probe_duration(path), 1.5, delta=0.15)
+
+
+class NarrationWordTimes(unittest.TestCase):
+    def test_count_words_come_from_the_spoken_file_not_the_padded_copy(self):
+        from tts import write_words_sidecar
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            spoken = root / "en" / "count.mp3"
+            spoken.parent.mkdir()
+            spoken.write_bytes(b"speech")
+            padded = root / "padded" / "en" / "count.mp3"
+            padded.parent.mkdir(parents=True)
+            padded.write_bytes(b"speech-plus-breath")
+            write_words_sidecar(spoken, [{"text": "Ten", "start": 0.05, "end": 0.5}])
+            words = build.narration_word_times(root, "en", "count")
+            self.assertEqual(words, [{"text": "Ten", "start": 0.05, "end": 0.5}])
+            self.assertIsNone(build.load_word_times(padded))

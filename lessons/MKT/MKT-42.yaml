@@ -1,0 +1,270 @@
+id: MKT-42
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The aisle test passed. Did the screen shut buyers out?
+title_zh: 店内买得到，线上却下不了单？
+title_zh_hk: 店內買得到，網上卻下不了單？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-42
+  kicker_en: MKT-42
+  kicker_zh: MKT-42
+  kicker_zh_hk: MKT-42
+  title_en: The aisle test passed. Did the screen shut buyers out?
+  title_zh: 店内买得到，线上却下不了单？
+  title_zh_hk: 店內買得到，網上卻下不了單？
+  image: art/the-aisle-passed-but-the-screen-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Hong Kong's Digital Policy Office shows how a keyboard user can miss form information when a control
+    works only by mouse. That is an access problem, not a measure of how often it happens. Now you run
+    Pantry Bridge, a fictional ingredient-box shop.
+  zh: >-
+    香港数字政策办公室举例说明，如果表单控件只能用鼠标操作，键盘用户就可能错过重要信息。这说明了无障碍问题，但不能说明问题有多常见。现在，你经营虚构的食材包网店 Pantry Bridge。
+  zh_hk: >-
+    香港數字政策辦公室舉例講，如果表格控件只可以用滑鼠操作，用鍵盤嘅人就可能錯過重要資訊。呢個講出咗無障礙問題，但講唔到問題有幾常見。而家，你經營虛構嘅食材包網店 Pantry Bridge。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Planning completion rates
+  title_zh: 预计结账完成率
+  title_zh_hk: 預計結賬完成率
+  row1_en: Keyboard route
+  row1_zh: 键盘操作
+  row1_zh_hk: 鍵盤操作
+  row2_en: Pointer route
+  row2_zh: 指针设备操作
+  row2_zh_hk: 指向裝置操作
+  col1_en: Current
+  col1_zh: 现况
+  col1_zh_hk: 現況
+  col2_en: With repair
+  col2_zh: 修复后
+  col2_zh_hk: 修正後
+  c11: 10%
+  c12: 50%
+  c21: 20%
+  c22: 20%
+  footer_en: 10,000 visits · HK$45 per order
+  footer_zh: 10,000 次访问 · 每单 HK$45
+  footer_zh_hk: 10,000 次瀏覽 · 每單 HK$45
+  s1_en: >-
+    At checkout, the delivery-time picker works by mouse, but a contractor reproduces a keyboard-only
+    path that cannot reach some dates. The store has 9,000 dollars for one action this month.
+  s1_zh: 结账时，配送时段选择器可以用鼠标操作，但承包商发现，只用键盘就选不到某些日期，而且问题可以复现。商家本月有九千元，只能做一件事。
+  s1_zh_hk: 結賬嗰陣，送貨時段選擇器用滑鼠揀得到，但承辦商發現，淨係用鍵盤就揀唔到某啲日子，而且問題可以重現。商戶今個月有九千蚊，只可以做一件事。
+  s2_en: >-
+    Either repair the picker, or buy ads that send 1,800 extra visits to the unchanged site. Each costs
+    the full budget; count only incremental contribution against keeping the current site.
+  s2_zh: 要么修好时段选择器，要么投放广告，为现有网站多带来一千八百次访问。两个方案都会用尽预算；只计算相对于维持现状的增量贡献。
+  s2_zh_hk: 一係修好時段選擇器，一係落廣告，為現有網站多帶一千八百次瀏覽。兩個方案都會用晒預算；只計相對維持現狀嘅增量貢獻。
+  s3_en: >-
+    Finance assumes 10,000 visits without ads, 10 percent by keyboard, and 45 dollars contribution per
+    completed order. Ads bring the same route mix, and repair leaves pointer completion unchanged.
+  s3_zh: >-
+    财务部假设，不投广告会有一万次访问，其中百分之十用键盘，每张完成的订单带来四十五元贡献。广告带来的操作方式比例不变，修复后指针设备的完成率也不变。
+  s3_zh_hk: >-
+    財務部假設，唔落廣告會有一萬次瀏覽，當中百分之十用鍵盤，每張完成嘅訂單帶嚟四十五蚊貢獻。廣告帶嚟嘅操作方式比例唔變，修正後用滑鼠嘅完成率都唔變。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Repair or ads?
+  title_zh: 修复还是投广告？
+  title_zh_hk: 修正還是落廣告？
+  en: >-
+    How much incremental contribution would each option earn after its 9,000-dollar cost? These are planning
+    inputs, not a causal estimate. Which would you fund? Pause and vote.
+  zh: 扣除九千元成本后，两个方案各能带来多少增量贡献？这些只是规划假设，不是因果估算。你会把预算用在哪个方案？请暂停，投个票。
+  zh_hk: 扣除九千蚊成本之後，兩個方案各自帶到幾多增量貢獻？呢啲只係規劃假設，唔係因果估算。你會將預算用喺邊個方案？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A corrected share and a rule
+  title_zh: 修正比例，加上规则
+  title_zh_hk: 修正比例，加上規則
+  step1_en: >-
+    Keyboard share corrected: 10% → 4%
+  step1_zh: 键盘比例更正：10% → 4%
+  step1_zh_hk: 鍵盤比例更正：10% → 4%
+  step2_en: No paid traffic into a known blocker
+  step2_zh: 已知阻断问题，不得花钱引流
+  step2_zh_hk: 已知阻斷問題，不得花錢引流
+  step3_en: Full repair still needs testing
+  step3_zh: 全面修复仍需测试
+  step3_zh_hk: 全面修正仍需測試
+  s1_en: >-
+    The analyst corrects the estimated keyboard share from 10 percent to 4 percent, with everything else
+    unchanged.
+  s1_zh: 分析员把键盘操作的估计比例，从百分之十更正为百分之四，其他条件不变。
+  s1_zh_hk: 分析員將鍵盤操作嘅估計比例，由百分之十更正做百分之四，其他條件唔變。
+  s2_en: >-
+    The store also documents its fictional launch rule: do not buy traffic for a customer journey with
+    a known, reproducible blocker in a supported input route.
+  s2_zh: 商家也写明了虚构的上线规则：如果购物流程在任何一种受支持的输入方式中，有已知而且可以复现的阻断问题，就不能花钱引流。
+  s2_zh_hk: 商戶亦寫明咗虛構嘅上線規則：如果購物流程喺任何一種支援嘅輸入方式入面，有已知而且可以重現嘅阻斷問題，就唔可以使錢引流。
+  s3_en: >-
+    The full repair removes the reproduced blocker, but it still needs regression and user testing.
+  s3_zh: 全面修复可以消除这个已复现的问题，但仍然需要做回归测试和用户测试。
+  s3_zh_hk: 全面修正可以消除呢個已經重現嘅問題，但仍然要做回歸測試同用戶測試。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: At 4%, what now?
+  title_zh: 只有 4%，怎么办？
+  title_zh_hk: 只有 4%，點算？
+  en: >-
+    At 4 percent, which option looks better on incremental contribution alone? At what keyboard share
+    does repair break even? And how should the launch rule affect the decision? Pause and vote.
+  zh: >-
+    如果键盘操作只占百分之四，单看增量贡献，哪个方案比较好？键盘比例要达到多少，修复才能收支平衡？上线规则又应该怎样影响你的决定？请暂停，投个票。
+  zh_hk: 如果鍵盤操作只佔百分之四，淨係睇增量貢獻，邊個方案好啲？鍵盤比例要去到幾多，修正先至收支平衡？上線規則又應該點樣影響你嘅決定？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: >-
+    At 10%: repair leads
+  title_zh: 10% 时：修复领先
+  title_zh_hk: 10% 時：修正領先
+  step1_en: >-
+    Current: 100 + 1,800 orders = 19%
+  step1_zh: 现况：100 + 1,800 单 = 19%
+  step1_zh_hk: 現況：100 + 1,800 單 = 19%
+  step2_en: >-
+    Repair: +400 orders, net HK$9,000
+  step2_zh: 修复：多 400 单，净增 HK$9,000
+  step2_zh_hk: 修正：多 400 單，淨增 HK$9,000
+  step3_en: >-
+    Ads: +342 orders, net HK$6,390
+  step3_zh: 广告：多 342 单，净增 HK$6,390
+  step3_zh_hk: 廣告：多 342 單，淨增 HK$6,390
+  s1_en: >-
+    At 10 percent keyboard use, the current site completes 100 keyboard orders and 1,800 pointer orders
+    out of 10,000: 19 percent in total.
+  s1_zh: 键盘操作占百分之十时，一万次访问中，现有网站通过键盘完成一百张订单，通过指针设备完成一千八百张，整体完成率是百分之十九。
+  s1_zh_hk: 鍵盤操作佔百分之十嗰陣，一萬次瀏覽入面，現有網站用鍵盤完成一百張訂單，用滑鼠完成一千八百張，整體完成率係百分之十九。
+  s2_en: >-
+    Repair adds 1,000 times 40 percentage points, which is 400 orders and 18,000 dollars of contribution;
+    after the 9,000-dollar cost, the net gain is 9,000.
+  s2_zh: 修复会增加一千乘以四十个百分点，即四百张订单，带来一万八千元贡献；扣除九千元成本后，净增九千元。
+  s2_zh_hk: 修正會增加一千乘四十個百分點，即係四百張訂單，帶嚟一萬八千蚊貢獻；扣除九千蚊成本之後，淨增九千蚊。
+  s3_en: >-
+    Ads add 1,800 times 19 percent, which is 342 orders, so the net gain is 6,390 dollars. Repair leads
+    by 2,610 dollars.
+  s3_zh: 投放广告会增加一千八百乘以百分之十九，即三百四十二张订单，净增六千三百九十元。修复领先两千六百一十元。
+  s3_zh_hk: 落廣告會增加一千八百乘百分之十九，即係三百四十二張訂單，淨增六千三百九十蚊。修正領先兩千六百一十蚊。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: >-
+    At 4%: ads win, the rule says no
+  title_zh: 4% 时：广告赢数字，不过规则
+  title_zh_hk: 4% 時：廣告贏數字，不過規則
+  step1_en: >-
+    Ads: +352.8 orders, net HK$6,876
+  step1_zh: 广告：多 352.8 单，净增 HK$6,876
+  step1_zh_hk: 廣告：多 352.8 單，淨增 HK$6,876
+  step2_en: >-
+    Repair: +160 orders, net −HK$1,800
+  step2_zh: 修复：多 160 单，净减 HK$1,800
+  step2_zh_hk: 修正：多 160 單，淨減 HK$1,800
+  step3_en: >-
+    Break-even keyboard share: 5%
+  step3_zh: 收支平衡的键盘比例：5%
+  step3_zh_hk: 收支平衡的鍵盤比例：5%
+  s1_en: >-
+    At 4 percent, current completion is 4 percent of 10 plus 96 percent of 20, which is 19.6 percent.
+    Ads add 352.8 expected orders and 6,876 dollars net.
+  s1_zh: >-
+    键盘只占百分之四时，现有完成率是百分之四乘百分之十，加百分之九十六乘百分之二十，等于百分之十九点六。广告预计多带来三百五十二点八张订单，净增六千八百七十六元。
+  s1_zh_hk: >-
+    鍵盤只佔百分之四嗰陣，現有完成率係百分之四乘百分之十，加百分之九十六乘百分之二十，即係百分之十九點六。廣告預計多帶三百五十二點八張訂單，淨增六千八百七十六蚊。
+  s2_en: Repair adds 160 orders and loses 1,800 dollars this month.
+  s2_zh: 修复只多出一百六十张订单，本月净减一千八百元。
+  s2_zh_hk: 修正只係多咗一百六十張訂單，今個月淨減一千八百蚊。
+  s3_en: >-
+    Repair breaks even at 9,000 divided by 10,000 times 40 percent times 45 dollars, which is a 5 percent
+    keyboard share.
+  s3_zh: 收支平衡点是九千除以一万乘百分之四十再乘四十五元，即键盘比例要达到百分之五。
+  s3_zh_hk: 收支平衡點係九千除以一萬乘百分之四十再乘四十五蚊，即係鍵盤比例要去到百分之五。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: The campaign stays on hold
+  title_zh: 广告仍需暂缓
+  title_zh_hk: 廣告仍需暫緩
+  en: >-
+    The launch rule still excludes the ads. If fixing the blocker now is required, repair with an explicit
+    1,800-dollar modelled shortfall; otherwise hold the campaign, price a narrower fix and retest before
+    spending.
+  zh: >-
+    上线规则仍然不允许投放广告。如果必须现在解决这个问题，可以修复，但要明确记录模型估算的一千八百元缺口；否则就先暂停广告，估算局部修复的成本，重新测试后再花钱。
+  zh_hk: >-
+    上線規則仍然唔准落廣告。如果一定要而家解決呢個問題，可以修正，但要清楚記錄模型估算嘅一千八百蚊缺口；否則就先暫停廣告，估算局部修正嘅成本，重新測試之後先使錢。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Can every buyer check out?
+  title_zh: 每位顾客都能结账吗？
+  title_zh_hk: 每位顧客都能結賬嗎？
+  q1_en: Business case ≠ launch rule
+  q1_zh: 商业效益 ≠ 上线规则
+  q1_zh_hk: 商業效益 ≠ 上線規則
+  q2_en: A projection is not a compliance finding
+  q2_zh: 模型预测不是合规结论
+  q2_zh_hk: 模型預測不是合規結論
+  s1_en: >-
+    More traffic only helps visitors who can actually complete the journey; count completions route by
+    route.
+  s1_zh: 增加流量，只对真正能完成购物流程的访客有用；要按操作方式逐一计算完成数。
+  s1_zh_hk: 增加流量，只係對真係完成到購物流程嘅訪客有用；要按操作方式逐一計完成數。
+  s2_en: Do not convert the projection into a compliance finding.
+  s2_zh: 不要把模型预测当成合规结论。
+  s2_zh_hk: 唔好將模型預測當成合規結論。
+  s3_en: >-
+    Pantry Bridge, its traffic and all rates are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: Pantry Bridge、流量和所有比率都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: Pantry Bridge、流量同所有比率都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

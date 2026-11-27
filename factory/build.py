@@ -224,6 +224,16 @@ def _attach_log(out_dir: Path, lesson_id: str, root: Path | None = None) -> Path
     return lesson_log
 
 
+def narration_word_times(audio_root: Path, spoken_lang: str, beat_id: str) -> list:
+    """Word starts for one beat, from the spoken MP3.
+
+    The padded copy that gets muxed has no sidecar. Count landings need
+    these starts, and they still line up: the pad is silence after the speech.
+    """
+    found = load_word_times(audio_root / spoken_lang / f"{beat_id}.mp3")
+    return list(found) if found else []
+
+
 def pad_audio(src: Path, seconds: float, dest: Path) -> Path:
     dest.parent.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_name(f"{dest.stem}.{os.getpid()}.tmp.mp3")
@@ -898,7 +908,7 @@ def build(
             if str(beat.get("visual") or "") == "animated":
                 from anim import anim_cache_dir, animated_clip_key, render_animated_clip
 
-                spoken_words = load_word_times(audio) or []
+                spoken_words = narration_word_times(audio_root, audio_lang, str(beat["id"]))
                 cache = anim_cache_dir(out_dir, lesson)
                 clip = clip_dir / f"{i:02d}_{beat['id']}.mp4"
                 clip_key = animated_clip_key(

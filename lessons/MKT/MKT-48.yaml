@@ -1,0 +1,276 @@
+id: MKT-48
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Fast dispatch. Here by which day?
+title_zh: 很快发货，究竟哪天送到？
+title_zh_hk: 很快出貨，究竟哪天送到？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-48
+  kicker_en: MKT-48
+  kicker_zh: MKT-48
+  kicker_zh_hk: MKT-48
+  title_en: Fast dispatch. Here by which day?
+  title_zh: 很快发货，究竟哪天送到？
+  title_zh_hk: 很快出貨，究竟哪天送到？
+  image: art/fast-enough-for-when-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A Hong Kong Consumer Council trial of food-ordering services compared displayed delivery estimates
+    with actual arrivals. Dispatch and delivery are different events. Now you write the delivery message
+    for a fictional Hong Kong household-goods shop.
+  zh: >-
+    香港消费者委员会测试外卖平台时，比较了页面显示的预计送达时间和实际送达时间。发货和送达是两回事。现在，你为香港一家虚构的家居用品店撰写送货信息。
+  zh_hk: 香港消費者委員會測試外賣平台嗰陣，比較咗頁面顯示嘅預計送達時間同實際送達時間。出貨同送達係兩回事。而家，你為香港一間虛構嘅家品店寫送貨訊息。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: When 100 Tuesday orders arrived
+  title_zh: 100 张周二订单何时送到
+  title_zh_hk: 100 張星期二訂單何時送到
+  row1_en: By Wednesday
+  row1_zh: 周三或之前
+  row1_zh_hk: 星期三或之前
+  row2_en: On Thursday
+  row2_zh: 周四当天
+  row2_zh_hk: 星期四當日
+  row3_en: After Thursday
+  row3_zh: 周四之后
+  row3_zh_hk: 星期四之後
+  col1_en: Count
+  col1_zh: 数量
+  col1_zh_hk: 數量
+  col2_en: Share
+  col2_zh: 比例
+  col2_zh_hk: 比例
+  c11: '65'
+  c12: 65%
+  c21: '30'
+  c22: 30%
+  c31: '5'
+  c32: 5%
+  footer_en: >-
+    Rule: ≥90% arrive by the stated day
+  footer_zh: 规则：≥90% 在所写日期前送到
+  footer_zh_hk: 規則：≥90% 在所寫日期前送到
+  s1_en: >-
+    The shop sells the same desk lamp from the same stock, carrier and price. For Tuesday morning orders,
+    card S says Dispatches by Wednesday; card A says Estimated arrival by Thursday. Neither guarantees
+    a date or changes customer rights.
+  s1_zh: >-
+    这家店卖同一款台灯，库存、快递公司和价格都相同。对周二上午的订单，S 卡写着周三前发货，A 卡写着预计周四前送达。两张卡都不保证送达日期，也不改变顾客的权利。
+  s1_zh_hk: >-
+    呢間店賣同一款枱燈，存貨、速遞公司同價錢都一樣。對星期二朝早嘅訂單，S 卡寫住星期三前出貨，A 卡寫住預計星期四前送達。兩張卡都唔保證送達日期，亦唔改變顧客嘅權利。
+  s2_en: >-
+    A matched cohort of 100 comparable recent Tuesday orders was all dispatched by Wednesday. 65 arrived
+    by Wednesday, 30 on Thursday and 5 after Thursday.
+  s2_zh: 最近一百张可比较的周二订单，全部在周三前发货。其中六十五张在周三或之前送到，三十张在周四送到，五张在周四之后才送到。
+  s2_zh_hk: 最近一百張可以比較嘅星期二訂單，全部喺星期三前出貨。當中六十五張喺星期三或之前送到，三十張喺星期四送到，五張喺星期四之後先送到。
+  s3_en: >-
+    The manager will not publish a date unless at least 90 percent of comparable recent shipments reached
+    customers by it. That is the shop's classroom rule, not a legal standard, and the pilot uses fixed
+    synthetic records.
+  s3_zh: 经理规定，只有至少百分之九十可比较的近期货件在那天前送到，才会公布这个日期。这是店铺在本题中的规则，不是法律标准；试验只用固定的模拟记录。
+  s3_zh_hk: >-
+    經理規定，最少要有百分之九十可以比較嘅近期貨件喺嗰日之前送到，先會公佈呢個日期。呢個係店舖喺本題嘅規則，唔係法律標準；試驗只係用固定嘅模擬記錄。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: S or A first?
+  title_zh: 先测 S 还是 A？
+  title_zh_hk: 先測 S 還是 A？
+  en: >-
+    Which card would you test first? Compute how many orders arrive by Thursday, and explain why dispatching
+    by Wednesday does not establish a Wednesday arrival. Pause and vote.
+  zh: 你会先测试哪张卡？算一算有多少张订单在周四前送到，并解释为什么周三前发货，不代表周三就能送到。请暂停，投个票。
+  zh_hk: 你會先測試邊張卡？計吓有幾多張訂單喺星期四前送到，再解釋點解星期三前出貨，唔代表星期三就送到。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: What shoppers read, and later
+  title_zh: 顾客怎么理解，截单后呢
+  title_zh_hk: 顧客怎樣理解，截單後呢
+  step1_en: >-
+    S: 24 of 40 expected Wednesday arrival
+  step1_zh: S：40 人中 24 人以为周三送到
+  step1_zh_hk: S：40 人中 24 人以為星期三送到
+  step2_en: >-
+    A: 35 of 40 saw Thursday as an estimate
+  step2_zh: A：40 人中 35 人明白是估计
+  step2_zh_hk: A：40 人中 35 人明白是估計
+  step3_en: >-
+    After cutoff: 28 Thu, 11 Fri, 1 later
+  step3_zh: 截单后：周四 28，周五 11，更晚 1
+  step3_zh_hk: 截單後：週四 28、週五 11、更遲 1
+  s1_en: >-
+    Two independent sets of 40 mock shoppers saw one card each. On S, 24 understood it to mean the lamp
+    would arrive by Wednesday.
+  s1_zh: 两组各四十名模拟顾客，各看一张卡。看 S 卡的人中，有二十四人以为台灯会在周三前送到。
+  s1_zh_hk: 兩組各四十個模擬顧客，每組睇一張卡。睇 S 卡嘅人入面，有二十四個以為枱燈會喺星期三前送到。
+  s2_en: >-
+    On A, 35 understood that Thursday was an arrival estimate, not a guarantee. These are different response
+    categories, not a percentage improvement.
+  s2_zh: 看 A 卡的人中，有三十五人明白周四只是预计送达，不是保证。这两个数字是不同类别的回答，不能当成理解程度提升了多少。
+  s2_zh_hk: 睇 A 卡嘅人入面，有三十五個明白星期四只係預計送達，唔係保證。呢兩個數字係唔同類別嘅回答，唔可以當成理解程度提升咗幾多。
+  s3_en: >-
+    The shop also checked 40 comparable orders placed after Tuesday's cutoff: 28 reached buyers by Thursday,
+    11 on Friday and one later. Staff can show different estimates based on the cutoff.
+  s3_zh: 店铺也查了四十张在周二截止时间后下的可比较订单：二十八张在周四前送到，十一张在周五送到，一张更晚。员工可以按截止时间显示不同的预计日期。
+  s3_zh_hk: >-
+    店舖亦查咗四十張喺星期二截單之後落嘅可以比較嘅訂單：二十八張喺星期四前送到，十一張喺星期五送到，一張更遲。職員可以按截單時間顯示唔同嘅預計日期。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Before and after the cutoff?
+  title_zh: 截单前后显示什么？
+  title_zh_hk: 截單前後顯示甚麼？
+  en: >-
+    What would you display before and after the cutoff? Compute each supported arrival rate, and explain
+    how you would verify shoppers' interpretation before launching the revised wording. Pause and vote.
+  zh: 截止时间前后，你会分别显示什么？算出有数据支持的送达比例，并说明在推出新写法之前，你会怎样核实顾客的理解。请暂停，投个票。
+  zh_hk: 截單前後，你會分別顯示啲咩？計出有數據支持嘅送達比例，再講吓推出新寫法之前，你會點樣核實顧客點理解。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: A fast step can mislead
+  title_zh: 发货快也会误导
+  title_zh_hk: 出貨快也會誤導
+  step1_en: >-
+    Dispatched by Wed: 100 · arrived: 65%
+  step1_zh: 周三前发货 100 张 · 送到 65%
+  step1_zh_hk: 星期三前出貨 100 張 · 送到 65%
+  step2_en: >-
+    By Thursday: 65 + 30 = 95%, passes 90%
+  step2_zh: 周四前：65 + 30 = 95%，过 90%
+  step2_zh_hk: 星期四前：65 + 30 = 95%，過 90%
+  step3_en: >-
+    S: 24/40 = 60% inferred Wednesday
+  step3_zh: S：24/40 = 60% 以为周三到
+  step3_zh_hk: S：24/40 = 60% 以為星期三到
+  s1_en: >-
+    All 100 early orders were dispatched by Wednesday, but only 65 percent actually arrived by then.
+  s1_zh: 这一百张订单全部在周三前发货，但只有百分之六十五在周三前真正送到。
+  s1_zh_hk: 呢一百張訂單全部喺星期三前出貨，但只有百分之六十五喺星期三前真係送到。
+  s2_en: >-
+    By Thursday, 65 plus 30, which is 95, arrived: 95 percent, clearing the 90 percent rule. So test card
+    A first; it clears the threshold and names arrival directly.
+  s2_zh: 到周四，六十五加三十，共九十五张送到，即百分之九十五，达到百分之九十的规则。所以应先测试 A 卡：它达到门槛，也直接说明送达时间。
+  s2_zh_hk: 到星期四，六十五加三十，總共九十五張送到，即係百分之九十五，達到百分之九十嘅規則。所以應該先測試 A 卡：佢過到門檻，亦直接講明送達時間。
+  s3_en: >-
+    S states a dispatch fact, but 24 of 40, or 60 percent, of its viewers inferred a Wednesday arrival.
+    Do not imply customers can rely on that day.
+  s3_zh: S 卡说的是发货事实，但看过的人中，四十人有二十四人，即百分之六十，以为周三会送到。不应暗示顾客可以指望那一天。
+  s3_zh_hk: S 卡講嘅係出貨事實，但睇過嘅人入面，四十個有二十四個，即係百分之六十，以為星期三會送到。唔應該暗示顧客可以靠嗰一日。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Date the right population
+  title_zh: 按对的订单群组定日期
+  title_zh_hk: 按對的訂單群組定日期
+  step1_en: >-
+    After cutoff, Thursday: 28/40 = 70%
+  step1_zh: 截单后周四：28/40 = 70%
+  step1_zh_hk: 截單後星期四：28/40 = 70%
+  step2_en: >-
+    Friday: (28 + 11)/40 = 97.5%
+  step2_zh: 周五：(28 + 11)/40 = 97.5%
+  step2_zh_hk: 星期五：(28 + 11)/40 = 97.5%
+  step3_en: >-
+    Before cutoff: Thursday · after: Friday
+  step3_zh: 截单前：周四 · 截单后：周五
+  step3_zh_hk: 截單前：星期四 · 截單後：星期五
+  s1_en: >-
+    After the cutoff, Thursday coverage is 28 out of 40, which is 70 percent, below the rule.
+  s1_zh: 截止时间后下的订单，周四前送到的是四十张中的二十八张，即百分之七十，没有达到规则。
+  s1_zh_hk: 截單之後落嘅訂單，星期四前送到嘅係四十張入面嘅二十八張，即係百分之七十，未達到規則。
+  s2_en: Friday coverage is 28 plus 11, out of 40, which is 97.5 percent.
+  s2_zh: 周五前送到的是二十八加十一，除以四十，等于百分之九十七点五。
+  s2_zh_hk: 星期五前送到嘅係二十八加十一，除以四十，即係百分之九十七點五。
+  s3_en: >-
+    So show Thursday before the cutoff and Friday after it, clearly marked as estimates. A historical
+    result does not guarantee the next shipment; pause the date if the cohort or fulfilment calendar changes.
+  s3_zh: 所以截止时间前显示周四，截止后显示周五，并清楚标明是预计日期。过去的结果不能保证下一张订单；如果订单群组或配送日程有变，就要暂停显示日期。
+  s3_zh_hk: 所以截單前顯示星期四，截單後顯示星期五，仲要清楚標明係預計日期。以往嘅結果保證唔到下一張單；如果訂單群組或者配送日程有變，就要暫停顯示日期。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Ask comparable questions next
+  title_zh: 下次问可比较的问题
+  title_zh_hk: 下次問可比較的問題
+  en: >-
+    Next time, test both versions with the same question about expected arrival and whether it is certain.
+    The 35 of 40 for A, or 87.5 percent, describes only its own measured interpretation. Keep dispatch
+    as secondary status, not the lead promise.
+  zh: >-
+    下次要用同一个问题测试两个版本：问顾客预计哪天送到，以及这是否确定。A 卡的四十人中有三十五人，即百分之八十七点五，只反映它自己所衡量的理解。发货状态应放在次要位置，不能当成主要承诺。
+  zh_hk: >-
+    下次要用同一條問題測試兩個版本：問顧客預計邊日送到，同埋係咪一定。A 卡四十人入面有三十五人，即係百分之八十七點五，只反映佢自己量度嘅理解。出貨狀態應該放喺次要位置，唔可以當成主要承諾。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Dispatch ≠ arrival
+  title_zh: 发货 ≠ 送达
+  title_zh_hk: 出貨 ≠ 送達
+  q1_en: Publish a date the records support
+  q1_zh: 只公布有记录支持的日期
+  q1_zh_hk: 只公佈有記錄支持的日期
+  q2_en: Check comprehension and missed dates
+  q2_zh: 理解程度和延误都要查
+  q2_zh_hk: 理解程度和延誤都要查
+  s1_en: >-
+    Check both display comprehension and actual missed estimates; neither alone tells you whether people
+    made good decisions.
+  s1_zh: 既要检查顾客是否看得懂，也要检查实际有多少预计日期落空；单看其中一项，都不能判断顾客是否作了好的决定。
+  s1_zh_hk: 既要檢查顧客睇唔睇得明，亦要檢查實際有幾多預計日期落空；淨係睇其中一樣，都判斷唔到顧客係咪作咗好嘅決定。
+  s2_en: >-
+    An estimate is not a guarantee, and it does not change customer rights.
+  s2_zh: 预计日期不是保证，也不改变顾客的权利。
+  s2_zh_hk: 預計日期唔係保證，亦唔改變顧客嘅權利。
+  s3_en: >-
+    The shop, lamp, records and test results are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 商店、台灯、记录和测试结果都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 商店、枱燈、記錄同測試結果都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

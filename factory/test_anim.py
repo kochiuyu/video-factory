@@ -2137,7 +2137,7 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in thirteen["beats"]).lower())
         recap13 = next(beat for beat in thirteen["beats"] if beat["id"] == "takeaway")
         self.assertEqual(step_count(recap13), 4)
-        self.assertEqual(labels_for(recap13, "en")["title"], "Tens, ones, and one hundred")
+        self.assertEqual(labels_for(recap13, "en")["title"], "Tens and ones")
         self.assertEqual(labels_for(recap13, "zh")["title"], "十、个和一百")
         self.assertEqual(labels_for(recap13, "zh_hk")["title"], "十、個同一百")
         self.assertEqual(

@@ -1,0 +1,285 @@
+id: FIN-22
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Commit now. Pay for the option to wait?
+title_zh: 现在就投入。还是花钱买等待的选择权？
+title_zh_hk: 現在就投入。還是花錢買等待的選擇權？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-22
+  kicker_en: FIN-22
+  kicker_zh: FIN-22
+  kicker_zh_hk: FIN-22
+  title_en: Commit now. Pay for the option to wait?
+  title_zh: 现在就投入。还是花钱买等待的选择权？
+  title_zh_hk: 現在就投入。還是花錢買等待的選擇權？
+  image: art/pay-for-time-to-decide-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Investment research distinguishes committing money now from keeping the right to invest after learning
+    more. That flexibility is not free: a reservation can cost money and expire before uncertainty is
+    resolved. Now you manage a fictional display-making workshop.
+  zh: >-
+    投资研究会区分两件事：现在就把钱投进去，和保留一份等了解更多再投资的权利。这种弹性不是免费的：预留要花钱，而且可能在不确定性消除之前就到期。现在，你管理一家虚构的展示制作工场。
+  zh_hk: >-
+    投資研究會分開兩件事：而家就落錢，同保留一個等知多啲先投資嘅權利。呢種彈性唔係免費嘅：預留要使錢，仲可能喺不確定性解決之前就到期。而家，你管理一間虛構嘅展覽製作工場。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Day-180 cash if installed
+  title_zh: 第 180 天的现金收款
+  title_zh_hk: 第 180 天的現金收款
+  row1_en: High demand
+  row1_zh: 高需求
+  row1_zh_hk: 高需求
+  row2_en: Low demand
+  row2_zh: 低需求
+  row2_zh_hk: 低需求
+  col1_en: Probability
+  col1_zh: 概率
+  col1_zh_hk: 或然率
+  col2_en: Cash received
+  col2_zh: 现金收款
+  col2_zh_hk: 現金收款
+  col3_en: Net of HK$100,000
+  col3_zh: 扣除 HK$100,000 后
+  col3_zh_hk: 扣除 HK$100,000 後
+  c11: 50%
+  c12: 160,000
+  c13: 60,000
+  c21: 50%
+  c22: 60,000
+  c23: −40,000
+  footer_en: Buy now, or HK$10,000 fee by day 30
+  footer_zh: 现在买，或付 1 万预留到第 30 天
+  footer_zh_hk: 現在買，或付 1 萬預留至第 30 天
+  s1_en: >-
+    The workshop is considering a specialist finishing unit for one seasonal contract. It can afford either
+    route without borrowing, or it can decline and earn zero extra cash.
+  s1_zh: 这家工场在考虑为一份季节性合同添置一台专用后期加工设备。两条路它都付得起，不用借钱；也可以放弃，增量现金就是零。
+  s1_zh_hk: 呢間工場考慮為一份季節性合約添置一部專門後期加工設備。兩條路佢都俾得起，唔使借錢；亦可以放棄，增量現金就係零。
+  s2_en: >-
+    Today, on day zero, it can commit 100,000 dollars to the unit, or pay a 10,000-dollar non-refundable
+    reservation fee. The fee gives the right, but not the obligation, to pay a further 100,000 by day
+    30. The fee is not credited against that payment.
+  s2_zh: >-
+    今天是第零天，可以投入十万港元买下设备，也可以付一万港元不可退还的预留费。这笔费用给你权利而不是义务：在第三十天之前再付十万港元。预留费不能抵扣这笔付款。
+  s2_zh_hk: >-
+    今日係第零日，可以落十萬港元買部設備，亦可以俾一萬港元唔退嘅預留費。呢筆費用俾你權利，唔係義務：喺第三十日之前再俾十萬港元。預留費唔可以抵嗰筆付款。
+  s3_en: >-
+    A perfectly informative demand signal arrives on day 20, with high and low demand each 50 percent
+    likely. Day-180 cash is 160,000 if demand is high and 60,000 if low, before equipment and fee payments.
+    Ignore interest; rank routes by expected incremental net cash.
+  s3_zh: >-
+    完全揭示需求的信号在第二十天到达，高、低需求的概率各占一半。第一百八十天的收款，高需求十六万，低需求六万，未扣设备款和预留费。不计利息，按期望增量净现金排序。
+  s3_zh_hk: >-
+    完全揭示需求嘅信號喺第二十日到，高、低需求嘅機率一半半。第一百八十日嘅收款，高需求十六萬，低需求六萬，未扣設備款同預留費。唔計利息，按期望增量淨現金排先後。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Commit, reserve or decline?
+  title_zh: 投入、预留，还是放弃？
+  title_zh_hk: 投入、預留，還是放棄？
+  en: >-
+    Would you commit now, buy the reservation right, or decline the expansion? Compare expected net cash,
+    and state what you would do after each demand signal. Pause and vote.
+  zh: 你会现在投入、买下预留权，还是放弃扩张？请比较期望净现金，并说明收到每一种需求信号之后你会怎么做。请暂停，投个票。
+  zh_hk: 你會而家投入、買預留權，定係放棄擴張？比較吓期望淨現金，再講吓收到每一種需求信號之後你會點做。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The signal may come too late
+  title_zh: 信号可能来得太晚
+  title_zh_hk: 信號可能來得太遲
+  step1_en: >-
+    Signal by day 20: 25% · by day 40: 75%
+  step1_zh: 第 20 天到：25% · 第 40 天到：75%
+  step1_zh_hk: 第 20 天到：25% · 第 40 天到：75%
+  step2_en: Reservation still expires on day 30
+  step2_zh: 预留权仍在第 30 天到期
+  step2_zh_hk: 預留權仍在第 30 天到期
+  step3_en: >-
+    No signal: pay blind or let it expire
+  step3_zh: 没信号：盲目付款或任其到期
+  step3_zh_hk: 沒有信號：盲目付款或任其到期
+  s1_en: >-
+    Still on day zero, the customer corrects the timetable. There is now a 25 percent chance the signal
+    arrives on day 20, and a 75 percent chance on day 40. Timing is independent of demand, so silence
+    is not bad news.
+  s1_zh: >-
+    仍然是第零天，客户更正了时间表：信号在第二十天到达的概率只有百分之二十五，在第四十天到达的概率是百分之七十五。信号时间和需求无关，所以没有消息不代表坏消息。
+  s1_zh_hk: >-
+    仲係第零日，客改咗時間表：信號喺第二十日到嘅機率得百分之二十五，喺第四十日到嘅機率係百分之七十五。信號幾時到同需求無關，所以冇消息唔代表壞消息。
+  s2_en: The reservation still expires on day 30, with no extension or refund.
+  s2_zh: 预留权仍然在第三十天到期，不能延期，也不退款。
+  s2_zh_hk: 預留權仍然喺第三十日到期，唔可以延期，亦唔退錢。
+  s3_en: >-
+    If no signal has arrived by then, you must pay the 100,000 without knowing demand, or let the right
+    expire. A day-40 signal is too late for this season's slot.
+  s3_zh: 如果到时还没收到信号，你就要在不知道需求的情况下付十万港元，或者让权利作废。第四十天的信号已经赶不上这一季的档期。
+  s3_zh_hk: 如果到時仲未有信號，你就要喺唔知需求嘅情況下俾十萬港元，或者由個權利失效。第四十日嘅信號已經趕唔切今季嘅檔期。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which route now?
+  title_zh: 现在选哪条路？
+  title_zh_hk: 現在選哪條路？
+  en: >-
+    With the revised signal timing, which route would you choose today? Show the reservation policy if
+    no signal arrives before expiry, and calculate the largest reservation fee that would match committing
+    now. Pause and vote.
+  zh: 按修订后的信号时间，你今天会选哪条路？请说明到期前没有信号时预留方案怎么做，并算出与现在投入打平的最高预留费。请暂停，投个票。
+  zh_hk: 按修訂咗嘅信號時間，你今日會揀邊條路？講吓到期前冇信號嘅話預留方案點做，再計出同而家投入打和嘅最高預留費。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: >-
+    Round 1: compare whole policies
+  title_zh: 第 1 轮：比较整套方案
+  title_zh_hk: 第 1 輪：比較整套方案
+  step1_en: >-
+    Commit: (60,000 − 40,000) ÷ 2 = 10,000
+  step1_zh: 投入：(60,000 − 40,000) ÷ 2 = 10,000
+  step1_zh_hk: 投入：(60,000 − 40,000) ÷ 2 = 10,000
+  step2_en: >-
+    Reserve: (50,000 − 10,000) ÷ 2 = 20,000
+  step2_zh: 预留：(50,000 − 10,000) ÷ 2 = 20,000
+  step2_zh_hk: 預留：(50,000 − 10,000) ÷ 2 = 20,000
+  step3_en: >-
+    Fee that matches committing: 20,000
+  step3_zh: 与投入打平的费用：20,000
+  step3_zh_hk: 與投入打和的費用：20,000
+  s1_en: >-
+    Work backward from the later choice. With a timely signal, exercise when demand is high and let the
+    right expire when it is low. Committing now gives 60,000 or minus 40,000, an expected 10,000 dollars.
+  s1_zh: 从较后的那个决定倒推。信号来得及时，高需求就行使，低需求就让权利到期。现在投入，结果是六万或负四万，期望是一万港元。
+  s1_zh_hk: 由較後嗰個決定倒推。信號及時嘅話，高需求就行使，低需求就由權利失效。而家投入，結果係六萬或者負四萬，期望係一萬港元。
+  s2_en: >-
+    Reserving gives 50,000 if demand is high, after both payments, and minus 10,000 if low, after only
+    the fee. Its expected net cash is 20,000, so reserving leads under the stated objective.
+  s2_zh: 预留在高需求时付完两笔后得五万，低需求时只付了费用，得负一万。期望净现金是两万，所以按设定的目标，预留领先。
+  s2_zh_hk: 預留喺高需求時俾完兩筆之後得五萬，低需求時淨係俾咗費用，得負一萬。期望淨現金係兩萬，所以按設定嘅目標，預留領先。
+  s3_en: >-
+    The later exercise decision is worth an expected 30,000 before the fee. So the largest fee that still
+    matches committing now is 30,000 minus 10,000, or 20,000 dollars.
+  s3_zh: 较后那个行使决定，扣费前的期望所得是三万。所以，还能和现在投入打平的最高费用，是三万减一万，即两万港元。
+  s3_zh_hk: 較後嗰個行使決定，未扣費前嘅期望所得係三萬。所以，仲可以同而家投入打和嘅最高費用，係三萬減一萬，即係兩萬港元。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: >-
+    Round 2: timely information
+  title_zh: 第 2 轮：信息必须及时
+  title_zh_hk: 第 2 輪：資訊必須及時
+  step1_en: >-
+    No signal by day 30: exercise, +10,000
+  step1_zh: 第 30 天无信号：行使，+10,000
+  step1_zh_hk: 第 30 天沒有信號：行使，+10,000
+  step2_en: >-
+    Reserve: 7,500 + 7,500 − 10,000 = 5,000
+  step2_zh: 预留：7,500 + 7,500 − 10,000 = 5,000
+  step2_zh_hk: 預留：7,500 + 7,500 − 10,000 = 5,000
+  step3_en: Commit now 10,000 · fee cap 5,000
+  step3_zh: 现在投入 10,000 · 费用上限 5,000
+  step3_zh_hk: 現在投入 10,000 · 費用上限 5,000
+  s1_en: >-
+    If no signal has arrived by expiry, exercising has expected cash of 10,000 versus zero. So exercise,
+    and do not subtract the already-paid fee again at day 30.
+  s1_zh: 如果到期时还没有信号，行使的期望现金是一万，不行使是零。所以要行使；第三十天做决定时，不要把已经付掉的费用再扣一次。
+  s1_zh_hk: 如果到期都未有信號，行使嘅期望現金係一萬，唔行使係零。所以要行使；第三十日做決定嗰陣，唔好將已經俾咗嘅費用再扣一次。
+  s2_en: >-
+    Reservation is now 0.25 times 30,000, plus 0.75 times 10,000, minus the 10,000 fee, which is 5,000
+    dollars.
+  s2_zh: 预留现在的期望值是零点二五乘三万，加零点七五乘一万，再减一万预留费，等于五千港元。
+  s2_zh_hk: 預留而家嘅期望值係零點二五乘三萬，加零點七五乘一萬，再減一萬預留費，等於五千港元。
+  s3_en: >-
+    Committing now stays at 10,000, so commit now under the stated criterion. To match it, the fee could
+    be at most 15,000 minus 10,000, or 5,000. That is a model-specific figure, not a fair market quote.
+  s3_zh: 现在投入仍是一万，所以按设定的标准，应该现在投入。要和它打平，预留费最多只能是一万五减一万，即五千。这是本模型里的数字，不是公平的市场报价。
+  s3_zh_hk: >-
+    而家投入仍然係一萬，所以按設定嘅標準，應該而家投入。要同佢打和，預留費最多只可以係一萬五減一萬，即係五千。呢個係呢個模型入面嘅數，唔係公平嘅市場報價。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Check the decision tree
+  title_zh: 核对决策树
+  title_zh_hk: 核對決策樹
+  en: >-
+    Under the revised reservation policy, early-high and early-low each have 12.5 percent probability,
+    and late-high and late-low each 37.5 percent. Net cash is 50,000, minus 10,000, 50,000 and minus 50,000,
+    which averages 5,000. In the late-low branch you paid the fee and the equipment before learning demand
+    was low.
+  zh: >-
+    修订后的预留方案里，早到且高需求、早到且低需求的概率各是百分之十二点五，晚到且高需求、晚到且低需求各是百分之三十七点五。净现金分别是五万、负一万、五万和负五万，加权平均是五千。在晚到且低需求那一支，你在得知需求低之前，已经付了预留费和设备款。
+  zh_hk: >-
+    修訂咗嘅預留方案入面，早到高需求、早到低需求嘅機率各係百分之十二點五，遲到高需求、遲到低需求各係百分之三十七點五。淨現金分別係五萬、負一萬、五萬同負五萬，加權平均係五千。喺遲到又低需求嗰一支，你未知需求低之前，已經俾咗預留費同設備款。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Options need timely information
+  title_zh: 期权要靠及时的信息
+  title_zh_hk: 期權要靠及時的資訊
+  q1_en: A later action must depend on new information
+  q1_zh: 将来的行动要取决于新信息
+  q1_zh_hk: 將來的行動要取決於新資訊
+  q2_en: Check what is learned, when, and the expiry
+  q2_zh: 核对能知道什么、何时知道、何时到期
+  q2_zh_hk: 核對能知道甚麼、何時知道、何時到期
+  s1_en: >-
+    A right is valuable because a future action can depend on new information, not merely because payment
+    happens later. A delayed signal can leave a costly right with little advantage.
+  s1_zh: 一份权利有价值，是因为将来的行动可以取决于新信息，而不只是因为付款晚一点。信号来晚了，一份昂贵的权利可能没多大优势。
+  s1_zh_hk: 一個權利有價值，係因為將來嘅行動可以視乎新資訊，唔只係因為遲啲先俾錢。信號遲到，一個貴嘅權利可能冇乜優勢。
+  s2_en: >-
+    Expected cash is not a guarantee or a complete appraisal; risk preferences, financing, discounting
+    and imperfect signals still matter.
+  s2_zh: 期望现金不是保证，也不是完整的投资评估；风险偏好、融资、折现和不完美的信号都还要考虑。
+  s2_zh_hk: 期望現金唔係保證，亦唔係完整嘅投資評估；風險偏好、融資、折現同唔完美嘅信號都仲要考慮。
+  s3_en: >-
+    The workshop, supplier terms, probabilities and cash amounts are fictional, not market quotes or investment
+    advice. Official scene art is a teaching illustration only.
+  s3_zh: 工场、供应商条款、概率和现金数额都是虚构的，不是市场报价，也不是投资建议。官方场景图只是教学插图。
+  s3_zh_hk: 工場、供應商條款、機率同現金數額都係虛構嘅，唔係市場報價，亦唔係投資建議。官方場景圖只係教學插圖。
+duration_target_s: 196

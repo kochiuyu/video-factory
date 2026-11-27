@@ -1,0 +1,291 @@
+id: FIN-23
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: No price today. No dilution tomorrow?
+title_zh: 今天没有定价。明天就没有股权稀释吗？
+title_zh_hk: 今天沒有定價。明天就沒有股權攤薄嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-23
+  kicker_en: FIN-23
+  kicker_zh: FIN-23
+  kicker_zh_hk: FIN-23
+  title_en: No price today. No dilution tomorrow?
+  title_zh: 今天没有定价。明天就没有股权稀释吗？
+  title_zh_hk: 今天沒有定價。明天就沒有股權攤薄嗎？
+  image: art/unpriced-not-ownership-free-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Startup funding can buy shares now, or create a contractual right to shares later. Regulator education
+    separates a future-equity agreement from current stock, and the contract's share-base definition matters.
+    Now you advise two founders of a fictional Hong Kong software business.
+  zh: >-
+    初创企业融资，可以现在就买股份，也可以签合同、换取将来获得股份的权利。监管机构的投资者教育会把未来股权协议和现有股票分开，合同里怎样定义股份基数也很关键。现在，你要为香港一家虚构软件企业的两位创始人出主意。
+  zh_hk: >-
+    初創企業融資，可以而家就買股份，亦可以簽合約，換將來攞股份嘅權利。監管機構嘅投資者教育會將未來股權協議同現有股票分開，合約點樣定義股份基數都好關鍵。而家，你要幫香港一間虛構軟件企業嘅兩位創辦人出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two HK$500,000 offers
+  title_zh: 两份 50 万港元的出价
+  title_zh_hk: 兩份 50 萬港元的出價
+  row1_en: >-
+    P: priced
+  row1_zh: P：已定价
+  row1_zh_hk: P：已定價
+  row2_en: >-
+    C: future equity
+  row2_zh: C：未来股权
+  row2_zh_hk: C：未來股權
+  col1_en: Timing
+  col1_zh: 到账时间
+  col1_zh_hk: 到賬時間
+  col2_en: Share terms
+  col2_zh: 股份条款
+  col2_zh_hk: 股份條款
+  col3_en: >-
+    Pilot deadline: 5 days
+  col3_zh: 试点截止：5 天
+  col3_zh_hk: 試點截止：5 天
+  c11_en: 10 working days
+  c11_zh: 10 个工作日
+  c11_zh_hk: 10 個工作日
+  c12_en: HK$2.50 per share now
+  c12_zh: 现在每股 HK$2.50
+  c12_zh_hk: 現在每股 HK$2.50
+  c13_en: Misses it
+  c13_zh: 赶不上
+  c13_zh_hk: 趕不上
+  c21_en: 2 working days
+  c21_zh: 2 个工作日
+  c21_zh_hk: 2 個工作日
+  c22_en: Lower of 80% or HK$2 cap
+  c22_zh: 80% 或 HK$2 上限取低
+  c22_zh_hk: 80% 或 HK$2 上限取低
+  c23_en: Meets it
+  c23_zh: 赶得上
+  c23_zh_hk: 趕得上
+  footer_en: Founders own all 1,000,000 shares
+  footer_zh: 创始人持有全部 1,000,000 股
+  footer_zh_hk: 創辦人持有全部 1,000,000 股
+  s1_en: >-
+    The founders jointly own all one million shares and want 500,000 dollars for an optional customer
+    pilot. Operations stay funded without it, so declining or delaying the pilot is feasible.
+  s1_zh: 两位创始人共同持有全部一百万股，想筹五十万港元做一次可选的客户试点。没有这笔钱，现有经营照样有资金，所以放弃或推迟试点都可以。
+  s1_zh_hk: 兩位創辦人一齊持有全部一百萬股，想籌五十萬港元做一次可選嘅客戶試點。冇呢筆錢，現有業務照樣有資金，所以放棄或者押後試點都得。
+  s2_en: >-
+    P buys new shares at 2.50 dollars each but takes ten working days. C pays in two days; no shares are
+    issued now, and it converts at the next qualifying priced round. The pilot booking expires in five
+    days, so only C meets it.
+  s2_zh: >-
+    P按每股二点五港元认购新股，但要十个工作日才交割。C两个工作日就到账，现在不发股，等下一轮合格的定价融资时自动转换。试点档期五个工作日后到期，只有C赶得上。
+  s2_zh_hk: >-
+    P按每股二點五港元認購新股，但要十個工作日先完成交割。C兩個工作日就到賬，而家唔發股，等下一輪合資格嘅定價融資先自動轉換。試點檔期五個工作日後到期，得C趕得切。
+  s3_en: >-
+    C converts at the lower of two prices: 80 percent of the next round's price, or a cap price of two
+    million dollars divided by the one million founder shares. The cap and discount are alternatives,
+    not cumulative. No value for meeting the deadline is supplied.
+  s3_zh: >-
+    C按两个价格中较低的一个转换：下一轮价格的百分之八十，或者两百万港元除以一百万股创始人股份的上限价。上限和折扣二选一，不会叠加。题目没有给出赶上截止日期的价值。
+  s3_zh_hk: >-
+    C按兩個價入面低嗰個轉換：下一輪價格嘅百分之八十，或者兩百萬港元除一百萬股創辦人股份嘅上限價。上限同折扣二揀一，唔會疊加。題目冇講趕上截止日期值幾多。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: P, C, or postpone?
+  title_zh: 选 P、C，还是推迟？
+  title_zh_hk: 選 P、C，還是推遲？
+  en: >-
+    Would you provisionally choose P or C, or postpone the pilot? Explain the timing trade-off, and why
+    no shares issued today does not mean no future dilution. Pause and vote.
+  zh: 你会暂时选P还是C，或者推迟试点？请说明时间上的取舍，以及为什么今天不发股，不等于将来没有股权稀释。请暂停，投个票。
+  zh_hk: 你暫時會揀P定C，定係押後試點？講吓時間上嘅取捨，同埋點解今日唔發股，唔等於將來冇股權攤薄。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A next-round scenario
+  title_zh: 下一轮融资的情景
+  title_zh_hk: 下一輪融資的情景
+  step1_en: >-
+    Later investor: HK$1,000,000 at HK$5
+  step1_zh: 后来的投资者：HK$5 投 HK$1,000,000
+  step1_zh_hk: 後來的投資者：HK$5 投 HK$1,000,000
+  step2_en: C converts just before the new shares
+  step2_zh: C 在新股发行前一刻转换
+  step2_zh_hk: C 在新股發行前一刻轉換
+  step3_en: A scenario, not a committed investor
+  step3_zh: 只是情景，不是已承诺的投资者
+  step3_zh_hk: 只是情景，不是已承諾的投資者
+  s1_en: >-
+    Before choosing, the founders add a scenario: in either route, a later investor would put in one million
+    dollars at 5 dollars per new share.
+  s1_zh: 做决定之前，创始人加了一个情景：无论走哪条路，后来都会有一位投资者按每股五港元投入一百万港元。
+  s1_zh_hk: 揀之前，創辦人加多一個情景：無論行邊條路，之後都會有一位投資者按每股五港元投一百萬港元。
+  s2_en: >-
+    Under C, conversion happens immediately before that new share issue. Under P, the first investor's
+    shares were already issued. The next investor gets the shares bought at 5 dollars in either route.
+  s2_zh: 在C之下，转换紧接在这次发行新股之前；在P之下，第一位投资者的股份早已发行。两条路下，新投资者都按每股五港元拿到相应的股数。
+  s2_zh_hk: 喺C之下，轉換緊貼喺今次發新股之前；喺P之下，第一位投資者嘅股份早就發咗。兩條路下，新投資者都係按每股五港元攞返相應嘅股數。
+  s3_en: >-
+    This is a scenario, not a committed investor or a guaranteed valuation. All other terms and the pilot
+    deadline are unchanged; calculate the two routes separately.
+  s3_zh: 这只是一个情景，不是已承诺的投资者，也不是有保证的估值。其他条款和试点截止日期都不变，两条路要分开算。
+  s3_zh_hk: 呢個只係一個情景，唔係已承諾嘅投資者，亦唔係有保證嘅估值。其他條款同試點截止日期都冇變，兩條路要分開計。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which price, and who owns what?
+  title_zh: 用哪个价？各占多少？
+  title_zh_hk: 用哪個價？各佔多少？
+  en: >-
+    Under the scenario, which conversion price applies to C, and what do the founders own after the new
+    round under each route? Would the faster funding justify the difference for you, given what remains
+    unknown? Pause and vote.
+  zh: 在这个情景下，C适用哪个转换价？新一轮之后，每条路下创始人各持有多少？考虑到还有哪些未知，更快到账值不值得这个差别？请暂停，投个票。
+  zh_hk: 喺呢個情景下，C用邊個轉換價？新一輪之後，每條路下創辦人各持有幾多？諗埋仲有咩未知，快啲到賬值唔值得呢個差別？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: First find the conversion price
+  title_zh: 先找出转换价
+  title_zh_hk: 先找出轉換價
+  step1_en: >-
+    Discount: 0.80 × HK$5 = HK$4
+  step1_zh: 折扣价：0.80 × HK$5 = HK$4
+  step1_zh_hk: 折扣價：0.80 × HK$5 = HK$4
+  step2_en: >-
+    Cap: 2,000,000 ÷ 1,000,000 = HK$2
+  step2_zh: 上限价：2,000,000 ÷ 1,000,000 = HK$2
+  step2_zh_hk: 上限價：2,000,000 ÷ 1,000,000 = HK$2
+  step3_en: C gets 500,000 ÷ 2 = 250,000 shares
+  step3_zh: C 得 500,000 ÷ 2 = 250,000 股
+  step3_zh_hk: C 得 500,000 ÷ 2 = 250,000 股
+  s1_en: The discount price is 0.8 times 5 dollars, or 4 dollars.
+  s1_zh: 折扣价是零点八乘五港元，即四港元。
+  s1_zh_hk: 折扣價係零點八乘五港元，即係四港元。
+  s2_en: >-
+    The cap price is two million divided by one million, or 2 dollars. The lower price, 2 dollars, applies.
+    Do not apply the 20 percent discount again to the cap price.
+  s2_zh: 上限价是两百万除以一百万，即两港元。取较低的两港元。不要把百分之二十的折扣再套到上限价上。
+  s2_zh_hk: 上限價係兩百萬除一百萬，即係兩港元。揀低嗰個，兩港元。唔好將百分之二十嘅折扣再套落上限價度。
+  s3_en: >-
+    So C receives 500,000 divided by 2, or 250,000 shares. The cap limits the conversion price in this
+    contract; it is not a promise of value, nor a cap on the founders' total dilution.
+  s3_zh: 所以C得到五十万除以二，即二十五万股。在这份合同里，上限限制的是转换价，不是对企业价值的承诺，也不是创始人总稀释的上限。
+  s3_zh_hk: 所以C攞到五十萬除二，即係二十五萬股。喺呢份合約入面，上限限制嘅係轉換價，唔係對企業價值嘅承諾，亦唔係創辦人總攤薄嘅上限。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Then build each share table
+  title_zh: 再列出各自的股权表
+  title_zh_hk: 再列出各自的股權表
+  step1_en: >-
+    P: 200,000 now → founders 83.33%
+  step1_zh: P：现在发 200,000 股 → 创始人 83.33%
+  step1_zh_hk: P：現在發 200,000 股 → 創辦人 83.33%
+  step2_en: >-
+    After round: P 71.43% · C 68.97%
+  step2_zh: 新一轮后：P 71.43% · C 68.97%
+  step2_zh_hk: 新一輪後：P 71.43% · C 68.97%
+  step3_en: Gap about 2.46 points
+  step3_zh: 相差约 2.46 个百分点
+  step3_zh_hk: 相差約 2.46 個百分點
+  s1_en: >-
+    P issues 500,000 divided by 2.50, or 200,000 shares now, leaving the founders 83.33 percent before
+    the new round. C's 250,000 conversion shares leave them 80 percent just before new money.
+  s1_zh: P现在发行五十万除以二点五，即二十万股，新一轮之前创始人占百分之八十三点三三。C转换出二十五万股，新资金进来之前，创始人占百分之八十。
+  s1_zh_hk: P而家發五十萬除二點五，即係二十萬股，新一輪之前創辦人佔百分之八十三點三三。C轉換出二十五萬股，新資金入嚟之前，創辦人佔百分之八十。
+  s2_en: >-
+    The later investor gets 200,000 shares either way. P totals 1,400,000 shares, with founders at 71.43
+    percent. C totals 1,450,000, with founders at 68.97 percent.
+  s2_zh: 两条路下，新投资者都拿到二十万股。P的总股数是一百四十万，创始人占百分之七十一点四三；C的总股数是一百四十五万，创始人占百分之六十八点九七。
+  s2_zh_hk: 兩條路下，新投資者都係攞二十萬股。P總共一百四十萬股，創辦人佔百分之七十一點四三；C總共一百四十五萬股，創辦人佔百分之六十八點九七。
+  s3_en: >-
+    The founder difference is about 2.46 percentage points. Equal cash at an equal price buys equal shares,
+    not an equal percentage of different share totals.
+  s3_zh: 创始人的持股差了约二点四六个百分点。同样的钱、同样的价格，买到的是同样的股数，而不是在不同总股数里的同样比例。
+  s3_zh_hk: 創辦人嘅持股差咗大約二點四六個百分點。同樣嘅錢、同樣嘅價，買到嘅係同樣嘅股數，唔係喺唔同總股數入面嘅同樣比例。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Real trade-off, not free money
+  title_zh: 真实的取舍，不是免费融资
+  title_zh_hk: 真實的取捨，不是免費融資
+  en: >-
+    P fixes the price and leaves the founders more ownership here, but misses the pilot. C funds the pilot
+    on time at the cost of more shares. No pilot value or round probability is given, so the case cannot
+    prove the extra dilution is worth it. A C answer should name the missing pilot evidence.
+  zh: >-
+    P锁定了价格，在这个情景下给创始人留下更多股权，但赶不上试点。C能按时为试点出资，代价是多发股份。题目没给试点的价值，也没给下一轮的概率，所以无法证明多出来的稀释值不值得。选C的人，要说清还缺哪些试点证据。
+  zh_hk: >-
+    P鎖定咗價錢，喺呢個情景下幫創辦人留多啲股權，但趕唔切試點。C可以準時為試點出資，代價係多發股份。題目冇俾試點嘅價值，亦冇俾下一輪嘅機率，所以證明唔到多咗嘅攤薄值唔值。揀C嘅人，要講清楚仲欠邊啲試點證據。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Unpriced is not ownership-free
+  title_zh: 没有定价，不等于没有稀释
+  title_zh_hk: 沒有定價，不等於沒有攤薄
+  q1_en: Read the conversion formula and share base
+  q1_zh: 看清转换公式和股份基数
+  q1_zh_hk: 看清轉換公式和股份基數
+  q2_en: Faster cash can cost more shares
+  q2_zh: 更快的钱，可能要多付股份
+  q2_zh_hk: 更快的錢，可能要多付股份
+  s1_en: >-
+    The cap binds when the next price exceeds 2.50 dollars. At a lower price such as 2 dollars, the discount
+    price of 1.60 applies, and C would issue 312,500 shares.
+  s1_zh: 下一轮价格高于二点五港元时，上限才起作用。如果价格更低，例如两港元，就用一点六港元的折扣价，C会转换出三十一万二千五百股。
+  s1_zh_hk: 下一輪價高過二點五港元，上限先會起作用。如果價錢低啲，例如兩港元，就用一點六港元嘅折扣價，C會轉換出三十一萬二千五百股。
+  s2_en: >-
+    This simplified agreement is not a standard SAFE, a loan document or a recommendation to invest; real
+    terms need professional review.
+  s2_zh: 这份简化的协议不是标准的SAFE，不是贷款文件，也不是投资建议；真实条款需要专业人士审阅。
+  s2_zh_hk: 呢份簡化咗嘅協議唔係標準SAFE，唔係貸款文件，亦唔係投資建議；真實條款要專業人士睇過。
+  s3_en: >-
+    The business, founders, investors and prices are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 企业、创始人、投资者和价格都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 企業、創辦人、投資者同價錢都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

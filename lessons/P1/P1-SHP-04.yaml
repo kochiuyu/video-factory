@@ -1,0 +1,111 @@
+# P1-SHP-04. Mirrors MathQuiz path solids / lesson solidnames, "Meet solid shapes".
+# A box is a prism. A can is a cylinder. A pyramid and a cone have a tip. A ball is a sphere.
+# https://github.com/kochiuyu/mathquiz learn-solids.js (solidnames).
+# Speech is for age 6: one short idea per sentence.
+id: P1-SHP-04
+title_en: Solid shapes
+title_zh: 认识立体
+title_zh_hk: 認識立體
+duration_target_s: 70
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: shapes
+  kind: prism
+  seconds: 8
+  title_en: Solid shapes
+  title_zh: 认识立体
+  title_zh_hk: 認識立體
+  s1_en: A shape you can hold.
+  s1_zh: 可以拿起来的形状。
+  s1_zh_hk: 可以攞起嚟嘅形狀。
+
+- id: box
+  visual: animated
+  scene: solid_shape
+  part: pair
+  items: [prism, cylinder]
+  seconds: 14
+  title_en: A box and a can
+  title_zh: 盒子和罐子
+  title_zh_hk: 盒同罐
+  s1_en: A box is a prism.
+  s1_zh: 盒子是柱体。
+  s1_zh_hk: 盒係柱體。
+  s2_en: A can is a cylinder.
+  s2_zh: 罐子是圆柱体。
+  s2_zh_hk: 罐係圓柱體。
+  s3_en: A box and a can.
+  s3_zh: 一个盒子，一个罐子。
+  s3_zh_hk: 一個盒，一個罐。
+
+- id: tip
+  visual: animated
+  scene: solid_shape
+  part: pair
+  items: [pyramid, cone]
+  seconds: 14
+  title_en: Both have a tip
+  title_zh: 都有一个尖
+  title_zh_hk: 都有一個尖
+  s1_en: This one has a tip.
+  s1_zh: 这个有一个尖。
+  s1_zh_hk: 呢個有一個尖。
+  s2_en: This one has a tip too.
+  s2_zh: 这个也有一个尖。
+  s2_zh_hk: 呢個都有一個尖。
+  s3_en: A pyramid and a cone.
+  s3_zh: 锥体和圆锥体。
+  s3_zh_hk: 錐體同圓錐體。
+
+- id: ball
+  visual: animated
+  scene: solid_shape
+  part: turn
+  items: [sphere]
+  turn: 25
+  seconds: 12
+  title_en: A ball is a sphere
+  title_zh: 皮球是球体
+  title_zh_hk: 波係球體
+  s1_en: A ball is a sphere.
+  s1_zh: 皮球是球体。
+  s1_zh_hk: 波係球體。
+  s2_en: Turn it.
+  s2_zh: 转一转。
+  s2_zh_hk: 轉一轉。
+  s3_en: Still a sphere.
+  s3_zh: 还是球体。
+  s3_zh_hk: 仲係球體。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: shapes
+  seconds: 16
+  title_en: Solid shapes
+  title_zh: 认识立体
+  title_zh_hk: 認識立體
+  s1_en: A box is a prism.
+  s1_zh: 盒子是柱体。
+  s1_zh_hk: 盒係柱體。
+  s2_en: A can is a cylinder.
+  s2_zh: 罐子是圆柱体。
+  s2_zh_hk: 罐係圓柱體。
+  s3_en: Both have a tip.
+  s3_zh: 两个都有尖。
+  s3_zh_hk: 兩個都有尖。
+  s4_en: A ball is a sphere.
+  s4_zh: 皮球是球体。
+  s4_zh_hk: 波係球體。
+  cues:
+  - kind: solid
+    shape: prism
+  - kind: solid
+    shape: cylinder
+  - kind: solid
+    items: [pyramid, cone]
+  - kind: solid
+    shape: sphere

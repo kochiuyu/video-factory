@@ -1912,6 +1912,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-NUM-13": [
                 "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
             ],
+            "P1-NUM-14": [
+                "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
+            ],
             "P1-NUM-15": [
                 "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
             ],
@@ -2343,6 +2346,49 @@ class SceneRegistryTest(unittest.TestCase):
         )
         for picture in labels_for(recap13, "en")["cues"]:
             self.assertNotIn(picture, DEFAULT_TRACK_CUES)
+        fourteen = load_lesson(P1 / "P1-NUM-14.yaml")
+        blocks = [beat for beat in fourteen["beats"] if beat.get("scene") == "number_blocks"]
+        self.assertEqual([b["mode"] for b in blocks], ["compare", "compare", "compare"])
+        self.assertEqual([(b["a"], b["b"]) for b in blocks], [(24, 42), (47, 43), (100, 99)])
+        self.assertIsNone(count_event(blocks[0]))
+        self.assertEqual(blocks[0]["s3_en"], "Four tens is more. 42 is larger.")
+        self.assertEqual(blocks[0]["s3_zh"], "四个十更多。四十二比较大。")
+        self.assertEqual(blocks[2]["s3_zh_hk"], "一百比九十九大。")
+        self.assertNotIn("嗎", _beat_lines(fourteen, "zh_hk"))
+        self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in fourteen["beats"]).lower())
+        recap = next(beat for beat in fourteen["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap), 4)
+        self.assertEqual(labels_for(recap, "en")["title"], "Which is larger?")
+        self.assertEqual(labels_for(recap, "zh")["title"], "哪个数比较大？")
+        self.assertEqual(labels_for(recap, "zh_hk")["title"], "邊個數大啲呀？")
+        self.assertEqual(
+            labels_for(recap, "en")["lines"],
+            [
+                "42 is larger than 24.",
+                "Look at the tens first.",
+                "47 is larger than 43.",
+                "100 is larger than 99.",
+            ],
+        )
+        self.assertEqual(labels_for(recap, "zh")["lines"][1], "先看有几个十。")
+        self.assertEqual(labels_for(recap, "zh_hk")["lines"][1], "先睇有幾個十。")
+        self.assertEqual(
+            labels_for(recap, "en")["cues"],
+            [
+                ("compare", 24, 42, 42),
+                ("tens_mark", 24, 42),
+                ("compare", 47, 43, 47),
+                ("compare", 100, 99, 100),
+            ],
+        )
+        for picture in labels_for(recap, "en")["cues"]:
+            self.assertNotIn(picture, DEFAULT_TRACK_CUES)
+        self.assertIn("？", fourteen["title_zh"])
+        self.assertNotIn("?", fourteen["title_zh"])
+        self.assertNotIn("?", fourteen["title_zh_hk"])
+        for beat in fourteen["beats"]:
+            self.assertNotIn("?", beat.get("title_zh") or "")
+            self.assertNotIn("?", beat.get("title_zh_hk") or "")
 
     def test_part_whole_bounds(self):
         good = {

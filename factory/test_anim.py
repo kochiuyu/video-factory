@@ -33,6 +33,7 @@ from scene_registry import (
     schedule_marks,
     step_count,
     takeaway_cue_picture,
+    group_columns,
     track_columns,
     track_slots,
 )
@@ -1789,6 +1790,26 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertTrue(any("must not fall back to the default track" in msg for msg in messages))
         self.assertNotIn("cues", labels_for(bad, "en"))
 
+    def test_groups_takeaway_picture_draws_each_counter(self):
+        """A groups cue draws one counter per place, and skips when Manim is missing."""
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
+        from manim import tempconfig
+
+        from anim import _make_scene, prepare_fonts
+
+        prepare_fonts()
+        with tempconfig({"pixel_width": 1920, "pixel_height": 1080, "frame_width": 8 * 16 / 9, "frame_height": 8}):
+            scene = _make_scene(
+                {"scene": "lesson_takeaway", "lang": "en", "labels": {"title": "Groups", "lines": ["a"]}},
+                [0.4],
+            )
+            group = scene._line_cue(("groups", 5, 4, 0), "Latin Modern Roman", "Noto Sans CJK SC")
+        circles = [mob for mob in group.get_family() if mob.__class__.__name__ == "Circle"]
+        self.assertEqual(len(circles), 20)
+
     def test_takeaway_blocks_share_a_scale_and_comparisons_stay_apart(self):
         """Rods keep one size, a comparison's blocks match the number, and the ring clears both digits."""
         try:
@@ -1919,6 +1940,9 @@ class SceneRegistryTest(unittest.TestCase):
                 "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
             ],
             "P1-NUM-16": [
+                "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
+            ],
+            "P1-NUM-17": [
                 "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
             ],
         }
@@ -2353,6 +2377,51 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertIn("？", labels_for(recap, "zh")["title"])
         self.assertNotIn("?", labels_for(recap, "zh")["title"])
         self.assertNotIn("?", labels_for(recap, "zh_hk")["title"])
+        seventeen = load_lesson(P1 / "P1-NUM-17.yaml")
+        blocks = [beat for beat in seventeen["beats"] if beat.get("scene") == "number_blocks"]
+        self.assertEqual([b["mode"] for b in blocks], ["groups", "tens", "hop"])
+        self.assertEqual((blocks[0]["a"], blocks[0]["n"]), (5, 4))
+        self.assertEqual(blocks[1]["count"], 50)
+        self.assertTrue(blocks[1].get("rods_only"))
+        self.assertTrue(labels_for(blocks[1], "en").get("rods_only"))
+        self.assertEqual(labels_for(blocks[1], "en")["title"], "Tens and ones")
+        self.assertEqual(group_columns(4, 5, True), 2)
+        self.assertEqual(group_columns(4, 2, True), 3)
+        self.assertEqual((blocks[2]["start"], blocks[2]["end"]), (30, 33))
+        self.assertEqual(count_event(blocks[0]), (1, 4))
+        self.assertEqual(count_event(blocks[1]), (0, 5))
+        self.assertEqual(count_event(blocks[2]), (1, 4))
+        self.assertEqual(blocks[0]["s2_zh_hk"], "五，十，十五，二十。")
+        self.assertNotIn("嗎", _beat_lines(seventeen, "zh_hk"))
+        self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in seventeen["beats"]).lower())
+        recap17 = next(beat for beat in seventeen["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap17), 4)
+        self.assertEqual(labels_for(recap17, "en")["title"], "How do we count in groups?")
+        self.assertEqual(labels_for(recap17, "zh")["title"], "怎样按组数？")
+        self.assertEqual(labels_for(recap17, "zh_hk")["title"], "點樣按組數呀？")
+        self.assertEqual(
+            labels_for(recap17, "en")["lines"],
+            [
+                "Four groups of five make twenty.",
+                "Five tens make fifty.",
+                "Thirty is three tens.",
+                "Count on, 31, 32, 33.",
+            ],
+        )
+        self.assertEqual(labels_for(recap17, "zh")["lines"][0], "四组五个是二十。")
+        self.assertEqual(labels_for(recap17, "zh_hk")["lines"][0], "四組五個係二十。")
+        self.assertEqual(
+            labels_for(recap17, "en")["cues"],
+            [("groups", 5, 4, 0), ("tens", 5, 0), ("tens", 3, 0), ("tiles", (30, 31, 32, 33))],
+        )
+        self.assertEqual(takeaway_cue_picture({"kind": "groups", "a": 5, "n": 4}), ("groups", 5, 4, 0))
+        self.assertIsNone(takeaway_cue_picture({"kind": "groups", "a": 6, "n": 4}))
+        self.assertIsNone(takeaway_cue_picture({"kind": "groups", "a": 5, "n": 4, "extra": 1}))
+        for picture in labels_for(recap17, "en")["cues"]:
+            self.assertNotIn(picture, DEFAULT_TRACK_CUES)
+        self.assertIn("？", labels_for(recap17, "zh")["title"])
+        self.assertNotIn("?", labels_for(recap17, "zh")["title"])
+        self.assertNotIn("?", labels_for(recap17, "zh_hk")["title"])
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

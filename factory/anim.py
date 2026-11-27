@@ -21,6 +21,7 @@ from scene_registry import (
     ordinal_visits,
     schedule_marks,
     step_count,
+    group_columns,
     track_columns,
     track_slots,
 )
@@ -2690,6 +2691,8 @@ def _scene_types() -> dict:
                 return self._cue_tiles(picture[1], latin)
             if kind == "pairs":
                 return self._cue_pairs(int(picture[1]), int(picture[2]))
+            if kind == "groups":
+                return self._cue_groups(int(picture[1]), int(picture[2]), int(picture[3]))
             if kind == "counters":
                 return self._cue_dots(int(picture[1]))
             raise ValueError(f"takeaway cue fell back to the default: {picture!r}")
@@ -2831,6 +2834,33 @@ def _scene_types() -> dict:
             ring.set_fill(opacity=0)
             loose = VGroup(dot, ring)
             return VGroup(group, loose).arrange(RIGHT, buff=0.14)
+
+        def _cue_group_box(self, size: int):
+            """One box of equal counters. Five sit as three and two."""
+            cols = size if size <= 3 else 3
+            dots = VGroup(*[counter(GREEN, 0.08) for _ in range(size)])
+            dots.arrange_in_grid(rows=(size + cols - 1) // cols, cols=cols, buff=0.04)
+            frame = RoundedRectangle(
+                width=float(dots.width) + 0.14,
+                height=float(dots.height) + 0.12,
+                corner_radius=0.08,
+                stroke_color=NAVY, stroke_width=3,
+                fill_color=WHITE, fill_opacity=1,
+            )
+            dots.move_to(frame)
+            return VGroup(frame, dots)
+
+        def _cue_groups(self, size: int, boxes: int, extra: int):
+            """Boxes of the same size, plus any loose counters beside them."""
+            group = VGroup(*[self._cue_group_box(size) for _ in range(boxes)])
+            group.arrange(RIGHT, buff=0.08)
+            if not extra:
+                return group
+            loose_dots = VGroup(*[counter(GOLD, 0.08) for _ in range(extra)])
+            loose_dots.arrange(RIGHT, buff=0.04)
+            ring = SurroundingRectangle(loose_dots, color=GOLD, buff=0.06, stroke_width=4)
+            ring.set_fill(opacity=0)
+            return VGroup(group, VGroup(loose_dots, ring)).arrange(RIGHT, buff=0.12)
 
         def _cue_dots(self, count: int):
             dots = VGroup(*[counter(GREEN, 0.12) for _ in range(count)])
@@ -3546,7 +3576,7 @@ def _scene_types() -> dict:
                 fill_opacity=1,
             )
 
-        def _bundles(self, count, latin, cjk, *, rod_w, rod_h, cols):
+        def _bundles(self, count, latin, cjk, *, rod_w, rod_h, cols, show_zero=True):
             tens, ones = divmod(int(count), 10)
             rods = VGroup(*[self._rod(rod_w, rod_h) for _ in range(tens)])
             if tens:
@@ -3556,7 +3586,7 @@ def _scene_types() -> dict:
                 dots = VGroup(*[counter(GOLD, min(0.15, rod_h * 0.2)) for _ in range(ones)])
                 dots.arrange(RIGHT, buff=0.08)
                 loose = dots
-            else:
+            elif show_zero:
                 zero = self._label("0", latin, cjk)
                 mat = RoundedRectangle(
                     width=max(float(zero.width) + 0.42, rod_w * 2.4),
@@ -3569,7 +3599,14 @@ def _scene_types() -> dict:
                 )
                 zero.move_to(mat)
                 loose = VGroup(mat, zero)
-            pic = VGroup(rods, loose).arrange(DOWN, buff=0.16) if tens else VGroup(loose)
+            else:
+                loose = VGroup()
+            if tens and len(loose):
+                pic = VGroup(rods, loose).arrange(DOWN, buff=0.16)
+            elif tens:
+                pic = rods
+            else:
+                pic = loose
             return pic, rods, loose
 
         def _show(self, index, *mobs):
@@ -3581,25 +3618,36 @@ def _scene_types() -> dict:
 
         def _tens(self, labels, latin, cjk, title):
             count = int(labels.get("count") or 0)
-            pic, rods, loose = self._bundles(count, latin, cjk, rod_w=0.46, rod_h=1.02, cols=5)
+            rods_only = bool(labels.get("rods_only")) and count % 10 == 0
+            pic, rods, loose = self._bundles(
+                count, latin, cjk, rod_w=0.46, rod_h=1.02, cols=5, show_zero=not rods_only,
+            )
             number = self._label(str(count), latin, cjk, 1.4)
             left, right, bot, top, max_w, max_h = self._limits()
-            room = max_h - float(title.height) - float(number.height) - 0.7
+            room = max_h - float(title.height if not rods_only else 0) - float(number.height) - 0.7
             if float(pic.height) > room > 0.4:
                 pic.scale(room / float(pic.height))
             self._fit_width(pic, max_w * 0.96)
-            stack = self._seat(VGroup(title, pic, number).arrange(DOWN, buff=0.2))
+            shown = VGroup(pic, number) if rods_only else VGroup(title, pic, number)
+            stack = self._seat(shown.arrange(DOWN, buff=0.2))
             rod_list = list(rods)
-            for mob in (title, loose, number, *rod_list):
+            fading = [loose, number, *rod_list] if rods_only else [title, loose, number, *rod_list]
+            for mob in fading:
                 mob.set_opacity(0)
             self.add(stack)
             marks = self.marks_for(0)
             if rod_list and marks and len(marks) == len(rod_list):
                 hops = [lambda rod=rod: rod.animate.set_opacity(1) for rod in rod_list]
-                self.spend_marked(0, hops, marks, intro=title.animate.set_opacity(1))
+                intro = None if rods_only else title.animate.set_opacity(1)
+                self.spend_marked(0, hops, marks, intro=intro)
+            elif rods_only:
+                self._show(0, *rod_list)
             else:
                 self._show(0, title, *rod_list)
-            self._show(1, loose)
+            if len(loose):
+                self._show(1, loose)
+            else:
+                self.spend(1)
             self._show(2, number)
 
         def _card(self, count, latin, cjk):
@@ -3729,7 +3777,7 @@ def _scene_types() -> dict:
             size = max(2, int(labels.get("a") or 2))
             boxes_n = max(1, int(labels.get("n") or 1))
             extra = max(0, int(labels.get("extra") or 0))
-            cols = 3 if portrait else min(6, boxes_n)
+            cols = group_columns(boxes_n, size, portrait)
             columns = []
             tags = []
             for i in range(boxes_n):

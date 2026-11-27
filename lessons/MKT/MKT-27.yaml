@@ -1,0 +1,286 @@
+id: MKT-27
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A smaller price tag. A cheaper quantity?
+title_zh: 标价低一点，同样分量也较便宜吗？
+title_zh_hk: 標價低一點，同樣分量也較便宜嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-27
+  kicker_en: MKT-27
+  kicker_zh: MKT-27
+  kicker_zh_hk: MKT-27
+  title_en: A smaller price tag. A cheaper quantity?
+  title_zh: 标价低一点，同样分量也较便宜吗？
+  title_zh_hk: 標價低一點，同樣分量也較便宜嗎？
+  image: art/smaller-pack-cheaper-quantity-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 15 March 2021, Hong Kong's Consumer Council reported that inconsistent quantity units made supermarket
+    price comparisons harder, and that larger packs were not always cheaper per unit. Now you manage shelf
+    information for a fictional Hong Kong grocery shop.
+  zh: >-
+    二零二一年三月十五日，香港消费者委员会指出，超市商品的计量单位不统一，让比价变得困难；调查也发现，大包装的单位价格不一定更低。现在，你负责一家虚构的香港食品杂货店的货架标签。
+  zh_hk: >-
+    二零二一年三月十五號，香港消費者委員會指出，超市貨品嘅計量單位唔統一，令格價好難；調查亦發現，大包裝嘅單位價錢唔一定平啲。而家，你負責一間虛構嘅香港食品雜貨舖嘅貨架標示。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Same sauce, two pack sizes
+  title_zh: 同一种酱汁，两种包装
+  title_zh_hk: 同款醬汁，兩種包裝
+  row1_en: Small
+  row1_zh: 小包
+  row1_zh_hk: 小包
+  row2_en: Large
+  row2_zh: 大包
+  row2_zh_hk: 大包
+  col1_en: Net quantity
+  col1_zh: 净重
+  col1_zh_hk: 淨重
+  col2_en: Total payable
+  col2_zh: 应付总价
+  col2_zh_hk: 應付總價
+  col3_en: Price per 100 g
+  col3_zh: 每 100 克价格
+  col3_zh_hk: 每 100 克價格
+  c11_en: 250 g
+  c11_zh: 250 克
+  c11_zh_hk: 250 克
+  c12: HK$12
+  c13_en: Calculate
+  c13_zh: 请计算
+  c13_zh_hk: 請計算
+  c21_en: 600 g
+  c21_zh: 600 克
+  c21_zh_hk: 600 克
+  c22: HK$24
+  c23_en: Calculate
+  c23_zh: 请计算
+  c23_zh_hk: 請計算
+  footer_en: Whole packs only · prices fixed
+  footer_zh: 只卖整包 · 价格不变
+  footer_zh_hk: 只賣整包 · 價格不變
+  s1_en: >-
+    The same chilled fresh sauce comes in two sealed packs: 250 grams for 12 dollars, and 600 grams for
+    24 dollars. Ingredients, quality and storage are identical, with no promotions, and customers can
+    only buy whole packs.
+  s1_zh: 同一种冷藏鲜酱汁有两种密封包装：二百五十克卖十二元，六百克卖二十四元。成分、质量和保存方法完全一样，没有任何优惠，顾客只能整包购买。
+  s1_zh_hk: 同一款冷藏鮮醬汁有兩種密封包裝：二百五十克賣十二蚊，六百克賣二十四蚊。成分、品質同保存方法完全一樣，冇任何優惠，顧客只可以買成包。
+  s2_en: >-
+    You must choose one truthful label layout. Ticket-led makes the total pack price the strongest element,
+    with weight and price per 100 grams readable beside it. Paired makes total price and price per 100
+    grams equally prominent.
+  s2_zh: 你要选一种如实的标签版面。总价优先版最突出整包的总价，旁边清楚列出净重和每一百克价格；并列版则让总价和每一百克价格同样醒目。
+  s2_zh_hk: 你要揀一款如實嘅標籤版面。總價優先版最突出成包嘅總價，旁邊清楚列出淨重同每一百克價錢；並列版就令總價同每一百克價錢一樣咁醒目。
+  s3_en: >-
+    Both layouts meet every requirement and hide nothing. The goal is quick comparison of immediate spend
+    and quantity, not steering everyone into one pack. Each layout has room for the same short optional
+    reminder.
+  s3_zh: >-
+    两种版面都符合所有要求，也不隐藏任何信息。目标是让顾客迅速比较当下的开支和分量，而不是引导所有人买同一种包装。两种版面都可以加上同一句简短提示。
+  s3_zh_hk: >-
+    兩款版面都符合所有要求，亦冇收埋任何資料。目標係等顧客快啲比較即刻要使幾多錢同分量，而唔係引導所有人買同一款包裝。兩款版面都可以加同一句簡短提示。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which layout, which prices?
+  title_zh: 选哪种版面？标哪些价格？
+  title_zh_hk: 揀哪款版面？標哪些價格？
+  en: >-
+    Calculate both prices per 100 grams. Which label layout would you choose, and what total price, quantity
+    and unit price should each pack clearly show? Pause and vote.
+  zh: 先算出两种包装每一百克的价格。你会选哪种标签版面？每种包装上应该清楚列出什么总价、分量和单位价格？请暂停，投个票。
+  zh_hk: 先計出兩款包裝每一百克嘅價錢。你會揀邊款標籤版面？每款包裝應該清楚列出咩總價、分量同單位價錢？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Two shoppers, two exact needs
+  title_zh: 两位顾客，两种确切需要
+  title_zh_hk: 兩位顧客，兩種確切需要
+  step1_en: >-
+    Shopper A: exactly 250 g tonight
+  step1_zh: 甲：今晚刚好要 250 克
+  step1_zh_hk: 甲：今晚剛好要 250 克
+  step2_en: >-
+    Shopper B: exactly 600 g tonight
+  step2_zh: 乙：今晚刚好要 600 克
+  step2_zh_hk: 乙：今晚剛好要 600 克
+  step3_en: Surplus has no usable value
+  step3_zh: 多买的没有可用价值
+  step3_zh_hk: 多買的沒有可用價值
+  s1_en: >-
+    Two shoppers explain their needs for tonight. Shopper A needs exactly 250 grams. Each wants the lowest
+    total outlay that supplies the amount.
+  s1_zh: 两位顾客说明今晚的需要。甲要刚好二百五十克。两人都想用最低的总开支，买够所需的分量。
+  s1_zh_hk: 兩位顧客講咗今晚嘅需要。甲要啱啱好二百五十克。兩個人都想用最少嘅總開支，買夠需要嘅分量。
+  s2_en: >-
+    Shopper B needs exactly 600 grams. Neither has sauce at home, and both can afford any relevant combination
+    of packs.
+  s2_zh: 乙要刚好六百克。两人家里都没有酱汁，也负担得起任何相关的包装组合。
+  s2_zh_hk: 乙要啱啱好六百克。兩個人屋企都冇醬汁，亦負擔得起任何相關嘅包裝組合。
+  s3_en: >-
+    Any surplus has no further usable value: they cannot share, freeze or use it before its safe-use deadline,
+    and they will not eat extra to avoid leftovers. Prices stay at 12 and 24 dollars.
+  s3_zh: 多买的酱汁没有可用价值：不能送人、不能冷冻，也无法在安全食用期限前用完，他们也不会为了不浪费而多吃。价格仍然是十二元和二十四元。
+  s3_zh_hk: 多買嘅醬汁冇可用價值：唔可以送人、唔可以凍起，亦用唔晒喺安全食用期限之前，佢哋亦唔會為咗唔浪費而食多咗。價錢仍然係十二蚊同二十四蚊。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What should A and B buy?
+  title_zh: 甲和乙该怎样买？
+  title_zh_hk: 甲和乙該怎樣買？
+  en: >-
+    What should A and B each buy at the lowest outlay for their stated needs? And how would you keep the
+    label helpful, without treating the lowest unit price as the cheapest purchase for everyone? Pause
+    and vote.
+  zh: 按各自的需要，甲和乙各应该怎样买才最省钱？标签又怎样才能帮到顾客，而不会让人以为单位价格最低，就一定对每个人都最便宜？请暂停，投个票。
+  zh_hk: 按各自嘅需要，甲同乙應該點買先最慳錢？標籤又點樣先幫到顧客，而唔會令人以為單位價錢最低，就一定對個個都最平？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Two kinds of price
+  title_zh: 两种价格
+  title_zh_hk: 兩種價格
+  step1_en: >-
+    Small: HK$4.80 per 100 g
+  step1_zh: 小包：每 100 克 HK$4.80
+  step1_zh_hk: 小包：每 100 克 HK$4.80
+  step2_en: >-
+    Large: HK$4.00 per 100 g
+  step2_zh: 大包：每 100 克 HK$4.00
+  step2_zh_hk: 大包：每 100 克 HK$4.00
+  step3_en: >-
+    A: one small pack, saves HK$12
+  step3_zh: 甲：买一小包，省 HK$12
+  step3_zh_hk: 甲：買一小包，省 HK$12
+  s1_en: >-
+    The small pack costs 12 dollars for 250 grams, or 4 dollars 80 per 100 grams. It has the lower ticket
+    price.
+  s1_zh: 小包二百五十克卖十二元，等于每一百克四块八。它的整包标价比较低。
+  s1_zh_hk: 小包二百五十克賣十二蚊，即係每一百克四蚊八。佢嘅成包標價比較低。
+  s2_en: >-
+    The large pack costs 24 dollars for 600 grams, or 4 dollars per 100 grams. It has the lower unit price.
+    Neither fact settles every shopper's total cost.
+  s2_zh: 大包六百克卖二十四元，等于每一百克四块钱，单位价格比较低。但单看其中一项，都不能判断每位顾客的总开支。
+  s2_zh_hk: 大包六百克賣二十四蚊，即係每一百克四蚊，單位價錢比較低。但淨係睇其中一樣，都判斷唔到每位顧客嘅總開支。
+  s3_en: >-
+    A buys one small pack for 12 dollars and uses all 250 grams. A large pack, or two small packs, would
+    cost 24 dollars and leave sauce unusable. A saves 12 dollars despite the higher unit price.
+  s3_zh: 甲花十二元买一小包，二百五十克全部用完。买一大包或两小包，都要花二十四元，还会剩下用不了的酱汁。小包单位价格虽然较高，甲反而省了十二元。
+  s3_zh_hk: 甲使十二蚊買一小包，二百五十克全部用晒。買一大包或者兩小包，都要使二十四蚊，仲會剩低用唔到嘅醬汁。小包單位價錢雖然貴啲，甲反而慳咗十二蚊。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: For 600 g, count whole packs
+  title_zh: 要 600 克，按整包计算
+  title_zh_hk: 要 600 克，按整包計算
+  step1_en: >-
+    B: one large pack, HK$24, no surplus
+  step1_zh: 乙：一大包 HK$24，没有剩余
+  step1_zh_hk: 乙：一大包 HK$24，沒有剩餘
+  step2_en: >-
+    Two small: HK$24 but only 500 g
+  step2_zh: 两小包：HK$24，只有 500 克
+  step2_zh_hk: 兩小包：HK$24，只有 500 克
+  step3_en: >-
+    Three small: HK$36, 150 g unusable
+  step3_zh: 三小包：HK$36，剩 150 克
+  step3_zh_hk: 三小包：HK$36，剩 150 克
+  s1_en: B buys one large pack for 24 dollars and uses all 600 grams.
+  s1_zh: 乙花二十四元买一大包，六百克全部用完。
+  s1_zh_hk: 乙使二十四蚊買一大包，六百克全部用晒。
+  s2_en: >-
+    Two small packs also cost 24 dollars, but supply only 500 grams, so they do not meet the need.
+  s2_zh: 两小包同样要二十四元，但总共只有五百克，分量不够。
+  s2_zh_hk: 兩小包一樣要二十四蚊，但總共得五百克，分量唔夠。
+  s3_en: >-
+    Three small packs cost 36 dollars, supply 750 grams and leave 150 grams unusable. The lowest ticket
+    price per pack does not give B the lowest relevant outlay.
+  s3_zh: 三小包要三十六元，共七百五十克，会剩下一百五十克用不了。所以，单包标价最低的选择，并不能让乙用最低的总开支买够酱汁。
+  s3_zh_hk: 三小包要三十六蚊，總共七百五十克，會剩低一百五十克用唔到。所以，單包標價最平嘅揀法，唔能夠令乙用最少嘅總開支買夠醬汁。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Clarity, not a universal winner
+  title_zh: 讲清楚，不宣称谁最划算
+  title_zh_hk: 講清楚，不宣稱誰最划算
+  en: >-
+    Paired is a strong choice, because immediate outlay and comparable unit price are visible together.
+    Ticket-led can still serve a shopper managing cash, if the unit price stays clear. Add a neutral reminder:
+    compare price per 100 grams, then buy the quantity you can use.
+  zh: >-
+    并列版是个好选择，因为顾客可以同时看清当下的开支和可比较的单位价格。只要单位价格也清楚，总价优先版对留意手头开支的顾客仍然有用。可以加一句中性的提示：先比较每一百克价格，再按用量购买。
+  zh_hk: >-
+    並列版係個好選擇，因為顧客可以同時睇清即刻要使幾多同可以比較嘅單位價錢。只要單位價錢都清楚，總價優先版對睇實荷包嘅顧客仍然有用。可以加一句中性嘅提示：先比較每一百克價錢，再按用量買。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Unit price ≠ cheapest purchase
+  title_zh: 单位价最低 ≠ 最省钱
+  title_zh_hk: 單位價最低 ≠ 最省錢
+  q1_en: >-
+    Shelf unit price: based on net quantity
+  q1_zh: 货架单位价格：按净重计算
+  q1_zh_hk: 貨架單位價格：按淨重計算
+  q2_en: >-
+    Shopper: whole packs and surplus
+  q2_zh: 顾客：比较整包组合和剩余
+  q2_zh_hk: 顧客：比較整包組合和剩餘
+  s1_en: >-
+    Keep the shelf unit price based on purchased net quantity; each shopper separately compares feasible
+    whole packs and unusable surplus.
+  s1_zh: 货架单位价格仍然按购买的净重计算；顾客再自己比较可行的整包组合，以及会剩下多少用不了。
+  s1_zh_hk: 貨架單位價錢仍然按買嘅淨重計；顧客再自己比較可行嘅成包組合，同會剩低幾多用唔到。
+  s2_en: >-
+    No evidence here shows which layout increases sales, or how often either need occurs.
+  s2_zh: 这里没有证据显示哪种版面能提高销量，也不知道这两种需要各有多常见。
+  s2_zh_hk: 呢度冇證據顯示邊款版面可以提高銷量，亦唔知道呢兩種需要各有幾常見。
+  s3_en: >-
+    The shop, the packs and the shopping requirements are fictional. Official scene art is a teaching
+    illustration only.
+  s3_zh: 商店、包装和购物需要都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 商店、包裝同購物需要都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

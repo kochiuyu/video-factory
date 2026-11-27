@@ -1,0 +1,284 @@
+id: MKT-28
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: They understand the benefit. Can they picture doing it?
+title_zh: 知道产品有用，但有信心自己装好吗？
+title_zh_hk: 知道產品有用，但有信心自己裝好嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-28
+  kicker_en: MKT-28
+  kicker_zh: MKT-28
+  kicker_zh_hk: MKT-28
+  title_en: They understand the benefit. Can they picture doing it?
+  title_zh: 知道产品有用，但有信心自己装好吗？
+  title_zh_hk: 知道產品有用，但有信心自己裝好嗎？
+  image: art/understand-benefit-picture-setup-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Bandura's self-efficacy account separates believing an action produces a useful outcome from believing
+    you can perform it yourself. Now a fictional Hong Kong home-organisation brand is introducing a modular
+    desktop organiser to twenty adult volunteers.
+  zh: >-
+    班杜拉的自我效能理论区分了两种想法：相信某个做法会有好结果，以及相信自己有能力做到。现在，一个虚构的香港家居收纳品牌，要向二十位自愿参加的成年人介绍一款组合式桌面收纳架。
+  zh_hk: >-
+    班杜拉嘅自我效能理論分開咗兩種諗法：相信某個做法會有好結果，同相信自己有能力做到。而家，一個虛構嘅香港家居收納品牌，要向二十位自願參加嘅成年人介紹一款組合式枱面收納架。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: >-
+    HK$4,000 allowance: one option
+  title_zh: HK$4,000 预算，只选一项
+  title_zh_hk: HK$4,000 預算，只選一項
+  row1_en: >-
+    A: benefit advert
+  row1_zh: A：产品好处广告
+  row1_zh_hk: A：效益廣告
+  row2_en: >-
+    D: hands-on demo
+  row2_zh: D：实物操作示范
+  row2_zh_hk: D：實物操作示範
+  col1_en: Main emphasis
+  col1_zh: 重点
+  col1_zh_hk: 重點
+  col2_en: Still available
+  col2_zh: 仍会提供
+  col2_zh_hk: 仍會提供
+  c11_en: Tidy desk, finished organiser
+  c11_zh: 整洁桌面、装好的收纳架
+  c11_zh_hk: 整潔桌面、裝好的收納架
+  c12_en: Full instructions, price, size
+  c12_zh: 完整说明、价格、尺寸
+  c12_zh_hk: 完整指示、價格、尺寸
+  c21_en: Three setup steps, practice
+  c21_zh: 三个组装步骤、自愿练习
+  c21_zh_hk: 三個組裝步驟、自願練習
+  c22_en: The same full information
+  c22_zh: 同样完整的信息
+  c22_zh_hk: 同樣完整的資料
+  footer_en: Needs 40 × 30 × 25 cm, front facing
+  footer_zh: 需 40 × 30 × 25 厘米，正面朝前
+  footer_zh_hk: 需 40 × 30 × 25 厘米，正面朝前
+  s1_en: >-
+    The organiser holds ordinary stationery and assembles in three tool-free steps: align the base, slide
+    in the dividers and secure the supplied clips. It is not wall-mounted, powered or safety-critical.
+  s1_zh: 收纳架用来放普通文具，组装不用工具，只有三步：对准底座、插入隔板，再用随附的卡扣固定。它不用上墙，也不用通电，不涉及安全风险。
+  s1_zh_hk: 收納架用嚟放普通文具，砌嘅時候唔使工具，得三步：對準底座、插入隔板，再用附送嘅扣固定。佢唔使上牆，又唔使插電，唔涉及安全風險。
+  s2_en: >-
+    It needs a level space at least 40 centimetres wide, 30 deep and 25 high, with the front facing the
+    user. It cannot be rotated, cut or reduced, and no other size or home installation is available.
+  s2_zh: >-
+    它需要一块平整的位置，至少宽四十厘米、深三十厘米、高二十五厘米，正面必须朝向使用者。不能转向、不能裁剪，也不能缩小；没有其他尺寸，也不提供上门安装。
+  s2_zh_hk: >-
+    佢要一個平整嘅位，最少闊四十厘米、深三十厘米、高二十五厘米，正面一定要對住用嘅人。唔可以轉向、唔可以裁細，亦唔可以縮細；冇其他尺寸，亦冇上門安裝。
+  s3_en: >-
+    One 4,000-dollar allowance funds either A, a polished benefit advert, or D, a five-minute one-to-one
+    demonstration with a chance to practise. The goal is informed, suitable adoption, not maximum purchases.
+  s3_zh: >-
+    一笔四千元的预算，只能做其中一项：A 是制作精美的产品好处广告，D 是五分钟一对一示范，并让顾客亲手练习。目标是让顾客了解产品，在合适时才选用，而不是追求最多销量。
+  s3_zh_hk: >-
+    一筆四千蚊嘅預算，只可以做其中一樣：A 係製作精美嘅效益廣告，D 係五分鐘一對一示範，再畀顧客親手試。目標係等顧客了解產品，啱用先買，而唔係追求最多銷量。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: A or D, and what would you ask?
+  title_zh: 选 A 还是 D？要问什么？
+  title_zh_hk: 選 A 還是 D？要問甚麼？
+  en: >-
+    Which communication would you provisionally fund? And what would you ask, to tell a lack of benefit
+    understanding apart from doubt about doing the setup? Pause and vote.
+  zh: 你会暂时把预算给哪一项？你又会问什么问题，来分辨顾客是不明白产品的好处，还是怀疑自己装不好？请暂停，投个票。
+  zh_hk: 你會暫時將預算畀邊一項？你又會問咩問題，嚟分辨顧客係唔明產品嘅好處，定係怕自己砌唔好？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Same benefit, different doubts
+  title_zh: 都明白好处，疑问却不同
+  title_zh_hk: 都明白好處，疑問卻不同
+  step1_en: All 20 explain the benefit correctly
+  step1_zh: 20 人都能说清产品好处
+  step1_zh_hk: 20 人都能說清產品好處
+  step2_en: 12 fit at 45 × 35 cm, doubt setup
+  step2_zh: 12 人空间够，担心装不好
+  step2_zh_hk: 12 人空間夠，擔心裝不好
+  step3_en: 8 have only 35 cm of width
+  step3_zh: 8 人只有 35 厘米宽
+  step3_zh_hk: 8 人只有 35 厘米闊
+  s1_en: >-
+    The diagnostic conversations show that all twenty prospects can correctly explain the storage benefit,
+    and want that outcome.
+  s1_zh: 访谈发现，二十人都能正确说出收纳架有什么用，也想要整洁的桌面。
+  s1_zh_hk: 傾完之後發現，二十個人都講得啱收納架有咩用，亦都想要整齊嘅枱面。
+  s2_en: >-
+    Twelve have verified spaces 45 centimetres wide and 35 deep, with enough height. They are unsure they
+    can align the base and secure the clips. Their doubt is about doing the setup, and no practice result
+    proves it yet.
+  s2_zh: >-
+    其中十二人已核实空间合适：宽四十五厘米、深三十五厘米，高度也够。他们不确定自己能不能对准底座、扣好卡扣。问题在于能否亲手装好，目前也没有练习结果能证明。
+  s2_zh_hk: >-
+    當中十二個人已經核實空間啱：闊四十五厘米、深三十五厘米，高度都夠。佢哋唔肯定自己對唔對得準底座、扣唔扣得好。問題係自己砌唔砌到，暫時亦冇練習結果證明到。
+  s3_en: >-
+    The other eight have only 35 centimetres of usable width, with no other location and no way to modify
+    the furniture. A demonstration cannot create the missing width.
+  s3_zh: 另外八人预定的位置只有三十五厘米可用宽度，没有别的位置，也不能改动家具。示范补不回欠缺的宽度。
+  s3_zh_hk: 另外八個人預定嘅位置得三十五厘米可以用嘅闊度，冇其他位置，亦改唔到傢俬。示範補唔返唔夠嘅闊度。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Twelve who fit, eight who don't
+  title_zh: 12 人合适，8 人不合适
+  title_zh_hk: 12 人合適，8 人不合適
+  en: >-
+    How would you use your chosen communication for the twelve fitting prospects, and how would you respond
+    to the eight without enough space? What evidence separates setup confidence from successful use or
+    a sale? Pause and vote.
+  zh: 你会怎样向空间合适的十二人介绍？又怎样回应空间不够的八个人？要看什么证据，才能分清组装信心、实际成功使用和完成购买？请暂停，投个票。
+  zh_hk: 你會點樣同空間啱嘅十二個人介紹？又點樣回應空間唔夠嘅八個人？要睇咩證據，先分得清砌嘢嘅信心、真係用得到同埋買咗？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Diagnose, then show the process
+  title_zh: 先找出疑问，再示范过程
+  title_zh_hk: 先找出疑問，再示範過程
+  step1_en: >-
+    Round 1: ask what is still in doubt
+  step1_zh: 第一轮：先问清还有什么疑问
+  step1_zh_hk: 第一輪：先問清還有甚麼疑問
+  step2_en: >-
+    12 who fit: choose D, let them try
+  step2_zh: 12 人：选 D，让他们自己试
+  step2_zh_hk: 12 人：選 D，讓他們自己試
+  step3_en: >-
+    Self-efficacy: confidence in these steps
+  step3_zh: 自我效能感：对这几步的信心
+  step3_zh_hk: 自我效能感：對這幾步的信心
+  s1_en: >-
+    D is a sensible provisional choice, but unfamiliarity alone does not prove a demonstration is needed.
+    Ask customers to describe the benefit, name the steps they doubt and check the space.
+  s1_zh: 暂时选 D 是有道理的，但单凭产品陌生，不能判定一定要示范。应该请顾客说出产品的好处、指出自己没把握的步骤，并核对摆放空间。
+  s1_zh_hk: 暫時揀 D 係有道理，但淨係因為產品陌生，唔可以話一定要示範。應該請顧客講出產品嘅好處、指出自己冇把握嘅步驟，再核對擺放空間。
+  s2_en: >-
+    For the twelve, choose D: demonstrate each step at normal speed, explain the alignment and clip checks,
+    then offer voluntary practice. Let them attempt it themselves, help when asked, and record what help
+    was needed.
+  s2_zh: 对这十二人，选 D：用正常速度逐步示范，讲解怎样检查底座和卡扣，再让他们自愿练习。让顾客自己动手，开口要帮忙才协助，并记录帮了哪一步。
+  s2_zh_hk: 對呢十二個人，揀 D：用正常速度逐步示範，講解點樣檢查底座同扣，再畀佢哋自願試。等顧客自己動手，開口要幫先幫，仲要記低幫咗邊一步。
+  s3_en: >-
+    Self-efficacy here means confidence in completing these particular setup actions. It is not liking
+    the brand, valuing a tidy desk or agreeing the demonstrator is skilled.
+  s3_zh: 这里的自我效能感，是指顾客对完成这几个组装动作的信心，不是喜欢这个品牌、想要整洁的桌面，也不是认同示范员技术好。
+  s3_zh_hk: 呢度嘅自我效能感，係指顧客對完成呢幾個組裝動作嘅信心，唔係鍾意個品牌、想要整齊嘅枱面，亦唔係覺得示範員好叻。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: An honest boundary for the eight
+  title_zh: 对那 8 人，要如实说明
+  title_zh_hk: 對那 8 人，要如實說明
+  step1_en: 40 − 35 = 5 cm short
+  step1_zh: 40 − 35 = 差 5 厘米
+  step1_zh_hk: 40 − 35 = 差 5 厘米
+  step2_en: A size mismatch, not low confidence
+  step2_zh: 是尺寸不合，不是缺乏信心
+  step2_zh_hk: 是尺寸不合，不是缺乏信心
+  step3_en: >-
+    Unsuitable: do not press for a sale
+  step3_zh: 不适合：不要催促购买
+  step3_zh_hk: 不適合：不要催促購買
+  s1_en: >-
+    The eight narrower spaces are 40 minus 35, or 5 centimetres short. A 40-centimetre organiser cannot
+    meet the stated conditions in 35 centimetres.
+  s1_zh: 那八个位置只有三十五厘米，比四十厘米差了五厘米。四十厘米宽的收纳架，放在三十五厘米的空间里，不可能符合使用条件。
+  s1_zh_hk: 嗰八個位得三十五厘米，同四十厘米比差咗五厘米。四十厘米闊嘅收納架，擺喺三十五厘米嘅空間，冇可能符合使用條件。
+  s2_en: >-
+    Do not treat that mismatch as low confidence, or ask customers to believe harder.
+  s2_zh: 不要把尺寸不合说成顾客缺乏信心，也不要叫他们再相信自己一点。
+  s2_zh_hk: 唔好將尺寸唔啱講成顧客冇信心，亦唔好叫佢哋再信多自己啲。
+  s3_en: >-
+    Explain that this product is unsuitable for their verified space, and do not press for a purchase.
+    A different size is a future design possibility, not an available solution.
+  s3_zh: 应该告诉他们，这款产品不适合已经测量过的位置，也不要催他们购买。较小的规格日后也许可以设计，但现在并没有这个选项。
+  s3_zh_hk: 應該話畀佢哋知，呢款產品唔啱已經度過嘅位置，亦唔好催佢哋買。細啲嘅尺寸將來或者可以設計，但而家冇呢個選擇。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Measure the action you support
+  title_zh: 测量你想协助的动作
+  title_zh_hk: 量度你想協助的動作
+  en: >-
+    Before and after the demonstration, ask separately how confident the fitting prospects are that they
+    can align the base and secure the clips without staff help. Then offer a fresh attempt, and record
+    correct completion, errors, requested help and opt-outs.
+  zh: >-
+    示范前后，分别问空间合适的顾客：在没有工作人员协助的情况下，有多大信心能对准底座、扣好卡扣。然后请他们从头再装一次，记录是否正确完成、哪里出错、要求了什么协助，以及有没有选择不试。
+  zh_hk: >-
+    示範前後，分開問空間啱嘅顧客：冇職員幫手嘅情況下，有幾大信心對得準底座、扣得好個扣。之後請佢哋由頭再砌一次，記低有冇砌啱、邊度出錯、要求咗咩幫手，同埋有冇揀唔試。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Confidence ≠ success ≠ a sale
+  title_zh: 有信心 ≠ 做得到 ≠ 成交
+  title_zh_hk: 有信心 ≠ 做得到 ≠ 成交
+  q1_en: Track purchase and home use separately
+  q1_zh: 购买和在家使用要另行跟进
+  q1_zh_hk: 購買和在家使用要另行跟進
+  q2_en: >-
+    12 of 20 = 60%: not a conversion rate
+  q2_zh: 20 人中 12 人 = 60%：非转化率
+  q2_zh_hk: 20 人中 12 人 = 60%：非轉化率
+  s1_en: >-
+    Neither increased confidence nor an observed attempt equals a sale or sustained home use. Twelve of
+    twenty, or 60 percent, is the maximum fitting group, not a predicted conversion rate.
+  s1_zh: 信心提高，或者看到一次尝试，都不等于成交或长期使用。二十人中有十二人，也就是百分之六十，是空间合适的上限，不是预测的转化率。
+  s1_zh_hk: 信心高咗，或者見到試咗一次，都唔等於成交或者長期用。二十個人入面有十二個，即係百分之六十，係空間啱嘅上限，唔係預測嘅轉化率。
+  s2_en: >-
+    A before-and-after change without a comparable control does not prove the demonstration caused it.
+  s2_zh: 没有可比较的对照组，示范前后的差异也不能证明是示范造成的。
+  s2_zh_hk: 冇可以比較嘅對照組，示範前後嘅分別都證明唔到係示範造成。
+  s3_en: >-
+    The brand, organiser, customers and budget are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 品牌、收纳架、顾客和预算都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 品牌、收納架、顧客同預算都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

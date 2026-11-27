@@ -1,0 +1,298 @@
+id: MKT-21
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: One customer. Which channel earns the sale?
+title_zh: 同一位顾客，这笔订单该算在哪个渠道？
+title_zh_hk: 同一位顧客，這宗生意算誰的？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-21
+  kicker_en: MKT-21
+  kicker_zh: MKT-21
+  kicker_zh_hk: MKT-21
+  title_en: One customer. Which channel earns the sale?
+  title_zh: 同一位顾客，这笔订单该算在哪个渠道？
+  title_zh_hk: 同一位顧客，這宗生意算誰的？
+  image: art/one-customer-which-channel-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    IKEA's US service page describes ordering and paying online, then collecting at a physical location.
+    The customer sees one retailer, but the journey crosses teams. Now Desk Corner, a fictional Hong Kong
+    retailer, sells home-office chairs through one shop and its own website, and must design a team commission
+    pilot.
+  zh: >-
+    宜家家居的美国服务网页介绍过，顾客可以先在网上下单付款，再到实体门店取货。顾客看到的是同一家零售商，背后却跨了不同团队。现在，一家虚构的香港零售商 Desk Corner，通过一家门店和自家网站卖家用办公椅，要设计一个团队佣金试点方案。
+  zh_hk: >-
+    宜家家居美國嘅服務網頁介紹過，顧客可以先喺網上落單俾錢，再去實體地點攞貨。顧客見到嘅係同一間零售商，背後就跨咗唔同團隊。而家，一間虛構嘅香港零售商 Desk Corner，經一間門市同自己個網站賣家用辦公椅，要設計一個團隊佣金試行方案。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two journeys, one HK$200 pot
+  title_zh: 两条购买路径，各 HK$200
+  title_zh_hk: 兩條購買流程，各 HK$200
+  row1_en: A
+  row1_zh: A
+  row1_zh_hk: A
+  row2_en: B
+  row2_zh: B
+  row2_zh_hk: B
+  col1_en: Product selection
+  col1_zh: 挑选产品
+  col1_zh_hk: 揀選產品
+  col2_en: Payment and delivery
+  col2_zh: 付款及交付
+  col2_zh_hk: 付款及交付
+  c11_en: Store adviser compares sizes; order from home
+  c11_zh: 门店顾问比较尺寸；回家下单
+  c11_zh_hk: 門市顧問比較尺寸；回家下單
+  c12_en: Paid online; home delivery
+  c12_zh: 线上付款；送货上门
+  c12_zh_hk: 網上付款；上門送貨
+  c21_en: Website information only, no store advice
+  c21_zh: 只看网站信息，没问门店
+  c21_zh_hk: 只參考網站資料，沒問門市
+  c22_en: Paid online; home delivery
+  c22_zh: 线上付款；送货上门
+  c22_zh_hk: 網上付款；上門送貨
+  footer_en: HK$800 for four equal-price orders
+  footer_zh: 四张同价订单共 HK$800
+  footer_zh_hk: 四張同價訂單共 HK$800
+  s1_en: >-
+    The four-week pilot has a fixed 800-dollar budget across four completed, equal-price orders: 200 dollars
+    per order, shared between the store team and the online team. Existing pay and agreed commissions
+    stay protected.
+  s1_zh: >-
+    这个为期四周的试点有八百元固定预算，分给四张已完成、价格相同的订单，每张二百元，由门店团队和线上团队来分。现有薪酬和已经约定的佣金都不受影响。
+  s1_zh_hk: >-
+    呢個四個星期嘅試行有八百蚊固定預算，分俾四張已經完成、價錢一樣嘅訂單，每張二百蚊，由門市團隊同網上團隊去分。現有薪酬同已經講好嘅佣金都受保障。
+  s2_en: >-
+    Checkout-only gives the whole pot to the payment channel: simple and verifiable. Logged assistance
+    splits it half and half when a verified selection consultation happened before online payment; otherwise
+    it is checkout-only.
+  s2_zh: >-
+    第一个规则只看结账：整笔钱给付款渠道，简单，也容易核实。第二个规则看有记录的协助：如果线上付款前，门店确实提供过选购建议，两队各分一半；否则就按结账渠道分。
+  s2_zh_hk: >-
+    第一個規則只睇結帳：成筆錢俾付款嘅渠道，簡單，亦容易核實。第二個規則睇有紀錄嘅協助：如果網上俾錢之前，門市真係俾過選購意見，兩隊一人一半；唔係就照結帳渠道分。
+  s3_en: >-
+    In A, a store adviser compared chair sizes, and the customer then ordered from home. In B, the customer
+    chose using website information alone. Both paid online for home delivery.
+  s3_zh: A 是门店顾问帮顾客比较椅子尺寸，顾客之后回家下单。B 是顾客只看网站信息自己选。两位都是线上付款、送货上门。
+  s3_zh_hk: A 係門市顧問幫顧客比較椅嘅尺寸，顧客之後返屋企落單。B 係顧客淨係睇網站資料自己揀。兩位都係網上俾錢、上門送貨。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which rule would you pilot?
+  title_zh: 你会试哪个规则？
+  title_zh_hk: 你會試哪個規則？
+  en: >-
+    Would you pilot checkout-only or logged assistance? Allocate the 200 dollars for journeys A and B,
+    and name one behaviour your rule might encourage or discourage. Pause and vote.
+  zh: 你会试行只看结账，还是计入有记录的协助？请把 A 和 B 各自的二百元分好，再说出这个规则可能鼓励或抑制的一种行为。请暂停，投个票。
+  zh_hk: 你會試行淨係睇結帳，定係計埋有紀錄嘅協助？請將 A 同 B 各自嘅二百蚊分好，再講一種呢個規則可能鼓勵或者壓抑嘅行為。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Two orders start online
+  title_zh: 两张订单从线上开始
+  title_zh_hk: 兩張訂單由網上開始
+  step1_en: >-
+    C: online; advice at pickup, new size
+  step1_zh: C：线上付款，取货时帮忙换尺寸
+  step1_zh_hk: C：網上付款，取貨時協助換尺寸
+  step2_en: >-
+    D: online; collection only, no advice
+  step2_zh: D：线上付款，只取货，没建议
+  step2_zh_hk: D：網上付款，只取貨，沒有建議
+  step3_en: >-
+    Pre-payment rule: C and D don't qualify
+  step3_zh: 原规则只算付款前：C、D 都不算
+  step3_zh_hk: 原規則只計付款前：C、D 都不計
+  s1_en: >-
+    The other two orders run the other way. In C, the customer paid online for collection. At pickup,
+    a store adviser compared sizes and helped choose a different size at the same price. It is still one
+    order, with no extra sale.
+  s1_zh: 另外两张订单方向相反。C 的顾客线上付款、到店自取。取货时，门店顾问帮他比较尺寸，换成另一个同价的尺寸。这仍然是一张订单，没有额外销售。
+  s1_zh_hk: 另外兩張訂單方向相反。C 嘅顧客網上俾錢、到店自取。攞貨嗰陣，門市顧問幫佢比較尺寸，換咗另一個同價嘅尺寸。呢張仍然係一張訂單，冇額外銷售。
+  s2_en: >-
+    In D, the customer also paid online for collection. Store staff prepared and handed over the chosen
+    chair, with no selection advice. The collection work is real, but it is not advice.
+  s2_zh: D 的顾客同样线上付款、到店自取。门店员工把选好的椅子准备好交给他，没有提供选购建议。取货的工作是真的，但不算建议。
+  s2_zh_hk: D 嘅顧客一樣係網上俾錢、到店自取。門市員工將揀好嘅椅準備好交俾佢，冇俾選購意見。攞貨嘅工作係真嘅，但唔算意見。
+  s3_en: >-
+    The initial logged-assistance rule recognises advice only before payment, so neither C nor D qualifies
+    for its split.
+  s3_zh: 原来那个按协助分佣的规则，只算付款前的建议，所以 C 和 D 都不符合分佣条件。
+  s3_zh_hk: 原本嗰個按協助分佣嘅規則，淨係計俾錢之前嘅意見，所以 C 同 D 都唔符合分佣條件。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Revise or retain the rule?
+  title_zh: 修订还是维持？
+  title_zh_hk: 修訂還是維持？
+  en: >-
+    Would you revise the rule, or keep it? Show team allocations for all four orders within 800 dollars,
+    and add one safeguard against unnecessary advice or extra transactions made just to earn credit. Pause
+    and vote.
+  zh: >-
+    你会修订规则，还是维持原来的做法？请在八百元之内，列出四张订单两个团队各分多少，再加一项措施，防止有人为了分佣，多做不必要的咨询或交易。请暂停，投个票。
+  zh_hk: >-
+    你會修訂規則，定係維持原本做法？請喺八百蚊之內，列出四張訂單兩隊各分幾多，再加一項措施，防止有人為咗分佣，多做唔必要嘅諮詢或者交易。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Payment is one step
+  title_zh: 付款只是其中一环
+  title_zh_hk: 付款只是其中一環
+  step1_en: >-
+    Checkout-only: A, B online HK$200 each
+  step1_zh: 只看结账：A、B 都给线上 HK$200
+  step1_zh_hk: 只看結帳：A、B 都給網上 HK$200
+  step2_en: >-
+    Assisted: A HK$100 each; B online HK$200
+  step2_zh: 看协助：A 各 HK$100；B 线上 HK$200
+  step2_zh_hk: 看協助：A 各 HK$100；B 網上 HK$200
+  step3_en: Both rules give C and D wholly to online
+  step3_zh: 两个规则都把 C、D 全给线上
+  step3_zh_hk: 兩個規則都把 C、D 全給網上
+  s1_en: >-
+    Under checkout-only, A and B each give online 200 dollars and the store nothing. Under the assistance
+    rule, A gives 100 dollars to each team, and B still gives online 200. Either way, these two orders
+    total 400 dollars.
+  s1_zh: >-
+    只看结账的话，A 和 B 都是线上团队拿二百元，门店一分没有。按协助规则，A 两队各拿一百元，B 仍然是线上拿二百元。无论哪个规则，这两张单合计都是四百元。
+  s1_zh_hk: >-
+    淨係睇結帳嘅話，A 同 B 都係網上團隊攞二百蚊，門市一蚊都冇。按協助規則，A 兩隊各攞一百蚊，B 仍然係網上攞二百蚊。無論邊個規則，呢兩張單加埋都係四百蚊。
+  s2_en: >-
+    Checkout-only is easy to audit, but can make useful store advice invisible. Sharing recognises that
+    work, but can invite claims for minor interactions. These are incentive risks, not observed misconduct.
+  s2_zh: >-
+    只看结账容易核查，但有价值的门店建议可能完全体现不出来。分佣能肯定这份工作，却可能引来为很小的互动申请佣金。这些只是激励上的风险，不是已经观察到的不当行为。
+  s2_zh_hk: >-
+    淨係睇結帳容易核查，但有價值嘅門市意見可能完全反映唔到。分佣可以肯定呢份工作，但可能令人為咗好細嘅互動申請佣金。呢啲只係激勵上嘅風險，唔係已經見到嘅不當行為。
+  s3_en: >-
+    Both original rules give C and D entirely to online, because both were paid online and C's advice
+    came after payment. Yet C combined online ordering with real store advice and store fulfilment.
+  s3_zh: >-
+    两个原来的规则，都把 C 和 D 的佣金全给线上，因为都是线上付款，而 C 的建议是付款之后才给的。可是 C 其实结合了线上下单、实质的门店建议和门店履约。
+  s3_zh_hk: >-
+    兩個原本嘅規則，都將 C 同 D 嘅佣金全部俾網上，因為都係網上俾錢，而 C 嘅意見係俾完錢先有。但係 C 其實結合咗網上落單、實質嘅門市意見同門市履約。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Selection, checkout, fulfilment
+  title_zh: 拆开选购、结账、履约
+  title_zh_hk: 拆開選購、結帳、履約
+  step1_en: >-
+    Points: select 40 · pay 40 · fulfil 20
+  step1_zh: 100 点：选购 40 · 结账 40 · 履约 20
+  step1_zh_hk: 100 點：選購 40 · 結帳 40 · 履約 20
+  step2_en: A 80/120 · B 0/200 · C 120/80 · D 40/160
+  step2_zh: A 80/120 · B 0/200 · C 120/80 · D 40/160
+  step2_zh_hk: A 80/120 · B 0/200 · C 120/80 · D 40/160
+  step3_en: Store HK$240 · online HK$560 = HK$800
+  step3_zh: 门店 HK$240 · 线上 HK$560 · 合计 HK$800
+  step3_zh_hk: 門市 HK$240 · 網上 HK$560 · 合計 HK$800
+  s1_en: >-
+    One defensible pilot gives each order 100 points: 40 for selection support, 40 for checkout, 20 for
+    fulfilment. The store earns selection points only for a verified, order-linked consultation, before
+    or after payment.
+  s1_zh: >-
+    一个说得通的试点做法，是每张订单分一百点：选购协助四十点，结账四十点，履约二十点。只有经过核实、和订单挂钩的咨询，门店才拿选购点，付款前后都算。
+  s1_zh_hk: >-
+    一個講得通嘅試行做法，係每張訂單分一百點：選購協助四十點，結帳四十點，履約二十點。只有核實過、同訂單掛鈎嘅諮詢，門市先攞選購點，俾錢之前之後都計。
+  s2_en: >-
+    Each point is worth 2 dollars. Store and online receive 80 and 120 dollars for A, nothing and 200
+    for B, 120 and 80 for C, and 40 and 160 for D.
+  s2_zh: 每点值二元。门店和线上分别拿：A 八十元和一百二十元，B 零元和二百元，C 一百二十元和八十元，D 四十元和一百六十元。
+  s2_zh_hk: 每點值兩蚊。門市同網上分別攞：A 八十蚊同一百二十蚊，B 零蚊同二百蚊，C 一百二十蚊同八十蚊，D 四十蚊同一百六十蚊。
+  s3_en: >-
+    In total, the store gets 240 dollars and online 560, which is still 800. These are chosen policy weights,
+    not measured causal shares; another coherent set can be defended.
+  s3_zh: 合计门店二百四十元，线上五百六十元，加起来仍是八百元。这些是政策上选定的权重，不是量出来的因果份额；其他有道理的比例也说得通。
+  s3_zh_hk: 合共門市二百四十蚊，網上五百六十蚊，加埋仍然係八百蚊。呢啲係政策上揀嘅權重，唔係量度出嚟嘅因果份額；其他有道理嘅比例都講得通。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Cooperation over credit claims
+  title_zh: 让合作比争功容易
+  title_zh_hk: 讓合作比爭功容易
+  en: >-
+    Use one order ID and at most one selection-support claim, backed by a short record of the customer's
+    question and the comparison given. Cancelling and repurchasing creates no new pot. Moving commission
+    between teams creates no customer value by itself, so also watch redirection, waiting time and total
+    retailer contribution.
+  zh: >-
+    每张单只用一个订单编号，最多申请一次选购协助，并用简短记录写明顾客问了什么、门店给了什么比较。取消再下单，不会多出一笔佣金。佣金在两队之间挪来挪去，本身不会增加顾客价值，所以还要留意渠道被改变、等候时间和零售商的整体贡献。
+  zh_hk: >-
+    每張單只用一個訂單編號，最多申請一次選購協助，仲要有簡短紀錄，寫低顧客問咗乜、門市俾咗乜嘢比較。取消再落單，唔會多一筆佣金。佣金喺兩隊之間搬嚟搬去，本身唔會增加顧客價值，所以仲要留意渠道有冇被改、等候時間同零售商嘅整體貢獻。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Reward the work, not the till
+  title_zh: 按工作分，不只看结账
+  title_zh_hk: 按工作分，不只看結帳
+  q1_en: >-
+    Checkout-only: all four orders to online
+  q1_zh: 只看结账：四张单全给线上
+  q1_zh_hk: 只看結帳：四張單全給網上
+  q2_en: >-
+    40/40/20: store HK$240 · online HK$560
+  q2_zh: 40/40/20：门店 HK$240 · 线上 HK$560
+  q2_zh_hk: 40/40/20：門市 HK$240 · 網上 HK$560
+  s1_en: >-
+    Where the customer pays does not show where the work was done. Separate selection help, checkout and
+    fulfilment, and verify each claim.
+  s1_zh: 顾客在哪里付款，不代表工作在哪里完成。把选购协助、结账和履约分开，每次申请都要核实。
+  s1_zh_hk: 顧客喺邊度俾錢，唔代表工作喺邊度做。將選購協助、結帳同履約分開，每次申請都要核實。
+  s2_en: >-
+    Four constructed records test consistency; they do not show how many sales the store caused.
+  s2_zh: 这四张模拟记录只是测试规则是否一致，不能证明门店带来了多少笔交易。
+  s2_zh_hk: 呢四張模擬紀錄只係測試規則係咪一致，證明唔到門市帶嚟咗幾多宗生意。
+  s3_en: >-
+    Desk Corner, its four orders and every commission rule are fictional, not IKEA's practices. Official
+    scene art is a teaching illustration only.
+  s3_zh: Desk Corner、四张订单和所有佣金规则都是虚构的，不代表宜家家居的做法。官方场景图只是教学插图。
+  s3_zh_hk: Desk Corner、四張訂單同所有佣金規則都係虛構嘅，唔代表宜家家居嘅做法。官方場景圖只係教學插圖。
+duration_target_s: 196

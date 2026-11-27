@@ -2,9 +2,9 @@ id: FIN-17
 course_en: Micro Cases
 course_zh: Micro Cases
 course_zh_hk: Micro Cases
-title_en: More credit. A tighter promise?
-title_zh: 信贷更多，承诺就更紧吗？
-title_zh_hk: 信貸更多，承諾就更緊嗎？
+title_en: Cheaper credit. A tighter promise?
+title_zh: 信贷更便宜，承诺更紧吗？
+title_zh_hk: 信貸更便宜，承諾更緊嗎？
 beats:
 - id: hook
   visual: still_image
@@ -13,9 +13,9 @@ beats:
   kicker_en: FIN-17
   kicker_zh: FIN-17
   kicker_zh_hk: FIN-17
-  title_en: More credit. A tighter promise?
-  title_zh: 信贷更多，承诺就更紧吗？
-  title_zh_hk: 信貸更多，承諾就更緊嗎？
+  title_en: Cheaper credit. A tighter promise?
+  title_zh: 信贷更便宜，承诺更紧吗？
+  title_zh_hk: 信貸更便宜，承諾更緊嗎？
   image: art/cheaper-credit-tighter-promise-scene.jpg
   caption_en: Classroom assumptions, not a news report
   caption_zh: 课堂假设，不是新闻报道
@@ -102,7 +102,7 @@ beats:
   kicker_zh_hk: 暫停
   title_en: A at 6%, or B at 8%?
   title_zh: A 6%，还是 B 8%？
-  title_zh_hk: A 6%，定 B 8%？
+  title_zh_hk: A 6%，還是 B 8%？
   en: >-
     Which facility would you provisionally choose? Calculate A's base-case ratio and interest advantage,
     then explain why those figures alone do not establish adequate covenant headroom. Pause and vote.
@@ -157,7 +157,7 @@ beats:
   kicker_zh_hk: 暫停
   title_en: Keep your facility choice?
   title_zh: 还选原来那一笔吗？
-  title_zh_hk: 仲揀原本那一筆嗎？
+  title_zh_hk: 還選原本那一筆嗎？
   en: >-
     Would you keep your facility choice after the downside forecast? Calculate A's required principal
     reduction and remaining reserve, and distinguish a forecast warning, a failed test with an agreed
@@ -187,7 +187,7 @@ beats:
   step2_zh_hk: 最低 EBITDA：600,000 / 3 = 200,000
   step3_en: A saves 12,000 at a constant draw
   step3_zh: 持续全额使用：A 省 12,000
-  step3_zh_hk: 持續全額使用：A 慳 12,000
+  step3_zh_hk: 持續全額使用：A 省 12,000
   s1_en: The base ratio is 600,000 divided by 240,000, which is 2.5.
   s1_zh: 基础比率是六十万除以二十四万，等于二点五。
   s1_zh_hk: 基本比率係六十萬除二十四萬，等於二點五。

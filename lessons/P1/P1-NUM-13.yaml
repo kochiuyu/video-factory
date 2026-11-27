@@ -1,6 +1,6 @@
 # P1-NUM-13. Mirrors MathQuiz path hundred / lesson bundles,
 # "Tens, ones and one hundred".
-# Two tens and four ones make 24. Four tens and no ones make 40, not 4.
+# Two tens and four ones make 24. Four tens make forty. Four ones make four.
 # Ten tens make 100.
 # https://github.com/kochiuyu/mathquiz learn-data.js (path hundred, lesson bundles; steps in learn-hundred.js).
 # Speech is for age 6: one short idea per sentence. The heading is answered on screen.
@@ -51,9 +51,9 @@ beats:
   s2_en: The ones are zero.
   s2_zh: 个是零。
   s2_zh_hk: 個係零。
-  s3_en: Four tens make forty.
-  s3_zh: 四个十是四十。
-  s3_zh_hk: 四個十係四十。
+  s3_en: Four tens make forty. We can count them.
+  s3_zh: 四个十是四十。我们可以数一数。
+  s3_zh_hk: 四個十係四十。我哋可以數一數。
 
 - id: hundred
   visual: animated

@@ -2179,7 +2179,7 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(count_event(blocks[2]), (0, 10))
         self.assertEqual(blocks[0]["s3_en"], "Two tens and four ones make twenty-four.")
         self.assertEqual(blocks[0]["s3_zh"], "两个十和四个一，是二十四。")
-        self.assertEqual(blocks[1]["s3_zh_hk"], "四個十係四十。")
+        self.assertEqual(blocks[1]["s3_zh_hk"], "四個十係四十。我哋可以數一數。")
         self.assertNotIn("嗎", _beat_lines(thirteen, "zh_hk"))
         self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in thirteen["beats"]).lower())
         recap13 = next(beat for beat in thirteen["beats"] if beat["id"] == "takeaway")

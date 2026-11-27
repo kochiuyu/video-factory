@@ -1,0 +1,286 @@
+id: MKT-43
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: HK$550 on screen. HK$550 on the card?
+title_zh: 屏幕写 HK$550，信用卡就扣 HK$550？
+title_zh_hk: 屏幕寫 HK$550，信用卡就扣 HK$550？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-43
+  kicker_en: MKT-43
+  kicker_zh: MKT-43
+  kicker_zh_hk: MKT-43
+  title_en: HK$550 on screen. HK$550 on the card?
+  title_zh: 屏幕写 HK$550，信用卡就扣 HK$550？
+  title_zh_hk: 屏幕寫 HK$550，信用卡就扣 HK$550？
+  image: art/reference-price-not-final-charge-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Hong Kong's Consumer Council reported in 2015 that card costs can differ between paying in a shop's
+    currency and a cardholder-currency conversion. Now you design checkout for a fictional Shenzhen cookware
+    shop.
+  zh: 香港消费者委员会在二零一五年指出，用商家当地币种付款，和换算成持卡人币种付款，成本可能不同。现在，你为深圳一家虚构的厨具店设计结账页面。
+  zh_hk: 香港消費者委員會喺二零一五年指出，用商戶當地貨幣俾錢，同換算做持卡人貨幣俾錢，成本可能唔同。而家，你為深圳一間虛構嘅廚具店設計結賬頁面。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two ways to pay RMB 500
+  title_zh: 人民币 500 元，两种付法
+  title_zh_hk: 人民幣 500 元，兩種付法
+  row1_en: Pay RMB 500
+  row1_zh: 付人民币 500 元
+  row1_zh_hk: 付人民幣 500 元
+  row2_en: Merchant HKD quote
+  row2_zh: 商户港元报价
+  row2_zh_hk: 商戶港幣報價
+  col1_en: Exchange input
+  col1_zh: 示例汇率或报价
+  col1_zh_hk: 示例匯率或報價
+  col2_en: Added fees
+  col2_zh: 附加费
+  col2_zh_hk: 附加費
+  c11_en: HK$1.10 per RMB
+  c11_zh: 每元 HK$1.10
+  c11_zh_hk: 每元 HK$1.10
+  c12_en: +1.5% issuer fee
+  c12_zh: 发卡机构加 1.5%
+  c12_zh_hk: 發卡機構加 1.5%
+  c21_en: HK$572 fixed
+  c21_zh: 固定 HK$572
+  c21_zh_hk: 固定 HK$572
+  c22_en: None beyond quote
+  c22_zh: 已含全部费用
+  c22_zh_hk: 已包括全部費用
+  footer_en: HK$550 = RMB 500 at 1.10, pre-fee
+  footer_zh: HK$550 = 500 元 × 1.10，未计费
+  footer_zh_hk: HK$550 = 500 元 × 1.10，未計費
+  s1_en: >-
+    The shop sells one cookware bundle for 500 renminbi, including all shop charges. A visitor with the
+    example Hong Kong card may pay in renminbi, or explicitly accept a merchant conversion quote. The
+    shop's revenue is the same either way.
+  s1_zh: >-
+    这家店以人民币五百元出售一套厨具，已包含商家所有收费。持示例香港信用卡的旅客，可以用人民币付款，也可以明确同意商户的换汇报价。两种方式，商家的收入都一样。
+  s1_zh_hk: >-
+    呢間店用人民幣五百蚊賣一套廚具，已經包晒商戶所有收費。用示例香港信用卡嘅旅客，可以用人民幣俾錢，亦可以明確接受商戶嘅換匯報價。兩種方式，商戶收入都一樣。
+  s2_en: >-
+    Layout A shows a large 550 Hong Kong dollar reference estimate above the renminbi price. Layout B
+    puts renminbi 500 first, with the estimate beside it. Both label the estimate, offer both currencies
+    equally and show terms before consent.
+  s2_zh: >-
+    A 版在人民币五百元上方，用大字显示五百五十港元的参考估算；B 版先列人民币五百元，估算放在旁边。两版都注明这是估算，平等提供两种币种，并在顾客同意前展示条款。
+  s2_zh_hk: >-
+    A 版喺人民幣五百蚊上面，用大字顯示五百五十港元嘅參考估算；B 版先列人民幣五百蚊，估算放喺旁邊。兩版都註明係估算，平等提供兩種貨幣，仲會喺顧客同意之前顯示條款。
+  s3_en: >-
+    The 550 is just renminbi 500 at the example rate of 1.10, before the card issuer's 1.5 percent fee.
+    The merchant's fixed quote is 572 dollars, including all its conversion charges, with no further issuer
+    charge.
+  s3_zh: >-
+    这五百五十港元，只是把人民币五百元按示例汇率一点一换算，还没计入发卡机构百分之一点五的收费。商户的固定报价是五百七十二港元，已包含全部换汇收费，发卡机构不再另收。
+  s3_zh_hk: >-
+    呢五百五十港元，只係將人民幣五百蚊按示例匯率一點一換算，未計發卡機構百分之一點五嘅收費。商戶嘅固定報價係五百七十二港元，已經包晒所有換匯收費，發卡機構唔會再收。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which layout first?
+  title_zh: 先测试哪个版面？
+  title_zh_hk: 先測試哪個版面？
+  en: >-
+    Which layout would you test first? Compare the estimated amounts paid by the two routes, and say what
+    shoppers need to understand before selecting either one. Pause and vote.
+  zh: 你会先测试哪个版面？比较两种付款方式的估计金额，再说明顾客在选择之前需要明白什么。请暂停，投个票。
+  zh_hk: 你會先測試邊個版面？比較兩種俾錢方式嘅估計金額，再講吓顧客揀之前要明白啲咩。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A mock checkout, then a new rate
+  title_zh: 模拟结账，再换汇率
+  title_zh_hk: 模擬結賬，再換匯率
+  step1_en: >-
+    Completions: A 130/200, B 120/200
+  step1_zh: 完成：A 130/200，B 120/200
+  step1_zh_hk: 完成：A 130/200，B 120/200
+  step2_en: >-
+    Knew it was an estimate: 128 vs 168
+  step2_zh: 知道是估算：128 对 168
+  step2_zh_hk: 知道是估算：128 對 168
+  step3_en: >-
+    Sensitivity: HK$1.13 per RMB
+  step3_zh: 敏感度：每元 HK$1.13
+  step3_zh_hk: 敏感度：每元 HK$1.13
+  s1_en: >-
+    In a fictional randomized mock checkout, 200 adult volunteers saw A and 200 saw B. A had 130 mock
+    completions and B had 120. Nobody made a purchase.
+  s1_zh: >-
+    在一项虚构的随机模拟结账中，两百名成年志愿者看 A 版，另外两百名看 B 版。A 版有一百三十人完成模拟结账，B 版有一百二十人。没有人真的购买。
+  s1_zh_hk: >-
+    喺一個虛構嘅隨機模擬結賬入面，兩百個成年義工睇 A 版，另外兩百個睇 B 版。A 版有一百三十人完成模擬結賬，B 版有一百二十人。冇人真係買嘢。
+  s2_en: >-
+    Asked of every assigned volunteer, 128 in A and 168 in B correctly said the 550 was an estimate, not
+    a guaranteed Hong Kong dollar charge.
+  s2_zh: 另外问了每一位志愿者，A 版有一百二十八人、B 版有一百六十八人，正确指出五百五十港元只是估算，不是保证会扣的港元金额。
+  s2_zh_hk: 另外問咗每一位義工，A 版有一百二十八人、B 版有一百六十八人，答啱五百五十港元只係估算，唔係保證會扣嘅港元金額。
+  s3_en: >-
+    For a sensitivity check, suppose the issuer's rate turns out to be 1.13 rather than 1.10. The 1.5
+    percent fee and the 572-dollar quote do not change; round to the nearest cent.
+  s3_zh: 另作敏感度分析：假设发卡机构的实际汇率是一点一三，而不是一点一。百分之一点五的收费和五百七十二港元的报价都不变；金额四舍五入到分。
+  s3_zh_hk: 另外做敏感度分析：假設發卡機構嘅實際匯率係一點一三，唔係一點一。百分之一點五嘅收費同五百七十二港元嘅報價都唔變；金額四捨五入到仙。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which layout goes next?
+  title_zh: 哪个版面进入下一轮？
+  title_zh_hk: 哪個版面進入下一輪？
+  en: >-
+    Which layout would you take into the next controlled trial? Compare completion and comprehension,
+    recalculate the renminbi-route charge, and give one check before calling either layout commercially
+    better. Pause and vote.
+  zh: 你会把哪个版面带进下一轮对照测试？比较完成率和理解程度，重新计算人民币付款的扣款，并说出一项在判断商业表现之前要核实的事。请暂停，投个票。
+  zh_hk: 你會將邊個版面帶入下一輪對照測試？比較完成率同理解程度，重新計人民幣俾錢嘅扣款，再講一樣判斷商業表現之前要核實嘅嘢。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Compare on the same cost basis
+  title_zh: 按同样范围的成本比较
+  title_zh_hk: 按同樣範圍的成本比較
+  step1_en: >-
+    RMB route: HK$550 → HK$558.25 with fee
+  step1_zh: 人民币：HK$550 → 含费 HK$558.25
+  step1_zh_hk: 人民幣：HK$550 → 含費 HK$558.25
+  step2_en: >-
+    Merchant quote: HK$572 all-in
+  step2_zh: 商户报价：含费 HK$572
+  step2_zh_hk: 商戶報價：含費 HK$572
+  step3_en: RMB route about HK$13.75 less
+  step3_zh: 人民币付款约少 HK$13.75
+  step3_zh_hk: 人民幣付款約少 HK$13.75
+  s1_en: >-
+    At 1.10 per renminbi, the issuer route is 550 dollars before its fee and 558.25 after it.
+  s1_zh: 按每人民币一元兑一点一港元计算，发卡机构收费前是五百五十港元，收费后是五百五十八点二五港元。
+  s1_zh_hk: 按每人民幣一蚊兌一點一港元計，發卡機構收費之前係五百五十港元，收費之後係五百五十八點二五港元。
+  s2_en: The all-in fixed merchant quote is 572 dollars.
+  s2_zh: 商户含全部收费的固定报价是五百七十二港元。
+  s2_zh_hk: 商戶包晒收費嘅固定報價係五百七十二港元。
+  s3_en: >-
+    So the renminbi route is estimated to cost 13.75 dollars less. But the renminbi amount and the Hong
+    Kong dollar amount on the card statement are different things; keep the choice and the reason for
+    the difference visible.
+  s3_zh: >-
+    所以，用人民币付款估计少付十三点七五港元。但人民币交易金额和信用卡账单上的港元金额并不是一回事；画面要让顾客看清两种选择，以及金额为什么不同。
+  s3_zh_hk: >-
+    所以，用人民幣俾錢估計少俾十三點七五港元。但係人民幣交易金額同信用卡月結單上嘅港元金額唔係一回事；畫面要等顧客睇清楚兩種選擇，同埋金額點解唔同。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Two measures, then a reversal
+  title_zh: 两项指标，结论可逆转
+  title_zh_hk: 兩項指標，結論可逆轉
+  step1_en: Completion 65% vs 60%; knew 64% vs 84%
+  step1_zh: 完成 65% 对 60%；理解 64% 对 84%
+  step1_zh_hk: 完成 65% 對 60%；理解 64% 對 84%
+  step2_en: >-
+    B: −5 pts completion, +20 understood
+  step2_zh: B：完成低 5 点，理解高 20 点
+  step2_zh_hk: B：完成低 5 點，理解高 20 點
+  step3_en: >-
+    At 1.13: HK$573.48, HK$1.48 above quote
+  step3_zh: 1.13 时：HK$573.48，比报价高 1.48
+  step3_zh_hk: 1.13 時：HK$573.48，比報價高 1.48
+  s1_en: >-
+    A completes at 65 percent and B at 60. Comprehension is 64 percent against 84.
+  s1_zh: A 版的完成率是百分之六十五，B 版是百分之六十；正确理解的比例分别是百分之六十四和百分之八十四。
+  s1_zh_hk: A 版完成率係百分之六十五，B 版係百分之六十；答啱嘅比例分別係百分之六十四同百分之八十四。
+  s2_en: >-
+    In this small mock test, B gives up five percentage points of completion and gains twenty of comprehension.
+    Neither is realised margin, and the counts do not show how many both understood and completed.
+  s2_zh: 在这个小型模拟测试中，B 版的完成率低五个百分点，理解率却高二十个百分点。两项都不是实际利润，现有数字也看不出有多少人既理解又完成。
+  s2_zh_hk: 喺呢個細規模模擬測試入面，B 版完成率低五個百分點，理解率就高二十個百分點。兩樣都唔係實際利潤，現有數字亦睇唔出有幾多人又明白又完成。
+  s3_en: >-
+    At 1.13, the renminbi route is 565 dollars before fees and 573.48 after rounding: 1.48 above the same
+    merchant quote. So neither option is universally cheaper.
+  s3_zh: >-
+    如果汇率是一点一三，人民币付款收费前折合五百六十五港元，收费后四舍五入是五百七十三点四八港元，比同一个商户报价高一点四八港元。所以，没有哪种方式一定比较便宜。
+  s3_zh_hk: >-
+    如果匯率係一點一三，人民幣俾錢收費之前折合五百六十五港元，收費之後四捨五入係五百七十三點四八港元，比同一個商戶報價高一點四八港元。所以，冇一種方式一定平啲。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Test B next, measure both
+  title_zh: 下一轮测 B，两项一起量
+  title_zh_hk: 下一輪測 B，兩項一起量
+  en: >-
+    If avoiding mistaken expectations matters, take B into the next trial and measure completion and comprehension
+    on the same people. Do not call either route cheaper or recommend a card; verify actual issuer terms
+    and settled costs.
+  zh: >-
+    如果要减少顾客误会，下一轮可以测试 B 版，并在同一批人身上同时记录完成率和理解程度。不要说哪种方式一定较便宜，也不要推荐某张信用卡；要核实实际的发卡条款和最终入账金额。
+  zh_hk: >-
+    如果要減少顧客誤會，下一輪可以測試 B 版，喺同一批人身上同時記錄完成率同理解程度。唔好話邊種方式一定平啲，亦唔好推薦某張信用卡；要核實實際嘅發卡條款同最後入賬金額。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: An estimate ≠ the final charge
+  title_zh: 估算不等于最终扣款
+  title_zh_hk: 估算不等於最終扣款
+  q1_en: Compare routes on the same cost basis
+  q1_zh: 按同样范围的成本比较
+  q1_zh_hk: 按同樣範圍的成本比較
+  q2_en: Completion ≠ informed completion
+  q2_zh: 完成 ≠ 理解后完成
+  q2_zh_hk: 完成 ≠ 明白後完成
+  s1_en: >-
+    A reference estimate helps only if shoppers know it is an estimate and what the card will actually
+    charge.
+  s1_zh: 参考估算只有在顾客知道它是估算，也明白信用卡实际会扣多少时，才真正有用。
+  s1_zh_hk: 參考估算只有喺顧客知道佢係估算，亦明白信用卡實際會扣幾多嘅時候，先至真係有用。
+  s2_en: >-
+    Observe how often shoppers correctly predict the order currency in any approved future evaluation.
+  s2_zh: 日后如获准评估，应观察顾客正确预计订单以哪种币种结算的比例。
+  s2_zh_hk: 日後如果獲准評估，應該觀察顧客準確預計訂單用邊種貨幣結算嘅比例。
+  s3_en: >-
+    The shop, card, rates, fees and test results are fictional; this is not card advice. Official scene
+    art is a teaching illustration only.
+  s3_zh: 商店、信用卡、汇率、收费和测试结果都是虚构的，并非信用卡建议。官方场景图只是教学插图。
+  s3_zh_hk: 商店、信用卡、匯率、收費同測試結果都係虛構嘅，並非信用卡建議。官方場景圖只係教學插圖。
+duration_target_s: 196

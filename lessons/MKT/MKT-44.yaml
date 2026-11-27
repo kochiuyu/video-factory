@@ -1,0 +1,270 @@
+id: MKT-44
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Five stars. Will it fit?
+title_zh: 评分有五星，可我的型号能用吗？
+title_zh_hk: 評價有五星，裝上去合用嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-44
+  kicker_en: MKT-44
+  kicker_zh: MKT-44
+  kicker_zh_hk: MKT-44
+  title_en: Five stars. Will it fit?
+  title_zh: 评分有五星，可我的型号能用吗？
+  title_zh_hk: 評價有五星，裝上去合用嗎？
+  image: art/five-stars-will-it-fit-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A Journal of Marketing Research study of a major UK retailer separated ratings about quality from
+    questions about product fit. Now you run a fictional Hong Kong shop's online listing for a blender
+    jar.
+  zh: >-
+    《市场营销研究期刊》的一项研究追踪了英国一家大型零售商，把评价质量的星级，和询问产品是否适配的问题区分开来。现在，你负责香港一家虚构商店的线上商品页，卖的是一款搅拌杯。
+  zh_hk: >-
+    《市場營銷研究期刊》有一項研究追蹤咗英國一間大型零售商，將評價質素嘅星級，同問產品啱唔啱用嘅問題分開。而家，你負責香港一間虛構商店嘅網上商品頁，賣緊一款攪拌杯。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two listing layouts, 100 each
+  title_zh: 两种版面，各 100 人
+  title_zh_hk: 兩種版面，各 100 人
+  row1_en: Layout S
+  row1_zh: S 版
+  row1_zh_hk: S 版
+  row2_en: Layout F
+  row2_zh: F 版
+  row2_zh_hk: F 版
+  col1_en: Eligible shoppers
+  col1_zh: 符合条件顾客
+  col1_zh_hk: 合資格顧客
+  col2_en: Shipped orders
+  col2_zh: 已发货订单
+  col2_zh_hk: 已出貨訂單
+  c11: '100'
+  c12: '54'
+  c21: '100'
+  c22: '64'
+  footer_en: Kept HK$180 · return −HK$60
+  footer_zh: 留下 HK$180 · 退货 −HK$60
+  footer_zh_hk: 留下 HK$180 · 退貨 −HK$60
+  s1_en: >-
+    The jar fits Series A bases but not the physically similar Series B. Both layouts keep the same official
+    compatibility statement, genuine reviews and Q and A; nothing is hidden and no price changes.
+  s1_zh: 这款搅拌杯适用于 A 系列底座，却装不上外形相近的 B 系列。两种版面都保留相同的官方兼容性说明、真实评论和问答；不隐藏任何内容，也不改价。
+  s1_zh_hk: 呢款攪拌杯啱 A 系列底座，但裝唔上外形差唔多嘅 B 系列。兩種版面都保留同樣嘅官方兼容說明、真實評論同問答；乜都冇收埋，亦唔改價。
+  s2_en: >-
+    Layout S features the full star distribution, with Q and A a click away. Layout F features two recurring
+    compatibility questions, chosen by frequency, not by how positive the answer is.
+  s2_zh: S 版把完整的星级分布放在显眼位置，问答点一下就能看到。F 版在同一位置放两条常见的兼容性问题，按提问次数挑选，不看答案是否正面。
+  s2_zh_hk: S 版將完整嘅星級分佈放喺當眼位置，問答撳一下就睇到。F 版喺同一位置放兩條常見嘅兼容問題，按問嘅次數揀，唔睇答案係咪正面。
+  s3_en: >-
+    A fictional randomized pilot reaches 100 eligible visitors per layout. S ships 54 orders and F ships
+    64. Each kept order earns 180 dollars; each returned order loses 60, including handling.
+  s3_zh: >-
+    一项虚构的随机试验中，每个版面各有一百位符合条件的访客。S 版发出五十四张订单，F 版发出六十四张。每张没退货的订单赚一百八十元；每张退货订单连处理费净亏六十元。
+  s3_zh_hk: >-
+    一個虛構嘅隨機試驗入面，每個版面各有一百位合資格訪客。S 版出咗五十四張單，F 版出咗六十四張。每張冇退貨嘅單賺一百八十蚊；每張退貨單連手續費淨蝕六十蚊。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: S or F, tentatively?
+  title_zh: 暂选 S 还是 F？
+  title_zh_hk: 暫選 S 還是 F？
+  en: >-
+    Which layout would you tentatively favour on these early results? What does the star distribution
+    tell buyers, what does the compatibility panel tell them, and what outcome do you still need to measure?
+    Pause and vote.
+  zh: 根据这些初步结果，你暂时倾向哪个版面？星级分布告诉买家什么？兼容性问答又告诉他们什么？你还需要衡量哪个结果？请暂停，投个票。
+  zh_hk: 根據呢啲初步結果，你暫時傾向邊個版面？星級分佈話俾買家知啲咩？兼容問答又話俾佢哋知啲咩？你仲要量度邊個結果？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Returns, and a mislabelled reply
+  title_zh: 退货，加上一个标错的回答
+  title_zh_hk: 退貨，加上一個標錯的回答
+  step1_en: >-
+    Returns: S 9 of 54, F 20 of 64
+  step1_zh: 退货：S 54 单退 9，F 64 单退 20
+  step1_zh_hk: 退貨：S 54 單退 9，F 64 單退 20
+  step2_en: >-
+    Wrong-series returns: S 2, F 12
+  step2_zh: 买错系列：S 2 单，F 12 单
+  step2_zh_hk: 買錯系列：S 2 單，F 12 單
+  step3_en: F's answer described an earlier jar
+  step3_zh: F 的一个回答说的是旧款
+  step3_zh_hk: F 的一個回答說的是舊款
+  s1_en: >-
+    Nine of S's 54 shipped orders and twenty of F's 64 were returned. All other shipped orders were kept.
+  s1_zh: S 版五十四张已发货订单中有九张退货，F 版六十四张中有二十张退货，其余订单都留下了。
+  s1_zh_hk: S 版五十四張已出貨訂單入面有九張退貨，F 版六十四張入面有二十張退貨，其餘嘅單都冇退。
+  s2_en: >-
+    Of those returns, two in S and twelve in F were verified wrong-series orders; these are part of the
+    returns, not extra orders.
+  s2_zh: 在这些退货中，S 版有两张、F 版有十二张经核实是买错了系列；它们是退货的一部分，不是额外的订单。
+  s2_zh_hk: 喺呢啲退貨入面，S 版有兩張、F 版有十二張經核實係買錯系列；佢哋係退貨嘅一部分，唔係額外嘅單。
+  s3_en: >-
+    A genuine owner's answer featured in F described an earlier jar, after a page migration attached the
+    wrong variant label. Correct it in all displays now, keep the original material on the right item,
+    and preserve critical reviews.
+  s3_zh: >-
+    F 版展示的一则真实用户回答，其实说的是旧款搅拌杯，原因是网页迁移时贴错了款式标签。要立即在所有页面更正，把原来的内容放回正确的产品，并保留差评。
+  s3_zh_hk: >-
+    F 版展示嘅一個真實用家回答，其實講緊舊款攪拌杯，原因係網頁搬遷嗰陣貼錯咗款式標籤。要即刻喺所有頁面更正，將原本嘅內容放返落正確嘅產品，同保留負評。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Correct it, then compare
+  title_zh: 更正后，再比较
+  title_zh_hk: 更正後，再比較
+  en: >-
+    What would you show after correcting the mapping? Compare kept orders and net contribution, then calculate
+    how many of F's returns would have to become kept orders for F to beat S. Pause and vote.
+  zh: 更正对应关系后，你会展示什么？比较留下的订单和净贡献，再算一算，F 版要有多少张退货变成留下的订单，才能胜过 S 版。请暂停，投个票。
+  zh_hk: 更正對應關係之後，你會顯示啲咩？比較冇退貨嘅單同淨貢獻，再計吓，F 版要有幾多張退貨變成冇退，先至贏到 S 版。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Purchases are not the end
+  title_zh: 购买不是终点
+  title_zh_hk: 購買不是終點
+  step1_en: >-
+    Kept: S 45, F 44
+  step1_zh: 留下：S 45 单，F 44 单
+  step1_zh_hk: 留下：S 45 單，F 44 單
+  step2_en: >-
+    S: 45 × 180 − 9 × 60 = HK$7,560
+  step2_zh: S：45 × 180 − 9 × 60 = HK$7,560
+  step2_zh_hk: S：45 × 180 − 9 × 60 = HK$7,560
+  step3_en: >-
+    F: 44 × 180 − 20 × 60 = HK$6,720
+  step3_zh: F：44 × 180 − 20 × 60 = HK$6,720
+  step3_zh_hk: F：44 × 180 − 20 × 60 = HK$6,720
+  s1_en: >-
+    S ships 54 and keeps 45; F ships 64 and keeps 44. F's ten extra shipments ended with one fewer kept
+    order.
+  s1_zh: S 版发出五十四张，留下四十五张；F 版发出六十四张，留下四十四张。F 版多发了十张，最后留下的反而少一张。
+  s1_zh_hk: S 版出咗五十四張，留低四十五張；F 版出咗六十四張，留低四十四張。F 版多出咗十張，最後留低嘅反而少一張。
+  s2_en: >-
+    S's net contribution is 45 times 180, minus 9 times 60, which is 7,560 dollars.
+  s2_zh: S 版的净贡献是四十五乘一百八十，减九乘六十，等于七千五百六十元。
+  s2_zh_hk: S 版嘅淨貢獻係四十五乘一百八十，減九乘六十，即係七千五百六十蚊。
+  s3_en: >-
+    F's is 44 times 180, minus 20 times 60, which is 6,720 dollars. S leads by 840.
+  s3_zh: F 版是四十四乘一百八十，减二十乘六十，等于六千七百二十元。S 版领先八百四十元。
+  s3_zh_hk: F 版係四十四乘一百八十，減二十乘六十，即係六千七百二十蚊。S 版領先八百四十蚊。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Repair the link, then retest
+  title_zh: 修正链接，再测试
+  title_zh_hk: 修正連結，再測試
+  step1_en: >-
+    Each return turned kept: +HK$240
+  step1_zh: 每张退货变留下：+HK$240
+  step1_zh_hk: 每張退貨變留下：+HK$240
+  step2_en: >-
+    Three: +HK$720, not enough
+  step2_zh: 三张：+HK$720，不够
+  step2_zh_hk: 三張：+HK$720，不夠
+  step3_en: >-
+    Four: HK$7,680, HK$120 above S
+  step3_zh: 四张：HK$7,680，比 S 高 120
+  step3_zh_hk: 四張：HK$7,680，比 S 高 120
+  s1_en: >-
+    Switching one return to one kept order adds 240 dollars at fixed shipments: 180 gained plus 60 not
+    lost.
+  s1_zh: 在发货量不变的情况下，每把一张退货变成留下的订单，就多二百四十元：多赚一百八十，加上少亏六十。
+  s1_zh_hk: 喺出貨量唔變嘅情況下，每將一張退貨變成冇退，就多二百四十蚊：多賺一百八十，加少蝕六十。
+  s2_en: >-
+    Three would add 720 dollars, which is not enough. Four add 960 and take F to 7,680 dollars, 120 above
+    S.
+  s2_zh: 三张多七百二十元，还不够；四张多九百六十元，F 版就到七千六百八十元，比 S 版高一百二十元。
+  s2_zh_hk: 三張多七百二十蚊，仲未夠；四張多九百六十蚊，F 版就去到七千六百八十蚊，比 S 版高一百二十蚊。
+  s3_en: >-
+    That is a sensitivity calculation, not a prediction that correcting the link will prevent four returns
+    or keep the shipment count.
+  s3_zh: 这只是敏感度计算，不是预测更正链接后就能减少四张退货，或者维持同样的发货量。
+  s3_zh_hk: 呢個只係敏感度計算，唔係預測更正連結之後就可以少四張退貨，或者維持同樣嘅出貨量。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Use S now; retest a checked F
+  title_zh: 现在用 S，核实后再测 F
+  title_zh_hk: 現在用 S，核實後再測 F
+  en: >-
+    Use S now, with a correct and clearly visible compatibility statement. Retest F only when featured
+    answers carry a checked product-version label, retailer answers are distinguished from owner answers,
+    and buyers can still find all genuine reviews.
+  zh: >-
+    现在先用 S 版，并清楚显示正确的兼容性说明。只有当展示的回答都标有经核实的产品版本、商家回答和用户回答分得清楚，而且买家仍能找到所有真实评论时，才重新测试 F 版。
+  zh_hk: >-
+    而家先用 S 版，清楚顯示正確嘅兼容說明。要等展示嘅回答都有經核實嘅產品版本標籤、商戶回答同用家回答分得清楚，而且買家仍然搵到所有真實評論，先至重新測試 F 版。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Stars ≠ fit
+  title_zh: 星级 ≠ 适配
+  title_zh_hk: 星級 ≠ 合用
+  q1_en: Measure kept orders, not just orders
+  q1_zh: 衡量留下的订单，不只看下单
+  q1_zh_hk: 量度留下的訂單，不只看落單
+  q2_en: Never screen out negative reviews
+  q2_zh: 绝不筛走差评
+  q2_zh_hk: 絕不篩走負評
+  s1_en: >-
+    Measure kept orders, wrong-model returns and contribution per eligible visitor, over the same return
+    window.
+  s1_zh: 要在相同的退货期内，衡量留下的订单、买错型号的退货，以及每位符合条件访客带来的贡献。
+  s1_zh_hk: 要喺同一個退貨期內，量度留低嘅訂單、買錯型號嘅退貨，同每位合資格訪客帶嚟嘅貢獻。
+  s2_en: Do not optimise the star average by screening out negative reviews.
+  s2_zh: 不要靠筛走差评来提高平均星级。
+  s2_zh_hk: 唔好靠篩走負評嚟谷高平均星級。
+  s3_en: >-
+    The shop, jar, pilot and all results are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 商店、搅拌杯、试验和所有结果都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 商店、攪拌杯、試驗同所有結果都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

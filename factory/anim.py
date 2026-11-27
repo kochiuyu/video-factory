@@ -3176,6 +3176,309 @@ def _scene_types() -> dict:
         dots.arrange(RIGHT, buff=0.08)
         return dots
 
+    class NumberBlocks(_Board):
+        """Tens bundles up to 100, a comparison, an order, a short hop, or equal groups."""
+
+        def construct(self):
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            mode = str(labels.get("mode") or self.vf_mode or "tens")
+            ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+            pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
+            portrait = ph > pw
+            title = self._label(labels.get("title") or "", latin, cjk)
+            if mode == "compare":
+                self._compare(labels, latin, cjk, portrait, title)
+            elif mode == "order":
+                self._order(labels, latin, cjk, portrait, title)
+            elif mode == "hop":
+                self._hop(labels, latin, cjk, title)
+            elif mode == "groups":
+                self._groups(labels, latin, cjk, portrait, title)
+            else:
+                self._tens(labels, latin, cjk, title)
+
+        def _label(self, text, latin, cjk, scale=1.0):
+            glyph = styled(str(text) if str(text).strip() else " ", latin, cjk, 64)
+            target = _ordinal_label_height() * scale
+            if float(glyph.height) > 0:
+                glyph.scale(target / float(glyph.height))
+            return glyph
+
+        def _limits(self):
+            left, right, bot, top = _safe_limits()
+            return left, right, bot, top, right - left, top - bot
+
+        def _fit_width(self, mob, max_w):
+            if float(mob.width) > max_w > 0:
+                mob.scale(max_w / float(mob.width))
+            return mob
+
+        def _seat(self, stack):
+            left, right, bot, top, max_w, max_h = self._limits()
+            self._fit_width(stack, max_w * 0.98)
+            if float(stack.height) > max_h and float(stack.height) > 0:
+                stack.scale(max_h / float(stack.height))
+            stack.move_to([(left + right) / 2.0, (bot + top) / 2.0, 0])
+            return stack
+
+        def _rod(self, w, h):
+            return RoundedRectangle(
+                width=w,
+                height=h,
+                corner_radius=min(0.08, h * 0.12),
+                stroke_color=NAVY,
+                stroke_width=3,
+                fill_color=GREEN,
+                fill_opacity=1,
+            )
+
+        def _bundles(self, count, latin, cjk, *, rod_w, rod_h, cols):
+            tens, ones = divmod(int(count), 10)
+            rods = VGroup(*[self._rod(rod_w, rod_h) for _ in range(tens)])
+            if tens:
+                used = min(cols, tens)
+                rods.arrange_in_grid(rows=(tens + used - 1) // used, cols=used, buff=0.1)
+            if ones:
+                dots = VGroup(*[counter(GOLD, min(0.15, rod_h * 0.2)) for _ in range(ones)])
+                dots.arrange(RIGHT, buff=0.08)
+                loose = dots
+            else:
+                zero = self._label("0", latin, cjk)
+                mat = RoundedRectangle(
+                    width=max(float(zero.width) + 0.42, rod_w * 2.4),
+                    height=float(zero.height) + 0.34,
+                    corner_radius=0.1,
+                    stroke_color=NAVY,
+                    stroke_width=3,
+                    fill_color=WHITE,
+                    fill_opacity=1,
+                )
+                zero.move_to(mat)
+                loose = VGroup(mat, zero)
+            pic = VGroup(rods, loose).arrange(DOWN, buff=0.16) if tens else VGroup(loose)
+            return pic, rods, loose
+
+        def _show(self, index, *mobs):
+            chosen = [mob for mob in mobs if mob is not None]
+            if not chosen:
+                self.spend(index)
+                return
+            self.spend_each(index, [lambda chosen=chosen: AnimationGroup(*[mob.animate.set_opacity(1) for mob in chosen])])
+
+        def _tens(self, labels, latin, cjk, title):
+            count = int(labels.get("count") or 0)
+            pic, rods, loose = self._bundles(count, latin, cjk, rod_w=0.46, rod_h=1.02, cols=5)
+            number = self._label(str(count), latin, cjk, 1.4)
+            left, right, bot, top, max_w, max_h = self._limits()
+            room = max_h - float(title.height) - float(number.height) - 0.7
+            if float(pic.height) > room > 0.4:
+                pic.scale(room / float(pic.height))
+            self._fit_width(pic, max_w * 0.96)
+            stack = self._seat(VGroup(title, pic, number).arrange(DOWN, buff=0.2))
+            rod_list = list(rods)
+            for mob in (title, loose, number, *rod_list):
+                mob.set_opacity(0)
+            self.add(stack)
+            marks = self.marks_for(0)
+            if rod_list and marks and len(marks) == len(rod_list):
+                hops = [lambda rod=rod: rod.animate.set_opacity(1) for rod in rod_list]
+                self.spend_marked(0, hops, marks, intro=title.animate.set_opacity(1))
+            else:
+                self._show(0, title, *rod_list)
+            self._show(1, loose)
+            self._show(2, number)
+
+        def _card(self, count, latin, cjk):
+            pic, _rods, _loose = self._bundles(count, latin, cjk, rod_w=0.3, rod_h=0.58, cols=5)
+            num = self._label(str(count), latin, cjk, 1.25)
+            return VGroup(num, pic).arrange(DOWN, buff=0.12), num
+
+        def _compare(self, labels, latin, cjk, portrait, title):
+            a, b = int(labels.get("a") or 0), int(labels.get("b") or 0)
+            left_card, left_num = self._card(a, latin, cjk)
+            right_card, right_num = self._card(b, latin, cjk)
+            pair = VGroup(left_card, right_card)
+            pair.arrange(DOWN if portrait else RIGHT, buff=0.36 if portrait else 0.7)
+            _left, _right, _bot, _top, max_w, max_h = self._limits()
+            room = max_h - float(title.height) - 0.45
+            if float(pair.height) > room > 0.4:
+                pair.scale(room / float(pair.height))
+            self._fit_width(pair, max_w * 0.96)
+            stack = self._seat(VGroup(title, pair).arrange(DOWN, buff=0.24))
+            winner = left_num if a > b else right_num
+            ring = SurroundingRectangle(winner, color=GOLD, buff=0.12, stroke_width=7)
+            for mob in (title, left_card, right_card):
+                mob.set_opacity(0)
+            self.add(stack)
+            self._show(0, title, left_card)
+            self._show(1, right_card)
+            self.spend(2, Create(ring))
+
+        def _order(self, labels, latin, cjk, portrait, title):
+            values = [int(v) for v in (labels.get("values") or [])]
+            cards = []
+            for value in values:
+                num = self._label(str(value), latin, cjk, 1.45)
+                box = RoundedRectangle(
+                    width=float(num.width) + 0.46,
+                    height=float(num.height) + 0.38,
+                    corner_radius=0.12,
+                    stroke_color=NAVY,
+                    stroke_width=4,
+                    fill_color=WHITE,
+                    fill_opacity=1,
+                )
+                num.move_to(box)
+                cards.append(VGroup(box, num))
+            row = VGroup(*cards)
+            if portrait and len(cards) >= 4:
+                row.arrange_in_grid(rows=2, cols=2, buff=0.24)
+            else:
+                row.arrange(RIGHT, buff=0.3)
+            stack = self._seat(VGroup(title, row).arrange(DOWN, buff=0.36))
+            for mob in (title, *cards):
+                mob.set_opacity(0)
+            self.add(stack)
+            self._show(0, title, cards[0])
+            middle = cards[1:-1]
+            self._show(1, *middle)
+            self._show(2, cards[-1])
+
+        def _hop(self, labels, latin, cjk, title):
+            start = int(labels.get("start") or 0)
+            end = int(labels.get("end") or start)
+            lo, hi = min(start, end), max(start, end)
+            values = list(range(lo, hi + 1))
+            sample = self._label(str(max(values, key=lambda n: len(str(n)))), latin, cjk)
+            _left, _right, _bot, _top, max_w, _max_h = self._limits()
+            gap = 0.12
+            cell = max(float(sample.width) + 0.36, float(sample.height) + 0.32)
+            row_w = cell * len(values) + gap * (len(values) - 1)
+            if row_w > max_w * 0.96 and row_w > 0:
+                cell *= (max_w * 0.96) / row_w
+            boxes = {}
+            grid = VGroup()
+            for i, value in enumerate(values):
+                box = RoundedRectangle(
+                    width=cell,
+                    height=cell * 0.86,
+                    corner_radius=0.1,
+                    stroke_color=NAVY,
+                    stroke_width=3,
+                    fill_color=WHITE,
+                    fill_opacity=1,
+                )
+                num = self._label(str(value), latin, cjk)
+                if float(num.width) > cell * 0.82:
+                    num.scale(cell * 0.82 / float(num.width))
+                if float(num.height) > cell * 0.62:
+                    num.scale(cell * 0.62 / float(num.height))
+                num.set_z_index(12)
+                num.move_to(box)
+                card = VGroup(box, num)
+                card.move_to([(i - (len(values) - 1) / 2.0) * (cell + gap), 0, 0])
+                boxes[value] = card
+                grid.add(card)
+            marker = RoundedRectangle(
+                width=cell * 1.14,
+                height=cell * 1.02,
+                corner_radius=0.14,
+                stroke_color=GOLD,
+                stroke_width=8,
+                fill_opacity=0,
+            )
+            marker.set_z_index(4)
+            marker.set_fill(opacity=0)
+            answer = self._label(str(end), latin, cjk, 1.4)
+            body = VGroup(title, grid, answer).arrange(DOWN, buff=0.28)
+            stack = self._seat(body)
+            marker.move_to(boxes[start])
+            answer.set_opacity(0)
+            marker.set_stroke(opacity=0)
+            title.set_opacity(0)
+            self.add(stack, marker)
+            self._show(0, title, grid)
+            step_by = 1 if end >= start else -1
+            visits = list(range(start, end + step_by, step_by))
+            counted = self.marks_for(1)
+            hops = [lambda: marker.animate.set_stroke(opacity=1)]
+            for value in visits[1:]:
+                dest = boxes[value].get_center().copy()
+                hops.append(lambda dest=dest: marker.animate.move_to(dest))
+            if counted and len(counted) == len(hops):
+                self.spend_marked(1, hops, counted)
+            else:
+                self.spend_each(1, hops)
+            self._show(2, answer)
+
+        def _groups(self, labels, latin, cjk, portrait, title):
+            size = max(2, int(labels.get("a") or 2))
+            boxes_n = max(1, int(labels.get("n") or 1))
+            extra = max(0, int(labels.get("extra") or 0))
+            cols = 3 if portrait else min(6, boxes_n)
+            columns = []
+            tags = []
+            for i in range(boxes_n):
+                dots = VGroup(*[counter(GREEN, 0.13) for _ in range(size)])
+                dots.arrange(RIGHT, buff=0.07)
+                pad = RoundedRectangle(
+                    width=float(dots.width) + 0.32,
+                    height=float(dots.height) + 0.3,
+                    corner_radius=0.1,
+                    stroke_color=NAVY,
+                    stroke_width=3,
+                    fill_color=WHITE,
+                    fill_opacity=1,
+                )
+                dots.move_to(pad)
+                tag = self._label(str((i + 1) * size), latin, cjk)
+                columns.append(VGroup(VGroup(pad, dots), tag).arrange(DOWN, buff=0.1))
+                tags.append(tag)
+            used = min(cols, boxes_n)
+            row = VGroup(*columns)
+            row.arrange_in_grid(rows=(boxes_n + used - 1) // used, cols=used, buff=0.22)
+            loose = None
+            if extra:
+                loose_dots = VGroup(*[counter(GOLD, 0.18) for _ in range(extra)])
+                loose_dots.arrange(RIGHT, buff=0.16)
+                ring = SurroundingRectangle(loose_dots, color=GOLD, buff=0.1, stroke_width=5)
+                ring.set_fill(opacity=0)
+                loose = VGroup(loose_dots, ring)
+                loose.next_to(row, RIGHT if not portrait else DOWN, buff=0.28)
+            total = self._label(str(size * boxes_n + extra), latin, cjk, 1.35)
+            parts = [title, VGroup(row, loose) if loose is not None else row, total]
+            stack = self._seat(VGroup(*parts).arrange(DOWN, buff=0.24))
+            for mob in (title, total, *tags):
+                mob.set_opacity(0)
+            if loose is not None:
+                loose[0].set_opacity(0)
+                loose[1].set_fill(opacity=0)
+                loose[1].set_stroke(opacity=0)
+            self.add(stack)
+            pads = [column[0] for column in columns]
+            self._show(0, title, *pads)
+            marks = self.marks_for(1)
+            reveals = [lambda tag=tag: tag.animate.set_opacity(1) for tag in tags]
+            if marks and len(marks) == len(reveals):
+                self.spend_marked(1, reveals, marks)
+            else:
+                self.spend_each(1, reveals)
+            if loose is None:
+                self._show(2, total)
+            else:
+                dot, ring = loose[0], loose[1]
+
+                def reveal_loose(dot=dot, ring=ring, total=total):
+                    # The ring and the loose counter pop on this line. A
+                    # grouped .animate would share one target and stay hidden.
+                    dot.set_opacity(1)
+                    ring.set_fill(opacity=0)
+                    ring.set_stroke(opacity=1)
+                    return total.animate.set_opacity(1)
+
+                self.spend_each(2, [reveal_loose])
+
     _scene_types._cache = {
         "one_ten": OneTen,
         "ten_and_ones": TenAndOnes,
@@ -3185,6 +3488,7 @@ def _scene_types() -> dict:
         "ordinal_row": OrdinalRow,
         "pair_counters": PairCounters,
         "part_whole": PartWhole,
+        "number_blocks": NumberBlocks,
         "lesson_hook": LessonHook,
         "lesson_takeaway": LessonTakeaway,
     }

@@ -1018,6 +1018,29 @@ def count_event(beat: dict) -> tuple[int, int] | None:
         if _part_pair_problems(beat) or a < 0 or b < 0:
             return None
         return 1, 2
+    if scene == "number_blocks":
+        mode = str(beat.get("mode") or "").strip()
+        if mode == "tens":
+            count = _as_int(beat.get("count"))
+            if count is None or not 0 <= count <= 100:
+                return None
+            tens = count // 10
+            if tens < 1:
+                return None
+            return 0, tens
+        if mode == "hop":
+            start, end = _as_int(beat.get("start")), _as_int(beat.get("end"))
+            if start is None or end is None or start == end:
+                return None
+            if abs(end - start) > 5:
+                return None
+            return 1, abs(end - start) + 1
+        if mode == "groups":
+            boxes = _as_int(beat.get("n"))
+            if boxes is None or not 1 <= boxes <= 6:
+                return None
+            return 1, boxes
+        return None
     if scene == "lesson_takeaway":
         # A ten-frame recap counts the three ones on its last line
         # ("Find the ten first. Then count the rest.").
@@ -1174,6 +1197,142 @@ def schedule_marks(beat: dict, durations: list[float], words) -> list[list[float
     return marks
 
 
+class NumberBlocks(SceneKind):
+    """Tens bundles up to 100, a comparison, an order, a short hop, or equal groups.
+
+    ``mode`` is ``tens``, ``compare``, ``order``, ``hop``, or ``groups``.
+    ``tens`` draws ``count`` (0–100) as bundles of ten and the leftover ones.
+    Zero ones are an empty mat. ``compare`` shows ``a`` and ``b``. ``order``
+    shows ``a``, ``b``, and optional ``n`` and ``mark``, left to right.
+    ``hop`` is a short row from ``start`` to ``end``, at most five steps
+    apart. ``groups`` draws ``n`` boxes of ``a``, plus ``b`` loose counters.
+    """
+
+    name = "number_blocks"
+    steps = 3
+
+    def problems(self, beat: dict) -> list[str]:
+        mode = str(beat.get("mode") or "").strip()
+        if mode == "tens":
+            count = _as_int(beat.get("count"))
+            if count is None or not 0 <= count <= 100:
+                return ["number_blocks mode tens needs a count from 0 to 100."]
+            return []
+        if mode == "compare":
+            a, b = _as_int(beat.get("a")), _as_int(beat.get("b"))
+            if a is None or b is None or not (0 <= a <= 100 and 0 <= b <= 100):
+                return ["number_blocks mode compare needs a and b from 0 to 100."]
+            if a == b:
+                return ["number_blocks mode compare needs two different numbers."]
+            return []
+        if mode == "order":
+            values = _block_values(beat)
+            if len(values) < 2:
+                return ["number_blocks mode order needs a and b, and may add n and mark."]
+            if any(v is None or not 0 <= v <= 100 for v in values):
+                return ["number_blocks mode order needs values from 0 to 100."]
+            return []
+        if mode == "hop":
+            start, end = _as_int(beat.get("start")), _as_int(beat.get("end"))
+            if start is None or end is None:
+                return ["number_blocks mode hop needs integer start and end."]
+            if not (0 <= start <= 100 and 0 <= end <= 100):
+                return ["number_blocks mode hop needs start and end from 0 to 100."]
+            if start == end:
+                return ["number_blocks mode hop needs a different start and end."]
+            if abs(end - start) > 5:
+                return ["number_blocks mode hop stays within five steps, so the row stays readable."]
+            return []
+        if mode == "groups":
+            size, boxes, extra = _as_int(beat.get("a")), _as_int(beat.get("n")), _as_int(beat.get("b"))
+            extra = 0 if extra is None else extra
+            if size is None or boxes is None or not 2 <= size <= 5 or not 1 <= boxes <= 6:
+                return ["number_blocks mode groups needs a from 2 to 5 and n from 1 to 6."]
+            if not 0 <= extra < size:
+                return ["number_blocks mode groups extra b must be fewer than one group."]
+            if size * boxes + extra > 20:
+                return ["number_blocks mode groups total must stay within 20."]
+            return []
+        return [f"number_blocks mode must be tens, compare, order, hop, or groups, not {mode!r}."]
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        code = label_lang(lang)
+        mode = str(beat.get("mode") or "").strip()
+        titles = {
+            "en": {
+                "tens": "Tens and ones",
+                "compare": "Which is larger?",
+                "order": "In order",
+                "hop": "Count on",
+                "groups": "Equal groups",
+            },
+            "zh": {
+                "tens": "十和个",
+                "compare": "哪个大？",
+                "order": "排好了",
+                "hop": "接着数",
+                "groups": "一组一组数",
+            },
+            "zh_hk": {
+                "tens": "十同個",
+                "compare": "邊個大呀？",
+                "order": "排好咗",
+                "hop": "跟住數",
+                "groups": "一組一組數",
+            },
+        }
+        title = titles.get(code, titles["en"]).get(mode, titles["en"]["tens"])
+        out = {"title": title, "mode": mode}
+        if mode == "tens":
+            out["count"] = int(beat.get("count"))
+        elif mode == "compare":
+            out["a"] = int(beat.get("a"))
+            out["b"] = int(beat.get("b"))
+        elif mode == "order":
+            out["values"] = _block_values(beat)
+        elif mode == "hop":
+            out["start"] = int(beat.get("start"))
+            out["end"] = int(beat.get("end"))
+        elif mode == "groups":
+            extra = _as_int(beat.get("b"))
+            out["a"] = int(beat.get("a"))
+            out["n"] = int(beat.get("n"))
+            out["extra"] = 0 if extra is None else extra
+        return out
+
+    def parameters(self, beat: dict) -> dict:
+        mode = str(beat.get("mode") or "").strip()
+        out = {"mode": mode}
+        if mode == "tens":
+            out["count"] = int(beat.get("count"))
+        elif mode == "compare":
+            out["a"] = int(beat.get("a"))
+            out["b"] = int(beat.get("b"))
+        elif mode == "order":
+            out["values"] = _block_values(beat)
+        elif mode == "hop":
+            out["start"] = int(beat.get("start"))
+            out["end"] = int(beat.get("end"))
+        elif mode == "groups":
+            extra = _as_int(beat.get("b"))
+            out["a"] = int(beat.get("a"))
+            out["n"] = int(beat.get("n"))
+            out["extra"] = 0 if extra is None else extra
+        return out
+
+
+def _block_values(beat: dict) -> list[int]:
+    values = []
+    for key in ("a", "b", "n", "mark"):
+        number = _as_int(beat.get(key))
+        if number is None:
+            if key in {"a", "b"}:
+                return []
+            break
+        values.append(number)
+    return values
+
+
 register(OneTen())
 register(TenAndOnes())
 register(MakeTen())
@@ -1182,6 +1341,7 @@ register(NumberTrack())
 register(OrdinalRow())
 register(PairCounters())
 register(PartWhole())
+register(NumberBlocks())
 register(LessonHook())
 register(LessonTakeaway())
 

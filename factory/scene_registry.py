@@ -819,6 +819,8 @@ class LessonHook(SceneKind):
         if _motif(beat) == "parts":
             pair = _part_pair(beat) or (3, 4)
             out["a"], out["b"] = pair
+        if beat.get("shown"):
+            out["shown"] = True
         return out
 
     def parameters(self, beat: dict) -> dict:
@@ -832,6 +834,8 @@ class LessonHook(SceneKind):
         if _motif(beat) == "parts":
             pair = _part_pair(beat) or (3, 4)
             params["a"], params["b"] = pair
+        if beat.get("shown"):
+            params["shown"] = True
         return params
 
 
@@ -1171,6 +1175,14 @@ def count_event(beat: dict) -> tuple[int, int] | None:
                 return None
             return 1, boxes
         return None
+    if scene == "estimate_group":
+        if str(beat.get("part") or "").strip() != "count":
+            return None
+        count = _as_int(beat.get("count"))
+        if count is None or not 11 <= count <= 29 or count % 10 == 0:
+            return None
+        tens, ones = divmod(count, 10)
+        return 0, tens + ones
     if scene == "lesson_takeaway":
         # A ten-frame recap counts the three ones on its last line
         # ("Find the ten first. Then count the rest.").
@@ -1455,6 +1467,95 @@ class NumberBlocks(SceneKind):
         return out
 
 
+def messy_spots(n: int, width: float, height: float, gap: float) -> list[tuple[float, float]]:
+    """Deterministic messy centres inside a box, at least ``gap`` apart.
+
+    The same count always lands in the same pile, so the clip cache stays stable.
+    """
+    n = max(0, int(n))
+    gap = max(0.05, float(gap))
+    width = max(float(width), gap)
+    height = max(float(height), gap)
+    spots: list[tuple[float, float]] = []
+    state = 23
+
+    def rnd() -> float:
+        nonlocal state
+        state = (1103515245 * state + 12345) & 0x7FFFFFFF
+        return state / 0x7FFFFFFF
+
+    guard = 0
+    while len(spots) < n and guard < n * 200:
+        guard += 1
+        x = (rnd() - 0.5) * width
+        y = (rnd() - 0.5) * height
+        if all((x - px) ** 2 + (y - py) ** 2 >= gap * gap for px, py in spots):
+            spots.append((x, y))
+    cols = max(1, int(width / gap))
+    col = row = 0
+    while len(spots) < n:
+        spots.append((-width / 2 + (col + 0.5) * gap, height / 2 - (row + 0.5) * gap))
+        col += 1
+        if col >= cols:
+            col = 0
+            row += 1
+    return spots
+
+
+_ESTIMATE_PARTS = ("pile", "ten", "guess", "count", "close")
+
+
+class EstimateGroup(SceneKind):
+    """One step of an estimate: the pile, one ten, the guess, the count, or the check.
+
+    ``count`` is 11 to 29, so there is at least one ten to guess with and at
+    least one one left to find. ``part`` picks the beat. The guess is that many
+    tens. The count beat lands on every ten and every one.
+    """
+
+    name = "estimate_group"
+    steps = 1
+
+    def problems(self, beat: dict) -> list[str]:
+        found = []
+        count = _as_int(beat.get("count"))
+        if count is None or not 11 <= count <= 29 or count % 10 == 0:
+            found.append("estimate_group count must be an integer from 11 to 29 with some ones left.")
+        part = str(beat.get("part") or "").strip()
+        if part not in _ESTIMATE_PARTS:
+            found.append("estimate_group part must be pile, ten, guess, count, or close.")
+        return found
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        code = label_lang(lang)
+        titles = {
+            "en": "About how many?",
+            "zh": "大约有多少个？",
+            "zh_hk": "大約有幾多個呀？",
+        }
+        count = int(beat.get("count"))
+        tens, ones = divmod(count, 10)
+        return {
+            "title": titles.get(code, titles["en"]),
+            "count": count,
+            "tens": tens,
+            "ones": ones,
+            "guess": tens * 10,
+            "part": str(beat.get("part") or "").strip(),
+        }
+
+    def parameters(self, beat: dict) -> dict:
+        count = int(beat.get("count"))
+        tens, ones = divmod(count, 10)
+        return {
+            "count": count,
+            "tens": tens,
+            "ones": ones,
+            "guess": tens * 10,
+            "part": str(beat.get("part") or "").strip(),
+        }
+
+
 def _block_values(beat: dict) -> list[int]:
     values = []
     for key in ("a", "b", "n", "mark"):
@@ -1476,6 +1577,7 @@ register(OrdinalRow())
 register(PairCounters())
 register(PartWhole())
 register(NumberBlocks())
+register(EstimateGroup())
 register(LessonHook())
 register(LessonTakeaway())
 

@@ -22,6 +22,7 @@ from scene_registry import (
     ordinal_visits,
     schedule_marks,
     step_count,
+    ordinal_columns,
     group_columns,
     track_columns,
     track_slots,
@@ -578,7 +579,7 @@ def _scene_types() -> dict:
         dot.set_z_index(2)
         return dot
 
-    def _token_row(n: int, mark: int, cell: float = 0.46):
+    def _token_row(n: int, mark: int, cell: float = 0.46, one_row: bool = False):
         """Left-to-right tokens. The marked one holds a star. Returns the row group and the token list."""
         tokens = []
         for i in range(max(1, int(n))):
@@ -605,7 +606,7 @@ def _scene_types() -> dict:
                 piece = VGroup(box, dot)
             piece.set_z_index(3)
             tokens.append(piece)
-        cols = n if n <= 6 else (6 if n <= 12 else 5)
+        cols = n if one_row or n <= 6 else (6 if n <= 12 else 5)
         if n <= cols:
             row = VGroup(*tokens)
             row.arrange(RIGHT, buff=max(0.06, cell * 0.16))
@@ -618,10 +619,10 @@ def _scene_types() -> dict:
         lines.arrange(DOWN, buff=max(0.12, cell * 0.28))
         return lines, tokens
 
-    def _ordinal_cue(n: int, mark: int, kind: str, latin: str, cjk: str, word: str = "", total: str = "", label_frac: float = 0.85):
+    def _ordinal_cue(n: int, mark: int, kind: str, latin: str, cjk: str, word: str = "", total: str = "", label_frac: float = 0.85, one_row: bool = False):
         """A takeaway or hook picture of the same row. ``kind`` is hook, total, left, right, or both."""
         token_cell = 0.42
-        board, tokens = _token_row(n, mark, token_cell)
+        board, tokens = _token_row(n, mark, token_cell, one_row=one_row)
         dim = "#D5D0C6"
         if kind in {"left", "right"}:
             visits = set(ordinal_visits(n, mark, kind, "ordinal"))
@@ -1493,7 +1494,7 @@ def _scene_types() -> dict:
             pw = int(getattr(config, "pixel_width", 0) or 1920)
             ph = int(getattr(config, "pixel_height", 0) or 1080)
             # 0.46 keeps six tokens on one row in 9:16. A higher floor would snake them.
-            cols = track_columns(n, pw, ph, min_cell=0.46)
+            cols = ordinal_columns(n, pw, ph, one_row=bool(labels.get("one_row")))
             label_h = _ordinal_label_height()
             # Scale from a full character, not each glyph's ink. 一 is a flat stroke;
             # matching its ink height turns it into a bar and shrinks the row.
@@ -2487,7 +2488,7 @@ def _scene_types() -> dict:
                 info = labels or {}
                 n = max(1, int(info.get("n") or 6))
                 mark = max(1, min(n, int(info.get("mark") or 3)))
-                return _ordinal_cue(n, mark, "hook", latin, cjk)
+                return _ordinal_cue(n, mark, "hook", latin, cjk, one_row=bool(info.get("one_row")))
             if motif == "pairs":
                 info = labels or {}
                 count = max(0, min(20, int(info.get("n") or 8)))
@@ -3231,11 +3232,12 @@ def _scene_types() -> dict:
             portrait = int(getattr(config, "pixel_height", 0) or 0) > int(getattr(config, "pixel_width", 0) or 0)
             # A short place label keeps an 80%-wide portrait row inside the picture band.
             label_frac = 0.38 if portrait else 0.85
+            one_row = bool(info.get("one_row"))
             cues = [
-                _ordinal_cue(n, mark, "total", latin, cjk, total=total, label_frac=label_frac),
-                _ordinal_cue(n, mark, "left", latin, cjk, word=left, label_frac=label_frac),
-                _ordinal_cue(n, mark, "right", latin, cjk, word=right, label_frac=label_frac),
-                _ordinal_cue(n, mark, "both", latin, cjk, total=total, label_frac=label_frac),
+                _ordinal_cue(n, mark, "total", latin, cjk, total=total, label_frac=label_frac, one_row=one_row),
+                _ordinal_cue(n, mark, "left", latin, cjk, word=left, label_frac=label_frac, one_row=one_row),
+                _ordinal_cue(n, mark, "right", latin, cjk, word=right, label_frac=label_frac, one_row=one_row),
+                _ordinal_cue(n, mark, "both", latin, cjk, total=total, label_frac=label_frac, one_row=one_row),
             ]
             # One token size and one left edge. The place label sits in the
             # shared height, so label-plus-row is centred as one picture.

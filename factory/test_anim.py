@@ -33,6 +33,7 @@ from scene_registry import (
     schedule_marks,
     step_count,
     takeaway_cue_picture,
+    group_columns,
     track_columns,
     track_slots,
 )
@@ -2381,6 +2382,11 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual([b["mode"] for b in blocks], ["groups", "tens", "hop"])
         self.assertEqual((blocks[0]["a"], blocks[0]["n"]), (5, 4))
         self.assertEqual(blocks[1]["count"], 50)
+        self.assertTrue(blocks[1].get("rods_only"))
+        self.assertTrue(labels_for(blocks[1], "en").get("rods_only"))
+        self.assertEqual(labels_for(blocks[1], "en")["title"], "Tens and ones")
+        self.assertEqual(group_columns(4, 5, True), 2)
+        self.assertEqual(group_columns(4, 2, True), 3)
         self.assertEqual((blocks[2]["start"], blocks[2]["end"]), (30, 33))
         self.assertEqual(count_event(blocks[0]), (1, 4))
         self.assertEqual(count_event(blocks[1]), (0, 5))

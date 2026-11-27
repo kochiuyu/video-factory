@@ -45,13 +45,14 @@ beats:
   scene: number_blocks
   mode: tens
   count: 50
+  rods_only: true
   seconds: 12
   s1_en: Ten, twenty, thirty, forty, fifty.
   s1_zh: 十，二十，三十，四十，五十。
   s1_zh_hk: 十，二十，三十，四十，五十。
-  s2_en: The ones are zero.
-  s2_zh: 个是零。
-  s2_zh_hk: 個係零。
+  s2_en: Five tens.
+  s2_zh: 五个十。
+  s2_zh_hk: 五個十。
   s3_en: Five tens make fifty.
   s3_zh: 五个十是五十。
   s3_zh_hk: 五個十係五十。

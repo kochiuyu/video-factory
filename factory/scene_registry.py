@@ -1061,6 +1061,16 @@ def track_columns(count: int, pixel_width: int, pixel_height: int, min_cell: flo
     return max(1, cols)
 
 
+def group_columns(boxes: int, size: int, portrait: bool) -> int:
+    """Columns of equal groups. Fives use two columns in 9:16 so the totals stay readable."""
+    boxes = max(1, int(boxes))
+    if portrait and int(size) >= 5:
+        return min(2, boxes)
+    if portrait:
+        return min(3, boxes)
+    return min(6, boxes)
+
+
 def track_slots(values: list[int], cols: int, *, left_to_right: bool) -> dict[int, tuple[int, int]]:
     """Map each track value to ``(row, column)``.
 
@@ -1405,6 +1415,8 @@ class NumberBlocks(SceneKind):
         out = {"title": title, "mode": mode}
         if mode == "tens":
             out["count"] = int(beat.get("count"))
+            if beat.get("rods_only"):
+                out["rods_only"] = True
         elif mode == "compare":
             out["a"] = int(beat.get("a"))
             out["b"] = int(beat.get("b"))
@@ -1425,6 +1437,8 @@ class NumberBlocks(SceneKind):
         out = {"mode": mode}
         if mode == "tens":
             out["count"] = int(beat.get("count"))
+            if beat.get("rods_only"):
+                out["rods_only"] = True
         elif mode == "compare":
             out["a"] = int(beat.get("a"))
             out["b"] = int(beat.get("b"))

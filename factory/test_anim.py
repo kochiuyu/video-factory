@@ -1609,7 +1609,7 @@ class SceneRegistryTest(unittest.TestCase):
             [
                 "one_ten", "ten_and_ones", "make_ten", "count_objects", "number_track",
                 "ordinal_row", "pair_counters", "part_whole", "number_blocks",
-                "estimate_group", "place_sum",
+                "estimate_group", "row_match", "place_sum",
                 "lesson_hook", "lesson_takeaway",
             ],
         )
@@ -1975,6 +1975,56 @@ class SceneRegistryTest(unittest.TestCase):
                             self.assertLessEqual(ring.get_right()[0], cube.get_left()[0] + 1e-4)
 
 
+    def test_row_match_rings_the_unmatched_counters(self):
+        """The gap rings only the extra counters, and equal rows show 0."""
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
+        from manim import tempconfig
+
+        from anim import _make_scene, prepare_fonts
+
+        prepare_fonts()
+
+        def spec(part, a, b):
+            return {
+                "scene": "row_match",
+                "lang": "en",
+                "a": a,
+                "b": b,
+                "part": part,
+                "labels": {"title": "How many more?", "part": part, "a": a, "b": b},
+            }
+
+        with tempconfig({
+            "pixel_width": 1920, "pixel_height": 1080,
+            "frame_width": 8 * 16 / 9, "frame_height": 8, "frame_rate": 15,
+        }):
+            gap = _make_scene(spec("gap", 8, 5), [2.4], [[0.2, 0.9, 1.6]])
+            gap.render(preview=False)
+            unit = 1080 / 8
+            self.assertGreaterEqual(float(gap.vf_title.height) * unit, 47)
+            self.assertEqual(len(gap.vf_top), 8)
+            self.assertEqual(len(gap.vf_bottom), 5)
+            self.assertEqual(len(gap.vf_rings), 3)
+            self.assertGreaterEqual(float(gap.vf_answer.get_fill_opacity()), 0.9)
+            self.assertGreater(float(gap.vf_top.get_bottom()[1]), float(gap.vf_bottom.get_top()[1]))
+            same = _make_scene(spec("equal", 6, 6), [1.2], [[]])
+            same.render(preview=False)
+            self.assertEqual(len(same.vf_rings), 0)
+            self.assertEqual(same.vf_answer.text, "0")
+            self.assertGreaterEqual(float(same.vf_answer.get_fill_opacity()), 0.9)
+        with tempconfig({
+            "pixel_width": 1080, "pixel_height": 1920,
+            "frame_width": 8, "frame_height": 8 * 16 / 9, "frame_rate": 15,
+        }):
+            tall = _make_scene(spec("gap", 8, 5), [1.2], [[]])
+            tall.render(preview=False)
+            unit = 1920 / (8 * 16 / 9)
+            self.assertGreaterEqual(float(tall.vf_title.height) * unit, 47)
+            self.assertGreater(float(tall.vf_top.get_bottom()[1]), float(tall.vf_bottom.get_top()[1]))
+
     def test_place_sum_lines_up_ones_and_tens(self):
         """Ones stay in the ones column, and a new ten is a full-size digit."""
         try:
@@ -2087,6 +2137,13 @@ class SceneRegistryTest(unittest.TestCase):
             ],
             "P1-NUM-20": [
                 "lesson_hook", "pair_counters", "pair_counters", "number_blocks", "lesson_takeaway",
+            ],
+            "P1-NUM-21": [
+                "lesson_hook", "row_match", "row_match", "row_match", "row_match",
+                "row_match", "row_match", "lesson_takeaway",
+            ],
+            "P1-NUM-22": [
+                "lesson_hook", "place_sum", "place_sum", "lesson_takeaway",
             ],
             "P1-NUM-23": [
                 "lesson_hook", "place_sum", "place_sum", "place_sum", "lesson_takeaway",
@@ -2709,6 +2766,43 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertNotIn("?", labels_for(recap20, "zh")["title"])
         self.assertNotIn("?", labels_for(recap20, "zh_hk")["title"])
 
+        twentyone = load_lesson(P1 / "P1-NUM-21.yaml")
+        matched = [beat for beat in twentyone["beats"] if beat.get("scene") == "row_match"]
+        self.assertEqual([b["part"] for b in matched], ["rows", "match", "gap", "hold", "hold", "equal"])
+        self.assertEqual([b["a"] for b in matched], [8, 8, 8, 8, 8, 6])
+        self.assertEqual(count_event(matched[2]), (0, 3))
+        self.assertIsNone(count_event(matched[0]))
+        self.assertEqual(matched[2]["s1_en"], "One. Two. Three.")
+        self.assertEqual(matched[2]["s1_zh_hk"], "一。二。三。")
+        self.assertEqual(labels_for(matched[3], "zh_hk")["title"], "多幾多呀？")
+        recap21 = twentyone["beats"][-1]
+        self.assertEqual(
+            labels_for(recap21, "en")["cues"],
+            [("tiles", (8, 5)), ("counters", 3), ("tiles", (3,)), ("tiles", (6, 6))],
+        )
+        self.assertEqual(len(labels_for(recap21, "en")["lines"]), 4)
+        self.assertNotIn("sum", recap21["s3_en"].lower())
+        self.assertIn("？", twentyone["title_zh"])
+        self.assertNotIn("?", twentyone["title_zh_hk"])
+        twentytwo = load_lesson(P1 / "P1-NUM-22.yaml")
+        added = [beat for beat in twentytwo["beats"] if beat.get("scene") == "place_sum"]
+        self.assertEqual([(b["a"], b["b"]) for b in added], [(23, 14), (27, 15)])
+        self.assertEqual(labels_for(added[0], "en")["values"], [23, 14])
+        self.assertEqual(labels_for(added[1], "zh_hk")["title"], "先個位，再十位")
+        self.assertIn(
+            "place_sum subtraction stays inside each column.",
+            scene_problems({
+                "visual": "animated", "scene": "place_sum", "op": "sub", "a": 21, "b": 15,
+                "s1_en": "a", "s2_en": "b", "s3_en": "c",
+                "s1_zh": "甲", "s2_zh": "乙", "s3_zh": "丙",
+            }),
+        )
+        recap22 = twentytwo["beats"][-1]
+        self.assertEqual(
+            labels_for(recap22, "en")["cues"],
+            [("tiles", (23, 14)), ("tens", 3, 7), ("tens", 1, 0), ("tens", 4, 2)],
+        )
+        self.assertNotIn("sum", " ".join(beat.get("s3_en", "") for beat in twentytwo["beats"]).lower())
         twentythree = load_lesson(P1 / "P1-NUM-23.yaml")
         trios = [beat for beat in twentythree["beats"] if beat.get("scene") == "place_sum"]
         self.assertEqual(

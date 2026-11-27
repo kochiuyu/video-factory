@@ -1,0 +1,295 @@
+id: FIN-12
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Rent the equipment. Keep the exit?
+title_zh: 租下这台设备，退路还留得住吗？
+title_zh_hk: 租下這台設備，退路還留得住嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-12
+  kicker_en: FIN-12
+  kicker_zh: FIN-12
+  kicker_zh_hk: FIN-12
+  title_en: Rent the equipment. Keep the exit?
+  title_zh: 租下这台设备，退路还留得住吗？
+  title_zh_hk: 租下這台設備，退路還留得住嗎？
+  image: art/rent-and-exit-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 17 September 2025, Hong Kong extended the application period for the 80 per cent Guarantee Product
+    under the SME Financing Guarantee Scheme. That concerned access to financing, not which assets to
+    acquire. Now you advise a fictional surveying firm that already has the funds.
+  zh: >-
+    2025年9月17日，香港宣布延长中小企融资担保计划下八成信贷担保产品的申请期。这关乎企业能否获得融资，而不是该购置哪项资产。现在，你要为一家虚构的测量公司出主意，它两条路的钱都已经准备好了。
+  zh_hk: >-
+    2025年9月17號，香港宣布延長中小企融資擔保計劃下八成信貸擔保產品嘅申請期。呢個關乎企業攞唔攞到融資，唔係應該買邊樣資產。而家，你要幫一間虛構嘅測量公司出主意，佢兩條路嘅錢都已經準備好。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Three-year plan · HK$
+  title_zh: 三年计划 · 港元
+  title_zh_hk: 三年計劃 · 港元
+  row1_en: Payment at start
+  row1_zh: 开始时付款
+  row1_zh_hk: 開始時付款
+  row2_en: Service cost
+  row2_zh: 服务成本
+  row2_zh_hk: 服務成本
+  row3_en: Monthly payment
+  row3_zh: 每月付款
+  row3_zh_hk: 每月付款
+  row4_en: At month 36
+  row4_zh: 第 36 个月
+  row4_zh_hk: 第 36 個月
+  col1_en: Buy
+  col1_zh: 购买
+  col1_zh_hk: 購買
+  col2_en: Lease
+  col2_zh: 租赁
+  col2_zh_hk: 租賃
+  c11: 90,000
+  c12: '0'
+  c21_en: 6,000 a year
+  c21_zh: 每年 6,000
+  c21_zh_hk: 每年 6,000
+  c22_en: Included
+  c22_zh: 已包含
+  c22_zh_hk: 已包括
+  c31: '0'
+  c32: 3,000 × 36
+  c41_en: Resale 30,000 (forecast)
+  c41_zh: 转售净额 30,000（预测）
+  c41_zh_hk: 轉售淨額 30,000（預測）
+  c42_en: Return; no resale
+  c42_zh: 退还，无转售
+  c42_zh_hk: 退還，無轉售
+  footer_en: Undiscounted cash comparison
+  footer_zh: 未折现；不计税、通胀、利息
+  footer_zh_hk: 未折現；不計稅、通脹、利息
+  s1_en: >-
+    A small Hong Kong surveying firm needs a desktop scanner to digitise archive documents. The owner
+    plans three years of use and compares buying outright with a three-year lease of the same model. Service
+    levels are equivalent, and both routes are affordable without borrowing.
+  s1_zh: >-
+    香港一家小型测量公司要把档案文件数字化，需要一台台式扫描仪。老板原本打算用三年，在比较同一型号是一次买断还是租三年。两条路服务相当，都不用借钱。
+  s1_zh_hk: >-
+    香港一間細測量公司要將檔案文件數碼化，要一部桌面掃描器。老闆本來打算用三年，比較緊同一型號係一次過買斷定租三年。兩條路服務差唔多，都唔使借錢。
+  s2_en: >-
+    Buying costs 90,000 dollars at the start, plus 6,000 dollars of service at each year-end, with a forecast
+    net resale receipt of 30,000 at month 36. The lease costs 3,000 dollars at each month-end for 36 months,
+    with service included, then the scanner is returned.
+  s2_zh: >-
+    购买一开始要付九万港元，每年年末再付六千港元服务费，第三十六个月预计转售净得三万港元。租赁每个月月末付三千港元，共三十六个月，已包含服务，到期把扫描仪还回去。
+  s2_zh_hk: >-
+    買嘅話，一開始要俾九萬港元，每年年尾再俾六千港元服務費，第三十六個月預計轉售淨收三萬港元。租嘅話，每個月月尾俾三千港元，一共三十六個月，已經包服務，到期將掃描器還返。
+  s3_en: >-
+    Use an undiscounted cash comparison: ignore interest on retained cash, income tax and inflation. Net
+    resale is after selling and collection costs, and it is a forecast, not a guaranteed buyback.
+  s3_zh: 这里用未折现的现金来比较，不考虑留存现金的利息、所得税和通胀。转售净额是扣除出售和搬运费用之后的金额，只是预测，不是保证回购。
+  s3_zh_hk: 呢度用未折現嘅現金嚟比較，唔計留存現金嘅利息、所得稅同通脹。轉售淨額係扣除出售同搬運費用之後嘅數，只係預測，唔係保證回購。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Buy or lease for three years?
+  title_zh: 三年：买还是租？
+  title_zh_hk: 三年：買定租？
+  en: >-
+    For the initial three-year plan, which route would you provisionally choose? Compare total net cash
+    cost, and explain what risk or cash-timing issue your preferred route still carries. Pause and vote.
+  zh: 按原来的三年计划，你会暂时选哪一条路？比较一下净现金成本总额，再说说你选的那条路还带着什么风险，或者现金时间上的问题。请暂停，投个票。
+  zh_hk: 按原本三年嘅計劃，你暫時會揀邊條路？比較吓淨現金成本總數，再講吓你揀嗰條路仲有咩風險，或者現金時間上嘅問題。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The project ends at month 12
+  title_zh: 项目 12 个月就结束
+  title_zh_hk: 項目 12 個月就結束
+  step1_en: >-
+    Lease exit after payment 12: + HK$12,000
+  step1_zh: 第 12 期后退租：另付 HK$12,000
+  step1_zh_hk: 第 12 期後退租：另付 HK$12,000
+  step2_en: >-
+    Buy: HK$90,000 + one HK$6,000 service
+  step2_zh: 购买：HK$90,000 + 一次 HK$6,000
+  step2_zh_hk: 購買：HK$90,000 + 一次 HK$6,000
+  step3_en: >-
+    Resale at month 12: HK$45,000 or 65,000
+  step3_zh: 第 12 个月转售：HK$45,000 或 65,000
+  step3_zh_hk: 第 12 個月轉售：HK$45,000 或 65,000
+  s1_en: >-
+    Before either quote is accepted, the client confirms the archive project ends after 12 months, not
+    36. No other work needs the scanner afterward.
+  s1_zh: 两份报价都还没接受，客户就确认档案项目十二个月后结束，不是三十六个月。之后也没有别的工作要用这台扫描仪。
+  s1_zh_hk: 兩份報價都未接受，客戶就確認檔案項目十二個月後完，唔係三十六個月。之後亦冇其他工作要用呢部掃描器。
+  s2_en: >-
+    The lease's written early-exit option allows return after the twelfth monthly payment, with notice
+    on time and a 12,000-dollar exit charge. That charge covers collection and secure data removal, and
+    releases all remaining payments. Simply stopping use would not trigger it.
+  s2_zh: >-
+    租约写明可以提前退租：付完第十二期月租并按时通知，就能退还设备，另付一万二千港元退出费。这笔费用包括搬运和安全清除数据，也免除剩下的月租。只是停用设备，不算行使。
+  s2_zh_hk: >-
+    租約寫明可以提早退租：俾完第十二期月租、準時通知，就可以還部機，另外俾一萬二千港元退出費。呢筆費用包搬運同安全清除數據，亦免咗其餘月租。淨係唔用部機，唔算行使。
+  s3_en: >-
+    Buying requires the 90,000-dollar payment and one 6,000-dollar service payment. A dealer gives two
+    plausible month-12 net resale scenarios, 45,000 or 65,000 dollars. Neither is a firm offer, and no
+    probabilities are given.
+  s3_zh: >-
+    购买要付九万港元，再加一次六千港元服务费。经销商给出两个合理的第十二个月转售净额情景：四万五千或六万五千港元。两个都不是确定报价，也没有给出概率。
+  s3_zh_hk: 買就要俾九萬港元，再加一次六千港元服務費。經銷商畀咗兩個合理嘅第十二個月轉售淨額情景：四萬五千或者六萬五千港元。兩個都唔係實價，亦冇畀機率。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Buy or use the exit?
+  title_zh: 买，还是行使退租权？
+  title_zh_hk: 買，定用退租權？
+  en: >-
+    For the revised 12-month need, would you buy or use the lease's agreed exit option? Compare both resale
+    scenarios, find the net resale amount at which the cash costs match, and say what remains uncertain.
+    Pause and vote.
+  zh: >-
+    需求改成十二个月之后，你会购买，还是用租约里约定的退租选择权？两个转售情景都比较一下，算出现金成本打平时的转售净额，再说说还有什么不确定。请暂停，投个票。
+  zh_hk: >-
+    需要改成十二個月之後，你會買，定係用租約入面講好嘅退租選擇權？兩個轉售情景都比較吓，計出現金成本打和嗰陣嘅轉售淨額，再講吓仲有咩唔確定。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Compare complete periods
+  title_zh: 比较完整的期间
+  title_zh_hk: 比較完整的期間
+  step1_en: >-
+    3 years: buy 78,000 · lease 108,000
+  step1_zh: 三年：买 78,000 · 租 108,000
+  step1_zh_hk: 三年：買 78,000 · 租 108,000
+  step2_en: >-
+    12-month exit: 36,000 + 12,000 = 48,000
+  step2_zh: 12 个月退租：36,000 + 12,000 = 48,000
+  step2_zh_hk: 12 個月退租：36,000 + 12,000 = 48,000
+  step3_en: Don't add the 24 released payments
+  step3_zh: 不要再加已免除的 24 期
+  step3_zh_hk: 不要再加已免除的 24 期
+  s1_en: >-
+    For three years, buying costs 90,000 plus three times 6,000, minus 30,000: a forecast 78,000 dollars.
+    Leasing costs 36 times 3,000, or 108,000. Buying is 30,000 lower under that resale forecast.
+  s1_zh: 按三年算，购买是九万加三乘六千，再减三万，预计成本七万八千港元。租赁是三十六乘三千，即十万八千。按这个转售预测，购买便宜三万港元。
+  s1_zh_hk: 按三年計，買係九萬加三乘六千，再減三萬，預計成本七萬八千港元。租就係三十六乘三千，即係十萬八千。按呢個轉售預測，買平三萬港元。
+  s2_en: >-
+    At 12 months, the agreed lease exit costs 12 times 3,000, plus 12,000, which is 48,000 dollars.
+  s2_zh: 到第十二个月，按约定退租的成本是十二乘三千，再加一万二千，即四万八千港元。
+  s2_zh_hk: 到第十二個月，按約定退租嘅成本係十二乘三千，再加一萬二千，即係四萬八千港元。
+  s3_en: >-
+    Do not omit the exit charge, and do not add the remaining 24 payments: the option releases them when
+    exercised correctly.
+  s3_zh: 不要漏掉退出费，也不要把剩下的二十四期月租加进去，因为正确行使选择权之后，这些月租已经免除了。
+  s3_zh_hk: 唔好漏咗退出費，亦唔好將剩低嘅二十四期月租加埋落去，因為正確行使選擇權之後，呢啲月租已經免咗。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Owning keeps residual-value risk
+  title_zh: 拥有设备就承担残值风险
+  title_zh_hk: 擁有設備就承擔殘值風險
+  step1_en: >-
+    Buy for a year: 96,000 before resale
+  step1_zh: 买一年：转售前 96,000
+  step1_zh_hk: 買一年：轉售前 96,000
+  step2_en: Resale 45,000 → 51,000; 65,000 → 31,000
+  step2_zh: 转售 45,000 → 51,000；65,000 → 31,000
+  step2_zh_hk: 轉售 45,000 → 51,000；65,000 → 31,000
+  step3_en: >-
+    Break-even resale: HK$48,000
+  step3_zh: 打平的转售净额：HK$48,000
+  step3_zh_hk: 打和的轉售淨額：HK$48,000
+  s1_en: Buying for the revised year costs 96,000 dollars before resale.
+  s1_zh: 修订后只用一年，购买在转售之前要花九万六千港元。
+  s1_zh_hk: 改咗只用一年，買喺轉售之前要用九萬六千港元。
+  s2_en: >-
+    With 45,000 of net proceeds, the cost is 51,000, which is 3,000 above leasing. With 65,000, it is
+    31,000, or 17,000 below leasing.
+  s2_zh: 转售净得四万五千，成本就是五万一千，比租赁高三千。转售六万五千，成本是三万一千，比租赁低一万七千。
+  s2_zh_hk: 轉售淨收四萬五千，成本就係五萬一千，比租貴三千。轉售六萬五千，成本係三萬一千，比租平一萬七千。
+  s3_en: >-
+    Costs match when 96,000 minus resale equals 48,000, so the break-even net resale is 48,000 dollars.
+    That threshold is not a valuation or a forecast.
+  s3_zh: 九万六千减转售净额等于四万八千时，两边成本打平，所以打平点是转售净额四万八千港元。这个门槛不是估值，也不是预测。
+  s3_zh_hk: 九萬六千減轉售淨額等於四萬八千嗰陣，兩邊成本打和，所以打和點係轉售淨額四萬八千港元。呢條界線唔係估值，亦唔係預測。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Don't fake certainty
+  title_zh: 建议时别假装确定
+  title_zh_hk: 建議時別假裝確定
+  en: >-
+    Leasing can be justified by a known 48,000-dollar contractual exit cost and less initial cash. Buying
+    can be justified if the firm accepts resale risk and has credible evidence of proceeds above 48,000.
+    Do not average the two scenarios without probabilities.
+  zh: >-
+    如果看重合同写明的四万八千港元退出成本，以及一开始少用现金，租赁说得通。如果公司愿意承担转售风险，又有可信证据显示转售所得会高于四万八千，购买也说得通。没有概率，就不要把两个情景平均。
+  zh_hk: >-
+    如果睇重合約寫明嘅四萬八千港元退出成本，同埋一開始少用現金，租講得通。如果公司肯承擔轉售風險，又有可信證據顯示轉售收入會高過四萬八千，買都講得通。冇機率，就唔好將兩個情景平均。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Price the exit, too
+  title_zh: 退出成本也要算
+  title_zh_hk: 退出成本也要計
+  q1_en: A monthly payment is not the total price
+  q1_zh: 月付金额不是总价
+  q1_zh_hk: 月付金額不是總價
+  q2_en: Check notice, return and release terms
+  q2_zh: 核对通知、退还和免除条款
+  q2_zh_hk: 核對通知、退還和免除條款
+  s1_en: >-
+    A different lease might not offer this exit. A real appraisal would also examine timing, financing
+    costs, taxes, maintenance exclusions, sale delays and other future uses.
+  s1_zh: 别的租约未必有这条退路。真实的评估还要看时间价值、融资成本、税务、维修除外条款、出售延误和设备的其他用途。
+  s1_zh_hk: 第二份租約未必有呢條退路。真實嘅評估仲要睇時間價值、融資成本、稅務、維修除外條款、出售延誤同部機嘅其他用途。
+  s2_en: Neither choice here is forced by a cash shortage.
+  s2_zh: 这里两个选择都不是因为缺钱才被迫做出的。
+  s2_zh_hk: 呢度兩個選擇都唔係因為唔夠錢先迫住揀。
+  s3_en: >-
+    The surveying firm, quotes and resale scenarios are fictional; no scheme eligibility or loan approval
+    is assumed. Official scene art is a teaching illustration only.
+  s3_zh: 测量公司、报价和转售情景都是虚构的，也不假定符合任何计划资格或已获批贷款。官方场景图只是教学插图。
+  s3_zh_hk: 測量公司、報價同轉售情景都係虛構嘅，亦唔假設符合任何計劃資格或者已經批咗貸款。官方場景圖只係教學插圖。
+duration_target_s: 196

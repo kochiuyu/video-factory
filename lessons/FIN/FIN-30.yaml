@@ -1,0 +1,294 @@
+id: FIN-30
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Affordable interest. A repayable principal?
+title_zh: 付得起的利息。本金还得起吗？
+title_zh_hk: 付得起的利息。本金還得起嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-30
+  kicker_en: FIN-30
+  kicker_zh: FIN-30
+  kicker_zh_hk: FIN-30
+  title_en: Affordable interest. A repayable principal?
+  title_zh: 付得起的利息。本金还得起吗？
+  title_zh_hk: 付得起的利息。本金還得起嗎？
+  image: art/interest-paid-principal-due-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    The US Office of the Comptroller of the Currency describes refinance risk as the chance that debt
+    cannot be replaced on reasonable terms when needed. So a loan schedule must show principal due at
+    maturity, not only affordable interest. Now you advise a fictional Hong Kong printing studio.
+  zh: >-
+    美国货币监理署把再融资风险描述为：需要时，现有债务未必能按合理条件续上。所以，还款计划不能只列付得起的利息，还要列出到期应还的本金。现在，你要为香港一家虚构的印刷工作室出主意。
+  zh_hk: >-
+    美國貨幣監理署將再融資風險形容為：要用嗰陣，現有債務未必可以按合理條件續落去。所以，還款計劃唔可以淨係列出俾得起嘅利息，仲要列出到期要還嘅本金。而家，你要幫香港一間虛構嘅印刷工作室出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two HK$600,000 three-year loans
+  title_zh: 两笔 60 万港元三年期贷款
+  title_zh_hk: 兩筆 60 萬港元三年期貸款
+  row1_en: Principal
+  row1_zh: 本金偿还
+  row1_zh_hk: 本金償還
+  row2_en: Interest
+  row2_zh: 利息
+  row2_zh_hk: 利息
+  row3_en: Cash each year
+  row3_zh: 每年可用现金
+  row3_zh_hk: 每年可用現金
+  row4_en: Reserve (B plan)
+  row4_zh: 储备（B 方案）
+  row4_zh_hk: 儲備（B 方案）
+  col1_en: Offer A
+  col1_zh: 要约 A
+  col1_zh_hk: 要約 A
+  col2_en: Offer B
+  col2_zh: 要约 B
+  col2_zh_hk: 要約 B
+  c11_en: 200,000 each year-end
+  c11_zh: 每年末 200,000
+  c11_zh_hk: 每年末 200,000
+  c12_en: 600,000 at end of year 3
+  c12_zh: 第 3 年末 600,000
+  c12_zh_hk: 第 3 年末 600,000
+  c21_en: 6% of opening balance
+  c21_zh: 年初余额的 6%
+  c21_zh_hk: 年初餘額的 6%
+  c22_en: 4% of 600,000
+  c22_zh: 600,000 的 4%
+  c22_zh_hk: 600,000 的 4%
+  c31: HK$240,000
+  c32: HK$240,000
+  c41_en: Not needed
+  c41_zh: 不需要
+  c41_zh_hk: 不需要
+  c42_en: 150,000 a year, zero return
+  c42_zh: 每年 150,000，零回报
+  c42_zh_hk: 每年 150,000，零回報
+  footer_en: >-
+    Both: HK$72,000 total interest
+  footer_zh: 两笔利息合计都是 HK$72,000
+  footer_zh_hk: 兩筆利息合計都是 HK$72,000
+  s1_en: >-
+    The studio needs 600,000 dollars for equipment now. Exactly 240,000 becomes available just before
+    each year-end debt payment, with no other usable cash, reserves or owner injections.
+  s1_zh: 工作室现在需要六十万港元买设备。每年年末还款之前，正好有二十四万港元可用，此外没有其他可用的现金、储备，股东也不会注资。
+  s1_zh_hk: 工作室而家要六十萬港元買設備。每年年尾還款之前，啱啱有二十四萬港元可以用，除此之外冇其他可用嘅現金、儲備，老闆亦唔會注資。
+  s2_en: >-
+    Offer A repays principal in three equal 200,000-dollar instalments, with 6 percent interest on the
+    opening balance. Offer B pays only 4 percent interest each year, with all 600,000 due at the end of
+    year 3. Both total 72,000 dollars of interest.
+  s2_zh: >-
+    要约A分三次等额还本，每次二十万港元，利息按年初未还本金的百分之六计算。要约B每年只付百分之四的利息，六十万本金在第三年年末一次还清。两笔的利息合计都是七万二千港元。
+  s2_zh_hk: >-
+    要約A分三次等額還本，每次二十萬港元，利息按年初未還本金嘅百分之六計。要約B每年淨係俾百分之四嘅利息，六十萬本金喺第三年年尾一次過還。兩筆利息合共都係七萬二千港元。
+  s3_en: >-
+    Under B, the initial plan pays interest, puts 150,000 a year into a zero-return reserve, and spends
+    66,000 on cancellable promotions. It assumes a new loan will cover any principal the reserve cannot
+    meet.
+  s3_zh: >-
+    按B，管理层起初的计划是：付完利息，每年把十五万放进零回报的储备，剩下的六万六千花在可以取消的推广上。计划假设储备不够还的本金，会由一笔新贷款补上。
+  s3_zh_hk: >-
+    按B，管理層起初嘅計劃係：俾完利息，每年將十五萬放入零回報嘅儲備，剩低嘅六萬六千用喺可以取消嘅推廣。計劃假設儲備還唔晒嘅本金，會由一筆新貸款補上。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What does each loan really need?
+  title_zh: 每笔贷款要付多少？
+  title_zh_hk: 每筆貸款要付多少？
+  en: >-
+    What are each offer's full three-year debt payments and remaining principal, and how much refinancing
+    does B's initial reserve plan still require at maturity? Pause and vote.
+  zh: 两份要约三年里的全部还款和剩余本金各是多少？按B起初的储备计划，到期时还需要多少再融资？请暂停，投个票。
+  zh_hk: 兩份要約三年入面嘅全部還款同剩餘本金各係幾多？按B起初嘅儲備計劃，到期仲要幾多再融資？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Refinancing is not committed
+  title_zh: 再融资并没有承诺
+  title_zh_hk: 再融資並沒有承諾
+  step1_en: Only an informal expression of interest
+  step1_zh: 只有一份非正式的意向
+  step1_zh_hk: 只有一份非正式的意向
+  step2_en: Count zero assured cash from it
+  step2_zh: 按零确定现金计算
+  step2_zh_hk: 按零確定現金計算
+  step3_en: Promotions can be cut now
+  step3_zh: 推广开支现在就能削减
+  step3_zh_hk: 推廣開支現在就能削減
+  s1_en: >-
+    The funding check finds only an informal expression of interest from a lender, subject to fresh credit
+    approval and future terms. There is no committed refinancing.
+  s1_zh: 资金核对只找到一家贷款人的非正式意向，还要重新做信贷审批，条款也要以后才定。并没有已承诺的再融资安排。
+  s1_zh_hk: 資金核對淨係搵到一間貸款人嘅非正式意向，仲要重新做信貸審批，條款亦要遲啲先定。並冇已承諾嘅再融資安排。
+  s2_en: >-
+    Count it as zero assured cash, not as certain rejection. The board will approve only a plan that repays
+    the loan from the stated cash, without relying on that funding.
+  s2_zh: 把它算作零确定现金，但不等于一定被拒绝。董事会只批准不靠这笔资金、用既定现金还清原贷款的方案。
+  s2_zh_hk: 將佢當做零確定現金，但唔等於一定俾人拒絕。董事會淨係批准唔靠呢筆資金、用既定現金還清原本貸款嘅方案。
+  s3_en: >-
+    The promotions are discretionary and can be cut now without charges. Management may put more into
+    B's reserve, or choose A and spend what is left after each payment.
+  s3_zh: 推广开支完全可以自主决定，现在削减也不收费。管理层可以把更多钱放进B的储备，也可以选A，把每次还款后剩下的钱拿来推广。
+  s3_zh_hk: 推廣開支完全可以自己話事，而家減都唔使俾錢。管理層可以將多啲錢放入B嘅儲備，亦可以揀A，用每次還款之後剩低嘅錢做推廣。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which self-funded plan?
+  title_zh: 选哪个自筹方案？
+  title_zh_hk: 選哪個自籌方案？
+  en: >-
+    With refinancing uncommitted, which self-funded plan would you choose, what equal annual reserve and
+    promotion amounts make B feasible, and how does A's cash pattern compare? Pause and vote.
+  zh: 再融资没有承诺，你会选哪个自筹方案？每年储备和推广各放多少，B才可行？A的现金安排又有什么不同？请暂停，投个票。
+  zh_hk: 再融資冇承諾，你會揀邊個自籌資金嘅方案？每年儲備同推廣各放幾多，B先行得通？A嘅現金安排又有咩唔同？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Same interest, different timing
+  title_zh: 两种还款安排，利息合计相同
+  title_zh_hk: 兩種還款安排，利息合計相同
+  step1_en: A pays 236,000 · 224,000 · 212,000
+  step1_zh: A 还 236,000 · 224,000 · 212,000
+  step1_zh_hk: A 還 236,000 · 224,000 · 212,000
+  step2_en: B pays 24,000 · 24,000 · 624,000
+  step2_zh: B 还 24,000 · 24,000 · 624,000
+  step2_zh_hk: B 還 24,000 · 24,000 · 624,000
+  step3_en: B reserve 450,000 → short 150,000
+  step3_zh: B 储备 450,000 → 缺 150,000
+  step3_zh_hk: B 儲備 450,000 → 缺 150,000
+  s1_en: >-
+    A's interest is 36,000, 24,000 and 12,000. With 200,000 of principal each year, its payments are 236,000,
+    224,000 and 212,000, all within 240,000, and the debt reaches zero.
+  s1_zh: >-
+    A的利息分别是三万六千、两万四千和一万二千。加上每年二十万本金，还款是二十三万六千、二十二万四千和二十一万二千，都在二十四万以内，债务最后还清。
+  s1_zh_hk: >-
+    A嘅利息分別係三萬六千、兩萬四千同一萬二千。加埋每年二十萬本金，還款係二十三萬六千、二十二萬四千同二十一萬二千，全部喺二十四萬以內，債務最後還清。
+  s2_en: >-
+    B pays 24,000, 24,000 and then 624,000. Both offers pay 72,000 in interest, but equal totals do not
+    make the timing equal.
+  s2_zh: B的还款是两万四千、两万四千，然后是六十二万四千。两份要约的利息都是七万二千，但总额相同，不等于时间安排相同。
+  s2_zh_hk: B嘅還款係兩萬四千、兩萬四千，跟住係六十二萬四千。兩份要約嘅利息都係七萬二千，但總數一樣，唔等於時間安排一樣。
+  s3_en: >-
+    B's initial reserve reaches 450,000 after three transfers, 150,000 short of the principal. The 66,000
+    promotions use the rest, so no spare cash can close the gap.
+  s3_zh: B起初的储备，三次转入后达到四十五万，比本金少十五万。每年六万六千的推广把余下的钱用光了，没有闲钱能补这个缺口。
+  s3_zh_hk: B起初嘅儲備，三次轉入之後有四十五萬，比本金少十五萬。每年六萬六千嘅推廣用晒剩低嘅錢，冇閒錢補到呢個缺口。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Fund B's maturity payment
+  title_zh: 为 B 的到期还款筹足钱
+  title_zh_hk: 為 B 的到期還款籌足錢
+  step1_en: Reserve 600,000 ÷ 3 = 200,000 a year
+  step1_zh: 储备 600,000 ÷ 3 = 每年 200,000
+  step1_zh_hk: 儲備 600,000 ÷ 3 = 每年 200,000
+  step2_en: >-
+    B promotions: 16,000 each year
+  step2_zh: B 推广：每年 16,000
+  step2_zh_hk: B 推廣：每年 16,000
+  step3_en: >-
+    A promotions: 4,000 · 16,000 · 28,000
+  step3_zh: A 推广：4,000 · 16,000 · 28,000
+  step3_zh_hk: A 推廣：4,000 · 16,000 · 28,000
+  s1_en: >-
+    To repay B without refinancing, reserve 600,000 divided by 3, or 200,000 each year. After 24,000 of
+    interest, that leaves 16,000 a year for promotions, 50,000 less than the initial plan.
+  s1_zh: 要不靠再融资还清B，每年要储备六十万除以三，即二十万。付完两万四千利息，每年只剩一万六千做推广，比原计划少五万。
+  s1_zh_hk: 要唔靠再融資還清B，每年要儲六十萬除三，即係二十萬。俾完兩萬四千利息，每年淨係剩一萬六千做推廣，比原本計劃少五萬。
+  s2_en: >-
+    In year 3, the earlier 400,000 reserve plus that year's 240,000 gives 640,000. Pay 24,000 interest
+    and 600,000 principal, and 16,000 is left. The third transfer is internal earmarking, not an extra
+    expense.
+  s2_zh: 第三年，之前储备的四十万，加上当年的二十四万，共六十四万。付两万四千利息和六十万本金，剩下一万六千。第三次转入只是内部划拨，不是额外开支。
+  s2_zh_hk: 第三年，之前儲落嘅四十萬，加當年嘅二十四萬，共六十四萬。俾兩萬四千利息同六十萬本金，剩一萬六千。第三次轉入只係內部撥款，唔係額外開支。
+  s3_en: >-
+    A leaves 4,000, 16,000 and 28,000 for promotions, a total of 48,000, the same as fully reserved B.
+    Both satisfy the repayment condition.
+  s3_zh: A每年剩给推广的钱是四千、一万六千和两万八千，合计四万八千，和储足钱的B一样。两个方案都符合还款条件。
+  s3_zh_hk: A每年剩俾推廣嘅錢係四千、一萬六千同兩萬八千，合共四萬八千，同儲夠錢嘅B一樣。兩個方案都符合還款條件。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Both self-funded plans work
+  title_zh: 两个自筹方案都行得通
+  title_zh_hk: 兩個自籌方案都行得通
+  en: >-
+    Choose fully reserved B if smoother promotion spending is valuable and the reserve discipline is credible.
+    Choose A if gradual contractual principal reduction is preferred. Reject B's original plan, which
+    relied on refinancing that is not assured.
+  zh: >-
+    如果更看重每年推广开支平稳，而且相信公司能守住储备纪律，就选储足钱的B。如果更想按合同逐步减少本金，就选A。B原来那个依赖不确定再融资的方案，应该否决。
+  zh_hk: >-
+    如果你更睇重每年推廣開支平穩，又相信公司守得住儲備紀律，就揀儲夠錢嘅B。如果想按合約逐步減本金，就揀A。B原本嗰個靠唔確定再融資嘅方案，應該否決。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Interest is not the whole debt
+  title_zh: 利息不是债务的全部
+  title_zh_hk: 利息不是債務的全部
+  q1_en: Show principal due at maturity
+  q1_zh: 列出到期应还的本金
+  q1_zh_hk: 列出到期應還的本金
+  q2_en: Uncommitted refinancing is not assured cash
+  q2_zh: 未承诺的再融资不是确定现金
+  q2_zh_hk: 未承諾的再融資不是確定現金
+  s1_en: >-
+    Affordable annual interest does not supply the missing principal. A reserve is a separate asset until
+    it is actually used to repay debt.
+  s1_zh: 每年付得起利息，并不会把缺的本金补上。储备在真正用来还债之前，只是另外一笔资产。
+  s1_zh_hk: 每年俾得起利息，唔會幫你補返欠嘅本金。儲備喺真係用嚟還債之前，只係另外一筆資產。
+  s2_en: >-
+    This is not a loan application, legal recommendation, or forecast that any lender will refinance a
+    business.
+  s2_zh: 这不是贷款申请，不是法律建议，也不是预测任何贷款人会给企业再融资。
+  s2_zh_hk: 呢個唔係貸款申請，唔係法律建議，亦唔係預測任何貸款人會幫企業再融資。
+  s3_en: >-
+    The studio, offers and cash amounts are fictional. Official scene art is a teaching illustration only.
+  s3_zh: 工作室、要约和现金数额都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 工作室、要約同現金數額都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

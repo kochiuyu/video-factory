@@ -1,0 +1,293 @@
+id: FIN-14
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Rising cash flows. The same discount rate?
+title_zh: 现金流在上升，折现率还用同一个吗？
+title_zh_hk: 現金流在上升，折現率還用同一個嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-14
+  kicker_en: FIN-14
+  kicker_zh: FIN-14
+  kicker_zh_hk: FIN-14
+  title_en: Rising cash flows. The same discount rate?
+  title_zh: 现金流在上升，折现率还用同一个吗？
+  title_zh_hk: 現金流在上升，折現率還用同一個嗎？
+  image: art/same-money-same-rate-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 22 October 2026, Hong Kong's Census and Statistics Department released September consumer-price
+    figures. A price index measures a basket over a period; it is not automatically a forecast for an
+    equipment project. Now you check a fictional packaging workshop's spreadsheets.
+  zh: >-
+    2026年10月22日，香港政府统计处公布了九月份的消费物价数据。物价指数衡量的是某一篮子商品在某段时期的价格，不会自动变成某个设备项目的预测。现在，你要核对香港一家虚构包装工场的两张表格。
+  zh_hk: >-
+    2026年10月22號，香港政府統計處公布咗九月嘅消費物價數字。物價指數量度嘅係某一籃子貨品喺某段時間嘅價格，唔會自動變成某個設備項目嘅預測。而家，你要幫香港一間虛構包裝工場核對兩張表。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 5
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Same machine, two sheets · HK$
+  title_zh: 同一台机器，两张表 · 港元
+  title_zh_hk: 同一部機器，兩張表 · 港元
+  row1_en: Year 1
+  row1_zh: 第 1 年
+  row1_zh_hk: 第 1 年
+  row2_en: Year 2
+  row2_zh: 第 2 年
+  row2_zh_hk: 第 2 年
+  row3_en: Year 3
+  row3_zh: 第 3 年
+  row3_zh_hk: 第 3 年
+  row4_en: Rate used
+  row4_zh: 所用折现率
+  row4_zh_hk: 所用折現率
+  row5_en: NPV, rounded
+  row5_zh: 净现值（约）
+  row5_zh_hk: 淨現值（約）
+  col1_en: >-
+    A: today's purchasing power
+  col1_zh: A：今天的购买力
+  col1_zh_hk: A：今天的購買力
+  col2_en: >-
+    B: future money
+  col2_zh: B：将来的钱
+  col2_zh_hk: B：將來的錢
+  c11: 42,000
+  c12: 43,680
+  c21: 42,000
+  c22: 45,427.20
+  c31: 42,000
+  c32: 47,244.288
+  c41: 9.2%
+  c42: 9.2%
+  c51: −4,063
+  c52: +4,376
+  footer_en: >-
+    Outlay today: HK$110,000
+  footer_zh: 今天投入：HK$110,000
+  footer_zh_hk: 今天投入：HK$110,000
+  s1_en: >-
+    A packaging workshop is considering a cutting machine costing 110,000 dollars today, including installation,
+    to run for three years. Two spreadsheets describe the same project, but give opposite signs for its
+    net present value: the value today of future net cash flows, less today's outlay.
+  s1_zh: >-
+    包装工场考虑买一台切割机，连安装今天要十一万港元，用三年。两张表说的是同一个项目，净现值却一正一负。净现值就是未来净现金流在今天的价值，减去今天的投入。
+  s1_zh_hk: >-
+    包裝工場諗緊買部切割機，連安裝今日要十一萬港元，用三年。兩張表講同一個項目，淨現值就一正一負。淨現值即係將來淨現金流喺今日嘅價值，減今日嘅投入。
+  s2_en: >-
+    Sheet A calls its flows today's purchasing power: 42,000 dollars each year-end. Sheet B calls them
+    future money: 43,680, 45,427.20, and 47,244.288. Both discount at 9.2 percent a year.
+  s2_zh: >-
+    A表把现金流称为今天的购买力，每年年末四万二千港元。B表称为将来的钱，分别是43,680、45,427.2和47,244.288港元。两张表都用每年百分之九点二折现。
+  s2_zh_hk: >-
+    A表將現金流叫做今日嘅購買力，每年年尾四萬二千港元。B表叫做將來嘅錢，分別係43,680、45,427.2同47,244.288港元。兩張表都用每年百分之九點二折現。
+  s3_en: >-
+    A reports NPV of about minus 4,063; B about plus 4,376. A negative NPV fails this screen; a positive
+    one supports further consideration, not a purchase. No order has been placed.
+  s3_zh: A表算出净现值约负四千零六十三，B表约正四千三百七十六。净现值为负就过不了这次财务筛选；为正也只是值得继续考虑，不是一定要买。现在还没下单。
+  s3_zh_hk: >-
+    A表計出淨現值大約負四千零六十三，B表大約正四千三百七十六。淨現值係負就過唔到今次財務篩選；係正都只係值得繼續考慮，唔係一定要買。而家仲未落單。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Use a sheet, or hold?
+  title_zh: 用哪张表，还是先暂停？
+  title_zh_hk: 用邊張表，定先停一停？
+  en: >-
+    Would you use either spreadsheet to recommend the machine now, or hold the recommendation for a consistency
+    check? Identify the missing definition that matters more than which NPV looks attractive. Pause and
+    vote.
+  zh: 你现在会用其中一张表来建议买这台机器，还是先暂缓，做一次口径核对？请指出缺了哪一个定义，它比哪个净现值看起来更吸引人更重要。请暂停，投个票。
+  zh_hk: 你而家會用其中一張表建議買呢部機，定係先暫停，做一次口徑核對？講吓缺咗邊一個定義，佢比邊個淨現值睇落吸引更重要。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Inflation 4% · matched rates
+  title_zh: 通胀 4% · 配对的折现率
+  title_zh_hk: 通脹 4% · 配對的折現率
+  step1_en: Every cash-flow item rises 4% a year
+  step1_zh: 每项现金流每年都升 4%
+  step1_zh_hk: 每項現金流每年都升 4%
+  step2_en: Real 5% ↔ nominal 9.2% (1.05 × 1.04)
+  step2_zh: 实际 5% ↔ 名义 9.2%（1.05 × 1.04）
+  step2_zh_hk: 實際 5% ↔ 名義 9.2%（1.05 × 1.04）
+  step3_en: A used the nominal rate on real flows
+  step3_zh: A 用名义利率折实际现金流
+  step3_zh_hk: A 用名義利率折實際現金流
+  s1_en: >-
+    The modeller confirms a simplified common inflation rate of 4 percent a year. Every part of the net
+    operating cash flow rises at that rate, so 42,000 in today's purchasing power becomes 42,000 times
+    1.04 to the power of the year. Physical output does not change.
+  s1_zh: >-
+    建模者确认，通胀率简化为每年百分之四，净经营现金流各部分都按这个速度涨。所以今天购买力的四万二千港元，换成将来的钱，就是四万二千乘一点零四的年数次方，实际产量不变。
+  s1_zh_hk: >-
+    整模型嘅人確認，共同通脹率簡化做每年百分之四，淨經營現金流每部分都咁升。所以今日購買力嘅四萬二千港元，換成將來嘅錢，就係四萬二千乘一點零四嘅年數次方。實際產量冇變。
+  s2_en: >-
+    The matched discount rates for the same project risk are 5 percent real and 9.2 percent nominal, because
+    1.05 times 1.04 is 1.092.
+  s2_zh: 同一项目风险下，配对的折现率是实际百分之五、名义百分之九点二，因为一点零五乘一点零四等于一点零九二。
+  s2_zh_hk: 同一項目風險之下，配對嘅折現率係實際百分之五、名義百分之九點二，因為一點零五乘一點零四等於一點零九二。
+  s3_en: >-
+    Sheet A used the nominal rate against real cash flows. Sheet B paired nominal flows with the nominal
+    rate. There are no taxes, working-capital changes or terminal proceeds in this model.
+  s3_zh: A表拿名义利率去折实际现金流，B表则是名义现金流配名义利率。这个模型里没有税、营运资金变动，也没有期末残值收入。
+  s3_zh_hk: A表用名義利率去折實際現金流，B表就係名義現金流配名義利率。呢個模型冇稅、冇營運資金變動，亦冇期末殘值收入。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Repair the inconsistent sheet
+  title_zh: 修正口径不一致的表
+  title_zh_hk: 修正口徑不一致的表
+  en: >-
+    Repair the inconsistent sheet. What NPV should the two consistent methods produce? And how would you
+    explain why rising future-money receipts do not create extra real value by themselves? Pause and vote.
+  zh: 把口径不一致的那张表改过来。两种一致的方法应该算出多少净现值？你又会怎样解释：将来的钱越收越多，本身并不会多出实际价值？请暂停，投个票。
+  zh_hk: 將口徑唔一致嗰張表改返啱。兩種一致嘅方法應該計出幾多淨現值？你又會點樣解釋：將來嘅錢越收越多，本身唔會多咗實際價值？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Match the units to the rate
+  title_zh: 现金流单位要配对折现率
+  title_zh_hk: 現金流單位要配對折現率
+  step1_en: Real flows ÷ real 5%
+  step1_zh: 实际现金流 ÷ 实际 5%
+  step1_zh_hk: 實際現金流 ÷ 實際 5%
+  step2_en: >-
+    Corrected A: NPV ≈ +HK$4,376.42
+  step2_zh: 改正后的 A：净现值 ≈ +HK$4,376.42
+  step2_zh_hk: 改正後的 A：淨現值 ≈ +HK$4,376.42
+  step3_en: Nominal B gives the same result
+  step3_zh: 名义 B 得到相同结果
+  step3_zh_hk: 名義 B 得到相同結果
+  s1_en: >-
+    Real cash flows express purchasing power at today's prices; nominal cash flows express the money expected
+    on each future date. Discount real flows at the 5 percent real rate, and nominal flows at 9.2 percent
+    nominal.
+  s1_zh: >-
+    实际现金流表示按今天价格计算的购买力；名义现金流表示每个将来日期预计收到的钱。实际现金流用百分之五的实际利率折现，名义现金流用百分之九点二的名义利率折现。
+  s1_zh_hk: >-
+    實際現金流表示按今日價格計嘅購買力；名義現金流表示每個將來日子預計收到嘅錢。實際現金流用百分之五實際利率折現，名義現金流用百分之九點二名義利率折現。
+  s2_en: >-
+    Corrected A: 42,000 divided by 1.05, by 1.05 squared and by 1.05 cubed, minus 110,000, gives about
+    4,376.42 dollars.
+  s2_zh: 改正后的A表：四万二千分别除以一点零五、一点零五的平方和一点零五的立方，加起来再减十一万，约等于四千三百七十六点四二港元。
+  s2_zh_hk: 改正後嘅A表：四萬二千分別除一點零五、一點零五嘅平方同一點零五嘅立方，加埋再減十一萬，大約係四千三百七十六點四二港元。
+  s3_en: >-
+    Sheet B, discounting its nominal flows at 1.092, gives the same result. Each nominal flow carries
+    a 1.04 factor per year, and the nominal discount factor carries the same one, so they cancel.
+  s3_zh: B表把名义现金流用一点零九二折现，结果完全一样。每笔名义现金流每年都多乘一个一点零四，名义折现因子里也有同一个一点零四，两者互相抵消。
+  s3_zh_hk: B表將名義現金流用一點零九二折現，結果一模一樣。每筆名義現金流每年都多乘一個一點零四，名義折現因子入面都有同一個一點零四，兩樣互相抵消。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: A unit mismatch, not caution
+  title_zh: 单位错配，不是保守
+  title_zh_hk: 單位錯配，不是保守
+  step1_en: −4,063.44 came from mixed units
+  step1_zh: −4,063.44 来自单位混用
+  step1_zh_hk: −4,063.44 來自單位混用
+  step2_en: Inflating receipts adds no real value
+  step2_zh: 名义收入上升不等于增值
+  step2_zh_hk: 名義收入上升不等於增值
+  step3_en: >-
+    Positive NPV: consider, not proof
+  step3_zh: 净现值为正：可考虑，非证明
+  step3_zh_hk: 淨現值為正：可考慮，非證明
+  s1_en: >-
+    The old minus 4,063.44 was a unit mismatch, not a more cautious view of the same assumptions.
+  s1_zh: 原来的负四千零六十三点四四，是单位没对上，不是对同一套假设更谨慎的看法。
+  s1_zh_hk: 原本嘅負四千零六十三點四四，係單位唔夾，唔係對同一套假設更審慎嘅睇法。
+  s2_en: >-
+    Rising future-money receipts only restate the same purchasing power in inflated dollars. By themselves,
+    they create no extra real value.
+  s2_zh: 将来的钱越收越多，只是用通胀后的金额重新表示同样的购买力，本身不会多出实际价值。
+  s2_zh_hk: 將來嘅錢越收越多，只係用通脹後嘅金額重新表示同樣嘅購買力，本身唔會多咗實際價值。
+  s3_en: >-
+    A positive NPV of about 4,376 under either consistent method does not prove the cash flows will occur,
+    or that this is the best use of funds. Check demand, capacity, costs and competing opportunities.
+  s3_zh: >-
+    两种一致方法都得出约正四千三百七十六的净现值，但这并不证明现金流一定会出现，也不证明这是资金的最佳用途。还要核对需求、产能、成本和其他投资机会。
+  s3_zh_hk: >-
+    兩種一致方法都計到大約正四千三百七十六嘅淨現值，但唔證明現金流一定會出現，亦唔證明呢個係資金最好嘅用途。仲要核對需求、產能、成本同其他投資機會。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Inflate components, not a total
+  title_zh: 分项通胀，不要整体推算
+  title_zh_hk: 分項通脹，不要整體推算
+  en: >-
+    If sales prices and costs rise at different rates, do not inflate a net total blindly. Forecast the
+    components, then convert them consistently. Nor should a household consumer-price figure become the
+    project's inflation assumption without justification.
+  zh: >-
+    如果售价和成本的涨幅不同，就不要把净额一起机械地按通胀推高，而是先分项预测，再按一致的基础换算。家庭消费物价的一个数据，也不能没有理由就当成这个项目的通胀假设。
+  zh_hk: >-
+    如果售價同成本嘅升幅唔同，就唔好將淨額一齊機械式咁按通脹推高，而係先分項預測，再按一致嘅基礎換算。家庭消費物價嘅一個數字，亦唔可以冇理由就當成呢個項目嘅通脹假設。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Match real and nominal
+  title_zh: 实际配实际，名义配名义
+  title_zh_hk: 實際配實際，名義配名義
+  q1_en: Define the cash-flow units first
+  q1_zh: 先定义现金流的单位
+  q1_zh_hk: 先定義現金流的單位
+  q2_en: A shared rate is not a fair comparison
+  q2_zh: 同一个折现率不等于公平比较
+  q2_zh_hk: 同一個折現率不等於公平比較
+  s1_en: >-
+    When the units are consistent, both methods give the same answer for the same project.
+  s1_zh: 只要单位一致，两种方法对同一个项目会得出同样的答案。
+  s1_zh_hk: 只要單位一致，兩種方法對同一個項目會計到同一個答案。
+  s2_en: >-
+    These rates are appraisal assumptions, not loan quotes or advice for other businesses.
+  s2_zh: 这些利率是评估假设，不是贷款报价，也不是给其他企业的建议。
+  s2_zh_hk: 呢啲利率係評估假設，唔係貸款報價，亦唔係俾其他企業嘅建議。
+  s3_en: >-
+    The workshop, cash flows and inflation rate are fictional, not a government forecast. Official scene
+    art is a teaching illustration only.
+  s3_zh: 工场、现金流和通胀率都是虚构的，不是政府的预测。官方场景图只是教学插图。
+  s3_zh_hk: 工場、現金流同通脹率都係虛構嘅，唔係政府嘅預測。官方場景圖只係教學插圖。
+duration_target_s: 196

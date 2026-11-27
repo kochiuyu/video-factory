@@ -1,0 +1,296 @@
+id: FIN-18
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Earn more interest. Available on which day?
+title_zh: 利息赚得更多，哪一天拿得到？
+title_zh_hk: 利息賺得更多，哪一天拿得到？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-18
+  kicker_en: FIN-18
+  kicker_zh: FIN-18
+  kicker_zh_hk: FIN-18
+  title_en: Earn more interest. Available on which day?
+  title_zh: 利息赚得更多，哪一天拿得到？
+  title_zh_hk: 利息賺得更多，哪一天拿得到？
+  image: art/cash-on-the-day-it-is-needed-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    The Hong Kong Monetary Authority's September 2025 stability report described lower retail Hong Kong-dollar
+    time-deposit rates in the first half of 2025, as liquidity eased. That is historical context, not
+    an offer or a forecast. Now you plan a fictional design studio's reserve.
+  zh: >-
+    香港金融管理局2025年9月的稳定报告提到，2025年上半年流动性有所缓和，零售港元定期存款利率随之下降。这是过去的银行业背景，不是现在的报价，也不是预测。现在，你要为一家虚构设计工作室安排一笔储备。
+  zh_hk: >-
+    香港金融管理局2025年9月嘅穩定報告提到，2025年上半年流動性放鬆咗，零售港元定期存款利率跟住跌。呢個係過去嘅銀行業背景，唔係而家嘅報價，亦唔係預測。而家，你要幫一間虛構設計工作室安排一筆儲備。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Fund three supplier payments
+  title_zh: 为三笔供应商付款备资
+  title_zh_hk: 為三筆供應商付款備資
+  row1_en: 60,000 on day 30
+  row1_zh: 第 30 天付 60,000
+  row1_zh_hk: 第 30 天付 60,000
+  row2_en: 90,000 on day 60
+  row2_zh: 第 60 天付 90,000
+  row2_zh_hk: 第 60 天付 90,000
+  row3_en: 150,000 on day 90
+  row3_zh: 第 90 天付 150,000
+  row3_zh_hk: 第 90 天付 150,000
+  col1_en: >-
+    A: maturity ladder
+  col1_zh: A：到期阶梯
+  col1_zh_hk: A：到期階梯
+  col2_en: >-
+    B: liquid first
+  col2_zh: B：先留活期
+  col2_zh_hk: B：先留活期
+  c11_en: 30-day deposit, 2.4%
+  c11_zh: 30 天定期，2.4%
+  c11_zh_hk: 30 天定期，2.4%
+  c12_en: On demand, 0.6%
+  c12_zh: 活期，0.6%
+  c12_zh_hk: 活期，0.6%
+  c21_en: 60-day deposit, 3.0%
+  c21_zh: 60 天定期，3.0%
+  c21_zh_hk: 60 天定期，3.0%
+  c22_en: Same
+  c22_zh: 相同
+  c22_zh_hk: 相同
+  c31_en: 90-day deposit, 3.6%
+  c31_zh: 90 天定期，3.6%
+  c31_zh_hk: 90 天定期，3.6%
+  c32_en: Same
+  c32_zh: 相同
+  c32_zh_hk: 相同
+  footer_en: HK$ · simple interest · 360-day year
+  footer_zh: 港元 · 单利 · 一年按 360 天
+  footer_zh_hk: 港元 · 單利 · 一年按 360 天
+  s1_en: >-
+    The studio has 300,000 dollars reserved for three supplier payments: 60,000 on day 30, 90,000 on day
+    60, and 150,000 on day 90. Other needs are funded separately, and no borrowing is available within
+    this reserve.
+  s1_zh: 工作室留出三十万港元，专门用来付三笔供应商货款：第三十天六万，第六十天九万，第九十天十五万。其他开支另有资金，这笔储备里也不能借钱。
+  s1_zh_hk: 工作室預留咗三十萬港元，專門俾三筆供應商貨款：第三十日六萬，第六十日九萬，第九十日十五萬。其他開支另外有錢，呢筆儲備入面亦唔可以借錢。
+  s2_en: >-
+    The maturity ladder puts each payment in a deposit maturing on its due day. The liquid-first plan
+    keeps the first 60,000 on demand, and uses the same deposits for the later two. Keeping everything
+    until day 90 is not allowed: it would miss earlier payments.
+  s2_zh: >-
+    到期阶梯是把每笔付款放进刚好在付款日到期的定期存款。先留活期的做法，是把第一笔六万放在活期，后面两笔照样做定期。把全部钱存到第九十天不可行，因为会错过前面的付款。
+  s2_zh_hk: >-
+    到期階梯即係將每筆付款放入啱啱喺付款日到期嘅定期存款。先留活期嘅做法，就係將第一筆六萬擺喺活期，後面兩筆照做定期。將全部錢存到第九十日唔得，因為會錯過前面嘅付款。
+  s3_en: >-
+    Fictional simple annual rates are 2.4 percent for 30 days, 3.0 for 60, and 3.6 for 90; on-demand cash
+    earns 0.6. Interest is principal times rate times days over 360, with no compounding or tax.
+  s3_zh: >-
+    虚构的单利年利率是：三十天百分之二点四，六十天百分之三，九十天百分之三点六，活期百分之零点六。利息等于本金乘年利率，再乘天数除以三百六十，不计复利，也不计税。
+  s3_zh_hk: >-
+    虛構嘅單利年利率係：三十日百分之二點四，六十日百分之三，九十日百分之三點六，活期百分之零點六。利息等於本金乘年利率，再乘日數除三百六十，唔計複利，亦唔計稅。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Ladder or liquid first?
+  title_zh: 到期阶梯还是先留活期？
+  title_zh_hk: 到期階梯定先留活期？
+  en: >-
+    Which policy would you choose for the known payment schedule? And how much interest would you give
+    up to keep the first payment liquid? Pause and vote.
+  zh: 按已知的付款日程，你会选哪一种做法？为了让第一笔付款随时可用，你要放弃多少利息？请暂停，投个票。
+  zh_hk: 按已知嘅付款日程，你會揀邊種做法？為咗第一筆付款隨時用得，你要放棄幾多利息？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: >-
+    Day 15: an early-delivery offer
+  title_zh: 第 15 天：提早交货的提议
+  title_zh_hk: 第 15 天：提早交貨的提議
+  step1_en: Pay HK$59,700 today instead of 60,000
+  step1_zh: 今天付 HK$59,700，代替 60,000
+  step1_zh_hk: 今天付 HK$59,700，代替 60,000
+  step2_en: >-
+    A: break deposit, no interest, −HK$200
+  step2_zh: A：提前支取，无利息，扣 HK$200
+  step2_zh_hk: A：提早提取，無利息，扣 HK$200
+  step3_en: >-
+    B: cash on demand, 15 days' interest
+  step3_zh: B：活期随时可用，有 15 天利息
+  step3_zh_hk: B：活期隨時可用，有 15 天利息
+  s1_en: >-
+    Treat each policy as already in place on day 0. On day 15, the first supplier offers optional early
+    delivery for 59,700 dollars that day, instead of 60,000 on day 30. Quality is unchanged, and declining
+    carries no penalty.
+  s1_zh: >-
+    把两种做法都当成第零天已经定好。到了第十五天，第一家供应商提出可以提早交货，当天付五万九千七百港元，代替第三十天的六万。质量不变，拒绝也不会被罚。
+  s1_zh_hk: 將兩種做法都當成第零日已經定咗。到第十五日，第一間供應商話可以提早交貨，當日俾五萬九千七百港元，代替第三十日嘅六萬。質素唔變，拒絕都唔會罰。
+  s2_en: >-
+    Under A, the bank will allow early withdrawal of the whole 60,000-dollar 30-day deposit, paying no
+    interest and deducting a 200-dollar fee from principal. Partial withdrawal is not allowed.
+  s2_zh: 在A之下，银行同意让那笔六万港元的三十天定期整笔提前支取，但不付利息，还要从本金扣两百港元手续费，不能只取一部分。
+  s2_zh_hk: 喺A之下，銀行同意嗰筆六萬港元三十日定期成筆提早提取，但唔俾利息，仲要喺本金扣兩百港元手續費，唔可以淨係攞一部分。
+  s3_en: >-
+    Under B, the 60,000 on-demand balance is available with no fee, and earns 15 days of interest. Leftover
+    money is parked without further interest through day 90.
+  s3_zh: 在B之下，六万港元活期余额随时可以用，不收手续费，还有十五天的利息。剩下的钱放到第九十天，不再计息。
+  s3_zh_hk: 喺B之下，六萬港元活期餘額隨時用得，唔收手續費，仲有十五日利息。剩低嘅錢放到第九十日，唔再計息。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Accept the early delivery?
+  title_zh: 接受提早交货吗？
+  title_zh_hk: 接受提早交貨嗎？
+  en: >-
+    Under each policy, would you accept the early-delivery offer? Reconcile the discount with lost interest
+    and fees, then explain what this one opportunity says about liquidity. Pause and vote.
+  zh: 两种做法之下，你会不会接受提早交货？把折扣、损失的利息和手续费对一对，再说说这次机会说明了流动性的什么。请暂停，投个票。
+  zh_hk: 兩種做法之下，你會唔會接受提早交貨？將折扣、損失嘅利息同手續費對一對，再講吓今次機會話咗流動性啲咩。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Fund the dates first
+  title_zh: 先按日期备好资金
+  title_zh_hk: 先按日期備好資金
+  step1_en: >-
+    A interest: 120 + 450 + 1,350 = 1,920
+  step1_zh: A 利息：120 + 450 + 1,350 = 1,920
+  step1_zh_hk: A 利息：120 + 450 + 1,350 = 1,920
+  step2_en: >-
+    B: first 60,000 earns 30 → 1,830
+  step2_zh: B：首笔 60,000 赚 30 → 1,830
+  step2_zh_hk: B：首筆 60,000 賺 30 → 1,830
+  step3_en: Liquidity costs HK$90 at the start
+  step3_zh: 保持流动的起始代价：HK$90
+  step3_zh_hk: 保持流動的起始代價：HK$90
+  s1_en: >-
+    For the ladder, 60,000 times 2.4 percent times 30 over 360 is 120 dollars. The 90,000 earns 450, and
+    the 150,000 earns 1,350.
+  s1_zh: 到期阶梯下，六万乘百分之二点四，再乘三十除以三百六十，是一百二十港元。九万赚四百五十，十五万赚一千三百五十。
+  s1_zh_hk: 到期階梯之下，六萬乘百分之二點四，再乘三十除三百六十，係一百二十港元。九萬賺四百五十，十五萬賺一千三百五十。
+  s2_en: >-
+    The ladder's total is 1,920 dollars. B earns 30 on its first cash balance instead of 120, so its total
+    is 1,830.
+  s2_zh: 阶梯合计一千九百二十港元。B的第一笔活期只赚三十，不是一百二十，所以合计一千八百三十。
+  s2_zh_hk: 階梯合共一千九百二十港元。B第一筆活期只賺三十，唔係一百二十，所以合共一千八百三十。
+  s3_en: >-
+    So the initial price of keeping 60,000 liquid is 90 dollars, not the whole interest on the reserve.
+  s3_zh: 所以，让六万港元保持流动，一开始的代价是九十港元，而不是整笔储备的利息。
+  s3_zh_hk: 所以，等六萬港元保持流動，一開始嘅代價係九十港元，唔係成筆儲備嘅利息。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Price the actual exit branch
+  title_zh: 给实际退出算价
+  title_zh_hk: 為實際退出計價
+  step1_en: >-
+    A: +300 − 120 − 200 = −20 → decline
+  step1_zh: A：+300 − 120 − 200 = −20 → 拒绝
+  step1_zh_hk: A：+300 − 120 − 200 = −20 → 拒絕
+  step2_en: >-
+    B: +300 − 15 = +285 → accept
+  step2_zh: B：+300 − 15 = +285 → 接受
+  step2_zh_hk: B：+300 − 15 = +285 → 接受
+  step3_en: >-
+    Best branches: A 1,920 · B 2,115
+  step3_zh: 各取最佳：A 1,920 · B 2,115
+  step3_zh_hk: 各取最佳：A 1,920 · B 2,115
+  s1_en: >-
+    The discount is 300 dollars. A gives up 120 of interest and pays a 200 fee, so paying early is 20
+    dollars worse. A should decline this optional offer.
+  s1_zh: 折扣是三百港元。A要放弃一百二十的利息，还要付两百手续费，提早付款反而差二十港元，所以A应该拒绝。
+  s1_zh_hk: 折扣係三百港元。A要放棄一百二十利息，仲要俾兩百手續費，提早俾錢反而差二十港元，所以A應該拒絕。
+  s2_en: >-
+    B earns 15 dollars over 15 days instead of 30 over 30 days. It gives up 15 but saves 300, a net gain
+    of 285. B should accept if the facts stay as stated.
+  s2_zh: B在十五天里赚十五港元，而不是三十天赚三十，少了十五，却省下三百，净赚二百八十五。只要条件不变，B应该接受。
+  s2_zh_hk: B喺十五日賺十五港元，唔係三十日賺三十，少咗十五，但慳咗三百，淨賺二百八十五。只要條件唔變，B應該接受。
+  s3_en: >-
+    With the best choice in each branch, A keeps 1,920, and B has 1,830 plus 285, which is 2,115, or 195
+    more. One good event does not prove B was always best on day 0.
+  s3_zh: >-
+    各自选最好的做法，A保住一千九百二十，B是一千八百三十加二百八十五，等于二千一百一十五，多一百九十五。但一次好机会，不能证明B在第零天一定最好。
+  s3_zh_hk: >-
+    各自揀最好嘅做法，A保住一千九百二十，B係一千八百三十加二百八十五，即係二千一百一十五，多一百九十五。但一次好機會，唔證明B喺第零日一定最好。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Liquidity has a price and a use
+  title_zh: 流动性有价格，也有用处
+  title_zh_hk: 流動性有價格，也有用處
+  en: >-
+    No frequency or probability of such offers was supplied. Keep a maturity calendar and a deliberate
+    liquidity buffer, rather than infer a universal rule from one favourable event. Never assume another
+    bank's early-exit policy.
+  zh: >-
+    题目没有给出这类提议出现的频率或概率。要做好存款到期日历，并有意识地留出流动性缓冲，不要从一次有利的事件推出普遍规则。也不要假定别家银行的提前支取政策都一样。
+  zh_hk: >-
+    題目冇畀呢類提議出現嘅頻率或者機率。要做好存款到期日曆，刻意留一個流動性緩衝，唔好因為一次有利嘅事就推出普遍規則。亦唔好假設第二間銀行嘅提早提取安排都一樣。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Match deposits to payment dates
+  title_zh: 存款期限要对准付款日
+  title_zh_hk: 存款期限要對準付款日
+  q1_en: Know what early exit really costs
+  q1_zh: 弄清提前支取的真实代价
+  q1_zh_hk: 弄清提早提取的真實代價
+  q2_en: One good event is not a rule
+  q2_zh: 一次好结果不是规律
+  q2_zh_hk: 一次好結果不是規律
+  s1_en: >-
+    Time deposits are not always withdrawable; check the fees and the permission before a payment date
+    changes.
+  s1_zh: 定期存款不一定能提前支取；付款日有变之前，要先核对手续费和银行是否允许。
+  s1_zh_hk: 定期存款唔一定可以提早提取；付款日有變之前，要先核對手續費同銀行准唔准。
+  s2_en: >-
+    Compare policies; this exercise opens no accounts and moves no real money.
+  s2_zh: 这里只比较做法，不开户，也不动用真实的钱。
+  s2_zh_hk: 呢度只係比較做法，唔開戶，亦唔郁真錢。
+  s3_en: >-
+    The studio, rates, terms, payment dates and charges are fictional, not bank quotations. Official scene
+    art is a teaching illustration only.
+  s3_zh: 工作室、利率、条款、付款日和收费都是虚构的，不是银行报价。官方场景图只是教学插图。
+  s3_zh_hk: 工作室、利率、條款、付款日同收費都係虛構嘅，唔係銀行報價。官方場景圖只係教學插圖。
+duration_target_s: 196

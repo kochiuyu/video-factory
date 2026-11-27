@@ -1,0 +1,291 @@
+id: FIN-17
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: More credit. A tighter promise?
+title_zh: 信贷更多，承诺就更紧吗？
+title_zh_hk: 信貸更多，承諾就更緊嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-17
+  kicker_en: FIN-17
+  kicker_zh: FIN-17
+  kicker_zh_hk: FIN-17
+  title_en: More credit. A tighter promise?
+  title_zh: 信贷更多，承诺就更紧吗？
+  title_zh_hk: 信貸更多，承諾就更緊嗎？
+  image: art/cheaper-credit-tighter-promise-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    FIT Hon Teng's 2025 interim report, filed on Hong Kong's exchange on 30 September 2025, disclosed
+    financial covenants on certain borrowings and reported compliance. Financing terms can include financial
+    ratios; that is not a suggested breach. Now you advise a fictional Hong Kong distributor.
+  zh: >-
+    FIT Hon Teng在2025年9月30日向香港交易所提交的2025年中期报告，披露了部分借款附带财务契约，并报告期内一直符合要求。融资条款可以包含财务比率，这并不表示该公司违约。现在，你要为香港一家虚构的分销商出主意。
+  zh_hk: >-
+    FIT Hon Teng喺2025年9月30號向香港交易所提交嘅2025年中期報告，披露咗部分借款附帶契諾，並報告期內一直符合。融資條款可以包括財務比率，呢個唔代表嗰間公司違約。而家，你要幫香港一間虛構嘅分銷商出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two 12-month facilities
+  title_zh: 两笔 12 个月额度
+  title_zh_hk: 兩筆 12 個月額度
+  row1_en: A
+  row1_zh: A
+  row1_zh_hk: A
+  row2_en: B
+  row2_zh: B
+  row2_zh_hk: B
+  col1_en: Fixed rate
+  col1_zh: 固定年利率
+  col1_zh_hk: 固定年利率
+  col2_en: Interest, HK$600,000 all year
+  col2_zh: 全年用 60 万的利息
+  col2_zh_hk: 全年用 60 萬的利息
+  col3_en: Quarter-end ratio test
+  col3_zh: 季末比率测试
+  col3_zh_hk: 季末比率測試
+  c11: 6%
+  c12: HK$36,000
+  c13_en: Principal / EBITDA ≤ 3.0
+  c13_zh: 总本金 / EBITDA ≤ 3.0
+  c13_zh_hk: 總本金 / EBITDA ≤ 3.0
+  c21: 8%
+  c22: HK$48,000
+  c23_en: None
+  c23_zh: 无
+  c23_zh_hk: 無
+  footer_en: >-
+    Base: principal 600k · EBITDA 240k
+  footer_zh: 基础预测：本金 60 万 · EBITDA 24 万
+  footer_zh_hk: 基本預測：本金 60 萬 · EBITDA 24 萬
+  s1_en: >-
+    The distributor needs 600,000 dollars for an approved working-capital plan and must choose one of
+    two committed facilities. Each runs twelve months, with quarterly interest and principal due at maturity.
+    Security, reporting and limits are the same.
+  s1_zh: >-
+    这家分销商为一项已批准的营运资金计划需要六十万港元，要在两笔已承诺的贷款额度里选一笔。两笔都是十二个月，利息按季支付，本金到期偿还。抵押、报告要求和额度上限都一样。
+  s1_zh_hk: >-
+    呢間分銷商為一個已批准嘅營運資金計劃要六十萬港元，要喺兩筆已承諾嘅貸款額度揀一筆。兩筆都係十二個月，利息每季俾，本金到期還。抵押、報告要求同額度上限都一樣。
+  s2_en: >-
+    A fixes interest at 6 percent, but gross principal divided by trailing-twelve-month EBITDA must be
+    no more than 3.0 at each quarter-end. EBITDA is earnings before interest, tax, depreciation and amortisation.
+    Cash is not subtracted from debt. B charges 8 percent with no such ratio.
+  s2_zh: >-
+    A固定年利率百分之六，但每个季末，总本金除以过去十二个月的EBITDA，不能高于三点零。EBITDA就是息税折旧摊销前利润，计算债务时不扣现金。B年利率百分之八，没有这项比率要求。
+  s2_zh_hk: >-
+    A固定年利率百分之六，但每個季末，總本金除過去十二個月嘅EBITDA，唔可以高過三點零。EBITDA即係未計利息、稅項、折舊及攤銷前嘅盈利，計債務唔扣現金。B年利率百分之八，冇呢項比率要求。
+  s3_en: >-
+    Under A, a weaker forecast only prompts discussion. A failed quarter-end test requires notice and
+    opens a 30-day remedy window, with drawings suspended. The lender may accelerate only if it stays
+    unremedied. No waiver is promised.
+  s3_zh: >-
+    在A之下，预测变差只会引起讨论。季末测试真的不达标，就要通知贷款人，进入三十天补救期，期间暂停提款。过了补救期仍未达标，贷款人才可以要求提前还款。没有承诺豁免。
+  s3_zh_hk: >-
+    喺A之下，預測轉差只會引起討論。季末測試真係唔達標，就要通知貸款人，入三十日補救期，期間暫停提款。過咗補救期仍未達標，貸款人先可以要求提早還款。冇承諾豁免。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: A at 6%, or B at 8%?
+  title_zh: A 6%，还是 B 8%？
+  title_zh_hk: A 6%，定 B 8%？
+  en: >-
+    Which facility would you provisionally choose? Calculate A's base-case ratio and interest advantage,
+    then explain why those figures alone do not establish adequate covenant headroom. Pause and vote.
+  zh: 你会暂时选哪一笔额度？算出A在基础情形下的比率和利息优势，再说明为什么光看这些数字，还不能证明契约有足够的余量。请暂停，投个票。
+  zh_hk: 你暫時會揀邊筆額度？計出A喺基本情況下嘅比率同利息優勢，再講吓點解淨睇呢啲數字，仲未證明到契諾有足夠嘅餘裕。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A downside forecast
+  title_zh: 一个下行预测
+  title_zh_hk: 一個下行預測
+  step1_en: >-
+    EBITDA at first test: HK$180,000
+  step1_zh: 首次测试 EBITDA：HK$180,000
+  step1_zh_hk: 首次測試 EBITDA：HK$180,000
+  step2_en: >-
+    Separate free reserve: HK$80,000
+  step2_zh: 另有可用储备：HK$80,000
+  step2_zh_hk: 另有可用儲備：HK$80,000
+  step3_en: Repaid principal cannot be redrawn
+  step3_zh: 已还本金不能再提取
+  step3_zh_hk: 已還本金不能再提取
+  s1_en: >-
+    Before either offer is signed, a downside forecast cuts the first test's EBITDA to 180,000 dollars,
+    with principal still 600,000. This is a scenario, not an actual breach, and no probability is given.
+  s1_zh: 两笔额度都还没签，一个下行预测就把第一次测试的EBITDA降到十八万港元，本金仍是六十万。这只是情景，不是已经违约，也没有给出概率。
+  s1_zh_hk: 兩筆額度都未簽，一個下行預測就將第一次測試嘅EBITDA降到十八萬港元，本金仲係六十萬。呢個只係情景，唔係已經違約，亦冇畀機率。
+  s2_en: >-
+    The business already holds a separate, unrestricted reserve of 80,000 dollars. It can fund a remedy
+    without delaying wages, suppliers or taxes.
+  s2_zh: 公司另外已经持有八万港元不受限制的储备，可以用来补救，而不会拖欠工资、供应商货款或税款。
+  s2_zh_hk: 公司另外已經有八萬港元唔受限制嘅儲備，可以用嚟補救，唔會拖欠人工、供應商貨款或者稅款。
+  s3_en: >-
+    Under A, the reserve could reduce principal within the 30-day window, without a fee, so permitted
+    debt equals three times tested EBITDA. Repaid principal cannot be redrawn, so flexibility genuinely
+    falls. B keeps the full reserve but its higher rate.
+  s3_zh: >-
+    在A之下，可以在三十天补救期内用这笔储备减少本金，不收费，让允许的债务等于测试EBITDA的三倍。已还的本金不能再提取，所以融资弹性是真的少了。B可以保住全部储备，但利率较高。
+  s3_zh_hk: >-
+    喺A之下，可以喺三十日補救期內用呢筆儲備減本金，唔收費，令容許嘅債務等於測試EBITDA嘅三倍。已還嘅本金唔可以再提取，所以融資彈性真係少咗。B可以保住全部儲備，但利率高啲。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep your facility choice?
+  title_zh: 还选原来那一笔吗？
+  title_zh_hk: 仲揀原本那一筆嗎？
+  en: >-
+    Would you keep your facility choice after the downside forecast? Calculate A's required principal
+    reduction and remaining reserve, and distinguish a forecast warning, a failed test with an agreed
+    remedy, and possible acceleration after an unremedied failure. Pause and vote.
+  zh: >-
+    看了下行预测，你还会选原来那一笔吗？算出A需要减少多少本金、还剩多少储备，再把三件事分开：预测发出警告、测试不达标但有约定的补救，以及补救不成之后可能被要求提前还款。请暂停，投个票。
+  zh_hk: >-
+    睇完下行預測，你仲會唔會揀原本嗰筆？計出A要減幾多本金、仲剩幾多儲備，再將三樣嘢分開：預測發出警告、測試唔達標但有約定嘅補救，同埋補救唔成之後可能要提早還款。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Measure the boundary, too
+  title_zh: 量边界，不只看利率
+  title_zh_hk: 量邊界，不只看利率
+  step1_en: >-
+    Base ratio: 600,000 / 240,000 = 2.5
+  step1_zh: 基础比率：600,000 / 240,000 = 2.5
+  step1_zh_hk: 基本比率：600,000 / 240,000 = 2.5
+  step2_en: >-
+    Minimum EBITDA: 600,000 / 3 = 200,000
+  step2_zh: 最低 EBITDA：600,000 / 3 = 200,000
+  step2_zh_hk: 最低 EBITDA：600,000 / 3 = 200,000
+  step3_en: A saves 12,000 at a constant draw
+  step3_zh: 持续全额使用：A 省 12,000
+  step3_zh_hk: 持續全額使用：A 慳 12,000
+  s1_en: The base ratio is 600,000 divided by 240,000, which is 2.5.
+  s1_zh: 基础比率是六十万除以二十四万，等于二点五。
+  s1_zh_hk: 基本比率係六十萬除二十四萬，等於二點五。
+  s2_en: >-
+    With principal unchanged, EBITDA must be at least 600,000 divided by 3, or 200,000 dollars. The base
+    forecast is 40,000 above that boundary.
+  s2_zh: 本金不变时，EBITDA至少要有六十万除以三，即二十万港元。基础预测只比这条界线高四万。
+  s2_zh_hk: 本金唔變，EBITDA最少要有六十萬除三，即係二十萬港元。基本預測只係高過呢條界線四萬。
+  s3_en: >-
+    At a constant 600,000 draw, interest is 36,000 versus 48,000, a 12,000 advantage for A. Neither the
+    saving nor the base ratio gives a probability of staying compliant.
+  s3_zh: 如果一直用满六十万，利息是三万六千对四万八千，A省一万二千。但这笔节省和基础比率，都说明不了继续达标的概率有多大。
+  s3_zh_hk: 如果一直用盡六十萬，利息係三萬六千對四萬八千，A慳一萬二千。但呢筆節省同基本比率，都講唔到繼續達標嘅機率有幾大。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Calculate the remedy by contract
+  title_zh: 按合同计算补救
+  title_zh_hk: 按合約計算補救
+  step1_en: >-
+    180,000: ratio 3.33 > 3.0
+  step1_zh: EBITDA 18 万：比率 3.33 > 3.0
+  step1_zh_hk: EBITDA 18 萬：比率 3.33 > 3.0
+  step2_en: Allowed 540,000 → repay 60,000
+  step2_zh: 上限 540,000 → 还 60,000
+  step2_zh_hk: 上限 540,000 → 還 60,000
+  step3_en: >-
+    Reserve left: 20,000 · no extra headroom
+  step3_zh: 储备剩 20,000 · 再无余量
+  step3_zh_hk: 儲備剩 20,000 · 再無餘裕
+  s1_en: >-
+    At EBITDA of 180,000, the ratio is 600,000 divided by 180,000, about 3.33, above 3.0.
+  s1_zh: EBITDA为十八万时，比率是六十万除以十八万，约三点三三，高于三点零。
+  s1_zh_hk: EBITDA係十八萬嗰陣，比率係六十萬除十八萬，大約三點三三，高過三點零。
+  s2_en: >-
+    Permitted principal is 3 times 180,000, or 540,000. A 60,000 reduction restores exactly 3.0, and leaves
+    20,000 of the 80,000 reserve, with no extra headroom at that level.
+  s2_zh: 允许的本金是三乘十八万，即五十四万。还掉六万，比率刚好回到三点零，八万储备剩下两万，在这个盈利水平上再没有余量。
+  s2_zh_hk: 容許嘅本金係三乘十八萬，即係五十四萬。還咗六萬，比率啱啱返到三點零，八萬儲備剩兩萬，喺呢個盈利水平就再冇餘裕。
+  s3_en: >-
+    Paying down with cash works here because the covenant uses gross principal, not net debt. A weaker
+    forecast is not a failed test; only an actual failure triggers notice, the window and suspension,
+    and acceleration needs an unremedied failure.
+  s3_zh: >-
+    用现金还本金行得通，是因为契约看总本金，不是净债务。预测变差不等于测试不达标；真正不达标才启动通知、补救期和暂停提款，补救不成才可能被要求提前还款。
+  s3_zh_hk: >-
+    用現金還本金喺度行得通，係因為契諾睇嘅係總本金，唔係淨債務。預測轉差唔等於測試唔達標；真係唔達標，先會啟動通知、補救期同暫停提款，要補救唔成，先可能要提早還款。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Choose the price of flexibility
+  title_zh: 为弹性定一个价
+  title_zh_hk: 為彈性定一個價
+  en: >-
+    A is defensible if the owner accepts the tighter promise and can fund the remedy while monitoring
+    later tests. B is defensible if keeping the whole reserve and avoiding this earnings constraint is
+    worth its higher rate. B is not risk-free, and A is not automatically unaffordable.
+  zh: >-
+    如果老板接受更紧的承诺，又能用已备资金来补救，同时盯紧之后的测试，选A说得通。如果保住全部储备、避开这项盈利约束，值得付更高的利率，选B也说得通。B不是没有风险，A也不是一定负担不起。
+  zh_hk: >-
+    如果老闆接受更緊嘅承諾，又可以用預備好嘅錢補救，同時睇實之後嘅測試，揀A講得通。如果保住全部儲備、避開呢項盈利限制，值得俾高啲利率，揀B都講得通。B唔係冇風險，A亦唔係一定負擔唔起。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Read the covenant, not the label
+  title_zh: 读条款，不读标签
+  title_zh_hk: 讀條款，不讀標籤
+  q1_en: A lower rate can buy a tighter promise
+  q1_zh: 利率更低，承诺可能更紧
+  q1_zh_hk: 利率更低，承諾可能更緊
+  q2_en: Warning, failed test and call differ
+  q2_zh: 警告、不达标、提前收回各不同
+  q2_zh_hk: 警告、不達標、提早收回各不同
+  s1_en: >-
+    The 12,000 saving is a constant-draw comparison only; after a remedy, actual interest depends on the
+    lower balance and its timing.
+  s1_zh: 一万二千的节省只适用于一直用满额度的比较；补救之后，实际利息要看较低的余额和时间。
+  s1_zh_hk: 一萬二千嘅節省只適用於一直用盡額度嘅比較；補救之後，實際利息要睇較低嘅餘額同時間。
+  s2_en: >-
+    Real clauses, definitions and dates must be read, not inferred from a generic ratio label.
+  s2_zh: 真实的条款、定义和日期都要逐一细读，不能凭一个笼统的比率名称去推断。
+  s2_zh_hk: 真實嘅條款、定義同日期都要逐一細讀，唔可以靠一個籠統嘅比率名稱去估。
+  s3_en: >-
+    The distributor, offers, forecasts and remedy are fictional; the ratio is not FIT Hon Teng's covenant.
+    Official scene art is a teaching illustration only.
+  s3_zh: 分销商、报价、预测和补救安排都是虚构的，比率也不是FIT Hon Teng的契约。官方场景图只是教学插图。
+  s3_zh_hk: 分銷商、報價、預測同補救安排都係虛構嘅，比率亦唔係FIT Hon Teng嘅契諾。官方場景圖只係教學插圖。
+duration_target_s: 196

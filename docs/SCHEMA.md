@@ -133,6 +133,8 @@ Authoring, the scenes, caption timing, and the cache live in [docs/ANIMATED_SCEN
 
 `estimate_group` takes `count` (11–29, not a multiple of 10) and `part` (`pile`, `ten`, `guess`, `count`, or `close`). Each part is one spoken line. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
 
+`row_match` takes `a` and `b` (0–12) and `part` (`rows`, `match`, `gap`, `hold`, or `equal`). Each part is one spoken line. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
+
 `place_sum` takes `op` (`add` or `sub`), `a` and `b` (0–99), and optional `c` for an addition. Three spoken lines. A subtraction stays inside each column, and the answer stays within 99. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
 
 `number_blocks` fields depend on `mode`. `tens` uses `count` (0–100). `compare` uses `a` and `b` (0–100, different). `order` uses `a` and `b`, plus optional `n` and `mark` (2–4 values, 0–100, drawn left to right). `hop` uses `start` and `end` (0–100, different, at most five apart). `groups` uses `a` (2–5), `n` (1–6), and optional `b` (loose counters, fewer than `a`), with the total at most 20. Three spoken lines. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).

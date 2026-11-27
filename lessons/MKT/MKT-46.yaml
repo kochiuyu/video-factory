@@ -1,0 +1,265 @@
+id: MKT-46
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The video stays up. Can the campaign keep using it?
+title_zh: 视频仍在线上，品牌还能用它投广告吗？
+title_zh_hk: 影片仍在網上，品牌還能拿來投放廣告嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-46
+  kicker_en: MKT-46
+  kicker_zh: MKT-46
+  kicker_zh_hk: MKT-46
+  title_en: The video stays up. Can the campaign keep using it?
+  title_zh: 视频仍在线上，品牌还能用它投广告吗？
+  title_zh_hk: 影片仍在網上，品牌還能拿來投放廣告嗎？
+  image: art/the-video-stays-do-the-rights-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    TikTok's Spark Ads documentation describes paid promotion of creators' posts with their authorisation,
+    which can have a defined duration. A visible post is not permission for another campaign. Now you
+    market an everyday pan for a fictional Hong Kong cookware brand.
+  zh: >-
+    TikTok 的 Spark Ads 说明文件提到，品牌可以在创作者授权下付费推广对方的帖子，而且授权可以有期限。帖子仍然公开，不等于获准用于另一次广告。现在，你为香港一个虚构的厨具品牌推广一款日常用的平底锅。
+  zh_hk: >-
+    TikTok 嘅 Spark Ads 說明文件提到，品牌可以喺創作者授權之下付費推廣對方嘅帖文，而且授權可以有期限。帖文仲公開，唔等於准許用嚟做另一次廣告。而家，你為香港一個虛構嘅廚具品牌推廣一隻日常用嘅煎鍋。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: First placement, two programmes
+  title_zh: 首次投放，两个方案
+  title_zh_hk: 首次投放，兩個方案
+  row1_en: >-
+    C: creator
+  row1_zh: C：创作者视频
+  row1_zh_hk: C：創作者影片
+  row2_en: >-
+    L: recipe library
+  row2_zh: L：食谱素材库
+  row2_zh_hk: L：食譜素材庫
+  col1_en: First contribution
+  col1_zh: 首次投放贡献
+  col1_zh_hk: 首次投放貢獻
+  col2_en: Programme cost
+  col2_zh: 方案成本
+  col2_zh_hk: 方案成本
+  c11: HK$34,000
+  c12: HK$16,000
+  c21: HK$26,000
+  c22: HK$20,000
+  footer_en: >-
+    2 later placements: L +HK$8,000 each
+  footer_zh: 之后 2 次：L 每次 +HK$8,000
+  footer_zh_hk: 之後 2 次：L 每次 +HK$8,000
+  s1_en: >-
+    C pays for a creator's video and permission for one local paid placement. The video may stay publicly
+    visible, but the brand gets no edit, repost or second paid-placement rights.
+  s1_zh: C 方案付钱请创作者拍视频，并取得一次本地付费投放的许可。视频之后可以继续公开，但品牌没有剪辑、转发或第二次付费投放的权利。
+  s1_zh_hk: C 方案俾錢請創作者拍片，同攞一次本地付費投放嘅許可。條片之後可以繼續公開，但品牌冇剪輯、轉發或者第二次付費投放嘅權利。
+  s2_en: >-
+    L funds a small recipe library, whose proposed written agreement would permit the specified local
+    reuse for two more placements.
+  s2_zh: L 方案出资制作一个小型食谱素材库，拟议的书面协议允许在本地按指定方式，再用于两次投放。
+  s2_zh_hk: L 方案出資製作一個細型食譜素材庫，擬議嘅書面協議准許喺本地按指定方式，再用多兩次投放。
+  s3_en: >-
+    Contribution is measured against a no-campaign comparison, before each programme's cost. Two comparable
+    later placements are planned; reusing L is forecast to add 8,000 dollars each time after media cost,
+    and C has no reuse rights.
+  s3_zh: >-
+    贡献是和不做推广的情况比较得出的，未扣除方案成本。之后还计划两次相近的投放；重用 L 的素材，预计每次扣除媒体费后多带来八千元，而 C 没有重用权。
+  s3_zh_hk: >-
+    貢獻係同唔做推廣嘅情況比較得出，未扣方案成本。之後仲計劃兩次相近嘅投放；重用 L 嘅素材，預計每次扣除媒體費之後多帶八千蚊，而 C 冇重用權。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: C or L?
+  title_zh: 选 C 还是 L？
+  title_zh_hk: 選 C 還是 L？
+  en: >-
+    Which programme would you choose for the first placement alone, and which for the whole three-placement
+    window? Show both comparisons, and identify a permission you must check before committing. Pause and
+    vote.
+  zh: 只看首次投放，你会选哪个方案？如果看整段三次投放，又会选哪个？请列出两种比较，并指出在作出承诺前，你必须核实的一项许可。请暂停，投个票。
+  zh_hk: 淨係睇首次投放，你會揀邊個方案？如果睇成段三次投放，又會揀邊個？請列出兩種比較，再講一樣承諾之前一定要核實嘅許可。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The music is cleared once only
+  title_zh: 配乐只获准用一次
+  title_zh_hk: 配樂只獲准用一次
+  step1_en: L's music cleared for placement one only
+  step1_zh: L 的配乐只准用于首次投放
+  step1_zh_hk: L 的配樂只准用於首次投放
+  step2_en: >-
+    Replace and check both: HK$5,000 once
+  step2_zh: 两次换配乐并核实：共 HK$5,000
+  step2_zh_hk: 兩次換配樂並核實：共 HK$5,000
+  step3_en: >-
+    C: no extension, no audience to transfer
+  step3_zh: C：没有延长授权，受众不能转移
+  step3_zh_hk: C：沒有延長授權，受眾不能轉移
+  s1_en: >-
+    Before any agreement is signed, the production audit finds that the library supplier's music is cleared
+    for the first placement only. Both future placements need licensed replacement tracks.
+  s1_zh: 在签约之前，制作审核发现，素材库供应商的配乐只获准用于首次投放。之后两次投放都要换上有授权的配乐。
+  s1_zh_hk: 喺簽約之前，製作審核發現，素材庫供應商嘅配樂只係准用喺首次投放。之後兩次投放都要換上有授權嘅配樂。
+  s2_en: >-
+    Replacing and checking both costs 5,000 dollars once in total, with no expected difference in fit
+    or performance.
+  s2_zh: 替换并核实两次投放的配乐，一次过共需五千元，预计不会影响适合程度或效果。
+  s2_zh_hk: 替換同核實兩次投放嘅配樂，一次過總共五千蚊，預計唔會影響合適程度或者效果。
+  s3_en: >-
+    C does not acquire a transferable audience, and the creator has not granted any extension. L's later
+    contribution remains a forecast, not guaranteed orders.
+  s3_zh: C 方案不会带来可以转移的受众，创作者也没有同意延长授权。L 之后的贡献仍然只是预测，不是保证的订单。
+  s3_zh_hk: C 方案唔會帶嚟可以轉移嘅受眾，創作者亦冇同意延長授權。L 之後嘅貢獻仍然只係預測，唔係保證嘅訂單。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: With clearance costs?
+  title_zh: 加上配乐成本呢？
+  title_zh_hk: 加上配樂成本呢？
+  en: >-
+    With the extra clearance cost, which offer would you favour? Calculate the maximum extra cost at which
+    L still ties C, and explain what should be written down for any future reuse decision. Pause and vote.
+  zh: >-
+    加上额外的配乐授权成本后，你会倾向哪个方案？算一算，额外成本最多是多少，L 仍然能和 C 打平？并说明日后作重用决定时，需要书面记录什么。请暂停，投个票。
+  zh_hk: >-
+    加埋額外嘅配樂授權成本之後，你會傾向邊個方案？計吓額外成本最多去到幾多，L 仲可以同 C 打和？再講吓日後決定重用嗰陣，要白紙黑字寫低啲咩。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Start fast, or keep the asset
+  title_zh: 先快速见效，还是保留素材
+  title_zh_hk: 先快速見效，還是保留素材
+  step1_en: >-
+    First: C HK$18,000 · L HK$6,000
+  step1_zh: 首次：C HK$18,000 · L HK$6,000
+  step1_zh_hk: 首次：C HK$18,000 · L HK$6,000
+  step2_en: >-
+    L with two repeats: HK$22,000
+  step2_zh: L 加两次重用：HK$22,000
+  step2_zh_hk: L 加兩次重用：HK$22,000
+  step3_en: >-
+    Before clearance: L leads by HK$4,000
+  step3_zh: 未计配乐：L 领先 HK$4,000
+  step3_zh_hk: 未計配樂：L 領先 HK$4,000
+  s1_en: >-
+    First placement: C earns 34,000 minus 16,000, which is 18,000 dollars; L earns 26,000 minus 20,000,
+    which is 6,000.
+  s1_zh: 只看首次投放：C 是三万四千减一万六千，等于一万八千元；L 是两万六千减两万，等于六千元。
+  s1_zh_hk: 淨係睇首次投放：C 係三萬四千減一萬六千，即係一萬八千蚊；L 係兩萬六千減兩萬，即係六千蚊。
+  s2_en: The two cleared repeats would add 16,000 dollars, taking L to 22,000.
+  s2_zh: 两次获准的重用会多带来一万六千元，令 L 达到两万二千元。
+  s2_zh_hk: 兩次准咗嘅重用會多帶一萬六千蚊，令 L 去到兩萬二千蚊。
+  s3_en: >-
+    C stays at 18,000 under the offered rights, so L initially leads by 4,000 dollars across the window.
+  s3_zh: 按现有授权，C 维持在一万八千元，所以整段期间 L 原本领先四千元。
+  s3_zh_hk: 按現有授權，C 維持喺一萬八千蚊，所以成段期間 L 原本領先四千蚊。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Check the music, not the file
+  title_zh: 核实配乐，不只看文件
+  title_zh_hk: 核實配樂，不只看檔案
+  step1_en: >-
+    L: 22,000 − 5,000 = HK$17,000
+  step1_zh: L：22,000 − 5,000 = HK$17,000
+  step1_zh_hk: L：22,000 − 5,000 = HK$17,000
+  step2_en: C leads by HK$1,000; L ties at HK$4,000
+  step2_zh: C 领先 HK$1,000；L 最多承受 HK$4,000
+  step2_zh_hk: C 領先 HK$1,000；L 最多承受 HK$4,000
+  step3_en: Never run an uncleared placement
+  step3_zh: 绝不投放未获授权的内容
+  step3_zh_hk: 絕不投放未獲授權的內容
+  s1_en: >-
+    With replacement clearance, L gives 22,000 minus 5,000, which is 17,000 dollars, 1,000 below C.
+  s1_zh: 加上替换配乐的成本，L 是两万二千减五千，等于一万七千元，比 C 少一千元。
+  s1_zh_hk: 加埋換配樂嘅成本，L 係兩萬二千減五千，即係一萬七千蚊，比 C 少一千蚊。
+  s2_en: >-
+    L can bear 4,000 dollars of extra clearance cost and still tie C under these forecasts. So choose
+    C on these inputs, unless a revised, compliant L deal changes the comparison.
+  s2_zh: 按这些预测，L 最多能承受四千元的额外授权成本，才和 C 打平。所以按现有数据应选 C，除非修订后的合规 L 方案改变了比较结果。
+  s2_zh_hk: 按呢啲預測，L 最多頂到四千蚊嘅額外授權成本，先同 C 打和。所以按現有數據應該揀 C，除非修訂後合規嘅 L 方案改變咗比較結果。
+  s3_en: Whatever the numbers, never run an uncleared placement.
+  s3_zh: 无论数字如何，都绝不能投放未获授权的内容。
+  s3_zh_hk: 無論數字點，都絕對唔可以投放未獲授權嘅內容。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Write the permissions down
+  title_zh: 把授权写清楚
+  title_zh_hk: 把授權寫清楚
+  en: >-
+    Document the channel, number of placements, dates, local scope, edits, music and other included assets,
+    and who can authorise later use. Check each upcoming placement against those permissions before budgeting.
+  zh: 要写清楚投放渠道、次数、日期、本地范围、可作的剪辑、配乐和其他素材，以及谁有权授权日后使用。每次投放前，都要先对照授权内容，再安排预算。
+  zh_hk: 要寫清楚投放渠道、次數、日期、本地範圍、可以點剪輯、配樂同其他素材，同埋邊個有權授權日後使用。每次投放之前，都要先對照授權內容，再安排預算。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Visible ≠ licensed for reuse
+  title_zh: 公开 ≠ 获准重用
+  title_zh_hk: 公開 ≠ 獲准重用
+  q1_en: Compare the whole window
+  q1_zh: 比较整段投放期
+  q1_zh_hk: 比較整段投放期
+  q2_en: Rerun when fit, cost or lift changes
+  q2_zh: 条件改变，就重新比较
+  q2_zh_hk: 條件改變，就重新比較
+  s1_en: >-
+    Keep first-placement test evidence separate from later forecasts; a visible post has no value by itself
+    here.
+  s1_zh: 首次投放的测试证据，要和之后的预测分开；在这道题里，帖子保持公开本身没有价值。
+  s1_zh_hk: 首次投放嘅測試證據，要同之後嘅預測分開；喺呢條題目入面，帖文保持公開本身冇價值。
+  s2_en: Rerun the comparison if fit, cost or expected lift changes.
+  s2_zh: 如果适合程度、成本或预期提升有变，就要重新比较。
+  s2_zh_hk: 如果合適程度、成本或者預期提升有變，就要重新比較。
+  s3_en: >-
+    The brand, creator, fees and forecasts are fictional, not actual platform terms. Official scene art
+    is a teaching illustration only.
+  s3_zh: 品牌、创作者、费用和预测都是虚构的，并非任何平台的实际条款。官方场景图只是教学插图。
+  s3_zh_hk: 品牌、創作者、費用同預測都係虛構嘅，並非任何平台嘅實際條款。官方場景圖只係教學插圖。
+duration_target_s: 196

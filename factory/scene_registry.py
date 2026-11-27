@@ -901,6 +901,15 @@ def takeaway_cue_picture(spec) -> tuple | None:
         if boxes is None or not 1 <= boxes <= 6 or extra not in (0, 1):
             return None
         return ("pairs", boxes, extra)
+    if kind == "groups":
+        size = _as_int(spec.get("a"))
+        boxes = _as_int(spec.get("n"))
+        extra = _as_int(spec.get("extra")) or 0
+        if size is None or boxes is None or not 2 <= size <= 5 or not 1 <= boxes <= 6:
+            return None
+        if extra < 0 or extra >= size or size * boxes + extra > 20:
+            return None
+        return ("groups", size, boxes, extra)
     if kind == "counters":
         count = _as_int(spec.get("n"))
         if count is None or not 1 <= count <= 12:
@@ -1054,6 +1063,16 @@ def track_columns(count: int, pixel_width: int, pixel_height: int, min_cell: flo
     while cols > 1 and cell(cols) < min_cell:
         cols -= 1
     return max(1, cols)
+
+
+def group_columns(boxes: int, size: int, portrait: bool) -> int:
+    """Columns of equal groups. Fives use two columns in 9:16 so the totals stay readable."""
+    boxes = max(1, int(boxes))
+    if portrait and int(size) >= 5:
+        return min(2, boxes)
+    if portrait:
+        return min(3, boxes)
+    return min(6, boxes)
 
 
 def track_slots(values: list[int], cols: int, *, left_to_right: bool) -> dict[int, tuple[int, int]]:

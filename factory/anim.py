@@ -22,6 +22,7 @@ from scene_registry import (
     ordinal_visits,
     schedule_marks,
     step_count,
+    group_columns,
     track_columns,
     track_slots,
 )
@@ -2697,6 +2698,8 @@ def _scene_types() -> dict:
                 return self._cue_tiles(picture[1], latin)
             if kind == "pairs":
                 return self._cue_pairs(int(picture[1]), int(picture[2]))
+            if kind == "groups":
+                return self._cue_groups(int(picture[1]), int(picture[2]), int(picture[3]))
             if kind == "counters":
                 return self._cue_dots(int(picture[1]))
             raise ValueError(f"takeaway cue fell back to the default: {picture!r}")
@@ -2838,6 +2841,33 @@ def _scene_types() -> dict:
             ring.set_fill(opacity=0)
             loose = VGroup(dot, ring)
             return VGroup(group, loose).arrange(RIGHT, buff=0.14)
+
+        def _cue_group_box(self, size: int):
+            """One box of equal counters. Five sit as three and two."""
+            cols = size if size <= 3 else 3
+            dots = VGroup(*[counter(GREEN, 0.08) for _ in range(size)])
+            dots.arrange_in_grid(rows=(size + cols - 1) // cols, cols=cols, buff=0.04)
+            frame = RoundedRectangle(
+                width=float(dots.width) + 0.14,
+                height=float(dots.height) + 0.12,
+                corner_radius=0.08,
+                stroke_color=NAVY, stroke_width=3,
+                fill_color=WHITE, fill_opacity=1,
+            )
+            dots.move_to(frame)
+            return VGroup(frame, dots)
+
+        def _cue_groups(self, size: int, boxes: int, extra: int):
+            """Boxes of the same size, plus any loose counters beside them."""
+            group = VGroup(*[self._cue_group_box(size) for _ in range(boxes)])
+            group.arrange(RIGHT, buff=0.08)
+            if not extra:
+                return group
+            loose_dots = VGroup(*[counter(GOLD, 0.08) for _ in range(extra)])
+            loose_dots.arrange(RIGHT, buff=0.04)
+            ring = SurroundingRectangle(loose_dots, color=GOLD, buff=0.06, stroke_width=4)
+            ring.set_fill(opacity=0)
+            return VGroup(group, VGroup(loose_dots, ring)).arrange(RIGHT, buff=0.12)
 
         def _cue_dots(self, count: int):
             dots = VGroup(*[counter(GREEN, 0.12) for _ in range(count)])
@@ -3754,7 +3784,7 @@ def _scene_types() -> dict:
             size = max(2, int(labels.get("a") or 2))
             boxes_n = max(1, int(labels.get("n") or 1))
             extra = max(0, int(labels.get("extra") or 0))
-            cols = 3 if portrait else min(6, boxes_n)
+            cols = group_columns(boxes_n, size, portrait)
             columns = []
             tags = []
             for i in range(boxes_n):

@@ -1,0 +1,98 @@
+# P1-NUM-16. Mirrors MathQuiz path groups / lesson twos,
+# "Count in twos".
+# Four pairs make eight. Six pairs make twelve counters, not six boxes.
+# Five pairs and one loose counter make eleven. That one is not a pair.
+# https://github.com/kochiuyu/mathquiz learn-data.js (path groups, lesson twos; steps in learn-groups.js).
+# Speech is for age 6: one short idea per sentence. The heading is answered on screen.
+id: P1-NUM-16
+title_en: Count in twos
+title_zh: 两个两个数
+title_zh_hk: 兩個兩個數
+duration_target_s: 58
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: pairs
+  n: 8
+  seconds: 8
+  title_en: Count in twos
+  title_zh: 两个两个数
+  title_zh_hk: 兩個兩個數
+  s1_en: How many counters are in four pairs?
+  s1_zh: 四对有多少个圆片？
+  s1_zh_hk: 四對有幾多個圓片呀？
+
+- id: four
+  visual: animated
+  scene: number_blocks
+  mode: groups
+  a: 2
+  n: 4
+  seconds: 12
+  s1_en: Each pair has two.
+  s1_zh: 每一对有两个。
+  s1_zh_hk: 每一對有兩個。
+  s2_en: Two, four, six, eight.
+  s2_zh: 二，四，六，八。
+  s2_zh_hk: 二，四，六，八。
+  s3_en: Four pairs make eight.
+  s3_zh: 四对是八个。
+  s3_zh_hk: 四對係八個。
+
+- id: six
+  visual: animated
+  scene: number_blocks
+  mode: groups
+  a: 2
+  n: 6
+  seconds: 12
+  s1_en: Six pairs.
+  s1_zh: 六对。
+  s1_zh_hk: 六對。
+  s2_en: Two, four, six, eight, ten, twelve.
+  s2_zh: 二，四，六，八，十，十二。
+  s2_zh_hk: 二，四，六，八，十，十二。
+  s3_en: Twelve is the counters. Six is the pairs.
+  s3_zh: 十二是圆片。六是对数。
+  s3_zh_hk: 十二係圓片。六係對數。
+
+- id: loose
+  visual: animated
+  scene: number_blocks
+  mode: groups
+  a: 2
+  n: 5
+  b: 1
+  seconds: 12
+  s1_en: Five pairs.
+  s1_zh: 五对。
+  s1_zh_hk: 五對。
+  s2_en: Two, four, six, eight, ten.
+  s2_zh: 二，四，六，八，十。
+  s2_zh_hk: 二，四，六，八，十。
+  s3_en: One more makes eleven. That one is not a pair.
+  s3_zh: 再加一个是十一。它不是一对。
+  s3_zh_hk: 再加一個係十一。佢唔係一對。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: track
+  seconds: 14
+  title_en: How many counters?
+  title_zh: 有多少个圆片？
+  title_zh_hk: 有幾多個圓片呀？
+  s1_en: Four pairs make eight.
+  s1_zh: 四对是八个。
+  s1_zh_hk: 四對係八個。
+  s2_en: Six pairs make twelve.
+  s2_zh: 六对是十二个。
+  s2_zh_hk: 六對係十二個。
+  s3_en: Twelve is the counters.
+  s3_zh: 十二是圆片的个数。
+  s3_zh_hk: 十二係圓片嘅個數。
+  s4_en: Five pairs and one more is eleven.
+  s4_zh: 五对再加一个是十一。
+  s4_zh_hk: 五對再加一個係十一。

@@ -1,0 +1,306 @@
+id: MKT-30
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: One customer profile. Two shopping missions?
+title_zh: 同一类顾客，来买东西的目的也一样吗？
+title_zh_hk: 同一類顧客，來買東西的目的也一樣嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-30
+  kicker_en: MKT-30
+  kicker_zh: MKT-30
+  kicker_zh_hk: MKT-30
+  title_en: One customer profile. Two shopping missions?
+  title_zh: 同一类顾客，来买东西的目的也一样吗？
+  title_zh_hk: 同一類顧客，來買東西的目的也一樣嗎？
+  image: art/same-shoppers-different-missions-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Marketing research separates shopping circumstances from enduring person characteristics. At the fictional
+    Hong Kong grocer Lane Basket, Mei must brief two equally sized communication panels for adult shoppers
+    aged 30 to 49 in the same neighbourhood.
+  zh: >-
+    市场营销研究会把当下的购物情境，和一个人较持久的特征分开来看。在虚构的香港杂货店 Lane Basket，Mei 要为同一街区三十到四十九岁的成年顾客，策划两块同样大小的宣传版面。
+  zh_hk: >-
+    市場營銷研究會將當下嘅購物情境，同一個人比較持久嘅特徵分開嚟睇。喺虛構嘅香港雜貨店 Lane Basket，Mei 要為同一區三十至四十九歲嘅成年顧客，策劃兩塊一樣大嘅宣傳版面。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: What can honestly be offered
+  title_zh: 可以如实告知顾客的内容
+  title_zh_hk: 可以如實告知顧客的內容
+  row1_en: Top-up
+  row1_zh: 临时补买
+  row1_zh_hk: 臨時補買
+  row2_en: Weekly shop
+  row2_zh: 每周采购
+  row2_zh_hk: 每周採買
+  row3_en: Access
+  row3_zh: 使用与隐私
+  row3_zh_hk: 使用與私隱
+  row4_en: Evidence
+  row4_zh: 证据
+  row4_zh_hk: 證據
+  col1_en: Feature
+  col1_zh: 功能
+  col1_zh_hk: 功能
+  col2_en: Boundary
+  col2_zh: 限度
+  col2_zh_hk: 限度
+  c11_en: Aisle finder
+  c11_zh: 货架位置查询
+  c11_zh_hk: 貨架位置查詢
+  c12_en: No stock or queue guarantee
+  c12_zh: 不保证有货或排队时间
+  c12_zh_hk: 不保證有貨或排隊時間
+  c21_en: List planner, unit prices
+  c21_zh: 清单工具，显示单位价格
+  c21_zh_hk: 清單工具，顯示單位價格
+  c22_en: No lowest-price promise
+  c22_zh: 不保证最低价
+  c22_zh_hk: 不保證最低價
+  c31_en: Both panels, open to all
+  c31_zh: 两个版面，人人可用
+  c31_zh_hk: 兩個版面，人人可用
+  c32_en: No individual tracking
+  c32_zh: 不追踪个人
+  c32_zh_hk: 不追蹤個人
+  c41_en: 12 pilot occasions
+  c41_zh: 试验中 12 次购物
+  c41_zh_hk: 試驗中 12 次購物
+  c42_en: No sales-effect estimate
+  c42_zh: 未估计销量效果
+  c42_zh_hk: 未估計銷量效果
+  footer_en: >-
+    G: ages 30–49 · M: two missions
+  footer_zh: G：按年龄 · M：按购物任务
+  footer_zh_hk: G：按年齡 · M：按購物任務
+  s1_en: >-
+    Option G repeats groceries for local adults aged 30 to 49 on both panels. Option M uses one panel
+    for an emergency top-up and one for a planned weekly shop. Either costs 2,000 dollars, and prices,
+    range and service stay the same.
+  s1_zh: >-
+    方案 G 在两块版面上都写：为区内三十到四十九岁的成年人提供日常食品。方案 M 一块针对临时补买，一块针对每周按计划采购。两个方案都花二千元，价格、商品和服务都不变。
+  s1_zh_hk: >-
+    方案 G 喺兩塊版面都寫：為區內三十至四十九歲嘅成年人提供日常食品。方案 M 一塊針對臨時補買，一塊針對每個星期按計劃採買。兩個方案都係使二千蚊，價錢、貨品同服務都唔變。
+  s2_en: >-
+    A voluntary diary pilot supplies 12 purchase occasions: six emergency top-ups, where the shopper forgot
+    an ingredient for tonight and wants to find it quickly, and six planned weekly shops, where the shopper
+    uses a list and compares unit prices.
+  s2_zh: >-
+    一项自愿参与的购物日志试验，收集了十二次购物记录：六次是临时补买，顾客忘了买今晚要用的食材，想尽快找到；六次是按计划的每周采购，顾客按清单购物，想比较单位价格。
+  s2_zh_hk: >-
+    一項自願參與嘅購物日誌試驗，收集咗十二次購物紀錄：六次係臨時補買，顧客唔記得買今晚要用嘅材料，想快啲搵到；六次係按計劃嘅每周採買，顧客跟清單買嘢，想比較單位價錢。
+  s3_en: >-
+    These are stated purposes, not inferred from age, basket size or time of day. At this stage the records
+    are not linked by person, and the manager wants useful communication, not a sales claim.
+  s3_zh: >-
+    这些都是顾客自己说出的目的，不是从年龄、购物篮大小或到店时间推算出来的。现阶段还不知道哪些记录属于同一个人；经理想要的是有用的信息，而不是声称提高了销量。
+  s3_zh_hk: >-
+    呢啲都係顧客自己講出嚟嘅目的，唔係由年齡、購物籃大細或者到店時間推算出嚟。現階段仲未知邊啲紀錄係同一個人；經理想要嘅係有用嘅訊息，而唔係話已經提高咗銷量。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: One message or two missions?
+  title_zh: 一则信息，还是两种任务？
+  title_zh_hk: 一則訊息，還是兩種任務？
+  en: >-
+    Should the grocer use one demographic message, or two mission-based messages? Specify the benefit
+    and the call to action for each communication. Pause and vote.
+  zh: 杂货店应该用一则按人口特征设计的信息，还是按两种购物任务分别设计？请说明每则信息提供什么好处，又希望顾客接着做什么。请暂停，投个票。
+  zh_hk: 雜貨店應該用一則按人口特徵設計嘅訊息，定係按兩種購物任務分開設計？講吓每則訊息有咩好處，又想顧客跟住做咩。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Six people, twelve occasions
+  title_zh: 6 个人，12 次购物
+  title_zh_hk: 6 個人，12 次購物
+  step1_en: >-
+    A–F: one top-up and one weekly shop each
+  step1_zh: A–F：每人补买一次、每周采购一次
+  step1_zh_hk: A–F：每人補買一次、每周採買一次
+  step2_en: >-
+    Proposed rule: A–C top-up, D–F weekly
+  step2_zh: 提案：A–C 补买，D–F 每周采购
+  step2_zh_hk: 提案：A–C 補買，D–F 每周採買
+  step3_en: No other missions, no future shares
+  step3_zh: 没有其他任务，也不知日后比例
+  step3_zh_hk: 沒有其他任務，也不知日後比例
+  s1_en: >-
+    Using consented pseudonymous diary IDs, the research lead links the records. Adults A to F each recorded
+    exactly one emergency top-up and one planned weekly shop, on different days. So there are six people
+    and twelve occasions, not twelve customers.
+  s1_zh: >-
+    研究主管用参与者同意使用的化名编号，把记录按人匹配起来。A 到 F 六个人，每人在不同日子各记录了一次临时补买和一次每周采购。所以是六个人、十二次购物，不是十二位不同的顾客。
+  s1_zh_hk: >-
+    研究主管用參與者同意使用嘅化名編號，將紀錄按人配對。A 至 F 六個人，每人喺唔同日子各記錄咗一次臨時補買同一次每周採買。所以係六個人、十二次購物，唔係十二位唔同嘅顧客。
+  s2_en: >-
+    A proposed database rule would label A to C as top-up customers and D to F as weekly customers, and
+    show each person only that assigned message from then on. Mei must approve or replace it.
+  s2_zh: >-
+    有人建议在数据库里，把 A 到 C 标为补买顾客，把 D 到 F 标为每周采购顾客，以后每人只看到分配给自己的那则信息。Mei 要批准或者改写这个规则。
+  s2_zh_hk: >-
+    有人建議喺資料庫度，將 A 至 C 標做補買顧客，將 D 至 F 標做每周採買顧客，以後每人只會見到分配畀自己嗰則訊息。Mei 要批准或者改寫呢條規則。
+  s3_en: >-
+    The pilot contains no other missions, and gives no evidence about the share of future visits in either
+    mission. Any new research must be voluntary and avoid sensitive traits.
+  s3_zh: 这项试验没有记录其他任务，也不能说明日后到店时两种任务各占多少。任何新研究都要自愿参与，不能收集敏感特征。
+  s3_zh_hk: 呢個試驗冇記錄其他任務，亦講唔到日後到店嗰陣兩種任務各佔幾多。任何新研究都要自願參與，唔可以收集敏感特徵。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Two permanent segments?
+  title_zh: 要永久分成两群吗？
+  title_zh_hk: 要永久分成兩群嗎？
+  en: >-
+    Do the linked diaries justify two permanent customer segments? Revise the targeting rule, and propose
+    one test that would separate relevance from a sales claim. Pause and vote.
+  zh: 匹配后的日志，能支持把顾客永久分成两群吗？请修改投放规则，再提出一项测试，分清信息是否切合需要，和能不能声称提升销量。请暂停，投个票。
+  zh_hk: 配對咗嘅日誌，支唔支持將顧客永久分做兩群？請改寫投放規則，再提出一個測試，分清訊息係咪切合需要，同可唔可以話提升咗銷量。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: A mission is not a demographic
+  title_zh: 购物任务，不是人口特征
+  title_zh_hk: 購物任務，不是人口特徵
+  step1_en: >-
+    Round 1: M fits the stated purposes
+  step1_zh: 第一轮：M 切合顾客说出的目的
+  step1_zh_hk: 第一輪：M 切合顧客說出的目的
+  step2_en: Both tools stay open to everyone
+  step2_zh: 两种工具都向所有人开放
+  step2_zh_hk: 兩種工具都向所有人開放
+  step3_en: >-
+    Linked: everyone is in both missions
+  step3_zh: 匹配后：人人都有两种任务
+  step3_zh_hk: 配對後：人人都有兩種任務
+  s1_en: >-
+    Choose M as the better-supported design hypothesis. Its two benefits match the stated purposes, while
+    the age-based message explains neither task. It is not proof of higher conversion.
+  s1_zh: 作为有待测试的设计，M 比较有根据：两种好处各自切合顾客说出的目的，只讲年龄的信息却回应不了任何一种需要。但这并不证明转化率更高。
+  s1_zh_hk: 作為有待測試嘅設計，M 比較有根據：兩種好處各自切合顧客講出嘅目的，淨係講年齡嘅訊息就回應唔到任何一種需要。但呢個唔證明轉化率會高啲。
+  s2_en: >-
+    Suitable copy: forgot an ingredient for tonight? Use the aisle finder. And: planning your weekly shop?
+    Compare unit prices with the list planner. Both are available to everyone.
+  s2_zh: 合适的文案可以是：忘了买今晚用的食材？用货架位置查询找一找。还有：准备每周采购？用购物清单工具比较单位价格。两种工具都向所有人开放。
+  s2_zh_hk: 啱用嘅文案可以係：唔記得買今晚用嘅材料？用貨架位置查詢搵一搵。仲有：準備每周採買？用購物清單工具比較單位價錢。兩種工具都向所有人開放。
+  s3_en: >-
+    After linkage, the six people each appear in both missions, so a permanent, mutually exclusive split
+    is unsupported.
+  s3_zh: 记录匹配后，六个人都同时出现在两种任务里，所以没有根据把他们永久分成互不重叠的两群。
+  s3_zh_hk: 紀錄配對之後，六個人都同時出現喺兩種任務入面，所以冇根據將佢哋永久分做互不重疊嘅兩群。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Segment the occasion
+  title_zh: 按当次购物来细分
+  title_zh_hk: 按當次購物來細分
+  step1_en: >-
+    A–C / D–F rule: 6 of 12 mismatched
+  step1_zh: A–C／D–F 规则：12 次有 6 次错配
+  step1_zh_hk: A–C／D–F 規則：12 次有 6 次錯配
+  step2_en: History, not a future error rate
+  step2_zh: 是历史记录，不是未来错配率
+  step2_zh_hk: 是歷史紀錄，不是未來錯配率
+  step3_en: Shoppers choose their task each visit
+  step3_zh: 让顾客每次按需要重新选
+  step3_zh_hk: 讓顧客每次按需要重新選
+  s1_en: >-
+    Under the proposed rule, one of each person's two recorded missions would get the mismatched message:
+    six of twelve occasions.
+  s1_zh: 按这个提案，每人两次购物中，有一次会收到不相配的信息，也就是十二次中有六次错配。
+  s1_zh_hk: 按呢個提案，每人兩次購物入面，有一次會收到唔啱嘅訊息，即係十二次入面有六次錯配。
+  s2_en: >-
+    That count diagnoses this supplied history. It is not a future error rate.
+  s2_zh: 这个数字只说明了题目给出的历史记录，并不是未来的错配率。
+  s2_zh_hk: 呢個數字只係講出題目畀嘅歷史紀錄，唔係將來嘅錯配率。
+  s3_en: >-
+    Keep the occasion as the unit of segmentation, and let shoppers select their current task anew each
+    time.
+  s3_zh: 应该以当次购物作为市场细分的单位，让顾客每次按眼前的需要重新选择。
+  s3_zh_hk: 應該用當次購物做市場細分嘅單位，等顧客每次按眼前嘅需要重新揀。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: A modest, discriminating test
+  title_zh: 简单而有辨别力的测试
+  title_zh_hk: 簡單而有辨別力的測試
+  en: >-
+    In a voluntary follow-up, ask adults their current mission, then show randomly assigned generic or
+    mission-matched copy, balanced within each mission. Predefine comprehension and correct tool choice
+    as relevance measures. Allow other missions and neither.
+  zh: >-
+    可以招募成年人自愿参与后续测试：先问他们这次的购物任务，再随机展示一般文案或切合任务的文案，并在每类任务里均衡分配。事先定好用是否理解信息、是否选对工具来衡量切合程度。也要接受其他任务和两者皆非。
+  zh_hk: >-
+    可以招募成年人自願參與跟進測試：先問佢哋今次嘅購物任務，再隨機展示一般文案或者切合任務嘅文案，喺每類任務入面平均分配。事先定好用明唔明訊息、揀唔揀啱工具嚟量度切合程度。亦要接受其他任務同兩樣都唔係。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Same people, different visits
+  title_zh: 同一批人，每次目的不同
+  title_zh_hk: 同一批人，每次目的不同
+  q1_en: >-
+    Relevance: comprehension, tool choice
+  q1_zh: 切合程度：理解、选对工具
+  q1_zh_hk: 切合程度：理解、選對工具
+  q2_en: >-
+    Sales claim: incremental purchases
+  q2_zh: 销量声称：衡量新增购买
+  q2_zh_hk: 銷量聲稱：量度新增購買
+  s1_en: >-
+    If sales uplift is claimed, measure incremental purchases in an adequately designed experiment, rather
+    than treating clicks or diary statements as sales.
+  s1_zh: 如果要声称提升销量，就要用设计合适的实验衡量新增购买，不能把点击或日志里的说法当作成交。
+  s1_zh_hk: 如果要話提升咗銷量，就要用設計得宜嘅實驗量度新增購買，唔可以將點擊或者日誌入面嘅講法當成交。
+  s2_en: >-
+    This exercise holds the people and their roles fixed; it changes the purpose of each visit.
+  s2_zh: 这道题里，人和角色都不变，改变的是每次来店的目的。
+  s2_zh_hk: 呢條題目入面，人同角色都唔變，變嘅係每次嚟店嘅目的。
+  s3_en: >-
+    Lane Basket, Mei, the shoppers and the pilot are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: Lane Basket、Mei、顾客和试验都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: Lane Basket、Mei、顧客同試驗都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

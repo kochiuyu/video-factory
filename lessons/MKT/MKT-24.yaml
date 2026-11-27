@@ -1,0 +1,284 @@
+id: MKT-24
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Preferred when compared. Never on the shortlist?
+title_zh: 比过才知道喜欢，却从未列入考虑？
+title_zh_hk: 比過才知道喜歡，卻從未列入考慮？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-24
+  kicker_en: MKT-24
+  kicker_zh: MKT-24
+  kicker_zh_hk: MKT-24
+  title_en: Preferred when compared. Never on the shortlist?
+  title_zh: 比过才知道喜欢，却从未列入考虑？
+  title_zh_hk: 比過才知道喜歡，卻從未列入考慮？
+  image: art/preferred-compared-never-shortlist-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Consumer-choice research separates the options people seriously consider from the one they prefer
+    within that set, and brand tracking separates having heard of a brand, considering it and intending
+    to buy. Now a fictional Hong Kong specialist retailer sells its own-label folding umbrella for everyday
+    commuting.
+  zh: >-
+    消费者选择的研究，会把顾客认真考虑的选项，和他们在其中最喜欢的那个分开来看；品牌追踪也会分开看：有没有听过、有没有考虑、有没有购买意向。现在，一家虚构的香港雨伞专卖店，卖自有品牌的折叠伞，适合日常通勤。
+  zh_hk: >-
+    消費者選擇嘅研究，會將顧客認真考慮過嘅選項，同佢哋喺入面最鍾意嗰個分開嚟睇；品牌追蹤亦會分開睇：有冇聽過、有冇考慮、有冇打算買。而家，一間虛構嘅香港雨遮專門店，賣自家牌子嘅摺遮，啱日常返工放工用。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two complete four-week pilots
+  title_zh: 两个完整的四周试验
+  title_zh_hk: 兩個完整的四周試驗
+  row1_en: Features
+  row1_zh: 产品特点
+  row1_zh_hk: 產品特點
+  row2_en: Occasion
+  row2_zh: 购买情境
+  row2_zh_hk: 購買情境
+  col1_en: Message emphasis
+  col1_zh: 宣传重点
+  col1_zh_hk: 宣傳重點
+  col2_en: Cost
+  col2_zh: 成本
+  col2_zh_hk: 成本
+  c11_en: Verified folded size and ease of opening
+  c11_zh: 经查证的折叠尺寸和开伞难易
+  c11_zh_hk: 經查證的摺合尺寸和開傘方便程度
+  c12: HK$12,000
+  c21_en: Packing for a rainy commute
+  c21_zh: 雨天通勤出门前的准备
+  c21_zh_hk: 雨天通勤前的出門準備
+  c22: HK$12,000
+  footer_en: Funds one pilot; no combined package
+  footer_zh: 只够一个，没有合并方案
+  footer_zh_hk: 只夠一個，沒有合併方案
+  s1_en: >-
+    In a paid prototype comparison, 40 adult volunteers saw this model and two alternatives, with names,
+    accurate prices and features visible. Thirty chose the retailer's model as their favourite. No one
+    purchased, and the sample was recruited for convenience.
+  s1_zh: >-
+    在一次有报酬的原型比较中，四十位成年志愿者看了这款伞和另外两款，名称、真实价格和特点都看得到。三十人把店里这款选为最喜欢。没有人真的购买，参加者也只是便利抽样找来的。
+  s1_zh_hk: >-
+    喺一次有酬勞嘅原型比較入面，四十個成年義工睇咗呢款遮同另外兩款，名、真實價錢同特點都睇得到。三十人揀咗店舖呢款做最鍾意。冇人真係買，參加者都只係方便招募返嚟。
+  s2_en: >-
+    The retailer has 12,000 dollars for one complete four-week pilot. Features emphasises verified comparisons
+    of folded size and the opening mechanism.
+  s2_zh: 店方有一万二千元，可以做一个完整的四周宣传试验。产品特点方案强调经过查证的比较：折叠后的尺寸，以及开伞的结构。
+  s2_zh_hk: 店舖有一萬二千蚊，可以做一個完整嘅四星期宣傳試驗。產品特點方案著重經查證嘅比較：摺埋之後嘅尺寸，同開遮嘅結構。
+  s3_en: >-
+    Occasion connects the model and the shop with packing a bag for a rainy commute, showing the same
+    truthful product and price. Neither invents weather urgency, and neither supplier promises extra purchases.
+  s3_zh: >-
+    购买情境方案，把这款伞和店铺，跟雨天通勤前收拾随身包连在一起，展示的是同一款商品和真实价格。两个方案都不制造天气的紧迫感，供应商也都不保证会多卖。
+  s3_zh_hk: 購買情境方案，將呢款遮同間舖，同落雨天返工前執袋連埋一齊，展示嘅係同一款貨同真實價錢。兩個方案都唔會扮天氣好急，供應商亦都唔保證會多賣。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Features or occasion first?
+  title_zh: 先做特点还是情境？
+  title_zh_hk: 先做特點還是情境？
+  en: >-
+    Would you fund the feature-comparison message or the purchase-occasion message first? Explain what
+    the 30-of-40 result tells you, and what you still need to know about getting onto buyers' shortlists.
+    Pause and vote.
+  zh: 你会先拨款做产品特点比较，还是购买情境？四十人里有三十人最喜欢这款，这说明了什么？要进入顾客的考虑名单，你还需要知道什么？请暂停，投个票。
+  zh_hk: 你會先撥款做產品特點比較，定係購買情境？四十人入面有三十人最鍾意呢款，咁講明咗啲乜？要入到顧客嘅考慮名單，你仲需要知道乜嘢？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: 100 recent buyers, unprompted
+  title_zh: 100 位近期买家的自述
+  title_zh_hk: 100 位近期買家的自述
+  step1_en: >-
+    Had not heard of the model: 20
+  step1_zh: 之前没听过这款：20 人
+  step1_zh_hk: 之前沒聽過這款：20 人
+  step2_en: >-
+    Knew it, but it did not come to mind: 60
+  step2_zh: 知道这款，当时没想起：60 人
+  step2_zh_hk: 知道這款，當時沒想起：60 人
+  step3_en: >-
+    Considered: 8 bought · 12 chose another
+  step3_zh: 考虑过：8 人买了 · 12 人选别款
+  step3_zh_hk: 考慮過：8 人買了 · 12 人選別款
+  s1_en: >-
+    A separate interview recruits 100 adults who recently bought a folding umbrella for commuting. Before
+    any brand names are shown, they describe the occasion, the models that came to mind and those seriously
+    considered. Twenty had not heard of the model before that trip.
+  s1_zh: >-
+    另一项访谈找了一百位最近为通勤买过折叠伞的成年人。在出示任何品牌之前，先请他们讲当时的购买情境、想起了哪些款式、认真考虑过哪些。其中二十人，那次之前根本没听过这款。
+  s1_zh_hk: >-
+    另一項訪談搵咗一百個最近為返工買過摺遮嘅成年人。喺俾佢哋睇任何牌子之前，先請佢哋講當時嘅購買情況、諗起邊幾款、認真考慮過邊幾款。其中二十人，嗰次之前根本冇聽過呢款。
+  s2_en: >-
+    Sixty knew the model, but it did not come to mind for that trip, and they did not compare it. Their
+    later recognition does not show they would have preferred or bought it if reminded.
+  s2_zh: 六十人本来知道这款，但那次购物没想起来，也没拿它来比较。他们后来认得出，不代表有人提醒，就会更喜欢或者买下。
+  s2_zh_hk: 六十人本身知道呢款，但嗰次買嘢冇諗起，亦冇攞佢嚟比較。佢哋後尾認得，唔代表有人提醒，就會更鍾意或者買。
+  s3_en: >-
+    Twenty considered it: eight bought it, and twelve chose another model that suited their preferred
+    folded size or opening feel. These are retrospective self-reports from a convenience sample.
+  s3_zh: 二十人考虑过：八人买了；十二人选了别款，因为别款的折叠尺寸或开伞手感更合心意。这些都是便利样本事后的自述。
+  s3_zh_hk: 二十人考慮過：八個買咗；十二個揀咗第二款，因為嗰款摺埋嘅尺寸或者開遮手感更啱心水。呢啲都係方便樣本事後嘅自述。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which message now?
+  title_zh: 现在优先哪个信息？
+  title_zh_hk: 現在優先哪個訊息？
+  en: >-
+    After the interviews, which message would you prioritise? Separate people who knew but did not consider
+    the model from those who considered and rejected it, and name a measure that tests your diagnosis
+    without forecasting sales. Pause and vote.
+  zh: >-
+    听完访谈，你会优先哪一个宣传信息？请把知道却没考虑这款的人，和考虑过却没选它的人分开，再提出一个能检验你判断的指标，而不是用这些人数去预测销量。请暂停，投个票。
+  zh_hk: >-
+    聽完訪談，你會優先邊個宣傳訊息？請將知道但冇考慮呢款嘅人，同考慮過但冇揀佢嘅人分開，再提出一個可以檢驗你判斷嘅指標，而唔係用呢啲人數去預測銷量。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Keep the denominator attached
+  title_zh: 别丢掉分母
+  title_zh_hk: 別丟掉分母
+  step1_en: 30 ÷ 40 = 75%, with everyone shown it
+  step1_zh: 30 ÷ 40 = 75%：人人都看到了
+  step1_zh_hk: 30 ÷ 40 = 75%：人人都看到了
+  step2_en: >-
+    Knew it: 60 + 20 = 80 of 100
+  step2_zh: 知道这款：60 + 20 = 80 人
+  step2_zh_hk: 知道這款：60 + 20 = 80 人
+  step3_en: >-
+    8 of 20 considerers = 40%: no forecast
+  step3_zh: 考虑过的 20 人中 8 人 = 40%，不是预测
+  step3_zh_hk: 考慮過的 20 人中 8 人 = 40%，不是預測
+  s1_en: >-
+    Thirty of 40 is 75 percent in a task where everyone was shown all three models. It describes prompted
+    preference, not spontaneous recall, market share or purchase conversion.
+  s1_zh: 四十人里三十人，是百分之七十五，但那是人人都看到三款的情况下。它说的是被提示后的偏好，不是自己想起、不是市场份额，也不是购买转化率。
+  s1_zh_hk: 四十人入面三十人，係百分之七十五，但嗰個係個個都睇到三款嘅情況。佢講嘅係有提示之後嘅偏好，唔係自己諗起、唔係市場佔有率，亦唔係購買轉換率。
+  s2_en: >-
+    In the interviews, 80 of 100 already knew the model: 60 did not think of it, and 20 considered it.
+    Do not add the 80 and the 20 as different people, or join this sample to the 40.
+  s2_zh: 访谈里，一百人中有八十人本来知道这款：六十人没想起，二十人考虑过。不要把八十和二十当成不同的人加起来，也不要把这批人和那四十人拼在一起。
+  s2_zh_hk: 訪談入面，一百人有八十人本身知道呢款：六十人冇諗起，二十人考慮過。唔好將八十同二十當係唔同嘅人加埋，亦唔好將呢批人同嗰四十人砌埋一齊。
+  s3_en: >-
+    Eight of the twenty considerers is 40 percent. That is not a causal conversion rate or a stable forecast.
+  s3_zh: 考虑过的二十人中有八人买了，是百分之四十。这不是因果上的转化率，也不是稳定的预测。
+  s3_zh_hk: 考慮過嘅二十人入面有八個買咗，係百分之四十。呢個唔係因果上嘅轉換率，亦唔係穩定嘅預測。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Target the missing step
+  title_zh: 针对没走到的那一步
+  title_zh_hk: 針對沒走到的那一步
+  step1_en: >-
+    Occasion: 60 knew it but did not recall
+  step1_zh: 情境：60 人知道却没想起
+  step1_zh_hk: 情境：60 人知道卻沒想起
+  step2_en: >-
+    Features: helps comparison, not entry
+  step2_zh: 特点：帮比较，不帮入围
+  step2_zh_hk: 特點：幫比較，不幫入圍
+  step3_en: Some simply prefer another umbrella
+  step3_zh: 有人确实更喜欢别款
+  step3_zh_hk: 有人確實更喜歡別款
+  s1_en: >-
+    Occasion is a defensible first priority, because the largest group knew the model without recalling
+    it for the relevant trip. Linking the model, the shop and that occasion addresses this hypothesis.
+  s1_zh: 购买情境可以说是站得住的第一优先，因为人数最多的一组本来知道这款，那次却没想起它。把伞款、店铺和那个情境连起来，正好针对这个假设。
+  s1_zh_hk: 購買情境可以話係企得住腳嘅第一優先，因為人數最多嗰組本身知道呢款，嗰次就冇諗起佢。將遮款、間舖同嗰個情境連埋，啱啱針對呢個假設。
+  s2_en: >-
+    Features addresses understanding and appeal during comparison. It may be sensible if that is the chosen
+    priority, but on its own it does not show that absent options will enter shortlists.
+  s2_zh: 产品特点处理的是比较时的理解和吸引力。如果把它定为优先也说得通，但单靠它，证明不了原本没入围的选项会进入考虑名单。
+  s2_zh_hk: 產品特點處理嘅係比較時嘅理解同吸引力。如果定佢做優先都講得通，但單靠佢，證明唔到原本冇入圍嘅選項會入到考慮名單。
+  s3_en: >-
+    This does not mean people forgot because the brand was bad, or that every non-buyer should be persuaded.
+    The 20 unfamiliar people may need basic awareness.
+  s3_zh: 这不代表大家没想起是因为品牌不好，也不代表每个没买的人都该被说服。那二十个没听过的人，可能先要知道有这个品牌。
+  s3_zh_hk: 咁唔代表大家冇諗起係因為個牌唔好，亦唔代表每個冇買嘅人都應該被說服。嗰二十個冇聽過嘅人，可能要先知道有呢個牌子。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Measure without prompting
+  title_zh: 评估时别先提示答案
+  title_zh_hk: 評估時別先提示答案
+  en: >-
+    For an occasion-focused evaluation, ask a fresh consenting sample the same unprompted question before
+    showing model names, and record spontaneous recall and serious consideration separately from aided
+    recognition. A comparison group would strengthen causal reading, and actual wanted purchases and costs
+    must be tracked separately.
+  zh: >-
+    如果评估购买情境方案，就找一批新的、同意参与的人，先问同一个不带提示的问题，之后才出示款式名称。自己想起、认真考虑和被提示后认得，要分开记录。有对照组，因果解读会更可靠；实际自愿的购买和成本，也要另外追踪。
+  zh_hk: >-
+    如果評估購買情境方案，就搵一批新嘅、同意參與嘅人，先問同一條冇提示嘅問題，之後先俾佢哋睇款式名。自己諗起、認真考慮同提示後認得，要分開記錄。有對照組，因果解讀會可靠啲；實際自願嘅購買同成本，都要另外追蹤。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Liked is not shortlisted
+  title_zh: 喜欢不等于入围
+  title_zh_hk: 喜歡不等於入圍
+  q1_en: >-
+    Prompted favourite: 30 of 40 = 75%
+  q1_zh: 提示下最喜欢：30/40 = 75%
+  q1_zh_hk: 提示下最喜歡：30/40 = 75%
+  q2_en: >-
+    Knew but did not recall it: 60 of 100
+  q2_zh: 知道却没想起：100 人中 60 人
+  q2_zh_hk: 知道卻沒想起：100 人中 60 人
+  s1_en: >-
+    A product can win a prompted comparison and still be missing when buyers make their own shortlist.
+    Find the missing step before choosing the message.
+  s1_zh: 一款产品在提示下能胜出，顾客自己列考虑名单时却可能想不起它。先找出缺了哪一步，再决定宣传什么。
+  s1_zh_hk: 一款產品喺有提示嘅比較可以贏，但顧客自己列考慮名單嗰陣就可能諗唔起佢。先搵出缺咗邊一步，再決定宣傳乜。
+  s2_en: Neither count forecasts sales; both describe convenience samples.
+  s2_zh: 两组人数都不能预测销量，它们都来自便利样本。
+  s2_zh_hk: 兩組人數都唔可以預測銷量，佢哋都係嚟自方便樣本。
+  s3_en: >-
+    The specialist umbrella retailer and all results are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 雨伞专卖店和所有结果都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 雨遮專門店同所有結果都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

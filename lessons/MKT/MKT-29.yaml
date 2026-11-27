@@ -1,0 +1,291 @@
+id: MKT-29
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Resolve one complaint. Reassure which audience?
+title_zh: 投诉解决了，还需要让谁放心？
+title_zh_hk: 投訴解決了，還要讓誰安心？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-29
+  kicker_en: MKT-29
+  kicker_zh: MKT-29
+  kicker_zh_hk: MKT-29
+  title_en: Resolve one complaint. Reassure which audience?
+  title_zh: 投诉解决了，还需要让谁放心？
+  title_zh_hk: 投訴解決了，還要讓誰安心？
+  image: art/private-remedy-public-reassurance-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Research on public management responses treats a review page as more than a private exchange: other
+    readers see what a business acknowledges and plans to do. Now a fictional Hong Kong stationery retailer
+    has received a genuine, visible complaint.
+  zh: >-
+    研究企业如何公开回复评价时发现，评价页不只是商家和顾客的私下对话，其他读者也看得到商家承认了什么、打算怎样做。现在，一家虚构的香港文具店收到了一则属实的公开投诉。
+  zh_hk: >-
+    研究企業點樣公開回覆評價嘅時候發現，評價頁唔只係商戶同顧客私下傾偈，其他讀者都睇到商戶承認咗咩、打算點做。而家，一間虛構嘅香港文具舖收到一則屬實嘅公開投訴。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Held fixed before the reply
+  title_zh: 回复前已定下的条件
+  title_zh_hk: 回覆前已定下的條件
+  row1_en: Remedy
+  row1_zh: 补救
+  row1_zh_hk: 補救
+  row2_en: Review
+  row2_zh: 评价
+  row2_zh_hk: 評價
+  row3_en: Cause
+  row3_zh: 成因
+  row3_zh_hk: 成因
+  col1_en: Held fixed
+  col1_zh: 已定下
+  col1_zh_hk: 已定下
+  col2_en: Public reply
+  col2_zh: 公开回复
+  col2_zh_hk: 公開回覆
+  c11_en: Offered privately; acceptance unknown
+  c11_zh: 已私下提出；未知是否接受
+  c11_zh_hk: 已私下提出；未知是否接受
+  c12_en: No remedy details
+  c12_zh: 不披露补救细节
+  c12_zh_hk: 不披露補救細節
+  c21_en: Genuine, stays visible
+  c21_zh: 属实，继续公开
+  c21_zh_hk: 屬實，繼續公開
+  c22_en: No deletion request
+  c22_zh: 不要求删除评价
+  c22_zh_hk: 不要求刪評
+  c31_en: Being checked
+  c31_zh: 正在核查
+  c31_zh_hk: 正在查核
+  c32_en: No invented fix
+  c32_zh: 不假称已修正
+  c32_zh_hk: 不假稱已修正
+  footer_en: >-
+    G: generic · S: specific
+  footer_zh: G：一般回复 · S：具体回复
+  footer_zh_hk: G：一般回覆 · S：具體回覆
+  s1_en: >-
+    The review says: the pickup message said ready, I travelled to the shop, but the order was not there,
+    and I wasted a trip. Staff have privately apologised and offered a fair remedy, not conditional on
+    changing the review.
+  s1_zh: 评价写道：通知说可以取货，我专程赶到店里，却发现订单还没准备好，白跑了一趟。店员已经私下道歉，并提出公平的补救，不以删除或修改评价为条件。
+  s1_zh_hk: 評價寫住：通知話可以取貨，我專登去到舖頭，先發現張單未準備好，白行一趟。店員已經私下道歉，提出咗公平嘅補救，唔使刪除或者改評價都可以攞到。
+  s2_en: >-
+    The public reply must not disclose names, order details, private correspondence, remedy terms or whether
+    the customer accepted. The manager knows the message was premature, but has not checked whether other
+    orders are affected.
+  s2_zh: 公开回复不能透露姓名、订单细节、私下往来、补救条款，或顾客是否接受。经理知道通知发得太早，但还没查明其他订单是否也受影响。
+  s2_zh_hk: 公開回覆唔可以透露姓名、訂單細節、私下往來、補救條款，或者顧客有冇接受。經理知道通知發得太早，但未查清其他訂單有冇受影響。
+  s3_en: >-
+    G says: thank you for your feedback, we are sorry for the inconvenience, please contact our service
+    team. S says: we are sorry the pickup message sent you on a wasted trip, and we are checking why it
+    was sent early.
+  s3_zh: >-
+    G 写的是：谢谢你的反馈，很抱歉给你带来不便，请联系我们的客服团队。S 写的是：取货通知让你白跑一趟，我们很抱歉，我们正在查明为什么提早发出了通知。
+  s3_zh_hk: G 寫嘅係：多謝你嘅意見，好抱歉造成不便，請聯絡客服團隊。S 寫嘅係：取貨通知令你白行一趟，我哋好抱歉，我哋正查清點解咁早發出通知。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: G or S for the public reply?
+  title_zh: 公开回复选 G 还是 S？
+  title_zh_hk: 公開回覆選 G 還是 S？
+  en: >-
+    Would you favour G or S for the public reply? What can a reader learn from it, and what must be verified
+    before claiming the issue is fixed? Pause and vote.
+  zh: 公开回复你会选 G 还是 S？读者能从中知道什么？要先核实什么，才能说问题已经解决？请暂停，投个票。
+  zh_hk: 公開回覆你會揀 G 定 S？讀者可以由佢知道啲咩？要先核實咩，先可以話問題已經解決？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A repeatable process problem
+  title_zh: 一个会重复出现的流程问题
+  title_zh_hk: 一個會重複出現的流程問題
+  step1_en: Batch message sent before shelving
+  step1_zh: 货品未上架，系统已批量通知
+  step1_zh_hk: 貨品未上架，系統已批量通知
+  step2_en: Auto trigger off · staff shelf check on
+  step2_zh: 停用自动通知 · 改由店员核查
+  step2_zh_hk: 停用自動通知 · 改由店員查核
+  step3_en: >-
+    Reply: verified facts, at most 55 words
+  step3_zh: 回复：只写已核实事实，限字数
+  step3_zh_hk: 回覆：只寫已核實事實，限字數
+  s1_en: >-
+    The check finds a repeatable problem: a batch message can mark orders ready before staff place them
+    on the collection shelf. It is not confined to this customer.
+  s1_zh: 核查发现一个会重复出现的问题：系统批量发通知时，货品还没放上取货架，订单就可能已经标成可取货。受影响的不只这位顾客。
+  s1_zh_hk: 查核發現一個會重複出現嘅問題：系統批量發通知嗰陣，貨品未放上取貨架，張單就可能已經標咗可以取貨。受影響嘅唔只呢位顧客。
+  s2_en: >-
+    The store has switched off the automatic trigger and added a staff shelf check before any ready message.
+    The change operates today, its long-run effect is unknown, and the manager will review the next week
+    of messages.
+  s2_zh: 店里已经停用自动触发的取货通知，改由店员先核查货架再发通知。新做法今天已经实行，长期效果还不知道，经理会核对未来一周的通知。
+  s2_zh_hk: 店舖已經停用自動發出嘅取貨通知，改由店員先查核貨架再發通知。新做法今日已經實行，長遠效果仲未知，經理會核對未來一個星期嘅通知。
+  s3_en: >-
+    Several prospective buyers ask whether they can rely on a pickup message, and the complainant asks
+    that private details stay private. The final reply must use only verified facts, in at most 55 English
+    words.
+  s3_zh: 有几位潜在顾客留言，问收到取货通知是否就能放心出门；投诉人也要求私下往来和个人信息保密。最终回复只能写已核实的事实，中文不超过一百字。
+  s3_zh_hk: 有幾位潛在顧客留言，問收到取貨通知係咪就可以放心出門；投訴人亦要求私下往來同個人資料保密。最終回覆只可以寫已核實嘅事實，中文唔超過一百字。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Your final public reply
+  title_zh: 最终公开回复怎样写？
+  title_zh_hk: 最終公開回覆怎樣寫？
+  en: >-
+    What short public reply would you now use? And what should prospective customers reasonably infer,
+    without learning the complainant's private details? Pause and vote.
+  zh: 你现在会怎样写这则简短的公开回复？潜在顾客在不知道投诉人私事的情况下，可以合理得出什么结论？请暂停，投个票。
+  zh_hk: 你而家會點樣寫呢則簡短嘅公開回覆？潛在顧客喺唔知道投訴人私事嘅情況下，可以合理得出咩結論？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Specific, only as far as known
+  title_zh: 具体交代，不超出已知事实
+  title_zh_hk: 具體交代，不超出已知事實
+  step1_en: >-
+    Round 1: S names the actual failure
+  step1_zh: 第一轮：S 承认实际失误
+  step1_zh_hk: 第一輪：S 承認實際失誤
+  step2_en: S cannot yet prove a working fix
+  step2_zh: S 还不能证明已修正
+  step2_zh_hk: S 還不能證明已修正
+  step3_en: >-
+    G: polite, but says little
+  step3_zh: G：有礼，但交代太少
+  step3_zh_hk: G：有禮，但交代太少
+  s1_en: >-
+    S is the stronger provisional approach. It identifies the actual failure and honestly describes an
+    investigation, without adding private facts. Readers can see that ready did not match availability.
+  s1_zh: 暂时来看，S 比较可取。它承认了实际失误，也如实说明正在调查，没有加入任何私人信息。读者会知道，通知上的可取货和实际情况不符。
+  s1_zh_hk: 暫時嚟講，S 比較可取。佢承認咗實際失誤，亦如實講明正在調查，冇加入任何私人資料。讀者會知道，通知講可以取貨，同實際情況唔夾。
+  s2_en: >-
+    But S cannot yet establish that a fix is operating, that the problem was isolated, or that future
+    messages are reliable.
+  s2_zh: 但 S 还不能证明新措施已经落实、问题只是个别事件，或者以后的通知一定可靠。
+  s2_zh_hk: 但係 S 仲未證明到新措施已經落實、問題只係個別事件，或者之後嘅通知一定可靠。
+  s3_en: >-
+    G is polite and may be a defensible temporary acknowledgement, but asking the customer to contact
+    the team can look disconnected from a complaint already handled privately. A longer reply is not automatically
+    better.
+  s3_zh: G 很有礼貌，在查清事实前也可以暂时这样回应。不过，顾客已经私下获得跟进，再叫对方联系客服，可能让人觉得答非所问。回复长，不一定就好。
+  s3_zh_hk: G 好有禮貌，未查清事實之前都可以暫時咁回應。不過，顧客已經私下有人跟進，再叫佢聯絡客服，可能令人覺得答非所問。回覆長，唔一定就好。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: A bounded public reply
+  title_zh: 有分寸的公开回复
+  title_zh_hk: 有分寸的公開回覆
+  step1_en: >-
+    Sorry: the message led to a wasted trip
+  step1_zh: 道歉：通知让顾客白跑一趟
+  step1_zh_hk: 道歉：通知令顧客白行一趟
+  step2_en: Auto message stopped · shelf checked
+  step2_zh: 停发自动通知 · 先查取货架
+  step2_zh_hk: 停發自動通知 · 先查取貨架
+  step3_en: One-week review · order details private
+  step3_zh: 核对一周 · 订单详情保密
+  step3_zh_hk: 核對一周 · 訂單詳情保密
+  s1_en: >-
+    The suggested reply begins: we are sorry our pickup message led to a wasted trip. We have stopped
+    automatic ready messages, and now check the collection shelf before sending one.
+  s1_zh: 参考回复是这样的：取货通知让你白跑一趟，我们很抱歉。店里已经停发自动取货通知，以后由店员先检查取货架，再通知顾客。
+  s1_zh_hk: 參考回覆係咁：取貨通知令你白行一趟，我哋深感抱歉。店舖已經停發自動取貨通知，而家由店員先查核取貨架，再通知顧客。
+  s2_en: >-
+    It continues: we will review pickup messages over the next week to check this change. Individual order
+    matters remain private.
+  s2_zh: 接下来一周，我们会核对取货通知，看看新做法是否有效。个别订单的详情会保密。
+  s2_zh_hk: 跟住話：未來一個星期，我哋會核對取貨通知，睇吓新做法有冇效。個別訂單嘅詳情會保密。
+  s3_en: >-
+    It names the failure, the implemented change and a defined review window. It does not identify an
+    order, quote correspondence, disclose compensation, assert acceptance or ask for a review change.
+  s3_zh: 这个写法交代了失误、已经落实的流程改动，以及明确的跟进时段。它没有识别订单、引用私下通讯、披露补偿、声称顾客已接受，也没有要求修改评价。
+  s3_zh_hk: 呢個寫法交代咗失誤、已經落實嘅流程改動，同埋清楚嘅跟進時段。佢冇認出係邊張單、冇引用私下通訊、冇披露補償、冇話顧客已經接受，亦冇要求改評價。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What readers can infer
+  title_zh: 读者可以合理推断什么
+  title_zh_hk: 讀者可以合理推斷甚麼
+  en: >-
+    Readers can infer a real process weakness, a specific new check and a commitment to examine whether
+    it works. They cannot infer that every future collection will be flawless, the original customer is
+    satisfied, the dispute is closed or reputation has improved.
+  zh: >-
+    读者可以合理推断：店方承认流程确有漏洞，加上了具体的核查步骤，也承诺检查成效。但他们不能推断以后每次取货都不会出错、原来的顾客已经满意、私下的个案已经完结，或者声誉已经改善。
+  zh_hk: >-
+    讀者可以合理推斷：店方承認流程真係有漏洞，加咗具體嘅查核步驟，亦承諾檢視成效。但佢哋唔可以推斷之後次次取貨都唔會出錯、原本嗰位顧客已經滿意、私下個案已經完結，或者聲譽已經改善。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: The process, not the person
+  title_zh: 谈流程，不谈个人
+  title_zh_hk: 談流程，不談個人
+  q1_en: >-
+    Individual: follow-through on the remedy
+  q1_zh: 当事人：落实私下补救
+  q1_zh_hk: 當事人：落實私下補救
+  q2_en: >-
+    Prospects: accurate service expectations
+  q2_zh: 潜在顾客：准确的服务预期
+  q2_zh_hk: 潛在顧客：準確的服務預期
+  s1_en: >-
+    Privacy does not require a content-free reply, and a public apology does not replace the private remedy.
+    Next week, check messages against shelf readiness and record any recurrence.
+  s1_zh: 保护隐私，不等于公开回复不能有实质内容；公开道歉也不能代替私下的补救。接下来一周，要把通知和货架实际情况逐一核对，如有再犯就记录下来。
+  s1_zh_hk: 保障私隱，唔等於公開回覆唔可以有實質內容；公開道歉亦代替唔到私下嘅補救。未來一個星期，要將通知同貨架實際情況逐一核對，再出事就記錄低。
+  s2_en: >-
+    Review volume or star ratings alone do not show the underlying failure was removed.
+  s2_zh: 单看评价数量或星级，不能证明根本问题已经解决。
+  s2_zh_hk: 淨係睇評價數量或者星級，證明唔到根本問題已經解決。
+  s3_en: >-
+    The retailer, the review and the replies are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 文具店、评价和回复都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 文具舖、評價同回覆都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

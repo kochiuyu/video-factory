@@ -131,7 +131,7 @@ These visuals paint progressive stills. Write one spoken chunk per still:
 
 Authoring, the scenes, caption timing, and the cache live in [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md). The demo file is `examples/demo-ten-and-ones.yaml`. It is outside `lessons/`, so `build --all` does not pick it up.
 
-`estimate_group` takes `count` (11–29, not a multiple of 10) and three spoken lines. The counters start in a pile, one ten becomes the guide, and the last line slides them into ten-rods and the leftover ones. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
+`estimate_group` takes `count` (11–29, not a multiple of 10) and `part` (`pile`, `ten`, `guess`, `count`, or `close`). Each part is one spoken line. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
 
 `number_blocks` fields depend on `mode`. `tens` uses `count` (0–100). `compare` uses `a` and `b` (0–100, different). `order` uses `a` and `b`, plus optional `n` and `mark` (2–4 values, 0–100, drawn left to right). `hop` uses `start` and `end` (0–100, different, at most five apart). `groups` uses `a` (2–5), `n` (1–6), and optional `b` (loose counters, fewer than `a`), with the total at most 20. Three spoken lines. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
 

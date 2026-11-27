@@ -819,6 +819,8 @@ class LessonHook(SceneKind):
         if _motif(beat) == "parts":
             pair = _part_pair(beat) or (3, 4)
             out["a"], out["b"] = pair
+        if beat.get("shown"):
+            out["shown"] = True
         return out
 
     def parameters(self, beat: dict) -> dict:
@@ -832,6 +834,8 @@ class LessonHook(SceneKind):
         if _motif(beat) == "parts":
             pair = _part_pair(beat) or (3, 4)
             params["a"], params["b"] = pair
+        if beat.get("shown"):
+            params["shown"] = True
         return params
 
 
@@ -1153,11 +1157,13 @@ def count_event(beat: dict) -> tuple[int, int] | None:
             return 1, boxes
         return None
     if scene == "estimate_group":
+        if str(beat.get("part") or "").strip() != "count":
+            return None
         count = _as_int(beat.get("count"))
         if count is None or not 11 <= count <= 29 or count % 10 == 0:
             return None
         tens, ones = divmod(count, 10)
-        return 2, tens + ones
+        return 0, tens + ones
     if scene == "lesson_takeaway":
         # A ten-frame recap counts the three ones on its last line
         # ("Find the ten first. Then count the rest.").
@@ -1477,22 +1483,29 @@ def messy_spots(n: int, width: float, height: float, gap: float) -> list[tuple[f
     return spots
 
 
+_ESTIMATE_PARTS = ("pile", "ten", "guess", "count", "close")
+
+
 class EstimateGroup(SceneKind):
-    """A messy pile, a ten as the guide, then the same counters in tens and ones.
+    """One step of an estimate: the pile, one ten, the guess, the count, or the check.
 
     ``count`` is 11 to 29, so there is at least one ten to guess with and at
-    least one one left to find. The guess is that many tens. The last line
-    counts every ten and every one.
+    least one one left to find. ``part`` picks the beat. The guess is that many
+    tens. The count beat lands on every ten and every one.
     """
 
     name = "estimate_group"
-    steps = 3
+    steps = 1
 
     def problems(self, beat: dict) -> list[str]:
+        found = []
         count = _as_int(beat.get("count"))
         if count is None or not 11 <= count <= 29 or count % 10 == 0:
-            return ["estimate_group count must be an integer from 11 to 29 with some ones left."]
-        return []
+            found.append("estimate_group count must be an integer from 11 to 29 with some ones left.")
+        part = str(beat.get("part") or "").strip()
+        if part not in _ESTIMATE_PARTS:
+            found.append("estimate_group part must be pile, ten, guess, count, or close.")
+        return found
 
     def labels(self, beat: dict, lang: str) -> dict:
         code = label_lang(lang)
@@ -1509,12 +1522,19 @@ class EstimateGroup(SceneKind):
             "tens": tens,
             "ones": ones,
             "guess": tens * 10,
+            "part": str(beat.get("part") or "").strip(),
         }
 
     def parameters(self, beat: dict) -> dict:
         count = int(beat.get("count"))
         tens, ones = divmod(count, 10)
-        return {"count": count, "tens": tens, "ones": ones, "guess": tens * 10}
+        return {
+            "count": count,
+            "tens": tens,
+            "ones": ones,
+            "guess": tens * 10,
+            "part": str(beat.get("part") or "").strip(),
+        }
 
 
 def _block_values(beat: dict) -> list[int]:

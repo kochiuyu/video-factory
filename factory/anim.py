@@ -2380,6 +2380,12 @@ def _scene_types() -> dict:
             total = float((self.vf_durations or [2.0])[0] or 0)
             fps = max(float(config.frame_rate or 15), 1.0)
             frame = 1.0 / fps
+            if bool(labels.get("shown")):
+                # The caption starts at once. The motif has to be there with it.
+                self.add(kicker, title, cue)
+                if total > frame / 2:
+                    self.wait(total)
+                return
             if total <= frame:
                 self.add(kicker, title, cue)
                 return
@@ -3812,21 +3818,22 @@ def _scene_types() -> dict:
                 self.spend_each(2, [reveal_loose])
 
     class EstimateGroup(_Board):
-        """A messy pile, one ten as the guide, then those counters as rods and ones."""
+        """One paced step. The ten-frame never sits on top of the pile."""
 
         def construct(self):
             labels = self.vf_labels
             latin, cjk = self.vf_fonts
+            part = str(labels.get("part") or "pile")
             count = int(labels.get("count") or 23)
             tens, ones = divmod(count, 10)
             ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
             pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
             portrait = ph > pw
             left, right, bot, top = _safe_limits()
-            max_w = (right - left) * 0.94
-            max_h = (top - bot) * 0.92
             cx = (left + right) / 2.0
-            radius = 0.12 if portrait else 0.15
+            # Diameter matches the shared label floor, so a counter stays readable.
+            radius = _ordinal_label_height() * 0.5
+            cell = radius * 2.0 + 0.14
 
             def number(text):
                 glyph = styled(str(text), latin, cjk, 64)
@@ -3835,134 +3842,228 @@ def _scene_types() -> dict:
                     glyph.scale(target / float(glyph.height))
                 return glyph
 
+            def make_frame():
+                group = VGroup()
+                for _ in range(10):
+                    box = RoundedRectangle(
+                        width=cell, height=cell, corner_radius=0.08,
+                        stroke_color=NAVY, stroke_width=3, fill_color=WHITE, fill_opacity=1,
+                    )
+                    box.set_z_index(1)
+                    group.add(box)
+                group.arrange_in_grid(rows=2, cols=5, buff=0.07)
+                return group
+
             title = number(labels.get("title") or "")
+            max_w = (right - left) * 0.92
             if float(title.width) > max_w:
                 title.scale(max_w / float(title.width))
+            title.move_to([cx, top - float(title.height) / 2.0 - 0.06, 0])
             guide_num = number("10")
             guess_num = number(str(tens * 10))
             final_num = number(str(count))
+            self.vf_title = title
             self.vf_answer = final_num
+            self.vf_guess = guess_num
+
+            frame1 = make_frame()
+            frame2 = make_frame()
+            if portrait:
+                frames = VGroup(frame1, frame2).arrange(DOWN, buff=0.32)
+            else:
+                frames = VGroup(frame1, frame2).arrange(RIGHT, buff=0.4)
+            body_top = float(title.get_bottom()[1]) - 0.2
+            body_h = body_top - bot
+            if portrait:
+                frames.move_to([cx, body_top - float(frames.height) / 2.0, 0])
+            else:
+                frames.move_to([
+                    left + float(frames.width) / 2.0 + 0.08,
+                    bot + body_h * 0.58,
+                    0,
+                ])
+            if float(frames.get_top()[1]) > body_top:
+                frames.shift(DOWN * (float(frames.get_top()[1]) - body_top))
+            if portrait:
+                # The second frame is under the first, so "10" sits beside
+                # its frame, clear of the gold outline, instead of on the next frame.
+                guide_num.next_to(frame1, RIGHT, buff=0.34)
+                over = float(guide_num.get_right()[0]) - (right - 0.04)
+                if over > 0:
+                    frames.shift(LEFT * over)
+                    guide_num.shift(LEFT * over)
+                guess_num.next_to(frame2, DOWN, buff=0.14)
+            else:
+                guide_num.next_to(frame1, DOWN, buff=0.12)
+                guess_num.next_to(frame2, DOWN, buff=0.12)
+            if float(guess_num.get_bottom()[1]) < bot + 0.02:
+                guess_num.next_to(guide_num, RIGHT, buff=0.28)
+            if float(guess_num.get_right()[0]) > right:
+                guess_num.next_to(guide_num, DOWN, buff=0.08)
+
+            ones_row = VGroup(*[counter(GREEN, radius) for _ in range(ones)])
+            for dot in ones_row:
+                dot.set_z_index(4)
+            ones_row.arrange(RIGHT, buff=0.16)
+            final_num.next_to(ones_row, DOWN, buff=0.12)
+            block = VGroup(ones_row, final_num)
+            block.move_to([cx, bot + float(block.height) / 2.0 + 0.04, 0])
+            one_at = [dot.get_center().copy() for dot in ones_row]
+
+            def zone_beside_frames():
+                gap = 0.42
+                if portrait:
+                    zone_top = min(float(guide_num.get_bottom()[1]), float(guess_num.get_bottom()[1])) - gap
+                    zone_bot = float(block.get_top()[1]) + gap
+                    return left + 0.05, right - 0.05, zone_bot, zone_top
+                zone_left = float(frames.get_right()[0]) + gap
+                zone_top = body_top - 0.05
+                zone_bot = float(block.get_top()[1]) + gap
+                return zone_left, right - 0.05, zone_bot, zone_top
+
+            zx0, zx1, zy0, zy1 = zone_beside_frames()
+            pile_w = max(radius * 4, zx1 - zx0)
+            pile_h = max(radius * 4, zy1 - zy0)
+            # Spots are centred, then shifted into the zone that is not the frames.
+            cloud = messy_spots(count, pile_w * 0.92, pile_h * 0.9, radius * 2.35)
+            anchor_x = (zx0 + zx1) / 2.0
+            anchor_y = (zy0 + zy1) / 2.0
+            pile_at = [(anchor_x + x, anchor_y + y) for x, y in cloud]
+            if pile_at:
+                low = min(y for _x, y in pile_at)
+                high = max(y for _x, y in pile_at)
+                west = min(x for x, _y in pile_at)
+                east = max(x for x, _y in pile_at)
+                shift_x = 0.0
+                shift_y = 0.0
+                if west < zx0 + radius:
+                    shift_x = zx0 + radius - west
+                if east + shift_x > zx1 - radius:
+                    shift_x -= (east + shift_x) - (zx1 - radius)
+                if low < zy0 + radius:
+                    shift_y = zy0 + radius - low
+                if high + shift_y > zy1 - radius:
+                    shift_y -= (high + shift_y) - (zy1 - radius)
+                pile_at = [(x + shift_x, y + shift_y) for x, y in pile_at]
 
             dots = VGroup(*[counter(GREEN, radius) for _ in range(count)])
             for dot in dots:
                 dot.set_z_index(4)
-            cell = 0.36 if portrait else 0.46
-            frame = VGroup()
-            for _ in range(10):
-                box = RoundedRectangle(
-                    width=cell, height=cell, corner_radius=0.08,
-                    stroke_color=NAVY, stroke_width=3, fill_color=WHITE, fill_opacity=1,
-                )
-                box.set_z_index(1)
-                frame.add(box)
-            frame.arrange_in_grid(rows=2, cols=5, buff=0.06)
-            rod_h = 0.92 if portrait else 1.12
-            rods = VGroup()
-            for _ in range(tens):
-                rod = RoundedRectangle(
-                    width=0.42, height=rod_h, corner_radius=0.08,
-                    stroke_color=NAVY, stroke_width=3, fill_color=GREEN, fill_opacity=1,
-                )
-                rod.set_z_index(2)
-                rods.add(rod)
-            rods.arrange(RIGHT, buff=0.14)
-            cube_r = min(0.15, rod_h * 0.16)
-            cubes = VGroup(*[counter(GOLD, cube_r) for _ in range(ones)])
-            for cube in cubes:
-                cube.set_z_index(4)
-            cubes.arrange(RIGHT, buff=0.1)
-            checked = VGroup(rods, cubes).arrange(DOWN, buff=0.18)
-            if float(checked.width) > max_w:
-                checked.scale(max_w / float(checked.width))
+            self.vf_dots = dots
+            self.vf_frame = frame1
+            self.vf_frame2 = frame2
+            cell1 = [box.get_center().copy() for box in frame1]
+            cell2 = [box.get_center().copy() for box in frame2]
 
-            title.move_to([cx, top - float(title.height) / 2.0 - 0.06, 0])
-            checked.move_to([cx, (bot + top) / 2.0 + 0.15, 0])
-            final_num.next_to(checked, DOWN, buff=0.2)
-            if portrait:
-                frame.next_to(title, DOWN, buff=0.18)
+            # The opening pile uses the middle of the safe area, with no frame.
+            open_w = (right - left) * (0.78 if portrait else 0.62)
+            open_h = max(radius * 4, (body_top - bot) * (0.62 if portrait else 0.7))
+            open_cloud = messy_spots(count, open_w, open_h, radius * 2.4)
+            open_at = [(cx + x, (bot + body_top) / 2.0 + y) for x, y in open_cloud]
+
+            def put(dot, spot):
+                dot.move_to([spot[0], spot[1], 0])
+
+            halo = SurroundingRectangle(frame1, color=GOLD, buff=0.1, stroke_width=6)
+            halo.set_fill(opacity=0)
+            halo.set_stroke(opacity=0)
+            halo.set_z_index(3)
+
+            show_frames = part != "pile"
+            grouped = part in {"guess", "count", "close"}
+            second = part == "close"
+            for i, dot in enumerate(dots):
+                if part == "pile":
+                    put(dot, open_at[i])
+                elif i < 10 and grouped:
+                    put(dot, (cell1[i][0], cell1[i][1]))
+                elif i < 20 and second:
+                    put(dot, (cell2[i - 10][0], cell2[i - 10][1]))
+                elif i >= 20 and second:
+                    put(dot, (one_at[i - 20][0], one_at[i - 20][1]))
+                else:
+                    put(dot, pile_at[i])
+
+            hidden = []
+            if not show_frames:
+                hidden.extend([frame1, frame2, guide_num, guess_num, final_num, halo])
             else:
-                frame.move_to([left + float(frame.width) / 2.0 + 0.15, (bot + top) / 2.0 + 0.25, 0])
-            guide_num.next_to(frame, DOWN, buff=0.14)
-            guess_num.next_to(guide_num, RIGHT, buff=0.32)
-            if float(guess_num.get_right()[0]) > right:
-                guess_num.next_to(guide_num, DOWN, buff=0.1)
-
-            pile_w = max_w * (0.72 if portrait else 0.48)
-            pile_h = max_h * (0.46 if portrait else 0.62)
-            pile = messy_spots(count, pile_w, pile_h, radius * 2.45)
-            for dot, (x, y) in zip(dots, pile):
-                dot.move_to([cx + x, (bot + top) / 2.0 + y, 0])
-
-            rest_w = max(radius * 4, (right - float(frame.get_right()[0]) - 0.45) if not portrait else max_w * 0.8)
-            rest_h = max_h * (0.28 if portrait else 0.42)
-            rest = messy_spots(max(0, count - 10), rest_w, rest_h, radius * 2.35)
-            if portrait:
-                anchor_y = float(guide_num.get_bottom()[1]) - 0.28 - rest_h / 2.0
-                anchor_x = cx
-            else:
-                anchor_x = float(frame.get_right()[0]) + 0.35 + rest_w / 2.0
-                anchor_y = float(frame.get_center()[1])
-            rest_at = [(anchor_x + x, anchor_y + y) for x, y in rest]
-            if rest_at:
-                low = min(y for _x, y in rest_at)
-                if low < bot + radius:
-                    lift = bot + radius - low
-                    rest_at = [(x, y + lift) for x, y in rest_at]
-            top_dot = max(float(dot.get_top()[1]) for dot in dots)
-            if top_dot > float(title.get_bottom()[1]) - 0.08:
-                dots.shift(DOWN * (top_dot - float(title.get_bottom()[1]) + 0.14))
-            frame_at = [box.get_center().copy() for box in frame]
-
-            # FadeIn keeps a mobject that is already at opacity 0 invisible.
-            # set_opacity(1) is the target that actually draws it.
-            for mob in (title, dots, frame, rods, cubes, guide_num, guess_num, final_num):
+                if not second:
+                    hidden.append(frame2)
+                if part == "ten":
+                    hidden.extend([guess_num, final_num, halo])
+                elif part == "guess":
+                    hidden.extend([guess_num, final_num, halo])
+                elif part == "count":
+                    hidden.extend([final_num, halo])
+            for mob in hidden:
                 mob.set_opacity(0)
-            self.add(title, dots, frame, rods, cubes, guide_num, guess_num, final_num)
-            self.vf_title = title
-            self.spend(0, title.animate.set_opacity(1), dots.animate.set_opacity(1))
-            gather = [dots[i].animate.move_to(frame_at[i]) for i in range(min(10, count))]
-            for j, spot in enumerate(rest_at):
-                gather.append(dots[10 + j].animate.move_to([spot[0], spot[1], 0]))
-            self.spend(
-                1,
-                frame.animate.set_opacity(1),
-                guide_num.animate.set_opacity(1),
-                guess_num.animate.set_opacity(1),
-                AnimationGroup(*gather),
-            )
+            self.add(title, dots, frame1, frame2, guide_num, guess_num, final_num, halo)
+            # Ones-row placeholders are the same counters, already in `dots`.
+            # Drop the extra row so it cannot sit under the picture.
+            title.set_opacity(0 if part == "pile" else 1)
+            if part != "pile":
+                dots.set_opacity(1)
+                if show_frames:
+                    frame1.set_opacity(1)
+                    if part != "ten":
+                        guide_num.set_opacity(1)
+                if part in {"count", "close"}:
+                    guess_num.set_opacity(1)
+                if part == "close":
+                    frame2.set_opacity(1)
+                    final_num.set_opacity(1)
 
-            def hop_bundle(index):
-                def play(index=index):
-                    start = index * 10
-                    centre = rods[index].get_center()
-                    moves = [
-                        dots[start + k].animate.move_to(centre).set_opacity(0)
-                        for k in range(10)
-                    ]
-                    shown = [rods[index].animate.set_opacity(1)]
-                    if index == 0:
-                        shown.extend([
-                            frame.animate.set_opacity(0),
-                            guide_num.animate.set_opacity(0),
-                            guess_num.animate.set_opacity(0),
-                        ])
-                    return AnimationGroup(*moves, *shown)
-                return play
+            if part == "pile":
+                total = float((self.vf_durations or [1.0])[0] or 0)
+                fps = max(float(config.frame_rate or 15), 1.0)
+                frame_t = 1.0 / fps
+                fade = min(0.5, max(frame_t, total * 0.28))
+                if total <= frame_t:
+                    title.set_opacity(1)
+                    dots.set_opacity(1)
+                    return
+                self.play(
+                    title.animate.set_opacity(1),
+                    dots.animate.set_opacity(1),
+                    run_time=min(fade, total),
+                )
+                rest = total - min(fade, total)
+                if rest > frame_t / 2:
+                    self.wait(rest)
+                return
+
+            if part == "ten":
+                guide_num.set_opacity(0)
+                moves = [dots[i].animate.move_to(cell1[i]) for i in range(min(10, count))]
+                self.spend(0, AnimationGroup(*moves), guide_num.animate.set_opacity(1))
+                return
+
+            if part == "guess":
+                self.spend(0, guess_num.animate.set_opacity(1))
+                return
+
+            if part == "close":
+                self.spend(0)
+                return
+
+            def hop_ten():
+                return halo.animate.set_stroke(opacity=1)
+
+            def hop_twenty():
+                moves = [dots[10 + k].animate.move_to(cell2[k]) for k in range(min(10, count - 10))]
+                return AnimationGroup(frame2.animate.set_opacity(1), *moves)
 
             def hop_one(j):
                 def play(j=j):
-                    centre = cubes[j].get_center()
-                    shown = [
-                        dots[tens * 10 + j].animate.move_to(centre).set_opacity(0),
-                        cubes[j].animate.set_opacity(1),
-                    ]
+                    shown = [dots[20 + j].animate.move_to(one_at[j])]
                     if j == ones - 1:
                         shown.append(final_num.animate.set_opacity(1))
                     return AnimationGroup(*shown)
                 return play
 
-            hops = [hop_bundle(i) for i in range(tens)] + [hop_one(j) for j in range(ones)]
-            self.spend_marked(2, hops, self.marks_for(2))
+            hops = [hop_ten, hop_twenty] + [hop_one(j) for j in range(ones)]
+            self.spend_marked(0, hops, self.marks_for(0))
 
     _scene_types._cache = {
         "one_ten": OneTen,

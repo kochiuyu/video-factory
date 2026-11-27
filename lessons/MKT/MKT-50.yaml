@@ -1,0 +1,261 @@
+id: MKT-50
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Only two left. Left where?
+title_zh: 「只剩两件」，是哪里只剩两件？
+title_zh_hk: 「只剩兩件」，是哪裏只剩兩件？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-50
+  kicker_en: MKT-50
+  kicker_zh: MKT-50
+  kicker_zh_hk: MKT-50
+  title_en: Only two left. Left where?
+  title_zh: 「只剩两件」，是哪里只剩两件？
+  title_zh_hk: 「只剩兩件」，是哪裏只剩兩件？
+  image: art/only-two-in-this-basket-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A Singapore competition authority study noted that a travel site's scarce-looking rooms could reflect
+    only its own allotment. Stock can be limited by channel, not by product. Now you manage a fictional
+    Hong Kong stationer's notebook listing.
+  zh: >-
+    新加坡竞争主管机构的一项市场研究指出，旅游网站显示客房所剩无几，有时只反映该平台分到的房间数。存货紧张可能只限于某个渠道，而不是整款产品。现在，你负责香港一家虚构文具店的笔记本商品页。
+  zh_hk: >-
+    新加坡競爭事務機構有一項市場研究指出，旅遊網站顯示房間所剩無幾，有時只係反映嗰個平台分到嘅房數。存貨緊張可能只係某個渠道，唔係成款產品。而家，你負責香港一間虛構文具店嘅筆記簿商品頁。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: The 10am stock ledger
+  title_zh: 上午 10 时的存货记录
+  title_zh_hk: 上午 10 時的存貨紀錄
+  row1_en: Early pickup slot
+  row1_zh: 早段自取预留
+  row1_zh_hk: 早段自取預留
+  row2_en: Delivery pool
+  row2_zh: 送货独立库存
+  row2_zh_hk: 送貨獨立庫存
+  col1_en: Units
+  col1_zh: 本数
+  col1_zh_hk: 本數
+  col2_en: Already paid
+  col2_zh: 已付款
+  col2_zh_hk: 已付款
+  c11: '18'
+  c12: '16'
+  c21: '24'
+  c22: —
+  footer_en: 6 more pickup units not yet arrived
+  footer_zh: 另有 6 本在途，未入账
+  footer_zh_hk: 另有 6 本在途，未計入
+  s1_en: >-
+    The stationer sells one notebook at the same price for shop pickup and home delivery. On the product
+    page, shoppers have not yet chosen a channel. The manager proposes showing Only two left beside the
+    name.
+  s1_zh: 这家文具店以同一价格出售一款笔记本，可以到店自取，也可以送货上门。在商品页上，顾客还没有选择取货方式。经理建议在商品名称旁边写上只剩两件。
+  s1_zh_hk: 呢間文具店用同一價錢賣一款筆記簿，可以到店自取，亦可以送貨上門。喺商品頁，顧客仲未揀取貨方式。經理建議喺商品名稱旁邊寫只剩兩件。
+  s2_en: >-
+    A competing draft shows channel-specific availability after the customer picks an option. Neither
+    has gone live.
+  s2_zh: 另一个方案则等顾客选好方式之后，才显示该渠道的存货。两个版本都还没有上线。
+  s2_zh_hk: 另一個方案就等顧客揀好方式之後，先顯示嗰個渠道嘅存貨。兩個版本都未上線。
+  s3_en: >-
+    At 10am, 18 notebooks are allocated to the early pickup slot, and 16 are already paid and protected.
+    A separate pool holds 24 checked units for delivery. Six more units, in neither pool, must arrive
+    and pass checks before a later pickup slot can open.
+  s3_zh: 上午十点，早段自取预留了十八本，十六本已付款，不能再卖。另一批分开的库存有二十四本可送货。另有六本在途，到货检查后才能开放较晚的自取时段。
+  s3_zh_hk: >-
+    上午十點，早段自取預留咗十八本，十六本已經俾錢，唔可以再賣。另一批分開嘅存貨有二十四本可以送貨。仲有六本喺途中，到貨檢查完先可以開較遲嘅自取時段。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Approve Only two left?
+  title_zh: 批准只剩两件吗？
+  title_zh_hk: 批准只剩兩件嗎？
+  en: >-
+    Would you approve the proposed headline? Find the number a new buyer could order in the early pickup
+    slot and across both channels, then explain the difference a shopper needs to see. Pause and vote.
+  zh: 你会批准这个标语吗？算出新顾客在早段自取时段，以及在两个渠道合计，可以订多少本，再说明顾客需要看清的区别。请暂停，投个票。
+  zh_hk: 你會唔會批准呢句標語？計出新顧客喺早段自取時段，同兩個渠道加埋，可以訂幾多本，再講吓顧客要睇清楚嘅分別。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: >-
+    10:04: pickup sells out
+  title_zh: >-
+    10:04：自取订满
+  title_zh_hk: >-
+    10:04：自取訂滿
+  step1_en: Last 2 early-pickup units paid
+  step1_zh: 最后 2 本早段自取已付款
+  step1_zh_hk: 最後 2 本早段自取已付款
+  step2_en: Product page still shows the 10am figure
+  step2_zh: 商品页仍显示 10 时的数字
+  step2_zh_hk: 商品頁仍顯示 10 時的數字
+  step3_en: Delivery still 24 · 6 not yet arrived
+  step3_zh: 送货仍有 24 本 · 6 本未到
+  step3_zh_hk: 送貨仍有 24 本 · 6 本未到
+  s1_en: >-
+    At 10:04, both remaining early-pickup units are paid for.
+  s1_zh: 上午十点零四分，早段自取剩下的两本都已经付款。
+  s1_zh_hk: 上午十點零四分，早段自取剩低嗰兩本都已經俾咗錢。
+  s2_en: >-
+    The product-page count still shows the 10am figure from its mock feed, while the checkout ledger is
+    current.
+  s2_zh: 商品页上的数字仍然显示模拟数据源里上午十点的数字，而结账系统的记录是最新的。
+  s2_zh_hk: 商品頁上面嘅數字仲係顯示模擬數據源入面上午十點嘅數，而結賬系統嘅紀錄係最新嘅。
+  s3_en: >-
+    The delivery pool stays at 24, and the six incoming units have not arrived. The shop can turn off
+    the cached pickup number and send stock notices only to shoppers who opt in.
+  s3_zh: 送货库存仍然是二十四本，在途的六本还没有到。店铺可以马上关掉缓存的自取数字，也只能向主动选择订阅的顾客发送到货通知。
+  s3_zh_hk: 送貨存貨仍然係二十四本，喺途中嗰六本仲未到。舖頭可以即刻熄咗緩存嘅自取數字，亦只可以向自己揀咗訂閱嘅顧客發到貨通知。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What to show now?
+  title_zh: 现在显示什么？
+  title_zh_hk: 現在顯示甚麼？
+  en: >-
+    What would you show on the product page and at checkout now? Recalculate availability by channel,
+    and describe when a numeric pickup claim would become suitable again. Pause and vote.
+  zh: 现在商品页和结账页面应该显示什么？按渠道重新计算存货，并说明什么时候才适合再显示自取的数字。请暂停，投个票。
+  zh_hk: 而家商品頁同結賬頁面應該顯示啲咩？按渠道重新計存貨，再講吓幾時先適合再顯示自取嘅數字。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Specify the relevant pool
+  title_zh: 说清是哪批存货
+  title_zh_hk: 說清是哪批存貨
+  step1_en: >-
+    10am pickup: 18 − 16 = 2 orderable
+  step1_zh: 10 时自取：18 − 16 = 2 本可订
+  step1_zh_hk: 10 時自取：18 − 16 = 2 本可訂
+  step2_en: Plus delivery 24 = 26 across channels
+  step2_zh: 加送货 24 本 = 两渠道共 26
+  step2_zh_hk: 加送貨 24 本 = 兩渠道共 26
+  step3_en: Only two left implies product scarcity
+  step3_zh: 只剩两件暗示整款缺货
+  step3_zh_hk: 只剩兩件暗示整款缺貨
+  s1_en: At 10am, pickup has 18 minus 16, which is 2 orderable units.
+  s1_zh: 上午十点，自取有十八减十六，即两本可以订。
+  s1_zh_hk: 上午十點，自取有十八減十六，即係兩本可以訂。
+  s2_en: >-
+    Delivery has 24, so 26 units are orderable across distinct channels. A shopper who needs early pickup
+    benefits from a scoped count.
+  s2_zh: 送货有二十四本，所以两个渠道合计有二十六本可以订。需要早段自取的顾客，看到注明范围的数字才有帮助。
+  s2_zh_hk: 送貨有二十四本，所以兩個渠道加埋有二十六本可以訂。需要早段自取嘅顧客，睇到註明範圍嘅數字先有幫助。
+  s3_en: >-
+    A broad Only two left suggests product-wide scarcity, and omits a valid alternative.
+  s3_zh: 笼统地写只剩两件，会让人以为整款产品快卖完，也漏掉了另一个可行的选择。
+  s3_zh_hk: 籠統咁寫只剩兩件，會令人以為成款產品就嚟賣晒，亦漏咗另一個可行嘅選擇。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Remove stale certainty
+  title_zh: 撤下过时的确定说法
+  title_zh_hk: 撤下過時的確定說法
+  step1_en: >-
+    After 10:04: pickup 0, delivery 24
+  step1_zh: >-
+    10:04 后：自取 0，送货 24
+  step1_zh_hk: >-
+    10:04 後：自取 0，送貨 24
+  step2_en: Hide the stale number; offer delivery
+  step2_zh: 隐藏过时数字，另列送货
+  step2_zh_hk: 隱藏過時數字，另列送貨
+  step3_en: Don't say sold out without scope
+  step3_zh: 不要笼统地说售罄
+  step3_zh_hk: 不要籠統地說售罄
+  s1_en: >-
+    After the two purchases, there are zero early-pickup units and 24 delivery units. No incoming items
+    can yet be promised.
+  s1_zh: 这两本卖出之后，早段自取是零本，送货仍有二十四本。在途的货还不能承诺。
+  s1_zh_hk: 呢兩本賣出之後，早段自取係零本，送貨仲有二十四本。喺途中嘅貨仲未可以承諾。
+  s2_en: >-
+    Hide the stale number, show the early pickup slot as unavailable once its status is verified, and
+    offer checked delivery availability separately.
+  s2_zh: 要隐藏过时的数字，核实之后把早段自取显示为不可选，并另外列出已核对的送货存货。
+  s2_zh_hk: 要收埋過時嘅數字，核實之後將早段自取顯示為唔可以揀，再另外列出已核對嘅送貨存貨。
+  s3_en: Do not say sold out without qualification.
+  s3_zh: 不要在没有说明范围的情况下写售罄。
+  s3_zh_hk: 唔好喺冇講明範圍嘅情況下寫售罄。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Match scope at every step
+  title_zh: 每一步范围都要一致
+  title_zh_hk: 每一步範圍都要一致
+  en: >-
+    Before enabling a numeric count, test that channel, slot, variant and new-order definition match between
+    listing and checkout. If feed freshness cannot be established, fall back to a neutral check-availability
+    message.
+  zh: 开放数字显示之前，要测试商品页和结账页的渠道、时段、款式和新订单定义是否一致。如果无法确认数据是否最新，就改为中性的查询存货提示。
+  zh_hk: 開放數字顯示之前，要測試商品頁同結賬頁嘅渠道、時段、款式同新訂單定義係咪一致。如果確認唔到數據係咪最新，就改做中性嘅查詢存貨提示。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Say which stock is limited
+  title_zh: 说清是哪里有限
+  title_zh_hk: 說清是哪裏有限
+  q1_en: A count needs a channel and a time
+  q1_zh: 数字要有渠道和时间
+  q1_zh_hk: 數字要有渠道和時間
+  q2_en: Incoming stock is not stock yet
+  q2_zh: 在途的货还不算存货
+  q2_zh_hk: 在途的貨還不算存貨
+  s1_en: >-
+    Once the six replenishment units physically arrive and pass checks, they can support a later slot,
+    not a retrospective promise.
+  s1_zh: 那六本补货真正到店并通过检查后，才可以支持较晚的自取时段，而不是补回之前的承诺。
+  s1_zh_hk: 嗰六本補貨真係到咗同檢查完之後，先可以支持遲啲嘅自取時段，唔係補返之前嘅承諾。
+  s2_en: Never add shoppers to a stock-notice list by default.
+  s2_zh: 不能默认把顾客加进到货通知名单。
+  s2_zh_hk: 唔可以預設將顧客加入到貨通知名單。
+  s3_en: >-
+    The stationer, notebook and stock records are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 文具店、笔记本和存货记录都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 文具店、筆記簿同存貨紀錄都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

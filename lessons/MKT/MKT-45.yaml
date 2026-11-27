@@ -1,0 +1,271 @@
+id: MKT-45
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: More renewals. More people who meant to stay?
+title_zh: 续订多了，真正想继续订阅的人也多了吗？
+title_zh_hk: 續訂多了，真心想留下的人也多了嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-45
+  kicker_en: MKT-45
+  kicker_zh: MKT-45
+  kicker_zh_hk: MKT-45
+  title_en: More renewals. More people who meant to stay?
+  title_zh: 续订多了，真正想继续订阅的人也多了吗？
+  title_zh_hk: 續訂多了，真心想留下的人也多了嗎？
+  image: art/before-the-next-renewal-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Hong Kong's Consumer Council has documented disputes over app renewals and urged clear charges, cancellation
+    steps and reminders. Now you run a fictional Hong Kong drawing-practice subscription, deciding when
+    to send an extra renewal reminder.
+  zh: >-
+    香港消费者委员会记录过不少应用程序自动续订的纠纷，并呼吁清楚列明收费、取消步骤和提醒。现在，你经营香港一项虚构的绘画练习订阅服务，要决定什么时候多发一次续订提醒。
+  zh_hk: >-
+    香港消費者委員會記錄過唔少手機程式自動續訂嘅糾紛，並呼籲清楚列明收費、取消步驟同提醒。而家，你經營香港一個虛構嘅繪畫練習訂閱服務，要決定幾時加發一次續訂提醒。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: When to send the extra reminder
+  title_zh: 何时加发提醒
+  title_zh_hk: 何時加發提醒
+  row1_en: >-
+    A: 7 days before
+  row1_zh: A：提前 7 天
+  row1_zh_hk: A：提前 7 天
+  row2_en: >-
+    B: 1 day before
+  row2_zh: B：提前 1 天
+  row2_zh_hk: B：提前 1 天
+  col1_en: Assigned
+  col1_zh: 分组账户
+  col1_zh_hk: 分組帳戶
+  col2_en: Renewal charges
+  col2_zh: 成功扣款
+  col2_zh_hk: 成功扣款
+  c11: '100'
+  c12: '72'
+  c21: '100'
+  c22: '80'
+  footer_en: Kept HK$100 · reversed −HK$20
+  footer_zh: 留下 HK$100 · 撤销 −HK$20
+  footer_zh_hk: 留下 HK$100 · 撤銷 −HK$20
+  s1_en: >-
+    Existing terms and required notices are clear and identical under either option. Subscribers opted
+    into renewal, can stop it until the same disclosed cutoff, and keep paid access until expiry.
+  s1_zh: 现有条款和必要通知都很清楚，两个方案完全相同。订阅者是主动选择续订的，在同一个已公布的截止时间前都可以停止，已付费的使用权维持到期满。
+  s1_zh_hk: 現有條款同必要通知都好清楚，兩個方案完全一樣。訂閱者係自己揀續訂嘅，喺同一個已公佈嘅截止時間之前都可以停，已付費嘅使用權維持到期滿。
+  s2_en: >-
+    A sends the extra reminder seven days before the cutoff; B sends it one day before. Price, cutoff,
+    the direct route to turn off renewal, and refund protection are the same, and no extra step may be
+    added.
+  s2_zh: A 方案在截止前七天加发提醒，B 方案在截止前一天才发。价格、截止时间、直接关闭续订的途径和退款保障都相同，也不能另加步骤。
+  s2_zh_hk: A 方案喺截止前七日加發提醒，B 方案喺截止前一日先發。價錢、截止時間、直接關閉續訂嘅途徑同退款保障都一樣，亦唔可以加多個步驟。
+  s3_en: >-
+    A fictional randomized pilot assigns 100 consenting subscriptions to each arm. A has 72 successful
+    renewal charges and B has 80. A kept renewal earns 100 dollars; a fully reversed charge earns nothing
+    and costs 20 in handling.
+  s3_zh: >-
+    一项虚构的随机试验，把同意参与的订阅各分一百个到两组。A 组有七十二次成功续订扣款，B 组有八十次。每个留下的续订带来一百元贡献；全额撤销的扣款没有贡献，还要多花二十元处理费。
+  s3_zh_hk: >-
+    一個虛構嘅隨機試驗，將同意參與嘅訂閱各分一百個去兩組。A 組有七十二次成功續訂扣款，B 組有八十次。每個留低嘅續訂帶嚟一百蚊貢獻；全數撤銷嘅扣款冇貢獻，仲要多使二十蚊手續費。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: A or B provisionally?
+  title_zh: 暂选 A 还是 B？
+  title_zh_hk: 暫選 A 還是 B？
+  en: >-
+    Would you keep A or B as your provisional preference? What does the charge count establish, and what
+    does it not show about whether people wanted to stay? Pause and vote.
+  zh: 你会暂时选 A 还是 B？扣款次数能说明什么？对于大家是否真的想继续订阅，它又说明不了什么？请暂停，投个票。
+  zh_hk: 你會暫時揀 A 定 B？扣款次數講到啲咩？對於大家係咪真心想繼續訂，佢又講唔到啲咩？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Reversals and recorded intent
+  title_zh: 撤销扣款与已记录意愿
+  title_zh_hk: 撤銷扣款與已記錄意願
+  step1_en: >-
+    Fully reversed: A 5 of 72, B 20 of 80
+  step1_zh: 全额撤销：A 72 次中 5 次，B 80 次中 20 次
+  step1_zh_hk: 全數撤銷：A 72 次中 5 次，B 80 次中 20 次
+  step2_en: >-
+    Recorded intent to continue: A 61, B 45
+  step2_zh: 事先表明想继续：A 61，B 45
+  step2_zh_hk: 事先表明想繼續：A 61，B 45
+  step3_en: No verified preference ≠ unhappy
+  step3_zh: 未核实意愿 ≠ 不满意
+  step3_zh_hk: 未核實意願 ≠ 不滿意
+  s1_en: >-
+    The completed pilot finds five of A's 72 charges and twenty of B's 80 were fully reversed by the same
+    end date. These are observed reversals, not an estimate of all unwanted renewals.
+  s1_zh: >-
+    完整试验结果显示，到同一个结束日期，A 组七十二次扣款中有五次全额撤销，B 组八十次中有二十次。这些是观察到的撤销，不是对所有不想要的续订的估算。
+  s1_zh_hk: >-
+    完整試驗結果顯示，到同一個結束日期，A 組七十二次扣款入面有五次全數撤銷，B 組八十次入面有二十次。呢啲係觀察到嘅撤銷，唔係估計所有唔想要嘅續訂。
+  s2_en: >-
+    Of the renewals that stayed paid, 61 in A and 45 in B had recorded a current, explicit intention to
+    continue before the charge, and correctly identified the charge and cutoff.
+  s2_zh: 在没有撤销的续订中，A 组有六十一个、B 组有四十五个，在扣款前已明确表示想继续订阅，并正确说出扣款金额和截止时间。
+  s2_zh_hk: 喺冇撤銷嘅續訂入面，A 組有六十一個、B 組有四十五個，喺扣款之前已經清楚表示想繼續訂，仲講啱扣款金額同截止時間。
+  s3_en: >-
+    The others have no verified preference by this measure; they are not assumed to be unhappy. The prompt
+    and recording process were the same in both arms.
+  s3_zh: 其余的人按这个指标没有经核实的意愿，但不能假设他们不满意。两组的提问和记录方式完全相同。
+  s3_zh_hk: 其餘嘅人按呢個指標冇經核實嘅意願，但唔可以假設佢哋唔滿意。兩組嘅提問同記錄方式完全一樣。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which timing goes forward?
+  title_zh: 哪个时间点继续用？
+  title_zh_hk: 哪個時間點繼續用？
+  en: >-
+    Which timing would you carry forward? Calculate contribution and confirmed intended continuation per
+    assigned subscription. What would you monitor about the cancellation route before the next test? Pause
+    and vote.
+  zh: 你会继续采用哪个时间点？算出每个分组账户的贡献，以及已确认想继续订阅的比例。下一次测试前，关于取消途径，你会关注什么？请暂停，投个票。
+  zh_hk: 你會繼續用邊個時間點？計吓每個分組帳戶嘅貢獻，同已確認想繼續訂嘅比例。下一次測試之前，關於取消途徑，你會留意啲咩？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Gross billing can reverse
+  title_zh: 扣款总数会误导排名
+  title_zh_hk: 扣款總數會誤導排名
+  step1_en: >-
+    Kept: A 72 − 5 = 67, B 80 − 20 = 60
+  step1_zh: 留下：A 72 − 5 = 67，B 80 − 20 = 60
+  step1_zh_hk: 留下：A 72 − 5 = 67，B 80 − 20 = 60
+  step2_en: >-
+    A: HK$6,600 · B: HK$5,600
+  step2_zh: A：HK$6,600 · B：HK$5,600
+  step2_zh_hk: A：HK$6,600 · B：HK$5,600
+  step3_en: >-
+    Per subscription: HK$66 vs HK$56
+  step3_zh: 每个账户：HK$66 对 HK$56
+  step3_zh_hk: 每個帳戶：HK$66 對 HK$56
+  s1_en: >-
+    A keeps 72 minus 5, which is 67 paid renewals; B keeps 80 minus 20, which is 60.
+  s1_zh: A 组留下七十二减五，即六十七个续订；B 组留下八十减二十，即六十个。
+  s1_zh_hk: A 組留低七十二減五，即係六十七個續訂；B 組留低八十減二十，即係六十個。
+  s2_en: >-
+    A's contribution is 6,700 minus 100 in handling, which is 6,600 dollars. B's is 6,000 minus 400, which
+    is 5,600.
+  s2_zh: A 组的贡献是六千七百减一百元处理费，等于六千六百元；B 组是六千减四百，等于五千六百元。
+  s2_zh_hk: A 組嘅貢獻係六千七百減一百蚊手續費，即係六千六百蚊；B 組係六千減四百，即係五千六百蚊。
+  s3_en: >-
+    Per assigned subscription, that is 66 dollars against 56. The later reminder charges eight more accounts
+    but produces 1,000 dollars less contribution in the observed window.
+  s3_zh: 按每个分组账户计算，是六十六元对五十六元。较迟的提醒多扣了八个账户，但在观察期内少了一千元贡献。
+  s3_zh_hk: 按每個分組帳戶計，係六十六蚊對五十六蚊。遲啲發嘅提醒多扣咗八個帳戶，但喺觀察期內少咗一千蚊貢獻。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Keep intent and billing separate
+  title_zh: 意愿和扣款分开看
+  title_zh_hk: 意願和扣款分開看
+  step1_en: >-
+    Confirmed intent: A 61%, B 45%
+  step1_zh: 确认想继续：A 61%，B 45%
+  step1_zh_hk: 確認想繼續：A 61%，B 45%
+  step2_en: >-
+    Kept but unconfirmed: A 6, B 15
+  step2_zh: 留下但未确认：A 6，B 15
+  step2_zh_hk: 留下但未確認：A 6，B 15
+  step3_en: Recommend A here, not 7 days always
+  step3_zh: 这里选 A，不是 7 天永远最好
+  step3_zh_hk: 這裏選 A，不是 7 天永遠最好
+  s1_en: >-
+    Confirmed intended continuation per 100 assigned is 61 percent for A and 45 percent for B.
+  s1_zh: 每一百个分组账户中，已确认想继续订阅的比例，A 组是百分之六十一，B 组是百分之四十五。
+  s1_zh_hk: 每一百個分組帳戶入面，已確認想繼續訂嘅比例，A 組係百分之六十一，B 組係百分之四十五。
+  s2_en: >-
+    Six kept renewals in A and fifteen in B do not meet this measurement definition. A missing voluntary
+    response does not prove an unwanted charge.
+  s2_zh: A 组有六个、B 组有十五个留下的续订，不符合这个衡量定义。没有自愿回应，并不证明扣款是对方不想要的。
+  s2_zh_hk: A 組有六個、B 組有十五個留低嘅續訂，唔符合呢個量度定義。冇自願回應，唔證明扣款係對方唔想要嘅。
+  s3_en: >-
+    Recommend A here, based on net contribution and the higher verified count, not on a rule that seven
+    days is universally best.
+  s3_zh: 这里建议选 A，依据是净贡献和较高的已核实人数，而不是认定提前七天永远最好。
+  s3_zh_hk: 呢度建議揀 A，根據係淨貢獻同較高嘅已核實人數，唔係認定提前七日永遠最好。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Test the route, not just arrival
+  title_zh: 测试取消途径，不只看送达
+  title_zh_hk: 測試取消途徑，不只看送達
+  en: >-
+    In an approved follow-up, check that reminders arrived before the actual cutoff in the account's local
+    time, and that a person could turn off renewal and get confirmation without going through retention
+    offers.
+  zh: 在获批准的后续测试中，要检查提醒是否按账户所在地的时间，在实际截止前送达；也要检查用户能否不经过挽留优惠，就关闭续订并收到确认。
+  zh_hk: 喺獲批准嘅後續測試入面，要檢查提醒係咪按帳戶所在地嘅時間，喺實際截止之前送到；亦要檢查用戶可唔可以唔經挽留優惠，就關閉續訂同收到確認。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: A charge is not a choice to stay
+  title_zh: 扣款不等于选择留下
+  title_zh_hk: 扣款不等於選擇留下
+  q1_en: Count kept renewals, not gross charges
+  q1_zh: 数留下的续订，不数扣款总数
+  q1_zh_hk: 數留下的續訂，不數扣款總數
+  q2_en: Silence is not consent or complaint
+  q2_zh: 沉默不是同意，也不是投诉
+  q2_zh_hk: 沉默不是同意，也不是投訴
+  s1_en: >-
+    Measure complaints, refunds and later paid continuation separately, and keep access, refunds and price
+    fixed.
+  s1_zh: 要分开衡量投诉、退款和之后的付费续订，同时保持使用权、退款安排和价格不变。
+  s1_zh_hk: 要分開量度投訴、退款同之後嘅付費續訂，同時保持使用權、退款安排同價錢唔變。
+  s2_en: Review nonresponse before interpreting intent rates.
+  s2_zh: 解读意愿比例之前，先审视没有回应的人。
+  s2_zh_hk: 解讀意願比例之前，先檢視冇回應嘅人。
+  s3_en: >-
+    The subscription service, pilot and all results are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 订阅服务、试验和所有结果都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 訂閱服務、試驗同所有結果都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

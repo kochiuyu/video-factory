@@ -1,0 +1,264 @@
+id: MKT-47
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A control area. Really out of reach?
+title_zh: 对照区没有投放，广告就影响不到它吗？
+title_zh_hk: 對照區沒有投放，廣告就影響不到它嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-47
+  kicker_en: MKT-47
+  kicker_zh: MKT-47
+  kicker_zh_hk: MKT-47
+  title_en: A control area. Really out of reach?
+  title_zh: 对照区没有投放，广告就影响不到它吗？
+  title_zh_hk: 對照區沒有投放，廣告就影響不到它嗎？
+  image: art/a-holdout-across-the-street-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Hong Kong's Lands Department shows how connected pedestrian routes shape walkable areas, and geographic
+    ad experiments must allow for people moving between areas. Now you manage two lunch markets for a
+    fictional Hong Kong bakery chain.
+  zh: >-
+    香港地政总署的 Walkin’HK 显示，相连的步行路线会塑造可步行的范围；按地区做的广告实验，也要考虑人们在不同地区之间走动。现在，你为香港一家虚构的连锁面包店管理两个午餐市场。
+  zh_hk: >-
+    香港地政總署嘅資料顯示，相連嘅行人路線會影響行得到嘅範圍；按地區做嘅廣告實驗，亦要考慮人喺唔同地區之間行嚟行去。而家，你為香港一間虛構嘅連鎖麵包舖管理兩個午餐市場。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Paid lunch baskets
+  title_zh: 已付款午餐订单
+  title_zh_hk: 已付款午餐單
+  row1_en: >-
+    A: chosen for ads
+  row1_zh: A：投放区
+  row1_zh_hk: A：投放區
+  row2_en: >-
+    B: comparison
+  row2_zh: B：对照区
+  row2_zh_hk: B：對照區
+  col1_en: Before
+  col1_zh: 投放前
+  col1_zh_hk: 投放前
+  col2_en: During
+  col2_zh: 投放期间
+  col2_zh_hk: 投放期間
+  c11: '220'
+  c12: '280'
+  c21: '230'
+  c22: '260'
+  footer_en: HK$20 per extra basket · ads HK$800
+  footer_zh: 每单增量 HK$20 · 广告 HK$800
+  footer_zh_hk: 每單增量 HK$20 · 廣告 HK$800
+  s1_en: >-
+    The experimental ad runs in area A, but not intentionally in B. B was chosen for similar pretest volume;
+    the areas were not assigned at random. Periods are equal in length, with the same weekdays.
+  s1_zh: 实验广告在 A 区投放，B 区则刻意不投。选 B 区是因为测试前的销量相近，两区并非随机分配。比较的时段长度相同，星期分布也一样。
+  s1_zh_hk: 實驗廣告喺 A 區投放，B 區就刻意唔投。揀 B 區係因為測試前嘅銷量相近，兩區唔係隨機分配。比較嘅時段一樣長，星期分佈都一樣。
+  s2_en: >-
+    Count all paid lunch baskets at participating tills, not just ad clicks or coupon scans. A rises from
+    220 to 280; B from 230 to 260.
+  s2_zh: 要计算参与门店收银台的所有已付款午餐订单，而不只是广告点击或优惠券扫描。A 区从两百二十单升到两百八十单，B 区从两百三十单升到两百六十单。
+  s2_zh_hk: 要計參與分店收銀機嘅所有已付款午餐單，唔只係廣告點擊或者優惠券掃描。A 區由二百二十單升到二百八十單，B 區由二百三十單升到二百六十單。
+  s3_en: >-
+    Each genuinely incremental basket is worth 20 dollars contribution, and the A ads cost 800. Prices,
+    hours and products stay fixed. The chain uses only aggregate records and will not track individual
+    locations.
+  s3_zh: 每张真正新增的订单带来二十元贡献，A 区的广告费是八百元。价格、营业时间和产品都不变。公司只用汇总数据，不会追踪个人位置。
+  s3_zh_hk: 每張真正新增嘅單帶嚟二十蚊貢獻，A 區嘅廣告費係八百蚊。價錢、營業時間同產品都唔變。公司只用匯總數據，唔會追蹤個人位置。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What uplift? What assumption?
+  title_zh: 提升多少？假设什么？
+  title_zh_hk: 提升多少？假設甚麼？
+  en: >-
+    Using change in A minus change in B, what uplift and contribution after ad cost does the initial comparison
+    imply? Which assumption would you check before deciding whether to expand? Pause and vote.
+  zh: >-
+    用 A 区的变化减去 B 区的变化，初步比较显示提升了多少？扣除广告费后贡献是多少？在决定是否扩大投放之前，你会先检查哪个假设？请暂停，投个票。
+  zh_hk: 用 A 區嘅變化減 B 區嘅變化，初步比較顯示提升咗幾多？扣除廣告費之後貢獻係幾多？決定擴唔擴大投放之前，你會先檢查邊個假設？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A footbridge joins the areas
+  title_zh: 一条天桥连起两区
+  title_zh_hk: 一條天橋連起兩區
+  step1_en: Covered footbridge, shared station exit
+  step1_zh: 有盖天桥，共用车站出口
+  step1_zh_hk: 有蓋天橋，共用車站出口
+  step2_en: Some A viewers may buy at B tills
+  step2_zh: 部分 A 区观众可能在 B 区买
+  step2_zh_hk: 部分 A 區觀眾可能在 B 區買
+  step3_en: Let s = B baskets caused by A ads
+  step3_zh: 设 s = A 区广告带来的 B 区订单
+  step3_zh_hk: 設 s = A 區廣告帶來的 B 區訂單
+  s1_en: >-
+    A site walk finds a covered footbridge between the markets and a shared station entrance.
+  s1_zh: 实地考察发现，两个市场之间有一条有盖天桥，还共用一个车站出入口。
+  s1_zh_hk: 實地考察發現，兩個市場之間有一條有蓋天橋，仲共用一個車站出入口。
+  s2_en: >-
+    A voluntary anonymous intercept supports the possibility that some A ad viewers bought lunch at B.
+    It does not measure a causal share of B's 30 extra baskets.
+  s2_zh: 一项自愿的匿名拦截访问显示，部分看过 A 区广告的人，可能到 B 区买午餐。但它没有衡量 B 区多出的三十单中，有多少是广告造成的。
+  s2_zh_hk: 一個自願嘅匿名截訪顯示，有啲睇過 A 區廣告嘅人，可能去咗 B 區買午餐。但佢冇量度到 B 區多出嚟嘅三十單入面，有幾多係廣告造成。
+  s3_en: >-
+    For the arithmetic, assume no sales are displaced. Let s be B baskets caused by the A ads, from zero
+    to 25. Without the ad, B's change would be 30 minus s, and so would A's. The range is a scenario,
+    not a measured bound.
+  s3_zh: >-
+    为了计算，假设销售没有在两区之间转移。设 s 为 A 区广告带来的 B 区订单，范围是零到二十五。如果没有广告，B 区的变化就是三十减 s，A 区也一样。这个范围只是情境，不是测量出来的上下限。
+  s3_zh_hk: >-
+    為咗計數，假設銷售冇喺兩區之間轉移。設 s 為 A 區廣告帶嚟嘅 B 區訂單，範圍係零到二十五。如果冇廣告，B 區嘅變化就係三十減 s，A 區都一樣。呢個範圍只係情境，唔係量度出嚟嘅上下限。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Break-even s, and next?
+  title_zh: s 多少才收支平衡？
+  title_zh_hk: s 多少才收支平衡？
+  en: >-
+    At what value of s does the campaign break even across both markets? Would you scale now, and how
+    would you redesign the comparison to reduce spillover? Pause and vote.
+  zh: 在这些假设下，s 是多少时，广告在两个市场合计刚好收支平衡？你现在会扩大投放吗？你会怎样重新设计比较，减少溢出效应？请暂停，投个票。
+  zh_hk: 喺呢啲假設下，s 係幾多嗰陣，廣告喺兩個市場加埋啱啱收支平衡？你而家會唔會擴大投放？你會點樣重新設計比較，減少溢出效應？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: A conditional first reading
+  title_zh: 有条件的初步结论
+  title_zh_hk: 有條件的初步結論
+  step1_en: >-
+    A +60, B +30: contrast 30 baskets
+  step1_zh: A +60，B +30：相差 30 单
+  step1_zh_hk: A +60，B +30：相差 30 單
+  step2_en: 30 × HK$20 = HK$600; net −HK$200
+  step2_zh: 30 × HK$20 = HK$600；净亏 HK$200
+  step2_zh_hk: 30 × HK$20 = HK$600；淨蝕 HK$200
+  step3_en: Similar levels ≠ parallel changes
+  step3_zh: 水平相近 ≠ 变化平行
+  step3_zh_hk: 水平相近 ≠ 變化平行
+  s1_en: A rises by 60 baskets and B by 30, so the initial contrast is 30.
+  s1_zh: A 区增加六十单，B 区增加三十单，所以初步差额是三十单。
+  s1_zh_hk: A 區多咗六十單，B 區多咗三十單，所以初步差額係三十單。
+  s2_en: >-
+    That is 600 dollars of additional margin, and a net loss of 200 after the 800-dollar ad cost.
+  s2_zh: 这带来六百元额外贡献，扣除八百元广告费后，净亏两百元。
+  s2_zh_hk: 即係多六百蚊貢獻，扣除八百蚊廣告費之後，淨蝕二百蚊。
+  s3_en: >-
+    This is a proxy for ad lift only if B gives a credible no-ad baseline. Similar levels before the test
+    do not prove the changes would be parallel.
+  s3_zh: 只有当 B 区真的能代表没有广告时的情况，这个数字才能近似反映广告效果。测试前销量相近，并不证明两区的变化会平行。
+  s3_zh_hk: 只有當 B 區真係代表到冇廣告嘅情況，呢個數字先至可以近似反映廣告效果。測試前銷量相近，唔證明兩區嘅變化會平行。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Spillover changes two terms
+  title_zh: 溢出效应改变两项
+  title_zh_hk: 溢出效應改變兩項
+  step1_en: >-
+    Corrected A: 60 − (30 − s) = 30 + s
+  step1_zh: 修正 A 提升：60 − (30 − s) = 30 + s
+  step1_zh_hk: 修正 A 提升：60 − (30 − s) = 30 + s
+  step2_en: >-
+    Both markets: 30 + 2s; break-even s = 5
+  step2_zh: 两区合计：30 + 2s；s = 5 打平
+  step2_zh_hk: 兩區合計：30 + 2s；s = 5 打和
+  step3_en: >-
+    s = 25: 80 baskets, net HK$800
+  step3_zh: s = 25：80 单，净赚 HK$800
+  step3_zh_hk: s = 25：80 單，淨賺 HK$800
+  s1_en: The corrected A uplift is 60 minus 30 minus s, which is 30 plus s.
+  s1_zh: 修正后的 A 区提升，是六十减去三十减 s，即三十加 s。
+  s1_zh_hk: 修正後嘅 A 區提升，係六十減三十減 s，即係三十加 s。
+  s2_en: >-
+    Add s at B to get 30 plus 2s across both markets, counting each basket once. Net is 20 dollars times
+    30 plus 2s, minus 800, which breaks even at five spillover baskets.
+  s2_zh: 再加上 B 区的 s，两区合计是三十加二 s，每单只计一次。净额是二十元乘以三十加二 s，再减八百元，s 等于五时刚好收支平衡。
+  s2_zh_hk: 再加 B 區嘅 s，兩區合計係三十加二 s，每單只計一次。淨額係二十蚊乘三十加二 s，再減八百蚊，s 等於五嗰陣啱啱收支平衡。
+  s3_en: >-
+    At 25, the scenario yields 80 extra baskets and 800 dollars net. These are conditional scenarios,
+    not evidence that the ad paid off.
+  s3_zh: 如果 s 是二十五，这个情境会多出八十单，净赚八百元。这些只是有条件的情境，不能证明广告已经回本。
+  s3_zh_hk: 如果 s 係二十五，呢個情境會多八十單，淨賺八百蚊。呢啲只係有條件嘅情境，唔證明廣告已經回本。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Don't scale on this test alone
+  title_zh: 不要单凭这次测试扩大
+  title_zh_hk: 不要單憑這次測試擴大
+  en: >-
+    Do not scale on this test alone. Match several pairs of nonadjacent walkable markets, keep a buffer
+    outside the readout, randomise within pairs and check baseline trends, using only permitted aggregate
+    checks of exposure.
+  zh: >-
+    不要单凭这次测试就扩大投放。应配对多组互不相邻、可步行到达的市场，在计算范围外留出缓冲区，在每组内随机分配，并检查测试前的趋势；检查广告覆盖时，只用获准的汇总数据。
+  zh_hk: >-
+    唔好單憑呢次測試就擴大投放。應該配對幾組互唔相鄰、行得到嘅市場，喺計算範圍以外留緩衝區，喺每組入面隨機分配，再檢查測試前嘅趨勢；檢查廣告覆蓋嗰陣，只用獲准嘅匯總數據。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: A control may be a walk away
+  title_zh: 对照区可能走路就到
+  title_zh_hk: 對照區可能走路就到
+  q1_en: Spillover can hide the real uplift
+  q1_zh: 溢出效应会掩盖真实提升
+  q1_zh_hk: 溢出效應會掩蓋真實提升
+  q2_en: Randomise units shoppers rarely cross
+  q2_zh: 随机分配顾客少跨越的单位
+  q2_zh_hk: 隨機分配顧客少跨越的單位
+  s1_en: >-
+    Measure all eligible sales, and keep any known boundary overlap for sensitivity analysis rather than
+    hiding it.
+  s1_zh: 要衡量所有符合条件的销售；已知的边界重叠，要保留下来做敏感度分析，不要隐藏。
+  s1_zh_hk: 要量度所有符合條件嘅銷售；已知嘅邊界重疊，要保留做敏感度分析，唔好收埋。
+  s2_en: >-
+    Do not collect individual locations or movement histories to answer this question.
+  s2_zh: 不需要为此收集个人位置或行动记录。
+  s2_zh_hk: 唔需要為呢個問題收集個人位置或者行蹤記錄。
+  s3_en: >-
+    The bakery, markets and all numbers are fictional. Official scene art is a teaching illustration only.
+  s3_zh: 面包店、市场和所有数字都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 麵包舖、市場同所有數字都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

@@ -1,0 +1,291 @@
+id: FIN-15
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: One company. One hurdle rate?
+title_zh: 一家公司，一个门槛回报率？
+title_zh_hk: 一家公司，一個門檻回報率？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-15
+  kicker_en: FIN-15
+  kicker_zh: FIN-15
+  kicker_zh_hk: FIN-15
+  title_en: One company. One hurdle rate?
+  title_zh: 一家公司，一个门槛回报率？
+  title_zh_hk: 一家公司，一個門檻回報率？
+  image: art/one-company-one-hurdle-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 17 September 2026, the Hong Kong Monetary Authority announced a Base Rate of 4.25 percent, which
+    applies to its Discount Window. That monetary-policy rate is not an appraisal rate for every business.
+    Now you brief a fictional Hong Kong business-services company.
+  zh: >-
+    2026年9月17日，香港金融管理局宣布基本利率为百分之四点二五，这个利率用于贴现窗。货币政策利率并不是每家企业都能直接拿来用的投资评估利率。现在，你要为香港一家虚构的商业服务公司准备汇报。
+  zh_hk: >-
+    2026年9月17號，香港金融管理局宣布基本利率係百分之四點二五，呢個利率用喺貼現窗。貨幣政策利率唔係每間企業都可以直接攞嚟用嘅投資評估利率。而家，你要幫香港一間虛構嘅商業服務公司準備匯報。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Initial forecast
+  title_zh: 起初的预测
+  title_zh_hk: 起初的預測
+  row1_en: Outlay now
+  row1_zh: 现在投入
+  row1_zh_hk: 現在投入
+  row2_en: Expected net cash, 1 year
+  row2_zh: 一年后期望净现金
+  row2_zh_hk: 一年後期望淨現金
+  row3_en: Company screening rate
+  row3_zh: 公司筛选回报率
+  row3_zh_hk: 公司篩選回報率
+  col1_en: >-
+    A: document support
+  col1_zh: A：文件支持
+  col1_zh_hk: A：文件支援
+  col2_en: >-
+    B: event design
+  col2_zh: B：活动设计
+  col2_zh_hk: B：活動設計
+  c11: HK$100,000
+  c12: HK$100,000
+  c21: HK$112,000
+  c22: HK$112,000
+  c31: 8%
+  c32: 8%
+  footer_en: Nominal HK$, after costs and tax
+  footer_zh: 名义港元，已扣成本、税和营运资金
+  footer_zh_hk: 名義港元，已扣成本、稅和營運資金
+  s1_en: >-
+    The company is considering two one-year projects. A expands its familiar document-support service.
+    B launches a new discretionary event-design service. Each needs 100,000 dollars now and forecasts
+    112,000 dollars of net cash in one year.
+  s1_zh: >-
+    公司在考虑两个为期一年的项目。A扩大它熟悉的文件支持服务；B新开一项非必需的活动设计服务。两个项目现在都要投入十万港元，预计一年后净现金十一万二千港元。
+  s1_zh_hk: >-
+    公司諗緊兩個為期一年嘅項目。A擴大佢熟悉嘅文件支援服務；B新開一項非必需嘅活動設計服務。兩個項目而家都要投十萬港元，預計一年後淨現金十一萬二千港元。
+  s2_en: >-
+    The company normally screens projects at an 8 percent annual cost of capital, estimated for its established
+    activities and current financing mix. One analyst proposes that rate for both. A second analyst wants
+    a project-risk review first.
+  s2_zh: >-
+    公司平时用每年百分之八的资本成本筛选项目，这个数是按现有业务和目前的融资结构估算的。一位分析师建议两个项目都用这个利率；另一位则想先做项目风险复核。
+  s2_zh_hk: >-
+    公司平時用每年百分之八嘅資本成本篩選項目，呢個數係按現有業務同而家嘅融資結構估出嚟。一位分析師建議兩個項目都用呢個利率；另一位就想先做項目風險覆核。
+  s3_en: >-
+    Amounts are nominal Hong Kong dollars, after operating costs, taxes and working capital. Financing
+    flows are excluded because the discount rate covers capital providers' required return. Neither project
+    is approved yet.
+  s3_zh: 金额都是名义港元，已经扣除经营成本、税和营运资金变动。融资现金流不计在内，因为折现率已经反映了资本提供者要求的回报。两个项目都还没批。
+  s3_zh_hk: 金額都係名義港元，已經扣除經營成本、稅同營運資金變動。融資現金流唔計，因為折現率已經反映咗資本提供者要求嘅回報。兩個項目都未批。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Equally attractive at 8%?
+  title_zh: 按 8% 一样吸引吗？
+  title_zh_hk: 按 8% 一樣吸引嗎？
+  en: >-
+    Would you present both projects as equally attractive at the company's 8 percent rate, or make that
+    comparison provisional pending a project-risk review? Calculate the initial net present value, and
+    state what the common rate assumes. Pause and vote.
+  zh: >-
+    你会按公司百分之八的利率，把两个项目说成一样吸引，还是先把比较标为暂定，等项目风险复核之后再说？算出起初的净现值，并说明共用一个利率背后假设了什么。请暂停，投个票。
+  zh_hk: >-
+    你會按公司百分之八嘅利率，講兩個項目一樣吸引，定係先將比較標做暫定，等項目風險覆核完再講？計出起初嘅淨現值，再講吓共用一個利率背後假設咗咩。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Same mean, different swings
+  title_zh: 均值相同，波动不同
+  title_zh_hk: 均值相同，波動不同
+  step1_en: >-
+    Downturn 50%: A 108,000 · B 84,000
+  step1_zh: 经济转弱 50%：A 108,000 · B 84,000
+  step1_zh_hk: 經濟轉弱 50%：A 108,000 · B 84,000
+  step2_en: >-
+    Stronger 50%: A 116,000 · B 140,000
+  step2_zh: 经济较强 50%：A 116,000 · B 140,000
+  step2_zh_hk: 經濟較強 50%：A 116,000 · B 140,000
+  step3_en: Test A at 6% and 8%; B at 10% and 14%
+  step3_zh: 试算：A 6%、8%；B 10%、14%
+  step3_zh_hk: 試算：A 6%、8%；B 10%、14%
+  s1_en: >-
+    The analyst supplies a simplified two-state forecast. One economy-wide state affects both projects:
+    a downturn or a stronger economy, each with probability 50 percent.
+  s1_zh: 分析师给出一个简化的两种状态预测。同一个整体经济状态会同时影响两个项目：经济转弱或者经济较强，概率各占百分之五十。
+  s1_zh_hk: 分析師畀出一個簡化嘅兩種狀態預測。同一個整體經濟狀態會同時影響兩個項目：經濟轉差或者經濟較強，機會各佔百分之五十。
+  s2_en: >-
+    A produces 108,000 dollars in the downturn and 116,000 in the stronger economy. B produces 84,000
+    and 140,000. Both still expect 112,000, but B moves much more with the shared economy.
+  s2_zh: A在经济转弱时产生十万八千港元，经济较强时十一万六千。B分别是八万四千和十四万。两者的期望现金仍然是十一万二千，但B随整体经济的波动大得多。
+  s2_zh_hk: >-
+    A喺經濟轉差嗰陣有十萬八千港元，經濟較強就有十一萬六千。B分別係八萬四千同十四萬。兩個嘅期望現金都仲係十一萬二千，但B跟住整體經濟嘅波動大好多。
+  s3_en: >-
+    No market beta or project-specific cost of capital has been estimated. For discussion, test A at 6
+    and 8 percent, and B at 10 and 14 percent. These are sensitivity rates, not estimated fair rates.
+  s3_zh: >-
+    团队还没有估算市场贝塔系数，也没有估出项目自己的资本成本。讨论时，A用百分之六和八试算，B用百分之十和十四试算。这些只是敏感性测试用的利率，不是估算出来的合理利率。
+  s3_zh_hk: >-
+    團隊仲未估市場貝塔系數，亦未估出項目本身嘅資本成本。討論嗰陣，A用百分之六同八試算，B用百分之十同十四試算。呢啲只係敏感度測試用嘅利率，唔係估出嚟嘅合理利率。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What goes in the briefing?
+  title_zh: 审批汇报里写什么？
+  title_zh_hk: 審批匯報寫甚麼？
+  en: >-
+    What would you now put in the approval briefing? Show the sensitivity results, distinguish a test
+    rate from an estimated required return, and explain what evidence is needed before accepting or rejecting
+    B. Pause and vote.
+  zh: >-
+    现在你会在审批汇报里写什么？列出敏感性测试的结果，分清试算利率和估算出来的要求回报率，并说明在接受或拒绝B之前，还需要什么证据。请暂停，投个票。
+  zh_hk: 而家你會喺審批匯報寫啲咩？列出敏感度測試嘅結果，分清試算利率同估出嚟嘅要求回報率，再講吓接受或者拒絕B之前，仲需要咩證據。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Make the rate assumption visible
+  title_zh: 把利率假设摆上台面
+  title_zh_hk: 把利率假設擺上枱面
+  step1_en: Both expect HK$112,000
+  step1_zh: 两者期望现金都是 HK$112,000
+  step1_zh_hk: 兩者期望現金都是 HK$112,000
+  step2_en: >-
+    At 8%: NPV ≈ HK$3,704 each
+  step2_zh: 按 8%：净现值各约 HK$3,704
+  step2_zh_hk: 按 8%：淨現值各約 HK$3,704
+  step3_en: >-
+    A: 5,660 / 3,704 · B: 1,818 / −1,754
+  step3_zh: A：5,660 / 3,704 · B：1,818 / −1,754
+  step3_zh_hk: A：5,660 / 3,704 · B：1,818 / −1,754
+  s1_en: >-
+    A's expected cash is half of 108,000 plus half of 116,000, which is 112,000. B's is half of 84,000
+    plus half of 140,000, also 112,000. Equal averages conceal different exposure to the same economy.
+  s1_zh: >-
+    A的期望现金是十万八千的一半加十一万六千的一半，即十一万二千。B是八万四千的一半加十四万的一半，也是十一万二千。平均数相同，却掩盖了它们对同一经济状态的不同风险敞口。
+  s1_zh_hk: >-
+    A嘅期望現金係十萬八千嘅一半加十一萬六千嘅一半，即係十一萬二千。B係八萬四千嘅一半加十四萬嘅一半，都係十一萬二千。平均數一樣，但遮住咗佢哋對同一經濟狀態唔同嘅風險。
+  s2_en: >-
+    At 8 percent, each gives 112,000 divided by 1.08, minus 100,000: about 3,704 dollars. That is a conditional
+    valuation, not proof that both deserve the same rate.
+  s2_zh: 按百分之八计算，每个项目都是十一万二千除以一点零八，减十万，约三千七百零四港元。这是有条件的估值，不能证明两个项目都该用同一个利率。
+  s2_zh_hk: 按百分之八計，每個項目都係十一萬二千除一點零八，減十萬，大約三千七百零四港元。呢個係有條件嘅估值，唔可以證明兩個項目都應該用同一個利率。
+  s3_en: >-
+    For A, NPV is about 5,660 at 6 percent and 3,704 at 8 percent. For B, about 1,818 at 10 percent, and
+    minus 1,754 at 14 percent.
+  s3_zh: A的净现值，在百分之六时约五千六百六十，在百分之八时约三千七百零四。B在百分之十时约一千八百一十八，在百分之十四时约负一千七百五十四。
+  s3_zh_hk: A嘅淨現值，百分之六大約五千六百六十，百分之八大約三千七百零四。B喺百分之十大約一千八百一十八，百分之十四大約負一千七百五十四。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Find the boundary, then evidence
+  title_zh: 先找边界，再找证据
+  title_zh_hk: 先找邊界，再找證據
+  step1_en: >-
+    Break-even rate: 112 / 100 − 1 = 12%
+  step1_zh: 盈亏平衡折现率：12%
+  step1_zh_hk: 收支平衡折現率：12%
+  step2_en: B's test range crosses 12%
+  step2_zh: B 的试算区间跨过 12%
+  step2_zh_hk: B 的試算區間跨過 12%
+  step3_en: Keep 8% as a provisional benchmark
+  step3_zh: 8% 保留为暂定基准
+  step3_zh_hk: 8% 保留為暫定基準
+  s1_en: >-
+    Either project's one-year break-even discount rate is 12 percent: 112,000 divided by 100,000, minus
+    one.
+  s1_zh: 两个项目的一年期盈亏平衡折现率都是百分之十二，也就是十一万二千除以十万，再减一。
+  s1_zh_hk: 兩個項目嘅一年期收支平衡折現率都係百分之十二，即係十一萬二千除十萬，再減一。
+  s2_en: >-
+    B's test range crosses that boundary, but it does not prove the correct rate exceeds 12 percent. B
+    is not riskier merely because it is new; the cash pattern identifies the concern.
+  s2_zh: B的试算区间跨过了这条边界，但这不能证明正确的利率高于百分之十二。B不是因为新就比较险，是它的现金流形态让人担心。
+  s2_zh_hk: B嘅試算區間跨過咗呢條界線，但唔證明正確利率高過百分之十二。B唔係因為新就危險啲，係佢嘅現金流形態令人擔心。
+  s3_en: >-
+    Keep the 8 percent calculation as an explicitly provisional benchmark, and add a risk-sensitive review.
+    Market-related risk matters here; not every operating uncertainty earns a bigger premium.
+  s3_zh: >-
+    百分之八的结果要保留，并明确标为暂定基准，再加上考虑风险的复核。这里重要的是与市场相关的风险，不是每一种经营上的不确定，都会自动要求更高的溢价。
+  s3_zh_hk: >-
+    百分之八嘅結果要保留，清楚標明係暫定基準，再加埋考慮風險嘅覆核。呢度要緊嘅係同市場有關嘅風險，唔係每一種經營上嘅唔確定，都會自動要求更高嘅溢價。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Evidence before approval
+  title_zh: 批准之前先有证据
+  title_zh_hk: 批准之前先有證據
+  en: >-
+    Compare economically similar activities, their exposure to market conditions and their financing.
+    B could remain worthwhile at a justified rate below 12 percent, or fail above it. Do not choose a
+    rate to get the preferred answer.
+  zh: >-
+    要比较经济上相近的业务、它们受市场状况影响的程度，以及融资假设。如果有充分理由的利率低于百分之十二，B仍可能值得做；高于百分之十二，就可能不划算。不要为了得到想要的答案去挑利率。
+  zh_hk: >-
+    要比較經濟上相近嘅業務、佢哋受市場狀況影響嘅程度，同融資假設。如果有充分理由嘅利率低過百分之十二，B仍然可能值得做；高過百分之十二，就可能唔抵。唔好為咗得到想要嘅答案去揀利率。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Fit the rate to the project
+  title_zh: 利率要配合项目风险
+  title_zh_hk: 利率要配合項目風險
+  q1_en: A company average is a starting benchmark
+  q1_zh: 公司平均利率只是起点
+  q1_zh_hk: 公司平均利率只是起點
+  q2_en: Never pick a rate to fit the answer
+  q2_zh: 不要为答案挑利率
+  q2_zh_hk: 不要為答案揀利率
+  s1_en: >-
+    A company-average rate fits only projects whose risk and financing match the company's established
+    activities.
+  s1_zh: 公司的平均利率，只适用于风险和融资都跟现有业务相近的项目。
+  s1_zh_hk: 公司嘅平均利率，只適用於風險同融資都同現有業務相近嘅項目。
+  s2_en: >-
+    The Base Rate is a monetary-policy rate, not a supplied appraisal rate for every firm.
+  s2_zh: 基本利率是货币政策利率，不是给每家企业现成的评估利率。
+  s2_zh_hk: 基本利率係貨幣政策利率，唔係俾每間企業現成嘅評估利率。
+  s3_en: >-
+    The company, projects, probabilities and rates are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 公司、项目、概率和利率都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 公司、項目、機率同利率都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

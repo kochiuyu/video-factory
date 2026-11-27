@@ -1,0 +1,284 @@
+id: FIN-11
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A lower rate. A less certain payment?
+title_zh: 更低的利率，更不确定的还款？
+title_zh_hk: 更低的利率，更不確定的還款？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-11
+  kicker_en: FIN-11
+  kicker_zh: FIN-11
+  kicker_zh_hk: FIN-11
+  title_en: A lower rate. A less certain payment?
+  title_zh: 更低的利率，更不确定的还款？
+  title_zh_hk: 更低的利率，更不確定的還款？
+  image: art/lower-rate-less-certainty-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 9 June 2025, Reuters reported abrupt movements in Hong Kong interest rates after capital inflows
+    and currency-market interventions. A low rate today does not guarantee low costs for the whole loan.
+    Now you advise a fictional Hong Kong furniture-repair workshop.
+  zh: >-
+    2025年6月9日，路透社报道，资本流入和外汇市场干预之后，香港利率出现急剧变动。今天利率低，并不保证整笔贷款期间的成本都低。现在，你要为香港一家虚构的家具维修工场提供建议。
+  zh_hk: >-
+    2025年6月9號，路透社報道，資金流入同外匯市場干預之後，香港利率急升急跌。今日利率低，唔代表成筆貸款期間成本都低。而家，你要幫香港一間虛構嘅傢俬維修工場出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two 12-month quotes
+  title_zh: 两份 12 个月报价
+  title_zh_hk: 兩份 12 個月報價
+  row1_en: Falling path
+  row1_zh: 下降路径
+  row1_zh_hk: 下降路徑
+  row2_en: Unchanged path
+  row2_zh: 不变路径
+  row2_zh_hk: 不變路徑
+  row3_en: Rising stress
+  row3_zh: 上升压力
+  row3_zh_hk: 上升壓力
+  col1_en: >-
+    V: month 1
+  col1_zh: V：第 1 个月
+  col1_zh_hk: V：第 1 個月
+  col2_en: >-
+    V: months 2–12
+  col2_zh: V：第 2–12 个月
+  col2_zh_hk: V：第 2–12 個月
+  c11: 4%
+  c12: 2%
+  c21: 4%
+  c22: 4%
+  c31: 4%
+  c32: 8%
+  footer_en: F fixed at 6% on every path
+  footer_zh: F 在每条路径都固定 6%
+  footer_zh_hk: F 在每條路徑都固定 6%
+  s1_en: >-
+    The workshop needs 240,000 Hong Kong dollars for approved equipment. Quote F fixes the annual rate
+    at 6 percent. Quote V starts at 4 percent in month one, then resets monthly. The floating rates already
+    include the lender's margin.
+  s1_zh: >-
+    工场已经批准购买设备，需要二十四万港元。F报价把年利率固定在百分之六。V报价第一个月是百分之四，之后每月重新设定。表里的浮动利率已经包含贷款人的利差，不用再加。
+  s1_zh_hk: >-
+    工場已經批准買設備，要二十四萬港元。F報價將年利率固定喺百分之六。V報價第一個月係百分之四，之後每個月重新設定。表入面嘅浮動利率已經包埋貸款人嘅息差，唔使再加。
+  s2_en: >-
+    Both repay 20,000 dollars of principal each month-end, plus interest on that month's opening principal:
+    opening principal times the annual rate, divided by twelve. There are no fees, caps, floors, early
+    repayment or refinancing.
+  s2_zh: >-
+    两份报价都在每个月底偿还本金两万港元，再加上当月期初本金的利息，也就是期初本金乘以年利率，再除以十二。这里没有手续费、利率上限、利率下限、提前还款或再融资。
+  s2_zh_hk: >-
+    兩份報價都喺每個月尾還本金兩萬港元，再加當月期初本金嘅利息，即係期初本金乘年利率，再除十二。呢度冇手續費、利率上限、利率下限、提早還款或者再融資。
+  s3_en: >-
+    The opening balances add up to 1,560,000 dollars over all 12 months, and 1,320,000 dollars for months
+    2 to 12. These paths are illustrations, not forecasts, and no probabilities are supplied.
+  s3_zh: 十二个月的期初余额加起来是一百五十六万港元，第二到第十二个月加起来是一百三十二万港元。这些路径只是示意，不是预测，也没有给出概率。
+  s3_zh_hk: 十二個月嘅期初餘額加埋係一百五十六萬港元，第二至第十二個月加埋係一百三十二萬港元。呢啲路徑只係示意，唔係預測，亦冇畀機率。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Fixed or floating?
+  title_zh: 固定还是浮动？
+  title_zh_hk: 固定定浮動？
+  en: >-
+    Which quote would you provisionally favour, and why? Compare financing costs across the three supplied
+    paths. What cash evidence would you need before choosing? Pause and vote.
+  zh: 你会暂时倾向哪一份报价？为什么？把三条路径下的融资成本比较一下。做决定之前，你还需要哪些现金方面的证据？请暂停，投个票。
+  zh_hk: 你暫時會揀邊份報價？點解？比較吓三條路徑下嘅融資成本。決定之前，你仲需要啲咩現金方面嘅證據？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Cash for interest, months 1–3
+  title_zh: 前 3 个月可付息现金
+  title_zh_hk: 頭 3 個月可付息現金
+  step1_en: >-
+    New cash: HK$1,200 · 1,100 · 1,100
+  step1_zh: 新拨入：HK$1,200 · 1,100 · 1,100
+  step1_zh_hk: 新撥入：HK$1,200 · 1,100 · 1,100
+  step2_en: No starting pot; savings carry forward
+  step2_zh: 初始为零，结余可留用
+  step2_zh_hk: 起初為零，結餘可留用
+  step3_en: >-
+    Owners: pass all three paths
+  step3_zh: 业主：三条路径都要过
+  step3_zh_hk: 東主：三條路徑都要過
+  s1_en: >-
+    The bookkeeper now supplies new cash for interest in the first three months, after operating bills,
+    principal and the minimum buffer: 1,200, 1,100 and 1,100 dollars.
+  s1_zh: 簿记员现在给出前三个月可以用来付利息的新增现金，已经扣除经营开支、本金和最低现金缓冲，分别是一千二百、一千一百和一千一百港元。
+  s1_zh_hk: 簿記員而家畀出頭三個月可以用嚟俾利息嘅新增現金，已經扣除營運開支、本金同最低現金緩衝，分別係一千二、一千一同一千一百港元。
+  s2_en: >-
+    There is no starting pot, but every unused dollar carries forward, including V's early savings. No
+    extra credit is approved.
+  s2_zh: 一开始没有多余的资金，但每一笔没用完的钱都可以留到后面，包括V前期省下的利息。没有另外批出的信贷。
+  s2_zh_hk: 一開始冇多餘資金，但每一蚊冇用晒嘅錢都可以留到後面，包括V前期慳落嘅利息。冇另外批出嘅信貸。
+  s3_en: >-
+    Months 4 to 12 are fundable on every path if this early bottleneck is crossed. The owners require
+    the choice to pass all three paths without breaching the buffer.
+  s3_zh: 只要渡过这个前期的瓶颈，第四到第十二个月在每条路径下都付得起。业主要求所选的报价在三条路径下都能过关，而且不能跌破现金缓冲。
+  s3_zh_hk: 只要過到呢個前期樽頸，第四至第十二個月喺每條路徑都俾得起。東主要求揀嘅報價喺三條路徑都要過關，而且唔可以跌穿現金緩衝。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Does V survive months 1–3?
+  title_zh: V 撑得过前三个月吗？
+  title_zh_hk: V 頂得住頭三個月嗎？
+  en: >-
+    Does your choice pass the first three months under the rising path, even after keeping earlier savings?
+    Recommend F, or state the confirmed change V would need to meet the owners' rule. Pause and vote.
+  zh: >-
+    在上升路径下，就算把前期省下的钱留着，你的选择能撑过前三个月吗？你可以建议选F，也可以说明V需要先落实什么改变，才符合业主的规则。请暂停，投个票。
+  zh_hk: 喺上升路徑下，就算留住前期慳落嘅錢，你揀嗰份頂唔頂得住頭三個月？你可以建議揀F，或者講吓V要先落實咩改變，先符合東主嘅規則。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Same loan, different interest
+  title_zh: 本金相同，利息不同
+  title_zh_hk: 本金相同，利息不同
+  step1_en: >-
+    F interest: HK$7,800 on every path
+  step1_zh: F 利息：每条路径 HK$7,800
+  step1_zh_hk: F 利息：每條路徑 HK$7,800
+  step2_en: >-
+    V: HK$3,000 · 5,200 · 9,600
+  step2_zh: V：HK$3,000 · 5,200 · 9,600
+  step2_zh_hk: V：HK$3,000 · 5,200 · 9,600
+  step3_en: >-
+    Rising V by month 3: HK$200 short
+  step3_zh: 上升路径 V 第 3 个月：缺 HK$200
+  step3_zh_hk: 上升路徑 V 第 3 個月：差 HK$200
+  s1_en: >-
+    F costs 1,560,000 times 6 percent over twelve, which is 7,800 dollars of interest on every path.
+  s1_zh: F的利息是一百五十六万乘以百分之六，再除以十二，即七千八百港元，每条路径都一样。
+  s1_zh_hk: F嘅利息係一百五十六萬乘百分之六，再除十二，即係七千八百港元，每條路徑都一樣。
+  s2_en: >-
+    V starts with 800 dollars, then uses the 1,320,000 sum: 3,000 falling, 5,200 unchanged, and 9,600
+    under rising stress.
+  s2_zh: V第一个月是八百港元，之后用一百三十二万这个总和来算：下降路径三千，不变路径五千二百，上升压力下九千六百港元。
+  s2_zh_hk: V第一個月係八百港元，之後用一百三十二萬呢個總和計：下降路徑三千，不變路徑五千二，上升壓力下九千六百港元。
+  s3_en: >-
+    Under rising stress, V's first three bills are 800, about 1,466.67 and 1,333.33. The pot holds 400,
+    then about 33.33, and month 3 is 200 dollars short. F's pot ends at 0, 0 and 100.
+  s3_zh: >-
+    上升压力下，V前三个月利息约为八百、一千四百六十七和一千三百三十三港元。资金池先剩四百，再剩约三十三，第三个月差两百港元。F依次剩零、零和一百。
+  s3_zh_hk: >-
+    上升壓力下，V頭三個月利息大約係八百、一千四百六十七同一千三百三十三港元。資金池先剩四百，再剩大約三十三，第三個月差兩百港元。F就剩零、零同一百。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Resilience, not a rate forecast
+  title_zh: 看承受力，不是预测利率
+  title_zh_hk: 睇承受力，唔係預測利率
+  step1_en: F passes; V needs HK$200 more, confirmed
+  step1_zh: F 过关；V 需另落实 HK$200
+  step1_zh_hk: F 過關；V 要另外落實 HK$200
+  step2_en: >-
+    F: +2,600, +4,800 or −1,800
+  step2_zh: F 多付 2,600 或 4,800，或少付 1,800
+  step2_zh_hk: F 多付 2,600 或 4,800，或少付 1,800
+  step3_en: Certain payments ≠ equal payments
+  step3_zh: 确定性是已知还款，不是等额
+  step3_zh_hk: 確定性是已知還款，不是等額
+  s1_en: >-
+    F passes the owners' test; V does not yet. V needs at least 200 dollars of extra usable cash confirmed
+    by month 3, without weakening the buffer or creating another unfunded obligation. Hoped-for income
+    or credit does not count.
+  s1_zh: >-
+    F通过了业主的测试，V暂时还没有。V需要在第三个月之前，落实至少两百港元额外的可用现金，而且不能削弱现金缓冲，也不能再产生一笔没有资金来源的支付义务。预期的收入或信贷都不算。
+  s1_zh_hk: >-
+    F過咗東主嘅測試，V暫時未過。V要喺第三個月之前，落實最少兩百港元額外可用現金，而且唔可以削弱現金緩衝，亦唔可以再搞出一筆冇資金來源嘅支付責任。指望嘅收入或者信貸都唔計。
+  s2_en: >-
+    Certainty has a scenario-dependent cost. F costs 2,600 dollars more if rates are unchanged, 4,800
+    more if they fall, and 1,800 less if they rise.
+  s2_zh: 确定性的成本要看情景。利率不变，F多付两千六百港元；利率下降，多付四千八百；利率上升，反而少付一千八百。
+  s2_zh_hk: 確定性嘅成本要睇情景。利率不變，F多俾兩千六百港元；利率跌，多俾四千八；利率升，反而少俾一千八。
+  s3_en: >-
+    Certainty means knowing the scheduled payments, not paying the same each month. Fixing the rate does
+    not protect against weak sales, losses or default.
+  s3_zh: 确定性是指预先知道要还多少，不是每个月还一样多。固定利率也挡不住销售转弱、经营亏损或违约。
+  s3_zh_hk: 確定性係指預先知道要還幾多，唔係每個月還一樣多。固定利率亦擋唔住生意轉差、經營虧損或者違約。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Read the whole quote
+  title_zh: 看清完整报价条款
+  title_zh_hk: 睇清完整報價條款
+  en: >-
+    For actual quotes, check the benchmark, reset dates, margin, fees, calculation method, security, covenants
+    and early-repayment conditions. With more verified cash capacity, V may be defensible without claiming
+    to forecast rates.
+  zh: >-
+    面对真实报价，要核对基准利率、重设日期、利差、费用、计息方法、抵押、贷款契约和提前还款条件。如果核实过的现金能力更强，选V也说得通，而不需要声称自己能预测利率。
+  zh_hk: >-
+    面對真實報價，要核對基準利率、重設日期、息差、費用、計息方法、抵押、契諾同提早還款條件。如果核實過嘅現金能力更強，揀V都講得通，唔使話自己識預測利率。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Test cash, not forecasts
+  title_zh: 检验现金，而非预测
+  title_zh_hk: 檢驗現金，而非預測
+  q1_en: A lower start can still miss a payment
+  q1_zh: 起步利率低，也可能付不出
+  q1_zh_hk: 起步利率低，也可能付不出
+  q2_en: Count only confirmed cash
+  q2_zh: 只计已落实的现金
+  q2_zh_hk: 只計已落實的現金
+  s1_en: >-
+    Today's attractive rate need not settle the financing decision. The sources do not establish this
+    workshop's rates or cash capacity.
+  s1_zh: 今天看起来便宜的利率，不必就此决定融资选择。这些来源也说明不了这家工场的利率或现金能力。
+  s1_zh_hk: 今日睇落平嘅利率，唔使就咁決定融資選擇。呢啲來源亦講唔到呢間工場嘅利率或者現金能力。
+  s2_en: >-
+    This is not a recommendation to take a real loan or use a particular lender.
+  s2_zh: 这不是建议你借某笔真实贷款，也不是推荐某家贷款机构。
+  s2_zh_hk: 呢個唔係建議你借某筆真實貸款，亦唔係推介某間貸款機構。
+  s3_en: >-
+    The workshop, quotes, rate paths and cash plan are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 工场、报价、利率路径和现金计划都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 工場、報價、利率路徑同現金計劃都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

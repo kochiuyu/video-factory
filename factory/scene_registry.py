@@ -138,8 +138,8 @@ def _copy(lang: str) -> dict[str, str]:
             "from_left": "From the left",
             "from_right": "From the right",
             "pair_title": "Make pairs",
-            "none_left": "None left",
-            "one_left": "One left",
+            "none_left": "All in pairs",
+            "one_left": "One left over",
             "even_word": "Even",
             "odd_word": "Odd",
             "part_title": "Two parts",
@@ -171,7 +171,7 @@ def _copy(lang: str) -> dict[str, str]:
             "from_left": "从左边",
             "from_right": "从右边",
             "pair_title": "两个配成一对",
-            "none_left": "没有剩下",
+            "none_left": "全部配成对",
             "one_left": "剩下一个",
             "even_word": "双数",
             "odd_word": "单数",
@@ -204,7 +204,7 @@ def _copy(lang: str) -> dict[str, str]:
             "from_left": "由左邊",
             "from_right": "由右邊",
             "pair_title": "兩個配成一對",
-            "none_left": "冇剩低",
+            "none_left": "全部配成對",
             "one_left": "剩低一個",
             "even_word": "雙數",
             "odd_word": "單數",
@@ -1396,6 +1396,8 @@ class NumberBlocks(SceneKind):
         out = {"title": title, "mode": mode}
         if mode == "tens":
             out["count"] = int(beat.get("count"))
+            if beat.get("pair_ones"):
+                out["pair_ones"] = True
         elif mode == "compare":
             out["a"] = int(beat.get("a"))
             out["b"] = int(beat.get("b"))
@@ -1416,6 +1418,8 @@ class NumberBlocks(SceneKind):
         out = {"mode": mode}
         if mode == "tens":
             out["count"] = int(beat.get("count"))
+            if beat.get("pair_ones"):
+                out["pair_ones"] = True
         elif mode == "compare":
             out["a"] = int(beat.get("a"))
             out["b"] = int(beat.get("b"))

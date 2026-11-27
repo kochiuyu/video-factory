@@ -2369,16 +2369,17 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in twenty["beats"]).lower())
         recap20 = next(beat for beat in twenty["beats"] if beat["id"] == "takeaway")
         self.assertEqual(step_count(recap20), 4)
-        self.assertEqual(labels_for(recap20, "en")["title"], "Even or odd?")
-        self.assertEqual(labels_for(recap20, "zh")["title"], "双数还是单数？")
-        self.assertEqual(labels_for(recap20, "zh_hk")["title"], "雙數定單數呀？")
+        self.assertEqual(labels_for(recap20, "en")["title"], "Odd or even?")
+        self.assertEqual(labels_for(recap20, "zh")["title"], "单数还是双数？")
+        self.assertEqual(labels_for(recap20, "zh_hk")["title"], "單數定雙數呀？")
+        self.assertTrue(blocks[0].get("pair_ones"))
         self.assertEqual(
             labels_for(recap20, "en")["lines"],
             [
                 "Four pairs. Eight is even.",
                 "Four pairs and one more. Nine is odd.",
                 "Zero counters. Zero is even.",
-                "Two ones. Thirty-two is even.",
+                "Look at the ones. Two ones make a pair. Thirty-two is even.",
             ],
         )
         self.assertEqual(labels_for(recap20, "zh")["lines"][2], "零个圆片。零是双数。")
@@ -2822,7 +2823,10 @@ class PairCountersTest(unittest.TestCase):
         self.assertEqual(labels_for(eight, "zh")["pairs"], ["一", "二", "三", "四"])
         self.assertEqual(labels_for(eight, "zh_hk")["pairs"], ["一", "二", "三", "四"])
         self.assertEqual(labels_for(eight, "en")["answer"], "Even")
-        self.assertEqual(labels_for(eight, "en")["note"], "None left")
+        self.assertEqual(labels_for(eight, "en")["note"], "All in pairs")
+        self.assertEqual(labels_for(eight, "zh")["note"], "全部配成对")
+        self.assertEqual(labels_for(eight, "zh_hk")["note"], "全部配成對")
+        self.assertEqual(labels_for(self._beat(9), "en")["note"], "One left over")
         self.assertEqual(labels_for(eight, "zh")["answer"], "双数")
         self.assertEqual(labels_for(self._beat(9), "zh_hk")["answer"], "單數")
         self.assertEqual(labels_for(self._beat(9), "zh_hk")["note"], "剩低一個")

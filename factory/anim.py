@@ -3546,16 +3546,39 @@ def _scene_types() -> dict:
                 fill_opacity=1,
             )
 
-        def _bundles(self, count, latin, cjk, *, rod_w, rod_h, cols):
+        def _bundles(self, count, latin, cjk, *, rod_w, rod_h, cols, pair_ones=False):
             tens, ones = divmod(int(count), 10)
             rods = VGroup(*[self._rod(rod_w, rod_h) for _ in range(tens)])
             if tens:
                 used = min(cols, tens)
                 rods.arrange_in_grid(rows=(tens + used - 1) // used, cols=used, buff=0.1)
             if ones:
-                dots = VGroup(*[counter(GOLD, min(0.15, rod_h * 0.2)) for _ in range(ones)])
-                dots.arrange(RIGHT, buff=0.08)
-                loose = dots
+                cubes = [counter(GOLD, min(0.15, rod_h * 0.2)) for _ in range(ones)]
+                if pair_ones and ones >= 2:
+                    bits = []
+                    i = 0
+                    while i + 1 < ones:
+                        pair = VGroup(cubes[i], cubes[i + 1]).arrange(RIGHT, buff=0.05)
+                        frame = RoundedRectangle(
+                            width=float(pair.width) + 0.18,
+                            height=float(pair.height) + 0.16,
+                            corner_radius=0.08,
+                            stroke_color=NAVY,
+                            stroke_width=3,
+                            fill_color=WHITE,
+                            fill_opacity=1,
+                        )
+                        pair.move_to(frame)
+                        bits.append(VGroup(frame, pair))
+                        i += 2
+                    if i < ones:
+                        lone = cubes[i]
+                        ring = SurroundingRectangle(lone, color=GOLD, buff=0.08, stroke_width=5)
+                        ring.set_fill(opacity=0)
+                        bits.append(VGroup(lone, ring))
+                    loose = VGroup(*bits).arrange(RIGHT, buff=0.16)
+                else:
+                    loose = VGroup(*cubes).arrange(RIGHT, buff=0.08)
             else:
                 zero = self._label("0", latin, cjk)
                 mat = RoundedRectangle(
@@ -3581,7 +3604,10 @@ def _scene_types() -> dict:
 
         def _tens(self, labels, latin, cjk, title):
             count = int(labels.get("count") or 0)
-            pic, rods, loose = self._bundles(count, latin, cjk, rod_w=0.46, rod_h=1.02, cols=5)
+            pic, rods, loose = self._bundles(
+                count, latin, cjk, rod_w=0.46, rod_h=1.02, cols=5,
+                pair_ones=bool(labels.get("pair_ones")),
+            )
             number = self._label(str(count), latin, cjk, 1.4)
             left, right, bot, top, max_w, max_h = self._limits()
             room = max_h - float(title.height) - float(number.height) - 0.7

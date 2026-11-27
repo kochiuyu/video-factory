@@ -9,7 +9,7 @@
 id: P1-NUM-20
 title_en: Odd or even?
 title_zh: 单数还是双数？
-title_zh_hk: 單數定雙數？
+title_zh_hk: 單數定雙數呀？
 duration_target_s: 58
 clock: own
 beats:
@@ -21,7 +21,7 @@ beats:
   seconds: 8
   title_en: Odd or even?
   title_zh: 单数还是双数？
-  title_zh_hk: 單數定雙數？
+  title_zh_hk: 單數定雙數呀？
   s1_en: Let us make pairs. Eight and nine will show us, then we look at the ones.
   s1_zh: 我们两个配成一对。先看八个和九个，再看有几个一。
   s1_zh_hk: 我哋兩個配成一對。先睇八個同九個，再睇有幾個一。
@@ -61,25 +61,26 @@ beats:
   scene: number_blocks
   mode: tens
   count: 23
+  pair_ones: true
   seconds: 12
   s1_en: Ten, twenty.
   s1_zh: 十，二十。
   s1_zh_hk: 十，二十。
-  s2_en: Three ones.
-  s2_zh: 三个一。
-  s2_zh_hk: 三個一。
-  s3_en: Three is odd. Twenty-three is odd.
-  s3_zh: 三个是单数。二十三是单数。
-  s3_zh_hk: 三個係單數。二十三係單數。
+  s2_en: Two ones make a pair, and one is left over.
+  s2_zh: 两个一配成一对，剩下一个。
+  s2_zh_hk: 兩個一配成一對，剩低一個。
+  s3_en: Twenty-three is odd.
+  s3_zh: 二十三是单数。
+  s3_zh_hk: 二十三係單數。
 
 - id: takeaway
   visual: animated
   scene: lesson_takeaway
   motif: pairs
   seconds: 14
-  title_en: Even or odd?
-  title_zh: 双数还是单数？
-  title_zh_hk: 雙數定單數呀？
+  title_en: Odd or even?
+  title_zh: 单数还是双数？
+  title_zh_hk: 單數定雙數呀？
   s1_en: Four pairs. Eight is even.
   s1_zh: 四对。八是双数。
   s1_zh_hk: 四對。八係雙數。
@@ -89,9 +90,9 @@ beats:
   s3_en: Zero counters. Zero is even.
   s3_zh: 零个圆片。零是双数。
   s3_zh_hk: 零個圓片。零係雙數。
-  s4_en: Two ones. Thirty-two is even.
-  s4_zh: 两个一。三十二是双数。
-  s4_zh_hk: 兩個一。三十二係雙數。
+  s4_en: Look at the ones. Two ones make a pair. Thirty-two is even.
+  s4_zh: 看一看这些一。两个一配成一对。三十二是双数。
+  s4_zh_hk: 睇下呢啲一。兩個一配成一對。三十二係雙數。
   cues:
   - kind: pairs
     n: 4

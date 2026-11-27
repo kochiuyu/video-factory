@@ -1,0 +1,89 @@
+# P1-NUM-22. Mirrors MathQuiz path calculate / lesson columnadd,
+# "Add tens and ones".
+# 23 + 14 lines up to 37. 27 + 15 makes twelve ones, and ten of them
+# become one new ten, so the total is 42.
+# https://github.com/kochiuyu/mathquiz learn-calculate.js (path calculate, lesson columnadd).
+# Speech is for age 6: one short idea per sentence. The heading is answered on screen.
+id: P1-NUM-22
+title_en: Add the ones, then the tens
+title_zh: 先加个，再加十
+title_zh_hk: 先加個，再加十
+duration_target_s: 58
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: ten_frame
+  shown: true
+  seconds: 8
+  title_en: Add the ones, then the tens
+  title_zh: 先加个，再加十
+  title_zh_hk: 先加個，再加十
+  s1_en: We will add the ones. Then we will add the tens.
+  s1_zh: 我们先加个位。再加十位。
+  s1_zh_hk: 我哋先加個位。再加十位。
+
+- id: plain
+  visual: animated
+  scene: place_sum
+  op: add
+  a: 23
+  b: 14
+  seconds: 16
+  s1_en: Twenty-three and fourteen. Ones under ones.
+  s1_zh: 二十三和十四。个位对个位。
+  s1_zh_hk: 二十三同十四。個位對個位。
+  s2_en: Three ones and four ones make seven.
+  s2_zh: 三个一和四个一，是七个。
+  s2_zh_hk: 三個一同四個一，係七個。
+  s3_en: Two tens and one ten make three tens. Thirty-seven.
+  s3_zh: 两个十和一个十，是三个十。三十七。
+  s3_zh_hk: 兩個十同一個十，係三個十。三十七。
+
+- id: exchange
+  visual: animated
+  scene: place_sum
+  op: add
+  a: 27
+  b: 15
+  seconds: 18
+  s1_en: Twenty-seven and fifteen.
+  s1_zh: 二十七和十五。
+  s1_zh_hk: 二十七同十五。
+  s2_en: Seven ones and five ones make twelve. Ten ones make one new ten.
+  s2_zh: 七个一和五个一，是十二个。十个一换成一个十。
+  s2_zh_hk: 七個一和五個一，係十二個。十個一換成一個十。
+  s3_en: Three tens and the new ten make four tens. Forty-two.
+  s3_zh: 三个十加这个新的十，是四个十。四十二。
+  s3_zh_hk: 三個十加呢個新嘅十，係四個十。四十二。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: ten_frame
+  seconds: 16
+  title_en: Add the ones, then the tens
+  title_zh: 先加个，再加十
+  title_zh_hk: 先加個，再加十
+  s1_en: Ones under ones.
+  s1_zh: 个位对个位。十位对十位。
+  s1_zh_hk: 個位對個位。十位對十位。
+  s2_en: Three and four make seven.
+  s2_zh: 三个和四个是七个。三十七。
+  s2_zh_hk: 三個同四個係七個。三十七。
+  s3_en: Ten ones make one new ten.
+  s3_zh: 十个一换成一个新的十。
+  s3_zh_hk: 十個一換成一個新嘅十。
+  s4_en: They make forty-two.
+  s4_zh: 二十七和十五是四十二。
+  s4_zh_hk: 二十七同十五係四十二。
+  cues:
+  - kind: tiles
+    values: [23, 14]
+  - kind: tens
+    count: 37
+  - kind: tens
+    count: 10
+  - kind: tens
+    count: 42

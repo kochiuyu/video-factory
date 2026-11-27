@@ -4142,6 +4142,128 @@ def _scene_types() -> dict:
             hops = [hop_ten, hop_twenty] + [hop_one(j) for j in range(ones)]
             self.spend_marked(0, hops, self.marks_for(0))
 
+    class PlaceSum(_Board):
+        """Ones under ones, then tens. Two or three numbers, no borrowing."""
+
+        def construct(self):
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            values = [int(v) for v in labels.get("values") or []]
+            op = str(labels.get("op") or "add")
+            left, right, bot_lim, top_lim = _safe_limits()
+            step = _ordinal_label_height()
+
+            def glyph(text, scale=1.0, color=NAVY):
+                mob = styled(str(text), latin, cjk, 64)
+                target = step * scale
+                if float(mob.height) > 0:
+                    mob.scale(target / float(mob.height))
+                mob.set_color(color)
+                return mob
+
+            if op == "sub":
+                ones_total = values[0] % 10 - values[1] % 10
+                carry = 0
+                tens_total = values[0] // 10 - values[1] // 10
+            else:
+                ones_total = sum(v % 10 for v in values)
+                carry = ones_total // 10
+                ones_total = ones_total % 10
+                tens_total = sum(v // 10 for v in values) + carry
+            col = step * 1.85
+            row = step * 1.55
+            ones_x = col * 0.5
+            tens_x = -col * 0.5
+            sign_x = tens_x - col * 0.95
+            y = step * 0.2
+            carry_mob = glyph(str(carry), 1.0, GOLD) if carry else None
+            if carry_mob is not None:
+                carry_mob.move_to([tens_x, y, 0])
+                y -= row
+            addend_digits = []
+            ones_digits = []
+            tens_digits = []
+            signs = []
+            tagged = {}
+            for i, value in enumerate(values):
+                tens_d, ones_d = divmod(value, 10)
+                ones_g = glyph(str(ones_d))
+                ones_g.move_to([ones_x, y, 0])
+                ones_digits.append(ones_g)
+                addend_digits.append(ones_g)
+                tagged[(i, "ones")] = ones_g
+                if tens_d or i == 0:
+                    tens_g = glyph(str(tens_d))
+                    tens_g.move_to([tens_x, y, 0])
+                    tens_digits.append(tens_g)
+                    addend_digits.append(tens_g)
+                    tagged[(i, "tens")] = tens_g
+                if i:
+                    sign = glyph("−" if op == "sub" else "+")
+                    sign.move_to([sign_x, y, 0])
+                    signs.append(sign)
+                y -= row
+            rule = Line(
+                [sign_x - step * 0.4, y + row * 0.45, 0],
+                [ones_x + step * 0.7, y + row * 0.45, 0],
+                color=NAVY, stroke_width=4,
+            )
+            answer_tens = glyph(str(tens_total))
+            answer_ones = glyph(str(ones_total))
+            answer_tens.move_to([tens_x, y, 0])
+            answer_ones.move_to([ones_x, y, 0])
+            ones_box = SurroundingRectangle(VGroup(*ones_digits), color=GOLD, buff=0.1, stroke_width=6)
+            ones_box.set_fill(opacity=0)
+            tens_targets = tens_digits or ones_digits
+            tens_box = SurroundingRectangle(VGroup(*tens_targets), color=GOLD, buff=0.1, stroke_width=6)
+            tens_box.set_fill(opacity=0)
+            bits = [rule, *addend_digits, *signs, answer_tens, answer_ones, ones_box, tens_box]
+            if carry_mob is not None:
+                bits.append(carry_mob)
+            grid = VGroup(*bits)
+            title = glyph(str(labels.get("title") or " "), 1.05)
+            title.next_to(grid, UP, buff=0.32)
+            group = VGroup(title, grid)
+            max_w = (right - left) * 0.96
+            max_h = (top_lim - bot_lim) * 0.96
+            if float(group.width) > max_w > 0:
+                group.scale(max_w / float(group.width))
+            if float(group.height) > max_h > 0:
+                group.scale(max_h / float(group.height))
+            group.move_to([(left + right) / 2.0, (bot_lim + top_lim) / 2.0, 0])
+            self.vf_title = title
+            self.vf_grid = grid
+            self.vf_answer_tens = answer_tens
+            self.vf_answer_ones = answer_ones
+            self.vf_carry = carry_mob
+            self.vf_digits = tagged
+            for mob in addend_digits + signs + [title, answer_tens, answer_ones, rule]:
+                mob.set_opacity(0)
+            if carry_mob is not None:
+                carry_mob.set_opacity(0)
+            ones_box.set_stroke(opacity=0)
+            tens_box.set_stroke(opacity=0)
+            self.add(group)
+            self.spend(
+                0,
+                title.animate.set_opacity(1),
+                rule.animate.set_opacity(1),
+                *[mob.animate.set_opacity(1) for mob in addend_digits + signs],
+            )
+            ones_anims = [
+                ones_box.animate.set_stroke(opacity=1),
+                answer_ones.animate.set_opacity(1),
+            ]
+            if carry_mob is not None:
+                ones_anims.append(carry_mob.animate.set_opacity(1))
+            self.spend(1, *ones_anims)
+            self.spend(
+                2,
+                ones_box.animate.set_stroke(opacity=0),
+                tens_box.animate.set_stroke(opacity=1),
+                answer_tens.animate.set_opacity(1),
+            )
+
     _scene_types._cache = {
         "one_ten": OneTen,
         "ten_and_ones": TenAndOnes,
@@ -4153,6 +4275,7 @@ def _scene_types() -> dict:
         "part_whole": PartWhole,
         "number_blocks": NumberBlocks,
         "estimate_group": EstimateGroup,
+        "place_sum": PlaceSum,
         "lesson_hook": LessonHook,
         "lesson_takeaway": LessonTakeaway,
     }

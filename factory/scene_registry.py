@@ -1603,7 +1603,64 @@ register(OrdinalRow())
 register(PairCounters())
 register(PartWhole())
 register(NumberBlocks())
+def _place_values(beat: dict) -> list[int]:
+    values = []
+    for key in ("a", "b", "c"):
+        number = _as_int(beat.get(key))
+        if number is None:
+            break
+        values.append(number)
+    return values
+
+
+class PlaceSum(SceneKind):
+    """Line up ones and tens, then add or take away. No borrowing.
+
+    ``op`` is ``add`` or ``sub``. ``a`` and ``b`` are 0 to 99, and ``c`` is an
+    optional third number for an addition. A subtraction stays within each
+    column. The answer stays within 99. Three spoken lines: the numbers, the
+    ones, then the tens.
+    """
+
+    name = "place_sum"
+    steps = 3
+
+    def problems(self, beat: dict) -> list[str]:
+        op = str(beat.get("op") or "").strip()
+        values = _place_values(beat)
+        if op not in {"add", "sub"}:
+            return ["place_sum op must be add or sub."]
+        if len(values) < 2 or any(not 0 <= v <= 99 for v in values):
+            return ["place_sum needs two or three numbers from 0 to 99."]
+        if op == "sub" and len(values) != 2:
+            return ["place_sum subtraction uses two numbers."]
+        if op == "sub":
+            if values[0] % 10 < values[1] % 10 or values[0] // 10 < values[1] // 10:
+                return ["place_sum subtraction stays inside each column."]
+        elif sum(values) > 99:
+            return ["place_sum addition stays within 99."]
+        return []
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        code = label_lang(lang)
+        op = str(beat.get("op") or "add").strip()
+        titles = {
+            "add": {"en": "Add the ones", "zh": "先加个位", "zh_hk": "先加個位"},
+            "sub": {"en": "Take away", "zh": "先减个位", "zh_hk": "先減個位"},
+        }
+        table = titles.get(op, titles["add"])
+        return {
+            "title": table.get(code, table["en"]),
+            "op": op,
+            "values": _place_values(beat),
+        }
+
+    def parameters(self, beat: dict) -> dict:
+        return {"op": str(beat.get("op") or "add").strip(), "values": _place_values(beat)}
+
+
 register(EstimateGroup())
+register(PlaceSum())
 register(LessonHook())
 register(LessonTakeaway())
 

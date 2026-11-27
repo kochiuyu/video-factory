@@ -1,7 +1,7 @@
 # P1-NUM-16. Mirrors MathQuiz path groups / lesson twos,
 # "Count in twos".
 # Four pairs make eight. Six pairs make twelve counters, not six boxes.
-# Five pairs and one loose counter make eleven. That one is not a pair.
+# Five pairs and one loose counter make eleven. One is left over.
 # https://github.com/kochiuyu/mathquiz learn-data.js (path groups, lesson twos; steps in learn-groups.js).
 # Speech is for age 6: one short idea per sentence. The heading is answered on screen.
 id: P1-NUM-16
@@ -54,9 +54,9 @@ beats:
   s2_en: Two, four, six, eight, ten, twelve.
   s2_zh: 二，四，六，八，十，十二。
   s2_zh_hk: 二，四，六，八，十，十二。
-  s3_en: Twelve is the counters. Six is the pairs. Count the counters.
-  s3_zh: 十二是圆片。六是对数。数的是圆片。
-  s3_zh_hk: 十二係圓片。六係對數。數嘅係圓片。
+  s3_en: There are twelve counters. There are six pairs. Count the counters.
+  s3_zh: 一共有十二个圆片。一共有六对。数的是圆片。
+  s3_zh_hk: 一共有十二個圓片。一共有六對。數嘅係圓片。
 
 - id: loose
   visual: animated
@@ -72,16 +72,26 @@ beats:
   s2_en: Two, four, six, eight, ten.
   s2_zh: 二，四，六，八，十。
   s2_zh_hk: 二，四，六，八，十。
-  s3_en: One more makes eleven. That one is not a pair.
-  s3_zh: 再加一个是十一。它不是一对。
-  s3_zh_hk: 再加一個係十一。佢唔係一對。
+  s3_en: One more makes eleven. One is left over.
+  s3_zh: 再加一个是十一。多了一个。
+  s3_zh_hk: 再加一個係十一。多咗一個。
 
 - id: takeaway
   visual: animated
   scene: lesson_takeaway
   motif: track
+  cues:
+  - kind: pairs
+    n: 4
+  - kind: pairs
+    n: 6
+  - kind: counters
+    n: 12
+  - kind: pairs
+    n: 5
+    extra: 1
   seconds: 14
-  title_en: Count the pairs
+  title_en: How many counters?
   title_zh: 有多少个圆片？
   title_zh_hk: 有幾多個圓片呀？
   s1_en: Four pairs make eight.
@@ -90,9 +100,9 @@ beats:
   s2_en: Six pairs make twelve.
   s2_zh: 六对是十二个。
   s2_zh_hk: 六對係十二個。
-  s3_en: Twelve is the counters.
-  s3_zh: 十二是圆片的个数。
-  s3_zh_hk: 十二係圓片嘅個數。
+  s3_en: There are twelve counters.
+  s3_zh: 一共有十二个圆片。
+  s3_zh_hk: 一共有十二個圓片。
   s4_en: Five pairs and one more is eleven.
   s4_zh: 五对再加一个是十一。
   s4_zh_hk: 五對再加一個係十一。

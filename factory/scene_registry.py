@@ -1396,6 +1396,8 @@ class NumberBlocks(SceneKind):
         out = {"title": title, "mode": mode}
         if mode == "tens":
             out["count"] = int(beat.get("count"))
+            if beat.get("rods_only"):
+                out["rods_only"] = True
         elif mode == "compare":
             out["a"] = int(beat.get("a"))
             out["b"] = int(beat.get("b"))
@@ -1416,6 +1418,8 @@ class NumberBlocks(SceneKind):
         out = {"mode": mode}
         if mode == "tens":
             out["count"] = int(beat.get("count"))
+            if beat.get("rods_only"):
+                out["rods_only"] = True
         elif mode == "compare":
             out["a"] = int(beat.get("a"))
             out["b"] = int(beat.get("b"))

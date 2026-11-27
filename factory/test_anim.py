@@ -2360,6 +2360,13 @@ class SceneRegistryTest(unittest.TestCase):
         blocks = [beat for beat in eighteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])
         self.assertEqual([b["count"] for b in blocks], [10, 20, 23])
+        self.assertTrue(blocks[0].get("rods_only"))
+        self.assertTrue(blocks[1].get("rods_only"))
+        self.assertFalse(blocks[2].get("rods_only"))
+        self.assertTrue(labels_for(blocks[0], "en").get("rods_only"))
+        self.assertFalse(labels_for(blocks[2], "en").get("rods_only"))
+        self.assertEqual(labels_for(blocks[0], "en")["title"], "Tens and ones")
+        self.assertEqual(labels_for(blocks[2], "en")["title"], "Tens and ones")
         self.assertEqual(count_event(blocks[0]), (0, 1))
         self.assertEqual(count_event(blocks[1]), (0, 2))
         self.assertEqual(count_event(blocks[2]), (0, 2))

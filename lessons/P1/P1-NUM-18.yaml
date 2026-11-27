@@ -29,13 +29,14 @@ beats:
   scene: number_blocks
   mode: tens
   count: 10
+  rods_only: true
   seconds: 12
   s1_en: Ten.
   s1_zh: 十。
   s1_zh_hk: 十。
-  s2_en: The ones are zero.
-  s2_zh: 个是零。
-  s2_zh_hk: 個係零。
+  s2_en: One ten.
+  s2_zh: 一个十。
+  s2_zh_hk: 一個十。
   s3_en: This group is ten. Ten helps us guess.
   s3_zh: 这一组是十个。我们用这十个来估计。
   s3_zh_hk: 呢一組係十個。我哋用呢十個嚟估計。
@@ -45,13 +46,14 @@ beats:
   scene: number_blocks
   mode: tens
   count: 20
+  rods_only: true
   seconds: 12
   s1_en: Ten, twenty.
   s1_zh: 十，二十。
   s1_zh_hk: 十，二十。
-  s2_en: The ones are zero.
-  s2_zh: 个是零。
-  s2_zh_hk: 個係零。
+  s2_en: Two tens.
+  s2_zh: 两个十。
+  s2_zh_hk: 兩個十。
   s3_en: Two groups of ten. Our guess is about twenty.
   s3_zh: 两组十个。我们估计大约是二十。
   s3_zh_hk: 兩組十個。我哋估計大約係二十。

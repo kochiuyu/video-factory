@@ -4183,8 +4183,9 @@ def _scene_types() -> dict:
             longer = top if a >= b else bottom
             rings = VGroup()
             for i in range(min(a, b), max(a, b)):
-                ring = SurroundingRectangle(longer[i], color=GOLD, buff=0.08, stroke_width=6)
+                ring = Circle(radius=radius * 1.18, color=GOLD, stroke_width=6)
                 ring.set_fill(opacity=0)
+                ring.move_to(longer[i].get_center())
                 rings.add(ring)
             rows = VGroup(top, bottom)
             answer = glyph(str(abs(a - b)), 1.45)
@@ -4219,7 +4220,10 @@ def _scene_types() -> dict:
             answer.set_opacity(0)
             self.add(group)
             if part == "rows":
-                self.spend(0, title.animate.set_opacity(1), *[dot.animate.set_opacity(1) for dot in list(top) + list(bottom)])
+                title.set_opacity(1)
+                for dot in list(top) + list(bottom):
+                    dot.set_opacity(1)
+                self.spend(0)
                 return
             for dot in list(top) + list(bottom):
                 dot.set_opacity(1)

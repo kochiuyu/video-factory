@@ -104,10 +104,10 @@ beats:
   s2_en: Three have no partner.
   s2_zh: 三个没有对上。
   s2_zh_hk: 三個冇對上。
-  s3_en: Five has three fewer. The same three.
+  s3_en: Five has three fewer.
   s3_zh: 五个少三个。还是这三个。
   s3_zh_hk: 五個少三個。都係呢三個。
-  s4_en: Six and six. Every one has a partner.
+  s4_en: Six and six.
   s4_zh: 六个和六个。每个都对上了。
   s4_zh_hk: 六個同六個。每個都對上咗。
   cues:

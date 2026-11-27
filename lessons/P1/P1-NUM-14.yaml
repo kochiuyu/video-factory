@@ -19,9 +19,9 @@ beats:
   title_en: Which number is larger?
   title_zh: 哪个数比较大？
   title_zh_hk: 邊個數大啲呀？
-  s1_en: Which is larger, 24 or 42?
-  s1_zh: 二十四和四十二，哪个大？
-  s1_zh_hk: 二十四同四十二，邊個大呀？
+  s1_en: Which is larger, 24 or 42? We will look at the tens.
+  s1_zh: 二十四和四十二，哪个大？我们先看十。
+  s1_zh_hk: 二十四同四十二，邊個大呀？我哋先睇十。
 
 - id: tens
   visual: animated
@@ -30,12 +30,12 @@ beats:
   a: 24
   b: 42
   seconds: 12
-  s1_en: 24 has two tens.
-  s1_zh: 二十四有两个十。
-  s1_zh_hk: 二十四有兩個十。
-  s2_en: 42 has four tens.
-  s2_zh: 四十二有四个十。
-  s2_zh_hk: 四十二有四個十。
+  s1_en: 24 has two tens. Count them.
+  s1_zh: 二十四有两个十。数一数。
+  s1_zh_hk: 二十四有兩個十。數一數。
+  s2_en: 42 has four tens. Count them too.
+  s2_zh: 四十二有四个十。也数一数。
+  s2_zh_hk: 四十二有四個十。都數一數。
   s3_en: Four tens is more. 42 is larger.
   s3_zh: 四个十更多。四十二比较大。
   s3_zh_hk: 四個十多啲。四十二大啲。
@@ -47,12 +47,12 @@ beats:
   a: 47
   b: 43
   seconds: 12
-  s1_en: Both numbers have four tens.
-  s1_zh: 两个数都有四个十。
-  s1_zh_hk: 兩個數都有四個十。
-  s2_en: Seven ones is more than three ones.
-  s2_zh: 七个一比三个一多。
-  s2_zh_hk: 七個一比三個一多。
+  s1_en: Both numbers have four tens. The tens match.
+  s1_zh: 两个数都有四个十。十是一样的。
+  s1_zh_hk: 兩個數都有四個十。十係一樣嘅。
+  s2_en: Seven ones is more than three ones. Look at the ones.
+  s2_zh: 七个一比三个一多。看一看这些一。
+  s2_zh_hk: 七個一比三個一多。睇一睇呢啲一。
   s3_en: 47 is larger. 43 is smaller.
   s3_zh: 四十七比较大。四十三比较小。
   s3_zh_hk: 四十七大啲。四十三細啲。
@@ -64,12 +64,12 @@ beats:
   a: 100
   b: 99
   seconds: 12
-  s1_en: 99 is nine tens and nine ones.
-  s1_zh: 九十九是九个十和九个一。
-  s1_zh_hk: 九十九係九個十同九個一。
-  s2_en: 100 is ten tens.
-  s2_zh: 一百是十个十。
-  s2_zh_hk: 一百係十個十。
+  s1_en: 99 is nine tens and nine ones. That is almost 100.
+  s1_zh: 九十九是九个十和九个一。它快到一百了。
+  s1_zh_hk: 九十九係九個十同九個一。佢就快到一百。
+  s2_en: 100 is ten tens. Ten tens make 100.
+  s2_zh: 一百是十个十。十个十就是一百。
+  s2_zh_hk: 一百係十個十。十個十就係一百。
   s3_en: 100 is larger than 99.
   s3_zh: 一百比九十九大。
   s3_zh_hk: 一百比九十九大。

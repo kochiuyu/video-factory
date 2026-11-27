@@ -1921,6 +1921,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-NUM-16": [
                 "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
             ],
+            "P1-NUM-18": [
+                "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -2353,6 +2356,41 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertIn("？", labels_for(recap, "zh")["title"])
         self.assertNotIn("?", labels_for(recap, "zh")["title"])
         self.assertNotIn("?", labels_for(recap, "zh_hk")["title"])
+        eighteen = load_lesson(P1 / "P1-NUM-18.yaml")
+        blocks = [beat for beat in eighteen["beats"] if beat.get("scene") == "number_blocks"]
+        self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])
+        self.assertEqual([b["count"] for b in blocks], [10, 20, 23])
+        self.assertEqual(count_event(blocks[0]), (0, 1))
+        self.assertEqual(count_event(blocks[1]), (0, 2))
+        self.assertEqual(count_event(blocks[2]), (0, 2))
+        self.assertEqual(blocks[2]["s3_zh_hk"], "我哋數到二十三。二十三大約係二十。")
+        self.assertNotIn("嗎", _beat_lines(eighteen, "zh_hk"))
+        self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in eighteen["beats"]).lower())
+        recap18 = next(beat for beat in eighteen["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap18), 4)
+        self.assertEqual(labels_for(recap18, "en")["title"], "About how many?")
+        self.assertEqual(labels_for(recap18, "zh")["title"], "大约有多少个？")
+        self.assertEqual(labels_for(recap18, "zh_hk")["title"], "大約有幾多個呀？")
+        self.assertEqual(
+            labels_for(recap18, "en")["lines"],
+            [
+                "A group of ten helps us guess.",
+                "Two groups of ten. About twenty.",
+                "We count and find twenty-three.",
+                "Twenty-three is about twenty.",
+            ],
+        )
+        self.assertEqual(labels_for(recap18, "zh")["lines"][3], "二十三大约是二十。")
+        self.assertEqual(labels_for(recap18, "zh_hk")["lines"][3], "二十三大約係二十。")
+        self.assertEqual(
+            labels_for(recap18, "en")["cues"],
+            [("tens", 1, 0), ("tens", 2, 0), ("tens", 2, 3), ("tiles", (20, 23))],
+        )
+        for picture in labels_for(recap18, "en")["cues"]:
+            self.assertNotIn(picture, DEFAULT_TRACK_CUES)
+        self.assertIn("？", labels_for(recap18, "zh")["title"])
+        self.assertNotIn("?", labels_for(recap18, "zh")["title"])
+        self.assertNotIn("?", labels_for(recap18, "zh_hk")["title"])
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

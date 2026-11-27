@@ -3585,16 +3585,40 @@ def _scene_types() -> dict:
                 fill_opacity=1,
             )
 
-        def _bundles(self, count, latin, cjk, *, rod_w, rod_h, cols, show_zero=True):
+        def _bundles(self, count, latin, cjk, *, rod_w, rod_h, cols, pair_ones=False, show_zero=True):
             tens, ones = divmod(int(count), 10)
             rods = VGroup(*[self._rod(rod_w, rod_h) for _ in range(tens)])
             if tens:
                 used = min(cols, tens)
                 rods.arrange_in_grid(rows=(tens + used - 1) // used, cols=used, buff=0.1)
             if ones:
-                dots = VGroup(*[counter(GOLD, min(0.15, rod_h * 0.2)) for _ in range(ones)])
-                dots.arrange(RIGHT, buff=0.08)
-                loose = dots
+                cube_r = _ordinal_label_height() * 0.62 if pair_ones else min(0.15, rod_h * 0.2)
+                cubes = [counter(GOLD, cube_r) for _ in range(ones)]
+                if pair_ones and ones >= 2:
+                    bits = []
+                    i = 0
+                    while i + 1 < ones:
+                        pair = VGroup(cubes[i], cubes[i + 1]).arrange(RIGHT, buff=0.12)
+                        frame = RoundedRectangle(
+                            width=float(pair.width) + 0.36,
+                            height=float(pair.height) + 0.32,
+                            corner_radius=0.1,
+                            stroke_color=NAVY,
+                            stroke_width=4,
+                            fill_color=WHITE,
+                            fill_opacity=1,
+                        )
+                        pair.move_to(frame)
+                        bits.append(VGroup(frame, pair))
+                        i += 2
+                    if i < ones:
+                        lone = cubes[i]
+                        ring = SurroundingRectangle(lone, color=GOLD, buff=0.2, stroke_width=8)
+                        ring.set_fill(opacity=0)
+                        bits.append(VGroup(lone, ring))
+                    loose = VGroup(*bits).arrange(RIGHT, buff=0.28)
+                else:
+                    loose = VGroup(*cubes).arrange(RIGHT, buff=0.08)
             elif show_zero:
                 zero = self._label("0", latin, cjk)
                 mat = RoundedRectangle(
@@ -3628,13 +3652,22 @@ def _scene_types() -> dict:
         def _tens(self, labels, latin, cjk, title):
             count = int(labels.get("count") or 0)
             rods_only = bool(labels.get("rods_only")) and count % 10 == 0
+            pair_ones = bool(labels.get("pair_ones"))
             pic, rods, loose = self._bundles(
-                count, latin, cjk, rod_w=0.46, rod_h=1.02, cols=5, show_zero=not rods_only,
+                count, latin, cjk, rod_w=0.46, rod_h=1.02, cols=5,
+                pair_ones=pair_ones, show_zero=not rods_only,
             )
             number = self._label(str(count), latin, cjk, 1.4)
             left, right, bot, top, max_w, max_h = self._limits()
             room = max_h - float(title.height if not rods_only else 0) - float(number.height) - 0.7
-            if float(pic.height) > room > 0.4:
+            # A paired leftover has to stay at the label floor. Shorten the
+            # rods instead of shrinking the pair and its ring.
+            if pair_ones and len(rods) and len(loose) and room > float(loose.height) + 0.2:
+                spare = room - float(loose.height) - 0.16
+                if float(rods.height) > spare > 0.2:
+                    rods.scale(spare / float(rods.height))
+                    pic = VGroup(rods, loose).arrange(DOWN, buff=0.16)
+            elif float(pic.height) > room > 0.4:
                 pic.scale(room / float(pic.height))
             self._fit_width(pic, max_w * 0.96)
             shown = VGroup(pic, number) if rods_only else VGroup(title, pic, number)
@@ -3653,7 +3686,19 @@ def _scene_types() -> dict:
                 self._show(0, *rod_list)
             else:
                 self._show(0, title, *rod_list)
-            if len(loose):
+            if pair_ones and len(loose):
+                def reveal_pairs(loose=loose, title=title):
+                    # set_opacity would fill the leftover ring. Keep it a stroke.
+                    loose.set_opacity(1)
+                    for part in loose:
+                        ring = part[-1] if len(part) else None
+                        if isinstance(ring, SurroundingRectangle):
+                            ring.set_fill(opacity=0)
+                            ring.set_stroke(opacity=1)
+                    return title.animate.set_opacity(1)
+
+                self.spend_each(1, [reveal_pairs])
+            elif len(loose):
                 self._show(1, loose)
             else:
                 self.spend(1)

@@ -1,0 +1,102 @@
+# P1-SHP-03. Mirrors MathQuiz path flat / lesson joinshapes, "Put shapes together".
+# Two pieces meet. Count only the outside.
+# https://github.com/kochiuyu/mathquiz learn-flat.js (joinshapes).
+# Speech is for age 6: one short idea per sentence.
+id: P1-SHP-03
+title_en: Put shapes together
+title_zh: 拼在一起
+title_zh_hk: 拼埋一齊
+duration_target_s: 64
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: shapes
+  kind: quad
+  seconds: 8
+  title_en: Put shapes together
+  title_zh: 拼在一起
+  title_zh_hk: 拼埋一齊
+  s1_en: What shape is the outside?
+  s1_zh: 外边是什么图形？
+  s1_zh_hk: 外邊係咩圖形呀？
+
+- id: four
+  visual: animated
+  scene: shape_join
+  result: quad
+  seconds: 12
+  title_en: Two pieces, one shape
+  title_zh: 两块，一个图形
+  title_zh_hk: 兩塊，一個圖形
+  s1_en: Two triangles.
+  s1_zh: 两个三角形。
+  s1_zh_hk: 兩個三角形。
+  s2_en: They meet.
+  s2_zh: 它们拼在一起。
+  s2_zh_hk: 佢哋拼埋一齊。
+  s3_en: The outside has four sides.
+  s3_zh: 外边有四条边。
+  s3_zh_hk: 外邊有四條邊。
+
+- id: five
+  visual: animated
+  scene: shape_join
+  result: pentagon
+  seconds: 12
+  title_en: Count the outside
+  title_zh: 数外边
+  title_zh_hk: 數外邊
+  s1_en: A triangle and a four-sided shape.
+  s1_zh: 一个三角形，和一个四边形。
+  s1_zh_hk: 一個三角形，同一個四邊形。
+  s2_en: They meet.
+  s2_zh: 它们拼在一起。
+  s2_zh_hk: 佢哋拼埋一齊。
+  s3_en: Count only the outside. Five sides.
+  s3_zh: 只数外边。五条边。
+  s3_zh_hk: 只數外邊。五條邊。
+
+- id: six
+  visual: animated
+  scene: shape_join
+  result: hexagon
+  seconds: 12
+  title_en: Turn the pieces
+  title_zh: 转一转再拼
+  title_zh_hk: 轉一轉再拼
+  s1_en: Turn the pieces.
+  s1_zh: 把拼片转一转。
+  s1_zh_hk: 把拼片轉一轉。
+  s2_en: They meet.
+  s2_zh: 它们拼在一起。
+  s2_zh_hk: 佢哋拼埋一齊。
+  s3_en: The outside has six sides.
+  s3_zh: 外边有六条边。
+  s3_zh_hk: 外邊有六條邊。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: shapes
+  seconds: 14
+  title_en: Put shapes together
+  title_zh: 拼在一起
+  title_zh_hk: 拼埋一齊
+  s1_en: Two pieces. The outside has four sides.
+  s1_zh: 两块拼片。外边有四条边。
+  s1_zh_hk: 兩塊拼片。外邊有四條邊。
+  s2_en: Count only the outside. Five sides.
+  s2_zh: 只数外边。五条边。
+  s2_zh_hk: 只數外邊。五條邊。
+  s3_en: Turn the pieces. Six sides.
+  s3_zh: 转一转再拼。六条边。
+  s3_zh_hk: 轉一轉再拼。六條邊。
+  cues:
+  - kind: join
+    result: quad
+  - kind: join
+    result: pentagon
+  - kind: join
+    result: hexagon

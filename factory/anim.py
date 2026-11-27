@@ -3625,7 +3625,20 @@ def _scene_types() -> dict:
                 self.spend_marked(0, hops, marks, intro=title.animate.set_opacity(1))
             else:
                 self._show(0, title, *rod_list)
-            self._show(1, loose)
+            if bool(labels.get("pair_ones")):
+                def reveal_pairs(loose=loose, title=title):
+                    # set_opacity would fill the leftover ring. Keep it a stroke.
+                    loose.set_opacity(1)
+                    for part in loose:
+                        ring = part[-1] if len(part) else None
+                        if isinstance(ring, SurroundingRectangle):
+                            ring.set_fill(opacity=0)
+                            ring.set_stroke(opacity=1)
+                    return title.animate.set_opacity(1)
+
+                self.spend_each(1, [reveal_pairs])
+            else:
+                self._show(1, loose)
             self._show(2, number)
 
         def _card(self, count, latin, cjk):

@@ -1,0 +1,286 @@
+id: MKT-33
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A free trial. Enough time to experience the benefit?
+title_zh: 免费试用：有足够时间体验成效吗？
+title_zh_hk: 免費試用：有足夠時間體驗成效嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-33
+  kicker_en: MKT-33
+  kicker_zh: MKT-33
+  kicker_zh_hk: MKT-33
+  title_en: A free trial. Enough time to experience the benefit?
+  title_zh: 免费试用：有足够时间体验成效吗？
+  title_zh_hk: 免費試用：有足夠時間體驗成效嗎？
+  image: art/free-trial-time-to-experience-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Free-trial research examines learning through use, not merely receiving access, and software studies
+    do not establish one universally best duration. Now you manage Clear Phrase, a fictional Singapore
+    language-practice service, choosing a trial for 100 consenting adult newcomers.
+  zh: >-
+    免费试用的研究关注顾客怎样在实际使用中了解产品，而不只是有没有开通服务；软件研究也没有找到一个普遍适用的最佳试用期。现在，你管理新加坡的虚构语言练习服务 Clear Phrase，要为一百位同意参与的成年新用户选择试用方案。
+  zh_hk: >-
+    免費試用嘅研究關注顧客點樣喺實際使用中了解產品，而唔只係有冇開通服務；軟件研究亦冇搵到一個普遍適用嘅最佳試用期。而家，你管理新加坡嘅虛構語言練習服務 Clear Phrase，要為一百位同意參與嘅成年新用戶揀試用方案。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two expiry rules, same content
+  title_zh: 两种到期规则，内容相同
+  title_zh_hk: 兩種到期規則，內容相同
+  row1_en: A
+  row1_zh: A
+  row1_zh_hk: A
+  row2_en: B
+  row2_zh: B
+  row2_zh_hk: B
+  col1_en: Trial ends
+  col1_zh: 试用结束
+  col1_zh_hk: 試用結束
+  col2_en: Sessions
+  col2_zh: 课时
+  col2_zh_hk: 課時
+  c11_en: End of day 7
+  c11_zh: 第 7 日结束
+  c11_zh_hk: 第 7 日結束
+  c12_en: Up to 3
+  c12_zh: 最多 3 节
+  c12_zh_hk: 最多 3 節
+  c21_en: 3rd session or day 21
+  c21_zh: 第 3 节完成或第 21 日
+  c21_zh_hk: 第 3 節完成或第 21 日
+  c22_en: Up to 3
+  c22_zh: 最多 3 节
+  c22_zh_hk: 最多 3 節
+  footer_en: Signup = day 1 · fixed S$2,000 quote
+  footer_zh: 登记当日为第 1 日 · 固定报价 S$2,000
+  footer_zh_hk: 登記當日為第 1 日 · 固定報價 S$2,000
+  s1_en: >-
+    The trial has three 20-minute sessions on separate days: attempt a short dialogue, practise with feedback,
+    then retry and compare. The goal is an informed assessment of that cycle, not maximum registrations
+    or pressured subscriptions.
+  s1_zh: 试用有三节二十分钟的课，分三天上：先试一段对话，再按反馈练习，最后重做并比较。目标是让用户能评估这个流程，不是追求登记人数，更不是催人订阅。
+  s1_zh_hk: 試用有三節二十分鐘嘅課，分三日上：先試一段對話，再按回饋練習，最後重做再比較。目標係等用戶評估成個流程，唔係追求登記人數，更唔係催人訂閱。
+  s2_en: >-
+    A expires at the end of day 7. B ends after the third completed session, or at the end of day 21,
+    whichever comes first. A fixed 2,000 Singapore-dollar quote covers either design, with no card, billing
+    or automatic renewal.
+  s2_zh: >-
+    A 方案在第七天结束时到期；B 方案在完成第三节课后，或第二十一天结束时终止，以较早者为准。固定报价两千新加坡元足够支付任一方案，不用信用卡，不收费，也不会自动续订。
+  s2_zh_hk: >-
+    A 方案喺第七日完結嗰陣到期；B 方案喺完成第三節課之後，或者第二十一日完結嗰陣終止，以較早者為準。固定報價兩千新加坡元夠支付任何一個方案，唔使信用卡，唔收費，亦唔會自動續訂。
+  s3_en: >-
+    The manager favours A, because a seven-day message is simple. The onboarding team has not yet supplied
+    setup and availability checks. Do not assume all 100 start practising on signup day.
+  s3_zh: >-
+    经理倾向 A，因为七天的说法简单易懂。负责新用户入门的团队，还没提供完成设置所需的时间和用户可上课的日期。不要假定一百人都会在登记当天开始练习。
+  s3_zh_hk: 經理傾向 A，因為七日嘅講法簡單易明。負責新用戶入門嘅團隊，仲未交代完成設定要幾耐同用戶幾時得閒上堂。唔好假定一百人都會喺登記當日開始練習。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: A or B, and what evidence?
+  title_zh: 选 A 还是 B？要什么证据？
+  title_zh_hk: 選 A 還是 B？要甚麼證據？
+  en: >-
+    Which trial would you provisionally choose, and what timing evidence would you request before calling
+    seven days enough? Distinguish account access from an opportunity to experience all three sessions.
+    Pause and vote.
+  zh: 你初步会选哪个方案？在认定七天足够之前，你会要哪些时间方面的信息？请区分开通账户，和有机会体验完整的三节课。请暂停，投个票。
+  zh_hk: 你初步會揀邊個方案？喺認定七日夠之前，你會要啲咩時間資料？請分清開通帳戶，同有機會體驗完整三節課。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: When can the newcomers attend?
+  title_zh: 新用户哪天能上课？
+  title_zh_hk: 新用戶哪天能上課？
+  step1_en: >-
+    40 people: days 2, 4 and 6
+  step1_zh: 40 人：第 2、4、6 日
+  step1_zh_hk: 40 人：第 2、4、6 日
+  step2_en: >-
+    40 people: days 6, 8 and 10
+  step2_zh: 40 人：第 6、8、10 日
+  step2_zh_hk: 40 人：第 6、8、10 日
+  step3_en: >-
+    20 people: days 15, 17 and 19
+  step3_zh: 20 人：第 15、17、19 日
+  step3_zh_hk: 20 人：第 15、17、19 日
+  s1_en: >-
+    A pre-launch walkthrough records setup needs and stated availability. Forty newcomers can attend on
+    days 2, 4 and 6.
+  s1_zh: 推出前的流程检查，记录了用户的设置要求和可上课日期。四十人可以在第二、四、六天上课。
+  s1_zh_hk: 推出前嘅流程檢查，記錄咗用戶嘅設定要求同得閒上堂嘅日子。四十人可以喺第二、四、六日上堂。
+  s2_en: >-
+    Forty more can attend on days 6, 8 and 10. Later starts reflect account setup and their own schedules,
+    not teaching or support quality.
+  s2_zh: 另外四十人可以在第六、八、十天上课。有人较晚开始，是因为账户设置和自己的日程，和教学或支持质量无关。
+  s2_zh_hk: 另外四十人可以喺第六、八、十日上堂。有人遲啲先開始，係因為帳戶設定同自己嘅時間表，同教學或者支援質素無關。
+  s3_en: >-
+    The last twenty can attend only on days 15, 17 and 19. This is a feasibility scenario, not observed
+    attendance; assume people attend every feasible session, though real people may skip or leave.
+  s3_zh: 最后二十人只能在第十五、十七、十九天上课。这只是可行性情境，不是实际出席记录；计算时假设每人都参加所有可行课时，但现实中有人可能缺席或退出。
+  s3_zh_hk: >-
+    最後二十人只可以喺第十五、十七、十九日上堂。呢個只係可行性情境，唔係實際出席紀錄；計嘅時候假設個個都上晒所有可行嘅堂，但現實中可能有人缺席或者退出。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which design aids evaluation?
+  title_zh: 哪个方案更能让人评估？
+  title_zh_hk: 哪個方案更能讓人評估？
+  en: >-
+    Which design better supports evaluation under this timetable? Count who could finish all three sessions
+    under each, explain the uncertainty, and propose measures for opportunity, actual experience and a
+    voluntary purchase. Pause and vote.
+  zh: >-
+    按这个时间表，哪个方案更能让人评估服务？算一算两个方案各有多少人能上完三节课，说明还有哪些不确定的地方，再建议怎样分开衡量体验机会、实际体验和自愿购买。请暂停，投个票。
+  zh_hk: >-
+    按呢個時間表，邊個方案比較可以等人評估服務？計吓兩個方案各有幾多人上得晒三節課，講吓仲有咩唔肯定，再建議點樣分開量度體驗機會、實際體驗同自願購買。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Trace A's opportunities
+  title_zh: 逐组计算 A 的机会
+  title_zh_hk: 逐組計算 A 的機會
+  step1_en: >-
+    Group 1: finishes before day 7 ends
+  step1_zh: 第一组：第 7 日前完成
+  step1_zh_hk: 第一組：第 7 日前完成
+  step2_en: >-
+    Group 2: only day 6 · group 3: none
+  step2_zh: 第二组只上第 6 日 · 第三组 0 节
+  step2_zh_hk: 第二組只上第 6 日 · 第三組 0 節
+  step3_en: 40 × 3 + 40 × 1 + 20 × 0 = 160
+  step3_zh: 40 × 3 + 40 × 1 + 20 × 0 = 160
+  step3_zh_hk: 40 × 3 + 40 × 1 + 20 × 0 = 160
+  s1_en: >-
+    Seven calendar days of access are not seven days of meaningful use. Under A, the first 40 can attend
+    on days 2, 4 and 6, and finish before day 7 ends.
+  s1_zh: 七个自然日的使用权，不等于七天有效的练习。选 A 的话，前四十人可以在第二、四、六天上课，赶在第七天结束前完成。
+  s1_zh_hk: 七個日曆日嘅使用權，唔等於七日有效練習。揀 A 嘅話，首四十人可以喺第二、四、六日上堂，趕得切喺第七日完結前完成。
+  s2_en: >-
+    The next 40 can attend only day 6; days 8 and 10 fall outside the trial. The final 20 cannot reach
+    even their first feasible session.
+  s2_zh: 第二组四十人只能上第六天那一节，第八和第十天已经超过期限。最后二十人到期前连第一节都上不了。
+  s2_zh_hk: 第二組四十人只可以上第六日嗰堂，第八同第十日已經過咗期。最後二十人到期前連第一堂都上唔到。
+  s3_en: >-
+    So A permits 40 complete cycles out of 100, or 40 percent, and 160 session opportunities in total.
+    Sixty people lack enough time to sample the whole cycle.
+  s3_zh: 所以 A 让一百人中只有四十人有机会体验全程，也就是百分之四十，可上的课时合计一百六十节。其余六十人没有足够时间体验整个流程。
+  s3_zh_hk: 所以 A 令一百人入面得四十人有機會體驗全程，即係百分之四十，可以上嘅課時加埋一百六十節。其餘六十人冇足夠時間體驗成個流程。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Trace B's opportunities
+  title_zh: 逐组计算 B 的机会
+  title_zh_hk: 逐組計算 B 的機會
+  step1_en: Finish on days 6, 10 and 19
+  step1_zh: 分别在第 6、10、19 日完成
+  step1_zh_hk: 分別在第 6、10、19 日完成
+  step2_en: 100 full cycles · 300 sessions
+  step2_zh: 100 人可体验全程 · 300 节
+  step2_zh_hk: 100 人可體驗全程 · 300 節
+  step3_en: Opportunities, not 60 extra customers
+  step3_zh: 是机会，不是多 60 位顾客
+  step3_zh_hk: 是機會，不是多 60 位顧客
+  s1_en: >-
+    Under B, the three groups can finish on days 6, 10 and 19, all before the day-21 cap.
+  s1_zh: 选 B 的话，三组分别可以在第六、十、十九天完成，都早于第二十一天的截止日。
+  s1_zh_hk: 揀 B 嘅話，三組分別可以喺第六、十、十九日完成，全部早過第二十一日嘅截止日。
+  s2_en: >-
+    That permits 100 complete cycles and 300 session opportunities: 60 more people with a full-cycle chance,
+    and 140 more usable slots than A.
+  s2_zh: 这样一百人都有机会体验全程，共有三百个可上课时；比 A 多了六十人有机会体验全程，也多了一百四十个可用课时。
+  s2_zh_hk: 咁樣一百人都有機會體驗全程，總共有三百個可以上嘅課時；比 A 多咗六十人有機會體驗全程，亦多咗一百四十個可用課時。
+  s3_en: >-
+    These are conditional opportunity counts, not 100 completed trials or 60 extra customers. Absent or
+    very late users may still not finish, so do not advertise three guaranteed sessions.
+  s3_zh: >-
+    这些只是题设条件下的机会数，不是已有一百人完成试用，也不是多了六十位顾客。缺席或太晚开始的人仍可能完成不了，所以宣传时不能承诺人人都能上完三节。
+  s3_zh_hk: >-
+    呢啲只係題設條件下嘅機會數，唔係已經有一百人完成試用，亦唔係多咗六十位顧客。缺席或者太遲開始嘅人仍然可能完成唔到，所以宣傳嗰陣唔可以承諾個個都上得晒三節。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Choose an evaluation opportunity
+  title_zh: 为顾客创造评估机会
+  title_zh_hk: 為顧客創造評估機會
+  en: >-
+    Choose B for this cohort: it removes A's timing barrier without changing content, cost or payment
+    protections. It does not establish better teaching, higher conversion or greater profit. A is simpler,
+    and could suit a cohort able to finish in the first week.
+  zh: >-
+    对这批用户来说，应该选 B：它消除了 A 的时间限制，又不改变课程、成本或付款保障。但这不能证明教学更好、转化率更高或利润更多。A 比较简单，对能在第一周完成流程的另一批用户，可能更合适。
+  zh_hk: >-
+    對呢批用戶嚟講，應該揀 B：佢消除咗 A 嘅時間限制，又唔改變課程、成本或者付款保障。但呢個證明唔到教學好啲、轉化率高啲或者利潤多啲。A 比較簡單，對可以喺第一個星期完成流程嘅另一批用戶，可能更啱。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Access ≠ experience ≠ purchase
+  title_zh: 开通 ≠ 体验 ≠ 购买
+  title_zh_hk: 開通 ≠ 體驗 ≠ 購買
+  q1_en: Track setup, sessions and full cycles
+  q1_zh: 分开记录设置、上课、完成全程
+  q1_zh_hk: 分開記錄設定、上課、完成全程
+  q2_en: Compare cohorts at a common day 28
+  q2_zh: 统一以第 28 日比较各组
+  q2_zh_hk: 統一以第 28 日比較各組
+  s1_en: >-
+    Track signup, setup, session dates, full-cycle completion, dropouts, later paid opt-ins and refunds
+    separately. Do not compare A's day-7 purchases with B's day-21 purchases as if exposure were equal.
+  s1_zh: >-
+    要分开记录登记、完成设置、上课日期、体验全程、自行退出，以及之后的主动付费和退款。不能拿 A 到第七天的购买数，和 B 到第二十一天的数字直接比较，当作观察时间一样。
+  s1_zh_hk: >-
+    要分開記錄登記、完成設定、上堂日子、體驗全程、自行退出，同埋之後主動付費同退款。唔可以攞 A 到第七日嘅購買數，同 B 到第二十一日嘅數字直接比，當兩組觀察時間一樣。
+  s2_en: >-
+    This timetable calculation is not an experiment, and noncompletion is not simply lack of interest.
+  s2_zh: 这个时间表计算不是实验，没有完成也不一定是因为没兴趣。
+  s2_zh_hk: 呢個時間表計算唔係實驗，冇完成亦唔一定係因為冇興趣。
+  s3_en: >-
+    Clear Phrase, the timetable and the costs are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: Clear Phrase、时间表和成本都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: Clear Phrase、時間表同成本都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

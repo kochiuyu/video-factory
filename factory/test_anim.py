@@ -1912,6 +1912,12 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-NUM-13": [
                 "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
             ],
+            "P1-NUM-14": [
+                "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
+            ],
+            "P1-NUM-15": [
+                "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
+            ],
             "P1-NUM-16": [
                 "lesson_hook", "number_blocks", "number_blocks", "number_blocks", "lesson_takeaway",
             ],
@@ -2267,6 +2273,48 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(labels_for(recap9, "zh_hk")["lines"][3], "六再加四個，就係十。")
         self.assertEqual(nine["title_zh_hk"], "將兩組合埋")
         self.assertEqual(labels_for(recap9, "en")["bonds"], [[3, 2], [8, 3], [6, 4], [6, 4]])
+        fifteen = load_lesson(P1 / "P1-NUM-15.yaml")
+        blocks = [beat for beat in fifteen["beats"] if beat.get("scene") == "number_blocks"]
+        self.assertEqual([b["mode"] for b in blocks], ["order", "order", "hop"])
+        self.assertEqual(labels_for(blocks[0], "en")["values"], [24, 40, 42])
+        self.assertEqual(labels_for(blocks[1], "en")["values"], [61, 60, 16])
+        self.assertEqual((blocks[2]["start"], blocks[2]["end"]), (38, 41))
+        self.assertEqual(count_event(blocks[2]), (1, 4))
+        self.assertEqual(blocks[2]["s2_en"], "38. 39. 40. 41.")
+        self.assertEqual(blocks[2]["s3_zh_hk"], "三十九後面係四十。")
+        self.assertNotIn("嗎", _beat_lines(fifteen, "zh_hk"))
+        self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in fifteen["beats"]).lower())
+        recap = next(beat for beat in fifteen["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap), 4)
+        self.assertEqual(labels_for(recap, "en")["title"], "How do we put numbers in order?")
+        self.assertEqual(labels_for(recap, "zh")["title"], "怎样排好这些数？")
+        self.assertEqual(labels_for(recap, "zh_hk")["title"], "點樣排好呢啲數？")
+        self.assertEqual(
+            labels_for(recap, "en")["lines"],
+            [
+                "24, 40, 42. Smallest first.",
+                "61, 60, 16. Largest first.",
+                "After 39 comes 40.",
+                "Count back: 41, 40, 39, 38.",
+            ],
+        )
+        self.assertEqual(labels_for(recap, "zh")["lines"][3], "倒着数，四十一，四十，三十九，三十八。")
+        self.assertEqual(labels_for(recap, "zh_hk")["lines"][3], "倒返數，四十一，四十，三十九，三十八。")
+        self.assertEqual(
+            labels_for(recap, "en")["cues"],
+            [
+                ("tiles", (24, 40, 42)),
+                ("tiles", (61, 60, 16)),
+                ("tiles", (39, 40)),
+                ("tiles", (41, 40, 39, 38)),
+            ],
+        )
+        for picture in labels_for(recap, "en")["cues"]:
+            self.assertNotIn(picture, DEFAULT_TRACK_CUES)
+            self.assertNotIn(picture[1], DEFAULT_TRACK_CUES)
+        self.assertIn("？", labels_for(recap, "zh")["title"])
+        self.assertNotIn("?", labels_for(recap, "zh")["title"])
+        self.assertNotIn("?", labels_for(recap, "zh_hk")["title"])
         sixteen = load_lesson(P1 / "P1-NUM-16.yaml")
         blocks = [beat for beat in sixteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["groups", "groups", "groups"])
@@ -2339,6 +2387,49 @@ class SceneRegistryTest(unittest.TestCase):
         )
         for picture in labels_for(recap13, "en")["cues"]:
             self.assertNotIn(picture, DEFAULT_TRACK_CUES)
+        fourteen = load_lesson(P1 / "P1-NUM-14.yaml")
+        blocks = [beat for beat in fourteen["beats"] if beat.get("scene") == "number_blocks"]
+        self.assertEqual([b["mode"] for b in blocks], ["compare", "compare", "compare"])
+        self.assertEqual([(b["a"], b["b"]) for b in blocks], [(24, 42), (47, 43), (100, 99)])
+        self.assertIsNone(count_event(blocks[0]))
+        self.assertEqual(blocks[0]["s3_en"], "Four tens is more. 42 is larger.")
+        self.assertEqual(blocks[0]["s3_zh"], "四个十更多。四十二比较大。")
+        self.assertEqual(blocks[2]["s3_zh_hk"], "一百比九十九大。")
+        self.assertNotIn("嗎", _beat_lines(fourteen, "zh_hk"))
+        self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in fourteen["beats"]).lower())
+        recap = next(beat for beat in fourteen["beats"] if beat["id"] == "takeaway")
+        self.assertEqual(step_count(recap), 4)
+        self.assertEqual(labels_for(recap, "en")["title"], "Which is larger?")
+        self.assertEqual(labels_for(recap, "zh")["title"], "哪个数比较大？")
+        self.assertEqual(labels_for(recap, "zh_hk")["title"], "邊個數大啲呀？")
+        self.assertEqual(
+            labels_for(recap, "en")["lines"],
+            [
+                "42 is larger than 24.",
+                "Look at the tens first.",
+                "47 is larger than 43.",
+                "100 is larger than 99.",
+            ],
+        )
+        self.assertEqual(labels_for(recap, "zh")["lines"][1], "先看有几个十。")
+        self.assertEqual(labels_for(recap, "zh_hk")["lines"][1], "先睇有幾個十。")
+        self.assertEqual(
+            labels_for(recap, "en")["cues"],
+            [
+                ("compare", 24, 42, 42),
+                ("tens_mark", 24, 42),
+                ("compare", 47, 43, 47),
+                ("compare", 100, 99, 100),
+            ],
+        )
+        for picture in labels_for(recap, "en")["cues"]:
+            self.assertNotIn(picture, DEFAULT_TRACK_CUES)
+        self.assertIn("？", fourteen["title_zh"])
+        self.assertNotIn("?", fourteen["title_zh"])
+        self.assertNotIn("?", fourteen["title_zh_hk"])
+        for beat in fourteen["beats"]:
+            self.assertNotIn("?", beat.get("title_zh") or "")
+            self.assertNotIn("?", beat.get("title_zh_hk") or "")
 
     def test_part_whole_bounds(self):
         good = {

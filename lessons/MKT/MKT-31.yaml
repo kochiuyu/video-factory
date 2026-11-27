@@ -1,0 +1,276 @@
+id: MKT-31
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The same sales. A smaller buyer base?
+title_zh: 销量一样，买的人反而少了？
+title_zh_hk: 銷量一樣，買的人反而少了？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-31
+  kicker_en: MKT-31
+  kicker_zh: MKT-31
+  kicker_zh_hk: MKT-31
+  title_en: The same sales. A smaller buyer base?
+  title_zh: 销量一样，买的人反而少了？
+  title_zh_hk: 銷量一樣，買的人反而少了？
+  image: art/same-sales-smaller-buyer-base-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In a May 2026 article, Worldpanel by Numerator reported that buyer growth accompanied growth for most
+    growing consumer-goods brands in China. Now you manage Bay Jar, a fictional Hong Kong pantry brand,
+    and must choose the next research priority.
+  zh: >-
+    Worldpanel by Numerator 在二零二六年五月的文章中提到，在中国消费品市场，大部分增长的品牌，买家数量也在增加。现在，你管理一个虚构的香港常备食品品牌 Bay Jar，要决定下一步优先研究什么。
+  zh_hk: >-
+    Worldpanel by Numerator 喺二零二六年五月嘅文章提到，喺中國消費品市場，大部分有增長嘅品牌，買家數目都有增加。而家，你管理一個虛構嘅香港常備食品品牌 Bay Jar，要決定下一步優先研究乜嘢。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Same 12 weeks, one year apart
+  title_zh: 相隔一年的同样 12 周
+  title_zh_hk: 相隔一年的同樣 12 周
+  row1_en: Households monitored
+  row1_zh: 观察家庭
+  row1_zh_hk: 觀察住戶
+  row2_en: Category buyers
+  row2_zh: 品类买家
+  row2_zh_hk: 品類買家
+  row3_en: Bay Jar packs
+  row3_zh: Bay Jar 包数
+  row3_zh_hk: Bay Jar 包數
+  row4_en: Sales value
+  row4_zh: 销售额
+  row4_zh_hk: 銷售額
+  col1_en: Earlier
+  col1_zh: 较早
+  col1_zh_hk: 較早
+  col2_en: Later
+  col2_zh: 较后
+  col2_zh_hk: 較後
+  c11: 10,000
+  c12: 10,000
+  c21: 8,000
+  c22: 8,000
+  c31: 8,000
+  c32: 8,000
+  c41: HK$240,000
+  c42: HK$240,000
+  footer_en: HK$30 a pack in both periods
+  footer_zh: 两期每包都是 HK$30
+  footer_zh_hk: 兩期每包都是 HK$30
+  s1_en: >-
+    Your brief must choose R, understanding why category-buying households do not buy Bay Jar, or F, creating
+    another useful purchase occasion for current buyers. This is a research priority, not a campaign budget.
+  s1_zh: >-
+    你的简报要在两项中选一项：R，了解买这类产品的家庭为什么不买 Bay Jar；F，为现有买家创造另一次合适的购买机会。这只是决定研究重点，不是批准推广预算。
+  s1_zh_hk: >-
+    你份簡報要喺兩樣之中揀一樣：R，了解買呢類產品嘅住戶點解唔買 Bay Jar；F，為現有買家創造多一次啱用嘅購買機會。呢個只係決定研究重點，唔係批推廣預算。
+  s2_en: >-
+    The dashboard compares the same calendar weeks one year apart, in the same 10,000 monitored households.
+    In both periods, 8,000 households bought the category, and Bay Jar sold 8,000 packs at 30 dollars.
+  s2_zh: 仪表盘比较相隔一年的同样日历周，观察对象都是同一批一万户家庭。两期都有八千户买过这个品类，Bay Jar 都卖出八千包，每包三十元。
+  s2_zh_hk: 儀表板比較相隔一年嘅同樣日曆周，觀察對象都係同一批一萬個住戶。兩期都有八千戶買過呢個品類，Bay Jar 都賣咗八千包，每包三十蚊。
+  s3_en: >-
+    So sales value is 240,000 dollars in both periods. Management argues that stable sales mean stable
+    buyer reach, so F is the obvious priority.
+  s3_zh: 所以两期的销售额都是二十四万元。管理层认为销售稳定，就说明买家覆盖也没变，所以 F 理所当然是重点。
+  s3_zh_hk: 所以兩期嘅銷售額都係二十四萬蚊。管理層覺得銷售穩定，就代表買家覆蓋都冇變，所以 F 理所當然係重點。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Approve F, or ask for buyers?
+  title_zh: 批准 F，还是先看买家？
+  title_zh_hk: 批准 F，還是先看買家？
+  en: >-
+    Would you approve F because unchanged sales prove unchanged buyer reach, or require the buyer breakdown
+    before choosing? What can the total establish? Pause and vote.
+  zh: 你会以销售不变证明买家覆盖不变为理由，批准 F 吗？还是先要求看买家的分项数据，再作选择？总数到底能证明什么？请暂停，投个票。
+  zh_hk: 你會唔會以銷售冇變證明買家覆蓋冇變為理由，批准 F？定係先要求睇買家嘅分項數據，再揀？總數究竟證明到乜？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The buyer breakdown
+  title_zh: 买家分项数据
+  title_zh_hk: 買家分項數據
+  step1_en: >-
+    Distinct buyers: 2,000 → 1,600
+  step1_zh: 不同买家：2,000 → 1,600
+  step1_zh_hk: 不同買家：2,000 → 1,600
+  step2_en: >-
+    Purchases per buyer: 4 → 5
+  step2_zh: 每人购买次数：4 → 5
+  step2_zh_hk: 每人購買次數：4 → 5
+  step3_en: >-
+    Packs per purchase: 1 → 1
+  step3_zh: 每次包数：1 → 1
+  step3_zh_hk: 每次包數：1 → 1
+  s1_en: >-
+    The breakdown shows 2,000 distinct Bay Jar buyers earlier, and 1,600 later. Category buyers remain
+    8,000.
+  s1_zh: 分项数据显示，较早一期有两千户不同的 Bay Jar 买家，较后一期是一千六百户。品类买家仍然是八千户。
+  s1_zh_hk: 分項數據顯示，較早嗰期有二千個唔同嘅 Bay Jar 買家，較後嗰期係一千六百個。品類買家仍然係八千戶。
+  s2_en: >-
+    Average purchases per Bay Jar buyer rose from 4 to 5. The later 1,600 buyers need not be a subset
+    of the earlier 2,000.
+  s2_zh: 每个买家的平均购买次数，从四次升到五次。后期的一千六百户，不一定都包括在前期的两千户里。
+  s2_zh_hk: 每個買家平均購買次數，由四次升到五次。後期嘅一千六百戶，唔一定全部都係前期二千戶入面嘅。
+  s3_en: >-
+    Each purchase is still one pack on average. There is no matched household table, no reason-for-nonpurchase
+    evidence and no campaign experiment.
+  s3_zh: 每次购买平均仍是一包。没有按家庭匹配的前后变动表，没有不购买原因的证据，也没有推广实验。
+  s3_zh_hk: 每次購買平均仍然係一包。冇按住戶配對嘅前後變動表，冇唔買原因嘅證據，亦冇推廣實驗。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: R or F now?
+  title_zh: 现在选 R 还是 F？
+  title_zh_hk: 現在選 R 還是 F？
+  en: >-
+    Should the next brief prioritise R or F? Reconcile the unchanged sales, calculate both buyer-reach
+    percentages, and state one claim these records cannot justify. Pause and vote.
+  zh: 下一份简报应该优先 R 还是 F？请解释销售为什么不变，算出两种买家覆盖率，再指出一项这些记录不能支持的说法。请暂停，投个票。
+  zh_hk: 下一份簡報應該優先 R 定 F？解釋吓銷售點解冇變，計出兩種買家覆蓋率，再講一項呢啲紀錄支持唔到嘅講法。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: One total, different components
+  title_zh: 同一总数，不同构成
+  title_zh_hk: 同一總數，不同構成
+  step1_en: >-
+    Earlier: 2,000 × 4 × 1 = 8,000 packs
+  step1_zh: 前期：2,000 × 4 × 1 = 8,000 包
+  step1_zh_hk: 前期：2,000 × 4 × 1 = 8,000 包
+  step2_en: >-
+    Later: 1,600 × 5 × 1 = 8,000 packs
+  step2_zh: 后期：1,600 × 5 × 1 = 8,000 包
+  step2_zh_hk: 後期：1,600 × 5 × 1 = 8,000 包
+  step3_en: 0.80 × 1.25 = 1.00
+  step3_zh: 0.80 × 1.25 = 1.00
+  step3_zh_hk: 0.80 × 1.25 = 1.00
+  s1_en: >-
+    In round one, require the buyer breakdown. The dashboard shows stable volume and value, not stable
+    distinct buyer reach. Earlier volume is 2,000 times 4 times 1, or 8,000 packs.
+  s1_zh: 第一轮就应该要求看买家分项数据。仪表盘只能说明销量和销售额不变，不能说明买家覆盖不变。前期销量是两千乘四乘一，等于八千包。
+  s1_zh_hk: 第一輪就應該要求睇買家分項數據。儀表板只講到銷量同銷售額冇變，講唔到買家覆蓋冇變。前期銷量係二千乘四乘一，即係八千包。
+  s2_en: Later volume is 1,600 times 5 times 1, also 8,000 packs.
+  s2_zh: 后期销量是一千六百乘五乘一，同样是八千包。
+  s2_zh_hk: 後期銷量係一千六百乘五乘一，一樣係八千包。
+  s3_en: >-
+    The buyer count falls 20 percent while frequency rises 25 percent: 0.8 times 1.25 equals 1. These
+    percentage changes cannot simply be added.
+  s3_zh: 买家数下降百分之二十，购买频率上升百分之二十五：零点八乘一点二五等于一。这两个百分比变化不能直接相加。
+  s3_zh_hk: 買家數跌咗百分之二十，購買頻率升咗百分之二十五：零點八乘一點二五等於一。呢兩個百分比變化唔可以直接加埋。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Name the denominator
+  title_zh: 先说清楚分母
+  title_zh_hk: 先說清楚分母
+  step1_en: >-
+    All households: 20% → 16%
+  step1_zh: 全部家庭：20% → 16%
+  step1_zh_hk: 全部住戶：20% → 16%
+  step2_en: >-
+    Category buyers: 25% → 20%
+  step2_zh: 品类买家：25% → 20%
+  step2_zh_hk: 品類買家：25% → 20%
+  step3_en: Neither is a volume market share
+  step3_zh: 两者都不是销量份额
+  step3_zh_hk: 兩者都不是銷量份額
+  s1_en: >-
+    Brand penetration among all monitored households falls from 2,000 over 10,000, or 20 percent, to 1,600
+    over 10,000, or 16 percent: four percentage points, or 20 percent relative.
+  s1_zh: 以全部观察家庭计算，品牌渗透率从两千除以一万，即百分之二十，降到一千六百除以一万，即百分之十六：下降四个百分点，相对下降百分之二十。
+  s1_zh_hk: 以全部觀察住戶計，品牌滲透率由二千除一萬，即係百分之二十，跌到一千六百除一萬，即係百分之十六：跌咗四個百分點，相對跌咗百分之二十。
+  s2_en: >-
+    Among category buyers, reach falls from 2,000 over 8,000, or 25 percent, to 1,600 over 8,000, or 20
+    percent. That is five percentage points.
+  s2_zh: 以品类买家为分母，覆盖率从两千除以八千，即百分之二十五，降到一千六百除以八千，即百分之二十，相差五个百分点。
+  s2_zh_hk: 以品類買家做分母，覆蓋率由二千除八千，即係百分之二十五，跌到一千六百除八千，即係百分之二十，相差五個百分點。
+  s3_en: >-
+    Neither percentage is a volume market share, because the case does not give total category packs.
+  s3_zh: 两个百分比都不是按销量计算的市场份额，因为题目没有提供品类的总包数。
+  s3_zh_hk: 兩個百分比都唔係按銷量計嘅市場佔有率，因為題目冇畀品類嘅總包數。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Diagnose before promising growth
+  title_zh: 先找原因，再谈增长
+  title_zh_hk: 先找原因，再談增長
+  en: >-
+    R is the better-supported priority: reach has narrowed while frequency has already risen. Ask which
+    category buyers do not buy Bay Jar, and why. Availability, relevance, recognition and preference are
+    competing explanations, not findings. F remains possible, but is not shown to be cheaper or more profitable.
+  zh: >-
+    现有证据更支持优先研究 R：买家覆盖收窄了，而购买频率已经上升。要问哪些品类买家不买 Bay Jar，原因是什么。能不能买到、是否切合需要、是否认识品牌和偏好差异，都只是待查的解释，不是结论。F
+    仍然有可能，但没有证据显示它更省钱或更有利可图。
+  zh_hk: >-
+    現有證據比較支持優先研究 R：買家覆蓋收窄咗，而購買頻率已經升咗。要問邊啲品類買家唔買 Bay Jar，點解唔買。買唔買得到、啱唔啱用、識唔識個牌子同埋偏好，都只係待查嘅解釋，唔係結論。F 仍然有可能，但冇證據顯示佢平啲或者賺多啲。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Same total, fewer buyers
+  title_zh: 总数一样，买家变少
+  title_zh_hk: 總數一樣，買家變少
+  q1_en: Net 400 fewer buyers ≠ 400 left
+  q1_zh: 净少 400 户 ≠ 400 户离开
+  q1_zh_hk: 淨少 400 戶 ≠ 400 戶離開
+  q2_en: Not a retention or lifetime-value result
+  q2_zh: 不是留存率或终身价值
+  q2_zh_hk: 不是留存率或終身價值
+  s1_en: >-
+    There are 400 fewer buyers in net terms, but we cannot say exactly 400 households left, because new
+    buyers may have joined. Nor can we say each continuing buyer bought more.
+  s1_zh: 买家净减少四百户，但不能说正好有四百户离开，因为也可能有新买家加入；也不能说每个继续购买的家庭都买多了。
+  s1_zh_hk: 買家淨減少四百戶，但唔可以話啱啱好有四百戶走咗，因為可能有新買家加入；亦唔可以話每個繼續買嘅住戶都買多咗。
+  s2_en: >-
+    A narrower buyer base is a diagnostic signal, not a complete marketing investment case.
+  s2_zh: 买家基础收窄是值得追查的信号，本身还不足以支持一项营销投资。
+  s2_zh_hk: 買家基礎收窄係值得追查嘅訊號，本身未足以支持一項營銷投資。
+  s3_en: >-
+    Bay Jar and all figures are fictional. Official scene art is a teaching illustration only.
+  s3_zh: Bay Jar 和所有数字都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: Bay Jar 同所有數字都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

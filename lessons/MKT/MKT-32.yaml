@@ -1,0 +1,276 @@
+id: MKT-32
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A generous referral. A trustworthy recommendation?
+title_zh: 推荐奖励越慷慨，朋友就越信你吗？
+title_zh_hk: 推薦獎勵越慷慨，朋友就越信你嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: MKT-32
+  kicker_en: MKT-32
+  kicker_zh: MKT-32
+  kicker_zh_hk: MKT-32
+  title_en: A generous referral. A trustworthy recommendation?
+  title_zh: 推荐奖励越慷慨，朋友就越信你吗？
+  title_zh_hk: 推薦獎勵越慷慨，朋友就越信你嗎？
+  image: art/same-reward-different-recipient-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Dropbox's help page describes referral benefits for both an existing user and a qualifying new user,
+    and separates invitations from completed referrals. Now you manage Harbour Shelf, a fictional Hong
+    Kong homeware shop, choosing a four-week referral pilot.
+  zh: >-
+    Dropbox 的帮助页面列出了现有用户和符合条件的新用户各自能获得的推荐奖励，也把发出邀请和完成推荐分开。现在，你管理虚构的香港家居用品店 Harbour Shelf，要选一个为期四周的推荐试行计划。
+  zh_hk: >-
+    Dropbox 嘅說明頁列出現有用戶同符合資格嘅新用戶各自攞到咩推薦獎勵，亦將發出邀請同完成推薦分開。而家，你管理虛構嘅香港家居用品店 Harbour Shelf，要揀一個四星期嘅推薦試行計劃。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Same HK$60, split differently
+  title_zh: 同样 HK$60，分法不同
+  title_zh_hk: 同樣 HK$60，分法不同
+  row1_en: A
+  row1_zh: A
+  row1_zh_hk: A
+  row2_en: B
+  row2_zh: B
+  row2_zh_hk: B
+  col1_en: Advocate
+  col1_zh: 推荐人
+  col1_zh_hk: 推薦人
+  col2_en: Buyer
+  col2_zh: 买家
+  col2_zh_hk: 買家
+  col3_en: Total
+  col3_zh: 合计
+  col3_zh_hk: 合計
+  c11: HK$60
+  c12: HK$0
+  c13: HK$60
+  c21: HK$30
+  c22: HK$30
+  c23: HK$60
+  footer_en: Cap HK$7,000 · at most 100 referrals
+  footer_zh: 上限 HK$7,000 · 最多 100 次推荐
+  footer_zh_hk: 上限 HK$7,000 · 最多 100 宗推薦
+  s1_en: >-
+    The goal is useful recommendations that adult friends willingly receive and that lead to suitable
+    purchases, not the largest number of messages. A pays the advocate 60 dollars per completed referral.
+    B pays the advocate 30 and the new buyer 30.
+  s1_zh: >-
+    目标是让成年朋友自愿接收有用的推荐，并在合适时购买，而不是发出最多的信息。A 方案每完成一次推荐，付给推荐人六十元；B 方案则给推荐人和新买家各三十元。
+  s1_zh_hk: >-
+    目標係等成年朋友自願接收有用嘅推薦，喺啱用嘅時候先買，而唔係發最多訊息。A 方案每完成一宗推薦，畀推薦人六十蚊；B 方案就畀推薦人同新買家各三十蚊。
+  s2_en: >-
+    Both have a 7,000-dollar ceiling: 1,000 for setup and 6,000 for rewards, covering at most 100 completed
+    referrals. That is a ceiling, not a forecast of 100 sales.
+  s2_zh: 两个方案的上限都是七千元：一千元设立费，六千元留作奖励，最多可支付一百次完成的推荐。这是上限，不是预测会有一百笔成交。
+  s2_zh_hk: 兩個方案嘅上限都係七千蚊：一千蚊設立費，六千蚊留做獎勵，最多可以畀一百宗完成嘅推薦。呢個係上限，唔係預測會有一百宗成交。
+  s3_en: >-
+    A completed referral means a new adult buyer uses a valid invitation, spends at least 300 dollars
+    and keeps the purchase past the 30-day return period. Each recommendation must clearly state who receives
+    how much, and when.
+  s3_zh: 完成推荐，是指成年新买家用有效邀请购买至少三百元的商品，并在三十天退货期后保留商品。每条推荐都要清楚写明谁、在什么时候、拿到多少奖励。
+  s3_zh_hk: 完成推薦，即係成年新買家用有效邀請買至少三百蚊嘅貨品，仲要過咗三十日退貨期都冇退。每個推薦都要清楚寫明邊個、幾時、攞幾多獎勵。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Pilot A or B first?
+  title_zh: 先试 A 还是 B？
+  title_zh_hk: 先試 A 還是 B？
+  en: >-
+    Which design would you pilot first, A or B? Why need equal total rewards not produce equally useful
+    recommendations? And name one response you need from the recipient, not just the advocate. Pause and
+    vote.
+  zh: 你会先试 A 还是 B？为什么奖励总额相同，推荐的价值却不一定一样？除了推荐人，你还需要了解受邀者的哪一种反应？请暂停，投个票。
+  zh_hk: 你會先試 A 定 B？點解獎勵總額一樣，推薦嘅用處唔一定一樣？除咗推薦人，你仲需要知道受邀者嘅邊種反應？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Twelve pairs understand both
+  title_zh: 12 对参与者，都看懂了
+  title_zh_hk: 12 對參與者，都看懂了
+  step1_en: All understand both disclosures
+  step1_zh: 人人都看懂两种披露
+  step1_zh_hk: 人人都看懂兩種披露
+  step2_en: Some recipients doubt A's motive
+  step2_zh: 有受邀者怀疑 A 的动机
+  step2_zh_hk: 有受邀者懷疑 A 的動機
+  step3_en: Themes, not votes; no sales effect
+  step3_zh: 只是看法，不是票数
+  step3_zh_hk: 只是看法，不是票數
+  s1_en: >-
+    Twelve adult customer and friend pairs volunteer for hypothetical interviews, seeing both offers in
+    alternating order. Every participant correctly explains both reward splits, eligibility and payment
+    timing.
+  s1_zh: 有十二对成年顾客和朋友自愿参加假设情境访谈，两个方案都看过，展示顺序交替。每位参与者都能正确说出两种奖励分配、资格和付款时间。
+  s1_zh_hk: 有十二對成年顧客同朋友自願參加假設情境訪談，兩個方案都睇過，次序交替。每位參與者都講得啱兩種獎勵分配、資格同付款時間。
+  s2_en: >-
+    Several recipients say A makes them question whether the recommendation serves their needs, or mainly
+    earns their friend money. Several see B as sharing the benefit; others say any rewarded recommendation
+    deserves scrutiny.
+  s2_zh: 几位受邀者说，A 让他们怀疑推荐是为了自己好，还是主要让朋友赚钱。有几位觉得 B 是双方共享好处；也有人认为只要推荐有奖励，就应该审慎看待。
+  s2_zh_hk: 幾位受邀者話，A 令佢哋懷疑個推薦係為自己好，定係主要幫朋友賺錢。有幾位覺得 B 係大家分享好處；亦有人覺得只要推薦有獎，就應該小心睇。
+  s3_en: >-
+    These are fictional interview themes from a convenience sample, not counted votes or a sales effect.
+    B also gives buyers cash, so any later purchase gap could reflect price as well as trust.
+  s3_zh: >-
+    这些只是虚构访谈中的看法，来自便利抽样，不是统计票数，也不是销售效果。B 还给买家现金，所以日后的购买差异，可能来自价格诱因，也可能来自信任。
+  s3_zh_hk: 呢啲只係虛構訪談入面嘅睇法，來自便利抽樣，唔係點票，亦唔係銷售效果。B 仲畀現金買家，所以之後嘅購買差異，可能係價錢誘因，亦可能係信任。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep or change your choice?
+  title_zh: 维持还是改变选择？
+  title_zh_hk: 維持還是改變選擇？
+  en: >-
+    Would you keep or change your first choice? What does the reveal support, what can it not prove, and
+    how would you judge a pilot without rewarding message volume or hiding incentives? Pause and vote.
+  zh: >-
+    听完访谈，你会维持原来的选择，还是改选？新信息支持什么，不能证明什么？你会怎样评估试行效果，而不按信息数量给奖励，也不隐瞒诱因？请暂停，投个票。
+  zh_hk: 聽完訪談，你會維持原本嘅選擇，定係改選？新資料支持咩、證明唔到咩？你會點樣評估試行成效，又唔按訊息數量畀獎，亦唔收埋誘因？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Two people make decisions
+  title_zh: 两个人，各有决定
+  title_zh_hk: 兩個人，各有決定
+  step1_en: >-
+    Advocate: whether and whom to recommend
+  step1_zh: 推荐人：推不推荐、向谁推荐
+  step1_zh_hk: 推薦人：推不推薦、向誰推薦
+  step2_en: >-
+    Recipient: is it useful, will I buy?
+  step2_zh: 受邀者：有没有用、买不买
+  step2_zh_hk: 受邀者：有沒有用、買不買
+  step3_en: B defensible first; A also defensible
+  step3_zh: 先试 B 有理，A 也有理
+  step3_zh_hk: 先試 B 有理，A 也有理
+  s1_en: An advocate decides whether, and whom, to recommend.
+  s1_zh: 推荐人决定要不要推荐，向谁推荐。
+  s1_zh_hk: 推薦人決定推唔推薦，推薦畀邊個。
+  s2_en: >-
+    A recipient decides whether the advice is useful, and whether to buy. Paying the advocate more may
+    encourage effort, but can also change how the recipient reads that effort.
+  s2_zh: 受邀者决定建议有没有用，买不买。多给推荐人奖励，也许会让他更积极，但也可能改变受邀者对这份热心的理解。
+  s2_zh_hk: 受邀者決定個建議有冇用，買唔買。畀多啲推薦人，可能令佢更落力，但亦可能改變受邀者點睇佢嘅熱心。
+  s3_en: >-
+    B is a defensible first pilot, because it answers the concern raised: the recipient sees a benefit
+    too. A stays defensible if stronger motivation brings genuinely suitable recommendations. Neither
+    is a demonstrated winner.
+  s3_zh: >-
+    先试 B 有道理，因为它直接回应了访谈中的疑虑：受邀者自己也有好处。如果更强的激励能带来真正合适的推荐，A 也说得通。两者都没有被证明一定更好。
+  s3_zh_hk: 先試 B 有道理，因為佢直接回應咗訪談入面嘅疑慮：受邀者自己都有好處。如果更大嘅誘因帶嚟真正啱嘅推薦，A 都講得通。兩個都冇證明一定贏。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: A ceiling is not an outcome
+  title_zh: 上限不等于实际结果
+  title_zh_hk: 上限不等於實際結果
+  step1_en: 100 × HK$60 + HK$1,000 = HK$7,000
+  step1_zh: 100 × HK$60 + HK$1,000 = HK$7,000
+  step1_zh_hk: 100 × HK$60 + HK$1,000 = HK$7,000
+  step2_en: Spend = HK$1,000 + HK$60n, 0 ≤ n ≤ 100
+  step2_zh: 支出 = HK$1,000 + HK$60n
+  step2_zh_hk: 支出 = HK$1,000 + HK$60n
+  step3_en: Disclosure informs; it does not persuade
+  step3_zh: 披露帮人判断，不替人决定
+  step3_zh_hk: 披露幫人判斷，不替人決定
+  s1_en: >-
+    For either design, 100 times 60 dollars is a 6,000-dollar reward maximum; adding 1,000 for setup gives
+    7,000. Under B, that is at most 3,000 to advocates and 3,000 to buyers.
+  s1_zh: 无论哪个方案，最高奖励都是一百乘六十元，即六千元；加上一千元设立费，就是七千元。在 B 方案下，推荐人和买家最多各得三千元。
+  s1_zh_hk: 無論邊個方案，最高獎勵都係一百乘六十蚊，即係六千蚊；加埋一千蚊設立費，就係七千蚊。喺 B 方案，推薦人同買家最多各攞三千蚊。
+  s2_en: >-
+    With n completed referrals, spending is 1,000 plus 60 n dollars. Equal caps do not mean equal spending,
+    purchases or profit, and a friend might have bought anyway.
+  s2_zh: 如果完成 n 次推荐，支出就是一千元加六十乘 n。上限相同，不代表实际支出、成交或利润相同；朋友也可能本来就会买。
+  s2_zh_hk: 如果完成 n 宗推薦，支出就係一千蚊加六十乘 n。上限一樣，唔代表實際支出、成交或者利潤一樣；朋友可能本來都會買。
+  s3_en: >-
+    Disclosure lets recipients evaluate an incentive, but does not make the advice impartial. Keep the
+    terms transparent whichever design you choose, and never hide who is paid.
+  s3_zh: 披露让受邀者能衡量诱因，但不会让建议变得客观。无论选哪个方案，都要保持条款透明，绝不能靠隐瞒谁拿钱来解决问题。
+  s3_zh_hk: 披露令受邀者可以衡量誘因，但唔會令建議變得客觀。無論揀邊個方案，條款都要透明，絕對唔可以靠收埋邊個收錢嚟解決問題。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Test useful recommendations
+  title_zh: 评估推荐是否有用
+  title_zh_hk: 評估推薦是否有用
+  en: >-
+    Track eligible invitations, willingly received recommendations, completed purchases, returns, recipient-rated
+    usefulness, pressure complaints and actual cost separately. Get consent for feedback, minimise personal
+    data, and set no targets that encourage indiscriminate forwarding.
+  zh: >-
+    要分别追踪合格的邀请、自愿接收的推荐、完成的购买、退货、受邀者评价的实用程度、施压投诉和实际成本。收集意见前要先征得同意，尽量少用个人信息，也不要设定鼓励到处转发的指标。
+  zh_hk: >-
+    要分開追蹤合資格嘅邀請、自願接收嘅推薦、完成嘅購買、退貨、受邀者評嘅實用程度、施壓投訴同實際成本。收集意見之前要先得到同意，盡量少用個人資料，亦唔好設定鼓勵四圍轉發嘅指標。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Equal cost ≠ equal benefit
+  title_zh: 支出相同 ≠ 好处相同
+  title_zh_hk: 支出相同 ≠ 好處相同
+  q1_en: Compare A and B in a planned trial
+  q1_zh: 用事先设计的试验比较
+  q1_zh_hk: 用事先設計的試驗比較
+  q2_en: Add a no-programme comparison
+  q2_zh: 要估增量，加无计划对照组
+  q2_zh_hk: 要估增量，加無計劃對照組
+  s1_en: >-
+    Before scaling, compare A and B in a separately budgeted, pre-specified trial with comparable groups
+    and consistent disclosure, and measure contribution after all relevant costs.
+  s1_zh: 扩大规模前，要另外安排预算，事先定好试验设计，用可比较的组别对比 A 和 B，披露方式保持一致，并衡量扣除所有相关成本后的贡献。
+  s1_zh_hk: 擴大規模之前，要另外安排預算，事先定好試驗設計，用可以比較嘅組別對比 A 同 B，披露方式保持一致，再量度扣除所有相關成本之後嘅貢獻。
+  s2_en: >-
+    An A versus B purchase gap alone cannot separate trust from the buyer's cash incentive.
+  s2_zh: 单看 A 和 B 的成交差异，无法把信任的作用和买家的现金诱因分开。
+  s2_zh_hk: 淨係睇 A 同 B 嘅成交差異，分唔開信任嘅作用同買家嘅現金誘因。
+  s3_en: >-
+    Harbour Shelf, the participants, plans, budget and interview themes are fictional. Official scene
+    art is a teaching illustration only.
+  s3_zh: Harbour Shelf、参与者、方案、预算和访谈看法都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: Harbour Shelf、參與者、方案、預算同訪談睇法都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

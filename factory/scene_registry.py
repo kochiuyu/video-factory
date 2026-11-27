@@ -940,6 +940,14 @@ def takeaway_cue_picture(spec) -> tuple | None:
             return ("line", mode)
         return None
     if kind == "flat":
+        items = spec.get("items")
+        if isinstance(items, list):
+            shapes = [str(item).strip() for item in items]
+            if not 2 <= len(shapes) <= 3 or any(
+                shape not in {"triangle", "quad", "pentagon", "hexagon", "circle"} for shape in shapes
+            ):
+                return None
+            return ("flat", "row", tuple(shapes))
         shape = str(spec.get("shape") or "").strip()
         if shape not in {"triangle", "quad", "pentagon", "hexagon", "circle"}:
             return None
@@ -948,6 +956,14 @@ def takeaway_cue_picture(spec) -> tuple | None:
             return None
         return ("flat", shape, turn)
     if kind == "solid":
+        items = spec.get("items")
+        if isinstance(items, list):
+            shapes = [str(item).strip() for item in items]
+            if len(shapes) != 2 or any(
+                shape not in {"prism", "cylinder", "pyramid", "cone", "sphere"} for shape in shapes
+            ):
+                return None
+            return ("solid", "pair", tuple(shapes))
         shape = str(spec.get("shape") or "").strip()
         if shape not in {"prism", "cylinder", "pyramid", "cone", "sphere"}:
             return None
@@ -1011,7 +1027,7 @@ class LessonTakeaway(SceneKind):
 
     def problems(self, beat: dict) -> list[str]:
         if _motif(beat) not in _MOTIFS:
-            return [f"lesson_takeaway motif must be counters, ten_frame, track, ordinal, pairs, or parts, not {_motif(beat)!r}."]
+            return [f"lesson_takeaway motif must be counters, ten_frame, track, ordinal, pairs, parts, or shapes, not {_motif(beat)!r}."]
         if _motif(beat) == "ordinal":
             found = _ordinal_pair_problems(beat, required=False)
         elif _motif(beat) == "pairs":

@@ -2960,6 +2960,14 @@ class SceneRegistryTest(unittest.TestCase):
             [("line", "marks", 3), ("line", "straight"), ("line", "curve"), ("line", "routes")],
         )
         self.assertNotIn("嗎", _beat_lines(shapes, "zh_hk"))
+        self.assertEqual(
+            takeaway_cue_picture({"kind": "flat", "items": ["pentagon", "hexagon", "circle"]}),
+            ("flat", "row", ("pentagon", "hexagon", "circle")),
+        )
+        self.assertEqual(
+            takeaway_cue_picture({"kind": "solid", "items": ["pyramid", "cone"]}),
+            ("solid", "pair", ("pyramid", "cone")),
+        )
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

@@ -4506,9 +4506,13 @@ def _scene_types() -> dict:
                 return VGroup(line, dots)
             return straight_line()
         if kind == "flat":
+            if picture[1] == "row":
+                return VGroup(*[flat_picture(str(item)) for item in picture[2]]).arrange(RIGHT, buff=0.2)
             turn = float(picture[2]) if len(picture) > 2 else 0.0
             return flat_picture(str(picture[1]), turn)
         if kind == "solid":
+            if picture[1] == "pair":
+                return VGroup(*[solid_picture(str(item)) for item in picture[2]]).arrange(RIGHT, buff=0.28)
             return solid_picture(str(picture[1]))
         pic = join_picture(str(picture[1]))
         for edge in pic.vf_edges:

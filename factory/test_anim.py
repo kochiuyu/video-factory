@@ -2145,6 +2145,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-NUM-22": [
                 "lesson_hook", "place_sum", "place_sum", "lesson_takeaway",
             ],
+            "P1-NUM-23": [
+                "lesson_hook", "place_sum", "place_sum", "place_sum", "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -2800,6 +2803,20 @@ class SceneRegistryTest(unittest.TestCase):
             [("tiles", (23, 14)), ("tens", 3, 7), ("tens", 1, 0), ("tens", 4, 2)],
         )
         self.assertNotIn("sum", " ".join(beat.get("s3_en", "") for beat in twentytwo["beats"]).lower())
+        twentythree = load_lesson(P1 / "P1-NUM-23.yaml")
+        trios = [beat for beat in twentythree["beats"] if beat.get("scene") == "place_sum"]
+        self.assertEqual(
+            [(b["a"], b["b"], b["c"]) for b in trios],
+            [(12, 4, 3), (24, 6, 4), (18, 7, 5)],
+        )
+        self.assertEqual(labels_for(trios[2], "en")["values"], [18, 7, 5])
+        self.assertEqual(labels_for(trios[0], "zh")["title"], "先个位，再十位")
+        recap23 = twentythree["beats"][-1]
+        self.assertEqual(
+            labels_for(recap23, "en")["cues"],
+            [("tiles", (12, 4, 3)), ("tens", 1, 9), ("tiles", (6, 4, 10)), ("tens", 3, 0)],
+        )
+        self.assertNotIn("sum", recap23["s3_en"].lower())
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

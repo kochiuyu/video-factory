@@ -1,0 +1,110 @@
+# P1-NUM-23. Mirrors MathQuiz path calculate / lesson addthree,
+# "Add three numbers".
+# 12 + 4 + 3 is two steps: 16, then 19.
+# 6 and 4 make ten, then 24 + 10 = 34.
+# 18 + 7 + 5 has twenty ones, which become two tens, so the total is 30.
+# https://github.com/kochiuyu/mathquiz learn-calculate.js (path calculate, lesson addthree).
+# Speech is for age 6: one short idea per sentence. The heading is answered on screen.
+id: P1-NUM-23
+title_en: Add three numbers
+title_zh: 三个数相加
+title_zh_hk: 三個數相加
+duration_target_s: 66
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: ten_frame
+  shown: true
+  seconds: 8
+  title_en: Add three numbers
+  title_zh: 三个数相加
+  title_zh_hk: 三個數相加
+  s1_en: Three numbers. We add two, then the last one.
+  s1_zh: 三个数。先加两个，再加上最后一个。
+  s1_zh_hk: 三個數。先加兩個，再加上最後一個。
+
+- id: steps
+  visual: animated
+  scene: place_sum
+  op: add
+  a: 12
+  b: 4
+  c: 3
+  seconds: 14
+  s1_en: Twelve, four, and three. Use each number once.
+  s1_zh: 十二、四和三。每个数只加一次。
+  s1_zh_hk: 十二、四同三。每個數只加一次。
+  s2_en: Twelve and four make sixteen.
+  s2_zh: 十二加四，是十六。
+  s2_zh_hk: 十二加四，係十六。
+  s3_en: Sixteen and three make nineteen.
+  s3_zh: 十六加三，是十九。
+  s3_zh_hk: 十六加三，係十九。
+
+- id: pair
+  visual: animated
+  scene: place_sum
+  op: add
+  a: 24
+  b: 6
+  c: 4
+  seconds: 14
+  s1_en: Twenty-four, six, and four.
+  s1_zh: 二十四、六和四。
+  s1_zh_hk: 二十四、六同四。
+  s2_en: Six and four make ten.
+  s2_zh: 六和四是十。
+  s2_zh_hk: 六同四係十。
+  s3_en: Twenty-four and ten make thirty-four.
+  s3_zh: 二十四加十，是三十四。
+  s3_zh_hk: 二十四加十，係三十四。
+
+- id: ones
+  visual: animated
+  scene: place_sum
+  op: add
+  a: 18
+  b: 7
+  c: 5
+  seconds: 14
+  s1_en: Eighteen, seven, and five.
+  s1_zh: 十八、七和五。
+  s1_zh_hk: 十八、七同五。
+  s2_en: The ones make twenty. Twenty ones make two tens.
+  s2_zh: 个位有二十个一。二十个一换成两个十。
+  s2_zh_hk: 個位有二十個一。二十個一換成兩個十。
+  s3_en: One ten and two new tens make three tens. Thirty.
+  s3_zh: 一个十加两个新的十，是三个十。三十。
+  s3_zh_hk: 一個十加兩個新嘅十，係三個十。三十。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: ten_frame
+  seconds: 16
+  title_en: Add three numbers
+  title_zh: 三个数相加
+  title_zh_hk: 三個數相加
+  s1_en: Add two, then the last one.
+  s1_zh: 先加两个，再加上最后一个。
+  s1_zh_hk: 先加兩個，再加上最後一個。
+  s2_en: They make nineteen.
+  s2_zh: 十二、四和三是十九。
+  s2_zh_hk: 十二、四同三係十九。
+  s3_en: Six and four make ten.
+  s3_zh: 六和四是十。三十四。
+  s3_zh_hk: 六同四係十。三十四。
+  s4_en: They make thirty.
+  s4_zh: 十八、七和五是三十。
+  s4_zh_hk: 十八、七同五係三十。
+  cues:
+  - kind: tiles
+    values: [12, 4, 3]
+  - kind: tens
+    count: 19
+  - kind: tiles
+    values: [6, 4, 10]
+  - kind: tens
+    count: 30

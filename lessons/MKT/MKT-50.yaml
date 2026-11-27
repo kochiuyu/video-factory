@@ -3,8 +3,8 @@ course_en: Micro Cases
 course_zh: Micro Cases
 course_zh_hk: Micro Cases
 title_en: Only two left. Left where?
-title_zh: 「只剩两件」，是哪里只剩两件？
-title_zh_hk: 「只剩兩件」，是哪裏只剩兩件？
+title_zh: 只剩两件，是哪里只剩两件？
+title_zh_hk: 只剩兩件，是哪裏只剩兩件？
 beats:
 - id: hook
   visual: still_image
@@ -14,8 +14,8 @@ beats:
   kicker_zh: MKT-50
   kicker_zh_hk: MKT-50
   title_en: Only two left. Left where?
-  title_zh: 「只剩两件」，是哪里只剩两件？
-  title_zh_hk: 「只剩兩件」，是哪裏只剩兩件？
+  title_zh: 只剩两件，是哪里只剩两件？
+  title_zh_hk: 只剩兩件，是哪裏只剩兩件？
   image: art/only-two-in-this-basket-scene.jpg
   caption_en: Classroom assumptions, not a news report
   caption_zh: 课堂假设，不是新闻报道

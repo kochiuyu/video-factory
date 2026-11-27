@@ -4153,7 +4153,7 @@ def _scene_types() -> dict:
             b = int(labels.get("b") or 0)
             left, right, bot_lim, top_lim = _safe_limits()
             radius = _ordinal_label_height() * 0.5
-            gap = radius * 0.7
+            gap = radius * 1.45
 
             def glyph(text, scale=1.0):
                 mob = styled(str(text), latin, cjk, 64)

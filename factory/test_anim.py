@@ -2136,7 +2136,7 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertNotIn("sum", " ".join(b.get("s3_en", "") for b in sixteen["beats"]).lower())
         recap = next(beat for beat in sixteen["beats"] if beat["id"] == "takeaway")
         self.assertEqual(step_count(recap), 4)
-        self.assertEqual(labels_for(recap, "en")["title"], "How many counters?")
+        self.assertEqual(labels_for(recap, "en")["title"], "Count the pairs")
         self.assertEqual(labels_for(recap, "zh")["title"], "有多少个圆片？")
         self.assertEqual(labels_for(recap, "zh_hk")["title"], "有幾多個圓片呀？")
         self.assertEqual(

@@ -1,0 +1,98 @@
+# P1-NUM-15. Mirrors MathQuiz path hundred / lesson order,
+# "Order and continue".
+# Smallest to largest: 24, 40, 42. Largest to smallest: 61, 60, 16.
+# Count on from 38 to 41. After 39 comes 40. Count back from 41 to 38.
+# https://github.com/kochiuyu/mathquiz learn-data.js (path hundred, lesson order; steps in learn-hundred.js).
+# Speech is for age 6: one short idea per sentence. The heading is answered on screen.
+id: P1-NUM-15
+title_en: Put the numbers in order
+title_zh: 把这些数排好
+title_zh_hk: 將呢啲數排好
+duration_target_s: 58
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: track
+  seconds: 8
+  title_en: Put the numbers in order
+  title_zh: 把这些数排好
+  title_zh_hk: 將呢啲數排好
+  s1_en: What comes after 39?
+  s1_zh: 三十九后面是多少？
+  s1_zh_hk: 三十九後面係幾多呀？
+
+- id: up
+  visual: animated
+  scene: number_blocks
+  mode: order
+  a: 24
+  b: 40
+  n: 42
+  seconds: 12
+  s1_en: 24 is the smallest.
+  s1_zh: 二十四最小。
+  s1_zh_hk: 二十四最細。
+  s2_en: Then 40.
+  s2_zh: 然后是四十。
+  s2_zh_hk: 然後係四十。
+  s3_en: Then 42. Smallest to largest.
+  s3_zh: 然后是四十二。由小到大。
+  s3_zh_hk: 然後係四十二。由細到大。
+
+- id: down
+  visual: animated
+  scene: number_blocks
+  mode: order
+  a: 61
+  b: 60
+  n: 16
+  seconds: 12
+  s1_en: 61 is the largest.
+  s1_zh: 六十一最大。
+  s1_zh_hk: 六十一最大。
+  s2_en: Then 60.
+  s2_zh: 然后是六十。
+  s2_zh_hk: 然後係六十。
+  s3_en: Then 16. Largest to smallest.
+  s3_zh: 然后是十六。由大到小。
+  s3_zh_hk: 然後係十六。由大到細。
+
+- id: across
+  visual: animated
+  scene: number_blocks
+  mode: hop
+  start: 38
+  end: 41
+  seconds: 12
+  s1_en: Start at 38.
+  s1_zh: 从三十八开始。
+  s1_zh_hk: 由三十八開始。
+  s2_en: 38. 39. 40. 41.
+  s2_zh: 三十八，三十九，四十，四十一。
+  s2_zh_hk: 三十八，三十九，四十，四十一。
+  s3_en: After 39 comes 40.
+  s3_zh: 三十九后面是四十。
+  s3_zh_hk: 三十九後面係四十。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: track
+  seconds: 14
+  title_en: How do we order them?
+  title_zh: 怎样排这些数？
+  title_zh_hk: 點樣排呢啲數呀？
+  s1_en: 24, 40, 42. Smallest first.
+  s1_zh: 由小到大，二十四，四十，四十二。
+  s1_zh_hk: 由細到大，二十四，四十，四十二。
+  s2_en: 61, 60, 16. Largest first.
+  s2_zh: 由大到小，六十一，六十，十六。
+  s2_zh_hk: 由大到細，六十一，六十，十六。
+  s3_en: After 39 comes 40.
+  s3_zh: 三十九后面是四十。
+  s3_zh_hk: 三十九後面係四十。
+  s4_en: "Count back: 41, 40, 39, 38."
+  s4_zh: 倒着数，四十一，四十，三十九，三十八。
+  s4_zh_hk: 倒返數，四十一，四十，三十九，三十八。

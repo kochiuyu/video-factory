@@ -897,6 +897,15 @@ def takeaway_cue_picture(spec) -> tuple | None:
         if boxes is None or not 1 <= boxes <= 6 or extra not in (0, 1):
             return None
         return ("pairs", boxes, extra)
+    if kind == "groups":
+        size = _as_int(spec.get("a"))
+        boxes = _as_int(spec.get("n"))
+        extra = _as_int(spec.get("extra")) or 0
+        if size is None or boxes is None or not 2 <= size <= 5 or not 1 <= boxes <= 6:
+            return None
+        if extra < 0 or extra >= size or size * boxes + extra > 20:
+            return None
+        return ("groups", size, boxes, extra)
     if kind == "counters":
         count = _as_int(spec.get("n"))
         if count is None or not 1 <= count <= 12:

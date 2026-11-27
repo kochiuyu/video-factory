@@ -1,0 +1,105 @@
+# P1-NUM-17. Mirrors MathQuiz path groups / lesson fives,
+# "Count in fives and tens".
+# Four groups of five make twenty. Five tens make fifty.
+# From thirty we count thirty-one, thirty-two, thirty-three.
+# https://github.com/kochiuyu/mathquiz learn-data.js (path groups, lesson fives).
+# Speech is for age 6: one short idea per sentence. The heading is answered on screen.
+id: P1-NUM-17
+title_en: Count in fives and tens
+title_zh: 五个、十个一组数
+title_zh_hk: 五個、十個一組數
+duration_target_s: 58
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: ten_frame
+  seconds: 8
+  title_en: Count in fives and tens
+  title_zh: 五个、十个一组数
+  title_zh_hk: 五個、十個一組數
+  s1_en: How many are in groups of five? Let us count in fives, then in tens.
+  s1_zh: 五个一组有多少个？我们五个五个数，再十个十个数。
+  s1_zh_hk: 五個一組有幾多個呀？我哋五個五個數，再十個十個數。
+
+- id: fives
+  visual: animated
+  scene: number_blocks
+  mode: groups
+  a: 5
+  n: 4
+  seconds: 12
+  s1_en: Each group has five. There are four groups.
+  s1_zh: 每一组有五个。这里有四组。
+  s1_zh_hk: 每一組有五個。呢度有四組。
+  s2_en: Five, ten, fifteen, twenty.
+  s2_zh: 五，十，十五，二十。
+  s2_zh_hk: 五，十，十五，二十。
+  s3_en: Four groups of five make twenty.
+  s3_zh: 四组五个是二十。
+  s3_zh_hk: 四組五個係二十。
+
+- id: fifties
+  visual: animated
+  scene: number_blocks
+  mode: tens
+  count: 50
+  seconds: 12
+  s1_en: Ten, twenty, thirty, forty, fifty.
+  s1_zh: 十，二十，三十，四十，五十。
+  s1_zh_hk: 十，二十，三十，四十，五十。
+  s2_en: The ones are zero.
+  s2_zh: 个是零。
+  s2_zh_hk: 個係零。
+  s3_en: Five tens make fifty.
+  s3_zh: 五个十是五十。
+  s3_zh_hk: 五個十係五十。
+
+- id: onward
+  visual: animated
+  scene: number_blocks
+  mode: hop
+  start: 30
+  end: 33
+  seconds: 12
+  s1_en: Start at 30.
+  s1_zh: 从三十开始。
+  s1_zh_hk: 由三十開始。
+  s2_en: 30. 31. 32. 33.
+  s2_zh: 三十，三十一，三十二，三十三。
+  s2_zh_hk: 三十，三十一，三十二，三十三。
+  s3_en: After 30 comes 31, then 32, then 33.
+  s3_zh: 三十后面是三十一，然后三十二，然后三十三。
+  s3_zh_hk: 三十後面係三十一，然後三十二，然後三十三。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: ten_frame
+  seconds: 14
+  title_en: How do we count in groups?
+  title_zh: 怎样按组数？
+  title_zh_hk: 點樣按組數呀？
+  s1_en: Four groups of five make twenty.
+  s1_zh: 四组五个是二十。
+  s1_zh_hk: 四組五個係二十。
+  s2_en: Five tens make fifty.
+  s2_zh: 五个十是五十。
+  s2_zh_hk: 五個十係五十。
+  s3_en: Thirty is three tens.
+  s3_zh: 三十是三个十。
+  s3_zh_hk: 三十係三個十。
+  s4_en: Count on, 31, 32, 33.
+  s4_zh: 接着数，三十一，三十二，三十三。
+  s4_zh_hk: 順住數，三十一，三十二，三十三。
+  cues:
+  - kind: groups
+    a: 5
+    n: 4
+  - kind: tens
+    count: 50
+  - kind: tens
+    count: 30
+  - kind: tiles
+    values: [30, 31, 32, 33]

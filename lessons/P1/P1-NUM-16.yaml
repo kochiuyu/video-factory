@@ -20,9 +20,9 @@ beats:
   title_en: Count in twos
   title_zh: 两个两个数
   title_zh_hk: 兩個兩個數
-  s1_en: How many counters are in four pairs?
-  s1_zh: 四对有多少个圆片？
-  s1_zh_hk: 四對有幾多個圓片呀？
+  s1_en: How many counters are in four pairs? Let us count in twos.
+  s1_zh: 四对有多少个圆片？我们两个两个数。
+  s1_zh_hk: 四對有幾多個圓片呀？我哋兩個兩個數。
 
 - id: four
   visual: animated
@@ -31,9 +31,9 @@ beats:
   a: 2
   n: 4
   seconds: 12
-  s1_en: Each pair has two.
-  s1_zh: 每一对有两个。
-  s1_zh_hk: 每一對有兩個。
+  s1_en: Each pair has two. There are four pairs.
+  s1_zh: 每一对有两个。这里有四对。
+  s1_zh_hk: 每一對有兩個。呢度有四對。
   s2_en: Two, four, six, eight.
   s2_zh: 二，四，六，八。
   s2_zh_hk: 二，四，六，八。
@@ -48,9 +48,9 @@ beats:
   a: 2
   n: 6
   seconds: 12
-  s1_en: Six pairs.
-  s1_zh: 六对。
-  s1_zh_hk: 六對。
+  s1_en: Six pairs. Each pair still has two.
+  s1_zh: 六对。每一对都是两个。
+  s1_zh_hk: 六對。每一對都係兩個。
   s2_en: Two, four, six, eight, ten, twelve.
   s2_zh: 二，四，六，八，十，十二。
   s2_zh_hk: 二，四，六，八，十，十二。
@@ -66,9 +66,9 @@ beats:
   n: 5
   b: 1
   seconds: 12
-  s1_en: Five pairs.
-  s1_zh: 五对。
-  s1_zh_hk: 五對。
+  s1_en: Five pairs. Then one more counter.
+  s1_zh: 五对。然后再加一个圆片。
+  s1_zh_hk: 五對。然後再加一個圓片。
   s2_en: Two, four, six, eight, ten.
   s2_zh: 二，四，六，八，十。
   s2_zh_hk: 二，四，六，八，十。

@@ -83,7 +83,8 @@ beats:
     a: 24
     b: 42
   - kind: tens_mark
-    rods: 4
+    a: 24
+    b: 42
   - kind: compare
     a: 47
     b: 43

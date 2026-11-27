@@ -1,0 +1,298 @@
+id: FIN-13
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The invoice is sold. Is the risk gone?
+title_zh: 发票卖出去了，风险就没了吗？
+title_zh_hk: 發票賣出去了，風險就沒了嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-13
+  kicker_en: FIN-13
+  kicker_zh: FIN-13
+  kicker_zh_hk: FIN-13
+  title_en: The invoice is sold. Is the risk gone?
+  title_zh: 发票卖出去了，风险就没了吗？
+  title_zh_hk: 發票賣出去了，風險就沒了嗎？
+  image: art/cash-before-risk-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 29 April 2026, the Hong Kong Monetary Authority and the banking sector announced extra SME support,
+    including trade-finance arrangements. Access to finance does not settle who bears an unpaid invoice.
+    Now you advise a fictional Hong Kong stationery wholesaler.
+  zh: >-
+    2026年4月29日，香港金融管理局和银行业宣布了更多支持中小企业的措施，包括贸易融资安排。能拿到融资，并不说明发票收不回来时由谁承担。现在，你要为香港一家虚构的文具批发商出主意。
+  zh_hk: >-
+    2026年4月29號，香港金融管理局同銀行業宣布咗更多支援中小企嘅措施，包括貿易融資安排。攞到融資，唔代表發票收唔到錢嗰陣由邊個承擔。而家，你要幫香港一間虛構嘅文具批發商出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Known funding terms
+  title_zh: 已知的融资条款
+  title_zh_hk: 已知的融資條款
+  row1_en: Cash today
+  row1_zh: 今天的现金
+  row1_zh_hk: 今天的現金
+  row2_en: All-in charge
+  row2_zh: 全部费用
+  row2_zh_hk: 全部費用
+  row3_en: Invoice on day 60
+  row3_zh: 第 60 天发票款
+  row3_zh_hk: 第 60 天發票款
+  col1_en: Factor
+  col1_zh: 保理
+  col1_zh_hk: 保理
+  col2_en: Keep invoice + bridge
+  col2_zh: 保留发票 + 过渡融资
+  col2_zh_hk: 保留發票 + 過渡融資
+  c11: HK$98,000
+  c12: HK$90,000
+  c21_en: HK$2,000, non-refundable
+  c21_zh: HK$2,000，不退还
+  c21_zh_hk: HK$2,000，不退還
+  c22_en: HK$3,000, in HK$93,000 repaid
+  c22_zh: HK$3,000，含在 93,000 还款内
+  c22_zh_hk: HK$3,000，含在 93,000 還款內
+  c31_en: HK$100,000 to the factor
+  c31_zh: HK$100,000 付给保理商
+  c31_zh_hk: HK$100,000 付給保理商
+  c32_en: HK$100,000 to the wholesaler
+  c32_zh: HK$100,000 付给批发商
+  c32_zh_hk: HK$100,000 付給批發商
+  footer_en: HK$90,000 needed today · unsigned
+  footer_zh: 今天需要 HK$90,000 · 尚未签约
+  footer_zh_hk: 今天需要 HK$90,000 · 尚未簽約
+  s1_en: >-
+    The wholesaler has delivered an order and issued an undisputed 100,000-dollar invoice, due on day
+    60. It needs 90,000 dollars today for separately approved working capital. The goods' costs are already
+    incurred and unchanged.
+  s1_zh: >-
+    批发商已经交货，开出一张十万港元的发票，第六十天到期，目前没有争议。它今天需要九万港元，用作另外批准的营运资金。货物成本已经发生，不受这个决定影响。
+  s1_zh_hk: >-
+    批發商已經交咗貨，開咗一張十萬港元嘅發票，第六十日到期，暫時冇爭議。佢今日要九萬港元，用嚟做另外批咗嘅營運資金。貨品成本已經發生咗，唔受呢個決定影響。
+  s2_en: >-
+    A factor offers 98,000 dollars today for the whole invoice, with no reserve held back. The 2,000-dollar
+    difference is the entire non-refundable charge. The headline says invoice purchase and collection
+    service, but the repayment clauses have not yet been read.
+  s2_zh: >-
+    保理商今天出九万八千港元，买下整张发票，不预留保留款。中间差的两千港元就是全部费用，不退还。标题写的是购买发票加代收服务，但详细的还款条款还没看。
+  s2_zh_hk: >-
+    保理商今日出九萬八千港元，買起成張發票，唔預留保留款。中間差嘅兩千港元就係全部費用，唔退。標題寫住購買發票加代收服務，但係詳細還款條款仲未睇。
+  s3_en: >-
+    Alternatively, it keeps the invoice and draws an approved 90,000-dollar bridge, repaying 93,000 dollars
+    on day 60, even if the customer does not pay. Other funded resources could cover repayment if the
+    customer fails to pay.
+  s3_zh: 另一条路是保留发票，提取已获批的九万港元过渡融资，第六十天还九万三千港元；就算客户不付款，也一样要还。如果客户不付，公司另有资金足以还款。
+  s3_zh_hk: 另一條路係留住發票，提取已經批咗嘅九萬港元過渡融資，第六十日還九萬三千港元；就算客戶唔俾錢，都一樣要還。如果客戶唔俾，公司另外有錢夠還。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Factor, or keep the invoice?
+  title_zh: 保理，还是保留发票？
+  title_zh_hk: 保理，定留住發票？
+  en: >-
+    Would you provisionally choose factoring, or keep the invoice with the bridge? Compare the known charges,
+    then name the repayment clause you must check before calling the invoice risk transferred. Pause and
+    vote.
+  zh: >-
+    你会暂时选择保理，还是保留发票、用过渡融资？先比较已知的费用，再说说：在宣布发票风险已经转出去之前，你必须先核对哪一条还款条款。请暂停，投个票。
+  zh_hk: 你暫時會揀保理，定係留住發票、用過渡融資？先比較已知嘅費用，再講吓：講發票風險已經轉走之前，你一定要先核對邊條還款條款。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Read the contract clauses
+  title_zh: 读清合同条款
+  title_zh_hk: 讀清合約條款
+  step1_en: >-
+    Full recourse: pay HK$100,000 on day 75
+  step1_zh: 完全追索：第 75 天付 HK$100,000
+  step1_zh_hk: 完全追索：第 75 天付 HK$100,000
+  step2_en: >-
+    Valid HK$20,000 credit: seller pays it
+  step2_zh: 有效扣减 HK$20,000：卖方补付
+  step2_zh_hk: 有效扣減 HK$20,000：賣方補付
+  step3_en: Fee HK$2,000 never refunded
+  step3_zh: HK$2,000 费用一概不退
+  step3_zh_hk: HK$2,000 費用一概不退
+  s1_en: >-
+    The contract makes the factoring fully recourse for customer credit failure. If the customer cannot
+    pay anything, the wholesaler must pay the factor 100,000 dollars on day 75, and takes the unpaid receivable
+    back. The fee is not refunded, and no later recovery is assumed.
+  s1_zh: >-
+    合同规定，客户信用出问题时，保理有完全追索权。客户一分都付不出，批发商就要在第七十五天付给保理商十万港元，收回这笔应收账款。费用不退，之后也收不回钱。
+  s1_zh_hk: >-
+    合約寫明，客戶信用出事嗰陣，保理有完全追索權。客戶一蚊都俾唔出，批發商就要喺第七十五日俾十萬港元保理商，收返呢筆應收賬。費用唔退，之後亦收唔返錢。
+  s2_en: >-
+    A separate dispute clause covers a valid 20,000-dollar credit for missing goods. Then the customer
+    pays the factor 80,000, and the wholesaler pays the factor the 20,000 adjustment on day 60. This is
+    not a default event.
+  s2_zh: 另一条争议条款处理有效的两万港元少货扣减。这时客户付给保理商八万港元，批发商在第六十天把两万港元调整款补给保理商。这不算信用违约。
+  s2_zh_hk: 另一條爭議條款處理有效嘅兩萬港元少貨扣減。咁樣客戶俾八萬港元保理商，批發商喺第六十日將兩萬港元調整款補俾保理商。呢個唔算信用違約。
+  s3_en: >-
+    If the invoice is paid in full, the factor receives 100,000 dollars and nothing more passes between
+    them. Assess all three scenarios separately; no probabilities are supplied.
+  s3_zh: 如果发票全额付清，保理商收到十万港元，双方之间就不再有其他收付。三个情景要分开评估，没有给出概率。
+  s3_zh_hk: 如果發票全數付清，保理商收到十萬港元，雙方之間就冇其他收付。三個情景要分開評估，冇畀機率。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Keep your funding choice?
+  title_zh: 还坚持原来的选择吗？
+  title_zh_hk: 仲維持原本的選擇嗎？
+  en: >-
+    After reading the recourse and dispute clauses, would you keep your funding choice? Calculate net
+    cash for each route under full payment, zero recovery and the 20,000-dollar adjustment, and name the
+    obligation that cash today has not removed. Pause and vote.
+  zh: >-
+    读完追索条款和争议条款之后，你还坚持原来的融资选择吗？分别按全额付款、完全收不回和两万港元调整，算出两条路的净现金，再指出今天拿到的现金并没有消除哪一项义务。请暂停，投个票。
+  zh_hk: >-
+    讀完追索條款同爭議條款之後，你仲會唔會維持原本嘅融資選擇？分別按全數付款、完全收唔返同兩萬港元調整，計出兩條路嘅淨現金，再講吓今日攞到嘅現金冇消除到邊項責任。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Trace cash, not the word sale
+  title_zh: 看现金，别看“出售”二字
+  title_zh_hk: 睇現金，唔好睇「出售」兩個字
+  step1_en: >-
+    Full payment: 98,000 vs 97,000
+  step1_zh: 全额付款：98,000 对 97,000
+  step1_zh_hk: 全數付款：98,000 對 97,000
+  step2_en: >-
+    Zero recovery: −2,000 vs −3,000
+  step2_zh: 完全收不回：−2,000 对 −3,000
+  step2_zh_hk: 完全收不回：−2,000 對 −3,000
+  step3_en: >-
+    Valid credit: 78,000 vs 77,000
+  step3_zh: 有效扣减：78,000 对 77,000
+  step3_zh_hk: 有效扣減：78,000 對 77,000
+  s1_en: >-
+    With full payment, factoring leaves 98,000 dollars. The bridge gives 90,000, plus 100,000 from the
+    customer, minus 93,000: 97,000. Factoring is 1,000 better.
+  s1_zh: 全额付款时，保理留下九万八千港元。过渡融资是九万，加客户付的十万，减还款九万三千，得九万七千。保理好一千港元。
+  s1_zh_hk: 全數付款嗰陣，保理留低九萬八千港元。過渡融資係九萬，加客戶俾嘅十萬，減還款九萬三千，得九萬七千。保理好一千港元。
+  s2_en: >-
+    With zero recovery, factoring is 98,000 minus 100,000, a net of minus 2,000. The bridge is 90,000
+    minus 93,000, or minus 3,000. Each route is 100,000 worse than with full payment.
+  s2_zh: 完全收不回时，保理是九万八千减十万，净额负两千。过渡融资是九万减九万三千，净额负三千。两条路都比全额付款时差了十万港元。
+  s2_zh_hk: 完全收唔返嗰陣，保理係九萬八千減十萬，淨額負兩千。過渡融資係九萬減九萬三千，淨額負三千。兩條路都比全數付款差咗十萬港元。
+  s3_en: >-
+    For the valid 20,000 credit, factoring leaves 78,000, and the bridge 90,000 plus 80,000 minus 93,000,
+    which is 77,000.
+  s3_zh: 如果是有效的两万港元扣减，保理留下七万八千；过渡融资是九万加八万减九万三千，得七万七千。
+  s3_zh_hk: 如果係有效嘅兩萬港元扣減，保理留低七萬八千；過渡融資係九萬加八萬減九萬三千，得七萬七千。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Recourse returns the credit risk
+  title_zh: 追索权把信用风险送回来
+  title_zh_hk: 追索權把信用風險送回來
+  step1_en: Factoring bought cash and collection
+  step1_zh: 保理买到的是现金和代收
+  step1_zh_hk: 保理買到的是現金和代收
+  step2_en: Not insurance against non-payment
+  step2_zh: 不是防客户不付款的保险
+  step2_zh_hk: 不是防客戶不付款的保險
+  step3_en: >-
+    Disputes and default: separate rules
+  step3_zh: 争议和违约各有规则
+  step3_zh_hk: 爭議和違約各有規則
+  s1_en: >-
+    Both routes still leave the seller exposed to the failed 100,000-dollar receivable. Factoring has
+    not insured it. Do not count the 100,000 repayment as a second loss without including the earlier
+    factor payment.
+  s1_zh: 两条路都仍然让卖方承担这笔落空的十万港元应收账款，保理并没有替它买保险。也不要把那十万港元还款当成第二笔损失，而忘了算保理商之前付的那笔钱。
+  s1_zh_hk: 兩條路都仍然要賣方承擔呢筆落空嘅十萬港元應收賬，保理冇幫佢買保險。亦唔好將嗰十萬港元還款當成第二筆損失，而唔計保理商之前俾嗰筆錢。
+  s2_en: >-
+    Factoring stays defensible here. It gives enough cash, saves 1,000 dollars in every stated scenario,
+    and funded resources can meet its repayment. It buys earlier cash and collection, not removal of credit
+    risk.
+  s2_zh: >-
+    在这里，保理仍然说得通：钱够用，每个情景都省一千港元，公司的备用资金也能应付它的还款。它买到的是提早到账的现金和代收服务，不是把信用风险拿走。
+  s2_zh_hk: >-
+    喺呢度，保理仍然講得通：錢夠用，每個情景都慳一千港元，公司嘅備用資金亦應付得到佢嘅還款。佢買到嘅係早啲到手嘅現金同代收服務，唔係攞走信用風險。
+  s3_en: >-
+    The factor's right to the 20,000 adjustment comes from the dispute clause, not from insolvency. Keep
+    separate reasons for non-payment, and read their separate rules.
+  s3_zh: 保理商要求两万港元调整的权利，来自争议条款，不是因为客户破产。客户不付款的原因要分开看，各自的规则也要分开读。
+  s3_zh_hk: 保理商要求兩萬港元調整嘅權利，係嚟自爭議條款，唔係因為客戶破產。客戶唔俾錢嘅原因要分開睇，各自嘅規則都要分開讀。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Before signing
+  title_zh: 签约之前
+  title_zh_hk: 簽約之前
+  en: >-
+    A seller unable to meet the day-75 obligation of 100,000 dollars would need a different arrangement,
+    less exposure or confirmed protection before signing. No default probability is given, so do not invent
+    an expected credit-loss premium.
+  zh: >-
+    如果卖方付不起第七十五天那十万港元，签约前就需要换一种安排、减少风险敞口，或者先落实保障。题目没有给违约概率，所以不要自己编一个预期信用损失的溢价。
+  zh_hk: >-
+    如果賣方俾唔起第七十五日嗰十萬港元，簽約前就要換一種安排、減少風險承擔，或者先落實保障。題目冇畀違約機率，所以唔好自己作一個預期信用損失嘅溢價。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Cash today ≠ risk transferred
+  title_zh: 拿到现金 ≠ 风险转走
+  title_zh_hk: 拿到現金 ≠ 風險轉走
+  q1_en: Read recourse before calling it a sale
+  q1_zh: 先读追索条款，再说是出售
+  q1_zh_hk: 先讀追索條款，再說是出售
+  q2_en: Separate disputes from default
+  q2_zh: 分开争议和违约
+  q2_zh_hk: 分開爭議和違約
+  s1_en: >-
+    Different contract terms, reserves, fees or recovery rights could reverse the recommendation.
+  s1_zh: 合同条款、保留款、费用或追偿权利不同，结论都可能反过来。
+  s1_zh_hk: 合約條款、保留款、費用或者追討權利唔同，結論都可能反轉。
+  s2_en: >-
+    Accounting derecognition and legal enforceability are outside this cash-flow exercise.
+  s2_zh: 会计上的终止确认，以及法律上能否执行，都不在这次现金流练习的范围内。
+  s2_zh_hk: 會計上嘅終止確認，同法律上執唔執行到，都唔喺今次現金流練習嘅範圍。
+  s3_en: >-
+    The wholesaler, factor, bridge and invoice are fictional, not an offer from any bank. Official scene
+    art is a teaching illustration only.
+  s3_zh: 批发商、保理商、过渡融资和发票都是虚构的，不是任何银行的要约。官方场景图只是教学插图。
+  s3_zh_hk: 批發商、保理商、過渡融資同發票都係虛構嘅，唔係任何銀行嘅要約。官方場景圖只係教學插圖。
+duration_target_s: 196

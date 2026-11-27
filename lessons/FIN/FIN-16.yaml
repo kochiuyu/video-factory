@@ -1,0 +1,301 @@
+id: FIN-16
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Two income streams. One bad month?
+title_zh: 两路收入，一个糟糕的月份？
+title_zh_hk: 兩路收入，一個糟糕的月份？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-16
+  kicker_en: FIN-16
+  kicker_zh: FIN-16
+  kicker_zh_hk: FIN-16
+  title_en: Two income streams. One bad month?
+  title_zh: 两路收入，一个糟糕的月份？
+  title_zh_hk: 兩路收入，一個糟糕的月份？
+  image: art/cash-moves-together-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 27 September 2024, Hong Kong's Investor and Financial Education Council explained that diversification
+    depends on how investments move together, not only on holding different names. This case applies that
+    idea to operating cash, not securities. Now you advise a fictional event-preparation business.
+  zh: >-
+    2024年9月27日，香港的投资者及理财教育委员会解释说，分散风险要看各项投资怎样一起变动，不只是持有不同的投资。这个案例把这个道理用在经营现金流上，而不是买证券。现在，你要为一家虚构的活动筹备企业出主意。
+  zh_hk: >-
+    2024年9月27號，香港嘅投資者及理財教育委員會解釋，分散風險要睇各項投資點樣一齊郁，唔只係揸住唔同嘅投資。呢個案例將呢個道理用喺經營現金流，唔係買證券。而家，你要幫一間虛構嘅活動籌備公司出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Ordinary months · HK$000
+  title_zh: 普通月份 · 千港元
+  title_zh_hk: 普通月份 · 千港元
+  row1_en: Scenario 1
+  row1_zh: 情景 1
+  row1_zh_hk: 情景 1
+  row2_en: Scenario 2
+  row2_zh: 情景 2
+  row2_zh_hk: 情景 2
+  row3_en: Scenario 3
+  row3_zh: 情景 3
+  row3_zh_hk: 情景 3
+  row4_en: Scenario 4
+  row4_zh: 情景 4
+  row4_zh_hk: 情景 4
+  col1_en: Existing
+  col1_zh: 现有
+  col1_zh_hk: 現有
+  col2_en: >-
+    A: event display
+  col2_zh: A：活动展示
+  col2_zh_hk: A：活動展示
+  col3_en: >-
+    B: digitising
+  col3_zh: B：文件数字化
+  col3_zh_hk: B：文件數碼化
+  c11: '40'
+  c12: '20'
+  c13: '50'
+  c21: '60'
+  c22: '30'
+  c23: '40'
+  c31: '80'
+  c32: '40'
+  c33: '30'
+  c41: '100'
+  c42: '50'
+  c43: '20'
+  footer_en: Each row 1/4 · combine within a row
+  footer_zh: 每行权重 1/4 · 同一行相加
+  footer_zh_hk: 每行權重 1/4 · 同一行相加
+  s1_en: >-
+    The business can add one contract portfolio with funded capacity. A adds event-display preparation;
+    B adds document digitisation. Both need the same setup outlay and management time, and neither changes
+    cash from the existing line.
+  s1_zh: >-
+    这家企业可以用现有、已备资金的产能，再加一个合约组合。A是活动展示筹备，B是文件数字化。两者的启动支出和管理时间相同，选哪个都不影响现有业务的现金。
+  s1_zh_hk: >-
+    呢間公司可以用現有、已經預咗錢嘅產能，再加一個合約組合。A係活動展示籌備，B係文件數碼化。兩個嘅開辦支出同管理時間一樣，揀邊個都唔影響現有業務嘅現金。
+  s2_en: >-
+    The owner wants steadier total monthly operating cash, not the biggest good month. Four ordinary scenarios
+    are weighted one quarter each. A common 100,000-dollar monthly commitment must be paid from the combined
+    total.
+  s2_zh: 老板想要的是每月经营现金总额更稳定，而不是某个月特别好。四个普通情景各占四分之一的权重。每月还有十万港元的共同支出，要从合计现金里支付。
+  s2_zh_hk: 老闆想要嘅係每月經營現金總數穩定啲，唔係某個月特別好。四個普通情景各佔四分之一權重。每個月仲有十萬港元嘅共同支出，要喺合計現金度俾。
+  s3_en: >-
+    Each row is one shared operating environment, so combine within a row. A and B each average 35,000
+    dollars, with the same standalone values: 20, 30, 40 and 50 thousand. Only their order against the
+    existing line differs.
+  s3_zh: >-
+    每一行代表同一个经营环境，所以要在同一行里相加。A和B平均都是三万五千港元，单独看的数值也一样：两万、三万、四万和五万。不同的只是它们跟现有业务的排列次序。
+  s3_zh_hk: >-
+    每一行代表同一個經營環境，所以要喺同一行入面相加。A同B平均都係三萬五千港元，單獨睇嘅數值都一樣：兩萬、三萬、四萬同五萬。唔同嘅只係佢哋同現有業務嘅排列次序。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: A or B for steadier months?
+  title_zh: A 还是 B，月份更稳？
+  title_zh_hk: A 定 B，月份更穩？
+  en: >-
+    Which addition better serves the owner's ordinary-month stability goal, A or B? Compare the combined
+    cash in each row, and explain why equal standalone averages and variability do not make the additions
+    equivalent. Pause and vote.
+  zh: >-
+    哪一个新增业务更符合老板希望普通月份现金稳定的目标，A还是B？比较每一行的合计现金，再解释：单独看平均数和波动都一样，为什么两者还不能等同。请暂停，投个票。
+  zh_hk: >-
+    邊一個新增業務更符合老闆想普通月份現金穩定嘅目標，A定B？比較每一行嘅合計現金，再解釋：單獨睇平均數同波動都一樣，點解兩個仲唔可以當係一樣。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A common shock
+  title_zh: 一次共同冲击
+  title_zh_hk: 一次共同衝擊
+  step1_en: >-
+    Stress month: existing 20 · add-on 10
+  step1_zh: 压力月：现有 20 · 新增 10
+  step1_zh_hk: 壓力月：現有 20 · 新增 10
+  step2_en: Common commitment still HK$100,000
+  step2_zh: 共同支出仍是 HK$100,000
+  step2_zh_hk: 共同支出仍是 HK$100,000
+  step3_en: >-
+    Ring-fenced reserve: HK$70,000
+  step3_zh: 圈定储备：HK$70,000
+  step3_zh_hk: 預留儲備：HK$70,000
+  s1_en: >-
+    A stress workshop identifies a prolonged building-access disruption affecting all three workflows.
+    In one stress month, the existing line brings 20,000 dollars, and either addition 10,000. The 100,000
+    commitment is unchanged.
+  s1_zh: >-
+    压力研讨发现，大楼可能长时间无法进出，三条业务都会受影响。在这一个压力月里，现有业务带来两万港元，任何一项新增业务带来一万。十万港元的共同支出不变。
+  s1_zh_hk: >-
+    壓力研討發現，大廈可能長時間出入唔到，三條業務都會受影響。喺呢一個壓力月，現有業務帶嚟兩萬港元，任何一項新增業務帶嚟一萬。十萬港元嘅共同支出唔變。
+  s2_en: >-
+    The owner has 70,000 dollars of unrestricted cash, ring-fenced outside operating needs, not borrowed.
+    It is the only funded contingency. No extra credit, insurance recovery or delayed obligation is promised.
+  s2_zh: >-
+    老板有七万港元不受限制的现金，已经从经营需要中单独圈出来，不是借来的。这是练习里唯一已备好的应急资金，没有承诺额外信贷、保险赔付，也不能推迟付款。
+  s2_zh_hk: >-
+    老闆有七萬港元唔受限制嘅現金，已經喺經營需要以外預留，唔係借返嚟。呢筆係練習入面唯一預備好嘅應急資金，冇承諾額外信貸、保險賠償，亦唔可以延遲俾錢。
+  s3_en: >-
+    No probability or duration beyond that single month is given. Do not add it as an equally likely fifth
+    row, or claim the four ordinary rows cover every month.
+  s3_zh: 除了这一个月，没有给出概率，也没有说会持续多久。不要把它当成同样可能的第五行，也不要说那四行普通情景已经涵盖了每一个月。
+  s3_zh_hk: 除咗呢一個月，冇畀機率，亦冇講會維持幾耐。唔好當佢係一樣咁可能嘅第五行，亦唔好話嗰四行普通情景已經包晒每一個月。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Protected from bad months?
+  title_zh: 能防住糟糕的月份吗？
+  title_zh_hk: 防得住糟糕的月份嗎？
+  en: >-
+    Would you keep your portfolio choice after the common-shock test? Calculate the one-month cash gap,
+    state what the reserve can and cannot cover, and give a more accurate claim than two income streams
+    protect us from a bad month. Pause and vote.
+  zh: >-
+    经过共同冲击的测试，你还会保留原来的选择吗？算出这个月的现金缺口，说明储备能覆盖什么、不能覆盖什么，再给出一句比两路收入能帮我们挡住糟糕月份更准确的说法。请暂停，投个票。
+  zh_hk: >-
+    經過共同衝擊嘅測試，你仲會唔會維持原本嘅選擇？計出呢個月嘅現金缺口，講吓儲備遮到啲咩、遮唔到啲咩，再畀一句比兩路收入幫我哋擋住糟糕月份更準確嘅講法。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Combine matched scenarios
+  title_zh: 把同一情景配对相加
+  title_zh_hk: 把同一情景配對相加
+  step1_en: >-
+    Existing + A: 60 · 90 · 120 · 150
+  step1_zh: 现有 + A：60 · 90 · 120 · 150
+  step1_zh_hk: 現有 + A：60 · 90 · 120 · 150
+  step2_en: >-
+    Existing + B: 90 · 100 · 110 · 120
+  step2_zh: 现有 + B：90 · 100 · 110 · 120
+  step2_zh_hk: 現有 + B：90 · 100 · 110 · 120
+  step3_en: Both average 105 · range 90 vs 30
+  step3_zh: 平均都是 105 · 极差 90 对 30
+  step3_zh_hk: 平均都是 105 · 全距 90 對 30
+  s1_en: Existing plus A gives 60, 90, 120 and 150 thousand dollars.
+  s1_zh: 现有业务加A，得到六万、九万、十二万和十五万港元。
+  s1_zh_hk: 現有業務加A，得到六萬、九萬、十二萬同十五萬港元。
+  s2_en: Existing plus B gives 90, 100, 110 and 120 thousand.
+  s2_zh: 现有业务加B，得到九万、十万、十一万和十二万港元。
+  s2_zh_hk: 現有業務加B，得到九萬、十萬、十一萬同十二萬港元。
+  s3_en: >-
+    Both average 105,000, but the ordinary range is 90,000 for A and 30,000 for B. The narrower spread
+    favours B for this goal. A rises and falls with the existing line; B moves against it.
+  s3_zh: 两者平均都是十万五千，但最高和最低之差，A是九万，B只有三万。B的波动范围更窄，更符合这个目标。A跟现有业务同涨同跌，B则反向变动。
+  s3_zh_hk: 兩個平均都係十萬五千，但最高同最低相差，A係九萬，B得三萬。B嘅波動範圍窄啲，更符合呢個目標。A同現有業務一齊升一齊跌，B就反方向郁。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Stable is not always enough
+  title_zh: 稳定不等于每月都够
+  title_zh_hk: 穩定不等於每月都夠
+  step1_en: >-
+    Minus 100: A −40 · −10 · 20 · 50
+  step1_zh: 减 100：A −40 · −10 · 20 · 50
+  step1_zh_hk: 減 100：A −40 · −10 · 20 · 50
+  step2_en: B −10 · 0 · 10 · 20 · both average +5
+  step2_zh: B −10 · 0 · 10 · 20 · 平均都 +5
+  step2_zh_hk: B −10 · 0 · 10 · 20 · 平均都 +5
+  step3_en: >-
+    Stress: 20 + 10 = 30 · gap HK$70,000
+  step3_zh: 压力：20 + 10 = 30 · 缺口 HK$70,000
+  step3_zh_hk: 壓力：20 + 10 = 30 · 缺口 HK$70,000
+  s1_en: >-
+    Co-movement asks whether weak cash arrives at the same time. Equal individual variability does not
+    set the variability of the sum. Real streams rarely offset this neatly.
+  s1_zh: 联动看的是现金差的时候会不会同时出现。各自的波动一样，并不能决定加起来之后的波动。现实中的现金流也很少抵消得这么整齐。
+  s1_zh_hk: 聯動睇嘅係現金差嗰陣會唔會同時出現。各自嘅波動一樣，唔決定加埋之後嘅波動。現實嘅現金流亦好少抵消得咁整齊。
+  s2_en: >-
+    After the 100,000 commitment, A leaves minus 40, minus 10, plus 20 and plus 50 thousand. B leaves
+    minus 10, zero, 10 and 20. Both average a 5,000 surplus, but B still needs contingency cash in its
+    weakest row.
+  s2_zh: >-
+    扣掉十万的共同支出，A剩下负四万、负一万、两万和五万；B剩下负一万、零、一万和两万。两者平均都有五千港元盈余，但B在最差的那一行仍然需要应急现金。
+  s2_zh_hk: 扣咗十萬嘅共同支出，A剩負四萬、負一萬、兩萬同五萬；B剩負一萬、零、一萬同兩萬。兩個平均都有五千港元盈餘，但B喺最差嗰行仲係要應急現金。
+  s3_en: >-
+    Under the disruption, either combination gives 20,000 plus 10,000, which is 30,000. Against 100,000
+    due, the gap is 70,000, exactly the reserve, leaving nothing in it afterward.
+  s3_zh: 遇上中断，任何一个组合都是两万加一万，等于三万。对比到期的十万，缺口是七万，正好用光那笔储备，之后一分不剩。
+  s3_zh_hk: 遇到中斷，任何一個組合都係兩萬加一萬，即係三萬。對比到期嘅十萬，缺口係七萬，啱啱用晒嗰筆儲備，之後一蚊都唔剩。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Say what is really protected
+  title_zh: 说清楚真正保住了什么
+  title_zh_hk: 講清楚真正保住了甚麼
+  en: >-
+    The reserve covers that one supplied month, not an indefinite closure or every unmodelled cost. A
+    more accurate claim: B steadies ordinary months, but a shared shock still needs funded contingency
+    cash.
+  zh: >-
+    这笔储备只能覆盖给出的那一个月，挡不住无限期停业，也挡不住所有没算进模型的成本。更准确的说法是：B让普通月份更稳定，但遇到共同冲击，仍然要靠已备好的应急资金。
+  zh_hk: >-
+    呢筆儲備只係遮到畀出嗰一個月，擋唔住無限期停業，亦擋唔住所有冇計入模型嘅成本。更準確嘅講法係：B令普通月份穩定啲，但遇到共同衝擊，仍然要靠預備好嘅應急資金。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Diversify, but keep a reserve
+  title_zh: 分散之外，仍要应急资金
+  title_zh_hk: 分散之外，仍要應急資金
+  q1_en: Check when weak months coincide
+  q1_zh: 看差的月份是否同时出现
+  q1_zh_hk: 看差的月份會否同時出現
+  q2_en: An average surplus is not monthly cash
+  q2_zh: 平均盈余不等于每月现金
+  q2_zh_hk: 平均盈餘不等於每月現金
+  s1_en: >-
+    On the given facts, B remains preferable for ordinary stability, but diversification does not replace
+    contingency funding.
+  s1_zh: 按给出的事实，B在普通月份的稳定性上仍然较好，但分散风险不能代替应急资金。
+  s1_zh_hk: 按畀出嘅事實，B喺普通月份嘅穩定性仍然較好，但分散風險代替唔到應急資金。
+  s2_en: >-
+    A multi-month disruption would need further funding and planning; none is assumed here.
+  s2_zh: 如果中断持续几个月，就需要更多资金和计划，这里没有假设有这些资金。
+  s2_zh_hk: 如果中斷維持幾個月，就要更多資金同計劃，呢度冇假設有呢啲資金。
+  s3_en: >-
+    The business, portfolios, cash amounts and stress event are fictional, not investment advice. Official
+    scene art is a teaching illustration only.
+  s3_zh: 企业、组合、现金金额和压力事件都是虚构的，不是投资建议。官方场景图只是教学插图。
+  s3_zh_hk: 公司、組合、現金金額同壓力事件都係虛構嘅，唔係投資建議。官方場景圖只係教學插圖。
+duration_target_s: 196

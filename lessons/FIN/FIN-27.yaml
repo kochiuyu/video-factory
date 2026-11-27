@@ -1,0 +1,286 @@
+id: FIN-27
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A credit limit. How much can we draw?
+title_zh: 信贷额度。我们能支取多少？
+title_zh_hk: 信貸額。我們能支取多少？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-27
+  kicker_en: FIN-27
+  kicker_zh: FIN-27
+  kicker_zh_hk: FIN-27
+  title_en: A credit limit. How much can we draw?
+  title_zh: 信贷额度。我们能支取多少？
+  title_zh_hk: 信貸額。我們能支取多少？
+  image: art/credit-limit-available-draw-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A March 2024 credit-agreement amendment filed by Universal Electronics shows that a revolving commitment
+    can be limited by a separate borrowing-base formula and eligibility rules. Now you are finance manager
+    of a fictional Hong Kong distributor.
+  zh: >-
+    Universal Electronics在2024年3月备案的一份信贷协议修订显示：循环信贷承诺，还可能受另一套借款基础公式和合格标准的限制。现在，你是香港一家虚构分销商的财务经理。
+  zh_hk: >-
+    Universal Electronics喺2024年3月存檔嘅一份信貸協議修訂顯示：循環信貸承諾，仲可能受另一套借款基礎公式同合資格準則限制。而家，你係香港一間虛構分銷商嘅財務經理。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two approved facilities
+  title_zh: 两项已获批的信贷
+  title_zh_hk: 兩項已獲批的信貸
+  row1_en: Headline limit
+  row1_zh: 名义上限
+  row1_zh_hk: 名義上限
+  row2_en: Total borrowing allowed
+  row2_zh: 允许的借款总额
+  row2_zh_hk: 容許的借款總額
+  row3_en: Rate / fee
+  row3_zh: 年利率 / 费用
+  row3_zh_hk: 年利率 / 費用
+  col1_en: Fixed
+  col1_zh: Fixed
+  col1_zh_hk: Fixed
+  col2_en: Asset
+  col2_zh: Asset
+  col2_zh_hk: Asset
+  c11: HK$800,000
+  c12: HK$900,000
+  c21_en: HK$800,000 committed
+  c21_zh: HK$800,000 已承诺
+  c21_zh_hk: HK$800,000 已承諾
+  c22_en: 80% eligible AR + 50% stock
+  c22_zh: 80% 合格应收 + 50% 存货
+  c22_zh_hk: 80% 合資格應收 + 50% 存貨
+  c31: 9% / HK$2,000
+  c32: 7% / HK$3,000
+  footer_en: Refinance 200,000 + need 550,000 new
+  footer_zh: 再融资 200,000 + 新增 550,000
+  footer_zh_hk: 再融資 200,000 + 新增 550,000
+  s1_en: >-
+    Two days before a planned draw, you compare two approved offers and must pick one. Either would refinance
+    200,000 dollars of existing borrowing, and the distributor needs exactly 550,000 of new cash, for
+    750,000 in total over 90 days.
+  s1_zh: >-
+    计划支取前两天，你在比较两项已获批的要约，只能选一项。两项都会把现有的二十万借款再融资，而分销商还需要正好五十五万的新现金，总借款七十五万，为期九十天。
+  s1_zh_hk: >-
+    計劃支取之前兩日，你比較緊兩項已獲批嘅要約，只可以揀一項。兩項都會將現有嘅二十萬借款再融資，而分銷商仲要啱啱好五十五萬嘅新現金，總借款七十五萬，為期九十日。
+  s2_en: >-
+    Fixed is a committed 800,000-dollar limit. Asset has a 900,000 ceiling, but total borrowing is capped
+    at 80 percent of eligible receivables plus 50 percent of eligible inventory. Receivables are eligible
+    only under 90 days from invoice.
+  s2_zh: >-
+    Fixed是已承诺的八十万港元额度。Asset名义上限九十万，但借款总额不能超过合格应收账款的百分之八十，加上合格存货的百分之五十。应收账款只有在发票开出后未满九十天才算合格。
+  s2_zh_hk: >-
+    Fixed係已承諾嘅八十萬港元額度。Asset名義上限九十萬，但借款總額唔可以超過合資格應收賬款嘅百分之八十，加合資格存貨嘅百分之五十。應收賬款要發票開出後未夠九十日先算合資格。
+  s3_en: >-
+    Eligible receivables are now 800,000 of a 1-million book total, and eligible inventory is 400,000.
+    Fixed charges 9 percent plus a 2,000 fee; Asset charges 7 percent plus 3,000. The final certificate
+    must use eligibility on the draw date.
+  s3_zh: >-
+    目前合格应收账款是八十万，账面总额一百万；合格存货四十万。Fixed年利率百分之九，另收两千费用；Asset年利率百分之七，另收三千。最终证明要按支取当天的合格情况计算。
+  s3_zh_hk: >-
+    而家合資格應收賬款係八十萬，賬面總數一百萬；合資格存貨四十萬。Fixed年利率百分之九，另收兩千費用；Asset年利率百分之七，另收三千。最後嘅證明要按支取當日嘅合資格情況計。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Fixed or Asset?
+  title_zh: Fixed 还是 Asset？
+  title_zh_hk: Fixed 還是 Asset？
+  en: >-
+    On the preliminary certificate, which facility would you prefer, and how much additional cash and
+    90-day total financing cost would each provide at the required borrowing? Pause and vote.
+  zh: 按初步的证明，你会选哪一项信贷？按所需的借款额，每一项能提供多少新增现金，九十天的融资总成本又是多少？请暂停，投个票。
+  zh_hk: 按初步嘅證明，你會揀邊一項信貸？按所需嘅借款額，每一項可以提供幾多新增現金，九十日嘅融資總成本又係幾多？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The draw-date certificate
+  title_zh: 支取日的最终证明
+  title_zh_hk: 支取日的最終證明
+  step1_en: HK$300,000 of receivables now 91 days
+  step1_zh: HK$300,000 应收账款已到 91 天
+  step1_zh_hk: HK$300,000 應收賬款已到 91 天
+  step2_en: >-
+    Eligible receivables: 800,000 → 500,000
+  step2_zh: 合格应收：800,000 → 500,000
+  step2_zh_hk: 合資格應收：800,000 → 500,000
+  step3_en: No waiver, extra collateral or delay
+  step3_zh: 没有豁免、额外抵押或延期
+  step3_zh_hk: 沒有豁免、額外抵押或延期
+  s1_en: >-
+    The final draw-date certificate arrives before either offer is accepted. 300,000 dollars of receivables
+    has moved from 89 to 91 days old without being paid, so it is now ineligible.
+  s1_zh: 两项要约都还没接受，支取日的最终证明就到了：有三十万港元的应收账款还没收回，账龄从八十九天变成九十一天，现在已经不合格。
+  s1_zh_hk: 兩項要約都未接受，支取日嘅最終證明就到咗：有三十萬港元嘅應收賬款仲未收到，賬齡由八十九日變咗九十一日，而家已經唔合資格。
+  s2_en: >-
+    Book receivables stay at one million, but eligible receivables fall to 500,000. Inventory and the
+    other tests are unchanged.
+  s2_zh: 账面应收账款仍是一百万，但合格应收账款降到五十万。存货和其他条件都不变。
+  s2_zh_hk: 賬面應收賬款仍然係一百萬，但合資格應收賬款跌到五十萬。存貨同其他條件都冇變。
+  s3_en: >-
+    No waiver, overadvance, extra collateral, second lender or delayed payment is available. This is not
+    a write-off or a covenant breach; it simply follows Asset's stated formula.
+  s3_zh: 这次支取没有豁免、超额放款、额外抵押、第二家贷款人，也不能延期付款。这不是坏账核销，也不是违反契约，只是按Asset写明的公式计算的结果。
+  s3_zh_hk: >-
+    今次支取冇豁免、超額放款、額外抵押、第二間貸款人，亦唔可以延遲付款。呢個唔係壞賬撇銷，亦唔係違反契諾，只係按Asset寫明嘅公式計出嚟嘅結果。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which offer can fund it?
+  title_zh: 哪项能足额支取？
+  title_zh_hk: 哪項能足額支取？
+  en: >-
+    After the aging change, how much new cash is drawable under each facility, what shortfall would Asset
+    leave, and which offer can fund the required payment? Pause and vote.
+  zh: 账龄变化之后，每一项信贷各能支取多少新现金？Asset会留下多少缺口？哪一项能拨出所需的付款？请暂停，投个票。
+  zh_hk: 賬齡變咗之後，每一項信貸各可以支取幾多新現金？Asset會留低幾多缺口？邊一項可以撥出所需嘅付款？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Base first, then subtract usage
+  title_zh: 先算基础，再减已用
+  title_zh_hk: 先算基礎，再減已用
+  step1_en: >-
+    Asset: 640,000 + 200,000 = 840,000 base
+  step1_zh: Asset：640,000 + 200,000 = 840,000
+  step1_zh_hk: Asset：640,000 + 200,000 = 840,000
+  step2_en: >-
+    New cash: Asset 640,000 · Fixed 600,000
+  step2_zh: 新现金：Asset 640,000 · Fixed 600,000
+  step2_zh_hk: 新現金：Asset 640,000 · Fixed 600,000
+  step3_en: >-
+    Cost: Fixed 18,875 · Asset 16,125
+  step3_zh: 成本：Fixed 18,875 · Asset 16,125
+  step3_zh_hk: 成本：Fixed 18,875 · Asset 16,125
+  s1_en: >-
+    At first, Asset's borrowing base is 80 percent of 800,000, which is 640,000, plus 50 percent of 400,000,
+    which is 200,000: 840,000 in total, below its 900,000 ceiling.
+  s1_zh: 起初，Asset的借款基础是八十万的百分之八十，即六十四万，加上四十万的百分之五十，即二十万，合计八十四万，低于九十万的上限。
+  s1_zh_hk: 起初，Asset嘅借款基礎係八十萬嘅百分之八十，即係六十四萬，加四十萬嘅百分之五十，即係二十萬，合共八十四萬，低過九十萬嘅上限。
+  s2_en: >-
+    After refinancing 200,000, Asset offers 640,000 of new cash, and Fixed offers 600,000. Both cover
+    the 550,000 need, but neither makes its headline limit available as new cash.
+  s2_zh: 扣掉再融资的二十万，Asset能提供六十四万新现金，Fixed能提供六十万。两项都够五十五万的需要，但都不能把名义上限全部当新现金用。
+  s2_zh_hk: 扣咗再融資嘅二十萬，Asset可以提供六十四萬新現金，Fixed可以提供六十萬。兩項都夠五十五萬嘅需要，但都唔可以將名義上限全部當新現金用。
+  s3_en: >-
+    On 750,000 for 90 days, Fixed costs 16,875 interest plus its fee, 18,875 in total. Asset costs 13,125
+    plus its fee, 16,125. Asset is 2,750 cheaper, but only if eligibility holds on the draw date.
+  s3_zh: >-
+    七十五万借九十天，Fixed利息加费用共一万八千八百七十五，Asset共一万六千一百二十五。Asset便宜两千七百五十，前提是支取当天仍然合格。
+  s3_zh_hk: >-
+    七十五萬借九十日，Fixed利息加費用共一萬八千八百七十五，Asset共一萬六千一百二十五。Asset平兩千七百五十，前提係支取當日仍然合資格。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: The balance sheet did not shrink
+  title_zh: 资产负债表并没有缩小
+  title_zh_hk: 資產負債表並沒有縮小
+  step1_en: >-
+    Asset base: 400,000 + 200,000 = 600,000
+  step1_zh: Asset 基础：400,000 + 200,000 = 600,000
+  step1_zh_hk: Asset 基礎：400,000 + 200,000 = 600,000
+  step2_en: New cash 400,000 → short 150,000
+  step2_zh: 新现金 400,000 → 缺 150,000
+  step2_zh_hk: 新現金 400,000 → 缺 150,000
+  step3_en: >-
+    Fixed: draw 550,000, 50,000 unused
+  step3_zh: Fixed：支取 550,000，余 50,000
+  step3_zh_hk: Fixed：支取 550,000，餘 50,000
+  s1_en: >-
+    On the draw date, Asset's base becomes 80 percent of 500,000, which is 400,000, plus 200,000 from
+    inventory: 600,000.
+  s1_zh: 到了支取日，Asset的基础变成五十万的百分之八十，即四十万，加上存货的二十万，共六十万。
+  s1_zh_hk: 到支取日，Asset嘅基礎變成五十萬嘅百分之八十，即係四十萬，加存貨嘅二十萬，共六十萬。
+  s2_en: >-
+    Subtract the existing 200,000 and only 400,000 of new cash is available, a 150,000 shortfall. The
+    300,000 eligibility loss cut the base by 240,000, though book assets did not change.
+  s2_zh: 减去现有的二十万，只剩四十万新现金，缺口十五万。三十万应收账款失去合格资格，让基础少了二十四万，可是账面资产一点没变。
+  s2_zh_hk: 減咗現有嘅二十萬，得返四十萬新現金，缺口十五萬。三十萬應收賬款唔再合資格，令基礎少咗二十四萬，但賬面資產一啲都冇變。
+  s3_en: >-
+    Fixed still provides up to 600,000. Draw only the 550,000 needed, bringing total debt to 750,000 and
+    leaving 50,000 unused.
+  s3_zh: Fixed仍然最多能提供六十万。只支取需要的五十五万，总借款七十五万，还有五万没用。
+  s3_zh_hk: Fixed仍然最多可以提供六十萬。淨係支取需要嘅五十五萬，總借款七十五萬，仲有五萬未用。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Choose funding you can draw
+  title_zh: 选能真正支取的资金
+  title_zh_hk: 選能真正支取的資金
+  en: >-
+    Choose Fixed under the supplied constraints. Asset's lower rate cannot fund the full payment, and
+    no authorised substitute exists. Do not fabricate eligibility, extend invoice dates, or treat the
+    advertised ceiling as a waiver.
+  zh: >-
+    在给定的条件下，应该选Fixed。Asset利率较低，却拨不出全部所需的钱，而且没有获授权的替代办法。不能虚报合格资产、改动发票日期，也不能把宣传的上限当成豁免。
+  zh_hk: >-
+    喺題目嘅條件下，應該揀Fixed。Asset利率低啲，但撥唔出全部所需嘅錢，又冇獲授權嘅替代辦法。唔可以虛報合資格資產、改發票日期，亦唔可以將宣傳嘅上限當成豁免。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: A ceiling is not drawable cash
+  title_zh: 名义上限不等于可支取现金
+  title_zh_hk: 名義上限不等於可支取現金
+  q1_en: Check the borrowing base on the draw date
+  q1_zh: 按支取日核对借款基础
+  q1_zh_hk: 按支取日核對借款基礎
+  q2_en: Compare prices only for feasible draws
+  q2_zh: 只在可行的支取之间比价
+  q2_zh_hk: 只在可行的支取之間比價
+  s1_en: >-
+    Asset-based borrowing is tied to eligible collateral, not simply total assets on the balance sheet.
+  s1_zh: 以资产为基础的借款，看的是合格的抵押资产，而不只是资产负债表上的总资产。
+  s1_zh_hk: 以資產為基礎嘅借款，睇嘅係合資格嘅抵押資產，唔只係資產負債表上面嘅總資產。
+  s2_en: >-
+    The public filing illustrates contract structure only; it is not the contract or pricing used here.
+  s2_zh: 那份公开备案只用来说明合同结构，不是这里用到的合同或价格。
+  s2_zh_hk: 嗰份公開存檔只係用嚟說明合約結構，唔係呢度用到嘅合約或者價錢。
+  s3_en: >-
+    Every facility, rate and collateral amount here is fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 这里的每一项信贷、利率和抵押金额都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 呢度每一項信貸、利率同抵押金額都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

@@ -1,0 +1,282 @@
+id: FIN-19
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The best project. The best set of projects?
+title_zh: 最好的项目。最好的一组项目？
+title_zh_hk: 最好的項目。最好的一組項目？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-19
+  kicker_en: FIN-19
+  kicker_zh: FIN-19
+  kicker_zh_hk: FIN-19
+  title_en: The best project. The best set of projects?
+  title_zh: 最好的项目。最好的一组项目？
+  title_zh_hk: 最好的項目。最好的一組項目？
+  image: art/best-project-best-package-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 13 December 2024, Hong Kong announced that the Technology Voucher Programme would stop accepting
+    applications after 31 December 2024. That is context for reviewing investment funding, not proof that
+    any firm lost an award. Now you advise a fictional stationery wholesaler, with no subsidy assumed.
+  zh: >-
+    2024年12月13日，香港宣布科技券计划在2024年12月31日之后停止接受申请。这只是审视投资资金时的背景，不能证明哪家公司失去了已承诺的资助。现在，你要为一家虚构的文具批发商出主意，这里不假设有任何补贴。
+  zh_hk: >-
+    2024年12月13號，香港宣布科技券計劃喺2024年12月31號之後停止接受申請。呢個只係檢視投資資金嘅背景，唔證明有邊間公司冇咗已承諾嘅資助。而家，你要幫一間虛構文具批發商出主意，呢度唔假設有任何資助。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Indivisible projects · HK$000
+  title_zh: 不可分割的项目 · 千港元
+  title_zh_hk: 不可分割的項目 · 千港元
+  row1_en: >-
+    A: order processing
+  row1_zh: A：订单处理升级
+  row1_zh_hk: A：訂單處理升級
+  row2_en: >-
+    B: picking workflow
+  row2_zh: B：拣货流程升级
+  row2_zh_hk: B：揀貨流程升級
+  row3_en: >-
+    C: dispatch workflow
+  row3_zh: C：发货流程升级
+  row3_zh_hk: C：發貨流程升級
+  col1_en: Outlay now
+  col1_zh: 现在支出
+  col1_zh_hk: 現在支出
+  col2_en: Supplied NPV
+  col2_zh: 所给净现值
+  col2_zh_hk: 所給淨現值
+  c11: '70'
+  c12: '35'
+  c21: '50'
+  c22: '24'
+  c31: '50'
+  c32: '24'
+  footer_en: >-
+    Fixed envelope: HK$100,000
+  footer_zh: 固定额度：HK$100,000
+  footer_zh_hk: 固定額度：HK$100,000
+  s1_en: >-
+    The wholesaler has a fixed, board-approved envelope of 100,000 dollars for discretionary improvements.
+    Core operations, safety, wages and committed services are funded separately, and no extra borrowing
+    or budget transfer is available.
+  s1_zh: >-
+    这家批发商有一笔经董事会批准的固定额度，十万港元，用于自主决定的改进项目。核心经营、安全、工资和已承诺的服务另有资金，也不能额外借钱或调用别的预算。
+  s1_zh_hk: >-
+    呢間批發商有一筆董事會批咗嘅固定額度，十萬港元，用嚟做自己揀嘅改善項目。核心營運、安全、人工同已承諾嘅服務另外有錢，亦唔可以額外借錢或者調用其他預算。
+  s2_en: >-
+    Three projects are ready, and each is indivisible: fund the whole outlay or don't start. They can
+    run together without conflict, and their net present values add up.
+  s2_zh: 有三个项目已经准备好，每个都不可分割：要么全额拨款，要么不做。它们可以同时进行，互不冲突，净现值也可以直接相加。
+  s2_zh_hk: 有三個項目已經準備好，每個都唔可以拆開：一係全數撥款，一係唔做。佢哋可以同時做，互不衝突，淨現值亦可以直接加埋。
+  s3_en: >-
+    The NPVs already deduct the outlay and all relevant cash flows, at a consistent risk-adjusted rate.
+    The goal is the greatest total NPV within the envelope; unspent cash adds zero NPV.
+  s3_zh: 这些净现值已经扣除初始支出和所有相关现金流，用的是一致的风险调整折现率。目标是在额度内让净现值总和最大；没花的钱，增量净现值是零。
+  s3_zh_hk: 呢啲淨現值已經扣除初始支出同所有相關現金流，用嘅係一致嘅風險調整折現率。目標係喺額度內令淨現值總和最大；冇用嘅錢，增量淨現值係零。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which projects for HK$100,000?
+  title_zh: 十万港元给哪些项目？
+  title_zh_hk: 十萬港元俾邊啲項目？
+  en: >-
+    Which feasible project or combination would you fund from 100,000 dollars? Explain why the project
+    with the highest individual NPV, or NPV per dollar, need not give the best whole-budget result. Pause
+    and vote.
+  zh: >-
+    这十万港元，你会拨给哪个可行的项目，或者哪一组项目？请解释：为什么单独净现值最高，或者每元净现值最高的项目，不一定能让整笔预算发挥最好的结果。请暂停，投个票。
+  zh_hk: >-
+    呢十萬港元，你會撥俾邊個可行嘅項目，或者邊一組項目？解釋吓：點解單獨淨現值最高，或者每蚊淨現值最高嘅項目，唔一定令成筆預算發揮得最好。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Option D, and an A–D interaction
+  title_zh: 选项 D，以及 A 与 D 的协同
+  title_zh_hk: 選項 D，以及 A 與 D 的協同
+  step1_en: >-
+    D: outlay 30 · NPV 3 (HK$000)
+  step1_zh: D：支出 30 · 净现值 3（千港元）
+  step1_zh_hk: D：支出 30 · 淨現值 3（千港元）
+  step2_en: >-
+    A with D: extra NPV HK$20,000
+  step2_zh: A 与 D 同做：额外净现值 HK$20,000
+  step2_zh_hk: A 與 D 同做：額外淨現值 HK$20,000
+  step3_en: No other pair interacts
+  step3_zh: 其他组合没有协同
+  step3_zh_hk: 其他組合沒有協同
+  s1_en: >-
+    Before any approval, the team offers a fourth indivisible option: D, a reporting module, costing 30,000
+    dollars with a standalone NPV of 3,000. It can run alone or with any project.
+  s1_zh: >-
+    还没批准任何项目之前，团队提出第四个不可分割的选项：D，一个报表模块，支出三万港元，单独的净现值是三千港元。它可以单独做，也可以和任何项目一起做。
+  s1_zh_hk: >-
+    未批任何項目之前，團隊提出第四個唔可以拆開嘅選項：D，一個報表模組，支出三萬港元，單獨淨現值係三千港元。佢可以自己做，亦可以同任何項目一齊做。
+  s2_en: >-
+    An independent internal review supports an extra 20,000 dollars of NPV only when A and D are both
+    implemented, net of all integration and support costs, with no extra initial cash. It is not already
+    counted in A or D.
+  s2_zh: >-
+    一份独立的内部复核确认，只有A和D一起实施，才会额外多出两万港元净现值，这已经扣除了所有整合和支持成本，也不需要额外的初始现金。这部分并没有算进A或D里面。
+  s2_zh_hk: >-
+    一份獨立嘅內部覆核確認，只有A同D一齊做，先會額外多兩萬港元淨現值，呢個已經扣除咗所有整合同支援成本，亦唔使額外初始現金。呢部分冇計入A或者D。
+  s3_en: >-
+    No other pair interacts. Treat the 20,000 as a reviewed forecast, not a guaranteed synergy. The owner
+    wants to know the interaction value at which the recommendation would reverse.
+  s3_zh: 其他组合都没有这种协同。这两万港元要当作复核过的预测，不是保证会有的协同效应。老板想知道，协同价值降到多少，建议就会反过来。
+  s3_zh_hk: 其他組合都冇呢種協同。呢兩萬港元要當係覆核過嘅預測，唔係保證有嘅協同效應。老闆想知，協同價值跌到幾多，建議就會反轉。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which package now?
+  title_zh: 现在选哪一组？
+  title_zh_hk: 而家揀邊一組？
+  en: >-
+    With D and the reviewed interaction available, which package would you choose now? Show its total
+    outlay and NPV, and find how small the extra interaction value could become before your recommendation
+    changes. Pause and vote.
+  zh: 有了D和这份复核过的协同效应，你现在会选哪一组？写出它的总支出和净现值，再算出协同价值最低能降到多少，你的建议才会改变。请暂停，投个票。
+  zh_hk: 有咗D同呢份覆核過嘅協同效應，你而家會揀邊一組？寫出佢嘅總支出同淨現值，再計出協同價值最低可以跌到幾多，你嘅建議先會改。暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Compare feasible sets, not ranks
+  title_zh: 比较可行组合，不只排名
+  title_zh_hk: 比較可行組合，不只排名
+  step1_en: >-
+    A: best NPV 35, best per dollar 0.50
+  step1_zh: A：净现值 35 最高，每元 0.50
+  step1_zh_hk: A：淨現值 35 最高，每蚊 0.50
+  step2_en: >-
+    A alone leaves 30: nothing else fits
+  step2_zh: 只做 A 剩 30：其他都放不下
+  step2_zh_hk: 只做 A 剩 30：其他都放不下
+  step3_en: >-
+    B + C: outlay 100 · NPV 48
+  step3_zh: B + C：支出 100 · 净现值 48
+  step3_zh_hk: B + C：支出 100 · 淨現值 48
+  s1_en: >-
+    A has the highest standalone NPV, 35,000 dollars, and the highest NPV per dollar: 35 over 70 is 0.50,
+    versus 24 over 50, or 0.48, for B or C.
+  s1_zh: A的单独净现值最高，三万五千港元，每元支出的净现值也最高：三十五除以七十是零点五，B或C是二十四除以五十，零点四八。
+  s1_zh_hk: A嘅單獨淨現值最高，三萬五千港元，每蚊支出嘅淨現值都最高：三十五除七十係零點五，B或者C係二十四除五十，零點四八。
+  s2_en: >-
+    But A leaves only 30,000, too little for B or C. A plus B or C would cost 120,000, which is infeasible.
+  s2_zh: 但做了A只剩三万，B和C都做不了。A再加B或C要十二万，超出额度，做不到。
+  s2_zh_hk: 但做咗A就淨係剩三萬，B同C都做唔到。A再加B或者C要十二萬，超出額度，做唔到。
+  s3_en: B plus C uses exactly 100,000 and adds 48,000 of NPV, beating A alone.
+  s3_zh: B加C刚好用完十万，净现值合计四万八千，比只做A更好。
+  s3_zh_hk: B加C啱啱用晒十萬，淨現值合共四萬八千，好過淨做A。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: A complement changes the package
+  title_zh: 互补项目改变整组选择
+  title_zh_hk: 互補項目改變整組選擇
+  step1_en: >-
+    A + D: 100 → 35 + 3 + 20 = 58
+  step1_zh: A + D：100 → 35 + 3 + 20 = 58
+  step1_zh_hk: A + D：100 → 35 + 3 + 20 = 58
+  step2_en: >-
+    B + D or C + D: 80 → 27
+  step2_zh: B + D 或 C + D：80 → 27
+  step2_zh_hk: B + D 或 C + D：80 → 27
+  step3_en: >-
+    Tie: 38 + x = 48 → x = 10
+  step3_zh: 打平：38 + x = 48 → x = 10
+  step3_zh_hk: 打和：38 + x = 48 → x = 10
+  s1_en: >-
+    A plus D uses 70,000 plus 30,000, which is 100,000. Its NPV is 35,000 plus 3,000 plus 20,000: 58,000,
+    beating B plus C at 48,000.
+  s1_zh: A加D用七万加三万，即十万。净现值是三万五千加三千加两万，等于五万八千，胜过B加C的四万八千。
+  s1_zh_hk: A加D用七萬加三萬，即係十萬。淨現值係三萬五千加三千加兩萬，即係五萬八千，贏咗B加C嘅四萬八千。
+  s2_en: >-
+    B or C plus D costs 80,000 and yields 27,000. Any three projects exceed the budget. The best package
+    changes because of the new option and its interaction, not because A's NPV was wrong.
+  s2_zh: B或C加D要八万，净现值两万七千。任何三个项目放在一起都超出预算。最佳组合改变，是因为多了D和它的协同效应，不是因为A原来的净现值算错了。
+  s2_zh_hk: B或者C加D要八萬，淨現值兩萬七千。任何三個項目擺埋一齊都超出預算。最好嘅組合改變，係因為多咗D同佢嘅協同效應，唔係因為A原本嘅淨現值計錯。
+  s3_en: >-
+    Without the interaction, A plus D yields 38,000. If the interaction is x, the tie is 38,000 plus x
+    equals 48,000, so x is 10,000. Above that, choose A plus D; below it, B plus C.
+  s3_zh: 没有协同效应的话，A加D只有三万八千。设协同价值为x，打平时三万八千加x等于四万八千，所以x是一万。高于一万选A加D，低于一万就选B加C。
+  s3_zh_hk: 冇協同效應嘅話，A加D得三萬八千。設協同價值係x，打和嗰陣三萬八千加x等於四萬八千，所以x係一萬。高過一萬揀A加D，低過一萬就揀B加C。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Test the synergy first
+  title_zh: 先检验协同效应
+  title_zh_hk: 先檢驗協同效應
+  en: >-
+    Before committing, verify the integration, who is accountable for the benefit, and how it will be
+    monitored. Do not count the same saving twice.
+  zh: 承诺之前，要先核实整合能不能做成、谁对这份效益负责，以及之后怎样跟进监测。同一笔节省，不能算两次。
+  zh_hk: 承諾之前，要先核實整合做唔做得成、邊個對呢份效益負責，同之後點樣跟進監察。同一筆節省，唔可以計兩次。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Choose the best set
+  title_zh: 选最好的组合
+  title_zh_hk: 選最好的組合
+  q1_en: Rank feasible packages within the budget
+  q1_zh: 在预算内比较可行组合
+  q1_zh_hk: 在預算內比較可行組合
+  q2_en: Find the break-even interaction
+  q2_zh: 算出协同价值的临界点
+  q2_zh_hk: 算出協同價值的臨界點
+  s1_en: >-
+    Indivisible projects and a fixed budget can make the top-ranked project the wrong first pick.
+  s1_zh: 项目不可分割、预算又固定时，排名第一的项目也可能是错误的首选。
+  s1_zh_hk: 項目唔可以拆開、預算又固定嗰陣，排第一嘅項目都可能係錯嘅首選。
+  s2_en: >-
+    The Technology Voucher Programme change is context only; no subsidy is assumed.
+  s2_zh: 科技券计划的变化只是背景，这里不假设有任何补贴。
+  s2_zh_hk: 科技券計劃嘅變化只係背景，呢度唔假設有任何資助。
+  s3_en: >-
+    The wholesaler, projects and NPV figures are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 批发商、项目和净现值数字都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 批發商、項目同淨現值數字都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

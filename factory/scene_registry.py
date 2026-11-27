@@ -1205,6 +1205,13 @@ def count_event(beat: dict) -> tuple[int, int] | None:
             return None
         tens, ones = divmod(count, 10)
         return 0, tens + ones
+    if scene == "row_match":
+        if str(beat.get("part") or "").strip() != "gap":
+            return None
+        a, b = _as_int(beat.get("a")), _as_int(beat.get("b"))
+        if a is None or b is None or a == b:
+            return None
+        return 0, abs(a - b)
     if scene == "lesson_takeaway":
         # A ten-frame recap counts the three ones on its last line
         # ("Find the ten first. Then count the rest.").
@@ -1659,7 +1666,56 @@ class PlaceSum(SceneKind):
         return {"op": str(beat.get("op") or "add").strip(), "values": _place_values(beat)}
 
 
+
+_ROW_PARTS = ("rows", "match", "gap", "hold", "equal")
+
+
+class RowMatch(SceneKind):
+    """Match two rows, then count the counters with no partner.
+
+    ``a`` and ``b`` are 0 to 12. ``part`` is ``rows``, ``match``, ``gap``,
+    ``hold``, or ``equal``. ``equal`` needs the same count on both rows.
+    ``gap`` counts the unmatched counters, one landing per spoken number.
+    """
+
+    name = "row_match"
+    steps = 1
+
+    def problems(self, beat: dict) -> list[str]:
+        found = []
+        a, b = _as_int(beat.get("a")), _as_int(beat.get("b"))
+        if a is None or b is None or not (0 <= a <= 12 and 0 <= b <= 12):
+            found.append("row_match needs a and b from 0 to 12.")
+        part = str(beat.get("part") or "").strip()
+        if part not in _ROW_PARTS:
+            found.append("row_match part must be rows, match, gap, hold, or equal.")
+        elif part == "equal" and a is not None and b is not None and a != b:
+            found.append("row_match part equal needs the same count on both rows.")
+        elif part == "gap" and a is not None and b is not None and a == b:
+            found.append("row_match part gap needs one row with counters left over.")
+        return found
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        code = label_lang(lang)
+        titles = {"en": "How many more?", "zh": "多多少？", "zh_hk": "多幾多呀？"}
+        return {
+            "title": titles.get(code, titles["en"]),
+            "a": int(beat.get("a")),
+            "b": int(beat.get("b")),
+            "part": str(beat.get("part") or "").strip(),
+        }
+
+    def parameters(self, beat: dict) -> dict:
+        return {
+            "a": int(beat.get("a")),
+            "b": int(beat.get("b")),
+            "part": str(beat.get("part") or "").strip(),
+        }
+
+
+
 register(EstimateGroup())
+register(RowMatch())
 register(PlaceSum())
 register(LessonHook())
 register(LessonTakeaway())

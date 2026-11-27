@@ -4199,7 +4199,13 @@ def _scene_types() -> dict:
                     addend_digits.append(tens_g)
                     tagged[(i, "tens")] = tens_g
                 if i:
-                    sign = glyph("−" if op == "sub" else "+")
+                    if op == "sub":
+                        sign = Line(
+                            [-step * 0.32, 0, 0], [step * 0.32, 0, 0],
+                            color=NAVY, stroke_width=6,
+                        )
+                    else:
+                        sign = glyph("+")
                     sign.move_to([sign_x, y, 0])
                     signs.append(sign)
                 y -= row

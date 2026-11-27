@@ -2354,6 +2354,22 @@ def _scene_types() -> dict:
                 group.move_to(UP * 0)
                 if float(group.get_bottom()[1]) < bot_lim:
                     group.shift(UP * (bot_lim - float(group.get_bottom()[1])))
+            elif portrait:
+                # A one-line English title wider than the frame would shrink
+                # the picture with it. Wrap that title onto two centred lines
+                # and leave the picture at the size a short title keeps.
+                # 16:9 stays on the settle path below.
+                raw = str(labels.get("title") or "")
+                left_lim, right_lim, _, _ = _safe_limits()
+                cap = (right_lim - left_lim) * 0.96
+                if " " in raw and float(title.width) > cap:
+                    ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+                    unit = ph / float(config.frame_height)
+                    floor_h = (52.0 * (ph / 1920.0)) / unit
+                    title = self._parts_hook_title(raw, latin, cjk, cap, floor_h, force_wrap=True)
+                title.next_to(kicker, DOWN, buff=0.28)
+                cue.next_to(title, DOWN, buff=0.4)
+                settle(VGroup(kicker, title, cue))
             else:
                 if motif == "ordinal":
                     # Twice the old token row. A wide title is what the frame scales to,
@@ -2448,7 +2464,7 @@ def _scene_types() -> dict:
                 group.shift(DOWN * (float(group.get_top()[1]) - top_lim))
             return kicker, title, cue
 
-        def _parts_hook_title(self, text: str, latin: str, cjk: str, cap: float, floor_h: float):
+        def _parts_hook_title(self, text: str, latin: str, cjk: str, cap: float, floor_h: float, force_wrap: bool = False):
             raw = (text or "").strip() or " "
             one = styled(raw, latin, cjk, 54)
             if float(one.width) <= 0:
@@ -2456,7 +2472,9 @@ def _scene_types() -> dict:
             fill = cap / float(one.width)
             words = raw.split()
             # Two centred lines when one full-width line would sit near the floor.
-            if len(words) >= 2 and float(one.height) * fill < floor_h * 1.5:
+            # force_wrap is the counters / ten-frame / track case: any English
+            # title wider than the frame wraps, so the picture is not scaled down.
+            if len(words) >= 2 and (force_wrap or float(one.height) * fill < floor_h * 1.5):
                 best = None
                 for cut in range(1, len(words)):
                     left = styled(" ".join(words[:cut]), latin, cjk, 54)
@@ -2610,7 +2628,33 @@ def _scene_types() -> dict:
             cx = (float(grid["left"]) + float(grid["right"])) / 2.0
             cy = float(grid["top"]) - band / 2.0
             heading.move_to([cx, cy, 0])
+            self._clear_heading_bar(heading, grid)
             self._placed_heading = heading
+
+        def _clear_heading_bar(self, heading, grid: dict) -> None:
+            """In 9:16, keep a two-line heading under the gold progress bar.
+
+            The bar is 8px at the top of the frame. A heading that already
+            clears it, including a one-line title, stays where it is. A heading
+            that would touch the bar is lowered, and scaled only if it would
+            otherwise cover the first row.
+            """
+            ph = int(getattr(config, "pixel_height", 0) or 0) or 1080
+            pw = int(getattr(config, "pixel_width", 0) or 0) or 1920
+            if ph <= pw:
+                return
+            inset_px = 36.0
+            unit = ph / float(grid["fh"])
+            top_limit = float(grid["top"]) - inset_px / unit
+            if float(heading.get_top()[1]) <= top_limit + 0.01:
+                return
+            floor = float(grid["rows_top"])
+            room = top_limit - floor
+            if room > 0 and float(heading.height) > room:
+                heading.scale(room / float(heading.height))
+            drop = float(heading.get_top()[1]) - top_limit
+            if drop > 0:
+                heading.shift(DOWN * drop)
 
         def _wrap_heading(self, text: str, latin: str, width: float, height: float, floor_h: float):
             words = text.split()
@@ -4142,6 +4186,114 @@ def _scene_types() -> dict:
             hops = [hop_ten, hop_twenty] + [hop_one(j) for j in range(ones)]
             self.spend_marked(0, hops, self.marks_for(0))
 
+    class RowMatch(_Board):
+        """Two rows, matched one to one, then the unmatched counters."""
+
+        def construct(self):
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            part = str(labels.get("part") or "rows")
+            a = int(labels.get("a") or 0)
+            b = int(labels.get("b") or 0)
+            left, right, bot_lim, top_lim = _safe_limits()
+            radius = _ordinal_label_height() * 0.5
+            gap = radius * 1.45
+
+            def glyph(text, scale=1.0):
+                mob = styled(str(text), latin, cjk, 64)
+                target = _ordinal_label_height() * scale
+                if float(mob.height) > 0:
+                    mob.scale(target / float(mob.height))
+                return mob
+
+            def make_row(n, color):
+                dots = VGroup(*[counter(color, radius) for _ in range(n)])
+                if n > 1:
+                    dots.arrange(RIGHT, buff=gap)
+                return dots
+
+            top = make_row(a, GREEN)
+            bottom = make_row(b, GOLD)
+            if a and b:
+                bottom.next_to(top, DOWN, buff=radius * 2.4)
+                bottom.align_to(top, LEFT)
+            lines = VGroup()
+            for i in range(min(a, b)):
+                line = Line(
+                    top[i].get_center(), bottom[i].get_center(),
+                    color=GOLD, stroke_width=6,
+                )
+                lines.add(line)
+            longer = top if a >= b else bottom
+            rings = VGroup()
+            for i in range(min(a, b), max(a, b)):
+                ring = Circle(radius=radius * 1.18, color=GOLD, stroke_width=6)
+                ring.set_fill(opacity=0)
+                ring.move_to(longer[i].get_center())
+                rings.add(ring)
+            rows = VGroup(top, bottom)
+            answer = glyph(str(abs(a - b)), 1.45)
+            anchor = rows if len(rows) else answer
+            answer.next_to(anchor, DOWN, buff=0.32)
+            title = glyph(str(labels.get("title") or " "), 1.05)
+            picture = VGroup(rows, lines, rings, answer)
+            title.next_to(picture, UP, buff=0.28)
+            group = VGroup(title, picture)
+            max_w = (right - left) * 0.96
+            max_h = (top_lim - bot_lim) * 0.96
+            if float(group.width) > max_w > 0:
+                group.scale(max_w / float(group.width))
+            if float(group.height) > max_h > 0:
+                group.scale(max_h / float(group.height))
+            group.move_to([(left + right) / 2.0, (bot_lim + top_lim) / 2.0, 0])
+            self.vf_title = title
+            self.vf_top = top
+            self.vf_bottom = bottom
+            self.vf_lines = lines
+            self.vf_rings = rings
+            self.vf_answer = answer
+            show_rings = part in {"gap", "hold"} and len(rings)
+            show_number = part in {"hold", "equal"} or (part == "gap" and abs(a - b) == 0)
+            title.set_opacity(0)
+            for dot in list(top) + list(bottom):
+                dot.set_opacity(0)
+            for line in lines:
+                line.set_stroke(opacity=0)
+            for ring in rings:
+                ring.set_stroke(opacity=0)
+            answer.set_opacity(0)
+            self.add(group)
+            if part == "rows":
+                title.set_opacity(1)
+                for dot in list(top) + list(bottom):
+                    dot.set_opacity(1)
+                self.spend(0)
+                return
+            for dot in list(top) + list(bottom):
+                dot.set_opacity(1)
+            title.set_opacity(1)
+            if part == "match":
+                self.spend(0, *[line.animate.set_stroke(opacity=1) for line in lines])
+                return
+            for line in lines:
+                line.set_stroke(opacity=1)
+            if part == "gap" and len(rings):
+                def reveal(i):
+                    def play(i=i):
+                        shown = [rings[i].animate.set_stroke(opacity=1)]
+                        if i == len(rings) - 1:
+                            shown.append(answer.animate.set_opacity(1))
+                        return AnimationGroup(*shown)
+                    return play
+                self.spend_marked(0, [reveal(i) for i in range(len(rings))], self.marks_for(0))
+                return
+            if show_rings:
+                for ring in rings:
+                    ring.set_stroke(opacity=1)
+            if part in {"hold", "equal"} or show_number:
+                answer.set_opacity(1)
+            self.spend(0)
+
     _scene_types._cache = {
         "one_ten": OneTen,
         "ten_and_ones": TenAndOnes,
@@ -4153,6 +4305,7 @@ def _scene_types() -> dict:
         "part_whole": PartWhole,
         "number_blocks": NumberBlocks,
         "estimate_group": EstimateGroup,
+        "row_match": RowMatch,
         "lesson_hook": LessonHook,
         "lesson_takeaway": LessonTakeaway,
     }

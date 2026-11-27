@@ -1,0 +1,264 @@
+id: FIN-42
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A buy order. A higher quote?
+title_zh: 一笔买单。报价反而更高？
+title_zh_hk: 一筆買單。報價反而更高？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-42
+  kicker_en: FIN-42
+  kicker_zh: FIN-42
+  kicker_zh_hk: FIN-42
+  title_en: A buy order. A higher quote?
+  title_zh: 一笔买单。报价反而更高？
+  title_zh_hk: 一筆買單。報價反而更高？
+  image: art/a-buy-order-a-higher-quote-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In 2020 HKEX introduced new market-making requirements and smaller tick sizes to improve ETF liquidity.
+    Real spreads reflect many factors. This fictional dealing desk isolates one: what an incoming order
+    says about the value of what is being traded.
+  zh: >-
+    二零二零年，香港交易所为了改善ETF的流动性，推出新的做市要求，并缩小了最小价格变动单位。现实中的买卖价差受很多因素影响。这个虚构的交易台只看其中一个：一笔进来的订单，透露了多少关于资产价值的信息。
+  zh_hk: >-
+    二零二零年，香港交易所為咗改善ETF嘅流動性，推出新嘅莊家要求，又收窄咗最小價格變動單位。現實嘅買賣差價受好多因素影響。呢個虛構嘅交易枱只睇其中一個：一張入嚟嘅買賣盤，透露咗幾多關於資產價值嘅資訊。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Value at the close
+  title_zh: 收盘时的价值
+  title_zh_hk: 收市時的價值
+  row1_en: HK$120
+  row1_zh: HK$120
+  row1_zh_hk: HK$120
+  row2_en: HK$80
+  row2_zh: HK$80
+  row2_zh_hk: HK$80
+  col1_en: Prior chance
+  col1_zh: 先验概率
+  col1_zh_hk: 先驗概率
+  col2_en: Buy likelihood
+  col2_zh: 买入的可能性
+  col2_zh_hk: 買入的可能性
+  col3_en: Sell likelihood
+  col3_zh: 卖出的可能性
+  col3_zh_hk: 賣出的可能性
+  c11: 40%
+  c12: 80%
+  c13: 20%
+  c21: 60%
+  c22: 30%
+  c23: 70%
+  footer_en: Break even on each side
+  footer_zh: 每一侧都不赚不赔
+  footer_zh_hk: 每一邊都收支平衡
+  s1_en: >-
+    You quote one unit of a simple fund. At today's close it will be worth either 120 or 80 dollars, and
+    your desk gives the higher value a 40 percent chance.
+  s1_zh: 你要为一只简单基金的一个单位报价。今天收盘时，它的价值要么是一百二十港元，要么是八十港元；交易台认为较高价值的机会是百分之四十。
+  s1_zh_hk: 你要為一隻簡單基金嘅一個單位報價。今日收市嗰陣，佢嘅價值唔係一百二十蚊，就係八十蚊；交易枱認為較高價值嘅機會係百分之四十。
+  s2_en: >-
+    One market order arrives. It buys at your ask or sells at your bid. If the value will be high, a buy
+    is 80 percent likely; if low, only 30 percent.
+  s2_zh: 接下来会有一笔市价单。对方要么按你的卖出价买入，要么按你的买入价卖出。如果价值会高，买入的可能性是百分之八十；如果价值会低，只有百分之三十。
+  s2_zh_hk: 跟住會有一張市價盤。對方唔係按你嘅賣出價買入，就係按你嘅買入價賣出。如果價值會高，買入嘅機會係百分之八十；如果價值會低，就只有百分之三十。
+  s3_en: >-
+    Set each price so that you break even on average if a trade happens on that side. There are no fees,
+    inventory concerns or other information.
+  s3_zh: 每个价格都要定成：一旦在那一侧成交，你平均刚好不赚不赔。没有费用，不考虑存货，也没有其他信息。
+  s3_zh_hk: 每個價都要定到：一旦喺嗰邊成交，你平均啱啱好唔賺唔蝕。冇費用，唔考慮存貨，亦冇其他資料。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: What bid and ask?
+  title_zh: 怎样定买卖报价？
+  title_zh_hk: 怎樣定買賣報價？
+  en: >-
+    Before you know the order's direction, what bid and ask should the desk post? And why is one single
+    price not enough? Pause and vote.
+  zh: 在知道订单方向之前，交易台应该挂出什么买入价和卖出价？为什么只报一个价格不够？请暂停，投个票。
+  zh_hk: 喺知道買賣方向之前，交易枱應該掛出咩買入價同賣出價？點解淨係報一個價唔夠？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A buy, then a rebalancing order
+  title_zh: 先有买单，再来再平衡单
+  title_zh_hk: 先有買單，再來再平衡單
+  step1_en: >-
+    First order: a buy at the ask
+  step1_zh: 第一笔：按卖出价买入
+  step1_zh_hk: 第一筆：按賣出價買入
+  step2_en: >-
+    Next: a scheduled rebalance
+  step2_zh: 下一笔：预定的再平衡
+  step2_zh_hk: 下一筆：預定的再平衡
+  step3_en: >-
+    Buy or sell 50:50 in both states
+  step3_zh: 两种状态下买卖各半
+  step3_zh_hk: 兩種狀態下買賣各半
+  s1_en: >-
+    The first order is a buy and trades at your ask. No closing value is revealed and no other news arrives.
+  s1_zh: 第一笔订单是买入，按你的卖出价成交。收盘价值还没揭晓，也没有其他消息。
+  s1_zh_hk: 第一張單係買入，按你嘅賣出價成交。收市價值仲未揭曉，亦冇其他消息。
+  s2_en: A second order is coming from a scheduled portfolio rebalance.
+  s2_zh: 第二笔订单即将到来，来自一次事先排好的组合再平衡。
+  s2_zh_hk: 第二張單就嚟到，係一次預先排定嘅組合再平衡。
+  s3_en: >-
+    Its direction has nothing to do with the fund's value: it buys or sells with equal likelihood in either
+    state. The same break-even rule applies.
+  s3_zh: 它的方向和基金价值无关：无论哪种状态，买入和卖出的可能性都一样。同样要做到不赚不赔。
+  s3_zh_hk: 佢嘅方向同基金價值無關：無論邊種狀態，買同賣嘅機會都一樣。一樣要做到唔賺唔蝕。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: New quotes for the rebalance?
+  title_zh: 再平衡单怎样报价？
+  title_zh_hk: 再平衡單怎樣報價？
+  en: >-
+    What bid and ask should you post for the rebalancing order? If the spread disappears, does that undo
+    what you learned from the first buy? Pause and vote.
+  zh: 对这笔再平衡订单，应该挂出什么买入价和卖出价？如果价差消失了，是不是就把从第一笔买单学到的东西抹掉了？请暂停，投个票。
+  zh_hk: 對呢張再平衡單，應該掛出咩買入價同賣出價？如果差價冇咗，係咪就等於抹走咗由第一張買單學到嘅嘢？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Each side has its own value
+  title_zh: 每一侧有自己的价值
+  title_zh_hk: 每一邊有自己的價值
+  step1_en: >-
+    Buy: 0.32 ÷ 0.50 = 64% high
+  step1_zh: 买入：0.32 ÷ 0.50 = 64% 为高
+  step1_zh_hk: 買入：0.32 ÷ 0.50 = 64% 為高
+  step2_en: >-
+    Sell: 0.08 ÷ 0.50 = 16% high
+  step2_zh: 卖出：0.08 ÷ 0.50 = 16% 为高
+  step2_zh_hk: 賣出：0.08 ÷ 0.50 = 16% 為高
+  step3_en: Bid 86.40 · ask 105.60
+  step3_zh: 买入价 86.40 · 卖出价 105.60
+  step3_zh_hk: 買入價 86.40 · 賣出價 105.60
+  s1_en: >-
+    A buy with a high value has probability 0.4 times 0.8, or 0.32. A buy with a low value is 0.6 times
+    0.3, or 0.18. A buy is 0.5 likely in total, so after a buy the chance of high is 64 percent.
+  s1_zh: >-
+    买入而且价值高的概率，是零点四乘零点八，等于零点三二。买入而价值低，是零点六乘零点三，等于零点一八。买入的总概率是零点五，所以看到买入之后，价值高的概率是百分之六十四。
+  s1_zh_hk: >-
+    買入而且價值高嘅概率，係零點四乘零點八，等於零點三二。買入而價值低，係零點六乘零點三，等於零點一八。買入嘅總概率係零點五，所以見到買入之後，價值高嘅概率係百分之六十四。
+  s2_en: >-
+    After a sell, the joint probabilities are 0.08 and 0.42, so the chance of high falls to 16 percent.
+  s2_zh: 如果是卖出，两个联合概率是零点零八和零点四二，价值高的概率就降到百分之十六。
+  s2_zh_hk: 如果係賣出，兩個聯合概率係零點零八同零點四二，價值高嘅概率就跌到百分之十六。
+  s3_en: >-
+    Value is 80 plus 40 times that chance. So the ask is 105.60 and the bid is 86.40. Quoting the prior
+    value of 96 on both sides would lose 9.60 on average on either trade.
+  s3_zh: >-
+    价值等于八十，加上四十乘以这个概率。所以卖出价是一百零五点六，买入价是八十六点四。如果两边都报原来的九十六，无论哪一侧成交，平均都会亏九点六。
+  s3_zh_hk: 價值等於八十，加四十乘呢個概率。所以賣出價係一百零五點六，買入價係八十六點四。如果兩邊都報原本嘅九十六，無論邊邊成交，平均都會蝕九點六。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Keep the update, drop the spread
+  title_zh: 保留更新，去掉价差
+  title_zh_hk: 保留更新，去掉差價
+  step1_en: >-
+    After the buy: 64% high
+  step1_zh: 买入之后：64% 为高
+  step1_zh_hk: 買入之後：64% 為高
+  step2_en: Rebalance order tells nothing
+  step2_zh: 再平衡单不带信息
+  step2_zh_hk: 再平衡單不帶資訊
+  step3_en: Bid = ask = 105.60
+  step3_zh: 买入价 = 卖出价 = 105.60
+  step3_zh_hk: 買入價 = 賣出價 = 105.60
+  s1_en: After the first buy, the chance of high is 64 percent.
+  s1_zh: 第一笔买入之后，价值高的概率是百分之六十四。
+  s1_zh_hk: 第一張買單之後，價值高嘅概率係百分之六十四。
+  s2_en: >-
+    The rebalancing order is equally likely to buy or sell in both states, so it multiplies both probabilities
+    by the same 0.5. After normalising, 64 percent stays 64 percent.
+  s2_zh: 再平衡订单在两种状态下买卖的可能性一样，等于把两个概率都乘以同一个零点五。归一化之后，百分之六十四还是百分之六十四。
+  s2_zh_hk: 再平衡單喺兩種狀態下買賣嘅機會一樣，等於將兩個概率都乘同一個零點五。歸一化之後，百分之六十四仍然係百分之六十四。
+  s3_en: >-
+    So the bid and ask are both 105.60. The spread falls from 19.20 to zero, but the quote is still 9.60
+    above the original 96.
+  s3_zh: 所以买入价和卖出价都是一百零五点六。价差从十九点二降到零，但报价仍然比原来的九十六高九点六。
+  s3_zh_hk: 所以買入價同賣出價都係一百零五點六。差價由十九點二跌到零，但報價仍然比原本嘅九十六高九點六。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Report both comparisons
+  title_zh: 两个比较都要报告
+  title_zh_hk: 兩個比較都要報告
+  en: >-
+    Against the first spread of 19.20, the new spread is zero. Against the first value of 96, the new
+    quote is 9.60 higher. Dropping the spread does not undo what the first buy revealed.
+  zh: 和起初十九点二的价差比，新的价差是零。和起初九十六的价值比，新的报价高了九点六。去掉价差，并没有抹掉第一笔买单透露的信息。
+  zh_hk: 同起初十九點二嘅差價比，新嘅差價係零。同起初九十六嘅價值比，新報價高咗九點六。去咗差價，冇抹走第一張買單透露嘅資訊。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Orders carry information
+  title_zh: 订单本身带有信息
+  title_zh_hk: 買賣盤本身帶有資訊
+  q1_en: Price each side conditional on trading
+  q1_zh: 按成交条件为每一侧定价
+  q1_zh_hk: 按成交條件為每一邊定價
+  q2_en: Separate the spread from the update
+  q2_zh: 把价差和信念更新分开
+  q2_zh_hk: 把差價和信念更新分開
+  s1_en: >-
+    A bid–ask spread can protect a dealer from informed orders. When the next order carries no information,
+    the spread can close while the learned value stays.
+  s1_zh: 买卖价差可以保护交易商，不被掌握信息的订单占便宜。下一笔订单不带信息时，价差可以收窄为零，而学到的价值依然保留。
+  s1_zh_hk: 買賣差價可以保護交易商，唔畀有資訊嘅買賣盤佔便宜。下一張單唔帶資訊嘅時候，差價可以收窄到零，而學到嘅價值仍然保留。
+  s2_en: >-
+    This is a simplified model, not a description of any real market maker's quotes.
+  s2_zh: 这是简化模型，不是对任何真实做市商报价的描述。
+  s2_zh_hk: 呢個係簡化模型，唔係描述任何真實莊家嘅報價。
+  s3_en: >-
+    The desk, fund and probabilities are fictional. Official scene art is a teaching illustration only.
+  s3_zh: 交易台、基金和概率都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 交易枱、基金同概率都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

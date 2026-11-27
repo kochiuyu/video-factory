@@ -1,0 +1,279 @@
+id: FIN-41
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Protection when the portfolio falls
+title_zh: 投资组合下跌时的保障
+title_zh_hk: 投資組合下跌時的保障
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-41
+  kicker_en: FIN-41
+  kicker_zh: FIN-41
+  kicker_zh_hk: FIN-41
+  title_en: Protection when the portfolio falls
+  title_zh: 投资组合下跌时的保障
+  title_zh_hk: 投資組合下跌時的保障
+  image: art/protection-when-the-portfolio-falls-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Weekly Hang Seng Index options began trading in 2019, giving markets a short-dated way to manage exposure.
+    Here, two fictional contracts pay a fixed amount in one of two index states. You advise a fictional
+    Hong Kong foundation that is fifty dollars short of a scholarship payment if the index falls.
+  zh: >-
+    恒生指数每周期权在二零一九年开始交易，让市场可以用短期合约管理风险。这里有两份虚构的合约，分别在两种指数状态之一支付固定金额。你要为香港一家虚构的基金会出主意：如果指数下跌，它付奖学金还差五十港元。
+  zh_hk: >-
+    恒生指數每週期權喺二零一九年開始交易，等市場可以用短期合約管理風險。呢度有兩份虛構嘅合約，分別喺兩種指數狀態其中一種支付固定金額。你要幫香港一間虛構嘅基金會出主意：如果指數跌，佢俾獎學金仲差五十蚊。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Prices and payouts per unit
+  title_zh: 每单位的价格和支付
+  title_zh_hk: 每單位的價格和支付
+  row1_en: Note
+  row1_zh: 票据
+  row1_zh_hk: 票據
+  row2_en: Fund
+  row2_zh: 基金
+  row2_zh_hk: 基金
+  row3_en: Down
+  row3_zh: Down 合约
+  row3_zh_hk: Down 合約
+  row4_en: Up
+  row4_zh: Up 合约
+  row4_zh_hk: Up 合約
+  col1_en: Price now
+  col1_zh: 现价
+  col1_zh_hk: 現價
+  col2_en: Index down
+  col2_zh: 指数下跌
+  col2_zh_hk: 指數下跌
+  col3_en: Index up
+  col3_zh: 指数上升
+  col3_zh_hk: 指數上升
+  c11: '95'
+  c12: '100'
+  c13: '100'
+  c21: '92'
+  c22: '80'
+  c23: '120'
+  c31: '25'
+  c32: '50'
+  c33: '0'
+  c41: '23'
+  c42: '0'
+  c43: '50'
+  footer_en: Shortfall HK$50 if the index falls
+  footer_zh: 指数下跌时缺 HK$50
+  footer_zh_hk: 指數下跌時缺 HK$50
+  s1_en: >-
+    A traded note pays 100 in either state and costs 95. A traded fund pays 80 if the index falls and
+    120 if it rises, and costs 92. Both can be bought or sold short in fractions.
+  s1_zh: >-
+    已交易的票据，两种状态都支付一百，现价九十五。已交易的基金，指数下跌时支付八十，上升时支付一百二十，现价九十二。两者都可以按分数单位买入或卖空。
+  s1_zh_hk: >-
+    已交易嘅票據，兩種狀態都支付一百，現價九十五。已交易嘅基金，指數跌就支付八十，升就支付一百二十，現價九十二。兩樣都可以按分數單位買入或者沽空。
+  s2_en: >-
+    Down pays 50 if the index falls and costs 25. Up pays 50 if the index rises and costs 23. The foundation
+    can buy at most one.
+  s2_zh: Down合约在指数下跌时支付五十，价格二十五。Up合约在指数上升时支付五十，价格二十三。基金会最多只能买其中一份。
+  s2_zh_hk: Down合約喺指數跌嘅時候支付五十，價錢二十五。Up合約喺指數升嘅時候支付五十，價錢二十三。基金會最多只可以買其中一份。
+  s3_en: >-
+    Both states are equally likely in the forecast. The goal is to meet the scholarship in the bad state,
+    and to see which offer is cheap against its benchmark.
+  s3_zh: 在预测里，两种状态的可能性相同。目标是在不利状态下付得出奖学金，同时看清哪一份报价相对基准更便宜。
+  s3_zh_hk: 喺預測入面，兩種狀態嘅機會一樣。目標係喺唔利嘅狀態下都俾得出獎學金，同時睇清楚邊份報價對比基準比較平。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Same price? Which one?
+  title_zh: 价格相同吗？选哪份？
+  title_zh_hk: 價格相同嗎？選哪份？
+  en: >-
+    Do Down and Up have the same benchmark price? And which offer would you recommend for the scholarship
+    payment? Pause and vote.
+  zh: Down和Up的基准价格相同吗？为了这笔奖学金，你会建议哪一份？请暂停，投个票。
+  zh_hk: Down同Up嘅基準價格一樣嗎？為咗呢筆獎學金，你會建議邊一份？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A gap when the index rises
+  title_zh: 指数上升也有缺口
+  title_zh_hk: 指數上升也有缺口
+  step1_en: Own portfolio can miss HK$50 too
+  step1_zh: 自身组合也可能缺 HK$50
+  step1_zh_hk: 自身組合也可能缺 HK$50
+  step2_en: Contracts still track the index only
+  step2_zh: 合约仍只看指数
+  step2_zh_hk: 合約仍只看指數
+  step3_en: Both may be bought; safe note available
+  step3_zh: 可两份都买；有安全票据
+  step3_zh_hk: 可兩份都買；有安全票據
+  s1_en: >-
+    Before signing, the forecast turns out too strong. The foundation can also be fifty dollars short
+    when the index rises, for example if a large holding moves away from the index.
+  s1_zh: 签约之前，发现预测太乐观了。指数上升时，基金会也可能差五十港元，比如某一大笔持仓走势偏离了指数。
+  s1_zh_hk: 簽約之前，發現預測太樂觀。指數升嘅時候，基金會都可能差五十蚊，例如有一大筆持倉嘅走勢同指數唔同。
+  s2_en: >-
+    The contracts and benchmark securities still pay only according to the two index states.
+  s2_zh: 合约和基准证券的支付，仍然只取决于两种指数状态。
+  s2_zh_hk: 合約同基準證券嘅支付，仍然只係睇兩種指數狀態。
+  s3_en: >-
+    Now both contracts may be bought at their original prices, and a safe note is available at its benchmark
+    price.
+  s3_zh: 现在两份合约可以按原价一起买，也可以按基准价格买安全票据。
+  s3_zh_hk: 而家兩份合約可以按原價一齊買，亦可以按基準價格買安全票據。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which gives a certain HK$50?
+  title_zh: 哪个确定给出 50 港元？
+  title_zh_hk: 哪個確定給出 50 港元？
+  en: >-
+    Does Down still cover every shortfall? Which choice gives a certain fifty dollars on the payment date?
+    Pause and vote.
+  zh: Down还能覆盖每一个缺口吗？哪一个选择能在付款日确定给出五十港元？请暂停，投个票。
+  zh_hk: Down仲覆蓋到每一個缺口嗎？邊個選擇可以喺付款日一定俾到五十蚊？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Price each state by benchmark
+  title_zh: 用基准为每种状态定价
+  title_zh_hk: 用基準為每種狀態定價
+  step1_en: 1.5 notes − 1.25 funds = 27.50
+  step1_zh: 1.5 份票据 − 1.25 份基金 = 27.50
+  step1_zh_hk: 1.5 份票據 − 1.25 份基金 = 27.50
+  step2_en: >-
+    Up state: 47.50 − 27.50 = 20
+  step2_zh: 上升状态：47.50 − 27.50 = 20
+  step2_zh_hk: 上升狀態：47.50 − 27.50 = 20
+  step3_en: Down cheap at 25 · Up dear at 23
+  step3_zh: Down 25 偏便宜 · Up 23 偏贵
+  step3_zh_hk: Down 25 偏便宜 · Up 23 偏貴
+  s1_en: >-
+    Buy one and a half notes and short one and a quarter funds. That pays fifty if the index falls and
+    zero if it rises, and costs twenty-seven fifty.
+  s1_zh: 买入一点五份票据，卖空一点二五份基金。指数下跌时支付五十，上升时支付零，成本是二十七点五。
+  s1_zh_hk: 買入一點五份票據，沽空一點二五份基金。指數跌就支付五十，升就支付零，成本係二十七點五。
+  s2_en: >-
+    Half a note pays fifty in both states and costs forty-seven fifty. Subtract the down-state portfolio,
+    and the up-state payout is worth twenty.
+  s2_zh: 半份票据在两种状态都支付五十，成本四十七点五。减去下跌状态的组合，上升状态的支付就值二十。
+  s2_zh_hk: 半份票據兩種狀態都支付五十，成本四十七點五。減走下跌狀態嗰個組合，上升狀態嘅支付就值二十。
+  s3_en: >-
+    So the prices differ. Down at twenty-five is cheap against twenty-seven fifty; Up at twenty-three
+    is dear against twenty. Both have an expected value of twenty-five, but that is not the benchmark
+    price.
+  s3_zh: 所以两者价格不同。Down卖二十五，比基准二十七点五便宜；Up卖二十三，比基准二十贵。两份的期望值都是二十五，但期望值不是基准价格。
+  s3_zh_hk: 所以兩份價格唔同。Down賣二十五，比基準二十七點五平；Up賣二十三，比基準二十貴。兩份嘅期望值都係二十五，但期望值唔係基準價格。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Hedge what actually falls short
+  title_zh: 对冲真正的缺口
+  title_zh_hk: 對沖真正的缺口
+  step1_en: >-
+    Round 1: Down fits the shortfall
+  step1_zh: 第一轮：Down 对应缺口
+  step1_zh_hk: 第一輪：Down 對應缺口
+  step2_en: >-
+    Down + Up: certain 50 for 48
+  step2_zh: Down + Up：48 换确定的 50
+  step2_zh_hk: Down + Up：48 換確定的 50
+  step3_en: >-
+    Half a safe note: 50 for 47.50
+  step3_zh: 半份安全票据：47.50 换 50
+  step3_zh_hk: 半份安全票據：47.50 換 50
+  s1_en: >-
+    In the first round, Down is both cheap and pays exactly when the shortfall occurs. The recommendation
+    follows the objective, not a view on the index.
+  s1_zh: 第一轮里，Down既便宜，又正好在出现缺口时支付。这个建议跟随的是目标，而不是对指数走势的判断。
+  s1_zh_hk: 第一輪入面，Down又平，又啱啱喺出現缺口嘅時候支付。呢個建議跟嘅係目標，唔係對指數走勢嘅判斷。
+  s2_en: >-
+    Once the foundation can also fall short when the index rises, Down alone pays nothing then. Buying
+    both contracts gives fifty in every state for forty-eight.
+  s2_zh: 一旦指数上升时基金会也可能有缺口，单靠Down，那时就一分钱都拿不到。两份合约都买，每种状态都有五十，花费四十八。
+  s2_zh_hk: 一旦指數升嘅時候基金會都可能有缺口，淨係靠Down，嗰陣就一蚊都收唔到。兩份合約都買，每種狀態都有五十，使四十八。
+  s3_en: >-
+    Half a safe note delivers the same certain fifty for forty-seven fifty, so it is the cheaper way to
+    get certain cash.
+  s3_zh: 半份安全票据同样确定给出五十，只要四十七点五，所以它是更便宜的确定现金办法。
+  s3_zh_hk: 半份安全票據一樣一定俾到五十，只要四十七點五，所以佢係平啲嘅確定現金辦法。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Match the hedge to the gap
+  title_zh: 对冲要对准缺口
+  title_zh_hk: 對沖要對準缺口
+  en: >-
+    Index contracts cannot tell apart two outcomes with the same index state but different shortfalls.
+    The safe note covers both, by paying even when the cash is not needed.
+  zh: 指数合约分不清指数状态相同、但缺口不同的两种结果。安全票据之所以能覆盖两者，是因为不管怎样都会支付，包括不需要这笔现金的时候。
+  zh_hk: 指數合約分唔到指數狀態一樣、但缺口唔同嘅兩種結果。安全票據之所以覆蓋到兩者，係因為無論點都會支付，包括唔需要呢筆現金嘅時候。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Replicate prices; hedge the gap
+  title_zh: 用复制定价，对准缺口对冲
+  title_zh_hk: 用複製定價，對準缺口對沖
+  q1_en: Compare offers with benchmark prices
+  q1_zh: 用基准价格比较报价
+  q1_zh_hk: 用基準價格比較報價
+  q2_en: Check which risk the hedge tracks
+  q2_zh: 看清对冲跟的是哪种风险
+  q2_zh_hk: 看清對沖跟的是哪種風險
+  s1_en: >-
+    Expected value is not a price. Replicate the payout with traded securities, and check that the hedge
+    pays when your own shortfall happens.
+  s1_zh: 期望值不是价格。用已交易的证券复制支付，再确认对冲会在你自己出现缺口时支付。
+  s1_zh_hk: 期望值唔係價格。用已交易嘅證券複製支付，再確認對沖會喺你自己出現缺口嘅時候支付。
+  s2_en: This is a simplified two-state model, not a trading recommendation.
+  s2_zh: 这是简化的两状态模型，不是交易建议。
+  s2_zh_hk: 呢個係簡化嘅兩狀態模型，唔係交易建議。
+  s3_en: >-
+    The foundation, contracts and prices are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 基金会、合约和价格都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 基金會、合約同價格都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

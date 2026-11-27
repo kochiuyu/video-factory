@@ -1,0 +1,264 @@
+id: FIN-50
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Is a big IPO allocation good news?
+title_zh: 首次公开招股（IPO）获配很多，是好消息吗？
+title_zh_hk: 首次公開招股（IPO）獲配很多，是好消息嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-50
+  kicker_en: FIN-50
+  kicker_zh: FIN-50
+  kicker_zh_hk: FIN-50
+  title_en: Is a big IPO allocation good news?
+  title_zh: 首次公开招股（IPO）获配很多，是好消息吗？
+  title_zh_hk: 首次公開招股（IPO）獲配很多，是好消息嗎？
+  image: art/big-ipo-allocation-good-news-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In August 2025 the Hong Kong exchange introduced two mechanisms issuers can choose for allocating
+    shares to the public subscription tranche. But the size of that pool is not the number of shares one
+    applicant receives. At a Kowloon training session, analyst Jan assesses a simulated IPO application.
+  zh: >-
+    二零二五年八月，香港交易所推出两种机制，让发行人选择如何把股份分配给公开认购部分。但这部分的规模，并不等于单个申请人能分到多少股。在九龙的一次培训课上，分析员Jan要评估一份模拟的新股申购。
+  zh_hk: >-
+    二零二五年八月，港交所推出兩種機制，等發行人揀點樣將股份分配俾公開認購部分。但呢部分嘅規模，唔等於單一申請人分到幾多股。喺九龍一次培訓入面，分析員Jan要評估一份模擬嘅新股認購。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Apply for 120 shares at HK$16
+  title_zh: 按 HK$16 申购 120 股
+  title_zh_hk: 按 HK$16 認購 120 股
+  row1_en: Weak
+  row1_zh: 疲弱
+  row1_zh_hk: 疲弱
+  row2_en: Middle
+  row2_zh: 中等
+  row2_zh_hk: 中等
+  row3_en: Strong
+  row3_zh: 强劲
+  row3_zh_hk: 強勁
+  col1_en: Probability
+  col1_zh: 概率
+  col1_zh_hk: 概率
+  col2_en: Value per share
+  col2_zh: 每股价值
+  col2_zh_hk: 每股價值
+  col3_en: Shares allotted
+  col3_zh: 获配股数
+  col3_zh_hk: 獲配股數
+  c11: 25%
+  c12: HK$12
+  c13: '120'
+  c21: 50%
+  c22: HK$20
+  c23: '50'
+  c31: 25%
+  c32: HK$30
+  c33: '10'
+  footer_en: Pay only for shares allotted
+  footer_zh: 只为获配的股份付款
+  footer_zh_hk: 只為獲配的股份付款
+  s1_en: >-
+    Jan applies for 120 shares at an offer price of 16 dollars. She pays only for the shares she is allotted.
+    If she skips, her payoff is zero.
+  s1_zh: Jan按每股十六港元的招股价，申购一百二十股。她只为实际获配的股份付款。如果不申购，收益就是零。
+  s1_zh_hk: Jan按每股十六蚊嘅招股價，認購一百二十股。佢只係為真正獲配嘅股份俾錢。如果唔認購，收益就係零。
+  s2_en: >-
+    Better-informed applicants compete hardest when a strong debut is likely, so Jan gets fewer shares
+    in that state.
+  s2_zh: 掌握更多信息的申购人，在预期首日表现强劲时争得最凶，所以那种情况下Jan分到的股份更少。
+  s2_zh_hk: 掌握多啲資訊嘅認購人，喺預期首日表現強勁嗰陣搶得最勁，所以嗰種情況Jan分到嘅股份更少。
+  s3_en: >-
+    In a weak debut a share is worth 12 and she gets all 120. In the middle state, 20 and 50 shares. In
+    a strong debut, 30, but only 10 shares.
+  s3_zh: 首日表现疲弱时，每股值十二，她获配全部一百二十股。中等时每股值二十，获配五十股。强劲时每股值三十，却只获配十股。
+  s3_zh_hk: 首日表現疲弱，每股值十二，佢獲配晒一百二十股。中等嘅時候每股值二十，獲配五十股。強勁嘅時候每股值三十，但淨係獲配十股。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Apply at HK$16?
+  title_zh: 按 HK$16 申购吗？
+  title_zh_hk: 按 HK$16 認購嗎？
+  en: >-
+    What is Jan's expected profit at 16 dollars? And what offer price would just break even, once you
+    count how many shares she gets in each state? Pause and vote.
+  zh: 按十六港元，Jan的期望利润是多少？把每种状态下分到多少股算进去之后，招股价定在多少才刚好打平？请暂停，投个票。
+  zh_hk: 按十六蚊，Jan嘅期望利潤係幾多？將每種狀態分到幾多股計埋之後，招股價定喺幾多先啱啱打平？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A flat fee per application
+  title_zh: 每次申购的固定费用
+  title_zh_hk: 每次認購的固定費用
+  step1_en: HK$25 per application
+  step1_zh: 每次申购 HK$25
+  step1_zh_hk: 每次認購 HK$25
+  step2_en: Paid even with no shares
+  step2_zh: 没分到股份也要付
+  step2_zh_hk: 沒分到股份也要付
+  step3_en: Price and outcomes unchanged
+  step3_zh: 价格和结果不变
+  step3_zh_hk: 價格和結果不變
+  s1_en: >-
+    A colleague notices a flat 25 dollar platform charge on each application.
+  s1_zh: 一位同事发现，每次申购都要付二十五港元的平台费。
+  s1_zh_hk: 有個同事發現，每次認購都要俾二十五蚊平台費。
+  s2_en: It is payable even if no shares are allotted.
+  s2_zh: 即使一股都没分到，也要付。
+  s2_zh_hk: 就算一股都分唔到，都要俾。
+  s3_en: The share price and all the outcomes in the table stay the same.
+  s3_zh: 股价和表里的所有结果都不变。
+  s3_zh_hk: 股價同表入面嘅所有結果都唔變。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Still apply with the fee?
+  title_zh: 有了费用还申购吗？
+  title_zh_hk: 有了費用還認購嗎？
+  en: >-
+    With the 25 dollar charge, would Jan still apply at 16? What is the new break-even price, and the
+    largest flat charge she could bear at 16? Pause and vote.
+  zh: 有了二十五港元的费用，Jan按十六港元还会申购吗？新的打平价格是多少？按十六港元，她最多能承受多少固定费用？请暂停，投个票。
+  zh_hk: 有咗二十五蚊收費，Jan按十六蚊仲會唔會認購？新嘅打平價係幾多？按十六蚊，佢最多頂得順幾多固定收費？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: A full allotment can be bad news
+  title_zh: 全数获配可能是坏消息
+  title_zh_hk: 全數獲配可能是壞消息
+  step1_en: Average value 20.50, yet profit is small
+  step1_zh: 平均每股 20.50，利润却不大
+  step1_zh_hk: 平均每股 20.50，利潤卻不大
+  step2_en: >-
+    States: −480 · +200 · +140
+  step2_zh: 各状态：−480 · +200 · +140
+  step2_zh_hk: 各狀態：−480 · +200 · +140
+  step3_en: >-
+    Expected profit: HK$15
+  step3_zh: 期望利润：HK$15
+  step3_zh_hk: 期望利潤：HK$15
+  s1_en: >-
+    The probability-weighted value per share is 20.50, well above 16. But the most shares arrive in the
+    weak state, where each is worth 4 dollars less than Jan pays.
+  s1_zh: 按概率加权，每股价值二十点五，远高于十六。但分到最多股份的，正是疲弱状态，那时每股比Jan付的价钱少四港元。
+  s1_zh_hk: 按概率加權，每股價值二十點五，遠高過十六。但分到最多股份嘅，正正係疲弱狀態，嗰陣每股比Jan俾嘅價錢少四蚊。
+  s2_en: >-
+    At 16, the profits are minus 480 in the weak state, plus 200 in the middle and plus 140 in the strong
+    state.
+  s2_zh: 按十六港元，疲弱状态亏四百八十，中等赚二百，强劲赚一百四十。
+  s2_zh_hk: 按十六蚊，疲弱狀態蝕四百八十，中等賺二百，強勁賺一百四十。
+  s3_en: >-
+    Expected profit is just 15 dollars. Jan would apply, but the margin is far smaller than the 4.50 gap
+    between average value and price suggests.
+  s3_zh: 期望利润只有十五港元。Jan会申购，但这个利润，远比平均价值和招股价相差的四点五看起来要小。
+  s3_zh_hk: 期望利潤得十五蚊。Jan會認購，但呢個利潤，遠比平均價值同招股價相差嘅四點五睇落細。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Weight by shares, not states
+  title_zh: 按股数加权，不只按状态
+  title_zh_hk: 按股數加權，不只按狀態
+  step1_en: 935 ÷ 57.5 shares ≈ HK$16.26
+  step1_zh: 935 ÷ 57.5 股 ≈ HK$16.26
+  step1_zh_hk: 935 ÷ 57.5 股 ≈ HK$16.26
+  step2_en: >-
+    With fee: 15 − 25 = −10, skip
+  step2_zh: 加费用：15 − 25 = −10，不申购
+  step2_zh_hk: 加費用：15 − 25 = −10，不認購
+  step3_en: New break-even ≈ 15.83 · max fee 15
+  step3_zh: 新打平价 ≈ 15.83 · 最多费用 15
+  step3_zh_hk: 新打平價 ≈ 15.83 · 最多費用 15
+  s1_en: >-
+    Expected allotment is 57.5 shares, with an expected debut value of 935 dollars. Break-even is 935
+    divided by 57.5, about 16.26 per share.
+  s1_zh: 期望获配五十七点五股，首日期望价值九百三十五港元。打平价格是九百三十五除以五十七点五，大约每股十六点二六。
+  s1_zh_hk: 期望獲配五十七點五股，首日期望價值九百三十五蚊。打平價係九百三十五除五十七點五，大約每股十六點二六。
+  s2_en: >-
+    The 25 dollar fee turns the expected profit of 15 into a loss of 10, so Jan skips the application.
+  s2_zh: 二十五港元的费用，把十五的期望利润变成亏损十，所以Jan不申购。
+  s2_zh_hk: 二十五蚊收費，將十五嘅期望利潤變成蝕十，所以Jan唔認購。
+  s3_en: >-
+    With the fee, the break-even price falls to about 15.83. At 16, a flat charge of 15 would leave her
+    indifferent; anything higher makes skipping better.
+  s3_zh: 有了费用，打平价格降到大约十五点八三。按十六港元，固定费用十五时她申不申购都一样；再高，就不申购更好。
+  s3_zh_hk: 有咗收費，打平價跌到大約十五點八三。按十六蚊，固定收費十五嘅時候佢認唔認購都一樣；再高，就唔認購好啲。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: A model, not a trading rule
+  title_zh: 这是模型，不是交易规则
+  title_zh_hk: 這是模型，不是交易規則
+  en: >-
+    Here the winner's curse is an allocation effect: you get more of the weak issues and less of the strong
+    ones. A large real allotment can have other causes, including the offer terms.
+  zh: 这里的赢家诅咒，是分配造成的：弱的新股你分得多，强的分得少。现实中获配很多，也可能有别的原因，包括发行条款。
+  zh_hk: 呢度嘅贏家詛咒，係分配造成嘅：弱嘅新股你分得多，強嘅分得少。現實獲配好多，都可能有其他原因，包括招股條款。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Allotment size is information
+  title_zh: 获配多少本身带有信息
+  title_zh_hk: 獲配多少本身帶有資訊
+  q1_en: Weight value by shares received
+  q1_zh: 按获配股数加权价值
+  q1_zh_hk: 按獲配股數加權價值
+  q2_en: Include fixed costs per application
+  q2_zh: 计入每次申购的固定费用
+  q2_zh_hk: 計入每次認購的固定費用
+  s1_en: >-
+    An average value above the offer price does not guarantee a profit, because you receive the most shares
+    when they are worth the least.
+  s1_zh: 平均价值高于招股价，并不保证赚钱，因为你分到最多股份的时候，正是股份最不值钱的时候。
+  s1_zh_hk: 平均價值高過招股價，唔保證賺錢，因為你分到最多股份嘅時候，正正係股份最唔值錢嘅時候。
+  s2_en: >-
+    The fee, probabilities and allotments are not estimates for any actual IPO.
+  s2_zh: 这里的费用、概率和获配数，都不是对任何真实新股的估计。
+  s2_zh_hk: 呢度嘅收費、概率同獲配數，都唔係對任何真實新股嘅估計。
+  s3_en: >-
+    The issuer, applicant and figures are fictional. Official scene art is a teaching illustration only.
+  s3_zh: 发行人、申购人和数字都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 發行人、認購人同數字都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

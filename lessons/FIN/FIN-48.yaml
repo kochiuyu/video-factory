@@ -1,0 +1,270 @@
+id: FIN-48
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Who funds the rescue investment?
+title_zh: 这笔挽救投资，谁来出钱？
+title_zh_hk: 這筆挽救投資，誰來出錢？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-48
+  kicker_en: FIN-48
+  kicker_zh: FIN-48
+  kicker_zh_hk: FIN-48
+  title_en: Who funds the rescue investment?
+  title_zh: 这笔挽救投资，谁来出钱？
+  title_zh_hk: 這筆挽救投資，誰來出錢？
+  image: art/who-funds-the-rescue-investment-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In October 2024 the HKMA and Hong Kong banks announced measures to help smaller businesses upgrade,
+    including financing for low-carbon equipment and more flexible repayment. The announcement did not
+    promise bank co-funding. Here, a fictional cold-storage operator in Kwai Chung needs a rescue investment.
+  zh: >-
+    二零二四年十月，香港金融管理局和银行业公布措施，帮助中小企业升级，包括为低碳设备提供融资，以及更灵活的还款安排。公告并没有承诺银行会共同出资。这里，葵涌一家虚构的冷库运营商，需要一笔挽救投资。
+  zh_hk: >-
+    二零二四年十月，金管局同銀行業公布措施，幫中小企升級，包括為低碳設備提供融資，同埋更靈活嘅還款安排。公告冇承諾銀行會一齊出資。呢度，葵涌一間虛構嘅凍倉營運商，需要一筆挽救投資。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Year-end cash, HK$ million
+  title_zh: 年末现金（百万港元）
+  title_zh_hk: 年末現金（百萬港元）
+  row1_en: Weak
+  row1_zh: 疲弱
+  row1_zh_hk: 疲弱
+  row2_en: Steady
+  row2_zh: 平稳
+  row2_zh_hk: 平穩
+  row3_en: Strong
+  row3_zh: 强劲
+  row3_zh_hk: 強勁
+  col1_en: Chance
+  col1_zh: 概率
+  col1_zh_hk: 概率
+  col2_en: No retrofit
+  col2_zh: 不改造
+  col2_zh_hk: 不改造
+  col3_en: Retrofit
+  col3_zh: 改造
+  col3_zh_hk: 改造
+  c11: 25%
+  c12: '30'
+  c13: '42'
+  c21: 50%
+  c22: '70'
+  c23: '104'
+  c31: 25%
+  c32: '130'
+  c33: '156'
+  footer_en: Retrofit costs 22 today · loan 100
+  footer_zh: 改造今天花 22 · 贷款 100
+  footer_zh_hk: 改造今天花 22 · 貸款 100
+  s1_en: >-
+    Old refrigeration controls are failing, and the firm is losing orders. A retrofit could cut spoilage
+    and win customers back.
+  s1_zh: 旧的制冷控制系统老出故障，公司在流失订单。改造可以减少损耗，把客户拉回来。
+  s1_zh_hk: 舊嘅製冷控制系統成日壞，公司失咗啲訂單。改造可以減少損耗，將客拉返嚟。
+  s2_en: >-
+    Finance manager Ada asks the owners to put in 22 million dollars today. The firm has no spare cash
+    and owes the bank 100 million at year end.
+  s2_zh: 财务经理Ada请股东今天投入两千二百万港元。公司没有闲钱，年末还欠银行一亿港元。
+  s2_zh_hk: 財務經理Ada請股東今日投入兩千二百萬港元。公司冇閒錢，年尾仲欠銀行一億港元。
+  s3_en: >-
+    At year end the bank gets the lower of the cash available and the amount due, and the owners get the
+    rest. Use expected cash, with no discounting or taxes.
+  s3_zh: 年末，银行拿走可用现金和欠款之中较低的那个，余下的归股东。按期望现金计算，不折现，不计税。
+  s3_zh_hk: 年尾，銀行攞走可用現金同欠款之中較低嗰個，其餘歸股東。按期望現金計，唔折現，唔計稅。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Would the owners pay?
+  title_zh: 股东会出这笔钱吗？
+  title_zh_hk: 股東會出這筆錢嗎？
+  en: >-
+    Who gets the cash in each demand state? How much value does the retrofit create, and would the owners
+    fund it on the old terms? Pause and vote.
+  zh: 每一种需求状态下，现金归谁？改造创造多少价值？按原来的条件，股东会出钱吗？请暂停，投个票。
+  zh_hk: 每一種需求狀態之下，現金歸邊個？改造創造幾多價值？按原本嘅條件，股東會唔會出錢？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The bank offers to share
+  title_zh: 银行愿意分担费用
+  title_zh_hk: 銀行願意分擔費用
+  step1_en: Bank pays part of the 22
+  step1_zh: 银行承担 22 的一部分
+  step1_zh_hk: 銀行承擔 22 的一部分
+  step2_en: No new claim; old loan unchanged
+  step2_zh: 不产生新债权，旧贷款不变
+  step2_zh_hk: 不產生新債權，舊貸款不變
+  step3_en: >-
+    Stress test: steady 104 → 94
+  step3_zh: 压力测试：平稳 104 → 94
+  step3_zh_hk: 壓力測試：平穩 104 → 94
+  s1_en: >-
+    The bank offers to pay part of the 22 million installation bill if the owners pay the rest.
+  s1_zh: 银行提出，如果股东付其余部分，它愿意承担两千二百万安装费的一部分。
+  s1_zh_hk: 銀行提出，如果股東俾其餘部分，佢願意承擔兩千二百萬安裝費嘅一部分。
+  s2_en: >-
+    Its contribution creates no new claim and does not change the old loan. If either side walks away,
+    there is no retrofit.
+  s2_zh: 银行出的钱不产生新的债权，也不改变原来的贷款。任何一方退出，改造就不做。
+  s2_zh_hk: 銀行出嘅錢唔產生新嘅債權，亦唔改變原本嘅貸款。任何一方退出，就唔做改造。
+  s3_en: >-
+    Then a customer cuts its forecast. Stress-test by changing only the steady state with the retrofit,
+    from 104 to 94 million.
+  s3_zh: 接着一位客户下调了订单预测。做压力测试时，只把平稳状态下改造后的现金，从一亿零四百万改成九千四百万。
+  s3_zh_hk: 跟住有個客戶調低咗訂單預測。做壓力測試，淨係將平穩狀態下改造後嘅現金，由一億零四百萬改成九千四百萬。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: How much should the bank pay?
+  title_zh: 银行该出多少？
+  title_zh_hk: 銀行該出多少？
+  en: >-
+    How much can the bank contribute while making both sides better off? Give a range and one offer. Does
+    any offer still work under the revised forecast? Pause and vote.
+  zh: 银行出多少，才能让双方都得益？请给出一个范围和一个具体报价。在修改后的预测下，还有可行的报价吗？请暂停，投个票。
+  zh_hk: 銀行出幾多，先可以令雙方都得益？請俾一個範圍同一個具體報價。喺修改後嘅預測之下，仲有冇可行嘅報價？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: A good project the owners reject
+  title_zh: 股东会拒绝的好项目
+  title_zh_hk: 股東會拒絕的好項目
+  step1_en: >-
+    Value created: 101.5 − 75 − 22 = 4.5
+  step1_zh: 创造价值：101.5 − 75 − 22 = 4.5
+  step1_zh_hk: 創造價值：101.5 − 75 − 22 = 4.5
+  step2_en: Bank 67.5 → 85.5 · owners 7.5 → 16
+  step2_zh: 银行 67.5 → 85.5 · 股东 7.5 → 16
+  step2_zh_hk: 銀行 67.5 → 85.5 · 股東 7.5 → 16
+  step3_en: >-
+    Owners alone: +8.5 − 22 = −13.5
+  step3_zh: 股东独自出钱：+8.5 − 22 = −13.5
+  step3_zh_hk: 股東獨自出錢：+8.5 − 22 = −13.5
+  s1_en: >-
+    All amounts are in millions. Without the retrofit the bank collects 30, 70 or 100, and the owners
+    0, 0 or 30. With it, the bank collects 42, 100 or 100, and the owners 0, 4 or 56.
+  s1_zh: 以下单位都是百万港元。不改造时，银行收回三十、七十或一百，股东拿零、零或三十。改造之后，银行收回四十二、一百或一百，股东拿零、四或五十六。
+  s1_zh_hk: >-
+    以下單位都係百萬港元。唔改造，銀行收返三十、七十或者一百，股東攞零、零或者三十。改造之後，銀行收返四十二、一百或者一百，股東攞零、四或者五十六。
+  s2_en: >-
+    Expected cash rises from 75 to 101.5, so the retrofit creates 4.5 after its 22 cost.
+  s2_zh: 期望现金从七十五升到一百零一点五，扣除二十二的成本，改造创造四点五的价值。
+  s2_zh_hk: 期望現金由七十五升到一百零一點五，扣咗二十二嘅成本，改造創造四點五嘅價值。
+  s3_en: >-
+    But the bank's expected recovery rises by 18, and the owners' only by 8.5. If the owners pay all 22,
+    they lose 13.5. That is debt overhang.
+  s3_zh: 但银行的期望回收增加了十八，股东只增加八点五。如果股东独自出二十二，就要亏十三点五。这就是债务积压。
+  s3_zh_hk: 但銀行嘅期望回收多咗十八，股東只係多八點五。如果股東自己出晒二十二，就蝕十三點五。呢個就係債務積壓。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Divide the installation bill
+  title_zh: 分担安装费用
+  title_zh_hk: 分擔安裝費用
+  step1_en: >-
+    Bank pays x: both gain if 13.5 < x < 18
+  step1_zh: 银行出 x：13.5 < x < 18 双方得益
+  step1_zh_hk: 銀行出 x：13.5 < x < 18 雙方得益
+  step2_en: >-
+    Offer x = 15: bank +3 · owners +1.5
+  step2_zh: 报价 x = 15：银行 +3 · 股东 +1.5
+  step2_zh_hk: 報價 x = 15：銀行 +3 · 股東 +1.5
+  step3_en: >-
+    At 94: bank ≤ 15, owners need ≥ 15.5
+  step3_zh: 94 时：银行最多 15，股东要 15.5
+  step3_zh_hk: 94 時：銀行最多 15，股東要 15.5
+  s1_en: >-
+    If the bank pays x, it gains 18 minus x, and the owners gain x minus 13.5. Both gain when x is between
+    13.5 and 18.
+  s1_zh: 如果银行出x，它的得益是十八减x，股东的得益是x减十三点五。x在十三点五和十八之间，双方都得益。
+  s1_zh_hk: 如果銀行出x，佢嘅得益係十八減x，股東嘅得益係x減十三點五。x喺十三點五同十八之間，雙方都得益。
+  s2_en: >-
+    One offer is 15: the bank gains 3 and the owners gain 1.5.
+  s2_zh: 一个可行的报价是十五：银行得益三，股东得益一点五。
+  s2_zh_hk: 一個可行嘅報價係十五：銀行得益三，股東得益一點五。
+  s3_en: >-
+    With 94 in the steady state, the bank will pay at most 15, but the owners need at least 15.5. Expected
+    extra cash is 21.5 against a cost of 22, so no split works.
+  s3_zh: 如果平稳状态只有九十四，银行最多只肯出十五，股东却要银行至少出十五点五。期望新增现金只有二十一点五，成本却是二十二，怎么分都不行。
+  s3_zh_hk: 如果平穩狀態淨係得九十四，銀行最多肯出十五，股東就要銀行最少出十五點五。期望新增現金得二十一點五，成本就係二十二，點分都唔得。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Can a deal fix a bad project?
+  title_zh: 协议能救坏项目吗？
+  title_zh_hk: 協議能救壞項目嗎？
+  en: >-
+    Co-funding can share a gain that exists. When the project itself destroys value, no way of splitting
+    the same costs can fix it.
+  zh: 共同出资可以分享一个确实存在的收益。当项目本身毁损价值时，再怎么分摊同样的成本，也救不了。
+  zh_hk: 共同出資可以分享一個真係存在嘅收益。如果項目本身蝕價值，點樣分攤同一啲成本都救唔到。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Who pays, who gains
+  title_zh: 谁出钱，谁得益
+  title_zh_hk: 誰出錢，誰得益
+  q1_en: Split cash by claim before averaging
+  q1_zh: 先按债权分现金，再求平均
+  q1_zh_hk: 先按債權分現金，再求平均
+  q2_en: Check that the project creates value
+  q2_zh: 先确认项目创造价值
+  q2_zh_hk: 先確認項目創造價值
+  s1_en: >-
+    Debt overhang can block a good investment because the old lender captures most of the gain. Sharing
+    the cost can unlock it, but only if value is created.
+  s1_zh: 债务积压会挡住好的投资，因为大部分收益被旧债权人拿走。分摊成本可以解开僵局，前提是项目真的创造价值。
+  s1_zh_hk: 債務積壓會擋住好嘅投資，因為大部分收益俾舊債權人攞走。分攤成本可以解開僵局，前提係項目真係創造價值。
+  s2_en: This is a fictional negotiation, not a description of any bank scheme.
+  s2_zh: 这是虚构的谈判，不是对任何银行计划的描述。
+  s2_zh_hk: 呢個係虛構嘅談判，唔係描述任何銀行計劃。
+  s3_en: >-
+    The firm, bank and cash flows are fictional. Official scene art is a teaching illustration only.
+  s3_zh: 公司、银行和现金流都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 公司、銀行同現金流都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

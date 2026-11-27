@@ -1,0 +1,271 @@
+id: FIN-44
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The peg holds. Which rate resets?
+title_zh: 联系汇率守得住。哪个利率会重设？
+title_zh_hk: 聯繫匯率守得住。哪個利率會重設？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-44
+  kicker_en: FIN-44
+  kicker_zh: FIN-44
+  kicker_zh_hk: FIN-44
+  title_en: The peg holds. Which rate resets?
+  title_zh: 联系汇率守得住。哪个利率会重设？
+  title_zh_hk: 聯繫匯率守得住。哪個利率會重設？
+  image: art/the-peg-holds-which-rate-resets-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 26 June 2025 the weak-side undertaking was triggered, and the HKMA bought 9.42 billion Hong Kong
+    dollars from banks. A smaller Aggregate Balance can push up local funding rates, but it does not mechanically
+    reset every loan. You are treasurer of a fictional Kowloon East furniture maker.
+  zh: >-
+    二零二五年六月二十六日，弱方兑换保证被触发，香港金融管理局向银行买入九十四点二亿港元。总结余减少，可能推高本地融资利率，但不会自动重设每一笔贷款。你是九龙东一家虚构家具厂的司库。
+  zh_hk: >-
+    二零二五年六月二十六號，弱方兌換保證被觸發，金管局向銀行買入九十四點二億港元。總結餘減少，可能推高本地融資利率，但唔會自動重設每一筆貸款。你係九龍東一間虛構傢俬廠嘅司庫。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two loans, one HK$68,000 reserve
+  title_zh: 两笔贷款，一笔 HK$68,000 储备
+  title_zh_hk: 兩筆貸款，一筆 HK$68,000 儲備
+  row1_en: A · HK$6m
+  row1_zh: A · 600 万港元
+  row1_zh_hk: A · 600 萬港元
+  row2_en: B · HK$4m
+  row2_zh: B · 400 万港元
+  row2_zh_hk: B · 400 萬港元
+  col1_en: Days 0–30
+  col1_zh: 第 0–30 天
+  col1_zh_hk: 第 0–30 天
+  col2_en: Days 30–60
+  col2_zh: 第 30–60 天
+  col2_zh_hk: 第 30–60 天
+  col3_en: Forecast
+  col3_zh: 预测
+  col3_zh_hk: 預測
+  c11_en: HIBOR 2% + 1 point
+  c11_zh: HIBOR 2% + 1 个百分点
+  c11_zh_hk: HIBOR 2% + 1 個百分點
+  c12_en: New HIBOR + 1 point
+  c12_zh: 新 HIBOR + 1 个百分点
+  c12_zh_hk: 新 HIBOR + 1 個百分點
+  c13: HIBOR 4%
+  c21_en: 3.5% all-in
+  c21_zh: 全包 3.5%
+  c21_zh_hk: 全包 3.5%
+  c22_en: 3.5% all-in
+  c22_zh: 全包 3.5%
+  c22_zh_hk: 全包 3.5%
+  c23_en: No reset
+  c23_zh: 不重设
+  c23_zh_hk: 不重設
+  footer_en: Paid day 60 · top-up by day 40
+  footer_zh: 第 60 天付息 · 第 40 天前申请补充
+  footer_zh_hk: 第 60 天付息 · 第 40 天前申請補充
+  s1_en: >-
+    A manager says that while the currency stays inside its band, the 68,000 dollar interest reserve cannot
+    come up short.
+  s1_zh: 一位经理说，只要汇率还在区间里，那笔六万八千港元的利息储备就不可能不够。
+  s1_zh_hk: 有個經理話，只要匯率仲喺區間入面，嗰筆六萬八千蚊嘅利息儲備就冇可能唔夠。
+  s2_en: >-
+    Loan A is 6 million. It resets today at a 2 percent HIBOR fixing plus 1 point, and again on day 30.
+    The forecast for that next fixing is 4 percent.
+  s2_zh: A贷款六百万。今天按百分之二的HIBOR定价，加一个百分点重设，第三十天再重设一次。对下一次定价的预测是百分之四。
+  s2_zh_hk: A貸款六百萬。今日按百分之二嘅HIBOR定價，加一個百分點重設，第三十日再重設一次。對下一次定價嘅預測係百分之四。
+  s3_en: >-
+    Loan B is 4 million at 3.5 percent all-in, with no reset before day 60. Interest is paid on day 60.
+    Up to 8,000 extra can be requested, but only by day 40.
+  s3_zh: B贷款四百万，全包利率百分之三点五，第六十天之前不重设。两笔利息都在第六十天支付。最多可以申请补充八千港元，但必须在第四十天前提出。
+  s3_zh_hk: B貸款四百萬，全包利率百分之三點五，第六十日之前唔重設。兩筆利息都喺第六十日俾。最多可以申請補多八千蚊，但一定要喺第四十日之前提出。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Is the reserve enough?
+  title_zh: 储备够不够？
+  title_zh_hk: 儲備夠不夠？
+  en: >-
+    Will the 68,000 reserve cover the forecast? And how high can the day-30 HIBOR fixing go before you
+    need a top-up? Pause and vote.
+  zh: 六万八千的储备，够不够应付预测？第三十天的HIBOR定价最高可以到多少，才需要补充？请暂停，投个票。
+  zh_hk: 六萬八千嘅儲備，夠唔夠應付預測？第三十日嘅HIBOR定價最高可以去到幾多，先要補錢？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: >-
+    Day 30: HIBOR fixes at 6%
+  title_zh: 第 30 天：HIBOR 定价 6%
+  title_zh_hk: 第 30 天：HIBOR 定價 6%
+  step1_en: Next fixing 6%, not 4%
+  step1_zh: 下一次定价 6%，不是 4%
+  step1_zh_hk: 下一次定價 6%，不是 4%
+  step2_en: First month and B are locked
+  step2_zh: 第一个月和 B 已锁定
+  step2_zh_hk: 第一個月和 B 已鎖定
+  step3_en: Top-up window open to day 40
+  step3_zh: 补充窗口开到第 40 天
+  step3_zh_hk: 補充窗口開到第 40 天
+  s1_en: >-
+    In a fictional tighter funding scenario, the day-30 fixing comes in at 6 percent, not 4.
+  s1_zh: 在一个虚构的资金收紧情景里，第三十天的定价是百分之六，不是百分之四。
+  s1_zh_hk: 喺一個虛構嘅資金收緊情景入面，第三十日嘅定價係百分之六，唔係百分之四。
+  s2_en: >-
+    The first month's interest on A is already locked, and loan B's contract is unchanged.
+  s2_zh: A贷款第一个月的利息已经锁定，B贷款的合同也没有变。
+  s2_zh_hk: A貸款第一個月嘅利息已經鎖定，B貸款嘅合約亦冇變。
+  s3_en: >-
+    You can still request a top-up until day 40. Interest is still paid on day 60.
+  s3_zh: 到第四十天之前，仍然可以申请补充。利息仍在第六十天支付。
+  s3_zh_hk: 第四十日之前，仍然可以申請補錢。利息仍然喺第六十日俾。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: How much top-up?
+  title_zh: 要补充多少？
+  title_zh_hk: 要補充多少？
+  en: >-
+    Which part of the interest forecast changes? And what is the minimum whole-dollar top-up you must
+    request by day 40? Pause and vote.
+  zh: 利息预测里，哪一部分变了？在第四十天之前，最少要申请补充多少整数港元？请暂停，投个票。
+  zh_hk: 利息預測入面，邊部分變咗？喺第四十日之前，最少要申請補幾多蚊？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Reprice only the reset period
+  title_zh: 重设只影响它那一期
+  title_zh_hk: 重設只影響它那一期
+  step1_en: >-
+    A: 15,000 + 25,000 = 40,000
+  step1_zh: A：15,000 + 25,000 = 40,000
+  step1_zh_hk: A：15,000 + 25,000 = 40,000
+  step2_en: >-
+    B: 23,333.33 · total 63,333.33
+  step2_zh: B：23,333.33 · 合计 63,333.33
+  step2_zh_hk: B：23,333.33 · 合計 63,333.33
+  step3_en: Reserve holds up to HIBOR 4.9333%
+  step3_zh: HIBOR 不超过 4.9333% 都够
+  step3_zh_hk: HIBOR 不超過 4.9333% 都夠
+  s1_en: >-
+    Loan A costs 3 percent for the first month, 15,000, and 5 percent for the second, 25,000. That is
+    40,000.
+  s1_zh: A贷款第一个月按百分之三计，一万五千；第二个月按百分之五计，两万五千，合计四万。
+  s1_zh_hk: A貸款第一個月按百分之三計，一萬五千；第二個月按百分之五計，兩萬五千，加埋四萬。
+  s2_en: >-
+    Loan B adds 23,333.33 for two months, so the forecast is 63,333.33, leaving about 4,667 in the reserve.
+  s2_zh: B贷款两个月是两万三千三百三十三点三三，所以预测总额是六万三千三百三十三点三三，储备还剩大约四千六百六十七。
+  s2_zh_hk: B貸款兩個月係兩萬三千三百三十三點三三，所以預測總額係六萬三千三百三十三點三三，儲備仲剩大約四千六百六十七。
+  s3_en: >-
+    B and A's first month use 38,333.33, leaving 29,666.67 for A's second month. That allows a rate of
+    5.9333 percent, so HIBOR can reach about 4.9333 percent.
+  s3_zh: >-
+    B加上A的第一个月，用掉三万八千三百三十三点三三，A的第二个月还剩两万九千六百六十六点六七可用。折合年利率百分之五点九三三三，所以HIBOR最高大约可以到百分之四点九三三三。
+  s3_zh_hk: >-
+    B加A嘅第一個月，用咗三萬八千三百三十三點三三，A嘅第二個月仲剩兩萬九千六百六十六點六七。折合年利率百分之五點九三三三，所以HIBOR最高大約去到百分之四點九三三三。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Find the exposed cash flow
+  title_zh: 找出受影响的现金流
+  title_zh_hk: 找出受影響的現金流
+  step1_en: >-
+    Only A's second month reprices: 7%
+  step1_zh: 只有 A 第二个月重新定价：7%
+  step1_zh_hk: 只有 A 第二個月重新定價：7%
+  step2_en: 25,000 → 35,000 · total 73,333.33
+  step2_zh: 25,000 → 35,000 · 合计 73,333.33
+  step2_zh_hk: 25,000 → 35,000 · 合計 73,333.33
+  step3_en: Request HK$5,334 by day 40
+  step3_zh: 第 40 天前申请 HK$5,334
+  step3_zh_hk: 第 40 天前申請 HK$5,334
+  s1_en: >-
+    At 6 percent HIBOR, only A's second month reprices, to 7 percent. It costs 35,000 instead of 25,000.
+  s1_zh: HIBOR到百分之六时，只有A的第二个月重新定价，变成百分之七，利息从两万五千变成三万五千。
+  s1_zh_hk: HIBOR去到百分之六，淨係A嘅第二個月重新定價，變成百分之七，利息由兩萬五千變三萬五千。
+  s2_en: >-
+    Total interest becomes about 73,333.33, so the reserve is short by about 5,333.33.
+  s2_zh: 利息总额变成大约七万三千三百三十三点三三，储备大约差五千三百三十三点三三。
+  s2_zh_hk: 利息總額變成大約七萬三千三百三十三點三三，儲備大約差五千三百三十三點三三。
+  s3_en: >-
+    Request at least 5,334 dollars, rounded up, by day 40. It fits under the 8,000 cap. Waiting until
+    payment day would miss the window.
+  s3_zh: 在第四十天前，至少申请五千三百三十四港元，向上取整，在八千的上限之内。等到付款日才申请，就错过了窗口。
+  s3_zh_hk: 喺第四十日之前，最少申請五千三百三十四蚊，向上取整，喺八千嘅上限之內。等到俾錢嗰日先申請，就錯過咗窗口。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: The band does not fix your rate
+  title_zh: 汇率区间锁不住利率
+  title_zh_hk: 匯率區間鎖不住利率
+  en: >-
+    The peg can hold while local funding rates rise. Your loan feels that change only where and when its
+    contract allows a new fixing.
+  zh: 联系汇率守得住的同时，本地融资利率仍然可以上升。你的贷款只会在合同允许重新定价的地方和时间，受到这种变化影响。
+  zh_hk: 聯繫匯率守得住嘅同時，本地融資利率仍然可以上升。你嘅貸款只會喺合約容許重新定價嘅地方同時間，先受呢個變化影響。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Map each reset to its cash flow
+  title_zh: 把每次重设对应到现金流
+  title_zh_hk: 把每次重設對應到現金流
+  q1_en: Find the break-even fixing
+  q1_zh: 找出临界的定价
+  q1_zh_hk: 找出臨界的定價
+  q2_en: Ask for funding before the deadline
+  q2_zh: 在期限前申请资金
+  q2_zh_hk: 在期限前申請資金
+  s1_en: >-
+    A stable exchange rate is not a stable interest rate. Reprice only the periods that reset, and request
+    any top-up while the window is open.
+  s1_zh: 汇率稳定，不等于利率稳定。只为会重设的那几期重新定价，并在窗口关闭前申请补充。
+  s1_zh_hk: 匯率穩定，唔等於利率穩定。淨係為會重設嗰幾期重新定價，仲要喺窗口關之前申請補錢。
+  s2_en: >-
+    This is a classroom scenario, not a forecast of HIBOR or of any intervention.
+  s2_zh: 这是课堂情景，不是对HIBOR或任何干预的预测。
+  s2_zh_hk: 呢個係課堂情景，唔係對HIBOR或者任何干預嘅預測。
+  s3_en: >-
+    The business, loans and rates are fictional. Official scene art is a teaching illustration only.
+  s3_zh: 企业、贷款和利率都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 企業、貸款同利率都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

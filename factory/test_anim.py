@@ -1609,7 +1609,7 @@ class SceneRegistryTest(unittest.TestCase):
             [
                 "one_ten", "ten_and_ones", "make_ten", "count_objects", "number_track",
                 "ordinal_row", "pair_counters", "part_whole", "number_blocks",
-                "estimate_group",
+                "estimate_group", "row_match",
                 "lesson_hook", "lesson_takeaway",
             ],
         )
@@ -1974,6 +1974,57 @@ class SceneRegistryTest(unittest.TestCase):
                         for cube in card.vf_cubes:
                             self.assertLessEqual(ring.get_right()[0], cube.get_left()[0] + 1e-4)
 
+
+    def test_row_match_rings_the_unmatched_counters(self):
+        """The gap rings only the extra counters, and equal rows show 0."""
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
+        from manim import tempconfig
+
+        from anim import _make_scene, prepare_fonts
+
+        prepare_fonts()
+
+        def spec(part, a, b):
+            return {
+                "scene": "row_match",
+                "lang": "en",
+                "a": a,
+                "b": b,
+                "part": part,
+                "labels": {"title": "How many more?", "part": part, "a": a, "b": b},
+            }
+
+        with tempconfig({
+            "pixel_width": 1920, "pixel_height": 1080,
+            "frame_width": 8 * 16 / 9, "frame_height": 8, "frame_rate": 15,
+        }):
+            gap = _make_scene(spec("gap", 8, 5), [2.4], [[0.2, 0.9, 1.6]])
+            gap.render(preview=False)
+            unit = 1080 / 8
+            self.assertGreaterEqual(float(gap.vf_title.height) * unit, 47)
+            self.assertEqual(len(gap.vf_top), 8)
+            self.assertEqual(len(gap.vf_bottom), 5)
+            self.assertEqual(len(gap.vf_rings), 3)
+            self.assertGreaterEqual(float(gap.vf_answer.get_fill_opacity()), 0.9)
+            self.assertGreater(float(gap.vf_top.get_bottom()[1]), float(gap.vf_bottom.get_top()[1]))
+            same = _make_scene(spec("equal", 6, 6), [1.2], [[]])
+            same.render(preview=False)
+            self.assertEqual(len(same.vf_rings), 0)
+            self.assertEqual(same.vf_answer.text, "0")
+            self.assertGreaterEqual(float(same.vf_answer.get_fill_opacity()), 0.9)
+        with tempconfig({
+            "pixel_width": 1080, "pixel_height": 1920,
+            "frame_width": 8, "frame_height": 8 * 16 / 9, "frame_rate": 15,
+        }):
+            tall = _make_scene(spec("gap", 8, 5), [1.2], [[]])
+            tall.render(preview=False)
+            unit = 1920 / (8 * 16 / 9)
+            self.assertGreaterEqual(float(tall.vf_title.height) * unit, 47)
+            self.assertGreater(float(tall.vf_top.get_bottom()[1]), float(tall.vf_bottom.get_top()[1]))
+
     def test_p1_lessons_validate_and_keep_traditional_labels(self):
         expected = {
             "P1-NUM-01": ["lesson_hook", "count_objects", "count_objects", "count_objects", "lesson_takeaway"],
@@ -2025,6 +2076,10 @@ class SceneRegistryTest(unittest.TestCase):
             ],
             "P1-NUM-20": [
                 "lesson_hook", "pair_counters", "pair_counters", "number_blocks", "lesson_takeaway",
+            ],
+            "P1-NUM-21": [
+                "lesson_hook", "row_match", "row_match", "row_match", "row_match",
+                "row_match", "row_match", "lesson_takeaway",
             ],
         }
         for name, visuals in expected.items():
@@ -2643,6 +2698,25 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertIn("？", labels_for(recap20, "zh")["title"])
         self.assertNotIn("?", labels_for(recap20, "zh")["title"])
         self.assertNotIn("?", labels_for(recap20, "zh_hk")["title"])
+
+        twentyone = load_lesson(P1 / "P1-NUM-21.yaml")
+        matched = [beat for beat in twentyone["beats"] if beat.get("scene") == "row_match"]
+        self.assertEqual([b["part"] for b in matched], ["rows", "match", "gap", "hold", "hold", "equal"])
+        self.assertEqual([b["a"] for b in matched], [8, 8, 8, 8, 8, 6])
+        self.assertEqual(count_event(matched[2]), (0, 3))
+        self.assertIsNone(count_event(matched[0]))
+        self.assertEqual(matched[2]["s1_en"], "One. Two. Three.")
+        self.assertEqual(matched[2]["s1_zh_hk"], "一。二。三。")
+        self.assertEqual(labels_for(matched[3], "zh_hk")["title"], "多幾多呀？")
+        recap21 = twentyone["beats"][-1]
+        self.assertEqual(
+            labels_for(recap21, "en")["cues"],
+            [("tiles", (8, 5)), ("counters", 3), ("tiles", (3,)), ("tiles", (6, 6))],
+        )
+        self.assertEqual(len(labels_for(recap21, "en")["lines"]), 4)
+        self.assertNotIn("sum", recap21["s3_en"].lower())
+        self.assertIn("？", twentyone["title_zh"])
+        self.assertNotIn("?", twentyone["title_zh_hk"])
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

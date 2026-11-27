@@ -1,0 +1,121 @@
+# P1-NUM-21. Mirrors MathQuiz path relations / lesson difference,
+# "How many more or fewer?".
+# Eight and five leave three with no partner. Fewer names that same three.
+# Six and six leave no one over. Comparing does not take the counters away.
+# https://github.com/kochiuyu/mathquiz learn-relations.js (path relations, lesson difference).
+# Speech is for age 6: one short idea per sentence. The heading is answered on screen.
+id: P1-NUM-21
+title_en: How many more?
+title_zh: 多多少？少多少？
+title_zh_hk: 多幾多？少幾多呀？
+duration_target_s: 58
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: counters
+  shown: true
+  seconds: 8
+  title_en: How many more?
+  title_zh: 多多少？少多少？
+  title_zh_hk: 多幾多？少幾多呀？
+  s1_en: Two rows. We will match them.
+  s1_zh: 两行圆片。我们一个对一个。
+  s1_zh_hk: 兩行圓片。我哋一個對一個。
+
+- id: rows
+  visual: animated
+  scene: row_match
+  part: rows
+  a: 8
+  b: 5
+  seconds: 6
+  s1_en: This row has eight. This row has five.
+  s1_zh: 这一行有八个。这一行有五个。
+  s1_zh_hk: 呢一行有八個。呢一行有五個。
+
+- id: match
+  visual: animated
+  scene: row_match
+  part: match
+  a: 8
+  b: 5
+  seconds: 6
+  s1_en: Match one with one.
+  s1_zh: 一个对一个。
+  s1_zh_hk: 一個對一個。
+
+- id: gap
+  visual: animated
+  scene: row_match
+  part: gap
+  a: 8
+  b: 5
+  seconds: 6
+  s1_en: One. Two. Three.
+  s1_zh: 一。二。三。
+  s1_zh_hk: 一。二。三。
+
+- id: more
+  visual: animated
+  scene: row_match
+  part: hold
+  a: 8
+  b: 5
+  seconds: 7
+  s1_en: Three have no partner. Eight has three more.
+  s1_zh: 三个没有对上。八个比五个多三个。
+  s1_zh_hk: 三個冇對上。八個比五個多三個。
+
+- id: fewer
+  visual: animated
+  scene: row_match
+  part: hold
+  a: 8
+  b: 5
+  seconds: 7
+  s1_en: Five has three fewer. It is the same three.
+  s1_zh: 五个比八个少三个。还是这三个。
+  s1_zh_hk: 五個比八個少三個。都係呢三個。
+
+- id: equal
+  visual: animated
+  scene: row_match
+  part: equal
+  a: 6
+  b: 6
+  seconds: 7
+  s1_en: Both rows have six. Every one has a partner.
+  s1_zh: 两行都是六个。每个都对上了。
+  s1_zh_hk: 兩行都係六個。每個都對上咗。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: counters
+  seconds: 11
+  title_en: How many more?
+  title_zh: 多多少？
+  title_zh_hk: 多幾多呀？
+  s1_en: Eight and five.
+  s1_zh: 八个和五个。
+  s1_zh_hk: 八個同五個。
+  s2_en: Three have no partner.
+  s2_zh: 三个没有对上。
+  s2_zh_hk: 三個冇對上。
+  s3_en: Five has three fewer. The same three.
+  s3_zh: 五个少三个。还是这三个。
+  s3_zh_hk: 五個少三個。都係呢三個。
+  s4_en: Six and six. Every one has a partner.
+  s4_zh: 六个和六个。每个都对上了。
+  s4_zh_hk: 六個同六個。每個都對上咗。
+  cues:
+  - kind: tiles
+    values: [8, 5]
+  - kind: counters
+    n: 3
+  - kind: tiles
+    values: [3]
+  - kind: tiles
+    values: [6, 6]

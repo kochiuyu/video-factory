@@ -190,8 +190,37 @@ def straight_line():
     return _stroke(Line((-1.6, 0, 0), (1.6, 0, 0), stroke_width=8))
 
 
-def curved_line():
-    from manim import Arc
+def arc_stroke(start, end, angle: float = 1.05, pieces: int = 24):
+    """A curved stroke from start to end. Short lines, so it never fills in."""
+    from manim import Line, VGroup
 
-    arc = Arc(radius=1.35, start_angle=math.radians(200), angle=math.radians(140), color=NAVY, stroke_width=8)
-    return arc
+    sx, sy = float(start[0]), float(start[1])
+    ex, ey = float(end[0]), float(end[1])
+    dx, dy = ex - sx, ey - sy
+    chord = math.hypot(dx, dy) or 1.0
+    half = abs(angle) / 2.0
+    radius = chord / (2.0 * math.sin(half)) if half > 0.05 else chord * 4.0
+    mx, my = (sx + ex) / 2.0, (sy + ey) / 2.0
+    px, py = -dy / chord, dx / chord
+    sign = 1.0 if angle >= 0 else -1.0
+    height = math.sqrt(max(radius * radius - (chord / 2.0) ** 2, 0.0))
+    cx, cy = mx + sign * px * height, my + sign * py * height
+    a0 = math.atan2(sy - cy, sx - cx)
+    a1 = math.atan2(ey - cy, ex - cx)
+    sweep = a1 - a0
+    if sign > 0 and sweep < 0:
+        sweep += 2.0 * math.pi
+    if sign < 0 and sweep > 0:
+        sweep -= 2.0 * math.pi
+    points = []
+    for index in range(pieces + 1):
+        theta = a0 + sweep * index / pieces
+        points.append((cx + radius * math.cos(theta), cy + radius * math.sin(theta), 0.0))
+    return VGroup(*[
+        Line(points[index], points[index + 1], color=NAVY, stroke_width=8)
+        for index in range(pieces)
+    ])
+
+
+def curved_line():
+    return arc_stroke((-1.55, -0.15, 0.0), (1.55, -0.15, 0.0), angle=1.15)

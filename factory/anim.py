@@ -2534,7 +2534,18 @@ def _scene_types() -> dict:
                 if kind in {"prism", "cylinder", "pyramid", "cone", "sphere"}:
                     return solid_picture(kind)
                 if kind == "line":
-                    return straight_line()
+                    # A filled bar plus the mark. FadeIn does not show a stroke-only line.
+                    from manim import Rectangle
+                    bar = Rectangle(
+                        width=3.4, height=0.1, stroke_width=0,
+                        fill_color=NAVY, fill_opacity=1,
+                    )
+                    mark = Circle(
+                        radius=0.16, stroke_color=NAVY, stroke_width=3,
+                        fill_color=GREEN, fill_opacity=1,
+                    )
+                    mark.move_to(bar.get_center())
+                    return VGroup(bar, mark)
                 if kind in {"triangle", "quad", "pentagon", "hexagon", "circle"}:
                     return flat_picture(kind)
                 return flat_picture("triangle")
@@ -4566,13 +4577,14 @@ def _scene_types() -> dict:
                 self.spend(1, right.animate.set_opacity(1))
                 self.spend(2)
                 return
+            from shape_draw import arc_stroke
+
             dots = VGroup(*[
                 Circle(radius=0.18, stroke_color=NAVY, stroke_width=4, fill_color=GREEN, fill_opacity=1)
                 for _ in range(2)
             ]).arrange(RIGHT, buff=2.2)
             line = Line(dots[0].get_center(), dots[1].get_center(), color=NAVY, stroke_width=8)
-            curve = curved_line()
-            curve.move_to(line.get_center() + UP * 0.15)
+            curve = arc_stroke(dots[0].get_center(), dots[1].get_center(), angle=1.05)
             line.set_opacity(0)
             curve.set_opacity(0)
             body = VGroup(curve, line, dots)

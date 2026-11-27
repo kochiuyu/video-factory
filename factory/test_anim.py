@@ -1609,7 +1609,7 @@ class SceneRegistryTest(unittest.TestCase):
             [
                 "one_ten", "ten_and_ones", "make_ten", "count_objects", "number_track",
                 "ordinal_row", "pair_counters", "part_whole", "number_blocks",
-                "estimate_group",
+                "estimate_group", "place_sum",
                 "lesson_hook", "lesson_takeaway",
             ],
         )
@@ -1974,6 +1974,68 @@ class SceneRegistryTest(unittest.TestCase):
                         for cube in card.vf_cubes:
                             self.assertLessEqual(ring.get_right()[0], cube.get_left()[0] + 1e-4)
 
+
+    def test_place_sum_lines_up_ones_and_tens(self):
+        """Ones stay in the ones column, and a new ten is a full-size digit."""
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
+        from manim import tempconfig
+
+        from anim import _make_scene, prepare_fonts
+
+        prepare_fonts()
+
+        def spec(op, values, title):
+            return {
+                "scene": "place_sum",
+                "lang": "en",
+                "op": op,
+                "values": values,
+                "labels": {"title": title, "op": op, "values": values},
+            }
+
+        with tempconfig({
+            "pixel_width": 1920, "pixel_height": 1080,
+            "frame_width": 8 * 16 / 9, "frame_height": 8, "frame_rate": 15,
+        }):
+            carry = _make_scene(spec("add", [27, 15], "Add the ones"), [0.6, 0.6, 0.6])
+            carry.render(preview=False)
+            unit = 1080 / 8
+            self.assertGreaterEqual(float(carry.vf_title.height) * unit, 47)
+            self.assertGreater(float(carry.vf_title.get_bottom()[1]), float(carry.vf_grid.get_top()[1]) - 0.05)
+            self.assertEqual(carry.vf_carry.text, "1")
+            self.assertGreaterEqual(float(carry.vf_carry.get_fill_opacity()), 0.9)
+            self.assertGreaterEqual(float(carry.vf_answer_ones.get_fill_opacity()), 0.9)
+            self.assertGreaterEqual(float(carry.vf_answer_tens.get_fill_opacity()), 0.9)
+            self.assertEqual(carry.vf_answer_ones.text, "2")
+            self.assertEqual(carry.vf_answer_tens.text, "4")
+            six = _make_scene(spec("sub", [58, 6], "Take away"), [0.6, 0.6, 0.6])
+            six.render(preview=False)
+            self.assertNotIn((1, "tens"), six.vf_digits)
+            self.assertGreater(
+                float(six.vf_digits[(1, "ones")].get_center()[0]),
+                float(six.vf_digits[(0, "tens")].get_center()[0]),
+            )
+            self.assertEqual(six.vf_answer_ones.text, "2")
+            self.assertEqual(six.vf_answer_tens.text, "5")
+            self.assertIsNone(six.vf_carry)
+            trio = _make_scene(spec("add", [18, 7, 5], "Add the ones"), [0.6, 0.6, 0.6])
+            trio.render(preview=False)
+            self.assertEqual(trio.vf_carry.text, "2")
+            self.assertEqual(trio.vf_answer_ones.text, "0")
+            self.assertEqual(trio.vf_answer_tens.text, "3")
+        with tempconfig({
+            "pixel_width": 1080, "pixel_height": 1920,
+            "frame_width": 8, "frame_height": 8 * 16 / 9, "frame_rate": 15,
+        }):
+            tall = _make_scene(spec("add", [18, 7, 5], "Add the ones"), [0.5, 0.5, 0.5])
+            tall.render(preview=False)
+            unit = 1920 / (8 * 16 / 9)
+            self.assertGreaterEqual(float(tall.vf_title.height) * unit, 47)
+            self.assertGreater(float(tall.vf_title.get_bottom()[1]), float(tall.vf_grid.get_top()[1]) - 0.05)
+
     def test_p1_lessons_validate_and_keep_traditional_labels(self):
         expected = {
             "P1-NUM-01": ["lesson_hook", "count_objects", "count_objects", "count_objects", "lesson_takeaway"],
@@ -2025,6 +2087,9 @@ class SceneRegistryTest(unittest.TestCase):
             ],
             "P1-NUM-20": [
                 "lesson_hook", "pair_counters", "pair_counters", "number_blocks", "lesson_takeaway",
+            ],
+            "P1-NUM-23": [
+                "lesson_hook", "place_sum", "place_sum", "place_sum", "lesson_takeaway",
             ],
         }
         for name, visuals in expected.items():
@@ -2643,6 +2708,21 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertIn("？", labels_for(recap20, "zh")["title"])
         self.assertNotIn("?", labels_for(recap20, "zh")["title"])
         self.assertNotIn("?", labels_for(recap20, "zh_hk")["title"])
+
+        twentythree = load_lesson(P1 / "P1-NUM-23.yaml")
+        trios = [beat for beat in twentythree["beats"] if beat.get("scene") == "place_sum"]
+        self.assertEqual(
+            [(b["a"], b["b"], b["c"]) for b in trios],
+            [(12, 4, 3), (24, 6, 4), (18, 7, 5)],
+        )
+        self.assertEqual(labels_for(trios[2], "en")["values"], [18, 7, 5])
+        self.assertEqual(labels_for(trios[0], "zh")["title"], "先加个位")
+        recap23 = twentythree["beats"][-1]
+        self.assertEqual(
+            labels_for(recap23, "en")["cues"],
+            [("tiles", (12, 4, 3)), ("tens", 1, 9), ("tiles", (6, 4, 10)), ("tens", 3, 0)],
+        )
+        self.assertNotIn("sum", recap23["s3_en"].lower())
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

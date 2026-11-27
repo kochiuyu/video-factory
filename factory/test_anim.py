@@ -1791,6 +1791,10 @@ class SceneRegistryTest(unittest.TestCase):
 
     def test_takeaway_blocks_share_a_scale_and_comparisons_stay_apart(self):
         """Rods keep one size, a comparison's blocks match the number, and the ring clears both digits."""
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
         from manim import Text, tempconfig
 
         from anim import _scene_types, cjk_family, latin_family, prepare_fonts

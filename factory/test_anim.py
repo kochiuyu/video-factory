@@ -2583,6 +2583,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-EVY-07": [
                 "lesson_hook", "coin_row", "coin_row", "coin_row", "lesson_takeaway",
             ],
+            "P1-EVY-08": [
+                "lesson_hook", "coin_row", "coin_row", "coin_row", "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -2611,6 +2614,7 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-EVY-05": ("7 centimetres is longer.", "7厘米更长。", "7厘米長啲。"),
             "P1-EVY-06": ("That is about 6 centimetres.", "大约是6厘米。", "大約係6厘米。"),
             "P1-EVY-07": ("This coin says one dollar.", "这枚写着一元。", "呢枚寫住一元。"),
+            "P1-EVY-08": ("It says 4 dollars and 20 cents.", "它是四元两角。", "佢係四元兩毫。"),
         }
         for name, phrases in answers.items():
             lesson = load_lesson(P1 / f"{name}.yaml")

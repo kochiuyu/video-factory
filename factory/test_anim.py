@@ -2256,6 +2256,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-SHP-02": [
                 "lesson_hook", "flat_shape", "flat_shape", "flat_shape", "flat_shape", "lesson_takeaway",
             ],
+            "P1-SHP-03": [
+                "lesson_hook", "shape_join", "shape_join", "shape_join", "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -2987,6 +2990,17 @@ class SceneRegistryTest(unittest.TestCase):
         )
         self.assertEqual(labels_for(recap, "en")["cues"][3], ("flat", "pentagon", 20))
         self.assertNotIn("嗎", _beat_lines(names, "zh_hk"))
+        joins = load_lesson(P1 / "P1-SHP-03.yaml")
+        pieces = [beat for beat in joins["beats"] if beat.get("scene") == "shape_join"]
+        self.assertEqual([b["result"] for b in pieces], ["quad", "pentagon", "hexagon"])
+        self.assertIsNone(count_event(pieces[0]))
+        self.assertEqual(pieces[1]["s3_en"], "Count only the outside. Five sides.")
+        self.assertEqual(pieces[1]["s3_zh_hk"], "只數外邊。五條邊。")
+        self.assertEqual(
+            labels_for(joins["beats"][-1], "en")["cues"],
+            [("join", "quad"), ("join", "pentagon"), ("join", "hexagon")],
+        )
+        self.assertNotIn("嗎", _beat_lines(joins, "zh_hk"))
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

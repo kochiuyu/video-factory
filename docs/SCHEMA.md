@@ -143,9 +143,9 @@ Authoring, the scenes, caption timing, and the cache live in [docs/ANIMATED_SCEN
 
 `shape_join` takes `result` (`quad`, `triangle`, `pentagon`, or `hexagon`). Three spoken lines. The last line counts the outside only. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
 
-`solid_shape` takes `items` (one or two of `prism`, `cylinder`, `pyramid`, `cone`, `sphere`) and `part` (`pair` or `turn`). Three spoken lines. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
+`solid_shape` takes `items` (one or two of `prism`, `cylinder`, `pyramid`, `cone`, `sphere`) and `part` (`pair`, `turn`, or `stack`). Optional `turns` is one angle per item. Three spoken lines. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
 
-A `lesson_hook` may use `motif: shapes` and `kind` (a flat shape, a solid, or `line`). A takeaway cue may use `kind: line` (`mode` `marks`, `straight`, `curve`, or `routes`), `kind: flat` (one `shape` with optional `turn`, or `items` for two or three shapes in a row), `kind: solid` (one `shape`, or `items` for a pair), or `kind: join` (`result`).
+A `lesson_hook` may use `motif: shapes` and `kind` (a flat shape, a solid, or `line`). A takeaway cue may use `kind: line` (`mode` `marks`, `straight`, `curve`, or `routes`), `kind: flat` (one `shape` with optional `turn`, or `items` for two or three shapes in a row), `kind: solid` (one `shape` with optional `turn`, `items` for a pair, or `items` with `layout: stack`), or `kind: join` (`result`).
 
 `number_blocks` fields depend on `mode`. `tens` uses `count` (0–100). `compare` uses `a` and `b` (0–100, different). `order` uses `a` and `b`, plus optional `n` and `mark` (2–4 values, 0–100, drawn left to right). `hop` uses `start` and `end` (0–100, different, at most five apart). `groups` uses `a` (2–5), `n` (1–6), and optional `b` (loose counters, fewer than `a`), with the total at most 20. Three spoken lines. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
 

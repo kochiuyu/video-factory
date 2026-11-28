@@ -2176,6 +2176,22 @@ class SceneRegistryTest(unittest.TestCase):
             solid.render(preview=False)
             self.assertEqual(solid.vf_kinds, ["prism", "cylinder"])
             self.assertEqual(len(solid.vf_cards), 2)
+            stacked = _make_scene({
+                "scene": "solid_shape",
+                "lang": "en",
+                "part": "stack",
+                "items": ["prism", "prism"],
+                "labels": {
+                    "title": "Flat faces stack",
+                    "part": "stack",
+                    "items": ["prism", "prism"],
+                    "names": ["Prism", "Prism"],
+                    "turn": 25,
+                },
+            }, [0.4, 0.5, 0.4])
+            stacked.render(preview=False)
+            self.assertEqual(stacked.vf_kinds, ["prism", "prism"])
+            self.assertEqual(len(stacked.vf_cards), 2)
         with tempconfig({
             "pixel_width": 1080, "pixel_height": 1920,
             "frame_width": 8, "frame_height": 8 * 16 / 9, "frame_rate": 15,
@@ -2263,6 +2279,9 @@ class SceneRegistryTest(unittest.TestCase):
                 "lesson_hook", "solid_shape", "solid_shape", "solid_shape", "lesson_takeaway",
             ],
             "P1-SHP-05": [
+                "lesson_hook", "solid_shape", "solid_shape", "solid_shape", "solid_shape", "lesson_takeaway",
+            ],
+            "P1-SHP-06": [
                 "lesson_hook", "solid_shape", "solid_shape", "solid_shape", "solid_shape", "lesson_takeaway",
             ],
         }
@@ -3037,6 +3056,37 @@ class SceneRegistryTest(unittest.TestCase):
         )
         self.assertEqual(labels_for(around["beats"][-1], "zh_hk")["lines"][3], "轉一轉，仲係同一種。")
         self.assertNotIn("嗎", _beat_lines(around, "zh_hk"))
+        explore = load_lesson(P1 / "P1-SHP-06.yaml")
+        tried = [beat for beat in explore["beats"] if beat.get("scene") == "solid_shape"]
+        self.assertEqual([b["part"] for b in tried], ["pair", "pair", "stack", "pair"])
+        self.assertEqual(tried[0]["turns"], [0, 90])
+        self.assertEqual(tried[1]["items"], ["cylinder", "cylinder"])
+        self.assertEqual(tried[2]["items"], ["prism", "prism"])
+        self.assertIsNone(count_event(tried[0]))
+        self.assertEqual(tried[0]["s1_zh_hk"], "光滑嘅波可以碌。")
+        self.assertEqual(tried[2]["s3_zh"], "平的一面可以叠稳。")
+        self.assertEqual(explore["beats"][0]["s1_en"], "Which shapes can roll?")
+        self.assertEqual(
+            labels_for(explore["beats"][-1], "en")["cues"],
+            [
+                ("solid", "sphere"),
+                ("solid", "cylinder", 90),
+                ("solid", "cylinder"),
+                ("solid", "stack", ("prism", "prism")),
+            ],
+        )
+        self.assertEqual(
+            labels_for(tried[0], "en")["turns"],
+            [0, 90],
+        )
+        self.assertNotIn("turns", labels_for(matched[0], "en"))
+        self.assertTrue(scene_problems({
+            "visual": "animated",
+            "scene": "solid_shape",
+            "part": "stack",
+            "items": ["prism"],
+        }))
+        self.assertNotIn("嗎", _beat_lines(explore, "zh_hk"))
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

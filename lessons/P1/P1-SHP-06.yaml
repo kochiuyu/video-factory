@@ -1,0 +1,134 @@
+# P1-SHP-06. Mirrors MathQuiz path solids / lesson solidexplore, "Roll, stack and look".
+# A ball rolls. A can on its side rolls too. A flat end can sit still.
+# Flat faces stack. A ball has no flat face to stack on.
+# https://github.com/kochiuyu/mathquiz learn-solids.js (solidexplore).
+# Speech is for age 6: one short idea per sentence.
+id: P1-SHP-06
+title_en: Roll, stack and look
+title_zh: 滚动、堆叠和观察
+title_zh_hk: 碌、疊同睇
+duration_target_s: 70
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: shapes
+  kind: sphere
+  seconds: 8
+  title_en: Roll, stack and look
+  title_zh: 滚动、堆叠和观察
+  title_zh_hk: 碌、疊同睇
+  s1_en: Which shapes can roll?
+  s1_zh: 哪些立体可以滚动？
+  s1_zh_hk: 邊啲立體可以碌呀？
+
+- id: roll
+  visual: animated
+  scene: solid_shape
+  part: pair
+  items: [sphere, cylinder]
+  turns: [0, 90]
+  seconds: 14
+  title_en: A ball and a can
+  title_zh: 皮球和罐子
+  title_zh_hk: 波同罐
+  s1_en: A smooth ball can roll.
+  s1_zh: 光滑的皮球可以滚动。
+  s1_zh_hk: 光滑嘅波可以碌。
+  s2_en: A can on its side can roll too.
+  s2_zh: 侧放的罐子也可以滚动。
+  s2_zh_hk: 側放嘅罐都可以碌。
+  s3_en: Look at the whole shape.
+  s3_zh: 要看整个立体。
+  s3_zh_hk: 要睇成個立體。
+
+- id: place
+  visual: animated
+  scene: solid_shape
+  part: pair
+  items: [cylinder, cylinder]
+  turns: [0, 90]
+  seconds: 14
+  title_en: Stand or lie down
+  title_zh: 站着，或者侧放
+  title_zh_hk: 企住，或者側放
+  s1_en: This can stands on a flat end.
+  s1_zh: 这个罐子用平的一端站着。
+  s1_zh_hk: 呢個罐用平嘅一端企住。
+  s2_en: The same shape can lie on its side.
+  s2_zh: 同一种也可以侧过来。
+  s2_zh_hk: 同一種都可以側過嚟。
+  s3_en: The flat end can sit still.
+  s3_zh: 平的一端可以放稳。
+  s3_zh_hk: 平嘅一端可以放穩。
+
+- id: stack
+  visual: animated
+  scene: solid_shape
+  part: stack
+  items: [prism, prism]
+  seconds: 14
+  title_en: Flat faces stack
+  title_zh: 平的一面可以叠
+  title_zh_hk: 平嘅一面可以疊
+  s1_en: Here are two boxes.
+  s1_zh: 这里有两个盒子。
+  s1_zh_hk: 呢度有兩個盒。
+  s2_en: Put one flat face on the other.
+  s2_zh: 把平的一面叠上去。
+  s2_zh_hk: 將平嘅一面疊上去。
+  s3_en: Flat faces stack.
+  s3_zh: 平的一面可以叠稳。
+  s3_zh_hk: 平嘅一面可以疊穩。
+
+- id: round
+  visual: animated
+  scene: solid_shape
+  part: pair
+  items: [prism, sphere]
+  seconds: 12
+  title_en: A ball is round all over
+  title_zh: 皮球四面都圆
+  title_zh_hk: 波四面都圓
+  s1_en: A box has a flat face.
+  s1_zh: 盒子有平的一面。
+  s1_zh_hk: 盒有平嘅一面。
+  s2_en: A ball is round all over.
+  s2_zh: 皮球四面都是圆的。
+  s2_zh_hk: 波四面都係圓嘅。
+  s3_en: Stack the flat face.
+  s3_zh: 用平的一面来叠。
+  s3_zh_hk: 用平嘅一面嚟疊。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: shapes
+  seconds: 16
+  title_en: Roll, stack and look
+  title_zh: 滚动、堆叠和观察
+  title_zh_hk: 碌、疊同睇
+  s1_en: A ball can roll.
+  s1_zh: 皮球可以滚动。
+  s1_zh_hk: 波可以碌。
+  s2_en: A can on its side can roll.
+  s2_zh: 侧放的罐子可以滚。
+  s2_zh_hk: 側放嘅罐可以碌。
+  s3_en: A flat end can sit still.
+  s3_zh: 平的一端可以放稳。
+  s3_zh_hk: 平嘅一端可以放穩。
+  s4_en: Flat faces can stack.
+  s4_zh: 平的一面可以叠起。
+  s4_zh_hk: 平嘅一面可以疊起。
+  cues:
+  - kind: solid
+    shape: sphere
+  - kind: solid
+    shape: cylinder
+    turn: 90
+  - kind: solid
+    shape: cylinder
+  - kind: solid
+    items: [prism, prism]
+    layout: stack

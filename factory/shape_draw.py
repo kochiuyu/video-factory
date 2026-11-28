@@ -159,6 +159,98 @@ def solid_picture(kind: str):
     return group
 
 
+OBJECT_KINDS = ("ball", "book", "cup")
+PLACE_LAYOUTS = ("row", "column", "depth")
+
+
+def _fit_height(mob, height: float = 1.6):
+    if float(mob.height) > 0:
+        mob.scale(height / float(mob.height))
+    return mob
+
+
+def _cup_handle():
+    """A stroke handle on the right. Each piece stops at its own end."""
+    from manim import Line, VGroup
+
+    lines = []
+    steps = 8
+    cx, cy, radius = 0.72, -0.08, 0.36
+    for index in range(steps):
+        theta0 = -math.pi / 2 + math.pi * index / steps
+        theta1 = -math.pi / 2 + math.pi * (index + 1) / steps
+        start = (cx + radius * math.cos(theta0), cy + radius * math.sin(theta0), 0.0)
+        end = (cx + radius * math.cos(theta1), cy + radius * math.sin(theta1), 0.0)
+        lines.append(_round_outline(Line(start, end, color=NAVY, stroke_width=5)))
+    return VGroup(*lines)
+
+
+def _viewer_arrow():
+    """The child stands here and looks along the floor. The point faces the objects."""
+    from manim import Polygon
+
+    return _round_outline(Polygon(
+        (0.0, 0.28, 0.0), (-0.24, -0.14, 0.0), (0.24, -0.14, 0.0),
+        color=NAVY, stroke_width=4, fill_color=GREEN, fill_opacity=1,
+    ))
+
+
+def object_picture(kind: str):
+    """A ball, a book, or a cup, at one shared height."""
+    from manim import RIGHT, Ellipse, Polygon, Rectangle, VGroup
+
+    if kind == "ball":
+        return _fit_height(solid_picture("sphere"))
+    if kind == "book":
+        cover = _round_outline(Rectangle(
+            width=1.2, height=1.55, color=NAVY, stroke_width=5,
+            fill_color=GOLD, fill_opacity=1,
+        ))
+        page = _round_outline(Rectangle(
+            width=0.16, height=1.38, color=NAVY, stroke_width=4,
+            fill_color=CREAM, fill_opacity=1,
+        ))
+        page.next_to(cover, RIGHT, buff=0)
+        return _fit_height(VGroup(cover, page))
+    body = _round_outline(Polygon(
+        (-0.58, -0.75, 0), (0.58, -0.75, 0), (0.78, 0.42, 0), (-0.78, 0.42, 0),
+        color=NAVY, stroke_width=5, fill_color=SIDE, fill_opacity=1,
+    ))
+    rim = _round_outline(Ellipse(
+        width=1.56, height=0.36, color=NAVY, stroke_width=5,
+        fill_color=CREAM, fill_opacity=1,
+    ))
+    rim.move_to((0, 0.42, 0))
+    return _fit_height(VGroup(body, rim, _cup_handle()))
+
+
+def place_arrangement(layout: str, items: list[str]):
+    """Objects in a row, a column, or near-to-far along the floor.
+
+    ``row`` reads left to right. ``column`` puts the first object over the next.
+    ``depth`` puts the first object nearer the arrow. The arrow is the child.
+    """
+    from manim import DOWN, RIGHT, VGroup
+
+    pics = VGroup(*[object_picture(str(kind)) for kind in items])
+    if layout == "column":
+        pics.arrange(DOWN, buff=0.36)
+        group = pics
+    elif layout == "depth":
+        pics[0].move_to((0, -0.85, 0))
+        if len(pics) > 1:
+            pics[1].move_to((0, 1.0, 0))
+        arrow = _viewer_arrow()
+        arrow.next_to(pics[0], DOWN, buff=0.22)
+        group = VGroup(pics, arrow)
+        group.vf_arrow = arrow
+    else:
+        pics.arrange(RIGHT, buff=0.48)
+        group = pics
+    group.vf_objects = pics
+    return group
+
+
 def join_picture(result: str):
     """Two pieces in their joined places, plus the outside edges and the inside join."""
     from manim import Line, Polygon, VGroup

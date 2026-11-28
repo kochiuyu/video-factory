@@ -1,0 +1,138 @@
+# P1-SHP-07. Mirrors MathQuiz path positions / lesson leftright, "Left and right".
+# Positions are from the child's own view of the screen.
+# The ball starts on the left of the book. Then the two objects swap.
+# https://github.com/kochiuyu/mathquiz learn-positions.js (leftright).
+# Speech is for age 6: one short idea per sentence.
+id: P1-SHP-07
+title_en: Left and right
+title_zh: 左边和右边
+title_zh_hk: 左邊同右邊
+duration_target_s: 70
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: shapes
+  kind: sphere
+  seconds: 8
+  title_en: Left and right
+  title_zh: 左边和右边
+  title_zh_hk: 左邊同右邊
+  s1_en: Where is the ball?
+  s1_zh: 球在哪里？
+  s1_zh_hk: 波喺邊呀？
+
+- id: left
+  visual: animated
+  scene: object_place
+  layout: row
+  items: [ball, book]
+  focus: 0
+  seconds: 14
+  title_en: The ball is on the left
+  title_zh: 球在左边
+  title_zh_hk: 波喺左邊
+  s1_en: The ball is on the left.
+  s1_zh: 球在左边。
+  s1_zh_hk: 波喺左邊。
+  s2_en: The book is on the right. It sits next to the ball.
+  s2_zh: 书在右边。它在球的旁边。
+  s2_zh_hk: 書喺右邊。佢喺波嘅旁邊。
+  s3_en: Use your own view. Your left is this side.
+  s3_zh: 按你看的方向说。你的左边是这一边。
+  s3_zh_hk: 按你望嘅方向講。你嘅左邊係呢一邊。
+
+- id: book
+  visual: animated
+  scene: object_place
+  layout: row
+  items: [ball, book]
+  focus: 1
+  seconds: 12
+  title_en: Start with the book
+  title_zh: 先说书
+  title_zh_hk: 先講書
+  s1_en: Start with the book. Point to it first.
+  s1_zh: 先说这一本书。先指出它。
+  s1_zh_hk: 先講呢本書。先指住佢。
+  s2_en: The book is on the right of the ball. The ball stays on the left.
+  s2_zh: 书在球的右边。球还在左边。
+  s2_zh_hk: 書喺波嘅右邊。波仲喺左邊。
+  s3_en: Same picture. We named the book first. The places stayed.
+  s3_zh: 同一幅图，我们先说书。位置没有变。
+  s3_zh_hk: 同一幅圖，我哋先講書。位置冇變。
+
+- id: swap
+  visual: animated
+  scene: object_place
+  layout: row
+  items: [book, ball]
+  focus: 1
+  seconds: 14
+  title_en: They swapped places
+  title_zh: 两件换了位置
+  title_zh_hk: 兩件換咗位
+  s1_en: The ball and the book swap. Both of them move.
+  s1_zh: 球和书换了位置。两件都动了。
+  s1_zh_hk: 波同書換咗位。兩件都郁咗。
+  s2_en: Now the ball is on the right. Look at that side.
+  s2_zh: 现在球在右边。看这一边。
+  s2_zh_hk: 而家波喺右邊。睇呢一邊。
+  s3_en: The book is on the left. The ball is on the right.
+  s3_zh: 书在左边。球就在右边。
+  s3_zh_hk: 書喺左邊。波就喺右邊。
+
+- id: again
+  visual: animated
+  scene: object_place
+  layout: row
+  items: [book, ball]
+  focus: 0
+  seconds: 12
+  title_en: Where is the book now?
+  title_zh: 现在书在哪里？
+  title_zh_hk: 而家書喺邊呀？
+  s1_en: Where is the book now? Look to your left.
+  s1_zh: 现在书在哪里？望向左边。
+  s1_zh_hk: 而家書喺邊呀？望向左邊。
+  s2_en: The book is on the left.
+  s2_zh: 书在左边。
+  s2_zh_hk: 書喺左邊。
+  s3_en: Name the object, then the side. Say the book first.
+  s3_zh: 先说哪一件，再说哪一边。先说书。
+  s3_zh_hk: 先講邊一件，再講邊一邊。先講書。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: shapes
+  seconds: 16
+  title_en: Left and right
+  title_zh: 左边和右边
+  title_zh_hk: 左邊同右邊
+  s1_en: The ball was on the left.
+  s1_zh: 球在左边。
+  s1_zh_hk: 波喺左邊。
+  s2_en: The book was on the right.
+  s2_zh: 书在右边。
+  s2_zh_hk: 書喺右邊。
+  s3_en: They swapped places.
+  s3_zh: 两件换了位置。
+  s3_zh_hk: 兩件換咗位。
+  s4_en: Now the ball is on the right.
+  s4_zh: 现在球在右边。
+  s4_zh_hk: 而家波喺右邊。
+  cues:
+  - kind: place
+    layout: row
+    items: [ball, book]
+  - kind: place
+    layout: row
+    items: [ball, book]
+  - kind: place
+    layout: row
+    items: [book, ball]
+  - kind: place
+    layout: row
+    items: [book, ball]

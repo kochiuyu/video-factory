@@ -983,6 +983,20 @@ def takeaway_cue_picture(spec) -> tuple | None:
         if result not in {"quad", "triangle", "pentagon", "hexagon"}:
             return None
         return ("join", result)
+    if kind == "place":
+        layout = str(spec.get("layout") or "").strip()
+        items = spec.get("items")
+        if layout not in {"row", "column", "depth"} or not isinstance(items, list):
+            return None
+        names = [str(item).strip() for item in items]
+        if any(name not in {"ball", "book", "cup"} for name in names):
+            return None
+        if layout == "row":
+            if not 2 <= len(names) <= 3:
+                return None
+        elif len(names) != 2:
+            return None
+        return ("place", layout, tuple(names))
     return None
 
 
@@ -2021,10 +2035,80 @@ class SolidShape(SceneKind):
         return params
 
 
+_OBJECT_KINDS = ("ball", "book", "cup")
+_PLACE_LAYOUTS = ("row", "column", "depth")
+_OBJECT_NAMES = {
+    "ball": {"en": "Ball", "zh": "球", "zh_hk": "波"},
+    "book": {"en": "Book", "zh": "书", "zh_hk": "書"},
+    "cup": {"en": "Cup", "zh": "杯", "zh_hk": "杯"},
+}
+
+
+class ObjectPlace(SceneKind):
+    """Where two or three objects are, from the child's own view.
+
+    ``layout`` is ``row`` (left to right), ``column`` (over, then under),
+    or ``depth`` (the first object is nearer, with an arrow for the child).
+    ``items`` are ``ball``, ``book``, or ``cup``. A row may hold three,
+    so the middle one is between the other two. ``focus`` is the item
+    that receives a ring on the second line.
+    """
+
+    name = "object_place"
+    steps = 3
+
+    def problems(self, beat: dict) -> list[str]:
+        layout = str(beat.get("layout") or "").strip()
+        if layout not in _PLACE_LAYOUTS:
+            return ["object_place layout must be row, column, or depth."]
+        items = beat.get("items")
+        if not isinstance(items, list) or any(str(item) not in _OBJECT_KINDS for item in items):
+            return ["object_place items must be ball, book, or cup."]
+        if layout == "row":
+            if not 2 <= len(items) <= 3:
+                return ["object_place row needs two or three items."]
+        elif len(items) != 2:
+            return ["object_place column and depth need two items."]
+        focus = _as_int(beat.get("focus"))
+        if focus is None:
+            focus = 0
+        if not 0 <= focus < len(items):
+            return ["object_place focus must point at one item."]
+        return []
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        items = [str(item) for item in beat.get("items") or []]
+        focus = _as_int(beat.get("focus"))
+        if focus is None:
+            focus = 0
+        return {
+            "title": _shape_heading(beat, lang, {
+                "en": "Where is it?",
+                "zh": "它在哪里？",
+                "zh_hk": "佢喺邊呀？",
+            }),
+            "layout": str(beat.get("layout") or "").strip(),
+            "items": items,
+            "names": [_named(_OBJECT_NAMES, item, lang) for item in items],
+            "focus": focus,
+        }
+
+    def parameters(self, beat: dict) -> dict:
+        focus = _as_int(beat.get("focus"))
+        if focus is None:
+            focus = 0
+        return {
+            "layout": str(beat.get("layout") or "").strip(),
+            "items": [str(item) for item in (beat.get("items") or [])],
+            "focus": focus,
+        }
+
+
 register(ShapeLine())
 register(FlatShape())
 register(ShapeJoin())
 register(SolidShape())
+register(ObjectPlace())
 register(LessonHook())
 register(LessonTakeaway())
 

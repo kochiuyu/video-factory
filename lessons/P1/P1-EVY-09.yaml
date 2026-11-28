@@ -1,0 +1,115 @@
+# P1-EVY-09. Mirrors MathQuiz path money / lesson coinequal, "Exchange coins".
+# Swap coins and keep the same total. Two 50¢ coins make $1.
+# Five $1 coins make $5. Count the value, not the number of coins.
+# https://github.com/kochiuyu/mathquiz learn-money.js (coinequal).
+# Speech is for age 6: one short idea per sentence.
+id: P1-EVY-09
+title_en: Exchange coins
+title_zh: 换硬币
+title_zh_hk: 換硬幣
+duration_target_s: 55
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: money
+  kind: swap
+  seconds: 8
+  title_en: Exchange coins
+  title_zh: 换硬币
+  title_zh_hk: 換硬幣
+  s1_en: Do two 50 cent coins make one dollar?
+  s1_zh: 两个五角是不是一元？
+  s1_zh_hk: 兩個五毫係咪一元呀？
+
+- id: half
+  visual: animated
+  scene: coin_row
+  part: swap
+  coins: [100]
+  into: [50, 50]
+  seconds: 11
+  title_en: Two coins, one dollar
+  title_zh: 两个五角
+  title_zh_hk: 兩個五毫
+  s1_en: One dollar can be changed.
+  s1_zh: 一元可以换成别的硬币。
+  s1_zh_hk: 一元可以換成第啲硬幣。
+  s2_en: Two 50 cent coins make one dollar.
+  s2_zh: 两个五角就是一元。
+  s2_zh_hk: 兩個五毫就係一元。
+  s3_en: The amount stays the same.
+  s3_zh: 总值没有变。
+  s3_zh_hk: 總值冇變。
+
+- id: ten
+  visual: animated
+  scene: coin_row
+  part: total
+  coins: [500, 200, 200, 100]
+  seconds: 11
+  title_en: That is ten dollars
+  title_zh: 总数是十元
+  title_zh_hk: 總數係十元
+  s1_en: Count these dollar coins.
+  s1_zh: 数一数这些元的硬币。
+  s1_zh_hk: 數一數呢啲元嘅硬幣。
+  s2_en: 5 and 2 and 2 and 1.
+  s2_zh: 五元、两元、两元、一元。
+  s2_zh_hk: 五元、兩元、兩元、一元。
+  s3_en: That is 10 dollars.
+  s3_zh: 一共是十元。
+  s3_zh_hk: 一共係十元。
+
+- id: five
+  visual: animated
+  scene: coin_row
+  part: swap
+  coins: [500]
+  into: [100, 100, 100, 100, 100]
+  seconds: 11
+  title_en: Same amount
+  title_zh: 总值不变
+  title_zh_hk: 總值唔變
+  s1_en: One 5 dollar coin.
+  s1_zh: 一枚五元。
+  s1_zh_hk: 一枚五元。
+  s2_en: It makes five 1 dollar coins.
+  s2_zh: 它可以换成五枚一元。
+  s2_zh_hk: 佢可以換成五枚一元。
+  s3_en: More coins can be the same amount.
+  s3_zh: 硬币多，总值可以一样。
+  s3_zh_hk: 硬幣多，總值可以一樣。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: money
+  seconds: 14
+  title_en: Exchange coins
+  title_zh: 换硬币
+  title_zh_hk: 換硬幣
+  s1_en: You can swap coins.
+  s1_zh: 硬币可以互换。
+  s1_zh_hk: 硬幣可以互換。
+  s2_en: The amount stays the same.
+  s2_zh: 总值保持不变。
+  s2_zh_hk: 總值保持唔變。
+  s3_en: Two 50 cent coins make one dollar.
+  s3_zh: 两个五角是一元。
+  s3_zh_hk: 兩個五毫係一元。
+  s4_en: Five 1 dollar coins make 5 dollars.
+  s4_zh: 五枚一元是五元。
+  s4_zh_hk: 五枚一元係五元。
+  cues:
+  - kind: coin
+    coins: [100]
+    into: [50, 50]
+  - kind: coin
+    coin: 100
+  - kind: coin
+    coins: [50, 50]
+  - kind: coin
+    coins: [500]
+    into: [100, 100, 100, 100, 100]

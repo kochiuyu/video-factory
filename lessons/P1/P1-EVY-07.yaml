@@ -1,0 +1,113 @@
+# P1-EVY-07. Mirrors MathQuiz path money / lesson coinvalues, "Meet Hong Kong coins".
+# Tokens show 10¢, 20¢, 50¢, $1, $2, $5, and $10. Read the value. Do not use the size.
+# One dollar is 100 cents. 20¢ is not $2.
+# https://github.com/kochiuyu/mathquiz learn-money.js (coinvalues).
+# Speech is for age 6: one short idea per sentence.
+id: P1-EVY-07
+title_en: Hong Kong coins
+title_zh: 香港的硬币
+title_zh_hk: 香港嘅硬幣
+duration_target_s: 55
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: money
+  kind: coin
+  seconds: 8
+  title_en: Hong Kong coins
+  title_zh: 香港的硬币
+  title_zh_hk: 香港嘅硬幣
+  s1_en: Which coin is one dollar?
+  s1_zh: 哪个是一元？
+  s1_zh_hk: 邊個係一元呀？
+
+- id: dollar
+  visual: animated
+  scene: coin_row
+  part: show
+  coins: [10, 20, 50, 100, 200, 500, 1000]
+  focus: 3
+  seconds: 11
+  title_en: The one-dollar coin
+  title_zh: 这一枚是一元
+  title_zh_hk: 呢一枚係一元
+  s1_en: Read the number on the coin.
+  s1_zh: 读硬币上的数。
+  s1_zh_hk: 讀硬幣上嘅數。
+  s2_en: This coin says one dollar.
+  s2_zh: 这枚写着一元。
+  s2_zh_hk: 呢枚寫住一元。
+  s3_en: Do not guess from the size.
+  s3_zh: 不要看大小来猜。
+  s3_zh_hk: 唔好睇大細嚟估。
+
+- id: cents
+  visual: animated
+  scene: coin_row
+  part: pair
+  coins: [20, 200]
+  focus: 1
+  seconds: 11
+  title_en: Cents are not dollars
+  title_zh: 两角不是两元
+  title_zh_hk: 兩毫唔係兩元
+  s1_en: This coin is twenty cents.
+  s1_zh: 这枚是两角。
+  s1_zh_hk: 呢枚係兩毫。
+  s2_en: This coin is two dollars.
+  s2_zh: 这枚是两元。
+  s2_zh_hk: 呢枚係兩元。
+  s3_en: Twenty cents is not two dollars.
+  s3_zh: 两角不是两元。
+  s3_zh_hk: 兩毫唔係兩元。
+
+- id: hundred
+  visual: animated
+  scene: coin_row
+  part: cent
+  coins: [100]
+  seconds: 11
+  title_en: One hundred cents
+  title_zh: 一元是100分
+  title_zh_hk: 一元係100分
+  s1_en: This coin is one dollar.
+  s1_zh: 这枚是一元。
+  s1_zh_hk: 呢枚係一元。
+  s2_en: One dollar is 100 cents.
+  s2_zh: 一元是100分。
+  s2_zh_hk: 一元係100分。
+  s3_en: Cents and dollars are different.
+  s3_zh: 分和元不一样。
+  s3_zh_hk: 分同元唔一樣。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: money
+  seconds: 14
+  title_en: Hong Kong coins
+  title_zh: 香港的硬币
+  title_zh_hk: 香港嘅硬幣
+  s1_en: Read the coin.
+  s1_zh: 看清硬币上的字。
+  s1_zh_hk: 睇清硬幣上嘅字。
+  s2_en: $1 is one dollar.
+  s2_zh: 写着$1的是一元。
+  s2_zh_hk: 寫住$1嘅係一元。
+  s3_en: 20¢ is not $2.
+  s3_zh: 两角不是两元。
+  s3_zh_hk: 兩毫唔係兩元。
+  s4_en: One dollar is 100 cents.
+  s4_zh: 一元等于100分。
+  s4_zh_hk: 一元等於100分。
+  cues:
+  - kind: coin
+    coins: [10, 20, 50, 100]
+  - kind: coin
+    coin: 100
+  - kind: coin
+    coins: [20, 200]
+  - kind: coin
+    coin: 100

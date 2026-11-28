@@ -1,0 +1,282 @@
+id: FIN-40
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The same payout. The same value for whom?
+title_zh: 同样的分配。对谁的价值一样？
+title_zh_hk: 同樣的分派。對誰的價值一樣？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-40
+  kicker_en: FIN-40
+  kicker_zh: FIN-40
+  kicker_zh_hk: FIN-40
+  title_en: The same payout. The same value for whom?
+  title_zh: 同样的分配。对谁的价值一样？
+  title_zh_hk: 同樣的分派。對誰的價值一樣？
+  image: art/same-payout-different-shareholders-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A cash dividend and a share repurchase both move cash from a company to its shareholders. Neither
+    automatically creates operating value. The payout form changes who receives cash and how many shares
+    remain, and paying above fair value can shift wealth between shareholders. Now you advise a fictional
+    Hong Kong company.
+  zh: >-
+    现金股息和股份回购，都是把公司的现金交给股东，两者都不会自动创造经营价值。分配方式改变的，是谁拿到现金、还剩多少股份；如果回购价高于公允价值，还会把财富从一部分股东转给另一部分股东。现在，你要为香港一家虚构的公司出主意。
+  zh_hk: >-
+    現金股息同股份回購，都係將公司嘅現金交俾股東，兩樣都唔會自動創造經營價值。分派方式改變嘅，係邊個攞到現金、仲剩幾多股；如果回購價高過公允價值，仲會將財富由一部分股東轉去另一部分股東。而家，你要幫香港一間虛構嘅公司出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Before the HK$240,000 payout
+  title_zh: 派发 HK$240,000 之前
+  title_zh_hk: 派發 HK$240,000 之前
+  row1_en: Equity value
+  row1_zh: 股权价值
+  row1_zh_hk: 股權價值
+  row2_en: Shares
+  row2_zh: 股数
+  row2_zh_hk: 股數
+  row3_en: Asha
+  row3_zh: Asha
+  row3_zh_hk: Asha
+  col1_en: Amount
+  col1_zh: 金额
+  col1_zh_hk: 金額
+  col2_en: Detail
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11: HK$1,200,000
+  c12_en: 960,000 operating + 240,000 cash
+  c12_zh: 经营 960,000 + 现金 240,000
+  c12_zh_hk: 經營 960,000 + 現金 240,000
+  c21: 120,000
+  c22_en: HK$10 per share
+  c22_zh: 每股 HK$10
+  c22_zh_hk: 每股 HK$10
+  c31_en: 1,200 shares
+  c31_zh: 1,200 股
+  c31_zh_hk: 1,200 股
+  c32_en: Never sells
+  c32_zh: 始终不卖
+  c32_zh_hk: 始終不賣
+  footer_en: >-
+    D: dividend · R: buy back at HK$10
+  footer_zh: D：股息 · R：按 HK$10 回购
+  footer_zh_hk: D：股息 · R：按 HK$10 回購
+  s1_en: >-
+    The company has 120,000 shares and no debt. Its equity is worth 1,200,000 dollars: 960,000 of operating
+    value plus 240,000 of surplus cash. So each share is worth 10 dollars.
+  s1_zh: 这家公司有十二万股，没有负债。股权价值一百二十万港元：九十六万是经营价值，二十四万是富余现金。所以每股值十港元。
+  s1_zh_hk: 呢間公司有十二萬股，冇負債。股權價值一百二十萬港元：九十六萬係經營價值，二十四萬係多出嚟嘅現金。所以每股值十港元。
+  s2_en: >-
+    Option D pays all 240,000 as an equal cash dividend. Option R uses exactly 240,000 to buy back and
+    cancel shares at 10 dollars each. Operations are unchanged either way.
+  s2_zh: D方案把二十四万全部作为现金股息，平均派给所有股份。R方案正好用二十四万，按每股十港元回购并注销股份。两种方案下，经营都不变。
+  s2_zh_hk: D方案將二十四萬全部當現金股息，平均派俾所有股份。R方案啱啱用二十四萬，按每股十港元回購同註銷股份。兩個方案之下，經營都唔變。
+  s3_en: >-
+    Shareholder Asha owns 1,200 shares and never sells. Compare her cash plus remaining share value, and
+    the combined wealth of all the original shareholders. There are no taxes or costs.
+  s3_zh: 股东Asha持有一千二百股，始终不卖。请比较她拿到的现金加上剩余股份的价值，以及全体原有股东的财富总和。不考虑税和交易成本。
+  s3_zh_hk: 股東Asha持有一千二百股，一直唔賣。請比較佢攞到嘅現金加剩低股份嘅價值，同埋所有原有股東嘅財富總和。唔計稅同交易成本。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Is anyone richer?
+  title_zh: 有人更富有吗？
+  title_zh_hk: 有人更富有嗎？
+  en: >-
+    At 10 dollars a share, calculate the dividend per share, shares cancelled, remaining shares and value
+    per share under each route. Does either make Asha, or all original shareholders, richer? Pause and
+    vote.
+  zh: 按每股十港元，算出每股股息、注销的股数、剩下的股数，以及两种方式下每股的价值。哪一种能让Asha或者全体原有股东更富有？请暂停，投个票。
+  zh_hk: 按每股十港元，計出每股股息、註銷嘅股數、剩低嘅股數，同兩種方式之下每股嘅價值。邊種可以令Asha或者全部原有股東更富有？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The buyback price rises
+  title_zh: 回购价提高了
+  title_zh_hk: 回購價提高了
+  step1_en: Buyback at HK$12, same HK$240,000
+  step1_zh: 按 HK$12 回购，仍用 HK$240,000
+  step1_zh_hk: 按 HK$12 回購，仍用 HK$240,000
+  step2_en: 20,000 shares tendered and cancelled
+  step2_zh: 收回并注销 20,000 股
+  step2_zh_hk: 收回並註銷 20,000 股
+  step3_en: Fair value still HK$10
+  step3_zh: 公允价值仍是 HK$10
+  step3_zh_hk: 公允價值仍是 HK$10
+  s1_en: >-
+    The buyback proposal changes to 12 dollars a share, with the same 240,000 budget. Willing owners tender
+    exactly 20,000 shares, and all are cancelled.
+  s1_zh: 回购提议改成每股十二港元，总预算仍然是二十四万。愿意出售的股东正好交出两万股，全部注销。
+  s1_zh_hk: 回購建議改成每股十二港元，總預算仍然係二十四萬。願意賣嘅股東啱啱交出兩萬股，全部註銷。
+  s2_en: >-
+    The fair value before the payout is still 10 dollars a share. The higher offer brings no new information
+    about the business.
+  s2_zh: 分配之前的公允价值，仍然是每股十港元。更高的回购价，并没有带来关于业务的新信息。
+  s2_zh_hk: 分派之前嘅公允價值，仍然係每股十港元。高啲嘅回購價，冇帶嚟任何關於業務嘅新資料。
+  s3_en: >-
+    Operations are still worth 960,000 after either payout. Asha keeps all her shares, and the dividend
+    option is unchanged.
+  s3_zh: 无论哪种方式，分配之后经营价值仍然是九十六万。Asha保留全部股份，股息方案也没有变。
+  s3_zh_hk: 無論邊種方式，分派之後經營價值仍然係九十六萬。Asha保留晒所有股份，股息方案亦冇變。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Value created, or transferred?
+  title_zh: 价值是创造，还是转移？
+  title_zh_hk: 價值是創造，還是轉移？
+  en: >-
+    Does the premium buyback create value, or transfer it? Calculate the remaining share value, Asha's
+    wealth, and the gain or loss of sellers and continuing holders. Is it equally good for every owner?
+    Pause and vote.
+  zh: >-
+    溢价回购是创造了价值，还是转移了价值？算出剩余股份的价值、Asha的财富，以及卖出股东和继续持股股东的得失。这对每一位股东都一样好吗？请暂停，投个票。
+  zh_hk: >-
+    溢價回購係創造咗價值，定係轉移咗價值？計出剩低股份嘅價值、Asha嘅財富，同賣出股東同繼續持股股東嘅得失。呢個對每一位股東都一樣好嗎？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: At fair value, no one gains
+  title_zh: 按公允价值，没有人得益
+  title_zh_hk: 按公允價值，沒有人得益
+  step1_en: >-
+    D: HK$2 dividend, shares worth 8
+  step1_zh: D：股息 HK$2，每股值 8
+  step1_zh_hk: D：股息 HK$2，每股值 8
+  step2_en: >-
+    R at 10: 24,000 cancelled, still 10
+  step2_zh: R 按 10：注销 24,000，仍值 10
+  step2_zh_hk: R 按 10：註銷 24,000，仍值 10
+  step3_en: >-
+    Asha: 12,000 either way
+  step3_zh: Asha：两种方式都是 12,000
+  step3_zh_hk: Asha：兩種方式都是 12,000
+  s1_en: >-
+    The dividend pays 2 dollars a share. The remaining 960,000 spread over 120,000 shares is 8 dollars
+    each. Asha gets 2,400 in cash and keeps shares worth 9,600, a total of 12,000.
+  s1_zh: 股息是每股两港元。剩下的九十六万分摊到十二万股，每股值八港元。Asha拿到两千四百现金，股份值九千六百，合计一万二千。
+  s1_zh_hk: 股息係每股兩港元。剩低嘅九十六萬分落十二萬股，每股值八蚊。Asha攞到兩千四百現金，股份值九千六百，加埋一萬二千。
+  s2_en: >-
+    A buyback at 10 dollars cancels 24,000 shares, leaving 96,000. The remaining 960,000 is still 10 dollars
+    a share, so Asha's 1,200 shares remain worth 12,000.
+  s2_zh: 按十港元回购，会注销两万四千股，剩九万六千股。剩下的九十六万，仍然是每股十港元，所以Asha的一千二百股仍然值一万二千。
+  s2_zh_hk: 按十港元回購，會註銷兩萬四千股，剩九萬六千股。剩低嘅九十六萬，仍然係每股十蚊，所以Asha嘅一千二百股仍然值一萬二千。
+  s3_en: >-
+    Her ownership rises from 1 to 1.25 percent without making her richer. All shareholders together still
+    have 1,200,000. Don't count the dividend while keeping the old 10-dollar price.
+  s3_zh: 她的持股比例从百分之一升到百分之一点二五，但财富没有增加。全体股东加起来仍然是一百二十万。不要一边算股息，一边还按旧的十港元股价计算。
+  s3_zh_hk: 佢嘅持股比例由百分之一升到百分之一點二五，但財富冇增加。全部股東加埋仍然係一百二十萬。唔好一邊計股息，一邊仲用舊嘅十蚊股價。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: A premium price moves value
+  title_zh: 溢价转移了价值
+  title_zh_hk: 溢價轉移了價值
+  step1_en: >-
+    At 12: 100,000 left, worth 9.60
+  step1_zh: 按 12：剩 100,000 股，每股 9.60
+  step1_zh_hk: 按 12：剩 100,000 股，每股 9.60
+  step2_en: >-
+    Asha: 11,520, down 480
+  step2_zh: Asha：11,520，少了 480
+  step2_zh_hk: Asha：11,520，少了 480
+  step3_en: Sellers +40,000 · holders −40,000
+  step3_zh: 卖方 +40,000 · 持有人 −40,000
+  step3_zh_hk: 賣方 +40,000 · 持有人 −40,000
+  s1_en: >-
+    At 12 dollars, the same budget cancels only 20,000 shares. The 960,000 is spread over 100,000 shares,
+    so each is worth 9.60.
+  s1_zh: 按十二港元，同样的预算只能注销两万股。九十六万分摊到十万股，每股只值九点六港元。
+  s1_zh_hk: 按十二港元，同一個預算淨係註銷到兩萬股。九十六萬分落十萬股，每股淨係值九點六蚊。
+  s2_en: >-
+    Asha's shares are now worth 11,520, a loss of 480, even though her ownership rises to 1.2 percent.
+  s2_zh: Asha的股份现在值一万一千五百二十，少了四百八十，尽管她的持股比例升到百分之一点二。
+  s2_zh_hk: Asha嘅股份而家值一萬一千五百二十，少咗四百八十，雖然佢嘅持股比例升到百分之一點二。
+  s3_en: >-
+    Sellers gave up shares worth 200,000 and received 240,000, a 40,000 gain. Continuing holders lost
+    exactly 40,000. The premium redistributes value; it does not create it.
+  s3_zh: 卖出的股东交出价值二十万的股份，拿回二十四万，赚了四万。继续持股的股东正好亏了四万。溢价只是重新分配价值，并没有创造价值。
+  s3_zh_hk: 賣出嘅股東交出值二十萬嘅股份，攞返二十四萬，賺咗四萬。繼續持股嘅股東啱啱蝕咗四萬。溢價只係重新分配價值，冇創造價值。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Not equally good for every owner
+  title_zh: 并非人人同样得益
+  title_zh_hk: 並非人人同樣得益
+  en: >-
+    Report that the premium buyback is not equally beneficial to all owners. Total wealth is unchanged,
+    but sellers gain at the continuing holders' expense. At fair value, neither route changes anyone's
+    wealth.
+  zh: >-
+    应该如实报告：溢价回购并不是对所有股东都一样有利。总财富没有变，但卖出的股东得益，代价由继续持股的股东承担。按公允价值进行时，两种方式都不会改变任何人的财富。
+  zh_hk: >-
+    應該如實報告：溢價回購唔係對所有股東都一樣有利。總財富冇變，但賣出嘅股東得益，代價由繼續持股嘅股東承擔。按公允價值做嘅話，兩種方式都唔會改變任何人嘅財富。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Payouts move cash, not value
+  title_zh: 分配方式移动现金，不创造价值
+  title_zh_hk: 分派方式移動現金，不創造價值
+  q1_en: Check the price against fair value
+  q1_zh: 把回购价和公允价值比较
+  q1_zh_hk: 把回購價和公允價值比較
+  q2_en: Track sellers and holders separately
+  q2_zh: 分开看卖方和持有人
+  q2_zh_hk: 分開看賣方和持有人
+  s1_en: >-
+    A higher ownership percentage is not a gain if the company paid too much for the shares it cancelled.
+  s1_zh: 如果公司为注销的股份付得太多，持股比例上升也不代表得益。
+  s1_zh_hk: 如果公司為註銷嘅股份俾得太多，持股比例升咗都唔代表得益。
+  s2_en: >-
+    This is a simplified model, not a market forecast, tax advice or permission to execute a repurchase.
+  s2_zh: 这是简化模型，不是市场预测，不是税务建议，也不是执行回购的许可。
+  s2_zh_hk: 呢個係簡化模型，唔係市場預測，唔係稅務建議，亦唔係執行回購嘅許可。
+  s3_en: >-
+    The company, shareholders and values are fictional. Official scene art is a teaching illustration
+    only.
+  s3_zh: 公司、股东和价值都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 公司、股東同價值都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

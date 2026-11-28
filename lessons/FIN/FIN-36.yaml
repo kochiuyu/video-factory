@@ -1,0 +1,272 @@
+id: FIN-36
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A cheaper machine. Over how many service years?
+title_zh: 更便宜的机器。服务年限要算多少年？
+title_zh_hk: 更便宜的機器。服務年期要算多少年？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-36
+  kicker_en: FIN-36
+  kicker_zh: FIN-36
+  kicker_zh_hk: FIN-36
+  title_en: A cheaper machine. Over how many service years?
+  title_zh: 更便宜的机器。服务年限要算多少年？
+  title_zh_hk: 更便宜的機器。服務年期要算多少年？
+  image: art/cheaper-machine-service-years-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Equivalent annual cost turns a discounted ownership cycle into a comparable yearly amount. It helps
+    compare assets with different lives when they give the same service and can be replaced on unchanged
+    terms. A fixed service deadline needs a common end date instead. Now you advise a fictional Hong Kong
+    scanning bureau.
+  zh: >-
+    等额年成本，是把一个折现后的持有周期，换算成可以比较的每年金额。如果两项资产提供同样的服务，而且能按不变的条件更换，它可以用来比较寿命不同的资产。如果服务有固定的截止日期，就要改用同一个结束日。现在，你要为香港一家虚构的文件扫描公司出主意。
+  zh_hk: >-
+    等額年成本，係將一個折現咗嘅持有周期，換算成可以比較嘅每年金額。如果兩件資產提供一樣嘅服務，又可以按唔變嘅條件更換，佢就可以用嚟比較壽命唔同嘅資產。如果服務有固定嘅截止日期，就要改用同一個結束日。而家，你要幫香港一間虛構嘅文件掃描公司出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two machines, same workload
+  title_zh: 两台机器，同样的工作量
+  title_zh_hk: 兩部機器，同樣的工作量
+  row1_en: Machine A
+  row1_zh: 机器 A
+  row1_zh_hk: 機器 A
+  row2_en: Machine B
+  row2_zh: 机器 B
+  row2_zh_hk: 機器 B
+  col1_en: Purchase today
+  col1_zh: 今天购买
+  col1_zh_hk: 今天購買
+  col2_en: Life
+  col2_zh: 寿命
+  col2_zh_hk: 壽命
+  col3_en: Operating / year
+  col3_zh: 每年运行费
+  col3_zh_hk: 每年營運
+  c11: HK$60,000
+  c12_en: 3 years
+  c12_zh: 3 年
+  c12_zh_hk: 3 年
+  c13: HK$10,000
+  c21: HK$80,000
+  c22_en: 5 years
+  c22_zh: 5 年
+  c22_zh_hk: 5 年
+  c23: HK$10,000
+  footer_en: 10% discount rate · zero end value
+  footer_zh: 折现率 10% · 期末价值为零
+  footer_zh_hk: 折現率 10% · 期末價值為零
+  s1_en: >-
+    The bureau must buy one of two machines for the same annual workload. Both meet identical quality,
+    capacity, safety and privacy requirements.
+  s1_zh: 这家公司要为同样的年工作量，在两台机器中买一台。两台的质量、产能、安全和隐私要求都完全一样。
+  s1_zh_hk: 呢間公司要為同樣嘅每年工作量，喺兩部機器之間買一部。兩部嘅質素、產能、安全同私隱要求都完全一樣。
+  s2_en: >-
+    A costs 60,000 dollars and lasts three years. B costs 80,000 and lasts five. Each costs 10,000 at
+    every year-end to run, and is worth nothing at the end of its life.
+  s2_zh: A要六万港元，可以用三年。B要八万，可以用五年。两台每年年末的运行费用都是一万，寿命结束时都不值钱。
+  s2_zh_hk: A要六萬港元，用得三年。B要八萬，用得五年。兩部每年年尾嘅營運費用都係一萬，壽命完嗰陣都唔值錢。
+  s3_en: >-
+    At first, assume the service is needed indefinitely, and each machine can be replaced at life-end
+    on identical terms. Use a 10 percent discount rate. Lower cost is better.
+  s3_zh: 先假设这项服务无限期需要，每台机器到寿命结束时，都能按同样条件更换。折现率用百分之十。成本越低越好。
+  s3_zh_hk: 先假設呢項服務無限期都要，每部機器壽命完嗰陣，都可以按同樣條件換新。折現率用百分之十。成本越低越好。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: A or B for continuing service?
+  title_zh: 长期服务选 A 还是 B？
+  title_zh_hk: 長期服務選 A 還是 B？
+  en: >-
+    For continuing, repeatable service, which machine has the lower equivalent annual cost? Why would
+    choosing the smaller purchase price, or the smaller one-cycle cost, mislead you? Pause and vote.
+  zh: 如果服务一直持续、可以重复更换，哪台机器的等额年成本更低？为什么只挑购买价更低、或者单个周期成本更低的，会误导你？请暂停，投个票。
+  zh_hk: 如果服務一直持續、可以重複換新，邊部機器嘅等額年成本低啲？點解淨係揀買價平啲、或者一個周期成本低啲嘅，會誤導你？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Service ends after three years
+  title_zh: 服务三年后结束
+  title_zh_hk: 服務三年後結束
+  step1_en: Contract ends after year 3
+  step1_zh: 合同第 3 年后结束
+  step1_zh_hk: 合約第 3 年後結束
+  step2_en: No renewal, no other use
+  step2_zh: 不续约，也没有其他用途
+  step2_zh_hk: 不續約，也沒有其他用途
+  step3_en: B sells for net HK$20,000
+  step3_zh: B 可卖得净额 HK$20,000
+  step3_zh_hk: B 可賣得淨額 HK$20,000
+  s1_en: >-
+    Before purchase, the client confirms the service contract ends after exactly three years, with no
+    renewal and no other use for either machine.
+  s1_zh: 购买之前，客户确认服务合同正好在三年后结束，不能续约，两台机器之后也没有别的用途。
+  s1_zh_hk: 買之前，客戶確認服務合約啱啱三年後完，唔可以續，兩部機器之後亦冇其他用途。
+  s2_en: >-
+    At the end of year three, after that year's work, A is worth nothing, but B can be sold for a net
+    20,000 dollars. Treat both as certain.
+  s2_zh: 第三年年末，做完当年的工作之后，A不值钱，B可以卖得净额两万港元。两者都当作确定。
+  s2_zh_hk: 第三年年尾，做完嗰年嘅工作之後，A唔值錢，B可以賣到淨額兩萬港元。兩樣都當係確定。
+  s3_en: >-
+    No replacement is bought. Selling B passes all later use and costs to its buyer. The year-three discount
+    factor is 0.751314801.
+  s3_zh: 之后不再购买替换机器。卖掉B，以后的使用和费用都转给买方。第三年的折现系数是零点七五一三一四八零一。
+  s3_zh_hk: 之後唔再買替換機器。賣咗B，之後嘅使用同費用都轉俾買家。第三年嘅折現係數係零點七五一三一四八零一。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Cheaper over three years?
+  title_zh: 三年来看哪台更便宜？
+  title_zh_hk: 三年來看哪部更便宜？
+  en: >-
+    Which machine now has the lower three-year present cost, and by how much? At what resale price for
+    B would the two tie, and why can't the first ranking be carried over? Pause and vote.
+  zh: 现在哪台机器三年的现值成本更低？低多少？B的转售价是多少时，两者打平？为什么起初的排名不能直接沿用？请暂停，投个票。
+  zh_hk: 而家邊部機器三年嘅現值成本低啲？低幾多？B嘅轉售價係幾多嘅時候，兩部打和？點解起初嘅排名唔可以直接照用？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Compare equal annual service
+  title_zh: 比较同样的每年服务
+  title_zh_hk: 比較同樣的每年服務
+  step1_en: >-
+    A: 84,869 → 34,127 a year
+  step1_zh: A：84,869 → 每年 34,127
+  step1_zh_hk: A：84,869 → 每年 34,127
+  step2_en: >-
+    B: 117,908 → 31,104 a year
+  step2_zh: B：117,908 → 每年 31,104
+  step2_zh_hk: B：117,908 → 每年 31,104
+  step3_en: >-
+    Continuing service: choose B
+  step3_zh: 长期服务：选 B
+  step3_zh_hk: 長期服務：選 B
+  s1_en: >-
+    A's three-year cycle has a present cost of about 84,869 dollars. Divided by the three-year annuity
+    factor, that is 34,127 a year.
+  s1_zh: A三年一个周期，现值成本约八万四千八百六十九港元。除以三年的年金因子，等于每年三万四千一百二十七。
+  s1_zh_hk: A三年一個周期，現值成本大約八萬四千八百六十九港元。除三年嘅年金因子，即係每年三萬四千一百二十七。
+  s2_en: >-
+    B's five-year cycle costs 117,908 in present value, or 31,104 a year. Its bigger one-cycle total covers
+    five years, not three.
+  s2_zh: B五年一个周期，现值成本十一万七千九百零八，等于每年三万一千一百零四。它单个周期的总额更大，是因为覆盖五年，而不是三年。
+  s2_zh_hk: B五年一個周期，現值成本十一萬七千九百零八，即係每年三萬一千一百零四。佢一個周期總額大啲，係因為包咗五年，唔係三年。
+  s3_en: >-
+    So, with continuing and repeatable service, choose B. Its equivalent annual cost is about 3,023 dollars
+    lower. That annual figure is not an invoice or depreciation.
+  s3_zh: 所以，服务长期持续又能重复更换时，应该选B，它的等额年成本低大约三千零二十三港元。这个每年金额不是发票，也不是折旧。
+  s3_zh_hk: 所以，服務長期持續又可以重複換新嘅時候，應該揀B，佢嘅等額年成本低大約三千零二十三港元。呢個每年金額唔係發票，亦唔係折舊。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Stop at the real deadline
+  title_zh: 停在真正的截止日
+  title_zh_hk: 停在真正的截止日
+  step1_en: >-
+    3 years: A 84,869 · B 89,842
+  step1_zh: 三年：A 84,869 · B 89,842
+  step1_zh_hk: 三年：A 84,869 · B 89,842
+  step2_en: Choose A, about 4,974 cheaper
+  step2_zh: 选 A，约便宜 4,974
+  step2_zh_hk: 選 A，約便宜 4,974
+  step3_en: Tie if B resells for 26,620
+  step3_zh: B 转售 26,620 时打平
+  step3_zh_hk: B 轉售 26,620 時打平
+  s1_en: >-
+    With only three years needed, A still costs 84,869. B costs 80,000, plus 24,869 of operating cost,
+    minus 15,026 of discounted resale, or 89,842.
+  s1_zh: >-
+    只需要三年的话，A仍然是八万四千八百六十九。B是八万，加上两万四千八百六十九的运行成本，再减去折现后一万五千零二十六的转售收入，等于八万九千八百四十二。
+  s1_zh_hk: >-
+    淨係要三年嘅話，A仍然係八萬四千八百六十九。B係八萬，加兩萬四千八百六十九營運成本，再減折現後一萬五千零二十六嘅轉售收入，即係八萬九千八百四十二。
+  s2_en: >-
+    So choose A, about 4,974 dollars cheaper in present value. Don't charge B for years the bureau will
+    never use.
+  s2_zh: 所以应该选A，按现值计算便宜大约四千九百七十四港元。不要把公司根本用不到的年份算进B的成本。
+  s2_zh_hk: 所以應該揀A，按現值計平大約四千九百七十四港元。唔好將公司根本用唔到嘅年份計落B嘅成本度。
+  s3_en: >-
+    The operating costs cancel. B's extra 20,000 today ties only if its resale R satisfies R divided by
+    1.1 cubed equals 20,000. So R is 26,620, and the 20,000 offered is below it.
+  s3_zh: >-
+    两台的运行成本互相抵消。B今天多付的两万，要转售价R除以一点一的三次方等于两万，才会打平。所以R是两万六千六百二十，而给定的两万低于这个门槛。
+  s3_zh_hk: 兩部嘅營運成本互相抵銷。B今日多俾嘅兩萬，要轉售價R除一點一嘅三次方等於兩萬，先會打和。所以R係兩萬六千六百二十，而題目俾嘅兩萬低過呢條線。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: The horizon changed, not method
+  title_zh: 变的是期限，不是方法
+  title_zh_hk: 變的是期限，不是方法
+  en: >-
+    The answer changes because the required service horizon changes, not because discounting stopped working.
+    What is invalid is carrying B's five-year repeated-service annual cost into a three-year need.
+  zh: 答案改变，是因为所需的服务期限变了，不是折现方法失效了。错的是把B五年、可重复更换的等额年成本，硬套到只需要三年的情况。
+  zh_hk: 答案改變，係因為要嘅服務年期變咗，唔係折現方法失效。錯嘅係將B五年、可以重複換新嘅等額年成本，硬套落淨係要三年嘅情況。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Match the comparison to the need
+  title_zh: 比较要配合实际需要
+  title_zh_hk: 比較要配合實際需要
+  q1_en: Use annual cost for repeated service
+  q1_zh: 可重复的服务用等额年成本
+  q1_zh_hk: 可重複的服務用等額年成本
+  q2_en: Use a common end date for a deadline
+  q2_zh: 有截止日就用同一结束日
+  q2_zh_hk: 有截止日就用同一結束日
+  s1_en: >-
+    A cheaper purchase price is not the test. The right comparison depends on how long the service is
+    needed and what is left at the end.
+  s1_zh: 购买价更便宜，不是判断标准。正确的比较，要看服务需要多久，以及结束时还剩下什么价值。
+  s1_zh_hk: 買價平啲，唔係判斷標準。正確嘅比較，要睇服務要幾耐，同埋完結嗰陣仲剩低咩價值。
+  s2_en: This is not an actual purchase or investment recommendation.
+  s2_zh: 这不是实际的采购建议，也不是投资建议。
+  s2_zh_hk: 呢個唔係實際嘅採購建議，亦唔係投資建議。
+  s3_en: >-
+    The bureau, machines and amounts are fictional. Official scene art is a teaching illustration only.
+  s3_zh: 公司、机器和金额都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 公司、機器同金額都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

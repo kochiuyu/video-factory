@@ -709,7 +709,7 @@ class PartWhole(SceneKind):
         return params
 
 
-_MOTIFS = {"counters", "ten_frame", "track", "ordinal", "pairs", "parts"}
+_MOTIFS = {"counters", "ten_frame", "track", "ordinal", "pairs", "parts", "shapes"}
 
 
 def _pair_n(beat: dict, default: int = 8) -> int:
@@ -798,7 +798,7 @@ class LessonHook(SceneKind):
 
     def problems(self, beat: dict) -> list[str]:
         if _motif(beat) not in _MOTIFS:
-            return [f"lesson_hook motif must be counters, ten_frame, track, ordinal, pairs, or parts, not {_motif(beat)!r}."]
+            return [f"lesson_hook motif must be counters, ten_frame, track, ordinal, pairs, parts, or shapes, not {_motif(beat)!r}."]
         if not _title_line(beat, "en"):
             return ["lesson_hook needs title_en (and title_zh / title_zh_hk)."]
         if _motif(beat) == "ordinal":
@@ -827,6 +827,8 @@ class LessonHook(SceneKind):
         if _motif(beat) == "parts":
             pair = _part_pair(beat) or (3, 4)
             out["a"], out["b"] = pair
+        if _motif(beat) == "shapes":
+            out["kind"] = str(beat.get("kind") or "triangle").strip()
         if beat.get("shown"):
             out["shown"] = True
         return out
@@ -844,6 +846,8 @@ class LessonHook(SceneKind):
         if _motif(beat) == "parts":
             pair = _part_pair(beat) or (3, 4)
             params["a"], params["b"] = pair
+        if _motif(beat) == "shapes":
+            params["kind"] = str(beat.get("kind") or "triangle").strip()
         if beat.get("shown"):
             params["shown"] = True
         return params
@@ -925,6 +929,50 @@ def takeaway_cue_picture(spec) -> tuple | None:
         if count is None or not 1 <= count <= 12:
             return None
         return ("counters", count)
+    if kind == "line":
+        mode = str(spec.get("mode") or "").strip()
+        if mode == "marks":
+            count = _as_int(spec.get("n"))
+            if count is None or not 1 <= count <= 4:
+                return None
+            return ("line", "marks", count)
+        if mode in {"straight", "curve", "routes"}:
+            return ("line", mode)
+        return None
+    if kind == "flat":
+        items = spec.get("items")
+        if isinstance(items, list):
+            shapes = [str(item).strip() for item in items]
+            if not 2 <= len(shapes) <= 3 or any(
+                shape not in {"triangle", "quad", "pentagon", "hexagon", "circle"} for shape in shapes
+            ):
+                return None
+            return ("flat", "row", tuple(shapes))
+        shape = str(spec.get("shape") or "").strip()
+        if shape not in {"triangle", "quad", "pentagon", "hexagon", "circle"}:
+            return None
+        turn = _as_int(spec.get("turn")) or 0
+        if not -180 <= turn <= 180:
+            return None
+        return ("flat", shape, turn)
+    if kind == "solid":
+        items = spec.get("items")
+        if isinstance(items, list):
+            shapes = [str(item).strip() for item in items]
+            if len(shapes) != 2 or any(
+                shape not in {"prism", "cylinder", "pyramid", "cone", "sphere"} for shape in shapes
+            ):
+                return None
+            return ("solid", "pair", tuple(shapes))
+        shape = str(spec.get("shape") or "").strip()
+        if shape not in {"prism", "cylinder", "pyramid", "cone", "sphere"}:
+            return None
+        return ("solid", shape)
+    if kind == "join":
+        result = str(spec.get("result") or "").strip()
+        if result not in {"quad", "triangle", "pentagon", "hexagon"}:
+            return None
+        return ("join", result)
     return None
 
 
@@ -979,7 +1027,7 @@ class LessonTakeaway(SceneKind):
 
     def problems(self, beat: dict) -> list[str]:
         if _motif(beat) not in _MOTIFS:
-            return [f"lesson_takeaway motif must be counters, ten_frame, track, ordinal, pairs, or parts, not {_motif(beat)!r}."]
+            return [f"lesson_takeaway motif must be counters, ten_frame, track, ordinal, pairs, parts, or shapes, not {_motif(beat)!r}."]
         if _motif(beat) == "ordinal":
             found = _ordinal_pair_problems(beat, required=False)
         elif _motif(beat) == "pairs":
@@ -1212,6 +1260,20 @@ def count_event(beat: dict) -> tuple[int, int] | None:
         if a is None or b is None or a == b:
             return None
         return 0, abs(a - b)
+    if scene == "shape_line":
+        if str(beat.get("part") or "").strip() != "marks":
+            return None
+        count = _as_int(beat.get("n")) or 3
+        if not 1 <= count <= 4:
+            return None
+        return 1, count
+    if scene == "flat_shape":
+        if str(beat.get("part") or "one").strip() != "one":
+            return None
+        sides = {"triangle": 3, "quad": 4, "pentagon": 5, "hexagon": 6}.get(str(beat.get("kind") or "").strip())
+        if not sides:
+            return None
+        return 1, sides
     if scene == "lesson_takeaway":
         # A ten-frame recap counts the three ones on its last line
         # ("Find the ten first. Then count the rest.").
@@ -1717,6 +1779,224 @@ class RowMatch(SceneKind):
 register(EstimateGroup())
 register(RowMatch())
 register(PlaceSum())
+
+
+_FLAT_KINDS = ("triangle", "quad", "pentagon", "hexagon", "circle")
+_SOLID_KINDS = ("prism", "cylinder", "pyramid", "cone", "sphere")
+_LINE_PARTS = ("marks", "lines", "routes")
+_FLAT_PARTS = ("one", "row", "turn")
+_JOIN_RESULTS = ("quad", "triangle", "pentagon", "hexagon")
+_FLAT_NAMES = {
+    "triangle": {"en": "Triangle", "zh": "三角形", "zh_hk": "三角形"},
+    "quad": {"en": "Four sides", "zh": "四条边", "zh_hk": "四條邊"},
+    "pentagon": {"en": "Five sides", "zh": "五条边", "zh_hk": "五條邊"},
+    "hexagon": {"en": "Six sides", "zh": "六条边", "zh_hk": "六條邊"},
+    "circle": {"en": "Round", "zh": "圆形", "zh_hk": "圓形"},
+}
+_SOLID_NAMES = {
+    "prism": {"en": "Prism", "zh": "柱体", "zh_hk": "柱體"},
+    "cylinder": {"en": "Cylinder", "zh": "圆柱体", "zh_hk": "圓柱體"},
+    "pyramid": {"en": "Pyramid", "zh": "锥体", "zh_hk": "錐體"},
+    "cone": {"en": "Cone", "zh": "圆锥体", "zh_hk": "圓錐體"},
+    "sphere": {"en": "Sphere", "zh": "球体", "zh_hk": "球體"},
+}
+_LINE_WORDS = {
+    "straight": {"en": "Straight", "zh": "直的", "zh_hk": "直嘅"},
+    "curve": {"en": "Curved", "zh": "弯的", "zh_hk": "彎嘅"},
+}
+
+
+def _shape_heading(beat: dict, lang: str, fallback: dict[str, str]) -> str:
+    code = label_lang(lang)
+    suffix = {"en": "en", "zh": "zh", "zh_hk": "zh_hk"}[code]
+    written = str(beat.get(f"title_{suffix}") or "").strip()
+    return written or fallback.get(code, fallback["en"])
+
+
+def _named(table: dict, key: str, lang: str) -> str:
+    code = label_lang(lang)
+    row = table.get(key) or {}
+    return row.get(code, row.get("en", ""))
+
+
+class ShapeLine(SceneKind):
+    """Points, a straight line, and a curve. Three spoken lines.
+
+    ``part`` is ``marks``, ``lines``, or ``routes``. ``marks`` counts ``n``
+    places (1 to 4) on the second line.
+    """
+
+    name = "shape_line"
+    steps = 3
+
+    def problems(self, beat: dict) -> list[str]:
+        part = str(beat.get("part") or "").strip()
+        if part not in _LINE_PARTS:
+            return ["shape_line part must be marks, lines, or routes."]
+        if part == "marks":
+            count = _as_int(beat.get("n")) or 3
+            if not 1 <= count <= 4:
+                return ["shape_line marks need n from 1 to 4."]
+        return []
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        part = str(beat.get("part") or "").strip()
+        count = _as_int(beat.get("n")) or 3
+        return {
+            "title": _shape_heading(beat, lang, {
+                "en": "Points and lines",
+                "zh": "点和线",
+                "zh_hk": "點同線",
+            }),
+            "part": part,
+            "n": count,
+            "straight": _named(_LINE_WORDS, "straight", lang),
+            "curve": _named(_LINE_WORDS, "curve", lang),
+        }
+
+    def parameters(self, beat: dict) -> dict:
+        return {"part": str(beat.get("part") or "").strip(), "n": _as_int(beat.get("n")) or 3}
+
+
+class FlatShape(SceneKind):
+    """A flat shape, a row of up to three, or the same shape turned.
+
+    ``part`` is ``one``, ``row``, or ``turn``. ``one`` counts the straight
+    sides on the second line. A circle has no straight sides. ``row`` uses
+    ``items``. ``turn`` is degrees, default 20.
+    """
+
+    name = "flat_shape"
+    steps = 3
+
+    def problems(self, beat: dict) -> list[str]:
+        part = str(beat.get("part") or "one").strip()
+        if part not in _FLAT_PARTS:
+            return ["flat_shape part must be one, row, or turn."]
+        if part == "row":
+            items = beat.get("items")
+            if not isinstance(items, list) or not 1 <= len(items) <= 3:
+                return ["flat_shape row needs one to three items."]
+            if any(str(item) not in _FLAT_KINDS for item in items):
+                return ["flat_shape items must be triangle, quad, pentagon, hexagon, or circle."]
+            return []
+        kind = str(beat.get("kind") or "").strip()
+        if kind not in _FLAT_KINDS:
+            return ["flat_shape kind must be triangle, quad, pentagon, hexagon, or circle."]
+        if part == "turn":
+            turn = _as_int(beat.get("turn")) or 20
+            if not -180 <= turn <= 180:
+                return ["flat_shape turn must be from -180 to 180."]
+        return []
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        part = str(beat.get("part") or "one").strip()
+        kind = str(beat.get("kind") or "").strip()
+        items = [str(item) for item in (beat.get("items") or [])]
+        return {
+            "title": _shape_heading(beat, lang, {
+                "en": "Name the shape",
+                "zh": "认识这个图形",
+                "zh_hk": "認識呢個圖形",
+            }),
+            "part": part,
+            "kind": kind,
+            "items": items,
+            "name": _named(_FLAT_NAMES, kind, lang),
+            "names": [_named(_FLAT_NAMES, item, lang) for item in items],
+            "turn": _as_int(beat.get("turn")) or 20,
+        }
+
+    def parameters(self, beat: dict) -> dict:
+        part = str(beat.get("part") or "one").strip()
+        return {
+            "part": part,
+            "kind": str(beat.get("kind") or "").strip(),
+            "items": [str(item) for item in (beat.get("items") or [])],
+            "turn": _as_int(beat.get("turn")) or 20,
+        }
+
+
+class ShapeJoin(SceneKind):
+    """Two pieces meet. The last line shows only the outside sides.
+
+    ``result`` is ``quad``, ``triangle``, ``pentagon``, or ``hexagon``.
+    """
+
+    name = "shape_join"
+    steps = 3
+
+    def problems(self, beat: dict) -> list[str]:
+        result = str(beat.get("result") or "").strip()
+        if result not in _JOIN_RESULTS:
+            return ["shape_join result must be quad, triangle, pentagon, or hexagon."]
+        return []
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        result = str(beat.get("result") or "").strip()
+        return {
+            "title": _shape_heading(beat, lang, {
+                "en": "Put shapes together",
+                "zh": "拼在一起",
+                "zh_hk": "拼埋一齊",
+            }),
+            "result": result,
+            "name": _named(_FLAT_NAMES, result if result != "quad" else "quad", lang),
+        }
+
+    def parameters(self, beat: dict) -> dict:
+        return {"result": str(beat.get("result") or "").strip()}
+
+
+class SolidShape(SceneKind):
+    """One solid, two solids, or the same solid turned. Three spoken lines.
+
+    ``items`` lists one or two of prism, cylinder, pyramid, cone, sphere.
+    ``part`` ``turn`` rotates a single solid.
+    """
+
+    name = "solid_shape"
+    steps = 3
+
+    def problems(self, beat: dict) -> list[str]:
+        items = beat.get("items")
+        if not isinstance(items, list) or not 1 <= len(items) <= 2:
+            return ["solid_shape needs one or two items."]
+        if any(str(item) not in _SOLID_KINDS for item in items):
+            return ["solid_shape items must be prism, cylinder, pyramid, cone, or sphere."]
+        part = str(beat.get("part") or "pair").strip()
+        if part not in {"pair", "turn"}:
+            return ["solid_shape part must be pair or turn."]
+        if part == "turn" and len(items) != 1:
+            return ["solid_shape turn uses one item."]
+        return []
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        items = [str(item) for item in beat.get("items") or []]
+        return {
+            "title": _shape_heading(beat, lang, {
+                "en": "Solid shapes",
+                "zh": "认识立体",
+                "zh_hk": "認識立體",
+            }),
+            "part": str(beat.get("part") or "pair").strip(),
+            "items": items,
+            "names": [_named(_SOLID_NAMES, item, lang) for item in items],
+            "turn": _as_int(beat.get("turn")) or 25,
+        }
+
+    def parameters(self, beat: dict) -> dict:
+        return {
+            "part": str(beat.get("part") or "pair").strip(),
+            "items": [str(item) for item in (beat.get("items") or [])],
+            "turn": _as_int(beat.get("turn")) or 25,
+        }
+
+
+register(ShapeLine())
+register(FlatShape())
+register(ShapeJoin())
+register(SolidShape())
 register(LessonHook())
 register(LessonTakeaway())
 

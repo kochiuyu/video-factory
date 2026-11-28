@@ -2527,6 +2527,28 @@ def _scene_types() -> dict:
                 return VGroup(frame, dots)
             if motif == "track":
                 return _mini_track(range(8, 13), 12, latin)
+            if motif == "shapes":
+                from shape_draw import flat_picture, solid_picture, straight_line
+                info = labels or {}
+                kind = str(info.get("kind") or "triangle")
+                if kind in {"prism", "cylinder", "pyramid", "cone", "sphere"}:
+                    return solid_picture(kind)
+                if kind == "line":
+                    # A filled bar plus the mark. FadeIn does not show a stroke-only line.
+                    from manim import Rectangle
+                    bar = Rectangle(
+                        width=3.4, height=0.1, stroke_width=0,
+                        fill_color=NAVY, fill_opacity=1,
+                    )
+                    mark = Circle(
+                        radius=0.16, stroke_color=NAVY, stroke_width=3,
+                        fill_color=GREEN, fill_opacity=1,
+                    )
+                    mark.move_to(bar.get_center())
+                    return VGroup(bar, mark)
+                if kind in {"triangle", "quad", "pentagon", "hexagon", "circle"}:
+                    return flat_picture(kind)
+                return flat_picture("triangle")
             dots = VGroup(*[counter(GREEN, 0.26) for _ in range(5)])
             dots.arrange(RIGHT, buff=0.18)
             return dots
@@ -2750,6 +2772,8 @@ def _scene_types() -> dict:
                 return self._cue_groups(int(picture[1]), int(picture[2]), int(picture[3]))
             if kind == "counters":
                 return self._cue_dots(int(picture[1]))
+            if kind in {"line", "flat", "solid", "join"}:
+                return _shape_takeaway_cue(picture)
             raise ValueError(f"takeaway cue fell back to the default: {picture!r}")
 
         def _compare_card(self, number: int, latin: str, cjk: str, mark: str, larger):
@@ -4438,6 +4462,287 @@ def _scene_types() -> dict:
             )
 
 
+    def _shape_title(text, latin, cjk):
+        title = styled(str(text or " "), latin, cjk, 54)
+        floor = _ordinal_label_height()
+        if float(title.height) > 0 and float(title.height) < floor:
+            title.scale(floor / float(title.height))
+        return title
+
+    def _shape_name(text, latin, cjk):
+        label = styled(str(text or " "), latin, cjk, 48)
+        floor = _ordinal_label_height()
+        if float(label.height) > 0 and float(label.height) < floor:
+            label.scale(floor / float(label.height))
+        return label
+
+    def _place_shape(board, title, body):
+        left, right, bot, top = _safe_limits()
+        cap = (right - left) * 0.92
+        if float(title.width) > cap > 0:
+            title.scale(cap / float(title.width))
+        title.move_to([(left + right) / 2.0, top - float(title.height) / 2.0 - 0.04, 0])
+        room_top = float(title.get_bottom()[1]) - 0.28
+        room_h = room_top - bot
+        if float(body.width) > cap > 0:
+            body.scale(cap / float(body.width))
+        if float(body.height) > room_h > 0:
+            body.scale(room_h / float(body.height))
+        body.move_to([(left + right) / 2.0, (bot + room_top) / 2.0, 0])
+        board.add(title, body)
+        board.vf_title = title
+        return title, body
+
+    def _shape_takeaway_cue(picture):
+        from shape_draw import curved_line, flat_picture, join_picture, solid_picture, straight_line
+
+        kind = picture[0]
+        if kind == "line":
+            mode = picture[1]
+            if mode == "marks":
+                count = int(picture[2])
+                dots = VGroup(*[
+                    Circle(radius=0.16, stroke_color=NAVY, stroke_width=3, fill_color=GREEN, fill_opacity=1)
+                    for _ in range(count)
+                ]).arrange(RIGHT, buff=0.28)
+                return dots
+            if mode == "curve":
+                return curved_line()
+            if mode == "routes":
+                dots = VGroup(*[
+                    Circle(radius=0.14, stroke_color=NAVY, stroke_width=3, fill_color=GREEN, fill_opacity=1)
+                    for _ in range(2)
+                ]).arrange(RIGHT, buff=1.6)
+                line = Line(dots[0].get_center(), dots[1].get_center(), color=NAVY, stroke_width=6)
+                return VGroup(line, dots)
+            return straight_line()
+        if kind == "flat":
+            if picture[1] == "row":
+                return VGroup(*[flat_picture(str(item)) for item in picture[2]]).arrange(RIGHT, buff=0.2)
+            turn = float(picture[2]) if len(picture) > 2 else 0.0
+            return flat_picture(str(picture[1]), turn)
+        if kind == "solid":
+            if picture[1] == "pair":
+                return VGroup(*[solid_picture(str(item)) for item in picture[2]]).arrange(RIGHT, buff=0.28)
+            return solid_picture(str(picture[1]))
+        pic = join_picture(str(picture[1]))
+        for edge in pic.vf_edges:
+            edge.set_stroke(opacity=1)
+        return pic
+
+    class ShapeLine(_Board):
+        """Points, a straight line, or a curve. Three spoken lines."""
+
+        def construct(self):
+            from shape_draw import curved_line, straight_line
+
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            part = str(labels.get("part") or "marks")
+            title = _shape_title(labels.get("title") or "", latin, cjk)
+            if part == "marks":
+                count = int(labels.get("n") or 3)
+                dots = VGroup(*[
+                    Circle(radius=0.22, stroke_color=NAVY, stroke_width=4, fill_color=GREEN, fill_opacity=1)
+                    for _ in range(count)
+                ]).arrange(RIGHT, buff=0.55)
+                for dot in dots:
+                    dot.set_opacity(0)
+                number = _shape_name(str(count), latin, cjk)
+                number.set_opacity(0)
+                body = VGroup(dots, number).arrange(DOWN, buff=0.45)
+                _place_shape(self, title, body)
+                dots[0].set_opacity(1)
+                self.vf_dots = dots
+                self.vf_count = number
+
+                def reveal(index):
+                    return dots[index].animate.set_opacity(1)
+
+                self.spend(0)
+                self.spend_marked(1, [reveal(i) for i in range(count)], self.marks_for(1))
+                self.spend(2, number.animate.set_opacity(1))
+                return
+            if part == "lines":
+                straight = straight_line()
+                curve = curved_line()
+                left = VGroup(straight, _shape_name(labels.get("straight") or "", latin, cjk)).arrange(DOWN, buff=0.22)
+                right = VGroup(curve, _shape_name(labels.get("curve") or "", latin, cjk)).arrange(DOWN, buff=0.22)
+                right.set_opacity(0)
+                body = VGroup(left, right).arrange(RIGHT, buff=0.9)
+                _place_shape(self, title, body)
+                self.vf_straight = straight
+                self.vf_curve = curve
+                self.spend(0)
+                self.spend(1, right.animate.set_opacity(1))
+                self.spend(2)
+                return
+            from shape_draw import arc_stroke
+
+            dots = VGroup(*[
+                Circle(radius=0.18, stroke_color=NAVY, stroke_width=4, fill_color=GREEN, fill_opacity=1)
+                for _ in range(2)
+            ]).arrange(RIGHT, buff=2.2)
+            line = Line(dots[0].get_center(), dots[1].get_center(), color=NAVY, stroke_width=8)
+            curve = arc_stroke(dots[0].get_center(), dots[1].get_center(), angle=1.05)
+            line.set_opacity(0)
+            curve.set_opacity(0)
+            body = VGroup(curve, line, dots)
+            _place_shape(self, title, body)
+            self.vf_dots = dots
+            self.vf_straight = line
+            self.vf_curve = curve
+            self.spend(0)
+            self.spend(1, line.animate.set_opacity(1))
+            self.spend(2, curve.animate.set_opacity(1))
+
+    class FlatShape(_Board):
+        """One flat shape, a row of shapes, or the same shape turned. Three spoken lines."""
+
+        def construct(self):
+            import math
+
+            from shape_draw import flat_picture
+
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            part = str(labels.get("part") or "one")
+            title = _shape_title(labels.get("title") or "", latin, cjk)
+            if part == "row":
+                cards = []
+                for kind, name in zip(labels.get("items") or [], labels.get("names") or []):
+                    card = VGroup(
+                        flat_picture(str(kind)),
+                        _shape_name(name, latin, cjk),
+                    ).arrange(DOWN, buff=0.16)
+                    card.set_opacity(0)
+                    cards.append(card)
+                body = VGroup(*cards).arrange(RIGHT, buff=0.4)
+                _place_shape(self, title, body)
+                self.vf_cards = cards
+                self.vf_sides = [int(card[0].vf_sides) for card in cards]
+                if cards:
+                    cards[0].set_opacity(1)
+                self.spend(0)
+                if len(cards) > 1:
+                    self.spend(1, cards[1].animate.set_opacity(1))
+                else:
+                    self.spend(1)
+                if len(cards) > 2:
+                    self.spend(2, cards[2].animate.set_opacity(1))
+                else:
+                    self.spend(2)
+                return
+            kind = str(labels.get("kind") or "triangle")
+            if part == "turn":
+                picture = flat_picture(kind, 0)
+                name = _shape_name(labels.get("name") or "", latin, cjk)
+                name.set_opacity(0)
+                body = VGroup(picture, name).arrange(DOWN, buff=0.22)
+                _place_shape(self, title, body)
+                self.vf_shape = picture
+                self.vf_sides = int(picture.vf_sides)
+                self.spend(0)
+                self.spend(1, picture.animate.rotate(math.radians(float(labels.get("turn") or 20))))
+                self.spend(2, name.animate.set_opacity(1))
+                return
+            picture = flat_picture(kind)
+            name = _shape_name(labels.get("name") or "", latin, cjk)
+            name.set_opacity(0)
+            for edge in picture.vf_edges:
+                edge.set_stroke(opacity=0.2)
+            body = VGroup(picture, name).arrange(DOWN, buff=0.22)
+            _place_shape(self, title, body)
+            self.vf_shape = picture
+            self.vf_edges = picture.vf_edges
+            self.vf_sides = int(picture.vf_sides)
+
+            def light(index):
+                return picture.vf_edges[index].animate.set_stroke(opacity=1)
+
+            self.spend(0)
+            if picture.vf_edges:
+                self.spend_marked(1, [light(i) for i in range(len(picture.vf_edges))], self.marks_for(1))
+            else:
+                self.spend(1)
+            self.spend(2, name.animate.set_opacity(1))
+
+    class ShapeJoin(_Board):
+        """Two pieces slide together. The last line traces only the outside."""
+
+        def construct(self):
+            from shape_draw import join_picture
+
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            title = _shape_title(labels.get("title") or "", latin, cjk)
+            picture = join_picture(str(labels.get("result") or "quad"))
+            for edge in picture.vf_edges:
+                edge.set_stroke(opacity=0)
+            picture.vf_seam.set_stroke(opacity=0)
+            _place_shape(self, title, picture)
+            first, second = picture.vf_pieces
+            first.vf_home = first.get_center()
+            second.vf_home = second.get_center()
+            first.shift(LEFT * 0.85)
+            second.shift(RIGHT * 0.85)
+            self.vf_pieces = picture.vf_pieces
+            self.vf_edges = picture.vf_edges
+            self.vf_sides = int(picture.vf_sides)
+            self.spend(0)
+            self.spend(
+                1,
+                first.animate.move_to(first.vf_home),
+                second.animate.move_to(second.vf_home),
+                picture.vf_seam.animate.set_stroke(opacity=0.4),
+            )
+            self.spend(2, *[edge.animate.set_stroke(opacity=1) for edge in picture.vf_edges])
+
+    class SolidShape(_Board):
+        """One solid, a pair of solids, or the same solid turned. Three spoken lines."""
+
+        def construct(self):
+            import math
+
+            from shape_draw import solid_picture
+
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            title = _shape_title(labels.get("title") or "", latin, cjk)
+            kinds = list(labels.get("items") or [])
+            names = list(labels.get("names") or [])
+            cards = []
+            for kind, name in zip(kinds, names):
+                card = VGroup(
+                    solid_picture(str(kind)),
+                    _shape_name(name, latin, cjk),
+                ).arrange(DOWN, buff=0.16)
+                cards.append(card)
+            part = str(labels.get("part") or "pair")
+            if part == "turn" and len(cards) == 1:
+                body = cards[0]
+                _place_shape(self, title, body)
+                self.vf_kinds = kinds
+                self.vf_cards = cards
+                self.spend(0)
+                self.spend(1, body[0].animate.rotate(math.radians(float(labels.get("turn") or 25))))
+                self.spend(2)
+                return
+            for card in cards[1:]:
+                card.set_opacity(0)
+            body = VGroup(*cards).arrange(RIGHT, buff=0.7)
+            _place_shape(self, title, body)
+            self.vf_kinds = kinds
+            self.vf_cards = cards
+            self.spend(0)
+            if len(cards) > 1:
+                self.spend(1, cards[1].animate.set_opacity(1))
+            else:
+                self.spend(1)
+            self.spend(2)
+
+
+
     _scene_types._cache = {
         "one_ten": OneTen,
         "ten_and_ones": TenAndOnes,
@@ -4451,6 +4756,10 @@ def _scene_types() -> dict:
         "estimate_group": EstimateGroup,
         "row_match": RowMatch,
         "place_sum": PlaceSum,
+        "shape_line": ShapeLine,
+        "flat_shape": FlatShape,
+        "shape_join": ShapeJoin,
+        "solid_shape": SolidShape,
         "lesson_hook": LessonHook,
         "lesson_takeaway": LessonTakeaway,
     }

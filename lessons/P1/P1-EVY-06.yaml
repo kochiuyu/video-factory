@@ -1,0 +1,120 @@
+# P1-EVY-06. Mirrors MathQuiz path ruler / lesson estimatecm, "Estimate, then check".
+# Measure one reference, repeat it, say the guess, then check with the scale.
+# A hand span is only an example. Yours may differ.
+# https://github.com/kochiuyu/mathquiz learn-ruler.js (estimatecm).
+# Speech is for age 6: one short idea per sentence.
+id: P1-EVY-06
+title_en: Estimate, then check
+title_zh: 先估计，再核对
+title_zh_hk: 先估計，再核對
+duration_target_s: 55
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: measure
+  kind: ruler
+  seconds: 8
+  title_en: Estimate, then check
+  title_zh: 先估计，再核对
+  title_zh_hk: 先估計，再核對
+  s1_en: About how long is it?
+  s1_zh: 大约有多长？
+  s1_zh_hk: 大約有幾長呀？
+
+- id: copies
+  visual: animated
+  scene: measure_line
+  mode: reference
+  action: copies
+  unit: 2
+  repeats: 3
+  seconds: 11
+  title_en: About 6 cm
+  title_zh: 大约6厘米
+  title_zh_hk: 大約6厘米
+  s1_en: This little strip is 2 centimetres.
+  s1_zh: 这条小的是2厘米。
+  s1_zh_hk: 呢條細嘅係2厘米。
+  s2_en: The long strip is about three of those.
+  s2_zh: 长纸条大约有三个这么长。
+  s2_zh_hk: 長紙條大約有三個咁長。
+  s3_en: That is about 6 centimetres.
+  s3_zh: 大约是6厘米。
+  s3_zh_hk: 大約係6厘米。
+
+- id: span
+  visual: animated
+  scene: measure_line
+  mode: reference
+  action: span
+  cm: 10
+  seconds: 11
+  title_en: About 10 cm
+  title_zh: 大约10厘米
+  title_zh_hk: 大約10厘米
+  s1_en: A hand span can be a unit.
+  s1_zh: 一拃可以当单位。
+  s1_zh_hk: 一柞可以當單位。
+  s2_en: This one is about 10 centimetres.
+  s2_zh: 这一拃大约10厘米。
+  s2_zh_hk: 呢一柞大約10厘米。
+  s3_en: Your hand may be different.
+  s3_zh: 你的手可能不一样。
+  s3_zh_hk: 你嘅手可能唔同。
+
+- id: check
+  visual: animated
+  scene: measure_line
+  mode: reference
+  action: record
+  unit: 2
+  repeats: 3
+  seconds: 11
+  title_en: Check the guess
+  title_zh: 再核对一次
+  title_zh_hk: 再核對一次
+  s1_en: Say the guess first.
+  s1_zh: 先说出估计。
+  s1_zh_hk: 先講出估計。
+  s2_en: Then measure with the ruler.
+  s2_zh: 再用尺量一量。
+  s2_zh_hk: 再用尺度一度。
+  s3_en: Check the 6 centimetres.
+  s3_zh: 核对是不是6厘米。
+  s3_zh_hk: 核對係咪6厘米。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: measure
+  seconds: 14
+  title_en: Estimate, then check
+  title_zh: 先估计，再核对
+  title_zh_hk: 先估計，再核對
+  s1_en: Measure one small unit.
+  s1_zh: 先量一个小单位。
+  s1_zh_hk: 先度一個細單位。
+  s2_en: Repeat it along the strip.
+  s2_zh: 沿着纸条重复它。
+  s2_zh_hk: 沿住紙條重複佢。
+  s3_en: Say your guess first.
+  s3_zh: 先说出估计。
+  s3_zh_hk: 先講出估計。
+  s4_en: Then check with the ruler.
+  s4_zh: 再用尺核对。
+  s4_zh_hk: 再用尺核對。
+  cues:
+  - kind: measure
+    mode: ruler
+    cm: 2
+  - kind: measure
+    mode: units
+    count: 3
+  - kind: measure
+    mode: ruler
+    cm: 6
+  - kind: measure
+    mode: ruler
+    cm: 6

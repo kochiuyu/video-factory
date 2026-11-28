@@ -1,0 +1,264 @@
+id: FIN-45
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The same forecast. A dearer option?
+title_zh: 预测没变。期权却更贵了吗？
+title_zh_hk: 預測沒變。期權卻更貴了嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-45
+  kicker_en: FIN-45
+  kicker_zh: FIN-45
+  kicker_zh_hk: FIN-45
+  title_en: The same forecast. A dearer option?
+  title_zh: 预测没变。期权却更贵了吗？
+  title_zh_hk: 預測沒變。期權卻更貴了嗎？
+  image: art/same-forecast-dearer-option-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In November 2024 HKEX introduced weekly options on ten stocks, describing them as a way to manage
+    exposure around specific events. Volatility is one input in its pricing calculator. At a fictional
+    Hong Kong brokerage, analyst Mei must decide whether a call quote is rich or cheap.
+  zh: >-
+    二零二四年十一月，香港交易所推出十只股票的周期权，说这是在特定事件前后管理风险的办法。在它的定价计算器里，波动率是其中一项输入。在香港一家虚构的券商，分析员Mei要判断一个看涨期权报价是偏贵还是偏便宜。
+  zh_hk: >-
+    二零二四年十一月，港交所推出十隻股票嘅週期權，話係喺特定事件前後管理風險嘅方法。喺佢嘅定價計算機入面，波幅係其中一項輸入。喺香港一間虛構嘅證券行，分析員Mei要判斷一個認購期權報價係偏貴定偏平。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: One share and one call
+  title_zh: 一股股票和一份看涨期权
+  title_zh_hk: 一股股票和一份認購期權
+  row1_en: Stock
+  row1_zh: 股票
+  row1_zh_hk: 股票
+  row2_en: Call · strike 105
+  row2_zh: 看涨期权 · 行权价 105
+  row2_zh_hk: 認購期權 · 行使價 105
+  col1_en: Today
+  col1_zh: 今天
+  col1_zh_hk: 今天
+  col2_en: Down at expiry
+  col2_zh: 到期下跌
+  col2_zh_hk: 到期下跌
+  col3_en: Up at expiry
+  col3_zh: 到期上升
+  col3_zh_hk: 到期上升
+  c11: HK$100
+  c12: HK$90
+  c13: HK$110
+  c21_en: HK$4.50 quote
+  c21_zh: 报价 HK$4.50
+  c21_zh_hk: 報價 HK$4.50
+  c22: HK$0
+  c23: HK$5
+  footer_en: >-
+    50:50 · zero interest · no dividend
+  footer_zh: 各半机会 · 零利率 · 不派息
+  footer_zh_hk: 各半機會 · 零利率 · 不派息
+  s1_en: >-
+    A share costs 100 dollars today. Mei models two equally likely prices at expiry: 90 or 110. There
+    are no dividends.
+  s1_zh: 一股股票今天值一百港元。Mei假设到期时有两种可能性相同的价格：九十或者一百一十。股票不派息。
+  s1_zh_hk: 一股股票今日值一百蚊。Mei假設到期有兩個機會一樣嘅價：九十或者一百一十。股票唔派息。
+  s2_en: >-
+    The call pays the amount by which the expiry price exceeds 105, and nothing below that. It can only
+    be exercised at expiry. The quote is 4.50.
+  s2_zh: 这份看涨期权，到期时支付股价高出行权价一百零五的部分，低于一百零五就什么都不付。只能到期行权。报价是四点五。
+  s2_zh_hk: 呢份認購期權，到期支付股價高過行使價一百零五嘅部分，低過一百零五就乜都唔俾。只可以到期行使。報價係四點五。
+  s3_en: >-
+    Fractional shares are allowed, and borrowing or lending is at zero interest, with no fees. Replicate
+    one call with shares and a loan chosen today.
+  s3_zh: 可以持有零碎股，借款和放款都是零利率，没有费用。请用今天选定的股票和借款，复制一份看涨期权。
+  s3_zh_hk: 可以持有碎股，借錢同借出都係零利率，冇費用。請用今日揀定嘅股票同借款，複製一份認購期權。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Rich or cheap?
+  title_zh: 偏贵还是偏便宜？
+  title_zh_hk: 偏貴還是偏便宜？
+  en: >-
+    What stock holding and loan reproduce one call? Is the 4.50 quote above or below that cost? Pause
+    and vote.
+  zh: 要持有多少股票、借多少钱，才能复制一份看涨期权？四点五的报价比这个成本高还是低？请暂停，投个票。
+  zh_hk: 要持有幾多股票、借幾多錢，先可以複製一份認購期權？四點五嘅報價比呢個成本高定低？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Wider outcomes, same average
+  title_zh: 结果更分散，平均不变
+  title_zh_hk: 結果更分散，平均不變
+  step1_en: Share ends at 80 or 120
+  step1_zh: 股价到期为 80 或 120
+  step1_zh_hk: 股價到期為 80 或 120
+  step2_en: Average still HK$100
+  step2_zh: 平均仍是 HK$100
+  step2_zh_hk: 平均仍是 HK$100
+  step3_en: Call pays 0 or 15
+  step3_zh: 期权支付 0 或 15
+  step3_zh_hk: 期權支付 0 或 15
+  s1_en: >-
+    A colleague offers another model. There are still two equally likely outcomes, but the share might
+    end at 80 or 120.
+  s1_zh: 同事提出另一个模型：仍然是两种可能性相同的结果，但股价到期可能是八十或者一百二十。
+  s1_zh_hk: 同事提出另一個模型：仍然係兩個機會一樣嘅結果，但股價到期可能係八十或者一百二十。
+  s2_en: >-
+    The spot price, strike, quote, funding and time to expiry are all unchanged. The average expiry price
+    is still 100.
+  s2_zh: 现价、行权价、报价、融资条件和到期时间都不变。到期股价的平均值仍然是一百。
+  s2_zh_hk: 現價、行使價、報價、融資條件同到期時間都唔變。到期股價嘅平均值仍然係一百。
+  s3_en: The call now pays zero in the down state and 15 in the up state.
+  s3_zh: 现在看涨期权在下跌状态支付零，在上升状态支付十五。
+  s3_zh_hk: 而家認購期權喺下跌狀態支付零，喺上升狀態支付十五。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Does the verdict change?
+  title_zh: 结论会改变吗？
+  title_zh_hk: 結論會改變嗎？
+  en: >-
+    With the wider outcomes, what holding and loan reproduce the call? Is the 4.50 quote still on the
+    same side? Pause and vote.
+  zh: 结果更分散之后，要持有多少股票、借多少钱来复制这份期权？四点五的报价还在同一边吗？请暂停，投个票。
+  zh_hk: 結果更分散之後，要持有幾多股票、借幾多錢嚟複製呢份期權？四點五嘅報價仲係喺同一邊嗎？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Match the payoff difference
+  title_zh: 对准支付的差额
+  title_zh_hk: 對準支付的差額
+  step1_en: >-
+    Call +5 when stock +20: hold 0.25
+  step1_zh: 股价差 20，期权差 5：持 0.25 股
+  step1_zh_hk: 股價差 20，期權差 5：持 0.25 股
+  step2_en: Borrow 22.50 · cost 25 − 22.50 = 2.50
+  step2_zh: 借 22.50 · 成本 25 − 22.50 = 2.50
+  step2_zh_hk: 借 22.50 · 成本 25 − 22.50 = 2.50
+  step3_en: >-
+    Quote 4.50 is 2 above: rich
+  step3_zh: 报价 4.50 高出 2：偏贵
+  step3_zh_hk: 報價 4.50 高出 2：偏貴
+  s1_en: >-
+    Between the two states the stock moves by 20 and the call by 5, so a quarter of a share matches the
+    change.
+  s1_zh: 两种状态之间，股价相差二十，期权支付相差五，所以持有四分之一股，就能对上这个差额。
+  s1_zh_hk: 兩種狀態之間，股價差二十，期權支付差五，所以持有四分之一股，就對得上呢個差額。
+  s2_en: >-
+    A quarter share is worth 22.50 in the down state, so borrow 22.50 today. Then the portfolio pays zero
+    or 5, exactly like the call.
+  s2_zh: 四分之一股在下跌状态值二十二点五，所以今天借二十二点五。这样组合在两种状态下支付零或者五，和期权完全一样。
+  s2_zh_hk: 四分之一股喺下跌狀態值二十二點五，所以今日借二十二點五。咁個組合喺兩種狀態支付零或者五，同期權一模一樣。
+  s3_en: >-
+    It costs 25 minus 22.50, or 2.50. The 4.50 quote is 2 dollars above that benchmark, so it is rich.
+  s3_zh: 成本是二十五减二十二点五，等于二点五。四点五的报价比这个基准高两港元，所以偏贵。
+  s3_zh_hk: 成本係二十五減二十二點五，等於二點五。四點五嘅報價比呢個基準高兩蚊，所以偏貴。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Wider outcomes flip the verdict
+  title_zh: 结果更分散，结论反转
+  title_zh_hk: 結果更分散，結論反轉
+  step1_en: >-
+    Call +15 when stock +40: hold 0.375
+  step1_zh: 股价差 40，期权差 15：持 0.375 股
+  step1_zh_hk: 股價差 40，期權差 15：持 0.375 股
+  step2_en: Borrow 30 · cost 37.50 − 30 = 7.50
+  step2_zh: 借 30 · 成本 37.50 − 30 = 7.50
+  step2_zh_hk: 借 30 · 成本 37.50 − 30 = 7.50
+  step3_en: >-
+    Quote 4.50 is 3 below: cheap
+  step3_zh: 报价 4.50 低 3：偏便宜
+  step3_zh_hk: 報價 4.50 低 3：偏便宜
+  s1_en: >-
+    Now the call changes by 15 across a 40 dollar range, so hold 0.375 of a share.
+  s1_zh: 现在股价相差四十，期权支付相差十五，所以要持有零点三七五股。
+  s1_zh_hk: 而家股價差四十，期權支付差十五，所以要持有零點三七五股。
+  s2_en: >-
+    Borrow 30 to cancel the down-state value of 0.375 times 80. In the up state the stock pays 45, and
+    15 after repaying.
+  s2_zh: 借三十，抵消下跌状态时零点三七五股乘八十的价值。上升状态时股票值四十五，还款后剩十五。
+  s2_zh_hk: 借三十，抵銷下跌狀態零點三七五股乘八十嘅價值。上升狀態股票值四十五，還錢之後剩十五。
+  s3_en: >-
+    The portfolio costs 37.50 minus 30, or 7.50. The 4.50 quote is now 3 dollars below, so it is cheap.
+    The average price did not change, but wider outcomes give the call more upside.
+  s3_zh: 组合成本是三十七点五减三十，等于七点五。四点五的报价现在低了三港元，所以偏便宜。平均股价没有变，但结果更分散，期权的上行空间就更大。
+  s3_zh_hk: 組合成本係三十七點五減三十，等於七點五。四點五嘅報價而家低咗三蚊，所以偏平。平均股價冇變，但結果更分散，期權嘅上升空間就更大。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: A forecast is not a price
+  title_zh: 预测不是价格
+  title_zh_hk: 預測不是價格
+  en: >-
+    The costs come from matched payoffs, funding and today's stock price, not from discounting the 50-50
+    forecast. Here they happen to equal the forecast mean payoff, but that does not hold in general.
+  zh: 成本来自对准的支付、融资条件和今天的股价，而不是把那个各半的预测拿来折现。这里刚好等于预测的平均支付，但一般情况下并不成立。
+  zh_hk: 成本嚟自對準嘅支付、融資條件同今日嘅股價，唔係將嗰個各半嘅預測拎嚟折現。呢度啱啱等於預測嘅平均支付，但一般情況唔成立。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Spread raises option value
+  title_zh: 波动更大，期权更值钱
+  title_zh_hk: 波幅更大，期權更值錢
+  q1_en: Replicate with shares and a loan
+  q1_zh: 用股票和借款复制
+  q1_zh_hk: 用股票和借款複製
+  q2_en: Recheck when outcomes widen
+  q2_zh: 结果变分散就要重算
+  q2_zh_hk: 結果變分散就要重算
+  s1_en: >-
+    Two models with the same average can value the same call very differently. Wider outcomes raise its
+    value because the down side stops at zero.
+  s1_zh: 两个平均值相同的模型，可以给同一份期权很不同的价值。结果越分散，期权越值钱，因为下行最多只到零。
+  s1_zh_hk: 兩個平均值一樣嘅模型，可以俾同一份期權好唔同嘅價值。結果越分散，期權越值錢，因為下跌最多只係到零。
+  s2_en: >-
+    This is a two-outcome teaching model, not a valuation of any listed option or a trading recommendation.
+  s2_zh: 这是两种结果的教学模型，不是任何上市期权的估值，也不是交易建议。
+  s2_zh_hk: 呢個係兩種結果嘅教學模型，唔係任何上市期權嘅估值，亦唔係交易建議。
+  s3_en: >-
+    The brokerage, stock and quotes are fictional. Official scene art is a teaching illustration only.
+  s3_zh: 券商、股票和报价都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 證券行、股票同報價都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

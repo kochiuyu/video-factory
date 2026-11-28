@@ -1,0 +1,265 @@
+id: FIN-49
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: When does a tougher loan collect less?
+title_zh: 更苛刻的贷款，什么时候反而收得更少？
+title_zh_hk: 更苛刻的貸款，甚麼時候反而收得更少？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-49
+  kicker_en: FIN-49
+  kicker_zh: FIN-49
+  kicker_zh_hk: FIN-49
+  title_en: When does a tougher loan collect less?
+  title_zh: 更苛刻的贷款，什么时候反而收得更少？
+  title_zh_hk: 更苛刻的貸款，甚麼時候反而收得更少？
+  image: art/tougher-loan-collect-less-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In November 2024, Hong Kong extended guarantee periods and added partial principal repayment options
+    in its SME Financing Guarantee Scheme. This fictional loan has no public guarantee. A small Kwun Tong
+    delivery firm asks credit officer Mina for 126,000 dollars to start a chilled-grocery route.
+  zh: >-
+    二零二四年十一月，香港的中小企融资担保计划延长了担保期，并为新贷款加入部分还本的选择。这笔虚构的贷款没有政府担保。观塘一家小型送货公司，向信贷员Mina申请十二万六千港元，开一条冷链杂货线路。
+  zh_hk: >-
+    二零二四年十一月，香港嘅中小企融資擔保計劃延長咗擔保期，仲為新貸款加入部分還本嘅選擇。呢筆虛構嘅貸款冇政府擔保。觀塘一間細嘅送貨公司，向信貸主任Mina申請十二萬六千蚊，開一條凍鏈雜貨路線。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Season cash, HK$ thousand
+  title_zh: 季度现金（千港元）
+  title_zh_hk: 季度現金（千港元）
+  row1_en: Success
+  row1_zh: 成功
+  row1_zh_hk: 成功
+  row2_en: Weak season
+  row2_zh: 淡季
+  row2_zh_hk: 淡季
+  col1_en: Project cash
+  col1_zh: 项目现金
+  col1_zh_hk: 項目現金
+  col2_en: Quote A pays
+  col2_zh: 报价 A 还款
+  col2_zh_hk: 報價 A 還款
+  col3_en: Quote B pays
+  col3_zh: 报价 B 还款
+  col3_zh_hk: 報價 B 還款
+  c11: '240'
+  c12: '155'
+  c13: '175'
+  c21: '40'
+  c22: '20'
+  c23: '20'
+  footer_en: Loan 126 · needs expected 126 back
+  footer_zh: 贷款 126 · 期望回收至少 126
+  footer_zh_hk: 貸款 126 · 期望回收至少 126
+  s1_en: >-
+    From here, all figures are in thousands of dollars. The loan is 126 today and is settled at the end
+    of the season.
+  s1_zh: 以下金额的单位都是千港元。贷款今天放出一百二十六，到季末结清。
+  s1_zh_hk: 以下金額嘅單位都係千港元。貸款今日批出一百二十六，到季尾清還。
+  s2_en: >-
+    If the owner puts in extra planning work, success is 80 percent likely; without it, 50 percent. The
+    work costs the owner the equivalent of 18. Mina cannot verify it.
+  s2_zh: 如果老板多花功夫做规划，成功的概率是百分之八十；不做，就是百分之五十。这份功夫对老板来说相当于十八的成本，而Mina没法核实他有没有做。
+  s2_zh_hk: 如果老闆落多啲功夫做規劃，成功機會係百分之八十；唔做，就係百分之五十。呢份功夫對老闆嚟講，成本相當於十八，而Mina冇辦法核實佢有冇做。
+  s3_en: >-
+    Both quotes collect 20 after a weak season. After success, quote A collects 155 and quote B collects
+    175. Mina needs expected collections of at least 126.
+  s3_zh: 两个报价在淡季都收回二十。成功的话，报价A收一百五十五，报价B收一百七十五。Mina要求期望回收至少一百二十六。
+  s3_zh_hk: 兩個報價喺淡季都收返二十。成功嘅話，報價A收一百五十五，報價B收一百七十五。Mina要求期望回收最少一百二十六。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Approve A or B?
+  title_zh: 批准 A 还是 B？
+  title_zh_hk: 批准 A 還是 B？
+  en: >-
+    Which quote should Mina approve? Once the owner decides whether to do the extra work, how much does
+    the lender expect to collect under each? Pause and vote.
+  zh: Mina应该批准哪个报价？在老板决定做不做额外功夫之后，每个报价下贷款方期望收回多少？请暂停，投个票。
+  zh_hk: Mina應該批准邊個報價？老闆決定做唔做額外功夫之後，每個報價之下，貸款方期望收返幾多？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Less can be collected when weak
+  title_zh: 淡季能收回的更少
+  title_zh_hk: 淡季能收回的更少
+  step1_en: >-
+    Weak season: collect at most 10
+  step1_zh: 淡季最多收回 10
+  step1_zh_hk: 淡季最多收回 10
+  step2_en: Mina can rewrite both payments
+  step2_zh: Mina 可以重订两笔还款
+  step2_zh_hk: Mina 可以重訂兩筆還款
+  step3_en: Chances, cost and loan unchanged
+  step3_zh: 概率、成本和贷款额不变
+  step3_zh_hk: 概率、成本和貸款額不變
+  s1_en: >-
+    Before signing, Mina learns that part of the weak-season resale money cannot be assigned to the lender.
+    At most 10, not 20, can be collected in that state.
+  s1_zh: 签约之前，Mina得知淡季的转售收入，有一部分不能转让给贷款方。在那种状态下，最多只能收回十，而不是二十。
+  s1_zh_hk: 簽約之前，Mina知道淡季嘅轉售收入，有一部分唔可以轉讓俾貸款方。喺嗰種狀態，最多只可以收返十，唔係二十。
+  s2_en: >-
+    She can rewrite both repayments: R after success, up to 240, and X after a weak season, up to 10.
+  s2_zh: 她可以重新订两笔还款：成功时还R，最多二百四十；淡季还X，最多十。
+  s2_zh_hk: 佢可以重新訂兩筆還款：成功還R，最多二百四十；淡季還X，最多十。
+  s3_en: >-
+    The chances, the cost of extra work and the loan amount all stay the same.
+  s3_zh: 成功概率、额外功夫的成本和贷款金额都不变。
+  s3_zh_hk: 成功機會、額外功夫嘅成本同貸款金額都唔變。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Can any loan break even?
+  title_zh: 有能打平的贷款吗？
+  title_zh_hk: 有能打平的貸款嗎？
+  en: >-
+    Can Mina design a break-even loan that still rewards the extra work? If not, how much must she be
+    able to collect in a weak season? Pause and vote.
+  zh: Mina能不能设计一笔既能打平、又能鼓励额外功夫的贷款？如果不能，淡季至少要能收回多少？请暂停，投个票。
+  zh_hk: Mina可唔可以設計一筆又打平、又鼓勵額外功夫嘅貸款？如果唔得，淡季最少要收得返幾多？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Tougher terms change the effort
+  title_zh: 更苛刻的报价改变了努力
+  title_zh_hk: 更苛刻的報價改變了努力
+  step1_en: >-
+    A: owner keeps 85 · gain 19.5 > 18
+  step1_zh: A：老板留 85 · 得益 19.5 > 18
+  step1_zh_hk: A：老闆留 85 · 得益 19.5 > 18
+  step2_en: >-
+    B: owner keeps 65 · gain 13.5 < 18
+  step2_zh: B：老板留 65 · 得益 13.5 < 18
+  step2_zh_hk: B：老闆留 65 · 得益 13.5 < 18
+  step3_en: A collects 128 · B only 97.5
+  step3_zh: A 收回 128 · B 只有 97.5
+  step3_zh_hk: A 收回 128 · B 只有 97.5
+  s1_en: >-
+    Under A, the owner keeps 85 after success and 20 after a weak season. Extra work adds 0.3 times 65,
+    or 19.5, more than its cost of 18, so the owner does it.
+  s1_zh: 报价A下，成功时老板留下八十五，淡季留下二十。额外功夫带来零点三乘六十五，等于十九点五，高于十八的成本，所以老板会做。
+  s1_zh_hk: 報價A之下，成功老闆留八十五，淡季留二十。額外功夫帶嚟零點三乘六十五，等於十九點五，高過十八嘅成本，所以老闆會做。
+  s2_en: >-
+    Under B, the owner keeps only 65 after success. Extra work adds just 13.5, less than its cost, so
+    the owner skips it.
+  s2_zh: 报价B下，成功时老板只留下六十五。额外功夫只带来十三点五，低于成本，所以老板不做。
+  s2_zh_hk: 報價B之下，成功老闆淨係留六十五。額外功夫只帶嚟十三點五，低過成本，所以老闆唔做。
+  s3_en: >-
+    So Mina expects 128 under A, enough to cover 126, but only 97.5 under B. Approve A: the tougher quote
+    collects less.
+  s3_zh: 所以报价A下，Mina期望收回一百二十八，够覆盖一百二十六；报价B下只有九十七点五。应批准A：更苛刻的报价反而收得更少。
+  s3_zh_hk: 所以報價A之下，Mina期望收返一百二十八，夠覆蓋一百二十六；報價B之下得九十七點五。應該批准A：更苛刻嘅報價反而收得少啲。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Find the two limits
+  title_zh: 找出两个界限
+  title_zh_hk: 找出兩個界限
+  step1_en: >-
+    Effort: R ≤ 140 + X
+  step1_zh: 努力条件：R ≤ 140 + X
+  step1_zh_hk: 努力條件：R ≤ 140 + X
+  step2_en: >-
+    Lender: R ≥ 157.5 − 0.25X
+  step2_zh: 贷款方：R ≥ 157.5 − 0.25X
+  step2_zh_hk: 貸款方：R ≥ 157.5 − 0.25X
+  step3_en: >-
+    X = 10: 150 vs 155 fails · need X ≥ 14
+  step3_zh: X = 10：150 对 155，不可行 · 需 X ≥ 14
+  step3_zh_hk: X = 10：150 對 155，不可行 · 需 X ≥ 14
+  s1_en: >-
+    Extra work pays for the owner only if R is at most 140 plus X. The lender breaks even, with the work
+    done, only if R is at least 157.5 minus a quarter of X.
+  s1_zh: 只有当R不超过一百四十加X，额外功夫对老板才划算。在老板做了功夫的前提下，只有当R至少是一百五十七点五减四分之一X，贷款方才能打平。
+  s1_zh_hk: R唔超過一百四十加X，額外功夫對老闆先至抵。喺老闆做咗功夫嘅前提下，R最少要係一百五十七點五減四分之一X，貸款方先打平。
+  s2_en: >-
+    With X capped at 10, the owner needs R of at most 150, but the lender needs at least 155. No loan
+    works, and without the work, the lender can expect at most 125.
+  s2_zh: X最多只有十时，老板要求R不超过一百五十，贷款方却要求至少一百五十五，没有可行的贷款。如果老板不做功夫，贷款方最多也只能期望收回一百二十五。
+  s2_zh_hk: X最多得十嘅時候，老闆要R唔超過一百五十，貸款方就要最少一百五十五，冇可行嘅貸款。如果老闆唔做功夫，貸款方最多都只係期望收返一百二十五。
+  s3_en: >-
+    The limits first meet when X reaches 14. At X of 14 and R of 154, the lender expects exactly 126 and
+    the owner is just willing to work.
+  s3_zh: 两个界限在X达到十四时才开始重叠。X等于十四、R等于一百五十四时，贷款方期望刚好收回一百二十六，老板也刚好愿意做功夫。
+  s3_zh_hk: 兩個界限喺X去到十四先開始重疊。X等於十四、R等於一百五十四，貸款方期望啱啱收返一百二十六，老闆亦啱啱願意落功夫。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Price the incentive too
+  title_zh: 定价要顾及激励
+  title_zh_hk: 定價要顧及激勵
+  en: >-
+    A higher repayment after success can weaken the borrower's incentive to work, and so lower the chance
+    of being repaid. Check what the borrower keeps in each outcome.
+  zh: 成功后要还得更多，可能削弱借款人努力的动力，反而降低还款的概率。要看清借款人在每种结果下留下多少。
+  zh_hk: 成功之後要還多啲，可能削弱借款人努力嘅動力，反而降低還款嘅機會。要睇清楚借款人喺每種結果之下留低幾多。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Tougher terms can collect less
+  title_zh: 条件更苛刻，回收可能更少
+  title_zh_hk: 條件更苛刻，回收可能更少
+  q1_en: Ask what the borrower keeps
+  q1_zh: 问借款人能留下多少
+  q1_zh_hk: 問借款人能留下多少
+  q2_en: Recover more in bad states
+  q2_zh: 在不利状态多收回一些
+  q2_zh_hk: 在不利狀態多收回一些
+  s1_en: >-
+    When effort cannot be verified, the repayment schedule shapes it. Being able to collect more in a
+    weak season can make a fair, effort-rewarding loan possible.
+  s1_zh: 当努力无法核实时，还款安排就会影响努力。在淡季能多收回一些，才有可能设计出公平、又鼓励努力的贷款。
+  s1_zh_hk: 當努力冇辦法核實，還款安排就會影響努力。喺淡季收得返多啲，先有可能設計出公平、又鼓勵努力嘅貸款。
+  s2_en: >-
+    This is a fictional loan, not a description of any guarantee scheme's terms.
+  s2_zh: 这是虚构的贷款，不是对任何担保计划条款的描述。
+  s2_zh_hk: 呢個係虛構嘅貸款，唔係描述任何擔保計劃嘅條款。
+  s3_en: >-
+    The firm, loan and figures are fictional. Official scene art is a teaching illustration only.
+  s3_zh: 公司、贷款和数字都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 公司、貸款同數字都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

@@ -1,0 +1,282 @@
+id: FIN-43
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: The customer paid. Can we make payroll?
+title_zh: 顾客付了款。工资发得出吗？
+title_zh_hk: 顧客付了款。出得起糧嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-43
+  kicker_en: FIN-43
+  kicker_zh: FIN-43
+  kicker_zh_hk: FIN-43
+  title_en: The customer paid. Can we make payroll?
+  title_zh: 顾客付了款。工资发得出吗？
+  title_zh_hk: 顧客付了款。出得起糧嗎？
+  image: art/customer-paid-can-we-make-payroll-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In December 2023, Hong Kong and Thailand linked FPS and PromptPay, so travellers can pay by scanning
+    a merchant's QR code, and merchants can receive funds immediately. A card approval, by contrast, is
+    not yet money in the bank. You advise a fictional gift shop in Tsim Sha Tsui.
+  zh: >-
+    二零二三年十二月，香港的转数快和泰国的PromptPay实现互联，旅客扫描商户的二维码就能付款，商户可以即时收到款项。相比之下，银行卡交易获批，并不等于钱已经进了银行账户。你要为尖沙咀一家虚构的礼品店出主意。
+  zh_hk: >-
+    二零二三年十二月，香港嘅轉數快同泰國嘅PromptPay互聯，旅客掃商戶嘅二維碼就可以俾錢，商戶可以即時收到款項。相反，信用卡交易批核咗，唔等於錢已經入咗銀行戶口。你要幫尖沙咀一間虛構嘅禮品店出主意。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: HK$40,000 payroll, Saturday 5pm
+  title_zh: 星期六下午 5 时前发薪 HK$40,000
+  title_zh_hk: 星期六下午 5 時前發薪 HK$40,000
+  row1_en: Card
+  row1_zh: 银行卡
+  row1_zh_hk: 銀行卡
+  row2_en: Bank-QR
+  row2_zh: 银行二维码
+  row2_zh_hk: 銀行二維碼
+  row3_en: Bridge
+  row3_zh: 过渡融资
+  row3_zh_hk: 過渡融資
+  col1_en: Fee
+  col1_zh: 费用
+  col1_zh_hk: 費用
+  col2_en: Usable at bank
+  col2_zh: 何时可用
+  col2_zh_hk: 何時可用
+  col3_en: Other fee
+  col3_zh: 其他费用
+  col3_zh_hk: 其他費用
+  c11: 2%
+  c12_en: Tuesday
+  c12_zh: 星期二
+  c12_zh_hk: 星期二
+  c13_en: None
+  c13_zh: 无
+  c13_zh_hk: 無
+  c21: 1%
+  c22_en: On credit
+  c22_zh: 入账即可用
+  c22_zh_hk: 入賬即可用
+  c23_en: HK$900 setup
+  c23_zh: 开通费 HK$900
+  c23_zh_hk: 開通費 HK$900
+  c31_en: Not a sale
+  c31_zh: 不是销售
+  c31_zh_hk: 不是銷售
+  c32_en: Before 5pm
+  c32_zh: 下午 5 时前
+  c32_zh_hk: 下午 5 時前
+  c33_en: HK$800 if drawn
+  c33_zh: 提取就收 HK$800
+  c33_zh_hk: 提取即收 HK$800
+  footer_en: Start HK$20,000 · sales HK$60,000
+  footer_zh: 起初 HK$20,000 · 销售 HK$60,000
+  footer_zh_hk: 起初 HK$20,000 · 銷售 HK$60,000
+  s1_en: >-
+    The shop must pay 40,000 dollars of payroll from its bank account by 5 pm on Saturday. It starts the
+    day with 20,000.
+  s1_zh: 这家店星期六下午五点前，要从银行账户发出四万港元工资。当天一开始，账上只有两万。
+  s1_zh_hk: 呢間舖頭星期六下晝五點前，要由銀行戶口出四萬蚊糧。當日一開始，戶口得兩萬。
+  s2_en: >-
+    It expects 60,000 of sales. Up to 25,000 can move from cards to an instant bank QR channel. Cards
+    cost 2 percent and pay out on Tuesday. QR costs 1 percent and is usable once credited, plus a 900
+    dollar setup fee.
+  s2_zh: >-
+    预计销售六万港元，其中最多两万五千可以从银行卡改走即时的银行二维码。银行卡收费百分之二，星期二才到账。二维码收费百分之一，入账就能用，但要另付九百港元开通费。
+  s2_zh_hk: >-
+    預計銷售六萬蚊，其中最多兩萬五千可以由信用卡轉用即時嘅銀行二維碼。信用卡收百分之二，星期二先到賬。二維碼收百分之一，入咗賬就用得，但要另外俾九百蚊開通費。
+  s3_en: >-
+    A bridge of up to 20,000 can be drawn before payroll. Any draw at all costs 800 dollars. Money counts
+    only when it reaches the spendable bank balance.
+  s3_zh: 发工资前，可以动用最多两万港元的过渡融资。只要提取，不论多少，都收八百港元。钱只有进了可动用的银行余额，才算数。
+  s3_zh_hk: 出糧之前，可以動用最多兩萬蚊嘅過渡融資。只要提取，唔理幾多，都收八百蚊。錢一定要入咗可以用嘅銀行結餘，先計數。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Cards only, or add QR?
+  title_zh: 只用银行卡，还是加二维码？
+  title_zh_hk: 只用銀行卡，還是加二維碼？
+  en: >-
+    If all 25,000 of QR sales credit before payroll, which route should the shop choose this weekend,
+    and what is its fee advantage? Pause and vote.
+  zh: 如果两万五千的二维码销售，全部在发工资前入账，这个周末应该选哪条路径？费用上能省多少？请暂停，投个票。
+  zh_hk: 如果兩萬五千嘅二維碼銷售，全部喺出糧之前入賬，呢個週末應該揀邊條路？費用上慳到幾多？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Some QR cash arrives late
+  title_zh: 部分二维码款项迟到
+  title_zh_hk: 部分二維碼款項遲到
+  step1_en: HK$6,000 still pending at 5pm
+  step1_zh: 下午 5 时仍有 HK$6,000 未到
+  step1_zh_hk: 下午 5 時仍有 HK$6,000 未到
+  step2_en: It credits that evening, same 1%
+  step2_zh: 当晚入账，费用仍是 1%
+  step2_zh_hk: 當晚入賬，費用仍是 1%
+  step3_en: Everything else unchanged
+  step3_zh: 其他条件不变
+  step3_zh_hk: 其他條件不變
+  s1_en: >-
+    Before committing, you learn that 6,000 of the 25,000 QR sales would still be pending at 5 pm under
+    the shop's provider arrangement.
+  s1_zh: 决定之前，你得知按这家店和服务商的安排，两万五千的二维码销售里，有六千到下午五点还在等待确认。
+  s1_zh_hk: 決定之前，你知道按呢間舖同服務商嘅安排，兩萬五千嘅二維碼銷售入面，有六千到下晝五點仲等緊確認。
+  s2_en: >-
+    That 6,000 credits later the same evening, at the same 1 percent fee. The full amount arrives; the
+    question is whether it arrives in time.
+  s2_zh: 这六千当晚稍后入账，费用同样是百分之一。钱最终都会到，问题是能不能赶在截止前到。
+  s2_zh_hk: 呢六千當晚遲啲入賬，費用一樣係百分之一。錢最後都會到，問題係趕唔趕得切。
+  s3_en: All the other assumptions and choices stay the same.
+  s3_zh: 其余假设和选择都不变。
+  s3_zh_hk: 其他假設同選擇都唔變。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which route costs less now?
+  title_zh: 现在哪条路径更省？
+  title_zh_hk: 現在哪條路徑更省？
+  en: >-
+    With the later credit, how much would the shop have to draw on the QR route, and which route now costs
+    less? Pause and vote.
+  zh: 入账推迟之后，走二维码路径要提取多少过渡融资？现在哪条路径更省钱？请暂停，投个票。
+  zh_hk: 入賬推遲之後，用二維碼要提取幾多過渡融資？而家邊條路更慳錢？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: When all QR cash arrives in time
+  title_zh: 二维码款项全部准时到
+  title_zh_hk: 二維碼款項全部準時到
+  step1_en: >-
+    Cards: 1,200 + bridge 800 = 2,000
+  step1_zh: 银行卡：1,200 + 过渡 800 = 2,000
+  step1_zh_hk: 銀行卡：1,200 + 過渡 800 = 2,000
+  step2_en: >-
+    QR: 24,750 arrives; no bridge
+  step2_zh: 二维码：到账 24,750，不用过渡
+  step2_zh_hk: 二維碼：到賬 24,750，不用過渡
+  step3_en: 700 + 250 + 900 = 1,850; saves 150
+  step3_zh: 700 + 250 + 900 = 1,850；省 150
+  step3_zh_hk: 700 + 250 + 900 = 1,850；省 150
+  s1_en: >-
+    Cards can approve 60,000 of sales but add nothing to Saturday's bank cash. The shop is 20,000 short,
+    so it must draw the bridge. Cost: 1,200 in card fees plus 800, or 2,000.
+  s1_zh: 银行卡可以批准六万的销售，却不会让星期六的银行现金多一分。店里差两万，只能提取过渡融资。成本是一千二百的刷卡费，加八百，共两千。
+  s1_zh_hk: 信用卡可以批核六萬嘅銷售，但星期六銀行嘅現金一蚊都唔會多。舖頭差兩萬，一定要提取過渡融資。成本係一千二百嘅碌卡費，加八百，總共兩千。
+  s2_en: >-
+    With QR, 25,000 less 1 percent is 24,750 of Saturday cash. With the 20,000 already there, payroll
+    is covered with 4,750 to spare. No bridge fee.
+  s2_zh: 加上二维码，两万五千扣掉百分之一，就是星期六到账的两万四千七百五十。加上原有的两万，足够发工资，还多出四千七百五十，不用付过渡融资费。
+  s2_zh_hk: 加埋二維碼，兩萬五千扣咗百分之一，就係星期六到賬嘅兩萬四千七百五十。加埋原本嘅兩萬，夠出糧，仲多四千七百五十，唔使俾過渡融資費。
+  s3_en: >-
+    Fees are 700 on the remaining cards, 250 on QR and the 900 setup: 1,850. That is 150 cheaper than
+    cards with the bridge.
+  s3_zh: 费用是剩下银行卡的七百，二维码的二百五十，加九百开通费，共一千八百五十，比银行卡加过渡融资便宜一百五十。
+  s3_zh_hk: 費用係其餘信用卡嘅七百，二維碼嘅二百五十，加九百開通費，總共一千八百五十，比信用卡加過渡融資平一百五十。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Late cash brings back the draw
+  title_zh: 款项迟到，又要提取
+  title_zh_hk: 款項遲到，又要提取
+  step1_en: >-
+    By 5 pm: 18,810 → 38,810 total
+  step1_zh: 下午 5 时前：18,810 → 共 38,810
+  step1_zh_hk: 下午 5 時前：18,810 → 共 38,810
+  step2_en: Draw 1,190 still costs 800
+  step2_zh: 提取 1,190 仍收 800
+  step2_zh_hk: 提取 1,190 仍收 800
+  step3_en: QR 2,650 vs cards 2,000
+  step3_zh: 二维码 2,650 对 银行卡 2,000
+  step3_zh_hk: 二維碼 2,650 對 銀行卡 2,000
+  s1_en: >-
+    By payroll only 19,000 of QR sales have credited. After the fee that is 18,810, so the shop has 38,810.
+  s1_zh: 到发工资时，只有一万九千的二维码销售入账，扣费后是一万八千八百一十，店里一共有三万八千八百一十。
+  s1_zh_hk: 到出糧嗰陣，得一萬九千嘅二維碼銷售入咗賬，扣費之後係一萬八千八百一十，舖頭總共有三萬八千八百一十。
+  s2_en: It must draw 1,190, and any draw triggers the whole 800 dollar charge.
+  s2_zh: 它必须提取一千一百九十，而只要提取，就要付足八百港元。
+  s2_zh_hk: 佢要提取一千一百九十，而只要提取，就要俾足八百蚊。
+  s3_en: >-
+    The QR route now costs 2,650 against 2,000 for cards with the bridge. Choose cards this weekend, saving
+    650.
+  s3_zh: 这样二维码路径成本是二千六百五十，银行卡加过渡融资是两千。这个周末应选银行卡，省下六百五十。
+  s3_zh_hk: 咁二維碼路線成本係二千六百五十，信用卡加過渡融資係兩千。呢個週末應該揀信用卡，慳六百五十。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Money counts when usable
+  title_zh: 能用的钱才算数
+  title_zh_hk: 能用的錢才算數
+  en: >-
+    A later credit does not close a 5 pm payroll gap or avoid the draw fee. Compare the fees and the cash
+    timing separately, and count money only when it reaches the spendable balance.
+  zh: 晚到的款项，补不上下午五点的工资缺口，也免不了提取费。费用和现金到账时间要分开比较，钱只有进了可动用的余额才算数。
+  zh_hk: 遲到嘅款項，補唔到下晝五點出糧嘅缺口，亦免唔到提取費。費用同現金到賬時間要分開比較，錢一定要入咗可以用嘅結餘先計數。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Approval is not cash in the bank
+  title_zh: 批准不等于钱已到账
+  title_zh_hk: 批核不等於錢已到賬
+  q1_en: Compare total fees for the weekend
+  q1_zh: 比较整个周末的总费用
+  q1_zh_hk: 比較整個週末的總費用
+  q2_en: Check what is usable by the deadline
+  q2_zh: 核对截止前能用多少钱
+  q2_zh_hk: 核對截止前能用多少錢
+  s1_en: >-
+    A cheaper payment rail helps only if the money arrives before the bill is due. Fixed fees, such as
+    a bridge charge, can reverse the ranking.
+  s1_zh: 更便宜的收款渠道，只有在账单到期前把钱送到，才帮得上忙。像过渡融资这样的固定费用，可能会让排名反过来。
+  s1_zh_hk: 平啲嘅收款渠道，要喺賬單到期之前將錢送到先幫到手。好似過渡融資咁嘅固定費用，可能會令排名調轉。
+  s2_en: >-
+    This is a classroom exercise, not a description of any real payment link's settlement terms.
+  s2_zh: 这是课堂练习，不是对任何真实支付互联结算条款的描述。
+  s2_zh_hk: 呢個係課堂練習，唔係描述任何真實支付互聯嘅結算條款。
+  s3_en: >-
+    The shop, contracts and fees are fictional. Official scene art is a teaching illustration only.
+  s3_zh: 商店、合同和费用都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 商店、合約同費用都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

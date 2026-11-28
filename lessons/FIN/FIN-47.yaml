@@ -1,0 +1,285 @@
+id: FIN-47
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Who gets the lending subsidy?
+title_zh: 谁拿到这笔贷款补贴？
+title_zh_hk: 誰拿到這筆借貸補貼？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-47
+  kicker_en: FIN-47
+  kicker_zh: FIN-47
+  kicker_zh_hk: FIN-47
+  title_en: Who gets the lending subsidy?
+  title_zh: 谁拿到这笔贷款补贴？
+  title_zh_hk: 誰拿到這筆借貸補貼？
+  image: art/who-gets-the-lending-subsidy-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Lending platforms in Singapore connect small businesses with individual and institutional investors.
+    A platform can spend money to attract more lenders or more borrowers, but extra growth helps only
+    where it removes a real constraint. Priya runs growth at a fictional Singapore small-business loan
+    marketplace.
+  zh: >-
+    新加坡的借贷平台，把小企业和个人及机构投资者连接起来。平台可以花钱吸引更多出借人或者更多借款人，但新增的增长，只有在解除真正的约束时才有用。Priya在新加坡一家虚构的小企业贷款平台负责增长。
+  zh_hk: >-
+    新加坡嘅借貸平台，將小企業同個人及機構投資者連繫埋一齊。平台可以使錢吸引多啲放款人或者多啲借款人，但新增嘅增長，要解除到真正嘅限制先有用。Priya喺新加坡一間虛構嘅小企業貸款平台負責增長。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 5
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two pools, no shared slots
+  title_zh: 两个放款池，名额不能互通
+  title_zh_hk: 兩個放款池，名額不能互通
+  row1_en: Short-term firms
+  row1_zh: 短期企业
+  row1_zh_hk: 短期企業
+  row2_en: Short-term slots
+  row2_zh: 短期名额
+  row2_zh_hk: 短期名額
+  row3_en: Longer-term firms
+  row3_zh: 较长期企业
+  row3_zh_hk: 較長期企業
+  row4_en: Longer-term slots
+  row4_zh: 较长期名额
+  row4_zh_hk: 較長期名額
+  row5_en: Campaign cost
+  row5_zh: 推广成本
+  row5_zh_hk: 推廣成本
+  col1_en: None
+  col1_zh: 不推广
+  col1_zh_hk: 不推廣
+  col2_en: Lender
+  col2_zh: 出借人推广
+  col2_zh_hk: 放款人推廣
+  col3_en: Borrower
+  col3_zh: 借款人推广
+  col3_zh_hk: 借款人推廣
+  c11: '70'
+  c12: '70'
+  c13: '70'
+  c21: '45'
+  c22: '63'
+  c23: '45'
+  c31: '20'
+  c32: '20'
+  c33: '36'
+  c41: '45'
+  c42: '57'
+  c43: '45'
+  c51: S$0
+  c52: S$1,250
+  c53: S$540
+  footer_en: S$180 per loan · screening S$30 each
+  footer_zh: 每笔贷款 S$180 · 审查每人 S$30
+  footer_zh_hk: 每筆貸款 S$180 · 審查每人 S$30
+  s1_en: >-
+    The platform earns 180 Singapore dollars per funded loan. Priya can run one campaign this month, or
+    neither.
+  s1_zh: 平台每放出一笔贷款，赚一百八十新加坡元。这个月Priya可以做一项推广，也可以都不做。
+  s1_zh_hk: 平台每批出一筆貸款，賺一百八十新加坡元。呢個月Priya可以做一項推廣，或者乜都唔做。
+  s2_en: >-
+    There are two separate pools, short-term and longer-term. Lenders' mandates fix which pool they fund,
+    so spare slots cannot move between pools.
+  s2_zh: 平台有两个分开的放款池：短期和较长期。出借人的委托决定了他们只能给哪个池放款，所以空着的名额不能在池之间挪用。
+  s2_zh_hk: 平台有兩個分開嘅放款池：短期同較長期。放款人嘅委託決定咗佢哋只可以放款俾邊個池，所以空出嚟嘅名額唔可以喺池之間調動。
+  s3_en: >-
+    The lender campaign costs 1,250 and adds slots in both pools. The borrower campaign costs 540 and
+    recruits 30 longer-term applicants, 16 of whom qualify, with screening at 30 dollars each.
+  s3_zh: 出借人推广花一千二百五十，两个池都会增加名额。借款人推广花五百四十，招来三十名较长期申请人，其中十六名合格，每审查一人要三十元。
+  s3_zh_hk: 放款人推廣使一千二百五十，兩個池都會多咗名額。借款人推廣使五百四十，招到三十個較長期申請人，其中十六個合格，每審查一個要三十蚊。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which campaign earns more?
+  title_zh: 哪项推广赚得更多？
+  title_zh_hk: 哪項推廣賺得更多？
+  en: >-
+    Which campaign should Priya choose? Compare funded loans in each pool, and the extra contribution
+    after all new costs, against doing nothing. Pause and vote.
+  zh: Priya应该选哪项推广？请按每个池比较放出的贷款，以及扣除所有新增成本之后，相比什么都不做多出的贡献。请暂停，投个票。
+  zh_hk: Priya應該揀邊項推廣？請按每個池比較批出嘅貸款，同埋扣除所有新增成本之後，比起乜都唔做多出嘅貢獻。暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Not every new slot is ready
+  title_zh: 不是每个新名额都能用
+  title_zh_hk: 不是每個新名額都能用
+  step1_en: Only 12 of 18 short-term slots ready
+  step1_zh: 18 个短期名额只有 12 个可用
+  step1_zh_hk: 18 個短期名額只有 12 個可用
+  step2_en: Longer-term slots still available
+  step2_zh: 较长期名额仍然可用
+  step2_zh_hk: 較長期名額仍然可用
+  step3_en: Interest is not a slot
+  step3_zh: 表示有兴趣不等于名额
+  step3_zh_hk: 表示有興趣不等於名額
+  s1_en: >-
+    A pilot suggests that only 12 of the 18 extra short-term slots would be ready to fund this month.
+  s1_zh: 试点显示，新增的十八个短期名额里，这个月只有十二个真的能放款。
+  s1_zh_hk: 試點顯示，新增嘅十八個短期名額入面，呢個月得十二個真係可以放款。
+  s2_en: >-
+    The 12 extra longer-term slots would still be available. The campaign costs and the borrower forecast
+    are unchanged.
+  s2_zh: 新增的十二个较长期名额仍然可用。推广成本和借款人预测都不变。
+  s2_zh_hk: 新增嘅十二個較長期名額仍然用得。推廣成本同借款人預測都唔變。
+  s3_en: >-
+    A slot counts only if the lender is ready to fund within the month. An expression of interest is not
+    a slot.
+  s3_zh: 只有出借人在这个月内准备好放款，名额才算数。表示有兴趣，不等于名额。
+  s3_zh_hk: 一定要放款人喺呢個月內準備好放款，名額先計數。表示有興趣，唔等於名額。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Switch, or stay?
+  title_zh: 要改选，还是不变？
+  title_zh_hk: 要改選，還是不變？
+  en: >-
+    Which campaign now earns more? And what is the smallest number of ready short-term slots that would
+    make the lender campaign better? Pause and vote.
+  zh: 现在哪项推广赚得更多？短期名额最少要有多少个准备好，出借人推广才会更好？请暂停，投个票。
+  zh_hk: 而家邊項推廣賺得多啲？短期名額最少要有幾多個準備好，放款人推廣先會更好？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Find each pool's constraint
+  title_zh: 找出每个池的约束
+  title_zh_hk: 找出每個池的限制
+  step1_en: >-
+    Now: 45 + 20 = 65 loans
+  step1_zh: 现在：45 + 20 = 65 笔
+  step1_zh_hk: 現在：45 + 20 = 65 筆
+  step2_en: >-
+    Lender: +18 → 3,240 − 1,250 = 1,990
+  step2_zh: 出借人：+18 → 3,240 − 1,250 = 1,990
+  step2_zh_hk: 放款人：+18 → 3,240 − 1,250 = 1,990
+  step3_en: >-
+    Borrower: +16 → 1,440 after costs
+  step3_zh: 借款人：+16 → 2,880 − 900 − 540 = 1,440
+  step3_zh_hk: 借款人：+16 → 2,880 − 900 − 540 = 1,440
+  s1_en: >-
+    Without a campaign, 45 short-term and 20 longer-term loans are funded, 65 in all. Short-term is short
+    of lenders; longer-term is short of qualified firms.
+  s1_zh: 不做推广，短期放出四十五笔，较长期放出二十笔，共六十五笔。短期缺的是出借人，较长期缺的是合格企业。
+  s1_zh_hk: 唔做推廣，短期批出四十五筆，較長期批出二十筆，總共六十五筆。短期缺嘅係放款人，較長期缺嘅係合格企業。
+  s2_en: >-
+    The lender campaign funds 18 more short-term loans. That is 18 times 180, minus 1,250, or 1,990 more
+    contribution.
+  s2_zh: 出借人推广让短期多放十八笔。十八乘一百八十，减一千二百五十，多出一千九百九十的贡献。
+  s2_zh_hk: 放款人推廣令短期多批十八筆。十八乘一百八十，減一千二百五十，多咗一千九百九十嘅貢獻。
+  s3_en: >-
+    The borrower campaign funds 16 more longer-term loans. After 900 of screening and 540 of campaign
+    cost, it adds 1,440. On this forecast, recruit lenders.
+  s3_zh: 借款人推广让较长期多放十六笔。扣掉九百的审查费和五百四十的推广费，多出一千四百四十。按这个预测，应该招募出借人。
+  s3_zh_hk: 借款人推廣令較長期多批十六筆。扣咗九百審查費同五百四十推廣費，多咗一千四百四十。按呢個預測，應該招放款人。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Count slots ready this month
+  title_zh: 只算本月能用的名额
+  title_zh_hk: 只算本月能用的名額
+  step1_en: >-
+    Lender: +12 → 2,160 − 1,250 = 910
+  step1_zh: 出借人：+12 → 2,160 − 1,250 = 910
+  step1_zh_hk: 放款人：+12 → 2,160 − 1,250 = 910
+  step2_en: >-
+    Borrower still 1,440: switch
+  step2_zh: 借款人仍是 1,440：改选
+  step2_zh_hk: 借款人仍是 1,440：改選
+  step3_en: >-
+    Lender wins from 15 slots: 1,450
+  step3_zh: 15 个名额起出借人胜：1,450
+  step3_zh_hk: 15 個名額起放款人勝：1,450
+  s1_en: >-
+    With 12 ready slots, the lender campaign funds 12 more loans: 2,160 minus 1,250, or 910. The extra
+    longer-term slots fund nothing, because that pool lacks firms.
+  s1_zh: 只有十二个名额能用时，出借人推广多放十二笔：二千一百六十减一千二百五十，等于九百一十。新增的较长期名额放不出贷款，因为那个池缺的是企业。
+  s1_zh_hk: 得十二個名額用得，放款人推廣多批十二筆：二千一百六十減一千二百五十，等於九百一十。新增嘅較長期名額批唔到貸款，因為嗰個池缺嘅係企業。
+  s2_en: The borrower campaign still adds 1,440, so Priya should switch.
+  s2_zh: 借款人推广仍然多出一千四百四十，所以Priya应该改选借款人推广。
+  s2_zh_hk: 借款人推廣仍然多咗一千四百四十，所以Priya應該改揀借款人推廣。
+  s3_en: >-
+    With 14 ready slots the lender campaign adds 1,270; with 15 it adds 1,450, just 10 more. Fifteen is
+    the threshold, and such a small lead is a reason to verify commitments first.
+  s3_zh: >-
+    有十四个名额时，出借人推广多出一千二百七十；有十五个时多出一千四百五十，只比借款人推广多十元。十五个就是临界点，领先这么少，花钱前更应该先核实承诺。
+  s3_zh_hk: >-
+    有十四個名額，放款人推廣多咗一千二百七十；有十五個就多咗一千四百五十，只比借款人推廣多十蚊。十五個就係臨界點，領先咁少，使錢之前更應該先核實承諾。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Fix the binding constraint
+  title_zh: 解决真正卡住的约束
+  title_zh_hk: 解決真正卡住的限制
+  en: >-
+    Spend where the constraint binds. Slots in a pool that lacks borrowers fund nothing, and a slot counts
+    only when the lender is ready this month.
+  zh: 钱要花在真正卡住的地方。缺借款人的池，多了名额也放不出贷款；而名额只有在出借人这个月准备好时才算数。
+  zh_hk: 錢要使喺真正卡住嘅地方。缺借款人嘅池，多咗名額都批唔出貸款；而名額要放款人呢個月準備好先計數。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Subsidise the side that binds
+  title_zh: 补贴卡住的那一边
+  title_zh_hk: 補貼卡住的那一邊
+  q1_en: Compare extra contribution after costs
+  q1_zh: 比较扣除成本后多出的贡献
+  q1_zh_hk: 比較扣除成本後多出的貢獻
+  q2_en: Count only ready capacity
+  q2_zh: 只算真正能用的容量
+  q2_zh_hk: 只算真正能用的容量
+  s1_en: >-
+    In a two-sided marketplace, adding supply where demand is missing earns nothing. Find the bottleneck
+    in each segment before choosing whom to subsidise.
+  s1_zh: 在双边市场里，在没有需求的地方增加供给，赚不到钱。先找出每个细分市场的瓶颈，再决定补贴谁。
+  s1_zh_hk: 喺雙邊市場入面，喺冇需求嘅地方增加供應，賺唔到錢。先搵出每個細分市場嘅樽頸，再決定補貼邊個。
+  s2_en: >-
+    This is a fictional platform, not a description of any provider's practices or terms.
+  s2_zh: 这是虚构的平台，不代表任何服务商的做法或条款。
+  s2_zh_hk: 呢個係虛構嘅平台，唔代表任何服務商嘅做法或者條款。
+  s3_en: >-
+    The platform, campaigns and figures are fictional. Official scene art is a teaching illustration only.
+  s3_zh: 平台、推广和数字都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 平台、推廣同數字都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

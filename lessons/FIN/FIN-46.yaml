@@ -1,0 +1,265 @@
+id: FIN-46
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Which share would you sell?
+title_zh: 你会卖掉哪一只股票？
+title_zh_hk: 你會賣掉哪一隻股票？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: FIN-46
+  kicker_en: FIN-46
+  kicker_zh: FIN-46
+  kicker_zh_hk: FIN-46
+  title_en: Which share would you sell?
+  title_zh: 你会卖掉哪一只股票？
+  title_zh_hk: 你會賣掉哪一隻股票？
+  image: art/which-share-would-you-sell-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In November 2023 Hong Kong cut stamp duty on stock trades from 0.13 to 0.1 percent per side. That
+    changed a transaction cost, not the price any investor had originally paid. Now Yan, in a fictional
+    Kwun Tong flat, must sell one lot of shares to pay a repair bill.
+  zh: >-
+    二零二三年十一月，香港把股票买卖的印花税从每边百分之零点一三降到百分之零点一。这改变的是交易成本，而不是投资者当初买入的价格。现在，虚构人物Yan住在观塘，她要卖出一手股票，去付一笔维修账单。
+  zh_hk: >-
+    二零二三年十一月，香港將股票買賣嘅印花稅由每邊百分之零點一三減到百分之零點一。改變嘅係交易成本，唔係投資者當初買入嘅價錢。而家，虛構人物Yan住喺觀塘，佢要賣一手股票，去俾一張維修單。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 4
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: One lot each of A and B
+  title_zh: A 和 B 各一手
+  title_zh_hk: A 和 B 各一手
+  row1_en: Paid · Statement 1
+  row1_zh: 买入价 · 对账单 1
+  row1_zh_hk: 買入價 · 結單 1
+  row2_en: Paid · Statement 2
+  row2_zh: 买入价 · 对账单 2
+  row2_zh_hk: 買入價 · 結單 2
+  row3_en: Month-end, weak
+  row3_zh: 月底 · 弱
+  row3_zh_hk: 月底 · 弱
+  row4_en: Month-end, strong
+  row4_zh: 月底 · 强
+  row4_zh_hk: 月底 · 強
+  col1_en: A
+  col1_zh: A
+  col1_zh_hk: A
+  col2_en: B
+  col2_zh: B
+  col2_zh_hk: B
+  c11: HK$8,000
+  c12: HK$12,000
+  c21: HK$12,000
+  c22: HK$8,000
+  c31: HK$9,200
+  c32: HK$9,200
+  c41: HK$11,040
+  c42: HK$10,800
+  footer_en: Quote HK$10,000 · cost HK$40 each
+  footer_zh: 卖价各 HK$10,000 · 成本各 HK$40
+  footer_zh_hk: 賣價各 HK$10,000 · 成本各 HK$40
+  s1_en: >-
+    Yan needs 9,900 dollars in cleared cash for a building repair bill. She must sell one whole lot, A
+    or B, and keep the other until month end.
+  s1_zh: Yan要付大厦维修费，需要九千九百港元的到账现金。她只能卖出一整手，A或者B，另一手要留到月底。
+  s1_zh_hk: Yan要俾大廈維修費，需要九千九百蚊嘅到賬現金。佢只可以賣一整手，A或者B，另一手要留到月尾。
+  s2_en: >-
+    Both lots can be sold now for 10,000, with the same 40 dollar all-in cost. The two statements show
+    alternative purchase histories.
+  s2_zh: 两手现在都能卖一万港元，全部成本同样是四十港元。两张对账单，是两种不同的买入经历。
+  s2_zh_hk: 兩手而家都可以賣一萬蚊，全部成本一樣係四十蚊。兩張結單，係兩種唔同嘅買入經歷。
+  s3_en: >-
+    At month end, each state is equally likely. Compare cash left over plus the value of the lot she keeps.
+    Ignore tax, interest and dividends.
+  s3_zh: 月底时，两种状态的可能性相同。请比较剩下的现金，加上留着那一手的价值。不考虑税、利息和股息。
+  s3_zh_hk: 月尾嘅時候，兩種狀態嘅機會一樣。請比較剩低嘅現金，加埋留住嗰手嘅價值。唔計稅、利息同股息。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Sell A or B?
+  title_zh: 卖 A 还是卖 B？
+  title_zh_hk: 賣 A 還是賣 B？
+  en: >-
+    In Statement 1, which lot should Yan sell? Note your answer, then compare it with Statement 2. Would
+    anything make you change the sale? Pause and vote.
+  zh: 按对账单1，Yan应该卖哪一手？先记下答案，再和对账单2比较。有什么会让你改变决定吗？请暂停，投个票。
+  zh_hk: 按結單1，Yan應該賣邊一手？先記低答案，再同結單2比較。有冇嘢會令你改變決定？暫停，投個票。
+- id: reveal
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: B's sale cost rises
+  title_zh: B 的卖出成本上升
+  title_zh_hk: B 的賣出成本上升
+  step1_en: >-
+    B's all-in cost: 40 → 120
+  step1_zh: B 的全部成本：40 → 120
+  step1_zh_hk: B 的全部成本：40 → 120
+  step2_en: Quotes and forecasts unchanged
+  step2_zh: 卖价和预测不变
+  step2_zh_hk: 賣價和預測不變
+  step3_en: Still one lot, no borrowing
+  step3_zh: 仍只能卖一手，不能借钱
+  step3_zh_hk: 仍只能賣一手，不能借錢
+  s1_en: >-
+    Before Yan sends an order, the broker raises only B's all-in sale cost, from 40 to 120 dollars.
+  s1_zh: Yan下单之前，经纪只把B的全部卖出成本，从四十港元提高到一百二十港元。
+  s1_zh_hk: Yan落盤之前，經紀淨係將B嘅全部賣出成本，由四十蚊加到一百二十蚊。
+  s2_en: >-
+    Sale quotes, settlement timing and both month-end forecasts stay the same.
+  s2_zh: 卖价、交收时间和两种月底预测都不变。
+  s2_zh_hk: 賣價、交收時間同兩種月尾預測都唔變。
+  s3_en: Yan still cannot borrow or sell a second lot. A's cost stays at 40.
+  s3_zh: Yan仍然不能借钱，也不能卖第二手。A的成本仍是四十。
+  s3_zh_hk: Yan仍然唔可以借錢，亦唔可以賣第二手。A嘅成本仍然係四十。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Pause
+  kicker_en: Pause
+  kicker_zh: 暂停
+  kicker_zh_hk: 暫停
+  title_en: Which sale pays on time?
+  title_zh: 哪一笔能准时付账？
+  title_zh_hk: 哪一筆能準時付賬？
+  en: >-
+    With the new cost, which sale pays the bill on time? How large can B's extra cost be before that sale
+    no longer covers it? Pause and vote.
+  zh: 成本改了之后，哪一笔卖出能准时付账？B的额外成本最多能到多少，卖出B仍然够付？请暂停，投个票。
+  zh_hk: 成本改咗之後，賣邊手可以準時俾錢？B嘅額外成本最多去到幾多，賣B仍然夠俾？暫停，投個票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲解
+  kicker_zh_hk: 講解
+  title_en: Count cash, not the gain
+  title_zh: 看现金，不看盈亏
+  title_zh_hk: 看現金，不看盈虧
+  step1_en: >-
+    Either sale: 9,960 cash, 60 left
+  step1_zh: 卖哪手都是 9,960，剩 60
+  step1_zh_hk: 賣哪手都是 9,960，剩 60
+  step2_en: >-
+    Keep A: expected 10,120 vs 10,000
+  step2_zh: 留 A：期望值 10,120 对 10,000
+  step2_zh_hk: 留 A：期望值 10,120 對 10,000
+  step3_en: Sell B in both statements
+  step3_zh: 两张对账单都应卖 B
+  step3_zh_hk: 兩張結單都應賣 B
+  s1_en: >-
+    Either sale leaves 9,960 dollars of cleared cash, and 60 after the bill. The purchase price changes
+    only the recorded gain or loss, not the cash.
+  s1_zh: 卖哪一手，到账现金都是九千九百六十，付账后剩六十。买入价只改变账面上的盈亏，不改变现金。
+  s1_zh_hk: 賣邊一手，到賬現金都係九千九百六十，俾完賬剩六十。買入價淨係改變賬面嘅盈虧，唔改變現金。
+  s2_en: >-
+    A's expected month-end value is 10,120; B's is 10,000. Keeping A matches B in the weak state and gives
+    240 more in the strong state.
+  s2_zh: A的月底期望值是一万零一百二十，B是一万。留着A，弱的状态和B一样，强的状态多二百四十。
+  s2_zh_hk: A嘅月尾期望值係一萬零一百二十，B係一萬。留住A，弱嘅狀態同B一樣，強嘅狀態多二百四十。
+  s3_en: >-
+    So sell B in both statements, adding 120 in expected wealth. Always selling the winner would pick
+    A in one statement and B in the other: that is the disposition effect.
+  s3_zh: 所以两张对账单都应该卖B，期望财富多一百二十。如果总是卖赚钱的那只，就会在一张对账单里卖A，另一张里卖B，这就是处置效应。
+  s3_zh_hk: 所以兩張結單都應該賣B，期望財富多一百二十。如果成日賣賺錢嗰隻，就會喺一張結單賣A，另一張賣B，呢個就係處置效應。
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Meaning
+  kicker_en: Meaning
+  kicker_zh: 含义
+  kicker_zh_hk: 含意
+  title_en: Apply the cash deadline first
+  title_zh: 先满足现金期限
+  title_zh_hk: 先滿足現金期限
+  step1_en: >-
+    B at 120: 9,880, short by 20
+  step1_zh: B 成本 120：9,880，差 20
+  step1_zh_hk: B 成本 120：9,880，差 20
+  step2_en: >-
+    Sell A: the only feasible sale
+  step2_zh: 卖 A：唯一可行
+  step2_zh_hk: 賣 A：唯一可行
+  step3_en: B works if extra cost ≤ 60
+  step3_zh: 额外成本不超过 60，B 才可行
+  step3_zh_hk: 額外成本不超過 60，B 才可行
+  s1_en: >-
+    At a 120 dollar cost, selling B clears only 9,880, twenty short of the bill. Selling A still clears
+    9,960.
+  s1_zh: 成本变成一百二十后，卖B只到账九千八百八十，付账还差二十。卖A仍然到账九千九百六十。
+  s1_zh_hk: 成本變咗一百二十，賣B淨係到賬九千八百八十，俾賬仲差二十。賣A仍然到賬九千九百六十。
+  s2_en: >-
+    So selling A is now the only feasible sale, even though keeping B gives up expected value.
+  s2_zh: 所以现在卖A是唯一可行的做法，尽管留着B会损失一些期望值。
+  s2_zh_hk: 所以而家賣A係唯一可行嘅做法，雖然留住B會損失啲期望值。
+  s3_en: >-
+    With an extra cost s, B clears 9,960 minus s, which pays the bill only if s is no more than 60. The
+    deadline binds before the 120 advantage disappears.
+  s3_zh: 如果额外成本是s，卖B到账九千九百六十减s，只有s不超过六十才够付账。在一百二十的期望优势消失之前，现金期限已经先卡住了。
+  s3_zh_hk: 如果額外成本係s，賣B到賬九千九百六十減s，s唔超過六十先夠俾賬。喺一百二十嘅期望優勢冇咗之前，現金期限已經卡住咗。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Purchase price is history
+  title_zh: 买入价已是过去
+  title_zh_hk: 買入價已是過去
+  en: >-
+    One choice alone does not prove a bias. But when past purchase prices do not change tax, future values
+    or constraints, they should not decide which share to sell.
+  zh: 单凭一次选择，证明不了有偏差。但当过去的买入价不影响税、未来价值和约束条件时，它就不应该决定卖哪一只。
+  zh_hk: 單憑一次選擇，證明唔到有偏差。但係過去嘅買入價唔影響稅、將來價值同限制嘅時候，就唔應該由佢決定賣邊隻。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Pay first, keep the better lot
+  title_zh: 留下更好的前景，先付清账单
+  title_zh_hk: 留下更好的前景，先付清賬單
+  q1_en: Ignore sunk purchase prices
+  q1_zh: 不理已沉没的买入价
+  q1_zh_hk: 不理已沉沒的買入價
+  q2_en: Check cash feasibility first
+  q2_zh: 先核对现金是否够
+  q2_zh_hk: 先核對現金是否夠
+  s1_en: >-
+    Compare what each sale leaves you with: cash after the bill plus the value of what you keep. A recorded
+    gain or loss is not cash.
+  s1_zh: 比较每一种卖法最后留给你什么：付账后的现金，加上留下那只股票的价值。账面盈亏不是现金。
+  s1_zh_hk: 比較每一種賣法最後留低咩：俾完賬嘅現金，加留低嗰隻股票嘅價值。賬面盈虧唔係現金。
+  s2_en: This is a classroom exercise, not investment or tax advice.
+  s2_zh: 这是课堂练习，不是投资或税务建议。
+  s2_zh_hk: 呢個係課堂練習，唔係投資或者稅務建議。
+  s3_en: >-
+    The investor, shares and values are fictional. Official scene art is a teaching illustration only.
+  s3_zh: 投资者、股票和价值都是虚构的。官方场景图只是教学插图。
+  s3_zh_hk: 投資者、股票同價值都係虛構嘅。官方場景圖只係教學插圖。
+duration_target_s: 196

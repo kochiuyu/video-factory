@@ -34,13 +34,13 @@ beats:
   title_zh: 这一枚是一元
   title_zh_hk: 呢一枚係一元
   s1_en: Read the number on the coin.
-  s1_zh: 读硬币上的数。
+  s1_zh: 先读硬币上的数字。
   s1_zh_hk: 讀硬幣上嘅數。
   s2_en: This coin says one dollar.
   s2_zh: 这枚写着一元。
   s2_zh_hk: 呢枚寫住一元。
   s3_en: Do not guess from the size.
-  s3_zh: 不要看大小来猜。
+  s3_zh: 不要看硬币大小来猜。
   s3_zh_hk: 唔好睇大細嚟估。
 
 - id: cents
@@ -54,10 +54,10 @@ beats:
   title_zh: 两角不是两元
   title_zh_hk: 兩毫唔係兩元
   s1_en: This coin is twenty cents.
-  s1_zh: 这枚是两角。
+  s1_zh: 左边这枚是两角。
   s1_zh_hk: 呢枚係兩毫。
   s2_en: This coin is two dollars.
-  s2_zh: 这枚是两元。
+  s2_zh: 右边这枚是两元。
   s2_zh_hk: 呢枚係兩元。
   s3_en: Twenty cents is not two dollars.
   s3_zh: 两角不是两元。
@@ -79,7 +79,7 @@ beats:
   s2_zh: 一元是100分。
   s2_zh_hk: 一元係100分。
   s3_en: Cents and dollars are different.
-  s3_zh: 分和元不一样。
+  s3_zh: 分和元是不一样的。
   s3_zh_hk: 分同元唔一樣。
 
 - id: takeaway

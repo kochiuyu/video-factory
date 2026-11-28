@@ -53,9 +53,9 @@ beats:
   title_en: Stand or lie down
   title_zh: 站着，或者侧放
   title_zh_hk: 企住，或者側放
-  s1_en: This can stands on a flat end. That end is down.
-  s1_zh: 这个罐子用平的一端站着。平的一端在下面。
-  s1_zh_hk: 呢個罐用平嘅一端企住。平嘅一端喺下面。
+  s1_en: This can stands on a flat end.
+  s1_zh: 这个罐子用平的一端站着。
+  s1_zh_hk: 呢個罐用平嘅一端企住。
   s2_en: The same shape can lie on its side. It is still a cylinder.
   s2_zh: 同一种也可以侧过来。还是圆柱体。
   s2_zh_hk: 同一種都可以側過嚟。仲係圓柱體。
@@ -75,9 +75,9 @@ beats:
   s1_en: Here are two boxes. Both boxes are prisms.
   s1_zh: 这里有两个盒子。两个都是柱体。
   s1_zh_hk: 呢度有兩個盒。兩個都係柱體。
-  s2_en: Put one flat face on the other. Watch it come down.
-  s2_zh: 把平的一面叠上去。看它落下来。
-  s2_zh_hk: 將平嘅一面疊上去。睇佢落嚟。
+  s2_en: Put one flat face on the other.
+  s2_zh: 把平的一面叠上去。
+  s2_zh_hk: 將平嘅一面疊上去。
   s3_en: Flat faces stack.
   s3_zh: 平的一面可以叠稳。
   s3_zh_hk: 平嘅一面可以疊穩。

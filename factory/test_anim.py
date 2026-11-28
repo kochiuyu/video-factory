@@ -1593,6 +1593,48 @@ LEAK = set(
 )
 
 
+def _segment_hits_box(ax, ay, bx, by, left, right, bottom, top) -> bool:
+    """True when the segment meets the closed rectangle."""
+    def inside(x, y):
+        return left <= x <= right and bottom <= y <= top
+
+    if inside(ax, ay) or inside(bx, by):
+        return True
+
+    def crosses(x3, y3, x4, y4):
+        den = (ax - bx) * (y3 - y4) - (ay - by) * (x3 - x4)
+        if abs(den) < 1e-9:
+            return False
+        t = ((ax - x3) * (y3 - y4) - (ay - y3) * (x3 - x4)) / den
+        u = ((ax - x3) * (ay - by) - (ay - y3) * (ax - bx)) / den
+        return 0 <= t <= 1 and 0 <= u <= 1
+
+    return any((
+        crosses(left, bottom, right, bottom),
+        crosses(right, bottom, right, top),
+        crosses(right, top, left, top),
+        crosses(left, top, left, bottom),
+    ))
+
+
+def _ticks_miss_the_numerals(picture, pad: float = 0.04) -> bool:
+    """Hour ticks and both hands stay off every digit."""
+    lines = list(picture.vf_ticks) + [picture.vf_minute, picture.vf_hour]
+    for label in picture.vf_numbers:
+        left = float(label.get_left()[0]) - pad
+        right = float(label.get_right()[0]) + pad
+        bottom = float(label.get_bottom()[1]) - pad
+        top = float(label.get_top()[1]) + pad
+        for line in lines:
+            if _segment_hits_box(
+                float(line.get_start()[0]), float(line.get_start()[1]),
+                float(line.get_end()[0]), float(line.get_end()[1]),
+                left, right, bottom, top,
+            ):
+                return False
+    return True
+
+
 def _beat_lines(lesson, suffix: str) -> str:
     parts = []
     for beat in lesson["beats"]:
@@ -1744,6 +1786,20 @@ class SceneRegistryTest(unittest.TestCase):
             centre = noon.vf_face.get_center()
             self.assertGreater(noon.vf_hour.get_end()[1], centre[1] + 0.2)
             self.assertGreater(noon.vf_hour.get_end()[0], centre[0] + 0.05)
+            for clock in (three, half, noon):
+                self.assertTrue(_ticks_miss_the_numerals(clock.vf_picture))
+            from manim import Text
+
+            from everyday_draw import _clock
+
+            latin, cjk = prepare_fonts()
+
+            def write(text, size=28, latin=latin, cjk=cjk):
+                font = cjk if any("\u4e00" <= ch <= "\u9fff" for ch in str(text)) else latin
+                return Text(str(text), font=font, font_size=size, color="#0B1F3A")
+
+            # Hook and takeaway clocks use the smaller face.
+            self.assertTrue(_ticks_miss_the_numerals(_clock(7, 30, write, radius=1.15)))
             coins = render(self._spoken(
                 scene="coin_row", part="show",
                 coins=[10, 20, 50, 100, 200, 500, 1000], focus=3,

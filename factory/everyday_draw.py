@@ -580,22 +580,35 @@ def _clock(hour: int, minute: int, write, radius: float = 1.7):
         fill_opacity=1,
     )
     _round_outline(face)
+    # Ticks stay on a ring at the rim. Numerals sit on a smaller ring, with a
+    # gap so a tick never runs through a digit. The minute hand still stops
+    # short of 12 and 6.
+    tick_outer = radius * 0.96
+    tick_inner = radius * 0.88
+    tick_gap = 0.08
+    hand_gap = radius * 0.52 + 0.06
     ticks = []
     numbers = []
     for number in range(1, 13):
         angle = math.pi / 2 - number * (2 * math.pi / 12)
-        outer = radius * 0.92
-        inner = radius * 0.82
-        ticks.append(Line(
-            [inner * math.cos(angle), inner * math.sin(angle), 0],
-            [outer * math.cos(angle), outer * math.sin(angle), 0],
+        ux, uy = math.cos(angle), math.sin(angle)
+        tick = Line(
+            [tick_inner * ux, tick_inner * uy, 0],
+            [tick_outer * ux, tick_outer * uy, 0],
             color=NAVY,
             stroke_width=3,
-        ))
-        # Numbers sit outside the hands, so a hand never covers 12 or 6.
-        spot = radius * 0.78
+        )
+        ticks.append(_round_outline(tick))
         label = write(str(number), 22)
-        label.move_to([spot * math.cos(angle), spot * math.sin(angle), 0])
+        reach = (float(label.width) * abs(ux) + float(label.height) * abs(uy)) / 2.0
+        outer_room = tick_inner - tick_gap
+        if reach > 0 and outer_room - reach < hand_gap + reach:
+            fit = (outer_room - hand_gap) / 2.0
+            if fit > 0:
+                label.scale(fit / reach)
+                reach = fit
+        spot = outer_room - reach
+        label.move_to([spot * ux, spot * uy, 0])
         numbers.append(label)
     minute_deg = minute / 60.0 * 360.0
     hour_deg = (hour % 12) * 30.0 + minute * 0.5
@@ -606,6 +619,8 @@ def _clock(hour: int, minute: int, write, radius: float = 1.7):
     group.vf_face = face
     group.vf_hour = hour_hand
     group.vf_minute = minute_hand
+    group.vf_ticks = ticks
+    group.vf_numbers = numbers
     return group
 
 

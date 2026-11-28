@@ -491,6 +491,7 @@ def _make_scene(spec: dict, durs: list[float], marks: list | None = None):
     scene.vf_marks = [list(row) for row in (marks or [])]
     scene.vf_labels = spec.get("labels") or {}
     scene.vf_fonts = (latin_family(), cjk_family(str(spec.get("lang") or "en")))
+    scene.vf_lang = label_lang(str(spec.get("lang") or "en"))
     raw_count = spec.get("count", None)
     scene.vf_count = int(raw_count) if raw_count is not None else 13
     scene.vf_a = int(spec.get("a") or 9)
@@ -2527,6 +2528,29 @@ def _scene_types() -> dict:
                 return VGroup(frame, dots)
             if motif == "track":
                 return _mini_track(range(8, 13), 12, latin)
+            if motif in {"measure", "money", "time"}:
+                from everyday_draw import everyday_icon
+
+                kind = str((labels or {}).get("kind") or "")
+                lang = str((labels or {}).get("lang") or "en")
+                icons = {
+                    ("measure", "length"): ("measure", "length", 4, 8),
+                    ("measure", "distance"): ("measure", "distance", 8, 5),
+                    ("measure", "units"): ("measure", "units", 6),
+                    ("measure", "ruler"): ("measure", "ruler", 4),
+                    ("money", "coin"): ("coin", 100),
+                    ("money", "price"): ("coin", "price", 420),
+                    ("money", "swap"): ("coin", "swap", (100,), (50, 50)),
+                    ("time", "clock"): ("time", "clock", 3, 0),
+                    ("time", "hops"): ("time", "hops", 2, 1, 0),
+                    ("time", "week"): ("time", "week"),
+                }
+                picture = icons.get((motif, kind), icons[(motif, "length" if motif == "measure" else "coin" if motif == "money" else "clock")])
+
+                def write(text, size=28, latin=latin, cjk=cjk):
+                    return styled(str(text), latin, cjk, size)
+
+                return everyday_icon(picture, write, lang)
             if motif == "shapes":
                 from shape_draw import flat_picture, solid_picture, straight_line
                 info = labels or {}
@@ -2774,6 +2798,15 @@ def _scene_types() -> dict:
                 return self._cue_dots(int(picture[1]))
             if kind in {"line", "flat", "solid", "join", "place"}:
                 return _shape_takeaway_cue(picture)
+            if kind in {"measure", "coin", "time"}:
+                from everyday_draw import everyday_icon
+
+                lang = getattr(self, "vf_lang", "en")
+
+                def write(text, size=28, latin=latin, cjk=cjk):
+                    return styled(str(text), latin, cjk, size)
+
+                return everyday_icon(picture, write, lang)
             raise ValueError(f"takeaway cue fell back to the default: {picture!r}")
 
         def _compare_card(self, number: int, latin: str, cjk: str, mark: str, larger):
@@ -4493,6 +4526,27 @@ def _scene_types() -> dict:
         board.vf_title = title
         return title, body
 
+    def _reveal_everyday(board, title, picture):
+        """First line holds. Second line fades in the new part, or moves it."""
+        for mob in picture.vf_later:
+            mob.set_opacity(0)
+        _place_shape(board, title, picture)
+        board.vf_title = title
+        board.vf_picture = picture
+        board.spend(0)
+        anims = [mob.animate.set_opacity(1) for mob in picture.vf_later]
+        for mob in picture.vf_strokes:
+            anims.append(mob.animate.set_stroke(color=GREEN, width=8))
+        if picture.vf_align is not None:
+            moving, target = picture.vf_align
+            delta = target.get_left()[0] - moving.vf_bar.get_left()[0]
+            anims.append(moving.animate.shift(RIGHT * delta))
+        if anims:
+            board.spend(1, *anims)
+        else:
+            board.spend(1)
+        board.spend(2)
+
     def _shape_takeaway_cue(picture):
         from shape_draw import curved_line, flat_picture, join_picture, solid_picture, straight_line
 
@@ -4830,6 +4884,57 @@ def _scene_types() -> dict:
             self.spend(1, ring.animate.set_stroke(opacity=1))
             self.spend(2)
 
+    class MeasureLine(_Board):
+        """Strips, gaps, tiles, or a centimetre scale. Three spoken lines."""
+
+        def construct(self):
+            from everyday_draw import measure_board
+
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            title = _shape_title(labels.get("title") or "", latin, cjk)
+
+            def write(text, size=32, latin=latin, cjk=cjk):
+                return styled(str(text), latin, cjk, size)
+
+            _reveal_everyday(self, title, measure_board(labels, write))
+
+    class CoinRow(_Board):
+        """Coin tokens, a price, or an exchange. Three spoken lines."""
+
+        def construct(self):
+            from everyday_draw import coin_board
+
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            title = _shape_title(labels.get("title") or "", latin, cjk)
+
+            def write(text, size=32, latin=latin, cjk=cjk):
+                return styled(str(text), latin, cjk, size)
+
+            _reveal_everyday(self, title, coin_board(labels, write))
+
+    class DayTime(_Board):
+        """A clock, hour hops, a week, the months, or a calendar. Three spoken lines."""
+
+        def construct(self):
+            from everyday_draw import day_board
+
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            title = _shape_title(labels.get("title") or "", latin, cjk)
+
+            def write(text, size=32, latin=latin, cjk=cjk):
+                return styled(str(text), latin, cjk, size)
+
+            picture = day_board(labels, write)
+            _reveal_everyday(self, title, picture)
+            self.vf_hour = getattr(picture, "vf_hour", None)
+            self.vf_minute = getattr(picture, "vf_minute", None)
+            self.vf_face = getattr(picture, "vf_face", None)
+            self.vf_day = getattr(picture, "vf_day", None)
+            self.vf_column = getattr(picture, "vf_column", None)
+
     _scene_types._cache = {
         "one_ten": OneTen,
         "ten_and_ones": TenAndOnes,
@@ -4848,6 +4953,9 @@ def _scene_types() -> dict:
         "shape_join": ShapeJoin,
         "solid_shape": SolidShape,
         "object_place": ObjectPlace,
+        "measure_line": MeasureLine,
+        "coin_row": CoinRow,
+        "day_time": DayTime,
         "lesson_hook": LessonHook,
         "lesson_takeaway": LessonTakeaway,
     }

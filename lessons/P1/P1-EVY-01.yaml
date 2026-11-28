@@ -1,0 +1,124 @@
+# P1-EVY-01. Mirrors MathQuiz path measure / lesson alignlength, "Compare lengths".
+# Line up one end. The end that reaches farther is longer. Width is not length.
+# https://github.com/kochiuyu/mathquiz learn-measure.js (alignlength).
+# Speech is for age 6: one short idea per sentence.
+id: P1-EVY-01
+title_en: Compare lengths
+title_zh: 比较长短
+title_zh_hk: 比較長短
+duration_target_s: 55
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: measure
+  kind: length
+  seconds: 8
+  title_en: Compare lengths
+  title_zh: 比较长短
+  title_zh_hk: 比較長短
+  s1_en: Which strip is longer?
+  s1_zh: 哪条更长？
+  s1_zh_hk: 邊條長啲呀？
+
+- id: ends
+  visual: animated
+  scene: measure_line
+  mode: length
+  action: align
+  a: 4
+  b: 8
+  seconds: 11
+  title_en: Line up the ends
+  title_zh: 对齐左端
+  title_zh_hk: 對齊左邊
+  s1_en: Line up the left ends.
+  s1_zh: 把左端对齐。
+  s1_zh_hk: 將左邊對齊。
+  s2_en: Strip 2 reaches farther.
+  s2_zh: 第二条伸得更远。
+  s2_zh_hk: 第二條伸遠啲。
+  s3_en: Strip 2 is longer.
+  s3_zh: 第二条更长。
+  s3_zh_hk: 第二條長啲。
+
+- id: width
+  visual: animated
+  scene: measure_line
+  mode: length
+  action: width
+  a: 8
+  b: 4
+  seconds: 11
+  title_en: Wider is not longer
+  title_zh: 宽不是长
+  title_zh_hk: 闊唔係長
+  s1_en: Strip 2 is wider.
+  s1_zh: 第二条更宽。
+  s1_zh_hk: 第二條闊啲。
+  s2_en: Wider is not longer.
+  s2_zh: 更宽不是更长。
+  s2_zh_hk: 闊啲唔係長啲。
+  s3_en: Look along the strip.
+  s3_zh: 沿着纸条看。
+  s3_zh_hk: 沿住紙條睇。
+
+- id: same
+  visual: animated
+  scene: measure_line
+  mode: length
+  action: match
+  a: 6
+  b: 6
+  seconds: 11
+  title_en: The same length
+  title_zh: 一样长
+  title_zh_hk: 一樣咁長
+  s1_en: These ends match.
+  s1_zh: 两端对齐了。
+  s1_zh_hk: 兩端對齊咗。
+  s2_en: The strips are the same length.
+  s2_zh: 两条一样长。
+  s2_zh_hk: 兩條一樣長。
+  s3_en: Moving a strip does not change its length.
+  s3_zh: 挪一挪，长度不变。
+  s3_zh_hk: 郁一郁，長度唔變。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: measure
+  seconds: 14
+  title_en: Compare lengths
+  title_zh: 比较长短
+  title_zh_hk: 比較長短
+  s1_en: Line up one end.
+  s1_zh: 先对齐一端。
+  s1_zh_hk: 先對齊一端。
+  s2_en: The farther end is longer.
+  s2_zh: 伸得远的更长。
+  s2_zh_hk: 伸得遠嘅長啲。
+  s3_en: Width is not length.
+  s3_zh: 宽窄不是长短。
+  s3_zh_hk: 闊窄唔係長短。
+  s4_en: Same ends, same length.
+  s4_zh: 两端一样，就一样长。
+  s4_zh_hk: 兩端一樣，就一樣長。
+  cues:
+  - kind: measure
+    mode: length
+    a: 4
+    b: 8
+  - kind: measure
+    mode: length
+    a: 4
+    b: 8
+  - kind: measure
+    mode: length
+    a: 8
+    b: 4
+  - kind: measure
+    mode: length
+    a: 6
+    b: 6

@@ -2325,6 +2325,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-SHP-07": [
                 "lesson_hook", "object_place", "object_place", "object_place", "object_place", "lesson_takeaway",
             ],
+            "P1-SHP-08": [
+                "lesson_hook", "object_place", "object_place", "object_place", "object_place", "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -3150,6 +3153,23 @@ class SceneRegistryTest(unittest.TestCase):
         )
         self.assertIsNone(count_event(places[0]))
         self.assertNotIn("嗎", _beat_lines(sides, "zh_hk"))
+        above = load_lesson(P1 / "P1-SHP-08.yaml")
+        heights = [beat for beat in above["beats"] if beat.get("scene") == "object_place"]
+        self.assertEqual([b["layout"] for b in heights], ["column", "column", "column", "column"])
+        self.assertEqual(heights[0]["items"], ["ball", "book"])
+        self.assertEqual(heights[2]["items"], ["book", "ball"])
+        self.assertEqual(heights[0]["s1_zh_hk"], "波喺書上面。")
+        self.assertEqual(heights[2]["s3_zh"], "球在书的下面。")
+        self.assertEqual(above["beats"][0]["s1_en"], "Where is the ball?")
+        self.assertEqual(
+            labels_for(above["beats"][-1], "en")["cues"][0],
+            ("place", "column", ("ball", "book")),
+        )
+        self.assertEqual(
+            labels_for(above["beats"][-1], "zh_hk")["lines"][3],
+            "而家書喺波上面。",
+        )
+        self.assertNotIn("嗎", _beat_lines(above, "zh_hk"))
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

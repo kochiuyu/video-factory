@@ -1,0 +1,138 @@
+# P1-SHP-08. Mirrors MathQuiz path positions / lesson overunder, "Over and under".
+# Name the object, then say whether it is over or under the other one.
+# The ball starts over the book. Then the two objects swap.
+# https://github.com/kochiuyu/mathquiz learn-positions.js (overunder).
+# Speech is for age 6: one short idea per sentence.
+id: P1-SHP-08
+title_en: Over and under
+title_zh: 上面和下面
+title_zh_hk: 上面同下面
+duration_target_s: 70
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: shapes
+  kind: sphere
+  seconds: 8
+  title_en: Over and under
+  title_zh: 上面和下面
+  title_zh_hk: 上面同下面
+  s1_en: Where is the ball?
+  s1_zh: 球在哪里？
+  s1_zh_hk: 波喺邊呀？
+
+- id: over
+  visual: animated
+  scene: object_place
+  layout: column
+  items: [ball, book]
+  focus: 0
+  seconds: 14
+  title_en: The ball is over the book
+  title_zh: 球在书的上面
+  title_zh_hk: 波喺書上面
+  s1_en: The ball is over the book.
+  s1_zh: 球在书的上面。
+  s1_zh_hk: 波喺書上面。
+  s2_en: The book is under the ball.
+  s2_zh: 书在球的下面。
+  s2_zh_hk: 書喺波下面。
+  s3_en: Both sentences match this picture.
+  s3_zh: 两句都符合这幅图。
+  s3_zh_hk: 兩句都符合呢幅圖。
+
+- id: under
+  visual: animated
+  scene: object_place
+  layout: column
+  items: [ball, book]
+  focus: 1
+  seconds: 12
+  title_en: Start with the book
+  title_zh: 先说书
+  title_zh_hk: 先講書
+  s1_en: Now start with the book.
+  s1_zh: 现在先说书。
+  s1_zh_hk: 而家先講書。
+  s2_en: The book is under the ball.
+  s2_zh: 书在球的下面。
+  s2_zh_hk: 書喺波下面。
+  s3_en: The ball is over the book.
+  s3_zh: 球在书的上面。
+  s3_zh_hk: 波喺書上面。
+
+- id: swap
+  visual: animated
+  scene: object_place
+  layout: column
+  items: [book, ball]
+  focus: 0
+  seconds: 14
+  title_en: Now the book is over
+  title_zh: 现在书在上面
+  title_zh_hk: 而家書喺上面
+  s1_en: The book and the ball swap.
+  s1_zh: 书和球换了位置。
+  s1_zh_hk: 書同波換咗位。
+  s2_en: Now the book is over the ball.
+  s2_zh: 现在书在球的上面。
+  s2_zh_hk: 而家書喺波上面。
+  s3_en: The ball is under the book.
+  s3_zh: 球在书的下面。
+  s3_zh_hk: 波喺書下面。
+
+- id: name
+  visual: animated
+  scene: object_place
+  layout: column
+  items: [book, ball]
+  focus: 0
+  seconds: 12
+  title_en: Name the object first
+  title_zh: 先说哪一件
+  title_zh_hk: 先講邊一件
+  s1_en: Say which object.
+  s1_zh: 先说是哪一件。
+  s1_zh_hk: 先講係邊一件。
+  s2_en: Then say over or under.
+  s2_zh: 再说上面，或者下面。
+  s2_zh_hk: 再講上面，或者下面。
+  s3_en: The book is over the ball.
+  s3_zh: 书在球的上面。
+  s3_zh_hk: 書喺波上面。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: shapes
+  seconds: 16
+  title_en: Over and under
+  title_zh: 上面和下面
+  title_zh_hk: 上面同下面
+  s1_en: The ball was over the book.
+  s1_zh: 球在书的上面。
+  s1_zh_hk: 波喺書上面。
+  s2_en: The book was under the ball.
+  s2_zh: 书在球的下面。
+  s2_zh_hk: 書喺波下面。
+  s3_en: They swapped places.
+  s3_zh: 两件换了位置。
+  s3_zh_hk: 兩件換咗位。
+  s4_en: Now the book is over the ball.
+  s4_zh: 现在书在球的上面。
+  s4_zh_hk: 而家書喺波上面。
+  cues:
+  - kind: place
+    layout: column
+    items: [ball, book]
+  - kind: place
+    layout: column
+    items: [ball, book]
+  - kind: place
+    layout: column
+    items: [book, ball]
+  - kind: place
+    layout: column
+    items: [book, ball]

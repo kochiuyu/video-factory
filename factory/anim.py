@@ -4509,7 +4509,49 @@ def _scene_types() -> dict:
             label.scale(floor / float(label.height))
         return label
 
-    def _place_shape(board, title, body):
+    def _thicken_strokes(body, factor):
+        """Manim scale grows points and leaves stroke widths in pixels."""
+        if factor <= 1.01:
+            return
+        for sub in body.get_family():
+            if sub.submobjects:
+                continue
+            try:
+                width = float(sub.get_stroke_width())
+            except Exception:
+                continue
+            if width > 0:
+                sub.set_stroke(width=width * factor)
+
+    def _grow_everyday(body, cap, room_h):
+        """Grow a teaching diagram until it fills the room between title and caption.
+
+        The larger side reaches about 58% of the usable span. If the other side
+        is still under half, keep growing until one side reaches 85% or the
+        smaller side reaches half, and never past 92% of the room.
+        """
+        width = float(body.width)
+        height = float(body.height)
+        if width <= 0 or height <= 0 or cap <= 0 or room_h <= 0:
+            return
+        frac_w = width / cap
+        frac_h = height / room_h
+        larger = max(frac_w, frac_h)
+        smaller = min(frac_w, frac_h)
+        if larger <= 0 or smaller <= 0:
+            return
+        reach = 0.58 / larger
+        lift = 0.50 / smaller
+        ceiling = 0.85 / larger
+        limit = min(0.92 * cap / width, 0.92 * room_h / height)
+        factor = max(1.0, min(max(reach, min(lift, ceiling)), limit))
+        if factor <= 1.01:
+            return
+        body.scale(factor)
+        _thicken_strokes(body, factor)
+        body.vf_grow = factor
+
+    def _place_shape(board, title, body, grow=False):
         left, right, bot, top = _safe_limits()
         cap = (right - left) * 0.92
         if float(title.width) > cap > 0:
@@ -4517,6 +4559,8 @@ def _scene_types() -> dict:
         title.move_to([(left + right) / 2.0, top - float(title.height) / 2.0 - 0.04, 0])
         room_top = float(title.get_bottom()[1]) - 0.28
         room_h = room_top - bot
+        if grow:
+            _grow_everyday(body, cap, room_h)
         if float(body.width) > cap > 0:
             body.scale(cap / float(body.width))
         if float(body.height) > room_h > 0:
@@ -4533,7 +4577,7 @@ def _scene_types() -> dict:
                 mob.set_stroke(opacity=0)
             else:
                 mob.set_opacity(0)
-        _place_shape(board, title, picture)
+        _place_shape(board, title, picture, grow=True)
         board.vf_title = title
         board.vf_picture = picture
         board.spend(0)
@@ -4543,8 +4587,9 @@ def _scene_types() -> dict:
                 anims.append(mob.animate.set_stroke(opacity=1))
             else:
                 anims.append(mob.animate.set_opacity(1))
+        edge = 8 * float(getattr(picture, "vf_grow", 1) or 1)
         for mob in picture.vf_strokes:
-            anims.append(mob.animate.set_stroke(color=GREEN, width=8))
+            anims.append(mob.animate.set_stroke(color=GREEN, width=edge))
         if picture.vf_align is not None:
             moving, target = picture.vf_align
             delta = target.get_left()[0] - moving.vf_bar.get_left()[0]

@@ -194,8 +194,11 @@ def _length_board(labels, write):
         board.vf_strokes.append(marked)
         board.vf_marked = marked
     elif action == "width":
-        board.vf_marked = cards[1].vf_bar
-        board.vf_strokes.append(cards[1].vf_bar)
+        # Green marks the longer strip. The thicker strip stays gold, so width
+        # is not the answer.
+        longer = cards[0].vf_bar if a >= b else cards[1].vf_bar
+        board.vf_marked = longer
+        board.vf_strokes.append(longer)
     return board
 
 

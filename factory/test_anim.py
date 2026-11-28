@@ -1708,6 +1708,20 @@ class SceneRegistryTest(unittest.TestCase):
             self.assertGreaterEqual(float(aligned.vf_title.height) * unit, 47)
             self.assertLess(abs(picture.vf_bars[0].get_left()[0] - picture.vf_bars[1].get_left()[0]), 0.05)
             self.assertGreater(float(picture.vf_bars[1].width), float(picture.vf_bars[0].width) + 0.4)
+            # The teaching picture fills the room between the title and the caption.
+            self.assertGreater(max(float(picture.width) / (8 * 16 / 9), float(picture.height) / 8), 0.40)
+            self.assertLess(float(picture.get_top()[1]), float(aligned.vf_title.get_bottom()[1]) - 0.2)
+            wider = render(self._spoken(
+                scene="measure_line", mode="length", action="width", a=8, b=4,
+                title_en="Wider is not longer",
+            ))
+            bars = wider.vf_picture.vf_bars
+            self.assertGreater(float(bars[0].width), float(bars[1].width))
+            self.assertIs(wider.vf_picture.vf_marked, bars[0])
+            self.assertNotEqual(
+                bars[1].get_stroke_color().to_hex().lower(),
+                wider.vf_picture.vf_marked.get_stroke_color().to_hex().lower(),
+            )
             three = render(self._spoken(
                 scene="day_time", mode="clock", hour=3, minute=0, hand="hour",
                 title_en="Three o'clock",

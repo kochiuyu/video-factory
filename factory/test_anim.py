@@ -2262,6 +2262,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-SHP-04": [
                 "lesson_hook", "solid_shape", "solid_shape", "solid_shape", "lesson_takeaway",
             ],
+            "P1-SHP-05": [
+                "lesson_hook", "solid_shape", "solid_shape", "solid_shape", "solid_shape", "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -3017,6 +3020,23 @@ class SceneRegistryTest(unittest.TestCase):
             ("solid", "pair", ("pyramid", "cone")),
         )
         self.assertNotIn("嗎", _beat_lines(solids, "zh_hk"))
+        around = load_lesson(P1 / "P1-SHP-05.yaml")
+        matched = [beat for beat in around["beats"] if beat.get("scene") == "solid_shape"]
+        self.assertEqual([b["part"] for b in matched], ["pair", "pair", "turn", "turn"])
+        self.assertEqual(matched[0]["items"], ["prism", "cylinder"])
+        self.assertEqual(matched[1]["items"], ["sphere", "cone"])
+        self.assertEqual(matched[3]["items"], ["pyramid"])
+        self.assertEqual(matched[0]["s1_zh"], "密封的盒子是柱体。")
+        self.assertEqual(matched[0]["s1_zh_hk"], "密封嘅盒係柱體。")
+        self.assertEqual(matched[2]["s3_zh_hk"], "仲係圓柱體。")
+        self.assertEqual(around["beats"][0]["s1_en"], "What shape is a closed box?")
+        self.assertIn("柱体", matched[0]["s1_zh"])
+        self.assertEqual(
+            labels_for(around["beats"][-1], "en")["lines"][0],
+            "A closed box is a prism.",
+        )
+        self.assertEqual(labels_for(around["beats"][-1], "zh_hk")["lines"][3], "轉一轉，仲係同一種。")
+        self.assertNotIn("嗎", _beat_lines(around, "zh_hk"))
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

@@ -36,12 +36,12 @@ beats:
   s1_en: A smooth ball can roll.
   s1_zh: 光滑的皮球可以滚动。
   s1_zh_hk: 光滑嘅波可以碌。
-  s2_en: A can on its side can roll too.
-  s2_zh: 侧放的罐子也可以滚动。
-  s2_zh_hk: 側放嘅罐都可以碌。
-  s3_en: Look at the whole shape.
-  s3_zh: 要看整个立体。
-  s3_zh_hk: 要睇成個立體。
+  s2_en: A can on its side can roll too. The round side touches the floor.
+  s2_zh: 侧放的罐子也可以滚动。圆的一面贴着地。
+  s2_zh_hk: 側放嘅罐都可以碌。圓嘅一面貼住地。
+  s3_en: Look at the whole shape. Do not look at one small part.
+  s3_zh: 要看整个立体。不要只看一小块。
+  s3_zh_hk: 要睇成個立體。唔好只睇一小塊。
 
 - id: place
   visual: animated
@@ -53,15 +53,15 @@ beats:
   title_en: Stand or lie down
   title_zh: 站着，或者侧放
   title_zh_hk: 企住，或者側放
-  s1_en: This can stands on a flat end.
-  s1_zh: 这个罐子用平的一端站着。
-  s1_zh_hk: 呢個罐用平嘅一端企住。
-  s2_en: The same shape can lie on its side.
-  s2_zh: 同一种也可以侧过来。
-  s2_zh_hk: 同一種都可以側過嚟。
-  s3_en: The flat end can sit still.
-  s3_zh: 平的一端可以放稳。
-  s3_zh_hk: 平嘅一端可以放穩。
+  s1_en: This can stands on a flat end. That end is down.
+  s1_zh: 这个罐子用平的一端站着。平的一端在下面。
+  s1_zh_hk: 呢個罐用平嘅一端企住。平嘅一端喺下面。
+  s2_en: The same shape can lie on its side. It is still a cylinder.
+  s2_zh: 同一种也可以侧过来。还是圆柱体。
+  s2_zh_hk: 同一種都可以側過嚟。仲係圓柱體。
+  s3_en: The flat end can sit still. It does not roll from there.
+  s3_zh: 平的一端可以放稳。这样它就不滚了。
+  s3_zh_hk: 平嘅一端可以放穩。咁樣佢就唔碌。
 
 - id: stack
   visual: animated
@@ -72,12 +72,12 @@ beats:
   title_en: Flat faces stack
   title_zh: 平的一面可以叠
   title_zh_hk: 平嘅一面可以疊
-  s1_en: Here are two boxes.
-  s1_zh: 这里有两个盒子。
-  s1_zh_hk: 呢度有兩個盒。
-  s2_en: Put one flat face on the other.
-  s2_zh: 把平的一面叠上去。
-  s2_zh_hk: 將平嘅一面疊上去。
+  s1_en: Here are two boxes. Both boxes are prisms.
+  s1_zh: 这里有两个盒子。两个都是柱体。
+  s1_zh_hk: 呢度有兩個盒。兩個都係柱體。
+  s2_en: Put one flat face on the other. Watch it come down.
+  s2_zh: 把平的一面叠上去。看它落下来。
+  s2_zh_hk: 將平嘅一面疊上去。睇佢落嚟。
   s3_en: Flat faces stack.
   s3_zh: 平的一面可以叠稳。
   s3_zh_hk: 平嘅一面可以疊穩。
@@ -91,15 +91,15 @@ beats:
   title_en: A ball is round all over
   title_zh: 皮球四面都圆
   title_zh_hk: 波四面都圓
-  s1_en: A box has a flat face.
-  s1_zh: 盒子有平的一面。
-  s1_zh_hk: 盒有平嘅一面。
-  s2_en: A ball is round all over.
-  s2_zh: 皮球四面都是圆的。
-  s2_zh_hk: 波四面都係圓嘅。
-  s3_en: Stack the flat face.
-  s3_zh: 用平的一面来叠。
-  s3_zh_hk: 用平嘅一面嚟疊。
+  s1_en: A box has a flat face. Use that face to stack.
+  s1_zh: 盒子有平的一面。用这一面来叠。
+  s1_zh_hk: 盒有平嘅一面。用呢一面嚟疊。
+  s2_en: A ball is round all over. No face is flat.
+  s2_zh: 皮球四面都是圆的。没有平的一面。
+  s2_zh_hk: 波四面都係圓嘅。冇平嘅一面。
+  s3_en: Stack the flat face. Leave the ball beside the box.
+  s3_zh: 用平的一面来叠。皮球放在旁边。
+  s3_zh_hk: 用平嘅一面嚟疊。波放喺旁邊。
 
 - id: takeaway
   visual: animated

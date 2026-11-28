@@ -1,0 +1,133 @@
+# P1-SHP-05. Mirrors MathQuiz path solids / lesson solidobjects, "Shapes around us".
+# A closed box matches a prism. A straight can matches a cylinder.
+# A smooth ball matches a sphere. A cone model has a round bottom and one tip.
+# Turning a pyramid does not change its kind. Small labels are not the shape.
+# https://github.com/kochiuyu/mathquiz learn-solids.js (solidobjects).
+# Speech is for age 6: one short idea per sentence.
+id: P1-SHP-05
+title_en: Shapes around us
+title_zh: 身边的立体
+title_zh_hk: 身邊嘅立體
+duration_target_s: 70
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: shapes
+  kind: prism
+  seconds: 8
+  title_en: Shapes around us
+  title_zh: 身边的立体
+  title_zh_hk: 身邊嘅立體
+  s1_en: What shape is a closed box?
+  s1_zh: 密封的盒子是什么立体？
+  s1_zh_hk: 密封嘅盒係咩立體呀？
+
+- id: box
+  visual: animated
+  scene: solid_shape
+  part: pair
+  items: [prism, cylinder]
+  seconds: 14
+  title_en: A box and a can
+  title_zh: 盒子和罐子
+  title_zh_hk: 盒同罐
+  s1_en: A closed box is a prism.
+  s1_zh: 密封的盒子是柱体。
+  s1_zh_hk: 密封嘅盒係柱體。
+  s2_en: A straight can is a cylinder. Two ends are round.
+  s2_zh: 直身的罐子是圆柱体。两端都是圆的。
+  s2_zh_hk: 直身嘅罐係圓柱體。兩端都係圓嘅。
+  s3_en: Look at the main shape. A small label is not the shape.
+  s3_zh: 看主要的形状。小标签不是形状。
+  s3_zh_hk: 睇主要嘅形狀。細標籤唔係形狀。
+
+- id: ball
+  visual: animated
+  scene: solid_shape
+  part: pair
+  items: [sphere, cone]
+  seconds: 14
+  title_en: A ball and a cone
+  title_zh: 皮球和圆锥体
+  title_zh_hk: 波同圓錐體
+  s1_en: A smooth ball is a sphere. It is round all over.
+  s1_zh: 光滑的皮球是球体。四面都是圆的。
+  s1_zh_hk: 光滑嘅波係球體。四面都係圓嘅。
+  s2_en: This model is a cone. The top is one tip.
+  s2_zh: 这个模型是圆锥体。上面是一个尖。
+  s2_zh_hk: 呢個模型係圓錐體。上面係一個尖。
+  s3_en: A round bottom, and one tip. That names the cone.
+  s3_zh: 圆圆的底，一个尖。这就是圆锥体。
+  s3_zh_hk: 圓圓嘅底，一個尖。呢個就係圓錐體。
+
+- id: sticker
+  visual: animated
+  scene: solid_shape
+  part: turn
+  items: [cylinder]
+  turn: 20
+  seconds: 12
+  title_en: Still a can
+  title_zh: 还是罐子
+  title_zh_hk: 仲係罐
+  s1_en: A small sticker is not the shape.
+  s1_zh: 小标签不是这个形状。
+  s1_zh_hk: 細標籤唔係呢個形狀。
+  s2_en: Turn the can. The label turns with it.
+  s2_zh: 把罐子转一转。标签跟着转。
+  s2_zh_hk: 將罐轉一轉。標籤一齊轉。
+  s3_en: It is still a cylinder.
+  s3_zh: 还是圆柱体。
+  s3_zh_hk: 仲係圓柱體。
+
+- id: tip
+  visual: animated
+  scene: solid_shape
+  part: turn
+  items: [pyramid]
+  turn: 25
+  seconds: 12
+  title_en: Still a pyramid
+  title_zh: 还是锥体
+  title_zh_hk: 仲係錐體
+  s1_en: This pyramid has flat sides. Each side is a triangle.
+  s1_zh: 这个锥体的侧面是平的。每一面都是三角形。
+  s1_zh_hk: 呢個錐體嘅側面係平嘅。每一面都係三角形。
+  s2_en: Turn it the other way.
+  s2_zh: 换一个方向看。
+  s2_zh_hk: 換一個方向睇。
+  s3_en: It is still a pyramid.
+  s3_zh: 还是锥体。
+  s3_zh_hk: 仲係錐體。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: shapes
+  seconds: 16
+  title_en: Shapes around us
+  title_zh: 身边的立体
+  title_zh_hk: 身邊嘅立體
+  s1_en: A closed box is a prism.
+  s1_zh: 密封盒子是柱体。
+  s1_zh_hk: 密封盒係柱體。
+  s2_en: A straight can is a cylinder.
+  s2_zh: 直身罐子是圆柱体。
+  s2_zh_hk: 直身罐係圓柱體。
+  s3_en: A smooth ball is a sphere.
+  s3_zh: 光滑皮球是球体。
+  s3_zh_hk: 光滑波係球體。
+  s4_en: Turn it. Still the same solid.
+  s4_zh: 转一转，还是同一种。
+  s4_zh_hk: 轉一轉，仲係同一種。
+  cues:
+  - kind: solid
+    shape: prism
+  - kind: solid
+    shape: cylinder
+  - kind: solid
+    shape: sphere
+  - kind: solid
+    shape: pyramid

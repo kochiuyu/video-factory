@@ -1807,6 +1807,42 @@ class SceneRegistryTest(unittest.TestCase):
             ))
             self.assertEqual(len(coins.vf_picture.vf_coins), 7)
             self.assertGreater(float(coins.vf_picture.vf_ring.get_stroke_opacity()), 0.9)
+            frame_w = 8 * 16 / 9
+            coin_w = max(float(token.width) for token in coins.vf_picture.vf_coins)
+            # A four-across row used to stop near 8% of the frame. It now fills the band.
+            self.assertGreater(coin_w / frame_w, 0.11)
+            self.assertGreater(float(coins.vf_picture.width) / frame_w, 0.50)
+            self.assertGreater(float(coins.vf_picture.height) / 8, 0.40)
+            self.assertLess(
+                float(coins.vf_picture.get_top()[1]),
+                float(coins.vf_title.get_bottom()[1]) - 0.15,
+            )
+            pair = render(self._spoken(
+                scene="coin_row", part="pair", coins=[20, 200], focus=1,
+                title_en="Cents are not dollars",
+            ))
+            pair_w = max(float(token.width) for token in pair.vf_picture.vf_coins)
+            self.assertGreater(pair_w / frame_w, 0.15)
+            swap = render(self._spoken(
+                scene="coin_row", part="swap", coins=[500], into=[100, 100, 100, 100, 100],
+                title_en="Five one-dollar coins",
+            ))
+            ys = [float(token.get_center()[1]) for token in swap.vf_picture.vf_coins]
+            self.assertLess(max(ys) - min(ys), 0.25)
+            hook = render(self._spoken(
+                scene="lesson_hook", motif="money", kind="coin",
+                title_en="Hong Kong coins", title_zh="香港的硬币", title_zh_hk="香港嘅硬幣",
+            ))
+            self.assertGreater(float(hook.vf_cue.width) / frame_w, 0.15)
+            self.assertLess(float(hook.vf_cue.get_top()[1]), float(hook.vf_title.get_bottom()[1]) - 0.12)
+            from everyday_draw import _row_counts
+
+            self.assertEqual(_row_counts(7), [4, 3])
+            with tempconfig({
+                "pixel_width": 1080, "pixel_height": 1920,
+                "frame_width": 8.0 * 1080 / 1920, "frame_height": 8.0,
+            }):
+                self.assertEqual(_row_counts(7), [2, 2, 3])
             month = render(self._spoken(
                 scene="day_time", mode="calendar", year=2026, month=11, day=18,
                 title_en="18 November",

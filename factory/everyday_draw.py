@@ -504,14 +504,51 @@ def _ring(target):
     return ring
 
 
+def _row_counts(count: int) -> list[int]:
+    """How the coins split across rows.
+
+    A wide frame keeps four on the top row (seven coins read 4 then 3). A tall
+    frame cannot grow a four-across row, so seven coins read 2, 2, 3 and each
+    coin can fill the width.
+    """
+    from manim import config
+
+    portrait = float(config.frame_width) < float(config.frame_height)
+    if portrait and count == 7:
+        return [2, 2, 3]
+    per = 4 if count > 4 else count
+    counts = []
+    left = count
+    while left > 0:
+        take = min(per, left)
+        counts.append(take)
+        left -= take
+    return counts
+
+
+def _mark_coin_fill(board) -> None:
+    """A row of several coins should grow out to the title-caption band."""
+    if len(getattr(board, "vf_coins", []) or []) >= 4:
+        board.vf_fill = "coins"
+
+
 def _coin_rows(tokens, per=None):
     from manim import VGroup
 
     if per is None:
-        per = 4 if len(tokens) > 4 else len(tokens)
+        counts = _row_counts(len(tokens))
+    else:
+        counts = []
+        left = len(tokens)
+        while left > 0:
+            take = min(per, left)
+            counts.append(take)
+            left -= take
     rows = []
-    for index in range(0, len(tokens), per):
-        rows.append(VGroup(*tokens[index:index + per]).arrange(RIGHT, buff=0.28))
+    start = 0
+    for take in counts:
+        rows.append(VGroup(*tokens[start:start + take]).arrange(RIGHT, buff=0.28))
+        start += take
     return VGroup(*rows).arrange(DOWN, buff=0.3)
 
 
@@ -548,6 +585,7 @@ def coin_board(labels, write):
         board = _fresh(group)
         board.vf_later.extend([arrow, right])
         board.vf_coins = tokens + other
+        _mark_coin_fill(board)
         return board
     row = _coin_rows(tokens)
     if part == "total":
@@ -558,6 +596,7 @@ def coin_board(labels, write):
         board = _fresh(group)
         board.vf_later.append(tag)
         board.vf_coins = tokens
+        _mark_coin_fill(board)
         return board
     focus = int(labels.get("focus") or 0)
     ring = _ring(tokens[focus].vf_coin)
@@ -566,6 +605,7 @@ def coin_board(labels, write):
     board.vf_later.append(ring)
     board.vf_ring = ring
     board.vf_coins = tokens
+    _mark_coin_fill(board)
     return board
 
 

@@ -2330,7 +2330,12 @@ def _scene_types() -> dict:
             title = styled(labels.get("title") or "", latin, cjk, 54)
             cue = self._hook_cue(motif, latin, cjk, labels)
             portrait = int(getattr(config, "pixel_height", 0) or 0) > int(getattr(config, "pixel_width", 0) or 0)
-            if portrait and motif == "parts":
+            if motif == "money":
+                # Coin, price, and swap cues are drawn at icon size. Grow the
+                # cue into the band under the title. The title is not scaled
+                # with it, in either format.
+                kicker, title, cue = self._layout_money_hook(kicker, title, cue, labels, latin, cjk)
+            elif portrait and motif == "parts":
                 # A long English title wraps onto two centred lines at the
                 # takeaway floor, and the grade tag is not shrunk with it.
                 kicker, title, cue = self._layout_parts_hook(kicker, title, cue, grade, latin, cjk)
@@ -2422,6 +2427,45 @@ def _scene_types() -> dict:
             rest = total - (a + b + c)
             if rest > frame / 2:
                 self.wait(rest)
+
+        def _fit_hook_title(self, title, raw: str, latin: str, cjk: str, cap: float):
+            """Keep a money-hook title at its type size, wrapping English that is wider than the frame."""
+            if cap <= 0 or float(title.width) <= cap:
+                return title
+            words = [word for word in str(raw or "").split() if word]
+            if len(words) >= 2:
+                best = None
+                for cut in range(1, len(words)):
+                    left = styled(" ".join(words[:cut]), latin, cjk, 54)
+                    right = styled(" ".join(words[cut:]), latin, cjk, 54)
+                    block = VGroup(left, right).arrange(DOWN, buff=0.08)
+                    if best is None or float(block.width) < best[0]:
+                        best = (float(block.width), block)
+                title = best[1]
+            if float(title.width) > cap > 0:
+                title.scale(cap / float(title.width))
+            return title
+
+        def _layout_money_hook(self, kicker, title, cue, labels, latin: str, cjk: str):
+            """Pin the grade and title, then grow the coin picture into the open band."""
+            left, right, bot, top = _safe_limits()
+            cap = (right - left) * 0.92
+            title = self._fit_hook_title(title, str((labels or {}).get("title") or ""), latin, cjk, cap)
+            if float(kicker.width) > cap > 0:
+                kicker.scale(cap / float(kicker.width))
+            kicker.move_to([(left + right) / 2.0, top - float(kicker.height) / 2.0 - 0.02, 0])
+            title.next_to(kicker, DOWN, buff=0.14)
+            room_top = float(title.get_bottom()[1]) - 0.22
+            room_h = room_top - bot
+            _grow_money_cue(cue, cap, room_h)
+            if float(cue.width) > cap > 0:
+                cue.scale(cap / float(cue.width))
+            if float(cue.height) > room_h > 0:
+                cue.scale(room_h / float(cue.height))
+            cue.move_to([(left + right) / 2.0, (bot + room_top) / 2.0, 0])
+            self.vf_title = title
+            self.vf_cue = cue
+            return kicker, title, cue
 
         def _layout_parts_hook(self, kicker, title, cue, grade: str, latin: str, cjk: str):
             """Portrait parts hook. Title stays at least the takeaway floor.
@@ -2550,6 +2594,18 @@ def _scene_types() -> dict:
                 def write(text, size=28, latin=latin, cjk=cjk):
                     return styled(str(text), latin, cjk, size)
 
+                # A tall frame cannot grow three coins in a row. Stack the
+                # exchange so each coin fills the band. Teaching rows stay horizontal.
+                if motif == "money" and kind == "swap" and float(config.frame_width) < float(config.frame_height):
+                    import math
+
+                    from everyday_draw import _coin, _pointer
+
+                    gave = VGroup(*[_coin(100, write)])
+                    got = VGroup(*[_coin(50, write), _coin(50, write)]).arrange(RIGHT, buff=0.12)
+                    arrow = _pointer()
+                    arrow.rotate(-math.pi / 2)
+                    return VGroup(gave, arrow, got).arrange(DOWN, buff=0.16)
                 return everyday_icon(picture, write, lang)
             if motif == "shapes":
                 from shape_draw import flat_picture, solid_picture, straight_line
@@ -4523,6 +4579,25 @@ def _scene_types() -> dict:
             if width > 0:
                 sub.set_stroke(width=width * factor)
 
+    def _grow_money_cue(cue, cap, room_h):
+        """Grow a money hook until it fills the band under the title.
+
+        The cue is an icon at native size. The longer side reaches about 70%
+        of its span, and neither side passes 90% of the room.
+        """
+        width = float(cue.width)
+        height = float(cue.height)
+        if width <= 0 or height <= 0 or cap <= 0 or room_h <= 0:
+            return
+        larger = max(width / cap, height / room_h)
+        if larger <= 0:
+            return
+        factor = min(0.72 / larger, 0.90 * cap / width, 0.90 * room_h / height)
+        if factor <= 1.01:
+            return
+        cue.scale(factor)
+        _thicken_strokes(cue, factor)
+
     def _grow_everyday(body, cap, room_h):
         """Grow a teaching diagram until it fills the room between title and caption.
 
@@ -4540,11 +4615,17 @@ def _scene_types() -> dict:
         smaller = min(frac_w, frac_h)
         if larger <= 0 or smaller <= 0:
             return
-        reach = 0.58 / larger
-        lift = 0.50 / smaller
-        ceiling = 0.85 / larger
-        limit = min(0.92 * cap / width, 0.92 * room_h / height)
-        factor = max(1.0, min(max(reach, min(lift, ceiling)), limit))
+        # A half-span stop leaves a four-across coin row small. Those pictures
+        # grow until they meet the room, which is how a two-coin pair already looks.
+        if getattr(body, "vf_fill", "") == "coins":
+            factor = min(0.90 * cap / width, 0.90 * room_h / height)
+            factor = max(1.0, min(factor, 0.92 * cap / width, 0.92 * room_h / height))
+        else:
+            reach = 0.58 / larger
+            lift = 0.50 / smaller
+            ceiling = 0.85 / larger
+            limit = min(0.92 * cap / width, 0.92 * room_h / height)
+            factor = max(1.0, min(max(reach, min(lift, ceiling)), limit))
         if factor <= 1.01:
             return
         body.scale(factor)

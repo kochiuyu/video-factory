@@ -1,0 +1,121 @@
+# P1-EVY-05. Mirrors MathQuiz path ruler / lesson comparecm, "Compare in centimetres".
+# The same unit compares two lengths and two straight distances.
+# A 60 cm tape covers a long gap. A 15 cm ruler does not.
+# https://github.com/kochiuyu/mathquiz learn-ruler.js (comparecm).
+# Speech is for age 6: one short idea per sentence.
+id: P1-EVY-05
+title_en: Compare centimetres
+title_zh: 用厘米比较
+title_zh_hk: 用厘米比較
+duration_target_s: 55
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: measure
+  kind: ruler
+  seconds: 8
+  title_en: Compare centimetres
+  title_zh: 用厘米比较
+  title_zh_hk: 用厘米比較
+  s1_en: Which length is longer?
+  s1_zh: 哪个更长？
+  s1_zh_hk: 邊個長啲呀？
+
+- id: longer
+  visual: animated
+  scene: measure_line
+  mode: length
+  action: ends
+  a: 4
+  b: 7
+  seconds: 11
+  title_en: 7 cm is longer
+  title_zh: 7厘米更长
+  title_zh_hk: 7厘米長啲
+  s1_en: Line them up at zero.
+  s1_zh: 在零上对齐。
+  s1_zh_hk: 喺零對齊。
+  s2_en: One is 4 centimetres. One is 7.
+  s2_zh: 一条4厘米，一条7厘米。
+  s2_zh_hk: 一條4厘米，一條7厘米。
+  s3_en: 7 centimetres is longer.
+  s3_zh: 7厘米更长。
+  s3_zh_hk: 7厘米長啲。
+
+- id: nearer
+  visual: animated
+  scene: measure_line
+  mode: distance
+  action: nearer
+  a: 8
+  b: 5
+  units: true
+  seconds: 11
+  title_en: 5 cm is nearer
+  title_zh: 5厘米更近
+  title_zh_hk: 5厘米近啲
+  s1_en: Both start at S.
+  s1_zh: 两条都从S出发。
+  s1_zh_hk: 兩條都由S出發。
+  s2_en: One point is 8 centimetres away.
+  s2_zh: 一个点在8厘米外。
+  s2_zh_hk: 一個點喺8厘米外。
+  s3_en: The point at 5 centimetres is nearer.
+  s3_zh: 5厘米那个点更近。
+  s3_zh_hk: 5厘米嗰個點近啲。
+
+- id: tools
+  visual: animated
+  scene: measure_line
+  mode: tools
+  seconds: 11
+  title_en: Pick a tool
+  title_zh: 选一把尺
+  title_zh_hk: 揀一把尺
+  s1_en: This gap is 40 centimetres.
+  s1_zh: 这段距离是40厘米。
+  s1_zh_hk: 呢段距離係40厘米。
+  s2_en: The 60 centimetre tape covers it.
+  s2_zh: 60厘米的尺一次就够。
+  s2_zh_hk: 60厘米嘅尺一次就夠。
+  s3_en: The 15 centimetre ruler is too short.
+  s3_zh: 15厘米的尺太短。
+  s3_zh_hk: 15厘米嘅尺太短。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: measure
+  seconds: 14
+  title_en: Compare centimetres
+  title_zh: 用厘米比较
+  title_zh_hk: 用厘米比較
+  s1_en: Use the same unit.
+  s1_zh: 用同一个单位。
+  s1_zh_hk: 用同一個單位。
+  s2_en: 7 cm is longer than 4 cm.
+  s2_zh: 7厘米比4厘米长。
+  s2_zh_hk: 7厘米比4厘米長。
+  s3_en: 5 cm is nearer than 8 cm.
+  s3_zh: 5厘米比8厘米近。
+  s3_zh_hk: 5厘米比8厘米近。
+  s4_en: A longer tool can cover the gap.
+  s4_zh: 更长的尺才能盖住。
+  s4_zh_hk: 長啲嘅尺先蓋得住。
+  cues:
+  - kind: measure
+    mode: ruler
+    cm: 4
+  - kind: measure
+    mode: length
+    a: 4
+    b: 7
+  - kind: measure
+    mode: distance
+    a: 8
+    b: 5
+  - kind: measure
+    mode: ruler
+    cm: 6

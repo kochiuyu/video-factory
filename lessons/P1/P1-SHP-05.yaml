@@ -72,9 +72,9 @@ beats:
   title_en: Still a can
   title_zh: 还是罐子
   title_zh_hk: 仲係罐
-  s1_en: A small sticker is not the shape. It is only a label.
-  s1_zh: 小标签不是这个形状。它只是一个标签。
-  s1_zh_hk: 細標籤唔係呢個形狀。佢只係一個標籤。
+  s1_en: A small sticker is not the shape.
+  s1_zh: 小标签不是这个形状。
+  s1_zh_hk: 細標籤唔係呢個形狀。
   s2_en: Turn the can. The label turns with it.
   s2_zh: 把罐子转一转。标签跟着转。
   s2_zh_hk: 將罐轉一轉。標籤一齊轉。
@@ -95,9 +95,9 @@ beats:
   s1_en: This pyramid has flat sides. Each side is a triangle.
   s1_zh: 这个锥体的侧面是平的。每一面都是三角形。
   s1_zh_hk: 呢個錐體嘅側面係平嘅。每一面都係三角形。
-  s2_en: Turn it the other way. The sides stay flat.
-  s2_zh: 换一个方向看。侧面还是平的。
-  s2_zh_hk: 換一個方向睇。側面仲係平嘅。
+  s2_en: Turn it the other way.
+  s2_zh: 换一个方向看。
+  s2_zh_hk: 換一個方向睇。
   s3_en: It is still a pyramid.
   s3_zh: 还是锥体。
   s3_zh_hk: 仲係錐體。

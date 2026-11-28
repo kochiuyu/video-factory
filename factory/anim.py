@@ -2772,7 +2772,7 @@ def _scene_types() -> dict:
                 return self._cue_groups(int(picture[1]), int(picture[2]), int(picture[3]))
             if kind == "counters":
                 return self._cue_dots(int(picture[1]))
-            if kind in {"line", "flat", "solid", "join"}:
+            if kind in {"line", "flat", "solid", "join", "place"}:
                 return _shape_takeaway_cue(picture)
             raise ValueError(f"takeaway cue fell back to the default: {picture!r}")
 
@@ -4531,6 +4531,10 @@ def _scene_types() -> dict:
                 import math
                 picture_mob.rotate(math.radians(float(picture[2])))
             return picture_mob
+        if kind == "place":
+            from shape_draw import place_arrangement
+
+            return place_arrangement(str(picture[1]), list(picture[2]))
         pic = join_picture(str(picture[1]))
         for edge in pic.vf_edges:
             edge.set_stroke(opacity=1)
@@ -4772,7 +4776,57 @@ def _scene_types() -> dict:
                 self.spend(1)
             self.spend(2)
 
+    class ObjectPlace(_Board):
+        """Two or three objects, from the child's view. Three spoken lines."""
 
+        def construct(self):
+            from shape_draw import _viewer_arrow, object_picture
+
+            labels = self.vf_labels
+            latin, cjk = self.vf_fonts
+            title = _shape_title(labels.get("title") or "", latin, cjk)
+            layout = str(labels.get("layout") or "row")
+            items = list(labels.get("items") or [])
+            names = list(labels.get("names") or [])
+            cards = []
+            for kind, name in zip(items, names):
+                picture = object_picture(str(kind))
+                label = _shape_name(name, latin, cjk)
+                if layout == "depth":
+                    card = VGroup(picture, label).arrange(RIGHT, buff=0.16)
+                else:
+                    card = VGroup(picture, label).arrange(DOWN, buff=0.18)
+                cards.append(card)
+            if layout == "column":
+                row = VGroup(*cards).arrange(DOWN, buff=0.28)
+                body = row
+            elif layout == "depth":
+                cards[0].move_to((0, -1.05, 0))
+                cards[1].move_to((0, 1.2, 0))
+                arrow = _viewer_arrow()
+                arrow.next_to(cards[0], DOWN, buff=0.16)
+                body = VGroup(*cards, arrow)
+                self.vf_arrow = arrow
+            else:
+                body = VGroup(*cards).arrange(RIGHT, buff=0.42)
+            focus = int(labels.get("focus") or 0)
+            target = cards[focus][0]
+            ring = Circle(
+                radius=max(float(target.width), float(target.height)) / 2 + 0.08,
+                color=GREEN,
+                stroke_width=6,
+            )
+            ring.set_fill(opacity=0)
+            ring.move_to(target)
+            ring.set_stroke(opacity=0)
+            placed = VGroup(body, ring)
+            _place_shape(self, title, placed)
+            self.vf_objects = cards
+            self.vf_ring = ring
+            self.vf_layout = layout
+            self.spend(0)
+            self.spend(1, ring.animate.set_stroke(opacity=1))
+            self.spend(2)
 
     _scene_types._cache = {
         "one_ten": OneTen,
@@ -4791,6 +4845,7 @@ def _scene_types() -> dict:
         "flat_shape": FlatShape,
         "shape_join": ShapeJoin,
         "solid_shape": SolidShape,
+        "object_place": ObjectPlace,
         "lesson_hook": LessonHook,
         "lesson_takeaway": LessonTakeaway,
     }

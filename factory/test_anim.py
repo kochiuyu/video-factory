@@ -1610,7 +1610,7 @@ class SceneRegistryTest(unittest.TestCase):
                 "one_ten", "ten_and_ones", "make_ten", "count_objects", "number_track",
                 "ordinal_row", "pair_counters", "part_whole", "number_blocks",
                 "estimate_group", "row_match", "place_sum",
-                "shape_line", "flat_shape", "shape_join", "solid_shape",
+                "shape_line", "flat_shape", "shape_join", "solid_shape", "object_place",
                 "lesson_hook", "lesson_takeaway",
             ],
         )
@@ -2192,6 +2192,42 @@ class SceneRegistryTest(unittest.TestCase):
             stacked.render(preview=False)
             self.assertEqual(stacked.vf_kinds, ["prism", "prism"])
             self.assertEqual(len(stacked.vf_cards), 2)
+            placed = _make_scene({
+                "scene": "object_place",
+                "lang": "en",
+                "layout": "row",
+                "items": ["ball", "book"],
+                "focus": 0,
+                "labels": {
+                    "title": "The ball is on the left",
+                    "layout": "row",
+                    "items": ["ball", "book"],
+                    "names": ["Ball", "Book"],
+                    "focus": 0,
+                },
+            }, [0.4, 0.5, 0.4])
+            placed.render(preview=False)
+            unit = 1080 / 8
+            self.assertGreaterEqual(float(placed.vf_title.height) * unit, 47)
+            self.assertEqual(len(placed.vf_objects), 2)
+            self.assertGreaterEqual(float(placed.vf_ring.get_stroke_opacity()), 0.9)
+            between = _make_scene({
+                "scene": "object_place",
+                "lang": "zh_hk",
+                "layout": "depth",
+                "items": ["book", "ball"],
+                "focus": 0,
+                "labels": {
+                    "title": "書喺前面",
+                    "layout": "depth",
+                    "items": ["book", "ball"],
+                    "names": ["書", "波"],
+                    "focus": 0,
+                },
+            }, [0.3, 0.4, 0.3])
+            between.render(preview=False)
+            self.assertEqual(between.vf_layout, "depth")
+            self.assertIsNotNone(between.vf_arrow)
         with tempconfig({
             "pixel_width": 1080, "pixel_height": 1920,
             "frame_width": 8, "frame_height": 8 * 16 / 9, "frame_rate": 15,
@@ -2283,6 +2319,9 @@ class SceneRegistryTest(unittest.TestCase):
             ],
             "P1-SHP-06": [
                 "lesson_hook", "solid_shape", "solid_shape", "solid_shape", "solid_shape", "lesson_takeaway",
+            ],
+            "P1-SHP-07": [
+                "lesson_hook", "object_place", "object_place", "object_place", "object_place", "lesson_takeaway",
             ],
         }
         for name, visuals in expected.items():
@@ -3087,6 +3126,28 @@ class SceneRegistryTest(unittest.TestCase):
             "items": ["prism"],
         }))
         self.assertNotIn("嗎", _beat_lines(explore, "zh_hk"))
+        sides = load_lesson(P1 / "P1-SHP-07.yaml")
+        places = [beat for beat in sides["beats"] if beat.get("scene") == "object_place"]
+        self.assertEqual([b["layout"] for b in places], ["row", "row", "row", "row"])
+        self.assertEqual(places[0]["items"], ["ball", "book"])
+        self.assertEqual(places[2]["items"], ["book", "ball"])
+        self.assertEqual(places[0]["focus"], 0)
+        self.assertEqual(places[1]["focus"], 1)
+        self.assertEqual(places[0]["s1_zh_hk"], "波喺左邊。")
+        self.assertEqual(places[3]["s2_zh"], "书在左边。")
+        self.assertEqual(sides["beats"][0]["s1_en"], "Where is the ball?")
+        self.assertEqual(labels_for(places[0], "zh_hk")["names"], ["波", "書"])
+        self.assertEqual(labels_for(places[0], "zh")["names"], ["球", "书"])
+        self.assertEqual(
+            labels_for(sides["beats"][-1], "en")["cues"][0],
+            ("place", "row", ("ball", "book")),
+        )
+        self.assertEqual(
+            labels_for(sides["beats"][-1], "en")["cues"][3],
+            ("place", "row", ("book", "ball")),
+        )
+        self.assertIsNone(count_event(places[0]))
+        self.assertNotIn("嗎", _beat_lines(sides, "zh_hk"))
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

@@ -4793,7 +4793,9 @@ def _scene_types() -> dict:
                 picture = object_picture(str(kind))
                 label = _shape_name(name, latin, cjk)
                 if layout == "depth":
-                    card = VGroup(picture, label).arrange(RIGHT, buff=0.16)
+                    # The ring is a circle around the picture. A tight gap
+                    # lets that circle cover the first letters of the name.
+                    card = VGroup(picture, label).arrange(RIGHT, buff=0.42)
                 else:
                     card = VGroup(picture, label).arrange(DOWN, buff=0.18)
                 cards.append(card)

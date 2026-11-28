@@ -2228,6 +2228,8 @@ class SceneRegistryTest(unittest.TestCase):
             between.render(preview=False)
             self.assertEqual(between.vf_layout, "depth")
             self.assertIsNotNone(between.vf_arrow)
+            near = between.vf_objects[0]
+            self.assertLess(between.vf_ring.get_right()[0], near[1].get_left()[0] - 0.02)
         with tempconfig({
             "pixel_width": 1080, "pixel_height": 1920,
             "frame_width": 8, "frame_height": 8 * 16 / 9, "frame_rate": 15,

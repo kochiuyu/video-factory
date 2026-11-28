@@ -32,7 +32,7 @@ beats:
   title_zh: 从0到1
   title_zh_hk: 由0到1
   s1_en: Start at zero.
-  s1_zh: 从零开始。
+  s1_zh: 先从左边的零开始。
   s1_zh_hk: 由零開始。
   s2_en: From 0 to 1 is one space.
   s2_zh: 从0到1是一格。
@@ -52,7 +52,7 @@ beats:
   title_zh: 看另一端
   title_zh_hk: 睇另一端
   s1_en: Put the left end on zero.
-  s1_zh: 把左端放在零上。
+  s1_zh: 把纸条左端放在零上。
   s1_zh_hk: 將左邊放喺零。
   s2_en: The other end is on 4.
   s2_zh: 另一端在4上。

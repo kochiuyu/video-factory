@@ -4529,12 +4529,20 @@ def _scene_types() -> dict:
     def _reveal_everyday(board, title, picture):
         """First line holds. Second line fades in the new part, or moves it."""
         for mob in picture.vf_later:
-            mob.set_opacity(0)
+            if getattr(mob, "vf_stroke_only", False):
+                mob.set_stroke(opacity=0)
+            else:
+                mob.set_opacity(0)
         _place_shape(board, title, picture)
         board.vf_title = title
         board.vf_picture = picture
         board.spend(0)
-        anims = [mob.animate.set_opacity(1) for mob in picture.vf_later]
+        anims = []
+        for mob in picture.vf_later:
+            if getattr(mob, "vf_stroke_only", False):
+                anims.append(mob.animate.set_stroke(opacity=1))
+            else:
+                anims.append(mob.animate.set_opacity(1))
         for mob in picture.vf_strokes:
             anims.append(mob.animate.set_stroke(color=GREEN, width=8))
         if picture.vf_align is not None:

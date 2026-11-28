@@ -496,6 +496,8 @@ def _ring(target):
     )
     ring.set_fill(opacity=0)
     ring.move_to(target)
+    # set_opacity would turn this stroke into a filled disc and hide the coin.
+    ring.vf_stroke_only = True
     return ring
 
 

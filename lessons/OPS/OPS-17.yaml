@@ -1,0 +1,332 @@
+id: OPS-17
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Steady output. Or follow the peak?
+title_zh: 稳定生产，还是跟着订单高峰走？
+title_zh_hk: 維持產量，還是跟隨訂單高峰？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-17
+  kicker_en: OPS-17
+  kicker_zh: OPS-17
+  kicker_zh_hk: OPS-17
+  title_en: Steady output. Or follow the peak?
+  title_zh: 稳定生产，还是跟着订单高峰走？
+  title_zh_hk: 維持產量，還是跟隨訂單高峰？
+  image: art/steady-output-later-peak-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 22 September 2026, Hong Kong’s labour authorities published an updated manpower projection. Capacity
+    is also a matter of people. This workshop’s boxes, positions and costs are fictional.
+  zh: 二零二六年九月二十二日，香港劳工部门发布了更新的人力推算。产能也取决于人。课堂上这家工场的收纳箱、岗位和成本，都是虚构的。
+  zh_hk: 二零二六年九月二十二日，香港勞工部門公布咗更新嘅人力推算。產能都取決於人手。課堂上呢間工場嘅收納箱、崗位同成本，都係虛構嘅。
+- id: ledger
+  visual: table_grid
+  seconds: 28
+  rows: 3
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Orders and two prepared plans
+  title_zh: 订单和两套既定方案
+  title_zh_hk: 訂單同兩套既定方案
+  row1_en: Months 1, 2, 4, 6
+  row1_zh: 第1、2、4、6月
+  row1_zh_hk: 第1、2、4、6月
+  row2_en: Months 3 and 5
+  row2_zh: 第3月和第5月
+  row2_zh_hk: 第3月同第5月
+  row3_en: Six-month total
+  row3_zh: 六个月合计
+  row3_zh_hk: 六個月合計
+  col1_en: Orders due
+  col1_zh: 到期订单
+  col1_zh_hk: 到期訂單
+  col2_en: L output
+  col2_zh: L产量
+  col2_zh_hk: L產量
+  col3_en: C positions
+  col3_zh: C岗位
+  col3_zh_hk: C崗位
+  c11: '80'
+  c12: '100'
+  c13: '4'
+  c21: '140'
+  c22: '100'
+  c23: '7'
+  c31: '600'
+  c32: '600'
+  c33_en: Back to 5
+  c33_zh: 期末回到5
+  c33_zh_hk: 期末回到5
+  footer_en: >-
+    One position: 20 boxes, HK$20,000
+  footer_zh: 一个岗位：20箱、20,000港元
+  footer_zh_hk: 一個崗位：20箱、20,000港元
+  s1_en: >-
+    A workshop must choose between two prepared six-month plans for a standard storage box. Plan L keeps
+    five trained positions and makes 100 boxes every month. Plan C follows monthly orders by changing
+    trained positions, with no stock or late delivery.
+  s1_zh: >-
+    这家工场要在两套已经准备好的六个月方案里做选择，产品是不变的标准收纳箱。方案L保留五个受过培训的生产岗位，每月生产一百个箱子。方案C按每月订单调整岗位，不存货，也不延迟交货。
+  s1_zh_hk: >-
+    呢間工場要喺兩套已經準備好嘅六個月方案裏面做選擇，產品係不變嘅標準收納箱。方案L保留五個受過培訓嘅生產崗位，每月生產一百個收納箱。方案C按每月訂單調整崗位，唔存貨，亦都唔延遲交貨。
+  s2_en: >-
+    One filled position provides 20 boxes a month and costs 20,000 Hong Kong dollars that month, whether
+    busy or idle. Adding a qualified position costs 3,000 dollars, including paid induction a month ahead.
+    Ending an assignment costs 2,000 dollars. Both plans start at five positions and must restore five
+    for the next cycle.
+  s2_zh: >-
+    一个在岗岗位每月可产二十个箱子，当月成本是两万港元，不论忙闲。增设一个合格岗位要三千港元，包括提前一个月完成的带薪岗前培训。结束一个岗位要两千港元。两套方案都从五个岗位起步，并且必须在下个周期开始前恢复到五个岗位。
+  s2_zh_hk: >-
+    一個在崗崗位每月可產二十個收納箱，當月成本係兩萬港元，不論忙閒。增設一個合格崗位要三千港元，包括提前一個月完成嘅帶薪入職培訓。結束一個崗位要兩千港元。兩套方案都由五個崗位起步，並且必須喺下個周期開始前恢復到五個崗位。
+  s3_en: >-
+    Opening stock and backlog are zero. Month-end finished stock costs 100 dollars per box per month and
+    cannot exceed 40 boxes. A customer has agreed that up to 20 boxes due in month 5 may arrive in month
+    6, at 1,000 dollars per delayed box. No other late delivery is allowed. Both plans end at zero stock
+    and backlog.
+  s3_zh: >-
+    期初存货和积压都是零。月末成品库存每个箱子每月一百港元，且不能超过四十个箱子。客户已同意，第五个月到期的箱子，最多二十个可以改到第六个月到，每个延期箱子一千港元。不允许其他延迟交货。两套方案期末存货和积压都为零。
+  s3_zh_hk: >-
+    期初存貨同積壓都係零。月末成品存貨每個收納箱每月一百港元，而且唔能夠超過四十個收納箱。客戶已同意，第五個月到期嘅收納箱，最多二十個可以改到第六個月到，每個延期收納箱一千港元。唔允許其他延遲交貨。兩套方案期末存貨同積壓都係零。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Choose steady output, or follow the peak?
+  title_zh: 选稳定生产，还是跟着高峰？
+  title_zh_hk: 揀穩定生產，定跟隨高峰？
+  en: >-
+    Would you choose L or C for this first calendar? Trace L’s inventory and the agreed delay, include
+    C’s starting and ending staffing changes, and explain the cost-versus-service trade-off. Pause and
+    vote.
+  zh: >-
+    按这个最初的订单日历，你会选L还是C？请推算L的库存和约定延期，把C期初和期末的人员调整也算进去，并说明成本与服务之间的取舍。请暂停，投个票。
+  zh_hk: 按呢個最初嘅訂單日曆，你會揀L定C？請推算L嘅存貨同約定延期，把C期初同期末嘅人手調整都算進去，並說明成本同服務之間嘅取捨。暫停，投個票。
+- id: reveal
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The second peak moves later
+  title_zh: 第二个高峰推迟了
+  title_zh_hk: 第二個高峰推遲咗
+  row1_en: Revised orders
+  row1_zh: 调整后的订单
+  row1_zh_hk: 修訂後嘅訂單
+  row2_en: Revised C positions
+  row2_zh: 调整后的C岗位
+  row2_zh_hk: 修訂後嘅C崗位
+  row3_en: Retention idea
+  row3_zh: 带薪留岗设想
+  row3_zh_hk: 帶薪留崗構想
+  col1_en: Months 1 to 6
+  col1_zh: 第1到第6月
+  col1_zh_hk: 第1到第6月
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11_en: 80, 80, 140, 80, 80, 140
+  c11_zh: 80、80、140、80、80、140
+  c11_zh_hk: 80、80、140、80、80、140
+  c12_en: Still 600 in total
+  c12_zh: 合计仍是600
+  c12_zh_hk: 合計仍然係600
+  c21_en: 4, 4, 7, 4, 4, 7
+  c21_zh: 4、4、7、4、4、7
+  c21_zh_hk: 4、4、7、4、4、7
+  c22_en: Then back to five
+  c22_zh: 然后回到5个岗位
+  c22_zh_hk: 然後回到5個崗位
+  c31_en: Keep 7 in months 4–5
+  c31_zh: 第4、5月留下7人
+  c31_zh_hk: 第4、5月留下7人
+  c32_en: Paid, making only 80
+  c32_zh: 照付薪，只产80箱
+  c32_zh_hk: 照付薪，只產80箱
+  footer_en: The agreed delay is no longer needed
+  footer_zh: 约定延期已不再需要
+  footer_zh_hk: 約定延期已不再需要
+  s1_en: >-
+    Before any staffing change or production begins, the customer moves 60 boxes from month 5 to month
+    6. Orders are now 80, 80, 140, 80, 80 and 140. The total is still 600. The original delayed-delivery
+    allowance is no longer needed.
+  s1_zh: >-
+    在人员還未调整、生产還未开始之前，客户把六十个箱子从第五个月改到第六个月。订单变成八十、八十、一百四十、八十、八十、一百四十。合计仍是六百。原来的可选延期交货，已经不再需要。
+  s1_zh_hk: >-
+    喺人手還未調整、生產還未開始之前，客戶把六十個收納箱由第五個月改到第六個月。訂單變成八十、八十、一百四十、八十、八十、一百四十。合計仍然係六百。原來可選用嘅延期交貨，已經不再需要。
+  s2_en: >-
+    L can still make 100 boxes a month. C can revise positions to 4, 4, 7, 4, 4 and 7, then return to
+    five. All changes can still be planned with the required training lead time; there are no sunk adjustment
+    costs yet.
+  s2_zh: >-
+    L仍然可以每月生产一百个箱子。C可以把各月岗位数改为四、四、七、四、四、七，然后再回到五个。所有调整仍可按所需培训提前期来安排，目前还没有已经沉没的人员调整成本。
+  s2_zh_hk: >-
+    L仍然可以每月生產一百個收納箱。C可以把各月崗位數改為四、四、七、四、四、七，然後再回到五個。所有調整仍可按所需培訓前置時間嚟安排，目前仲未有已經沉沒嘅人手調整成本。
+  s3_en: >-
+    A manager proposes keeping all seven trained positions through months 4 and 5. They remain fully paid
+    but make only the 80 boxes due each month. No extra inventory or other assignment is supplied in this
+    variant, and no quantified continuity benefit is given.
+  s3_zh: >-
+    有一位经理提议，第四、第五个月都保留七个岗位。这些人仍然全额付薪，但每月只生产到期的八十个箱子。这个留岗方案没有额外库存，也没有其他生产任务，更没有给出可量化的团队稳定收益。
+  s3_zh_hk: >-
+    有一位經理提議，第四、第五個月都保留七個崗位。呢啲人仍然全額付薪，但每月只生產到期嘅八十個收納箱。呢個留崗方案冇額外存貨，亦都冇其他生產任務，更冇給出可量化嘅團隊延續收益。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: L, revised C, or paid retention?
+  title_zh: 选L、调整后的C，还是留岗？
+  title_zh_hk: 揀L、修訂後嘅C，定留崗？
+  en: >-
+    How would you revise the plan now that the second peak is later? Compare L, revised C and the paid-retention
+    variant, and explain why equal totals need not mean equal timing costs. Pause and vote again.
+  zh: 第二个高峰推迟了，你会怎样调整方案？请比较L、调整后的C，以及带薪留岗方案，并说明为什么总量相同，时序成本却不必相同。请暂停，再投一次票。
+  zh_hk: 第二個高峰推遲咗，你會點樣調整方案？請比較L、修訂後嘅C，以及帶薪留崗方案，並說明點解總量相同，時序成本卻唔一定相同。暫停，再投一次票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Follow the month-end balance
+  title_zh: 逐月核算库存余额
+  title_zh_hk: 逐月追蹤存貨結餘
+  step1_en: Initial L totals HK$628,000
+  step1_zh: 最初L合计628,000港元
+  step1_zh_hk: 最初L合計628,000港元
+  step2_en: Initial C totals HK$635,000
+  step2_zh: 最初C合计635,000港元
+  step2_zh_hk: 最初C合計635,000港元
+  s1_en: >-
+    For the first calendar, L’s month-end net stock is 20, 40, 0, 20, minus 20, then 0. The negative entry
+    means 20 agreed delayed boxes, not negative physical stock. Holding is 80 box-months, or 8,000 dollars,
+    plus 20,000 dollars for the agreed delay.
+  s1_zh: >-
+    按最初的日历，L的月末净库存是二十、四十、零、二十、负二十，然后是零。负数表示二十个已约定延期的箱子，不是实物库存为负。持有量是八十个箱月，也就是八千港元，再加上约定延期的两万港元。
+  s1_zh_hk: >-
+    按最初嘅日曆，L嘅月末淨存貨係二十、四十、零、二十、負二十，然後係零。負數表示二十個已約定延期嘅收納箱，唔係實物存貨為負。持有量係八十個箱月，也就是八千港元，再加上約定延期嘅兩萬港元。
+  s2_en: >-
+    Five positions for six months cost 600,000 dollars, so L’s compared total is 628,000 dollars. The
+    40-box storage limit is respected.
+  s2_zh: 五个岗位用六个月，成本六十万港元，因此L的比较成本是六十二万八千港元。四十个箱子的库存上限得到遵守。
+  s2_zh_hk: 五個崗位用六個月，成本六十萬港元，所以L嘅比較成本係六十二萬八千港元。四十個收納箱嘅存貨上限得到遵守。
+  s3_en: >-
+    Initial C uses 30 position-months, also 600,000 dollars, but seven additions and seven endings cost
+    35,000 dollars, for a total of 635,000, with no stock or delay. L is 7,000 dollars lower, but it uses
+    the agreed delivery variation.
+  s3_zh: >-
+    最初的C使用三十个岗位月，同样是六十万港元，但七次增设和七次结束要三万五千港元，合计六十三万五千港元，没有库存，也没有延期。L低七千港元，但它用了约定的交货调整。
+  s3_zh_hk: >-
+    最初嘅C使用三十個崗位月，同樣係六十萬港元，但七次增設同七次結束要三萬五千港元，合計六十三萬五千港元，冇存貨，亦都冇延期。L低七千港元，但它用咗約定嘅交貨調整。
+  step3_en: L is HK$7,000 lower here
+  step3_zh: 这里L低7,000港元
+  step3_zh_hk: 呢度L低7,000港元
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: A later peak changes the path
+  title_zh: 高峰推迟，路径也变了
+  title_zh_hk: 高峰一推遲，路徑就唔同
+  step1_en: Revised L totals HK$612,000
+  step1_zh: 调整后L为612,000港元
+  step1_zh_hk: 修訂後L係612,000港元
+  step2_en: Revised C totals HK$630,000
+  step2_zh: 调整后C为630,000港元
+  step2_zh_hk: 修訂後C係630,000港元
+  s1_en: >-
+    After the peak moves, revised L ends months with 20, 40, 0, 20, 40 and 0 boxes. Holding is 120 box-months,
+    or 12,000 dollars, with no backlog, for a total of 612,000 dollars.
+  s1_zh: 高峰推迟后，调整后的L月末库存是二十、四十、零、二十、四十、零。持有量是一百二十个箱月，也就是一万二千港元，没有积压，合计六十一万二千港元。
+  s1_zh_hk: 高峰推遲之後，修訂後嘅L月末存貨係二十、四十、零、二十、四十、零。持有量係一百二十個箱月，也就是一萬二千港元，冇積壓，合計六十一萬二千港元。
+  s2_en: >-
+    Revised C still uses 30 position-months, but now needs six additions and six endings, including the
+    first reduction and the final return to five. Adjustment cost is 30,000 dollars, for a total of 630,000.
+  s2_zh: 调整后的C仍然使用三十个岗位月，但现在只需六次增设和六次结束，包括期初减员和期末回到五个岗位。人员调整成本是三万港元，合计六十三万港元。
+  s2_zh_hk: 修訂後嘅C仍然使用三十個崗位月，但而家只需六次增設同六次結束，包括期初減員同期末回到五個崗位。人手調整成本係三萬港元，合計六十三萬港元。
+  s3_en: >-
+    Keeping seven positions in both quiet months adds six paid position-months, or 120,000 dollars, and
+    saves 15,000 dollars of avoided changes. Relative to revised C that is 105,000 dollars more, or 735,000
+    in total. Continuity may have value beyond these figures, but it is not a cost saving here.
+  s3_zh: >-
+    在两个淡季月份都保留七个岗位，会多付六个岗位月，也就是十二万港元，同时省下三万五千里的一万五千港元调整费用。相对调整后的C，净增多十万五千港元，合计七十三万五千港元。团队稳定可能有数字以外的价值，但在这里不能说成省了钱。
+  s3_zh_hk: >-
+    喺兩個淡季月份都保留七個崗位，會多付六個崗位月，也就是十二萬港元，同時慳到一萬五千港元調整費用。相對修訂後嘅C，淨增多十萬五千港元，合計七十三萬五千港元。團隊延續性可能有數字以外嘅價值，但喺呢度唔能夠話成慳咗錢。
+  step3_en: Retention adds HK$105,000
+  step3_zh: 留岗再多105,000港元
+  step3_zh_hk: 留崗再多105,000港元
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Equal totals can hide timing costs
+  title_zh: 总量相同仍可能时序成本不同
+  title_zh_hk: 總量相同仍然可能時序成本唔同
+  en: >-
+    Do not average 600 boxes into 100 a month and stop. Follow the month-end balance, mark any agreed
+    delay, and count starting and ending staffing changes. On the revised figures, L is lowest of the
+    three, but it is not proven to be a global optimum.
+  zh: >-
+    不要把六百个箱子平均成每月一百个就停下来。要逐月核对余额，标出约定延期，并把期初和期末的人员调整都算进去。按调整后给定的成本，三个方案里L最低，但不能证明它是全局最优。
+  zh_hk: >-
+    唔好把六百個收納箱平均成每月一百個就停低。要逐月核對結餘，標出約定延期，并把期初同期末嘅人手調整都算進去。按修訂後給定嘅成本，三個方案裏面L最低，但唔能夠證明佢係全局最優。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Timing costs are not just totals
+  title_zh: 时序成本不只是合计数
+  title_zh_hk: 時序成本唔只係合計數
+  q1_en: A later peak can remove the need for delay
+  q1_zh: 高峰推迟可能不再需要延期
+  q1_zh_hk: 高峰推遲可能不再需要延期
+  q2_en: Paid retention is not automatically cheaper
+  q2_zh: 带薪留岗不一定更便宜
+  q2_zh_hk: 帶薪留崗唔一定更平
+  s1_en: >-
+    After the second peak moves to month 6, steady output is the lowest of the three compared totals,
+    at 612,000 dollars. Following the peak costs 630,000, and keeping seven people through the quiet months
+    costs 735,000.
+  s1_zh: 第二个高峰改到第六个月后，稳定生产在三个比较方案里成本最低，是六十一万二千港元。跟着高峰走是六十三万港元，淡季留下七个人是七十三万五千港元。
+  s1_zh_hk: >-
+    第二個高峰改到第六個月之後，維持產量喺三個比較方案裏面成本最低，係六十一萬二千港元。跟隨高峰係六十三萬港元，淡季留下七個人係七十三萬五千港元。
+  s2_en: >-
+    The workshop, orders, positions and cost quotes are fictional classroom assumptions. Official scene
+    art is a teaching illustration only.
+  s2_zh: 这家工场、订单、岗位和成本报价，都是虚构的课堂假设。官方场景图只是教学插图。
+  s2_zh_hk: 呢間工場、訂單、崗位同成本報價，都係虛構嘅課堂假設。官方場景圖只係教學插圖。
+  s3_en: >-
+    The manpower projection supplies context, not evidence for any classroom number.
+  s3_zh: 人力推算只提供背景，不能当作课堂上这些数字的证据。
+  s3_zh_hk: 人力推算只提供背景，唔可以當作課堂上呢啲數字嘅證據。
+duration_target_s: 196

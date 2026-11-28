@@ -1,0 +1,324 @@
+id: OPS-14
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A shorter route. A missed window?
+title_zh: 路线更短，却错过时间窗？
+title_zh_hk: 路線更短，卻趕不上時間窗？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-14
+  kicker_en: OPS-14
+  kicker_zh: OPS-14
+  kicker_zh_hk: OPS-14
+  title_en: A shorter route. A missed window?
+  title_zh: 路线更短，却错过时间窗？
+  title_zh_hk: 路線更短，卻趕不上時間窗？
+  image: art/route-and-window-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A delivery van can choose a shorter loop and still miss a service window. Distance is not the same
+    as a feasible timetable. This urban round, and every minute and kilometre, is fictional.
+  zh: 送货车可以选一条更短的回路，却仍然错过服务时间窗。路程短，不等于时间表可行。课堂上这条市区线路，以及每一分钟和每一公里，都是虚构的。
+  zh_hk: 送貨車可以揀一條更短嘅回路，卻仍然錯過服務時間窗。路程短，唔等於時間表可行。課堂上呢條市區路線，以及每一分鐘同每一公里，都係虛構嘅。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two candidate routes
+  title_zh: 两条候选路线
+  title_zh_hk: 兩條候選路線
+  row1_en: >-
+    Route 1: D-A-B-C-D
+  row1_zh: 路线1：D-A-B-C-D
+  row1_zh_hk: 路線1：D-A-B-C-D
+  row2_en: >-
+    Route 2: D-B-A-C-D
+  row2_zh: 路线2：D-B-A-C-D
+  row2_zh_hk: 路線2：D-B-A-C-D
+  col1_en: Distance
+  col1_zh: 路程
+  col1_zh_hk: 路程
+  col2_en: Travel
+  col2_zh: 行驶
+  col2_zh_hk: 行駛
+  col3_en: Return
+  col3_zh: 返回
+  col3_zh_hk: 返回
+  c11_en: 14 km
+  c11_zh: 14公里
+  c11_zh_hk: 14公里
+  c12_en: 60 min
+  c12_zh: 60分钟
+  c12_zh_hk: 60分鐘
+  c13_en: >-
+    10:30
+  c13_zh: >-
+    10:30
+  c13_zh_hk: >-
+    10:30
+  c21_en: 17 km
+  c21_zh: 17公里
+  c21_zh_hk: 17公里
+  c22_en: 70 min
+  c22_zh: 70分钟
+  c22_zh_hk: 70分鐘
+  c23_en: >-
+    10:40
+  c23_zh: >-
+    10:40
+  c23_zh_hk: >-
+    10:40
+  footer_en: Service time 10 minutes at each stop
+  footer_zh: 每站服务10分钟
+  footer_zh_hk: 每站服務10分鐘
+  s1_en: >-
+    A van leaves depot D and must serve stops A, B and C, each with a time window and a ten-minute service.
+    Route 1 goes D, A, B, C, D: 14 kilometres, 60 minutes of travel plus 30 minutes of service, and a
+    10:30 return. The planned calls are 9:15 to 9:25 at A, 9:35 to 9:45 at B, and 10:00 to 10:10 at C.
+  s1_zh: >-
+    一辆货车从车场D出发，必须服务站点A、B、C，每个站点都有时间窗，服务时间十分钟。路线1按D、A、B、C、D走：十四公里，行驶六十分钟，加上三十分钟服务，十点三十分返回。计划到达是A站九点十五到九点二十五，B站九点三十五到九点四十五，C站十点到十点十分。
+  s1_zh_hk: >-
+    一輛貨車由車場D出發，必須服務站點A、B、C，每個站點都有時間窗，服務時間十分鐘。路線1按D、A、B、C、D走：十四公里，行駛六十分鐘，加上三十分鐘服務，十時三十分返回。計劃到達係A站九時十五至九時二十五，B站九時三十五至九時四十五，C站十時至十時十分。
+  s2_en: >-
+    Route 2 goes D, B, A, C, D: 17 kilometres and 70 minutes of travel, returning at 10:40. The planned
+    calls are 9:20 to 9:30 at B, 9:40 to 9:50 at A, and 10:10 to 10:20 at C.
+  s2_zh: >-
+    路线2按D、B、A、C、D走：十七公里，行驶七十分钟，十点四十分返回。计划到达是B站九点二十到九点三十，A站九点四十到九点五十，C站十点十分到十点二十。
+  s2_zh_hk: >-
+    路線2按D、B、A、C、D走：十七公里，行駛七十分鐘，十時四十分返回。計劃到達係B站九時二十至九時三十，A站九時四十至九時五十，C站十時十至十時二十。
+  s3_en: >-
+    On the opening windows, both routes look feasible. The shorter route also returns ten minutes earlier.
+    The question is which route to choose before the windows are reconfirmed.
+  s3_zh: 按起初的时间窗，两条路线都看起来可行。更短的路线还早十分钟返回。问题是：在重新确认时间窗之前，该选哪一条。
+  s3_zh_hk: 按起初嘅時間窗，兩條路線都睇落可行。更短嘅路線仲早十分鐘返回。問題係：喺重新確認時間窗之前，該揀邊一條。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Which route would you choose first?
+  title_zh: 你会先选哪一条路线？
+  title_zh_hk: 你會先揀邊一條路線？
+  en: >-
+    Which route would you choose on the opening windows? Would you prefer the shorter loop, or the longer
+    one, and what would you still want reconfirmed? Pause and vote.
+  zh: 按起初的时间窗，你会选哪一条路线？你更倾向于更短的回路，还是更长的那条？还有什么需要再确认？请暂停，投个票。
+  zh_hk: 按起初嘅時間窗，你會揀邊一條路線？你較傾向更短嘅回路，定係更長嗰條？仲有咩需要再確認？暫停，投個票。
+- id: reveal
+  visual: table_grid
+  seconds: 24
+  rows: 2
+  cols: 2
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Windows after confirmation
+  title_zh: 确认后的时间窗
+  title_zh_hk: 確認後嘅時間窗
+  row1_en: Stop A
+  row1_zh: 站点A
+  row1_zh_hk: 站點A
+  row2_en: Stop B
+  row2_zh: 站点B
+  row2_zh_hk: 站點B
+  col1_en: Revised constraint
+  col1_zh: 调整后的约束
+  col1_zh_hk: 修訂後嘅限制
+  col2_en: Route 1 problem
+  col2_zh: 路线1的问题
+  col2_zh_hk: 路線1嘅問題
+  c11_en: >-
+    Window until 10:10
+  c11_zh: >-
+    时间窗至10:10
+  c11_zh_hk: >-
+    時間窗至10:10
+  c12_en: A is still feasible
+  c12_zh: A站仍然可行
+  c12_zh_hk: A站仍然可行
+  c21_en: >-
+    Start by 9:20; done by 9:35
+  c21_zh: >-
+    9:20前开始，9:35完成
+  c21_zh_hk: >-
+    9:20前開始，9:35完成
+  c22_en: >-
+    Route 1 finishes at 9:45
+  c22_zh: >-
+    路线1完成于9:45
+  c22_zh_hk: >-
+    路線1完成於9:45
+  footer_en: Stop C is unchanged
+  footer_zh: C站没有变化
+  footer_zh_hk: C站冇變
+  s1_en: >-
+    After confirmation, stop A’s window runs until 10:10. Stop B must start no later than 9:20 and finish
+    by 9:35. Stop C is unchanged. These are the two candidate routes already drawn; the case does not
+    invent a third tour.
+  s1_zh: >-
+    确认之后，A站的时间窗到十点十分。B站必须不晚于九点二十开始，并在九点三十五前完成。C站没有变化。只比较已经给出的两条候选路线，本案例不另设第三条线路。
+  s1_zh_hk: >-
+    確認之後，A站嘅時間窗到十時十分。B站必須唔遲於九時二十開始，並喺九時三十五前完成。C站冇變。只比較已經給出嘅兩條候選路線，本個案唔另外設第三條路線。
+  s2_en: >-
+    On Route 1, service at B still finishes at 9:45, after the revised close. That route is no longer
+    feasible. Check Route 2 against the same constraints, including the extra distance and travel time.
+  s2_zh: 在路线1上，B站仍然要到九点四十五才完成，已经超过调整后的截止时间。这条路线不再可行。请按同样的约束核路线2，包括多出的路程和行驶时间。
+  s2_zh_hk: 喺路線1上面，B站仍然要到九時四十五先完成，已經超過修訂後嘅截止時間。呢條路線不再可行。請按同樣嘅限制核對路線2，包括多出嘅路程同行駛時間。
+  s3_en: >-
+    A feasible timetable on paper is not a guarantee under live traffic. Reconsider which route, if either,
+    you would dispatch.
+  s3_zh: 纸面上可行的时间表，并不保证实际路况下一定能准时。请重新考虑，这两条里你会派哪一条，或者都不派。
+  s3_zh_hk: 紙面上可行嘅時間表，並唔保證實際路況下一定能夠準時。請重新考慮，呢兩條裏面你會派邊一條，或者兩條都唔派。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Is the longer route now the feasible one?
+  title_zh: 更长的路线现在可行吗？
+  title_zh_hk: 更長嘅路線而家可行嗎？
+  en: >-
+    After the confirmed windows, is Route 2 feasible, and what extra distance and time does it add? Would
+    you still dispatch it, and what remains uncertain? Pause and vote again.
+  zh: 确认时间窗之后，路线2是否可行？它会多出多少路程和时间？你还会派出这条线吗？还有哪些不确定？请暂停，再投一次票。
+  zh_hk: 確認時間窗之後，路線2係咪可行？佢會多出幾多路程同時間？你仲會唔會派出呢條線？仲有邊啲唔確定？暫停，再投一次票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Check each stop against the clock
+  title_zh: 逐段核对时间
+  title_zh_hk: 逐站核對時間
+  step1_en: >-
+    Route 1 finishes B at 9:45
+  step1_zh: >-
+    路线1在9:45完成B站
+  step1_zh_hk: >-
+    路線1喺9:45完成B站
+  step2_en: >-
+    Route 2: B 9:30, A 9:50, C 10:20
+  step2_zh: >-
+    路线2：B 9:30，A 9:50，C 10:20
+  step2_zh_hk: >-
+    路線2：B 9:30，A 9:50，C 10:20
+  s1_en: >-
+    Look beyond the map and check each stop against the clock. Route 1 still finishes B at 9:45, so it
+    misses the revised 9:35 close and cannot be used.
+  s1_zh: 不只看地图上的路线，还要逐段核对时间。路线1仍然在九点四十五完成B站，错过了调整后九点三十五的截止时间，因此不能采用。
+  s1_zh_hk: 唔好淨係睇地圖上嘅路線，都要逐站核對時間。路線1仍然喺九時四十五完成B站，錯過咗修訂後九時三十五嘅截止時間，所以唔能夠採用。
+  s2_en: >-
+    Route 2 is feasible under the confirmed windows: B is finished at 9:30, A at 9:50, which is still
+    before 10:10, C at 10:20, and the van returns to D at 10:40.
+  s2_zh: 按确认后的时间窗，路线2可行：B站九点三十完成，A站九点五十完成，仍早于十点十分，C站十点二十，货车十点四十回到D。
+  s2_zh_hk: 按確認後嘅時間窗，路線2可行：B站九時三十完成，A站九時五十完成，仍然早過十時十分，C站十時二十，貨車十時四十回到D。
+  s3_en: >-
+    The feasible route adds three kilometres and ten minutes of travel compared with the shorter loop.
+    A shorter route that misses a window is not the better choice here.
+  s3_zh: 这条可行路线，比更短的回路多出三公里，以及十分钟行驶时间。在这里，错过时间窗的短路线，并不是更好的选择。
+  s3_zh_hk: 呢條可行路線，比更短嘅回路多出三公里，以及十分鐘行駛時間。喺呢度，錯過時間窗嘅短路線，並唔係更好嘅選擇。
+  step3_en: Extra 3 km and 10 minutes
+  step3_zh: 多出3公里和10分钟
+  step3_zh_hk: 多出3公里同10分鐘
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 22
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Feasible is not a traffic guarantee
+  title_zh: 可行不是路况保证
+  title_zh_hk: 可行唔等於路況保證
+  step1_en: Recheck after a window changes
+  step1_zh: 时间窗一变就要重核
+  step1_zh_hk: 時間窗一變就要重核
+  step2_en: Do not invent a third tour here
+  step2_zh: 这里不要另设第三条线
+  step2_zh_hk: 呢度唔好另設第三條線
+  s1_en: >-
+    When a window is revised, recheck the same candidates against the new constraints. The shorter loop
+    was acceptable only before B’s close was tightened.
+  s1_zh: 时间窗调整后，要用新的约束，重新核对同一批候选路线。更短的回路，只在B站截止时间收紧之前才可以接受。
+  s1_zh_hk: 時間窗修訂之後，要用新嘅限制，重新核對同一批候選路線。更短嘅回路，只喺B站截止時間收緊之前先可以接受。
+  s2_en: >-
+    The case compares only these two stated routes. A different sequence, an earlier departure or a split
+    visit would be a different plan, and is not supplied here.
+  s2_zh: 本案例只比较已经给出的两条路线。如果改顺序、更早出发，或者分开拜访，那就是另一套计划，这里没有提供。
+  s2_zh_hk: 本個案只比較已經給出嘅兩條路線。如果改順序、更早出發，或者分開探訪，那就係另一套計劃，呢度冇提供。
+  s3_en: >-
+    Even the feasible timetable can be delayed by traffic, loading or a blocked kerbside. A feasible plan
+    is not a guarantee that the van will be on time on the day.
+  s3_zh: 即使是可行的时间表，也可能被路况、装卸或者路边受阻耽误。方案可行，不代表实际路况下一定能准时。
+  s3_zh_hk: 即使係可行嘅時間表，都可能被路況、裝卸或者路邊受阻耽誤。方案可行，唔等於路況有保證，當日一定準時。
+  step3_en: A paper timetable is not a live-traffic guarantee
+  step3_zh: 纸面时间表不是路况保证
+  step3_zh_hk: 紙面時間表唔係路況保證
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: A short loop can still miss a window
+  title_zh: 短路程仍可能错过时间窗
+  title_zh_hk: 短路程仍然可能錯過時間窗
+  en: >-
+    Choose a route only after every stop fits its window, including service time and the return. If a
+    key window tightens, a previously attractive short loop can become infeasible, and a longer loop may
+    be the one that still works.
+  zh: >-
+    只有每个站点都落在时间窗内，包括服务时间和返回，才能选定路线。如果关键时间窗收紧，原先更有吸引力的短回路可能变得不可行，更长的回路反而仍然走得通。
+  zh_hk: >-
+    只有每個站點都落喺時間窗之內，包括服務時間同返回，先可以選定路線。如果關鍵時間窗收緊，原先更有吸引力嘅短路仍可能變得不可行，更長嘅回路反而仍然行得通。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Fit the window, then compare distance
+  title_zh: 先符合时间窗，再比路程
+  title_zh_hk: 先符合時間窗，再比路程
+  q1_en: The short route misses the new close at B
+  q1_zh: 短路线赶不上B站新截止时间
+  q1_zh_hk: 短路線趕唔上B站新截止時間
+  q2_en: The longer route adds 3 km and 10 minutes
+  q2_zh: 较长路线多3公里和10分钟
+  q2_zh_hk: 較長路線多3公里同10分鐘
+  s1_en: >-
+    After confirmation, only Route 2 remains feasible among the two candidates. It returns at 10:40 and
+    costs three extra kilometres and ten extra minutes.
+  s1_zh: 确认之后，两条候选路线里只剩路线2可行。它十点四十返回，多出三公里和十分钟。
+  s1_zh_hk: 確認之後，兩條候選路線裏面只剩路線2可行。佢十時四十返回，多出三公里同十分鐘。
+  s2_en: >-
+    The van, stops, windows and travel times are fictional classroom assumptions. Official scene art is
+    a teaching illustration only.
+  s2_zh: 这辆货车、站点、时间窗和行驶时间，都是虚构的课堂假设。官方场景图只是教学插图。
+  s2_zh_hk: 呢輛貨車、站點、時間窗同行駛時間，都係虛構嘅課堂假設。官方場景圖只係教學插圖。
+  s3_en: >-
+    Local traffic rules supply context, not evidence for any classroom minute or kilometre.
+  s3_zh: 本地通行提示只提供背景，不能当作课堂上这些分钟或公里的证据。
+  s3_zh_hk: 本地道路使用限制嘅提醒只提供背景，唔可以當作課堂上呢啲分鐘或公里嘅證據。
+duration_target_s: 186

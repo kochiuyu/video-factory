@@ -1,0 +1,293 @@
+id: OPS-16
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Keep every station busy. Finish orders sooner?
+title_zh: 每道工序都忙起来，订单就能更早完工？
+title_zh_hk: 讓每個工序都忙起來，訂單就能更快完成？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-16
+  kicker_en: OPS-16
+  kicker_zh: OPS-16
+  kicker_zh_hk: OPS-16
+  title_en: Keep every station busy. Finish orders sooner?
+  title_zh: 每道工序都忙起来，订单就能更早完工？
+  title_zh_hk: 讓每個工序都忙起來，訂單就能更快完成？
+  image: art/started-is-not-finished-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Hong Kong factories have long discussed lean production and work-in-process control. Keeping every
+    station busy is not the same as finishing orders sooner. This workshop, and every figure, is fictional.
+  zh: 香港工厂很早就在讨论精益生产和在制品控制。每道工序都忙起来，并不等于订单会更早完工。课堂上的这家工场，以及全部数字，都是虚构的。
+  zh_hk: 香港工廠好早就喺度討論精益生產同在製品控制。每個工序都忙起來，並唔等於訂單會更快完成。課堂上呢間工場，同埋全部數字，都係虛構嘅。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Five busy days, then a proposal
+  title_zh: 忙了五天，然后有个提议
+  title_zh_hk: 忙咗五日，然後有個提議
+  row1_en: Each of five days
+  row1_zh: 这五天里每天
+  row1_zh_hk: 呢五日裏面每日
+  row2_en: After five days
+  row2_zh: 五天之后
+  row2_zh_hk: 五日之後
+  col1_en: Released
+  col1_zh: 投产
+  col1_zh_hk: 投產
+  col2_en: Finished
+  col2_zh: 完工
+  col2_zh_hk: 完工
+  col3_en: On the floor
+  col3_zh: 在制品
+  col3_zh_hk: 在製品
+  c11: '8'
+  c12: '4'
+  c13_en: Up 4 a day
+  c13_zh: 每天多4单
+  c13_zh_hk: 每日多4單
+  c21: '40'
+  c22: '20'
+  c23: '20'
+  footer_en: Completion is still 4 orders a day
+  footer_zh: 完工仍是每天4单
+  footer_zh_hk: 完工仍然係每日4單
+  s1_en: >-
+    A workshop has been releasing eight orders a day, while only four are completed. Work-in-process on
+    the floor therefore rises by four orders a day. Over five days, twenty extra orders accumulate on
+    the floor. Daily completions stay at four.
+  s1_zh: 这家工场每天投产八张订单，但每天只完工四张。因此，车间里的在制品每天增加四张。五天里，车间多积了二十张订单。每天的完工量仍是四张。
+  s1_zh_hk: 呢間工場每日投產八張訂單，但每日只完工四張。所以，工場裏嘅在製品每日增加四張。五日裏面，工場多積咗二十張訂單。每日嘅完工量仍然係四張。
+  s2_en: >-
+    A supervisor proposes a release cap: start a new order only when one is finished, so that the floor
+    holds a stable twelve orders. Another colleague wants every station kept busy, and argues that a fuller
+    floor means orders will finish sooner.
+  s2_zh: >-
+    一位主管提议设置投产上限：只有一张订单完工，才开工一张新的，好让车间稳定保持十二张在制品。另一位同事希望每道工序都忙着，并认为车间更满，订单就会更早完工。
+  s2_zh_hk: >-
+    一位主管提議設定投產上限：只有一張訂單完工，先開工一張新嘅，等工場穩定保持十二張在製品。另一位同事希望每個工序都忙住，並認為工場更滿，訂單就會更快完成。
+  s3_en: >-
+    The five-day burst is a growing period, not a stable average. Before comparing floor time or customer
+    time, the class has to be clear which period is being measured.
+  s3_zh: 这五天是在制品增加的阶段，不是稳定的平均数。比较车间时间或客户时间之前，要先说清量的是哪一段时间。
+  s3_zh_hk: 呢五日係在製品增加嘅階段，唔係穩定嘅平均數。比較工場時間或顧客時間之前，要先講清量嘅係邊一段時間。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Cap releases, or keep every station busy?
+  title_zh: 限制投产，还是让每站都忙？
+  title_zh_hk: 限制投產，定讓每站都忙？
+  en: >-
+    Would you cap new releases so that twelve orders stay on the floor, or keep releasing work to keep
+    every station busy? What would you measure before claiming that orders finish sooner? Pause and vote.
+  zh: 你会限制新订单投产，让车间保持十二张在制品，还是继续投产，好让每道工序都忙着？要声称订单会更早完工，你先会量什么？请暂停，投个票。
+  zh_hk: 你會限制新訂單投產，讓工場保持十二張在製品，定係繼續投產，等每個工序都忙住？要聲稱訂單會更快完成，你會先量啲咩？暫停，投個票。
+- id: reveal
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Two stable averages to compare
+  title_zh: 两个稳定平均数
+  title_zh_hk: 兩個穩定平均數
+  row1_en: Policy A, no cap
+  row1_zh: 方案A，不设上限
+  row1_zh_hk: 方案A，唔設上限
+  row2_en: Policy B, cap at 12
+  row2_zh: 方案B，上限12张
+  row2_zh_hk: 方案B，上限12張
+  col1_en: On the floor
+  col1_zh: 车间在制品
+  col1_zh_hk: 工場在製品
+  col2_en: Waiting to start
+  col2_zh: 等待投产
+  col2_zh_hk: 等待投產
+  col3_en: Completions a day
+  col3_zh: 每天完工
+  col3_zh_hk: 每日完工
+  c11: '24'
+  c12: '0'
+  c13: '4'
+  c21: '12'
+  c22: '12'
+  c23: '4'
+  footer_en: Use only these stable averages
+  footer_zh: 只用这些稳定平均数
+  footer_zh_hk: 只用呢啲穩定平均數
+  s1_en: >-
+    After the burst, compare two stable policies. Completions remain four orders a day in both. Policy
+    A has no release cap: twenty-four orders sit on the floor, and none wait off the floor.
+  s1_zh: 这一轮过后，比较两种稳定政策。两种情况下，每天完工仍是四张。方案A不设投产上限：二十四张订单在车间里，没有订单在车间外等待。
+  s1_zh_hk: 呢一輪之後，比較兩種穩定政策。兩種情況下，每日完工仍然係四張。方案A唔設投產上限：二十四張訂單喺工場裏，冇訂單喺工場外等待。
+  s2_en: >-
+    Policy B caps the floor at twelve. Another twelve accepted orders wait unreleased. The cap does not
+    increase capacity; it only changes where work waits. Little’s law is to be used only on these supplied
+    stable averages.
+  s2_zh: >-
+    方案B把车间上限设为十二张。另外十二张已经接受的订单，在未投产的队列里等待。管控规则不会增加产能，只会改变工作在哪里等待。只有这些给定的稳定平均数，才用来应用利特尔法则。
+  s2_zh_hk: >-
+    方案B把工場上限設為十二張。另外十二張已經接受嘅訂單，喺未投產嘅隊列裏面等待。控制規則唔會增加產能，只會改變工作喺邊度等待。只有呢啲給定嘅穩定平均數，先用來應用利特爾法則。
+  s3_en: >-
+    A colleague claims that policy B cuts customer time from six days to three, because twelve divided
+    by four is three. Check that claim by drawing the boundary first: floor time is not the same as time
+    from acceptance to completion.
+  s3_zh: 有同事声称，方案B能把客户时间从六天减到三天，因为十二除以四等于三。请先画清边界再核这个说法：车间时间，不等于从接单到完工的时间。
+  s3_zh_hk: 有同事聲稱，方案B能夠把顧客時間由六日減到三日，因為十二除以四等於三。請先劃定量度範圍再核呢個說法：工場時間，唔等於由接單到完工嘅時間。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Does the cap cut customer time to three days?
+  title_zh: 上限能把客户时间减到三天吗？
+  title_zh_hk: 上限能唔能把顧客時間減到三日？
+  en: >-
+    Under the stable averages, what is floor time and what is acceptance-to-completion time under each
+    policy? Does the cap cut customer time to three days? Pause and vote again.
+  zh: 按这些稳定平均数，两种政策下的车间时间是多少，从接单到完工的时间又是多少？投产上限能把客户时间减到三天吗？请暂停，再投一次票。
+  zh_hk: 按呢啲穩定平均數，兩種政策之下嘅工場時間係幾多，由接單到完工嘅時間又係幾多？投產上限能唔能把顧客時間減到三日？暫停，再投一次票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Start more, finish no more
+  title_zh: 开工更多，完工并没有更多
+  title_zh_hk: 投產更多，完工量冇增加
+  step1_en: >-
+    A: 24/4 = 6 days on the floor
+  step1_zh: A：24÷4=6天在车间
+  step1_zh_hk: A：24÷4=6日喺工場
+  step2_en: >-
+    B: 12/4 = 3 days on the floor
+  step2_zh: B：12÷4=3天在车间
+  step2_zh_hk: B：12÷4=3日喺工場
+  s1_en: >-
+    Releasing more did not increase completions. In the five-day burst, eight went in and four came out
+    each day, so the floor grew. A stable comparison has to use the later averages, not that growing period.
+  s1_zh: 开工更多，完工并没有更多。那五天里，每天投产八张、完工四张，车间在制品增加。稳定比较要用后来的平均数，不能用这段增加期。
+  s1_zh_hk: 投產更多，完工量冇增加。嗰五日裏面，每日投產八張、完工四張，工場在製品增加。穩定比較要用後來嘅平均數，唔可以用呢段增加期。
+  s2_en: >-
+    Under policy A, floor time is twenty-four divided by four, or six days. Customer time, from acceptance
+    to completion, is also six days, because nothing waits off the floor.
+  s2_zh: 在方案A下，车间时间是二十四除以四，等于六天。从接单到完工的客户时间也是六天，因为没有订单在车间外等待。
+  s2_zh_hk: 喺方案A之下，工場時間係二十四除以四，等於六日。由接單到完工嘅顧客時間都係六日，因為冇訂單喺工場外等待。
+  s3_en: >-
+    Under policy B, floor time is twelve divided by four, or three days. The twelve unreleased orders
+    are another three days. Customer time is still twenty-four divided by four, or six days. The three-day
+    customer claim does not hold.
+  s3_zh: >-
+    在方案B下，车间时间是十二除以四，等于三天。十二张未投产的订单，又是三天。客户时间仍是二十四除以四，等于六天。所谓三天客户时间的说法，不成立。
+  s3_zh_hk: >-
+    喺方案B之下，工場時間係十二除以四，等於三日。十二張未投產嘅訂單，又係三日。顧客時間仍然係二十四除以四，等於六日。所謂三日顧客時間嘅說法，唔成立。
+  step3_en: Customer time stays 6 days
+  step3_zh: 客户时间仍是6天
+  step3_zh_hk: 顧客時間仍然係6日
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: A tidier floor is not a faster promise
+  title_zh: 车间更有序不是更快承诺
+  title_zh_hk: 工場更有條理唔等於更快承諾
+  step1_en: Draw the boundary first
+  step1_zh: 先画清量度范围
+  step1_zh_hk: 先劃定量度範圍
+  step2_en: The cap does not add capacity
+  step2_zh: 管控不会增加产能
+  step2_zh_hk: 控制規則唔會增加產能
+  s1_en: >-
+    A more orderly floor can still leave the customer waiting just as long, if the waiting has only moved
+    upstream of the release point. Do not turn a tidier workshop into a faster customer promise.
+  s1_zh: 车间更有序，不等于可以对客户作出更快的承诺。如果等待只是移到了投产点之前，客户等待的时间可以仍然一样长。
+  s1_zh_hk: 別把工場更有條理，變成誤導顧客嘅承諾。如果等待只係移到投產點之前，顧客等待嘅時間可以仍然一樣長。
+  s2_en: >-
+    Little’s law applies only to the supplied stable averages, and only inside a clearly drawn boundary.
+    The five-day burst was not a stable state, and should not be used as if it were.
+  s2_zh: 利特尔法则只适用于给定的稳定平均数，而且要先画清边界。那五天不是稳定状态，不能当成稳定状态来用。
+  s2_zh_hk: 利特爾法則只適用於給定嘅穩定平均數，而且要先劃定量度範圍。嗰五日唔係穩定狀態，唔可以當成穩定狀態嚟用。
+  s3_en: >-
+    A release cap changes where work waits. It does not raise the four-order completion rate in this case.
+    Quoting three days to customers would be misleading.
+  s3_zh: 投产上限改变的是工作在哪里等待。在本案例里，它不会把每天四张的完工量提高。向客户报价三天，会造成误导。
+  s3_zh_hk: 投產上限改變嘅係工作喺邊度等待。喺本個案裏面，佢唔會把每日四張嘅完工量提高。向顧客報價三日，會造成誤導。
+  step3_en: Do not quote three days to customers
+  step3_zh: 不要向客户报价三天
+  step3_zh_hk: 唔好向顧客報價三日
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Floor time is not customer time
+  title_zh: 车间时间不是客户时间
+  title_zh_hk: 工場時間唔等於顧客時間
+  en: >-
+    If unreleased work is left outside the floor count, a shorter floor time can hide an unchanged wait
+    from acceptance to completion. Before claiming a lead-time cut, say which jobs are inside the boundary,
+    and whether completions have actually risen.
+  zh: >-
+    如果未投产的订单被留在车间计数之外，更短的车间时间，可能掩盖从接单到完工仍然不变的等待。要声称缩短了提前期，先说清边界里包括哪些订单，以及完工量是否真的增加了。
+  zh_hk: >-
+    如果未投產嘅訂單被留喺工場計數之外，更短嘅工場時間，可能掩蓋由接單到完工仍然不變嘅等待。要聲稱縮短咗前置時間，先講清量度範圍包括邊啲訂單，以及完工量係咪真係增加咗。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Busy stations can still leave long waits
+  title_zh: 工序忙碌仍可能等得久
+  title_zh_hk: 工序忙碌仍然可能等得耐
+  q1_en: The cap cuts floor time, not customer time
+  q1_zh: 上限缩短车间时间，不是客户时间
+  q1_zh_hk: 上限縮短工場時間，唔係顧客時間
+  q2_en: Completions stay at four orders a day
+  q2_zh: 每天完工仍然是四张
+  q2_zh_hk: 每日完工仍然係四張
+  s1_en: >-
+    Under the stable averages, policy B halves time on the floor but leaves customer time at six days,
+    because twelve orders wait unreleased. The three-day claim should be rejected.
+  s1_zh: 按稳定平均数，方案B把车间时间减半，但客户时间仍是六天，因为有十二张订单在未投产处等待。三天的说法应予拒绝。
+  s1_zh_hk: 按穩定平均數，方案B把工場時間減半，但顧客時間仍然係六日，因為有十二張訂單喺未投產處等待。三日嘅說法應予拒絕。
+  s2_en: >-
+    The workshop, releases, caps and averages are fictional classroom assumptions. Official scene art
+    is a teaching illustration only.
+  s2_zh: 这家工场、投产、上限和平均数，都是虚构的课堂假设。官方场景图只是教学插图。
+  s2_zh_hk: 呢間工場、投產、上限同平均數，都係虛構嘅課堂假設。官方場景圖只係教學插圖。
+  s3_en: >-
+    Lean-production history supplies context, not evidence for any classroom number.
+  s3_zh: 精益生产的历史背景只提供情境，不能当作课堂上这些数字的证据。
+  s3_zh_hk: 精益生產嘅歷史背景只提供情境，唔可以當作課堂上呢啲數字嘅證據。
+duration_target_s: 192

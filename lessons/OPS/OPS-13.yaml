@@ -1,0 +1,321 @@
+id: OPS-13
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Promise Friday. Based on which stock?
+title_zh: 承诺星期五交货，靠的是哪批库存？
+title_zh_hk: 承諾星期五交貨，憑的是哪批存貨？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-13
+  kicker_en: OPS-13
+  kicker_zh: OPS-13
+  kicker_zh_hk: OPS-13
+  title_en: Promise Friday. Based on which stock?
+  title_zh: 承诺星期五交货，靠的是哪批库存？
+  title_zh_hk: 承諾星期五交貨，憑的是哪批存貨？
+  image: art/promise-by-when-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A made-to-order desk is promised only when the kit is released and there is time to assemble and deliver
+    it. A weekly stock total can hide a Friday shortage. This workshop, and every figure, is fictional.
+  zh: >-
+    定制书桌只有在组件放行、并且还有时间组装和送货时，才能承诺交货。一周的库存结余，可能掩盖星期五的缺口。课堂上的这家工场，以及全部数字，都是虚构的。
+  zh_hk: >-
+    訂製書桌只有喺組件放行、而且仲有時間組裝同送貨時，先可以承諾交貨。一星期嘅存貨結餘，可能掩蓋星期五嘅缺口。課堂上呢間工場，同埋全部數字，都係虛構嘅。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Weekly kit movement
+  title_zh: 一周组件进出
+  title_zh_hk: 一週組件進出
+  row1_en: Opening on-hand kits
+  row1_zh: 期初在手组件
+  row1_zh_hk: 期初在手組件
+  row2_en: Inbound after Sunday close
+  row2_zh: 周日打烊后到货
+  row2_zh_hk: 周日打烊後到貨
+  row3_en: Already allocated
+  row3_zh: 已经分配
+  row3_zh_hk: 已經分配
+  col1_en: Quantity
+  col1_zh: 数量
+  col1_zh_hk: 數量
+  col2_en: Timing
+  col2_zh: 时间
+  col2_zh_hk: 時間
+  c11: '10'
+  c12_en: Usable now
+  c12_zh: 现已可用
+  c12_zh_hk: 而家可用
+  c21: '8'
+  c22_en: Not yet released
+  c22_zh: 尚未放行
+  c22_zh_hk: 尚未放行
+  c31: '8'
+  c32_en: 6 Friday, 2 Saturday
+  c32_zh: 周五6套、周六2套
+  c32_zh_hk: 周五6套、周六2套
+  footer_en: >-
+    New request: 4 desks by Friday 2 p.m.
+  footer_zh: 新请求：周五下午2点交4张
+  footer_zh_hk: 新請求：周五下午2時交4張
+  s1_en: >-
+    A workshop starts the week with ten released kit sets on hand. Eight more arrive after Sunday closing,
+    but they are usable only after inspection. Eight kits are already allocated: six must start at 8 a.m.
+    on Friday, and two at 8 a.m. on Saturday.
+  s1_zh: >-
+    这家工场本周期初有十套已经放行的在手组件。周日打烊后再到八套，但只有通过检验放行后才能使用。已经分配了八套：六套必须星期五上午八点开工，两套星期六上午八点开工。
+  s1_zh_hk: >-
+    呢間工場本周期初有十套已經放行嘅在手組件。周日打烊後再到八套，但只有通過檢驗放行之後先可以用。已經分配咗八套：六套必須星期五上午八時開工，兩套星期六上午八時開工。
+  s2_en: >-
+    A new customer wants four desks delivered by 2 p.m. on Friday. Each desk needs four hours to assemble
+    and two hours to deliver, so work must start at 8 a.m. on Friday. Capacity for assembly and delivery
+    is given as sufficient in this case.
+  s2_zh: >-
+    一位新客户希望星期五下午两点送到四张书桌。每张书桌要四个小时组装、两个小时送货，所以必须星期五上午八点开工。本案例已给定，组装和运输能力足够。
+  s2_zh_hk: 一位新客戶希望星期五下午兩時送到四張書桌。每張書桌要四個鐘組裝、兩個鐘送貨，所以必須星期五上午八時開工。本個案已給定，組裝同運輸能力足夠。
+  s3_en: >-
+    The weekly movement is ten plus eight minus eight, leaving ten kits in total. That closing balance
+    is not, by itself, a Friday promise. A Saturday delivery can be offered for an extra 300 Hong Kong
+    dollars, if the customer accepts it.
+  s3_zh: 一周进出是十加八减八，结余十套。这个期末结余本身，不等于星期五的交付承诺。如果客户接受，也可以提出星期六交货，并加收三百港元。
+  s3_zh_hk: 一週進出係十加八減八，結餘十套。呢個期末結餘本身，唔等於星期五嘅交貨承諾。如果客戶接受，亦都可以提出星期六交貨，並加收三百港元。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Can you promise all four on Friday?
+  title_zh: 能承诺周五交齐四张吗？
+  title_zh_hk: 可唔可以承諾周五交齊四張？
+  en: >-
+    Would you promise all four desks by 2 p.m. on Friday? If not, what alternative would you offer, and
+    which stock would support it? Pause and vote.
+  zh: 你能否承诺星期五下午两点交齐四张书桌？如果不能，你会提出什么替代方案，又靠哪批库存来支持？请暂停，投个票。
+  zh_hk: 你可唔可以承諾星期五下午兩時交齊四張書桌？如果唔得，你會提出咩替代方案，又憑邊批存貨嚟支持？暫停，投個票。
+- id: reveal
+  visual: table_grid
+  seconds: 24
+  rows: 3
+  cols: 2
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: When inbound kits are usable
+  title_zh: 到货组件何时可用
+  title_zh_hk: 到貨組件幾時可用
+  row1_en: Sunday receipt
+  row1_zh: 周日到货
+  row1_zh_hk: 周日到貨
+  row2_en: Inspection release
+  row2_zh: 检验放行
+  row2_zh_hk: 檢驗放行
+  row3_en: Friday uncommitted kits
+  row3_zh: 周五尚未承诺的套数
+  row3_zh_hk: 周五尚未分配嘅套數
+  col1_en: Fact
+  col1_zh: 事实
+  col1_zh_hk: 事實
+  col2_en: For Friday 8 a.m.
+  col2_zh: 对周五上午8点
+  col2_zh_hk: 對周五上午8時
+  c11_en: 8 kits after close
+  c11_zh: 打烊后到8套
+  c11_zh_hk: 打烊後到8套
+  c12_en: Not released yet
+  c12_zh: 尚未放行
+  c12_zh_hk: 尚未放行
+  c21_en: Noon Saturday
+  c21_zh: 星期六中午
+  c21_zh_hk: 星期六中午
+  c22_en: Too late for Friday
+  c22_zh: 赶不上星期五
+  c22_zh_hk: 趕唔上星期五
+  c31: '2'
+  c32_en: 10 − 6 − 2
+  c32_zh: 10减6减2
+  c32_zh_hk: 10減6減2
+  footer_en: Physical arrival is not a release
+  footer_zh: 实物到货不等于放行
+  footer_zh_hk: 實際到貨唔等於放行
+  s1_en: >-
+    The eight inbound kits are released only at noon on Saturday. They cannot start a Friday job. Physical
+    arrival is not the same as an inspection release, and released stock is not the same as uncommitted
+    stock.
+  s1_zh: 这八套到货组件，要到星期六中午才放行，不能用来开始星期五的工作。实物到货不等于通过检验放行；已放行的库存，也不一定尚未承诺。
+  s1_zh_hk: 呢八套到貨組件，要到星期六中午先放行，唔可以用嚟開始星期五嘅工作。實際到貨唔等於通過檢驗放行；已放行嘅存貨，亦都唔一定尚未分配。
+  s2_en: >-
+    Of the ten kits already usable, six are committed to Friday 8 a.m. jobs and two to Saturday 8 a.m.
+    jobs. Uncommitted usable kits for a Friday start are ten minus six minus two, or two. Four Friday
+    deliveries would need four kits at 8 a.m.
+  s2_zh: >-
+    十套已经可用的组件里，六套已承诺给星期五上午八点的工作，两套给星期六上午八点。星期五开工时，尚未承诺的可用组件是十减六减二，等于两套。星期五要交四张，就需要上午八点有四套。
+  s2_zh_hk: >-
+    十套已經可用嘅組件裏面，六套已分配畀星期五上午八時嘅工作，兩套畀星期六上午八時。星期五開工時，尚未分配嘅可用組件係十減六減二，等於兩套。星期五要交四張，就需要上午八時有四套。
+  s3_en: >-
+    A Saturday offer remains available for an extra 300 dollars if the customer accepts it. Reconsider
+    the Friday promise, and any split you would put to the customer.
+  s3_zh: 如果客户接受，仍然可以提出星期六交货，并加收三百港元。请重新考虑星期五的承诺，以及你会向客户提出的分批方案。
+  s3_zh_hk: 如果客戶接受，仍然可以提出星期六交貨，並加收三百港元。請重新考慮星期五嘅承諾，同埋你會向客戶提出嘅分批方案。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Friday in full, Saturday, or split?
+  title_zh: 周五交齐、周六，还是分批？
+  title_zh_hk: 周五交齊、周六，定分批？
+  en: >-
+    Can you promise all four by Friday 2 p.m.? If you offer Saturday in full, or a split delivery, what
+    times would you confirm, and which kits support each desk? Pause and vote again.
+  zh: >-
+    你能否承诺星期五下午两点交齐四张？如果你提出全部改到星期六，或者分批交货，你会确认哪些时间，又靠哪几套组件来支持每张书桌？请暂停，再投一次票。
+  zh_hk: >-
+    你可唔可以承諾星期五下午兩時交齊四張？如果你提出全部改到星期六，或者分批交貨，你會確認邊啲時間，又憑邊幾套組件嚟支持每張書桌？暫停，再投一次票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Count back from the due time
+  title_zh: 从交货时间往回推
+  title_zh_hk: 由交貨時間倒推
+  step1_en: >-
+    Friday uncommitted usable: 2
+  step1_zh: 周五未承诺可用：2套
+  step1_zh_hk: 周五未分配可用：2套
+  step2_en: Inbound usable only Saturday noon
+  step2_zh: 到货周六中午才可用
+  step2_zh_hk: 到貨周六中午先可用
+  s1_en: >-
+    Work backwards from the customer’s due time. Four Friday deliveries need four kits at 8 a.m. Only
+    two uncommitted usable kits are free then, so a full Friday promise cannot be made.
+  s1_zh: 要从客户要求的交付时间往回推。星期五交四张，需要上午八点有四套组件。那时尚未承诺的可用组件只有两套，因此不能承诺星期五交齐。
+  s1_zh_hk: 要由客戶要求嘅交貨時間倒推。星期五交四張，需要上午八時有四套組件。嗰時尚未分配嘅可用組件只有兩套，所以唔能夠承諾星期五交齊。
+  s2_en: >-
+    If all four are delivered on Saturday, assembly can start at noon, finish at 4 p.m., and reach the
+    customer at 6 p.m. The two still-uncommitted on-hand kits can wait until then. The inbound eight become
+    usable at noon.
+  s2_zh: >-
+    如果星期六整批交付，四套组件可在中午开始组装，下午四点完成工序，下午六点送到客户。两套尚未承诺的在手组件，可以留到那时再用。到货的八套中午才可用。
+  s2_zh_hk: >-
+    如果星期六整批交付，四套組件可喺中午開始組裝，下午四時完成工序，下午六時送到客戶。兩套尚未分配嘅在手組件，可以留到嗰時再用。到貨嘅八套中午先可用。
+  s3_en: >-
+    A split offer can use the two free kits on Friday, from 8 a.m. to 2 p.m., and the other two on Saturday,
+    from noon to 6 p.m. Capacity for both options is given as sufficient in this classroom case.
+  s3_zh: >-
+    分批方案可以用两套尚未承诺的组件，按星期五上午八点到下午两点处理；另外两张按星期六中午到下午六点处理。本课堂案例已给定，两种方案所需的处理能力都足够。
+  s3_zh_hk: >-
+    分批方案可以用兩套尚未分配嘅組件，按星期五上午八時到下午兩時處理；另外兩張按星期六中午到下午六時處理。本課堂個案已給定，兩種方案所需嘅處理能力都足夠。
+  step3_en: A full Friday promise fails
+  step3_zh: 无法承诺周五交齐
+  step3_zh_hk: 唔能夠承諾周五交齊
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Offer a choice the customer can accept
+  title_zh: 给客户一个可确认的选择
+  title_zh_hk: 提出客戶可選擇嘅方案
+  step1_en: Physical, usable, uncommitted
+  step1_zh: 实物、可用、未承诺
+  step1_zh_hk: 實際、可用、未分配
+  step2_en: Ending 6 does not fix a Friday gap
+  step2_zh: 期末剩6补不了周五缺口
+  step2_zh_hk: 期末剩6補唔到周五缺口
+  s1_en: >-
+    Give the customer a choice that can actually be confirmed. Saturday in full, or two on Friday and
+    two on Saturday, are both feasible under the stated times. Whether the extra 300 dollars is worth
+    it is the customer’s decision.
+  s1_zh: 要给客户一个可以确认接受的选择。星期六整批交货，或者星期五两张、星期六两张，按既定时间都可行。多付三百港元是否值得，由客户决定。
+  s1_zh_hk: 要向客戶提出一個可以確認接受嘅選擇。星期六整批交貨，或者星期五兩張、星期六兩張，按既定時間都可行。多付三百港元值唔值得，由客戶決定。
+  s2_en: >-
+    After both receipts and all four new desks, remaining uncommitted kits are ten plus eight minus eight
+    minus four, or six. A positive ending balance does not close an earlier gap.
+  s2_zh: >-
+    无论以哪种安排接受这四张新订单，计及两批入库和全部订单后，余下未承诺的组件是十加八减八减四，等于六套。期末有正数结余，不能弥补较早时点的不足。
+  s2_zh_hk: >-
+    無論以邊種安排接受呢四張新訂單，計及兩批入庫同全部訂單之後，餘下未分配嘅組件係十加八減八減四，等於六套。期末有正數結餘，唔能夠彌補較早時點嘅不足。
+  s3_en: >-
+    Do not borrow another customer’s kits to make a Friday promise. In practice, a make-to-order promise
+    also has to check capacity, complete kits, handling, transport and uncertainty. Future receipt dates
+    are plan assumptions, not guarantees.
+  s3_zh: >-
+    不要借用其他客户的组件，来承诺星期五交货。实际上，按单生产的交货承诺，还须核对产能、组件是否齐全、货件处理、运输和不确定因素。未来的到货日期是计划假设，不是保证。
+  s3_zh_hk: >-
+    唔好借用其他客戶嘅組件，嚟承諾星期五交貨。實際上，按單生產嘅交貨承諾，仲須核對產能、組件係咪齊全、貨件處理、運輸同不確定因素。未來嘅到貨日期係計劃假設，唔係保證。
+  step3_en: Do not borrow another customer’s kits
+  step3_zh: 不要挪用其他客户的组件
+  step3_zh_hk: 唔好挪用其他客戶嘅組件
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: A weekly total is not a due-date promise
+  title_zh: 周结余不是到期承诺
+  title_zh_hk: 週結餘唔等於到期承諾
+  en: >-
+    A weekly surplus can coexist with a Friday shortage if inbound stock is not yet released, or if usable
+    kits are already committed. Before promising a due date, separate physical arrivals, inspection releases,
+    and uncommitted kits at the start time.
+  zh: >-
+    如果到货尚未放行，或者可用组件已经承诺出去，一周有结余，星期五仍可能不够。承诺交货日期之前，要把实物到货、检验放行，以及开工时尚未承诺的组件，分开来看。
+  zh_hk: >-
+    如果到貨尚未放行，或者可用組件已經分配出去，一星期有結餘，星期五仍然可能不夠。承諾交貨日期之前，要把實際到貨、檢驗放行，以及開工時尚未分配嘅組件，分開嚟睇。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Promise only with uncommitted kits
+  title_zh: 有未承诺组件才能许诺
+  title_zh_hk: 有未分配組件先好許諾
+  q1_en: Arrival is not the same as a release
+  q1_zh: 到货不等于已经放行
+  q1_zh_hk: 到貨唔等於已經放行
+  q2_en: Offer a feasible Friday or Saturday split
+  q2_zh: 提出可行的周五或周六方案
+  q2_zh_hk: 提出可行嘅周五或周六方案
+  s1_en: >-
+    Two uncommitted usable kits can support two Friday desks. The inbound eight can support a Saturday
+    delivery only after noon release. A four-desk Friday promise cannot be kept.
+  s1_zh: 两套尚未承诺的可用组件，可以支持星期五交两张。到货的八套，只有中午放行后才能支持星期六交货。四张全部放在星期五，承诺无法兑现。
+  s1_zh_hk: 兩套尚未分配嘅可用組件，可以支持星期五交兩張。到貨嘅八套，只有中午放行之後先可以支持星期六交貨。四張全部放喺星期五，承諾冇辦法兌現。
+  s2_en: >-
+    The workshop, kits, times and the 300-dollar option are fictional classroom assumptions. Official
+    scene art is a teaching illustration only.
+  s2_zh: 这家工场、组件、时间和三百港元的方案，都是虚构的课堂假设。官方场景图只是教学插图。
+  s2_zh_hk: 呢間工場、組件、時間同三百港元嘅方案，都係虛構嘅課堂假設。官方場景圖只係教學插圖。
+  s3_en: >-
+    Industry practice supplies context, not evidence for any classroom number.
+  s3_zh: 行业背景只提供情境，不能当作课堂上这些数字的证据。
+  s3_zh_hk: 行業背景只提供情境，唔可以當作課堂上呢啲數字嘅證據。
+duration_target_s: 190

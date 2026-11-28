@@ -1,0 +1,354 @@
+id: OPS-11
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Plenty on the shelf. Time to reorder?
+title_zh: 货架上还有不少货，该再订货了吗？
+title_zh_hk: 貨架上還有不少貨，該再訂貨了嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-11
+  kicker_en: OPS-11
+  kicker_zh: OPS-11
+  kicker_zh_hk: OPS-11
+  title_en: Plenty on the shelf. Time to reorder?
+  title_zh: 货架上还有不少货，该再订货了吗？
+  title_zh_hk: 貨架上還有不少貨，該再訂貨了嗎？
+  image: art/time-to-reorder-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 16 January 2026, Hong Kong announced the formal rollout of its Port Community System, with cargo
+    tracking across transport networks. Visibility helps only when it informs a decision. This stationery
+    wholesaler, and every figure, is fictional.
+  zh: >-
+    二零二六年一月十六日，香港宣布正式推出港口社区系统，并介绍了跨运输网络的货物追踪。看得见货物动向，只有能为决策提供依据才有用。课堂上的这家文具批发商，以及全部数字，都是虚构的。
+  zh_hk: >-
+    二零二六年一月十六日，香港宣布正式推出港口社區系統，並介紹跨運輸網絡嘅貨物追蹤。睇到貨物動向，要能夠幫你做決定先有用。課堂上呢間文具批發商，同埋全部數字，都係虛構嘅。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Opening record, packs
+  title_zh: 初始记录，包
+  title_zh_hk: 初始記錄，包
+  row1_en: Shelf and daily use
+  row1_zh: 货架与日用量
+  row1_zh_hk: 貨架同每日用量
+  row2_en: Lead time and policy
+  row2_zh: 提前期和规则
+  row2_zh_hk: 前置時間同規則
+  col1_en: On the shelf
+  col1_zh: 货架上
+  col1_zh_hk: 貨架上
+  col2_en: Daily use
+  col2_zh: 日用量
+  col2_zh_hk: 每日用量
+  col3_en: Policy
+  col3_zh: 规则
+  col3_zh_hk: 規則
+  c11_en: 140 packs
+  c11_zh: 140包
+  c11_zh_hk: 140包
+  c12_en: 20 packs
+  c12_zh: 20包
+  c12_zh_hk: 20包
+  c13_en: Review at close
+  c13_zh: 打烊检查
+  c13_zh_hk: 打烊檢查
+  c21_en: 5 business days
+  c21_zh: 5个工作日
+  c21_zh_hk: 5個工作天
+  c22_en: Buffer 40
+  c22_zh: 安全库存40
+  c22_zh_hk: 緩衝量40
+  c23_en: Lot 200
+  c23_zh: 批量200
+  c23_zh_hk: 批量200
+  footer_en: When to order, not the lot size
+  footer_zh: 讨论何时下单，不是批量
+  footer_zh_hk: 討論何時下單，唔係批量
+  s1_en: >-
+    At closing, a small stationery wholesaler has 140 usable packs of standard labels. In the worked plan,
+    daily use is exactly 20 packs. A new order placed at closing has a recorded lead time of five complete
+    business days.
+  s1_zh: >-
+    打烊时，这家小型文具批发商货架上有一百四十包可用的标准标签。按案例的计算方案，每个工作日恰好用掉二十包。打烊时下单，记录的提前期是五个完整工作日。
+  s1_zh_hk: 打烊時，呢間小型文具批發商貨架上有一百四十包可用嘅標準標籤。按個案推算，每個工作天恰好用二十包。打烊時下單，記錄嘅前置時間係五個完整工作天。
+  s2_en: >-
+    Management wants 40 packs left just before a replenishment arrives. Every new order is the usual 200-pack
+    lot. Funding and storage permit it; this discussion is about when to order, not the lot size.
+  s2_zh: 管理层希望补货到达前一刻还剩四十包。每次新下单仍按惯例订两百包。资金和库容都允许；这里讨论的是何时下单，不是订货批量。
+  s2_zh_hk: 管理層希望補貨到達前一刻仲剩四十包。每次新訂單都按慣例訂兩百包。資金同倉容都夠；呢度討論嘅係幾時下單，唔係訂貨批量。
+  s3_en: >-
+    Stock is reviewed at each close. Before authorising an order, the manager will confirm supplier dates
+    and outstanding purchase orders. The familiar shelf trigger is 100 packs. A colleague asks whether
+    that leaves enough while a delivery is on its way.
+  s3_zh: >-
+    每天打烊时检查库存。批准下单前，经理会核实供应商的交货日期，以及还没到的采购订单。经理通常等到货架上只剩一百包才下单。一位同事问：等货到的这段时间里，库存够用吗？
+  s3_zh_hk: >-
+    每日打烊都檢視存貨。批准下單前，經理會向供應商核實交貨日期，同埋未到貨嘅採購訂單。經理通常等貨架淨係剩一百包先下單。有同事問：等貨到呢段時間，存貨夠唔夠用？
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Order now, or wait until 100?
+  title_zh: 现在订，还是等到100包？
+  title_zh_hk: 而家訂，定等到100包？
+  en: >-
+    Would you provisionally order the usual 200 packs now, or wait until the shelf reaches 100? Explain
+    the trigger, and what you must check before sending the order. Pause and vote.
+  zh: 你会初步决定，现在按惯例订两百包，还是等到货架上只剩一百包再订？说明你的订货触发条件，以及发出订单前必须核实什么。请暂停，投个票。
+  zh_hk: 你會初步決定，而家按慣例訂兩百包，定等到貨架淨係剩一百包先訂？講清楚你嘅訂貨觸發條件，同埋發出訂單前必須查核啲咩。暫停，投個票。
+- id: reveal
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Two entries change
+  title_zh: 两项记录变了
+  title_zh_hk: 兩項記錄變咗
+  row1_en: Existing order
+  row1_zh: 已有订单
+  row1_zh_hk: 已有訂單
+  row2_en: New-order lead time
+  row2_zh: 新订单提前期
+  row2_zh_hk: 新訂單前置時間
+  row3_en: Buffer and lot
+  row3_zh: 安全库存和批量
+  row3_zh_hk: 緩衝量同批量
+  col1_en: Now confirmed
+  col1_zh: 现已确认
+  col1_zh_hk: 而家已確認
+  col2_en: Effect
+  col2_zh: 影响
+  col2_zh_hk: 影響
+  c11_en: 120 packs
+  c11_zh: 120包
+  c11_zh_hk: 120包
+  c12_en: Ready tomorrow a.m.
+  c12_zh: 明天上午可用
+  c12_zh_hk: 明早可用
+  c21_en: 10 business days
+  c21_zh: 10个工作日
+  c21_zh_hk: 10個工作天
+  c22_en: New orders only
+  c22_zh: 只适用于新订单
+  c22_zh_hk: 只適用於新訂單
+  c31_en: Still 40 and 200
+  c31_zh: 仍为40和200
+  c31_zh_hk: 仍然係40同200
+  c32_en: Same policy rule
+  c32_zh: 规则本身不变
+  c32_zh_hk: 規則本身不變
+  footer_en: Use on-hand plus on-order stock
+  footer_zh: 按在手加在途判断
+  footer_zh_hk: 按在手加在途判斷
+  s1_en: >-
+    The checks change two entries. An existing 120-pack order will be ready for use tomorrow morning,
+    before any consumption. Separately, a new order now takes ten complete business days. The dispatched
+    120-pack delivery is unaffected.
+  s1_zh: >-
+    核实后，有两项信息变了。原先订的一百二十包，明天上午就可以用，早于当天的任何领用。另外，现在的新订单需要十个完整工作日。已经发出的一百二十包不受影响。
+  s1_zh_hk: 查核之後，有兩項記錄變咗。原先訂嘅一百二十包，明早未開始耗用前就可以用。另外，而家嘅新訂單需要十個完整工作天。已經發出嘅一百二十包不受影響。
+  s2_en: >-
+    Keep the same 40-pack buffer and 200-pack lot. The trigger is lead-time demand plus the safety buffer.
+    Apply it to inventory position: usable on-hand stock plus confirmed on-order stock.
+  s2_zh: >-
+    安全库存仍是四十包，订货批量仍是两百包。再订货点等于提前期内的需求量，加上安全库存。用它来判断库存状况：可用的在手库存，加上已确认的在途订货。
+  s2_zh_hk: >-
+    緩衝量仍然係四十包，訂貨批量仍然係兩百包。再訂貨點等於前置時間內嘅需求量，加上緩衝量。用嚟判斷存貨狀況：可用嘅在手存貨，加上已確認嘅在途訂單。
+  s3_en: >-
+    Reorder when that position is at or below the trigger, and check that each receipt arrives before
+    it is needed. There are no other receipts, backorders or reserved commitments. Use the confirmed dates
+    and exactly 20 packs a day. No emergency supply is available.
+  s3_zh: >-
+    库存状况达到或低于再订货点时再下单，同时还要核实每批货能否在需要之前到达。没有其他到货、欠交订单，也没有预留给客户的库存。按确认的日期和每天恰好二十包来推算。这次决策没有应急供货。
+  s3_zh_hk: >-
+    存貨狀況等於或低過再訂貨點就下單，同時都要核實每批貨可唔可以喺需要之前到達。冇其他到貨、欠交訂單，亦都冇預留給客戶嘅存貨。按確認嘅日期同每日恰好二十包嚟推算。呢次決定冇應急供貨。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Order today after the change?
+  title_zh: 今天就要下单吗？
+  title_zh_hk: 今日就要下單嗎？
+  en: >-
+    Does the longer lead time mean ordering today? Use the confirmed delivery to set the next order time,
+    and show the stock expected just before that new order arrives. Pause and vote again.
+  zh: 提前期变长了，是否意味着今天就该下单？根据已确认的到货，确定下次下单时间，并算出这笔新订单到货前一刻，预计还剩多少库存。请暂停，再投一次票。
+  zh_hk: 前置時間長咗，係咪即係今日就要下單？根據已確認嘅到貨，定下次下單時間，再計出呢筆新訂單到貨前一刻，預計仲剩幾多存貨。暫停，再投一次票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: A trigger is not a lot size
+  title_zh: 再订货点不是订货量
+  title_zh_hk: 再訂貨點唔等於訂貨量
+  step1_en: >-
+    Trigger: 20×5+40 = 140
+  step1_zh: 再订货点：20×5+40=140
+  step1_zh_hk: 再訂貨點：20×5+40=140
+  step2_en: >-
+    Wait to 100: 0 left
+  step2_zh: 等到100包：到货前为0
+  step2_zh_hk: 等到100包：到貨前係0
+  s1_en: >-
+    With the opening five-day lead time, lead-time demand is 20 times 5, or 100 packs. Add the agreed
+    40-pack buffer: the trigger is 140 packs. With no outstanding supply, the opening record would justify
+    ordering now.
+  s1_zh: >-
+    按最初五天的提前期，提前期内的需求量是二十乘以五，等于一百包。加上已商定的四十包安全库存，再订货点就是一百四十包。如果没有在途订货，初始记录就足以支持现在下单。
+  s1_zh_hk: >-
+    按最初五天嘅前置時間，前置時間內嘅需求量係二十乘五，等於一百包。加上已商定嘅四十包緩衝量，再訂貨點就係一百四十包。如果冇在途訂單，初始記錄就足以支持而家下單。
+  s2_en: >-
+    Waiting until 100 would leave 100 minus 100, or zero, immediately before replenishment in this exact-demand
+    example, rather than management’s intended 40. That is not proof of an inevitable stock-out in practice.
+  s2_zh: 在这个用量完全确定的例子里，如果等到只剩一百包再订，补货到达前一刻就会剩下零包，而不是管理层想保留的四十包。这并不证明实际中一定会缺货。
+  s2_zh_hk: >-
+    喺呢個用量完全確定嘅例子裏面，如果等到淨係剩一百包先訂，補貨到達前一刻就會剩零包，而唔係管理層想保留嘅四十包。呢個並唔能夠證明實際一定會缺貨。
+  s3_en: >-
+    The 200-pack lot answers a different question: how much arrives after an order is triggered.
+  s3_zh: 两百包的批量回答的是另一个问题：触发订货之后，会到多少货。
+  s3_zh_hk: 兩百包嘅批量回答嘅係另一個問題：觸發訂貨之後，會到幾多貨。
+  step3_en: The 200-pack lot is separate
+  step3_zh: 200包批量是另一件事
+  step3_zh_hk: 200包批量係另一件事
+- id: meaning
+  visual: table_grid
+  seconds: 28
+  rows: 3
+  cols: 3
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Count each supply once
+  title_zh: 同一批货只计一次
+  title_zh_hk: 同一批貨只計一次
+  row1_en: Now, no new order
+  row1_zh: 现在，尚未新订
+  row1_zh_hk: 而家，未有新訂
+  row2_en: Tomorrow close
+  row2_zh: 明天打烊
+  row2_zh_hk: 明日打烊
+  row3_en: Before new receipt
+  row3_zh: 新货到达前
+  row3_zh_hk: 新貨到達前
+  col1_en: On hand
+  col1_zh: 在手
+  col1_zh_hk: 在手
+  col2_en: On order
+  col2_zh: 在途
+  col2_zh_hk: 在途
+  col3_en: Position
+  col3_zh: 库存状况
+  col3_zh_hk: 存貨狀況
+  c11: '140'
+  c12: '120'
+  c13: '260'
+  c21: '240'
+  c22: '0'
+  c23: '240'
+  c31: '40'
+  c32: '200'
+  c33: '240'
+  footer_en: Trigger 240; order at tomorrow close
+  footer_zh: 再订货点240；明天打烊下单
+  footer_zh_hk: 再訂貨點240；明日打烊下單
+  s1_en: >-
+    The new ten-day lead time raises the trigger to 20 times 10 plus 40, or 240 packs. Current inventory
+    position is 140 on hand plus 120 on order, or 260 packs. It is above the trigger, so another order
+    today is not yet called for by the stated rule.
+  s1_zh: >-
+    新的十天提前期，把再订货点提高到二十乘以十再加四十，等于二百四十包。当前库存状况是在手一百四十包，加上在途一百二十包，等于二百六十包。这高于再订货点，按既定规则，今天还不需要再下单。
+  s1_zh_hk: >-
+    新嘅十天前置時間，把再訂貨點提高到二十乘十再加四十，等於二百四十包。目前存貨狀況係在手一百四十包，加上在途一百二十包，等於二百六十包。呢個高過再訂貨點，按既定規則，今日仲唔需要再下單。
+  s2_en: >-
+    Tomorrow’s receipt moves 120 packs from on order to on hand. It does not add 120 to inventory position
+    a second time. After tomorrow’s 20 packs are used, both on-hand stock and position are 240. Order
+    the usual 200 at that closing-time check. Position then rises to 440, while the shelf still holds
+    240.
+  s2_zh: >-
+    明天到货后，一百二十包从在途转为在手，不能在库存状况里再加一次。明天用掉二十包后，在手库存和库存状况都是二百四十包。打烊检查时按惯例订两百包；下单后库存状况升到四百四十包，但货架上仍是二百四十包。
+  s2_zh_hk: >-
+    明日到貨之後，一百二十包由在途轉為在手，唔可以喺存貨狀況裏面再加多一次。明日用咗二十包之後，在手存貨同存貨狀況都係二百四十包。打烊檢查時按慣例訂兩百包；下單之後存貨狀況升到四百四十包，但貨架上仍然係二百四十包。
+  s3_en: >-
+    The 140 packs now on the shelf bridge the wait until tomorrow morning. After ten further days’ use
+    of 200 packs, 40 remain just before the new receipt. A distant or uncertain inbound order could not
+    be treated as immediately usable simply because it raises the position.
+  s3_zh: >-
+    眼下可用的一百四十包，足以撑到明天上午。随后十天用掉两百包，到货前还剩四十包。如果一笔在途订货要很久才到，或者到货时间不确定，不能仅仅因为它提高了库存状况，就把它当成马上能用的库存。
+  s3_zh_hk: >-
+    而家可用嘅一百四十包，足夠撐到明日上午。之後十日付掉兩百包，到貨前仲剩四十包。如果一筆在途訂單要好耐先到，或者到貨時間唔確定，唔可以只因為佢提高咗存貨狀況，就當佢即刻用得。
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Check dates, not only totals
+  title_zh: 还要核对到货日期
+  title_zh_hk: 都要核對到貨日期
+  en: >-
+    This is a transparent calculation under an agreed policy, not an optimisation of inventory cost or
+    customer service. Unexpected demand, rejected goods or a changed delivery date can invalidate the
+    trace. A visibility system does not remove that judgement.
+  zh: >-
+    这是按商定规则做的一笔明白账，并不是对库存成本或客户服务的优化。意外需求、来货被拒收，或者交货日期变动，都可能让这套推算失效。系统能让货物动向看得见，也不能代替这些判断。
+  zh_hk: >-
+    呢個係按商定規則做嘅一筆明白賬，並唔係對存貨成本或者客戶服務嘅優化。意外需求、來貨被拒收，或者交貨日期有變，都可能令呢套推算失效。系統睇到貨物動向，都代替唔到呢啲判斷。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Order at the position trigger
+  title_zh: 按库存状况触发下单
+  title_zh_hk: 按存貨狀況觸發下單
+  q1_en: The shelf count is not the position
+  q1_zh: 货架数量不是库存状况
+  q1_zh_hk: 貨架數量唔等於存貨狀況
+  q2_en: Check arrival dates as well
+  q2_zh: 还要核对到货日期
+  q2_zh_hk: 都要核對到貨日期
+  s1_en: >-
+    The longer lead time raises the trigger; the confirmed inbound order raises the position. Their combined
+    effect is to order tomorrow at closing, not to double-order today.
+  s1_zh: 提前期变长，会把再订货点推高；已确认的在途订货，会把库存状况推高。两者合在一起，是明天打烊时再下单，而不是今天再订一笔。
+  s1_zh_hk: 前置時間變長，會把再訂貨點推高；已確認嘅在途訂單，會把存貨狀況推高。兩者加埋，係明日打烊先下單，而唔係今日再訂多一筆。
+  s2_en: >-
+    The wholesaler, demand, deliveries and rules are fictional classroom assumptions. Official scene art
+    is a teaching illustration only.
+  s2_zh: 这家批发商、需求、交货安排和订货规则，都是虚构的课堂假设。官方场景图只是教学插图。
+  s2_zh_hk: 呢間批發商、需求、交貨安排同訂貨規則，都係虛構嘅課堂假設。官方場景圖只係教學插圖。
+  s3_en: >-
+    The local announcement supplies context, not evidence for any classroom number.
+  s3_zh: 本地公告只提供背景，不能当作课堂上这些数字的证据。
+  s3_zh_hk: 本地公告只提供背景，唔可以當作課堂上呢啲數字嘅證據。
+duration_target_s: 194

@@ -1,0 +1,332 @@
+id: OPS-20
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Count everything twice. Or risky shelves more often?
+title_zh: 所有品项都盘点两次，还是对高风险货位多盘几次？
+title_zh_hk: 每種物料都盤點兩次，還是更頻密地盤點高風險貨位？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-20
+  kicker_en: OPS-20
+  kicker_zh: OPS-20
+  kicker_zh_hk: OPS-20
+  title_en: Count everything twice. Or risky shelves more often?
+  title_zh: 所有品项都盘点两次，还是对高风险货位多盘几次？
+  title_zh_hk: 每種物料都盤點兩次，還是更頻密地盤點高風險貨位？
+  image: art/count-the-risky-shelves-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 16 January 2026, Hong Kong announced the rollout of its Port Community System. Better connected
+    records still need physical checks. This spare-parts store, and every count result, is fictional.
+  zh: 二零二六年一月十六日，香港宣布推出港口社区系统。有了更连通的数字记录，仍要核对实物。课堂上的这家零件仓，以及全部盘点结果，都是虚构的。
+  zh_hk: 二零二六年一月十六日，香港宣布推出港口社區系統。有咗更連通嘅數碼記錄，仍須核對實物。課堂上呢間零件倉，同埋全部盤點結果，都係虛構嘅。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two 120-count schedules
+  title_zh: 两种120次盘点安排
+  title_zh_hk: 兩種120次盤點安排
+  row1_en: >-
+    A: count all twice
+  row1_zh: A：全部盘两次
+  row1_zh_hk: A：全部盤兩次
+  row2_en: >-
+    B: focus one group
+  row2_zh: B：聚焦一组
+  row2_zh_hk: B：聚焦一組
+  col1_en: Priority group
+  col1_zh: 优先组
+  col1_zh_hk: 優先組
+  col2_en: Other items
+  col2_zh: 其他品项
+  col2_zh_hk: 其他物料
+  col3_en: Total counts
+  col3_zh: 总次数
+  col3_zh_hk: 總次數
+  c11_en: 20 × 2
+  c11_zh: 20×2
+  c11_zh_hk: 20×2
+  c12_en: 40 × 2
+  c12_zh: 40×2
+  c12_zh_hk: 40×2
+  c13: '120'
+  c21_en: 20 × 4
+  c21_zh: 20×4
+  c21_zh_hk: 20×4
+  c22_en: 40 × 1
+  c22_zh: 40×1
+  c22_zh_hk: 40×1
+  c23: '120'
+  footer_en: >-
+    Budget: 10 hours, 5 minutes each
+  footer_zh: 预算：10小时，每次5分钟
+  footer_zh_hk: 預算：10小時，每次5分鐘
+  s1_en: >-
+    A spare-parts store is planning its next twelve-week cycle-count schedule. Cycle counting means checking
+    selected item records repeatedly during operations, not only at a year-end event. There are 60 item
+    types: 20 high-value motors, 20 inexpensive connectors and 20 inexpensive brackets. Each type occupies
+    one identified bin.
+  s1_zh: >-
+    这家零件仓正在安排未来十二周的循环盘点计划。循环盘点是在日常作业中，反复核对选定品项的记录，而不是只在年终全库盘点一次。共有六十个品项：二十种高价值电机、二十种廉价连接器，以及二十种廉价支架。每个品项占一个已标识的货位。
+  s1_zh_hk: >-
+    呢間零件倉而家安排未來十二個星期嘅循環盤點計劃。循環盤點係喺日常作業中，反覆核對選定物料嘅記錄，而唔係只喺年終一次過盤點整個貨倉。合共六十種物料：二十種高價值摩打、二十種廉價連接器，以及二十種廉價支架。每種物料佔一個已標識嘅貨位。
+  s2_en: >-
+    Each scheduled count takes five paid minutes. The routine budget is ten hours, or 120 counts. Schedule
+    A counts every item twice, six weeks apart. Schedule B counts one chosen 20-item group four times,
+    three weeks apart, and each of the other 40 items once. Both cover every item.
+  s2_zh: >-
+    每次按计划盘点，需要五分钟有薪工时。常规盘点的工时预算是十小时，也就是一百二十次。方案A对每个品项盘点两次，间隔六周。方案B对选定的二十个优先品项盘点四次，间隔三周，其余四十个品项各盘一次。两种方案都覆盖全部品项。
+  s2_zh_hk: >-
+    每次按計劃進行嘅盤點，需要五分鐘有薪工時。例行盤點嘅工時預算係十小時，也就是一百二十次。方案A對每種物料盤點兩次，間隔六個星期。方案B對選定嘅二十種優先物料盤點四次，間隔三個星期，其餘四十種物料各盤一次。兩種方案都覆蓋全部物料。
+  s3_en: >-
+    The manager first proposes motors as B’s priority because their unit values are highest. No comparable
+    transaction or verified discrepancy history has yet been presented. An exception team handles urgent
+    recounts outside these 120 routine counts. No record is changed merely to match a first count.
+  s3_zh: >-
+    经理起初建议优先盘点电机，因为它们的单位价值最高。目前还没有提交可比较的交易记录，或已经核实的差异历史。紧急复盘由独立预算的例外小组处理，不占用这一百二十次常规盘点。不能只因为第一次清点不同，就改记录。
+  s3_zh_hk: >-
+    經理起初建議優先盤點摩打，因為佢哋嘅單位價值最高。目前仲未提交可比較嘅交易記錄，或已經核實嘅差異歷史。緊急覆點由獨立預算嘅例外小組處理，唔佔用呢一百二十次例行盤點。唔能夠只因為第一次清點唔同，就改記錄。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Count all twice, or focus a priority group?
+  title_zh: 全部盘两次，还是聚焦一组？
+  title_zh_hk: 全部盤兩次，定聚焦一組？
+  en: >-
+    Would you start with uniform repeated counts, or focus more counts on a priority group? Check the
+    effort budget, and explain what evidence should determine priority beyond unit value. Pause and vote.
+  zh: >-
+    你会先采用均匀的重复盘点，还是把更多次数集中到一组优先品项？请核对工时预算，并说明除了单位价值，还应用什么证据来确定优先对象。请暂停，投个票。
+  zh_hk: 你會先採用同頻嘅重複盤點，定係把更多次數集中到一組優先物料？請核對工時預算，並說明除咗單位價值，仲應用咩證據嚟釐定優先對象。暫停，投個票。
+- id: reveal
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: History and two recount examples
+  title_zh: 历史记录和两次复盘
+  title_zh_hk: 歷史記錄同兩次覆點
+  row1_en: Motors, 20 items
+  row1_zh: 电机，20个品项
+  row1_zh_hk: 摩打，20種物料
+  row2_en: Connectors, 20 items
+  row2_zh: 连接器，20个品项
+  row2_zh_hk: 連接器，20種物料
+  row3_en: Brackets, 20 items
+  row3_zh: 支架，20个品项
+  row3_zh_hk: 支架，20種物料
+  col1_en: Supported corrections
+  col1_zh: 获支持的数量更正
+  col1_zh_hk: 獲支持嘅數量更正
+  col2_en: Other signal
+  col2_zh: 其他信号
+  col2_zh_hk: 其他信號
+  c11: '2'
+  c12_en: High unit value
+  c12_zh: 单位价值高
+  c12_zh_hk: 單位價值高
+  c21: '8'
+  c22_en: Ten times the movements
+  c22_zh: 交易次数是电机的10倍
+  c22_zh_hk: 交易次數是摩打的10倍
+  c31: '1'
+  c32_en: Easy substitutes
+  c32_zh: 容易找到替代
+  c32_zh_hk: 容易找到替代
+  footer_en: History is a reason to investigate
+  footer_zh: 历史是著手调查的理由
+  footer_zh_hk: 歷史係著手調查嘅理由
+  s1_en: >-
+    A comparable prior twelve-week record is now supplied: every item was checked once under the same
+    verified-count protocol. Two of the 20 motor records needed a supported quantity correction, compared
+    with eight connector records and one bracket record. These are item counts, not total missing units
+    or monetary losses.
+  s1_zh: >-
+    现在有一份可比较的前十二周记录：按同一套核实流程，每个品项都盘点过一次。二十条电机记录里，有两条需要获支持的数量更正；连接器是八条，支架是一条。这是品项次数，不是缺失件数合计，也不是金额损失。
+  s1_zh_hk: >-
+    而家有一份可比較嘅前十二個星期記錄：按同一套盤點核實程序，每種物料都查過一次。二十項摩打記錄裏面，有兩項需要獲支持嘅數量更正；連接器係八項，支架係一項。呢個係物料次數，唔係缺失件數合計，亦都唔係金額損失。
+  s2_en: >-
+    Connectors had ten times as many stock-movement transactions per item as motors, and a false availability
+    record can stop an otherwise ready repair. Brackets have convenient substitutes; motors remain financially
+    significant. None is a safety-critical or legally mandatory priority in this exercise.
+  s2_zh: >-
+    连接器每个品项的库存交易次数，是电机的十倍；一条错误的可供应记录，就可能让本来准备好的维修停下来。支架容易找到替代，电机在财务上仍然重要。在本练习里，没有一类是安全关键或法定必须优先的对象。
+  s2_zh_hk: >-
+    連接器每種物料嘅存貨交易次數，係摩打嘅十倍；一條錯誤嘅可供應記錄，就可能讓本來準備好嘅維修停低。支架容易找到替代，摩打在財務上仍然重要。喺本練習裏面，冇一類係安全關鍵或法定必須優先嘅對象。
+  s3_en: >-
+    Two recent exceptions show the verification rule. One bin showed 30 on the system and a first count
+    of 26; a blind recount found a missed tray and confirmed all 30, so no adjustment was supported. Another
+    showed 40, with two independent counts of 36; a four-unit correction was approved, and the cause is
+    still being investigated. No fraud conclusion follows.
+  s3_zh: >-
+    最近两个例外，说明了核实规则。一个货位系统显示三十，第一次盘点是二十六；独立复盘发现漏数了一个托盘，确认仍是三十，因此没有依据调整。另一个系统显示四十，两次独立盘点都是三十六；审核人批准更正四件，并继续调查原因。这并不构成欺诈结论。
+  s3_zh_hk: >-
+    最近兩個例外，說明咗核實規則。一個貨位系統顯示三十，第一次盤點係二十六；獨立覆點發現漏數咗一個托盤，確認仍然係三十，所以冇依據調整。另一個系統顯示四十，兩次獨立盤點都係三十六；審核人批准更正四件，並繼續調查原因。呢個並唔構成欺詐結論。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Which group, if any, should be counted more?
+  title_zh: 若要聚焦，该多盘哪一组？
+  title_zh_hk: 若要聚焦，該多盤邊一組？
+  en: >-
+    Would you keep the uniform schedule, or assign B’s four-count frequency to motors, connectors or brackets?
+    Use the history and the two recounts, and say what a recount is for. Pause and vote again.
+  zh: 你会保留均匀盘点，还是把方案B的四次盘点，分给电机、连接器或支架？请用上历史记录和两次复盘，并说明复盘是做什么的。请暂停，再投一次票。
+  zh_hk: 你會保留同頻盤點，定係把方案B嘅四次盤點，分給摩打、連接器或支架？請用上歷史記錄同兩次覆點，並說明覆點係做咩嘅。暫停，再投一次票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Count items, and count the workload
+  title_zh: 既要数品项，也要算工作量
+  title_zh_hk: 唔只數物料，都要計工作量
+  step1_en: 60 items × 5 min × 2 = 10 hours
+  step1_zh: 60品项×5分钟×2=10小时
+  step1_zh_hk: 60物料×5分鐘×2=10小時
+  step2_en: >-
+    A: 60×2 = 120 counts
+  step2_zh: A：60×2=120次
+  step2_zh_hk: A：60×2=120次
+  s1_en: >-
+    Both schedules use the same effort: sixty items, five minutes each, and one hundred and twenty counts,
+    which is ten hours. Neither plan leaves a group uncounted. The choice is how to spread that budget,
+    not whether to ignore other stock.
+  s1_zh: >-
+    两种安排的工作量相同：六十个品项，每次五分钟，一共一百二十次，也就是十小时。两种方案都没有漏掉任何一组。要选择的是怎样分配这笔预算，而不是可不可以忽略其他库存。
+  s1_zh_hk: >-
+    兩種安排嘅工作量相同：六十種物料，每次五分鐘，合共一百二十次，也就是十小時。兩種方案都冇漏掉任何一組。要選擇嘅係點樣分配呢筆預算，而唔係可唔可以忽略其他存貨。
+  s2_en: >-
+    Unit value alone is a weak reason to make motors the priority. Connectors had more supported corrections,
+    and far more movements per item. A false availability record can stop a repair even when the part
+    is inexpensive.
+  s2_zh: >-
+    只凭单位价值，就优先盘点电机，理由并不充分。连接器获支持的更正更多，而且每个品项的交易次数高得多。即使零件不贵，一条错误的可供应记录，也可能让维修停下来。
+  s2_zh_hk: >-
+    只憑單位價值，就優先盤點摩打，理由並唔充分。連接器獲支持嘅更正更多，而且每種物料嘅交易次數高得多。即使零件唔貴，一條錯誤嘅可供應記錄，都可能讓維修停低。
+  s3_en: >-
+    The history is a reason to investigate, not a forecast error probability, and not proof that frequency
+    alone will fix the process.
+  s3_zh: 这份历史是著手调查的理由，不是预测差错概率，也不能证明只靠提高频次就能修好流程。
+  s3_zh_hk: 呢份歷史係著手調查嘅理由，唔係預測差錯概率，亦都唔能夠證明只靠提高頻次就能夠修好流程。
+  step3_en: >-
+    B: 20×4 + 40×1 = 120
+  step3_zh: B：20×4+40×1=120
+  step3_zh_hk: B：20×4+40×1=120
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: A recount is evidence, not a rewrite button
+  title_zh: 复盘是取证，不是改账按钮
+  title_zh_hk: 覆點係取證，唔係改數按鈕
+  step1_en: 26 against 30 was a missed tray
+  step1_zh: 26对30是漏数了托盘
+  step1_zh_hk: 26對30係漏數咗托盤
+  step2_en: 36 against 40 supported a correction
+  step2_zh: 36对40支持更正4件
+  step2_zh_hk: 36對40支持更正4件
+  s1_en: >-
+    A recount gathers evidence; it is not a button that rewrites the book. When the first count of 26
+    missed a tray, the independent recount confirmed 30, so the record stayed at 30.
+  s1_zh: 复盘是在取证，不是按一下就改账。第一次盘点是二十六，漏数了一个托盘，独立复盘确认仍是三十，因此记录保持三十。
+  s1_zh_hk: 覆點係取證，唔係按一下掣便改數。第一次盤點係二十六，漏數咗一個托盤，獨立覆點確認仍然係三十，所以記錄保持三十。
+  s2_en: >-
+    When two independent counts of 36 agreed, and cutoff, location and ownership were reconciled, a four-unit
+    correction from 40 was supported. The cause still has to be investigated. Neither example implies
+    fraud.
+  s2_zh: 当两次独立盘点都是三十六，并且已核对截止时点、存放位置和货物归属，就可以把四十更正为少四件。原因仍要调查。这两个例子都不构成欺诈结论。
+  s2_zh_hk: 當兩次獨立盤點都係三十六，並且已核對截止時點、存放位置同貨物歸屬，就可以把四十更正為少四件。原因仍要調查。呢兩個例子都唔構成欺詐結論。
+  s3_en: >-
+    Before the new schedule starts, the manager may keep A, or choose any one of the three groups for
+    B’s four-count frequency. Frequency is a plan for attention, not a substitute for a verified adjustment
+    rule.
+  s3_zh: >-
+    新计划实施前，经理可以保留方案A，也可以把方案B的四次盘点，分给三组里的任何一组。提高频次是把注意力放在哪里的计划，不能代替已经核实的调整规则。
+  s3_zh_hk: >-
+    新計劃實施前，經理可以保留方案A，亦都可以把方案B嘅四次盤點，分畀三組裏面嘅任何一組。提高頻次係把注意力放喺邊度嘅計劃，唔能夠代替已經核實嘅調整規則。
+  step3_en: Do not change a record to match the first count
+  step3_zh: 不要按第一次清点改记录
+  step3_zh_hk: 唔好按第一次清點改記錄
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Value is only one risk dimension
+  title_zh: 价值只是风险的一个维度
+  title_zh_hk: 價值只係風險嘅一個面向
+  en: >-
+    A risk-based cycle-count plan should weigh movement frequency and the operational effect of a wrong
+    record, not only unit value. Whatever the schedule, a first-count difference is evidence to recount,
+    not an automatic adjustment.
+  zh: >-
+    按风险安排循环盘点时，除了单位价值，还要看交易频次，以及记录错误会造成什么作业影响。无论采用哪一种安排，第一次清点不同，都只是需要复盘的证据，不是自动改账。
+  zh_hk: >-
+    按風險安排循環盤點時，除咗單位價值，仲要睇交易頻次，以及記錄錯誤會造成咩作業影響。無論採用邊一種安排，第一次清點唔同，都只係需要覆點嘅證據，唔係自動改數。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Spend the count budget where risk is
+  title_zh: 把盘点预算用在风险上
+  title_zh_hk: 把盤點預算用喺風險上
+  q1_en: Connectors had more supported corrections
+  q1_zh: 连接器获支持的更正更多
+  q1_zh_hk: 連接器獲支持嘅更正更多
+  q2_en: A recount can confirm 30, or support minus 4
+  q2_zh: 复盘可确认30，或支持少4件
+  q2_zh_hk: 覆點可確認30，或支持少4件
+  s1_en: >-
+    Both schedules use 120 counts and ten hours. If a priority group is chosen, connector history is a
+    stronger reason than unit value alone. A missed tray left the record at 30; two agreeing counts of
+    36 supported a four-unit correction.
+  s1_zh: >-
+    两种安排都是一百二十次、十小时。如果要选优先组，连接器的历史，比只看单位价值更有理由。漏数托盘后，记录仍是三十；两次一致的三十六，支持更正四件。
+  s1_zh_hk: >-
+    兩種安排都係一百二十次、十小時。如果要選優先組，連接器嘅歷史，比只睇單位價值更有理由。漏數托盤之後，記錄仍然係三十；兩次一致嘅三十六，支持更正四件。
+  s2_en: >-
+    The store, counts, histories and recounts are fictional classroom assumptions. Official scene art
+    is a teaching illustration only.
+  s2_zh: 这家零件仓、盘点、历史和复盘，都是虚构的课堂假设。官方场景图只是教学插图。
+  s2_zh_hk: 呢間零件倉、盤點、歷史同覆點，都係虛構嘅課堂假設。官方場景圖只係教學插圖。
+  s3_en: >-
+    The local announcement supplies context, not evidence for any classroom count.
+  s3_zh: 本地公告只提供背景，不能当作课堂上这些盘点结果的证据。
+  s3_zh_hk: 本地公告只提供背景，唔可以當作課堂上呢啲盤點結果嘅證據。
+duration_target_s: 190

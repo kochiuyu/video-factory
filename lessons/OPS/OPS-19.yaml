@@ -1,0 +1,316 @@
+id: OPS-19
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Straight through the depot. Or onto a shelf?
+title_zh: 到了配送站，是直接发走，还是先上货架？
+title_zh_hk: 直通配送站，還是先上貨架？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-19
+  kicker_en: OPS-19
+  kicker_zh: OPS-19
+  kicker_zh_hk: OPS-19
+  title_en: Straight through the depot. Or onto a shelf?
+  title_zh: 到了配送站，是直接发走，还是先上货架？
+  title_zh_hk: 直通配送站，還是先上貨架？
+  image: art/through-the-depot-or-to-a-shelf-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 14 November 2023, DHL announced the opening of its expanded Central Asia Hub in Hong Kong. A hub
+    can connect incoming and outgoing flows, but only eligible goods can skip the shelf. This distributor,
+    and every figure, is fictional.
+  zh: >-
+    二零二三年十一月十四日，DHL宣布其位于香港的Central Asia Hub扩建启用。物流枢纽可以衔接进出货流，但只有符合条件的货物，才能不先上架。课堂上的这家分销商，以及全部数字，都是虚构的。
+  zh_hk: >-
+    二零二三年十一月十四日，DHL宣布其位於香港嘅Central Asia Hub擴建啟用。物流樞紐可以銜接進出貨流，但只有符合條件嘅貨物，先可以唔使先上架。課堂上呢間分銷商，同埋全部數字，都係虛構嘅。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: One hundred and twenty cartons
+  title_zh: 一百二十箱货
+  title_zh_hk: 一百二十箱貨
+  row1_en: Cross-dock quote
+  row1_zh: 越库作业报价
+  row1_zh_hk: 越庫作業報價
+  row2_en: Store-and-pick quote
+  row2_zh: 上架再拣货报价
+  row2_zh_hk: 上架再揀貨報價
+  col1_en: Quoted cost
+  col1_zh: 报价
+  col1_zh_hk: 報價
+  col2_en: Requirement
+  col2_zh: 条件
+  col2_zh_hk: 條件
+  c11_en: HK$2 plus HK$80
+  c11_zh: 每箱2港元加80港元
+  c11_zh_hk: 每箱2港元加80港元
+  c12_en: Named same-day load
+  c12_zh: 已确认的当日出货
+  c12_zh_hk: 已確認嘅當日出貨
+  c21_en: HK$5 a carton
+  c21_zh: 每箱5港元
+  c21_zh_hk: 每箱5港元
+  c22_en: Reserved rack space
+  c22_zh: 预留货架再拣出
+  c22_zh_hk: 預留貨架再揀出
+  footer_en: Four noon loads of 30 cartons
+  footer_zh: 四个中午出货，各30箱
+  footer_zh_hk: 四個中午出貨，各30箱
+  s1_en: >-
+    A distributor expects 120 identical sealed cartons of stationery at 8 a.m. tomorrow. Four confirmed
+    customer loads each need 30 cartons and leave at noon. Checks can finish by 9 a.m., leaving three
+    hours before departure. Both routes can meet the existing noon commitments.
+  s1_zh: >-
+    这家分销商预计明天上午八点，收到一百二十箱相同的密封文具纸箱。四票已确认的客户出货，各需三十箱，中午发车。核验可在九点前完成，离发车还有三个小时。两条路径都能满足现有的中午出货承诺。
+  s1_zh_hk: >-
+    呢間分銷商預計明日上午八時，收到一百二十箱相同嘅密封文具紙箱。四票已確認嘅客戶出貨，各需三十箱，中午開出。核驗可喺九時前完成，距離開出仲有三個鐘。兩條路徑都能夠滿足現有嘅中午出貨承諾。
+  s2_en: >-
+    Cross-docking sends eligible goods from receipt to a named outbound load without routine rack storage.
+    The quote is 2 dollars per carton, plus a single 80-dollar coordination charge if any carton in this
+    batch is cross-docked. Storing and later picking costs 5 dollars per carton, including up to seven
+    days of holding.
+  s2_zh: >-
+    越库作业是指，符合条件的货物从收货直接转到已指定的出货，不必按常规上架存储。报价是每箱两港元，如果这批货有一箱走越库，还要加收一笔八十港元的协调费。上架再拣货是每箱五港元，已包括最多七天的存储和最终出货拣选。
+  s2_zh_hk: >-
+    越庫作業是指，符合條件嘅貨物由收貨直接轉到已指定嘅出貨，唔須按常規上架存放。報價係每箱兩港元，如果呢批貨有一箱採用越庫作業，仲要加收一筆八十港元嘅協調費。上架再揀貨係每箱五港元，已包括最多七天嘅存放同最終出貨揀選。
+  s3_en: >-
+    A split is allowed without another fixed charge. No route is booked yet. Receipt checks, safe vehicle
+    separation and release authorisation still apply under both methods.
+  s3_zh: 允许拆分，而且不会再收一笔固定费用。目前两条路径都還未预订、還未付费。无论走哪条路径，收货核验、安全分车和放行授权都不能少。
+  s3_zh_hk: 允許拆分，而且唔會再收一筆固定費用。目前兩條路徑都還未預訂、還未付費。無論走邊條路徑，收貨核驗、安全分車同放行授權都不能少。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Cross-dock all 120, or store them?
+  title_zh: 120箱全部越库，还是先上架？
+  title_zh_hk: 120箱全部越庫，定先上架？
+  en: >-
+    Would you plan to cross-dock the 120 cartons or put them into storage? Compare the quoted costs, then
+    specify the checks that must still pass before goods can bypass the racks. Pause and vote.
+  zh: 你会计划把这一百二十箱走越库作业，还是先上架？请比较报价，并说明货物不经过货架之前，还必须通过哪些核验。请暂停，投个票。
+  zh_hk: 你會計劃把呢一百二十箱採用越庫作業，定係先上架？請比較報價，並說明貨物唔經貨架之前，仲必須通過邊啲核驗。暫停，投個票。
+- id: reveal
+  visual: table_grid
+  seconds: 24
+  rows: 3
+  cols: 2
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: One thirty-carton load is cancelled
+  title_zh: 一票30箱被取消了
+  title_zh_hk: 一票30箱被取消咗
+  row1_en: Confirmed loads left
+  row1_zh: 仍确认的出货
+  row1_zh_hk: 仍確認嘅出貨
+  row2_en: Unassigned cartons
+  row2_zh: 没有去向的箱子
+  row2_zh_hk: 沒有去向嘅紙箱
+  row3_en: Inbound quantity
+  row3_zh: 即将到达的数量
+  row3_zh_hk: 即將到達嘅數量
+  col1_en: Cartons
+  col1_zh: 箱数
+  col1_zh_hk: 箱數
+  col2_en: Consequence
+  col2_zh: 影响
+  col2_zh_hk: 影響
+  c11: '90'
+  c12_en: Noon times unchanged
+  c12_zh: 中午时间不变
+  c12_zh_hk: 中午時間不變
+  c21: '30'
+  c22_en: No departure time
+  c22_zh: 没有发车时间
+  c22_zh_hk: 冇開出時間
+  c31: '120'
+  c32_en: Cannot be reduced now
+  c32_zh: 此刻不能减少
+  c32_zh_hk: 此刻不能減少
+  footer_en: A split may be planned before moving goods
+  footer_zh: 挪货前可以先计划拆分
+  footer_zh_hk: 移貨前可以先計劃拆分
+  s1_en: >-
+    Before the inbound truck arrives, one customer validly cancels its entire 30-carton order and noon
+    collection. No fee or replacement promise arises. The other three 30-carton loads remain confirmed.
+    The distributor owns the 30 released cartons, but they have no assigned recipient or departure time.
+  s1_zh: >-
+    在到货车到达之前，一位客户按约定条款，取消了整票三十箱订单和中午提货。不产生费用，也没有替代订单或剩余交货承诺。另外三票三十箱仍然确认，发车时间不变。这三十箱归分销商所有，但没有指定收货人，也没有发车时间。
+  s1_zh_hk: >-
+    喺到貨車到達之前，一位客戶按約定條款，取消咗整票三十箱訂單同中午提貨。唔產生費用，亦都冇替代訂單或剩餘交貨承諾。另外三票三十箱仍然確認，開出時間不變。呢三十箱仍屬分銷商所有，但冇指定收貨人，亦都冇開出時間。
+  s2_en: >-
+    The inbound quantity remains 120 and cannot be reduced now. The 30 unassigned cartons can be stored
+    safely under the seven-day quote while a new allocation is found. No sale within seven days is guaranteed.
+  s2_zh: 即将到达的数量仍是一百二十箱，此刻不能减少。这三十箱没有去向的货物，可按七天报价安全存放，同时再寻找新的分配。七天内并不保证能够售出或发出。
+  s2_zh_hk: >-
+    即將到達嘅數量仍然係一百二十箱，此刻不能減少。呢三十箱沒有去向嘅貨物，可按七天報價安全存放，同時再尋找新嘅編配。七天內並唔保證能夠售出或發出。
+  s3_en: >-
+    The supervisor can split the receipt into 90 cross-dock cartons and 30 put-away cartons before moving
+    either group. If any remaining appointment or check fails, those cartons also take the storage route.
+    They must not block a staging lane indefinitely.
+  s3_zh: >-
+    主管可以在挪动任何一组货物之前，把到货拆成九十箱走越库、三十箱上架入库。如果剩余的出货预约或核验没有通过，受影响的纸箱也要走获准的存储路径，不能无限期占用暂存通道。
+  s3_zh_hk: >-
+    主管可以喺移動任何一組貨物之前，把到貨拆成九十箱採用越庫作業、三十箱上架存放。如果剩餘嘅出貨預約或核驗冇通過，受影響嘅紙箱也須走獲准嘅存放流程，唔能夠無限期佔用暫存通道。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: How should the 120 cartons be split?
+  title_zh: 这120箱该怎样拆分？
+  title_zh_hk: 呢120箱該點樣拆分？
+  en: >-
+    How would you route the shipment after the cancellation? Calculate the revised handling cost, and
+    explain what happens to the cartons with no outbound assignment. Pause and vote again.
+  zh: >-
+    取消发生后，你会怎样安排这批货的路径？请算出调整后的作业成本，并说明没有出货去向的箱子怎么处理，而不是把越库作业看成全有或全无。请暂停，再投一次票。
+  zh_hk: >-
+    取消發生之後，你會點樣安排呢批貨嘅路徑？請計出調整後嘅處理成本，並說明沒有出貨去向嘅紙箱會點樣處理，而唔好把越庫作業當成全有或全無。暫停，再投一次票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Match inbound and outbound first
+  title_zh: 先核对进出能否匹配
+  title_zh_hk: 先配對進出貨，再計節省
+  step1_en: >-
+    All 120 stored: HK$600
+  step1_zh: 120箱全部上架：600港元
+  step1_zh_hk: 120箱全部上架：600港元
+  step2_en: >-
+    All 120 cross-docked: HK$320
+  step2_zh: 120箱全部越库：320港元
+  step2_zh_hk: 120箱全部越庫：320港元
+  s1_en: >-
+    Match the flows before counting a saving. Cross-docking all 120 would cost 2 dollars times 120, plus
+    the 80-dollar charge, or 320 dollars. Storing all 120 would cost 5 dollars times 120, or 600 dollars.
+    The difference is 280 dollars, but that comparison assumed every carton had a same-day outbound load.
+  s1_zh: >-
+    先核对进出货能否匹配，再算节省。一百二十箱全部走越库，费用是两港元乘以一百二十，再加上八十港元，等于三百二十港元。全部上架是五港元乘以一百二十，等于六百港元。相差二百八十港元，但这样比，前提是每箱都有当日确认的出货。
+  s1_zh_hk: >-
+    先配對進出貨，再計算節省。一百二十箱全部採用越庫作業，費用係兩港元乘以一百二十，再加上八十港元，等於三百二十港元。全部上架係五港元乘以一百二十，等於六百港元。相差二百八十港元，但噉樣比，前提係每箱都有當日確認嘅出貨。
+  s2_en: >-
+    After the cancellation, 90 cartons can still be cross-docked: 2 times 90 plus 80, or 260 dollars.
+    The 30 unassigned cartons are stored at 5 dollars each, or 150 dollars. The combined handling cost
+    is 410 dollars, which is 190 dollars below storing all 120.
+  s2_zh: >-
+    取消之后，九十箱仍可走越库：两乘以九十再加八十，等于二百六十港元。三十箱没有去向的货，按每箱五港元存放，等于一百五十港元。合计作业成本是四百一十港元，比一百二十箱全部上架低一百九十港元。
+  s2_zh_hk: >-
+    取消之後，九十箱仍可採用越庫作業：兩乘以九十再加八十，等於二百六十港元。三十箱沒有去向嘅貨，按每箱五港元存放，等於一百五十港元。合計處理成本係四百一十港元，比一百二十箱全部上架低一百九十港元。
+  s3_en: >-
+    The 80-dollar coordination charge is paid once if any carton is cross-docked. You cannot cross-dock
+    all 120 when 30 cartons have no destination.
+  s3_zh: 只要这批货有一箱走越库，八十港元的协调费只收一次。三十箱没有去向时，不能把一百二十箱全部走越库。
+  s3_zh_hk: 只要呢批貨有一箱採用越庫作業，八十港元嘅協調費只收一次。三十箱沒有去向時，唔能夠把一百二十箱全部做越庫作業。
+  step3_en: >-
+    After cancel, 90 plus 30: HK$410
+  step3_zh: 取消后90加30：410港元
+  step3_zh_hk: 取消後90加30：410港元
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 22
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Storage can be a planned path
+  title_zh: 入库可以是预先安排的路径
+  title_zh_hk: 存放可以係預先安排嘅路徑
+  step1_en: Reclassify only the exception
+  step1_zh: 只调整异常货物的去向
+  step1_zh_hk: 只重新分類例外個案
+  step2_en: No destination means no cross-dock
+  step2_zh: 没有去向就不能越库
+  step2_zh_hk: 沒有去向就不能越庫
+  s1_en: >-
+    Only the exception needs to be reclassified. The ninety cartons with confirmed noon loads can still
+    go straight through, provided their checks and appointments still pass.
+  s1_zh: 只调整异常货物的去向。九十箱仍有确认中午出货的纸箱，只要核验和预约仍然通过，就可以继续直接发走。
+  s1_zh_hk: 只重新分類例外個案。九十箱仍有確認中午出貨嘅紙箱，只要核驗同預約仍然通過，就可以繼續直接出貨。
+  s2_en: >-
+    Putting the thirty unassigned cartons into reserved racks is a planned path, not a failure of cross-docking.
+    Cross-docking is not an all-or-nothing label for the whole truck.
+  s2_zh: 把三十箱没有去向的货放上预留货架，是预先安排的路线，不是越库作业失败。不要把越库作业看成整车非此即彼的标签。
+  s2_zh_hk: 把三十箱沒有去向嘅貨放到預留貨架，係預先安排嘅路徑，唔係越庫作業失敗。唔好把越庫作業當成整車非此即彼嘅標籤。
+  s3_en: >-
+    If a later appointment or check fails, those cartons also take the authorised storage route. They
+    must not block a staging lane while waiting indefinitely.
+  s3_zh: 如果后来的预约或核验没有通过，这些纸箱也要走获准的存储路径，不能无限期占用暂存通道。
+  s3_zh_hk: 如果後來嘅預約或核驗冇通過，呢啲紙箱也須走獲准嘅存放流程，唔能夠無限期佔用暫存通道。
+  step3_en: Putting goods away is not a failure
+  step3_zh: 上架入库不是失败
+  step3_zh_hk: 上架存放唔係失敗
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Do not cross-dock goods with no destination
+  title_zh: 没有去向的货不能越库
+  title_zh_hk: 沒有去向嘅貨不能越庫
+  en: >-
+    A cheaper cross-dock quote applies only to cartons with a named, confirmed outbound load. After a
+    cancellation, split the receipt, keep the eligible cartons moving, and store the rest under the quoted
+    holding path.
+  zh: 更便宜的越库报价，只适用于已有指定、已确认出货的纸箱。取消发生后，要把到货拆开：符合条件的继续流转，其余按报价走存储路径。
+  zh_hk: 更平嘅越庫報價，只適用於已有指定、已確認出貨嘅紙箱。取消發生之後，要把到貨拆開：符合條件嘅繼續流轉，其餘按報價走存放路徑。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Split the flow when assignments change
+  title_zh: 去向一变就要拆分流向
+  title_zh_hk: 去向一變就要拆分流向
+  q1_en: 90 can still cross-dock; 30 should be stored
+  q1_zh: 90箱仍可越库，30箱应上架
+  q1_zh_hk: 90箱仍可越庫，30箱應上架
+  q2_en: The split costs HK$410, not HK$320
+  q2_zh: 拆分后是410港元，不是320
+  q2_zh_hk: 拆分後係410港元，唔係320
+  s1_en: >-
+    After the cancellation, the quoted handling cost is 410 dollars: 260 for ninety cross-docked cartons,
+    including the one-time 80-dollar charge, plus 150 to store thirty cartons. Cross-docking all 120 is
+    no longer eligible.
+  s1_zh: >-
+    取消之后，报价作业成本是四百一十港元：九十箱越库二百六十港元，已包括一次性八十港元协调费，再加上三十箱存放一百五十港元。一百二十箱全部走越库，已经不再符合条件。
+  s1_zh_hk: >-
+    取消之後，報價處理成本係四百一十港元：九十箱越庫作業二百六十港元，已包括一次性八十港元協調費，再加上三十箱存放一百五十港元。一百二十箱全部做越庫作業，已經不再符合條件。
+  s2_en: >-
+    The distributor, cartons, appointments and quotes are fictional classroom assumptions. Official scene
+    art is a teaching illustration only.
+  s2_zh: 这家分销商、纸箱、预约和报价，都是虚构的课堂假设。官方场景图只是教学插图。
+  s2_zh_hk: 呢間分銷商、紙箱、預約同報價，都係虛構嘅課堂假設。官方場景圖只係教學插圖。
+  s3_en: >-
+    The hub announcement supplies context, not evidence for any classroom number.
+  s3_zh: 枢纽扩建的宣布只提供背景，不能当作课堂上这些数字的证据。
+  s3_zh_hk: 樞紐擴建嘅宣布只提供背景，唔可以當作課堂上呢啲數字嘅證據。
+duration_target_s: 188

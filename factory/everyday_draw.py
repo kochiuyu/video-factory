@@ -206,10 +206,15 @@ def _distance_board(labels, write):
     action = str(labels["action"])
     unit = _unit_word(labels)
     show_units = bool(labels.get("units"))
-    left = -2.4
+    left = -2.2
+    top_y, bot_y = 0.72, -0.72
+    spine = Line([left, top_y, 0], [left, bot_y, 0], color=NAVY, stroke_width=8)
+    _round_outline(spine)
+    name = write("S", 36)
+    name.next_to(spine, LEFT, buff=0.22)
     lanes = []
     lines = []
-    for length, y in ((a, 0.62), (b, -0.62)):
+    for length, y in ((a, top_y), (b, bot_y)):
         start = [left, y, 0]
         end = [left + 0.46 * length, y, 0]
         line = Line(start, end, color=NAVY, stroke_width=8)
@@ -219,16 +224,11 @@ def _distance_board(labels, write):
         bits = [line, pip]
         if show_units:
             tag = write(_reading(length, unit), 28)
-            tag.next_to(pip, RIGHT, buff=0.12)
+            tag.next_to(pip, RIGHT, buff=0.16)
             bits.append(tag)
-        lane = VGroup(*bits)
-        lanes.append(lane)
+        lanes.append(VGroup(*bits))
         lines.append(line)
-    start = _pip(GREEN)
-    start.move_to([left, 0, 0])
-    name = write("S", 32)
-    name.next_to(start, DOWN, buff=0.16)
-    group = VGroup(*lanes, start, name)
+    group = VGroup(spine, name, *lanes)
     board = _fresh(group)
     board.vf_bars = lines
     if action == "nearer":
@@ -240,25 +240,26 @@ def _distance_board(labels, write):
     else:
         longer = 0 if a >= b else 1
         line = lines[longer]
-        bend = _bend(line.get_start(), line.get_end())
+        bend = _bend(line.get_start(), line.get_end(), up=(longer == 0))
         group.add(bend)
         board.vf_later.append(bend)
         board.vf_marked = bend
     return board
 
 
-def _bend(start, end):
+def _bend(start, end, up=True):
     from manim import Line, VGroup
 
     sx, sy, _sz = [float(v) for v in start]
     ex, ey, _ez = [float(v) for v in end]
-    lift = 0.85 if sy >= 0 else -0.85
+    lift = 0.7 if up else -0.7
+    # Leave the straight gap visible. The detour starts just off that line.
     mid_a = [sx, sy + lift, 0]
     mid_b = [ex, ey + lift, 0]
     path = VGroup(
-        Line(start, mid_a, color=SIDE, stroke_width=6),
+        Line([sx, sy + (0.08 if up else -0.08), 0], mid_a, color=SIDE, stroke_width=6),
         Line(mid_a, mid_b, color=SIDE, stroke_width=6),
-        Line(mid_b, end, color=SIDE, stroke_width=6),
+        Line(mid_b, [ex, ey + (0.08 if up else -0.08), 0], color=SIDE, stroke_width=6),
     )
     return path
 

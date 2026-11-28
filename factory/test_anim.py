@@ -2259,6 +2259,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-SHP-03": [
                 "lesson_hook", "shape_join", "shape_join", "shape_join", "lesson_takeaway",
             ],
+            "P1-SHP-04": [
+                "lesson_hook", "solid_shape", "solid_shape", "solid_shape", "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -3001,6 +3004,19 @@ class SceneRegistryTest(unittest.TestCase):
             [("join", "quad"), ("join", "pentagon"), ("join", "hexagon")],
         )
         self.assertNotIn("嗎", _beat_lines(joins, "zh_hk"))
+        solids = load_lesson(P1 / "P1-SHP-04.yaml")
+        models = [beat for beat in solids["beats"] if beat.get("scene") == "solid_shape"]
+        self.assertEqual([b["part"] for b in models], ["pair", "pair", "turn"])
+        self.assertEqual(models[0]["items"], ["prism", "cylinder"])
+        self.assertEqual(models[2]["items"], ["sphere"])
+        self.assertIsNone(count_event(models[0]))
+        self.assertEqual(models[0]["s1_zh_hk"], "盒係柱體。")
+        self.assertEqual(models[2]["s3_zh_hk"], "仲係球體。")
+        self.assertEqual(
+            labels_for(solids["beats"][-1], "en")["cues"][2],
+            ("solid", "pair", ("pyramid", "cone")),
+        )
+        self.assertNotIn("嗎", _beat_lines(solids, "zh_hk"))
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

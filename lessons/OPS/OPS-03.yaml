@@ -1,0 +1,314 @@
+id: OPS-03
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: A faster machine. More finished boxes?
+title_zh: 机器更快，成品盒就更多吗？
+title_zh_hk: 機器更快，完成的禮盒會更多嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-03
+  kicker_en: OPS-03
+  kicker_zh: OPS-03
+  kicker_zh_hk: OPS-03
+  title_en: A faster machine. More finished boxes?
+  title_zh: 机器更快，成品盒就更多吗？
+  title_zh_hk: 機器更快，完成的禮盒會更多嗎？
+  image: art/packing-line-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In July 2023, a government report described Hongkong Post's packet-sorting robotics. Parcels were
+    scanned, weighed and sorted, then staff sealed mailbags for dispatch. That is a chain of steps, not
+    a claim about one bottleneck. You manage a fictional Hong Kong gift-order packing workshop. Every
+    identical box goes through pick and check, then wrap, then seal and label.
+  zh: >-
+    二零二三年七月，政府新闻介绍了香港邮政的包裹分拣机器人：包裹经过扫描、称重和分拣后，再由工作人员把邮袋封好发运。这是一条衔接起来的工序，并没有指出瓶颈在哪里。你管理一家虚构的香港礼品打包工坊。每个同样的礼盒，都要经过拣货与核对、包装、再封盒与贴标。
+  zh_hk: >-
+    二零二三年七月，政府新聞介紹咗香港郵政嘅郵件分揀機械人：包裹經過掃描、稱重同分揀之後，再由員工封好郵袋付運。呢條係一條銜接起來嘅工序，並冇指出瓶頸喺邊。你管理一間虛構嘅香港禮品裝盒工場。每個同樣嘅禮盒，都要經過揀貨同核對、包裝、再封盒同貼標籤。
+- id: ledger
+  visual: table_grid
+  seconds: 24
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: What is known before the study
+  title_zh: 流程调查前已知的数字
+  title_zh_hk: 流程研究前已知的數字
+  row1_en: Demand
+  row1_zh: 需求
+  row1_zh_hk: 需求
+  row2_en: Pick/check now
+  row2_zh: 拣货与核对（现）
+  row2_zh_hk: 揀貨及核對（現）
+  row3_en: Offered upgrade
+  row3_zh: 拟升级后
+  row3_zh_hk: 擬升級後
+  col1_en: Rate
+  col1_zh: 速率
+  col1_zh_hk: 速率
+  col2_en: Note
+  col2_zh: 说明
+  col2_zh_hk: 說明
+  c11: 150/h
+  c11_en: 150 boxes/hour
+  c11_zh: 150盒/小时
+  c11_zh_hk: 每小時150盒
+  c12_en: Orders waiting
+  c12_zh: 订单在等
+  c12_zh_hk: 訂單在等
+  c21: 120/h
+  c21_en: 120 boxes/hour
+  c21_zh: 120盒/小时
+  c21_zh_hk: 每小時120盒
+  c22_en: Other stations unmeasured
+  c22_zh: 其他工位未测
+  c22_zh_hk: 其他工位未量度
+  c31: 200/h
+  c31_en: 200 boxes/hour
+  c31_zh: 200盒/小时
+  c31_zh_hk: 每小時200盒
+  c32_en: Costs HK$20,000
+  c32_zh: 需20,000港元
+  c32_zh_hk: 需20,000港元
+  footer_en: Budget can fund only one improvement
+  footer_zh: 预算只够做一项改进
+  footer_zh_hk: 預算只夠改善一項
+  s1_en: >-
+    Customers have enough orders for one hundred and fifty finished boxes per hour in the coming busy
+    period. You want more acceptable boxes ready for dispatch.
+  s1_zh: 接下来的旺季，客户订单足以支撑每小时一百五十个成品盒。还有订单在等，你希望有更多合格的成品盒可以发运。
+  s1_zh_hk: 即將到來嘅旺季，客戶訂單足以消化每小時一百五十盒成品。已有訂單在等，你希望有更多合格禮盒可以付運。
+  s2_en: >-
+    A supplier offers a twenty-thousand-dollar pick-and-check setup that raises that station from one
+    hundred and twenty to two hundred boxes an hour. The tempting headline is eighty more boxes picked
+    and checked each hour. A picked box is not yet a completed order.
+  s2_zh: >-
+    供应商提供一套两万港元的拣货与核对设备，能把该工位从每小时一百二十盒提高到两百盒。最诱人的说法是：每小时可多拣出并核对八十盒。可是拣完的盒子，还不是已经完成的订单。
+  s2_zh_hk: >-
+    供應商提供一套兩萬港元嘅揀貨及核對設備，可以將該工位由每小時一百二十盒提升到兩百盒。最吸引嘅講法係：每小時可以多揀同核對八十盒。但揀完嘅盒子，仲唔係已經完成嘅訂單。
+  s3_en: >-
+    You have not measured the other stations. The budget can fund only one improvement, and there is time
+    for a short process study before you decide.
+  s3_zh: 其他工位你还没有测过。预算只够做一项改进，而且在拍板之前，还来得及做一次简短的流程调查。
+  s3_zh_hk: 其他工位你仲未量度過。預算只夠改善一項，而且喺拍板之前，仲嚟得切做一次簡短嘅流程研究。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Buy now, or measure the line first?
+  title_zh: 现在就买，还是先测整条线？
+  title_zh_hk: 而家就買，定先量度成條線？
+  en: >-
+    Would you approve the faster pick-and-check setup now, or measure the full packing line first? What
+    output would justify the purchase? Pause and vote.
+  zh: 你是现在就批准这套更快的拣货与核对设备，还是先把整条打包线测一遍？什么样的产出，才值得这笔采购？请暂停，投个票。
+  zh_hk: 你係而家就批准呢套更快嘅揀貨及核對設備，定先將成條裝盒線量度一次？點樣嘅產出，先值得呢筆採購？暫停，投個票。
+- id: reveal
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A time study of all three stations
+  title_zh: 三个工位的工时测定
+  title_zh_hk: 三個工位的工時研究
+  row1_en: 1. Pick and check
+  row1_zh: 1. 拣货与核对
+  row1_zh_hk: 1. 揀貨及核對
+  row2_en: 2. Wrap
+  row2_zh: 2. 包装
+  row2_zh_hk: 2. 包裝
+  row3_en: 3. Seal and label
+  row3_zh: 3. 封盒与贴标
+  row3_zh_hk: 3. 封盒及貼標
+  col1_en: Current
+  col1_zh: 当前
+  col1_zh_hk: 現有
+  col2_en: If improved
+  col2_zh: 若改进该项
+  col2_zh_hk: 若改善該項
+  c11: 120/h
+  c12: 200/h
+  c21: 80/h
+  c22: 120/h
+  c31: 100/h
+  c32_en: unchanged
+  c32_zh: 不变
+  c32_zh_hk: 不變
+  footer_en: Same HK$20,000; only one change allowed
+  footer_zh: 同是20,000港元，只能改一项
+  footer_zh_hk: 同是20,000港元，只可改一項
+  s1_en: >-
+    A representative time study now measures all three stations, including normal interruptions. These
+    are sustainable rates of acceptable work for the same box design, with separate staff and adequate
+    transfer space.
+  s1_zh: 一次有代表性的工时测定，已经量了全部三个工位，也包括正常的中断。这些是同一款礼盒、可持续的合格产出速率。各工位人员分开，中间转运空间也够用。
+  s1_zh_hk: 一次有代表性嘅工時研究，已經量度全部三個工位，亦包括正常中斷。呢啲係同一款禮盒、可持續嘅合格產出速率。各工位人手分開，中間轉運空間都夠用。
+  s2_en: >-
+    Current capacities are one hundred and twenty, eighty, and one hundred boxes an hour. For the same
+    twenty thousand dollars, a wrapping redesign can raise wrapping from eighty to one hundred and twenty.
+    The proposed pick-and-check setup still raises that station to two hundred.
+  s2_zh: >-
+    当前产能分别是每小时一百二十、八十和一百盒。同样花两万港元，改造包装工位可以把包装从八十提高到一百二十。原来那套拣货与核对设备，仍然是把该工位提高到两百。
+  s2_zh_hk: >-
+    現有處理能力分別係每小時一百二十、八十同一百盒。同樣花兩萬港元，改善包裝工位可以把包裝由八十提升到一百二十。原來嗰套揀貨及核對設備，仍然係將該工位提升到兩百。
+  s3_en: >-
+    Either change leaves the other stations, staffing, quality and recurring costs unchanged. Demand remains
+    one hundred and fifty boxes an hour, and the budget still permits only one improvement.
+  s3_zh: 无论改哪一项，其他工位、人员、质量和经常性费用都不变。需求仍是每小时一百五十盒，预算也仍然只够改一项。
+  s3_zh_hk: 無論改邊一項，其他工位、人手、質素同經常性費用都不變。需求仍然係每小時一百五十盒，預算亦都仍然只夠改一項。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Which investment, and how many extra boxes?
+  title_zh: 投资哪一项，成品能多多少？
+  title_zh_hk: 投資邊一項，成品可以多幾多？
+  en: >-
+    Which investment would you choose now, and how many extra finished boxes per hour could it support?
+    Pause and vote again.
+  zh: 现在你会选哪一项投资？它每小时能够多支持多少个成品盒？请暂停，再投一次票。
+  zh_hk: 而家你會揀邊一項投資？它每小時能夠多支持幾多盒成品？暫停，再投一次票。
+- id: bridge
+  visual: steps
+  seconds: 26
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Follow one box to the end
+  title_zh: 跟着一个礼盒走完整条线
+  title_zh_hk: 沿着一盒禮品看完整個流程
+  step1_en: The line is limited by min(120, 80, 100) = 80
+  step1_zh: 整条线受限于 min(120, 80, 100) = 80
+  step1_zh_hk: 成條線受限於 min(120, 80, 100) = 80
+  step2_en: Faster pick/check still finishes 80 an hour
+  step2_zh: 拣货加快后，成品仍是每小时80盒
+  step2_zh_hk: 揀貨加快之後，成品仍是每小時80盒
+  step3_en: Better wrapping raises finished output to 100
+  step3_zh: 改进包装后，成品提高到每小时100盒
+  step3_zh_hk: 改善包裝之後，成品提升到每小時100盒
+  s1_en: >-
+    In this simplified serial process, the slowest station limits sustainable finished output. Initially
+    that is wrapping: the minimum of one hundred and twenty, eighty and one hundred is eighty boxes an
+    hour.
+  s1_zh: 在这条简化的串联流程里，最慢的工位限制了可持续的成品产出。一开始，这个工位是包装：一百二十、八十和一百里面，最小的是八十盒每小时。
+  s1_zh_hk: 喺呢條簡化嘅串聯流程裏面，最慢嘅工位限制咗可持續嘅成品產出。一開始，呢個工位係包裝：一百二十、八十同一百裏面，最小嘅係每小時八十盒。
+  s2_en: >-
+    Faster pick and check gives a minimum of two hundred, eighty and one hundred: still eighty. It does
+    not increase the flow of finished boxes. Extra work sent to wrapping only creates a waiting pile unless
+    upstream release is controlled.
+  s2_zh: 拣货与核对加快以后，最小值变成两百、八十和一百，仍然是八十。成品盒的流量并没有增加。如果上游还是不停往下送，包装工位只会堆起等待的半成品。
+  s2_zh_hk: 揀貨及核對加快之後，最小值變成兩百、八十同一百，仍然係八十。成品盒嘅流量並冇增加。如果上游仲係不停送落去，包裝工位只會堆起等待嘅半成品。
+  s3_en: >-
+    Improved wrapping gives a minimum of one hundred and twenty, one hundred and twenty, and one hundred:
+    one hundred finished boxes an hour. The potential gain is twenty completed boxes an hour, or twenty-five
+    percent, not wrapping's forty-box local gain, and not the advertised eighty-box pick-and-check gain.
+  s3_zh: >-
+    改进包装以后，最小值是一百二十、一百二十和一百，也就是每小时一百个成品盒。可能增加的是每小时二十个完成盒，即百分之二十五，不是包装工位本身多出来的四十盒，更不是宣传里拣货可多出的八十盒。
+  s3_zh_hk: >-
+    改善包裝之後，最小值係一百二十、一百二十同一百，亦即每小時一百盒成品。可能增加嘅係每小時二十盒完成品，即百分之二十五，唔係包裝工位本身多出嚟嘅四十盒，更加唔係宣傳裏揀貨可多出嘅八十盒。
+- id: meaning
+  visual: steps
+  seconds: 24
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: The bottleneck moves
+  title_zh: 瓶颈转移了
+  title_zh_hk: 瓶頸轉移了
+  step1_en: After wrapping, seal-and-label limits the line
+  step1_zh: 包装改进后，封盒贴标成了限制
+  step1_zh_hk: 包裝改善後，封盒貼標成咗限制
+  step2_en: Demand of 150 an hour is still not met
+  step2_zh: 每小时150盒的需求仍未满足
+  step2_zh_hk: 每小時150盒嘅需求仍未滿足
+  step3_en: This is a capacity comparison, not a payback
+  step3_zh: 这是产能比较，不是投资回报计算
+  step3_zh_hk: 呢個係處理能力比較，唔係回報計算
+  s1_en: >-
+    After the wrapping change, sealing and labelling becomes the limiting station. The process still cannot
+    meet demand of one hundred and fifty boxes an hour. Do not promise that the entire backlog disappears.
+  s1_zh: 包装改完以后，封盒与贴标变成了限制工位。整条线仍然达不到每小时一百五十盒的需求。不要承诺积压的订单会全部消失。
+  s1_zh_hk: 包裝改完之後，封盒及貼標變成咗限制工位。成條線仍然達唔到每小時一百五十盒嘅需求。唔好承諾積壓嘅訂單會全部消失。
+  s2_en: >-
+    Keep enough prepared work so the constraint is not starved, but do not reward upstream staff merely
+    for building the largest pile. Recheck end-to-end performance, quality and queues after the change.
+  s2_zh: 要让瓶颈工位有足够的待加工件，不要让它闲着等料；但也不要只因为上游堆得最多就奖励上游。改完以后，还要再看端到端的产出、质量和排队。
+  s2_zh_hk: 要等瓶頸工位有足夠嘅待加工件，唔好等佢閒住等料；但亦都唔好只因為上游堆得最多就獎勵上游。改完之後，仲要再睇端到端嘅產出、質素同排隊。
+  s3_en: >-
+    For finished-box capacity, the wrapping redesign is the useful candidate; faster pick and check adds
+    none in this model. That is not yet a full investment appraisal. If the economics fail, delaying both
+    purchases is defensible.
+  s3_zh: >-
+    若目标是增加成品盒，改造包装才是有用的选项；在这个模型里，加快拣货并不能增加成品流量。这还不是完整的投资评估。如果经济账算不过来，两笔采购都暂缓，也说得通。
+  s3_zh_hk: >-
+    若目標係增加成品盒，改善包裝先至係有用嘅選項；喺呢個模型裏面，加快揀貨並唔能夠增加成品流量。呢個仲未係完整嘅投資評估。如果經濟賬算唔過去，兩筆採購都暫緩，都講得通。
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Why only 20 more finished boxes?
+  title_zh: 为什么成品只多20盒？
+  title_zh_hk: 點解成品只多20盒？
+  en: >-
+    If you chose wrapping, why does a forty-box local improvement yield only twenty more completed boxes?
+    If you chose faster pick and check, which downstream rate actually changes? Separate capacity from
+    financial return, and note the remaining demand gap.
+  zh: >-
+    如果你选了改造包装，为什么工位多处理四十盒，成品却只多二十盒？如果你选了加快拣货与核对，下游哪一个工位的产出率会变？要把产能和财务回报分开看，并注意到需求缺口还在。
+  zh_hk: >-
+    如果你揀咗改善包裝，點解工位可以多做四十盒，成品卻只多二十盒？如果你揀咗加快揀貨及核對，下游邊一個工位嘅產出率會變？要把處理能力同財務回報分開睇，並注意到需求缺口仲喺度。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Improve the limiting activity
+  title_zh: 先改进限制整条线的工序
+  title_zh_hk: 先改善限制成條線的工序
+  q1_en: A station's speed is not the line's output
+  q1_zh: 一个工位变快，不等于整条线更快
+  q1_zh_hk: 一個工位變快，唔等於成條線更快
+  q2_en: >-
+    Then look again: the bottleneck can move
+  q2_zh: 改完再看，瓶颈可能会转移
+  q2_zh_hk: 改完再睇，瓶頸可能會轉移
+  s1_en: >-
+    Improve the process's limiting activity, then look again. A station's speed is not the same as the
+    business's output.
+  s1_zh: 先改进限制整条流程的那一步，然后再看一看。一个工位的速度，并不等于企业的产出。
+  s1_zh_hk: 先改善限制成個流程嗰一步，然後再睇一睇。一個工位嘅速度，並唔等於企業嘅產出。
+  s2_en: >-
+    The workshop, equipment offers, station rates and demand are invented teaching assumptions. They are
+    not estimates of Hongkong Post or any named operator.
+  s2_zh: 这家工坊、设备报价、工位速率和需求，都是虚构的教学假设，不是对香港邮政或任何具名机构的估算。
+  s2_zh_hk: 呢間工場、設備報價、工位速率同需求，都係虛構嘅教學假設，唔係對香港郵政或任何具名機構嘅估算。
+  s3_en: Official scene art is a teaching illustration only.
+  s3_zh: 官方场景图只是教学插图。
+  s3_zh_hk: 官方場景圖只係教學插圖。
+duration_target_s: 190

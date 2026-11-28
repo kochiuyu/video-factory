@@ -1,0 +1,331 @@
+id: OPS-10
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Within specification. Still the same process?
+title_zh: 符合规格。过程还和以前一样吗？
+title_zh_hk: 符合規格，生產過程仍跟以往一樣嗎？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-10
+  kicker_en: OPS-10
+  kicker_zh: OPS-10
+  kicker_zh_hk: OPS-10
+  title_en: Within specification. Still the same process?
+  title_zh: 符合规格。过程还和以前一样吗？
+  title_zh_hk: 符合規格，生產過程仍跟以往一樣嗎？
+  image: art/same-process-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In July 2026, HKPC reported a manufacturing showcase that included tools intended to flag anomalies
+    in production-line data. A fictional Hong Kong stationery-finishing workshop cuts decorative paper
+    sleeves for adult notebooks. For this order, acceptable individual widths are ninety-eight point zero
+    to one hundred and two point zero millimetres inclusive. The latest measured sleeve is one hundred
+    point six millimetres, and the current summary records no failed width checks.
+  zh: >-
+    二零二六年七月，香港生产力促进局报道了一项制造业展览，其中有工具用来整合生产线数据并标示异常。一家虚构的香港文具加工工坊，在为成人笔记本裁切装饰纸套。这张订单规定，单个纸套可接受的宽度是九十八点零到一百零二点零毫米，包括上下限。最近一次量到一百点六毫米，目前的汇总没有记录任何宽度检查不合格。
+  zh_hk: >-
+    二零二六年七月，香港生產力促進局報道咗一項製造業展覽，當中有工具用嚟整合生產線數據並標示異常。一間虛構嘅香港文具加工工場，喺為成人筆記簿裁切裝飾紙套。呢張訂單規定，單個紙套可接受嘅寬度係九十八點零到一百零二點零毫米，包括上下限。最近一次量到一百點六毫米，目前嘅摘要冇記錄任何寬度檢查不合格。
+- id: ledger
+  visual: table_grid
+  seconds: 24
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two responses, and what they use
+  title_zh: 两种应对，以及它们动用什么
+  title_zh_hk: 兩種應對，以及它們動用甚麼
+  row1_en: A · Scheduled review
+  row1_zh: A · 按计划检查
+  row1_zh_hk: A · 按原定時間檢視
+  row2_en: B · Diagnostic pause
+  row2_zh: B · 暂停做诊断
+  row2_zh_hk: B · 暫停作診斷
+  col1_en: What happens now
+  col1_zh: 现在怎么做
+  col1_zh_hk: 即時行動
+  col2_en: Resources
+  col2_zh: 资源
+  col2_zh_hk: 資源
+  c11_en: Review at hour end
+  c11_zh: 本小时结束时再检查过程
+  c11_zh_hk: 呢一小時結束時再檢視過程
+  c12_en: Keep the slack
+  c12_zh: 保留生产余量
+  c12_zh_hk: 保留生產緩衝時間
+  c21_en: Pause 20 minutes
+  c21_zh: 暂停20分钟做诊断
+  c21_zh_hk: 暫停20分鐘作診斷
+  c22_en: Use funded slack
+  c22_zh: 动用已安排的余量
+  c22_zh_hk: 動用已撥的緩衝時間
+  footer_en: Width is a fit characteristic, not safety-critical
+  footer_zh: 宽度影响合身，不是安全关键特性
+  footer_zh_hk: 寬度影響合身，不是安全關鍵特性
+  s1_en: >-
+    The supervisor must decide when to examine the process. The time-ordered record and reference chart
+    have not yet been shown; no existing mandatory stop rule is being bypassed.
+  s1_zh: 主管必须决定何时检视生产过程。按时间排列的记录和参考控制图还没有展示；这并不涉及绕过任何现行的强制停机规则。
+  s1_zh_hk: 主管必須決定何時檢視生產過程。按時間排列嘅記錄同參考管制圖仲未展示；呢個並唔涉及繞過任何現行嘅強制停機規則。
+  s2_en: >-
+    Option A continues with normal release checks and reviews the process at the end of the hour, keeping
+    available production slack. Option B pauses for twenty minutes, preserves settings and material, and
+    asks a qualified technician to review measurement, setup and time order.
+  s2_zh: >-
+    方案A照常进行放行检验，到这一小时结束时再检查过程，从而保留可用的生产余量。方案B暂停二十分钟，保留现有设置和物料，请具备资质的技术员检查测量、设备设置和读数的时间顺序。
+  s2_zh_hk: >-
+    方案A照常進行放行檢查，到呢一小時結束時再檢視過程，從而保留可用嘅生產緩衝時間。方案B暫停二十分鐘，保留原有設定同物料，請合資格技術員檢視量度方法、設定同讀數嘅時間次序。
+  s3_en: >-
+    Either schedule can meet today's delivery. B funds diagnosis, not a guaranteed repair within twenty
+    minutes. Machine guarding, maintenance, safety obligations and customer release checks remain in force
+    under either response. No extra worker or quantified prevention benefit is supplied.
+  s3_zh: >-
+    两种安排都能赶上今天交货。B拨出的是诊断时间，并不保证二十分钟内完成修复。无论选哪一个，机器防护、维护、安全责任和交付前的放行检验都维持不变。题目没有提供额外人手，也没有量化预防效益。
+  s3_zh_hk: >-
+    兩種安排都能趕上今日交貨。B撥出嘅係診斷時間，並唔保證二十分鐘內完成修復。無論揀邊一個，機器防護、保養、安全責任同交付前嘅放行檢查都維持不變。題目冇提供額外人手，亦都冇量化預防效益。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Continue now, or pause for diagnosis?
+  title_zh: 先照常做，还是暂停做诊断？
+  title_zh_hk: 先照常做，定暫停作診斷？
+  en: >-
+    Continue normal monitoring for now, or use the twenty-minute diagnostic pause? Does “within specification”
+    answer whether the process is behaving as before? Name evidence that could reverse your provisional
+    choice. Pause and vote.
+  zh: 你会暂时照常监察，还是用这二十分钟做诊断？“符合规格”能不能说明过程仍和以前一样？请指出哪些证据可能让你改变初步选择。请暂停，投个票。
+  zh_hk: 你會暫時照常監察，定用呢二十分鐘作診斷？「符合規格」可唔可以說明過程仍然同以往一樣？請指出邊啲證據可能令你改變初步選擇。暫停，投個票。
+- id: reveal
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Three references for the same readings
+  title_zh: 同一组读数，三个参照
+  title_zh_hk: 同一組讀數，三個參照
+  row1_en: Product specification
+  row1_zh: 产品规格
+  row1_zh_hk: 產品規格
+  row2_en: Control limits
+  row2_zh: 控制限
+  row2_zh_hk: 管制界限
+  row3_en: Historical centre
+  row3_zh: 历史中心
+  row3_zh_hk: 歷史中心線
+  col1_en: Value, mm
+  col1_zh: 数值，毫米
+  col1_zh_hk: 數值，毫米
+  col2_en: These nine
+  col2_zh: 这九个读数
+  col2_zh_hk: 呢九個讀數
+  c11_en: 98.0–102.0
+  c11_zh: 98.0–102.0
+  c11_zh_hk: 98.0–102.0
+  c12_en: All pass
+  c12_zh: 全部合格
+  c12_zh_hk: 全部合格
+  c21_en: 99.0–101.0
+  c21_zh: 99.0–101.0
+  c21_zh_hk: 99.0–101.0
+  c22_en: All inside
+  c22_zh: 全部在范围内
+  c22_zh_hk: 全部在範圍內
+  c31: '100.0'
+  c32_en: All nine above
+  c32_zh: 九个都在中心上方
+  c32_zh_hk: 九個都在中心上方
+  footer_en: Nine time-ordered readings, in mm
+  footer_zh: 九个按时间排列的读数，单位毫米
+  footer_zh_hk: 九個按時間排列的讀數，單位毫米
+  s1_en: >-
+    The technician supplies the last nine readings, taken at equal intervals with the same documented
+    method: one hundred point two, four, three, five, four, six, five, seven and six millimetres. Every
+    point is inside both the product requirement and the control band. All nine are above the centre.
+  s1_zh: >-
+    技术员提供最近九个读数，按相同的书面方法、相等时间间隔测得：一百点二、点四、点三、点五、点四、点六、点五、点七和点六毫米。每个点都在产品规格和控制限之内。九个读数都在中心的上方。
+  s1_zh_hk: >-
+    技術員提供最近九個讀數，按相同嘅書面方法、相等時間間隔測得：一百點二、點四、點三、點五、點四、點六、點五、點七同點六毫米。每個點都喺產品規格同管制界限之內。九個讀數都喺中心嘅上方。
+  s2_en: >-
+    The centre of one hundred point zero millimetres and control limits of ninety-nine point zero to one
+    hundred and one point zero were established before this job, from a substantial reviewed stable baseline.
+    Their validity is a given fact, not calculated from these nine points. The centre is a historical
+    average, not simply the desired target.
+  s2_zh: >-
+    中心一百点零毫米，控制限九十九点零到一百零一点零毫米，都是这项工作开始前，根据一套经过审查、数量充足而且稳定的可比基准定下来的。它们的有效性是已知条件，不是用这九个点算出来的。中心是历史平均值，不只是想达到的目标。
+  s2_zh_hk: >-
+    中心一百點零毫米，管制界限九十九點零到一百零一點零毫米，都係呢項工作開始前，根據一套經過審查、數量充足而且穩定嘅可比基準定落嚟嘅。佢哋嘅有效性係已知條件，唔係用呢九個點計出嚟。中心係歷史平均值，唔只係想達到嘅目標。
+  s3_en: >-
+    The workshop's preselected warning tests are a point outside the control limits, or nine successive
+    points strictly on the same side of the centre. Either calls for prompt investigation and a proportionate
+    response, not automatic rejection or machine adjustment.
+  s3_zh: >-
+    工坊事先选定的预警规则是：一点落在控制限之外，或者连续九个点都严格在中心的同一侧。出现任何一种，都要及时调查，并做出相称的应对，而不是自动判废，或自动去调机器。
+  s3_zh_hk: >-
+    工場預先選定嘅預警規則係：一點落喺管制界限之外，或者連續九個點都嚴格喺中心嘅同一側。出現任何一種，都要及時調查，並做出相稱嘅應對，而唔係自動判定不合格，或自動去調校機器。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Does the record change your timing?
+  title_zh: 这份记录会改变你的时机吗？
+  title_zh_hk: 呢份記錄會唔會改變你嘅時機？
+  en: >-
+    Does the chart change your response timing? Which rule signals, what should be checked first, and
+    why would rejecting every sleeve or automatically turning the cutter down be unjustified? Pause and
+    vote again.
+  zh: >-
+    这份记录会改变你的应对时机吗？是哪一条规则发出信号，应先检查什么，以及为什么把这些纸套全部判废、或自动把切刀往下调，都是没有根据的？请暂停，再投一次票。
+  zh_hk: >-
+    呢份記錄會唔會改變你嘅應對時機？係邊一條規則發出訊號，應先檢查啲咩，以及點解將呢啲紙套全部判定不合格、或自動將切刀往下調，都係冇根據？暫停，再投一次票。
+- id: bridge
+  visual: steps
+  seconds: 24
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Passing product checks is not the process question
+  title_zh: 产品合格，不是过程问题的答案
+  title_zh_hk: 產品合格，唔係過程問題嘅答案
+  step1_en: All nine pass the 98.0–102.0 mm specification
+  step1_zh: 九个读数都符合98.0–102.0毫米规格
+  step1_zh_hk: 九個讀數都符合98.0–102.0毫米規格
+  step2_en: None breaches the 99.0–101.0 mm control limits
+  step2_zh: 没有一点越过99.0–101.0毫米控制限
+  step2_zh_hk: 冇一點越過99.0–101.0毫米管制界限
+  step3_en: The nine-on-one-side rule signals at reading nine
+  step3_zh: 连续九点在同一侧，在第9个点报警
+  step3_zh_hk: 連續九點在同一側，在第9個點示警
+  s1_en: >-
+    The measured sleeves satisfy the stipulated product requirement. That does not answer whether the
+    recent process behaves like its historical reference.
+  s1_zh: 测到的这些纸套，都符合规定的产品要求。但这并不能回答：最近的过程，是否还像它的历史参照那样运行。
+  s1_zh_hk: 量到嘅呢啲紙套，都符合規定嘅產品要求。但呢個並唔能夠回答：最近嘅過程，係咪仍然好似佢嘅歷史參照咁運行。
+  s2_en: >-
+    No point breaches a control limit. Nevertheless, the supplied nine-on-one-side rule signals at reading
+    nine. The sequence is not continuously increasing: it is a possible shift in location, not a demonstrated
+    upward trend or increased variability.
+  s2_zh: >-
+    没有一个点越过控制限。尽管如此，事先选定的“连续九点在同一侧”规则，在第九个读数发出了信号。这个序列并不是一路上升：它提示位置可能发生了偏移，而不是已经证明存在上升趋势，或波动变大。
+  s2_zh_hk: >-
+    冇一個點越過管制界限。儘管如此，預先選定嘅「連續九點在同一側」規則，喺第九個讀數發出咗訊號。呢個序列並唔係一路上升：它提示位置可能發生咗偏移，而唔係已經證明存在上升趨勢，或波動變大。
+  s3_en: >-
+    The exact nine-point convention is supplied in this case. Some educational examples use an eight-point
+    rule; do not attribute nine to those sources. Do not derive a posterior certainty by raising one half
+    to a power.
+  s3_zh: 本题采用的，就是这个九点规则。有些教材例子用的是八点规则，不要把九点算到那些来源头上。也不要用二分之一的几次方，来推出事后的确定性。
+  s3_zh_hk: 本題採用嘅，就係呢個九點規則。有啲教材例子用嘅係八點規則，唔好將九點算到嗰啲來源頭上。亦都唔好用二分之一嘅幾次方，嚟推出事後嘅確定性。
+- id: meaning
+  visual: steps
+  seconds: 24
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Investigate; do not hide the signal
+  title_zh: 先调查，不要掩盖报警信号
+  title_zh_hk: 先調查，唔好掩蓋警示訊號
+  step1_en: B is now the supported response
+  step1_zh: 现在更支持选择B，用暂停做诊断
+  step1_zh_hk: 而家更支持選擇B，用暫停作診斷
+  step2_en: Check the gauge, sampling, material and setup
+  step2_zh: 先查量具、抽样、材料和设置
+  step2_zh_hk: 先查量具、抽樣、物料同設定
+  step3_en: Do not recompute limits from these nine points
+  step3_zh: 不要用这九个点重算中心或界限
+  step3_zh_hk: 唔好用呢九個點重算中心或界限
+  s1_en: >-
+    B is now the supported response under this monitoring plan: there is a defined signal and available
+    diagnostic slack. Preserve the record and settings initially. Have the qualified technician check
+    the gauge and reference, sampling and recording consistency, and recent material or setup changes.
+  s1_zh: >-
+    按照这套监控规则，现在更支持选B：已经有明确信号，也有可用的诊断余量。先把记录和设置保留下来。请具备资质的技术员检查量具和参照、抽样与记录是否一致，以及近期材料和设置有没有变化。
+  s1_zh_hk: >-
+    按照呢套監察規則，而家更支持揀B：已經有明確訊號，亦都有可用嘅診斷緩衝時間。先將記錄同設定保留落嚟。請合資格技術員檢查量具同參照、抽樣同記錄係咪一致，以及近期物料同設定有冇變化。
+  s2_en: >-
+    These are questions to investigate, not findings that an operator made an error or a machine broke.
+    A signal does not automatically make these nine sleeves defective or identify a setting correction.
+    Blindly turning the cutter down could act on the wrong explanation.
+  s2_zh: >-
+    这些是需要调查的问题，不是已经证明操作员出了错，或机器坏了。有信号，并不等于这九个纸套不合格，也不等于已经找到该怎么调。盲目把切刀往下调，可能是按错误的解释在行动。
+  s2_zh_hk: >-
+    呢啲係需要調查嘅問題，唔係已經證明操作員出咗錯，或機器壞咗。有訊號，並唔等於呢九個紙套不合格，亦都唔等於已經搵到該點調。盲目將切刀往下調，可能係按錯誤嘅解釋喺度行動。
+  s3_en: >-
+    Do not recompute the centre or widen limits using these nine readings just to remove the signal. A
+    genuinely changed process may later justify a reviewed new baseline; that is a separate decision.
+    A false alarm remains possible, and the exercise gives no probability of a cause, next defect or avoided
+    loss.
+  s3_zh: >-
+    不要只用这九个读数重算中心，或把界限放宽，好让信号消失。如果过程真的变了，以后可以依据证据审定新的基准，但那是另外一个决定。误报仍然可能发生。本题也没有给出原因、下一件不良或避免损失的概率。
+  s3_zh_hk: >-
+    唔好只用呢九個讀數重算中心，或將界限放寬，好等訊號消失。如果過程真係變咗，以後可以依據證據審定新嘅基準，但嗰個係另外一個決定。誤報仍然可能發生。本題亦都冇畀出原因、下一件不良或避免損失嘅概率。
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Keep the response bounded, not complacent
+  title_zh: 应对要有分寸，但不能掉以轻心
+  title_zh_hk: 應對要有分寸，但不能掉以輕心
+  en: >-
+    The twenty-minute allowance is for diagnosis. If findings require longer work, revise the production
+    and delivery plan rather than promising that the pause has solved everything. Simply continuing because
+    every item passes ignores the supplied rule. This one record does not certify a whole process.
+  zh: >-
+    这二十分钟是用来做诊断的。如果查出来的工作需要更长时间，就要改生产和交货计划，而不能承诺这次暂停已经解决一切。只因为每件都合格就继续做，是在忽略既定规则。这一份记录，并不能证明整个过程都没有问题。
+  zh_hk: >-
+    呢二十分鐘係用嚟做診斷。如果查出來嘅工作需要更長時間，就要改生產同交貨計劃，而不能承諾呢次暫停已經解決一切。只因為每件都合格就繼續做，係喺忽略既定規則。呢一份記錄，並唔能夠證明整個過程都冇問題。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: A warning supports a response, not certainty
+  title_zh: 报警促使行动，但不能下定论
+  title_zh_hk: 警示促使行動，但不能下定論
+  q1_en: Specification, centre and limits are different
+  q1_zh: 规格、中心和控制限不是同一回事
+  q1_zh_hk: 規格、中心同管制界限唔係同一回事
+  q2_en: Investigate without automatic rejection
+  q2_zh: 要调查，不要自动判废或调机
+  q2_zh_hk: 要調查，唔好自動判定不合格或調機
+  s1_en: >-
+    Within specification does not, by itself, answer whether the process is still the same. A preselected
+    pattern can justify a prompt, bounded investigation without treating every item as defective.
+  s1_zh: 仅仅符合规格，并不能说明过程是否还和以前一样。一个事先选定的模式，可以支持及时、有限度的调查，但不必把每件产品都当成不合格。
+  s1_zh_hk: 單單符合規格，並唔能夠說明過程係咪仍然同以往一樣。一個預先選定嘅形態，可以支持及時、有限度嘅調查，但不必將每件產品都當成不合格。
+  s2_en: >-
+    The workshop, measurements, requirements and plan are fictional. Official scene art is a teaching
+    illustration only, not copied source artwork.
+  s2_zh: 这家工坊、测量值、要求和方案都是虚构的。官方场景图只是教学插图，不是从来源复制的控制图。
+  s2_zh_hk: 呢間工場、量度值、要求同方案都係虛構嘅。官方場景圖只係教學插圖，唔係從來源複製嘅管制圖。
+  s3_en: >-
+    This is an educational response-timing decision, not machine-operation instructions or statistical
+    certification.
+  s3_zh: 这是一道关于何时应对的教学题，不是机器操作规程，也不是统计认证。
+  s3_zh_hk: 呢個係一道關於何時應對嘅教學題，唔係機器操作規程，亦都唔係統計認證。
+duration_target_s: 188

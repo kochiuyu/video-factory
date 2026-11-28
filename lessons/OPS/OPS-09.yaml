@@ -1,0 +1,309 @@
+id: OPS-09
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Print now. Or keep the design open?
+title_zh: 现在就印，还是晚点再定图案？
+title_zh_hk: 現在印花，還是留待稍後決定款式？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-09
+  kicker_en: OPS-09
+  kicker_zh: OPS-09
+  kicker_zh_hk: OPS-09
+  title_en: Print now. Or keep the design open?
+  title_zh: 现在就印，还是晚点再定图案？
+  title_zh_hk: 現在印花，還是留待稍後決定款式？
+  image: art/keep-the-design-open-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In September 2024, HKPC discussed small-volume customisation and manufacturing flexibility. An independent
+    Hong Kong maker is preparing one hundred fabric pouches in two original prints: leaf and wave. Construction
+    and quality are otherwise identical. Customers want their selected design and will not substitute
+    the other. The decision is when to commit the designs, not how many pouches to buy.
+  zh: >-
+    二零二四年九月，香港生产力促进局讨论了小批量定制和制造柔性。一家独立的香港制作者，要做一百个布袋，有叶纹和波纹两种原创图案。除此之外，结构和质量都一样。顾客要自己选中的图案，不会用另一种代替。要决定的是何时定下图案，不是买多少个布袋。
+  zh_hk: >-
+    二零二四年九月，香港生產力促進局討論咗小批量定制同製造彈性。一間獨立嘅香港製作者，要做一百個布袋，有葉紋同波浪紋兩種原創款式。除此之外，結構同品質都一樣。顧客要自己選中嘅款式，唔會用另一種代替。要決定嘅係何時敲定款式，唔係買幾多個布袋。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two whole-order quotes for 100 pouches
+  title_zh: 全部100个布袋的两份报价
+  title_zh_hk: 全部100個布袋的兩份報價
+  row1_en: A · Early 50/50
+  row1_zh: A · 提前按50/50完工
+  row1_zh_hk: A · 提早按50/50印製
+  row2_en: B · Late flexible
+  row2_zh: B · 晚点按实际搭配印
+  row2_zh_hk: B · 稍後按實際搭配印
+  col1_en: When fixed
+  col1_zh: 何时确定图案
+  col1_zh_hk: 何時敲定款式
+  col2_en: Relevant cost
+  col2_zh: 相关成本
+  col2_zh_hk: 相關成本
+  c11_en: Now, 50 leaf and 50 wave
+  c11_zh: 现在定为叶纹50、波纹50
+  c11_zh_hk: 現在印50個葉紋、50個波浪紋
+  c12: 2,000
+  c21_en: After Friday selections
+  c21_zh: 周五截止后按所选搭配
+  c21_zh_hk: 周五截止後按所選搭配
+  c22: 2,400
+  footer_en: Each sells at HK$40; leftover net clearance HK$5
+  footer_zh: 每个售40港元；剩余净残值5港元
+  footer_zh_hk: 每個售40港元；剩餘淨殘值5港元
+  s1_en: >-
+    The maker must choose one of two written whole-order quotes this afternoon. No money is committed
+    yet. Plan A finishes a standard fifty-fifty mix now. Plan B keeps common plain pouches until customer
+    selections close at noon Friday, then prints the selected mix for Saturday collection.
+  s1_zh: >-
+    今天下午必须在两份书面整单报价里选一份，现在还没有付钱。方案A现在就按标准的五十对五十做完。方案B先做通用的素色布袋，等星期五中午客户选定后再印所需搭配，星期六取货。
+  s1_zh_hk: >-
+    今日下午必須喺兩份書面整單報價裏面揀一份，而家仲未俾錢。方案A而家就按標準嘅五十對五十做完。方案B先做通用嘅素色布袋，等星期五中午客戶選定後再印所需搭配，星期六取貨。
+  s2_en: >-
+    Both plans are affordable and can meet the deadline under the supplied capacity conditions. The team's
+    initial planning scenario is fifty leaf and fifty wave requests, not a confirmed order or established
+    forecast.
+  s2_zh: 在给定的产能条件下，两个方案都负担得起，也能赶上期限。团队起初的规划情景是叶纹五十、波纹五十，这不是已确认的订单，也不是已经成立的预测。
+  s2_zh_hk: >-
+    喺所定嘅產能條件之下，兩個方案都負擔得起，亦都能夠趕上期限。團隊起初嘅規劃情境係葉紋五十、波浪紋五十，呢個唔係已確認嘅訂單，亦都唔係已經成立嘅預測。
+  s3_en: >-
+    B's fixed quote includes materials, printing, reserved late capacity, packing and required quality
+    checks. The slot can complete and check one hundred good pouches of either mix before Saturday. There
+    is no extra supply or reprinting before collection. Unchanged overhead is excluded, so the surplus
+    is not complete business profit.
+  s3_zh: >-
+    B的固定报价已包括材料、印花、预留的后期产能、包装和必要的质量检查。这个时段能在星期六前做完并检查一百个合格布袋，不论搭配如何。取货前不能再补货或重印。未变的间接费用不计入，所以这里的盈余不是完整的企业利润。
+  s3_zh_hk: >-
+    B嘅固定報價已包括物料、印花、預留嘅後期產能、包裝同必要嘅品質檢查。呢個時段能夠喺星期六前做完並檢查一百個合格布袋，不論搭配如何。取貨前唔可以再補貨或重印。未變嘅間接費用唔計入，所以呢度嘅盈餘唔係完整嘅企業利潤。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Would you choose quote A or quote B?
+  title_zh: 你会选报价A，还是报价B？
+  title_zh_hk: 你會揀報價A，定報價B？
+  en: >-
+    Which quote would you provisionally choose, A or B? What evidence about the design mix or finishing
+    reliability would reverse your choice? Pause and vote.
+  zh: 你会初步选择报价A，还是报价B？关于图案搭配或后期印制的可靠性，什么样的证据会让你改主意？请暂停，投个票。
+  zh_hk: 你會初步選擇報價A，定報價B？關於款式搭配或後期印製嘅可靠性，點樣嘅證據會令你改主意？暫停，投個票。
+- id: reveal
+  visual: steps
+  seconds: 22
+  layout: rows
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: A comparable event chose 80 leaf, 20 wave
+  title_zh: 一次类似活动选了叶纹80、波纹20
+  title_zh_hk: 一次類似活動選了葉紋80、波浪紋20
+  step1_en: Add an 80/20 scenario beside the 50/50 plan
+  step1_zh: 在50/50之外，再加入80/20情景
+  step1_zh_hk: 在50/50之外，再加入80/20情境
+  step2_en: This tally is not a confirmed future order
+  step2_zh: 这份统计不是已确认的未来订单
+  step2_zh_hk: 呢份統計唔係已確認嘅未來訂單
+  step3_en: A cannot turn 30 surplus wave into leaf
+  step3_zh: A多出的30个波纹，不能改成叶纹
+  step3_zh_hk: A多出的30個波浪紋，不能改成葉紋
+  s1_en: >-
+    The sales coordinator brings the selection tally from a completed comparable pop-up: eighty customers
+    chose leaf and twenty chose wave. The same designs and price were offered, with both available throughout
+    selection.
+  s1_zh: 销售协调员带来一次已结束的类似快闪活动的选款统计：八十位顾客选了叶纹，二十位选了波纹。当时两种图案和价格都在，而且全程都有货。
+  s1_zh_hk: 銷售協調員帶嚟一次已結束嘅類似快閃活動嘅選款統計：八十位顧客選咗葉紋，二十位選咗波浪紋。當時兩種款式同價格都喺度，而且全程都有貨。
+  s2_en: >-
+    One event and a potentially different audience cannot establish the next mix. Add an eighty-twenty
+    scenario alongside the initial fifty-fifty scenario before committing. No probabilities are supplied.
+  s2_zh: 一次活动和可能不同的受众，并不能确定下一次的搭配。在做承诺之前，要把八十对二十这个情景，和起初的五十对五十放在一起看。题目没有给出概率。
+  s2_zh_hk: 一次活動同可能唔同嘅受眾，並唔能夠確定下一次嘅搭配。喺做承諾之前，要把八十對二十呢個情境，同起初嘅五十對五十放喺一齊睇。題目冇畀出概率。
+  s3_en: >-
+    Under B's existing quote, the one hundred common blanks can become eighty leaf and twenty wave in
+    the reserved slot, without extra stock or charges. Under A, the thirty surplus wave pouches cannot
+    become the missing leaf pouches. No third or unpriced hybrid offer has appeared.
+  s3_zh: >-
+    按B现有报价，一百个通用素袋可以在预留时段做成叶纹八十、波纹二十，不用额外备货，也不另加费用。按A，多出来的三十个波纹布袋，不能改成缺少的叶纹。现在也没有第三种、尚未定价的混合方案。
+  s3_zh_hk: >-
+    按B現有報價，一百個通用素袋可以喺預留時段做成葉紋八十、波浪紋二十，唔使額外備貨，亦都唔另加費用。按A，多出嚟嘅三十個波浪紋布袋，唔可以改成缺少嘅葉紋。而家亦都冇第三種、尚未定價嘅混合方案。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Does HK$400 for flexibility pay?
+  title_zh: 多付400港元换柔性，值得吗？
+  title_zh_hk: 多付400港元換彈性，值得嗎？
+  en: >-
+    Does keeping the design open justify four hundred dollars extra? Compare both design-mix scenarios,
+    choose a plan, and identify the evidence that makes your choice defensible. Pause and vote again.
+  zh: 为了晚点再定图案，多付四百港元值得吗？请把两种搭配情景都比较一遍，再选一个方案，并指出能支持这个选择的证据。请暂停，再投一次票。
+  zh_hk: 為咗稍後先敲定款式，多付四百港元值得嗎？請將兩種搭配情境都比較一次，再揀一個方案，並指出能夠支持呢個選擇嘅證據。暫停，再投一次票。
+- id: bridge
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Surplus in two mix scenarios, HK$
+  title_zh: 两种搭配下的盈余，港元
+  title_zh_hk: 兩種搭配下的盈餘，港元
+  row1_en: A · Early 50/50
+  row1_zh: A · 提前50/50
+  row1_zh_hk: A · 提早50/50
+  row2_en: B · Flexible late
+  row2_zh: B · 晚点再定
+  row2_zh_hk: B · 稍後再定
+  col1_en: If 50/50
+  col1_zh: 若是50/50
+  col1_zh_hk: 若是50/50
+  col2_en: If 80/20
+  col2_zh: 若是80/20
+  col2_zh_hk: 若是80/20
+  c11: 2,000
+  c12: '950'
+  c21: 1,600
+  c22: 1,600
+  footer_en: Revenue plus clearance, less the quoted cost
+  footer_zh: 销售收入加残值，再减去报价成本
+  footer_zh_hk: 銷售收入加殘值，再減去報價成本
+  s1_en: >-
+    With fifty leaf and fifty wave requests, either plan sells all one hundred pouches for four thousand
+    dollars, with no leftovers. A leaves two thousand dollars after its two-thousand-dollar cost. B leaves
+    one thousand six hundred after its two-thousand-four-hundred-dollar cost. In that scenario, keeping
+    the mix open costs four hundred without adding sales.
+  s1_zh: >-
+    如果需求是叶纹五十、波纹五十，两个方案都能卖掉一百个，收入四千港元，没有剩余。A扣掉两千成本，剩下两千港元。B扣掉两千四百，剩下一千六百港元。在这个情景里，把搭配留到后面，会多花四百港元，却不能增加销售。
+  s1_zh_hk: >-
+    如果需求係葉紋五十、波浪紋五十，兩個方案都能賣走一百個，收入四千港元，冇剩餘。A扣咗兩千成本，剩返兩千港元。B扣咗兩千四百，剩返一千六百港元。喺呢個情境裏面，將搭配留到後面，會多花四百港元，卻唔能夠增加銷售。
+  s2_en: >-
+    With eighty leaf and twenty wave requests, A sells fifty leaf plus twenty wave: seventy pouches. Its
+    thirty remaining wave pouches have net clearance value of one hundred and fifty dollars. Surplus is
+    seventy times forty, plus thirty times five, minus two thousand, which is nine hundred and fifty.
+  s2_zh: >-
+    如果需求是叶纹八十、波纹二十，A能卖掉五十个叶纹加二十个波纹，共七十个。剩下三十个波纹，净残值一百五十港元。盈余是七十乘以四十，加上三十乘以五，再减去两千，等于九百五十港元。
+  s2_zh_hk: >-
+    如果需求係葉紋八十、波浪紋二十，A能夠賣走五十個葉紋加二十個波浪紋，共七十個。剩低三十個波浪紋，淨殘值一百五十港元。盈餘係七十乘以四十，加三十乘以五，再減去兩千，等於九百五十港元。
+  s3_en: >-
+    B finishes the requested eighty-twenty mix and sells all one hundred. Its surplus remains one thousand
+    six hundred, six hundred and fifty above A in this scenario. Total demand and total stock are still
+    one hundred. The advantage comes from delaying the irreversible design choice, not from creating more
+    units.
+  s3_zh: >-
+    B能按八十对二十做完，并卖掉全部一百个。盈余仍是一千六百港元，在这个情景里比A多六百五十港元。总需求和总库存还是一百个。优势来自推迟那个不能反悔的图案决定，而不是做出了更多布袋。
+  s3_zh_hk: >-
+    B能夠按八十對二十做完，並賣走全部一百個。盈餘仍然係一千六百港元，喺呢個情境裏面比A多六百五十港元。總需求同總存貨仲係一百個。優勢來自推遲嗰個唔可以反悔嘅款式決定，而唔係做出咗更多布袋。
+- id: meaning
+  visual: steps
+  seconds: 24
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: A price for flexibility, not an automatic win
+  title_zh: 这是柔性的价格，不是必赢的方案
+  title_zh_hk: 呢個係彈性嘅價錢，唔係必贏嘅方案
+  step1_en: A is ahead by HK$400 if the mix is balanced
+  step1_zh: 搭配均衡时，A多出400港元
+  step1_zh_hk: 搭配均衡時，A多出400港元
+  step2_en: B is ahead by HK$650 if the mix is 80/20
+  step2_zh: 若是80/20，B多出650港元
+  step2_zh_hk: 若是80/20，B多出650港元
+  step3_en: A's fall is HK$1,050, not HK$1,200
+  step3_zh: A少收的是1,050港元，不是1,200
+  step3_zh_hk: A少收嘅係1,050港元，唔係1,200
+  s1_en: >-
+    A is ahead by four hundred dollars in the balanced scenario; B is ahead by six hundred and fifty in
+    the imbalanced one. Neither wins in both, and one historical tally supplies no probability that determines
+    an expected-return ranking.
+  s1_zh: 搭配均衡时，A多出四百港元；搭配不均时，B多出六百五十港元。没有一个方案在两种情景里都赢。一次历史统计，并不能给出用来比较期望回报的概率。
+  s1_zh_hk: 搭配均衡時，A多出四百港元；搭配不均時，B多出六百五十港元。冇一個方案喺兩種情境裏面都贏。一次歷史統計，並唔能夠畀出用嚟比較期望回報嘅概率。
+  s2_en: >-
+    Clearance value matters: A's fall from two thousand to nine hundred and fifty is one thousand and
+    fifty, not one thousand two hundred, because the thirty leftover wave pouches still have net clearance
+    value. The same arithmetic holds for a twenty-eighty reversal, because the two designs have symmetric
+    costs and prices.
+  s2_zh: >-
+    残值很重要：A从两千降到九百五十，少了的是一千零五十，不是一千二百，因为剩下的三十个波纹布袋仍有净残值。如果换成二十对八十，算术一样，因为两种图案的成本和售价是对称的。
+  s2_zh_hk: >-
+    殘值好重要：A由兩千降至九百五十，少咗嘅係一千零五十，唔係一千二百，因為剩低嘅三十個波浪紋布袋仍然有淨殘值。如果換成二十對八十，算術一樣，因為兩種款式嘅成本同售價係對稱嘅。
+  s3_en: >-
+    A can be defended by convincing evidence of a balanced mix. B can be defended by material mix uncertainty
+    and the value placed on fulfilling customer selections. Common blanks help only if designs, materials,
+    printing capacity and checks are ready in time. Those conditions are included in B's quote here, and
+    should be verified before a real commitment.
+  s3_zh: >-
+    如果有有力证据显示搭配会比较均衡，可以支持选A。如果搭配很不确定，又重视按顾客所选交付，可以支持选B。通用素袋要真的有用，前提是图案、材料、印制产能和检查都能及时就绪。这些条件在本题里已经写进B的报价，实际承诺之前仍要核实。
+  s3_zh_hk: >-
+    如果有有力證據顯示搭配會比較均衡，可以支持揀A。如果搭配好唔確定，又重視按顧客所選交付，可以支持揀B。通用素袋要真係有用，前提係款式、物料、印製產能同檢查都能夠及時就緒。呢啲條件喺本題裏面已經寫入B嘅報價，實際承諾之前仍然要核實。
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What does the extra HK$400 buy?
+  title_zh: 多花的400港元买到了什么？
+  title_zh_hk: 多付400港元，買到甚麼？
+  en: >-
+    The four hundred dollars buys the ability to choose variants later, backed by a paid, feasible finishing
+    slot. Do not invent a costless hybrid, missing probabilities, or an environmental saving from leftover
+    counts. Late finishing is not permission to rush quality checks.
+  zh: >-
+    这四百港元买到的，是稍后再定图案的能力，而且背后有一个已付费、可行的印制时段。不要虚构一个没有成本的混合方案，也不要补上题目没有的概率，或从剩余数量推断环保收益。晚点印制，不是可以匆忙省略质量检查的许可。
+  zh_hk: >-
+    呢四百港元買到嘅，係稍後先敲定款式嘅能力，而且背後有一個已付費、可行嘅印製時段。唔好虛構一個冇成本嘅混合方案，亦都唔好補上題目冇有嘅概率，或從剩餘數量推斷環保收益。遲啲印製，唔係可以匆忙省略品質檢查嘅許可。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: The decision is when to commit the design
+  title_zh: 要决定的是何时定下图案
+  title_zh_hk: 要決定嘅係何時敲定款式
+  q1_en: The same stock can give different results
+  q1_zh: 同样的库存，结果可以不同
+  q1_zh_hk: 同樣嘅存貨，結果可以唔同
+  q2_en: Flexibility has a price, and it needs a ready slot
+  q2_zh: 柔性有价格，也需要就绪的产能
+  q2_zh_hk: 彈性有價錢，亦都需要就緒嘅產能
+  s1_en: >-
+    Keep the design open only if the later step is paid for and feasible. The key tradeoff is commitment
+    timing, distinct from choosing total inventory or sequencing batches.
+  s1_zh: 只有在后期步骤已经付费、并且确实可行时，才值得把图案留到后面再定。这里的权衡是何时做出承诺，这和决定总库存、或如何安排批次，不是同一道题。
+  s1_zh_hk: >-
+    只有喺後期步驟已經付費、並且確實可行嘅時候，先值得將款式留到後面再定。呢度嘅權衡係何時做出承諾，呢個同決定總存貨、或如何安排批次，唔係同一道題。
+  s2_en: >-
+    The maker, pouches, quotes, prices and historical tally are fictional. Official scene art is a teaching
+    illustration only.
+  s2_zh: 这家制作者、布袋、报价、价格和历史统计都是虚构的。官方场景图只是教学插图。
+  s2_zh_hk: 呢間製作者、布袋、報價、價格同歷史統計都係虛構嘅。官方場景圖只係教學插圖。
+  s3_en: The prior pop-up cannot be treated as certain next demand.
+  s3_zh: 上次快闪活动，不能当成下一次的确定需求。
+  s3_zh_hk: 上次快閃活動，唔可以當成下一次嘅確定需求。
+duration_target_s: 188

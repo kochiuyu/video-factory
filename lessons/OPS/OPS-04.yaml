@@ -1,0 +1,304 @@
+id: OPS-04
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Fewer changeovers. A later customer.
+title_zh: 换型少了，客户就要晚点取货？
+title_zh_hk: 轉線少了，客戶卻要遲些取貨？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-04
+  kicker_en: OPS-04
+  kicker_zh: OPS-04
+  kicker_zh_hk: OPS-04
+  title_en: Fewer changeovers. A later customer.
+  title_zh: 换型少了，客户就要晚点取货？
+  title_zh_hk: 轉線少了，客戶卻要遲些取貨？
+  image: art/mixed-collection-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    A 2024 PolyU visit report described a knitted-garment microfactory that supported small-batch production.
+    That illustrates interest in flexibility; it is not an audited performance claim. You supervise a
+    fictional Hong Kong gift-label workshop. A confirmed order needs two hundred labels of design A and
+    two hundred of design B. There is no finished stock, and one machine has three hundred and sixty minutes
+    in the shift.
+  zh: >-
+    二零二四年，理工大学的一份参访报告介绍了一个支持小批量生产的针织服装微型工厂演示。它说明柔性生产受到关注，并不是经过审计的业绩数字。你管理一家虚构的香港礼品标签工坊。一份已确认的订单要两百张A款、两百张B款。现在没有成品库存，一台机器在本班次里有三百六十分钟可用。
+  zh_hk: >-
+    二零二四年，理工大學嘅一份參訪報告介紹咗一個支持小批量生產嘅針織成衣微型工廠示範。佢說明彈性生產受到關注，並唔係經過審核嘅業績數字。你主管一間虛構嘅香港禮品標籤工場。一張已確認嘅訂單要兩百張A款、兩百張B款。而家冇成品存貨，一部機器喺呢個更次裏面有三百六十分鐘可用。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Two plans that both finish the 400
+  title_zh: 两个都能做完400张的方案
+  title_zh_hk: 兩個都能做完400張的方案
+  row1_en: Two runs
+  row1_zh: 两轮
+  row1_zh_hk: 兩段
+  row2_en: Four runs
+  row2_zh: 四轮
+  row2_zh_hk: 四段
+  col1_en: Sequence
+  col1_zh: 顺序
+  col1_zh_hk: 次序
+  col2_en: Total time
+  col2_zh: 总用时
+  col2_zh_hk: 總耗時
+  col3_en: Unused
+  col3_zh: 剩余
+  col3_zh_hk: 剩餘
+  c11_en: A200 then B200
+  c11_zh: A200→B200
+  c11_zh_hk: A200→B200
+  c12_en: 260 min
+  c12_zh: 260分钟
+  c12_zh_hk: 260分鐘
+  c13_en: 100 min
+  c13_zh: 100分钟
+  c13_zh_hk: 100分鐘
+  c21_en: A100 B100 A100 B100
+  c21_zh: A100→B100→A100→B100
+  c21_zh_hk: A100→B100→A100→B100
+  c22_en: 320 min
+  c22_zh: 320分钟
+  c22_zh_hk: 320分鐘
+  c23_en: 40 min
+  c23_zh: 40分钟
+  c23_zh_hk: 40分鐘
+  footer_en: Each label 0.5 min; every run needs 30 min setup
+  footer_zh: 每张0.5分钟；每轮含首轮都要换型30分钟
+  footer_zh_hk: 每張0.5分鐘；每段包括首段都要轉線30分鐘
+  s1_en: >-
+    Each good label takes half a minute. Every run, including the first, needs thirty minutes of setup
+    and checking before production. A run is a continuous stretch of one design.
+  s1_zh: 生产一张合格标签要零点五分钟。每一轮连续生产，包括第一轮，开工前都要三十分钟换型和检查。一轮是指连续生产同一款式。
+  s1_zh_hk: 生產一張合格標籤要零點五分鐘。每段連續生產，包括第一段，開工前都要三十分鐘轉線同檢查。一段係指連續生產同一款式。
+  s2_en: >-
+    Two long runs use two hundred production minutes plus sixty minutes of setup, finishing in two hundred
+    and sixty minutes, with one hundred minutes unused. Four shorter runs add two extra setups, finishing
+    in three hundred and twenty minutes, with forty minutes unused.
+  s2_zh: 两轮方案：生产用两百分钟，换型六十分钟，一共两百六十分钟，班次还剩一百分钟。四轮方案多两次换型，一共三百二十分钟，还剩四十分钟。
+  s2_zh_hk: 兩段方案：生產用兩百分鐘，轉線六十分鐘，一共兩百六十分鐘，更次仲剩一百分鐘。四段方案多兩次轉線，一共三百二十分鐘，仲剩四十分鐘。
+  s3_en: >-
+    Both plans produce the same four hundred labels within the shift. The two-run plan preserves more
+    time for unexpected work, but the summary has not shown collection details. Time starts at minute
+    zero, before the first setup.
+  s3_zh: >-
+    两个方案都能在班次内做完四百张，数量相同。两轮方案剩下的时间更多，可以应付意外工作，可是汇总表还没有写出取货要求。时间从第零分钟、第一次换型之前开始算。
+  s3_zh_hk: >-
+    兩個方案都能喺更次內做完四百張，數量相同。兩段方案剩餘時間更多，可以應付突發工作，但摘要仲未寫出取貨要求。時間由第零分鐘、第一次轉線之前開始計。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Two long runs, or four shorter runs?
+  title_zh: 两轮长做，还是四轮短做？
+  title_zh_hk: 兩段長做，定四段短做？
+  en: >-
+    Which plan would you approve: two long runs or four shorter runs? What delivery information should
+    you check before choosing? Pause and vote.
+  zh: 你会批准哪个方案：两轮长做，还是四轮短做？做选择之前，还应该核对哪些交货信息？请暂停，投个票。
+  zh_hk: 你會批准邊個方案：兩段長做，定四段短做？做選擇之前，仲應該核對邊啲交貨資料？暫停，投個票。
+- id: reveal
+  visual: steps
+  seconds: 22
+  layout: rows
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: 100 of each design by minute 180
+  title_zh: 第180分钟要各取走100张
+  title_zh_hk: 第180分鐘要各取走100張
+  step1_en: The first collection needs both designs
+  step1_zh: 第一次取货必须两款都有
+  step1_zh_hk: 第一次取貨必須兩款都有
+  step2_en: Remaining 100 of each can wait until minute 360
+  step2_zh: 其余各100张可到第360分钟再取
+  step2_zh_hk: 其餘各100張可到第360分鐘再取
+  step3_en: The customer can collect during a run
+  step3_zh: 机器还在做时，客户也可以取走
+  step3_zh_hk: 機器仲喺度做時，客戶都可以取走
+  s1_en: >-
+    The customer's confirmed collection plan requires one hundred A and one hundred B by minute one hundred
+    and eighty. The remaining one hundred of each can be collected at shift end, minute three hundred
+    and sixty. The first collection needs both designs, not any two hundred labels.
+  s1_zh: >-
+    客户已确认的取货计划是：第一百八十分钟要取走一百张A款和一百张B款。其余各一百张可以到班次结束、第三百六十分钟再取。第一次取货必须两款都有，不是随便两百张就行。
+  s1_zh_hk: >-
+    客戶已確認嘅取貨計劃係：第一百八十分鐘要取走一百張A款同一百張B款。其餘各一百張可以到更次結束、第三百六十分鐘再取。第一次取貨必須兩款都有，唔係隨便兩百張就得。
+  s2_en: >-
+    This requirement was on the order but omitted from the supervisor's summary. No production has started,
+    so you can revise the sequence now. Changing the collection time would need the customer's agreement,
+    which has not been obtained.
+  s2_zh: 这项要求本来就写在订单上，只是主管汇总时漏掉了。生产还没有开始，现在还可以改顺序。若要改取货时间，必须得到客户同意，而目前还没有同意。
+  s2_zh_hk: 呢項要求本來就寫喺訂單上，只係主管摘要時漏咗。生產仲未開始，而家仲可以改次序。若要改取貨時間，必須得到客戶同意，而目前仲未有同意。
+  s3_en: >-
+    The customer can collect completed labels while the machine continues its run. Collection causes no
+    extra delay in this simplified exercise. All other time assumptions remain unchanged.
+  s3_zh: 在这个简化练习里，机器还在做的时候，客户也可以取走已经做好的标签，取货本身不会再多耽误时间。其他时间假设都不变。
+  s3_zh_hk: 喺呢個簡化練習裏面，機器仲喺度做嘅時候，客戶都可以取走已經做好嘅標籤，取貨本身唔會再額外耽误時間。其他時間假設都不變。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Keep two runs, use four, or try another sequence?
+  title_zh: 仍做两轮、改做四轮，还是另排？
+  title_zh_hk: 繼續兩段、改做四段，定另外排？
+  en: >-
+    Would you keep two runs, use four, or propose another sequence? Show when the customer can collect
+    one hundred of each design, and whether the full order still finishes within the shift. Pause and
+    vote again.
+  zh: 你是继续两轮，改做四轮，还是另排一个顺序？请说明客户什么时候能取到两款各一百张，以及整张订单还能不能在班次内做完。请暂停，再投一次票。
+  zh_hk: 你係繼續兩段，改做四段，定另外排一個次序？請說明客戶幾時可以取到兩款各一百張，以及整張訂單仲可唔可以喺更次內做完。暫停，再投一次票。
+- id: bridge
+  visual: steps
+  seconds: 26
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: When is the required mix ready?
+  title_zh: 两款什么时候能按要求备齐？
+  title_zh_hk: 兩款幾時可以按要求備齊？
+  step1_en: >-
+    Two runs: 100 of each only at minute 210
+  step1_zh: 两轮：两款各100张要到第210分钟
+  step1_zh_hk: 兩段：兩款各100張要到第210分鐘
+  step2_en: That is 30 minutes after the deadline
+  step2_zh: 比期限晚了30分钟
+  step2_zh_hk: 比期限遲咗30分鐘
+  step3_en: >-
+    Four runs: the mix is ready at minute 160
+  step3_zh: 四轮：第160分钟就能先取一批
+  step3_zh_hk: 四段：第160分鐘就能先取一批
+  s1_en: >-
+    Under two runs, setup A takes minutes zero to thirty, and A two hundred finishes at minute one hundred
+    and thirty. Setup B then takes minutes one hundred and thirty to one hundred and sixty. The first
+    one hundred B take another fifty minutes, so one hundred of both designs are available only at minute
+    two hundred and ten: thirty minutes late.
+  s1_zh: >-
+    两轮方案里，A款换型占第零到三十分钟，两百张A做到第一百三十分钟。接着换B款，到第一百六十分钟。再做一百张B要五十分钟，所以两款各一百张要到第二百一十分钟才齐，晚了三十分钟。
+  s1_zh_hk: >-
+    兩段方案裏面，A款轉線佔第零到三十分鐘，兩百張A做到第一百三十分鐘。跟住轉B款，到第一百六十分鐘。再做一百張B要五十分鐘，所以兩款各一百張要到第二百一十分鐘先齊，遲咗三十分鐘。
+  s2_en: >-
+    Under four runs, setup A and A one hundred take thirty plus fifty, or eighty minutes. Setup B and
+    B one hundred take another eighty. The first mixed collection is ready at minute one hundred and sixty,
+    twenty minutes before the deadline. The full order finishes at minute three hundred and twenty.
+  s2_zh: >-
+    四轮方案里，换A加做一百张A是三十加五十，一共八十分钟。再换B、做一百张B，又是八十分钟。第一次按比例取货在第一百六十分钟就齐了，比期限早二十分钟。整张订单在第三百二十分钟做完。
+  s2_zh_hk: >-
+    四段方案裏面，轉A加做一百張A係三十加五十，一共八十分鐘。再轉B、做一百張B，又係八十分鐘。第一次按比例取貨喺第一百六十分鐘就齊，比期限早二十分鐘。整張訂單喺第三百二十分鐘做完。
+  s3_en: >-
+    Reversing the two long runs merely changes which design arrives late. Total output by shift end is
+    not enough to satisfy the earlier mixed collection.
+  s3_zh: 就算把两轮长做的顺序对调，也只是换成另一款迟到。班次结束时的总产量，并不能满足这次更早的混合取货。
+  s3_zh_hk: 就算將兩段長做嘅次序對調，都只係換成另一款遲到。更次結束時嘅總產量，並唔能夠滿足呢次更早嘅混合取貨。
+- id: meaning
+  visual: steps
+  seconds: 26
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: A three-run sequence can also work
+  title_zh: 三轮也可以做到
+  title_zh_hk: 三段都可以做到
+  step1_en: Try A100, then B200, then A100
+  step1_zh: 可试 A100 → B200 → A100
+  step1_zh_hk: 可試 A100 → B200 → A100
+  step2_en: The mixed collection is ready at minute 160
+  step2_zh: 第一次取货仍在第160分钟齐
+  step2_zh_hk: 第一次取貨仍在第160分鐘齊
+  step3_en: The full order finishes at minute 290
+  step3_zh: 整单在第290分钟做完，剩70分钟
+  step3_zh_hk: 整單在第290分鐘做完，剩70分鐘
+  s1_en: >-
+    Try A one hundred, then B two hundred, then A one hundred. The first A one hundred is ready at minute
+    eighty. After B setup, the first B one hundred is ready at minute one hundred and sixty, so the first
+    collection can leave on time while the B run continues.
+  s1_zh: >-
+    可以试试先做一百张A，再做两百张B，最后再做一百张A。一百张A在第八十分钟就好。换完B、再做一百张B，到第一百六十分钟，第一次取货可以准时走，B款后面的部分继续做。
+  s1_zh_hk: >-
+    可以試試先做一百張A，再做兩百張B，最後再做一百張A。一百張A喺第八十分鐘就好。轉完B、再做一百張B，到第一百六十分鐘，第一次取貨可以準時走，B款後面嘅部分繼續做。
+  s2_en: >-
+    B two hundred finishes at minute two hundred and ten. The final A setup and A one hundred take another
+    eighty minutes. Everything finishes at minute two hundred and ninety, leaving seventy minutes of shift
+    time.
+  s2_zh: 两百张B在第二百一十分钟做完。最后再换A、做一百张A，又要八十分钟。全部在第二百九十分钟结束，班次还剩七十分钟。
+  s2_zh_hk: 兩百張B喺第二百一十分鐘做完。最後再轉A、做一百張A，又要八十分鐘。全部喺第二百九十分鐘結束，更次仲剩七十分鐘。
+  s3_en: >-
+    This three-run plan meets the same promise with thirty fewer setup minutes than four runs. The initial
+    menu is not the whole solution, and the case does not establish a universal best batch size. Four
+    runs also meet the stated deadlines, though they use more setup time.
+  s3_zh: >-
+    这个三轮方案能守住同一项承诺，换型时间比四轮少三十分钟。一开始那两个方案，并不是全部答案。案例也没有给出普遍最优的批量。四轮同样能赶上期限，只是换型用时更多。
+  s3_zh_hk: >-
+    呢個三段方案能夠守住同一項承諾，轉線時間比四段少三十分鐘。一開始嗰兩個方案，並唔係全部答案。個案亦都冇畀出普遍最優嘅批量。四段同樣趕得切期限，只係轉線用時更多。
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Do not silently change the promise
+  title_zh: 不要悄悄改交货承诺
+  title_zh_hk: 唔好悄悄改交貨承諾
+  en: >-
+    Use a feasible mixed sequence when the minute-one-hundred-and-eighty commitment stands. Two long runs
+    preserve more slack, but they need an agreed later first collection. No delay penalty is provided,
+    so we cannot price that negotiation.
+  zh: >-
+    如果第一百八十分钟的承诺仍然成立，就要用一个可行的混合顺序。两轮长做剩下的机动时间最多，但必须先征得客户同意，推迟第一次取货。题目没有给出延误罚则，所以这笔谈判没法定价。
+  zh_hk: >-
+    如果第一百八十分鐘嘅承諾仍然成立，就要用一個可行嘅混合次序。兩段長做剩餘嘅機動時間最多，但必須先得到客戶同意，延遲第一次取貨。題目冇畀出延誤罰則，所以呢筆談判冇辦法定價。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Schedule the mix by the required time
+  title_zh: 按要求的时间备齐所需搭配
+  title_zh_hk: 按要求的時間備齊所需搭配
+  q1_en: Daily totals can hide a late first collection
+  q1_zh: 当天做完，也可能误了第一次取货
+  q1_zh_hk: 當日做完，亦都可能誤咗第一次取貨
+  q2_en: Fewer changeovers are not automatically better
+  q2_zh: 换型更少，不一定就更好
+  q2_zh_hk: 轉線更少，唔一定就更好
+  s1_en: >-
+    Schedule the required mix by the required time, not just the daily total. Ask when the first one hundred
+    of each design exist, not only when production ends.
+  s1_zh: 要按要求的时间，备齐所需的款式搭配，而不是只看当天的总产量。要问两款各自的首批一百张什么时候都已做好，而不只问什么时候全部完工。
+  s1_zh_hk: 要按要求嘅時間，備齊所需嘅款式搭配，而唔係只睇當日嘅總產量。要問兩款各自嘅首批一百張幾時都已經做好，而不只問幾時全部完工。
+  s2_en: >-
+    The workshop, order, run times and collection requirement are invented. Official scene art is a teaching
+    illustration only.
+  s2_zh: 这家工坊、订单、用时和取货要求都是虚构的。官方场景图只是教学插图。
+  s2_zh_hk: 呢間工場、訂單、用時同取貨要求都係虛構嘅。官方場景圖只係教學插圖。
+  s3_en: >-
+    This is a single-machine sequencing exercise, not a bottleneck investment decision.
+  s3_zh: 这是一道单机排序练习，不是要不要投资改善瓶颈的决策。
+  s3_zh_hk: 呢個係一項單機排程練習，唔係要唔要投資改善瓶頸嘅決定。
+duration_target_s: 190

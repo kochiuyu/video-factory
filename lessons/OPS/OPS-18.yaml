@@ -1,0 +1,307 @@
+id: OPS-18
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Customer demand moved a little. Orders moved a lot.
+title_zh: 顾客需求只变了一点，订单却变动很大。
+title_zh_hk: 顧客需求小幅波動，訂單卻大起大落
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-18
+  kicker_en: OPS-18
+  kicker_zh: OPS-18
+  kicker_zh_hk: OPS-18
+  title_en: Customer demand moved a little. Orders moved a lot.
+  title_zh: 顾客需求只变了一点，订单却变动很大。
+  title_zh_hk: 顧客需求小幅波動，訂單卻大起大落
+  image: art/orders-are-not-consumption-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 16 January 2026, Hong Kong announced the formal rollout of its Port Community System. Seeing cargo
+    move is not the same as knowing final customer demand. This distributor, and every figure, is fictional.
+  zh: 二零二六年一月十六日，香港宣布正式推出港口社区系统。看得见货物移动，并不等于掌握最终顾客需求。课堂上的这家分销商，以及全部数字，都是虚构的。
+  zh_hk: 二零二六年一月十六日，香港宣布正式推出港口社區系統。睇到貨物移動，並唔等於掌握最終顧客需求。課堂上呢間分銷商，同埋全部數字，都係虛構嘅。
+- id: ledger
+  visual: table_grid
+  seconds: 24
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Four weekly retailer orders
+  title_zh: 零售商四周订货
+  title_zh_hk: 零售商四周訂貨
+  row1_en: Weeks 1 and 3
+  row1_zh: 第1周和第3周
+  row1_zh_hk: 第1週同第3週
+  row2_en: Weeks 2 and 4
+  row2_zh: 第2周和第4周
+  row2_zh_hk: 第2週同第4週
+  col1_en: Order, boxes
+  col1_zh: 订货，箱
+  col1_zh_hk: 訂貨，箱
+  col2_en: What the distributor sees
+  col2_zh: 分销商看到的
+  col2_zh_hk: 分銷商見到嘅
+  c11: '0'
+  c12_en: No order that week
+  c12_zh: 当周没有订单
+  c12_zh_hk: 當週冇訂單
+  c21_en: 200, then 300
+  c21_zh: 先200，再300
+  c21_zh_hk: 先200，再300
+  c22_en: A jump in week 4
+  c22_zh: 第4周跳升
+  c22_zh_hk: 第4週跳升
+  footer_en: The 300-box order is a real commitment
+  footer_zh: 300箱订单是真实承诺
+  footer_zh_hk: 300箱訂單係真實承諾
+  s1_en: >-
+    A distributor supplies one retailer with a standard reusable storage box. The retailer’s last four
+    weekly orders were 0, 200, 0 and 300 boxes. The latest increase has to be interpreted. The decision
+    is the future planning routine, not whether to honour a confirmed order.
+  s1_zh: >-
+    这家分销商向一家零售商供应标准可重复使用的收纳箱。零售商最近四周的订货是零、两百、零和三百箱。最新这次增加，需要解读。要决定的是今后怎么做计划，不是是否履行已经确认的订单。
+  s1_zh_hk: >-
+    呢間分銷商向一間零售商供應標準可重用收納箱。零售商最近四周嘅訂貨係零、兩百、零同三百箱。最新呢次增加，需要解讀。要決定嘅係今後點樣做計劃，唔係係咪履行已經確認嘅訂單。
+  s2_en: >-
+    Routine A keeps using incoming order changes as the main signal for the internal capacity forecast.
+    It is fast, and it closely reflects the requests the distributor must serve.
+  s2_zh: 方案A继续把进来的订单变化，当作内部产能预测的主要信号。这样做快，也能紧贴分销商必须满足的请求。
+  s2_zh_hk: 方案A繼續把進來嘅訂單變化，當作內部產能預測嘅主要信號。噉樣做快，亦都能夠直接反映分銷商必須滿足嘅請求。
+  s3_en: >-
+    Routine B adds a weekly two-hour review of retailer sales, stock, outstanding orders and delivery
+    dates before that forecast is changed. The two staff hours are funded and displace a non-urgent catalogue
+    refresh. No extra stock or capacity is authorised just by choosing B.
+  s3_zh: >-
+    方案B在调整预测之前，增加每周两小时的对账，核对零售商的销量、库存、未完成订单和交货日期。这两个工时是有预算的，会挤占一项不紧急的目录更新。选择B本身，并不授权额外备货或预订产能。
+  s3_zh_hk: >-
+    方案B喺調整預測之前，增加每週兩小時嘅核對，核對零售商嘅銷量、存貨、未完成訂單同交貨日期。呢兩個工時係有預算嘅，會擠佔一項唔緊急嘅目錄更新。選擇B本身，並唔授權額外備貨或預訂產能。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Treat 300 as a new demand level?
+  title_zh: 要把300当成新的需求水平吗？
+  title_zh_hk: 要把300當成新嘅需求水平嗎？
+  en: >-
+    Which planning routine would you choose, and what would have to be true before treating the 300-box
+    order as a new weekly level of consumer demand? Pause and vote.
+  zh: 你会选择哪种计划方式？要把三百箱订单当作新的每周顾客需求水平，必须先满足什么条件？请暂停，投个票。
+  zh_hk: 你會選擇邊套計劃方式？要把三百箱訂單當作新嘅每週顧客需求水平，必須先滿足咩條件？暫停，投個票。
+- id: reveal
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 3
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Sales, orders and closing stock
+  title_zh: 销量、订货和期末库存
+  title_zh_hk: 銷量、訂貨同期末存貨
+  row1_en: Weeks 1 and 3
+  row1_zh: 第1周和第3周
+  row1_zh_hk: 第1週同第3週
+  row2_en: Week 2
+  row2_zh: 第2周
+  row2_zh_hk: 第2週
+  row3_en: Week 4
+  row3_zh: 第4周
+  row3_zh_hk: 第4週
+  col1_en: Sales
+  col1_zh: 销量
+  col1_zh_hk: 銷量
+  col2_en: Orders
+  col2_zh: 订货
+  col2_zh_hk: 訂貨
+  col3_en: Closing stock
+  col3_zh: 期末库存
+  col3_zh_hk: 期末存貨
+  c11_en: 100 and 90
+  c11_zh: 100和90
+  c11_zh_hk: 100同90
+  c12: '0'
+  c13_en: 150 and 150
+  c13_zh: 150和150
+  c13_zh_hk: 150同150
+  c21: '110'
+  c22: '200'
+  c23: '40'
+  c31: '100'
+  c32: '300'
+  c33: '50'
+  footer_en: Start 250; receipts 0, 0, 200, 0
+  footer_zh: 期初250；收货0、0、200、0
+  footer_zh_hk: 期初250；收貨0、0、200、0
+  s1_en: >-
+    The retailer began week 1 with 250 boxes on hand and no outstanding orders. Orders placed at the end
+    of a week arrive at the start of the next week. Consumer sales were 100, 110, 90 and 100. Closing
+    stocks were 150, 40, 150 and 50. Week-3 receipts were 200 boxes; the other weeks received none.
+  s1_zh: >-
+    零售商第一周开始时，有二百五十箱在手库存，没有未完成订单。周末下的订单，会在下周初到达。顾客销量是一百、一百一十、九十和一百。期末库存是一百五十、四十、一百五十和五十。第三周收货两百箱，其余各周没有收货。
+  s1_zh_hk: >-
+    零售商第一週開始時，有二百五十箱在手存貨，冇未完成訂單。週末落嘅訂單，會喺下週初到達。顧客銷量係一百、一百一十、九十同一百。期末存貨係一百五十、四十、一百五十同五十。第三週收貨兩百箱，其餘各週冇收貨。
+  s2_en: >-
+    The retailer normally batches orders every second week. The week-2 order was 200 boxes. In week 4
+    a temporary wholesale discount was used: the planned 200 boxes plus 100 for later weeks. The customer-facing
+    price did not change. The 300-box order is a genuine commitment, all due in week 5.
+  s2_zh: >-
+    零售商通常每隔一周合并订货，以节省行政工作。第二周订了两百箱。第四周有一个短期批发折扣，零售商决定利用：除了原计划的两百箱，再加一百箱留给后面几周。面向顾客的价格和促销没有变。这三百箱是真实承诺，全部要在第五周交到。
+  s2_zh_hk: >-
+    零售商通常隔週合併訂貨，以節省行政工作。第二週訂咗兩百箱。第四週有一個短期批發折扣，零售商決定把握機會：除咗原計劃嘅兩百箱，再加一百箱留給後面幾週。面向顧客嘅價格同促銷冇變。呢三百箱係真實承諾，全部要喺第五週交到。
+  s3_en: >-
+    At the end of week 4, 50 boxes are on hand and 300 are already inbound. Future consumer demand is
+    unknown. Seeing the sales file does not, by itself, remove the two-week batching practice or the discount
+    incentive. Do not order another 300 merely because the existing 300 have not arrived yet.
+  s3_zh: >-
+    第四周末，在手库存五十箱，已有三百箱在途。未来的顾客需求未知。看到销售文件本身，并不能取消隔周订货的做法，也不能取消折扣诱因。不要只因为这三百箱还没到，就再订三百箱。
+  s3_zh_hk: >-
+    第四週末，在手存貨五十箱，已有三百箱在途。未來嘅顧客需求未知。睇到銷售文件本身，並唔能夠取消隔週訂貨嘅做法，亦都唔能夠取消折扣誘因。唔好只因為呢三百箱仲未到，就再訂三百箱。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: What caused the order swings?
+  title_zh: 订单大幅波动是什么原因？
+  title_zh_hk: 訂單大幅波動係咩原因？
+  en: >-
+    How would you revise your interpretation and planning routine? Reconcile sales, orders and the pipeline,
+    then name one cause of the swings that sharing data alone would not remove. Pause and vote again.
+  zh: 你会怎样修正解读和计划方式？请先对销量、订货和在途货物，然后指出一个原因：即使共享数据，也不能单独消除这种波动。请暂停，再投一次票。
+  zh_hk: 你會點樣修正解讀同計劃方式？請先核對銷量、訂貨同在途貨物，然後指出一個原因：即使共享數據，都不能夠單獨消除呢種波動。暫停，再投一次票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Reconcile before reacting
+  title_zh: 先对账，再行动
+  title_zh_hk: 先核對，再行動
+  step1_en: Sales total 400; range 90–110
+  step1_zh: 销量合计400；介于90到110
+  step1_zh_hk: 銷量合計400；介乎90到110
+  step2_en: Orders total 500; range 0–300
+  step2_zh: 订货合计500；介于0到300
+  step2_zh_hk: 訂貨合計500；介乎0到300
+  s1_en: >-
+    Consumer sales total 400 boxes and stay in a narrow band, from 90 to 110 a week. Retailer orders total
+    500 and swing from 0 to 300. The orders are not a picture of weekly consumption.
+  s1_zh: 顾客销量合计四百箱，而且波动很窄，每周介于九十到一百一十。零售商订货合计五百箱，却在零到三百之间大幅波动。订单并不是每周消费量的写真。
+  s1_zh_hk: 顧客銷量合計四百箱，而且波動好窄，每週介乎九十到一百一十。零售商訂貨合計五百箱，卻喺零到三百之間大幅波動。訂單並唔係每週消費量嘅寫照。
+  s2_en: >-
+    Start with 250, add orders of 500, subtract sales of 400, and the ending position is 350 boxes: 50
+    on hand plus 300 already inbound. If you count only receipts of 200, on-hand stock is 250 plus 200
+    minus 400, or 50. Do not treat the inbound 300 as missing stock.
+  s2_zh: >-
+    期初二百五十箱，加上订货五百箱，减去销量四百箱，期末状况是三百五十箱：在手五十箱，加上已经在途的三百箱。如果只计算已经收到的两百箱，在手库存是二百五十加二百减四百，等于五十。不要把在途的三百箱当成缺失库存。
+  s2_zh_hk: >-
+    期初二百五十箱，加上訂貨五百箱，減去銷量四百箱，期末狀況係三百五十箱：在手五十箱，加上已經在途嘅三百箱。如果只計算已經收到嘅兩百箱，在手存貨係二百五十加二百減四百，等於五十。唔好把在途嘅三百箱當成缺失存貨。
+  s3_en: >-
+    The week-4 order is a real commitment for week 5. It is not a new weekly consumer-demand level of
+    300, and it is not a reason to place a second 300-box order.
+  s3_zh: 第四周的订单，是第五周的真实承诺。它不是每周三百箱的新顾客需求水平，也不能成为再下一张三百箱订单的理由。
+  s3_zh_hk: 第四週嘅訂單，係第五週嘅真實承諾。佢唔係每週三百箱嘅新顧客需求水平，亦都不能夠成為再下一張三百箱訂單嘅理由。
+  step3_en: >-
+    End: 50 on hand, 300 inbound
+  step3_zh: 期末：在手50，在途300
+  step3_zh_hk: 期末：在手50，在途300
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Visibility helps, but not every policy
+  title_zh: 看得见有帮助，不是万能
+  title_zh_hk: 睇得清楚有幫助，但唔係萬能
+  step1_en: On-hand plus inbound explain the gap
+  step1_zh: 在手加在途能解释差额
+  step1_zh_hk: 在手加在途能解釋差額
+  step2_en: Batching and a discount still remain
+  step2_zh: 批量订货和折扣仍然在
+  step2_zh_hk: 批量訂貨同折扣仍然在
+  s1_en: >-
+    A sales file can stop a planner from treating every order swing as a consumption shock. It does not,
+    by itself, remove the two-week batching practice or the temporary wholesale discount that enlarged
+    the week-4 order.
+  s1_zh: 有了销售文件，计划人员可以避免把每一次订单波动，都当成消费冲击。但它本身，并不能取消隔周订货的做法，也不能取消放大第四周订单的短期批发折扣。
+  s1_zh_hk: >-
+    有咗銷售文件，計劃人員可以避免把每一次訂單波動，都當成消費衝擊。但它本身，並唔能夠取消隔週訂貨嘅做法，亦都唔能夠取消放大第四週訂單嘅短期批發折扣。
+  s2_en: >-
+    Those remaining causes are one reason sharing data alone would not remove the swings. A bullwhip pattern
+    can appear even when consumer demand is fairly steady.
+  s2_zh: 这些仍然存在的原因，说明只靠共享数据，并不能消除波动。即使顾客需求相当平稳，也可能出现牛鞭效应。
+  s2_zh_hk: 呢啲仍然存在嘅原因，說明淨係靠共享數據，並唔能夠消除波動。即使顧客需求相當平穩，都可能出現牛鞭效應。
+  s3_en: >-
+    Routine B’s two hours are a real cost. They are spent on reconciliation, not on automatically changing
+    contracts, prices or the agreed next-week delivery schedule.
+  s3_zh: 方案B的两个小时是实在的成本。这笔时间用在对账上，不会自动改合同、改价格，也不会改已约定的下周交货安排。
+  s3_zh_hk: 方案B嘅兩個鐘係實在嘅成本。呢筆時間用喺核對上，唔會自動改合約、改價格，亦都唔會改已約定嘅下週交貨安排。
+  step3_en: Shared data does not rewrite incentives
+  step3_zh: 共享数据改不了诱因
+  step3_zh_hk: 共享數據改唔到誘因
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Orders are not the same as consumption
+  title_zh: 订单不等于消费
+  title_zh_hk: 訂單唔等於消費
+  en: >-
+    Before treating a large incoming order as a new demand level, reconcile sales, on-hand stock and inbound
+    supply. A genuine large order can still be a batch or a discount, not a jump in weekly consumption.
+  zh: 把一张大订单当成新的需求水平之前，先核对销量、在手库存和在途补货。一张真实的大订单，仍然可能只是合并订货或折扣采购，而不是每周消费量跳升。
+  zh_hk: 把一張大訂單當成新嘅需求水平之前，先核對銷量、在手存貨同在途補貨。一張真實嘅大訂單，仍然可能只係合併訂貨或折扣採購，而唔係每週消費量跳升。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Read the pipeline before you react
+  title_zh: 行动前先看清在途货物
+  title_zh_hk: 行動前先睇清在途貨物
+  q1_en: Sales stayed near 100; orders did not
+  q1_zh: 销量接近100，订单不是
+  q1_zh_hk: 銷量接近100，訂單唔係
+  q2_en: Do not order 300 a second time
+  q2_zh: 不要再订一次300箱
+  q2_zh_hk: 唔好再訂一次300箱
+  s1_en: >-
+    Consumer sales were about 100 boxes a week. The 300-box order is a week-5 commitment sitting already
+    in the pipeline, on top of 50 boxes on hand. It is not missing stock, and it is not a new weekly run-rate.
+  s1_zh: 顾客销量大约每周一百箱。三百箱订单是已经在途、第五周要交的承诺，再加上在手的五十箱。它不是缺失库存，也不是新的每周需求水平。
+  s1_zh_hk: 顧客銷量大約每週一百箱。三百箱訂單係已經在途、第五週要交嘅承諾，再加上在手嘅五十箱。佢唔係缺失存貨，亦都唔係新嘅每週需求水平。
+  s2_en: >-
+    The distributor, retailer, sales and orders are fictional classroom assumptions. Official scene art
+    is a teaching illustration only.
+  s2_zh: 这家分销商、零售商、销量和订单，都是虚构的课堂假设。官方场景图只是教学插图。
+  s2_zh_hk: 呢間分銷商、零售商、銷量同訂單，都係虛構嘅課堂假設。官方場景圖只係教學插圖。
+  s3_en: >-
+    The local announcement supplies context, not evidence for any classroom number.
+  s3_zh: 本地公告只提供背景，不能当作课堂上这些数字的证据。
+  s3_zh_hk: 本地公告只提供背景，唔可以當作課堂上呢啲數字嘅證據。
+duration_target_s: 190

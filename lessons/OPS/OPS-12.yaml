@@ -1,0 +1,325 @@
+id: OPS-12
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Two stores. One safety stock?
+title_zh: 两家门店，共用一份安全库存？
+title_zh_hk: 兩間店，共用一份安全庫存？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-12
+  kicker_en: OPS-12
+  kicker_zh: OPS-12
+  kicker_zh_hk: OPS-12
+  title_en: Two stores. One safety stock?
+  title_zh: 两家门店，共用一份安全库存？
+  title_zh_hk: 兩間店，共用一份安全庫存？
+  image: art/stock-is-not-ready-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 17 October 2024, Hong Kong’s consumer council reported supermarket shortages of some frozen foods.
+    A stock figure is useful only if the unit is ready where the customer is standing. This two-shop trial,
+    and every number, is fictional.
+  zh: >-
+    二零二四年十月十七日，香港消费者委员会报道，超市部分冷冻食品缺货。库存数字有用，前提是货品在顾客所在的地方已经备好。课堂上这两家门店的试算，以及全部数字，都是虚构的。
+  zh_hk: >-
+    二零二四年十月十七日，香港消費者委員會報道，超市部分冷凍食品缺貨。存貨數字有用，前提係貨品喺顧客所在嘅地方已經備好。課堂上呢兩間門市嘅試算，同埋全部數字，都係虛構嘅。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Three one-day reserve plans
+  title_zh: 三种单日储备方案
+  title_zh_hk: 三種單日儲備方案
+  row1_en: >-
+    A: 8 in each shop
+  row1_zh: A：每店8件
+  row1_zh_hk: A：每店8件
+  row2_en: >-
+    B: 12 in the stockroom
+  row2_zh: B：库房12件
+  row2_zh_hk: B：貨倉12件
+  row3_en: >-
+    C: 2 each shop, 8 central
+  row3_zh: C：每店2件、库房8件
+  row3_zh_hk: C：每店2件、貨倉8件
+  col1_en: Local
+  col1_zh: 门店
+  col1_zh_hk: 門市
+  col2_en: Central
+  col2_zh: 库房
+  col2_zh_hk: 貨倉
+  col3_en: Cost
+  col3_zh: 成本
+  col3_zh_hk: 成本
+  c11: '16'
+  c12: '0'
+  c13_en: HK$1,600
+  c13_zh: 1,600港元
+  c13_zh_hk: 1,600港元
+  c21: '0'
+  c22: '12'
+  c23_en: HK$1,200
+  c23_zh: 1,200港元
+  c23_zh_hk: 1,200港元
+  c31: '4'
+  c32: '8'
+  c33_en: HK$1,400
+  c33_zh: 1,400港元
+  c33_zh_hk: 1,400港元
+  footer_en: 10 same-day requests, two shops
+  footer_zh: 两店共10个当日请求
+  footer_zh_hk: 兩店合共10個當日請求
+  s1_en: >-
+    A small chain will trial one shared product across two shops for a single day. Historically there
+    are ten same-day requests: eight around 10 a.m., and two around 4 p.m., split evenly between the shops
+    in the worked plan.
+  s1_zh: >-
+    这家小型连锁店，会用同一款商品，在两家门店做一天试算。历史上每天有十个当日请求：大约八个在上午十点，两个在下午四点。按计算方案，两家门店各占一半。
+  s1_zh_hk: >-
+    呢間小型連鎖店，會用同一款商品，喺兩間門市做一日試算。歷史上每日有十個當日請求：大約八個喺上午十時，兩個喺下午四時。按推算方案，兩間門市各佔一半。
+  s2_en: >-
+    If a unit is not already on the shop floor, it takes two hours to become ready for the customer under
+    the opening assumption. Option A holds eight units in each shop, sixteen in total, at a cost of 1,600
+    Hong Kong dollars.
+  s2_zh: 如果货品不在门店货架上，按起初的假设，要两个小时才能为顾客备好。方案A每家门店放八件，一共十六件，成本一千六百港元。
+  s2_zh_hk: 如果貨品唔喺門市貨架上，按起初嘅假設，要兩個鐘先可以為顧客備好。方案A每間門市放八件，合共十六件，成本一千六百港元。
+  s3_en: >-
+    Option B holds twelve units only in the central stockroom, at 1,200 dollars. Option C holds two in
+    each shop and eight in the stockroom, at 1,400 dollars. Compare which requests can be met on time,
+    and at what cost.
+  s3_zh: 方案B只在中央库房放十二件，成本一千二百港元。方案C每家门店放两件，库房放八件，成本一千四百港元。比较哪些请求能按时兑现，以及各自的成本。
+  s3_zh_hk: >-
+    方案B淨係喺中央貨倉放十二件，成本一千二百港元。方案C每間門市放兩件，貨倉放八件，成本一千四百港元。比較邊啲請求能夠準時兌現，同埋各自嘅成本。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Which reserve plan would you trial?
+  title_zh: 你会试哪一种储备？
+  title_zh_hk: 你會試邊一種儲備？
+  en: >-
+    Which reserve plan would you trial for this day? Explain which requests you expect to meet on time,
+    and what the two-hour ready time implies. Pause and vote.
+  zh: 这一天你会试哪一种储备方案？说明你预计能按时兑现哪些请求，以及两个小时的备货时间意味着什么。请暂停，投个票。
+  zh_hk: 呢一日你會試邊一種儲備方案？講清楚你預計能夠準時兌現邊啲請求，同埋兩個鐘嘅備貨時間意味住啲咩。暫停，投個票。
+- id: reveal
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Timing and the 4 p.m. slot
+  title_zh: 时间与下午四点
+  title_zh_hk: 時間同下午四時
+  row1_en: Stockroom to shop
+  row1_zh: 库房到门店
+  row1_zh_hk: 貨倉到門市
+  row2_en: After a 10 a.m. miss
+  row2_zh: 错过上午十点后
+  row2_zh_hk: 錯過上午十時之後
+  row3_en: Afternoon requests
+  row3_zh: 下午的请求
+  row3_zh_hk: 下午嘅請求
+  col1_en: Confirmed rule
+  col1_zh: 已确认规则
+  col1_zh_hk: 已確認規則
+  col2_en: Implication
+  col2_zh: 含义
+  col2_zh_hk: 含義
+  c11_en: One hour
+  c11_zh: 一小时
+  c11_zh_hk: 一個鐘
+  c12_en: Not two hours
+  c12_zh: 不是两小时
+  c12_zh_hk: 唔係兩個鐘
+  c21_en: Next promise 3 p.m.
+  c21_zh: >-
+    下一次可约15:00
+  c21_zh_hk: >-
+    下次可約15:00
+  c22_en: Too late for 10 a.m.
+  c22_zh: 赶不上上午十点
+  c22_zh_hk: 趕唔上上午十時
+  c31_en: Unchanged at 4 p.m.
+  c31_zh: 仍是下午四点
+  c31_zh_hk: 仍然係下午四時
+  c32_en: A later slot can be met
+  c32_zh: 较晚时段仍可能兑现
+  c32_zh_hk: 較後時段仍可能兌現
+  footer_en: Morning 5 and 5; afternoon 1 and 1
+  footer_zh: 上午各5个；下午各1个
+  footer_zh_hk: 上午各5個；下午各1個
+  s1_en: >-
+    A confirmed transfer from the stockroom to a shop takes one hour, not two. After a missed 10 a.m.
+    request, the next time that can be promised is 3 p.m. The two 4 p.m. requests are unchanged. In the
+    worked plan, each shop has five morning requests and one afternoon request.
+  s1_zh: >-
+    已确认，从库房调到门店需要一小时，不是两小时。错过上午十点的请求后，下一次可以承诺的时间是下午三点。下午四点的两个请求没有变化。按计算方案，每家门店上午五个请求，下午一个。
+  s1_zh_hk: >-
+    已確認，由貨倉調去門市需要一個鐘，唔係兩個鐘。錯過上午十時嘅請求之後，下一次可以承諾嘅時間係下午三時。下午四時嘅兩個請求冇變。按推算方案，每間門市上午五個請求，下午一個。
+  s2_en: >-
+    With all stock in the central room, option B cannot serve the 10 a.m. customers on time: a one-hour
+    transfer is ready at 11 a.m., and the next promise is 3 p.m. Four morning requests are missed.
+  s2_zh: 如果存货全在中央库房，方案B无法准时服务上午十点的顾客：一小时调货要到十一点才备好，下一次可承诺的是下午三点。四个上午请求会错过。
+  s2_zh_hk: 如果存貨全部喺中央貨倉，方案B冇辦法準時服務上午十時嘅顧客：一個鐘調貨要到十一時先備好，下一次可承諾嘅係下午三時。四個上午請求會錯過。
+  s3_en: >-
+    The later 4 p.m. requests can still be met from the stockroom. Recount, under these rules, who is
+    served and who is missed under each plan, and at what cost.
+  s3_zh: 较晚的下午四点请求，仍可以从库房兑现。请按这些规则重新清点：每个方案能服务谁、会错过谁，以及成本是多少。
+  s3_zh_hk: 較後嘅下午四時請求，仍然可以由貨倉兌現。請按呢啲規則重新清點：每個方案能夠服務邊啲人、會錯過邊啲人，同埋成本係幾多。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Who is served, and who is missed?
+  title_zh: 谁能被服务，谁会被错过？
+  title_zh_hk: 邊啲人得到服務，邊啲人會錯過？
+  en: >-
+    With the 4 p.m. slot unchanged, who is served and who is missed under each plan? Compare the cost
+    of the plan that meets every request with the cheaper alternatives. Pause and vote again.
+  zh: 下午四点的请求没有变。每个方案能服务谁、会错过谁？请比较那个能兑现全部请求的方案，和更便宜的方案，成本相差多少。请暂停，再投一次票。
+  zh_hk: 下午四時嘅請求冇變。每個方案能夠服務邊啲人、會錯過邊啲人？比較嗰個能夠兌現全部請求嘅方案，同埋更平嘅方案，成本相差幾多。暫停，再投一次票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 26
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Stock must be ready in place
+  title_zh: 库存要在所需地点备好
+  title_zh_hk: 存貨要喺所需地點備好
+  step1_en: A meets all 10; costs HK$1,600
+  step1_zh: A兑现全部10个；1,600港元
+  step1_zh_hk: A兌現全部10個；1,600港元
+  step2_en: B meets 6; misses four mornings
+  step2_zh: B兑现6个；错过四个上午
+  step2_zh_hk: B兌現6個；錯過四個上午
+  s1_en: >-
+    Count units where and when they can be used. Option A has eight already in each shop, so it meets
+    all ten requests, at 1,600 Hong Kong dollars.
+  s1_zh: 要在所需的地点和时间，清点可用库存。方案A每家门店已有八件，因此能兑现全部十个请求，成本是一千六百港元。
+  s1_zh_hk: 要喺所需嘅地點同時間，清點可用存貨。方案A每間門市已有八件，所以能夠兌現全部十個請求，成本係一千六百港元。
+  s2_en: >-
+    Option B is 400 dollars cheaper, at 1,200 dollars, but a one-hour transfer misses the four 10 a.m.
+    requests that exceed the later 3 p.m. promise. It still meets the six requests that can wait until
+    4 p.m., so six out of ten are served.
+  s2_zh: >-
+    方案B便宜四百港元，只要一千二百港元，但一小时调货赶不上四个上午十点的请求，而下一次只能约到下午三点。下午四点还能兑现的六个请求可以满足，因此十个里只兑现了六个。
+  s2_zh_hk: >-
+    方案B平四百港元，只要一千二百港元，但一個鐘調貨趕唔上四個上午十時嘅請求，而下一次只能約到下午三時。下午四時仲可以兌現嘅六個請求可以滿足，所以十個裏面只兌現咗六個。
+  s3_en: >-
+    Option C costs 1,400 dollars: 200 less than A, and 200 more than B. The two local units in each shop
+    cover the morning requests that cannot wait, and the central eight cover the afternoon. It meets all
+    ten.
+  s3_zh: 方案C成本一千四百港元：比A少二百，比B多二百。每家门店的两件本地存货，覆盖了不能等待的上午请求，库房的八件覆盖下午。它能兑现全部十个。
+  s3_zh_hk: 方案C成本一千四百港元：比A少二百，比B多二百。每間門市嘅兩件本地存貨，覆蓋咗唔能夠等待嘅上午請求，貨倉嘅八件覆蓋下午。佢能夠兌現全部十個。
+  step3_en: C meets all 10; costs HK$1,400
+  step3_zh: C也兑现全部10个；1,400港元
+  step3_zh_hk: C都兌現全部10個；1,400港元
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: A small local reserve changes promises
+  title_zh: 少量门店储备就能改承诺
+  title_zh_hk: 少量門市備貨就能改承諾
+  step1_en: Local units change what can be promised
+  step1_zh: 本地存货会改变可作承诺
+  step1_zh_hk: 本地存貨會改變可作承諾
+  step2_en: Do not assume service is the same
+  step2_zh: 别假定服务保障相同
+  step2_zh_hk: 唔好假定服務保障相同
+  s1_en: >-
+    A few units already in the shop can change which commitments can be kept, even when total stock is
+    lower than a fully local plan. Compare cost against the service that is actually delivered, not against
+    an assumed guarantee.
+  s1_zh: 即使总量低于全部放在门店的方案，少量已经放在门店的存货，也能改变哪些承诺兑现得了。比较成本时，要对照实际兑现的服务，不要凭空认定服务有保障。
+  s1_zh_hk: 即使總量低過全部放喺門市嘅方案，少量已經放喺門市嘅存貨，都能夠改變邊啲承諾兌現得到。比較成本時，要對照實際兌現嘅服務，唔好假定保障相同。
+  s2_en: >-
+    This is one worked day under stated request times and transfer rules. A day with more morning requests,
+    or a slower transfer, could change the comparison. Do not treat a single favourable day as a general
+    test.
+  s2_zh: 这只是按既定请求时间和调货规则，计算的一天。如果上午请求更多，或者调货更慢，比较结果就可能改变。不要只用顺利的一天，来验证一套规则。
+  s2_zh_hk: 呢個只係按既定請求時間同調貨規則，計算嘅一日。如果上午請求更多，或者調貨更慢，比較結果就可能改變。唔好淨係用順利嘅一日，嚟驗證一套規則。
+  s3_en: >-
+    The trial quantities are classroom reserves, not a statistically calculated safety stock. Opening
+    figures, request times and the one-hour transfer are case assumptions, not a field measurement.
+  s3_zh: 这些试算数量是课堂里的储备，不是按统计方法算出的安全库存。期初数字、请求时间和一小时调货，都是案例假设，不是实地测量。
+  s3_zh_hk: 呢啲試算數量係課堂裏嘅儲備，唔係按統計方法計出嚟嘅安全庫存。期初數字、請求時間同一個鐘調貨，都係個案假設，唔係實地測量。
+  step3_en: Do not test only a favourable day
+  step3_zh: 别只用顺利的一天来验证
+  step3_zh_hk: 唔好淨係用順利嘅一日嚟驗證
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Ready stock is not a total
+  title_zh: 可用库存不是一个总数
+  title_zh_hk: 可用存貨唔係一個總數
+  en: >-
+    A pooled stockroom can look cheaper until you ask whether the unit is ready at the shop at 10 a.m.
+    A later afternoon slot can still be served from the centre. Before copying the 1,400-dollar plan,
+    check whether the request pattern and transfer time still hold.
+  zh: >-
+    共用库房看起来更便宜，但你要问：上午十点，货品是否已经在门店备好。较晚的下午时段，仍可能由库房兑现。把一千四百港元的方案搬到别处之前，先核对请求分布和调货时间是否仍然成立。
+  zh_hk: >-
+    共用貨倉睇落更平，但你要問：上午十時，貨品係咪已經喺門市備好。較後嘅下午時段，仍然可能由貨倉兌現。將一千四百港元嘅方案搬去第二度之前，先核對請求分布同調貨時間係咪仍然成立。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Count stock where it can be used
+  title_zh: 在能用的地点清点库存
+  title_zh_hk: 喺用得著嘅地點清點存貨
+  q1_en: A local reserve can keep a morning promise
+  q1_zh: 门店少量存货能保住上午承诺
+  q1_zh_hk: 門市少量存貨能保住上午承諾
+  q2_en: Cheaper stock is not the same service
+  q2_zh: 更低成本不等于同样的服务
+  q2_zh_hk: 更低成本唔等於同樣嘅服務
+  s1_en: >-
+    Under these rules, the mixed plan meets all ten requests and costs 200 dollars less than holding eight
+    in each shop. The cheapest plan misses four morning requests.
+  s1_zh: 按这些规则，混合方案能兑现全部十个请求，而且比每店放八件便宜二百港元。最便宜的方案会错过四个上午请求。
+  s1_zh_hk: 按呢啲規則，混合方案能夠兌現全部十個請求，而且比每店放八件平二百港元。最平嘅方案會錯過四個上午請求。
+  s2_en: >-
+    The shops, requests, transfer times and costs are fictional classroom assumptions. Official scene
+    art is a teaching illustration only.
+  s2_zh: 这些门店、请求、调货时间和成本，都是虚构的课堂假设。官方场景图只是教学插图。
+  s2_zh_hk: 呢啲門市、請求、調貨時間同成本，都係虛構嘅課堂假設。官方場景圖只係教學插圖。
+  s3_en: >-
+    The consumer council report supplies context, not evidence for any classroom number.
+  s3_zh: 消委会的报道只提供背景，不能当作课堂上这些数字的证据。
+  s3_zh_hk: 消委會嘅報道只提供背景，唔可以當作課堂上呢啲數字嘅證據。
+duration_target_s: 192

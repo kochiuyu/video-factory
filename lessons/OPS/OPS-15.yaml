@@ -1,0 +1,302 @@
+id: OPS-15
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Returned and checked. Where next?
+title_zh: 退货已检验，接下来往哪儿送？
+title_zh_hk: 退貨已檢驗，下一站去哪裏？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-15
+  kicker_en: OPS-15
+  kicker_zh: OPS-15
+  kicker_zh_hk: OPS-15
+  title_en: Returned and checked. Where next?
+  title_zh: 退货已检验，接下来往哪儿送？
+  title_zh_hk: 退貨已檢驗，下一站去哪裏？
+  image: art/returned-checked-where-next-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    On 24 November 2025, reporting on Hong Kong logistics pointed to tighter screening of inbound and
+    returned goods. After a return is checked, the next move decides how fast its value comes back. This
+    recovered batch, and every figure, is fictional.
+  zh: >-
+    二零二五年十一月二十四日，有关香港物流的报道提到，对进境和退货物品的筛查更严。退货检验之后，下一步送到哪里，会决定价值回收有多快。课堂上这批回收货，以及全部数字，都是虚构的。
+  zh_hk: >-
+    二零二五年十一月二十四日，有關香港物流嘅報道提到，對進境同退貨物品嘅篩查更嚴。退貨檢驗之後，下一步送到邊度，會決定價值回收有幾快。課堂上呢批回收貨，同埋全部數字，都係虛構嘅。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Eighty returns, two routes
+  title_zh: 八十件退货，两条路线
+  title_zh_hk: 八十件退貨，兩條路線
+  row1_en: Cleared for resale
+  row1_zh: 已获准转售
+  row1_zh_hk: 已放行
+  row2_en: Need repair first
+  row2_zh: 需先维修
+  row2_zh_hk: 須先維修
+  row3_en: Route cost, whole batch
+  row3_zh: 整批路线成本
+  row3_zh_hk: 整批路線成本
+  col1_en: Units
+  col1_zh: 件数
+  col1_zh_hk: 件數
+  col2_en: Route A
+  col2_zh: 路线A
+  col2_zh_hk: 路線A
+  col3_en: Route B
+  col3_zh: 路线B
+  col3_zh_hk: 路線B
+  c11: '60'
+  c12_en: North first
+  c12_zh: 先到北仓
+  c12_zh_hk: 先到北倉
+  c13_en: Each site itself
+  c13_zh: 各自送到原店
+  c13_zh_hk: 各自送到原店
+  c21: '20'
+  c22_en: Then south
+  c22_zh: 再到南仓
+  c22_zh_hk: 再到南倉
+  c23_en: Each site itself
+  c23_zh: 各自送到原店
+  c23_zh_hk: 各自送到原店
+  c31: '80'
+  c32_en: HK$1,800
+  c32_zh: 1,800港元
+  c32_zh_hk: 1,800港元
+  c33_en: HK$1,000
+  c33_zh: 1,000港元
+  c33_zh_hk: 1,000港元
+  footer_en: A costs HK$800 more than B
+  footer_zh: A比B多800港元
+  footer_zh_hk: A比B多800港元
+  s1_en: >-
+    A retailer has eighty checked returns: sixty are cleared for resale, and twenty need repair first.
+    Two recovery routes are quoted for the whole batch.
+  s1_zh: 这家零售商有八十件已经检验的退货：六十件已获准转售，二十件要先维修。两条价值回收路线，都按整批报价。
+  s1_zh_hk: 呢間零售商有八十件已經檢驗嘅退貨：六十件已放行可以轉售，二十件要先維修。兩條回收路線，都按整批報價。
+  s2_en: >-
+    Route A sends everything to the north warehouse first, then on to the south, at 1,800 Hong Kong dollars.
+    Route B sends each unit to its own site, at 1,000 dollars. The difference is 800 dollars.
+  s2_zh: 路线A先把全部货物送到北仓，再到南仓，成本一千八百港元。路线B把每件货送到各自的地点，成本一千港元。相差八百港元。
+  s2_zh_hk: 路線A先把全部貨物送到北倉，再到南倉，成本一千八百港元。路線B把每件貨送到各自嘅地點，成本一千港元。相差八百港元。
+  s3_en: >-
+    Of the sixty cleared units, fifty came from the north and ten from the south. Of the twenty repair
+    units, ten came from each site. The question is where the batch should go next.
+  s3_zh: 六十件已获准转售的货里，五十件来自北面，十件来自南面。二十件待修货里，南北各十件。问题是：这批货接下来该往哪里送。
+  s3_zh_hk: 六十件已放行嘅貨裏面，五十件來自北面，十件來自南面。二十件待修貨裏面，南北各十件。問題係：呢批貨接下來該送到邊度。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Send them together, or each to its site?
+  title_zh: 整批合送，还是各回原店？
+  title_zh_hk: 整批合送，定各自送返原店？
+  en: >-
+    Would you send the whole batch on the dearer combined route, or on the cheaper route that returns
+    each unit to its own site? What recovery aim would decide it? Pause and vote.
+  zh: 你会选择更贵的合送路线，把整批货一起送，还是选择更便宜、各回原地点的路线？你的价值回收目标会如何决定？请暂停，投个票。
+  zh_hk: 你會揀較貴嘅合送路線，把整批貨一齊送，定係揀較平、各自送返原點嘅路線？你嘅回收目標會點樣決定？暫停，投個票。
+- id: reveal
+  visual: table_grid
+  seconds: 24
+  rows: 2
+  cols: 3
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Friday demand at the two sites
+  title_zh: 两地星期五的需求
+  title_zh_hk: 兩地星期五嘅需求
+  row1_en: North warehouse
+  row1_zh: 北仓
+  row1_zh_hk: 北倉
+  row2_en: South warehouse
+  row2_zh: 南仓
+  row2_zh_hk: 南倉
+  col1_en: Cleared units now
+  col1_zh: 现有已获准转售
+  col1_zh_hk: 現有已放行
+  col2_en: Friday forecast
+  col2_zh: 周五预估
+  col2_zh_hk: 周五預估
+  col3_en: Repair units now
+  col3_zh: 现有待修
+  col3_zh_hk: 現有待修
+  c11: '50'
+  c12: '10'
+  c13: '10'
+  c21: '10'
+  c22: '70'
+  c23: '10'
+  footer_en: The promotion is on Friday
+  footer_zh: 促销在星期五
+  footer_zh_hk: 促銷在星期五
+  s1_en: >-
+    A Friday promotion is now in the plan. Forecast demand that day is ten cleared units in the north
+    and seventy in the south. Repair work is not finished before Friday.
+  s1_zh: 现在计划里有一次星期五促销。当天预估需求是：北仓十件已获准转售的货，南仓七十件。维修工作星期五前完成不了。
+  s1_zh_hk: 而家計劃裏有一次星期五促銷。當日預估需求係：北倉十件已放行嘅貨，南倉七十件。維修工作星期五前完成唔到。
+  s2_en: >-
+    Route A can place all eighty units, including the sixty cleared units, in position by Friday: ten
+    in the north and seventy in the south, matching the forecast exactly.
+  s2_zh: 路线A能在星期五前，把全部八十件货就位，包括六十件已获准转售的货：北面十件、南面七十件，正好对上预估。
+  s2_zh_hk: 路線A能夠喺星期五前，把全部八十件貨就位，包括六十件已放行嘅貨：北面十件、南面七十件，正好對上預估。
+  s3_en: >-
+    Route B matches only the units already at each site: ten cleared units that fit the north forecast,
+    and ten cleared units against seventy in the south, or twenty in total. Forty cleared units and all
+    twenty repaired units would arrive after the promotion.
+  s3_zh: >-
+    路线B只能用已经在各地的货去匹配：北面对上十件，南面七十件需求里只对上十件，一共二十件。四十件已获准转售的货，以及二十件修完的货，要到促销之后才到达。
+  s3_zh_hk: >-
+    路線B只能用已經喺各地嘅貨去匹配：北面對上十件，南面七十件需求裏面只對上十件，合共二十件。四十件已放行嘅貨，以及二十件修完嘅貨，要到促銷之後先到達。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Which route meets Friday’s promotion?
+  title_zh: 哪条路线赶得上周五促销？
+  title_zh_hk: 邊條路線趕得及周五促銷？
+  en: >-
+    If the aim is to place cleared units for Friday, which route meets the forecast, and what does the
+    800-dollar saving on B leave unmatched? Pause and vote again.
+  zh: 如果目标是让已获准转售的货赶上星期五，哪条路线能对上预估？路线B节省的八百港元，会留下多少货对不上？请暂停，再投一次票。
+  zh_hk: 如果目標係讓已放行嘅貨趕及星期五，邊條路線能夠對上預估？路線B慳到嘅八百港元，會留下幾多貨對唔上？暫停，再投一次票。
+- id: bridge
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Track each category’s next stop
+  title_zh: 按类别追踪下一步
+  title_zh_hk: 按類別追蹤下一站
+  step1_en: A places 10 + 70 by Friday
+  step1_zh: A周五就位10加70件
+  step1_zh_hk: A周五就位10加70件
+  step2_en: B matches only 20 by Friday
+  step2_zh: B周五只对上20件
+  step2_zh_hk: B周五只對上20件
+  s1_en: >-
+    Track cleared units and repair units separately. Route A can position ten plus seventy, or eighty
+    units, by Friday, matching the promotion forecast.
+  s1_zh: 要按类别追踪商品去向。路线A能在星期五前就位十加七十，也就是八十件，对上促销预估。
+  s1_zh_hk: 要按類別追蹤貨品去向。路線A能夠喺星期五前就位十加七十，也就是八十件，對上促銷預估。
+  s2_en: >-
+    Route B’s Friday match is the minimum of fifty and ten in the north, plus the minimum of ten and seventy
+    in the south, or twenty units. Forty cleared units and twenty repaired units arrive after the promotion.
+  s2_zh: >-
+    路线B在星期五能对上的，是北面五十和十的较小值，加上南面十和七十的较小值，等于二十件。四十件已获准转售的货和二十件修完的货，要到促销之后才到。
+  s2_zh_hk: 路線B喺星期五能夠對上嘅，係北面五十同十嘅較小值，加上南面十同七十嘅較小值，等於二十件。四十件已放行嘅貨同二十件修完嘅貨，要到促銷之後先到。
+  s3_en: >-
+    The 800-dollar transport saving is real, but recovery can be slower. About 800 divided by 60 is roughly
+    13 dollars per cleared unit as a descriptive figure only, not a decision rule.
+  s3_zh: 八百港元的运费节省是实在的，但价值回收可能更慢。八百除以六十，大约是每件已获准转售货十三港元，这只是描述性数字，不是决策规则。
+  s3_zh_hk: 八百港元嘅運費節省係實在嘅，但回收進度可能更慢。八百除以六十，大約係每件已放行貨十三港元，呢個只係描述性數字，唔係決策規則。
+  step3_en: B leaves 40 and 20 until after
+  step3_zh: B有40和20件会迟到
+  step3_zh_hk: B有40同20件會遲到
+- id: meaning
+  visual: steps
+  layout: rows
+  seconds: 24
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Set the recovery aim first
+  title_zh: 先明确价值回收目标
+  title_zh_hk: 先選定回收目標
+  step1_en: Transport cost is not the only score
+  step1_zh: 运费不是唯一分数
+  step1_zh_hk: 運費唔係唯一分數
+  step2_en: A slower cheap route can miss Friday
+  step2_zh: 更便宜但更慢会错过周五
+  step2_zh_hk: 更平但更慢會錯過周五
+  s1_en: >-
+    State the recovery aim before choosing a route. If the aim is to place cleared units for Friday, the
+    dearer combined route meets the forecast; the cheaper route does not.
+  s1_zh: 先明确价值回收目标，再选路线。如果目标是让已获准转售的货赶上星期五，较贵的合送路线能对上预估；较便宜的路线对不上。
+  s1_zh_hk: 先選定回收目標，再揀路線。如果目標係讓已放行嘅貨趕及星期五，較貴嘅合送路線能夠對上預估；較平嘅路線對唔上。
+  s2_en: >-
+    If the aim were only to minimise this batch’s transport cost, Route B would look better, at 1,000
+    dollars against 1,800. That comparison ignores when the units become available for sale or after repair.
+  s2_zh: 如果目标只是尽量降低这批货的运费，路线B看起来更好，一千港元对一千八百港元。这样比，忽略了货物何时能再出售，或修完后何时可用。
+  s2_zh_hk: 如果目標只係盡量降低呢批貨嘅運費，路線B睇落更好，一千港元對一千八百港元。噉樣比，忽略咗貨物幾時能夠再出售，或修完之後幾時可用。
+  s3_en: >-
+    The Friday forecasts, inspection results and quotes are case assumptions. A different promotion date
+    or mix of cleared and repair units would change the comparison.
+  s3_zh: 星期五的预估、检验结果和报价，都是案例假设。如果促销日期不同，或者已获准转售和待修的比例不同，比较结果就会改变。
+  s3_zh_hk: 星期五嘅預估、檢驗結果同報價，都係個案假設。如果促銷日期唔同，或者已放行同待修嘅比例唔同，比較結果就會改變。
+  step3_en: Name the aim before choosing a route
+  step3_zh: 选路线之前先说清目标
+  step3_zh_hk: 揀路線之前先講清目標
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: A cheaper route can recover value later
+  title_zh: 更便宜的路线可能回收更慢
+  title_zh_hk: 更平嘅路線可能回收更慢
+  en: >-
+    After returns are checked, the next stop should follow the recovery aim. A combined route can cost
+    more and still be the one that places goods for a dated promotion, while a cheaper point-to-point
+    route leaves a large unmatched quantity.
+  zh: 退货检验之后，下一站要跟着价值回收目标走。合送路线可能更贵，却能让货物赶上既定日期的促销；更便宜的点对点路线，会留下大量对不上的货。
+  zh_hk: 退貨檢驗之後，下一站要跟住回收目標走。合送路線可能更貴，卻能夠讓貨物趕及既定日期嘅促銷；更平嘅點對點路線，會留下大量對唔上嘅貨。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Choose the route that meets the aim
+  title_zh: 选能实现目标的路线
+  title_zh_hk: 揀能夠實現目標嘅路線
+  q1_en: Route A can match Friday’s 10 and 70
+  q1_zh: 路线A能对上周五的10和70
+  q1_zh_hk: 路線A能夠對上周五嘅10同70
+  q2_en: Route B matches 20 and saves HK$800
+  q2_zh: 路线B对上20件，节省800港元
+  q2_zh_hk: 路線B對上20件，慳800港元
+  s1_en: >-
+    If Friday availability is the aim, the 1,800-dollar route places the cleared units on time. The 1,000-dollar
+    route leaves forty cleared units and twenty repaired units until after the promotion.
+  s1_zh: >-
+    如果目标是星期五就要可用，一千八百港元的路线能让已获准转售的货按时就位。一千港元的路线，会把四十件已获准转售的货和二十件修完的货，留到促销之后。
+  s1_zh_hk: 如果目標係星期五就要可用，一千八百港元嘅路線能夠讓已放行嘅貨準時就位。一千港元嘅路線，會把四十件已放行嘅貨同二十件修完嘅貨，留到促銷之後。
+  s2_en: >-
+    The returns, sites, forecasts and quotes are fictional classroom assumptions. Official scene art is
+    a teaching illustration only.
+  s2_zh: 这些退货、地点、预估和报价，都是虚构的课堂假设。官方场景图只是教学插图。
+  s2_zh_hk: 呢啲退貨、地點、預估同報價，都係虛構嘅課堂假設。官方場景圖只係教學插圖。
+  s3_en: >-
+    The logistics report supplies context, not evidence for any classroom number.
+  s3_zh: 物流报道只提供背景，不能当作课堂上这些数字的证据。
+  s3_zh_hk: 物流報道只提供背景，唔可以當作課堂上呢啲數字嘅證據。
+duration_target_s: 188

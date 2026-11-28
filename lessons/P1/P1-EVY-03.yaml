@@ -1,0 +1,118 @@
+# P1-EVY-03. Mirrors MathQuiz path measure / lesson equalunits, "Measure with units".
+# Equal tiles touch end to end. More tiles means longer. A new tile changes the count.
+# https://github.com/kochiuyu/mathquiz learn-measure.js (equalunits).
+# Speech is for age 6: one short idea per sentence.
+id: P1-EVY-03
+title_en: Equal units
+title_zh: 一样的单位
+title_zh_hk: 一樣嘅單位
+duration_target_s: 55
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: measure
+  kind: units
+  seconds: 8
+  title_en: Equal units
+  title_zh: 一样的单位
+  title_zh_hk: 一樣嘅單位
+  s1_en: How many tiles cover it?
+  s1_zh: 几块砖盖满？
+  s1_zh_hk: 幾多塊磚蓋滿呀？
+
+- id: cover
+  visual: animated
+  scene: measure_line
+  mode: units
+  action: cover
+  count: 6
+  size: small
+  seconds: 11
+  title_en: Six tiles
+  title_zh: 六块砖
+  title_zh_hk: 六塊磚
+  s1_en: Six tiles cover the strip.
+  s1_zh: 六块砖盖满纸条。
+  s1_zh_hk: 六塊磚蓋滿紙條。
+  s2_en: The tiles touch end to end.
+  s2_zh: 砖块首尾相接。
+  s2_zh_hk: 磚塊頭尾相接。
+  s3_en: There are no gaps.
+  s3_zh: 中间没有空位。
+  s3_zh_hk: 中間冇空位。
+
+- id: more
+  visual: animated
+  scene: measure_line
+  mode: units
+  action: more
+  low: 4
+  high: 7
+  seconds: 11
+  title_en: More tiles
+  title_zh: 砖更多
+  title_zh_hk: 磚多啲
+  s1_en: Count the tiles.
+  s1_zh: 数一数砖块。
+  s1_zh_hk: 數一數磚塊。
+  s2_en: This row has more tiles.
+  s2_zh: 这一排砖更多。
+  s2_zh_hk: 呢一排磚多啲。
+  s3_en: More equal tiles means a longer strip.
+  s3_zh: 同样的砖更多，纸条更长。
+  s3_zh_hk: 同樣嘅磚多啲，紙條長啲。
+
+- id: size
+  visual: animated
+  scene: measure_line
+  mode: units
+  action: size
+  seconds: 11
+  title_en: The tile changed
+  title_zh: 砖的大小变了
+  title_zh_hk: 磚嘅大細變咗
+  s1_en: Six small tiles cover this strip.
+  s1_zh: 六块小砖盖满这条。
+  s1_zh_hk: 六塊細磚蓋滿呢條。
+  s2_en: Three large tiles cover the same length.
+  s2_zh: 三块大砖盖住同样的长度。
+  s2_zh_hk: 三塊大磚蓋住同樣嘅長度。
+  s3_en: A new tile changes the count.
+  s3_zh: 换了砖，块数就变了。
+  s3_zh_hk: 換咗磚，塊數就變咗。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: measure
+  seconds: 14
+  title_en: Equal units
+  title_zh: 一样的单位
+  title_zh_hk: 一樣嘅單位
+  s1_en: Use equal tiles.
+  s1_zh: 用同样的砖。
+  s1_zh_hk: 用同樣嘅磚。
+  s2_en: Tiles touch, with no gaps.
+  s2_zh: 砖块相接，不留空。
+  s2_zh_hk: 磚塊相接，唔留空。
+  s3_en: More tiles, longer strip.
+  s3_zh: 砖更多，纸条更长。
+  s3_zh_hk: 磚多啲，紙條長啲。
+  s4_en: A new tile changes the count.
+  s4_zh: 换砖，块数就变。
+  s4_zh_hk: 換磚，塊數就變。
+  cues:
+  - kind: measure
+    mode: units
+    count: 6
+  - kind: measure
+    mode: units
+    count: 6
+  - kind: measure
+    mode: units
+    count: 7
+  - kind: measure
+    mode: units
+    count: 3

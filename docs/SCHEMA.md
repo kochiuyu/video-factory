@@ -147,7 +147,13 @@ Authoring, the scenes, caption timing, and the cache live in [docs/ANIMATED_SCEN
 
 `object_place` takes `layout` (`row`, `column`, or `depth`) and `items` (`ball`, `book`, or `cup`). A row may hold three items. Optional `focus` rings one item. Three spoken lines. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
 
-A `lesson_hook` may use `motif: shapes` and `kind` (a flat shape, a solid, or `line`). A takeaway cue may use `kind: line` (`mode` `marks`, `straight`, `curve`, or `routes`), `kind: flat` (one `shape` with optional `turn`, or `items` for two or three shapes in a row), `kind: solid` (one `shape` with optional `turn`, `items` for a pair, or `items` with `layout: stack`), `kind: join` (`result`), or `kind: place` (`layout` and `items`, the same objects as `object_place`).
+`measure_line` takes `mode` (`length`, `distance`, `units`, `scale`, `reference`, or `tools`) and an `action` for every mode except `tools`. Lengths `a` and `b` are 1 to 10. Three spoken lines. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
+
+`coin_row` takes `part` (`show`, `pair`, `price`, `total`, `swap`, or `cent`). Coin values are 10, 20, 50, 100, 200, 500, or 1000 cents. A price is whole cents. Three spoken lines. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
+
+`day_time` takes `mode` (`clock`, `hops`, `week`, `months`, or `calendar`). A clock is an hour from 1 to 12 and minute 0 or 30. A calendar needs a real `year`, `month`, and `day`. Three spoken lines. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
+
+A `lesson_hook` may use `motif: shapes` and `kind` (a flat shape, a solid, or `line`). It may also use `motif: measure` (`kind` `length`, `distance`, `units`, or `ruler`), `motif: money` (`kind` `coin`, `price`, or `swap`), or `motif: time` (`kind` `clock`, `hops`, or `week`). A takeaway cue may use `kind: line` (`mode` `marks`, `straight`, `curve`, or `routes`), `kind: flat` (one `shape` with optional `turn`, or `items` for two or three shapes in a row), `kind: solid` (one `shape` with optional `turn`, `items` for a pair, or `items` with `layout: stack`), `kind: join` (`result`), `kind: place` (`layout` and `items`, the same objects as `object_place`), `kind: measure` (`mode` `length`, `distance`, `units`, or `ruler`), `kind: coin` (`coin`, `price`, `coins`, or `coins` with `into`), or `kind: time` (`mode` `clock`, `hops`, `week`, `months`, or `day`).
 
 `number_blocks` fields depend on `mode`. `tens` uses `count` (0–100). `compare` uses `a` and `b` (0–100, different). `order` uses `a` and `b`, plus optional `n` and `mark` (2–4 values, 0–100, drawn left to right). `hop` uses `start` and `end` (0–100, different, at most five apart). `groups` uses `a` (2–5), `n` (1–6), and optional `b` (loose counters, fewer than `a`), with the total at most 20. Three spoken lines. See [docs/ANIMATED_SCENES.md](ANIMATED_SCENES.md).
 

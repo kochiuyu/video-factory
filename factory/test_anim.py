@@ -1593,6 +1593,48 @@ LEAK = set(
 )
 
 
+def _segment_hits_box(ax, ay, bx, by, left, right, bottom, top) -> bool:
+    """True when the segment meets the closed rectangle."""
+    def inside(x, y):
+        return left <= x <= right and bottom <= y <= top
+
+    if inside(ax, ay) or inside(bx, by):
+        return True
+
+    def crosses(x3, y3, x4, y4):
+        den = (ax - bx) * (y3 - y4) - (ay - by) * (x3 - x4)
+        if abs(den) < 1e-9:
+            return False
+        t = ((ax - x3) * (y3 - y4) - (ay - y3) * (x3 - x4)) / den
+        u = ((ax - x3) * (ay - by) - (ay - y3) * (ax - bx)) / den
+        return 0 <= t <= 1 and 0 <= u <= 1
+
+    return any((
+        crosses(left, bottom, right, bottom),
+        crosses(right, bottom, right, top),
+        crosses(right, top, left, top),
+        crosses(left, top, left, bottom),
+    ))
+
+
+def _ticks_miss_the_numerals(picture, pad: float = 0.04) -> bool:
+    """Hour ticks and both hands stay off every digit."""
+    lines = list(picture.vf_ticks) + [picture.vf_minute, picture.vf_hour]
+    for label in picture.vf_numbers:
+        left = float(label.get_left()[0]) - pad
+        right = float(label.get_right()[0]) + pad
+        bottom = float(label.get_bottom()[1]) - pad
+        top = float(label.get_top()[1]) + pad
+        for line in lines:
+            if _segment_hits_box(
+                float(line.get_start()[0]), float(line.get_start()[1]),
+                float(line.get_end()[0]), float(line.get_end()[1]),
+                left, right, bottom, top,
+            ):
+                return False
+    return True
+
+
 def _beat_lines(lesson, suffix: str) -> str:
     parts = []
     for beat in lesson["beats"]:
@@ -1611,6 +1653,7 @@ class SceneRegistryTest(unittest.TestCase):
                 "ordinal_row", "pair_counters", "part_whole", "number_blocks",
                 "estimate_group", "row_match", "place_sum",
                 "shape_line", "flat_shape", "shape_join", "solid_shape", "object_place",
+                "measure_line", "coin_row", "day_time",
                 "lesson_hook", "lesson_takeaway",
             ],
         )
@@ -1618,6 +1661,194 @@ class SceneRegistryTest(unittest.TestCase):
         self.assertEqual(REGISTRY["count_objects"].steps, 3)
         self.assertEqual(REGISTRY["number_track"].steps, 3)
         self.assertEqual(scene_problems({"visual": "title_card", "scene": "nope"}), [])
+
+    def _spoken(self, **extra):
+        row = {
+            "visual": "animated",
+            "s1_en": "One.",
+            "s2_en": "Two.",
+            "s3_en": "Three.",
+            "s1_zh": "一。",
+            "s2_zh": "二。",
+            "s3_zh": "三。",
+            "s1_zh_hk": "一。",
+            "s2_zh_hk": "二。",
+            "s3_zh_hk": "三。",
+        }
+        row.update(extra)
+        return row
+
+    def test_everyday_scene_bounds(self):
+        self.assertEqual(scene_problems(self._spoken(scene="measure_line", mode="length", action="align", a=4, b=8)), [])
+        self.assertTrue(scene_problems(self._spoken(scene="measure_line", mode="length", action="match", a=4, b=8)))
+        self.assertTrue(scene_problems(self._spoken(scene="measure_line", mode="nope")))
+        self.assertEqual(scene_problems(self._spoken(
+            scene="coin_row", part="show", coins=[10, 20, 50, 100, 200, 500, 1000], focus=3,
+        )), [])
+        self.assertTrue(scene_problems(self._spoken(scene="coin_row", part="show", coins=[3])))
+        self.assertEqual(scene_problems(self._spoken(scene="day_time", mode="clock", hour=3, minute=0)), [])
+        self.assertTrue(scene_problems(self._spoken(scene="day_time", mode="clock", hour=3, minute=15)))
+        self.assertEqual(scene_problems(self._spoken(
+            scene="day_time", mode="calendar", year=2026, month=11, day=18,
+        )), [])
+        self.assertTrue(scene_problems(self._spoken(
+            scene="day_time", mode="calendar", year=2026, month=11, day=31,
+        )))
+        self.assertEqual(takeaway_cue_picture({"kind": "measure", "mode": "length", "a": 4, "b": 8}), ("measure", "length", 4, 8))
+        self.assertEqual(takeaway_cue_picture({"kind": "coin", "coin": 100}), ("coin", 100))
+        self.assertEqual(
+            takeaway_cue_picture({"kind": "time", "mode": "hops", "start": 11, "steps": 2}),
+            ("time", "hops", 11, 2, 0),
+        )
+        self.assertIsNone(takeaway_cue_picture({"kind": "coin", "coin": 3}))
+        hook = self._spoken(scene="lesson_hook", motif="measure", kind="ruler", title_en="Length", title_zh="长度", title_zh_hk="長度", s1_en="Which?", s1_zh="哪条？", s1_zh_hk="邊條？")
+        # A hook has one spoken line. Extra lines are ignored by step count, but
+        # scene_problems only requires the lines for that step.
+        self.assertEqual(scene_problems({
+            "visual": "animated",
+            "scene": "lesson_hook",
+            "motif": "time",
+            "kind": "clock",
+            "title_en": "Clock",
+            "title_zh": "时钟",
+            "title_zh_hk": "時鐘",
+            "s1_en": "What time?",
+            "s1_zh": "几点？",
+            "s1_zh_hk": "幾點？",
+        }), [])
+
+    def test_everyday_scenes_draw_length_coins_and_clocks(self):
+        try:
+            require_manim()
+        except ManimNotInstalled:
+            self.skipTest("Manim is optional")
+        from manim import tempconfig
+
+        from anim import _make_scene, prepare_fonts
+        from scene_registry import scene_spec
+
+        prepare_fonts()
+        wide = {
+            "pixel_width": 1920, "pixel_height": 1080,
+            "frame_width": 8 * 16 / 9, "frame_height": 8, "frame_rate": 15,
+        }
+
+        def render(beat):
+            spec = scene_spec(beat, "en")
+            scene = _make_scene(spec, [0.45, 0.6, 0.45])
+            with tempconfig(wide):
+                scene.render(preview=False)
+            return scene
+
+        with tempconfig(wide):
+            aligned = render(self._spoken(
+                scene="measure_line", mode="length", action="align", a=4, b=8,
+                title_en="Line up the ends",
+            ))
+            picture = aligned.vf_picture
+            unit = 1080 / 8
+            self.assertGreaterEqual(float(aligned.vf_title.height) * unit, 47)
+            self.assertLess(abs(picture.vf_bars[0].get_left()[0] - picture.vf_bars[1].get_left()[0]), 0.05)
+            self.assertGreater(float(picture.vf_bars[1].width), float(picture.vf_bars[0].width) + 0.4)
+            # The teaching picture fills the room between the title and the caption.
+            self.assertGreater(max(float(picture.width) / (8 * 16 / 9), float(picture.height) / 8), 0.40)
+            self.assertLess(float(picture.get_top()[1]), float(aligned.vf_title.get_bottom()[1]) - 0.2)
+            wider = render(self._spoken(
+                scene="measure_line", mode="length", action="width", a=8, b=4,
+                title_en="Wider is not longer",
+            ))
+            bars = wider.vf_picture.vf_bars
+            self.assertGreater(float(bars[0].width), float(bars[1].width))
+            self.assertIs(wider.vf_picture.vf_marked, bars[0])
+            self.assertNotEqual(
+                bars[1].get_stroke_color().to_hex().lower(),
+                wider.vf_picture.vf_marked.get_stroke_color().to_hex().lower(),
+            )
+            three = render(self._spoken(
+                scene="day_time", mode="clock", hour=3, minute=0, hand="hour",
+                title_en="Three o'clock",
+            ))
+            centre = three.vf_face.get_center()
+            self.assertGreater(three.vf_minute.get_end()[1], centre[1] + 0.35)
+            self.assertGreater(three.vf_hour.get_end()[0], centre[0] + 0.25)
+            half = render(self._spoken(
+                scene="day_time", mode="clock", hour=7, minute=30, hand="minute",
+                title_en="Half past seven",
+            ))
+            centre = half.vf_face.get_center()
+            self.assertLess(half.vf_minute.get_end()[1], centre[1] - 0.35)
+            self.assertLess(half.vf_hour.get_end()[0], centre[0] - 0.15)
+            self.assertLess(half.vf_hour.get_end()[1], centre[1] - 0.15)
+            noon = render(self._spoken(
+                scene="day_time", mode="clock", hour=12, minute=30, hand="hour",
+                title_en="Half past twelve",
+            ))
+            centre = noon.vf_face.get_center()
+            self.assertGreater(noon.vf_hour.get_end()[1], centre[1] + 0.2)
+            self.assertGreater(noon.vf_hour.get_end()[0], centre[0] + 0.05)
+            for clock in (three, half, noon):
+                self.assertTrue(_ticks_miss_the_numerals(clock.vf_picture))
+            from manim import Text
+
+            from everyday_draw import _clock
+
+            latin, cjk = prepare_fonts()
+
+            def write(text, size=28, latin=latin, cjk=cjk):
+                font = cjk if any("\u4e00" <= ch <= "\u9fff" for ch in str(text)) else latin
+                return Text(str(text), font=font, font_size=size, color="#0B1F3A")
+
+            # Hook and takeaway clocks use the smaller face.
+            self.assertTrue(_ticks_miss_the_numerals(_clock(7, 30, write, radius=1.15)))
+            coins = render(self._spoken(
+                scene="coin_row", part="show",
+                coins=[10, 20, 50, 100, 200, 500, 1000], focus=3,
+                title_en="One dollar",
+            ))
+            self.assertEqual(len(coins.vf_picture.vf_coins), 7)
+            self.assertGreater(float(coins.vf_picture.vf_ring.get_stroke_opacity()), 0.9)
+            frame_w = 8 * 16 / 9
+            coin_w = max(float(token.width) for token in coins.vf_picture.vf_coins)
+            # A four-across row used to stop near 8% of the frame. It now fills the band.
+            self.assertGreater(coin_w / frame_w, 0.11)
+            self.assertGreater(float(coins.vf_picture.width) / frame_w, 0.50)
+            self.assertGreater(float(coins.vf_picture.height) / 8, 0.40)
+            self.assertLess(
+                float(coins.vf_picture.get_top()[1]),
+                float(coins.vf_title.get_bottom()[1]) - 0.15,
+            )
+            pair = render(self._spoken(
+                scene="coin_row", part="pair", coins=[20, 200], focus=1,
+                title_en="Cents are not dollars",
+            ))
+            pair_w = max(float(token.width) for token in pair.vf_picture.vf_coins)
+            self.assertGreater(pair_w / frame_w, 0.15)
+            swap = render(self._spoken(
+                scene="coin_row", part="swap", coins=[500], into=[100, 100, 100, 100, 100],
+                title_en="Five one-dollar coins",
+            ))
+            ys = [float(token.get_center()[1]) for token in swap.vf_picture.vf_coins]
+            self.assertLess(max(ys) - min(ys), 0.25)
+            hook = render(self._spoken(
+                scene="lesson_hook", motif="money", kind="coin",
+                title_en="Hong Kong coins", title_zh="香港的硬币", title_zh_hk="香港嘅硬幣",
+            ))
+            self.assertGreater(float(hook.vf_cue.width) / frame_w, 0.15)
+            self.assertLess(float(hook.vf_cue.get_top()[1]), float(hook.vf_title.get_bottom()[1]) - 0.12)
+            from everyday_draw import _row_counts
+
+            self.assertEqual(_row_counts(7), [4, 3])
+            with tempconfig({
+                "pixel_width": 1080, "pixel_height": 1920,
+                "frame_width": 8.0 * 1080 / 1920, "frame_height": 8.0,
+            }):
+                self.assertEqual(_row_counts(7), [2, 2, 3])
+            month = render(self._spoken(
+                scene="day_time", mode="calendar", year=2026, month=11, day=18,
+                title_en="18 November",
+            ))
+            self.assertEqual(month.vf_day, 18)
+            self.assertEqual(month.vf_column, 2)
 
     def test_number_blocks_bounds(self):
         def beat(**extra):
@@ -2331,6 +2562,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-SHP-09": [
                 "lesson_hook", "object_place", "object_place", "object_place", "object_place", "lesson_takeaway",
             ],
+            "P1-EVY-01": [
+                "lesson_hook", "measure_line", "measure_line", "measure_line", "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -2351,6 +2585,16 @@ class SceneRegistryTest(unittest.TestCase):
                 leaked = sorted({ch for ch in traditional if ch in LEAK})
                 self.assertEqual(leaked, [], traditional)
                 self.assertNotEqual(traditional, _label_text(labels_for(beat, "zh")))
+        answers = {
+            "P1-EVY-01": ("Strip 2 is longer.", "第二条更长。", "第二條長啲。"),
+        }
+        for name, phrases in answers.items():
+            lesson = load_lesson(P1 / f"{name}.yaml")
+            first = lesson["beats"][1]
+            spoken = " ".join(str(first.get(key) or "") for key in ("s1_en", "s2_en", "s3_en", "s1_zh", "s2_zh", "s3_zh", "s1_zh_hk", "s2_zh_hk", "s3_zh_hk"))
+            for phrase in phrases:
+                self.assertIn(phrase, spoken, name)
+            self.assertNotIn("嗎", _beat_lines(lesson, "zh_hk"))
         two = load_lesson(P1 / "P1-NUM-02.yaml")
         twenty = next(beat for beat in two["beats"] if beat["id"] == "twenty")
         self.assertEqual(twenty["count"], 20)

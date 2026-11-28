@@ -709,7 +709,17 @@ class PartWhole(SceneKind):
         return params
 
 
-_MOTIFS = {"counters", "ten_frame", "track", "ordinal", "pairs", "parts", "shapes"}
+_MOTIFS = {
+    "counters", "ten_frame", "track", "ordinal", "pairs", "parts", "shapes",
+    "measure", "money", "time",
+}
+_HOOK_KINDS = {
+    "measure": {"length", "distance", "units", "ruler"},
+    "money": {"coin", "price", "swap"},
+    "time": {"clock", "hops", "week"},
+}
+_MEASURE_MODES = {"length", "distance", "units", "scale", "reference", "tools"}
+_COIN_VALUES = {10, 20, 50, 100, 200, 500, 1000}
 
 
 def _pair_n(beat: dict, default: int = 8) -> int:
@@ -778,6 +788,27 @@ def _beat_line(beat: dict, lang: str, index: int) -> str:
     return str(beat.get(f"s{index}_{suffix}") or "").strip()
 
 
+_HOOK_DEFAULT = {"measure": "length", "money": "coin", "time": "clock"}
+
+
+def _hook_kind(beat: dict) -> str:
+    motif = _motif(beat)
+    written = str(beat.get("kind") or "").strip()
+    if written:
+        return written
+    return _HOOK_DEFAULT.get(motif, "length")
+
+
+def _hook_kind_problems(beat: dict) -> list[str]:
+    motif = _motif(beat)
+    kind = _hook_kind(beat)
+    allowed = _HOOK_KINDS.get(motif) or set()
+    if kind not in allowed:
+        names = ", ".join(sorted(allowed))
+        return [f"{motif} hook kind must be one of {names}, not {kind!r}."]
+    return []
+
+
 def _title_line(beat: dict, lang: str) -> str:
     code = label_lang(lang)
     suffix = {"en": "en", "zh": "zh", "zh_hk": "zh_hk"}[code]
@@ -798,7 +829,8 @@ class LessonHook(SceneKind):
 
     def problems(self, beat: dict) -> list[str]:
         if _motif(beat) not in _MOTIFS:
-            return [f"lesson_hook motif must be counters, ten_frame, track, ordinal, pairs, parts, or shapes, not {_motif(beat)!r}."]
+            names = ", ".join(sorted(_MOTIFS))
+            return [f"lesson_hook motif must be one of {names}, not {_motif(beat)!r}."]
         if not _title_line(beat, "en"):
             return ["lesson_hook needs title_en (and title_zh / title_zh_hk)."]
         if _motif(beat) == "ordinal":
@@ -807,6 +839,8 @@ class LessonHook(SceneKind):
             return _pair_n_problems(beat)
         if _motif(beat) == "parts" and ("a" in beat or "b" in beat):
             return _part_pair_problems(beat)
+        if _motif(beat) in _HOOK_KINDS:
+            return _hook_kind_problems(beat)
         return []
 
     def labels(self, beat: dict, lang: str) -> dict:
@@ -829,6 +863,9 @@ class LessonHook(SceneKind):
             out["a"], out["b"] = pair
         if _motif(beat) == "shapes":
             out["kind"] = str(beat.get("kind") or "triangle").strip()
+        if _motif(beat) in _HOOK_KINDS:
+            out["kind"] = _hook_kind(beat)
+            out["lang"] = label_lang(lang)
         if beat.get("shown"):
             out["shown"] = True
         return out
@@ -848,6 +885,8 @@ class LessonHook(SceneKind):
             params["a"], params["b"] = pair
         if _motif(beat) == "shapes":
             params["kind"] = str(beat.get("kind") or "triangle").strip()
+        if _motif(beat) in _HOOK_KINDS:
+            params["kind"] = _hook_kind(beat)
         if beat.get("shown"):
             params["shown"] = True
         return params
@@ -862,6 +901,97 @@ DEFAULT_TRACK_CUES = (
     (12, 11, 10, 9),
     (12, 11, 10, 9),
 )
+
+
+def _span(value, low: int, high: int) -> int | None:
+    number = _as_int(value)
+    if number is None or not low <= number <= high:
+        return None
+    return number
+
+
+def _coin_values(raw) -> tuple[int, ...] | None:
+    if not isinstance(raw, list) or not raw:
+        return None
+    values = []
+    for item in raw:
+        number = _as_int(item)
+        if number not in _COIN_VALUES:
+            return None
+        values.append(number)
+    return tuple(values)
+
+
+def _measure_cue(spec: dict) -> tuple | None:
+    mode = str(spec.get("mode") or "").strip()
+    if mode == "length":
+        left, right = _span(spec.get("a"), 1, 10), _span(spec.get("b"), 1, 10)
+        if left is None or right is None:
+            return None
+        return ("measure", "length", left, right)
+    if mode == "distance":
+        left, right = _span(spec.get("a"), 1, 10), _span(spec.get("b"), 1, 10)
+        if left is None or right is None or left == right:
+            return None
+        return ("measure", "distance", left, right)
+    if mode == "units":
+        count = _span(spec.get("count"), 1, 8)
+        if count is None:
+            return None
+        return ("measure", "units", count)
+    if mode == "ruler":
+        cm = _span(spec.get("cm"), 1, 10)
+        if cm is None:
+            return None
+        return ("measure", "ruler", cm)
+    return None
+
+
+def _coin_cue(spec: dict) -> tuple | None:
+    if "price" in spec:
+        price = _span(spec.get("price"), 1, 10000)
+        if price is None:
+            return None
+        return ("coin", "price", price)
+    if "into" in spec:
+        left, right = _coin_values(spec.get("coins")), _coin_values(spec.get("into"))
+        if left is None or right is None or len(left) > 4 or len(right) > 6:
+            return None
+        return ("coin", "swap", left, right)
+    if "coins" in spec:
+        coins = _coin_values(spec.get("coins"))
+        if coins is None or len(coins) > 6:
+            return None
+        return ("coin", "row", coins)
+    coin = _as_int(spec.get("coin"))
+    if coin not in _COIN_VALUES:
+        return None
+    return ("coin", coin)
+
+
+def _time_cue(spec: dict) -> tuple | None:
+    mode = str(spec.get("mode") or "").strip()
+    if mode == "clock":
+        hour, minute = _span(spec.get("hour"), 1, 12), _as_int(spec.get("minute"))
+        if hour is None or minute not in {0, 30}:
+            return None
+        return ("time", "clock", hour, minute)
+    if mode == "hops":
+        start, steps = _span(spec.get("start"), 1, 12), _span(spec.get("steps"), 1, 4)
+        minute = _as_int(spec.get("minute")) or 0
+        if start is None or steps is None or minute not in {0, 30}:
+            return None
+        return ("time", "hops", start, steps, minute)
+    if mode == "week":
+        return ("time", "week")
+    if mode == "months":
+        return ("time", "months")
+    if mode == "day":
+        day = _span(spec.get("day"), 1, 31)
+        if day is None:
+            return None
+        return ("time", "day", day)
+    return None
 
 
 def takeaway_cue_picture(spec) -> tuple | None:
@@ -997,6 +1127,12 @@ def takeaway_cue_picture(spec) -> tuple | None:
         elif len(names) != 2:
             return None
         return ("place", layout, tuple(names))
+    if kind == "measure":
+        return _measure_cue(spec)
+    if kind == "coin":
+        return _coin_cue(spec)
+    if kind == "time":
+        return _time_cue(spec)
     return None
 
 
@@ -1051,7 +1187,8 @@ class LessonTakeaway(SceneKind):
 
     def problems(self, beat: dict) -> list[str]:
         if _motif(beat) not in _MOTIFS:
-            return [f"lesson_takeaway motif must be counters, ten_frame, track, ordinal, pairs, parts, or shapes, not {_motif(beat)!r}."]
+            names = ", ".join(sorted(_MOTIFS))
+            return [f"lesson_takeaway motif must be one of {names}, not {_motif(beat)!r}."]
         if _motif(beat) == "ordinal":
             found = _ordinal_pair_problems(beat, required=False)
         elif _motif(beat) == "pairs":
@@ -2104,11 +2241,301 @@ class ObjectPlace(SceneKind):
         }
 
 
+_LENGTH_ACTIONS = {"look", "align", "match", "width", "ends"}
+_DISTANCE_ACTIONS = {"straight", "nearer", "route"}
+_WEEKDAY_NAMES = {
+    "en": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "zh": ["一", "二", "三", "四", "五", "六", "日"],
+    "zh_hk": ["一", "二", "三", "四", "五", "六", "日"],
+}
+
+
+def _unit_word(lang: str) -> str:
+    return "cm" if label_lang(lang) == "en" else "厘米"
+
+
+def _copy_ints(beat: dict, params: dict, keys: tuple[str, ...]) -> None:
+    for key in keys:
+        value = _as_int(beat.get(key))
+        if value is not None:
+            params[key] = value
+
+
+class MeasureLine(SceneKind):
+    """Lengths, straight distances, equal units, and a centimetre scale.
+
+    Counters and shapes do not show a longer strip, a gap, or a scale.
+    ``mode`` is ``length``, ``distance``, ``units``, ``scale``, ``reference``,
+    or ``tools``. Three spoken lines.
+    """
+
+    name = "measure_line"
+    steps = 3
+
+    def problems(self, beat: dict) -> list[str]:
+        mode = str(beat.get("mode") or "").strip()
+        action = str(beat.get("action") or "").strip()
+        if mode == "length":
+            if action not in _LENGTH_ACTIONS:
+                return ["measure_line length action must be look, align, match, width, or ends."]
+            left, right = _span(beat.get("a"), 1, 10), _span(beat.get("b"), 1, 10)
+            if left is None or right is None:
+                return ["measure_line length a and b must be integers from 1 to 10."]
+            if action == "match" and left != right:
+                return ["measure_line match needs two equal lengths."]
+            if action != "match" and left == right:
+                return ["measure_line needs two different lengths, except match."]
+            return []
+        if mode == "distance":
+            if action not in _DISTANCE_ACTIONS:
+                return ["measure_line distance action must be straight, nearer, or route."]
+            left, right = _span(beat.get("a"), 1, 10), _span(beat.get("b"), 1, 10)
+            if left is None or right is None or left == right:
+                return ["measure_line distance a and b must be different integers from 1 to 10."]
+            return []
+        if mode == "units":
+            if action not in {"cover", "more", "size"}:
+                return ["measure_line units action must be cover, more, or size."]
+            if action == "cover":
+                if _span(beat.get("count"), 1, 8) is None:
+                    return ["measure_line cover count must be an integer from 1 to 8."]
+                size = str(beat.get("size") or "small").strip()
+                if size not in {"small", "large"}:
+                    return ["measure_line cover size must be small or large."]
+            if action == "more":
+                low, high = _span(beat.get("low"), 1, 8), _span(beat.get("high"), 1, 8)
+                if low is None or high is None or low == high:
+                    return ["measure_line more needs two different counts from 1 to 8."]
+            return []
+        if mode == "scale":
+            if action not in {"one", "place", "spaces"}:
+                return ["measure_line scale action must be one, place, or spaces."]
+            if action == "place" and _span(beat.get("cm"), 1, 10) is None:
+                return ["measure_line place cm must be an integer from 1 to 10."]
+            if action == "spaces" and _span(beat.get("cm"), 2, 6) is None:
+                return ["measure_line spaces cm must be an integer from 2 to 6."]
+            return []
+        if mode == "reference":
+            if action not in {"span", "copies", "record"}:
+                return ["measure_line reference action must be span, copies, or record."]
+            if action == "span" and _span(beat.get("cm"), 1, 20) is None:
+                return ["measure_line span cm must be an integer from 1 to 20."]
+            if action in {"copies", "record"}:
+                unit, repeats = _span(beat.get("unit"), 1, 5), _span(beat.get("repeats"), 2, 5)
+                if unit is None or repeats is None or unit * repeats > 12:
+                    return ["measure_line copies need a unit of 1 to 5, repeated 2 to 5 times, totalling at most 12."]
+            return []
+        if mode == "tools":
+            return []
+        return ["measure_line mode must be length, distance, units, scale, reference, or tools."]
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        out = {
+            "title": _shape_heading(beat, lang, {
+                "en": "How long?",
+                "zh": "有多长？",
+                "zh_hk": "有幾長呀？",
+            }),
+            "mode": str(beat.get("mode") or "").strip(),
+            "action": str(beat.get("action") or "").strip(),
+            "lang": label_lang(lang),
+            "unit_word": _unit_word(lang),
+            "units": bool(beat.get("units")),
+        }
+        _copy_ints(beat, out, ("a", "b", "count", "low", "high", "cm", "unit", "repeats"))
+        size = str(beat.get("size") or "").strip()
+        if size:
+            out["size"] = size
+        return out
+
+    def parameters(self, beat: dict) -> dict:
+        params = {
+            "mode": str(beat.get("mode") or "").strip(),
+            "action": str(beat.get("action") or "").strip(),
+        }
+        _copy_ints(beat, params, ("a", "b", "count", "low", "high", "cm", "unit", "repeats"))
+        size = str(beat.get("size") or "").strip()
+        if size:
+            params["size"] = size
+        if beat.get("units"):
+            params["units"] = True
+        return params
+
+
+class CoinRow(SceneKind):
+    """Labelled Hong Kong coin tokens, a price, or an exchange.
+
+    The tokens are circles with a value printed on them. They are not
+    drawings of real coins. Three spoken lines.
+    """
+
+    name = "coin_row"
+    steps = 3
+
+    def problems(self, beat: dict) -> list[str]:
+        part = str(beat.get("part") or "").strip()
+        if part not in {"show", "pair", "price", "total", "swap", "cent"}:
+            return ["coin_row part must be show, pair, price, total, swap, or cent."]
+        if part == "price":
+            prices = beat.get("prices")
+            if not isinstance(prices, list) or not 1 <= len(prices) <= 2:
+                return ["coin_row price needs one or two prices."]
+            if any(_span(item, 1, 10000) is None for item in prices):
+                return ["coin_row prices must be whole cents from 1 to 10000."]
+            return []
+        coins = _coin_values(beat.get("coins"))
+        if part == "show":
+            if coins is None or not 1 <= len(coins) <= 8:
+                return ["coin_row show needs one to eight Hong Kong coin values."]
+        elif part == "pair":
+            if coins is None or len(coins) != 2:
+                return ["coin_row pair needs two Hong Kong coin values."]
+        elif part == "total":
+            if coins is None or not 1 <= len(coins) <= 6:
+                return ["coin_row total needs one to six Hong Kong coin values."]
+        elif part == "cent":
+            if coins is None or len(coins) != 1:
+                return ["coin_row cent needs one Hong Kong coin value."]
+        elif part == "swap":
+            into = _coin_values(beat.get("into"))
+            if coins is None or into is None or len(coins) > 4 or len(into) > 6:
+                return ["coin_row swap needs a short row of coins and the coins they make."]
+        if part in {"show", "pair"}:
+            focus = _as_int(beat.get("focus"))
+            if focus is None:
+                focus = 0
+            count = len(beat.get("coins") or [])
+            if not 0 <= focus < count:
+                return ["coin_row focus must point at one coin."]
+        return []
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        part = str(beat.get("part") or "").strip()
+        focus = _as_int(beat.get("focus"))
+        if focus is None:
+            focus = 0
+        out = {
+            "title": _shape_heading(beat, lang, {
+                "en": "How much?",
+                "zh": "是多少？",
+                "zh_hk": "係幾多呀？",
+            }),
+            "part": part,
+            "lang": label_lang(lang),
+            "focus": focus,
+            "coins": [int(item) for item in (beat.get("coins") or [])],
+        }
+        if part == "price":
+            out["prices"] = [int(item) for item in beat.get("prices") or []]
+        if part == "swap":
+            out["into"] = [int(item) for item in beat.get("into") or []]
+        return out
+
+    def parameters(self, beat: dict) -> dict:
+        part = str(beat.get("part") or "").strip()
+        params = {"part": part}
+        if beat.get("coins") is not None:
+            params["coins"] = [int(item) for item in beat.get("coins") or []]
+        if part == "price":
+            params["prices"] = [int(item) for item in beat.get("prices") or []]
+        if part == "swap":
+            params["into"] = [int(item) for item in beat.get("into") or []]
+        if part in {"show", "pair"}:
+            focus = _as_int(beat.get("focus"))
+            params["focus"] = 0 if focus is None else focus
+        return params
+
+
+class DayTime(SceneKind):
+    """A clock, hour hops, a week, the twelve months, or one calendar month.
+
+    The number track does not draw hands, and it does not continue from 12
+    back to 1. Three spoken lines.
+    """
+
+    name = "day_time"
+    steps = 3
+
+    def problems(self, beat: dict) -> list[str]:
+        mode = str(beat.get("mode") or "").strip()
+        if mode == "clock":
+            if _span(beat.get("hour"), 1, 12) is None or _as_int(beat.get("minute")) not in {0, 30}:
+                return ["day_time clock needs an hour from 1 to 12 and minute 0 or 30."]
+            hand = str(beat.get("hand") or "hour").strip()
+            if hand not in {"hour", "minute"}:
+                return ["day_time hand must be hour or minute."]
+            return []
+        if mode == "hops":
+            minute = _as_int(beat.get("minute")) or 0
+            if _span(beat.get("start"), 1, 12) is None or _span(beat.get("steps"), 1, 4) is None:
+                return ["day_time hops need a start from 1 to 12 and 1 to 4 steps."]
+            if minute not in {0, 30}:
+                return ["day_time hops minute must be 0 or 30."]
+            return []
+        if mode in {"week", "months"}:
+            return []
+        if mode == "calendar":
+            import calendar as calendar_mod
+
+            year, month, day = _span(beat.get("year"), 2000, 2100), _span(beat.get("month"), 1, 12), _as_int(beat.get("day"))
+            if year is None or month is None or day is None:
+                return ["day_time calendar needs a year, a month, and a day."]
+            last = calendar_mod.monthrange(year, month)[1]
+            if not 1 <= day <= last:
+                return [f"day_time calendar day must be a real day of that month (1 to {last})."]
+            return []
+        return ["day_time mode must be clock, hops, week, months, or calendar."]
+
+    def labels(self, beat: dict, lang: str) -> dict:
+        import calendar as calendar_mod
+
+        code = label_lang(lang)
+        mode = str(beat.get("mode") or "").strip()
+        out = {
+            "title": _shape_heading(beat, lang, {
+                "en": "What time?",
+                "zh": "几点了？",
+                "zh_hk": "幾點呀？",
+            }),
+            "mode": mode,
+            "lang": code,
+            "days": list(_WEEKDAY_NAMES[code]),
+        }
+        _copy_ints(beat, out, ("hour", "minute", "start", "steps", "year", "month", "day"))
+        hand = str(beat.get("hand") or "").strip()
+        if hand:
+            out["hand"] = hand
+        if mode == "calendar":
+            year = int(out.get("year") or 0)
+            month = int(out.get("month") or 0)
+            if code == "en":
+                out["month_name"] = f"{calendar_mod.month_name[month]} {year}"
+            else:
+                out["month_name"] = f"{year}年{month}月"
+        return out
+
+    def parameters(self, beat: dict) -> dict:
+        mode = str(beat.get("mode") or "").strip()
+        params = {"mode": mode}
+        _copy_ints(beat, params, ("hour", "minute", "start", "steps", "year", "month", "day"))
+        hand = str(beat.get("hand") or "").strip()
+        if hand:
+            params["hand"] = hand
+        if mode == "hops" and "minute" not in params:
+            params["minute"] = 0
+        if mode == "clock" and "hand" not in params:
+            params["hand"] = "hour"
+        return params
+
+
 register(ShapeLine())
 register(FlatShape())
 register(ShapeJoin())
 register(SolidShape())
 register(ObjectPlace())
+register(MeasureLine())
+register(CoinRow())
+register(DayTime())
 register(LessonHook())
 register(LessonTakeaway())
 

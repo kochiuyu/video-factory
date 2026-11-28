@@ -120,9 +120,9 @@ beats:
   s3_en: Now the ball is in front.
   s3_zh: 现在球在前面。
   s3_zh_hk: 而家波喺前面。
-  s4_en: The ball is between the book and the cup.
-  s4_zh: 球在书和杯中间。
-  s4_zh_hk: 波喺書同杯中間。
+  s4_en: The ball is between them.
+  s4_zh: 球在它们中间。
+  s4_zh_hk: 波喺佢哋中間。
   cues:
   - kind: place
     layout: depth

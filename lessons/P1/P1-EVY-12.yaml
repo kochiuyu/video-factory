@@ -1,0 +1,112 @@
+# P1-EVY-12. Mirrors MathQuiz path time / lesson calendays, "Days and calendars".
+# A week has seven days. A year has twelve months.
+# The sample is November 2026. The 18th is a Wednesday. It is not "today".
+# https://github.com/kochiuyu/mathquiz learn-time.js (calendays).
+# Speech is for age 6: one short idea per sentence.
+id: P1-EVY-12
+title_en: Days and months
+title_zh: 日子和月份
+title_zh_hk: 日子同月份
+duration_target_s: 55
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: time
+  kind: week
+  seconds: 8
+  title_en: Days and months
+  title_zh: 日子和月份
+  title_zh_hk: 日子同月份
+  s1_en: How many days are in a week?
+  s1_zh: 一星期有几天？
+  s1_zh_hk: 一個星期有幾多日呀？
+
+- id: week
+  visual: animated
+  scene: day_time
+  mode: week
+  seconds: 11
+  title_en: Seven days
+  title_zh: 有七天
+  title_zh_hk: 有七日
+  s1_en: A week has seven days.
+  s1_zh: 一星期有七天。
+  s1_zh_hk: 一個星期有七日。
+  s2_en: The days stay in order.
+  s2_zh: 日子按顺序排。
+  s2_zh_hk: 日子按順序排。
+  s3_en: After Sunday comes Monday.
+  s3_zh: 星期日之后是星期一。
+  s3_zh_hk: 星期日之後係星期一。
+
+- id: months
+  visual: animated
+  scene: day_time
+  mode: months
+  seconds: 11
+  title_en: Twelve months
+  title_zh: 十二个月
+  title_zh_hk: 十二個月
+  s1_en: A year has twelve months.
+  s1_zh: 一年有十二个月。
+  s1_zh_hk: 一年有十二個月。
+  s2_en: The months stay in order.
+  s2_zh: 月份按顺序排。
+  s2_zh_hk: 月份按順序排。
+  s3_en: After December comes January.
+  s3_zh: 十二月之后是一月。
+  s3_zh_hk: 十二月之後係一月。
+
+- id: sample
+  visual: animated
+  scene: day_time
+  mode: calendar
+  year: 2026
+  month: 11
+  day: 18
+  seconds: 11
+  title_en: Find 18
+  title_zh: 找出18日
+  title_zh_hk: 搵出18號
+  s1_en: This calendar is November 2026.
+  s1_zh: 这张月历是2026年11月。
+  s1_zh_hk: 呢張月曆係2026年11月。
+  s2_en: Find 18. It is a Wednesday.
+  s2_zh: 找到18日。这一天是星期三。
+  s2_zh_hk: 搵到18號。呢一日係星期三。
+  s3_en: A month is about four weeks.
+  s3_zh: 一个月大约四个星期。
+  s3_zh_hk: 一個月大約四個星期。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: time
+  seconds: 14
+  title_en: Days and months
+  title_zh: 日子和月份
+  title_zh_hk: 日子同月份
+  s1_en: A week has seven days.
+  s1_zh: 一星期有七天。
+  s1_zh_hk: 一個星期有七日。
+  s2_en: After Sunday comes Monday.
+  s2_zh: 星期日之后是星期一。
+  s2_zh_hk: 星期日之後係星期一。
+  s3_en: A year has twelve months.
+  s3_zh: 一年有十二个月。
+  s3_zh_hk: 一年有十二個月。
+  s4_en: 18 November 2026 is a Wednesday.
+  s4_zh: 2026年11月18日是星期三。
+  s4_zh_hk: 2026年11月18號係星期三。
+  cues:
+  - kind: time
+    mode: week
+  - kind: time
+    mode: week
+  - kind: time
+    mode: months
+  - kind: time
+    mode: day
+    day: 18

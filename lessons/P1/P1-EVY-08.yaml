@@ -32,13 +32,13 @@ beats:
   title_zh: 四元两角
   title_zh_hk: 四元兩毫
   s1_en: Read the price.
-  s1_zh: 读这个价钱。
+  s1_zh: 先读牌子上的价钱。
   s1_zh_hk: 讀呢個價錢。
   s2_en: It says 4 dollars and 20 cents.
   s2_zh: 它是四元两角。
   s2_zh_hk: 佢係四元兩毫。
   s3_en: Say the dollars, then the cents.
-  s3_zh: 先说元，再说角。
+  s3_zh: 先说几元，再说几角。
   s3_zh_hk: 先講元，再講毫。
 
 - id: others
@@ -51,7 +51,7 @@ beats:
   title_zh: 六元，还有七角
   title_zh_hk: 六元，同埋七毫
   s1_en: This price is 6 dollars.
-  s1_zh: 这个是六元。
+  s1_zh: 左边这张是六元。
   s1_zh_hk: 呢個係六元。
   s2_en: This price is 70 cents.
   s2_zh: 这个是七角。
@@ -70,7 +70,7 @@ beats:
   title_zh: 三元七角
   title_zh_hk: 三元七毫
   s1_en: Count the dollar coins first.
-  s1_zh: 先数元的硬币。
+  s1_zh: 先数元的硬币有几枚。
   s1_zh_hk: 先數元嘅硬幣。
   s2_en: Then count the cent coins.
   s2_zh: 再数角的硬币。

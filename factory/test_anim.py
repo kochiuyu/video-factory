@@ -2328,6 +2328,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-SHP-08": [
                 "lesson_hook", "object_place", "object_place", "object_place", "object_place", "lesson_takeaway",
             ],
+            "P1-SHP-09": [
+                "lesson_hook", "object_place", "object_place", "object_place", "object_place", "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -3170,6 +3173,23 @@ class SceneRegistryTest(unittest.TestCase):
             "而家書喺波上面。",
         )
         self.assertNotIn("嗎", _beat_lines(above, "zh_hk"))
+        front = load_lesson(P1 / "P1-SHP-09.yaml")
+        spots = [beat for beat in front["beats"] if beat.get("scene") == "object_place"]
+        self.assertEqual([b["layout"] for b in spots], ["depth", "depth", "depth", "row"])
+        self.assertEqual(spots[0]["items"], ["book", "ball"])
+        self.assertEqual(spots[2]["items"], ["ball", "book"])
+        self.assertEqual(spots[3]["items"], ["book", "ball", "cup"])
+        self.assertEqual(spots[3]["focus"], 1)
+        self.assertEqual(spots[0]["s1_zh_hk"], "你喺箭嘴呢度。")
+        self.assertEqual(spots[2]["s3_zh_hk"], "呢個係遠近，唔係高低。")
+        self.assertEqual(spots[3]["s3_en"], "The ball is between the book and the cup.")
+        self.assertEqual(front["beats"][0]["s1_en"], "Which one is nearer?")
+        self.assertEqual(
+            labels_for(front["beats"][-1], "en")["cues"][3],
+            ("place", "row", ("book", "ball", "cup")),
+        )
+        self.assertEqual(labels_for(front["beats"][-1], "zh_hk")["lines"][1], "波喺後面。")
+        self.assertNotIn("嗎", _beat_lines(front, "zh_hk"))
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

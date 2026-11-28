@@ -1,0 +1,138 @@
+# P1-SHP-09. Mirrors MathQuiz path positions / lesson frontbetween, "Front and between".
+# The arrow is the child, looking along the floor. Nearer is in front.
+# Both objects stay on the floor. In a row of three, the ball is between.
+# https://github.com/kochiuyu/mathquiz learn-positions.js (frontbetween).
+# Speech is for age 6: one short idea per sentence.
+id: P1-SHP-09
+title_en: Front and between
+title_zh: 前面和中间
+title_zh_hk: 前面同中間
+duration_target_s: 70
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: shapes
+  kind: sphere
+  seconds: 8
+  title_en: Front and between
+  title_zh: 前面和中间
+  title_zh_hk: 前面同中間
+  s1_en: Which one is nearer?
+  s1_zh: 哪一件比较近？
+  s1_zh_hk: 邊一件近啲呀？
+
+- id: front
+  visual: animated
+  scene: object_place
+  layout: depth
+  items: [book, ball]
+  focus: 0
+  seconds: 14
+  title_en: The book is in front
+  title_zh: 书在前面
+  title_zh_hk: 書喺前面
+  s1_en: You are at the arrow.
+  s1_zh: 你在箭头这里。
+  s1_zh_hk: 你喺箭嘴呢度。
+  s2_en: The book is nearer. It is closer to you.
+  s2_zh: 书比较近。它离你更近。
+  s2_zh_hk: 書近啲。佢離你近啲。
+  s3_en: The book is in front of the ball. Front means nearer.
+  s3_zh: 书在球的前面。前面就是近一些。
+  s3_zh_hk: 書喺波前面。前面就係近啲。
+
+- id: behind
+  visual: animated
+  scene: object_place
+  layout: depth
+  items: [book, ball]
+  focus: 1
+  seconds: 12
+  title_en: The ball is behind
+  title_zh: 球在后面
+  title_zh_hk: 波喺後面
+  s1_en: The ball is farther away. It is not as close.
+  s1_zh: 球比较远。它没有那么近。
+  s1_zh_hk: 波遠啲。佢冇咁近。
+  s2_en: The ball is behind the book. It is farther from you.
+  s2_zh: 球在书的后面。它离你远一些。
+  s2_zh_hk: 波喺書後面。佢離你遠啲。
+  s3_en: Both sit on the floor. Neither one is higher.
+  s3_zh: 两件都在地上。没有一件更高。
+  s3_zh_hk: 兩件都喺地上。冇一件更高。
+
+- id: nearer
+  visual: animated
+  scene: object_place
+  layout: depth
+  items: [ball, book]
+  focus: 0
+  seconds: 14
+  title_en: Now the ball is nearer
+  title_zh: 现在球比较近
+  title_zh_hk: 而家波近啲
+  s1_en: Now the ball is nearer. It is the close one.
+  s1_zh: 现在球比较近。球来到前面。
+  s1_zh_hk: 而家波近啲。波嚟到前面。
+  s2_en: The ball is in front of the book. You meet the ball first.
+  s2_zh: 球在书的前面。你先碰到球。
+  s2_zh_hk: 波喺書前面。你先碰到波。
+  s3_en: This shows distance, not height.
+  s3_zh: 这是远近，不是高低。
+  s3_zh_hk: 呢個係遠近，唔係高低。
+
+- id: middle
+  visual: animated
+  scene: object_place
+  layout: row
+  items: [book, ball, cup]
+  focus: 1
+  seconds: 14
+  title_en: The ball is between
+  title_zh: 球在中间
+  title_zh_hk: 波喺中間
+  s1_en: Three objects in a row. A book, a ball, and a cup.
+  s1_zh: 三件排成一行。书、球和杯。
+  s1_zh_hk: 三件排成一行。書、波同杯。
+  s2_en: The ball is in the middle. One object is on each side.
+  s2_zh: 球在中间。左右各有一件。
+  s2_zh_hk: 波喺中間。左右各有一件。
+  s3_en: The ball is between the book and the cup.
+  s3_zh: 球在书和杯的中间。
+  s3_zh_hk: 波喺書同杯中間。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: shapes
+  seconds: 16
+  title_en: Front and between
+  title_zh: 前面和中间
+  title_zh_hk: 前面同中間
+  s1_en: The book was in front.
+  s1_zh: 书在前面。
+  s1_zh_hk: 書喺前面。
+  s2_en: The ball was behind.
+  s2_zh: 球在后面。
+  s2_zh_hk: 波喺後面。
+  s3_en: Now the ball is in front.
+  s3_zh: 现在球在前面。
+  s3_zh_hk: 而家波喺前面。
+  s4_en: The ball is between them.
+  s4_zh: 球在它们中间。
+  s4_zh_hk: 波喺佢哋中間。
+  cues:
+  - kind: place
+    layout: depth
+    items: [book, ball]
+  - kind: place
+    layout: depth
+    items: [book, ball]
+  - kind: place
+    layout: depth
+    items: [ball, book]
+  - kind: place
+    layout: row
+    items: [book, ball, cup]

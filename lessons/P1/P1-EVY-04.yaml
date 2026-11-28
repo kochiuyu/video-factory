@@ -1,0 +1,116 @@
+# P1-EVY-04. Mirrors MathQuiz path ruler / lesson readcm, "Read centimetres".
+# Start at zero. Count the spaces, not the marks. The drawing is not a real ruler.
+# https://github.com/kochiuyu/mathquiz learn-ruler.js (readcm).
+# Speech is for age 6: one short idea per sentence.
+id: P1-EVY-04
+title_en: Read centimetres
+title_zh: 读厘米
+title_zh_hk: 讀厘米
+duration_target_s: 55
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: measure
+  kind: ruler
+  seconds: 8
+  title_en: Read centimetres
+  title_zh: 读厘米
+  title_zh_hk: 讀厘米
+  s1_en: How long is this space?
+  s1_zh: 这一格有多长？
+  s1_zh_hk: 呢一格有幾長呀？
+
+- id: one
+  visual: animated
+  scene: measure_line
+  mode: scale
+  action: one
+  seconds: 11
+  title_en: One centimetre
+  title_zh: 从0到1
+  title_zh_hk: 由0到1
+  s1_en: Start at zero.
+  s1_zh: 先从左边的零开始。
+  s1_zh_hk: 由零開始。
+  s2_en: From 0 to 1 is one space.
+  s2_zh: 从0到1是一格。
+  s2_zh_hk: 由0到1係一格。
+  s3_en: That space is one centimetre.
+  s3_zh: 这一格是一厘米。
+  s3_zh_hk: 呢一格係一厘米。
+
+- id: four
+  visual: animated
+  scene: measure_line
+  mode: scale
+  action: place
+  cm: 4
+  seconds: 11
+  title_en: Read the other end
+  title_zh: 看另一端
+  title_zh_hk: 睇另一端
+  s1_en: Put the left end on zero.
+  s1_zh: 把纸条左端放在零上。
+  s1_zh_hk: 將左邊放喺零。
+  s2_en: The other end is on 4.
+  s2_zh: 另一端在4上。
+  s2_zh_hk: 另一端喺4。
+  s3_en: The strip is 4 centimetres long.
+  s3_zh: 纸条长4厘米。
+  s3_zh_hk: 紙條長4厘米。
+
+- id: spaces
+  visual: animated
+  scene: measure_line
+  mode: scale
+  action: spaces
+  cm: 3
+  seconds: 11
+  title_en: Count the spaces
+  title_zh: 数格子
+  title_zh_hk: 數格數
+  s1_en: There are four marks.
+  s1_zh: 这里有四个刻度。
+  s1_zh_hk: 呢度有四個刻度。
+  s2_en: There are three spaces.
+  s2_zh: 中间有三格。
+  s2_zh_hk: 中間有三格。
+  s3_en: Count the spaces, not the marks.
+  s3_zh: 数格子，不数刻度。
+  s3_zh_hk: 數格數，唔數刻度。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: measure
+  seconds: 14
+  title_en: Read centimetres
+  title_zh: 读厘米
+  title_zh_hk: 讀厘米
+  s1_en: Start at zero.
+  s1_zh: 从零开始。
+  s1_zh_hk: 由零開始。
+  s2_en: One space is one centimetre.
+  s2_zh: 一格是一厘米。
+  s2_zh_hk: 一格係一厘米。
+  s3_en: Read the other end.
+  s3_zh: 看另一端的数。
+  s3_zh_hk: 睇另一端嘅數。
+  s4_en: Count spaces, not marks.
+  s4_zh: 数格子，不数刻度。
+  s4_zh_hk: 數格數，唔數刻度。
+  cues:
+  - kind: measure
+    mode: ruler
+    cm: 1
+  - kind: measure
+    mode: ruler
+    cm: 1
+  - kind: measure
+    mode: ruler
+    cm: 4
+  - kind: measure
+    mode: ruler
+    cm: 3

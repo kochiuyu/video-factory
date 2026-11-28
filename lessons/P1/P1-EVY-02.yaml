@@ -1,0 +1,124 @@
+# P1-EVY-02. Mirrors MathQuiz path measure / lesson straightgap, "Compare distances".
+# The distance is the straight gap from the same start. A bend is a route.
+# https://github.com/kochiuyu/mathquiz learn-measure.js (straightgap).
+# Speech is for age 6: one short idea per sentence.
+id: P1-EVY-02
+title_en: Compare distances
+title_zh: 比较距离
+title_zh_hk: 比較距離
+duration_target_s: 55
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: measure
+  kind: distance
+  seconds: 8
+  title_en: Compare distances
+  title_zh: 比较距离
+  title_zh_hk: 比較距離
+  s1_en: Which point is nearer?
+  s1_zh: 哪个点更近？
+  s1_zh_hk: 邊個點近啲呀？
+
+- id: nearer
+  visual: animated
+  scene: measure_line
+  mode: distance
+  action: nearer
+  a: 8
+  b: 4
+  seconds: 11
+  title_en: Point 2 is nearer
+  title_zh: 点2更近
+  title_zh_hk: 點2近啲
+  s1_en: Both gaps start at S.
+  s1_zh: 两条都从S出发。
+  s1_zh_hk: 兩條都由S出發。
+  s2_en: Point 2 is nearer.
+  s2_zh: 点2更近。
+  s2_zh_hk: 點2近啲。
+  s3_en: The straight gap to point 2 is shorter.
+  s3_zh: 到点2的直线更短。
+  s3_zh_hk: 去點2嘅直線短啲。
+
+- id: straight
+  visual: animated
+  scene: measure_line
+  mode: distance
+  action: straight
+  a: 6
+  b: 4
+  seconds: 11
+  title_en: A straight gap
+  title_zh: 直线距离
+  title_zh_hk: 直線距離
+  s1_en: This gap is a straight line.
+  s1_zh: 这段距离是直线。
+  s1_zh_hk: 呢段距離係直線。
+  s2_en: Both gaps start at the same place.
+  s2_zh: 两条从同一个地方开始。
+  s2_zh_hk: 兩條由同一個地方開始。
+  s3_en: The straight gap is the distance.
+  s3_zh: 直线那一段才是距离。
+  s3_zh_hk: 直線嗰段先係距離。
+
+- id: bend
+  visual: animated
+  scene: measure_line
+  mode: distance
+  action: route
+  a: 8
+  b: 4
+  seconds: 11
+  title_en: A bent path
+  title_zh: 弯的路线
+  title_zh_hk: 彎嘅路線
+  s1_en: A path can bend.
+  s1_zh: 路线可以转弯。
+  s1_zh_hk: 路線可以轉彎。
+  s2_en: The bent path is longer.
+  s2_zh: 弯的路线更长。
+  s2_zh_hk: 彎嘅路線長啲。
+  s3_en: The straight gap stays the same.
+  s3_zh: 直线距离没有变。
+  s3_zh_hk: 直線距離冇變。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: measure
+  seconds: 14
+  title_en: Compare distances
+  title_zh: 比较距离
+  title_zh_hk: 比較距離
+  s1_en: Start from the same point.
+  s1_zh: 从同一个点出发。
+  s1_zh_hk: 由同一個點出發。
+  s2_en: The shorter gap is nearer.
+  s2_zh: 较短的那段更近。
+  s2_zh_hk: 短啲嗰段近啲。
+  s3_en: Use the straight gap.
+  s3_zh: 用直线那段。
+  s3_zh_hk: 用直線嗰段。
+  s4_en: A bend does not move the ends.
+  s4_zh: 转弯不挪动两端。
+  s4_zh_hk: 轉彎唔郁兩端。
+  cues:
+  - kind: measure
+    mode: distance
+    a: 8
+    b: 4
+  - kind: measure
+    mode: distance
+    a: 6
+    b: 4
+  - kind: measure
+    mode: distance
+    a: 8
+    b: 4
+  - kind: measure
+    mode: distance
+    a: 8
+    b: 4

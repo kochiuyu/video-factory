@@ -1,0 +1,110 @@
+# P1-EVY-08. Mirrors MathQuiz path money / lesson pricetags, "Read prices and count coins".
+# $4.20 is four dollars and twenty cents. Count dollar coins, then cent coins.
+# https://github.com/kochiuyu/mathquiz learn-money.js (pricetags).
+# Speech is for age 6: one short idea per sentence.
+id: P1-EVY-08
+title_en: Prices and coins
+title_zh: 价钱和硬币
+title_zh_hk: 價錢同硬幣
+duration_target_s: 55
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: money
+  kind: price
+  seconds: 8
+  title_en: Prices and coins
+  title_zh: 价钱和硬币
+  title_zh_hk: 價錢同硬幣
+  s1_en: What is this price?
+  s1_zh: 这个价钱是多少？
+  s1_zh_hk: 呢個價錢係幾多呀？
+
+- id: tag
+  visual: animated
+  scene: coin_row
+  part: price
+  prices: [420]
+  seconds: 11
+  title_en: Four dollars and twenty cents
+  title_zh: 四元两角
+  title_zh_hk: 四元兩毫
+  s1_en: Read the price.
+  s1_zh: 先读牌子上的价钱。
+  s1_zh_hk: 讀呢個價錢。
+  s2_en: It says 4 dollars and 20 cents.
+  s2_zh: 它是四元两角。
+  s2_zh_hk: 佢係四元兩毫。
+  s3_en: Say the dollars, then the cents.
+  s3_zh: 先说几元，再说几角。
+  s3_zh_hk: 先講元，再講毫。
+
+- id: others
+  visual: animated
+  scene: coin_row
+  part: price
+  prices: [600, 70]
+  seconds: 11
+  title_en: Six dollars, and seventy cents
+  title_zh: 六元，还有七角
+  title_zh_hk: 六元，同埋七毫
+  s1_en: This price is 6 dollars.
+  s1_zh: 左边这张是六元。
+  s1_zh_hk: 呢個係六元。
+  s2_en: This price is 70 cents.
+  s2_zh: 这个是七角。
+  s2_zh_hk: 呢個係七毫。
+  s3_en: 6 dollars is not 6 cents.
+  s3_zh: 六元不是六分。
+  s3_zh_hk: 六元唔係六分。
+
+- id: count
+  visual: animated
+  scene: coin_row
+  part: total
+  coins: [200, 100, 50, 20]
+  seconds: 11
+  title_en: Three dollars and seventy cents
+  title_zh: 三元七角
+  title_zh_hk: 三元七毫
+  s1_en: Count the dollar coins first.
+  s1_zh: 先数元的硬币有几枚。
+  s1_zh_hk: 先數元嘅硬幣。
+  s2_en: Then count the cent coins.
+  s2_zh: 再数角的硬币。
+  s2_zh_hk: 再數毫嘅硬幣。
+  s3_en: That is 3 dollars and 70 cents.
+  s3_zh: 一共三元七角。
+  s3_zh_hk: 一共三元七毫。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: money
+  seconds: 14
+  title_en: Prices and coins
+  title_zh: 价钱和硬币
+  title_zh_hk: 價錢同硬幣
+  s1_en: Say the dollars first.
+  s1_zh: 先说多少元。
+  s1_zh_hk: 先講幾多元。
+  s2_en: Then say the cents.
+  s2_zh: 再说多少角。
+  s2_zh_hk: 再講幾多毫。
+  s3_en: Count the dollar coins.
+  s3_zh: 先数元的硬币。
+  s3_zh_hk: 先數元嘅硬幣。
+  s4_en: Then count the cent coins.
+  s4_zh: 再数角的硬币。
+  s4_zh_hk: 再數毫嘅硬幣。
+  cues:
+  - kind: coin
+    price: 420
+  - kind: coin
+    price: 70
+  - kind: coin
+    coins: [200, 100]
+  - kind: coin
+    coins: [50, 20]

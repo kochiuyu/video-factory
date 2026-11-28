@@ -501,10 +501,11 @@ def _ring(target):
     return ring
 
 
-def _coin_rows(tokens):
+def _coin_rows(tokens, per=None):
     from manim import VGroup
 
-    per = 4 if len(tokens) > 4 else len(tokens)
+    if per is None:
+        per = 4 if len(tokens) > 4 else len(tokens)
     rows = []
     for index in range(0, len(tokens), per):
         rows.append(VGroup(*tokens[index:index + per]).arrange(RIGHT, buff=0.28))
@@ -537,8 +538,8 @@ def coin_board(labels, write):
     tokens = [_coin(value, write) for value in coins]
     if part == "swap":
         other = [_coin(value, write) for value in labels.get("into") or []]
-        left = _coin_rows(tokens)
-        right = _coin_rows(other)
+        left = _coin_rows(tokens, per=6)
+        right = _coin_rows(other, per=6)
         arrow = _pointer()
         group = VGroup(left, arrow, right).arrange(RIGHT, buff=0.28)
         board = _fresh(group)
@@ -588,14 +589,15 @@ def _clock(hour: int, minute: int, write, radius: float = 1.7):
             color=NAVY,
             stroke_width=3,
         ))
-        spot = radius * 0.64
+        # Numbers sit outside the hands, so a hand never covers 12 or 6.
+        spot = radius * 0.78
         label = write(str(number), 22)
         label.move_to([spot * math.cos(angle), spot * math.sin(angle), 0])
         numbers.append(label)
     minute_deg = minute / 60.0 * 360.0
     hour_deg = (hour % 12) * 30.0 + minute * 0.5
-    minute_hand = _hand(radius * 0.72, minute_deg, 5)
-    hour_hand = _hand(radius * 0.46, hour_deg, 8)
+    minute_hand = _hand(radius * 0.52, minute_deg, 5)
+    hour_hand = _hand(radius * 0.36, hour_deg, 8)
     centre = _pip(NAVY, 0.07)
     group = VGroup(face, *ticks, *numbers, minute_hand, hour_hand, centre)
     group.vf_face = face

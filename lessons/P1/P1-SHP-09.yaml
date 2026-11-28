@@ -36,12 +36,12 @@ beats:
   s1_en: You are at the arrow.
   s1_zh: 你在箭头这里。
   s1_zh_hk: 你喺箭嘴呢度。
-  s2_en: The book is nearer.
-  s2_zh: 书比较近。
-  s2_zh_hk: 書近啲。
-  s3_en: The book is in front of the ball.
-  s3_zh: 书在球的前面。
-  s3_zh_hk: 書喺波前面。
+  s2_en: The book is nearer. It is closer to you.
+  s2_zh: 书比较近。它离你更近。
+  s2_zh_hk: 書近啲。佢離你近啲。
+  s3_en: The book is in front of the ball. Front means nearer.
+  s3_zh: 书在球的前面。前面就是近一些。
+  s3_zh_hk: 書喺波前面。前面就係近啲。
 
 - id: behind
   visual: animated
@@ -53,15 +53,15 @@ beats:
   title_en: The ball is behind
   title_zh: 球在后面
   title_zh_hk: 波喺後面
-  s1_en: The ball is farther away.
-  s1_zh: 球比较远。
-  s1_zh_hk: 波遠啲。
-  s2_en: The ball is behind the book.
-  s2_zh: 球在书的后面。
-  s2_zh_hk: 波喺書後面。
-  s3_en: Both sit on the floor.
-  s3_zh: 两件都在地上。
-  s3_zh_hk: 兩件都喺地上。
+  s1_en: The ball is farther away. It is not as close.
+  s1_zh: 球比较远。它没有那么近。
+  s1_zh_hk: 波遠啲。佢冇咁近。
+  s2_en: The ball is behind the book. It is farther from you.
+  s2_zh: 球在书的后面。它离你远一些。
+  s2_zh_hk: 波喺書後面。佢離你遠啲。
+  s3_en: Both sit on the floor. Neither one is higher.
+  s3_zh: 两件都在地上。没有一件更高。
+  s3_zh_hk: 兩件都喺地上。冇一件更高。
 
 - id: nearer
   visual: animated
@@ -73,12 +73,12 @@ beats:
   title_en: Now the ball is nearer
   title_zh: 现在球比较近
   title_zh_hk: 而家波近啲
-  s1_en: Now the ball is nearer.
-  s1_zh: 现在球比较近。
-  s1_zh_hk: 而家波近啲。
-  s2_en: The ball is in front of the book.
-  s2_zh: 球在书的前面。
-  s2_zh_hk: 波喺書前面。
+  s1_en: Now the ball is nearer. It is the close one.
+  s1_zh: 现在球比较近。球来到前面。
+  s1_zh_hk: 而家波近啲。波嚟到前面。
+  s2_en: The ball is in front of the book. You meet the ball first.
+  s2_zh: 球在书的前面。你先碰到球。
+  s2_zh_hk: 波喺書前面。你先碰到波。
   s3_en: This shows distance, not height.
   s3_zh: 这是远近，不是高低。
   s3_zh_hk: 呢個係遠近，唔係高低。
@@ -93,12 +93,12 @@ beats:
   title_en: The ball is between
   title_zh: 球在中间
   title_zh_hk: 波喺中間
-  s1_en: Three objects in a row.
-  s1_zh: 三件排成一行。
-  s1_zh_hk: 三件排成一行。
-  s2_en: The ball is in the middle.
-  s2_zh: 球在中间。
-  s2_zh_hk: 波喺中間。
+  s1_en: Three objects in a row. A book, a ball, and a cup.
+  s1_zh: 三件排成一行。书、球和杯。
+  s1_zh_hk: 三件排成一行。書、波同杯。
+  s2_en: The ball is in the middle. One object is on each side.
+  s2_zh: 球在中间。左右各有一件。
+  s2_zh_hk: 波喺中間。左右各有一件。
   s3_en: The ball is between the book and the cup.
   s3_zh: 球在书和杯的中间。
   s3_zh_hk: 波喺書同杯中間。

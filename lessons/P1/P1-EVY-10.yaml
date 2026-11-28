@@ -1,0 +1,125 @@
+# P1-EVY-10. Mirrors MathQuiz path time / lesson readclock, "Read clocks".
+# The short hand is the hour. The long hand is the minutes.
+# Half past twelve is not one o'clock.
+# https://github.com/kochiuyu/mathquiz learn-time.js (readclock).
+# Speech is for age 6: one short idea per sentence.
+id: P1-EVY-10
+title_en: Read the clock
+title_zh: 读时钟
+title_zh_hk: 讀時鐘
+duration_target_s: 55
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: time
+  kind: clock
+  seconds: 8
+  title_en: Read the clock
+  title_zh: 读时钟
+  title_zh_hk: 讀時鐘
+  s1_en: What time is it?
+  s1_zh: 现在几点？
+  s1_zh_hk: 而家幾點呀？
+
+- id: three
+  visual: animated
+  scene: day_time
+  mode: clock
+  hour: 3
+  minute: 0
+  hand: hour
+  seconds: 11
+  title_en: Three o'clock
+  title_zh: 三点
+  title_zh_hk: 三點
+  s1_en: The short hand shows the hour.
+  s1_zh: 短针是时针。
+  s1_zh_hk: 短針係時針。
+  s2_en: It is on 3.
+  s2_zh: 短针指着3。
+  s2_zh_hk: 短針指住3。
+  s3_en: It is three o'clock. The long hand is on 12.
+  s3_zh: 现在是三点。长针指着12。
+  s3_zh_hk: 而家係三點。長針指住12。
+
+- id: half
+  visual: animated
+  scene: day_time
+  mode: clock
+  hour: 7
+  minute: 30
+  hand: minute
+  seconds: 11
+  title_en: Half past seven
+  title_zh: 七点半
+  title_zh_hk: 七點半
+  s1_en: The long hand shows the minutes.
+  s1_zh: 长针是分针。
+  s1_zh_hk: 長針係分針。
+  s2_en: It is on 6. That is half past.
+  s2_zh: 长针指着6，这是半点。
+  s2_zh_hk: 長針指住6，呢個係半點。
+  s3_en: It is half past seven. The short hand is between 7 and 8.
+  s3_zh: 现在是七点半。短针在7和8中间。
+  s3_zh_hk: 而家係七點半。短針喺7同8中間。
+
+- id: twelve
+  visual: animated
+  scene: day_time
+  mode: clock
+  hour: 12
+  minute: 30
+  hand: hour
+  seconds: 11
+  title_en: Half past twelve
+  title_zh: 十二点半
+  title_zh_hk: 十二點半
+  s1_en: The long hand is on 6.
+  s1_zh: 长针指着6。
+  s1_zh_hk: 長針指住6。
+  s2_en: The short hand is between 12 and 1.
+  s2_zh: 短针在12和1中间。
+  s2_zh_hk: 短針喺12同1中間。
+  s3_en: It is half past twelve. It is not one o'clock.
+  s3_zh: 现在是十二点半。不是一点。
+  s3_zh_hk: 而家係十二點半。唔係一點。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: time
+  seconds: 14
+  title_en: Read the clock
+  title_zh: 读时钟
+  title_zh_hk: 讀時鐘
+  s1_en: The short hand is the hour.
+  s1_zh: 短针是时针。
+  s1_zh_hk: 短針係時針。
+  s2_en: The long hand is the minutes.
+  s2_zh: 长针是分针。
+  s2_zh_hk: 長針係分針。
+  s3_en: That is three o'clock.
+  s3_zh: 那就是三点。
+  s3_zh_hk: 咁就係三點。
+  s4_en: Half past has the long hand on 6.
+  s4_zh: 半点时长针在6。
+  s4_zh_hk: 半點時長針喺6。
+  cues:
+  - kind: time
+    mode: clock
+    hour: 3
+    minute: 0
+  - kind: time
+    mode: clock
+    hour: 6
+    minute: 0
+  - kind: time
+    mode: clock
+    hour: 3
+    minute: 0
+  - kind: time
+    mode: clock
+    hour: 7
+    minute: 30

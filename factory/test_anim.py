@@ -2253,6 +2253,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-SHP-01": [
                 "lesson_hook", "shape_line", "shape_line", "shape_line", "lesson_takeaway",
             ],
+            "P1-SHP-02": [
+                "lesson_hook", "flat_shape", "flat_shape", "flat_shape", "flat_shape", "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -2968,6 +2971,22 @@ class SceneRegistryTest(unittest.TestCase):
             takeaway_cue_picture({"kind": "solid", "items": ["pyramid", "cone"]}),
             ("solid", "pair", ("pyramid", "cone")),
         )
+        names = load_lesson(P1 / "P1-SHP-02.yaml")
+        flats = [beat for beat in names["beats"] if beat.get("scene") == "flat_shape"]
+        self.assertEqual([b["part"] for b in flats], ["one", "one", "row", "turn"])
+        self.assertEqual(count_event(flats[0]), (1, 3))
+        self.assertEqual(count_event(flats[1]), (1, 4))
+        self.assertIsNone(count_event(flats[2]))
+        self.assertEqual(flats[0]["s2_zh_hk"], "一。二。三。")
+        self.assertEqual(flats[3]["s3_zh_hk"], "仲係五條邊。")
+        self.assertEqual(labels_for(flats[2], "zh_hk")["title"], "五邊、六邊，或者圓")
+        recap = names["beats"][-1]
+        self.assertEqual(
+            labels_for(recap, "en")["cues"][2],
+            ("flat", "row", ("pentagon", "hexagon", "circle")),
+        )
+        self.assertEqual(labels_for(recap, "en")["cues"][3], ("flat", "pentagon", 20))
+        self.assertNotIn("嗎", _beat_lines(names, "zh_hk"))
         thirteen = load_lesson(P1 / "P1-NUM-13.yaml")
         blocks = [beat for beat in thirteen["beats"] if beat.get("scene") == "number_blocks"]
         self.assertEqual([b["mode"] for b in blocks], ["tens", "tens", "tens"])

@@ -1,0 +1,131 @@
+# P1-SHP-02. Mirrors MathQuiz path flat / lesson flatnames, "Name flat shapes".
+# Count the outside. A circle is round. Turning keeps the same sides.
+# https://github.com/kochiuyu/mathquiz learn-flat.js (flatnames).
+# Speech is for age 6: one short idea per sentence.
+id: P1-SHP-02
+title_en: Name the shapes
+title_zh: 认识这些图形
+title_zh_hk: 認識呢啲圖形
+duration_target_s: 70
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: shapes
+  kind: triangle
+  seconds: 8
+  title_en: Name the shapes
+  title_zh: 认识这些图形
+  title_zh_hk: 認識呢啲圖形
+  s1_en: What shape is this?
+  s1_zh: 这是什么图形？
+  s1_zh_hk: 呢個係咩圖形呀？
+
+- id: three
+  visual: animated
+  scene: flat_shape
+  part: one
+  kind: triangle
+  seconds: 12
+  title_en: Three straight sides
+  title_zh: 三条直边
+  title_zh_hk: 三條直邊
+  s1_en: This is a triangle.
+  s1_zh: 这是一个三角形。
+  s1_zh_hk: 呢個係三角形。
+  s2_en: One. Two. Three.
+  s2_zh: 一。二。三。
+  s2_zh_hk: 一。二。三。
+  s3_en: Three straight sides.
+  s3_zh: 三条直边。
+  s3_zh_hk: 三條直邊。
+
+- id: four
+  visual: animated
+  scene: flat_shape
+  part: one
+  kind: quad
+  seconds: 12
+  title_en: Four straight sides
+  title_zh: 四条直边
+  title_zh_hk: 四條直邊
+  s1_en: Count the outside.
+  s1_zh: 沿着外边数一数。
+  s1_zh_hk: 沿住外邊數一數。
+  s2_en: One. Two. Three. Four.
+  s2_zh: 一。二。三。四。
+  s2_zh_hk: 一。二。三。四。
+  s3_en: Four straight sides.
+  s3_zh: 四条直边。
+  s3_zh_hk: 四條直邊。
+
+- id: more
+  visual: animated
+  scene: flat_shape
+  part: row
+  items: [pentagon, hexagon, circle]
+  seconds: 14
+  title_en: Five, six, or round
+  title_zh: 五边、六边，或者圆
+  title_zh_hk: 五邊、六邊，或者圓
+  s1_en: Five straight sides.
+  s1_zh: 五条直边。
+  s1_zh_hk: 五條直邊。
+  s2_en: Six straight sides.
+  s2_zh: 六条直边。
+  s2_zh_hk: 六條直邊。
+  s3_en: The outside is round.
+  s3_zh: 外边是圆的。
+  s3_zh_hk: 外邊係圓嘅。
+
+- id: turn
+  visual: animated
+  scene: flat_shape
+  part: turn
+  kind: pentagon
+  turn: 20
+  seconds: 12
+  title_en: Turn it
+  title_zh: 转一转
+  title_zh_hk: 轉一轉
+  s1_en: Five straight sides.
+  s1_zh: 五条直边。
+  s1_zh_hk: 五條直邊。
+  s2_en: Turn it.
+  s2_zh: 转一转。
+  s2_zh_hk: 轉一轉。
+  s3_en: Still five sides.
+  s3_zh: 还是五条边。
+  s3_zh_hk: 仲係五條邊。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: shapes
+  seconds: 16
+  title_en: Name the shapes
+  title_zh: 认识这些图形
+  title_zh_hk: 認識呢啲圖形
+  s1_en: A triangle has three sides.
+  s1_zh: 三角形有三条边。
+  s1_zh_hk: 三角形有三條邊。
+  s2_en: Four straight sides.
+  s2_zh: 四条直边。
+  s2_zh_hk: 四條直邊。
+  s3_en: Five sides, six sides, or round.
+  s3_zh: 五条边，六条边，或者圆。
+  s3_zh_hk: 五條邊，六條邊，或者圓。
+  s4_en: Turn it. Still five sides.
+  s4_zh: 转一转，还是五条边。
+  s4_zh_hk: 轉一轉，仲係五條邊。
+  cues:
+  - kind: flat
+    shape: triangle
+  - kind: flat
+    shape: quad
+  - kind: flat
+    items: [pentagon, hexagon, circle]
+  - kind: flat
+    shape: pentagon
+    turn: 20

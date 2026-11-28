@@ -2592,6 +2592,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-EVY-10": [
                 "lesson_hook", "day_time", "day_time", "day_time", "lesson_takeaway",
             ],
+            "P1-EVY-11": [
+                "lesson_hook", "day_time", "day_time", "day_time", "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -2623,6 +2626,7 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-EVY-08": ("It says 4 dollars and 20 cents.", "它是四元两角。", "佢係四元兩毫。"),
             "P1-EVY-09": ("Two 50 cent coins make one dollar.", "两个五角就是一元。", "兩個五毫就係一元。"),
             "P1-EVY-10": ("It is three o'clock.", "现在是三点。", "而家係三點。"),
+            "P1-EVY-11": ("That is one hour.", "这是一个小时。", "呢個係一個小時。"),
         }
         for name, phrases in answers.items():
             lesson = load_lesson(P1 / f"{name}.yaml")

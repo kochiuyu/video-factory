@@ -1,0 +1,123 @@
+# P1-EVY-11. Mirrors MathQuiz path time / lesson elapsedhours, "Count the hours".
+# Count the gaps after the start. After 12, the next hour is 1.
+# https://github.com/kochiuyu/mathquiz learn-time.js (elapsedhours).
+# Speech is for age 6: one short idea per sentence.
+id: P1-EVY-11
+title_en: Count the hours
+title_zh: 数小时
+title_zh_hk: 數小時
+duration_target_s: 55
+clock: own
+beats:
+- id: hook
+  visual: animated
+  scene: lesson_hook
+  motif: time
+  kind: hops
+  seconds: 8
+  title_en: Count the hours
+  title_zh: 数小时
+  title_zh_hk: 數小時
+  s1_en: How many hours is that?
+  s1_zh: 一共有几小时？
+  s1_zh_hk: 一共有幾多個小時呀？
+
+- id: one
+  visual: animated
+  scene: day_time
+  mode: hops
+  start: 2
+  steps: 1
+  seconds: 11
+  title_en: One hour
+  title_zh: 一个小时
+  title_zh_hk: 一個小時
+  s1_en: Start at 2 o'clock.
+  s1_zh: 从两点开始。
+  s1_zh_hk: 由兩點開始。
+  s2_en: The next hour is 3.
+  s2_zh: 下一个钟点是三点。
+  s2_zh_hk: 下一個鐘點係三點。
+  s3_en: That is one hour.
+  s3_zh: 这是一个小时。
+  s3_zh_hk: 呢個係一個小時。
+
+- id: wrap
+  visual: animated
+  scene: day_time
+  mode: hops
+  start: 11
+  steps: 2
+  seconds: 11
+  title_en: Land on 1
+  title_zh: 落到1点
+  title_zh_hk: 去到1點
+  s1_en: Start at 11.
+  s1_zh: 从十一点开始。
+  s1_zh_hk: 由十一點開始。
+  s2_en: Count two hours. 12, then 1.
+  s2_zh: 数两个小时。十二，然后到一。
+  s2_zh_hk: 數兩個小時。十二，然後到一。
+  s3_en: You land on 1. The clock goes on after 12.
+  s3_zh: 落到一点。过了十二还继续。
+  s3_zh_hk: 去到一點。過咗十二仲繼續。
+
+- id: three
+  visual: animated
+  scene: day_time
+  mode: hops
+  start: 4
+  steps: 3
+  minute: 30
+  seconds: 11
+  title_en: Three hours
+  title_zh: 三个小时
+  title_zh_hk: 三個小時
+  s1_en: Start at half past 4.
+  s1_zh: 从四点半开始。
+  s1_zh_hk: 由四點半開始。
+  s2_en: Count the hours. 5, 6, and 7.
+  s2_zh: 数小时。五、六、七。
+  s2_zh_hk: 數小時。五、六、七。
+  s3_en: That is three hours. Do not count the start.
+  s3_zh: 这是三小时。开始的时刻不算。
+  s3_zh_hk: 呢個係三個小時。開始嗰下唔算。
+
+- id: takeaway
+  visual: animated
+  scene: lesson_takeaway
+  motif: time
+  seconds: 14
+  title_en: Count the hours
+  title_zh: 数小时
+  title_zh_hk: 數小時
+  s1_en: Count on from the start.
+  s1_zh: 从起点往后数。
+  s1_zh_hk: 由起點再數落去。
+  s2_en: From 2 to 3 is one hour.
+  s2_zh: 从两点到三点是一小时。
+  s2_zh_hk: 由兩點到三點係一個小時。
+  s3_en: After 12 comes 1.
+  s3_zh: 十二点之后是一点。
+  s3_zh_hk: 十二點之後係一點。
+  s4_en: Skip the starting hour.
+  s4_zh: 开始的时刻不算。
+  s4_zh_hk: 開始嗰下唔算。
+  cues:
+  - kind: time
+    mode: hops
+    start: 2
+    steps: 1
+  - kind: time
+    mode: hops
+    start: 2
+    steps: 1
+  - kind: time
+    mode: hops
+    start: 11
+    steps: 2
+  - kind: time
+    mode: hops
+    start: 4
+    steps: 3
+    minute: 30

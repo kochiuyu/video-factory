@@ -36,12 +36,12 @@ beats:
   s1_en: The ball is over the book.
   s1_zh: 球在书的上面。
   s1_zh_hk: 波喺書上面。
-  s2_en: The book is under the ball.
-  s2_zh: 书在球的下面。
-  s2_zh_hk: 書喺波下面。
-  s3_en: Both sentences match this picture.
-  s3_zh: 两句都符合这幅图。
-  s3_zh_hk: 兩句都符合呢幅圖。
+  s2_en: The book is under the ball. The ball sits on the book.
+  s2_zh: 书在球的下面。球坐在书上。
+  s2_zh_hk: 書喺波下面。波坐喺書上面。
+  s3_en: Both sentences match this picture. Over and under go together.
+  s3_zh: 两句都符合这幅图。上面和下面是一对。
+  s3_zh_hk: 兩句都符合呢幅圖。上面同下面係一對。
 
 - id: under
   visual: animated
@@ -53,15 +53,15 @@ beats:
   title_en: Start with the book
   title_zh: 先说书
   title_zh_hk: 先講書
-  s1_en: Now start with the book.
-  s1_zh: 现在先说书。
-  s1_zh_hk: 而家先講書。
-  s2_en: The book is under the ball.
-  s2_zh: 书在球的下面。
-  s2_zh_hk: 書喺波下面。
-  s3_en: The ball is over the book.
-  s3_zh: 球在书的上面。
-  s3_zh_hk: 波喺書上面。
+  s1_en: Now start with the book. Name the book first.
+  s1_zh: 现在先说书。先说这一本。
+  s1_zh_hk: 而家先講書。先講呢一本。
+  s2_en: The book is under the ball. It is the lower one.
+  s2_zh: 书在球的下面。它在下面。
+  s2_zh_hk: 書喺波下面。佢喺下面。
+  s3_en: The ball is over the book. It is the higher one.
+  s3_zh: 球在书的上面。它在上面。
+  s3_zh_hk: 波喺書上面。佢喺上面。
 
 - id: swap
   visual: animated
@@ -73,12 +73,12 @@ beats:
   title_en: Now the book is over
   title_zh: 现在书在上面
   title_zh_hk: 而家書喺上面
-  s1_en: The book and the ball swap.
-  s1_zh: 书和球换了位置。
-  s1_zh_hk: 書同波換咗位。
-  s2_en: Now the book is over the ball.
-  s2_zh: 现在书在球的上面。
-  s2_zh_hk: 而家書喺波上面。
+  s1_en: The book and the ball swap. Watch them trade places.
+  s1_zh: 书和球换了位置。两件对调了。
+  s1_zh_hk: 書同波換咗位。兩件調轉咗。
+  s2_en: Now the book is over the ball. The book is on top.
+  s2_zh: 现在书在球的上面。书在最上面。
+  s2_zh_hk: 而家書喺波上面。書喺最上面。
   s3_en: The ball is under the book.
   s3_zh: 球在书的下面。
   s3_zh_hk: 波喺書下面。
@@ -93,15 +93,15 @@ beats:
   title_en: Name the object first
   title_zh: 先说哪一件
   title_zh_hk: 先講邊一件
-  s1_en: Say which object.
-  s1_zh: 先说是哪一件。
-  s1_zh_hk: 先講係邊一件。
-  s2_en: Then say over or under.
-  s2_zh: 再说上面，或者下面。
-  s2_zh_hk: 再講上面，或者下面。
-  s3_en: The book is over the ball.
-  s3_zh: 书在球的上面。
-  s3_zh_hk: 書喺波上面。
+  s1_en: Say which object. Point to the book.
+  s1_zh: 先说是哪一件。指出这本书。
+  s1_zh_hk: 先講係邊一件。指出呢本書。
+  s2_en: Then say over or under. Add the place.
+  s2_zh: 再说上面，或者下面。补上位置。
+  s2_zh_hk: 再講上面，或者下面。補上位置。
+  s3_en: The book is over the ball. Say the book first.
+  s3_zh: 书在球的上面。先说书。
+  s3_zh_hk: 書喺波上面。先講書。
 
 - id: takeaway
   visual: animated

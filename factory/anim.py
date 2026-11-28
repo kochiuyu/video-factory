@@ -4524,7 +4524,13 @@ def _scene_types() -> dict:
         if kind == "solid":
             if picture[1] == "pair":
                 return VGroup(*[solid_picture(str(item)) for item in picture[2]]).arrange(RIGHT, buff=0.28)
-            return solid_picture(str(picture[1]))
+            if picture[1] == "stack":
+                return VGroup(*[solid_picture(str(item)) for item in picture[2]]).arrange(DOWN, buff=0.08)
+            picture_mob = solid_picture(str(picture[1]))
+            if len(picture) > 2 and picture[2]:
+                import math
+                picture_mob.rotate(math.radians(float(picture[2])))
+            return picture_mob
         pic = join_picture(str(picture[1]))
         for edge in pic.vf_edges:
             edge.set_stroke(opacity=1)
@@ -4711,14 +4717,39 @@ def _scene_types() -> dict:
             title = _shape_title(labels.get("title") or "", latin, cjk)
             kinds = list(labels.get("items") or [])
             names = list(labels.get("names") or [])
+            part = str(labels.get("part") or "pair")
+            if part == "stack" and len(kinds) == 2:
+                bottom = solid_picture(str(kinds[0]))
+                top = solid_picture(str(kinds[1]))
+                pair = VGroup(bottom, top).arrange(DOWN, buff=0.08)
+                if kinds[0] == kinds[1]:
+                    label = _shape_name(names[0] if names else "", latin, cjk)
+                else:
+                    label = VGroup(
+                        _shape_name(names[0] if names else "", latin, cjk),
+                        _shape_name(names[1] if len(names) > 1 else "", latin, cjk),
+                    ).arrange(RIGHT, buff=0.35)
+                body = VGroup(pair, label).arrange(DOWN, buff=0.2)
+                _place_shape(self, title, body)
+                home = top.get_center()
+                top.shift(UP * 0.95)
+                self.vf_kinds = kinds
+                self.vf_cards = [bottom, top]
+                self.spend(0)
+                self.spend(1, top.animate.move_to(home))
+                self.spend(2)
+                return
             cards = []
-            for kind, name in zip(kinds, names):
+            turns = list(labels.get("turns") or [])
+            for index, (kind, name) in enumerate(zip(kinds, names)):
+                picture = solid_picture(str(kind))
+                if index < len(turns) and turns[index]:
+                    picture.rotate(math.radians(float(turns[index])))
                 card = VGroup(
-                    solid_picture(str(kind)),
+                    picture,
                     _shape_name(name, latin, cjk),
                 ).arrange(DOWN, buff=0.16)
                 cards.append(card)
-            part = str(labels.get("part") or "pair")
             if part == "turn" and len(cards) == 1:
                 body = cards[0]
                 _place_shape(self, title, body)

@@ -963,10 +963,20 @@ def takeaway_cue_picture(spec) -> tuple | None:
                 shape not in {"prism", "cylinder", "pyramid", "cone", "sphere"} for shape in shapes
             ):
                 return None
+            layout = str(spec.get("layout") or "").strip()
+            if layout == "stack":
+                return ("solid", "stack", tuple(shapes))
+            if layout not in {"", "pair"}:
+                return None
             return ("solid", "pair", tuple(shapes))
         shape = str(spec.get("shape") or "").strip()
         if shape not in {"prism", "cylinder", "pyramid", "cone", "sphere"}:
             return None
+        turn = _as_int(spec.get("turn")) or 0
+        if not -180 <= turn <= 180:
+            return None
+        if turn:
+            return ("solid", shape, turn)
         return ("solid", shape)
     if kind == "join":
         result = str(spec.get("result") or "").strip()
@@ -1952,7 +1962,9 @@ class SolidShape(SceneKind):
     """One solid, two solids, or the same solid turned. Three spoken lines.
 
     ``items`` lists one or two of prism, cylinder, pyramid, cone, sphere.
-    ``part`` ``turn`` rotates a single solid.
+    ``part`` ``turn`` rotates a single solid. ``part`` ``stack`` sets the
+    second solid down on the first. Optional ``turns`` is one angle per item,
+    so a pair can show a can standing and the same can lying on its side.
     """
 
     name = "solid_shape"
@@ -1965,15 +1977,25 @@ class SolidShape(SceneKind):
         if any(str(item) not in _SOLID_KINDS for item in items):
             return ["solid_shape items must be prism, cylinder, pyramid, cone, or sphere."]
         part = str(beat.get("part") or "pair").strip()
-        if part not in {"pair", "turn"}:
-            return ["solid_shape part must be pair or turn."]
+        if part not in {"pair", "turn", "stack"}:
+            return ["solid_shape part must be pair, turn, or stack."]
         if part == "turn" and len(items) != 1:
             return ["solid_shape turn uses one item."]
+        if part == "stack" and len(items) != 2:
+            return ["solid_shape stack uses two items."]
+        turns = beat.get("turns")
+        if turns is not None:
+            if not isinstance(turns, list) or len(turns) != len(items):
+                return ["solid_shape turns must be one angle per item."]
+            for angle in turns:
+                value = _as_int(angle)
+                if value is None or not -180 <= value <= 180:
+                    return ["solid_shape turns must be from -180 to 180."]
         return []
 
     def labels(self, beat: dict, lang: str) -> dict:
         items = [str(item) for item in beat.get("items") or []]
-        return {
+        out = {
             "title": _shape_heading(beat, lang, {
                 "en": "Solid shapes",
                 "zh": "认识立体",
@@ -1984,13 +2006,19 @@ class SolidShape(SceneKind):
             "names": [_named(_SOLID_NAMES, item, lang) for item in items],
             "turn": _as_int(beat.get("turn")) or 25,
         }
+        if beat.get("turns") is not None:
+            out["turns"] = [_as_int(angle) or 0 for angle in beat.get("turns") or []]
+        return out
 
     def parameters(self, beat: dict) -> dict:
-        return {
+        params = {
             "part": str(beat.get("part") or "pair").strip(),
             "items": [str(item) for item in (beat.get("items") or [])],
             "turn": _as_int(beat.get("turn")) or 25,
         }
+        if beat.get("turns") is not None:
+            params["turns"] = [_as_int(angle) or 0 for angle in beat.get("turns") or []]
+        return params
 
 
 register(ShapeLine())

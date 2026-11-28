@@ -1,0 +1,272 @@
+id: OPS-01
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Sold out by noon. Double tomorrow?
+title_zh: 中午就卖光了，明天订双倍？
+title_zh_hk: 到中午已售罄，明天訂雙倍？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-01
+  kicker_en: OPS-01
+  kicker_zh: OPS-01
+  kicker_zh_hk: OPS-01
+  title_en: Sold out by noon. Double tomorrow?
+  title_zh: 中午就卖光了，明天订双倍？
+  title_zh_hk: 到中午已售罄，明天訂雙倍？
+  image: art/sold-out-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    Hong Kong's McGriddles launch drew queues in July 2024, and the company later said stock had run out.
+    That news raises a forecasting question, but this is not a McDonald's branch. You run a fictional
+    independent breakfast kiosk. A new sandwich sold all one hundred portions by noon, and your supplier
+    needs tomorrow's order now.
+  zh: >-
+    二零二四年七月，McGriddles在香港一推出就排起了长队，公司后来表示库存卖光了。这条新闻提出了一个订货问题，但课堂上的不是麦当劳门店。你经营的是一家虚构的独立早餐摊。新三明治到中午就卖完了一百份，供应商现在就要明天的订货量。
+  zh_hk: >-
+    二零二四年七月，McGriddles喺香港一推出就排起長龍，公司後來話存貨賣晒。呢條新聞提出咗一個訂貨問題，但課堂上嘅唔係麥當勞分店。你經營嘅係一間虛構嘅獨立早餐小食亭。新三文治到中午已經賣清一百份，供應商而家就要明天嘅訂單。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Tomorrow's contribution, HK$
+  title_zh: 明天的边际贡献，港元
+  title_zh_hk: 明天的邊際貢獻，港元
+  row1_en: 100 kits
+  row1_zh: 100包
+  row1_zh_hk: 100份材料包
+  row2_en: 200 kits
+  row2_zh: 200包
+  row2_zh_hk: 200份材料包
+  col1_en: Demand 100
+  col1_zh: 需求 100
+  col1_zh_hk: 需求 100
+  col2_en: Demand 200
+  col2_zh: 需求 200
+  col2_zh_hk: 需求 200
+  c11: 1,500
+  c12: 1,500
+  c21: −500
+  c22: 3,000
+  footer_en: Fictional scenarios; no probabilities
+  footer_zh: 虚构情景，未给出概率
+  footer_zh_hk: 虛構情境，未有提供概率
+  s1_en: >-
+    You can order kits for one hundred or two hundred sandwiches. Each kit costs twenty dollars and each
+    sandwich sells for thirty-five. Delivery is before opening, there is no same-day replenishment, and
+    unsold kits have no value after tomorrow.
+  s1_zh: >-
+    你可以订一百包或两百包配料包。每包成本二十港元，每份三明治卖三十五港元。配料包在开门前送到，当天不能补货；明天过后，没卖掉的配料包既不能再用，也不能转卖。
+  s1_zh_hk: >-
+    你可以訂一百份或者兩百份材料包。每份成本二十港元，每份三文治賣三十五港元。材料包會喺開門前送到，當天唔補貨；明天過後，未賣出嘅材料包再用唔到，亦都轉售唔到。
+  s2_en: >-
+    Contribution is sales revenue minus the cost of every kit ordered, and sales cannot exceed stock.
+    Labour and other overheads do not change between the two choices.
+  s2_zh: 边际贡献等于销售收入减去订购的全部配料包成本，销量不能超过库存。两种订法的人工和其他间接费用都一样。
+  s2_zh_hk: 邊際貢獻等於銷售收入減去所有訂購材料包嘅成本，銷量唔可以超過存貨。兩個方案嘅人工同其他間接開支都一樣。
+  s3_en: >-
+    Compare only demand of one hundred and demand of two hundred. Neither is a forecast, and their probabilities
+    are not supplied.
+  s3_zh: 这里只比较需求一百和需求两百这两种情景。两者都不是预测，题目也没有给出概率。
+  s3_zh_hk: 呢度只比較需求一百同需求兩百兩種情境。兩者都唔係預測，題目亦都冇提供概率。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Order 100 or 200?
+  title_zh: 订100包，还是200包？
+  title_zh_hk: 訂100份，定200份？
+  en: >-
+    Would you order one hundred or two hundred for tomorrow? Say what demand you are expecting, and one
+    reason not to trust today's sales total. Pause and vote.
+  zh: 明天你订一百包，还是两百包？说一下你预期的需求是多少，以及为什么不能完全相信今天的销量。请暂停，投个票。
+  zh_hk: 明天你訂一百份，定兩百份？講吓你預期嘅需求係幾多，同埋點解唔可以完全信今日嘅銷量。暫停，投個票。
+- id: reveal
+  visual: steps
+  seconds: 24
+  layout: rows
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: One fact changes
+  title_zh: 有一个情况变了
+  title_zh_hk: 一項事實有變
+  step1_en: 80 of 100 sales were event visitors
+  step1_zh: 今天100份里，80份是活动访客买的
+  step1_zh_hk: 今日100份之中，80份係活動訪客買嘅
+  step2_en: The one-day event will not run tomorrow
+  step2_zh: 这场一天的活动明天不再举办
+  step2_zh_hk: 呢場單日活動明天唔會舉行
+  step3_en: Turnaways and return visits remain unknown
+  step3_zh: 没买到的人、会不会再来，仍不清楚
+  step3_zh_hk: 買唔到嘅人、會唔會再來，仍然未知
+  s1_en: >-
+    The cashier checks a wristband tally kept during the event: eighty of today's one hundred sandwiches
+    were bought by visitors wearing wristbands for a nearby one-day event.
+  s1_zh: 收银员查了活动期间按腕带做的统计：今天卖出的一百份里，有八十份是戴着腕带的访客买的。他们参加的是附近一场为期一天的活动。
+  s1_zh_hk: 收銀員查過活動期間按腕帶做嘅統計：今日售出嘅一百份裏面，有八十份係戴住腕帶嘅訪客買嘅。佢哋參加嘅係附近一場單日活動。
+  s2_en: >-
+    The event will not run tomorrow. The price was the same for everyone, and no other assumption changes.
+  s2_zh: 这场活动明天不再举办。所有顾客付的价格都一样，其他假设不变。
+  s2_zh_hk: 呢場活動明天唔會舉行。所有人付嘅價格都一樣，其他假設不變。
+  s3_en: >-
+    You still do not know whether those visitors will return, whether local customers were turned away,
+    or how many people would have bought later if stock had remained.
+  s3_zh: 你仍然不知道这些访客会不会再来，有没有本地顾客想买却没买到，以及如果还有库存，晚些时候还会有多少人来买。
+  s3_zh_hk: 你仍然唔知呢啲訪客會唔會再來，有冇區內顧客想買但買唔到，以及如果仲有貨，稍後仲會有幾多人買。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Does this change your order?
+  title_zh: 这会改变你的订货量吗？
+  title_zh_hk: 呢個會唔會改到你嘅訂貨量？
+  en: >-
+    Does this change your order? What extra observation would most help you decide before the supplier's
+    deadline? Pause and vote again.
+  zh: 这会改变你的订货量吗？在供应商要求的时限之前，再多观察哪一项，对你做决定最有帮助？请暂停，再投一次票。
+  zh_hk: 呢個會唔會改到你嘅訂貨量？喺供應商期限之前，再多觀察邊一項，對你做決定最有幫助？暫停，再投一次票。
+- id: bridge
+  visual: steps
+  seconds: 26
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Sales are not full demand
+  title_zh: 销量不是不受限的需求
+  title_zh_hk: 銷量唔等於不受限嘅需求
+  step1_en: Selling 100 shows at least 100 sales
+  step1_zh: 卖掉100份，只说明至少有100份需求
+  step1_zh_hk: 賣出100份，只說明至少有100份需求
+  step2_en: >-
+    Demand 100: doubling costs HK$2,000
+  step2_zh: 若需求是100，加倍会少赚2,000港元
+  step2_zh_hk: 若需求係100，加倍會少賺2,000港元
+  step3_en: >-
+    Demand 200: doubling gains HK$1,500
+  step3_zh: 若需求是200，加倍会多赚1,500港元
+  step3_zh_hk: 若需求係200，加倍會多賺1,500港元
+  s1_en: >-
+    Sales stopped at the stock limit; demand did not necessarily stop there. Selling one hundred establishes
+    at least one hundred purchases today. It does not show that full-day demand was exactly one hundred,
+    or that tomorrow's demand will be two hundred.
+  s1_zh: >-
+    销量停在库存上限上，需求不一定也停在那里。卖掉一百份，只能说明今天至少有一百人买到了。这既不能说明全天需求刚好就是一百，也不能说明明天需求就是两百。
+  s1_zh_hk: >-
+    銷量停喺存貨上限度，需求唔一定都停喺嗰度。賣出一百份，只可以說明今日至少有一百人買到。呢個唔等於全日需求剛剛就係一百，亦都唔等於明天需求就係兩百。
+  s2_en: >-
+    If demand is one hundred, doubling the order lowers contribution from one thousand five hundred dollars
+    to a loss of five hundred: a two-thousand-dollar setback against the smaller order.
+  s2_zh: 如果需求是一百，把订货加倍，边际贡献会从一千五百港元变成亏损五百港元，比起小订单少了两千港元。
+  s2_zh_hk: 如果需求係一百，將訂貨加倍，邊際貢獻會由一千五百港元變成虧五百港元，比起細訂單少咗兩千港元。
+  s3_en: >-
+    If demand is two hundred, doubling raises contribution from one thousand five hundred to three thousand:
+    a one-thousand-five-hundred-dollar gain. A sell-out alone does not justify the larger order.
+  s3_zh: 如果需求是两百，加倍会把边际贡献从一千五百港元提高到三千港元，多赚一千五百港元。仅仅因为卖光了，并不能证明就该订大单。
+  s3_zh_hk: 如果需求係兩百，加倍會將邊際貢獻由一千五百港元提高到三千港元，多賺一千五百港元。單憑賣晒，並唔足以證明就要訂大單。
+- id: meaning
+  visual: steps
+  seconds: 26
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: The event revises a forecast
+  title_zh: 活动修正预测，不是订货量
+  title_zh_hk: 活動修正預測，唔係訂貨量
+  step1_en: >-
+    100 sales minus 80 event buys: 20
+  step1_zh: 100份销量减去80份活动购买，还剩20份
+  step1_zh_hk: 100份銷量減去80份活動購買，仲剩20份
+  step2_en: That is not proof demand is 20
+  step2_zh: 这并不能证明明天需求就是20份
+  step2_zh_hk: 呢個並唔能夠證明明天需求就係20份
+  step3_en: Check pre-orders and comparable days
+  step3_zh: 还要看预订、专门询价和可比的日子
+  step3_zh_hk: 仲要睇預訂、專門查詢同可比較嘅日子
+  s1_en: >-
+    Removing eighty event purchases from one hundred sales leaves twenty observed non-event purchases.
+    That does not prove tomorrow's demand will be twenty: regular customers may have been unable to buy,
+    and some visitors may return.
+  s1_zh: 从一百份销量里去掉八十份活动购买，还剩二十份非活动购买。这并不能证明明天需求就是二十份：平时的顾客可能没买到，有些访客也可能再来。
+  s1_zh_hk: 由一百份銷量裏面減走八十份活動購買，仲剩二十份非活動購買。呢個並唔能夠證明明天需求就係二十份：平時嘅顧客可能買唔到，有啲訪客亦都可能再來。
+  s2_en: >-
+    The reveal weakens a simple argument: repeat today, then double. It does not uniquely determine the
+    correct quantity.
+  s2_zh: 新信息削弱了“今天卖多少，明天就按这个再翻倍”的简单说法，但并不能单独决定唯一正确的订货量。
+  s2_zh_hk: 新資料削弱咗「今日賣幾多，明天就照樣再翻倍」嘅簡單講法，但唔可以單獨決定唯一正確嘅訂貨量。
+  s3_en: >-
+    Before the deadline, check paid pre-orders, enquiries specifically for this sandwich, comparable non-event
+    days, and whether tomorrow has a similar demand driver. State the limits of each measure.
+  s3_zh: >-
+    在截止时间之前，可以看已付款的预订、专门来问这款三明治的询价、没有活动的可比日子，以及明天会不会有类似的需求来源。每一种观察都有局限，要说清楚。
+  s3_zh_hk: >-
+    喺截止時間之前，可以睇已付款嘅預訂、專門嚟問呢款三文治嘅查詢、冇活動嘅可比較日子，以及明天會唔會有類似嘅需求來源。每種觀察都有局限，要講清楚。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: How strong must high demand be?
+  title_zh: 对高需求要有多大把握？
+  title_zh_hk: 對高需求要有幾大把握？
+  en: >-
+    In this two-scenario model, the larger order has the higher expected contribution only if the probability
+    of demand two hundred is above four sevenths, about fifty-seven percent. The news and the wristbands
+    do not supply that probability. If you choose one hundred, name the missed-sales risk you accept;
+    if you choose two hundred, say why you expect enough repeat demand to justify the waste risk.
+  zh: >-
+    在这个只有两种情景的模型里，只有当需求为两百的概率高于七分之四，大约百分之五十七时，大订单的期望边际贡献才会更高。新闻和腕带统计都没有给出这个概率。如果你选一百包，要说清楚你愿意承担怎样的缺货风险；如果你选两百包，要说明为什么预期有足够的重复需求，值得承担浪费的风险。
+  zh_hk: >-
+    喺呢個只有兩種情境嘅模型裏面，只有當需求為兩百嘅概率高過七分之四，大約百分之五十七，大訂單嘅期望邊際貢獻先會更高。新聞同腕帶統計都冇提供呢個概率。如果你揀一百份，要講清楚你願意承擔點樣嘅缺貨風險；如果你揀兩百份，要說明點解預期有足夠嘅重複需求，值得承擔浪費嘅風險。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: A sell-out is not a forecast
+  title_zh: 卖光了，不等于预测
+  title_zh_hk: 售罄唔等於預測
+  q1_en: Sales can stop when stock runs out
+  q1_zh: 销量可能只是库存卖完了
+  q1_zh_hk: 銷量可能只係存貨賣完
+  q2_en: Compare the downside with the upside
+  q2_zh: 要比较加倍的下行和上行
+  q2_zh_hk: 要比較加倍嘅下行同上行
+  s1_en: >-
+    Today's sales total is not unconstrained demand, and a launch-day sell-out does not, by itself, tell
+    you to double tomorrow's order.
+  s1_zh: 今天的销量，并不是不受库存限制的需求。仅仅因为上市当天卖光了，并不能单独告诉你，明天就该订双倍。
+  s1_zh_hk: 今日嘅銷量，並唔係不受存貨限制嘅需求。單憑推出當日售罄，並唔能夠單獨話你知，明天就應該訂雙倍。
+  s2_en: >-
+    The kiosk, prices, order rule and event mix are fictional classroom assumptions. The illustration
+    is not the reported company, and no deliberate shortage is asserted.
+  s2_zh: 这家早餐摊、价格、订货规则和活动构成，都是虚构的课堂假设。插图不是新闻里的那家公司，案例也不断言有人故意制造缺货。
+  s2_zh_hk: 呢間小食亭、價格、訂貨規則同活動構成，都係虛構嘅課堂假設。插圖唔係新聞裏嗰間公司，個案亦都冇断言有人故意製造缺貨。
+  s3_en: Official scene art is a teaching illustration only.
+  s3_zh: 官方场景图只是教学插图。
+  s3_zh_hk: 官方場景圖只係教學插圖。
+duration_target_s: 194

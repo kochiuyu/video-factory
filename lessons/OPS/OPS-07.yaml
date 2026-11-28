@@ -1,0 +1,348 @@
+id: OPS-07
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: An empty counter. A waiting customer.
+title_zh: 柜台空着，顾客还在等
+title_zh_hk: 櫃位空着，顧客卻在等候
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-07
+  kicker_en: OPS-07
+  kicker_zh: OPS-07
+  kicker_zh_hk: OPS-07
+  title_en: An empty counter. A waiting customer.
+  title_zh: 柜台空着，顾客还在等
+  title_zh_hk: 櫃位空着，顧客卻在等候
+  image: art/empty-counter-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In December 2024, the Hong Kong Government said it would explore queue arrangements at the Hong Kong-Zhuhai-Macao
+    Bridge Hong Kong Port, alongside flexible staffing. This classroom case is a repair shop's collection
+    desk, not a port and not medical triage. Two equally trained employees can each complete a quick prepaid
+    collection in two minutes, or a paperwork collection in six.
+  zh: >-
+    二零二四年十二月，香港政府表示会探讨港珠澳大桥香港口岸的排队安排，并配合弹性人手。课堂上的是一家维修店的取件柜台，不是口岸，也不是医疗分诊。两名同样受过训练的员工，完成一笔已付款的快速取件要两分钟，完成一笔要办手续的取件要六分钟。
+  zh_hk: >-
+    二零二四年十二月，香港政府表示會探討港珠澳大橋香港口岸嘅排隊安排，並配合彈性人手。課堂上嘅係一間維修店嘅取件櫃位，唔係口岸，亦都唔係醫療分流。兩名同樣受過訓練嘅員工，完成一筆已付款嘅快速取件要兩分鐘，完成一筆要辦手續嘅取件要六分鐘。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 3
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Five customers already waiting
+  title_zh: 五名已在场的顾客
+  title_zh_hk: 五名已在場的顧客
+  row1_en: A · Common
+  row1_zh: A · 共用队列
+  row1_zh_hk: A · 共用隊列
+  row2_en: B · Dedicated
+  row2_zh: B · 分类专柜
+  row2_zh_hk: B · 專用櫃位
+  col1_en: Total wait
+  col1_zh: 总等待
+  col1_zh_hk: 總等候
+  col2_en: Quick mean
+  col2_zh: 快速件人均
+  col2_zh_hk: 快速件人均
+  col3_en: Last done
+  col3_zh: 最晚完成
+  col3_zh_hk: 最晚完成
+  c11: '16'
+  c11_en: 16 min
+  c11_zh: 16分钟
+  c11_zh_hk: 16分鐘
+  c12: '3'
+  c12_en: 3 min
+  c12_zh: 3分钟
+  c12_zh_hk: 3分鐘
+  c13: '14'
+  c13_en: min 14
+  c13_zh: 第14分钟
+  c13_zh_hk: 第14分鐘
+  c21: '20'
+  c21_en: 20 min
+  c21_zh: 20分钟
+  c21_zh_hk: 20分鐘
+  c22: '1'
+  c22_en: 1 min
+  c22_zh: 1分钟
+  c22_zh_hk: 1分鐘
+  c23: '18'
+  c23_en: min 18
+  c23_zh: 第18分钟
+  c23_zh_hk: 第18分鐘
+  footer_en: >-
+    Order at t=0: P1, Q1, P2, Q2, P3
+  footer_zh: 零时刻顺序：P1、Q1、P2、Q2、P3
+  footer_zh_hk: 零時刻次序：P1、Q1、P2、Q2、P3
+  s1_en: >-
+    Each transaction stays with its employee until completion. Policy A is one first-come-first-served
+    queue, and the next customer goes to whichever employee is free. Policy B gives one employee only
+    quick collections and the other only paperwork. Under B, an idle employee cannot help the other queue.
+  s1_zh: >-
+    每笔业务会由同一名员工做到完。方案A是一条先到先得的共用队列，谁空闲就接待下一位。方案B是一人只做快速取件，另一人只做手续件。在B方案下，空着的员工不能去帮另一队。
+  s1_zh_hk: >-
+    每筆業務會由同一名員工做到完。方案A係一條先到先得嘅共用隊列，邊個空閒就接待下一位。方案B係一人只做快速取件，另一人只做手續件。喺B方案之下，空置嘅員工唔可以去幫另一隊。
+  s2_en: >-
+    Both employees start free at minute zero. Five customers are already present in recorded order P one,
+    Q one, P two, Q two, P three. In this first trace, nobody else arrives. Waiting runs from arrival
+    until service starts, not until it ends.
+  s2_zh: >-
+    两名员工在第零分钟都空闲。五名顾客已经在场，记录顺序是P一、Q一、P二、Q二、P三。在这一次推演里，没有其他顾客再来。等待时间从到达计到开始办理，不是计到办理结束。
+  s2_zh_hk: >-
+    兩名員工喺第零分鐘都空閒。五名顧客已經在場，記錄次序係P一、Q一、P二、Q二、P三。喺呢一次推演裏面，冇其他顧客再來。等候時間由到達計到開始辦理，唔係計到辦理結束。
+  s3_en: >-
+    For these five, common-queue waits are zero, zero, two, six and eight minutes, totalling sixteen,
+    or three point two on average. Dedicated waits are zero, zero, six, two and twelve, totalling twenty.
+    Quick-customer waits average three minutes under A and one under B. Last completion is minute fourteen
+    under A and minute eighteen under B.
+  s3_zh: >-
+    这五人在共用队列里的等待是零、零、二、六和八分钟，一共十六分钟，人均三点二。分类专柜是零、零、六、二和十二，一共二十分钟。快速顾客的平均等待，A是三分钟，B是一分钟。最晚完成时间，A是第十四分钟，B是第十八分钟。
+  s3_zh_hk: >-
+    呢五人喺共用隊列裏面嘅等候係零、零、二、六同八分鐘，一共十六分鐘，人均三點二。專用櫃位係零、零、六、二同十二，一共二十分鐘。快速顧客嘅平均等候，A係三分鐘，B係一分鐘。最晚完成時間，A係第十四分鐘，B係第十八分鐘。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Pilot a common queue, or dedicated counters?
+  title_zh: 试点共用队列，还是分类专柜？
+  title_zh_hk: 試點共用隊列，定專用櫃位？
+  en: >-
+    Which policy would you pilot: A's common queue or B's dedicated counters? What evidence about arrivals
+    or customer waits would make you switch? Pause and vote.
+  zh: 你会试点哪个方案：A的共用队列，还是B的分类专柜？关于到达情况或顾客等待，什么样的证据会让你改主意？请暂停，投个票。
+  zh_hk: 你會試點邊個方案：A嘅共用隊列，定B嘅專用櫃位？關於到達情況或顧客等候，點樣嘅證據會令你改主意？暫停，投個票。
+- id: reveal
+  visual: table_grid
+  seconds: 24
+  rows: 3
+  cols: 2
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Add Q3, arriving at minute five
+  title_zh: 再加入第5分钟到达的Q3
+  title_zh_hk: 再加入第5分鐘到達的Q3
+  row1_en: Q3 wait
+  row1_zh: Q3等待
+  row1_zh_hk: Q3等候
+  row2_en: Total wait / 6
+  row2_zh: 六人总等待
+  row2_zh_hk: 六人總等候
+  row3_en: Mean quick wait
+  row3_zh: 快速件人均等待
+  row3_zh_hk: 快速件人均等候
+  col1_en: A · Common
+  col1_zh: A · 共用
+  col1_zh_hk: A · 共用
+  col2_en: B · Dedicated
+  col2_zh: B · 专柜
+  col2_zh_hk: B · 專用
+  c11: '3'
+  c11_en: 3 min
+  c11_zh: 3分钟
+  c11_zh_hk: 3分鐘
+  c12: '0'
+  c12_en: 0 min
+  c12_zh: 0分钟
+  c12_zh_hk: 0分鐘
+  c21_en: 19; mean ≈ 3.17
+  c21_zh: 19；人均约3.17
+  c21_zh_hk: 19；人均約3.17
+  c22_en: 20; mean ≈ 3.33
+  c22_zh: 20；人均约3.33
+  c22_zh_hk: 20；人均約3.33
+  c31: '3'
+  c31_en: 3 min
+  c31_zh: 3分钟
+  c31_zh_hk: 3分鐘
+  c32_en: 2/3 min
+  c32_zh: 2/3分钟
+  c32_zh_hk: 2/3分鐘
+  footer_en: Last completion still 14 under A, 18 under B
+  footer_zh: 最晚完成仍是A第14分钟、B第18分钟
+  footer_zh_hk: 最晚完成仍是A第14分鐘、B第18分鐘
+  s1_en: >-
+    Now add one change to that same trace: a third quick customer, Q three, arrives at minute five. Everyone
+    else's arrival and service requirement is unchanged.
+  s1_zh: 现在只改一件事：第三位快速顾客Q三在第五分钟到达。其他人的到达时间和办理类型都不变。
+  s1_zh_hk: 而家只改一件事：第三位快速顧客Q三喺第五分鐘到達。其他人嘅到達時間同辦理類型都不變。
+  s2_en: >-
+    Under A, both employees are busy until minute six. Q two starts at six. At eight both become free,
+    so P three and then Q three can both start. Q three finishes at ten and waits three minutes.
+  s2_zh: >-
+    在A方案下，两名员工直到第六分钟都在忙。Q二从第六分钟开始办理。到第八分钟两人都空出来，P三和Q三可以一起开始。Q三在第十分钟办完，等了三分钟。
+  s2_zh_hk: >-
+    喺A方案之下，兩名員工直到第六分鐘都喺度忙。Q二由第六分鐘開始辦理。到第八分鐘兩人都空出嚟，P三同Q三可以一齊開始。Q三喺第十分鐘辦完，等咗三分鐘。
+  s3_en: >-
+    Under B, the express employee finished Q two at four, so Q three starts at five, finishes at seven
+    and waits zero. Earlier customers' waits are unchanged. This extra arrival is a hypothetical comparison,
+    not a forecast of tomorrow's demand.
+  s3_zh: >-
+    在B方案下，专做快速件的员工第四分钟就做完了Q二，所以Q三第五分钟立即开始，第七分钟结束，等待为零。前面几位的等待不变。多出来的这位顾客，是用来比较的假设，不是对明天需求的预测。
+  s3_zh_hk: >-
+    喺B方案之下，專做快速件嘅員工第四分鐘已經做完Q二，所以Q三第五分鐘即刻開始，第七分鐘結束，等候為零。前面幾位嘅等候不變。多出嚟呢位顧客，係用嚟比較嘅假設，唔係對明天需求嘅預測。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Which wait are you protecting?
+  title_zh: 你要保障的是哪一种等待？
+  title_zh_hk: 你要保障嘅係邊一種等候？
+  en: >-
+    Would you keep your selected policy for tomorrow? Name the customer-wait measure you are protecting,
+    and the arrival pattern you need to check before extending the pilot. Pause and vote again.
+  zh: 明天你还会沿用刚才选的方案吗？请说出你要保障的是哪一种顾客等待，以及在扩大试点之前，需要核对怎样的到达规律。请暂停，再投一次票。
+  zh_hk: 明天你仲會唔會沿用頭先揀嘅方案？請講出你要保障嘅係邊一種顧客等候，以及喺擴大試點之前，需要核對點樣嘅到達規律。暫停，再投一次票。
+- id: bridge
+  visual: steps
+  seconds: 24
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Sharing capacity can cut overall waits
+  title_zh: 共享能力可以减少总体等待
+  title_zh_hk: 共享能力可以減少總體等候
+  step1_en: In A, the employee finishing Q1 can take P2
+  step1_zh: 在A，做完Q1的员工可以接下P2
+  step1_zh_hk: 在A，做完Q1的員工可以接P2
+  step2_en: In B, that person must stay on quick work
+  step2_zh: 在B，这个人只能继续做快速件
+  step2_zh_hk: 在B，呢個人只能繼續做快速件
+  step3_en: Q2 still waits longer in the common queue
+  step3_zh: 但共用队列里，Q2会等得更久
+  step3_zh_hk: 但共用隊列裏面，Q2會等得更耐
+  s1_en: >-
+    In A, the employee finishing Q one at minute two can take P two. In B, that person must remain on
+    quick work, even while paperwork customers wait. The dedicated policy, not laziness or lack of training,
+    creates the apparent idle capacity.
+  s1_zh: >-
+    在A方案里，第二分钟做完Q一的员工可以接下P二。在B方案里，这个人即使看到手续顾客在等，也只能继续守着快速件。看起来的闲置，是分类规则造成的，不是偷懒，也不是不会做。
+  s1_zh_hk: >-
+    喺A方案裏面，第二分鐘做完Q一嘅員工可以接下P二。喺B方案裏面，呢個人即使見到手續顧客喺度等，都只能繼續守住快速件。睇落嘅閒置，係分類規則造成，唔係偷懶，亦都唔係唔會做。
+  s2_en: >-
+    Pooling therefore improves overall waiting and last completion in these traces. It also makes Q two
+    wait longer: six minutes rather than two. A better overall mean is not a better experience for every
+    customer.
+  s2_zh: >-
+    因此，在这两次推演里，共用队列改善了总体等待和最晚完成时间。可是Q二会等得更久：六分钟而不是两分钟。总体平均更好，并不等于每一位顾客都等得更短。
+  s2_zh_hk: >-
+    因此，喺呢兩次推演裏面，共用隊列改善咗總體等候同最晚完成時間。但係Q二會等得更耐：六分鐘而唔係兩分鐘。總體平均更好，並唔等於每一位顧客都等得更短。
+  s3_en: >-
+    When Q three arrives at minute five, B's express employee is available immediately. In A both employees
+    are already occupied, so Q three waits. The previously idle express capacity has a use when that arrival
+    occurs.
+  s3_zh: >-
+    当Q三在第五分钟到达时，B方案里做快速件的员工马上有空。在A方案里，两人都已经被占用，所以Q三要等。先前看起来闲着的快速通道，在这位顾客到来时就用上了。
+  s3_zh_hk: >-
+    當Q三喺第五分鐘到達嗰陣，B方案裏面做快速件嘅員工即刻有空。喺A方案裏面，兩人都已經被佔用，所以Q三要等。先前睇落閒住嘅快速通道，喺呢位顧客到來嗰陣就用得着。
+- id: meaning
+  visual: steps
+  seconds: 24
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: State the service objective first
+  title_zh: 先说清楚要改善哪一种等待
+  title_zh_hk: 先講清楚要改善邊一種等候
+  step1_en: A still has the slightly lower mean wait
+  step1_zh: 六人推演里，A的平均等待仍略低
+  step1_zh_hk: 六人推演裏，A嘅平均等候仍略低
+  step2_en: B still gives quicker service to Q customers
+  step2_zh: B仍然让快速顾客等得更短
+  step2_zh_hk: B仍然讓快速顧客等得更短
+  step3_en: A hybrid rule needs its own complete trace
+  step3_zh: 混合规则必须重新完整推演一次
+  step3_zh_hk: 混合規則必須重新完整推演一次
+  s1_en: >-
+    The common queue still has the slightly lower mean waiting time in the six-customer trace, while dedicated
+    counters give quick customers shorter waits. The manager must make that service tradeoff explicit,
+    rather than silently choosing a metric after seeing the results.
+  s1_zh: >-
+    在六名顾客的推演里，共用队列的平均等待仍然略低，而分类专柜让快速顾客等得更短。经理必须先说清楚要保障哪一种服务目标，而不能看完结果再偷偷换一个指标。
+  s1_zh_hk: >-
+    喺六名顧客嘅推演裏面，共用隊列嘅平均等候仍然略低，而專用櫃位讓快速顧客等得更短。經理必須先講清楚要保障邊一種服務目標，而不能睇完結果再偷偷換一個指標。
+  s2_en: >-
+    Observe arrival timing, category mix, service duration and waiting by category during a pilot. This
+    exercise holds employee speeds fixed; a real queue design may also affect behaviour. No result here
+    establishes universal superiority, fairness or financial returns.
+  s2_zh: >-
+    试点时要观察到达时间、业务类型搭配、办理时长，以及各类顾客的等待。这个练习把员工速度固定下来；真实的排队设计，还可能改变行为。这里的结果，并不能证明哪一种方案普遍更优、更公平，或在财务上更好。
+  s2_zh_hk: >-
+    試點時要觀察到達時間、業務類型搭配、辦理時長，以及各類顧客嘅等候。呢個練習將員工速度固定咗；真實嘅排隊設計，仲可能改變行為。呢度嘅結果，並唔能夠證明邊一種方案普遍更優、更公平，或喺財務上更好。
+  s3_en: >-
+    A rule allowing the express employee to help paperwork when that queue is empty may be worth evaluating.
+    But once that employee starts a six-minute transaction, they cannot interrupt it for a new quick arrival.
+    Work through the complete revised sequence before claiming a hybrid achieves both benefits.
+  s3_zh: >-
+    有人会想：快速通道空着时，让那位员工去帮手续柜台。这个规则值得另做推演。可是一旦这个人开始办理一笔六分钟的手续，按本题规则就不能中途停下来接待新来的快速顾客。在完整重演之前，不能说混合规则一定能兼得两种好处。
+  s3_zh_hk: >-
+    有人會想：快速通道空置嗰陣，等嗰位員工去幫手續櫃位。呢條規則值得另外推演。但係一旦呢個人開始辦理一筆六分鐘嘅手續，按本題規則就唔可以中途停低去接待新嚟嘅快速顧客。喺完整重演之前，唔可以話混合規則一定能夠兼得兩種好處。
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Completion time is not waiting time
+  title_zh: 完成时刻，不是等待时间
+  title_zh_hk: 完成時刻，唔係等候時間
+  en: >-
+    Waits and completion times are not interchangeable. With Q three, total waits become nineteen and
+    twenty across six customers, and the quick means become three minutes and two thirds of a minute.
+    Do not treat one added arrival as a statistically reliable demand forecast.
+  zh: >-
+    等待时间和完成时刻不能互相代替。加入Q三以后，六人总等待变成十九和二十分钟，快速件人均等待变成三分钟和三分之二分钟。不要把多来的这一位，当成统计上可靠的需求预测。
+  zh_hk: >-
+    等候時間同完成時刻唔可以互相代替。加入Q三之後，六人總等候變成十九同二十分鐘，快速件人均等候變成三分鐘同三分之二分鐘。唔好將多嚟呢一位，當成統計上可靠嘅需求預測。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Choose the wait you want to improve
+  title_zh: 先选定你要改善的那种等待
+  title_zh_hk: 先選定你要改善嘅那種等候
+  q1_en: Pooling can cut the overall mean
+  q1_zh: 共用可以降低总体平均等待
+  q1_zh_hk: 共用可以降低總體平均等候
+  q2_en: Idle express time can protect a service promise
+  q2_zh: 快速通道的空闲，也能保障服务承诺
+  q2_zh_hk: 快速通道嘅空閒，都能保障服務承諾
+  s1_en: >-
+    A common queue and dedicated counters serve different objectives in these traces. Say which wait the
+    manager wants to improve before choosing a design, and test the arrival pattern in a pilot.
+  s1_zh: 在这些推演里，共用队列和分类专柜对应的是不同目标。先说清楚经理要改善哪一种等待，再选排队设计，并在试点中核对到达规律。
+  s1_zh_hk: 喺呢啲推演裏面，共用隊列同專用櫃位對應嘅係唔同目標。先講清楚經理要改善邊一種等候，再揀排隊設計，並喺試點中核對到達規律。
+  s2_en: >-
+    The shop, transaction times and arrivals are invented. Official scene art is a teaching illustration
+    only.
+  s2_zh: 这家店、办理时间和到达情况都是虚构的。官方场景图只是教学插图。
+  s2_zh_hk: 呢間店、辦理時間同到達情況都係虛構嘅。官方場景圖只係教學插圖。
+  s3_en: This collection desk is not an analogy for medical triage.
+  s3_zh: 这个取件柜台，不能拿来类比医疗分诊。
+  s3_zh_hk: 呢個取件櫃位，唔可以攞嚟類比醫療分流。
+duration_target_s: 188

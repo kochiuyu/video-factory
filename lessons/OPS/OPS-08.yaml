@@ -1,0 +1,317 @@
+id: OPS-08
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Check it again. Or make the mistake harder?
+title_zh: 再检查一遍，还是让错误更难发生？
+title_zh_hk: 再檢查一次，還是讓人不易出錯？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-08
+  kicker_en: OPS-08
+  kicker_zh: OPS-08
+  kicker_zh_hk: OPS-08
+  title_en: Check it again. Or make the mistake harder?
+  title_zh: 再检查一遍，还是让错误更难发生？
+  title_zh_hk: 再檢查一次，還是讓人不易出錯？
+  image: art/harder-to-miss-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In October 2025, HKPC discussed visual inspection as a smart-manufacturing application. This classroom
+    case is a small Hong Kong stationery workshop packing desk kits for adult office gifts. Every kit
+    promises one notebook, one pencil, one eraser and one ruler. Last week, the existing pre-dispatch
+    inspection found twenty-five of five hundred kits needing correction.
+  zh: >-
+    二零二五年十月，香港生产力促进局在讨论智能制造时提到了外观检验。课堂上的是一家小型香港文具工坊，为成人办公礼品打包文具套装。每套都承诺有一本笔记本、一支铅笔、一块橡皮和一把尺子。上周，现有的发货前检验发现，五百盒里有二十五盒需要纠正。
+  zh_hk: >-
+    二零二五年十月，香港生產力促進局喺討論智能製造時提到咗外觀檢驗。課堂上嘅係一間小型香港文具工場，為成人辦公禮品包裝文具套裝。每套都承諾有一本筆記簿、一枝鉛筆、一塊擦膠同埋一把尺。上週，現有嘅出貨前檢驗發現，五百盒裏面有二十五盒需要修正。
+- id: ledger
+  visual: table_grid
+  seconds: 26
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: One six-hour improvement allowance
+  title_zh: 一共只有六个工时的改进额度
+  title_zh_hk: 一共只有六個工時的改進額度
+  row1_en: A · Another check
+  row1_zh: A · 再加一道检查
+  row1_zh_hk: A · 再加一次檢查
+  row2_en: B · Four-position tray
+  row2_zh: B · 四格托盘
+  row2_zh_hk: B · 四格托盤
+  col1_en: What changes
+  col1_zh: 改动
+  col1_zh_hk: 改動
+  col2_en: What stays
+  col2_zh: 保持不变
+  col2_zh_hk: 維持不變
+  c11_en: Second independent check
+  c11_zh: 发货前再独立检查一次
+  c11_zh_hk: 出貨前再獨立檢查一次
+  c12_en: Existing release inspection
+  c12_zh: 原有放行检验仍保留
+  c12_zh_hk: 原有放行檢驗仍保留
+  c21_en: Make, test and teach trays
+  c21_zh: 制作、试验并教会使用托盘
+  c21_zh_hk: 製作、試驗並教導使用托盤
+  c22_en: Existing release inspection
+  c22_zh: 原有放行检验仍保留
+  c22_zh_hk: 原有放行檢驗仍保留
+  footer_en: Six paid staff-hours in total, not per person
+  footer_zh: 六个工时是合计，不是每人各六小时
+  footer_zh_hk: 六個工時是合計，不是每人各六小時
+  s1_en: >-
+    The detailed defect breakdown is not yet at the meeting. Every detected defect was corrected before
+    dispatch, but no count of errors missed by inspection is available.
+  s1_zh: 各类缺陷的明细还没有带到这次会上。已经查出的问题，发货前都纠正了，但检验有没有漏过的错误，并没有统计。
+  s1_zh_hk: 各類缺陷嘅明細仲未帶到呢次會上。已經查出嘅問題，出貨前都修正咗，但檢驗有冇漏過嘅錯誤，並冇統計。
+  s2_en: >-
+    The supervisor has one separately funded allowance of six paid staff-hours next week. Either proposal
+    fits it. Normal production staffing and the target stay unchanged. Existing release inspection, safety
+    and legally required checks remain under either choice.
+  s2_zh: >-
+    主管下周有一笔单独拨付的六个员工工时，用来做改进。两个方案都刚好用得上这笔额度。正常生产人手和产量目标都不变。无论选哪一个，现有的放行检验、安全和法定检查都保留。
+  s2_zh_hk: >-
+    主管下週有一筆單獨撥付嘅六個員工工時，用嚟做改進。兩個方案都剛剛用得上呢筆額度。正常生產人手同產量目標都不變。無論揀邊一個，現有嘅放行檢驗、安全同法定檢查都保留。
+  s3_en: >-
+    With the tray, fill all four positions before transferring the set into a box, then check that no
+    part remains in the tray before closing. It is a visual aid, not an automatic lock: it can be misloaded
+    or bypassed. Its refill and checking effort must be considered.
+  s3_zh: >-
+    如果用托盘，要先把四个位置都放满，再把一套转入盒子，合盖前还要确认托盘里没有剩下零件。它是视觉辅助，不是自动锁：放错或绕过都有可能。补货和核对所花的工夫，也必须考虑进去。
+  s3_zh_hk: >-
+    如果用托盤，要先將四個位置都放滿，再將一套轉入盒子，合蓋前仲要確認托盤裏面冇剩低零件。它係視覺輔助，唔係自動鎖：放錯或繞過都有可能。補貨同核對所花嘅工夫，都必須考慮進去。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Another check, or a packing tray?
+  title_zh: 再加一道检查，还是上托盘？
+  title_zh_hk: 再加一次檢查，定用托盤？
+  en: >-
+    Would you spend next week's improvement allowance on another final check or the packing tray? Make
+    a provisional choice, and name a defect pattern that would change it. Pause and vote.
+  zh: 下周这六个工时，你会用来再加一道最终检查，还是用来上托盘？先做一个初步选择，并说一种会让你改主意的缺陷模式。请暂停，投个票。
+  zh_hk: 下週呢六個工時，你會用嚟再加一次最終檢查，定用嚟上托盤？先做一個初步選擇，並講一種會令你改主意嘅缺陷模式。暫停，投個票。
+- id: reveal
+  visual: table_grid
+  seconds: 26
+  rows: 3
+  cols: 2
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Kits needing correction, per 500
+  title_zh: 每500盒中需要纠正的礼盒
+  title_zh_hk: 每500盒中需要修正的禮盒
+  row1_en: Missing one item
+  row1_zh: 少一样物品
+  row1_zh_hk: 欠缺一件物品
+  row2_en: Misprinted cover
+  row2_zh: 封面印错
+  row2_zh_hk: 封面印錯
+  row3_en: Total kits
+  row3_zh: 礼盒合计
+  row3_zh_hk: 禮盒合計
+  col1_en: Earlier 500
+  col1_zh: 先前500盒
+  col1_zh_hk: 較早500盒
+  col2_en: Tray trial 500
+  col2_zh: 托盘试验500盒
+  col2_zh_hk: 托盤試驗500盒
+  c11: '20'
+  c12: '4'
+  c21: '5'
+  c22: '5'
+  c31: '25'
+  c32: '9'
+  footer_en: Categories do not overlap; trial already finished
+  footer_zh: 两类不重叠；试验已完成，不占用下周额度
+  footer_zh_hk: 兩類不重疊；試驗已完成，不佔下週額度
+  s1_en: >-
+    The records show twenty of the twenty-five kits lacked one item, and five had a visibly misprinted
+    notebook cover. The categories do not overlap. Observation also found that loose component piles and
+    interruptions made it easy to lose count.
+  s1_zh: 记录显示，二十五盒里有二十盒少了一件物品，五盒的笔记本封面明显印错。两类并不重叠。观察还发现，零件散放，再加上工作被打断，很容易数错。
+  s1_zh_hk: 記錄顯示，二十五盒裏面有二十盒少咗一件物品，五盒嘅筆記簿封面明顯印錯。兩類並唔重疊。觀察仲發現，零件散放，再加上工作被打斷，好容易數錯。
+  s2_en: >-
+    A preparatory trial, already completed before this decision, used prototype trays for another five
+    hundred comparable kits. It did not use next week's six-hour allowance. Ordinary trained operators
+    used the same four components and release criteria, including tray refilling and the before-and-after
+    transfer checks.
+  s2_zh: >-
+    在这次决策之前，已经做完一次准备性试验：用原型托盘又做了五百盒同类礼盒。它没有占用下周那六个工时。普通受训员工使用同样的四件套和放行标准，也包括补货，以及转入前后的核对。
+  s2_zh_hk: >-
+    喺呢次決策之前，已經做完一次準備性試驗：用原型托盤又做咗五百盒同類禮盒。它冇佔用下週嗰六個工時。普通受訓員工使用同樣嘅四件套同放行標準，亦包括補貨，以及轉入前後嘅核對。
+  s3_en: >-
+    The trial found four kits missing an item and five with a misprinted cover, nine in total. This before-and-after
+    comparison is encouraging, not a controlled proof that the tray caused the entire change. The tray
+    still cannot guarantee correct loading or replace release inspection.
+  s3_zh: >-
+    试验里，少一件的有四盒，封面印错的仍是五盒，合计九盒。这个前后对比令人鼓舞，但并不是受控证据，不能证明全部变化都是托盘造成的。托盘仍然不能保证一定放对，也不能取代放行检验。
+  s3_zh_hk: >-
+    試驗裏面，少一件嘅有四盒，封面印錯嘅仍然係五盒，合計九盒。呢個前後對比令人鼓舞，但並唔係受控證據，唔能夠證明全部變化都係托盤造成。托盤仍然唔能夠保證一定放對，亦都唔能夠取代放行檢驗。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Which improvement would you choose now?
+  title_zh: 现在你会选哪一项改进？
+  title_zh_hk: 而家你會揀邊一項改進？
+  en: >-
+    With the trial and defect breakdown, which improvement would you choose? Which problem does the tray
+    address, and which check must remain? Pause and vote again.
+  zh: 有了试验和缺陷分类以后，你会选哪一项改进？托盘能针对哪个问题，哪一项检查又必须保留？请暂停，再投一次票。
+  zh_hk: 有咗試驗同缺陷分類之後，你會揀邊一項改進？托盤能夠針對邊個問題，邊一項檢查又必須保留？暫停，再投一次票。
+- id: bridge
+  visual: steps
+  seconds: 24
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Target the error, not the worker
+  title_zh: 针对错误本身，而不是针对人
+  title_zh_hk: 針對錯誤本身，而不是針對人
+  step1_en: 20 of 25 recorded problems were omissions
+  step1_zh: 25盒里有20盒是漏放，占80%
+  step1_zh_hk: 25盒裏有20盒是漏放，佔80%
+  step2_en: A second check detects, but may not prevent
+  step2_zh: 再检查一次，能发现，却未必能防止
+  step2_zh_hk: 再檢查一次，能發現，卻未必能防止
+  step3_en: The tray makes the four-part set visible
+  step3_zh: 托盘让四件套在装箱时看得见
+  step3_zh_hk: 托盤讓四件套在裝箱時睇得見
+  s1_en: >-
+    Most recorded problems were missing parts: twenty of twenty-five kits, or eighty percent. That eighty
+    percent is not a universal Pareto law. Count kits, not defect instances: the categories are exclusive.
+  s1_zh: >-
+    记录到的问题里，大多数是漏放：二十五盒中有二十盒，也就是百分之八十。这个百分之八十，并不是普遍适用的帕累托法则。要按礼盒计数，不要按缺陷次数计数，因为两类并不重叠。
+  s1_zh_hk: >-
+    記錄到嘅問題裏面，大多數係漏放：二十五盒之中有二十盒，亦即百分之八十。呢個百分之八十，並唔係普遍適用嘅帕累托法則。要按禮盒計數，唔好按缺陷次數計數，因為兩類並唔重疊。
+  s2_en: >-
+    A second check could detect omissions and other defects, but it does not change how a part gets left
+    out during packing. The tray makes the intended four-part set visible at the step where an omission
+    can occur.
+  s2_zh: 再加一道检查，有可能发现漏放和其他缺陷，但它并没有改变装箱时为什么会少放一件。托盘是在漏放可能发生的那一步，把应有的四件套变得看得见。
+  s2_zh_hk: 再加一次檢查，有可能發現漏放同其他缺陷，但它並冇改變裝箱嗰陣點解會少放一件。托盤係喺漏放可能發生嗰一步，將應有嘅四件套變得睇得見。
+  s3_en: >-
+    Correct loading, transfer and the final empty-tray check still depend on the routine. A visible warning
+    is not a physical guarantee, and loose piles or interruptions are process clues, not evidence that
+    a particular worker was careless.
+  s3_zh: >-
+    能不能放对、能不能正确转入，以及最后是否确认托盘已空，仍然取决于这套做法有没有被执行。看得见的提醒，不是物理上的保证。零件散放或工作被打断，是流程上的线索，不能用来证明某一个员工不认真。
+  s3_zh_hk: >-
+    可唔可以放對、可唔可以正確轉入，以及最後係咪確認托盤已空，仍然取決於呢套做法有冇被執行。睇得見嘅提醒，唔係物理上嘅保證。零件散放或工作被打斷，係流程上嘅線索，唔可以用嚟證明某一個員工唔認真。
+- id: meaning
+  visual: steps
+  seconds: 24
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Choose the tray; keep the existing checks
+  title_zh: 可选用托盘，但原有检查要保留
+  title_zh_hk: 可選用托盤，但原有檢查要保留
+  step1_en: >-
+    First-pass results: 95% then 98.2%
+  step1_zh: 一次通过率：先是95%，试验为98.2%
+  step1_zh_hk: 一次通過率：先是95%，試驗為98.2%
+  step2_en: That is 16 fewer kits needing correction
+  step2_zh: 需要纠正的礼盒少了16盒
+  step2_zh_hk: 需要修正的禮盒少咗16盒
+  step3_en: The misprinted-cover count did not change
+  step3_zh: 封面印错的数量并没有下降
+  step3_zh_hk: 封面印錯的數量並冇下降
+  s1_en: >-
+    B now has stronger support for this workshop's main recorded problem. The trial suggests a workable
+    routine and fewer omissions, so use the six hours to prepare the reusable trays, test their setup
+    and teach the method.
+  s1_zh: >-
+    对这家工坊记录最多的问题来说，现在更支持选B。试验显示这套做法可以运转，漏放也更少，所以这六个工时应用来准备可重复使用的托盘，测试布置，并教会方法。
+  s1_zh_hk: >-
+    對呢間工場記錄最多嘅問題嚟講，而家更支持揀B。試驗顯示呢套做法可以運轉，漏放亦都更少，所以呢六個工時應用嚟準備可重複使用嘅托盤，測試佈置，並教導方法。
+  s2_en: >-
+    The earlier release check found four hundred and seventy-five of five hundred kits needing no correction:
+    ninety-five percent. In the trial it found four hundred and ninety-one of five hundred: ninety-eight
+    point two percent. That is an observed increase of three point two percentage points, with sixteen
+    fewer kits requiring correction.
+  s2_zh: >-
+    先前的放行检验里，五百盒中有四百七十五盒一次通过，也就是百分之九十五。试验里是四百九十一盒，即百分之九十八点二。一次通过率上升了三点二个百分点，需要纠正的礼盒少了十六盒。
+  s2_zh_hk: >-
+    先前嘅放行檢驗裏面，五百盒之中有四百七十五盒一次通過，亦即百分之九十五。試驗裏面係四百九十一盒，即百分之九十八點二。一次通過率上升咗三點二個百分點，需要修正嘅禮盒少咗十六盒。
+  s3_en: >-
+    The misprinted-cover count did not change. Keep the original release inspection for print defects,
+    remaining omissions and other problems. These figures are not customer satisfaction or guaranteed
+    outgoing quality, and the batches were not randomly assigned. Do not promise sixteen fewer defective
+    kits every week.
+  s3_zh: >-
+    封面印错的数量没有变。原来的放行检验仍要保留，用来发现印刷问题、仍然可能出现的漏放，以及其他缺陷。这些数字不是顾客满意度，也不能保证出厂质量。两批并不是随机分配的，不要承诺每周都会少十六盒不良。
+  s3_zh_hk: >-
+    封面印錯嘅數量冇變。原來嘅放行檢驗仍然要保留，用嚟發現印刷問題、仍然可能出現嘅漏放，以及其他缺陷。呢啲數字唔係顧客滿意度，亦都唔能夠保證出廠品質。兩批並唔係隨機分配，唔好承諾每週都會少十六盒不良。
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Process evidence is not permission to drop checks
+  title_zh: 流程证据，不是取消检查的许可
+  title_zh_hk: 流程證據，唔係取消檢查嘅許可
+  en: >-
+    A second final check remains defensible if broad immediate detection is the priority, or if the tray
+    routine cannot be reliably maintained. Continuing tray use still has handling effort. A rare serious
+    safety defect would need attention regardless of frequency; this case is a low-risk office-gift kit.
+  zh: >-
+    如果当务之急是马上发现各类缺陷，或者托盘这套做法无法可靠执行，再加一道最终检查仍然说得通。托盘一旦日常使用，仍要花操作工夫。如果是罕见但严重的安全缺陷，不论频率高低都要处理；本题是低风险的办公礼品套装。
+  zh_hk: >-
+    如果當務之急係即刻發現各類缺陷，或者托盤呢套做法無法可靠執行，再加一次最終檢查仍然講得通。托盤一旦日常使用，仍然要花操作工夫。如果係罕見但嚴重嘅安全缺陷，不論頻率高低都要處理；本題係低風險嘅辦公禮品套裝。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Make the omission harder at the source
+  title_zh: 在源头让漏放更难发生
+  title_zh_hk: 喺源頭讓漏放更難發生
+  q1_en: Inspecting again is not the only response
+  q1_zh: 再检查一遍，不是唯一的办法
+  q1_zh_hk: 再檢查一次，唔係唯一嘅辦法
+  q2_en: Keep release checks for what the tray cannot catch
+  q2_zh: 托盘抓不到的问题，仍要靠放行检验
+  q2_zh_hk: 托盤抓唔到嘅問題，仍要靠放行檢驗
+  s1_en: >-
+    When omissions are the main recorded problem, it can be better to make the intended set visible at
+    the packing step, while keeping the existing release inspection.
+  s1_zh: 当记录到的主要问题是漏放时，更好的做法往往是：在装箱这一步把应有的套装变得看得见，同时保留原有的放行检验。
+  s1_zh_hk: 當記錄到嘅主要問題係漏放時，更好嘅做法往往係：喺裝箱呢一步將應有嘅套裝變得睇得見，同時保留原有嘅放行檢驗。
+  s2_en: >-
+    The workshop, kits, allowance, trial and all quantities are fictional. Official scene art is a teaching
+    illustration only.
+  s2_zh: 这家工坊、礼盒、额度、试验和全部数量都是虚构的。官方场景图只是教学插图。
+  s2_zh_hk: 呢間工場、禮盒、額度、試驗同全部數量都係虛構嘅。官方場景圖只係教學插圖。
+  s3_en: >-
+    These are adult office-gift kits, not food, medical or safety-critical products.
+  s3_zh: 这些是成人办公礼品套装，不是食品、医疗或安全关键产品。
+  s3_zh_hk: 呢啲係成人辦公禮品套裝，唔係食品、醫療或安全關鍵產品。
+duration_target_s: 190

@@ -1,0 +1,275 @@
+id: OPS-05
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Two suppliers. One factory?
+title_zh: 两家供应商，只有一家工厂？
+title_zh_hk: 兩家供應商，同一家工廠？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-05
+  kicker_en: OPS-05
+  kicker_zh: OPS-05
+  kicker_zh_hk: OPS-05
+  title_en: Two suppliers. One factory?
+  title_zh: 两家供应商，只有一家工厂？
+  title_zh_hk: 兩家供應商，同一家工廠？
+  image: art/shared-factory-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In January 2025, HKTDC and UOB Hong Kong released research on Greater Bay Area supply-chain diversification,
+    based on a survey of more than six hundred companies. Diversification is not automatically protection.
+    A fictional Hong Kong gift shop needs one thousand identical presentation boxes each month. Distributor
+    A charges ten dollars per box; distributor B charges eleven. Both meet the quality specification.
+  zh: >-
+    二零二五年一月，香港贸易发展局与UOB Hong Kong发布了关于大湾区供应链多元化的研究，依据是对六百多家企业的调查。多元化并不自动等于供应得到保障。一家虚构的香港礼品店，每月需要一千个一模一样的礼品包装盒。经销商A每个报价十港元，经销商B每个十一港元。两家都符合质量规格。
+  zh_hk: >-
+    二零二五年一月，香港貿易發展局同UOB Hong Kong發布咗關於大灣區供應鏈多元化嘅研究，依據係對六百幾家企業嘅調查。多元化並唔等於供應自動得到保障。一間虛構嘅香港禮品店，每月需要一千個一模一樣嘅禮盒。分銷商A每個收十港元，分銷商B每個收十一港元。兩家都符合品質規格。
+- id: ledger
+  visual: table_grid
+  seconds: 22
+  rows: 2
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Monthly purchasing cost, HK$
+  title_zh: 每月采购成本，港元
+  title_zh_hk: 每月採購成本，港元
+  row1_en: All from A
+  row1_zh: 全部从A采购
+  row1_zh_hk: 全數向A採購
+  row2_en: Half from each
+  row2_zh: 两家各买一半
+  row2_zh_hk: 兩家各買一半
+  col1_en: Calculation
+  col1_zh: 计算
+  col1_zh_hk: 計算
+  col2_en: Cost
+  col2_zh: 成本
+  col2_zh_hk: 成本
+  c11_en: 1,000 × 10
+  c11_zh: 1,000 × 10
+  c11_zh_hk: 1,000 × 10
+  c12: 10,000
+  c21_en: 500 × 10 + 500 × 11
+  c21_zh: 500 × 10 + 500 × 11
+  c21_zh_hk: 500 × 10 + 500 × 11
+  c22: 10,500
+  footer_en: The HK$500 premium is known; the protection is not
+  footer_zh: 多付的500港元已知，保障效果未知
+  footer_zh_hk: 多付的500港元已知，保障效果未知
+  s1_en: >-
+    Either distributor can normally supply the required volume. The owner proposes buying five hundred
+    boxes from each rather than all one thousand from A. The split would cost five hundred dollars more
+    each month.
+  s1_zh: 正常情况下，任何一家都能供应所需数量。店主提议不再把一千个盒子全从A买，而是向两家各买五百个。这样每月要多花五百港元。
+  s1_zh_hk: 平日任何一家都有能力供應所需數量。東主建議唔再將一千個禮盒全數向A購買，而係向兩家各買五百個。分開採購每月會多花五百港元。
+  s2_en: >-
+    These prices include delivery and all costs that differ between the two arrangements in normal operations.
+    The team has not yet checked where the distributors obtain the boxes, or what they could deliver during
+    a disruption.
+  s2_zh: 这些报价包含配送，也包括正常运营下两种采购方案之间有差异的全部成本。团队还没有核实两家经销商从哪里进货，也没有核实供应中断时它们能交付多少。
+  s2_zh_hk: >-
+    呢啲價格已包括送貨，亦包括喺正常營運下兩種採購安排之間有差異嘅所有成本。團隊尚未查明兩家分銷商從哪裏取得禮盒，亦未查明供應中斷時佢哋能夠交付啲咩。
+  s3_en: >-
+    The five-hundred-dollar difference is known. The disruption risk and the value of protection have
+    not been quantified.
+  s3_zh: 这五百港元的差额是清楚的。中断风险，以及这种安排到底能提供多少保障，还没有量化。
+  s3_zh_hk: 呢五百港元嘅差額係清楚嘅。中斷風險，以及呢種安排到底能夠提供幾多保障，仲未有量化。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Pay HK$500 a month for the split?
+  title_zh: 每月多付500港元做拆分采购？
+  title_zh_hk: 每月多付500港元分開採購？
+  en: >-
+    Would you pay the five-hundred-dollar monthly premium for the split, or keep buying from A? What would
+    you verify before calling the second distributor a backup? Pause and vote.
+  zh: 你愿意每月多付五百港元做拆分采购，还是继续只向A采购？在把第二家经销商当成后备之前，你会核实什么？请暂停，投个票。
+  zh_hk: 你願意每月多付五百港元分開採購，定繼續只向A採購？喺把第二家分銷商當成後備之前，你會核實啲咩？暫停，投個票。
+- id: reveal
+  visual: steps
+  seconds: 22
+  layout: rows
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: Both buy from the same plant
+  title_zh: 两家都从同一家工厂进货
+  title_zh_hk: 兩家都從同一家工廠入貨
+  step1_en: A and B obtain the boxes from one plant
+  step1_zh: A和B都从同一家制造厂拿货
+  step1_zh_hk: A同B都從同一家製造廠拿貨
+  step2_en: In this stress test, the plant cannot supply
+  step2_zh: 在这个压力测试中，工厂无法供货
+  step2_zh_hk: 在呢個壓力測試中，工廠無法供貨
+  step3_en: No finished stock or timely alternative
+  step3_zh: 没有现货，也没有及时的替代来源
+  step3_zh_hk: 冇現貨，亦都冇及時嘅替代來源
+  s1_en: >-
+    Both distributors obtain these boxes from the same manufacturing plant. For this stress test, assume
+    the plant cannot supply either distributor during the next required delivery window.
+  s1_zh: 两家经销商都从同一家制造厂取得这些盒子。在这个压力测试里，假设下一次需要交货的时间窗内，这家工厂无法向任何一家经销商供货。
+  s1_zh_hk: 兩家分銷商都從同一家製造廠取得呢啲禮盒。喺呢個壓力測試裏面，假設下一次需要交貨嘅時間窗內，呢間工廠無法向任何一家分銷商供貨。
+  s2_en: >-
+    Neither distributor holds finished stock available for this shop's next delivery, and neither has
+    a qualified alternative able to supply within that window. Assume the shop also has no usable buffer
+    covering that delivery.
+  s2_zh: 两家经销商都没有可供应下次交货的成品库存，也没有合格的替代来源能在这个时间窗内供货。假设店里也没有能撑过这次交货的可用存货。
+  s2_zh_hk: 兩家分銷商都冇可以供應下次交貨嘅成品存貨，亦都冇合格嘅替代來源能夠喺呢個時間窗內供貨。假設店裏亦都冇能撐過呢次交貨嘅可用存貨。
+  s3_en: >-
+    This is a planning scenario, not a predicted or reported real shutdown. No disruption probability,
+    loss estimate, storage cost or alternative-source quotation is supplied.
+  s3_zh: 这是一个规划情景，不是预测或报道中的真实停工。题目没有给出中断概率、损失估计、仓储成本或替代来源的报价。
+  s3_zh_hk: 呢個係一個規劃情境，唔係預測或者報道中嘅真實停工。題目冇畀出中斷概率、損失估計、倉儲成本或者替代來源嘅報價。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Does this split keep the shop supplied?
+  title_zh: 这样拆分，店里还能有货吗？
+  title_zh_hk: 咁樣分開，店裏仲有冇貨？
+  en: >-
+    Does this split keep the shop supplied during the stated plant shutdown? What would you change or
+    investigate before paying for continuity? Pause and vote again.
+  zh: 在所述的工厂停产情景下，这样拆分还能让店里有货吗？在为连续性付钱之前，你会改什么、查什么？请暂停，再投一次票。
+  zh_hk: 喺所述嘅工廠停產情境之下，咁樣分開仲可唔可以讓店裏有貨？喺為連續性俾錢之前，你會改啲咩、查啲咩？暫停，再投一次票。
+- id: bridge
+  visual: steps
+  seconds: 24
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Count independent paths, not invoices
+  title_zh: 数的是独立路径，不是发票
+  title_zh_hk: 數的是獨立路徑，不是發票
+  step1_en: Plant to A to shop, and plant to B to shop
+  step1_zh: 工厂到A到店，工厂到B到店
+  step1_zh_hk: 工廠到A到店，工廠到B到店
+  step2_en: The two paths share the same plant
+  step2_zh: 两条路径经过同一家工厂
+  step2_zh_hk: 兩條路徑經過同一家工廠
+  step3_en: In this scenario, neither can deliver in time
+  step3_zh: 在这个情景下，两家都无法及时交货
+  step3_zh_hk: 在呢個情境下，兩家都無法及時交貨
+  s1_en: >-
+    Under this specific scenario, neither distributor can deliver the required boxes in time. The fifty-fifty
+    split therefore does not provide continuity against the common-plant failure.
+  s1_zh: 在这个特定情景下，两家经销商都无法及时交到所需的盒子。因此，五五拆分并不能对抗这次共同工厂停产，保障供应连续性。
+  s1_zh_hk: 喺呢個特定情境之下，兩家分銷商都無法及時交到所需嘅禮盒。因此，五五分開並唔能夠對抗呢次共同工廠停產，保障供應連續性。
+  s2_en: >-
+    The two purchasing paths share an upstream dependency: the manufacturing plant behind both distributors.
+    Separate names and invoices do not establish independent production.
+  s2_zh: 这两条采购路径有一个共同的上游依赖：两家经销商背后的那家制造厂。名字不同、发票分开，并不能说明生产是独立的。
+  s2_zh_hk: 呢兩條採購路徑有一個共同嘅上游依賴：兩家分銷商背後嗰間製造廠。名字唔同、發票分開，並唔等於生產係獨立嘅。
+  s3_en: >-
+    That does not make B useless. The split could help with a problem affecting A alone, such as a distributor-specific
+    processing failure, provided B has available capacity and can respond in time. That ability still
+    needs evidence.
+  s3_zh: 这并不等于B没有用。如果问题只出在A，例如经销商自己的处理故障，拆分采购仍可能有帮助，前提是B有余力、也能及时响应。这一点仍然需要证据。
+  s3_zh_hk: 呢個並唔等於B冇用。如果問題只出喺A，例如分銷商自己嘅處理故障，分開採購仍然可能有幫助，前提係B有餘力、亦能夠及時回應。呢一點仍然需要證據。
+- id: meaning
+  visual: steps
+  seconds: 24
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Ask what the backup can actually supply
+  title_zh: 问清后备实际能供多少货
+  title_zh_hk: 問清楚後備實際能供應甚麼
+  step1_en: Check the site, stock, and alternative capacity
+  step1_zh: 要核实产地、库存和替代产能
+  step1_zh_hk: 要核實產地、存貨同替代產能
+  step2_en: Geography alone does not solve a shared source
+  step2_zh: 地点不同，不等于来源已经分开
+  step2_zh_hk: 地點唔同，唔等於來源已經分開
+  step3_en: Compare workable protection and its limits
+  step3_zh: 要比较可行的保供方案及其限制
+  step3_zh_hk: 要比較可行的保障方案及其限制
+  s1_en: >-
+    Before paying for continuity, verify the production site, relevant upstream dependencies, stock reserved
+    or available to the shop, alternative capacity, quality qualification and replenishment time.
+  s1_zh: 在为供应连续性付钱之前，要核实生产地点、相关的上游依赖、为这家店预留或可调用的库存、替代产能、质量认证，以及补货需要多长时间。
+  s1_zh_hk: 喺為供應連續性俾錢之前，要核實生產地點、相關嘅上游依賴、為呢間店預留或可調用嘅存貨、替代產能、品質資格，以及補貨需要幾耐。
+  s2_en: >-
+    Ask for a concrete stress-test answer: if this plant stops, how many acceptable boxes could reach
+    us by the required date, from where, and under what commitment? A supplier in another location may
+    still depend on the same plant, material or transport route.
+  s2_zh: >-
+    要问一个具体的压力测试问题：如果这家工厂停了，到约定日期能有多少合格的盒子送到，从哪里来，有什么承诺？另一处的供应商，仍可能依赖同一家工厂、同一种材料或同一条运输路线。
+  s2_zh_hk: >-
+    要問一個具體嘅壓力測試問題：如果呢間工廠停咗，到約定日期能夠有幾多合格禮盒送到，從邊度來，有咩承諾？另一處嘅供應商，仍然可能依賴同一家工廠、同一種材料或同一條運輸路線。
+  s3_en: >-
+    Options include qualifying a genuinely separate source, arranging an appropriate stock buffer, or
+    staying with A while explicitly accepting the exposure. Each has costs and limits. The available figures
+    do not establish an optimal premium or purchasing split.
+  s3_zh: >-
+    可选的办法包括：认证一个真正分开的来源，准备适量存货，或者继续只向A采购，并明确接受这份风险。每种办法都有成本和限制。现有数字并不能给出最优的溢价或采购比例。
+  s3_zh_hk: >-
+    可選嘅辦法包括：認證一個真正分開嘅來源，準備適量存貨，或者繼續只向A採購，並明確接受呢份風險。每種辦法都有成本同限制。現有數字並唔能夠畀出最優嘅溢價或採購比例。
+- id: check
+  visual: title_card
+  seconds: 16
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: Does this arrangement address the risk?
+  title_zh: 这种安排对得上这个风险吗？
+  title_zh_hk: 呢種安排對唔對得上呢個風險？
+  en: >-
+    Do not claim diversification always pays, or that single sourcing is always reckless. The decision
+    is whether a particular arrangement addresses the relevant risk at an acceptable cost. What evidence
+    could make B a useful backup for a different risk?
+  zh: >-
+    不要说多元化一定划算，也不要说单一来源一定鲁莽。要问的是：这个具体安排，能不能以可接受的成本，对应上相关的风险。如果风险换成另一种，什么样的证据能让B成为有用的后备？
+  zh_hk: >-
+    唔好話多元化一定化算，亦都唔好話單一來源一定魯莽。要問嘅係：呢個具體安排，可唔可以以可接受嘅成本，對應到相關嘅風險。如果風險換成另一種，點樣嘅證據可以令B成為有用嘅後備？
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Separate names are not separate sources
+  title_zh: 名字不同，不等于来源不同
+  title_zh_hk: 名字唔同，唔等於來源唔同
+  q1_en: Map the shared point in the two paths
+  q1_zh: 先画出两条路径上的共同点
+  q1_zh_hk: 先畫出兩條路徑上嘅共同點
+  q2_en: Pay only for protection that can actually work
+  q2_zh: 只为真正有效的保障付钱
+  q2_zh_hk: 只為真正有效嘅保障俾錢
+  s1_en: >-
+    Count independent supply paths, not invoices. A second distributor is a backup only if it can still
+    deliver when the risk you care about occurs.
+  s1_zh: 要数的是独立的供应路径，不是发票张数。第二家经销商能不能算后备，要看你关心的那种风险发生时，它还能不能交货。
+  s1_zh_hk: 要數嘅係獨立嘅供應路徑，唔係發票張數。第二家分銷商可唔可以算後備，要睇你關心嗰種風險發生嗰陣，佢仲可唔可以交貨。
+  s2_en: >-
+    The shop, distributors, prices, stock conditions and shutdown assumptions are fictional. Official
+    scene art is a teaching illustration only.
+  s2_zh: 这家店、经销商、价格、库存条件和停工假设都是虚构的。官方场景图只是教学插图。
+  s2_zh_hk: 呢間店、分銷商、價格、存貨條件同停工假設都係虛構嘅。官方場景圖只係教學插圖。
+  s3_en: Survey findings are not disruption probabilities for this shop.
+  s3_zh: 调查结果，并不是这家店的中断概率。
+  s3_zh_hk: 調查結果，並唔係呢間店嘅中斷概率。
+duration_target_s: 182

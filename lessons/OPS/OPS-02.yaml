@@ -1,0 +1,293 @@
+id: OPS-02
+course_en: Micro Cases
+course_zh: Micro Cases
+course_zh_hk: Micro Cases
+title_en: Fly the whole order, or just what is missing?
+title_zh: 整单空运，还是只运缺的那部分？
+title_zh_hk: 整張訂單都空運，還是只空運欠缺的部分？
+beats:
+- id: hook
+  visual: still_image
+  seconds: 22
+  kicker: OPS-02
+  kicker_en: OPS-02
+  kicker_zh: OPS-02
+  kicker_zh_hk: OPS-02
+  title_en: Fly the whole order, or just what is missing?
+  title_zh: 整单空运，还是只运缺的那部分？
+  title_zh_hk: 整張訂單都空運，還是只空運欠缺的部分？
+  image: art/split-shipment-scene.jpg
+  caption_en: Classroom assumptions, not a news report
+  caption_zh: 课堂假设，不是新闻报道
+  caption_zh_hk: 課堂假設，不是新聞報道
+  en: >-
+    In April 2024, Hong Kong trade reporting described firms shifting different portions of freight from
+    sea to air during Red Sea disruption. A survey found many made no shift, and others moved only a fraction.
+    You manage logistics for a fictional Hong Kong supplier. An overseas customer ordered one thousand
+    welcome kits, each a cloth bag plus a matching printed insert.
+  zh: >-
+    二零二四年四月，香港商贸报道提到，红海航运受阻期间，有企业把不同比例的货物从海运改为空运。调查里，不少企业没有改，其余也只转运了部分货物。你负责一家虚构香港供应商的物流。海外客户订了一千套迎宾礼包，每套都要有一个布袋和一张配套的印刷插页。
+  zh_hk: >-
+    二零二四年四月，香港商貿報道提到，紅海航運受阻期間，有企業把不同比例嘅貨物由海運轉為空運。調查裏面，不少企業冇改，其餘亦都只轉運部分貨物。你負責一間虛構香港供應商嘅物流。海外客戶訂咗一千套迎新用品，每套都要有一個布袋同埋一張配套印刷插頁。
+- id: ledger
+  visual: table_grid
+  seconds: 28
+  rows: 3
+  cols: 2
+  kicker: Figures
+  kicker_en: Figures
+  kicker_zh: 数字
+  kicker_zh_hk: 數字
+  title_en: Extra cost above all-sea, HK$
+  title_zh: 相对全海运的增量成本，港元
+  title_zh_hk: 相對全數海運的額外成本，港元
+  row1_en: All sea
+  row1_zh: 全部海运
+  row1_zh_hk: 全數海運
+  row2_en: 300 by air
+  row2_zh: 300套空运
+  row2_zh_hk: 300套空運
+  row3_en: All air
+  row3_zh: 全部空运
+  row3_zh_hk: 全部空運
+  col1_en: Usable Monday
+  col1_zh: 星期一可用
+  col1_zh_hk: 星期一可用
+  col2_en: Total extra cost
+  col2_zh: 总增量成本
+  col2_zh_hk: 額外成本總額
+  c11: '0'
+  c12: 30,000
+  c21: '300'
+  c22: 24,000
+  c31: 1,000
+  c32: 60,000
+  footer_en: Credit 30,000 if Monday usable kits < 300
+  footer_zh: 星期一可用不足300套，减免30,000
+  footer_zh_hk: 星期一可用不足300套，扣款30,000
+  s1_en: >-
+    The first event needs three hundred complete kits on Monday; the remaining seven hundred are due on
+    Friday. All goods are finished in your warehouse and can be split before booking. An all-sea shipment
+    would arrive on Friday.
+  s1_zh: 首场活动星期一需要三百套完整礼包，其余七百套星期五才要。货物都已完工，还在仓库里，订舱前可以拆分。如果全部走海运，星期五才会到。
+  s1_zh_hk: 首場活動星期一需要三百套完整迎新用品，其餘七百套星期五先至要。貨物都已經製成，仲喺貨倉，訂艙前可以分拆。如果全部走海運，星期五先至會到。
+  s2_en: >-
+    Under the agreed classroom terms, fewer than three hundred usable kits by Monday triggers a one-off
+    thirty-thousand-dollar credit. The customer still accepts and pays for the full order, less that credit.
+    Product costs and ordinary sea freight are the same baseline under every plan.
+  s2_zh: >-
+    按课堂约定，星期一可用礼包不足三百套，就要一次性给客户减免三万港元货款。客户仍会接收并支付整张订单，只是减去这笔减免。各方案的产品成本和普通海运费用都是同一条基线。
+  s2_zh_hk: >-
+    按課堂協議，星期一可用迎新用品不足三百套，就要一次過俾客戶扣款三萬港元。客戶仍然會收下並支付整張訂單，只係減去呢筆扣款。各方案嘅產品成本同普通海運費都係同一條基線。
+  s3_en: >-
+    Airfreighting three hundred complete kits costs twenty-four thousand extra and avoids the credit.
+    Flying all one thousand costs sixty thousand. Quotes already include split handling, documentation
+    and final delivery. Air space alone does not prove Monday delivery.
+  s3_zh: >-
+    空运三百套完整礼包，额外运费两万四千港元，可以避免货款减免。一千套全部空运，要六万港元。报价已包括拆分、单证和最终派送。有空运舱位，并不等于星期一一定送到。
+  s3_zh_hk: >-
+    空運三百套完整迎新用品，額外運費兩萬四千港元，可以避免客戶扣款。一千套全部空運，要六萬港元。報價已包括分拆、文件同最終派送。有空運艙位，並唔等於星期一一定送到。
+- id: pause1
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Which plan would you authorize?
+  title_zh: 你会批准哪个方案？
+  title_zh_hk: 你會批准邊個方案？
+  en: >-
+    Which plan would you authorize before noon, and why? What would you ask the customer before spending
+    the extra freight budget? Pause and vote.
+  zh: 中午之前，你会批准哪个方案？为什么？在动用这笔额外运费预算之前，你还想问客户什么？请暂停，投个票。
+  zh_hk: 中午之前，你會批准邊個方案？點解？喺動用呢筆額外運費預算之前，你仲想問客戶啲咩？暫停，投個票。
+- id: reveal
+  visual: steps
+  seconds: 26
+  layout: rows
+  kicker: Round 2
+  kicker_en: Round 2
+  kicker_zh: 第二轮
+  kicker_zh_hk: 第二輪
+  title_en: The customer already has 300 bags
+  title_zh: 客户手里已有300个布袋
+  title_zh_hk: 客戶手上已有300個布袋
+  step1_en: 300 compatible bags are already on site
+  step1_zh: 现场已有300个可用的配套布袋
+  step1_zh_hk: 現場已有300個可用嘅配套布袋
+  step2_en: They have no matching inserts
+  step2_zh: 但没有配套的插页
+  step2_zh_hk: 但冇配套嘅插頁
+  step3_en: Airfreight 300 inserts costs HK$9,000
+  step3_zh: 空运300张插页，额外成本9,000港元
+  step3_zh_hk: 空運300張插頁，額外成本9,000港元
+  s1_en: >-
+    The customer's stock check reveals three hundred compatible cloth bags left from a previous event,
+    but no matching inserts. The customer confirms in writing that putting your new inserts into those
+    bags would meet Monday's requirement and avoid the entire credit. Their team can assemble three hundred
+    kits before the event.
+  s1_zh: >-
+    客户盘点后发现，上次活动还剩三百个可用的配套布袋，但没有配套插页。客户书面确认：把你新的插页放进这些布袋，就能满足星期一的要求，并避免整笔货款减免。他们的团队能在活动前组装三百套。
+  s1_zh_hk: >-
+    客戶盤點後發現，上次活動仲剩三百個可用嘅配套布袋，但冇配套插頁。客戶書面確認：將你新嘅插頁放入呢啲布袋，就能滿足星期一嘅要求，並避免整筆扣款。佢哋嘅團隊可以喺活動前組裝三百套。
+  s2_en: >-
+    The forwarder quotes an additional nine thousand dollars above the same all-sea baseline to send only
+    three hundred inserts by air, with all remaining goods by sea on Friday, including your three hundred
+    unused bags.
+  s2_zh: 货代报价：只把三百张插页空运过去，其余货物星期五海运，包括你没有用上的三百个布袋，相对同一条全海运基线，额外只要九千港元。
+  s2_zh_hk: 貨代報價：只將三百張插頁空運過去，其餘貨物星期五海運，包括你沒用上嘅三百個布袋，相對同一條全海運基線，額外只係要九千港元。
+  s3_en: >-
+    This includes splitting, handling, documentation and final delivery. A door-to-door plan and space
+    are available under the same arrival assumptions. No other prices or deadlines change.
+  s3_zh: 报价已包括拆分、操作、单证和最终派送。门到门方案和舱位都有，到达时间的假设与其他报价相同。其他价格和期限都不变。
+  s3_zh_hk: 報價已包括分拆、操作、文件同最終派送。門到門方案同艙位都有，到達時間嘅假設同其他報價一樣。其他價格同期限都不變。
+- id: pause2
+  visual: title_card
+  seconds: 16
+  kicker: Decision
+  kicker_en: Decision
+  kicker_zh: 决策
+  kicker_zh_hk: 決定
+  title_en: Would you revise the shipment?
+  title_zh: 你会改运输方案吗？
+  title_zh_hk: 你會唔會改運輸方案？
+  en: >-
+    Would you revise the shipment? Calculate the saving against your first choice, then name the checks
+    needed before you promise three hundred usable kits on Monday. Pause and vote again.
+  zh: 你会改运输方案吗？先算一算，相对你刚才选的方案能省多少，再说一说：在承诺星期一交到三百套可用礼包之前，还要核对哪些环节？请暂停，再投一次票。
+  zh_hk: >-
+    你會唔會改運輸方案？先計一計，相對你頭先揀嘅方案可以慳幾多，再講一講：喺承諾星期一交到三百套可用迎新用品之前，仲要核實邊啲環節？暫停，再投一次票。
+- id: bridge
+  visual: steps
+  seconds: 26
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Pay for useful early output
+  title_zh: 为提前到手的可用成品付费
+  title_zh_hk: 為提早交付的可用成品付費
+  step1_en: >-
+    300 complete kits: save HK$6,000 versus all-sea
+  step1_zh: 空运300套整包，比全海运省6,000
+  step1_zh_hk: 空運300套整包，比全海運慳6,000
+  step2_en: All air spends HK$36,000 more than that split
+  step2_zh: 全部空运比该拆分方案多花36,000
+  step2_zh_hk: 全部空運比該分拆方案多花36,000
+  step3_en: >-
+    300 inserts: HK$9,000, and still avoids the credit
+  step3_zh: 只运300张插页：9,000，仍避免减免
+  step3_zh_hk: 只運300張插頁：9,000，仍避免扣款
+  s1_en: >-
+    In the first round, sending three hundred complete kits costs twenty-four thousand instead of the
+    thirty-thousand credit: a six-thousand saving under the stated delivery assumptions. Sending all one
+    thousand by air spends thirty-six thousand more than that split, without serving an additional Monday
+    need.
+  s1_zh: >-
+    在第一轮里，空运三百套完整礼包要两万四千港元，而不是三万港元货款减免，按给定的到达假设能省六千港元。一千套全部空运，比这个拆分方案多花三万六千港元，却不能多满足星期一的需要。
+  s1_zh_hk: >-
+    喺第一輪裏面，空運三百套完整迎新用品要兩萬四千港元，而唔係三萬港元扣款，按所定嘅到達假設可以慳六千港元。一千套全部空運，比呢個分拆方案多花三萬六千港元，但唔能夠再多滿足星期一嘅需要。
+  s2_en: >-
+    After the stock check, airfreighting only the three hundred missing inserts costs nine thousand and
+    still avoids the credit. Compare that nine thousand with the plan you first chose; do not automatically
+    claim a twenty-one-thousand saving against all-sea.
+  s2_zh: 盘点之后，只空运缺的三百张插页，要九千港元，仍然可以避免货款减免。要把这九千港元，跟你第一轮选的方案比，不要一律说比全海运省了两万一千港元。
+  s2_zh_hk: 盤點之後，只空運欠缺嘅三百張插頁，要九千港元，仍然可以避免扣款。要把呢九千港元，同你第一輪揀嘅方案比，唔好一律話比全海運慳咗兩萬一千港元。
+  s3_en: >-
+    Against the three-hundred-complete-kit plan the saving is fifteen thousand; against all-sea it is
+    twenty-one thousand; against all-air it is fifty-one thousand. These are incremental comparisons,
+    not the order's profit.
+  s3_zh: >-
+    相对空运三百套完整礼包，能省一万五千港元；相对全海运，能省两万一千港元；相对全部空运，能省五万一千港元。这些都是增量比较，不是这张订单的利润。
+  s3_zh_hk: >-
+    相對空運三百套完整迎新用品，可以慳一萬五千港元；相對全海運，可以慳兩萬一千港元；相對全部空運，可以慳五萬一千港元。呢啲都係增量比較，唔係呢張訂單嘅利潤。
+- id: meaning
+  visual: steps
+  seconds: 26
+  layout: rows
+  kicker: Debrief
+  kicker_en: Debrief
+  kicker_zh: 讲评
+  kicker_zh_hk: 講評
+  title_en: Find the missing component
+  title_zh: 找出缺的那一件
+  title_zh_hk: 找出欠缺的部件
+  step1_en: The useful output is 300 complete kits on Monday
+  step1_zh: 有用的产出是星期一的300套完整礼包
+  step1_zh_hk: 有用嘅產出係星期一嘅300套完整用品
+  step2_en: Faster bags do not add usable kits
+  step2_zh: 布袋再运得快，也不会多出可用礼包
+  step2_zh_hk: 布袋運得再快，都唔會多出可用套裝
+  step3_en: Confirm stock, agreement, and the whole journey
+  step3_zh: 还要核实库存、约定和全程各环节
+  step3_zh_hk: 仲要核實存貨、協議同全程各環節
+  s1_en: >-
+    The useful output is three hundred complete kits at the customer on Monday, not three hundred cartons
+    dispatched or one thousand bags flown. With compatible bags already there, inserts are the missing
+    component.
+  s1_zh: 真正有用的产出，是星期一在客户那里有三百套完整礼包，不是发出三百箱，也不是空运一千个布袋。现场已有配套布袋，缺的就是插页。
+  s1_zh_hk: 真正有用嘅產出，係星期一喺客戶嗰度有三百套完整迎新用品，唔係發出三百箱，亦都唔係空運一千個布袋。現場已有配套布袋，缺嘅就係插頁。
+  s2_en: >-
+    Written acceptance matters. Using the customer's existing bags must actually satisfy the agreed requirement.
+    Confirm the stock count, compatibility and assembly capacity before you treat this as the bottleneck.
+  s2_zh: 书面确认很重要。用客户现有的布袋，必须真正满足约定要求。在把插页当成瓶颈之前，要核实盘点数量、是否配套，以及组装能力是不是真的够。
+  s2_zh_hk: 書面確認好重要。用客戶現有嘅布袋，必須真正滿足約定要求。喺把插頁當成瓶頸之前，要核實盤點數量、係咪配套，以及組裝能力係咪真係足夠。
+  s3_en: >-
+    Check pickup, confirmed uplift, documentation, clearance, destination delivery and a named recipient.
+    Track arrival at the customer, not just departure from Hong Kong. An air booking is not an unconditional
+    guarantee.
+  s3_zh: >-
+    还要核对提货截止时间、确认的航班、单证、清关、目的地派送和指定收货人。追踪的是货到客户手里，而不只是离开香港。订了空运，并不等于无条件保证送达。
+  s3_zh_hk: >-
+    仲要核對提貨截止時間、確認嘅航班、文件、清關、目的地派送同指定收貨人。追蹤嘅係貨到客戶手上，而不只係離開香港。訂咗空運，並唔等於無條件保證送到。
+- id: check
+  visual: title_card
+  seconds: 18
+  kicker: Check
+  kicker_en: Check
+  kicker_zh: 检验
+  kicker_zh_hk: 檢驗
+  title_en: What do the extra 700 early kits achieve?
+  title_zh: 多提前送到的700套有什么用？
+  title_zh_hk: 多提早送到的700套有甚麼用？
+  en: >-
+    If you would fly everything, what do the extra seven hundred early kits achieve? If you would send
+    only the inserts, what evidence makes the bags usable and the agreement valid? The credit is a stipulated
+    classroom term, not a typical market tariff or a legal ruling.
+  zh: >-
+    如果你主张全部空运，多提前送到的七百套能做什么？如果你主张只寄插页，有什么证据说明这些布袋能用、双方约定有效？这笔货款减免是课堂设定的约定，不是市场上的常规费率，也不是法律裁决。
+  zh_hk: >-
+    如果你主張全部空運，多提早送到嘅七百套可以做咩？如果你主張只寄插頁，有咩證據說明呢啲布袋用得、雙方協議有效？呢筆扣款係課堂設定嘅條款，唔係市場上嘅常規收費，亦都唔係法律裁決。
+- id: takeaway
+  visual: takeaway
+  seconds: 20
+  kicker: Takeaway
+  kicker_en: Takeaway
+  kicker_zh: 要点
+  kicker_zh_hk: 要點
+  title_en: Pay for the missing piece
+  title_zh: 为缺的那一件付费
+  title_zh_hk: 為欠缺嗰一件付費
+  q1_en: Speed is useful where it completes the kit
+  q1_zh: 速度只有在能凑成可用套装时才有用
+  q1_zh_hk: 速度只有喺能湊成可用套裝時先有用
+  q2_en: Compare any saving with your first choice
+  q2_zh: 节省多少，要跟你原先的选择比
+  q2_zh_hk: 慳幾多，要同你原先嘅選擇比
+  s1_en: >-
+    Pay extra freight where it creates useful early output. After the stock check, that output is three
+    hundred inserts meeting a complete-kit requirement, not a thousand bags in the air.
+  s1_zh: 额外运费，应该花在能提前形成可用产出的地方。盘点之后，这个产出是三百张能凑成完整礼包的插页，不是一千个正在空运的布袋。
+  s1_zh_hk: 額外運費，應該花喺能提早形成可用產出嘅地方。盤點之後，呢個產出係三百張能湊成完整迎新用品嘅插頁，唔係一千個正在空運嘅布袋。
+  s2_en: >-
+    The supplier, customer, kits, quotations and credit are fictional. Official scene art is a teaching
+    illustration only.
+  s2_zh: 供应商、客户、礼包、报价和货款减免都是虚构的。官方场景图只是教学插图。
+  s2_zh_hk: 供應商、客戶、迎新用品、報價同扣款都係虛構嘅。官方場景圖只係教學插圖。
+  s3_en: >-
+    The 2024 survey does not establish current freight conditions or these savings.
+  s3_zh: 二零二四年的调查，并不能说明现在的运费条件，也不能验证这些节省。
+  s3_zh_hk: 二零二四年嘅調查，並唔能夠說明而家嘅運費條件，亦都唔能夠驗證呢啲節省。
+duration_target_s: 198

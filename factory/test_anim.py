@@ -2574,6 +2574,9 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-EVY-04": [
                 "lesson_hook", "measure_line", "measure_line", "measure_line", "lesson_takeaway",
             ],
+            "P1-EVY-05": [
+                "lesson_hook", "measure_line", "measure_line", "measure_line", "lesson_takeaway",
+            ],
         }
         for name, visuals in expected.items():
             path = P1 / f"{name}.yaml"
@@ -2599,6 +2602,7 @@ class SceneRegistryTest(unittest.TestCase):
             "P1-EVY-02": ("Point 2 is nearer.", "点2更近。", "點2近啲。"),
             "P1-EVY-03": ("Six tiles cover the strip.", "六块砖盖满纸条。", "六塊磚蓋滿紙條。"),
             "P1-EVY-04": ("That space is one centimetre.", "这一格是一厘米。", "呢一格係一厘米。"),
+            "P1-EVY-05": ("7 centimetres is longer.", "7厘米更长。", "7厘米長啲。"),
         }
         for name, phrases in answers.items():
             lesson = load_lesson(P1 / f"{name}.yaml")
